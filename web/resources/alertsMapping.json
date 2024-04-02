@@ -1,0 +1,418 @@
+{
+  "en-US": [
+    {
+      "Text": "Warning",
+      "Id": "EVENT_TYPE_UNKOWN_WARNING",
+      "Icon": "warning",
+      "Sound": "notify"
+    },
+    {
+      "Text": "Info",
+      "Id": "EVENT_TYPE_UNKOWN_INFO",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "Timer fired",
+      "Id": "EVENT_TYPE_TIMER",
+      "Icon": "info",
+      "Sound": "timer"
+    },
+    {
+      "Text": "Danger",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER",
+      "Icon": "danger",
+      "Sound": "notify"
+    }
+  ],
+  "it-IT": [
+    {
+      "Text": "Attenzione",
+      "Id": "EVENT_TYPE_UNKOWN_WARNING",
+      "Icon": "warning",
+      "Sound": "notify"
+    },
+    {
+      "Text": "Avvertimento",
+      "Id": "EVENT_TYPE_UNKOWN_INFO",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "Timer esaurito",
+      "Id": "EVENT_TYPE_TIMER",
+      "Icon": "info",
+      "Sound": "timer"
+    },
+    {
+      "Text": "Errore",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER",
+      "Icon": "danger",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_ENGAGE",
+      "Id": "EVENT_TYPE_AUTOPILOT_ENGAGE",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_DISENGAGE",
+      "Id": "EVENT_TYPE_AUTOPILOT_DISENGAGE",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_ABEAM",
+      "Id": "EVENT_TYPE_AUTOPILOT_ABEAM",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_GOTO",
+      "Id": "EVENT_TYPE_AUTOPILOT_GOTO",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "Pericolo",
+      "Id": "danger",
+      "Icon": "danger"
+    },
+    {
+      "Text": "Stallo",
+      "Id": "stall",
+      "Icon": "danger"
+    },
+    {
+      "Text": "GPS Online",
+      "Id": "",
+      "Icon": "info"
+    },
+    {
+      "Text": "GPS Offline",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Speed decreasing, entering in white arc, remember to open flaps and landing gear",
+      "Id": "speed_white",
+      "Icon": "info"
+    },
+    {
+      "Text": "Velocità critica, pericolo di stallo",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine dal suolo 2000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine dal suolo 1000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine dal suolo 500 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 10000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 9000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 8000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 7000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 6000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 5000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 4000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 3000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 2000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 1000 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Altitudine 500 piedi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Velocità in arco giallo",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Velocità in arco rosso",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Velocità in arco verde",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 1.5",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 1.7",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 2.0",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 2.2",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 2.5",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 3.0",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 0.5",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G 0",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Forza G negativa",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Pressione olio bassa",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Pressione olio in arco giallo",
+      "Id": "oil_pressure_yellow",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Pressione olio in arco rosso",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Pressione olio alta",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura olio bassa",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura olio alta",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura olio in arco giallo",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura olio in arco rosso",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura aqua bassa",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura acqua alta",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura acqua in arco giallo",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura acqua in arco rosso",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Traffico possibile collisione",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Traffico molto vicino",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Traffico, guardare fuori",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Angolo di benk 15 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Angolo di benk 30 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Angolo di benk 45 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Angolo di benk molto accentuato",
+      "Id": "bank_angle_60",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Assetto 5 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Assetto 10 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Assetto 15 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Assetto 20 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Pressione alimentazione bassa",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Pressione alimentazione alta",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Possibile ghiaccio al carburatore",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura aria sotto ai 20 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura aria 0 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura aria sopra ai 30 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT 200 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT 300 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT 400 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT 500 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT 600 gradi",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT in arco giallo",
+      "Id": "",
+      "Icon": "warning"
+    },
+    {
+      "Text": "Temperatura EGT in arco rosso",
+      "Id": "",
+      "Icon": "warning"
+    }
+  ]
+}

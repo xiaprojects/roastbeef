@@ -1232,6 +1232,8 @@ type settings struct {
 	GpsManualDevice	     string         // default: /dev/ttyAMA0
     GpsManualChip        string         // ublox8, ublox9, ublox
 	GpsManualTargetBaud  int            // default: 115200
+	// Plugins
+	Audio_Enabled        bool // Alerts Audio Playback on RPI
 }
 
 type status struct {
@@ -1297,6 +1299,8 @@ var globalSettings settings
 var globalStatus status
 
 func defaultSettings() {
+	// Plugin defaults
+	globalSettings.Audio_Enabled = false
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
@@ -1580,6 +1584,8 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// Alerts Feature
+	alerts.ShutdownFunc()
 
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
@@ -1720,6 +1726,9 @@ func main() {
 	if !isTraceReplayMode {
 		sdrInit()
 		pingInit()
+		// Enable loaded plugins
+		// Alerts Feature
+		alerts.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 
