@@ -26,10 +26,14 @@ const ALERT_DEFAULT_LANGUAGE = "en-US"
 
 // Please define a unique Id and check for collision using the keyword "EVENT_TYPE_"
 const (
-	EVENT_TYPE_UNKOWN_WARNING = 0
-	EVENT_TYPE_UNKOWN_INFO    = 1
-	EVENT_TYPE_TIMER          = 2
-	EVENT_TYPE_SYSTEM_DANGER  = 3
+	EVENT_TYPE_UNKOWN_WARNING           = 0
+	EVENT_TYPE_UNKOWN_INFO              = 1
+	EVENT_TYPE_TIMER                    = 2
+	EVENT_TYPE_SYSTEM_DANGER            = 3
+	EVENT_TYPE_SYSTEM_DANGER_BAROMETER  = 4
+	EVENT_TYPE_SYSTEM_DANGER_SDR        = 5
+	EVENT_TYPE_SYSTEM_DANGER_SETTINGS   = 6
+	EVENT_TYPE_STARTUP_INFO             = 7
 )
 
 // Maximum events in the list
@@ -92,7 +96,7 @@ func (alertsInstance *AlertsStratuxPlugin) InitFunc() bool {
 	}
 	log.Println("AlertsStratuxPlugin Loadded Sound Mapping Count: ", len(EventLanguages[ALERT_DEFAULT_LANGUAGE]))
 	// Push initial event to track the startup
-	alertsInstance.pushEvent(Alert{EVENT_TYPE_UNKOWN_INFO, "Startup", time.Now()})
+	alertsInstance.pushEvent(Alert{EVENT_TYPE_STARTUP_INFO, "Startup", time.Now()})
 	return true
 }
 
@@ -112,20 +116,24 @@ alerts.pushEventByIdent().
 	wide event for System to pipe alerts
 */
 func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event Alert) bool {
-	// System wide alert signal
-	switch ident {
-	case "save-settings":
-	case "disk-space":
-	case "partition-rebuild":
-	case "fs-write":
-	case "restart-warn":
-	case "sdrconfig":
-	case "pressure-sensor-temp-read":
-	case "pressure-sensor-pressure-read":
-	case "BaroBroken":
+	// System wide alert signal mapping
+	if(ident=="save-settings" || 
+		ident=="disk-space" ||
+		ident=="partition-rebuild" ||
+		ident=="fs-write"){
+			event.Type = EVENT_TYPE_SYSTEM_DANGER_SETTINGS
+
+	} else if (ident=="pressure-sensor-temp-read" ||
+	ident=="pressure-sensor-pressure-read" ||
+	ident=="BaroBroken"){
+		event.Type = EVENT_TYPE_SYSTEM_DANGER_BAROMETER
+	} else if (ident=="sdrconfig" ||
+	ident=="ping-missing"){
+		event.Type = EVENT_TYPE_SYSTEM_DANGER_SDR
+	} else {
+		// Fallback to system danger
 		event.Type = EVENT_TYPE_SYSTEM_DANGER
 	}
-
 	return alertsInstance.pushEvent(event)
 }
 
@@ -142,7 +150,7 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) bool {
 		return false
 	}
 	// Dispatch event on web interface, if any
-	// TODO: complete the push with MgmInterface alertUpdate.SendJSON(event)
+	alertUpdate.SendJSON(event)
 	// Queue the Alert
 	alertsInstance.alertsDataMutex.Lock()
 	alertsInstance.alertsData = append(alertsInstance.alertsData, event)
@@ -158,6 +166,7 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) bool {
 				// TODO: Migrate from Wav to Mp3
 				soundPath := STRATUX_WWW_DIR + "sounds/" + sound + ".wav"
 				// TODO: Let's customisable the player command line
+				// TODO: Queue sounds in case of multiple events
 				cmd := exec.Command("/usr/bin/aplay", soundPath)
 				go cmd.Start()
 			}

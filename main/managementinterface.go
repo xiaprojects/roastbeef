@@ -1169,6 +1169,7 @@ func managementInterface() {
 	situationUpdate = NewUIBroadcaster()
 	weatherRawUpdate = NewUIBroadcaster()
 	gdl90Update = NewUIBroadcaster()
+	alertUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))

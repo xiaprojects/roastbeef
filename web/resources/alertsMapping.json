@@ -22,7 +22,31 @@
       "Text": "Danger",
       "Id": "EVENT_TYPE_SYSTEM_DANGER",
       "Icon": "danger",
-      "Sound": "notify"
+      "Sound": "danger"
+    },
+    {
+      "Text": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER"
+    },
+    {
+      "Text": "EVENT_TYPE_SYSTEM_DANGER_SDR",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_SDR",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_SDR"
+    },
+    {
+      "Text": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS"
+    },
+    {
+      "Text": "EVENT_TYPE_STARTUP_INFO",
+      "Id": "EVENT_TYPE_STARTUP_INFO",
+      "Icon": "info",
+      "Sound": ""
     }
   ],
   "it-IT": [
@@ -48,7 +72,31 @@
       "Text": "Errore",
       "Id": "EVENT_TYPE_SYSTEM_DANGER",
       "Icon": "danger",
-      "Sound": "notify"
+      "Sound": "danger"
+    },
+    {
+      "Text": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER"
+    },
+    {
+      "Text": "EVENT_TYPE_SYSTEM_DANGER_SDR",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_SDR",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_SDR"
+    },
+    {
+      "Text": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS"
+    },
+    {
+      "Text": "EVENT_TYPE_STARTUP_INFO",
+      "Id": "EVENT_TYPE_STARTUP_INFO",
+      "Icon": "info",
+      "Sound": ""
     },
     {
       "Text": "EVENT_TYPE_AUTOPILOT_ENGAGE",

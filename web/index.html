@@ -57,6 +57,7 @@
 	<link rel="stylesheet" href="css/ol.css" />
 	<link rel="stylesheet" href="css/ol-layerswitcher.css" />
 	<link rel="stylesheet" href="css/map.css" />
+	<link rel="stylesheet" href="css/alerts.css" />
 	<link rel="stylesheet" id="themeStylesheet" href="" />
 
 	<script src="maui/js/angular.min.js"></script>
@@ -76,6 +77,8 @@
 	<script src="plates/js/radar.js"></script>
 	<script src="plates/js/map.js"></script>
 	<script src="plates/js/gps.js"></script>
+	<script src="plates/js/alerts.js"></script>
+	<script src="js/servicealerts.js"></script>
 	<script src="plates/js/developer.js"></script>
 </head>
 
@@ -102,6 +105,7 @@
 					<a class="list-group-item" href="#/settings"><i class="fa fa-gear"></i>    Settings <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/radar"><i class="fa fa-street-view"></i>    Radar <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/map"><i class="fa fa-map"></i>    Map <i class="fa fa-chevron-right pull-right"></i></a>
+					<a class="list-group-item" href="#/alerts"><i class="fa fa-exclamation-triangle"></i>    Alerts <i class="fa fa-chevron-right pull-right"></i></a>
 					<div ng-show="DeveloperMode">
 					<a class="list-group-item" href="#/developer"><i class="fa fa-tasks"></i>    Developer <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
@@ -138,6 +142,9 @@
 				</div>
 			</div>
 			<div class="btn-group pull-right" ui-yield-to="navbarAction">
+				<audio id="audioproxy"></audio>
+				<div ng-click="goToAlerts();alarmIsLit=false;" class="btn" style="margin:0px; padding:0px;"><i class="fa {{alarmIsLit?'fa-bell':'fa-bell-o'}}" style="font-size: 28px;margin:0px; padding:0px;margin-top: 10px;color:{{alarmIsLit?'red':'gray'}};"></i></div>
+
 				<div ui-toggle="uiSidebarRight" class="btn">
 					<i class="fa fa-info-circle"></i> Help
 				</div>

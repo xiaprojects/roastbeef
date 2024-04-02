@@ -99,6 +99,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'MapCtrl',
 			reloadOnSearch: false
 		})
+		.state('alerts', {
+			url: '/alerts',
+			templateUrl: 'plates/alerts.html',
+			controller: 'AlertsCtrl',
+			reloadOnSearch: false
+		})
         .state('developer', {
 			url: '/developer',
 			templateUrl: 'plates/developer.html',
@@ -121,6 +127,14 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+
+			// Plugins: Alerts Service
+			$scope.Alerts_Enabled= true;
+			if($scope.Alerts_Enabled==true){
+				if($scope.alerts === undefined|| $scope.alerts === null){
+					$scope.alerts = new AlertsService($scope, $http);
+				}
+			}
 
             // Update theme
             $scope.updateTheme(settings.DarkMode);
