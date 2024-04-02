@@ -82,7 +82,39 @@ var trafficUpdate *uibroadcaster
 var radarUpdate *uibroadcaster
 var gdl90Update *uibroadcaster
 
+/*
+	Alerts Feature
+	- Websocket
+	- Dispatcher for websocket
+	- GetAlerts API
+*/
+// Alerts WS
+var alertUpdate *uibroadcaster
 
+// Alerts WS Code
+func handleAlertsWS(conn *websocket.Conn) {
+	alertUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
+
+// AJAX call - /getAlerts. Responds with current Alerts status
+func handleAlertsRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	alerts.alertsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&alerts.alertsData)
+	alerts.alertsDataMutex.Unlock()
+	if err == nil {
+	fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+	}
+}
+// Alerts Feature End Code
 
 func handleGDL90WS(conn *websocket.Conn) {
 	// Subscribe the socket to receive updates.
@@ -357,6 +389,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.APRS_Enabled = val.(bool)
 					case "Ping_Enabled":
 						globalSettings.Ping_Enabled = val.(bool)
+					case "Audio_Enabled":
+						globalSettings.Audio_Enabled = val.(bool)
 					case "OGNI2CTXEnabled":
 						globalSettings.OGNI2CTXEnabled = val.(bool)
 					case "GPS_Enabled":
@@ -1153,6 +1187,13 @@ func managementInterface() {
 				Handler: websocket.Handler(handleStatusWS)}
 			s.ServeHTTP(w, req)
 		})
+	// Alerts Feature
+	http.HandleFunc("/alerts",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleAlertsWS)}
+			s.ServeHTTP(w, req)
+		})
 	http.HandleFunc("/situation",
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
@@ -1191,6 +1232,8 @@ func managementInterface() {
 	http.HandleFunc("/getTowers", handleTowersRequest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	// Alerts Feature	
+	http.HandleFunc("/getAlerts", handleAlertsRequest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)

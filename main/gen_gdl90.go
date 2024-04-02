@@ -1401,6 +1401,8 @@ func addSingleSystemErrorf(ident string, format string, a ...interface{}) {
 		systemErrs[ident] = fmt.Sprintf(format, a...)
 		globalStatus.Errors = append(globalStatus.Errors, systemErrs[ident])
 		log.Printf("Added critical system error: %s\n", systemErrs[ident])
+		// Alerts Feature Push critical events
+		alerts.pushEventByIdent(ident,Alert{EVENT_TYPE_UNKOWN_WARNING,fmt.Sprintf(format, a...),time.Now()})
 	}
 	// Do nothing on this call if the error has already been thrown.
 	systemErrsMutex.Unlock()
