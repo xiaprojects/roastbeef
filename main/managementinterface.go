@@ -82,6 +82,24 @@ var trafficUpdate *uibroadcaster
 var radarUpdate *uibroadcaster
 var gdl90Update *uibroadcaster
 
+
+
+/*
+	Keypad Feature
+	- Websocket
+*/
+// Keypad WS
+var keypadUpdate *uibroadcaster
+
+// Keypad WS Code
+func handleKeypadWS(conn *websocket.Conn) {
+	keypadUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
 /*
 	Alerts Feature
 	- Websocket
@@ -492,6 +510,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.AIS_Enabled = val.(bool)
 					case "APRS_Enabled":
 						globalSettings.APRS_Enabled = val.(bool)
+					case "Keypad_Enabled":
+						globalSettings.Keypad_Enabled = val.(bool)
 					case "Ping_Enabled":
 						globalSettings.Ping_Enabled = val.(bool)
 					case "Audio_Enabled":
@@ -1275,6 +1295,7 @@ func managementInterface() {
 	weatherRawUpdate = NewUIBroadcaster()
 	gdl90Update = NewUIBroadcaster()
 	alertUpdate = NewUIBroadcaster()
+	keypadUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))
@@ -1298,6 +1319,13 @@ func managementInterface() {
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleAlertsWS)}
+			s.ServeHTTP(w, req)
+		})
+	// Keypad Feature
+	http.HandleFunc("/keypad",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleKeypadWS)}
 			s.ServeHTTP(w, req)
 		})
 	http.HandleFunc("/situation",

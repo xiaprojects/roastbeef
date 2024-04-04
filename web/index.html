@@ -81,12 +81,18 @@
 	<script src="plates/js/alerts.js"></script>
 	<script src="js/servicealerts.js"></script>
 	<script src="plates/js/timers.js"></script>
+	<script src="js/keypad.js"></script>
 	<script src="plates/js/developer.js"></script>
 </head>
 
 <body ng-app="stratux" ng-controller="MainCtrl" ui-prevent-touchmove-defaults>
 	<!-- Needed for modal confirmation dialogs -->
 	<div ui-yield-to="modals"></div>
+	<!-- keypadModal -->
+	<div class="modal" ui-if="keypadModal" ui-state="keypadModal">
+		{{keypadKnobLastTitle}}
+	</div>
+
 	<!-- Define Left (Menu) Sidebar Navigation -->
 	<div ui-track-as-search-param='true' class="sidebar sidebar-left">
 		<div class="scrollable">

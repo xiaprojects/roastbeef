@@ -1234,6 +1234,7 @@ type settings struct {
 	GpsManualTargetBaud  int            // default: 115200
 	// Plugins
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
+	Keypad_Enabled       bool
 }
 
 type status struct {
@@ -1301,6 +1302,7 @@ var globalStatus status
 func defaultSettings() {
 	// Plugin defaults
 	globalSettings.Audio_Enabled = false
+	globalSettings.Keypad_Enabled = false
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
@@ -1590,6 +1592,8 @@ func gracefulShutdown() {
 	timers.ShutdownFunc()
 	// Alerts Feature
 	alerts.ShutdownFunc()
+	// USB Keyboard and Keypad Driver
+	keypad.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 }
@@ -1734,6 +1738,8 @@ func main() {
 		alerts.InitFunc()
 		// Timers Feature
 		timers.InitFunc()
+		// USB Keyboard and Keypad Driver
+		keypad.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 

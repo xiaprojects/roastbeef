@@ -133,7 +133,13 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
-
+            // Plugins: Keypad Service
+            $scope.Keypad_Enabled= settings.Keypad_Enabled;
+            if($scope.Keypad_Enabled==true){
+		if(($scope.keypad === undefined) || ($scope.keypad === null)){
+			$scope.keypad = new KeypadService($scope,response);
+            	}
+            }
 			// Plugins: Alerts Service
 			$scope.Alerts_Enabled= true;
 			if($scope.Alerts_Enabled==true){
