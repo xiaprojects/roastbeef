@@ -288,6 +288,111 @@ func handleSituationWS(conn *websocket.Conn) {
 
 }
 
+/***
+ * Timers REST API Start
+ */
+func handleTimersGet(w http.ResponseWriter, r *http.Request) {
+	timers.timersDataMutex.Lock()
+	statusJSON, err := json.Marshal(&timers.timersData)
+	timers.timersDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+func handleTimersDelete(w http.ResponseWriter, r *http.Request) {
+	
+	parts := strings.Split(r.RequestURI, "/")
+	log.Printf("%s %d",r.RequestURI,len(parts))
+	
+	if len(parts) < 3 {
+		return
+	}
+	idx := len(parts) - 1
+	timerId, err := strconv.Atoi(parts[idx])
+	log.Printf("Timer delete %d", timerId)
+	timers.timersDataMutex.Lock()
+	if(len(timers.timersData)>timerId){
+		timers.timersData=append(timers.timersData[:timerId], timers.timersData[timerId+1:]...)
+	}
+	statusJSON, err := json.Marshal(&timers.timersData)
+	timers.timersDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+func handleTimersPut(w http.ResponseWriter, r *http.Request) {
+	timers.timersDataMutex.Lock()
+	timers.timersData = append(timers.timersData, SingleTimer{0,0,false,false})
+	statusJSON, err := json.Marshal(&timers.timersData)
+	timers.timersDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+func handleTimersPost(w http.ResponseWriter, r *http.Request) {
+	//raw, _ := httputil.DumpRequest(r, true)
+	//log.Printf("handleTimersPost:raw: %s\n", raw)
+	decoder := json.NewDecoder(r.Body)
+	
+		var msg map[int]SingleTimer
+		err := decoder.Decode(&msg)
+		if err == io.EOF {
+			
+		} else if err != nil {
+			log.Printf("handleTimersSetRequest:error: %s\n", err.Error())
+		} else {
+			for key, thisTimer := range msg {					
+				if(len(timers.timersData)>key){
+					timers.timersDataMutex.Lock()
+					timers.timersData[key].CountDown = thisTimer.CountDown
+					timers.timersData[key].Status = thisTimer.Status
+					timers.timersData[key].Epoch = thisTimer.Epoch
+					timers.timersData[key].Fired = thisTimer.Fired
+					timers.timersDataMutex.Unlock()
+				}
+			}
+		}
+}
+
+func handleTimersRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+	// AJAX call - /getTimers. Responds with current CameraSources
+	if r.Method == "GET" {
+		handleTimersGet(w, r)
+	}
+
+	if r.Method == "DELETE" {
+		handleTimersDelete(w, r)
+	}
+
+	if r.Method == "PUT" {
+		handleTimersPut(w, r)
+	}
+
+	if r.Method == "POST" {
+		handleTimersPost(w, r)
+	}
+}
+/***
+ * Timers REST API End
+ */
+
 // AJAX call - /getStatus. Responds with current global status
 // a webservice call for the same data available on the websocket but when only a single update is needed
 func handleStatusRequest(w http.ResponseWriter, r *http.Request) {
@@ -1235,6 +1340,8 @@ func managementInterface() {
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
 	// Alerts Feature	
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
+	// Timers Feature
+	http.HandleFunc("/timers", handleTimersRest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)

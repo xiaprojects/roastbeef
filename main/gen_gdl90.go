@@ -1586,9 +1586,10 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// Timers Feature
+	timers.ShutdownFunc()
 	// Alerts Feature
 	alerts.ShutdownFunc()
-
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 }
@@ -1731,6 +1732,8 @@ func main() {
 		// Enable loaded plugins
 		// Alerts Feature
 		alerts.InitFunc()
+		// Timers Feature
+		timers.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 
