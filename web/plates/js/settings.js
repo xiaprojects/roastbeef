@@ -263,6 +263,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 	var toggles = ['UAT_Enabled', 'ES_Enabled', 'OGN_Enabled', 'AIS_Enabled', 'APRS_Enabled', 'Ping_Enabled', 'OGNI2CTXEnabled', 'GPS_Enabled', 'IMU_Sensor_Enabled',
 		'Audio_Enabled',
 		'Keypad_Enabled',
+		'Camera_Enabled',
 		'BMP_Sensor_Enabled', 'DisplayTrafficSource', 'DEBUG', 'ReplayLog', 'TraceLog', 'AHRSLog', 'PersistentLogging', 'GDL90MSLAlt_Enabled', 'EstimateBearinglessDist', 'DarkMode'];
 
 	var settings = {};
@@ -309,6 +310,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		$scope.TraceLog = settings.TraceLog;
 		$scope.AHRSLog = settings.AHRSLog;
 		$scope.PersistentLogging = settings.PersistentLogging;
+		$scope.Camera_Enabled = settings.Camera_Enabled;
 		$scope.Audio_Enabled = settings.Audio_Enabled;
 		$scope.Keypad_Enabled = settings.Keypad_Enabled;
 		$scope.PPM = settings.PPM;

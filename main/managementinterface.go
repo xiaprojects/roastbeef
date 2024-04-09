@@ -516,6 +516,15 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.Ping_Enabled = val.(bool)
 					case "Audio_Enabled":
 						globalSettings.Audio_Enabled = val.(bool)
+					case "Camera_Enabled":
+						globalSettings.Camera_Enabled = val.(bool)
+					case "Cameras":
+						var newCameras = make([]cameraModel, 0)
+						for _, rawModel := range val.([]interface{}) {
+							modelItem := rawModel.(map[string]interface{})
+							newCameras = append(newCameras, cameraModel{Name: modelItem["Name"].(string),Url: modelItem["Url"].(string),Type:int(modelItem["Type"].(float64))})
+						}
+						globalSettings.Cameras = newCameras
 					case "OGNI2CTXEnabled":
 						globalSettings.OGNI2CTXEnabled = val.(bool)
 					case "GPS_Enabled":

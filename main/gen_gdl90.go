@@ -1234,6 +1234,8 @@ type settings struct {
 	GpsManualTargetBaud  int            // default: 115200
 	// Plugins
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
+	Camera_Enabled       bool // USB Camera and WebCam
+	Cameras              []cameraModel // Camera Settings
 	Keypad_Enabled       bool
 }
 
@@ -1303,6 +1305,8 @@ func defaultSettings() {
 	// Plugin defaults
 	globalSettings.Audio_Enabled = false
 	globalSettings.Keypad_Enabled = false
+	globalSettings.Camera_Enabled = false
+	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true

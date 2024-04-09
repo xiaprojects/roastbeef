@@ -93,6 +93,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'RadarCtrl',
 			reloadOnSearch: false
 		})
+		.state('camera', {
+			url: '/camera',
+			templateUrl: 'plates/camera.html',
+			controller: 'CameraCtrl',
+			reloadOnSearch: false
+		})
 		.state('map', {
 			url: '/map',
 			templateUrl: 'plates/map.html',
@@ -133,6 +139,8 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+            // Plugins: Camera Menu
+            $scope.Camera_Enabled = settings.Camera_Enabled;
             // Plugins: Keypad Service
             $scope.Keypad_Enabled= settings.Keypad_Enabled;
             if($scope.Keypad_Enabled==true){

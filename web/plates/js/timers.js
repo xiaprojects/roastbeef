@@ -17,7 +17,6 @@ var TIMER_STATUS_RUNNING = true;
 function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/timers-help.html';
     $scope.data_list = [];
-    $scope.isHidden = false;
     $scope.noSleep = new NoSleep();
 
 

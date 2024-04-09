@@ -215,16 +215,29 @@ function KeypadService($scope, settings) {
             "title": "Traffic"
         },
         "#/gps": {
-            "ArrowRight": "#/logs",
-            "ArrowDown": "#/logs",
-            "3": "#/logs",
-            "to": "#/logs",
+            "ArrowRight": "#/camera",
+            "ArrowDown": "#/camera",
+            "3": "#/camera",
+            "to": "#/camera",
             "from": "#/traffic",
             "ArrowLeft": "#/traffic",
             "ArrowUp": "#/traffic",
             "1": "#/traffic",
             "knobDeg": 0,
             "title": "GPS"
+        },
+        "#/camera": {
+            "disableRotary": true,
+            "ArrowRight": "#/logs",
+            "ArrowDown": "#/logs",
+            "3": "#/logs",
+            "to": "#/logs",
+            "from": "#/gps",
+            "ArrowLeft": "#/gps",
+            "ArrowUp": "#/gps",
+            "1": "#/gps",
+            "knobDeg": 0,
+            "title": "Camera"
         },
         "#/logs": {
             "ArrowRight": "#/settings",
@@ -430,7 +443,7 @@ function KeypadService($scope, settings) {
         //var nextLocation = keypadSettingsNavigation[document.location.hash][key];
         // Using this feature many 1000 times requires a "async" to load the screen, do not apply now
         // UN-Comment this line if Rotary is used "keypadModal" or NO-USE this line if apply the Left Side Menu
-        //document.location = $scope.keypadKnobLastLocation
+        document.location = $scope.keypadKnobLastLocation
         
         // Not required because it is triggered by Angular
         //$scope.$apply(); 
@@ -461,7 +474,7 @@ function KeypadService($scope, settings) {
                 $scope.keypadKnobLastLocation = nextLocation;
                 // Using this feature many 1000 times requires a "async" to load the screen, do not apply now
                 // Comment this line if Rotary is used "keypadModal" or USE this line if apply the Left Side Menu
-                document.location = nextLocation
+                //document.location = nextLocation
             }
         }
         else {
