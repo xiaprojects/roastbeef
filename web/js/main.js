@@ -99,6 +99,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'CameraCtrl',
 			reloadOnSearch: false
 		})
+		.state('autopilot', {
+			url: '/autopilot',
+			templateUrl: 'plates/autopilot.html',
+			controller: 'AutopilotCtrl',
+			reloadOnSearch: false
+		})
 		.state('map', {
 			url: '/map',
 			templateUrl: 'plates/map.html',
@@ -139,6 +145,8 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+            // Plugins: Autopilot Menu
+            $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
             // Plugins: Camera Menu
             $scope.Camera_Enabled = settings.Camera_Enabled;
             // Plugins: Keypad Service

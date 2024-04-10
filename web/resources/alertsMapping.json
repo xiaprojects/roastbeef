@@ -47,6 +47,30 @@
       "Id": "EVENT_TYPE_STARTUP_INFO",
       "Icon": "info",
       "Sound": ""
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_ENGAGE",
+      "Id": "EVENT_TYPE_AUTOPILOT_ENGAGE",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_DISENGAGE",
+      "Id": "EVENT_TYPE_AUTOPILOT_DISENGAGE",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_ABEAM",
+      "Id": "EVENT_TYPE_AUTOPILOT_ABEAM",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_AUTOPILOT_GOTO",
+      "Id": "EVENT_TYPE_AUTOPILOT_GOTO",
+      "Icon": "info",
+      "Sound": "notify"
     }
   ],
   "it-IT": [

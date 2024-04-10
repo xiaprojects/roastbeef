@@ -1234,6 +1234,8 @@ type settings struct {
     GpsManualChip        string         // ublox8, ublox9, ublox
 	GpsManualTargetBaud  int            // default: 115200
 	// Plugins
+	Autopilot_Enabled    bool // Autopilot with HSI
+	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
 	Camera_Enabled       bool // USB Camera and WebCam
 	Cameras              []cameraModel // Camera Settings
@@ -1304,6 +1306,8 @@ var globalStatus status
 
 func defaultSettings() {
 	// Plugin defaults
+	globalSettings.Autopilot_Enabled = false
+	globalSettings.Autopilot_HomeWaypoint = Waypoint{Lat:41.95284169758052,Lon:12.501970590019647,Ele:0,Cmt:"Home"} // Home Location, LIRU as example
 	globalSettings.Audio_Enabled = false
 	globalSettings.Keypad_Enabled = false
 	globalSettings.Camera_Enabled = false
@@ -1593,6 +1597,8 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// Autopilot Feature
+	autopilot.ShutdownFunc()
 	// Timers Feature
 	timers.ShutdownFunc()
 	// Alerts Feature
@@ -1740,6 +1746,8 @@ func main() {
 		sdrInit()
 		pingInit()
 		// Enable loaded plugins
+		// Autopilot Feature
+		autopilot.InitFunc()
 		// Alerts Feature
 		alerts.InitFunc()
 		// Timers Feature

@@ -82,6 +82,9 @@
 	<script src="plates/js/alerts.js"></script>
 	<script src="js/servicealerts.js"></script>
 	<script src="plates/js/timers.js"></script>
+	<script src="js/GPXParser.js"></script>
+	<script src="plates/js/cockpit_widgets.js"></script>
+	<script src="plates/js/autopilot.js"></script>
 	<script src="js/keypad.js"></script>
 	<script src="plates/js/developer.js"></script>
 </head>
@@ -109,7 +112,9 @@
 					</div>
 					<a class="list-group-item" href="#/traffic"><i class="fa fa-plane"></i>    Traffic  <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/gps"><i class="fa fa-globe"></i>        GPS/AHRS <i class="fa fa-chevron-right pull-right"></i></a>
-					<div ng-show="UAT_Enabled">
+					<div ng-show="Autopilot_Enabled">
+						<a class="list-group-item" href="#/autopilot"><i class="fa fa-location-arrow"></i>    Autopilot <i class="fa fa-chevron-right pull-right"></i></a>
+					</div>					<div ng-show="UAT_Enabled">
 						<a class="list-group-item" href="#/towers"><i class="fa fa-signal"></i>    Towers   <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
 					<div ng-show="Camera_Enabled">
