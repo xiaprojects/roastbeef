@@ -111,6 +111,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'MapCtrl',
 			reloadOnSearch: false
 		})
+		.state('checklist', {
+			url: '/checklist',
+			templateUrl: 'plates/checklist.html',
+			controller: 'CheckCtrl',
+			reloadOnSearch: false
+		})
 		.state('alerts', {
 			url: '/alerts',
 			templateUrl: 'plates/alerts.html',

@@ -491,6 +491,73 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
  * Autopilot REST API End
  */
 
+
+/***
+ * Checklist REST API
+ */
+ // Restore or Get current Checklist Status
+ func handleChecklistGet(w http.ResponseWriter, r *http.Request) {
+	checklist.checklistDataMutex.Lock()
+	statusJSON, err := json.Marshal(&checklist.checklistData)
+	checklist.checklistDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+
+// Update current Checklist Status
+func handleChecklistPost(w http.ResponseWriter, r *http.Request) {
+	raw, _ := httputil.DumpRequest(r, true)
+	log.Printf("handleChecklistPost:raw: %s\n", raw)
+	decoder := json.NewDecoder(r.Body)
+	var msg []interface{}
+	err := decoder.Decode(&msg)
+	if err == nil {
+		checklist.checklistDataMutex.Lock()
+		checklist.checklistData = msg
+		checklist.checklistDataMutex.Unlock()
+	} else {
+		log.Printf("%s", err)
+	}
+	fmt.Fprintf(w, "{}\n")
+}
+
+// TODO: Modify and store the checklist items
+func handleChecklistPut(w http.ResponseWriter, r *http.Request) {
+}
+
+// TODO: Reset checklist status
+func handleChecklistDelete(w http.ResponseWriter, r *http.Request) {
+}
+
+func handleChecklistRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	if r.Method == "GET" {
+		handleChecklistGet(w, r)
+	}
+	if r.Method == "POST" {
+		handleChecklistPost(w, r)
+	}
+	if r.Method == "PUT" {
+		handleChecklistPut(w, r)
+	}
+	if r.Method == "DELETE" {
+		handleChecklistDelete(w, r)
+	}
+}
+
+/***
+ * Checklist REST API End
+ */
+
 // AJAX call - /getStatus. Responds with current global status
 // a webservice call for the same data available on the websocket but when only a single update is needed
 func handleStatusRequest(w http.ResponseWriter, r *http.Request) {
@@ -1462,6 +1529,8 @@ func managementInterface() {
 	http.HandleFunc("/autopilot", handleAutopilotRest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	// Checklist Feature
+	http.HandleFunc("/checklist/default/status", handleChecklistRest)
 	// Alerts Feature	
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
 	// Timers Feature

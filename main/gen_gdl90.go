@@ -1597,6 +1597,8 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// Checklist Feature
+	checklist.ShutdownFunc()
 	// Autopilot Feature
 	autopilot.ShutdownFunc()
 	// Timers Feature
@@ -1746,6 +1748,8 @@ func main() {
 		sdrInit()
 		pingInit()
 		// Enable loaded plugins
+		// Checklist Feature
+		checklist.InitFunc()
 		// Autopilot Feature
 		autopilot.InitFunc()
 		// Alerts Feature

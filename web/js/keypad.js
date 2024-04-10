@@ -314,17 +314,31 @@ function KeypadService($scope, settings) {
             "title": "Timers"
         },
         "#/alerts": {
-            "ArrowRight": "#/alerts",
-            "ArrowDown": "#/alerts",
-            "3": "#/alerts",
-            "to": "#/alerts",
+            "ArrowRight": "#/checklist",
+            "ArrowDown": "#/checklist",
+            "3": "#/checklist",
+            "to": "#/checklist",
             "from": "#/timers",
             "ArrowLeft": "#/timers",
             "ArrowUp": "#/timers",
             "1": "#/timers",
             "knobDeg": 0,
             "title": "Alerts"
+        },
+        "#/checklist": {
+            "disableRotary": true,
+            "ArrowRight": "#/checklist",
+            "ArrowDown": "#/checklist",
+            "3": "#/checklist",
+            "to": "#/checklist",
+            "from": "#/alerts",
+            "ArrowLeft": "#/alerts",
+            "ArrowUp": "#/alerts",
+            "1": "#/alerts",
+            "knobDeg": 0,
+            "title": "Checklist"
         }
+
     };
     // Current Rotary Navigation Pattern: ROTARY at 8 positions, uncomment when Rotary is used
     /*
