@@ -215,10 +215,10 @@ function KeypadService($scope, settings) {
             "title": "Traffic"
         },
         "#/gps": {
-            "ArrowRight": "#/camera",
-            "ArrowDown": "#/camera",
-            "3": "#/camera",
-            "to": "#/camera",
+            "ArrowRight": "#/autopilot",
+            "ArrowDown": "#/autopilot",
+            "3": "#/autopilot",
+            "to": "#/autopilot",
             "from": "#/traffic",
             "ArrowLeft": "#/traffic",
             "ArrowUp": "#/traffic",
@@ -226,16 +226,29 @@ function KeypadService($scope, settings) {
             "knobDeg": 0,
             "title": "GPS"
         },
+        "#/autopilot": {
+            "disableRotary": true,
+            "ArrowRight": "#/camera",
+            "ArrowDown": "#/camera",
+            "3": "#/camera",
+            "to": "#/camera",
+            "from": "#/gps",
+            "ArrowLeft": "#/gps",
+            "ArrowUp": "#/gps",
+            "1": "#/gps",
+            "knobDeg": 0,
+            "title": "Autopilot"
+        },
         "#/camera": {
             "disableRotary": true,
             "ArrowRight": "#/logs",
             "ArrowDown": "#/logs",
             "3": "#/logs",
             "to": "#/logs",
-            "from": "#/gps",
-            "ArrowLeft": "#/gps",
-            "ArrowUp": "#/gps",
-            "1": "#/gps",
+            "from": "#/autopilot",
+            "ArrowLeft": "#/autopilot",
+            "ArrowUp": "#/autopilot",
+            "1": "#/autopilot",
             "knobDeg": 0,
             "title": "Camera"
         },
