@@ -191,6 +191,19 @@ function KeypadService($scope, settings) {
     // Current Rotary Navigation Pattern: Left Side Menu
     var keypadSettingsNavigation = {
         "#/": {
+            "ArrowRight": "#/cockpit",
+            "ArrowDown": "#/cockpit",
+            "3": "#/cockpit",
+            "to": "#/cockpit",
+            "from": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
+            "knobDeg": 0,
+            "title": "Home"
+        },
+        "#/cockpit": {
+            "disableRotary": true,
             "ArrowRight": "#/traffic",
             "ArrowDown": "#/traffic",
             "3": "#/traffic",
@@ -200,17 +213,17 @@ function KeypadService($scope, settings) {
             "ArrowUp": "#/",
             "1": "#/",
             "knobDeg": 0,
-            "title": "Home"
-        },
+            "title": "Cockpit"
+        },        
         "#/traffic": {
             "ArrowRight": "#/gps",
             "ArrowDown": "#/gps",
             "3": "#/gps",
             "to": "#/gps",
-            "from": "#/",
-            "ArrowLeft": "#/",
-            "ArrowUp": "#/",
-            "1": "#/",
+            "from": "#/cockpit",
+            "ArrowLeft": "#/cockpit",
+            "ArrowUp": "#/cockpit",
+            "1": "#/cockpit",
             "knobDeg": 0,
             "title": "Traffic"
         },

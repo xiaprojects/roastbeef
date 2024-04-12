@@ -1,0 +1,8 @@
+<div ui-content-for="title">Cockpit</div>
+<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-body" id="cockpit_container" >
+				<span class="{{scrollItemCounter==$index?'keypadSelectedYes':'keypadSelectedNo'}} {{widget.class}}" id="{{'CockpitWidget' + $index}}"  ng-click="zoom($index);" ng-repeat="widget in widgetsSettings"></span>
+			</div>
+		</div>
+</div>

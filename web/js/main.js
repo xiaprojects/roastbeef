@@ -51,6 +51,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'StatusCtrl',
 			reloadOnSearch: false
 		})
+		.state('cockpit', {
+			url: '/cockpit',
+			templateUrl: 'plates/cockpit.html',
+			controller: 'CockpitCtrl',
+			reloadOnSearch: false
+		})
 		.state('towers', {
 			url: '/towers',
 			templateUrl: 'plates/towers.html',
