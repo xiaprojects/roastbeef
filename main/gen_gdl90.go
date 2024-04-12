@@ -47,7 +47,6 @@ var dataLogFilef string // Set according to OS config.
 
 const (
 	STRATUX_HOME  = "/opt/stratux/"
-	configLocation = "/boot/stratux.conf"
 	managementAddr = ":80"
 	logDir         = "/var/log/"
 	dataLogFile    = "stratux.sqlite"
@@ -120,6 +119,8 @@ const (
 )
 
 var STRATUX_WWW_DIR = STRATUX_HOME + "www/"
+var configLocation = "/boot/firmware/stratux.conf"
+
 var maxSignalStrength int
 
 var stratuxBuild string
@@ -1232,6 +1233,13 @@ type settings struct {
 	GpsManualDevice	     string         // default: /dev/ttyAMA0
     GpsManualChip        string         // ublox8, ublox9, ublox
 	GpsManualTargetBaud  int            // default: 115200
+	// Plugins
+	Autopilot_Enabled    bool // Autopilot with HSI
+	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
+	Audio_Enabled        bool // Alerts Audio Playback on RPI
+	Camera_Enabled       bool // USB Camera and WebCam
+	Cameras              []cameraModel // Camera Settings
+	Keypad_Enabled       bool
 }
 
 type status struct {
@@ -1297,6 +1305,13 @@ var globalSettings settings
 var globalStatus status
 
 func defaultSettings() {
+	// Plugin defaults
+	globalSettings.Autopilot_Enabled = false
+	globalSettings.Autopilot_HomeWaypoint = Waypoint{Lat:41.95284169758052,Lon:12.501970590019647,Ele:0,Cmt:"Home"} // Home Location, LIRU as example
+	globalSettings.Audio_Enabled = false
+	globalSettings.Keypad_Enabled = false
+	globalSettings.Camera_Enabled = false
+	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
@@ -1397,6 +1412,8 @@ func addSingleSystemErrorf(ident string, format string, a ...interface{}) {
 		systemErrs[ident] = fmt.Sprintf(format, a...)
 		globalStatus.Errors = append(globalStatus.Errors, systemErrs[ident])
 		log.Printf("Added critical system error: %s\n", systemErrs[ident])
+		// Alerts Feature Push critical events
+		alerts.pushEventByIdent(ident,Alert{EVENT_TYPE_UNKOWN_WARNING,fmt.Sprintf(format, a...),time.Now()})
 	}
 	// Do nothing on this call if the error has already been thrown.
 	systemErrsMutex.Unlock()
@@ -1580,7 +1597,16 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
-
+	// Checklist Feature
+	checklist.ShutdownFunc()
+	// Autopilot Feature
+	autopilot.ShutdownFunc()
+	// Timers Feature
+	timers.ShutdownFunc()
+	// Alerts Feature
+	alerts.ShutdownFunc()
+	// USB Keyboard and Keypad Driver
+	keypad.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 }
@@ -1626,6 +1652,7 @@ func main() {
 			ex = filepath.Dir(ex)
 			STRATUX_WWW_DIR = ex + "/web/"
 		}
+		configLocation = os.Getenv("HOME") + "/.stratux.conf"
 	}
 
 	// Set up mySituation, do it here so logging JSON doesn't panic
@@ -1720,6 +1747,17 @@ func main() {
 	if !isTraceReplayMode {
 		sdrInit()
 		pingInit()
+		// Enable loaded plugins
+		// Checklist Feature
+		checklist.InitFunc()
+		// Autopilot Feature
+		autopilot.InitFunc()
+		// Alerts Feature
+		alerts.InitFunc()
+		// Timers Feature
+		timers.InitFunc()
+		// USB Keyboard and Keypad Driver
+		keypad.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 

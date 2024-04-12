@@ -21,6 +21,7 @@ import (
 	"log"
 	"math"
 	"net/http"
+	"net/http/httputil"
 	"net/url"
 	"os"
 	"os/exec"
@@ -83,6 +84,56 @@ var radarUpdate *uibroadcaster
 var gdl90Update *uibroadcaster
 
 
+
+/*
+	Keypad Feature
+	- Websocket
+*/
+// Keypad WS
+var keypadUpdate *uibroadcaster
+
+// Keypad WS Code
+func handleKeypadWS(conn *websocket.Conn) {
+	keypadUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
+/*
+	Alerts Feature
+	- Websocket
+	- Dispatcher for websocket
+	- GetAlerts API
+*/
+// Alerts WS
+var alertUpdate *uibroadcaster
+
+// Alerts WS Code
+func handleAlertsWS(conn *websocket.Conn) {
+	alertUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
+
+// AJAX call - /getAlerts. Responds with current Alerts status
+func handleAlertsRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	alerts.alertsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&alerts.alertsData)
+	alerts.alertsDataMutex.Unlock()
+	if err == nil {
+	fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+	}
+}
+// Alerts Feature End Code
 
 func handleGDL90WS(conn *websocket.Conn) {
 	// Subscribe the socket to receive updates.
@@ -256,6 +307,257 @@ func handleSituationWS(conn *websocket.Conn) {
 
 }
 
+/***
+ * Timers REST API Start
+ */
+func handleTimersGet(w http.ResponseWriter, r *http.Request) {
+	timers.timersDataMutex.Lock()
+	statusJSON, err := json.Marshal(&timers.timersData)
+	timers.timersDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+func handleTimersDelete(w http.ResponseWriter, r *http.Request) {
+	
+	parts := strings.Split(r.RequestURI, "/")
+	log.Printf("%s %d",r.RequestURI,len(parts))
+	
+	if len(parts) < 3 {
+		return
+	}
+	idx := len(parts) - 1
+	timerId, err := strconv.Atoi(parts[idx])
+	log.Printf("Timer delete %d", timerId)
+	timers.timersDataMutex.Lock()
+	if(len(timers.timersData)>timerId){
+		timers.timersData=append(timers.timersData[:timerId], timers.timersData[timerId+1:]...)
+	}
+	statusJSON, err := json.Marshal(&timers.timersData)
+	timers.timersDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+func handleTimersPut(w http.ResponseWriter, r *http.Request) {
+	timers.timersDataMutex.Lock()
+	timers.timersData = append(timers.timersData, SingleTimer{0,0,false,false})
+	statusJSON, err := json.Marshal(&timers.timersData)
+	timers.timersDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+func handleTimersPost(w http.ResponseWriter, r *http.Request) {
+	//raw, _ := httputil.DumpRequest(r, true)
+	//log.Printf("handleTimersPost:raw: %s\n", raw)
+	decoder := json.NewDecoder(r.Body)
+	
+		var msg map[int]SingleTimer
+		err := decoder.Decode(&msg)
+		if err == io.EOF {
+			
+		} else if err != nil {
+			log.Printf("handleTimersSetRequest:error: %s\n", err.Error())
+		} else {
+			for key, thisTimer := range msg {					
+				if(len(timers.timersData)>key){
+					timers.timersDataMutex.Lock()
+					timers.timersData[key].CountDown = thisTimer.CountDown
+					timers.timersData[key].Status = thisTimer.Status
+					timers.timersData[key].Epoch = thisTimer.Epoch
+					timers.timersData[key].Fired = thisTimer.Fired
+					timers.timersDataMutex.Unlock()
+				}
+			}
+		}
+}
+
+func handleTimersRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+	// AJAX call - /getTimers. Responds with current CameraSources
+	if r.Method == "GET" {
+		handleTimersGet(w, r)
+	}
+
+	if r.Method == "DELETE" {
+		handleTimersDelete(w, r)
+	}
+
+	if r.Method == "PUT" {
+		handleTimersPut(w, r)
+	}
+
+	if r.Method == "POST" {
+		handleTimersPost(w, r)
+	}
+}
+/***
+ * Timers REST API End
+ */
+
+
+
+/***
+ * Autopilot REST API
+ */
+func handleAutopilotGet(w http.ResponseWriter, r *http.Request) {
+	autopilot.waypointsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&autopilot.waypointsData)
+	autopilot.waypointsDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+func handleAutopilotPut(w http.ResponseWriter, r *http.Request) {
+}
+func handleAutopilotPost(w http.ResponseWriter, r *http.Request) {
+
+
+	raw, _ := httputil.DumpRequest(r, true)
+	log.Printf("handleAutopilotPost:raw: %s\n", raw)
+	decoder := json.NewDecoder(r.Body)
+	
+		var msg []Waypoint
+		err := decoder.Decode(&msg)
+		if err == io.EOF {
+			
+		} else if err != nil {
+			log.Printf("handleAutopilotPost:error: %s\n", err.Error())
+		} else {
+			autopilot.waypointsDataMutex.Lock()
+			autopilot.waypointsData = msg
+			autopilot.waypointsDataMutex.Unlock()
+		}
+
+		fmt.Fprintf(w, "[]\n")
+
+
+}
+func handleAutopilotDelete(w http.ResponseWriter, r *http.Request) {
+	autopilot.waypointsDataMutex.Lock()
+	autopilot.waypointsData = make([]Waypoint, 0)
+	autopilot.isActive = false
+	autopilot.waypointsDataMutex.Unlock()
+}
+
+
+func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+	// AJAX call - /getTimers. Responds with current CameraSources
+	if r.Method == "GET" {
+		handleAutopilotGet(w, r)
+	}
+
+	if r.Method == "DELETE" {
+		handleAutopilotDelete(w, r)
+	}
+
+	if r.Method == "PUT" {
+		handleAutopilotPut(w, r)
+	}
+
+	if r.Method == "POST" {
+		handleAutopilotPost(w, r)
+	}
+}
+/***
+ * Autopilot REST API End
+ */
+
+
+/***
+ * Checklist REST API
+ */
+ // Restore or Get current Checklist Status
+ func handleChecklistGet(w http.ResponseWriter, r *http.Request) {
+	checklist.checklistDataMutex.Lock()
+	statusJSON, err := json.Marshal(&checklist.checklistData)
+	checklist.checklistDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+
+// Update current Checklist Status
+func handleChecklistPost(w http.ResponseWriter, r *http.Request) {
+	raw, _ := httputil.DumpRequest(r, true)
+	log.Printf("handleChecklistPost:raw: %s\n", raw)
+	decoder := json.NewDecoder(r.Body)
+	var msg []interface{}
+	err := decoder.Decode(&msg)
+	if err == nil {
+		checklist.checklistDataMutex.Lock()
+		checklist.checklistData = msg
+		checklist.checklistDataMutex.Unlock()
+	} else {
+		log.Printf("%s", err)
+	}
+	fmt.Fprintf(w, "{}\n")
+}
+
+// TODO: Modify and store the checklist items
+func handleChecklistPut(w http.ResponseWriter, r *http.Request) {
+}
+
+// TODO: Reset checklist status
+func handleChecklistDelete(w http.ResponseWriter, r *http.Request) {
+}
+
+func handleChecklistRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	if r.Method == "GET" {
+		handleChecklistGet(w, r)
+	}
+	if r.Method == "POST" {
+		handleChecklistPost(w, r)
+	}
+	if r.Method == "PUT" {
+		handleChecklistPut(w, r)
+	}
+	if r.Method == "DELETE" {
+		handleChecklistDelete(w, r)
+	}
+}
+
+/***
+ * Checklist REST API End
+ */
+
 // AJAX call - /getStatus. Responds with current global status
 // a webservice call for the same data available on the websocket but when only a single update is needed
 func handleStatusRequest(w http.ResponseWriter, r *http.Request) {
@@ -353,10 +655,29 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.OGN_Enabled = val.(bool)
 					case "AIS_Enabled":
 						globalSettings.AIS_Enabled = val.(bool)
+					case "Autopilot_Enabled":
+						globalSettings.Autopilot_Enabled = val.(bool)
+					case "Autopilot_HomeWaypoint":
+						home := val.(map[string]interface{})
+						waypoint := Waypoint{Lat:float32(home["Lat"].(float64)),Lon:float32(home["Lon"].(float64)),Ele:int32(home["Ele"].(float64)),Cmt:home["Cmt"].(string)}
+						globalSettings.Autopilot_HomeWaypoint = waypoint
 					case "APRS_Enabled":
 						globalSettings.APRS_Enabled = val.(bool)
+					case "Keypad_Enabled":
+						globalSettings.Keypad_Enabled = val.(bool)
 					case "Ping_Enabled":
 						globalSettings.Ping_Enabled = val.(bool)
+					case "Audio_Enabled":
+						globalSettings.Audio_Enabled = val.(bool)
+					case "Camera_Enabled":
+						globalSettings.Camera_Enabled = val.(bool)
+					case "Cameras":
+						var newCameras = make([]cameraModel, 0)
+						for _, rawModel := range val.([]interface{}) {
+							modelItem := rawModel.(map[string]interface{})
+							newCameras = append(newCameras, cameraModel{Name: modelItem["Name"].(string),Url: modelItem["Url"].(string),Type:int(modelItem["Type"].(float64))})
+						}
+						globalSettings.Cameras = newCameras
 					case "OGNI2CTXEnabled":
 						globalSettings.OGNI2CTXEnabled = val.(bool)
 					case "GPS_Enabled":
@@ -1135,6 +1456,8 @@ func managementInterface() {
 	situationUpdate = NewUIBroadcaster()
 	weatherRawUpdate = NewUIBroadcaster()
 	gdl90Update = NewUIBroadcaster()
+	alertUpdate = NewUIBroadcaster()
+	keypadUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))
@@ -1151,6 +1474,20 @@ func managementInterface() {
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleStatusWS)}
+			s.ServeHTTP(w, req)
+		})
+	// Alerts Feature
+	http.HandleFunc("/alerts",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleAlertsWS)}
+			s.ServeHTTP(w, req)
+		})
+	// Keypad Feature
+	http.HandleFunc("/keypad",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleKeypadWS)}
 			s.ServeHTTP(w, req)
 		})
 	http.HandleFunc("/situation",
@@ -1189,8 +1526,15 @@ func managementInterface() {
 	http.HandleFunc("/getStatus", handleStatusRequest)
 	http.HandleFunc("/getSituation", handleSituationRequest)
 	http.HandleFunc("/getTowers", handleTowersRequest)
+	http.HandleFunc("/autopilot", handleAutopilotRest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	// Checklist Feature
+	http.HandleFunc("/checklist/default/status", handleChecklistRest)
+	// Alerts Feature	
+	http.HandleFunc("/getAlerts", handleAlertsRequest)
+	// Timers Feature
+	http.HandleFunc("/timers", handleTimersRest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)

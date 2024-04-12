@@ -1,0 +1,216 @@
+<div ui-content-for="title">Autopilot</div>
+    <!---->
+	<div ng-class="[hsi_panel,ahrsClassSelected]"  id="ahrs_panel">
+        <div class="panel-group" ng-click="zoom('hsi_panel');">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="panel_label">AHRS</span>
+                    <span ng-show="ConnectState == 'Connected'" class="label label-success">{{ConnectState}}</span>
+                    <span ng-hide="ConnectState == 'Connected'" class="label label-danger">{{ConnectState}}</span>
+                </div>
+
+                <div class="panel-body">
+                            <div id="ahrs_display"></div>
+                            <span ng-repeat="g in gmeterIcons" class="label {{g.class}}" id="{{g.name}}" style="margin-right:1px;">{{g.text}}</span>
+                </div>
+
+            </div>
+        </div>        
+    </div>
+	<div ng-class="[hsi_panel,hsiClassSelected]" id="hsi_panel">
+        <div class="panel-group" ng-click="zoom('hsi_panel');">
+            <div class="panel panel-default">
+                <div class="panel-heading" >
+                    <span  class="panel_label">HSI</span>
+                    <span class="label {{directTo.Lat==0?'label-danger':'label-success'}}">{{directTo.Lat==0?'OFF':'ACTIVE'}}</span>
+                </div>
+                <div class="panel-body" id="hsi_container">
+                            <div id="hsi"></div>
+                            <span class="label {{isSelectedHSI==true?'label-danger':(overrideHSI!=0?'label-warning':'label-info')}}" id="overrideHSI">OVERRIDE RADIAL {{overrideHSI==0?'OFF':overrideHSI+'°'}}</span>
+
+                </div>
+            </div>
+        </div>        
+    </div>
+<!---->
+	<div class="col-sm-6 col-xs-12" ng-class="destClassSelected" id="dest_panel">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span ng-click="hideClick()" class="panel_label">Destination</span>
+                        <span class="label label-info">From: {{situation.GPSLatitude}}, {{situation.GPSLongitude}}
+                        TRK: {{situation.GPSTrueCourse.toFixed(1)}}°</span>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div>
+                            <span style="font-size: 3vmax;padding: 0px;margin:0px;color:{{to.xtrk<0?'blue':'purple'}};">{{to.xtrk<0?'&#9658;':'&#9668;'}}</span>
+                                    <span style="font-size: 4vmax;padding: 0px;margin:0px;">{{to.trk.toFixed(0)}}°</span>
+                                    <span style="font-size: 4vmax;padding: 0px;margin:0px;">{{to.dist.toFixed(1)}}</span><span>NM</span>
+                                    <span style="font-size: 4vmax;padding: 0px;margin:0px;">{{to.slope.toFixed(0)}}</span><span>%</span>
+                        </div>
+                        <div>
+                            <span
+                                To: style="font-size: 3vmax;padding: 0px;margin:0px;">{{directTo.Lat.toFixed(4)}},{{directTo.Lon.toFixed(4)}}</span>
+                                <span
+                                style="font-size: 3vmax;padding: 0px;margin:0px;color:{{to.dele>0?'green':'red'}};">{{to.dele>0?'&#9650;':'&#9660;'}}</span>
+                            <span
+                                style="font-size: 3vmax;padding: 0px;margin:0px;">{{to.dele>0?to.dele.toFixed(0):(-to.dele.toFixed(0))}}</span>
+                            <span>ft</span>
+
+                            </div>
+                        <button class="btn btn-success"
+                            ng-click="directToHome();">&ETH; HOME</button>
+                        <button class="btn btn-default" ng-click="directToNearest()">&ETH; Nearest</button>
+                        <button class="btn btn-danger" ng-click="">STOP AP</button>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+
+<!---->
+<div class="col-sm-6  col-xs-12" ng-class="forecastClassSelected" id="forecast_panel"> 
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span ng-click="hideClick()" class="panel_label">Forecast</span>
+                <span class="label label-info">Speed: {{situation.GPSGroundSpeed.toFixed(0)}}
+                </span>&nbsp;
+                <span class="label label-default">QNH: {{QNH.toFixed(0)}}
+                </span>
+            </div>
+            <div class="panel-body text-center">
+                <div class="col-xs-6"> 
+                    <span>ETE:</span>
+                    <span style="font-size: 4vmax;padding: 0px;margin:0px;">{{to.ete}}</span>
+                </div>
+                <div class="col-xs-6"> 
+                    <span>ATA:</span>
+                    <span style="font-size: 4vmax;padding: 0px;margin:0px;">{{to.ata}}</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---->
+<div class="col-xs-12">
+    <div class="panel-group">
+        <div class="panel panel-default" ng-repeat="route in gpx.routes">
+            <div class="panel-heading"><span class="panel_label">Flight Plan </span>
+                <span class="label label-success">{{route.name}}</span>
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;">
+    
+                <table style="width:100%;margin: 0px;padding:0px;">
+    
+                    <tr style="margin: 0px;padding:0px;">
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <strong>&ETH;</strong> TRK
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            Waypoint
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Time&nbsp;
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Distance NM&nbsp;
+                        </td>
+                        <td class="alertstitle" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Altitude&nbsp;
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;">
+                            Skip
+                        </td>
+                    </tr>
+    
+    
+                    <tr ng-repeat="point in route.points"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" ng-class="point.className" id="line_{{route.index}}_{{point.index}}">
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <a ng-click="directToWaypoint(route.index,point.index)">
+                                <i class="fa fa-location-arrow" aria-hidden="true"
+                                    style="font-size: 32px;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>
+                                {{point.trk.toFixed(1)}}°
+                            </a>
+                        </td>
+                        <td class="text-center"
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;">
+                            <strong>{{point.Cmt}}</strong>
+                            {{point.Lat.toFixed(4)}}, {{point.Lon.toFixed(4)}}
+    
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{point.time.toFixed(0)}}
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{point.dist.toFixed(1)}}
+    
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{point.Ele.toFixed(0)}}ft
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:2px;">
+                            <a ng-click="dropWaypoint(route.index,point.index)">
+                                <i class="fa fa-trash" aria-hidden="true" style="font-size: 24px;color:gray;"></i>
+                            </a>
+    
+                        </td>
+                    </tr>
+    
+    
+                    <tr style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                        </td>
+                        <td class="text-right"
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;">
+                            Total:&nbsp;
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{route.time.toFixed(0)}}
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <strong>{{route.dist.toFixed(1) }}</strong>
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+    
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:2px;">
+    
+                        </td>
+                    </tr>
+    
+                </table>
+                <div class="col-xs-12 text-right row" style="margin-top: 16px;">
+                    <button class="btn btn-warning" ng-click="dropWaypoints(route.indx)"><i class="fa fa-trash"></i> Drop
+                        Route</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+<!---->
+<div class="col-xs-6">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">Waypoint Management</div>
+            <div class="panel-body text-center">
+                <div class="col-xs-12" id="gpx_upload_panel">
+                    <span ng-show="true">
+                        <!-- default: offer file selection -->
+                        <span style="position:relative; overflow: hidden;">
+                            <span class="fake-btn fake-btn-block">Load GPX Waypoints</span>
+                            <input style="opacity:0.0; position: absolute; top: 0; right: 0;" class="col-xs-12"
+                                type="file" name="gpx_file"
+                                onchange="angular.element(this).scope().setUploadFile(this.files)" />
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

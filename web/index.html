@@ -57,8 +57,11 @@
 	<link rel="stylesheet" href="css/ol.css" />
 	<link rel="stylesheet" href="css/ol-layerswitcher.css" />
 	<link rel="stylesheet" href="css/map.css" />
+	<link rel="stylesheet" href="css/alerts.css" />
+	<link rel="stylesheet" href="css/timers.css" />
+	<link rel="stylesheet" href="css/checklist.css" />
 	<link rel="stylesheet" id="themeStylesheet" href="" />
-
+	<link rel="stylesheet" href="css/cockpit.css" />
 	<script src="maui/js/angular.min.js"></script>
 	<script src="maui/js/angular-ui-router.min.js"></script>
 	<script src="maui/js/mobile-angular-ui.min.js"></script>
@@ -75,13 +78,30 @@
 	<script src="plates/js/ahrs.js"></script>
 	<script src="plates/js/radar.js"></script>
 	<script src="plates/js/map.js"></script>
+	<script src="plates/js/camera.js"></script>
 	<script src="plates/js/gps.js"></script>
+	<script src="plates/js/alerts.js"></script>
+	<script src="js/servicealerts.js"></script>
+	<script src="plates/js/checklist.js"></script>
+	<script src="plates/js/timers.js"></script>
+	<script src="js/GPXParser.js"></script>
+	<script src="plates/js/cockpit_widgets.js"></script>
+	<script src="plates/js/cockpit.js"></script>
+	<script src="plates/js/autopilot.js"></script>
+	<script src="js/keypad.js"></script>
 	<script src="plates/js/developer.js"></script>
 </head>
 
 <body ng-app="stratux" ng-controller="MainCtrl" ui-prevent-touchmove-defaults>
 	<!-- Needed for modal confirmation dialogs -->
 	<div ui-yield-to="modals"></div>
+	<!-- keypadModal -->
+	<div class="modal" ui-if="keypadModal" ui-state="keypadModal">
+		<div style="line-height: 50vh; text-align: center; font-size: 10vh;margin:0px; width: 100%; height: 100%;background-color: rgba(200, 200, 200,0.5);">
+		{{keypadKnobLastTitle}}
+		</div>
+	</div>
+
 	<!-- Define Left (Menu) Sidebar Navigation -->
 	<div ui-track-as-search-param='true' class="sidebar sidebar-left">
 		<div class="scrollable">
@@ -90,18 +110,27 @@
 				<div class="list-group" ui-turn-off='uiSidebarLeft'>
 					<!-- hrefs are redirected by the state engine in main.js -->
 					<a class="list-group-item" href="#/"><i class="fa fa-home"></i>            Status   <i class="fa fa-chevron-right pull-right"></i></a>
+					<a class="list-group-item" href="#/cockpit"><i class="fa fa-star"></i>    Cockpit <i class="fa fa-chevron-right pull-right"></i></a>
 					<div ng-show="UAT_Enabled">
 						<a class="list-group-item" href="#/weather"><i class="fa fa-cloud"></i>    Weather  <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
 					<a class="list-group-item" href="#/traffic"><i class="fa fa-plane"></i>    Traffic  <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/gps"><i class="fa fa-globe"></i>        GPS/AHRS <i class="fa fa-chevron-right pull-right"></i></a>
-					<div ng-show="UAT_Enabled">
+					<div ng-show="Autopilot_Enabled">
+						<a class="list-group-item" href="#/autopilot"><i class="fa fa-location-arrow"></i>    Autopilot <i class="fa fa-chevron-right pull-right"></i></a>
+					</div>					<div ng-show="UAT_Enabled">
 						<a class="list-group-item" href="#/towers"><i class="fa fa-signal"></i>    Towers   <i class="fa fa-chevron-right pull-right"></i></a>
+					</div>
+					<div ng-show="Camera_Enabled">
+						<a class="list-group-item" href="#/camera"><i class="fa fa-camera"></i>    Camera <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
 					<a class="list-group-item" href="#/logs"><i class="fa fa-file-text-o"></i> Logs     <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/settings"><i class="fa fa-gear"></i>    Settings <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/radar"><i class="fa fa-street-view"></i>    Radar <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/map"><i class="fa fa-map"></i>    Map <i class="fa fa-chevron-right pull-right"></i></a>
+					<a class="list-group-item" href="#/timers"><i class="fa fa-clock-o"></i>    Timers <i class="fa fa-chevron-right pull-right"></i></a>
+					<a class="list-group-item" href="#/alerts"><i class="fa fa-exclamation-triangle"></i>    Alerts <i class="fa fa-chevron-right pull-right"></i></a>
+					<a class="list-group-item" href="#/checklist"><i class="fa fa-check-square-o"></i>    Checklist <i class="fa fa-chevron-right pull-right"></i></a>			
 					<div ng-show="DeveloperMode">
 					<a class="list-group-item" href="#/developer"><i class="fa fa-tasks"></i>    Developer <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
@@ -138,6 +167,9 @@
 				</div>
 			</div>
 			<div class="btn-group pull-right" ui-yield-to="navbarAction">
+				<audio id="audioproxy"></audio>
+				<div ng-click="goToAlerts();alarmIsLit=false;" class="btn" style="margin:0px; padding:0px;"><i class="fa {{alarmIsLit?'fa-bell':'fa-bell-o'}}" style="font-size: 28px;margin:0px; padding:0px;margin-top: 10px;color:{{alarmIsLit?'red':'gray'}};"></i></div>
+
 				<div ui-toggle="uiSidebarRight" class="btn">
 					<i class="fa fa-info-circle"></i> Help
 				</div>

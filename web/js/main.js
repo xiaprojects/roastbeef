@@ -51,6 +51,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'StatusCtrl',
 			reloadOnSearch: false
 		})
+		.state('cockpit', {
+			url: '/cockpit',
+			templateUrl: 'plates/cockpit.html',
+			controller: 'CockpitCtrl',
+			reloadOnSearch: false
+		})
 		.state('towers', {
 			url: '/towers',
 			templateUrl: 'plates/towers.html',
@@ -93,10 +99,40 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'RadarCtrl',
 			reloadOnSearch: false
 		})
+		.state('camera', {
+			url: '/camera',
+			templateUrl: 'plates/camera.html',
+			controller: 'CameraCtrl',
+			reloadOnSearch: false
+		})
+		.state('autopilot', {
+			url: '/autopilot',
+			templateUrl: 'plates/autopilot.html',
+			controller: 'AutopilotCtrl',
+			reloadOnSearch: false
+		})
 		.state('map', {
 			url: '/map',
 			templateUrl: 'plates/map.html',
 			controller: 'MapCtrl',
+			reloadOnSearch: false
+		})
+		.state('checklist', {
+			url: '/checklist',
+			templateUrl: 'plates/checklist.html',
+			controller: 'CheckCtrl',
+			reloadOnSearch: false
+		})
+		.state('alerts', {
+			url: '/alerts',
+			templateUrl: 'plates/alerts.html',
+			controller: 'AlertsCtrl',
+			reloadOnSearch: false
+		})
+		.state('timers', {
+			url: '/timers',
+			templateUrl: 'plates/timers.html',
+			controller: 'TimersCtrl',
 			reloadOnSearch: false
 		})
         .state('developer', {
@@ -121,6 +157,24 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+            // Plugins: Autopilot Menu
+            $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
+            // Plugins: Camera Menu
+            $scope.Camera_Enabled = settings.Camera_Enabled;
+            // Plugins: Keypad Service
+            $scope.Keypad_Enabled= settings.Keypad_Enabled;
+            if($scope.Keypad_Enabled==true){
+		if(($scope.keypad === undefined) || ($scope.keypad === null)){
+			$scope.keypad = new KeypadService($scope,response);
+            	}
+            }
+			// Plugins: Alerts Service
+			$scope.Alerts_Enabled= true;
+			if($scope.Alerts_Enabled==true){
+				if($scope.alerts === undefined|| $scope.alerts === null){
+					$scope.alerts = new AlertsService($scope, $http);
+				}
+			}
 
             // Update theme
             $scope.updateTheme(settings.DarkMode);

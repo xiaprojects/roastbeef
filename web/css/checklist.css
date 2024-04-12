@@ -1,0 +1,47 @@
+
+.checksline .checker {
+    width: 100px;
+    margin:5px;
+    min-height: 50px;
+    -webkit-appearance: none;
+}
+
+.checksline .checker.pass {
+    background-color: green;
+}
+.checksline .checker.fail {
+    background-color: red;
+}
+.checksline .checker.skip {
+    background-color: #7f7f7f;
+}
+
+.checksline.pass {
+    background-color: #00ac00;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.checksline.test {
+    background-color: yellow;
+    border-bottom: 1px solid #7f7f7f;
+}
+.checksline.skip {
+    background-color: #bcbcbc;
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.checksline.fail {
+    background-color: red;
+    border-bottom: 1px solid #7f7f7f;
+}
+.checksline.todo {
+    border-bottom: 1px solid #7f7f7f;
+}
+
+.checksline .alertstitle {
+    font-size: x-large;
+    padding-left: 4px;
+    border-right: 1px solid #7f7f7f;
+    border-left: 1px solid #7f7f7f;
+}
+

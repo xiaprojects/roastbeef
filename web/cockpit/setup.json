@@ -1,0 +1,122 @@
+[
+    {
+        "class":"col-xs-3",
+        "ceil": 0,
+        "scale": 1,
+        "background": "#00ffff",
+        "uiModel": "GPS\n\nKph",
+        "size": 0,
+        "circleSize": 330,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -90,
+        "sensorType": "GPSGroundSpeed",
+        "ranges": [
+            { "color": "#acacac", "min": 0, "max": 70 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": 70, "max": 80 },
+            { "color": "#ffffff", "min": 80, "max": 130 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 130, "max": 220 },
+            { "colorOff": "#888800", "color": "#ffff00", "min": 220, "max": 300 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": 300, "max": 330 }
+        ]
+    },
+    {
+        "class":"col-xs-3",
+        "ceil": 0,
+        "scale": 1,
+        "background": "#acacac",
+        "uiModel": "ALT\n\nfeet",
+        "size": 0,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "circleSize": 324,
+        "rotate": 270,
+        "sensorType": "BaroPressureAltitude",
+        "ranges": [
+            { "colorOff": "#acacac", "color": "#000000", "min": 0, "max": 1 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 1, "max": 2 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 2, "max": 3 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 3, "max": 4 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 4, "max": 5 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 5, "max": 6 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 6, "max": 7 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 7, "max": 8 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 8, "max": 9 }
+
+
+        ]
+    },
+    {
+        "class":"col-xs-3",
+        "ceil": 0,
+        "scale": 100,
+        "background": "#acacac",
+        "uiModel": "VARIO\n\nfeet/m",
+        "size": 0,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "circleSize": 270,
+        "rotate": -180,
+        "sensorType": "BaroVerticalSpeed",
+        "ranges": [
+            { "colorOff": "#880000", "color": "#ff0000", "min": -500, "max": -400 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": -400, "max": -300 },
+            { "colorOff": "#888800", "color": "#ffff00", "min": -300, "max": -200 },
+            { "colorOff": "#888800", "color": "#ffff00", "min": -200, "max": -100 },
+            { "colorOff": "#acacac", "color": "#000000", "min": -100, "max": 0 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 0, "max": 100 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 100, "max": 200 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 200, "max": 300 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 300, "max": 400 },
+            { "colorOff": "#000088", "color": "#0000ff", "min": 400, "max": 500 }
+
+        ]
+    },
+    {
+        "ceil": 1,
+        "class":"col-xs-3",
+        "scale": 1,
+        "background": "#00ffff",
+        "uiModel": "TRK",
+        "size": 0,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "circleSize": 360,
+        "format": "X°",
+        "value": 0,
+        "rotate": -90,
+        "sensorType": "GPSTrueCourse",
+        "ranges": [
+            { "colorOff": "#880000", "color": "#ff0000", "min": 0, "max": 50 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 10, "max": 500 }
+        ]
+    },
+    {
+        "ceil": 1,
+        "class":"col-xs-3",
+        "scale": 1,
+        "background": "#00ffff",
+        "size": 0,
+        "circleSize": 270,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -180,
+        "sensorType": "BaroTemperature",
+        "uiModel": "Temp\n\n°C",
+        "ranges": [
+            { "colorOff": "#000088", "color": "#0000ff", "min": -10, "max": 0 },
+            { "colorOff": "#008888", "color": "#00ffff", "min": 0, "max": 15 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 15, "max": 25 },
+            { "colorOff": "#888800", "color": "#ffff00", "min": 25, "max": 45 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": 45, "max": 55 }
+        ]
+    }
+]

@@ -1,0 +1,11 @@
+<div ui-content-for="title">Alerts</div>
+<div class="col-sm-12">
+<table style="width:100%">
+	<tr class="alertsline {{alert.type}}"  ng-repeat="alert in data_list " ng-click="playAudio(alert.sound)">
+		<td class="text-center {{alert.barclass}}" ></td>
+		<td class="alertstitle">{{alert.text}}</td>
+		<td class="text-right"><a class="btn"><img style="width: 0.3in;opacity: 25%;" src="img/speaker.svg"/>{{alert.date}}</a></td>
+	</tr>
+</table>
+</div>
+<audio id="audioproxyalerts"></audio>

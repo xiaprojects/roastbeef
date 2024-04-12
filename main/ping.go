@@ -59,6 +59,7 @@ func initPingSerial() bool {
 		pingDeviceModel = 1
 	} else {
 		log.Printf("No suitable Ping device found.\n")
+		addSingleSystemErrorf("ping-missing", "No suitable Ping device found.\n")
 		return false
 	}
 	log.Printf("Using %s for Ping\n", device)
