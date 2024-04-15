@@ -1,0 +1,38 @@
+<div ui-content-for="title">Radio</div>
+<div class="panel-group col-sm-6" id="radio_box" ng-repeat="radio in radioList">
+    <div class="panel panel-default {{radio.className}}">
+        <div class="panel-heading">{{radio.name}}
+            <span class="label label-success pull-right">ACTIVE</span>
+        </div>
+        <div class="panel-body text-center">
+                <div style="font-size: 10vmax;padding: 0px;margin-top:-5%;margin-bottom:-4%;" class="Radio">
+                    {{radio.active}}</div>
+                <div style="font-size: 2vmax;padding: 0px;margin:0px;">{{radioFindFrequency(radio.active)}}</div>
+        </div>
+    </div>
+    <div class="panel panel-default {{radio.className}}">
+        <div class="panel-heading">{{radio.name}}
+            <a ng-click="switchFreq(radio)" class="label label-warning">TAP TO SWITCH</a>
+
+            <a ng-click="dualFreq(radio,false)" ng-show="radio.dual == true" class="label label-success pull-right">DUAL
+                ENABLED</a>
+            <a ng-click="dualFreq(radio,true)" ng-show="radio.dual == false" class="label label-default pull-right">DUAL
+                OFF</a>
+        </div>
+        <div class="panel-body text-center">
+           
+            <a ng-click="increaseFreq(radio,1000)" class="btn btn-default {{radio.classStandByLeft}}" style="width:15%;">&#9650;</a>
+            <a ng-click="search(radio)" class="btn" style="width: 20%;min-width: 90px;"></a>
+            <a ng-click="increaseFreq(radio,5)" class="btn btn-default {{radio.classStandByRight}}" style="width:  15%;">&#9650;</a>
+                <div class="Radio"
+                    style="pointer-events: none;font-size: 6vmax;padding: 0px;margin-top:-3%;margin-bottom:-3%;">
+                    {{radio.standby}}
+                </div>
+                <div style="font-size: 2vmax;padding: 0px;margin: 0px;">{{radioFindFrequency(radio.standby)}}</div>
+
+                <a ng-click="increaseFreq(radio,-1000)" class="btn btn-default  {{radio.classStandByLeft}}" style="width:  15%;">&#9660;</a>
+                <a ng-click="search(radio)" class="btn btn-default " style="width: 20%;min-width: 90px;">SEARCH</a>
+                <a ng-click="increaseFreq(radio,-5)" class="btn btn-default  {{radio.classStandByRight}}" style="width:  15%;">&#9660;</a>
+            </div>
+    </div>
+</div>

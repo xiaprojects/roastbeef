@@ -99,6 +99,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'RadarCtrl',
 			reloadOnSearch: false
 		})
+		.state('radio', {
+			url: '/radio',
+			templateUrl: 'plates/radio.html',
+			controller: 'RadioCtrl',
+			reloadOnSearch: false
+		})
 		.state('camera', {
 			url: '/camera',
 			templateUrl: 'plates/camera.html',
@@ -159,6 +165,8 @@ app.controller('MainCtrl', function ($scope, $http) {
             $scope.UAT_Enabled = settings.UAT_Enabled;
             // Plugins: Autopilot Menu
             $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
+            // Plugins: Radio Menu
+            $scope.Radio_Enabled = settings.Radio_Enabled;
             // Plugins: Camera Menu
             $scope.Camera_Enabled = settings.Camera_Enabled;
             // Plugins: Keypad Service

@@ -1238,6 +1238,7 @@ type settings struct {
 	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
 	Camera_Enabled       bool // USB Camera and WebCam
+	Radio_Enabled        bool // RTL SDR Used as Audio Radio
 	Cameras              []cameraModel // Camera Settings
 	Keypad_Enabled       bool
 }
@@ -1315,6 +1316,7 @@ func defaultSettings() {
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
+	globalSettings.Radio_Enabled = false
 	globalSettings.OGN_Enabled = true
 	globalSettings.Dump1090Gain = 37.2
 	globalSettings.APRS_Enabled = true
@@ -1597,6 +1599,8 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// Radio
+	radio.ShutdownFunc()
 	// Checklist Feature
 	checklist.ShutdownFunc()
 	// Autopilot Feature
@@ -1756,6 +1760,8 @@ func main() {
 		alerts.InitFunc()
 		// Timers Feature
 		timers.InitFunc()
+		// Radio
+		radio.InitFunc()
 		// USB Keyboard and Keypad Driver
 		keypad.InitFunc()
 	}

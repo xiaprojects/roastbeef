@@ -492,6 +492,62 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
  */
 
 
+
+/***
+ * Radio REST API
+ */
+ func handleRadioGet(w http.ResponseWriter, r *http.Request) {
+	radio.radioDataMutex.Lock()
+	statusJSON, err := json.Marshal(&radio.radioData)
+	radio.radioDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+func handleRadioPut(w http.ResponseWriter, r *http.Request) {
+}
+func handleRadioPost(w http.ResponseWriter, r *http.Request) {
+
+}
+func handleRadioDelete(w http.ResponseWriter, r *http.Request) {
+
+}
+/***
+ * Radio REST API End
+ */
+
+func handleRadioRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+	// AJAX call - /getTimers. Responds with current CameraSources
+	if r.Method == "GET" {
+		handleRadioGet(w, r)
+	}
+
+	if r.Method == "DELETE" {
+		handleRadioDelete(w, r)
+	}
+
+	if r.Method == "PUT" {
+		handleRadioPut(w, r)
+	}
+
+	if r.Method == "POST" {
+		handleRadioPost(w, r)
+	}
+}
+
+
+
 /***
  * Checklist REST API
  */
@@ -703,6 +759,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						if v != globalSettings.ReplayLog { // Don't mark the files unless there is a change.
 							globalSettings.ReplayLog = v
 						}
+					case "Radio_Enabled":
+						globalSettings.Radio_Enabled = val.(bool)
 					case "TraceLog":
 						globalSettings.TraceLog = val.(bool)
 					case "AHRSLog":
@@ -1535,6 +1593,8 @@ func managementInterface() {
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
 	// Timers Feature
 	http.HandleFunc("/timers", handleTimersRest)
+	// Radio Feature
+	http.HandleFunc("/radio", handleRadioRest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)
