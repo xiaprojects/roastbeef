@@ -135,6 +135,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'AlertsCtrl',
 			reloadOnSearch: false
 		})
+		.state('charts', {
+			url: '/charts',
+			templateUrl: 'plates/charts.html',
+			controller: 'ChartsCtrl',
+			reloadOnSearch: false
+		})
 		.state('timers', {
 			url: '/timers',
 			templateUrl: 'plates/timers.html',

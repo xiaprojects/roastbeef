@@ -37,6 +37,8 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('checklist').onExit = function () {
+        removeEventListener("keypad", keypadEventListener);
+
         if (($scope.socket !== undefined) && ($scope.socket !== null)) {
             $scope.socket.close();
             $scope.socket = null;
@@ -167,7 +169,11 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
 
-    addEventListener("keypad", (event) => {
+
+    // Bridge from servicekeypad
+    addEventListener("keypad",keypadEventListener);
+    // Keypad Listener with supported keys
+    function keypadEventListener(event){
         if (($scope === undefined) || ($scope === null)) {
             return; // we are getting called once after clicking away from the status page
         }
@@ -204,7 +210,7 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
                 $scope.checklistSelectNext();
                 break;
         }
-    });
+    }
 
 
 

@@ -1241,6 +1241,7 @@ type settings struct {
 	Radio_Enabled        bool // RTL SDR Used as Audio Radio
 	Cameras              []cameraModel // Camera Settings
 	Keypad_Enabled       bool
+	Charts_Enabled       bool
 }
 
 type status struct {
@@ -1312,6 +1313,7 @@ func defaultSettings() {
 	globalSettings.Audio_Enabled = false
 	globalSettings.Keypad_Enabled = false
 	globalSettings.Camera_Enabled = false
+	globalSettings.Charts_Enabled = false
 	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
@@ -1513,6 +1515,7 @@ func printStats() {
 			addSingleSystemErrorf("disk-space", "Disk bytes used = %s (%.1f %%), Disk bytes free = %s (%.1f %%)", humanize.Bytes(usage.Used()), 100*usage.Usage(), humanize.Bytes(usage.Free()), 100*(1-usage.Usage()))
 		}
 		logStatus()
+		charts.logStatus()
 	}
 }
 
@@ -1611,6 +1614,8 @@ func gracefulShutdown() {
 	alerts.ShutdownFunc()
 	// USB Keyboard and Keypad Driver
 	keypad.ShutdownFunc()
+	// Charts
+	charts.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 }
@@ -1764,6 +1769,8 @@ func main() {
 		radio.InitFunc()
 		// USB Keyboard and Keypad Driver
 		keypad.InitFunc()
+		// Charts
+		charts.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 

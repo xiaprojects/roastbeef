@@ -55,11 +55,6 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         // everything gets handled correctly by the controller
     };
 
-    $state.get('radio').onExit = function () {
-        $scope.noSleep.disable();
-        delete $scope.noSleep;
-    };
-
     $scope.radioApply = function(index){
         var item = {
             "FrequencyActive": $scope.radioList[index].active,

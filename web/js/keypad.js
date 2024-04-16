@@ -353,16 +353,28 @@ function KeypadService($scope, settings) {
         },
         "#/checklist": {
             "disableRotary": true,
-            "ArrowRight": "#/checklist",
-            "ArrowDown": "#/checklist",
-            "3": "#/checklist",
-            "to": "#/checklist",
+            "ArrowRight": "#/charts",
+            "ArrowDown": "#/charts",
+            "3": "#/charts",
+            "to": "#/charts",
             "from": "#/alerts",
             "ArrowLeft": "#/alerts",
             "ArrowUp": "#/alerts",
             "1": "#/alerts",
             "knobDeg": 0,
             "title": "Checklist"
+        },
+        "#/charts": {
+            "ArrowRight": "#/charts",
+            "ArrowDown": "#/charts",
+            "3": "#/charts",
+            "to": "#/charts",
+            "from": "#/checklist",
+            "ArrowLeft": "#/checklist",
+            "ArrowUp": "#/checklist",
+            "1": "#/checklist",
+            "knobDeg": 0,
+            "title": "Charts"
         }
 
     };

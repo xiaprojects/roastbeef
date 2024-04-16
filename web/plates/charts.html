@@ -1,0 +1,44 @@
+<div ui-content-for="title">Charts</div>
+<div>&nbsp;</div>
+<div class="col-sm-12">
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Control Panel</div>
+      <div class="panel-body text-center">
+       
+        <div class="form-group">
+          <label class="control-label col-xs-6">Display Charts</label>
+          <div class="col-xs-6">
+            <select class="custom-select" ng-model="ChartSelect" ng-change="reloadCharts()">
+              <option value="{{file.Name}}" ng-select="file.Name==ChartSelect" ng-repeat="file in files">{{file.Label}}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="col-sm-12" ng-repeat="(chartName,chart) in charts">
+  <div class="panel-group col-sm-12" id="chart_panel_{{chartName}}">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{chartName}}</div>
+      <div class="panel-body text-center">
+        <div class="form-group" style="padding: 0px;margin:0px;">
+          <div>
+            <canvas id="chart_{{chartName}}"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body text-right">
+        <div lass="col-sm-3">
+          <a ng-click="downloadChart(chartName)" id="chart_download_status" class="btn"><i class="fa fa-download"></i>
+            Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

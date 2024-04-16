@@ -547,6 +547,22 @@ func handleRadioRest(w http.ResponseWriter, r *http.Request) {
 }
 
 
+// AJAX call - /getCharts. Responds with current Charts
+func handleChartsRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	charts.chartsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&charts.export)
+	charts.chartsDataMutex.Unlock()
+	if err == nil {
+	fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+
+
 
 /***
  * Checklist REST API
@@ -727,6 +743,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.Audio_Enabled = val.(bool)
 					case "Camera_Enabled":
 						globalSettings.Camera_Enabled = val.(bool)
+					case "Charts_Enabled":
+						globalSettings.Charts_Enabled = val.(bool)
 					case "Cameras":
 						var newCameras = make([]cameraModel, 0)
 						for _, rawModel := range val.([]interface{}) {
@@ -1582,6 +1600,7 @@ func managementInterface() {
 		})
 
 	http.HandleFunc("/getStatus", handleStatusRequest)
+	http.HandleFunc("/charts/", handleChartsRequest)
 	http.HandleFunc("/getSituation", handleSituationRequest)
 	http.HandleFunc("/getTowers", handleTowersRequest)
 	http.HandleFunc("/autopilot", handleAutopilotRest)
