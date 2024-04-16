@@ -1,0 +1,17 @@
+
+.keypadSelectedYes {
+    border-left: 3px solid #ff0000;
+    padding: 2px;
+    margin: 0px;
+}
+
+
+.keypadSelectedNo {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    padding: 2px;
+    margin: 0px;
+}
+
+.timerTriggered {
+    background-color: #ff0000;
+}

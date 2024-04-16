@@ -1,3 +1,11 @@
+/*
+    Copyright (c) 2023 XIAPROJECTS SRL
+    Distributable under the terms of The "BSD New" License
+    that can be found in the LICENSE file, herein included
+    as part of this header.
+
+    timers.js: Timers interface
+*/
 angular.module('appControllers').controller('TimersCtrl', TimersCtrl); // get the main module controllers set
 TimersCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
 

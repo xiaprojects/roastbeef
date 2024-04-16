@@ -1,0 +1,21 @@
+{
+    "global":
+    {
+        "130.000":{
+            "gps":{
+                "lat":43.0,
+                "lon":12.0,
+                "range":500000
+            },
+            "name":"Local Frequency"
+        },
+        "125.600":{
+            "gps":{
+                "lat":43.0,
+                "lon":12.0,
+                "range":500000
+            },
+            "name":"LIRZ Perugia Approach"
+        }
+    }
+}

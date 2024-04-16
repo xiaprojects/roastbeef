@@ -62,6 +62,7 @@
 	<link rel="stylesheet" href="css/checklist.css" />
 	<link rel="stylesheet" id="themeStylesheet" href="" />
 	<link rel="stylesheet" href="css/cockpit.css" />
+	<link rel="stylesheet" href="css/radio.css" />
 	<script src="maui/js/angular.min.js"></script>
 	<script src="maui/js/angular-ui-router.min.js"></script>
 	<script src="maui/js/mobile-angular-ui.min.js"></script>
@@ -76,6 +77,8 @@
 	<script src="plates/js/traffic.js"></script>
 	<script src="plates/js/weather.js"></script>
 	<script src="plates/js/ahrs.js"></script>
+	<script src="js/chart.js"></script>
+	<script src="plates/js/charts.js"></script>
 	<script src="plates/js/radar.js"></script>
 	<script src="plates/js/map.js"></script>
 	<script src="plates/js/camera.js"></script>
@@ -89,6 +92,7 @@
 	<script src="plates/js/cockpit.js"></script>
 	<script src="plates/js/autopilot.js"></script>
 	<script src="js/keypad.js"></script>
+	<script src="plates/js/radio.js"></script>
 	<script src="plates/js/developer.js"></script>
 </head>
 
@@ -114,6 +118,9 @@
 					<div ng-show="UAT_Enabled">
 						<a class="list-group-item" href="#/weather"><i class="fa fa-cloud"></i>    Weather  <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
+					<div ng-show="Radio_Enabled">
+						<a class="list-group-item" href="#/radio"><i class="fa fa-wifi"></i>    Radio <i class="fa fa-chevron-right pull-right"></i></a>
+					</div>
 					<a class="list-group-item" href="#/traffic"><i class="fa fa-plane"></i>    Traffic  <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/gps"><i class="fa fa-globe"></i>        GPS/AHRS <i class="fa fa-chevron-right pull-right"></i></a>
 					<div ng-show="Autopilot_Enabled">
@@ -131,6 +138,7 @@
 					<a class="list-group-item" href="#/timers"><i class="fa fa-clock-o"></i>    Timers <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/alerts"><i class="fa fa-exclamation-triangle"></i>    Alerts <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/checklist"><i class="fa fa-check-square-o"></i>    Checklist <i class="fa fa-chevron-right pull-right"></i></a>			
+					<a class="list-group-item" href="#/charts"><i class="fa fa-bar-chart"></i>    Charts <i class="fa fa-chevron-right pull-right"></i></a>
 					<div ng-show="DeveloperMode">
 					<a class="list-group-item" href="#/developer"><i class="fa fa-tasks"></i>    Developer <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>

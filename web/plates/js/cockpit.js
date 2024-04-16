@@ -43,8 +43,15 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('cockpit').onExit = function () {
+        removeEventListener("keypad", keypadEventListener);
+
         $scope.noSleep.disable();
         delete $scope.noSleep;
+
+        if (($scope.socket !== undefined) && ($scope.socket !== null)) {
+            $scope.socket.close();
+            $scope.socket = null;
+        }
     };
 
     $scope.zoom = function (index) {

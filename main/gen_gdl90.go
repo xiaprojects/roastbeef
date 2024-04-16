@@ -1238,8 +1238,10 @@ type settings struct {
 	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
 	Camera_Enabled       bool // USB Camera and WebCam
+	Radio_Enabled        bool // RTL SDR Used as Audio Radio
 	Cameras              []cameraModel // Camera Settings
 	Keypad_Enabled       bool
+	Charts_Enabled       bool
 }
 
 type status struct {
@@ -1311,10 +1313,12 @@ func defaultSettings() {
 	globalSettings.Audio_Enabled = false
 	globalSettings.Keypad_Enabled = false
 	globalSettings.Camera_Enabled = false
+	globalSettings.Charts_Enabled = false
 	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
+	globalSettings.Radio_Enabled = false
 	globalSettings.OGN_Enabled = true
 	globalSettings.Dump1090Gain = 37.2
 	globalSettings.APRS_Enabled = true
@@ -1511,6 +1515,7 @@ func printStats() {
 			addSingleSystemErrorf("disk-space", "Disk bytes used = %s (%.1f %%), Disk bytes free = %s (%.1f %%)", humanize.Bytes(usage.Used()), 100*usage.Usage(), humanize.Bytes(usage.Free()), 100*(1-usage.Usage()))
 		}
 		logStatus()
+		charts.logStatus()
 	}
 }
 
@@ -1597,6 +1602,8 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// Radio
+	radio.ShutdownFunc()
 	// Checklist Feature
 	checklist.ShutdownFunc()
 	// Autopilot Feature
@@ -1607,6 +1614,8 @@ func gracefulShutdown() {
 	alerts.ShutdownFunc()
 	// USB Keyboard and Keypad Driver
 	keypad.ShutdownFunc()
+	// Charts
+	charts.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 }
@@ -1756,8 +1765,12 @@ func main() {
 		alerts.InitFunc()
 		// Timers Feature
 		timers.InitFunc()
+		// Radio
+		radio.InitFunc()
 		// USB Keyboard and Keypad Driver
 		keypad.InitFunc()
+		// Charts
+		charts.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 
