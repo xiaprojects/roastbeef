@@ -10,13 +10,15 @@
 angular.module('appControllers').controller('ChartsCtrl', ChartsCtrl); // get the main module controllers set
 ChartsCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
 
-var URL_CHARTS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/charts";
+var URL_CHARTS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/charts/view/";
+var URL_CHARTS_DOWNLOAD = URL_HOST_PROTOCOL + URL_HOST_BASE + "/charts/export/";
 
 // create our controller function with all necessary logic
 function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
 
   // Render Engine
   $scope.charts = {};
+  $scope.Charts_Enabled = false;
   // Data
   $scope.chartConfig = {};
   // Charts Group, usefull to avoid creating too many charts
@@ -32,6 +34,11 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     "AHRSSlipSkid": "Attitude",
     "AHRSTurnRate": "Attitude",
     "AHRSGLoad": "Load Factor",
+    "AHRSGLoadMax": "Load Factor",
+    "AHRSGLoadMin": "Load Factor",
+    "GPSLatitude": null,
+    "GPSLongitude": null,
+    "Epoch": null,
     "BaroVerticalSpeed": "Variometers",
     "GpsTurnRate": "Attitude",
     "GPSHeightAboveEllipsoid": "Performance",
@@ -193,9 +200,7 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     Object.keys(updateData).forEach(function (key) {
-      if (key != "Epoch") {
         $scope.refreshChart(updateData, key, labels)
-      }
     });
     // Ready to render the charts, wait for Angular to apply the div
     setTimeout(function () {
@@ -218,6 +223,11 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     let enabledGroup = chart_field_mapping;
     if (enabledGroup.hasOwnProperty(key)) {
       groupName = enabledGroup[key];
+    }
+
+    // null is for skipping items, like Epoch, GPSLatitude...
+    if(groupName==null){
+      return;
     }
 
     //
@@ -253,6 +263,15 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
       $scope.charts[groupName] = null;
     }
   }
+
+// Reload Settings
+$http.get(URL_SETTINGS_GET).
+then(function (response) {
+  settings = angular.fromJson(response.data);
+  $scope.Charts_Enabled = settings.Charts_Enabled;
+});
+
+
   $scope.reloadCharts();
   // PNG Export
   $scope.downloadChart = function (chartName) {
@@ -261,6 +280,10 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     date = new Date;
     a.download = "Chart_" + chartName + "_" + textBySeconds(date.getUTCHours() * 60 * 60 + date.getUTCMinutes() * 60 + date.getUTCSeconds()) + ".png";
     a.click();
+  }
+  // GPX,KML,CSV Export
+  $scope.downloadByExt = function (ext) {
+    document.location = URL_CHARTS_DOWNLOAD + "/" + $scope.ChartSelect + "."+ext;
   }
 }
 

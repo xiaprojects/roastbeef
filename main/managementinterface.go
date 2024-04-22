@@ -49,11 +49,10 @@ type SettingMessage struct {
 }
 
 type MbTileConnectionCacheEntry struct {
-	Path string
-	Conn *sql.DB
+	Path     string
+	Conn     *sql.DB
 	Metadata map[string]string
 	fileTime time.Time
-	
 }
 
 func (this *MbTileConnectionCacheEntry) IsOutdated() bool {
@@ -76,14 +75,11 @@ func NewMbTileConnectionCacheEntry(path string, conn *sql.DB) *MbTileConnectionC
 var mbtileCacheLock = sync.Mutex{}
 var mbtileConnectionCache = make(map[string]MbTileConnectionCacheEntry)
 
-
 // Weather updates channel.
 var weatherUpdate *uibroadcaster
 var trafficUpdate *uibroadcaster
 var radarUpdate *uibroadcaster
 var gdl90Update *uibroadcaster
-
-
 
 /*
 	Keypad Feature
@@ -119,7 +115,6 @@ func handleAlertsWS(conn *websocket.Conn) {
 	}
 }
 
-
 // AJAX call - /getAlerts. Responds with current Alerts status
 func handleAlertsRequest(w http.ResponseWriter, r *http.Request) {
 	setNoCache(w)
@@ -128,11 +123,12 @@ func handleAlertsRequest(w http.ResponseWriter, r *http.Request) {
 	statusJSON, err := json.Marshal(&alerts.alertsData)
 	alerts.alertsDataMutex.Unlock()
 	if err == nil {
-	fmt.Fprintf(w, "%s\n", statusJSON)
+		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
 		fmt.Fprintf(w, "{}\n")
 	}
 }
+
 // Alerts Feature End Code
 
 func handleGDL90WS(conn *websocket.Conn) {
@@ -160,7 +156,7 @@ var situationUpdate *uibroadcaster
 var weatherRawUpdate *uibroadcaster
 
 /*
-	The /weather websocket starts off by sending the current buffer of weather messages, then sends updates as they are received.
+The /weather websocket starts off by sending the current buffer of weather messages, then sends updates as they are received.
 */
 func handleWeatherWS(conn *websocket.Conn) {
 	// Subscribe the socket to receive updates.
@@ -242,11 +238,11 @@ func handleTrafficWS(conn *websocket.Conn) {
 
 func handleRadarWS(conn *websocket.Conn) {
 	trafficMutex.Lock()
-	// Subscribe the socket to receive updates. Not necessary to send old traffic 
+	// Subscribe the socket to receive updates. Not necessary to send old traffic
 	radarUpdate.AddSocket(conn)
 	trafficMutex.Unlock()
 
-	radarUpdate.SendJSON(globalSettings);
+	radarUpdate.SendJSON(globalSettings)
 
 	// Connection closes when function returns. Since uibroadcast is writing and we don't need to read anything (for now), just keep it busy.
 	for {
@@ -261,7 +257,6 @@ func handleRadarWS(conn *websocket.Conn) {
 		time.Sleep(1 * time.Second)
 	}
 }
-
 
 func handleStatusWS(conn *websocket.Conn) {
 	//	log.Printf("Web client connected.\n")
@@ -322,10 +317,10 @@ func handleTimersGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func handleTimersDelete(w http.ResponseWriter, r *http.Request) {
-	
+
 	parts := strings.Split(r.RequestURI, "/")
-	log.Printf("%s %d",r.RequestURI,len(parts))
-	
+	log.Printf("%s %d", r.RequestURI, len(parts))
+
 	if len(parts) < 3 {
 		return
 	}
@@ -333,8 +328,8 @@ func handleTimersDelete(w http.ResponseWriter, r *http.Request) {
 	timerId, err := strconv.Atoi(parts[idx])
 	log.Printf("Timer delete %d", timerId)
 	timers.timersDataMutex.Lock()
-	if(len(timers.timersData)>timerId){
-		timers.timersData=append(timers.timersData[:timerId], timers.timersData[timerId+1:]...)
+	if len(timers.timersData) > timerId {
+		timers.timersData = append(timers.timersData[:timerId], timers.timersData[timerId+1:]...)
 	}
 	statusJSON, err := json.Marshal(&timers.timersData)
 	timers.timersDataMutex.Unlock()
@@ -347,7 +342,7 @@ func handleTimersDelete(w http.ResponseWriter, r *http.Request) {
 }
 func handleTimersPut(w http.ResponseWriter, r *http.Request) {
 	timers.timersDataMutex.Lock()
-	timers.timersData = append(timers.timersData, SingleTimer{0,0,false,false})
+	timers.timersData = append(timers.timersData, SingleTimer{0, 0, false, false})
 	statusJSON, err := json.Marshal(&timers.timersData)
 	timers.timersDataMutex.Unlock()
 	if err == nil {
@@ -361,25 +356,25 @@ func handleTimersPost(w http.ResponseWriter, r *http.Request) {
 	//raw, _ := httputil.DumpRequest(r, true)
 	//log.Printf("handleTimersPost:raw: %s\n", raw)
 	decoder := json.NewDecoder(r.Body)
-	
-		var msg map[int]SingleTimer
-		err := decoder.Decode(&msg)
-		if err == io.EOF {
-			
-		} else if err != nil {
-			log.Printf("handleTimersSetRequest:error: %s\n", err.Error())
-		} else {
-			for key, thisTimer := range msg {					
-				if(len(timers.timersData)>key){
-					timers.timersDataMutex.Lock()
-					timers.timersData[key].CountDown = thisTimer.CountDown
-					timers.timersData[key].Status = thisTimer.Status
-					timers.timersData[key].Epoch = thisTimer.Epoch
-					timers.timersData[key].Fired = thisTimer.Fired
-					timers.timersDataMutex.Unlock()
-				}
+
+	var msg map[int]SingleTimer
+	err := decoder.Decode(&msg)
+	if err == io.EOF {
+
+	} else if err != nil {
+		log.Printf("handleTimersSetRequest:error: %s\n", err.Error())
+	} else {
+		for key, thisTimer := range msg {
+			if len(timers.timersData) > key {
+				timers.timersDataMutex.Lock()
+				timers.timersData[key].CountDown = thisTimer.CountDown
+				timers.timersData[key].Status = thisTimer.Status
+				timers.timersData[key].Epoch = thisTimer.Epoch
+				timers.timersData[key].Fired = thisTimer.Fired
+				timers.timersDataMutex.Unlock()
 			}
 		}
+	}
 }
 
 func handleTimersRest(w http.ResponseWriter, r *http.Request) {
@@ -408,11 +403,10 @@ func handleTimersRest(w http.ResponseWriter, r *http.Request) {
 		handleTimersPost(w, r)
 	}
 }
+
 /***
  * Timers REST API End
  */
-
-
 
 /***
  * Autopilot REST API
@@ -432,25 +426,23 @@ func handleAutopilotPut(w http.ResponseWriter, r *http.Request) {
 }
 func handleAutopilotPost(w http.ResponseWriter, r *http.Request) {
 
-
 	raw, _ := httputil.DumpRequest(r, true)
 	log.Printf("handleAutopilotPost:raw: %s\n", raw)
 	decoder := json.NewDecoder(r.Body)
-	
-		var msg []Waypoint
-		err := decoder.Decode(&msg)
-		if err == io.EOF {
-			
-		} else if err != nil {
-			log.Printf("handleAutopilotPost:error: %s\n", err.Error())
-		} else {
-			autopilot.waypointsDataMutex.Lock()
-			autopilot.waypointsData = msg
-			autopilot.waypointsDataMutex.Unlock()
-		}
 
-		fmt.Fprintf(w, "[]\n")
+	var msg []Waypoint
+	err := decoder.Decode(&msg)
+	if err == io.EOF {
 
+	} else if err != nil {
+		log.Printf("handleAutopilotPost:error: %s\n", err.Error())
+	} else {
+		autopilot.waypointsDataMutex.Lock()
+		autopilot.waypointsData = msg
+		autopilot.waypointsDataMutex.Unlock()
+	}
+
+	fmt.Fprintf(w, "[]\n")
 
 }
 func handleAutopilotDelete(w http.ResponseWriter, r *http.Request) {
@@ -459,7 +451,6 @@ func handleAutopilotDelete(w http.ResponseWriter, r *http.Request) {
 	autopilot.isActive = false
 	autopilot.waypointsDataMutex.Unlock()
 }
-
 
 func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
 	// define header in support of cross-domain AJAX
@@ -487,16 +478,15 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
 		handleAutopilotPost(w, r)
 	}
 }
+
 /***
  * Autopilot REST API End
  */
 
-
-
 /***
  * Radio REST API
  */
- func handleRadioGet(w http.ResponseWriter, r *http.Request) {
+func handleRadioGet(w http.ResponseWriter, r *http.Request) {
 	radio.radioDataMutex.Lock()
 	statusJSON, err := json.Marshal(&radio.radioData)
 	radio.radioDataMutex.Unlock()
@@ -515,6 +505,7 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 func handleRadioDelete(w http.ResponseWriter, r *http.Request) {
 
 }
+
 /***
  * Radio REST API End
  */
@@ -546,7 +537,6 @@ func handleRadioRest(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-
 // AJAX call - /getCharts. Responds with current Charts
 func handleChartsRequest(w http.ResponseWriter, r *http.Request) {
 	setNoCache(w)
@@ -555,20 +545,65 @@ func handleChartsRequest(w http.ResponseWriter, r *http.Request) {
 	statusJSON, err := json.Marshal(&charts.export)
 	charts.chartsDataMutex.Unlock()
 	if err == nil {
-	fmt.Fprintf(w, "%s\n", statusJSON)
+		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
 		fmt.Fprintf(w, "{}\n")
 		log.Printf("%s", err)
 	}
 }
 
+// AJAX call - Exports. Responds with current Charts
+func handleChartsExportRequest(w http.ResponseWriter, r *http.Request) {
+	// Fetch the session name by the URL
+	parts := strings.Split(r.RequestURI, "/")
+	sessionNameWithExtension := parts[len(parts)-1]
+	parts2 := strings.Split(sessionNameWithExtension, ".")
+	sessionName := parts2[0]
+	ext := "gpx"
+	if len(parts2) == 2 {
+		ext = parts2[1]
+	}
 
+	setNoCache(w)
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/octet-stream")
+
+	// TODO: Change this part with retrieval of the stored session
+	// Workaround to download a different file:
+	if(len(charts.export.Epoch)>0){
+		sessionName = time.Unix(charts.export.Epoch[0], 0).Format(time.DateTime)
+	}
+
+	w.Header().Set("Content-Disposition", "attachment; filename=\""+sessionName+"."+ext+"\"")
+	charts.chartsDataMutex.Lock()
+	ret := ""
+	if ext == "gpx" {
+		exportGPX := ExportGPXStratuxPlugin{SessionName: sessionName, FilePath: "/tmp/" + sessionName + "." + ext}
+		ret = exportGPX.generateHeader() +
+			exportGPX.generatePointBySamples(charts.export) +
+			exportGPX.generateTrailer()
+	}
+	if ext == "kml" {
+		exportKML := ExportKMLStratuxPlugin{SessionName: sessionName, FilePath: "/tmp/" + sessionName + "." + ext}
+		ret = exportKML.generateHeader() +
+			exportKML.generatePointBySamples(charts.export) +
+			exportKML.generateTrailer()
+	}
+	if ext == "csv" {
+		exportCSV := ExportCSVStratuxPlugin{SessionName: sessionName, FilePath: "/tmp/" + sessionName + "." + ext}
+		ret = exportCSV.generateHeader() +
+			exportCSV.generatePointBySamples(charts.export) +
+			exportCSV.generateTrailer()
+	}
+	charts.chartsDataMutex.Unlock()
+	fmt.Fprintf(w, "%s\n", ret)
+}
 
 /***
  * Checklist REST API
  */
- // Restore or Get current Checklist Status
- func handleChecklistGet(w http.ResponseWriter, r *http.Request) {
+// Restore or Get current Checklist Status
+func handleChecklistGet(w http.ResponseWriter, r *http.Request) {
 	checklist.checklistDataMutex.Lock()
 	statusJSON, err := json.Marshal(&checklist.checklistData)
 	checklist.checklistDataMutex.Unlock()
@@ -731,7 +766,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.Autopilot_Enabled = val.(bool)
 					case "Autopilot_HomeWaypoint":
 						home := val.(map[string]interface{})
-						waypoint := Waypoint{Lat:float32(home["Lat"].(float64)),Lon:float32(home["Lon"].(float64)),Ele:int32(home["Ele"].(float64)),Cmt:home["Cmt"].(string)}
+						waypoint := Waypoint{Lat: float32(home["Lat"].(float64)), Lon: float32(home["Lon"].(float64)), Ele: int32(home["Ele"].(float64)), Cmt: home["Cmt"].(string)}
 						globalSettings.Autopilot_HomeWaypoint = waypoint
 					case "APRS_Enabled":
 						globalSettings.APRS_Enabled = val.(bool)
@@ -749,7 +784,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						var newCameras = make([]cameraModel, 0)
 						for _, rawModel := range val.([]interface{}) {
 							modelItem := rawModel.(map[string]interface{})
-							newCameras = append(newCameras, cameraModel{Name: modelItem["Name"].(string),Url: modelItem["Url"].(string),Type:int(modelItem["Type"].(float64))})
+							newCameras = append(newCameras, cameraModel{Name: modelItem["Name"].(string), Url: modelItem["Url"].(string), Type: int(modelItem["Type"].(float64))})
 						}
 						globalSettings.Cameras = newCameras
 					case "OGNI2CTXEnabled":
@@ -823,7 +858,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.GLimits = val.(string)
 					case "OwnshipModeS":
 						codes := strings.Split(val.(string), ",")
-						codesFinal :=  make([]string, 0)
+						codesFinal := make([]string, 0)
 						for _, code := range codes {
 							code = strings.Trim(code, " ")
 							// Expecting a hex string less than 6 characters (24 bits) long.
@@ -910,7 +945,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.OGNTxPower = int(val.(float64))
 						reconfigureOgnTracker = true
 					case "GXAddr":
-						inter,_ := strconv.ParseInt(val.(string), 16, 0)
+						inter, _ := strconv.ParseInt(val.(string), 16, 0)
 						globalSettings.GXAddr = int(inter) & 0xffffff
 						reconfigureGXTracker = true
 					case "GXAddrType":
@@ -939,7 +974,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 					configureGxAirComTracker()
 				}
 				if reconfigureFancontrol {
-					exec.Command("killall", "-SIGUSR1", "fancontrol").Run();
+					exec.Command("killall", "-SIGUSR1", "fancontrol").Run()
 				}
 			}
 		}
@@ -957,7 +992,6 @@ func setPersistentLogging(persistent bool) {
 		overlayctl("enable")
 	}
 }
-
 
 func handleShutdownRequest(w http.ResponseWriter, r *http.Request) {
 	syscall.Sync()
@@ -1197,7 +1231,7 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	for {
-		part, err := reader.NextPart();
+		part, err := reader.NextPart()
 		if err != nil {
 			log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
 			return
@@ -1210,7 +1244,7 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 			continue
 		}
 
-		fi, err := os.OpenFile("/overlay/robase/root/TMP_update-stratux-v.sh", os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
+		fi, err := os.OpenFile("/overlay/robase/root/TMP_update-stratux-v.sh", os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0666)
 		if err != nil {
 			log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
 			return
@@ -1225,7 +1259,6 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		break
 	}
 
-	
 	os.Rename("/overlay/robase/root/TMP_update-stratux-v.sh", "/overlay/robase/root/update-stratux-v.sh")
 	log.Printf("%s uploaded %s for update.\n", r.RemoteAddr, "/overlay/robase/root/update-stratux-v.sh")
 	overlayctl("disable")
@@ -1314,7 +1347,7 @@ type dirlisting struct {
 	ServerUA       string
 }
 
-//FIXME: This needs to be switched to show a "sessions log" from the sqlite database.
+// FIXME: This needs to be switched to show a "sessions log" from the sqlite database.
 func viewLogs(w http.ResponseWriter, r *http.Request) {
 	urlpath := strings.TrimPrefix(r.URL.Path, "/logs/")
 	path := "/var/log/" + urlpath
@@ -1328,18 +1361,18 @@ func viewLogs(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, path)
 		return
 	}
-	
+
 	names, err := ioutil.ReadDir(path)
 	if err != nil {
 		return
-	}	
+	}
 
 	fi := make([]fileInfo, 0)
 	for _, val := range names {
 		if val.Name()[0] == '.' {
 			continue
 		} // Remove hidden files from listing
-		
+
 		if val.IsDir() {
 			mtime := val.ModTime().Format("2006-Jan-02 15:04:05")
 			sz := ""
@@ -1375,7 +1408,7 @@ func connectMbTilesArchive(path string) (*sql.DB, map[string]string, error) {
 		log.Printf("Reloading MBTiles " + path)
 	}
 
-	conn, err := sql.Open("sqlite3", "file:" + path + "?mode=ro")
+	conn, err := sql.Open("sqlite3", "file:"+path+"?mode=ro")
 	if err != nil {
 		return nil, nil, err
 	}
@@ -1399,7 +1432,7 @@ func tileToDegree(z, x, y int) (lon, lat float64) {
 func readMbTilesMetadata(fname string, db *sql.DB) map[string]string {
 	rows, err := db.Query(`SELECT name, value FROM metadata 
 		UNION SELECT 'minzoom', min(zoom_level) FROM tiles WHERE NOT EXISTS (SELECT * FROM metadata WHERE name='minzoom' and value is not null and value != '')
-		UNION SELECT 'maxzoom', max(zoom_level) FROM tiles WHERE NOT EXISTS (SELECT * FROM metadata WHERE name='maxzoom' and value is not null and value != '')`);
+		UNION SELECT 'maxzoom', max(zoom_level) FROM tiles WHERE NOT EXISTS (SELECT * FROM metadata WHERE name='maxzoom' and value is not null and value != '')`)
 	if err != nil {
 		log.Printf("SQLite read error %s: %s", fname, err.Error())
 		return nil
@@ -1437,14 +1470,14 @@ func readMbTilesMetadata(fname string, db *sql.DB) map[string]string {
 			// We found a style!
 			meta["stratux_style_url"] = "/mapdata/styles/" + file + "/style.json"
 		}
-		
+
 	}
 	return meta
 }
 
 // Scans mapdata dir for all .db and .mbtiles files and returns json representation of all metadata values
 func handleTilesets(w http.ResponseWriter, r *http.Request) {
-	files, err := ioutil.ReadDir(STRATUX_HOME + "/mapdata/");
+	files, err := ioutil.ReadDir(STRATUX_HOME + "/mapdata/")
 	if err != nil {
 		log.Printf("handleTilesets() error: %s\n", err.Error())
 		http.Error(w, err.Error(), 500)
@@ -1457,7 +1490,7 @@ func handleTilesets(w http.ResponseWriter, r *http.Request) {
 		if strings.HasSuffix(f.Name(), ".mbtiles") || strings.HasSuffix(f.Name(), ".db") {
 			_, meta, err := connectMbTilesArchive(STRATUX_HOME + "/mapdata/" + f.Name())
 			if err != nil {
-				log.Printf("SQLite open " + f.Name() + " failed: %s", err.Error())
+				log.Printf("SQLite open "+f.Name()+" failed: %s", err.Error())
 				continue
 			}
 			result[f.Name()] = meta
@@ -1477,7 +1510,7 @@ func loadTile(fname string, z, x, y int) ([]byte, error) {
 		log.Printf("Failed to query mbtiles: %s", err.Error())
 		return nil, nil
 	}
-	
+
 	defer rows.Close()
 	for rows.Next() {
 		var res []byte
@@ -1537,7 +1570,7 @@ func managementInterface() {
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))
-	http.Handle("/mapdata/styles/", http.StripPrefix("/mapdata/styles/", http.FileServer(http.Dir(STRATUX_HOME + "/mapdata/styles"))))
+	http.Handle("/mapdata/styles/", http.StripPrefix("/mapdata/styles/", http.FileServer(http.Dir(STRATUX_HOME+"/mapdata/styles"))))
 	http.HandleFunc("/logs/", viewLogs)
 
 	http.HandleFunc("/gdl90",
@@ -1591,7 +1624,6 @@ func managementInterface() {
 			s.ServeHTTP(w, req)
 		})
 
-
 	http.HandleFunc("/jsonio",
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
@@ -1600,7 +1632,8 @@ func managementInterface() {
 		})
 
 	http.HandleFunc("/getStatus", handleStatusRequest)
-	http.HandleFunc("/charts/", handleChartsRequest)
+	http.HandleFunc("/charts/view/", handleChartsRequest)
+	http.HandleFunc("/charts/export/", handleChartsExportRequest)
 	http.HandleFunc("/getSituation", handleSituationRequest)
 	http.HandleFunc("/getTowers", handleTowersRequest)
 	http.HandleFunc("/autopilot", handleAutopilotRest)
@@ -1608,7 +1641,7 @@ func managementInterface() {
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
 	// Checklist Feature
 	http.HandleFunc("/checklist/default/status", handleChecklistRest)
-	// Alerts Feature	
+	// Alerts Feature
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
 	// Timers Feature
 	http.HandleFunc("/timers", handleTimersRest)
@@ -1641,7 +1674,7 @@ func managementInterface() {
 		addr = ":8000" // Make sure we can run without root priviledges on different port
 	}
 
-	if err :=http.ListenAndServe(addr, nil); err != nil {
+	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
 	}
 }

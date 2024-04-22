@@ -24,11 +24,11 @@ const (
 type ChartDataCurrent struct {
 	Epoch int64
 	// Attitude GPS
-	GPSGroundSpeed          float64
-	GPSTrueCourse           float32
-	Alt                     float32
+	GPSGroundSpeed float64
+	GPSTrueCourse  float32
+	Alt            float32
 	//Vv                      float32
-	GpsTurnRate             float64
+	GpsTurnRate float64
 	//GPSHeightAboveEllipsoid float32
 
 	// Attitude EFIS Situation
@@ -54,13 +54,17 @@ type ChartDataCurrent struct {
 
 	// Traffic
 	TrafficCount int
+	GPSLatitude  float32
+	GPSLongitude float32
+	AHRSGLoadMin float64
+	AHRSGLoadMax float64
 }
 type ChartDataExport struct {
-	GPSGroundSpeed          []float64
-	GPSTrueCourse           []float32
-	Alt                     []float32
+	GPSGroundSpeed []float64
+	GPSTrueCourse  []float32
+	Alt            []float32
 	//Vv                      []float32
-	GpsTurnRate             []float64
+	GpsTurnRate []float64
 	//GPSHeightAboveEllipsoid []float32
 
 	BaroTemperature      []float32
@@ -84,7 +88,11 @@ type ChartDataExport struct {
 	// Traffic
 	TrafficCount []int
 
-	Epoch []int64
+	Epoch        []int64
+	GPSLatitude  []float32
+	GPSLongitude []float32
+	AHRSGLoadMin []float64
+	AHRSGLoadMax []float64
 }
 
 type ChartsStratuxPlugin struct {
@@ -107,6 +115,10 @@ func (chartsInstance *ChartsStratuxPlugin) InitFunc() bool {
 	chartsInstance.export.Alt = make([]float32, 0)
 	//chartsInstance.export.Vv = make([]float32, 0)
 	chartsInstance.export.GpsTurnRate = make([]float64, 0)
+	chartsInstance.export.GPSLatitude = make([]float32, 0)
+	chartsInstance.export.GPSLongitude = make([]float32, 0)
+	chartsInstance.export.AHRSGLoadMax = make([]float64, 0)
+	chartsInstance.export.AHRSGLoadMin = make([]float64, 0)
 	//chartsInstance.export.GPSHeightAboveEllipsoid = make([]float32, 0)
 
 	chartsInstance.export.BaroTemperature = make([]float32, 0)
@@ -129,6 +141,10 @@ func (chartsInstance *ChartsStratuxPlugin) InitFunc() bool {
 	// Traffic
 	chartsInstance.export.TrafficCount = make([]int, 0)
 
+	// Start File system recording:
+	exportGPX := ExportGPXStratuxPlugin{SessionName: time.Now().UTC().Format(time.RFC3339), FilePath: "/tmp/" + time.Now().UTC().Format(time.RFC3339) + ".gpx"}
+	exportGPX.generateHeader()
+
 	go chartsInstance.ListenerFunc()
 	return true
 }
@@ -148,6 +164,10 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			chartsInstance.export.GPSTrueCourse = append(chartsInstance.export.GPSTrueCourse, chartsInstance.last.GPSTrueCourse)
 			//chartsInstance.export.Vv = append(chartsInstance.export.Vv, chartsInstance.last.Vv)
 			chartsInstance.export.GpsTurnRate = append(chartsInstance.export.GpsTurnRate, chartsInstance.last.GpsTurnRate)
+			chartsInstance.export.GPSLatitude = append(chartsInstance.export.GPSLatitude, chartsInstance.last.GPSLatitude)
+			chartsInstance.export.GPSLongitude = append(chartsInstance.export.GPSLongitude, chartsInstance.last.GPSLongitude)
+			chartsInstance.export.AHRSGLoadMax = append(chartsInstance.export.AHRSGLoadMax, chartsInstance.last.AHRSGLoadMax)
+			chartsInstance.export.AHRSGLoadMin = append(chartsInstance.export.AHRSGLoadMin, chartsInstance.last.AHRSGLoadMin)
 			//chartsInstance.export.GPSHeightAboveEllipsoid = append(chartsInstance.export.GPSHeightAboveEllipsoid, chartsInstance.last.GPSHeightAboveEllipsoid)
 
 			chartsInstance.export.GPS_satellites_locked = append(chartsInstance.export.GPS_satellites_locked, chartsInstance.last.GPS_satellites_locked)
@@ -168,6 +188,14 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			chartsInstance.export.AHRSTurnRate = append(chartsInstance.export.AHRSTurnRate, chartsInstance.last.AHRSTurnRate)
 			chartsInstance.export.AHRSGLoad = append(chartsInstance.export.AHRSGLoad, chartsInstance.last.AHRSGLoad)
 
+			// Store the retrieved data by a stream on the storage
+			// TODO:
+			// - Let's the user decide the storage location, in case of USB
+			// - Let's the user decide the format CSV, KML, GPX, Waypoints, Route...
+			//log.Println(exportGPX.generateHeader("Session Name"))
+			//log.Println(exportGPX.generatePointBySample(chartsInstance.last))
+			//log.Println(exportGPX.generateTrailerBySample())
+
 			// Digest
 			chartsInstance.last.AHRSPitch = 0
 			chartsInstance.last.AHRSRoll = 0
@@ -177,14 +205,13 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			chartsInstance.last.AHRSTurnRate = 0
 			chartsInstance.last.AHRSGLoad = 0
 			chartsInstance.last.Alt = 0
-			
+
 			chartsInstance.last.GPSTrueCourse = 0
 			chartsInstance.last.GpsTurnRate = 0
 			chartsInstance.last.GPSGroundSpeed = 0
 			chartsInstance.last.AHRSGLoad = 0
 
 			//
-
 			chartsInstance.chartsDataMutex.Unlock()
 			EveryMinute = CHARTS_SAMPLING
 		}
@@ -206,11 +233,23 @@ func (chartsInstance *ChartsStratuxPlugin) logSituation() {
 		chartsInstance.last.BaroTemperature = mySituation.BaroTemperature
 		chartsInstance.last.BaroPressureAltitude = mySituation.BaroPressureAltitude
 		chartsInstance.last.BaroVerticalSpeed = mySituation.BaroVerticalSpeed
+		if mySituation.AHRSPitch < 0 {
+			if chartsInstance.last.AHRSPitch > mySituation.AHRSPitch {
+				chartsInstance.last.AHRSPitch = mySituation.AHRSPitch
+			}	
+		} else {
 		if chartsInstance.last.AHRSPitch < mySituation.AHRSPitch {
 			chartsInstance.last.AHRSPitch = mySituation.AHRSPitch
 		}
+		}
+		if mySituation.AHRSRoll < 0 {
+			if chartsInstance.last.AHRSRoll > mySituation.AHRSRoll {
+				chartsInstance.last.AHRSRoll = mySituation.AHRSRoll
+			}
+		} else {
 		if chartsInstance.last.AHRSRoll < mySituation.AHRSRoll {
 			chartsInstance.last.AHRSRoll = mySituation.AHRSRoll
+		}
 		}
 		if mySituation.AHRSGyroHeading < 3276.7 {
 			chartsInstance.last.AHRSGyroHeading = mySituation.AHRSGyroHeading
@@ -232,9 +271,9 @@ func (chartsInstance *ChartsStratuxPlugin) logSituation() {
 		if chartsInstance.last.Alt < mySituation.GPSAltitudeMSL {
 			chartsInstance.last.Alt = mySituation.GPSAltitudeMSL
 		}
-		
+
 		//chartsInstance.last.Vv = mySituation.GPSVerticalSpeed
-		
+
 		if chartsInstance.last.GPSTrueCourse < mySituation.GPSTrueCourse {
 			chartsInstance.last.GPSTrueCourse = mySituation.GPSTrueCourse
 		}
@@ -245,13 +284,15 @@ func (chartsInstance *ChartsStratuxPlugin) logSituation() {
 			chartsInstance.last.GPSGroundSpeed = mySituation.GPSGroundSpeed
 		}
 		/*
-		if chartsInstance.last.GPSHeightAboveEllipsoid < mySituation.GPSHeightAboveEllipsoid {
-			chartsInstance.last.GPSHeightAboveEllipsoid = mySituation.GPSHeightAboveEllipsoid
-		}
+			if chartsInstance.last.GPSHeightAboveEllipsoid < mySituation.GPSHeightAboveEllipsoid {
+				chartsInstance.last.GPSHeightAboveEllipsoid = mySituation.GPSHeightAboveEllipsoid
+			}
 		*/
-		if chartsInstance.last.AHRSGLoad < mySituation.AHRSGLoad {
-			chartsInstance.last.AHRSGLoad = mySituation.AHRSGLoad
-		}
+
+		chartsInstance.last.GPSLatitude = mySituation.GPSLatitude
+		chartsInstance.last.GPSLongitude = mySituation.GPSLongitude
+		chartsInstance.last.AHRSGLoadMax = mySituation.AHRSGLoadMax
+		chartsInstance.last.AHRSGLoadMin = mySituation.AHRSGLoadMin
 
 		chartsInstance.chartsDataMutex.Unlock()
 	}
@@ -274,3 +315,29 @@ func (chartsInstance *ChartsStratuxPlugin) logStatus() {
 	}
 }
 
+func chartsSamplesByIndexToSample(index int, samples ChartDataExport) ChartDataCurrent {
+	ret := ChartDataCurrent{
+		Epoch:                 samples.Epoch[index],
+		GPSGroundSpeed:        samples.GPSGroundSpeed[index],
+		GPSTrueCourse:         samples.GPSTrueCourse[index],
+		Alt:                   samples.Alt[index],
+		GpsTurnRate:           samples.GpsTurnRate[index],
+		BaroTemperature:       samples.BaroTemperature[index],
+		BaroPressureAltitude:  samples.BaroPressureAltitude[index],
+		BaroVerticalSpeed:     samples.BaroVerticalSpeed[index],
+		AHRSPitch:             samples.AHRSPitch[index],
+		AHRSRoll:              samples.AHRSRoll[index],
+		AHRSGyroHeading:       samples.AHRSGyroHeading[index],
+		AHRSMagHeading:        samples.AHRSMagHeading[index],
+		AHRSSlipSkid:          samples.AHRSSlipSkid[index],
+		AHRSTurnRate:          samples.AHRSTurnRate[index],
+		AHRSGLoad:             samples.AHRSGLoad[index],
+		GPS_satellites_locked: samples.GPS_satellites_locked[index],
+		CPUTemp:               samples.CPUTemp[index],
+		TrafficCount:          samples.TrafficCount[index],
+		GPSLatitude:           samples.GPSLatitude[index],
+		GPSLongitude:          samples.GPSLongitude[index],
+		AHRSGLoadMin:          samples.AHRSGLoadMin[index],
+		AHRSGLoadMax:          samples.AHRSGLoadMax[index]}
+	return ret
+}
