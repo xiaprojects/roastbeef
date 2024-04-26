@@ -4,7 +4,7 @@
         "ceil": 0,
         "scale": 1,
         "background": "#00ffff",
-        "uiModel": "GPS\n\nKph",
+        "uiModel": "GPS\n\nKT",
         "size": 0,
         "circleSize": 330,
         "valueMin": 99999,
@@ -14,12 +14,12 @@
         "rotate": -90,
         "sensorType": "GPSGroundSpeed",
         "ranges": [
-            { "color": "#acacac", "min": 0, "max": 70 },
-            { "colorOff": "#880000", "color": "#ff0000", "min": 70, "max": 80 },
-            { "color": "#ffffff", "min": 80, "max": 130 },
-            { "colorOff": "#008800", "color": "#00ff00", "min": 130, "max": 220 },
-            { "colorOff": "#888800", "color": "#ffff00", "min": 220, "max": 300 },
-            { "colorOff": "#880000", "color": "#ff0000", "min": 300, "max": 330 }
+            { "color": "#acacac", "min": 0, "max": 35 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": 35, "max": 45 },
+            { "color": "#ffffff", "min": 45, "max": 70 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 70, "max": 110 },
+            { "colorOff": "#888800", "color": "#ffff00", "min": 110, "max": 150 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": 150, "max": 160 }
         ]
     },
     {
@@ -55,7 +55,7 @@
         "ceil": 0,
         "scale": 100,
         "background": "#acacac",
-        "uiModel": "VARIO\n\nfeet/m",
+        "uiModel": "VARIO\n\nft/min",
         "size": 0,
         "valueMin": 99999,
         "valueMax": 0,
@@ -65,6 +65,7 @@
         "rotate": -180,
         "sensorType": "BaroVerticalSpeed",
         "ranges": [
+            { "colorOff": "#880000", "color": "#ff0000", "min": -1000, "max": -500 },
             { "colorOff": "#880000", "color": "#ff0000", "min": -500, "max": -400 },
             { "colorOff": "#880000", "color": "#ff0000", "min": -400, "max": -300 },
             { "colorOff": "#888800", "color": "#ffff00", "min": -300, "max": -200 },
@@ -74,8 +75,8 @@
             { "colorOff": "#008800", "color": "#00ff00", "min": 100, "max": 200 },
             { "colorOff": "#008800", "color": "#00ff00", "min": 200, "max": 300 },
             { "colorOff": "#008800", "color": "#00ff00", "min": 300, "max": 400 },
-            { "colorOff": "#000088", "color": "#0000ff", "min": 400, "max": 500 }
-
+            { "colorOff": "#000088", "color": "#0000ff", "min": 400, "max": 500 },
+            { "colorOff": "#000088", "color": "#0000ff", "min": 500, "max": 1000 }
         ]
     },
     {
