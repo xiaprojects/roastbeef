@@ -1,0 +1,65 @@
+.CockpitBlack {
+    fill: #ffffff;
+    stroke: #efefef;
+}
+
+
+.CockpitWhite {
+    fill: #121512;
+    stroke: #222522;
+}
+
+.CockpitWhite .big {
+    stroke-width: 6;
+}
+
+.CockpitBlack .big {
+    stroke-width: 6;
+}
+
+
+
+.CockpitWhite .pointer {
+    stroke: #bbbbcc;
+    fill: #ddddee;
+}
+
+.CockpitWhite .pointerBG {
+    fill: #bbbbcc;
+}
+
+
+.CockpitBlack .pointer {
+    stroke: #bbbbcc;
+    fill: #ddddee;
+}
+
+.CockpitBlack .pointerBG {
+    fill: #bbbbcc;
+}
+
+.CockpitBlack .text {
+    font-size: 1em;
+    font-family: sans-serif;
+    text-anchor: middle;
+    stroke-width: 0;
+    fill: #ddddee;
+}
+
+.CockpitWhite .text {
+    font-size: 1em;
+    font-family: sans-serif;
+    text-anchor: middle;
+    stroke-width: 0;
+    fill: #ddddee;
+}
+
+
+.CockpitWhite .textMini {
+    stroke-width: 0;
+    fill: #000000;
+}
+.CockpitBlack .textMini {
+    stroke-width: 0;
+    fill: #ffffff;  
+}

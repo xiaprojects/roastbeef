@@ -1072,6 +1072,7 @@ func calculateNACp(accuracy float32) uint8 {
 func registerSituationUpdate() {
 	logSituation()
 	situationUpdate.SendJSON(mySituation)
+	charts.logSituation()
 }
 
 func calculateNavRate() float64 {

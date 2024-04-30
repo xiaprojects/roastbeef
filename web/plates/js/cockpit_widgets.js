@@ -17,7 +17,7 @@
 
 
 /**
- * 
+ * HSI
  * @param {*} div 
  * @param {*} item 
  */
@@ -186,3 +186,329 @@ HSICircleRenderer.prototype = {
     }
 };
 
+
+
+
+
+/**
+ * Heading
+ * @param {*} locationId 
+ * @param {*} item 
+ */
+function HeadingCircleRenderer(locationId, item) {
+    this.width = -1;
+    this.height = -1;
+
+    this.locationId = locationId;
+    this.canvas = document.getElementById(this.locationId);
+    var image = SVG(this.locationId).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
+    this.image = image;
+    const plane = image.path(d = "M 247.51404,152.40266 139.05781,71.800946 c 0.80268,-12.451845 1.32473,-40.256266 0.85468,-45.417599 -3.94034,-43.266462 -31.23018,-24.6301193 -31.48335,-5.320367 -0.0693,5.281361 -1.01502,32.598388 -1.10471,50.836622 L 0.2842717,154.37562 0,180.19575 l 110.50058,-50.48239 3.99332,80.29163 -32.042567,22.93816 -0.203845,16.89693 42.271772,-11.59566 0.008,0.1395 42.71311,10.91879 -0.50929,-16.88213 -32.45374,-22.39903 2.61132,-80.35205 111.35995,48.50611 -0.73494,-25.77295 z")
+    plane.cx(0).cy(0);
+
+    this.pointer_el = image.group().addClass('card');
+
+    const sectors = 8;
+    const circleDiameter = 400 - 10 - 60;
+    for (var r = 0; r < sectors; r++) {
+
+        const displace = r * (360 / sectors);
+        this.pointer_el.line(-100, 0, -160, 0).addClass('big').transform({ rotation: displace, cx: 0, cy: 0, relative: false });
+        var rad = ((displace - 90) * 2 * Math.PI / 360.0)
+        if (displace % 90 != 0) {
+            this.pointer_el.text("" + displace)
+                //.addClass('text')
+                .style('font-size', '24px')
+                //.cx(-180).cy(0)
+                .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
+        }
+    }
+
+    for (var r = 0; r < sectors; r++) {
+        const displace = r * (360 / sectors);
+        this.pointer_el.line(-100, 0, -160, 0).addClass('small').transform({ rotation: displace + 45.0 / 2.0, cx: 0, cy: 0, relative: false });
+    }
+
+    this.pointer_el.text("N").style('font-size', '32px').style("fill", "#ff0000").style("stroke", "#ff0000")
+        .cx(0).cy(-180);
+    this.pointer_el.text("E").style('font-size', '32px')//.style("fill", "#000000")
+        .cx(180).cy(0)
+    this.pointer_el.text("W").style('font-size', '32px')//.style("fill", "#000000")
+        .cx(-180).cy(0)
+    this.pointer_el.text("S").style('font-size', '32px')//.style("fill", "#000000")
+        .cx(0).cy(180)
+
+}
+
+HeadingCircleRenderer.prototype = {
+    constructor: HeadingCircleRenderer,
+    resize: function () {
+        var canvasWidth = this.canvas.parentElement.offsetWidth - 12;
+
+        if (canvasWidth !== this.width) {
+            this.width = canvasWidth;
+            this.height = canvasWidth * 0.5;
+
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+        }
+    },
+    update: function (value, item) {
+        //this.card.text=value;
+        if (value < this.min) {
+            value = this.min;
+        }
+        if (value > this.max) {
+            value = this.max;
+        }
+        this.pointer_el.rotate(-value, 0, 0);
+    }
+};
+
+
+/**
+ * EMS
+ * @param {*} locationId 
+ * @param {*} item 
+ */
+function EMSGenericCircleRenderer(locationId, item) {
+    this.width = -1;
+    this.height = -1;
+    this.locationId = locationId;
+    this.canvas = document.getElementById(this.locationId);
+    var image = SVG(this.locationId).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
+    this.image = image;
+    var el, card = image.group().addClass('card');
+    const circleDiameter = 400 - 10 - 60;
+    item.backround = card.circle(circleDiameter).cx(0).cy(0).style('fill', item.background)
+    var diameter = circleDiameter * 8.0 / 10.0;
+    var donutHeight = circleDiameter - diameter - 4;
+    const circumference = 2.0 * Math.PI * diameter / 2.0;
+    var maxRange = 0;
+    var minRange = 32000;
+    for (var r = 0; r < item.ranges.length; r++) {
+        var range = item.ranges[r];
+        if (range.min < minRange) {
+            minRange = range.min;
+        }
+        if (range.max > maxRange) {
+            maxRange = range.max;
+        }
+    }
+    this.min = minRange;
+    this.max = maxRange;
+
+    for (var r = 0; r < item.ranges.length; r++) {
+        var range = item.ranges[r];
+        var circle = card.circle(diameter).cx(0).cy(0);
+        circle.style('stroke-width', donutHeight);
+        circle.style('stroke', range.color);
+        circle.style('fill', "transparent");
+        const percentage = 100.0 * (range.max - range.min) / (maxRange - minRange) * item.circleSize / 360.0;
+        const strokeDash = Math.round((percentage * circumference) / 100);
+        const strokeDashArray = `${strokeDash} ${circumference}`;
+        circle.style('stroke-dasharray', strokeDashArray);
+        const displace = item.rotate + item.circleSize * (range.min) / (maxRange- minRange);
+        circle.transform({ rotation: displace, cx: 0, cy: 0, relative: false })
+        range.svg = circle;
+        card.line(-120, 0, -160, 0).addClass('small').transform({ rotation: displace + 180, cx: 0, cy: 0, relative: false });
+
+        const rad = 2 * Math.PI * displace / 360.0;
+        card.text("" + (range.min / item.scale)).addClass('textMini')
+            .style('font-size', '32px')
+            .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
+        if (r == item.ranges.length - 1) {
+            const displace = item.rotate + item.circleSize * (range.max) / (maxRange-minRange);
+            const rad = 2 * Math.PI * displace / 360.0;
+            card.text("" + (range.max / item.scale)).addClass('textMini')
+                .style('font-size', '32px')
+                .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
+
+        }
+    }
+
+    image.group().text(item.uiModel).style('font-size', '38px').addClass('textMini').cx(50).cy(-40);
+
+    this.min_el = image.group().addClass('min').style("opacity", 0.5);
+    this.min_el.polygon('0,0 -170,0 -160,-5 0,-5').addClass('pointer');
+    this.min_el.polygon('0,0 -170,0 -160,+5 0,+5').addClass('pointerBG');
+
+
+    this.max_el = image.group().addClass('max').style("opacity", 0.5);
+    this.max_el.polygon('0,0 -170,0 -150,-5 0,-5').addClass('pointer');
+    this.max_el.polygon('0,0 -170,0 -150,+5 0,+5').addClass('pointerBG');
+
+
+    this.pointer_el = image.group()//.addClass('pointer_el');
+
+    this.pointer_el.polygon('40,0 -140,0 -120,-10 0,-10').addClass('pointer');
+    this.pointer_el.polygon('40,0 -140,0 -120,+10 0,+10').addClass('pointerBG');
+    var middle = image.group().cx(0).cy(0).addClass('text');
+    middle.rect(220, 80).cx(0).cy(90).style('fill', '#4c4c4c').style('rx', '10').style('stroke-width', '2');
+    this.textMiddle = middle.text(item.format.replace("X", item.value))
+        .style('fill', 'white')
+        .style('font-size', '64px').cx("50%").cy(90);
+    image.circle(40).cx(0).cy(0).addClass('center');
+    this.resize();
+}
+
+
+EMSGenericCircleRenderer.prototype = {
+    constructor: EMSGenericCircleRenderer,
+
+    resize: function () {
+        var canvasWidth = this.canvas.parentElement.offsetWidth - 12;
+
+        if (canvasWidth !== this.width) {
+            this.width = canvasWidth;
+            this.height = canvasWidth * 0.5;
+
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+        }
+    },
+
+    update: function (value, item) {
+        //this.card.text=value;
+        if (value < this.min) {
+            value = this.min;
+        }
+        if (value > this.max) {
+            value = this.max;
+        }
+        for (var r = 0; r < item.ranges.length; r++) {
+            var range = item.ranges[r];
+            if (range.hasOwnProperty("svg") == false) { }
+            else {
+                if (value > range.max || value < range.min) {
+                    //range["svg"].style("opacity",0.3);
+                    range["svg"].style("stroke", range.colorOff);
+                    //range["svg"].style("fill","#00ffff");
+                }
+                else {
+                    //range["svg"].style("opacity",1.0);
+                    range["svg"].style("stroke", range.color);
+                    this.textMiddle.style('fill', range.color)
+                    item.backround.style('fill', range.colorOff).style("opacity", 0.5);
+                }
+            }
+        }
+        if (item.valueMin > value) {
+            item.valueMin = value;
+            this.min_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max-this.min), 0, 0);
+        }
+        if (item.valueMax < value) {
+            item.valueMax = value;
+            this.max_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max-this.min), 0, 0);
+        }
+        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max-this.min), 0, 0);
+        this.textMiddle.text(item.format.replace("X", (item.value).toFixed(item.ceil)))
+    }
+};
+
+
+
+/**
+ * Altimeter
+ */
+class AltimeterCircleRenderer extends EMSGenericCircleRenderer {
+    update(value, item) {
+        for (var r = 0; r < item.ranges.length; r++) {
+            var range = item.ranges[r];
+            if (range.hasOwnProperty("svg") == false) { }
+            else {
+                if (value > range.max || value < range.min) {
+                    //range["svg"].style("opacity",0.3);
+                    range["svg"].style("stroke", range.colorOff);
+                    //range["svg"].style("fill","#00ffff");
+                }
+                else {
+                    //range["svg"].style("opacity",1.0);
+                    range["svg"].style("stroke", range.color);
+                    this.textMiddle.style('fill', "white")
+                    item.backround.style('fill', range.colorOff).style("opacity", 0.8);
+                }
+            }
+        }
+
+        this.min_el.rotate(item.rotate - 180 + item.circleSize * (value/100) / (this.max), 0, 0);
+        this.min_el.style("opacity", 1);
+        this.max_el.style("opacity", 0);
+        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value/1000) / (this.max), 0, 0);
+        this.textMiddle.text(item.format.replace("X", (item.value).toFixed(item.ceil)))
+    }
+}
+
+
+
+function DirectionCircleRenderer(locationId, item) {
+    this.width = -1;
+    this.height = -1;
+
+    this.locationId = locationId;
+    this.canvas = document.getElementById(this.locationId);
+    var image = SVG(this.locationId).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
+    this.image = image;
+    const plane = image.path(d = "M 247.51404,152.40266 139.05781,71.800946 c 0.80268,-12.451845 1.32473,-40.256266 0.85468,-45.417599 -3.94034,-43.266462 -31.23018,-24.6301193 -31.48335,-5.320367 -0.0693,5.281361 -1.01502,32.598388 -1.10471,50.836622 L 0.2842717,154.37562 0,180.19575 l 110.50058,-50.48239 3.99332,80.29163 -32.042567,22.93816 -0.203845,16.89693 42.271772,-11.59566 0.008,0.1395 42.71311,10.91879 -0.50929,-16.88213 -32.45374,-22.39903 2.61132,-80.35205 111.35995,48.50611 -0.73494,-25.77295 z")
+    plane.cx(0).cy(0);
+
+    this.pointer_el = image.group().addClass('card');
+
+    const sectors = 8;
+    const circleDiameter = 400 - 10 - 60;
+    for (var r = 0; r < sectors; r++) {
+
+        const displace = r * (360 / sectors);
+        this.pointer_el.line(-100, 0, -160, 0).addClass('big').transform({ rotation: displace, cx: 0, cy: 0, relative: false });
+        var rad = ((displace - 90) * 2 * Math.PI / 360.0)
+        if (displace % 90 != 0) {
+            this.pointer_el.text("" + displace)
+                //.addClass('text')
+                .style('font-size', '24px')
+                //.cx(-180).cy(0)
+                .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
+        }
+    }
+
+    for (var r = 0; r < sectors; r++) {
+        const displace = r * (360 / sectors);
+        this.pointer_el.line(-100, 0, -160, 0).addClass('small').transform({ rotation: displace + 45.0 / 2.0, cx: 0, cy: 0, relative: false });
+    }
+
+    this.pointer_el.text("N").style('font-size', '32px').style("fill", "#ff0000").style("stroke", "#ff0000")
+        .cx(0).cy(-180);
+    this.pointer_el.text("E").style('font-size', '32px')//.style("fill", "#000000")
+        .cx(180).cy(0)
+    this.pointer_el.text("W").style('font-size', '32px')//.style("fill", "#000000")
+        .cx(-180).cy(0)
+    this.pointer_el.text("S").style('font-size', '32px')//.style("fill", "#000000")
+        .cx(0).cy(180)
+
+}
+
+DirectionCircleRenderer.prototype = {
+    constructor: DirectionCircleRenderer,
+
+    resize: function () {
+        var canvasWidth = this.canvas.parentElement.offsetWidth - 12;
+
+        if (canvasWidth !== this.width) {
+            this.width = canvasWidth;
+            this.height = canvasWidth * 0.5;
+
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+        }
+    },
+    update: function (value, item) {
+        //this.card.text=value;
+        if (value < this.min) {
+            value = this.min;
+        }
+        if (value > this.max) {
+            value = this.max;
+        }
+        this.pointer_el.rotate(-value, 0, 0);
+
+    }
+};

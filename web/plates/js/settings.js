@@ -265,6 +265,8 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		'Autopilot_Enabled',
 		'Keypad_Enabled',
 		'Camera_Enabled',
+		'Charts_Enabled',
+		'Radio_Enabled',
 		'BMP_Sensor_Enabled', 'DisplayTrafficSource', 'DEBUG', 'ReplayLog', 'TraceLog', 'AHRSLog', 'PersistentLogging', 'GDL90MSLAlt_Enabled', 'EstimateBearinglessDist', 'DarkMode'];
 
 	var settings = {};
@@ -312,6 +314,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		$scope.AHRSLog = settings.AHRSLog;
 		$scope.PersistentLogging = settings.PersistentLogging;
 		$scope.Camera_Enabled = settings.Camera_Enabled;
+		$scope.Charts_Enabled = settings.Charts_Enabled;
 		$scope.Autopilot_Enabled = settings.Autopilot_Enabled;
 		$scope.Audio_Enabled = settings.Audio_Enabled;
 		$scope.Keypad_Enabled = settings.Keypad_Enabled;
@@ -320,6 +323,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		$scope.AltitudeOffset = settings.AltitudeOffset;
 		$scope.WatchList = settings.WatchList;
 		$scope.OwnshipModeS = settings.OwnshipModeS;
+		$scope.Radio_Enabled = settings.Radio_Enabled;
 		$scope.DeveloperMode = settings.DeveloperMode;
 		$scope.GLimits = settings.GLimits;
 		$scope.GDL90MSLAlt_Enabled = settings.GDL90MSLAlt_Enabled;

@@ -191,10 +191,10 @@ function KeypadService($scope, settings) {
     // Current Rotary Navigation Pattern: Left Side Menu
     var keypadSettingsNavigation = {
         "#/": {
-            "ArrowRight": "#/traffic",
-            "ArrowDown": "#/traffic",
-            "3": "#/traffic",
-            "to": "#/traffic",
+            "ArrowRight": "#/cockpit",
+            "ArrowDown": "#/cockpit",
+            "3": "#/cockpit",
+            "to": "#/cockpit",
             "from": "#/",
             "ArrowLeft": "#/",
             "ArrowUp": "#/",
@@ -202,15 +202,41 @@ function KeypadService($scope, settings) {
             "knobDeg": 0,
             "title": "Home"
         },
+        "#/cockpit": {
+            "disableRotary": true,
+            "ArrowRight": "#/radio",
+            "ArrowDown": "#/radio",
+            "3": "#/radio",
+            "to": "#/radio",
+            "from": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
+            "knobDeg": 0,
+            "title": "Cockpit"
+        },
+        "#/radio": {
+            "disableRotary": true,
+            "ArrowRight": "#/traffic",
+            "ArrowDown": "#/traffic",
+            "3": "#/traffic",
+            "to": "#/traffic",
+            "from": "#/cockpit",
+            "ArrowLeft": "#/cockpit",
+            "ArrowUp": "#/cockpit",
+            "1": "#/cockpit",
+            "knobDeg": 0,
+            "title": "Radio"
+        },        
         "#/traffic": {
             "ArrowRight": "#/gps",
             "ArrowDown": "#/gps",
             "3": "#/gps",
             "to": "#/gps",
-            "from": "#/",
-            "ArrowLeft": "#/",
-            "ArrowUp": "#/",
-            "1": "#/",
+            "from": "#/radio",
+            "ArrowLeft": "#/radio",
+            "ArrowUp": "#/radio",
+            "1": "#/radio",
             "knobDeg": 0,
             "title": "Traffic"
         },
@@ -314,17 +340,43 @@ function KeypadService($scope, settings) {
             "title": "Timers"
         },
         "#/alerts": {
-            "ArrowRight": "#/alerts",
-            "ArrowDown": "#/alerts",
-            "3": "#/alerts",
-            "to": "#/alerts",
+            "ArrowRight": "#/checklist",
+            "ArrowDown": "#/checklist",
+            "3": "#/checklist",
+            "to": "#/checklist",
             "from": "#/timers",
             "ArrowLeft": "#/timers",
             "ArrowUp": "#/timers",
             "1": "#/timers",
             "knobDeg": 0,
             "title": "Alerts"
+        },
+        "#/checklist": {
+            "disableRotary": true,
+            "ArrowRight": "#/charts",
+            "ArrowDown": "#/charts",
+            "3": "#/charts",
+            "to": "#/charts",
+            "from": "#/alerts",
+            "ArrowLeft": "#/alerts",
+            "ArrowUp": "#/alerts",
+            "1": "#/alerts",
+            "knobDeg": 0,
+            "title": "Checklist"
+        },
+        "#/charts": {
+            "ArrowRight": "#/charts",
+            "ArrowDown": "#/charts",
+            "3": "#/charts",
+            "to": "#/charts",
+            "from": "#/checklist",
+            "ArrowLeft": "#/checklist",
+            "ArrowUp": "#/checklist",
+            "1": "#/checklist",
+            "knobDeg": 0,
+            "title": "Charts"
         }
+
     };
     // Current Rotary Navigation Pattern: ROTARY at 8 positions, uncomment when Rotary is used
     /*

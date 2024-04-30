@@ -51,6 +51,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'StatusCtrl',
 			reloadOnSearch: false
 		})
+		.state('cockpit', {
+			url: '/cockpit',
+			templateUrl: 'plates/cockpit.html',
+			controller: 'CockpitCtrl',
+			reloadOnSearch: false
+		})
 		.state('towers', {
 			url: '/towers',
 			templateUrl: 'plates/towers.html',
@@ -93,6 +99,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'RadarCtrl',
 			reloadOnSearch: false
 		})
+		.state('radio', {
+			url: '/radio',
+			templateUrl: 'plates/radio.html',
+			controller: 'RadioCtrl',
+			reloadOnSearch: false
+		})
 		.state('camera', {
 			url: '/camera',
 			templateUrl: 'plates/camera.html',
@@ -111,10 +123,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'MapCtrl',
 			reloadOnSearch: false
 		})
+		.state('checklist', {
+			url: '/checklist',
+			templateUrl: 'plates/checklist.html',
+			controller: 'CheckCtrl',
+			reloadOnSearch: false
+		})
 		.state('alerts', {
 			url: '/alerts',
 			templateUrl: 'plates/alerts.html',
 			controller: 'AlertsCtrl',
+			reloadOnSearch: false
+		})
+		.state('charts', {
+			url: '/charts',
+			templateUrl: 'plates/charts.html',
+			controller: 'ChartsCtrl',
 			reloadOnSearch: false
 		})
 		.state('timers', {
@@ -147,6 +171,8 @@ app.controller('MainCtrl', function ($scope, $http) {
             $scope.UAT_Enabled = settings.UAT_Enabled;
             // Plugins: Autopilot Menu
             $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
+            // Plugins: Radio Menu
+            $scope.Radio_Enabled = settings.Radio_Enabled;
             // Plugins: Camera Menu
             $scope.Camera_Enabled = settings.Camera_Enabled;
             // Plugins: Keypad Service

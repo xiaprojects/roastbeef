@@ -380,6 +380,7 @@ func sendTrafficUpdates() {
 		if ti.Position_valid && isCurrent { // ... but don't pass stale data to the EFB.
 			//TODO: Coast old traffic? Need to determine how FF, WingX, etc deal with stale targets.
 			logTraffic(ti) // only add to the SQLite log if it's not stale
+			charts.logTraffic(ti)
 
 			if isOwnshipTi {
 				if globalSettings.DEBUG {
