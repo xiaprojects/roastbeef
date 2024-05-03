@@ -411,6 +411,18 @@ func handleTimersRest(w http.ResponseWriter, r *http.Request) {
 /***
  * Autopilot REST API
  */
+// Autopilot WS
+var autopilotUpdate *uibroadcaster
+
+// Autopilot WS Code
+func handleAutopilotWS(conn *websocket.Conn) {
+	autopilotUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
 func handleAutopilotGet(w http.ResponseWriter, r *http.Request) {
 	autopilot.waypointsDataMutex.Lock()
 	statusJSON, err := json.Marshal(&autopilot.waypointsData)
@@ -423,6 +435,18 @@ func handleAutopilotGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func handleAutopilotPut(w http.ResponseWriter, r *http.Request) {
+
+	// TODO: Future feature, inject the start location for pre-calculation
+	/*
+	var msg map[string]interface{} // support arbitrary JSON
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&msg)
+	if err == nil {
+		autopilot.status.Lat = float32(msg["Lat"].(float64))
+		autopilot.status.Lon = float32(msg["Lon"].(float64))
+	}
+	*/
+	autopilot.start()
 }
 func handleAutopilotPost(w http.ResponseWriter, r *http.Request) {
 
@@ -446,13 +470,25 @@ func handleAutopilotPost(w http.ResponseWriter, r *http.Request) {
 
 }
 func handleAutopilotDelete(w http.ResponseWriter, r *http.Request) {
+	/*
 	autopilot.waypointsDataMutex.Lock()
 	autopilot.waypointsData = make([]Waypoint, 0)
 	autopilot.isActive = false
 	autopilot.waypointsDataMutex.Unlock()
+	*/
+	autopilot.stop()
 }
 
 func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
+	// Unified REST with WebSocket
+	if len(r.Header["Upgrade"]) > 0 {
+		s := websocket.Server{
+			Handler: websocket.Handler(handleAutopilotWS)}
+		s.ServeHTTP(w, r)
+		return
+	}
+
+
 	// define header in support of cross-domain AJAX
 	setNoCache(w)
 	setJSONHeaders(w)
@@ -461,7 +497,6 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
 
 	// for an OPTION method request, we return header without processing.
 	// this insures we are recognized as supporting cross-domain AJAX REST calls
-	// AJAX call - /getTimers. Responds with current CameraSources
 	if r.Method == "GET" {
 		handleAutopilotGet(w, r)
 	}
@@ -1567,6 +1602,7 @@ func managementInterface() {
 	gdl90Update = NewUIBroadcaster()
 	alertUpdate = NewUIBroadcaster()
 	keypadUpdate = NewUIBroadcaster()
+	autopilotUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))

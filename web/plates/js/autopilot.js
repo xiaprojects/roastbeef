@@ -210,11 +210,32 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
     };
+    $scope.autopilotStop = function () {
+        $http.delete(URL_AUTOPILOT_SET, "").then(function (response) {
+        });
+    }
 
     $scope.uploadWaypoints = function () {
         if ($scope.gpx.routes.length > 0) {
             var msg = JSON.stringify($scope.gpx.routes[0].points);
-            $http.post(URL_AUTOPILOT_SET, msg).then(function (response) { });
+            $http.post(URL_AUTOPILOT_SET, msg).then(function (response) {
+                // if the upload is positive, check for TARGET, if there is any, Start() navigation
+                var foundTarget = -1;
+                for (var x = 0; x < $scope.gpx.routes.length; x++) {
+                    for (var y = 0; y < $scope.gpx.routes[x].points.length; y++) {
+                        if ($scope.gpx.routes[x].points[y].Status == WAYPOINT_STATUS_TARGET) {
+                            foundTarget = y;
+                        }
+                    }
+                }
+                if (foundTarget >= 0) {
+                    $http.put(URL_AUTOPILOT_SET, "").then(function (response) {
+                    });
+                }
+                else {
+                    $scope.autopilotStop();
+                }
+            });
         }
     }
 
@@ -454,6 +475,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $state.get('autopilot').onExit = function () {
         removeEventListener("keypad", keypadEventListener);
+        removeEventListener("WaypointChanged", waypointChanged);
 
         $scope.noSleep.disable();
         delete $scope.noSleep;
@@ -706,6 +728,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     */
     $scope.hsi = new HSICircleRenderer("hsi", {});
     addEventListener("keypad", keypadEventListener);
+    addEventListener("WaypointChanged", waypointChanged);
     //$scope.tickForAll();
 
     // GPS Controller tasks
@@ -827,6 +850,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     });
 
 
+    $scope.autopilotLoadCurrentStatus = function () {
     // Restore Flight Plan
     $http.get(URL_AUTOPILOT_GET).then(function (response) {
         var status = angular.fromJson(response.data);
@@ -848,5 +872,17 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.gpxImport(autopilotLastPlan);
         }
     });
+    }
+    $scope.autopilotLoadCurrentStatus();
+
+    
+    function waypointChanged(event) {
+        if (($scope === undefined) || ($scope === null)) {
+            removeEventListener("WaypointChanged", waypointChanged);
+            return; // we are getting called once after clicking away from the status page
+        }
+        console.log(event);
+        $scope.autopilotLoadCurrentStatus();
+    }
 }
 

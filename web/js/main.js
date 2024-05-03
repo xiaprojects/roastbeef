@@ -189,6 +189,12 @@ app.controller('MainCtrl', function ($scope, $http) {
 					$scope.alerts = new AlertsService($scope, $http);
 				}
 			}
+			// Plugins: Autopilot Service
+			if($scope.Autopilot_Enabled == true){
+				if($scope.autopilot === undefined|| $scope.autopilot === null){
+					$scope.autopilot = new AutopilotService($scope, $http);
+				}
+			}
 
             // Update theme
             $scope.updateTheme(settings.DarkMode);
