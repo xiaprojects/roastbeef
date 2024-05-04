@@ -515,6 +515,10 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 		return $scope.gpsLayer;
 	}
 
+	$state.get('map').onEnter = function () {
+        // everything gets handled correctly by the controller
+    };
+
 	$state.get('map').onExit = function () {
 		// disconnect from the socket
 		if (($scope.socket !== undefined) && ($scope.socket !== null)) {

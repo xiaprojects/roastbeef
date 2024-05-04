@@ -1,3 +1,4 @@
+<div ui-content-for="title">Status</div>
 <div class="col-sm-12">
 	<div class="text-center">
 		<a ng-click="VersionClick()" class="btn btn-hidden"><strong>Version: <span>{{Version}} ({{Build}})</span></strong></a>
@@ -24,8 +25,10 @@
 					</div>
 					<div class="col-sm-6 label_adj" ng-class="{'section_invisible': !visible_ping}">
 						<strong class="col-xs-5">Ping device:</strong>
+						<span class="col-xs-7">
 						<span ng-show="Ping_connected == true" class="label label-success">Connected</span>
 						<span ng-hide="Ping_connected == true" class="label label-danger">Disconnected</span>
+					</span>
 					</div>
 				</div>
 				<div class="separator"></div>

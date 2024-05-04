@@ -275,6 +275,13 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 	}
 	$scope.update_files = '';
 
+	$state.get('settings').onEnter = function () {
+        // everything gets handled correctly by the controller
+    };
+
+    $state.get('settings').onExit = function () {
+    };
+
 	$http.get(URL_STATUS_GET).then(function(response) {
 		var status = angular.fromJson(response.data);
 		var gpsHardwareCode = (status.GPS_detected_type & 0x0f);
