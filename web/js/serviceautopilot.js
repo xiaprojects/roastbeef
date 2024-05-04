@@ -4,7 +4,7 @@ AutopilotService.prototype = {
 };
 
 // Autopilot WebSockets
-var URL_AUTOPILOT_WS = "ws://" + URL_HOST_BASE + "/autopilot";
+var URL_AUTOPILOT_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/autopilot";
 
 /**
  * AutopilotService Service Class

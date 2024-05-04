@@ -24,7 +24,7 @@ KeypadService.prototype = {
     constructor: KeypadService,
 };
 
-var URL_KEYPAD_WS = "ws://" + URL_HOST_BASE + "/keypad";
+var URL_KEYPAD_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/keypad";
 let KEYPAD_HOLD_TIMEOUT = 500 // Applicable to WS, in JS .repeat is used
 let KEYPAD_MAPPING_PREV = "1"
 let KEYPAD_MAPPING_TAP = "2"

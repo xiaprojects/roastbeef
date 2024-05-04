@@ -15,6 +15,7 @@ import (
 	"compress/gzip"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -1704,13 +1705,48 @@ func managementInterface() {
 	http.HandleFunc("/tiles/", handleTile)
 
 	var addr string
+	var addrTls string
 	if common.IsRunningAsRoot() {
 		addr = managementAddr
+		addrTls = ":443"
 	} else {
 		addr = ":8000" // Make sure we can run without root priviledges on different port
+		addrTls = ":8443"
 	}
 
+	go managementInterfaceForServe(addr)
+	go managementInterfaceForServeTls(addrTls)
+}
+
+
+func managementInterfaceForServe(addr string){
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
+	}
+}
+
+func managementInterfaceForServeTls(addrTls string){
+	// TLS Files
+	certFile := "/boot/firmware/server.crt"
+	keyFile := "/boot/firmware/server.pem"
+
+	// TLS Setup
+	if _, err := os.Stat(keyFile); errors.Is(err, os.ErrNotExist) {
+		log.Printf("HTTPS server.crt or server.pem does not exists, creating new keypair...")
+		exec.Command("openssl",
+		"req","-x509",
+		"-newkey","rsa:2048",
+		"-keyout","/boot/firmware/server.pem",
+		"-out","/boot/firmware/server.crt",
+		"-sha256",
+		"-days","3650",
+		"-subj",
+		"/C=EU/ST=Europe/L=City/O=Stratux/OU=Aviation/CN=192.168.10.1",
+		"-nodes").Run()
+	}
+
+	// HTTPS is required for: Camera, Weather, Remote CORS API, OTA Updates
+	if err := http.ListenAndServeTLS(addrTls, certFile, keyFile, nil); err != nil {
+		log.Printf("managementInterface ListenAndServeTLS: %s\n", err.Error())
 	}
 }
