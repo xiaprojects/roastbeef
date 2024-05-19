@@ -62,8 +62,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             "Dual": $scope.radioList[index].dual
         };
         let msg = JSON.stringify(item);
-        $http.post(URL_RADIO_SET, msg).
+        $http.post(URL_RADIO_SET+"/"+index, msg).
              then(function(response) {
+                $scope.radioRefresh();
              }, function(response) {
                // called asynchronously if an error occurs
                // or server returns response with an error status.
@@ -73,24 +74,32 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     // Restore status
+    $scope.radioRefresh = function(){
     $http.get(URL_RADIO_GET).then(function (response) {
         var status = angular.fromJson(response.data);
-        var radioList = [];
+        var radioList = $scope.radioList;
         for(var index=0;index<status.length;index++){
             var template = { "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "name": "", "active": "000.000", "standby": "000.000", "dual": false, "index": 0 };
+            if(index<radioList.length){
+                template = radioList[index];
+            } else {
+                radioList.push(template);
+            }
             template.name = status[index]["Name"];
             template.active = status[index]["FrequencyActive"];
             template.standby = status[index]["FrequencyStandby"];
             template.dual = status[index]["Dual"];
             template.index = index;
-            radioList.push(template);
         }
-        if(radioList.length>0){
+        // Auto select the first Radio only the first time
+        if(radioList.length>0 && $scope.radioList.length==0){
             radioList[0].className = "keypadSelectedYes";
             radioList[0].classStandByLeft= "btn-danger";
         }
         $scope.radioList = radioList;
     });
+    }
+    $scope.radioRefresh();
 
     $scope.switchFreq = function (radio) {
         var standby = radio.standby;

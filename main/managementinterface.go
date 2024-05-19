@@ -536,7 +536,75 @@ func handleRadioGet(w http.ResponseWriter, r *http.Request) {
 func handleRadioPut(w http.ResponseWriter, r *http.Request) {
 }
 func handleRadioPost(w http.ResponseWriter, r *http.Request) {
+	parts := strings.Split(r.RequestURI, "/")
 
+	if len(parts) < 3 {
+		http.Error(w, "", 500)
+		return
+	}
+	idx := len(parts) - 1
+	radioIndex, err1 := strconv.Atoi(parts[idx])
+
+	if(err1 != nil){
+		http.Error(w, err1.Error(), 500)
+		return
+	}
+
+	decoder := json.NewDecoder(r.Body)
+
+	radio.radioDataMutex.Lock()
+
+	var msg RadioStatus
+	err2 := decoder.Decode(&msg)
+	if err2 == io.EOF {
+		log.Printf("handleRadioPostio.EOF:error: %s\n", err2.Error())
+		http.Error(w, err2.Error(), 500)
+	} else if err2 != nil {
+		log.Printf("handleRadioPost:error: %s\n", err2.Error())
+		http.Error(w, err2.Error(), 500)
+	} else {
+		// no need for Mutex because the writer is here, no other thread will access to the array
+		if(radio.radioData[radioIndex].Dual != msg.Dual){
+			// Dual is Changed
+			ret := radio.radioSetDual(radioIndex,msg.Dual)
+			if(ret==true){
+				radio.radioData[radioIndex].Dual = msg.Dual
+			} else {
+				log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+				alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio DUAL Set fail"), time.Now()})
+
+			}
+		}
+		if(radio.radioData[radioIndex].FrequencyActive != msg.FrequencyActive){
+			// ActiveFrequency is Changed
+			ret := radio.radioSetFrequency(radioIndex,msg.FrequencyActive,true)
+			if(ret==true){
+				radio.radioData[radioIndex].FrequencyActive = msg.FrequencyActive
+			} else {
+					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Active fail"), time.Now()})
+				}
+			}
+		if(radio.radioData[radioIndex].FrequencyStandby != msg.FrequencyStandby){
+			// FrequencyStandby is Changed
+			ret := radio.radioSetFrequency(radioIndex,msg.FrequencyStandby,true)
+			if(ret==true){
+				radio.radioData[radioIndex].FrequencyStandby = msg.FrequencyStandby
+			} else {
+					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Standby fail"), time.Now()})
+				}
+			}
+	}
+
+	statusJSON, err4 := json.Marshal(&radio.radioData)
+	radio.radioDataMutex.Unlock()
+	if err4 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err4)
+	}
 }
 func handleRadioDelete(w http.ResponseWriter, r *http.Request) {
 
@@ -875,6 +943,19 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 					case "RadarRange":
 						globalSettings.RadarRange = int(val.(float64))
 						radarUpdate.SendJSON(globalSettings)
+					// Serial Management with Capabilities and Baud support
+					case "SerialOutput":
+						modelItem := val.(map[string]interface{})
+						if(modelItem["DeviceString"]!=nil && len(modelItem["DeviceString"].(string))>0 &&
+							modelItem["Baud"]!=nil && (modelItem["Baud"].(float64))>0){
+								dev := modelItem["DeviceString"].(string)
+								serialOut := globalSettings.SerialOutputs[dev]
+								serialOut.Baud = int(modelItem["Baud"].(float64))
+								serialOut.Capability = uint8(modelItem["Capability"].(float64))
+								globalSettings.SerialOutputs[dev]=serialOut
+								closeSerial(dev)
+						}
+					// TODO: This method is obsolete and can be removed
 					case "Baud":
 						if globalSettings.SerialOutputs != nil {
 							for dev, serialOut := range globalSettings.SerialOutputs {
@@ -1684,6 +1765,7 @@ func managementInterface() {
 	http.HandleFunc("/timers", handleTimersRest)
 	// Radio Feature
 	http.HandleFunc("/radio", handleRadioRest)
+	http.HandleFunc("/radio/", handleRadioRest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)
