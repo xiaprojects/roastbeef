@@ -142,7 +142,11 @@ func serialOutWatcher() {
 		serialDevs = append(serialDevs, fmt.Sprintf("/dev/serialout%d", i))
 		serialDevs = append(serialDevs, fmt.Sprintf("/dev/serialout_nmea%d", i))
 		// Improved Serial Output support for different devices
-		serialDevs = append(serialDevs, fmt.Sprintf("/dev/ttyUSB%d", i))
+		//serialDevs = append(serialDevs, fmt.Sprintf("/dev/ttyUSB%d", i)) // avoid generic ttyUSB0 which may relay on a peripheral symlink
+		//serialDevs = append(serialDevs, fmt.Sprintf("/dev/prolific%d", i))
+		// TODO1: find the right path for USB devices
+		// TODO2: add into serialConnection structure more detailed mapping function using udevadm info -q property -n {/dev/device}
+		// TODO3: unify network.go with gps.go serial discovery
 	}
 
 	for {
@@ -177,7 +181,7 @@ func serialOutWatcher() {
 						config = val
 						if config.Capability == 0 {
 							// Obsolete: using the new Web Settings the user can easily manage and change this
-							//config.Capability = NETWORK_GDL90_STANDARD // Fix old serial conns that didn't have protocol set
+							config.Capability = NETWORK_GDL90_STANDARD // Fix old serial conns that didn't have protocol set
 						}
 					}
 

@@ -319,7 +319,7 @@
         
         
                                 <select class="custom-select" ng-model="serial.Capability" ng-blur="updateBaud(serial)">
-                                    <option value="0" ng-selected="serial.Capability.toFixed(0)==0">DISABLED</option>
+                                    <option value="0" ng-selected="serial.Capability.toFixed(0)==0">AUTO (NMEA)</option>
                                     <option value="1" ng-selected="serial.Capability.toFixed(0)==1">GDL90</option>
                                     <option value="2" ng-selected="serial.Capability.toFixed(0)==2">AHRS_FFSIM</option>
                                     <option value="4" ng-selected="serial.Capability.toFixed(0)==4">AHRS_GDL90</option>
