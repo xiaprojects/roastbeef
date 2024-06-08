@@ -787,7 +787,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
                         $scope.gmeterIcons[gm].class = "label-success";
                     }
                 }
-
+                // GMeter Buzzer Play
+                window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
 
             }
 
@@ -847,6 +848,14 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         if (status.hasOwnProperty("Autopilot_HomeWaypoint")) {
             $scope.Autopilot_HomeWaypoint=status["Autopilot_HomeWaypoint"];
         }
+        // GMeter Buzzer Setup
+        if (status.GLimits === "" || status.GLimits === undefined) {
+            status.GLimits = "-1.76 4.4";
+        }
+        var glims = status.GLimits.split(" ");
+        $scope.gLimNegative = parseFloat(glims[0]);
+        $scope.gLimPositive = parseFloat(glims[1]);
+        window.gMeterBuzzerPlayer.setGLimits($scope.gLimNegative,$scope.gLimPositive);
     });
 
 

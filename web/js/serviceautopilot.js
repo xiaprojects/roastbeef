@@ -47,7 +47,7 @@ function AutopilotService($scope, $http) {
             if (($scope === undefined) || ($scope === null))
                 return; // we are getting called once after clicking away from the page
             var k = JSON.parse(msg.data);
-            console.log(k);
+            //console.log(k);
             if(k.hasOwnProperty("Active") && k["Active"]==true){
                 $scope.autopilotClass = "label-success"
                 if(k["GPRMB"]["Steer"]=="R"){

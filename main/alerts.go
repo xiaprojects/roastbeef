@@ -173,10 +173,15 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) bool {
 				// TODO: Let's customisable the player command line
 				// TODO: Queue sounds in case of multiple events
 				cmd := exec.Command("/usr/bin/aplay", soundPath)
-				go cmd.Start()
+				go startAndWaitCmd(cmd)
 			}
 		}
 	}
 	// Event pushed
 	return true
+}
+
+func startAndWaitCmd(cmd *exec.Cmd) {
+	cmd.Start()
+	cmd.Wait()
 }
