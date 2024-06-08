@@ -22,6 +22,7 @@ RadioCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; //
 
 var URL_RADIO_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_RADIO_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
+var URL_PLAYBACK_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/playback";
 var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.frequencies.json";
 
 
@@ -32,6 +33,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.scrollItemCounter = 0;
     $scope.scrollItemSelected = 0;
     $scope.scrollItemRight = 0;
+    $scope.replayList = [];
     // Frequency DB
         /*
     {
@@ -97,6 +99,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             radioList[0].classStandByLeft= "btn-danger";
         }
         $scope.radioList = radioList;
+        $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
     });
     }
     $scope.radioRefresh();
@@ -134,9 +137,12 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $state.get('radio').onEnter = function () {
         // everything gets handled correctly by the controller
+
     };
 
     $state.get('radio').onExit = function () {
+        clearInterval($scope.tickerPlayback);
+        delete $scope.tickerPlayback;
         removeEventListener("keypad", keypadEventListener);
         $scope.noSleep.disable();
         delete $scope.noSleep;
@@ -177,6 +183,23 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     }
 
+    $scope.playlistSelectByIndex = function (index) {
+        for (var x = 0; x < $scope.replayList.length; x++) {
+            if (x == index) {
+                $scope.replayList[x].className = "keypadSelectedYes";
+            }
+            else {
+                $scope.replayList[x].className = "keypadSelectedNo";
+            }
+        }
+        var off = "btn-default";
+        for (var x = 0; x < $scope.radioList.length; x++) {
+                $scope.radioList[x].className = "keypadSelectedNo";
+                $scope.radioList[x].classStandByLeft = off;
+                $scope.radioList[x].classStandByRight = off;
+        }
+        $scope.$apply();
+    }
 
     $scope.radioSelectByIndex = function (index, right, selected) {
         var off = "btn-default";
@@ -205,11 +228,20 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
                 $scope.radioList[x].classStandByRight = off;
             }
         }
+        for (var x = 0; x < $scope.replayList.length; x++) {
+                $scope.replayList[x].className = "keypadSelectedNo";
+        }
     }
 
     $scope.radioSelectTap = function () {
+        var availableItems = $scope.radioList.length;
+        if ($scope.scrollItemCounter < availableItems) {
         $scope.scrollItemSelected = !$scope.scrollItemSelected;
         $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
+        } else {
+            var playBackItemSelected = $scope.scrollItemCounter - availableItems + $scope.scrollItemRight;
+            $scope.playAudio($scope.replayList[playBackItemSelected].Path);
+        }
         $scope.$apply();
     }
 
@@ -231,10 +263,17 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
             if ($scope.scrollItemCounter >= availableItems) {
+                var playBackItemSelected = ($scope.scrollItemCounter - availableItems)*2 + $scope.scrollItemRight;
+                if(playBackItemSelected >= $scope.replayList.length){
+
                 $scope.scrollItemCounter = availableItems - 1;
                 $scope.scrollItemRight = 1;
                 const proxy = new KeyboardEvent("keypad", { key: "to" });
                 dispatchEvent(proxy);
+                
+                } else {
+                    $scope.playlistSelectByIndex(playBackItemSelected);
+                }
             }
             else {
                 $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
@@ -260,6 +299,13 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             else {
                 $scope.scrollItemRight--;
             }
+            var availableItems = $scope.radioList.length;
+            if ($scope.scrollItemCounter >= availableItems) {
+                var playBackItemSelected = ($scope.scrollItemCounter - availableItems)*2 + $scope.scrollItemRight;
+                if(playBackItemSelected < $scope.replayList.length) {
+                    $scope.playlistSelectByIndex(playBackItemSelected);
+                }
+            } else {
             if ($scope.scrollItemCounter < 0) {
                 $scope.scrollItemCounter = 0;
                 $scope.scrollItemRight = 0;
@@ -269,6 +315,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             else {
                 $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
                 $scope.$apply();
+            }
             }
         }
 
@@ -281,9 +328,16 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         return "";
     }
+    $scope.radioDisplayNameByFrequency = function (frequency) {
+        if($scope.db["global"].hasOwnProperty(frequency)){
+        return $scope.db["global"][frequency]["name"];
+        }
+        return "---";
+    }
 
     addEventListener("keypad", keypadEventListener);
 
+    $scope.radioDBReload = function(){
     // Load the Radio DB, format:
     $http.get(URL_RADIO_DB_GET).then(function (response) {
         var db = angular.fromJson(response.data);
@@ -292,7 +346,70 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             return;
         }
         $scope.db = db;
+        $scope.playbackReload();
+        if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
+            $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
+        }    
     });
+    }
+    $scope.radioDBReload();
+    // TODO: Add WebSocket to avoid Polling
+    $scope.playbackReload = function() {
+    // Load the Playback:
+    $http.get(URL_PLAYBACK_GET).then(function (response) {
+        var list = angular.fromJson(response.data);
+        if(list === undefined || list.length == 0)
+        {
+            return;
+        }
+        // {"Name":"radio_20240607_051225_130000000.mp3","Source":"RTL","Path":"/playback/radio_20240607_051225_130000000.mp3","Size":12380,"ModTime":"2024-06-07T06:12:30.20311712+01:00","Frequency":""}
+        var listParsed = [];
+        for (var i = list.length - 1; i >= 0; i--) {
+            var p = list[i];
+            p.Duration = parseInt(p.Size / 3000);
+            if(p.Duration<2)continue;
+            
+            if (p.Frequency == "") {
+                var fr = (p.Path.split("_").pop().split(".")[0]).slice(0,6);
+                var f = fr.slice(0,3) + "." + fr.slice(3,6);
+                var fn = $scope.radioFindFrequency(f);
+                if (fn == "") {
+                    p.Frequency = f;
+                }
+                else {
+                    p.Frequency = fn;
+                }
+            }
+
+            if(listParsed.length%2 == 0){
+                p.style = "background-color:lightgray;";
+            }
+            p.className = "keypadSelectedNo";
+            listParsed.push(p);
+        }
+        var availableItems = $scope.radioList.length;
+        if ($scope.scrollItemCounter >= availableItems) {
+            var playBackItemSelected = ($scope.scrollItemCounter - availableItems)*2 + $scope.scrollItemRight;
+            if(playBackItemSelected < listParsed.length) {
+                listParsed[playBackItemSelected].className = "keypadSelectedYes";
+            }
+        }
+
+        $scope.replayList = listParsed;
+    });
+    }
+    $scope.elapsed = function (dateISO) {
+        return textBySeconds(new Date(dateISO).getHours() * 60 + new Date(dateISO).getMinutes())
+    }
+    $scope.playAudio = function (url) {
+        document.getElementById("audioproxy").autoplay = true;
+        document.getElementById("audioproxy").src = url;
+        document.getElementById("audioproxy").load();
+      }
+      $scope.shareAudio = function (url) {
+        window.open(url,'_blank');
+      }
+      
 }
 
 

@@ -519,6 +519,31 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
  * Autopilot REST API End
  */
 
+func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
+	fileInfo, err := ioutil.ReadDir(STRATUX_WWW_DIR + "playback")
+    if err != nil {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+
+	list := []RadioPlayback{}
+
+	for i := range fileInfo {
+		r := RadioPlayback{Name: fileInfo[i].Name(),Size: fileInfo[i].Size(),ModTime: fileInfo[i].ModTime(),Path: "/playback/"+fileInfo[i].Name(),Source: "RTL",Frequency: ""}
+		list = append(list, r)
+	}
+
+	statusJSON, err2 := json.Marshal(&list)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+
+
 /***
  * Radio REST API
  */
@@ -1757,6 +1782,8 @@ func managementInterface() {
 	http.HandleFunc("/autopilot", handleAutopilotRest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	// Radio Platback Feature
+	http.HandleFunc("/playback", handlePlaybackGet)
 	// Checklist Feature
 	http.HandleFunc("/checklist/default/status", handleChecklistRest)
 	// Alerts Feature

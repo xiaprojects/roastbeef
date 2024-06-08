@@ -69,6 +69,15 @@ const (
 	RADIO_DRIVER_RS232_STX =   0x02
 )
 
+type RadioPlayback struct {
+	Name string
+	Source string
+	Path string
+	Size int64
+	ModTime time.Time
+	Frequency string
+}
+
 type RadioStatus struct {
 	Name string
 	SquelchLevel int
