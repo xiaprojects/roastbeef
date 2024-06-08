@@ -8,4 +8,13 @@ function LogsCtrl($scope, $state, $http) {
 	// just a couple environment variables that may bve useful for dev/debugging but otherwise not significant
 	$scope.userAgent = navigator.userAgent;
     $scope.deviceViewport = 'screen = ' + window.screen.width + ' x ' + window.screen.height;
+
+
+	$state.get('logs').onEnter = function () {
+        // everything gets handled correctly by the controller
+    };
+
+    $state.get('logs').onExit = function () {
+    };
+
 }

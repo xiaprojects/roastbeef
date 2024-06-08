@@ -38,6 +38,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"math"
 	"sync"
 	"time"
 
@@ -58,12 +59,46 @@ type Waypoint struct {
 	Cmt    string  // GPX comment
 }
 
+const (
+	GPRMB_STATUS_OK         = "A"
+	GPRMB_STATUS_WARNING    = "V"
+	GPRMB_STEER_LEFT        = "L"
+	GPRMB_STEER_RIGHT       = "R"
+	GPRMB_ARRIVED_YES       = "A"
+	GPRMB_ARRIVED_NOT_YET   = "V"
+)
+
+type GPRMBData struct {
+	Status        string
+	XTRKDistance  float64
+	Steer         string
+	WaypointStart string
+	WaypointDest  string
+	Lat           float32
+	Lon           float32
+	Distance      float64
+	TrueBearing   float64
+	Knots         float64
+	Arrived       string
+}
+
+type AutopilotStatus struct {
+	Active           bool
+	To               Waypoint
+	GPRMB            GPRMBData
+	// TODO: Future feature, inject the start location for pre-calculation
+	/*
+	Lat              float32
+	Lon              float32
+	*/
+}
+
 type AutopilotStratuxPlugin struct {
 	StratuxPlugin
 	waypointsData      []Waypoint
 	waypointsDataMutex *sync.Mutex
 	requestToExit      bool
-	isActive           bool
+	status             AutopilotStatus
 }
 
 var autopilot = AutopilotStratuxPlugin{}
@@ -73,7 +108,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) InitFunc() bool {
 	autopilotInstance.Name = "Autopilot RS232 $GPRMB"
 	autopilotInstance.waypointsDataMutex = &sync.Mutex{}
 	autopilotInstance.requestToExit = false
-	autopilotInstance.isActive = false
+	autopilotInstance.status.Active = false
 	autopilotInstance.waypointsData = make([]Waypoint, 0)
 	go autopilotInstance.autopilot()
 	return true
@@ -82,15 +117,21 @@ func (autopilotInstance *AutopilotStratuxPlugin) InitFunc() bool {
 func (autopilotInstance *AutopilotStratuxPlugin) autopilot() {
 	for autopilotInstance.requestToExit == false {
 		if globalSettings.Autopilot_Enabled == true {
-			if autopilotInstance.isActive == true {
+			if autopilotInstance.status.Active == true {
 				if isGPSValid() {
 					// Work on a copy of the waypoints and wait for events
 					autopilotInstance.waypointsDataMutex.Lock()
 					var waypointsDataCopy = autopilotInstance.waypointsData
 					autopilotInstance.waypointsDataMutex.Unlock()
-					autopilotInstance.autopilotRoutine(waypointsDataCopy)
+					gprmb := autopilotInstance.autopilotRoutine(waypointsDataCopy)
+					autopilotInstance.status.GPRMB = gprmb
+					nmeaGPRMB := makeGPRMBString(gprmb)
+					log.Print(nmeaGPRMB)
+					// NMEA Serial output for $GPRMB Autopilot feature
+					sendNetFLARM(nmeaGPRMB,time.Second, 2)
 				}
 			}
+			autopilotUpdate.SendJSON(autopilotInstance.status)
 		}
 		time.Sleep(1 * time.Second)
 	}
@@ -98,30 +139,63 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilot() {
 
 func (autopilotInstance *AutopilotStratuxPlugin) autopilotEventAbeamPoint(waypointIndex int) {
 	autopilotInstance.waypointsDataMutex.Lock()
+	var waypoint = &autopilotInstance.waypointsData[waypointIndex]
 	autopilotInstance.waypointsData[waypointIndex].Status = WAYPOINT_STATUS_PAST
+	if(len(autopilotInstance.waypointsData)>waypointIndex+2){
+		autopilotInstance.waypointsData[waypointIndex+1].Status = WAYPOINT_STATUS_TARGET
+	}
 	autopilotInstance.waypointsDataMutex.Unlock()
 	// Emit Signal
-	alerts.pushEvent(Alert{EVENT_TYPE_AUTOPILOT_ABEAM, "Waypoint abeam", time.Now()})
+	alerts.pushEvent(Alert{EVENT_TYPE_AUTOPILOT_ABEAM, fmt.Sprintf("Abeam: %s",waypoint.Cmt), time.Now()})
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) autopilotEventGoTo(waypointIndex int, bearing float64, distance float64) {
 	autopilotInstance.waypointsDataMutex.Lock()
 	autopilotInstance.waypointsData[waypointIndex].Status = WAYPOINT_STATUS_TARGET
 	var waypoint = &autopilotInstance.waypointsData[waypointIndex]
+	autopilotInstance.status.To = autopilotInstance.waypointsData[waypointIndex]
 	autopilotInstance.waypointsDataMutex.Unlock()
 	// Emit Signal
-	alerts.pushEvent(Alert{EVENT_TYPE_AUTOPILOT_GOTO, fmt.Sprintf("GoTo: %.0f %.0f %s", bearing, distance, waypoint.Cmt), time.Now()})
+	alerts.pushEvent(Alert{EVENT_TYPE_AUTOPILOT_GOTO, fmt.Sprintf("To: %.0f° %.1fN %s", bearing, distance * 0.539957 / 1000.0, waypoint.Cmt), time.Now()})
 }
 
-func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataCopy []Waypoint) {
+func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataCopy []Waypoint) GPRMBData{
+	// GPRMB by default in Warning and Arrived
+	gprmb := GPRMBData{Status: GPRMB_STATUS_WARNING,XTRKDistance: 0,Steer: GPRMB_STEER_LEFT,WaypointStart: "Current",WaypointDest: "",Lat: 0,Lon: 0,Distance: 0,TrueBearing: 0,Knots: 0,Arrived: GPRMB_ARRIVED_YES}
 	var nearestWaypointDistance float64
 	var nearestWaypointBearing float64
 	var nearestWaypointIndex int
 	nearestWaypointIndex = -1
 	nearestWaypointDistance = 999999
 	nearestWaypointBearing = 0
+
+	// Check if there is an existing Target
 	for waypointIndex := range waypointsDataCopy {
 		waypoint := &waypointsDataCopy[waypointIndex]
+		if waypoint.Status == WAYPOINT_STATUS_PAST {
+			continue
+		}
+		if waypoint.Status == WAYPOINT_STATUS_TARGET {
+
+			var waypointDistance float64
+			var waypointBearing float64
+			lat := float64(mySituation.GPSLatitude)
+			lng := float64(mySituation.GPSLongitude)
+			//lat = float64(autopilotInstance.status.Lat)
+			//lng = float64(autopilotInstance.status.Lon)
+			waypointDistance, waypointBearing = common.Distance(float64(lat), float64(lng), float64(waypoint.Lat), float64(waypoint.Lon))
+	
+			nearestWaypointBearing = waypointBearing
+			nearestWaypointDistance = waypointDistance
+			nearestWaypointIndex = waypointIndex
+		}
+	}
+
+	// There is no waypoint selected by the User, search for nearby
+	if(nearestWaypointIndex==-1){
+	for waypointIndex := range waypointsDataCopy {
+		waypoint := &waypointsDataCopy[waypointIndex]
+		//
 		if waypoint.Status == WAYPOINT_STATUS_PAST {
 			continue
 		}
@@ -129,12 +203,16 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataC
 		var waypointBearing float64
 		lat := float64(mySituation.GPSLatitude)
 		lng := float64(mySituation.GPSLongitude)
+
+		//lat = float64(autopilotInstance.status.Lat)
+		//lng = float64(autopilotInstance.status.Lon)
+
 		waypointDistance, waypointBearing = common.Distance(float64(lat), float64(lng), float64(waypoint.Lat), float64(waypoint.Lon))
 
 		// Check if we are abeam (500 meters)
 		if waypointDistance < 500 {
 			//waypoint.Status = WAYPOINT_STATUS_PAST
-			autopilotInstance.autopilotEventAbeamPoint(waypointIndex)
+			//autopilotInstance.autopilotEventAbeamPoint(waypointIndex)
 			continue
 		}
 		if waypointDistance < nearestWaypointDistance {
@@ -144,42 +222,135 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataC
 			nearestWaypointIndex = waypointIndex
 
 			//waypoint.Status = WAYPOINT_STATUS_TARGET
-			autopilotInstance.autopilotEventGoTo(waypointIndex, nearestWaypointBearing, nearestWaypointDistance)
+			//autopilotInstance.autopilotEventGoTo(waypointIndex, nearestWaypointBearing, nearestWaypointDistance)
 		}
 	}
-
+	}
 	// Autopilot has a target
 	if nearestWaypointIndex >= 0 {
+
+		if(autopilotInstance.status.To.Lat != autopilotInstance.waypointsData[nearestWaypointIndex].Lat &&
+			autopilotInstance.status.To.Lon != autopilotInstance.waypointsData[nearestWaypointIndex].Lon){
+			autopilotInstance.autopilotEventGoTo(nearestWaypointIndex, nearestWaypointBearing, nearestWaypointDistance)
+		}
+
+		// Enable Autopilot Directions
+		gprmb.Status = GPRMB_STATUS_OK
+		gprmb.Arrived = GPRMB_ARRIVED_NOT_YET
+		/*
+		// TODO: escape, GPRMB Support for Waypoints string naming
+		if nearestWaypointIndex > 0 {
+			gprmb.WaypointStart = autopilotInstance.waypointsData[nearestWaypointIndex-1].Cmt
+		}
+		gprmb.WaypointDest = autopilotInstance.waypointsData[nearestWaypointIndex].Cmt
+		*/
+		gprmb.WaypointDest = fmt.Sprintf("%03d",nearestWaypointIndex+1)
+		gprmb.WaypointStart = fmt.Sprintf("%03d",nearestWaypointIndex)
+		gprmb.Lat = autopilotInstance.waypointsData[nearestWaypointIndex].Lat
+		gprmb.Lon = autopilotInstance.waypointsData[nearestWaypointIndex].Lon
+		gprmb.Distance = nearestWaypointDistance * 0.539957 / 1000.0
+		gprmb.Knots = mySituation.GPSGroundSpeed * 0.539957
+		gprmb.TrueBearing = nearestWaypointBearing
+		gprmb.XTRKDistance = gprmb.Distance * math.Tan(common.Radians(nearestWaypointBearing-float64(mySituation.GPSTrueCourse)));
+
+		if(gprmb.XTRKDistance<0){
+			gprmb.Steer = GPRMB_STEER_LEFT
+			gprmb.XTRKDistance = -gprmb.XTRKDistance
+		} else {
+			gprmb.Steer = GPRMB_STEER_RIGHT
+		}
+
+		if(nearestWaypointDistance<500){
+			autopilotInstance.autopilotEventAbeamPoint(nearestWaypointIndex)
+		}
+
+
+		/*
 		if nearestWaypointBearing > 5+float64(mySituation.GPSTrueCourse) {
-			log.Println("Autpilot Turn Left")
+			
 		}
 		if nearestWaypointBearing < float64(mySituation.GPSTrueCourse)-5 {
-			log.Println("Autpilot Turn Right")
+			
 		}
+		*/
 	}
-	return
+	return gprmb
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) stop() bool {
 	log.Println("Entered AutopilotStratuxPlugin stop() ...")
 	autopilotInstance.waypointsDataMutex.Lock()
-	autopilotInstance.isActive = false
+	autopilotInstance.status.Active = false
 	autopilotInstance.waypointsDataMutex.Unlock()
-	return autopilotInstance.isActive
+	return autopilotInstance.status.Active
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) start() bool {
 	log.Println("Entered AutopilotStratuxPlugin start() ...")
 	autopilotInstance.waypointsDataMutex.Lock()
 	if len(autopilotInstance.waypointsData) > 0 {
-		autopilotInstance.isActive = true
+		autopilotInstance.status.Active = true
 	}
 	autopilotInstance.waypointsDataMutex.Unlock()
-	return autopilotInstance.isActive
+	return autopilotInstance.status.Active
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) ShutdownFunc() bool {
 	log.Println("Entered AutopilotStratuxPlugin shutdown() ...")
 	autopilotInstance.requestToExit = true
 	return true
+}
+
+
+/*
+	NMEA Sentence Generator
+*/
+func makeGPRMBString(data GPRMBData) string {
+
+	// Conversion from float to degree
+	lat := float64(data.Lat)
+	ns := "N"
+	if lat < 0 {
+		lat = -lat
+		ns = "S"
+	}
+
+	deg := math.Floor(lat)
+	min := (lat - deg) * 60
+	lat = deg*100 + min
+
+	ew := "E"
+	lng := float64(data.Lon)
+	if lng < 0 {
+		lng = -lng
+		ew = "W"
+	}
+
+	deg = math.Floor(lng)
+	min = (lng - deg) * 60
+	lng = deg*100 + min
+
+	XTRKDistance := data.XTRKDistance
+	if(XTRKDistance>9.99){
+		XTRKDistance=9.99
+	}
+
+	// Format Message GPRMB Recommended minimum navigation info
+	msg := fmt.Sprintf("$GPRMB,%s,%.2f,%s,%s,%s,%.f,%s,%f,%s,%.1f,%.1f,%.1f,%s",
+	data.Status,
+	XTRKDistance,
+	data.Steer,
+	data.WaypointStart,
+	data.WaypointDest,
+	lat,
+	ns,
+	lng,
+	ew,
+	data.Distance,
+	data.TrueBearing,
+	data.Knots,
+	data.Arrived)
+	msg = appendNmeaChecksum(msg)
+	msg += "\r\n"
+	return msg
 }

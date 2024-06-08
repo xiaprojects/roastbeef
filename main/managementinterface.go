@@ -15,6 +15,7 @@ import (
 	"compress/gzip"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -411,6 +412,18 @@ func handleTimersRest(w http.ResponseWriter, r *http.Request) {
 /***
  * Autopilot REST API
  */
+// Autopilot WS
+var autopilotUpdate *uibroadcaster
+
+// Autopilot WS Code
+func handleAutopilotWS(conn *websocket.Conn) {
+	autopilotUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
 func handleAutopilotGet(w http.ResponseWriter, r *http.Request) {
 	autopilot.waypointsDataMutex.Lock()
 	statusJSON, err := json.Marshal(&autopilot.waypointsData)
@@ -423,6 +436,18 @@ func handleAutopilotGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func handleAutopilotPut(w http.ResponseWriter, r *http.Request) {
+
+	// TODO: Future feature, inject the start location for pre-calculation
+	/*
+	var msg map[string]interface{} // support arbitrary JSON
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&msg)
+	if err == nil {
+		autopilot.status.Lat = float32(msg["Lat"].(float64))
+		autopilot.status.Lon = float32(msg["Lon"].(float64))
+	}
+	*/
+	autopilot.start()
 }
 func handleAutopilotPost(w http.ResponseWriter, r *http.Request) {
 
@@ -446,13 +471,25 @@ func handleAutopilotPost(w http.ResponseWriter, r *http.Request) {
 
 }
 func handleAutopilotDelete(w http.ResponseWriter, r *http.Request) {
+	/*
 	autopilot.waypointsDataMutex.Lock()
 	autopilot.waypointsData = make([]Waypoint, 0)
 	autopilot.isActive = false
 	autopilot.waypointsDataMutex.Unlock()
+	*/
+	autopilot.stop()
 }
 
 func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
+	// Unified REST with WebSocket
+	if len(r.Header["Upgrade"]) > 0 {
+		s := websocket.Server{
+			Handler: websocket.Handler(handleAutopilotWS)}
+		s.ServeHTTP(w, r)
+		return
+	}
+
+
 	// define header in support of cross-domain AJAX
 	setNoCache(w)
 	setJSONHeaders(w)
@@ -461,7 +498,6 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
 
 	// for an OPTION method request, we return header without processing.
 	// this insures we are recognized as supporting cross-domain AJAX REST calls
-	// AJAX call - /getTimers. Responds with current CameraSources
 	if r.Method == "GET" {
 		handleAutopilotGet(w, r)
 	}
@@ -483,6 +519,31 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
  * Autopilot REST API End
  */
 
+func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
+	fileInfo, err := ioutil.ReadDir(STRATUX_WWW_DIR + "playback")
+    if err != nil {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+
+	list := []RadioPlayback{}
+
+	for i := range fileInfo {
+		r := RadioPlayback{Name: fileInfo[i].Name(),Size: fileInfo[i].Size(),ModTime: fileInfo[i].ModTime(),Path: "/playback/"+fileInfo[i].Name(),Source: "RTL",Frequency: ""}
+		list = append(list, r)
+	}
+
+	statusJSON, err2 := json.Marshal(&list)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+
+
 /***
  * Radio REST API
  */
@@ -500,7 +561,75 @@ func handleRadioGet(w http.ResponseWriter, r *http.Request) {
 func handleRadioPut(w http.ResponseWriter, r *http.Request) {
 }
 func handleRadioPost(w http.ResponseWriter, r *http.Request) {
+	parts := strings.Split(r.RequestURI, "/")
 
+	if len(parts) < 3 {
+		http.Error(w, "", 500)
+		return
+	}
+	idx := len(parts) - 1
+	radioIndex, err1 := strconv.Atoi(parts[idx])
+
+	if(err1 != nil){
+		http.Error(w, err1.Error(), 500)
+		return
+	}
+
+	decoder := json.NewDecoder(r.Body)
+
+	radio.radioDataMutex.Lock()
+
+	var msg RadioStatus
+	err2 := decoder.Decode(&msg)
+	if err2 == io.EOF {
+		log.Printf("handleRadioPostio.EOF:error: %s\n", err2.Error())
+		http.Error(w, err2.Error(), 500)
+	} else if err2 != nil {
+		log.Printf("handleRadioPost:error: %s\n", err2.Error())
+		http.Error(w, err2.Error(), 500)
+	} else {
+		// no need for Mutex because the writer is here, no other thread will access to the array
+		if(radio.radioData[radioIndex].Dual != msg.Dual){
+			// Dual is Changed
+			ret := radio.radioSetDual(radioIndex,msg.Dual)
+			if(ret==true){
+				radio.radioData[radioIndex].Dual = msg.Dual
+			} else {
+				log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+				alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio DUAL Set fail"), time.Now()})
+
+			}
+		}
+		if(radio.radioData[radioIndex].FrequencyActive != msg.FrequencyActive){
+			// ActiveFrequency is Changed
+			ret := radio.radioSetFrequency(radioIndex,msg.FrequencyActive,true)
+			if(ret==true){
+				radio.radioData[radioIndex].FrequencyActive = msg.FrequencyActive
+			} else {
+					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Active fail"), time.Now()})
+				}
+			}
+		if(radio.radioData[radioIndex].FrequencyStandby != msg.FrequencyStandby){
+			// FrequencyStandby is Changed
+			ret := radio.radioSetFrequency(radioIndex,msg.FrequencyStandby,true)
+			if(ret==true){
+				radio.radioData[radioIndex].FrequencyStandby = msg.FrequencyStandby
+			} else {
+					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Standby fail"), time.Now()})
+				}
+			}
+	}
+
+	statusJSON, err4 := json.Marshal(&radio.radioData)
+	radio.radioDataMutex.Unlock()
+	if err4 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err4)
+	}
 }
 func handleRadioDelete(w http.ResponseWriter, r *http.Request) {
 
@@ -1580,6 +1709,7 @@ func managementInterface() {
 	gdl90Update = NewUIBroadcaster()
 	alertUpdate = NewUIBroadcaster()
 	keypadUpdate = NewUIBroadcaster()
+	autopilotUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))
@@ -1652,6 +1782,8 @@ func managementInterface() {
 	http.HandleFunc("/autopilot", handleAutopilotRest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	// Radio Platback Feature
+	http.HandleFunc("/playback", handlePlaybackGet)
 	// Checklist Feature
 	http.HandleFunc("/checklist/default/status", handleChecklistRest)
 	// Alerts Feature
@@ -1660,6 +1792,7 @@ func managementInterface() {
 	http.HandleFunc("/timers", handleTimersRest)
 	// Radio Feature
 	http.HandleFunc("/radio", handleRadioRest)
+	http.HandleFunc("/radio/", handleRadioRest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)
@@ -1681,13 +1814,48 @@ func managementInterface() {
 	http.HandleFunc("/tiles/", handleTile)
 
 	var addr string
+	var addrTls string
 	if common.IsRunningAsRoot() {
 		addr = managementAddr
+		addrTls = ":443"
 	} else {
 		addr = ":8000" // Make sure we can run without root priviledges on different port
+		addrTls = ":8443"
 	}
 
+	go managementInterfaceForServe(addr)
+	go managementInterfaceForServeTls(addrTls)
+}
+
+
+func managementInterfaceForServe(addr string){
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
+	}
+}
+
+func managementInterfaceForServeTls(addrTls string){
+	// TLS Files
+	certFile := "/boot/firmware/server.crt"
+	keyFile := "/boot/firmware/server.pem"
+
+	// TLS Setup
+	if _, err := os.Stat(keyFile); errors.Is(err, os.ErrNotExist) {
+		log.Printf("HTTPS server.crt or server.pem does not exists, creating new keypair...")
+		exec.Command("openssl",
+		"req","-x509",
+		"-newkey","rsa:2048",
+		"-keyout","/boot/firmware/server.pem",
+		"-out","/boot/firmware/server.crt",
+		"-sha256",
+		"-days","3650",
+		"-subj",
+		"/C=EU/ST=Europe/L=City/O=Stratux/OU=Aviation/CN=192.168.10.1",
+		"-nodes").Run()
+	}
+
+	// HTTPS is required for: Camera, Weather, Remote CORS API, OTA Updates
+	if err := http.ListenAndServeTLS(addrTls, certFile, keyFile, nil); err != nil {
+		log.Printf("managementInterface ListenAndServeTLS: %s\n", err.Error())
 	}
 }

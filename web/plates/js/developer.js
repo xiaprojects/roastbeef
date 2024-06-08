@@ -4,6 +4,20 @@ DeveloperCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']
 // create our controller function with all necessary logic
 function DeveloperCtrl($rootScope, $scope, $state, $http, $interval) {
 	$scope.$parent.helppage = 'plates/developer-help.html';
+
+
+	$state.get('developer').onEnter = function () {
+        // everything gets handled correctly by the controller
+    };
+
+	$state.get('developer').onExit = function () {
+		// disconnect from the socket
+		if (($scope.socket !== undefined) && ($scope.socket !== null)) {
+			$scope.socket.close();
+			$scope.socket = null;
+		}
+	};
+
     
 	function connect($scope) {
 		if (($scope === undefined) || ($scope === null))

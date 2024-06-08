@@ -4,7 +4,7 @@ AlertsService.prototype = {
 };
 
 // Alerts WebSockets
-var URL_ALERTS_WS = "ws://" + URL_HOST_BASE + "/alerts";
+var URL_ALERTS_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/alerts";
 
 /**
  * AlertsService Service Class

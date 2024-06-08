@@ -28,7 +28,7 @@
                     style="pointer-events: none;font-size: 6vmax;padding: 0px;margin-top:-3%;margin-bottom:-3%;">
                     {{radio.standby}}
                 </div>
-                <div style="font-size: 2vmax;padding: 0px;margin: 0px;">{{radioFindFrequency(radio.standby)}}</div>
+                <div style="font-size: 2vmax;padding: 0px;margin: 0px;">{{radioDisplayNameByFrequency(radio.standby)}}</div>
 
                 <a ng-click="increaseFreq(radio,-1000)" class="btn btn-default  {{radio.classStandByLeft}}" style="width:  15%;">&#9660;</a>
                 <a ng-click="search(radio)" class="btn btn-default " style="width: 20%;min-width: 90px;">SEARCH</a>
@@ -36,3 +36,50 @@
             </div>
     </div>
 </div>
+<!---->
+<div class="col-xs-12" >
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading"><span class="panel_label">Conversation Playback </span>
+                <span class="label label-success">SDR Internal</span>
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <table style="width:100%;margin: 0px;padding:0px;">
+                    <tr style="margin: 0px;padding:0px;">
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <strong>Time</strong>
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <strong>Freq.</strong>
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <strong>Dur.</strong>
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;">
+                            &nbsp;Actions&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr ng-click="playAudio(playback.Path)" ng-repeat="playback in replayList"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{playback.style}}" ng-class="playback.className" >
+
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{elapsed(playback.ModTime)}}
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{playback.Frequency}}
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{playback.Duration}}s
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;">
+                            <button class="btn-success">REPLAY</button> &nbsp;
+                            <a ng-click="shareAudio(playback.Path)" class="btn"><i class="fa fa-download"></i>
+                                SHARE</a>
+                        </td>
+                    </tr>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->

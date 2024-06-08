@@ -2,6 +2,12 @@
 var URL_HOST_BASE           = window.location.hostname + (window.location.port ? ':' + window.location.port : '');
 var URL_HOST_PROTOCOL       = window.location.protocol + "//";
 
+// Migration from HTTP to HTTPS, all WS shall be upgraded to WSS
+var WS_HOST_PROTOCOL        = "ws://";
+if (URL_HOST_PROTOCOL === 'https://') {
+	WS_HOST_PROTOCOL = "wss://";
+}
+
 var URL_AHRS_CAGE           = URL_HOST_PROTOCOL + URL_HOST_BASE + "/cageAHRS";
 var URL_AHRS_CAL            = URL_HOST_PROTOCOL + URL_HOST_BASE + "/calibrateAHRS";
 var URL_AHRS_ORIENT         = URL_HOST_PROTOCOL + URL_HOST_BASE + "/orientAHRS";
@@ -27,12 +33,14 @@ var URL_GET_TILE            = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles";
 var URL_GET_STYLE           = URL_HOST_PROTOCOL + URL_HOST_BASE + "/mapdata/styles"
 
 
-var URL_DEVELOPER_WS        = "ws://" + URL_HOST_BASE + "/developer";
-var URL_GPS_WS              = "ws://" + URL_HOST_BASE + "/situation";
-var URL_STATUS_WS           = "ws://" + URL_HOST_BASE + "/status";
-var URL_TRAFFIC_WS          = "ws://" + URL_HOST_BASE + "/traffic";
-var URL_WEATHER_WS          = "ws://" + URL_HOST_BASE + "/weather";
-var URL_RADAR_WS            = "ws://" + URL_HOST_BASE + "/radar";
+var URL_DEVELOPER_WS        = WS_HOST_PROTOCOL + URL_HOST_BASE + "/developer";
+var URL_GPS_WS              = WS_HOST_PROTOCOL + URL_HOST_BASE + "/situation";
+var URL_STATUS_WS           = WS_HOST_PROTOCOL + URL_HOST_BASE + "/status";
+var URL_TRAFFIC_WS          = WS_HOST_PROTOCOL + URL_HOST_BASE + "/traffic";
+var URL_WEATHER_WS          = WS_HOST_PROTOCOL + URL_HOST_BASE + "/weather";
+var URL_RADAR_WS            = WS_HOST_PROTOCOL + URL_HOST_BASE + "/radar";
+
+
 
 // define the module with dependency on mobile-angular-ui
 //var app = angular.module('stratux', ['ngRoute', 'mobile-angular-ui', 'mobile-angular-ui.gestures', 'appControllers']);
@@ -187,6 +195,12 @@ app.controller('MainCtrl', function ($scope, $http) {
 			if($scope.Alerts_Enabled==true){
 				if($scope.alerts === undefined|| $scope.alerts === null){
 					$scope.alerts = new AlertsService($scope, $http);
+				}
+			}
+			// Plugins: Autopilot Service
+			if($scope.Autopilot_Enabled == true){
+				if($scope.autopilot === undefined|| $scope.autopilot === null){
+					$scope.autopilot = new AutopilotService($scope, $http);
 				}
 			}
 
