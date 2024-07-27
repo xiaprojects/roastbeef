@@ -1178,6 +1178,7 @@ type settings struct {
 	IMU_Sensor_Enabled   bool
 	NetworkOutputs       []networkConnection
 	SerialOutputs        map[string]serialConnection
+	BleOutputs           []bleConnection
 	DisplayTrafficSource bool
 	DEBUG                bool
 	ReplayLog            bool
@@ -1331,6 +1332,18 @@ func defaultSettings() {
 		{Conn: nil, Ip: "", Port: 4000, Capability: NETWORK_GDL90_STANDARD | NETWORK_AHRS_GDL90},
 		{Conn: nil, Ip: "", Port: 2000, Capability: NETWORK_FLARM_NMEA},
 		{Conn: nil, Ip: "", Port: 49002, Capability: NETWORK_POSITION_FFSIM | NETWORK_AHRS_FFSIM},
+	}
+	globalSettings.BleOutputs = []bleConnection{
+		{ // SoftRF style service
+			Capability: NETWORK_FLARM_NMEA,
+			UUIDService: "FFE0",
+			UUIDGatt:    "FFE1",
+		},
+		{ // "standard" nRF UART/Serial emulation
+			Capability: NETWORK_FLARM_NMEA,
+			UUIDService: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",
+			UUIDGatt:    "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",
+		},
 	}
 	globalSettings.DEBUG = false
 	globalSettings.DisplayTrafficSource = false
@@ -1812,6 +1825,7 @@ func main() {
 
 	// Guesses barometric altitude if we don't have our own baro source by using GnssBaroDiff from other traffic at similar altitude
 	go baroAltGuesser()
+	go cotListen()
 
 	// Monitor RPi CPU temp.
 	globalStatus.CPUTempMin = common.InvalidCpuTemp
