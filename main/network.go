@@ -24,6 +24,7 @@ import (
 	"github.com/tarm/serial"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
+	"tinygo.org/x/bluetooth"
 )
 
 
@@ -36,11 +37,13 @@ var netMutex *sync.Mutex              // netMutex needs to be locked before acce
 var totalNetworkMessagesSent uint32
 
 const (
+	NETWORK_DISABLED       = 0
 	NETWORK_GDL90_STANDARD = 1
 	NETWORK_AHRS_FFSIM     = 2
 	NETWORK_AHRS_GDL90     = 4
 	NETWORK_FLARM_NMEA     = 8
 	NETWORK_POSITION_FFSIM = 16
+	NETWORK_RESERVED_FEA32 = 32	
 	dhcp_lease_file        = "/var/lib/misc/dnsmasq.leases"
 	dhcp_lease_dir         = "/var/lib/misc/"
 	extra_hosts_file       = "/etc/stratux-static-hosts.conf"
@@ -139,6 +142,12 @@ func serialOutWatcher() {
 	for i := 0; i < 10; i++ {
 		serialDevs = append(serialDevs, fmt.Sprintf("/dev/serialout%d", i))
 		serialDevs = append(serialDevs, fmt.Sprintf("/dev/serialout_nmea%d", i))
+		// Improved Serial Output support for different devices
+		//serialDevs = append(serialDevs, fmt.Sprintf("/dev/ttyUSB%d", i)) // avoid generic ttyUSB0 which may relay on a peripheral symlink
+		//serialDevs = append(serialDevs, fmt.Sprintf("/dev/prolific%d", i))
+		// TODO1: find the right path for USB devices
+		// TODO2: add into serialConnection structure more detailed mapping function using udevadm info -q property -n {/dev/device}
+		// TODO3: unify network.go with gps.go serial discovery
 	}
 
 	for {
@@ -150,7 +159,14 @@ func serialOutWatcher() {
 
 					// Master is globalSettings.SerialOutputs. Once we connect to one, it will be copied to the active connections map
 					if val, ok := globalSettings.SerialOutputs[serialDev]; !ok {
-						proto := uint8(NETWORK_GDL90_STANDARD)
+						// Improved Serial Output support for different devices
+						// Step 1: Let's the user decide using Web Settings
+						proto := uint8(NETWORK_DISABLED)
+						// Step 2: Existing installation with serialout
+						if strings.Contains(serialDev, "serialout") {
+							proto = NETWORK_GDL90_STANDARD
+						}
+						// Step 3: nmea output 
 						if strings.Contains(serialDev, "_nmea") {
 							proto = NETWORK_FLARM_NMEA
 						}
@@ -165,6 +181,7 @@ func serialOutWatcher() {
 					} else {
 						config = val
 						if config.Capability == 0 {
+							// Obsolete: using the new Web Settings the user can easily manage and change this
 							config.Capability = NETWORK_GDL90_STANDARD // Fix old serial conns that didn't have protocol set
 						}
 					}
@@ -172,6 +189,10 @@ func serialOutWatcher() {
 					netMutex.Lock()
 
 					needsConnect := true
+					// Disabled Serial Interface
+					if config.Capability == 0 {
+						needsConnect = false
+					}
 					if activeConn, ok := clientConnections[serialDev]; ok {
 						if !activeConn.IsSleeping() {
 							needsConnect = false
@@ -228,6 +249,7 @@ func tcpNMEAOutListener() {
 		go connectionWriter(tcpConn)
 	}
 }
+
 
 
 /* Server that can be used to feed NMEA data to, e.g. to connect OGN Tracker wirelessly */
@@ -360,6 +382,69 @@ func refreshConnectedClients() {
 				delete(clientConnections, ipAndPort)
 			}
 		}
+	}
+}
+
+func parseBleUuid(uuidStr string) (uuid bluetooth.UUID) {
+	if len(uuidStr) == 4 {
+		// Assume hex 16 bit
+		var val uint64
+		val, _ = strconv.ParseUint(uuidStr, 16, 16)
+		uuid = bluetooth.New16BitUUID(uint16(val))
+	} else {
+		uuid, _ = bluetooth.ParseUUID(uuidStr)
+	}
+	return
+}
+
+var bleAdapter = bluetooth.DefaultAdapter
+func initBluetooth() {
+	if len(globalSettings.BleOutputs) == 0 {
+		return
+	}
+	if err := bleAdapter.Enable(); err != nil {
+		addSingleSystemErrorf("BLE", "Failed to init BLE adapter: %s", err.Error())
+		return
+	}
+	services := []bluetooth.UUID{}
+	for _, conn := range globalSettings.BleOutputs {
+		services = append(services, parseBleUuid(conn.UUIDService))
+	}
+
+	adv := bleAdapter.DefaultAdvertisement()
+	adv.Configure(bluetooth.AdvertisementOptions{
+		LocalName: globalSettings.WiFiSSID,
+		ServiceUUIDs: services,
+	})
+	if err := adv.Start(); err != nil {
+		addSingleSystemErrorf("BLE", "BLE Advertising failed to start: %s", err.Error())
+	}
+	// TODO: not working if we have multiple GATTs in one service
+	for i := range globalSettings.BleOutputs {
+		conn := &globalSettings.BleOutputs[i]
+		err := bleAdapter.AddService(&bluetooth.Service{
+			UUID: parseBleUuid(conn.UUIDService),
+			Characteristics: []bluetooth.CharacteristicConfig {
+				{
+					Handle: &conn.Characteristic,
+					UUID:   parseBleUuid(conn.UUIDGatt),
+					Value:  []byte{},
+					Flags:  bluetooth.CharacteristicNotifyPermission | bluetooth.CharacteristicReadPermission | bluetooth.CharacteristicWriteWithoutResponsePermission,
+					//WriteEvent: func(client bluetooth.Connection, offset int, value []byte) {
+					//	log.Printf("client %d: received %s", client, string(value))
+					//},
+				},
+			},
+
+		})
+		if err != nil {
+			log.Printf("Failed to bring up BLE Gatt Service %s: %s", conn.UUIDService, err.Error())
+			continue
+		}
+		netMutex.Lock()
+		clientConnections[conn.GetConnectionKey()] = conn
+		go connectionWriter(conn)
+		netMutex.Unlock()
 	}
 }
 
@@ -652,4 +737,5 @@ func initNetwork() {
 	go tcpNMEAOutListener()
 	go tcpNMEAInListener()
 	go getNetworkStats()
+	go initBluetooth()
 }
