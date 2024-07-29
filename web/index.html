@@ -84,6 +84,7 @@
 	<script src="plates/js/camera.js"></script>
 	<script src="plates/js/gps.js"></script>
 	<script src="plates/js/alerts.js"></script>
+	<script src="plates/js/ems.js"></script>
 	<script src="js/servicealerts.js"></script>
 	<script src="js/serviceautopilot.js"></script>
 	<script src="plates/js/checklist.js"></script>
@@ -110,7 +111,7 @@
 	<!-- Define Left (Menu) Sidebar Navigation -->
 	<div ui-track-as-search-param='true' class="sidebar sidebar-left">
 		<div class="scrollable">
-			<h3 class="scrollable-header app-name">Menu</h3>
+			<h3 class="scrollable-header app-name">RoastBeef</h3>
 			<div class="scrollable-content">
 				<div class="list-group" ui-turn-off='uiSidebarLeft'>
 					<!-- hrefs are redirected by the state engine in main.js -->
@@ -118,6 +119,9 @@
 					<a class="list-group-item" href="#/cockpit"><i class="fa fa-star"></i>    Cockpit <i class="fa fa-chevron-right pull-right"></i></a>
 					<div ng-show="UAT_Enabled">
 						<a class="list-group-item" href="#/weather"><i class="fa fa-cloud"></i>    Weather  <i class="fa fa-chevron-right pull-right"></i></a>
+					</div>
+					<div ng-show="EMS_Enabled">
+						<a class="list-group-item" href="#/ems"><i class="fa fa-tachometer"></i>    EMS <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>
 					<div ng-show="Radio_Enabled">
 						<a class="list-group-item" href="#/radio"><i class="fa fa-wifi"></i>    Radio <i class="fa fa-chevron-right pull-right"></i></a>
@@ -140,6 +144,9 @@
 					<a class="list-group-item" href="#/alerts"><i class="fa fa-exclamation-triangle"></i>    Alerts <i class="fa fa-chevron-right pull-right"></i></a>
 					<a class="list-group-item" href="#/checklist"><i class="fa fa-check-square-o"></i>    Checklist <i class="fa fa-chevron-right pull-right"></i></a>			
 					<a class="list-group-item" href="#/charts"><i class="fa fa-bar-chart"></i>    Charts <i class="fa fa-chevron-right pull-right"></i></a>
+					<div ng-show="Cloud_Enabled">
+						<a class="list-group-item" href="#/cloud"><i class="fa fa-cloud"></i>    Internet <i class="fa fa-chevron-right pull-right"></i></a>
+					</div>
 					<div ng-show="DeveloperMode">
 					<a class="list-group-item" href="#/developer"><i class="fa fa-tasks"></i>    Developer <i class="fa fa-chevron-right pull-right"></i></a>
 					</div>

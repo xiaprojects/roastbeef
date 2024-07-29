@@ -81,6 +81,7 @@ var weatherUpdate *uibroadcaster
 var trafficUpdate *uibroadcaster
 var radarUpdate *uibroadcaster
 var gdl90Update *uibroadcaster
+var emsUpdate *uibroadcaster
 
 /*
 	Keypad Feature
@@ -789,6 +790,106 @@ func handleChecklistRest(w http.ResponseWriter, r *http.Request) {
 		handleChecklistDelete(w, r)
 	}
 }
+
+
+/***
+ * EMS REST API
+ */
+func handleEMSWS(conn *websocket.Conn) {
+	//	log.Printf("Web client connected.\n")
+	emsUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		// The below is not used, but should be if something needs to be streamed from the web client ever in the future.
+		/*		var msg SettingMessage
+				err := websocket.JSON.Receive(conn, &msg)
+				if err == io.EOF {
+					break
+				} else if err != nil {
+					log.Printf("handleStatusWS: %s\n", err.Error())
+				} else {
+					// Use 'msg'.
+				}
+		*/
+
+		// Send status via polling.
+		// Disabled because it is managed by interrupt on WebSocket or setEMS
+		if(false){
+			ems.emsDataMutex.Lock()
+			update, _ := json.Marshal(&ems.emsData)
+			ems.emsDataMutex.Unlock()
+			_, err := conn.Write(update)
+			if err != nil {
+				//			log.Printf("Web client disconnected.\n")
+				break
+			}
+		}
+		<-timer.C
+	}
+}
+
+// AJAX call - /getEMS. Responds with current EMS status
+func handleEMSRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	ems.emsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&ems.emsData)
+	ems.emsDataMutex.Unlock()
+	if err == nil {
+	fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+	}
+}
+
+
+// AJAX call - /setEMS. receives via POST command, any/all EMS data.
+func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+	if r.Method == "POST" {
+		raw, _ := httputil.DumpRequest(r, true)
+		log.Printf("handleEMSSetRequest:raw: %s\n", raw)
+		log.Printf(ems.Name);
+		decoder := json.NewDecoder(r.Body)
+		
+			var msg map[string]float32 // support key:int JSON
+
+			err := decoder.Decode(&msg)
+			if err == io.EOF {
+				
+			} else if err != nil {
+				log.Printf("handleSettingsSetRequest:error: %s\n", err.Error())
+			} else {
+				reconfigureEMS := false
+				for key, ival := range msg {
+					//ival,err2 := strconv.Atoi(val)					
+					//if(err2==nil){
+						ems.emsDataMutex.Lock()
+					if(ems.emsData[key]!=ival){
+						ems.emsData[key]=ival
+						reconfigureEMS = true
+
+					//}
+					
+				}
+				ems.emsDataMutex.Unlock()
+				}
+				if(reconfigureEMS==true){
+					ems.emsDataMutex.Lock()
+					emsUpdate.SendJSON(ems.emsData)
+					ems.emsDataMutex.Unlock()
+				}
+			}
+	}
+}
+
 
 /***
  * Checklist REST API End
@@ -1709,6 +1810,7 @@ func managementInterface() {
 	gdl90Update = NewUIBroadcaster()
 	alertUpdate = NewUIBroadcaster()
 	keypadUpdate = NewUIBroadcaster()
+	emsUpdate = NewUIBroadcaster()
 	autopilotUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
@@ -1726,6 +1828,13 @@ func managementInterface() {
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleStatusWS)}
+			s.ServeHTTP(w, req)
+		})
+	// EMS Feature
+	http.HandleFunc("/ems",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleEMSWS)}
 			s.ServeHTTP(w, req)
 		})
 	// Alerts Feature
@@ -1793,6 +1902,9 @@ func managementInterface() {
 	// Radio Feature
 	http.HandleFunc("/radio", handleRadioRest)
 	http.HandleFunc("/radio/", handleRadioRest)
+	// EMS Feature
+	http.HandleFunc("/getEMS", handleEMSRequest)
+	http.HandleFunc("/setEMS", handleEMSSetRequest)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)

@@ -1616,6 +1616,8 @@ func gracefulShutdown() {
 	pprof.StopCPUProfile()
 
 	//TODO: Any other graceful shutdown functions.
+	// EMS Feature
+	ems.ShutdownFunc()
 	// Radio
 	radio.ShutdownFunc()
 	// Checklist Feature
@@ -1785,6 +1787,8 @@ func main() {
 		keypad.InitFunc()
 		// Charts
 		charts.InitFunc()
+		// EMS Feature
+		ems.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 
