@@ -143,6 +143,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'AlertsCtrl',
 			reloadOnSearch: false
 		})
+		.state('ems', {
+			url: '/ems',
+			templateUrl: 'plates/ems.html',
+			controller: 'EMSCtrl',
+			reloadOnSearch: false
+		})
 		.state('charts', {
 			url: '/charts',
 			templateUrl: 'plates/charts.html',
@@ -177,6 +183,10 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+            // Plugins: EMS Menu
+            $scope.EMS_Enabled = true;
+            // Plugins: Cloud Menu
+            $scope.Cloud_Enabled = true;
             // Plugins: Autopilot Menu
             $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
             // Plugins: Radio Menu

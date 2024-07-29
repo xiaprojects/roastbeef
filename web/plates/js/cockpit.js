@@ -88,7 +88,10 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                     break;
                 case "ALT\n\nfeet":
                     currentItem["render"] = new AltimeterCircleRenderer(currentItem.divName, currentItem);
-
+                    break;    
+                case "EGT":
+                       currentItem["render"] = new Bar4Renderer(currentItem.divName, currentItem);
+                       //currentItem["render"] = new EMSGenericCircleRenderer(currentItem.divName, currentItem);
                     break;
                 default:
                     currentItem["render"] = new EMSGenericCircleRenderer(currentItem.divName, currentItem);
@@ -163,10 +166,44 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
         };
     }
 
+    /*****************************************************
+     * EMS Update
+     */
+    function connectEMS($scope) {
+        if (($scope === undefined) || ($scope === null))
+            return; // we are getting called once after clicking away from the gps page
+
+        if (($scope.socketEMS === undefined) || ($scope.socketEMS === null)) {
+            socketEMS = new WebSocket(URL_EMS_WS);
+            $scope.socketEMS = socketEMS; // store socket in scope for enter/exit usage
+        }
+        socketEMS.onopen = function (msg) {
+        };
+
+        socketEMS.onclose = function (msg) {
+            $scope.$apply();
+            delete $scope.socketEMS;
+            setTimeout(function () { connectEMS($scope); }, 1000);
+        };
+
+        socketEMS.onerror = function (msg) {
+            $scope.$apply();
+        };
+
+        socketEMS.onmessage = function (msg) {
+            if (($scope === undefined) || ($scope === null)) {
+                socketEMS.close();
+                return;
+            }
+            $scope.loadSituationInCockpit(angular.fromJson(msg.data));
+            $scope.$apply(); // trigger any needed refreshing of data
+        };
+    }
+
     $scope.loadSituationInCockpit = function (situation) {
 
         Object.keys($scope.mapping).forEach(element => {
-            if ($scope.mapping.hasOwnProperty(element)) {
+            if (situation.hasOwnProperty(element)) {
                 $scope.widgetsSettings[$scope.mapping[element]].value = situation[element];
                 $scope.widgetsSettings[$scope.mapping[element]].render.update(
                     $scope.widgetsSettings[$scope.mapping[element]].value,
@@ -236,6 +273,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $scope.InitFunc();
     connect($scope);
+    connectEMS($scope);
     // Bridge from servicekeypad
     addEventListener("keypad", keypadEventListener);
 }

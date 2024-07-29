@@ -512,3 +512,57 @@ DirectionCircleRenderer.prototype = {
 
     }
 };
+
+
+
+function Bar4Renderer(locationId, item) {
+    this.width = -1;
+    this.height = -1;
+
+    this.locationId = locationId;
+    this.canvas = document.getElementById(this.locationId);
+    var virtualWidth=400;
+    var image = SVG(this.locationId).viewbox(-200, -200, virtualWidth, virtualWidth).group().addClass('CockpitWhite');
+    this.image = image;
+
+
+    var barNumbers = 4;
+    var barWidth = (virtualWidth-40)/barNumbers;
+    var barSegments = item.ranges.length;
+    var barHeight = (virtualWidth-80)/barSegments;
+for(var x=0;x<barNumbers;x++){
+    var bar=image.group().cx(-virtualWidth/2.0).cy(virtualWidth/2.0-40).addClass('card');
+    for(var y=0;y<barSegments;y++){
+        bar.rect(barWidth, barHeight)
+            .cx(virtualWidth - barNumbers * barWidth + x*(barWidth+5))
+            .cy(-barHeight * y)
+            .style("fill", item.ranges[y].colorOff);
+    }
+}
+    this.resize();
+}
+
+Bar4Renderer.prototype = {
+    constructor: Bar4Renderer,
+
+    resize: function () {
+        var canvasWidth = this.canvas.parentElement.offsetWidth - 12;
+
+        if (canvasWidth !== this.width) {
+            this.width = canvasWidth;
+            this.height = canvasWidth * 0.5;
+
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+        }
+    },
+    update: function (value, item) {
+        if (value < this.min) {
+            value = this.min;
+        }
+        if (value > this.max) {
+            value = this.max;
+        }
+        
+    }
+};

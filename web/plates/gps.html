@@ -144,6 +144,17 @@
 						<div id="gMeter_display"></div>
 					</span>
 				</div>
+				<div class="row">
+					<label class="control-label col-xs-5">G-Load Buzzer Volume</label>
+					<select class="custom-select" ng-model="gMeterBuzzerVolume" ng-blur="setGMeterBuzzVolume(gMeterBuzzerVolume)">
+						<option value="0" ng-selected="gMeterBuzzerVolume.toFixed(0)==0">DISABLED</option>
+						<option value="25" ng-selected="gMeterBuzzerVolume.toFixed(0)==25">QUIET</option>
+						<option value="50" ng-selected="gMeterBuzzerVolume.toFixed(0)==50">NORMAL</option>
+						<option value="75" ng-selected="gMeterBuzzerVolume.toFixed(0)==75">LOUD</option>
+						<option value="90" ng-selected="gMeterBuzzerVolume.toFixed(0)==90">VERY LOUD</option>
+						<option value="100" ng-selected="gMeterBuzzerVolume.toFixed(0)==100">MAX</option>
+					</select>
+				</div>
 			</div>
 		</div>
 	</div>

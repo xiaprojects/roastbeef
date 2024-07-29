@@ -1,0 +1,25 @@
+<div ui-content-for="title">EMS</div>
+<div class="col-sm-12">
+	<div class="col-sm-12">
+		<div class="col-xs-12">
+			<div class="panel-body ems-simulator-page">
+	
+				<div class="row" ng-repeat="item in data_list">
+					<div class="separator"></div>
+					<span class="col-xs-3" >{{item.id}}</span>
+					<span class="col-xs-1">
+						<button class="btn btn-primary btn-block" ng-click="Decrement(item.id)"
+						>-</button>
+					</span>
+					<span class="col-xs-1">{{item.text}}</span>
+					<span class="col-xs-6">
+						<input type="range" min="{{item.min}}" max="{{item.max}}" value="{{item.text}}" class="slider" id="{{item.id}}" onChange="(angular.element(this).scope()).OnChange(this.value,this.id)">
+					</span>
+					<span class="col-xs-1">
+						<button class="btn btn-primary btn-block" ng-click="Increment(item.id)"
+						>+</button>
+					</span>
+				</div>
+			</div>
+	</div>
+</div>
