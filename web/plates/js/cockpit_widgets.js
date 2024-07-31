@@ -308,7 +308,7 @@ function EMSGenericCircleRenderer(locationId, item) {
         const strokeDash = Math.round((percentage * circumference) / 100);
         const strokeDashArray = `${strokeDash} ${circumference}`;
         circle.style('stroke-dasharray', strokeDashArray);
-        const displace = item.rotate + item.circleSize * (range.min) / (maxRange- minRange);
+        const displace = item.rotate + item.circleSize * (range.min) / (maxRange - minRange);
         circle.transform({ rotation: displace, cx: 0, cy: 0, relative: false })
         range.svg = circle;
         card.line(-120, 0, -160, 0).addClass('small').transform({ rotation: displace + 180, cx: 0, cy: 0, relative: false });
@@ -318,7 +318,7 @@ function EMSGenericCircleRenderer(locationId, item) {
             .style('font-size', '32px')
             .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
         if (r == item.ranges.length - 1) {
-            const displace = item.rotate + item.circleSize * (range.max) / (maxRange-minRange);
+            const displace = item.rotate + item.circleSize * (range.max) / (maxRange - minRange);
             const rad = 2 * Math.PI * displace / 360.0;
             card.text("" + (range.max / item.scale)).addClass('textMini')
                 .style('font-size', '32px')
@@ -395,13 +395,13 @@ EMSGenericCircleRenderer.prototype = {
         }
         if (item.valueMin > value) {
             item.valueMin = value;
-            this.min_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max-this.min), 0, 0);
+            this.min_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max - this.min), 0, 0);
         }
         if (item.valueMax < value) {
             item.valueMax = value;
-            this.max_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max-this.min), 0, 0);
+            this.max_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max - this.min), 0, 0);
         }
-        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max-this.min), 0, 0);
+        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max - this.min), 0, 0);
         this.textMiddle.text(item.format.replace("X", (item.value).toFixed(item.ceil)))
     }
 };
@@ -431,10 +431,10 @@ class AltimeterCircleRenderer extends EMSGenericCircleRenderer {
             }
         }
 
-        this.min_el.rotate(item.rotate - 180 + item.circleSize * (value/100) / (this.max), 0, 0);
+        this.min_el.rotate(item.rotate - 180 + item.circleSize * (value / 100) / (this.max), 0, 0);
         this.min_el.style("opacity", 1);
         this.max_el.style("opacity", 0);
-        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value/1000) / (this.max), 0, 0);
+        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value / 1000) / (this.max), 0, 0);
         this.textMiddle.text(item.format.replace("X", (item.value).toFixed(item.ceil)))
     }
 }
@@ -521,24 +521,69 @@ function Bar4Renderer(locationId, item) {
 
     this.locationId = locationId;
     this.canvas = document.getElementById(this.locationId);
-    var virtualWidth=400;
+    var virtualWidth = 400;
     var image = SVG(this.locationId).viewbox(-200, -200, virtualWidth, virtualWidth).group().addClass('CockpitWhite');
     this.image = image;
-
-
-    var barNumbers = 4;
-    var barWidth = (virtualWidth-40)/barNumbers;
+    var spaceTop = 48;
+    var spaceBottom = 64;
+    var spacing = 24;
+    var barNumbers = item.sensorsType.length;
+    var indicatorHeight = 10;
+    var indicatorSpacing = 6;
+    var barWidth = parseInt(virtualWidth / barNumbers) - spacing * 2;
+    var indicatorWidth = barWidth + spacing - indicatorSpacing;
     var barSegments = item.ranges.length;
-    var barHeight = (virtualWidth-80)/barSegments;
-for(var x=0;x<barNumbers;x++){
-    var bar=image.group().cx(-virtualWidth/2.0).cy(virtualWidth/2.0-40).addClass('card');
-    for(var y=0;y<barSegments;y++){
-        bar.rect(barWidth, barHeight)
-            .cx(virtualWidth - barNumbers * barWidth + x*(barWidth+5))
-            .cy(-barHeight * y)
-            .style("fill", item.ranges[y].colorOff);
+    var virtualHeight = virtualWidth - spaceBottom - spaceTop;
+    var barHeight = parseInt(virtualHeight / barSegments);
+
+    var bar = image.group().cx(-virtualWidth / 2).cy(-virtualWidth / 2);
+
+    var indicators = [];
+
+    this.segmentStarts = virtualHeight - barHeight * 0 + barHeight / 2.0 + 0;
+    this.segmentEnds = virtualHeight - barHeight * barSegments + barHeight / 2.0 + barSegments;
+
+    for (var x = 0; x < barNumbers; x++) {
+        indicators.push({ "bars": [] });
+        for (var y = 0; y < barSegments; y++) {
+
+            bar.rect(barWidth, barHeight)
+                .cx(x * barWidth + barWidth / 2.0 + spacing * x + spacing * 2)
+                .cy(virtualHeight - barHeight * y + barHeight / 2.0 + y)
+                .stroke({ opacity: 0.0, width: 0 })
+                .fill(item.ranges[y].colorOff);
+            var b = bar.rect(barWidth, barHeight)
+                .cx(x * barWidth + barWidth / 2.0 + spacing * x + spacing * 2)
+                .cy(virtualHeight - barHeight * y + barHeight / 2.0 + y)
+                .stroke({ opacity: 0.0, width: 0 })
+                .fill(item.ranges[y].color).opacity(0);
+            indicators[x].bars.push(b);
+
+            if (item.valueMax < item.ranges[y].max) item.valueMax = item.ranges[y].max;
+            if (item.valueMin > item.ranges[y].min) item.valueMin = item.ranges[y].min;
+        }
     }
-}
+
+    for (var x = 0; x < barNumbers; x++) {
+        var w = x * indicatorWidth + indicatorWidth / 2.0 - spacing / 2.0 + spacing * 2 + indicatorSpacing * x + indicatorSpacing / 2
+
+        bar.text(item.sensorsType[x]).style('font-size', '32px').cx(w).cy(16);
+
+
+        var indicator = bar.rect(indicatorWidth, indicatorHeight)
+            .cx(w)
+            .cy(virtualHeight + spaceTop)
+            .fill("#ffffffff")
+            .stroke({ color: '#7f7f7f', opacity: 1.0, width: 4 })
+        indicators[x].indicator = indicator;
+
+
+        var t = bar.text(item.format.replace("X", item.value))
+            //.style('fill', 'white')
+            .style('font-size', '32px').cx(w).cy(virtualHeight + spaceBottom + spaceTop - 32);
+        indicators[x].text = t;
+    }
+    this.indicators = indicators;
     this.resize();
 }
 
@@ -556,13 +601,28 @@ Bar4Renderer.prototype = {
             this.canvas.height = this.height;
         }
     },
-    update: function (value, item) {
-        if (value < this.min) {
-            value = this.min;
+
+    updateBar: function (value, item, index) {
+
+        for (var r = 0; r < item.ranges.length; r++) {
+            var range = item.ranges[r];
+            if (value > range.min) {
+                this.indicators[index].bars[r].opacity(1);
+            }
+            else {
+                this.indicators[index].bars[r].opacity(0);
+            }
+
         }
-        if (value > this.max) {
-            value = this.max;
+        var percent = (this.segmentStarts - this.segmentEnds) * (value - item.valueMin) / item.valueMax;
+        this.indicators[index].indicator.cy(this.segmentStarts-percent);
+        this.indicators[index].text.text(item.format.replace("X", (value).toFixed(item.ceil)));
+    },
+
+    update: function (value, item, situation) {
+
+        for (var index = 0; index < item.sensorsType.length; index++) {
+            this.updateBar(situation[item.sensorsType[index]], item, index)
         }
-        
     }
 };
