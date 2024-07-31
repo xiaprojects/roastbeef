@@ -90,10 +90,12 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                     currentItem["render"] = new AltimeterCircleRenderer(currentItem.divName, currentItem);
                     break;    
                 case "EGT":
-                       currentItem["render"] = new Bar4Renderer(currentItem.divName, currentItem);
-                       //currentItem["render"] = new EMSGenericCircleRenderer(currentItem.divName, currentItem);
-                    break;
-                default:
+                    currentItem["render"] = new Bar4Renderer(currentItem.divName, currentItem);
+                break;
+                case "CHT":
+                    currentItem["render"] = new Bar4Renderer(currentItem.divName, currentItem);
+                break;
+                  default:
                     currentItem["render"] = new EMSGenericCircleRenderer(currentItem.divName, currentItem);
                     break;
             }
@@ -207,7 +209,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                 $scope.widgetsSettings[$scope.mapping[element]].value = situation[element];
                 $scope.widgetsSettings[$scope.mapping[element]].render.update(
                     $scope.widgetsSettings[$scope.mapping[element]].value,
-                    $scope.widgetsSettings[$scope.mapping[element]]);
+                    $scope.widgetsSettings[$scope.mapping[element]],situation);
             }
         });
     }
