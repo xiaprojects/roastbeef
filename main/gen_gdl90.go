@@ -1371,7 +1371,7 @@ func defaultSettings() {
 
 	globalSettings.OGNI2CTXEnabled = true
 
-	globalSettings.ClearLogOnStart = true
+	globalSettings.ClearLogOnStart = false
 
 	globalSettings.GpsManualConfig = false
 	globalSettings.GpsManualDevice = "/dev/ttyAMA0"
