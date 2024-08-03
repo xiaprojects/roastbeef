@@ -131,6 +131,30 @@ func handleAlertsRequest(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// AJAX call - /putAlerts. Append Alerts from external system like EMS
+func handleAlertsPutRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+
+	parts := strings.Split(r.RequestURI, "/")
+	log.Printf("%s %d", r.RequestURI, len(parts))
+
+	if len(parts) < 3 {
+		return
+	}
+	idx := len(parts) - 1
+	alertId, err := strconv.Atoi(parts[idx])
+
+	if err == nil {
+		log.Printf("Push Alert %d", alertId)
+		alerts.pushEvent(Alert{alertId, fmt.Sprintf(""), time.Now()})
+	} else {
+		log.Printf("Push Alert Error %d", alertId)
+		log.Printf("%s %d", r.RequestURI, len(parts))
+	}
+}
+
+
 // Alerts Feature End Code
 
 func handleGDL90WS(conn *websocket.Conn) {
@@ -1897,6 +1921,7 @@ func managementInterface() {
 	http.HandleFunc("/checklist/default/status", handleChecklistRest)
 	// Alerts Feature
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
+	http.HandleFunc("/alert/", handleAlertsPutRequest)
 	// Timers Feature
 	http.HandleFunc("/timers", handleTimersRest)
 	// Radio Feature

@@ -98,13 +98,16 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
           template.sound = "../sounds/" + $scope.alertsMapping[userLang][alert.Type].Sound + ".mp3";
         }
         template.type = $scope.alertsMapping[userLang][alert.Type].Icon;
+        template.text = $scope.alertsMapping[userLang][alert.Type].Text;
         template.icon = "../img/" + $scope.alertsMapping[userLang][alert.Type].Icon + ".svg";
         // alerts.css contains the colors attributes using the Type info,warning and danger
         template.barclass = "bar" + $scope.alertsMapping[userLang][alert.Type].Icon;
       }
     }
     // TODO: Find the best display between voices[userLang].Title;
+    if(alert.Title.length>0){
     template.text = alert.Title;
+    }
     // Enumeration
     template.id = alert.Type;
     // Time "Elapsed"

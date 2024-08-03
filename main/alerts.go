@@ -39,6 +39,7 @@ const (
 	EVENT_TYPE_AUTOPILOT_ABEAM          = 10
 	EVENT_TYPE_AUTOPILOT_GOTO           = 11
 	EVENT_TYPE_RADIO_COMMAND_NOT_OK     = 12
+	EVENT_TYPE_EMS_GENERIC_FAILURE		= 13
 )
 
 // Maximum events in the list

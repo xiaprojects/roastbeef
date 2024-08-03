@@ -77,6 +77,12 @@
       "Id": "EVENT_TYPE_RADIO_COMMAND_NOT_OK",
       "Icon": "info",
       "Sound": "danger"
+    },
+    {
+      "Text": "Engine Generic Error",
+      "Id": "EVENT_TYPE_EMS_GENERIC_FAILURE",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_EMS_GENERIC_FAILURE"
     }
   ],
   "it-IT": [
@@ -151,6 +157,18 @@
       "Id": "EVENT_TYPE_AUTOPILOT_GOTO",
       "Icon": "info",
       "Sound": "notify"
+    },
+    {
+      "Text": "EVENT_TYPE_RADIO_COMMAND_NOT_OK",
+      "Id": "EVENT_TYPE_RADIO_COMMAND_NOT_OK",
+      "Icon": "info",
+      "Sound": "danger"
+    },
+    {
+      "Text": "EVENT_TYPE_EMS_GENERIC_FAILURE",
+      "Id": "EVENT_TYPE_EMS_GENERIC_FAILURE",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_EMS_GENERIC_FAILURE"
     },
     {
       "Text": "Pericolo",
