@@ -184,7 +184,7 @@ app.controller('MainCtrl', function ($scope, $http) {
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
             // Plugins: EMS Menu
-            $scope.EMS_Enabled = true;
+            $scope.EMS_Enabled = settings.EMS_Enabled;
             // Plugins: Cloud Menu
             $scope.Cloud_Enabled = true;
             // Plugins: Autopilot Menu

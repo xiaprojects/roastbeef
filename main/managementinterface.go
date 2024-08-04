@@ -1032,6 +1032,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.Audio_Enabled = val.(bool)
 					case "Camera_Enabled":
 						globalSettings.Camera_Enabled = val.(bool)
+					case "EMS_Enabled":
+						globalSettings.EMS_Enabled = val.(bool)
 					case "Charts_Enabled":
 						globalSettings.Charts_Enabled = val.(bool)
 					case "Cameras":

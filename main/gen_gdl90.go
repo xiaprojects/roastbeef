@@ -1242,6 +1242,7 @@ type settings struct {
 	Camera_Enabled       bool // USB Camera and WebCam
 	Radio_Enabled        bool // RTL SDR Used as Audio Radio
 	Cameras              []cameraModel // Camera Settings
+	EMS_Enabled       	 bool // Engine Monitoring System
 	Keypad_Enabled       bool
 	Charts_Enabled       bool
 }
@@ -1321,6 +1322,7 @@ func defaultSettings() {
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
 	globalSettings.Radio_Enabled = false
+	globalSettings.EMS_Enabled = false
 	globalSettings.OGN_Enabled = true
 	globalSettings.Dump1090Gain = 37.2
 	globalSettings.APRS_Enabled = true
