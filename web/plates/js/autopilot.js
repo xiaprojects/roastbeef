@@ -763,7 +763,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             if ($scope.ahrs_slip_skid > 360) {
                 $scope.ahrs_slip_skid = "--";
             }
-            ahrs.update(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid);
+            ahrs.update(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid, situation.GPSGroundSpeed, situation.GPSAltitudeMSL);
 
             $scope.ahrs_heading_mag = situation.AHRSMagHeading.toFixed(0);
             if ($scope.ahrs_heading_mag > 360) {

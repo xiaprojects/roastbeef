@@ -12,6 +12,7 @@ function AHRSRenderer(locationId) {
     this.heading = 0;
     this.slipSkid = 0;
     this.altitude = 0;
+    this.speed = 0;
     this.messages = [];
 
     var display = SVG(this.locationId).viewbox(-200, -200, 400, 400).group();
@@ -83,6 +84,14 @@ function AHRSRenderer(locationId) {
         }
     }
 
+    // 20241110 - Adding the Speed and Altitude as requested by users
+    this.textSpeed = this.ai.text("")
+        .style('fill', 'white')
+        .style('font-size', '32px').x(-195).y(-190);
+    this.textAltitude = this.ai.text("")
+        .style('fill', 'white')
+        .style('font-size', '32px').x(130).y(-190);
+
     this.err = display.group().addClass('error').group();
     this.err.rect(400, 400).cx(0).cy(0);
     this.err.line(-200, -200, 200, +200);
@@ -109,7 +118,7 @@ AHRSRenderer.prototype = {
         }
     },
 
-    update: function (pitch, roll, heading, slipSkid) {
+    update: function (pitch, roll, heading, slipSkid, speed = 0, altitude = 0) {
         this.pitch = pitch;
         this.roll = roll;
         this.heading = heading;
@@ -144,6 +153,19 @@ AHRSRenderer.prototype = {
         this.rollMarks.rotate(-this.roll, 0, 0);
         this.headingMarks.translate(-2 * (this.heading % 360), 0);
         this.skidBar.translate(-2 * this.slipSkid, 0);
+
+        // 20241110 - Adding the Speed and Altitude as requested by users
+        this.speed = speed
+        if(speed != 0) {
+            this.textSpeed.text(speed.toFixed(0) + "Kmh");
+        }
+        this.altitude = altitude
+        if(altitude != 0) {
+            var alt = altitude.toFixed(0) + "ft";
+            this.textAltitude.text(alt);
+            this.textAltitude.x(190-alt.length*14);
+        }
+
     },
 
     turn_on: function () {
