@@ -481,8 +481,25 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.reindex();
     }
     $scope.directToAirfield = function(point) {
-        $scope.directTo = point
-        $scope.engageAutopilot([point]);
+        point.Status = WAYPOINT_STATUS_TARGET
+        $scope.gpxImportData({
+            "routes": [{
+                "points": [  {
+                    "Lat": $scope.situation.GPSLatitude,
+                    "Lon": $scope.situation.GPSLongitude,
+                    "Ele": $scope.situation.BaroPressureAltitude,
+                    "Status": WAYPOINT_STATUS_PAST,
+                    "Cmt": "Current Position"
+                 },  point],
+                "index": 0,
+                "Cmt": point.Cmt,
+                "name": point.Cmt,
+                "desc": point.Cmt,
+                "time": 0,
+                "dist": 0
+            }]
+        });
+        $scope.uploadWaypoints();
     }
 
     $scope.directToWaypoint = function (routeIndex, waypointIndex) {
