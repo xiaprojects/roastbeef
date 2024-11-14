@@ -13,6 +13,7 @@ AutopilotCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']
 
 var URL_AUTOPILOT_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/autopilot";
 var URL_AUTOPILOT_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/autopilot";
+var URL_AIRFIELDS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.airfields.json";
 
 var WAYPOINT_STATUS_PATH = 0;       // On the way
 var WAYPOINT_STATUS_TARGET = 1;     // Next target
@@ -45,6 +46,11 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         "Status": 0,
         "Cmt": "Home"
     };
+
+    // Airfields management
+    $scope.airfieldsSortByDistance = true;
+    $scope.airfields = [
+    ];
 
     $scope.situation = { "GPSLastFixSinceMidnightUTC": 32304.2, "GPSLatitude": 43.0, "GPSLongitude": 12.0, "GPSFixQuality": 1, "GPSHeightAboveEllipsoid": 1057.4148, "GPSGeoidSep": 145.34122, "GPSSatellites": 8, "GPSSatellitesTracked": 12, "GPSSatellitesSeen": 10, "GPSHorizontalAccuracy": 5.4, "GPSNACp": 10, "GPSAltitudeMSL": 912.07355, "GPSVerticalAccuracy": 10.700001, "GPSVerticalSpeed": 0, "GPSLastFixLocalTime": "0001-01-01T00:49:25.51Z", "GPSTrueCourse": 48.3, "GPSTurnRate": 0, "GPSGroundSpeed": 0, "GPSLastGroundTrackTime": "0001-01-01T00:49:25.51Z", "GPSTime": "2023-12-31T08:58:24.3Z", "GPSLastGPSTimeStratuxTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessageTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessage": "$GPGGA,085824.20,4311.12143,N,01208.18939,E,1,08,1.08,278.0,M,44.3,M,,*51", "GPSPositionSampleRate": 9.99973784244331, "BaroTemperature": 29.04, "BaroPressureAltitude": 776.60333, "BaroVerticalSpeed": -1.2355082, "BaroLastMeasurementTime": "0001-01-01T00:49:25.52Z", "BaroSourceType": 1, "AHRSPitch": -56.752181757536206, "AHRSRoll": -77.98562991928083, "AHRSGyroHeading": 3276.7, "AHRSMagHeading": 332.9175199350767, "AHRSSlipSkid": 78.88479760867865, "AHRSTurnRate": 3276.7, "AHRSGLoad": 0.10920454632244811, "AHRSGLoadMin": 0.10626655052683534, "AHRSGLoadMax": 0.1099768285851461, "AHRSLastAttitudeTime": "0001-01-01T00:49:25.51Z", "AHRSStatus": 7 };
     $scope.scrollItemCounter = -4;
@@ -217,7 +223,13 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $scope.uploadWaypoints = function () {
         if ($scope.gpx.routes.length > 0) {
-            var msg = JSON.stringify($scope.gpx.routes[0].points);
+            $scope.engageAutopilot($scope.gpx.routes[0].points);        
+        }
+    }
+
+    $scope.engageAutopilot = function (points) {
+        if (points.length > 0) {
+            var msg = JSON.stringify(points);
             $http.post(URL_AUTOPILOT_SET, msg).then(function (response) {
                 // if the upload is positive, check for TARGET, if there is any, Start() navigation
                 var foundTarget = -1;
@@ -351,14 +363,50 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.directToWaypoint(lastX, lastY);
         }
     }
+    $scope.calculateDistanceFromAirfields = function () {
+            for (var y = 0; y < $scope.airfields.length; y++) {
+                var orig = {
+                    Ele:$scope.situation.GPSAltitudeMSL,
+                    Lat:$scope.situation.GPSLatitude,
+                    Lon:$scope.situation.GPSLongitude
+                }
+                var point = $scope.airfields[y];
+                var routing = $scope.calcRouting(
+                    0,
+                    orig.Ele,
+                    point.Ele,
+                    orig.Lat,
+                    orig.Lon,
+                    point.Lat,
+                    point.Lon
+                )
+
+                $scope.airfields[y].trk = routing.trk;
+                $scope.airfields[y].dist = routing.dist;
+                if ($scope.situation.GPSGroundSpeed > 10) {
+                    $scope.GPSGroundSpeedReference = $scope.situation.GPSGroundSpeed;
+                }
+                else {
+                }
+                $scope.airfields[y].time = 60.0 * $scope.airfields[y].dist * 1.852 / $scope.GPSGroundSpeedReference;
+            }
+    }
+
 
     $scope.reindex = function () {
         // Calc distance and intermediate track
         for (var x = 0; x < $scope.gpx.routes.length; x++) {
             var time = 0;
             var dist = 0;
-            for (var y = 1; y < $scope.gpx.routes[x].points.length; y++) {
-                var orig = $scope.gpx.routes[x].points[y - 1];
+            for (var y = 0; y < $scope.gpx.routes[x].points.length; y++) {
+                var orig = {
+                    Ele:$scope.situation.GPSAltitudeMSL,
+                    Lat:$scope.situation.GPSLatitude,
+                    Lon:$scope.situation.GPSLongitude
+                }
+                if(y>0) {
+                    orig = $scope.gpx.routes[x].points[y - 1];
+                }
                 var point = $scope.gpx.routes[x].points[y];
                 var routing = $scope.calcRouting(
                     0,
@@ -431,6 +479,10 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.gpx.routes.splice(routeIndex, 1);
         }
         $scope.reindex();
+    }
+    $scope.directToAirfield = function(point) {
+        $scope.directTo = point
+        $scope.engageAutopilot([point]);
     }
 
     $scope.directToWaypoint = function (routeIndex, waypointIndex) {
@@ -882,7 +934,35 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     });
     }
+    $scope.airfieldsReload = function () {
+        $http.get(URL_AIRFIELDS_GET).then(function (response) {
+            var status = angular.fromJson(response.data);
+            if (status.length > 0) {
+                $scope.airfields = [];
+                status.forEach(element => {
+                    element.Cmt = (element.gps_code==""?"":element.gps_code + " - ") + (element.local_code==""?"":element.local_code+" - ") + element.name
+                    element.className ="keypadSelectedNo";
+                    $scope.airfields.push(element);
+                });
+                $scope.calculateDistanceFromAirfields();
+                if($scope.airfieldsSortByDistance==true){
+                    $scope.airfields.sort((a, b) => a.dist - b.dist);
+                } else {
+                    $scope.airfields.sort((a, b) => a.Cmt.localeCompare(b.Cmt));
+                }
+                for(var x=0;x<$scope.airfields.length;x++)
+                {
+                    $scope.airfields[x].style =  x%2==0?"background-color:lightgray;":""
+                }
+
+            }
+    });        
+    }
+    // Try to wait for situation update, this will allow to calculate also the first point
+    window.setTimeout(()=>{    
+        $scope.airfieldsReload();
     $scope.autopilotLoadCurrentStatus();
+    },500);
 
     
     function waypointChanged(event) {

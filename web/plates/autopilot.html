@@ -183,7 +183,7 @@
                     </tr>
     
                 </table>
-                <div class="col-xs-12 text-right row" style="margin-top: 16px;">
+                <div class="col-xs-12 text-right row" style="margin-top: 16px;margin-bottom: 16px;">
                     <button class="btn btn-warning" ng-click="dropWaypoints(route.indx)"><i class="fa fa-trash"></i> Drop
                         Route</button>
                 </div>
@@ -210,6 +210,75 @@
                     </span>
 
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- List of Airfields -->
+<div class="col-xs-12">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading"><span class="panel_label">Airfields</span>
+                <a ng-click="airfieldsSortByDistance=false;airfieldsReload()" ng-show="airfieldsSortByDistance == true" class="label label-success pull-right">SORT BY DISTANCE</a>
+                <a ng-click="airfieldsSortByDistance=true;airfieldsReload()" ng-show="airfieldsSortByDistance == false" class="label label-default pull-right">SORT BY NAME</a>
+                
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+    
+                <table style="width:100%;margin: 0px;padding:0px;">
+    
+                    <tr style="margin: 0px;padding:0px;">
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <strong>&ETH;</strong> TRK
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            Waypoint
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Time&nbsp;
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Distance NM&nbsp;
+                        </td>
+                        <td class="alertstitle" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Altitude&nbsp;
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;">
+                            Services
+                        </td>
+                    </tr>
+    
+    
+                    <tr ng-repeat="point in airfields"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac;{{point.style}}">
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            <a ng-click="directToAirfield(point)">
+                                <i class="fa fa-location-arrow" aria-hidden="true"
+                                    style="font-size: 32px;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>
+                                {{point.trk.toFixed(1)}}°
+                            </a>
+                        </td>
+                        <td class="text-center"
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;">
+                            <strong>{{point.Cmt}}</strong>
+                            {{point.Lat.toFixed(4)}}, {{point.Lon.toFixed(4)}}
+    
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{point.time.toFixed(0)}}
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{point.dist.toFixed(1)}}
+    
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            {{point.Ele.toFixed(0)}}ft
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:2px;">
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
