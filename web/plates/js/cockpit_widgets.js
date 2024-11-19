@@ -279,9 +279,10 @@ function EMSGenericCircleRenderer(locationId, item) {
     var image = SVG(this.locationId).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
     this.image = image;
     var el, card = image.group().addClass('card');
-    const circleDiameter = 400 - 10 - 60;
+    const circleDiameter = 400 - 10 - 60 - 10;
+    const outTextDistance = 1.15;
     item.backround = card.circle(circleDiameter).cx(0).cy(0).style('fill', item.background)
-    var diameter = circleDiameter * 8.0 / 10.0;
+    var diameter = circleDiameter * 18.0 / 20.0;
     var donutHeight = circleDiameter - diameter - 4;
     const circumference = 2.0 * Math.PI * diameter / 2.0;
     var maxRange = 0;
@@ -297,6 +298,7 @@ function EMSGenericCircleRenderer(locationId, item) {
     }
     this.min = minRange;
     this.max = maxRange;
+    var fontSize = "32px";
 
     for (var r = 0; r < item.ranges.length; r++) {
         var range = item.ranges[r];
@@ -315,40 +317,39 @@ function EMSGenericCircleRenderer(locationId, item) {
 
         const rad = 2 * Math.PI * displace / 360.0;
         card.text("" + (range.min / item.scale)).addClass('textMini')
-            .style('font-size', '32px')
-            .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
+            .style('font-size', fontSize)
+            .style('font-weight', "bold")
+            .cx(Math.cos(rad) * (circleDiameter * outTextDistance) / 2.0).cy(Math.sin(rad) * circleDiameter * outTextDistance / 2.0)
         if (r == item.ranges.length - 1) {
             const displace = item.rotate + item.circleSize * (range.max) / (maxRange - minRange);
             const rad = 2 * Math.PI * displace / 360.0;
             card.text("" + (range.max / item.scale)).addClass('textMini')
-                .style('font-size', '32px')
-                .cx(Math.cos(rad) * (circleDiameter * 1.12) / 2.0).cy(Math.sin(rad) * circleDiameter * 1.12 / 2.0)
+                .style('font-size', fontSize)
+                .style('font-weight', "bold")
+                .cx(Math.cos(rad) * (circleDiameter * outTextDistance) / 2.0).cy(Math.sin(rad) * circleDiameter * outTextDistance / 2.0)
 
         }
     }
 
-    image.group().text(item.uiModel).style('font-size', '38px').addClass('textMini').cx(50).cy(-40);
+    image.group().text(item.uiModel).addClass('text').style('font-size', '24px').addClass('textMini').cx("50%").cy(40);
 
     this.min_el = image.group().addClass('min').style("opacity", 0.5);
-    this.min_el.polygon('0,0 -170,0 -160,-5 0,-5').addClass('pointer');
-    this.min_el.polygon('0,0 -170,0 -160,+5 0,+5').addClass('pointerBG');
-
+    this.min_el.polygon('-160,5 -160,-5 -170,0').style('fill', '#ff4c4c');
 
     this.max_el = image.group().addClass('max').style("opacity", 0.5);
-    this.max_el.polygon('0,0 -170,0 -150,-5 0,-5').addClass('pointer');
-    this.max_el.polygon('0,0 -170,0 -150,+5 0,+5').addClass('pointerBG');
+    this.max_el.polygon('-160,5 -160,-5 -170,0').style('fill', '#4c4cff');
 
+    this.pointer_el = image.group().svg('<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"    y="0px" width="400px" height="400px" viewBox="0 0 400 400"    enable-background="new 0 0 400 400" xml:space="preserve">    <filter filterUnits="objectBoundingBox" id="AI_Shadow_1">        <feGaussianBlur stdDeviation="5" result="blur" in="SourceAlpha"></feGaussianBlur>        <feOffset dy="0" dx="0" result="offsetBlurredAlpha" in="blur"></feOffset>        <feMerge>            <feMergeNode in="offsetBlurredAlpha"></feMergeNode>            <feMergeNode in="SourceGraphic"></feMergeNode>        </feMerge>    </filter>    <g filter="url(#AI_Shadow_1)">        <polygon fill="#FFFFFF" stroke="#535353" stroke-width="1"  stroke-miterlimit="10" points="76.445,196.417 68.082,200 		76.423,203.583 184.334,203.583 184.334,196.417 	" />        <path fill="#232323" stroke="#b2b2b2" stroke-width="0.5" stroke-miterlimit="10" d="M239.042,196.417		c-3.563-3.563-8.918,0-13.063,0c-0.787,0-3.148,0-3.148,0h-11.969c-1.51-4.271-5.573-7.337-10.362-7.337s-8.852,3.065-10.362,7.337		h-5.804v7.167h5.745c1.464,4.355,5.572,7.496,10.42,7.496s8.956-3.141,10.42-7.496h12.036c0,0,2.314,0,3.085,0		c3.874,0,9.458,3.542,13,0C241.124,201.501,241.25,198.625,239.042,196.417z" />    </g></svg>');
+    
+    this.pointer_el.x(-220).y(-200);
+    this.pointer_el.scale(1.4,1.4);    
 
-    this.pointer_el = image.group()//.addClass('pointer_el');
-
-    this.pointer_el.polygon('40,0 -140,0 -120,-10 0,-10').addClass('pointer');
-    this.pointer_el.polygon('40,0 -140,0 -120,+10 0,+10').addClass('pointerBG');
     var middle = image.group().cx(0).cy(0).addClass('text');
-    middle.rect(220, 80).cx(0).cy(90).style('fill', '#4c4c4c').style('rx', '10').style('stroke-width', '2');
+    middle.rect(130, 50).cx(0).cy(0).style('fill', '#4c4c4c').style('rx', '6').style('stroke-width', '2').style('stroke', '#ffffff');
     this.textMiddle = middle.text(item.format.replace("X", item.value))
         .style('fill', 'white')
-        .style('font-size', '64px').cx("50%").cy(90);
-    image.circle(40).cx(0).cy(0).addClass('center');
+        .style('font-size', '52px').cx("50%").cy(0);
+
     this.resize();
 }
 
@@ -388,7 +389,7 @@ EMSGenericCircleRenderer.prototype = {
                 else {
                     //range["svg"].style("opacity",1.0);
                     range["svg"].style("stroke", range.color);
-                    this.textMiddle.style('fill', range.color)
+                    //this.textMiddle.style('fill', range.color)
                     item.backround.style('fill', range.colorOff).style("opacity", 0.5);
                 }
             }
@@ -401,8 +402,8 @@ EMSGenericCircleRenderer.prototype = {
             item.valueMax = value;
             this.max_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max - this.min), 0, 0);
         }
-        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max - this.min), 0, 0);
-        this.textMiddle.text(item.format.replace("X", (item.value).toFixed(item.ceil)))
+        this.pointer_el.rotate(item.rotate - 180 + item.circleSize * (value) / (this.max - this.min),200,200);  
+        this.textMiddle.text(item.format.replace("X", (value).toFixed(item.ceil)))
     }
 };
 
@@ -624,5 +625,81 @@ Bar4Renderer.prototype = {
         for (var index = 0; index < item.sensorsType.length; index++) {
             this.updateBar(situation[item.sensorsType[index]], item, index)
         }
+    }
+};
+
+
+////////////////////////////////////////////////////////////////////////////
+function SixPackAttitude(locationId, item) {
+    this.attitude = new FlightIndicators(document.getElementById(locationId), FlightIndicators.TYPE_ATTITUDE);
+}
+
+SixPackAttitude.prototype = {
+    constructor: SixPackAttitude,
+
+
+    update: function (value, item, situation) {
+        // Attitude update
+        this.attitude.updateRoll(-situation.AHRSRoll)
+        this.attitude.updatePitch(situation.AHRSPitch)
+    }
+};
+////////////////////////////////////////////////////////////////////////////
+function SixPackTurnIndicator(locationId, item) {
+    this.coordinator = new FlightIndicators(document.getElementById(locationId), FlightIndicators.TYPE_TURN_COORDINATOR);
+}
+
+
+SixPackTurnIndicator.prototype = {
+    constructor: SixPackTurnIndicator,
+
+
+    update: function (value, item, situation) {
+    // TC update - note that the TC appears opposite the angle of the attitude indicator, as it mirrors the actual wing up/down position
+
+    this.coordinator.updateCoordinator(situation.AHRSTurnRate,situation.AHRSSlipSkid)
+    }
+}
+////////////////////////////////////////////////////////////////////////////
+function SixPackAltimeter(locationId, item) {
+    this.altimeter = new FlightIndicators(document.getElementById(locationId), FlightIndicators.TYPE_ALTIMETER);
+}
+
+SixPackAltimeter.prototype = {
+    constructor: SixPackAltimeter,
+
+
+    update: function (value, item, situation) {
+    // Altimeter update
+    this.altimeter.updateAltitude(value);
+    this.altimeter.updatePressure(situation.QNH);
+    }
+};
+////////////////////////////////////////////////////////////////////////////
+function SixPackHeading(locationId, item) {
+    this.heading = new FlightIndicators(document.getElementById(locationId), FlightIndicators.TYPE_HEADING);
+}
+
+SixPackHeading.prototype = {
+    constructor: SixPackHeading,
+
+
+    update: function (value, item, situation) {
+    // Heading update
+    this.heading.updateHeading(value)
+    }
+};
+////////////////////////////////////////////////////////////////////////////
+function SixPackVariometer(locationId, item) {
+    this.vertical = new FlightIndicators(document.getElementById(locationId), FlightIndicators.TYPE_VERTICAL_SPEED);
+}
+
+SixPackVariometer.prototype = {
+    constructor: SixPackVariometer,
+
+
+    update: function (value, item, situation) {
+    // Vertical speed update
+    this.vertical.updateVerticalSpeed(value/100)
     }
 };

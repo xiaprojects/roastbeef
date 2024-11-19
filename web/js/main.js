@@ -155,6 +155,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'ChartsCtrl',
 			reloadOnSearch: false
 		})
+		.state('switchboard', {
+			url: '/switchboard',
+			templateUrl: 'plates/switchboard.html',
+			controller: 'SwitchBoardCtrl',
+			reloadOnSearch: false
+		})
 		.state('timers', {
 			url: '/timers',
 			templateUrl: 'plates/timers.html',
@@ -191,6 +197,8 @@ app.controller('MainCtrl', function ($scope, $http) {
             $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
             // Plugins: Radio Menu
             $scope.Radio_Enabled = settings.Radio_Enabled;
+            // Plugins: SwitchBoard Menu
+            $scope.SwitchBoard_Enabled = settings.SwitchBoard_Enabled;
             // Plugins: Camera Menu
             $scope.Camera_Enabled = settings.Camera_Enabled;
             // Plugins: Keypad Service

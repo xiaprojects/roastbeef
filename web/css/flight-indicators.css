@@ -1,0 +1,53 @@
+.instrument {
+    width: 32vw;
+    height: 32vw;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* The box containing any element of an indicator */
+.instrument .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Default transformations */
+.instrument.attitude .roll {
+    transform: rotate(0deg);
+}
+
+.instrument.attitude .roll .pitch {
+    top: 0;
+}
+
+.instrument.heading .yaw {
+    transform: rotate(0deg);
+}
+
+.instrument.vertical-speed .vertical-speed {
+    transform: rotate(0deg);
+}
+
+.instrument.speed .airspeed {
+    transform: rotate(90deg);
+}
+
+.instrument.altimeter .pressure {
+    transform: rotate(40deg);
+}
+
+.instrument.altimeter .needle {
+    transform: rotate(90deg);
+}
+
+.instrument.altimeter .small-needle {
+    transform: rotate(90deg);
+}
+
+.indicators .hidden {
+    display: none;
+}

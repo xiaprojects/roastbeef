@@ -425,22 +425,3 @@ body {
 input.ng-invalid:not(.grayout){
     background: pink;
 }
-
-/* change right sidebar behavior to always push */
-
-@media (min-width: 992px) {
-	.sidebar-right-in .app {
-		margin-right: 0;
-		right: 0;
-	}
-	.sidebar-right-in .app {
-		width: auto;
-		-webkit-transform: translate3d(-300px, 0, 0)!important;
-		-moz-transform: translate3d(-300px, 0, 0)!important;
-		transform: translate3d(-300px, 0, 0)!important;
-		position: relative;
-		-webkit-transition: -webkit-transform 0 ease;
-		-moz-transition: -moz-transform 0 ease;
-		transition: transform 0 ease;
-	}
-}

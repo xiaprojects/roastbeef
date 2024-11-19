@@ -55,8 +55,31 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $scope.zoom = function (index) {
-        let widgetClasses = ["col-xs-3", "col-xs-6", "col-xs-12", "col-xs-3"];
+        let widgetClasses = ["col-xs-4", "col-xs-6", "col-xs-12", "col-xs-3", "col-xs-4"];
         $scope.widgetsSettings[index].class = widgetClasses[1 + widgetClasses.indexOf($scope.widgetsSettings[index].class)];
+
+        // TODO: automate this process, it is not so good to probe which kind of widget is.
+        let instrument = document.getElementById($scope.widgetsSettings[index].divName).querySelector('div.instrument')
+        if (instrument) {
+            switch ($scope.widgetsSettings[index].class) {
+                case "col-xs-3":
+                    instrument.style.height = `24vw`
+                    instrument.style.width = `24vw`
+                    break;
+                case "col-xs-4":
+                    instrument.style.height = `32vw`
+                    instrument.style.width = `32vw`
+                    break;
+                case "col-xs-6":
+                    instrument.style.height = `46vw`
+                    instrument.style.width = `46vw`
+                    break;
+                case "col-xs-12":
+                    instrument.style.height = `90vw`
+                    instrument.style.width = `90vw`
+                    break;
+            }
+        }
     }
 
     $scope.reloadDiv = function (index) {
@@ -94,6 +117,34 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                 break;
                 case "CHT":
                     currentItem["render"] = new Bar4Renderer(currentItem.divName, currentItem);
+                break;
+                case "AHRSExtendedRenderer":
+                    currentItem["render"] = new AHRSRenderer(currentItem.divName);
+                    currentItem["render"].turn_on();
+                    var defs= currentItem["render"].ai.defs();
+                    var circleClip=defs.circle(380).cx(0).cy(0);
+                    currentItem["render"].ai.clipWith(circleClip)
+
+                    currentItem["render"].updateAHRS = currentItem["render"].update
+                    currentItem["render"].update = function(value, item, situation) {
+                        currentItem["render"].updateAHRS(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid, situation.GPSGroundSpeed, situation.GPSAltitudeMSL);
+                    }
+                break;
+
+                case "SixPackAttitude":
+                    currentItem["render"] = new SixPackAttitude(currentItem.divName, currentItem);
+                break;
+                case "SixPackAltimeter":
+                    currentItem["render"] = new SixPackAltimeter(currentItem.divName, currentItem);
+                break;
+                case "SixPackTurnIndicator":
+                    currentItem["render"] = new SixPackTurnIndicator(currentItem.divName, currentItem);
+                break;
+                case "SixPackVariometer":
+                    currentItem["render"] = new SixPackVariometer(currentItem.divName, currentItem);
+                break;
+                case "SixPackHeading":
+                    currentItem["render"] = new SixPackHeading(currentItem.divName, currentItem);
                 break;
                   default:
                     currentItem["render"] = new EMSGenericCircleRenderer(currentItem.divName, currentItem);
@@ -203,6 +254,18 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     $scope.loadSituationInCockpit = function (situation) {
+
+        if (situation.hasOwnProperty("BaroPressureAltitude")) {
+            var altitudeVsMillibar = 8 / 0.3048;
+            var a = (situation.BaroPressureAltitude / altitudeVsMillibar).toFixed(0);
+            var b = (situation.GPSAltitudeMSL / altitudeVsMillibar).toFixed(0);
+            var c = (b - a);
+            situation.QNH = 1013 + c;
+        }
+        else {
+            situation.QNH;
+        }
+
 
         Object.keys($scope.mapping).forEach(element => {
             if (situation.hasOwnProperty(element)) {

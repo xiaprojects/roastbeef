@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="540" height="540" id="svg6534"
+    preserveAspectRatio="X200Y200 meet">
+    <defs id="defs6536">
+        <linearGradient id="linearGradient7398">
+            <stop style="stop-color:#a8a8a8;stop-opacity:1" offset="0" />
+            <stop style="stop-color:#515151;stop-opacity:1" offset="1" />
+        </linearGradient>
+        <linearGradient id="linearGradient7376">
+            <stop style="stop-color:#1d1d1d;stop-opacity:1" offset="0" />
+            <stop style="stop-color:#acacac;stop-opacity:1" offset="1" />
+        </linearGradient>
+        <linearGradient id="linearGradient7357">
+            <stop style="stop-color:#222222;stop-opacity:1" offset="0" />
+            <stop style="stop-color:#888888;stop-opacity:1" offset="1" />
+        </linearGradient>
+        <linearGradient id="linearGradient7280">
+            <stop style="stop-color:#989898;stop-opacity:1" offset="0" />
+            <stop style="stop-color:#161616;stop-opacity:1" offset="1" />
+        </linearGradient>
+        <filter x="0" y="0" width="1" height="1.5" color-interpolation-filters="sRGB"
+            id="filter7272">
+            <feGaussianBlur id="feGaussianBlur7274" stdDeviation="1.3586542" />
+        </filter>
+        <filter x="0" y="0" width="1" height="1.5" color-interpolation-filters="sRGB"
+            id="filter7276">
+            <feGaussianBlur id="feGaussianBlur7278" stdDeviation="1.3586542" />
+        </filter>
+        <filter x="-0.025320208" y="-0.4602949" width="1.0506403" height="1.9205898" color-interpolation-filters="sRGB"
+            id="filter7296">
+            <feGaussianBlur id="feGaussianBlur7298" stdDeviation="2.5395566" />
+        </filter>
+        <filter color-interpolation-filters="sRGB" id="filter7320">
+            <feGaussianBlur id="feGaussianBlur7322" stdDeviation="1.560427" />
+        </filter>
+        <filter x="-0.037216581" y="-1.1012783" width="1.0744332" height="3.2025566" color-interpolation-filters="sRGB"
+            id="filter7332">
+            <feGaussianBlur id="feGaussianBlur7334" stdDeviation="0.42103338" />
+        </filter>
+        <filter x="-0.03657512" y="-2.2894466" width="1.0731502" height="5.5788932" color-interpolation-filters="sRGB"
+            id="filter7336">
+            <feGaussianBlur id="feGaussianBlur7338" stdDeviation="0.37260582" />
+        </filter>
+        <filter color-interpolation-filters="sRGB" id="filter7340">
+            <feGaussianBlur id="feGaussianBlur7342" stdDeviation="12.323861" />
+        </filter>
+        <filter x="-1.5192107" y="-0.16643283" width="4.0384216" height="1.3328657" color-interpolation-filters="sRGB"
+            id="filter7344">
+            <feGaussianBlur id="feGaussianBlur7346" stdDeviation="2.4271454" />
+        </filter>
+        <filter x="-0.15478399" y="-0.095661767" width="1.309568" height="1.1913235" color-interpolation-filters="sRGB"
+            id="filter7390">
+            <feGaussianBlur id="feGaussianBlur7392" stdDeviation="2.6718665" />
+        </filter>
+        <radialGradient cx="436.2619" cy="383.55603" r="21.234371" fx="436.2619" fy="383.55603" id="radialGradient7450"
+            xlink:href="#linearGradient7280" gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(0.99962961,0.03151084,-0.03165606,1.3463234,12.30346,-151.54305)" />
+        <linearGradient x1="405.10495" y1="100.92" x2="429.60284" y2="491.39627" id="linearGradient7457"
+            xlink:href="#linearGradient7376" gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(1.0317265,0,0,1.0317265,-10.411468,-40.920085)" />
+        <linearGradient x1="330.24167" y1="125.12653" x2="460.05554" y2="575.40216" id="linearGradient7460"
+            xlink:href="#linearGradient7357" gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(1,0,0,1,1.2957406,-32.018626)" />
+        <linearGradient x1="346.57809" y1="73.12307" x2="545.03467" y2="529.28961" id="linearGradient7498"
+            xlink:href="#linearGradient7398" gradientUnits="userSpaceOnUse"
+            gradientTransform="matrix(1,0,0,1,2.6,1.5)" />
+        <filter x="0" y="0" width="1" height="1.5" color-interpolation-filters="sRGB" id="filter3669">
+            <feGaussianBlur stdDeviation="3.5" />
+        </filter>
+        <filter id="inner-shadow">
+            <feOffset dx="0" dy="1" />
+            <feComposite operator="out" result="fc-out-result" in2="SourceGraphic" />
+            <feFlood flood-opacity=".6" flood-color="rgb(0,0,0)" />
+            <feComposite operator="in" in2="fc-out-result" result="fc-in-result" />
+            <feMerge>
+                <feMergeNode in="fc-in-result" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <g transform="translate(-78,33), scale(0.8)" id="layer3" style="display:inline">
+
+        <path d="m 462.49999,391.78574 a 20.714285,33.516418 0 1 1 -41.42857,0 20.714285,33.516418 0 1 1 41.42857,0 z"
+            transform="matrix(1.0344828,0,0,0.89344242,-15.393402,42.833118)" id="path7384"
+            style="fill:#000000;fill-opacity:0.57213931;stroke:none;filter:url(#filter7390)" />
+
+      <path d="m 462.49999,391.78574 a 20.714285,33.516418 0 1 1 -41.42857,0 20.714285,33.516418 0 1 1 41.42857,0 z"
+            transform="matrix(1.0344828,0,0,0.89344242,-21.030537,41.561674)" id="path7231"
+            style="fill:url(#radialGradient7450);fill-opacity:1;stroke:none" />
+           
+     </g>
+</svg>
