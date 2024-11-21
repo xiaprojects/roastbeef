@@ -700,6 +700,6 @@ SixPackVariometer.prototype = {
 
     update: function (value, item, situation) {
     // Vertical speed update
-    this.vertical.updateVerticalSpeed(value/100)
+    this.vertical.updateVerticalSpeed(value/1000)
     }
 };

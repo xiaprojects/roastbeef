@@ -67,12 +67,12 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                     instrument.style.width = `24vw`
                     break;
                 case "col-xs-4":
-                    instrument.style.height = `32vw`
-                    instrument.style.width = `32vw`
+                    instrument.style.height = `33vw`
+                    instrument.style.width = `33vw`
                     break;
                 case "col-xs-6":
-                    instrument.style.height = `46vw`
-                    instrument.style.width = `46vw`
+                    instrument.style.height = `49vw`
+                    instrument.style.width = `49vw`
                     break;
                 case "col-xs-12":
                     instrument.style.height = `90vw`
