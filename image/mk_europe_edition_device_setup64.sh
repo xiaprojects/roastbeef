@@ -26,6 +26,11 @@ mkdir -p /proc/sys/vm/
 apt update
 apt clean
 
+# first, install esptool for tracker flashing. pip will be removed again afterwards to conserve space
+PATH=/root/fake:$PATH RUNLEVEL=1 apt install python3-pip
+pip install --break-system-packages esptool
+PATH=/root/fake:$PATH RUNLEVEL=1 apt autoremove --purge python3-pip
+
 PATH=/root/fake:$PATH RUNLEVEL=1 apt install --yes libjpeg62-turbo-dev libconfig9 rpi-update dnsmasq git cmake  \
     libusb-1.0-0-dev build-essential autoconf libtool i2c-tools libfftw3-dev libncurses-dev python3-serial jq ifplugd iptables libttspico-utils bluez bluez-firmware
 

@@ -337,8 +337,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 			} else if err != nil {
 				log.Printf("handleSettingsSetRequest:error: %s\n", err.Error())
 			} else {
-				reconfigureOgnTracker := false
-				reconfigureGXTracker := false
+				reconfigureTracker := false
 				reconfigureFancontrol := false
 				for key, val := range msg {
 					// log.Printf("handleSettingsSetRequest:json: testing for key:%s of type %s\n", key, reflect.TypeOf(val))
@@ -496,35 +495,22 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 
 					case "OGNAddrType":
 						globalSettings.OGNAddrType = int(val.(float64))
-						reconfigureOgnTracker = true
+						reconfigureTracker = true
 					case "OGNAddr":
 						globalSettings.OGNAddr = val.(string)
-						reconfigureOgnTracker = true
+						reconfigureTracker = true
 					case "OGNAcftType":
 						globalSettings.OGNAcftType = int(val.(float64))
-						reconfigureOgnTracker = true
+						reconfigureTracker = true
 					case "OGNPilot":
 						globalSettings.OGNPilot = val.(string)
-						reconfigureOgnTracker = true
+						reconfigureTracker = true
 					case "OGNReg":
 						globalSettings.OGNReg = val.(string)
-						reconfigureOgnTracker = true
+						reconfigureTracker = true
 					case "OGNTxPower":
 						globalSettings.OGNTxPower = int(val.(float64))
-						reconfigureOgnTracker = true
-					case "GXAddr":
-						inter,_ := strconv.ParseInt(val.(string), 16, 0)
-						globalSettings.GXAddr = int(inter) & 0xffffff
-						reconfigureGXTracker = true
-					case "GXAddrType":
-						globalSettings.GXAddrType = int(val.(float64))
-						reconfigureGXTracker = true
-					case "GXAcftType":
-						globalSettings.GXAcftType = int(val.(float64))
-						reconfigureGXTracker = true
-					case "GXPilot":
-						globalSettings.GXPilot = val.(string)
-						reconfigureGXTracker = true
+						reconfigureTracker = true
 					case "PWMDutyMin":
 						globalSettings.PWMDutyMin = int(val.(float64))
 						reconfigureFancontrol = true
@@ -535,11 +521,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 				}
 				saveSettings()
 				applyNetworkSettings(false, false)
-				if reconfigureOgnTracker {
-					configureOgnTrackerFromSettings()
-				}
-				if reconfigureGXTracker {
-					configureGxAirComTracker()
+				if reconfigureTracker && detectedTracker != nil {
+					writeTrackerConfigFromSettings()
 				}
 				if reconfigureFancontrol {
 					exec.Command("killall", "-SIGUSR1", "fancontrol").Run();

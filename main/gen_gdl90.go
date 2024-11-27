@@ -97,19 +97,20 @@ const (
 
 	// lower nibble gps type   (dont forget to use only numbers form 0 to 15)
 	
-	GPS_TYPE_ANY     	= 1		// Any generic GPS - no reconfiguring applied
-	GPS_TYPE_PROLIFIC 	= 2
+	GPS_TYPE_ANY        = 1		// Any generic GPS - no reconfiguring applied
+	GPS_TYPE_PROLIFIC   = 2
 	GPS_TYPE_OGNTRACKER = 3
-	GPS_TYPE_UBX_GEN  	= 4
-	GPS_TYPE_UBX10    	= 5	
+	GPS_TYPE_UBX_GEN    = 4
+	GPS_TYPE_UBX10      = 5
 	//GPS_TYPE_UBX6     	= 6
 	GPS_TYPE_UBX6or7    = 7
-	GPS_TYPE_UBX8     	= 8
-	GPS_TYPE_UBX9     	= 9
-	GPS_TYPE_SERIAL   	= 10 		// 0x0A
+	GPS_TYPE_UBX8       = 8
+	GPS_TYPE_UBX9       = 9
+	GPS_TYPE_SERIAL     = 10 		// 0x0A
 	GPS_TYPE_SOFTRF_DONGLE 	= 11	// 0x0B
-	GPS_TYPE_NETWORK  	= 12		// 0x0C
-	GPS_TYPE_GXAIRCOM 	= 15		// 0x0F
+	GPS_TYPE_NETWORK    = 12		// 0x0C
+	GPS_TYPE_SOFTRF     = 13
+	GPS_TYPE_GXAIRCOM   = 15		// 0x0F
 	
 
 	// upper nibble is used for the protocol
@@ -1215,18 +1216,14 @@ type settings struct {
 	RadarRange           int
 
 	OGNI2CTXEnabled      bool
+
+	// External Tracker config (OGN Tracker/GXAirCom/SoftRF)
 	OGNAddr              string
 	OGNAddrType          int            // 0=random, 1=ICAO, 2=Flarm, 3=OGN
 	OGNAcftType          int
 	OGNPilot             string
 	OGNReg               string
 	OGNTxPower           int
-
-	// GxAirCom
-	GXAddr               int
-	GXAddrType           int            // 1=ICAO, 2=Flarm
-	GXAcftType           int
-	GXPilot              string
 
 	PWMDutyMin           int
 
