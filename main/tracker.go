@@ -425,6 +425,10 @@ func (tracker *SoftRF) writeConfigFromSettings(serialPortFirst *serial.Port) boo
 	// PSRFD,<version>,<id_method>,<aircraft_id>,<ignore_id>,<follow_id>,<baud_rate>,<power_external>,<nmea_d>,<debug_flags>,<nmea_out2>,<nmea2_g>,<nmea2_p>,<nmea2_l>,<nmea2_s>,<nmea2_d>,<relay>,<bluetooth>,<baudrate2>,<invert2>,<nmea_e>,<nmea2_e>,<altpin0>,<voice>,<strobe>
 	// 0     1         2           3             4           5           6           7                8        9             10          11        12        13        14        15        16      17          18          19        20       21        22        23      24
 
+	if !tracker.isConfigRead() {
+		return false
+	}
+	
 	newc := make([]string, len(tracker.psrfc))
 	newd := make([]string, len(tracker.psrfd))
 	copy(newc, tracker.psrfc)
