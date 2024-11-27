@@ -625,7 +625,7 @@ func writeTrackerConfigFromSettings() {
 		if !changed {
 			return
 		}
-		delay := detectedTracker.writeReadDelay()
+		delay := tracker.writeReadDelay()
 		go func() {
 			time.Sleep(delay)
 			if tracker == detectedTracker {

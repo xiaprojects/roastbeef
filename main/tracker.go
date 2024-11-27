@@ -119,9 +119,6 @@ type SoftRF struct {
 	detected bool
 	psrfc []string
 	psrfd []string
-
-	// Hack: SoftRF reboots after settings change.. we have to wait until we receive the hearbeat again and send with the new serial connection
-	pendingRfdWrite string
 }
 
 func (tracker *OgnTracker) initNewConnection(serialPort *serial.Port) {
@@ -388,17 +385,10 @@ func (tracker *SoftRF) isConfigRead() bool {
 }
 
 func (tracker *SoftRF) writeReadDelay() time.Duration {
-	return 40 * time.Second // Settings change requires 2 reboots.. 20s each
+	return 15 * time.Second
 }
 
 func (tracker *SoftRF) writeInitialConfig(serialPort *serial.Port) bool {
-	if tracker.pendingRfdWrite != "" {
-		log.Printf("Configure SoftRF " + tracker.pendingRfdWrite)
-		serialPort.Write([]byte(tracker.pendingRfdWrite))
-		tracker.pendingRfdWrite = ""
-		return true
-	}
-
 	if !tracker.isConfigRead() {
 		return false
 	}
@@ -419,7 +409,7 @@ func (tracker *SoftRF) requestTrackerConfig(serialPort *serial.Port) {
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFD,?") + "\r\n"))
 }
 
-func (tracker *SoftRF) writeConfigFromSettings(serialPortFirst *serial.Port) bool {
+func (tracker *SoftRF) writeConfigFromSettings(serialPort *serial.Port) bool {
 	// PSRFC,<version>,<mode>,<rf_protocol>,<band>,<aircraft_type>,<alarm>,<txpower>,<volume>,<pointer>,<nmea_g>,<nmea_p>,<nmea_l>,<nmea_s>,<nmea_out>,<gdl90>,<d1090>,<stealth>,<no_track>,<power_save>
 	// 0     1         2      3             4      5               6       7         8        9         10       11       12       13       14         15      16      17        18         19
 
@@ -440,16 +430,22 @@ func (tracker *SoftRF) writeConfigFromSettings(serialPortFirst *serial.Port) boo
 
 	changed := false
 	if tracker.psrfc[5] != newc[5] {
+		newc[1] = "0" // instructs SoftRF to not reboot yet
 		msg := appendNmeaChecksum("$" + strings.Join(newc, ",")) + "\r\n"
 		log.Printf("Configure SoftRF " + msg)
-		serialPortFirst.Write([]byte(msg))
+		serialPort.Write([]byte(msg))
 		changed = true
 	}
 	
 	if tracker.psrfd[2] != newd[2] || tracker.psrfd[3] != newd[3] {
-		changed = true
+		newd[1] = "0" // instructs SoftRF to not reboot yet
 		msg := appendNmeaChecksum("$" + strings.Join(newd, ",")) + "\r\n"
-		tracker.pendingRfdWrite =  msg
+		log.Printf("Configure SoftRF " + msg)
+		serialPort.Write([]byte(msg))
+		changed = true
+	}
+	if changed {
+		serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,SAV") + "\r\n")) // Finally reboot
 	}
 	
 	return changed
