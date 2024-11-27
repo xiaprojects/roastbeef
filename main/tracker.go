@@ -132,7 +132,6 @@ func (tracker *OgnTracker) initNewConnection(serialPort *serial.Port) {
 func (tracker *OgnTracker) onNmea(serialPort *serial.Port, nmea []string) bool {
 	if nmea[0] == "POGNR" {
 		tracker.detected = true
-		tracker.writeInitialConfig(serialPort)
 		return true
 	}
 
