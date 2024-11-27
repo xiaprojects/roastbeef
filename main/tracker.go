@@ -405,7 +405,9 @@ func (tracker *SoftRF) writeInitialConfig(serialPort *serial.Port) bool {
 	if tracker.psrfc[2] != "10" {
 		// NMEA extended mode
 		tracker.psrfc[2] = "10"
-		serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,1,10") + "\r\n"))
+		msg := appendNmeaChecksum("$" + strings.Join(tracker.psrfc, ",")) + "\r\n"
+		log.Printf("Configure SoftRF " + msg)
+		serialPort.Write([]byte(appendNmeaChecksum(msg) + "\r\n"))
 		return true
 	}
 
