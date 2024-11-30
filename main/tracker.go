@@ -338,6 +338,10 @@ func (tracker *SoftRF) initNewConnection(serialPort *serial.Port) {
 
 func (tracker *SoftRF) onNmea(serialPort *serial.Port, nmea []string) bool {
 	if nmea[0] == "PSRFH" {
+		if tracker.detected && !tracker.isConfigRead() {
+			// sometimes SoftRF doesn't seem to respond to settings request if we are too early after boot.. retry if we were already detected before but still don't have a config
+			tracker.requestTrackerConfig(serialPort)
+		}
 		tracker.detected = true
 		return true
 	}
@@ -385,7 +389,7 @@ func (tracker *SoftRF) isConfigRead() bool {
 }
 
 func (tracker *SoftRF) writeReadDelay() time.Duration {
-	return 15 * time.Second
+	return 15 * time.Second // SoftRF seems to take a while until it responds to config read after boot..?
 }
 
 func (tracker *SoftRF) writeInitialConfig(serialPort *serial.Port) bool {
@@ -405,6 +409,7 @@ func (tracker *SoftRF) writeInitialConfig(serialPort *serial.Port) bool {
 }
 
 func (tracker *SoftRF) requestTrackerConfig(serialPort *serial.Port) {
+	//log.Printf("Request tracker config")
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,?") + "\r\n"))
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFD,?") + "\r\n"))
 }
