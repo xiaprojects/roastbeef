@@ -98,7 +98,7 @@
                         </div>
 
                         <!-- Address -->
-                        <div class="form-group reset-flow">
+                        <div class="form-group reset-flow" ng-hide="gpsHardwareCode==13 && OGNAddrType != '1'">
                             <label class="control-label col-xs-5">Tracker Address (Hex)</label>
                             <input class="col-xs-7" type="text" maxlength="6" hex-input ng-model="OGNAddr" />
                         </div>
