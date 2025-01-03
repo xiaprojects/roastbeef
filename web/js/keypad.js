@@ -204,10 +204,10 @@ function KeypadService($scope, settings) {
         },
         "#/cockpit": {
             "disableRotary": true,
-            "ArrowRight": "#/radio",
-            "ArrowDown": "#/radio",
-            "3": "#/radio",
-            "to": "#/radio",
+            "ArrowRight": "#/synthview",
+            "ArrowDown": "#/synthview",
+            "3": "#/synthview",
+            "to": "#/synthview",
             "from": "#/",
             "ArrowLeft": "#/",
             "ArrowUp": "#/",
@@ -215,6 +215,20 @@ function KeypadService($scope, settings) {
             "knobDeg": 0,
             "title": "Cockpit"
         },
+        "#/synthview": {
+            "disableRotary": true,
+            "ArrowRight": "#/radio",
+            "ArrowDown": "#/radio",
+            "3": "#/radio",
+            "to": "#/radio",
+            "from": "#/cockpit",
+            "ArrowLeft": "#/cockpit",
+            "ArrowUp": "#/cockpit",
+            "1": "#/cockpit",
+            "knobDeg": 0,
+            "title": "SynthView"
+        },
+
         "#/radio": {
             "disableRotary": true,
             "ArrowRight": "#/traffic",
@@ -529,6 +543,7 @@ function KeypadService($scope, settings) {
 
         $scope.keypadKnobTimerRemovePopup = setInterval(keypadHideRotary, 1000);
         $scope.Ui.turnOn("keypadModal");
+        document.getElementById("keypadModalDiv").style="";
 
         if (keypadSettingsNavigation.hasOwnProperty($scope.keypadKnobLastLocation)) {
             if (keypadSettingsNavigation[$scope.keypadKnobLastLocation].hasOwnProperty(key)) {

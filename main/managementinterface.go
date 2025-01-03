@@ -328,6 +328,134 @@ func handleSituationWS(conn *websocket.Conn) {
 
 }
 
+
+
+/***
+ * SwitchBoard REST API Start
+ */
+ func handleSwitchBoardGet(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "{}\n")
+}
+func handleSwitchBoardDelete(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "{}\n")
+}
+
+/***
+ * handleSwitchBoardPut: this method will directly invoke a Command in Sync without keeping the result
+ * TODO: to be removed in the future
+ */
+func handleSwitchBoardPut(w http.ResponseWriter, r *http.Request) {
+		decoder := json.NewDecoder(r.Body)
+		var msg switchModel
+		err := decoder.Decode(&msg)
+		if err == io.EOF {
+			http.Error(w, err.Error(), 500)
+			return
+	
+		} else if err != nil {
+			log.Printf("%s", err)
+			http.Error(w, err.Error(), 500)
+			return
+	
+		} else {
+			if(msg.Type==SW_TYPE_CMD){
+				msg.EpochStart = time.Now().Unix()
+				msg.Status = switchBoard.executeCommandLine(msg.Uri)
+				msg.EpochFinish = time.Now().Unix()
+				statusJSON, err := json.Marshal(&msg)
+				if err == nil {
+					fmt.Fprintf(w, "%s\n", statusJSON)
+				} else {
+					fmt.Fprintf(w, "{}\n")
+					log.Printf("%s", err)
+				}
+			} else {
+				http.Error(w, err.Error(), 500)
+				return
+			}
+		}
+}
+
+func handleSwitchBoardPost(w http.ResponseWriter, r *http.Request) {
+	parts := strings.Split(r.RequestURI, "/")
+	log.Printf("%s %d", r.RequestURI, len(parts))
+
+	if len(parts) < 3 {
+		return
+	}
+	idx := len(parts) - 1
+	switchId, err := strconv.Atoi(parts[idx])
+	log.Printf("Command to start %d", switchId)
+
+	if(err != nil){
+		http.Error(w, err.Error(), 500)
+		return
+	}
+	// TODO: Mutex
+	if(switchId<0 || switchId>= len(globalSettings.Switches)){
+		http.Error(w, err.Error(), 500)
+		return
+	} else {
+		var msg = globalSettings.Switches[switchId]
+		if(msg.Type==SW_TYPE_CMD){
+			msg.EpochStart = time.Now().Unix()
+			msg.Status = SW_STATUS_RUNNING
+			
+			err2 := switchBoard.forkCommand(msg,switchId)
+			msg.EpochFinish = time.Now().Unix()
+			if err2 == nil {
+			} else {
+				msg.Status = SW_STATUS_FINISH_2
+				
+			}
+
+			globalSettings.Switches[switchId] = msg
+			statusJSON, _ := json.Marshal(&msg)
+			fmt.Fprintf(w, "%s\n", statusJSON)
+		} else {
+			// Only Bash commands are supported
+			msg.Status = SW_STATUS_FINISH_2
+			msg.EpochStart = time.Now().Unix()
+			msg.EpochFinish = time.Now().Unix()
+			globalSettings.Switches[switchId] = msg
+			statusJSON, _ := json.Marshal(&msg)
+			fmt.Fprintf(w, "%s\n", statusJSON)
+		}
+	}
+}
+
+func handleSwitchBoardRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+
+	if r.Method == "GET" {
+		handleSwitchBoardGet(w, r)
+	}
+
+	if r.Method == "DELETE" {
+		handleSwitchBoardDelete(w, r)
+	}
+
+	if r.Method == "PUT" {
+		handleSwitchBoardPut(w, r)
+	}
+
+	if r.Method == "POST" {
+		handleSwitchBoardPost(w, r)
+	}
+}
+
+/***
+ * SwitchBoard REST API End
+ */
+
+
 /***
  * Timers REST API Start
  */
@@ -433,6 +561,48 @@ func handleTimersRest(w http.ResponseWriter, r *http.Request) {
 /***
  * Timers REST API End
  */
+
+/***
+ * Magnetometer REST API Start
+ */
+func handleMagnetometerGet(w http.ResponseWriter, r *http.Request) {
+	/*
+	magnetometer.magDataMutex.Lock()
+	statusJSON, err := json.Marshal(&magnetometer.field)
+	magnetometer.magDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+	*/
+	fmt.Fprintf(w, "[]\n")
+}
+
+ func handleMagnetometerRest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	if r.Method == "GET" {
+		handleMagnetometerGet(w, r)
+	}
+
+	if r.Method == "DELETE" {
+
+	}
+
+	if r.Method == "PUT" {
+
+	}
+
+	if r.Method == "POST" {
+
+	}
+}
 
 /***
  * Autopilot REST API
@@ -1036,6 +1206,20 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.EMS_Enabled = val.(bool)
 					case "Charts_Enabled":
 						globalSettings.Charts_Enabled = val.(bool)
+					case "Switches":
+						var newSwitches = make([]switchModel, 0)
+						for _, rawModel := range val.([]interface{}) {
+							modelItem := rawModel.(map[string]interface{})
+							newSwitches = append(newSwitches,
+								switchModel{Name: modelItem["Name"].(string),
+								Uri: modelItem["Uri"].(string),
+								Status: 0,
+								EpochStart: 0,
+								EpochFinish: 0,
+								UriStatus: "",
+								Type: int(modelItem["Type"].(float64))})
+						}
+						globalSettings.Switches = newSwitches
 					case "Cameras":
 						var newCameras = make([]cameraModel, 0)
 						for _, rawModel := range val.([]interface{}) {
@@ -1924,8 +2108,13 @@ func managementInterface() {
 	// Alerts Feature
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
 	http.HandleFunc("/alert/", handleAlertsPutRequest)
+	// Magnetometer Feature
+	http.HandleFunc("/magnetometer", handleMagnetometerRest)
 	// Timers Feature
 	http.HandleFunc("/timers", handleTimersRest)
+	// SwitchBoard Feature
+	http.HandleFunc("/switches", handleSwitchBoardRest)
+	http.HandleFunc("/switches/", handleSwitchBoardRest)
 	// Radio Feature
 	http.HandleFunc("/radio", handleRadioRest)
 	http.HandleFunc("/radio/", handleRadioRest)

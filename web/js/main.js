@@ -193,6 +193,8 @@ app.controller('MainCtrl', function ($scope, $http) {
             $scope.EMS_Enabled = settings.EMS_Enabled;
             // Plugins: Cloud Menu
             $scope.Cloud_Enabled = true;
+			// SynthView_Enabled
+			$scope.SynthView_Enabled = true;
             // Plugins: Autopilot Menu
             $scope.Autopilot_Enabled = settings.Autopilot_Enabled;
             // Plugins: Radio Menu

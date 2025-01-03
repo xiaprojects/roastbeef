@@ -1245,6 +1245,8 @@ type settings struct {
 	EMS_Enabled       	 bool // Engine Monitoring System
 	Keypad_Enabled       bool
 	Charts_Enabled       bool
+	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
+	Switches             []switchModel // Switches Settings
 }
 
 type status struct {
@@ -1318,6 +1320,8 @@ func defaultSettings() {
 	globalSettings.Camera_Enabled = false
 	globalSettings.Charts_Enabled = false
 	globalSettings.Cameras = make([]cameraModel, 0)
+	globalSettings.SwitchBoard_Enabled = false
+	globalSettings.Switches = make([]switchModel, 0)
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
 	globalSettings.ES_Enabled = true
@@ -1634,6 +1638,8 @@ func gracefulShutdown() {
 	keypad.ShutdownFunc()
 	// Charts
 	charts.ShutdownFunc()
+	// SwitchBoards
+	switchBoard.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 }
@@ -1791,6 +1797,8 @@ func main() {
 		charts.InitFunc()
 		// EMS Feature
 		ems.InitFunc()
+		// Switchboards
+		switchBoard.InitFunc()
 	}
 	initTraffic(isTraceReplayMode)
 

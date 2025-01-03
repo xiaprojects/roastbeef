@@ -1,1 +1,63 @@
 <div ui-content-for="title">Switchboard</div>
+<div class="panel-group col-sm-6 {{scrollItemCounter==$index?'keypadSelectedYes':'keypadSelectedNo'}}"
+    ng-repeat="item in switches">
+    <div class="panel panel-default ">
+        <div class="panel-heading" ng-click="itemEdit($index,item)" id="{{'item_' + $index}}">
+            <span class="panel_label">{{item.Name}}</span>
+            <span ng-show="item.Edit==false" class="label label-info pull-right">Edit</span>
+            <span ng-show="item.Edit==true" class="label label-danger pull-right">Save</span>
+        </div>
+        <div class="panel-body">
+            <div class="row" ng-show="item.Edit==true">
+                <form name="editForm" novalidate ng-show="item.Edit">
+                    <input class="col-xs-6" type="text" ng-model="item.Name" placeholder="{{'Item '+$index}}" />
+                    <select class="col-xs-6 custom-select" ng-model="item.Type">
+                        <option value="0" ng-selected="item.Type==0">Disabled</option>
+                        <!--
+                        <option value="1" ng-selected="item.Type==1">URL</option>
+                        -->
+                        <option value="2" ng-selected="item.Type==2">Command</option>
+                        <!--
+                        <option value="3" ng-selected="item.Type==3">Internal</option>
+                        <option value="4" ng-selected="item.Type==4">GPIO</option>
+                        -->
+                    </select>
+                    <input class="col-xs-12" type="text" ng-model="item.Uri"
+                        placeholder="Commad line or URL or Command or GPIO" />
+                    <input class="col-xs-12" type="text" ng-model="item.UriStatus"
+                        placeholder="Retrieve execution status Command" />
+                </form>
+            </div>
+            <div class="row" ng-show="item.Edit==false" style="padding: 4px;">
+                <span>Status: </span>
+                <strong>{{item.Status==0?"NEVER STARTED":(item.Status==4?"ERROR":(item.Status==1?"RUNNING":"COMPLETED"))}}</strong>
+            </div>
+            <div class="row" ng-show="item.Status!=0&&item.Edit==false"  style="padding: 4px;">
+                <span>Started on: </span>
+                <strong>{{textByEpoch(item.EpochStart)}}</strong>
+                <span> within </span>
+                <strong>{{(item.EpochFinish-item.EpochStart)}}</strong>
+            </div>
+            <div class="row"  style="padding: 4px;" ng-show="item.Edit==false" >
+                <a ng-click="forkCommandInBackground($index)" class="btn btn-primary btn-block"
+                    ng-show="item.Status!=1">START</a>
+                <a ng-click="itemStart($index,item,0)" class="btn btn-warning btn-block"
+                    ng-show="item.Status==1">RESTART</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div>&nbsp;</div>
+<div class="panel-group col-sm-12 {{scrollItemCounter>=switches.length?'keypadSelectedYes':'keypadSelectedNo'}}"
+    id="item_add">
+    <div class="panel panel-default ">
+        <div class="panel-heading">Switch</div>
+        <div class="panel-body text-center">
+            <div class="panel-group col-sm-12">
+                <a ng-click="itemCreate()" class="btn btn-primary btn-block">Create new Switch</a>
+            </div>
+        </div>
+    </div>
+</div>

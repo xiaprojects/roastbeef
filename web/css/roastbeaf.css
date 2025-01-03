@@ -1,0 +1,13 @@
+/* CSS Required for improved features of RoastBeaf */
+
+html,
+body {
+    /* RoastBeaf - Disable Swipe to go back and forward of the browsers, instead use KeyPad gestures*/
+    overscroll-behavior-x: none;
+}
+
+
+/* RoastBeaf - Make transparent the AHRS */
+.ai .transparent {
+    fill: #00000000
+}

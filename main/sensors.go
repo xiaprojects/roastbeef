@@ -333,6 +333,32 @@ func sensorAttitudeSender() {
 					log.Printf("AHRS Magnetometer Error, not using for this run: %s\n", magError)
 				}
 				m.MValid = false
+			} else {
+					if(m.M1==0 || m.M2 == 0 || m.M3 ==0){
+					} else {
+						mySituation.Magnetometer.X=(m.M1)
+						mySituation.Magnetometer.Y=(m.M2)
+						mySituation.Magnetometer.Z=(m.M3)
+						
+						if(mySituation.Magnetometer.MagMaxX<m.M1){
+							mySituation.Magnetometer.MagMaxX=m.M1
+						}
+						if(mySituation.Magnetometer.MagMaxY<m.M2){
+							mySituation.Magnetometer.MagMaxY=m.M2
+						}
+						if(mySituation.Magnetometer.MagMaxZ<m.M3){
+							mySituation.Magnetometer.MagMaxZ=m.M3
+						}
+						if(mySituation.Magnetometer.MagMinX>m.M1){
+							mySituation.Magnetometer.MagMinX=m.M1
+						}
+						if(mySituation.Magnetometer.MagMinY>m.M2){
+							mySituation.Magnetometer.MagMinY=m.M2
+						}
+						if(mySituation.Magnetometer.MagMinZ>m.M3){
+							mySituation.Magnetometer.MagMinZ=m.M3
+						}
+					}
 			}
 
 			// Make the GPS measurements.
@@ -363,7 +389,7 @@ func sensorAttitudeSender() {
 				}
 
 				//TODO westphae: until magnetometer calibration is performed, no mag heading
-				mySituation.AHRSMagHeading = ahrs.Invalid
+				mySituation.AHRSMagHeading = s.MagHeading()
 				mySituation.AHRSSlipSkid = s.SlipSkid()
 				mySituation.AHRSTurnRate = s.RateOfTurn()
 				mySituation.AHRSGLoad = s.GLoad()
