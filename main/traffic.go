@@ -265,7 +265,7 @@ func isOwnshipTrafficInfo(ti TrafficInfo) (isOwnshipInfo bool, shouldIgnore bool
 			}
 
 			// Check if the distance to the ti is plausible
-			maxDistMetersIgnore := (timeDiff * speed * 0.514444 + float64(mySituation.GPSHorizontalAccuracy) + 50) * 2
+			maxDistMetersIgnore := (timeDiff * speed * 0.514444 + float64(mySituation.GPSHorizontalAccuracy) + 50) * 3
 			if trafficDist > maxDistMetersIgnore {
 				log.Printf("Skipping ownship %s because it's too far away (%fm, speed=%f, max=%f)", ownCode, trafficDist, speed, maxDistMetersIgnore)
 				continue

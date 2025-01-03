@@ -148,8 +148,10 @@ var readyToInitGPS bool //TODO: replace with channel control to terminate gorout
 
 var Satellites map[string]SatelliteInfo
 
-var ognTrackerConfigured = false;
-var gxAirComTrackerConfigured = false;
+
+var trackerDrivers []Tracker = []Tracker { &OgnTracker{}, &GxAirCom{}, &SoftRF{} }
+var detectedTracker Tracker
+
 
 /*
 u-blox5_Referenzmanual.pdf
@@ -233,8 +235,8 @@ func initGPSSerial() bool {
 	// Possible baud rates for this device. We will try to auto detect the correct one
 	baudrates := []int{int(9600)}
 	isSirfIV := bool(false)
-	ognTrackerConfigured = false;
 	globalStatus.GPS_detected_type = 0 // reset detected type on each initialization
+	detectedTracker = nil
 
 	
 	if globalSettings.GpsManualConfig {
@@ -473,6 +475,10 @@ func initGPSSerial() bool {
 	}
 
 	serialPort = p
+
+	for _, tracker := range trackerDrivers {
+		tracker.initNewConnection(serialPort)
+	}
 	return true
 
 }
@@ -615,58 +621,23 @@ func writeUbloxGenericCommands(navrate uint16, p *serial.Port) {
 	logDbg("GPS - applying generic ublox settings (refresh rate: %d)" , navrate)
 }
 
-
-func configureOgnTracker() {
-	if serialPort == nil {
-		return
+func writeTrackerConfigFromSettings() {
+	tracker := detectedTracker
+	if tracker != nil {
+		changed := tracker.writeConfigFromSettings(serialPort)
+		if !changed {
+			return
+		}
+		delay := tracker.writeReadDelay()
+		go func() {
+			time.Sleep(delay)
+			if tracker == detectedTracker {
+				detectedTracker.requestTrackerConfig(serialPort)
+			}
+		}()
 	}
-
-	gpsTimeOffsetPpsMs = 200 * time.Millisecond
-	serialPort.Write([]byte(appendNmeaChecksum("$POGNS,NavRate=5") + "\r\n")) // Also force NavRate directly, just to make sure it's always set
-
-	serialPort.Write([]byte(getOgnTrackerConfigQueryString())) // query current configuration
-
-	// Configuration for OGN Tracker T-Beam is similar to normal Ublox config
-	writeUblox8ConfigCommands(serialPort)
-	writeUbloxGenericCommands(5, serialPort)
-
-
-	globalStatus.GPS_detected_type = GPS_TYPE_OGNTRACKER
 }
 
-func requestGxAirComTrackerConfig() {
-	if serialPort == nil {
-		return
-	}
-	serialPort.Write([]byte(appendNmeaChecksum("$PGXCF,?") + "\r\n")) // Request configuration
-}
-
-func configureGxAirComTracker() {
-	if serialPort == nil {
-		return
-	}
-
-	// $PGXCF,<version>,<Output Serial>,<eMode>,<eOutputVario>,<output Fanet>,<output GPS>,<output FLARM>,<customGPSConfig>,<Aircraft Type (hex)>,<Address Type>,<Address (hex)>,<Pilot Name> 
-	//  0      1         2               3              4              5            6              7                 8                     9              10              11      12
-	requiredSentence := fmt.Sprintf("$PGXCF,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%06X,%s",
-		1,  // PGXCF Version
-		0,  // Serial out
-		0,  // Airmode
-		0,  // Vario disabled // 0=noVario, 1= LK8EX1, 2=LXPW
-		1,  // Fanet
-		1,  // GPS
-		1,  // Flarm
-		1,  // Stratux NMEA
-		globalSettings.GXAcftType,
-		globalSettings.GXAddrType,
-		globalSettings.GXAddr,
-		globalSettings.GXPilot)
-
-	fullSentence := appendNmeaChecksum(requiredSentence)
-	log.Printf("Configuring GxAirCom Tracker with: " + fullSentence)
-	serialPort.Write([]byte(fullSentence + "\r\n")) // Set configuration
-	gxAirComTrackerConfigured = false
-}
 
 // func validateNMEAChecksum determines if a string is a properly formatted NMEA sentence with a valid checksum.
 //
@@ -1367,8 +1338,6 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 					var err error
 					if common.IsRunningAsRoot() {
 						err = exec.Command("date", "-s", setStr).Run()
-					} else {
-						err = exec.Command("sudo", "date", "-s", setStr).Run()
 					}					
 					if err != nil {
 						log.Printf("Set Date failure: %s error\n", err)
@@ -1793,115 +1762,46 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		return true
 	}
 
-	// Only sent by OGN tracker. We use this to detect that OGN tracker is connected and configure it as needed
-	if x[0] == "POGNR" {
-		if !ognTrackerConfigured {
-			ognTrackerConfigured = true
-			go func() {
-				time.Sleep(10 * time.Second)
-				configureOgnTracker()
-			}()
-		}
-
-		return true
-	}
-
-	if x[0] == "POGNS" {
-		// Tracker notified us of restart (crashed?) -> ensure we configure it again
-		if len(x) == 2 && x[1] == "SysStart" {
-			ognTrackerConfigured = false
+	// Handling of all trackers via drivers. Care: serialPort might be nil during baud detection
+	if detectedTracker != nil && serialPort != nil {
+		if detectedTracker.onNmea(serialPort, x) {
 			return true
 		}
-		// OGN tracker sent us its configuration
-		log.Printf("Received OGN Tracker configuration: " + strings.Join(x, ","))
-		oldAddr := globalSettings.OGNAddr
-		for i := 1; i < len(x); i++ {
-			kv := strings.SplitN(x[i], "=", 2);
-			if len(kv) < 2 {
-				continue
-			}
-
-			if kv[0] == "Address" {
-				addr, _ :=  strconv.ParseUint(kv[1], 0, 32)
-				globalSettings.OGNAddr = strings.ToUpper(fmt.Sprintf("%x", addr))
-			} else if kv[0] == "AddrType" {
-				addrtype, _ :=  strconv.ParseInt(kv[1], 0, 8)
-				globalSettings.OGNAddrType = int(addrtype)
-			} else if kv[0] == "AcftType" {
-				acfttype, _ :=  strconv.ParseInt(kv[1], 0, 8)
-				globalSettings.OGNAcftType = int(acfttype)
-			} else if kv[0] == "Pilot" {
-				globalSettings.OGNPilot = kv[1]
-			} else if kv[0] == "Reg" {
-				globalSettings.OGNReg = kv[1]
-			} else if kv[0] == "TxPower" {
-				pwr, _ := strconv.ParseInt(kv[1], 10, 16)
-				globalSettings.OGNTxPower = int(pwr)
+	} else if serialPort != nil {
+		handled := false
+		for _, tracker := range trackerDrivers {
+			handled = tracker.onNmea(serialPort, x) || handled
+			if tracker.isDetected() {
+				// First detected tracker. Write transient config and read back
+				detectedTracker = tracker
+				globalStatus.GPS_detected_type = tracker.getGpsHardwareType()
+				gpsTimeOffsetPpsMs = tracker.gpsTimeOffsetPps()
+				tracker.requestTrackerConfig(serialPort)
+				timelimit := stratuxClock.Time.Add(5 * time.Second)
+				go func() {
+					for stratuxClock.Time.Before(timelimit) && serialPort != nil && detectedTracker == tracker {
+						if tracker.isConfigRead() {
+							tracker.writeInitialConfig(serialPort)
+							break
+						}
+						time.Sleep(20 * time.Millisecond)
+					}
+				}()
+				break
 			}
 		}
-		// OGN Tracker can change its address arbitrarily. However, if it does,
-		// ownship detection would fail for the old target. Therefore we remove the old one from the traffic list
-		if oldAddr != globalSettings.OGNAddr && globalSettings.OGNAddrType == 0 {
-			globalStatus.OGNPrevRandomAddr = oldAddr
-			oldAddrInt, _ := strconv.ParseUint(oldAddr, 16, 32)
-			removeTarget(uint32(oldAddrInt))
-			// potentially other address type before
-			removeTarget(uint32((1 << 24) | oldAddrInt))
+
+		if handled {
+			return true
 		}
 	}
 
-    // Only sent by GxAirCOm tracker. We use this to detect that GxAirCom tracker is connected and configure it as needed
-    if x[0] == "PFLAV" && x[4] == "GXAircom" {
-        if !gxAirComTrackerConfigured {
-			gpsTimeOffsetPpsMs = 130 * time.Millisecond
-			globalStatus.GPS_detected_type = GPS_TYPE_GXAIRCOM
-			gxAirComTrackerConfigured = true
-            go func() {
-                requestGxAirComTrackerConfig()
-			}()
-        }
 
-        return true
-    }
-
-    if x[0] == "PGXCF" && x[1] == "1" {
-		// $PGXCF,<version>,<Output Serial>,<eMode>,<eOutputVario>,<output Fanet>,<output GPS>,<output FLARM>,<customGPSConfig>,<Aircraft Type (hex)>,<Address Type>,<Address (hex)>,<Pilot Name> 
-		//  0      1         2               3       4              5            6              7                 8                     9              10              11             12
-		log.Printf("Received GxAirCom Tracker configuration: " + strings.Join(x, ","))
-
-		GXAcftType,_ := strconv.ParseInt(x[9], 16, 0)
-		if (globalSettings.GXAcftType==0) {
-			globalSettings.GXAcftType = int(GXAcftType)
-		}
-
-		GXAddrType,_ := strconv.Atoi(x[10]) 
-		if (globalSettings.GXAddrType==0) {
-			globalSettings.GXAddrType = GXAddrType
-		}
-
-		GXAddr,_ := strconv.ParseInt(x[11], 16, 0)
-		if (globalSettings.GXAddr==0) {
-			globalSettings.GXAddr = int(GXAddr)
-		}
-
-		if (globalSettings.GXPilot=="") {
-			globalSettings.GXPilot = x[12]
-		}
-
-        if (x[2] != "0" || x[5] == "0" || x[6] == "0" || x[7] == "0" || x[8] == "0" || 
-			int(GXAcftType) != globalSettings.GXAcftType || int(GXAddrType) != globalSettings.GXAddrType || int(GXAddr) != globalSettings.GXAddr) {
-			configureGxAirComTracker()
-        } else {
-			log.Printf("GxAirCom tracker configuration ok!")
-		}
-
-        return true
-    }
 
 	// Only evaluate PGRMZ for SoftRF/Flarm, where we know that it is standard barometric pressure.
 	// might want to add more types if applicable.
 	// $PGRMZ,1089,f,3*2B
-	if x[0] == "PGRMZ" && ((globalStatus.GPS_detected_type & 0x0f) ==  GPS_TYPE_SERIAL || (globalStatus.GPS_detected_type & 0x0f) == GPS_TYPE_SOFTRF_DONGLE) {
+	if x[0] == "PGRMZ" && ((globalStatus.GPS_detected_type & 0x0f) ==  GPS_TYPE_SERIAL || (globalStatus.GPS_detected_type & 0x0f) == GPS_TYPE_SOFTRF_DONGLE || (globalStatus.GPS_detected_type & 0x0f) == GPS_TYPE_SOFTRF) {
 		if len(x) < 3 {
 			return false
 		}
@@ -1935,28 +1835,6 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 	return false
 }
 
-func getOgnTrackerConfigString() string {
-	msg := fmt.Sprintf("$POGNS,Address=0x%s,AddrType=%d,AcftType=%d,Pilot=%s,Reg=%s,TxPower=%d,Hard=STX,Soft=%s",
-		globalSettings.OGNAddr, globalSettings.OGNAddrType, globalSettings.OGNAcftType, globalSettings.OGNPilot, globalSettings.OGNReg, globalSettings.OGNTxPower, stratuxVersion[1:])
-	msg = appendNmeaChecksum(msg)
-	return msg + "\r\n"
-}
-
-func getOgnTrackerConfigQueryString() string {
-	return appendNmeaChecksum("$POGNS") + "\r\n"
-}
-
-func configureOgnTrackerFromSettings() {
-	if serialPort == nil {
-		return
-	}
-
-	cfg := getOgnTrackerConfigString()
-	log.Printf("Configuring OGN Tracker: " + cfg)
-
-	serialPort.Write([]byte(getOgnTrackerConfigString()))
-	serialPort.Write([]byte(getOgnTrackerConfigQueryString())) // re-read settings from tracker
-}
 
 var gnssBaroAltDiffs = make(map [int]int)
 // Little helper function to dump the gnssBaroAltDiffs map to CSV for plotting

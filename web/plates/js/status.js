@@ -120,6 +120,9 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 				case 12:
 					tempGpsHardwareString = "Network";
 					break;
+				case 13:
+					tempGpsHardwareString = "SoftRF";
+					break;
 				case 15:
 					tempGpsHardwareString = "GxAirCom";
 					break;
