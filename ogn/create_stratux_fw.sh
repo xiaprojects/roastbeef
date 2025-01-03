@@ -11,7 +11,6 @@ fi
 cd "$(dirname "$0")"
 STRATUX_OGN_DIR="$(pwd)"
 
-curl https://raw.githubusercontent.com/pjalocha/esp32-ogn-tracker/master/esptool.py > esptool.py
 
 cd ogn-tracker
 
@@ -42,8 +41,7 @@ function append_defaultconfig {
 function package {
     fname=$1
     cd .pio/build/$fname
-    cp $STRATUX_OGN_DIR/esptool.py .
-    zip $fname.zip bootloader.bin firmware.bin partitions.bin esptool.py
+    zip $fname.zip bootloader.bin firmware.bin partitions.bin
     mv $fname.zip $STRATUX_OGN_DIR/
     cd -
 }
