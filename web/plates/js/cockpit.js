@@ -24,16 +24,15 @@
     - Add Themes: round, square, more digital
 */
 angular.module('appControllers').controller('CockpitCtrl', CockpitCtrl); // get the main module controllers set
-CockpitCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
+CockpitCtrl.$inject = ['$rootScope', '$scope', '$state', '$http']; // Inject my dependencies
 
 
 // TODO: Move into a service to store the user changes
 var URL_COCKPIT_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/cockpit/setup.json";
 
 // create our controller function with all necessary logic
-function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
+function CockpitCtrl($rootScope, $scope, $state, $http) {
     $scope.$parent.helppage = 'plates/cockpit-help.html';
-    $scope.data_list = [];
     $scope.noSleep = new NoSleep();
     $scope.mapping = {};
     $scope.widgetsSettings = [];
@@ -47,7 +46,14 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
 
         $scope.noSleep.disable();
         delete $scope.noSleep;
-
+        if (($scope.socketEMS !== undefined) && ($scope.socketEMS !== null)) {
+            $scope.socketEMS.close();
+            $scope.socketEMS = null;
+        }
+        if (($scope.socketTraffic !== undefined) && ($scope.socketTraffic !== null)) {
+            $scope.socketTraffic.close();
+            $scope.socketTraffic = null;
+        }
         if (($scope.socket !== undefined) && ($scope.socket !== null)) {
             $scope.socket.close();
             $scope.socket = null;
@@ -57,29 +63,6 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.zoom = function (index) {
         let widgetClasses = ["col-xs-4", "col-xs-6", "col-xs-12", "col-xs-3", "col-xs-4"];
         $scope.widgetsSettings[index].class = widgetClasses[1 + widgetClasses.indexOf($scope.widgetsSettings[index].class)];
-
-        // TODO: automate this process, it is not so good to probe which kind of widget is.
-        let instrument = document.getElementById($scope.widgetsSettings[index].divName).querySelector('div.instrument')
-        if (instrument) {
-            switch ($scope.widgetsSettings[index].class) {
-                case "col-xs-3":
-                    instrument.style.height = `24vw`
-                    instrument.style.width = `24vw`
-                    break;
-                case "col-xs-4":
-                    instrument.style.height = `33vw`
-                    instrument.style.width = `33vw`
-                    break;
-                case "col-xs-6":
-                    instrument.style.height = `49vw`
-                    instrument.style.width = `49vw`
-                    break;
-                case "col-xs-12":
-                    instrument.style.height = `90vw`
-                    instrument.style.width = `90vw`
-                    break;
-            }
-        }
     }
 
     $scope.reloadDiv = function (index) {
@@ -95,7 +78,8 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                     //currentItem["render"] = new GMeterRenderer(currentItem.divName, -2, +4, null);
                     break;
                 case "Radar":
-                    //currentItem["render"] = new RadarRenderer(currentItem.divName, $scope, $http);
+                    currentItem["render"] = new RadarRenderer(currentItem.divName,$scope,$http, currentItem);
+                    radar = currentItem["render"];
                     break;
                 case "HSI":
                     currentItem["render"] = new HSICircleRenderer(currentItem.divName, currentItem);
@@ -132,18 +116,23 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                 break;
 
                 case "SixPackAttitude":
+                    SVG(currentItem.divName).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
                     currentItem["render"] = new SixPackAttitude(currentItem.divName, currentItem);
                 break;
                 case "SixPackAltimeter":
+                    SVG(currentItem.divName).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
                     currentItem["render"] = new SixPackAltimeter(currentItem.divName, currentItem);
                 break;
                 case "SixPackTurnIndicator":
+                    SVG(currentItem.divName).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
                     currentItem["render"] = new SixPackTurnIndicator(currentItem.divName, currentItem);
                 break;
                 case "SixPackVariometer":
+                    SVG(currentItem.divName).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
                     currentItem["render"] = new SixPackVariometer(currentItem.divName, currentItem);
                 break;
                 case "SixPackHeading":
+                    SVG(currentItem.divName).viewbox(-200, -200, 400, 400).group().addClass('CockpitWhite');
                     currentItem["render"] = new SixPackHeading(currentItem.divName, currentItem);
                 break;
                   default:
@@ -175,11 +164,15 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
         });
     }
 
+    $scope.situation = { "GPSLastFixSinceMidnightUTC": 32304.2, "GPSLatitude": 43.0, "GPSLongitude": 12.0, "GPSFixQuality": 1, "GPSHeightAboveEllipsoid": 1057.4148, "GPSGeoidSep": 145.34122, "GPSSatellites": 8, "GPSSatellitesTracked": 12, "GPSSatellitesSeen": 10, "GPSHorizontalAccuracy": 5.4, "GPSNACp": 10, "GPSAltitudeMSL": 912.07355, "GPSVerticalAccuracy": 10.700001, "GPSVerticalSpeed": 0, "GPSLastFixLocalTime": "0001-01-01T00:49:25.51Z", "GPSTrueCourse": 48.3, "GPSTurnRate": 0, "GPSGroundSpeed": 0, "GPSLastGroundTrackTime": "0001-01-01T00:49:25.51Z", "GPSTime": "2023-12-31T08:58:24.3Z", "GPSLastGPSTimeStratuxTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessageTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessage": "$GPGGA,085824.20,4311.12143,N,01208.18939,E,1,08,1.08,278.0,M,44.3,M,,*51", "GPSPositionSampleRate": 9.99973784244331, "BaroTemperature": 29.04, "BaroPressureAltitude": 776.60333, "BaroVerticalSpeed": -1.2355082, "BaroLastMeasurementTime": "0001-01-01T00:49:25.52Z", "BaroSourceType": 1, "AHRSPitch": -56.752181757536206, "AHRSRoll": -77.98562991928083, "AHRSGyroHeading": 3276.7, "AHRSMagHeading": 332.9175199350767, "AHRSSlipSkid": 78.88479760867865, "AHRSTurnRate": 3276.7, "AHRSGLoad": 0.10920454632244811, "AHRSGLoadMin": 0.10626655052683534, "AHRSGLoadMax": 0.1099768285851461, "AHRSLastAttitudeTime": "0001-01-01T00:49:25.51Z", "AHRSStatus": 7 };
+
 
     /*****************************************************
      * Situation Update
      */
     function connect($scope) {
+        if($state.current.controller!='CockpitCtrl')return;
+
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
 
@@ -214,8 +207,53 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
                 socket.close();
                 return;
             }
-            $scope.loadSituationInCockpit(angular.fromJson(msg.data));
-            $scope.$apply(); // trigger any needed refreshing of data
+            const situation = angular.fromJson(msg.data);
+            // Filter to avoid blow up CPU
+            const oldSituation = $scope.situation;
+            const newSituation = situation;
+            const ahrsThreshold = 2;
+            const altitudeThreshold = 50 / 3.2808;
+            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+            if (requireRefresh == true) {
+                $scope.situation = situation;
+                $scope.loadSituationInCockpit(situation);
+                $scope.$apply(); // trigger any needed refreshing of data
+            }
+            else
+            {
+                return;
+            }
+        };
+    }
+
+    function connectTraffic($scope) {
+        if (($scope === undefined) || ($scope === null))
+            return; // we are getting called once after clicking away from the gps page
+
+        if (($scope.socketTraffic === undefined) || ($scope.socketTraffic === null)) {
+            socketTraffic = new WebSocket(URL_TRAFFIC_WS);
+            $scope.socketTraffic = socketTraffic; // store socket in scope for enter/exit usage
+        }
+        socketTraffic.onopen = function (msg) {
+        };
+
+        socketTraffic.onclose = function (msg) {
+            $scope.$apply();
+            delete $scope.socketTraffic;
+            setTimeout(function () { connectTraffic($scope); }, 1000);
+        };
+
+        socketTraffic.onerror = function (msg) {
+            $scope.$apply();
+        };
+
+        socketTraffic.onmessage = function (msg) {
+            if (($scope === undefined) || ($scope === null)) {
+                socketTraffic.close();
+                return;
+            }
+            // $scope.loadTraffics(angular.fromJson(msg.data)); // Traffic is an optional feature not pushed today
+            //$scope.$apply(); // trigger any needed refreshing of data
         };
     }
 
@@ -223,6 +261,8 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
      * EMS Update
      */
     function connectEMS($scope) {
+        if($state.current.controller!='CockpitCtrl')return;
+
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
 
@@ -263,8 +303,53 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
             situation.QNH = 1013 + c;
         }
         else {
-            situation.QNH;
+            situation.QNH = 1013;
         }
+
+
+
+        // $scope.myRadarOwnSituation(situation); Traffic is an optional not pushed today
+        // if (radar) radar.update();
+       
+
+
+        // Magnetometer Calibration
+        /*
+        if (situation.hasOwnProperty("Magnetometer")) {
+
+            avgX = (situation.Magnetometer.MagMaxX+situation.Magnetometer.MagMinX)/2;
+            avgY = (situation.Magnetometer.MagMaxY+situation.Magnetometer.MagMinY)/2;
+            avgZ = (situation.Magnetometer.MagMaxZ+situation.Magnetometer.MagMinZ)/2;
+            diffX = situation.Magnetometer.MagMaxX-situation.Magnetometer.MagMinX/2;
+            diffY = situation.Magnetometer.MagMaxY-situation.Magnetometer.MagMinY/2;
+            diffZ = situation.Magnetometer.MagMaxZ-situation.Magnetometer.MagMinZ/2;
+            MX = (situation.Magnetometer.X-avgX)/diffX;
+            MY = (situation.Magnetometer.Y-avgY)/diffY;
+            MZ = (situation.Magnetometer.Z-avgZ)/diffZ;
+
+
+
+            situation.Compass = Math.atan2(MX, MY) * (180 / Math.PI);
+            situation.MagnetometerPercentageX = MX * 180;
+            situation.MagnetometerPercentageY = MY * 180;
+            situation.MagnetometerPercentageZ = MZ * 180;
+
+            
+            console.log(
+                MX.toFixed(2)
+                +","+
+                MY.toFixed(2)
+                +","+
+                MZ.toFixed(2)
+                );
+
+        }
+        else {
+            situation.MagnetometerPercentageX = 0;
+            situation.MagnetometerPercentageY = 0;
+            situation.MagnetometerPercentageZ = 0;
+        }
+        */
 
 
         Object.keys($scope.mapping).forEach(element => {
@@ -339,6 +424,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.InitFunc();
     connect($scope);
     connectEMS($scope);
+    connectTraffic($scope);
     // Bridge from servicekeypad
     addEventListener("keypad", keypadEventListener);
 }

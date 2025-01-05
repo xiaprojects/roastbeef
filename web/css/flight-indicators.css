@@ -1,9 +1,7 @@
 .instrument {
-    width: 33vw;
-    height: 33vw;
-    padding: 0;
-    margin-left: -8px;
     position: relative;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
 }
 

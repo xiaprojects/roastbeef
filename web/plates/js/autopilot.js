@@ -752,6 +752,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
      * Situation Update
      */
     function connect($scope) {
+        if($state.current.controller!='AutopilotCtrl')return;
+
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
 
@@ -787,8 +789,24 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
                 socket.close();
                 return;
             }
-            loadSituationInAutopilot(msg.data);
-            $scope.$apply(); // trigger any needed refreshing of data
+            var situation = angular.fromJson(msg.data);
+            // Filter to avoid blow up CPU
+            const oldSituation = $scope.situation;
+            const newSituation = situation;
+            const ahrsThreshold = 2;
+            const altitudeThreshold = 50 / 3.2808;
+            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+            if (requireRefresh == true) {
+                $scope.situation = situation;
+                loadSituationInAutopilot(situation);
+                $scope.$apply(); // trigger any needed refreshing of data
+            }
+            else
+            {
+                return;
+            }
+    
+
         };
     }
 
@@ -806,9 +824,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     /*****************************************************
     * AHRS and GPS Helper
     */
-    function loadSituationInAutopilot(data) { // mySituation
-        var situation = angular.fromJson(data);
-
+    function loadSituationInAutopilot(situation) { // mySituation
 
         $scope.gps_time = Date.parse(situation.GPSLastGPSTimeStratuxTime);
         $scope.ahrs_time = Date.parse(situation.AHRSLastAttitudeTime);
@@ -886,8 +902,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.ahrs_turn_rate = "--";
         }
 
-        $scope.situation = situation;
 
+        
         $scope.tickForRouting();
         $scope.hsi.update(
             $scope.situation.GPSTrueCourse,

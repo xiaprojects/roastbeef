@@ -20,6 +20,8 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.noSleep = new NoSleep();
 
     function connect($scope) {
+        if($state.current.controller!='EMSCtrl')return;
+
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
 

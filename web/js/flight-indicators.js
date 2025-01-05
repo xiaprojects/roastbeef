@@ -82,12 +82,13 @@ class FlightIndicators {
     }
 
     updateHeading(heading) {
-        let meter = this.placeholder.querySelector('div.instrument.heading div.heading')
+        //let meter = this.placeholder.querySelector('div.instrument.heading div.heading')
+        let meter = this.placeholder.querySelector('div.heading')
         meter.style.transform = `rotate(${-heading}deg)`
     }
 
     updateRoll(roll) {
-        let meter = this.placeholder.querySelector('div.instrument.attitude div.roll')
+        let meter = this.placeholder.querySelector('div.roll')
         meter.style.transform = `rotate(${roll}deg)`
     }
 
@@ -99,14 +100,14 @@ class FlightIndicators {
             pitch = -FlightIndicators.CONSTANTS.pitch_bound;
         }
 
-        let meter = this.placeholder.querySelector('div.instrument.attitude div.roll div.pitch')
+        let meter = this.placeholder.querySelector('div.pitch')
         meter.style.top = `${pitch * 0.7}%`
     }
 
     updateCoordinator(turn,slipskid) {
-        let meter = this.placeholder.querySelector('div.instrument.turn-coordinator div.turn')
+        let meter = this.placeholder.querySelector('div.turn')
         meter.style.transform = `rotate(${turn}deg)`
-        let ball = this.placeholder.querySelector('div.instrument.turn-coordinator div.ball')
+        let ball = this.placeholder.querySelector('div.ball')
         if(slipskid>5)slipskid=5
         if(slipskid<-5)slipskid=-5;
         slipskid=slipskid/2;
@@ -121,7 +122,7 @@ class FlightIndicators {
         }
         vSpeed = vSpeed * 90;
 
-        let meter = this.placeholder.querySelector('div.instrument.vertical-speed div.vertical-speed')
+        let meter = this.placeholder.querySelector('div.vertical-speed')
         meter.style.transform = `rotate(${vSpeed}deg)`
     }
 
@@ -133,7 +134,7 @@ class FlightIndicators {
         }
         speed = 90 + speed * 2;
 
-        let meter = this.placeholder.querySelector('div.instrument.airspeed div.speed')
+        let meter = this.placeholder.querySelector('div.speed')
         meter.style.transform = `rotate(${speed}deg)`
     }
 
@@ -141,17 +142,17 @@ class FlightIndicators {
         let needle = 90 + altitude % 1e3 * 360 / 1e3;
         let needleSmall = altitude / 1e4 * 360;
 
-        let meter = this.placeholder.querySelector('div.instrument.altimeter div.needle')
+        let meter = this.placeholder.querySelector('div.needle')
         meter.style.transform = `rotate(${needle}deg)`
 
-        let smallMeter = this.placeholder.querySelector('div.instrument.altimeter div.small-needle')
+        let smallMeter = this.placeholder.querySelector('div.small-needle')
         smallMeter.style.transform = `rotate(${needleSmall}deg)`
     }
 
     updatePressure(pressure) {
         pressure = 2 * pressure - 1980;
 
-        let meter = this.placeholder.querySelector('div.instrument.altimeter div.pressure')
+        let meter = this.placeholder.querySelector('div.pressure')
         meter.style.transform = `rotate(${pressure}deg)`
     }
 
@@ -235,7 +236,7 @@ class FlightIndicators {
 
     createDivIndicator(className) {
         const instrument = document.createElement('div')
-        instrument.setAttribute('class', `instrument ${className}`)
+        instrument.classList.add(`instrument`,`${className}`)
 
         return instrument
     }
@@ -249,7 +250,7 @@ class FlightIndicators {
 
     createDivBox(name, imgDirectory, imgName) {
         const div = document.createElement('div')
-        div.setAttribute('class', `${name} box`)
+        div.classList.add(`${name}`,`box`)
 
         const img = this.createImgBox(imgDirectory, imgName)
         div.appendChild(img)
@@ -259,7 +260,7 @@ class FlightIndicators {
 
     createImgBox(imgDirectory, imgSrc) {
         const img = document.createElement('img')
-        img.setAttribute('class', 'box')
+        img.classList.add('box')
         img.src = `${imgDirectory}/${imgSrc}`
 
         return img
@@ -293,7 +294,10 @@ class FlightIndicators {
     createHeadingIndicator(imgDirectory) {
         const name = 'heading'
 
-        const instrument = this.createDivIndicator(name)
+        //const instrument = this.createDivIndicator(name)
+        const instrument = this.placeholder;
+        instrument.classList.add(`instrument`,`${name}`)
+
         //const fiBox = this.createFiBoxImage(imgDirectory)
 
         const heading = this.createDivBox('heading', imgDirectory, 'heading_yaw.svg')
@@ -305,7 +309,7 @@ class FlightIndicators {
         instrument.appendChild(heading)
         instrument.appendChild(mechanics)
 
-        this.placeholder.appendChild(instrument)
+        //this.placeholder.appendChild(instrument)
 
         this.updateHeading(this.settings.heading)
 
@@ -315,7 +319,9 @@ class FlightIndicators {
     createAltimeterIndicator(imgDirectory) {
         const name = 'altimeter'
 
-        const instrument = this.createDivIndicator(name)
+        //const instrument = this.createDivIndicator(name)
+        const instrument = this.placeholder;
+        instrument.classList.add(`instrument`,`${name}`)
 
         //const fiBox = this.createFiBoxImage(imgDirectory)
 
@@ -336,7 +342,7 @@ class FlightIndicators {
         instrument.appendChild(needle)
         instrument.appendChild(mechanics)
 
-        this.placeholder.appendChild(instrument)
+        //this.placeholder.appendChild(instrument)
 
         this.updateAltitude(this.settings.altitude);
         this.updatePressure(this.settings.pressure);
@@ -347,7 +353,9 @@ class FlightIndicators {
     createAirspeedIndicator(imgDirectory) {
         const name = 'airspeed'
 
-        const instrument = this.createDivIndicator(name)
+        //const instrument = this.createDivIndicator(name)
+        const instrument = this.placeholder;
+        instrument.classList.add(`instrument`,`${name}`)
 
         //const fiBox = this.createFiBoxImage(imgDirectory)
 
@@ -362,7 +370,7 @@ class FlightIndicators {
         instrument.appendChild(speed)
         instrument.appendChild(mechanics)
 
-        this.placeholder.appendChild(instrument)
+        //this.placeholder.appendChild(instrument)
 
         this.updateAirSpeed(this.settings.airspeed);
 
@@ -372,7 +380,10 @@ class FlightIndicators {
     createAttitudeIndicator(imgDirectory) {
         const name = 'attitude'
 
-        const instrument = this.createDivIndicator(name)
+        //const instrument = this.createDivIndicator(name)
+        const instrument = this.placeholder;
+        instrument.classList.add(`instrument`,`${name}`)
+
 
         //const fiBox = this.createFiBoxImage(imgDirectory)
 
@@ -385,7 +396,7 @@ class FlightIndicators {
         instrument.appendChild(roll)
         instrument.appendChild(mechanics)
 
-        this.placeholder.appendChild(instrument)
+        //this.placeholder.appendChild(instrument)
 
         this.updateRoll(this.settings.roll);
         this.updatePitch(this.settings.pitch);
@@ -396,7 +407,9 @@ class FlightIndicators {
     createCoordinatorIndicator(imgDirectory) {
         const name = 'turn-coordinator'
 
-        const instrument = this.createDivIndicator(name)
+        //const instrument = this.createDivIndicator(name)
+        const instrument = this.placeholder;
+        instrument.classList.add(`instrument`,`${name}`)
 
         //const fiBox = this.createFiBoxImage(imgDirectory)
 
@@ -413,7 +426,7 @@ class FlightIndicators {
         instrument.appendChild(turn)
         instrument.appendChild(mechanics)
 
-        this.placeholder.appendChild(instrument)
+        //this.placeholder.appendChild(instrument)
 
         this.updateCoordinator(this.settings.turn,0);
 
@@ -423,7 +436,9 @@ class FlightIndicators {
     createVerticalSpeedIndicator(imgDirectory) {
         const name = 'vertical-speed'
 
-        const instrument = this.createDivIndicator(name)
+        //const instrument = this.createDivIndicator(name)
+        const instrument = this.placeholder;
+        instrument.classList.add(`instrument`,`${name}`)
 
         //const fiBox = this.createFiBoxImage(imgDirectory)
 
@@ -438,7 +453,7 @@ class FlightIndicators {
         instrument.appendChild(speed)
         instrument.appendChild(mechanics)
 
-        this.placeholder.appendChild(instrument)
+        //this.placeholder.appendChild(instrument)
 
         this.updateVerticalSpeed(this.settings.verticalSpeed);
 
