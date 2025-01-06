@@ -191,11 +191,13 @@ function KeypadService($scope, settings) {
     // Current Rotary Navigation Pattern: Left Side Menu
     var keypadSettingsNavigation = {
         "#/": {
+            "SwipeRight": "#/cockpit",
             "ArrowRight": "#/cockpit",
             "ArrowDown": "#/cockpit",
             "3": "#/cockpit",
             "to": "#/cockpit",
             "from": "#/",
+            "SwipeLeft": "#/",
             "ArrowLeft": "#/",
             "ArrowUp": "#/",
             "1": "#/",
@@ -204,11 +206,13 @@ function KeypadService($scope, settings) {
         },
         "#/cockpit": {
             "disableRotary": true,
+            "SwipeRight": "#/synthview",
             "ArrowRight": "#/synthview",
             "ArrowDown": "#/synthview",
             "3": "#/synthview",
             "to": "#/synthview",
             "from": "#/",
+            "SwipeLeft": "#/",
             "ArrowLeft": "#/",
             "ArrowUp": "#/",
             "1": "#/",
@@ -231,11 +235,13 @@ function KeypadService($scope, settings) {
 
         "#/radio": {
             "disableRotary": true,
+            "SwipeRight": "#/traffic",
             "ArrowRight": "#/traffic",
             "ArrowDown": "#/traffic",
             "3": "#/traffic",
             "to": "#/traffic",
             "from": "#/cockpit",
+            "SwipeLeft": "#/cockpit",
             "ArrowLeft": "#/cockpit",
             "ArrowUp": "#/cockpit",
             "1": "#/cockpit",
@@ -243,11 +249,13 @@ function KeypadService($scope, settings) {
             "title": "Radio"
         },        
         "#/traffic": {
+            "SwipeRight": "#/gps",
             "ArrowRight": "#/gps",
             "ArrowDown": "#/gps",
             "3": "#/gps",
             "to": "#/gps",
             "from": "#/radio",
+            "SwipeLeft": "#/radio",
             "ArrowLeft": "#/radio",
             "ArrowUp": "#/radio",
             "1": "#/radio",
@@ -255,11 +263,13 @@ function KeypadService($scope, settings) {
             "title": "Traffic"
         },
         "#/gps": {
+            "SwipeRight": "#/autopilot",
             "ArrowRight": "#/autopilot",
             "ArrowDown": "#/autopilot",
             "3": "#/autopilot",
             "to": "#/autopilot",
             "from": "#/traffic",
+            "SwipeLeft": "#/traffic",
             "ArrowLeft": "#/traffic",
             "ArrowUp": "#/traffic",
             "1": "#/traffic",
@@ -268,11 +278,13 @@ function KeypadService($scope, settings) {
         },
         "#/autopilot": {
             "disableRotary": true,
+            "SwipeRight": "#/camera",
             "ArrowRight": "#/camera",
             "ArrowDown": "#/camera",
             "3": "#/camera",
             "to": "#/camera",
             "from": "#/gps",
+            "SwipeLeft": "#/gps",
             "ArrowLeft": "#/gps",
             "ArrowUp": "#/gps",
             "1": "#/gps",
@@ -505,6 +517,12 @@ function KeypadService($scope, settings) {
             if (keypadSettingsNavigation.hasOwnProperty(document.location.hash)) {
                 if (keypadSettingsNavigation[document.location.hash].hasOwnProperty(event.key)) {
                     if (keypadSettingsNavigation[document.location.hash][event.key].length > 0) {
+                        if ((event.key == "SwipeRight" || event.key == "SwipeLeft")) {
+                            var nextLocation = keypadSettingsNavigation[document.location.hash][event.key];
+                            console.log("Swipe direct to:"+nextLocation);
+                            document.location = nextLocation;
+                            return;
+                        }
                         if (keypadSettingsNavigation[document.location.hash].hasOwnProperty("disableRotary") == false || event.key == "to" || event.key == "from" || $scope.keypadKnobTimerRemovePopup !== undefined) {
                             $scope.keypadShowRotary(event.key);
                             $scope.$apply();

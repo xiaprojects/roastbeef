@@ -411,6 +411,10 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
                     }
                 }
                 break;
+            default:
+                // Event not managed, ex. Swipes and other keypad.
+                return;
+                break;
         }
 
         if ($scope.scrollItemCounter >= 0 && $scope.scrollItemCounter < $scope.widgetsSettings.length) {

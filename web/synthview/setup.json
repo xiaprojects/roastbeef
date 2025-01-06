@@ -1,0 +1,49 @@
+{
+    "cellSize": 100,
+    "terrainBaseColor": null,
+    "terrainColorRed": {
+        "r": 1.0,
+        "g": 0,
+        "b": 0
+    },
+    "terrainColorYellow": {
+        "r": 1.0,
+        "g": 0,
+        "b": 0
+    },
+    "terrainColorGreen": {
+        "r": 0,
+        "g": 1.0,
+        "b": 0
+    },
+    "terrainColorSea": {
+        "r": 0,
+        "g": 0,
+        "b": 1.0
+    },
+    "skyColor": {
+        "r": 0.52,
+        "g": 0.8,
+        "b": 0.91
+    },
+    "elevation": 1000,
+    "items": [
+        {
+            "reference": null,
+            "referenceTubeFront": null,
+            "referenceTubeVertical": null,
+            "projectionSize": 1000,
+            "roll": 10,
+            "pitch": -10,
+            "direction": 45,
+            "elevation": 1000,
+            "directionModel": 0,
+            "template": "RV4",
+            "name": "ME",
+            "color": 986895,
+            "scale": 2,
+            "x": 1000,
+            "y": 500
+        }
+    ]
+}

@@ -641,7 +641,9 @@ function AudioSinusoidPlayer() {
 }
 
 // Shared instance that can be used across screens
+if(window.gMeterBuzzerPlayer === undefined || window.gMeterBuzzerPlayer === null){
 window.gMeterBuzzerPlayer = new AudioSinusoidPlayer();
+}
 
 AudioSinusoidPlayer.prototype = {
     constructor: AudioSinusoidPlayer

@@ -167,6 +167,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'TimersCtrl',
 			reloadOnSearch: false
 		})
+		.state('synthview', {
+			url: '/synthview',
+			templateUrl: 'plates/synthview.html',
+			controller: 'SynthViewCtrl',
+			reloadOnSearch: false
+		})
         .state('developer', {
 			url: '/developer',
 			templateUrl: 'plates/developer.html',
@@ -229,6 +235,18 @@ app.controller('MainCtrl', function ($scope, $http) {
     }, function(response) {
         //Second function handles error
     });	
+
+	/**
+	 * 2025 - Integrated display touch screen navigation swipes: switch from Side Left-Right panels to section navigation 
+	 */
+	$scope.swipeLeft = function() {
+		const proxy = new KeyboardEvent("keypad", { key: "SwipeLeft"});
+		dispatchEvent(proxy);
+    };
+    $scope.swipeRight = function() {
+		const proxy = new KeyboardEvent("keypad", { key: "SwipeRight"});
+		dispatchEvent(proxy);
+    };
 
     $scope.updateTheme = function(darkMode) {
         if(darkMode != $scope.DarkMode) {

@@ -1,4 +1,4 @@
-function AHRSRenderer(locationId) {
+function AHRSRenderer(locationId,minimal=false,skyColorName='sky',terrainColor='earth',pointerColor='pointer',pointerBGColor='pointerBG') {
     this.width = -1;
     this.height = -1;
 
@@ -30,10 +30,10 @@ function AHRSRenderer(locationId) {
     // card is the earth+sky+pitch marks, moves with both pitch and roll.
     this.pitchScale = 0.5;
     this.card = this.ai.group();
-    this.card.circle(2400).cx(0).cy(0).addClass('sky'); // Sky
+    this.card.circle(2400).cx(0).cy(0).addClass(skyColorName); // Sky
     this.card.line(-1200, 0, 1200, 0).addClass('marks'); // Horizon line
-    this.card.circle(2400).cx(0).cy(0).addClass('earth').clipWith(earthClip); // Earth
-
+    this.card.circle(2400).cx(0).cy(0).addClass(terrainColor).clipWith(earthClip); // Earth
+    if(minimal==false){
     var pitchMarks = this.card.group().addClass('marks').clipWith(this.pitchClip);
     var y;
     for (var i = -1050; i <= 1050; i += 50) {
@@ -48,7 +48,7 @@ function AHRSRenderer(locationId) {
             pitchMarks.line(-15, y, 15, y);
         }
     }
-
+    }
     this.rollMarks = this.ai.group().addClass('marks').clipWith(this.rollClip);
     for (i = -180; i < 180; i += 10) {
         if (i === 0) {
@@ -66,10 +66,10 @@ function AHRSRenderer(locationId) {
     rollPointer.polygon('-10,+160 0,+174 10,+160').style('stroke-width', 0);
     this.skidBar = this.ai.rect(20, 6).cx(0).y(-158).style('stroke-width', 0).addClass('marks');
 
-    var pointer = this.ai.group().addClass('pointer');
+    var pointer = this.ai.group().addClass(pointerColor);
     pointer.polygon('-150,-3 -78,-3 -75,0 -78,3 -150,3');
     pointer.polygon('+150,-3 +78,-3 +75,0 +78,3 +150,3');
-    pointer.polygon('-75,25 0,0 75,25 25,25 25,20 -25,20 -25,25').addClass('pointerBG');
+    pointer.polygon('-75,25 0,0 75,25 25,25 25,20 -25,20 -25,25').addClass(pointerBGColor);
     pointer.polygon('-75,25 0,0 75,25 0,10');
     pointer.line(0, 0, 0, 10);
 
@@ -87,10 +87,10 @@ function AHRSRenderer(locationId) {
     // 20241110 - Adding the Speed and Altitude as requested by users
     this.textSpeed = this.ai.text("")
         .style('fill', 'white')
-        .style('font-size', '32px').x(-195).y(-190);
+        .style('font-size', '32px').x(-195).y(-30);
     this.textAltitude = this.ai.text("")
         .style('fill', 'white')
-        .style('font-size', '32px').x(130).y(-190);
+        .style('font-size', '32px').x(130).y(-30);
 
     this.err = display.group().addClass('error').group();
     this.err.rect(400, 400).cx(0).cy(0);
@@ -163,7 +163,7 @@ AHRSRenderer.prototype = {
         if(altitude != 0) {
             var alt = altitude.toFixed(0) + "ft";
             this.textAltitude.text(alt);
-            this.textAltitude.x(190-alt.length*14);
+            this.textAltitude.x(180-alt.length*14);
         }
 
     },
