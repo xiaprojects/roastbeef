@@ -500,6 +500,10 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             }]
         });
         $scope.uploadWaypoints();
+        // Autoselect the HSI
+        $scope.scrollItemCounter = -3;
+        $scope.redrawSelectedIndex();
+
     }
 
     $scope.directToWaypoint = function (routeIndex, waypointIndex) {
@@ -519,6 +523,9 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.gpx.routes[routeIndex].points[waypointIndex].Status = WAYPOINT_STATUS_TARGET;
         }
         $scope.uploadWaypoints();
+        // Autoselect the HSI
+        $scope.scrollItemCounter = -3;
+        $scope.redrawSelectedIndex();
     }
 
     $scope.tickForRouting = function () {

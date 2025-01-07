@@ -143,6 +143,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'AlertsCtrl',
 			reloadOnSearch: false
 		})
+		.state('hsi', {
+			url: '/hsi',
+			templateUrl: 'plates/hsi.html',
+			controller: 'HSICtrl',
+			reloadOnSearch: false
+		})
 		.state('ems', {
 			url: '/ems',
 			templateUrl: 'plates/ems.html',

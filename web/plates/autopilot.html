@@ -128,13 +128,12 @@
     
     
                     <tr ng-repeat="point in route.points"
-                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" ng-class="point.className" id="line_{{route.index}}_{{point.index}}">
+                    ng-click="directToWaypoint(route.index,point.index)"
+                    style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" ng-class="point.className" id="line_{{route.index}}_{{point.index}}">
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
-                            <a ng-click="directToWaypoint(route.index,point.index)">
                                 <i class="fa fa-location-arrow" aria-hidden="true"
                                     style="font-size: 32px;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>
                                 {{point.trk.toFixed(1)}}°
-                            </a>
                         </td>
                         <td class="text-center"
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;">
@@ -251,13 +250,12 @@
     
     
                     <tr ng-repeat="point in airfields"
+                        ng-click="directToAirfield(point)"
                         style="margin: 0px;padding:0px;border-top: 1px #acacac;{{point.style}}">
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
-                            <a ng-click="directToAirfield(point)">
                                 <i class="fa fa-location-arrow" aria-hidden="true"
                                     style="font-size: 32px;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>
                                 {{point.trk.toFixed(1)}}°
-                            </a>
                         </td>
                         <td class="text-center"
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;">

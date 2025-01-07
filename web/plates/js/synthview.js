@@ -181,7 +181,6 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             const altitudeThreshold = 50 / 3.2808;
             const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
             if (requireRefresh == true) {
-                situation.AHRSPitch = 0; // Temporary disable the Pitch
                 $scope.situation = situation;
                 loadSituationInSynthView(situation);
                 loadSituationInAHRS(situation);
@@ -627,6 +626,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     gltf.scene.rotation.y = (Math.PI * 2.0 / 360) * (180 - item.direction + item.directionModel) // Yaw
                     gltf.scene.rotation.z = (Math.PI * 2.0 / 360) * item.roll // Roll
 
+                    gltf.scene.rotation.order ="YXZ"
 
                     item.reference = gltf;
                     if (callback != null) {
