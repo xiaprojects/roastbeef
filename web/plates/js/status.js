@@ -202,7 +202,12 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 			$scope.visible_ogn = settings.OGN_Enabled;
 			$scope.visible_ais = settings.AIS_Enabled;
 			$scope.visible_ping = settings.Ping_Enabled;
+			$scope.visible_pong = settings.Pong_Enabled;
 			if (settings.Ping_Enabled) {
+				$scope.visible_uat = true;
+				$scope.visible_es = true;
+			}
+			if (settings.Pong_Enabled) {
 				$scope.visible_uat = true;
 				$scope.visible_es = true;
 			}

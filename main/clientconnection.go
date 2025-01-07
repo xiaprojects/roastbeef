@@ -42,6 +42,7 @@ type networkConnection struct {
 	Queue           *MessageQueue `json:"-"` // don't store in settings
 
 	LastPingResponse time.Time // last time the client responded
+	LastPongResponse time.Time // last time the client responded
 	LastUnreachable time.Time // Last time the device sent an ICMP Unreachable packet.
 	/*
 		Sleep mode/throttle variables. "sleep mode" is actually now just a very reduced packet rate, since we don't know positively
@@ -79,7 +80,9 @@ func (conn *networkConnection) IsSleeping() bool {
 		return false
 	}
 	// No ping response. Assume disconnected/sleeping device.
-	if conn.LastPingResponse.IsZero() || stratuxClock.Since(conn.LastPingResponse) > (10*time.Second) {
+	if conn.LastPongResponse.IsZero() || stratuxClock.Since(conn.LastPongResponse) > (10*time.Second) {
+		conn.SleepFlag = true
+	} else if conn.LastPingResponse.IsZero() || stratuxClock.Since(conn.LastPingResponse) > (10*time.Second) {
 		conn.SleepFlag = true
 	} else if stratuxClock.Since(conn.LastUnreachable) < (5 * time.Second) {
 		conn.SleepFlag = true

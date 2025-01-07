@@ -304,6 +304,9 @@ func getNetworkStats() {
 			if !netconn.LastPingResponse.IsZero() && stratuxClock.Since(netconn.LastPingResponse) < 15*time.Minute {
 				numNonSleepingClients++
 			}
+			if !netconn.LastPongResponse.IsZero() && stratuxClock.Since(netconn.LastPongResponse) < 15*time.Minute {
+				numNonSleepingClients++
+			}
 		}
 
 		globalStatus.Connected_Users = numNonSleepingClients
@@ -662,6 +665,7 @@ func sleepMonitor() {
 		if msg.Type == ipv4.ICMPTypeEchoReply {
 			for _, conn := range getNetworkConnsByIp(ip) {
 				conn.LastPingResponse = stratuxClock.Time
+				conn.LastPongResponse = stratuxClock.Time
 			}
 			continue // No further processing needed.
 		}

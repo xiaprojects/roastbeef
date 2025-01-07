@@ -356,6 +356,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.APRS_Enabled = val.(bool)
 					case "Ping_Enabled":
 						globalSettings.Ping_Enabled = val.(bool)
+					case "Pong_Enabled":
+						globalSettings.Pong_Enabled = val.(bool)
 					case "OGNI2CTXEnabled":
 						globalSettings.OGNI2CTXEnabled = val.(bool)
 					case "GPS_Enabled":

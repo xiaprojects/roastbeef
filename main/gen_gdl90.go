@@ -581,6 +581,11 @@ func makeStratuxStatus() []byte {
 		msg[13] = msg[13] | (1 << 5) | (1 << 6)
 	}
 
+	// Pong provides ES and UAT
+	if globalSettings.Pong_Enabled {
+		msg[13] = msg[13] | (1 << 5) | (1 << 6)
+	}
+
 	// Valid/Enabled: GPS Enabled portion.
 	if globalSettings.GPS_Enabled {
 		msg[13] = msg[13] | (1 << 7)
@@ -1174,6 +1179,7 @@ type settings struct {
 	APRS_Enabled         bool
 	AIS_Enabled          bool
 	Ping_Enabled         bool
+	Pong_Enabled         bool
 	GPS_Enabled          bool
 	BMP_Sensor_Enabled   bool
 	IMU_Sensor_Enabled   bool
@@ -1255,6 +1261,7 @@ type status struct {
 	UAT_traffic_targets_tracking               uint16
 	ES_traffic_targets_tracking                uint16
 	Ping_connected                             bool
+	Pong_connected                             bool
 	UATRadio_connected                         bool
 	GPS_satellites_locked                      uint16
 	GPS_satellites_seen                        uint16
