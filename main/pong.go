@@ -52,11 +52,6 @@ func initPongSerial() bool {
 	} else if _, err := os.Stat("/dev/softrf"); err == nil {
 		device = "/dev/softrf"
 		baudrate = int(38400)
-	} else if _, err := os.Stat("/dev/pongusb"); err == nil {
-		// 99-uavionix.rules 0403:6015
-		device = "/dev/pongusb"
-		baudrate = int(57600)
-		pongDeviceModel = 1
 	} else {
 		log.Printf("No suitable Pong device found.\n")
 		return false
