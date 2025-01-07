@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3nn0/stratux/sensors/bmp388"
+	"github.com/jamez70/stratux/sensors/bmp388"
 
-	"github.com/b3nn0/goflying/ahrs"
-	"github.com/b3nn0/goflying/ahrsweb"
-	"github.com/b3nn0/stratux/common"
-	"github.com/b3nn0/stratux/sensors"
+	"github.com/jamez70/goflying/ahrs"
+	"github.com/jamez70/goflying/ahrsweb"
+	"github.com/jamez70/stratux/common"
+	"github.com/jamez70/stratux/sensors"
 	"github.com/kidoman/embd"
 	_ "github.com/kidoman/embd/host/all"
 	"github.com/ricochet2200/go-disk-usage/du"

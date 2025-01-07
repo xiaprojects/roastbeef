@@ -1,7 +1,7 @@
 package sensors
 
 import (
-	"github.com/b3nn0/stratux/sensors/bmp388"
+	"github.com/jamez70/stratux/sensors/bmp388"
 	"github.com/kidoman/embd"
 	"time"
 )

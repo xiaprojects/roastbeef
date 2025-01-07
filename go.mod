@@ -1,14 +1,13 @@
-module github.com/b3nn0/stratux
+module github.com/jamez70/stratux
 
 go 1.20
 
 require (
 	github.com/BertoldVdb/go-ais v0.1.0
-	github.com/b3nn0/goflying v0.0.0-20240610064310-ce0f56b2d656
-	github.com/bradfitz/gomemcache v0.0.0-20230124162541-5f7a7d875746
 	github.com/dustin/go-humanize v1.0.0
 	github.com/felixge/pidctrl v0.0.0-20160307080219-7b13bcae7243
 	github.com/gansidui/geohash v0.0.0-20141019080235-ebe5ba447f34
+	github.com/jamez70/goflying v0.0.0-20250107200536-17c646dd01b1
 	github.com/jpoirier/gortlsdr v2.10.0+incompatible
 	github.com/kellydunn/golang-geo v0.7.0
 	github.com/kidoman/embd v0.0.0-20170508013040-d3d8c0c5c68d
@@ -19,11 +18,11 @@ require (
 	github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198
 	github.com/takama/daemon v1.0.0
 	github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07
-	github.com/tatsuhiro-t/go-nghttp2 v0.0.0-20150408091349-4742878d9c90
 	github.com/uavionix/serial v0.0.0-19700101022104-87f23b1d3198
 	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
 	golang.org/x/net v0.1.0
 	gonum.org/v1/plot v0.9.0
+	tinygo.org/x/bluetooth v0.10.0
 )
 
 require (
@@ -60,5 +59,6 @@ require (
 	golang.org/x/sys v0.11.0 // indirect
 	golang.org/x/text v0.4.0 // indirect
 	google.golang.org/protobuf v1.23.0 // indirect
-	tinygo.org/x/bluetooth v0.10.0 // indirect
 )
+
+replace github.com/b3nn0/goflying => github.com/jamez70/goflying v0.0.0-20190813180847-c0701d10ae2f

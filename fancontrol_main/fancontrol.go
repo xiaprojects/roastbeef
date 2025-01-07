@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/b3nn0/stratux/common"
+	"github.com/jamez70/stratux/common"
 	"github.com/felixge/pidctrl"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"

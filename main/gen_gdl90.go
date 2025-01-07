@@ -33,8 +33,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/b3nn0/stratux/common"
-	"github.com/b3nn0/stratux/uatparse"
+	"github.com/jamez70/stratux/common"
+	"github.com/jamez70/stratux/uatparse"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/ricochet2200/go-disk-usage/du"
 )
@@ -1590,7 +1590,8 @@ func gracefulShutdown() {
 	// Shut down SDRs.
 	sdrKill()
 	pingKill()
-
+	pongKill()
+	
 	// Shut down data logging.
 	if dataLogStarted {
 		closeDataLog()
@@ -1740,6 +1741,7 @@ func main() {
 	if !isTraceReplayMode {
 		sdrInit()
 		pingInit()
+		pongInit()
 	}
 	initTraffic(isTraceReplayMode)
 

@@ -2,7 +2,7 @@
 package sensors
 
 import (
-	"github.com/b3nn0/goflying/mpu9250"
+	"github.com/jamez70/goflying/mpu9250"
 	"github.com/kidoman/embd"
 )
 

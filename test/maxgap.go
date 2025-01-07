@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/b3nn0/stratux/uatparse"
+	"github.com/jamez70/stratux/uatparse"
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/plotutil"

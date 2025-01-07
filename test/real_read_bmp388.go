@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/b3nn0/stratux/sensors/bmp388"
+	"github.com/jamez70/stratux/sensors/bmp388"
 	"github.com/kidoman/embd"
 	_ "github.com/kidoman/embd/host/all"
 )

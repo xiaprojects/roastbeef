@@ -2,7 +2,7 @@
 package sensors
 
 import (
-	"github.com/b3nn0/goflying/icm20948"
+	"github.com/jamez70/goflying/icm20948"
 	"github.com/kidoman/embd"
 )
 

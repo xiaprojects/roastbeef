@@ -25,7 +25,7 @@ import (
 
 	// Using forked version of tarm/serial to force Linux
 	// instead of posix code, allowing for higher baud rates
-	"github.com/b3nn0/stratux/common"
+	"github.com/jamez70/stratux/common"
 	"github.com/uavionix/serial"
 )
 
@@ -245,7 +245,7 @@ var shutdownPong bool
 func pongWatcher() {
 	prevPongEnabled := false
 	pongDeviceSuccessfullyWorking = false
-
+	log.Printf("Running pongWatcher\n")
 	for {
 		time.Sleep(1 * time.Second)
 

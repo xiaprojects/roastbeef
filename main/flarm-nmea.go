@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3nn0/stratux/common"
+	"github.com/jamez70/stratux/common"
 )
 
 /*
