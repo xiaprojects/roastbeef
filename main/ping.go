@@ -82,7 +82,7 @@ func initPingSerial() bool {
 func pingNetworkRepeater() {
 	defer pingWG.Done()
 	log.Println("Entered Ping network repeater ...")
-	cmd := exec.Command(STRATUX_HOME + "/bin/dump1090", "--net-only")
+	cmd := exec.Command(STRATUX_HOME + "/bin/dump1090", "--net-only", "--net-stratux-port", "30006")
 	stdout, _ := cmd.StdoutPipe()
 	stderr, _ := cmd.StderrPipe()
 

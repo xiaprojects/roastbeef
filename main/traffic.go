@@ -1040,14 +1040,11 @@ func parseDownlinkReport(s string, signalLevel int) {
 
 func esListen() {
 	for {
-		if !globalSettings.ES_Enabled && !globalSettings.Ping_Enabled {
+		if !globalSettings.ES_Enabled && !globalSettings.Ping_Enabled && !globalSettings.Pong_Enabled {
 			time.Sleep(1 * time.Second) // Don't do much unless ES is actually enabled.
 			continue
 		}
-		if !globalSettings.ES_Enabled && !globalSettings.Pong_Enabled {
-			time.Sleep(1 * time.Second) // Don't do much unless ES is actually enabled.
-			continue
-		}
+
 		dump1090Addr := "127.0.0.1:30006"
 		inConn, err := net.Dial("tcp", dump1090Addr)
 		if err != nil { // Local connection failed.
@@ -1056,9 +1053,7 @@ func esListen() {
 		}
 		rdr := bufio.NewReader(inConn)
 		for globalSettings.ES_Enabled || globalSettings.Ping_Enabled {
-			//log.Printf("ES enabled. Ready to read next message from dump1090\n")
 			buf, err := rdr.ReadString('\n')
-			//log.Printf("String read from dump1090\n")
 			if err != nil { // Must have disconnected?
 				break
 			}
@@ -1067,9 +1062,7 @@ func esListen() {
 			parseDump1090Message(buf)
 		}
 		for globalSettings.ES_Enabled || globalSettings.Pong_Enabled {
-			//log.Printf("ES enabled. Ready to read next message from dump1090\n")
 			buf, err := rdr.ReadString('\n')
-			//log.Printf("String read from dump1090\n")
 			if err != nil { // Must have disconnected?
 				break
 			}

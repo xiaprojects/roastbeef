@@ -12,7 +12,7 @@ package main
 
 import (
 	"bufio"
-	//"fmt"
+	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -77,7 +77,7 @@ func initPongSerial() bool {
 func pongNetworkRepeater() {
 	defer pongWG.Done()
 	log.Println("Entered Pong network repeater ...")
-	cmd := exec.Command(STRATUX_HOME+"/bin/dump1090", "--net-only")
+	cmd := exec.Command(STRATUX_HOME + "/bin/dump1090", "--net-only", "--net-stratux-port", "30006")
 	stdout, _ := cmd.StdoutPipe()
 	stderr, _ := cmd.StderrPipe()
 
@@ -157,6 +157,7 @@ func pongSerialReader() {
 
 	scanner := bufio.NewScanner(pongSerialPort)
 	for scanner.Scan() && globalStatus.Pong_connected && globalSettings.Pong_Enabled {
+		log.Printf("In pong loop")
 		pongDeviceSuccessfullyWorking = true
 		s := scanner.Text()
 		// Trimspace removes newlines as well as whitespace
@@ -180,11 +181,10 @@ func pongSerialReader() {
 				log.Println("Starting dump1090 network connection")
 				pongNetworkConnection()
 			}
-			if len(report[0]) != 0 && dump1090Connection != nil {
+			if len(report[0]) != 0 && dump1090ConnectionPong != nil {
 				dump1090ConnectionPong.Write([]byte(report[0] + ";\r\n"))
-				//log.Println("Relaying 1090ES message")
-				//logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0]);
-				//log.Println(logString)
+				logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0])
+				log.Println(logString)
 			}
 		} else if s[0] == '+' || s[0] == '-' {
 			// UAT report
@@ -488,7 +488,7 @@ func pongUSBSerialReader() {
 	for globalStatus.Pong_connected && globalSettings.Pong_Enabled {
 		n, err := pongSerialPort.Read(data)
 		if err != nil {
-			break
+			
 		}
 		for _, b := range data[:n] {
 			if b == 0xfe && mavLinkFrameLastIndex > 0 {
