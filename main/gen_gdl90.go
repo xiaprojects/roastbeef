@@ -1244,6 +1244,7 @@ type settings struct {
 	Charts_Enabled       bool
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
 	Switches             []switchModel // Switches Settings
+	MagCalibration       MagnetometerData // Magnetometer Calibration
 }
 
 type status struct {
@@ -1321,6 +1322,16 @@ func defaultSettings() {
 	globalSettings.Switches = make([]switchModel, 0)
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = false
+	globalSettings.MagCalibration.Heading = 0	// Angle Correction Offset
+	globalSettings.MagCalibration.X = 0			// Magnetic Field Correction Offset
+	globalSettings.MagCalibration.Y = 0			// Magnetic Field Correction Offset
+	globalSettings.MagCalibration.Z = 0			// Magnetic Field Correction Offset
+	globalSettings.MagCalibration.MagMaxX = 0	// Magnetic Field Range
+	globalSettings.MagCalibration.MagMaxY = 0	// Magnetic Field Range
+	globalSettings.MagCalibration.MagMaxZ = 0	// Magnetic Field Range
+	globalSettings.MagCalibration.MagMinX = 0	// Magnetic Field Range
+	globalSettings.MagCalibration.MagMinY = 0	// Magnetic Field Range
+	globalSettings.MagCalibration.MagMinZ = 0	// Magnetic Field Range
 	globalSettings.ES_Enabled = true
 	globalSettings.Radio_Enabled = false
 	globalSettings.EMS_Enabled = false

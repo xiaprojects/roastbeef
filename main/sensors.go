@@ -374,6 +374,43 @@ func sensorAttitudeSender() {
 				}
 			}
 
+			// Magnetometer steps required to apply in ahrs_simple.go the s.headingMag = math.Atan2(m1, -m2)
+			// Magnetometer Calibration Step 0: Offset set?
+			if(globalSettings.MagCalibration.MagMaxX !=0){
+			// Magnetometer Calibration Step 1: Hard Iron
+				magXRange := globalSettings.MagCalibration.MagMaxX-globalSettings.MagCalibration.MagMinX
+			// Magnetometer Calibration Step 2: Soft Iron
+				magXOffset := (globalSettings.MagCalibration.MagMaxX+globalSettings.MagCalibration.MagMinX)/2.0
+			// Magnetometer Sphere Value
+				m.M1 = 1.0 * (m.M1 - magXOffset) / magXRange;
+			}
+			// Magnetometer Calibration Step 0: Offset set?
+			if(globalSettings.MagCalibration.MagMaxY !=0){
+				// Magnetometer Calibration Step 1: Hard Iron
+					magYRange := globalSettings.MagCalibration.MagMaxY-globalSettings.MagCalibration.MagMinY
+				// Magnetometer Calibration Step 2: Soft Iron
+					magYOffset := (globalSettings.MagCalibration.MagMaxY+globalSettings.MagCalibration.MagMinY)/2.0
+				// Magnetometer Sphere Value
+					m.M2 = 1.0 * (m.M2 - magYOffset) / magYRange;
+				}
+			// Magnetometer Calibration Step 0: Offset set?
+			if(globalSettings.MagCalibration.MagMaxZ !=0){
+				// Magnetometer Calibration Step 1: Hard Iron
+					magZRange := globalSettings.MagCalibration.MagMaxZ-globalSettings.MagCalibration.MagMinZ
+				// Magnetometer Calibration Step 2: Soft Iron
+					magZOffset := (globalSettings.MagCalibration.MagMaxZ+globalSettings.MagCalibration.MagMinZ)/2.0
+				// Magnetometer Sphere Value
+					m.M3 = 1.0 * (m.M3 - magZOffset) / magZRange;
+				}
+		
+			// Magnetometer Calibration Step 3: Normalisation
+			if(m.M1 != 0 && m.M2 != 0 && m.M3 !=0){
+				magnitude :=  math.Sqrt(m.M1*m.M1 + m.M2*m.M2 + m.M3*m.M3)
+				m.M1 = m.M1 / magnitude
+				m.M2 = m.M2 / magnitude
+				m.M3 = m.M3 / magnitude
+			}
+
 			// Run the AHRS calculations.
 			s.Compute(m)
 
