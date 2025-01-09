@@ -26,7 +26,7 @@ import (
 	// Using forked version of tarm/serial to force Linux
 	// instead of posix code, allowing for higher baud rates
 	"github.com/jamez70/stratux/common"
-	"github.com/uavionix/serial"
+	"github.com/jamez70/serial"
 )
 
 // pong device data

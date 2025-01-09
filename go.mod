@@ -8,6 +8,7 @@ require (
 	github.com/felixge/pidctrl v0.0.0-20160307080219-7b13bcae7243
 	github.com/gansidui/geohash v0.0.0-20141019080235-ebe5ba447f34
 	github.com/jamez70/goflying v0.0.0-20250107200536-17c646dd01b1
+	github.com/jamez70/serial v0.0.0-19700101022104-87f23b1d3198
 	github.com/jpoirier/gortlsdr v2.10.0+incompatible
 	github.com/kellydunn/golang-geo v0.7.0
 	github.com/kidoman/embd v0.0.0-20170508013040-d3d8c0c5c68d
@@ -18,7 +19,6 @@ require (
 	github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198
 	github.com/takama/daemon v1.0.0
 	github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07
-	github.com/uavionix/serial v0.0.0-19700101022104-87f23b1d3198
 	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
 	golang.org/x/net v0.1.0
 	gonum.org/v1/plot v0.9.0
