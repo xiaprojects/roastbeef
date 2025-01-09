@@ -49,9 +49,6 @@ func initPongSerial() bool {
 
 	if _, err := os.Stat("/dev/pong"); err == nil {
 		device = "/dev/pong"
-	} else if _, err := os.Stat("/dev/softrf"); err == nil {
-		device = "/dev/softrf"
-		baudrate = int(38400)
 	} else {
 		log.Printf("No suitable Pong device found.\n")
 		return false
@@ -66,7 +63,7 @@ func initPongSerial() bool {
 		log.Printf("Error opening serial port: %s\n", err.Error())
 		return false
 	}
-	log.Printf("Pong opened serial port")
+	log.Printf("Pong opened serial port at %d baud\n",baudrate)
 
 	// No device configuration is needed, we should be ready
 
@@ -164,10 +161,7 @@ func pongSerialReader() {
 		if s[0] == '.' {
 			//log.Println("Pong heartbeat\n")
 			globalStatus.Pong_Heartbeats++
-		}
-		//logString := fmt.Sprintf("Pong received: %s", s)
-		//log.Println(logString)
-		if s[0] == '*' {
+		} else if s[0] == '*' {
 			// 1090ES report
 			// Pong appends a signal strength at the end of the message
 			// e.g. *8DC01C2860C37797E9732E555B23;ss=049D;
@@ -219,12 +213,6 @@ func pongSerialReader() {
 
 func pongShutdown() {
 	log.Println("Entered Pong shutdown() ...")
-	//close(closeChpong)
-	//log.Println("Pong shutdown(): calling pongWG.Wait() ...")
-	//pongWG.Wait() // Wait for the goroutine to shutdown
-	//log.Println("Pong shutdown(): pongWG.Wait() returned...")
-	// Serial Port Gracefully Close and Read() returns
-	//globalStatus.Pong_connected = false
 	if globalStatus.Pong_connected == true {
 		pongSerialPort.Close()
 	}
