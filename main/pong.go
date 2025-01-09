@@ -157,11 +157,14 @@ func pongSerialReader() {
 
 	scanner := bufio.NewScanner(pongSerialPort)
 	for scanner.Scan() && globalStatus.Pong_connected && globalSettings.Pong_Enabled {
-		log.Printf("In pong loop")
 		pongDeviceSuccessfullyWorking = true
 		s := scanner.Text()
 		// Trimspace removes newlines as well as whitespace
 		s = strings.TrimSpace(s)
+		if s[0] == '.' {
+			//log.Println("Pong heartbeat\n")
+			globalStatus.Pong_Heartbeats++
+		}
 		//logString := fmt.Sprintf("Pong received: %s", s)
 		//log.Println(logString)
 		if s[0] == '*' {
