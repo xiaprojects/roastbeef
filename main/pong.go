@@ -63,6 +63,11 @@ func initPongSerial() bool {
 		log.Printf("Error opening serial port: %s\n", err.Error())
 		return false
 	}
+	errRts := p.ClearRTS()
+	if errRts != nil {
+		log.Printf("Error clearing RTS: %s\n", errRts.Error())
+	}
+
 	log.Printf("Pong opened serial port at %d baud\n",baudrate)
 
 	// No device configuration is needed, we should be ready

@@ -8,7 +8,7 @@ require (
 	github.com/felixge/pidctrl v0.0.0-20160307080219-7b13bcae7243
 	github.com/gansidui/geohash v0.0.0-20141019080235-ebe5ba447f34
 	github.com/jamez70/goflying v0.0.0-20250107200536-17c646dd01b1
-	github.com/jamez70/serial v0.0.0-19700101022104-87f23b1d3198
+	github.com/jamez70/serial v0.0.0-20250110001033-d5066815f2d1
 	github.com/jpoirier/gortlsdr v2.10.0+incompatible
 	github.com/kellydunn/golang-geo v0.7.0
 	github.com/kidoman/embd v0.0.0-20170508013040-d3d8c0c5c68d
@@ -62,3 +62,5 @@ require (
 )
 
 replace github.com/b3nn0/goflying => github.com/jamez70/goflying v0.0.0-20190813180847-c0701d10ae2f
+
+//replace github.com/jamez70/serial v0.0.0-20250109230522-5d259d4b05b4 => /disk/dev/Pong/serial
