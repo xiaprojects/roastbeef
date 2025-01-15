@@ -75,7 +75,6 @@ func NewMbTileConnectionCacheEntry(path string, conn *sql.DB) *MbTileConnectionC
 var mbtileCacheLock = sync.Mutex{}
 var mbtileConnectionCache = make(map[string]MbTileConnectionCacheEntry)
 
-
 // Weather updates channel.
 var weatherUpdate *uibroadcaster
 var trafficUpdate *uibroadcaster
@@ -1198,11 +1197,10 @@ func managementInterface() {
 
 	var addr string
 	if common.IsRunningAsRoot() {
-		addr = managementAddr
+		addr = fmt.Sprintf(":%d", ManagementAddr)
 	} else {
 		addr = ":8000" // Make sure we can run without root priviledges on different port
 	}
-
 	if err :=http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
 	}

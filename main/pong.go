@@ -1,11 +1,6 @@
 /*
-	Copyright (c) 2016 uAvionix
-	Distributable under the terms of The "BSD New" License
-	that can be found in the LICENSE file, herein included
-	as part of this header.
-
 	pong.go: uAvionix Pong ADS-B monitoring and management.
-    2023 Added PongUSB MavLink support device 0403:6015
+	Added 1/2026
 */
 
 package main
@@ -35,16 +30,12 @@ var pongSerialPort *serial.Port
 var pongWG *sync.WaitGroup
 var closeChpong chan int
 
-// 0 => pongEFB - 1090ES
-// 1 => pongUSB - MavLink
-var pongDeviceModel int
 var pongDeviceSuccessfullyWorking bool
 
 func initPongSerial() bool {
 	var device string
-	baudrate := int(2000000)
+	baudrate := int(3000000)
 
-	pongDeviceModel = 0
 	log.Printf("Configuring Pong ADS-B\n")
 
 	if _, err := os.Stat("/dev/pong"); err == nil {
@@ -65,12 +56,13 @@ func initPongSerial() bool {
 	}
 	errRts := p.ClearRTS()
 	if errRts != nil {
-		log.Printf("Error clearing RTS: %s\n", errRts.Error())
+		log.Printf("Clearing RTS returned %s\n", errRts.Error())
 	}
 
 	log.Printf("Pong opened serial port at %d baud\n",baudrate)
 
 	// No device configuration is needed, we should be ready
+	globalStatus.Pong_Heartbeats = 0
 
 	pongSerialPort = p
 	return true
@@ -163,7 +155,11 @@ func pongSerialReader() {
 		s := scanner.Text()
 		// Trimspace removes newlines as well as whitespace
 		s = strings.TrimSpace(s)
-		if s[0] == '.' {
+		if s[0] == '\'' {
+			report := strings.Split(s, "'")
+			logString :=  fmt.Sprintf("Pong ASCII: %s",report[1])
+			log.Println(logString)
+		} else if s[0] == '.' {
 			//log.Println("Pong heartbeat\n")
 			globalStatus.Pong_Heartbeats++
 		} else if s[0] == '*' {
@@ -270,19 +266,9 @@ func pongWatcher() {
 				time.Sleep(10 * time.Second)
 				continue
 			}
-			//count := 0
-			// pongEFB - 1090
-			if globalStatus.Pong_connected && pongDeviceModel == 0 {
-				//pongWG.Add(1)
+			if globalStatus.Pong_connected  {
 				go pongNetworkRepeater()
-				//pongNetworkConnection()
 				go pongSerialReader()
-				// Emulate SDR count
-				//count = 2
-			}
-			// pongUSB - MavLink
-			if globalStatus.Pong_connected && pongDeviceModel == 1 {
-				go pongUSBSerialReader()
 			}
 			//atomic.StoreUint32(&globalStatus.Devices, uint32(count))
 		} else if !globalSettings.Pong_Enabled {

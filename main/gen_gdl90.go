@@ -46,8 +46,8 @@ var logDirf string      // Directory for all logging
 var dataLogFilef string // Set according to OS config.
 
 const (
-	STRATUX_HOME  = "/opt/stratux/"
-	managementAddr = ":80"
+	STRATUX_HOME  = "/opt/stratux"
+	defaultManagementAddr = 80
 	logDir         = "/var/log/"
 	dataLogFile    = "stratux.sqlite"
 	//FlightBox: log to /root.
@@ -119,13 +119,14 @@ const (
 	
 )
 
-var STRATUX_WWW_DIR = STRATUX_HOME + "www/"
+var STRATUX_WWW_DIR = STRATUX_HOME + "/www/"
 var configLocation = "/boot/firmware/stratux.conf"
 
 var maxSignalStrength int
 
 var stratuxBuild string
 var stratuxVersion string
+var ManagementAddr = 0
 
 var product_name_map = map[int]string{
 	0:   "METAR",
@@ -1693,11 +1694,13 @@ func main() {
 	traceReplaySpeed := flag.Float64("traceSpeed", 1.0, "Trace replay speed multiplier")
 	traceReplayFilter := flag.String("traceFilter", "", "Filter trace data by context. Comma separated list of: ais,nmea,aprs,ogn-rx,dump1090,godump978,lowpower_uat")
 	traceSkip := flag.Int64("traceSkip", 0, "Minutes to skip forward in recorded trace")
-	
+	ManagementAddrTmp := flag.Int("port", defaultManagementAddr, "Specify the port to use")
 
 	cpuprofile := flag.String("cpuprofile", "", "write cpu profile to file")
 
 	flag.Parse()
+
+	ManagementAddr = *ManagementAddrTmp
 	isTraceReplayMode := *traceReplay != ""
 
 	timeStarted = time.Now()
