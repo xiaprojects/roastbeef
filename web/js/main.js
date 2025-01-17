@@ -121,6 +121,8 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+            $scope.Ping_Enabled = settings.Ping_Enabled;
+            $scope.Pong_Enabled = settings.Pong_Enabled;
 
             // Update theme
             $scope.updateTheme(settings.DarkMode);

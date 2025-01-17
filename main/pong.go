@@ -20,8 +20,8 @@ import (
 
 	// Using forked version of tarm/serial to force Linux
 	// instead of posix code, allowing for higher baud rates
-	"github.com/jamez70/stratux/common"
 	"github.com/jamez70/serial"
+	"github.com/jamez70/stratux/common"
 )
 
 // pong device data
@@ -205,6 +205,8 @@ func pongSerialReader() {
 			} else {
 				//log.Println("Not relaying message, msgtype == 0")
 			}
+		} else {
+			log.Printf("Pong ASCII: %s",s)
 		}
 	}
 	globalStatus.Pong_connected = false

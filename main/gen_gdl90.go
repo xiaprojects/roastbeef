@@ -96,7 +96,7 @@ const (
 	// This is somewhat ugly but difficult to change without breaking backward compatibility
 
 	// lower nibble gps type   (dont forget to use only numbers form 0 to 15)
-	
+
 	GPS_TYPE_ANY        = 1		// Any generic GPS - no reconfiguring applied
 	GPS_TYPE_PROLIFIC   = 2
 	GPS_TYPE_OGNTRACKER = 3
@@ -1094,7 +1094,12 @@ func parseInput(buf string) ([]byte, uint16) {
 
 	s = s[1:]
 	msglen := len(s) / 2
-
+	if msglen != UPLINK_FRAME_DATA_BYTES {
+		difference := UPLINK_FRAME_DATA_BYTES - msglen
+		//s = append(s,strings.Repeat("00",difference))
+		s = s + strings.Repeat("00",difference)
+		msglen = len(s) / 2
+	}
 	if len(s)%2 != 0 { // Bad format.
 		return nil, 0
 	}
