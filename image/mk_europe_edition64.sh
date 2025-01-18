@@ -64,7 +64,7 @@ if [ "$1" == "dev" ]; then
     rsync -av --progress --exclude=ogn/esp-idf --exclude="**/*.mbtiles" --exclude=esp32-ogn-tracker $SRCDIR ./
     cd stratux && git checkout $2 && cd ..
 else
-    git clone --recursive -b $2 --depth=1 $REMOTE_ORIGIN
+    git clone --recursive -b $2 $REMOTE_ORIGIN
 fi
 cd ../../
 
