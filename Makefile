@@ -107,8 +107,6 @@ install: optinstall
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
-	systemctl daemon-reload
-	systemctl restart udev
 
 clean:
 	rm -f stratuxrun libdump978.so fancontrol ahrs_approx
