@@ -23,11 +23,11 @@ ln -s /bin/true /root/fake/deb-systemd-invoke
 # Fake a proc FS for raspberrypi-sys-mods_20170519_armhf... Extend me as needed
 mkdir -p /proc/sys/vm/
 
-apt update
+apt -y update
 apt clean
 
 # first, install esptool for tracker flashing. pip will be removed again afterwards to conserve space
-PATH=/root/fake:$PATH RUNLEVEL=1 apt install python3-pip
+PATH=/root/fake:$PATH RUNLEVEL=1 apt -y install python3-pip
 pip install --break-system-packages esptool
 PATH=/root/fake:$PATH RUNLEVEL=1 apt autoremove --purge python3-pip
 
@@ -113,7 +113,7 @@ cd /root && rm -rf kalibrate-rtl
 
 
 # Prepare wiringpi for ogn trx via GPIO
-cd /root && git clone https://github.com/WiringPi/WiringPi.git
+cd /root && git clone --depth=1 https://github.com/WiringPi/WiringPi.git
 cd WiringPi && WIRINGPI_SUDO="" ./build
 cd /root && rm -r WiringPi
 
