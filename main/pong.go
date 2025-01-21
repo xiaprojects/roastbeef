@@ -181,8 +181,8 @@ func pongSerialReader() {
 			}
 			if len(report[0]) != 0 && dump1090ConnectionPong != nil {
 				dump1090ConnectionPong.Write([]byte(report[0] + ";\r\n"))
-				logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0])
-				log.Println(logString)
+				//logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0])
+				//log.Println(logString)
 			}
 		} else if s[0] == '+' || s[0] == '-' {
 			// UAT report
@@ -197,13 +197,13 @@ func pongSerialReader() {
 			// -102dBm signal
 			o, msgtype := parseInput(s)
 			if o != nil && msgtype != 0 {
-				//logString = fmt.Sprintf("Relaying message, type=%d", msgtype)
-				//log.Println(logString)
+				logString := fmt.Sprintf("Relaying UAT, type=%d: %s", msgtype,s)
+				log.Println(logString)
 				relayMessage(msgtype, o)
 			} else if o == nil {
-				//log.Println("Not relaying message, o == nil")
+				log.Println("Not relaying message, o == nil")
 			} else {
-				//log.Println("Not relaying message, msgtype == 0")
+				log.Println("Not relaying message, msgtype == 0")
 			}
 		} else {
 			log.Printf("Pong ASCII: %s",s)

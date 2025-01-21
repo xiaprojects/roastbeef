@@ -33,9 +33,9 @@ import (
 	"syscall"
 	"time"
 
+	humanize "github.com/dustin/go-humanize"
 	"github.com/jamez70/stratux/common"
 	"github.com/jamez70/stratux/uatparse"
-	humanize "github.com/dustin/go-humanize"
 	"github.com/ricochet2200/go-disk-usage/du"
 )
 
@@ -1091,10 +1091,9 @@ func parseInput(buf string) ([]byte, uint16) {
 	if s[0] == '-' {
 		parseDownlinkReport(s, int(thisSignalStrength))
 	}
-
 	s = s[1:]
 	msglen := len(s) / 2
-	if msglen != UPLINK_FRAME_DATA_BYTES {
+	if msglen != UPLINK_FRAME_DATA_BYTES && isUplink {
 		difference := UPLINK_FRAME_DATA_BYTES - msglen
 		//s = append(s,strings.Repeat("00",difference))
 		s = s + strings.Repeat("00",difference)
