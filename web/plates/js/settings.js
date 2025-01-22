@@ -268,6 +268,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		settings[toggles[i]] = undefined;
 	}
 	$scope.update_files = '';
+	$scope.pong_update_files = '';
 
 	$http.get(URL_STATUS_GET).then(function(response) {
 		var status = angular.fromJson(response.data);
@@ -462,7 +463,13 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 			setSettings(angular.toJson(newsettings));
 		}
 	};
-
+	$scope.pongUpdateRun = function () {
+		console.log("WOW IT RAN!!! ");
+		console.log($scope.pongUpdateForm);
+		const curFiles = inputfile.files;
+		console.log($curFiles);
+//		if ($scope.PongUpdateFile)
+	};
 	$scope.updatemodes = function () {
 		if ($scope.OwnshipModeS !== settings["OwnshipModeS"]) {
 			settings["OwnshipModeS"] = $scope.OwnshipModeS.toUpperCase();
@@ -535,6 +542,13 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		$scope.$apply();
 	};
 
+	$scope.setPongUploadFile = function (files) {
+		$scope.pong_update_files = files;
+		$scope.$apply();
+		console.log("setPongUploadFile");
+		console.log($scope.pong_update_files);
+	};
+
 	$scope.resetUploadFile = function () {
 		$scope.update_files = '';
 		$scope.$apply();
@@ -574,6 +588,45 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 			$scope.$apply();
 		}).error(function (data) {
 			$scope.uploading_update = false;
+			alert("error");
+			$scope.$apply();
+		});
+	};
+
+	$scope.uploadPongFile = function () {
+		var fd = new FormData();
+		//Take the first selected file
+		var file = $scope.pong_update_files[0];
+		// check for empty string
+		if (file === undefined || file === null) {
+			alert ("update file not selected");
+			return;
+		}
+		var filename = file.name;
+		// check for expected file naming convention
+		var re = /^pongbuild.*\.zip$/;
+		if (!re.exec(filename)) {
+			alert ("file does not appear to be an update");
+			return;
+		}
+		console.log("Pong update file");
+		console.log(filename);
+		fd.append("pong_update_file", file);
+		$scope.uploading_pong_update = true;
+		$scope.$apply();
+
+		$http.post(URL_UPDATE_PONG, fd, {
+			withCredentials: true,
+			headers: {
+				'Content-Type': undefined
+			},
+			transformRequest: angular.identity
+		}).success(function (data) {
+			$scope.uploading_pong_update = false;
+			alert("Success. Watch the LEDs on the Pong for successful programming");
+			$scope.$apply();
+		}).error(function (data) {
+			$scope.uploading_pong_update = false;
 			alert("error");
 			$scope.$apply();
 		});

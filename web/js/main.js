@@ -21,6 +21,7 @@ var URL_SHUTDOWN            = URL_HOST_PROTOCOL + URL_HOST_BASE + "/shutdown";
 var URL_STATUS_GET          = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getStatus";
 var URL_TOWERS_GET          = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getTowers";
 var URL_UPDATE_UPLOAD       = URL_HOST_PROTOCOL + URL_HOST_BASE + "/updateUpload";
+var URL_UPDATE_PONG         = URL_HOST_PROTOCOL + URL_HOST_BASE + "/updatePong";
 var URL_GET_SITUATION       = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getSituation";
 var URL_GET_TILESETS        = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles/tilesets";
 var URL_GET_TILE            = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles";

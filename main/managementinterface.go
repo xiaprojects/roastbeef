@@ -37,8 +37,8 @@ import (
 
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/jamez70/stratux/common"
 	humanize "github.com/dustin/go-humanize"
+	"github.com/jamez70/stratux/common"
 	"golang.org/x/net/websocket"
 )
 
@@ -820,6 +820,45 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	go delayReboot()
 }
 
+// Upload an update file for Pong
+func handlePongUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	overlayctl("unlock")
+	log.Printf("request: %s\n",r.URL.RequestURI())
+	err := r.ParseMultipartForm(8 << 20)
+	if err != nil {
+		log.Printf("Step 1 Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
+		return
+	}
+	file, _, err := r.FormFile("pong_update_file")
+	if err != nil {
+		log.Printf("FormFile returned error %s\n", err.Error())
+		return
+	}
+	fi, err := os.OpenFile("/tmp/update_pong.zip",os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
+	if err != nil {
+		log.Printf("Cannot open file for saving (%s)\n", err.Error())
+		return
+	}
+	defer fi.Close()
+	_, err = io.Copy(fi, file)
+	if err != nil {
+		log.Printf("Could not copy file (%s)\n", err.Error())
+		return
+	}
+	log.Printf("Process Pong build file /tmp/update_pong.zip here!\n")
+	out, err := exec.Command("/opt/stratux/bin/update-pong.sh","/tmp/update_pong.zip").Output()
+	if err != nil {
+		log.Printf("Could not execute pong programming script\n")
+		addSingleSystemErrorf("pong-updater", "Execute pong update script error: %s", err.Error())
+	} else {
+		addSingleSystemErrorf("pong-updater", "Execute pong update script success: %s", out)
+	}
+	
+	file.Close()
+}
+
 func setNoCache(w http.ResponseWriter) {
 	w.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
 	w.Header().Set("Pragma", "no-cache")
@@ -1181,6 +1220,7 @@ func managementInterface() {
 	http.HandleFunc("/reboot", handleRebootRequest)
 	http.HandleFunc("/getClients", handleClientsGetRequest)
 	http.HandleFunc("/updateUpload", handleUpdatePostRequest)
+	http.HandleFunc("/updatePong", handlePongUpdatePostRequest)
 	http.HandleFunc("/roPartitionRebuild", handleroPartitionRebuild)
 	http.HandleFunc("/develmodetoggle", handleDevelModeToggle)
 	http.HandleFunc("/orientAHRS", handleOrientAHRS)
