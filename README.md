@@ -1,3 +1,5 @@
+[![CI](https://github.com/stratux/stratux/actions/workflows/ci.yml/badge.svg)](https://github.com/stratux/stratux/actions/workflows/ci.yml)
+
 # Stratux - European edition [![](https://dcbadge.limes.pink/api/server/D9NQ6xe4nF)](https://discord.gg/D9NQ6xe4nF)
 
 **Users from the US, see here: https://github.com/stratux/stratux/wiki/US-configuration**
