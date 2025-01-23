@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/b3nn0/goflying/bmp280"
 	"github.com/kidoman/embd"
+	"github.com/stratux/goflying/bmp280"
 )
 
 const (

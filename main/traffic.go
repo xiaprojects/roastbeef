@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/b3nn0/stratux/common"
+	"github.com/stratux/stratux/common"
 )
 
 //-0b2b48fe3aef1f88621a0856110a31c01105c4e6c4e6c40a9a820300000000000000;rs=7;

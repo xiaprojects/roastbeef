@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/b3nn0/stratux/uatparse"
+	"github.com/stratux/stratux/uatparse"
 	"github.com/gansidui/geohash"
 )
 

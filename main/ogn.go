@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3nn0/stratux/common"
+	"github.com/stratux/stratux/common"
 )
 
 // {"sys":"OGN","addr":"395F39","addr_type":3,"acft_type":"1","lat_deg":51.7657533,"lon_deg":-1.1918533,"alt_msl_m":124,"alt_std_m":63,"track_deg":0.0,"speed_mps":0.3,"climb_mps":-0.5,"turn_dps":0.0,"DOP":1.5}
