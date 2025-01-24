@@ -29,7 +29,7 @@ var pongSerialConfig *serial.Config
 var pongSerialPort *serial.Port
 var pongWG *sync.WaitGroup
 var closeChpong chan int
-
+var pongUpdateMode bool
 var pongDeviceSuccessfullyWorking bool
 
 func initPongSerial() bool {
@@ -221,6 +221,10 @@ func pongShutdown() {
 	}
 }
 
+func pongSetUpdateMode() {
+	pongUpdateMode = true
+}
+
 func pongKill() {
 	// Send signal to shutdown to pongWatcher().
 	shutdownPong = true
@@ -238,6 +242,8 @@ var shutdownPong bool
 // Watch for config/device changes.
 func pongWatcher() {
 	prevPongEnabled := false
+	// Clear pong update mode
+	pongUpdateMode = false
 	pongDeviceSuccessfullyWorking = false
 	log.Printf("Running pongWatcher\n")
 	for {
@@ -253,6 +259,30 @@ func pongWatcher() {
 		// Autoreconnect the device
 		if pongDeviceSuccessfullyWorking == true && globalSettings.Pong_Enabled && !globalStatus.Pong_connected {
 			prevPongEnabled = false
+		}
+
+		if pongUpdateMode {
+			log.Printf("PONG UPDATE MODE SET run the steps we need to update it here!")
+			// File should be in /tmp/update_pong.zip 
+			pongUpdateMode = false
+			// Lets shut down the pong thread and run the update script
+			pongShutdown() 
+			time.Sleep(5 * time.Second)
+			log.Printf("Run update process\n")
+			_, err := exec.Command("/usr/bin/unzip","/tmp/update_pong.zip","-d","/tmp/updpong").Output()
+			if err == nil {
+				out, err2 := exec.Command("/bin/bash","-c", "\"/tmp/updpong/util/updatepong.sh\"").Output()
+				if err2 != nil {
+					log.Printf("Failed to run updatepong script: %s\n",err2.Error())
+				} else {
+					log.Printf("Update ran ok:\n%s\n",out)
+				}
+			} else {
+				log.Printf("Could not unpack the update file /tmp/update_pong.zip: %s\n",err.Error())
+			}
+
+			time.Sleep(1 * time.Second)
+			log.Printf("update process complete - continue\n")
 		}
 
 		if prevPongEnabled == globalSettings.Pong_Enabled {
@@ -276,7 +306,6 @@ func pongWatcher() {
 		} else if !globalSettings.Pong_Enabled {
 			pongShutdown()
 		}
-
 		prevPongEnabled = globalSettings.Pong_Enabled
 	}
 }

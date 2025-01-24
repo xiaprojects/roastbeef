@@ -847,15 +847,9 @@ func handlePongUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Could not copy file (%s)\n", err.Error())
 		return
 	}
-	log.Printf("Process Pong build file /tmp/update_pong.zip here!\n")
-	out, err := exec.Command("/opt/stratux/bin/update-pong.sh","/tmp/update_pong.zip").Output()
-	if err != nil {
-		log.Printf("Could not execute pong programming script\n")
-		addSingleSystemErrorf("pong-updater", "Execute pong update script error: %s", err.Error())
-	} else {
-		addSingleSystemErrorf("pong-updater", "Execute pong update script success: %s", out)
-	}
-	
+	log.Printf("Set update mode flag to signal Pong to run the update\n")
+	pongSetUpdateMode();
+
 	file.Close()
 }
 
