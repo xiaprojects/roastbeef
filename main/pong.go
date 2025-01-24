@@ -32,6 +32,12 @@ var closeChpong chan int
 var pongUpdateMode bool
 var pongDeviceSuccessfullyWorking bool
 
+
+type PongTermMessage struct {
+	Text   string
+	Source string
+}
+
 func initPongSerial() bool {
 	var device string
 	baudrate := int(3000000)
@@ -111,6 +117,7 @@ func pongNetworkRepeater() {
 			for scanStdout.Scan() {
 				m := Dump1090TermMessage{Text: scanStdout.Text(), Source: "stdout"}
 				logDump1090TermMessage(m)
+				log.Printf("Pong Updater: %s\n", m.Text)
 			}
 			if err := scanStdout.Err(); err != nil {
 				log.Printf("scanStdout error: %s\n", err)
@@ -119,14 +126,17 @@ func pongNetworkRepeater() {
 			for scanStderr.Scan() {
 				m := Dump1090TermMessage{Text: scanStderr.Text(), Source: "stderr"}
 				logDump1090TermMessage(m)
-				if shutdownES != true {
-					shutdownES = true
-				}
 			}
 			if err := scanStderr.Err(); err != nil {
 				log.Printf("scanStderr error: %s\n", err)
 			}
-
+			for scanStderr.Scan() {
+				m := Dump1090TermMessage{Text: scanStderr.Text(), Source: "stderr"}
+				logDump1090TermMessage(m)
+				if shutdownES != true {
+					shutdownES = true
+				}
+			}
 			time.Sleep(1 * time.Second)
 		}
 	}
@@ -225,6 +235,55 @@ func pongSetUpdateMode() {
 	pongUpdateMode = true
 }
 
+func pongRunUpdateWithOutput() error {
+	/*
+	out, err2 := exec.Command("/bin/bash","-c", "\"/tmp/updpong/util/updatepong.sh\"").Output()
+	if err2 != nil {
+		return err2
+	} else {
+		log.Printf("Update ran ok:\n%s\n",out)
+	}
+	return nil
+*/
+	cmd := exec.Command("/bin/bash","-c", "\"/tmp/updpong/util/updatepong.sh\"")
+	stdout, _ := cmd.StdoutPipe()
+	//stderr, _ := cmd.StderrPipe()
+
+	err := cmd.Start()
+	if err != nil {
+		log.Printf("Error executing updatepong.sh: %s\n", err)
+		return err
+	}
+	log.Println("Executed " + cmd.String() + " successfully...")
+
+	scanStdout := bufio.NewScanner(stdout)
+	for scanStdout.Scan() {
+		m := PongTermMessage{Text: scanStdout.Text(), Source: "stdout"}
+		logPongTermMessage(m)
+		log.Printf("Pong Updater: %s\n",m.Text)
+	}
+
+	if err := scanStdout.Err(); err != nil {
+		log.Printf("Pong Updater error: %s\n", err)
+	}
+/*
+	for scanStderr.Scan() {
+		m := PongTermMessage{Text: scanStderr.Text(), Source: "stderr"}
+		logPongTermMessage(m)
+		log.Printf("Pong Updater: %s\n",m.Text)
+	}
+	if err := scanStderr.Err(); err != nil {
+		log.Printf("Pong Updater  error: %s\n", err)
+	}
+*/
+	if err := cmd.Wait(); err != nil {
+		return err
+	} else {
+		fmt.Printf("Update pong completed with success\n")
+	}
+	return nil
+}
+
 func pongKill() {
 	// Send signal to shutdown to pongWatcher().
 	shutdownPong = true
@@ -271,11 +330,9 @@ func pongWatcher() {
 			log.Printf("Run update process\n")
 			_, err := exec.Command("/usr/bin/unzip","/tmp/update_pong.zip","-d","/tmp/updpong").Output()
 			if err == nil {
-				out, err2 := exec.Command("/bin/bash","-c", "\"/tmp/updpong/util/updatepong.sh\"").Output()
+				err2 := pongRunUpdateWithOutput()
 				if err2 != nil {
-					log.Printf("Failed to run updatepong script: %s\n",err2.Error())
-				} else {
-					log.Printf("Update ran ok:\n%s\n",out)
+					log.Printf("Failed to run pongRunUpdateWithOutput(): %s\n",err2.Error())
 				}
 			} else {
 				log.Printf("Could not unpack the update file /tmp/update_pong.zip: %s\n",err.Error())
