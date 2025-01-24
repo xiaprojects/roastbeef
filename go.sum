@@ -29,10 +29,6 @@ github.com/aryann/difflib v0.0.0-20170710044230-e206f873d14a/go.mod h1:DAHtR1m6l
 github.com/aws/aws-lambda-go v1.13.3/go.mod h1:4UKl9IzQMoD+QF79YdCuzCwp8VbmG4VAQwij/eHl5CU=
 github.com/aws/aws-sdk-go v1.27.0/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
 github.com/aws/aws-sdk-go-v2 v0.18.0/go.mod h1:JWVYvqSMppoMJC0x5wdwiImzgXTI9FuZwxzkQq9wy+g=
-github.com/b3nn0/goflying v0.0.0-20210424141101-d83dac8fdc36 h1:tfrudqqE7GQ+HpnTUmWeD3FYHGi3kJSGQobTd5J4VIY=
-github.com/b3nn0/goflying v0.0.0-20210424141101-d83dac8fdc36/go.mod h1:eFhjOgYDYj0/ghLT3KJjmeZ5RxJwPur5qanoUb6vxII=
-github.com/b3nn0/goflying v0.0.0-20240610064310-ce0f56b2d656 h1:hReF31Fl5EXNTikFJAHX5MAvgG8Z8v346tZx8OduME0=
-github.com/b3nn0/goflying v0.0.0-20240610064310-ce0f56b2d656/go.mod h1:eFhjOgYDYj0/ghLT3KJjmeZ5RxJwPur5qanoUb6vxII=
 github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24TaqPxmxbtue+5NUziq4I4S80YR8gNf3Q=
 github.com/beorn7/perks v1.0.0/go.mod h1:KWe93zE9D1o94FZ5RNwFwVgaQK1VOXiVxmqh+CedLV8=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
@@ -326,6 +322,10 @@ github.com/spf13/cobra v0.0.3/go.mod h1:1l0Ry5zgKvJasoi3XT1TypsSe7PqH0Sj9dhYf7v3
 github.com/spf13/pflag v1.0.1/go.mod h1:DYY7MBk1bdzusC3SYhjObp+wFpr4gzcvqqNjLnInEg4=
 github.com/stianeikeland/go-rpio/v4 v4.5.1-0.20210920090620-2ab4c0432c52 h1:HFIcHyN2nkgaODFDifF0ixiC6ZDbE9ocwa9PKpYTZx4=
 github.com/stianeikeland/go-rpio/v4 v4.5.1-0.20210920090620-2ab4c0432c52/go.mod h1:A3GvHxC1Om5zaId+HqB3HKqx4K/AqeckxB7qRjxMK7o=
+github.com/stratux/goflying v0.0.0-20250123172509-a130299def1d h1:3OQDNcxNnaPPaFfGEEUy4pN/FaKfKrxoA8XW23hxw48=
+github.com/stratux/goflying v0.0.0-20250123172509-a130299def1d/go.mod h1:mUBHzShWc6gsOpF8+312Sd+UJgYBKeKNWgfbJULD1z8=
+github.com/stratux/goflying v0.0.0-20250123172850-dd059ec48194 h1:krb36V5gM+X8smhT31strjBt3UF03dxV9vKxtak0IQ8=
+github.com/stratux/goflying v0.0.0-20250123172850-dd059ec48194/go.mod h1:mUBHzShWc6gsOpF8+312Sd+UJgYBKeKNWgfbJULD1z8=
 github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198 h1:oK0CezUdK1uo3P4aboNpRkdErS4sTOUk50eW3qaqgeA=
 github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198/go.mod h1:i4vrHzYiaNeMMsal0bm/fq/MzXwQIB4zxBi9kJtntKg=
 github.com/streadway/amqp v0.0.0-20190404075320-75d898a42a94/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=

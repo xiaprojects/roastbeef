@@ -33,10 +33,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/b3nn0/stratux/common"
-	"github.com/b3nn0/stratux/uatparse"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/ricochet2200/go-disk-usage/du"
+	"github.com/stratux/stratux/common"
+	"github.com/stratux/stratux/uatparse"
 )
 
 // https://www.faa.gov/nextgen/programs/adsb/Archival/

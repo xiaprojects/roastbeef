@@ -7,7 +7,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/b3nn0/stratux/uatparse"
+	"github.com/stratux/stratux/uatparse"
 	geo "github.com/kellydunn/golang-geo"
 )
 

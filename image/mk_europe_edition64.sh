@@ -11,7 +11,7 @@ ZIPNAME="$(basename $BASE_IMAGE_URL)"
 IMGNAME="$(basename $ZIPNAME .xz)"
 TMPDIR="$HOME/stratux-tmp"
 # REMOTE_ORIGIN=$(git config --get remote.origin.url) # would be nicer, but doesn't work with ssh clone..
-REMOTE_ORIGIN="https://github.com/b3nn0/stratux.git"
+REMOTE_ORIGIN="https://github.com/stratux/stratux.git"
 
 die() {
     echo $1

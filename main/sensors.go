@@ -8,15 +8,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3nn0/stratux/sensors/bmp388"
+	"github.com/stratux/stratux/sensors/bmp388"
 
-	"github.com/b3nn0/goflying/ahrs"
-	"github.com/b3nn0/goflying/ahrsweb"
-	"github.com/b3nn0/stratux/common"
-	"github.com/b3nn0/stratux/sensors"
 	"github.com/kidoman/embd"
 	_ "github.com/kidoman/embd/host/all"
 	"github.com/ricochet2200/go-disk-usage/du"
+	"github.com/stratux/goflying/ahrs"
+	"github.com/stratux/goflying/ahrsweb"
+	"github.com/stratux/stratux/common"
+	"github.com/stratux/stratux/sensors"
 )
 
 const (

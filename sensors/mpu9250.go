@@ -2,8 +2,8 @@
 package sensors
 
 import (
-	"github.com/b3nn0/goflying/mpu9250"
 	"github.com/kidoman/embd"
+	"github.com/stratux/goflying/mpu9250"
 )
 
 const (

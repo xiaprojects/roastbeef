@@ -1,10 +1,9 @@
-module github.com/b3nn0/stratux
+module github.com/stratux/stratux
 
 go 1.20
 
 require (
 	github.com/BertoldVdb/go-ais v0.1.0
-	github.com/b3nn0/goflying v0.0.0-20240610064310-ce0f56b2d656
 	github.com/bradfitz/gomemcache v0.0.0-20230124162541-5f7a7d875746
 	github.com/dustin/go-humanize v1.0.0
 	github.com/felixge/pidctrl v0.0.0-20160307080219-7b13bcae7243
@@ -53,6 +52,7 @@ require (
 	github.com/skelterjohn/go.matrix v0.0.0-20130517144113-daa59528eefd // indirect
 	github.com/soypat/cyw43439 v0.0.0-20240609122733-da9153086796 // indirect
 	github.com/soypat/seqs v0.0.0-20240527012110-1201bab640ef // indirect
+	github.com/stratux/goflying v0.0.0-20250123172850-dd059ec48194 // indirect
 	github.com/tinygo-org/cbgo v0.0.4 // indirect
 	github.com/tinygo-org/pio v0.0.0-20231216154340-cd888eb58899 // indirect
 	github.com/ziutek/mymysql v1.5.4 // indirect
