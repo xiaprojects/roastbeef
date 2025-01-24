@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/jamez70/goflying/bmp280"
+	"github.com/stratux/goflying/bmp280"
 	"github.com/kidoman/embd"
 )
 

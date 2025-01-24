@@ -34,8 +34,8 @@ import (
 	"time"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/jamez70/stratux/common"
-	"github.com/jamez70/stratux/uatparse"
+	"github.com/stratux/stratux/common"
+	"github.com/stratux/stratux/uatparse"
 	"github.com/ricochet2200/go-disk-usage/du"
 )
 

@@ -28,7 +28,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/jamez70/stratux/common"
+	"github.com/stratux/stratux/common"
 )
 
 const (

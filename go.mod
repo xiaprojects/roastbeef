@@ -1,4 +1,4 @@
-module github.com/jamez70/stratux
+module github.com/stratux/stratux
 
 go 1.20
 
@@ -7,7 +7,6 @@ require (
 	github.com/dustin/go-humanize v1.0.0
 	github.com/felixge/pidctrl v0.0.0-20160307080219-7b13bcae7243
 	github.com/gansidui/geohash v0.0.0-20141019080235-ebe5ba447f34
-	github.com/jamez70/goflying v0.0.0-20250107200536-17c646dd01b1
 	github.com/jpoirier/gortlsdr v2.10.0+incompatible
 	github.com/kellydunn/golang-geo v0.7.0
 	github.com/kidoman/embd v0.0.0-20170508013040-d3d8c0c5c68d
@@ -15,6 +14,7 @@ require (
 	github.com/prometheus/client_golang v1.10.0
 	github.com/ricochet2200/go-disk-usage v0.0.0-20150921141558-f0d1b743428f
 	github.com/stianeikeland/go-rpio/v4 v4.5.1-0.20210920090620-2ab4c0432c52
+	github.com/stratux/goflying v0.0.0-20250123172850-dd059ec48194
 	github.com/stratux/serial v0.0.0-20250124170838-6b3ab1cff00c
 	github.com/takama/daemon v1.0.0
 	github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07
@@ -60,4 +60,3 @@ require (
 	google.golang.org/protobuf v1.23.0 // indirect
 )
 
-replace github.com/b3nn0/goflying => github.com/jamez70/goflying v0.0.0-20190813180847-c0701d10ae2f
