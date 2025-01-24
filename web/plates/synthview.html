@@ -1,7 +1,4 @@
 <div ui-content-for="title">Syntetic View</div>
-<canvas id="inop" name="inop"
-  style="position: fixed;    top: 0;    left: 0;    min-width: 100%;    min-height: 100%;background-color: black;">
-</canvas>
 <div id="synthviewFrame" name="synthviewFrame"
   style="position: fixed;    right: 0;    bottom: 0;    min-width: 100%;    min-height: 100%;">
 </div>
@@ -9,14 +6,14 @@
 <div ng-show="remote.reset==false" id="ahrs_display"
   style="position: fixed;width: 100vh;  left: 50%;transform: translate(-50%, -3%);pointer-events: none;cursor: not-allowed;">
 </div>
-<!-- TODO: put back the HSI on SynthView
-<div ng-show="remote.reset==false" ng-click="goToHSI()" id="hsi"
-  style="position: fixed;      bottom: 0%; width: 30vw;    right: 35vw;"></div>
--->
-<a ng-show="remote.reset==false" ng-click="goToCockpit()" style="position: fixed;bottom: 15vw;    left: 15vw;">
+<a ng-show="remote.reset==false" ng-click="goToLeft()" style="position: fixed;bottom: 15vw;    left: 15vw;">
+  <i style="font-size: 48px;padding: 0px;margin:0px;transform: rotate(-45deg);color:white;" class="fa fa-dot-circle-o"></i>
+</a>
+
+<a ng-show="remote.reset==false" ng-click="goToRight()" style="position: fixed;bottom: 15vw;    right: 15vw;">
   <i style="font-size: 48px;padding: 0px;margin:0px;transform: rotate(-45deg);color:white;" class="fa fa-location-arrow"></i>
 </a>
 
 <a ng-show="remote.reset==true" ng-click="synthviewFrameReset()" style="position: fixed;bottom: 15vw;    left: 15vw;">
-  <i style="font-size: 48px;padding: 0px;margin:0px;transform: rotate(-45deg);color:white;" class="fa fa-plane"></i>
+  <i style="font-size: 48px;padding: 0px;margin:0px;color:white;" class="fa fa-eye"></i>
 </a>

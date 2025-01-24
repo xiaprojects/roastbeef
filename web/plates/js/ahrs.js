@@ -157,7 +157,7 @@ AHRSRenderer.prototype = {
         // 20241110 - Adding the Speed and Altitude as requested by users
         this.speed = speed
         if(speed != 0) {
-            this.textSpeed.text(speed.toFixed(0) + "Kmh");
+            this.textSpeed.text(speed.toFixed(0) + "kt");
         }
         this.altitude = altitude
         if(altitude != 0) {

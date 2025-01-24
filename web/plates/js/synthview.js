@@ -16,7 +16,7 @@ var URL_AIRFIELDS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.airfi
 
 // create our controller function with all necessary logic
 function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
-    $scope.$parent.helppage = 'plates/autopilot-help.html';
+    $scope.$parent.helppage = 'plates/synthview-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
     $scope.noSleep = new NoSleep();
@@ -109,9 +109,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
      * Situation Update
      */
     function connectTraffic($scope) {
-        if($state.current.controller!='SynthViewCtrl')return;
-
-        if (($scope === undefined) || ($scope === null))
+        if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
             return; // we are getting called once after clicking away from the gps page
 
         if (($scope.socketTraffic === undefined) || ($scope.socketTraffic === null)) {
@@ -132,7 +130,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         };
 
         socketTraffic.onmessage = function (msg) {
-            if (($scope === undefined) || ($scope === null)) {
+            if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
+            {
                 socketTraffic.close();
                 return;
             }
@@ -143,9 +142,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     function connect($scope) {
-        console.log($state.current.controller);
-
-        if (($scope === undefined) || ($scope === null))
+        if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
             return; // we are getting called once after clicking away from the gps page
 
         if (($scope.socket === undefined) || ($scope.socket === null)) {
@@ -169,7 +166,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
         socket.onmessage = function (msg) {
-            if (($scope === undefined) || ($scope === null)) {
+            if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
+            {
                 socket.close();
                 return;
             }
@@ -177,7 +175,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             // Filter to avoid blow up CPU
             const oldSituation = $scope.situation;
             const newSituation = situation;
-            const ahrsThreshold = 2;
+            const ahrsThreshold = 1;
             const altitudeThreshold = 50 / 3.2808;
             const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
             if (requireRefresh == true) {
@@ -209,13 +207,13 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.remote.reset = false;
     }
 
-    $scope.goToHSI = function () {
-        document.location = "#/autopilot"
+    $scope.goToLeft = function () {
+        document.location = "#/radar"
     }
 
     
-    $scope.goToCockpit = function () {
-        document.location = "#/cockpit"
+    $scope.goToRight = function () {
+        document.location = "#/hsi"
     }
     
 
@@ -379,10 +377,13 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 ) {
                     const aXY = this.terrain.plan(element.Lat, element.Lon);
                     var item = this.itemTemplate();
-                    item.elevation = element.Ele + 20;
+                    // TODO: fix Airfields database with real Elevations
+                    //item.elevation = element.Ele + 20;
+                    // POI Elevation based on current surface
+                    item.elevation = this.terrain.elevationByLatLon(element.Lat, element.Lon)+60;
                     item.template = "map_pointer_places_of_interest";
                     item.name = element.gps_code;
-                    item.scale = 200;
+                    item.scale = 100;
                     item.x = aXY[0] * this.setup.cellSize;
                     item.y = aXY[1] * this.setup.cellSize;
                     itemsToAdd.push(item);
@@ -446,6 +447,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             // Listen to the change event
             rendering.controls.addEventListener('change', () => {
                 this.reset = true;
+                requestAnimationFrame(animate);
             });
         }
 
@@ -554,7 +556,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                             }
                         }
                     }
-
+                    requestAnimationFrame(animate);
                 })
             }
         }
@@ -744,12 +746,18 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.terrainBrown = new THREE.Mesh(geometryBrown, materialBrownColors[0]);
             this.terrainBrown.rotation.x = -Math.PI / 2; // Rotate to lay flat
             this.scene.add(this.terrainBrown);
+            // Add Wireframe to improve readability
+            var geo = new THREE.EdgesGeometry(this.terrainBrown.geometry); // or WireframeGeometry
+            var mat = new THREE.LineBasicMaterial({ color: 0x778877, transparent: true,
+                opacity: 0.5 });
+            var wireframe = new THREE.LineSegments(geo, mat);
+            this.terrainBrown.add(wireframe);
         }
 
     }
 
     const container = document.getElementById("synthviewFrame");
-
+/*
     const canvas = document.getElementById("inop");
     const ctx = canvas.getContext("2d");
     
@@ -759,7 +767,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     ctx.lineWidth = 1;
     ctx.strokeStyle = "red";
     ctx.stroke();
-
+*/
 
     const rendering = new Rendering(container);
     const resources = new ResourceManager();
@@ -845,7 +853,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         //"GPSLatitude": 43.0, "GPSLongitude": 12.0
         if (resources.terrain.isReady()) {
-
+            requestAnimationFrame(animate);
         }
         else {
             if (lockedInTerrainGeneration == true) return;
@@ -870,7 +878,6 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                         connectTraffic($scope);
                     });
 
-                    animate();
                     //
                     //window.setInterval(()=>{contextUpdate()},100);
                 })
@@ -945,10 +952,6 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         }
 
-
-
-        requestAnimationFrame(animate);
-        //controls.update();
         rendering.renderer.render(rendering.scene, rendering.camera);
     }
 
