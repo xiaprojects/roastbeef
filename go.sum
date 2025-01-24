@@ -168,8 +168,6 @@ github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANyt
 github.com/influxdata/influxdb1-client v0.0.0-20191209144304-8bf82d3c094d/go.mod h1:qj24IKcXYK6Iy9ceXlo3Tc+vtHo9lIhSX5JddghvEPo=
 github.com/jamez70/goflying v0.0.0-20250107200536-17c646dd01b1 h1:P5OmFkBMiWaPN/ZlwvS7ybJTp5ONIJpxq0CU6ERK1v8=
 github.com/jamez70/goflying v0.0.0-20250107200536-17c646dd01b1/go.mod h1:LwiDke1v2C5blb5NN2RKt58AsZw90T2a+E8sWFoAPFc=
-github.com/jamez70/serial v0.0.0-20250110001033-d5066815f2d1 h1:8G+90WIKE3t68VTXVK6azDs4NiUU51fj/1CBAyn/F/w=
-github.com/jamez70/serial v0.0.0-20250110001033-d5066815f2d1/go.mod h1:xii8nEufeP3TMLwR3ia3v3cUedwrbFNzYoOoLTDwQZU=
 github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af/go.mod h1:Nht3zPeWKUH0NzdCt2Blrr5ys8VGpn0CEB0cQHVjt7k=
 github.com/jonboulle/clockwork v0.1.0/go.mod h1:Ii8DK3G1RaLaWxj9trq07+26W01tbo22gdxWY5EU2bo=
 github.com/jpillora/backoff v1.0.0/go.mod h1:J/6gKK9jxlEcS3zixgDgUAsiuZ7yrSoa/FX5e0EB2j4=
@@ -324,8 +322,8 @@ github.com/spf13/cobra v0.0.3/go.mod h1:1l0Ry5zgKvJasoi3XT1TypsSe7PqH0Sj9dhYf7v3
 github.com/spf13/pflag v1.0.1/go.mod h1:DYY7MBk1bdzusC3SYhjObp+wFpr4gzcvqqNjLnInEg4=
 github.com/stianeikeland/go-rpio/v4 v4.5.1-0.20210920090620-2ab4c0432c52 h1:HFIcHyN2nkgaODFDifF0ixiC6ZDbE9ocwa9PKpYTZx4=
 github.com/stianeikeland/go-rpio/v4 v4.5.1-0.20210920090620-2ab4c0432c52/go.mod h1:A3GvHxC1Om5zaId+HqB3HKqx4K/AqeckxB7qRjxMK7o=
-github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198 h1:oK0CezUdK1uo3P4aboNpRkdErS4sTOUk50eW3qaqgeA=
-github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198/go.mod h1:i4vrHzYiaNeMMsal0bm/fq/MzXwQIB4zxBi9kJtntKg=
+github.com/stratux/serial v0.0.0-20250124170838-6b3ab1cff00c h1:HLUIHE1QTC1NgGi+2TmWcba9PmQvEY0i6QZQrhWjt0s=
+github.com/stratux/serial v0.0.0-20250124170838-6b3ab1cff00c/go.mod h1:i4vrHzYiaNeMMsal0bm/fq/MzXwQIB4zxBi9kJtntKg=
 github.com/streadway/amqp v0.0.0-20190404075320-75d898a42a94/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
 github.com/streadway/amqp v0.0.0-20190827072141-edfb9018d271/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
 github.com/streadway/handy v0.0.0-20190108123426-d5acb3125c2a/go.mod h1:qNTQ5P5JnDBl6z3cMAg/SywNDC5ABu5ApDIw6lUbRmI=
