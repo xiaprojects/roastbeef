@@ -23,6 +23,7 @@ require (
 	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
 	golang.org/x/net v0.1.0
 	gonum.org/v1/plot v0.9.0
+	github.com/MarinX/keylogger v0.0.0-20240620105846-48ca9d01f566
 )
 
 require (
