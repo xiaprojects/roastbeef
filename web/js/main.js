@@ -147,9 +147,10 @@ app.controller('MainCtrl', function ($scope, $http) {
 .service('craftService',function(){ 
 	let trafficSourceColors = {
 		1: 'cornflowerblue', // ES
-		2: 'darkkhaki',      // UAT
+		2: '#FF8C00',      // UAT
 		4: 'green',          // OGN
-		5: '#0077be'         // AIS
+		5: '#0077be',         // AIS
+		6: 'darkkhaki'     // UAT bar color
 	}
 
 	const getTrafficSourceColor = (source) => {
@@ -169,11 +170,11 @@ app.controller('MainCtrl', function ($scope, $http) {
 		13: 'skyblue',
 		14: 'skyblue',
 
-		20: 'darkkhaki',
-		21: 'darkkhaki',
-		22: 'khaki',
-		23: 'khaki',
-		24: 'khaki',
+		20: 'darkorange',
+		21: 'darkorange',
+		22: 'orange',
+		23: 'orange',
+		24: 'orange',
 
 		40: 'green',
 		41: 'green',

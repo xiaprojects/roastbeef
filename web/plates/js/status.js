@@ -190,7 +190,7 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 		$scope.visible_gps = true;
 
 		$scope.esStyleColor = craftService.getTrafficSourceColor(1);
-		$scope.uatStyleColor = craftService.getTrafficSourceColor(2);
+		$scope.uatStyleColor = craftService.getTrafficSourceColor(6);
 		$scope.ognStyleColor = craftService.getTrafficSourceColor(4);
 		$scope.aisStyleColor = craftService.getTrafficSourceColor(5);
 

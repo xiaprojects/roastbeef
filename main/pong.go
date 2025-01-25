@@ -117,7 +117,6 @@ func pongNetworkRepeater() {
 			for scanStdout.Scan() {
 				m := Dump1090TermMessage{Text: scanStdout.Text(), Source: "stdout"}
 				logDump1090TermMessage(m)
-				log.Printf("Pong Updater: %s\n", m.Text)
 			}
 			if err := scanStdout.Err(); err != nil {
 				log.Printf("scanStdout error: %s\n", err)
@@ -266,16 +265,7 @@ func pongRunUpdateWithOutput() error {
 	if err := scanStdout.Err(); err != nil {
 		log.Printf("Pong Updater error: %s\n", err)
 	}
-/*
-	for scanStderr.Scan() {
-		m := PongTermMessage{Text: scanStderr.Text(), Source: "stderr"}
-		logPongTermMessage(m)
-		log.Printf("Pong Updater: %s\n",m.Text)
-	}
-	if err := scanStderr.Err(); err != nil {
-		log.Printf("Pong Updater  error: %s\n", err)
-	}
-*/
+
 	if err := cmd.Wait(); err != nil {
 		return err
 	} else {
@@ -300,6 +290,7 @@ var shutdownPong bool
 
 // Watch for config/device changes.
 func pongWatcher() {
+	pongDownCount := 0
 	prevPongEnabled := false
 	// Clear pong update mode
 	pongUpdateMode = false
@@ -340,6 +331,20 @@ func pongWatcher() {
 
 			time.Sleep(1 * time.Second)
 			log.Printf("update process complete - continue\n")
+		}
+		// Keep a counter of how long its been down
+		if prevPongEnabled == false && globalSettings.Pong_Enabled == false {
+			pongDownCount++
+		} else {
+			pongDownCount = 0
+		}
+		// Autodetect Pong 
+		if (!globalSettings.Pong_Enabled && !prevPongEnabled && pongDownCount > 10) {
+			if _, err := os.Stat("/dev/pong"); err == nil {
+				log.Printf("Pong device file detected - Enabling the pong radio\n")
+				globalSettings.Pong_Enabled = true
+				saveSettings()
+			}
 		}
 
 		if prevPongEnabled == globalSettings.Pong_Enabled {
