@@ -76,11 +76,18 @@ function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
         timer.Fired = false;
         $scope.timers[timer.timerId] = timer;
         $scope.setTimers(timer);
+        if (document.getElementById("audioproxy") === undefined 
+        || document.getElementById("audioproxy") === false
+        || document.getElementById("audioproxy") == null){
+            // DOM is not ready or Audio in not enabled on the browser (ex.:Round display)
+        }
+        else {
         // play some feedback for the user interaction
         // audioproxy is in index.html
         document.getElementById("audioproxy").autoplay=true;
         document.getElementById("audioproxy").src = "alert.wav";
         document.getElementById("audioproxy").load();
+        }
     }
     $scope.timerReset = function (timer) {
         timer.triggered = "";

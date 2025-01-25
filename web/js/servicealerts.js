@@ -47,9 +47,17 @@ function AlertsService($scope, $http) {
             if ($scope.alertsMapping[userLang].length > alertType) {
                 if ($scope.alertsMapping[userLang][alertType].Sound !== undefined && $scope.alertsMapping[userLang][alertType].Sound.length > 0) {
                     // AudioProxy HTML Item is in index.html
+
+                    if (document.getElementById("audioproxy") === undefined 
+                    || document.getElementById("audioproxy") === false
+                    || document.getElementById("audioproxy") == null){
+                        // DOM is not ready or Audio in not enabled on the browser (ex.:Round display)
+                    }
+                    else {
                     document.getElementById("audioproxy").autoplay = true;
                     document.getElementById("audioproxy").src = "../sounds/" + $scope.alertsMapping[userLang][alertType].Sound + ".mp3";
                     document.getElementById("audioproxy").load();
+                    }
                 }
             }
         }

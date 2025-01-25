@@ -67,9 +67,16 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
   // Audio Player using alerts.html hidden component
   // Warning: the audio will play only if the user touched the screen, in case of Keypad, at least 1 touch on the screen shall be done
   $scope.playAudio = function (url) {
+    if (document.getElementById("audioproxy") === undefined 
+    || document.getElementById("audioproxy") === false
+    || document.getElementById("audioproxy") == null){
+        // DOM is not ready or Audio in not enabled on the browser (ex.:Round display)
+    }
+    else {
     document.getElementById("audioproxy").autoplay = true;
     document.getElementById("audioproxy").src = url;
     document.getElementById("audioproxy").load();
+    }
   }
 
   /**
