@@ -551,3 +551,5 @@ sigs.k8s.io/yaml v1.1.0/go.mod h1:UJmg0vDUVViEyp3mgSv9WPwZCDxu4rQW1olrI1uml+o=
 sourcegraph.com/sourcegraph/appdash v0.0.0-20190731080439-ebfcffb1b5c0/go.mod h1:hI742Nqp5OhwiqlzhgfbWU4mW4yO10fP+LoT9WOswdU=
 tinygo.org/x/bluetooth v0.10.0 h1:42n8qj2tuF5AfdbAUR2Nv45EhtVmbDFH6UoWnt6lzZQ=
 tinygo.org/x/bluetooth v0.10.0/go.mod h1:t/Vm2a/rslsBoqFQKCBsWQw/cmRicQq+8Tl3tj5RCRI=
+github.com/MarinX/keylogger v0.0.0-20240620105846-48ca9d01f566 h1:3uD1lmRbdt8Ho73IcAUTxRQtksuupGMigYG0x+yOi+o=
+github.com/MarinX/keylogger v0.0.0-20240620105846-48ca9d01f566/go.mod h1:aKzZ7D15UvH5LboXkeLmcNi+s/f805vUfB+BfW1fqd4=
