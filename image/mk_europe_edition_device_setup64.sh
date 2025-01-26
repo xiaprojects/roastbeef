@@ -149,7 +149,7 @@ cd /root/stratux/image
 #motd
 cp -f motd /etc/motd
 
-#network default config. TODO: can't we just implement gen_gdl90 -write_network_settings or something to generate them from template?
+#network default config. TODO: can't we just implement stratuxrun -write_network_settings or something to generate them from template?
 cp -f stratux-dnsmasq.conf /etc/dnsmasq.d/stratux-dnsmasq.conf
 cp -f wpa_supplicant_ap.conf /etc/wpa_supplicant/wpa_supplicant_ap.conf
 cp -f interfaces /etc/network/interfaces

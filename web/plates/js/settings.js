@@ -464,11 +464,9 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		}
 	};
 	$scope.pongUpdateRun = function () {
-		console.log("WOW IT RAN!!! ");
 		console.log($scope.pongUpdateForm);
 		const curFiles = inputfile.files;
 		console.log($curFiles);
-//		if ($scope.PongUpdateFile)
 	};
 	$scope.updatemodes = function () {
 		if ($scope.OwnshipModeS !== settings["OwnshipModeS"]) {

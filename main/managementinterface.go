@@ -824,7 +824,6 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 func handlePongUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	setNoCache(w)
 	setJSONHeaders(w)
-	overlayctl("unlock")
 	log.Printf("request: %s\n",r.URL.RequestURI())
 	err := r.ParseMultipartForm(8 << 20)
 	if err != nil {

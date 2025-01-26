@@ -218,7 +218,7 @@ type msg struct {
 var msgLog []msg
 var msgLogMutex sync.Mutex
 
-// Time gen_gdl90 was started.
+// Time stratuxrun was started.
 var timeStarted time.Time
 
 type ADSBTower struct {

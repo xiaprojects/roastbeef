@@ -14,7 +14,7 @@
                     </div>
                     <div class="form-group reset-flow">
                         <label class="control-label col-xs-3">G Limits</label>
-                        <form name="GLimitForm" ng-submit="updateGLimits()" ng-disabled="!Pong_Enabled" novalidate>
+                        <form name="GLimitForm" ng-submit="updateGLimits()"  novalidate>
                             <input class="col-xs-9" type="text" g-limits-input ng-model="GLimits"
                                 ng-blur="updateGLimits()" ng-disabled="!IMU_Sensor_Enabled"
                                 ng-class="{grayout: !IMU_Sensor_Enabled}"
@@ -345,7 +345,7 @@
     <!-- End Right Col -->
 </div>
 <!-- Developer mode area -->
-<div class="col-sm-12">
+<div ng-show="DeveloperMode" class="col-sm-12" >
     <!-- Begin Left Col -->
     <div class="col-sm-6">
         <!-- Hardware Settings -->
@@ -484,7 +484,7 @@
                             </ui-switch>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" ng-show="Pong_Enabled">
                         <label class="control-label col-xs-5">Pong Firmware Update<br /></label>
                         <div class="col-xs-7">
                             <input class="col-xs-7" type="file" id="pongfile" accept=".zip" onchange="angular.element(this).scope().setPongUploadFile(this.files)"

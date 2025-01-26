@@ -295,10 +295,8 @@ func pongWatcher() {
 	// Clear pong update mode
 	pongUpdateMode = false
 	pongDeviceSuccessfullyWorking = false
-	log.Printf("Running pongWatcher\n")
 	for {
 		time.Sleep(1 * time.Second)
-
 		// true when a serial call fails
 		if shutdownPong {
 			pongShutdown()
@@ -539,18 +537,6 @@ func mavLinkFormatPong(x []byte) {
 		seenTraffic[ti.Icao_addr] = true
 		trafficMutex.Unlock()
 	}
-}
-
-func mavLinkParsePong(mavLinkFrame []byte) bool {
-	if mavLinkFrame[0] != 0xfe || len(mavLinkFrame) > 1024 {
-		return true
-	}
-	if len(mavLinkFrame) < 9 || mavLinkFrame[0] != 0xfe || int(mavLinkFrame[1]+8) != len(mavLinkFrame) {
-		return false
-	}
-	mavLinkFormatPong(mavLinkFrame)
-	pongDeviceSuccessfullyWorking = true
-	return true
 }
 
 func pongUSBSerialReader() {
