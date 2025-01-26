@@ -25,8 +25,8 @@ import (
 
 	// Using forked version of tarm/serial to force Linux
 	// instead of posix code, allowing for higher baud rates
-	"github.com/stratux/stratux/common"
 	"github.com/stratux/serial"
+	"github.com/stratux/stratux/common"
 )
 
 // Ping device data
@@ -186,6 +186,7 @@ func pingSerialReader() {
 				pingNetworkConnection()
 			}
 			if len(report[0]) != 0 && dump1090Connection != nil {
+				globalStatus.ES_messages_total++
 				dump1090Connection.Write([]byte(report[0] + ";\r\n"))
 				//log.Println("Relaying 1090ES message")
 				//logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0]);

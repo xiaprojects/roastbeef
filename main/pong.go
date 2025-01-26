@@ -189,6 +189,7 @@ func pongSerialReader() {
 				pongNetworkConnection()
 			}
 			if len(report[0]) != 0 && dump1090ConnectionPong != nil {
+				globalStatus.ES_messages_total++
 				dump1090ConnectionPong.Write([]byte(report[0] + ";\r\n"))
 				//logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0])
 				//log.Println(logString)
@@ -216,6 +217,9 @@ func pongSerialReader() {
 			}
 		} else {
 			log.Printf("Pong ASCII: %s",s)
+			if strings.Contains(s,"ERROR SPI") {
+				log.Printf("SPI error sent from Pong. Restarting Pong")
+			}
 		}
 	}
 	globalStatus.Pong_connected = false

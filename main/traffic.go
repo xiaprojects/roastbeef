@@ -1085,7 +1085,10 @@ func parseDump1090Message(buf string) {
 	eslog.TimeReceived = stratuxClock.Time
 	eslog.Data = buf
 	logESMsg(eslog) // log raw dump1090:30006 output to SQLite log
-
+	// Only increment if using an SDR for 1090 traffic
+	if !globalSettings.Ping_Enabled  && !globalSettings.Pong_Enabled {
+		globalStatus.ES_messages_total++
+	}
 	var newTi *dump1090Data
 	err := json.Unmarshal([]byte(buf), &newTi)
 	if err != nil {

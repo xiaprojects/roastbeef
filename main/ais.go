@@ -85,6 +85,7 @@ func parseAisMessage(data string) {
 	thisMsg.MessageClass = MSGCLASS_AIS
 	thisMsg.TimeReceived = stratuxClock.Time
 	thisMsg.Data = data
+	globalStatus.AIS_messages_total++
 	msgLogAppend(thisMsg)
 	logMsg(thisMsg) // writes to replay logs
 

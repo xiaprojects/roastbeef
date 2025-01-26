@@ -147,6 +147,7 @@ func parseOgnMessage(data string, fakeCurrentTime bool) {
 	if msg.Sys == "status" {
 		importOgnStatusMessage(msg)
 	} else {
+		globalStatus.OGN_messages_total++
 		msgLogAppend(thisMsg)
 		logMsg(thisMsg) // writes to replay logs
 		importOgnTrafficMessage(msg, data, fakeCurrentTime)

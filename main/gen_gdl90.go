@@ -34,9 +34,9 @@ import (
 	"time"
 
 	humanize "github.com/dustin/go-humanize"
+	"github.com/ricochet2200/go-disk-usage/du"
 	"github.com/stratux/stratux/common"
 	"github.com/stratux/stratux/uatparse"
-	"github.com/ricochet2200/go-disk-usage/du"
 )
 
 // https://www.faa.gov/nextgen/programs/adsb/Archival/
@@ -1062,6 +1062,7 @@ func parseInput(buf string) ([]byte, uint16) {
 	if len(s) == 0 {
 		return nil, 0
 	}
+	globalStatus.UAT_messages_total++
 	msgtype := uint16(0)
 	isUplink := false
 
@@ -1254,14 +1255,18 @@ type status struct {
 	DiskBytesFree                              uint64
 	UAT_messages_last_minute                   uint
 	UAT_messages_max                           uint
+	UAT_messages_total                         uint64
 	ES_messages_last_minute                    uint
 	ES_messages_max                            uint
+	ES_messages_total                          uint64
 	OGN_messages_last_minute                   uint
 	OGN_messages_max                           uint
+	OGN_messages_total                         uint64
 	OGN_connected                              bool
-	APRS_connected                              bool
+	APRS_connected                             bool
 	AIS_messages_last_minute                   uint
 	AIS_messages_max                           uint
+	AIS_messages_total                         uint64
 	AIS_connected                              bool
 	UAT_traffic_targets_tracking               uint16
 	ES_traffic_targets_tracking                uint16
@@ -1497,7 +1502,7 @@ func printStats() {
 		log.Printf("stats [started: %s]\n", humanize.RelTime(time.Time{}, stratuxClock.Time, "ago", "from now"))
 		log.Printf(" - Disk bytes used = %s (%.1f %%), Disk bytes free = %s (%.1f %%)\n", humanize.Bytes(usage.Used()), 100*usage.Usage(), humanize.Bytes(usage.Free()), 100*(1-usage.Usage()))
 		log.Printf(" - CPUTemp=%.02f [%.02f - %.02f] deg C, MemStats.Alloc=%s, MemStats.Sys=%s, totalNetworkMessagesSent=%s\n", globalStatus.CPUTemp, globalStatus.CPUTempMin, globalStatus.CPUTempMax, humanize.Bytes(uint64(memstats.Alloc)), humanize.Bytes(uint64(memstats.Sys)), humanize.Comma(int64(totalNetworkMessagesSent)))
-		log.Printf(" - UAT/min %s/%s [maxSS=%.02f%%], ES/min %s/%s, Total traffic targets tracked=%s", humanize.Comma(int64(globalStatus.UAT_messages_last_minute)), humanize.Comma(int64(globalStatus.UAT_messages_max)), float64(maxSignalStrength)/10.0, humanize.Comma(int64(globalStatus.ES_messages_last_minute)), humanize.Comma(int64(globalStatus.ES_messages_max)), humanize.Comma(int64(len(seenTraffic))))
+		log.Printf(" - UAT/min/total %s/%s/%s [maxSS=%.02f%%], ES/min/total %s/%s/%s, Total traffic targets tracked=%s", humanize.Comma(int64(globalStatus.UAT_messages_last_minute)), humanize.Comma(int64(globalStatus.UAT_messages_max)), humanize.Comma(int64(globalStatus.UAT_messages_total)), float64(maxSignalStrength)/10.0, humanize.Comma(int64(globalStatus.ES_messages_last_minute)), humanize.Comma(int64(globalStatus.ES_messages_max)), humanize.Comma(int64(globalStatus.ES_messages_total)),humanize.Comma(int64(len(seenTraffic))))
 		log.Printf(" - Network data messages sent: %d total.  Network data bytes sent: %d total.\n", globalStatus.NetworkDataMessagesSent, globalStatus.NetworkDataBytesSent)
 		if globalSettings.GPS_Enabled {
 			log.Printf(" - Last GPS fix: %s, GPS solution type: %d using %d satellites (%d/%d seen/tracked), NACp: %d, est accuracy %.02f m\n", stratuxClock.HumanizeTime(mySituation.GPSLastFixLocalTime), mySituation.GPSFixQuality, mySituation.GPSSatellites, mySituation.GPSSatellitesSeen, mySituation.GPSSatellitesTracked, mySituation.GPSNACp, mySituation.GPSHorizontalAccuracy)
