@@ -38,7 +38,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/stratux/stratux/common"
 	"golang.org/x/net/websocket"
 )
 
@@ -1228,13 +1227,9 @@ func managementInterface() {
 	http.HandleFunc("/tiles/tilesets", handleTilesets)
 	http.HandleFunc("/tiles/", handleTile)
 
-	var addr string
-	if common.IsRunningAsRoot() {
-		addr = fmt.Sprintf(":%d", ManagementAddr)
-	} else {
-		addr = ":8000" // Make sure we can run without root priviledges on different port
-	}
-	if err :=http.ListenAndServe(addr, nil); err != nil {
+
+	addr := fmt.Sprintf(":%d", ManagementAddr)
+	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
 	}
 }
