@@ -562,12 +562,6 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 			return;
 		}
 		var filename = file.name;
-		// check for expected file naming convention
-		var re = /^update.*\.sh$/;
-		if (!re.exec(filename)) {
-			alert ("file does not appear to be an update");
-			return;
-		}
 
 		fd.append("update_file", file);
 		$scope.uploading_update = true;
