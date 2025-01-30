@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Running pre-installation script and stopping the stratux service"
+if [ -f "/opt/stratux/bin/fancontrol" ]; then
+	/opt/stratux/bin/fancontrol stop
+fi
+# Example: Stop the stratux service before installing a new version
+systemctl stop stratux 2>/dev/null || true

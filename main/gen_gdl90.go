@@ -119,8 +119,9 @@ const (
 	
 )
 
-var STRATUX_WWW_DIR = STRATUX_HOME + "www/"
+var STRATUX_WWW_DIR = STRATUX_HOME + "/www/"
 var configLocation = "/boot/firmware/stratux.conf"
+var configLocationDefault = "/opt/stratux/cfg/stratux.conf.default"
 
 var maxSignalStrength int
 
@@ -1358,6 +1359,30 @@ func defaultSettings() {
 	globalSettings.GpsManualChip = "ublox"
 }
 
+func checkForNoSettings() {
+	// See if a configuration file exists. If not, copy the default one
+	if _, err := os.Stat(configLocation); os.IsNotExist(err) {
+		src, errsrc := os.Open(configLocationDefault)
+		if errsrc != nil {
+			log.Printf("Could not locate default config file %s: %s\n", configLocationDefault, errsrc.Error())
+			return
+		}
+		defer src.Close()
+		// Create the config file
+		dest, err := os.Create(configLocation)
+		if err != nil {
+			log.Printf("Could not create default config file %s: %s\n", configLocation,err.Error())
+			return
+		}
+		defer dest.Close()
+		// Copy the default into the config file
+		_, err = io.Copy(dest, src)
+		if err != nil {
+			log.Printf("Could not create default config file %s: %s\n", configLocation, err.Error())
+		}
+	}
+}
+
 func readSettings() {
 	defaultSettings()
 
@@ -1705,7 +1730,10 @@ func main() {
 	}
 
 	initLogging()
-	
+
+	// JAJ if we do not have the settings file, we will attempt to copy a default one at first boot
+	// in order to handle US vs EU settings
+	checkForNoSettings()
 
 	// Read settings.
 	readSettings()

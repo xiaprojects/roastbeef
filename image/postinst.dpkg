@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Post install script for stratux is running.."
+systemctl daemon-reload
+systemctl enable stratux
+systemctl restart udev
+systemctl start stratux
+if [ -f "/opt/stratux/bin/fancontrol" ]; then
+	/opt/stratux/bin/fancontrol start
+fi
