@@ -2,8 +2,8 @@
 package sensors
 
 import (
-	"github.com/stratux/goflying/icm20948"
 	"github.com/kidoman/embd"
+	"github.com/stratux/goflying/icm20948"
 )
 
 const (

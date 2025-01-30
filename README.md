@@ -1,3 +1,5 @@
+[![CI](https://github.com/stratux/stratux/actions/workflows/ci.yml/badge.svg)](https://github.com/stratux/stratux/actions/workflows/ci.yml)
+
 # Stratux - European edition [![](https://dcbadge.limes.pink/api/server/D9NQ6xe4nF)](https://discord.gg/D9NQ6xe4nF)
 
 **Users from the US, see here: https://github.com/stratux/stratux/wiki/US-configuration**
@@ -9,6 +11,20 @@ nice, full featured Stratux-OGN image that works well for europe, the US, and th
 
 ## Disclaimer
 This repository offers code and binaries that can help you to build your own traffic awareness device. We do not take any responsibility for what you do with this code. When you build a device, you are responsible for what it does. There is no warrenty of any kind provided with the information, code and binaries you can find here. You are solely responsible for the device you build.
+
+## Building
+
+NOTE: Stratux uses submodules, ensure you have run:
+
+```
+git submodule update --init --recursive
+```
+
+Prior to building with:
+
+```
+make
+```
 
 ## Main differences to original Stratux
 * Original Stratux: https://github.com/cyoung/stratux

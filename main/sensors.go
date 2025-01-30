@@ -10,13 +10,13 @@ import (
 
 	"github.com/stratux/stratux/sensors/bmp388"
 
+	"github.com/kidoman/embd"
+	_ "github.com/kidoman/embd/host/all"
+	"github.com/ricochet2200/go-disk-usage/du"
 	"github.com/stratux/goflying/ahrs"
 	"github.com/stratux/goflying/ahrsweb"
 	"github.com/stratux/stratux/common"
 	"github.com/stratux/stratux/sensors"
-	"github.com/kidoman/embd"
-	_ "github.com/kidoman/embd/host/all"
-	"github.com/ricochet2200/go-disk-usage/du"
 )
 
 const (
