@@ -133,6 +133,8 @@ optinstall_dpkg: optinstall
 dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Copy the control script to DEBIAN directory
 	cp -f image/control.dpkg $(DEBPKG_BASE)/DEBIAN/control
+	# Copy the configuration  file list to DEBIAN directory
+	cp -f image/conffiles.dpkg $(DEBPKG_BASE)/DEBIAN/conffiles
 	# Copy the preinstall script to DEBIAN directory
 	cp -f image/preinst.dpkg $(DEBPKG_BASE)/DEBIAN/preinst
 	# Copy the preinstall script to DEBIAN directory
