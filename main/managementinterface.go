@@ -39,6 +39,8 @@ import (
 
 	humanize "github.com/dustin/go-humanize"
 	"golang.org/x/net/websocket"
+
+	"github.com/stratux/stratux/common"
 )
 
 type SettingMessage struct {
@@ -786,7 +788,15 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	var temp_filename string
 	var upload_filename string
 
-	base_dir := "/overlay/robase/root"
+	var base_dir string
+
+	if common.IsRunningAsRoot() {
+		base_dir = "/overlay/robase/root"
+	} else
+	{
+		base_dir = "."
+		log.Printf("not running as root, using base_dir of %s", base_dir)
+	}
 
 	for {
 		part, err := reader.NextPart();
