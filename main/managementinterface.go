@@ -786,6 +786,8 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	var temp_filename string
 	var upload_filename string
 
+	base_dir := "/overlay/robase/root"
+
 	for {
 		part, err := reader.NextPart();
 		if err != nil {
@@ -800,8 +802,8 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 			continue
 		}
 
-		temp_filename = fmt.Sprintf("/overlay/robase/root/TMP_%s", part.FileName())
-		upload_filename = fmt.Sprintf("/overlay/robase/root/%s", part.FileName())
+		temp_filename = fmt.Sprintf("%s/TMP_%s", base_dir, part.FileName())
+		upload_filename = fmt.Sprintf("%s/%s", base_dir, part.FileName())
 
 		fi, err := os.OpenFile(temp_filename, os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
 		if err != nil {
