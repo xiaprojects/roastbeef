@@ -377,7 +377,7 @@ func (tracker *SoftRF) isDetected() bool {
 }
 
 func (tracker *SoftRF) isConfigRead() bool {
-	return len(tracker.settings) >= 4 // need at least or 4 main settings: acft type, id method and id, as well as nmea mode
+	return len(tracker.settings) >= 5 // need at least or 5 main settings: acft type, id method and id, as well as nmea1/2 mode
 }
 
 func (tracker *SoftRF) writeReadDelay() time.Duration {
@@ -388,16 +388,28 @@ func (tracker *SoftRF) writeInitialConfig(serialPort *serial.Port) bool {
 	if !tracker.isConfigRead() {
 		return false
 	}
+	changed := false
 	if tracker.settings["nmea_g"] != "0F" {
-		msg := appendNmeaChecksum("$PSRFS,1,nmea_g,0F") + "\r\n"
+		msg := appendNmeaChecksum("$PSRFS,0,nmea_g,0F") + "\r\n"
 		log.Printf("Configure SoftRF: %s", msg)
 		serialPort.Write([]byte(msg))
+		changed = true
+	}
+	if tracker.settings["nmea2_g"] != "0F" {
+		msg := appendNmeaChecksum("$PSRFS,0,nmea2_g,0F") + "\r\n"
+		log.Printf("Configure SoftRF: %s", msg)
+		serialPort.Write([]byte(msg))
+		changed = true
+	}
+	if changed {
+		serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,SAV") + "\r\n"))
 	}
 	return false
 }
 
 func (tracker *SoftRF) requestTrackerConfig(serialPort *serial.Port) {
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,nmea_g,?") + "\r\n"))
+	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,nmea2_g,?") + "\r\n"))
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,acft_type,?") + "\r\n"))
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,aircraft_id,?") + "\r\n"))
 	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,id_method,?") + "\r\n"))
