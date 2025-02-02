@@ -14,6 +14,8 @@ if  [ "$arch" == "aarch64" ]; then
 		fi
 	fi
 fi
+
 # Example: Stop the stratux service before installing a new version
+echo "Stopping stratux before installing the new version"
 systemctl stop stratux 2>/dev/null || true
 exit 0
