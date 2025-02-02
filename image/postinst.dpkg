@@ -5,8 +5,8 @@ systemctl enable stratux
 systemctl restart udev
 systemctl start stratux
 # Raspberry Pi's have the config.txt so this is one way to determine if its a raspberry pi
-arch=$(uname -p)
-if [ -f "/boot/firmware/config.txt" ] && ["$arch" == "aarch64" ]; then
+arch=$(uname -m)
+if [ -f "/boot/firmware/config.txt" ] && [ "$arch" == "aarch64" ]; then
 	if [ -f "/opt/stratux/bin/fancontrol" ]; then
 		ret=$(/opt/stratux/bin/fancontrol status)
 		if [ $ret -ne 0 ]; then
