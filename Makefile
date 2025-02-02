@@ -139,6 +139,8 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	cp -f image/preinst.dpkg $(DEBPKG_BASE)/DEBIAN/preinst
 	# Copy the preinstall script to DEBIAN directory
 	cp -f image/postinst.dpkg $(DEBPKG_BASE)/DEBIAN/postinst
+	# Copy the preremoval script to DEBIAN directory
+	cp -f image/prerm.dpkg $(DEBPKG_BASE)/DEBIAN/prerm
 	# Create the directories inside of the dpkg environment
 	mkdir -p $(DEBPKG_BASE)/etc/udev/rules.d/
 	mkdir -p $(DEBPKG_BASE)/lib/systemd/system/
@@ -157,6 +159,7 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/control
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/preinst
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst	
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/prerm	
 	# Create the default US settings for the config default
 	echo '{"UAT_Enabled": true,"OGN_Enabled": false,"DeveloperMode": false}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
 	# Create the debian package for US
