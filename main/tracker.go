@@ -117,8 +117,7 @@ type GxAirCom struct {
 
 type SoftRF struct {
 	detected bool
-	psrfc []string
-	psrfd []string
+	settings map[string]string
 }
 
 func (tracker *OgnTracker) initNewConnection(serialPort *serial.Port) {
@@ -331,8 +330,7 @@ func (tracker *GxAirCom) writeConfigFromSettings(serialPort *serial.Port) bool {
 
 func (tracker *SoftRF) initNewConnection(serialPort *serial.Port) {
 	tracker.detected = false
-	tracker.psrfc = nil
-	tracker.psrfd = nil
+	tracker.settings = make(map[string]string)
 }
 
 
@@ -345,29 +343,23 @@ func (tracker *SoftRF) onNmea(serialPort *serial.Port, nmea []string) bool {
 		tracker.detected = true
 		return true
 	}
-	// PSRFC,<version>,<mode>,<rf_protocol>,<band>,<aircraft_type>,<alarm>,<txpower>,<volume>,<pointer>,<nmea_g>,<nmea_p>,<nmea_l>,<nmea_s>,<nmea_out>,<gdl90>,<d1090>,<stealth>,<no_track>,<power_save>
-	// 0     1         2      3             4      5               6       7         8        9         10       11       12       13       14         15      16      17        18         19
-	// PSRFD,<version>,<id_method>,<aircraft_id>,<ignore_id>,<follow_id>,<baud_rate>,<power_external>,<nmea_d>,<debug_flags>,<nmea_out2>,<nmea2_g>,<nmea2_p>,<nmea2_l>,<nmea2_s>,<nmea2_d>,<relay>,<bluetooth>,<baudrate2>,<invert2>,<nmea_e>,<nmea2_e>,<altpin0>,<voice>,<strobe>
-	// 0     1         2           3             4           5           6           7                8        9             10          11        12        13        14        15        16      17          18          19        20       21        22        23      24
 
-	if nmea[0] == "PSRFC" && nmea[1] == "1" {
-		tracker.detected = true
-		tracker.psrfc = nmea
-		log.Printf("Received SoftRF config %s", strings.Join(nmea, ","))
-		acType, _ := strconv.Atoi(nmea[5])
-		acType = mapAircraftType(typeMappingOgn2SoftRF, false, acType)
-		globalSettings.OGNAcftType = acType
+	// See output of $PSRFS,0,?*4B
+	if nmea[0] == "PSRFS" {
+		key, value := nmea[2], nmea[3]
+		log.Printf("Received SoftRF config %s=%s", key, value)
+		tracker.settings[key] = value
+		if key == "acft_type" {
+			acType, _ := strconv.Atoi(value)
+			acType = mapAircraftType(typeMappingOgn2SoftRF, false, acType)
+			globalSettings.OGNAcftType = acType
+		} else if key == "id_method" {
+			globalSettings.OGNAddrType, _ = strconv.Atoi(value)
+		} else if key == "aircraft_id" {
+			globalSettings.OGNAddr = value
+		}
 		return true
 	}
-	if nmea[0] == "PSRFD" && nmea[1] == "1" {
-		tracker.detected = true
-		tracker.psrfd = nmea
-		log.Printf("Received SoftRF config %s", strings.Join(nmea, ","))
-		globalSettings.OGNAddrType, _ = strconv.Atoi(nmea[2])
-		globalSettings.OGNAddr = nmea[3]
-		return true
-	}
-
 
 	return false
 
@@ -385,7 +377,7 @@ func (tracker *SoftRF) isDetected() bool {
 }
 
 func (tracker *SoftRF) isConfigRead() bool {
-	return tracker.psrfc != nil && tracker.psrfd != nil
+	return len(tracker.settings) >= 5 // need at least or 5 main settings: acft type, id method and id, as well as nmea1/2 mode
 }
 
 func (tracker *SoftRF) writeReadDelay() time.Duration {
@@ -396,64 +388,64 @@ func (tracker *SoftRF) writeInitialConfig(serialPort *serial.Port) bool {
 	if !tracker.isConfigRead() {
 		return false
 	}
-	if tracker.psrfc[2] != "10" {
-		// NMEA extended mode
-		tracker.psrfc[2] = "10"
-		msg := appendNmeaChecksum("$" + strings.Join(tracker.psrfc, ",")) + "\r\n"
-		log.Printf("Configure SoftRF " + msg)
-		serialPort.Write([]byte(appendNmeaChecksum(msg) + "\r\n"))
-		return true
-	}
-
-	return false
-}
-
-func (tracker *SoftRF) requestTrackerConfig(serialPort *serial.Port) {
-	//log.Printf("Request tracker config")
-	serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,?") + "\r\n"))
-	serialPort.Write([]byte(appendNmeaChecksum("$PSRFD,?") + "\r\n"))
-}
-
-func (tracker *SoftRF) writeConfigFromSettings(serialPort *serial.Port) bool {
-	// PSRFC,<version>,<mode>,<rf_protocol>,<band>,<aircraft_type>,<alarm>,<txpower>,<volume>,<pointer>,<nmea_g>,<nmea_p>,<nmea_l>,<nmea_s>,<nmea_out>,<gdl90>,<d1090>,<stealth>,<no_track>,<power_save>
-	// 0     1         2      3             4      5               6       7         8        9         10       11       12       13       14         15      16      17        18         19
-
-	// PSRFD,<version>,<id_method>,<aircraft_id>,<ignore_id>,<follow_id>,<baud_rate>,<power_external>,<nmea_d>,<debug_flags>,<nmea_out2>,<nmea2_g>,<nmea2_p>,<nmea2_l>,<nmea2_s>,<nmea2_d>,<relay>,<bluetooth>,<baudrate2>,<invert2>,<nmea_e>,<nmea2_e>,<altpin0>,<voice>,<strobe>
-	// 0     1         2           3             4           5           6           7                8        9             10          11        12        13        14        15        16      17          18          19        20       21        22        23      24
-
-	if !tracker.isConfigRead() {
-		return false
-	}
-	
-	newc := make([]string, len(tracker.psrfc))
-	newd := make([]string, len(tracker.psrfd))
-	copy(newc, tracker.psrfc)
-	copy(newd, tracker.psrfd)
-	newc[5] = strconv.Itoa(mapAircraftType(typeMappingOgn2SoftRF, true, globalSettings.OGNAcftType))
-	newd[2] = strconv.Itoa(globalSettings.OGNAddrType)
-	newd[3] = globalSettings.OGNAddr
-
 	changed := false
-	if tracker.psrfc[5] != newc[5] {
-		newc[1] = "0" // instructs SoftRF to not reboot yet
-		msg := appendNmeaChecksum("$" + strings.Join(newc, ",")) + "\r\n"
-		log.Printf("Configure SoftRF " + msg)
+	if tracker.settings["nmea_g"] != "0F" {
+		msg := appendNmeaChecksum("$PSRFS,0,nmea_g,0F") + "\r\n"
+		log.Printf("Configure SoftRF: %s", msg)
 		serialPort.Write([]byte(msg))
 		changed = true
 	}
-	
-	if tracker.psrfd[2] != newd[2] || tracker.psrfd[3] != newd[3] {
-		newd[1] = "0" // instructs SoftRF to not reboot yet
-		msg := appendNmeaChecksum("$" + strings.Join(newd, ",")) + "\r\n"
-		log.Printf("Configure SoftRF " + msg)
+	if tracker.settings["nmea2_g"] != "0F" {
+		msg := appendNmeaChecksum("$PSRFS,0,nmea2_g,0F") + "\r\n"
+		log.Printf("Configure SoftRF: %s", msg)
 		serialPort.Write([]byte(msg))
 		changed = true
 	}
 	if changed {
+		serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,SAV") + "\r\n"))
+	}
+	return false
+}
+
+func (tracker *SoftRF) requestTrackerConfig(serialPort *serial.Port) {
+	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,nmea_g,?") + "\r\n"))
+	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,nmea2_g,?") + "\r\n"))
+	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,acft_type,?") + "\r\n"))
+	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,aircraft_id,?") + "\r\n"))
+	serialPort.Write([]byte(appendNmeaChecksum("$PSRFS,0,id_method,?") + "\r\n"))
+}
+
+func (tracker *SoftRF) writeConfigFromSettings(serialPort *serial.Port) bool {
+	if !tracker.isConfigRead() {
+		return false
+	}
+
+	acType := strconv.Itoa(mapAircraftType(typeMappingOgn2SoftRF, true, globalSettings.OGNAcftType))
+	addrType := strconv.Itoa(globalSettings.OGNAddrType)
+	addr := globalSettings.OGNAddr
+
+	var messages []string
+
+	if s, ok := tracker.settings["acft_type"]; !ok || acType != s {
+		messages = append(messages, appendNmeaChecksum("$PSRFS,0,acft_type," + acType) + "\r\n")
+	}
+	if s, ok := tracker.settings["id_method"]; !ok || addrType != s {
+		messages = append(messages, appendNmeaChecksum("$PSRFS,0,id_method," + addrType) + "\r\n")
+	}
+	if s, ok := tracker.settings["aircraft_id"]; !ok || addr != s {
+		messages = append(messages, appendNmeaChecksum("$PSRFS,0,aircraft_id," + addr) + "\r\n")
+	}
+
+	for _, msg := range messages {
+		log.Printf("Configure SoftRF: %s", msg)
+		serialPort.Write([]byte(msg))
+	}
+
+	if len(messages) > 0 {
 		serialPort.Write([]byte(appendNmeaChecksum("$PSRFC,SAV") + "\r\n")) // Finally reboot
 	}
 	
-	return changed
+	return len(messages) > 0
 }
 
 

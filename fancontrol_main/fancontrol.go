@@ -17,7 +17,6 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/stianeikeland/go-rpio/v4"
 	"github.com/stratux/stratux/common"
-	"github.com/takama/daemon"
 )
 
 import "C"
@@ -241,13 +240,8 @@ func fanControl() {
 	pin.DutyCycle(pwmDutyMax, pwmDutyMax)
 }
 
-// Service has embedded daemon
-type Service struct {
-	daemon.Daemon
-}
-
 // Manage by daemon commands or run the daemon
-func (service *Service) Manage() (string, error) {
+func Run() (string, error) {
 	// initialize defaults or from settings
 	readSettings()
 
@@ -258,25 +252,6 @@ func (service *Service) Manage() (string, error) {
 	pin := flag.Int("pin", myFanControl.PWMPin, "PWM pin (BCM numbering)")
 	flag.Parse()
 
-	usage := "Usage: " + name + " install | remove | start | stop | status"
-	// if received any kind of command, do it
-	if flag.NArg() > 0 {
-		command := os.Args[flag.NFlag()+1]
-		switch command {
-		case "install":
-			return service.Install()
-		case "remove":
-			return service.Remove()
-		case "start":
-			return service.Start()
-		case "stop":
-			return service.Stop()
-		case "status":
-			return service.Status()
-		default:
-			return usage, nil
-		}
-	}
 	myFanControl.TempTarget = *tempTarget
 	myFanControl.PWMDutyMin = uint32(*dutyMin)
 	myFanControl.PWMFrequency = uint32(*frequency)
@@ -350,16 +325,9 @@ func init() {
 }
 
 func main() {
-	srv, err := daemon.New(name, description, daemon.SystemDaemon)
-	if err != nil {
-		errlog.Println("Error: ", err)
-		os.Exit(1)
-	}
-	service := &Service{srv}
-	status, err := service.Manage()
+	status, err := Run()
 	if err != nil {
 		errlog.Println(status, "\nError: ", err)
-		os.Exit(1)
 	}
 	fmt.Println(status)
 }

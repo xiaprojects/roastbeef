@@ -26,6 +26,10 @@ cp -f __lib__systemd__system__stratux.service /lib/systemd/system/stratux.servic
 chmod 644 /lib/systemd/system/stratux.service
 ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
 
+cp -f stratux_fancontrol.service /lib/systemd/system/stratux_fancontrol.service
+chmod 644 /lib/systemd/system/stratux_fancontrol.service
+ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
+
 #boot config
 cp -f config.txt /boot/firmware/config.txt
 
@@ -51,9 +55,6 @@ cp -f modules.txt /etc/modules
 
 #motd
 cp -f motd /etc/motd
-
-#fan control utility
-/opt/stratux/bin/fancontrol install
 
 # overlayctl
 cp -f overlayctl init-overlay /sbin/

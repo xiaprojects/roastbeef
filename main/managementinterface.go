@@ -2140,7 +2140,8 @@ func managementInterface() {
 
 
 func managementInterfaceForServe(addr string){
-	if err := http.ListenAndServe(addr, nil); err != nil {
+	log.Printf("web configuration console on port %s", addr);
+	if err :=http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
 	}
 }
