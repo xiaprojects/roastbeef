@@ -17,6 +17,7 @@ rm -rf work
 mkdir -p work/bin
 make optinstall STRATUX_HOME=$(pwd)/work/bin/stratux
 cp __lib__systemd__system__stratux.service work/bin/
+cp image/stratux_fancontrol.service work/bin/
 cp image/config.txt work/bin/
 cp image/rtl-sdr-blacklist.conf work/bin/
 cp image/bashrc.txt work/bin/

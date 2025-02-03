@@ -100,15 +100,17 @@ optinstall: www ogn/ddb.json
 
 
 install: optinstall
-	-$(STRATUX_HOME)/bin/fancontrol remove
-	$(STRATUX_HOME)/bin/fancontrol install
-
 	# System configuration
 	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
 	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
+
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
+	
+	cp image/stratux_fancontrol.service  /lib/systemd/system/stratux_fancontrol.service
+	chmod 644 /lib/systemd/system/stratux_fancontrol.service
+	ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
 
 #
 # Debian package related targets below
@@ -155,7 +157,7 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	sed -i 's/VERSION/$(VERSIONSTR)/g' $(DEBPKG_BASE)/DEBIAN/control
 	# set up the arch inside of the dpkg System. We have to use a script because x86_64 is arm64, aarch64 is arm64, etc.
 	sed -i 's/ARCH/$(THISARCH)/g' $(DEBPKG_BASE)/DEBIAN/control
-    # Set permissions of the scripts for dpkg
+	# Set permissions of the scripts for dpkg
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/control
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/preinst
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst	
