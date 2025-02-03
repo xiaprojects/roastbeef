@@ -152,6 +152,8 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Copy the systemd scripts to the dpkg environment
 	cp __lib__systemd__system__stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
+	cp image/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
+	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux_fancontrol.service
 	#ln -s $(DEBPKG_BASE)/lib/systemd/system/stratux.service $(DEBPKG_BASE)/etc/systemd/system/multi-user.target.wants/stratux.service	
 	# Set up the versioning inside of the dpkg system. This puts the version number inside of the config file
 	sed -i 's/VERSION/$(VERSIONSTR)/g' $(DEBPKG_BASE)/DEBIAN/control

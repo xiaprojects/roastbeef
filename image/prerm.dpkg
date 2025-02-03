@@ -5,10 +5,7 @@ echo "Running pre-removal script for the stratux service"
 arch=$(uname -m)
 if  [ "$arch" == "aarch64" ]; then
 	if [ -f "/boot/firmware/config.txt" ]; then
-		if [ -f "/opt/stratux/bin/fancontrol" ]; then
-			/opt/stratux/bin/fancontrol stop
-			/opt/stratux/bin/fancontrol remove
-		fi
+		systemctl stop stratux_fancontrol
 	fi
 fi
 # Example: Stop the stratux service before removing this version
