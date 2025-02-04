@@ -58,6 +58,8 @@ type ChartDataCurrent struct {
 	GPSLongitude float32
 	AHRSGLoadMin float64
 	AHRSGLoadMax float64
+	// Magnetometer
+	Magnetometer MagnetometerData
 }
 type ChartDataExport struct {
 	GPSGroundSpeed []float64
@@ -93,6 +95,16 @@ type ChartDataExport struct {
 	GPSLongitude []float32
 	AHRSGLoadMin []float64
 	AHRSGLoadMax []float64
+	// Magnetometer
+	MagMaxX		[]float64
+	MagMaxY		[]float64
+	MagMaxZ		[]float64
+	MagMinX		[]float64
+	MagMinY		[]float64
+	MagMinZ		[]float64
+	MagX		[]float64
+	MagY		[]float64
+	MagZ		[]float64
 }
 
 type ChartsStratuxPlugin struct {
@@ -141,12 +153,43 @@ func (chartsInstance *ChartsStratuxPlugin) InitFunc() bool {
 	// Traffic
 	chartsInstance.export.TrafficCount = make([]int, 0)
 
+	// Magnetometer
+	chartsInstance.export.MagMaxX	= make([]float64, 0)
+	chartsInstance.export.MagMaxY	= make([]float64, 0)
+	chartsInstance.export.MagMaxZ	= make([]float64, 0)
+	chartsInstance.export.MagMinX	= make([]float64, 0)
+	chartsInstance.export.MagMinY	= make([]float64, 0)
+	chartsInstance.export.MagMinZ	= make([]float64, 0)
+	chartsInstance.export.MagX	= make([]float64, 0)
+	chartsInstance.export.MagY	= make([]float64, 0)
+	chartsInstance.export.MagZ	= make([]float64, 0)
+
 	// Start File system recording:
 	exportGPX := ExportGPXStratuxPlugin{SessionName: time.Now().UTC().Format(time.RFC3339), FilePath: "/tmp/" + time.Now().UTC().Format(time.RFC3339) + ".gpx"}
 	exportGPX.generateHeader()
 
 	go chartsInstance.ListenerFunc()
 	return true
+}
+
+/***
+ * Aerobatic, turbolence or other on demand to store POI
+ * On demand can be user requrest or when there are some error indicators
+ */
+func (chartsInstance *ChartsStratuxPlugin) IsTimeToStoreSample(elapsed int) bool {
+	// First step: check for user request
+
+	// Second step: error event trap
+
+	// 3rd step: automation based on situation rules
+
+
+	// 4th step: Time based
+	if(elapsed < 1) {
+		return true
+	} else {
+	}
+	return false
 }
 
 func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
@@ -157,7 +200,7 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 		if globalSettings.Charts_Enabled == false {
 			continue
 		}
-		if EveryMinute == 0 {
+		if chartsInstance.IsTimeToStoreSample(EveryMinute) == true {
 			chartsInstance.chartsDataMutex.Lock()
 			chartsInstance.export.GPSGroundSpeed = append(chartsInstance.export.GPSGroundSpeed, chartsInstance.last.GPSGroundSpeed)
 			chartsInstance.export.Alt = append(chartsInstance.export.Alt, chartsInstance.last.Alt)
@@ -188,6 +231,16 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			chartsInstance.export.AHRSTurnRate = append(chartsInstance.export.AHRSTurnRate, chartsInstance.last.AHRSTurnRate)
 			chartsInstance.export.AHRSGLoad = append(chartsInstance.export.AHRSGLoad, chartsInstance.last.AHRSGLoad)
 
+			chartsInstance.export.MagMaxX	= append(chartsInstance.export.MagMaxX, chartsInstance.last.Magnetometer.MagMaxX)
+			chartsInstance.export.MagMaxY	= append(chartsInstance.export.MagMaxY, chartsInstance.last.Magnetometer.MagMaxX)
+			chartsInstance.export.MagMaxZ	= append(chartsInstance.export.MagMaxZ, chartsInstance.last.Magnetometer.MagMaxX)
+			chartsInstance.export.MagMinX	= append(chartsInstance.export.MagMinX, chartsInstance.last.Magnetometer.MagMinX)
+			chartsInstance.export.MagMinY	= append(chartsInstance.export.MagMinY, chartsInstance.last.Magnetometer.MagMinY)
+			chartsInstance.export.MagMinZ	= append(chartsInstance.export.MagMinZ, chartsInstance.last.Magnetometer.MagMinZ)
+			chartsInstance.export.MagX	= append(chartsInstance.export.MagX, chartsInstance.last.Magnetometer.X)
+			chartsInstance.export.MagY	= append(chartsInstance.export.MagY, chartsInstance.last.Magnetometer.Y)
+			chartsInstance.export.MagZ	= append(chartsInstance.export.MagZ, chartsInstance.last.Magnetometer.Z)
+
 			// Store the retrieved data by a stream on the storage
 			// TODO:
 			// - Let's the user decide the storage location, in case of USB
@@ -203,13 +256,12 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			chartsInstance.last.AHRSMagHeading = 0
 			chartsInstance.last.AHRSSlipSkid = 0
 			chartsInstance.last.AHRSTurnRate = 0
-			chartsInstance.last.AHRSGLoad = 0
+			chartsInstance.last.AHRSGLoad = 1
 			chartsInstance.last.Alt = 0
 
 			chartsInstance.last.GPSTrueCourse = 0
 			chartsInstance.last.GpsTurnRate = 0
 			chartsInstance.last.GPSGroundSpeed = 0
-			chartsInstance.last.AHRSGLoad = 0
 
 			//
 			chartsInstance.chartsDataMutex.Unlock()
@@ -264,8 +316,15 @@ func (chartsInstance *ChartsStratuxPlugin) logSituation() {
 				chartsInstance.last.AHRSTurnRate = mySituation.AHRSTurnRate
 			}
 		}
+		// Aerobatics negative G-Loads
+		if(mySituation.AHRSGLoad<1) {
+			if chartsInstance.last.AHRSGLoad > mySituation.AHRSGLoad {
+				chartsInstance.last.AHRSGLoad = mySituation.AHRSGLoad
+			}	
+		} else {
 		if chartsInstance.last.AHRSGLoad < mySituation.AHRSGLoad {
 			chartsInstance.last.AHRSGLoad = mySituation.AHRSGLoad
+		}
 		}
 
 		if chartsInstance.last.Alt < mySituation.GPSAltitudeMSL {
@@ -293,6 +352,10 @@ func (chartsInstance *ChartsStratuxPlugin) logSituation() {
 		chartsInstance.last.GPSLongitude = mySituation.GPSLongitude
 		chartsInstance.last.AHRSGLoadMax = mySituation.AHRSGLoadMax
 		chartsInstance.last.AHRSGLoadMin = mySituation.AHRSGLoadMin
+
+		// Magnetometer
+		chartsInstance.last.Magnetometer = mySituation.Magnetometer
+		chartsInstance.last.Magnetometer.Heading = int(mySituation.AHRSMagHeading)
 
 		chartsInstance.chartsDataMutex.Unlock()
 	}
@@ -338,6 +401,16 @@ func chartsSamplesByIndexToSample(index int, samples ChartDataExport) ChartDataC
 		GPSLatitude:           samples.GPSLatitude[index],
 		GPSLongitude:          samples.GPSLongitude[index],
 		AHRSGLoadMin:          samples.AHRSGLoadMin[index],
-		AHRSGLoadMax:          samples.AHRSGLoadMax[index]}
+		AHRSGLoadMax:          samples.AHRSGLoadMax[index],
+		Magnetometer:          MagnetometerData{MagMaxX: samples.MagMaxX[index],
+			MagMaxY: samples.MagMaxY[index],
+			MagMaxZ: samples.MagMaxZ[index],
+			MagMinX: samples.MagMinX[index],
+			MagMinY: samples.MagMinY[index],
+			MagMinZ: samples.MagMinZ[index],
+			X: samples.MagX[index],
+			Y: samples.MagY[index],
+			Z: samples.MagZ[index],
+			Heading: int(samples.AHRSMagHeading[index])}}
 	return ret
 }

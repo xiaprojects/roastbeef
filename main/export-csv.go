@@ -54,7 +54,7 @@ func (exportCSVInstance *ExportCSVStratuxPlugin) appendStringToFile(String strin
 }
 
 func (exportCSVInstance *ExportCSVStratuxPlugin) generateHeaderByData(name string) string {
-	ret := fmt.Sprintf("Epoch,Time,GPSLatitude,GPSLongitude,GPSGroundSpeed,GPSTrueCourse,Alt,BaroPressureAltitude,AHRSPitch,AHRSRoll,AHRSGLoad,BaroTemperature,BaroVerticalSpeed,GPS_satellites_locked,TrafficCount,CPUTemp\n")
+	ret := fmt.Sprintf("Epoch,Time,GPSLatitude,GPSLongitude,GPSGroundSpeed,GPSTrueCourse,Alt,BaroPressureAltitude,AHRSPitch,AHRSRoll,AHRSGLoad,BaroTemperature,BaroVerticalSpeed,GPS_satellites_locked,TrafficCount,CPUTemp,AHRSMagHeading,MagX,MagY,MagZ\n")
 	return ret
 }
 
@@ -92,7 +92,11 @@ func (exportCSVInstance *ExportCSVStratuxPlugin) generatePointBySample(sample Ch
 		sample.BaroVerticalSpeed,
 		sample.GPS_satellites_locked,
 		sample.TrafficCount,
-		sample.CPUTemp)
+		sample.CPUTemp,
+		sample.AHRSMagHeading,
+		sample.Magnetometer.X,
+		sample.Magnetometer.Y,
+		sample.Magnetometer.Z)
 	return ret
 
 }
