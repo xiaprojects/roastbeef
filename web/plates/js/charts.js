@@ -30,7 +30,7 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     "AHRSPitch": "Attitude",
     "AHRSRoll": "Attitude",
     "AHRSGyroHeading": "Attitude",
-    "AHRSMagHeading": "Attitude",
+    "AHRSMagHeading": "Magnetometer",
     "AHRSSlipSkid": "Attitude",
     "AHRSTurnRate": "Attitude",
     "AHRSGLoad": "Load Factor",
@@ -46,6 +46,15 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     "Connected_Users": "System",
     "GPS_satellites_locked": "System",
     "CPUTemp": "System",
+    "MagX":"Magnetometer",
+    "MagY":"Magnetometer",
+    "MagZ":"Magnetometer",
+    "MagMaxX":"Magnetometer",
+    "MagMaxY":"Magnetometer",
+    "MagMaxZ":"Magnetometer",
+    "MagMinX":"Magnetometer",
+    "MagMinY":"Magnetometer",
+    "MagMinZ":"Magnetometer",
     "BaroTemperature": "System"
   };
   const chart_field_axis = {
@@ -63,6 +72,7 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     "BaroVerticalSpeed": "y",
     "GpsTurnRate": "y",
     "GPSHeightAboveEllipsoid": "y1",
+    "Magnetometer":"y",
     "TrafficCount": "y",
     "Connected_Users": "y",
     "GPS_satellites_locked": "y",

@@ -19,7 +19,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/synthview-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
+/*
     $scope.noSleep = new NoSleep();
+*/
 
     $scope.situation = { "GPSLastFixSinceMidnightUTC": 32304.2, "GPSLatitude": 43.0, "GPSLongitude": 12.0, "GPSFixQuality": 1, "GPSHeightAboveEllipsoid": 1057.4148, "GPSGeoidSep": 145.34122, "GPSSatellites": 8, "GPSSatellitesTracked": 12, "GPSSatellitesSeen": 10, "GPSHorizontalAccuracy": 5.4, "GPSNACp": 10, "GPSAltitudeMSL": 912.07355, "GPSVerticalAccuracy": 10.700001, "GPSVerticalSpeed": 0, "GPSLastFixLocalTime": "0001-01-01T00:49:25.51Z", "GPSTrueCourse": 48.3, "GPSTurnRate": 0, "GPSGroundSpeed": 0, "GPSLastGroundTrackTime": "0001-01-01T00:49:25.51Z", "GPSTime": "2023-12-31T08:58:24.3Z", "GPSLastGPSTimeStratuxTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessageTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessage": "$GPGGA,085824.20,4311.12143,N,01208.18939,E,1,08,1.08,278.0,M,44.3,M,,*51", "GPSPositionSampleRate": 9.99973784244331, "BaroTemperature": 29.04, "BaroPressureAltitude": 776.60333, "BaroVerticalSpeed": -1.2355082, "BaroLastMeasurementTime": "0001-01-01T00:49:25.52Z", "BaroSourceType": 1, "AHRSPitch": -56.752181757536206, "AHRSRoll": -77.98562991928083, "AHRSGyroHeading": 3276.7, "AHRSMagHeading": 332.9175199350767, "AHRSSlipSkid": 78.88479760867865, "AHRSTurnRate": 3276.7, "AHRSGLoad": 0.10920454632244811, "AHRSGLoadMin": 0.10626655052683534, "AHRSGLoadMax": 0.1099768285851461, "AHRSLastAttitudeTime": "0001-01-01T00:49:25.51Z", "AHRSStatus": 7 };
     $scope.scrollItemCounter = -4;
@@ -33,8 +35,10 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $state.get('synthview').onExit = function () {
         removeEventListener("keypad", keypadEventListener);
+/*
         $scope.noSleep.disable();
         delete $scope.noSleep;
+*/
 
         if (($scope.socket !== undefined) && ($scope.socket !== null)) {
             $scope.socket.close();
@@ -350,15 +354,36 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             };
         }
 
+        trafficTemplateMapper(item){
+            var copyTemplate = null;
+            // Check for friends mapping:
+            if(this.setup.trafficMapping.hasOwnProperty(item.name)){
+                copyTemplate = this.setup.trafficMapping[item.name];
+            } else {
+            // Pick a random model:
+                copyTemplate = this.setup.trafficTemplates[Math.floor((Math.random()*this.setup.trafficTemplates.length))];
+            }
+            if(copyTemplate!=null){
+                Object.keys(copyTemplate).forEach(key => {
+                    item[key]=copyTemplate[key];
+                });
+            }
+            return item;
+        }
+
         convertTrafficToItem(traffic) {
             const aXY = this.terrain.plan(traffic.Lat, traffic.Lng);
             var item = this.itemTemplate();
+
+            // Load Traffic Mapping and friends
+            item.template = this.setup.trafficTemplates.template;
+            item.name = "" + traffic.Icao_addr;
+            item.scale = 1;
+            item = this.trafficTemplateMapper(item);
+            // item
             item.projectionSize = this.setup.cellSize * 10.0 * traffic.Speed / 60.0;
             item.direction = traffic.Track;
             item.elevation = traffic.Alt * 0.3048;
-            item.template = "a319_plane";
-            item.name = "" + traffic.Icao_addr;
-            item.scale = 2;
             item.x = aXY[0] * this.setup.cellSize;
             item.y = aXY[1] * this.setup.cellSize;
 

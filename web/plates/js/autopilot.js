@@ -24,8 +24,9 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/autopilot-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
+/*
     $scope.noSleep = new NoSleep();
-
+*/
 
     /*****************************************************
      * Sample Data and Defaults
@@ -552,10 +553,10 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     $state.get('autopilot').onExit = function () {
         removeEventListener("keypad", keypadEventListener);
         removeEventListener("WaypointChanged", waypointChanged);
-
+/*
         $scope.noSleep.disable();
         delete $scope.noSleep;
-
+*/
         if (($scope.socket !== undefined) && ($scope.socket !== null)) {
             $scope.socket.close();
             $scope.socket = null;
@@ -993,6 +994,10 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
                 for(var x=0;x<$scope.airfields.length;x++)
                 {
                     $scope.airfields[x].style =  x%2==0?"background-color:lightgray;":""
+                }
+                // Trim the list to the first 50 results
+                if($scope.airfields.length>50){
+                    $scope.airfields = $scope.airfields.slice(0, 50);
                 }
 
             }

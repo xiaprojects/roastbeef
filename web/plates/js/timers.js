@@ -25,8 +25,9 @@ var TIMER_STATUS_RUNNING = true;
 function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/timers-help.html';
     $scope.data_list = [];
+/*
     $scope.noSleep = new NoSleep();
-
+*/
 
     $scope.timers = [];
     $scope.timerTemplate = { "className": "keypadSelectedNo", "name": "", "text": "00:00", timerId: 0, CountDown: 0, Epoch: 0, Status: false, triggered: "", Fired:false};
@@ -363,8 +364,10 @@ function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('timers').onExit = function () {
+/*
         $scope.noSleep.disable();
         delete $scope.noSleep;
+*/
         clearInterval($scope.ticker);
         delete $scope.ticker;
         removeEventListener("keypad", keypadEventListener);

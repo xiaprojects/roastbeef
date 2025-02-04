@@ -11,7 +11,9 @@ function GPSCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/gps-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
+/*
     $scope.noSleep = new NoSleep();
+*/
 
     function connect($scope) {
         if (($scope === undefined) || ($scope === null))
@@ -383,8 +385,10 @@ function GPSCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('gps').onExit = function () {
+    /*
         $scope.noSleep.disable();
         delete $scope.noSleep;
+    */
 
         if (($scope.socket !== undefined) && ($scope.socket !== null)) {
             $scope.socket.close();
@@ -403,9 +407,13 @@ function GPSCtrl($rootScope, $scope, $state, $http, $interval) {
         var disp = "block";
         if ($scope.isHidden) {
             disp = "none";
+/*
             $scope.noSleep.enable();
+*/
         } else {
+/*
             $scope.noSleep.disable();
+*/
         }
         var hiders = document.querySelectorAll(".hider");
 

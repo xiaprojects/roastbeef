@@ -232,8 +232,8 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			chartsInstance.export.AHRSGLoad = append(chartsInstance.export.AHRSGLoad, chartsInstance.last.AHRSGLoad)
 
 			chartsInstance.export.MagMaxX	= append(chartsInstance.export.MagMaxX, chartsInstance.last.Magnetometer.MagMaxX)
-			chartsInstance.export.MagMaxY	= append(chartsInstance.export.MagMaxY, chartsInstance.last.Magnetometer.MagMaxX)
-			chartsInstance.export.MagMaxZ	= append(chartsInstance.export.MagMaxZ, chartsInstance.last.Magnetometer.MagMaxX)
+			chartsInstance.export.MagMaxY	= append(chartsInstance.export.MagMaxY, chartsInstance.last.Magnetometer.MagMaxY)
+			chartsInstance.export.MagMaxZ	= append(chartsInstance.export.MagMaxZ, chartsInstance.last.Magnetometer.MagMaxZ)
 			chartsInstance.export.MagMinX	= append(chartsInstance.export.MagMinX, chartsInstance.last.Magnetometer.MagMinX)
 			chartsInstance.export.MagMinY	= append(chartsInstance.export.MagMinY, chartsInstance.last.Magnetometer.MagMinY)
 			chartsInstance.export.MagMinZ	= append(chartsInstance.export.MagMinZ, chartsInstance.last.Magnetometer.MagMinZ)

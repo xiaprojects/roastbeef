@@ -33,7 +33,9 @@ var URL_COCKPIT_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/cockpit/setup.json
 // create our controller function with all necessary logic
 function CockpitCtrl($rootScope, $scope, $state, $http) {
     $scope.$parent.helppage = 'plates/cockpit-help.html';
+/*    
     $scope.noSleep = new NoSleep();
+*/
     $scope.mapping = {};
     $scope.widgetsSettings = [];
 
@@ -43,9 +45,10 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
 
     $state.get('cockpit').onExit = function () {
         removeEventListener("keypad", keypadEventListener);
-
+/*
         $scope.noSleep.disable();
         delete $scope.noSleep;
+*/
         if (($scope.socketEMS !== undefined) && ($scope.socketEMS !== null)) {
             $scope.socketEMS.close();
             $scope.socketEMS = null;
@@ -211,7 +214,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
             // Filter to avoid blow up CPU
             const oldSituation = $scope.situation;
             const newSituation = situation;
-            const ahrsThreshold = 2;
+            const ahrsThreshold = 1;
             const altitudeThreshold = 50 / 3.2808;
             const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
             if (requireRefresh == true) {
@@ -314,7 +317,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
 
 
         // Magnetometer Calibration
-        /*
+        
         if (situation.hasOwnProperty("Magnetometer")) {
 
             avgX = (situation.Magnetometer.MagMaxX+situation.Magnetometer.MagMinX)/2;
@@ -334,7 +337,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
             situation.MagnetometerPercentageY = MY * 180;
             situation.MagnetometerPercentageZ = MZ * 180;
 
-            
+        /*    
             console.log(
                 MX.toFixed(2)
                 +","+
@@ -342,6 +345,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
                 +","+
                 MZ.toFixed(2)
                 );
+                */
 
         }
         else {
@@ -349,7 +353,7 @@ function CockpitCtrl($rootScope, $scope, $state, $http) {
             situation.MagnetometerPercentageY = 0;
             situation.MagnetometerPercentageZ = 0;
         }
-        */
+        
 
 
         Object.keys($scope.mapping).forEach(element => {

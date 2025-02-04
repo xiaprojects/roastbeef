@@ -29,7 +29,9 @@ var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.freque
 // create our controller function with all necessary logic
 function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/radio-help.html';
+/*
     $scope.noSleep = new NoSleep();
+*/
     $scope.scrollItemCounter = 0;
     $scope.scrollItemSelected = 0;
     $scope.scrollItemRight = 0;
@@ -144,8 +146,10 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         clearInterval($scope.tickerPlayback);
         delete $scope.tickerPlayback;
         removeEventListener("keypad", keypadEventListener);
+/*
         $scope.noSleep.disable();
         delete $scope.noSleep;
+*/
     };
 
 
@@ -402,9 +406,16 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         return textBySeconds(new Date(dateISO).getHours() * 60 + new Date(dateISO).getMinutes())
     }
     $scope.playAudio = function (url) {
+        if (document.getElementById("audioproxy") === undefined 
+        || document.getElementById("audioproxy") === false
+        || document.getElementById("audioproxy") == null){
+            // DOM is not ready or Audio in not enabled on the browser (ex.:Round display)
+        }
+        else {
         document.getElementById("audioproxy").autoplay = true;
         document.getElementById("audioproxy").src = url;
         document.getElementById("audioproxy").load();
+        }
       }
       $scope.shareAudio = function (url) {
         window.open(url,'_blank');

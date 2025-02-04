@@ -87,7 +87,7 @@ function AHRSRenderer(locationId,minimal=false,skyColorName='sky',terrainColor='
     // 20241110 - Adding the Speed and Altitude as requested by users
     this.textSpeed = this.ai.text("")
         .style('fill', 'white')
-        .style('font-size', '32px').x(-195).y(-30);
+        .style('font-size', '32px').x(-180).y(-30);
     this.textAltitude = this.ai.text("")
         .style('fill', 'white')
         .style('font-size', '32px').x(130).y(-30);

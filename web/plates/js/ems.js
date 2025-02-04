@@ -17,7 +17,9 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/ems-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
+/*    
     $scope.noSleep = new NoSleep();
+*/
 
     function connect($scope) {
         if($state.current.controller!='EMSCtrl')return;
@@ -68,9 +70,13 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
         var disp = "block";
         if ($scope.isHidden) {
             disp = "none";
+/*
             $scope.noSleep.enable();
+*/
         } else {
+/*
             $scope.noSleep.disable();
+*/
         }
         var hiders = document.querySelectorAll(".hider");
 
@@ -85,8 +91,10 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('ems').onExit = function () {
+/*
         $scope.noSleep.disable();
         delete $scope.noSleep;
+*/
 
         if (($scope.socket !== undefined) && ($scope.socket !== null)) {
             $scope.socket.close();
