@@ -95,9 +95,6 @@ optinstall: www ogn/ddb.json
 
 
 install: optinstall
-	-$(STRATUX_HOME)/bin/fancontrol remove
-	$(STRATUX_HOME)/bin/fancontrol install
-
 	# System configuration
 	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
 	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
@@ -105,6 +102,11 @@ install: optinstall
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
+
+	cp image/stratux_fancontrol.service  /lib/systemd/system/stratux_fancontrol.service
+	chmod 644 /lib/systemd/system/stratux_fancontrol.service
+	ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
+
 
 clean:
 	rm -f stratuxrun libdump978.so fancontrol ahrs_approx
