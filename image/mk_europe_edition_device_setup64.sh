@@ -23,13 +23,13 @@ ln -s /bin/true /root/fake/deb-systemd-invoke
 # Fake a proc FS for raspberrypi-sys-mods_20170519_armhf... Extend me as needed
 mkdir -p /proc/sys/vm/
 
-apt update
+apt -y update
 apt clean
 
 # first, install esptool for tracker flashing. pip will be removed again afterwards to conserve space
-PATH=/root/fake:$PATH RUNLEVEL=1 apt install python3-pip
+PATH=/root/fake:$PATH RUNLEVEL=1 apt -y install python3-pip
 pip install --break-system-packages esptool
-PATH=/root/fake:$PATH RUNLEVEL=1 apt autoremove --purge python3-pip
+PATH=/root/fake:$PATH RUNLEVEL=1 apt autoremove --yes --purge python3-pip
 
 PATH=/root/fake:$PATH RUNLEVEL=1 apt install --yes libjpeg62-turbo-dev libconfig9 rpi-update dnsmasq git cmake  \
     libusb-1.0-0-dev build-essential autoconf libtool i2c-tools libfftw3-dev libncurses-dev python3-serial jq ifplugd iptables libttspico-utils bluez bluez-firmware
@@ -113,7 +113,7 @@ cd /root && rm -rf kalibrate-rtl
 
 
 # Prepare wiringpi for ogn trx via GPIO
-cd /root && git clone https://github.com/WiringPi/WiringPi.git
+cd /root && git clone --depth=1 https://github.com/WiringPi/WiringPi.git
 cd WiringPi && WIRINGPI_SUDO="" ./build
 cd /root && rm -r WiringPi
 
@@ -149,7 +149,7 @@ cd /root/stratux/image
 #motd
 cp -f motd /etc/motd
 
-#network default config. TODO: can't we just implement gen_gdl90 -write_network_settings or something to generate them from template?
+#network default config. TODO: can't we just implement stratuxrun -write_network_settings or something to generate them from template?
 cp -f stratux-dnsmasq.conf /etc/dnsmasq.d/stratux-dnsmasq.conf
 cp -f wpa_supplicant_ap.conf /etc/wpa_supplicant/wpa_supplicant_ap.conf
 cp -f interfaces /etc/network/interfaces

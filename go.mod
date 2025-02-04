@@ -15,14 +15,14 @@ require (
 	github.com/prometheus/client_golang v1.10.0
 	github.com/ricochet2200/go-disk-usage v0.0.0-20150921141558-f0d1b743428f
 	github.com/stianeikeland/go-rpio/v4 v4.5.1-0.20210920090620-2ab4c0432c52
-	github.com/stratux/serial v0.0.0-19700101022104-87f23b1d3198
+	github.com/stratux/goflying v0.0.0-20250123172850-dd059ec48194
+	github.com/stratux/serial v0.0.0-20250124170838-6b3ab1cff00c
 	github.com/takama/daemon v1.0.0
 	github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07
-	github.com/tatsuhiro-t/go-nghttp2 v0.0.0-20150408091349-4742878d9c90
-	github.com/uavionix/serial v0.0.0-19700101022104-87f23b1d3198
 	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
 	golang.org/x/net v0.1.0
 	gonum.org/v1/plot v0.9.0
+	tinygo.org/x/bluetooth v0.10.0
 )
 
 require (
@@ -52,13 +52,12 @@ require (
 	github.com/skelterjohn/go.matrix v0.0.0-20130517144113-daa59528eefd // indirect
 	github.com/soypat/cyw43439 v0.0.0-20240609122733-da9153086796 // indirect
 	github.com/soypat/seqs v0.0.0-20240527012110-1201bab640ef // indirect
-	github.com/stratux/goflying v0.0.0-20250123172850-dd059ec48194 // indirect
 	github.com/tinygo-org/cbgo v0.0.4 // indirect
 	github.com/tinygo-org/pio v0.0.0-20231216154340-cd888eb58899 // indirect
+	github.com/uavionix/serial v0.0.0-19700101022104-87f23b1d3198 // indirect
 	github.com/ziutek/mymysql v1.5.4 // indirect
 	golang.org/x/image v0.0.0-20210216034530-4410531fe030 // indirect
 	golang.org/x/sys v0.11.0 // indirect
 	golang.org/x/text v0.4.0 // indirect
 	google.golang.org/protobuf v1.23.0 // indirect
-	tinygo.org/x/bluetooth v0.10.0 // indirect
 )

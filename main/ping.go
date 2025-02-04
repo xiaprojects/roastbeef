@@ -25,6 +25,7 @@ import (
 
 	// Using forked version of tarm/serial to force Linux
 	// instead of posix code, allowing for higher baud rates
+
 	"github.com/stratux/stratux/common"
 	"github.com/uavionix/serial"
 )
@@ -82,7 +83,7 @@ func initPingSerial() bool {
 func pingNetworkRepeater() {
 	defer pingWG.Done()
 	log.Println("Entered Ping network repeater ...")
-	cmd := exec.Command(STRATUX_HOME + "/bin/dump1090", "--net-only")
+	cmd := exec.Command(STRATUX_HOME + "/bin/dump1090", "--net-only", "--net-stratux-port", "30006")
 	stdout, _ := cmd.StdoutPipe()
 	stderr, _ := cmd.StderrPipe()
 
@@ -186,6 +187,7 @@ func pingSerialReader() {
 				pingNetworkConnection()
 			}
 			if len(report[0]) != 0 && dump1090Connection != nil {
+				globalStatus.ES_messages_total++
 				dump1090Connection.Write([]byte(report[0] + ";\r\n"))
 				//log.Println("Relaying 1090ES message")
 				//logString := fmt.Sprintf("Relaying 1090ES: %s;", report[0]);

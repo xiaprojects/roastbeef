@@ -56,7 +56,7 @@ if [ -f /boot/firmware/.stratux-first-boot ]; then
 
 		# write network config
 		if grep -q WiFi /boot/firmware/stratux.conf ; then
-			/opt/stratux/bin/gen_gdl90 -write-network-config
+			/opt/stratux/bin/stratuxrun -write-network-config
 			do_reboot=true
 			wLog "re-wrote network configuration for first-boot config import. Rebooting... Bye"
 		fi

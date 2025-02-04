@@ -581,6 +581,12 @@ func logDump1090TermMessage(m Dump1090TermMessage) {
 	}
 }
 
+func logPongTermMessage(m PongTermMessage) {
+	if globalSettings.DEBUG && globalSettings.ReplayLog && isDataLogReady() {
+		dataLogChan <- DataLogRow{tbl: "pong_update", data: m}
+	}
+}
+
 func logAISTermMessage(m AISTermMessage) {
 	if globalSettings.DEBUG && globalSettings.ReplayLog && isDataLogReady() {
 		dataLogChan <- DataLogRow{tbl: "ais_message", data: m}

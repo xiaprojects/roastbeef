@@ -32,7 +32,7 @@ cd $TMPDIR
 
 # Download/extract image
 wget -c $BASE_IMAGE_URL || die "Download failed"
-unxz -k $ZIPNAME || die "Extracting image failed"
+unxz -f -k $ZIPNAME || die "Extracting image failed"
 
 # Check where in the image the root partition begins:
 bootoffset=$(parted $IMGNAME unit B p | grep fat32 | awk -F ' ' '{print $2}')
@@ -42,7 +42,7 @@ partoffset=${partoffset::-1}
 
 # Original image partition is too small to hold our stuff.. resize it to 2.5gb
 # Append one GB and truncate to size
-truncate -s 3500M $IMGNAME || die "Image resize failed"
+truncate -s 4500M $IMGNAME || die "Image resize failed"
 lo=$(losetup -f)
 losetup $lo $IMGNAME
 partprobe $lo

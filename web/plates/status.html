@@ -16,6 +16,10 @@
 						<strong class="col-xs-5">Recent Clients:</strong>
 						<span class="col-xs-7">{{Connected_Users}}</span>
 					</div>
+					<div class="col-sm-6 label_adj" ng-class="{'secion_invisible': !visible_pong}">
+						<strong class="col-xs-5">Pong Heartbeats:</strong>
+						<span class="col-xs-7">{{Pong_Heartbeats}}</span>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 label_adj">
@@ -26,6 +30,11 @@
 						<strong class="col-xs-5">Ping device:</strong>
 						<span ng-show="Ping_connected == true" class="label label-success">Connected</span>
 						<span ng-hide="Ping_connected == true" class="label label-danger">Disconnected</span>
+					</div>
+					<div class="col-sm-6 label_adj" ng-class="{'section_invisible': !visible_pong}">
+						<strong class="col-xs-5">Pong device:</strong>
+						<span ng-show="Pong_connected == true" class="label label-success">Connected</span>
+						<span ng-hide="Pong_connected == true" class="label label-danger">Disconnected</span>
 					</div>
 				</div>
 				<div class="separator"></div>
@@ -70,7 +79,6 @@
 					</div></span>
 					<span class="col-xs-2 text-right">{{OGN_messages_max}}</span>
 				</div>
-				
 				<div class="row" ng-class="{'section_invisible': !visible_ogn}">
 					<span class="col-xs-1"></span>
 					<label class="col-xs-3">OGN Noise@Gain 50:<br/><sup>Half range for each 6 dB noise</sup></label>
@@ -165,6 +173,25 @@
 					<div class="col-sm-4 label_adj">
 						<span class="col-xs-5"><strong>Free Storage:</strong></span>
 						<span class="col-xs-7">{{DiskSpace}} MiB</span>
+					</div>
+				</div>
+				<div class="separator"></div>
+				<div class="row">
+					<div class="cols-sm-4 label_adj" ng-class="{'section_invisible': !visible_uat}">
+						<span class="col-xs-5"><strong>&nbsp;UAT Frames</strong></span>
+						<span class="col-xs-7">{{UAT_messages_total}}</span>
+					</div>
+					<div class="cols-sm-4 label_adj" ng-class="{'section_invisible': !visible_es}">
+						<span class="col-xs-5"><strong>&nbsp;ES Frames</strong></span>
+						<span class="col-xs-7">{{ES_messages_total}}</span>
+					</div>
+					<div class="cols-sm-4 label_adj" ng-class="{'section_invisible': !visible_ais}">
+						<span class="col-xs-5"><strong>&nbsp;AIS Frames</strong></span>
+						<span class="col-xs-7">{{AIS_messages_total}}</span>
+					</div>
+					<div class="cols-sm-4 label_adj" ng-class="{'section_invisible': !visible_ogn}">
+						<span class="col-xs-5"><strong>&nbsp;OGN Frames</strong></span>
+						<span class="col-xs-7">{{OGN_messages_total}}</span>
 					</div>
 				</div>
 			</div>

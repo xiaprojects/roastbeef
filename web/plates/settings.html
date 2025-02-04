@@ -14,7 +14,7 @@
                     </div>
                     <div class="form-group reset-flow">
                         <label class="control-label col-xs-3">G Limits</label>
-                        <form name="GLimitForm" ng-submit="updateGLimits()" novalidate>
+                        <form name="GLimitForm" ng-submit="updateGLimits()"  novalidate>
                             <input class="col-xs-9" type="text" g-limits-input ng-model="GLimits"
                                 ng-blur="updateGLimits()" ng-disabled="!IMU_Sensor_Enabled"
                                 ng-class="{grayout: !IMU_Sensor_Enabled}"
@@ -345,7 +345,7 @@
     <!-- End Right Col -->
 </div>
 <!-- Developer mode area -->
-<div ng-show="DeveloperMode" class="col-sm-12">
+<div ng-show="DeveloperMode" class="col-sm-12" >
     <!-- Begin Left Col -->
     <div class="col-sm-6">
         <!-- Hardware Settings -->
@@ -416,7 +416,14 @@
                     <div class="form-group reset-flow">
                         <label class="control-label col-xs-5">Ping ADS-B</label>
                         <div class="col-xs-7">
-                            <ui-switch ng-model='Ping_Enabled' settings-change></ui-switch>
+                            <ui-switch ng-model='Ping_Enabled' ng-disabled='Pong_Enabled' settings-change></ui-switch>
+                        </div>
+                    </div>
+
+                    <div class="form-group reset-flow">
+                        <label class="control-label col-xs-5">Pong ADS-B Receiver</label>
+                        <div class="col-xs-7">
+                            <ui-switch ng-model='Pong_Enabled' ng-disabled='Ping_Enabled' settings-change></ui-switch>
                         </div>
                     </div>
 
@@ -476,6 +483,24 @@
                             <ui-switch ng-model='PersistentLogging' ui-turn-on="modalRebootRequired" settings-change>
                             </ui-switch>
                         </div>
+                    </div>
+                    <div class="form-group" ng-show="Pong_Enabled">
+                        <label class="control-label col-xs-5">Pong Firmware Update<br /></label>
+                        <div class="col-xs-7">
+                            <input class="col-xs-7" type="file" id="pongfile" accept=".zip" onchange="angular.element(this).scope().setPongUploadFile(this.files)"
+                            placeholder="Pong Fimrware Update" />
+                        </div>
+                        <span ng-show="pong_update_files != '' && !pong_uploading_update">
+                            <!-- once selected, btn to upload -->
+                            <button class="btn btn-block" onclick="angular.element(this).scope().uploadPongFile()">
+                                Install {{pong_update_files[0].name}}</button>
+                        </span>
+                        <span ng-show="pong_update_files != '' && pong_uploading_update">
+                            <!-- "uploading.." -->
+                            <button class="btn btn-block">
+                                Uploading {{pong_update_files[0].name}}. Please wait...</button>
+                        </span>
+
                     </div>
                 </div>
             </div>
