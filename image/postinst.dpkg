@@ -1,9 +1,16 @@
 #!/bin/bash
 echo "Post install script for stratux is running.."
 systemctl daemon-reload
+
+echo "Enabling stratux"
 systemctl enable stratux
+
+echo "Enabling udev"
 systemctl restart udev
+
+echo "Starting stratux"
 systemctl start stratux
+
 # Raspberry Pi's have the config.txt so this is one way to determine if its a raspberry pi
 arch=$(uname -m)
 if  [ "$arch" == "aarch64" ]; then

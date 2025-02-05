@@ -39,6 +39,8 @@ import (
 
 	humanize "github.com/dustin/go-humanize"
 	"golang.org/x/net/websocket"
+
+	"github.com/stratux/stratux/common"
 )
 
 type SettingMessage struct {
@@ -782,6 +784,20 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
 		return
 	}
+
+	var temp_filename string
+	var upload_filename string
+
+	var base_dir string
+
+	if common.IsRunningAsRoot() {
+		base_dir = "/overlay/robase/root"
+	} else
+	{
+		base_dir = "."
+		log.Printf("not running as root, using base_dir of %s", base_dir)
+	}
+
 	for {
 		part, err := reader.NextPart();
 		if err != nil {
@@ -796,7 +812,10 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 			continue
 		}
 
-		fi, err := os.OpenFile("/overlay/robase/root/TMP_update-stratux-v.sh", os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
+		temp_filename = fmt.Sprintf("%s/TMP_%s", base_dir, part.FileName())
+		upload_filename = fmt.Sprintf("%s/%s", base_dir, part.FileName())
+
+		fi, err := os.OpenFile(temp_filename, os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
 		if err != nil {
 			log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
 			return
@@ -811,9 +830,8 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		break
 	}
 
-	
-	os.Rename("/overlay/robase/root/TMP_update-stratux-v.sh", "/overlay/robase/root/update-stratux-v.sh")
-	log.Printf("%s uploaded %s for update.\n", r.RemoteAddr, "/overlay/robase/root/update-stratux-v.sh")
+	os.Rename(temp_filename, upload_filename)
+	log.Printf("%s uploaded %s for update.\n", r.RemoteAddr, upload_filename)
 	overlayctl("disable")
 	// Successful update upload. Now reboot.
 	go delayReboot()
