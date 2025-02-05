@@ -27,18 +27,22 @@ else
 	OGN_RX_BINARY=ogn/ogn-rx-eu_arm
 endif
 
+GCC_VERSION := $(shell gcc -dumpversion | cut -f1 -d.)
+ifeq ($(shell test $(GCC_VERSION) -ge 14; echo $$?),0)
+	DUMP1090_CFLAGS += "-Wno-error=calloc-transposed-args"
+endif
 
 
-all: libdump978.so xdump1090 xrtlais gen_gdl90 $(PLATFORMDEPENDENT)
+all: libdump978.so xdump1090 xrtlais stratuxrun $(PLATFORMDEPENDENT)
 
-gen_gdl90: main/*.go common/*.go libdump978.so
-	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o gen_gdl90 -p 4 ./main/
+stratuxrun: main/*.go common/*.go libdump978.so
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o stratuxrun -p 4 ./main/
 
 fancontrol: fancontrol_main/*.go common/*.go
 	go build $(BUILDINFO) -o fancontrol -p 4 ./fancontrol_main/
 
 xdump1090:
-	cd dump1090 && make BLADERF=no
+	cd dump1090 && CFLAGS=$(DUMP1090_CFLAGS) make BLADERF=no
 
 libdump978.so: dump978/*.c dump978/*.h
 	cd dump978 && make lib
@@ -68,7 +72,7 @@ optinstall: www ogn/ddb.json
 	chmod a+rwx $(STRATUX_HOME)/mapdata # so users can upload their stuff as user pi
 
 	# binaries
-	cp -f gen_gdl90 $(STRATUX_HOME)/bin/
+	cp -f stratuxrun $(STRATUX_HOME)/bin/
 	cp -f fancontrol $(STRATUX_HOME)/bin/
 	cp -f dump1090/dump1090 $(STRATUX_HOME)/bin
 	cp -f rtl-ais/rtl_ais $(STRATUX_HOME)/bin
@@ -103,7 +107,7 @@ install: optinstall
 	# System configuration
 	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
 	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
-
+	cp image/99-pong.rules /etc/udev/rules.d/99-pong.rules
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
@@ -178,7 +182,7 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-EU.deb
 	
 clean:
-	rm -f gen_gdl90 libdump978.so fancontrol ahrs_approx *.deb
+	rm -f stratuxrun libdump978.so fancontrol ahrs_approx *.deb
 	cd dump1090 && make clean
 	cd dump978 && make clean
 	cd rtl-ais && make clean

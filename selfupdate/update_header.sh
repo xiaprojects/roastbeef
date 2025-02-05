@@ -45,6 +45,7 @@ cp -f rtl-sdr-blacklist.conf /etc/modprobe.d/
 #udev config
 cp -f 10-stratux.rules /etc/udev/rules.d
 cp -f 99-uavionix.rules /etc/udev/rules.d
+cp -f 99-pong.rules /etc/udev/rules.d
 
 #go setup
 cp -f bashrc.txt /root/.bashrc
@@ -66,7 +67,7 @@ systemctl disable apt-daily-upgrade.timer
 
 
 # Rewrite network settings to make sure the format is up to date for next boot
-/opt/stratux/bin/gen_gdl90 -write-network-config
+/opt/stratux/bin/stratuxrun -write-network-config
 
 # Add optional usb stick mount if it's not already there
 if [ "$(grep /dev/sda1 /etc/fstab)" = "" ]; then

@@ -44,6 +44,8 @@ function DeveloperCtrl($rootScope, $scope, $state, $http, $interval) {
 			$scope.Build = status.Build.substr(0, 10);
 			$scope.Devices = status.Devices;
 			$scope.Ping_connected = status.Ping_connected;
+			$scope.Pong_connected = status.Pong_connected;
+			$scope.Pong_Heartbeats = status.Pong_Heartbeats;
 			$scope.Connected_Users = status.Connected_Users;
 			$scope.UAT_messages_last_minute = status.UAT_messages_last_minute;
 			$scope.UAT_messages_max = status.UAT_messages_max;

@@ -46,8 +46,8 @@ var logDirf string      // Directory for all logging
 var dataLogFilef string // Set according to OS config.
 
 const (
-	STRATUX_HOME  = "/opt/stratux/"
-	managementAddr = ":80"
+	STRATUX_HOME  = "/opt/stratux"
+	defaultManagementAddr = 80
 	logDir         = "/var/log/"
 	dataLogFile    = "stratux.sqlite"
 	//FlightBox: log to /root.
@@ -96,7 +96,7 @@ const (
 	// This is somewhat ugly but difficult to change without breaking backward compatibility
 
 	// lower nibble gps type   (dont forget to use only numbers form 0 to 15)
-	
+
 	GPS_TYPE_ANY        = 1		// Any generic GPS - no reconfiguring applied
 	GPS_TYPE_PROLIFIC   = 2
 	GPS_TYPE_OGNTRACKER = 3
@@ -127,6 +127,7 @@ var maxSignalStrength int
 
 var stratuxBuild string
 var stratuxVersion string
+var ManagementAddr = 0
 
 var product_name_map = map[int]string{
 	0:   "METAR",
@@ -218,7 +219,7 @@ type msg struct {
 var msgLog []msg
 var msgLogMutex sync.Mutex
 
-// Time gen_gdl90 was started.
+// Time stratuxrun was started.
 var timeStarted time.Time
 
 type ADSBTower struct {
@@ -579,6 +580,11 @@ func makeStratuxStatus() []byte {
 
 	// Ping provides ES and UAT
 	if globalSettings.Ping_Enabled {
+		msg[13] = msg[13] | (1 << 5) | (1 << 6)
+	}
+
+	// Pong provides ES and UAT
+	if globalSettings.Pong_Enabled {
 		msg[13] = msg[13] | (1 << 5) | (1 << 6)
 	}
 
@@ -1057,6 +1063,7 @@ func parseInput(buf string) ([]byte, uint16) {
 	if len(s) == 0 {
 		return nil, 0
 	}
+	globalStatus.UAT_messages_total++
 	msgtype := uint16(0)
 	isUplink := false
 
@@ -1086,10 +1093,14 @@ func parseInput(buf string) ([]byte, uint16) {
 	if s[0] == '-' {
 		parseDownlinkReport(s, int(thisSignalStrength))
 	}
-
 	s = s[1:]
 	msglen := len(s) / 2
-
+	if msglen != UPLINK_FRAME_DATA_BYTES && isUplink {
+		difference := UPLINK_FRAME_DATA_BYTES - msglen
+		//s = append(s,strings.Repeat("00",difference))
+		s = s + strings.Repeat("00",difference)
+		msglen = len(s) / 2
+	}
 	if len(s)%2 != 0 { // Bad format.
 		return nil, 0
 	}
@@ -1175,6 +1186,7 @@ type settings struct {
 	APRS_Enabled         bool
 	AIS_Enabled          bool
 	Ping_Enabled         bool
+	Pong_Enabled         bool
 	GPS_Enabled          bool
 	BMP_Sensor_Enabled   bool
 	IMU_Sensor_Enabled   bool
@@ -1244,18 +1256,23 @@ type status struct {
 	DiskBytesFree                              uint64
 	UAT_messages_last_minute                   uint
 	UAT_messages_max                           uint
+	UAT_messages_total                         uint64
 	ES_messages_last_minute                    uint
 	ES_messages_max                            uint
+	ES_messages_total                          uint64
 	OGN_messages_last_minute                   uint
 	OGN_messages_max                           uint
+	OGN_messages_total                         uint64
 	OGN_connected                              bool
-	APRS_connected                              bool
+	APRS_connected                             bool
 	AIS_messages_last_minute                   uint
 	AIS_messages_max                           uint
+	AIS_messages_total                         uint64
 	AIS_connected                              bool
 	UAT_traffic_targets_tracking               uint16
 	ES_traffic_targets_tracking                uint16
 	Ping_connected                             bool
+	Pong_connected                             bool
 	UATRadio_connected                         bool
 	GPS_satellites_locked                      uint16
 	GPS_satellites_seen                        uint16
@@ -1292,6 +1309,7 @@ type status struct {
 	OGN_tx_enabled                             bool // If ogn-rx-eu uses a local tx module for transmission
 
 	OGNPrevRandomAddr                          string    // when OGN is in random stealth mode, it's ID changes randomly - keep the previous one so we can filter properly
+	Pong_Heartbeats                            int64     // Pong heartbeat counter
 }
 
 var globalSettings settings
@@ -1509,7 +1527,7 @@ func printStats() {
 		log.Printf("stats [started: %s]\n", humanize.RelTime(time.Time{}, stratuxClock.Time, "ago", "from now"))
 		log.Printf(" - Disk bytes used = %s (%.1f %%), Disk bytes free = %s (%.1f %%)\n", humanize.Bytes(usage.Used()), 100*usage.Usage(), humanize.Bytes(usage.Free()), 100*(1-usage.Usage()))
 		log.Printf(" - CPUTemp=%.02f [%.02f - %.02f] deg C, MemStats.Alloc=%s, MemStats.Sys=%s, totalNetworkMessagesSent=%s\n", globalStatus.CPUTemp, globalStatus.CPUTempMin, globalStatus.CPUTempMax, humanize.Bytes(uint64(memstats.Alloc)), humanize.Bytes(uint64(memstats.Sys)), humanize.Comma(int64(totalNetworkMessagesSent)))
-		log.Printf(" - UAT/min %s/%s [maxSS=%.02f%%], ES/min %s/%s, Total traffic targets tracked=%s", humanize.Comma(int64(globalStatus.UAT_messages_last_minute)), humanize.Comma(int64(globalStatus.UAT_messages_max)), float64(maxSignalStrength)/10.0, humanize.Comma(int64(globalStatus.ES_messages_last_minute)), humanize.Comma(int64(globalStatus.ES_messages_max)), humanize.Comma(int64(len(seenTraffic))))
+		log.Printf(" - UAT/min/total %s/%s/%s [maxSS=%.02f%%], ES/min/total %s/%s/%s, Total traffic targets tracked=%s", humanize.Comma(int64(globalStatus.UAT_messages_last_minute)), humanize.Comma(int64(globalStatus.UAT_messages_max)), humanize.Comma(int64(globalStatus.UAT_messages_total)), float64(maxSignalStrength)/10.0, humanize.Comma(int64(globalStatus.ES_messages_last_minute)), humanize.Comma(int64(globalStatus.ES_messages_max)), humanize.Comma(int64(globalStatus.ES_messages_total)),humanize.Comma(int64(len(seenTraffic))))
 		log.Printf(" - Network data messages sent: %d total.  Network data bytes sent: %d total.\n", globalStatus.NetworkDataMessagesSent, globalStatus.NetworkDataBytesSent)
 		if globalSettings.GPS_Enabled {
 			log.Printf(" - Last GPS fix: %s, GPS solution type: %d using %d satellites (%d/%d seen/tracked), NACp: %d, est accuracy %.02f m\n", stratuxClock.HumanizeTime(mySituation.GPSLastFixLocalTime), mySituation.GPSFixQuality, mySituation.GPSSatellites, mySituation.GPSSatellitesSeen, mySituation.GPSSatellitesTracked, mySituation.GPSNACp, mySituation.GPSHorizontalAccuracy)
@@ -1608,6 +1626,7 @@ func gracefulShutdown() {
 	// Shut down SDRs.
 	sdrKill()
 	pingKill()
+	pongKill()
 
 	// Shut down data logging.
 	if dataLogStarted {
@@ -1711,11 +1730,13 @@ func main() {
 	traceReplaySpeed := flag.Float64("traceSpeed", 1.0, "Trace replay speed multiplier")
 	traceReplayFilter := flag.String("traceFilter", "", "Filter trace data by context. Comma separated list of: ais,nmea,aprs,ogn-rx,dump1090,godump978,lowpower_uat")
 	traceSkip := flag.Int64("traceSkip", 0, "Minutes to skip forward in recorded trace")
-	
+	ManagementAddrTmp := flag.Int("port", defaultManagementAddr, "Specify the port to use")
 
 	cpuprofile := flag.String("cpuprofile", "", "write cpu profile to file")
 
 	flag.Parse()
+
+	ManagementAddr = *ManagementAddrTmp
 	isTraceReplayMode := *traceReplay != ""
 
 	timeStarted = time.Now()
@@ -1763,6 +1784,7 @@ func main() {
 	if !isTraceReplayMode {
 		sdrInit()
 		pingInit()
+		pongInit()
 	}
 	initTraffic(isTraceReplayMode)
 

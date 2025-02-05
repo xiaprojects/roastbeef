@@ -38,7 +38,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/stratux/stratux/common"
 	"golang.org/x/net/websocket"
 )
 
@@ -74,7 +73,6 @@ func NewMbTileConnectionCacheEntry(path string, conn *sql.DB) *MbTileConnectionC
 
 var mbtileCacheLock = sync.Mutex{}
 var mbtileConnectionCache = make(map[string]MbTileConnectionCacheEntry)
-
 
 // Weather updates channel.
 var weatherUpdate *uibroadcaster
@@ -356,6 +354,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.APRS_Enabled = val.(bool)
 					case "Ping_Enabled":
 						globalSettings.Ping_Enabled = val.(bool)
+					case "Pong_Enabled":
+						globalSettings.Pong_Enabled = val.(bool)
 					case "OGNI2CTXEnabled":
 						globalSettings.OGNI2CTXEnabled = val.(bool)
 					case "GPS_Enabled":
@@ -819,6 +819,38 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	go delayReboot()
 }
 
+// Upload an update file for Pong
+func handlePongUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	log.Printf("request: %s\n",r.URL.RequestURI())
+	err := r.ParseMultipartForm(8 << 20)
+	if err != nil {
+		log.Printf("Step 1 Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
+		return
+	}
+	file, _, err := r.FormFile("pong_update_file")
+	if err != nil {
+		log.Printf("FormFile returned error %s\n", err.Error())
+		return
+	}
+	fi, err := os.OpenFile("/tmp/update_pong.zip",os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
+	if err != nil {
+		log.Printf("Cannot open file for saving (%s)\n", err.Error())
+		return
+	}
+	defer fi.Close()
+	_, err = io.Copy(fi, file)
+	if err != nil {
+		log.Printf("Could not copy file (%s)\n", err.Error())
+		return
+	}
+	log.Printf("Set update mode flag to signal Pong to run the update\n")
+	pongSetUpdateMode();
+
+	file.Close()
+}
+
 func setNoCache(w http.ResponseWriter) {
 	w.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
 	w.Header().Set("Pragma", "no-cache")
@@ -1180,6 +1212,7 @@ func managementInterface() {
 	http.HandleFunc("/reboot", handleRebootRequest)
 	http.HandleFunc("/getClients", handleClientsGetRequest)
 	http.HandleFunc("/updateUpload", handleUpdatePostRequest)
+	http.HandleFunc("/updatePong", handlePongUpdatePostRequest)
 	http.HandleFunc("/roPartitionRebuild", handleroPartitionRebuild)
 	http.HandleFunc("/develmodetoggle", handleDevelModeToggle)
 	http.HandleFunc("/orientAHRS", handleOrientAHRS)
@@ -1194,15 +1227,10 @@ func managementInterface() {
 	http.HandleFunc("/tiles/tilesets", handleTilesets)
 	http.HandleFunc("/tiles/", handleTile)
 
-	var addr string
-	if common.IsRunningAsRoot() {
-		addr = managementAddr
-	} else {
-		addr = ":8000" // Make sure we can run without root priviledges on different port
-	}
 
-	log.Printf("web configuration console on port %s", addr);
-	if err :=http.ListenAndServe(addr, nil); err != nil {
+	addr := fmt.Sprintf(":%d", ManagementAddr)
+  log.Printf("web configuration console on port %s", addr);
+	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Printf("managementInterface ListenAndServe: %s\n", err.Error())
 	}
 }

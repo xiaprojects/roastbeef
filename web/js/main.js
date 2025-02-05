@@ -21,6 +21,7 @@ var URL_SHUTDOWN            = URL_HOST_PROTOCOL + URL_HOST_BASE + "/shutdown";
 var URL_STATUS_GET          = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getStatus";
 var URL_TOWERS_GET          = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getTowers";
 var URL_UPDATE_UPLOAD       = URL_HOST_PROTOCOL + URL_HOST_BASE + "/updateUpload";
+var URL_UPDATE_PONG         = URL_HOST_PROTOCOL + URL_HOST_BASE + "/updatePong";
 var URL_GET_SITUATION       = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getSituation";
 var URL_GET_TILESETS        = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles/tilesets";
 var URL_GET_TILE            = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles";
@@ -121,6 +122,8 @@ app.controller('MainCtrl', function ($scope, $http) {
 			var settings = angular.fromJson(response.data);
             $scope.DeveloperMode = settings.DeveloperMode;
             $scope.UAT_Enabled = settings.UAT_Enabled;
+            $scope.Ping_Enabled = settings.Ping_Enabled;
+            $scope.Pong_Enabled = settings.Pong_Enabled;
 
             // Update theme
             $scope.updateTheme(settings.DarkMode);
@@ -144,9 +147,10 @@ app.controller('MainCtrl', function ($scope, $http) {
 .service('craftService',function(){ 
 	let trafficSourceColors = {
 		1: 'cornflowerblue', // ES
-		2: 'darkkhaki',      // UAT
+		2: '#FF8C00',      // UAT
 		4: 'green',          // OGN
-		5: '#0077be'         // AIS
+		5: '#0077be',         // AIS
+		6: 'darkkhaki'     // UAT bar color
 	}
 
 	const getTrafficSourceColor = (source) => {
@@ -166,11 +170,11 @@ app.controller('MainCtrl', function ($scope, $http) {
 		13: 'skyblue',
 		14: 'skyblue',
 
-		20: 'darkkhaki',
-		21: 'darkkhaki',
-		22: 'khaki',
-		23: 'khaki',
-		24: 'khaki',
+		20: 'darkorange',
+		21: 'darkorange',
+		22: 'orange',
+		23: 'orange',
+		24: 'orange',
 
 		40: 'green',
 		41: 'green',

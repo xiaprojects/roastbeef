@@ -646,6 +646,13 @@ func New(buf string) (*UATMsg, error) {
 		}
 	}
 	s := x[0]
+	msglen := len(s) / 2
+	if msglen != UPLINK_FRAME_DATA_BYTES {
+		difference := UPLINK_FRAME_DATA_BYTES - msglen
+		//s = append(s,strings.Repeat("00",difference))
+		s = s + strings.Repeat("00",difference)
+		msglen = len(s) / 2
+	}
 
 	// Only want "long" uplink messages.
 	if (len(s)-1)%2 != 0 || (len(s)-1)/2 != UPLINK_FRAME_DATA_BYTES {
