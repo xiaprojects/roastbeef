@@ -40,7 +40,7 @@ if [ -e ${TEMP_SCRIPT_LOCATION} ]; then
 fi
 
 # script based update to apply
-if [ -e ${UPDATE_LOCATION} ]; then
+if [ -e ${SCRIPT_UPDATE_LOCATION} ]; then
 	UPDATE_SCRIPT_FILE=`ls -1t ${SCRIPT_UPDATE_LOCATION} | head -1`
 	if [ -n ${UPDATE_SCRIPT_FILE} ] ; then
 		# Execute the script, remove it, then reboot.
@@ -66,8 +66,8 @@ if [ -e ${TEMP_PACKAGE_LOCATION} ]; then
 	rm -rf ${TEMP_PACKAGE_FILE}
 fi
 
-# package based packageate to apply
-if [ -e ${UPDATE_LOCATION} ]; then
+# package based update to apply
+if [ -e ${PACKAGE_UPDATE_LOCATION} ]; then
 	UPDATE_PACKAGE_FILE=`ls -1t ${PACKAGE_UPDATE_LOCATION} | head -1`
 	if [ -n ${UPDATE_PACKAGE_FILE} ] ; then
 		# Install the new packagepackage, remove it, then reboot.
