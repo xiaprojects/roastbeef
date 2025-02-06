@@ -26,14 +26,8 @@ jobs:
       - name: Update submodule
         run: git submodule update --init --recursive
 
-      - name: Install dependencies
-        run: sudo apt-get install -y librtlsdr-dev
-
-      - name: make
-        run: make
-
-      - name: make dpkg
-        run: make dpkg
+      - name: make ddpkg
+        run: make ddpkg
 
       - uses: actions/upload-artifact@v4
         with:
