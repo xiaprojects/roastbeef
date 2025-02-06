@@ -6,7 +6,7 @@
 
 	---
 	gps.go: GPS functions, GPS init, AHRS status messages, other external sensor monitoring.
-	compile and install: clear && make www && make gen_gdl90 && mv gen_gdl90 /opt/stratux/bin/ && stxrestart
+	compile and install: clear && make www && make stratuxrun && mv stratuxrun /opt/stratux/bin/ && stxrestart
 */
 
 package main

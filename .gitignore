@@ -3,6 +3,7 @@ dump978/extract_nexrad
 dump978/uat2esnt
 dump978/uat2json
 dump978/uat2text
+stratuxrun
 gen_gdl90
 libdump978.so
 fancontrol
@@ -11,6 +12,8 @@ ogn/esp-idf
 ogn/esp32-ogn-tracker
 
 *.mp4
+
+*.deb
 
 *.img
 

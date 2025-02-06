@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Running pre-installation script and stopping the stratux service"
+# Raspberry Pi's have the config.txt so this is one way to determine if its a raspberry pi
+arch=$(uname -m)
+if  [ "$arch" == "aarch64" ]; then
+	if [ -f "/boot/firmware/config.txt" ]; then
+		# check to see if we are running the 'new' fancontrol
+		if [ -f "/lib/systemd/system/stratux_fancontrol.service" ]; then
+			systemctl stop stratux_fancontrol 2>/dev/null || true
+		else
+			/opt/stratux/bin/fancontrol stop 2>/dev/null || true
+			/opt/stratux/bin/fancontrol remove 2>/dev/null || true
+		fi
+	fi
+fi
+
+# Example: Stop the stratux service before installing a new version
+echo "Stopping stratux before installing the new version"
+systemctl stop stratux 2>/dev/null || true
+exit 0

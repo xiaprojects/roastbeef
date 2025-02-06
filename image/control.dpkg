@@ -1,0 +1,8 @@
+Package: stratux
+Version: VERSION
+Section: utils
+Priority: optional
+Architecture: ARCH
+Maintainer: Admin admin@stratux.me
+Vcs-Git: git@github.com:stratux/stratux.git
+Description: A low cost ADS-B receivers for pilots.
