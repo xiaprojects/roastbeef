@@ -31,7 +31,7 @@ endif
 all: libdump978.so xdump1090 xrtlais stratuxrun $(PLATFORMDEPENDENT)
 
 stratuxrun: main/*.go common/*.go libdump978.so
-	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o stratuxrun -p 4 ./main/
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o stratuxrun ./main/
 
 fancontrol: fancontrol_main/*.go common/*.go
 	go build $(BUILDINFO) -o fancontrol -p 4 ./fancontrol_main/
