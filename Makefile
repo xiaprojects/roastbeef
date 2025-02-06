@@ -153,6 +153,7 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Copy the udev rules to the dpkg environment
 	cp -f image/10-stratux.rules $(DEBPKG_BASE)/etc/udev/rules.d/10-stratux.rules
 	cp -f image/99-uavionix.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-uavionix.rules
+	cp -f image/99-pong.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-pong.rules
 	# Copy the systemd scripts to the dpkg environment
 	cp __lib__systemd__system__stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
