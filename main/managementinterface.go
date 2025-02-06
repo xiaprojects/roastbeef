@@ -2180,7 +2180,7 @@ func managementInterface() {
 	var addr string
 	var addrTls string
 	if common.IsRunningAsRoot() {
-		addr = managementAddr
+		addr = fmt.Sprintf(":%d", ManagementAddr)
 		addrTls = ":443"
 	} else {
 		addr = ":8000" // Make sure we can run without root priviledges on different port

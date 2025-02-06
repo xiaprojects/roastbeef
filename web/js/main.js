@@ -56,6 +56,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('home', {
 			url: '/',
+			templateUrl: globalInterfaceSettings.HomePage,
+			controller: globalInterfaceSettings.HomePageController,
+			reloadOnSearch: false
+		})
+		.state('status', {
+			url: '/status',
 			templateUrl: 'plates/status.html',
 			controller: 'StatusCtrl',
 			reloadOnSearch: false
@@ -64,6 +70,60 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			url: '/cockpit',
 			templateUrl: 'plates/cockpit.html',
 			controller: 'CockpitCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundview', {
+			url: '/roundview',
+			templateUrl: 'plates/roundview.html',
+			controller: 'RoundViewCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundviewaltimeter', {
+			url: '/roundviewaltimeter',
+			templateUrl: 'plates/round-altimeter.html',
+			controller: 'RoundAltimeterCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundviewattitude', {
+			url: '/roundviewattitude',
+			templateUrl: 'plates/round-attitude.html',
+			controller: 'RoundAttitudeCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundviewspeed', {
+			url: '/roundviewspeed',
+			templateUrl: 'plates/round-speed.html',
+			controller: 'RoundSpeedCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundviewvariometer', {
+			url: '/roundviewvariometer',
+			templateUrl: 'plates/round-variometer.html',
+			controller: 'RoundVariometerCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundviewgyro', {
+			url: '/roundviewgyro',
+			templateUrl: 'plates/round-gyro.html',
+			controller: 'RoundGyroCtrl',
+			reloadOnSearch: false
+		})
+		.state('roundviewball', {
+			url: '/roundviewball',
+			templateUrl: 'plates/round-ball.html',
+			controller: 'RoundBallCtrl',
+			reloadOnSearch: false
+		})
+		.state('airfields', {
+			url: '/airfields',
+			templateUrl: 'plates/airfields.html',
+			controller: 'AirfieldsCtrl',
+			reloadOnSearch: false
+		})
+		.state('resources', {
+			url: '/resources',
+			templateUrl: 'plates/resources.html',
+			controller: 'ResourcesCtrl',
 			reloadOnSearch: false
 		})
 		.state('towers', {
@@ -223,6 +283,7 @@ app.controller('MainCtrl', function ($scope, $http) {
 			$scope.keypad = new KeypadService($scope,response);
             	}
             }
+			$scope.situationService = new SituationService($scope, $http);
 			// Plugins: Alerts Service
 			$scope.Alerts_Enabled= true;
 			if($scope.Alerts_Enabled==true){

@@ -59,11 +59,13 @@ func initPongSerial() bool {
 		log.Printf("Error opening serial port: %s\n", err.Error())
 		return false
 	}
+	/*
+	main/pong.go:62:14: p.ClearRTS undefined (type *"github.com/stratux/serial".Port has no field or method ClearRTS)
 	errRts := p.ClearRTS()
 	if errRts != nil {
 		log.Printf("Clearing RTS returned %s\n", errRts.Error())
 	}
-
+	*/
 	log.Printf("Pong opened serial port at %d baud\n",baudrate)
 
 	// No device configuration is needed, we should be ready
