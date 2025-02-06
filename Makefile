@@ -4,15 +4,10 @@ export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
 VERSIONSTR := $(shell ./image/getversion.sh)
 THISARCH = $(shell ./image/getarch.sh)
 
-ifeq "$(CIRCLECI)" "true"
-	BUILDINFO=
-	PLATFORMDEPENDENT=
-else
-	LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`  
-	BUILDINFO=-ldflags "$(LFLAGS)"
-	BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
-	PLATFORMDEPENDENT=fancontrol
-endif
+LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`  
+BUILDINFO=-ldflags "$(LFLAGS)"
+BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
+PLATFORMDEPENDENT=fancontrol
 
 ifeq ($(debug),true)
 	BUILDINFO := -gcflags '-N -l' $(BUILDINFO)
