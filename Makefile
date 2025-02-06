@@ -4,7 +4,7 @@ export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
 VERSIONSTR := $(shell ./image/getversion.sh)
 THISARCH = $(shell ./image/getarch.sh)
 
-LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`  
+LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`
 BUILDINFO=-ldflags "$(LFLAGS)"
 BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
 PLATFORMDEPENDENT=fancontrol
@@ -106,7 +106,7 @@ install: optinstall
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
-	
+
 	cp image/stratux_fancontrol.service  /lib/systemd/system/stratux_fancontrol.service
 	chmod 644 /lib/systemd/system/stratux_fancontrol.service
 	ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
@@ -162,8 +162,8 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Set permissions of the scripts for dpkg
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/control
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/preinst
-	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst	
-	chmod 755 $(DEBPKG_BASE)/DEBIAN/prerm	
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/prerm
 	# Create the default US settings for the config default
 	echo '{"UAT_Enabled": true,"OGN_Enabled": false,"DeveloperMode": false}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
 	# Create the debian package for US
@@ -176,7 +176,7 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	dpkg-deb -b $(DEBPKG_BASE)
 	# Rename the file and move it to the base directory. Include the arch in the name
 	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-EU.deb
-	
+
 clean:
 	rm -f stratuxrun libdump978.so fancontrol ahrs_approx *.deb
 	cd dump1090 && make clean
