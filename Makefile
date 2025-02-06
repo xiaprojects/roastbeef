@@ -130,7 +130,7 @@ wwwdpkg:
 optinstall_dpkg:  STRATUX_HOME=$(DEBPKG_HOME)
 optinstall_dpkg: optinstall
 
-dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
+dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Copy the control script to DEBIAN directory
 	cp -f image/control.dpkg $(DEBPKG_BASE)/DEBIAN/control
 	# Copy the configuration  file list to DEBIAN directory
