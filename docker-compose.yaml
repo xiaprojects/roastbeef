@@ -1,0 +1,21 @@
+# Start the cli with:
+# MY_UID="$(id -u)" MY_GID="$(id -g)" docker compose run --service-ports --rm cli
+
+services:
+  cli:
+    image: stratux_debian
+    environment:
+      GOCACHE: "/tmp/go-cache"
+      GOMODCACHE: "/tmp/go/pkg/mod"
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+    entrypoint: /bin/bash
+    user: ${MY_UID}:${MY_GID}
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - type: bind
+        source: ./
+        target: /data
+    ports:
+      - "8000:8000"
