@@ -2,23 +2,17 @@ export STRATUX_HOME := /opt/stratux/
 export DEBPKG_BASE := /tmp/dpkg-stratux/stratux
 export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
 VERSIONSTR := $(shell ./image/getversion.sh)
-THISARCH = $(shell ./image/getarch.sh)
+ARCH = $(shell ./image/getarch.sh)
 
-ifeq "$(CIRCLECI)" "true"
-	BUILDINFO=
-	PLATFORMDEPENDENT=
-else
-	LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`  
-	BUILDINFO=-ldflags "$(LFLAGS)"
-	BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
-	PLATFORMDEPENDENT=fancontrol
-endif
+LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`
+BUILDINFO=-ldflags "$(LFLAGS)"
+BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
+PLATFORMDEPENDENT=fancontrol
 
 ifeq ($(debug),true)
 	BUILDINFO := -gcflags '-N -l' $(BUILDINFO)
 endif
 
-ARCH=$(shell arch)
 ifeq ($(ARCH),aarch64)
 	OGN_RX_BINARY=ogn/ogn-rx-eu_aarch64
 else ifeq ($(ARCH),x86_64)
@@ -36,7 +30,7 @@ endif
 all: libdump978.so xdump1090 xrtlais stratuxrun $(PLATFORMDEPENDENT)
 
 stratuxrun: main/*.go common/*.go libdump978.so
-	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o stratuxrun -p 4 ./main/
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o stratuxrun ./main/
 
 fancontrol: fancontrol_main/*.go common/*.go
 	go build $(BUILDINFO) -o fancontrol -p 4 ./fancontrol_main/
@@ -111,7 +105,7 @@ install: optinstall
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
-	
+
 	cp image/stratux_fancontrol.service  /lib/systemd/system/stratux_fancontrol.service
 	chmod 644 /lib/systemd/system/stratux_fancontrol.service
 	ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
@@ -136,7 +130,7 @@ wwwdpkg:
 optinstall_dpkg:  STRATUX_HOME=$(DEBPKG_HOME)
 optinstall_dpkg: optinstall
 
-dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
+dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Copy the control script to DEBIAN directory
 	cp -f image/control.dpkg $(DEBPKG_BASE)/DEBIAN/control
 	# Copy the configuration  file list to DEBIAN directory
@@ -163,25 +157,25 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Set up the versioning inside of the dpkg system. This puts the version number inside of the config file
 	sed -i 's/VERSION/$(VERSIONSTR)/g' $(DEBPKG_BASE)/DEBIAN/control
 	# set up the arch inside of the dpkg System. We have to use a script because x86_64 is arm64, aarch64 is arm64, etc.
-	sed -i 's/ARCH/$(THISARCH)/g' $(DEBPKG_BASE)/DEBIAN/control
+	sed -i 's/ARCH/$(ARCH)/g' $(DEBPKG_BASE)/DEBIAN/control
 	# Set permissions of the scripts for dpkg
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/control
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/preinst
-	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst	
-	chmod 755 $(DEBPKG_BASE)/DEBIAN/prerm	
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/prerm
 	# Create the default US settings for the config default
 	echo '{"UAT_Enabled": true,"OGN_Enabled": false,"DeveloperMode": false}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
 	# Create the debian package for US
 	dpkg-deb -b $(DEBPKG_BASE)
 	# Rename the file and move it to the base directory. Include the arch in the name
-	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-US.deb
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(ARCH)-US.deb
 	#Ceate the default EU settings for the config default
 	echo '{"OGN_Enabled": true, "DeveloperMode": true}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
 	# Create the debian package for EU
 	dpkg-deb -b $(DEBPKG_BASE)
 	# Rename the file and move it to the base directory. Include the arch in the name
-	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-EU.deb
-	
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(ARCH)-EU.deb
+
 clean:
 	rm -f stratuxrun libdump978.so fancontrol ahrs_approx *.deb
 	cd dump1090 && make clean
