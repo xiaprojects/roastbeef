@@ -1,9 +1,14 @@
 export STRATUX_HOME := /opt/stratux/
+export DEBPKG_BASE := /tmp/dpkg-stratux/stratux
+export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
+VERSIONSTR := $(shell ./image/getversion.sh)
+THISARCH = $(shell ./image/getarch.sh)
+
 ifeq "$(CIRCLECI)" "true"
 	BUILDINFO=
 	PLATFORMDEPENDENT=
 else
-	LFLAGS=-X main.stratuxVersion=`git describe --tags --abbrev=0` -X main.stratuxBuild=`git log -n 1 --pretty=%H`  
+	LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`  
 	BUILDINFO=-ldflags "$(LFLAGS)"
 	BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
 	PLATFORMDEPENDENT=fancontrol
@@ -28,10 +33,10 @@ ifeq ($(shell test $(GCC_VERSION) -ge 14; echo $$?),0)
 endif
 
 
-all: libdump978.so xdump1090 xrtlais gen_gdl90 $(PLATFORMDEPENDENT)
+all: libdump978.so xdump1090 xrtlais stratuxrun $(PLATFORMDEPENDENT)
 
-gen_gdl90: main/*.go common/*.go libdump978.so
-	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o gen_gdl90 -p 4 ./main/
+stratuxrun: main/*.go common/*.go libdump978.so
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go build $(BUILDINFO) -o stratuxrun -p 4 ./main/
 
 fancontrol: fancontrol_main/*.go common/*.go
 	go build $(BUILDINFO) -o fancontrol -p 4 ./fancontrol_main/
@@ -67,7 +72,7 @@ optinstall: www ogn/ddb.json
 	chmod a+rwx $(STRATUX_HOME)/mapdata # so users can upload their stuff as user pi
 
 	# binaries
-	cp -f gen_gdl90 $(STRATUX_HOME)/bin/
+	cp -f stratuxrun $(STRATUX_HOME)/bin/
 	cp -f fancontrol $(STRATUX_HOME)/bin/
 	cp -f dump1090/dump1090 $(STRATUX_HOME)/bin
 	cp -f rtl-ais/rtl_ais $(STRATUX_HOME)/bin
@@ -102,18 +107,83 @@ install: optinstall
 	# System configuration
 	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
 	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
-
+	cp image/99-pong.rules /etc/udev/rules.d/99-pong.rules
 	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
-
+	
 	cp image/stratux_fancontrol.service  /lib/systemd/system/stratux_fancontrol.service
 	chmod 644 /lib/systemd/system/stratux_fancontrol.service
 	ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
 
+#
+# Debian package related targets below
+#
 
+.PHONY: prep_dpkg
+prep_dpkg:
+	rm -rf $(DEBPKG_BASE)
+	mkdir -p $(DEBPKG_BASE)
+	mkdir $(DEBPKG_BASE)/DEBIAN
+
+.PHONY: wwwdpkg
+wwwdpkg: STRATUX_HOME=$(DEBPKG_HOME)
+wwwdpkg:
+	make -C web
+
+.PHONY: optinstall_dpkg
+
+optinstall_dpkg:  STRATUX_HOME=$(DEBPKG_HOME)
+optinstall_dpkg: optinstall
+
+dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
+	# Copy the control script to DEBIAN directory
+	cp -f image/control.dpkg $(DEBPKG_BASE)/DEBIAN/control
+	# Copy the configuration  file list to DEBIAN directory
+	cp -f image/conffiles.dpkg $(DEBPKG_BASE)/DEBIAN/conffiles
+	# Copy the preinstall script to DEBIAN directory
+	cp -f image/preinst.dpkg $(DEBPKG_BASE)/DEBIAN/preinst
+	# Copy the preinstall script to DEBIAN directory
+	cp -f image/postinst.dpkg $(DEBPKG_BASE)/DEBIAN/postinst
+	# Copy the preremoval script to DEBIAN directory
+	cp -f image/prerm.dpkg $(DEBPKG_BASE)/DEBIAN/prerm
+	# Create the directories inside of the dpkg environment
+	mkdir -p $(DEBPKG_BASE)/etc/udev/rules.d/
+	mkdir -p $(DEBPKG_BASE)/lib/systemd/system/
+	# Copy the udev rules to the dpkg environment
+	cp -f image/10-stratux.rules $(DEBPKG_BASE)/etc/udev/rules.d/10-stratux.rules
+	cp -f image/99-uavionix.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-uavionix.rules
+	cp -f image/99-pong.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-pong.rules
+	# Copy the systemd scripts to the dpkg environment
+	cp __lib__systemd__system__stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
+	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
+	cp image/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
+	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux_fancontrol.service
+	#ln -s $(DEBPKG_BASE)/lib/systemd/system/stratux.service $(DEBPKG_BASE)/etc/systemd/system/multi-user.target.wants/stratux.service	
+	# Set up the versioning inside of the dpkg system. This puts the version number inside of the config file
+	sed -i 's/VERSION/$(VERSIONSTR)/g' $(DEBPKG_BASE)/DEBIAN/control
+	# set up the arch inside of the dpkg System. We have to use a script because x86_64 is arm64, aarch64 is arm64, etc.
+	sed -i 's/ARCH/$(THISARCH)/g' $(DEBPKG_BASE)/DEBIAN/control
+	# Set permissions of the scripts for dpkg
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/control
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/preinst
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/postinst	
+	chmod 755 $(DEBPKG_BASE)/DEBIAN/prerm	
+	# Create the default US settings for the config default
+	echo '{"UAT_Enabled": true,"OGN_Enabled": false,"DeveloperMode": false}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
+	# Create the debian package for US
+	dpkg-deb -b $(DEBPKG_BASE)
+	# Rename the file and move it to the base directory. Include the arch in the name
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-US.deb
+	#Ceate the default EU settings for the config default
+	echo '{"OGN_Enabled": true, "DeveloperMode": true}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
+	# Create the debian package for EU
+	dpkg-deb -b $(DEBPKG_BASE)
+	# Rename the file and move it to the base directory. Include the arch in the name
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-EU.deb
+	
 clean:
-	rm -f gen_gdl90 libdump978.so fancontrol ahrs_approx
+	rm -f stratuxrun libdump978.so fancontrol ahrs_approx *.deb
 	cd dump1090 && make clean
 	cd dump978 && make clean
 	cd rtl-ais && make clean

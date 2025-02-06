@@ -10,30 +10,71 @@ function wLog () {
 }
 wLog "Running Stratux Updater Script."
 
-SCRIPT_MASK="update*stratux*v*.sh"
-TEMP_LOCATION="/boot/firmware/StratuxUpdates/$SCRIPT_MASK"
-UPDATE_LOCATION="/root/$SCRIPT_MASK"
+TEMP_DIRECTORY="/boot/firmware/StratuxUpdates"
 
-if [ -e ${TEMP_LOCATION} ]; then
-	wLog "Found Update Script in $TEMP_LOCATION$SCRIPT_MASK"
-	TEMP_SCRIPT=`ls -1t ${TEMP_LOCATION} | head -1`
-	wLog "Moving Script $TEMP_SCRIPT"
-	cp -r ${TEMP_SCRIPT} /root/
+######################
+# script based update
+SCRIPT_MASK="update*stratux*v*.sh"
+TEMP_SCRIPT_LOCATION="$TEMP_DIRECTORY/$SCRIPT_MASK"
+SCRIPT_UPDATE_LOCATION="/root/$SCRIPT_MASK"
+
+######################
+# package based update
+PACKAGE_MASK="stratux*.deb"
+# packages are placed here after download, before movement to PACKAGE_UPDATE_LOCATION
+TEMP_PACKAGE_LOCATION="$TEMP_DIRECTORY/$PACKAGE_MASK"
+# packages are placed here for update
+PACKAGE_UPDATE_LOCATION="/root/$PACKAGE_MASK"
+
+###############
+# script based update in download location
+if [ -e ${TEMP_SCRIPT_LOCATION} ]; then
+	wLog "Found Update Script in $TEMP_SCRIPT_LOCATION$SCRIPT_MASK"
+	TEMP_SCRIPT_FILE=`ls -1t ${TEMP_SCRIPT_LOCATION} | head -1`
+	wLog "Moving Update Script $TEMP_SCRIPT_FILE"
+	cp -r ${TEMP_SCRIPT_FILE} /root/
 	wLog "Changing permissions to chmod a+x $UPDATE_LOCATION"
-	chmod a+x ${UPDATE_LOCATION}
-	wLog "Removing Update file from $TEMP_LOCATION"
-	rm -rf ${TEMP_SCRIPT}
+	chmod a+x ${SCRIPT_UPDATE_LOCATION}
+	wLog "Removing Script file from $TEMP_SCRIPT_LOCATION"
+	rm -rf ${TEMP_SCRIPT_FILE}
 fi
 
-# Check if we need to run an update.
-if [ -e ${UPDATE_LOCATION} ]; then
-	UPDATE_SCRIPT=`ls -1t ${UPDATE_LOCATION} | head -1`
-	if [ -n ${UPDATE_SCRIPT} ] ; then
+# script based update to apply
+if [ -e ${SCRIPT_UPDATE_LOCATION} ]; then
+	UPDATE_SCRIPT_FILE=`ls -1t ${SCRIPT_UPDATE_LOCATION} | head -1`
+	if [ -n ${UPDATE_SCRIPT_FILE} ] ; then
 		# Execute the script, remove it, then reboot.
-		wLog "Running update script ${UPDATE_SCRIPT}..."
-		bash ${UPDATE_SCRIPT}
-		wLog "Removing Update SH"
-		rm -f ${UPDATE_SCRIPT}
+		wLog "Installing update script ${UPDATE_SCRIPT_FILE}..."
+		bash ${UPDATE_SCRIPT_FILE}
+		wLog "Removing Update Script"
+		rm -f ${UPDATE_SCRIPT_FILE}
+		wLog "Finished... Rebooting... Bye"
+		reboot
+	fi
+fi
+
+##############
+# package based update in download location
+if [ -e ${TEMP_PACKAGE_LOCATION} ]; then
+	wLog "Found Update Package in $TEMP_PACKAGE_LOCATION$PACKAGE_MASK"
+	TEMP_PACKAGE_FILE=`ls -1t ${TEMP_PACAGE_LOCATION} | head -1`
+	wLog "Moving Update Package $TEMP_PACKAGE_FILE"
+	cp -r ${TEMP_PACKAGE_FILE} /root/
+	wLog "Changing permissions to chmod a+x $PACKAGE_UPDATE_LOCATION"
+	chmod a+x ${PACKAGE_UPDATE_LOCATION}
+	wLog "Removing Update file from $TEMP_PACKAGE_LOCATION"
+	rm -rf ${TEMP_PACKAGE_FILE}
+fi
+
+# package based update to apply
+if [ -e ${PACKAGE_UPDATE_LOCATION} ]; then
+	UPDATE_PACKAGE_FILE=`ls -1t ${PACKAGE_UPDATE_LOCATION} | head -1`
+	if [ -n ${UPDATE_PACKAGE_FILE} ] ; then
+		# Install the new packagepackage, remove it, then reboot.
+		wLog "Installing update package ${UPDATE_PACKAGE_FILE}..."
+		bash dpkg -i ${UPDATE_PACKAGE_FILE}
+		wLog "Removing Update Package"
+		rm -f ${UPDATE_PACKAGE_FILE}
 		wLog "Finished... Rebooting... Bye"
 		reboot
 	fi
@@ -56,7 +97,7 @@ if [ -f /boot/firmware/.stratux-first-boot ]; then
 
 		# write network config
 		if grep -q WiFi /boot/firmware/stratux.conf ; then
-			/opt/stratux/bin/gen_gdl90 -write-network-config
+			/opt/stratux/bin/stratuxrun -write-network-config
 			do_reboot=true
 			wLog "re-wrote network configuration for first-boot config import. Rebooting... Bye"
 		fi

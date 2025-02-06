@@ -20,6 +20,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # fetch the full repository, necessary as the latest tag is used during the build of the deb
 
       - name: Update submodule
         run: git submodule update --init --recursive
@@ -27,6 +29,22 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install -y librtlsdr-dev
 
-      # Runs a single command using the runners shell
       - name: make
         run: make
+
+      - name: make dpkg
+        run: make dpkg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stratux US debian package
+          path: |
+            *US*.deb
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stratux EU debian package
+          path: |
+            *EU*.deb
+          if-no-files-found: error

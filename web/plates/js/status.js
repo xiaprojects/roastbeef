@@ -45,16 +45,22 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 			$scope.Build = status.Build.substr(0, 10);
 			$scope.Devices = status.Devices;
 			$scope.Ping_connected = status.Ping_connected;
+			$scope.Pong_connected = status.Pong_connected;
+			$scope.Pong_Heartbeats = status.Pong_Heartbeats;
 			$scope.Connected_Users = status.Connected_Users;
 			$scope.UAT_messages_last_minute = status.UAT_messages_last_minute;
 			$scope.UAT_messages_max = status.UAT_messages_max;
+			$scope.UAT_messages_total = status.UAT_messages_total;
 			$scope.ES_messages_last_minute = status.ES_messages_last_minute;
 			$scope.ES_messages_max = status.ES_messages_max;
+			$scope.ES_messages_total = status.ES_messages_total;
 			$scope.OGN_messages_last_minute = status.OGN_messages_last_minute;
 			$scope.OGN_messages_max = status.OGN_messages_max;
+			$scope.OGN_messages_total = status.OGN_messages_total;
 			$scope.OGN_connected = status.OGN_connected;
 			$scope.AIS_messages_last_minute = status.AIS_messages_last_minute;
 			$scope.AIS_messages_max = status.AIS_messages_max;
+			$scope.AIS_messages_total = status.AIS_messages_total;
 			$scope.AIS_connected = status.AIS_connected;
 			$scope.GPS_satellites_locked = status.GPS_satellites_locked;
 			$scope.GPS_satellites_tracked = status.GPS_satellites_tracked;
@@ -188,7 +194,7 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 		$scope.visible_gps = true;
 
 		$scope.esStyleColor = craftService.getTrafficSourceColor(1);
-		$scope.uatStyleColor = craftService.getTrafficSourceColor(2);
+		$scope.uatStyleColor = craftService.getTrafficSourceColor(6);
 		$scope.ognStyleColor = craftService.getTrafficSourceColor(4);
 		$scope.aisStyleColor = craftService.getTrafficSourceColor(5);
 
@@ -202,7 +208,12 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 			$scope.visible_ogn = settings.OGN_Enabled;
 			$scope.visible_ais = settings.AIS_Enabled;
 			$scope.visible_ping = settings.Ping_Enabled;
+			$scope.visible_pong = settings.Pong_Enabled;
 			if (settings.Ping_Enabled) {
+				$scope.visible_uat = true;
+				$scope.visible_es = true;
+			}
+			if (settings.Pong_Enabled) {
 				$scope.visible_uat = true;
 				$scope.visible_es = true;
 			}

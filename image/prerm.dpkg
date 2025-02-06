@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Running pre-removal script for the stratux service"
+# Raspberry Pi's have the config.txt so this is one way to determine if its a raspberry pi
+arch=$(uname -m)
+if  [ "$arch" == "aarch64" ]; then
+	if [ -f "/boot/firmware/config.txt" ]; then
+		systemctl stop stratux_fancontrol
+	fi
+fi
+# Example: Stop the stratux service before removing this version
+systemctl stop stratux 2>/dev/null || true
+exit 0
