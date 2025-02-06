@@ -2,7 +2,7 @@ export STRATUX_HOME := /opt/stratux/
 export DEBPKG_BASE := /tmp/dpkg-stratux/stratux
 export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
 VERSIONSTR := $(shell ./image/getversion.sh)
-THISARCH = $(shell ./image/getarch.sh)
+ARCH = $(shell ./image/getarch.sh)
 
 LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`
 BUILDINFO=-ldflags "$(LFLAGS)"
@@ -13,7 +13,6 @@ ifeq ($(debug),true)
 	BUILDINFO := -gcflags '-N -l' $(BUILDINFO)
 endif
 
-ARCH=$(shell arch)
 ifeq ($(ARCH),aarch64)
 	OGN_RX_BINARY=ogn/ogn-rx-eu_aarch64
 else ifeq ($(ARCH),x86_64)
@@ -158,7 +157,7 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Set up the versioning inside of the dpkg system. This puts the version number inside of the config file
 	sed -i 's/VERSION/$(VERSIONSTR)/g' $(DEBPKG_BASE)/DEBIAN/control
 	# set up the arch inside of the dpkg System. We have to use a script because x86_64 is arm64, aarch64 is arm64, etc.
-	sed -i 's/ARCH/$(THISARCH)/g' $(DEBPKG_BASE)/DEBIAN/control
+	sed -i 's/ARCH/$(ARCH)/g' $(DEBPKG_BASE)/DEBIAN/control
 	# Set permissions of the scripts for dpkg
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/control
 	chmod 755 $(DEBPKG_BASE)/DEBIAN/preinst
@@ -169,13 +168,13 @@ dpkg: prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Create the debian package for US
 	dpkg-deb -b $(DEBPKG_BASE)
 	# Rename the file and move it to the base directory. Include the arch in the name
-	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-US.deb
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(ARCH)-US.deb
 	#Ceate the default EU settings for the config default
 	echo '{"OGN_Enabled": true, "DeveloperMode": true}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
 	# Create the debian package for EU
 	dpkg-deb -b $(DEBPKG_BASE)
 	# Rename the file and move it to the base directory. Include the arch in the name
-	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH)-EU.deb
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(ARCH)-EU.deb
 
 clean:
 	rm -f stratuxrun libdump978.so fancontrol ahrs_approx *.deb
