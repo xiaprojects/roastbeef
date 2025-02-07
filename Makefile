@@ -168,13 +168,7 @@ dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Create the debian package for US
 	dpkg-deb -b $(DEBPKG_BASE)
 	# Rename the file and move it to the base directory. Include the arch in the name
-	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(ARCH)-US.deb
-	#Ceate the default EU settings for the config default
-	echo '{"OGN_Enabled": true, "DeveloperMode": true}' > $(DEBPKG_HOME)/cfg/stratux.conf.default
-	# Create the debian package for EU
-	dpkg-deb -b $(DEBPKG_BASE)
-	# Rename the file and move it to the base directory. Include the arch in the name
-	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(ARCH)-EU.deb
+	mv -f $(DEBPKG_BASE)/../stratux.deb ./stratux-$(VERSIONSTR)-$(THISARCH).deb
 
 clean:
 	rm -f stratuxrun libdump978.so fancontrol ahrs_approx *.deb

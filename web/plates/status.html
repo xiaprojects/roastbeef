@@ -1,6 +1,6 @@
 <div class="col-sm-12">
 	<div class="text-center">
-		<a ng-click="VersionClick()" class="btn btn-hidden"><strong>Version: <span>{{Version}} ({{Build}})</span></strong></a>
+		<a ng-click="VersionClick()" class="btn btn-hidden"><strong>Version: <span><tt>{{Version}} ({{Build}})</tt></span></strong></a>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -207,6 +207,28 @@
 					<span class="fa fa-exclamation-triangle icon-red"></span> <span class="icon-red">{{err}}</span>
 				</li>
 			</ul>
+		</div>
+	</div>
+</div>
+<div ui-content-for="modals">
+	<div class="modal" ui-if="RegionSelect" ui-state="RegionSelect">
+		<div class="modal-overlay"></div>
+		<div class="vertical-alignment-helper center-block">
+			<div class="modal-dialog vertical-align-center">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" ui-turn-off="RegionSelect"></button>
+						<span align="center"><h4 class="modal-title">Select Operating Region</h4></span>
+					</div>
+					<div class="modal-body" align="center">
+						<p><strong>Select operating region of the device</strong></p>
+						<button ui-turn-off="RegionSelect" style="width: 45%;" onclick="angular.element(this).scope().setRegionClick('US')"
+							class="btn">US</button>
+						<button ui-turn-off="RegionSelect" style="width: 45%;" onclick="angular.element(this).scope().setRegionClick('EU')"
+							class="btn">EU</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

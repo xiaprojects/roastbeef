@@ -222,6 +222,12 @@ var msgLogMutex sync.Mutex
 // Time stratuxrun was started.
 var timeStarted time.Time
 
+type RegionInfo struct {
+	IsSet       bool
+	Region		string
+}
+
+var RegionSettings RegionInfo
 type ADSBTower struct {
 	Lat                         float64
 	Lng                         float64
@@ -1245,6 +1251,7 @@ type settings struct {
 	GpsManualDevice	     string         // default: /dev/ttyAMA0
     GpsManualChip        string         // ublox8, ublox9, ublox
 	GpsManualTargetBaud  int            // default: 115200
+	RegionSelected       int			// 0 - none, 1 = US, 2 = EU
 }
 
 type status struct {
@@ -1316,10 +1323,12 @@ var globalSettings settings
 var globalStatus status
 
 func defaultSettings() {
+	// Region is none if not specified
+	globalSettings.RegionSelected = 0
 	globalSettings.DarkMode = false
-	globalSettings.UAT_Enabled = false
+	globalSettings.UAT_Enabled = true
 	globalSettings.ES_Enabled = true
-	globalSettings.OGN_Enabled = true
+	globalSettings.OGN_Enabled = false
 	globalSettings.Dump1090Gain = 37.2
 	globalSettings.APRS_Enabled = true
 	globalSettings.GPS_Enabled = true
@@ -1349,7 +1358,7 @@ func defaultSettings() {
 	globalSettings.AHRSLog = false
 	globalSettings.IMUMapping = [2]int{-1, 0}
 	globalSettings.OwnshipModeS = "F00000"
-	globalSettings.DeveloperMode = true
+	globalSettings.DeveloperMode = false
 	globalSettings.StaticIps = make([]string, 0)
 	globalSettings.NoSleep = false
 	globalSettings.EstimateBearinglessDist = false
@@ -1477,6 +1486,24 @@ func saveSettings() {
 	fd.Write(jsonSettings)
 	fd.Sync()
 	log.Printf("wrote settings.\n")
+}
+
+func changeRegionSettings() {
+	// The region has been updated by the UI. Decide what to do with that information
+
+	switch(globalSettings.RegionSelected)  {
+		case 1:	// US settings
+			globalSettings.UAT_Enabled = true
+			globalSettings.OGN_Enabled = false
+			globalSettings.DeveloperMode = false
+		case 2: // EU settings
+			globalSettings.UAT_Enabled = false
+			globalSettings.OGN_Enabled = true
+			globalSettings.DeveloperMode = true
+		default:	// Nothing selected
+
+	}
+	saveSettings()
 }
 
 func openReplay(fn string, compressed bool) (WriteCloser, error) {

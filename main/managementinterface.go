@@ -313,6 +313,74 @@ func handleSettingsGetRequest(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "%s\n", settingsJSON)
 }
 
+func handleRegionGet(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	switch globalSettings.RegionSelected {
+	case 1:
+		RegionSettings.IsSet = true
+		RegionSettings.Region = "US"
+	case 2:
+		RegionSettings.IsSet = true
+		RegionSettings.Region = "EU"
+	default:
+		RegionSettings.IsSet = false
+	}
+
+
+	regionJSON, err := json.Marshal(&RegionSettings)
+	if err != nil {
+		log.Printf("%s", err)
+	}
+	fmt.Fprintf(w, "%s\n", regionJSON)
+}
+
+// AJAX call - /setRegion. receives via POST command, any/all stratux.conf data.
+func handleRegionSet(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+	if r.Method == "POST" {
+		// raw, _ := httputil.DumpRequest(r, true)
+		// log.Printf("handleRegionSet:raw: %s\n", raw)
+
+		decoder := json.NewDecoder(r.Body)
+		for {
+			var msg map[string]interface{} // support arbitrary JSON
+
+			err := decoder.Decode(&msg)
+			if err == io.EOF {
+				break
+			} else if err != nil {
+				log.Printf("handleRegionSet:error: %s\n", err.Error())
+			} else {
+				for key, val := range msg {
+					// log.Printf("handleRegionSet:json: testing for key:%s of type %s\n", key, reflect.TypeOf(val))
+					switch key {
+					case "Region":
+						val := val.(string)
+						log.Printf("String is %s\n",val)
+						if val == "US" {
+							globalSettings.RegionSelected = 1
+						} else if val == "EU" {
+							globalSettings.RegionSelected = 2
+						} else {
+							globalSettings.RegionSelected = 0
+						}
+						changeRegionSettings()
+					default:
+						log.Printf("handleRegionSet:json: unrecognized key:%s\n", key)
+					}
+				}
+//				saveSettings()
+			}
+		}
+	}
+
+}
+
 // AJAX call - /setSettings. receives via POST command, any/all stratux.conf data.
 func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 	// define header in support of cross-domain AJAX
@@ -1224,6 +1292,8 @@ func managementInterface() {
 	http.HandleFunc("/getTowers", handleTowersRequest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	http.HandleFunc("/getRegion", handleRegionGet)
+	http.HandleFunc("/setRegion", handleRegionSet)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
 	http.HandleFunc("/restart", handleRestartRequest)
 	http.HandleFunc("/shutdown", handleShutdownRequest)
