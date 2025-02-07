@@ -181,3 +181,13 @@ clean:
 	cd dump1090 && make clean
 	cd dump978 && make clean
 	cd rtl-ais && make clean
+
+
+# docker targets for ease of use
+#
+# NOTE: 'clean' works outside of docker
+dall:
+	./docker_run.sh "cd data && make all"
+
+ddpkg:
+	./docker_run.sh "cd data && make dpkg"
