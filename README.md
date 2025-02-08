@@ -10,6 +10,7 @@ mindmap
         Wi-Fi
             Foreflight
             ::icon(fa fa-tablet)
+            Web Configuration Portal
     Sensors
         GNSS (GPS)
         1090-ADSB
@@ -47,6 +48,8 @@ This repository offers code and binaries that can help you to build your own tra
 * 1090 ADSB
 * UAT
 * OGN receiver functionality to receive several protocols on the 868Mhz frequency band, comparable to what the OpenGliderNetwork does
+* Web Configuration Portal
+   * Connect to the Stratux AP and browse to any address(eg. my-stratux.com) to reach the portal.
 * Several improvements and bug fixes to GPS handling and chip configuration (by [VirusPilot](https://github.com/VirusPilot))
 * Support for transmitting OGN via a TTGO T-Beam
 * More robust sensor handling
