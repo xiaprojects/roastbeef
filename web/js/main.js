@@ -257,7 +257,7 @@ app.run(function ($transform) {
 });
 
 // For this app we have a MainController for whatever and individual controllers for each page
-app.controller('MainCtrl', function ($scope, $http) {
+app.controller('MainCtrl', function ($scope, $http, $state) {
 	// any logic global logic
     $http.get(URL_SETTINGS_GET)
     .then(function(response) {
@@ -282,7 +282,7 @@ app.controller('MainCtrl', function ($scope, $http) {
             $scope.Keypad_Enabled= settings.Keypad_Enabled;
             if($scope.Keypad_Enabled==true){
 		if(($scope.keypad === undefined) || ($scope.keypad === null)){
-			$scope.keypad = new KeypadService($scope,response);
+			$scope.keypad = new KeypadService($scope,$state,settings);
             	}
             }
 			$scope.situationService = new SituationService($scope, $http);
