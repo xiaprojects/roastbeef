@@ -31,14 +31,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: stratux US debian package
+          name: stratux debian package
           path: |
-            *US*.deb
-          if-no-files-found: error
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: stratux EU debian package
-          path: |
-            *EU*.deb
+            *.deb
           if-no-files-found: error

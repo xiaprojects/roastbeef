@@ -188,6 +188,34 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 		};
 	}
 
+	function setRegion(val) {
+		// Simple POST request example (note: response is asynchronous)
+		var jsonData = {};
+		jsonData["Region"] = val;
+		console.log("setRegion() called "+ jsonData);
+		$http.post(URL_REGION_SET, angular.toJson(jsonData)).
+		then(function (response) {
+		}, function (response) {
+			$scope.rawSettings = "error setting region";
+		});
+		location.reload();
+	}
+
+	function checkForRegion() {
+		$http.get(URL_REGION_GET).
+		then(function (response) {
+			settings = angular.fromJson(response.data);
+			// Update Status
+			console.log("Check for region called: "+settings.IsSet);
+			if (settings.IsSet == false) {
+				$scope.Ui.turnOn('RegionSelect');
+				$scope.Region = settings.RegionSelect;
+			}
+		}, function (response) {
+			// nop
+		});
+	}
+
 	function setHardwareVisibility() {
 		$scope.visible_uat = true;
 		$scope.visible_es = true;
@@ -202,6 +230,12 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 		$http.get(URL_SETTINGS_GET).
 		then(function (response) {
 			settings = angular.fromJson(response.data);
+			// Update Region Visibility
+			if (settings.RegionSelect == true) {
+				$scope.Ui.turnOn('RegionSelect');
+				$scope.Region = settings.RegionSelect;
+			}
+
 			$scope.DeveloperMode = settings.DeveloperMode;
 			$scope.visible_uat = settings.UAT_Enabled;
 			$scope.visible_es = settings.ES_Enabled;
@@ -293,11 +327,17 @@ function StatusCtrl($rootScope, $scope, $state, $http, $interval, craftService) 
 		if (num > max) return max;
 		return num;
 	}
+  
+	$scope.setRegionClick = function(val) {
+		//console.log("setRegionClick() called");
+		setRegion(val);
+	}
 
     $scope.GetDeveloperModeClick = function() {
         return DeveloperModeClick;
     }
 	// Status Controller tasks
 	setHardwareVisibility();
+	checkForRegion();
 	connect($scope); // connect - opens a socket and listens for messages
 };

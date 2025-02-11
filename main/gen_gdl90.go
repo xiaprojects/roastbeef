@@ -222,6 +222,12 @@ var msgLogMutex sync.Mutex
 // Time stratuxrun was started.
 var timeStarted time.Time
 
+type RegionInfo struct {
+	IsSet       bool
+	Region		string
+}
+
+var RegionSettings RegionInfo
 type ADSBTower struct {
 	Lat                         float64
 	Lng                         float64
@@ -1258,6 +1264,7 @@ type settings struct {
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
 	Switches             []switchModel // Switches Settings
 	MagCalibration       MagnetometerData // Magnetometer Calibration
+	RegionSelected       int			// 0 - none, 1 = US, 2 = EU
 }
 
 type status struct {
@@ -1327,6 +1334,7 @@ type status struct {
 
 var globalSettings settings
 var globalStatus status
+var noConfigFound bool
 
 func defaultSettings() {
 	// Plugin defaults
@@ -1355,6 +1363,12 @@ func defaultSettings() {
 	globalSettings.Radio_Enabled = false
 	globalSettings.EMS_Enabled = false
 	globalSettings.OGN_Enabled = true
+	// Region is none if not specified
+	globalSettings.RegionSelected = 0
+	globalSettings.DarkMode = false
+	globalSettings.UAT_Enabled = true
+	globalSettings.ES_Enabled = true
+	globalSettings.OGN_Enabled = false
 	globalSettings.Dump1090Gain = 37.2
 	globalSettings.APRS_Enabled = true
 	globalSettings.GPS_Enabled = true
@@ -1384,7 +1398,7 @@ func defaultSettings() {
 	globalSettings.AHRSLog = false
 	globalSettings.IMUMapping = [2]int{-1, 0}
 	globalSettings.OwnshipModeS = "F00000"
-	globalSettings.DeveloperMode = true
+	globalSettings.DeveloperMode = false
 	globalSettings.StaticIps = make([]string, 0)
 	globalSettings.NoSleep = false
 	globalSettings.EstimateBearinglessDist = false
@@ -1415,6 +1429,7 @@ func defaultSettings() {
 func checkForNoSettings() {
 	// See if a configuration file exists. If not, copy the default one
 	if _, err := os.Stat(configLocation); os.IsNotExist(err) {
+		noConfigFound = true
 		src, errsrc := os.Open(configLocationDefault)
 		if errsrc != nil {
 			log.Printf("Could not locate default config file %s: %s\n", configLocationDefault, errsrc.Error())
@@ -1433,6 +1448,8 @@ func checkForNoSettings() {
 		if err != nil {
 			log.Printf("Could not create default config file %s: %s\n", configLocation, err.Error())
 		}
+	} else {
+		noConfigFound = false
 	}
 }
 
@@ -1514,6 +1531,24 @@ func saveSettings() {
 	fd.Write(jsonSettings)
 	fd.Sync()
 	log.Printf("wrote settings.\n")
+}
+
+func changeRegionSettings() {
+	// The region has been updated by the UI. Decide what to do with that information
+
+	switch(globalSettings.RegionSelected)  {
+		case 1:	// US settings
+			globalSettings.UAT_Enabled = true
+			globalSettings.OGN_Enabled = false
+			globalSettings.DeveloperMode = false
+		case 2: // EU settings
+			globalSettings.UAT_Enabled = false
+			globalSettings.OGN_Enabled = true
+			globalSettings.DeveloperMode = true
+		default:	// Nothing selected
+
+	}
+	saveSettings()
 }
 
 func openReplay(fn string, compressed bool) (WriteCloser, error) {
@@ -1815,6 +1850,17 @@ func main() {
 
 	// Read settings.
 	readSettings()
+	// Check to see if there was no config file found initially. If so, then we will set the region to 0. If there
+	// was a config found and the region is 0, we will set it to 1 (US) by default
+	if noConfigFound {
+		log.Printf("No config file was found, so enabling the query of a region")
+		globalSettings.RegionSelected = 0
+	} else {
+		if globalSettings.RegionSelected == 0 {
+			log.Printf("Config file was found and the region selected is 0. Setting the default to US")
+			globalSettings.RegionSelected = 1
+		}
+	}
 
 	// Clear the logfile on startup
 	if globalSettings.ClearLogOnStart { clearDebugLogFile() }
