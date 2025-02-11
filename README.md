@@ -81,6 +81,14 @@ are not being developed.
 * OTA updates are supported between minor versions
   * Some users have Stratux units mounted in their dash or other challenging locations.
 
+## microSD capacity requirement
+
+The goal is for the Stratux image to fit onto a 4GB microSD card. This ensures that existing Stratux units can continue to be upgraded to the latest Stratux releases. At the moment the image is ~1.4GB in size, easily fitting onto a 4GB card.
+
+Due to the availabilty of much larger and low cost microSD cards this constraint may be revisited and expanded to 8GB if necessary.
+
+We recommend using a 8GB or larger microSD card for your stratux system.
+
 ## Developing
 
 See [DEVELOPING.md](docs/DEVELOPING.md) for details and information.
