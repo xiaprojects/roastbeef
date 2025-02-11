@@ -37,7 +37,7 @@ block-beta
    docker["<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/docker.svg" width="50" height="50">docker container with bind mount"]
    debian_bookworm["<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/debian.svg" width="50" height="50">Debian 12 (Bookworm) image"]
    make_dpkg["make dpkg"]
-   artifacts["EU and US dpkg published to the branch"]
+   artifacts[".deb package published to the branch"]
 ```
 
 ### release.yml
@@ -52,7 +52,7 @@ block-beta
    release["release.yml workflow"]
    build_deb
    build_image
-   artifact_deb["publish EU and US deb artifacts"]
+   artifact_deb["publish .deb artifacts"]
    artifact_image["publish PI image artifact"]
 ```
 
