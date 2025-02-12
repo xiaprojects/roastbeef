@@ -19,7 +19,9 @@ git submodule update --init --recursive
 
 - Run the 'make dall' to build via Docker.
 
-## Github workflows
+## GitHub workflows
+
+Stratux leverages GitHub workflows to ensure that all code changes are built, and that there is an easily reproducable mechanism to generate releases.
 
 ### Assumptions
 
