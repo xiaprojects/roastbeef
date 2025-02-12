@@ -153,7 +153,7 @@ dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	cp image/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux_fancontrol.service
-	#ln -s $(DEBPKG_BASE)/lib/systemd/system/stratux.service $(DEBPKG_BASE)/etc/systemd/system/multi-user.target.wants/stratux.service	
+	#ln -s $(DEBPKG_BASE)/lib/systemd/system/stratux.service $(DEBPKG_BASE)/etc/systemd/system/multi-user.target.wants/stratux.service
 	# Set up the versioning inside of the dpkg system. This puts the version number inside of the config file
 	sed -i 's/VERSION/$(VERSIONSTR)/g' $(DEBPKG_BASE)/DEBIAN/control
 	# set up the arch inside of the dpkg System. We have to use a script because x86_64 is arm64, aarch64 is arm64, etc.
