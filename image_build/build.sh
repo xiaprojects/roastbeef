@@ -23,6 +23,7 @@ rsync -av --delete stage2/10-stratux/ pi-gen/stage2/10-stratux/
 local_git=`pwd`/../
 (cd pi-gen && rm -rf stratux && git clone ${local_git} stratux)
 (cd pi-gen/stratux && git submodule update --init --recursive)
+(cd pi-gen/stratux && make ddpkg)
 
 # build via docker
 #
