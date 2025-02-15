@@ -24,6 +24,7 @@ local_git=`pwd`/../
 (cd pi-gen && rm -rf stratux && git clone ${local_git} stratux)
 (cd pi-gen/stratux && git submodule update --init --recursive)
 (cd pi-gen/stratux && make ddpkg)
+
 # build via docker
 #
 # pass PRESERVE_CONTAINER=1 to keep the container in the case of error
