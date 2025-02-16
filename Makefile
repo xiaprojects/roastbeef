@@ -84,7 +84,7 @@ optinstall: www ogn/ddb.json
 	cp -f softrf/*.zip softrf/*.sh $(STRATUX_HOME)/softrf
 
 	# Scripts
-	cp __opt__stratux__bin__stratux-pre-start.sh $(STRATUX_HOME)/bin/stratux-pre-start.sh
+	cp debian/stratux-pre-start.sh $(STRATUX_HOME)/bin/stratux-pre-start.sh
 	chmod 744 $(STRATUX_HOME)/bin/stratux-pre-start.sh
 	cp -f image/stratux-wifi.sh $(STRATUX_HOME)/bin/
 	cp -f image/sdr-tool.sh $(STRATUX_HOME)/bin/
@@ -102,7 +102,7 @@ install: optinstall
 	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
 	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
 	cp image/99-pong.rules /etc/udev/rules.d/99-pong.rules
-	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
+	cp image/stratux.service /lib/systemd/system/stratux.service
 	chmod 644 /lib/systemd/system/stratux.service
 	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
 
@@ -149,7 +149,7 @@ dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	cp -f debian/99-uavionix.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-uavionix.rules
 	cp -f debian/99-pong.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-pong.rules
 	# Copy the systemd scripts to the dpkg environment
-	cp __lib__systemd__system__stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
+	cp stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	cp debian/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux_fancontrol.service
