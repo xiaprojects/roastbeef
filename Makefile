@@ -139,7 +139,7 @@ dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	cp -f debian/99-uavionix.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-uavionix.rules
 	cp -f debian/99-pong.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-pong.rules
 	# Copy the systemd scripts to the dpkg environment
-	cp stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
+	cp debian/stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	cp debian/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux_fancontrol.service
