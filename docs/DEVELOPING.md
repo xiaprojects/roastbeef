@@ -81,6 +81,28 @@ block-beta
    image["image generation"]
 ```
 
+# Repository organization
+
+## debian/
+
+Files related to debian packages
+
+## image_build/
+
+Files related to the Stratux Raspberry PI image, built by pi-gen.
+
+## How to determine what is in the debian package vs. in the image?
+
+* Debian package contains *all* of the stratux executables.
+* System image contains necessary libraries and applications for Stratux.
+* Debian package contains Stratux specific configuration and udev rules
+* <b>sdr-tool.sh</b> and <b>stratux-wifi.sh</b> are exceptions. These <b>ARE</b> included int
+the debian package.
+* However there are some oddities:
+   * The <b>interfaces</b> file that references stratux-wifi.sh is a part of the image.
+   * <b>stxAliases</b> that references <b>sdr-tool.sh</b> is also part of the image.
+
+
 # Contributing
 
 ## Coding Style

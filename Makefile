@@ -1,8 +1,8 @@
 export STRATUX_HOME := /opt/stratux/
 export DEBPKG_BASE := /tmp/dpkg-stratux/stratux
 export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
-VERSIONSTR := $(shell ./image/getversion.sh)
-ARCH = $(shell ./image/getarch.sh)
+VERSIONSTR := $(shell ./scripts/getversion.sh)
+ARCH = $(shell ./scripts/getarch.sh)
 
 LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`
 BUILDINFO=-ldflags "$(LFLAGS)"
@@ -84,31 +84,21 @@ optinstall: www ogn/ddb.json
 	cp -f softrf/*.zip softrf/*.sh $(STRATUX_HOME)/softrf
 
 	# Scripts
-	cp __opt__stratux__bin__stratux-pre-start.sh $(STRATUX_HOME)/bin/stratux-pre-start.sh
+	cp debian/stratux-pre-start.sh $(STRATUX_HOME)/bin/stratux-pre-start.sh
 	chmod 744 $(STRATUX_HOME)/bin/stratux-pre-start.sh
-	cp -f image/stratux-wifi.sh $(STRATUX_HOME)/bin/
-	cp -f image/sdr-tool.sh $(STRATUX_HOME)/bin/
+	cp -f debian/stratux-wifi.sh $(STRATUX_HOME)/bin/
+	cp -f debian/sdr-tool.sh $(STRATUX_HOME)/bin/
 	chmod 755 $(STRATUX_HOME)/bin/*
 
 	# Config templates
-	cp -f image/stratux-dnsmasq.conf.template $(STRATUX_HOME)/cfg/
-	cp -f image/interfaces.template $(STRATUX_HOME)/cfg/
-	cp -f image/wpa_supplicant.conf.template $(STRATUX_HOME)/cfg/
-	cp -f image/wpa_supplicant_ap.conf.template $(STRATUX_HOME)/cfg/
+	cp -f debian/stratux-dnsmasq.conf.template $(STRATUX_HOME)/cfg/
+	cp -f debian/interfaces.template $(STRATUX_HOME)/cfg/
+	cp -f debian/wpa_supplicant.conf.template $(STRATUX_HOME)/cfg/
+	cp -f debian/wpa_supplicant_ap.conf.template $(STRATUX_HOME)/cfg/
 
 
-install: optinstall
-	# System configuration
-	cp image/10-stratux.rules /etc/udev/rules.d/10-stratux.rules
-	cp image/99-uavionix.rules /etc/udev/rules.d/99-uavionix.rules
-	cp image/99-pong.rules /etc/udev/rules.d/99-pong.rules
-	cp __lib__systemd__system__stratux.service /lib/systemd/system/stratux.service
-	chmod 644 /lib/systemd/system/stratux.service
-	ln -fs /lib/systemd/system/stratux.service /etc/systemd/system/multi-user.target.wants/stratux.service
-
-	cp image/stratux_fancontrol.service  /lib/systemd/system/stratux_fancontrol.service
-	chmod 644 /lib/systemd/system/stratux_fancontrol.service
-	ln -fs /lib/systemd/system/stratux_fancontrol.service /etc/systemd/system/multi-user.target.wants/stratux_fancontrol.service
+install: dpkg
+	dpkg -i stratux-$(VERSIONSTR)-$(ARCH).deb
 
 #
 # Debian package related targets below
@@ -132,26 +122,26 @@ optinstall_dpkg: optinstall
 
 dpkg: all prep_dpkg wwwdpkg ogn/ddb.json optinstall_dpkg
 	# Copy the control script to DEBIAN directory
-	cp -f image/control.dpkg $(DEBPKG_BASE)/DEBIAN/control
+	cp -f debian/control.dpkg $(DEBPKG_BASE)/DEBIAN/control
 	# Copy the configuration  file list to DEBIAN directory
-	cp -f image/conffiles.dpkg $(DEBPKG_BASE)/DEBIAN/conffiles
+	cp -f debian/conffiles.dpkg $(DEBPKG_BASE)/DEBIAN/conffiles
 	# Copy the preinstall script to DEBIAN directory
-	cp -f image/preinst.dpkg $(DEBPKG_BASE)/DEBIAN/preinst
+	cp -f debian/preinst.dpkg $(DEBPKG_BASE)/DEBIAN/preinst
 	# Copy the preinstall script to DEBIAN directory
-	cp -f image/postinst.dpkg $(DEBPKG_BASE)/DEBIAN/postinst
+	cp -f debian/postinst.dpkg $(DEBPKG_BASE)/DEBIAN/postinst
 	# Copy the preremoval script to DEBIAN directory
-	cp -f image/prerm.dpkg $(DEBPKG_BASE)/DEBIAN/prerm
+	cp -f debian/prerm.dpkg $(DEBPKG_BASE)/DEBIAN/prerm
 	# Create the directories inside of the dpkg environment
 	mkdir -p $(DEBPKG_BASE)/etc/udev/rules.d/
 	mkdir -p $(DEBPKG_BASE)/lib/systemd/system/
 	# Copy the udev rules to the dpkg environment
-	cp -f image/10-stratux.rules $(DEBPKG_BASE)/etc/udev/rules.d/10-stratux.rules
-	cp -f image/99-uavionix.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-uavionix.rules
-	cp -f image/99-pong.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-pong.rules
+	cp -f debian/10-stratux.rules $(DEBPKG_BASE)/etc/udev/rules.d/10-stratux.rules
+	cp -f debian/99-uavionix.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-uavionix.rules
+	cp -f debian/99-pong.rules $(DEBPKG_BASE)/etc/udev/rules.d/99-pong.rules
 	# Copy the systemd scripts to the dpkg environment
-	cp __lib__systemd__system__stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
+	cp debian/stratux.service $(DEBPKG_BASE)/lib/systemd/system/stratux.service
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux.service
-	cp image/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
+	cp debian/stratux_fancontrol.service $(DEBPKG_BASE)/lib/systemd/system
 	chmod 644 $(DEBPKG_BASE)/lib/systemd/system/stratux_fancontrol.service
 	#ln -s $(DEBPKG_BASE)/lib/systemd/system/stratux.service $(DEBPKG_BASE)/etc/systemd/system/multi-user.target.wants/stratux.service
 	# Set up the versioning inside of the dpkg system. This puts the version number inside of the config file
