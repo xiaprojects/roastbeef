@@ -1,8 +1,8 @@
 export STRATUX_HOME := /opt/stratux/
 export DEBPKG_BASE := /tmp/dpkg-stratux/stratux
 export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
-VERSIONSTR := $(shell ./image/getversion.sh)
-ARCH = $(shell ./image/getarch.sh)
+VERSIONSTR := $(shell ./scripts/getversion.sh)
+ARCH = $(shell ./scripts/getarch.sh)
 
 LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`
 BUILDINFO=-ldflags "$(LFLAGS)"
