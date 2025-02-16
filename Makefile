@@ -91,10 +91,10 @@ optinstall: www ogn/ddb.json
 	chmod 755 $(STRATUX_HOME)/bin/*
 
 	# Config templates
-	cp -f image/stratux-dnsmasq.conf.template $(STRATUX_HOME)/cfg/
-	cp -f image/interfaces.template $(STRATUX_HOME)/cfg/
-	cp -f image/wpa_supplicant.conf.template $(STRATUX_HOME)/cfg/
-	cp -f image/wpa_supplicant_ap.conf.template $(STRATUX_HOME)/cfg/
+	cp -f debian/stratux-dnsmasq.conf.template $(STRATUX_HOME)/cfg/
+	cp -f debian/interfaces.template $(STRATUX_HOME)/cfg/
+	cp -f debian/wpa_supplicant.conf.template $(STRATUX_HOME)/cfg/
+	cp -f debian/wpa_supplicant_ap.conf.template $(STRATUX_HOME)/cfg/
 
 
 install: dpkg
