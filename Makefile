@@ -86,8 +86,8 @@ optinstall: www ogn/ddb.json
 	# Scripts
 	cp debian/stratux-pre-start.sh $(STRATUX_HOME)/bin/stratux-pre-start.sh
 	chmod 744 $(STRATUX_HOME)/bin/stratux-pre-start.sh
-	cp -f image/stratux-wifi.sh $(STRATUX_HOME)/bin/
-	cp -f image/sdr-tool.sh $(STRATUX_HOME)/bin/
+	cp -f debian/stratux-wifi.sh $(STRATUX_HOME)/bin/
+	cp -f debian/sdr-tool.sh $(STRATUX_HOME)/bin/
 	chmod 755 $(STRATUX_HOME)/bin/*
 
 	# Config templates
