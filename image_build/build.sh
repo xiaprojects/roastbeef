@@ -28,7 +28,7 @@ local_git=`pwd`/../
 ERRCODE=$?
 if [ $ERRCODE -ne 0 ]; then
 	echo "Error creating the stratux debian package: Returned $ERRCODE"
-	exit -1
+	exit $ERRCODE 
 fi
 
 # build via docker
