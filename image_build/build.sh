@@ -23,7 +23,13 @@ rsync -av --delete stage2/10-stratux/ pi-gen/stage2/10-stratux/
 local_git=`pwd`/../
 (cd pi-gen && rm -rf stratux && git clone ${local_git} stratux)
 (cd pi-gen/stratux && git submodule update --init --recursive)
+# Build the stratux debian package.
 (cd pi-gen/stratux && make ddpkg)
+ERRCODE=$?
+if [ $ERRCODE -ne 0 ]; then
+	echo "Error creating the stratux debian package: Returned $ERRCODE"
+	exit -1
+fi
 
 # build via docker
 #
