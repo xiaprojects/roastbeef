@@ -1,0 +1,13 @@
+IMG_NAME='stratux'
+
+# don't rename the first user, must set FIRST_USER_PASS
+DISABLE_FIRST_BOOT_USER_RENAME=1
+
+# Defaults to "pi"
+# Renamed on first boot unless DISABLE_FIRST_BOOT_USER_RENAME is set
+#FIRST_USER_NAME="pi"
+
+# set so account is not locked
+FIRST_USER_PASS="raspberry"
+
+ENABLE_SSH=1
