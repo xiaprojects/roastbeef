@@ -16,9 +16,9 @@
 						<strong class="col-xs-5">Recent Clients:</strong>
 						<span class="col-xs-7">{{Connected_Users}}</span>
 					</div>
-					<div class="col-sm-6 label_adj" ng-class="{'secion_invisible': !visible_pong}">
-						<strong class="col-xs-5">Pong Heartbeats:</strong>
-						<span class="col-xs-7">{{Pong_Heartbeats}}</span>
+					<span class="col-sm-6 label_adj" ng-class="{'secion_invisible': !visible_pong}">
+						<span ng-show="Pong_connected == true"><strong class="col-xs-5">Pong Heartbeats:</strong></span>
+						<span ng-show="Pong_connected == true" class="col-xs-7">{{Pong_Heartbeats}}</span>
 					</div>
 				</div>
 				<div class="row">
