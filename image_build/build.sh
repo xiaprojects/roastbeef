@@ -1,5 +1,5 @@
+#!/bin/bash -e
 # Script to configure and build Stratux images with pi-gen
-#!/bin/bash -e -x
 
 arch=`uname -m`
 echo "arch ${arch}"
