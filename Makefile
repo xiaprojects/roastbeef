@@ -13,9 +13,9 @@ ifeq ($(debug),true)
 	BUILDINFO := -gcflags '-N -l' $(BUILDINFO)
 endif
 
-ifeq ($(ARCH),aarch64)
+ifeq ($(ARCH),arm64)
 	OGN_RX_BINARY=ogn/ogn-rx-eu_aarch64
-else ifeq ($(ARCH),x86_64)
+else ifeq ($(ARCH),amd64)
 	OGN_RX_BINARY=ogn/ogn-rx-eu_x86
 else
 	OGN_RX_BINARY=ogn/ogn-rx-eu_arm
