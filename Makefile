@@ -21,12 +21,6 @@ else
 	OGN_RX_BINARY=ogn/ogn-rx-eu_arm
 endif
 
-GCC_VERSION := $(shell gcc -dumpversion | cut -f1 -d.)
-ifeq ($(shell test $(GCC_VERSION) -ge 14; echo $$?),0)
-	DUMP1090_CFLAGS += "-Wno-error=calloc-transposed-args"
-endif
-
-
 all: libdump978.so xdump1090 xrtlais stratuxrun $(PLATFORMDEPENDENT)
 
 stratuxrun: main/*.go common/*.go libdump978.so
@@ -36,7 +30,7 @@ fancontrol: fancontrol_main/*.go common/*.go
 	go build $(BUILDINFO) -o fancontrol -p 4 ./fancontrol_main/
 
 xdump1090:
-	cd dump1090 && CFLAGS=$(DUMP1090_CFLAGS) make BLADERF=no
+	cd dump1090 && make BLADERF=no
 
 libdump978.so: dump978/*.c dump978/*.h
 	cd dump978 && make lib
