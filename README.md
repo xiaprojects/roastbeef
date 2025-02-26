@@ -61,7 +61,7 @@ This repository offers code and binaries that can help you to build your own tra
 
 ## Building
 Due to the modular nature of Stratux, there are many possibilities how you can build it to your needs.
-You can find three popular variations in the form of complete build guides [here](https://github.com/stratux/stratux/wiki/Building-Stratux-Europe-Edition).
+You can find three popular variations in the form of complete build guides [here](https://github.com/stratux/stratux/wiki/Building-Stratux).
 It also shows how you can modify your pre-built Stratux US version to run the EU version.
 
 If you want to customize beyond that, or have different needs, you can find a full list of supported hardware/attachments [here](https://github.com/stratux/stratux/wiki/Supported-Hardware).
