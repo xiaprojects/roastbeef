@@ -10,6 +10,7 @@ DEB_FILENAME_TMP=${ROOTFS_DIR}/tmp/${DEB_NAME}
 on_chroot << EOF
     # needed for OGN for some reason
     apt install --yes libjpeg62-turbo
+    # needed for dump1090
     apt install -y libncurses6 
     dpkg -i /tmp/${DEB_NAME}
 EOF
