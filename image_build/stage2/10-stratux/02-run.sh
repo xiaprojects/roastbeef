@@ -8,7 +8,9 @@ DEB_FILENAME_TMP=${ROOTFS_DIR}/tmp/${DEB_NAME}
 # copy dpkg into /tmp directory so its available in the chroot
 (cp ../../stratux/${DEB_NAME} ${DEB_FILENAME_TMP})
 on_chroot << EOF
-    apt install -y libncurses6
+    # needed for OGN for some reason
+    apt install --yes libjpeg62-turbo
+    apt install -y libncurses6 
     dpkg -i /tmp/${DEB_NAME}
 EOF
 
