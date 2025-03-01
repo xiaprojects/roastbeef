@@ -182,7 +182,7 @@ func applyNetworkSettings(force bool, onlyWriteFiles bool) {
 	}
 	
 	if tplSettings.WiFiSSID == "" {
-		tplSettings.WiFiSSID = "stratux"
+		tplSettings.WiFiSSID = "Stratux"
 	}
 
 	f := func() {

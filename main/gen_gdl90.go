@@ -1406,7 +1406,7 @@ func defaultSettings() {
 	globalSettings.WiFiChannel = 1
 	globalSettings.WiFiIPAddress = "192.168.10.1"
 	globalSettings.WiFiPassphrase = ""
-	globalSettings.WiFiSSID = "stratux"
+	globalSettings.WiFiSSID = "Stratux"
 	globalSettings.WiFiSecurityEnabled = false
 	globalSettings.WiFiClientNetworks = make([]wifiClientNetwork, 0)
 
