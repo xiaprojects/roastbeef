@@ -1347,8 +1347,6 @@ func defaultSettings() {
 	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.SwitchBoard_Enabled = false
 	globalSettings.Switches = make([]switchModel, 0)
-	globalSettings.DarkMode = false
-	globalSettings.UAT_Enabled = false
 	globalSettings.MagCalibration.Heading = 0	// Angle Correction Offset
 	globalSettings.MagCalibration.X = 0			// Magnetic Field Correction Offset
 	globalSettings.MagCalibration.Y = 0			// Magnetic Field Correction Offset
@@ -1359,11 +1357,9 @@ func defaultSettings() {
 	globalSettings.MagCalibration.MagMinX = 0	// Magnetic Field Range
 	globalSettings.MagCalibration.MagMinY = 0	// Magnetic Field Range
 	globalSettings.MagCalibration.MagMinZ = 0	// Magnetic Field Range
-	globalSettings.ES_Enabled = true
 	globalSettings.Radio_Enabled = false
 	globalSettings.EMS_Enabled = false
-	globalSettings.OGN_Enabled = true
-	// Region is none if not specified
+	// Region is none if not specified, default to US settings
 	globalSettings.RegionSelected = 0
 	globalSettings.DarkMode = false
 	globalSettings.UAT_Enabled = true
@@ -1424,33 +1420,6 @@ func defaultSettings() {
 	globalSettings.GpsManualDevice = "/dev/ttyAMA0"
 	globalSettings.GpsManualTargetBaud = 115200
 	globalSettings.GpsManualChip = "ublox"
-}
-
-func checkForNoSettings() {
-	// See if a configuration file exists. If not, copy the default one
-	if _, err := os.Stat(configLocation); os.IsNotExist(err) {
-		noConfigFound = true
-		src, errsrc := os.Open(configLocationDefault)
-		if errsrc != nil {
-			log.Printf("Could not locate default config file %s: %s\n", configLocationDefault, errsrc.Error())
-			return
-		}
-		defer src.Close()
-		// Create the config file
-		dest, err := os.Create(configLocation)
-		if err != nil {
-			log.Printf("Could not create default config file %s: %s\n", configLocation,err.Error())
-			return
-		}
-		defer dest.Close()
-		// Copy the default into the config file
-		_, err = io.Copy(dest, src)
-		if err != nil {
-			log.Printf("Could not create default config file %s: %s\n", configLocation, err.Error())
-		}
-	} else {
-		noConfigFound = false
-	}
 }
 
 func readSettings() {
@@ -1844,23 +1813,8 @@ func main() {
 
 	initLogging()
 
-	// JAJ if we do not have the settings file, we will attempt to copy a default one at first boot
-	// in order to handle US vs EU settings
-	checkForNoSettings()
-
 	// Read settings.
 	readSettings()
-	// Check to see if there was no config file found initially. If so, then we will set the region to 0. If there
-	// was a config found and the region is 0, we will set it to 1 (US) by default
-	if noConfigFound {
-		log.Printf("No config file was found, so enabling the query of a region")
-		globalSettings.RegionSelected = 0
-	} else {
-		if globalSettings.RegionSelected == 0 {
-			log.Printf("Config file was found and the region selected is 0. Setting the default to US")
-			globalSettings.RegionSelected = 1
-		}
-	}
 
 	// Clear the logfile on startup
 	if globalSettings.ClearLogOnStart { clearDebugLogFile() }
