@@ -17,6 +17,7 @@
 	- Fuel calculation
 	- GoTo Home
 
+	Autopilot sentence
 	$GPRMB,A,4.32,L,FROM,TO,5109.7578000,N,11409.0960000,W,4.6,279.2,0.0,V,D*4A
 	eg1. $GPRMB,A,0.66,L,003,004,4917.24,N,12309.57,W,001.3,052.5,000.5,V*0B
 	          A            Data status A = OK, V = warning
@@ -31,6 +32,22 @@
 	          000.5        Velocity towards destination, knots
 	          V            Arrival alarm  A = arrived, V = not arrived
 	          *0B          mandatory checksum
+	Add CDI Indicator sentence for new Avionics integration
+	$GPAPB,A,A,0.10,R,N,V,V,011,M,DEST,011,M,011,M*82
+			Status V = LORAN-C Blink or SNR warning flag A = OK or not used
+			Status V = Loran-C Cycle Lock warning flag A = OK or not used
+			Cross Track Error Magnitude
+			Direction to steer, L or R
+			Cross Track Units, N = Nautical Miles
+			Status A = Arrival Circle Entered
+			Status A = Perpendicular passed at waypoint
+			Bearing origin to destination
+			M = Magnetic, T = True
+			Destination Waypoint ID
+			Bearing, present position to Destination
+			M = Magnetic, T = True
+			Heading to steer to destination waypoint
+			M = Magnetic, T = True
 */
 
 package main
@@ -66,6 +83,7 @@ const (
 	GPRMB_STEER_RIGHT       = "R"
 	GPRMB_ARRIVED_YES       = "A"
 	GPRMB_ARRIVED_NOT_YET   = "V"
+	GPRMB_STATUS_ACTIVE     = "A"
 )
 
 type GPRMBData struct {
@@ -129,6 +147,12 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilot() {
 					log.Print(nmeaGPRMB)
 					// NMEA Serial output for $GPRMB Autopilot feature
 					sendNetFLARM(nmeaGPRMB,time.Second, 2)
+
+					// Added CDI
+					nmeaGPAPB := makeGPAPBString(gprmb)
+					log.Print(nmeaGPAPB)
+					// NMEA Serial output for $GPRMB Autopilot feature
+					sendNetFLARM(nmeaGPAPB,time.Second, 2)
 				}
 			}
 			autopilotUpdate.SendJSON(autopilotInstance.status)
@@ -236,7 +260,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataC
 
 		// Enable Autopilot Directions
 		gprmb.Status = GPRMB_STATUS_OK
-		gprmb.Arrived = GPRMB_ARRIVED_NOT_YET
+		gprmb.Arrived = GPRMB_STATUS_ACTIVE
 		/*
 		// TODO: escape, GPRMB Support for Waypoints string naming
 		if nearestWaypointIndex > 0 {
@@ -304,6 +328,8 @@ func (autopilotInstance *AutopilotStratuxPlugin) ShutdownFunc() bool {
 
 /*
 	NMEA Sentence Generator
+	$GPRMB - Recommended minimum navigation info
+	Navigation information (Used by Autopilot)
 */
 func makeGPRMBString(data GPRMBData) string {
 
@@ -336,7 +362,7 @@ func makeGPRMBString(data GPRMBData) string {
 	}
 
 	// Format Message GPRMB Recommended minimum navigation info
-	msg := fmt.Sprintf("$GPRMB,%s,%.2f,%s,%s,%s,%.f,%s,%f,%s,%.1f,%.1f,%.1f,%s",
+	msg := fmt.Sprintf("$GPRMB,%s,%.2f,%s,%s,%s,%.2f,%s,%.2f,%s,%.1f,%.1f,%.1f,%s",
 	data.Status,
 	XTRKDistance,
 	data.Steer,
@@ -350,6 +376,30 @@ func makeGPRMBString(data GPRMBData) string {
 	data.TrueBearing,
 	data.Knots,
 	data.Arrived)
+	msg = appendNmeaChecksum(msg)
+	msg += "\r\n"
+	return msg
+}
+
+/*
+	NMEA Sentence Generator
+	$GPAPB - Autopilot Sentence "B"
+	CDI Information  (Used by Autopilot)
+*/
+func makeGPAPBString(data GPRMBData) string {
+	XTRKDistance := data.XTRKDistance
+	if(XTRKDistance>9.99){
+		XTRKDistance=9.99
+	}
+
+	// Format Message GPRMB Recommended minimum navigation info
+	msg := fmt.Sprintf("$GPAPB,A,A,%.2f,%s,N,V,V,%03.0f,M,%s,%03.0f,M,%03.0f",
+	XTRKDistance,
+	data.Steer,
+	data.TrueBearing,
+	data.WaypointDest,
+	data.TrueBearing,
+	data.TrueBearing)
 	msg = appendNmeaChecksum(msg)
 	msg += "\r\n"
 	return msg
