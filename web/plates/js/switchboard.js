@@ -44,6 +44,7 @@ function SwitchBoardCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     switch (event.key) {
+      case KEYPAD_MAPPING_PREV_MEDIA:
       case KEYPAD_MAPPING_PREV:
       case "ArrowUp":
       case "ArrowLeft":
@@ -54,6 +55,7 @@ function SwitchBoardCtrl($rootScope, $scope, $state, $http, $interval) {
         break;
       case "ArrowDown":
       case "ArrowRight":
+      case KEYPAD_MAPPING_NEXT_MEDIA:
       case KEYPAD_MAPPING_NEXT:
         break;
     }

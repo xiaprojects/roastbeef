@@ -189,6 +189,7 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
         switch (event.key) {
             case "ArrowLeft":
             case "ArrowUp":
+            case KEYPAD_MAPPING_PREV_MEDIA:
             case KEYPAD_MAPPING_PREV:
                 $scope.checklistSelectPrev();
                 break;
@@ -206,6 +207,7 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
                 break;
             case "ArrowRight":
             case "ArrowDown":
+            case KEYPAD_MAPPING_NEXT_MEDIA:
             case KEYPAD_MAPPING_NEXT:
                 $scope.checklistSelectNext();
                 break;

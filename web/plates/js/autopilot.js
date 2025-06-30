@@ -452,6 +452,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
                 if ($scope.gpx.routes[x].points[y].Status == WAYPOINT_STATUS_TARGET) {
                     $scope.gpx.routes[x].points[y].style = "background-color:#4cd964;";
                     $scope.directTo = $scope.gpx.routes[x].points[y];
+                    $scope.to = $scope.directTo;
                 }
                 if ($scope.gpx.routes[x].points[y].Status == WAYPOINT_STATUS_PAST) {
                     $scope.gpx.routes[x].points[y].style = "background-color:lightgray;";
@@ -629,7 +630,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null)) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller!='AutopilotCtrl'){
             removeEventListener("keypad", keypadEventListener);
             return; // we are getting called once after clicking away from the status page
         }
@@ -643,6 +644,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
         switch (event.key) {
+            case KEYPAD_MAPPING_PREV_MEDIA:
             case KEYPAD_MAPPING_PREV:
             case "ArrowUp":
             case "ArrowLeft":
@@ -655,6 +657,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
                 break;
             case "ArrowDown":
             case "ArrowRight":
+            case KEYPAD_MAPPING_NEXT_MEDIA:
             case KEYPAD_MAPPING_NEXT:
                 $scope.autopilotSelectNext();
                 break;

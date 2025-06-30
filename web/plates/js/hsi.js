@@ -12,6 +12,7 @@ HSICtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // I
 
 // create our controller function with all necessary logic
 function HSICtrl($rootScope, $scope, $state, $http, $interval) {
+    const controllerName = "HSICtrl";
     $scope.directTo = {
         "Lat": 0,
         "Lon": 0,
@@ -55,56 +56,20 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
     /*****************************************************
      * Situation Update
      */
-    function connect($scope) {
-        if ($state.current.controller != 'HSICtrl') return;
 
-        if (($scope === undefined) || ($scope === null))
-            return; // we are getting called once after clicking away from the gps page
-
-        if (($scope.socket === undefined) || ($scope.socket === null)) {
-            socket = new WebSocket(URL_GPS_WS);
-            $scope.socket = socket; // store socket in scope for enter/exit usage
+    addEventListener("SituationUpdated", SituationUpdated);
+    function SituationUpdated(event) {
+        if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'HSICtrl')) {
+            removeEventListener("SituationUpdated", SituationUpdated);
+            return; // we are getting called once after clicking away from the status page
         }
-
-
-        socket.onopen = function (msg) {
-        };
-
-        socket.onclose = function (msg) {
-            delete $scope.socket;
-            setTimeout(function () { connect($scope); }, 1000);
-        };
-
-        socket.onerror = function (msg) {
-        };
-
-        socket.onmessage = function (msg) {
-            if (($scope === undefined) || ($scope === null)) {
-                socket.close();
-                return;
-            }
-            var situation = angular.fromJson(msg.data);
-            // Filter to avoid blow up CPU
-            const oldSituation = $scope.situation;
-            const newSituation = situation;
-            const ahrsThreshold = 2;
-            const altitudeThreshold = 50 / 3.2808;
-            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
-            if (requireRefresh == true) {
-                $scope.situation = situation;
-                loadSituationInHSI(situation);
-                $scope.$apply(); // trigger any needed refreshing of data
-            }
-            else {
-                return;
-            }
-
-
-        };
+        
+        $scope.loadSituationInHSI(event.detail)
     }
 
+
     $scope.hsi = new HSICircleRenderer("hsi", {});
-    connect($scope);
+
     $scope.autopilotLoadCurrentStatus();
 
     $state.get('hsi').onEnter = function () {
@@ -114,14 +79,7 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
     $state.get('hsi').onExit = function () {
         removeEventListener("keypad", keypadEventListener);
         removeEventListener("WaypointChanged", waypointChanged);
-
-        $scope.noSleep.disable();
-        delete $scope.noSleep;
-
-        if (($scope.socket !== undefined) && ($scope.socket !== null)) {
-            $scope.socket.close();
-            $scope.socket = null;
-        }
+        removeEventListener("SituationUpdated", SituationUpdated);
     };
 
 
@@ -237,7 +195,8 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
 
-    function loadSituationInHSI(situation) { // mySituation
+    $scope.loadSituationInHSI = function(situation) { // mySituation
+        $scope.situation = situation;
         $scope.tickForRouting();
         $scope.hsi.update(
             $scope.situation.GPSTrueCourse,
@@ -247,6 +206,82 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.overrideHSI,
             $scope.to.slope
         );
+    }
+
+
+
+      // Keypad Listener with supported keys
+      function keypadEventListener(event) {
+        if (($scope === undefined) || ($scope === null) || ($state.current.controller != controllerName)) {
+            removeEventListener("keypad", keypadEventListener);
+            return; // we are getting called once after clicking away from the status page
+        }
+        if ($scope.keypadKnobTimerRemovePopup === undefined) {
+        }
+        else {
+            // user is changing screen
+            return;
+        }
+
+        switch (event.key) {
+            case KEYPAD_MAPPING_PREV_MEDIA:
+            case KEYPAD_MAPPING_PREV:
+                case "W":
+                    {
+                        const proxy = new KeyboardEvent("keypad", { key: "SwipeLeft" });
+                        dispatchEvent(proxy);
+                        $scope.$apply(); 
+                    }
+                break;
+            case "ArrowUp":
+            case "ArrowLeft":
+                {
+                    const proxy = new KeyboardEvent("keypad", { key: "from" });
+                    dispatchEvent(proxy);
+                    $scope.$apply(); 
+                }
+                break;
+            case "Enter":
+            case "C":
+            case " ":
+            case KEYPAD_MAPPING_TAP:
+
+                break;
+            case "E":
+                {
+                    const proxy = new KeyboardEvent("keypad", { key: "SwipeRight" });
+                    dispatchEvent(proxy);
+                    $scope.$apply(); 
+                }
+            break;
+            case "ArrowDown":
+            case "ArrowRight":
+            case KEYPAD_MAPPING_NEXT_MEDIA:
+            case KEYPAD_MAPPING_NEXT:
+                {
+                    const proxy = new KeyboardEvent("keypad", { key: "to" });
+                    dispatchEvent(proxy);
+                    $scope.$apply(); 
+                }
+                break;
+            default:
+                // Event not managed, ex. Swipes and other keypad.
+                break;
+        }
+
+    }
+
+    addEventListener("keypad", keypadEventListener);
+    addEventListener("WaypointChanged", waypointChanged);
+
+        
+    function waypointChanged(event) {
+        if (($scope === undefined) || ($scope === null)) {
+            removeEventListener("WaypointChanged", waypointChanged);
+            return; // we are getting called once after clicking away from the status page
+        }
+        console.log(event);
+        $scope.autopilotLoadCurrentStatus();
     }
 }
 

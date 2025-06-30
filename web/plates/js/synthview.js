@@ -57,7 +57,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
      */
 
     function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null)) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl'){
             removeEventListener("keypad", keypadEventListener);
             return; // we are getting called once after clicking away from the status page
         }
@@ -70,36 +70,115 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
         switch (event.key) {
+            case "MediaTrackNext":
+                $scope.synthViewSelectUp();
+                break;
             case KEYPAD_MAPPING_PREV:
-            case "ArrowUp":
-            case "ArrowLeft":
-                $scope.synthViewSelectPrev();
+            case KEYPAD_MAPPING_PREV_MEDIA:
+            case "MediaFastForward":
+                $scope.synthViewSelectLeft();
                 break;
             case "Enter":
             case " ":
             case KEYPAD_MAPPING_TAP:
                 $scope.synthViewSelectTap();
                 break;
-            case "ArrowDown":
-            case "ArrowRight":
+            case "MediaTrackPrevious":
+                $scope.synthViewSelectDown();
+                break;
+            case "MediaRewind":
+            case KEYPAD_MAPPING_NEXT_MEDIA:
             case KEYPAD_MAPPING_NEXT:
-                $scope.synthViewSelectNext();
+                $scope.synthViewSelectRight();
                 break;
         }
     }
 
 
-
-    $scope.synthViewSelectPrev = function () {
-        const proxy = new KeyboardEvent("keypad", { key: "from" });
-        dispatchEvent(proxy);
+    $scope.cameraRotating = {};
+    $scope.synthViewSelectDown = function () {
+        //const proxy = new KeyboardEvent("keypad", { key: "from" });
+        //dispatchEvent(proxy);
+        if($scope.remote.reset == false){
+            $scope.cameraRotating = {
+                pitch:resources.items[0].pitch,
+                roll:resources.items[0].roll,
+                x:resources.items[0].x,
+                y:resources.items[0].y,
+                elevation:resources.items[0].elevation,
+                direction:resources.items[0].direction,
+                distance:10
+            };
+        }
+        $scope.remote.reset = true;
+        $scope.cameraRotating.distance = $scope.cameraRotating.distance+1;
+        if($scope.cameraRotating.distance<10)$scope.cameraRotating.distance=10;
+        rendering.cameraFollowItem($scope.cameraRotating, resources,$scope.cameraRotating.distance);
+        requestAnimationFrame(animate);
     }
-    $scope.synthViewSelectNext = function () {
-        const proxy = new KeyboardEvent("keypad", { key: "to" });
-        dispatchEvent(proxy);
+    $scope.synthViewSelectUp = function () {
+        //const proxy = new KeyboardEvent("keypad", { key: "from" });
+        //dispatchEvent(proxy);
+        if($scope.remote.reset == false){
+            $scope.cameraRotating = {
+                pitch:resources.items[0].pitch,
+                roll:resources.items[0].roll,
+                x:resources.items[0].x,
+                y:resources.items[0].y,
+                elevation:resources.items[0].elevation,
+                direction:resources.items[0].direction,
+                distance:10
+            };
+        }
+        $scope.remote.reset = true;
+        $scope.cameraRotating.distance = $scope.cameraRotating.distance-1;
+        if($scope.cameraRotating.distance<10)$scope.cameraRotating.distance=10;
+        rendering.cameraFollowItem($scope.cameraRotating, resources,$scope.cameraRotating.distance);
+        requestAnimationFrame(animate);
+    }
+    $scope.synthViewSelectLeft = function () {
+        //const proxy = new KeyboardEvent("keypad", { key: "from" });
+        //dispatchEvent(proxy);
+        if($scope.remote.reset == false){
+            $scope.cameraRotating = {
+                pitch:resources.items[0].pitch,
+                roll:resources.items[0].roll,
+                x:resources.items[0].x,
+                y:resources.items[0].y,
+                elevation:resources.items[0].elevation,
+                direction:resources.items[0].direction,
+                distance:10
+            };
+        }
+        $scope.remote.reset = true;
+        $scope.cameraRotating.direction = $scope.cameraRotating.direction-10;
+        //remote.set($scope.cameraRotating.pitch, $scope.cameraRotating.roll, $scope.cameraRotating.x, $scope.cameraRotating.y, $scope.cameraRotating.elevation, $scope.cameraRotating.direction);
+        rendering.cameraFollowItem($scope.cameraRotating, resources);
+        requestAnimationFrame(animate);
+    }
+    $scope.synthViewSelectRight = function () {
+        //const proxy = new KeyboardEvent("keypad", { key: "to" });
+        //dispatchEvent(proxy);
+        if($scope.remote.reset == false){
+            $scope.cameraRotating = {
+                pitch:resources.items[0].pitch,
+                roll:resources.items[0].roll,
+                x:resources.items[0].x,
+                y:resources.items[0].y,
+                elevation:resources.items[0].elevation,
+                direction:resources.items[0].direction,
+                distance:10
+            };
+        }
+        $scope.remote.reset = true;
+        $scope.cameraRotating.direction = $scope.cameraRotating.direction+10;
+        //remote.set($scope.cameraRotating.pitch, $scope.cameraRotating.roll, $scope.cameraRotating.x, $scope.cameraRotating.y, $scope.cameraRotating.elevation, $scope.cameraRotating.direction);
+        rendering.cameraFollowItem($scope.cameraRotating, resources);
+        requestAnimationFrame(animate);
     }
 
     $scope.synthViewSelectTap = function () {
+        $scope.synthviewFrameReset();
     }
 
     /*****************************************************
@@ -588,16 +667,16 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
 
-        cameraFollowItem(item, resources) {
+        cameraFollowItem(item, resources, distance = 10) {
             this.camera.position.set(
-                item.x - 10 * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize,
+                item.x - distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize,
                 item.elevation,
-                item.y - 10 * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize
+                item.y - distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize
             );
             this.controls.target.set(
-                item.x + 10 * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize,
+                item.x + distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize,
                 item.elevation,
-                item.y + 10 * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize
+                item.y + distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize
             );
             this.controls.update();
         }
