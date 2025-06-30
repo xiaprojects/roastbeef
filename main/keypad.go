@@ -142,8 +142,12 @@ func (keypadInstance *KeypadStratuxPlugin) ListenerFunc() {
 
 func (keypad *KeypadStratuxPlugin) ShutdownFunc() bool {
 	log.Println("Entered KeypadStratuxPlugin shutdown() ...")
-	if keypad.isConnected() {
-		keypad.device.Close()
+	if keypad != nil {
+		if keypad.isConnected() {
+			if keypad.device != nil {
+				keypad.device.Close()
+			}
+		}
 	}
 	return true
 }
