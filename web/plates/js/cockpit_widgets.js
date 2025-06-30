@@ -657,7 +657,7 @@ SixPackTurnIndicator.prototype = {
     update: function (value, item, situation) {
     // TC update - note that the TC appears opposite the angle of the attitude indicator, as it mirrors the actual wing up/down position
 
-    this.coordinator.updateCoordinator(situation.AHRSTurnRate,situation.AHRSSlipSkid)
+    this.coordinator.updateCoordinator(situation.AHRSTurnRate,-situation.AHRSSlipSkid)
     }
 }
 ////////////////////////////////////////////////////////////////////////////
