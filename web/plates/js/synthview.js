@@ -378,7 +378,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         async terrainFetch(lat, lon) {
             try {
-                const url = "synthview/terrainData.json";
+                const url = "synthview/Europe100M.json";
                 const response = await fetch(url); // Fetch the data
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
