@@ -562,7 +562,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             items[0].elevation = situation.GPSAltitudeMSL * 0.3048;
             items[0].direction = situation.GPSTrueCourse;
             items[0].roll = situation.AHRSRoll;
-            items[0].pitch = -situation.AHRSPitch;
+            items[0].pitch = -situation.AHRSPitch+items[0].pitchModel;
 
             return items;
         }
