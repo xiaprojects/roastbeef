@@ -146,13 +146,13 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilot() {
 					nmeaGPRMB := makeGPRMBString(gprmb)
 					log.Print(nmeaGPRMB)
 					// NMEA Serial output for $GPRMB Autopilot feature
-					sendNetFLARM(nmeaGPRMB,time.Second, 2)
+					sendNetFLARM(nmeaGPRMB,time.Second, 0)
 
 					// Added CDI
 					nmeaGPAPB := makeGPAPBString(gprmb)
 					log.Print(nmeaGPAPB)
 					// NMEA Serial output for $GPRMB Autopilot feature
-					sendNetFLARM(nmeaGPAPB,time.Second, 2)
+					sendNetFLARM(nmeaGPAPB,time.Second, 0)
 				}
 			}
 			autopilotUpdate.SendJSON(autopilotInstance.status)

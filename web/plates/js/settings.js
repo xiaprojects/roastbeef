@@ -263,6 +263,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 	var toggles = ['UAT_Enabled', 'ES_Enabled', 'OGN_Enabled', 'AIS_Enabled', 'APRS_Enabled', 'Ping_Enabled', 'Pong_Enabled', 'OGNI2CTXEnabled', 'GPS_Enabled', 'IMU_Sensor_Enabled',
 		'Audio_Enabled',
 		'Autopilot_Enabled',
+		'AutopilotUdp_Enabled',
 		'Keypad_Enabled',
 		'Camera_Enabled',
 		'Charts_Enabled',
@@ -326,6 +327,9 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		$scope.Charts_Enabled = settings.Charts_Enabled;
 		$scope.SwitchBoard_Enabled = settings.SwitchBoard_Enabled;
 		$scope.Autopilot_Enabled = settings.Autopilot_Enabled;
+		// https://github.com/xiaprojects/roastbeef/issues/29
+		$scope.AutopilotUdp_Enabled = settings.AutopilotUdp_Enabled;
+		$scope.AutopilotUdp_Port = settings.AutopilotUdp_Port;
 		$scope.Audio_Enabled = settings.Audio_Enabled;
 		$scope.Keypad_Enabled = settings.Keypad_Enabled;
 		$scope.EMS_Enabled = settings.EMS_Enabled;
@@ -422,6 +426,17 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 			setSettings(angular.toJson(newsettings));
 		}
 	});
+
+	$scope.updateAutopilotUdp_Port = function () {
+		settings["AutopilotUdp_Port"] = 1234; // default settings
+		if (($scope.AutopilotUdp_Port !== undefined) && ($scope.AutopilotUdp_Port !== null)) {
+			settings["AutopilotUdp_Port"] = parseInt($scope.AutopilotUdp_Port);
+			var newsettings = {
+				"AutopilotUdp_Port": settings["AutopilotUdp_Port"]
+			};
+			setSettings(angular.toJson(newsettings));
+		}
+	};
 
 	$scope.updateppm = function () {
 		settings["PPM"] = 0;

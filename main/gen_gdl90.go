@@ -1253,6 +1253,8 @@ type settings struct {
 	GpsManualTargetBaud  int            // default: 115200
 	// Plugins
 	Autopilot_Enabled    bool // Autopilot with HSI
+	AutopilotUdp_Enabled bool // Autopilot from UDP with HSI
+	AutopilotUdp_Port    int  // Autopilot UDP Port, default 1234
 	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
 	Camera_Enabled       bool // USB Camera and WebCam
@@ -1330,6 +1332,7 @@ type status struct {
 
 	OGNPrevRandomAddr                          string    // when OGN is in random stealth mode, it's ID changes randomly - keep the previous one so we can filter properly
 	Pong_Heartbeats                            int64     // Pong heartbeat counter
+	AutopilotUDPReceivingMessages              uint32
 }
 
 var globalSettings settings
@@ -1339,6 +1342,8 @@ var noConfigFound bool
 func defaultSettings() {
 	// Plugin defaults
 	globalSettings.Autopilot_Enabled = false
+	globalSettings.AutopilotUdp_Enabled = false
+	globalSettings.AutopilotUdp_Port = 1234	
 	globalSettings.Autopilot_HomeWaypoint = Waypoint{Lat:41.95284169758052,Lon:12.501970590019647,Ele:0,Cmt:"Home"} // Home Location, LIRU as example
 	globalSettings.Audio_Enabled = false
 	globalSettings.Keypad_Enabled = false
@@ -1686,6 +1691,7 @@ func gracefulShutdown() {
 	checklist.ShutdownFunc()
 	// Autopilot Feature
 	autopilot.ShutdownFunc()
+	autopilotUdp.ShutdownFunc()
 	// Timers Feature
 	timers.ShutdownFunc()
 	// Alerts Feature
@@ -1844,6 +1850,7 @@ func main() {
 		checklist.InitFunc()
 		// Autopilot Feature
 		autopilot.InitFunc()
+		autopilotUdp.InitFunc()
 		// Alerts Feature
 		alerts.InitFunc()
 		// Timers Feature

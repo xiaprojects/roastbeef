@@ -486,6 +486,17 @@
                     </div>
                 </div>
                 <div class="form-group reset-flow">
+                    <label class="control-label col-xs-5">Autopilot UDP Forwarder</label>
+                    <div class="col-xs-7">
+                        <ui-switch ng-model='AutopilotUdp_Enabled' settings-change></ui-switch>
+                    </div>
+                    <label class="control-label col-xs-5">Autopilot UDP Port</label>
+                    <form name="AutopilotUdp_PortForm" ng-submit="updateAutopilotUdp_Port()" novalidate>
+                        <input class="col-xs-7" type="number" ng-model="AutopilotUdp_Port" placeholder="integer"
+                            ng-blur="updateAutopilotUdp_Port()" />
+                    </form>
+                </div>
+                <div class="form-group reset-flow">
                     <label class="control-label col-xs-5">Keypad</label>
                     <div class="col-xs-7">
                         <ui-switch ng-model='Keypad_Enabled' settings-change></ui-switch>
