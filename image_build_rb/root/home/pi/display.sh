@@ -1,0 +1,2 @@
+exec chromium-browser --start-maximized
+exec chromium-browser --remote-debugging-port=9222 --fast --fast-start --kiosk --disable-pinch --overscroll-history-navigation=disabled --disable-features=TouchpadOverscrollHistoryNavigation --disable-restore-session-state  --noerrdialogs --disable-infobars --no-first-run --ozone-platform=wayland --enable-features=OverlayScrollbar --start-maximized --start-fullscreen  --app=https://agi.it 2>> /tmp/chromium-browser-errors.txt >> /tmp/chromium-browser.txt

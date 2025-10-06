@@ -1,0 +1,13 @@
+[Unit]
+Description=AccessPoint
+After=NetworkManager.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -lc /home/pi/enable_accesspoint.sh
+Restart=once
+User=root
+RestartSec=5
+
+[Install]
+WantedBy=network.target

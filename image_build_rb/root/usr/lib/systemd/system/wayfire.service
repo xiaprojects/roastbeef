@@ -1,0 +1,12 @@
+[Unit]
+Description=Wayfire
+
+[Service]
+ExecStart=/bin/bash -lc /home/pi/wayfire.sh
+KillMode=process
+Restart=always
+User=pi
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
