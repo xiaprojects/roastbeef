@@ -20,7 +20,9 @@ export WIFI_AP_BAND=bg
 # Access point setup
 cd $USER_HOME
 iw dev wlan0 interface add ap0 type __ap
-
+nmcli connection del 'AccessPoint'
+nmcli connection del 'AccessPoint'
+nmcli connection del 'AccessPoint'
 nmcli connection add type wifi ifname ap0 con-name 'AccessPoint' ssid $WIFI_AP_NAME mode ap
 nmcli connection modify 'AccessPoint' wifi-sec.key-mgmt wpa-psk
 nmcli connection modify 'AccessPoint' wifi-sec.psk $WIFI_AP_PASSWORD
@@ -35,16 +37,13 @@ nmcli con up AccessPoint
 
 # If you have Internet WiFi in your Aircraft here is the right place to enable it
 # raspi-config nonint do_wifi_setup "MyNetwork" "MyPassword"
-
-
-sudo raspi-config nonint do_wifi_country "IT"
-sudo raspi-config nonint do_i2c 0
-sudo raspi-config nonint do_overlayfs 0
-
-
-sudo mount -o remount,rw /media/root-ro
-sudo mount -o remount,ro /media/root-ro
-
+raspi-config nonint do_wifi_country "IT"
+raspi-config nonint do_i2c 0
+raspi-config nonint do_overlayfs 0
+# To write on the root file system:
+#sudo mount -o remount,rw /media/root-ro
+#sudo mount -o remount,ro /media/root-ro
+# Todo create a similar script to be invoked by application
 
 # GO Install
 cd $USER_HOME
@@ -58,12 +57,44 @@ ln -s $USER_HOME/go/bin/* .
 cd $USER_HOME
 apt update
 apt upgrade -y
-apt install -y librtlsdr-dev bc bison flex libssl-dev make git wayfire seatd xdg-user-dirs libgl1-mesa-dri libusb-1.0-0-dev build-essential autoconf libtool i2c-tools libfftw3-dev libncurses-dev python3-serial jq ifplugd iptables libttspico-utils bluez bluez-firmware chromium-browser usbmuxd dnsmasq libtool libfftw3-dev rtl-sdr
+apt install -y librtlsdr-dev
+apt install -y bc
+apt install -y bison
+apt install -y flex
+apt install -y libssl-dev
+apt install -y make
+apt install -y git
+apt install -y wayfire
+apt install -y seatd
+apt install -y xdg-user-dirs
+apt install -y libgl1-mesa-dri
+apt install -y libusb-1.0-0-dev
+apt install -y build-essential
+apt install -y autoconf
+apt install -y libtool
+apt install -y i2c-tools
+apt install -y libfftw3-dev
+apt install -y libncurses-dev
+apt install -y python3-serial
+apt install -y jq
+apt install -y iptables
+apt install -y libttspico-utils
+apt install -y bluez bluez-firmware
+apt install -y chromium
+apt install -y chromium-browser
+apt install -y usbmuxd
+apt install -y dnsmasq
+apt install -y libtool
+apt install -y libfftw3-dev
+apt install -y rtl-sdr
 
 # OGN ESP Updater
 apt install -y python3-pip
 pip install --break-system-packages esptool
 
+# Enable RW on /boot to allow writing of configuration
+# TODO in the future change method
+raspi-config nonint disable_bootro
 
 # Apply files
 cd $USER_HOME
@@ -164,9 +195,6 @@ ln -s $RB_SETTINGS_FOLDER $RB_WWW_SETTINGS
 
 # Enable the Overlay
 raspi-config nonint do_overlayfs 0
-# Enable RW on /boot to allow writing of configuration
-# TODO in the future change method
-raspi-config nonint disable_bootro
 # In the future to write into the root you shall:
 #sudo mount -o remount,rw /media/root-ro
 # In the future to readonly into the root you shall:
@@ -176,7 +204,7 @@ raspi-config nonint disable_bootro
 raspi-config nonint do_i2c 0
 
 # Debugging purposes
-sudo raspi-config nonint do_ssh 1
+#raspi-config nonint do_ssh 1
 
 
 # Apply User Settings
