@@ -1,0 +1,28 @@
+.SynthView-side-left {
+    top: 48%;
+    left: 0px;
+        transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10cqmin;
+    font-weight: bolder;
+    color: white;
+    text-align: left;
+    padding: 1%;
+    text-shadow: 1px 1px #1c1c1c;
+}
+.SynthView-side-right {
+    top: 48%;
+    right: 0px;
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10cqmin;
+    font-weight: bolder;
+    color: white;
+    text-align: right;
+    padding: 1%;
+    text-shadow: 1px 1px #1c1c1c;
+}

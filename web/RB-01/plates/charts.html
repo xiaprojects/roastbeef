@@ -1,0 +1,49 @@
+<div ui-content-for="title">Charts</div>
+<div>&nbsp;</div>
+<div class="col-sm-12">
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <span class="panel_label">Charts</span>
+      <span ng-show="Charts_Enabled" class="label label-success">Recording enabled</span>
+			<span ng-hide="Charts_Enabled" class="label label-danger">Recording disabled</span>
+      </div>
+      <div class="panel-body text-center">
+       
+        <div class="form-group">
+          Display Charts:&nbsp;
+            <select class="custom-select" ng-model="ChartSelect" ng-change="reloadCharts()">
+              <option value="{{file.Name}}" ng-select="file.Name==ChartSelect" ng-repeat="file in files">{{file.Label}}
+              </option>
+            </select>
+            <button class="btn btn-success" ng-click="downloadByExt('kml')">KML</button>&nbsp;
+            <button class="btn btn-primary" ng-click="downloadByExt('gpx')">GPX</button>&nbsp;
+            <button class="btn btn-warning" ng-click="downloadByExt('csv')">CSV</button>&nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="col-sm-12" ng-repeat="(chartName,chart) in charts">
+  <div class="panel-group col-sm-12" id="chart_panel_{{chartName}}">
+    <div class="panel panel-default">
+      <div class="panel-heading">{{chartName}}</div>
+      <div class="panel-body text-center">
+        <div class="form-group" style="padding: 0px;margin:0px;">
+          <div>
+            <canvas id="chart_{{chartName}}"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body text-right">
+        <div lass="col-sm-3">
+          <a ng-click="downloadChart(chartName)" id="chart_download_status" class="btn"><i class="fa fa-download"></i>
+            Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

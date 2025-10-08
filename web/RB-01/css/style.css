@@ -1,0 +1,334 @@
+/*
+@supports (padding-top: constant(safe-area-inset-top)) {
+  body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}
+
+@media (display-mode: fullscreen) {
+  body {
+    padding: 0;
+  }
+}
+
+@media (display-mode: standalone) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+/* Browsers which partially support CSS variables (iOS 11.0 – 11.2)
+@supports (padding-top: constant(safe-area-inset-top)) {
+  body { 
+    --safe-area-inset-top: constant(safe-area-inset-top);
+    height: calc(100% + var(--safe-area-inset-top));
+  }
+}
+/* Adapted from https://medium.com/@draganeror/iphone-x-layout-features-with-css-environment-variables-d57423433dec */
+/* Browsers which fully support CSS variables (iOS 11.2+).
+@supports (padding-top: env(safe-area-inset-top)) {
+  body {
+    --safe-area-inset-top: env(safe-area-inset-top);
+    height: calc(100% + var(--safe-area-inset-top));
+  }
+}
+
+@media (display-mode: fullscreen) {
+  body {
+    height: 100%;
+  }
+}
+
+@media (display-mode: standalone) {
+  body {
+    height: 100%;
+  }
+}
+*/
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-app {
+  /*background: lightcoral;*/
+  background: transparent;
+  border-width: 0px;
+}
+
+body {
+
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.app-body {
+  margin: 0;
+}
+
+/*
+.has-navbar-top .app-body {
+  padding-top: 0px;
+}
+  */
+
+.navbar-absolute-top {
+  /*width: 40px;*/
+  text-align: center;
+  line-height: 40px;
+}
+
+.semiroundtop {
+  border-radius: 0px 0px 10px 10px;
+  /*background: #80808050;*/
+}
+
+.semiroundleft {
+  border-radius: 0px 10px 10px 0px;
+  /*background: #80808050;*/
+}
+
+.semiroundright {
+  border-radius: 10px 0px 00px 10px;
+  /*background: #80808050;*/
+}
+
+
+
+html,
+body {
+  /* RoastBeaf - Disable Swipe to go back and forward of the browsers, instead use KeyPad gestures*/
+  overscroll-behavior-x: none;
+}
+
+
+/* RoastBeaf - Make transparent the AHRS */
+.ai .transparent {
+  fill: #00000000
+}
+
+
+.rb-button-switch {
+  border-color: lightgray;
+  color: white;
+  text-align: center;
+  font-size: 5cqmin;
+  padding-left: 0;
+  padding-right: 1%;
+  border-style: solid;
+  border-width: 1%;
+  display: inline-block;
+  border-radius: 5%;
+  margin-right: 4px;
+}
+
+.rb-button-switch-light {
+  height: 100%;
+  width: 16px;
+  display: inline-block;
+}
+
+.fabSouth {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 30%;
+  height: 10cqw;
+  margin-left: 35%;
+  padding: 0;
+  bottom: 0px;
+
+  text-align: center;
+}
+
+
+.fabNorth {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 30%;
+  height: 10cqw;
+  margin-left: 35%;
+
+  padding: 0;
+  top: 0px;
+
+  text-align: center;
+}
+
+
+.fabWest {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 10%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  margin-top: 35cqh;
+  left: 0px;
+
+
+}
+
+.fabEast {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 10%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  margin-top: 35cqh;
+  right: 0px;
+
+}
+
+.fabNorthEast {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 4cqmin;
+  height: 4cqmin;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  right: 0%;
+
+  font-size: 4cqmin;
+  text-align: center;
+}
+
+.fabNorthWest {
+  text-align: center;
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 4cqmin;
+  height: 4cqmin;
+  margin: 0;
+  padding: 0;
+  top: 0px;
+  left: 0px;
+  font-size: 4cqmin;
+}
+
+.fabSouthEast {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 10%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  bottom: 0px;
+  right: 0px;
+
+}
+
+.fabSouthWest {
+  z-index: 9999999;
+  cursor: pointer;
+  position: absolute;
+  width: 10%;
+  height: 25%;
+  margin: 0;
+  padding: 0;
+  bottom: 0px;
+  left: 0px;
+
+}
+
+@container (width<700px) {
+  .col-sm-6 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .sidebar {
+    pointer-events: auto;
+  }
+
+  .navbar-brand-center {
+    text-align: left;
+    width: auto;
+    float: left;
+    position: relative;
+  }
+
+  .sidebar-left {
+    display: block;
+    left: 0;
+    width: 23%;
+  }
+
+  .sidebar-right {
+    display: block;
+    right: 0;
+    left: auto;
+    width: 23%;
+  }
+
+  .sidebar-right-in .sidebar-left {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .sidebar-left-in .sidebar-right {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .sidebar-left-in .app {
+    width: auto;
+    margin-left: 23%;
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    position: relative;
+    -webkit-transition: -webkit-transform 0 ease;
+    -moz-transition: -moz-transform 0 ease;
+    transition: transform 0 ease;
+  }
+
+  .sidebar-right-in .app {
+    width: auto;
+    margin-right: 23%;
+    right: 0;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    position: relative;
+    -webkit-transition: -webkit-transform 0 ease;
+    -moz-transition: -moz-transform 0 ease;
+    transition: transform 0 ease;
+  }
+}

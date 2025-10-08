@@ -1,0 +1,177 @@
+{
+    "elevationUrl": "/settings/Europe100M.json",
+    "glbPath":"/settings/glb",
+    "cellSize": 100,
+    "terrainBaseColor": null,
+    "terrainColorRed": {
+        "r": 1.0,
+        "g": 0,
+        "b": 0
+    },
+    "terrainColorYellow": {
+        "r": 1.0,
+        "g": 0,
+        "b": 0
+    },
+    "terrainColorGreen": {
+        "r": 0,
+        "g": 1.0,
+        "b": 0
+    },
+    "terrainColorSea": {
+        "r": 0,
+        "g": 0,
+        "b": 1.0
+    },
+    "skyColor": {
+        "r": 0.52,
+        "g": 0.8,
+        "b": 0.91
+    },
+    "elevation": 1000,
+    "trafficMapping": {
+        "GRVDX": {
+            "reference": null,
+            "referenceTubeFront": null,
+            "referenceTubeVertical": null,
+            "projectionSize": 1000,
+            "roll": 0,
+            "pitch": 0,
+            "pitchModel": 15,
+            "direction": 45,
+            "elevation": 1000,
+            "directionModel": 0,
+            "template": "RV4",
+            "name": "ME",
+            "color": 986895,
+            "scale": 2,
+            "x": 0,
+            "y": 0
+        },
+        "IPIMP": {
+            "directionModel": 0,
+            "projectionSize": 1000,
+            "reference": null,
+            "referenceTubeFront": null,
+            "referenceTubeVertical": null,
+            "roll": 10,
+            "pitch": -10,
+            "direction": 0,
+            "elevation": 1000,
+            "template": "RV7",
+            "name": "I-PIMP",
+            "scale": 2,
+            "color": 30719,
+            "x": 10,
+            "y": 0
+        }
+    },
+    "trafficTemplates": {
+        "Helic": [
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 90,
+                "template": "bell206",
+                "scale": 100,
+                "color": 30719
+            },
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "helicopter",
+                "scale": 30,
+                "color": 30719
+            }
+        ],
+        "Large": [
+            {
+                "roll": 0,
+                "pitch": -10,
+                "directionModel": 0,
+                "template": "airbus_a380_hifly",
+                "scale": 1,
+                "color": null
+            },
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "low-poly_gulfstream_aircraft",
+                "scale": 1,
+                "color": null
+            },
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "a319_plane",
+                "scale": 1.5,
+                "color": null
+            }
+        ],
+        "Light": [
+            {
+                "roll": 0,
+                "pitch": 10,
+                "directionModel": 0,
+                "template": "RV7",
+                "scale": 1.5,
+                "color": 30719
+            },
+            {
+                "roll": 0,
+                "pitch": 15,
+                "directionModel": 0,
+                "template": "RV4",
+                "scale": 1.5,
+                "color": 30719
+            },
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 180,
+                "template": "cessna-152",
+                "scale": 10,
+                "color": 30719
+            },
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "low_poly_plane",
+                "scale": 20,
+                "color": 30719
+            },
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "plane_corsair1",
+                "scale": 20,
+                "color": 30719
+            }
+        ]
+    },
+    "items": [
+        {
+            "reference": null,
+            "referenceTubeFront": null,
+            "referenceTubeVertical": null,
+            "projectionSize": 1000,
+            "roll": 0,
+            "pitch": 0,
+            "pitchModel": 15,
+            "direction": 45,
+            "elevation": 1000,
+            "directionModel": 0,
+            "template": "RV4",
+            "name": "ME",
+            "color": 986895,
+            "scale": 2,
+            "x": 0,
+            "y": 0
+        }
+    ]
+}

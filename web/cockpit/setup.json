@@ -11,14 +11,17 @@
         "valueMax": 0,
         "format": "X",
         "value": 0,
-        "rotate": -90,
+        "rotate": -155,
         "sensorType": "GPSGroundSpeed",
         "ranges": [
-            { "colorOff": "#acacac", "color": "#acacac", "min": 0, "max": 35 },
-            { "colorOff": "#ffffff", "color": "#ffffff", "min": 35, "max": 60 },
-            { "colorOff": "#008800", "color": "#00ff00", "min": 60, "max": 95 },
-            { "colorOff": "#888800", "color": "#ffff00", "min": 95, "max": 150 },
-            { "colorOff": "#880000", "color": "#ff0000", "min": 150, "max": 160 }
+            { "colorOff": "#acacac", "color": "#acacac", "min": 40, "max": 50 },
+            { "colorOff": "#ffffff", "color": "#ffffff", "min": 50, "max": 80 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 80, "max": 110 },
+            { "colorOff": "#000088", "color": "#0000ff", "min": 100, "max": 115 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 115, "max": 150 },
+            { "colorOff": "#888800", "color": "#ffff00", "min": 150, "max": 180 },
+            { "colorOff": "#880000", "color": "#ff0000", "min": 180, "max": 190 },
+            { "colorOff": "#acacac", "color": "#000000", "min": 190, "max": 210 }
         ]
     },
     {
@@ -38,24 +41,6 @@
         "ranges": [
         ]
     },
-    {
-        "class":"col-xs-4",
-        "ceil": 0,
-        "scale": 1,
-        "background": "#00ffff",
-        "uiModel": "SixPackTurnIndicator",
-        "size": 0,
-        "circleSize": 0,
-        "valueMin": 99999,
-        "valueMax": 0,
-        "format": "X",
-        "value": 0,
-        "rotate": -90,
-        "sensorType": "AHRSTurnRate",
-        "ranges": [
-        ]
-    },
-
     {
         "class":"col-xs-4",
         "ceil": 0,
@@ -85,6 +70,23 @@
         ]
     },
     {
+        "class":"col-xs-4",
+        "ceil": 0,
+        "scale": 1,
+        "background": "#00ffff",
+        "uiModel": "SixPackTurnIndicator",
+        "size": 0,
+        "circleSize": 0,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -90,
+        "sensorType": "AHRSTurnRate",
+        "ranges": [
+        ]
+    },
+    {
         "ceil": 1,
         "class":"col-xs-4",
         "scale": 1,
@@ -97,7 +99,7 @@
         "format": "X°",
         "value": 0,
         "rotate": -90,
-        "sensorType": "GPSTrueCourse",
+        "sensorType": "AHRSMagHeading",
         "ranges": [
             { "colorOff": "#880000", "color": "#ff0000", "min": 0, "max": 50 },
             { "colorOff": "#008800", "color": "#00ff00", "min": 10, "max": 500 }
@@ -247,6 +249,117 @@
             { "colorOff": "#acacac", "color": "#000000", "min": 8, "max": 9 }
 
 
+        ]
+    },
+    {
+        "ceil": 0,
+        "class":"col-xs-3",
+        "scale": 1,
+        "background": "#00ffff",
+        "size": 0,
+        "circleSize": 270,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -180,
+        "sensorType": "MagnetometerPercentageX",
+        "uiModel": "X-Mag",
+        "ranges": [
+            { "colorOff": "#ededed", "color": "#ededed", "min": -180, "max": 180 }
+        ]
+    },
+    {
+        "ceil": 0,
+        "class":"col-xs-3",
+        "scale": 1,
+        "background": "#00ffff",
+        "size": 0,
+        "circleSize": 270,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -180,
+        "sensorType": "MagnetometerPercentageY",
+        "uiModel": "Y-Mag",
+        "ranges": [
+            { "colorOff": "#ededed", "color": "#ededed", "min": -180, "max": 180}
+        ]
+    },
+    {
+        "ceil": 0,
+        "class":"col-xs-3",
+        "scale": 1,
+        "background": "#00ffff",
+        "size": 0,
+        "circleSize": 270,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -180,
+        "sensorType": "MagnetometerPercentageZ",
+        "uiModel": "Z-Mag",
+        "ranges": [
+            { "colorOff": "#ededed", "color": "#ededed", "min": -180, "max": 180}
+        ]
+    }
+    ,
+    {
+        "ceil": 0,
+        "class":"col-xs-3",
+        "scale": 0.01,
+        "background": "#00ffff",
+        "size": 0,
+        "circleSize": 270,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "format": "X",
+        "value": 0,
+        "rotate": -180,
+        "sensorType": "Magnitude",
+        "uiModel": "Magnitude",
+        "ranges": [
+            { "colorOff": "#ededed", "color": "#ededed", "min": 0, "max": 1 }
+        ]
+    },
+    {
+        "ceil": 1,
+        "class":"col-xs-4",
+        "scale": 1,
+        "background": "#00ffff",
+        "uiModel": "SixPackHeading",
+        "size": 0,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "circleSize": 360,
+        "format": "X°",
+        "value": 0,
+        "rotate": -90,
+        "sensorType": "GPSTrueCourse",
+        "ranges": [
+            { "colorOff": "#880000", "color": "#ff0000", "min": 0, "max": 50 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 10, "max": 500 }
+        ]
+    },
+    {
+        "ceil": 1,
+        "class":"col-xs-4",
+        "scale": 1,
+        "background": "#00ffff",
+        "uiModel": "SixPackHeading",
+        "size": 0,
+        "valueMin": 99999,
+        "valueMax": 0,
+        "circleSize": 360,
+        "format": "X°",
+        "value": 0,
+        "rotate": -90,
+        "sensorType": "Compass",
+        "ranges": [
+            { "colorOff": "#880000", "color": "#ff0000", "min": 0, "max": 50 },
+            { "colorOff": "#008800", "color": "#00ff00", "min": 10, "max": 500 }
         ]
     }
 ]

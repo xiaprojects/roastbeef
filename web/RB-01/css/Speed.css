@@ -1,0 +1,95 @@
+.speed {
+  margin: 0 auto;
+  max-height: 100cqmin;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+/* HTML: <div class="arc"></div> */
+.arc {
+  --a: 90deg;
+  /* control the progression */
+  width: 100%;
+  aspect-ratio: 1/1;
+  padding: 5%;
+  /* the boder thickness */
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #ffffff;
+  mask:
+    linear-gradient(#0000 0 0) content-box intersect,
+    conic-gradient(#000 var(--a), #0000 0);
+  position: absolute;
+}
+
+
+.speed-fi_needle {
+  transform-origin: 77% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("fi_needle.png");
+  display: inline-block;
+  top: 45%;
+  left: 5%;
+  width: 60%;
+  height: 8%;
+  position: absolute;
+}
+
+
+.speed-number {
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 5cqmin;
+  font-weight: bolder;
+  color: white;
+}
+
+
+.speed-unit {
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 8cqw;
+  font-weight: normal;
+  color: white;
+}
+
+.speed-value {
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20cqmin;
+  font-weight: bolder;
+  color: white;
+  background-color: black;
+  border-radius: 10%;
+  border-width: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-color: lightslategray;
+  border-style: solid;
+}
+
+
+.speed-label {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12cqmin;
+  font-weight: bolder;
+  color: white;
+  white-space: nowrap;
+}

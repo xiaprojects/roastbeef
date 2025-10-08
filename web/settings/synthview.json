@@ -1,0 +1,85 @@
+{
+    "elevationUrl": "/settings/elevations.json",
+    "glbPath":"/settings/glb/",
+    "cellSize": 100,
+    "terrainBaseColor": null,
+    "terrainColorRed": {
+        "r": 1.0,
+        "g": 0,
+        "b": 0
+    },
+    "terrainColorYellow": {
+        "r": 1.0,
+        "g": 0,
+        "b": 0
+    },
+    "terrainColorGreen": {
+        "r": 0,
+        "g": 1.0,
+        "b": 0
+    },
+    "terrainColorSea": {
+        "r": 0,
+        "g": 0,
+        "b": 1.0
+    },
+    "skyColor": {
+        "r": 0.52,
+        "g": 0.8,
+        "b": 0.91
+    },
+    "elevation": 1000,
+    "trafficMapping": {},
+    "trafficTemplates": {
+        "Helic": [
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "traffic_helicopter",
+                "scale": 1.5,
+                "color": null
+            }
+        ],
+        "Large": [
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "traffic_large",
+                "scale": 1.5,
+                "color": null
+            }
+        ],
+        "Light": [
+            {
+                "roll": 0,
+                "pitch": 0,
+                "directionModel": 0,
+                "template": "traffic_light",
+                "scale": 1.5,
+                "color": null
+            }
+        ]
+    },
+    "items": [
+        {
+            "reference": null,
+            "referenceTubeFront": null,
+            "referenceTubeVertical": null,
+            "projectionSize": 1000,
+            "roll": 0,
+            "pitch": 0,
+            "pitchModel": 15,
+            "direction": 0,
+            "elevation": 1000,
+            "directionModel": 0,
+            "template": "me",
+            "name": "ME",
+            "color": 986895,
+            "scale": 10,
+            "x": 0,
+            "y": 0
+        }
+    ]
+}

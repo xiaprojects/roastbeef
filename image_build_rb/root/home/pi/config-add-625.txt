@@ -1,0 +1,4 @@
+#DSI1 Use
+dtoverlay=vc4-kms-dsi-waveshare-panel,6_25_inch
+#DSI0 Use
+#dtoverlay=vc4-kms-dsi-waveshare-panel,6_25_inch,dsi0

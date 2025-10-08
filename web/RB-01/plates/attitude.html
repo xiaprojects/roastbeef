@@ -1,0 +1,12 @@
+<div ui-content-for="title">Attitude</div>
+        <div class="attitude">
+            <div class="attitude-rollpitch" id="attitude-rollpitch"  style="top:{{Attitude.pitchTop}};transformOrigin:{{Attitude.pitchOrigin}};transform: rotate({{Attitude.rollDegree}});"  >
+                <div class="attitude-rollpitch-sky"></div>
+                <div class="attitude-rollpitch-terrain"></div>
+            </div>
+            <div class="attitude-rollpitch-numbers" style="top:{{Attitude.pitchTop}};" ></div>
+            <div class="attitude-roll" style="transform: rotate({{Attitude.rollDegree}});" ></div>
+            <div class="attitude-center" ></div>
+            <div class="attitude-speed" >{{Speed.speed}}</div>
+            <div class="attitude-altimeter" >{{Altimeter.altitude}}</div>
+        </div>

@@ -1,0 +1,62 @@
+<div ui-content-for="title">Timers</div>
+	<div class="panel-group col-sm-12" id="timer_clock">
+		<div class="panel panel-default">
+			<div class="panel-heading">UTC Time</div>
+			<div class="panel-body text-center">
+				<div class="form-group" style="padding: 0px;margin:0px;">
+					<span style="font-size: 10vmax">{{clockText}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-6" ng-repeat="timer in timers">
+		<div class=" {{timer.className}}" id="timer_{{timer.timerId}}">
+			<div class="panel panel-default  {{timer.triggered}}">
+				<div class="panel-heading">{{timer.name}}<a ng-click="dropTimer(timer.timerId)"
+						class="btn pull-right"><i style="font-size: 24px;padding: 0px;margin:0px;"
+							class="fa fa-trash"></i></a></div>
+				<div class="panel-body text-center">
+					<div class2=" col-sm-12" style="padding: 0px;margin:0px;font-size: 12cqmin;">
+						{{timer.text}}
+					</div>
+					<div  class="col-sm-6 col-xs-6">
+						<a ng-click="timerStart(timer)" class="btn btn-primary btn-block"
+							style="background-color: {{timer.Status==false?'green':'orange'}};"><i
+								class="fa {{timer.Status==false?'fa-play':'fa-stop'}}"></i>
+							{{timer.Status==false?"START":"STOP"}}</a>
+					</div>
+
+
+
+					<div  class="col-sm-6 col-xs-6" style="display: {{timer.Status==true?'none':'block'}};">
+						<a ng-click="timerSwitch(timer)" ng-disabled="timer.Status==true"class="btn btn-primary btn-block" >
+							<i class="fa fa-refresh"></i> {{timer.CountDown==0?'TIMER':'CHRNO'}}</a>
+					</div>
+
+					<div  class="col-sm-3 col-xs-3" style="display: {{timer.Status==true && timer.CountDown>0?'blocl':'none'}};">
+						<a ng-click="timerCountdownIncrease(timer,-5)" ng-disabled="timer.CountDown<300"
+							ng-show="timer.CountDown>0" class="btn btn-primary btn-block">-5</a>
+							</div>
+
+							<div  class="col-sm-3 col-xs-3" style="display: {{timer.Status==true && timer.CountDown>0?'blocl':'none'}};">
+								<a ng-click="timerCountdownIncrease(timer,5)" ng-show="timer.CountDown>0" class="btn btn-primary btn-block">+5</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div>&nbsp;</div>
+<div class="col-sm-6">
+	<div class="panel-group col-sm-12 {{scrollItemCounter>0?'keypadSelectedYes':'keypadSelectedNo'}}" id="timer_create">
+		<div class="panel panel-default ">
+			<div class="panel-heading">Timer</div>
+			<div class="panel-body text-center">
+				<div class="panel-group col-sm-12">
+					<a ng-click="timerCreate()" class="btn btn-primary btn-block">Create new timer</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

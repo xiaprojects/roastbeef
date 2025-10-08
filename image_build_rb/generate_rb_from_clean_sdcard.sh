@@ -1,5 +1,7 @@
 #!/bin/bash
 # This script generates an RB from a standard installation
+# Please read the Wiki documentation and Join Discord for more tips
+# https://github.com/xiaprojects/roastbeef/wiki/How-to-install
 
 # Settings
 export USER_HOME=$HOME
@@ -31,6 +33,19 @@ nmcli connection modify 'AccessPoint' 802-11-wireless.band $WIFI_AP_BAND
 nmcli con up AccessPoint
 
 
+# If you have Internet WiFi in your Aircraft here is the right place to enable it
+# raspi-config nonint do_wifi_setup "MyNetwork" "MyPassword"
+
+
+sudo raspi-config nonint do_wifi_country "IT"
+sudo raspi-config nonint do_i2c 0
+sudo raspi-config nonint do_overlayfs 0
+
+
+sudo mount -o remount,rw /media/root-ro
+sudo mount -o remount,ro /media/root-ro
+
+
 # GO Install
 cd $USER_HOME
 wget $GOURL
@@ -53,10 +68,18 @@ pip install --break-system-packages esptool
 # Apply files
 cd $USER_HOME
 tar --owner=0 --group=0 --no-overwrite-dir --no-same-owner -zxf rootfiles.tgz -C /
+# Hostname is already contained into the tgz
+# raspi-config nonint do_hostname "raspberrypi"
 
 
 # Enable I2C
-cp /home/pi/config.txt /boot/firmware
+cp $USER_HOME/config.txt /boot/firmware/config.txt
+# Enable 80 mm round display
+#cat $USER_HOME/config-add-80mm.txt >> /boot/firmware/config.txt
+# Enable DSI 6.25" display
+#cat $USER_HOME/config-add-625.txt >> /boot/firmware/config.txt
+
+
 
 # Kalibrate Install
 cd $USER_HOME
@@ -130,7 +153,7 @@ cd stratux
 make && make optinstall
 
 # Enable stratux service
-cp /home/pi/stratux/debian/stratux.service /lib/systemd/system
+cp $USER_HOME/stratux/debian/stratux.service /lib/systemd/system
 systemctl daemon-reload
 systemctl enable stratux
 
@@ -140,6 +163,24 @@ ln -s $RB_SETTINGS_FOLDER $RB_WWW_SETTINGS
 
 
 # Enable the Overlay
-# TODO: 
+raspi-config nonint do_overlayfs 0
+# Enable RW on /boot to allow writing of configuration
+# TODO in the future change method
+raspi-config nonint disable_bootro
+# In the future to write into the root you shall:
+#sudo mount -o remount,rw /media/root-ro
+# In the future to readonly into the root you shall:
+#sudo mount -o remount,ro /media/root-ro
 
-# TODO: Check for I2C Enabled
+# I2C Enable
+raspi-config nonint do_i2c 0
+
+# Debugging purposes
+sudo raspi-config nonint do_ssh 1
+
+
+# Apply User Settings
+# Create USA SDCard with Maps and detailed elevations:
+# Join Discord Channel for the script
+# Create EU SDCard with Maps and detailed elevations:
+# Join Discord Channel for the script

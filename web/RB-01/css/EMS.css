@@ -1,0 +1,28 @@
+.ems {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("EMS.png");
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.ems_intrument {
+    width: 50%;
+    float: left;
+}
+
+.ems_intrument_big {
+    width: 100%;
+    float: left;
+}
+
+@container (width> 800px) {
+    .ems_intrument {
+        width: 25%;
+    }
+
+    .ems_intrument_big {
+        width: 25%;
+    }
+}

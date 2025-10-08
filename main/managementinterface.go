@@ -1256,6 +1256,10 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.AIS_Enabled = val.(bool)
 					case "Autopilot_Enabled":
 						globalSettings.Autopilot_Enabled = val.(bool)
+					case "AutopilotUdp_Enabled":
+						globalSettings.AutopilotUdp_Enabled = val.(bool)
+					case "AutopilotUdp_Port":
+						globalSettings.AutopilotUdp_Port = (int(val.(float64)))
 					case "Autopilot_HomeWaypoint":
 						home := val.(map[string]interface{})
 						waypoint := Waypoint{Lat: float32(home["Lat"].(float64)), Lon: float32(home["Lon"].(float64)), Ele: int32(home["Ele"].(float64)), Cmt: home["Cmt"].(string)}

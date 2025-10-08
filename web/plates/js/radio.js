@@ -23,6 +23,7 @@ RadioCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; //
 var URL_RADIO_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_RADIO_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_PLAYBACK_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/playback";
+// TODO: Load frequencies from airfields
 var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.frequencies.json";
 
 
@@ -354,7 +355,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.db = db;
         $scope.playbackReload();
         if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
+            if(false){
             $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
+            }
         }    
     });
     }

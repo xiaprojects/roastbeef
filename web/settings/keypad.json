@@ -1,0 +1,32 @@
+{
+    "keypad": {
+        "KEYPAD_MAPPING_PREV": ["1","MediaTrackNext","ArrowLeft","ArrowUp","MediaFastForward"],
+        "KEYPAD_MAPPING_TAP": ["2","Enter","ENTER","BrowserHome","AudioVolumeMute"],
+        "KEYPAD_MAPPING_NEXT": ["3","MediaTrackPrevious","ArrowRight","ArrowDown","MediaRewind"],
+        "SwipeLeft": ["AudioVolumeUp","DOM_CLICK_W","a"],
+        "SwipeRight": ["AudioVolumeDown","DOM_CLICK_E","b"],       
+        "directKey": {
+            "MediaPlayPause":{
+                "href": "#/"
+            },
+            "A": {
+                "href": "#/"
+            },
+            "B": {
+                "href": "#/radar"
+            },
+            "C": {
+                "href": "#/airfields"
+            },
+            "xa": {
+                "href": "#/"
+            },
+            "xb": {
+                "href": "#/radar"
+            },
+            "c": {
+                "href": "#/synthview"
+            }
+        }
+    }
+}

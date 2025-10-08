@@ -1,0 +1,20 @@
+{
+  "short_name": "RB-03",
+  "name": "RB-Avionics-03",
+  "icons": [
+    {
+      "src": "/img/logo-android3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/logo-android3.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "black",
+  "background_color": "black"
+}

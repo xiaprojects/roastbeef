@@ -717,7 +717,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         generateItemGLB(item, setup = {}, callback = null) {
             const loader = new THREE.GLTFLoader();
             loader.load(
-                'synthview/' + item.template + '.glb',
+                setup.glbPath + + item.template + '.glb',
                 (gltf) => {
                     console.log('Model loaded successfully:', gltf);
 

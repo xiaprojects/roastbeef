@@ -1,0 +1,20 @@
+<div ui-content-for="title">Aircraft</div>
+<div class="aircraft">
+        <div class="aircraft-item-value" style="margin-top: 3%;border: none;font-size: 6cqmin;">{{name}}</div>
+
+    <div class="aircraft-item-container-left">
+    <div ng-repeat="item in items[0]" style="margin: 1cqmin;">
+        <span class="aircraft-item">{{item.label}}</span>
+        &nbsp;<span
+            class="aircraft-item-value" style="background-color: {{item.color}};" ng-show="item.value">{{item.value}}</span>
+    </div>
+    </div>
+    <div class="aircraft-item-container-right">
+    <div ng-repeat="item in items[1]" style="margin: 1cqmin;">
+        <span 
+            class="aircraft-item-value" style="background-color: {{item.color}};">{{item.value}}</span>
+            &nbsp;
+        <span class="aircraft-item">{{item.label}}</span>
+    </div>
+    </div>
+</div>

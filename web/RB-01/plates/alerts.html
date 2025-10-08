@@ -1,0 +1,20 @@
+<div ui-content-for="title">Alerts</div>
+
+    <div class="panel-group col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="margin-left: 20px;margin-right: 6px;">
+                Alerts                
+            </div>
+
+
+<table class="panel-body text-center" style="overflow:hidden;padding:0px;" style="width:100%">
+	<tr class="alertsline {{alert.type}}"  ng-repeat="alert in data_list " ng-click="playAudio(alert.sound)">
+		<td class="text-center {{alert.barclass}}" ></td>
+		<td class="alertstitle">{{alert.text}}</td>
+		<td class="text-right"><a class="btn"><img style="width: 0.3in;opacity: 25%; filter: invert(100%);" src="/img/speaker.svg"/>{{alert.date}}</a></td>
+	</tr>
+</table>
+
+
+		</div>
+	</div>

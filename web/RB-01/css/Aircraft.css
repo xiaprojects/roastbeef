@@ -1,0 +1,59 @@
+.aircraft {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("AircraftProfile.svg");
+  margin: 0 auto;
+  max-height: 100cqh;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.aircraft-item-container-left {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 40%;
+text-align: right;
+}
+
+.aircraft-item-container-right {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  width: 40%;
+text-align: left;
+
+  top: 50%;
+  left: 75%;
+}
+
+.aircraft-item {
+  /*
+
+  */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 4cqmin;
+  color: white;
+}
+
+.aircraft-item-value {
+  /*
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 4cqmin;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5%;
+  border-width: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+
+}

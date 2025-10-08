@@ -1,0 +1,35 @@
+.turnslip {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("TurnSlip.png");
+  margin: 0 auto;
+  max-height: 100cqh;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+}
+
+.turnslip-aircraft {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("fi_tc_airplane.png");
+    aspect-ratio: 1/1;
+    width: 76%;
+    height: 76%;
+    position: absolute;
+    top: 12%;
+    left: 12%;
+}
+
+.turnslip-ball {
+    width: 8%;
+    height: 10%;
+    position: absolute;
+    background-color: black;
+    border-style: solid;
+    border-width: 1%;
+    border-color: white;
+    border-radius: 50%;
+}

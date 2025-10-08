@@ -1,0 +1,27 @@
+.variometer {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("RoundVariometer.png");
+  margin: 0 auto;
+  max-height: 100cqh;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.variometer-fi_needle {
+    transform-origin: 77% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("fi_needle.png");
+    position: absolute;
+    display: inline-block;
+    top:47%;
+    width: 60%;
+    height: 8%;
+    left: 4%;
+}
+

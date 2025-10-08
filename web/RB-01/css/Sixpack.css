@@ -1,0 +1,12 @@
+.Sixpack {
+    container-type: inline-size;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Sixpack_intrument {
+    width: 50cqmin
+}
