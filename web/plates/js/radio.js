@@ -23,8 +23,8 @@ RadioCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; //
 var URL_RADIO_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_RADIO_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_PLAYBACK_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/playback";
-// TODO: Load frequencies from airfields
-var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.frequencies.json";
+// Load frequencies from airfields
+var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.airfields.json";
 
 
 // create our controller function with all necessary logic
@@ -343,6 +343,36 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     addEventListener("keypad", keypadEventListener);
+    function convertAirFieldDBToAirFrequencies(airfieldDataset) {
+        var frequencyDB = {
+            "global":
+            {
+                "130.000": {
+                    "gps": {
+                        "lat": 43.0,
+                        "lon": 12.0,
+                        "range": 500000
+                    },
+                    "name": "130. Local Freq."
+                }
+            }
+        }
+        airfieldDataset.forEach((airfield) => {
+            if (airfield.hasOwnProperty("freq") && airfield["freq"].length > 0) {
+                // TODO: use the GPS position to match the nearest
+                var freq = airfield["freq"].padEnd(7,"0");
+                frequencyDB.global[freq]={
+                     "gps": {
+                        "lat": airfield["Lat"],
+                        "lon": airfield["Lon"],
+                        "range": 500000
+                    },
+                    "name": airfield["name"]
+                };
+            }
+        });
+        return frequencyDB;
+    }
 
     $scope.radioDBReload = function(){
     // Load the Radio DB, format:
@@ -352,7 +382,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         {
             return;
         }
-        $scope.db = db;
+        $scope.db = convertAirFieldDBToAirFrequencies(db);
         $scope.playbackReload();
         if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
             if(false){

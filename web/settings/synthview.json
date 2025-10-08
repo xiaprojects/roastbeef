@@ -37,7 +37,7 @@
                 "pitch": 0,
                 "directionModel": 0,
                 "template": "traffic_helicopter",
-                "scale": 1.5,
+                "scale": 20,
                 "color": null
             }
         ],
@@ -47,7 +47,7 @@
                 "pitch": 0,
                 "directionModel": 0,
                 "template": "traffic_large",
-                "scale": 1.5,
+                "scale": 20,
                 "color": null
             }
         ],
@@ -57,7 +57,7 @@
                 "pitch": 0,
                 "directionModel": 0,
                 "template": "traffic_light",
-                "scale": 1.5,
+                "scale": 20,
                 "color": null
             }
         ]
@@ -70,14 +70,14 @@
             "projectionSize": 1000,
             "roll": 0,
             "pitch": 0,
-            "pitchModel": 15,
+            "pitchModel": 0,
             "direction": 0,
             "elevation": 1000,
             "directionModel": 0,
             "template": "me",
             "name": "ME",
             "color": 986895,
-            "scale": 10,
+            "scale": 20,
             "x": 0,
             "y": 0
         }

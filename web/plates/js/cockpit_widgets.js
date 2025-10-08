@@ -21,7 +21,7 @@
  * @param {*} div 
  * @param {*} item 
  */
-function HSICircleRenderer(div, item) {
+function HSICircleRenderer(div, item,foregroundColor="#000000") {
     var hsiSettings = {
         "middleCircleSize": 5,
         "middleCircleDistance": 25,
@@ -59,43 +59,48 @@ function HSICircleRenderer(div, item) {
             cl.style('fill', "red");
             cr.style('fill', "red");
         }
+        else
+        {
+            cl.style("fill", foregroundColor);
+            cr.style("fill", foregroundColor);
+        }
     }
     /*****************/
     var containerOuter = image.group();
     containerOuter.text("N").style('font-size', '32px').style("fill", "#ff0000").style("stroke", "#ff0000")
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2);
-    containerOuter.text("E").style('font-size', '32px')//.style("fill", "#000000")
+    containerOuter.text("E").style('font-size', '32px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2)
         .transform({ rotation: 90, cx: 0, cy: 0, relative: false });
-    containerOuter.text("S").style('font-size', '32px')//.style("fill", "#000000")
+    containerOuter.text("S").style('font-size', '32px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2)
         .transform({ rotation: 180, cx: 0, cy: 0, relative: false });
-    containerOuter.text("W").style('font-size', '32px')//.style("fill", "#000000")
+    containerOuter.text("W").style('font-size', '32px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2)
         .transform({ rotation: 270, cx: 0, cy: 0, relative: false });
 
-    containerOuter.text("3").style('font-size', '24px')
+    containerOuter.text("3").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 30, cx: 0, cy: 0, relative: false });
-    containerOuter.text("6").style('font-size', '24px')
+    containerOuter.text("6").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 60, cx: 0, cy: 0, relative: false });
-    containerOuter.text("12").style('font-size', '24px')
+    containerOuter.text("12").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 120, cx: 0, cy: 0, relative: false });
-    containerOuter.text("15").style('font-size', '24px')
+    containerOuter.text("15").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 150, cx: 0, cy: 0, relative: false });
-    containerOuter.text("21").style('font-size', '24px')
+    containerOuter.text("21").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 210, cx: 0, cy: 0, relative: false });
-    containerOuter.text("24").style('font-size', '24px')
+    containerOuter.text("24").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 240, cx: 0, cy: 0, relative: false });
-    containerOuter.text("30").style('font-size', '24px')
+    containerOuter.text("30").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 300, cx: 0, cy: 0, relative: false });
-    containerOuter.text("33").style('font-size', '24px')
+    containerOuter.text("33").style('font-size', '24px').style("fill", foregroundColor)
         .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
         .transform({ rotation: 330, cx: 0, cy: 0, relative: false });
 
@@ -115,7 +120,7 @@ function HSICircleRenderer(div, item) {
     var containerCenterCircle = containerCenter.circle(hsiSettings.horizontalLine.h * 2.0);
     containerCenterCircle.cx(0).cy(0);
     containerCenterCircle.style('fill', "transparent");
-    containerCenterCircle.style('stroke', "#000000");
+    containerCenterCircle.style('stroke', foregroundColor);
     containerCenterCircle.style('stroke-width', hsiSettings.horizontalLine.h * 0.01);
 
     var verticalLineDirection = containerCenter.rect(hsiSettings.horizontalLine.w, hsiSettings.horizontalLine.h);
@@ -124,15 +129,16 @@ function HSICircleRenderer(div, item) {
 
     for (var hsiIndex = -3; hsiIndex < 4; hsiIndex++) {
         var c = containerCenter.circle(hsiSettings.middleCircleSize);
+        c.style("fill", foregroundColor);
         c.cx(hsiSettings.middleCircleDistance * hsiIndex).cy(0);
     }
     /*****************/
-    var arrow = containerCenter.polygon('0,0 10,20 5,20 5,40 -5,40 -5,20 -10,20');
+    var arrow = containerCenter.polygon('0,0 10,20 5,20 5,40 -5,40 -5,20 -10,20').style("fill", foregroundColor);
     arrow.cy(-hsiSettings.horizontalLine.h * 0.8);
-    containerCenter.rect(10, 40).cx(0).cy(hsiSettings.horizontalLine.h * 0.8);
+    containerCenter.rect(10, 40).cx(0).cy(hsiSettings.horizontalLine.h * 0.8).style("fill", foregroundColor);
 
     /*****************/
-    var radial = containerCenter.polygon('0,0 -10,-15 -5,-15 -1,-5 1,-5 5,-15 10,-15 ');
+    var radial = containerCenter.polygon('0,0 -10,-15 -5,-15 -1,-5 1,-5 5,-15 10,-15 ').style("fill", foregroundColor);
     radial.cy(-hsiSettings.horizontalLine.h * 1.08);
     radial.style("fill", hsiSettings.horizontalLine.color);
 
@@ -142,9 +148,9 @@ function HSICircleRenderer(div, item) {
     centerLine.cy(-hsiSettings.horizontalLine.h * 1.2);
     centerLine.style("fill", hsiSettings.horizontalLine.color);
 
-    image.rect(2, 30).cx(0).cy(5);
-    image.rect(10, 2).cx(0).cy(15);
-    image.rect(30, 2).cx(0).cy(0);
+    image.rect(2, 30).style("fill", foregroundColor).cx(0).cy(5);
+    image.rect(10, 2).style("fill", foregroundColor).cx(0).cy(15);
+    image.rect(30, 2).style("fill", foregroundColor).cx(0).cy(0);
 
     /*****************/
     this.containerOuter = containerOuter;

@@ -5,6 +5,13 @@
     margin: 0px;
 }
 
+.keypadSelectedYesFull {
+    _border-left: 3px solid #900000;
+    background-color: #900000;
+    _padding: 2px;
+    _margin: 0px;
+}
+
 
 .keypadSelectedNo {
     border-left: 3px solid rgba(0, 0, 0, 0);
