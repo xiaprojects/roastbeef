@@ -159,6 +159,7 @@ systemctl disable wayfire.service
 # Prepare wiringpi for ogn trx via GPIO
 export WIRINGPI_VERSION="3.16"
 export WIRINGPI_FILENAME="wiringpi_${WIRINGPI_VERSION}_arm64.deb"
+cd $USER_HOME
 wget https://github.com/WiringPi/WiringPi/releases/download/${WIRINGPI_VERSION}/${WIRINGPI_FILENAME}
 dpkg -i $WIRINGPI_FILENAME
 
@@ -170,6 +171,7 @@ mkdir -p /opt/stratux/
 chown -R $USER:$USER /opt/stratux/
 
 # Install latest sources from RB-Avionics
+cd $USER_HOME
 git clone  --recurse-submodules https://github.com/xiaprojects/roastbeef.git stratux
 
 # Install latest sources from online
@@ -193,18 +195,19 @@ mv $RB_WWW_SETTINGS $RB_SETTINGS_FOLDER
 ln -s $RB_SETTINGS_FOLDER $RB_WWW_SETTINGS
 
 
+# I2C Enable
+raspi-config nonint do_i2c 0
+
+# Debugging purposes
+#raspi-config nonint do_ssh 1
+
+
 # Enable the Overlay
 raspi-config nonint do_overlayfs 0
 # In the future to write into the root you shall:
 #sudo mount -o remount,rw /media/root-ro
 # In the future to readonly into the root you shall:
 #sudo mount -o remount,ro /media/root-ro
-
-# I2C Enable
-raspi-config nonint do_i2c 0
-
-# Debugging purposes
-#raspi-config nonint do_ssh 1
 
 
 # Apply User Settings
