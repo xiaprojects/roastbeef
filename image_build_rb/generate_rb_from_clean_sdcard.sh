@@ -8,7 +8,7 @@ export USER="pi"
 export USER_HOME=/home/$USER
 # into /boot/ you shall have 450 MB
 export RB_SETTINGS_FOLDER="/boot/firmware/rb"
-export RB_WWW_SETTINGS="/opt/stratux/www/RB-01/settings"
+export RB_WWW_SETTINGS="/opt/stratux/www/settings"
 export GOURL="https://go.dev/dl/go1.25.1.linux-arm64.tar.gz"
 export WIFI_AP_NAME=AccessPoint
 export WIFI_AP_PASSWORD=steffano
@@ -186,7 +186,7 @@ git clone  --recurse-submodules https://github.com/pjalocha/ogn-tracker.git stra
 # Compile it
 cd stratux
 make && make optinstall
-mv /opt/stratux/www mv /opt/stratux/www.old
+mv /opt/stratux/www /opt/stratux/www.old
 mv web /opt/stratux/www
 
 # Enable stratux service
