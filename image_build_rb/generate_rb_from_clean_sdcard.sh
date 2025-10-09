@@ -99,6 +99,8 @@ raspi-config nonint disable_bootro
 # Apply files
 cd $USER_HOME
 tar --owner=0 --group=0 --no-overwrite-dir --no-same-owner -zxf rootfiles.tgz -C /
+# Double check that shell scripts shall be executable
+chmod a+x *.sh
 # Hostname is already contained into the tgz
 # raspi-config nonint do_hostname "raspberrypi"
 
