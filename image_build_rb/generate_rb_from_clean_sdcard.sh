@@ -4,11 +4,11 @@
 # https://github.com/xiaprojects/roastbeef/wiki/How-to-install
 
 # Settings
-export USER_HOME=$HOME
+export USER = "pi"
+export USER_HOME=/home/$USER
 # into /boot/ you shall have 450 MB
 export RB_SETTINGS_FOLDER="/boot/firmware/rb"
 export RB_WWW_SETTINGS="/opt/stratux/www/RB-01/settings"
-#export USER = "pi"
 export GOURL="https://go.dev/dl/go1.25.1.linux-arm64.tar.gz"
 export WIFI_AP_NAME=AccessPoint
 export WIFI_AP_PASSWORD=steffano
@@ -184,6 +184,8 @@ git clone  --recurse-submodules https://github.com/pjalocha/ogn-tracker.git stra
 # Compile it
 cd stratux
 make && make optinstall
+mv /opt/stratux/www mv /opt/stratux/www.old
+mv web /opt/stratux/www
 
 # Enable stratux service
 cp $USER_HOME/stratux/debian/stratux.service /lib/systemd/system
@@ -209,6 +211,10 @@ raspi-config nonint do_overlayfs 0
 # In the future to readonly into the root you shall:
 #sudo mount -o remount,ro /media/root-ro
 
+
+# TODO: make everything without root
+chown -R $USER:$USER $USER_HOME
+chown -R $USER:$USER /opt/stratux/
 
 # Apply User Settings
 # Create USA SDCard with Maps and detailed elevations:
