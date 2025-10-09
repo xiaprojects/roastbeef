@@ -4,7 +4,7 @@
 # https://github.com/xiaprojects/roastbeef/wiki/How-to-install
 
 # Settings
-export USER = "pi"
+export USER="pi"
 export USER_HOME=/home/$USER
 # into /boot/ you shall have 450 MB
 export RB_SETTINGS_FOLDER="/boot/firmware/rb"
