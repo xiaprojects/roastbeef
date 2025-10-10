@@ -1,6 +1,6 @@
 # Image for building Stratux
 #
-FROM debian:bookworm
+FROM debian:trixie
 
 # file and nano are nice to have
 RUN apt-get update \
