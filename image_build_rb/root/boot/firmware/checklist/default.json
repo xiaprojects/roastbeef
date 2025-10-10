@@ -1,0 +1,41 @@
+[
+    {
+        "isselected": "", "value": "todo", "id": 0,
+        "name": "PRE-FLIGHT",
+        "text": "DOLIST",
+        "date": "", "dateParsed": "__:__",
+        "items":
+            [
+                { "isselected": "keypadSelectedYes", "value": "todo", "id": 0, "date": "", "dateParsed": "__:__", "name": "CINTURE", "name": "", "text": "ALLACCIATE" },
+                { "isselected": "", "value": "todo", "id": 1, "date": "", "dateParsed": "__:__", "name": "CUFFIE", "name": "", "text": "INDOSSATE" },
+                { "isselected": "", "value": "todo", "id": 2, "date": "", "dateParsed": "__:__", "name": "CARBURANTE", "name": "", "text": "RUBINETTI ENTRAMBI APERTI" }
+            ]
+    },
+    {
+        "isselected": "", "value": "todo", "id": 1,
+        "name": "AVVIAMENTO",
+        "text": "CHECKLIST",
+        "date": "", "dateParsed": "__:__",
+        "items":
+            [
+
+                { "isselected": "", "value": "todo", "id": 0, "date": "", "dateParsed": "__:__", "name": "MASTER", "text": "ON (+12V line)" },
+                { "isselected": "", "value": "todo", "id": 1, "date": "", "dateParsed": "__:__", "name": "FUEL PUMP", "text": "On - 5.5 psi" },
+                { "isselected": "", "value": "todo", "id": 2, "date": "", "dateParsed": "__:__", "name": "FUEL PUMP", "text": "Off - 0.0 psi" },
+                { "isselected": "", "value": "todo", "id": 3, "date": "", "dateParsed": "__:__", "name": "TEMPERATURE", "text": "Airbox Temp >15° <30°" },
+                { "isselected": "", "value": "todo", "id": 4, "date": "", "dateParsed": "__:__", "name": "SEATBELT", "text": "Seatbelt fasten" },
+                { "isselected": "", "value": "todo", "id": 5, "date": "", "dateParsed": "__:__", "name": "CANOPY", "text": "Canopy Close" },
+                { "isselected": "", "value": "todo", "id": 6, "date": "", "dateParsed": "__:__", "name": "AREA", "text": "Check Propeller Area" },
+                { "isselected": "", "value": "todo", "id": 7, "date": "", "dateParsed": "__:__", "name": "PITOT", "text": "Pitot onboard" },
+                { "isselected": "", "value": "todo", "id": 8, "date": "", "dateParsed": "__:__", "name": "CONTACT", "text": "Magneto 1 and 2 Active" },
+                { "isselected": "", "value": "todo", "id": 9, "date": "", "dateParsed": "__:__", "name": "CHOKE", "text": "Choke On and Throttle Off" },
+                { "isselected": "", "value": "todo", "id": 10, "date": "", "dateParsed": "__:__", "name": "CRANKING", "text": "Cranking up to 10 seconds" },
+                { "isselected": "", "value": "todo", "id": 11, "date": "", "dateParsed": "__:__", "name": "CHOKE", "text": "Release Choke" },
+                { "isselected": "", "value": "todo", "id": 12, "date": "", "dateParsed": "__:__", "name": "OIL PRESSURE", "text": "OIL Pressure Green Arc" },
+                { "isselected": "", "value": "todo", "id": 13, "date": "", "dateParsed": "__:__", "name": "FUEL PRESSURE", "text": "Fuel Pressure >2psi" },
+                { "isselected": "", "value": "todo", "id": 14, "date": "", "dateParsed": "__:__", "name": "RPM", "text": "RPM >1800 <2200" },
+                { "isselected": "", "value": "todo", "id": 15, "date": "", "dateParsed": "__:__", "name": "OIL PRESSURE", "text": "OIL Pressure Green Arc" }
+
+            ]
+    }
+]

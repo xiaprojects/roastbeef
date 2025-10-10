@@ -1,0 +1,208 @@
+{
+  "DarkMode": false,
+  "UAT_Enabled": false,
+  "ES_Enabled": true,
+  "OGN_Enabled": false,
+  "APRS_Enabled": true,
+  "AIS_Enabled": false,
+  "Ping_Enabled": false,
+  "Pong_Enabled": false,
+  "GPS_Enabled": true,
+  "BMP_Sensor_Enabled": true,
+  "IMU_Sensor_Enabled": true,
+  "NetworkOutputs": [
+    {
+      "Conn": null,
+      "Ip": "",
+      "Port": 4000,
+      "Capability": 5,
+      "LastPingResponse": "0001-01-01T00:00:00Z",
+      "LastPongResponse": "0001-01-01T00:00:00Z",
+      "LastUnreachable": "0001-01-01T00:00:00Z",
+      "SleepFlag": false
+    },
+    {
+      "Conn": null,
+      "Ip": "",
+      "Port": 2000,
+      "Capability": 8,
+      "LastPingResponse": "0001-01-01T00:00:00Z",
+      "LastPongResponse": "0001-01-01T00:00:00Z",
+      "LastUnreachable": "0001-01-01T00:00:00Z",
+      "SleepFlag": false
+    },
+    {
+      "Conn": null,
+      "Ip": "",
+      "Port": 49002,
+      "Capability": 18,
+      "LastPingResponse": "0001-01-01T00:00:00Z",
+      "LastPongResponse": "0001-01-01T00:00:00Z",
+      "LastUnreachable": "0001-01-01T00:00:00Z",
+      "SleepFlag": false
+    }
+  ],
+  "SerialOutputs": {
+    "/dev/serialout_nmea0": {
+      "DeviceString": "/dev/serialout_nmea0",
+      "Baud": 9600,
+      "Capability": 8
+    }
+  },
+  "BleOutputs": [
+    {
+      "Capability": 8,
+      "UUIDService": "FFE0",
+      "UUIDGatt": "FFE1",
+      "Characteristic": {}
+    }
+  ],
+  "DisplayTrafficSource": false,
+  "DEBUG": false,
+  "ReplayLog": false,
+  "TraceLog": false,
+  "AHRSLog": false,
+  "PersistentLogging": false,
+  "ClearLogOnStart": false,
+  "IMUMapping": [
+    -1,
+    0
+  ],
+  "SensorQuaternion": [
+    0.009490568388145876,
+    0.0002591196954326215,
+    0.9995824318285395,
+    -0.027291462924272952
+  ],
+  "C": [
+    -0.015947752311777093,
+    -0.045821710867641224,
+    -0.8385119174779504
+  ],
+  "D": [
+    -2.457960753196814,
+    2.4373607593005158,
+    -0.4849391155735954
+  ],
+  "PPM": 0,
+  "Dump1090Gain": 37.2,
+  "AltitudeOffset": 0,
+  "OwnshipModeS": "F00000",
+  "WatchList": "",
+  "DeveloperMode": true,
+  "GLimits": "",
+  "StaticIps": [],
+  "WiFiCountry": "",
+  "WiFiSSID": "Stratux",
+  "WiFiChannel": 1,
+  "WiFiSecurityEnabled": false,
+  "WiFiPassphrase": "",
+  "NoSleep": false,
+  "WiFiMode": 0,
+  "WiFiDirectPin": "",
+  "WiFiIPAddress": "192.168.10.1",
+  "WiFiClientNetworks": [],
+  "WiFiInternetPassThroughEnabled": false,
+  "EstimateBearinglessDist": false,
+  "RadarLimits": 2000,
+  "RadarRange": 40,
+  "OGNI2CTXEnabled": false,
+  "OGNAddr": "",
+  "OGNAddrType": 0,
+  "OGNAcftType": 0,
+  "OGNPilot": "",
+  "OGNReg": "",
+  "OGNTxPower": 0,
+  "PWMDutyMin": 0,
+  "GpsManualConfig": false,
+  "GpsManualDevice": "/dev/ttyAMA0",
+  "GpsManualChip": "ublox",
+  "GpsManualTargetBaud": 38400,
+  "Autopilot_Enabled": true,
+  "AutopilotUdp_Enabled": true,
+  "AutopilotUdp_Port": 1234,
+  "Autopilot_HomeWaypoint": {
+    "Lat": 41.952843,
+    "Lon": 12.50197,
+    "Ele": 0,
+    "Status": 0,
+    "Cmt": "Home"
+  },
+  "Audio_Enabled": true,
+  "Camera_Enabled": true,
+  "Radio_Enabled": true,
+  "Cameras": [
+    {
+      "Name": "Windy",
+      "Type": 1,
+      "Url": "http://embed.windy.com/embed.html?type=map\u0026location=coordinates\u0026metricRain=default\u0026metricTemp=default\u0026metricWind=default\u0026zoom=5\u0026overlay=wind\u0026product=ecmwf\u0026level=surface\u0026lat=43.111\u0026lon=12.398"
+    },
+    {
+      "Name": "Terni",
+      "Type": 0,
+      "Url": "https://www.climavia.city/CLIMAVIA_AvioTerni/snapshot/camera/Camera2.png"
+    },
+    {
+      "Name": "FlyRoma",
+      "Type": 0,
+      "Url": "https://www.paramotorelazio.it/roma/FoscamCamera_00626EED4A78/snap/webcam.jpg"
+    },
+    {
+      "Name": "Meteo",
+      "Type": 1,
+      "Url": "https://radar.wo-cloud.com/pwa/?zoom=5\u0026placemark=41.8919,12.5113\u0026layer=WetterRadar\u0026loop=true\u0026period=periodPrognose24h\u0026center=41.88,12.48\u0026tz=Europe/Rome\u0026tf=HH:mm\u0026windunit=kmh\u0026lang=it"
+    },
+    {
+      "Name": "Asiago",
+      "Type": 0,
+      "Url": "http://www.asiagowebcam.it/webcam/aeroporto-asiago-finepista.jpg"
+    },
+    {
+      "Name": "Aircraft",
+      "Type": 1,
+      "Url": "http://192.168.10.245/video/livemb.asp"
+    },
+    {
+      "Name": "LIAF - Foligno",
+      "Type": 0,
+      "Url": "https://www.meteofoligno.it/aeroporto/webcam/webcam.php"
+    }
+  ],
+  "EMS_Enabled": true,
+  "Keypad_Enabled": false,
+  "Charts_Enabled": true,
+  "SwitchBoard_Enabled": false,
+  "Switches": [
+    {
+      "Name": "Display OFF",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "su pi -c /home/pi/off.sh",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "Display ON",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "sudo su pi -c /home/pi/on.sh",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    }
+  ],
+  "MagCalibration": {
+    "MagMaxX": 0,
+    "MagMaxY": 0,
+    "MagMaxZ": 0,
+    "MagMinX": 0,
+    "MagMinY": 0,
+    "MagMinZ": 0,
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
+    "Heading": 0
+  },
+  "RegionSelected": 2
+}
