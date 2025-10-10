@@ -1,0 +1,29 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Kukës International Airport",
+    "gps_code": "LAKU",
+    "freq": "",
+    "Lat": 42.035802,
+    "Lon": 20.415955,
+    "Ele": 341.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kuçovë Air Base",
+    "gps_code": "LAKV",
+    "freq": "124.500",
+    "Lat": 40.7719,
+    "Lon": 19.901899,
+    "Ele": 41.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Tirana International Airport Mother Teresa",
+    "gps_code": "LATI",
+    "freq": "127.500",
+    "Lat": 41.4147,
+    "Lon": 19.7206,
+    "Ele": 38.4
+  }
+]

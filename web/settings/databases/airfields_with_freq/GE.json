@@ -1,0 +1,191 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Kobuleti Airfield",
+    "gps_code": "GE-0006",
+    "freq": "",
+    "Lat": 41.840599,
+    "Lon": 41.799461,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ozurgeti Air Base",
+    "gps_code": "GE-0007",
+    "freq": "",
+    "Lat": 41.9291,
+    "Lon": 41.863499,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Senaki Air Base",
+    "gps_code": "GE-0010",
+    "freq": "",
+    "Lat": 42.2403057198,
+    "Lon": 42.0454931259,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lagodekhi Airfield",
+    "gps_code": "GE-0011",
+    "freq": "",
+    "Lat": 41.8150179007,
+    "Lon": 46.2341594696,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sedmoye Nebo Airstrip",
+    "gps_code": "GE-0013",
+    "freq": "",
+    "Lat": 43.1812,
+    "Lon": 40.3011,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pskhu Airport",
+    "gps_code": "GE-0015",
+    "freq": "",
+    "Lat": 43.385152,
+    "Lon": 40.816355,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolnisi Parachutist Training Airfield",
+    "gps_code": "GE-0020",
+    "freq": "",
+    "Lat": 41.48523,
+    "Lon": 44.53348,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gudauta Air Base",
+    "gps_code": "UG0U",
+    "freq": "",
+    "Lat": 43.104,
+    "Lon": 40.5793,
+    "Ele": 24.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tbilisi Marneuli Air Base",
+    "gps_code": "UG22",
+    "freq": "",
+    "Lat": 41.459202,
+    "Lon": 44.783199,
+    "Ele": 397.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tbilisi Soganlug Air Base",
+    "gps_code": "UG24",
+    "freq": "",
+    "Lat": 41.649200439453125,
+    "Lon": 44.9364013671875,
+    "Ele": 381.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Telavi Kurdgelauri Airport",
+    "gps_code": "UG25",
+    "freq": "",
+    "Lat": 41.9534,
+    "Lon": 45.507999,
+    "Ele": 456.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kutaisi West Airport",
+    "gps_code": "UG26",
+    "freq": "",
+    "Lat": 42.24860000610352,
+    "Lon": 42.624698638916016,
+    "Ele": 117.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vaziani Air Base",
+    "gps_code": "UG27",
+    "freq": "",
+    "Lat": 41.627998,
+    "Lon": 45.0308,
+    "Ele": 445.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bolshiye Shiraki Air Base",
+    "gps_code": "UG28",
+    "freq": "",
+    "Lat": 41.37950134277344,
+    "Lon": 46.3672981262207,
+    "Ele": 547.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ambrolauri Airport",
+    "gps_code": "UGAM",
+    "freq": "",
+    "Lat": 42.52687,
+    "Lon": 43.13538,
+    "Ele": 543.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "David the Builder Kutaisi International Airport",
+    "gps_code": "UGKO",
+    "freq": "125.500",
+    "Lat": 42.176768,
+    "Lon": 42.482393,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mestia Queen Tamar Airport",
+    "gps_code": "UGMS",
+    "freq": "",
+    "Lat": 43.053597,
+    "Lon": 42.749012,
+    "Ele": 1456.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Natakhtari Airfield",
+    "gps_code": "UGSA",
+    "freq": "",
+    "Lat": 41.921198,
+    "Lon": 44.714186,
+    "Ele": 510.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Batumi International Airport",
+    "gps_code": "UGSB",
+    "freq": "120.000",
+    "Lat": 41.610298,
+    "Lon": 41.599701,
+    "Ele": 32.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sukhumi Babushara /  Vladislav Ardzinba International Airport",
+    "gps_code": "UGSS",
+    "freq": "",
+    "Lat": 42.8582,
+    "Lon": 41.128101,
+    "Ele": 16.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Tbilisi International Airport",
+    "gps_code": "UGTB",
+    "freq": "127.200",
+    "Lat": 41.669201,
+    "Lon": 44.9547,
+    "Ele": 495.0
+  }
+]

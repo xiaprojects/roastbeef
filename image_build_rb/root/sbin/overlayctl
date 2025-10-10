@@ -1,0 +1,83 @@
+#!/bin/sh
+#
+# Root filesystem overlay control and install stript
+#
+# Copyright (C) 2025 with dual licensing GPL3 and Commercial
+
+modify_boot_cmdline()
+{
+    return 0
+}
+
+overlay_is_active()
+{
+    if [ -e /media/root-ro/overlay ] ; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+if [ $# -eq 0 ] ; then
+    echo "overlayctl [status|enable|disable|lock|unlock]"
+    exit 0
+fi
+
+if overlay_is_active ; then
+    overlay_active="yes"
+    overlay_base="/media/root-ro"
+else
+    overlay_active="no"
+    overlay_base="/"
+fi
+
+overlay_disable_file="$overlay_base""/overlay/disable"
+
+case "$1" in
+    status)
+        echo -n "overlay is "
+        if [ "$overlay_active" = "yes" ] ; then
+            echo "active"
+        else
+            echo "inactive"
+        fi
+        echo -n "overlay "
+        if [ -e "$overlay_disable_file" ] ; then
+            echo -n "disabled"
+        else
+            echo -n "enabled"
+        fi
+        echo " for next boot"
+        ;;
+
+    enable)
+        raspi-config nonint do_overlayfs 0
+        ;;
+
+    disable)
+        raspi-config nonint do_overlayfs 1
+        raspi-config nonint disable_bootro
+        ;;
+
+    lock)
+        mount -o remount,ro "$overlay_base"
+        ;;
+
+    unlock)
+        mount -o remount,rw "$overlay_base"
+        ;;
+
+    install)
+        modify_boot_cmdline " ro init=/sbin/init-overlay"
+        mkdir -p /overlay
+        ;;
+
+    uninstall)
+        modify_boot_cmdline " ro"
+        ;;
+
+    *)
+        echo "overlayctl: unknown option"
+        exit 1
+        ;;
+esac

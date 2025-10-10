@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Maurice Bishop International Airport",
+    "gps_code": "TGPY",
+    "freq": "119.400",
+    "Lat": 12.0042,
+    "Lon": -61.786201,
+    "Ele": 12.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lauriston Airport",
+    "gps_code": "TGPZ",
+    "freq": "120.800",
+    "Lat": 12.4761,
+    "Lon": -61.472801,
+    "Ele": 1.5
+  }
+]

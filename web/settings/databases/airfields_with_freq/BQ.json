@@ -1,0 +1,29 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Flamingo International Airport",
+    "gps_code": "TNCB",
+    "freq": "118.700",
+    "Lat": 12.131,
+    "Lon": -68.268501,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "F. D. Roosevelt Airport",
+    "gps_code": "TNCE",
+    "freq": "118.100",
+    "Lat": 17.4965,
+    "Lon": -62.979401,
+    "Ele": 39.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Juancho E. Yrausquin Airport",
+    "gps_code": "TNCS",
+    "freq": "",
+    "Lat": 17.645351,
+    "Lon": -63.220571,
+    "Ele": 18.3
+  }
+]

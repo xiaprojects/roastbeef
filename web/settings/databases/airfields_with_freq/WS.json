@@ -1,0 +1,38 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Asau Airport",
+    "gps_code": "NSAU",
+    "freq": "",
+    "Lat": -13.505132,
+    "Lon": -172.627888,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Faleolo International Airport",
+    "gps_code": "NSFA",
+    "freq": "118.100",
+    "Lat": -13.829999923706056,
+    "Lon": -172.00799560546875,
+    "Ele": 17.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fagali'i Airport",
+    "gps_code": "NSFI",
+    "freq": "",
+    "Lat": -13.849167,
+    "Lon": -171.739866,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maota Airport",
+    "gps_code": "NSMA",
+    "freq": "",
+    "Lat": -13.7423,
+    "Lon": -172.257996,
+    "Ele": 0.0
+  }
+]

@@ -1,0 +1,506 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Matoko Airport",
+    "gps_code": "CG-0001",
+    "freq": "",
+    "Lat": -1.012216,
+    "Lon": 17.104403,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bomassa Airport",
+    "gps_code": "CG-0002",
+    "freq": "",
+    "Lat": 2.202584,
+    "Lon": 16.185859,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mokabi Airport",
+    "gps_code": "CG-0003",
+    "freq": "",
+    "Lat": 3.278863,
+    "Lon": 16.756092,
+    "Ele": 507.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Enyele Airport",
+    "gps_code": "CG-0004",
+    "freq": "",
+    "Lat": 2.829175,
+    "Lon": 18.02458,
+    "Ele": 401.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Thanry Airport",
+    "gps_code": "CG-0005",
+    "freq": "",
+    "Lat": 2.651304,
+    "Lon": 17.173194,
+    "Ele": 363.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Okoyo Airport",
+    "gps_code": "CG-OKG",
+    "freq": "",
+    "Lat": -1.4483300447464,
+    "Lon": 15.073300361633,
+    "Ele": 431.3
+  },
+  {
+    "type": "small_airport",
+    "name": "La Louila Airport",
+    "gps_code": "FCBA",
+    "freq": "",
+    "Lat": -4.083000183105469,
+    "Lon": 14.232999801635742,
+    "Ele": 299.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maya-Maya Airport",
+    "gps_code": "FCBB",
+    "freq": "121.100",
+    "Lat": -4.251699924468994,
+    "Lon": 15.253000259399414,
+    "Ele": 319.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Djambala Airport",
+    "gps_code": "FCBD",
+    "freq": "",
+    "Lat": -2.516883,
+    "Lon": 14.754403,
+    "Ele": 791.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kindamba Airport",
+    "gps_code": "FCBK",
+    "freq": "",
+    "Lat": -3.749781,
+    "Lon": 14.490264,
+    "Ele": 445.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lague Airport",
+    "gps_code": "FCBL",
+    "freq": "",
+    "Lat": -2.45,
+    "Lon": 14.533,
+    "Ele": 840.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mouyondzi Airport",
+    "gps_code": "FCBM",
+    "freq": "",
+    "Lat": -4.014874,
+    "Lon": 13.966112,
+    "Ele": 509.0
+  },
+  {
+    "type": "small_airport",
+    "name": "M'passa Airport",
+    "gps_code": "FCBP",
+    "freq": "",
+    "Lat": -4.367000102996826,
+    "Lon": 14.149999618530272,
+    "Ele": 339.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sibiti Airport",
+    "gps_code": "FCBS",
+    "freq": "",
+    "Lat": -3.683,
+    "Lon": 13.35,
+    "Ele": 573.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Loutete Airport",
+    "gps_code": "FCBT",
+    "freq": "",
+    "Lat": -4.2829999923706055,
+    "Lon": 13.866999626159668,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aubeville Airport",
+    "gps_code": "FCBU",
+    "freq": "",
+    "Lat": -4.267000198364258,
+    "Lon": 13.532999992370604,
+    "Ele": 349.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yokangassi Airport",
+    "gps_code": "FCBY",
+    "freq": "",
+    "Lat": -4.223077,
+    "Lon": 13.286347,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zanaga Airport",
+    "gps_code": "FCBZ",
+    "freq": "",
+    "Lat": -2.85,
+    "Lon": 13.817,
+    "Ele": 570.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mavinza Airport",
+    "gps_code": "FCMA",
+    "freq": "",
+    "Lat": -2.450000047683716,
+    "Lon": 11.649999618530272,
+    "Ele": 155.1
+  },
+  {
+    "type": "small_airport",
+    "name": "N'Ziba Airport",
+    "gps_code": "FCMB",
+    "freq": "",
+    "Lat": -2.7170000076293945,
+    "Lon": 12.532999992370604,
+    "Ele": 655.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sidetra Airport",
+    "gps_code": "FCMD",
+    "freq": "",
+    "Lat": -2.867000102996826,
+    "Lon": 12.866999626159668,
+    "Ele": 650.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Loufoula Airport",
+    "gps_code": "FCMF",
+    "freq": "",
+    "Lat": -3.0,
+    "Lon": 12.0,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gokango Airport",
+    "gps_code": "FCMG",
+    "freq": "",
+    "Lat": -3.032999992370605,
+    "Lon": 12.133000373840332,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Irogo Airport",
+    "gps_code": "FCMI",
+    "freq": "",
+    "Lat": -2.7170000076293945,
+    "Lon": 11.883000373840332,
+    "Ele": 280.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kele Kibangou Airport",
+    "gps_code": "FCMK",
+    "freq": "",
+    "Lat": -3.316999912261963,
+    "Lon": 12.616999626159668,
+    "Ele": 274.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Leboulou Airport",
+    "gps_code": "FCML",
+    "freq": "",
+    "Lat": -2.900000095367432,
+    "Lon": 12.366999626159668,
+    "Ele": 270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mossendjo Airport",
+    "gps_code": "FCMM",
+    "freq": "",
+    "Lat": -2.95,
+    "Lon": 12.7,
+    "Ele": 463.0
+  },
+  {
+    "type": "small_airport",
+    "name": "N'gongo Airport",
+    "gps_code": "FCMN",
+    "freq": "",
+    "Lat": -2.9830000400543213,
+    "Lon": 12.199999809265137,
+    "Ele": 276.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandoro Airport",
+    "gps_code": "FCMO",
+    "freq": "",
+    "Lat": -2.650000095367432,
+    "Lon": 12.883000373840332,
+    "Ele": 540.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Marala Airport",
+    "gps_code": "FCMR",
+    "freq": "",
+    "Lat": -2.900000095367432,
+    "Lon": 12.633000373840332,
+    "Ele": 467.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyanga Airport",
+    "gps_code": "FCMS",
+    "freq": "",
+    "Lat": -2.867000102996826,
+    "Lon": 11.949999809265137,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Legala Airport",
+    "gps_code": "FCMY",
+    "freq": "",
+    "Lat": -2.2170000076293945,
+    "Lon": 12.833000183105469,
+    "Ele": 655.9
+  },
+  {
+    "type": "small_airport",
+    "name": "N'Zabi Airport",
+    "gps_code": "FCMZ",
+    "freq": "",
+    "Lat": -3.1670000553131104,
+    "Lon": 12.866999626159668,
+    "Ele": 499.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Boundji Airport",
+    "gps_code": "FCOB",
+    "freq": "",
+    "Lat": -1.03104,
+    "Lon": 15.336009,
+    "Ele": 380.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oyo Ollombo Airport",
+    "gps_code": "FCOD",
+    "freq": "119.100",
+    "Lat": -1.226666,
+    "Lon": 15.91,
+    "Ele": 327.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ewo Airport",
+    "gps_code": "FCOE",
+    "freq": "",
+    "Lat": -0.883,
+    "Lon": 14.8,
+    "Ele": 458.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gamboma Airport",
+    "gps_code": "FCOG",
+    "freq": "",
+    "Lat": -1.829403,
+    "Lon": 15.885237,
+    "Ele": 459.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Impfondo Airport",
+    "gps_code": "FCOI",
+    "freq": "",
+    "Lat": 1.589968,
+    "Lon": 18.046624,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kelle Airport",
+    "gps_code": "FCOK",
+    "freq": "",
+    "Lat": -0.071271,
+    "Lon": 14.506621,
+    "Ele": 465.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Makoua Airport",
+    "gps_code": "FCOM",
+    "freq": "",
+    "Lat": -0.020842,
+    "Lon": 15.577746,
+    "Ele": 394.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Owando Airport",
+    "gps_code": "FCOO",
+    "freq": "",
+    "Lat": -0.524566,
+    "Lon": 15.93782,
+    "Ele": 370.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Souanke Airport",
+    "gps_code": "FCOS",
+    "freq": "",
+    "Lat": 1.998326,
+    "Lon": 14.174217,
+    "Ele": 524.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Betou Airport",
+    "gps_code": "FCOT",
+    "freq": "",
+    "Lat": 3.057593,
+    "Lon": 18.514433,
+    "Ele": 356.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ouesso Airport",
+    "gps_code": "FCOU",
+    "freq": "127.100",
+    "Lat": 1.61599,
+    "Lon": 16.037901,
+    "Ele": 353.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makabana Airport",
+    "gps_code": "FCPA",
+    "freq": "",
+    "Lat": -3.483,
+    "Lon": 12.617,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bangamba Airport",
+    "gps_code": "FCPB",
+    "freq": "",
+    "Lat": -3.683000087738037,
+    "Lon": 13.199999809265137,
+    "Ele": 399.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Leganda Airport",
+    "gps_code": "FCPE",
+    "freq": "",
+    "Lat": -3.433000087738037,
+    "Lon": 12.93299961090088,
+    "Ele": 365.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kibangou Airport",
+    "gps_code": "FCPG",
+    "freq": "",
+    "Lat": -3.4830000400543213,
+    "Lon": 12.300000190734863,
+    "Ele": 130.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Loubetsi Airport",
+    "gps_code": "FCPI",
+    "freq": "",
+    "Lat": -3.700000047683716,
+    "Lon": 12.133000373840332,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "N'komo Airport",
+    "gps_code": "FCPK",
+    "freq": "",
+    "Lat": -3.93999,
+    "Lon": 11.30887,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ngot Nzoungou Airport",
+    "gps_code": "FCPL",
+    "freq": "",
+    "Lat": -4.20635,
+    "Lon": 12.6599,
+    "Ele": 328.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Noumbi Airport",
+    "gps_code": "FCPN",
+    "freq": "",
+    "Lat": -4.144149,
+    "Lon": 11.383476,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pemo Airport",
+    "gps_code": "FCPO",
+    "freq": "",
+    "Lat": -2.867000102996826,
+    "Lon": 12.532999992370604,
+    "Ele": 513.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Antonio Agostinho-Neto International Airport",
+    "gps_code": "FCPP",
+    "freq": "549.300",
+    "Lat": -4.81603,
+    "Lon": 11.8866,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Loukanyi Airport",
+    "gps_code": "FCPY",
+    "freq": "",
+    "Lat": -4.048475,
+    "Lon": 11.521568,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lekana Airport",
+    "gps_code": "LKC",
+    "freq": "",
+    "Lat": -2.313,
+    "Lon": 14.606,
+    "Ele": 802.8
+  }
+]

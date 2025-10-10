@@ -1,0 +1,155 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Anse-a-Galets Airport",
+    "gps_code": "HT-0002",
+    "freq": "",
+    "Lat": 18.841212,
+    "Lon": -72.880232,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hinche Airport",
+    "gps_code": "HT-0003",
+    "freq": "",
+    "Lat": 19.13874,
+    "Lon": -72.016,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Île-à-Vache International Airport",
+    "gps_code": "HT-0004",
+    "freq": "",
+    "Lat": 18.07058,
+    "Lon": -73.59194,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Anse-Rouge Airport",
+    "gps_code": "HT-0005",
+    "freq": "",
+    "Lat": 19.66631,
+    "Lon": -73.07227,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dame-Marie Airport",
+    "gps_code": "HT-0007",
+    "freq": "",
+    "Lat": 18.616667,
+    "Lon": -74.416667,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fond-des-Blancs Airport",
+    "gps_code": "HT-0008",
+    "freq": "",
+    "Lat": 18.286235,
+    "Lon": -73.111922,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Môle-Saint-Nicolas Airport",
+    "gps_code": "HT-0009",
+    "freq": "",
+    "Lat": 19.834269,
+    "Lon": -73.358116,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ouanaminthe Airport",
+    "gps_code": "HT-0010",
+    "freq": "",
+    "Lat": 19.5375,
+    "Lon": -71.72861,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Phaeton Airport",
+    "gps_code": "HT-0011",
+    "freq": "",
+    "Lat": 19.68055,
+    "Lon": -71.90555,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pignon Airport",
+    "gps_code": "HT-0012",
+    "freq": "",
+    "Lat": 19.32361,
+    "Lon": -72.11666,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port-Salut Airport",
+    "gps_code": "HT-0013",
+    "freq": "",
+    "Lat": 18.06444,
+    "Lon": -73.9125,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Antoine-Simon International Airport",
+    "gps_code": "MTCA",
+    "freq": "118.500",
+    "Lat": 18.271099,
+    "Lon": -73.7883,
+    "Ele": 61.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cap Haitien International Airport",
+    "gps_code": "MTCH",
+    "freq": "118.700",
+    "Lat": 19.726734,
+    "Lon": -72.199576,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jacmel Airport",
+    "gps_code": "MTJA",
+    "freq": "118.500",
+    "Lat": 18.2411,
+    "Lon": -72.518501,
+    "Ele": 50.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jérémie Airport",
+    "gps_code": "MTJE",
+    "freq": "",
+    "Lat": 18.663099,
+    "Lon": -74.170303,
+    "Ele": 44.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Toussaint Louverture International Airport",
+    "gps_code": "MTPP",
+    "freq": "119.800",
+    "Lat": 18.580023,
+    "Lon": -72.292596,
+    "Ele": 37.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Port-de-Paix Airport",
+    "gps_code": "MTPX",
+    "freq": "",
+    "Lat": 19.934045,
+    "Lon": -72.84801,
+    "Ele": 2.7
+  }
+]

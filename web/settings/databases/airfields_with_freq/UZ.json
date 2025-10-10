@@ -1,0 +1,677 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Chirchik Airport",
+    "gps_code": "UA66",
+    "freq": "",
+    "Lat": 41.5168,
+    "Lon": 69.575401,
+    "Ele": 699.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakaydy Airport",
+    "gps_code": "UT1M",
+    "freq": "",
+    "Lat": 37.624298095703125,
+    "Lon": 67.5176010131836,
+    "Ele": 367.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kogon South Airport",
+    "gps_code": "UT1P",
+    "freq": "",
+    "Lat": 39.686776,
+    "Lon": 64.548161,
+    "Ele": 210.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pakhtakor Airport",
+    "gps_code": "UT1Q",
+    "freq": "",
+    "Lat": 40.25270080566406,
+    "Lon": 67.91079711914062,
+    "Ele": 311.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Namangan Airport",
+    "gps_code": "UTFN",
+    "freq": "",
+    "Lat": 40.9846,
+    "Lon": 71.556702,
+    "Ele": 474.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Andizhan Airport",
+    "gps_code": "UTKA",
+    "freq": "",
+    "Lat": 40.727699,
+    "Lon": 72.293999,
+    "Ele": 461.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fergana International Airport",
+    "gps_code": "UTKF",
+    "freq": "",
+    "Lat": 40.358799,
+    "Lon": 71.745003,
+    "Ele": 603.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kokand Airport",
+    "gps_code": "UTKK",
+    "freq": "",
+    "Lat": 40.447183,
+    "Lon": 70.989144,
+    "Ele": 413.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Muynak Airport",
+    "gps_code": "UTNM",
+    "freq": "",
+    "Lat": 43.753636,
+    "Lon": 59.029884,
+    "Ele": 53.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nukus Airport",
+    "gps_code": "UTNN",
+    "freq": "",
+    "Lat": 42.4884,
+    "Lon": 59.623299,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Turtkul Airport",
+    "gps_code": "UTNT",
+    "freq": "",
+    "Lat": 41.57500076293945,
+    "Lon": 60.96659851074219,
+    "Ele": 93.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Urgench Airport",
+    "gps_code": "UTNU",
+    "freq": "126.000",
+    "Lat": 41.58430099487305,
+    "Lon": 60.641700744628906,
+    "Ele": 97.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Navoi Airport",
+    "gps_code": "UTSA",
+    "freq": "",
+    "Lat": 40.117199,
+    "Lon": 65.170799,
+    "Ele": 347.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bukhara International Airport",
+    "gps_code": "UTSB",
+    "freq": "124.600",
+    "Lat": 39.775002,
+    "Lon": 64.483299,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Shahrisabz Airport",
+    "gps_code": "UTSH",
+    "freq": "",
+    "Lat": 39.068003,
+    "Lon": 66.758388,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Karshi Airport",
+    "gps_code": "UTSK",
+    "freq": "",
+    "Lat": 38.802246,
+    "Lon": 65.773068,
+    "Ele": 374.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Karshi-Khanabad Air Base",
+    "gps_code": "UTSL",
+    "freq": "131.600",
+    "Lat": 38.833599,
+    "Lon": 65.921501,
+    "Ele": 416.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tandy Bulak Airport",
+    "gps_code": "UTSM",
+    "freq": "",
+    "Lat": 41.76079177856445,
+    "Lon": 64.60240173339844,
+    "Ele": 218.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Sugraly Airport",
+    "gps_code": "UTSN",
+    "freq": "",
+    "Lat": 41.613899,
+    "Lon": 64.2332,
+    "Ele": 425.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Sariasiya Airport",
+    "gps_code": "UTSR",
+    "freq": "",
+    "Lat": 38.41059875488281,
+    "Lon": 67.94519805908203,
+    "Ele": 594.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Samarkand Airport",
+    "gps_code": "UTSS",
+    "freq": "120.800",
+    "Lat": 39.70050048828125,
+    "Lon": 66.98380279541016,
+    "Ele": 677.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Termez Airport",
+    "gps_code": "UTST",
+    "freq": "134.300",
+    "Lat": 37.287261,
+    "Lon": 67.311869,
+    "Ele": 313.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Uchkuduk Airport",
+    "gps_code": "UTSU",
+    "freq": "",
+    "Lat": 42.083099365234375,
+    "Lon": 63.44929885864258,
+    "Ele": 126.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tashkent East Airport",
+    "gps_code": "UTTP",
+    "freq": "",
+    "Lat": 41.312889,
+    "Lon": 69.395535,
+    "Ele": 479.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Tashkent International Airport",
+    "gps_code": "UTTT",
+    "freq": "125.200",
+    "Lat": 41.2579,
+    "Lon": 69.281197,
+    "Ele": 431.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zomin Airport",
+    "gps_code": "UTTZ",
+    "freq": "",
+    "Lat": 40.01402,
+    "Lon": 68.41103,
+    "Ele": 536.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Besh Kotan Airport",
+    "gps_code": "UZ-0006",
+    "freq": "",
+    "Lat": 37.493271,
+    "Lon": 66.978463,
+    "Ele": 324.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chinaz Highway Airstrip",
+    "gps_code": "UZ-0009",
+    "freq": "",
+    "Lat": 40.97949981689453,
+    "Lon": 68.79219818115234,
+    "Ele": 281.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kunkhodzha Airport",
+    "gps_code": "UZ-0012",
+    "freq": "",
+    "Lat": 43.118801,
+    "Lon": 58.3736,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dzhar-Tepe Airport",
+    "gps_code": "UZ-0013",
+    "freq": "",
+    "Lat": 39.16740036010742,
+    "Lon": 66.7145004272461,
+    "Ele": 616.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Imeni Kirova Airport",
+    "gps_code": "UZ-0019",
+    "freq": "",
+    "Lat": 40.633514,
+    "Lon": 68.617562,
+    "Ele": 266.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aranchi Airfield",
+    "gps_code": "UZ-0020",
+    "freq": "",
+    "Lat": 41.026817,
+    "Lon": 69.199536,
+    "Ele": 345.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamashi Airport",
+    "gps_code": "UZ-0021",
+    "freq": "",
+    "Lat": 38.80440139770508,
+    "Lon": 66.52960205078125,
+    "Ele": 542.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kara Kalpak Airport",
+    "gps_code": "UZ-0022",
+    "freq": "",
+    "Lat": 40.80339813232422,
+    "Lon": 71.18920135498047,
+    "Ele": 374.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kayki Airport",
+    "gps_code": "UZ-0023",
+    "freq": "",
+    "Lat": 41.078374,
+    "Lon": 72.028289,
+    "Ele": 478.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kokand Southeast Airport",
+    "gps_code": "UZ-0025",
+    "freq": "",
+    "Lat": 40.377905,
+    "Lon": 71.093859,
+    "Ele": 576.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuva Southeast Airport",
+    "gps_code": "UZ-0028",
+    "freq": "",
+    "Lat": 40.483441,
+    "Lon": 72.280825,
+    "Ele": 601.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuva West Airport",
+    "gps_code": "UZ-0029",
+    "freq": "",
+    "Lat": 40.504785,
+    "Lon": 71.902458,
+    "Ele": 484.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Muglan Airport",
+    "gps_code": "UZ-0030",
+    "freq": "",
+    "Lat": 38.901798248291016,
+    "Lon": 65.39669799804688,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Muruntau Southeast Airport",
+    "gps_code": "UZ-0031",
+    "freq": "",
+    "Lat": 41.47116470336914,
+    "Lon": 64.66607666015625,
+    "Ele": 408.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Namangan Northeast Airport",
+    "gps_code": "UZ-0032",
+    "freq": "",
+    "Lat": 41.044891,
+    "Lon": 71.786989,
+    "Ele": 484.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Naubag Airport",
+    "gps_code": "UZ-0033",
+    "freq": "",
+    "Lat": 37.65290069580078,
+    "Lon": 66.97380065917969,
+    "Ele": 385.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nishan Airport",
+    "gps_code": "UZ-0034",
+    "freq": "",
+    "Lat": 38.58919906616211,
+    "Lon": 65.60970306396484,
+    "Ele": 355.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nukus South Airport",
+    "gps_code": "UZ-0035",
+    "freq": "",
+    "Lat": 42.36360168457031,
+    "Lon": 59.516998291015625,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ostrov Vozrozhdeniya Airport",
+    "gps_code": "UZ-0037",
+    "freq": "",
+    "Lat": 45.159148,
+    "Lon": 59.301882,
+    "Ele": 70.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Shirabad Northeast Airport",
+    "gps_code": "UZ-0042",
+    "freq": "",
+    "Lat": 37.69039916992188,
+    "Lon": 67.05039978027344,
+    "Ele": 400.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Shur Ob East Airport",
+    "gps_code": "UZ-0043",
+    "freq": "",
+    "Lat": 37.39509963989258,
+    "Lon": 67.03990173339844,
+    "Ele": 285.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Statsiya Yakkabag Airport",
+    "gps_code": "UZ-0046",
+    "freq": "",
+    "Lat": 38.975366,
+    "Lon": 66.726805,
+    "Ele": 600.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Syrdarya Airport",
+    "gps_code": "UZ-0047",
+    "freq": "",
+    "Lat": 40.809101,
+    "Lon": 68.687698,
+    "Ele": 261.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Syrdarya Highway Southwest Airstrip",
+    "gps_code": "UZ-0048",
+    "freq": "",
+    "Lat": 40.772499,
+    "Lon": 68.563599,
+    "Ele": 263.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Tashkent Angor Airport",
+    "gps_code": "UZ-0051",
+    "freq": "",
+    "Lat": 37.464258,
+    "Lon": 67.078743,
+    "Ele": 317.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Uchkurgan Southeast Airport",
+    "gps_code": "UZ-0054",
+    "freq": "",
+    "Lat": 41.046854,
+    "Lon": 72.116494,
+    "Ele": 476.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Uychi Southeast Airport",
+    "gps_code": "UZ-0056",
+    "freq": "",
+    "Lat": 41.00979995727539,
+    "Lon": 71.94869995117188,
+    "Ele": 438.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alhi Airport",
+    "gps_code": "UZ-0060",
+    "freq": "",
+    "Lat": 40.93299,
+    "Lon": 69.13819,
+    "Ele": 332.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aradzhi Airport",
+    "gps_code": "UZ-0061",
+    "freq": "",
+    "Lat": 41.50798416137695,
+    "Lon": 60.42179870605469,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Beruni Airport",
+    "gps_code": "UZ-0065",
+    "freq": "",
+    "Lat": 41.68532180786133,
+    "Lon": 60.71579360961914,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chambel Airport",
+    "gps_code": "UZ-0066",
+    "freq": "",
+    "Lat": 40.023572,
+    "Lon": 67.143373,
+    "Ele": 670.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dzharkurgan East Airport",
+    "gps_code": "UZ-0077",
+    "freq": "",
+    "Lat": 37.50899887084961,
+    "Lon": 67.47229766845703,
+    "Ele": 346.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gilyambor Airport",
+    "gps_code": "UZ-0079",
+    "freq": "",
+    "Lat": 37.40700149536133,
+    "Lon": 67.18370056152344,
+    "Ele": 312.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gulistan North Airport",
+    "gps_code": "UZ-0081",
+    "freq": "",
+    "Lat": 40.51276,
+    "Lon": 68.798999,
+    "Ele": 272.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Karyz Airport",
+    "gps_code": "UZ-0095",
+    "freq": "",
+    "Lat": 39.01860046386719,
+    "Lon": 66.5188980102539,
+    "Ele": 510.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kasan Southwest Airport",
+    "gps_code": "UZ-0096",
+    "freq": "",
+    "Lat": 39.02119827270508,
+    "Lon": 65.53369903564453,
+    "Ele": 339.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Khavast Airport",
+    "gps_code": "UZ-0101",
+    "freq": "",
+    "Lat": 40.199849,
+    "Lon": 68.853511,
+    "Ele": 374.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Malekskaya Airport",
+    "gps_code": "UZ-0112",
+    "freq": "",
+    "Lat": 40.709064,
+    "Lon": 68.581698,
+    "Ele": 263.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Nadezhdinskoye Airport",
+    "gps_code": "UZ-0116",
+    "freq": "",
+    "Lat": 40.62350082397461,
+    "Lon": 68.93990325927734,
+    "Ele": 270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pap East Airport",
+    "gps_code": "UZ-0119",
+    "freq": "",
+    "Lat": 40.88519,
+    "Lon": 71.181217,
+    "Ele": 429.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Shahrisabz Southwest Airport",
+    "gps_code": "UZ-0124",
+    "freq": "",
+    "Lat": 39.030067,
+    "Lon": 66.775825,
+    "Ele": 591.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Shamenay Airport",
+    "gps_code": "UZ-0126",
+    "freq": "",
+    "Lat": 42.63859939575195,
+    "Lon": 58.91719818115234,
+    "Ele": 66.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Surkhany Airport",
+    "gps_code": "UZ-0130",
+    "freq": "",
+    "Lat": 37.73059844970703,
+    "Lon": 67.5770034790039,
+    "Ele": 397.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Yangi Aryn Airport",
+    "gps_code": "UZ-0136",
+    "freq": "",
+    "Lat": 41.3560905456543,
+    "Lon": 60.599308013916016,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Yangiturmysh Airport",
+    "gps_code": "UZ-0143",
+    "freq": "",
+    "Lat": 40.71609878540039,
+    "Lon": 69.08039855957031,
+    "Ele": 298.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tomar Ozek Airport",
+    "gps_code": "UZ-0147",
+    "freq": "",
+    "Lat": 43.615,
+    "Lon": 59.267,
+    "Ele": 56.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Suh airport",
+    "gps_code": "UZ-0153",
+    "freq": "",
+    "Lat": 39.987179,
+    "Lon": 71.124615,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maymanak Airport",
+    "gps_code": "UZ-UT73",
+    "freq": "",
+    "Lat": 39.137798,
+    "Lon": 65.165298,
+    "Ele": 319.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kungirot Airport",
+    "gps_code": "UZ-UT77",
+    "freq": "",
+    "Lat": 43.082662,
+    "Lon": 58.885077,
+    "Ele": 54.9
+  }
+]

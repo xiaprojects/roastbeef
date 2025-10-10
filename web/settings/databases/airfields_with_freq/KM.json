@@ -1,0 +1,29 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Prince Said Ibrahim International Airport",
+    "gps_code": "FMCH",
+    "freq": "465.700",
+    "Lat": -11.5337,
+    "Lon": 43.2719,
+    "Ele": 28.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mohéli Bandar Es Eslam Airport",
+    "gps_code": "FMCI",
+    "freq": "119.700",
+    "Lat": -12.2981,
+    "Lon": 43.766399,
+    "Ele": 14.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ouani Airport",
+    "gps_code": "FMCV",
+    "freq": "548.400",
+    "Lat": -12.131047,
+    "Lon": 44.430044,
+    "Ele": 18.9
+  }
+]

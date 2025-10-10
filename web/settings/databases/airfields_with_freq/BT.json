@@ -1,0 +1,38 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Bathpalathang Airport",
+    "gps_code": "VQBT",
+    "freq": "122.550",
+    "Lat": 27.5622,
+    "Lon": 90.7471,
+    "Ele": 2586.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gelephu Airport",
+    "gps_code": "VQGP",
+    "freq": "",
+    "Lat": 26.88456,
+    "Lon": 90.46412,
+    "Ele": 298.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Paro International Airport",
+    "gps_code": "VQPR",
+    "freq": "",
+    "Lat": 27.4032,
+    "Lon": 89.424599,
+    "Ele": 2244.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Yongphulla Airport",
+    "gps_code": "VQTY",
+    "freq": "",
+    "Lat": 27.25627,
+    "Lon": 91.514633,
+    "Ele": 2743.2
+  }
+]

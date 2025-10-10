@@ -1,0 +1,155 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Noakhali Airport",
+    "gps_code": "BD-0019",
+    "freq": "",
+    "Lat": 22.7389,
+    "Lon": 91.06489,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Patuakhali Airport",
+    "gps_code": "BD-0022",
+    "freq": "",
+    "Lat": 22.37647,
+    "Lon": 90.32213,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bogra Airport",
+    "gps_code": "VGBG",
+    "freq": "",
+    "Lat": 24.8668,
+    "Lon": 89.3165,
+    "Ele": 21.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Barisal Airport",
+    "gps_code": "VGBR",
+    "freq": "122.900",
+    "Lat": 22.801001,
+    "Lon": 90.301201,
+    "Ele": 7.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cox's Bazar Airport",
+    "gps_code": "VGCB",
+    "freq": "129.500",
+    "Lat": 21.457517,
+    "Lon": 91.963263,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Comilla Airport",
+    "gps_code": "VGCM",
+    "freq": "",
+    "Lat": 23.440133,
+    "Lon": 91.188685,
+    "Ele": 7.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shah Amanat International Airport",
+    "gps_code": "VGEG",
+    "freq": "127.600",
+    "Lat": 22.249599,
+    "Lon": 91.813301,
+    "Ele": 3.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Hazrat Shahjalal International Airport",
+    "gps_code": "VGHS",
+    "freq": "121.300",
+    "Lat": 23.843347,
+    "Lon": 90.397783,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ishurdi Airport",
+    "gps_code": "VGIS",
+    "freq": "122.900",
+    "Lat": 24.1525,
+    "Lon": 89.0494,
+    "Ele": 13.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jessore Airport",
+    "gps_code": "VGJR",
+    "freq": "123.200",
+    "Lat": 23.1838,
+    "Lon": 89.160797,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lalmonirhat Airport",
+    "gps_code": "VGLM",
+    "freq": "",
+    "Lat": 25.887624,
+    "Lon": 89.431254,
+    "Ele": 32.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shah Mokhdum Airport",
+    "gps_code": "VGRJ",
+    "freq": "122.900",
+    "Lat": 24.437201,
+    "Lon": 88.616501,
+    "Ele": 19.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saidpur Airport",
+    "gps_code": "VGSD",
+    "freq": "122.900",
+    "Lat": 25.759199,
+    "Lon": 88.908897,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Thakurgaon Airport",
+    "gps_code": "VGSG",
+    "freq": "",
+    "Lat": 26.016378,
+    "Lon": 88.402092,
+    "Ele": 53.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Shamshernagar Airport",
+    "gps_code": "VGSH",
+    "freq": "",
+    "Lat": 24.398333,
+    "Lon": 91.916944,
+    "Ele": 17.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Osmany International Airport",
+    "gps_code": "VGSY",
+    "freq": "122.900",
+    "Lat": 24.963832,
+    "Lon": 91.864843,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tejgaon Airport",
+    "gps_code": "VGTJ",
+    "freq": "123.000",
+    "Lat": 23.778507,
+    "Lon": 90.382719,
+    "Ele": 7.3
+  }
+]

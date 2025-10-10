@@ -1,0 +1,668 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Hinthada Airport",
+    "gps_code": "MM-0002",
+    "freq": "",
+    "Lat": 17.633329391500002,
+    "Lon": 95.4666976929,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Langkho Airport",
+    "gps_code": "MM-0003",
+    "freq": "",
+    "Lat": 20.350000381469727,
+    "Lon": 98.01667022705078,
+    "Ele": 309.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Myoungmya Airport",
+    "gps_code": "MM-0004",
+    "freq": "",
+    "Lat": 16.570999145507812,
+    "Lon": 94.93229675292967,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Shinbweyang Airport",
+    "gps_code": "MM-0005",
+    "freq": "",
+    "Lat": 26.68600082397461,
+    "Lon": 96.2104034423828,
+    "Ele": 512.1
+  },
+  {
+    "type": "small_airport",
+    "name": "New Magway Airport",
+    "gps_code": "VY02",
+    "freq": "",
+    "Lat": 20.153600692749023,
+    "Lon": 94.96869659423828,
+    "Ele": 85.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ann Airport",
+    "gps_code": "VYAN",
+    "freq": "118.700",
+    "Lat": 19.769199,
+    "Lon": 94.0261,
+    "Ele": 22.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Anisakan Airport",
+    "gps_code": "VYAS",
+    "freq": "",
+    "Lat": 21.9554,
+    "Lon": 96.406097,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Bagan Airport",
+    "gps_code": "VYBG",
+    "freq": "119.700",
+    "Lat": 21.178800582885746,
+    "Lon": 94.9301986694336,
+    "Ele": 95.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Banmaw Airport",
+    "gps_code": "VYBM",
+    "freq": "118.700",
+    "Lat": 24.27044,
+    "Lon": 97.2476,
+    "Ele": 112.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bokpyinn Airport",
+    "gps_code": "VYBP",
+    "freq": "",
+    "Lat": 11.1494,
+    "Lon": 98.735901,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Coco Island Airport",
+    "gps_code": "VYCI",
+    "freq": "",
+    "Lat": 14.137964,
+    "Lon": 93.367853,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chanmyathazi Airport",
+    "gps_code": "VYCZ",
+    "freq": "119.700",
+    "Lat": 21.9405,
+    "Lon": 96.0896,
+    "Ele": 76.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dawei Airport",
+    "gps_code": "VYDW",
+    "freq": "119.700",
+    "Lat": 14.103899955749512,
+    "Lon": 98.20359802246094,
+    "Ele": 25.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Surbung Airport",
+    "gps_code": "VYFS",
+    "freq": "",
+    "Lat": 22.939167,
+    "Lon": 93.615333,
+    "Ele": 1832.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Gangaw Airport",
+    "gps_code": "VYGG",
+    "freq": "",
+    "Lat": 22.174699783325195,
+    "Lon": 94.1343994140625,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gwa Airport",
+    "gps_code": "VYGW",
+    "freq": "",
+    "Lat": 17.600000381469727,
+    "Lon": 94.5832977294922,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hmawbi Air Base",
+    "gps_code": "VYHB",
+    "freq": "",
+    "Lat": 17.11669921875,
+    "Lon": 96.06670379638672,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Heho Airport",
+    "gps_code": "VYHH",
+    "freq": "",
+    "Lat": 20.74714,
+    "Lon": 96.792029,
+    "Ele": 1175.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hommalinn Airport",
+    "gps_code": "VYHL",
+    "freq": "",
+    "Lat": 24.899599,
+    "Lon": 94.914001,
+    "Ele": 162.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tilin Airport",
+    "gps_code": "VYHN",
+    "freq": "",
+    "Lat": 21.700000762939453,
+    "Lon": 94.0999984741211,
+    "Ele": 422.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kengtung Airport",
+    "gps_code": "VYKG",
+    "freq": "118.700",
+    "Lat": 21.30159950256348,
+    "Lon": 99.63600158691406,
+    "Ele": 852.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kanti Airport",
+    "gps_code": "VYKI",
+    "freq": "",
+    "Lat": 25.9883,
+    "Lon": 95.6744,
+    "Ele": 1828.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalay Airport",
+    "gps_code": "VYKL",
+    "freq": "118.700",
+    "Lat": 23.188801,
+    "Lon": 94.051102,
+    "Ele": 133.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kyaukpyu Airport",
+    "gps_code": "VYKP",
+    "freq": "118.700",
+    "Lat": 19.42639923095703,
+    "Lon": 93.53479766845705,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kawthoung Airport",
+    "gps_code": "VYKT",
+    "freq": "118.700",
+    "Lat": 10.04930019378662,
+    "Lon": 98.53800201416016,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyauktu Airport",
+    "gps_code": "VYKU",
+    "freq": "",
+    "Lat": 21.399999618530277,
+    "Lon": 94.13330078125,
+    "Ele": 381.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Loikaw Airport",
+    "gps_code": "VYLK",
+    "freq": "118.700",
+    "Lat": 19.691499710083008,
+    "Lon": 97.2147979736328,
+    "Ele": 896.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lonekin Airport",
+    "gps_code": "VYLN",
+    "freq": "",
+    "Lat": 25.649999618530277,
+    "Lon": 96.36699676513672,
+    "Ele": 307.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lashio Airport",
+    "gps_code": "VYLS",
+    "freq": "118.700",
+    "Lat": 22.9778995513916,
+    "Lon": 97.752197265625,
+    "Ele": 746.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lanywa Airport",
+    "gps_code": "VYLY",
+    "freq": "",
+    "Lat": 20.940399169921875,
+    "Lon": 94.82260131835938,
+    "Ele": 53.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Mandalay International Airport",
+    "gps_code": "VYMD",
+    "freq": "119.200",
+    "Lat": 21.70219993591309,
+    "Lon": 95.97789764404295,
+    "Ele": 91.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Myeik Airport",
+    "gps_code": "VYME",
+    "freq": "119.700",
+    "Lat": 12.439800262451172,
+    "Lon": 98.62149810791016,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mong Hpayak Airport",
+    "gps_code": "VYMH",
+    "freq": "",
+    "Lat": 20.83300018310547,
+    "Lon": 99.9499969482422,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mongyai Airport",
+    "gps_code": "VYMI",
+    "freq": "",
+    "Lat": 22.482999801635746,
+    "Lon": 98.03299713134766,
+    "Ele": 883.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Myitkyina Airport",
+    "gps_code": "VYMK",
+    "freq": "119.700",
+    "Lat": 25.3836,
+    "Lon": 97.351898,
+    "Ele": 144.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Meiktila Air Base",
+    "gps_code": "VYML",
+    "freq": "",
+    "Lat": 20.88640022277832,
+    "Lon": 95.89279174804688,
+    "Ele": 213.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mawlamyine Airport",
+    "gps_code": "VYMM",
+    "freq": "118.700",
+    "Lat": 16.444700241088867,
+    "Lon": 97.66069793701172,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Manaung Airport",
+    "gps_code": "VYMN",
+    "freq": "",
+    "Lat": 18.8458,
+    "Lon": 93.688904,
+    "Ele": 31.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Momeik Airport",
+    "gps_code": "VYMO",
+    "freq": "118.700",
+    "Lat": 23.092500686645508,
+    "Lon": 96.64530181884766,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mongpyin Airport",
+    "gps_code": "VYMP",
+    "freq": "",
+    "Lat": 21.350000381469727,
+    "Lon": 99.03299713134766,
+    "Ele": 462.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mong Hsat Airport",
+    "gps_code": "VYMS",
+    "freq": "118.700",
+    "Lat": 20.51679992675781,
+    "Lon": 99.25679779052734,
+    "Ele": 571.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Mong Tong Airport",
+    "gps_code": "VYMT",
+    "freq": "",
+    "Lat": 20.29669952392578,
+    "Lon": 98.8989028930664,
+    "Ele": 560.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mrauk-U Airport",
+    "gps_code": "VYMU",
+    "freq": "",
+    "Lat": 20.525901,
+    "Lon": 93.252979,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Magway Airport",
+    "gps_code": "VYMW",
+    "freq": "",
+    "Lat": 20.1656,
+    "Lon": 94.941399,
+    "Ele": 85.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Monywar Airport",
+    "gps_code": "VYMY",
+    "freq": "",
+    "Lat": 22.221638,
+    "Lon": 95.093479,
+    "Ele": 90.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Naungmom Airport",
+    "gps_code": "VYNM",
+    "freq": "",
+    "Lat": 27.5,
+    "Lon": 97.81700134277344,
+    "Ele": 670.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nampong Air Base",
+    "gps_code": "VYNP",
+    "freq": "119.700",
+    "Lat": 25.3544006348,
+    "Lon": 97.2951965332,
+    "Ele": 139.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Namsang Airport",
+    "gps_code": "VYNS",
+    "freq": "118.700",
+    "Lat": 20.890499114990234,
+    "Lon": 97.73590087890624,
+    "Ele": 944.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nay Pyi Taw International Airport",
+    "gps_code": "VYNT",
+    "freq": "118.700",
+    "Lat": 19.623501,
+    "Lon": 96.200996,
+    "Ele": 92.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Namtu Airport",
+    "gps_code": "VYNU",
+    "freq": "",
+    "Lat": 23.083,
+    "Lon": 97.383003,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Hpa-N Airport",
+    "gps_code": "VYPA",
+    "freq": "118.700",
+    "Lat": 16.8937,
+    "Lon": 97.674599,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Phonngbyin Airport",
+    "gps_code": "VYPB",
+    "freq": "",
+    "Lat": 24.25,
+    "Lon": 94.78299713134766,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Seinzan (Paletwa) Airport",
+    "gps_code": "VYPE",
+    "freq": "",
+    "Lat": 21.28416,
+    "Lon": 92.90048,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pearl Island Airport",
+    "gps_code": "VYPI",
+    "freq": "",
+    "Lat": 11.276081,
+    "Lon": 98.213278,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pauk Airport",
+    "gps_code": "VYPK",
+    "freq": "",
+    "Lat": 21.4492,
+    "Lon": 94.4869,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pinlebu Airport",
+    "gps_code": "VYPL",
+    "freq": "",
+    "Lat": 24.08300018310547,
+    "Lon": 95.36699676513672,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pathein Airport",
+    "gps_code": "VYPN",
+    "freq": "118.700",
+    "Lat": 16.815201,
+    "Lon": 94.7799,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hpapun Airport",
+    "gps_code": "VYPP",
+    "freq": "",
+    "Lat": 18.0666999817,
+    "Lon": 97.449798584,
+    "Ele": 91.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Putao Airport",
+    "gps_code": "VYPT",
+    "freq": "118.700",
+    "Lat": 27.32990074157715,
+    "Lon": 97.42630004882812,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Pakhokku Airport",
+    "gps_code": "VYPU",
+    "freq": "",
+    "Lat": 21.4043,
+    "Lon": 95.11125,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Palaw Airport",
+    "gps_code": "VYPW",
+    "freq": "",
+    "Lat": 12.959289,
+    "Lon": 98.641627,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Pyay Airport",
+    "gps_code": "VYPY",
+    "freq": "",
+    "Lat": 18.824499130249023,
+    "Lon": 95.26599884033205,
+    "Ele": 36.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Saw Airport",
+    "gps_code": "VYSA",
+    "freq": "",
+    "Lat": 21.16699981689453,
+    "Lon": 94.16699981689452,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Salingyi Airport",
+    "gps_code": "VYSL",
+    "freq": "",
+    "Lat": 22.100000381469727,
+    "Lon": 95.01699829101562,
+    "Ele": 80.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shante Air Base",
+    "gps_code": "VYST",
+    "freq": "119.700",
+    "Lat": 20.941699981689453,
+    "Lon": 95.91449737548828,
+    "Ele": 192.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sittwe Airport",
+    "gps_code": "VYSW",
+    "freq": "119.700",
+    "Lat": 20.133165,
+    "Lon": 92.870693,
+    "Ele": 8.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Thandwe Airport",
+    "gps_code": "VYTD",
+    "freq": "118.700",
+    "Lat": 18.4606990814209,
+    "Lon": 94.30010223388672,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tachileik Airport",
+    "gps_code": "VYTL",
+    "freq": "118.700",
+    "Lat": 20.483800888061523,
+    "Lon": 99.9354019165039,
+    "Ele": 390.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanai Airport",
+    "gps_code": "VYTN",
+    "freq": "",
+    "Lat": 26.367000579833984,
+    "Lon": 96.73300170898438,
+    "Ele": 210.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Taungoo Airport",
+    "gps_code": "VYTO",
+    "freq": "119.700",
+    "Lat": 19.031299591064453,
+    "Lon": 96.40119934082033,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanyang Airport",
+    "gps_code": "VYTY",
+    "freq": "",
+    "Lat": 22.482999801635746,
+    "Lon": 98.4000015258789,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyaukhtu South Airport",
+    "gps_code": "VYXG",
+    "freq": "",
+    "Lat": 21.406700134277344,
+    "Lon": 94.13030242919922,
+    "Ele": 410.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ye Airport",
+    "gps_code": "VYYE",
+    "freq": "",
+    "Lat": 15.301361,
+    "Lon": 97.864288,
+    "Ele": 9.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Yangon International Airport",
+    "gps_code": "VYYY",
+    "freq": "119.700",
+    "Lat": 16.907300949099998,
+    "Lon": 96.1332015991,
+    "Ele": 33.2
+  }
+]

@@ -1,0 +1,614 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ajrestan Airport",
+    "gps_code": "AF-0001",
+    "freq": "",
+    "Lat": 33.485298,
+    "Lon": 67.144096,
+    "Ele": 2537.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Dehdadi Airport",
+    "gps_code": "AF-0002",
+    "freq": "",
+    "Lat": 36.646099,
+    "Lon": 67.032303,
+    "Ele": 420.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Charikar Airport",
+    "gps_code": "AF-0003",
+    "freq": "",
+    "Lat": 35.142523,
+    "Lon": 69.304742,
+    "Ele": 1697.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mohammad Agha Wuluswali Airport",
+    "gps_code": "AF-0006",
+    "freq": "",
+    "Lat": 34.171971,
+    "Lon": 69.035309,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Forward Operating Base Arian Airfield",
+    "gps_code": "AF-0011",
+    "freq": "",
+    "Lat": 33.50443,
+    "Lon": 68.414262,
+    "Ele": 2165.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Samangan Airstrip",
+    "gps_code": "AF-0013",
+    "freq": "",
+    "Lat": 36.282828,
+    "Lon": 68.020254,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Salerno North Field",
+    "gps_code": "AF-0014",
+    "freq": "",
+    "Lat": 33.375169,
+    "Lon": 69.96954,
+    "Ele": 1145.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Qarghayi Airport",
+    "gps_code": "AF-0015",
+    "freq": "",
+    "Lat": 34.49927,
+    "Lon": 70.11921,
+    "Ele": 705.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Salerno South Airport",
+    "gps_code": "AF-0017",
+    "freq": "",
+    "Lat": 33.333401,
+    "Lon": 69.952003,
+    "Ele": 1144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Andkhoy Airport",
+    "gps_code": "AF-0020",
+    "freq": "118.300",
+    "Lat": 36.942659,
+    "Lon": 65.206746,
+    "Ele": 274.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Logar Airport",
+    "gps_code": "AF-0021",
+    "freq": "",
+    "Lat": 33.9865,
+    "Lon": 69.023102,
+    "Ele": 1930.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Lal (Sarjangal) Airport",
+    "gps_code": "AF-0022",
+    "freq": "",
+    "Lat": 34.506716,
+    "Lon": 66.298068,
+    "Ele": 2810.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Muqur Airport",
+    "gps_code": "AF-0023",
+    "freq": "",
+    "Lat": 32.879601,
+    "Lon": 67.848602,
+    "Ele": 2011.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Panjab Airport",
+    "gps_code": "AF-0024",
+    "freq": "",
+    "Lat": 34.391726,
+    "Lon": 67.020445,
+    "Ele": 2682.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Taywarah Airport",
+    "gps_code": "AF-0025",
+    "freq": "",
+    "Lat": 33.54309,
+    "Lon": 64.42542,
+    "Ele": 2246.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Yakawlang (Yakolang) Airport",
+    "gps_code": "AF-0026",
+    "freq": "",
+    "Lat": 34.513302,
+    "Lon": 66.303101,
+    "Ele": 2651.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Helmand Airport",
+    "gps_code": "AF04",
+    "freq": "",
+    "Lat": 30.303216,
+    "Lon": 61.868904,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khwaja Ghar North Airport",
+    "gps_code": "AF06",
+    "freq": "",
+    "Lat": 37.071098,
+    "Lon": 69.495003,
+    "Ele": 501.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Khwaja Ghar South Airport",
+    "gps_code": "AF07",
+    "freq": "",
+    "Lat": 37.061623,
+    "Lon": 69.487765,
+    "Ele": 501.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kutub Khel Airport",
+    "gps_code": "AF08",
+    "freq": "",
+    "Lat": 34.192902,
+    "Lon": 69.135696,
+    "Ele": 1912.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nayak Airport",
+    "gps_code": "AF09",
+    "freq": "",
+    "Lat": 34.687099,
+    "Lon": 66.893204,
+    "Ele": 2636.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Shebartu Landing Zone Airport",
+    "gps_code": "AF13",
+    "freq": "",
+    "Lat": 34.778601,
+    "Lon": 67.489557,
+    "Ele": 3197.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Tapa Airport",
+    "gps_code": "AF14",
+    "freq": "",
+    "Lat": 32.745098,
+    "Lon": 62.598701,
+    "Ele": 799.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bamyan Airport",
+    "gps_code": "OABN",
+    "freq": "",
+    "Lat": 34.808916,
+    "Lon": 67.816629,
+    "Ele": 2550.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bost Airport",
+    "gps_code": "OABT",
+    "freq": "",
+    "Lat": 31.5597,
+    "Lon": 64.364998,
+    "Ele": 751.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chaghcharan Airport",
+    "gps_code": "OACC",
+    "freq": "",
+    "Lat": 34.526465,
+    "Lon": 65.27102,
+    "Ele": 2250.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sardeh Band Airport",
+    "gps_code": "OADS",
+    "freq": "",
+    "Lat": 33.3207015991,
+    "Lon": 68.6364974976,
+    "Ele": 2124.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Dwyer Airport",
+    "gps_code": "OADY",
+    "freq": "",
+    "Lat": 31.091265,
+    "Lon": 64.066053,
+    "Ele": 725.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Darwaz Airport",
+    "gps_code": "OADZ",
+    "freq": "",
+    "Lat": 38.461798,
+    "Lon": 70.881606,
+    "Ele": 1600.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ishkashim Airport",
+    "gps_code": "OAEM",
+    "freq": "",
+    "Lat": 36.71272,
+    "Lon": 71.61261,
+    "Ele": 2566.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Farah Airport",
+    "gps_code": "OAFR",
+    "freq": "",
+    "Lat": 32.366667,
+    "Lon": 62.165347,
+    "Ele": 939.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fayzabad Airport",
+    "gps_code": "OAFZ",
+    "freq": "",
+    "Lat": 37.122148,
+    "Lon": 70.5201,
+    "Ele": 1180.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghazni Airport",
+    "gps_code": "OAGN",
+    "freq": "",
+    "Lat": 33.487853,
+    "Lon": 68.525243,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gardez Airport",
+    "gps_code": "OAGZ",
+    "freq": "",
+    "Lat": 33.627366,
+    "Lon": 69.237023,
+    "Ele": 2374.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Khwahan Airport",
+    "gps_code": "OAHN",
+    "freq": "",
+    "Lat": 37.890021,
+    "Lon": 70.20383,
+    "Ele": 1095.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Herat - Khwaja Abdullah Ansari International Airport",
+    "gps_code": "OAHR",
+    "freq": "118.100",
+    "Lat": 34.209999,
+    "Lon": 62.228298,
+    "Ele": 977.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bagram Airfield",
+    "gps_code": "OAIX",
+    "freq": "133.350",
+    "Lat": 34.946098,
+    "Lon": 69.264999,
+    "Ele": 1492.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Joghari Airport",
+    "gps_code": "OAJG",
+    "freq": "",
+    "Lat": 33.158323,
+    "Lon": 67.546136,
+    "Ele": 2514.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jalalabad Airport",
+    "gps_code": "OAJL",
+    "freq": "118.500",
+    "Lat": 34.399799,
+    "Lon": 70.498596,
+    "Ele": 552.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kabul International Airport",
+    "gps_code": "OAKB",
+    "freq": "131.600",
+    "Lat": 34.565899,
+    "Lon": 69.212303,
+    "Ele": 1791.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Khoja-i-Ghar Airport",
+    "gps_code": "OAKG",
+    "freq": "",
+    "Lat": 37.083,
+    "Lon": 69.366997,
+    "Ele": 489.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ahmad Shah Baba International Airport / Kandahar Airfield",
+    "gps_code": "OAKN",
+    "freq": "25.320",
+    "Lat": 31.5058,
+    "Lon": 65.847801,
+    "Ele": 1017.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khost International Airport",
+    "gps_code": "OAKS",
+    "freq": "",
+    "Lat": 33.284605,
+    "Lon": 69.80734,
+    "Ele": 1281.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Little Pamir Airport",
+    "gps_code": "OALP",
+    "freq": "",
+    "Lat": 37.244444,
+    "Lon": 74.251944,
+    "Ele": 4066.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maymana Zahiraddin Faryabi Airport",
+    "gps_code": "OAMN",
+    "freq": "118.100",
+    "Lat": 35.930801,
+    "Lon": 64.760902,
+    "Ele": 836.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mazar-i-Sharif International Airport",
+    "gps_code": "OAMS",
+    "freq": "121.250",
+    "Lat": 36.706902,
+    "Lon": 67.209702,
+    "Ele": 391.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nili Airport",
+    "gps_code": "OANL",
+    "freq": "",
+    "Lat": 33.739456,
+    "Lon": 66.157408,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nimroz Airport",
+    "gps_code": "OANZ",
+    "freq": "",
+    "Lat": 30.963333,
+    "Lon": 62.060833,
+    "Ele": 481.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Urgun Airport",
+    "gps_code": "OAOG",
+    "freq": "",
+    "Lat": 32.939933,
+    "Lon": 69.150064,
+    "Ele": 2225.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Qalat Airport",
+    "gps_code": "OAQA",
+    "freq": "",
+    "Lat": 32.133839,
+    "Lon": 66.898917,
+    "Ele": 1640.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Koran va Monjan  Airport",
+    "gps_code": "OAQM",
+    "freq": "",
+    "Lat": 36.01707,
+    "Lon": 70.76085,
+    "Ele": 2566.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Qala-i-Naw Airport",
+    "gps_code": "OAQN",
+    "freq": "",
+    "Lat": 34.985472,
+    "Lon": 63.117404,
+    "Ele": 914.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Orūzgān Airport",
+    "gps_code": "OARG",
+    "freq": "",
+    "Lat": 32.9029998779,
+    "Lon": 66.630897522,
+    "Ele": 2049.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Rostaq Airport",
+    "gps_code": "OART",
+    "freq": "",
+    "Lat": 37.10681,
+    "Lon": 69.848892,
+    "Ele": 1384.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Razer Airport",
+    "gps_code": "OARZ",
+    "freq": "",
+    "Lat": 36.029893,
+    "Lon": 70.714159,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sharana Airstrip",
+    "gps_code": "OASA",
+    "freq": "",
+    "Lat": 33.12575,
+    "Lon": 68.838517,
+    "Ele": 2237.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Shindand Air Base",
+    "gps_code": "OASD",
+    "freq": "",
+    "Lat": 33.3913,
+    "Lon": 62.261002,
+    "Ele": 1150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sheberghan Airport",
+    "gps_code": "OASG",
+    "freq": "118.100",
+    "Lat": 36.751076,
+    "Lon": 65.913038,
+    "Ele": 321.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shank Air Base",
+    "gps_code": "OASH",
+    "freq": "",
+    "Lat": 33.922217,
+    "Lon": 69.07794,
+    "Ele": 2100.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Salerno Airport",
+    "gps_code": "OASL",
+    "freq": "",
+    "Lat": 33.3638,
+    "Lon": 69.9561,
+    "Ele": 1152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sheghnan Airport",
+    "gps_code": "OASN",
+    "freq": "",
+    "Lat": 37.497642,
+    "Lon": 71.508484,
+    "Ele": 2042.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarinkot Airport",
+    "gps_code": "OATN",
+    "freq": "",
+    "Lat": 32.604198,
+    "Lon": 65.865799,
+    "Ele": 1350.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taleqan Airport",
+    "gps_code": "OATQ",
+    "freq": "",
+    "Lat": 36.770699,
+    "Lon": 69.531998,
+    "Ele": 794.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kunduz Airport",
+    "gps_code": "OAUZ",
+    "freq": "130.350",
+    "Lat": 36.6651,
+    "Lon": 68.910797,
+    "Ele": 444.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yangi Qaleh Airport",
+    "gps_code": "OAYQ",
+    "freq": "",
+    "Lat": 37.459,
+    "Lon": 69.646599,
+    "Ele": 487.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Yawan Airport",
+    "gps_code": "OAYW",
+    "freq": "",
+    "Lat": 37.563636,
+    "Lon": 70.444496,
+    "Ele": 1720.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Camp Shorabak Airfield",
+    "gps_code": "OAZI",
+    "freq": "",
+    "Lat": 31.848735,
+    "Lon": 64.223175,
+    "Ele": 897.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zaranj Airport",
+    "gps_code": "OAZJ",
+    "freq": "",
+    "Lat": 30.972222,
+    "Lon": 61.865833,
+    "Ele": 479.1
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Angaur",
+    "gps_code": "ANG",
+    "freq": "",
+    "Lat": 6.906829,
+    "Lon": 134.145386,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Peleliu Airport",
+    "gps_code": "C23",
+    "freq": "",
+    "Lat": 6.99744,
+    "Lon": 134.232055,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Palau International Airport",
+    "gps_code": "PTRO",
+    "freq": "123.600",
+    "Lat": 7.36731,
+    "Lon": 134.544236,
+    "Ele": 53.6
+  }
+]

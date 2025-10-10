@@ -1,0 +1,1874 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Malmen Air Base",
+    "gps_code": "ESCF",
+    "freq": "132.950",
+    "Lat": 58.397666,
+    "Lon": 15.522422,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ärna Air Base",
+    "gps_code": "ESCM",
+    "freq": "130.400",
+    "Lat": 59.897301,
+    "Lon": 17.5886,
+    "Ele": 20.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ronneby Airport",
+    "gps_code": "ESDF",
+    "freq": "121.700",
+    "Lat": 56.266701,
+    "Lon": 15.265,
+    "Ele": 58.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hässleholm Bokeberg Airfield",
+    "gps_code": "ESFA",
+    "freq": "123.600",
+    "Lat": 56.134407,
+    "Lon": 13.875647,
+    "Ele": 32.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Råda Air Base",
+    "gps_code": "ESFR",
+    "freq": "136.025",
+    "Lat": 58.4981,
+    "Lon": 13.0532,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sandvik Airfield",
+    "gps_code": "ESFS",
+    "freq": "",
+    "Lat": 57.064935,
+    "Lon": 16.861854,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Backamo Airfield",
+    "gps_code": "ESGA",
+    "freq": "123.550",
+    "Lat": 58.1772,
+    "Lon": 11.9735,
+    "Ele": 126.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ålleberg Airfield",
+    "gps_code": "ESGC",
+    "freq": "123.400",
+    "Lat": 58.134499,
+    "Lon": 13.602097,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bämmelshed Airfield",
+    "gps_code": "ESGD",
+    "freq": "",
+    "Lat": 58.192146,
+    "Lon": 13.998156,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Borås Airfield",
+    "gps_code": "ESGE",
+    "freq": "123.525",
+    "Lat": 57.695935,
+    "Lon": 12.845002,
+    "Ele": 179.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Morup Airfield",
+    "gps_code": "ESGF",
+    "freq": "123.350",
+    "Lat": 56.968598,
+    "Lon": 12.388047,
+    "Ele": 11.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Göteborg Landvetter Airport",
+    "gps_code": "ESGG",
+    "freq": "118.375",
+    "Lat": 57.6628,
+    "Lon": 12.2798,
+    "Ele": 154.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Herrljunga Airfield",
+    "gps_code": "ESGH",
+    "freq": "123.650",
+    "Lat": 58.032376,
+    "Lon": 13.108642,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rödene Airfield",
+    "gps_code": "ESGI",
+    "freq": "123.650",
+    "Lat": 57.948888,
+    "Lon": 12.575827,
+    "Ele": 68.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jönköping Airport",
+    "gps_code": "ESGJ",
+    "freq": "118.250",
+    "Lat": 57.757598876953125,
+    "Lon": 14.068699836730955,
+    "Ele": 225.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Falköping Airfield",
+    "gps_code": "ESGK",
+    "freq": "118.000",
+    "Lat": 58.1698,
+    "Lon": 13.5878,
+    "Ele": 239.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Lidköping-Hovby Airport",
+    "gps_code": "ESGL",
+    "freq": "124.450",
+    "Lat": 58.4655,
+    "Lon": 13.1744,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Öresten Airfield",
+    "gps_code": "ESGM",
+    "freq": "123.200",
+    "Lat": 57.445301,
+    "Lon": 12.649,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brännebrona Airfield",
+    "gps_code": "ESGN",
+    "freq": "",
+    "Lat": 58.573374,
+    "Lon": 13.611237,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vårgårda Airfield",
+    "gps_code": "ESGO",
+    "freq": "123.650",
+    "Lat": 58.039306,
+    "Lon": 12.785781,
+    "Ele": 96.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Säve Airport",
+    "gps_code": "ESGP",
+    "freq": "124.675",
+    "Lat": 57.7747,
+    "Lon": 11.8704,
+    "Ele": 18.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Skövde Airport",
+    "gps_code": "ESGR",
+    "freq": "122.325",
+    "Lat": 58.456402,
+    "Lon": 13.9727,
+    "Ele": 98.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Näsinge Airfield",
+    "gps_code": "ESGS",
+    "freq": "123.550",
+    "Lat": 59.01676,
+    "Lon": 11.341344,
+    "Ele": 35.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Trollhättan-Vänersborg Airport",
+    "gps_code": "ESGT",
+    "freq": "122.725",
+    "Lat": 58.31809997558594,
+    "Lon": 12.345000267028809,
+    "Ele": 41.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Rörkärr Airfield",
+    "gps_code": "ESGU",
+    "freq": "123.550",
+    "Lat": 58.366493,
+    "Lon": 11.773879,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Varberg Getterön Airfield",
+    "gps_code": "ESGV",
+    "freq": "123.150",
+    "Lat": 57.125052,
+    "Lon": 12.229157,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Säffle Airfield",
+    "gps_code": "ESGY",
+    "freq": "",
+    "Lat": 59.084479,
+    "Lon": 12.94936,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karlsborg Air Base",
+    "gps_code": "ESIA",
+    "freq": "130.000",
+    "Lat": 58.513802,
+    "Lon": 14.5071,
+    "Ele": 93.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Såtenäs Air Base",
+    "gps_code": "ESIB",
+    "freq": "134.300",
+    "Lat": 58.426399,
+    "Lon": 12.7144,
+    "Ele": 55.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Lunda Airfield",
+    "gps_code": "ESKA",
+    "freq": "",
+    "Lat": 60.132801,
+    "Lon": 18.1049,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Uppsala-Sundbro Airfield",
+    "gps_code": "ESKC",
+    "freq": "",
+    "Lat": 59.922699,
+    "Lon": 17.5368,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dala Järna Airfield",
+    "gps_code": "ESKD",
+    "freq": "",
+    "Lat": 60.556099,
+    "Lon": 14.3771,
+    "Ele": 234.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Gryttjom Airfield",
+    "gps_code": "ESKG",
+    "freq": "",
+    "Lat": 60.286999,
+    "Lon": 17.4217,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ekshärad Airfield",
+    "gps_code": "ESKH",
+    "freq": "",
+    "Lat": 60.1548,
+    "Lon": 13.5286,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Karlskoga Airport",
+    "gps_code": "ESKK",
+    "freq": "122.550",
+    "Lat": 59.345901,
+    "Lon": 14.4959,
+    "Ele": 124.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mora Airport",
+    "gps_code": "ESKM",
+    "freq": "129.855",
+    "Lat": 60.957901,
+    "Lon": 14.5114,
+    "Ele": 193.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Stockholm Skavsta Airport",
+    "gps_code": "ESKN",
+    "freq": "132.955",
+    "Lat": 58.788601,
+    "Lon": 16.912201,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Munkfors Airfield",
+    "gps_code": "ESKO",
+    "freq": "",
+    "Lat": 59.798801,
+    "Lon": 13.4907,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Scandinavian Mountains Airport",
+    "gps_code": "ESKS",
+    "freq": "",
+    "Lat": 61.158393,
+    "Lon": 12.842503,
+    "Ele": 490.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tierp Airfield",
+    "gps_code": "ESKT",
+    "freq": "118.205",
+    "Lat": 60.350351,
+    "Lon": 17.418652,
+    "Ele": 39.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sunne Airfield",
+    "gps_code": "ESKU",
+    "freq": "123.200",
+    "Lat": 59.860199,
+    "Lon": 13.1129,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arvika Airfield",
+    "gps_code": "ESKV",
+    "freq": "122.350",
+    "Lat": 59.6759,
+    "Lon": 12.6394,
+    "Ele": 72.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Borglanda Airfield",
+    "gps_code": "ESMB",
+    "freq": "123.550",
+    "Lat": 56.862999,
+    "Lon": 16.656099,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ränneslätt Airfield",
+    "gps_code": "ESMC",
+    "freq": "123.425",
+    "Lat": 57.670601,
+    "Lon": 14.943,
+    "Ele": 219.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Eslöv Airfield",
+    "gps_code": "ESME",
+    "freq": "123.150",
+    "Lat": 55.848923,
+    "Lon": 13.329935,
+    "Ele": 90.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Fagerhult Airfield",
+    "gps_code": "ESMF",
+    "freq": "",
+    "Lat": 56.387901,
+    "Lon": 13.4706,
+    "Ele": 115.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Feringe Airfield",
+    "gps_code": "ESMG",
+    "freq": "122.505",
+    "Lat": 56.950298,
+    "Lon": 13.9217,
+    "Ele": 164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Höganäs Airfield",
+    "gps_code": "ESMH",
+    "freq": "123.550",
+    "Lat": 56.184799,
+    "Lon": 12.5761,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sjöbo Sövde Airfield",
+    "gps_code": "ESMI",
+    "freq": "123.650",
+    "Lat": 55.598202,
+    "Lon": 13.6747,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kågeröd Simmelsberga Airfield",
+    "gps_code": "ESMJ",
+    "freq": "",
+    "Lat": 55.994701,
+    "Lon": 13.0509,
+    "Ele": 84.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kristianstad Airport",
+    "gps_code": "ESMK",
+    "freq": "129.355",
+    "Lat": 55.9217,
+    "Lon": 14.0855,
+    "Ele": 23.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Landskrona Enoch Thulins Airfield",
+    "gps_code": "ESML",
+    "freq": "123.350",
+    "Lat": 55.946124,
+    "Lon": 12.870001,
+    "Ele": 59.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Oskarshamn Airport",
+    "gps_code": "ESMO",
+    "freq": "123.350",
+    "Lat": 57.350498,
+    "Lon": 16.497999,
+    "Ele": 29.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Anderstorp Airfield",
+    "gps_code": "ESMP",
+    "freq": "123.420",
+    "Lat": 57.264198,
+    "Lon": 13.5994,
+    "Ele": 154.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kalmar Airport",
+    "gps_code": "ESMQ",
+    "freq": "130.800",
+    "Lat": 56.685501,
+    "Lon": 16.2876,
+    "Ele": 5.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malmö Sturup Airport",
+    "gps_code": "ESMS",
+    "freq": "135.900",
+    "Lat": 55.535564,
+    "Lon": 13.376327,
+    "Ele": 71.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Halmstad Airport",
+    "gps_code": "ESMT",
+    "freq": "130.100",
+    "Lat": 56.69110107421875,
+    "Lon": 12.820199966430664,
+    "Ele": 30.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Möckeln Airfield",
+    "gps_code": "ESMU",
+    "freq": "",
+    "Lat": 56.572514,
+    "Lon": 14.16885,
+    "Ele": 146.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hagshult Air Base",
+    "gps_code": "ESMV",
+    "freq": "132.250",
+    "Lat": 57.292194,
+    "Lon": 14.136792,
+    "Ele": 169.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Växjö Kronoberg Airport",
+    "gps_code": "ESMX",
+    "freq": "118.150",
+    "Lat": 56.92910003662109,
+    "Lon": 14.727999687194824,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Smålandsstenar Smålanda Airfield",
+    "gps_code": "ESMY",
+    "freq": "123.200",
+    "Lat": 57.168598,
+    "Lon": 13.4402,
+    "Ele": 164.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ölanda Airfield",
+    "gps_code": "ESMZ",
+    "freq": "123.650",
+    "Lat": 57.328236,
+    "Lon": 17.050524,
+    "Ele": 8.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hallviken Airfield",
+    "gps_code": "ESNA",
+    "freq": "123.550",
+    "Lat": 63.7383,
+    "Lon": 15.4583,
+    "Ele": 341.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sollefteå/Långsele Airfield",
+    "gps_code": "ESNB",
+    "freq": "",
+    "Lat": 63.1712,
+    "Lon": 16.985201,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hedlanda Airfield",
+    "gps_code": "ESNC",
+    "freq": "",
+    "Lat": 62.410631,
+    "Lon": 13.745699,
+    "Ele": 445.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sveg Airport",
+    "gps_code": "ESND",
+    "freq": "122.200",
+    "Lat": 62.047798,
+    "Lon": 14.4229,
+    "Ele": 359.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Överkalix Airfield",
+    "gps_code": "ESNE",
+    "freq": "",
+    "Lat": 66.529093,
+    "Lon": 22.356319,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gällivare Airport",
+    "gps_code": "ESNG",
+    "freq": "122.100",
+    "Lat": 67.13240051269531,
+    "Lon": 20.814599990844727,
+    "Ele": 313.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jokkmokk Airfield",
+    "gps_code": "ESNJ",
+    "freq": "124.850",
+    "Lat": 66.496201,
+    "Lon": 20.1472,
+    "Ele": 275.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kramfors-Sollefteå Höga Kusten Airport",
+    "gps_code": "ESNK",
+    "freq": "122.150",
+    "Lat": 63.048599,
+    "Lon": 17.7689,
+    "Ele": 10.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lycksele Airport",
+    "gps_code": "ESNL",
+    "freq": "122.225",
+    "Lat": 64.548302,
+    "Lon": 18.7162,
+    "Ele": 214.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Optand Airfield",
+    "gps_code": "ESNM",
+    "freq": "123.550",
+    "Lat": 63.128601,
+    "Lon": 14.8028,
+    "Ele": 376.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sundsvall-Härnösand Airport",
+    "gps_code": "ESNN",
+    "freq": "127.400",
+    "Lat": 62.528099060058594,
+    "Lon": 17.443899154663086,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Örnsköldsvik Airport",
+    "gps_code": "ESNO",
+    "freq": "122.250",
+    "Lat": 63.40829849243164,
+    "Lon": 18.989999771118164,
+    "Ele": 107.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Piteå Airfield",
+    "gps_code": "ESNP",
+    "freq": "123.550",
+    "Lat": 65.3983,
+    "Lon": 21.260799,
+    "Ele": 13.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kiruna Airport",
+    "gps_code": "ESNQ",
+    "freq": "130.150",
+    "Lat": 67.821998596191,
+    "Lon": 20.336799621582,
+    "Ele": 459.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Orsa Airfield",
+    "gps_code": "ESNR",
+    "freq": "123.400",
+    "Lat": 61.189999,
+    "Lon": 14.7126,
+    "Ele": 208.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Skellefteå Airport",
+    "gps_code": "ESNS",
+    "freq": "122.050",
+    "Lat": 64.62480163574219,
+    "Lon": 21.07690048217773,
+    "Ele": 47.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Umeå Airport",
+    "gps_code": "ESNU",
+    "freq": "119.800",
+    "Lat": 63.791801452637,
+    "Lon": 20.282800674438,
+    "Ele": 7.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vilhelmina South Lapland Airport",
+    "gps_code": "ESNV",
+    "freq": "122.550",
+    "Lat": 64.579102,
+    "Lon": 16.833599,
+    "Ele": 347.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arvidsjaur Airport",
+    "gps_code": "ESNX",
+    "freq": "122.730",
+    "Lat": 65.59030151367188,
+    "Lon": 19.28190040588379,
+    "Ele": 379.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Söderhamn Airport",
+    "gps_code": "ESNY",
+    "freq": "135.350",
+    "Lat": 61.261501,
+    "Lon": 17.0991,
+    "Ele": 26.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Åre Östersund Airport",
+    "gps_code": "ESNZ",
+    "freq": "",
+    "Lat": 63.194135,
+    "Lon": 14.500322,
+    "Ele": 375.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Örebro Airport",
+    "gps_code": "ESOE",
+    "freq": "120.275",
+    "Lat": 59.22370147705078,
+    "Lon": 15.038000106811523,
+    "Ele": 57.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hagfors Airport",
+    "gps_code": "ESOH",
+    "freq": "122.225",
+    "Lat": 60.0201,
+    "Lon": 13.5789,
+    "Ele": 144.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Karlstad Airport",
+    "gps_code": "ESOK",
+    "freq": "119.450",
+    "Lat": 59.444698,
+    "Lon": 13.3374,
+    "Ele": 107.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Lemstanas Airfield",
+    "gps_code": "ESOL",
+    "freq": "",
+    "Lat": 60.586597,
+    "Lon": 16.586566,
+    "Ele": 64.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Stockholm Västerås Airport",
+    "gps_code": "ESOW",
+    "freq": "125.950",
+    "Lat": 59.58940124511719,
+    "Lon": 16.63360023498535,
+    "Ele": 6.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Luleå Airport",
+    "gps_code": "ESPA",
+    "freq": "125.450",
+    "Lat": 65.5438,
+    "Lon": 22.122,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vidsel Air Base",
+    "gps_code": "ESPE",
+    "freq": "124.150",
+    "Lat": 65.875298,
+    "Lon": 20.1499,
+    "Ele": 182.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arboga Airfield",
+    "gps_code": "ESQO",
+    "freq": "123.150",
+    "Lat": 59.3866,
+    "Lon": 15.9241,
+    "Ele": 10.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Stockholm-Arlanda Airport",
+    "gps_code": "ESSA",
+    "freq": "123.750",
+    "Lat": 59.64849,
+    "Lon": 17.928829,
+    "Ele": 41.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Stockholm-Bromma Airport",
+    "gps_code": "ESSB",
+    "freq": "119.400",
+    "Lat": 59.354400634765625,
+    "Lon": 17.941699981689453,
+    "Ele": 14.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ekeby Airfield",
+    "gps_code": "ESSC",
+    "freq": "",
+    "Lat": 59.3839,
+    "Lon": 16.4419,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dala Airport",
+    "gps_code": "ESSD",
+    "freq": "127.300",
+    "Lat": 60.422001,
+    "Lon": 15.5152,
+    "Ele": 153.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Skå-Edeby Airfield",
+    "gps_code": "ESSE",
+    "freq": "",
+    "Lat": 59.3451,
+    "Lon": 17.740499,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hultsfred Airport",
+    "gps_code": "ESSF",
+    "freq": "123.550",
+    "Lat": 57.525799,
+    "Lon": 15.8233,
+    "Ele": 111.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ludvika Airfield",
+    "gps_code": "ESSG",
+    "freq": "123.150",
+    "Lat": 60.088299,
+    "Lon": 15.0964,
+    "Ele": 272.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Laxå Airfield",
+    "gps_code": "ESSH",
+    "freq": "",
+    "Lat": 58.978699,
+    "Lon": 14.6662,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Visingsö Airfield",
+    "gps_code": "ESSI",
+    "freq": "123.500",
+    "Lat": 58.0984,
+    "Lon": 14.4026,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gävle Sandviken Airport",
+    "gps_code": "ESSK",
+    "freq": "122.350",
+    "Lat": 60.5933,
+    "Lon": 16.951401,
+    "Ele": 68.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Linköping City Airport",
+    "gps_code": "ESSL",
+    "freq": "118.805",
+    "Lat": 58.4062004089,
+    "Lon": 15.6805000305,
+    "Ele": 52.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Brattforshede Airfield",
+    "gps_code": "ESSM",
+    "freq": "",
+    "Lat": 59.608398,
+    "Lon": 13.9123,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Norrtälje Airfield",
+    "gps_code": "ESSN",
+    "freq": "123.325",
+    "Lat": 59.732592,
+    "Lon": 18.695215,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Norrköping Airport",
+    "gps_code": "ESSP",
+    "freq": "133.350",
+    "Lat": 58.58629989624024,
+    "Lon": 16.250600814819336,
+    "Ele": 9.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Torsby Airport",
+    "gps_code": "ESST",
+    "freq": "122.050",
+    "Lat": 60.1576,
+    "Lon": 12.9913,
+    "Ele": 119.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Eskilstuna Airport",
+    "gps_code": "ESSU",
+    "freq": "126.855",
+    "Lat": 59.351101,
+    "Lon": 16.708401,
+    "Ele": 42.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Visby Airport",
+    "gps_code": "ESSV",
+    "freq": "126.155",
+    "Lat": 57.662799835205,
+    "Lon": 18.346200942993,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Västervik Airport",
+    "gps_code": "ESSW",
+    "freq": "131.615",
+    "Lat": 57.779999,
+    "Lon": 16.5236,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Johannisberg Airfield",
+    "gps_code": "ESSX",
+    "freq": "",
+    "Lat": 59.575802,
+    "Lon": 16.503201,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vängsö Airfield",
+    "gps_code": "ESSZ",
+    "freq": "123.375",
+    "Lat": 59.101101,
+    "Lon": 17.2111,
+    "Ele": 14.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ängelholm-Helsingborg Airport",
+    "gps_code": "ESTA",
+    "freq": "132.450",
+    "Lat": 56.29610061645508,
+    "Lon": 12.847100257873535,
+    "Ele": 20.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fjällbacka Anra Airfield",
+    "gps_code": "ESTF",
+    "freq": "128.625",
+    "Lat": 58.630009,
+    "Lon": 11.314459,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ljungbyhed Airfield",
+    "gps_code": "ESTL",
+    "freq": "129.555",
+    "Lat": 56.082802,
+    "Lon": 13.2125,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Vellinge Airfield",
+    "gps_code": "ESTT",
+    "freq": "123.400",
+    "Lat": 55.391202,
+    "Lon": 13.022103,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Arbrå Airfield",
+    "gps_code": "ESUB",
+    "freq": "",
+    "Lat": 61.512501,
+    "Lon": 16.372499,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Storuman Airport",
+    "gps_code": "ESUD",
+    "freq": "133.800",
+    "Lat": 64.960899,
+    "Lon": 17.6966,
+    "Ele": 278.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Idre Airport",
+    "gps_code": "ESUE",
+    "freq": "",
+    "Lat": 61.869701,
+    "Lon": 12.6894,
+    "Ele": 451.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gargnäs Airfield",
+    "gps_code": "ESUG",
+    "freq": "",
+    "Lat": 65.305298,
+    "Lon": 17.9755,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Myran Airfield",
+    "gps_code": "ESUH",
+    "freq": "",
+    "Lat": 62.632469,
+    "Lon": 17.981701,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mellansel Airfield",
+    "gps_code": "ESUI",
+    "freq": "",
+    "Lat": 63.391806,
+    "Lon": 18.319471,
+    "Ele": 94.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tälje Airfield",
+    "gps_code": "ESUJ",
+    "freq": "",
+    "Lat": 62.5653,
+    "Lon": 15.8347,
+    "Ele": 135.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalixfors Airfield",
+    "gps_code": "ESUK",
+    "freq": "",
+    "Lat": 67.764801,
+    "Lon": 20.2572,
+    "Ele": 472.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ljusdal Airfield",
+    "gps_code": "ESUL",
+    "freq": "",
+    "Lat": 61.817001,
+    "Lon": 16.004299,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mohed Airfield",
+    "gps_code": "ESUM",
+    "freq": "",
+    "Lat": 61.291199,
+    "Lon": 16.8463,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Graftavallen Airfield",
+    "gps_code": "ESUO",
+    "freq": "",
+    "Lat": 63.041698,
+    "Lon": 14.0014,
+    "Ele": 499.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pajala Airport",
+    "gps_code": "ESUP",
+    "freq": "118.250",
+    "Lat": 67.244569,
+    "Lon": 23.074894,
+    "Ele": 165.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ramsele Airfield",
+    "gps_code": "ESUR",
+    "freq": "",
+    "Lat": 63.490299,
+    "Lon": 16.4834,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Åsele Airfield",
+    "gps_code": "ESUS",
+    "freq": "",
+    "Lat": 64.155938,
+    "Lon": 17.285045,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hemavan Airport",
+    "gps_code": "ESUT",
+    "freq": "122.970",
+    "Lat": 65.806099,
+    "Lon": 15.0828,
+    "Ele": 458.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Älvsbyn Airfield",
+    "gps_code": "ESUV",
+    "freq": "",
+    "Lat": 65.645699,
+    "Lon": 21.0611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Edsby Airfield",
+    "gps_code": "ESUY",
+    "freq": "",
+    "Lat": 61.386732,
+    "Lon": 15.833166,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Avesta Airfield",
+    "gps_code": "ESVA",
+    "freq": "",
+    "Lat": 60.180401,
+    "Lon": 16.122801,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bunge Airfield",
+    "gps_code": "ESVB",
+    "freq": "",
+    "Lat": 57.849701,
+    "Lon": 19.035,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gagnef Airfiekld",
+    "gps_code": "ESVG",
+    "freq": "",
+    "Lat": 60.551701,
+    "Lon": 15.0816,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hällefors Airfield",
+    "gps_code": "ESVH",
+    "freq": "",
+    "Lat": 59.867401,
+    "Lon": 14.4239,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Katrineholm Airfield",
+    "gps_code": "ESVK",
+    "freq": "",
+    "Lat": 59.017988,
+    "Lon": 16.221775,
+    "Ele": 45.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Skinnlanda Airfield",
+    "gps_code": "ESVM",
+    "freq": "",
+    "Lat": 60.658798,
+    "Lon": 13.7266,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Köping/Gålby Airfield",
+    "gps_code": "ESVQ",
+    "freq": "",
+    "Lat": 59.528083,
+    "Lon": 15.970064,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Siljansnäs Air Park",
+    "gps_code": "ESVS",
+    "freq": "123.550",
+    "Lat": 60.785099,
+    "Lon": 14.8272,
+    "Ele": 186.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Trosa Troslanda airfield",
+    "gps_code": "SE-0001",
+    "freq": "123.600",
+    "Lat": 58.898617,
+    "Lon": 17.498474,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stegeborg",
+    "gps_code": "SE-0002",
+    "freq": "",
+    "Lat": 58.433696,
+    "Lon": 16.606826,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bollnäs",
+    "gps_code": "SE-0003",
+    "freq": "",
+    "Lat": 61.356201171875,
+    "Lon": 16.328800201416016,
+    "Ele": 82.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Norberg",
+    "gps_code": "SE-0004",
+    "freq": "123.150",
+    "Lat": 60.1071572879,
+    "Lon": 15.9503996372,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Åre / Molanda",
+    "gps_code": "SE-0005",
+    "freq": "123.450",
+    "Lat": 63.3283291729,
+    "Lon": 13.425722122199998,
+    "Ele": 319.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Alvesta Smålanda Airfield",
+    "gps_code": "SE-0006",
+    "freq": "123.600",
+    "Lat": 56.925822,
+    "Lon": 14.542294,
+    "Ele": 137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Staffanstorp Bjällerup Field",
+    "gps_code": "SE-0007",
+    "freq": "",
+    "Lat": 55.658778,
+    "Lon": 13.264961,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kattleberg Airfield",
+    "gps_code": "SE-0008",
+    "freq": "",
+    "Lat": 57.978928,
+    "Lon": 12.143033,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Långtora Airfield",
+    "gps_code": "SE-0009",
+    "freq": "",
+    "Lat": 59.747445,
+    "Lon": 17.145188,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Vallentuna flygfält",
+    "gps_code": "SE-0010",
+    "freq": "",
+    "Lat": 59.541786,
+    "Lon": 18.038661,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Majfält-Ovansjö",
+    "gps_code": "SE-0013",
+    "freq": "",
+    "Lat": 62.235628,
+    "Lon": 17.384825,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ålåsen Airfield",
+    "gps_code": "SE-0014",
+    "freq": "",
+    "Lat": 63.865698,
+    "Lon": 14.608111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Orrlanda Flygfält",
+    "gps_code": "SE-0015",
+    "freq": "",
+    "Lat": 63.0928328,
+    "Lon": 14.4414464,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyholm Airstrip",
+    "gps_code": "SE-0016",
+    "freq": "",
+    "Lat": 64.86937,
+    "Lon": 20.44866,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Frostlanda Airfield",
+    "gps_code": "SE-0017",
+    "freq": "",
+    "Lat": 64.482053,
+    "Lon": 14.104497,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Frölunda Airfield",
+    "gps_code": "SE-0018",
+    "freq": "",
+    "Lat": 59.456951,
+    "Lon": 17.707942,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bänkås Hoppfält",
+    "gps_code": "SE-0020",
+    "freq": "",
+    "Lat": 62.389086,
+    "Lon": 17.452807,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Finnskoga/Backa Airfield",
+    "gps_code": "SE-0021",
+    "freq": "",
+    "Lat": 60.553495,
+    "Lon": 13.102787,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vassunda Private Airfield",
+    "gps_code": "SE-0022",
+    "freq": "",
+    "Lat": 59.721673,
+    "Lon": 17.719996,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baggböle Airstrip",
+    "gps_code": "SE-0023",
+    "freq": "",
+    "Lat": 62.1908112,
+    "Lon": 17.2688212,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Älvdalens flygklubb",
+    "gps_code": "SE-0024",
+    "freq": "",
+    "Lat": 61.213966,
+    "Lon": 14.043191,
+    "Ele": 218.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Flykälen Airfield",
+    "gps_code": "SE-0025",
+    "freq": "",
+    "Lat": 63.867146,
+    "Lon": 15.03912,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Finspångs flygfält",
+    "gps_code": "SE-0026",
+    "freq": "",
+    "Lat": 58.73342,
+    "Lon": 15.603996,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Flygebyns hoppövningsfält",
+    "gps_code": "SE-0027",
+    "freq": "",
+    "Lat": 58.6033945,
+    "Lon": 14.4544131,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Charlottenberg Airstrip",
+    "gps_code": "SE-0028",
+    "freq": "",
+    "Lat": 59.8942235,
+    "Lon": 12.2722539,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dorotea Airfield",
+    "gps_code": "SE-0029",
+    "freq": "",
+    "Lat": 64.265398,
+    "Lon": 16.490822,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Finlanda Airfield",
+    "gps_code": "SE-0030",
+    "freq": "",
+    "Lat": 63.911887,
+    "Lon": 16.322891,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolåsens flygfält",
+    "gps_code": "SE-0031",
+    "freq": "",
+    "Lat": 63.764233,
+    "Lon": 12.909206,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Porjus flygfält",
+    "gps_code": "SE-0032",
+    "freq": "",
+    "Lat": 66.963289,
+    "Lon": 19.833215,
+    "Ele": 390.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Överlanda Airfield",
+    "gps_code": "SE-0035",
+    "freq": "",
+    "Lat": 62.958041,
+    "Lon": 18.047853,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tjautjasjaure Airstrip",
+    "gps_code": "SE-0039",
+    "freq": "",
+    "Lat": 67.3275684,
+    "Lon": 20.7439752,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kokhedsfältet Airstrip",
+    "gps_code": "SE-0040",
+    "freq": "",
+    "Lat": 66.1504889,
+    "Lon": 21.0352497,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pålsträsket Airstrip",
+    "gps_code": "SE-0042",
+    "freq": "",
+    "Lat": 65.639347,
+    "Lon": 21.231589,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vuollerim Airstrip",
+    "gps_code": "SE-0044",
+    "freq": "",
+    "Lat": 66.4344129,
+    "Lon": 20.6340556,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sala flygfält",
+    "gps_code": "SE-0045",
+    "freq": "",
+    "Lat": 59.895125,
+    "Lon": 16.630146,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gimo gräsfält",
+    "gps_code": "SE-0046",
+    "freq": "",
+    "Lat": 60.177022,
+    "Lon": 18.194143,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Åviken Fly Camp",
+    "gps_code": "SE-0047",
+    "freq": "",
+    "Lat": 63.212778,
+    "Lon": 18.749167,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Duvhed flygfält UL",
+    "gps_code": "SE-0048",
+    "freq": "123.200",
+    "Lat": 57.443448,
+    "Lon": 12.164868,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Timmele Airfield",
+    "gps_code": "SE-0049",
+    "freq": "123.650",
+    "Lat": 57.872988,
+    "Lon": 13.430448,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Degerfors Grenlanda Airfield",
+    "gps_code": "SE-0051",
+    "freq": "",
+    "Lat": 59.102878,
+    "Lon": 14.300332,
+    "Ele": 114.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bergs Airstrip",
+    "gps_code": "SE-0052",
+    "freq": "",
+    "Lat": 62.7788937,
+    "Lon": 14.4059394,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hornlanda",
+    "gps_code": "SE-0055",
+    "freq": "",
+    "Lat": 57.866397,
+    "Lon": 15.84486,
+    "Ele": 105.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Stöde / Prästbordet flygfält",
+    "gps_code": "SE-0056",
+    "freq": "",
+    "Lat": 62.408119,
+    "Lon": 16.531705,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lindholmen flygfält",
+    "gps_code": "SE-0057",
+    "freq": "",
+    "Lat": 59.58588,
+    "Lon": 18.161001,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kronobergshed Airfield",
+    "gps_code": "SE-0058",
+    "freq": "",
+    "Lat": 56.974778,
+    "Lon": 14.566527,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ödestugu Glider Field",
+    "gps_code": "SE-0059",
+    "freq": "",
+    "Lat": 57.60187,
+    "Lon": 14.28645,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kvarnhem Flygfält",
+    "gps_code": "SE-0060",
+    "freq": "",
+    "Lat": 55.80065,
+    "Lon": 13.6221,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Åkersberga Airfield",
+    "gps_code": "SE-0061",
+    "freq": "",
+    "Lat": 59.520106,
+    "Lon": 18.239751,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hellby Säteri Private Airstrip",
+    "gps_code": "SE-0062",
+    "freq": "",
+    "Lat": 59.71731,
+    "Lon": 16.62933,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hedemora Flygfält",
+    "gps_code": "SE-0063",
+    "freq": "",
+    "Lat": 60.239545,
+    "Lon": 15.98397,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyby Private Airstrip",
+    "gps_code": "SE-0064",
+    "freq": "",
+    "Lat": 59.87213,
+    "Lon": 16.41971,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stockholm - Hova",
+    "gps_code": "SE-0065",
+    "freq": "",
+    "Lat": 59.674664,
+    "Lon": 17.77854,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Motala flygklubb",
+    "gps_code": "SE-0066",
+    "freq": "",
+    "Lat": 58.49494,
+    "Lon": 15.1024,
+    "Ele": 103.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Örnlanda Airstrip",
+    "gps_code": "SE-0067",
+    "freq": "",
+    "Lat": 60.32916,
+    "Lon": 15.78226,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pirttivuopio ice runway",
+    "gps_code": "SE-0068",
+    "freq": "",
+    "Lat": 67.867556,
+    "Lon": 19.220967,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skeppsdal Airstrip",
+    "gps_code": "SE-0069",
+    "freq": "",
+    "Lat": 59.49633,
+    "Lon": 18.42299,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sticksjö Private Airstrip",
+    "gps_code": "SE-0070",
+    "freq": "",
+    "Lat": 59.31151,
+    "Lon": 15.47868,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bergby Airstrip",
+    "gps_code": "SE-0071",
+    "freq": "",
+    "Lat": 59.76502,
+    "Lon": 18.62201,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bleckåsen Airstirp",
+    "gps_code": "SE-0072",
+    "freq": "",
+    "Lat": 63.387264,
+    "Lon": 13.760569,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Väster Private Airstrip",
+    "gps_code": "SE-0073",
+    "freq": "",
+    "Lat": 55.52905,
+    "Lon": 12.92175,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Muskö Airstrip",
+    "gps_code": "SE-0074",
+    "freq": "",
+    "Lat": 59.00512,
+    "Lon": 18.11521,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ragglanda Airfield",
+    "gps_code": "SE-0076",
+    "freq": "",
+    "Lat": 57.86829,
+    "Lon": 14.338317,
+    "Ele": 146.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tallåsen Airstrip",
+    "gps_code": "SE-0080",
+    "freq": "",
+    "Lat": 62.87396,
+    "Lon": 17.35913,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lagan Private Airstrip",
+    "gps_code": "SE-0082",
+    "freq": "",
+    "Lat": 56.5174,
+    "Lon": 12.97121,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ekeryd - Ekelanda private airstrip",
+    "gps_code": "SE-0083",
+    "freq": "",
+    "Lat": 56.596257,
+    "Lon": 13.490785,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rotnäset Airstrip",
+    "gps_code": "SE-0084",
+    "freq": "",
+    "Lat": 64.45328,
+    "Lon": 15.57484,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hudiksvall Airport",
+    "gps_code": "SE-0088",
+    "freq": "123.200",
+    "Lat": 61.768087,
+    "Lon": 17.080715,
+    "Ele": 28.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Esgrene Field",
+    "gps_code": "SE-0114",
+    "freq": "",
+    "Lat": 58.132092,
+    "Lon": 11.775177,
+    "Ele": 6.1
+  }
+]

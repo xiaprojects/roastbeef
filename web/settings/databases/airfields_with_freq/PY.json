@@ -1,0 +1,758 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Iturbe",
+    "gps_code": "PY-0001",
+    "freq": "",
+    "Lat": -26.063066,
+    "Lon": -56.493378,
+    "Ele": 100.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional de Coronel Oviedo",
+    "gps_code": "PY-0002",
+    "freq": "",
+    "Lat": -25.517347,
+    "Lon": -56.406555,
+    "Ele": 148.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Isla Pucú",
+    "gps_code": "PY-0003",
+    "freq": "",
+    "Lat": -25.298498,
+    "Lon": -56.901884,
+    "Ele": 126.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Hugo Stroessner",
+    "gps_code": "PY-0004",
+    "freq": "",
+    "Lat": -25.40757,
+    "Lon": -56.554098,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Nueva Australia",
+    "gps_code": "PY-0005",
+    "freq": "",
+    "Lat": -25.42,
+    "Lon": -56.57,
+    "Ele": 103.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Guaraní",
+    "gps_code": "PY-0006",
+    "freq": "",
+    "Lat": -21.274458,
+    "Lon": -57.925254,
+    "Ele": 78.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia Cunataí",
+    "gps_code": "PY-0007",
+    "freq": "",
+    "Lat": -21.550106,
+    "Lon": -57.969028,
+    "Ele": 80.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Colonia Carmelo Peralta",
+    "gps_code": "PY-0008",
+    "freq": "",
+    "Lat": -21.681,
+    "Lon": -57.912498,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto La Esperanza",
+    "gps_code": "PY-0009",
+    "freq": "",
+    "Lat": -22.037316,
+    "Lon": -58.012565,
+    "Ele": 77.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Risso",
+    "gps_code": "PY-0010",
+    "freq": "",
+    "Lat": -22.373204,
+    "Lon": -57.81655,
+    "Ele": 81.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Alegre",
+    "gps_code": "PY-0011",
+    "freq": "",
+    "Lat": -22.446919,
+    "Lon": -57.832975,
+    "Ele": 84.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Calera",
+    "gps_code": "PY-0012",
+    "freq": "",
+    "Lat": -22.541753,
+    "Lon": -57.825508,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Max",
+    "gps_code": "PY-0013",
+    "freq": "",
+    "Lat": -22.630302,
+    "Lon": -57.770469,
+    "Ele": 73.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Itapucu",
+    "gps_code": "PY-0014",
+    "freq": "",
+    "Lat": -22.678639,
+    "Lon": -57.909708,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Abente",
+    "gps_code": "PY-0015",
+    "freq": "",
+    "Lat": -22.945422,
+    "Lon": -57.792163,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Boquerón",
+    "gps_code": "PY-0016",
+    "freq": "",
+    "Lat": -23.976944,
+    "Lon": -57.245915,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Michi",
+    "gps_code": "PY-0017",
+    "freq": "",
+    "Lat": -24.135367,
+    "Lon": -57.284914,
+    "Ele": 66.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia Lomas",
+    "gps_code": "PY-0018",
+    "freq": "",
+    "Lat": -24.612863,
+    "Lon": -57.149463,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Villa Rey",
+    "gps_code": "PY-0019",
+    "freq": "",
+    "Lat": -24.688288,
+    "Lon": -57.230937,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Santa Clara",
+    "gps_code": "PY-0020",
+    "freq": "",
+    "Lat": -25.663906,
+    "Lon": -57.664833,
+    "Ele": 63.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia Herradura",
+    "gps_code": "PY-0021",
+    "freq": "",
+    "Lat": -26.493698,
+    "Lon": -58.20547,
+    "Ele": 57.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Jorge Bolf",
+    "gps_code": "PY-0022",
+    "freq": "",
+    "Lat": -27.280865,
+    "Lon": -56.433359,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia Trementina",
+    "gps_code": "PY-0024",
+    "freq": "",
+    "Lat": -22.74078,
+    "Lon": -56.842403,
+    "Ele": 155.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia Coeyu",
+    "gps_code": "PY-0025",
+    "freq": "",
+    "Lat": -23.9363,
+    "Lon": -57.735901,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropista Nº1 de Villa del Rosario",
+    "gps_code": "PY-0027",
+    "freq": "",
+    "Lat": -24.471234,
+    "Lon": -57.154851,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropista Nº2 de Villa del Rosario",
+    "gps_code": "PY-0028",
+    "freq": "",
+    "Lat": -24.4777,
+    "Lon": -57.147968,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropista N°3 de Villa del Rosario",
+    "gps_code": "PY-0029",
+    "freq": "",
+    "Lat": -24.486413,
+    "Lon": -57.102357,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Colonia Volendam",
+    "gps_code": "PY-0030",
+    "freq": "",
+    "Lat": -24.285026,
+    "Lon": -57.012056,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Nueva Germania",
+    "gps_code": "PY-0031",
+    "freq": "",
+    "Lat": -23.908399,
+    "Lon": -56.557038,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Loma Plata",
+    "gps_code": "PY-0032",
+    "freq": "",
+    "Lat": -22.364205,
+    "Lon": -59.838238,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Gnadenheim",
+    "gps_code": "PY-0033",
+    "freq": "",
+    "Lat": -22.369842,
+    "Lon": -59.770861,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de La Victoria",
+    "gps_code": "PY-0034",
+    "freq": "",
+    "Lat": -22.289467,
+    "Lon": -57.931053,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Militar del Parque Nacional Cerro Corá",
+    "gps_code": "PY-0035",
+    "freq": "",
+    "Lat": -22.639541,
+    "Lon": -56.020317,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia El Dorado",
+    "gps_code": "PY-0036",
+    "freq": "",
+    "Lat": -21.370676,
+    "Lon": -61.484652,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo El Retiro",
+    "gps_code": "PY-0037",
+    "freq": "",
+    "Lat": -24.001777,
+    "Lon": -60.342462,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropuerto Nacional de San Juan Bautista",
+    "gps_code": "PY-0038",
+    "freq": "",
+    "Lat": -26.634333,
+    "Lon": -57.105528,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia Buena Vista",
+    "gps_code": "PY-0039",
+    "freq": "",
+    "Lat": -26.563752,
+    "Lon": -57.144935,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de San Miguel",
+    "gps_code": "PY-0040",
+    "freq": "",
+    "Lat": -26.546805,
+    "Lon": -57.101111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Santa María Misiones",
+    "gps_code": "PY-0041",
+    "freq": "",
+    "Lat": -26.781323,
+    "Lon": -56.952095,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Cabaña La Escondida",
+    "gps_code": "PY-0042",
+    "freq": "",
+    "Lat": -26.753208,
+    "Lon": -57.05256,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Mayor Infante Rivarola\"",
+    "gps_code": "PY-0043",
+    "freq": "",
+    "Lat": -21.680442,
+    "Lon": -62.3964,
+    "Ele": 276.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Arrayán",
+    "gps_code": "PY-0069",
+    "freq": "",
+    "Lat": -25.275519,
+    "Lon": -57.413291,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Nueva Asunción\"",
+    "gps_code": "PY-0076",
+    "freq": "",
+    "Lat": -20.517909,
+    "Lon": -62.142795,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Dr. Luis María Argaña\"",
+    "gps_code": "PY-0077",
+    "freq": "",
+    "Lat": -22.029324,
+    "Lon": -60.61899,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"General Adrián Jara\"",
+    "gps_code": "PY-0078",
+    "freq": "",
+    "Lat": -19.540817,
+    "Lon": -59.495138,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Guaraní\"",
+    "gps_code": "PY-0080",
+    "freq": "",
+    "Lat": -25.452952,
+    "Lon": -54.835693,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Yacyretá\"",
+    "gps_code": "PY-0081",
+    "freq": "",
+    "Lat": -27.435916,
+    "Lon": -56.837483,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Ayolas\"",
+    "gps_code": "PY-0082",
+    "freq": "",
+    "Lat": -27.378664,
+    "Lon": -56.857024,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Teniente Amín Ayub González\"",
+    "gps_code": "PY-0083",
+    "freq": "",
+    "Lat": -27.220503,
+    "Lon": -55.83299,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Aviadores del Chaco\"",
+    "gps_code": "PY-0084",
+    "freq": "",
+    "Lat": -26.564336,
+    "Lon": -55.394003,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Silvio Pettirossi\"",
+    "gps_code": "PY-0085",
+    "freq": "",
+    "Lat": -25.257017,
+    "Lon": -57.518595,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Ñu Guasú\"",
+    "gps_code": "PY-0086",
+    "freq": "",
+    "Lat": -25.274209,
+    "Lon": -57.529676,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Mariscal Francisco Solano López\"",
+    "gps_code": "PY-0087",
+    "freq": "",
+    "Lat": -23.439302,
+    "Lon": -57.430772,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo del Aeroclub Altona",
+    "gps_code": "PY-0090",
+    "freq": "",
+    "Lat": -25.375874,
+    "Lon": -55.653325,
+    "Ele": 313.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Leda",
+    "gps_code": "PY-PBT",
+    "freq": "",
+    "Lat": -20.9046,
+    "Lon": -57.927101,
+    "Ele": 79.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto La Victoria",
+    "gps_code": "PY-PCJ",
+    "freq": "",
+    "Lat": -22.289298,
+    "Lon": -57.860484,
+    "Ele": 87.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Pai Quara Airport",
+    "gps_code": "SG67",
+    "freq": "",
+    "Lat": -23.223334,
+    "Lon": -55.946254,
+    "Ele": 217.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Aeropuerto Internacional Silvio Pettirossi",
+    "gps_code": "SGAS",
+    "freq": "119.700",
+    "Lat": -25.240156,
+    "Lon": -57.519227,
+    "Ele": 89.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional Juan de Ayolas",
+    "gps_code": "SGAY",
+    "freq": "",
+    "Lat": -27.378379,
+    "Lon": -56.856791,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Bella Vista Sur",
+    "gps_code": "SGBA",
+    "freq": "",
+    "Lat": -27.052393,
+    "Lon": -55.578026,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahía Negra Airport",
+    "gps_code": "SGBN",
+    "freq": "",
+    "Lat": -20.230777,
+    "Lon": -58.170455,
+    "Ele": 84.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Capitan Bado",
+    "gps_code": "SGCB",
+    "freq": "",
+    "Lat": -23.257493,
+    "Lon": -55.528057,
+    "Ele": 521.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional Tte. Cnel. Carmelo Peralta",
+    "gps_code": "SGCO",
+    "freq": "118.400",
+    "Lat": -23.440334,
+    "Lon": -57.429206,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Curuguaty",
+    "gps_code": "SGCU",
+    "freq": "",
+    "Lat": -24.497675,
+    "Lon": -55.686307,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Caazapá",
+    "gps_code": "SGCZ",
+    "freq": "",
+    "Lat": -26.168958,
+    "Lon": -56.360464,
+    "Ele": 143.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Aeropuerto Internacional Tte. Amín Ayub González",
+    "gps_code": "SGEN",
+    "freq": "",
+    "Lat": -27.227537,
+    "Lon": -55.837584,
+    "Ele": 200.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Aeropuerto Internacional Guaraní",
+    "gps_code": "SGES",
+    "freq": "119.300",
+    "Lat": -25.457186,
+    "Lon": -54.839544,
+    "Ele": 257.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Filadelfia",
+    "gps_code": "SGFI",
+    "freq": "",
+    "Lat": -22.354611,
+    "Lon": -60.053211,
+    "Ele": 128.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional de Salto del Guaira",
+    "gps_code": "SGGR",
+    "freq": "",
+    "Lat": -24.032844,
+    "Lon": -54.35267,
+    "Ele": 301.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional de Itaipú",
+    "gps_code": "SGIB",
+    "freq": "118.500",
+    "Lat": -25.407818,
+    "Lon": -54.619457,
+    "Ele": 232.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo La Paz",
+    "gps_code": "SGLZ",
+    "freq": "",
+    "Lat": -27.00382,
+    "Lon": -55.887119,
+    "Ele": 189.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Aeropuerto Internacional Dr. Luis Maria Argaña",
+    "gps_code": "SGME",
+    "freq": "118.800",
+    "Lat": -22.046499,
+    "Lon": -60.6217,
+    "Ele": 168.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo José María Argaña",
+    "gps_code": "SGMZ",
+    "freq": "",
+    "Lat": -26.839758,
+    "Lon": -55.328915,
+    "Ele": 264.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Fuerte",
+    "gps_code": "SGOL",
+    "freq": "",
+    "Lat": -21.045724,
+    "Lon": -57.882935,
+    "Ele": 82.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropuerto de Pozo Colorado",
+    "gps_code": "SGPC",
+    "freq": "",
+    "Lat": -23.495565,
+    "Lon": -58.788464,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Base de la Fuerza Aérea Paraguaya \"Teniente Pelayo Prats Gill\"",
+    "gps_code": "SGPG",
+    "freq": "",
+    "Lat": -22.559962,
+    "Lon": -61.611972,
+    "Ele": 210.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeródromo Don Carlos Miguel Gimenez",
+    "gps_code": "SGPI",
+    "freq": "",
+    "Lat": -26.881981,
+    "Lon": -58.319067,
+    "Ele": 75.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional Dr. Augusto Roberto Fuster",
+    "gps_code": "SGPJ",
+    "freq": "120.500",
+    "Lat": -22.641427,
+    "Lon": -55.829993,
+    "Ele": 570.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Puerto Pinasco",
+    "gps_code": "SGPO",
+    "freq": "",
+    "Lat": -22.629856,
+    "Lon": -57.838469,
+    "Ele": 72.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Rosario",
+    "gps_code": "SGRO",
+    "freq": "",
+    "Lat": -24.430037,
+    "Lon": -57.12013,
+    "Ele": 71.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropuerto Nacional de San Pedro de Ycuamanindeyu",
+    "gps_code": "SGSP",
+    "freq": "",
+    "Lat": -24.027103,
+    "Lon": -57.02342,
+    "Ele": 82.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropuerto Nacional de Santa Teresa",
+    "gps_code": "SGST",
+    "freq": "130.400",
+    "Lat": -22.622487,
+    "Lon": -56.634393,
+    "Ele": 177.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeropuerto Nacional Doctor Juan Plate",
+    "gps_code": "VMI",
+    "freq": "",
+    "Lat": -22.159371,
+    "Lon": -57.942395,
+    "Ele": 85.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Militar del Comando de Artillería",
+    "gps_code": "Z23Z",
+    "freq": "",
+    "Lat": -25.601998,
+    "Lon": -57.152059,
+    "Ele": 152.4
+  }
+]

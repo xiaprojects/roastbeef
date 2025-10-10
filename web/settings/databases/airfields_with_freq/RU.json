@@ -1,0 +1,8255 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Dalnegorsk Airport",
+    "gps_code": "DHG",
+    "freq": "",
+    "Lat": 44.558748,
+    "Lon": 135.490005,
+    "Ele": 253.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dalnerechensk Airport",
+    "gps_code": "DLR",
+    "freq": "",
+    "Lat": 45.877949,
+    "Lon": 133.735822,
+    "Ele": 82.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Deputatskiy Airport",
+    "gps_code": "DPT",
+    "freq": "",
+    "Lat": 69.392503,
+    "Lon": 139.890012,
+    "Ele": 289.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Levashovo Air Base",
+    "gps_code": "RU-0001",
+    "freq": "",
+    "Lat": 60.0867,
+    "Lon": 30.1933,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Protasovo Regional Airport",
+    "gps_code": "RU-0003",
+    "freq": "",
+    "Lat": 54.493301,
+    "Lon": 39.931702,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arabatuk Air Base",
+    "gps_code": "RU-0006",
+    "freq": "",
+    "Lat": 50.223801,
+    "Lon": 117.098999,
+    "Ele": 694.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bada Air Base",
+    "gps_code": "RU-0008",
+    "freq": "",
+    "Lat": 51.406917,
+    "Lon": 109.900091,
+    "Ele": 762.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Balashov Air Base",
+    "gps_code": "RU-0010",
+    "freq": "",
+    "Lat": 51.533298,
+    "Lon": 43.299999,
+    "Ele": 173.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Borisoglebsk Air Base",
+    "gps_code": "RU-0014",
+    "freq": "",
+    "Lat": 51.366699,
+    "Lon": 42.178299,
+    "Ele": 118.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khotilovo Air Base",
+    "gps_code": "RU-0015",
+    "freq": "",
+    "Lat": 57.654999,
+    "Lon": 34.099998,
+    "Ele": 180.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Lipetsk Air Base",
+    "gps_code": "RU-0016",
+    "freq": "",
+    "Lat": 52.634998,
+    "Lon": 39.445,
+    "Ele": 193.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Buturlinovka Air Base",
+    "gps_code": "RU-0018",
+    "freq": "",
+    "Lat": 50.79221,
+    "Lon": 40.606155,
+    "Ele": 153.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chebenki Air Base",
+    "gps_code": "RU-0019",
+    "freq": "",
+    "Lat": 51.974899,
+    "Lon": 55.549,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Korsakov Pushistyy Aerodrome",
+    "gps_code": "RU-0021",
+    "freq": "",
+    "Lat": 46.616726,
+    "Lon": 142.812395,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chornoye Air Base",
+    "gps_code": "RU-0022",
+    "freq": "",
+    "Lat": 55.75,
+    "Lon": 38.06669998168945,
+    "Ele": 136.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chindant Air Base",
+    "gps_code": "RU-0023",
+    "freq": "",
+    "Lat": 50.396702,
+    "Lon": 116.347,
+    "Ele": 670.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rybnovsk Airport",
+    "gps_code": "RU-0027",
+    "freq": "",
+    "Lat": 53.246007,
+    "Lon": 141.806327,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kaliningrad Chkalovsk Naval Air Base",
+    "gps_code": "RU-0028",
+    "freq": "",
+    "Lat": 54.766602,
+    "Lon": 20.396999,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kansk West Airport",
+    "gps_code": "RU-0029",
+    "freq": "",
+    "Lat": 56.20658493041992,
+    "Lon": 95.63624572753906,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Plestsy Air Base",
+    "gps_code": "RU-0033",
+    "freq": "",
+    "Lat": 62.716702,
+    "Lon": 40.4883,
+    "Ele": 130.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Verkhnyaya Toyma Airport",
+    "gps_code": "RU-0034",
+    "freq": "",
+    "Lat": 62.239632,
+    "Lon": 45.019784,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Irkutsk Northwest Airport",
+    "gps_code": "RU-0036",
+    "freq": "",
+    "Lat": 52.368301,
+    "Lon": 104.182999,
+    "Ele": 448.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaliningrad Devau Airport",
+    "gps_code": "RU-0037",
+    "freq": "",
+    "Lat": 54.725128173828125,
+    "Lon": 20.573894500732425,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Syktyvkar Southwest",
+    "gps_code": "RU-0040",
+    "freq": "",
+    "Lat": 61.586666,
+    "Lon": 50.52,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Istomino Airfield",
+    "gps_code": "RU-0042",
+    "freq": "",
+    "Lat": 56.521719,
+    "Lon": 43.480724,
+    "Ele": 77.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mius Airport",
+    "gps_code": "RU-0043",
+    "freq": "",
+    "Lat": 54.958332,
+    "Lon": 43.311668,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasnovishersk Airport",
+    "gps_code": "RU-0044",
+    "freq": "",
+    "Lat": 60.4106330871582,
+    "Lon": 57.13611602783203,
+    "Ele": 167.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Menzelinsk Airport",
+    "gps_code": "RU-0048",
+    "freq": "",
+    "Lat": 55.720001,
+    "Lon": 53.060001,
+    "Ele": 91.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yamburg Airport",
+    "gps_code": "RU-0050",
+    "freq": "",
+    "Lat": 67.986664,
+    "Lon": 75.099998,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyren Airport",
+    "gps_code": "RU-0054",
+    "freq": "",
+    "Lat": 51.678089,
+    "Lon": 102.156548,
+    "Ele": 698.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taksimo Airport",
+    "gps_code": "RU-0056",
+    "freq": "",
+    "Lat": 56.361668,
+    "Lon": 114.93,
+    "Ele": 498.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tasayevo Airport",
+    "gps_code": "RU-0058",
+    "freq": "",
+    "Lat": 57.174999,
+    "Lon": 94.889999,
+    "Ele": 91.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chernyakhovsk Naval Air Base",
+    "gps_code": "RU-0060",
+    "freq": "",
+    "Lat": 54.601665,
+    "Lon": 21.781668,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalinovskaya Airfield",
+    "gps_code": "RU-0062",
+    "freq": "",
+    "Lat": 43.59999847412109,
+    "Lon": 45.52999877929688,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ostrov Naval Air Base",
+    "gps_code": "RU-0064",
+    "freq": "",
+    "Lat": 57.299999,
+    "Lon": 28.4333,
+    "Ele": 67.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pribylovo Naval Air Base",
+    "gps_code": "RU-0065",
+    "freq": "",
+    "Lat": 60.458332,
+    "Lon": 28.746668,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bychye Field",
+    "gps_code": "RU-0068",
+    "freq": "",
+    "Lat": 60.014599,
+    "Lon": 29.702801,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kummolovo Airfield",
+    "gps_code": "RU-0069",
+    "freq": "",
+    "Lat": 59.65444564819336,
+    "Lon": 28.994722366333008,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manushkino Airfield",
+    "gps_code": "RU-0070",
+    "freq": "",
+    "Lat": 59.8718986511,
+    "Lon": 30.802799224900003,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuznetsovo Airfield",
+    "gps_code": "RU-0071",
+    "freq": "",
+    "Lat": 55.961765,
+    "Lon": 93.011971,
+    "Ele": 270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorskaya Airfield",
+    "gps_code": "RU-0072",
+    "freq": "",
+    "Lat": 60.03329849243164,
+    "Lon": 30.01499938964844,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gostilitsy Airfield",
+    "gps_code": "RU-0073",
+    "freq": "",
+    "Lat": 59.7267,
+    "Lon": 29.6395,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Borki Airfield",
+    "gps_code": "RU-0074",
+    "freq": "",
+    "Lat": 58.371133,
+    "Lon": 31.043243,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Korpikyulya Airfield",
+    "gps_code": "RU-0075",
+    "freq": "",
+    "Lat": 59.60499954223633,
+    "Lon": 30.272300720214844,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sivoritsy Airfield",
+    "gps_code": "RU-0077",
+    "freq": "",
+    "Lat": 59.476156,
+    "Lon": 30.001545,
+    "Ele": 113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuznetsovo Airfield",
+    "gps_code": "RU-0079",
+    "freq": "",
+    "Lat": 59.24520111083984,
+    "Lon": 29.945199966430664,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Murmashi Airfield",
+    "gps_code": "RU-0080",
+    "freq": "",
+    "Lat": 68.8067,
+    "Lon": 32.8077,
+    "Ele": 74.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolchary Airport",
+    "gps_code": "RU-0082",
+    "freq": "",
+    "Lat": 59.821293,
+    "Lon": 68.829631,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Verkhnyaya Zolotitsa Airfield",
+    "gps_code": "RU-0083",
+    "freq": "",
+    "Lat": 65.68571,
+    "Lon": 40.36182,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vozhgora Airport",
+    "gps_code": "RU-0084",
+    "freq": "",
+    "Lat": 64.539597,
+    "Lon": 48.484901,
+    "Ele": 90.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolgoshchelye Airfield",
+    "gps_code": "RU-0085",
+    "freq": "",
+    "Lat": 66.053492,
+    "Lon": 43.424625,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Indiga Airport",
+    "gps_code": "RU-0087",
+    "freq": "",
+    "Lat": 67.645419,
+    "Lon": 49.048749,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krymsk Air Base",
+    "gps_code": "RU-0089",
+    "freq": "",
+    "Lat": 44.962905,
+    "Lon": 37.999071,
+    "Ele": 20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krasnodar Central Air Base",
+    "gps_code": "RU-0090",
+    "freq": "",
+    "Lat": 45.082429,
+    "Lon": 38.944312,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sasovo Airfield",
+    "gps_code": "RU-0093",
+    "freq": "",
+    "Lat": 54.356106,
+    "Lon": 41.983345,
+    "Ele": 111.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Buguruslan Glavny Airfield",
+    "gps_code": "RU-0094",
+    "freq": "",
+    "Lat": 53.61800003049999,
+    "Lon": 52.4440002441,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Troekurovka Air Base",
+    "gps_code": "RU-0095",
+    "freq": "",
+    "Lat": 53.225454,
+    "Lon": 48.549725,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Oktyabrskiy Airfield",
+    "gps_code": "RU-0097",
+    "freq": "",
+    "Lat": 44.64500045776367,
+    "Lon": 40.22200012207031,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aleksandrovskoye Airport",
+    "gps_code": "RU-0099",
+    "freq": "",
+    "Lat": 60.445636,
+    "Lon": 77.837069,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ashuluk Airfield",
+    "gps_code": "RU-0101",
+    "freq": "",
+    "Lat": 47.42257,
+    "Lon": 47.92717,
+    "Ele": -20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Azov Airfield",
+    "gps_code": "RU-0103",
+    "freq": "",
+    "Lat": 47.0846,
+    "Lon": 39.406169,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Barabinsk Airport",
+    "gps_code": "RU-0104",
+    "freq": "",
+    "Lat": 55.36000061035156,
+    "Lon": 78.30000305175781,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barguzin Airport",
+    "gps_code": "RU-0105",
+    "freq": "",
+    "Lat": 53.587003,
+    "Lon": 109.699997,
+    "Ele": 483.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Basy Airfield",
+    "gps_code": "RU-0106",
+    "freq": "",
+    "Lat": 46.214443,
+    "Lon": 46.945971,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Berdsk Airfield",
+    "gps_code": "RU-0108",
+    "freq": "",
+    "Lat": 54.73500061035156,
+    "Lon": 83.09500122070312,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "ObGES Airfield",
+    "gps_code": "RU-0109",
+    "freq": "",
+    "Lat": 54.874000549316406,
+    "Lon": 82.98300170898438,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mochische Airfield",
+    "gps_code": "RU-0110",
+    "freq": "118.000",
+    "Lat": 55.168999,
+    "Lon": 83.142998,
+    "Ele": 218.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Yevsino Airfield",
+    "gps_code": "RU-0112",
+    "freq": "",
+    "Lat": 54.4070014954,
+    "Lon": 83.24199676510001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamen-na-Obi Air Base",
+    "gps_code": "RU-0113",
+    "freq": "",
+    "Lat": 53.792999,
+    "Lon": 81.150002,
+    "Ele": 155.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Panfilovo Airport",
+    "gps_code": "RU-0114",
+    "freq": "",
+    "Lat": 53.124276,
+    "Lon": 83.374341,
+    "Ele": 228.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Slavgorod North Air Base",
+    "gps_code": "RU-0115",
+    "freq": "",
+    "Lat": 53.051998,
+    "Lon": 78.639999,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Severnoye Airport",
+    "gps_code": "RU-0116",
+    "freq": "",
+    "Lat": 56.3349990845,
+    "Lon": 78.3550033569,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Klyuchi Airfield",
+    "gps_code": "RU-0117",
+    "freq": "",
+    "Lat": 52.26499938964844,
+    "Lon": 79.2020034790039,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chistoozernoe Air Base",
+    "gps_code": "RU-0118",
+    "freq": "",
+    "Lat": 54.659,
+    "Lon": 76.537003,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ishim Airfield",
+    "gps_code": "RU-0120",
+    "freq": "",
+    "Lat": 56.08599853515625,
+    "Lon": 69.4530029296875,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Verkhneimbatsk Airport",
+    "gps_code": "RU-0121",
+    "freq": "",
+    "Lat": 63.156939,
+    "Lon": 87.972736,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yalutorovsk Airfield",
+    "gps_code": "RU-0122",
+    "freq": "",
+    "Lat": 56.66699981689453,
+    "Lon": 66.25800323486328,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Birobidzhan Yuzhniy Airfield",
+    "gps_code": "RU-0123",
+    "freq": "",
+    "Lat": 48.583557,
+    "Lon": 133.048811,
+    "Ele": 66.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bobrovka Air Base",
+    "gps_code": "RU-0125",
+    "freq": "",
+    "Lat": 53.145,
+    "Lon": 50.709999,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Borzya Zapadnaya Airfield",
+    "gps_code": "RU-0126",
+    "freq": "",
+    "Lat": 50.354,
+    "Lon": 116.260002,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Budyonnovsk Air Base",
+    "gps_code": "RU-0128",
+    "freq": "",
+    "Lat": 44.830002,
+    "Lon": 44.013,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Buzuluk Airport",
+    "gps_code": "RU-0129",
+    "freq": "",
+    "Lat": 52.8129997253418,
+    "Lon": 52.22200012207031,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chernigovka Air Base",
+    "gps_code": "RU-0132",
+    "freq": "",
+    "Lat": 44.32239,
+    "Lon": 132.545289,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kashtak Airfield",
+    "gps_code": "RU-0133",
+    "freq": "",
+    "Lat": 52.110933,
+    "Lon": 113.49698,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Esso Airport",
+    "gps_code": "RU-0135",
+    "freq": "",
+    "Lat": 55.938344,
+    "Lon": 158.710192,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Galyonki Air Base",
+    "gps_code": "RU-0136",
+    "freq": "",
+    "Lat": 44.095001,
+    "Lon": 131.800003,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gazimurskiy Zavod Airport",
+    "gps_code": "RU-0137",
+    "freq": "",
+    "Lat": 51.547001,
+    "Lon": 118.370003,
+    "Ele": 615.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Goryachinsk Airport",
+    "gps_code": "RU-0139",
+    "freq": "",
+    "Lat": 53.01499938964844,
+    "Lon": 108.3270034790039,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gryazi Airfield",
+    "gps_code": "RU-0140",
+    "freq": "",
+    "Lat": 52.43299865722656,
+    "Lon": 39.900001525878906,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Imeni Poliny Osipenko Airport",
+    "gps_code": "RU-0142",
+    "freq": "",
+    "Lat": 52.43999862670898,
+    "Lon": 136.4739990234375,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Froly Airfield",
+    "gps_code": "RU-0146",
+    "freq": "",
+    "Lat": 57.901598,
+    "Lon": 56.243678,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kurkachi Airfield",
+    "gps_code": "RU-0147",
+    "freq": "",
+    "Lat": 55.97999954223633,
+    "Lon": 49.58100128173828,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maikhe Airfield",
+    "gps_code": "RU-0148",
+    "freq": "",
+    "Lat": 43.423353,
+    "Lon": 132.422864,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Uglovaya Air Base",
+    "gps_code": "RU-0149",
+    "freq": "",
+    "Lat": 43.347977,
+    "Lon": 132.058755,
+    "Ele": 12.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mozdok Air Base",
+    "gps_code": "RU-0152",
+    "freq": "",
+    "Lat": 43.78499984741211,
+    "Lon": 44.59999847412109,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Seltso Airfield",
+    "gps_code": "RU-0155",
+    "freq": "",
+    "Lat": 59.617443,
+    "Lon": 29.542865,
+    "Ele": 145.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Solnechniy Airfield",
+    "gps_code": "RU-0156",
+    "freq": "",
+    "Lat": 56.108001708984375,
+    "Lon": 92.93699645996094,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manskiy Airfield",
+    "gps_code": "RU-0157",
+    "freq": "",
+    "Lat": 55.76300048828125,
+    "Lon": 93.7770004272461,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Severskaya Airfield",
+    "gps_code": "RU-0158",
+    "freq": "",
+    "Lat": 44.85499954223633,
+    "Lon": 38.63999938964844,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maksimkin Yar Airport",
+    "gps_code": "RU-0162",
+    "freq": "",
+    "Lat": 58.68242645263672,
+    "Lon": 86.82374572753906,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tikhoretsk Air Base",
+    "gps_code": "RU-0164",
+    "freq": "",
+    "Lat": 45.879002,
+    "Lon": 40.105,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Agoy Airfield",
+    "gps_code": "RU-0165",
+    "freq": "",
+    "Lat": 44.138929,
+    "Lon": 39.028943,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mozhga Airport",
+    "gps_code": "RU-0167",
+    "freq": "",
+    "Lat": 56.42380142211914,
+    "Lon": 52.27870178222656,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarmany Airport",
+    "gps_code": "RU-0168",
+    "freq": "",
+    "Lat": 55.257999420166016,
+    "Lon": 52.573001861572266,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Byngi Airfield",
+    "gps_code": "RU-0169",
+    "freq": "",
+    "Lat": 57.57500076293945,
+    "Lon": 60.209999084472656,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baltym Airfield",
+    "gps_code": "RU-0170",
+    "freq": "",
+    "Lat": 57.10900115966797,
+    "Lon": 60.60699844360352,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Troitsk Air Base",
+    "gps_code": "RU-0171",
+    "freq": "",
+    "Lat": 54.110001,
+    "Lon": 61.535,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gudron Airfield",
+    "gps_code": "RU-0172",
+    "freq": "",
+    "Lat": 51.210999,
+    "Lon": 58.682999,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Georgiyevka Airfield",
+    "gps_code": "RU-0173",
+    "freq": "",
+    "Lat": 53.28499984741211,
+    "Lon": 51.03099822998047,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chegdomyn Airport",
+    "gps_code": "RU-0182",
+    "freq": "",
+    "Lat": 51.136162,
+    "Lon": 132.941573,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuryevskoye Airfield",
+    "gps_code": "RU-0184",
+    "freq": "129.100",
+    "Lat": 56.779999,
+    "Lon": 36.285,
+    "Ele": 121.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marino Airstrip",
+    "gps_code": "RU-0185",
+    "freq": "",
+    "Lat": 56.6339988708,
+    "Lon": 36.8860015869,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kostomuksha Airfield",
+    "gps_code": "RU-0189",
+    "freq": "",
+    "Lat": 64.617996,
+    "Lon": 30.687,
+    "Ele": 207.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kinel-Cherkassy Air Base",
+    "gps_code": "RU-0195",
+    "freq": "128.500",
+    "Lat": 53.46500015258789,
+    "Lon": 51.560001373291016,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tomtor Airport",
+    "gps_code": "RU-0196",
+    "freq": "",
+    "Lat": 63.243,
+    "Lon": 143.173004,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Solnechniy Airport",
+    "gps_code": "RU-0198",
+    "freq": "",
+    "Lat": 60.256935,
+    "Lon": 137.512608,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dzhebariki-Khaya Airport",
+    "gps_code": "RU-0199",
+    "freq": "",
+    "Lat": 62.18999862670898,
+    "Lon": 135.86500549316406,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karachikha Airfield",
+    "gps_code": "RU-0202",
+    "freq": "",
+    "Lat": 57.650002,
+    "Lon": 39.759998,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koyda Airstrip",
+    "gps_code": "RU-0203",
+    "freq": "",
+    "Lat": 66.377998,
+    "Lon": 42.557999,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kanevka Airstrip",
+    "gps_code": "RU-0204",
+    "freq": "",
+    "Lat": 67.121002,
+    "Lon": 39.716999,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sosnovka Airstrip",
+    "gps_code": "RU-0205",
+    "freq": "",
+    "Lat": 66.503998,
+    "Lon": 40.577999,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aginskoye Airport",
+    "gps_code": "RU-0210",
+    "freq": "",
+    "Lat": 55.26599884033203,
+    "Lon": 94.86000061035156,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taganrog Tsentralny Air Base",
+    "gps_code": "RU-0211",
+    "freq": "124.000",
+    "Lat": 47.24645,
+    "Lon": 38.8403,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arsenyev Sport Airfield",
+    "gps_code": "RU-0212",
+    "freq": "",
+    "Lat": 44.142367,
+    "Lon": 133.272228,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vokhma Airport",
+    "gps_code": "RU-0216",
+    "freq": "",
+    "Lat": 58.91699981689453,
+    "Lon": 46.72700119018555,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sormovo Airfield",
+    "gps_code": "RU-0217",
+    "freq": "",
+    "Lat": 56.31999969482422,
+    "Lon": 43.79999923706055,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolshoye Gryzlovo Airfield",
+    "gps_code": "RU-0218",
+    "freq": "124.100",
+    "Lat": 54.785,
+    "Lon": 37.645,
+    "Ele": 242.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Drakino Airfield",
+    "gps_code": "RU-0219",
+    "freq": "",
+    "Lat": 54.873,
+    "Lon": 37.267,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volosovo Airfield",
+    "gps_code": "RU-0220",
+    "freq": "",
+    "Lat": 55.068,
+    "Lon": 37.454,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pakhomovo Airfield",
+    "gps_code": "RU-0224",
+    "freq": "",
+    "Lat": 54.625,
+    "Lon": 37.575,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Korobcheyevo Airfield",
+    "gps_code": "RU-0226",
+    "freq": "",
+    "Lat": 55.092666,
+    "Lon": 38.923033,
+    "Ele": 123.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rydoma Airfield",
+    "gps_code": "RU-0228",
+    "freq": "",
+    "Lat": 54.260288,
+    "Lon": 37.256187,
+    "Ele": 205.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Myasnovo Airfield",
+    "gps_code": "RU-0229",
+    "freq": "",
+    "Lat": 54.213931,
+    "Lon": 37.553004,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vatulino Airfield",
+    "gps_code": "RU-0231",
+    "freq": "125.550",
+    "Lat": 55.661964,
+    "Lon": 36.139039,
+    "Ele": 210.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bezhitsa Airfield",
+    "gps_code": "RU-0232",
+    "freq": "",
+    "Lat": 53.337,
+    "Lon": 34.233,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Akhty Airfield",
+    "gps_code": "RU-0235",
+    "freq": "",
+    "Lat": 41.4744544227,
+    "Lon": 47.7015209198,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vyazma Zapadny Airstrip",
+    "gps_code": "RU-0236",
+    "freq": "",
+    "Lat": 55.2035614169,
+    "Lon": 34.2527103424,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Starodub Airfield",
+    "gps_code": "RU-0239",
+    "freq": "",
+    "Lat": 52.571,
+    "Lon": 32.797,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Seshcha Air Base",
+    "gps_code": "RU-0240",
+    "freq": "",
+    "Lat": 53.715,
+    "Lon": 33.34,
+    "Ele": 210.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rybinsk Yuzhny Airfield",
+    "gps_code": "RU-0241",
+    "freq": "",
+    "Lat": 58.0,
+    "Lon": 38.84,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirzhach Airfield",
+    "gps_code": "RU-0242",
+    "freq": "",
+    "Lat": 56.157,
+    "Lon": 38.83,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ivanovo Yasyunikha Airfield",
+    "gps_code": "RU-0243",
+    "freq": "",
+    "Lat": 56.964,
+    "Lon": 41.071,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikitino Airfield",
+    "gps_code": "RU-0245",
+    "freq": "",
+    "Lat": 56.806,
+    "Lon": 37.69,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolchugino Airfield",
+    "gps_code": "RU-0246",
+    "freq": "",
+    "Lat": 56.282,
+    "Lon": 39.473,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alferyevo Airfield",
+    "gps_code": "RU-0247",
+    "freq": "",
+    "Lat": 56.1,
+    "Lon": 35.875,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yegoryevsk Airfield",
+    "gps_code": "RU-0248",
+    "freq": "",
+    "Lat": 55.459,
+    "Lon": 39.037,
+    "Ele": 131.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Vyazma Air Base",
+    "gps_code": "RU-0257",
+    "freq": "",
+    "Lat": 55.148322,
+    "Lon": 34.382915,
+    "Ele": 242.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oyok Airfield",
+    "gps_code": "RU-0276",
+    "freq": "",
+    "Lat": 52.551,
+    "Lon": 104.45,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bely Klyuch Airfield",
+    "gps_code": "RU-0281",
+    "freq": "",
+    "Lat": 54.1965,
+    "Lon": 48.321,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Millerovo Air Base",
+    "gps_code": "RU-0282",
+    "freq": "",
+    "Lat": 48.955177,
+    "Lon": 40.296356,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bogorodsk Airfield",
+    "gps_code": "RU-0284",
+    "freq": "",
+    "Lat": 56.121,
+    "Lon": 43.545,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Primorsko-Akhtarsk Air Base",
+    "gps_code": "RU-0285",
+    "freq": "",
+    "Lat": 46.059,
+    "Lon": 38.24,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Korenovsk Air Base",
+    "gps_code": "RU-0287",
+    "freq": "",
+    "Lat": 45.447,
+    "Lon": 39.424,
+    "Ele": 52.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kushchyovskaya Air Base",
+    "gps_code": "RU-0288",
+    "freq": "",
+    "Lat": 46.537,
+    "Lon": 39.548,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Goreloye Airfield",
+    "gps_code": "RU-0289",
+    "freq": "",
+    "Lat": 52.957,
+    "Lon": 41.469,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Udskoye Airport",
+    "gps_code": "RU-0294",
+    "freq": "",
+    "Lat": 54.5217291038,
+    "Lon": 134.423046112,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pereyaslavka-2 Air Base",
+    "gps_code": "RU-0297",
+    "freq": "",
+    "Lat": 47.996987,
+    "Lon": 135.088182,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marinovka Air Base",
+    "gps_code": "RU-0298",
+    "freq": "",
+    "Lat": 48.637,
+    "Lon": 43.789,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Varfolomeyevka Air Base",
+    "gps_code": "RU-0299",
+    "freq": "",
+    "Lat": 44.261794,
+    "Lon": 133.411701,
+    "Ele": 147.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Privolzhskiy Air Base",
+    "gps_code": "RU-0303",
+    "freq": "",
+    "Lat": 46.395726,
+    "Lon": 47.887688,
+    "Ele": -20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kapustin Yar Airfield",
+    "gps_code": "RU-0304",
+    "freq": "",
+    "Lat": 48.667,
+    "Lon": 45.732,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Srednyaya Akhtuba Airfield",
+    "gps_code": "RU-0305",
+    "freq": "",
+    "Lat": 48.7279023823,
+    "Lon": 44.8650741577,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beketovka Air Base",
+    "gps_code": "RU-0306",
+    "freq": "",
+    "Lat": 48.551003,
+    "Lon": 44.369,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kotelnikovo Air Base",
+    "gps_code": "RU-0307",
+    "freq": "",
+    "Lat": 47.635,
+    "Lon": 43.095,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Romanovskaya Airfield",
+    "gps_code": "RU-0308",
+    "freq": "",
+    "Lat": 47.530133,
+    "Lon": 42.03,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kholodnogorskiy Airfield",
+    "gps_code": "RU-0309",
+    "freq": "",
+    "Lat": 44.983,
+    "Lon": 42.118,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Belaya Kalitva Airfield",
+    "gps_code": "RU-0312",
+    "freq": "",
+    "Lat": 48.217001,
+    "Lon": 40.82,
+    "Ele": 144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Zernograd Air Base",
+    "gps_code": "RU-0313",
+    "freq": "",
+    "Lat": 46.835,
+    "Lon": 40.38,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dubki Airfield",
+    "gps_code": "RU-0314",
+    "freq": "",
+    "Lat": 51.647,
+    "Lon": 46.059,
+    "Ele": 130.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zabelskiy Airfield",
+    "gps_code": "RU-0315",
+    "freq": "",
+    "Lat": 54.7978028607,
+    "Lon": 55.9420824051,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Loginovo Airfield",
+    "gps_code": "RU-0316",
+    "freq": "",
+    "Lat": 56.64745040139999,
+    "Lon": 61.3502311707,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rozhdestveno Airfield",
+    "gps_code": "RU-0317",
+    "freq": "",
+    "Lat": 53.25,
+    "Lon": 50.053,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sokol Air Base",
+    "gps_code": "RU-0318",
+    "freq": "",
+    "Lat": 51.284,
+    "Lon": 58.605,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kupino Air Base",
+    "gps_code": "RU-0319",
+    "freq": "",
+    "Lat": 54.352,
+    "Lon": 77.354,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Usman Airfield",
+    "gps_code": "RU-0323",
+    "freq": "",
+    "Lat": 52.025,
+    "Lon": 39.675,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ryshkovo Airfield",
+    "gps_code": "RU-0325",
+    "freq": "",
+    "Lat": 51.6561578589,
+    "Lon": 36.1818408966,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vozdvizhenka Air Base",
+    "gps_code": "RU-0327",
+    "freq": "",
+    "Lat": 43.907501,
+    "Lon": 131.925008,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Khorol Air Base",
+    "gps_code": "RU-0329",
+    "freq": "",
+    "Lat": 44.449,
+    "Lon": 132.124,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novonezhino Airfield",
+    "gps_code": "RU-0332",
+    "freq": "",
+    "Lat": 43.21875,
+    "Lon": 132.587198,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novorossiya Airfield",
+    "gps_code": "RU-0333",
+    "freq": "",
+    "Lat": 43.347,
+    "Lon": 132.557,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lesnoy Airfield",
+    "gps_code": "RU-0335",
+    "freq": "",
+    "Lat": 53.251722,
+    "Lon": 83.954945,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Charyshskoye Airfield",
+    "gps_code": "RU-0336",
+    "freq": "",
+    "Lat": 51.402449,
+    "Lon": 83.526096,
+    "Ele": 416.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ubinskoye Airport",
+    "gps_code": "RU-0337",
+    "freq": "",
+    "Lat": 55.3166,
+    "Lon": 79.6666,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yurt-Ora Airstrip",
+    "gps_code": "RU-0338",
+    "freq": "",
+    "Lat": 55.4501751626,
+    "Lon": 82.91646838190002,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kemerovo Severny Airport",
+    "gps_code": "RU-0341",
+    "freq": "",
+    "Lat": 55.3327207334,
+    "Lon": 86.04554414750001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuzhnaya Airfield",
+    "gps_code": "RU-0342",
+    "freq": "",
+    "Lat": 54.654718956,
+    "Lon": 83.07869911190001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Iskitim Airfield",
+    "gps_code": "RU-0343",
+    "freq": "",
+    "Lat": 54.6,
+    "Lon": 83.3,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nazarovo Airport",
+    "gps_code": "RU-0345",
+    "freq": "",
+    "Lat": 55.972549,
+    "Lon": 90.490179,
+    "Ele": 269.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Maryanovka Airfield",
+    "gps_code": "RU-0347",
+    "freq": "",
+    "Lat": 54.9725397836,
+    "Lon": 72.64649391169999,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasnoozyorsk Airport",
+    "gps_code": "RU-0348",
+    "freq": "",
+    "Lat": 53.992785208,
+    "Lon": 79.3133926392,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Voskresensk Airstrip",
+    "gps_code": "RU-0359",
+    "freq": "",
+    "Lat": 55.3072155811,
+    "Lon": 38.5956573486,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Burny Airfield",
+    "gps_code": "RU-0361",
+    "freq": "",
+    "Lat": 60.61188,
+    "Lon": 30.474349,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolshoy Lutsk Airstrip",
+    "gps_code": "RU-0362",
+    "freq": "",
+    "Lat": 59.4120340638,
+    "Lon": 28.577284812900004,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Novinki Airfield",
+    "gps_code": "RU-0365",
+    "freq": "",
+    "Lat": 54.978557,
+    "Lon": 37.657439,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beloomut Airfield",
+    "gps_code": "RU-0367",
+    "freq": "118.850",
+    "Lat": 54.9521,
+    "Lon": 39.296583,
+    "Ele": 98.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Seltsy Airfield",
+    "gps_code": "RU-0368",
+    "freq": "",
+    "Lat": 54.9237,
+    "Lon": 39.6392,
+    "Ele": 110.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rostov-on-Don Central Air Base",
+    "gps_code": "RU-0372",
+    "freq": "",
+    "Lat": 47.277386,
+    "Lon": 39.635556,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Monino Airfield",
+    "gps_code": "RU-0375",
+    "freq": "",
+    "Lat": 55.836700439453125,
+    "Lon": 38.16999816894531,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalininskiy Airfield",
+    "gps_code": "RU-0376",
+    "freq": "",
+    "Lat": 44.8582,
+    "Lon": 44.1829,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makhachkala-1 Airfield",
+    "gps_code": "RU-0377",
+    "freq": "",
+    "Lat": 43.0126495066,
+    "Lon": 47.4357461929,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khunzakh Alart Airport",
+    "gps_code": "RU-0378",
+    "freq": "",
+    "Lat": 42.570339,
+    "Lon": 46.729059,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Akhtubinsk Air Base",
+    "gps_code": "RU-0380",
+    "freq": "",
+    "Lat": 48.3085,
+    "Lon": 46.2365,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Osypnoy Bugor Airfield",
+    "gps_code": "RU-0381",
+    "freq": "",
+    "Lat": 46.2871581029,
+    "Lon": 48.0611729622,
+    "Ele": -21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tri Protoka Airfield",
+    "gps_code": "RU-0382",
+    "freq": "",
+    "Lat": 46.326142,
+    "Lon": 48.15254,
+    "Ele": -21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuznetsk Airport",
+    "gps_code": "RU-0383",
+    "freq": "",
+    "Lat": 53.098095652,
+    "Lon": 46.5904426575,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volsk Airfield",
+    "gps_code": "RU-0385",
+    "freq": "",
+    "Lat": 52.0303435013,
+    "Lon": 47.322063446,
+    "Ele": 166.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Novosyolki Airport",
+    "gps_code": "RU-0386",
+    "freq": "",
+    "Lat": 53.9099000326,
+    "Lon": 49.7357082367,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Golovino Airport",
+    "gps_code": "RU-0387",
+    "freq": "",
+    "Lat": 56.3665099612,
+    "Lon": 84.7375488281,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vikhrevo Airfield",
+    "gps_code": "RU-0391",
+    "freq": "",
+    "Lat": 56.240187,
+    "Lon": 38.159867,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasny Yar Airport",
+    "gps_code": "RU-0393",
+    "freq": "",
+    "Lat": 53.508635,
+    "Lon": 50.439348,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Okunev Nos Airport",
+    "gps_code": "RU-0396",
+    "freq": "",
+    "Lat": 66.2877128016,
+    "Lon": 52.5848579407,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Korzhevskiy Airstrip",
+    "gps_code": "RU-0397",
+    "freq": "",
+    "Lat": 45.2146965624,
+    "Lon": 37.74410963059999,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiyevskoye Airstrip",
+    "gps_code": "RU-0398",
+    "freq": "",
+    "Lat": 45.0605629952,
+    "Lon": 37.9666471481,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Olginskaya Airstrip",
+    "gps_code": "RU-0401",
+    "freq": "",
+    "Lat": 45.9383477869,
+    "Lon": 38.3999097347,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Medvedkovskaya Airstrip",
+    "gps_code": "RU-0402",
+    "freq": "",
+    "Lat": 45.4433769126,
+    "Lon": 38.9604592323,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yelizavetinskaya Airstrip",
+    "gps_code": "RU-0403",
+    "freq": "",
+    "Lat": 45.085393,
+    "Lon": 38.805385,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Osechki Azimut Airfield",
+    "gps_code": "RU-0404",
+    "freq": "",
+    "Lat": 45.256686,
+    "Lon": 38.918593,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novotitarovskaya Airstrip",
+    "gps_code": "RU-0405",
+    "freq": "",
+    "Lat": 45.2496489003,
+    "Lon": 39.076695442200005,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novodmitriyevskaya Airstrip",
+    "gps_code": "RU-0406",
+    "freq": "",
+    "Lat": 44.8486583488,
+    "Lon": 38.897244930300005,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rodnikovskaya Airstrip",
+    "gps_code": "RU-0407",
+    "freq": "",
+    "Lat": 44.777646496,
+    "Lon": 40.7087659836,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kusino Airfield",
+    "gps_code": "RU-0408",
+    "freq": "120.150",
+    "Lat": 59.402156,
+    "Lon": 31.815548,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yastrebino Airstrip",
+    "gps_code": "RU-0409",
+    "freq": "",
+    "Lat": 59.3856162518,
+    "Lon": 28.9302420616,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Panino Airstrip",
+    "gps_code": "RU-0412",
+    "freq": "",
+    "Lat": 54.4750251757,
+    "Lon": 40.3169059753,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lyubytino Airstrip",
+    "gps_code": "RU-0416",
+    "freq": "",
+    "Lat": 58.802629,
+    "Lon": 33.373418,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Staritsa Airstrip",
+    "gps_code": "RU-0420",
+    "freq": "",
+    "Lat": 56.512343544100005,
+    "Lon": 34.9719715118,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Otradnaya Airfield",
+    "gps_code": "RU-0421",
+    "freq": "",
+    "Lat": 44.382827,
+    "Lon": 41.490469,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Labinsk",
+    "gps_code": "RU-0423",
+    "freq": "",
+    "Lat": 44.663708,
+    "Lon": 40.752668,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kurganinsk Airfield",
+    "gps_code": "RU-0424",
+    "freq": "",
+    "Lat": 44.863048,
+    "Lon": 40.625768,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Psebay Airfield",
+    "gps_code": "RU-0426",
+    "freq": "",
+    "Lat": 44.110453,
+    "Lon": 40.818844,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Morozovo Airstrip",
+    "gps_code": "RU-0429",
+    "freq": "",
+    "Lat": 55.3806464897,
+    "Lon": 38.3715963364,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamyshin Airport",
+    "gps_code": "RU-0430",
+    "freq": "",
+    "Lat": 50.0532536947,
+    "Lon": 45.3695440292,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Afipsky Airfield",
+    "gps_code": "RU-0436",
+    "freq": "",
+    "Lat": 44.8544,
+    "Lon": 38.8224,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zyryanka West Airport",
+    "gps_code": "RU-0438",
+    "freq": "",
+    "Lat": 65.7367,
+    "Lon": 150.705,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodrom Tsherskaia",
+    "gps_code": "RU-0445",
+    "freq": "",
+    "Lat": 57.633923,
+    "Lon": 28.223795,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Seredka Airfield",
+    "gps_code": "RU-0447",
+    "freq": "",
+    "Lat": 58.142135,
+    "Lon": 28.203349,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Atsevo",
+    "gps_code": "RU-0449",
+    "freq": "",
+    "Lat": 57.0934603,
+    "Lon": 29.7212392,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chistyy Airport",
+    "gps_code": "RU-0451",
+    "freq": "",
+    "Lat": 55.4856,
+    "Lon": 103.2065,
+    "Ele": 434.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Priboynyy Airport",
+    "gps_code": "RU-0452",
+    "freq": "",
+    "Lat": 55.6498,
+    "Lon": 103.2314,
+    "Ele": 411.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Krivolutskaya Airport",
+    "gps_code": "RU-0453",
+    "freq": "",
+    "Lat": 55.6112,
+    "Lon": 103.1252,
+    "Ele": 525.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Borskoye Airfield",
+    "gps_code": "RU-0454",
+    "freq": "",
+    "Lat": 54.653027,
+    "Lon": 20.993629,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikulino Airstrip",
+    "gps_code": "RU-0455",
+    "freq": "",
+    "Lat": 56.99965,
+    "Lon": 29.815912,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zhurban Airport",
+    "gps_code": "RU-0456",
+    "freq": "",
+    "Lat": 54.1745,
+    "Lon": 127.989703,
+    "Ele": 423.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Khvoynyy Airport",
+    "gps_code": "RU-0457",
+    "freq": "",
+    "Lat": 54.6331,
+    "Lon": 127.84425,
+    "Ele": 410.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakhovka Airfield",
+    "gps_code": "RU-0459",
+    "freq": "",
+    "Lat": 50.80945,
+    "Lon": 129.187,
+    "Ele": 223.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Pozdeevka Airport",
+    "gps_code": "RU-0460",
+    "freq": "",
+    "Lat": 50.58205,
+    "Lon": 128.8795,
+    "Ele": 232.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Amaranka Airfield",
+    "gps_code": "RU-0461",
+    "freq": "",
+    "Lat": 50.6947,
+    "Lon": 129.613,
+    "Ele": 211.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Cheremkhovo Airstrip",
+    "gps_code": "RU-0462",
+    "freq": "",
+    "Lat": 50.42953,
+    "Lon": 127.77367,
+    "Ele": 179.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sorokino Airfield",
+    "gps_code": "RU-0463",
+    "freq": "",
+    "Lat": 57.724212,
+    "Lon": 28.240812,
+    "Ele": 49.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Eldikan Airstrip",
+    "gps_code": "RU-0464",
+    "freq": "",
+    "Lat": 60.747856,
+    "Lon": 135.128137,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novoselovo Airport",
+    "gps_code": "RU-0465",
+    "freq": "",
+    "Lat": 55.002535,
+    "Lon": 90.921397,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balakhta Airport",
+    "gps_code": "RU-0466",
+    "freq": "",
+    "Lat": 55.361388,
+    "Lon": 91.528933,
+    "Ele": 304.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasnoturansk Airport",
+    "gps_code": "RU-0467",
+    "freq": "",
+    "Lat": 54.313927,
+    "Lon": 91.521,
+    "Ele": 383.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Oktyabrskiy Airport",
+    "gps_code": "RU-0468",
+    "freq": "",
+    "Lat": 56.088096,
+    "Lon": 99.40945,
+    "Ele": 262.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Anash Airport",
+    "gps_code": "RU-0469",
+    "freq": "",
+    "Lat": 54.856756,
+    "Lon": 91.061761,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Motygino Airport",
+    "gps_code": "RU-0470",
+    "freq": "",
+    "Lat": 58.180921,
+    "Lon": 94.745272,
+    "Ele": 164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novoangarsk Airport",
+    "gps_code": "RU-0471",
+    "freq": "",
+    "Lat": 58.127988,
+    "Lon": 93.477721,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lamutskoye Airport",
+    "gps_code": "RU-0472",
+    "freq": "",
+    "Lat": 65.538838,
+    "Lon": 168.844848,
+    "Ele": 183.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Schloss Waldau Airstrip",
+    "gps_code": "RU-0473",
+    "freq": "",
+    "Lat": 54.6920446,
+    "Lon": 20.7462606,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pricep Airstrip",
+    "gps_code": "RU-0475",
+    "freq": "",
+    "Lat": 55.098395,
+    "Lon": 38.00034,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Padinskoye Airstrip",
+    "gps_code": "RU-0483",
+    "freq": "",
+    "Lat": 44.844707,
+    "Lon": 43.185901,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kotovo Airfield",
+    "gps_code": "RU-0484",
+    "freq": "",
+    "Lat": 51.3146773,
+    "Lon": 38.0090673,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Belgorod-Severniy Airstrip",
+    "gps_code": "RU-0488",
+    "freq": "",
+    "Lat": 50.657376,
+    "Lon": 36.529791,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zavitinsk Air Base",
+    "gps_code": "RU-0490",
+    "freq": "",
+    "Lat": 50.1917,
+    "Lon": 129.503006,
+    "Ele": 276.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Taldom airstrip",
+    "gps_code": "RU-0492",
+    "freq": "",
+    "Lat": 56.7397979,
+    "Lon": 37.6042247,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bichevaya Airport",
+    "gps_code": "RU-0493",
+    "freq": "",
+    "Lat": 47.75029,
+    "Lon": 135.64066,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nebyloye Airfield",
+    "gps_code": "RU-0511",
+    "freq": "",
+    "Lat": 56.401394,
+    "Lon": 39.958137,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Orlovka Airfield",
+    "gps_code": "RU-0514",
+    "freq": "",
+    "Lat": 56.143813,
+    "Lon": 34.988268,
+    "Ele": 206.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bakhta Airport",
+    "gps_code": "RU-0517",
+    "freq": "",
+    "Lat": 62.468115,
+    "Lon": 88.998827,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Poligus Airport",
+    "gps_code": "RU-0519",
+    "freq": "",
+    "Lat": 62.002853,
+    "Lon": 94.657168,
+    "Ele": 341.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Visokiy Airstrip",
+    "gps_code": "RU-0521",
+    "freq": "",
+    "Lat": 44.7770214,
+    "Lon": 40.8997519,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Paradrom Pokrov",
+    "gps_code": "RU-0522",
+    "freq": "",
+    "Lat": 55.43705,
+    "Lon": 37.626689,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Podgornoye Airfield",
+    "gps_code": "RU-0523",
+    "freq": "",
+    "Lat": 54.740583,
+    "Lon": 20.726472,
+    "Ele": -1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Southern Sky Airfield",
+    "gps_code": "RU-0524",
+    "freq": "",
+    "Lat": 44.937911,
+    "Lon": 38.929186,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beregovoy Airport",
+    "gps_code": "RU-0525",
+    "freq": "",
+    "Lat": 54.358554,
+    "Lon": 127.501488,
+    "Ele": 350.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Fevralsk Airport",
+    "gps_code": "RU-0526",
+    "freq": "",
+    "Lat": 52.495787,
+    "Lon": 130.915318,
+    "Ele": 271.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Byas-Kyuyol Airport",
+    "gps_code": "RU-0527",
+    "freq": "",
+    "Lat": 59.498603,
+    "Lon": 119.309163,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikolayevka Air Base",
+    "gps_code": "RU-0538",
+    "freq": "",
+    "Lat": 43.085608,
+    "Lon": 133.190505,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Baranovskiy Airfield",
+    "gps_code": "RU-0539",
+    "freq": "",
+    "Lat": 43.751678,
+    "Lon": 132.007553,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sysoyevka Airfield",
+    "gps_code": "RU-0540",
+    "freq": "",
+    "Lat": 44.20964,
+    "Lon": 133.36596,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tempa Airfield",
+    "gps_code": "RU-0543",
+    "freq": "",
+    "Lat": 75.76713,
+    "Lon": 137.576637,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ozernovskiy Airport",
+    "gps_code": "RU-0548",
+    "freq": "",
+    "Lat": 51.49929,
+    "Lon": 156.54339,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Takhtoyamsk Airport",
+    "gps_code": "RU-0555",
+    "freq": "",
+    "Lat": 60.194321,
+    "Lon": 154.674325,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inya Airport",
+    "gps_code": "RU-0557",
+    "freq": "",
+    "Lat": 59.39879,
+    "Lon": 144.82051,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tukchi Airport",
+    "gps_code": "RU-0558",
+    "freq": "",
+    "Lat": 57.35506,
+    "Lon": 139.49783,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiran Airport",
+    "gps_code": "RU-0559",
+    "freq": "",
+    "Lat": 55.01798,
+    "Lon": 135.40866,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maksimovka Airstrip",
+    "gps_code": "RU-0565",
+    "freq": "",
+    "Lat": 46.09133,
+    "Lon": 137.89901,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gostagayevskaya Airfield",
+    "gps_code": "RU-0579",
+    "freq": "",
+    "Lat": 44.999984,
+    "Lon": 37.482398,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Borodinskaya Airstrip",
+    "gps_code": "RU-0580",
+    "freq": "",
+    "Lat": 46.0928,
+    "Lon": 38.2347,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yasenskaya Airstrip",
+    "gps_code": "RU-0581",
+    "freq": "",
+    "Lat": 46.3927,
+    "Lon": 38.2848,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oktyabr'skiy Airstrip",
+    "gps_code": "RU-0582",
+    "freq": "",
+    "Lat": 46.4636,
+    "Lon": 38.2878,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zarya Airstrip",
+    "gps_code": "RU-0583",
+    "freq": "",
+    "Lat": 46.4812,
+    "Lon": 38.1347,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamyshevatskaya Airstrip",
+    "gps_code": "RU-0584",
+    "freq": "",
+    "Lat": 46.4665,
+    "Lon": 37.9568,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Komsomolets Airstrip",
+    "gps_code": "RU-0585",
+    "freq": "",
+    "Lat": 46.5809,
+    "Lon": 38.2255,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Orlovka Air Base",
+    "gps_code": "RU-0588",
+    "freq": "",
+    "Lat": 51.263302,
+    "Lon": 128.720001,
+    "Ele": 259.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Matua Airfield",
+    "gps_code": "RU-0593",
+    "freq": "",
+    "Lat": 48.050982,
+    "Lon": 153.25502,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ivashka Airport",
+    "gps_code": "RU-0600",
+    "freq": "",
+    "Lat": 58.571046,
+    "Lon": 162.304749,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Anadyr Airfield",
+    "gps_code": "RU-0603",
+    "freq": "",
+    "Lat": 64.720087,
+    "Lon": 177.46323,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Uelkal Airstrip",
+    "gps_code": "RU-0605",
+    "freq": "",
+    "Lat": 65.530823,
+    "Lon": -179.287263,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nayba Airfield",
+    "gps_code": "RU-0614",
+    "freq": "",
+    "Lat": 70.844976,
+    "Lon": 130.68745,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taymylyr Airstrip",
+    "gps_code": "RU-0616",
+    "freq": "",
+    "Lat": 72.607271,
+    "Lon": 121.893179,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Syndassko Airstrip",
+    "gps_code": "RU-0617",
+    "freq": "",
+    "Lat": 73.249726,
+    "Lon": 108.206176,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kostino Airstrip",
+    "gps_code": "RU-0630",
+    "freq": "",
+    "Lat": 65.322665,
+    "Lon": 87.97587,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vereshchagino Airport",
+    "gps_code": "RU-0634",
+    "freq": "",
+    "Lat": 64.235903,
+    "Lon": 87.576178,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Naparino Airport",
+    "gps_code": "RU-0636",
+    "freq": "",
+    "Lat": 60.146822,
+    "Lon": 90.472639,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nazimovo Airstrip",
+    "gps_code": "RU-0637",
+    "freq": "",
+    "Lat": 59.524164,
+    "Lon": 90.917114,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Voznesenka Airfield",
+    "gps_code": "RU-0639",
+    "freq": "",
+    "Lat": 56.032263,
+    "Lon": 93.248872,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyzyl-Mazhalyk Airport",
+    "gps_code": "RU-0645",
+    "freq": "",
+    "Lat": 51.14266,
+    "Lon": 90.58967,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Armavir / Krasnaya Polyana Airfield",
+    "gps_code": "RU-0672",
+    "freq": "",
+    "Lat": 45.053223,
+    "Lon": 41.088352,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arti Airfield",
+    "gps_code": "RU-0674",
+    "freq": "",
+    "Lat": 56.444921,
+    "Lon": 58.521575,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ayanka Airport",
+    "gps_code": "RU-0676",
+    "freq": "",
+    "Lat": 63.709269,
+    "Lon": 167.584196,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolshaya Pyssa Airfield",
+    "gps_code": "RU-0685",
+    "freq": "",
+    "Lat": 64.1694,
+    "Lon": 48.8127,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Borovsky Airfield",
+    "gps_code": "RU-0686",
+    "freq": "",
+    "Lat": 57.035,
+    "Lon": 65.745,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Buor-Sysy Airstrip",
+    "gps_code": "RU-0688",
+    "freq": "",
+    "Lat": 66.4773,
+    "Lon": 143.0463,
+    "Ele": 188.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chekunda Airfield",
+    "gps_code": "RU-0689",
+    "freq": "",
+    "Lat": 50.871569,
+    "Lon": 132.302213,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chernaya Rechka Airfield",
+    "gps_code": "RU-0690",
+    "freq": "",
+    "Lat": 56.9417,
+    "Lon": 65.2417,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Parabel Airport",
+    "gps_code": "RU-0703",
+    "freq": "",
+    "Lat": 58.70748,
+    "Lon": 81.46433,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Belogorsk Airstrip",
+    "gps_code": "RU-0708",
+    "freq": "",
+    "Lat": 50.8937,
+    "Lon": 128.47338,
+    "Ele": 171.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mayorskiy Airstrip",
+    "gps_code": "RU-0709",
+    "freq": "",
+    "Lat": 47.07512,
+    "Lon": 42.01812,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalachevo Airfield",
+    "gps_code": "RU-0710",
+    "freq": "",
+    "Lat": 54.762,
+    "Lon": 73.3115,
+    "Ele": 90.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lugovskoye Airfield",
+    "gps_code": "RU-0712",
+    "freq": "",
+    "Lat": 57.982,
+    "Lon": 55.71028,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasny Voskhod South Airfield",
+    "gps_code": "RU-0713",
+    "freq": "",
+    "Lat": 57.9779,
+    "Lon": 55.71143,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mylniki Airfield",
+    "gps_code": "RU-0714",
+    "freq": "",
+    "Lat": 57.39187,
+    "Lon": 56.88028,
+    "Ele": 193.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Byvshaya Airfield",
+    "gps_code": "RU-0715",
+    "freq": "",
+    "Lat": 58.13804,
+    "Lon": 52.57068,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Utrenniy Airport",
+    "gps_code": "RU-0717",
+    "freq": "",
+    "Lat": 71.011405,
+    "Lon": 74.259759,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Onor Airfield",
+    "gps_code": "RU-0719",
+    "freq": "",
+    "Lat": 50.19164,
+    "Lon": 142.7426,
+    "Ele": 156.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Novokemskii Airstrip",
+    "gps_code": "RU-0723",
+    "freq": "",
+    "Lat": 60.33815,
+    "Lon": 37.24933,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zubovo Airstrip",
+    "gps_code": "RU-0724",
+    "freq": "",
+    "Lat": 60.32048,
+    "Lon": 37.02119,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khailino Airport",
+    "gps_code": "RU-0727",
+    "freq": "",
+    "Lat": 60.95206,
+    "Lon": 166.83801,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Bolsheretsk Highway Airstrip",
+    "gps_code": "RU-0728",
+    "freq": "",
+    "Lat": 52.8533,
+    "Lon": 156.3467,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Apuka Airport",
+    "gps_code": "RU-0729",
+    "freq": "",
+    "Lat": 60.43932,
+    "Lon": 169.62441,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sredny Pakhachi Airport",
+    "gps_code": "RU-0730",
+    "freq": "",
+    "Lat": 60.81718,
+    "Lon": 169.07555,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikolayevka Airport",
+    "gps_code": "RU-0734",
+    "freq": "",
+    "Lat": 53.048854,
+    "Lon": 158.312513,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Garmanda Airport",
+    "gps_code": "RU-0738",
+    "freq": "",
+    "Lat": 62.18334,
+    "Lon": 159.08894,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dinamo Airport",
+    "gps_code": "RU-0742",
+    "freq": "",
+    "Lat": 48.43709,
+    "Lon": 135.14229,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Khabarovsk Tsentralny Airfield",
+    "gps_code": "RU-0743",
+    "freq": "",
+    "Lat": 48.46262,
+    "Lon": 135.15165,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Khokhlatskaya-1 Airport",
+    "gps_code": "RU-0744",
+    "freq": "",
+    "Lat": 48.61991,
+    "Lon": 135.12234,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Reshety Airport",
+    "gps_code": "RU-0745",
+    "freq": "",
+    "Lat": 54.19889,
+    "Lon": 80.23976,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sukhovka Airfield",
+    "gps_code": "RU-0747",
+    "freq": "",
+    "Lat": 56.05055,
+    "Lon": 40.75778,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zhilinda Airport",
+    "gps_code": "RU-0753",
+    "freq": "",
+    "Lat": 70.15387,
+    "Lon": 113.91756,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ebelyakh Airport",
+    "gps_code": "RU-0754",
+    "freq": "",
+    "Lat": 70.88319,
+    "Lon": 113.58159,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chirinda Airstrip",
+    "gps_code": "RU-0755",
+    "freq": "",
+    "Lat": 67.53965,
+    "Lon": 100.41201,
+    "Ele": 318.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ekonda Airport",
+    "gps_code": "RU-0756",
+    "freq": "",
+    "Lat": 65.75707,
+    "Lon": 105.32821,
+    "Ele": 413.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Noginsk Airport",
+    "gps_code": "RU-0757",
+    "freq": "",
+    "Lat": 64.492499,
+    "Lon": 91.21423,
+    "Ele": 155.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kislokan Airport",
+    "gps_code": "RU-0759",
+    "freq": "",
+    "Lat": 63.59221,
+    "Lon": 103.94732,
+    "Ele": 217.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Yukta Airport",
+    "gps_code": "RU-0760",
+    "freq": "",
+    "Lat": 63.38788,
+    "Lon": 105.65577,
+    "Ele": 207.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nakanno Airport",
+    "gps_code": "RU-0761",
+    "freq": "",
+    "Lat": 62.89988,
+    "Lon": 108.44788,
+    "Ele": 248.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Khamakar Airport",
+    "gps_code": "RU-0762",
+    "freq": "",
+    "Lat": 61.989,
+    "Lon": 108.17978,
+    "Ele": 271.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kubinka Air Base",
+    "gps_code": "RU-0764",
+    "freq": "",
+    "Lat": 55.611695,
+    "Lon": 36.650002,
+    "Ele": 187.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yam Airfield",
+    "gps_code": "RU-0767",
+    "freq": "",
+    "Lat": 56.33257,
+    "Lon": 38.6369,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nekrasovo Airfield",
+    "gps_code": "RU-0769",
+    "freq": "",
+    "Lat": 57.78792,
+    "Lon": 40.84022,
+    "Ele": 78.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manturovo Airfield",
+    "gps_code": "RU-0770",
+    "freq": "",
+    "Lat": 58.36749,
+    "Lon": 44.7957,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Belokurikha Airport",
+    "gps_code": "RU-0772",
+    "freq": "",
+    "Lat": 52.0645,
+    "Lon": 85.02143,
+    "Ele": 225.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ustinovo Aerodrome",
+    "gps_code": "RU-0773",
+    "freq": "",
+    "Lat": 54.85274,
+    "Lon": 60.00283,
+    "Ele": 394.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Galitskiy Aerodrome",
+    "gps_code": "RU-0774",
+    "freq": "",
+    "Lat": 54.83703,
+    "Lon": 58.36763,
+    "Ele": 423.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Novokayakent Airport",
+    "gps_code": "RU-0777",
+    "freq": "",
+    "Lat": 42.33369,
+    "Lon": 48.02926,
+    "Ele": -11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Karasuk Vertodrome-Aerodrome",
+    "gps_code": "RU-0780",
+    "freq": "",
+    "Lat": 51.56184,
+    "Lon": 85.91851,
+    "Ele": 376.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Manzherok Airport",
+    "gps_code": "RU-0783",
+    "freq": "",
+    "Lat": 51.82526,
+    "Lon": 85.80593,
+    "Ele": 394.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Barantal Aerodrome",
+    "gps_code": "RU-0785",
+    "freq": "",
+    "Lat": 51.44663,
+    "Lon": 85.98885,
+    "Ele": 487.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Laishevo Airport",
+    "gps_code": "RU-0788",
+    "freq": "",
+    "Lat": 55.40836,
+    "Lon": 49.49762,
+    "Ele": 124.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Belaya",
+    "gps_code": "RU-0789",
+    "freq": "",
+    "Lat": 55.83613,
+    "Lon": 44.43664,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balagannoye Airport",
+    "gps_code": "RU-0790",
+    "freq": "",
+    "Lat": 59.6969,
+    "Lon": 149.07195,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aleksandrovsk-Sakhalinskiy Airport",
+    "gps_code": "RU-0802",
+    "freq": "",
+    "Lat": 50.877144,
+    "Lon": 142.17561,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kukan Airport",
+    "gps_code": "RU-0805",
+    "freq": "",
+    "Lat": 49.21613,
+    "Lon": 133.46271,
+    "Ele": 142.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Amurzet Airport",
+    "gps_code": "RU-0807",
+    "freq": "",
+    "Lat": 47.70734,
+    "Lon": 131.09247,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust'-Strelka Airport",
+    "gps_code": "RU-0844",
+    "freq": "",
+    "Lat": 53.32426,
+    "Lon": 121.38508,
+    "Ele": 338.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorelovo Aerodrome",
+    "gps_code": "RU-0845",
+    "freq": "124.000",
+    "Lat": 59.765518,
+    "Lon": 30.071722,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kungurtug Airport",
+    "gps_code": "RU-0851",
+    "freq": "",
+    "Lat": 50.60054,
+    "Lon": 97.50883,
+    "Ele": 1313.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Priargunsk Airport",
+    "gps_code": "RU-0862",
+    "freq": "",
+    "Lat": 50.34247,
+    "Lon": 119.00104,
+    "Ele": 627.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Menza Airport",
+    "gps_code": "RU-0883",
+    "freq": "",
+    "Lat": 49.41982,
+    "Lon": 108.8545,
+    "Ele": 946.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyra Airport",
+    "gps_code": "RU-0884",
+    "freq": "",
+    "Lat": 49.58653,
+    "Lon": 111.95628,
+    "Ele": 912.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Petropavlovka Airport",
+    "gps_code": "RU-0891",
+    "freq": "",
+    "Lat": 50.61721,
+    "Lon": 105.28553,
+    "Ele": 716.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulekchin Airport",
+    "gps_code": "RU-0896",
+    "freq": "",
+    "Lat": 50.50104,
+    "Lon": 104.27745,
+    "Ele": 872.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yarovoye Altaipetstrans Airport",
+    "gps_code": "RU-0904",
+    "freq": "",
+    "Lat": 52.93973,
+    "Lon": 78.60009,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Karasuk Airport",
+    "gps_code": "RU-0908",
+    "freq": "",
+    "Lat": 53.70532,
+    "Lon": 78.07082,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Slavyansk-na-Kubani Airfield",
+    "gps_code": "RU-0917",
+    "freq": "",
+    "Lat": 45.20633,
+    "Lon": 38.08692,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rybatskaya Airstrip",
+    "gps_code": "RU-0922",
+    "freq": "",
+    "Lat": 54.67994,
+    "Lon": 39.78785,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "AirLife Aerodrome",
+    "gps_code": "RU-0923",
+    "freq": "",
+    "Lat": 48.04196,
+    "Lon": 45.98445,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust'-Kara Airport",
+    "gps_code": "RU-0926",
+    "freq": "",
+    "Lat": 69.255514,
+    "Lon": 64.95232,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Artel-Amur Kondyor Mine airstrip",
+    "gps_code": "RU-0929",
+    "freq": "",
+    "Lat": 57.643517,
+    "Lon": 134.622324,
+    "Ele": 641.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Artel-Amur Kondyor Airport",
+    "gps_code": "RU-0930",
+    "freq": "",
+    "Lat": 57.731361,
+    "Lon": 134.444191,
+    "Ele": 449.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aim Airstrip",
+    "gps_code": "RU-0931",
+    "freq": "",
+    "Lat": 58.783536,
+    "Lon": 134.262501,
+    "Ele": 238.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nelkan Airstrip",
+    "gps_code": "RU-0932",
+    "freq": "",
+    "Lat": 57.642153,
+    "Lon": 136.161458,
+    "Ele": 303.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kurun-Uryakh Airstrip",
+    "gps_code": "RU-0933",
+    "freq": "",
+    "Lat": 58.678982,
+    "Lon": 137.503174,
+    "Ele": 429.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Red Partisan Private Airstrip",
+    "gps_code": "RU-0935",
+    "freq": "",
+    "Lat": 55.339996,
+    "Lon": 47.268988,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyurbinskiy Gok",
+    "gps_code": "RU-0936",
+    "freq": "",
+    "Lat": 65.066513,
+    "Lon": 117.116543,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Severo Kurilsk Airport",
+    "gps_code": "RU-0940",
+    "freq": "",
+    "Lat": 50.669405,
+    "Lon": 156.124287,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gora Airstrip UL",
+    "gps_code": "RU-0941",
+    "freq": "",
+    "Lat": 55.27693,
+    "Lon": 39.25163,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koz'modem'yansk Airstrip",
+    "gps_code": "RU-0942",
+    "freq": "",
+    "Lat": 56.304714,
+    "Lon": 46.547653,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vladikavkaz Gizel' Airfield",
+    "gps_code": "RU-0956",
+    "freq": "",
+    "Lat": 43.073397,
+    "Lon": 44.586704,
+    "Ele": 600.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Syradasayskoye Coal Terminal Airport",
+    "gps_code": "RU-0963",
+    "freq": "",
+    "Lat": 72.851332,
+    "Lon": 80.969221,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirovsk-Apatity Airport",
+    "gps_code": "RU-10046",
+    "freq": "",
+    "Lat": 67.462851,
+    "Lon": 33.585294,
+    "Ele": 157.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rtishchevo Air Base",
+    "gps_code": "RU-10047",
+    "freq": "",
+    "Lat": 52.297317,
+    "Lon": 43.7241,
+    "Ele": 205.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Semyazino Airport",
+    "gps_code": "RU-10048",
+    "freq": "",
+    "Lat": 56.127423,
+    "Lon": 40.315202,
+    "Ele": 168.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Soltsy-2 Air Base",
+    "gps_code": "RU-10049",
+    "freq": "",
+    "Lat": 58.139545,
+    "Lon": 30.33042,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Klokovo Air Base",
+    "gps_code": "RU-10050",
+    "freq": "",
+    "Lat": 54.239,
+    "Lon": 37.6,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mezen Airfield",
+    "gps_code": "RU-10051",
+    "freq": "",
+    "Lat": 65.878334,
+    "Lon": 44.215,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stary Oskol Airfield",
+    "gps_code": "RU-10052",
+    "freq": "",
+    "Lat": 51.329216,
+    "Lon": 37.768848,
+    "Ele": 219.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yermolino Air Base",
+    "gps_code": "RU-10053",
+    "freq": "",
+    "Lat": 55.228333,
+    "Lon": 36.608334,
+    "Ele": 195.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Myachkovo Airfield",
+    "gps_code": "RU-10054",
+    "freq": "",
+    "Lat": 55.560001,
+    "Lon": 37.985001,
+    "Ele": 125.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Staraya Russa Air Base",
+    "gps_code": "RU-10055",
+    "freq": "",
+    "Lat": 57.961399,
+    "Lon": 31.384399,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fedotovo Naval Air Base",
+    "gps_code": "RU-10056",
+    "freq": "",
+    "Lat": 59.190372,
+    "Lon": 39.123459,
+    "Ele": 175.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Severomorsk-1 Naval Air Base",
+    "gps_code": "RU-10057",
+    "freq": "",
+    "Lat": 69.03167,
+    "Lon": 33.418331,
+    "Ele": 72.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Severomorsk-3 Naval Air Base",
+    "gps_code": "RU-10058",
+    "freq": "",
+    "Lat": 68.866669,
+    "Lon": 33.716667,
+    "Ele": 171.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dyagilevo Air Base",
+    "gps_code": "RU-10059",
+    "freq": "",
+    "Lat": 54.642284,
+    "Lon": 39.569047,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Veshenskaya Airfield",
+    "gps_code": "RU-10060",
+    "freq": "",
+    "Lat": 49.656601,
+    "Lon": 41.700699,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Icha Airport",
+    "gps_code": "RU-10061",
+    "freq": "",
+    "Lat": 55.595402,
+    "Lon": 155.619003,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khanskaya Air Base",
+    "gps_code": "RU-10062",
+    "freq": "",
+    "Lat": 44.68,
+    "Lon": 40.035,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Velsk Airfield",
+    "gps_code": "RU-10063",
+    "freq": "",
+    "Lat": 61.040001,
+    "Lon": 42.099998,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Vytegra Airfield",
+    "gps_code": "RU-10064",
+    "freq": "",
+    "Lat": 61.032001,
+    "Lon": 36.435001,
+    "Ele": 66.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pudozh",
+    "gps_code": "RU-10065",
+    "freq": "",
+    "Lat": 61.825001,
+    "Lon": 36.580002,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Borovichi Airfield",
+    "gps_code": "RU-10066",
+    "freq": "",
+    "Lat": 58.436001,
+    "Lon": 33.889,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karpogory Airfield",
+    "gps_code": "RU-10067",
+    "freq": "",
+    "Lat": 64.013,
+    "Lon": 44.455002,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pertominsk Airstrip",
+    "gps_code": "RU-10068",
+    "freq": "",
+    "Lat": 64.790463,
+    "Lon": 38.422472,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lopshenga Airstrip",
+    "gps_code": "RU-10069",
+    "freq": "",
+    "Lat": 64.980003,
+    "Lon": 37.693001,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Trufanovo Airfield",
+    "gps_code": "RU-10070",
+    "freq": "",
+    "Lat": 59.308998,
+    "Lon": 39.849998,
+    "Ele": 127.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasnoshchelye Airstrip",
+    "gps_code": "RU-10071",
+    "freq": "",
+    "Lat": 67.348,
+    "Lon": 37.077,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sosnovka Airfield",
+    "gps_code": "RU-10072",
+    "freq": "",
+    "Lat": 53.261002,
+    "Lon": 45.277,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nizhnyaya Pesha Airport",
+    "gps_code": "RU-10073",
+    "freq": "",
+    "Lat": 66.7391,
+    "Lon": 47.728815,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Shoyna Airstrip",
+    "gps_code": "RU-10074",
+    "freq": "",
+    "Lat": 67.869003,
+    "Lon": 44.151001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shenkursk Airfield",
+    "gps_code": "RU-10075",
+    "freq": "",
+    "Lat": 62.117001,
+    "Lon": 42.882999,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Smolensk North Airport",
+    "gps_code": "RU-10076",
+    "freq": "",
+    "Lat": 54.824,
+    "Lon": 32.025,
+    "Ele": 249.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yeysk Airport",
+    "gps_code": "RU-10077",
+    "freq": "",
+    "Lat": 46.68,
+    "Lon": 38.21,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Morozovsk Air Base",
+    "gps_code": "RU-10078",
+    "freq": "",
+    "Lat": 48.313,
+    "Lon": 41.791,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Remontnoye Airfield",
+    "gps_code": "RU-10081",
+    "freq": "",
+    "Lat": 46.544302,
+    "Lon": 43.6457,
+    "Ele": 124.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Belozersk Airfield",
+    "gps_code": "RU-10082",
+    "freq": "",
+    "Lat": 60.015745,
+    "Lon": 37.755371,
+    "Ele": 121.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tomarovka Aerodrome",
+    "gps_code": "RU-10083",
+    "freq": "",
+    "Lat": 50.6945,
+    "Lon": 36.2922,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pirovskoye Airfield",
+    "gps_code": "RU-10085",
+    "freq": "",
+    "Lat": 57.608942,
+    "Lon": 92.303195,
+    "Ele": 196.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Pit Airfield",
+    "gps_code": "RU-10086",
+    "freq": "",
+    "Lat": 58.99397,
+    "Lon": 91.748865,
+    "Ele": 72.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mayskoye Airfield",
+    "gps_code": "RU-10087",
+    "freq": "",
+    "Lat": 60.014497,
+    "Lon": 89.428082,
+    "Ele": 73.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Gagarin Aerodrome",
+    "gps_code": "RU-10099",
+    "freq": "",
+    "Lat": 55.6371,
+    "Lon": 34.828751,
+    "Ele": 190.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Vency Zarya Airfield",
+    "gps_code": "RU-10115",
+    "freq": "",
+    "Lat": 45.322497,
+    "Lon": 40.811273,
+    "Ele": 127.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Torbeyevo Airfield",
+    "gps_code": "RU-10118",
+    "freq": "",
+    "Lat": 55.06583,
+    "Lon": 37.88167,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Betenkes Airfield",
+    "gps_code": "RU-10119",
+    "freq": "",
+    "Lat": 67.642559,
+    "Lon": 135.575882,
+    "Ele": 139.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aereodromo Borovaya(Боровая)",
+    "gps_code": "RU-1051",
+    "freq": "",
+    "Lat": 61.244065,
+    "Lon": 73.322221,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prigorodnoye Airfield",
+    "gps_code": "RU-1064",
+    "freq": "",
+    "Lat": 44.2273,
+    "Lon": 42.10827,
+    "Ele": 623.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Progress Airfield",
+    "gps_code": "RU-1065",
+    "freq": "",
+    "Lat": 44.881707,
+    "Lon": 40.232148,
+    "Ele": 159.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Takhtamukay Airfield",
+    "gps_code": "RU-1066",
+    "freq": "",
+    "Lat": 44.89457,
+    "Lon": 39.01931,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Voronezhskaya Airfield",
+    "gps_code": "RU-1067",
+    "freq": "",
+    "Lat": 45.24142,
+    "Lon": 39.55752,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yefimov Airstrip",
+    "gps_code": "RU-1068",
+    "freq": "",
+    "Lat": 57.02799,
+    "Lon": 38.06476,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kamensk-Uralskiy Air Base",
+    "gps_code": "RU-1071",
+    "freq": "",
+    "Lat": 56.436699,
+    "Lon": 61.986698,
+    "Ele": 170.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Marinskoye Airfield",
+    "gps_code": "RU-1072",
+    "freq": "",
+    "Lat": 51.72496,
+    "Lon": 140.229401,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Monchegorsk Air Base",
+    "gps_code": "RU-1110",
+    "freq": "",
+    "Lat": 67.986702,
+    "Lon": 33.018299,
+    "Ele": 167.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vozzhayevka Air Base",
+    "gps_code": "RU-1221",
+    "freq": "",
+    "Lat": 50.77,
+    "Lon": 128.776993,
+    "Ele": 224.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nerchinsk Air Base",
+    "gps_code": "RU-1777",
+    "freq": "",
+    "Lat": 52.0,
+    "Lon": 116.532997,
+    "Ele": 480.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dolinsk-Sokol Air Base",
+    "gps_code": "RU-1892",
+    "freq": "",
+    "Lat": 47.2617,
+    "Lon": 142.768005,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Logovushka Airfield",
+    "gps_code": "RU-2070",
+    "freq": "",
+    "Lat": 55.4109992980957,
+    "Lon": 64.94300079345703,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ukrainka Air Base",
+    "gps_code": "RU-2244",
+    "freq": "",
+    "Lat": 51.169997,
+    "Lon": 128.445007,
+    "Ele": 235.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gromovo Air Base",
+    "gps_code": "RU-2249",
+    "freq": "",
+    "Lat": 60.713299,
+    "Lon": 30.1117,
+    "Ele": 70.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Samara Kryazh Air Base",
+    "gps_code": "RU-2344",
+    "freq": "",
+    "Lat": 53.108299,
+    "Lon": 50.098301,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dombarovskiy Air Base",
+    "gps_code": "RU-2383",
+    "freq": "",
+    "Lat": 50.799999,
+    "Lon": 59.516701,
+    "Ele": 264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Greem Bell Air Base",
+    "gps_code": "RU-2510",
+    "freq": "",
+    "Lat": 81.15,
+    "Lon": 64.33,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dzhida Air Base",
+    "gps_code": "RU-2844",
+    "freq": "",
+    "Lat": 50.677425,
+    "Lon": 106.138573,
+    "Ele": 599.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Shadrinsk Air Base",
+    "gps_code": "RU-3095",
+    "freq": "",
+    "Lat": 56.039207,
+    "Lon": 63.681995,
+    "Ele": 139.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oreshkovo",
+    "gps_code": "RU-3686",
+    "freq": "",
+    "Lat": 54.4683,
+    "Lon": 36.073299,
+    "Ele": 166.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bagay-Baranovka Air Base",
+    "gps_code": "RU-3709",
+    "freq": "",
+    "Lat": 52.139652,
+    "Lon": 46.969387,
+    "Ele": 38.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kansk Air Base",
+    "gps_code": "RU-3880",
+    "freq": "",
+    "Lat": 56.123299,
+    "Lon": 95.6633,
+    "Ele": 316.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Domna Air Base",
+    "gps_code": "RU-4111",
+    "freq": "",
+    "Lat": 51.916479,
+    "Lon": 113.121444,
+    "Ele": 694.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tambov Air Base",
+    "gps_code": "RU-4339",
+    "freq": "",
+    "Lat": 52.700626,
+    "Lon": 41.374168,
+    "Ele": 168.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Danilovo Air Base",
+    "gps_code": "RU-4421",
+    "freq": "",
+    "Lat": 56.66,
+    "Lon": 48.033298,
+    "Ele": 117.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Olenya Air Base",
+    "gps_code": "RU-4464",
+    "freq": "",
+    "Lat": 68.151802,
+    "Lon": 33.463902,
+    "Ele": 214.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rogachyovo Air Base",
+    "gps_code": "RU-4536",
+    "freq": "",
+    "Lat": 71.616699,
+    "Lon": 52.478298,
+    "Ele": 82.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shatalovo Air Base",
+    "gps_code": "RU-4609",
+    "freq": "",
+    "Lat": 54.34,
+    "Lon": 32.473301,
+    "Ele": 192.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cheryomushki Air Base",
+    "gps_code": "RU-4827",
+    "freq": "",
+    "Lat": 52.072963,
+    "Lon": 113.433267,
+    "Ele": 677.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Klyuchi Air Base",
+    "gps_code": "RU-4936",
+    "freq": "",
+    "Lat": 56.30976,
+    "Lon": 160.804541,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lyuban Chudovo Airfield",
+    "gps_code": "RU-4948",
+    "freq": "",
+    "Lat": 59.2383,
+    "Lon": 31.27,
+    "Ele": 50.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chuguyevka Air Base",
+    "gps_code": "RU-5105",
+    "freq": "",
+    "Lat": 44.083302,
+    "Lon": 133.867996,
+    "Ele": 305.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Klin Air Base",
+    "gps_code": "RU-5186",
+    "freq": "",
+    "Lat": 56.36669921875,
+    "Lon": 36.73830032348633,
+    "Ele": 164.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Smuravyovo Air Base",
+    "gps_code": "RU-5376",
+    "freq": "",
+    "Lat": 58.814999,
+    "Lon": 28.0133,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yugoryonok Airport",
+    "gps_code": "RU-5491",
+    "freq": "",
+    "Lat": 59.7649993896,
+    "Lon": 137.682998657,
+    "Ele": 305.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ivanovo North Air Base",
+    "gps_code": "RU-5672",
+    "freq": "",
+    "Lat": 57.0583,
+    "Lon": 40.981701,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lovozero Airfield",
+    "gps_code": "RU-6219",
+    "freq": "",
+    "Lat": 68.021698,
+    "Lon": 35.0,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Orenburg Air Base",
+    "gps_code": "RU-6542",
+    "freq": "",
+    "Lat": 51.709057,
+    "Lon": 55.020046,
+    "Ele": 111.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lyambir Air Base",
+    "gps_code": "RU-6558",
+    "freq": "",
+    "Lat": 54.28499984741211,
+    "Lon": 45.16830062866211,
+    "Ele": 199.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ulan-Ude East Airport",
+    "gps_code": "RU-6560",
+    "freq": "",
+    "Lat": 51.849998,
+    "Lon": 107.737999,
+    "Ele": 509.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Michurinsk Air Base",
+    "gps_code": "RU-6687",
+    "freq": "",
+    "Lat": 52.918301,
+    "Lon": 40.365002,
+    "Ele": 164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Savasleyka Air Base",
+    "gps_code": "RU-6878",
+    "freq": "",
+    "Lat": 55.439999,
+    "Lon": 42.310001,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Matrosovo Air Base",
+    "gps_code": "RU-7218",
+    "freq": "",
+    "Lat": 49.401699,
+    "Lon": 142.882996,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Koshka Yavr Air Base",
+    "gps_code": "RU-7444",
+    "freq": "",
+    "Lat": 69.251701,
+    "Lon": 31.196698,
+    "Ele": 150.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Step Air Base",
+    "gps_code": "RU-7576",
+    "freq": "",
+    "Lat": 51.016701,
+    "Lon": 115.432999,
+    "Ele": 709.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Salka Airfield",
+    "gps_code": "RU-7741",
+    "freq": "",
+    "Lat": 57.9883,
+    "Lon": 60.235001,
+    "Ele": 270.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yugorsk Sovetsky Air Base",
+    "gps_code": "RU-7911",
+    "freq": "",
+    "Lat": 61.268299,
+    "Lon": 63.138302,
+    "Ele": 114.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Uprun Air Base",
+    "gps_code": "RU-7978",
+    "freq": "",
+    "Lat": 54.375,
+    "Lon": 61.353298,
+    "Ele": 235.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Voronezh Baltimore Air Base",
+    "gps_code": "RU-8363",
+    "freq": "",
+    "Lat": 51.62,
+    "Lon": 39.14,
+    "Ele": 153.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sharomy Air Base",
+    "gps_code": "RU-8499",
+    "freq": "",
+    "Lat": 54.293787,
+    "Lon": 158.15094,
+    "Ele": 149.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Engels Air Base",
+    "gps_code": "RU-8602",
+    "freq": "",
+    "Lat": 51.480499,
+    "Lon": 46.215,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Totskoye Air Base",
+    "gps_code": "RU-8604",
+    "freq": "",
+    "Lat": 52.501701,
+    "Lon": 52.779999,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yaroslavl Levtsovo",
+    "gps_code": "RU-8974",
+    "freq": "",
+    "Lat": 57.729377,
+    "Lon": 40.046008,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vorkuta Sovetskiy Air Base",
+    "gps_code": "RU-9129",
+    "freq": "",
+    "Lat": 67.463303,
+    "Lon": 64.306702,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krapivnya Airfield",
+    "gps_code": "RU-9241",
+    "freq": "",
+    "Lat": 57.076698303222656,
+    "Lon": 33.388301849365234,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krechevitsy Air Base",
+    "gps_code": "RU-9345",
+    "freq": "",
+    "Lat": 58.625,
+    "Lon": 31.385,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rzhev Air Base",
+    "gps_code": "RU-9937",
+    "freq": "",
+    "Lat": 56.259998,
+    "Lon": 34.408298,
+    "Ele": 193.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shaykovka Air Base",
+    "gps_code": "RU-9942",
+    "freq": "",
+    "Lat": 54.2267,
+    "Lon": 34.3717,
+    "Ele": 203.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chumpu-Kytyl Airport",
+    "gps_code": "UEAT",
+    "freq": "",
+    "Lat": 65.371234,
+    "Lon": 143.167048,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Batagay Airport",
+    "gps_code": "UEBB",
+    "freq": "",
+    "Lat": 67.648003,
+    "Lon": 134.695007,
+    "Ele": 212.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lake Khaiyr Airport",
+    "gps_code": "UEBG",
+    "freq": "",
+    "Lat": 70.8083,
+    "Lon": 133.5059,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kular Airport",
+    "gps_code": "UEBK",
+    "freq": "",
+    "Lat": 70.59566,
+    "Lon": 134.509293,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nizhneyansk Airport",
+    "gps_code": "UEBN",
+    "freq": "",
+    "Lat": 71.43699645996094,
+    "Lon": 136.19000244140625,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sakkyryr Airport",
+    "gps_code": "UEBS",
+    "freq": "",
+    "Lat": 67.792,
+    "Lon": 130.394,
+    "Ele": 513.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Kuyga Airport",
+    "gps_code": "UEBT",
+    "freq": "",
+    "Lat": 70.011002,
+    "Lon": 135.645004,
+    "Ele": 99.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Verkhoyansk Airport",
+    "gps_code": "UEBW",
+    "freq": "",
+    "Lat": 67.54309844970703,
+    "Lon": 133.3988037109375,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Talakan Airport",
+    "gps_code": "UECT",
+    "freq": "",
+    "Lat": 59.876389,
+    "Lon": 111.044444,
+    "Ele": 405.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kulun-Elbyut Airport",
+    "gps_code": "UEDB",
+    "freq": "",
+    "Lat": 66.794851,
+    "Lon": 142.727423,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Desku Airport",
+    "gps_code": "UEDK",
+    "freq": "",
+    "Lat": 68.363387,
+    "Lon": 144.51725,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Horula Airfield",
+    "gps_code": "UEDN",
+    "freq": "",
+    "Lat": 63.9622,
+    "Lon": 118.644602,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aldan Airport",
+    "gps_code": "UEEA",
+    "freq": "",
+    "Lat": 58.60279846191406,
+    "Lon": 125.40899658203124,
+    "Ele": 683.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sebyan-Kyuyol Airport",
+    "gps_code": "UEED",
+    "freq": "",
+    "Lat": 65.292822,
+    "Lon": 129.991865,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yakutsk Airport",
+    "gps_code": "UEEE",
+    "freq": "129.300",
+    "Lat": 62.093299865722656,
+    "Lon": 129.77099609375,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chagda Airport",
+    "gps_code": "UEEG",
+    "freq": "",
+    "Lat": 58.756895,
+    "Lon": 130.6071,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kobyay Airport",
+    "gps_code": "UEEJ",
+    "freq": "",
+    "Lat": 63.568351,
+    "Lon": 126.512203,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sanyyakhtakh Airport",
+    "gps_code": "UEEQ",
+    "freq": "",
+    "Lat": 60.58802,
+    "Lon": 124.04779,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bel'kachi Airport",
+    "gps_code": "UEEX",
+    "freq": "",
+    "Lat": 59.169249,
+    "Lon": 131.91988,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sobolokh Airport",
+    "gps_code": "UEGT",
+    "freq": "",
+    "Lat": 66.256326,
+    "Lon": 143.323982,
+    "Ele": 218.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuberganya Airport",
+    "gps_code": "UEKG",
+    "freq": "",
+    "Lat": 67.765668,
+    "Lon": 144.509096,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delgey Airport",
+    "gps_code": "UEKO",
+    "freq": "",
+    "Lat": 59.907533,
+    "Lon": 118.649383,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kutana Airport",
+    "gps_code": "UEKU",
+    "freq": "",
+    "Lat": 59.028719,
+    "Lon": 131.788731,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Keng-Kyuyol Airport",
+    "gps_code": "UEKY",
+    "freq": "",
+    "Lat": 68.076828,
+    "Lon": 145.985126,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chulman Airport",
+    "gps_code": "UELL",
+    "freq": "118.300",
+    "Lat": 56.913898468018,
+    "Lon": 124.91400146484,
+    "Ele": 857.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Torgo Airport",
+    "gps_code": "UELT",
+    "freq": "",
+    "Lat": 58.44634,
+    "Lon": 119.504728,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Moma Airport",
+    "gps_code": "UEMA",
+    "freq": "",
+    "Lat": 66.450861,
+    "Lon": 143.261551,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Khatyngnakh Airport",
+    "gps_code": "UEMC",
+    "freq": "",
+    "Lat": 67.489845,
+    "Lon": 152.575679,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chagda Airport",
+    "gps_code": "UEMD",
+    "freq": "",
+    "Lat": 63.371467,
+    "Lon": 125.54296,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tyaya Airport",
+    "gps_code": "UEME",
+    "freq": "",
+    "Lat": 63.689242,
+    "Lon": 125.985031,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Typliy Klyuch Airport",
+    "gps_code": "UEMH",
+    "freq": "",
+    "Lat": 62.7890014648,
+    "Lon": 136.854995728,
+    "Ele": 281.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Magan Airport",
+    "gps_code": "UEMM",
+    "freq": "",
+    "Lat": 62.103484,
+    "Lon": 129.545288,
+    "Ele": 175.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Syagannakh",
+    "gps_code": "UEMN",
+    "freq": "",
+    "Lat": 68.372322,
+    "Lon": 143.619676,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Olyokminsk Airport",
+    "gps_code": "UEMO",
+    "freq": "",
+    "Lat": 60.401833,
+    "Lon": 120.476094,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aryktakh Airport",
+    "gps_code": "UEMR",
+    "freq": "",
+    "Lat": 63.561388,
+    "Lon": 125.255277,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sangar Airport",
+    "gps_code": "UEMS",
+    "freq": "",
+    "Lat": 63.9594,
+    "Lon": 127.42,
+    "Ele": 61.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ust-Nera Airport",
+    "gps_code": "UEMT",
+    "freq": "",
+    "Lat": 64.550003,
+    "Lon": 143.115005,
+    "Ele": 550.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Maya Airport",
+    "gps_code": "UEMU",
+    "freq": "",
+    "Lat": 60.356998443604,
+    "Lon": 134.43499755859,
+    "Ele": 171.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yatek Airport",
+    "gps_code": "UENH",
+    "freq": "",
+    "Lat": 63.720041,
+    "Lon": 124.187007,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Verkhnevilyuisk Airport",
+    "gps_code": "UENI",
+    "freq": "",
+    "Lat": 63.458057403564,
+    "Lon": 120.26916503906,
+    "Ele": 125.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kyzyl-Syr Airport",
+    "gps_code": "UENK",
+    "freq": "",
+    "Lat": 63.8849983215332,
+    "Lon": 122.7770004272461,
+    "Ele": 100.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ilbenge Airfield",
+    "gps_code": "UENL",
+    "freq": "",
+    "Lat": 62.82751,
+    "Lon": 124.403908,
+    "Ele": 235.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyurba Airport",
+    "gps_code": "UENN",
+    "freq": "",
+    "Lat": 63.296703,
+    "Lon": 118.341953,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chapayevo Airport",
+    "gps_code": "UENO",
+    "freq": "",
+    "Lat": 60.133212,
+    "Lon": 117.13872,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Suntar Airport",
+    "gps_code": "UENS",
+    "freq": "",
+    "Lat": 62.185001373291,
+    "Lon": 117.63500213623,
+    "Ele": 137.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sayylyk Airport",
+    "gps_code": "UENU",
+    "freq": "",
+    "Lat": 63.852094,
+    "Lon": 123.846388,
+    "Ele": 101.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vilyuisk Airport",
+    "gps_code": "UENW",
+    "freq": "",
+    "Lat": 63.756668,
+    "Lon": 121.693336,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Macha Airport",
+    "gps_code": "UEOA",
+    "freq": "",
+    "Lat": 59.900692,
+    "Lon": 117.597742,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tyanya Airport",
+    "gps_code": "UEOQ",
+    "freq": "",
+    "Lat": 59.05574,
+    "Lon": 119.780331,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tokko Airport",
+    "gps_code": "UEOT",
+    "freq": "",
+    "Lat": 59.978294,
+    "Lon": 119.851098,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Uritskoye Airport",
+    "gps_code": "UEOU",
+    "freq": "",
+    "Lat": 60.558207,
+    "Lon": 122.430611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ezhantsy Airport",
+    "gps_code": "UEQC",
+    "freq": "",
+    "Lat": 60.480888,
+    "Lon": 135.146577,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyuptsy Airport",
+    "gps_code": "UEQK",
+    "freq": "",
+    "Lat": 60.858792,
+    "Lon": 135.308905,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Mil Airstrip",
+    "gps_code": "UEQM",
+    "freq": "",
+    "Lat": 59.631249,
+    "Lon": 133.089694,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Allakh-Yun Airport",
+    "gps_code": "UEQN",
+    "freq": "",
+    "Lat": 61.1431,
+    "Lon": 138.0313,
+    "Ele": 591.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aykhal Airport",
+    "gps_code": "UERA",
+    "freq": "",
+    "Lat": 65.959198,
+    "Lon": 111.546501,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lensk Airport",
+    "gps_code": "UERL",
+    "freq": "",
+    "Lat": 60.7206001282,
+    "Lon": 114.825996399,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Olenyok Airport",
+    "gps_code": "UERO",
+    "freq": "",
+    "Lat": 68.514999,
+    "Lon": 112.480003,
+    "Ele": 258.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Polyarny Airport",
+    "gps_code": "UERP",
+    "freq": "132.100",
+    "Lat": 66.400398,
+    "Lon": 112.029999,
+    "Ele": 506.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mirny Airport",
+    "gps_code": "UERR",
+    "freq": "125.900",
+    "Lat": 62.534698486328125,
+    "Lon": 114.03900146484376,
+    "Ele": 352.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saskylakh Airport",
+    "gps_code": "UERS",
+    "freq": "",
+    "Lat": 71.927902,
+    "Lon": 114.080002,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vitim Airport",
+    "gps_code": "UERT",
+    "freq": "",
+    "Lat": 59.458,
+    "Lon": 112.563004,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Berezovka Airport",
+    "gps_code": "UESC",
+    "freq": "",
+    "Lat": 67.120183,
+    "Lon": 156.589766,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Belaya Gora Airport",
+    "gps_code": "UESG",
+    "freq": "",
+    "Lat": 68.556227,
+    "Lon": 146.22784,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Argakhtakh Airport",
+    "gps_code": "UESH",
+    "freq": "",
+    "Lat": 68.443333,
+    "Lon": 153.362222,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Srednekolymsk Airport",
+    "gps_code": "UESK",
+    "freq": "123.400",
+    "Lat": 67.4805,
+    "Lon": 153.7364,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sylgy-Ytar Airport",
+    "gps_code": "UESL",
+    "freq": "",
+    "Lat": 67.848145,
+    "Lon": 154.838862,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chokurdakh Airport",
+    "gps_code": "UESO",
+    "freq": "",
+    "Lat": 70.6231,
+    "Lon": 147.901993,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tumat Airport",
+    "gps_code": "UESR",
+    "freq": "",
+    "Lat": 70.72611,
+    "Lon": 139.235833,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cherskiy Airport",
+    "gps_code": "UESS",
+    "freq": "",
+    "Lat": 68.7406005859375,
+    "Lon": 161.33799743652344,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tiksi Airport",
+    "gps_code": "UEST",
+    "freq": "128.500",
+    "Lat": 71.697700500488,
+    "Lon": 128.90299987793,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zyryanka Airport",
+    "gps_code": "UESU",
+    "freq": "",
+    "Lat": 65.7485,
+    "Lon": 150.8889,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Svatay Airport",
+    "gps_code": "UESV",
+    "freq": "",
+    "Lat": 68.057338,
+    "Lon": 151.79625,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aleko-Kyuyol Airport",
+    "gps_code": "UESX",
+    "freq": "",
+    "Lat": 68.676693,
+    "Lon": 151.873798,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abyy Airport",
+    "gps_code": "UESY",
+    "freq": "",
+    "Lat": 68.400997,
+    "Lon": 145.094419,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kazachye Airport",
+    "gps_code": "UESZ",
+    "freq": "",
+    "Lat": 70.746294,
+    "Lon": 136.179271,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zhigansk Airport",
+    "gps_code": "UEVV",
+    "freq": "",
+    "Lat": 66.7965011597,
+    "Lon": 123.361000061,
+    "Ele": 89.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dzhargalakh Airport",
+    "gps_code": "UEWD",
+    "freq": "",
+    "Lat": 67.2672,
+    "Lon": 130.5319,
+    "Ele": 426.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kudu-Kyuyol Airport",
+    "gps_code": "UEWO",
+    "freq": "",
+    "Lat": 59.460858,
+    "Lon": 121.334896,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sasyr Airport",
+    "gps_code": "UEYR",
+    "freq": "",
+    "Lat": 65.162269,
+    "Lon": 147.073803,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chuvanskoye Airport",
+    "gps_code": "UHAC",
+    "freq": "",
+    "Lat": 65.172163,
+    "Lon": 167.952484,
+    "Ele": 196.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Vayegi Airport",
+    "gps_code": "UHAW",
+    "freq": "",
+    "Lat": 64.167442,
+    "Lon": 171.057887,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Birofeld Air Base",
+    "gps_code": "UHB1",
+    "freq": "",
+    "Lat": 48.459999,
+    "Lon": 132.660004,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arkhara Airport",
+    "gps_code": "UHBA",
+    "freq": "",
+    "Lat": 49.4165,
+    "Lon": 130.0673,
+    "Ele": 128.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ignatyevo Airport",
+    "gps_code": "UHBB",
+    "freq": "126.400",
+    "Lat": 50.42539978027344,
+    "Lon": 127.41200256347656,
+    "Ele": 194.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Zeya Airport",
+    "gps_code": "UHBE",
+    "freq": "",
+    "Lat": 53.687023,
+    "Lon": 127.090972,
+    "Ele": 275.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Novokievsky Uval Airport",
+    "gps_code": "UHBN",
+    "freq": "",
+    "Lat": 51.6603,
+    "Lon": 128.9329,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Oktyabrskiy Airport",
+    "gps_code": "UHBO",
+    "freq": "",
+    "Lat": 53.004403,
+    "Lon": 128.662691,
+    "Ele": 326.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ekimchan Airport",
+    "gps_code": "UHBP",
+    "freq": "",
+    "Lat": 53.076099,
+    "Lon": 132.951004,
+    "Ele": 542.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Svobodny Airport",
+    "gps_code": "UHBS",
+    "freq": "",
+    "Lat": 51.45500183105469,
+    "Lon": 128.09832763671875,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tynda Airport",
+    "gps_code": "UHBW",
+    "freq": "",
+    "Lat": 55.284936,
+    "Lon": 124.77901,
+    "Ele": 609.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gornyy Airport",
+    "gps_code": "UHBX",
+    "freq": "",
+    "Lat": 54.653452,
+    "Lon": 128.455903,
+    "Ele": 415.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Vankarem Airport",
+    "gps_code": "UHDW",
+    "freq": "",
+    "Lat": 67.838719,
+    "Lon": -175.8494283,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ilirney Airport",
+    "gps_code": "UHEI",
+    "freq": "",
+    "Lat": 67.255278,
+    "Lon": 167.949167,
+    "Ele": 355.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kupol Airport",
+    "gps_code": "UHEK",
+    "freq": "",
+    "Lat": 66.901667,
+    "Lon": 169.56,
+    "Ele": 531.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yamsk Airfield",
+    "gps_code": "UHGB",
+    "freq": "",
+    "Lat": 59.581555,
+    "Lon": 154.15393,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Glukharinoye Airfield",
+    "gps_code": "UHGL",
+    "freq": "",
+    "Lat": 64.999872,
+    "Lon": 153.096328,
+    "Ele": 297.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bomnak Airfield",
+    "gps_code": "UHHG",
+    "freq": "",
+    "Lat": 54.71275,
+    "Lon": 128.8577,
+    "Ele": 365.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khabarovsk Novy Airport",
+    "gps_code": "UHHH",
+    "freq": "125.200",
+    "Lat": 48.528338,
+    "Lon": 135.188588,
+    "Ele": 74.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Troitskoye Airport",
+    "gps_code": "UHHO",
+    "freq": "",
+    "Lat": 49.444833,
+    "Lon": 136.571033,
+    "Ele": 28.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Khabarovsk MVL Airport",
+    "gps_code": "UHHT",
+    "freq": "",
+    "Lat": 48.525484,
+    "Lon": 135.152478,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chumikan Airport",
+    "gps_code": "UHHY",
+    "freq": "",
+    "Lat": 54.695999,
+    "Lon": 135.285995,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalinka Airport",
+    "gps_code": "UHK1",
+    "freq": "",
+    "Lat": 48.407329,
+    "Lon": 135.411571,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Garovka Air Base",
+    "gps_code": "UHK2",
+    "freq": "",
+    "Lat": 48.395946,
+    "Lon": 135.223477,
+    "Ele": 88.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dzemgi Airport",
+    "gps_code": "UHKD",
+    "freq": "",
+    "Lat": 50.605598,
+    "Lon": 137.080994,
+    "Ele": 27.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kamenny Ruchey Naval Air Base",
+    "gps_code": "UHKG",
+    "freq": "",
+    "Lat": 49.235703,
+    "Lon": 140.1931,
+    "Ele": 200.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Komsomolsk-on-Amur Airport",
+    "gps_code": "UHKK",
+    "freq": "",
+    "Lat": 50.40900039672852,
+    "Lon": 136.9340057373047,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sovetskaya Gavan (Maygatka) Airport",
+    "gps_code": "UHKM",
+    "freq": "",
+    "Lat": 48.925067,
+    "Lon": 140.035348,
+    "Ele": 234.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nizhnetambovskoye Airfield",
+    "gps_code": "UHKN",
+    "freq": "",
+    "Lat": 50.935278,
+    "Lon": 138.187501,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sovetskaya Gavan (Postovaya) Airport",
+    "gps_code": "UHKP",
+    "freq": "",
+    "Lat": 49.0311,
+    "Lon": 140.22678,
+    "Ele": 73.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ugolny Yuri Ryktheu Airport",
+    "gps_code": "UHMA",
+    "freq": "124.000",
+    "Lat": 64.734902,
+    "Lon": 177.740997,
+    "Ele": 59.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Provideniya Bay Airport",
+    "gps_code": "UHMD",
+    "freq": "119.300",
+    "Lat": 64.37809753417969,
+    "Lon": -173.2429962158203,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zaliv Kresta Airport",
+    "gps_code": "UHME",
+    "freq": "",
+    "Lat": 66.358398,
+    "Lon": -179.107697,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Omsukchan Airport",
+    "gps_code": "UHMF",
+    "freq": "",
+    "Lat": 62.457001,
+    "Lon": 155.744995,
+    "Ele": 527.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chaybukha Airport",
+    "gps_code": "UHMG",
+    "freq": "",
+    "Lat": 61.834999,
+    "Lon": 160.548004,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Susuman Airport",
+    "gps_code": "UHMH",
+    "freq": "",
+    "Lat": 62.764995,
+    "Lon": 148.147014,
+    "Ele": 648.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mys Shmidta Airport",
+    "gps_code": "UHMI",
+    "freq": "",
+    "Lat": 68.86808,
+    "Lon": -179.374183,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Keperveem Airport",
+    "gps_code": "UHMK",
+    "freq": "",
+    "Lat": 67.845001,
+    "Lon": 166.139999,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lavrentiya Airport",
+    "gps_code": "UHML",
+    "freq": "",
+    "Lat": 65.580426,
+    "Lon": -170.999177,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sokol Airport",
+    "gps_code": "UHMM",
+    "freq": "126.900",
+    "Lat": 59.9109992980957,
+    "Lon": 150.72000122070312,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Omolon Airport",
+    "gps_code": "UHMN",
+    "freq": "",
+    "Lat": 65.239998,
+    "Lon": 160.539993,
+    "Ele": 264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Markovo Airport",
+    "gps_code": "UHMO",
+    "freq": "",
+    "Lat": 64.665446,
+    "Lon": 170.417626,
+    "Ele": 22.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pevek Airport",
+    "gps_code": "UHMP",
+    "freq": "124.200",
+    "Lat": 69.783302,
+    "Lon": 170.597,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Beringovskiy Airport",
+    "gps_code": "UHMR",
+    "freq": "",
+    "Lat": 63.02,
+    "Lon": 179.292999,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Seymchan Airport",
+    "gps_code": "UHMS",
+    "freq": "",
+    "Lat": 62.92078,
+    "Lon": 152.422775,
+    "Ele": 207.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Magadan-13 Airport",
+    "gps_code": "UHMT",
+    "freq": "",
+    "Lat": 59.62329864501953,
+    "Lon": 150.9219970703125,
+    "Ele": 50.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Severo-Evensk Airport",
+    "gps_code": "UHMW",
+    "freq": "",
+    "Lat": 61.921786,
+    "Lon": 159.229059,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Wrangel Island Airport",
+    "gps_code": "UHMZ",
+    "freq": "",
+    "Lat": 70.945356,
+    "Lon": -179.5,
+    "Ele": 34.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Munuk Airport",
+    "gps_code": "UHNA",
+    "freq": "",
+    "Lat": 56.4321,
+    "Lon": 138.0449,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bogorodskoye Airport",
+    "gps_code": "UHNB",
+    "freq": "",
+    "Lat": 52.381041,
+    "Lon": 140.449378,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mar-Kyuel Airport",
+    "gps_code": "UHNK",
+    "freq": "",
+    "Lat": 57.451667,
+    "Lon": 132.5275,
+    "Ele": 818.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nikolayevsk-na-Amure Airport",
+    "gps_code": "UHNN",
+    "freq": "",
+    "Lat": 53.154999,
+    "Lon": 140.649994,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tugur Airport",
+    "gps_code": "UHNT",
+    "freq": "",
+    "Lat": 53.77586,
+    "Lon": 136.83302,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arka Airport",
+    "gps_code": "UHOA",
+    "freq": "",
+    "Lat": 60.1012,
+    "Lon": 142.3015,
+    "Ele": 228.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Okhotsk Airport",
+    "gps_code": "UHOO",
+    "freq": "",
+    "Lat": 59.410065,
+    "Lon": 143.056503,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Pakhachi Airport",
+    "gps_code": "UHPA",
+    "freq": "",
+    "Lat": 60.556587,
+    "Lon": 169.107707,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ossora Airport",
+    "gps_code": "UHPD",
+    "freq": "",
+    "Lat": 59.2236,
+    "Lon": 163.0664,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tigil Airport",
+    "gps_code": "UHPG",
+    "freq": "",
+    "Lat": 57.784,
+    "Lon": 158.729996,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Khalaktyrka Airport",
+    "gps_code": "UHPH",
+    "freq": "",
+    "Lat": 53.026245,
+    "Lon": 158.721972,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust'-Kamchatsk Airport",
+    "gps_code": "UHPK",
+    "freq": "",
+    "Lat": 56.238854,
+    "Lon": 162.689989,
+    "Ele": 61.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Palana Airport",
+    "gps_code": "UHPL",
+    "freq": "",
+    "Lat": 59.082064,
+    "Lon": 159.891577,
+    "Ele": 34.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Milkovo Airport",
+    "gps_code": "UHPM",
+    "freq": "",
+    "Lat": 54.68058013916016,
+    "Lon": 158.5485076904297,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manily Airport",
+    "gps_code": "UHPN",
+    "freq": "",
+    "Lat": 62.485962,
+    "Lon": 165.338917,
+    "Ele": 10.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yelizovo Airport",
+    "gps_code": "UHPP",
+    "freq": "119.400",
+    "Lat": 53.16764,
+    "Lon": 158.451863,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tilichiki Airport",
+    "gps_code": "UHPT",
+    "freq": "",
+    "Lat": 60.384238,
+    "Lon": 166.02503,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Khayryuzovo Airport",
+    "gps_code": "UHPU",
+    "freq": "",
+    "Lat": 57.099706,
+    "Lon": 156.737223,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikolskoye Airport",
+    "gps_code": "UHPX",
+    "freq": "",
+    "Lat": 55.1783332824707,
+    "Lon": 166.04833984375,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Slautnoye Airfield",
+    "gps_code": "UHQE",
+    "freq": "",
+    "Lat": 63.176423,
+    "Lon": 167.978281,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sobolevo Airport",
+    "gps_code": "UHQO",
+    "freq": "",
+    "Lat": 54.30701,
+    "Lon": 155.973673,
+    "Ele": 26.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Burevestnik Airport",
+    "gps_code": "UHSB",
+    "freq": "",
+    "Lat": 44.919998,
+    "Lon": 147.621994,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Okha Airport",
+    "gps_code": "UHSH",
+    "freq": "",
+    "Lat": 53.516446,
+    "Lon": 142.881426,
+    "Ele": 37.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Iturup Airport",
+    "gps_code": "UHSI",
+    "freq": "",
+    "Lat": 45.256389,
+    "Lon": 147.95549,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shakhtyorsk Airport",
+    "gps_code": "UHSK",
+    "freq": "",
+    "Lat": 49.1903,
+    "Lon": 142.082993,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuzhno-Kurilsk Mendeleyevo Airport",
+    "gps_code": "UHSM",
+    "freq": "",
+    "Lat": 43.961066,
+    "Lon": 145.684977,
+    "Ele": 178.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nogliki Airport",
+    "gps_code": "UHSN",
+    "freq": "",
+    "Lat": 51.783955,
+    "Lon": 143.141785,
+    "Ele": 33.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Zonalnoye Airport",
+    "gps_code": "UHSO",
+    "freq": "",
+    "Lat": 50.6692008972,
+    "Lon": 142.761001587,
+    "Ele": 146.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yuzhno-Sakhalinsk Airport",
+    "gps_code": "UHSS",
+    "freq": "120.600",
+    "Lat": 46.885461,
+    "Lon": 142.717466,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Amgu Airport",
+    "gps_code": "UHTG",
+    "freq": "",
+    "Lat": 45.84126,
+    "Lon": 137.673568,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vostok Airfield",
+    "gps_code": "UHTO",
+    "freq": "",
+    "Lat": 46.402222,
+    "Lon": 135.788611,
+    "Ele": 371.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Svetlaya Airport",
+    "gps_code": "UHTQ",
+    "freq": "",
+    "Lat": 46.541704,
+    "Lon": 138.321703,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Samarga Airport",
+    "gps_code": "UHTS",
+    "freq": "",
+    "Lat": 47.250835,
+    "Lon": 138.789459,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zolotaya Dolina Air Base",
+    "gps_code": "UHU1",
+    "freq": "",
+    "Lat": 42.959999,
+    "Lon": 133.115005,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Yedinka Airport",
+    "gps_code": "UHWE",
+    "freq": "",
+    "Lat": 47.178201,
+    "Lon": 138.657357,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kavalerovo Airport",
+    "gps_code": "UHWK",
+    "freq": "",
+    "Lat": 44.2726,
+    "Lon": 135.029,
+    "Ele": 222.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Plastun Airport",
+    "gps_code": "UHWP",
+    "freq": "",
+    "Lat": 44.814999,
+    "Lon": 136.292007,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Terney Airport",
+    "gps_code": "UHWT",
+    "freq": "",
+    "Lat": 45.0825,
+    "Lon": 136.5912,
+    "Ele": 10.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Vladivostok International Airport",
+    "gps_code": "UHWW",
+    "freq": "127.800",
+    "Lat": 43.396256,
+    "Lon": 132.148155,
+    "Ele": 18.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chita-Kadala International Airport",
+    "gps_code": "UIAA",
+    "freq": "126.400",
+    "Lat": 52.026299,
+    "Lon": 113.306,
+    "Ele": 692.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tungukochen Airport",
+    "gps_code": "UIAC",
+    "freq": "",
+    "Lat": 53.538317,
+    "Lon": 115.615139,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasniy Chikoy Airfield",
+    "gps_code": "UIAD",
+    "freq": "",
+    "Lat": 50.372068,
+    "Lon": 108.76771,
+    "Ele": 770.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krasnokamensk Airport",
+    "gps_code": "UIAE",
+    "freq": "",
+    "Lat": 50.033108,
+    "Lon": 118.061142,
+    "Ele": 652.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust'-Karenga Airport",
+    "gps_code": "UIAG",
+    "freq": "",
+    "Lat": 54.441672,
+    "Lon": 116.513894,
+    "Ele": 677.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Chara Airport",
+    "gps_code": "UIAR",
+    "freq": "",
+    "Lat": 56.913334,
+    "Lon": 118.269997,
+    "Ele": 670.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yumurchen Airport",
+    "gps_code": "UIAU",
+    "freq": "",
+    "Lat": 53.6195,
+    "Lon": 114.034,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Usugli Airport",
+    "gps_code": "UIAY",
+    "freq": "",
+    "Lat": 52.659388,
+    "Lon": 115.242634,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bratsk Airport",
+    "gps_code": "UIBB",
+    "freq": "121.800",
+    "Lat": 56.370601654052734,
+    "Lon": 101.697998046875,
+    "Ele": 490.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Ilimsk Airport",
+    "gps_code": "UIBS",
+    "freq": "",
+    "Lat": 58.136101,
+    "Lon": 102.565002,
+    "Ele": 408.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zheleznogorsk Airport",
+    "gps_code": "UIBV",
+    "freq": "",
+    "Lat": 56.487701,
+    "Lon": 104.106003,
+    "Ele": 593.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Belaya Air Base",
+    "gps_code": "UIIB",
+    "freq": "",
+    "Lat": 52.915001,
+    "Lon": 103.574997,
+    "Ele": 458.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Khuzhir Airport",
+    "gps_code": "UIIH",
+    "freq": "",
+    "Lat": 53.217869,
+    "Lon": 107.410469,
+    "Ele": 495.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Irkutsk International Airport",
+    "gps_code": "UIII",
+    "freq": "125.200",
+    "Lat": 52.268002,
+    "Lon": 104.389,
+    "Ele": 510.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Zhigalovo Airport",
+    "gps_code": "UIIV",
+    "freq": "",
+    "Lat": 54.79999923706055,
+    "Lon": 105.1500015258789,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bodaybo Airport",
+    "gps_code": "UIKB",
+    "freq": "",
+    "Lat": 57.8661003113,
+    "Lon": 114.242996216,
+    "Ele": 280.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yerbogachen Airport",
+    "gps_code": "UIKE",
+    "freq": "",
+    "Lat": 61.2750015259,
+    "Lon": 108.029998779,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirensk Airport",
+    "gps_code": "UIKK",
+    "freq": "",
+    "Lat": 57.773,
+    "Lon": 108.064,
+    "Ele": 256.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mama Airport",
+    "gps_code": "UIKM",
+    "freq": "",
+    "Lat": 58.31333160400391,
+    "Lon": 112.88999938964844,
+    "Ele": 200.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Preobrazheniye Airport",
+    "gps_code": "UIKP",
+    "freq": "",
+    "Lat": 42.921698,
+    "Lon": 133.904438,
+    "Ele": 10.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nizhneudinsk Airport",
+    "gps_code": "UINN",
+    "freq": "",
+    "Lat": 54.8894,
+    "Lon": 99.067,
+    "Ele": 408.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kazachinskaya Airport",
+    "gps_code": "UITK",
+    "freq": "",
+    "Lat": 56.280151,
+    "Lon": 107.567566,
+    "Ele": 456.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ust-Kut Airport",
+    "gps_code": "UITT",
+    "freq": "",
+    "Lat": 56.856701,
+    "Lon": 105.730003,
+    "Ele": 666.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nizhneangarsk International Airport",
+    "gps_code": "UIUN",
+    "freq": "",
+    "Lat": 55.8008,
+    "Lon": 109.595001,
+    "Ele": 470.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Baikal International Airport",
+    "gps_code": "UIUU",
+    "freq": "129.300",
+    "Lat": 51.808614,
+    "Lon": 107.439652,
+    "Ele": 515.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Talagi Airport",
+    "gps_code": "ULAA",
+    "freq": "122.000",
+    "Lat": 64.60030364990234,
+    "Lon": 40.71670150756836,
+    "Ele": 18.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vaskovo Airport",
+    "gps_code": "ULAH",
+    "freq": "",
+    "Lat": 64.441704,
+    "Lon": 40.4217,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Leshukonskoye Airport",
+    "gps_code": "ULAL",
+    "freq": "",
+    "Lat": 64.8960037231,
+    "Lon": 45.7229995728,
+    "Ele": 67.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Naryan Mar Airport",
+    "gps_code": "ULAM",
+    "freq": "",
+    "Lat": 67.639999,
+    "Lon": 53.121899,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Onega Airfield",
+    "gps_code": "ULAO",
+    "freq": "",
+    "Lat": 63.909376,
+    "Lon": 38.121786,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kargopol",
+    "gps_code": "ULAR",
+    "freq": "",
+    "Lat": 61.515033,
+    "Lon": 38.912039,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Solovki Airport",
+    "gps_code": "ULAS",
+    "freq": "",
+    "Lat": 65.029999,
+    "Lon": 35.733334,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamenka Airfield",
+    "gps_code": "ULBK",
+    "freq": "",
+    "Lat": 65.87835,
+    "Lon": 44.112947,
+    "Ele": 7.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Purnema Airfield",
+    "gps_code": "ULBM",
+    "freq": "",
+    "Lat": 64.3854,
+    "Lon": 37.441235,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Letnyaya Zolotitsa Airstrip",
+    "gps_code": "ULBZ",
+    "freq": "",
+    "Lat": 64.959999,
+    "Lon": 36.830002,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amderma Airport",
+    "gps_code": "ULDD",
+    "freq": "",
+    "Lat": 69.76329803466797,
+    "Lon": 61.556400299072266,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karatayka Airport",
+    "gps_code": "ULDT",
+    "freq": "",
+    "Lat": 68.764177,
+    "Lon": 61.418718,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Varandey Airport",
+    "gps_code": "ULDW",
+    "freq": "",
+    "Lat": 68.848503,
+    "Lon": 58.201401,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khorey-Ver Airport",
+    "gps_code": "ULEH",
+    "freq": "",
+    "Lat": 67.416721,
+    "Lon": 58.044769,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kotkino Airfield",
+    "gps_code": "ULEK",
+    "freq": "",
+    "Lat": 67.027443,
+    "Lon": 51.114849,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kharuta Airport",
+    "gps_code": "ULER",
+    "freq": "",
+    "Lat": 66.846122,
+    "Lon": 59.539305,
+    "Ele": 50.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsenogora Airport",
+    "gps_code": "ULIC",
+    "freq": "",
+    "Lat": 64.8870010376,
+    "Lon": 46.7210006714,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vizhas Airfield",
+    "gps_code": "ULJI",
+    "freq": "",
+    "Lat": 66.637283,
+    "Lon": 45.906166,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Oma Airfield",
+    "gps_code": "ULJM",
+    "freq": "",
+    "Lat": 66.652481,
+    "Lon": 46.507648,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Olema Airport",
+    "gps_code": "ULJO",
+    "freq": "",
+    "Lat": 64.495,
+    "Lon": 46.14666,
+    "Ele": 50.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kotlas Airport",
+    "gps_code": "ULKK",
+    "freq": "",
+    "Lat": 61.235801696777344,
+    "Lon": 46.6974983215332,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Savvatiya Air Base",
+    "gps_code": "ULKS",
+    "freq": "",
+    "Lat": 60.994998931884766,
+    "Lon": 46.869998931884766,
+    "Ele": 96.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Pulkovo Airport",
+    "gps_code": "ULLI",
+    "freq": "120.900",
+    "Lat": 59.800301,
+    "Lon": 30.262501,
+    "Ele": 23.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pushkin Airport",
+    "gps_code": "ULLP",
+    "freq": "",
+    "Lat": 59.685001,
+    "Lon": 30.338301,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Umba Airstrip",
+    "gps_code": "ULMA",
+    "freq": "",
+    "Lat": 66.696999,
+    "Lon": 34.387001,
+    "Ele": 37.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Murmansk Airport",
+    "gps_code": "ULMM",
+    "freq": "127.400",
+    "Lat": 68.78170013427734,
+    "Lon": 32.75080108642578,
+    "Ele": 81.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pestovo Airfield",
+    "gps_code": "ULNP",
+    "freq": "",
+    "Lat": 58.608002,
+    "Lon": 35.779999,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pskov Airport",
+    "gps_code": "ULOO",
+    "freq": "122.000",
+    "Lat": 57.78390121459961,
+    "Lon": 28.39559936523437,
+    "Ele": 46.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Petrozavodsk Airport",
+    "gps_code": "ULPB",
+    "freq": "128.000",
+    "Lat": 61.88520050048828,
+    "Lon": 34.15470123291016,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalevala Airfield",
+    "gps_code": "ULPK",
+    "freq": "",
+    "Lat": 65.209999,
+    "Lon": 31.135,
+    "Ele": 114.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Peski Airfield",
+    "gps_code": "ULPP",
+    "freq": "",
+    "Lat": 61.831944,
+    "Lon": 34.295555,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Segezha Airfield",
+    "gps_code": "ULPS",
+    "freq": "",
+    "Lat": 63.758999,
+    "Lon": 34.283001,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Severniy veter",
+    "gps_code": "ULSW",
+    "freq": "",
+    "Lat": 59.835311,
+    "Lon": 31.480533,
+    "Ele": 59.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cherepovets Airport",
+    "gps_code": "ULWC",
+    "freq": "",
+    "Lat": 59.273601532,
+    "Lon": 38.0158004761,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kichmengskiy Gorodok Airport",
+    "gps_code": "ULWK",
+    "freq": "",
+    "Lat": 59.97700119018555,
+    "Lon": 45.82500076293945,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Velikiy Ustyug Airport",
+    "gps_code": "ULWU",
+    "freq": "",
+    "Lat": 60.7883,
+    "Lon": 46.259998,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vologda Airport",
+    "gps_code": "ULWW",
+    "freq": "",
+    "Lat": 59.282501,
+    "Lon": 39.944401,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Medovoye Airfield",
+    "gps_code": "UMKE",
+    "freq": "",
+    "Lat": 54.540937,
+    "Lon": 20.336244,
+    "Ele": 25.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khrabrovo Airport",
+    "gps_code": "UMKK",
+    "freq": "126.000",
+    "Lat": 54.88999938964844,
+    "Lon": 20.59259986877441,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Strelnya Airfield",
+    "gps_code": "UMKS",
+    "freq": "",
+    "Lat": 54.515919,
+    "Lon": 20.618509,
+    "Ele": 23.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Abakan International Airport",
+    "gps_code": "UNAA",
+    "freq": "134.300",
+    "Lat": 53.740002,
+    "Lon": 91.385002,
+    "Ele": 253.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Shushenskoye Airport",
+    "gps_code": "UNAU",
+    "freq": "",
+    "Lat": 53.385176,
+    "Lon": 92.044718,
+    "Ele": 269.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kosh-Agach Airport",
+    "gps_code": "UNBA",
+    "freq": "",
+    "Lat": 49.946443,
+    "Lon": 88.630096,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Barnaul Airport",
+    "gps_code": "UNBB",
+    "freq": "120.300",
+    "Lat": 53.363800048828125,
+    "Lon": 83.53849792480469,
+    "Ele": 255.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gorno-Altaysk Airport",
+    "gps_code": "UNBG",
+    "freq": "",
+    "Lat": 51.969204,
+    "Lon": 85.836539,
+    "Ele": 294.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Volchikha Airport",
+    "gps_code": "UNBM",
+    "freq": "",
+    "Lat": 52.025089,
+    "Lon": 80.337868,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Koksa Airport",
+    "gps_code": "UNBU",
+    "freq": "",
+    "Lat": 50.264711,
+    "Lon": 85.713489,
+    "Ele": 986.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorodskoy Aeroport Airfield",
+    "gps_code": "UNCC",
+    "freq": "",
+    "Lat": 55.09573,
+    "Lon": 82.90945,
+    "Ele": 171.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kemerovo Airport",
+    "gps_code": "UNEE",
+    "freq": "125.500",
+    "Lat": 55.27009963989258,
+    "Lon": 86.1072006225586,
+    "Ele": 263.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aksenovo Airport",
+    "gps_code": "UNHA",
+    "freq": "",
+    "Lat": 58.963999,
+    "Lon": 101.571868,
+    "Ele": 176.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Zotino Airport",
+    "gps_code": "UNHZ",
+    "freq": "",
+    "Lat": 60.900834,
+    "Lon": 89.680726,
+    "Ele": 42.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aydara Airport",
+    "gps_code": "UNIA",
+    "freq": "",
+    "Lat": 58.5291,
+    "Lon": 88.4031,
+    "Ele": 113.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Baykit Airport",
+    "gps_code": "UNIB",
+    "freq": "",
+    "Lat": 61.676701,
+    "Lon": 96.355003,
+    "Ele": 260.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yeniseysk Airport",
+    "gps_code": "UNII",
+    "freq": "",
+    "Lat": 58.474201,
+    "Lon": 92.112503,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yartsevo Airport",
+    "gps_code": "UNIJ",
+    "freq": "",
+    "Lat": 60.255001,
+    "Lon": 90.195,
+    "Ele": 64.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Podkamennaya Tunguska Airport",
+    "gps_code": "UNIP",
+    "freq": "",
+    "Lat": 61.589699,
+    "Lon": 89.994003,
+    "Ele": 64.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Severo-Yeniseysk Airport",
+    "gps_code": "UNIS",
+    "freq": "",
+    "Lat": 60.373299,
+    "Lon": 93.011703,
+    "Ele": 520.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tura Mountain Airport",
+    "gps_code": "UNIT",
+    "freq": "",
+    "Lat": 64.333511,
+    "Lon": 100.432892,
+    "Ele": 623.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vanavara Airport",
+    "gps_code": "UNIW",
+    "freq": "",
+    "Lat": 60.356229,
+    "Lon": 102.309641,
+    "Ele": 271.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Boguchany Airport",
+    "gps_code": "UNKB",
+    "freq": "",
+    "Lat": 58.380615,
+    "Lon": 97.472336,
+    "Ele": 135.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kodinsk Airport",
+    "gps_code": "UNKI",
+    "freq": "",
+    "Lat": 58.479401,
+    "Lon": 99.093903,
+    "Ele": 301.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Krasnoyarsk International Airport",
+    "gps_code": "UNKL",
+    "freq": "127.700",
+    "Lat": 56.173077,
+    "Lon": 92.492437,
+    "Ele": 287.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krasnoyarsk Cheremshanka Airport",
+    "gps_code": "UNKM",
+    "freq": "",
+    "Lat": 56.177584,
+    "Lon": 92.545881,
+    "Ele": 253.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sharypovo Airport",
+    "gps_code": "UNKO",
+    "freq": "",
+    "Lat": 55.454914,
+    "Lon": 89.173882,
+    "Ele": 335.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Achinsk Airport",
+    "gps_code": "UNKS",
+    "freq": "",
+    "Lat": 56.269185,
+    "Lon": 90.57511,
+    "Ele": 314.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kyzyl Airport",
+    "gps_code": "UNKY",
+    "freq": "",
+    "Lat": 51.669399,
+    "Lon": 94.400597,
+    "Ele": 647.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kargasok Airport",
+    "gps_code": "UNLK",
+    "freq": "",
+    "Lat": 59.061858,
+    "Lon": 80.823204,
+    "Ele": 59.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolpashevo Airport",
+    "gps_code": "UNLL",
+    "freq": "",
+    "Lat": 58.325298,
+    "Lon": 82.932503,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Novy Vasyugan Airport",
+    "gps_code": "UNLW",
+    "freq": "",
+    "Lat": 58.586,
+    "Lon": 76.504,
+    "Ele": 75.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yeltsovka Airport",
+    "gps_code": "UNNE",
+    "freq": "",
+    "Lat": 55.0924,
+    "Lon": 83.004501,
+    "Ele": 188.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Novosibirsk Tolmachevo Airport",
+    "gps_code": "UNNT",
+    "freq": "127.500",
+    "Lat": 55.019756,
+    "Lon": 82.618675,
+    "Ele": 111.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalachinsk Airport",
+    "gps_code": "UNOK",
+    "freq": "",
+    "Lat": 55.02000045776367,
+    "Lon": 74.61000061035156,
+    "Ele": 110.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Omsk Central Airport",
+    "gps_code": "UNOO",
+    "freq": "131.200",
+    "Lat": 54.96699905395508,
+    "Lon": 73.31050109863281,
+    "Ele": 94.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Omsk Severny Airport",
+    "gps_code": "UNOS",
+    "freq": "",
+    "Lat": 54.974998,
+    "Lon": 73.555,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tara Airport",
+    "gps_code": "UNOT",
+    "freq": "",
+    "Lat": 56.900001525878906,
+    "Lon": 74.30000305175781,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tevriz Airport",
+    "gps_code": "UNOW",
+    "freq": "",
+    "Lat": 57.50400161743164,
+    "Lon": 72.33100128173828,
+    "Ele": 66.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Strezhevoy Airport",
+    "gps_code": "UNSS",
+    "freq": "",
+    "Lat": 60.7094,
+    "Lon": 77.660004,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beryozkino Airfield",
+    "gps_code": "UNTR",
+    "freq": "119.150",
+    "Lat": 56.50264,
+    "Lon": 84.686575,
+    "Ele": 120.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bogashevo Airport",
+    "gps_code": "UNTT",
+    "freq": "",
+    "Lat": 56.380298614502,
+    "Lon": 85.208297729492,
+    "Ele": 182.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Spichenkovo Airport",
+    "gps_code": "UNWW",
+    "freq": "",
+    "Lat": 53.811401,
+    "Lon": 86.877197,
+    "Ele": 312.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dikson Airport",
+    "gps_code": "UODD",
+    "freq": "",
+    "Lat": 73.517807,
+    "Lon": 80.379669,
+    "Ele": 14.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Cape Chelyuskin Airfield",
+    "gps_code": "UODL",
+    "freq": "",
+    "Lat": 77.712,
+    "Lon": 104.24,
+    "Ele": 18.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nagurskoye",
+    "gps_code": "UODN",
+    "freq": "",
+    "Lat": 80.803207,
+    "Lon": 47.663586,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sredniy Island Air Base",
+    "gps_code": "UODS",
+    "freq": "",
+    "Lat": 79.52958,
+    "Lon": 91.07495,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khatanga Airport",
+    "gps_code": "UOHH",
+    "freq": "126.600",
+    "Lat": 71.97810363769531,
+    "Lon": 102.49099731445312,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Snezhnogorsk Airport",
+    "gps_code": "UOIC",
+    "freq": "",
+    "Lat": 68.07666778564453,
+    "Lon": 87.6449966430664,
+    "Ele": 31.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Svetlogorsk Airport",
+    "gps_code": "UOIG",
+    "freq": "",
+    "Lat": 66.839996,
+    "Lon": 88.403336,
+    "Ele": 120.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Igarka Airport",
+    "gps_code": "UOII",
+    "freq": "",
+    "Lat": 67.437202,
+    "Lon": 86.621902,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Norilsk-Alykel Airport",
+    "gps_code": "UOOO",
+    "freq": "120.400",
+    "Lat": 69.31109619140625,
+    "Lon": 87.33219909667969,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Turukhansk Airport",
+    "gps_code": "UOTT",
+    "freq": "",
+    "Lat": 65.797203,
+    "Lon": 87.935303,
+    "Ele": 39.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tutonchany Airport",
+    "gps_code": "UOTU",
+    "freq": "",
+    "Lat": 64.210168,
+    "Lon": 93.792455,
+    "Ele": 274.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Anapa Vityazevo Airport",
+    "gps_code": "URKA",
+    "freq": "118.700",
+    "Lat": 45.002102,
+    "Lon": 37.347301,
+    "Ele": 53.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gelendzhik Airport",
+    "gps_code": "URKG",
+    "freq": "",
+    "Lat": 44.5820926295,
+    "Lon": 38.0124807358,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krasnodar Pashkovsky International Airport",
+    "gps_code": "URKK",
+    "freq": "129.600",
+    "Lat": 45.034698,
+    "Lon": 39.170502,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Armavir Air Base",
+    "gps_code": "URKR",
+    "freq": "",
+    "Lat": 44.968661,
+    "Lon": 41.107408,
+    "Ele": 217.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Enem Airfield",
+    "gps_code": "URKS",
+    "freq": "",
+    "Lat": 44.945999,
+    "Lon": 38.931999,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yessentuki Airfield",
+    "gps_code": "URME",
+    "freq": "",
+    "Lat": 44.06,
+    "Lon": 42.829,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grozny Airport",
+    "gps_code": "URMG",
+    "freq": "127.200",
+    "Lat": 43.388106,
+    "Lon": 45.699772,
+    "Ele": 167.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Makhachkala Uytash International Airport",
+    "gps_code": "URML",
+    "freq": "119.700",
+    "Lat": 42.816799,
+    "Lon": 47.652302,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mineralnyye Vody Airport",
+    "gps_code": "URMM",
+    "freq": "119.300",
+    "Lat": 44.22510147094727,
+    "Lon": 43.08190155029297,
+    "Ele": 321.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nalchik Airport",
+    "gps_code": "URMN",
+    "freq": "126.900",
+    "Lat": 43.51290130615234,
+    "Lon": 43.636600494384766,
+    "Ele": 445.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vladikavkaz Beslan International Airport",
+    "gps_code": "URMO",
+    "freq": "118.000",
+    "Lat": 43.205101,
+    "Lon": 44.606602,
+    "Ele": 509.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Magas Airport",
+    "gps_code": "URMS",
+    "freq": "",
+    "Lat": 43.323268,
+    "Lon": 45.012568,
+    "Ele": 355.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Stavropol Shpakovskoye Airport",
+    "gps_code": "URMT",
+    "freq": "120.300",
+    "Lat": 45.10919952392578,
+    "Lon": 42.11280059814453,
+    "Ele": 452.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dudinka Airport",
+    "gps_code": "UROD",
+    "freq": "",
+    "Lat": 69.375,
+    "Lon": 86.15667,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shakhty Airfield",
+    "gps_code": "URRH",
+    "freq": "",
+    "Lat": 47.697,
+    "Lon": 40.287,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Potapov",
+    "gps_code": "URRN",
+    "freq": "",
+    "Lat": 47.465981,
+    "Lon": 41.925036,
+    "Ele": 0.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Platov International Airport",
+    "gps_code": "URRP",
+    "freq": "",
+    "Lat": 47.493888,
+    "Lon": 39.924722,
+    "Ele": 64.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taganrog Yuzhny Airport",
+    "gps_code": "URRT",
+    "freq": "124.000",
+    "Lat": 47.1983333,
+    "Lon": 38.8491667,
+    "Ele": 35.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Sochi International Airport",
+    "gps_code": "URSS",
+    "freq": "118.800",
+    "Lat": 43.449902,
+    "Lon": 39.9566,
+    "Ele": 27.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Astrakhan Narimanovo Boris M. Kustodiev International Airport",
+    "gps_code": "URWA",
+    "freq": "126.000",
+    "Lat": 46.282843,
+    "Lon": 48.010511,
+    "Ele": -19.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Elista Airport",
+    "gps_code": "URWI",
+    "freq": "124.200",
+    "Lat": 46.3739013671875,
+    "Lon": 44.33089828491211,
+    "Ele": 152.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Volgograd International Airport",
+    "gps_code": "URWW",
+    "freq": "125.300",
+    "Lat": 48.782501220703125,
+    "Lon": 44.34550094604492,
+    "Ele": 146.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chelyabinsk Balandino Airport",
+    "gps_code": "USCC",
+    "freq": "124.700",
+    "Lat": 55.305801,
+    "Lon": 61.5033,
+    "Ele": 234.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Chelyabinsk Shagol Airport",
+    "gps_code": "USCG",
+    "freq": "",
+    "Lat": 55.2599983215332,
+    "Lon": 61.29999923706055,
+    "Ele": 253.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Magnitogorsk International Airport",
+    "gps_code": "USCM",
+    "freq": "120.800",
+    "Lat": 53.39310073852539,
+    "Lon": 58.75569915771485,
+    "Ele": 435.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalachevo Airfield",
+    "gps_code": "USCV",
+    "freq": "",
+    "Lat": 54.95299911499024,
+    "Lon": 61.5,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sabetta International Airport",
+    "gps_code": "USDA",
+    "freq": "",
+    "Lat": 71.219167,
+    "Lon": 72.052222,
+    "Ele": 14.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bovanenkovo Airport",
+    "gps_code": "USDB",
+    "freq": "",
+    "Lat": 70.315278,
+    "Lon": 68.333611,
+    "Ele": 7.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Salekhard Airport",
+    "gps_code": "USDD",
+    "freq": "120.800",
+    "Lat": 66.5907974243164,
+    "Lon": 66.61100006103516,
+    "Ele": 66.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Antipayuta Airport",
+    "gps_code": "USDI",
+    "freq": "",
+    "Lat": 69.092869,
+    "Lon": 76.860989,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mys Kamenny Airport",
+    "gps_code": "USDK",
+    "freq": "",
+    "Lat": 68.467676,
+    "Lon": 73.596733,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tolka Airport",
+    "gps_code": "USDO",
+    "freq": "",
+    "Lat": 63.987808,
+    "Lon": 82.050889,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasnoselkup Airport",
+    "gps_code": "USDP",
+    "freq": "",
+    "Lat": 65.717,
+    "Lon": 82.455,
+    "Ele": 30.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Yar-Sale Airport",
+    "gps_code": "USDR",
+    "freq": "",
+    "Lat": 66.853517,
+    "Lon": 70.847406,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarko-Sale Airport",
+    "gps_code": "USDS",
+    "freq": "",
+    "Lat": 64.930485,
+    "Lon": 77.811295,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tazovsky Airport",
+    "gps_code": "USDT",
+    "freq": "",
+    "Lat": 67.4842,
+    "Lon": 78.644402,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Urengoy Airport",
+    "gps_code": "USDU",
+    "freq": "",
+    "Lat": 65.9599990845,
+    "Lon": 78.43699646,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Saranpaul' Airport",
+    "gps_code": "USHA",
+    "freq": "",
+    "Lat": 64.2571,
+    "Lon": 60.9123,
+    "Ele": 27.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Berezovo Airport",
+    "gps_code": "USHB",
+    "freq": "",
+    "Lat": 63.92100143432617,
+    "Lon": 65.03050231933594,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khanty Mansiysk Airport",
+    "gps_code": "USHH",
+    "freq": "120.400",
+    "Lat": 61.0285,
+    "Lon": 69.086098,
+    "Ele": 23.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Igrim Airport",
+    "gps_code": "USHI",
+    "freq": "",
+    "Lat": 63.200391,
+    "Lon": 64.440136,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kondinskoye Airport",
+    "gps_code": "USHK",
+    "freq": "",
+    "Lat": 59.655083,
+    "Lon": 67.430046,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lugovoy Airport",
+    "gps_code": "USHL",
+    "freq": "",
+    "Lat": 59.725122,
+    "Lon": 65.833281,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nyagan Airport",
+    "gps_code": "USHN",
+    "freq": "",
+    "Lat": 62.110001,
+    "Lon": 65.614998,
+    "Ele": 110.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Beloyarskiy Airport",
+    "gps_code": "USHQ",
+    "freq": "",
+    "Lat": 63.686901,
+    "Lon": 66.698601,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sovetskiy Airport",
+    "gps_code": "USHS",
+    "freq": "",
+    "Lat": 61.326622009277344,
+    "Lon": 63.60191345214844,
+    "Ele": 107.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Uray Airport",
+    "gps_code": "USHU",
+    "freq": "",
+    "Lat": 60.103298,
+    "Lon": 64.826698,
+    "Ele": 57.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Izhevsk Airport",
+    "gps_code": "USII",
+    "freq": "",
+    "Lat": 56.82809829711914,
+    "Lon": 53.45750045776367,
+    "Ele": 161.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pobedilovo Airport",
+    "gps_code": "USKK",
+    "freq": "",
+    "Lat": 58.503883,
+    "Lon": 49.347831,
+    "Ele": 146.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nadym Airport",
+    "gps_code": "USMM",
+    "freq": "",
+    "Lat": 65.48090362548828,
+    "Lon": 72.69889831542969,
+    "Ele": 14.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Novy Urengoy Airport",
+    "gps_code": "USMU",
+    "freq": "",
+    "Lat": 66.06939697265625,
+    "Lon": 76.52030181884766,
+    "Ele": 64.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nizhnevartovsk Airport",
+    "gps_code": "USNN",
+    "freq": "134.300",
+    "Lat": 60.949299,
+    "Lon": 76.483597,
+    "Ele": 53.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Perm International Airport",
+    "gps_code": "USPP",
+    "freq": "127.100",
+    "Lat": 57.914501,
+    "Lon": 56.021198,
+    "Ele": 123.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Berezniki Airport",
+    "gps_code": "USPT",
+    "freq": "",
+    "Lat": 59.579548,
+    "Lon": 56.857681,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ay-Pim Airport",
+    "gps_code": "USRA",
+    "freq": "",
+    "Lat": 62.265,
+    "Lon": 71.191,
+    "Ele": 78.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kogalym International Airport",
+    "gps_code": "USRK",
+    "freq": "123.400",
+    "Lat": 62.19039916992188,
+    "Lon": 74.53379821777344,
+    "Ele": 67.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nefteyugansk Airport",
+    "gps_code": "USRN",
+    "freq": "",
+    "Lat": 61.108299,
+    "Lon": 72.650002,
+    "Ele": 35.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Noyabrsk Airport",
+    "gps_code": "USRO",
+    "freq": "",
+    "Lat": 63.18330001831055,
+    "Lon": 75.2699966430664,
+    "Ele": 135.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Surgut Airport",
+    "gps_code": "USRR",
+    "freq": "124.800",
+    "Lat": 61.34370040893555,
+    "Lon": 73.40180206298828,
+    "Ele": 61.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Uktus Airport",
+    "gps_code": "USSK",
+    "freq": "",
+    "Lat": 56.701698,
+    "Lon": 60.790001,
+    "Ele": 196.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alapayevsk Airfield",
+    "gps_code": "USSQ",
+    "freq": "",
+    "Lat": 57.868108,
+    "Lon": 61.748304,
+    "Ele": 128.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Koltsovo Airport",
+    "gps_code": "USSS",
+    "freq": "125.900",
+    "Lat": 56.743099212646,
+    "Lon": 60.802700042725,
+    "Ele": 232.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Remezov Airport",
+    "gps_code": "USTJ",
+    "freq": "",
+    "Lat": 58.058427,
+    "Lon": 68.348801,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Plekhanovo Airport",
+    "gps_code": "USTL",
+    "freq": "",
+    "Lat": 57.144691,
+    "Lon": 65.469718,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tobolsk Airport",
+    "gps_code": "USTO",
+    "freq": "",
+    "Lat": 58.135799,
+    "Lon": 68.231903,
+    "Ele": 50.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Roshchino International Airport",
+    "gps_code": "USTR",
+    "freq": "126.100",
+    "Lat": 57.16833,
+    "Lon": 65.31611,
+    "Ele": 115.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kurgan Airport",
+    "gps_code": "USUU",
+    "freq": "",
+    "Lat": 55.4753,
+    "Lon": 65.415604,
+    "Ele": 73.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kostroma Sokerkino Airport",
+    "gps_code": "UUBA",
+    "freq": "",
+    "Lat": 57.796902,
+    "Lon": 41.019402,
+    "Ele": 135.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grabtsevo Airport",
+    "gps_code": "UUBC",
+    "freq": "",
+    "Lat": 54.5499992371,
+    "Lon": 36.3666687012,
+    "Ele": 199.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ivanovo South Airport",
+    "gps_code": "UUBI",
+    "freq": "",
+    "Lat": 56.93939971923828,
+    "Lon": 40.940799713134766,
+    "Ele": 125.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Staroselye Airport",
+    "gps_code": "UUBK",
+    "freq": "",
+    "Lat": 58.104198,
+    "Lon": 38.929401,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zmeyevo Airfield",
+    "gps_code": "UUBN",
+    "freq": "",
+    "Lat": 56.914691,
+    "Lon": 35.935672,
+    "Ele": 143.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bryansk Airport",
+    "gps_code": "UUBP",
+    "freq": "119.200",
+    "Lat": 53.214199,
+    "Lon": 34.176399,
+    "Ele": 202.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sharya Airport",
+    "gps_code": "UUBQ",
+    "freq": "",
+    "Lat": 58.391989,
+    "Lon": 45.554466,
+    "Ele": 36.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Smolensk South Airport",
+    "gps_code": "UUBS",
+    "freq": "",
+    "Lat": 54.745,
+    "Lon": 32.065,
+    "Ele": 249.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Zhukovsky International Airport",
+    "gps_code": "UUBW",
+    "freq": "",
+    "Lat": 55.553299,
+    "Lon": 38.150002,
+    "Ele": 114.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Domodedovo International Airport",
+    "gps_code": "UUDD",
+    "freq": "120.600",
+    "Lat": 55.408798,
+    "Lon": 37.9063,
+    "Ele": 179.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tunoshna Airport",
+    "gps_code": "UUDL",
+    "freq": "120.300",
+    "Lat": 57.560699,
+    "Lon": 40.157398,
+    "Ele": 87.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Sheremetyevo International Airport",
+    "gps_code": "UUEE",
+    "freq": "121.900",
+    "Lat": 55.972599,
+    "Lon": 37.4146,
+    "Ele": 189.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kimry Airfield",
+    "gps_code": "UUEI",
+    "freq": "",
+    "Lat": 56.798302,
+    "Lon": 37.330002,
+    "Ele": 136.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Migalovo Air Base",
+    "gps_code": "UUEM",
+    "freq": "120.200",
+    "Lat": 56.82469940185547,
+    "Lon": 35.7577018737793,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Selnikovo Airfield",
+    "gps_code": "UUMD",
+    "freq": "",
+    "Lat": 55.129783,
+    "Lon": 39.145733,
+    "Ele": 107.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stupino Air Base",
+    "gps_code": "UUMI",
+    "freq": "",
+    "Lat": 54.888,
+    "Lon": 38.147,
+    "Ele": 178.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Severka Airfield",
+    "gps_code": "UUML",
+    "freq": "",
+    "Lat": 55.206608,
+    "Lon": 38.679149,
+    "Ele": 132.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ostafyevo International Airport",
+    "gps_code": "UUMO",
+    "freq": "",
+    "Lat": 55.511667,
+    "Lon": 37.507222,
+    "Ele": 173.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tretyakovo Airport",
+    "gps_code": "UUMT",
+    "freq": "",
+    "Lat": 54.904999,
+    "Lon": 39.026669,
+    "Ele": 157.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chkalovskiy Air Base",
+    "gps_code": "UUMU",
+    "freq": "121.100",
+    "Lat": 55.8783,
+    "Lon": 38.061699,
+    "Ele": 152.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Belgorod International Airport",
+    "gps_code": "UUOB",
+    "freq": "133.000",
+    "Lat": 50.643798828125,
+    "Lon": 36.5900993347168,
+    "Ele": 224.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pridacha",
+    "gps_code": "UUOD",
+    "freq": "",
+    "Lat": 51.652271,
+    "Lon": 39.255524,
+    "Ele": 104.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kursk East Airport",
+    "gps_code": "UUOK",
+    "freq": "131.500",
+    "Lat": 51.7505989074707,
+    "Lon": 36.29560089111328,
+    "Ele": 209.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lipetsk Airport",
+    "gps_code": "UUOL",
+    "freq": "",
+    "Lat": 52.70280075073242,
+    "Lon": 39.53779983520508,
+    "Ele": 178.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Voronezh International Airport",
+    "gps_code": "UUOO",
+    "freq": "125.900",
+    "Lat": 51.81420135498047,
+    "Lon": 39.22959899902344,
+    "Ele": 156.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Donskoye Airport",
+    "gps_code": "UUOT",
+    "freq": "",
+    "Lat": 52.806099,
+    "Lon": 41.4828,
+    "Ele": 125.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valuyki  Airfield",
+    "gps_code": "UUOW",
+    "freq": "",
+    "Lat": 50.224929,
+    "Lon": 38.110891,
+    "Ele": 180.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Zavidovo Air Park (U.C.)",
+    "gps_code": "UUTZ",
+    "freq": "",
+    "Lat": 56.553558,
+    "Lon": 36.559481,
+    "Ele": 476.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kudinovo Airfield",
+    "gps_code": "UUWK",
+    "freq": "",
+    "Lat": 55.023839,
+    "Lon": 36.244583,
+    "Ele": 182.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Vnukovo International Airport",
+    "gps_code": "UUWW",
+    "freq": "122.300",
+    "Lat": 55.591499,
+    "Lon": 37.261501,
+    "Ele": 208.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ukhta Airport",
+    "gps_code": "UUYH",
+    "freq": "",
+    "Lat": 63.566898,
+    "Lon": 53.804699,
+    "Ele": 146.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Inta Airport",
+    "gps_code": "UUYI",
+    "freq": "",
+    "Lat": 66.053372,
+    "Lon": 60.105786,
+    "Ele": 56.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vuktyl Airport",
+    "gps_code": "UUYK",
+    "freq": "",
+    "Lat": 63.823299,
+    "Lon": 57.279999,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yemva Airport",
+    "gps_code": "UUYM",
+    "freq": "",
+    "Lat": 62.6054000854,
+    "Lon": 50.925201416,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Noviy Bor Airfield",
+    "gps_code": "UUYN",
+    "freq": "",
+    "Lat": 66.715051,
+    "Lon": 52.292875,
+    "Ele": 21.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pechora Airport",
+    "gps_code": "UUYP",
+    "freq": "",
+    "Lat": 65.121101,
+    "Lon": 57.130798,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Usinsk Airport",
+    "gps_code": "UUYS",
+    "freq": "",
+    "Lat": 66.0047,
+    "Lon": 57.367199,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ust-Kulom Airport",
+    "gps_code": "UUYT",
+    "freq": "",
+    "Lat": 61.68999862670898,
+    "Lon": 53.709999084472656,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Izhma Airport",
+    "gps_code": "UUYV",
+    "freq": "",
+    "Lat": 65.0317,
+    "Lon": 53.970001,
+    "Ele": 70.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vorkuta Airport",
+    "gps_code": "UUYW",
+    "freq": "",
+    "Lat": 67.488602,
+    "Lon": 63.993099,
+    "Ele": 184.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ust-Tsylma Airport",
+    "gps_code": "UUYX",
+    "freq": "",
+    "Lat": 65.437294,
+    "Lon": 52.200336,
+    "Ele": 79.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Syktyvkar Airport",
+    "gps_code": "UUYY",
+    "freq": "118.100",
+    "Lat": 61.64699935913086,
+    "Lon": 50.84510040283203,
+    "Ele": 104.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolshoye Boldino Airport",
+    "gps_code": "UWGB",
+    "freq": "",
+    "Lat": 55.02000045776367,
+    "Lon": 45.31499862670898,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nizhny Novgorod / Strigino International Airport",
+    "gps_code": "UWGG",
+    "freq": "124.700",
+    "Lat": 56.228254,
+    "Lon": 43.785197,
+    "Ele": 78.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bugulma Airport",
+    "gps_code": "UWKB",
+    "freq": "122.300",
+    "Lat": 54.641184,
+    "Lon": 52.800229,
+    "Ele": 302.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Kazan International Airport",
+    "gps_code": "UWKD",
+    "freq": "126.800",
+    "Lat": 55.606201,
+    "Lon": 49.278702,
+    "Ele": 125.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Begishevo Airport",
+    "gps_code": "UWKE",
+    "freq": "127.900",
+    "Lat": 55.564701,
+    "Lon": 52.092499,
+    "Ele": 196.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Borisoglebskoye Airport",
+    "gps_code": "UWKG",
+    "freq": "",
+    "Lat": 55.866699,
+    "Lon": 49.133301,
+    "Ele": 64.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yoshkar-Ola Airport",
+    "gps_code": "UWKJ",
+    "freq": "",
+    "Lat": 56.7006,
+    "Lon": 47.904701,
+    "Ele": 106.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cheboksary Airport",
+    "gps_code": "UWKS",
+    "freq": "119.300",
+    "Lat": 56.090302,
+    "Lon": 47.347301,
+    "Ele": 170.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ulyanovsk Baratayevka Airport",
+    "gps_code": "UWLL",
+    "freq": "128.850",
+    "Lat": 54.268299,
+    "Lon": 48.2267,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Soldatskaya Tashla Airfield",
+    "gps_code": "UWLS",
+    "freq": "",
+    "Lat": 54.015284,
+    "Lon": 48.306026,
+    "Ele": 205.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ulyanovsk East Airport",
+    "gps_code": "UWLW",
+    "freq": "127.300",
+    "Lat": 54.401001,
+    "Lon": 48.8027,
+    "Ele": 76.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Adamovka Airport",
+    "gps_code": "UWOD",
+    "freq": "",
+    "Lat": 51.499284,
+    "Lon": 59.936658,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kvarkeno Airport",
+    "gps_code": "UWOH",
+    "freq": "",
+    "Lat": 52.077797,
+    "Lon": 59.686542,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Orenburg Central Airport",
+    "gps_code": "UWOO",
+    "freq": "132.000",
+    "Lat": 51.79579925537109,
+    "Lon": 55.45669937133789,
+    "Ele": 118.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Orsk Airport",
+    "gps_code": "UWOR",
+    "freq": "129.400",
+    "Lat": 51.072498,
+    "Lon": 58.5956,
+    "Ele": 277.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Svetlyy Airport",
+    "gps_code": "UWOS",
+    "freq": "",
+    "Lat": 50.800721,
+    "Lon": 60.902367,
+    "Ele": 298.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Penza Airport",
+    "gps_code": "UWPP",
+    "freq": "",
+    "Lat": 53.110599517822266,
+    "Lon": 45.02109909057617,
+    "Ele": 187.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saransk Airport",
+    "gps_code": "UWPS",
+    "freq": "",
+    "Lat": 54.12512969970703,
+    "Lon": 45.21225738525391,
+    "Ele": 206.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Balakovo Airport",
+    "gps_code": "UWSB",
+    "freq": "",
+    "Lat": 51.858299,
+    "Lon": 47.745602,
+    "Ele": 29.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Gagarin International Airport",
+    "gps_code": "UWSG",
+    "freq": "",
+    "Lat": 51.712778,
+    "Lon": 46.171111,
+    "Ele": 31.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasny Kut Airport",
+    "gps_code": "UWSK",
+    "freq": "",
+    "Lat": 50.955458,
+    "Lon": 46.949901,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Karaishevo Airfield",
+    "gps_code": "UWTK",
+    "freq": "",
+    "Lat": 55.53869,
+    "Lon": 49.32154,
+    "Ele": 56.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Beloretsk Airport",
+    "gps_code": "UWUB",
+    "freq": "",
+    "Lat": 53.938389,
+    "Lon": 58.340113,
+    "Ele": 556.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Oktyabrskiy Airport",
+    "gps_code": "UWUK",
+    "freq": "",
+    "Lat": 54.439999,
+    "Lon": 53.388302,
+    "Ele": 114.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Ufa International Airport",
+    "gps_code": "UWUU",
+    "freq": "124.800",
+    "Lat": 54.557498931885,
+    "Lon": 55.874401092529,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aktanysh Airport",
+    "gps_code": "UWUZ",
+    "freq": "",
+    "Lat": 55.6975,
+    "Lon": 54.0677,
+    "Ele": 115.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Buguruslan Severny Airport",
+    "gps_code": "UWWB",
+    "freq": "",
+    "Lat": 53.718399,
+    "Lon": 52.371899,
+    "Ele": 221.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Verkhneye Sancheleyevo Airfield",
+    "gps_code": "UWWE",
+    "freq": "",
+    "Lat": 53.6960966684,
+    "Lon": 49.491519928,
+    "Ele": 75.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bezymyanka Airfield",
+    "gps_code": "UWWG",
+    "freq": "",
+    "Lat": 53.220001,
+    "Lon": 50.325001,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Smyshlyayevka Airport",
+    "gps_code": "UWWS",
+    "freq": "",
+    "Lat": 53.241318,
+    "Lon": 50.374982,
+    "Ele": 39.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Kurumoch International Airport",
+    "gps_code": "UWWW",
+    "freq": "124.600",
+    "Lat": 53.504902,
+    "Lon": 50.164299,
+    "Ele": 145.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khankala Air Base",
+    "gps_code": "XRMU",
+    "freq": "",
+    "Lat": 43.2981,
+    "Lon": 45.7841,
+    "Ele": 167.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lebyazhye Air Base",
+    "gps_code": "XRWL",
+    "freq": "",
+    "Lat": 50.201698,
+    "Lon": 45.208302,
+    "Ele": 116.1
+  }
+]

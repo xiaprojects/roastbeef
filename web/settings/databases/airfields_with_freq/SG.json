@@ -1,0 +1,83 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Pulau Sudong Military Airstrip",
+    "gps_code": "SG-0002",
+    "freq": "",
+    "Lat": 1.20532,
+    "Lon": 103.719002,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lim Chu Kang Road (Tengah Highway Strip)",
+    "gps_code": "SG-0003",
+    "freq": "",
+    "Lat": 1.390671,
+    "Lon": 103.698435,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Murai Airfield",
+    "gps_code": "SG-0005",
+    "freq": "",
+    "Lat": 1.39203,
+    "Lon": 103.69951,
+    "Ele": 21.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Changi Air Base (East)",
+    "gps_code": "WSAC",
+    "freq": "",
+    "Lat": 1.3441400528,
+    "Lon": 104.009002686,
+    "Ele": 6.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sembawang Air Base",
+    "gps_code": "WSAG",
+    "freq": "120.300",
+    "Lat": 1.42526,
+    "Lon": 103.813004,
+    "Ele": 26.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Paya Lebar Air Base",
+    "gps_code": "WSAP",
+    "freq": "127.300",
+    "Lat": 1.36042,
+    "Lon": 103.910004,
+    "Ele": 19.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tengah Air Base",
+    "gps_code": "WSAT",
+    "freq": "120.300",
+    "Lat": 1.387561,
+    "Lon": 103.708291,
+    "Ele": 15.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Seletar Airport",
+    "gps_code": "WSSL",
+    "freq": "120.300",
+    "Lat": 1.41555,
+    "Lon": 103.86673,
+    "Ele": 11.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Singapore Changi Airport",
+    "gps_code": "WSSS",
+    "freq": "120.300",
+    "Lat": 1.35019,
+    "Lon": 103.994003,
+    "Ele": 6.7
+  }
+]

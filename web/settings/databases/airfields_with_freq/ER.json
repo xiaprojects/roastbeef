@@ -1,0 +1,101 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Dahlak South Airfield",
+    "gps_code": "ER-0001",
+    "freq": "",
+    "Lat": 15.68151,
+    "Lon": 40.104431,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dahlak Central Airfield",
+    "gps_code": "ER-0002",
+    "freq": "",
+    "Lat": 15.72753,
+    "Lon": 40.07532,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dahlak West Airfield",
+    "gps_code": "ER-0003",
+    "freq": "",
+    "Lat": 15.75794,
+    "Lon": 39.97046,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Omhajer Airport",
+    "gps_code": "ER-0004",
+    "freq": "",
+    "Lat": 14.32168,
+    "Lon": 36.63028,
+    "Ele": 593.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Keren Airfield",
+    "gps_code": "ER-0006",
+    "freq": "",
+    "Lat": 15.78437,
+    "Lon": 38.42529,
+    "Ele": 1425.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Agordat Airport",
+    "gps_code": "HHAG",
+    "freq": "",
+    "Lat": 15.536313,
+    "Lon": 37.865546,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Asmara International Airport",
+    "gps_code": "HHAS",
+    "freq": "120.700",
+    "Lat": 15.291899681091309,
+    "Lon": 38.91070175170898,
+    "Ele": 2335.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Barentu Airport",
+    "gps_code": "HHBA",
+    "freq": "",
+    "Lat": 15.122394,
+    "Lon": 37.614335,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Massawa International Airport",
+    "gps_code": "HHMS",
+    "freq": "123.900",
+    "Lat": 15.67,
+    "Lon": 39.370098,
+    "Ele": 59.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Assab International Airport",
+    "gps_code": "HHSB",
+    "freq": "118.600",
+    "Lat": 13.0718,
+    "Lon": 42.645,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tessenei Airport",
+    "gps_code": "HHTS",
+    "freq": "",
+    "Lat": 15.104322,
+    "Lon": 36.681711,
+    "Ele": 615.1
+  }
+]

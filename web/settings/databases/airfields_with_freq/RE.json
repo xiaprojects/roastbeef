@@ -1,0 +1,65 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Roland Garros Airport",
+    "gps_code": "FMEE",
+    "freq": "347.600",
+    "Lat": -20.890087,
+    "Lon": 55.518894,
+    "Ele": 20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pierrefonds Airport",
+    "gps_code": "FMEP",
+    "freq": "122.400",
+    "Lat": -21.319362,
+    "Lon": 55.422506,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Adventure Reunion Paramotor Field",
+    "gps_code": "RE-0001",
+    "freq": "",
+    "Lat": -21.111944,
+    "Lon": 55.261667,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Uca Airfield",
+    "gps_code": "RE-0002",
+    "freq": "",
+    "Lat": -20.985833,
+    "Lon": 55.664444,
+    "Ele": 88.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint-Leu Paraglider Field",
+    "gps_code": "RE-0006",
+    "freq": "",
+    "Lat": -21.15235,
+    "Lon": 55.27887,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cambaie Airfield",
+    "gps_code": "RE-0008",
+    "freq": "",
+    "Lat": -20.963333,
+    "Lon": 55.281667,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Grand Coude Altisurface",
+    "gps_code": "RE-0009",
+    "freq": "",
+    "Lat": -21.288889,
+    "Lon": 55.623611,
+    "Ele": 990.6
+  }
+]

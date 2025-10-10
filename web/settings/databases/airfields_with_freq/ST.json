@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Principe Airport",
+    "gps_code": "FPPR",
+    "freq": "118.900",
+    "Lat": 1.66294,
+    "Lon": 7.41174,
+    "Ele": 180.1
+  },
+  {
+    "type": "large_airport",
+    "name": "São Tomé International Airport",
+    "gps_code": "FPST",
+    "freq": "118.900",
+    "Lat": 0.378175,
+    "Lon": 6.71215,
+    "Ele": 10.1
+  }
+]

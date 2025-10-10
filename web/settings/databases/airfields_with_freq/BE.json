@@ -1,0 +1,434 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Amougies Airfield",
+    "gps_code": "EBAM",
+    "freq": "",
+    "Lat": 50.740101,
+    "Lon": 3.4849,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Arlon-Sterpenich Ultralight Airfield",
+    "gps_code": "EBAR",
+    "freq": "123.425",
+    "Lat": 49.661981,
+    "Lon": 5.885953,
+    "Ele": 346.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Avernas-le-Bauduin Ultralight Airfield",
+    "gps_code": "EBAV",
+    "freq": "129.975",
+    "Lat": 50.706147,
+    "Lon": 5.067739,
+    "Ele": 120.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Antwerp International Airport (Deurne)",
+    "gps_code": "EBAW",
+    "freq": "118.255",
+    "Lat": 51.190667,
+    "Lon": 4.463153,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Beauvechain Air Base",
+    "gps_code": "EBBE",
+    "freq": "122.500",
+    "Lat": 50.758598,
+    "Lon": 4.76833,
+    "Ele": 112.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kleine Brogel Air Base",
+    "gps_code": "EBBL",
+    "freq": "134.480",
+    "Lat": 51.168301,
+    "Lon": 5.47,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Büllingen Airfield",
+    "gps_code": "EBBN",
+    "freq": "",
+    "Lat": 50.415001,
+    "Lon": 6.27639,
+    "Ele": 630.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Brussels Airport",
+    "gps_code": "EBBR",
+    "freq": "118.255",
+    "Lat": 50.901402,
+    "Lon": 4.48444,
+    "Ele": 53.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Brasschaat Airfield",
+    "gps_code": "EBBT",
+    "freq": "122.905",
+    "Lat": 51.34259,
+    "Lon": 4.503451,
+    "Ele": 23.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Jehonville Air Base",
+    "gps_code": "EBBX",
+    "freq": "",
+    "Lat": 49.891483,
+    "Lon": 5.227405,
+    "Ele": 461.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Baisy-Thy Ultralight Airfield",
+    "gps_code": "EBBY",
+    "freq": "132.000",
+    "Lat": 50.568611,
+    "Lon": 4.434722,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Buzet Aerodrome",
+    "gps_code": "EBBZ",
+    "freq": "118.765",
+    "Lat": 50.542335,
+    "Lon": 4.382472,
+    "Ele": 159.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerfontaine Airfield",
+    "gps_code": "EBCF",
+    "freq": "123.200",
+    "Lat": 50.152802,
+    "Lon": 4.38722,
+    "Ele": 291.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Brussels South Charleroi Airport",
+    "gps_code": "EBCI",
+    "freq": "133.125",
+    "Lat": 50.460982,
+    "Lon": 4.457158,
+    "Ele": 187.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chièvres Air Base",
+    "gps_code": "EBCV",
+    "freq": "126.625",
+    "Lat": 50.575801849365234,
+    "Lon": 3.8310000896453857,
+    "Ele": 59.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Schaffen Airfield",
+    "gps_code": "EBDT",
+    "freq": "118.930",
+    "Lat": 51.004032,
+    "Lon": 5.064697,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Koksijde Air Base",
+    "gps_code": "EBFN",
+    "freq": "122.500",
+    "Lat": 51.090302,
+    "Lon": 2.65278,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Florennes Air Base",
+    "gps_code": "EBFS",
+    "freq": "122.500",
+    "Lat": 50.2433013916,
+    "Lon": 4.64583015442,
+    "Ele": 285.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grimbergen Airfield",
+    "gps_code": "EBGB",
+    "freq": "119.500",
+    "Lat": 50.948546,
+    "Lon": 4.39181,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Overboelare Airfield",
+    "gps_code": "EBGG",
+    "freq": "",
+    "Lat": 50.7556,
+    "Lon": 3.86389,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoevenen Airfield",
+    "gps_code": "EBHN",
+    "freq": "135.000",
+    "Lat": 51.306099,
+    "Lon": 4.38722,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ath/Isieres Airfield",
+    "gps_code": "EBIS",
+    "freq": "",
+    "Lat": 50.663636,
+    "Lon": 3.804681,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Balen-Keiheuvel Airfield",
+    "gps_code": "EBKH",
+    "freq": "119.200",
+    "Lat": 51.180957,
+    "Lon": 5.221124,
+    "Ele": 39.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Flanders International Airport Kortrijk-Wevelgem",
+    "gps_code": "EBKT",
+    "freq": "120.250",
+    "Lat": 50.818878,
+    "Lon": 3.209551,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Leopoldsburg Airfield",
+    "gps_code": "EBLE",
+    "freq": "",
+    "Lat": 51.12,
+    "Lon": 5.307222,
+    "Ele": 63.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Liège Airport",
+    "gps_code": "EBLG",
+    "freq": "119.280",
+    "Lat": 50.638574,
+    "Lon": 5.443897,
+    "Ele": 200.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Melsbroek Air Base",
+    "gps_code": "EBMB",
+    "freq": "",
+    "Lat": 50.913419,
+    "Lon": 4.491005,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Matagne-la-Petite Ultralight Airfield",
+    "gps_code": "EBMG",
+    "freq": "",
+    "Lat": 50.104208,
+    "Lon": 4.636063,
+    "Ele": 239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maillen Ultralight Airfield",
+    "gps_code": "EBML",
+    "freq": "123.550",
+    "Lat": 50.375033,
+    "Lon": 4.926489,
+    "Ele": 270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Moorsele Airfield",
+    "gps_code": "EBMO",
+    "freq": "",
+    "Lat": 50.851285,
+    "Lon": 3.147669,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Namur-Suarlée Airfield",
+    "gps_code": "EBNM",
+    "freq": "118.005",
+    "Lat": 50.489705,
+    "Lon": 4.769697,
+    "Ele": 181.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oostende-Brugge International Airport",
+    "gps_code": "EBOS",
+    "freq": "120.600",
+    "Lat": 51.1998,
+    "Lon": 2.874673,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint-Ghislain Airfield",
+    "gps_code": "EBSG",
+    "freq": "122.170",
+    "Lat": 50.458009,
+    "Lon": 3.821,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint Hubert Airfield",
+    "gps_code": "EBSH",
+    "freq": "122.175",
+    "Lat": 50.0359,
+    "Lon": 5.40425,
+    "Ele": 588.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Zutendaal Air Base",
+    "gps_code": "EBSL",
+    "freq": "",
+    "Lat": 50.949352,
+    "Lon": 5.593549,
+    "Ele": 95.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Verrebroek Private Airstrip",
+    "gps_code": "EBSM",
+    "freq": "",
+    "Lat": 51.268281,
+    "Lon": 4.175453,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Spa-La Sauvenière Airfield",
+    "gps_code": "EBSP",
+    "freq": "124.640",
+    "Lat": 50.482006,
+    "Lon": 5.913434,
+    "Ele": 481.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sint-Truiden / Brustem Airfield",
+    "gps_code": "EBST",
+    "freq": "119.980",
+    "Lat": 50.790772,
+    "Lon": 5.19958,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint Hubert Air Base",
+    "gps_code": "EBSU",
+    "freq": "",
+    "Lat": 50.034401,
+    "Lon": 5.44081,
+    "Ele": 588.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Goetsenhoven Airfield",
+    "gps_code": "EBTN",
+    "freq": "125.375",
+    "Lat": 50.7817,
+    "Lon": 4.95778,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Theux (Verviers) Airfield",
+    "gps_code": "EBTX",
+    "freq": "119.000",
+    "Lat": 50.551099,
+    "Lon": 5.853996,
+    "Ele": 335.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maubray Airfield",
+    "gps_code": "EBTY",
+    "freq": "118.425",
+    "Lat": 50.531639,
+    "Lon": 3.496185,
+    "Ele": 49.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ursel Air Base",
+    "gps_code": "EBUL",
+    "freq": "135.130",
+    "Lat": 51.144199,
+    "Lon": 3.47556,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Weelde Air Base",
+    "gps_code": "EBWE",
+    "freq": "120.225",
+    "Lat": 51.394798,
+    "Lon": 4.96019,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiewit Airfield Hasselt",
+    "gps_code": "EBZH",
+    "freq": "118.330",
+    "Lat": 50.970375,
+    "Lon": 5.375331,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oostmalle Airfield",
+    "gps_code": "EBZR",
+    "freq": "123.805",
+    "Lat": 51.269092,
+    "Lon": 4.762428,
+    "Ele": 16.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Zuienkerke Sport Aviation Airfield",
+    "gps_code": "EBZU",
+    "freq": "123.425",
+    "Lat": 51.25555,
+    "Lon": 3.139858,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Genk Zwartberg Airfield",
+    "gps_code": "EBZW",
+    "freq": "120.400",
+    "Lat": 51.0154,
+    "Lon": 5.52647,
+    "Ele": 84.7
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Bo Airport",
+    "gps_code": "GFBO",
+    "freq": "",
+    "Lat": 7.9444,
+    "Lon": -11.761,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gbangbatok Airport",
+    "gps_code": "GFGK",
+    "freq": "",
+    "Lat": 7.812535,
+    "Lon": -12.377815,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hastings Airport",
+    "gps_code": "GFHA",
+    "freq": "",
+    "Lat": 8.394348,
+    "Lon": -13.128891,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kabala Airport",
+    "gps_code": "GFKB",
+    "freq": "",
+    "Lat": 9.63832291343,
+    "Lon": -11.5155601501,
+    "Ele": 308.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kenema Airport",
+    "gps_code": "GFKE",
+    "freq": "",
+    "Lat": 7.896364,
+    "Lon": -11.174126,
+    "Ele": 147.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Lungi International Airport",
+    "gps_code": "GFLL",
+    "freq": "667.300",
+    "Lat": 8.61644,
+    "Lon": -13.1955,
+    "Ele": 25.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tongo Airport",
+    "gps_code": "GFTO",
+    "freq": "",
+    "Lat": 8.217000007629395,
+    "Lon": -11.06700038909912,
+    "Ele": 228.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yengema Airport",
+    "gps_code": "GFYE",
+    "freq": "",
+    "Lat": 8.61047,
+    "Lon": -11.0454,
+    "Ele": 396.2
+  }
+]

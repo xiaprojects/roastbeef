@@ -1,0 +1,992 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Kákahalom Airfield",
+    "gps_code": "HU-0001",
+    "freq": "",
+    "Lat": 46.803936,
+    "Lon": 20.527838,
+    "Ele": 78.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kalocsa-Foktő Airfield",
+    "gps_code": "HU-0002",
+    "freq": "135.390",
+    "Lat": 46.55149,
+    "Lon": 18.942299,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Matkópuszta Airfield",
+    "gps_code": "HU-0003",
+    "freq": "",
+    "Lat": 46.800343,
+    "Lon": 19.68257,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Szatymaz Airfield",
+    "gps_code": "HU-0006",
+    "freq": "123.200",
+    "Lat": 46.322651,
+    "Lon": 20.053209,
+    "Ele": 76.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Börgönd Airfield",
+    "gps_code": "HU-0007",
+    "freq": "",
+    "Lat": 47.129833,
+    "Lon": 18.50029,
+    "Ele": 119.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pusztacsalád Airfield",
+    "gps_code": "HU-0008",
+    "freq": "",
+    "Lat": 47.493935,
+    "Lon": 16.897216,
+    "Ele": 151.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kunmadaras Air Base",
+    "gps_code": "HU-0010",
+    "freq": "",
+    "Lat": 47.390839,
+    "Lon": 20.785009,
+    "Ele": 85.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cserszegtomaj-Hévíz Airfield",
+    "gps_code": "HU-0012",
+    "freq": "",
+    "Lat": 46.809114,
+    "Lon": 17.19974,
+    "Ele": 116.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Baja Airfield",
+    "gps_code": "HU-0013",
+    "freq": "",
+    "Lat": 46.145347,
+    "Lon": 19.043172,
+    "Ele": 115.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Balatonkeresztúr Airfield",
+    "gps_code": "HU-0014",
+    "freq": "",
+    "Lat": 46.693034,
+    "Lon": 17.397773,
+    "Ele": 102.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Dáka Sport Airfield",
+    "gps_code": "HU-0015",
+    "freq": "",
+    "Lat": 47.271801,
+    "Lon": 17.4105,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballószög Airfield",
+    "gps_code": "HU-0016",
+    "freq": "",
+    "Lat": 46.8618,
+    "Lon": 19.5566,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gyõrszentiván-Bõny Airfield",
+    "gps_code": "HU-0017",
+    "freq": "",
+    "Lat": 47.6672,
+    "Lon": 17.784801,
+    "Ele": 149.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Balatonfőkajár Airfield",
+    "gps_code": "HU-0018",
+    "freq": "",
+    "Lat": 47.0065,
+    "Lon": 18.21188,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bátonyterenye-Világosipuszta sportreptér",
+    "gps_code": "HU-0019",
+    "freq": "",
+    "Lat": 48.025531,
+    "Lon": 19.805066,
+    "Ele": 264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rétság Airfield",
+    "gps_code": "HU-0020",
+    "freq": "",
+    "Lat": 47.932748,
+    "Lon": 19.122283,
+    "Ele": 219.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Papkutapuszta Airfield",
+    "gps_code": "HU-0021",
+    "freq": "",
+    "Lat": 46.874977,
+    "Lon": 18.039036,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hódmezővásárhely Airfield",
+    "gps_code": "HU-0023",
+    "freq": "",
+    "Lat": 46.384444,
+    "Lon": 20.308333,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pusztaszer Airfield",
+    "gps_code": "HU-0024",
+    "freq": "",
+    "Lat": 46.57687,
+    "Lon": 19.99022,
+    "Ele": 89.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balatonlelle Glider Field",
+    "gps_code": "HU-0025",
+    "freq": "",
+    "Lat": 46.760514,
+    "Lon": 17.689823,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dány Airfield",
+    "gps_code": "HU-0026",
+    "freq": "",
+    "Lat": 47.500436,
+    "Lon": 19.504709,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zalacsány Airfield",
+    "gps_code": "HU-0027",
+    "freq": "",
+    "Lat": 46.79941,
+    "Lon": 17.11188,
+    "Ele": 116.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pásztó-Hasznos repülőtér",
+    "gps_code": "HU-0028",
+    "freq": "",
+    "Lat": 47.9327379,
+    "Lon": 19.7747449,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Atkár Airfield",
+    "gps_code": "HU-0029",
+    "freq": "129.985",
+    "Lat": 47.720908,
+    "Lon": 19.904652,
+    "Ele": 112.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tapolca Airfield",
+    "gps_code": "HU-0030",
+    "freq": "",
+    "Lat": 46.8687,
+    "Lon": 17.407322,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balatonederics Airfield",
+    "gps_code": "HU-0031",
+    "freq": "",
+    "Lat": 46.784913,
+    "Lon": 17.378794,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mezőhegyes",
+    "gps_code": "HU-0032",
+    "freq": "",
+    "Lat": 46.296989,
+    "Lon": 20.813389,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hajmáskér Airfield",
+    "gps_code": "HU-0033",
+    "freq": "133.425",
+    "Lat": 47.142891,
+    "Lon": 17.997437,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunabogdány Airfield",
+    "gps_code": "HU-0035",
+    "freq": "",
+    "Lat": 47.774341,
+    "Lon": 19.062484,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sárospatak Airfield",
+    "gps_code": "HU-0036",
+    "freq": "",
+    "Lat": 48.318035,
+    "Lon": 21.586117,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inárcs Airfield",
+    "gps_code": "HU-0038",
+    "freq": "",
+    "Lat": 47.263641,
+    "Lon": 19.313225,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gyomaendrőd",
+    "gps_code": "HU-0039",
+    "freq": "",
+    "Lat": 46.9112958,
+    "Lon": 20.7615195,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiskunhalas-Füzespuszta Airfield",
+    "gps_code": "HU-0040",
+    "freq": "",
+    "Lat": 46.36935,
+    "Lon": 19.477426,
+    "Ele": 129.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Felsőráda Airstrip",
+    "gps_code": "HU-0041",
+    "freq": "",
+    "Lat": 47.264102,
+    "Lon": 19.173974,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pusztaszer West Airfield",
+    "gps_code": "HU-0042",
+    "freq": "",
+    "Lat": 46.546667,
+    "Lon": 19.96,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mórahalom Airstrip",
+    "gps_code": "HU-0043",
+    "freq": "",
+    "Lat": 46.251378,
+    "Lon": 19.949197,
+    "Ele": 89.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dévaványa Airfield",
+    "gps_code": "HU-0044",
+    "freq": "",
+    "Lat": 47.011512,
+    "Lon": 20.982331,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jászapáti Agricultural Airfield",
+    "gps_code": "HU-0046",
+    "freq": "",
+    "Lat": 47.521857,
+    "Lon": 20.16257,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Csikéria Airstrip",
+    "gps_code": "HU-0047",
+    "freq": "",
+    "Lat": 46.11381,
+    "Lon": 19.48895,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kislőd Airstrip",
+    "gps_code": "HU-0049",
+    "freq": "",
+    "Lat": 47.1336,
+    "Lon": 17.640073,
+    "Ele": 402.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Földes Airfield",
+    "gps_code": "HU-0050",
+    "freq": "",
+    "Lat": 46.96852,
+    "Lon": 17.84473,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Soltvadkert Sports Aerodrome",
+    "gps_code": "HU-0051",
+    "freq": "",
+    "Lat": 46.57223,
+    "Lon": 19.42941,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Becsehely Airstrip",
+    "gps_code": "HU-0052",
+    "freq": "",
+    "Lat": 46.432148,
+    "Lon": 16.778913,
+    "Ele": 139.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tótvázsony Airfield",
+    "gps_code": "HU-0054",
+    "freq": "",
+    "Lat": 47.03787,
+    "Lon": 17.78407,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zirc-Tündérmajor Repülőtér",
+    "gps_code": "HU-0055",
+    "freq": "",
+    "Lat": 47.259864,
+    "Lon": 17.838192,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balkány Airfield",
+    "gps_code": "HU-0056",
+    "freq": "",
+    "Lat": 47.771461,
+    "Lon": 21.815028,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Telekgerendás Airfield",
+    "gps_code": "HU-0061",
+    "freq": "",
+    "Lat": 46.65295,
+    "Lon": 20.96272,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "ESRE Glider Field",
+    "gps_code": "HU-0062",
+    "freq": "",
+    "Lat": 47.43479,
+    "Lon": 18.78092,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Martfű Airstrip",
+    "gps_code": "HU-0063",
+    "freq": "",
+    "Lat": 47.01397,
+    "Lon": 20.28573,
+    "Ele": -0.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Halászi Airstrip",
+    "gps_code": "HU-0064",
+    "freq": "",
+    "Lat": 47.89016,
+    "Lon": 17.34828,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sülysáp Airfield",
+    "gps_code": "HU-0070",
+    "freq": "",
+    "Lat": 47.49786,
+    "Lon": 19.4594,
+    "Ele": 178.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Velence Airstrip UL",
+    "gps_code": "HU-0071",
+    "freq": "",
+    "Lat": 47.25452,
+    "Lon": 18.64159,
+    "Ele": 125.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilis Airfield",
+    "gps_code": "HU-0080",
+    "freq": "",
+    "Lat": 47.30361,
+    "Lon": 19.52895,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hertelendy Kastély Field",
+    "gps_code": "LH0",
+    "freq": "",
+    "Lat": 46.373168,
+    "Lon": 17.428007,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Békéscsaba Airfield",
+    "gps_code": "LHBC",
+    "freq": "123.260",
+    "Lat": 46.677132,
+    "Lon": 21.161188,
+    "Ele": 87.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bükfördö Airfield",
+    "gps_code": "LHBF",
+    "freq": "",
+    "Lat": 47.3848,
+    "Lon": 16.80264,
+    "Ele": 166.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Biharkeresztes Airfield",
+    "gps_code": "LHBI",
+    "freq": "",
+    "Lat": 47.137425,
+    "Lon": 21.675425,
+    "Ele": 92.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bácsbokod Airfield",
+    "gps_code": "LHBO",
+    "freq": "",
+    "Lat": 46.153445,
+    "Lon": 19.149051,
+    "Ele": 156.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Budapest Liszt Ferenc International Airport",
+    "gps_code": "LHBP",
+    "freq": "129.700",
+    "Lat": 47.43018,
+    "Lon": 19.262393,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Budaörs Airfield",
+    "gps_code": "LHBS",
+    "freq": "",
+    "Lat": 47.451099,
+    "Lon": 18.9806,
+    "Ele": 121.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cegléd Airfield",
+    "gps_code": "LHCL",
+    "freq": "",
+    "Lat": 47.162621,
+    "Lon": 19.877401,
+    "Ele": 96.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Debrecen International Airport",
+    "gps_code": "LHDC",
+    "freq": "125.900",
+    "Lat": 47.488899,
+    "Lon": 21.615299,
+    "Ele": 109.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunakeszi Airfield",
+    "gps_code": "LHDK",
+    "freq": "",
+    "Lat": 47.613899,
+    "Lon": 19.143299,
+    "Ele": 121.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunaújváros Airfield",
+    "gps_code": "LHDV",
+    "freq": "",
+    "Lat": 46.895802,
+    "Lon": 18.9139,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Esztergom Ernő Rubik Airfield",
+    "gps_code": "LHEM",
+    "freq": "128.650",
+    "Lat": 47.756811,
+    "Lon": 18.730459,
+    "Ele": 104.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Eger Apolló Airfield",
+    "gps_code": "LHER",
+    "freq": "",
+    "Lat": 47.9052,
+    "Lon": 20.4055,
+    "Ele": 240.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bodmér-Felcsút Airfield",
+    "gps_code": "LHFC",
+    "freq": "",
+    "Lat": 47.444629,
+    "Lon": 18.557102,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Farkashegy Airfield",
+    "gps_code": "LHFH",
+    "freq": "",
+    "Lat": 47.4869,
+    "Lon": 18.9147,
+    "Ele": 210.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Fertőszentmiklós Airfield",
+    "gps_code": "LHFM",
+    "freq": "124.450",
+    "Lat": 47.582802,
+    "Lon": 16.8454,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Piuszpuszta Airfield",
+    "gps_code": "LHFP",
+    "freq": "",
+    "Lat": 47.744444,
+    "Lon": 16.614167,
+    "Ele": 148.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gödöllő Airfield",
+    "gps_code": "LHGD",
+    "freq": "118.650",
+    "Lat": 47.571662,
+    "Lon": 19.336796,
+    "Ele": 217.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gyúró Airfield",
+    "gps_code": "LHGR",
+    "freq": "",
+    "Lat": 47.391333,
+    "Lon": 18.756989,
+    "Ele": 195.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gyöngyös Pipishegy Airfield",
+    "gps_code": "LHGY",
+    "freq": "",
+    "Lat": 47.814279,
+    "Lon": 19.976792,
+    "Ele": 350.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hármashatárhegy Glider Field",
+    "gps_code": "LHHH",
+    "freq": "",
+    "Lat": 47.551503,
+    "Lon": 18.976386,
+    "Ele": 292.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Hajdúszoboszló Airfield",
+    "gps_code": "LHHO",
+    "freq": "",
+    "Lat": 47.459717,
+    "Lon": 21.390904,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Jakabszállás Airfield",
+    "gps_code": "LHJK",
+    "freq": "",
+    "Lat": 46.747855,
+    "Lon": 19.604754,
+    "Ele": 106.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kecskéd Airfield",
+    "gps_code": "LHKD",
+    "freq": "120.610",
+    "Lat": 47.517121,
+    "Lon": 18.325024,
+    "Ele": 173.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kecskemét Air Base",
+    "gps_code": "LHKE",
+    "freq": "120.250",
+    "Lat": 46.9175,
+    "Lon": 19.749201,
+    "Ele": 114.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiskunfélegyháza Airfield",
+    "gps_code": "LHKH",
+    "freq": "118.850",
+    "Lat": 46.733101,
+    "Lon": 19.893299,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiskőrös-Akasztó Airfield",
+    "gps_code": "LHKI",
+    "freq": "",
+    "Lat": 46.656791,
+    "Lon": 19.242997,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiskunlacháza Airfield",
+    "gps_code": "LHKK",
+    "freq": "124.035",
+    "Lat": 47.174484,
+    "Lon": 19.077501,
+    "Ele": 98.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kadarkút Airfield",
+    "gps_code": "LHKT",
+    "freq": "",
+    "Lat": 46.247418,
+    "Lon": 17.607822,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaposvar Kaposújlak Airfield",
+    "gps_code": "LHKV",
+    "freq": "125.060",
+    "Lat": 46.386398,
+    "Lon": 17.733479,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lipót Szigetköz Airfield",
+    "gps_code": "LHLI",
+    "freq": "",
+    "Lat": 47.8575,
+    "Lon": 17.448333,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maklár Airfield",
+    "gps_code": "LHMR",
+    "freq": "",
+    "Lat": 47.811857,
+    "Lon": 20.422254,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nagykanizsa Airfield",
+    "gps_code": "LHNK",
+    "freq": "",
+    "Lat": 46.428304,
+    "Lon": 16.957569,
+    "Ele": 142.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nagyszénás",
+    "gps_code": "LHNS",
+    "freq": "",
+    "Lat": 46.698056,
+    "Lon": 20.668611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyíregyháza Airfield",
+    "gps_code": "LHNY",
+    "freq": "127.600",
+    "Lat": 47.983898,
+    "Lon": 21.692301,
+    "Ele": 103.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Őcsény Airfield",
+    "gps_code": "LHOY",
+    "freq": "",
+    "Lat": 46.306138,
+    "Lon": 18.767386,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pápa Air Base",
+    "gps_code": "LHPA",
+    "freq": "",
+    "Lat": 47.363602,
+    "Lon": 17.500799,
+    "Ele": 142.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pécs-Pogány Airport",
+    "gps_code": "LHPP",
+    "freq": "126.900",
+    "Lat": 45.988891,
+    "Lon": 18.242044,
+    "Ele": 198.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Győr-Pér International Airport",
+    "gps_code": "LHPR",
+    "freq": "129.900",
+    "Lat": 47.628436,
+    "Lon": 17.804718,
+    "Ele": 129.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Szentkirályszabadja Airfield",
+    "gps_code": "LHSA",
+    "freq": "127.000",
+    "Lat": 47.0779,
+    "Lon": 17.968399,
+    "Ele": 280.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Szabadszállás-Balázspuszta Airfield",
+    "gps_code": "LHSB",
+    "freq": "",
+    "Lat": 46.900278,
+    "Lon": 19.366389,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sitke Airfield",
+    "gps_code": "LHSI",
+    "freq": "",
+    "Lat": 47.234558,
+    "Lon": 17.027178,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Siófok-Kiliti Airfield",
+    "gps_code": "LHSK",
+    "freq": "",
+    "Lat": 46.856899,
+    "Lon": 18.0958,
+    "Ele": 127.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hévíz–Balaton Airport",
+    "gps_code": "LHSM",
+    "freq": "127.600",
+    "Lat": 46.686391,
+    "Lon": 17.159084,
+    "Ele": 124.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Szolnok Air Base",
+    "gps_code": "LHSN",
+    "freq": "129.000",
+    "Lat": 47.122897,
+    "Lon": 20.2355,
+    "Ele": 98.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Szolnok-Szandai Airfield",
+    "gps_code": "LHSS",
+    "freq": "",
+    "Lat": 47.144402,
+    "Lon": 20.1978,
+    "Ele": 81.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Surjány Airfield",
+    "gps_code": "LHSU",
+    "freq": "",
+    "Lat": 47.199968,
+    "Lon": 20.481934,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Szombathely Airfield",
+    "gps_code": "LHSY",
+    "freq": "",
+    "Lat": 47.279999,
+    "Lon": 16.6264,
+    "Ele": 223.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Szentes Aerodrome",
+    "gps_code": "LHSZ",
+    "freq": "123.810",
+    "Lat": 46.6133,
+    "Lon": 20.282801,
+    "Ele": 78.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taszár Air Base",
+    "gps_code": "LHTA",
+    "freq": "",
+    "Lat": 46.393101,
+    "Lon": 17.9175,
+    "Ele": 161.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tököl Airport",
+    "gps_code": "LHTL",
+    "freq": "127.550",
+    "Lat": 47.345299,
+    "Lon": 18.980801,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tápiószentmárton Airfield",
+    "gps_code": "LHTM",
+    "freq": "",
+    "Lat": 47.310956,
+    "Lon": 19.777364,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Szeged Airfield",
+    "gps_code": "LHUD",
+    "freq": "122.810",
+    "Lat": 46.245127,
+    "Lon": 20.092217,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Úrhida",
+    "gps_code": "LHUH",
+    "freq": "135.700",
+    "Lat": 47.128198,
+    "Lon": 18.312986,
+    "Ele": 192.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Veresegyház Airfield",
+    "gps_code": "LHVE",
+    "freq": "",
+    "Lat": 47.638107,
+    "Lon": 19.255007,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zalaegerszeg Andráshida Airfield",
+    "gps_code": "LHZA",
+    "freq": "0.000",
+    "Lat": 46.884701,
+    "Lon": 16.7889,
+    "Ele": 188.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zalakaros Airfield",
+    "gps_code": "LHZK",
+    "freq": "134.585",
+    "Lat": 46.5539,
+    "Lon": 17.15118,
+    "Ele": 112.8
+  }
+]

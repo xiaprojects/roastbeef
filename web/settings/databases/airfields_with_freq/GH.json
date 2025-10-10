@@ -1,0 +1,101 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Kotoka International Airport",
+    "gps_code": "DGAA",
+    "freq": "119.500",
+    "Lat": 5.605189800262451,
+    "Lon": -0.1667860001325607,
+    "Ele": 62.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ho Airport",
+    "gps_code": "DGAH",
+    "freq": "118.400",
+    "Lat": 6.579691,
+    "Lon": 0.532547,
+    "Ele": 108.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tamale Airport",
+    "gps_code": "DGLE",
+    "freq": "658.600",
+    "Lat": 9.55718994140625,
+    "Lon": -0.8632140159606934,
+    "Ele": 168.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Navrongo Airport",
+    "gps_code": "DGLN",
+    "freq": "",
+    "Lat": 10.943081,
+    "Lon": -1.087356,
+    "Ele": 206.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Wa Airport",
+    "gps_code": "DGLW",
+    "freq": "",
+    "Lat": 10.0827,
+    "Lon": -2.50769,
+    "Ele": 323.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yendi Airport",
+    "gps_code": "DGLY",
+    "freq": "",
+    "Lat": 9.425,
+    "Lon": -0.004722,
+    "Ele": 734.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kumasi Airport",
+    "gps_code": "DGSI",
+    "freq": "658.600",
+    "Lat": 6.714560031890869,
+    "Lon": -1.5908199548721311,
+    "Ele": 287.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sunyani Airport",
+    "gps_code": "DGSN",
+    "freq": "658.600",
+    "Lat": 7.36183,
+    "Lon": -2.32876,
+    "Ele": 309.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Takoradi Airport",
+    "gps_code": "DGTK",
+    "freq": "658.600",
+    "Lat": 4.896059989929199,
+    "Lon": -1.7747600078582764,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kpong Airfield",
+    "gps_code": "GH-0001",
+    "freq": "",
+    "Lat": 6.114864,
+    "Lon": 0.057761,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ajena Airstrip",
+    "gps_code": "GH-0002",
+    "freq": "",
+    "Lat": 6.322619,
+    "Lon": 0.087893,
+    "Ele": 147.8
+  }
+]

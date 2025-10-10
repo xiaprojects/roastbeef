@@ -1,0 +1,308 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Inezgane Airport",
+    "gps_code": "GMAA",
+    "freq": "120.300",
+    "Lat": 30.381399,
+    "Lon": -9.54631,
+    "Ele": 27.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Al Massira Airport",
+    "gps_code": "GMAD",
+    "freq": "120.900",
+    "Lat": 30.322478,
+    "Lon": -9.412003,
+    "Ele": 76.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tan Tan Airport",
+    "gps_code": "GMAT",
+    "freq": "129.700",
+    "Lat": 28.44820022583008,
+    "Lon": -11.161299705505373,
+    "Ele": 199.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zagora Airport",
+    "gps_code": "GMAZ",
+    "freq": "",
+    "Lat": 30.263858,
+    "Lon": -5.853341,
+    "Ele": 735.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ouezzane Airport",
+    "gps_code": "GMFA",
+    "freq": "",
+    "Lat": 34.793361,
+    "Lon": -5.635986,
+    "Ele": 174.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bouarfa Airport",
+    "gps_code": "GMFB",
+    "freq": "",
+    "Lat": 32.514306,
+    "Lon": -1.983056,
+    "Ele": 1106.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Fes Saïss International Airport",
+    "gps_code": "GMFF",
+    "freq": "118.600",
+    "Lat": 33.927299,
+    "Lon": -4.97796,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ifran Airport",
+    "gps_code": "GMFI",
+    "freq": "131.000",
+    "Lat": 33.505299,
+    "Lon": -5.1529,
+    "Ele": 1663.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Moulay Ali Cherif Airport",
+    "gps_code": "GMFK",
+    "freq": "122.700",
+    "Lat": 31.9475002289,
+    "Lon": -4.39833021164,
+    "Ele": 1044.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bassatine Airport",
+    "gps_code": "GMFM",
+    "freq": "124.500",
+    "Lat": 33.879101,
+    "Lon": -5.51512,
+    "Ele": 576.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oujda Angads Airport",
+    "gps_code": "GMFO",
+    "freq": "136.600",
+    "Lat": 34.789558,
+    "Lon": -1.926041,
+    "Ele": 467.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Taza Airport",
+    "gps_code": "GMFZ",
+    "freq": "",
+    "Lat": 34.231887,
+    "Lon": -3.94701,
+    "Ele": 576.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ben Slimane Airport",
+    "gps_code": "GMMB",
+    "freq": "",
+    "Lat": 33.655399,
+    "Lon": -7.22145,
+    "Ele": 191.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Beni Mellal Airport",
+    "gps_code": "GMMD",
+    "freq": "119.000",
+    "Lat": 32.401895,
+    "Lon": -6.315905,
+    "Ele": 516.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Rabat-Salé Airport",
+    "gps_code": "GMME",
+    "freq": "118.900",
+    "Lat": 34.051498,
+    "Lon": -6.75152,
+    "Ele": 84.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Essaouira-Mogador Airport",
+    "gps_code": "GMMI",
+    "freq": "121.200",
+    "Lat": 31.397499,
+    "Lon": -9.68167,
+    "Ele": 117.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Mohammed V International Airport",
+    "gps_code": "GMMN",
+    "freq": "119.900",
+    "Lat": 33.3675,
+    "Lon": -7.58997,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Taroudant Airport",
+    "gps_code": "GMMO",
+    "freq": "",
+    "Lat": 30.503487,
+    "Lon": -8.821549,
+    "Ele": 264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Casablanca Tit Mellil Airport",
+    "gps_code": "GMMT",
+    "freq": "",
+    "Lat": 33.5975,
+    "Lon": -7.465,
+    "Ele": 98.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nador Al Aaroui International Airport",
+    "gps_code": "GMMW",
+    "freq": "118.650",
+    "Lat": 34.9888,
+    "Lon": -3.02821,
+    "Ele": 175.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Menara Airport",
+    "gps_code": "GMMX",
+    "freq": "119.700",
+    "Lat": 31.606899,
+    "Lon": -8.0363,
+    "Ele": 470.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kenitra Air Base",
+    "gps_code": "GMMY",
+    "freq": "124.500",
+    "Lat": 34.298901,
+    "Lon": -6.59588,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ouarzazate Airport",
+    "gps_code": "GMMZ",
+    "freq": "119.300",
+    "Lat": 30.9391002655,
+    "Lon": -6.909430027010001,
+    "Ele": 1152.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sidi Slimane Airport",
+    "gps_code": "GMSL",
+    "freq": "124.500",
+    "Lat": 34.230598,
+    "Lon": -6.05014,
+    "Ele": 54.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cherif Al Idrissi Airport",
+    "gps_code": "GMTA",
+    "freq": "118.700",
+    "Lat": 35.177101,
+    "Lon": -3.83952,
+    "Ele": 29.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sania Ramel Airport",
+    "gps_code": "GMTN",
+    "freq": "119.000",
+    "Lat": 35.594299,
+    "Lon": -5.32002,
+    "Ele": 3.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Tangier Ibn Battuta Airport",
+    "gps_code": "GMTT",
+    "freq": "121.200",
+    "Lat": 35.731741,
+    "Lon": -5.921459,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lakhmiss N'Arazane Airport",
+    "gps_code": "MA-0002",
+    "freq": "",
+    "Lat": 30.49707,
+    "Lon": -8.63648,
+    "Ele": 367.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tata Airport",
+    "gps_code": "MA-0004",
+    "freq": "",
+    "Lat": 29.557381,
+    "Lon": -8.007671,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khouribga Air Base",
+    "gps_code": "MA-0006",
+    "freq": "",
+    "Lat": 32.85821,
+    "Lon": -6.9461,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khouribga West Airport",
+    "gps_code": "MA-0007",
+    "freq": "",
+    "Lat": 32.8767,
+    "Lon": -7.08445,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ben Guerir Air Base",
+    "gps_code": "MA-0008",
+    "freq": "",
+    "Lat": 32.124889,
+    "Lon": -7.877884,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sidi Zouine Airport",
+    "gps_code": "MA-0009",
+    "freq": "",
+    "Lat": 31.63833,
+    "Lon": -8.34768,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Guelmim Airport",
+    "gps_code": "MA-GLN",
+    "freq": "",
+    "Lat": 29.026699,
+    "Lon": -10.0503,
+    "Ele": 299.9
+  }
+]

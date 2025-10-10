@@ -1,0 +1,911 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Abbeyshrule Aerodrome",
+    "gps_code": "EIAB",
+    "freq": "122.600",
+    "Lat": 53.591373,
+    "Lon": -7.642947,
+    "Ele": 59.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballyboughal Aerodrome",
+    "gps_code": "EIBA",
+    "freq": "",
+    "Lat": 53.505556,
+    "Lon": -6.237778,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Benfield Aerodrome",
+    "gps_code": "EIBF",
+    "freq": "124.405",
+    "Lat": 53.16147,
+    "Lon": -7.26737,
+    "Ele": 79.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bantry Aerodrome",
+    "gps_code": "EIBN",
+    "freq": "122.400",
+    "Lat": 51.6772,
+    "Lon": -9.487123,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Birr Aerodrome",
+    "gps_code": "EIBR",
+    "freq": "122.950",
+    "Lat": 53.070599,
+    "Lon": -7.897468,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Belmullet Aerodrome",
+    "gps_code": "EIBT",
+    "freq": "123.600",
+    "Lat": 54.2228012085,
+    "Lon": -10.0307998657,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Connemara Regional Airport",
+    "gps_code": "EICA",
+    "freq": "123.000",
+    "Lat": 53.23030090332031,
+    "Lon": -9.467780113220217,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Craddenstown Airfield",
+    "gps_code": "EICD",
+    "freq": "",
+    "Lat": 53.542749,
+    "Lon": -7.061153,
+    "Ele": 78.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cork Airport",
+    "gps_code": "EICK",
+    "freq": "119.900",
+    "Lat": 51.841301,
+    "Lon": -8.49111,
+    "Ele": 153.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Clonbullogue Aerodrome",
+    "gps_code": "EICL",
+    "freq": "128.550",
+    "Lat": 53.249657,
+    "Lon": -7.122746,
+    "Ele": 73.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Galway Airport",
+    "gps_code": "EICM",
+    "freq": "121.825",
+    "Lat": 53.300201,
+    "Lon": -8.94159,
+    "Ele": 24.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Coonagh Aerodrome",
+    "gps_code": "EICN",
+    "freq": "",
+    "Lat": 52.6665,
+    "Lon": -8.68183,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Donegal Airport",
+    "gps_code": "EIDL",
+    "freq": "129.925",
+    "Lat": 55.0442008972168,
+    "Lon": -8.340999603271484,
+    "Ele": 9.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Dublin Airport",
+    "gps_code": "EIDW",
+    "freq": "121.100",
+    "Lat": 53.428713,
+    "Lon": -6.262121,
+    "Ele": 73.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Erinagh Airfield",
+    "gps_code": "EIER",
+    "freq": "118.175",
+    "Lat": 52.8125,
+    "Lon": -8.282222,
+    "Ele": 47.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Gowran Grange Aerodrome",
+    "gps_code": "EIGN",
+    "freq": "",
+    "Lat": 53.1786,
+    "Lon": -6.63528,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Navan Airfield",
+    "gps_code": "EIHH",
+    "freq": "",
+    "Lat": 53.695885,
+    "Lon": -6.654085,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hacketstown Aerodrome",
+    "gps_code": "EIHN",
+    "freq": "",
+    "Lat": 52.85499954223633,
+    "Lon": -6.547220230102539,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Inishmore Aerodrome",
+    "gps_code": "EIIM",
+    "freq": "123.000",
+    "Lat": 53.1067008972168,
+    "Lon": -9.653610229492188,
+    "Ele": 7.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Inisheer Aerodrome",
+    "gps_code": "EIIR",
+    "freq": "123.000",
+    "Lat": 53.064701,
+    "Lon": -9.5109,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kildare Aerodrome",
+    "gps_code": "EIKH",
+    "freq": "123.425",
+    "Lat": 53.0635986328125,
+    "Lon": -6.855279922485352,
+    "Ele": 79.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilkenny Airport",
+    "gps_code": "EIKK",
+    "freq": "122.900",
+    "Lat": 52.65079879760742,
+    "Lon": -7.296110153198242,
+    "Ele": 97.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ireland West Knock Airport",
+    "gps_code": "EIKN",
+    "freq": "121.900",
+    "Lat": 53.910301,
+    "Lon": -8.81849,
+    "Ele": 202.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kerry Airport",
+    "gps_code": "EIKY",
+    "freq": "121.600",
+    "Lat": 52.180901,
+    "Lon": -9.52378,
+    "Ele": 34.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Letterkenny Airfield",
+    "gps_code": "EILT",
+    "freq": "129.550",
+    "Lat": 54.951302,
+    "Lon": -7.67283,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Casement Air Base",
+    "gps_code": "EIME",
+    "freq": "122.000",
+    "Lat": 53.301700592,
+    "Lon": -6.451330184940001,
+    "Ele": 97.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Athboy Airfield",
+    "gps_code": "EIMH",
+    "freq": "118.550",
+    "Lat": 53.637779,
+    "Lon": -6.878611,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Inishmaan Aerodrome",
+    "gps_code": "EIMN",
+    "freq": "",
+    "Lat": 53.092999,
+    "Lon": -9.56806,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Newcastle Aerodrome",
+    "gps_code": "EINC",
+    "freq": "122.550",
+    "Lat": 53.071098,
+    "Lon": -6.04528,
+    "Ele": 0.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Shannon Airport",
+    "gps_code": "EINN",
+    "freq": "120.200",
+    "Lat": 52.702,
+    "Lon": -8.92482,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rathcoole Aerodrome",
+    "gps_code": "EIRT",
+    "freq": "",
+    "Lat": 52.105598,
+    "Lon": -8.98333,
+    "Ele": 85.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sligo Airport",
+    "gps_code": "EISG",
+    "freq": "122.100",
+    "Lat": 54.280200958252,
+    "Lon": -8.5992097854614,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Spanish Point Airfield",
+    "gps_code": "EISP",
+    "freq": "",
+    "Lat": 52.845839,
+    "Lon": -9.414876,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballyhavil Farm Airfield",
+    "gps_code": "EISS",
+    "freq": "",
+    "Lat": 53.56139,
+    "Lon": -6.092778,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Trim Aerodrome",
+    "gps_code": "EITM",
+    "freq": "123.300",
+    "Lat": 53.5746994019,
+    "Lon": -6.7386097908,
+    "Ele": 61.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Waterford Airport",
+    "gps_code": "EIWF",
+    "freq": "121.150",
+    "Lat": 52.187199,
+    "Lon": -7.08696,
+    "Ele": 36.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Weston Airport",
+    "gps_code": "EIWT",
+    "freq": "122.400",
+    "Lat": 53.351622,
+    "Lon": -6.490357,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Greaghlough Airstrip",
+    "gps_code": "GB-1054",
+    "freq": "",
+    "Lat": 53.85961,
+    "Lon": -6.9959,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brittas House Airstrip",
+    "gps_code": "IE-0001",
+    "freq": "",
+    "Lat": 52.603908,
+    "Lon": -8.417588,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lyons Estate Private Airstrip",
+    "gps_code": "IE-0002",
+    "freq": "",
+    "Lat": 53.296767,
+    "Lon": -6.543199,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolly's Grove Airfield",
+    "gps_code": "IE-0004",
+    "freq": "",
+    "Lat": 53.422468,
+    "Lon": -6.546232,
+    "Ele": 78.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eyne Airfield",
+    "gps_code": "IE-0005",
+    "freq": "",
+    "Lat": 53.082764,
+    "Lon": -7.277601,
+    "Ele": 80.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lough Conn Airstrip",
+    "gps_code": "IE-0008",
+    "freq": "",
+    "Lat": 54.044059,
+    "Lon": -9.216109,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "ILAS Wexford Airfield",
+    "gps_code": "IE-0010",
+    "freq": "",
+    "Lat": 52.2981,
+    "Lon": -6.68194,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Limetree Airfield",
+    "gps_code": "IE-0011",
+    "freq": "",
+    "Lat": 53.1155,
+    "Lon": -7.2443,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ashfield - Russell's field UL",
+    "gps_code": "IE-0013",
+    "freq": "",
+    "Lat": 54.989617,
+    "Lon": -7.738113,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Finn Valley Airfield UL",
+    "gps_code": "IE-0014",
+    "freq": "",
+    "Lat": 54.846529,
+    "Lon": -7.658548,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ruskey Airstrip",
+    "gps_code": "IE-0015",
+    "freq": "",
+    "Lat": 54.8405299,
+    "Lon": -7.6547115,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Drumavish Airstrip",
+    "gps_code": "IE-0016",
+    "freq": "",
+    "Lat": 54.78812,
+    "Lon": -7.724356,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Coulters Airstrip",
+    "gps_code": "IE-0017",
+    "freq": "",
+    "Lat": 54.82439,
+    "Lon": -7.62959,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abbeyfeale Airfield",
+    "gps_code": "IE-0018",
+    "freq": "",
+    "Lat": 52.395797,
+    "Lon": -9.34006,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballyjamesduff Airstrip",
+    "gps_code": "IE-0019",
+    "freq": "",
+    "Lat": 53.864439,
+    "Lon": -7.214957,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tibohine Airfield",
+    "gps_code": "IE-0020",
+    "freq": "",
+    "Lat": 53.884757,
+    "Lon": -8.488176,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eniskeane Airfield",
+    "gps_code": "IE-0021",
+    "freq": "",
+    "Lat": 51.737526,
+    "Lon": -8.863843,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ardfert Airstrip",
+    "gps_code": "IE-0023",
+    "freq": "",
+    "Lat": 52.34653,
+    "Lon": -9.76285,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Killamaster Airstrip",
+    "gps_code": "IE-0024",
+    "freq": "",
+    "Lat": 52.866546,
+    "Lon": -6.810249,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "The Forge Airstrip",
+    "gps_code": "IE-0025",
+    "freq": "",
+    "Lat": 52.81052,
+    "Lon": -8.13732,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballina Airfield",
+    "gps_code": "IE-0026",
+    "freq": "",
+    "Lat": 54.089209,
+    "Lon": -9.160676,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Allenwood Airstrip",
+    "gps_code": "IE-0027",
+    "freq": "",
+    "Lat": 53.267785,
+    "Lon": -6.839772,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballyboe Airstrip",
+    "gps_code": "IE-0028",
+    "freq": "",
+    "Lat": 52.383923,
+    "Lon": -7.618068,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Borris-in-Ossory Airstrip",
+    "gps_code": "IE-0029",
+    "freq": "",
+    "Lat": 52.92613,
+    "Lon": -7.65352,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bunnyconnellan Airstrip",
+    "gps_code": "IE-0030",
+    "freq": "",
+    "Lat": 54.094487,
+    "Lon": -9.034681,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Granard Airfield",
+    "gps_code": "IE-0031",
+    "freq": "",
+    "Lat": 53.74978,
+    "Lon": -7.53327,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gowran Airstrip",
+    "gps_code": "IE-0032",
+    "freq": "",
+    "Lat": 52.64263,
+    "Lon": -7.12033,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stradbally Airstrip",
+    "gps_code": "IE-0033",
+    "freq": "",
+    "Lat": 53.04556,
+    "Lon": -7.163937,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballyvalloo Airstrip",
+    "gps_code": "IE-0034",
+    "freq": "",
+    "Lat": 52.414439,
+    "Lon": -6.363058,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taggarts Airstrip",
+    "gps_code": "IE-0035",
+    "freq": "",
+    "Lat": 53.44808,
+    "Lon": -7.04839,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Spollens Airstrip",
+    "gps_code": "IE-0036",
+    "freq": "",
+    "Lat": 53.2934,
+    "Lon": -7.530334,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gay Tracy Airstrip",
+    "gps_code": "IE-0037",
+    "freq": "",
+    "Lat": 52.991607,
+    "Lon": -7.892731,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "O'Loughlin Airstrip",
+    "gps_code": "IE-0038",
+    "freq": "",
+    "Lat": 53.17023,
+    "Lon": -7.019048,
+    "Ele": 79.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Crossmolina Airstrip",
+    "gps_code": "IE-0039",
+    "freq": "",
+    "Lat": 54.134279,
+    "Lon": -9.366467,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dorans Airstrip",
+    "gps_code": "IE-0040",
+    "freq": "",
+    "Lat": 53.51968,
+    "Lon": -7.67858,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Warrens Airstrip",
+    "gps_code": "IE-0041",
+    "freq": "",
+    "Lat": 52.640212,
+    "Lon": -6.298816,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Laytown Airstrip",
+    "gps_code": "IE-0042",
+    "freq": "",
+    "Lat": 53.690727,
+    "Lon": -6.272178,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Whites Airstrip",
+    "gps_code": "IE-0043",
+    "freq": "",
+    "Lat": 53.66317,
+    "Lon": -8.63488,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballyvarry Airstrip",
+    "gps_code": "IE-0044",
+    "freq": "",
+    "Lat": 53.892707,
+    "Lon": -9.122479,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maganey Airstrip",
+    "gps_code": "IE-0045",
+    "freq": "",
+    "Lat": 52.898174,
+    "Lon": -6.928672,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Clonakilty Airstrip",
+    "gps_code": "IE-0046",
+    "freq": "",
+    "Lat": 51.6258872,
+    "Lon": -8.916197,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fethard Airstrip",
+    "gps_code": "IE-0047",
+    "freq": "",
+    "Lat": 52.471738,
+    "Lon": -7.734409,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Camus Airstrip",
+    "gps_code": "IE-0048",
+    "freq": "",
+    "Lat": 53.17147,
+    "Lon": -8.11363,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Millicent Airfield",
+    "gps_code": "IE-0049",
+    "freq": "",
+    "Lat": 53.271783,
+    "Lon": -6.68574,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mullingar-Milltownpass Airfield",
+    "gps_code": "IE-0050",
+    "freq": "",
+    "Lat": 53.452082,
+    "Lon": -7.237543,
+    "Ele": 85.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Carrigart Airstrip",
+    "gps_code": "IE-0051",
+    "freq": "",
+    "Lat": 55.161563,
+    "Lon": -7.710258,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lough Sheelin Airstrip",
+    "gps_code": "IE-0052",
+    "freq": "",
+    "Lat": 53.7964,
+    "Lon": -7.28455,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carstown Ultralight Airstrip",
+    "gps_code": "IE-0053",
+    "freq": "",
+    "Lat": 53.7668,
+    "Lon": -6.3257,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Craughwell Airfield",
+    "gps_code": "IE-0054",
+    "freq": "",
+    "Lat": 53.2461,
+    "Lon": -8.688,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cregboy Airstrip",
+    "gps_code": "IE-0056",
+    "freq": "",
+    "Lat": 53.329,
+    "Lon": -8.9605,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ellistown Airstrip",
+    "gps_code": "IE-0057",
+    "freq": "",
+    "Lat": 53.5364,
+    "Lon": -6.2593,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilbrook Airstrip",
+    "gps_code": "IE-0059",
+    "freq": "",
+    "Lat": 53.423,
+    "Lon": -6.7785,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunslaughlin Airstrip",
+    "gps_code": "IE-0060",
+    "freq": "",
+    "Lat": 53.5192,
+    "Lon": -6.6001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Moyglare Airfield",
+    "gps_code": "IE-0061",
+    "freq": "",
+    "Lat": 53.4044,
+    "Lon": -6.6362,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pallas West Airstrip",
+    "gps_code": "IE-0062",
+    "freq": "",
+    "Lat": 52.8601,
+    "Lon": -8.0498,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lickfinn Airstrip",
+    "gps_code": "IE-0063",
+    "freq": "",
+    "Lat": 52.591353,
+    "Lon": -7.643436,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tobertaskin Airstrip",
+    "gps_code": "IE-0065",
+    "freq": "",
+    "Lat": 53.60988,
+    "Lon": -6.26595,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Feohanagh Airstrip",
+    "gps_code": "IE-0067",
+    "freq": "",
+    "Lat": 52.387396,
+    "Lon": -8.973234,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Clonkeiffy Farm Airstrip",
+    "gps_code": "IE-0069",
+    "freq": "",
+    "Lat": 53.80343,
+    "Lon": -7.18509,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Drumgurra Airstrip",
+    "gps_code": "IE-0070",
+    "freq": "",
+    "Lat": 53.992919,
+    "Lon": -6.799064,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pettigo Airstrip",
+    "gps_code": "IE-0071",
+    "freq": "",
+    "Lat": 54.54779,
+    "Lon": -7.8412,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Adamstown Airfield",
+    "gps_code": "IE-0072",
+    "freq": "",
+    "Lat": 53.536548,
+    "Lon": -6.734977,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abbeyleix Airfield",
+    "gps_code": "IE-0073",
+    "freq": "",
+    "Lat": 52.894444,
+    "Lon": -7.369167,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballymoney Airfield",
+    "gps_code": "IE-0086",
+    "freq": "",
+    "Lat": 52.93241,
+    "Lon": -6.08221,
+    "Ele": 0.0
+  }
+]

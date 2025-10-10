@@ -1,0 +1,29 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Camden Airfield",
+    "gps_code": "TT-TT01",
+    "freq": "129.900",
+    "Lat": 10.4263,
+    "Lon": -61.439701,
+    "Ele": 22.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "A.N.R. Robinson International Airport",
+    "gps_code": "TTCP",
+    "freq": "119.000",
+    "Lat": 11.1497,
+    "Lon": -60.832199,
+    "Ele": 11.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Piarco International Airport",
+    "gps_code": "TTPP",
+    "freq": "123.700",
+    "Lat": 10.5954,
+    "Lon": -61.3372,
+    "Ele": 17.7
+  }
+]

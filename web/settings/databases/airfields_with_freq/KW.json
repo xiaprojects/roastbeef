@@ -1,0 +1,56 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Skydive Kuwait Airport",
+    "gps_code": "KW-0016",
+    "freq": "",
+    "Lat": 28.60425,
+    "Lon": 48.3093,
+    "Ele": 14.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ahmed Al Jaber Air Base",
+    "gps_code": "OKAJ",
+    "freq": "",
+    "Lat": 28.9347991943,
+    "Lon": 47.7919006348,
+    "Ele": 124.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ali Al Salem Air Base",
+    "gps_code": "OKAS",
+    "freq": "128.300",
+    "Lat": 29.344632,
+    "Lon": 47.511215,
+    "Ele": 143.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Udairi Army Air Field",
+    "gps_code": "OKDI",
+    "freq": "128.300",
+    "Lat": 29.697599411010746,
+    "Lon": 47.43600082397461,
+    "Ele": 131.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Kuwait International Airport",
+    "gps_code": "OKKK",
+    "freq": "121.300",
+    "Lat": 29.226601,
+    "Lon": 47.968899,
+    "Ele": 62.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Abdaliyah Highway Strip",
+    "gps_code": "Z19M",
+    "freq": "",
+    "Lat": 29.045299530029297,
+    "Lon": 47.79079818725586,
+    "Ele": 100.6
+  }
+]

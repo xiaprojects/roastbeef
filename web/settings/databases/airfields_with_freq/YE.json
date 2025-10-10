@@ -1,0 +1,344 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Dathina Airport",
+    "gps_code": "DAH",
+    "freq": "",
+    "Lat": 13.866884,
+    "Lon": 46.133473,
+    "Ele": -0.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ad-Dali Airport",
+    "gps_code": "DHL",
+    "freq": "",
+    "Lat": 13.73846,
+    "Lon": 44.72719,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Anad Air Base",
+    "gps_code": "OY74",
+    "freq": "",
+    "Lat": 13.1747,
+    "Lon": 44.765099,
+    "Ele": 274.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Canoxy Airport",
+    "gps_code": "OY75",
+    "freq": "",
+    "Lat": 15.6018,
+    "Lon": 49.0807,
+    "Ele": 1005.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aden International Airport",
+    "gps_code": "OYAA",
+    "freq": "119.700",
+    "Lat": 12.8295,
+    "Lon": 45.028801,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Abs Airport",
+    "gps_code": "OYAB",
+    "freq": "",
+    "Lat": 16.010983,
+    "Lon": 43.176771,
+    "Ele": 198.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ataq Airport",
+    "gps_code": "OYAT",
+    "freq": "759.500",
+    "Lat": 14.5513,
+    "Lon": 46.826199,
+    "Ele": 1138.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Badie Airport",
+    "gps_code": "OYBA",
+    "freq": "118.900",
+    "Lat": 18.720709,
+    "Lon": 50.835771,
+    "Ele": 276.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Al-Bayda Airport",
+    "gps_code": "OYBI",
+    "freq": "",
+    "Lat": 14.105974,
+    "Lon": 45.441079,
+    "Ele": 1865.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Beihan Airport",
+    "gps_code": "OYBN",
+    "freq": "",
+    "Lat": 14.781714,
+    "Lon": 45.719703,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Al-Bough Airport",
+    "gps_code": "OYBQ",
+    "freq": "",
+    "Lat": 17.350352,
+    "Lon": 44.625542,
+    "Ele": 1158.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Ghaydah International Airport",
+    "gps_code": "OYGD",
+    "freq": "121.600",
+    "Lat": 16.193341,
+    "Lon": 52.174186,
+    "Ele": 40.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamaran Airport",
+    "gps_code": "OYKM",
+    "freq": "",
+    "Lat": 15.368755,
+    "Lon": 42.612515,
+    "Ele": 15.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Marib Airport",
+    "gps_code": "OYMB",
+    "freq": "",
+    "Lat": 15.469228,
+    "Lon": 45.327272,
+    "Ele": 1005.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mukeiras Airport",
+    "gps_code": "OYMS",
+    "freq": "",
+    "Lat": 13.9368,
+    "Lon": 45.657,
+    "Ele": 2158.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Qishn Airport",
+    "gps_code": "OYQN",
+    "freq": "",
+    "Lat": 15.417,
+    "Lon": 51.682999,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Riyan Mukalla International Airport",
+    "gps_code": "OYRN",
+    "freq": "121.900",
+    "Lat": 14.6626,
+    "Lon": 49.375,
+    "Ele": 16.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Barat Airport",
+    "gps_code": "OYRT",
+    "freq": "",
+    "Lat": 16.732999801635742,
+    "Lon": 44.34999847412109,
+    "Ele": 2072.6
+  },
+  {
+    "type": "small_airport",
+    "name": "As Salif Airport",
+    "gps_code": "OYSF",
+    "freq": "",
+    "Lat": 15.294577,
+    "Lon": 42.685954,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sadah Airport",
+    "gps_code": "OYSH",
+    "freq": "",
+    "Lat": 16.967542,
+    "Lon": 43.728103,
+    "Ele": 1809.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sanaa International Airport",
+    "gps_code": "OYSN",
+    "freq": "121.600",
+    "Lat": 15.4763,
+    "Lon": 44.2197,
+    "Ele": 2199.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Socotra International Airport",
+    "gps_code": "OYSQ",
+    "freq": "759.500",
+    "Lat": 12.6307,
+    "Lon": 53.9058,
+    "Ele": 44.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Seiyun Hadhramaut International Airport",
+    "gps_code": "OYSY",
+    "freq": "118.400",
+    "Lat": 15.9661,
+    "Lon": 48.7883,
+    "Ele": 639.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ta'izz International Airport",
+    "gps_code": "OYTZ",
+    "freq": "121.600",
+    "Lat": 13.6859998703,
+    "Lon": 44.1390991211,
+    "Ele": 1474.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Al-Hazm Airport",
+    "gps_code": "OYZM",
+    "freq": "",
+    "Lat": 16.200001,
+    "Lon": 44.783001,
+    "Ele": 975.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Ain Airport Ain District, Shabwah Governorate, Yemen",
+    "gps_code": "WDA",
+    "freq": "",
+    "Lat": 14.859579,
+    "Lon": 45.545705,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Perim / Mayyun East Airfield",
+    "gps_code": "YE-0002",
+    "freq": "",
+    "Lat": 12.661236,
+    "Lon": 43.429654,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Dhaba Airport",
+    "gps_code": "YE-0003",
+    "freq": "",
+    "Lat": 14.70339,
+    "Lon": 49.49634,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ar Rawdah Airport",
+    "gps_code": "YE-0005",
+    "freq": "",
+    "Lat": 14.44872,
+    "Lon": 47.27955,
+    "Ele": 832.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Balhaf Yemen LNG Airport",
+    "gps_code": "YE-0008",
+    "freq": "",
+    "Lat": 14.01389,
+    "Lon": 48.15943,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sayma Airfield",
+    "gps_code": "YE-0013",
+    "freq": "",
+    "Lat": 13.020746,
+    "Lon": 43.467598,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kharir Airfield",
+    "gps_code": "YE-0014",
+    "freq": "",
+    "Lat": 15.734888,
+    "Lon": 48.793107,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Um Ghareb Airfield",
+    "gps_code": "YE-0015",
+    "freq": "",
+    "Lat": 18.399411,
+    "Lon": 49.127599,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Little Aden Airfield",
+    "gps_code": "YE-0016",
+    "freq": "",
+    "Lat": 12.785666,
+    "Lon": 44.825802,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abd al-Kuri Air Base",
+    "gps_code": "YE-0017",
+    "freq": "",
+    "Lat": 12.186662,
+    "Lon": 52.291746,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Perim Air Base",
+    "gps_code": "YE-0018",
+    "freq": "",
+    "Lat": 12.66653,
+    "Lon": 43.40793,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sayma",
+    "gps_code": "YE-0019",
+    "freq": "",
+    "Lat": 13.020746,
+    "Lon": 43.467598,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "New Mocha",
+    "gps_code": "YE-0020",
+    "freq": "",
+    "Lat": 12.873542,
+    "Lon": 43.511844,
+    "Ele": 28.7
+  }
+]

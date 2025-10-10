@@ -1,0 +1,560 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ameis Airstrip",
+    "gps_code": "AT-0009",
+    "freq": "",
+    "Lat": 48.657837,
+    "Lon": 16.540234,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herrnbaumgarten Airstrip",
+    "gps_code": "AT-0011",
+    "freq": "",
+    "Lat": 48.6976,
+    "Lon": 16.6598,
+    "Ele": 291.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kottingneusiedl Airfield",
+    "gps_code": "AT-0017",
+    "freq": "",
+    "Lat": 48.69335,
+    "Lon": 16.46472,
+    "Ele": 196.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tandem Airlebnis Paraglider Field",
+    "gps_code": "AT-0024",
+    "freq": "",
+    "Lat": 48.61453,
+    "Lon": 15.40598,
+    "Ele": 537.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Flugplatz Usting",
+    "gps_code": "AT-0025",
+    "freq": "",
+    "Lat": 48.31459,
+    "Lon": 13.71796,
+    "Ele": 385.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ossiacher See Paraglider Landing Field",
+    "gps_code": "AT-0029",
+    "freq": "",
+    "Lat": 46.65278,
+    "Lon": 13.89145,
+    "Ele": 502.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ternberg Landing Field",
+    "gps_code": "DE-0354",
+    "freq": "",
+    "Lat": 47.93474,
+    "Lon": 14.350854,
+    "Ele": 355.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ottenschlag Airfield",
+    "gps_code": "LOAA",
+    "freq": "124.400",
+    "Lat": 48.41856,
+    "Lon": 15.215294,
+    "Ele": 873.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dobersberg Airfield",
+    "gps_code": "LOAB",
+    "freq": "",
+    "Lat": 48.922113,
+    "Lon": 15.296826,
+    "Ele": 524.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Völtendorf Airfield",
+    "gps_code": "LOAD",
+    "freq": "",
+    "Lat": 48.160081,
+    "Lon": 15.58677,
+    "Ele": 324.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krems/Langenlois Airfield",
+    "gps_code": "LOAG",
+    "freq": "122.700",
+    "Lat": 48.446155,
+    "Lon": 15.635011,
+    "Ele": 310.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wiener Neustadt East Airport",
+    "gps_code": "LOAN",
+    "freq": "130.005",
+    "Lat": 47.8433,
+    "Lon": 16.260099,
+    "Ele": 273.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Altlichtenwarth Gliderfield",
+    "gps_code": "LOAR",
+    "freq": "125.250",
+    "Lat": 48.6661,
+    "Lon": 16.825,
+    "Ele": 184.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Spitzerberg Airfield",
+    "gps_code": "LOAS",
+    "freq": "118.520",
+    "Lat": 48.099157,
+    "Lon": 16.933527,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stockerau Airfield",
+    "gps_code": "LOAU",
+    "freq": "",
+    "Lat": 48.409121,
+    "Lon": 16.191015,
+    "Ele": 209.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vöslau-Kottingbrunn Airfield",
+    "gps_code": "LOAV",
+    "freq": "118.605",
+    "Lat": 47.965,
+    "Lon": 16.26,
+    "Ele": 233.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Fürstenfeld Airfield",
+    "gps_code": "LOGF",
+    "freq": "",
+    "Lat": 47.061873,
+    "Lon": 16.083901,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Punitz-Güssing Airfield",
+    "gps_code": "LOGG",
+    "freq": "123.205",
+    "Lat": 47.146654,
+    "Lon": 16.317058,
+    "Ele": 289.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Trieben Airfield",
+    "gps_code": "LOGI",
+    "freq": "",
+    "Lat": 47.493364,
+    "Lon": 14.49558,
+    "Ele": 695.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapfenberg Airfield",
+    "gps_code": "LOGK",
+    "freq": "",
+    "Lat": 47.457544,
+    "Lon": 15.331125,
+    "Ele": 524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lanzen-Turnau Airfield",
+    "gps_code": "LOGL",
+    "freq": "",
+    "Lat": 47.556155,
+    "Lon": 15.320327,
+    "Ele": 784.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mariazell Airfield",
+    "gps_code": "LOGM",
+    "freq": "122.105",
+    "Lat": 47.789733,
+    "Lon": 15.300333,
+    "Ele": 860.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Niederöblarn Airfield",
+    "gps_code": "LOGO",
+    "freq": "",
+    "Lat": 47.478742,
+    "Lon": 14.007101,
+    "Ele": 652.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pinkafeld Airfield",
+    "gps_code": "LOGP",
+    "freq": "",
+    "Lat": 47.386684,
+    "Lon": 16.112673,
+    "Ele": 408.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Leoben/Timmersdorf Airfield",
+    "gps_code": "LOGT",
+    "freq": "122.305",
+    "Lat": 47.379648,
+    "Lon": 14.964044,
+    "Ele": 627.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Weiz-Unterfladnitz Airfield",
+    "gps_code": "LOGW",
+    "freq": "",
+    "Lat": 47.170293,
+    "Lon": 15.664468,
+    "Ele": 395.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hohenems-Dornbirn Airfield",
+    "gps_code": "LOIH",
+    "freq": "121.200",
+    "Lat": 47.384477,
+    "Lon": 9.699776,
+    "Ele": 412.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sankt Johann Airfield",
+    "gps_code": "LOIJ",
+    "freq": "120.350",
+    "Lat": 47.5201,
+    "Lon": 12.4497,
+    "Ele": 670.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kufstein-Langkampfen Airfield",
+    "gps_code": "LOIK",
+    "freq": "",
+    "Lat": 47.564713,
+    "Lon": 12.127576,
+    "Ele": 484.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Reutte-Höfen Airfield",
+    "gps_code": "LOIR",
+    "freq": "",
+    "Lat": 47.470897,
+    "Lon": 10.6913,
+    "Ele": 855.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Feldkirchen Airfield",
+    "gps_code": "LOKF",
+    "freq": "",
+    "Lat": 46.70893,
+    "Lon": 14.076722,
+    "Ele": 520.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ferlach-Glainach Airfield",
+    "gps_code": "LOKG",
+    "freq": "",
+    "Lat": 46.532778,
+    "Lon": 14.330833,
+    "Ele": 456.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Friesach/Hirt Airfield",
+    "gps_code": "LOKH",
+    "freq": "",
+    "Lat": 46.927491,
+    "Lon": 14.431848,
+    "Ele": 615.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Lienz-Nikolsdorf Airfield",
+    "gps_code": "LOKL",
+    "freq": "",
+    "Lat": 46.798069,
+    "Lon": 12.87833,
+    "Ele": 637.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mayerhofen Airfield",
+    "gps_code": "LOKM",
+    "freq": "",
+    "Lat": 46.974996,
+    "Lon": 14.371228,
+    "Ele": 645.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nötsch im Gailtal Airfield",
+    "gps_code": "LOKN",
+    "freq": "",
+    "Lat": 46.5811,
+    "Lon": 13.6292,
+    "Ele": 548.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sankt Donat / Mairist Airfield",
+    "gps_code": "LOKR",
+    "freq": "",
+    "Lat": 46.743139,
+    "Lon": 14.413134,
+    "Ele": 536.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wolfsberg Airfield",
+    "gps_code": "LOKW",
+    "freq": "122.500",
+    "Lat": 46.818202,
+    "Lon": 14.825154,
+    "Ele": 445.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Scharnstein Airfield",
+    "gps_code": "LOLC",
+    "freq": "",
+    "Lat": 47.898602,
+    "Lon": 13.9394,
+    "Ele": 531.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eferding Airfield",
+    "gps_code": "LOLE",
+    "freq": "",
+    "Lat": 48.338793,
+    "Lon": 13.985209,
+    "Ele": 270.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Freistadt Airfield",
+    "gps_code": "LOLF",
+    "freq": "",
+    "Lat": 48.513748,
+    "Lon": 14.406579,
+    "Ele": 681.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sankt Georgen-Ybbsfeld Airfield",
+    "gps_code": "LOLG",
+    "freq": "122.405",
+    "Lat": 48.10332,
+    "Lon": 14.951091,
+    "Ele": 252.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hofkirchen Airfield",
+    "gps_code": "LOLH",
+    "freq": "122.180",
+    "Lat": 48.13911,
+    "Lon": 14.33584,
+    "Ele": 358.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ried-Kirchheim Airfield",
+    "gps_code": "LOLK",
+    "freq": "",
+    "Lat": 48.21227,
+    "Lon": 13.345678,
+    "Ele": 420.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Micheldorf Airfield",
+    "gps_code": "LOLM",
+    "freq": "",
+    "Lat": 47.871669,
+    "Lon": 14.125149,
+    "Ele": 459.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Linz-East Glider Field",
+    "gps_code": "LOLO",
+    "freq": "122.380",
+    "Lat": 48.300044,
+    "Lon": 14.333606,
+    "Ele": 252.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Schärding-Suben Airfield",
+    "gps_code": "LOLS",
+    "freq": "",
+    "Lat": 48.403301,
+    "Lon": 13.4483,
+    "Ele": 326.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Flugplatz Seitenstetten",
+    "gps_code": "LOLT",
+    "freq": "123.605",
+    "Lat": 48.050556,
+    "Lon": 14.661944,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gmunden-Laakirchen Airfield",
+    "gps_code": "LOLU",
+    "freq": "",
+    "Lat": 47.951541,
+    "Lon": 13.867271,
+    "Ele": 509.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wels Airfield",
+    "gps_code": "LOLW",
+    "freq": "119.700",
+    "Lat": 48.182513,
+    "Lon": 14.039283,
+    "Ele": 317.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mauterndorf Airfield",
+    "gps_code": "LOSM",
+    "freq": "",
+    "Lat": 47.131995,
+    "Lon": 13.695867,
+    "Ele": 1110.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Graz Airport",
+    "gps_code": "LOWG",
+    "freq": "119.300",
+    "Lat": 46.9911,
+    "Lon": 15.4396,
+    "Ele": 339.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Innsbruck Airport",
+    "gps_code": "LOWI",
+    "freq": "119.275",
+    "Lat": 47.260201,
+    "Lon": 11.344,
+    "Ele": 581.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Klagenfurt Airport",
+    "gps_code": "LOWK",
+    "freq": "126.825",
+    "Lat": 46.642502,
+    "Lon": 14.3377,
+    "Ele": 448.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Linz-Hörsching Airport / Vogler Air Base",
+    "gps_code": "LOWL",
+    "freq": "119.750",
+    "Lat": 48.2332,
+    "Lon": 14.1875,
+    "Ele": 298.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Salzburg Airport",
+    "gps_code": "LOWS",
+    "freq": "123.725",
+    "Lat": 47.793301,
+    "Lon": 13.0043,
+    "Ele": 430.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Vienna International Airport",
+    "gps_code": "LOWW",
+    "freq": "134.675",
+    "Lat": 48.110298,
+    "Lon": 16.5697,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zell am See Airfield",
+    "gps_code": "LOWZ",
+    "freq": "119.705",
+    "Lat": 47.291468,
+    "Lon": 12.790632,
+    "Ele": 752.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fiala-Fernbrugg Air Base",
+    "gps_code": "LOXA",
+    "freq": "",
+    "Lat": 47.53573,
+    "Lon": 14.141488,
+    "Ele": 637.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wiener Neustadt West Airport",
+    "gps_code": "LOXN",
+    "freq": "130.150",
+    "Lat": 47.836933,
+    "Lon": 16.221838,
+    "Ele": 285.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brumowski  Air Base",
+    "gps_code": "LOXT",
+    "freq": "",
+    "Lat": 48.319247,
+    "Lon": 16.114016,
+    "Ele": 175.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hinterstoisser Air Base",
+    "gps_code": "LOXZ",
+    "freq": "129.475",
+    "Lat": 47.202801,
+    "Lon": 14.7442,
+    "Ele": 690.1
+  }
+]

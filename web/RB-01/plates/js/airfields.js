@@ -13,7 +13,7 @@ AirfieldsCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']
 
 var URL_AUTOPILOT_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/autopilot";
 var URL_AUTOPILOT_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/autopilot";
-var URL_AIRFIELDS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.airfields.json";
+var URL_AIRFIELDS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/db.airfields.json";
 
 var WAYPOINT_STATUS_PATH = 0;       // On the way
 var WAYPOINT_STATUS_TARGET = 1;     // Next target

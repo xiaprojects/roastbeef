@@ -1,0 +1,65 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Quebo Airport",
+    "gps_code": "GG64",
+    "freq": "",
+    "Lat": 11.536858,
+    "Lon": -14.761904,
+    "Ele": 50.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bafatá Airport",
+    "gps_code": "GGBF",
+    "freq": "",
+    "Lat": 12.176437,
+    "Lon": -14.657811,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bubaque Airport",
+    "gps_code": "GGBU",
+    "freq": "",
+    "Lat": 11.297356,
+    "Lon": -15.838079,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cufar Airport",
+    "gps_code": "GGCF",
+    "freq": "",
+    "Lat": 11.2879,
+    "Lon": -15.1805,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gabu Airport",
+    "gps_code": "GGGB",
+    "freq": "",
+    "Lat": 12.292002,
+    "Lon": -14.236044,
+    "Ele": 68.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Osvaldo Vieira International Airport",
+    "gps_code": "GGOV",
+    "freq": "343.200",
+    "Lat": 11.894800186157228,
+    "Lon": -15.65369987487793,
+    "Ele": 39.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Piche Airport",
+    "gps_code": "GW-0001",
+    "freq": "",
+    "Lat": 12.32008,
+    "Lon": -13.958281,
+    "Ele": 71.9
+  }
+]

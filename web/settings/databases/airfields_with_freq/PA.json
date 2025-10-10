@@ -1,0 +1,695 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Corazón de Jesús Airport",
+    "gps_code": "CZJ",
+    "freq": "",
+    "Lat": 9.44686,
+    "Lon": -78.575678,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Garachiné Airport",
+    "gps_code": "GHE",
+    "freq": "",
+    "Lat": 8.0644,
+    "Lon": -78.3673,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Viveros Island Airport",
+    "gps_code": "IVI",
+    "freq": "",
+    "Lat": 8.4693,
+    "Lon": -79.0016,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca Ceiba Airport",
+    "gps_code": "MP01",
+    "freq": "",
+    "Lat": 8.354999542236328,
+    "Lon": -82.8364028930664,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca 45 Airport",
+    "gps_code": "MP02",
+    "freq": "",
+    "Lat": 9.543330192565918,
+    "Lon": -82.73380279541016,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Cabezona Airport",
+    "gps_code": "MP03",
+    "freq": "",
+    "Lat": 8.3457,
+    "Lon": -82.5042,
+    "Ele": 9.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca 67 Airport",
+    "gps_code": "MP17",
+    "freq": "",
+    "Lat": 9.434410095214844,
+    "Lon": -82.49909973144531,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Guillermo Palm Jaén Airport",
+    "gps_code": "MP18",
+    "freq": "123.000",
+    "Lat": 8.50383,
+    "Lon": -80.360298,
+    "Ele": 86.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alvaro Berroa Airport",
+    "gps_code": "MP21",
+    "freq": "",
+    "Lat": 8.770389556884766,
+    "Lon": -82.66439819335938,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingenio Santa Rosa Airport",
+    "gps_code": "MP22",
+    "freq": "",
+    "Lat": 8.195219993591309,
+    "Lon": -80.65869903564453,
+    "Ele": 33.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Capt. Alex H. Bosquez Airport",
+    "gps_code": "MP23",
+    "freq": "122.800",
+    "Lat": 9.16628,
+    "Lon": -79.545205,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Captain Krish E. Persaud Airport",
+    "gps_code": "MP24",
+    "freq": "0.000",
+    "Lat": 8.58846,
+    "Lon": -79.889702,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Cocos Airport",
+    "gps_code": "MP26",
+    "freq": "",
+    "Lat": 8.22485,
+    "Lon": -78.904404,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Deborah Airport",
+    "gps_code": "MP27",
+    "freq": "",
+    "Lat": 9.51614,
+    "Lon": -82.595497,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Aguila Airstrip",
+    "gps_code": "MPAG",
+    "freq": "",
+    "Lat": 8.37168,
+    "Lon": -80.351676,
+    "Ele": 22.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bocas del Toro International Airport",
+    "gps_code": "MPBO",
+    "freq": "133.000",
+    "Lat": 9.34085,
+    "Lon": -82.250801,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Alonso Valderrama Airport",
+    "gps_code": "MPCE",
+    "freq": "124.300",
+    "Lat": 7.98784,
+    "Lon": -80.409837,
+    "Ele": 10.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Changuinola Captain Manuel Niño International Airport",
+    "gps_code": "MPCH",
+    "freq": "121.800",
+    "Lat": 9.458962,
+    "Lon": -82.515062,
+    "Ele": 5.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Enrique Malek International Airport",
+    "gps_code": "MPDA",
+    "freq": "133.000",
+    "Lat": 8.391,
+    "Lon": -82.434998,
+    "Ele": 27.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Enrique Adolfo Jimenez Airport",
+    "gps_code": "MPEJ",
+    "freq": "119.700",
+    "Lat": 9.35664,
+    "Lon": -79.867401,
+    "Ele": 7.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Fernando Eleta Airport",
+    "gps_code": "MPFE",
+    "freq": "",
+    "Lat": 8.411389,
+    "Lon": -79.111115,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fort Sherman Airport",
+    "gps_code": "MPFS",
+    "freq": "",
+    "Lat": 9.365090370178224,
+    "Lon": -79.94979858398438,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Panamá Pacífico International Airport",
+    "gps_code": "MPHO",
+    "freq": "",
+    "Lat": 8.91479,
+    "Lon": -79.599602,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mamitupu Airport",
+    "gps_code": "MPI",
+    "freq": "",
+    "Lat": 9.1851,
+    "Lon": -77.9841,
+    "Ele": 7.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Jaqué Airport",
+    "gps_code": "MPJE",
+    "freq": "",
+    "Lat": 7.51778,
+    "Lon": -78.157204,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Chame Mayor Airport",
+    "gps_code": "MPMC",
+    "freq": "",
+    "Lat": 8.591418,
+    "Lon": -79.869189,
+    "Ele": 24.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Marcos A. Gelabert International Airport",
+    "gps_code": "MPMG",
+    "freq": "133.000",
+    "Lat": 8.97334,
+    "Lon": -79.555603,
+    "Ele": 9.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Augusto Vergara Airport",
+    "gps_code": "MPNU",
+    "freq": "",
+    "Lat": 7.8575,
+    "Lon": -80.276167,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Puerto Obaldía Airport",
+    "gps_code": "MPOA",
+    "freq": "",
+    "Lat": 8.668813,
+    "Lon": -77.417399,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Capt. J. Montenegro Airport",
+    "gps_code": "MPPD",
+    "freq": "",
+    "Lat": 7.534801,
+    "Lon": -80.043347,
+    "Ele": 45.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Patiño Airstrip",
+    "gps_code": "MPPT",
+    "freq": "",
+    "Lat": 8.252816,
+    "Lon": -78.278618,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ruben Cantu Airport",
+    "gps_code": "MPSA",
+    "freq": "124.000",
+    "Lat": 8.085599899291992,
+    "Lon": -80.94529724121094,
+    "Ele": 82.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Scarlett Martinez International Airport",
+    "gps_code": "MPSM",
+    "freq": "118.200",
+    "Lat": 8.375880241394,
+    "Lon": -80.127899169922,
+    "Ele": 32.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Tocumen International Airport",
+    "gps_code": "MPTO",
+    "freq": "133.000",
+    "Lat": 9.07136,
+    "Lon": -79.383499,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Porvenir Airport",
+    "gps_code": "MPVR",
+    "freq": "",
+    "Lat": 9.559212,
+    "Lon": -78.946631,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Wannukandi Airport",
+    "gps_code": "MPWN",
+    "freq": "",
+    "Lat": 9.273476,
+    "Lon": -78.139848,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca 32 Airport",
+    "gps_code": "MPZL",
+    "freq": "",
+    "Lat": 9.42708969116211,
+    "Lon": -82.56269836425781,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ogobsucum Airport",
+    "gps_code": "OGM",
+    "freq": "",
+    "Lat": 9.1383,
+    "Lon": -77.93385,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Achutupu Airport",
+    "gps_code": "PA-0001",
+    "freq": "",
+    "Lat": 9.188481,
+    "Lon": -77.994153,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aguadulce Airport",
+    "gps_code": "PA-0002",
+    "freq": "",
+    "Lat": 8.251649856567383,
+    "Lon": -80.56539916992188,
+    "Ele": 31.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ailigandí Airport",
+    "gps_code": "PA-0003",
+    "freq": "",
+    "Lat": 9.2226,
+    "Lon": -78.0236,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cartí Airport",
+    "gps_code": "PA-0004",
+    "freq": "",
+    "Lat": 9.452863,
+    "Lon": -78.978917,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Corazón de Jesús Airport",
+    "gps_code": "PA-0005",
+    "freq": "",
+    "Lat": 9.017219543457031,
+    "Lon": -77.98069763183594,
+    "Ele": 307.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca Blanco Airport",
+    "gps_code": "PA-0006",
+    "freq": "",
+    "Lat": 8.389832,
+    "Lon": -82.870847,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca Fátima Airport",
+    "gps_code": "PA-0007",
+    "freq": "",
+    "Lat": 8.388027,
+    "Lon": -82.748509,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Joya Airport",
+    "gps_code": "PA-0008",
+    "freq": "",
+    "Lat": 9.13856029510498,
+    "Lon": -79.24019622802734,
+    "Ele": 29.3
+  },
+  {
+    "type": "small_airport",
+    "name": "La Plantación Airport",
+    "gps_code": "PA-0009",
+    "freq": "",
+    "Lat": 7.662889957427978,
+    "Lon": -81.006103515625,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandinga Airport",
+    "gps_code": "PA-0010",
+    "freq": "",
+    "Lat": 9.454635,
+    "Lon": -79.086507,
+    "Ele": 11.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Mulatupo Airport",
+    "gps_code": "PA-0011",
+    "freq": "",
+    "Lat": 8.945487,
+    "Lon": -77.733486,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Playón Chico Airport",
+    "gps_code": "PA-0013",
+    "freq": "",
+    "Lat": 9.30692,
+    "Lon": -78.235273,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Río Azúcar Airport",
+    "gps_code": "PA-0014",
+    "freq": "",
+    "Lat": 9.4247,
+    "Lon": -78.6269,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Sidra Airport",
+    "gps_code": "PA-0015",
+    "freq": "",
+    "Lat": 9.316789627075195,
+    "Lon": -79.28299713134766,
+    "Ele": 828.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Río Tigre Airport",
+    "gps_code": "PA-0016",
+    "freq": "",
+    "Lat": 9.250880241394045,
+    "Lon": -78.49870300292969,
+    "Ele": 333.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Miguel Airport",
+    "gps_code": "PA-0017",
+    "freq": "",
+    "Lat": 8.456507,
+    "Lon": -78.934214,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Tubualá Airport",
+    "gps_code": "PA-0018",
+    "freq": "",
+    "Lat": 8.918601,
+    "Lon": -77.709182,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tupile Airport",
+    "gps_code": "PA-0019",
+    "freq": "",
+    "Lat": 9.246580123901367,
+    "Lon": -78.36250305175781,
+    "Ele": 418.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Coral Lodge Airport",
+    "gps_code": "PA-0020",
+    "freq": "",
+    "Lat": 9.55488,
+    "Lon": -79.13786,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yaviza Airport",
+    "gps_code": "PA-0022",
+    "freq": "",
+    "Lat": 8.1528,
+    "Lon": -77.687,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Coiba Airport",
+    "gps_code": "PA-0024",
+    "freq": "",
+    "Lat": 7.5068,
+    "Lon": -81.6981,
+    "Ele": 77.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Arenas Airport",
+    "gps_code": "PA-0025",
+    "freq": "",
+    "Lat": 7.3713,
+    "Lon": -80.846,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tonosí Airport",
+    "gps_code": "PA-0026",
+    "freq": "",
+    "Lat": 7.4148,
+    "Lon": -80.4466,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Candelaria Airport",
+    "gps_code": "PA-0027",
+    "freq": "",
+    "Lat": 7.7326,
+    "Lon": -80.1403,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Nusatupo Airport",
+    "gps_code": "PA-0028",
+    "freq": "",
+    "Lat": 9.43392,
+    "Lon": -78.83173,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Wannukandi Airport",
+    "gps_code": "PA-0029",
+    "freq": "",
+    "Lat": 9.273166,
+    "Lon": -78.139873,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mansukun Airport",
+    "gps_code": "PA-0030",
+    "freq": "",
+    "Lat": 9.05011,
+    "Lon": -77.80985,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Caledonia Airport",
+    "gps_code": "PA-0032",
+    "freq": "",
+    "Lat": 8.90201,
+    "Lon": -77.69286,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Coibito Landing Airstrip",
+    "gps_code": "PA-0037",
+    "freq": "",
+    "Lat": 7.639068,
+    "Lon": -81.702433,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pixvae Airstrip",
+    "gps_code": "PA-0038",
+    "freq": "",
+    "Lat": 7.841248,
+    "Lon": -81.567301,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Puerto Armuelles Airport",
+    "gps_code": "PA-AML",
+    "freq": "",
+    "Lat": 8.267667,
+    "Lon": -82.864537,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahia Piña Airport",
+    "gps_code": "PA-BFQ",
+    "freq": "",
+    "Lat": 7.58737,
+    "Lon": -78.179939,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "EL Real Airport",
+    "gps_code": "PA-ELE",
+    "freq": "",
+    "Lat": 8.107235,
+    "Lon": -77.725545,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Miraflores Airport",
+    "gps_code": "PA-MRF",
+    "freq": "",
+    "Lat": 8.338889,
+    "Lon": -78.131944,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Raul Arias Espinoza Airport",
+    "gps_code": "PA-OTD",
+    "freq": "132.200",
+    "Lat": 8.62876,
+    "Lon": -79.034698,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sambú Airport",
+    "gps_code": "PA-SAX",
+    "freq": "",
+    "Lat": 8.026279,
+    "Lon": -78.209555,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San José Island Airport",
+    "gps_code": "SIC",
+    "freq": "",
+    "Lat": 8.2622,
+    "Lon": -79.078,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ticantiquí Airport",
+    "gps_code": "TJC",
+    "freq": "",
+    "Lat": 9.4185,
+    "Lon": -78.4896,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ustupu Airport",
+    "gps_code": "UTU",
+    "freq": "",
+    "Lat": 9.1283,
+    "Lon": -77.9337,
+    "Ele": 2.7
+  }
+]

@@ -1,0 +1,326 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Nhon Co Airfield",
+    "gps_code": "HOO",
+    "freq": "",
+    "Lat": 11.9787,
+    "Lon": 107.5638,
+    "Ele": 691.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sóc Trăng Airport",
+    "gps_code": "SOA",
+    "freq": "",
+    "Lat": 9.5814,
+    "Lon": 105.9602,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yen Bai Air Base",
+    "gps_code": "VN-0004",
+    "freq": "",
+    "Lat": 21.732873,
+    "Lon": 104.853601,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Đảo Trường Sa (Spratly Island) Airport",
+    "gps_code": "VN-0005",
+    "freq": "",
+    "Lat": 8.644541,
+    "Lon": 111.920347,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Phu Quy Airport",
+    "gps_code": "VN-0019",
+    "freq": "",
+    "Lat": 10.53367,
+    "Lon": 108.92867,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoa Lac Airfield",
+    "gps_code": "VN-0030",
+    "freq": "",
+    "Lat": 21.028531,
+    "Lon": 105.487428,
+    "Ele": 39.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bien Hoa Air Base",
+    "gps_code": "VV02",
+    "freq": "",
+    "Lat": 10.9766998291,
+    "Lon": 106.818000793,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Haiphong Kien An Airport",
+    "gps_code": "VV03",
+    "freq": "",
+    "Lat": 20.8034,
+    "Lon": 106.605003,
+    "Ele": 15.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Buon Ma Thuot Airport",
+    "gps_code": "VVBM",
+    "freq": "118.300",
+    "Lat": 12.668299675,
+    "Lon": 108.120002747,
+    "Ele": 527.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chu Lai Airport",
+    "gps_code": "VVCA",
+    "freq": "118.250",
+    "Lat": 15.4033,
+    "Lon": 108.706001,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cat Bi International Airport",
+    "gps_code": "VVCI",
+    "freq": "",
+    "Lat": 20.81686,
+    "Lon": 106.722994,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cà Mau Airport",
+    "gps_code": "VVCM",
+    "freq": "",
+    "Lat": 9.177667,
+    "Lon": 105.177778,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cam Ranh International Airport / Cam Ranh Air Base",
+    "gps_code": "VVCR",
+    "freq": "",
+    "Lat": 11.9982,
+    "Lon": 109.219002,
+    "Ele": 12.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Con Dao Airport",
+    "gps_code": "VVCS",
+    "freq": "",
+    "Lat": 8.73183,
+    "Lon": 106.633003,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Can Tho International Airport",
+    "gps_code": "VVCT",
+    "freq": "118.800",
+    "Lat": 10.0851,
+    "Lon": 105.711998,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dien Bien Phu Airport",
+    "gps_code": "VVDB",
+    "freq": "118.700",
+    "Lat": 21.3974990845,
+    "Lon": 103.008003235,
+    "Ele": 491.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dong Hoi Airport",
+    "gps_code": "VVDH",
+    "freq": "",
+    "Lat": 17.515,
+    "Lon": 106.590556,
+    "Ele": 18.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lien Khuong Airport",
+    "gps_code": "VVDL",
+    "freq": "",
+    "Lat": 11.750556,
+    "Lon": 108.366997,
+    "Ele": 961.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Da Nang International Airport",
+    "gps_code": "VVDN",
+    "freq": "125.300",
+    "Lat": 16.0439,
+    "Lon": 108.198997,
+    "Ele": 10.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gia Lam Air Base",
+    "gps_code": "VVGL",
+    "freq": "",
+    "Lat": 21.040501,
+    "Lon": 105.886002,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kep Air Base",
+    "gps_code": "VVKP",
+    "freq": "",
+    "Lat": 21.3946,
+    "Lon": 106.261002,
+    "Ele": 16.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Noi Bai International Airport",
+    "gps_code": "VVNB",
+    "freq": "120.075",
+    "Lat": 21.221201,
+    "Lon": 105.806999,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Na San Airport",
+    "gps_code": "VVNS",
+    "freq": "",
+    "Lat": 21.215301,
+    "Lon": 104.032803,
+    "Ele": 650.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Phu Bai International Airport",
+    "gps_code": "VVPB",
+    "freq": "118.800",
+    "Lat": 16.400628,
+    "Lon": 107.703094,
+    "Ele": 14.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Phu Cat Airport",
+    "gps_code": "VVPC",
+    "freq": "",
+    "Lat": 13.955,
+    "Lon": 109.042,
+    "Ele": 24.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pleiku Airport",
+    "gps_code": "VVPK",
+    "freq": "118.100",
+    "Lat": 14.00450038909912,
+    "Lon": 108.01699829101562,
+    "Ele": 741.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Phu Quoc International Airport",
+    "gps_code": "VVPQ",
+    "freq": "118.600",
+    "Lat": 10.1698,
+    "Lon": 103.9931,
+    "Ele": 11.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Phan Rang Airport",
+    "gps_code": "VVPR",
+    "freq": "",
+    "Lat": 11.6335,
+    "Lon": 108.952003,
+    "Ele": 30.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rach Gia Airport",
+    "gps_code": "VVRG",
+    "freq": "",
+    "Lat": 9.95802997234,
+    "Lon": 105.132379532,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dong Tac Airport",
+    "gps_code": "VVTH",
+    "freq": "",
+    "Lat": 13.0496,
+    "Lon": 109.334,
+    "Ele": 6.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Tan Son Nhat International Airport",
+    "gps_code": "VVTS",
+    "freq": "125.500",
+    "Lat": 10.8188,
+    "Lon": 106.652,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tho Xuan Airport",
+    "gps_code": "VVTX",
+    "freq": "",
+    "Lat": 19.901667,
+    "Lon": 105.467778,
+    "Ele": 18.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Van Don International Airport",
+    "gps_code": "VVVD",
+    "freq": "",
+    "Lat": 21.120693,
+    "Lon": 107.41539,
+    "Ele": 7.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vinh Airport",
+    "gps_code": "VVVH",
+    "freq": "",
+    "Lat": 18.7376003265,
+    "Lon": 105.67099762,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vung Tau Airport",
+    "gps_code": "VVVT",
+    "freq": "",
+    "Lat": 10.375093,
+    "Lon": 107.096185,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ok365comdev",
+    "gps_code": "XCBA",
+    "freq": "",
+    "Lat": 10.0,
+    "Lon": 12.0,
+    "Ele": 3.7
+  }
+]

@@ -1,0 +1,938 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Betong International Airport",
+    "gps_code": "BTZ",
+    "freq": "",
+    "Lat": 5.79,
+    "Lon": 101.15,
+    "Ele": 239.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Eastern Flying Club Airport",
+    "gps_code": "TH-0001",
+    "freq": "122.300",
+    "Lat": 12.902439,
+    "Lon": 100.933227,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Khlong Si Airfield",
+    "gps_code": "TH-0002",
+    "freq": "",
+    "Lat": 14.170617,
+    "Lon": 100.691757,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Klong 15 Airfield",
+    "gps_code": "TH-0003",
+    "freq": "131.000",
+    "Lat": 14.114705,
+    "Lon": 100.949485,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Prachom Klao Airfield",
+    "gps_code": "TH-0004",
+    "freq": "",
+    "Lat": 14.163603,
+    "Lon": 101.337118,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lektop-Thames Airport",
+    "gps_code": "TH-0005",
+    "freq": "",
+    "Lat": 14.03662,
+    "Lon": 100.69448,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thung Si Kan Airport",
+    "gps_code": "TH-0006",
+    "freq": "",
+    "Lat": 13.94571,
+    "Lon": 100.57441,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chanthaburi Airstrip",
+    "gps_code": "TH-0007",
+    "freq": "",
+    "Lat": 12.63247,
+    "Lon": 102.02603,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Koh Mai Si Airport",
+    "gps_code": "TH-0008",
+    "freq": "",
+    "Lat": 11.717453,
+    "Lon": 102.520332,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Klaeng Airfield",
+    "gps_code": "TH-0010",
+    "freq": "",
+    "Lat": 12.709905,
+    "Lon": 101.630542,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nong Khor Airfield",
+    "gps_code": "TH-0011",
+    "freq": "122.300",
+    "Lat": 13.14027,
+    "Lon": 101.04642,
+    "Ele": 65.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bang Phra Ultralightport",
+    "gps_code": "TH-0012",
+    "freq": "",
+    "Lat": 13.236033,
+    "Lon": 100.994902,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ko Chan Airport",
+    "gps_code": "TH-0013",
+    "freq": "",
+    "Lat": 13.3938,
+    "Lon": 101.32055,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Supawan Mini Airfield",
+    "gps_code": "TH-0014",
+    "freq": "",
+    "Lat": 13.85782,
+    "Lon": 100.32493,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Best Ocean Airpark",
+    "gps_code": "TH-0015",
+    "freq": "124.350",
+    "Lat": 13.54018,
+    "Lon": 100.32936,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Camp Burachat (Sanam Luang) Airfield",
+    "gps_code": "TH-0016",
+    "freq": "",
+    "Lat": 13.57376,
+    "Lon": 99.75296,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaeng Krachan Airfield",
+    "gps_code": "TH-0017",
+    "freq": "",
+    "Lat": 12.87173,
+    "Lon": 99.79265,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ratthaphum Airfield",
+    "gps_code": "TH-0019",
+    "freq": "",
+    "Lat": 7.1349,
+    "Lon": 100.33063,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Phanom Sarakham Airport",
+    "gps_code": "TH-0021",
+    "freq": "",
+    "Lat": 13.7553,
+    "Lon": 101.395,
+    "Ele": 50.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Old Betong Airport",
+    "gps_code": "TH-0022",
+    "freq": "",
+    "Lat": 5.78161,
+    "Lon": 101.159256,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Banana",
+    "gps_code": "TH-0023",
+    "freq": "122.300",
+    "Lat": 13.14421,
+    "Lon": 101.106062,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vanchanphen Airpark",
+    "gps_code": "TH-0024",
+    "freq": "",
+    "Lat": 13.94495,
+    "Lon": 102.00432,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dropzone Thailand Airport",
+    "gps_code": "TH-0025",
+    "freq": "122.775",
+    "Lat": 12.6714,
+    "Lon": 101.5476,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ban Thi Airport",
+    "gps_code": "TH-0027",
+    "freq": "",
+    "Lat": 18.67614,
+    "Lon": 99.10522,
+    "Ele": 301.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Seri Thai Airport",
+    "gps_code": "TH-0029",
+    "freq": "",
+    "Lat": 16.77324,
+    "Lon": 104.03372,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pattaya Huai Yai Airport",
+    "gps_code": "TH-0032",
+    "freq": "",
+    "Lat": 12.8351,
+    "Lon": 100.98118,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "TFT Airfield",
+    "gps_code": "TH-0034",
+    "freq": "125.800",
+    "Lat": 14.08045,
+    "Lon": 100.852589,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lektop-Thames Airport Number 2",
+    "gps_code": "TH-0035",
+    "freq": "",
+    "Lat": 14.11717,
+    "Lon": 100.76169,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kabin Buri Airport",
+    "gps_code": "TH-0036",
+    "freq": "",
+    "Lat": 14.021443,
+    "Lon": 101.702989,
+    "Ele": 12.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lat Ya Army Airfield",
+    "gps_code": "TH-0037",
+    "freq": "",
+    "Lat": 14.125242,
+    "Lon": 99.446955,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "River Kwai Airfield",
+    "gps_code": "TH-0038",
+    "freq": "",
+    "Lat": 14.06445,
+    "Lon": 99.36168,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hinzon Airport",
+    "gps_code": "TH-0039",
+    "freq": "",
+    "Lat": 13.77697,
+    "Lon": 101.61345,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khanong Phra Airport",
+    "gps_code": "TH-0040",
+    "freq": "122.400",
+    "Lat": 14.63123,
+    "Lon": 101.4659,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chiang Mai Airsports",
+    "gps_code": "TH-0042",
+    "freq": "123.000",
+    "Lat": 18.70403,
+    "Lon": 99.11917,
+    "Ele": 310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bird's Paradise Airpark",
+    "gps_code": "TH-0043",
+    "freq": "122.400",
+    "Lat": 17.522045,
+    "Lon": 103.551192,
+    "Ele": 168.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tantawan",
+    "gps_code": "TH-0044",
+    "freq": "122.300",
+    "Lat": 14.7712,
+    "Lon": 100.776,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dok Rai",
+    "gps_code": "TH-0045",
+    "freq": "",
+    "Lat": 12.920684,
+    "Lon": 101.183631,
+    "Ele": 56.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Saensuk Flying Club",
+    "gps_code": "TH-0049",
+    "freq": "",
+    "Lat": 13.289235,
+    "Lon": 100.963154,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Atlantic",
+    "gps_code": "TH-0050",
+    "freq": "",
+    "Lat": 12.85511,
+    "Lon": 100.990908,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ongkarak Airport (Klong 16)",
+    "gps_code": "VN-0020",
+    "freq": "",
+    "Lat": 14.10993,
+    "Lon": 101.00166,
+    "Ele": 1.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Don Mueang International Airport",
+    "gps_code": "VTBD",
+    "freq": "119.400",
+    "Lat": 13.9126,
+    "Lon": 100.607002,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sa Pran Nak Airport",
+    "gps_code": "VTBH",
+    "freq": "552.000",
+    "Lat": 14.9494,
+    "Lon": 100.642998,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khao E To Airport",
+    "gps_code": "VTBI",
+    "freq": "133.100",
+    "Lat": 14.0778,
+    "Lon": 101.379997,
+    "Ele": 24.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kamphaeng Saen Airport",
+    "gps_code": "VTBK",
+    "freq": "127.750",
+    "Lat": 14.1020002365,
+    "Lon": 99.9171981812,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khok Kathiam Airport",
+    "gps_code": "VTBL",
+    "freq": "121.750",
+    "Lat": 14.87462,
+    "Lon": 100.663397,
+    "Ele": 37.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Prachuap Khiri Khan Airport",
+    "gps_code": "VTBN",
+    "freq": "",
+    "Lat": 12.417200088500977,
+    "Lon": 99.86940002441406,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Trat Airport",
+    "gps_code": "VTBO",
+    "freq": "118.600",
+    "Lat": 12.2746,
+    "Lon": 102.319,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prachuap Airport",
+    "gps_code": "VTBP",
+    "freq": "39.060",
+    "Lat": 11.7884,
+    "Lon": 99.804703,
+    "Ele": 3.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Suvarnabhumi Airport",
+    "gps_code": "VTBS",
+    "freq": "127.800",
+    "Lat": 13.6811,
+    "Lon": 100.747002,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bang Phra Airport",
+    "gps_code": "VTBT",
+    "freq": "119.700",
+    "Lat": 13.232426,
+    "Lon": 100.956802,
+    "Ele": 27.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "U-Tapao International Airport",
+    "gps_code": "VTBU",
+    "freq": "119.700",
+    "Lat": 12.67990016937256,
+    "Lon": 101.00499725341795,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Koh Takian Airport",
+    "gps_code": "VTBV",
+    "freq": "",
+    "Lat": 12.254042,
+    "Lon": 102.518522,
+    "Ele": -0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Watthana Nakhon Airport",
+    "gps_code": "VTBW",
+    "freq": "118.100",
+    "Lat": 13.769203,
+    "Lon": 102.316017,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Phayao Ban Chiang Kham Airport",
+    "gps_code": "VTCB",
+    "freq": "",
+    "Lat": 19.5,
+    "Lon": 100.28299713134766,
+    "Ele": 387.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Chiang Mai International Airport",
+    "gps_code": "VTCC",
+    "freq": "129.600",
+    "Lat": 18.7667999268,
+    "Lon": 98.962600708,
+    "Ele": 315.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mae Hong Son Airport",
+    "gps_code": "VTCH",
+    "freq": "126.200",
+    "Lat": 19.3013,
+    "Lon": 97.9758,
+    "Ele": 283.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Pai Airport",
+    "gps_code": "VTCI",
+    "freq": "123.000",
+    "Lat": 19.372054,
+    "Lon": 98.435904,
+    "Ele": 510.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lampang Airport",
+    "gps_code": "VTCL",
+    "freq": "119.300",
+    "Lat": 18.27090072631836,
+    "Lon": 99.50420379638672,
+    "Ele": 247.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nan Airport",
+    "gps_code": "VTCN",
+    "freq": "120.250",
+    "Lat": 18.807899475097656,
+    "Lon": 100.78299713134766,
+    "Ele": 208.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lamphun Airport",
+    "gps_code": "VTCO",
+    "freq": "",
+    "Lat": 18.548986,
+    "Lon": 99.012426,
+    "Ele": 281.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Phrae Airport",
+    "gps_code": "VTCP",
+    "freq": "120.100",
+    "Lat": 18.1322,
+    "Lon": 100.165001,
+    "Ele": 164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mae Sariang Airport",
+    "gps_code": "VTCS",
+    "freq": "122.300",
+    "Lat": 18.180962,
+    "Lon": 97.930627,
+    "Ele": 228.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mae Fah Luang - Chiang Rai International Airport",
+    "gps_code": "VTCT",
+    "freq": "163.050",
+    "Lat": 19.952299,
+    "Lon": 99.882896,
+    "Ele": 390.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nok Airfield",
+    "gps_code": "VTCY",
+    "freq": "",
+    "Lat": 18.6762,
+    "Lon": 99.11157,
+    "Ele": 299.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Udorn Air Base",
+    "gps_code": "VTED",
+    "freq": "",
+    "Lat": 17.382999,
+    "Lon": 102.800003,
+    "Ele": 180.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Phetchabun Airport",
+    "gps_code": "VTPB",
+    "freq": "126.700",
+    "Lat": 16.6760005951,
+    "Lon": 101.194999695,
+    "Ele": 137.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hua Hin Airport",
+    "gps_code": "VTPH",
+    "freq": "126.200",
+    "Lat": 12.6361999512,
+    "Lon": 99.951499939,
+    "Ele": 18.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Takhli Airport",
+    "gps_code": "VTPI",
+    "freq": "124.000",
+    "Lat": 15.277299881,
+    "Lon": 100.29599762,
+    "Ele": 32.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Sak Long Airport",
+    "gps_code": "VTPL",
+    "freq": "",
+    "Lat": 16.824057,
+    "Lon": 101.251244,
+    "Ele": 152.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mae Sot Airport",
+    "gps_code": "VTPM",
+    "freq": "120.650",
+    "Lat": 16.699899673461914,
+    "Lon": 98.54509735107422,
+    "Ele": 210.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nakhon Sawan Airport",
+    "gps_code": "VTPN",
+    "freq": "122.300",
+    "Lat": 15.673,
+    "Lon": 100.137001,
+    "Ele": 34.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sukhothai Airport",
+    "gps_code": "VTPO",
+    "freq": "120.700",
+    "Lat": 17.238000869750977,
+    "Lon": 99.81819915771484,
+    "Ele": 54.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Phitsanulok Airport",
+    "gps_code": "VTPP",
+    "freq": "120.700",
+    "Lat": 16.7829,
+    "Lon": 100.278999,
+    "Ele": 46.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Photharam Airport",
+    "gps_code": "VTPR",
+    "freq": "",
+    "Lat": 13.6686,
+    "Lon": 99.7314,
+    "Ele": 26.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tak Airport",
+    "gps_code": "VTPT",
+    "freq": "120.700",
+    "Lat": 16.896,
+    "Lon": 99.253304,
+    "Ele": 145.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Khunan Phumipol Airport",
+    "gps_code": "VTPY",
+    "freq": "122.300",
+    "Lat": 17.2342,
+    "Lon": 99.057899,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khoun Khan Airport",
+    "gps_code": "VTSA",
+    "freq": "",
+    "Lat": 6.6614,
+    "Lon": 100.080002,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Surat Thani Airport",
+    "gps_code": "VTSB",
+    "freq": "129.600",
+    "Lat": 9.13259983063,
+    "Lon": 99.135597229,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Narathiwat Airport",
+    "gps_code": "VTSC",
+    "freq": "125.550",
+    "Lat": 6.519919872283936,
+    "Lon": 101.74299621582033,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chumphon Airport",
+    "gps_code": "VTSE",
+    "freq": "119.750",
+    "Lat": 10.7112,
+    "Lon": 99.361702,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nakhon Si Thammarat Airport",
+    "gps_code": "VTSF",
+    "freq": "119.750",
+    "Lat": 8.539620399475098,
+    "Lon": 99.9447021484375,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krabi Airport",
+    "gps_code": "VTSG",
+    "freq": "120.050",
+    "Lat": 8.09912014008,
+    "Lon": 98.9861984253,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Songkhla Airport",
+    "gps_code": "VTSH",
+    "freq": "126.200",
+    "Lat": 7.186560153961182,
+    "Lon": 100.60800170898438,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pattani Airport",
+    "gps_code": "VTSK",
+    "freq": "125.550",
+    "Lat": 6.78546,
+    "Lon": 101.153999,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Samui Airport",
+    "gps_code": "VTSM",
+    "freq": "129.600",
+    "Lat": 9.54779,
+    "Lon": 100.061996,
+    "Ele": 19.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cha Eian Airport",
+    "gps_code": "VTSN",
+    "freq": "657.700",
+    "Lat": 8.47115,
+    "Lon": 99.955597,
+    "Ele": 13.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Phuket International Airport",
+    "gps_code": "VTSP",
+    "freq": "124.700",
+    "Lat": 8.1132,
+    "Lon": 98.316902,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ranong Airport",
+    "gps_code": "VTSR",
+    "freq": "125.100",
+    "Lat": 9.77762,
+    "Lon": 98.585503,
+    "Ele": 17.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hat Yai International Airport",
+    "gps_code": "VTSS",
+    "freq": "126.700",
+    "Lat": 6.93320989609,
+    "Lon": 100.392997742,
+    "Ele": 27.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Trang Airport",
+    "gps_code": "VTST",
+    "freq": "125.300",
+    "Lat": 7.50874,
+    "Lon": 99.6166,
+    "Ele": 20.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Phuket Airpark",
+    "gps_code": "VTSW",
+    "freq": "124.700",
+    "Lat": 8.018733,
+    "Lon": 98.40291,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Udon Thani Airport",
+    "gps_code": "VTUD",
+    "freq": "126.200",
+    "Lat": 17.386400222800003,
+    "Lon": 102.788002014,
+    "Ele": 176.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sakon Nakhon Airport",
+    "gps_code": "VTUI",
+    "freq": "123.350",
+    "Lat": 17.195100784301758,
+    "Lon": 104.11900329589844,
+    "Ele": 161.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Surin Airport",
+    "gps_code": "VTUJ",
+    "freq": "123.600",
+    "Lat": 14.868300437927,
+    "Lon": 103.49800109863,
+    "Ele": 145.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khon Kaen Airport",
+    "gps_code": "VTUK",
+    "freq": "123.400",
+    "Lat": 16.466600418099997,
+    "Lon": 102.783996582,
+    "Ele": 204.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Loei Airport",
+    "gps_code": "VTUL",
+    "freq": "122.550",
+    "Lat": 17.43910026550293,
+    "Lon": 101.72200012207033,
+    "Ele": 262.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Khorat Airport",
+    "gps_code": "VTUN",
+    "freq": "129.750",
+    "Lat": 14.934713,
+    "Lon": 102.078945,
+    "Ele": 222.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Buri Ram Airport",
+    "gps_code": "VTUO",
+    "freq": "123.600",
+    "Lat": 15.2295,
+    "Lon": 103.252998,
+    "Ele": 179.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nakhon Ratchasima Airport",
+    "gps_code": "VTUQ",
+    "freq": "123.600",
+    "Lat": 14.9495,
+    "Lon": 102.313004,
+    "Ele": 233.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Rob Muang Airport",
+    "gps_code": "VTUR",
+    "freq": "125.400",
+    "Lat": 16.0704,
+    "Lon": 103.646004,
+    "Ele": 139.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ubon Ratchathani Airport",
+    "gps_code": "VTUU",
+    "freq": "123.500",
+    "Lat": 15.2512998581,
+    "Lon": 104.870002747,
+    "Ele": 123.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Roi Et Airport",
+    "gps_code": "VTUV",
+    "freq": "125.400",
+    "Lat": 16.1168,
+    "Lon": 103.774002,
+    "Ele": 137.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nakhon Phanom Airport",
+    "gps_code": "VTUW",
+    "freq": "123.350",
+    "Lat": 17.383801,
+    "Lon": 104.642998,
+    "Ele": 178.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nam Phung Dam Airport",
+    "gps_code": "VTUZ",
+    "freq": "",
+    "Lat": 16.65220069885254,
+    "Lon": 102.96700286865234,
+    "Ele": 0.0
+  }
+]

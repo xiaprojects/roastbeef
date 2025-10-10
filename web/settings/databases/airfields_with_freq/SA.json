@@ -1,0 +1,812 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Batha Airport",
+    "gps_code": "AE-0001",
+    "freq": "",
+    "Lat": 24.214693,
+    "Lon": 51.44989,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arfa Airport",
+    "gps_code": "OE43",
+    "freq": "",
+    "Lat": 21.323601,
+    "Lon": 41.198299,
+    "Ele": 1266.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aramco Ras Khafji Airport",
+    "gps_code": "OE45",
+    "freq": "",
+    "Lat": 28.3899,
+    "Lon": 48.516499,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Lidem Airport",
+    "gps_code": "OE46",
+    "freq": "",
+    "Lat": 20.47590065002441,
+    "Lon": 44.75749969482422,
+    "Ele": 678.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Kharj Airport",
+    "gps_code": "OE47",
+    "freq": "",
+    "Lat": 24.060722,
+    "Lon": 47.410805,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Quz South Airport",
+    "gps_code": "OE48",
+    "freq": "",
+    "Lat": 18.8932,
+    "Lon": 41.355,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mecca East Airport",
+    "gps_code": "OE49",
+    "freq": "",
+    "Lat": 21.4375,
+    "Lon": 39.994202,
+    "Ele": 368.8
+  },
+  {
+    "type": "small_airport",
+    "name": "King Abdulaziz Naval Base",
+    "gps_code": "OE50",
+    "freq": "122.800",
+    "Lat": 26.941601,
+    "Lon": 49.704102,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Kharj East Airport",
+    "gps_code": "OE51",
+    "freq": "",
+    "Lat": 24.05150032043457,
+    "Lon": 47.65420150756836,
+    "Ele": 502.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Artawiyah South Airport",
+    "gps_code": "OE52",
+    "freq": "",
+    "Lat": 26.61160087585449,
+    "Lon": 45.321998596191406,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "King Abdul Aziz Military Academy Airport",
+    "gps_code": "OE53",
+    "freq": "122.800",
+    "Lat": 24.942100524902344,
+    "Lon": 46.39120101928711,
+    "Ele": 737.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Hafar Al Atk Airport",
+    "gps_code": "OE54",
+    "freq": "",
+    "Lat": 25.99340057373047,
+    "Lon": 46.53670120239258,
+    "Ele": 600.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aradah Airport",
+    "gps_code": "OE55",
+    "freq": "",
+    "Lat": 21.226999,
+    "Lon": 55.2673,
+    "Ele": 213.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shubaytah Airport",
+    "gps_code": "OE56",
+    "freq": "",
+    "Lat": 22.709952,
+    "Lon": 53.281131,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Ali Airport",
+    "gps_code": "OEAA",
+    "freq": "",
+    "Lat": 27.319099,
+    "Lon": 49.587101,
+    "Ele": 21.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Abha International Airport",
+    "gps_code": "OEAB",
+    "freq": "124.500",
+    "Lat": 18.2404,
+    "Lon": 42.656601,
+    "Ele": 2090.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al-Ahsa International Airport",
+    "gps_code": "OEAH",
+    "freq": "122.800",
+    "Lat": 25.285299,
+    "Lon": 49.485199,
+    "Ele": 179.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Majeed Bin Abdulaziz Airport",
+    "gps_code": "OEAO",
+    "freq": "",
+    "Lat": 26.483333,
+    "Lon": 38.116944,
+    "Ele": 624.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Saud Bin Abdulaziz (Al Baha) Airport",
+    "gps_code": "OEBA",
+    "freq": "122.800",
+    "Lat": 20.298506,
+    "Lon": 41.636153,
+    "Ele": 1672.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bisha Airport",
+    "gps_code": "OEBH",
+    "freq": "122.800",
+    "Lat": 19.9844,
+    "Lon": 42.620899,
+    "Ele": 1184.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Thablotin Airport",
+    "gps_code": "OEBN",
+    "freq": "",
+    "Lat": 19.831632,
+    "Lon": 54.022115,
+    "Ele": 122.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Abqaiq Airport",
+    "gps_code": "OEBQ",
+    "freq": "138.220",
+    "Lat": 25.911301,
+    "Lon": 49.591202,
+    "Ele": 69.8
+  },
+  {
+    "type": "large_airport",
+    "name": "King Fahd International Airport",
+    "gps_code": "OEDF",
+    "freq": "125.000",
+    "Lat": 26.471201,
+    "Lon": 49.797901,
+    "Ele": 21.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Salman Abdulaziz Airport",
+    "gps_code": "OEDM",
+    "freq": "122.800",
+    "Lat": 24.4499,
+    "Lon": 44.121201,
+    "Ele": 922.3
+  },
+  {
+    "type": "large_airport",
+    "name": "King Abdulaziz Air Base",
+    "gps_code": "OEDR",
+    "freq": "127.900",
+    "Lat": 26.2654,
+    "Lon": 50.152,
+    "Ele": 25.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jizan Regional Airport / King Abdullah bin Abdulaziz Airport",
+    "gps_code": "OEGN",
+    "freq": "121.900",
+    "Lat": 16.9011,
+    "Lon": 42.5858,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gassim Airport",
+    "gps_code": "OEGS",
+    "freq": "131.500",
+    "Lat": 26.302799,
+    "Lon": 43.774399,
+    "Ele": 648.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gurayat Domestic Airport",
+    "gps_code": "OEGT",
+    "freq": "122.800",
+    "Lat": 31.412413,
+    "Lon": 37.278898,
+    "Ele": 509.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ha'il Airport",
+    "gps_code": "OEHL",
+    "freq": "131.500",
+    "Lat": 27.437901,
+    "Lon": 41.686298,
+    "Ele": 1015.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Haradh Airport",
+    "gps_code": "OEHR",
+    "freq": "",
+    "Lat": 24.09653,
+    "Lon": 49.22432,
+    "Ele": 33.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hawtah Airport",
+    "gps_code": "OEHW",
+    "freq": "138.250",
+    "Lat": 22.9678,
+    "Lon": 46.899502,
+    "Ele": 637.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jubail Airport",
+    "gps_code": "OEJB",
+    "freq": "130.500",
+    "Lat": 27.039,
+    "Lon": 49.405102,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Faisal Naval Base",
+    "gps_code": "OEJF",
+    "freq": "",
+    "Lat": 21.348100662231445,
+    "Lon": 39.17300033569336,
+    "Ele": 2.1
+  },
+  {
+    "type": "large_airport",
+    "name": "King Abdulaziz International Airport",
+    "gps_code": "OEJN",
+    "freq": "119.100",
+    "Lat": 21.6796,
+    "Lon": 39.156502,
+    "Ele": 14.6
+  },
+  {
+    "type": "small_airport",
+    "name": "King Faisal Air Academy Airport",
+    "gps_code": "OEKF",
+    "freq": "",
+    "Lat": 26.085278,
+    "Lon": 45.196667,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Khaled Military City Airport",
+    "gps_code": "OEKK",
+    "freq": "120.700",
+    "Lat": 27.9009,
+    "Lon": 45.528198,
+    "Ele": 412.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Khalid Air Base",
+    "gps_code": "OEKM",
+    "freq": "130.500",
+    "Lat": 18.2973,
+    "Lon": 42.803501,
+    "Ele": 2065.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Old Khurais Airport",
+    "gps_code": "OEKR",
+    "freq": "138.220",
+    "Lat": 25.069599,
+    "Lon": 48.194901,
+    "Ele": 396.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Prince Mohammad Bin Abdulaziz Airport",
+    "gps_code": "OEMA",
+    "freq": "124.200",
+    "Lat": 24.5534,
+    "Lon": 39.705101,
+    "Ele": 655.6
+  },
+  {
+    "type": "small_airport",
+    "name": "The Saudi Aviation Club (SAC) Airport",
+    "gps_code": "OEMD",
+    "freq": "",
+    "Lat": 24.626,
+    "Lon": 39.195,
+    "Ele": 582.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Najran Domestic Airport",
+    "gps_code": "OENG",
+    "freq": "122.800",
+    "Lat": 17.611401,
+    "Lon": 44.419201,
+    "Ele": 1213.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Neom Bay Airport",
+    "gps_code": "OENN",
+    "freq": "",
+    "Lat": 27.927598,
+    "Lon": 35.28874,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Nariya Airport",
+    "gps_code": "OENR",
+    "freq": "",
+    "Lat": 27.5,
+    "Lon": 48.5,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Umm Al Melh Border Guards Airport",
+    "gps_code": "OEOM",
+    "freq": "",
+    "Lat": 19.11176,
+    "Lon": 50.127353,
+    "Ele": 262.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Qaisumah/Hafr Al Batin Airport",
+    "gps_code": "OEPA",
+    "freq": "122.800",
+    "Lat": 28.335199,
+    "Lon": 46.125099,
+    "Ele": 357.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pump Station 3 Airport",
+    "gps_code": "OEPC",
+    "freq": "138.250",
+    "Lat": 25.1745,
+    "Lon": 47.4884,
+    "Ele": 530.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Pump Station 6 Airport",
+    "gps_code": "OEPF",
+    "freq": "138.250",
+    "Lat": 24.71030044555664,
+    "Lon": 44.964500427246094,
+    "Ele": 771.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pump Station 9 Airport",
+    "gps_code": "OEPI",
+    "freq": "138.250",
+    "Lat": 24.276100158691406,
+    "Lon": 42.143699645996094,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Pump Station 10 Airport",
+    "gps_code": "OEPJ",
+    "freq": "138.250",
+    "Lat": 24.1072998046875,
+    "Lon": 41.0359992980957,
+    "Ele": 865.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ipsa 3 Airport",
+    "gps_code": "OEPK",
+    "freq": "138.250",
+    "Lat": 27.954201,
+    "Lon": 46.742599,
+    "Ele": 304.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Prince Sultan Air Base",
+    "gps_code": "OEPS",
+    "freq": "123.425",
+    "Lat": 24.0627,
+    "Lon": 47.580502,
+    "Ele": 503.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Rabigh Airport",
+    "gps_code": "OERB",
+    "freq": "122.800",
+    "Lat": 22.7026,
+    "Lon": 39.069801,
+    "Ele": 6.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rafha Domestic Airport",
+    "gps_code": "OERF",
+    "freq": "122.800",
+    "Lat": 29.626399993896484,
+    "Lon": 43.4906005859375,
+    "Ele": 449.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Al-Rass Airport",
+    "gps_code": "OERG",
+    "freq": "",
+    "Lat": 25.669,
+    "Lon": 43.54969,
+    "Ele": 736.7
+  },
+  {
+    "type": "large_airport",
+    "name": "King Khaled International Airport",
+    "gps_code": "OERK",
+    "freq": "120.000",
+    "Lat": 24.9576,
+    "Lon": 46.698799,
+    "Ele": 624.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ras Mishab Airport",
+    "gps_code": "OERM",
+    "freq": "122.800",
+    "Lat": 28.079599,
+    "Lon": 48.611,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arar Domestic Airport",
+    "gps_code": "OERR",
+    "freq": "122.800",
+    "Lat": 30.90660095214844,
+    "Lon": 41.13819885253906,
+    "Ele": 552.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ras Tanura Airport",
+    "gps_code": "OERT",
+    "freq": "138.200",
+    "Lat": 26.723101,
+    "Lon": 50.0308,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Shaibah Airport",
+    "gps_code": "OESB",
+    "freq": "138.250",
+    "Lat": 22.514781,
+    "Lon": 53.964114,
+    "Ele": 91.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sharurah Domestic Airport",
+    "gps_code": "OESH",
+    "freq": "122.800",
+    "Lat": 17.4669,
+    "Lon": 47.121399,
+    "Ele": 720.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al-Jawf Domestic Airport",
+    "gps_code": "OESK",
+    "freq": "122.800",
+    "Lat": 29.78510093688965,
+    "Lon": 40.09999847412109,
+    "Ele": 689.2
+  },
+  {
+    "type": "small_airport",
+    "name": "As-Sulayyil Airport",
+    "gps_code": "OESL",
+    "freq": "",
+    "Lat": 20.464701,
+    "Lon": 45.619598,
+    "Ele": 616.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Soltana Al-Ghat Airport",
+    "gps_code": "OESS",
+    "freq": "",
+    "Lat": 26.000097,
+    "Lon": 44.880062,
+    "Ele": 668.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tabuk Airport",
+    "gps_code": "OETB",
+    "freq": "24.590",
+    "Lat": 28.3654,
+    "Lon": 36.6189,
+    "Ele": 777.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ta’if Regional Airport",
+    "gps_code": "OETF",
+    "freq": "131.500",
+    "Lat": 21.483001,
+    "Lon": 40.543442,
+    "Ele": 1477.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Thumamah Airport",
+    "gps_code": "OETH",
+    "freq": "",
+    "Lat": 25.212999,
+    "Lon": 46.640999,
+    "Ele": 570.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ras Tanajib Airport",
+    "gps_code": "OETN",
+    "freq": "138.200",
+    "Lat": 27.8678,
+    "Lon": 48.7691,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Turaif Domestic Airport",
+    "gps_code": "OETR",
+    "freq": "131.500",
+    "Lat": 31.692188,
+    "Lon": 38.731544,
+    "Ele": 854.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Udhailiyah Airport",
+    "gps_code": "OEUD",
+    "freq": "138.220",
+    "Lat": 25.1511001587,
+    "Lon": 49.3288002014,
+    "Ele": 231.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ummlejj Airport",
+    "gps_code": "OEUM",
+    "freq": "",
+    "Lat": 25.285833,
+    "Lon": 37.199167,
+    "Ele": 29.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wadi Al Dawasir Domestic Airport",
+    "gps_code": "OEWD",
+    "freq": "122.800",
+    "Lat": 20.504299,
+    "Lon": 45.1996,
+    "Ele": 628.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Wajh Domestic Airport",
+    "gps_code": "OEWJ",
+    "freq": "122.800",
+    "Lat": 26.198601,
+    "Lon": 36.476398,
+    "Ele": 20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Prince Abdul Mohsin bin Abdulaziz International Airport / Yanbu Airport",
+    "gps_code": "OEYN",
+    "freq": "118.100",
+    "Lat": 24.144199,
+    "Lon": 38.0634,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zilfi Airport",
+    "gps_code": "OEZL",
+    "freq": "",
+    "Lat": 26.350000381469727,
+    "Lon": 44.83300018310547,
+    "Ele": 579.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Red Sea International Airport",
+    "gps_code": "RSI",
+    "freq": "",
+    "Lat": 25.627975,
+    "Lon": 37.088914,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Bir Highway Strip",
+    "gps_code": "SA-0001",
+    "freq": "",
+    "Lat": 28.886,
+    "Lon": 36.158833,
+    "Ele": 723.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Wariah SE Highway Strip",
+    "gps_code": "SA-0002",
+    "freq": "",
+    "Lat": 27.645834,
+    "Lon": 47.993057,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Qalibah Highway Strip",
+    "gps_code": "SA-0003",
+    "freq": "",
+    "Lat": 27.975000381469727,
+    "Lon": 37.951942443847656,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Hasa Airport",
+    "gps_code": "SA-0005",
+    "freq": "",
+    "Lat": 25.406473,
+    "Lon": 49.484428,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ugtah Highway Strip",
+    "gps_code": "SA-0006",
+    "freq": "",
+    "Lat": 24.794468,
+    "Lon": 50.742459,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Uwayqilah Airport",
+    "gps_code": "SA-0007",
+    "freq": "",
+    "Lat": 30.3469725273,
+    "Lon": 42.2126054764,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khurais Airport",
+    "gps_code": "SA-0010",
+    "freq": "",
+    "Lat": 25.26533,
+    "Lon": 48.178333,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wadi Al Musayr Airfield",
+    "gps_code": "SA-0014",
+    "freq": "",
+    "Lat": 28.13516,
+    "Lon": 34.92503,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hawtah Kentz Airport",
+    "gps_code": "SA-0023",
+    "freq": "",
+    "Lat": 22.99304,
+    "Lon": 46.92114,
+    "Ele": 644.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khashm Alan/ Riyadh Airport",
+    "gps_code": "SA-0057",
+    "freq": "",
+    "Lat": 24.620335,
+    "Lon": 46.918402,
+    "Ele": 563.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Military Airport",
+    "gps_code": "SA-0058",
+    "freq": "",
+    "Lat": 24.665125,
+    "Lon": 46.924925,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al-Watah Runway",
+    "gps_code": "SA-0076",
+    "freq": "",
+    "Lat": 24.244617,
+    "Lon": 44.705515,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Runway near industry",
+    "gps_code": "SA-0078",
+    "freq": "",
+    "Lat": 24.602309,
+    "Lon": 44.108562,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tiran Island Airfield",
+    "gps_code": "SA-0086",
+    "freq": "",
+    "Lat": 27.94323,
+    "Lon": 34.59492,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Salman Air Base",
+    "gps_code": "SA-0094",
+    "freq": "",
+    "Lat": 24.465259,
+    "Lon": 46.659279,
+    "Ele": 0.0
+  }
+]

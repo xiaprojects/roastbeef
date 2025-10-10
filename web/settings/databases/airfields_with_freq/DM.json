@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Canefield Airport",
+    "gps_code": "TDCF",
+    "freq": "118.700",
+    "Lat": 15.336693,
+    "Lon": -61.392108,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Douglas-Charles Airport",
+    "gps_code": "TDPD",
+    "freq": "118.900",
+    "Lat": 15.547,
+    "Lon": -61.299999,
+    "Ele": 22.3
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Aasiaat Airport",
+    "gps_code": "BGAA",
+    "freq": "",
+    "Lat": 68.721802,
+    "Lon": -52.784698,
+    "Ele": 22.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Narsarsuaq Airport",
+    "gps_code": "BGBW",
+    "freq": "119.100",
+    "Lat": 61.1605,
+    "Lon": -45.425999,
+    "Ele": 34.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Neerlerit Inaat Airport",
+    "gps_code": "BGCO",
+    "freq": "118.100",
+    "Lat": 70.743103,
+    "Lon": -22.650499,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Danmarkshavn Landing Strip",
+    "gps_code": "BGDH",
+    "freq": "",
+    "Lat": 76.76667,
+    "Lon": -18.666668,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nuuk Airport",
+    "gps_code": "BGGH",
+    "freq": "119.100",
+    "Lat": 64.191066,
+    "Lon": -51.67914,
+    "Ele": 86.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ilulissat Airport",
+    "gps_code": "BGJN",
+    "freq": "",
+    "Lat": 69.243202,
+    "Lon": -51.057098,
+    "Ele": 29.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kulusuk Airport",
+    "gps_code": "BGKK",
+    "freq": "",
+    "Lat": 65.573601,
+    "Lon": -37.1236,
+    "Ele": 35.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Station Nord Landing Strip",
+    "gps_code": "BGMI",
+    "freq": "",
+    "Lat": 81.601292,
+    "Lon": -16.679306,
+    "Ele": 10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Maniitsoq Airport",
+    "gps_code": "BGMQ",
+    "freq": "",
+    "Lat": 65.412498,
+    "Lon": -52.9394,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mestersvig Airport",
+    "gps_code": "BGMV",
+    "freq": "",
+    "Lat": 72.2369,
+    "Lon": -23.9319,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Paamiut Airport",
+    "gps_code": "BGPT",
+    "freq": "",
+    "Lat": 62.014736,
+    "Lon": -49.670937,
+    "Ele": 36.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Qaanaaq Airport",
+    "gps_code": "BGQQ",
+    "freq": "118.100",
+    "Lat": 77.488602,
+    "Lon": -69.388702,
+    "Ele": 15.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kangerlussuaq Airport",
+    "gps_code": "BGSF",
+    "freq": "126.200",
+    "Lat": 67.010446,
+    "Lon": -50.715294,
+    "Ele": 50.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sisimiut Airport",
+    "gps_code": "BGSS",
+    "freq": "118.100",
+    "Lat": 66.951302,
+    "Lon": -53.729301,
+    "Ele": 10.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pituffik Space Base",
+    "gps_code": "BGTL",
+    "freq": "836.400",
+    "Lat": 76.531197,
+    "Lon": -68.703201,
+    "Ele": 76.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Upernavik Airport",
+    "gps_code": "BGUK",
+    "freq": "118.100",
+    "Lat": 72.790199,
+    "Lon": -56.1306,
+    "Ele": 126.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Qaarsut Airport",
+    "gps_code": "BGUQ",
+    "freq": "",
+    "Lat": 70.7342,
+    "Lon": -52.696201,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gisp Ice Landing Strip",
+    "gps_code": "GL-0002",
+    "freq": "",
+    "Lat": 72.59619,
+    "Lon": -38.42145,
+    "Ele": 3214.1
+  },
+  {
+    "type": "small_airport",
+    "name": "NorthGRIP Airport",
+    "gps_code": "GL-0003",
+    "freq": "",
+    "Lat": 75.099998,
+    "Lon": -42.316666,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Raven Skiway",
+    "gps_code": "GL-0004",
+    "freq": "",
+    "Lat": 66.316666,
+    "Lon": -46.283333,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sødalen Landingstrip",
+    "gps_code": "GL-0005",
+    "freq": "",
+    "Lat": 68.16747,
+    "Lon": -31.51479,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Summit Ice Landing Strip",
+    "gps_code": "GL-0006",
+    "freq": "",
+    "Lat": 72.616669,
+    "Lon": -38.5,
+    "Ele": 3207.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Zackenberg Airport",
+    "gps_code": "GL-0007",
+    "freq": "",
+    "Lat": 74.468629,
+    "Lon": -20.564003,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ikateq Airport",
+    "gps_code": "GL-0011",
+    "freq": "",
+    "Lat": 65.940768,
+    "Lon": -36.676226,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "EastGRIP Airport",
+    "gps_code": "GL-0014",
+    "freq": "",
+    "Lat": 75.63,
+    "Lon": -35.99,
+    "Ele": 0.0
+  }
+]

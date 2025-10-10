@@ -4,16 +4,34 @@
 </div>
 
 <div ng-show="remote.reset==false" id="ahrs_display"
-  style="position: fixed;width: 100vh;  left: 50%;transform: translate(-50%, -3%);pointer-events: none;cursor: not-allowed;">
+  style="position: fixed;width: 100vh;  left: 50%;transform: translate(-50%, -2%);pointer-events: none;cursor: not-allowed;">
 </div>
-<a ng-show="remote.reset==false" ng-click="goToLeft()" style="position: fixed;bottom: 15vw;    left: 15vw;">
-  <i style="font-size: 48px;padding: 0px;margin:0px;transform: rotate(-45deg);color:white;" class="fa fa-dot-circle-o"></i>
-</a>
+<div ng-show="remote.reset==false" class="SynthView-side-left">{{situation.GPSGroundSpeed}}
+  <div style="font-size: 4cqmin;margin-top: -15%;">Kmh</div>
+</div>
+<div ng-show="remote.reset==false" class="SynthView-side-right">{{situation.GPSAltitudeMSL}}
+  <div style="font-size: 4cqmin;margin-top: -15%;">feet</div>
+</div>
 
-<a ng-show="remote.reset==false" ng-click="goToRight()" style="position: fixed;bottom: 15vw;    right: 15vw;">
-  <i style="font-size: 48px;padding: 0px;margin:0px;transform: rotate(-45deg);color:white;" class="fa fa-location-arrow"></i>
-</a>
+<div  ng-show="displayHSI()" ng-controller="HSICtrl" ng-init="init('SynthViewCtrl','#000000')">
+  <div id="hsi" style="
+  width: 40cqw;
+  height: 40cqmin;
+  position: absolute;
+  margin: 0;
+  margin-left: 30cqw;
+  padding: 0;
+  bottom: 11cqh;
+  text-align: center;
+  ">
+  </div>
+</div>
 
 <a ng-show="remote.reset==true" ng-click="synthviewFrameReset()" style="position: fixed;bottom: 15vw;    left: 15vw;">
   <i style="font-size: 48px;padding: 0px;margin:0px;color:white;" class="fa fa-eye"></i>
+</a>
+
+
+<a ng-show="remote.reset==true" ng-click="AHRSCageAndCalibrate()" style="font-size: 48px;padding: 0px;margin:0px;color:red;position: fixed;bottom: 15vw;    right: 15vw;">
+  <i class="fa fa-recycle"></i>
 </a>

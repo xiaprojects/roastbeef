@@ -1,0 +1,587 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Ángel S. Adami International Airport",
+    "gps_code": "SUAA",
+    "freq": "122.100",
+    "Lat": -34.7892,
+    "Lon": -56.264702,
+    "Ele": 53.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Artigas International Airport",
+    "gps_code": "SUAG",
+    "freq": "",
+    "Lat": -30.4007,
+    "Lon": -56.5079,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Anchorena Airport",
+    "gps_code": "SUAN",
+    "freq": "",
+    "Lat": -34.270516,
+    "Lon": -57.964383,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Termas del Arapey Airport",
+    "gps_code": "SUAY",
+    "freq": "",
+    "Lat": -30.938271,
+    "Lon": -57.517528,
+    "Ele": 46.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Captain Juan Manuel Boiso Lanza Air Base",
+    "gps_code": "SUBL",
+    "freq": "",
+    "Lat": -34.811533,
+    "Lon": -56.164317,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Placeres Airport",
+    "gps_code": "SUBU",
+    "freq": "",
+    "Lat": -30.319807,
+    "Lon": -57.558823,
+    "Ele": 76.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Colonia Laguna de Los Patos International Airport",
+    "gps_code": "SUCA",
+    "freq": "120.800",
+    "Lat": -34.456402,
+    "Lon": -57.770599,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cardona Airport",
+    "gps_code": "SUCD",
+    "freq": "",
+    "Lat": -33.875502,
+    "Lon": -57.397875,
+    "Ele": 168.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chuy Airport",
+    "gps_code": "SUCH",
+    "freq": "",
+    "Lat": -33.71085,
+    "Lon": -53.471334,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Calera Airport",
+    "gps_code": "SUCL",
+    "freq": "",
+    "Lat": -34.286766,
+    "Lon": -55.354757,
+    "Ele": 152.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Zagarzazú International Airport",
+    "gps_code": "SUCM",
+    "freq": "122.100",
+    "Lat": -33.96611,
+    "Lon": -58.325279,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub Canelones",
+    "gps_code": "SUCN",
+    "freq": "",
+    "Lat": -34.515153,
+    "Lon": -56.261384,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santa Bernardina International Airport",
+    "gps_code": "SUDU",
+    "freq": "120.400",
+    "Lat": -33.358898,
+    "Lon": -56.499199,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Frigorifico Tacuarembó Airport",
+    "gps_code": "SUFT",
+    "freq": "",
+    "Lat": -31.703611,
+    "Lon": -55.943056,
+    "Ele": 149.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Military Aeronautical School",
+    "gps_code": "SUGA",
+    "freq": "",
+    "Lat": -34.7469,
+    "Lon": -55.961,
+    "Ele": 11.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Guichón Airfield",
+    "gps_code": "SUGN",
+    "freq": "",
+    "Lat": -32.3478,
+    "Lon": -57.1894,
+    "Ele": 88.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Juan Lacaze Airport",
+    "gps_code": "SUJL",
+    "freq": "",
+    "Lat": -34.415352,
+    "Lon": -57.46422,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "José Pedro Varela Airport",
+    "gps_code": "SUJP",
+    "freq": "",
+    "Lat": -33.4753,
+    "Lon": -54.539702,
+    "Ele": 96.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Capitan Corbeta CA Curbelo International Airport",
+    "gps_code": "SULS",
+    "freq": "122.100",
+    "Lat": -34.855099,
+    "Lon": -55.094299,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ricardo Detomasi Airport",
+    "gps_code": "SUME",
+    "freq": "",
+    "Lat": -33.2489,
+    "Lon": -58.0737,
+    "Ele": 20.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Minas Municipal Airfield",
+    "gps_code": "SUMI",
+    "freq": "",
+    "Lat": -34.345455,
+    "Lon": -55.227522,
+    "Ele": 139.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerro Largo International Airport",
+    "gps_code": "SUMO",
+    "freq": "",
+    "Lat": -32.337898,
+    "Lon": -54.216702,
+    "Ele": 110.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Carrasco General Cesáreo L. Berisso International Airport",
+    "gps_code": "SUMU",
+    "freq": "119.200",
+    "Lat": -34.835647,
+    "Lon": -56.026497,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Nueva Mehlem Airport",
+    "gps_code": "SUNM",
+    "freq": "",
+    "Lat": -32.96963,
+    "Lon": -57.982351,
+    "Ele": 48.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Charles Chalkling Airport",
+    "gps_code": "SUPC",
+    "freq": "",
+    "Lat": -32.379601,
+    "Lon": -58.029761,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Jagüel / Punta del Este Airport",
+    "gps_code": "SUPE",
+    "freq": "118.700",
+    "Lat": -34.909716,
+    "Lon": -54.920212,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Centro Aeronáutico Piriápolis",
+    "gps_code": "SUPL",
+    "freq": "",
+    "Lat": -34.88278,
+    "Lon": -55.24861,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tydeo Larre Borges Airport",
+    "gps_code": "SUPU",
+    "freq": "",
+    "Lat": -32.3633,
+    "Lon": -58.061901,
+    "Ele": 42.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Branco Airport",
+    "gps_code": "SURB",
+    "freq": "",
+    "Lat": -32.583057,
+    "Lon": -53.454166,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Presidente General Don Oscar D. Gestido International Airport",
+    "gps_code": "SURV",
+    "freq": "",
+    "Lat": -30.9746,
+    "Lon": -55.4762,
+    "Ele": 217.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Gregorio Airport",
+    "gps_code": "SUSG",
+    "freq": "",
+    "Lat": -32.526501,
+    "Lon": -55.841636,
+    "Ele": 113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "San José Airport",
+    "gps_code": "SUSJ",
+    "freq": "",
+    "Lat": -34.350554,
+    "Lon": -56.752438,
+    "Ele": 69.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nueva Hesperides International Airport",
+    "gps_code": "SUSO",
+    "freq": "286.000",
+    "Lat": -31.438499,
+    "Lon": -57.985298,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tacuarembo Airport",
+    "gps_code": "SUTB",
+    "freq": "",
+    "Lat": -31.749001,
+    "Lon": -55.925801,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tomás Gomenzoro Airport",
+    "gps_code": "SUTG",
+    "freq": "",
+    "Lat": -30.436607,
+    "Lon": -57.446726,
+    "Ele": 83.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Treinta y Tres Airport",
+    "gps_code": "SUTR",
+    "freq": "",
+    "Lat": -33.195714,
+    "Lon": -54.347246,
+    "Ele": 102.7
+  },
+  {
+    "type": "small_airport",
+    "name": "SAMAN Vergara Airport",
+    "gps_code": "SUVE",
+    "freq": "",
+    "Lat": -32.960353,
+    "Lon": -53.930913,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vichadero Airport",
+    "gps_code": "SUVO",
+    "freq": "",
+    "Lat": -31.739166,
+    "Lon": -54.587776,
+    "Ele": 148.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarandí del Yí Airport",
+    "gps_code": "SUYI",
+    "freq": "",
+    "Lat": -33.311667,
+    "Lon": -55.600278,
+    "Ele": 140.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Young Airport",
+    "gps_code": "SUYN",
+    "freq": "",
+    "Lat": -32.6872,
+    "Lon": -57.6581,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Independencia Airport",
+    "gps_code": "UY-0001",
+    "freq": "",
+    "Lat": -33.14196,
+    "Lon": -58.293759,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Rocha Airport",
+    "gps_code": "UY-0002",
+    "freq": "",
+    "Lat": -34.479077,
+    "Lon": -54.283494,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Garcia Brum Airstrip",
+    "gps_code": "UY-0004",
+    "freq": "",
+    "Lat": -32.396295,
+    "Lon": -56.588257,
+    "Ele": 136.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Joaquín Lenzina Airport",
+    "gps_code": "UY-0005",
+    "freq": "",
+    "Lat": -31.868851,
+    "Lon": -55.498746,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ansina Airstrip",
+    "gps_code": "UY-0006",
+    "freq": "",
+    "Lat": -31.869065,
+    "Lon": -55.491636,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Lata Aeroclub Airport",
+    "gps_code": "UY-0007",
+    "freq": "",
+    "Lat": -30.952597,
+    "Lon": -55.5353,
+    "Ele": 226.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ricardo Raver Airport",
+    "gps_code": "UY-0008",
+    "freq": "",
+    "Lat": -34.312485,
+    "Lon": -57.041631,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub Guichón Airfield",
+    "gps_code": "UY-0009",
+    "freq": "",
+    "Lat": -32.346251,
+    "Lon": -57.170861,
+    "Ele": 84.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Saman Lascano Airport",
+    "gps_code": "UY-0010",
+    "freq": "",
+    "Lat": -33.755113,
+    "Lon": -54.148823,
+    "Ele": 49.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Media Luna Airport",
+    "gps_code": "UY-0011",
+    "freq": "",
+    "Lat": -30.4053,
+    "Lon": -57.2756,
+    "Ele": 77.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Florida Aviation Center",
+    "gps_code": "UY-0013",
+    "freq": "123.500",
+    "Lat": -34.08392,
+    "Lon": -56.186665,
+    "Ele": 57.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Juan B. Desalvo Airport",
+    "gps_code": "UY-0014",
+    "freq": "",
+    "Lat": -33.485556,
+    "Lon": -56.890833,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Arcadia Airport",
+    "gps_code": "UY-0015",
+    "freq": "",
+    "Lat": -34.18717,
+    "Lon": -58.0733,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Rabida Airport",
+    "gps_code": "UY-0016",
+    "freq": "",
+    "Lat": -34.72139,
+    "Lon": -56.61134,
+    "Ele": 31.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiyú Airport",
+    "gps_code": "UY-0017",
+    "freq": "",
+    "Lat": -34.66828,
+    "Lon": -56.71273,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Horqueta Airport",
+    "gps_code": "UY-0018",
+    "freq": "",
+    "Lat": -34.56547,
+    "Lon": -56.72975,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Wings of Freedom Airport",
+    "gps_code": "UY-0019",
+    "freq": "",
+    "Lat": -34.76568,
+    "Lon": -55.48423,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cumbres de Carrasco Airport",
+    "gps_code": "UY-0020",
+    "freq": "",
+    "Lat": -34.76896,
+    "Lon": -55.95315,
+    "Ele": 25.3
+  },
+  {
+    "type": "small_airport",
+    "name": "La Rinconada Airport",
+    "gps_code": "UY-0021",
+    "freq": "",
+    "Lat": -34.66773,
+    "Lon": -54.30602,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueva Helvecia Airport",
+    "gps_code": "UY-0022",
+    "freq": "",
+    "Lat": -34.244003,
+    "Lon": -57.205465,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Alamos Airport",
+    "gps_code": "UY-0023",
+    "freq": "",
+    "Lat": -31.804875,
+    "Lon": -54.264035,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "OTA Agricultural Airport",
+    "gps_code": "UY-0024",
+    "freq": "",
+    "Lat": -33.217597,
+    "Lon": -54.330647,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Don Tomás Airstrip",
+    "gps_code": "UY-0026",
+    "freq": "",
+    "Lat": -31.661925,
+    "Lon": -54.664019,
+    "Ele": 153.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Monasterio Airstrip",
+    "gps_code": "UY-0027",
+    "freq": "",
+    "Lat": -33.834374,
+    "Lon": -54.000696,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerro Cueva del Tigre Airfield",
+    "gps_code": "UY-0029",
+    "freq": "",
+    "Lat": -31.741739,
+    "Lon": -58.026713,
+    "Ele": 17.7
+  }
+]

@@ -1,0 +1,659 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Berenice International Airport / Banas Cape Air Base",
+    "gps_code": "EES",
+    "freq": "",
+    "Lat": 23.980437,
+    "Lon": 35.460277,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Rahmaniyah Air Base",
+    "gps_code": "EG-0001",
+    "freq": "",
+    "Lat": 31.043742,
+    "Lon": 30.664859,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Sheikh Gebeil Airport",
+    "gps_code": "EG-0002",
+    "freq": "",
+    "Lat": 30.594704,
+    "Lon": 31.66493,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bilbeis 2 Airfield",
+    "gps_code": "EG-0003",
+    "freq": "",
+    "Lat": 30.42060089111328,
+    "Lon": 31.67889976501465,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Hassana Well Airport",
+    "gps_code": "EG-0004",
+    "freq": "",
+    "Lat": 30.194401,
+    "Lon": 33.4128,
+    "Ele": 395.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Difarsuwar Airfield",
+    "gps_code": "EG-0005",
+    "freq": "",
+    "Lat": 30.423011,
+    "Lon": 32.335344,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Fayed Air Base",
+    "gps_code": "EG-0006",
+    "freq": "",
+    "Lat": 30.329104,
+    "Lon": 32.266932,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Battikh Airfield",
+    "gps_code": "EG-0017",
+    "freq": "",
+    "Lat": 31.34512,
+    "Lon": 30.97628,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Gouna Ultralight Airport",
+    "gps_code": "EG-0032",
+    "freq": "",
+    "Lat": 27.42739,
+    "Lon": 33.66568,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Wadi Firan Airport",
+    "gps_code": "EG-0057",
+    "freq": "",
+    "Lat": 28.675985,
+    "Lon": 33.358955,
+    "Ele": 160.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sahra' Muhafadhat al-Jeezah Airfield",
+    "gps_code": "EG-0058",
+    "freq": "",
+    "Lat": 29.800373,
+    "Lon": 31.084539,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sheikh Zayed City Military Airstrip",
+    "gps_code": "EG-0060",
+    "freq": "",
+    "Lat": 30.03825,
+    "Lon": 30.885848,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Rudeis Airport",
+    "gps_code": "EG-AUE",
+    "freq": "",
+    "Lat": 28.899694,
+    "Lon": 33.202057,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Badr El Din Airport",
+    "gps_code": "HE11",
+    "freq": "131.970",
+    "Lat": 29.867554,
+    "Lon": 27.946558,
+    "Ele": -21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inshas Air Base",
+    "gps_code": "HE12",
+    "freq": "",
+    "Lat": 30.332373,
+    "Lon": 31.448109,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Helwan Air Base",
+    "gps_code": "HE15",
+    "freq": "",
+    "Lat": 29.8225,
+    "Lon": 31.3309,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Birma Air Base",
+    "gps_code": "HE16",
+    "freq": "",
+    "Lat": 30.836599,
+    "Lon": 30.936001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Rahal Well Airport",
+    "gps_code": "HE17",
+    "freq": "",
+    "Lat": 24.998663,
+    "Lon": 33.494289,
+    "Ele": 232.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Habata Airport",
+    "gps_code": "HE18",
+    "freq": "",
+    "Lat": 31.108875,
+    "Lon": 25.456717,
+    "Ele": 205.1
+  },
+  {
+    "type": "small_airport",
+    "name": "As Sallum Airport",
+    "gps_code": "HE19",
+    "freq": "",
+    "Lat": 31.464013,
+    "Lon": 25.278039,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gabal El Zeit Airport",
+    "gps_code": "HE20",
+    "freq": "",
+    "Lat": 27.834596,
+    "Lon": 33.525982,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ras Shukeir Airport",
+    "gps_code": "HE21",
+    "freq": "",
+    "Lat": 28.19694,
+    "Lon": 33.206005,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Darau Airport",
+    "gps_code": "HE23",
+    "freq": "",
+    "Lat": 24.414914,
+    "Lon": 32.951667,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Minya Airport",
+    "gps_code": "HE25",
+    "freq": "",
+    "Lat": 28.090509,
+    "Lon": 30.738738,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Shahat Valley Air Base",
+    "gps_code": "HE26",
+    "freq": "",
+    "Lat": 26.55239,
+    "Lon": 33.128543,
+    "Ele": 358.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Osman Air Base",
+    "gps_code": "HE27",
+    "freq": "",
+    "Lat": 29.552626,
+    "Lon": 25.584583,
+    "Ele": 130.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gebel El Basur Air Base",
+    "gps_code": "HE28",
+    "freq": "",
+    "Lat": 30.540501,
+    "Lon": 30.5602,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kawm Ushim Airport",
+    "gps_code": "HE30",
+    "freq": "",
+    "Lat": 29.543146,
+    "Lon": 30.897374,
+    "Ele": -4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Malan Frein Airport",
+    "gps_code": "HE31",
+    "freq": "",
+    "Lat": 29.80532,
+    "Lon": 28.55263,
+    "Ele": 64.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Mansurah Airbase",
+    "gps_code": "HE32",
+    "freq": "",
+    "Lat": 30.9676,
+    "Lon": 31.4342,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Meliha Airport",
+    "gps_code": "HE33",
+    "freq": "131.150",
+    "Lat": 30.732035,
+    "Lon": 27.019075,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kibrit Airport",
+    "gps_code": "HE34",
+    "freq": "",
+    "Lat": 30.246901,
+    "Lon": 32.492298,
+    "Ele": 6.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Abu Suwayr Air Base",
+    "gps_code": "HE35",
+    "freq": "",
+    "Lat": 30.57270050048828,
+    "Lon": 32.095298767089844,
+    "Ele": 14.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bardawil International Airport",
+    "gps_code": "HE36",
+    "freq": "",
+    "Lat": 30.410714,
+    "Lon": 33.15535,
+    "Ele": 323.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bilbeis Air Base",
+    "gps_code": "HE37",
+    "freq": "",
+    "Lat": 30.394899,
+    "Lon": 31.6014,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Rish Valley Airport",
+    "gps_code": "HE38",
+    "freq": "",
+    "Lat": 28.968086,
+    "Lon": 31.701586,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "As Salihiyah Airport",
+    "gps_code": "HE39",
+    "freq": "",
+    "Lat": 30.7952,
+    "Lon": 32.044102,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sidi EL Barrani Airport",
+    "gps_code": "HE40",
+    "freq": "",
+    "Lat": 31.47201,
+    "Lon": 25.879272,
+    "Ele": 86.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Misheifa Airport",
+    "gps_code": "HE41",
+    "freq": "",
+    "Lat": 31.032399,
+    "Lon": 25.854349,
+    "Ele": 214.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Quesna Airport",
+    "gps_code": "HE42",
+    "freq": "",
+    "Lat": 30.579,
+    "Lon": 31.1292,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ras Sedr Airport",
+    "gps_code": "HE45",
+    "freq": "",
+    "Lat": 29.603,
+    "Lon": 32.689604,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Sharqi Airport",
+    "gps_code": "HE46",
+    "freq": "",
+    "Lat": 30.026081,
+    "Lon": 32.971458,
+    "Ele": 470.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Alamein International Airport",
+    "gps_code": "HEAL",
+    "freq": "121.900",
+    "Lat": 30.924324,
+    "Lon": 28.46161,
+    "Ele": 46.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Arish International Airport",
+    "gps_code": "HEAR",
+    "freq": "123.725",
+    "Lat": 31.078565,
+    "Lon": 33.836791,
+    "Ele": 36.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Asyut International Airport",
+    "gps_code": "HEAT",
+    "freq": "121.900",
+    "Lat": 27.050818,
+    "Lon": 31.016309,
+    "Ele": 228.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Almaza Air Force Base",
+    "gps_code": "HEAZ",
+    "freq": "119.050",
+    "Lat": 30.091702,
+    "Lon": 31.359739,
+    "Ele": 75.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Alexandria International Airport",
+    "gps_code": "HEBA",
+    "freq": "122.300",
+    "Lat": 30.93249,
+    "Lon": 29.696437,
+    "Ele": 52.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Abu Simbel Airport",
+    "gps_code": "HEBL",
+    "freq": "121.900",
+    "Lat": 22.367657,
+    "Lon": 31.609962,
+    "Ele": 187.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bani Sweif Air Base",
+    "gps_code": "HEBS",
+    "freq": "127.100",
+    "Lat": 29.20224,
+    "Lon": 31.013471,
+    "Ele": 31.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Cairo International Airport",
+    "gps_code": "HECA",
+    "freq": "119.050",
+    "Lat": 30.111534,
+    "Lon": 31.396694,
+    "Ele": 98.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Capital International Airport",
+    "gps_code": "HECP",
+    "freq": "121.925",
+    "Lat": 30.074293,
+    "Lon": 31.84296,
+    "Ele": 232.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cairo West Air Base",
+    "gps_code": "HECW",
+    "freq": "125.300",
+    "Lat": 30.116431,
+    "Lon": 30.915535,
+    "Ele": 169.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ad Dakhla Airport",
+    "gps_code": "HEDK",
+    "freq": "585.900",
+    "Lat": 25.41116,
+    "Lon": 29.003273,
+    "Ele": 167.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Hurghada International Airport",
+    "gps_code": "HEGN",
+    "freq": "123.400",
+    "Lat": 27.176776,
+    "Lon": 33.796692,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "El Gouna Private Airport",
+    "gps_code": "HEGO",
+    "freq": "119.050",
+    "Lat": 27.365594,
+    "Lon": 33.668461,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Jora Airport",
+    "gps_code": "HEGR",
+    "freq": "579.000",
+    "Lat": 31.078138,
+    "Lon": 34.153131,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jiyanklis Air Base",
+    "gps_code": "HEGS",
+    "freq": "130.000",
+    "Lat": 30.819799,
+    "Lon": 30.1912,
+    "Ele": 14.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ismailia Air Base",
+    "gps_code": "HEIS",
+    "freq": "119.100",
+    "Lat": 30.597951,
+    "Lon": 32.235689,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Kharja Airport",
+    "gps_code": "HEKG",
+    "freq": "585.900",
+    "Lat": 25.471483,
+    "Lon": 30.588491,
+    "Ele": 59.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Luxor International Airport",
+    "gps_code": "HELX",
+    "freq": "124.300",
+    "Lat": 25.671037,
+    "Lon": 32.706451,
+    "Ele": 84.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Marsa Alam International Airport",
+    "gps_code": "HEMA",
+    "freq": "121.000",
+    "Lat": 25.555548,
+    "Lon": 34.59245,
+    "Ele": 64.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Marsa Matruh International Airport",
+    "gps_code": "HEMM",
+    "freq": "579.000",
+    "Lat": 31.325464,
+    "Lon": 27.221716,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "October Airport",
+    "gps_code": "HEOC",
+    "freq": "121.900",
+    "Lat": 29.812707,
+    "Lon": 30.823461,
+    "Ele": 235.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Owainat East International Airport",
+    "gps_code": "HEOW",
+    "freq": "121.900",
+    "Lat": 22.584256,
+    "Lon": 28.721609,
+    "Ele": 256.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Port Said International Airport",
+    "gps_code": "HEPS",
+    "freq": "579.000",
+    "Lat": 31.279285,
+    "Lon": 32.240582,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saint Catherine International Airport",
+    "gps_code": "HESC",
+    "freq": "579.000",
+    "Lat": 28.684601,
+    "Lon": 34.062681,
+    "Ele": 1341.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Sohag International Airport",
+    "gps_code": "HESG",
+    "freq": "",
+    "Lat": 26.342515,
+    "Lon": 31.743017,
+    "Ele": 98.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Sharm El Sheikh International Airport",
+    "gps_code": "HESH",
+    "freq": "121.100",
+    "Lat": 27.977272,
+    "Lon": 34.394717,
+    "Ele": 58.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aswan International Airport",
+    "gps_code": "HESN",
+    "freq": "119.350",
+    "Lat": 23.968137,
+    "Lon": 32.824445,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Siwa Oasis North Airport",
+    "gps_code": "HESW",
+    "freq": "",
+    "Lat": 29.346234,
+    "Lon": 25.505624,
+    "Ele": 88.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sphinx International Airport",
+    "gps_code": "HESX",
+    "freq": "",
+    "Lat": 30.108179,
+    "Lon": 30.895728,
+    "Ele": 155.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taba International Airport",
+    "gps_code": "HETB",
+    "freq": "122.800",
+    "Lat": 29.594496,
+    "Lon": 34.775752,
+    "Ele": 739.1
+  },
+  {
+    "type": "small_airport",
+    "name": "At Tur Airport",
+    "gps_code": "HETR",
+    "freq": "121.900",
+    "Lat": 28.208964,
+    "Lon": 33.645483,
+    "Ele": 15.8
+  }
+]

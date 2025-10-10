@@ -1,0 +1,56 @@
+[
+  {
+    "type": "small_airport",
+    "name": "La Désirade Airport",
+    "gps_code": "TFFA",
+    "freq": "",
+    "Lat": 16.296902,
+    "Lon": -61.0844,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Basse-Terre Baillif Airport",
+    "gps_code": "TFFB",
+    "freq": "",
+    "Lat": 16.013648,
+    "Lon": -61.742928,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "St-François Airport",
+    "gps_code": "TFFC",
+    "freq": "",
+    "Lat": 16.257799,
+    "Lon": -61.262501,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Marie-Galante Airport",
+    "gps_code": "TFFM",
+    "freq": "119.300",
+    "Lat": 15.868925,
+    "Lon": -61.270087,
+    "Ele": 4.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Guadeloupe - Maryse Condé International Airport",
+    "gps_code": "TFFR",
+    "freq": "121.300",
+    "Lat": 16.265301,
+    "Lon": -61.531799,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Terre-de-Haut Airport",
+    "gps_code": "TFFS",
+    "freq": "",
+    "Lat": 15.86439991,
+    "Lon": -61.5806007385,
+    "Ele": 14.0
+  }
+]

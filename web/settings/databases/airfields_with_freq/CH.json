@@ -1,0 +1,614 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Croix de Coeur Altiport",
+    "gps_code": "CH-0002",
+    "freq": "",
+    "Lat": 46.123348,
+    "Lon": 7.234131,
+    "Ele": 2160.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Altisurface du Glacier de Prasfleuri",
+    "gps_code": "CH-0003",
+    "freq": "",
+    "Lat": 46.064289,
+    "Lon": 7.354317,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Altiport du Glacier de Tsanfleuron",
+    "gps_code": "CH-0004",
+    "freq": "",
+    "Lat": 46.320653,
+    "Lon": 7.23288,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bex Airfield",
+    "gps_code": "LSGB",
+    "freq": "122.155",
+    "Lat": 46.258301,
+    "Lon": 6.98639,
+    "Ele": 399.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Les Eplatures Airport",
+    "gps_code": "LSGC",
+    "freq": "118.125",
+    "Lat": 47.0839004517,
+    "Lon": 6.792840003970001,
+    "Ele": 1026.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ecuvillens Airfield",
+    "gps_code": "LSGE",
+    "freq": "120.630",
+    "Lat": 46.755279,
+    "Lon": 7.075746,
+    "Ele": 698.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Geneva Cointrin International Airport",
+    "gps_code": "LSGG",
+    "freq": "120.300",
+    "Lat": 46.238098,
+    "Lon": 6.10895,
+    "Ele": 430.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Saanen Airfield",
+    "gps_code": "LSGK",
+    "freq": "119.425",
+    "Lat": 46.486525,
+    "Lon": 7.248359,
+    "Ele": 1008.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lausanne-Blécherette Airfield",
+    "gps_code": "LSGL",
+    "freq": "123.205",
+    "Lat": 46.5453,
+    "Lon": 6.61667,
+    "Ele": 622.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Neuchâtel Airfield",
+    "gps_code": "LSGN",
+    "freq": "123.600",
+    "Lat": 46.957371,
+    "Lon": 6.864574,
+    "Ele": 434.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Côte Airfield",
+    "gps_code": "LSGP",
+    "freq": "123.655",
+    "Lat": 46.406399,
+    "Lon": 6.25806,
+    "Ele": 412.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Reichenbach Air Base",
+    "gps_code": "LSGR",
+    "freq": "127.705",
+    "Lat": 46.613602,
+    "Lon": 7.67778,
+    "Ele": 726.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sion Airport",
+    "gps_code": "LSGS",
+    "freq": "134.275",
+    "Lat": 46.219166,
+    "Lon": 7.326944,
+    "Ele": 482.2
+  },
+  {
+    "type": "small_airport",
+    "name": "La Gruyère  Airfield",
+    "gps_code": "LSGT",
+    "freq": "",
+    "Lat": 46.5942,
+    "Lon": 7.09444,
+    "Ele": 687.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yverdon-les-Bains Airfield",
+    "gps_code": "LSGY",
+    "freq": "131.130",
+    "Lat": 46.761902,
+    "Lon": 6.61333,
+    "Ele": 433.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Alpnach Air Base",
+    "gps_code": "LSMA",
+    "freq": "33.787",
+    "Lat": 46.943901,
+    "Lon": 8.28417,
+    "Ele": 445.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dübendorf Air Base",
+    "gps_code": "LSMD",
+    "freq": "37.680",
+    "Lat": 47.398602,
+    "Lon": 8.64823,
+    "Ele": 448.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Emmen Air Base",
+    "gps_code": "LSME",
+    "freq": "36.052",
+    "Lat": 47.092444,
+    "Lon": 8.305184,
+    "Ele": 426.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lodrino Air Base",
+    "gps_code": "LSML",
+    "freq": "",
+    "Lat": 46.295898,
+    "Lon": 8.99213,
+    "Ele": 259.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Meiringen Air Base",
+    "gps_code": "LSMM",
+    "freq": "37.012",
+    "Lat": 46.742324,
+    "Lon": 8.108919,
+    "Ele": 577.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Payerne Air Base",
+    "gps_code": "LSMP",
+    "freq": "141.800",
+    "Lat": 46.8432,
+    "Lon": 6.91506,
+    "Ele": 446.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Amlikon Airfield",
+    "gps_code": "LSPA",
+    "freq": "",
+    "Lat": 47.573983,
+    "Lon": 9.047785,
+    "Ele": 417.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dittingen Airfield",
+    "gps_code": "LSPD",
+    "freq": "118.180",
+    "Lat": 47.438599,
+    "Lon": 7.49139,
+    "Ele": 535.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Schmerlat Airfield",
+    "gps_code": "LSPF",
+    "freq": "",
+    "Lat": 47.690203,
+    "Lon": 8.526178,
+    "Ele": 463.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kägiswil Airfield",
+    "gps_code": "LSPG",
+    "freq": "134.125",
+    "Lat": 46.908298,
+    "Lon": 8.25417,
+    "Ele": 464.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Winterthur Airfield",
+    "gps_code": "LSPH",
+    "freq": "134.975",
+    "Lat": 47.514999,
+    "Lon": 8.77194,
+    "Ele": 459.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Langenthal Airfield",
+    "gps_code": "LSPL",
+    "freq": "119.405",
+    "Lat": 47.18281,
+    "Lon": 7.741191,
+    "Ele": 480.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambri Airport",
+    "gps_code": "LSPM",
+    "freq": "118.525",
+    "Lat": 46.512501,
+    "Lon": 8.68978,
+    "Ele": 987.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Triengen Airfield",
+    "gps_code": "LSPN",
+    "freq": "124.525",
+    "Lat": 47.2267,
+    "Lon": 8.07806,
+    "Ele": 485.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Olten Airfield",
+    "gps_code": "LSPO",
+    "freq": "",
+    "Lat": 47.34131,
+    "Lon": 7.88494,
+    "Ele": 417.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Münster Airfield",
+    "gps_code": "LSPU",
+    "freq": "",
+    "Lat": 46.480301,
+    "Lon": 8.26333,
+    "Ele": 1335.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wangen-Lachen Airfield",
+    "gps_code": "LSPV",
+    "freq": "123.200",
+    "Lat": 47.204835,
+    "Lon": 8.867346,
+    "Ele": 406.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Raron Airfield",
+    "gps_code": "LSTA",
+    "freq": "",
+    "Lat": 46.30449,
+    "Lon": 7.819085,
+    "Ele": 618.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Bellechasse Airfield",
+    "gps_code": "LSTB",
+    "freq": "",
+    "Lat": 46.979315,
+    "Lon": 7.13253,
+    "Ele": 433.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Môtiers Airfield",
+    "gps_code": "LSTO",
+    "freq": "",
+    "Lat": 46.916698,
+    "Lon": 6.615,
+    "Ele": 732.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Montricher Airfield",
+    "gps_code": "LSTR",
+    "freq": "",
+    "Lat": 46.590263,
+    "Lon": 6.400591,
+    "Ele": 663.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sankt Stephan Airfield",
+    "gps_code": "LSTS",
+    "freq": "119.425",
+    "Lat": 46.497398,
+    "Lon": 7.41257,
+    "Ele": 1007.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zweisimmen Airfield",
+    "gps_code": "LSTZ",
+    "freq": "",
+    "Lat": 46.551713,
+    "Lon": 7.381012,
+    "Ele": 935.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Clariden-Hüfifirn Mountain Landing Site",
+    "gps_code": "LSVD",
+    "freq": "",
+    "Lat": 46.821944,
+    "Lon": 8.880277,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Petersgrat Mountain Landing Site",
+    "gps_code": "LSVP",
+    "freq": "",
+    "Lat": 46.468889,
+    "Lon": 7.828333,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vorabgletscher Mountain Landing Site",
+    "gps_code": "LSVV",
+    "freq": "",
+    "Lat": 46.878333,
+    "Lon": 9.151944,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Limmerenfirn Mountain Landing Site",
+    "gps_code": "LSYI",
+    "freq": "",
+    "Lat": 46.810556,
+    "Lon": 8.967778,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kanderfirn Mountain Landing Site",
+    "gps_code": "LSYK",
+    "freq": "",
+    "Lat": 46.485833,
+    "Lon": 7.828333,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rosa Blanche Mountain Landing Site",
+    "gps_code": "LSYR",
+    "freq": "",
+    "Lat": 46.060833,
+    "Lon": 7.354722,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Glacier du Trient Mountain Landing Site",
+    "gps_code": "LSYX",
+    "freq": "",
+    "Lat": 45.9883,
+    "Lon": 7.0425,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lugano Airport",
+    "gps_code": "LSZA",
+    "freq": "121.175",
+    "Lat": 46.004299,
+    "Lon": 8.91058,
+    "Ele": 278.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bern Airport",
+    "gps_code": "LSZB",
+    "freq": "127.325",
+    "Lat": 46.912868,
+    "Lon": 7.498512,
+    "Ele": 509.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Buochs Airport",
+    "gps_code": "LSZC",
+    "freq": "134.125",
+    "Lat": 46.974444,
+    "Lon": 8.396944,
+    "Ele": 449.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bad Ragaz Airfield",
+    "gps_code": "LSZE",
+    "freq": "",
+    "Lat": 47.014904,
+    "Lon": 9.481815,
+    "Ele": 492.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Birrfeld Airfield",
+    "gps_code": "LSZF",
+    "freq": "123.550",
+    "Lat": 47.4436,
+    "Lon": 8.23361,
+    "Ele": 396.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grenchen Airfield",
+    "gps_code": "LSZG",
+    "freq": "127.325",
+    "Lat": 47.181599,
+    "Lon": 7.41719,
+    "Ele": 430.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Zürich Airport",
+    "gps_code": "LSZH",
+    "freq": "118.000",
+    "Lat": 47.458056,
+    "Lon": 8.548056,
+    "Ele": 431.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fricktal-Schupfart Airfield",
+    "gps_code": "LSZI",
+    "freq": "119.550",
+    "Lat": 47.5089,
+    "Lon": 7.95,
+    "Ele": 545.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Courtelary Airfield",
+    "gps_code": "LSZJ",
+    "freq": "",
+    "Lat": 47.183601,
+    "Lon": 7.09083,
+    "Ele": 684.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Speck-Fehraltorf Airfield",
+    "gps_code": "LSZK",
+    "freq": "120.350",
+    "Lat": 47.3764,
+    "Lon": 8.7575,
+    "Ele": 532.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Locarno Airport",
+    "gps_code": "LSZL",
+    "freq": "",
+    "Lat": 46.160801,
+    "Lon": 8.87861,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mollis Airfield",
+    "gps_code": "LSZM",
+    "freq": "134.825",
+    "Lat": 47.078353,
+    "Lon": 9.064662,
+    "Ele": 452.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Hausen am Albis Airfield",
+    "gps_code": "LSZN",
+    "freq": "130.755",
+    "Lat": 47.238602,
+    "Lon": 8.51556,
+    "Ele": 587.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Luzern-Beromünster Airfield",
+    "gps_code": "LSZO",
+    "freq": "122.450",
+    "Lat": 47.188993,
+    "Lon": 8.204556,
+    "Ele": 654.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Biel-Kappelen Airfield",
+    "gps_code": "LSZP",
+    "freq": "",
+    "Lat": 47.089199,
+    "Lon": 7.29,
+    "Ele": 438.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bressaucourt Airfield",
+    "gps_code": "LSZQ",
+    "freq": "122.050",
+    "Lat": 47.392677,
+    "Lon": 7.028648,
+    "Ele": 568.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sankt Gallen Altenrhein Airport",
+    "gps_code": "LSZR",
+    "freq": "133.900",
+    "Lat": 47.485001,
+    "Lon": 9.56077,
+    "Ele": 398.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Samedan Airport",
+    "gps_code": "LSZS",
+    "freq": "123.670",
+    "Lat": 46.5341,
+    "Lon": 9.88411,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lommis Airfield",
+    "gps_code": "LSZT",
+    "freq": "119.300",
+    "Lat": 47.524399,
+    "Lon": 9.00306,
+    "Ele": 469.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Buttwil Airfield",
+    "gps_code": "LSZU",
+    "freq": "122.150",
+    "Lat": 47.264702,
+    "Lon": 8.3025,
+    "Ele": 723.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sitterdorf Airfield",
+    "gps_code": "LSZV",
+    "freq": "",
+    "Lat": 47.5089,
+    "Lon": 9.26278,
+    "Ele": 506.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thun Airfield",
+    "gps_code": "LSZW",
+    "freq": "123.255",
+    "Lat": 46.756401,
+    "Lon": 7.60056,
+    "Ele": 559.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Schänis Airfield",
+    "gps_code": "LSZX",
+    "freq": "",
+    "Lat": 47.1717,
+    "Lon": 9.03944,
+    "Ele": 416.1
+  }
+]

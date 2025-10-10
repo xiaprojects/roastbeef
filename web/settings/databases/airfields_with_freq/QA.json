@@ -1,0 +1,65 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Umm Al-Shokhot Airport",
+    "gps_code": "OT62",
+    "freq": "135.225",
+    "Lat": 25.700539,
+    "Lon": 51.36303,
+    "Ele": 12.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Doha International Airport",
+    "gps_code": "OTBD",
+    "freq": "121.100",
+    "Lat": 25.261101,
+    "Lon": 51.565102,
+    "Ele": 10.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Udeid Air Base",
+    "gps_code": "OTBH",
+    "freq": "28.145",
+    "Lat": 25.1173000336,
+    "Lon": 51.3149986267,
+    "Ele": 39.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Hamad International Airport",
+    "gps_code": "OTHH",
+    "freq": "128.850",
+    "Lat": 25.273056,
+    "Lon": 51.608056,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dukhan / Tamim Airbase",
+    "gps_code": "QA-0001",
+    "freq": "",
+    "Lat": 25.467722,
+    "Lon": 50.999479,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mesaleed Airfield",
+    "gps_code": "QA-0009",
+    "freq": "",
+    "Lat": 24.988976,
+    "Lon": 51.50031,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Umm Garn Airport",
+    "gps_code": "QA-0012",
+    "freq": "",
+    "Lat": 25.753967,
+    "Lon": 51.292675,
+    "Ele": 34.1
+  }
+]

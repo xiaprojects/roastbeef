@@ -1,0 +1,2873 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Daulat Beg Oldi Advanced Landing Ground",
+    "gps_code": "IN-0003",
+    "freq": "",
+    "Lat": 35.396467,
+    "Lon": 77.928965,
+    "Ele": 4937.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Walong Advanced Landing Ground",
+    "gps_code": "IN-0010",
+    "freq": "",
+    "Lat": 28.12967300415,
+    "Lon": 97.019660949707,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jakkur Aerodrome",
+    "gps_code": "IN-0011",
+    "freq": "122.250",
+    "Lat": 13.07674,
+    "Lon": 77.597645,
+    "Ele": 918.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Pakyong Airport",
+    "gps_code": "IN-0012",
+    "freq": "",
+    "Lat": 27.2313,
+    "Lon": 88.587196,
+    "Ele": 1399.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nadirgul Airport",
+    "gps_code": "IN-0013",
+    "freq": "123.250",
+    "Lat": 17.306142,
+    "Lon": 78.561004,
+    "Ele": 552.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baljek Airport",
+    "gps_code": "IN-0015",
+    "freq": "",
+    "Lat": 25.661487579345703,
+    "Lon": 90.34503936767578,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Amreli Airport",
+    "gps_code": "IN-0023",
+    "freq": "",
+    "Lat": 21.621416,
+    "Lon": 71.226309,
+    "Ele": 130.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Baramati Airport",
+    "gps_code": "IN-0024",
+    "freq": "129.250",
+    "Lat": 18.226944,
+    "Lon": 74.590833,
+    "Ele": 602.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ayodhya Airport",
+    "gps_code": "IN-0025",
+    "freq": "120.450",
+    "Lat": 26.751283,
+    "Lon": 82.155295,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Korba Airport",
+    "gps_code": "IN-0026",
+    "freq": "",
+    "Lat": 22.4141666667,
+    "Lon": 82.7194444444,
+    "Ele": 365.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aamby Valley Airport",
+    "gps_code": "IN-0033",
+    "freq": "",
+    "Lat": 18.609617,
+    "Lon": 73.377583,
+    "Ele": 689.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Vijay Nagar Airport",
+    "gps_code": "IN-0034",
+    "freq": "",
+    "Lat": 19.8841,
+    "Lon": 73.84056666670001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "INS Kohassa",
+    "gps_code": "IN-0053",
+    "freq": "",
+    "Lat": 13.236316,
+    "Lon": 93.049731,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khargon Govt. Airstrip",
+    "gps_code": "IN-0060",
+    "freq": "",
+    "Lat": 21.8100301946,
+    "Lon": 75.55443763730001,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khandwa Airport",
+    "gps_code": "IN-0061",
+    "freq": "",
+    "Lat": 21.857117,
+    "Lon": 76.336956,
+    "Ele": 328.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Shirpur Airport",
+    "gps_code": "IN-0062",
+    "freq": "122.750",
+    "Lat": 21.3239987933,
+    "Lon": 74.9567341805,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Umaria Air Field",
+    "gps_code": "IN-0064",
+    "freq": "",
+    "Lat": 23.5325139099,
+    "Lon": 80.80821990970001,
+    "Ele": 460.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Amravati (Belora) Airstrip",
+    "gps_code": "IN-0065",
+    "freq": "",
+    "Lat": 20.814608,
+    "Lon": 77.717765,
+    "Ele": 342.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Madhubani Airport",
+    "gps_code": "IN-0066",
+    "freq": "",
+    "Lat": 26.329167,
+    "Lon": 86.06,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulao Aerodrome",
+    "gps_code": "IN-0067",
+    "freq": "",
+    "Lat": 25.42788,
+    "Lon": 86.08819,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Birwa Airstrip",
+    "gps_code": "IN-0068",
+    "freq": "",
+    "Lat": 22.092639,
+    "Lon": 80.595531,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sultanpur Airport",
+    "gps_code": "IN-0069",
+    "freq": "122.425",
+    "Lat": 26.2475,
+    "Lon": 82.0425,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Raigarh Airport (JSPL)",
+    "gps_code": "IN-0072",
+    "freq": "0.247",
+    "Lat": 21.9352805556,
+    "Lon": 83.3502138889,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Savitri Jindal Airport",
+    "gps_code": "IN-0073",
+    "freq": "",
+    "Lat": 20.910055,
+    "Lon": 85.036669,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Barbil Tonto Airstrip",
+    "gps_code": "IN-0074",
+    "freq": "131.500",
+    "Lat": 22.045829,
+    "Lon": 85.373468,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bhagalpur Airport",
+    "gps_code": "IN-0077",
+    "freq": "",
+    "Lat": 25.249535,
+    "Lon": 87.011976,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fury Airport",
+    "gps_code": "IN-0085",
+    "freq": "",
+    "Lat": 26.434072,
+    "Lon": 73.101472,
+    "Ele": 234.1
+  },
+  {
+    "type": "small_airport",
+    "name": "CHINDWARA AIRFIELD",
+    "gps_code": "IN-0086",
+    "freq": "",
+    "Lat": 22.0,
+    "Lon": 78.93,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gauchar Airstrip",
+    "gps_code": "IN-0087",
+    "freq": "",
+    "Lat": 30.284585,
+    "Lon": 79.161665,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Poonch Airport",
+    "gps_code": "IN-0088",
+    "freq": "",
+    "Lat": 33.76875,
+    "Lon": 74.083753,
+    "Ele": 981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Noamundi Airport",
+    "gps_code": "IN-0089",
+    "freq": "",
+    "Lat": 22.192222,
+    "Lon": 85.548889,
+    "Ele": 427.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Saharsa Airport",
+    "gps_code": "IN-0091",
+    "freq": "",
+    "Lat": 25.892205,
+    "Lon": 86.583016,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vedanta Lanjigarh Airstrip",
+    "gps_code": "IN-0093",
+    "freq": "",
+    "Lat": 19.7194444444,
+    "Lon": 83.3936111111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Akli Airport",
+    "gps_code": "IN-0096",
+    "freq": "",
+    "Lat": 25.8077,
+    "Lon": 70.2943,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Surichua Air Base",
+    "gps_code": "IN-0097",
+    "freq": "",
+    "Lat": 24.18824,
+    "Lon": 87.701722,
+    "Ele": 85.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Durgapur Steel Plant Airport",
+    "gps_code": "IN-0099",
+    "freq": "",
+    "Lat": 23.58331,
+    "Lon": 87.339787,
+    "Ele": 88.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sido Kanhu Airport",
+    "gps_code": "IN-0100",
+    "freq": "",
+    "Lat": 24.231185,
+    "Lon": 87.269989,
+    "Ele": 143.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Vanasthali Airport",
+    "gps_code": "IN-0101",
+    "freq": "",
+    "Lat": 26.407627,
+    "Lon": 75.870128,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandla Airstrip",
+    "gps_code": "IN-0102",
+    "freq": "",
+    "Lat": 22.500929,
+    "Lon": 80.331195,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mithapur Airport",
+    "gps_code": "IN-0106",
+    "freq": "",
+    "Lat": 22.412068,
+    "Lon": 68.993632,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sindhudurg Airport",
+    "gps_code": "IN-0107",
+    "freq": "",
+    "Lat": 16.002552,
+    "Lon": 73.529846,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandvi Airport",
+    "gps_code": "IN-0176",
+    "freq": "",
+    "Lat": 22.83932,
+    "Lon": 69.30498,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mehsana Airport",
+    "gps_code": "IN-0177",
+    "freq": "",
+    "Lat": 23.60118,
+    "Lon": 72.37399,
+    "Ele": 0.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Navi Mumbai International Airport",
+    "gps_code": "IN-0276",
+    "freq": "",
+    "Lat": 18.984597,
+    "Lon": 73.065253,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chushul Airstrip",
+    "gps_code": "IN-0279",
+    "freq": "",
+    "Lat": 33.55493,
+    "Lon": 78.72214,
+    "Ele": 4332.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Therubali Aerodrome",
+    "gps_code": "IN-0283",
+    "freq": "",
+    "Lat": 19.34564,
+    "Lon": 83.43444,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Viraf Airstrip",
+    "gps_code": "IN-0300",
+    "freq": "",
+    "Lat": 17.728462,
+    "Lon": 78.700909,
+    "Ele": 612.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rashtrakavi Kuvempu Airport",
+    "gps_code": "IN-0301",
+    "freq": "",
+    "Lat": 13.858024,
+    "Lon": 75.618868,
+    "Ele": 614.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyoma Airstrip",
+    "gps_code": "IN-0302",
+    "freq": "",
+    "Lat": 33.16913,
+    "Lon": 78.72971,
+    "Ele": 4141.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuting Advanced Landing Ground",
+    "gps_code": "IN-0307",
+    "freq": "",
+    "Lat": 28.98876,
+    "Lon": 94.89863,
+    "Ele": 476.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Itanagar Donyi Polo Hollongi Airport",
+    "gps_code": "IN-0308",
+    "freq": "",
+    "Lat": 26.96683,
+    "Lon": 93.638792,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Birasal Airport",
+    "gps_code": "IN-0338",
+    "freq": "",
+    "Lat": 20.98366,
+    "Lon": 85.681622,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mohammadabad Airport",
+    "gps_code": "IN-0341",
+    "freq": "",
+    "Lat": 27.316258,
+    "Lon": 79.451555,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marhamtabad Airport",
+    "gps_code": "IN-0342",
+    "freq": "",
+    "Lat": 26.58182,
+    "Lon": 79.96797,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Benti Airstrip",
+    "gps_code": "IN-0343",
+    "freq": "",
+    "Lat": 25.67292,
+    "Lon": 81.49592,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Andhau Airfield",
+    "gps_code": "IN-0345",
+    "freq": "",
+    "Lat": 25.6155,
+    "Lon": 83.56064,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bihta Air Force Station",
+    "gps_code": "IN-0346",
+    "freq": "",
+    "Lat": 25.59124,
+    "Lon": 84.88312,
+    "Ele": 59.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dinjan Airfield",
+    "gps_code": "IN-0360",
+    "freq": "",
+    "Lat": 27.53606,
+    "Lon": 95.2682,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dhulia Airport",
+    "gps_code": "IN-0363",
+    "freq": "123.450",
+    "Lat": 20.9265,
+    "Lon": 74.737099,
+    "Ele": 280.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Road Airport",
+    "gps_code": "IN-0364",
+    "freq": "",
+    "Lat": 24.4942,
+    "Lon": 72.781502,
+    "Ele": 266.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Dahod Helipad",
+    "gps_code": "IN-0367",
+    "freq": "",
+    "Lat": 22.874296,
+    "Lon": 74.243247,
+    "Ele": 262.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sant Gadge Baba Yavatmal Airport",
+    "gps_code": "IN-0369",
+    "freq": "",
+    "Lat": 20.395781,
+    "Lon": 78.216272,
+    "Ele": 427.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Gunna Ka Pura",
+    "gps_code": "IN-0370",
+    "freq": "",
+    "Lat": 26.65022,
+    "Lon": 77.792484,
+    "Ele": 241.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarpura Airfield",
+    "gps_code": "IN-0373",
+    "freq": "",
+    "Lat": 27.729912,
+    "Lon": 75.24086,
+    "Ele": 437.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Utkela Airport",
+    "gps_code": "IN-0376",
+    "freq": "",
+    "Lat": 20.097778,
+    "Lon": 83.183333,
+    "Ele": 208.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gandhinagar Airfield",
+    "gps_code": "IN-0382",
+    "freq": "",
+    "Lat": 19.963699,
+    "Lon": 73.807602,
+    "Ele": 597.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kannur Heliport",
+    "gps_code": "IN-0390",
+    "freq": "",
+    "Lat": 11.862516,
+    "Lon": 75.366505,
+    "Ele": 7.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Noida International Airport",
+    "gps_code": "IN-0392",
+    "freq": "",
+    "Lat": 28.175556,
+    "Lon": 77.60611,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maa Mahamaya Airport",
+    "gps_code": "IN-0393",
+    "freq": "",
+    "Lat": 22.98753,
+    "Lon": 83.19612,
+    "Ele": 588.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Jagdalpur Airport",
+    "gps_code": "IN-JGB",
+    "freq": "",
+    "Lat": 19.074301,
+    "Lon": 82.036797,
+    "Ele": 555.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Rajouri Airport",
+    "gps_code": "IN-RJI",
+    "freq": "",
+    "Lat": 33.377899,
+    "Lon": 74.315201,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sirohi Airport",
+    "gps_code": "IN-VA38",
+    "freq": "",
+    "Lat": 24.895099639892575,
+    "Lon": 72.84590148925781,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Banswara Airport",
+    "gps_code": "IN-VA51",
+    "freq": "",
+    "Lat": 23.589259,
+    "Lon": 74.314048,
+    "Ele": 213.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Osmanabad Airport",
+    "gps_code": "OMN",
+    "freq": "",
+    "Lat": 18.281,
+    "Lon": 76.0574,
+    "Ele": 694.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chanda Airport",
+    "gps_code": "VA1B",
+    "freq": "",
+    "Lat": 19.99469947814941,
+    "Lon": 79.22250366210938,
+    "Ele": 190.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Birlagram Airport",
+    "gps_code": "VA1C",
+    "freq": "",
+    "Lat": 23.4468994140625,
+    "Lon": 75.42030334472656,
+    "Ele": 469.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Muirpur Airport",
+    "gps_code": "VA1D",
+    "freq": "122.100",
+    "Lat": 24.125200271606445,
+    "Lon": 83.04060363769531,
+    "Ele": 342.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bhilai Airport",
+    "gps_code": "VA1E",
+    "freq": "",
+    "Lat": 21.2942008972168,
+    "Lon": 81.37950134277344,
+    "Ele": 309.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sidhi Airport",
+    "gps_code": "VA1F",
+    "freq": "",
+    "Lat": 24.402299880981445,
+    "Lon": 81.8147964477539,
+    "Ele": 333.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rewa Airport, Chorhata, REWA",
+    "gps_code": "VA1G",
+    "freq": "",
+    "Lat": 24.503401,
+    "Lon": 81.220299,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ondwa Airport",
+    "gps_code": "VA1H",
+    "freq": "",
+    "Lat": 25.14150047302246,
+    "Lon": 74.61150360107422,
+    "Ele": 442.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dhana Airport",
+    "gps_code": "VA1J",
+    "freq": "122.600",
+    "Lat": 23.75359916687012,
+    "Lon": 78.85579681396484,
+    "Ele": 520.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Naliya Air Force Station",
+    "gps_code": "VA1K",
+    "freq": "",
+    "Lat": 23.2223,
+    "Lon": 68.891296,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Amla Airport",
+    "gps_code": "VA1L",
+    "freq": "",
+    "Lat": 21.926399,
+    "Lon": 78.113602,
+    "Ele": 742.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Karad Airport",
+    "gps_code": "VA1M",
+    "freq": "",
+    "Lat": 17.285900115966797,
+    "Lon": 74.15809631347656,
+    "Ele": 576.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nimach Airport",
+    "gps_code": "VA1N",
+    "freq": "",
+    "Lat": 24.43079948425293,
+    "Lon": 74.8677978515625,
+    "Ele": 492.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Burhar Airport",
+    "gps_code": "VA1O",
+    "freq": "",
+    "Lat": 23.235200881958008,
+    "Lon": 81.50370025634766,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Diu Airport",
+    "gps_code": "VA1P",
+    "freq": "",
+    "Lat": 20.714185,
+    "Lon": 70.921855,
+    "Ele": 9.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Phalodi Airport",
+    "gps_code": "VA2A",
+    "freq": "",
+    "Lat": 27.11289978027344,
+    "Lon": 72.38899993896484,
+    "Ele": 238.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dr. Bhimrao Ambedkar Airstrip",
+    "gps_code": "VA2B",
+    "freq": "",
+    "Lat": 28.904933,
+    "Lon": 77.677524,
+    "Ele": 223.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gondia Airport",
+    "gps_code": "VA2C",
+    "freq": "230.000",
+    "Lat": 21.526817,
+    "Lon": 80.290347,
+    "Ele": 300.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ratlam Airport",
+    "gps_code": "VA2D",
+    "freq": "",
+    "Lat": 23.38139915466309,
+    "Lon": 75.02559661865234,
+    "Ele": 518.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sardar Vallabh Bhai Patel International Airport",
+    "gps_code": "VAAH",
+    "freq": "123.750",
+    "Lat": 23.0772,
+    "Lon": 72.634697,
+    "Ele": 57.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Akola Airport",
+    "gps_code": "VAAK",
+    "freq": "",
+    "Lat": 20.698931,
+    "Lon": 77.056883,
+    "Ele": 304.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aurangabad Airport",
+    "gps_code": "VAAU",
+    "freq": "122.300",
+    "Lat": 19.862699508666992,
+    "Lon": 75.39810180664062,
+    "Ele": 582.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Chhatrapati Shivaji International Airport",
+    "gps_code": "VABB",
+    "freq": "120.500",
+    "Lat": 19.0886993408,
+    "Lon": 72.8678970337,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bhuj Airport",
+    "gps_code": "VABJ",
+    "freq": "123.500",
+    "Lat": 23.2877998352,
+    "Lon": 69.6701965332,
+    "Ele": 81.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Belagavi Airport",
+    "gps_code": "VABM",
+    "freq": "123.500",
+    "Lat": 15.8593,
+    "Lon": 74.618301,
+    "Ele": 758.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vadodara Airport",
+    "gps_code": "VABO",
+    "freq": "122.350",
+    "Lat": 22.336201,
+    "Lon": 73.226303,
+    "Ele": 39.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Raja Bhoj International Airport",
+    "gps_code": "VABP",
+    "freq": "118.050",
+    "Lat": 23.2875003815,
+    "Lon": 77.3374023438,
+    "Ele": 521.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bhavnagar Airport",
+    "gps_code": "VABV",
+    "freq": "120.800",
+    "Lat": 21.752199173,
+    "Lon": 72.1852035522,
+    "Ele": 13.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Daman Airport",
+    "gps_code": "VADN",
+    "freq": "118.700",
+    "Lat": 20.434401,
+    "Lon": 72.843201,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Deesa Airport",
+    "gps_code": "VADS",
+    "freq": "",
+    "Lat": 24.2679,
+    "Lon": 72.204399,
+    "Ele": 147.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Guna Airport",
+    "gps_code": "VAGN",
+    "freq": "",
+    "Lat": 24.654699,
+    "Lon": 77.347298,
+    "Ele": 487.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hubli Airport",
+    "gps_code": "VAHB",
+    "freq": "122.200",
+    "Lat": 15.3617,
+    "Lon": 75.0849,
+    "Ele": 661.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Rajkot International Airport",
+    "gps_code": "VAHS",
+    "freq": "",
+    "Lat": 22.378824,
+    "Lon": 71.039391,
+    "Ele": 197.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Devi Ahilyabai Holkar Airport",
+    "gps_code": "VAID",
+    "freq": "122.300",
+    "Lat": 22.7217998505,
+    "Lon": 75.8011016846,
+    "Ele": 563.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jabalpur Airport",
+    "gps_code": "VAJB",
+    "freq": "122.300",
+    "Lat": 23.177799,
+    "Lon": 80.052002,
+    "Ele": 495.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Juhu Aerodrome",
+    "gps_code": "VAJJ",
+    "freq": "",
+    "Lat": 19.098100662231445,
+    "Lon": 72.83419799804688,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jalgaon Airport",
+    "gps_code": "VAJL",
+    "freq": "131.675",
+    "Lat": 20.962678,
+    "Lon": 75.627492,
+    "Ele": 249.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jamnagar Airport",
+    "gps_code": "VAJM",
+    "freq": "123.500",
+    "Lat": 22.465499877929688,
+    "Lon": 70.01260375976562,
+    "Ele": 21.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kandla Airport",
+    "gps_code": "VAKE",
+    "freq": "122.300",
+    "Lat": 23.1127,
+    "Lon": 70.100304,
+    "Ele": 29.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khajuraho Airport",
+    "gps_code": "VAKJ",
+    "freq": "118.150",
+    "Lat": 24.8172,
+    "Lon": 79.918602,
+    "Ele": 221.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kolhapur Airport",
+    "gps_code": "VAKP",
+    "freq": "126.900",
+    "Lat": 16.6647,
+    "Lon": 74.289398,
+    "Ele": 608.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Keshod Airport",
+    "gps_code": "VAKS",
+    "freq": "122.300",
+    "Lat": 21.317101,
+    "Lon": 70.270401,
+    "Ele": 50.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Murod Kond Airport",
+    "gps_code": "VALT",
+    "freq": "118.250",
+    "Lat": 18.411501,
+    "Lon": 76.464699,
+    "Ele": 651.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mundra Airport",
+    "gps_code": "VAMA",
+    "freq": "",
+    "Lat": 22.834795,
+    "Lon": 69.765408,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nanded Airport",
+    "gps_code": "VAND",
+    "freq": "113.000",
+    "Lat": 19.1833,
+    "Lon": 77.316704,
+    "Ele": 381.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dr. Babasaheb Ambedkar International Airport",
+    "gps_code": "VANP",
+    "freq": "287.200",
+    "Lat": 21.092199,
+    "Lon": 79.047203,
+    "Ele": 314.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nashik Airport",
+    "gps_code": "VAOZ",
+    "freq": "122.700",
+    "Lat": 20.119101,
+    "Lon": 73.912903,
+    "Ele": 579.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pune Airport / Lohagaon Air Force Station",
+    "gps_code": "VAPO",
+    "freq": "123.500",
+    "Lat": 18.5821,
+    "Lon": 73.919701,
+    "Ele": 591.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Porbandar Airport",
+    "gps_code": "VAPR",
+    "freq": "122.300",
+    "Lat": 21.649524,
+    "Lon": 69.656405,
+    "Ele": 7.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ratnagiri Airport",
+    "gps_code": "VARG",
+    "freq": "",
+    "Lat": 17.013599,
+    "Lon": 73.327797,
+    "Ele": 93.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rajkot Airport",
+    "gps_code": "VARK",
+    "freq": "122.300",
+    "Lat": 22.3092,
+    "Lon": 70.779503,
+    "Ele": 134.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Swami Vivekananda Airport",
+    "gps_code": "VARP",
+    "freq": "124.750",
+    "Lat": 21.180401,
+    "Lon": 81.7388,
+    "Ele": 317.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shirdi Airport",
+    "gps_code": "VASD",
+    "freq": "",
+    "Lat": 19.688752,
+    "Lon": 74.377354,
+    "Ele": 587.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Solapur Airport",
+    "gps_code": "VASL",
+    "freq": "",
+    "Lat": 17.6280002594,
+    "Lon": 75.93479919430001,
+    "Ele": 482.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Surat Airport",
+    "gps_code": "VASU",
+    "freq": "123.500",
+    "Lat": 21.1141,
+    "Lon": 72.741798,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maharana Pratap Airport",
+    "gps_code": "VAUD",
+    "freq": "118.650",
+    "Lat": 24.6177005768,
+    "Lon": 73.89610290530001,
+    "Ele": 513.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Burnpur Airport",
+    "gps_code": "VE23",
+    "freq": "",
+    "Lat": 23.631500244140625,
+    "Lon": 86.97550201416016,
+    "Ele": 94.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Sookerating (Doomdooma) Airport",
+    "gps_code": "VE24",
+    "freq": "",
+    "Lat": 27.5529,
+    "Lon": 95.570602,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nuagaon Airport",
+    "gps_code": "VE36",
+    "freq": "",
+    "Lat": 20.511699676513672,
+    "Lon": 83.4480972290039,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Giridih Airport",
+    "gps_code": "VE41",
+    "freq": "",
+    "Lat": 24.20190048217773,
+    "Lon": 86.28980255126953,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Daltonganj Airport",
+    "gps_code": "VE54",
+    "freq": "",
+    "Lat": 24.01930046081543,
+    "Lon": 84.09510040283203,
+    "Ele": 244.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cuttack Airport",
+    "gps_code": "VE62",
+    "freq": "",
+    "Lat": 20.549601,
+    "Lon": 85.886299,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mechuka Advanced Landing Ground",
+    "gps_code": "VE67",
+    "freq": "",
+    "Lat": 28.602458,
+    "Lon": 94.126139,
+    "Ele": 2407.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bentayan Airport",
+    "gps_code": "VE85",
+    "freq": "",
+    "Lat": 23.09510040283203,
+    "Lon": 75.88529968261719,
+    "Ele": 507.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vijaynagar Advanced Landing Ground",
+    "gps_code": "VE91",
+    "freq": "",
+    "Lat": 27.1935997009,
+    "Lon": 97.0037002563,
+    "Ele": 1270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Thuniabhand Airport",
+    "gps_code": "VE96",
+    "freq": "",
+    "Lat": 22.00160026550293,
+    "Lon": 78.91719818115234,
+    "Ele": 665.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Azamgarh Airport",
+    "gps_code": "VEAH",
+    "freq": "",
+    "Lat": 26.153333,
+    "Lon": 83.118333,
+    "Ele": 76.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Along Airport",
+    "gps_code": "VEAN",
+    "freq": "",
+    "Lat": 28.17530059814453,
+    "Lon": 94.802001953125,
+    "Ele": 274.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Agartala - Maharaja Bir Bikram Airport",
+    "gps_code": "VEAT",
+    "freq": "123.500",
+    "Lat": 23.886999,
+    "Lon": 91.240402,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuirial Airfield",
+    "gps_code": "VEAZ",
+    "freq": "122.300",
+    "Lat": 23.746214,
+    "Lon": 92.802846,
+    "Ele": 333.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Behala Airport",
+    "gps_code": "VEBA",
+    "freq": "",
+    "Lat": 22.50423,
+    "Lon": 88.293427,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bagdogra Airport",
+    "gps_code": "VEBD",
+    "freq": "293.100",
+    "Lat": 26.68120002746582,
+    "Lon": 88.32859802246094,
+    "Ele": 125.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Balurghat Airport",
+    "gps_code": "VEBG",
+    "freq": "",
+    "Lat": 25.2617,
+    "Lon": 88.795601,
+    "Ele": 23.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shillong Airport",
+    "gps_code": "VEBI",
+    "freq": "122.300",
+    "Lat": 25.70359992980957,
+    "Lon": 91.97869873046876,
+    "Ele": 887.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bokaro Airport",
+    "gps_code": "VEBK",
+    "freq": "",
+    "Lat": 23.643499,
+    "Lon": 86.148903,
+    "Ele": 217.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Berhampur Rangeilunda Airport",
+    "gps_code": "VEBM",
+    "freq": "",
+    "Lat": 19.2975,
+    "Lon": 84.876944,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lal Bahadur Shastri Airport",
+    "gps_code": "VEBN",
+    "freq": "132.400",
+    "Lat": 25.452129,
+    "Lon": 82.861805,
+    "Ele": 81.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Biju Patnaik International Airport",
+    "gps_code": "VEBS",
+    "freq": "123.500",
+    "Lat": 20.2444,
+    "Lon": 85.817802,
+    "Ele": 42.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bilaspur Airport",
+    "gps_code": "VEBU",
+    "freq": "",
+    "Lat": 21.9884,
+    "Lon": 82.111,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chabua Air Force Station",
+    "gps_code": "VECA",
+    "freq": "",
+    "Lat": 27.4622,
+    "Lon": 95.117699,
+    "Ele": 111.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Netaji Subhash Chandra Bose International Airport",
+    "gps_code": "VECC",
+    "freq": "119.300",
+    "Lat": 22.654699,
+    "Lon": 88.446701,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chakulia Airport",
+    "gps_code": "VECK",
+    "freq": "",
+    "Lat": 22.463625,
+    "Lon": 86.705219,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cooch Behar Airport",
+    "gps_code": "VECO",
+    "freq": "122.300",
+    "Lat": 26.3305,
+    "Lon": 89.467201,
+    "Ele": 42.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chitrakoot Airport",
+    "gps_code": "VECT",
+    "freq": "",
+    "Lat": 25.167694,
+    "Lon": 80.9358,
+    "Ele": 320.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dhanbad Airport",
+    "gps_code": "VEDB",
+    "freq": "",
+    "Lat": 23.834,
+    "Lon": 86.425301,
+    "Ele": 258.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kazi Nazrul Islam Airport",
+    "gps_code": "VEDG",
+    "freq": "",
+    "Lat": 23.6225,
+    "Lon": 87.243,
+    "Ele": 91.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Darbhanga Airport",
+    "gps_code": "VEDH",
+    "freq": "",
+    "Lat": 26.192801,
+    "Lon": 85.916901,
+    "Ele": 47.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Deoghar Airport",
+    "gps_code": "VEDO",
+    "freq": "",
+    "Lat": 24.446842,
+    "Lon": 86.704955,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalaikunda Air Force Station",
+    "gps_code": "VEDX",
+    "freq": "",
+    "Lat": 22.3395,
+    "Lon": 87.2145,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Daporijo Airport",
+    "gps_code": "VEDZ",
+    "freq": "",
+    "Lat": 27.9855003357,
+    "Lon": 94.22280120850002,
+    "Ele": 228.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gorakhpur Airport",
+    "gps_code": "VEGK",
+    "freq": "122.700",
+    "Lat": 26.7397003174,
+    "Lon": 83.4496994019,
+    "Ele": 78.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lokpriya Gopinath Bordoloi International Airport",
+    "gps_code": "VEGT",
+    "freq": "123.300",
+    "Lat": 26.10610008239746,
+    "Lon": 91.58589935302734,
+    "Ele": 49.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gaya Airport",
+    "gps_code": "VEGY",
+    "freq": "123.500",
+    "Lat": 24.744301,
+    "Lon": 84.951202,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hirakud Airport",
+    "gps_code": "VEHK",
+    "freq": "",
+    "Lat": 21.5802,
+    "Lon": 84.005699,
+    "Ele": 200.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hashimara Air Force Station",
+    "gps_code": "VEHX",
+    "freq": "",
+    "Lat": 26.698299,
+    "Lon": 89.369102,
+    "Ele": 103.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Imphal Airport",
+    "gps_code": "VEIM",
+    "freq": "123.500",
+    "Lat": 24.7600002289,
+    "Lon": 93.896697998,
+    "Ele": 774.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Jharsuguda Airport",
+    "gps_code": "VEJH",
+    "freq": "",
+    "Lat": 21.9135,
+    "Lon": 84.0504,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jeypore Airport",
+    "gps_code": "VEJP",
+    "freq": "",
+    "Lat": 18.879549,
+    "Lon": 82.552478,
+    "Ele": 595.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sonari Airport",
+    "gps_code": "VEJS",
+    "freq": "122.100",
+    "Lat": 22.813706,
+    "Lon": 86.168981,
+    "Ele": 144.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jorhat Airport",
+    "gps_code": "VEJT",
+    "freq": "119.700",
+    "Lat": 26.730456,
+    "Lon": 94.175416,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kishanganj Airport",
+    "gps_code": "VEKG",
+    "freq": "",
+    "Lat": 26.075836,
+    "Lon": 87.93965,
+    "Ele": 42.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kushinagar International Airport",
+    "gps_code": "VEKI",
+    "freq": "",
+    "Lat": 26.776534,
+    "Lon": 83.889214,
+    "Ele": 81.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kendujhar Airport",
+    "gps_code": "VEKJ",
+    "freq": "",
+    "Lat": 21.696667,
+    "Lon": 85.581667,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamalpur Airport",
+    "gps_code": "VEKM",
+    "freq": "",
+    "Lat": 24.134325,
+    "Lon": 91.810769,
+    "Ele": 39.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kailashahar Airport",
+    "gps_code": "VEKR",
+    "freq": "122.300",
+    "Lat": 24.308657,
+    "Lon": 92.00768,
+    "Ele": 24.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Silchar Airport",
+    "gps_code": "VEKU",
+    "freq": "122.700",
+    "Lat": 24.9129009247,
+    "Lon": 92.9786987305,
+    "Ele": 107.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Khowai Airport",
+    "gps_code": "VEKW",
+    "freq": "",
+    "Lat": 24.061899,
+    "Lon": 91.603897,
+    "Ele": 29.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lengpui Airport",
+    "gps_code": "VELP",
+    "freq": "122.250",
+    "Lat": 23.840599,
+    "Lon": 92.619698,
+    "Ele": 426.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lilabari North Lakhimpur Airport",
+    "gps_code": "VELR",
+    "freq": "123.500",
+    "Lat": 27.295682,
+    "Lon": 94.097266,
+    "Ele": 100.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Malda Airport",
+    "gps_code": "VEMH",
+    "freq": "",
+    "Lat": 25.01018,
+    "Lon": 88.126917,
+    "Ele": 24.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dibrugarh Airport",
+    "gps_code": "VEMN",
+    "freq": "123.500",
+    "Lat": 27.4839000702,
+    "Lon": 95.0168991089,
+    "Ele": 110.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dimapur Airport",
+    "gps_code": "VEMR",
+    "freq": "123.500",
+    "Lat": 25.8838996887,
+    "Lon": 93.7711029053,
+    "Ele": 148.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Muzaffarpur Airport",
+    "gps_code": "VEMZ",
+    "freq": "",
+    "Lat": 26.119101,
+    "Lon": 85.313698,
+    "Ele": 53.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nawapara Airport",
+    "gps_code": "VENP",
+    "freq": "",
+    "Lat": 20.870001,
+    "Lon": 82.5196,
+    "Ele": 322.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pasighat Airport",
+    "gps_code": "VEPG",
+    "freq": "",
+    "Lat": 28.064786,
+    "Lon": 95.336952,
+    "Ele": 145.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Panagarh Air Force Station",
+    "gps_code": "VEPH",
+    "freq": "",
+    "Lat": 23.4743003845,
+    "Lon": 87.4274978638,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Barrackpore Air Force Station",
+    "gps_code": "VEPI",
+    "freq": "",
+    "Lat": 22.7810001373,
+    "Lon": 88.3591995239,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jay Prakash Narayan Airport",
+    "gps_code": "VEPT",
+    "freq": "118.300",
+    "Lat": 25.591299,
+    "Lon": 85.087997,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Purnea Airport",
+    "gps_code": "VEPU",
+    "freq": "",
+    "Lat": 25.759599685668945,
+    "Lon": 87.41000366210938,
+    "Ele": 39.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Birsa Munda Airport",
+    "gps_code": "VERC",
+    "freq": "118.050",
+    "Lat": 23.314300537100003,
+    "Lon": 85.3217010498,
+    "Ele": 654.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rourkela Airport",
+    "gps_code": "VERK",
+    "freq": "122.300",
+    "Lat": 22.256571,
+    "Lon": 84.815193,
+    "Ele": 200.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Raxaul Airport",
+    "gps_code": "VERL",
+    "freq": "",
+    "Lat": 26.9667,
+    "Lon": 84.833298,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rupsi Airport",
+    "gps_code": "VERU",
+    "freq": "",
+    "Lat": 26.141867,
+    "Lon": 89.907892,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tezu Airport",
+    "gps_code": "VETJ",
+    "freq": "",
+    "Lat": 27.9412002563,
+    "Lon": 96.1343994141,
+    "Ele": 243.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tezpur Airport",
+    "gps_code": "VETZ",
+    "freq": "",
+    "Lat": 26.7091007232666,
+    "Lon": 92.78469848632812,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Utkela Airport",
+    "gps_code": "VEUK",
+    "freq": "",
+    "Lat": 20.097401,
+    "Lon": 83.1838,
+    "Ele": 207.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Visakhapatnam Airport",
+    "gps_code": "VEVZ",
+    "freq": "658.300",
+    "Lat": 17.723506,
+    "Lon": 83.227729,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ziro Airport",
+    "gps_code": "VEZO",
+    "freq": "122.700",
+    "Lat": 27.588301,
+    "Lon": 93.828102,
+    "Ele": 1646.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Saifai Airport",
+    "gps_code": "VI00",
+    "freq": "",
+    "Lat": 26.9202,
+    "Lon": 79.06277,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Narnaul Airport",
+    "gps_code": "VI20",
+    "freq": "",
+    "Lat": 28.077101,
+    "Lon": 76.205002,
+    "Ele": 291.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Karnal Airport",
+    "gps_code": "VI40",
+    "freq": "122.500",
+    "Lat": 29.714663,
+    "Lon": 77.037438,
+    "Ele": 252.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Suratgarh New Airport",
+    "gps_code": "VI43",
+    "freq": "",
+    "Lat": 29.387800216674805,
+    "Lon": 73.90390014648438,
+    "Ele": 168.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Thoise Airport",
+    "gps_code": "VI57",
+    "freq": "",
+    "Lat": 34.652599,
+    "Lon": 77.375801,
+    "Ele": 3062.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kargil Airport",
+    "gps_code": "VI65",
+    "freq": "",
+    "Lat": 34.5243,
+    "Lon": 76.155899,
+    "Ele": 2927.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukche Advanced Landing Ground",
+    "gps_code": "VI66",
+    "freq": "",
+    "Lat": 32.937401,
+    "Lon": 79.213203,
+    "Ele": 4175.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Jhunjhunu Airport",
+    "gps_code": "VI69",
+    "freq": "",
+    "Lat": 28.1067008972168,
+    "Lon": 75.37560272216797,
+    "Ele": 338.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilani New Airport",
+    "gps_code": "VI70",
+    "freq": "",
+    "Lat": 28.348800659179688,
+    "Lon": 75.59369659423828,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pinjore Airfield and Flying Club",
+    "gps_code": "VI71",
+    "freq": "122.500",
+    "Lat": 30.82457,
+    "Lon": 76.883652,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Nagaur Airport",
+    "gps_code": "VI73",
+    "freq": "",
+    "Lat": 27.20829963684082,
+    "Lon": 73.7114028930664,
+    "Ele": 289.6
+  },
+  {
+    "type": "small_airport",
+    "name": "IIT Kanpur Airport",
+    "gps_code": "VI75",
+    "freq": "",
+    "Lat": 26.520399,
+    "Lon": 80.232904,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Band Tal Airport",
+    "gps_code": "VI76",
+    "freq": "",
+    "Lat": 26.000099182128903,
+    "Lon": 78.26180267333984,
+    "Ele": 240.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Maa Ganga Airport Uttarkashi",
+    "gps_code": "VI82",
+    "freq": "",
+    "Lat": 30.582583,
+    "Lon": 78.323164,
+    "Ele": 909.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Beas Airport",
+    "gps_code": "VI88",
+    "freq": "",
+    "Lat": 31.559999,
+    "Lon": 75.341301,
+    "Ele": 225.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Akbarpur Mahamaya Rajkiya Airport",
+    "gps_code": "VI90",
+    "freq": "",
+    "Lat": 26.447599,
+    "Lon": 82.568199,
+    "Ele": 87.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Agra Airport / Agra Air Force Station",
+    "gps_code": "VIAG",
+    "freq": "122.300",
+    "Lat": 27.157683,
+    "Lon": 77.960942,
+    "Ele": 167.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aligarh Airport",
+    "gps_code": "VIAH",
+    "freq": "122.625",
+    "Lat": 27.861437,
+    "Lon": 78.145404,
+    "Ele": 188.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Prayagraj Airport",
+    "gps_code": "VIAL",
+    "freq": "122.700",
+    "Lat": 25.4401,
+    "Lon": 81.733902,
+    "Ele": 98.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ambala Air Force Station",
+    "gps_code": "VIAM",
+    "freq": "",
+    "Lat": 30.368099,
+    "Lon": 76.816704,
+    "Ele": 277.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sri Guru Ram Dass Jee International Airport",
+    "gps_code": "VIAR",
+    "freq": "119.700",
+    "Lat": 31.7096,
+    "Lon": 74.797302,
+    "Ele": 230.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Awantipura Air Force Station",
+    "gps_code": "VIAW",
+    "freq": "",
+    "Lat": 33.876598,
+    "Lon": 74.9757,
+    "Ele": 1643.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Adampur Airport",
+    "gps_code": "VIAX",
+    "freq": "",
+    "Lat": 31.4338,
+    "Lon": 75.758797,
+    "Ele": 236.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nal Airport",
+    "gps_code": "VIBK",
+    "freq": "",
+    "Lat": 28.070601,
+    "Lon": 73.207199,
+    "Ele": 228.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bakshi Ka Talab Air Force Station",
+    "gps_code": "VIBL",
+    "freq": "",
+    "Lat": 26.9883,
+    "Lon": 80.893097,
+    "Ele": 117.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kullu Manali Airport",
+    "gps_code": "VIBR",
+    "freq": "122.300",
+    "Lat": 31.876699,
+    "Lon": 77.154404,
+    "Ele": 1089.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bhatinda Air Force Station",
+    "gps_code": "VIBT",
+    "freq": "",
+    "Lat": 30.2701,
+    "Lon": 74.755798,
+    "Ele": 201.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bhiwani Airport",
+    "gps_code": "VIBW",
+    "freq": "",
+    "Lat": 28.837,
+    "Lon": 76.1791,
+    "Ele": 219.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bareilly Air Force Station",
+    "gps_code": "VIBY",
+    "freq": "122.700",
+    "Lat": 28.4221,
+    "Lon": 79.450798,
+    "Ele": 176.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chandigarh International Airport",
+    "gps_code": "VICG",
+    "freq": "118.300",
+    "Lat": 30.6735,
+    "Lon": 76.788498,
+    "Ele": 308.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kanpur Airport",
+    "gps_code": "VICX",
+    "freq": "122.700",
+    "Lat": 26.404301,
+    "Lon": 80.410103,
+    "Ele": 125.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Safdarjung Airport",
+    "gps_code": "VIDD",
+    "freq": "126.350",
+    "Lat": 28.585453,
+    "Lon": 77.203563,
+    "Ele": 214.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pithoragarh Airport",
+    "gps_code": "VIDF",
+    "freq": "",
+    "Lat": 29.593599,
+    "Lon": 80.239197,
+    "Ele": 1496.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dehradun Jolly Grant Airport",
+    "gps_code": "VIDN",
+    "freq": "122.300",
+    "Lat": 30.189243,
+    "Lon": 78.176651,
+    "Ele": 558.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Indira Gandhi International Airport",
+    "gps_code": "VIDP",
+    "freq": "126.350",
+    "Lat": 28.55563,
+    "Lon": 77.09519,
+    "Ele": 236.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hindon Airport / Hindon Air Force Station",
+    "gps_code": "VIDX",
+    "freq": "122.700",
+    "Lat": 28.707701,
+    "Lon": 77.358902,
+    "Ele": 213.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kangra Airport",
+    "gps_code": "VIGG",
+    "freq": "122.300",
+    "Lat": 32.164902,
+    "Lon": 76.263018,
+    "Ele": 769.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gwalior Airport",
+    "gps_code": "VIGR",
+    "freq": "123.500",
+    "Lat": 26.29330062866211,
+    "Lon": 78.22779846191406,
+    "Ele": 188.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hisar Airport",
+    "gps_code": "VIHR",
+    "freq": "",
+    "Lat": 29.179399,
+    "Lon": 75.755302,
+    "Ele": 213.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Halwara Air Force Station",
+    "gps_code": "VIHX",
+    "freq": "",
+    "Lat": 30.748501,
+    "Lon": 75.629799,
+    "Ele": 240.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Jhansi Airport",
+    "gps_code": "VIJN",
+    "freq": "",
+    "Lat": 25.491199,
+    "Lon": 78.558403,
+    "Ele": 244.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jodhpur Airport",
+    "gps_code": "VIJO",
+    "freq": "122.700",
+    "Lat": 26.251100540161133,
+    "Lon": 73.04889678955078,
+    "Ele": 218.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jaipur International Airport",
+    "gps_code": "VIJP",
+    "freq": "126.600",
+    "Lat": 26.8242,
+    "Lon": 75.812202,
+    "Ele": 385.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jaisalmer Airport",
+    "gps_code": "VIJR",
+    "freq": "123.500",
+    "Lat": 26.8887,
+    "Lon": 70.864998,
+    "Ele": 228.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jammu Airport",
+    "gps_code": "VIJU",
+    "freq": "122.850",
+    "Lat": 32.688849,
+    "Lon": 74.838152,
+    "Ele": 303.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kanpur Civil Airport (Old)",
+    "gps_code": "VIKA",
+    "freq": "122.300",
+    "Lat": 26.440857,
+    "Lon": 80.365029,
+    "Ele": 125.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kishangarh Airport Ajmer",
+    "gps_code": "VIKG",
+    "freq": "",
+    "Lat": 26.591007,
+    "Lon": 74.812956,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kota Airport",
+    "gps_code": "VIKO",
+    "freq": "119.000",
+    "Lat": 25.160200119,
+    "Lon": 75.84559631350001,
+    "Ele": 273.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ludhiana Airport",
+    "gps_code": "VILD",
+    "freq": "122.300",
+    "Lat": 30.854700088500977,
+    "Lon": 75.95259857177734,
+    "Ele": 254.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Leh Kushok Bakula Rimpochee Airport",
+    "gps_code": "VILH",
+    "freq": "",
+    "Lat": 34.135899,
+    "Lon": 77.546501,
+    "Ele": 3255.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chaudhary Charan Singh International Airport",
+    "gps_code": "VILK",
+    "freq": "120.450",
+    "Lat": 26.7605991364,
+    "Lon": 80.8892974854,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lalitpur Airport",
+    "gps_code": "VILP",
+    "freq": "",
+    "Lat": 24.71699905395508,
+    "Lon": 78.41699981689453,
+    "Ele": 367.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Moradabad Airport",
+    "gps_code": "VIMB",
+    "freq": "",
+    "Lat": 28.81746,
+    "Lon": 78.92187,
+    "Ele": 194.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pathankot Airport",
+    "gps_code": "VIPK",
+    "freq": "122.700",
+    "Lat": 32.233611,
+    "Lon": 75.634444,
+    "Ele": 310.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Patiala Airport",
+    "gps_code": "VIPL",
+    "freq": "122.500",
+    "Lat": 30.3148,
+    "Lon": 76.364502,
+    "Ele": 249.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pantnagar Airport",
+    "gps_code": "VIPT",
+    "freq": "122.300",
+    "Lat": 29.0334,
+    "Lon": 79.473701,
+    "Ele": 234.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Phalodi Air Force Station",
+    "gps_code": "VIPX",
+    "freq": "",
+    "Lat": 27.104866,
+    "Lon": 72.212894,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fursatganj Airport",
+    "gps_code": "VIRB",
+    "freq": "122.650",
+    "Lat": 26.248501,
+    "Lon": 81.380501,
+    "Ele": 109.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sirsa Air Force Station",
+    "gps_code": "VISA",
+    "freq": "",
+    "Lat": 29.5606,
+    "Lon": 75.006104,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shimla Airport",
+    "gps_code": "VISM",
+    "freq": "122.500",
+    "Lat": 31.0818,
+    "Lon": 77.068001,
+    "Ele": 1545.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarsawa Air Force Station",
+    "gps_code": "VISP",
+    "freq": "123.500",
+    "Lat": 29.994303,
+    "Lon": 77.42456,
+    "Ele": 271.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sheikh ul Alam International Airport",
+    "gps_code": "VISR",
+    "freq": "893.900",
+    "Lat": 33.987099,
+    "Lon": 74.7742,
+    "Ele": 1654.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Satna Airport",
+    "gps_code": "VIST",
+    "freq": "",
+    "Lat": 24.56262,
+    "Lon": 80.852927,
+    "Ele": 323.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shravasti Airport",
+    "gps_code": "VISV",
+    "freq": "",
+    "Lat": 27.499732,
+    "Lon": 82.032927,
+    "Ele": 111.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Uttarlai Airport",
+    "gps_code": "VIUT",
+    "freq": "",
+    "Lat": 25.813,
+    "Lon": 71.4823,
+    "Ele": 152.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Udhampur Air Force Station",
+    "gps_code": "VIUX",
+    "freq": "561.000",
+    "Lat": 32.902152,
+    "Lon": 75.155709,
+    "Ele": 629.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kovilpatti Airport",
+    "gps_code": "VO26",
+    "freq": "",
+    "Lat": 9.15389,
+    "Lon": 77.821198,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Harihar Airport",
+    "gps_code": "VO52",
+    "freq": "",
+    "Lat": 14.534533,
+    "Lon": 75.786879,
+    "Ele": 533.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Campbell Bay Airport / INS Baaz",
+    "gps_code": "VO94",
+    "freq": "",
+    "Lat": 7.01304,
+    "Lon": 93.922798,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hosur Airport",
+    "gps_code": "VO95",
+    "freq": "129.800",
+    "Lat": 12.661299705505373,
+    "Lon": 77.76719665527344,
+    "Ele": 949.8
+  },
+  {
+    "type": "small_airport",
+    "name": "INS Rajali / Arakkonam Naval Air Station",
+    "gps_code": "VOAR",
+    "freq": "",
+    "Lat": 13.0712,
+    "Lon": 79.6912,
+    "Ele": 80.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Agatti Airport",
+    "gps_code": "VOAT",
+    "freq": "",
+    "Lat": 10.8237,
+    "Lon": 72.176003,
+    "Ele": 4.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "HAL Airport",
+    "gps_code": "VOBG",
+    "freq": "127.700",
+    "Lat": 12.95,
+    "Lon": 77.668198,
+    "Ele": 887.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bellary Airport",
+    "gps_code": "VOBI",
+    "freq": "",
+    "Lat": 15.162799835205078,
+    "Lon": 76.88279724121094,
+    "Ele": 9.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Kempegowda International Airport",
+    "gps_code": "VOBL",
+    "freq": "121.250",
+    "Lat": 13.1979,
+    "Lon": 77.706299,
+    "Ele": 914.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bidar Airport / Bidar Air Force Station",
+    "gps_code": "VOBR",
+    "freq": "122.850",
+    "Lat": 17.9081,
+    "Lon": 77.487099,
+    "Ele": 663.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vijayawada Airport",
+    "gps_code": "VOBZ",
+    "freq": "123.500",
+    "Lat": 16.530399,
+    "Lon": 80.796799,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Coimbatore International Airport",
+    "gps_code": "VOCB",
+    "freq": "120.050",
+    "Lat": 11.029999733,
+    "Lon": 77.0434036255,
+    "Ele": 403.6
+  },
+  {
+    "type": "small_airport",
+    "name": "INS Garuda / Willingdon Island Naval Air Station",
+    "gps_code": "VOCC",
+    "freq": "665.500",
+    "Lat": 9.946064,
+    "Lon": 76.271947,
+    "Ele": 2.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Cochin International Airport",
+    "gps_code": "VOCI",
+    "freq": "119.750",
+    "Lat": 10.151047,
+    "Lon": 76.400838,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Calicut International Airport",
+    "gps_code": "VOCL",
+    "freq": "127.000",
+    "Lat": 11.1368,
+    "Lon": 75.955299,
+    "Ele": 104.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kadapa Airport",
+    "gps_code": "VOCP",
+    "freq": "118.350",
+    "Lat": 14.513154,
+    "Lon": 78.769183,
+    "Ele": 131.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Car Nicobar Air Force Base",
+    "gps_code": "VOCX",
+    "freq": "669.600",
+    "Lat": 9.153056,
+    "Lon": 92.819273,
+    "Ele": 1.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dundigul Air Force Academy",
+    "gps_code": "VODG",
+    "freq": "119.100",
+    "Lat": 17.627199173,
+    "Lon": 78.4033966064,
+    "Ele": 613.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Manohar International Airport",
+    "gps_code": "VOGA",
+    "freq": "",
+    "Lat": 15.744257,
+    "Lon": 73.860625,
+    "Ele": 168.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalaburagi Airport",
+    "gps_code": "VOGB",
+    "freq": "",
+    "Lat": 17.308154,
+    "Lon": 76.965246,
+    "Ele": 478.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Dabolim Airport",
+    "gps_code": "VOGO",
+    "freq": "119.700",
+    "Lat": 15.3808,
+    "Lon": 73.831398,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Hakimpet Airport",
+    "gps_code": "VOHK",
+    "freq": "",
+    "Lat": 17.553499,
+    "Lon": 78.524902,
+    "Ele": 615.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Rajiv Gandhi International Airport",
+    "gps_code": "VOHS",
+    "freq": "120.250",
+    "Lat": 17.231318,
+    "Lon": 78.429855,
+    "Ele": 616.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Begumpet Airport",
+    "gps_code": "VOHY",
+    "freq": "129.700",
+    "Lat": 17.4531,
+    "Lon": 78.467598,
+    "Ele": 531.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jindal Vijaynagar Airport",
+    "gps_code": "VOJV",
+    "freq": "0.217",
+    "Lat": 15.175921,
+    "Lon": 76.63303,
+    "Ele": 509.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kannur International Airport",
+    "gps_code": "VOKN",
+    "freq": "",
+    "Lat": 11.918614,
+    "Lon": 75.547211,
+    "Ele": 100.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Baldota Koppal Aerodrome",
+    "gps_code": "VOKP",
+    "freq": "131.775",
+    "Lat": 15.359481,
+    "Lon": 76.219411,
+    "Ele": 518.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kurnool Airport",
+    "gps_code": "VOKU",
+    "freq": "",
+    "Lat": 15.716288,
+    "Lon": 78.16923,
+    "Ele": 280.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Madurai Airport",
+    "gps_code": "VOMD",
+    "freq": "122.800",
+    "Lat": 9.83450984955,
+    "Lon": 78.09339904790001,
+    "Ele": 139.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mangalore International Airport",
+    "gps_code": "VOML",
+    "freq": "127.550",
+    "Lat": 12.9612998962,
+    "Lon": 74.8900985718,
+    "Ele": 102.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Chennai International Airport",
+    "gps_code": "VOMM",
+    "freq": "118.900",
+    "Lat": 12.990005,
+    "Lon": 80.169296,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mysore Airport",
+    "gps_code": "VOMY",
+    "freq": "",
+    "Lat": 12.23,
+    "Lon": 76.655833,
+    "Ele": 716.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nagarjuna Sagar Airport",
+    "gps_code": "VONS",
+    "freq": "",
+    "Lat": 16.541574,
+    "Lon": 79.316504,
+    "Ele": 200.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Neyveli Airport",
+    "gps_code": "VONV",
+    "freq": "",
+    "Lat": 11.612956,
+    "Lon": 79.527382,
+    "Ele": 56.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Veer Savarkar International Airport / INS Utkrosh",
+    "gps_code": "VOPB",
+    "freq": "658.300",
+    "Lat": 11.641208,
+    "Lon": 92.729643,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pondicherry Airport",
+    "gps_code": "VOPC",
+    "freq": "122.900",
+    "Lat": 11.968,
+    "Lon": 79.812,
+    "Ele": 40.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sri Sathya Sai Airport",
+    "gps_code": "VOPN",
+    "freq": "118.400",
+    "Lat": 14.1492996216,
+    "Lon": 77.7910995483,
+    "Ele": 474.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Basanth Nagar Airport",
+    "gps_code": "VORG",
+    "freq": "",
+    "Lat": 18.701,
+    "Lon": 79.3923,
+    "Ele": 204.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ramnad Naval Air Station",
+    "gps_code": "VORM",
+    "freq": "118.900",
+    "Lat": 9.32509,
+    "Lon": 78.971497,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Raichur Airport",
+    "gps_code": "VORR",
+    "freq": "",
+    "Lat": 16.279722,
+    "Lon": 77.360278,
+    "Ele": 374.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rajahmundry Airport",
+    "gps_code": "VORY",
+    "freq": "122.300",
+    "Lat": 17.105799,
+    "Lon": 81.813204,
+    "Ele": 46.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Salem Airport",
+    "gps_code": "VOSM",
+    "freq": "122.400",
+    "Lat": 11.78330039978,
+    "Lon": 78.06559753418,
+    "Ele": 307.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Coimbatore Air Force Station",
+    "gps_code": "VOSX",
+    "freq": "122.300",
+    "Lat": 11.0136,
+    "Lon": 77.159698,
+    "Ele": 381.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thanjavur Air Force Station",
+    "gps_code": "VOTJ",
+    "freq": "",
+    "Lat": 10.723835,
+    "Lon": 79.109457,
+    "Ele": 77.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuticorin Airport",
+    "gps_code": "VOTK",
+    "freq": "",
+    "Lat": 8.724241,
+    "Lon": 78.025803,
+    "Ele": 39.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Tirupati Airport",
+    "gps_code": "VOTP",
+    "freq": "119.000",
+    "Lat": 13.632499694800002,
+    "Lon": 79.543296814,
+    "Ele": 106.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tiruchirappalli International Airport",
+    "gps_code": "VOTR",
+    "freq": "119.700",
+    "Lat": 10.766223,
+    "Lon": 78.71774,
+    "Ele": 87.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Thiruvananthapuram International Airport",
+    "gps_code": "VOTV",
+    "freq": "125.900",
+    "Lat": 8.48212,
+    "Lon": 76.920097,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tambaram Air Force Station",
+    "gps_code": "VOTX",
+    "freq": "127.900",
+    "Lat": 12.9072,
+    "Lon": 80.121902,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Vellore Airport",
+    "gps_code": "VOVR",
+    "freq": "",
+    "Lat": 12.9088,
+    "Lon": 79.066803,
+    "Ele": 232.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Warangal Airport",
+    "gps_code": "VOWA",
+    "freq": "",
+    "Lat": 17.9144,
+    "Lon": 79.602203,
+    "Ele": 285.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yelahanka Air Force Station",
+    "gps_code": "VOYK",
+    "freq": "119.700",
+    "Lat": 13.135499954223633,
+    "Lon": 77.60600280761719,
+    "Ele": 928.1
+  }
+]

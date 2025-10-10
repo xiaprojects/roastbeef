@@ -1,0 +1,47 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Sir Seewoosagur Ramgoolam International Airport",
+    "gps_code": "FIMP",
+    "freq": "347.600",
+    "Lat": -20.430201,
+    "Lon": 57.683601,
+    "Ele": 56.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sir Charles Gaetan Duval Airport",
+    "gps_code": "FIMR",
+    "freq": "123.300",
+    "Lat": -19.7577,
+    "Lon": 63.361,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agalega Island Airstrip",
+    "gps_code": "MU-0001",
+    "freq": "",
+    "Lat": -10.3731,
+    "Lon": 56.609798,
+    "Ele": 1.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Skydive Austral Airstrip",
+    "gps_code": "MU-0002",
+    "freq": "",
+    "Lat": -20.123793,
+    "Lon": 57.681656,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "IAF Agalega",
+    "gps_code": "MU-0004",
+    "freq": "",
+    "Lat": -10.372483,
+    "Lon": 56.603537,
+    "Ele": 0.0
+  }
+]

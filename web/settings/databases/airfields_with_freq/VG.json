@@ -1,0 +1,29 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Captain Auguste George Airport",
+    "gps_code": "TUPA",
+    "freq": "",
+    "Lat": 18.727734,
+    "Lon": -64.32852,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Terrance B. Lettsome International Airport",
+    "gps_code": "TUPJ",
+    "freq": "121.900",
+    "Lat": 18.445492,
+    "Lon": -64.541707,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Virgin Gorda Airport",
+    "gps_code": "TUPW",
+    "freq": "",
+    "Lat": 18.446634,
+    "Lon": -64.427932,
+    "Ele": 2.7
+  }
+]

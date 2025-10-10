@@ -1,0 +1,749 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Arngerðareyri Airport",
+    "gps_code": "BIAE",
+    "freq": "",
+    "Lat": 65.90470123291016,
+    "Lon": -22.363300323486328,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Álftaver Airport",
+    "gps_code": "BIAL",
+    "freq": "",
+    "Lat": 63.53979,
+    "Lon": -18.44374,
+    "Ele": 48.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Akureyri Airport",
+    "gps_code": "BIAR",
+    "freq": "119.700",
+    "Lat": 65.656573,
+    "Lon": -18.072018,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bakki Airport",
+    "gps_code": "BIBA",
+    "freq": "",
+    "Lat": 63.556099,
+    "Lon": -20.137501,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Bildudalur Airport",
+    "gps_code": "BIBD",
+    "freq": "119.700",
+    "Lat": 65.641296,
+    "Lon": -23.5462,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Borgarfjörður eystri Airport",
+    "gps_code": "BIBF",
+    "freq": "",
+    "Lat": 65.516769,
+    "Lon": -13.81578,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Baeir Airport",
+    "gps_code": "BIBI",
+    "freq": "",
+    "Lat": 66.097838,
+    "Lon": -22.569713,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bakkafjörður Airport",
+    "gps_code": "BIBK",
+    "freq": "",
+    "Lat": 66.02189636230469,
+    "Lon": -14.824399948120115,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Blönduós Airport",
+    "gps_code": "BIBL",
+    "freq": "",
+    "Lat": 65.644997,
+    "Lon": -20.2875,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Búðardalur Airport",
+    "gps_code": "BIBR",
+    "freq": "",
+    "Lat": 65.074583,
+    "Lon": -21.802193,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Breiðdalsvík Airport",
+    "gps_code": "BIBV",
+    "freq": "",
+    "Lat": 64.790037,
+    "Lon": -14.043927,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dagverðará Airport",
+    "gps_code": "BIDA",
+    "freq": "",
+    "Lat": 64.744617,
+    "Lon": -23.726521,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Djúpivogur Airport",
+    "gps_code": "BIDV",
+    "freq": "",
+    "Lat": 64.642372,
+    "Lon": -14.277297,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Egilsstaðir Airport",
+    "gps_code": "BIEG",
+    "freq": "119.700",
+    "Lat": 65.2833023071289,
+    "Lon": -14.401399612426758,
+    "Ele": 23.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Fáskrúðsfjörður Airport",
+    "gps_code": "BIFF",
+    "freq": "",
+    "Lat": 64.931456,
+    "Lon": -14.047957,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Flúðir Airport",
+    "gps_code": "BIFL",
+    "freq": "",
+    "Lat": 64.1427993774414,
+    "Lon": -20.326099395751957,
+    "Ele": 82.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Fagurhólsmýri Airport",
+    "gps_code": "BIFM",
+    "freq": "",
+    "Lat": 63.874699,
+    "Lon": -16.6411,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Forsæti Airport",
+    "gps_code": "BIFZ",
+    "freq": "",
+    "Lat": 63.84816,
+    "Lon": -20.716267,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Grundarfjörður Airport",
+    "gps_code": "BIGF",
+    "freq": "",
+    "Lat": 64.991402,
+    "Lon": -23.224701,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Gunnarsholt Airport",
+    "gps_code": "BIGH",
+    "freq": "",
+    "Lat": 63.85329818725586,
+    "Lon": -20.262800216674805,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gjögur Airport",
+    "gps_code": "BIGJ",
+    "freq": "",
+    "Lat": 65.9953,
+    "Lon": -21.3269,
+    "Ele": 25.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Grímsey Airport",
+    "gps_code": "BIGR",
+    "freq": "",
+    "Lat": 66.5458,
+    "Lon": -18.0173,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Grímsstaðir Airport",
+    "gps_code": "BIGS",
+    "freq": "",
+    "Lat": 65.63249969482422,
+    "Lon": -16.148300170898438,
+    "Ele": 389.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Herðubreiðarlindir Airport",
+    "gps_code": "BIHE",
+    "freq": "",
+    "Lat": 65.188599,
+    "Lon": -16.1947,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hveravellir Airport",
+    "gps_code": "BIHI",
+    "freq": "",
+    "Lat": 64.88610076904297,
+    "Lon": -19.49250030517578,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Hólmavík Airport",
+    "gps_code": "BIHK",
+    "freq": "",
+    "Lat": 65.704697,
+    "Lon": -21.6964,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Hella Airport",
+    "gps_code": "BIHL",
+    "freq": "",
+    "Lat": 63.83580017089844,
+    "Lon": -20.377500534057617,
+    "Ele": 20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hornafjörður Airport",
+    "gps_code": "BIHN",
+    "freq": "119.700",
+    "Lat": 64.295601,
+    "Lon": -15.2272,
+    "Ele": 7.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hvolsvöllur Airport",
+    "gps_code": "BIHR",
+    "freq": "",
+    "Lat": 63.752743,
+    "Lon": -20.250893,
+    "Ele": 33.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hrafnseyri Airport",
+    "gps_code": "BIHS",
+    "freq": "",
+    "Lat": 65.75716,
+    "Lon": -23.461404,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Holt Airport",
+    "gps_code": "BIHT",
+    "freq": "",
+    "Lat": 66.0141804294,
+    "Lon": -23.4416913986,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Húsavík Airport",
+    "gps_code": "BIHU",
+    "freq": "119.700",
+    "Lat": 65.952301,
+    "Lon": -17.426001,
+    "Ele": 14.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Krókstaðarmelar Airport",
+    "gps_code": "BIHV",
+    "freq": "",
+    "Lat": 65.270241,
+    "Lon": -20.848696,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hrísey Airport",
+    "gps_code": "BIHY",
+    "freq": "",
+    "Lat": 65.989204,
+    "Lon": -18.394117,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Húsafell Airport",
+    "gps_code": "BIHZ",
+    "freq": "",
+    "Lat": 64.69969940185547,
+    "Lon": -20.88360023498535,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingjaldssanður Airport",
+    "gps_code": "BIID",
+    "freq": "",
+    "Lat": 66.05000305175781,
+    "Lon": -23.69610023498535,
+    "Ele": 21.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ísafjörður Airport",
+    "gps_code": "BIIS",
+    "freq": "119.700",
+    "Lat": 66.058098,
+    "Lon": -23.1353,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaldármelar Airport",
+    "gps_code": "BIKA",
+    "freq": "",
+    "Lat": 64.77890014648438,
+    "Lon": -22.25690078735352,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kerlingafjöll Airport",
+    "gps_code": "BIKE",
+    "freq": "",
+    "Lat": 64.70500183105469,
+    "Lon": -19.410600662231445,
+    "Ele": 640.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Keflavik International Airport",
+    "gps_code": "BIKF",
+    "freq": "131.900",
+    "Lat": 63.985001,
+    "Lon": -22.6056,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kroksfjard-Arnes Airport",
+    "gps_code": "BIKJ",
+    "freq": "",
+    "Lat": 65.46700286865234,
+    "Lon": -21.950000762939453,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirkjubæjarklaustur Airport",
+    "gps_code": "BIKL",
+    "freq": "",
+    "Lat": 63.792685,
+    "Lon": -18.004684,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kópasker Airport",
+    "gps_code": "BIKP",
+    "freq": "",
+    "Lat": 66.310799,
+    "Lon": -16.4667,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sauðárkrókur Airport",
+    "gps_code": "BIKR",
+    "freq": "",
+    "Lat": 65.73169708249999,
+    "Lon": -19.5727996826,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Múlakot Airport",
+    "gps_code": "BIMK",
+    "freq": "",
+    "Lat": 63.71419906616211,
+    "Lon": -19.879199981689453,
+    "Ele": 82.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Melgerðismelar Airport",
+    "gps_code": "BIMM",
+    "freq": "",
+    "Lat": 65.4832992553711,
+    "Lon": -18.16670036315918,
+    "Ele": 10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tungubakkar Airport",
+    "gps_code": "BIMS",
+    "freq": "118.200",
+    "Lat": 64.18109893798828,
+    "Lon": -21.707799911499023,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Nýjidalur Airport",
+    "gps_code": "BIND",
+    "freq": "",
+    "Lat": 64.72059631347656,
+    "Lon": -18.066699981689453,
+    "Ele": 800.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Norðfjörður Airport",
+    "gps_code": "BINF",
+    "freq": "",
+    "Lat": 65.131897,
+    "Lon": -13.7464,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ólafsfjörður Airport",
+    "gps_code": "BIOF",
+    "freq": "",
+    "Lat": 66.083298,
+    "Lon": -18.6667,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Patreksfjörður Airport",
+    "gps_code": "BIPA",
+    "freq": "119.700",
+    "Lat": 65.555801,
+    "Lon": -23.965,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Reykhólar Airport",
+    "gps_code": "BIRE",
+    "freq": "",
+    "Lat": 65.45262908935547,
+    "Lon": -22.20611572265625,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Rif Airport",
+    "gps_code": "BIRF",
+    "freq": "",
+    "Lat": 64.9114,
+    "Lon": -23.823099,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Raufarhöfn Airport",
+    "gps_code": "BIRG",
+    "freq": "",
+    "Lat": 66.406403,
+    "Lon": -15.9183,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Reykjavík Domestic Airport",
+    "gps_code": "BIRK",
+    "freq": "119.000",
+    "Lat": 64.128732,
+    "Lon": -21.93759,
+    "Ele": 14.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Reykjahlíð Airport",
+    "gps_code": "BIRL",
+    "freq": "",
+    "Lat": 65.6558,
+    "Lon": -16.9181,
+    "Ele": 313.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Reykjanes Airport",
+    "gps_code": "BIRS",
+    "freq": "",
+    "Lat": 65.91419982910156,
+    "Lon": -22.42140007019043,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sandá Airport",
+    "gps_code": "BISA",
+    "freq": "118.100",
+    "Lat": 65.1343994140625,
+    "Lon": -19.66309928894043,
+    "Ele": 481.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Selfoss Airport",
+    "gps_code": "BISF",
+    "freq": "",
+    "Lat": 63.929199,
+    "Lon": -21.0378,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Steinasandur Airport",
+    "gps_code": "BISG",
+    "freq": "",
+    "Lat": 64.16547,
+    "Lon": -15.91334,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Stora-Holt Airport",
+    "gps_code": "BISH",
+    "freq": "",
+    "Lat": 65.4000015258789,
+    "Lon": -21.933000564575195,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Siglufjörður Airport",
+    "gps_code": "BISI",
+    "freq": "119.700",
+    "Lat": 66.137847,
+    "Lon": -18.908157,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skógasandur Airport",
+    "gps_code": "BISK",
+    "freq": "",
+    "Lat": 63.5172,
+    "Lon": -19.489201,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Svínafell Airport",
+    "gps_code": "BISN",
+    "freq": "",
+    "Lat": 64.384723,
+    "Lon": -15.371935,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sprengisandur Airport",
+    "gps_code": "BISP",
+    "freq": "",
+    "Lat": 64.6541976928711,
+    "Lon": -18.49690055847168,
+    "Ele": 624.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Stórikroppur Airport",
+    "gps_code": "BISR",
+    "freq": "",
+    "Lat": 64.6343994140625,
+    "Lon": -21.487499237060547,
+    "Ele": 50.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sandskeið Airport",
+    "gps_code": "BISS",
+    "freq": "119.900",
+    "Lat": 64.06079864501953,
+    "Lon": -21.57469940185547,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stykkishólmur Airport",
+    "gps_code": "BIST",
+    "freq": "",
+    "Lat": 65.058851,
+    "Lon": -22.764616,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Skálavatn Airport",
+    "gps_code": "BISV",
+    "freq": "",
+    "Lat": 64.11579895019531,
+    "Lon": -18.783300399780277,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Þingeyri Airport",
+    "gps_code": "BITE",
+    "freq": "",
+    "Lat": 65.8703,
+    "Lon": -23.559999,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Þórsmörk Airport",
+    "gps_code": "BITM",
+    "freq": "",
+    "Lat": 63.68999862670898,
+    "Lon": -19.563100814819336,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Þórshöfn Airport",
+    "gps_code": "BITN",
+    "freq": "119.700",
+    "Lat": 66.218498,
+    "Lon": -15.3356,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Thorisos Airport",
+    "gps_code": "BITO",
+    "freq": "",
+    "Lat": 64.354373,
+    "Lon": -18.836514,
+    "Ele": 560.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vatnsnes Airport",
+    "gps_code": "BIVA",
+    "freq": "",
+    "Lat": 64.03309631347656,
+    "Lon": -20.651100158691406,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Varmahlid Airport",
+    "gps_code": "BIVH",
+    "freq": "",
+    "Lat": 65.55694580078125,
+    "Lon": -19.428056716918945,
+    "Ele": 8.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Vík Airport",
+    "gps_code": "BIVI",
+    "freq": "",
+    "Lat": 63.42169952392578,
+    "Lon": -18.8882999420166,
+    "Ele": 30.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vestmannaeyjar Airport",
+    "gps_code": "BIVM",
+    "freq": "119.700",
+    "Lat": 63.42430114746094,
+    "Lon": -20.27890014648437,
+    "Ele": 99.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Vopnafjörður Airport",
+    "gps_code": "BIVO",
+    "freq": "",
+    "Lat": 65.720596,
+    "Lon": -14.8506,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Suðureyri Airstrip",
+    "gps_code": "IS-0001",
+    "freq": "",
+    "Lat": 66.1318,
+    "Lon": -23.544,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skaftafell Airport",
+    "gps_code": "IS-0003",
+    "freq": "",
+    "Lat": 63.99948,
+    "Lon": -16.94116,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kárastaða Airport",
+    "gps_code": "IS-0004",
+    "freq": "",
+    "Lat": 64.57267,
+    "Lon": -21.89826,
+    "Ele": 24.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Hólmsheiði",
+    "gps_code": "IS-0005",
+    "freq": "122.700",
+    "Lat": 64.111441,
+    "Lon": -21.706037,
+    "Ele": 137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Möðrudalur",
+    "gps_code": "IS-0014",
+    "freq": "",
+    "Lat": 65.384167,
+    "Lon": -15.904444,
+    "Ele": 449.6
+  }
+]

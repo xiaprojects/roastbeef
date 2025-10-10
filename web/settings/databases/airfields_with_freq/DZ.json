@@ -1,0 +1,857 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Illizi Airport",
+    "gps_code": "DA10",
+    "freq": "",
+    "Lat": 26.573601,
+    "Lon": 8.48366,
+    "Ele": 541.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hamaguir Airport",
+    "gps_code": "DA11",
+    "freq": "",
+    "Lat": 30.879,
+    "Lon": -3.06775,
+    "Ele": 748.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Abiodh Sidi Cheikh Airport",
+    "gps_code": "DA12",
+    "freq": "",
+    "Lat": 32.898499,
+    "Lon": 0.524694,
+    "Ele": 903.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tinfouchy Airport",
+    "gps_code": "DA13",
+    "freq": "",
+    "Lat": 28.879299,
+    "Lon": -5.8229,
+    "Ele": 549.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mostaganem Airport",
+    "gps_code": "DA14",
+    "freq": "",
+    "Lat": 35.90518,
+    "Lon": 0.144539,
+    "Ele": 223.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Saïda Airport",
+    "gps_code": "DA15",
+    "freq": "",
+    "Lat": 34.897202,
+    "Lon": 0.151694,
+    "Ele": 744.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tindouf East Airport",
+    "gps_code": "DA16",
+    "freq": "",
+    "Lat": 27.585899,
+    "Lon": -7.50011,
+    "Ele": 434.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Blida Airport",
+    "gps_code": "DAAB",
+    "freq": "",
+    "Lat": 36.503601,
+    "Lon": 2.81417,
+    "Ele": 163.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bou Saada Airport",
+    "gps_code": "DAAD",
+    "freq": "118.100",
+    "Lat": 35.3325,
+    "Lon": 4.20639,
+    "Ele": 459.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Soummam–Abane Ramdane Airport",
+    "gps_code": "DAAE",
+    "freq": "118.900",
+    "Lat": 36.711952,
+    "Lon": 5.069804,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aoulef Airport",
+    "gps_code": "DAAF",
+    "freq": "",
+    "Lat": 27.0624,
+    "Lon": 1.1111,
+    "Ele": 310.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Houari Boumediene Airport",
+    "gps_code": "DAAG",
+    "freq": "121.400",
+    "Lat": 36.693886,
+    "Lon": 3.214531,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Djanet Inedbirene Airport",
+    "gps_code": "DAAJ",
+    "freq": "889.400",
+    "Lat": 24.292801,
+    "Lon": 9.45244,
+    "Ele": 968.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Boufarik Air Base",
+    "gps_code": "DAAK",
+    "freq": "",
+    "Lat": 36.545799,
+    "Lon": 2.87611,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Telerghma Airport",
+    "gps_code": "DAAM",
+    "freq": "",
+    "Lat": 36.1087,
+    "Lon": 6.3646,
+    "Ele": 757.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Reggane Airport",
+    "gps_code": "DAAN",
+    "freq": "",
+    "Lat": 26.712418,
+    "Lon": 0.288219,
+    "Ele": 291.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Illizi Takhamalt Airport",
+    "gps_code": "DAAP",
+    "freq": "118.700",
+    "Lat": 26.723499,
+    "Lon": 8.62265,
+    "Ele": 541.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ain Oussera Airport",
+    "gps_code": "DAAQ",
+    "freq": "",
+    "Lat": 35.525398,
+    "Lon": 2.87871,
+    "Ele": 649.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ain Arnat Airport",
+    "gps_code": "DAAS",
+    "freq": "",
+    "Lat": 36.178100585900005,
+    "Lon": 5.32449007034,
+    "Ele": 1024.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aguenar – Hadj Bey Akhamok Airport",
+    "gps_code": "DAAT",
+    "freq": "119.700",
+    "Lat": 22.811501,
+    "Lon": 5.45108,
+    "Ele": 1377.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jijel Ferhat Abbas Airport",
+    "gps_code": "DAAV",
+    "freq": "119.700",
+    "Lat": 36.795101,
+    "Lon": 5.87361,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bordj Omar Driss Airport",
+    "gps_code": "DAAW",
+    "freq": "",
+    "Lat": 28.136042,
+    "Lon": 6.836156,
+    "Ele": 367.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chéraga Airport",
+    "gps_code": "DAAX",
+    "freq": "",
+    "Lat": 36.7782,
+    "Lon": 2.9284,
+    "Ele": 120.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mecheria Airport",
+    "gps_code": "DAAY",
+    "freq": "",
+    "Lat": 33.535900116,
+    "Lon": -0.242353007197,
+    "Ele": 1175.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Relizane Airport",
+    "gps_code": "DAAZ",
+    "freq": "",
+    "Lat": 35.752955,
+    "Lon": 0.625877,
+    "Ele": 86.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Annaba Rabah Bitat Airport",
+    "gps_code": "DABB",
+    "freq": "119.000",
+    "Lat": 36.826781,
+    "Lon": 7.81334,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mohamed Boudiaf International Airport",
+    "gps_code": "DABC",
+    "freq": "120.100",
+    "Lat": 36.2760009765625,
+    "Lon": 6.620389938354492,
+    "Ele": 690.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Oum El Bouaghi Air Base",
+    "gps_code": "DABO",
+    "freq": "",
+    "Lat": 35.8797,
+    "Lon": 7.2708,
+    "Ele": 908.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cheikh Larbi Tébessi Airport",
+    "gps_code": "DABS",
+    "freq": "118.100",
+    "Lat": 35.4315986633,
+    "Lon": 8.12071990967,
+    "Ele": 811.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Batna Mostefa Ben Boulaid Airport",
+    "gps_code": "DABT",
+    "freq": "118.100",
+    "Lat": 35.752102,
+    "Lon": 6.30859,
+    "Ele": 822.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hassi R'Mel Airport",
+    "gps_code": "DAFH",
+    "freq": "",
+    "Lat": 32.930401,
+    "Lon": 3.31154,
+    "Ele": 774.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsletsi Airport",
+    "gps_code": "DAFI",
+    "freq": "",
+    "Lat": 34.6657,
+    "Lon": 3.351,
+    "Ele": 1143.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Abdelhafid Boussouf Bou Chekif Airport",
+    "gps_code": "DAOB",
+    "freq": "118.100",
+    "Lat": 35.341099,
+    "Lon": 1.46315,
+    "Ele": 989.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Béchar Ouakda Aerodrome",
+    "gps_code": "DAOC",
+    "freq": "",
+    "Lat": 31.642901,
+    "Lon": -2.18466,
+    "Ele": 810.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bousfer Air Base",
+    "gps_code": "DAOE",
+    "freq": "",
+    "Lat": 35.735401,
+    "Lon": -0.805389,
+    "Ele": 57.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tindouf Airport",
+    "gps_code": "DAOF",
+    "freq": "",
+    "Lat": 27.7003993988,
+    "Lon": -8.167099952700001,
+    "Ele": 442.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chlef Aboubakr Belkaid International Airport",
+    "gps_code": "DAOI",
+    "freq": "119.000",
+    "Lat": 36.217166,
+    "Lon": 1.342237,
+    "Ele": 141.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oran Tafraoui Airport",
+    "gps_code": "DAOL",
+    "freq": "118.300",
+    "Lat": 35.5424,
+    "Lon": -0.532278,
+    "Ele": 111.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zenata – Messali El Hadj Airport",
+    "gps_code": "DAON",
+    "freq": "119.700",
+    "Lat": 35.013426,
+    "Lon": -1.457191,
+    "Ele": 248.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oran Es-Sénia (Ahmed Ben Bella) International Airport",
+    "gps_code": "DAOO",
+    "freq": "128.200",
+    "Lat": 35.623901,
+    "Lon": -0.621183,
+    "Ele": 89.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Béchar Boudghene Ben Ali Lotfi Airport",
+    "gps_code": "DAOR",
+    "freq": "",
+    "Lat": 31.645700454711918,
+    "Lon": -2.269860029220581,
+    "Ele": 811.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sidi Bel Abbes Airport",
+    "gps_code": "DAOS",
+    "freq": "",
+    "Lat": 35.1717987061,
+    "Lon": -0.593275010586,
+    "Ele": 491.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ghriss Airport",
+    "gps_code": "DAOV",
+    "freq": "119.700",
+    "Lat": 35.207699,
+    "Lon": 0.147142,
+    "Ele": 513.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Bayadh Airport",
+    "gps_code": "DAOY",
+    "freq": "",
+    "Lat": 33.721667,
+    "Lon": 1.0925,
+    "Ele": 1369.5
+  },
+  {
+    "type": "small_airport",
+    "name": "In Guezzam Airport",
+    "gps_code": "DATG",
+    "freq": "",
+    "Lat": 19.560518,
+    "Lon": 5.749326,
+    "Ele": 399.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bordj Badji Mokhtar Airport",
+    "gps_code": "DATM",
+    "freq": "",
+    "Lat": 21.3778,
+    "Lon": 0.92698,
+    "Ele": 397.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Touat Cheikh Sidi Mohamed Belkebir Airport",
+    "gps_code": "DAUA",
+    "freq": "889.400",
+    "Lat": 27.837601,
+    "Lon": -0.186414,
+    "Ele": 280.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Biskra - Mohamed Khider Airport",
+    "gps_code": "DAUB",
+    "freq": "",
+    "Lat": 34.793301,
+    "Lon": 5.73823,
+    "Ele": 88.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Golea Airport",
+    "gps_code": "DAUE",
+    "freq": "889.400",
+    "Lat": 30.580732,
+    "Lon": 2.861595,
+    "Ele": 398.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Noumérat - Moufdi Zakaria Airport",
+    "gps_code": "DAUG",
+    "freq": "889.400",
+    "Lat": 32.384102,
+    "Lon": 3.79411,
+    "Ele": 460.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hassi Messaoud-Oued Irara Krim Belkacem Airport",
+    "gps_code": "DAUH",
+    "freq": "120.000",
+    "Lat": 31.673,
+    "Lon": 6.14044,
+    "Ele": 141.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "In Salah Airport",
+    "gps_code": "DAUI",
+    "freq": "889.400",
+    "Lat": 27.250999,
+    "Lon": 2.51202,
+    "Ele": 273.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Touggourt Sidi Madhi Airport",
+    "gps_code": "DAUK",
+    "freq": "889.400",
+    "Lat": 33.067799,
+    "Lon": 6.08867,
+    "Ele": 85.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Laghouat - Molay Ahmed Medeghri Airport",
+    "gps_code": "DAUL",
+    "freq": "",
+    "Lat": 33.7644,
+    "Lon": 2.92834,
+    "Ele": 765.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Guemar Airport - مطار قمار بالوادي",
+    "gps_code": "DAUO",
+    "freq": "889.400",
+    "Lat": 33.511398,
+    "Lon": 6.77679,
+    "Ele": 61.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Timimoun Airport",
+    "gps_code": "DAUT",
+    "freq": "889.400",
+    "Lat": 29.237101,
+    "Lon": 0.276033,
+    "Ele": 313.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ain Beida Airport",
+    "gps_code": "DAUU",
+    "freq": "",
+    "Lat": 31.9172,
+    "Lon": 5.41278,
+    "Ele": 150.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zarzaitine - In Aménas Airport",
+    "gps_code": "DAUZ",
+    "freq": "889.400",
+    "Lat": 28.0515,
+    "Lon": 9.64291,
+    "Ele": 563.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hamra Airport",
+    "gps_code": "DZ-0001",
+    "freq": "",
+    "Lat": 29.221376,
+    "Lon": 6.48863,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gara Djebilet Airport",
+    "gps_code": "DZ-0002",
+    "freq": "",
+    "Lat": 26.88352,
+    "Lon": -7.16477,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Béni Abbès Airport",
+    "gps_code": "DZ-0004",
+    "freq": "",
+    "Lat": 30.12558,
+    "Lon": -2.13726,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fort Lotfi Airfield",
+    "gps_code": "DZ-0005",
+    "freq": "",
+    "Lat": 29.6397,
+    "Lon": -3.9939,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Groupement Reggane Nord Airport",
+    "gps_code": "DZ-0012",
+    "freq": "",
+    "Lat": 26.80634,
+    "Lon": 0.20704,
+    "Ele": 269.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Reggane Nord Airport",
+    "gps_code": "DZ-0013",
+    "freq": "",
+    "Lat": 26.91535,
+    "Lon": 0.07195,
+    "Ele": 273.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amguid Regional Airport",
+    "gps_code": "DZ-0016",
+    "freq": "",
+    "Lat": 26.393417,
+    "Lon": 5.325419,
+    "Ele": 609.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Menzel Lejmat Nord Airport",
+    "gps_code": "DZ-0017",
+    "freq": "",
+    "Lat": 30.33557,
+    "Lon": 7.834783,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Merk Airport",
+    "gps_code": "DZ-0018",
+    "freq": "",
+    "Lat": 30.30442,
+    "Lon": 8.16308,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hassi Bel Guebour Airport",
+    "gps_code": "DZ-0019",
+    "freq": "",
+    "Lat": 28.68354,
+    "Lon": 6.49767,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gassi Touil Airport",
+    "gps_code": "DZ-0020",
+    "freq": "",
+    "Lat": 30.51446,
+    "Lon": 6.45266,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trczina Airport",
+    "gps_code": "DZ-0021",
+    "freq": "",
+    "Lat": 31.12059,
+    "Lon": 6.34713,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Borma Ouargla Airport",
+    "gps_code": "DZ-0023",
+    "freq": "",
+    "Lat": 31.57946,
+    "Lon": 9.12337,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bir H'Med Airport",
+    "gps_code": "DZ-0024",
+    "freq": "",
+    "Lat": 31.5822,
+    "Lon": 8.23678,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rhoud El Baguel Airport",
+    "gps_code": "DZ-0025",
+    "freq": "",
+    "Lat": 31.3859,
+    "Lon": 6.95362,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hassi Messaoud East Airport",
+    "gps_code": "DZ-0026",
+    "freq": "",
+    "Lat": 31.50603,
+    "Lon": 6.64072,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hassi Fehal Airport",
+    "gps_code": "DZ-0027",
+    "freq": "",
+    "Lat": 31.68858,
+    "Lon": 3.71568,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oued Zine Airport",
+    "gps_code": "DZ-0028",
+    "freq": "",
+    "Lat": 28.141556,
+    "Lon": 0.244846,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oued Zine North Airport",
+    "gps_code": "DZ-0029",
+    "freq": "",
+    "Lat": 28.21292,
+    "Lon": 0.20262,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tin Zaoutine Airport",
+    "gps_code": "DZ-0030",
+    "freq": "",
+    "Lat": 19.99369,
+    "Lon": 3.0223,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krechba Airport",
+    "gps_code": "DZ-0034",
+    "freq": "",
+    "Lat": 29.071282,
+    "Lon": 2.2059,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tegentour Airport",
+    "gps_code": "DZ-0035",
+    "freq": "",
+    "Lat": 28.46911,
+    "Lon": 2.51871,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "REG In Salah Airport",
+    "gps_code": "DZ-0036",
+    "freq": "",
+    "Lat": 28.07732,
+    "Lon": 2.12826,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "REG In Salah North Airport",
+    "gps_code": "DZ-0037",
+    "freq": "",
+    "Lat": 28.08605,
+    "Lon": 2.14052,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oued Zine East Airport",
+    "gps_code": "DZ-0038",
+    "freq": "",
+    "Lat": 28.11892,
+    "Lon": 0.32861,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Touat Oil Airport",
+    "gps_code": "DZ-0039",
+    "freq": "",
+    "Lat": 27.81997,
+    "Lon": 0.23896,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ras el Miaad Airport",
+    "gps_code": "DZ-0040",
+    "freq": "",
+    "Lat": 34.23833,
+    "Lon": 4.46004,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Takhrekhuri Air Base",
+    "gps_code": "DZ-0042",
+    "freq": "",
+    "Lat": 24.42643,
+    "Lon": 10.43748,
+    "Ele": 835.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Rekiule Airport",
+    "gps_code": "DZ-0043",
+    "freq": "",
+    "Lat": 27.893493,
+    "Lon": 9.147415,
+    "Ele": 615.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tin Fouye Tabankort Airport",
+    "gps_code": "DZ-0046",
+    "freq": "",
+    "Lat": 28.43879,
+    "Lon": 7.55191,
+    "Ele": 476.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tin Fouye Tabankort South Airport",
+    "gps_code": "DZ-0047",
+    "freq": "",
+    "Lat": 28.41106,
+    "Lon": 7.56872,
+    "Ele": 492.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Omanet Airport",
+    "gps_code": "DZ-0048",
+    "freq": "",
+    "Lat": 28.73085,
+    "Lon": 8.88037,
+    "Ele": 537.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tin Fouye Tabankort East Airport",
+    "gps_code": "DZ-0049",
+    "freq": "",
+    "Lat": 28.41563,
+    "Lon": 8.24115,
+    "Ele": 449.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stah Airport",
+    "gps_code": "DZ-0050",
+    "freq": "",
+    "Lat": 28.62995,
+    "Lon": 9.85223,
+    "Ele": 712.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tit Airport",
+    "gps_code": "DZ-0051",
+    "freq": "",
+    "Lat": 27.06086,
+    "Lon": 1.58229,
+    "Ele": 307.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Zaouiet Kounta Airport",
+    "gps_code": "DZ-0052",
+    "freq": "",
+    "Lat": 27.25148,
+    "Lon": -0.16633,
+    "Ele": 271.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ouled Mahmoud Airport",
+    "gps_code": "DZ-0053",
+    "freq": "",
+    "Lat": 28.61283,
+    "Lon": 0.03651,
+    "Ele": 270.1
+  }
+]

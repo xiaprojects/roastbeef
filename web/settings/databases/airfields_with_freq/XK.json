@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Priština Adem Jashari International Airport",
+    "gps_code": "BKPR",
+    "freq": "118.775",
+    "Lat": 42.5728,
+    "Lon": 21.035801,
+    "Ele": 545.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Gjakovë Air Base",
+    "gps_code": "XK-0010",
+    "freq": "125.000",
+    "Lat": 42.435066,
+    "Lon": 20.427768,
+    "Ele": 417.6
+  }
+]

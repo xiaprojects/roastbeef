@@ -1,0 +1,92 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Holhol Airport",
+    "gps_code": "DJ-0001",
+    "freq": "",
+    "Lat": 11.30608,
+    "Lon": 42.91968,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Assa-Gueyla Airport",
+    "gps_code": "HDAG",
+    "freq": "",
+    "Lat": 12.188882,
+    "Lon": 42.637494,
+    "Ele": 624.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Djibouti-Ambouli Airport",
+    "gps_code": "HDAM",
+    "freq": "759.500",
+    "Lat": 11.5473,
+    "Lon": 43.1595,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali-Sabieh Airport",
+    "gps_code": "HDAS",
+    "freq": "",
+    "Lat": 11.146889,
+    "Lon": 42.72,
+    "Ele": 705.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chabelley Airport",
+    "gps_code": "HDCH",
+    "freq": "120.425",
+    "Lat": 11.5168,
+    "Lon": 43.061401,
+    "Ele": 85.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dikhil Airport",
+    "gps_code": "HDDK",
+    "freq": "",
+    "Lat": 11.097958,
+    "Lon": 42.350556,
+    "Ele": 463.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Herkale Airport",
+    "gps_code": "HDHE",
+    "freq": "",
+    "Lat": 12.4449,
+    "Lon": 43.292575,
+    "Ele": 11.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Moucha Airport",
+    "gps_code": "HDMO",
+    "freq": "",
+    "Lat": 11.72975,
+    "Lon": 43.209559,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Obock Airport",
+    "gps_code": "HDOB",
+    "freq": "",
+    "Lat": 11.967000007629396,
+    "Lon": 43.266998291015625,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tadjoura Airport",
+    "gps_code": "HDTJ",
+    "freq": "",
+    "Lat": 11.787037,
+    "Lon": 42.917376,
+    "Ele": 75.0
+  }
+]

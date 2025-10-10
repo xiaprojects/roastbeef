@@ -1,0 +1,1046 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Letisko Veľká Ida",
+    "gps_code": "CZ-0052",
+    "freq": "",
+    "Lat": 48.5992279,
+    "Lon": 21.1598857,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kvetoslavov Airfield",
+    "gps_code": "LSKV",
+    "freq": "",
+    "Lat": 48.04507,
+    "Lon": 17.34963,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bidovce Airfield",
+    "gps_code": "LZBD",
+    "freq": "",
+    "Lat": 48.743192,
+    "Lon": 21.448285,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Slávnica-Dubnica nad Váhom Airfield",
+    "gps_code": "LZDB",
+    "freq": "",
+    "Lat": 48.996899,
+    "Lon": 18.1922,
+    "Ele": 235.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dubová Airstrip",
+    "gps_code": "LZDV",
+    "freq": "",
+    "Lat": 48.347019,
+    "Lon": 17.356583,
+    "Ele": 193.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Holič Airfield",
+    "gps_code": "LZHL",
+    "freq": "",
+    "Lat": 48.8103,
+    "Lon": 17.1338,
+    "Ele": 158.5
+  },
+  {
+    "type": "large_airport",
+    "name": "M. R. Štefánik Airport",
+    "gps_code": "LZIB",
+    "freq": "120.900",
+    "Lat": 48.1702,
+    "Lon": 17.2127,
+    "Ele": 132.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jasná Airfield",
+    "gps_code": "LZJS",
+    "freq": "123.400",
+    "Lat": 49.047939,
+    "Lon": 19.506791,
+    "Ele": 641.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamenica nad Cirochou Airfield",
+    "gps_code": "LZKC",
+    "freq": "",
+    "Lat": 48.936242,
+    "Lon": 21.994196,
+    "Ele": 170.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Košice International Airport",
+    "gps_code": "LZKZ",
+    "freq": "119.850",
+    "Lat": 48.663101,
+    "Lon": 21.2411,
+    "Ele": 230.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lučenec Airfield",
+    "gps_code": "LZLU",
+    "freq": "",
+    "Lat": 48.339401,
+    "Lon": 19.7358,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Martin Airfield",
+    "gps_code": "LZMA",
+    "freq": "",
+    "Lat": 49.0653,
+    "Lon": 18.9508,
+    "Ele": 420.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malacky/Kuchyňa Air Base",
+    "gps_code": "LZMC",
+    "freq": "118.250",
+    "Lat": 48.402,
+    "Lon": 17.118401,
+    "Ele": 207.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nitra Airfield",
+    "gps_code": "LZNI",
+    "freq": "",
+    "Lat": 48.2794,
+    "Lon": 18.132799,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nové Zámky Airfield",
+    "gps_code": "LZNZ",
+    "freq": "122.600",
+    "Lat": 47.961944,
+    "Lon": 18.184444,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Očová Airfield",
+    "gps_code": "LZOC",
+    "freq": "123.600",
+    "Lat": 48.595333,
+    "Lon": 19.265806,
+    "Ele": 363.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prievidza Airfield",
+    "gps_code": "LZPE",
+    "freq": "",
+    "Lat": 48.766102,
+    "Lon": 18.5867,
+    "Ele": 259.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Piešťany Airport",
+    "gps_code": "LZPP",
+    "freq": "118.575",
+    "Lat": 48.62519836425781,
+    "Lon": 17.828399658203125,
+    "Ele": 166.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Male Bielice-Partizánske Airfield",
+    "gps_code": "LZPT",
+    "freq": "123.500",
+    "Lat": 48.619202,
+    "Lon": 18.3297,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Prešov Air Base",
+    "gps_code": "LZPW",
+    "freq": "",
+    "Lat": 49.02970123291,
+    "Lon": 21.315599441528,
+    "Ele": 323.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ružomberok Airfield",
+    "gps_code": "LZRU",
+    "freq": "123.500",
+    "Lat": 49.085485,
+    "Lon": 19.368584,
+    "Ele": 492.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ražňany Airfield",
+    "gps_code": "LZRY",
+    "freq": "",
+    "Lat": 49.078056,
+    "Lon": 21.099722,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Senica Airfield",
+    "gps_code": "LZSE",
+    "freq": "",
+    "Lat": 48.657927,
+    "Lon": 17.329459,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Svidník Airfield",
+    "gps_code": "LZSK",
+    "freq": "",
+    "Lat": 49.3339,
+    "Lon": 21.570299,
+    "Ele": 353.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sliač Airport",
+    "gps_code": "LZSL",
+    "freq": "119.150",
+    "Lat": 48.63779830932617,
+    "Lon": 19.13409996032715,
+    "Ele": 317.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Spišská Nová Ves Airfield",
+    "gps_code": "LZSV",
+    "freq": "123.500",
+    "Lat": 48.940833,
+    "Lon": 20.533889,
+    "Ele": 495.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Šurany Airfield",
+    "gps_code": "LZSY",
+    "freq": "",
+    "Lat": 48.075971,
+    "Lon": 18.114002,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Trenčín Airfield",
+    "gps_code": "LZTN",
+    "freq": "120.750",
+    "Lat": 48.865171,
+    "Lon": 18.000147,
+    "Ele": 206.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trnava Airfield",
+    "gps_code": "LZTR",
+    "freq": "",
+    "Lat": 48.451959,
+    "Lon": 17.531818,
+    "Ele": 199.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Poprad-Tatry Airport",
+    "gps_code": "LZTT",
+    "freq": "121.350",
+    "Lat": 49.073601,
+    "Lon": 20.2411,
+    "Ele": 718.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Žilina-Dolný Hričov Airport",
+    "gps_code": "LZZI",
+    "freq": "124.150",
+    "Lat": 49.233292,
+    "Lon": 18.613386,
+    "Ele": 310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dobra Niva airfield",
+    "gps_code": "SK-0001",
+    "freq": "122.900",
+    "Lat": 48.488716,
+    "Lon": 19.101749,
+    "Ele": 348.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Košťany nad Turcom Airstrip",
+    "gps_code": "SK-0002",
+    "freq": "",
+    "Lat": 49.0167622,
+    "Lon": 18.8951041,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunajská Streda-Malé Blahovo Airfield",
+    "gps_code": "SK-0003",
+    "freq": "",
+    "Lat": 48.020261,
+    "Lon": 17.612572,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hrabušice",
+    "gps_code": "SK-0004",
+    "freq": "",
+    "Lat": 48.969167,
+    "Lon": 20.386389,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamenný Most Airfield",
+    "gps_code": "SK-0005",
+    "freq": "",
+    "Lat": 47.863889,
+    "Lon": 18.65,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Krakovany Airfield",
+    "gps_code": "SK-0006",
+    "freq": "",
+    "Lat": 48.633889,
+    "Lon": 17.732222,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Malý Madaras Airfield",
+    "gps_code": "SK-0007",
+    "freq": "",
+    "Lat": 48.142866,
+    "Lon": 17.377625,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sládkovičovo Airfield",
+    "gps_code": "SK-0008",
+    "freq": "120.605",
+    "Lat": 48.188264,
+    "Lon": 17.634687,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tekovský Hrádok Airfield",
+    "gps_code": "SK-0009",
+    "freq": "",
+    "Lat": 48.171205,
+    "Lon": 18.541741,
+    "Ele": 163.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Trnava-Kopánka Airfield",
+    "gps_code": "SK-0010",
+    "freq": "",
+    "Lat": 48.4,
+    "Lon": 17.611667,
+    "Ele": 156.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Želiezovce Cropduster Strip",
+    "gps_code": "SK-0011",
+    "freq": "",
+    "Lat": 48.047222,
+    "Lon": 18.596111,
+    "Ele": 147.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Gajary Airstrip",
+    "gps_code": "SK-0012",
+    "freq": "",
+    "Lat": 48.448391,
+    "Lon": 16.938858,
+    "Ele": 153.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zborov Airfield",
+    "gps_code": "SK-0013",
+    "freq": "",
+    "Lat": 49.374843,
+    "Lon": 21.288328,
+    "Ele": 358.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mirkovce Airstrip",
+    "gps_code": "SK-0014",
+    "freq": "",
+    "Lat": 48.891407,
+    "Lon": 21.317362,
+    "Ele": 331.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Čab Airstrip",
+    "gps_code": "SK-0015",
+    "freq": "",
+    "Lat": 48.3888085,
+    "Lon": 18.0043553,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bojná Airstrip",
+    "gps_code": "SK-0017",
+    "freq": "",
+    "Lat": 48.541903,
+    "Lon": 18.052603,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kačanov Airstrip",
+    "gps_code": "SK-0018",
+    "freq": "",
+    "Lat": 48.615208,
+    "Lon": 21.83507,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ludanice Airstrip",
+    "gps_code": "SK-0019",
+    "freq": "",
+    "Lat": 48.509677,
+    "Lon": 18.132026,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rybany Airstrip",
+    "gps_code": "SK-0020",
+    "freq": "",
+    "Lat": 48.6660912,
+    "Lon": 18.228065,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Morovno Airstrip",
+    "gps_code": "SK-0021",
+    "freq": "",
+    "Lat": 48.760753,
+    "Lon": 18.742585,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Plášťovce Airstrip",
+    "gps_code": "SK-0022",
+    "freq": "",
+    "Lat": 48.128776,
+    "Lon": 19.000553,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prusy Airstrip",
+    "gps_code": "SK-0023",
+    "freq": "",
+    "Lat": 48.747364,
+    "Lon": 18.263118,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rusovce Airstrip",
+    "gps_code": "SK-0025",
+    "freq": "",
+    "Lat": 48.053679,
+    "Lon": 17.133268,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Babin Most Airstrip",
+    "gps_code": "SK-0026",
+    "freq": "",
+    "Lat": 48.378078,
+    "Lon": 19.93117,
+    "Ele": 327.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tornaľa Airstrip",
+    "gps_code": "SK-0027",
+    "freq": "",
+    "Lat": 48.4194,
+    "Lon": 20.337703,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Prša Airstrip",
+    "gps_code": "SK-0028",
+    "freq": "",
+    "Lat": 48.295864,
+    "Lon": 19.784368,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sklabiná Airstrip",
+    "gps_code": "SK-0029",
+    "freq": "",
+    "Lat": 48.151621,
+    "Lon": 19.363439,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Horný Jatov Airstrip",
+    "gps_code": "SK-0030",
+    "freq": "",
+    "Lat": 48.163221,
+    "Lon": 17.957382,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Šalgovce-Orešany Airstrip",
+    "gps_code": "SK-0031",
+    "freq": "",
+    "Lat": 48.50853,
+    "Lon": 17.922363,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pohronský Ruskov Airstrip",
+    "gps_code": "SK-0032",
+    "freq": "",
+    "Lat": 47.996312,
+    "Lon": 18.672981,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hontianske Nemce Airstrip",
+    "gps_code": "SK-0034",
+    "freq": "",
+    "Lat": 48.261964,
+    "Lon": 19.009003,
+    "Ele": 307.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Janova Lehota Airstrip",
+    "gps_code": "SK-0035",
+    "freq": "",
+    "Lat": 48.637592,
+    "Lon": 18.797125,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pliešovce Airstrip",
+    "gps_code": "SK-0036",
+    "freq": "",
+    "Lat": 48.418355,
+    "Lon": 19.149027,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Drienovec Airstrip",
+    "gps_code": "SK-0037",
+    "freq": "",
+    "Lat": 48.607864,
+    "Lon": 20.938503,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ďačov Airstrip",
+    "gps_code": "SK-0038",
+    "freq": "",
+    "Lat": 49.147313,
+    "Lon": 20.945992,
+    "Ele": 466.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bátka Airstrip",
+    "gps_code": "SK-0039",
+    "freq": "",
+    "Lat": 48.371677,
+    "Lon": 20.153322,
+    "Ele": 227.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Buzica Airstrip",
+    "gps_code": "SK-0040",
+    "freq": "",
+    "Lat": 48.550702,
+    "Lon": 21.09315,
+    "Ele": 193.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kecerovce Airstrip",
+    "gps_code": "SK-0041",
+    "freq": "",
+    "Lat": 48.833554,
+    "Lon": 21.4042387,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volica Airstrip",
+    "gps_code": "SK-0042",
+    "freq": "",
+    "Lat": 49.1637807,
+    "Lon": 21.9129184,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chotín Airstrip",
+    "gps_code": "SK-0043",
+    "freq": "",
+    "Lat": 47.81415,
+    "Lon": 18.194275,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tužina Airstrip",
+    "gps_code": "SK-0044",
+    "freq": "",
+    "Lat": 48.893072,
+    "Lon": 18.625023,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Seleška Airstrip",
+    "gps_code": "SK-0045",
+    "freq": "",
+    "Lat": 48.621235,
+    "Lon": 21.083072,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Domaniža Airfield",
+    "gps_code": "SK-0046",
+    "freq": "",
+    "Lat": 49.0517234,
+    "Lon": 18.5533962,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hertník Airstrip",
+    "gps_code": "SK-0047",
+    "freq": "",
+    "Lat": 49.210967,
+    "Lon": 21.264231,
+    "Ele": 406.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolonica Airstrip",
+    "gps_code": "SK-0048",
+    "freq": "",
+    "Lat": 48.933635,
+    "Lon": 22.275849,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kurov Airstrip",
+    "gps_code": "SK-0049",
+    "freq": "",
+    "Lat": 49.337959,
+    "Lon": 21.148789,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Širkovce Airstrip",
+    "gps_code": "SK-0050",
+    "freq": "",
+    "Lat": 48.27482,
+    "Lon": 20.092034,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jasenov Airstrip",
+    "gps_code": "SK-0051",
+    "freq": "",
+    "Lat": 48.791825,
+    "Lon": 22.179766,
+    "Ele": 167.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Novosad Airstrip",
+    "gps_code": "SK-0052",
+    "freq": "",
+    "Lat": 48.531801,
+    "Lon": 21.729293,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hucín Airstrip",
+    "gps_code": "SK-0053",
+    "freq": "",
+    "Lat": 48.574449,
+    "Lon": 20.291375,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dlžín Airstrip",
+    "gps_code": "SK-0054",
+    "freq": "",
+    "Lat": 48.8044756,
+    "Lon": 18.5067176,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Senné Airstrip",
+    "gps_code": "SK-0055",
+    "freq": "",
+    "Lat": 48.659681,
+    "Lon": 22.0141099,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Haniska Airstrip",
+    "gps_code": "SK-0056",
+    "freq": "",
+    "Lat": 48.609863,
+    "Lon": 21.248697,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Čerín-Čačín Airstrip",
+    "gps_code": "SK-0057",
+    "freq": "",
+    "Lat": 48.674911,
+    "Lon": 19.245273,
+    "Ele": 470.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rimavská Seč Airstrip",
+    "gps_code": "SK-0058",
+    "freq": "",
+    "Lat": 48.318305,
+    "Lon": 20.250388,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalša Airstrip",
+    "gps_code": "SK-0059",
+    "freq": "",
+    "Lat": 48.624655,
+    "Lon": 21.506477,
+    "Ele": 273.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolná Strehová Airstrip",
+    "gps_code": "SK-0060",
+    "freq": "",
+    "Lat": 48.256185,
+    "Lon": 19.504961,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kráľovský Chlmec Airstrip",
+    "gps_code": "SK-0061",
+    "freq": "",
+    "Lat": 48.413942,
+    "Lon": 22.002993,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Udavské Airstrip",
+    "gps_code": "SK-0062",
+    "freq": "",
+    "Lat": 48.97872,
+    "Lon": 21.947888,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trebišov Airstrip",
+    "gps_code": "SK-0063",
+    "freq": "",
+    "Lat": 48.636891,
+    "Lon": 21.759432,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vyšná Myšľa Airstrip",
+    "gps_code": "SK-0064",
+    "freq": "",
+    "Lat": 48.645044,
+    "Lon": 21.375666,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolná Štubňa Airstrip",
+    "gps_code": "SK-0065",
+    "freq": "",
+    "Lat": 48.834808,
+    "Lon": 18.843625,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamienka/Hniezdne Airstrip",
+    "gps_code": "SK-0066",
+    "freq": "",
+    "Lat": 49.319881,
+    "Lon": 20.635033,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Veľká Lomnica Airstrip",
+    "gps_code": "SK-0068",
+    "freq": "",
+    "Lat": 49.1065,
+    "Lon": 20.344029,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Streda nad Bodrogom Airstrip",
+    "gps_code": "SK-0069",
+    "freq": "",
+    "Lat": 48.361893,
+    "Lon": 21.746454,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mokraď Airstrip",
+    "gps_code": "SK-0070",
+    "freq": "",
+    "Lat": 49.096416,
+    "Lon": 19.733499,
+    "Ele": 789.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Klčov Airstrip",
+    "gps_code": "SK-0071",
+    "freq": "",
+    "Lat": 48.994162,
+    "Lon": 20.664952,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Komoča ULM",
+    "gps_code": "SK-0072",
+    "freq": "",
+    "Lat": 47.97054,
+    "Lon": 18.040467,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vankovia Airstrip",
+    "gps_code": "SK-0073",
+    "freq": "",
+    "Lat": 48.7640939,
+    "Lon": 17.526797,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rozhanovce Airstrip",
+    "gps_code": "SK-0074",
+    "freq": "",
+    "Lat": 48.751817,
+    "Lon": 21.328326,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tomášovce Airstrip",
+    "gps_code": "SK-0075",
+    "freq": "",
+    "Lat": 48.35997,
+    "Lon": 19.642739,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nevoľné Airstrip",
+    "gps_code": "SK-0076",
+    "freq": "",
+    "Lat": 48.6680872,
+    "Lon": 18.9349476,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Šarišské Michaľany Airstrip",
+    "gps_code": "SK-0077",
+    "freq": "",
+    "Lat": 49.0757,
+    "Lon": 21.1515,
+    "Ele": 352.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hatalov Airfield",
+    "gps_code": "SK-0078",
+    "freq": "",
+    "Lat": 48.651565,
+    "Lon": 21.873589,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nemčice-Topoľčany Airstrip",
+    "gps_code": "SK-0079",
+    "freq": "",
+    "Lat": 48.54662,
+    "Lon": 18.14393,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mlynica Airfield",
+    "gps_code": "SK-0080",
+    "freq": "",
+    "Lat": 49.104809,
+    "Lon": 20.318398,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vranov nad Topľou Airstrip",
+    "gps_code": "SK-0081",
+    "freq": "",
+    "Lat": 48.86856,
+    "Lon": 21.6768,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vavrečka Airfield",
+    "gps_code": "SK-0082",
+    "freq": "",
+    "Lat": 49.3911,
+    "Lon": 19.46712,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Masníkovo Airfield",
+    "gps_code": "SK-0083",
+    "freq": "",
+    "Lat": 48.04539,
+    "Lon": 17.47704,
+    "Ele": 117.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Senec Airstrip",
+    "gps_code": "SK-0084",
+    "freq": "",
+    "Lat": 48.250197,
+    "Lon": 17.398739,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rohozná Airfield",
+    "gps_code": "SK-0085",
+    "freq": "",
+    "Lat": 48.799367,
+    "Lon": 19.692275,
+    "Ele": 538.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolna Telka Airstrip",
+    "gps_code": "SK-0091",
+    "freq": "",
+    "Lat": 48.34239,
+    "Lon": 19.6035,
+    "Ele": 216.1
+  },
+  {
+    "type": "small_airport",
+    "name": "LMK Očová Airstrip",
+    "gps_code": "SK-0092",
+    "freq": "",
+    "Lat": 48.58111,
+    "Lon": 19.30989,
+    "Ele": 393.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Seleška Private Airfield",
+    "gps_code": "SK-0094",
+    "freq": "",
+    "Lat": 48.61997,
+    "Lon": 21.07353,
+    "Ele": 223.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zemplínska Teplica Airfield",
+    "gps_code": "SK-0095",
+    "freq": "",
+    "Lat": 48.634375,
+    "Lon": 21.576884,
+    "Ele": 192.9
+  }
+]

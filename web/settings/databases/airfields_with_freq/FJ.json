@@ -1,0 +1,236 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Cicia Airport",
+    "gps_code": "NFCI",
+    "freq": "",
+    "Lat": -17.7432994843,
+    "Lon": -179.341995239,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ba Airport",
+    "gps_code": "NFFA",
+    "freq": "",
+    "Lat": -17.530799,
+    "Lon": 177.690506,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nadi International Airport",
+    "gps_code": "NFFN",
+    "freq": "346.700",
+    "Lat": -17.755399703979492,
+    "Lon": 177.4429931640625,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Malolo Lailai Island Airport",
+    "gps_code": "NFFO",
+    "freq": "",
+    "Lat": -17.778448,
+    "Lon": 177.196996,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rabi Island Airport",
+    "gps_code": "NFFR",
+    "freq": "",
+    "Lat": -16.5337,
+    "Lon": 179.9757,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mago Island Airstrip",
+    "gps_code": "NFGO",
+    "freq": "",
+    "Lat": -17.438646,
+    "Lon": -179.163601,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaibu Island Airport",
+    "gps_code": "NFKB",
+    "freq": "",
+    "Lat": -17.254199981689453,
+    "Lon": -179.48899841308594,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vunisea Airport",
+    "gps_code": "NFKD",
+    "freq": "",
+    "Lat": -19.0580997467,
+    "Lon": 178.156997681,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mana Island Airport",
+    "gps_code": "NFMA",
+    "freq": "",
+    "Lat": -17.672844,
+    "Lon": 177.0985,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Moala Airport",
+    "gps_code": "NFMO",
+    "freq": "",
+    "Lat": -18.5666999817,
+    "Lon": 179.951004028,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nausori International Airport",
+    "gps_code": "NFNA",
+    "freq": "119.700",
+    "Lat": -18.04330062866211,
+    "Lon": 178.5590057373047,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Levuka Airfield",
+    "gps_code": "NFNB",
+    "freq": "",
+    "Lat": -17.7110996246,
+    "Lon": 178.759002686,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nanuku Airport",
+    "gps_code": "NFND",
+    "freq": "",
+    "Lat": -18.2553,
+    "Lon": 178.0492,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngau Airport",
+    "gps_code": "NFNG",
+    "freq": "",
+    "Lat": -18.1156005859,
+    "Lon": 179.339996338,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Laucala Island Airport",
+    "gps_code": "NFNH",
+    "freq": "",
+    "Lat": -16.7481,
+    "Lon": -179.667007,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lakeba Island Airport",
+    "gps_code": "NFNK",
+    "freq": "",
+    "Lat": -18.1991996765,
+    "Lon": -178.817001343,
+    "Ele": 85.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Labasa Airport",
+    "gps_code": "NFNL",
+    "freq": "122.900",
+    "Lat": -16.4667,
+    "Lon": 179.339996,
+    "Ele": 13.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Matei Airport",
+    "gps_code": "NFNM",
+    "freq": "",
+    "Lat": -16.690599,
+    "Lon": -179.876999,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Koro Island Airport",
+    "gps_code": "NFNO",
+    "freq": "",
+    "Lat": -17.3458003998,
+    "Lon": 179.42199707,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rotuma Airport",
+    "gps_code": "NFNR",
+    "freq": "",
+    "Lat": -12.482500076293944,
+    "Lon": 177.0709991455078,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Savusavu Airport",
+    "gps_code": "NFNS",
+    "freq": "",
+    "Lat": -16.803394,
+    "Lon": 179.340587,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Wakaya Island Airport",
+    "gps_code": "NFNW",
+    "freq": "",
+    "Lat": -17.617000579833984,
+    "Lon": 179.01699829101562,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ono-i-Lau Airport",
+    "gps_code": "NFOL",
+    "freq": "",
+    "Lat": -20.6589,
+    "Lon": -178.7411,
+    "Ele": 33.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Yasawa Island Airport",
+    "gps_code": "NFSW",
+    "freq": "",
+    "Lat": -16.7589,
+    "Lon": 177.544998,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vanua Balavu Airport",
+    "gps_code": "NFVB",
+    "freq": "",
+    "Lat": -17.268999099731445,
+    "Lon": -178.9759979248047,
+    "Ele": 23.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Vatulele Airport",
+    "gps_code": "NFVL",
+    "freq": "",
+    "Lat": -18.512500762939453,
+    "Lon": 177.63900756835938,
+    "Ele": 11.0
+  }
+]

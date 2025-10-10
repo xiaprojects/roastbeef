@@ -1,0 +1,803 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Adareil Airport",
+    "gps_code": "AEE",
+    "freq": "",
+    "Lat": 10.053611,
+    "Lon": 32.959444,
+    "Ele": 396.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Juba International Airport",
+    "gps_code": "HJJJ",
+    "freq": "11.300",
+    "Lat": 4.87201,
+    "Lon": 31.601101,
+    "Ele": 461.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kawjok Airport",
+    "gps_code": "HJKJ",
+    "freq": "",
+    "Lat": 8.279625,
+    "Lon": 27.955828,
+    "Ele": 434.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuron Airstrip",
+    "gps_code": "HJKR",
+    "freq": "",
+    "Lat": 5.714049,
+    "Lon": 34.52724,
+    "Ele": 522.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Akobo Airport",
+    "gps_code": "HSAK",
+    "freq": "",
+    "Lat": 7.7779,
+    "Lon": 33.0027,
+    "Ele": 412.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aweil Airport",
+    "gps_code": "HSAW",
+    "freq": "",
+    "Lat": 8.791383,
+    "Lon": 27.360151,
+    "Ele": 424.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bor Airport",
+    "gps_code": "HSBR",
+    "freq": "",
+    "Lat": 6.191942,
+    "Lon": 31.600408,
+    "Ele": 424.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bentiu Airport",
+    "gps_code": "HSBT",
+    "freq": "",
+    "Lat": 9.308488,
+    "Lon": 29.787316,
+    "Ele": 609.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Paloich Airport",
+    "gps_code": "HSFA",
+    "freq": "128.700",
+    "Lat": 10.529167,
+    "Lon": 32.500556,
+    "Ele": 393.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kajo Keji Airport",
+    "gps_code": "HSKJ",
+    "freq": "",
+    "Lat": 3.85754,
+    "Lon": 31.65652,
+    "Ele": 762.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapoeta Airport",
+    "gps_code": "HSKP",
+    "freq": "",
+    "Lat": 4.780812,
+    "Lon": 33.586278,
+    "Ele": 676.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Marida Airport",
+    "gps_code": "HSMD",
+    "freq": "",
+    "Lat": 4.902851,
+    "Lon": 29.443263,
+    "Ele": 579.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Rumbek Airport",
+    "gps_code": "HSMK",
+    "freq": "118.700",
+    "Lat": 6.831074,
+    "Lon": 29.669073,
+    "Ele": 420.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nimule Airport",
+    "gps_code": "HSNM",
+    "freq": "",
+    "Lat": 3.597659,
+    "Lon": 32.090278,
+    "Ele": 627.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Pochalla Airport",
+    "gps_code": "HSPA",
+    "freq": "",
+    "Lat": 7.178563,
+    "Lon": 34.097359,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Pibor Airport",
+    "gps_code": "HSPI",
+    "freq": "",
+    "Lat": 6.798561,
+    "Lon": 33.125904,
+    "Ele": 419.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Raga Airport",
+    "gps_code": "HSRJ",
+    "freq": "",
+    "Lat": 8.46111,
+    "Lon": 25.681101,
+    "Ele": 545.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Renk Airport",
+    "gps_code": "HSRN",
+    "freq": "",
+    "Lat": 11.644773,
+    "Lon": 32.81045,
+    "Ele": 389.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malakal Airport",
+    "gps_code": "HSSM",
+    "freq": "118.200",
+    "Lat": 9.55897,
+    "Lon": 31.652201,
+    "Ele": 393.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tong Airport",
+    "gps_code": "HSTO",
+    "freq": "",
+    "Lat": 7.267,
+    "Lon": 28.983,
+    "Ele": 430.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Torit Airport",
+    "gps_code": "HSTR",
+    "freq": "",
+    "Lat": 4.416769,
+    "Lon": 32.575707,
+    "Ele": 624.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tumbura Airport",
+    "gps_code": "HSTU",
+    "freq": "",
+    "Lat": 5.602137,
+    "Lon": 27.473212,
+    "Ele": 679.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wau Airport",
+    "gps_code": "HSWW",
+    "freq": "119.200",
+    "Lat": 7.72583,
+    "Lon": 27.975,
+    "Ele": 466.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yambio Airport",
+    "gps_code": "HSYA",
+    "freq": "",
+    "Lat": 4.567066,
+    "Lon": 28.424106,
+    "Ele": 723.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yei Airport",
+    "gps_code": "HSYE",
+    "freq": "",
+    "Lat": 4.128965,
+    "Lon": 30.731817,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Yirol Airport",
+    "gps_code": "HSYL",
+    "freq": "",
+    "Lat": 6.561571,
+    "Lon": 30.509892,
+    "Ele": 434.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ajuini Airstrip",
+    "gps_code": "SS-0001",
+    "freq": "",
+    "Lat": 7.457793,
+    "Lon": 31.41499,
+    "Ele": 412.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Duk Payuel Airstrip",
+    "gps_code": "SS-0002",
+    "freq": "",
+    "Lat": 7.47704,
+    "Lon": 31.51449,
+    "Ele": 413.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Duk Kwenyakwol Airstrip",
+    "gps_code": "SS-0003",
+    "freq": "",
+    "Lat": 7.598693,
+    "Lon": 31.45062,
+    "Ele": 410.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pajut Airstrip",
+    "gps_code": "SS-0004",
+    "freq": "",
+    "Lat": 7.746592,
+    "Lon": 31.690504,
+    "Ele": 412.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Duk Padiet Airstrip",
+    "gps_code": "SS-0005",
+    "freq": "",
+    "Lat": 7.740431,
+    "Lon": 31.399612,
+    "Ele": 409.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Waat Airstrip",
+    "gps_code": "SS-0006",
+    "freq": "",
+    "Lat": 8.189647,
+    "Lon": 32.152873,
+    "Ele": 405.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pieri Airstrip",
+    "gps_code": "SS-0007",
+    "freq": "",
+    "Lat": 8.04048,
+    "Lon": 32.028816,
+    "Ele": 410.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuai Airstrip",
+    "gps_code": "SS-0008",
+    "freq": "",
+    "Lat": 7.904872,
+    "Lon": 31.888386,
+    "Ele": 408.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Turuk Airstrip",
+    "gps_code": "SS-0009",
+    "freq": "",
+    "Lat": 7.98800762753,
+    "Lon": 31.9675540924,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mogok Airstrip",
+    "gps_code": "SS-0010",
+    "freq": "",
+    "Lat": 8.413961,
+    "Lon": 31.33333,
+    "Ele": 405.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ayod Airstrip",
+    "gps_code": "SS-0011",
+    "freq": "",
+    "Lat": 8.137948,
+    "Lon": 31.406178,
+    "Ele": 405.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Buk Airfield",
+    "gps_code": "SS-0012",
+    "freq": "",
+    "Lat": 8.01095641186,
+    "Lon": 31.4281082153,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pathai Airstrip",
+    "gps_code": "SS-0013",
+    "freq": "",
+    "Lat": 8.06976738146,
+    "Lon": 31.8386363983,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pulturuk Airstrip",
+    "gps_code": "SS-0014",
+    "freq": "",
+    "Lat": 8.595353,
+    "Lon": 31.949819,
+    "Ele": 404.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lankien Airstrip",
+    "gps_code": "SS-0015",
+    "freq": "",
+    "Lat": 8.529374,
+    "Lon": 32.063835,
+    "Ele": 405.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Panyagor Airstrip",
+    "gps_code": "SS-0016",
+    "freq": "",
+    "Lat": 7.32998059644,
+    "Lon": 31.4222609997,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lokwor Airport",
+    "gps_code": "SS-0017",
+    "freq": "",
+    "Lat": 5.288,
+    "Lon": 35.8328,
+    "Ele": 431.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kokuro Airport",
+    "gps_code": "SS-0018",
+    "freq": "",
+    "Lat": 4.6753,
+    "Lon": 35.7116,
+    "Ele": 420.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mundri West Airport",
+    "gps_code": "SS-0019",
+    "freq": "",
+    "Lat": 5.359401,
+    "Lon": 30.346927,
+    "Ele": 581.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ibba Airstrip",
+    "gps_code": "SS-0020",
+    "freq": "",
+    "Lat": 4.791895,
+    "Lon": 29.157161,
+    "Ele": 691.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Nzara Airport",
+    "gps_code": "SS-0021",
+    "freq": "",
+    "Lat": 4.635486,
+    "Lon": 28.26757,
+    "Ele": 627.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mvolo Airport",
+    "gps_code": "SS-0022",
+    "freq": "",
+    "Lat": 6.06388,
+    "Lon": 29.956666,
+    "Ele": 490.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Doregh Airstrip",
+    "gps_code": "SS-0023",
+    "freq": "",
+    "Lat": 9.04242,
+    "Lon": 30.70938,
+    "Ele": 400.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Keew Airstrip",
+    "gps_code": "SS-0024",
+    "freq": "",
+    "Lat": 9.26371,
+    "Lon": 30.63692,
+    "Ele": 402.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuai Bur Airstrip",
+    "gps_code": "SS-0025",
+    "freq": "",
+    "Lat": 9.39234,
+    "Lon": 30.66912,
+    "Ele": 401.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ganyiel Airport",
+    "gps_code": "SS-0026",
+    "freq": "",
+    "Lat": 7.3989,
+    "Lon": 30.4721,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Luri Airport",
+    "gps_code": "SS-0027",
+    "freq": "",
+    "Lat": 4.85299,
+    "Lon": 31.39548,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pulmok Airport",
+    "gps_code": "SS-0028",
+    "freq": "",
+    "Lat": 7.3367,
+    "Lon": 30.41285,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Melut Airport",
+    "gps_code": "SS-0029",
+    "freq": "",
+    "Lat": 10.3342,
+    "Lon": 32.26825,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Athidwey Airport",
+    "gps_code": "SS-0030",
+    "freq": "",
+    "Lat": 10.26976,
+    "Lon": 32.22511,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Payuer Airport",
+    "gps_code": "SS-0031",
+    "freq": "",
+    "Lat": 10.07147,
+    "Lon": 32.28504,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kodok Airport",
+    "gps_code": "SS-0032",
+    "freq": "",
+    "Lat": 9.89608,
+    "Lon": 32.12014,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tondiak Airport",
+    "gps_code": "SS-0033",
+    "freq": "",
+    "Lat": 9.39786,
+    "Lon": 31.15106,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thar Jath Airport",
+    "gps_code": "SS-0034",
+    "freq": "",
+    "Lat": 8.78311,
+    "Lon": 30.13077,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koch Airport",
+    "gps_code": "SS-0036",
+    "freq": "",
+    "Lat": 8.60289,
+    "Lon": 29.98998,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bieh Airport",
+    "gps_code": "SS-0037",
+    "freq": "",
+    "Lat": 8.46238,
+    "Lon": 30.13021,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Padeah Airport",
+    "gps_code": "SS-0038",
+    "freq": "",
+    "Lat": 8.4094,
+    "Lon": 30.18628,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thornyor Airfield",
+    "gps_code": "SS-0039",
+    "freq": "",
+    "Lat": 8.22396,
+    "Lon": 30.22138,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyal Airport",
+    "gps_code": "SS-0040",
+    "freq": "",
+    "Lat": 7.72751,
+    "Lon": 30.24454,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Panyagor Airport",
+    "gps_code": "SS-0041",
+    "freq": "",
+    "Lat": 7.163788,
+    "Lon": 31.409011,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Leer Airport",
+    "gps_code": "SS-0042",
+    "freq": "",
+    "Lat": 8.3081,
+    "Lon": 30.11517,
+    "Ele": 395.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dablual Airport",
+    "gps_code": "SS-0043",
+    "freq": "",
+    "Lat": 8.31798,
+    "Lon": 30.01107,
+    "Ele": 395.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Paguir Airport",
+    "gps_code": "SS-0044",
+    "freq": "",
+    "Lat": 9.11176,
+    "Lon": 30.76653,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuernyang Airport",
+    "gps_code": "SS-0045",
+    "freq": "",
+    "Lat": 9.32284,
+    "Lon": 30.88816,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manajang Airport",
+    "gps_code": "SS-0046",
+    "freq": "",
+    "Lat": 9.32928,
+    "Lon": 30.71316,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thokchak Airport",
+    "gps_code": "SS-0047",
+    "freq": "",
+    "Lat": 9.17726,
+    "Lon": 30.74859,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nimni Airport",
+    "gps_code": "SS-0048",
+    "freq": "",
+    "Lat": 9.31332,
+    "Lon": 30.01904,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "GPOC Unity Airstrip",
+    "gps_code": "SS-0049",
+    "freq": "",
+    "Lat": 9.47649,
+    "Lon": 29.66566,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Riangther Airport",
+    "gps_code": "SS-0050",
+    "freq": "",
+    "Lat": 9.70275,
+    "Lon": 30.15421,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Adok Airport",
+    "gps_code": "SS-0051",
+    "freq": "",
+    "Lat": 8.20699,
+    "Lon": 30.29131,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pakuor Airport",
+    "gps_code": "SS-0052",
+    "freq": "",
+    "Lat": 7.12922,
+    "Lon": 31.36519,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kongor Airport",
+    "gps_code": "SS-0053",
+    "freq": "",
+    "Lat": 7.14152,
+    "Lon": 31.34867,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makwar Airport",
+    "gps_code": "SS-0054",
+    "freq": "",
+    "Lat": 7.09195,
+    "Lon": 31.36751,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Paliau Airport",
+    "gps_code": "SS-0055",
+    "freq": "",
+    "Lat": 6.96466,
+    "Lon": 31.36796,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolmarek Airport",
+    "gps_code": "SS-0056",
+    "freq": "",
+    "Lat": 6.6268,
+    "Lon": 31.51511,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Padak Airport",
+    "gps_code": "SS-0057",
+    "freq": "",
+    "Lat": 6.4241,
+    "Lon": 31.55676,
+    "Ele": 426.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mankien Airstrip",
+    "gps_code": "SS-0058",
+    "freq": "",
+    "Lat": 9.04958,
+    "Lon": 29.0835,
+    "Ele": 396.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aweng Airstrip",
+    "gps_code": "SS-0059",
+    "freq": "",
+    "Lat": 9.10337,
+    "Lon": 28.56128,
+    "Ele": 402.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Turalei Airstrip",
+    "gps_code": "SS-0061",
+    "freq": "",
+    "Lat": 9.08177,
+    "Lon": 28.4359,
+    "Ele": 405.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wunrock Airport",
+    "gps_code": "SS-0062",
+    "freq": "",
+    "Lat": 8.97826,
+    "Lon": 28.29813,
+    "Ele": 406.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Panliet Airstrip",
+    "gps_code": "SS-0063",
+    "freq": "",
+    "Lat": 8.84716,
+    "Lon": 28.2321,
+    "Ele": 409.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alek Airfield",
+    "gps_code": "SS-0064",
+    "freq": "",
+    "Lat": 8.6662,
+    "Lon": 28.15377,
+    "Ele": 413.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abiemnom Airstrip",
+    "gps_code": "SS-0066",
+    "freq": "",
+    "Lat": 9.41258,
+    "Lon": 28.83009,
+    "Ele": 401.1
+  }
+]

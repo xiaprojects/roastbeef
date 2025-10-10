@@ -1,0 +1,407 @@
+[
+  {
+    "type": "small_airport",
+    "name": "El Daein Airport",
+    "gps_code": "ADV",
+    "freq": "",
+    "Lat": 11.4023,
+    "Lon": 26.1186,
+    "Ele": 475.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Baleela Airport",
+    "gps_code": "BJE",
+    "freq": "",
+    "Lat": 11.1994444444,
+    "Lon": 28.5230555556,
+    "Ele": 515.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Atbara Airport",
+    "gps_code": "HSAT",
+    "freq": "",
+    "Lat": 17.710344,
+    "Lon": 34.057018,
+    "Ele": 360.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carthago Airport",
+    "gps_code": "HSCG",
+    "freq": "",
+    "Lat": 18.751389,
+    "Lon": 36.991667,
+    "Ele": 984.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Dabbah Airport",
+    "gps_code": "HSDB",
+    "freq": "",
+    "Lat": 18.0146,
+    "Lon": 30.9595,
+    "Ele": 256.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dilling Airport",
+    "gps_code": "HSDL",
+    "freq": "",
+    "Lat": 11.9906,
+    "Lon": 29.673201,
+    "Ele": 672.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dongola Airport",
+    "gps_code": "HSDN",
+    "freq": "118.200",
+    "Lat": 19.1539001465,
+    "Lon": 30.4300994873,
+    "Ele": 235.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Damazin Airport",
+    "gps_code": "HSDZ",
+    "freq": "118.400",
+    "Lat": 11.7859,
+    "Lon": 34.3367,
+    "Ele": 482.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Fasher Airport",
+    "gps_code": "HSFS",
+    "freq": "127.300",
+    "Lat": 13.61489963531494,
+    "Lon": 25.32460021972656,
+    "Ele": 729.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Galegu Airport",
+    "gps_code": "HSGG",
+    "freq": "",
+    "Lat": 12.532999992370604,
+    "Lon": 35.06700134277344,
+    "Ele": 499.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Geneina Airport",
+    "gps_code": "HSGN",
+    "freq": "",
+    "Lat": 13.481882,
+    "Lon": 22.467119,
+    "Ele": 808.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gogrial Airport",
+    "gps_code": "HSGO",
+    "freq": "",
+    "Lat": 18.867000579833984,
+    "Lon": 28.117000579833984,
+    "Ele": 499.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Heglig Airport",
+    "gps_code": "HSHG",
+    "freq": "",
+    "Lat": 9.994933,
+    "Lon": 29.397718,
+    "Ele": 403.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kassala Airport",
+    "gps_code": "HSKA",
+    "freq": "118.200",
+    "Lat": 15.387499809265137,
+    "Lon": 36.328800201416016,
+    "Ele": 509.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Khashm El Girba Airport",
+    "gps_code": "HSKG",
+    "freq": "",
+    "Lat": 14.925,
+    "Lon": 35.877998,
+    "Ele": 475.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenana Airport",
+    "gps_code": "HSKN",
+    "freq": "",
+    "Lat": 13.05343,
+    "Lon": 32.90732,
+    "Ele": 393.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kadugli Airport",
+    "gps_code": "HSLI",
+    "freq": "120.700",
+    "Lat": 11.137999534600002,
+    "Lon": 29.7010993958,
+    "Ele": 563.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Merowe Airport",
+    "gps_code": "HSMN",
+    "freq": "118.400",
+    "Lat": 18.443333,
+    "Lon": 31.843333,
+    "Ele": 273.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Merowe Town Airport",
+    "gps_code": "HSMR",
+    "freq": "",
+    "Lat": 18.455,
+    "Lon": 31.8185,
+    "Ele": 263.3
+  },
+  {
+    "type": "small_airport",
+    "name": "En Nahud Airport",
+    "gps_code": "HSNH",
+    "freq": "",
+    "Lat": 12.735513,
+    "Lon": 28.410841,
+    "Ele": 595.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nyala Airport",
+    "gps_code": "HSNN",
+    "freq": "118.100",
+    "Lat": 12.0535,
+    "Lon": 24.9562,
+    "Ele": 641.9
+  },
+  {
+    "type": "small_airport",
+    "name": "New Halfa Airport",
+    "gps_code": "HSNW",
+    "freq": "",
+    "Lat": 15.3556,
+    "Lon": 35.727798,
+    "Ele": 451.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "El-Obeid Airport",
+    "gps_code": "HSOB",
+    "freq": "118.500",
+    "Lat": 13.1532,
+    "Lon": 30.2327,
+    "Ele": 587.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Port Sudan New International Airport",
+    "gps_code": "HSPN",
+    "freq": "128.100",
+    "Lat": 19.4335994720459,
+    "Lon": 37.23410034179688,
+    "Ele": 41.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sabera Geneina Airport",
+    "gps_code": "HSSG",
+    "freq": "",
+    "Lat": 13.4774,
+    "Lon": 22.53722,
+    "Ele": 802.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Khartoum International Airport",
+    "gps_code": "HSSK",
+    "freq": "124.700",
+    "Lat": 15.5895,
+    "Lon": 32.5532,
+    "Ele": 385.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Sudan Air Base",
+    "gps_code": "HSSP",
+    "freq": "",
+    "Lat": 19.5765,
+    "Lon": 37.2159,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wadi Halfa Airport",
+    "gps_code": "HSSW",
+    "freq": "",
+    "Lat": 21.802698,
+    "Lon": 31.521578,
+    "Ele": 284.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Zalingei Airport",
+    "gps_code": "HSZA",
+    "freq": "",
+    "Lat": 12.9437,
+    "Lon": 23.5631,
+    "Ele": 900.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wadi Seidna Air Base",
+    "gps_code": "SD-0001",
+    "freq": "",
+    "Lat": 15.815213,
+    "Lon": 32.51401,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kutum Airport",
+    "gps_code": "SD-0003",
+    "freq": "",
+    "Lat": 14.220586,
+    "Lon": 24.633616,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gereida Airport",
+    "gps_code": "SD-0004",
+    "freq": "",
+    "Lat": 11.256023,
+    "Lon": 25.143714,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jabal Burqat Karkor Airport",
+    "gps_code": "SD-0005",
+    "freq": "",
+    "Lat": 19.60021,
+    "Lon": 33.32162,
+    "Ele": 334.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Songo Airstrip",
+    "gps_code": "SD-0006",
+    "freq": "",
+    "Lat": 9.774332,
+    "Lon": 24.306231,
+    "Ele": 552.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Hamad Airport",
+    "gps_code": "SD-0007",
+    "freq": "",
+    "Lat": 19.56507,
+    "Lon": 33.31448,
+    "Ele": 331.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenana Air Base",
+    "gps_code": "SD-0009",
+    "freq": "",
+    "Lat": 13.089439,
+    "Lon": 32.853462,
+    "Ele": 387.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sinjah Airport",
+    "gps_code": "SD-0013",
+    "freq": "",
+    "Lat": 13.31905,
+    "Lon": 33.61347,
+    "Ele": 451.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Hawatah Airport",
+    "gps_code": "SD-0014",
+    "freq": "",
+    "Lat": 13.448558,
+    "Lon": 34.621427,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Jazirah Agricultural Airport",
+    "gps_code": "SD-0015",
+    "freq": "",
+    "Lat": 14.295991,
+    "Lon": 33.547225,
+    "Ele": 413.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abri Airport",
+    "gps_code": "SD-0016",
+    "freq": "",
+    "Lat": 20.77819,
+    "Lon": 30.3489,
+    "Ele": 210.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenana East Airport",
+    "gps_code": "SD-0018",
+    "freq": "",
+    "Lat": 13.15052,
+    "Lon": 33.01786,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agok Local Airport",
+    "gps_code": "SD-0019",
+    "freq": "",
+    "Lat": 9.360009,
+    "Lon": 28.584035,
+    "Ele": 402.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Athony Airstrip",
+    "gps_code": "SD-0023",
+    "freq": "",
+    "Lat": 9.468244,
+    "Lon": 28.466196,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shendi Airport",
+    "gps_code": "SD-0026",
+    "freq": "",
+    "Lat": 16.703775,
+    "Lon": 33.446395,
+    "Ele": 360.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sennar Sugar Factory Airfield",
+    "gps_code": "SD-0029",
+    "freq": "",
+    "Lat": 13.76607,
+    "Lon": 33.42155,
+    "Ele": 448.1
+  }
+]

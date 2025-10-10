@@ -1,0 +1,398 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Zakuoma Airport",
+    "gps_code": "AKM",
+    "freq": "",
+    "Lat": 10.8902777778,
+    "Lon": 19.8172222222,
+    "Ele": 417.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Abou-Deïa Airport",
+    "gps_code": "AOD",
+    "freq": "",
+    "Lat": 11.4773,
+    "Lon": 19.2874,
+    "Ele": 485.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ouadi Doum Air Base",
+    "gps_code": "FTFY",
+    "freq": "",
+    "Lat": 18.52793,
+    "Lon": 20.188644,
+    "Ele": 398.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarh Airport",
+    "gps_code": "FTTA",
+    "freq": "",
+    "Lat": 9.14444,
+    "Lon": 18.374399,
+    "Ele": 365.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bongor Airport",
+    "gps_code": "FTTB",
+    "freq": "",
+    "Lat": 10.288345,
+    "Lon": 15.379561,
+    "Ele": 328.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Abeche Airport",
+    "gps_code": "FTTC",
+    "freq": "118.100",
+    "Lat": 13.847,
+    "Lon": 20.844299,
+    "Ele": 545.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Moundou Airport",
+    "gps_code": "FTTD",
+    "freq": "118.600",
+    "Lat": 8.628503,
+    "Lon": 16.074241,
+    "Ele": 428.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Biltine Airport",
+    "gps_code": "FTTE",
+    "freq": "",
+    "Lat": 14.551908,
+    "Lon": 20.841834,
+    "Ele": 512.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Fada Airport",
+    "gps_code": "FTTF",
+    "freq": "",
+    "Lat": 17.19126,
+    "Lon": 21.50353,
+    "Ele": 545.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Goz-Beida Airport",
+    "gps_code": "FTTG",
+    "freq": "",
+    "Lat": 12.210946,
+    "Lon": 21.458472,
+    "Ele": 538.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lai Airport",
+    "gps_code": "FTTH",
+    "freq": "",
+    "Lat": 9.3979,
+    "Lon": 16.3125,
+    "Ele": 356.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ati Airport",
+    "gps_code": "FTTI",
+    "freq": "",
+    "Lat": 13.239778,
+    "Lon": 18.315893,
+    "Ele": 331.9
+  },
+  {
+    "type": "large_airport",
+    "name": "N'Djamena International Airport",
+    "gps_code": "FTTJ",
+    "freq": "119.700",
+    "Lat": 12.1337,
+    "Lon": 15.034,
+    "Ele": 295.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bokoro Airport",
+    "gps_code": "FTTK",
+    "freq": "",
+    "Lat": 12.385511,
+    "Lon": 17.070989,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bol-Berim Airport",
+    "gps_code": "FTTL",
+    "freq": "",
+    "Lat": 13.443574,
+    "Lon": 14.739254,
+    "Ele": 291.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mongo Airport",
+    "gps_code": "FTTM",
+    "freq": "",
+    "Lat": 12.17048,
+    "Lon": 18.675642,
+    "Ele": 431.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Am Timan Airport",
+    "gps_code": "FTTN",
+    "freq": "",
+    "Lat": 11.0340003967,
+    "Lon": 20.2740001678,
+    "Ele": 432.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pala Airport",
+    "gps_code": "FTTP",
+    "freq": "",
+    "Lat": 9.37806,
+    "Lon": 14.925,
+    "Ele": 467.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zouar Airport",
+    "gps_code": "FTTR",
+    "freq": "",
+    "Lat": 20.44813,
+    "Lon": 16.57185,
+    "Ele": 809.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bousso Airport",
+    "gps_code": "FTTS",
+    "freq": "",
+    "Lat": 10.483,
+    "Lon": 16.716999,
+    "Ele": 335.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mao Airport",
+    "gps_code": "FTTU",
+    "freq": "",
+    "Lat": 14.1456,
+    "Lon": 15.3144,
+    "Ele": 326.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Faya-Largeau Airport",
+    "gps_code": "FTTY",
+    "freq": "118.100",
+    "Lat": 17.917101,
+    "Lon": 19.111099,
+    "Ele": 235.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bardai Zougra Airport",
+    "gps_code": "FTTZ",
+    "freq": "",
+    "Lat": 21.448426,
+    "Lon": 17.053271,
+    "Ele": 1074.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Melfi Airport",
+    "gps_code": "MEF",
+    "freq": "",
+    "Lat": 11.060192,
+    "Lon": 17.944495,
+    "Ele": 394.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Oum Hadjer Airport",
+    "gps_code": "OUM",
+    "freq": "",
+    "Lat": 13.278244,
+    "Lon": 19.710256,
+    "Ele": 365.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aozou Airstrip",
+    "gps_code": "TD-0001",
+    "freq": "",
+    "Lat": 22.645195,
+    "Lon": 17.696527,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Doba Airport",
+    "gps_code": "TD-0002",
+    "freq": "",
+    "Lat": 8.701775,
+    "Lon": 16.834947,
+    "Ele": 395.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baïbokoum Airport",
+    "gps_code": "TD-0003",
+    "freq": "",
+    "Lat": 7.765304,
+    "Lon": 15.703935,
+    "Ele": 449.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Léré Airport",
+    "gps_code": "TD-0004",
+    "freq": "",
+    "Lat": 9.645894,
+    "Lon": 14.173201,
+    "Ele": 239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kélo Airport",
+    "gps_code": "TD-0005",
+    "freq": "",
+    "Lat": 9.31408,
+    "Lon": 15.786463,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koumra Airport",
+    "gps_code": "TD-0006",
+    "freq": "",
+    "Lat": 8.958891,
+    "Lon": 17.635592,
+    "Ele": 427.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Goundi Airport",
+    "gps_code": "TD-0007",
+    "freq": "",
+    "Lat": 9.382597,
+    "Lon": 17.380952,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyabé Airport",
+    "gps_code": "TD-0008",
+    "freq": "",
+    "Lat": 9.447491,
+    "Lon": 18.927636,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Haraze Airport",
+    "gps_code": "TD-0009",
+    "freq": "",
+    "Lat": 9.918697,
+    "Lon": 20.90368,
+    "Ele": 413.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Usine Sugar Plantation Airstrip",
+    "gps_code": "TD-0010",
+    "freq": "",
+    "Lat": 8.974228,
+    "Lon": 18.496038,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Iriba Airport",
+    "gps_code": "TD-0011",
+    "freq": "",
+    "Lat": 15.134124,
+    "Lon": 22.221355,
+    "Ele": 933.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Guéréda Airport",
+    "gps_code": "TD-0013",
+    "freq": "",
+    "Lat": 14.5642,
+    "Lon": 22.07495,
+    "Ele": 1003.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Amdjarass Airport",
+    "gps_code": "TD-0014",
+    "freq": "",
+    "Lat": 15.97096,
+    "Lon": 22.770585,
+    "Ele": 902.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Moussoro Airport",
+    "gps_code": "TD-0015",
+    "freq": "",
+    "Lat": 13.645663,
+    "Lon": 16.501386,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Adré Airport",
+    "gps_code": "TD-0016",
+    "freq": "",
+    "Lat": 13.481042,
+    "Lon": 22.179734,
+    "Ele": 787.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kouba Olanga Airstrip",
+    "gps_code": "TD-0017",
+    "freq": "",
+    "Lat": 15.718333,
+    "Lon": 18.311667,
+    "Ele": 266.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Salal Airport",
+    "gps_code": "TD-0018",
+    "freq": "",
+    "Lat": 14.843333,
+    "Lon": 17.226667,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Naramay East Airport",
+    "gps_code": "TD-0020",
+    "freq": "",
+    "Lat": 10.198583,
+    "Lon": 16.868222,
+    "Ele": 324.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beladja Airfield",
+    "gps_code": "TD-0021",
+    "freq": "",
+    "Lat": 8.71386,
+    "Lon": 16.40718,
+    "Ele": 402.9
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Mount Pleasant Airport",
+    "gps_code": "EGYP",
+    "freq": "118.500",
+    "Lat": -51.82279968261719,
+    "Lon": -58.44720077514648,
+    "Ele": 74.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Fox Bay Clay Airstrip",
+    "gps_code": "FK-0001",
+    "freq": "",
+    "Lat": -51.933694,
+    "Lon": -60.061595,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pebble Island Landing Strip",
+    "gps_code": "FK-0002",
+    "freq": "",
+    "Lat": -51.30978775024414,
+    "Lon": -59.60877227783203,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sea Lion Lodge Airstrip",
+    "gps_code": "FK-0003",
+    "freq": "",
+    "Lat": -52.428215,
+    "Lon": -59.077744,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "West Point Island Landing Strip",
+    "gps_code": "FK-0004",
+    "freq": "",
+    "Lat": -51.345611572265625,
+    "Lon": -60.6839714050293,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Goose Green Airfield",
+    "gps_code": "FK-0005",
+    "freq": "",
+    "Lat": -51.819282,
+    "Lon": -58.980893,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Roy Cove Landing Strip",
+    "gps_code": "FK-0006",
+    "freq": "",
+    "Lat": -51.539398193359375,
+    "Lon": -60.35639953613281,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Spring Point Landing Strip",
+    "gps_code": "FK-0007",
+    "freq": "",
+    "Lat": -51.82929992675781,
+    "Lon": -60.45140075683594,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port San Carlos Landing Strip",
+    "gps_code": "FK-0008",
+    "freq": "",
+    "Lat": -51.50166702270508,
+    "Lon": -59.00361251831055,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Howard Purvis Pond Airstrip",
+    "gps_code": "FK-0009",
+    "freq": "",
+    "Lat": -51.5681,
+    "Lon": -59.533699,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saunders Island Landing Strip",
+    "gps_code": "FK-0010",
+    "freq": "",
+    "Lat": -51.37810134887695,
+    "Lon": -60.091609954833984,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carcass Island Landing Strip",
+    "gps_code": "FK-0011",
+    "freq": "",
+    "Lat": -51.263671875,
+    "Lon": -60.592079162597656,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Stephens Airport",
+    "gps_code": "FK-0012",
+    "freq": "",
+    "Lat": -52.09473,
+    "Lon": -60.852379,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Abermarle Airport",
+    "gps_code": "FK-0013",
+    "freq": "",
+    "Lat": -52.205532,
+    "Lon": -60.535062,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunnose Head Airport",
+    "gps_code": "FK-0014",
+    "freq": "",
+    "Lat": -51.753339,
+    "Lon": -60.415834,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shallow Harbour Airport",
+    "gps_code": "FK-0015",
+    "freq": "",
+    "Lat": -51.755735,
+    "Lon": -60.534498,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hill Cove Airport",
+    "gps_code": "FK-0016",
+    "freq": "",
+    "Lat": -51.504427,
+    "Lon": -60.144435,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chartres Airport",
+    "gps_code": "FK-0017",
+    "freq": "",
+    "Lat": -51.719307,
+    "Lon": -60.062361,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "New Island Airport",
+    "gps_code": "FK-0018",
+    "freq": "",
+    "Lat": -51.746491,
+    "Lon": -61.281616,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "North Arm Airport",
+    "gps_code": "FK-0019",
+    "freq": "",
+    "Lat": -52.123295,
+    "Lon": -59.370239,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Salvador Airport",
+    "gps_code": "FK-0020",
+    "freq": "",
+    "Lat": -51.436639,
+    "Lon": -58.378874,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lively Island Airport",
+    "gps_code": "FK-0022",
+    "freq": "",
+    "Lat": -51.995626,
+    "Lon": -58.459238,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "George Island Airport",
+    "gps_code": "FK-0023",
+    "freq": "",
+    "Lat": -52.349583,
+    "Lon": -59.758717,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Douglas Station Airport",
+    "gps_code": "FK-0024",
+    "freq": "",
+    "Lat": -51.459942,
+    "Lon": -58.612131,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Speedwell Island Airport",
+    "gps_code": "FK-0026",
+    "freq": "",
+    "Lat": -52.2299,
+    "Lon": -59.744502,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bleaker Island Airport",
+    "gps_code": "FK-0027",
+    "freq": "",
+    "Lat": -52.181403,
+    "Lon": -58.858788,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Weddell Island Airport",
+    "gps_code": "FK-0028",
+    "freq": "",
+    "Lat": -51.875659,
+    "Lon": -60.90601,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beaver Island Airport",
+    "gps_code": "FK-0029",
+    "freq": "",
+    "Lat": -51.84025,
+    "Lon": -61.23365,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Edgar Airport",
+    "gps_code": "FK-0032",
+    "freq": "",
+    "Lat": -52.090803,
+    "Lon": -60.282682,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Howard Airstrip",
+    "gps_code": "FK-0033",
+    "freq": "",
+    "Lat": -51.613225,
+    "Lon": -59.516675,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sea Lion Island Airstrip",
+    "gps_code": "FK-0034",
+    "freq": "",
+    "Lat": -52.441146,
+    "Lon": -59.127616,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fox Bay East Airstrip",
+    "gps_code": "FK-0035",
+    "freq": "",
+    "Lat": -51.955049,
+    "Lon": -60.06315,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pebble Island Beach Airstrip",
+    "gps_code": "FK-0036",
+    "freq": "",
+    "Lat": -51.310931,
+    "Lon": -59.566162,
+    "Ele": 0.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Port Stanley Airport",
+    "gps_code": "SFAL",
+    "freq": "558.000",
+    "Lat": -51.685699462891,
+    "Lon": -57.777599334717,
+    "Ele": 22.9
+  }
+]

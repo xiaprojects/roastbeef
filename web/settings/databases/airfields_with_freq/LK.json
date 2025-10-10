@@ -1,0 +1,164 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Iranamadu Airport",
+    "gps_code": "LK-0001",
+    "freq": "",
+    "Lat": 9.3066,
+    "Lon": 80.489,
+    "Ele": 55.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Palaviya Airport",
+    "gps_code": "LK-0002",
+    "freq": "",
+    "Lat": 7.979668,
+    "Lon": 79.856495,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thalladi Airfield",
+    "gps_code": "LK-0003",
+    "freq": "",
+    "Lat": 8.9426,
+    "Lon": 79.94759,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sri Lanka Air Force Station Mullaitivu",
+    "gps_code": "LK-0004",
+    "freq": "",
+    "Lat": 9.26869,
+    "Lon": 80.72741,
+    "Ele": 19.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Bandaranaike International Colombo Airport",
+    "gps_code": "VCBI",
+    "freq": "120.900",
+    "Lat": 7.180759906768799,
+    "Lon": 79.88410186767578,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Anuradhapura Airport",
+    "gps_code": "VCCA",
+    "freq": "126.700",
+    "Lat": 8.301542,
+    "Lon": 80.42848,
+    "Ele": 98.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Batticaloa Airport",
+    "gps_code": "VCCB",
+    "freq": "118.100",
+    "Lat": 7.70576,
+    "Lon": 81.678802,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Colombo Ratmalana Airport",
+    "gps_code": "VCCC",
+    "freq": "119.100",
+    "Lat": 6.821990013122559,
+    "Lon": 79.88619995117188,
+    "Ele": 6.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ampara Airport",
+    "gps_code": "VCCG",
+    "freq": "118.100",
+    "Lat": 7.336745,
+    "Lon": 81.623869,
+    "Ele": 45.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hingurakgoda Air Force Base",
+    "gps_code": "VCCH",
+    "freq": "",
+    "Lat": 8.04981,
+    "Lon": 80.9814,
+    "Ele": 51.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jaffna International Airport",
+    "gps_code": "VCCJ",
+    "freq": "124.300",
+    "Lat": 9.79233,
+    "Lon": 80.070099,
+    "Ele": 10.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Koggala Airport",
+    "gps_code": "VCCK",
+    "freq": "118.100",
+    "Lat": 5.993680000305176,
+    "Lon": 80.32029724121094,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Katukurunda Air Force Base",
+    "gps_code": "VCCN",
+    "freq": "118.400",
+    "Lat": 6.55212020874,
+    "Lon": 79.9775009155,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sigiriya Air Force Base",
+    "gps_code": "VCCS",
+    "freq": "118.100",
+    "Lat": 7.95667,
+    "Lon": 80.7285,
+    "Ele": 192.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "China Bay Airport",
+    "gps_code": "VCCT",
+    "freq": "118.100",
+    "Lat": 8.539159,
+    "Lon": 81.18128,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vavuniya Airport",
+    "gps_code": "VCCV",
+    "freq": "118.100",
+    "Lat": 8.741009,
+    "Lon": 80.497845,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Weerawila Airport",
+    "gps_code": "VCCW",
+    "freq": "118.100",
+    "Lat": 6.25449,
+    "Lon": 81.235199,
+    "Ele": 15.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Mattala Rajapaksa International Airport",
+    "gps_code": "VCRI",
+    "freq": "121.700",
+    "Lat": 6.284467,
+    "Lon": 81.124128,
+    "Ele": 47.9
+  }
+]

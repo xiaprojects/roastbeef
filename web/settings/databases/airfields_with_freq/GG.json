@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Alderney Airport",
+    "gps_code": "EGJA",
+    "freq": "128.650",
+    "Lat": 49.706104,
+    "Lon": -2.21472,
+    "Ele": 88.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Guernsey Airport",
+    "gps_code": "EGJB",
+    "freq": "128.650",
+    "Lat": 49.435001,
+    "Lon": -2.60197,
+    "Ele": 102.4
+  }
+]

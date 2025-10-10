@@ -1,0 +1,839 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Alto Molocue Airport",
+    "gps_code": "AME",
+    "freq": "",
+    "Lat": -15.6102777778,
+    "Lon": 37.6813888889,
+    "Ele": 594.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Benguera Island Airport",
+    "gps_code": "BCW",
+    "freq": "",
+    "Lat": -21.8533,
+    "Lon": 35.438301,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bazaruto Island Airport",
+    "gps_code": "BZB",
+    "freq": "",
+    "Lat": -21.5411,
+    "Lon": 35.4729,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Caia Airport",
+    "gps_code": "CMZ",
+    "freq": "",
+    "Lat": -17.8331,
+    "Lon": 35.3341,
+    "Ele": 47.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Vila Franca do Save Airport",
+    "gps_code": "FQ49",
+    "freq": "",
+    "Lat": -21.164499282836918,
+    "Lon": 34.560699462890625,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Angoche Airport",
+    "gps_code": "FQAG",
+    "freq": "",
+    "Lat": -16.18187,
+    "Lon": 39.945217,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bilene Airport",
+    "gps_code": "FQBI",
+    "freq": "",
+    "Lat": -25.265985,
+    "Lon": 33.238598,
+    "Ele": 36.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Beira Airport",
+    "gps_code": "FQBR",
+    "freq": "119.700",
+    "Lat": -19.7964,
+    "Lon": 34.9076,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cuamba Airport",
+    "gps_code": "FQCB",
+    "freq": "",
+    "Lat": -14.815,
+    "Lon": 36.529999,
+    "Ele": 584.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chimoio Airport",
+    "gps_code": "FQCH",
+    "freq": "118.400",
+    "Lat": -19.15130043029785,
+    "Lon": 33.42900085449219,
+    "Ele": 697.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Furancungo Airport",
+    "gps_code": "FQFU",
+    "freq": "",
+    "Lat": -14.91860008239746,
+    "Lon": 33.628299713134766,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inhaca Airport",
+    "gps_code": "FQIA",
+    "freq": "",
+    "Lat": -25.9971446991,
+    "Lon": 32.9293518066,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ibo Airport",
+    "gps_code": "FQIB",
+    "freq": "",
+    "Lat": -12.350174,
+    "Lon": 40.602297,
+    "Ele": 8.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Inhambane Airport",
+    "gps_code": "FQIN",
+    "freq": "118.400",
+    "Lat": -23.8764,
+    "Lon": 35.408501,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lichinga Airport",
+    "gps_code": "FQLC",
+    "freq": "118.400",
+    "Lat": -13.274,
+    "Lon": 35.2663,
+    "Ele": 1373.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lumbo Airport",
+    "gps_code": "FQLU",
+    "freq": "121.300",
+    "Lat": -15.0331,
+    "Lon": 40.6717,
+    "Ele": 10.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Maputo Airport",
+    "gps_code": "FQMA",
+    "freq": "121.300",
+    "Lat": -25.920799,
+    "Lon": 32.572601,
+    "Ele": 44.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mueda Airport",
+    "gps_code": "FQMD",
+    "freq": "",
+    "Lat": -11.6729,
+    "Lon": 39.563099,
+    "Ele": 850.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mocímboa da Praia Airport",
+    "gps_code": "FQMP",
+    "freq": "",
+    "Lat": -11.3618,
+    "Lon": 40.3549,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Marrupa Airport",
+    "gps_code": "FQMR",
+    "freq": "",
+    "Lat": -13.2251,
+    "Lon": 37.552101,
+    "Ele": 755.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nacala Airport",
+    "gps_code": "FQNC",
+    "freq": "",
+    "Lat": -14.4882,
+    "Lon": 40.7122,
+    "Ele": 125.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nampula Airport",
+    "gps_code": "FQNP",
+    "freq": "128.800",
+    "Lat": -15.105600357055664,
+    "Lon": 39.28179931640625,
+    "Ele": 440.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pemba Airport",
+    "gps_code": "FQPB",
+    "freq": "118.400",
+    "Lat": -12.993302,
+    "Lon": 40.524867,
+    "Ele": 100.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ponta do Ouro Airport",
+    "gps_code": "FQPO",
+    "freq": "",
+    "Lat": -26.826913,
+    "Lon": 32.838444,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Quelimane Airport",
+    "gps_code": "FQQL",
+    "freq": "118.300",
+    "Lat": -17.855499267578125,
+    "Lon": 36.86909866333008,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Songo Airport",
+    "gps_code": "FQSG",
+    "freq": "118.400",
+    "Lat": -15.6027,
+    "Lon": 32.773201,
+    "Ele": 885.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chingozi Airport",
+    "gps_code": "FQTT",
+    "freq": "127.900",
+    "Lat": -16.104799270629883,
+    "Lon": 33.64020156860352,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulongwe Airport",
+    "gps_code": "FQUG",
+    "freq": "",
+    "Lat": -14.7046,
+    "Lon": 34.352402,
+    "Ele": 1300.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vilankulo Airport",
+    "gps_code": "FQVL",
+    "freq": "118.300",
+    "Lat": -22.018400192260746,
+    "Lon": 35.31330108642578,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Xai-Xai Chongoene Airport",
+    "gps_code": "FQXA",
+    "freq": "",
+    "Lat": -24.892909,
+    "Lon": 33.753024,
+    "Ele": 88.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Indigo Bay Lodge Airport",
+    "gps_code": "IBL",
+    "freq": "",
+    "Lat": -21.708,
+    "Lon": 35.452801,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Inhaminga Airport",
+    "gps_code": "IMG",
+    "freq": "",
+    "Lat": -18.41,
+    "Lon": 35.0045,
+    "Ele": 326.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Chinde Airport",
+    "gps_code": "INE",
+    "freq": "",
+    "Lat": -18.59,
+    "Lon": 36.4489,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Luabo Airport",
+    "gps_code": "LBM",
+    "freq": "",
+    "Lat": -18.4139,
+    "Lon": 36.1068,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Palma Airport",
+    "gps_code": "LMZ",
+    "freq": "",
+    "Lat": -10.7506,
+    "Lon": 40.4702,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maganja da Costa Airport",
+    "gps_code": "MJS",
+    "freq": "",
+    "Lat": -17.3087,
+    "Lon": 37.5,
+    "Ele": 65.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Montepuez Airport",
+    "gps_code": "MTU",
+    "freq": "",
+    "Lat": -13.121899604797363,
+    "Lon": 39.05279922485352,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mbatamila Airport",
+    "gps_code": "MZ-0001",
+    "freq": "",
+    "Lat": -12.169599,
+    "Lon": 37.54545,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Macalonge Airport",
+    "gps_code": "MZ-0002",
+    "freq": "",
+    "Lat": -12.499796,
+    "Lon": 35.428228,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Metangula Airport",
+    "gps_code": "MZ-0003",
+    "freq": "",
+    "Lat": -12.701334,
+    "Lon": 34.803468,
+    "Ele": 502.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paradise Island Airport",
+    "gps_code": "MZ-0005",
+    "freq": "",
+    "Lat": -21.614999771118,
+    "Lon": 35.338001251221,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Xinavane Airport",
+    "gps_code": "MZ-0006",
+    "freq": "",
+    "Lat": -25.031328,
+    "Lon": 32.748115,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Quissico Airport",
+    "gps_code": "MZ-0007",
+    "freq": "",
+    "Lat": -24.70554,
+    "Lon": 34.732691,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Massinga Airport",
+    "gps_code": "MZ-0008",
+    "freq": "",
+    "Lat": -23.345136,
+    "Lon": 35.339172,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Homoine Airport",
+    "gps_code": "MZ-0009",
+    "freq": "",
+    "Lat": -23.866113,
+    "Lon": 35.136698,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mabote Airport",
+    "gps_code": "MZ-0010",
+    "freq": "",
+    "Lat": -22.044039,
+    "Lon": 34.158814,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baixo Pinda Airport",
+    "gps_code": "MZ-0011",
+    "freq": "",
+    "Lat": -14.210912,
+    "Lon": 40.696848,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Matemo Airport",
+    "gps_code": "MZ-0013",
+    "freq": "",
+    "Lat": -12.201529,
+    "Lon": 40.569915,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Medjumbe Airport",
+    "gps_code": "MZ-0014",
+    "freq": "",
+    "Lat": -11.817449,
+    "Lon": 40.602972,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mbamba Airport",
+    "gps_code": "MZ-0016",
+    "freq": "",
+    "Lat": -12.140706,
+    "Lon": 38.318613,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lugenda Wilderness Camp Airstrip",
+    "gps_code": "MZ-0017",
+    "freq": "",
+    "Lat": -12.288658,
+    "Lon": 37.818062,
+    "Ele": 297.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Buffalo Camp Airstrip",
+    "gps_code": "MZ-0018",
+    "freq": "",
+    "Lat": -20.913318,
+    "Lon": 34.283153,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Québese Airport",
+    "gps_code": "MZ-0019",
+    "freq": "",
+    "Lat": -20.630937,
+    "Lon": 34.066019,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Machasi Airport",
+    "gps_code": "MZ-0020",
+    "freq": "",
+    "Lat": -20.823041,
+    "Lon": 33.378488,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Massangena Airport",
+    "gps_code": "MZ-0021",
+    "freq": "",
+    "Lat": -21.587678,
+    "Lon": 32.929183,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tondo Lodge Airstrip",
+    "gps_code": "MZ-0022",
+    "freq": "",
+    "Lat": -21.425639,
+    "Lon": 33.865274,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Espungabera Airport",
+    "gps_code": "MZ-0023",
+    "freq": "",
+    "Lat": -20.438769,
+    "Lon": 32.774927,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sussundenga Airport",
+    "gps_code": "MZ-0024",
+    "freq": "",
+    "Lat": -19.408009,
+    "Lon": 33.28094,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mafambisse Airport",
+    "gps_code": "MZ-0025",
+    "freq": "",
+    "Lat": -19.575645,
+    "Lon": 34.633552,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mague Airport",
+    "gps_code": "MZ-0026",
+    "freq": "",
+    "Lat": -15.810219,
+    "Lon": 31.741015,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Blanguete Airport",
+    "gps_code": "MZ-0027",
+    "freq": "",
+    "Lat": -15.684819,
+    "Lon": 30.610828,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zumbo Airport",
+    "gps_code": "MZ-0028",
+    "freq": "",
+    "Lat": -15.612746,
+    "Lon": 30.421241,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zambue Airport",
+    "gps_code": "MZ-0029",
+    "freq": "",
+    "Lat": -15.132704,
+    "Lon": 30.802094,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fingoe Airport",
+    "gps_code": "MZ-0030",
+    "freq": "",
+    "Lat": -15.172786,
+    "Lon": 31.906405,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Milange Airport",
+    "gps_code": "MZ-0031",
+    "freq": "",
+    "Lat": -16.124602,
+    "Lon": 35.734548,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gile Airport",
+    "gps_code": "MZ-0032",
+    "freq": "",
+    "Lat": -16.163767,
+    "Lon": 38.360793,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chiure Airport",
+    "gps_code": "MZ-0033",
+    "freq": "",
+    "Lat": -13.407165,
+    "Lon": 39.803192,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Macomia Airport",
+    "gps_code": "MZ-0034",
+    "freq": "",
+    "Lat": -12.271035,
+    "Lon": 40.110719,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Meluco Airport",
+    "gps_code": "MZ-0035",
+    "freq": "",
+    "Lat": -12.525447,
+    "Lon": 39.654529,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Malvernia Airport",
+    "gps_code": "MZ-0036",
+    "freq": "",
+    "Lat": -22.088361,
+    "Lon": 31.693199,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Macossa Airport",
+    "gps_code": "MZ-0037",
+    "freq": "",
+    "Lat": -17.86764,
+    "Lon": 33.915103,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mecanhelas Airport",
+    "gps_code": "MZ-0038",
+    "freq": "",
+    "Lat": -15.202762,
+    "Lon": 35.870151,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mucumbura Airport",
+    "gps_code": "MZ-0039",
+    "freq": "",
+    "Lat": -16.187755,
+    "Lon": 31.686824,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Catandica Airport",
+    "gps_code": "MZ-0040",
+    "freq": "",
+    "Lat": -18.136596,
+    "Lon": 33.202238,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vale Chassapa Airport",
+    "gps_code": "MZ-0041",
+    "freq": "",
+    "Lat": -18.394034,
+    "Lon": 35.599975,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mopeia Airport",
+    "gps_code": "MZ-0042",
+    "freq": "",
+    "Lat": -17.977031,
+    "Lon": 35.705003,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chemba Airport",
+    "gps_code": "MZ-0043",
+    "freq": "",
+    "Lat": -17.167836,
+    "Lon": 34.882624,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Massingir Airport",
+    "gps_code": "MZ-0044",
+    "freq": "",
+    "Lat": -23.939579,
+    "Lon": 32.153803,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inhassoro Airstrip",
+    "gps_code": "MZ-0045",
+    "freq": "",
+    "Lat": -21.547634,
+    "Lon": 35.119673,
+    "Ele": 34.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Quirimba Airstrip",
+    "gps_code": "MZ-0046",
+    "freq": "",
+    "Lat": -12.429533,
+    "Lon": 40.614222,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vamizi Airstrip",
+    "gps_code": "MZ-0047",
+    "freq": "",
+    "Lat": -11.030273,
+    "Lon": 40.612378,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Afungi Airport",
+    "gps_code": "MZ-0048",
+    "freq": "",
+    "Lat": -10.84903,
+    "Lon": 40.50541,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenmare Moma Airport",
+    "gps_code": "MZ-0051",
+    "freq": "",
+    "Lat": -16.55068,
+    "Lon": 39.62062,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pomene Airstrip",
+    "gps_code": "MZ-0052",
+    "freq": "",
+    "Lat": -22.94259,
+    "Lon": 35.57047,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zongoene Airport",
+    "gps_code": "MZ-0053",
+    "freq": "",
+    "Lat": -25.19949,
+    "Lon": 33.50123,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Machangulo Airport",
+    "gps_code": "MZ-0054",
+    "freq": "",
+    "Lat": -26.20306,
+    "Lon": 32.93819,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Emboqui Airport",
+    "gps_code": "MZ-0059",
+    "freq": "",
+    "Lat": -15.60454,
+    "Lon": 32.41439,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandimba Airport",
+    "gps_code": "MZ-0061",
+    "freq": "",
+    "Lat": -14.33943,
+    "Lon": 35.663,
+    "Ele": 776.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chokwé Airport",
+    "gps_code": "MZ-TGS",
+    "freq": "",
+    "Lat": -24.52059936523437,
+    "Lon": 32.965301513671875,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nangade Airport",
+    "gps_code": "NND",
+    "freq": "",
+    "Lat": -11.073,
+    "Lon": 39.68,
+    "Ele": 251.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pebane Airport",
+    "gps_code": "PEB",
+    "freq": "",
+    "Lat": -17.27276,
+    "Lon": 38.18073,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marromeu Airport",
+    "gps_code": "RRM",
+    "freq": "",
+    "Lat": -18.319259,
+    "Lon": 35.949501,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gurue Airport",
+    "gps_code": "VJQ",
+    "freq": "",
+    "Lat": -15.5062,
+    "Lon": 36.9904,
+    "Ele": 685.2
+  }
+]

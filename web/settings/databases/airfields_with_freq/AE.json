@@ -1,0 +1,380 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Skydive Dubai Airport",
+    "gps_code": "AE-0003",
+    "freq": "",
+    "Lat": 25.090037,
+    "Lon": 55.132345,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Upper Yasat Island Airport",
+    "gps_code": "AE-0024",
+    "freq": "",
+    "Lat": 24.221075,
+    "Lon": 52.006719,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Qaffay Airport",
+    "gps_code": "AE-0026",
+    "freq": "",
+    "Lat": 24.59017,
+    "Lon": 51.72703,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Camp Falaj Hazzaa Airfield",
+    "gps_code": "AE-0065",
+    "freq": "",
+    "Lat": 24.189055,
+    "Lon": 55.715891,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Al Abyad Airfield",
+    "gps_code": "AE-0086",
+    "freq": "",
+    "Lat": 24.182347,
+    "Lon": 53.867532,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nad Al Sheba Airport",
+    "gps_code": "AE-0088",
+    "freq": "",
+    "Lat": 25.11475,
+    "Lon": 55.29435,
+    "Ele": 11.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghantoot Naval Airfield",
+    "gps_code": "AE-0089",
+    "freq": "",
+    "Lat": 24.88443,
+    "Lon": 54.84281,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Marawah Airport",
+    "gps_code": "AE-0090",
+    "freq": "",
+    "Lat": 24.27215,
+    "Lon": 53.32545,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lower Yasat Island Airport",
+    "gps_code": "AE-0091",
+    "freq": "",
+    "Lat": 24.18884,
+    "Lon": 51.99655,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ras Ghumais Air Base",
+    "gps_code": "AE-0092",
+    "freq": "",
+    "Lat": 24.34092,
+    "Lon": 51.60276,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Diynah Airport",
+    "gps_code": "AE-0107",
+    "freq": "",
+    "Lat": 24.95,
+    "Lon": 52.399,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroprakt Private Airport",
+    "gps_code": "AE-0115",
+    "freq": "",
+    "Lat": 25.26895,
+    "Lon": 55.92562,
+    "Ele": 139.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Qusahwira Air Base",
+    "gps_code": "AE-0127",
+    "freq": "",
+    "Lat": 22.776021,
+    "Lon": 55.063199,
+    "Ele": 90.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Liwa Air Base",
+    "gps_code": "AE-0128",
+    "freq": "",
+    "Lat": 23.65128,
+    "Lon": 53.82444,
+    "Ele": 128.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Liwa Auxiliary Airfield",
+    "gps_code": "AE-0129",
+    "freq": "",
+    "Lat": 23.68789,
+    "Lon": 53.86956,
+    "Ele": 118.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sas Al Nakheel Air Base",
+    "gps_code": "AE-0221",
+    "freq": "",
+    "Lat": 24.44128,
+    "Lon": 54.51696,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Abu Dhabi Northeast Airport - Suweihan Air Base",
+    "gps_code": "OM11",
+    "freq": "",
+    "Lat": 24.526793,
+    "Lon": 54.974812,
+    "Ele": 26.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Zayed International Airport",
+    "gps_code": "OMAA",
+    "freq": "124.400",
+    "Lat": 24.443764,
+    "Lon": 54.651718,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Buhasa Airport",
+    "gps_code": "OMAB",
+    "freq": "",
+    "Lat": 23.599701,
+    "Lon": 53.379398,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Bateen Executive Airport",
+    "gps_code": "OMAD",
+    "freq": "124.400",
+    "Lat": 24.428301,
+    "Lon": 54.458099,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Futaysi Airport",
+    "gps_code": "OMAF",
+    "freq": "",
+    "Lat": 24.378889,
+    "Lon": 54.316111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "KIZAD Airport",
+    "gps_code": "OMAG",
+    "freq": "",
+    "Lat": 24.726505,
+    "Lon": 54.832259,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Hamra Auxiliary Airport",
+    "gps_code": "OMAH",
+    "freq": "",
+    "Lat": 24.073999,
+    "Lon": 52.4636,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Jebel Dhanna Airport",
+    "gps_code": "OMAJ",
+    "freq": "118.100",
+    "Lat": 24.187755,
+    "Lon": 52.613934,
+    "Ele": 13.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Ain International Airport",
+    "gps_code": "OMAL",
+    "freq": "119.850",
+    "Lat": 24.261699676513672,
+    "Lon": 55.60919952392578,
+    "Ele": 264.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Dhafra Air Base",
+    "gps_code": "OMAM",
+    "freq": "124.500",
+    "Lat": 24.248199462900004,
+    "Lon": 54.5476989746,
+    "Ele": 23.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Qarnayn Airport",
+    "gps_code": "OMAQ",
+    "freq": "",
+    "Lat": 24.930599,
+    "Lon": 52.855099,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arzanah Airport",
+    "gps_code": "OMAR",
+    "freq": "120.150",
+    "Lat": 24.780872,
+    "Lon": 52.559871,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Das Island Airport",
+    "gps_code": "OMAS",
+    "freq": "120.200",
+    "Lat": 25.138234,
+    "Lon": 52.874429,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Zirku Airport",
+    "gps_code": "OMAZ",
+    "freq": "129.750",
+    "Lat": 24.862492,
+    "Lon": 53.077141,
+    "Ele": 4.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sir Bani Yas Airport",
+    "gps_code": "OMBY",
+    "freq": "",
+    "Lat": 24.283611,
+    "Lon": 52.580278,
+    "Ele": 7.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Dubai International Airport",
+    "gps_code": "OMDB",
+    "freq": "124.900",
+    "Lat": 25.2527999878,
+    "Lon": 55.3643989563,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Delma Airport",
+    "gps_code": "OMDL",
+    "freq": "",
+    "Lat": 24.51,
+    "Lon": 52.3352,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Al Minhad Air Base",
+    "gps_code": "OMDM",
+    "freq": "122.500",
+    "Lat": 25.0268001556,
+    "Lon": 55.3661994934,
+    "Ele": 50.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Al Maktoum International Airport",
+    "gps_code": "OMDW",
+    "freq": "118.725",
+    "Lat": 24.896356,
+    "Lon": 55.161389,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Emirates Falcons Aeroclub Airport",
+    "gps_code": "OMEF",
+    "freq": "",
+    "Lat": 24.46611,
+    "Lon": 55.625,
+    "Ele": 276.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fujairah International Airport",
+    "gps_code": "OMFJ",
+    "freq": "129.400",
+    "Lat": 25.1122,
+    "Lon": 56.324001,
+    "Ele": 46.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Jazirah Airport",
+    "gps_code": "OMRJ",
+    "freq": "",
+    "Lat": 25.664957,
+    "Lon": 55.774413,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ras Al Khaimah International Airport",
+    "gps_code": "OMRK",
+    "freq": "121.600",
+    "Lat": 25.613500595092773,
+    "Lon": 55.93880081176758,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Saqr Field",
+    "gps_code": "OMRS",
+    "freq": "",
+    "Lat": 25.752944,
+    "Lon": 55.959234,
+    "Ele": 0.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Sharjah International Airport",
+    "gps_code": "OMSJ",
+    "freq": "124.675",
+    "Lat": 25.3286,
+    "Lon": 55.5172,
+    "Ele": 33.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sir Abu Nu'ayr Airport",
+    "gps_code": "OMSN",
+    "freq": "",
+    "Lat": 25.21679,
+    "Lon": 54.233447,
+    "Ele": 4.0
+  }
+]

@@ -1,0 +1,515 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Gangshan Air Force Base",
+    "gps_code": "RCAY",
+    "freq": "119.500",
+    "Lat": 22.782499,
+    "Lon": 120.263,
+    "Ele": 10.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kinmen Airport",
+    "gps_code": "RCBS",
+    "freq": "124.600",
+    "Lat": 24.4279,
+    "Lon": 118.359001,
+    "Ele": 28.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Qimei Airport",
+    "gps_code": "RCCM",
+    "freq": "",
+    "Lat": 23.213127,
+    "Lon": 119.417539,
+    "Ele": 19.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pingtung Air Force Base",
+    "gps_code": "RCDC",
+    "freq": "121.100",
+    "Lat": 22.6724,
+    "Lon": 120.461998,
+    "Ele": 23.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Longtan Air Base",
+    "gps_code": "RCDI",
+    "freq": "135.100",
+    "Lat": 24.853588,
+    "Lon": 121.236392,
+    "Ele": 240.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Matsu Nangan Airport",
+    "gps_code": "RCFG",
+    "freq": "125.500",
+    "Lat": 26.159656,
+    "Lon": 119.958376,
+    "Ele": 70.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taitung Airport",
+    "gps_code": "RCFN",
+    "freq": "119.400",
+    "Lat": 22.7549991607666,
+    "Lon": 121.10199737548828,
+    "Ele": 43.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lüdao Airport",
+    "gps_code": "RCGI",
+    "freq": "118.800",
+    "Lat": 22.673901,
+    "Lon": 121.466003,
+    "Ele": 8.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Kaohsiung International Airport",
+    "gps_code": "RCKH",
+    "freq": "121.100",
+    "Lat": 22.577101,
+    "Lon": 120.349998,
+    "Ele": 9.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chiayi Airport",
+    "gps_code": "RCKU",
+    "freq": "125.500",
+    "Lat": 23.462577,
+    "Lon": 120.390544,
+    "Ele": 25.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hengchun Airport",
+    "gps_code": "RCKW",
+    "freq": "124.700",
+    "Lat": 22.0411,
+    "Lon": 120.730003,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dongsha Island (Pratas Island) Airport",
+    "gps_code": "RCLM",
+    "freq": "",
+    "Lat": 20.7066,
+    "Lon": 116.721001,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lanyu Airport",
+    "gps_code": "RCLY",
+    "freq": "118.500",
+    "Lat": 22.027000427246094,
+    "Lon": 121.53500366210938,
+    "Ele": 13.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taichung International Airport / Ching Chuang Kang Air Base",
+    "gps_code": "RCMQ",
+    "freq": "120.400",
+    "Lat": 24.2647,
+    "Lon": 120.621002,
+    "Ele": 202.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Matsu Beigan Airport",
+    "gps_code": "RCMT",
+    "freq": "125.500",
+    "Lat": 26.224199,
+    "Lon": 120.002998,
+    "Ele": 12.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tainan International Airport / Tainan Air Base",
+    "gps_code": "RCNN",
+    "freq": "121.100",
+    "Lat": 22.950399,
+    "Lon": 120.206001,
+    "Ele": 19.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hsinchu Air Base",
+    "gps_code": "RCPO",
+    "freq": "123.500",
+    "Lat": 24.8180007935,
+    "Lon": 120.939002991,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Penghu Magong Airport",
+    "gps_code": "RCQC",
+    "freq": "128.100",
+    "Lat": 23.568701,
+    "Lon": 119.627998,
+    "Ele": 31.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chihhang Air Base",
+    "gps_code": "RCQS",
+    "freq": "119.400",
+    "Lat": 22.7931,
+    "Lon": 121.181999,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Taiping Island Airport",
+    "gps_code": "RCSP",
+    "freq": "",
+    "Lat": 10.377089,
+    "Lon": 114.365637,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pingtung Air Force Base North",
+    "gps_code": "RCSQ",
+    "freq": "121.100",
+    "Lat": 22.700199,
+    "Lon": 120.482002,
+    "Ele": 29.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taipei Songshan Airport",
+    "gps_code": "RCSS",
+    "freq": "119.700",
+    "Lat": 25.069401,
+    "Lon": 121.552002,
+    "Ele": 5.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Taiwan Taoyuan International Airport",
+    "gps_code": "RCTP",
+    "freq": "119.600",
+    "Lat": 25.0777,
+    "Lon": 121.233002,
+    "Ele": 32.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Wang'an Airport",
+    "gps_code": "RCWA",
+    "freq": "118.100",
+    "Lat": 23.369108,
+    "Lon": 119.503598,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Guiren Airport / Guiren Army Airfield",
+    "gps_code": "RCXY",
+    "freq": "",
+    "Lat": 22.981438,
+    "Lon": 120.284379,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hualien Airport",
+    "gps_code": "RCYU",
+    "freq": "119.100",
+    "Lat": 24.023099899291992,
+    "Lon": 121.61799621582033,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "AsiaTec Airport",
+    "gps_code": "TW-0002",
+    "freq": "",
+    "Lat": 24.26482,
+    "Lon": 120.81644,
+    "Ele": 320.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zuoying Naval Airfield",
+    "gps_code": "TW-0004",
+    "freq": "",
+    "Lat": 22.705,
+    "Lon": 120.280998,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hualien (Chiashan) Air Base",
+    "gps_code": "TW-0006",
+    "freq": "",
+    "Lat": 24.026161,
+    "Lon": 121.589897,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chiayi Highway Airstrip",
+    "gps_code": "TW-0007",
+    "freq": "",
+    "Lat": 23.538652,
+    "Lon": 120.410156,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taimali Airport",
+    "gps_code": "TW-0032",
+    "freq": "",
+    "Lat": 22.586871,
+    "Lon": 121.000736,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dapeng Bay Ultralightport",
+    "gps_code": "TW-0034",
+    "freq": "",
+    "Lat": 22.45167,
+    "Lon": 120.48565,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shoufeng Ultralightport",
+    "gps_code": "TW-0035",
+    "freq": "",
+    "Lat": 23.87514,
+    "Lon": 121.54155,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Huadong Airfield",
+    "gps_code": "TW-0036",
+    "freq": "",
+    "Lat": 23.77948,
+    "Lon": 121.47453,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fenglin Airstrip",
+    "gps_code": "TW-0037",
+    "freq": "",
+    "Lat": 23.77262,
+    "Lon": 121.47999,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saijia Jiehao Ultralightport",
+    "gps_code": "TW-0038",
+    "freq": "",
+    "Lat": 22.75635,
+    "Lon": 120.62325,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mingli Gliderport",
+    "gps_code": "TW-0039",
+    "freq": "",
+    "Lat": 23.71454,
+    "Lon": 121.42002,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wanrong Paraglider Base",
+    "gps_code": "TW-0040",
+    "freq": "",
+    "Lat": 23.71842,
+    "Lon": 121.4036,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Puli - Hutoushan Gliderport",
+    "gps_code": "TW-0041",
+    "freq": "",
+    "Lat": 23.96623,
+    "Lon": 120.98246,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wuri Weihui Airfield",
+    "gps_code": "TW-0042",
+    "freq": "",
+    "Lat": 24.04881,
+    "Lon": 120.63185,
+    "Ele": 42.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hualien Baiyun Airfield",
+    "gps_code": "TW-0053",
+    "freq": "",
+    "Lat": 23.89625,
+    "Lon": 121.56376,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lanqingting Ultralightport",
+    "gps_code": "TW-0054",
+    "freq": "",
+    "Lat": 23.89849,
+    "Lon": 121.56932,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Shoufeng North Ultralightport",
+    "gps_code": "TW-0055",
+    "freq": "",
+    "Lat": 23.87808,
+    "Lon": 121.54875,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "PIngtung Saijia Paragliding Field",
+    "gps_code": "TW-0058",
+    "freq": "",
+    "Lat": 22.75312,
+    "Lon": 120.64695,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Guanshan Airstrip",
+    "gps_code": "TW-0061",
+    "freq": "",
+    "Lat": 23.05556,
+    "Lon": 121.17125,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shunfeng Flying Club",
+    "gps_code": "TW-0062",
+    "freq": "",
+    "Lat": 23.805319,
+    "Lon": 120.554151,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Xizhou Airfield",
+    "gps_code": "TW-0063",
+    "freq": "",
+    "Lat": 23.86005,
+    "Lon": 120.47462,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taiwan Formosa UAV Association Testing Grounds",
+    "gps_code": "TW-0064",
+    "freq": "",
+    "Lat": 23.69765,
+    "Lon": 120.44209,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wanggong Airfield",
+    "gps_code": "TW-0065",
+    "freq": "",
+    "Lat": 23.96424,
+    "Lon": 120.33447,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ruisui Airfield",
+    "gps_code": "TW-0066",
+    "freq": "",
+    "Lat": 23.53923,
+    "Lon": 121.38567,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hualien Ultralight Airport",
+    "gps_code": "TW-0067",
+    "freq": "",
+    "Lat": 23.80368,
+    "Lon": 121.4811,
+    "Ele": 113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "208 Highway Strip",
+    "gps_code": "TW-0068",
+    "freq": "",
+    "Lat": 23.994525,
+    "Lon": 120.509977,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "296 298 Highway Strip",
+    "gps_code": "TW-0069",
+    "freq": "",
+    "Lat": 23.237659,
+    "Lon": 120.247668,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hualien Taroko Paraglider Field",
+    "gps_code": "TW-0070",
+    "freq": "",
+    "Lat": 24.10927,
+    "Lon": 121.62397,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Palicanlian Airstrip",
+    "gps_code": "TW-0088",
+    "freq": "",
+    "Lat": 23.68923,
+    "Lon": 121.47359,
+    "Ele": 106.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ligang West Airfield",
+    "gps_code": "TW-0093",
+    "freq": "",
+    "Lat": 22.78397,
+    "Lon": 120.53482,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ligang East Airfield",
+    "gps_code": "TW-0094",
+    "freq": "",
+    "Lat": 22.78034,
+    "Lon": 120.54403,
+    "Ele": 47.9
+  }
+]

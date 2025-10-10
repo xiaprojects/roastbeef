@@ -1,0 +1,2882 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Carabon Airport",
+    "gps_code": "EC-0001",
+    "freq": "",
+    "Lat": -3.6285500526428223,
+    "Lon": -80.18779754638672,
+    "Ele": 38.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nuevo Rocafuerte Airstrip",
+    "gps_code": "EC-0004",
+    "freq": "",
+    "Lat": -0.927875,
+    "Lon": -75.394383,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lorocachi Airstrip",
+    "gps_code": "EC-0005",
+    "freq": "",
+    "Lat": -1.615731,
+    "Lon": -75.98772,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pavacachi Airstrip",
+    "gps_code": "EC-0006",
+    "freq": "",
+    "Lat": -1.578569,
+    "Lon": -76.353395,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jaime Roldós Airstrip",
+    "gps_code": "EC-0007",
+    "freq": "",
+    "Lat": -1.384429,
+    "Lon": -76.958553,
+    "Ele": 258.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Taracoa Airstrip",
+    "gps_code": "EC-0008",
+    "freq": "",
+    "Lat": -1.368989,
+    "Lon": -76.947394,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuca Life Airstrip",
+    "gps_code": "EC-0009",
+    "freq": "",
+    "Lat": -1.497908,
+    "Lon": -77.474409,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pacayacu Airstrip",
+    "gps_code": "EC-0010",
+    "freq": "",
+    "Lat": -1.650816,
+    "Lon": -77.596069,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarayaku Airstrip",
+    "gps_code": "EC-0011",
+    "freq": "",
+    "Lat": -1.739358,
+    "Lon": -77.485087,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Teresa Mama Airstrip",
+    "gps_code": "EC-0012",
+    "freq": "",
+    "Lat": -1.923175,
+    "Lon": -77.211526,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Huito Molino Airstrip",
+    "gps_code": "EC-0013",
+    "freq": "",
+    "Lat": -1.828625,
+    "Lon": -77.321688,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Macuma Airstrip",
+    "gps_code": "EC-0014",
+    "freq": "",
+    "Lat": -2.145775,
+    "Lon": -77.700306,
+    "Ele": 701.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chichirata Airstrip",
+    "gps_code": "EC-0015",
+    "freq": "",
+    "Lat": -2.38364,
+    "Lon": -76.656656,
+    "Ele": 257.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Andoas Airstrip",
+    "gps_code": "EC-0016",
+    "freq": "",
+    "Lat": -2.568889,
+    "Lon": -76.660795,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Patukmai Airstrip",
+    "gps_code": "EC-0017",
+    "freq": "",
+    "Lat": -2.483436,
+    "Lon": -77.201006,
+    "Ele": 275.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Villano Airstrip",
+    "gps_code": "EC-0018",
+    "freq": "",
+    "Lat": -1.502584,
+    "Lon": -77.327519,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Rosa 2 Airstrip",
+    "gps_code": "EC-0019",
+    "freq": "",
+    "Lat": -2.212734,
+    "Lon": -77.572687,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuvientza Airstrip",
+    "gps_code": "EC-0020",
+    "freq": "",
+    "Lat": -2.164911,
+    "Lon": -77.57744,
+    "Ele": 517.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ayuy Airstrip",
+    "gps_code": "EC-0021",
+    "freq": "",
+    "Lat": -2.082567,
+    "Lon": -77.580241,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Copataza Airstrip",
+    "gps_code": "EC-0022",
+    "freq": "",
+    "Lat": -2.090779,
+    "Lon": -77.446868,
+    "Ele": 411.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Jimbiquiti Airstrip",
+    "gps_code": "EC-0023",
+    "freq": "",
+    "Lat": -1.990084,
+    "Lon": -77.716252,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sharamentza Airstrip",
+    "gps_code": "EC-0024",
+    "freq": "",
+    "Lat": -2.463387,
+    "Lon": -76.992629,
+    "Ele": 303.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Capauari Airstrip",
+    "gps_code": "EC-0025",
+    "freq": "",
+    "Lat": -2.070324,
+    "Lon": -77.173335,
+    "Ele": 333.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Achuar Airstrip",
+    "gps_code": "EC-0026",
+    "freq": "",
+    "Lat": -2.023662,
+    "Lon": -77.468825,
+    "Ele": 442.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shaimi Airstrip",
+    "gps_code": "EC-0027",
+    "freq": "",
+    "Lat": -1.926173,
+    "Lon": -77.505011,
+    "Ele": 446.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Yaupi Airstrip",
+    "gps_code": "EC-0028",
+    "freq": "",
+    "Lat": -2.852197,
+    "Lon": -77.942373,
+    "Ele": 381.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wasakentza Airstrip",
+    "gps_code": "EC-0029",
+    "freq": "",
+    "Lat": -2.543927,
+    "Lon": -77.199249,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wampuik Airstrip",
+    "gps_code": "EC-0030",
+    "freq": "",
+    "Lat": -2.61555,
+    "Lon": -77.023164,
+    "Ele": 254.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tambo Borja Airstrip",
+    "gps_code": "EC-0031",
+    "freq": "",
+    "Lat": -2.36646,
+    "Lon": -76.513774,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tambo Airstrip",
+    "gps_code": "EC-0032",
+    "freq": "",
+    "Lat": -1.873892,
+    "Lon": -76.773644,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cononaco Bameno Airstrip",
+    "gps_code": "EC-0033",
+    "freq": "",
+    "Lat": -1.298779,
+    "Lon": -76.154546,
+    "Ele": 256.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Atatakuinjia Airstrip",
+    "gps_code": "EC-0034",
+    "freq": "",
+    "Lat": -1.649742,
+    "Lon": -77.047942,
+    "Ele": 300.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Holandesa Airport",
+    "gps_code": "EC-0035",
+    "freq": "",
+    "Lat": -0.72495,
+    "Lon": -79.46976,
+    "Ele": 135.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ana María Airport",
+    "gps_code": "EC-0036",
+    "freq": "",
+    "Lat": -0.96115,
+    "Lon": -79.4162,
+    "Ele": 71.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Cadena Airport",
+    "gps_code": "EC-0037",
+    "freq": "",
+    "Lat": -0.93109,
+    "Lon": -79.420359,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Guayabo Airport",
+    "gps_code": "EC-0038",
+    "freq": "",
+    "Lat": -0.98999,
+    "Lon": -79.43663,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Agro Aereo Jaramillo Airport",
+    "gps_code": "EC-0039",
+    "freq": "",
+    "Lat": -0.98762,
+    "Lon": -79.4445,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Esterito Airport",
+    "gps_code": "EC-0040",
+    "freq": "",
+    "Lat": -0.94007,
+    "Lon": -79.31379,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Banastru Airport",
+    "gps_code": "EC-0041",
+    "freq": "",
+    "Lat": -1.98576,
+    "Lon": -79.62703,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Barbones - Samuel Quimi Airport",
+    "gps_code": "EC-0043",
+    "freq": "",
+    "Lat": -3.18885,
+    "Lon": -79.86874,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Puná Southwest Airport",
+    "gps_code": "EC-0045",
+    "freq": "",
+    "Lat": -3.01335,
+    "Lon": -80.257,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "NIRSA Airport",
+    "gps_code": "EC-0047",
+    "freq": "",
+    "Lat": -2.72034,
+    "Lon": -80.249194,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Playas Airport",
+    "gps_code": "EC-0048",
+    "freq": "",
+    "Lat": -2.6338,
+    "Lon": -80.40429,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Saraguro Army Airfield",
+    "gps_code": "EC-0049",
+    "freq": "",
+    "Lat": -2.53345,
+    "Lon": -80.40968,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Rebeldes Airpark",
+    "gps_code": "EC-0050",
+    "freq": "",
+    "Lat": -2.28323,
+    "Lon": -80.10262,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tambillo Airport",
+    "gps_code": "EC-0052",
+    "freq": "",
+    "Lat": -0.40349,
+    "Lon": -78.52983,
+    "Ele": 2709.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aguayo Airport",
+    "gps_code": "EC-0056",
+    "freq": "",
+    "Lat": -2.928941,
+    "Lon": -80.075941,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tapatla Airstrip",
+    "gps_code": "EC-0057",
+    "freq": "",
+    "Lat": 1.064419,
+    "Lon": -79.351037,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Nases Airstrip",
+    "gps_code": "EC-0061",
+    "freq": "",
+    "Lat": -2.559842,
+    "Lon": -77.172101,
+    "Ele": 274.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Llanchamacocha Airstrip",
+    "gps_code": "EC-0062",
+    "freq": "",
+    "Lat": -1.627303,
+    "Lon": -77.303546,
+    "Ele": 347.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Méndez Airport",
+    "gps_code": "EC-MZD",
+    "freq": "",
+    "Lat": -2.733330011367798,
+    "Lon": -78.31670379638672,
+    "Ele": 539.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Alba Elena Airport",
+    "gps_code": "SE01",
+    "freq": "",
+    "Lat": -2.173581,
+    "Lon": -79.280763,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Guabital Airport",
+    "gps_code": "SE02",
+    "freq": "",
+    "Lat": -2.773399,
+    "Lon": -79.702411,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Peñas Airport",
+    "gps_code": "SE03",
+    "freq": "",
+    "Lat": -2.94716,
+    "Lon": -80.1007,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Carlos Costa Airport",
+    "gps_code": "SE08",
+    "freq": "",
+    "Lat": -2.054719924926758,
+    "Lon": -79.43309783935547,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "San Rafael Airport",
+    "gps_code": "SE09",
+    "freq": "",
+    "Lat": -2.174602,
+    "Lon": -79.234887,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vinces Airport",
+    "gps_code": "SE10",
+    "freq": "",
+    "Lat": -1.59611,
+    "Lon": -79.726097,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Km 60 Airport",
+    "gps_code": "SE11",
+    "freq": "",
+    "Lat": -0.536183,
+    "Lon": -79.371976,
+    "Ele": 499.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Babahoyo North Airport",
+    "gps_code": "SE13",
+    "freq": "",
+    "Lat": -1.7033530473709106,
+    "Lon": -79.53804779052734,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Carlos Airport",
+    "gps_code": "SE14",
+    "freq": "",
+    "Lat": -2.21775,
+    "Lon": -79.43136,
+    "Ele": 38.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Quevedo North Airport",
+    "gps_code": "SE15",
+    "freq": "",
+    "Lat": -0.9998260140419006,
+    "Lon": -79.41535949707031,
+    "Ele": 95.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Loja Airport",
+    "gps_code": "SE16",
+    "freq": "",
+    "Lat": -3.881423950195313,
+    "Lon": -79.23474884033203,
+    "Ele": 2342.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Celia María Airport",
+    "gps_code": "SE22",
+    "freq": "",
+    "Lat": -3.27905,
+    "Lon": -79.80118,
+    "Ele": 34.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Solbananas Airport",
+    "gps_code": "SE58",
+    "freq": "",
+    "Lat": -3.34094,
+    "Lon": -79.8638,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Mina Airport",
+    "gps_code": "SE59",
+    "freq": "",
+    "Lat": -3.202759,
+    "Lon": -79.79825,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Puntilla Airport",
+    "gps_code": "SE60",
+    "freq": "",
+    "Lat": -2.443333,
+    "Lon": -79.399167,
+    "Ele": 59.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mar Abierto Airport",
+    "gps_code": "SEAB",
+    "freq": "",
+    "Lat": -2.156493,
+    "Lon": -80.773187,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Acado Airport",
+    "gps_code": "SEAC",
+    "freq": "",
+    "Lat": -1.397507,
+    "Lon": -77.19885,
+    "Ele": 335.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paandin Airport",
+    "gps_code": "SEAD",
+    "freq": "",
+    "Lat": -2.137235,
+    "Lon": -77.677402,
+    "Ele": 670.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Achuentza Airport",
+    "gps_code": "SEAH",
+    "freq": "",
+    "Lat": -2.833653,
+    "Lon": -77.761799,
+    "Ele": 274.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Alejandro Airport",
+    "gps_code": "SEAJ",
+    "freq": "",
+    "Lat": -0.881361,
+    "Lon": -79.396645,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Algarrobo Airstrip",
+    "gps_code": "SEAL",
+    "freq": "",
+    "Lat": -2.288551,
+    "Lon": -80.019765,
+    "Ele": 11.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chachoán Regional Airport",
+    "gps_code": "SEAM",
+    "freq": "118.200",
+    "Lat": -1.21207,
+    "Lon": -78.5746,
+    "Ele": 2591.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Agromarina Airstrip",
+    "gps_code": "SEAO",
+    "freq": "",
+    "Lat": -2.453185,
+    "Lon": -80.066835,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Arapicos Airport",
+    "gps_code": "SEAP",
+    "freq": "",
+    "Lat": -1.85762,
+    "Lon": -77.941399,
+    "Ele": 890.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aquapesca Airstrip",
+    "gps_code": "SEAQ",
+    "freq": "",
+    "Lat": -2.496764,
+    "Lon": -80.552155,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Arajuno Airport",
+    "gps_code": "SEAR",
+    "freq": "",
+    "Lat": -1.2357300519943235,
+    "Lon": -77.6854019165039,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Chau Airstrip",
+    "gps_code": "SEAU",
+    "freq": "",
+    "Lat": -2.823807,
+    "Lon": -77.771768,
+    "Ele": 303.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mashumarentza Military Airstrip",
+    "gps_code": "SEAX",
+    "freq": "",
+    "Lat": -2.757044,
+    "Lon": -77.22027,
+    "Ele": 242.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ayangue Airport",
+    "gps_code": "SEAY",
+    "freq": "",
+    "Lat": -1.977683,
+    "Lon": -80.745158,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Costa Azul Airstrip",
+    "gps_code": "SEAZ",
+    "freq": "",
+    "Lat": -0.873078,
+    "Lon": -79.327704,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Balzaura Airstrip",
+    "gps_code": "SEBL",
+    "freq": "",
+    "Lat": -1.947116,
+    "Lon": -76.308024,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Brisas del Mar Airstrip.",
+    "gps_code": "SEBM",
+    "freq": "",
+    "Lat": -2.828381,
+    "Lon": -80.020884,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bototillal Airstrip",
+    "gps_code": "SEBO",
+    "freq": "",
+    "Lat": -1.423874,
+    "Lon": -79.396144,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Blanca Piedra Airstrip",
+    "gps_code": "SEBP",
+    "freq": "",
+    "Lat": -2.103534,
+    "Lon": -79.469433,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Batán Airport",
+    "gps_code": "SEBT",
+    "freq": "",
+    "Lat": -2.094038,
+    "Lon": -79.880885,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bufeo Airstrip",
+    "gps_code": "SEBU",
+    "freq": "",
+    "Lat": -2.192174,
+    "Lon": -76.784617,
+    "Ele": 335.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Boanamo Airstrip",
+    "gps_code": "SEBW",
+    "freq": "",
+    "Lat": -1.260964,
+    "Lon": -76.387219,
+    "Ele": 262.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Probana Airport",
+    "gps_code": "SEBX",
+    "freq": "",
+    "Lat": -2.605359,
+    "Lon": -79.614612,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cumbaratza Airport",
+    "gps_code": "SEBZ",
+    "freq": "",
+    "Lat": -4.018793,
+    "Lon": -78.887293,
+    "Ele": 875.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Celeste Airport.",
+    "gps_code": "SECC",
+    "freq": "",
+    "Lat": 0.012807,
+    "Lon": -79.367843,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Calademar Airport",
+    "gps_code": "SECD",
+    "freq": "",
+    "Lat": -2.584669,
+    "Lon": -79.964156,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chongón Airstrip",
+    "gps_code": "SECG",
+    "freq": "",
+    "Lat": -2.230291,
+    "Lon": -80.054455,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chone Airport",
+    "gps_code": "SECH",
+    "freq": "",
+    "Lat": -0.6951010227203369,
+    "Lon": -80.0886001586914,
+    "Ele": 15.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Calica Airstrip",
+    "gps_code": "SECI",
+    "freq": "",
+    "Lat": -2.516987,
+    "Lon": -80.13594,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chankuap Airstrip",
+    "gps_code": "SECK",
+    "freq": "",
+    "Lat": -2.240933,
+    "Lon": -77.459008,
+    "Ele": 456.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hacienda Clementina Airport",
+    "gps_code": "SECM",
+    "freq": "",
+    "Lat": -1.7062699794769287,
+    "Lon": -79.37889862060547,
+    "Ele": 100.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Francisco De Orellana Airport",
+    "gps_code": "SECO",
+    "freq": "119.700",
+    "Lat": -0.462886,
+    "Lon": -76.986801,
+    "Ele": 254.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Coaque Airport",
+    "gps_code": "SECQ",
+    "freq": "",
+    "Lat": 0.016175,
+    "Lon": -80.091923,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Curaray Airport",
+    "gps_code": "SECR",
+    "freq": "",
+    "Lat": -1.384465,
+    "Lon": -76.938944,
+    "Ele": 253.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mariscal Lamar Airport",
+    "gps_code": "SECU",
+    "freq": "122.300",
+    "Lat": -2.88947,
+    "Lon": -78.984398,
+    "Ele": 2531.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Camaguay Airport",
+    "gps_code": "SECY",
+    "freq": "",
+    "Lat": -2.534167,
+    "Lon": -80.137167,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerro Azul Airport",
+    "gps_code": "SECZ",
+    "freq": "",
+    "Lat": -2.205134,
+    "Lon": -80.049993,
+    "Ele": 540.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dualar Airstrip",
+    "gps_code": "SEDA",
+    "freq": "",
+    "Lat": -2.361448,
+    "Lon": -80.162387,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerocisne Airport",
+    "gps_code": "SEDB",
+    "freq": "",
+    "Lat": -2.551863,
+    "Lon": -79.492396,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Delfines Airstrip",
+    "gps_code": "SEDF",
+    "freq": "",
+    "Lat": -2.58906,
+    "Lon": -80.291019,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Damointaro Airstrip",
+    "gps_code": "SEDM",
+    "freq": "",
+    "Lat": -1.294722,
+    "Lon": -77.319722,
+    "Ele": 335.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Colas de Oro Airport",
+    "gps_code": "SEDO",
+    "freq": "",
+    "Lat": -2.698472,
+    "Lon": -80.061409,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pukuan Airstrip",
+    "gps_code": "SEDP",
+    "freq": "",
+    "Lat": -2.101027,
+    "Lon": -77.15742,
+    "Ele": 336.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Darsacom Airstrip",
+    "gps_code": "SEDS",
+    "freq": "",
+    "Lat": -2.723363,
+    "Lon": -80.13474,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Eduardo Airstrip",
+    "gps_code": "SEED",
+    "freq": "",
+    "Lat": -0.365597,
+    "Lon": -77.302946,
+    "Ele": 305.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tekerika Suraka Airstrip",
+    "gps_code": "SEEK",
+    "freq": "",
+    "Lat": -1.954569,
+    "Lon": -76.554826,
+    "Ele": 305.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Morro Airstrip",
+    "gps_code": "SEEO",
+    "freq": "",
+    "Lat": -2.643455,
+    "Lon": -80.350049,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Piedrero Airport",
+    "gps_code": "SEEP",
+    "freq": "",
+    "Lat": -2.341612,
+    "Lon": -79.279642,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Palpailón",
+    "gps_code": "SEER",
+    "freq": "",
+    "Lat": 1.221636,
+    "Lon": -78.868266,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Etsa Airstrip",
+    "gps_code": "SEET",
+    "freq": "",
+    "Lat": -2.905964,
+    "Lon": -77.575509,
+    "Ele": 214.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Setuch Airstrip",
+    "gps_code": "SEEU",
+    "freq": "",
+    "Lat": -2.794536,
+    "Lon": -77.281829,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Exportamar Airstrip",
+    "gps_code": "SEEX",
+    "freq": "",
+    "Lat": -2.515499,
+    "Lon": -80.221437,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shiramentza Airstrip",
+    "gps_code": "SEEZ",
+    "freq": "",
+    "Lat": -2.750557,
+    "Lon": -77.556644,
+    "Ele": 224.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Francisco de Macuma Airstrip",
+    "gps_code": "SEFM",
+    "freq": "",
+    "Lat": -2.060004,
+    "Lon": -77.608323,
+    "Ele": 514.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hacienda La Fragua Airport",
+    "gps_code": "SEFR",
+    "freq": "",
+    "Lat": -1.869181,
+    "Lon": -80.011529,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumipalma Airport",
+    "gps_code": "SEFU",
+    "freq": "",
+    "Lat": -2.563699,
+    "Lon": -79.54552,
+    "Ele": 20.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Guale Airport",
+    "gps_code": "SEGE",
+    "freq": "",
+    "Lat": -1.61667001247406,
+    "Lon": -80.2332992553711,
+    "Ele": 67.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Hacienda Gran Chaparral Airport",
+    "gps_code": "SEGH",
+    "freq": "",
+    "Lat": -1.274146,
+    "Lon": -79.932926,
+    "Ele": 189.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Guarumal Airport",
+    "gps_code": "SEGL",
+    "freq": "",
+    "Lat": -1.860214,
+    "Lon": -79.642868,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanguntza Airstrip",
+    "gps_code": "SEGN",
+    "freq": "",
+    "Lat": -2.037239,
+    "Lon": -76.473366,
+    "Ele": 208.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Camacongo Airport",
+    "gps_code": "SEGO",
+    "freq": "",
+    "Lat": -2.770718,
+    "Lon": -79.767049,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Guaraní Airstrip",
+    "gps_code": "SEGR",
+    "freq": "",
+    "Lat": -2.235544,
+    "Lon": -77.240177,
+    "Ele": 315.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Seymour Galapagos Ecological Airport",
+    "gps_code": "SEGS",
+    "freq": "122.200",
+    "Lat": -0.453758,
+    "Lon": -90.2659,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarangaro Airstrip",
+    "gps_code": "SEGT",
+    "freq": "",
+    "Lat": -1.400583,
+    "Lon": -77.383055,
+    "Ele": 330.7
+  },
+  {
+    "type": "large_airport",
+    "name": "José Joaquín de Olmedo International Airport",
+    "gps_code": "SEGU",
+    "freq": "123.450",
+    "Lat": -2.15742,
+    "Lon": -79.883598,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gualaquiza Airport",
+    "gps_code": "SEGZ",
+    "freq": "",
+    "Lat": -3.42321,
+    "Lon": -78.567001,
+    "Ele": 804.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Chumbi Airstrip",
+    "gps_code": "SEHB",
+    "freq": "",
+    "Lat": -2.09847,
+    "Lon": -77.477692,
+    "Ele": 427.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mashient Airstrip",
+    "gps_code": "SEHE",
+    "freq": "",
+    "Lat": -2.159177,
+    "Lon": -77.322834,
+    "Ele": 349.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Mashuin Airstrip",
+    "gps_code": "SEHN",
+    "freq": "",
+    "Lat": -2.616113,
+    "Lon": -76.916497,
+    "Ele": 260.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Masurash Airstrip",
+    "gps_code": "SEHR",
+    "freq": "",
+    "Lat": -2.205549,
+    "Lon": -77.265694,
+    "Ele": 337.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kashaints Airstrip",
+    "gps_code": "SEHS",
+    "freq": "",
+    "Lat": -2.698513,
+    "Lon": -77.536647,
+    "Ele": 239.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chuindia Airstrip",
+    "gps_code": "SEHU",
+    "freq": "",
+    "Lat": -2.014083,
+    "Lon": -76.681475,
+    "Ele": 229.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Josema Airport",
+    "gps_code": "SEHV",
+    "freq": "",
+    "Lat": -2.33171,
+    "Lon": -80.20473,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Shuwin Mamus Airstrip",
+    "gps_code": "SEHW",
+    "freq": "",
+    "Lat": -2.465768,
+    "Lon": -77.039586,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mashientenza Airstrip",
+    "gps_code": "SEHZ",
+    "freq": "",
+    "Lat": -2.363793,
+    "Lon": -77.406923,
+    "Ele": 319.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Maria Airport",
+    "gps_code": "SEIA",
+    "freq": "",
+    "Lat": -2.898919,
+    "Lon": -79.812775,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ishpingo de Amuntay Airstrip",
+    "gps_code": "SEID",
+    "freq": "",
+    "Lat": -2.566312,
+    "Lon": -76.756598,
+    "Ele": 251.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Iñaywa Norte Airdtrip",
+    "gps_code": "SEIE",
+    "freq": "",
+    "Lat": -2.162952,
+    "Lon": -77.484895,
+    "Ele": 423.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sasain Airstrip",
+    "gps_code": "SEIF",
+    "freq": "",
+    "Lat": -2.261075,
+    "Lon": -77.33273,
+    "Ele": 350.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Santiago Airport",
+    "gps_code": "SEIG",
+    "freq": "",
+    "Lat": -3.049372,
+    "Lon": -78.010229,
+    "Ele": 304.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ishpink Airstrip",
+    "gps_code": "SEIH",
+    "freq": "",
+    "Lat": -2.316061,
+    "Lon": -77.410011,
+    "Ele": 347.5
+  },
+  {
+    "type": "small_airport",
+    "name": "General Villamil Airport",
+    "gps_code": "SEII",
+    "freq": "",
+    "Lat": -0.942628,
+    "Lon": -90.953003,
+    "Ele": 10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa María Airport",
+    "gps_code": "SEIM",
+    "freq": "",
+    "Lat": -2.104494,
+    "Lon": -79.381905,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ipiak Airstrip",
+    "gps_code": "SEIP",
+    "freq": "",
+    "Lat": -2.467547,
+    "Lon": -77.145839,
+    "Ele": 277.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapirna Airstrip",
+    "gps_code": "SEIR",
+    "freq": "",
+    "Lat": -2.219802,
+    "Lon": -76.814087,
+    "Ele": 286.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Isabel Maria Airport",
+    "gps_code": "SEIS",
+    "freq": "",
+    "Lat": -1.86667001247406,
+    "Lon": -79.7332992553711,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapitian Airstrip",
+    "gps_code": "SEIT",
+    "freq": "",
+    "Lat": -2.726732,
+    "Lon": -77.537105,
+    "Ele": 229.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pitiur Airstrip",
+    "gps_code": "SEIU",
+    "freq": "",
+    "Lat": -2.251998,
+    "Lon": -77.401788,
+    "Ele": 377.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingenio Valdez Airport",
+    "gps_code": "SEIV",
+    "freq": "",
+    "Lat": -2.111175,
+    "Lon": -79.599184,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Iwia Airstrip",
+    "gps_code": "SEIW",
+    "freq": "",
+    "Lat": -2.071725,
+    "Lon": -77.523399,
+    "Ele": 456.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pimpintza Airstrip",
+    "gps_code": "SEIX",
+    "freq": "",
+    "Lat": -2.275,
+    "Lon": -77.469444,
+    "Ele": 373.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Iñaywa Sur Airstrip",
+    "gps_code": "SEIY",
+    "freq": "",
+    "Lat": -2.748776,
+    "Lon": -77.443761,
+    "Ele": 230.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroazucar Airport",
+    "gps_code": "SEIZ",
+    "freq": "",
+    "Lat": -2.442218,
+    "Lon": -79.35504,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jandiyacua Airstrip",
+    "gps_code": "SEJA",
+    "freq": "",
+    "Lat": -1.730931,
+    "Lon": -77.109686,
+    "Ele": 298.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jumandy Airport",
+    "gps_code": "SEJD",
+    "freq": "",
+    "Lat": -1.060185,
+    "Lon": -77.580525,
+    "Ele": 376.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Jempentza Airstrip",
+    "gps_code": "SEJE",
+    "freq": "",
+    "Lat": -2.744252,
+    "Lon": -77.487304,
+    "Ele": 224.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Jacinto Airport",
+    "gps_code": "SEJG",
+    "freq": "",
+    "Lat": -2.084547,
+    "Lon": -79.672864,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Jipijapa Airport",
+    "gps_code": "SEJI",
+    "freq": "",
+    "Lat": -1.0,
+    "Lon": -80.66666412353516,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Juyukamentza Airstrip",
+    "gps_code": "SEJK",
+    "freq": "",
+    "Lat": -2.721043,
+    "Lon": -77.240896,
+    "Ele": 247.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Jama Airport",
+    "gps_code": "SEJM",
+    "freq": "",
+    "Lat": -0.2014970034360885,
+    "Lon": -80.2654037475586,
+    "Ele": 11.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Joya de Los Sachas Airport",
+    "gps_code": "SEJS",
+    "freq": "",
+    "Lat": -0.328361,
+    "Lon": -76.879399,
+    "Ele": 275.5
+  },
+  {
+    "type": "small_airport",
+    "name": "San José de Taisha Airstrip",
+    "gps_code": "SEJT",
+    "freq": "",
+    "Lat": -2.389295,
+    "Lon": -77.509117,
+    "Ele": 444.1
+  },
+  {
+    "type": "small_airport",
+    "name": "San Juan Airstrip",
+    "gps_code": "SEJU",
+    "freq": "",
+    "Lat": -2.105596,
+    "Lon": -77.519023,
+    "Ele": 498.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Juyuintsa Airstrip",
+    "gps_code": "SEJY",
+    "freq": "",
+    "Lat": -2.116691,
+    "Lon": -76.20208,
+    "Ele": 193.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Jimiarentza Airstrip",
+    "gps_code": "SEJZ",
+    "freq": "",
+    "Lat": -2.51669,
+    "Lon": -77.432241,
+    "Ele": 270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaan Airstrip",
+    "gps_code": "SEKA",
+    "freq": "",
+    "Lat": -2.873817,
+    "Lon": -77.868204,
+    "Ele": 271.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kusutkau Airstrip",
+    "gps_code": "SEKB",
+    "freq": "",
+    "Lat": -2.515333,
+    "Lon": -76.896588,
+    "Ele": 269.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaiptach Airfield",
+    "gps_code": "SEKC",
+    "freq": "",
+    "Lat": -2.639283,
+    "Lon": -77.127571,
+    "Ele": 278.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenkuim Airstrip",
+    "gps_code": "SEKE",
+    "freq": "",
+    "Lat": -2.23362,
+    "Lon": -77.735664,
+    "Ele": 588.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuserua Airstrip",
+    "gps_code": "SEKF",
+    "freq": "",
+    "Lat": -2.607173,
+    "Lon": -76.934738,
+    "Ele": 260.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuakash Airfield",
+    "gps_code": "SEKH",
+    "freq": "",
+    "Lat": -2.033081,
+    "Lon": -77.670886,
+    "Ele": 603.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Km 192 Airport",
+    "gps_code": "SEKK",
+    "freq": "",
+    "Lat": 0.18465,
+    "Lon": -79.391181,
+    "Ele": 380.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Silok Airport",
+    "gps_code": "SEKL",
+    "freq": "",
+    "Lat": -0.03085,
+    "Lon": -79.366315,
+    "Ele": 251.5
+  },
+  {
+    "type": "small_airport",
+    "name": "KM 35 Airport",
+    "gps_code": "SEKM",
+    "freq": "",
+    "Lat": -0.739894,
+    "Lon": -79.387207,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaniats Airstrip",
+    "gps_code": "SEKN",
+    "freq": "",
+    "Lat": -2.710571,
+    "Lon": -77.505235,
+    "Ele": 231.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapatinentza Airstrip",
+    "gps_code": "SEKP",
+    "freq": "",
+    "Lat": -2.681793,
+    "Lon": -77.477093,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kikints Airstrip",
+    "gps_code": "SEKQ",
+    "freq": "",
+    "Lat": -2.301939,
+    "Lon": -77.357591,
+    "Ele": 359.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaspaim Airstrip",
+    "gps_code": "SEKS",
+    "freq": "",
+    "Lat": -2.828304,
+    "Lon": -77.71069,
+    "Ele": 207.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kusutka Airstrip",
+    "gps_code": "SEKT",
+    "freq": "",
+    "Lat": -2.096276,
+    "Lon": -77.641338,
+    "Ele": 568.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kupit Airstrip",
+    "gps_code": "SEKU",
+    "freq": "",
+    "Lat": -2.644734,
+    "Lon": -77.223029,
+    "Ele": 262.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kurinua Airstrip",
+    "gps_code": "SEKV",
+    "freq": "",
+    "Lat": -2.695432,
+    "Lon": -77.379026,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapawi Airstrip",
+    "gps_code": "SEKW",
+    "freq": "",
+    "Lat": -2.534276,
+    "Lon": -76.84217,
+    "Ele": 259.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shinkiatam Airstrip",
+    "gps_code": "SEKX",
+    "freq": "",
+    "Lat": -2.462189,
+    "Lon": -77.459466,
+    "Ele": 281.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kayamentza Airstrip",
+    "gps_code": "SEKY",
+    "freq": "",
+    "Lat": -2.005646,
+    "Lon": -77.73578,
+    "Ele": 662.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kayantza Airstrip",
+    "gps_code": "SEKZ",
+    "freq": "",
+    "Lat": -2.174349,
+    "Lon": -77.368609,
+    "Ele": 388.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Loma Alta Airport",
+    "gps_code": "SELD",
+    "freq": "",
+    "Lat": -2.2078,
+    "Lon": -80.083339,
+    "Ele": 65.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Limoncocha Airport",
+    "gps_code": "SELI",
+    "freq": "",
+    "Lat": -0.4063630104064941,
+    "Lon": -76.6238021850586,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hacienda La Julia Airport",
+    "gps_code": "SELJ",
+    "freq": "",
+    "Lat": -1.70438,
+    "Lon": -79.552299,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Libertad Sur Airstrip",
+    "gps_code": "SELK",
+    "freq": "",
+    "Lat": -2.802859,
+    "Lon": -77.569399,
+    "Ele": 218.2
+  },
+  {
+    "type": "small_airport",
+    "name": "La Lolita Airport.",
+    "gps_code": "SELL",
+    "freq": "",
+    "Lat": -1.718359,
+    "Lon": -79.591112,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Loma Larga Airport",
+    "gps_code": "SELM",
+    "freq": "",
+    "Lat": -1.501579999923706,
+    "Lon": -79.48090362548828,
+    "Ele": 64.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cotopaxi International Airport",
+    "gps_code": "SELT",
+    "freq": "118.500",
+    "Lat": -0.906833,
+    "Lon": -78.615799,
+    "Ele": 2805.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Virgen Airport",
+    "gps_code": "SELV",
+    "freq": "",
+    "Lat": -1.225142,
+    "Lon": -79.50581,
+    "Ele": 33.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jose Maria Velasco Ibarra Airport",
+    "gps_code": "SEMA",
+    "freq": "122.700",
+    "Lat": -4.37823009491,
+    "Lon": -79.94100189210002,
+    "Ele": 459.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Coronel E Carvajal Airport",
+    "gps_code": "SEMC",
+    "freq": "119.500",
+    "Lat": -2.299170017242432,
+    "Lon": -78.12079620361328,
+    "Ele": 1052.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Maki Airstrip",
+    "gps_code": "SEMK",
+    "freq": "",
+    "Lat": -2.753646,
+    "Lon": -77.157786,
+    "Ele": 245.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Manglaralto Airport",
+    "gps_code": "SEML",
+    "freq": "",
+    "Lat": -1.844848,
+    "Lon": -80.73696,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Carmen Airport",
+    "gps_code": "SEMO",
+    "freq": "121.200",
+    "Lat": -2.06701,
+    "Lon": -76.9757,
+    "Ele": 292.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Eloy Alfaro International Airport",
+    "gps_code": "SEMT",
+    "freq": "122.700",
+    "Lat": -0.9460780024528505,
+    "Lon": -80.67880249023438,
+    "Ele": 14.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Maragrosa Airport",
+    "gps_code": "SEMX",
+    "freq": "",
+    "Lat": -2.8511,
+    "Lon": -79.803596,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Martinica Airport",
+    "gps_code": "SEMY",
+    "freq": "",
+    "Lat": -1.7397199869155884,
+    "Lon": -79.62149810791016,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueva Canusa Airstrip",
+    "gps_code": "SENB",
+    "freq": "",
+    "Lat": -2.407136,
+    "Lon": -77.740141,
+    "Ele": 338.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nemonpade Airstrip",
+    "gps_code": "SEND",
+    "freq": "",
+    "Lat": -1.236018,
+    "Lon": -77.25913,
+    "Ele": 305.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Nuevo Corrientes Airstrip",
+    "gps_code": "SENE",
+    "freq": "",
+    "Lat": -1.997976,
+    "Lon": -76.764307,
+    "Ele": 248.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Napurak Airstrip",
+    "gps_code": "SENF",
+    "freq": "",
+    "Lat": -2.52258,
+    "Lon": -76.990489,
+    "Ele": 287.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueva Loja Airport",
+    "gps_code": "SENL",
+    "freq": "",
+    "Lat": 0.0930560007691,
+    "Lon": -76.86750030520001,
+    "Ele": 298.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Alto Corrientes Airstrip",
+    "gps_code": "SEOC",
+    "freq": "",
+    "Lat": -1.910051,
+    "Lon": -76.9596,
+    "Ele": 319.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Matorrillos Airport",
+    "gps_code": "SEOI",
+    "freq": "",
+    "Lat": -2.436371,
+    "Lon": -79.83377,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Langosmar Airport",
+    "gps_code": "SEOM",
+    "freq": "",
+    "Lat": -2.463834,
+    "Lon": -80.13694,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Conambo Airport",
+    "gps_code": "SEON",
+    "freq": "",
+    "Lat": -1.871397,
+    "Lon": -76.877802,
+    "Ele": 239.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Molaute Airstrip",
+    "gps_code": "SEOU",
+    "freq": "",
+    "Lat": -0.076808,
+    "Lon": -79.134895,
+    "Ele": 449.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pantalony Airport",
+    "gps_code": "SEOY",
+    "freq": "",
+    "Lat": -0.841075,
+    "Lon": -79.288232,
+    "Ele": 157.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Centro Paatin Airstrip",
+    "gps_code": "SEPA",
+    "freq": "",
+    "Lat": -2.247454,
+    "Lon": -77.712845,
+    "Ele": 578.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pedro Carbo Airport",
+    "gps_code": "SEPB",
+    "freq": "",
+    "Lat": -1.8115930557250977,
+    "Lon": -80.23246002197266,
+    "Ele": 97.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Patuca Airport",
+    "gps_code": "SEPC",
+    "freq": "",
+    "Lat": -2.75172,
+    "Lon": -78.263603,
+    "Ele": 542.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pedernales Airport",
+    "gps_code": "SEPD",
+    "freq": "",
+    "Lat": 0.067619003355503,
+    "Lon": -80.05049896240234,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pechichal Airport",
+    "gps_code": "SEPE",
+    "freq": "",
+    "Lat": -2.658895,
+    "Lon": -79.618793,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pindoyacu Airstrip",
+    "gps_code": "SEPI",
+    "freq": "",
+    "Lat": -1.731878,
+    "Lon": -76.60763,
+    "Ele": 209.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pakintza Airstrip",
+    "gps_code": "SEPK",
+    "freq": "",
+    "Lat": -2.32312,
+    "Lon": -77.276133,
+    "Ele": 326.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Panamao Airport",
+    "gps_code": "SEPN",
+    "freq": "",
+    "Lat": -2.421208,
+    "Lon": -80.65012,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Posorja Airport",
+    "gps_code": "SEPO",
+    "freq": "",
+    "Lat": -2.681735,
+    "Lon": -80.276606,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Amable Calle Gutierrez Airport",
+    "gps_code": "SEPS",
+    "freq": "",
+    "Lat": -3.31967,
+    "Lon": -79.769203,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Putumayo Airport",
+    "gps_code": "SEPT",
+    "freq": "",
+    "Lat": 0.115949,
+    "Lon": -75.85022,
+    "Ele": 223.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Reales Tamarindos Airport",
+    "gps_code": "SEPV",
+    "freq": "122.100",
+    "Lat": -1.04165,
+    "Lon": -80.472198,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Payo Airport",
+    "gps_code": "SEPX",
+    "freq": "",
+    "Lat": -2.292292,
+    "Lon": -79.50222,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Perez Airport",
+    "gps_code": "SEPZ",
+    "freq": "",
+    "Lat": -0.953189,
+    "Lon": -79.375331,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Quevedo Airport",
+    "gps_code": "SEQE",
+    "freq": "",
+    "Lat": -0.989013,
+    "Lon": -79.465571,
+    "Ele": 106.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Mariscal Sucre International Airport",
+    "gps_code": "SEQM",
+    "freq": "119.700",
+    "Lat": -0.125399,
+    "Lon": -78.354306,
+    "Ele": 2389.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chimborazo Airport",
+    "gps_code": "SERB",
+    "freq": "122.900",
+    "Lat": -1.653324,
+    "Lon": -78.656342,
+    "Ele": 2789.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Maria Cristina Airport",
+    "gps_code": "SERI",
+    "freq": "",
+    "Lat": -1.177302,
+    "Lon": -79.496123,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Roble Mar Airport",
+    "gps_code": "SERL",
+    "freq": "",
+    "Lat": -3.00529,
+    "Lon": -80.229,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santa Rosa - Artillery Colonel Victor Larrea International Airport",
+    "gps_code": "SERO",
+    "freq": "",
+    "Lat": -3.441986,
+    "Lon": -79.996957,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cristal Airport",
+    "gps_code": "SERS",
+    "freq": "",
+    "Lat": -0.999248,
+    "Lon": -79.358836,
+    "Ele": 36.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "General Ulpiano Paez Airport",
+    "gps_code": "SESA",
+    "freq": "128.300",
+    "Lat": -2.210057,
+    "Lon": -80.985067,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Sebastián Airstrip",
+    "gps_code": "SESB",
+    "freq": "",
+    "Lat": -2.641853,
+    "Lon": -77.15722,
+    "Ele": 257.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Sucúa Airport",
+    "gps_code": "SESC",
+    "freq": "",
+    "Lat": -2.474201,
+    "Lon": -78.169041,
+    "Ele": 949.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Santo Domingo de Los Colorados Airport",
+    "gps_code": "SESD",
+    "freq": "",
+    "Lat": -0.248288,
+    "Lon": -79.209062,
+    "Ele": 499.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Secadal Airport",
+    "gps_code": "SESE",
+    "freq": "",
+    "Lat": -2.579977,
+    "Lon": -79.516547,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Shushufindi Airport",
+    "gps_code": "SESF",
+    "freq": "",
+    "Lat": -0.195626,
+    "Lon": -76.648237,
+    "Ele": 257.3
+  },
+  {
+    "type": "small_airport",
+    "name": "San Honorato Airport",
+    "gps_code": "SESH",
+    "freq": "",
+    "Lat": -1.113791,
+    "Lon": -79.680157,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "San José Airport",
+    "gps_code": "SESJ",
+    "freq": "",
+    "Lat": -1.893894,
+    "Lon": -79.490485,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsunkintza Airstrip",
+    "gps_code": "SESK",
+    "freq": "",
+    "Lat": -2.663498,
+    "Lon": -77.110696,
+    "Ele": 268.2
+  },
+  {
+    "type": "small_airport",
+    "name": "San Lorenzo Airport",
+    "gps_code": "SESL",
+    "freq": "",
+    "Lat": 1.264791,
+    "Lon": -78.797094,
+    "Ele": 43.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Amazonas Airport",
+    "gps_code": "SESM",
+    "freq": "119.500",
+    "Lat": -1.50524,
+    "Lon": -78.062698,
+    "Ele": 1056.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Estrella Airport",
+    "gps_code": "SESO",
+    "freq": "",
+    "Lat": -1.567288,
+    "Lon": -79.539826,
+    "Ele": 14.3
+  },
+  {
+    "type": "small_airport",
+    "name": "San Andres Airport",
+    "gps_code": "SESP",
+    "freq": "",
+    "Lat": -2.578345,
+    "Lon": -80.034351,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Carlos Oriente Airstrip",
+    "gps_code": "SESS",
+    "freq": "",
+    "Lat": -2.055229,
+    "Lon": -77.590771,
+    "Ele": 520.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Cristóbal Airport",
+    "gps_code": "SEST",
+    "freq": "122.500",
+    "Lat": -0.910206,
+    "Lon": -89.617401,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Perales Airport",
+    "gps_code": "SESV",
+    "freq": "118.400",
+    "Lat": -0.608111,
+    "Lon": -80.402702,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taura Air Base",
+    "gps_code": "SETA",
+    "freq": "",
+    "Lat": -2.26104,
+    "Lon": -79.680199,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mayor Galo Torres Airport",
+    "gps_code": "SETE",
+    "freq": "122.800",
+    "Lat": -0.986767,
+    "Lon": -77.819504,
+    "Ele": 520.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tenguel Airport",
+    "gps_code": "SETG",
+    "freq": "",
+    "Lat": -2.998017,
+    "Lon": -79.795922,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Taisha Airport",
+    "gps_code": "SETH",
+    "freq": "",
+    "Lat": -2.38167,
+    "Lon": -77.5028,
+    "Ele": 508.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tiputini Airport",
+    "gps_code": "SETI",
+    "freq": "",
+    "Lat": -0.776111,
+    "Lon": -75.526398,
+    "Ele": 303.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ciudad de Catamayo Airport",
+    "gps_code": "SETM",
+    "freq": "128.300",
+    "Lat": -3.995606,
+    "Lon": -79.371902,
+    "Ele": 1236.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Carlos Concha Torres International Airport",
+    "gps_code": "SETN",
+    "freq": "126.900",
+    "Lat": 0.978519,
+    "Lon": -79.626602,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Andes Aeroclub Airport",
+    "gps_code": "SETO",
+    "freq": "",
+    "Lat": 0.061667,
+    "Lon": -78.222833,
+    "Ele": 2974.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tarapoa Airport",
+    "gps_code": "SETR",
+    "freq": "129.100",
+    "Lat": -0.122956,
+    "Lon": -76.337799,
+    "Ele": 248.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsentsakentza Airstrip",
+    "gps_code": "SETS",
+    "freq": "",
+    "Lat": -2.55673,
+    "Lon": -77.401593,
+    "Ele": 268.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lieutenant Colonel Luis A. Mantilla International Airport",
+    "gps_code": "SETU",
+    "freq": "120.100",
+    "Lat": 0.809506,
+    "Lon": -77.708099,
+    "Ele": 2941.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tiwaeno Airstrip",
+    "gps_code": "SETW",
+    "freq": "",
+    "Lat": -1.321658,
+    "Lon": -77.455634,
+    "Ele": 368.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Guarumo Airport",
+    "gps_code": "SEUA",
+    "freq": "",
+    "Lat": -0.050556,
+    "Lon": -76.568889,
+    "Ele": 255.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Cuchintza Airstrip",
+    "gps_code": "SEUC",
+    "freq": "",
+    "Lat": -2.603056,
+    "Lon": -77.116389,
+    "Ele": 253.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Muruntza Airstrip",
+    "gps_code": "SEUD",
+    "freq": "",
+    "Lat": -2.585928,
+    "Lon": -77.218528,
+    "Ele": 271.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pumpuentza Airstrip",
+    "gps_code": "SEUE",
+    "freq": "",
+    "Lat": -2.474584,
+    "Lon": -77.333041,
+    "Ele": 286.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kusuimi Airstrip",
+    "gps_code": "SEUI",
+    "freq": "",
+    "Lat": -2.72319,
+    "Lon": -77.681991,
+    "Ele": 219.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuankua Airstrip",
+    "gps_code": "SEUK",
+    "freq": "",
+    "Lat": -2.148425,
+    "Lon": -77.3572,
+    "Ele": 366.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Putuntz Airstrip",
+    "gps_code": "SEUN",
+    "freq": "",
+    "Lat": -2.596584,
+    "Lon": -77.420483,
+    "Ele": 258.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Untsurientsa Airstrip",
+    "gps_code": "SEUQ",
+    "freq": "",
+    "Lat": -2.452778,
+    "Lon": -77.917728,
+    "Ele": 640.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pucar Airport",
+    "gps_code": "SEUR",
+    "freq": "",
+    "Lat": -2.78881,
+    "Lon": -77.648093,
+    "Ele": 234.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Putuimi Achuar Airstrip",
+    "gps_code": "SEUV",
+    "freq": "",
+    "Lat": -2.548547,
+    "Lon": -77.117863,
+    "Ele": 281.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Unswantz Airstrip",
+    "gps_code": "SEUW",
+    "freq": "",
+    "Lat": -2.555542,
+    "Lon": -77.898885,
+    "Ele": 563.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Uyuimi Airstrip",
+    "gps_code": "SEUY",
+    "freq": "",
+    "Lat": -1.828889,
+    "Lon": -77.676389,
+    "Ele": 494.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Curintza Airstrip",
+    "gps_code": "SEUZ",
+    "freq": "",
+    "Lat": -2.068437,
+    "Lon": -76.794788,
+    "Ele": 294.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Casa Vinces Airport",
+    "gps_code": "SEVS",
+    "freq": "",
+    "Lat": -1.30789,
+    "Lon": -79.560124,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wachirpas Airstrip",
+    "gps_code": "SEWA",
+    "freq": "",
+    "Lat": -2.573494,
+    "Lon": -76.806843,
+    "Ele": 259.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wentado Airstrip",
+    "gps_code": "SEWE",
+    "freq": "",
+    "Lat": -1.023494,
+    "Lon": -77.22108,
+    "Ele": 351.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarimiant Airstrip",
+    "gps_code": "SEWG",
+    "freq": "",
+    "Lat": -2.547432,
+    "Lon": -77.088446,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Washintza Airport",
+    "gps_code": "SEWH",
+    "freq": "",
+    "Lat": -2.037259,
+    "Lon": -77.562323,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wichimi Airstrip",
+    "gps_code": "SEWI",
+    "freq": "",
+    "Lat": -2.742677,
+    "Lon": -77.370289,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wasurak Airstrip",
+    "gps_code": "SEWK",
+    "freq": "",
+    "Lat": -2.576955,
+    "Lon": -77.346225,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wiririma Airstrip",
+    "gps_code": "SEWM",
+    "freq": "",
+    "Lat": -1.958333,
+    "Lon": -76.146667,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wusui Norte Airstrip",
+    "gps_code": "SEWN",
+    "freq": "",
+    "Lat": -2.087305,
+    "Lon": -77.491704,
+    "Ele": 456.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Wongkinmay Airport",
+    "gps_code": "SEWO",
+    "freq": "",
+    "Lat": -0.695957,
+    "Lon": -79.417448,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Warientza Airstrip",
+    "gps_code": "SEWR",
+    "freq": "",
+    "Lat": -3.169647,
+    "Lon": -78.26025,
+    "Ele": 885.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Waruintza Airstrip",
+    "gps_code": "SEWT",
+    "freq": "",
+    "Lat": -2.610352,
+    "Lon": -77.182968,
+    "Ele": 259.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Wisui Airstrip",
+    "gps_code": "SEWU",
+    "freq": "",
+    "Lat": -2.113471,
+    "Lon": -77.738423,
+    "Ele": 655.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kawa Airstrip",
+    "gps_code": "SEWX",
+    "freq": "",
+    "Lat": -2.001295,
+    "Lon": -77.669082,
+    "Ele": 648.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Wayusentsa Airstrip",
+    "gps_code": "SEWY",
+    "freq": "",
+    "Lat": -2.441689,
+    "Lon": -76.916739,
+    "Ele": 261.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Washintsa Airport",
+    "gps_code": "SEWZ",
+    "freq": "",
+    "Lat": -2.738798,
+    "Lon": -77.279803,
+    "Ele": 260.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Itak Airstrip",
+    "gps_code": "SEXI",
+    "freq": "",
+    "Lat": -2.645666,
+    "Lon": -77.294678,
+    "Ele": 265.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kambantsa",
+    "gps_code": "SEXK",
+    "freq": "",
+    "Lat": -2.014226,
+    "Lon": -76.832401,
+    "Ele": 366.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Carmita Airport",
+    "gps_code": "SEXM",
+    "freq": "",
+    "Lat": -2.883111,
+    "Lon": -79.743474,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Atacapi Airstrip",
+    "gps_code": "SEXP",
+    "freq": "",
+    "Lat": -1.353683,
+    "Lon": -77.621933,
+    "Ele": 488.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Simón Airstrip",
+    "gps_code": "SEXS",
+    "freq": "",
+    "Lat": -0.749722,
+    "Lon": -79.365556,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tres Marias Airport",
+    "gps_code": "SEXT",
+    "freq": "",
+    "Lat": -2.09426,
+    "Lon": -77.551003,
+    "Ele": 519.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yandana – Entsa Airstrip",
+    "gps_code": "SEYD",
+    "freq": "",
+    "Lat": -2.047949,
+    "Lon": -76.359451,
+    "Ele": 201.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cuyacocha Airstrip",
+    "gps_code": "SEYH",
+    "freq": "",
+    "Lat": -1.615763,
+    "Lon": -76.942377,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Joya Airport",
+    "gps_code": "SEYJ",
+    "freq": "",
+    "Lat": -2.889273,
+    "Lon": -79.650605,
+    "Ele": 98.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yankuntza Airstrip",
+    "gps_code": "SEYK",
+    "freq": "",
+    "Lat": -2.68365,
+    "Lon": -77.309595,
+    "Ele": 249.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yampuna Airstrip",
+    "gps_code": "SEYM",
+    "freq": "",
+    "Lat": -2.12698,
+    "Lon": -77.513906,
+    "Ele": 456.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yanayaku Airstrip",
+    "gps_code": "SEYN",
+    "freq": "",
+    "Lat": -1.953868,
+    "Lon": -76.101964,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yaapi Airstrip",
+    "gps_code": "SEYP",
+    "freq": "",
+    "Lat": -2.825404,
+    "Lon": -77.928979,
+    "Ele": 381.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yasnunka Airstrip",
+    "gps_code": "SEYS",
+    "freq": "",
+    "Lat": -2.650484,
+    "Lon": -77.399815,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yutsuntz Airstrip",
+    "gps_code": "SEYT",
+    "freq": "",
+    "Lat": -2.350797,
+    "Lon": -76.45388,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yawaentza Airstrip",
+    "gps_code": "SEYW",
+    "freq": "",
+    "Lat": -2.783602,
+    "Lon": -77.45764,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yamaran Airstrip",
+    "gps_code": "SEYX",
+    "freq": "",
+    "Lat": -2.223304,
+    "Lon": -77.54792,
+    "Ele": 519.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pampantza Airstrip",
+    "gps_code": "SEZA",
+    "freq": "",
+    "Lat": -2.554289,
+    "Lon": -77.443745,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tzapapentza Airstrip",
+    "gps_code": "SEZE",
+    "freq": "",
+    "Lat": -2.831069,
+    "Lon": -77.369267,
+    "Ele": 242.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Imatiño Airstrip",
+    "gps_code": "SEZI",
+    "freq": "",
+    "Lat": -1.918108,
+    "Lon": -76.625161,
+    "Ele": 217.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Karakam Airstrip",
+    "gps_code": "SEZK",
+    "freq": "",
+    "Lat": -2.785009,
+    "Lon": -77.408045,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tamantza Airstrip",
+    "gps_code": "SEZM",
+    "freq": "",
+    "Lat": -2.159088,
+    "Lon": -77.613177,
+    "Ele": 671.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tzapino Airstrip",
+    "gps_code": "SEZN",
+    "freq": "",
+    "Lat": -1.188339,
+    "Lon": -77.230792,
+    "Ele": 328.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Surik Nuevo Airstrip",
+    "gps_code": "SEZR",
+    "freq": "",
+    "Lat": -2.598404,
+    "Lon": -77.089405,
+    "Ele": 335.0
+  }
+]

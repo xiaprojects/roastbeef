@@ -1,0 +1,29 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Northwest Field",
+    "gps_code": "GU-0001",
+    "freq": "",
+    "Lat": 13.624787,
+    "Lon": 144.857358,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Andersen Air Force Base",
+    "gps_code": "PGUA",
+    "freq": "118.700",
+    "Lat": 13.584,
+    "Lon": 144.929998,
+    "Ele": 191.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Antonio B. Won Pat International Airport",
+    "gps_code": "PGUM",
+    "freq": "118.700",
+    "Lat": 13.485,
+    "Lon": 144.797282,
+    "Ele": 90.8
+  }
+]

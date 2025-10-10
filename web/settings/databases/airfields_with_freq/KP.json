@@ -1,0 +1,731 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Haeju Airfield",
+    "gps_code": "KP-0002",
+    "freq": "",
+    "Lat": 38.00739,
+    "Lon": 125.777321,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yonpo Air Base",
+    "gps_code": "KP-0003",
+    "freq": "",
+    "Lat": 39.792215,
+    "Lon": 127.535906,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "T'aet'an-pihaengjang Airport",
+    "gps_code": "KP-0005",
+    "freq": "",
+    "Lat": 38.131113,
+    "Lon": 125.233154,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taechon Airport",
+    "gps_code": "KP-0006",
+    "freq": "",
+    "Lat": 39.902648,
+    "Lon": 125.489503,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taebukpo Ri Airport",
+    "gps_code": "KP-0007",
+    "freq": "",
+    "Lat": 38.333801,
+    "Lon": 126.869003,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sinuiju Airport",
+    "gps_code": "KP-0009",
+    "freq": "",
+    "Lat": 40.087216,
+    "Lon": 124.407721,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pyong Ni South Highway Strip",
+    "gps_code": "KP-0010",
+    "freq": "",
+    "Lat": 39.321085,
+    "Lon": 125.897913,
+    "Ele": 32.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kwaksan Air Base",
+    "gps_code": "KP-0012",
+    "freq": "",
+    "Lat": 39.731218,
+    "Lon": 125.110159,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuum-ni Airport",
+    "gps_code": "KP-0013",
+    "freq": "",
+    "Lat": 38.864707,
+    "Lon": 127.904034,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Koksan Highway Airport",
+    "gps_code": "KP-0014",
+    "freq": "",
+    "Lat": 38.732703,
+    "Lon": 126.659875,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Koksan Air Base",
+    "gps_code": "KP-0015",
+    "freq": "",
+    "Lat": 38.690201,
+    "Lon": 126.606003,
+    "Ele": 256.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilchu Highway Airport",
+    "gps_code": "KP-0016",
+    "freq": "",
+    "Lat": 40.91260147094727,
+    "Lon": 129.30799865722656,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kangdong Airport",
+    "gps_code": "KP-0017",
+    "freq": "",
+    "Lat": 39.16088,
+    "Lon": 126.042452,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaechon Airport",
+    "gps_code": "KP-0018",
+    "freq": "",
+    "Lat": 39.753657,
+    "Lon": 125.902119,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hyon-ni Airport",
+    "gps_code": "KP-0019",
+    "freq": "",
+    "Lat": 38.613517,
+    "Lon": 127.452393,
+    "Ele": 583.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hwangju Airbase",
+    "gps_code": "KP-0020",
+    "freq": "",
+    "Lat": 38.653459,
+    "Lon": 125.78888,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pukchang Air Base",
+    "gps_code": "KP-0022",
+    "freq": "",
+    "Lat": 39.505001,
+    "Lon": 125.963997,
+    "Ele": 66.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Onchon Air Base",
+    "gps_code": "KP-0023",
+    "freq": "",
+    "Lat": 38.909402,
+    "Lon": 125.232553,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wong Yo Ri Highway Strip",
+    "gps_code": "KP-0024",
+    "freq": "",
+    "Lat": 38.59404,
+    "Lon": 126.526558,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Toksan Air Base",
+    "gps_code": "KP-0025",
+    "freq": "",
+    "Lat": 39.996257,
+    "Lon": 127.611694,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sinhung Highway Strip",
+    "gps_code": "KP-0027",
+    "freq": "",
+    "Lat": 40.180709,
+    "Lon": 127.539425,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sangwon Highway Strip",
+    "gps_code": "KP-0028",
+    "freq": "",
+    "Lat": 38.844721,
+    "Lon": 126.066828,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Panghyon South Highway Strip",
+    "gps_code": "KP-0030",
+    "freq": "",
+    "Lat": 39.882894,
+    "Lon": 125.158621,
+    "Ele": 109.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Panghyon Airport",
+    "gps_code": "KP-0031",
+    "freq": "",
+    "Lat": 39.927444,
+    "Lon": 125.207748,
+    "Ele": 89.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kang Da Ri Airport",
+    "gps_code": "KP-0033",
+    "freq": "",
+    "Lat": 39.098389,
+    "Lon": 127.415331,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ichon Airport",
+    "gps_code": "KP-0034",
+    "freq": "",
+    "Lat": 38.48225,
+    "Lon": 126.858788,
+    "Ele": 131.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hwangsuwon Airbase",
+    "gps_code": "KP-0035",
+    "freq": "",
+    "Lat": 40.6814,
+    "Lon": 128.151001,
+    "Ele": 1234.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Changjin Air Force Base",
+    "gps_code": "KP-0036",
+    "freq": "",
+    "Lat": 40.364375,
+    "Lon": 127.264252,
+    "Ele": 1053.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ayang Ni Highway Strip",
+    "gps_code": "KP-0037",
+    "freq": "",
+    "Lat": 38.251763,
+    "Lon": 125.964067,
+    "Ele": 118.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Riwon Airbase",
+    "gps_code": "KP-0038",
+    "freq": "",
+    "Lat": 40.359822,
+    "Lon": 128.720584,
+    "Ele": 25.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kwail Air Base",
+    "gps_code": "KP-0039",
+    "freq": "",
+    "Lat": 38.425487,
+    "Lon": 125.019093,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yong Hung Highway Airstrip",
+    "gps_code": "KP-0040",
+    "freq": "",
+    "Lat": 39.482282,
+    "Lon": 127.322102,
+    "Ele": 16.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Uthachi Highway Strip Airport",
+    "gps_code": "KP-0041",
+    "freq": "",
+    "Lat": 38.913877,
+    "Lon": 125.821309,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Toha Ri North Airport",
+    "gps_code": "KP-0042",
+    "freq": "",
+    "Lat": 38.70271,
+    "Lon": 126.284709,
+    "Ele": 256.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taechon Northwest Airport",
+    "gps_code": "KP-0043",
+    "freq": "",
+    "Lat": 39.99343,
+    "Lon": 125.365505,
+    "Ele": 89.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sungam ni Airport",
+    "gps_code": "KP-0044",
+    "freq": "",
+    "Lat": 41.674386,
+    "Lon": 129.676437,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sonchon Airport",
+    "gps_code": "KP-0045",
+    "freq": "",
+    "Lat": 39.918522,
+    "Lon": 124.840465,
+    "Ele": 60.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sohung South Airport",
+    "gps_code": "KP-0046",
+    "freq": "",
+    "Lat": 38.356398,
+    "Lon": 126.219242,
+    "Ele": 159.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sinanju Highway Strip",
+    "gps_code": "KP-0047",
+    "freq": "",
+    "Lat": 39.675749,
+    "Lon": 125.682735,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pyongsul Li Airstrip",
+    "gps_code": "KP-0048",
+    "freq": "",
+    "Lat": 38.719369,
+    "Lon": 126.721072,
+    "Ele": 217.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paegam Airstrip",
+    "gps_code": "KP-0049",
+    "freq": "",
+    "Lat": 41.943835,
+    "Lon": 128.851111,
+    "Ele": 990.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ongjin Airport",
+    "gps_code": "KP-0050",
+    "freq": "",
+    "Lat": 37.93225,
+    "Lon": 125.419664,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Okpyong ni Highway Strip Airstrip",
+    "gps_code": "KP-0051",
+    "freq": "",
+    "Lat": 39.271002,
+    "Lon": 127.320728,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nuchon Ni Highway Strip",
+    "gps_code": "KP-0052",
+    "freq": "",
+    "Lat": 38.232045,
+    "Lon": 126.264153,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manpo Airport",
+    "gps_code": "KP-0053",
+    "freq": "",
+    "Lat": 41.139365,
+    "Lon": 126.356764,
+    "Ele": 255.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Maengsan Airport",
+    "gps_code": "KP-0054",
+    "freq": "",
+    "Lat": 39.652888,
+    "Lon": 126.670218,
+    "Ele": 636.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuktong Airport",
+    "gps_code": "KP-0056",
+    "freq": "",
+    "Lat": 41.249741,
+    "Lon": 129.563699,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kojo Highway Strip Airfield",
+    "gps_code": "KP-0057",
+    "freq": "",
+    "Lat": 38.836632,
+    "Lon": 127.861977,
+    "Ele": 82.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ichon Northeast Airport",
+    "gps_code": "KP-0058",
+    "freq": "",
+    "Lat": 38.673885,
+    "Lon": 126.923718,
+    "Ele": 171.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ihyon Airstrip",
+    "gps_code": "KP-0059",
+    "freq": "",
+    "Lat": 38.130269,
+    "Lon": 125.849204,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hyesan Airport",
+    "gps_code": "KP-0060",
+    "freq": "",
+    "Lat": 41.377581,
+    "Lon": 128.203583,
+    "Ele": 714.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoeyang Southeast Airfield",
+    "gps_code": "KP-0061",
+    "freq": "",
+    "Lat": 38.658035,
+    "Lon": 127.650039,
+    "Ele": 333.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chik-Tong Airstrip",
+    "gps_code": "KP-0062",
+    "freq": "",
+    "Lat": 38.726405,
+    "Lon": 126.680287,
+    "Ele": 241.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Changyon Highway Strip Airstrip",
+    "gps_code": "KP-0063",
+    "freq": "",
+    "Lat": 38.22773,
+    "Lon": 125.136251,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Unchon Up Airport",
+    "gps_code": "KP-0064",
+    "freq": "",
+    "Lat": 38.548316,
+    "Lon": 125.337203,
+    "Ele": 146.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sangwon Ni Highway Strip",
+    "gps_code": "KP-0065",
+    "freq": "",
+    "Lat": 40.122978,
+    "Lon": 125.87122,
+    "Ele": 161.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hyangsan Airport",
+    "gps_code": "KP-0067",
+    "freq": "",
+    "Lat": 40.028699,
+    "Lon": 126.192741,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Koksan 2 Highway Strip",
+    "gps_code": "KP-0068",
+    "freq": "",
+    "Lat": 38.663481,
+    "Lon": 126.586618,
+    "Ele": 246.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kang Da Ri Highway Strip",
+    "gps_code": "KP-0070",
+    "freq": "",
+    "Lat": 39.015216,
+    "Lon": 127.406194,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hwangsuwon Highway Strip Airstrip",
+    "gps_code": "KP-0072",
+    "freq": "",
+    "Lat": 40.672013,
+    "Lon": 128.141098,
+    "Ele": 1369.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kumgang Airfield",
+    "gps_code": "KP-0073",
+    "freq": "",
+    "Lat": 38.564295,
+    "Lon": 128.004155,
+    "Ele": 403.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mirim Aviation Club",
+    "gps_code": "KP-0074",
+    "freq": "",
+    "Lat": 39.009355,
+    "Lon": 125.847548,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nuchon Ni Airfield",
+    "gps_code": "KP-0075",
+    "freq": "",
+    "Lat": 38.23791,
+    "Lon": 126.1203,
+    "Ele": 89.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Onchon Underground Fighter Base",
+    "gps_code": "KP-0076",
+    "freq": "",
+    "Lat": 38.885955,
+    "Lon": 125.280361,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Panghyon Highway Strip 2",
+    "gps_code": "KP-0077",
+    "freq": "",
+    "Lat": 39.813662,
+    "Lon": 125.149727,
+    "Ele": 184.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pyong Ni West Highway Strip Airstrip",
+    "gps_code": "KP-0078",
+    "freq": "",
+    "Lat": 39.410004,
+    "Lon": 125.670376,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sunan-Up North Highway Strip Airfield",
+    "gps_code": "KP-0081",
+    "freq": "",
+    "Lat": 39.255643,
+    "Lon": 125.705674,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanchon South Airstrip",
+    "gps_code": "KP-0082",
+    "freq": "",
+    "Lat": 40.400523,
+    "Lon": 128.855596,
+    "Ele": 39.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yong Hung Highway Reserve Strip Airfield",
+    "gps_code": "KP-0083",
+    "freq": "",
+    "Lat": 39.538767,
+    "Lon": 127.288499,
+    "Ele": 16.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ihyon Ni Highway Strip Airfield",
+    "gps_code": "KP-0084",
+    "freq": "",
+    "Lat": 38.061253,
+    "Lon": 125.86843,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sangwon 2 Highway Strip Airfield",
+    "gps_code": "KP-0085",
+    "freq": "",
+    "Lat": 38.760509,
+    "Lon": 126.080089,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sohung Highway Strip Airfield",
+    "gps_code": "KP-0086",
+    "freq": "",
+    "Lat": 38.283486,
+    "Lon": 126.234723,
+    "Ele": 239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yo-do Airstrip",
+    "gps_code": "KP-0088",
+    "freq": "",
+    "Lat": 39.233059,
+    "Lon": 127.62385,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ch'o do Airport",
+    "gps_code": "KP-0099",
+    "freq": "",
+    "Lat": 38.551953,
+    "Lon": 124.83261,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Orang (Chongjin) Airport",
+    "gps_code": "ZKHM",
+    "freq": "",
+    "Lat": 41.428538,
+    "Lon": 129.647555,
+    "Ele": 3.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Pyongyang Sunan International Airport",
+    "gps_code": "ZKPY",
+    "freq": "130.000",
+    "Lat": 39.224098,
+    "Lon": 125.669998,
+    "Ele": 35.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sunchon Air Base",
+    "gps_code": "ZKSC",
+    "freq": "",
+    "Lat": 39.412463,
+    "Lon": 125.890273,
+    "Ele": 43.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sondok Airport",
+    "gps_code": "ZKSD",
+    "freq": "",
+    "Lat": 39.745201,
+    "Lon": 127.473999,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Samjiyŏn Airport",
+    "gps_code": "ZKSE",
+    "freq": "",
+    "Lat": 41.907132,
+    "Lon": 128.409834,
+    "Ele": 1385.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Uiju Airport",
+    "gps_code": "ZKUJ",
+    "freq": "",
+    "Lat": 40.150013,
+    "Lon": 124.501104,
+    "Ele": 9.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wonsan Kalma International Airport",
+    "gps_code": "ZKWS",
+    "freq": "",
+    "Lat": 39.166801,
+    "Lon": 127.486,
+    "Ele": 2.1
+  }
+]

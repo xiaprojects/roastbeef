@@ -1,0 +1,119 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Dara Sakor International Airport",
+    "gps_code": "KH-0001",
+    "freq": "",
+    "Lat": 10.914244,
+    "Lon": 103.226652,
+    "Ele": 18.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Techo International Airport",
+    "gps_code": "KH-0002",
+    "freq": "",
+    "Lat": 11.359987,
+    "Lon": 104.921272,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Preah Vinhear Airport",
+    "gps_code": "OMY",
+    "freq": "",
+    "Lat": 13.7597,
+    "Lon": 104.97173,
+    "Ele": 106.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Battambang Airport",
+    "gps_code": "VDBG",
+    "freq": "122.400",
+    "Lat": 13.0956,
+    "Lon": 103.223999,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kampong Cham Airport",
+    "gps_code": "VDKC",
+    "freq": "",
+    "Lat": 12.028657,
+    "Lon": 105.441165,
+    "Ele": 45.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kampong Chhnang Airport",
+    "gps_code": "VDKH",
+    "freq": "129.700",
+    "Lat": 12.255032,
+    "Lon": 104.564657,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Koh Kong Airport",
+    "gps_code": "VDKK",
+    "freq": "",
+    "Lat": 11.613397,
+    "Lon": 102.997084,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mondulkiri Airport",
+    "gps_code": "VDMK",
+    "freq": "",
+    "Lat": 12.464562,
+    "Lon": 107.188039,
+    "Ele": 700.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Phnom Penh International Airport",
+    "gps_code": "VDPP",
+    "freq": "127.500",
+    "Lat": 11.5466,
+    "Lon": 104.844002,
+    "Ele": 12.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ratanakiri Airport",
+    "gps_code": "VDRK",
+    "freq": "",
+    "Lat": 13.729999542236328,
+    "Lon": 106.98699951171876,
+    "Ele": 0.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Siem Reap-Angkor International Airport",
+    "gps_code": "VDSA",
+    "freq": "",
+    "Lat": 13.369167,
+    "Lon": 104.223056,
+    "Ele": 58.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Sihanoukville International Airport",
+    "gps_code": "VDSV",
+    "freq": "116.000",
+    "Lat": 10.571969,
+    "Lon": 103.632689,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Krakor Airport",
+    "gps_code": "VDSY",
+    "freq": "",
+    "Lat": 12.5385,
+    "Lon": 104.1486,
+    "Ele": 18.9
+  }
+]

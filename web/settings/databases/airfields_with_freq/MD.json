@@ -1,0 +1,92 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Bălți International Airport",
+    "gps_code": "LUBL",
+    "freq": "122.300",
+    "Lat": 47.837666,
+    "Lon": 27.781108,
+    "Ele": 231.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mărculești Air Base",
+    "gps_code": "LUBM",
+    "freq": "",
+    "Lat": 47.862701,
+    "Lon": 28.212799,
+    "Ele": 95.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cahul International Airport",
+    "gps_code": "LUCH",
+    "freq": "",
+    "Lat": 45.8438,
+    "Lon": 28.2637,
+    "Ele": 198.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chişinău International Airport",
+    "gps_code": "LUKK",
+    "freq": "125.900",
+    "Lat": 46.9277,
+    "Lon": 28.931,
+    "Ele": 121.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tiraspol Airport",
+    "gps_code": "LUTR",
+    "freq": "",
+    "Lat": 46.868099,
+    "Lon": 29.590599,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vadul lui Voda Airfield",
+    "gps_code": "MD-0002",
+    "freq": "",
+    "Lat": 47.0681,
+    "Lon": 29.0954,
+    "Ele": 166.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Horeshti Airfield",
+    "gps_code": "MD-0003",
+    "freq": "",
+    "Lat": 46.83656,
+    "Lon": 28.901639,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Călărași",
+    "gps_code": "MD-0004",
+    "freq": "",
+    "Lat": 47.2521452,
+    "Lon": 28.2802413,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baimaclia Airstrip",
+    "gps_code": "MD-0006",
+    "freq": "",
+    "Lat": 46.18065,
+    "Lon": 28.38241,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vinaria Et Cetera Airstrip",
+    "gps_code": "MD-0007",
+    "freq": "",
+    "Lat": 46.45025,
+    "Lon": 29.92919,
+    "Ele": 137.5
+  }
+]

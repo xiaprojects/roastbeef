@@ -1,0 +1,3314 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Bamburi Airport",
+    "gps_code": "BMQ",
+    "freq": "",
+    "Lat": -3.983363,
+    "Lon": 39.730982,
+    "Ele": 15.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amboseli Airport",
+    "gps_code": "HKAM",
+    "freq": "",
+    "Lat": -2.645050048828125,
+    "Lon": 37.25310134887695,
+    "Ele": 1144.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bura East Airport",
+    "gps_code": "HKBR",
+    "freq": "",
+    "Lat": -1.1,
+    "Lon": 39.950001,
+    "Ele": 105.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Eldoret International Airport",
+    "gps_code": "HKEL",
+    "freq": "119.400",
+    "Lat": 0.4044579863548279,
+    "Lon": 35.23889923095703,
+    "Ele": 2115.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Embu Airport",
+    "gps_code": "HKEM",
+    "freq": "",
+    "Lat": -0.57327,
+    "Lon": 37.49726,
+    "Ele": 1264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Eliye Springs Airport",
+    "gps_code": "HKES",
+    "freq": "",
+    "Lat": 3.23635,
+    "Lon": 35.97664,
+    "Ele": 425.2
+  },
+  {
+    "type": "small_airport",
+    "name": "El Wak Airport",
+    "gps_code": "HKEW",
+    "freq": "",
+    "Lat": 2.732842,
+    "Lon": 40.927505,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalokol Airport",
+    "gps_code": "HKFG",
+    "freq": "",
+    "Lat": 3.49161,
+    "Lon": 35.836777,
+    "Ele": 379.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Garissa Airport",
+    "gps_code": "HKGA",
+    "freq": "",
+    "Lat": -0.463508,
+    "Lon": 39.6483,
+    "Ele": 144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Garba Tula Airport",
+    "gps_code": "HKGT",
+    "freq": "",
+    "Lat": 0.533333,
+    "Lon": 38.516667,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Homa Bay Airport",
+    "gps_code": "HKHB",
+    "freq": "",
+    "Lat": -0.587322,
+    "Lon": 34.476467,
+    "Ele": 1304.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hola Airport",
+    "gps_code": "HKHO",
+    "freq": "",
+    "Lat": -1.522,
+    "Lon": 40.004002,
+    "Ele": 59.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Isiolo Airport",
+    "gps_code": "HKIS",
+    "freq": "",
+    "Lat": 0.338171,
+    "Lon": 37.591694,
+    "Ele": 1065.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Jomo Kenyatta International Airport",
+    "gps_code": "HKJK",
+    "freq": "122.300",
+    "Lat": -1.31923997402,
+    "Lon": 36.9277992249,
+    "Ele": 1624.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiambere Airport",
+    "gps_code": "HKKB",
+    "freq": "",
+    "Lat": -0.6330000162124634,
+    "Lon": 37.882999420166016,
+    "Ele": 746.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Keekorok Airport",
+    "gps_code": "HKKE",
+    "freq": "",
+    "Lat": -1.586345,
+    "Lon": 35.257455,
+    "Ele": 1767.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakamega Airport",
+    "gps_code": "HKKG",
+    "freq": "",
+    "Lat": 0.271342009306,
+    "Lon": 34.7873001099,
+    "Ele": 1530.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kisumu Airport",
+    "gps_code": "HKKI",
+    "freq": "121.600",
+    "Lat": -0.0861390009522438,
+    "Lon": 34.72890090942383,
+    "Ele": 1138.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilaguni Airport",
+    "gps_code": "HKKL",
+    "freq": "",
+    "Lat": -2.91061,
+    "Lon": 38.065201,
+    "Ele": 838.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kericho Airport",
+    "gps_code": "HKKR",
+    "freq": "",
+    "Lat": -0.3899,
+    "Lon": 35.242093,
+    "Ele": 1964.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kisii Airport",
+    "gps_code": "HKKS",
+    "freq": "",
+    "Lat": -0.672514,
+    "Lon": 34.690923,
+    "Ele": 1495.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kitale Airport",
+    "gps_code": "HKKT",
+    "freq": "",
+    "Lat": 0.971989,
+    "Lon": 34.958599,
+    "Ele": 1850.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kitui Airport",
+    "gps_code": "HKKU",
+    "freq": "",
+    "Lat": -1.372789978981018,
+    "Lon": 37.97809982299805,
+    "Ele": 1155.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Lokitaung Airport",
+    "gps_code": "HKLG",
+    "freq": "",
+    "Lat": 4.319205,
+    "Lon": 35.688641,
+    "Ele": 550.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lokichogio Airport",
+    "gps_code": "HKLK",
+    "freq": "125.900",
+    "Lat": 4.20412,
+    "Lon": 34.348202,
+    "Ele": 632.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lodwar Airport",
+    "gps_code": "HKLO",
+    "freq": "",
+    "Lat": 3.12197,
+    "Lon": 35.6087,
+    "Ele": 522.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Manda Airport",
+    "gps_code": "HKLU",
+    "freq": "",
+    "Lat": -2.252431,
+    "Lon": 40.912892,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Loyengalani Airport",
+    "gps_code": "HKLY",
+    "freq": "",
+    "Lat": 2.75,
+    "Lon": 36.716999,
+    "Ele": 364.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandera Airport",
+    "gps_code": "HKMA",
+    "freq": "",
+    "Lat": 3.934045,
+    "Lon": 41.844437,
+    "Ele": 245.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Marsabit Airport",
+    "gps_code": "HKMB",
+    "freq": "",
+    "Lat": 2.344254,
+    "Lon": 37.999996,
+    "Ele": 1339.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Maralal (Kisima) Airport",
+    "gps_code": "HKMI",
+    "freq": "",
+    "Lat": 0.95,
+    "Lon": 36.799999,
+    "Ele": 1810.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Mulika Lodge Airport",
+    "gps_code": "HKMK",
+    "freq": "",
+    "Lat": 0.165083,
+    "Lon": 38.195141,
+    "Ele": 679.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malindi Airport",
+    "gps_code": "HKML",
+    "freq": "",
+    "Lat": -3.2293100357055664,
+    "Lon": 40.10169982910156,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Migori Airport",
+    "gps_code": "HKMM",
+    "freq": "",
+    "Lat": -1.116,
+    "Lon": 34.485833,
+    "Ele": 1407.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Moi International Airport",
+    "gps_code": "HKMO",
+    "freq": "120.300",
+    "Lat": -4.03483,
+    "Lon": 39.5942,
+    "Ele": 61.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mara Serena Lodge Airstrip",
+    "gps_code": "HKMS",
+    "freq": "",
+    "Lat": -1.406111,
+    "Lon": 35.008057,
+    "Ele": 1585.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makindu Airport",
+    "gps_code": "HKMU",
+    "freq": "",
+    "Lat": -2.289713,
+    "Lon": 37.828621,
+    "Ele": 1070.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Moyale Airport",
+    "gps_code": "HKMY",
+    "freq": "",
+    "Lat": 3.46972,
+    "Lon": 39.101398,
+    "Ele": 850.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyeri Airport",
+    "gps_code": "HKNI",
+    "freq": "",
+    "Lat": -0.364414,
+    "Lon": 36.978485,
+    "Ele": 1777.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nakuru Airport",
+    "gps_code": "HKNK",
+    "freq": "118.000",
+    "Lat": -0.298067,
+    "Lon": 36.159302,
+    "Ele": 1900.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nanyuki Airport",
+    "gps_code": "HKNL",
+    "freq": "",
+    "Lat": -0.062399,
+    "Lon": 37.041008,
+    "Ele": 1905.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Narok Airport",
+    "gps_code": "HKNO",
+    "freq": "",
+    "Lat": -1.128103,
+    "Lon": 35.785685,
+    "Ele": 1923.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Naivasha Airport",
+    "gps_code": "HKNV",
+    "freq": "",
+    "Lat": -0.787953,
+    "Lon": 36.433494,
+    "Ele": 1944.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nairobi Wilson Airport",
+    "gps_code": "HKNW",
+    "freq": "118.100",
+    "Lat": -1.321720004081726,
+    "Lon": 36.81480026245117,
+    "Ele": 1687.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Laikipia Air Base",
+    "gps_code": "HKNY",
+    "freq": "",
+    "Lat": 0.032933,
+    "Lon": 37.026901,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Moi Air Base",
+    "gps_code": "HKRE",
+    "freq": "124.300",
+    "Lat": -1.27727,
+    "Lon": 36.862301,
+    "Ele": 1626.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Samburu Airport",
+    "gps_code": "HKSB",
+    "freq": "",
+    "Lat": 0.534069,
+    "Lon": 37.531991,
+    "Ele": 1004.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Tawi airfield",
+    "gps_code": "HKTW",
+    "freq": "",
+    "Lat": -2.73,
+    "Lon": 37.427,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ukunda Airstrip",
+    "gps_code": "HKUK",
+    "freq": "",
+    "Lat": -4.29333,
+    "Lon": 39.571098,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Voi Airport",
+    "gps_code": "HKVO",
+    "freq": "",
+    "Lat": -3.374539,
+    "Lon": 38.534748,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Webuye Airport",
+    "gps_code": "HKWE",
+    "freq": "",
+    "Lat": 0.6169999837875366,
+    "Lon": 34.78300094604492,
+    "Ele": 1310.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wajir Airport",
+    "gps_code": "HKWJ",
+    "freq": "118.200",
+    "Lat": 1.73324,
+    "Lon": 40.091599,
+    "Ele": 234.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mfangano Airport",
+    "gps_code": "KE-0001",
+    "freq": "",
+    "Lat": -0.4665,
+    "Lon": 34.063998,
+    "Ele": 1143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nzoia Airport",
+    "gps_code": "KE-0002",
+    "freq": "",
+    "Lat": 0.1333329975605011,
+    "Lon": 34.08333206176758,
+    "Ele": 1149.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rusinga Airport",
+    "gps_code": "KE-0003",
+    "freq": "",
+    "Lat": -0.4126670062541961,
+    "Lon": 34.14250183105469,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Oropoi Airport",
+    "gps_code": "KE-0004",
+    "freq": "",
+    "Lat": 3.810904,
+    "Lon": 34.360943,
+    "Ele": 866.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mara Shikar Airport",
+    "gps_code": "KE-0005",
+    "freq": "",
+    "Lat": -1.0692780017852783,
+    "Lon": 35.050777435302734,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Camp Simba Airfield",
+    "gps_code": "KE-0006",
+    "freq": "",
+    "Lat": -2.169513,
+    "Lon": 40.896414,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chepgoiven Airport",
+    "gps_code": "KE-0007",
+    "freq": "",
+    "Lat": -0.3860000073909759,
+    "Lon": 35.334110260009766,
+    "Ele": 2119.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Muswani Airport",
+    "gps_code": "KE-0008",
+    "freq": "",
+    "Lat": -1.1359169483184814,
+    "Lon": 35.33414077758789,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sergoit Airport",
+    "gps_code": "KE-0009",
+    "freq": "",
+    "Lat": 0.6499999761581421,
+    "Lon": 35.383331298828125,
+    "Ele": 2194.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Siana Springs Airport",
+    "gps_code": "KE-0010",
+    "freq": "",
+    "Lat": -1.4833329916000366,
+    "Lon": 35.41666793823242,
+    "Ele": 1630.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Olerai Airport",
+    "gps_code": "KE-0011",
+    "freq": "",
+    "Lat": 0.9859439730644226,
+    "Lon": 35.550804138183594,
+    "Ele": 1981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Oleshabani Airport",
+    "gps_code": "KE-0012",
+    "freq": "",
+    "Lat": -0.972346007823944,
+    "Lon": 35.74672317504883,
+    "Ele": 2042.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Njoro Country Club Airport",
+    "gps_code": "KE-0013",
+    "freq": "",
+    "Lat": -0.335999995470047,
+    "Lon": 35.91747283935547,
+    "Ele": 2164.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Barclays Airport",
+    "gps_code": "KE-0014",
+    "freq": "",
+    "Lat": -0.1877959966659546,
+    "Lon": 35.967098236083984,
+    "Ele": 1941.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lake Baringo (Kampi Ya Samaki) Airport",
+    "gps_code": "KE-0015",
+    "freq": "",
+    "Lat": 0.603167,
+    "Lon": 36.013,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Shompole (Dry Lake) Airport",
+    "gps_code": "KE-0016",
+    "freq": "",
+    "Lat": -2.0203330516815186,
+    "Lon": 36.03911209106445,
+    "Ele": 624.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Shompole (\"All\" weather) Airport",
+    "gps_code": "KE-0017",
+    "freq": "",
+    "Lat": -1.9755829572677608,
+    "Lon": 36.04838943481445,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapedo Airport",
+    "gps_code": "KE-0018",
+    "freq": "",
+    "Lat": 1.1638610363006592,
+    "Lon": 36.08416748046875,
+    "Ele": 762.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Naishi Airport",
+    "gps_code": "KE-0019",
+    "freq": "",
+    "Lat": -0.4565829932689667,
+    "Lon": 36.084999084472656,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Congrieve Airfield",
+    "gps_code": "KE-0020",
+    "freq": "",
+    "Lat": -0.483944,
+    "Lon": 36.124359,
+    "Ele": 1767.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ndabibi Airport",
+    "gps_code": "KE-0021",
+    "freq": "",
+    "Lat": -0.7430350184440613,
+    "Lon": 36.17222213745117,
+    "Ele": 2164.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Seislucho Airport",
+    "gps_code": "KE-0022",
+    "freq": "",
+    "Lat": 4.377778053283691,
+    "Lon": 36.21666717529297,
+    "Ele": 411.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kongoni Airport",
+    "gps_code": "KE-0023",
+    "freq": "",
+    "Lat": -0.8666669726371765,
+    "Lon": 36.23333358764648,
+    "Ele": 2011.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Delamare Camp Airport",
+    "gps_code": "KE-0024",
+    "freq": "",
+    "Lat": -0.4025560021400451,
+    "Lon": 36.23605728149414,
+    "Ele": 1767.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngelesha Airport",
+    "gps_code": "KE-0025",
+    "freq": "",
+    "Lat": 1.5172220468521118,
+    "Lon": 36.2852783203125,
+    "Ele": 1828.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Oserongoni Airport",
+    "gps_code": "KE-0026",
+    "freq": "",
+    "Lat": -0.8190000057220459,
+    "Lon": 36.28783416748047,
+    "Ele": 1889.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Loldia Airport",
+    "gps_code": "KE-0027",
+    "freq": "",
+    "Lat": -0.699999988079071,
+    "Lon": 36.31666564941406,
+    "Ele": 600.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Manyatta Airport",
+    "gps_code": "KE-0028",
+    "freq": "",
+    "Lat": -0.494715,
+    "Lon": 36.352908,
+    "Ele": 1950.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Nyahururu Airport",
+    "gps_code": "KE-0029",
+    "freq": "",
+    "Lat": -0.0137670002877712,
+    "Lon": 36.36973571777344,
+    "Ele": 2362.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kigio (Malewa) Airport",
+    "gps_code": "KE-0030",
+    "freq": "",
+    "Lat": -0.5677779912948608,
+    "Lon": 36.38336181640625,
+    "Ele": 2052.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ndume Langa Airport",
+    "gps_code": "KE-0031",
+    "freq": "",
+    "Lat": -0.5193060040473938,
+    "Lon": 36.38414001464844,
+    "Ele": 1981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mugie Ranch Airport",
+    "gps_code": "KE-0032",
+    "freq": "",
+    "Lat": 0.714812,
+    "Lon": 36.586594,
+    "Ele": 1874.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ol Maisor Airport",
+    "gps_code": "KE-0033",
+    "freq": "",
+    "Lat": 0.413292,
+    "Lon": 36.651665,
+    "Ele": 1798.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Orly (Olooitikosh) Airport",
+    "gps_code": "KE-0034",
+    "freq": "",
+    "Lat": -1.581194,
+    "Lon": 36.812832,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tadlitium Airport",
+    "gps_code": "KE-0035",
+    "freq": "",
+    "Lat": -2.122875928878784,
+    "Lon": 36.817481994628906,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Muridjo Ranch Airport",
+    "gps_code": "KE-0036",
+    "freq": "",
+    "Lat": 0.6472219824790955,
+    "Lon": 36.850860595703125,
+    "Ele": 1767.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Nanyuki West Airport",
+    "gps_code": "KE-0037",
+    "freq": "",
+    "Lat": -0.141092,
+    "Lon": 36.914995,
+    "Ele": 1828.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Olpejeta Airport",
+    "gps_code": "KE-0038",
+    "freq": "",
+    "Lat": 0.0306109990924596,
+    "Lon": 36.90083312988281,
+    "Ele": 1781.6
+  },
+  {
+    "type": "small_airport",
+    "name": "El Karama Airport",
+    "gps_code": "KE-0039",
+    "freq": "",
+    "Lat": 0.1972499936819076,
+    "Lon": 36.91749954223633,
+    "Ele": 1737.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Talu Airport",
+    "gps_code": "KE-0040",
+    "freq": "",
+    "Lat": -1.1459519863128662,
+    "Lon": 36.91798782348633,
+    "Ele": 1557.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Laburra Airport",
+    "gps_code": "KE-0041",
+    "freq": "",
+    "Lat": -0.298471,
+    "Lon": 36.947185,
+    "Ele": 1837.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hall Hall Airport",
+    "gps_code": "KE-0042",
+    "freq": "",
+    "Lat": 0.9333329796791076,
+    "Lon": 37.06666564941406,
+    "Ele": 1828.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hall Strip Airport",
+    "gps_code": "KE-0043",
+    "freq": "",
+    "Lat": 2.930361032485962,
+    "Lon": 37.067527770996094,
+    "Ele": 1828.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamwaki Farm Airport",
+    "gps_code": "KE-0044",
+    "freq": "",
+    "Lat": 0.1338440030813217,
+    "Lon": 37.15920639038086,
+    "Ele": 1990.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ibis Farm Airport",
+    "gps_code": "KE-0045",
+    "freq": "",
+    "Lat": 0.0472779981791973,
+    "Lon": 37.20083236694336,
+    "Ele": 2133.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Oldonyo Farm Airport",
+    "gps_code": "KE-0046",
+    "freq": "",
+    "Lat": 0.0972779989242553,
+    "Lon": 37.30086135864258,
+    "Ele": 2377.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Tassia Airport",
+    "gps_code": "KE-0047",
+    "freq": "",
+    "Lat": 0.4262219965457916,
+    "Lon": 37.33402633666992,
+    "Ele": 1036.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Wanguru (Thiba) Airport",
+    "gps_code": "KE-0048",
+    "freq": "",
+    "Lat": -0.6966760158538818,
+    "Lon": 37.37461853027344,
+    "Ele": 1036.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Loloroi Airport",
+    "gps_code": "KE-0049",
+    "freq": "",
+    "Lat": 0.635479,
+    "Lon": 37.380327,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarara Airport",
+    "gps_code": "KE-0050",
+    "freq": "",
+    "Lat": -1.0499999523162842,
+    "Lon": 37.43333435058594,
+    "Ele": 1146.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rutundu Airport",
+    "gps_code": "KE-0051",
+    "freq": "",
+    "Lat": -0.0526540018618106,
+    "Lon": 37.464542388916016,
+    "Ele": 3109.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Ngwesi Airport",
+    "gps_code": "KE-0052",
+    "freq": "",
+    "Lat": 0.1972499936819076,
+    "Lon": 37.467529296875,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mbirikani Airport",
+    "gps_code": "KE-0053",
+    "freq": "",
+    "Lat": -2.560832977294922,
+    "Lon": 37.54100036621094,
+    "Ele": 1188.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Harris Hills Airport",
+    "gps_code": "KE-0054",
+    "freq": "",
+    "Lat": 3.416666984558105,
+    "Lon": 37.76666641235352,
+    "Ele": 1310.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lake Jipe Airport",
+    "gps_code": "KE-0055",
+    "freq": "",
+    "Lat": -3.616944074630737,
+    "Lon": 37.77891540527344,
+    "Ele": 731.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Finch Hattons Airport",
+    "gps_code": "KE-0056",
+    "freq": "",
+    "Lat": -2.94596791267395,
+    "Lon": 37.91468811035156,
+    "Ele": 805.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maktau Gate Airport",
+    "gps_code": "KE-0057",
+    "freq": "",
+    "Lat": -3.408166885375977,
+    "Lon": 38.119667053222656,
+    "Ele": 1066.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamboyo(Tsavo West) Airport",
+    "gps_code": "KE-0058",
+    "freq": "",
+    "Lat": -2.75,
+    "Lon": 38.119998931884766,
+    "Ele": 855.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kangetchwa Airport",
+    "gps_code": "KE-0059",
+    "freq": "",
+    "Lat": -3.179363965988159,
+    "Lon": 38.13101196289063,
+    "Ele": 929.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Nariokotome Mission Airport",
+    "gps_code": "KE-0060",
+    "freq": "",
+    "Lat": 4.1232,
+    "Lon": 35.85745,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ithumba Airport",
+    "gps_code": "KE-0061",
+    "freq": "",
+    "Lat": -2.216722011566162,
+    "Lon": 38.38689041137695,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Satao Airport",
+    "gps_code": "KE-0062",
+    "freq": "",
+    "Lat": -3.393749952316284,
+    "Lon": 38.94686126708984,
+    "Ele": 426.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kone Airport",
+    "gps_code": "KE-0063",
+    "freq": "",
+    "Lat": -2.219193935394287,
+    "Lon": 39.100887298583984,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Moyale (Boma) Airport",
+    "gps_code": "KE-0064",
+    "freq": "",
+    "Lat": 3.450000047683716,
+    "Lon": 39.132999420166016,
+    "Ele": 850.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Crocodile Camp Airport",
+    "gps_code": "KE-0065",
+    "freq": "",
+    "Lat": -3.0691111087799072,
+    "Lon": 39.234222412109375,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kwale Airport",
+    "gps_code": "KE-0066",
+    "freq": "",
+    "Lat": -4.169795036315918,
+    "Lon": 39.43186569213867,
+    "Ele": 420.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kore Galana Ranch Airport",
+    "gps_code": "KE-0067",
+    "freq": "",
+    "Lat": -2.733333110809326,
+    "Lon": 39.53333282470703,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Komawayu (Tanke) Airport",
+    "gps_code": "KE-0068",
+    "freq": "",
+    "Lat": -2.916666984558105,
+    "Lon": 39.55091857910156,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Vipingo Estate Airport",
+    "gps_code": "KE-0069",
+    "freq": "",
+    "Lat": -3.80666666667,
+    "Lon": 39.7973888889,
+    "Ele": 26.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kijipwa Airport",
+    "gps_code": "KE-0070",
+    "freq": "",
+    "Lat": -3.8431389331817623,
+    "Lon": 39.80516815185547,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Garsen Airport",
+    "gps_code": "KE-0071",
+    "freq": "",
+    "Lat": -2.2680559158325195,
+    "Lon": 40.09377670288086,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rhamu Airport",
+    "gps_code": "KE-0072",
+    "freq": "",
+    "Lat": 3.923082113265991,
+    "Lon": 41.22369003295898,
+    "Ele": 245.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngare Ndare Airstrip",
+    "gps_code": "KE-0073",
+    "freq": "",
+    "Lat": 0.231557,
+    "Lon": 37.364159,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Laragai Airstrip",
+    "gps_code": "KE-0074",
+    "freq": "",
+    "Lat": 0.26957,
+    "Lon": 37.328098,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Private Airstrip near Lenana",
+    "gps_code": "KE-0076",
+    "freq": "",
+    "Lat": -0.1621779948472976,
+    "Lon": 37.445899963378906,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Log Logo Airstrip",
+    "gps_code": "KE-0077",
+    "freq": "",
+    "Lat": 1.994582,
+    "Lon": 37.916434,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalacha Airport",
+    "gps_code": "KE-0078",
+    "freq": "",
+    "Lat": 3.134855,
+    "Lon": 37.426236,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kauro Airstrip",
+    "gps_code": "KE-0079",
+    "freq": "",
+    "Lat": 1.06402,
+    "Lon": 37.720198,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baomo Tana Airport",
+    "gps_code": "KE-0080",
+    "freq": "",
+    "Lat": -1.847326,
+    "Lon": 40.091586,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bura West Airport",
+    "gps_code": "KE-0081",
+    "freq": "",
+    "Lat": -1.189574,
+    "Lon": 39.81448,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tana River Rapids Airport",
+    "gps_code": "KE-0082",
+    "freq": "",
+    "Lat": -0.069552,
+    "Lon": 38.382484,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tana River Airport",
+    "gps_code": "KE-0083",
+    "freq": "",
+    "Lat": -0.049021,
+    "Lon": 38.308839,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rojewero River Airport",
+    "gps_code": "KE-0084",
+    "freq": "",
+    "Lat": 0.118977,
+    "Lon": 38.268425,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tharaka Nithi Meru Airport",
+    "gps_code": "KE-0085",
+    "freq": "",
+    "Lat": 0.02597,
+    "Lon": 38.065436,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Airspray Naivasha Airfield",
+    "gps_code": "KE-0086",
+    "freq": "",
+    "Lat": -0.802034,
+    "Lon": 36.411967,
+    "Ele": 1889.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Alale Airport",
+    "gps_code": "KE-0087",
+    "freq": "",
+    "Lat": 2.267596,
+    "Lon": 35.029196,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alia Bay Airport",
+    "gps_code": "KE-0088",
+    "freq": "",
+    "Lat": 3.705058,
+    "Lon": 36.262236,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arabia Airport",
+    "gps_code": "KE-0089",
+    "freq": "",
+    "Lat": 3.566973,
+    "Lon": 41.511833,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Asako Airport",
+    "gps_code": "KE-0090",
+    "freq": "",
+    "Lat": -0.107107,
+    "Lon": 39.046973,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Athi River Airport",
+    "gps_code": "KE-0091",
+    "freq": "",
+    "Lat": -1.51094,
+    "Lon": 37.034369,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bachuma Gate Airport",
+    "gps_code": "KE-0092",
+    "freq": "",
+    "Lat": -3.663575,
+    "Lon": 38.945339,
+    "Ele": 381.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baragoi West Airport",
+    "gps_code": "KE-0093",
+    "freq": "",
+    "Lat": 1.807578,
+    "Lon": 36.679137,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barsaloi Airport",
+    "gps_code": "KE-0094",
+    "freq": "",
+    "Lat": 1.340706,
+    "Lon": 36.856679,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barton's Naivasha Airport",
+    "gps_code": "KE-0095",
+    "freq": "",
+    "Lat": -0.795118,
+    "Lon": 36.295698,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Crescent Island Naivasha Airport",
+    "gps_code": "KE-0096",
+    "freq": "",
+    "Lat": -0.767433,
+    "Lon": 36.397561,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Belatrix Kargi Airport",
+    "gps_code": "KE-0097",
+    "freq": "",
+    "Lat": 2.505995,
+    "Lon": 37.565966,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bissel Airport",
+    "gps_code": "KE-0098",
+    "freq": "",
+    "Lat": -2.136863,
+    "Lon": 36.838493,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bobs Harries Airport",
+    "gps_code": "KE-0099",
+    "freq": "",
+    "Lat": -1.040713,
+    "Lon": 36.992879,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bogani Airport",
+    "gps_code": "KE-0100",
+    "freq": "",
+    "Lat": -1.014198,
+    "Lon": 35.342806,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bomet Airport",
+    "gps_code": "KE-0101",
+    "freq": "",
+    "Lat": -0.776471,
+    "Lon": 35.318411,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Buna Airport",
+    "gps_code": "KE-0102",
+    "freq": "",
+    "Lat": 2.80117,
+    "Lon": 39.481787,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bute Moyale Airport",
+    "gps_code": "KE-0103",
+    "freq": "",
+    "Lat": 3.337517,
+    "Lon": 39.41424,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carzan Rongai Airport",
+    "gps_code": "KE-0104",
+    "freq": "",
+    "Lat": -0.191457,
+    "Lon": 35.864189,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chaffa Airport",
+    "gps_code": "KE-0105",
+    "freq": "",
+    "Lat": 0.667151,
+    "Lon": 37.910007,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chyulus Airport",
+    "gps_code": "KE-0106",
+    "freq": "",
+    "Lat": -2.527368,
+    "Lon": 37.731488,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cottars Mara Airport",
+    "gps_code": "KE-0107",
+    "freq": "",
+    "Lat": -1.680954,
+    "Lon": 35.344401,
+    "Ele": 1761.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Dadaab Airstrip",
+    "gps_code": "KE-0108",
+    "freq": "",
+    "Lat": 0.058189,
+    "Lon": 40.318055,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dol Dol Airport",
+    "gps_code": "KE-0109",
+    "freq": "",
+    "Lat": 0.367944,
+    "Lon": 37.141442,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Kantor Airport",
+    "gps_code": "KE-0110",
+    "freq": "",
+    "Lat": 1.465284,
+    "Lon": 37.073011,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Enasoit Airport",
+    "gps_code": "KE-0111",
+    "freq": "",
+    "Lat": 0.237853,
+    "Lon": 37.077848,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Engelesha Airport",
+    "gps_code": "KE-0112",
+    "freq": "",
+    "Lat": 0.510757,
+    "Lon": 36.294394,
+    "Ele": 1970.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Entasopia Airport",
+    "gps_code": "KE-0113",
+    "freq": "",
+    "Lat": -1.783522,
+    "Lon": 36.057783,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Entesekera Airport",
+    "gps_code": "KE-0114",
+    "freq": "",
+    "Lat": -1.842318,
+    "Lon": 35.86778,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Funzi Island Airport",
+    "gps_code": "KE-0115",
+    "freq": "",
+    "Lat": -4.573672,
+    "Lon": 39.447079,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Galana Ranch Airstrip",
+    "gps_code": "KE-0116",
+    "freq": "",
+    "Lat": -3.062141,
+    "Lon": 39.331661,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gatab Lower Airport",
+    "gps_code": "KE-0117",
+    "freq": "",
+    "Lat": 2.636477,
+    "Lon": 36.932055,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gilgil Coulson Airport",
+    "gps_code": "KE-0118",
+    "freq": "",
+    "Lat": -0.502798,
+    "Lon": 36.356915,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gogar Airport",
+    "gps_code": "KE-0119",
+    "freq": "",
+    "Lat": -0.18786,
+    "Lon": 35.856818,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Habaswein Airport",
+    "gps_code": "KE-0120",
+    "freq": "",
+    "Lat": 1.016215,
+    "Lon": 39.505836,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ileret Main Airport",
+    "gps_code": "KE-0121",
+    "freq": "",
+    "Lat": 4.281881,
+    "Lon": 36.266951,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ileret Town Airport",
+    "gps_code": "KE-0122",
+    "freq": "",
+    "Lat": 4.304698,
+    "Lon": 36.235572,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ilkerin Airport",
+    "gps_code": "KE-0123",
+    "freq": "",
+    "Lat": -1.806828,
+    "Lon": 35.704339,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jolai Delamere Estates Airport",
+    "gps_code": "KE-0124",
+    "freq": "",
+    "Lat": -0.523628,
+    "Lon": 36.187582,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalama Airport",
+    "gps_code": "KE-0125",
+    "freq": "",
+    "Lat": 0.694423,
+    "Lon": 37.611987,
+    "Ele": 894.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamburu Airport",
+    "gps_code": "KE-0126",
+    "freq": "",
+    "Lat": -0.823913,
+    "Lon": 37.715869,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamogi Ranch Airstrip",
+    "gps_code": "KE-0127",
+    "freq": "",
+    "Lat": 0.601706,
+    "Lon": 36.73699,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kanzi Airport",
+    "gps_code": "KE-0128",
+    "freq": "",
+    "Lat": -2.75235,
+    "Lon": 37.878257,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kasigau Gate Airport",
+    "gps_code": "KE-0129",
+    "freq": "",
+    "Lat": -3.85072,
+    "Lon": 38.515401,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kataboi Airport",
+    "gps_code": "KE-0130",
+    "freq": "",
+    "Lat": 3.756125,
+    "Lon": 35.833843,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Katilu Airport",
+    "gps_code": "KE-0131",
+    "freq": "",
+    "Lat": 2.284583,
+    "Lon": 35.429495,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kedong Airport",
+    "gps_code": "KE-0132",
+    "freq": "",
+    "Lat": -1.299226,
+    "Lon": 36.475029,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kichwa Tembo Airport",
+    "gps_code": "KE-0133",
+    "freq": "",
+    "Lat": -1.263497,
+    "Lon": 35.027533,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kifuku Estate Airstrip",
+    "gps_code": "KE-0134",
+    "freq": "",
+    "Lat": 0.173081,
+    "Lon": 36.583018,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kijabe Airport",
+    "gps_code": "KE-0135",
+    "freq": "",
+    "Lat": -0.956812,
+    "Lon": 36.592155,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilalinda Airport",
+    "gps_code": "KE-0136",
+    "freq": "",
+    "Lat": -2.627593,
+    "Lon": 38.338681,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kimana Airstrip",
+    "gps_code": "KE-0137",
+    "freq": "",
+    "Lat": -2.752942,
+    "Lon": 37.525214,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kipipri Airport",
+    "gps_code": "KE-0138",
+    "freq": "",
+    "Lat": -0.454084,
+    "Lon": 36.493097,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kipsin Airstrip",
+    "gps_code": "KE-0139",
+    "freq": "",
+    "Lat": 0.598082,
+    "Lon": 37.319715,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kisima Ranch Airstrip",
+    "gps_code": "KE-0140",
+    "freq": "",
+    "Lat": 0.512642,
+    "Lon": 36.694537,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koka Airport",
+    "gps_code": "KE-0141",
+    "freq": "",
+    "Lat": -1.917027,
+    "Lon": 36.004027,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kongoni Game Valley Airport",
+    "gps_code": "KE-0142",
+    "freq": "",
+    "Lat": -0.843317,
+    "Lon": 36.259475,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Korr Airport",
+    "gps_code": "KE-0143",
+    "freq": "",
+    "Lat": 2.013786,
+    "Lon": 37.516742,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Korr AIM Airstrip",
+    "gps_code": "KE-0144",
+    "freq": "",
+    "Lat": 2.007568,
+    "Lon": 37.492219,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kowop Airstrip",
+    "gps_code": "KE-0145",
+    "freq": "",
+    "Lat": 2.00616,
+    "Lon": 36.8299,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuluo Airport",
+    "gps_code": "KE-0146",
+    "freq": "",
+    "Lat": -1.12471,
+    "Lon": 35.197795,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuti Airport",
+    "gps_code": "KE-0147",
+    "freq": "",
+    "Lat": 0.645962,
+    "Lon": 36.427784,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manda Point Airstrip",
+    "gps_code": "KE-0148",
+    "freq": "",
+    "Lat": -2.228949,
+    "Lon": 40.971447,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Langata Enerit Airstrip",
+    "gps_code": "KE-0149",
+    "freq": "",
+    "Lat": -1.536513,
+    "Lon": 36.020637,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Larsens Camp Airstrip",
+    "gps_code": "KE-0150",
+    "freq": "",
+    "Lat": 0.591385,
+    "Lon": 37.586685,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Latakwen Airport",
+    "gps_code": "KE-0151",
+    "freq": "",
+    "Lat": 1.547691,
+    "Lon": 37.108677,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lenchukuti Airport",
+    "gps_code": "KE-0152",
+    "freq": "",
+    "Lat": 2.243084,
+    "Lon": 36.670897,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lentille Airport",
+    "gps_code": "KE-0153",
+    "freq": "",
+    "Lat": 0.504473,
+    "Lon": 37.006397,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Limuru Airstrip",
+    "gps_code": "KE-0154",
+    "freq": "",
+    "Lat": -1.106687,
+    "Lon": 36.688778,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lolomarik Airport",
+    "gps_code": "KE-0155",
+    "freq": "",
+    "Lat": 0.107106,
+    "Lon": 37.278907,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Longonot Fair Airstrip",
+    "gps_code": "KE-0156",
+    "freq": "",
+    "Lat": -0.817072,
+    "Lon": 36.391407,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lowarengak Airport",
+    "gps_code": "KE-0157",
+    "freq": "",
+    "Lat": 4.284767,
+    "Lon": 35.870662,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lugard Falls South Airport",
+    "gps_code": "KE-0158",
+    "freq": "",
+    "Lat": -3.048607,
+    "Lon": 38.689626,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Malinda Estate Airstrip",
+    "gps_code": "KE-0159",
+    "freq": "",
+    "Lat": -1.483679,
+    "Lon": 37.098339,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manyani Airport",
+    "gps_code": "KE-0160",
+    "freq": "",
+    "Lat": -3.094749,
+    "Lon": 38.476476,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marinyn Airport",
+    "gps_code": "KE-0161",
+    "freq": "",
+    "Lat": -0.436093,
+    "Lon": 35.298761,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mawingo Airprot",
+    "gps_code": "KE-0162",
+    "freq": "",
+    "Lat": -0.043734,
+    "Lon": 37.145506,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mbaruk Airport",
+    "gps_code": "KE-0163",
+    "freq": "",
+    "Lat": -0.397362,
+    "Lon": 36.215325,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Meriti Oil Rig Airstrip",
+    "gps_code": "KE-0164",
+    "freq": "",
+    "Lat": 1.089888,
+    "Lon": 38.600205,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Milmet Airport",
+    "gps_code": "KE-0165",
+    "freq": "",
+    "Lat": -0.1115,
+    "Lon": 36.124334,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mount Elgon Orchards Airstrip",
+    "gps_code": "KE-0166",
+    "freq": "",
+    "Lat": 1.209714,
+    "Lon": 34.796225,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mpala Farm Airstrip",
+    "gps_code": "KE-0167",
+    "freq": "",
+    "Lat": 0.353531,
+    "Lon": 36.892033,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mpala Research Center Airstrip",
+    "gps_code": "KE-0168",
+    "freq": "",
+    "Lat": 0.29012,
+    "Lon": 36.892436,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mughwango Airstrip",
+    "gps_code": "KE-0169",
+    "freq": "",
+    "Lat": 0.126097,
+    "Lon": 38.132497,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mukenye Ranch Airstrip",
+    "gps_code": "KE-0170",
+    "freq": "",
+    "Lat": 0.251711,
+    "Lon": 36.805338,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mutomo Airport",
+    "gps_code": "KE-0171",
+    "freq": "",
+    "Lat": -1.846779,
+    "Lon": 38.204732,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mwatate Airport",
+    "gps_code": "KE-0172",
+    "freq": "",
+    "Lat": -3.517815,
+    "Lon": 38.442556,
+    "Ele": 786.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Namunyak Airport",
+    "gps_code": "KE-0173",
+    "freq": "",
+    "Lat": 1.058237,
+    "Lon": 37.437892,
+    "Ele": 975.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nariokotome Airport",
+    "gps_code": "KE-0174",
+    "freq": "",
+    "Lat": 4.114358,
+    "Lon": 35.842295,
+    "Ele": 487.7
+  },
+  {
+    "type": "small_airport",
+    "name": "National Park Airstrip",
+    "gps_code": "KE-0175",
+    "freq": "",
+    "Lat": -0.170666,
+    "Lon": 37.136612,
+    "Ele": 2286.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngalai Airport",
+    "gps_code": "KE-0176",
+    "freq": "",
+    "Lat": 1.170659,
+    "Lon": 37.252765,
+    "Ele": 1264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngao Airport",
+    "gps_code": "KE-0177",
+    "freq": "",
+    "Lat": -2.42834,
+    "Lon": 40.193087,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngurunit South Airport",
+    "gps_code": "KE-0178",
+    "freq": "",
+    "Lat": 1.735737,
+    "Lon": 37.3216,
+    "Ele": 975.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ol Derkessi Airstrip",
+    "gps_code": "KE-0179",
+    "freq": "",
+    "Lat": -1.713528,
+    "Lon": 35.560338,
+    "Ele": 1859.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ol Donyo Laro Airport",
+    "gps_code": "KE-0180",
+    "freq": "",
+    "Lat": -1.813717,
+    "Lon": 36.018261,
+    "Ele": 1356.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ol Malo Lodge Airstrip",
+    "gps_code": "KE-0181",
+    "freq": "",
+    "Lat": 0.659821,
+    "Lon": 36.868623,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ol Seki Airstrip",
+    "gps_code": "KE-0182",
+    "freq": "",
+    "Lat": -1.378382,
+    "Lon": 35.378453,
+    "Ele": 1981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Oryx Airport",
+    "gps_code": "KE-0183",
+    "freq": "",
+    "Lat": 0.60964,
+    "Lon": 37.53018,
+    "Ele": 944.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Oseur Airstrip",
+    "gps_code": "KE-0184",
+    "freq": "",
+    "Lat": -1.606288,
+    "Lon": 35.436835,
+    "Ele": 1737.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Perror Airport",
+    "gps_code": "KE-0185",
+    "freq": "",
+    "Lat": 2.846734,
+    "Lon": 35.050887,
+    "Ele": 762.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rukinga Ranch Airstrip",
+    "gps_code": "KE-0186",
+    "freq": "",
+    "Lat": -3.575566,
+    "Lon": 38.760165,
+    "Ele": 538.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Saguta Naibor Ranch Airstrip",
+    "gps_code": "KE-0187",
+    "freq": "",
+    "Lat": 0.431231,
+    "Lon": 36.729133,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sala Gate Airport",
+    "gps_code": "KE-0188",
+    "freq": "",
+    "Lat": -3.072405,
+    "Lon": 39.215665,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Seder Airport",
+    "gps_code": "KE-0189",
+    "freq": "",
+    "Lat": 2.314229,
+    "Lon": 36.88698,
+    "Ele": 868.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Segel Airprot",
+    "gps_code": "KE-0190",
+    "freq": "",
+    "Lat": 2.544761,
+    "Lon": 37.944126,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Shaba Lodge Airport",
+    "gps_code": "KE-0191",
+    "freq": "",
+    "Lat": 0.658176,
+    "Lon": 37.700377,
+    "Ele": 792.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Sheldrick Trust Strip",
+    "gps_code": "KE-0192",
+    "freq": "",
+    "Lat": -2.669606,
+    "Lon": 38.367137,
+    "Ele": 548.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Sigor Airport",
+    "gps_code": "KE-0193",
+    "freq": "",
+    "Lat": 1.58209,
+    "Lon": 35.471191,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sirocco Airstrip",
+    "gps_code": "KE-0194",
+    "freq": "",
+    "Lat": -0.721299,
+    "Lon": 36.28709,
+    "Ele": 1859.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sosian Ranch Airstrip",
+    "gps_code": "KE-0195",
+    "freq": "",
+    "Lat": 0.418494,
+    "Lon": 36.738667,
+    "Ele": 1737.4
+  },
+  {
+    "type": "small_airport",
+    "name": "South Horr Airport",
+    "gps_code": "KE-0196",
+    "freq": "",
+    "Lat": 2.172091,
+    "Lon": 36.906929,
+    "Ele": 883.9
+  },
+  {
+    "type": "small_airport",
+    "name": "St. Andrews School Airstrip",
+    "gps_code": "KE-0197",
+    "freq": "",
+    "Lat": -0.273941,
+    "Lon": 35.767293,
+    "Ele": 2510.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Sware Airport",
+    "gps_code": "KE-0198",
+    "freq": "",
+    "Lat": 1.077515,
+    "Lon": 37.092131,
+    "Ele": 1249.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tinderet Teas Estate Airstrip",
+    "gps_code": "KE-0199",
+    "freq": "",
+    "Lat": -0.017443,
+    "Lon": 35.351428,
+    "Ele": 2042.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tortilis Camp Airstrip",
+    "gps_code": "KE-0200",
+    "freq": "",
+    "Lat": -2.683608,
+    "Lon": 37.178328,
+    "Ele": 1160.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsavo Safari Camp Airstrip",
+    "gps_code": "KE-0201",
+    "freq": "",
+    "Lat": -2.638919,
+    "Lon": 38.364736,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tum Airport",
+    "gps_code": "KE-0202",
+    "freq": "",
+    "Lat": 2.141479,
+    "Lon": 36.759077,
+    "Ele": 1371.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Wanjala Mine Airstrip",
+    "gps_code": "KE-0203",
+    "freq": "",
+    "Lat": -3.245484,
+    "Lon": 38.181924,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Weavers Airstrip",
+    "gps_code": "KE-0204",
+    "freq": "",
+    "Lat": -1.363068,
+    "Lon": 35.189882,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Loisaba Airstrop",
+    "gps_code": "KE-0207",
+    "freq": "",
+    "Lat": 0.61196,
+    "Lon": 36.800095,
+    "Ele": 1750.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Olare Orok Airfield",
+    "gps_code": "KE-0208",
+    "freq": "",
+    "Lat": -1.324213,
+    "Lon": 35.246106,
+    "Ele": 1761.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahari East Airstrip",
+    "gps_code": "KE-0209",
+    "freq": "",
+    "Lat": -2.446286,
+    "Lon": 40.754641,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Matangeni East Airstrip",
+    "gps_code": "KE-0210",
+    "freq": "",
+    "Lat": -2.447421,
+    "Lon": 40.740016,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Witu Airstrip",
+    "gps_code": "KE-0211",
+    "freq": "",
+    "Lat": -2.37964,
+    "Lon": 40.44099,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Laisamis Airport",
+    "gps_code": "KE-6002",
+    "freq": "",
+    "Lat": 1.578387,
+    "Lon": 37.810799,
+    "Ele": 568.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lokori Airport",
+    "gps_code": "KE-6007",
+    "freq": "",
+    "Lat": 1.966667,
+    "Lon": 36.016668,
+    "Ele": 606.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Arroket Airport",
+    "gps_code": "KE-6012",
+    "freq": "",
+    "Lat": -0.623426,
+    "Lon": 35.065867,
+    "Ele": 1815.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Balesa Airport",
+    "gps_code": "KE-6013",
+    "freq": "",
+    "Lat": 3.646972,
+    "Lon": 37.350861,
+    "Ele": 609.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Fig Tree  Airport",
+    "gps_code": "KE-6018",
+    "freq": "",
+    "Lat": -1.434722,
+    "Lon": 35.193249,
+    "Ele": 1539.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Head Office Delamere Estates Airport",
+    "gps_code": "KE-6019",
+    "freq": "",
+    "Lat": -0.467954,
+    "Lon": 36.191218,
+    "Ele": 1981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Itona Ranch Airport",
+    "gps_code": "KE-6020",
+    "freq": "",
+    "Lat": -1.135916,
+    "Lon": 34.83411,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Karimbuni Airport",
+    "gps_code": "KE-6021",
+    "freq": "",
+    "Lat": -0.8029670119285583,
+    "Lon": 36.09061050415039,
+    "Ele": 2834.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Masai Mara Airport",
+    "gps_code": "KE-6024",
+    "freq": "",
+    "Lat": 1.2666670083999634,
+    "Lon": 35.033329010009766,
+    "Ele": 1633.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kisima Farm Airport",
+    "gps_code": "KE-6025",
+    "freq": "",
+    "Lat": 0.0472779981791973,
+    "Lon": 37.4341926574707,
+    "Ele": 2377.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamok Airport",
+    "gps_code": "KE-6027",
+    "freq": "",
+    "Lat": 0.013944000005722,
+    "Lon": 36.80083465576172,
+    "Ele": 1917.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kulalu Ranch Airport",
+    "gps_code": "KE-6028",
+    "freq": "",
+    "Lat": -3.083333,
+    "Lon": 39.416668,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Lubarra Airport",
+    "gps_code": "KE-6029",
+    "freq": "",
+    "Lat": -1.2999999523162842,
+    "Lon": 36.95000076293945,
+    "Ele": 1859.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hagadera Airport",
+    "gps_code": "KE-6033",
+    "freq": "",
+    "Lat": 0.1253229975700378,
+    "Lon": 40.28998565673828,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lomolo Airport",
+    "gps_code": "KE-6034",
+    "freq": "",
+    "Lat": 0.031057,
+    "Lon": 35.988683,
+    "Ele": 1585.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Loporot Airport",
+    "gps_code": "KE-6035",
+    "freq": "",
+    "Lat": 2.345275,
+    "Lon": 35.882778,
+    "Ele": 613.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lothagah Airport",
+    "gps_code": "KE-6036",
+    "freq": "",
+    "Lat": 3.033333,
+    "Lon": 36.049999,
+    "Ele": 487.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotubae Airport",
+    "gps_code": "KE-6037",
+    "freq": "",
+    "Lat": 1.9833329916000368,
+    "Lon": 36.04999923706055,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Menengai Airport",
+    "gps_code": "KE-6040",
+    "freq": "",
+    "Lat": -0.2360280007123947,
+    "Lon": 36.00080490112305,
+    "Ele": 2026.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nampaso Airport",
+    "gps_code": "KE-6041",
+    "freq": "",
+    "Lat": -1.0423929691314695,
+    "Lon": 35.24995422363281,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ndovu Airport",
+    "gps_code": "KE-6042",
+    "freq": "",
+    "Lat": 2.0137779712677,
+    "Lon": 38.634220123291016,
+    "Ele": 350.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lanet Prairies Airport",
+    "gps_code": "KE-6043",
+    "freq": "",
+    "Lat": -0.2860000133514404,
+    "Lon": 36.15080642700195,
+    "Ele": 1889.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngore Ngore Airport",
+    "gps_code": "KE-6044",
+    "freq": "",
+    "Lat": -1.8359440565109253,
+    "Lon": 37.78419494628906,
+    "Ele": 1917.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Njoro Airport",
+    "gps_code": "KE-6045",
+    "freq": "",
+    "Lat": -0.316978,
+    "Lon": 35.922549,
+    "Ele": 2176.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nkreta Airport",
+    "gps_code": "KE-6046",
+    "freq": "",
+    "Lat": -1.0166670083999634,
+    "Lon": 35.83333206176758,
+    "Ele": 2042.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Oleleren Airport",
+    "gps_code": "KE-6048",
+    "freq": "",
+    "Lat": 0.013944000005722,
+    "Lon": 36.8841667175293,
+    "Ele": 1700.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gaitu Airport",
+    "gps_code": "KE-6050",
+    "freq": "",
+    "Lat": -0.0527219995856285,
+    "Lon": 37.73419570922852,
+    "Ele": 1159.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Taita Hills Airport",
+    "gps_code": "KE-6053",
+    "freq": "",
+    "Lat": -3.5123889446258545,
+    "Lon": 38.250221252441406,
+    "Ele": 960.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Taveta Sisal Airport",
+    "gps_code": "KE-6054",
+    "freq": "",
+    "Lat": -3.418889045715332,
+    "Lon": 37.6341667175293,
+    "Ele": 769.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Turkwel Gorge Airport",
+    "gps_code": "KE-6055",
+    "freq": "",
+    "Lat": 1.895681,
+    "Lon": 35.38826,
+    "Ele": 800.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ziwani Airport",
+    "gps_code": "KE-6056",
+    "freq": "",
+    "Lat": -3.2193610668182373,
+    "Lon": 37.80072021484375,
+    "Ele": 922.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Didima Bule Airport",
+    "gps_code": "KE-6058",
+    "freq": "",
+    "Lat": -2.3691670894622803,
+    "Lon": 39.617584228515625,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Komofodo Galana Ranch Airport",
+    "gps_code": "KE-6061",
+    "freq": "",
+    "Lat": 2.552500009536743,
+    "Lon": 39.66758346557617,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Embori Farm Airport",
+    "gps_code": "KE-6062",
+    "freq": "",
+    "Lat": 0.07766,
+    "Lon": 37.34969,
+    "Ele": 2641.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngerende Airport",
+    "gps_code": "KE-6066",
+    "freq": "",
+    "Lat": -1.083519,
+    "Lon": 35.18565,
+    "Ele": 1679.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Barina Airport",
+    "gps_code": "KE-6067",
+    "freq": "",
+    "Lat": -0.1360000073909759,
+    "Lon": 36.01747131347656,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Soy-Chemoset Airport",
+    "gps_code": "KE-6068",
+    "freq": "",
+    "Lat": 0.7138890027999878,
+    "Lon": 36.86750030517578,
+    "Ele": 1563.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngorare Ranch Airport",
+    "gps_code": "KE-6071",
+    "freq": "",
+    "Lat": 0.3305830061435699,
+    "Lon": 36.65083312988281,
+    "Ele": 1950.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ilkek Airport",
+    "gps_code": "KE-6072",
+    "freq": "",
+    "Lat": -0.6026390194892883,
+    "Lon": 36.36747360229492,
+    "Ele": 1935.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalacha South Airport",
+    "gps_code": "KE-6074",
+    "freq": "",
+    "Lat": 3.0199999809265137,
+    "Lon": 37.448333740234375,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Masnami Airport",
+    "gps_code": "KE-6075",
+    "freq": "",
+    "Lat": -1.1333329677581787,
+    "Lon": 35.33333206176758,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Segera Ranch Airport",
+    "gps_code": "KE-6076",
+    "freq": "",
+    "Lat": 0.1821729987859726,
+    "Lon": 36.911842346191406,
+    "Ele": 1737.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Lali Galana Airport",
+    "gps_code": "KE-6077",
+    "freq": "",
+    "Lat": -3.135777950286865,
+    "Lon": 39.30088806152344,
+    "Ele": 152.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilgoris Airport",
+    "gps_code": "KE-6079",
+    "freq": "",
+    "Lat": -1.079585,
+    "Lon": 34.87741,
+    "Ele": 1754.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Oserian Naivasha Airport",
+    "gps_code": "KE-6081",
+    "freq": "",
+    "Lat": -0.8526390194892883,
+    "Lon": 36.26747131347656,
+    "Ele": 1935.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kinna Airport",
+    "gps_code": "KE-6082",
+    "freq": "",
+    "Lat": 0.3166669905185699,
+    "Lon": 38.20000076293945,
+    "Ele": 673.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Green Park Airport",
+    "gps_code": "KE-6084",
+    "freq": "",
+    "Lat": -0.6696670055389404,
+    "Lon": 36.310279846191406,
+    "Ele": 2069.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mara North Conservancy Airstrip",
+    "gps_code": "KE-6087",
+    "freq": "",
+    "Lat": -1.14542,
+    "Lon": 35.124922,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Cottar's Camp Airport",
+    "gps_code": "KE-6088",
+    "freq": "",
+    "Lat": -1.4952269792556765,
+    "Lon": 35.41211700439453,
+    "Ele": 1630.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Maji Mazuri Airport",
+    "gps_code": "KE-6089",
+    "freq": "",
+    "Lat": 0.933333,
+    "Lon": 35.166668,
+    "Ele": 2127.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kilifi Plantation Farm Airport",
+    "gps_code": "KE-6095",
+    "freq": "",
+    "Lat": -3.6333329677581783,
+    "Lon": 39.84999847412109,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mitunguu Airport",
+    "gps_code": "KE-6109",
+    "freq": "",
+    "Lat": -0.1096829995512962,
+    "Lon": 37.79010009765625,
+    "Ele": 944.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mkowe Airport",
+    "gps_code": "KE-6110",
+    "freq": "",
+    "Lat": -2.228892,
+    "Lon": 40.845313,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Angama Airport",
+    "gps_code": "KE-6112",
+    "freq": "",
+    "Lat": -1.27156,
+    "Lon": 34.955513,
+    "Ele": 1883.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Musiara Airstrip",
+    "gps_code": "KE-6121",
+    "freq": "",
+    "Lat": -1.298636,
+    "Lon": 35.063885,
+    "Ele": 1559.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Namanga Airport",
+    "gps_code": "KE-6123",
+    "freq": "",
+    "Lat": -2.57938888889,
+    "Lon": 36.9121666667,
+    "Ele": 1243.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Beverley Airport",
+    "gps_code": "KE-6127",
+    "freq": "",
+    "Lat": 3.316666,
+    "Lon": 37.066666,
+    "Ele": 361.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Solio Ranch Airport",
+    "gps_code": "KE-6151",
+    "freq": "",
+    "Lat": -0.245167002081871,
+    "Lon": 36.8848876953125,
+    "Ele": 1920.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Rumuruti Airport",
+    "gps_code": "KE-6152",
+    "freq": "",
+    "Lat": 0.2775940001010895,
+    "Lon": 36.53333282470703,
+    "Ele": 1848.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sabarei Airport",
+    "gps_code": "KE-6153",
+    "freq": "",
+    "Lat": 4.333976,
+    "Lon": 36.906768,
+    "Ele": 701.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oljogi Ranch Airport",
+    "gps_code": "KE-6158",
+    "freq": "",
+    "Lat": 0.290272,
+    "Lon": 36.940397,
+    "Ele": 1719.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Todonyang Airport",
+    "gps_code": "KE-6166",
+    "freq": "",
+    "Lat": 4.47532,
+    "Lon": 35.91425,
+    "Ele": 364.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Voi Park Airport",
+    "gps_code": "KE-6175",
+    "freq": "",
+    "Lat": -3.362721920013428,
+    "Lon": 38.605167388916016,
+    "Ele": 518.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Wamba Airport",
+    "gps_code": "KE-6178",
+    "freq": "",
+    "Lat": 0.9777780175209044,
+    "Lon": 37.31888198852539,
+    "Ele": 1318.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Olkiombo Airport",
+    "gps_code": "KE-6208",
+    "freq": "",
+    "Lat": -1.408586,
+    "Lon": 35.110689,
+    "Ele": 1527.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Laikipia Ranch Airport",
+    "gps_code": "KE-6320",
+    "freq": "",
+    "Lat": 0.5833330154418945,
+    "Lon": 36.43333435058594,
+    "Ele": 1859.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Lunga-Lunga Airport",
+    "gps_code": "KE-6394",
+    "freq": "",
+    "Lat": -4.52864,
+    "Lon": 39.152237,
+    "Ele": 58.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Maralal Airport",
+    "gps_code": "KE-6396",
+    "freq": "",
+    "Lat": 1.099450945854187,
+    "Lon": 36.69509506225586,
+    "Ele": 1966.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakuma Airport",
+    "gps_code": "KE-6557",
+    "freq": "",
+    "Lat": 3.705094,
+    "Lon": 34.871293,
+    "Ele": 580.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Taveta Airport",
+    "gps_code": "KE-6576",
+    "freq": "",
+    "Lat": -3.3947649002075195,
+    "Lon": 37.69775772094727,
+    "Ele": 910.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kajiado Airport",
+    "gps_code": "KE-6596",
+    "freq": "",
+    "Lat": -1.850000023841858,
+    "Lon": 36.78333282470703,
+    "Ele": 1707.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Marrian's Airport",
+    "gps_code": "KE-6646",
+    "freq": "",
+    "Lat": -0.3405900001525879,
+    "Lon": 36.91352462768555,
+    "Ele": 1950.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Nginyang (Kinkang) Airport",
+    "gps_code": "KE-6647",
+    "freq": "",
+    "Lat": 0.9666669964790344,
+    "Lon": 36.01666641235352,
+    "Ele": 721.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngulia Lodge Airport",
+    "gps_code": "KE-6648",
+    "freq": "",
+    "Lat": -2.947635,
+    "Lon": 38.250075,
+    "Ele": 762.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Takabba Airport",
+    "gps_code": "KE-6649",
+    "freq": "",
+    "Lat": 3.426179,
+    "Lon": 40.229733,
+    "Ele": 606.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sololo Airport",
+    "gps_code": "KE-6650",
+    "freq": "",
+    "Lat": 3.554547071456909,
+    "Lon": 38.64363479614258,
+    "Ele": 699.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Banisa Airport",
+    "gps_code": "KE-6656",
+    "freq": "",
+    "Lat": 3.897056,
+    "Lon": 40.320253,
+    "Ele": 913.8
+  },
+  {
+    "type": "small_airport",
+    "name": "George Smith Farm Airport",
+    "gps_code": "KE-6873",
+    "freq": "",
+    "Lat": 0.6166669726371765,
+    "Lon": 35.29999923706055,
+    "Ele": 2097.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shimba Hills Airport",
+    "gps_code": "KE-6878",
+    "freq": "",
+    "Lat": -1.2356940507888794,
+    "Lon": 39.41755676269531,
+    "Ele": 365.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mount Kenya Game Ranch Airport",
+    "gps_code": "KE-6883",
+    "freq": "",
+    "Lat": -0.045436,
+    "Lon": 37.129827,
+    "Ele": 2139.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lewa Downs Airport",
+    "gps_code": "KE-6885",
+    "freq": "",
+    "Lat": 0.195346,
+    "Lon": 37.470331,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapsumbeiwa Nandi Airport",
+    "gps_code": "KE-6888",
+    "freq": "",
+    "Lat": 0.1303399950265884,
+    "Lon": 35.2208251953125,
+    "Ele": 533.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Baragoi Airport",
+    "gps_code": "KE-6890",
+    "freq": "",
+    "Lat": 1.7814079523086548,
+    "Lon": 36.801368713378906,
+    "Ele": 1280.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Changoi Tea Estate Airport",
+    "gps_code": "KE-6893",
+    "freq": "",
+    "Lat": -0.476943999529,
+    "Lon": 35.2422218323,
+    "Ele": 1859.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Borana Airport",
+    "gps_code": "KE-6894",
+    "freq": "",
+    "Lat": 0.2305829972028732,
+    "Lon": 37.2841682434082,
+    "Ele": 1859.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kambi Ya Samaki Airport",
+    "gps_code": "KE-6907",
+    "freq": "",
+    "Lat": -2.316667079925537,
+    "Lon": 37.91666793823242,
+    "Ele": 942.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Samburu North Airport",
+    "gps_code": "KE-6911",
+    "freq": "",
+    "Lat": -3.766666889190674,
+    "Lon": 39.28333282470703,
+    "Ele": 294.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Masalani (Fanjaa) Airport",
+    "gps_code": "KE-6920",
+    "freq": "",
+    "Lat": -1.6956549882888794,
+    "Lon": 40.1257209777832,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mado Gashi Airport",
+    "gps_code": "KE-6924",
+    "freq": "",
+    "Lat": 0.7223730087280273,
+    "Lon": 39.17614364624024,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lokichar Airport",
+    "gps_code": "KE-6937",
+    "freq": "",
+    "Lat": 2.3833329677581787,
+    "Lon": 35.650001525878906,
+    "Ele": 743.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapenguria (Kisiaunet) Airport",
+    "gps_code": "KE-6946",
+    "freq": "",
+    "Lat": 1.2693220376968384,
+    "Lon": 35.076324462890625,
+    "Ele": 1975.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Hulugho Airport",
+    "gps_code": "KE-6951",
+    "freq": "",
+    "Lat": -1.135972023010254,
+    "Lon": 41.05097198486328,
+    "Ele": 149.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aruba Airport",
+    "gps_code": "KE-6957",
+    "freq": "",
+    "Lat": -3.3333330154418945,
+    "Lon": 38.76666641235352,
+    "Ele": 396.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kerio Valley Airport",
+    "gps_code": "KE-6978",
+    "freq": "",
+    "Lat": 0.319638,
+    "Lon": 35.66256,
+    "Ele": 1318.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kapchomuswo (Kabarnet) Airport",
+    "gps_code": "KE-6996",
+    "freq": "",
+    "Lat": 0.536848,
+    "Lon": 35.728044,
+    "Ele": 1891.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Busia Airport",
+    "gps_code": "KE-6997",
+    "freq": "",
+    "Lat": 0.45708501338959,
+    "Lon": 34.130279541016,
+    "Ele": 1215.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bungoma Airport",
+    "gps_code": "KE-6998",
+    "freq": "",
+    "Lat": 0.57620799541473,
+    "Lon": 34.553451538086,
+    "Ele": 1440.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Eldoret Boma Airport",
+    "gps_code": "KE-6999",
+    "freq": "",
+    "Lat": 0.536926,
+    "Lon": 35.280518,
+    "Ele": 2148.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Loitokitok Airport",
+    "gps_code": "KE-7000",
+    "freq": "",
+    "Lat": -2.909884929657,
+    "Lon": 37.526107788086,
+    "Ele": 1621.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Magadi Airport",
+    "gps_code": "KE-7001",
+    "freq": "",
+    "Lat": -1.9480570554733,
+    "Lon": 36.283332824707,
+    "Ele": 595.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mackinnon Road Airport",
+    "gps_code": "KE-7002",
+    "freq": "",
+    "Lat": -3.730548,
+    "Lon": 39.039413,
+    "Ele": 440.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mtito Andei Airport",
+    "gps_code": "KE-7003",
+    "freq": "",
+    "Lat": -2.7170820236206,
+    "Lon": 38.197566986084,
+    "Ele": 730.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Embakasi Airport",
+    "gps_code": "KE-7004",
+    "freq": "",
+    "Lat": -1.2982189655304,
+    "Lon": 36.915546417236,
+    "Ele": 1632.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiunga Airport",
+    "gps_code": "KE-KIU",
+    "freq": "",
+    "Lat": -1.7438290119171145,
+    "Lon": 41.48434448242188,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Liboi Airport",
+    "gps_code": "KE-LBK",
+    "freq": "",
+    "Lat": 0.348333,
+    "Lon": 40.881699,
+    "Ele": 85.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Lake Rudolf Airport",
+    "gps_code": "KE-LKU",
+    "freq": "",
+    "Lat": 3.416256,
+    "Lon": 35.885468,
+    "Ele": 396.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mumias Airport",
+    "gps_code": "KE-MUM",
+    "freq": "",
+    "Lat": 0.355399,
+    "Lon": 34.528234,
+    "Ele": 1268.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kiwayu Airport",
+    "gps_code": "KWY",
+    "freq": "",
+    "Lat": -1.96056,
+    "Lon": 41.297501,
+    "Ele": 6.4
+  }
+]

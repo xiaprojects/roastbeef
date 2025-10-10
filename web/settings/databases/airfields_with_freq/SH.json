@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "RAF Ascension Island",
+    "gps_code": "FHAW",
+    "freq": "1124.700",
+    "Lat": -7.9696,
+    "Lon": -14.3937,
+    "Ele": 84.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint Helena Airport",
+    "gps_code": "FHSH",
+    "freq": "119.100",
+    "Lat": -15.957725,
+    "Lon": -5.645943,
+    "Ele": 310.0
+  }
+]

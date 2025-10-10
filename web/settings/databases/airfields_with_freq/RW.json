@@ -1,0 +1,74 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Gisenyi Airport",
+    "gps_code": "HRYG",
+    "freq": "118.700",
+    "Lat": -1.6771999597549438,
+    "Lon": 29.258899688720703,
+    "Ele": 1549.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Butare Airport",
+    "gps_code": "HRYI",
+    "freq": "",
+    "Lat": -2.59583,
+    "Lon": 29.7367,
+    "Ele": 1768.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nemba Airport",
+    "gps_code": "HRYN",
+    "freq": "",
+    "Lat": -2.333,
+    "Lon": 30.200001,
+    "Ele": 1495.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gabiro Airport",
+    "gps_code": "HRYO",
+    "freq": "",
+    "Lat": -1.5499999523162842,
+    "Lon": 30.382999420166016,
+    "Ele": 1464.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Kigali International Airport",
+    "gps_code": "HRYR",
+    "freq": "124.300",
+    "Lat": -1.96863,
+    "Lon": 30.1395,
+    "Ele": 1481.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ruhengeri Airport",
+    "gps_code": "HRYU",
+    "freq": "",
+    "Lat": -1.496873,
+    "Lon": 29.631343,
+    "Ele": 1859.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kamembe Airport",
+    "gps_code": "HRZA",
+    "freq": "120.700",
+    "Lat": -2.462239980697632,
+    "Lon": 28.907899856567383,
+    "Ele": 1582.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Gako Airport",
+    "gps_code": "RW-0001",
+    "freq": "",
+    "Lat": -2.2308,
+    "Lon": 30.1809,
+    "Ele": 1453.9
+  }
+]

@@ -1,0 +1,524 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Kibbish Wells Airport",
+    "gps_code": "ET-0002",
+    "freq": "",
+    "Lat": 5.296,
+    "Lon": 35.8682,
+    "Ele": 427.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ganada Airport",
+    "gps_code": "ET-0003",
+    "freq": "",
+    "Lat": 5.337166,
+    "Lon": 37.022991,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bameza - Grand Ethiopian Renaissance Dam Airport",
+    "gps_code": "ET-0006",
+    "freq": "",
+    "Lat": 11.1269,
+    "Lon": 35.04396,
+    "Ele": 623.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolo Airport",
+    "gps_code": "ET-0007",
+    "freq": "",
+    "Lat": 4.17489,
+    "Lon": 42.03296,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Omorate Airport",
+    "gps_code": "ET-0008",
+    "freq": "",
+    "Lat": 4.80059,
+    "Lon": 36.12643,
+    "Ele": 378.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Geladi Airport",
+    "gps_code": "ET-GLC",
+    "freq": "",
+    "Lat": 6.984439849849999,
+    "Lon": 46.4213981628,
+    "Ele": 421.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Shire Inda Selassie Airport",
+    "gps_code": "ET-SHC",
+    "freq": "",
+    "Lat": 14.075699,
+    "Lon": 38.273592,
+    "Ele": 1891.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Addis Ababa Bole International Airport",
+    "gps_code": "HAAB",
+    "freq": "119.700",
+    "Lat": 8.97789,
+    "Lon": 38.799301,
+    "Ele": 2325.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Adaba Airport",
+    "gps_code": "HAAD",
+    "freq": "",
+    "Lat": 7.022953,
+    "Lon": 39.273162,
+    "Ele": 2406.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lideta Army Airport",
+    "gps_code": "HAAL",
+    "freq": "119.100",
+    "Lat": 9.003685,
+    "Lon": 38.725498,
+    "Ele": 2361.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arba Minch Airport",
+    "gps_code": "HAAM",
+    "freq": "",
+    "Lat": 6.03939,
+    "Lon": 37.5905,
+    "Ele": 1189.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Axum Airport",
+    "gps_code": "HAAX",
+    "freq": "118.300",
+    "Lat": 14.1468,
+    "Lon": 38.7728,
+    "Ele": 2121.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Baco Airport",
+    "gps_code": "HABC",
+    "freq": "",
+    "Lat": 5.783333,
+    "Lon": 36.55,
+    "Ele": 1310.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bahir Dar Airport",
+    "gps_code": "HABD",
+    "freq": "121.900",
+    "Lat": 11.6081,
+    "Lon": 37.321602,
+    "Ele": 1822.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Beica Airport",
+    "gps_code": "HABE",
+    "freq": "",
+    "Lat": 9.38639,
+    "Lon": 34.5219,
+    "Ele": 1649.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kombolcha Airport",
+    "gps_code": "HADC",
+    "freq": "",
+    "Lat": 11.10975,
+    "Lon": 39.725911,
+    "Ele": 1865.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dembidollo Airport",
+    "gps_code": "HADD",
+    "freq": "",
+    "Lat": 8.554,
+    "Lon": 34.858002,
+    "Ele": 1585.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Debre Markos Airport",
+    "gps_code": "HADM",
+    "freq": "",
+    "Lat": 10.321501,
+    "Lon": 37.741887,
+    "Ele": 2479.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dodola Airport",
+    "gps_code": "HADO",
+    "freq": "",
+    "Lat": 7.02056,
+    "Lon": 39.051102,
+    "Ele": 2509.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aba Tenna Dejazmach Yilma International Airport",
+    "gps_code": "HADR",
+    "freq": "120.100",
+    "Lat": 9.624699592590332,
+    "Lon": 41.85419845581055,
+    "Ele": 1166.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Debre Tabor Airport",
+    "gps_code": "HADT",
+    "freq": "",
+    "Lat": 11.884808,
+    "Lon": 38.009241,
+    "Ele": 2587.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fincha Airport",
+    "gps_code": "HAFN",
+    "freq": "",
+    "Lat": 9.584387,
+    "Lon": 37.377855,
+    "Ele": 2316.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Robe Airport",
+    "gps_code": "HAGB",
+    "freq": "",
+    "Lat": 7.119033,
+    "Lon": 40.045166,
+    "Ele": 2405.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghinnir Airport",
+    "gps_code": "HAGH",
+    "freq": "",
+    "Lat": 7.15000009537,
+    "Lon": 40.716999054,
+    "Ele": 1980.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gambela Airport",
+    "gps_code": "HAGM",
+    "freq": "121.900",
+    "Lat": 8.12876,
+    "Lon": 34.563099,
+    "Ele": 491.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gondar Airport",
+    "gps_code": "HAGN",
+    "freq": "121.900",
+    "Lat": 12.5199,
+    "Lon": 37.433998,
+    "Ele": 1965.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gode Airport",
+    "gps_code": "HAGO",
+    "freq": "125.200",
+    "Lat": 5.93513011932,
+    "Lon": 43.5786018372,
+    "Ele": 254.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Gore Airport",
+    "gps_code": "HAGR",
+    "freq": "",
+    "Lat": 8.1614,
+    "Lon": 35.5529,
+    "Ele": 2005.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Harar Meda Airport",
+    "gps_code": "HAHM",
+    "freq": "",
+    "Lat": 8.7163,
+    "Lon": 39.0059,
+    "Ele": 1890.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Humera Airport",
+    "gps_code": "HAHU",
+    "freq": "",
+    "Lat": 13.83012,
+    "Lon": 36.88237,
+    "Ele": 588.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wilwal International Airport",
+    "gps_code": "HAJJ",
+    "freq": "",
+    "Lat": 9.3325,
+    "Lon": 42.9121,
+    "Ele": 1814.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Jinka Airport",
+    "gps_code": "HAJK",
+    "freq": "",
+    "Lat": 5.7495,
+    "Lon": 36.559667,
+    "Ele": 1364.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jimma Airport",
+    "gps_code": "HAJM",
+    "freq": "121.900",
+    "Lat": 7.66609001159668,
+    "Lon": 36.81660079956055,
+    "Ele": 1676.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kebri Dahar Airport",
+    "gps_code": "HAKD",
+    "freq": "",
+    "Lat": 6.732577,
+    "Lon": 44.241339,
+    "Ele": 548.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kelafo East Airport",
+    "gps_code": "HAKL",
+    "freq": "",
+    "Lat": 5.6570000648498535,
+    "Lon": 44.34999847412109,
+    "Ele": 527.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hawassa International Airport",
+    "gps_code": "HALA",
+    "freq": "",
+    "Lat": 7.099869,
+    "Lon": 38.396187,
+    "Ele": 1661.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Lalibela Airport",
+    "gps_code": "HALL",
+    "freq": "",
+    "Lat": 11.975225,
+    "Lon": 38.980198,
+    "Ele": 1983.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mekane Selam Airport",
+    "gps_code": "HAMA",
+    "freq": "",
+    "Lat": 10.7254,
+    "Lon": 38.7415,
+    "Ele": 2561.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tume Airport",
+    "gps_code": "HAMJ",
+    "freq": "",
+    "Lat": 5.833,
+    "Lon": 35.533001,
+    "Ele": 762.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Alula Aba Nega Airport",
+    "gps_code": "HAMK",
+    "freq": "121.900",
+    "Lat": 13.4674,
+    "Lon": 39.533501,
+    "Ele": 2254.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Metema Airport",
+    "gps_code": "HAMM",
+    "freq": "",
+    "Lat": 12.932999610899998,
+    "Lon": 36.1669998169,
+    "Ele": 807.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mendi Airport",
+    "gps_code": "HAMN",
+    "freq": "",
+    "Lat": 9.767,
+    "Lon": 35.099998,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mui River Airport",
+    "gps_code": "HAMR",
+    "freq": "",
+    "Lat": 5.8646,
+    "Lon": 35.7485,
+    "Ele": 559.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mizan Teferi Airport",
+    "gps_code": "HAMT",
+    "freq": "",
+    "Lat": 6.9571,
+    "Lon": 35.5547,
+    "Ele": 1339.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Negele Airport",
+    "gps_code": "HANG",
+    "freq": "",
+    "Lat": 5.2897,
+    "Lon": 39.7023,
+    "Ele": 1594.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nejjo Airport",
+    "gps_code": "HANJ",
+    "freq": "",
+    "Lat": 9.55,
+    "Lon": 35.466995,
+    "Ele": 1874.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Nekemte Airport",
+    "gps_code": "HANK",
+    "freq": "",
+    "Lat": 9.034333,
+    "Lon": 36.613154,
+    "Ele": 1981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Beles Airport",
+    "gps_code": "HAPW",
+    "freq": "",
+    "Lat": 11.3126,
+    "Lon": 36.4164,
+    "Ele": 1126.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Soddu Airport",
+    "gps_code": "HASD",
+    "freq": "",
+    "Lat": 6.80281,
+    "Lon": 37.68622,
+    "Ele": 1950.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sheikh Hussein Airport",
+    "gps_code": "HASH",
+    "freq": "",
+    "Lat": 7.74175,
+    "Lon": 40.69557,
+    "Ele": 1981.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Shakiso Airport",
+    "gps_code": "HASK",
+    "freq": "",
+    "Lat": 5.6923,
+    "Lon": 38.9764,
+    "Ele": 1772.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Shilavo Airport",
+    "gps_code": "HASL",
+    "freq": "",
+    "Lat": 6.077545,
+    "Lon": 44.763736,
+    "Ele": 395.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Semera Airport",
+    "gps_code": "HASM",
+    "freq": "",
+    "Lat": 11.7875,
+    "Lon": 40.9915,
+    "Ele": 423.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Asosa Airport",
+    "gps_code": "HASO",
+    "freq": "118.500",
+    "Lat": 10.018500328063965,
+    "Lon": 34.586299896240234,
+    "Ele": 1554.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tippi Airport",
+    "gps_code": "HATP",
+    "freq": "",
+    "Lat": 7.2024,
+    "Lon": 35.415,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Warder Airport",
+    "gps_code": "HAWR",
+    "freq": "",
+    "Lat": 6.9724,
+    "Lon": 45.3334,
+    "Ele": 563.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Moyale Airport",
+    "gps_code": "MYS",
+    "freq": "",
+    "Lat": 3.5623,
+    "Lon": 39.0433,
+    "Ele": 1184.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Tum Airport",
+    "gps_code": "TUJ",
+    "freq": "",
+    "Lat": 6.26,
+    "Lon": 35.5184,
+    "Ele": 1432.6
+  }
+]

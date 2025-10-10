@@ -11,7 +11,8 @@ angular.module('appControllers').controller('SynthViewCtrl', SynthViewCtrl); // 
 SynthViewCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
 
 
-var URL_AIRFIELDS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.airfields.json";
+
+var URL_SYNTH_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/synthview.json";
 
 
 // create our controller function with all necessary logic
@@ -19,11 +20,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.$parent.helppage = 'plates/synthview-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
-/*
-    $scope.noSleep = new NoSleep();
-*/
+    /*
+        $scope.noSleep = new NoSleep();
+    */
 
-    $scope.situation = { "GPSLastFixSinceMidnightUTC": 32304.2, "GPSLatitude": 43.0, "GPSLongitude": 12.0, "GPSFixQuality": 1, "GPSHeightAboveEllipsoid": 1057.4148, "GPSGeoidSep": 145.34122, "GPSSatellites": 8, "GPSSatellitesTracked": 12, "GPSSatellitesSeen": 10, "GPSHorizontalAccuracy": 5.4, "GPSNACp": 10, "GPSAltitudeMSL": 912.07355, "GPSVerticalAccuracy": 10.700001, "GPSVerticalSpeed": 0, "GPSLastFixLocalTime": "0001-01-01T00:49:25.51Z", "GPSTrueCourse": 48.3, "GPSTurnRate": 0, "GPSGroundSpeed": 0, "GPSLastGroundTrackTime": "0001-01-01T00:49:25.51Z", "GPSTime": "2023-12-31T08:58:24.3Z", "GPSLastGPSTimeStratuxTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessageTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessage": "$GPGGA,085824.20,4311.12143,N,01208.18939,E,1,08,1.08,278.0,M,44.3,M,,*51", "GPSPositionSampleRate": 9.99973784244331, "BaroTemperature": 29.04, "BaroPressureAltitude": 776.60333, "BaroVerticalSpeed": -1.2355082, "BaroLastMeasurementTime": "0001-01-01T00:49:25.52Z", "BaroSourceType": 1, "AHRSPitch": -56.752181757536206, "AHRSRoll": -77.98562991928083, "AHRSGyroHeading": 3276.7, "AHRSMagHeading": 332.9175199350767, "AHRSSlipSkid": 78.88479760867865, "AHRSTurnRate": 3276.7, "AHRSGLoad": 0.10920454632244811, "AHRSGLoadMin": 0.10626655052683534, "AHRSGLoadMax": 0.1099768285851461, "AHRSLastAttitudeTime": "0001-01-01T00:49:25.51Z", "AHRSStatus": 7 };
+    $scope.situation = {};
     $scope.scrollItemCounter = -4;
 
     /*****************************************************
@@ -35,20 +36,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $state.get('synthview').onExit = function () {
         removeEventListener("keypad", keypadEventListener);
-/*
-        $scope.noSleep.disable();
-        delete $scope.noSleep;
-*/
+        removeEventListener("SituationUpdated", situationUpdateEventListener);
+        removeEventListener("TrafficUpdated", trafficUpdateEventListener);
 
-        if (($scope.socket !== undefined) && ($scope.socket !== null)) {
-            $scope.socket.close();
-            $scope.socket = null;
-        }
-
-        if (($scope.socketTraffic !== undefined) && ($scope.socketTraffic !== null)) {
-            $scope.socketTraffic.close();
-            $scope.socketTraffic = null;
-        }
     };
 
 
@@ -57,7 +47,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
      */
 
     function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl'){
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SynthViewCtrl') {
             removeEventListener("keypad", keypadEventListener);
             return; // we are getting called once after clicking away from the status page
         }
@@ -74,20 +64,14 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 $scope.synthViewSelectUp();
                 break;
             case KEYPAD_MAPPING_PREV:
-            case KEYPAD_MAPPING_PREV_MEDIA:
-            case "MediaFastForward":
                 $scope.synthViewSelectLeft();
                 break;
-            case "Enter":
-            case " ":
             case KEYPAD_MAPPING_TAP:
                 $scope.synthViewSelectTap();
                 break;
             case "MediaTrackPrevious":
                 $scope.synthViewSelectDown();
                 break;
-            case "MediaRewind":
-            case KEYPAD_MAPPING_NEXT_MEDIA:
             case KEYPAD_MAPPING_NEXT:
                 $scope.synthViewSelectRight();
                 break;
@@ -99,59 +83,59 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.synthViewSelectDown = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "from" });
         //dispatchEvent(proxy);
-        if($scope.remote.reset == false){
+        if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
-                pitch:resources.items[0].pitch,
-                roll:resources.items[0].roll,
-                x:resources.items[0].x,
-                y:resources.items[0].y,
-                elevation:resources.items[0].elevation,
-                direction:resources.items[0].direction,
-                distance:10
+                pitch: resources.items[0].pitch,
+                roll: resources.items[0].roll,
+                x: resources.items[0].x,
+                y: resources.items[0].y,
+                elevation: resources.items[0].elevation,
+                direction: resources.items[0].direction,
+                distance: 10
             };
         }
         $scope.remote.reset = true;
-        $scope.cameraRotating.distance = $scope.cameraRotating.distance+1;
-        if($scope.cameraRotating.distance<10)$scope.cameraRotating.distance=10;
-        rendering.cameraFollowItem($scope.cameraRotating, resources,$scope.cameraRotating.distance);
+        $scope.cameraRotating.distance = $scope.cameraRotating.distance + 1;
+        if ($scope.cameraRotating.distance < 10) $scope.cameraRotating.distance = 10;
+        rendering.cameraFollowItem($scope.cameraRotating, resources, $scope.cameraRotating.distance);
         requestAnimationFrame(animate);
     }
     $scope.synthViewSelectUp = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "from" });
         //dispatchEvent(proxy);
-        if($scope.remote.reset == false){
+        if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
-                pitch:resources.items[0].pitch,
-                roll:resources.items[0].roll,
-                x:resources.items[0].x,
-                y:resources.items[0].y,
-                elevation:resources.items[0].elevation,
-                direction:resources.items[0].direction,
-                distance:10
+                pitch: resources.items[0].pitch,
+                roll: resources.items[0].roll,
+                x: resources.items[0].x,
+                y: resources.items[0].y,
+                elevation: resources.items[0].elevation,
+                direction: resources.items[0].direction,
+                distance: 10
             };
         }
         $scope.remote.reset = true;
-        $scope.cameraRotating.distance = $scope.cameraRotating.distance-1;
-        if($scope.cameraRotating.distance<10)$scope.cameraRotating.distance=10;
-        rendering.cameraFollowItem($scope.cameraRotating, resources,$scope.cameraRotating.distance);
+        $scope.cameraRotating.distance = $scope.cameraRotating.distance - 1;
+        if ($scope.cameraRotating.distance < 10) $scope.cameraRotating.distance = 10;
+        rendering.cameraFollowItem($scope.cameraRotating, resources, $scope.cameraRotating.distance);
         requestAnimationFrame(animate);
     }
     $scope.synthViewSelectLeft = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "from" });
         //dispatchEvent(proxy);
-        if($scope.remote.reset == false){
+        if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
-                pitch:resources.items[0].pitch,
-                roll:resources.items[0].roll,
-                x:resources.items[0].x,
-                y:resources.items[0].y,
-                elevation:resources.items[0].elevation,
-                direction:resources.items[0].direction,
-                distance:10
+                pitch: resources.items[0].pitch,
+                roll: resources.items[0].roll,
+                x: resources.items[0].x,
+                y: resources.items[0].y,
+                elevation: resources.items[0].elevation,
+                direction: resources.items[0].direction,
+                distance: 10
             };
         }
         $scope.remote.reset = true;
-        $scope.cameraRotating.direction = $scope.cameraRotating.direction-10;
+        $scope.cameraRotating.direction = $scope.cameraRotating.direction - 10;
         //remote.set($scope.cameraRotating.pitch, $scope.cameraRotating.roll, $scope.cameraRotating.x, $scope.cameraRotating.y, $scope.cameraRotating.elevation, $scope.cameraRotating.direction);
         rendering.cameraFollowItem($scope.cameraRotating, resources);
         requestAnimationFrame(animate);
@@ -159,19 +143,19 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.synthViewSelectRight = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "to" });
         //dispatchEvent(proxy);
-        if($scope.remote.reset == false){
+        if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
-                pitch:resources.items[0].pitch,
-                roll:resources.items[0].roll,
-                x:resources.items[0].x,
-                y:resources.items[0].y,
-                elevation:resources.items[0].elevation,
-                direction:resources.items[0].direction,
-                distance:10
+                pitch: resources.items[0].pitch,
+                roll: resources.items[0].roll,
+                x: resources.items[0].x,
+                y: resources.items[0].y,
+                elevation: resources.items[0].elevation,
+                direction: resources.items[0].direction,
+                distance: 10
             };
         }
         $scope.remote.reset = true;
-        $scope.cameraRotating.direction = $scope.cameraRotating.direction+10;
+        $scope.cameraRotating.direction = $scope.cameraRotating.direction + 10;
         //remote.set($scope.cameraRotating.pitch, $scope.cameraRotating.roll, $scope.cameraRotating.x, $scope.cameraRotating.y, $scope.cameraRotating.elevation, $scope.cameraRotating.direction);
         rendering.cameraFollowItem($scope.cameraRotating, resources);
         requestAnimationFrame(animate);
@@ -191,83 +175,37 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     /*****************************************************
      * Situation Update
      */
-    function connectTraffic($scope) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
-            return; // we are getting called once after clicking away from the gps page
-
-        if (($scope.socketTraffic === undefined) || ($scope.socketTraffic === null)) {
-            socketTraffic = new WebSocket(URL_TRAFFIC_WS);
-            $scope.socketTraffic = socketTraffic; // store socket in scope for enter/exit usage
+    function trafficUpdateEventListener(event) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SynthViewCtrl') {
+            removeEventListener("TrafficUpdated", trafficUpdateEventListener);
+            return; // we are getting called once after clicking away from the status page
         }
-        socketTraffic.onopen = function (msg) {
-        };
-
-        socketTraffic.onclose = function (msg) {
-            $scope.$apply();
-            delete $scope.socketTraffic;
-            setTimeout(function () { connectTraffic($scope); }, 1000);
-        };
-
-        socketTraffic.onerror = function (msg) {
-            $scope.$apply();
-        };
-
-        socketTraffic.onmessage = function (msg) {
-            if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
-            {
-                socketTraffic.close();
-                return;
-            }
-            $scope.loadTraffics(angular.fromJson(msg.data));
-            $scope.$apply(); // trigger any needed refreshing of data
-        };
+        $scope.loadTraffics(event.detail);
+        $scope.$apply(); // trigger any needed refreshing of data
     }
 
 
-    function connect($scope) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
-            return; // we are getting called once after clicking away from the gps page
-
-        if (($scope.socket === undefined) || ($scope.socket === null)) {
-            socket = new WebSocket(URL_GPS_WS);
-            $scope.socket = socket; // store socket in scope for enter/exit usage
+    // ************
+    function situationUpdateEventListener(event) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SynthViewCtrl') {
+            removeEventListener("SituationUpdated", situationUpdateEventListener);
+            return; // we are getting called once after clicking away from the status page
         }
-
-        socket.onopen = function (msg) {
-
-        };
-
-        socket.onclose = function (msg) {
-            $scope.$apply();
-            delete $scope.socket;
-            setTimeout(function () { connect($scope); }, 1000);
-        };
-
-        socket.onerror = function (msg) {
-            $scope.$apply();
-        };
-
-
-        socket.onmessage = function (msg) {
-            if (($scope === undefined) || ($scope === null) || $state.current.controller!='SynthViewCtrl')
-            {
-                socket.close();
-                return;
-            }
-            var situation = angular.fromJson(msg.data);
-            // Filter to avoid blow up CPU
-            const oldSituation = $scope.situation;
-            const newSituation = situation;
-            const ahrsThreshold = 1;
-            const altitudeThreshold = 50 / 3.2808;
-            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
-            if (requireRefresh == true) {
-                $scope.situation = situation;
-                loadSituationInSynthView(situation);
-                loadSituationInAHRS(situation);
-                $scope.$apply(); // trigger any needed refreshing of data
-            }
-        };
+        var situation = event.detail;
+        // Filter to avoid blow up CPU
+        const oldSituation = $scope.situation;
+        const newSituation = situation;
+        const ahrsThreshold = 1;
+        const altitudeThreshold = 50 / 3.2808;
+        const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+        if (requireRefresh == true) {
+            $scope.situation = situation;
+            $scope.situation.GPSGroundSpeed = parseInt($scope.situation.GPSGroundSpeed);
+            $scope.situation.GPSAltitudeMSL = parseInt($scope.situation.GPSAltitudeMSL);
+            loadSituationInSynthView(situation);
+            loadSituationInAHRS(situation);
+            $scope.$apply(); // trigger any needed refreshing of data
+        }
     }
 
     /*****************************************************
@@ -275,15 +213,44 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     */
 
     addEventListener("keypad", keypadEventListener);
+    addEventListener("SituationUpdated", situationUpdateEventListener);
 
-    // GPS Controller tasks
-    connect($scope); // connect - opens a socket and listens for messages
+
 
     /*****************************************************
     * AHRS and GPS Helper
     */
     function loadSituationInAHRS(situation) { // mySituation
-        ahrs.update(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid, situation.GPSGroundSpeed, situation.GPSAltitudeMSL);
+        ahrs.update(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid, 0 /*situation.GPSGroundSpeed*/, /*situation.GPSAltitudeMSL*/);
+    }
+
+
+    $scope.AHRSCage = function () {
+        if (!$scope.IsCaging) {
+            $http.post(URL_AHRS_CAGE).then(function (response) {
+            }, function (response) {
+
+            });
+        }
+    };
+
+    $scope.AHRSCalibrate = function () {
+        if (!$scope.IsCaging) {
+            $http.post(URL_AHRS_CAL).then(function (response) {
+            }, function (response) {
+            });
+        }
+    };
+
+    $scope.AHRSCageAndCalibrate = function () {
+        window.setTimeout(function () {
+            $scope.AHRSCage();
+        }, 5000);
+        window.setTimeout(function () {
+            $scope.AHRSCalibrate();
+        }, 100);
+
+        $scope.synthviewFrameReset();
     }
 
     $scope.synthviewFrameReset = function () {
@@ -294,11 +261,17 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         document.location = "#/radar"
     }
 
-    
+
     $scope.goToRight = function () {
         document.location = "#/hsi"
     }
-    
+
+    $scope.displayHSI = function () {
+        // iPad Mini 768x949
+        // 8" display 785x1193
+
+        return $scope.remote.reset == false && window.innerHeight > 800;
+    }
 
     //
     class TerrainManager {
@@ -376,9 +349,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return [dilon, dilat];
         }
 
-        async terrainFetch(lat, lon) {
+        async terrainFetch(lat, lon, url) {
             try {
-                const url = "synthview/Europe100M.json";
                 const response = await fetch(url); // Fetch the data
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -409,12 +381,14 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.airfields = [];
             this.terrain = new TerrainManager();
             this.items = [];
+            this.itemIndexStartingTraffic = 0;
             this.setup = {};
         }
 
 
         itemTemplate() {
             return {
+                "ttl": Date.now() + 1000 * 60 * 60 * 12,
                 "directionModel": 0,
                 "projectionSize": 0,
                 "reference": null,
@@ -433,32 +407,83 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             };
         }
 
-        trafficTemplateMapper(item){
+
+        getAircraftCategory(Emitter_category) {
+            const category = {
+                1: 'Light',
+                2: 'Small',
+                3: 'Large',
+                4: 'VLarge',
+                5: 'Heavy',
+                6: 'Fight',
+                7: 'Helic',
+                9: 'Glide',
+                10: 'Ballo',
+                11: 'Parac',
+                12: 'Ultrl',
+                14: 'Drone',
+                15: 'Space',
+                16: 'VLarge',
+                17: 'Vehic',
+                18: 'Vehic',
+                19: 'Obstc'
+            };
+            return category[Emitter_category] ? category[Emitter_category] : 'Light';
+        }
+
+
+        randomPastelColorInt() {
+            /*
+            var ret = 0;
+            var rand = Math.floor(Math.random() * 10);
+            ret = (185 - rand * 10);
+            ret = (185 - rand * 5) * 256 + ret;
+            ret = (215 - rand * 3) * 256 * 256 + ret;
+            return ret;
+            */
+            return Math.floor(Math.random() * 256) * 256 * 256 + Math.floor(Math.random() * 256) * 256 + Math.floor(Math.random() * 256);
+        }
+
+        trafficTemplateMapper(item, category) {
             var copyTemplate = null;
             // Check for friends mapping:
-            if(this.setup.trafficMapping.hasOwnProperty(item.name)){
+            if (this.setup.trafficMapping.hasOwnProperty(item.name)) {
                 copyTemplate = this.setup.trafficMapping[item.name];
             } else {
-            // Pick a random model:
-                copyTemplate = this.setup.trafficTemplates[Math.floor((Math.random()*this.setup.trafficTemplates.length))];
+                // Search for the right template
+                if (this.setup.trafficTemplates.hasOwnProperty(category)) {
+                }
+                else {
+                    // Fallback
+                    category = "Light";
+                }
+                // Pick a random model:
+                copyTemplate = this.setup.trafficTemplates[category][Math.floor((Math.random() * this.setup.trafficTemplates[category].length))];
+                if (copyTemplate.color != null) {
+                    copyTemplate.color = this.randomPastelColorInt();
+                }
             }
-            if(copyTemplate!=null){
+            if (copyTemplate != null) {
                 Object.keys(copyTemplate).forEach(key => {
-                    item[key]=copyTemplate[key];
+                    item[key] = copyTemplate[key];
                 });
             }
+            item.ttl = Date.now();
             return item;
         }
 
         convertTrafficToItem(traffic) {
+            if (this.setup.hasOwnProperty("trafficTemplates") == false) {
+                return null;
+            }
             const aXY = this.terrain.plan(traffic.Lat, traffic.Lng);
             var item = this.itemTemplate();
 
             // Load Traffic Mapping and friends
-            item.template = this.setup.trafficTemplates.template;
+            item.template = this.setup.trafficTemplates['Light'][0];
             item.name = "" + traffic.Icao_addr;
             item.scale = 1;
-            item = this.trafficTemplateMapper(item);
+            item = this.trafficTemplateMapper(item, this.getAircraftCategory(traffic.Emitter_category));
             // item
             item.projectionSize = this.setup.cellSize * 10.0 * traffic.Speed / 60.0;
             item.direction = traffic.Track;
@@ -484,9 +509,15 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     // TODO: fix Airfields database with real Elevations
                     //item.elevation = element.Ele + 20;
                     // POI Elevation based on current surface
-                    item.elevation = this.terrain.elevationByLatLon(element.Lat, element.Lon)+60;
+                    item.elevation = this.terrain.elevationByLatLon(element.Lat, element.Lon) + 60;
                     item.template = "map_pointer_places_of_interest";
                     item.name = element.gps_code;
+                    if (item.name == "") {
+                        item.name = element.local_code;
+                    }
+                    if (item.name == "") {
+                        item.name = element.name;
+                    }
                     item.scale = 100;
                     item.x = aXY[0] * this.setup.cellSize;
                     item.y = aXY[1] * this.setup.cellSize;
@@ -503,8 +534,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         async startup() {
             try {
-                const url = "synthview/setup.json";
-                const response = await fetch(url); // Fetch the data
+
+                const response = await fetch(URL_SYNTH_SETUP); // Fetch the data
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
@@ -562,19 +593,18 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             items[0].elevation = situation.GPSAltitudeMSL * 0.3048;
             items[0].direction = situation.GPSTrueCourse;
             items[0].roll = situation.AHRSRoll;
-            items[0].pitch = -situation.AHRSPitch+items[0].pitchModel;
+            items[0].pitch = -situation.AHRSPitch + items[0].pitchModel;
 
             return items;
         }
 
-        set(pitch, roll, x, y, elevation,direction) {
+        set(pitch, roll, x, y, elevation, direction) {
             if (this.reset == false) {
-                if(direction % 360 >= 270 || direction % 360 <= 90){
+                if (direction % 360 >= 270 || direction % 360 <= 90) {
                     this.rendering.camera.rotation.z = -Math.PI * 2.0 * roll / 360.0
                 }
-                else
-                {
-                    this.rendering.camera.rotation.z = -Math.PI * 2.0 * (roll+180) / 360.0
+                else {
+                    this.rendering.camera.rotation.z = -Math.PI * 2.0 * (roll + 180) / 360.0
                 }
 
             }
@@ -624,6 +654,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         attachToContainer(divName) {
             const container = document.getElementById(divName);
             this.renderer.setSize(container.clientWidth, container.clientHeight);
+            this.renderer.domElement.style.width = "100cqw";
+            this.renderer.domElement.style.height = "100cqh";
             container.appendChild(this.renderer.domElement);
         }
 
@@ -717,9 +749,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         generateItemGLB(item, setup = {}, callback = null) {
             const loader = new THREE.GLTFLoader();
             loader.load(
-                setup.glbPath + + item.template + '.glb',
+                setup.glbPath + item.template + '.glb',
                 (gltf) => {
-                    console.log('Model loaded successfully:', gltf);
+                    //console.log('Model loaded successfully:', gltf);
 
                     gltf.scene.scale.x = item.scale;
                     gltf.scene.scale.y = item.scale;
@@ -732,7 +764,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     gltf.scene.rotation.y = (Math.PI * 2.0 / 360) * (180 - item.direction + item.directionModel) // Yaw
                     gltf.scene.rotation.z = (Math.PI * 2.0 / 360) * item.roll // Roll
 
-                    gltf.scene.rotation.order ="YXZ"
+                    gltf.scene.rotation.order = "YXZ"
 
                     item.reference = gltf;
                     if (callback != null) {
@@ -759,7 +791,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     }
                 },
                 (xhr) => {
-                    console.log(`Loading model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
+                    //console.log(`Loading model: ${(xhr.loaded / xhr.total) * 100}% loaded`);
                 },
                 (error) => {
                     console.error('An error occurred while loading the model', error);
@@ -852,8 +884,10 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.scene.add(this.terrainBrown);
             // Add Wireframe to improve readability
             var geo = new THREE.EdgesGeometry(this.terrainBrown.geometry); // or WireframeGeometry
-            var mat = new THREE.LineBasicMaterial({ color: 0x778877, transparent: true,
-                opacity: 0.5 });
+            var mat = new THREE.LineBasicMaterial({
+                color: 0x778877, transparent: true,
+                opacity: 0.5
+            });
             var wireframe = new THREE.LineSegments(geo, mat);
             this.terrainBrown.add(wireframe);
         }
@@ -861,17 +895,17 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     const container = document.getElementById("synthviewFrame");
-/*
-    const canvas = document.getElementById("inop");
-    const ctx = canvas.getContext("2d");
-    
-    ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(container.clientWidth, container.clientHeight);
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = "red";
-    ctx.stroke();
-*/
+    /*
+        const canvas = document.getElementById("inop");
+        const ctx = canvas.getContext("2d");
+        
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(container.clientWidth, container.clientHeight);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+    */
 
     const rendering = new Rendering(container);
     const resources = new ResourceManager();
@@ -881,38 +915,61 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         const setup = await resources.startup();
         rendering.setBackgroundColor(setup.skyColor);
         rendering.attachToContainer("synthviewFrame");
-
-        // Handle resizing
-        window.addEventListener('resize', () => {
-            rendering.renderer.setSize(container.clientWidth, container.clientHeight);
-            rendering.camera.aspect = container.clientWidth, container.clientHeight;
-            rendering.camera.updateProjectionMatrix();
-        });
         return setup;
     }
 
 
     var lockedInTerrainGeneration = false;
 
+
+    $scope.cleanupOldTraffic = function (s) {
+
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SynthViewCtrl') {
+            window.clearInterval($scope.cleanupOldTrafficTimer);
+            return; // we are getting called once after clicking away from the status page
+        }
+
+        const now = Date.now() - 1000 * 10;
+        for (var i = resources.itemIndexStartingTraffic; i < resources.items.length; i++) {
+            var currentItem = resources.items[i];
+            if (currentItem.ttl < now) {
+                rendering.scene.remove(currentItem.referenceTubeFront);
+                rendering.scene.remove(currentItem.referenceTubeVertical);
+                rendering.scene.remove(currentItem.reference.scene);
+
+                resources.items.splice(i, 1);
+                delete currentItem;
+                break;
+            }
+            else {
+            }
+        }
+    }
+
+
     $scope.loadTraffics = function (element) {
-        //traffics.forEach(element => {
+
         if (element.Position_valid == false) return;
         var founded = -1;
-        for (var i = 0; i < resources.items.length; i++) {
+        for (var i = resources.itemIndexStartingTraffic; i < resources.items.length; i++) {
             var currentItem = resources.items[i];
             if (currentItem.name == "" + element.Icao_addr) {
                 founded = i;
+                break;
             }
         }
 
         if (founded < 0) {
             var newItem = resources.convertTrafficToItem(element);
+            if (newItem == null) {
+                return;
+            }
             resources.items.push(newItem);
-
             rendering.generateItems(resources.items, resources.setup);
-
         }
         else {
+            resources.items[founded].ttl = Date.now();
+
             const aXY = resources.terrain.plan(element.Lat, element.Lng);
             resources.items[founded].direction = element.Track;
             resources.items[founded].elevation = element.Alt * 0.3048;
@@ -944,14 +1001,10 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
             }
         }
-
-        //});
-
-
     }
 
     function loadSituationInSynthView(situation) {
-        if(situation.GPSLatitude==0 || situation.GPSLongitude==0){
+        if (situation.GPSLatitude == 0 || situation.GPSLongitude == 0) {
             console.log("GPS Not ready");
             return;
         }
@@ -967,7 +1020,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 setup.elevation = situation.GPSAltitudeMSL * 0.3048
 
 
-                resources.terrain.terrainFetch(situation.GPSLatitude, situation.GPSLongitude).then((terrainElevations) => {
+                resources.terrain.terrainFetch(situation.GPSLatitude, situation.GPSLongitude, setup.elevationUrl).then((terrainElevations) => {
                     rendering.loadDEM(terrainElevations.terrainData, setup);
 
                     setup.items = remote.updateItemsBySituation(setup.items, situation, resources);
@@ -979,7 +1032,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
                     resources.fetchAndImportAirFields().then(() => {
                         rendering.generateItems(setup.items, setup);
-                        connectTraffic($scope);
+                        resources.itemIndexStartingTraffic = setup.items.length + 1;
+                        // Event chain
+                        addEventListener("TrafficUpdated", trafficUpdateEventListener);
+                        //
+                        $scope.cleanupOldTrafficTimer = window.setInterval($scope.cleanupOldTraffic, 10000, $scope);
                     });
 
                     //
@@ -1020,7 +1077,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 item.referenceTubeFront.rotation.x = (Math.PI * 2.0 / 360) * (90)
             }
 
-    
+
             if (remote.reset == false) {
                 rendering.cameraFollowItem(item, resources);
                 remote.reset = false
@@ -1079,6 +1136,6 @@ function globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsTh
     else {
         return true;
     }
-    
+
     return false;
 }

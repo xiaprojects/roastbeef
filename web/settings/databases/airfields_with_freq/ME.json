@@ -1,0 +1,47 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Berane Airport",
+    "gps_code": "LYBR",
+    "freq": "",
+    "Lat": 42.8390007019043,
+    "Lon": 19.86199951171875,
+    "Ele": 697.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikšić Airfield",
+    "gps_code": "LYNK",
+    "freq": "",
+    "Lat": 42.773039,
+    "Lon": 18.916311,
+    "Ele": 612.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Podgorica Airport / Podgorica Golubovci Airbase",
+    "gps_code": "LYPG",
+    "freq": "118.700",
+    "Lat": 42.359402,
+    "Lon": 19.2519,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ćemovsko Polje / Špiro Mugoša Airfield",
+    "gps_code": "LYPO",
+    "freq": "",
+    "Lat": 42.422306,
+    "Lon": 19.291018,
+    "Ele": 60.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tivat Airport",
+    "gps_code": "LYTV",
+    "freq": "118.000",
+    "Lat": 42.40470123291016,
+    "Lon": 18.72330093383789,
+    "Ele": 6.1
+  }
+]

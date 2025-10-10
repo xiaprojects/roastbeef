@@ -1,0 +1,362 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Kefar Gallim Highway Strip",
+    "gps_code": "IL-0001",
+    "freq": "",
+    "Lat": 32.7617093312,
+    "Lon": 34.9535393715,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mishmar Ayalon Highway Strip H",
+    "gps_code": "IL-0002",
+    "freq": "",
+    "Lat": 31.883434,
+    "Lon": 34.948411,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gvulot Airstrip",
+    "gps_code": "IL-0003",
+    "freq": "",
+    "Lat": 31.2277,
+    "Lon": 34.4604,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Talmei Yosef Airstrip",
+    "gps_code": "IL-0004",
+    "freq": "",
+    "Lat": 31.1252,
+    "Lon": 34.3777,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Palmahim South Airstrip",
+    "gps_code": "IL-0005",
+    "freq": "",
+    "Lat": 31.8692,
+    "Lon": 34.6907,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Naan Airstrip",
+    "gps_code": "IL-0006",
+    "freq": "",
+    "Lat": 31.8851,
+    "Lon": 34.8862,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rishon Lezion Airfield",
+    "gps_code": "IL-0007",
+    "freq": "126.900",
+    "Lat": 31.9672,
+    "Lon": 34.7536,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ein Vered Airfield",
+    "gps_code": "IL-0008",
+    "freq": "",
+    "Lat": 32.2636,
+    "Lon": 34.9511,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kedma Airport",
+    "gps_code": "IL-0011",
+    "freq": "",
+    "Lat": 31.69692,
+    "Lon": 34.76821,
+    "Ele": 98.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dimona Airport",
+    "gps_code": "IL-0012",
+    "freq": "",
+    "Lat": 31.06104,
+    "Lon": 35.01049,
+    "Ele": 548.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dalton Airfield",
+    "gps_code": "IL-0015",
+    "freq": "",
+    "Lat": 33.021598,
+    "Lon": 35.464788,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Negba-Gold Agricultural Airfield",
+    "gps_code": "IL-0019",
+    "freq": "",
+    "Lat": 31.679159,
+    "Lon": 34.702879,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Cyclone damper",
+    "gps_code": "IL-0020",
+    "freq": "",
+    "Lat": 32.906065,
+    "Lon": 35.18946,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hatzerim Northwest Airport",
+    "gps_code": "LL1A",
+    "freq": "",
+    "Lat": 31.26070022583008,
+    "Lon": 34.64039993286133,
+    "Ele": 201.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Arad Airport",
+    "gps_code": "LL1B",
+    "freq": "120.900",
+    "Lat": 31.22916984558105,
+    "Lon": 35.18903732299805,
+    "Ele": 595.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Palmahim Air Base",
+    "gps_code": "LL59",
+    "freq": "120.900",
+    "Lat": 31.8979,
+    "Lon": 34.6908,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kzeiot Airport",
+    "gps_code": "LL60",
+    "freq": "",
+    "Lat": 30.8594,
+    "Lon": 34.4431,
+    "Ele": 274.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Ben Gurion International Airport",
+    "gps_code": "LLBG",
+    "freq": "120.500",
+    "Lat": 32.011398,
+    "Lon": 34.8867,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Habonim Airfield",
+    "gps_code": "LLBO",
+    "freq": "129.150",
+    "Lat": 32.649854,
+    "Lon": 34.933126,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Beersheba (Teyman) Airport",
+    "gps_code": "LLBS",
+    "freq": "120.900",
+    "Lat": 31.287000656128,
+    "Lon": 34.722999572754,
+    "Ele": 199.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tel Nof Air Base",
+    "gps_code": "LLEK",
+    "freq": "120.900",
+    "Lat": 31.8395,
+    "Lon": 34.8218,
+    "Ele": 58.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Ramon International Airport",
+    "gps_code": "LLER",
+    "freq": "",
+    "Lat": 29.727009,
+    "Lon": 35.014116,
+    "Ele": 87.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ein Shemer Airfield",
+    "gps_code": "LLES",
+    "freq": "132.050",
+    "Lat": 32.4408,
+    "Lon": 35.007702,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ein Yahav Airfield",
+    "gps_code": "LLEY",
+    "freq": "",
+    "Lat": 30.621700286865234,
+    "Lon": 35.20330047607422,
+    "Ele": -50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fiq Airfield",
+    "gps_code": "LLFK",
+    "freq": "",
+    "Lat": 32.786389,
+    "Lon": 35.717499,
+    "Ele": 371.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Haifa International Airport",
+    "gps_code": "LLHA",
+    "freq": "135.400",
+    "Lat": 32.80939865112305,
+    "Lon": 35.04309844970703,
+    "Ele": 8.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hatzerim Air Base",
+    "gps_code": "LLHB",
+    "freq": "",
+    "Lat": 31.2334,
+    "Lon": 34.662601,
+    "Ele": 221.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hatzor Air Base",
+    "gps_code": "LLHS",
+    "freq": "120.900",
+    "Lat": 31.762501,
+    "Lon": 34.7272,
+    "Ele": 45.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Herzliya Airport",
+    "gps_code": "LLHZ",
+    "freq": "122.200",
+    "Lat": 32.180599,
+    "Lon": 34.834702,
+    "Ele": 36.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rosh Pina Airport",
+    "gps_code": "LLIB",
+    "freq": "132.450",
+    "Lat": 32.980999,
+    "Lon": 35.571899,
+    "Ele": 269.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiryat Shmona Airport",
+    "gps_code": "LLKS",
+    "freq": "126.900",
+    "Lat": 33.216275,
+    "Lon": 35.59622,
+    "Ele": 117.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Megiddo Airport",
+    "gps_code": "LLMG",
+    "freq": "124.300",
+    "Lat": 32.597301,
+    "Lon": 35.228802,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mitzpe Ramon Airfield",
+    "gps_code": "LLMR",
+    "freq": "",
+    "Lat": 30.65060043334961,
+    "Lon": 34.80690002441406,
+    "Ele": 779.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bar Yehuda Airfield",
+    "gps_code": "LLMZ",
+    "freq": "120.900",
+    "Lat": 31.328199,
+    "Lon": 35.388599,
+    "Ele": -385.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nevatim Air Base",
+    "gps_code": "LLNV",
+    "freq": "120.900",
+    "Lat": 31.2082996368,
+    "Lon": 35.012298584,
+    "Ele": 405.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ovda Airport",
+    "gps_code": "LLOV",
+    "freq": "129.900",
+    "Lat": 29.9403,
+    "Lon": 34.935799,
+    "Ele": 454.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ramat David Air Base",
+    "gps_code": "LLRD",
+    "freq": "125.800",
+    "Lat": 32.6651,
+    "Lon": 35.179501,
+    "Ele": 56.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ramon Air Base",
+    "gps_code": "LLRM",
+    "freq": "120.900",
+    "Lat": 30.7761,
+    "Lon": 34.666698,
+    "Ele": 648.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tnuvot Ultralight Airfield",
+    "gps_code": "LLTN",
+    "freq": "123.700",
+    "Lat": 32.308611,
+    "Lon": 34.978333,
+    "Ele": 30.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Yotvata Airfield",
+    "gps_code": "LLYT",
+    "freq": "126.900",
+    "Lat": 29.901111,
+    "Lon": 35.0675,
+    "Ele": 75.9
+  }
+]

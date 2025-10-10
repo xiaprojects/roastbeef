@@ -1,0 +1,1154 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Figueira dos Cavaleiros",
+    "gps_code": "ES-0025",
+    "freq": "123.750",
+    "Lat": 38.077502,
+    "Lon": -8.235832,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Military Airfield of Santa Margarida",
+    "gps_code": "LP77",
+    "freq": "",
+    "Lat": 39.402401,
+    "Lon": -8.28906,
+    "Ele": 164.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Alverca Air Base",
+    "gps_code": "LPAR",
+    "freq": "138.800",
+    "Lat": 38.883301,
+    "Lon": -9.0301,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "São Jacinto Airfield",
+    "gps_code": "LPAV",
+    "freq": "",
+    "Lat": 40.656741,
+    "Lon": -8.741544,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santa Maria Airport",
+    "gps_code": "LPAZ",
+    "freq": "301.600",
+    "Lat": 36.97140121459961,
+    "Lon": -25.17060089111328,
+    "Ele": 93.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bragança Airport",
+    "gps_code": "LPBG",
+    "freq": "122.300",
+    "Lat": 41.8578,
+    "Lon": -6.70713,
+    "Ele": 683.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Beja Airport / Airbase",
+    "gps_code": "LPBJ",
+    "freq": "130.100",
+    "Lat": 38.078899,
+    "Lon": -7.9324,
+    "Ele": 193.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Braga Municipal Aerodrome",
+    "gps_code": "LPBR",
+    "freq": "122.005",
+    "Lat": 41.587,
+    "Lon": -8.445189,
+    "Ele": 75.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aerodromo de Castelo Branco",
+    "gps_code": "LPCB",
+    "freq": "123.750",
+    "Lat": 39.844528,
+    "Lon": -7.439875,
+    "Ele": 396.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Chaves",
+    "gps_code": "LPCH",
+    "freq": "122.700",
+    "Lat": 41.722356,
+    "Lon": -7.463064,
+    "Ele": 360.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aerodromo Municipal de Coimbra",
+    "gps_code": "LPCO",
+    "freq": "122.905",
+    "Lat": 40.158758,
+    "Lon": -8.470815,
+    "Ele": 178.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Corvo Airport",
+    "gps_code": "LPCR",
+    "freq": "",
+    "Lat": 39.671501,
+    "Lon": -31.1136,
+    "Ele": 18.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cascais Airport",
+    "gps_code": "LPCS",
+    "freq": "121.830",
+    "Lat": 38.724998,
+    "Lon": -9.35523,
+    "Ele": 99.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Évora Airfield",
+    "gps_code": "LPEV",
+    "freq": "122.700",
+    "Lat": 38.533501,
+    "Lon": -7.88964,
+    "Ele": 246.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Flores Airport",
+    "gps_code": "LPFL",
+    "freq": "118.300",
+    "Lat": 39.455299377441406,
+    "Lon": -31.13139915466309,
+    "Ele": 34.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Faro Airport",
+    "gps_code": "LPFR",
+    "freq": "119.400",
+    "Lat": 37.0144004822,
+    "Lon": -7.96590995789,
+    "Ele": 7.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Graciosa Airport",
+    "gps_code": "LPGR",
+    "freq": "122.900",
+    "Lat": 39.09220123291016,
+    "Lon": -28.029800415039062,
+    "Ele": 26.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Horta Airport",
+    "gps_code": "LPHR",
+    "freq": "119.700",
+    "Lat": 38.519901275634766,
+    "Lon": -28.715900421142575,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Espinho Airfield",
+    "gps_code": "LPIN",
+    "freq": "118.600",
+    "Lat": 40.974201,
+    "Lon": -8.64444,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Leiria",
+    "gps_code": "LPJF",
+    "freq": "121.255",
+    "Lat": 39.779907,
+    "Lon": -8.820238,
+    "Ele": 46.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lajes Airport",
+    "gps_code": "LPLA",
+    "freq": "135.000",
+    "Lat": 38.761799,
+    "Lon": -27.090799,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo da Lousã",
+    "gps_code": "LPLZ",
+    "freq": "",
+    "Lat": 40.143042,
+    "Lon": -8.240987,
+    "Ele": 199.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Madeira International Airport Cristiano Ronaldo",
+    "gps_code": "LPMA",
+    "freq": "119.200",
+    "Lat": 32.697899,
+    "Lon": -16.7745,
+    "Ele": 58.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Monfortinho",
+    "gps_code": "LPMF",
+    "freq": "",
+    "Lat": 39.976398,
+    "Lon": -6.906624,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mirandela Airfield",
+    "gps_code": "LPMI",
+    "freq": "122.205",
+    "Lat": 41.468006,
+    "Lon": -7.226257,
+    "Ele": 405.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Morargil Airfield",
+    "gps_code": "LPMO",
+    "freq": "123.350",
+    "Lat": 38.993532,
+    "Lon": -8.14201,
+    "Ele": 115.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Monte Real Air Base",
+    "gps_code": "LPMR",
+    "freq": "121.700",
+    "Lat": 39.828335,
+    "Lon": -8.8875,
+    "Ele": 57.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Montijo Air Base",
+    "gps_code": "LPMT",
+    "freq": "142.400",
+    "Lat": 38.70929,
+    "Lon": -9.03368,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mogadouro Airfield",
+    "gps_code": "LPMU",
+    "freq": "120.100",
+    "Lat": 41.3963,
+    "Lon": -6.68348,
+    "Ele": 714.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ovar Air Base",
+    "gps_code": "LPOV",
+    "freq": "118.600",
+    "Lat": 40.915901,
+    "Lon": -8.64592,
+    "Ele": 17.1
+  },
+  {
+    "type": "large_airport",
+    "name": "João Paulo II Airport",
+    "gps_code": "LPPD",
+    "freq": "119.400",
+    "Lat": 37.7411994934,
+    "Lon": -25.6979007721,
+    "Ele": 78.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pico Airport",
+    "gps_code": "LPPI",
+    "freq": "122.700",
+    "Lat": 38.554298,
+    "Lon": -28.441299,
+    "Ele": 33.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Portimão Airport",
+    "gps_code": "LPPM",
+    "freq": "122.000",
+    "Lat": 37.1493,
+    "Lon": -8.58396,
+    "Ele": 1.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Francisco de Sá Carneiro Airport",
+    "gps_code": "LPPR",
+    "freq": "121.105",
+    "Lat": 41.2481002808,
+    "Lon": -8.68138980865,
+    "Ele": 69.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Porto Santo Airport",
+    "gps_code": "LPPS",
+    "freq": "123.300",
+    "Lat": 33.0733985901,
+    "Lon": -16.3500003815,
+    "Ele": 103.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Lisbon Humberto Delgado Airport",
+    "gps_code": "LPPT",
+    "freq": "119.100",
+    "Lat": 38.7813,
+    "Lon": -9.13592,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Cruz Airfield",
+    "gps_code": "LPSC",
+    "freq": "",
+    "Lat": 39.12392,
+    "Lon": -9.380091,
+    "Ele": 47.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "São Jorge Airport",
+    "gps_code": "LPSJ",
+    "freq": "122.300",
+    "Lat": 38.665501,
+    "Lon": -28.1758,
+    "Ele": 94.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeródromo Municipal de Ponte de Sor",
+    "gps_code": "LPSO",
+    "freq": "",
+    "Lat": 39.211545,
+    "Lon": -8.057787,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santarém Airfield",
+    "gps_code": "LPSR",
+    "freq": "",
+    "Lat": 39.209495,
+    "Lon": -8.68728,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sintra Air Base",
+    "gps_code": "LPST",
+    "freq": "118.600",
+    "Lat": 38.8311,
+    "Lon": -9.33955,
+    "Ele": 134.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tancos Airbase",
+    "gps_code": "LPTN",
+    "freq": "122.100",
+    "Lat": 39.475101,
+    "Lon": -8.36458,
+    "Ele": 81.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vilar de Luz Airfield",
+    "gps_code": "LPVL",
+    "freq": "122.400",
+    "Lat": 41.27729,
+    "Lon": -8.516209,
+    "Ele": 232.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vila Real Airport",
+    "gps_code": "LPVR",
+    "freq": "122.900",
+    "Lat": 41.2743,
+    "Lon": -7.72047,
+    "Ele": 550.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aerodromo Goncalves Lobato (Viseu Airport)",
+    "gps_code": "LPVZ",
+    "freq": "122.300",
+    "Lat": 40.725498,
+    "Lon": -7.88899,
+    "Ele": 627.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Cabeceiras de Basto UL",
+    "gps_code": "PT-0020",
+    "freq": "",
+    "Lat": 41.556444,
+    "Lon": -7.985086,
+    "Ele": 734.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Benavente UL",
+    "gps_code": "PT-0021",
+    "freq": "122.675",
+    "Lat": 38.914227,
+    "Lon": -8.786981,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo do Cerval UL",
+    "gps_code": "PT-0022",
+    "freq": "130.125",
+    "Lat": 41.972958,
+    "Lon": -8.673806,
+    "Ele": 33.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Laúndos Airfield UL",
+    "gps_code": "PT-0023",
+    "freq": "122.500",
+    "Lat": 41.4487,
+    "Lon": -8.70829,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tojeira Airfield UL",
+    "gps_code": "PT-0024",
+    "freq": "123.800",
+    "Lat": 38.88444,
+    "Lon": -9.427868,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lagos Airfield ULM",
+    "gps_code": "PT-0025",
+    "freq": "",
+    "Lat": 37.121875,
+    "Lon": -8.67879,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Casarão UL",
+    "gps_code": "PT-0026",
+    "freq": "",
+    "Lat": 40.548704,
+    "Lon": -8.40548,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arraiolos Ultralight Airfield",
+    "gps_code": "PT-0027",
+    "freq": "",
+    "Lat": 38.702191,
+    "Lon": -8.013582,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Coja",
+    "gps_code": "PT-0029",
+    "freq": "",
+    "Lat": 40.2748,
+    "Lon": -7.9747,
+    "Ele": 281.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Monte do Lago",
+    "gps_code": "PT-0030",
+    "freq": "",
+    "Lat": 39.07502,
+    "Lon": -8.13889,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Beja Civil Airfield UL",
+    "gps_code": "PT-0031",
+    "freq": "130.400",
+    "Lat": 38.06138,
+    "Lon": -7.87767,
+    "Ele": 188.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Amendoeira Aerodrome",
+    "gps_code": "PT-0032",
+    "freq": "133.855",
+    "Lat": 38.709167,
+    "Lon": -8.275277,
+    "Ele": 187.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Pombal UL",
+    "gps_code": "PT-0033",
+    "freq": "",
+    "Lat": 39.885631,
+    "Lon": -8.649693,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Seia",
+    "gps_code": "PT-0035",
+    "freq": "",
+    "Lat": 40.453186,
+    "Lon": -7.692059,
+    "Ele": 440.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Municipal de Ferreira do Zezere UL",
+    "gps_code": "PT-0036",
+    "freq": "",
+    "Lat": 39.682059,
+    "Lon": -8.253189,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo da Pampilhosa da Serra",
+    "gps_code": "PT-0037",
+    "freq": "",
+    "Lat": 40.026869,
+    "Lon": -7.955008,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aérodromo de Ferreira do Alentejo",
+    "gps_code": "PT-0039",
+    "freq": "",
+    "Lat": 38.040061,
+    "Lon": -8.10423,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aérodromo Municipal de Proença-a-Nova",
+    "gps_code": "PT-0040",
+    "freq": "",
+    "Lat": 39.731217,
+    "Lon": -7.87495,
+    "Ele": 406.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Leziria Aerodrome",
+    "gps_code": "PT-0041",
+    "freq": "130.200",
+    "Lat": 38.902297,
+    "Lon": -8.93682,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo de Voo de Valdonas UL",
+    "gps_code": "PT-0042",
+    "freq": "",
+    "Lat": 39.59119,
+    "Lon": -8.371753,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Óbidos",
+    "gps_code": "PT-0043",
+    "freq": "",
+    "Lat": 39.3907221,
+    "Lon": -9.1982199,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Martim Longo Airstrip",
+    "gps_code": "PT-0050",
+    "freq": "",
+    "Lat": 37.433582,
+    "Lon": -7.763626,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Herdade da Zambujeira UL",
+    "gps_code": "PT-0052",
+    "freq": "",
+    "Lat": 37.67084,
+    "Lon": -8.123743,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Pias Longas (New) UL",
+    "gps_code": "PT-0055",
+    "freq": "",
+    "Lat": 39.597207,
+    "Lon": -8.567748,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Arrepiado",
+    "gps_code": "PT-0056",
+    "freq": "",
+    "Lat": 39.446011,
+    "Lon": -8.412019,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Herdade da Comporta",
+    "gps_code": "PT-0057",
+    "freq": "",
+    "Lat": 38.393944,
+    "Lon": -8.788311,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pinheiro Airstrip",
+    "gps_code": "PT-0058",
+    "freq": "",
+    "Lat": 38.45523,
+    "Lon": -8.715986,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Montevil (Batalha)",
+    "gps_code": "PT-0060",
+    "freq": "",
+    "Lat": 38.397661,
+    "Lon": -8.575387,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Herdade da Barrosinha",
+    "gps_code": "PT-0061",
+    "freq": "",
+    "Lat": 38.346941,
+    "Lon": -8.442607,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo da Palma UL",
+    "gps_code": "PT-0062",
+    "freq": "",
+    "Lat": 38.514292,
+    "Lon": -8.575752,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Melides",
+    "gps_code": "PT-0063",
+    "freq": "",
+    "Lat": 38.196371,
+    "Lon": -8.729496,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Aguas de Moura",
+    "gps_code": "PT-0064",
+    "freq": "",
+    "Lat": 38.579004,
+    "Lon": -8.696119,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herdade do Rio Frio Airstrip",
+    "gps_code": "PT-0065",
+    "freq": "",
+    "Lat": 38.680518,
+    "Lon": -8.857877,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Torre Vã",
+    "gps_code": "PT-0067",
+    "freq": "",
+    "Lat": 37.839987,
+    "Lon": -8.512602,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Ourique",
+    "gps_code": "PT-0077",
+    "freq": "",
+    "Lat": 37.665784,
+    "Lon": -8.228631,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Belo",
+    "gps_code": "PT-0083",
+    "freq": "",
+    "Lat": 37.576079,
+    "Lon": -7.743988,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Adiça",
+    "gps_code": "PT-0084",
+    "freq": "",
+    "Lat": 38.062757,
+    "Lon": -7.268711,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Monte das Tezas",
+    "gps_code": "PT-0085",
+    "freq": "",
+    "Lat": 38.107096,
+    "Lon": -7.166846,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Alcanena",
+    "gps_code": "PT-0087",
+    "freq": "",
+    "Lat": 39.471293,
+    "Lon": -8.670402,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "V. das Areias Airfield",
+    "gps_code": "PT-0088",
+    "freq": "",
+    "Lat": 38.956235,
+    "Lon": -8.845059,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Monforte",
+    "gps_code": "PT-0090",
+    "freq": "",
+    "Lat": 39.059904,
+    "Lon": -7.421753,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herdade da Lentisca Airstrip",
+    "gps_code": "PT-0092",
+    "freq": "",
+    "Lat": 38.339418,
+    "Lon": -7.855396,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerieira Airfield",
+    "gps_code": "PT-0093",
+    "freq": "",
+    "Lat": 38.424545,
+    "Lon": -7.72326,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campinho Airfield UL",
+    "gps_code": "PT-0094",
+    "freq": "",
+    "Lat": 38.359106,
+    "Lon": -7.465532,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herdade do Esporão",
+    "gps_code": "PT-0095",
+    "freq": "",
+    "Lat": 38.381674,
+    "Lon": -7.55177,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nossa Senhora de Machede Airstrip",
+    "gps_code": "PT-0096",
+    "freq": "",
+    "Lat": 38.599527,
+    "Lon": -7.820549,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Cabeço da Vaca UL",
+    "gps_code": "PT-0099",
+    "freq": "",
+    "Lat": 40.345145,
+    "Lon": -6.979752,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Atouguia da Baleia UL",
+    "gps_code": "PT-0101",
+    "freq": "",
+    "Lat": 39.347424,
+    "Lon": -9.32014,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Montargil",
+    "gps_code": "PT-0103",
+    "freq": "",
+    "Lat": 39.051902,
+    "Lon": -8.142087,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Herdade da Lameira",
+    "gps_code": "PT-0104",
+    "freq": "",
+    "Lat": 39.277962,
+    "Lon": -7.772655,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Comenda",
+    "gps_code": "PT-0105",
+    "freq": "",
+    "Lat": 39.427111,
+    "Lon": -7.827158,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Mação",
+    "gps_code": "PT-0107",
+    "freq": "",
+    "Lat": 39.572335,
+    "Lon": -7.987393,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vendas Novas Airstrip",
+    "gps_code": "PT-0108",
+    "freq": "",
+    "Lat": 38.677419,
+    "Lon": -8.496015,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ciborro Airstrip",
+    "gps_code": "PT-0109",
+    "freq": "",
+    "Lat": 38.797735,
+    "Lon": -8.20256,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Biscainho Brandão",
+    "gps_code": "PT-0110",
+    "freq": "",
+    "Lat": 38.941904,
+    "Lon": -8.717673,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Volta do Vale",
+    "gps_code": "PT-0112",
+    "freq": "",
+    "Lat": 38.964347,
+    "Lon": -8.394842,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Bilrete",
+    "gps_code": "PT-0113",
+    "freq": "",
+    "Lat": 38.984165,
+    "Lon": -8.766081,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Muge",
+    "gps_code": "PT-0114",
+    "freq": "",
+    "Lat": 39.097162,
+    "Lon": -8.658857,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista de Valada do Ribatejo",
+    "gps_code": "PT-0116",
+    "freq": "",
+    "Lat": 39.073411,
+    "Lon": -8.766832,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo do Alqueidão UL",
+    "gps_code": "PT-0117",
+    "freq": "130.705",
+    "Lat": 39.066847,
+    "Lon": -8.804255,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo da Azambuja UL",
+    "gps_code": "PT-0118",
+    "freq": "",
+    "Lat": 39.05955,
+    "Lon": -8.827193,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Garrocheira",
+    "gps_code": "PT-0119",
+    "freq": "",
+    "Lat": 38.990303,
+    "Lon": -8.776832,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alcochete Military Airfield",
+    "gps_code": "PT-0121",
+    "freq": "",
+    "Lat": 38.766933,
+    "Lon": -8.802624,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo da Pedra da Broa",
+    "gps_code": "PT-0122",
+    "freq": "",
+    "Lat": 40.71896,
+    "Lon": -8.237944,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Corvachã Ultralight Airfield",
+    "gps_code": "PT-0125",
+    "freq": "",
+    "Lat": 41.231937,
+    "Lon": -7.977163,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Minhéu",
+    "gps_code": "PT-0126",
+    "freq": "",
+    "Lat": 41.540026,
+    "Lon": -7.677877,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Barragem do Maranhão",
+    "gps_code": "PT-0127",
+    "freq": "",
+    "Lat": 38.994697,
+    "Lon": -7.9894,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista da Chamusca",
+    "gps_code": "PT-0128",
+    "freq": "",
+    "Lat": 39.319425,
+    "Lon": -8.516121,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herdade do Pontal Airstrip UL",
+    "gps_code": "PT-0130",
+    "freq": "122.755",
+    "Lat": 38.711667,
+    "Lon": -8.610063,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Faias UL",
+    "gps_code": "PT-0131",
+    "freq": "",
+    "Lat": 38.687721,
+    "Lon": -8.745375,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista do Monte do Pombo",
+    "gps_code": "PT-0134",
+    "freq": "",
+    "Lat": 39.644693,
+    "Lon": -7.560568,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dragoa Airstrip",
+    "gps_code": "PT-0136",
+    "freq": "",
+    "Lat": 40.406895,
+    "Lon": -6.997218,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Piper Road Airstrip",
+    "gps_code": "PT-0138",
+    "freq": "",
+    "Lat": 38.916323,
+    "Lon": -8.951862,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herdade da Galega",
+    "gps_code": "PT-0140",
+    "freq": "",
+    "Lat": 39.387534,
+    "Lon": -8.358682,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Courela do Outeiro Private Airstrip",
+    "gps_code": "PT-0141",
+    "freq": "",
+    "Lat": 37.627463,
+    "Lon": -7.502632,
+    "Ele": 124.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Quinta de Fôja",
+    "gps_code": "PT-0142",
+    "freq": "",
+    "Lat": 40.18503,
+    "Lon": -8.704338,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromo de Daroeira",
+    "gps_code": "PT-0143",
+    "freq": "",
+    "Lat": 37.909991,
+    "Lon": -8.322573,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Monte de Freixial Airstrip",
+    "gps_code": "PT-0145",
+    "freq": "",
+    "Lat": 38.79809,
+    "Lon": -7.16397,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rebocho",
+    "gps_code": "PT-0146",
+    "freq": "",
+    "Lat": 38.926546,
+    "Lon": -8.534066,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Cano",
+    "gps_code": "PT-0147",
+    "freq": "",
+    "Lat": 38.972008,
+    "Lon": -7.760231,
+    "Ele": 240.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Urros ULM",
+    "gps_code": "PT-0150",
+    "freq": "",
+    "Lat": 41.086921,
+    "Lon": -7.013526,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo de Voo da Quinta Branca",
+    "gps_code": "PT-0151",
+    "freq": "",
+    "Lat": 40.25716,
+    "Lon": -7.459524,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Praia Verde Airstrip",
+    "gps_code": "PT-0161",
+    "freq": "",
+    "Lat": 37.193441,
+    "Lon": -7.472073,
+    "Ele": 3.0
+  }
+]

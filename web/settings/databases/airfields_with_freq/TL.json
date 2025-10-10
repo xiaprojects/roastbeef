@@ -1,0 +1,101 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Com Airport",
+    "gps_code": "ID-KCI",
+    "freq": "",
+    "Lat": -8.349193,
+    "Lon": 127.050793,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lospalos Airfield",
+    "gps_code": "TL-0001",
+    "freq": "",
+    "Lat": -8.455563,
+    "Lon": 126.975861,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Atauro Airport",
+    "gps_code": "WPAT",
+    "freq": "",
+    "Lat": -8.243133,
+    "Lon": 125.606378,
+    "Ele": 8.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Suai Airport",
+    "gps_code": "WPDB",
+    "freq": "127.100",
+    "Lat": -9.30331039428711,
+    "Lon": 125.28700256347656,
+    "Ele": 29.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Presidente Nicolau Lobato International Airport",
+    "gps_code": "WPDL",
+    "freq": "122.900",
+    "Lat": -8.546562,
+    "Lon": 125.524507,
+    "Ele": 46.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cakung Airport",
+    "gps_code": "WPEC",
+    "freq": "123.450",
+    "Lat": -8.486479,
+    "Lon": 126.399981,
+    "Ele": 539.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fuiloro Airfield",
+    "gps_code": "WPFL",
+    "freq": "",
+    "Lat": -8.447964,
+    "Lon": 126.987362,
+    "Ele": 416.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Maliana Airport",
+    "gps_code": "WPMN",
+    "freq": "",
+    "Lat": -8.97224,
+    "Lon": 125.214996,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rota Do Sândalo Oecusse Airport",
+    "gps_code": "WPOC",
+    "freq": "",
+    "Lat": -9.19806,
+    "Lon": 124.343002,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Same Airport",
+    "gps_code": "WPSM",
+    "freq": "",
+    "Lat": -9.000988,
+    "Lon": 125.683942,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Viqueque Airport",
+    "gps_code": "WPVQ",
+    "freq": "",
+    "Lat": -8.88379955291748,
+    "Lon": 126.3730010986328,
+    "Ele": 152.4
+  }
+]

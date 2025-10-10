@@ -1,0 +1,101 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Syunik Airport",
+    "gps_code": "AM-0001",
+    "freq": "",
+    "Lat": 39.202272,
+    "Lon": 46.455204,
+    "Ele": 703.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Goris Airport",
+    "gps_code": "AM-0002",
+    "freq": "",
+    "Lat": 39.450989,
+    "Lon": 46.34724,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoktember Highway Strip",
+    "gps_code": "AM-0003",
+    "freq": "",
+    "Lat": 40.0809774791,
+    "Lon": 43.8822698593,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Berd Airport",
+    "gps_code": "AM-0004",
+    "freq": "",
+    "Lat": 40.9254056063,
+    "Lon": 45.4614043236,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sisian Airstrip",
+    "gps_code": "AM-0008",
+    "freq": "",
+    "Lat": 39.54694,
+    "Lon": 46.05694,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sky Club Airstrip",
+    "gps_code": "AM-0009",
+    "freq": "",
+    "Lat": 40.07953,
+    "Lon": 44.60577,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arzni Airport",
+    "gps_code": "UD21",
+    "freq": "",
+    "Lat": 40.294102,
+    "Lon": 44.564602,
+    "Ele": 1346.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stepanavan Airport",
+    "gps_code": "UDLS",
+    "freq": "130.300",
+    "Lat": 41.048500061,
+    "Lon": 44.3372001648,
+    "Ele": 1474.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shirak International Airport",
+    "gps_code": "UDSG",
+    "freq": "127.700",
+    "Lat": 40.750401,
+    "Lon": 43.859299,
+    "Ele": 1524.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Erebuni Airport",
+    "gps_code": "UDYE",
+    "freq": "119.400",
+    "Lat": 40.1221008301,
+    "Lon": 44.465000152600005,
+    "Ele": 898.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Zvartnots International Airport",
+    "gps_code": "UDYZ",
+    "freq": "126.000",
+    "Lat": 40.1473007202,
+    "Lon": 44.3959007263,
+    "Ele": 865.0
+  }
+]

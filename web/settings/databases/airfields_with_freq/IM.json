@@ -1,0 +1,38 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Isle of Man Airport",
+    "gps_code": "EGNS",
+    "freq": "135.905",
+    "Lat": 54.083302,
+    "Lon": -4.62389,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Andreas Airfield",
+    "gps_code": "IM-0001",
+    "freq": "",
+    "Lat": 54.371111,
+    "Lon": -4.423333,
+    "Ele": 29.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Mount Rule Farm Airstrip",
+    "gps_code": "IM-0003",
+    "freq": "",
+    "Lat": 54.182127,
+    "Lon": -4.51311,
+    "Ele": 96.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Andreas-Ballavoddan House Airstrip",
+    "gps_code": "IM-0004",
+    "freq": "",
+    "Lat": 54.356006,
+    "Lon": -4.438477,
+    "Ele": 0.0
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Miquelon Airport",
+    "gps_code": "LFVM",
+    "freq": "119.100",
+    "Lat": 47.095501,
+    "Lon": -56.380299,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "St Pierre Airport",
+    "gps_code": "LFVP",
+    "freq": "118.500",
+    "Lat": 46.76290130615234,
+    "Lon": -56.173099517822266,
+    "Ele": 8.2
+  }
+]

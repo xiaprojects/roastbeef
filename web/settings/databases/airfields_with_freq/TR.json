@@ -1,0 +1,1046 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Güvercinlik Airport",
+    "gps_code": "LTAB",
+    "freq": "118.675",
+    "Lat": 39.9350013733,
+    "Lon": 32.7407989502,
+    "Ele": 819.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Esenboğa International Airport",
+    "gps_code": "LTAC",
+    "freq": "119.100",
+    "Lat": 40.128101,
+    "Lon": 32.995098,
+    "Ele": 952.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Etimesgut Air Base",
+    "gps_code": "LTAD",
+    "freq": "119.100",
+    "Lat": 39.949798584,
+    "Lon": 32.6885986328,
+    "Ele": 808.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Akıncı Air Base",
+    "gps_code": "LTAE",
+    "freq": "119.100",
+    "Lat": 40.0788993835,
+    "Lon": 32.5656013489,
+    "Ele": 843.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Adana Şakirpaşa Airport",
+    "gps_code": "LTAF",
+    "freq": "126.500",
+    "Lat": 36.982201,
+    "Lon": 35.280399,
+    "Ele": 19.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "İncirlik Air Base",
+    "gps_code": "LTAG",
+    "freq": "126.500",
+    "Lat": 37.002102,
+    "Lon": 35.4259,
+    "Ele": 72.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Afyon Air Base",
+    "gps_code": "LTAH",
+    "freq": "122.100",
+    "Lat": 38.726398,
+    "Lon": 30.601101,
+    "Ele": 1008.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Antalya International Airport",
+    "gps_code": "LTAI",
+    "freq": "122.050",
+    "Lat": 36.898701,
+    "Lon": 30.800501,
+    "Ele": 53.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gaziantep International Airport",
+    "gps_code": "LTAJ",
+    "freq": "120.100",
+    "Lat": 36.947201,
+    "Lon": 37.478699,
+    "Ele": 705.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kastamonu Airport",
+    "gps_code": "LTAL",
+    "freq": "",
+    "Lat": 41.314201,
+    "Lon": 33.795799,
+    "Ele": 1072.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Konya Airport",
+    "gps_code": "LTAN",
+    "freq": "121.500",
+    "Lat": 37.979,
+    "Lon": 32.561901,
+    "Ele": 1033.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Malatya Tulga Airport",
+    "gps_code": "LTAO",
+    "freq": "125.600",
+    "Lat": 38.353699,
+    "Lon": 38.253899,
+    "Ele": 919.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Amasya Merzifon Airport",
+    "gps_code": "LTAP",
+    "freq": "122.100",
+    "Lat": 40.829399,
+    "Lon": 35.521999,
+    "Ele": 535.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sivas Nuri Demirağ Airport",
+    "gps_code": "LTAR",
+    "freq": "121.900",
+    "Lat": 39.813801,
+    "Lon": 36.9035,
+    "Ele": 1596.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zonguldak Çaycuma Airport",
+    "gps_code": "LTAS",
+    "freq": "",
+    "Lat": 41.506401,
+    "Lon": 32.0886,
+    "Ele": 13.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malatya Erhaç Airport",
+    "gps_code": "LTAT",
+    "freq": "122.100",
+    "Lat": 38.4352989197,
+    "Lon": 38.0909996033,
+    "Ele": 862.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kayseri Erkilet Airport",
+    "gps_code": "LTAU",
+    "freq": "122.100",
+    "Lat": 38.770401001,
+    "Lon": 35.4953994751,
+    "Ele": 1055.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sivrihisar Airport",
+    "gps_code": "LTAV",
+    "freq": "122.100",
+    "Lat": 39.45149993896485,
+    "Lon": 31.36529922485352,
+    "Ele": 970.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tokat Airport",
+    "gps_code": "LTAW",
+    "freq": "118.700",
+    "Lat": 40.32472,
+    "Lon": 36.39056,
+    "Ele": 566.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Çardak Airport",
+    "gps_code": "LTAY",
+    "freq": "121.600",
+    "Lat": 37.7855987549,
+    "Lon": 29.7012996674,
+    "Ele": 851.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nevşehir Kapadokya Airport",
+    "gps_code": "LTAZ",
+    "freq": "119.100",
+    "Lat": 38.7719,
+    "Lon": 34.5345,
+    "Ele": 944.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "İstanbul Atatürk Airport",
+    "gps_code": "LTBA",
+    "freq": "120.500",
+    "Lat": 40.971913,
+    "Lon": 28.823714,
+    "Ele": 49.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aydın Çıldır Airport",
+    "gps_code": "LTBD",
+    "freq": "",
+    "Lat": 37.815389,
+    "Lon": 27.887566,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bursa Yunuseli Airport",
+    "gps_code": "LTBE",
+    "freq": "",
+    "Lat": 40.233243,
+    "Lon": 29.005583,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Balıkesir Airport",
+    "gps_code": "LTBF",
+    "freq": "122.100",
+    "Lat": 39.619301,
+    "Lon": 27.926001,
+    "Ele": 103.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bandırma Airport",
+    "gps_code": "LTBG",
+    "freq": "122.100",
+    "Lat": 40.318001,
+    "Lon": 27.977699,
+    "Ele": 51.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Çanakkale Airport",
+    "gps_code": "LTBH",
+    "freq": "122.100",
+    "Lat": 40.1376991272,
+    "Lon": 26.4267997742,
+    "Ele": 7.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Eskişehir Air Base",
+    "gps_code": "LTBI",
+    "freq": "122.100",
+    "Lat": 39.7841,
+    "Lon": 30.5821,
+    "Ele": 786.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Adnan Menderes International Airport",
+    "gps_code": "LTBJ",
+    "freq": "119.500",
+    "Lat": 38.2924,
+    "Lon": 27.157,
+    "Ele": 125.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Gaziemir Air Base",
+    "gps_code": "LTBK",
+    "freq": "120.100",
+    "Lat": 38.319099,
+    "Lon": 27.159401,
+    "Ele": 132.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Çiğli Airbase",
+    "gps_code": "LTBL",
+    "freq": "120.100",
+    "Lat": 38.513,
+    "Lon": 27.010099,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Isparta Airport",
+    "gps_code": "LTBM",
+    "freq": "",
+    "Lat": 37.78512191772461,
+    "Lon": 30.59001922607422,
+    "Ele": 990.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kütahya Airport",
+    "gps_code": "LTBN",
+    "freq": "25.125",
+    "Lat": 39.426701,
+    "Lon": 30.016899,
+    "Ele": 922.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Uşak Airport",
+    "gps_code": "LTBO",
+    "freq": "122.350",
+    "Lat": 38.681499,
+    "Lon": 29.471701,
+    "Ele": 883.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yalova Air Base",
+    "gps_code": "LTBP",
+    "freq": "121.950",
+    "Lat": 40.686279,
+    "Lon": 29.37707,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cengiz Topel Airport",
+    "gps_code": "LTBQ",
+    "freq": "120.500",
+    "Lat": 40.735001,
+    "Lon": 30.0833,
+    "Ele": 55.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bursa Yenişehir Airport",
+    "gps_code": "LTBR",
+    "freq": "120.325",
+    "Lat": 40.255199,
+    "Lon": 29.562599,
+    "Ele": 232.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Dalaman International Airport",
+    "gps_code": "LTBS",
+    "freq": "119.225",
+    "Lat": 36.7131004333,
+    "Lon": 28.7924995422,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Akhisar Airport / Akhisar Air Base",
+    "gps_code": "LTBT",
+    "freq": "120.100",
+    "Lat": 38.808899,
+    "Lon": 27.8339,
+    "Ele": 80.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tekirdağ Çorlu Airport",
+    "gps_code": "LTBU",
+    "freq": "120.500",
+    "Lat": 41.13819885253906,
+    "Lon": 27.919099807739254,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bodrum-Imsık Airport",
+    "gps_code": "LTBV",
+    "freq": "126.000",
+    "Lat": 37.140099,
+    "Lon": 27.669701,
+    "Ele": 61.6
+  },
+  {
+    "type": "small_airport",
+    "name": "İstanbul Hezarfen Airfield",
+    "gps_code": "LTBW",
+    "freq": "118.250",
+    "Lat": 41.1036,
+    "Lon": 28.547701,
+    "Ele": 18.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "İstanbul Samandıra Army Air Base",
+    "gps_code": "LTBX",
+    "freq": "132.000",
+    "Lat": 40.993,
+    "Lon": 29.216499,
+    "Ele": 121.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Anadolu Airport",
+    "gps_code": "LTBY",
+    "freq": "123.750",
+    "Lat": 39.809898,
+    "Lon": 30.5194,
+    "Ele": 788.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Zafer Airport",
+    "gps_code": "LTBZ",
+    "freq": "",
+    "Lat": 39.113079,
+    "Lon": 30.128111,
+    "Ele": 1014.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Elazığ Airport",
+    "gps_code": "LTCA",
+    "freq": "118.100",
+    "Lat": 38.597974,
+    "Lon": 39.28348,
+    "Ele": 892.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ordu–Giresun Airport",
+    "gps_code": "LTCB",
+    "freq": "",
+    "Lat": 40.966872,
+    "Lon": 38.085995,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Diyarbakır Airport",
+    "gps_code": "LTCC",
+    "freq": "123.200",
+    "Lat": 37.893902,
+    "Lon": 40.201,
+    "Ele": 686.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Erzincan Airport",
+    "gps_code": "LTCD",
+    "freq": "121.900",
+    "Lat": 39.7102012634,
+    "Lon": 39.5270004272,
+    "Ele": 1153.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Erzurum International Airport",
+    "gps_code": "LTCE",
+    "freq": "118.100",
+    "Lat": 39.956501,
+    "Lon": 41.1702,
+    "Ele": 1756.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kars Airport",
+    "gps_code": "LTCF",
+    "freq": "122.400",
+    "Lat": 40.562198638916016,
+    "Lon": 43.1150016784668,
+    "Ele": 1795.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Trabzon International Airport",
+    "gps_code": "LTCG",
+    "freq": "120.100",
+    "Lat": 40.995098,
+    "Lon": 39.7897,
+    "Ele": 31.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Van Ferit Melen Airport",
+    "gps_code": "LTCI",
+    "freq": "118.100",
+    "Lat": 38.46820068359375,
+    "Lon": 43.332298278808594,
+    "Ele": 1670.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Batman Airport",
+    "gps_code": "LTCJ",
+    "freq": "122.100",
+    "Lat": 37.9290008545,
+    "Lon": 41.1166000366,
+    "Ele": 555.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Muş Airport",
+    "gps_code": "LTCK",
+    "freq": "122.100",
+    "Lat": 38.74779891967773,
+    "Lon": 41.66120147705078,
+    "Ele": 1267.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Siirt Airport",
+    "gps_code": "LTCL",
+    "freq": "132.050",
+    "Lat": 37.97890090942383,
+    "Lon": 41.84040069580078,
+    "Ele": 609.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sinop Airport",
+    "gps_code": "LTCM",
+    "freq": "",
+    "Lat": 42.018313,
+    "Lon": 35.071774,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kahramanmaraş Airport",
+    "gps_code": "LTCN",
+    "freq": "123.100",
+    "Lat": 37.5388259888,
+    "Lon": 36.9535217285,
+    "Ele": 525.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ağrı Airport",
+    "gps_code": "LTCO",
+    "freq": "118.475",
+    "Lat": 39.655642,
+    "Lon": 43.025742,
+    "Ele": 1664.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Adıyaman Airport",
+    "gps_code": "LTCP",
+    "freq": "119.050",
+    "Lat": 37.7314,
+    "Lon": 38.468899,
+    "Ele": 675.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mardin Airport",
+    "gps_code": "LTCR",
+    "freq": "118.650",
+    "Lat": 37.2233009338,
+    "Lon": 40.6316986084,
+    "Ele": 527.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Şanlıurfa GAP Airport",
+    "gps_code": "LTCS",
+    "freq": "",
+    "Lat": 37.445663,
+    "Lon": 38.895592,
+    "Ele": 825.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iğdır Airport",
+    "gps_code": "LTCT",
+    "freq": "119.600",
+    "Lat": 39.976627,
+    "Lon": 43.876648,
+    "Ele": 945.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bingöl Airport",
+    "gps_code": "LTCU",
+    "freq": "",
+    "Lat": 38.860131,
+    "Lon": 40.594489,
+    "Ele": 1068.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Şırnak Şerafettin Elçi Airport",
+    "gps_code": "LTCV",
+    "freq": "",
+    "Lat": 37.3647,
+    "Lon": 42.0582,
+    "Ele": 621.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hakkari Yüksekova Airport",
+    "gps_code": "LTCW",
+    "freq": "",
+    "Lat": 37.5497,
+    "Lon": 44.2381,
+    "Ele": 1950.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hatay Airport",
+    "gps_code": "LTDA",
+    "freq": "",
+    "Lat": 36.362778,
+    "Lon": 36.282223,
+    "Ele": 82.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Çukurova International Airport",
+    "gps_code": "LTDB",
+    "freq": "",
+    "Lat": 36.890908,
+    "Lon": 35.070522,
+    "Ele": 10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaklıç Airport",
+    "gps_code": "LTFA",
+    "freq": "120.100",
+    "Lat": 38.517601,
+    "Lon": 26.9774,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Selçuk Efes Airport",
+    "gps_code": "LTFB",
+    "freq": "133.050",
+    "Lat": 37.950699,
+    "Lon": 27.329,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Süleyman Demirel International Airport",
+    "gps_code": "LTFC",
+    "freq": "121.700",
+    "Lat": 37.8554,
+    "Lon": 30.368401,
+    "Ele": 864.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Balıkesir Koca Seyit Airport",
+    "gps_code": "LTFD",
+    "freq": "123.100",
+    "Lat": 39.5546,
+    "Lon": 27.0138,
+    "Ele": 15.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Milas Bodrum International Airport",
+    "gps_code": "LTFE",
+    "freq": "119.500",
+    "Lat": 37.250599,
+    "Lon": 27.664301,
+    "Ele": 6.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gazipaşa-Alanya Airport",
+    "gps_code": "LTFG",
+    "freq": "119.250",
+    "Lat": 36.299217,
+    "Lon": 32.300598,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Samsun-Çarşamba Airport",
+    "gps_code": "LTFH",
+    "freq": "118.175",
+    "Lat": 41.253988,
+    "Lon": 36.567546,
+    "Ele": 5.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Istanbul Sabiha Gökçen International Airport",
+    "gps_code": "LTFJ",
+    "freq": "128.200",
+    "Lat": 40.898602,
+    "Lon": 29.3092,
+    "Ele": 95.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gökçeada Airport",
+    "gps_code": "LTFK",
+    "freq": "",
+    "Lat": 40.204498,
+    "Lon": 25.883302,
+    "Ele": 22.3
+  },
+  {
+    "type": "large_airport",
+    "name": "İstanbul Airport",
+    "gps_code": "LTFM",
+    "freq": "127.100",
+    "Lat": 41.261297,
+    "Lon": 28.741951,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Isparta/Kilic Airport",
+    "gps_code": "LTFN",
+    "freq": "",
+    "Lat": 37.863665,
+    "Lon": 30.355,
+    "Ele": 876.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rize–Artvin Airport",
+    "gps_code": "LTFO",
+    "freq": "127.150",
+    "Lat": 41.179766,
+    "Lon": 40.848802,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Karain Airport",
+    "gps_code": "LTXE",
+    "freq": "",
+    "Lat": 37.09644317626953,
+    "Lon": 30.647735595703125,
+    "Ele": 309.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Akhisar Military Airport",
+    "gps_code": "TR-0001",
+    "freq": "",
+    "Lat": 38.976571,
+    "Lon": 27.853267,
+    "Ele": 123.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Divriği Airport",
+    "gps_code": "TR-0002",
+    "freq": "",
+    "Lat": 39.3316650390625,
+    "Lon": 38.0918197631836,
+    "Ele": 1074.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Temelli Air Base",
+    "gps_code": "TR-0004",
+    "freq": "",
+    "Lat": 39.73885726928711,
+    "Lon": 32.378639221191406,
+    "Ele": 748.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuzla Air Base",
+    "gps_code": "TR-0005",
+    "freq": "",
+    "Lat": 40.822643,
+    "Lon": 29.335127,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bozcaada Airport",
+    "gps_code": "TR-0008",
+    "freq": "",
+    "Lat": 39.837845,
+    "Lon": 25.995106,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Çardak Highway Strip",
+    "gps_code": "TR-0009",
+    "freq": "",
+    "Lat": 37.828125,
+    "Lon": 29.637863159179688,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Diyarbakır Northwest Airport",
+    "gps_code": "TR-0011",
+    "freq": "",
+    "Lat": 38.01278305053711,
+    "Lon": 39.95493698120117,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alaçatı Airport",
+    "gps_code": "TR-0012",
+    "freq": "",
+    "Lat": 38.24319839477539,
+    "Lon": 26.424999237060547,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aksaray Airport",
+    "gps_code": "TR-0014",
+    "freq": "",
+    "Lat": 38.314704,
+    "Lon": 33.8055,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Boranköy Air Base",
+    "gps_code": "TR-0015",
+    "freq": "",
+    "Lat": 38.4689457144,
+    "Lon": 38.3651590347,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolu Air Base",
+    "gps_code": "TR-0018",
+    "freq": "",
+    "Lat": 40.74797058105469,
+    "Lon": 31.650066375732425,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Çukurhisar Airport",
+    "gps_code": "TR-0021",
+    "freq": "",
+    "Lat": 39.84389877319336,
+    "Lon": 30.968000411987305,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Keşan Air Base",
+    "gps_code": "TR-0028",
+    "freq": "",
+    "Lat": 40.787068,
+    "Lon": 26.606655,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Niğde Airport",
+    "gps_code": "TR-0029",
+    "freq": "",
+    "Lat": 37.846042,
+    "Lon": 34.473324,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Salyazı Airport",
+    "gps_code": "TR-0032",
+    "freq": "",
+    "Lat": 40.222900390625,
+    "Lon": 39.79309844970703,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarımsaklı Airfield",
+    "gps_code": "TR-0033",
+    "freq": "",
+    "Lat": 39.273658752441406,
+    "Lon": 26.68694877624512,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "THK İnönü Airfield",
+    "gps_code": "TR-0034",
+    "freq": "",
+    "Lat": 39.82091522216797,
+    "Lon": 30.11874008178711,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tatvan Airport",
+    "gps_code": "TR-0035",
+    "freq": "",
+    "Lat": 38.54180145263672,
+    "Lon": 42.332401275634766,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Muş West Airport",
+    "gps_code": "TR-0037",
+    "freq": "",
+    "Lat": 38.7861877312,
+    "Lon": 41.4696979523,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yüksekova Highway Strip",
+    "gps_code": "TR-0038",
+    "freq": "",
+    "Lat": 37.5439478243,
+    "Lon": 44.3380093575,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kayseri Hava İkmal Airfield",
+    "gps_code": "TR-0039",
+    "freq": "",
+    "Lat": 38.7029942184,
+    "Lon": 35.504550933800004,
+    "Ele": 1070.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Manavgat Airport",
+    "gps_code": "TR-0040",
+    "freq": "",
+    "Lat": 36.7357458756,
+    "Lon": 31.5086495876,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Pergamon Sport Airfield",
+    "gps_code": "TR-0041",
+    "freq": "433.000",
+    "Lat": 39.092842,
+    "Lon": 27.148651,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dörtyol Airfield",
+    "gps_code": "TR-0078",
+    "freq": "",
+    "Lat": 36.8309,
+    "Lon": 36.2172,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kumköy Blue Sky Airport",
+    "gps_code": "TR-0079",
+    "freq": "",
+    "Lat": 36.80834,
+    "Lon": 31.369507,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Samsun / Ondokuz Mayis Airport",
+    "gps_code": "TR-0080",
+    "freq": "",
+    "Lat": 41.5129,
+    "Lon": 36.1203,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kelaynak Aviation Club Airport",
+    "gps_code": "TR-0092",
+    "freq": "",
+    "Lat": 36.93968,
+    "Lon": 35.563492,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manavgat Model Ucak Pisti",
+    "gps_code": "TR-0159",
+    "freq": "",
+    "Lat": 36.748762,
+    "Lon": 31.479854,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Assos Aviation Village Airport",
+    "gps_code": "TR-0224",
+    "freq": "",
+    "Lat": 39.49862,
+    "Lon": 26.35856,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Istanbul Aviation Pamukova Airfield",
+    "gps_code": "TR-0282",
+    "freq": "",
+    "Lat": 40.487089,
+    "Lon": 30.169232,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "KTO Karatay University Airfield",
+    "gps_code": "TR-0283",
+    "freq": "",
+    "Lat": 38.095469,
+    "Lon": 32.779033,
+    "Ele": 306.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Orhan Ünsal Air Park",
+    "gps_code": "TR-0289",
+    "freq": "",
+    "Lat": 39.670069,
+    "Lon": 32.201065,
+    "Ele": 890.0
+  },
+  {
+    "type": "small_airport",
+    "name": "MANHAT Sportif Havaalanı",
+    "gps_code": "TR-0291",
+    "freq": "",
+    "Lat": 38.700849,
+    "Lon": 27.453658,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yıldızlar Sportif Havaalanı",
+    "gps_code": "TR-0292",
+    "freq": "",
+    "Lat": 38.331013,
+    "Lon": 27.245631,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sivrihisar Aviation Center",
+    "gps_code": "TR-0295",
+    "freq": "",
+    "Lat": 39.30217,
+    "Lon": 31.49727,
+    "Ele": 865.9
+  }
+]

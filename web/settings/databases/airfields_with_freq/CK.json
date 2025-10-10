@@ -1,0 +1,92 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Aitutaki Airport",
+    "gps_code": "NCAI",
+    "freq": "118.100",
+    "Lat": -18.8309,
+    "Lon": -159.764008,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Enua Airport",
+    "gps_code": "NCAT",
+    "freq": "",
+    "Lat": -19.96780014038086,
+    "Lon": -158.11900329589844,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mangaia Island Airport",
+    "gps_code": "NCMG",
+    "freq": "",
+    "Lat": -21.895987,
+    "Lon": -157.906662,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Manihiki Island Airport",
+    "gps_code": "NCMH",
+    "freq": "",
+    "Lat": -10.3767,
+    "Lon": -161.001999,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mauke Airport",
+    "gps_code": "NCMK",
+    "freq": "",
+    "Lat": -20.13610076904297,
+    "Lon": -157.34500122070312,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Manuae Airport",
+    "gps_code": "NCMN",
+    "freq": "",
+    "Lat": -19.269152,
+    "Lon": -158.959408,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Mitiaro Island Airport",
+    "gps_code": "NCMR",
+    "freq": "",
+    "Lat": -19.842501,
+    "Lon": -157.703003,
+    "Ele": 7.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Pukapuka Island Airport",
+    "gps_code": "NCPK",
+    "freq": "",
+    "Lat": -10.9145,
+    "Lon": -165.8393,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tongareva Airport",
+    "gps_code": "NCPY",
+    "freq": "",
+    "Lat": -9.01437,
+    "Lon": -158.03241,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rarotonga International Airport",
+    "gps_code": "NCRG",
+    "freq": "118.100",
+    "Lat": -21.2027,
+    "Lon": -159.806,
+    "Ele": 5.8
+  }
+]

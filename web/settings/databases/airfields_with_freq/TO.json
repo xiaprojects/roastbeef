@@ -1,0 +1,56 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Kaufana Airport",
+    "gps_code": "NFTE",
+    "freq": "",
+    "Lat": -21.3782997131,
+    "Lon": -174.957992554,
+    "Ele": 99.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fua'amotu International Airport",
+    "gps_code": "NFTF",
+    "freq": "322.600",
+    "Lat": -21.241199493408203,
+    "Lon": -175.14999389648438,
+    "Ele": 38.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lifuka Island Airport",
+    "gps_code": "NFTL",
+    "freq": "118.100",
+    "Lat": -19.777000427246094,
+    "Lon": -174.34100341796875,
+    "Ele": 9.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mata'aho Airport",
+    "gps_code": "NFTO",
+    "freq": "",
+    "Lat": -15.570603,
+    "Lon": -175.631283,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuini Lavenia Airport",
+    "gps_code": "NFTP",
+    "freq": "",
+    "Lat": -15.977297,
+    "Lon": -173.791089,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vava'u International Airport",
+    "gps_code": "NFTV",
+    "freq": "118.100",
+    "Lat": -18.58530044555664,
+    "Lon": -173.96200561523438,
+    "Ele": 71.9
+  }
+]

@@ -24,7 +24,7 @@ var URL_RADIO_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_RADIO_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_PLAYBACK_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/playback";
 // Load frequencies from airfields
-var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/db.airfields.json";
+var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/db.frequencies.json";
 
 
 // create our controller function with all necessary logic
@@ -334,40 +334,21 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         if($scope.db["global"].hasOwnProperty(frequency)){
         return $scope.db["global"][frequency]["name"];
         }
-        return "";
-    }
-    $scope.radioDisplayNameByFrequency = function (frequency) {
-        if($scope.db["global"].hasOwnProperty(frequency)){
-        return $scope.db["global"][frequency]["name"];
-        }
         return "---";
     }
 
     addEventListener("keypad", keypadEventListener);
 
-    function convertAirFieldDBToAirFrequencies(airfieldDataset) {
-        var frequencyDB = {
-            "global":
-            {
-                "130.000": {
-                    "gps": {
-                        "lat": 43.0,
-                        "lon": 12.0,
-                        "range": 500000
-                    },
-                    "name": "130. Local Freq."
-                }
-            }
-        }
+    function convertAirFieldDBToAirFrequencies(airfieldDataset,frequencyDB) {
         airfieldDataset.forEach((airfield) => {
             if (airfield.hasOwnProperty("freq") && airfield["freq"].length > 0) {
                 // TODO: use the GPS position to match the nearest
-                var freq = airfield["freq"].padEnd(7,"0");
-                frequencyDB.global[freq]={
-                     "gps": {
+                var freq = airfield["freq"].padEnd(7, "0");
+                frequencyDB.global[freq] = {
+                    "gps": {
                         "lat": airfield["Lat"],
                         "lon": airfield["Lon"],
-                        "range": 500000
+                        "range": 50000
                     },
                     "name": airfield["name"]
                 };
@@ -376,22 +357,30 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         return frequencyDB;
     }
 
-    $scope.radioDBReload = function(){
-    // Load the Radio DB, format:
-    $http.get(URL_RADIO_DB_GET).then(function (response) {
-        var db = angular.fromJson(response.data);
-        if(db === undefined || Object.keys(db).length == 0)
-        {
-            return;
-        }
-        $scope.db = convertAirFieldDBToAirFrequencies(db);
-        $scope.playbackReload();
-        if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
-            if(false){
-            $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
+    $scope.radioDBReload = function () {
+        // Load the Radio DB, format:
+        $http.get(URL_RADIO_DB_GET).then(function (response) {
+            var db = angular.fromJson(response.data);
+            if (db === undefined || Object.keys(db).length == 0) {
+                return;
             }
-        }    
-    });
+            $scope.db = db;
+            $http.get(URL_AIRFIELDS_GET).then(function (response) {
+                var airfields = angular.fromJson(response.data);
+                if (airfields === undefined || Object.keys(airfields).length == 0) {
+
+                }
+                else {
+                    $scope.db=convertAirFieldDBToAirFrequencies(airfields,$scope.db);
+                }
+            });
+            $scope.playbackReload();
+            if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
+                if (false) {
+                    $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
+                }
+            }
+        });
     }
     $scope.radioDBReload();
     // TODO: Add WebSocket to avoid Polling

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Hong Kong International Airport",
+    "gps_code": "VHHH",
+    "freq": "122.400",
+    "Lat": 22.308901,
+    "Lon": 113.915001,
+    "Ele": 8.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shek Kong Air Base",
+    "gps_code": "VHSK",
+    "freq": "",
+    "Lat": 22.4366,
+    "Lon": 114.080002,
+    "Ele": 15.2
+  }
+]

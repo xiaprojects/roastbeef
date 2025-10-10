@@ -1,0 +1,2522 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Oita Prefectural (Oitakenou) Airport",
+    "gps_code": "JP-0007",
+    "freq": "",
+    "Lat": 33.026331,
+    "Lon": 131.505577,
+    "Ele": 235.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukagawa Gliderport",
+    "gps_code": "JP-0013",
+    "freq": "",
+    "Lat": 43.69892,
+    "Lon": 142.03745,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Camp Horobetsu Airfield",
+    "gps_code": "JP-0019",
+    "freq": "",
+    "Lat": 42.40013,
+    "Lon": 141.088906,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Camp Nayoro Airfield and Heliport",
+    "gps_code": "JP-0039",
+    "freq": "",
+    "Lat": 44.384575,
+    "Lon": 142.442508,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hokkaido Spaceport",
+    "gps_code": "JP-0052",
+    "freq": "",
+    "Lat": 42.499971,
+    "Lon": 143.441759,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hokkaido University Yubari River Gliderport",
+    "gps_code": "JP-0071",
+    "freq": "",
+    "Lat": 43.10809,
+    "Lon": 141.62755,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Toyosaka Airstrip",
+    "gps_code": "JP-0090",
+    "freq": "",
+    "Lat": 34.624145,
+    "Lon": 132.79609,
+    "Ele": 595.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Otone Airfield",
+    "gps_code": "JP-0092",
+    "freq": "",
+    "Lat": 35.85937,
+    "Lon": 140.241219,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ryugasaki Airfield",
+    "gps_code": "JP-0093",
+    "freq": "",
+    "Lat": 35.906276,
+    "Lon": 140.242152,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tokyo Flight Park Moriya Airstrip",
+    "gps_code": "JP-0095",
+    "freq": "",
+    "Lat": 35.929944,
+    "Lon": 139.974189,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bando Auxiliary Airfield",
+    "gps_code": "JP-0096",
+    "freq": "",
+    "Lat": 36.015713,
+    "Lon": 139.873595,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sekiyado Gliderport",
+    "gps_code": "JP-0097",
+    "freq": "",
+    "Lat": 36.015574,
+    "Lon": 139.816561,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoshubana Gliderport",
+    "gps_code": "JP-0098",
+    "freq": "",
+    "Lat": 36.03903,
+    "Lon": 139.81066,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yomiuri Otone Gliderport",
+    "gps_code": "JP-0099",
+    "freq": "",
+    "Lat": 36.16458,
+    "Lon": 139.67117,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kazo Gliderport",
+    "gps_code": "JP-0100",
+    "freq": "",
+    "Lat": 36.1866,
+    "Lon": 139.61748,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hanyu Gliderport",
+    "gps_code": "JP-0101",
+    "freq": "",
+    "Lat": 36.19942,
+    "Lon": 139.6031,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Menuma Gliderport",
+    "gps_code": "JP-0102",
+    "freq": "",
+    "Lat": 36.21338,
+    "Lon": 139.41697,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Menuma Number 2 Gliderport",
+    "gps_code": "JP-0103",
+    "freq": "",
+    "Lat": 36.20044,
+    "Lon": 139.43405,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skyfield Watarase",
+    "gps_code": "JP-0104",
+    "freq": "",
+    "Lat": 36.251671,
+    "Lon": 139.677944,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Itakura Gliderport",
+    "gps_code": "JP-0105",
+    "freq": "",
+    "Lat": 36.26616,
+    "Lon": 139.63388,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makado Gliderport",
+    "gps_code": "JP-0106",
+    "freq": "",
+    "Lat": 36.2697,
+    "Lon": 139.59103,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kinugawa Gliderport",
+    "gps_code": "JP-0108",
+    "freq": "",
+    "Lat": 36.68102,
+    "Lon": 139.94322,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oyama Kinu Gliderport",
+    "gps_code": "JP-0109",
+    "freq": "",
+    "Lat": 36.30085,
+    "Lon": 139.90523,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fujikawa Airstrip",
+    "gps_code": "JP-0110",
+    "freq": "",
+    "Lat": 35.12073,
+    "Lon": 138.6318,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hamakita Gliderport",
+    "gps_code": "JP-0111",
+    "freq": "",
+    "Lat": 34.83975,
+    "Lon": 137.82417,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Okazaki Gliderport",
+    "gps_code": "JP-0112",
+    "freq": "",
+    "Lat": 34.94533,
+    "Lon": 137.14662,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kasaoka Air Station",
+    "gps_code": "JP-0113",
+    "freq": "",
+    "Lat": 34.476022,
+    "Lon": 133.488961,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Suika Airport",
+    "gps_code": "JP-0114",
+    "freq": "",
+    "Lat": 35.4395,
+    "Lon": 133.7043,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Urayasu Emergency Runway",
+    "gps_code": "JP-0117",
+    "freq": "",
+    "Lat": 35.638194,
+    "Lon": 139.935061,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Honda Airport",
+    "gps_code": "JP-0320",
+    "freq": "",
+    "Lat": 35.97633,
+    "Lon": 139.524125,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Suginohaku Hobby Field Ultralightport",
+    "gps_code": "JP-0329",
+    "freq": "",
+    "Lat": 34.61506,
+    "Lon": 132.27509,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makabe Gliderport",
+    "gps_code": "JP-0333",
+    "freq": "",
+    "Lat": 36.26608,
+    "Lon": 140.07195,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nirasaki Gliderport",
+    "gps_code": "JP-0334",
+    "freq": "",
+    "Lat": 35.69042,
+    "Lon": 138.46484,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Futaba Airport",
+    "gps_code": "JP-0335",
+    "freq": "",
+    "Lat": 35.68141,
+    "Lon": 138.48345,
+    "Ele": 313.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Iwabuchi Watergate Auxiliary Airfield",
+    "gps_code": "JP-0361",
+    "freq": "",
+    "Lat": 35.782031,
+    "Lon": 139.738133,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Isesaki Auxiliary Airfield",
+    "gps_code": "JP-0363",
+    "freq": "",
+    "Lat": 36.298871,
+    "Lon": 139.158261,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tokyo Flying Club Airstrip",
+    "gps_code": "JP-0394",
+    "freq": "",
+    "Lat": 36.03546,
+    "Lon": 139.50088,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mint Airstrip",
+    "gps_code": "JP-0395",
+    "freq": "",
+    "Lat": 36.00216,
+    "Lon": 139.498,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuhikoku Kawajima Airstrip",
+    "gps_code": "JP-0397",
+    "freq": "",
+    "Lat": 36.011448,
+    "Lon": 139.500289,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamisato Gliderport",
+    "gps_code": "JP-0400",
+    "freq": "",
+    "Lat": 36.27324,
+    "Lon": 139.1518,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Air Wing Motor Paraglider School Osato Landing Area",
+    "gps_code": "JP-0401",
+    "freq": "",
+    "Lat": 36.08799,
+    "Lon": 139.43146,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukiage Airstrip",
+    "gps_code": "JP-0402",
+    "freq": "",
+    "Lat": 36.0811,
+    "Lon": 139.45908,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kumagaya Flying Club Osato Airfield",
+    "gps_code": "JP-0403",
+    "freq": "",
+    "Lat": 36.11246,
+    "Lon": 139.4131,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kisogawa Gliderport",
+    "gps_code": "JP-0422",
+    "freq": "",
+    "Lat": 35.21016,
+    "Lon": 136.67814,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ono Gliderport",
+    "gps_code": "JP-0423",
+    "freq": "",
+    "Lat": 35.4492,
+    "Lon": 136.60299,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Hida Airpark",
+    "gps_code": "JP-0424",
+    "freq": "",
+    "Lat": 36.17939,
+    "Lon": 137.313573,
+    "Ele": 714.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanaka Airstrip",
+    "gps_code": "JP-0438",
+    "freq": "",
+    "Lat": 37.10633,
+    "Lon": 138.76491,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ojima R/C Skyport",
+    "gps_code": "JP-0449",
+    "freq": "",
+    "Lat": 36.23945,
+    "Lon": 139.31917,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yoichi Agricultural Airfield / Appleport Yoichi",
+    "gps_code": "JP-0453",
+    "freq": "",
+    "Lat": 43.17089,
+    "Lon": 140.80753,
+    "Ele": 42.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Izena Auxiliary Airfield",
+    "gps_code": "JP-0454",
+    "freq": "",
+    "Lat": 26.93657,
+    "Lon": 127.91536,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakuda Airfield",
+    "gps_code": "JP-0455",
+    "freq": "",
+    "Lat": 38.01017,
+    "Lon": 140.80282,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuju Gliderport",
+    "gps_code": "JP-0456",
+    "freq": "",
+    "Lat": 33.03444,
+    "Lon": 131.23344,
+    "Ele": 800.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shiraoi Gliderport",
+    "gps_code": "JP-0457",
+    "freq": "",
+    "Lat": 42.536824,
+    "Lon": 141.254919,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shintoku Agricultural Airfield",
+    "gps_code": "JP-0458",
+    "freq": "",
+    "Lat": 43.07622,
+    "Lon": 142.87658,
+    "Ele": 210.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Skyport Bibai",
+    "gps_code": "JP-0459",
+    "freq": "",
+    "Lat": 43.38992,
+    "Lon": 141.85892,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kitami Agricultural Airfield / Skyport Kitami",
+    "gps_code": "JP-0460",
+    "freq": "",
+    "Lat": 43.77998,
+    "Lon": 143.73064,
+    "Ele": 185.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Suwanose-jima Airport",
+    "gps_code": "JP-0461",
+    "freq": "",
+    "Lat": 29.60624,
+    "Lon": 129.70221,
+    "Ele": 107.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Semine Airstrip",
+    "gps_code": "JP-0462",
+    "freq": "",
+    "Lat": 38.68017,
+    "Lon": 141.02163,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Takikawa Sky Park",
+    "gps_code": "JP-0463",
+    "freq": "",
+    "Lat": 43.549349,
+    "Lon": 141.894103,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukushima (Iizaka) Skypark",
+    "gps_code": "JP-0465",
+    "freq": "",
+    "Lat": 37.82322,
+    "Lon": 140.38767,
+    "Ele": 401.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Betsukai Flight Park",
+    "gps_code": "JP-0466",
+    "freq": "",
+    "Lat": 43.47484,
+    "Lon": 144.78309,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shirakawa Gliderport",
+    "gps_code": "JP-0467",
+    "freq": "",
+    "Lat": 32.776029,
+    "Lon": 130.630532,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aso Auxiliary Airfield",
+    "gps_code": "JP-0468",
+    "freq": "",
+    "Lat": 33.00891,
+    "Lon": 131.10005,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hofu Gliderport",
+    "gps_code": "JP-0469",
+    "freq": "",
+    "Lat": 34.03937,
+    "Lon": 131.54031,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nagano City Gliderport",
+    "gps_code": "JP-0470",
+    "freq": "",
+    "Lat": 36.63339,
+    "Lon": 138.256073,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirigamine Gliderport",
+    "gps_code": "JP-0471",
+    "freq": "",
+    "Lat": 36.09332,
+    "Lon": 138.16283,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shinshinotsu Gliderport",
+    "gps_code": "JP-0472",
+    "freq": "",
+    "Lat": 43.2743,
+    "Lon": 141.652436,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Toma Skypark Gliderport",
+    "gps_code": "JP-0473",
+    "freq": "",
+    "Lat": 43.87484,
+    "Lon": 142.51119,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Biei Gliderport",
+    "gps_code": "JP-0474",
+    "freq": "",
+    "Lat": 43.53125,
+    "Lon": 142.56389,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sengokudaira Auxiliary Airfield",
+    "gps_code": "JP-0484",
+    "freq": "",
+    "Lat": 36.10811,
+    "Lon": 136.33646,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Juo Airfield",
+    "gps_code": "JP-0591",
+    "freq": "",
+    "Lat": 36.666323,
+    "Lon": 140.66923,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tokai Paraplane Airstrip",
+    "gps_code": "JP-0592",
+    "freq": "",
+    "Lat": 35.33082,
+    "Lon": 137.34719,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukushima Robot Test Field Minamisoma Runway",
+    "gps_code": "JP-0596",
+    "freq": "",
+    "Lat": 37.632442,
+    "Lon": 141.008363,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukushima Robot Test Field Namie Runway",
+    "gps_code": "JP-0597",
+    "freq": "",
+    "Lat": 37.50672,
+    "Lon": 141.032,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rifu Morigo Auxiliary Airfield",
+    "gps_code": "JP-0598",
+    "freq": "",
+    "Lat": 38.35937,
+    "Lon": 140.98477,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Abukuma Flying Club Airstrip",
+    "gps_code": "JP-0599",
+    "freq": "",
+    "Lat": 37.86812,
+    "Lon": 140.604283,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shirataka Aero Park / Mutsumi Airfield",
+    "gps_code": "JP-0600",
+    "freq": "",
+    "Lat": 38.16359,
+    "Lon": 140.0619,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inazawa Auxiliary Microlight Airport",
+    "gps_code": "JP-0601",
+    "freq": "",
+    "Lat": 39.6158,
+    "Lon": 140.40957,
+    "Ele": 116.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Arakawa Airstrip",
+    "gps_code": "JP-0602",
+    "freq": "",
+    "Lat": 40.370013,
+    "Lon": 140.735114,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Niikappu Auxiliary Airfield",
+    "gps_code": "JP-0623",
+    "freq": "",
+    "Lat": 42.462803,
+    "Lon": 142.454649,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bihoro Air Park",
+    "gps_code": "JP-0626",
+    "freq": "",
+    "Lat": 43.81589,
+    "Lon": 144.07879,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Shinodayama Airfield",
+    "gps_code": "JP-0634",
+    "freq": "",
+    "Lat": 34.49568,
+    "Lon": 135.46242,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Aonogahara East Airstrip",
+    "gps_code": "JP-0635",
+    "freq": "",
+    "Lat": 34.89599,
+    "Lon": 134.90918,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Aonogahara West Airstrip",
+    "gps_code": "JP-0636",
+    "freq": "",
+    "Lat": 34.892392,
+    "Lon": 134.904728,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kisarazu Nakajima Auxiliary Airfield / Kisarazu Heliport",
+    "gps_code": "JP-0638",
+    "freq": "",
+    "Lat": 35.42106,
+    "Lon": 139.91993,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oshino Sky Sports Club",
+    "gps_code": "JP-0648",
+    "freq": "",
+    "Lat": 35.4651,
+    "Lon": 138.86428,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fukuda Nishidai Airfield",
+    "gps_code": "JP-0690",
+    "freq": "",
+    "Lat": 34.50577,
+    "Lon": 131.59634,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Utsunomiya Auxiliary Airfield",
+    "gps_code": "JP-0707",
+    "freq": "",
+    "Lat": 36.57566,
+    "Lon": 139.96614,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuge Flying Club Airstrip",
+    "gps_code": "JP-0743",
+    "freq": "",
+    "Lat": 36.10627,
+    "Lon": 139.43258,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Locus Lake Biwa Flying Adventure / Lake Biwa MPPG Paraglider Airfield",
+    "gps_code": "JP-0826",
+    "freq": "",
+    "Lat": 35.08479,
+    "Lon": 135.94852,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Osadano Airstrip",
+    "gps_code": "JP-0829",
+    "freq": "",
+    "Lat": 35.28523,
+    "Lon": 135.18161,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ryu's Skypark",
+    "gps_code": "JP-0855",
+    "freq": "",
+    "Lat": 34.638053,
+    "Lon": 136.545568,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kushidagawa Gliderport",
+    "gps_code": "JP-0856",
+    "freq": "",
+    "Lat": 34.59808,
+    "Lon": 136.57514,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Namiki Auxiliary Airfield",
+    "gps_code": "JP-0860",
+    "freq": "",
+    "Lat": 36.11309,
+    "Lon": 140.48573,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Akeno Auxiliary Airfield",
+    "gps_code": "JP-0865",
+    "freq": "",
+    "Lat": 36.22588,
+    "Lon": 140.00184,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mito Flying Club Airfield",
+    "gps_code": "JP-0874",
+    "freq": "",
+    "Lat": 36.32147,
+    "Lon": 140.51258,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oarai Auxiliary Airfield",
+    "gps_code": "JP-0876",
+    "freq": "",
+    "Lat": 36.30517,
+    "Lon": 140.50303,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Izu Flying Club Airfield",
+    "gps_code": "JP-0898",
+    "freq": "",
+    "Lat": 34.99628,
+    "Lon": 139.0045,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGDSF Camp Bihoro Airfield",
+    "gps_code": "JP-1045",
+    "freq": "",
+    "Lat": 43.82618,
+    "Lon": 144.16707,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mageshima Airport",
+    "gps_code": "JP-1131",
+    "freq": "",
+    "Lat": 30.73569,
+    "Lon": 130.851216,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamishihoro Air Park",
+    "gps_code": "JP-1184",
+    "freq": "",
+    "Lat": 43.244787,
+    "Lon": 143.277673,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hopeland Airfield",
+    "gps_code": "JP-1185",
+    "freq": "",
+    "Lat": 42.859581,
+    "Lon": 143.311721,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarobetsu Flight Club Airfield",
+    "gps_code": "JP-1186",
+    "freq": "",
+    "Lat": 45.114106,
+    "Lon": 141.654321,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "UFO Park Airfield",
+    "gps_code": "JP-1189",
+    "freq": "",
+    "Lat": 43.343161,
+    "Lon": 141.435487,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yuri Airstrip",
+    "gps_code": "JP-1226",
+    "freq": "",
+    "Lat": 39.299205,
+    "Lon": 140.054859,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chiyoda Auxiliary Airstrip",
+    "gps_code": "JP-1267",
+    "freq": "",
+    "Lat": 36.142082,
+    "Lon": 140.253211,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tashiro Nanohana Airfield",
+    "gps_code": "JP-1271",
+    "freq": "",
+    "Lat": 40.293173,
+    "Lon": 140.469894,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taragi Auxiliary Airfield",
+    "gps_code": "JP-1303",
+    "freq": "",
+    "Lat": 32.276669,
+    "Lon": 130.915607,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kita-Ariake Auxiliary Airfield",
+    "gps_code": "JP-1333",
+    "freq": "",
+    "Lat": 33.148715,
+    "Lon": 130.187592,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ubuyama Auxiliary Airfield",
+    "gps_code": "JP-1334",
+    "freq": "",
+    "Lat": 32.98732,
+    "Lon": 131.209242,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Imari Flying Club Airfield",
+    "gps_code": "JP-1335",
+    "freq": "",
+    "Lat": 33.318118,
+    "Lon": 129.997357,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bekanbe Airfield",
+    "gps_code": "JP-1652",
+    "freq": "",
+    "Lat": 43.32851,
+    "Lon": 144.7079,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yausubetsu Airfield",
+    "gps_code": "JP-1653",
+    "freq": "",
+    "Lat": 43.2872,
+    "Lon": 144.9978,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Otaki Airfield",
+    "gps_code": "JP-1660",
+    "freq": "",
+    "Lat": 42.665802,
+    "Lon": 141.101933,
+    "Ele": 494.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Soratomo Wind Park Gliderport",
+    "gps_code": "JP-1679",
+    "freq": "",
+    "Lat": 34.66842,
+    "Lon": 137.18636,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ashoro Meto Airfield",
+    "gps_code": "JP-1712",
+    "freq": "",
+    "Lat": 43.31811,
+    "Lon": 143.43245,
+    "Ele": 242.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Atsuma Sky Park",
+    "gps_code": "JP-1716",
+    "freq": "",
+    "Lat": 42.64362,
+    "Lon": 141.87865,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Narashino Airfield",
+    "gps_code": "JP-1900",
+    "freq": "",
+    "Lat": 35.71426,
+    "Lon": 140.06481,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yoshiigawa Eku Gliderport",
+    "gps_code": "JP-1904",
+    "freq": "",
+    "Lat": 34.6744,
+    "Lon": 134.07234,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ieshima West (LHA) Airfield",
+    "gps_code": "JP-1931",
+    "freq": "",
+    "Lat": 26.72998,
+    "Lon": 127.75647,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hirosaki Fifteen Club Airstrip",
+    "gps_code": "JP-2073",
+    "freq": "",
+    "Lat": 40.70151,
+    "Lon": 140.3239,
+    "Ele": 285.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kawayo Green Ranch Airport",
+    "gps_code": "JP-2079",
+    "freq": "",
+    "Lat": 40.629479,
+    "Lon": 141.37704,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsubasa Flying Club Kawashima Auxiliary Airfield",
+    "gps_code": "JP-2080",
+    "freq": "",
+    "Lat": 36.285424,
+    "Lon": 139.907005,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Skyfield Nasu",
+    "gps_code": "JP-2082",
+    "freq": "",
+    "Lat": 36.96241,
+    "Lon": 139.97566,
+    "Ele": 344.4
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Mitsukojiyama Airstrip",
+    "gps_code": "JP-2089",
+    "freq": "",
+    "Lat": 36.5229,
+    "Lon": 136.67166,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nishigawara Airfield",
+    "gps_code": "JP-2114",
+    "freq": "",
+    "Lat": 36.99445,
+    "Lon": 137.86808,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsukuba Gliderport",
+    "gps_code": "JP-2137",
+    "freq": "",
+    "Lat": 36.23878,
+    "Lon": 140.06,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sekijo Auxiliary Airfield",
+    "gps_code": "JP-2148",
+    "freq": "",
+    "Lat": 36.271218,
+    "Lon": 139.905916,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nukata Auxiliary Airfield",
+    "gps_code": "JP-2174",
+    "freq": "",
+    "Lat": 34.89433,
+    "Lon": 137.34113,
+    "Ele": 234.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Shirosato Auxiliary Airfield",
+    "gps_code": "JP-2254",
+    "freq": "",
+    "Lat": 36.53145,
+    "Lon": 140.35816,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Tachibana Wind Park",
+    "gps_code": "JP-2286",
+    "freq": "",
+    "Lat": 33.89122,
+    "Lon": 132.27028,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hikone Kojinyama Hangglider Park",
+    "gps_code": "JP-2314",
+    "freq": "",
+    "Lat": 35.23572,
+    "Lon": 136.19201,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tatsuda Auxiliary Airfield",
+    "gps_code": "JP-2543",
+    "freq": "",
+    "Lat": 35.15797,
+    "Lon": 136.68484,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ichishicho Gliderport",
+    "gps_code": "JP-2558",
+    "freq": "",
+    "Lat": 34.66876,
+    "Lon": 136.42173,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kumagaya Trike Club Airfield",
+    "gps_code": "JP-3029",
+    "freq": "",
+    "Lat": 36.12158,
+    "Lon": 139.40029,
+    "Ele": 26.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Haneda Gliderport",
+    "gps_code": "JP-3047",
+    "freq": "",
+    "Lat": 36.13585,
+    "Lon": 139.90626,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yamatanigawa Auxiliary Airfield",
+    "gps_code": "JP-3069",
+    "freq": "",
+    "Lat": 39.36165,
+    "Lon": 141.45675,
+    "Ele": 784.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Agawa Skypark Gliderport",
+    "gps_code": "JP-3085",
+    "freq": "",
+    "Lat": 33.57508,
+    "Lon": 133.06374,
+    "Ele": 823.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kawane Skypark Gliderport",
+    "gps_code": "JP-3095",
+    "freq": "",
+    "Lat": 34.95518,
+    "Lon": 138.10416,
+    "Ele": 592.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Osato Gliderport",
+    "gps_code": "JP-3126",
+    "freq": "",
+    "Lat": 38.4368,
+    "Lon": 140.99466,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Izumigatake Paragliding School",
+    "gps_code": "JP-3127",
+    "freq": "",
+    "Lat": 38.39275,
+    "Lon": 140.72037,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kozaki Airfield",
+    "gps_code": "JP-3163",
+    "freq": "",
+    "Lat": 35.90741,
+    "Lon": 140.40668,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ogurayama Paraglider Launch",
+    "gps_code": "JP-3253",
+    "freq": "",
+    "Lat": 36.57134,
+    "Lon": 137.8226,
+    "Ele": 1281.1
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Nihonbara Airfield",
+    "gps_code": "JP-3352",
+    "freq": "",
+    "Lat": 35.11956,
+    "Lon": 134.13694,
+    "Ele": 252.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kannami Hang Glider Landing Field",
+    "gps_code": "JP-3438",
+    "freq": "",
+    "Lat": 35.10152,
+    "Lon": 139.01496,
+    "Ele": 235.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kannami Glider Park",
+    "gps_code": "JP-3497",
+    "freq": "",
+    "Lat": 35.1031,
+    "Lon": 139.01887,
+    "Ele": 241.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Satsuma Iōjima Airport",
+    "gps_code": "JP-3600",
+    "freq": "",
+    "Lat": 30.784722,
+    "Lon": 130.270556,
+    "Ele": 103.0
+  },
+  {
+    "type": "small_airport",
+    "name": "(Duplicate)Narita International Airport",
+    "gps_code": "JP-3601",
+    "freq": "",
+    "Lat": 35.769209,
+    "Lon": 140.385232,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shikabe Airfield",
+    "gps_code": "RJ04",
+    "freq": "",
+    "Lat": 42.045033,
+    "Lon": 140.793293,
+    "Ele": 19.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Narita International Airport",
+    "gps_code": "RJAA",
+    "freq": "124.400",
+    "Lat": 35.764702,
+    "Lon": 140.386002,
+    "Ele": 43.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shinshu-Matsumoto Airport",
+    "gps_code": "RJAF",
+    "freq": "132.450",
+    "Lat": 36.166801,
+    "Lon": 137.923004,
+    "Ele": 665.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ibaraki Airport / JASDF Hyakuri Air Base",
+    "gps_code": "RJAH",
+    "freq": "120.100",
+    "Lat": 36.181099,
+    "Lon": 140.414993,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Kasumigaura Airfield",
+    "gps_code": "RJAK",
+    "freq": "",
+    "Lat": 36.034698,
+    "Lon": 140.192993,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JMSDF Minami Torishima Air Base",
+    "gps_code": "RJAM",
+    "freq": "126.200",
+    "Lat": 24.2897,
+    "Lon": 153.979004,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Niijima Airport",
+    "gps_code": "RJAN",
+    "freq": "",
+    "Lat": 34.3694000244,
+    "Lon": 139.268997192,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ioto (Iwo Jima) Airbase",
+    "gps_code": "RJAW",
+    "freq": "138.300",
+    "Lat": 24.784153,
+    "Lon": 141.32261,
+    "Ele": 117.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kozushima Airport",
+    "gps_code": "RJAZ",
+    "freq": "",
+    "Lat": 34.1899986267,
+    "Lon": 139.134002686,
+    "Ele": 137.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Kansai International Airport",
+    "gps_code": "RJBB",
+    "freq": "120.250",
+    "Lat": 34.427299,
+    "Lon": 135.244003,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nanki Shirahama Airport",
+    "gps_code": "RJBD",
+    "freq": "118.550",
+    "Lat": 33.6622009277,
+    "Lon": 135.363998413,
+    "Ele": 90.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kobe Airport",
+    "gps_code": "RJBE",
+    "freq": "121.150",
+    "Lat": 34.6328010559082,
+    "Lon": 135.2239990234375,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kohnan Airport",
+    "gps_code": "RJBK",
+    "freq": "130.750",
+    "Lat": 34.590801,
+    "Lon": 133.932999,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Konotori Tajima Airport",
+    "gps_code": "RJBT",
+    "freq": "118.400",
+    "Lat": 35.512798,
+    "Lon": 134.787003,
+    "Ele": 178.0
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Camp Asahikawa Airfield",
+    "gps_code": "RJCA",
+    "freq": "126.200",
+    "Lat": 43.794734,
+    "Lon": 142.365432,
+    "Ele": 114.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tokachi-Obihiro Airport",
+    "gps_code": "RJCB",
+    "freq": "128.325",
+    "Lat": 42.7332992554,
+    "Lon": 143.216995239,
+    "Ele": 153.9
+  },
+  {
+    "type": "large_airport",
+    "name": "New Chitose Airport",
+    "gps_code": "RJCC",
+    "freq": "110.900",
+    "Lat": 42.7752,
+    "Lon": 141.692001,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hakodate Airport",
+    "gps_code": "RJCH",
+    "freq": "119.000",
+    "Lat": 41.77,
+    "Lon": 140.822006,
+    "Ele": 46.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Chitose Air Base",
+    "gps_code": "RJCJ",
+    "freq": "120.100",
+    "Lat": 42.794498,
+    "Lon": 141.666,
+    "Ele": 26.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kushiro Airport",
+    "gps_code": "RJCK",
+    "freq": "127.500",
+    "Lat": 43.041,
+    "Lon": 144.192993,
+    "Ele": 99.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Memanbetsu Airport",
+    "gps_code": "RJCM",
+    "freq": "118.850",
+    "Lat": 43.8805999756,
+    "Lon": 144.164001465,
+    "Ele": 41.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nakashibetsu Airport",
+    "gps_code": "RJCN",
+    "freq": "122.700",
+    "Lat": 43.5774993896,
+    "Lon": 144.960006714,
+    "Ele": 71.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sapporo Okadama Airport",
+    "gps_code": "RJCO",
+    "freq": "127.500",
+    "Lat": 43.117447,
+    "Lon": 141.38134,
+    "Ele": 7.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Rebun Airport",
+    "gps_code": "RJCR",
+    "freq": "",
+    "Lat": 45.4550018311,
+    "Lon": 141.039001465,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Kenebetsu Airfield",
+    "gps_code": "RJCS",
+    "freq": "",
+    "Lat": 43.425154,
+    "Lon": 144.741354,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tokachi Airport",
+    "gps_code": "RJCT",
+    "freq": "126.200",
+    "Lat": 42.890499,
+    "Lon": 143.158005,
+    "Ele": 85.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wakkanai Airport",
+    "gps_code": "RJCW",
+    "freq": "118.300",
+    "Lat": 45.4042015076,
+    "Lon": 141.800994873,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "JASDF Yakumo Airbase",
+    "gps_code": "RJCY",
+    "freq": "",
+    "Lat": 42.245955,
+    "Lon": 140.265729,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Amakusa Airport",
+    "gps_code": "RJDA",
+    "freq": "130.775",
+    "Lat": 32.482498,
+    "Lon": 130.158997,
+    "Ele": 103.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iki Airport",
+    "gps_code": "RJDB",
+    "freq": "118.200",
+    "Lat": 33.7490005493,
+    "Lon": 129.785003662,
+    "Ele": 12.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yamaguchi Ube Airport",
+    "gps_code": "RJDC",
+    "freq": "118.050",
+    "Lat": 33.930000305200004,
+    "Lon": 131.279006958,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamigoto Airport",
+    "gps_code": "RJDK",
+    "freq": "",
+    "Lat": 33.013576,
+    "Lon": 129.192363,
+    "Ele": 80.2
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Metabaru Airfield",
+    "gps_code": "RJDM",
+    "freq": "",
+    "Lat": 33.325445,
+    "Lon": 130.413787,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ojika Airport",
+    "gps_code": "RJDO",
+    "freq": "",
+    "Lat": 33.1907997131,
+    "Lon": 129.089996338,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tsushima Airport",
+    "gps_code": "RJDT",
+    "freq": "124.300",
+    "Lat": 34.2849006653,
+    "Lon": 129.330993652,
+    "Ele": 64.9
+  },
+  {
+    "type": "small_airport",
+    "name": "JMSDF Omura Air Base",
+    "gps_code": "RJDU",
+    "freq": "",
+    "Lat": 32.928046,
+    "Lon": 129.934168,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Monbetsu Airport",
+    "gps_code": "RJEB",
+    "freq": "118.150",
+    "Lat": 44.3039016724,
+    "Lon": 143.404006958,
+    "Ele": 24.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Asahikawa Airport",
+    "gps_code": "RJEC",
+    "freq": "127.500",
+    "Lat": 43.670799,
+    "Lon": 142.447006,
+    "Ele": 219.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Okushiri Airport",
+    "gps_code": "RJEO",
+    "freq": "122.700",
+    "Lat": 42.0717010498,
+    "Lon": 139.432998657,
+    "Ele": 49.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rishiri Airport",
+    "gps_code": "RJER",
+    "freq": "122.700",
+    "Lat": 45.2420005798,
+    "Lon": 141.186004639,
+    "Ele": 34.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Ashiya Air Base",
+    "gps_code": "RJFA",
+    "freq": "119.650",
+    "Lat": 33.883099,
+    "Lon": 130.653,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yakushima Airport",
+    "gps_code": "RJFC",
+    "freq": "118.650",
+    "Lat": 30.385599,
+    "Lon": 130.658997,
+    "Ele": 37.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fukue Airport",
+    "gps_code": "RJFE",
+    "freq": "118.350",
+    "Lat": 32.666302,
+    "Lon": 128.832993,
+    "Ele": 83.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Fukuoka Airport",
+    "gps_code": "RJFF",
+    "freq": "119.100",
+    "Lat": 33.585899353027344,
+    "Lon": 130.4510040283203,
+    "Ele": 9.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "New Tanegashima Airport",
+    "gps_code": "RJFG",
+    "freq": "118.750",
+    "Lat": 30.6051006317,
+    "Lon": 130.990997314,
+    "Ele": 234.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Kagoshima Airport",
+    "gps_code": "RJFK",
+    "freq": "126.000",
+    "Lat": 31.8034,
+    "Lon": 130.718994,
+    "Ele": 276.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Miyazaki Airport",
+    "gps_code": "RJFM",
+    "freq": "121.400",
+    "Lat": 31.877199173,
+    "Lon": 131.449005127,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "JASDF Nyūtabaru Air Base",
+    "gps_code": "RJFN",
+    "freq": "120.100",
+    "Lat": 32.083599,
+    "Lon": 131.451004,
+    "Ele": 78.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oita Airport",
+    "gps_code": "RJFO",
+    "freq": "120.600",
+    "Lat": 33.479400634799994,
+    "Lon": 131.736999512,
+    "Ele": 5.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kitakyushu Airport",
+    "gps_code": "RJFR",
+    "freq": "118.850",
+    "Lat": 33.845901,
+    "Lon": 131.035004,
+    "Ele": 6.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saga Airport",
+    "gps_code": "RJFS",
+    "freq": "118.050",
+    "Lat": 33.149700164799995,
+    "Lon": 130.302001953,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kumamoto Airport",
+    "gps_code": "RJFT",
+    "freq": "118.900",
+    "Lat": 32.83729934692383,
+    "Lon": 130.85499572753906,
+    "Ele": 195.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nagasaki Airport",
+    "gps_code": "RJFU",
+    "freq": "119.175",
+    "Lat": 32.916901,
+    "Lon": 129.914001,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "JMSDF Kanoya Air Base",
+    "gps_code": "RJFY",
+    "freq": "122.150",
+    "Lat": 31.36672,
+    "Lon": 130.838805,
+    "Ele": 65.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Tsuiki Air Base",
+    "gps_code": "RJFZ",
+    "freq": "120.100",
+    "Lat": 33.685001,
+    "Lon": 131.039993,
+    "Ele": 16.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Chubu Centrair International Airport",
+    "gps_code": "RJGG",
+    "freq": "121.050",
+    "Lat": 34.858398,
+    "Lon": 136.804993,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amami Airport",
+    "gps_code": "RJKA",
+    "freq": "118.150",
+    "Lat": 28.430599212646484,
+    "Lon": 129.71299743652344,
+    "Ele": 8.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Okinoerabu Airport",
+    "gps_code": "RJKB",
+    "freq": "118.050",
+    "Lat": 27.431604,
+    "Lon": 128.705564,
+    "Ele": 30.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kikai Airport",
+    "gps_code": "RJKI",
+    "freq": "118.000",
+    "Lat": 28.3213005066,
+    "Lon": 129.927993774,
+    "Ele": 6.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tokunoshima Airport",
+    "gps_code": "RJKN",
+    "freq": "122.700",
+    "Lat": 27.836382,
+    "Lon": 128.881356,
+    "Ele": 5.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nagoya Airport / JASDF Komaki Air Base",
+    "gps_code": "RJNA",
+    "freq": "121.050",
+    "Lat": 35.255759,
+    "Lon": 136.924095,
+    "Ele": 15.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fukui Airport",
+    "gps_code": "RJNF",
+    "freq": "120.100",
+    "Lat": 36.142799,
+    "Lon": 136.223999,
+    "Ele": 5.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gifu Airport",
+    "gps_code": "RJNG",
+    "freq": "120.300",
+    "Lat": 35.3941,
+    "Lon": 136.869995,
+    "Ele": 39.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Hamamatsu Air Base",
+    "gps_code": "RJNH",
+    "freq": "120.100",
+    "Lat": 34.750198,
+    "Lon": 137.703003,
+    "Ele": 45.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Komatsu Airport / JASDF Komatsu Air Base",
+    "gps_code": "RJNK",
+    "freq": "120.100",
+    "Lat": 36.3946,
+    "Lon": 136.406998,
+    "Ele": 11.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oki Global Geopark Airport",
+    "gps_code": "RJNO",
+    "freq": "118.650",
+    "Lat": 36.178388,
+    "Lon": 133.323566,
+    "Ele": 94.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mount Fuji Shizuoka Airport",
+    "gps_code": "RJNS",
+    "freq": "",
+    "Lat": 34.796043,
+    "Lon": 138.187752,
+    "Ele": 132.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Toyama Airport",
+    "gps_code": "RJNT",
+    "freq": "124.300",
+    "Lat": 36.64830017089844,
+    "Lon": 137.18800354003906,
+    "Ele": 29.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Noto Satoyama Airport",
+    "gps_code": "RJNW",
+    "freq": "132.450",
+    "Lat": 37.293098,
+    "Lon": 136.962006,
+    "Ele": 218.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Shizuhama Air Base",
+    "gps_code": "RJNY",
+    "freq": "120.100",
+    "Lat": 34.812801,
+    "Lon": 138.298004,
+    "Ele": 7.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hiroshima Airport",
+    "gps_code": "RJOA",
+    "freq": "124.050",
+    "Lat": 34.4361,
+    "Lon": 132.919006,
+    "Ele": 331.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Okayama Momotaro Airport",
+    "gps_code": "RJOB",
+    "freq": "120.400",
+    "Lat": 34.756901,
+    "Lon": 133.854996,
+    "Ele": 245.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Izumo Enmusubi Airport",
+    "gps_code": "RJOC",
+    "freq": "120.100",
+    "Lat": 35.413601,
+    "Lon": 132.889999,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Akeno Airfield",
+    "gps_code": "RJOE",
+    "freq": "",
+    "Lat": 34.533298,
+    "Lon": 136.671997,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Hofu Airfield",
+    "gps_code": "RJOF",
+    "freq": "133.000",
+    "Lat": 34.034746,
+    "Lon": 131.548716,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yonago Kitaro Airport / JASDF Miho Air Base",
+    "gps_code": "RJOH",
+    "freq": "120.100",
+    "Lat": 35.492199,
+    "Lon": 133.235992,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iwakuni Kintaikyo Airport / Marine Corps Air Station Iwakuni",
+    "gps_code": "RJOI",
+    "freq": "126.100",
+    "Lat": 34.146333,
+    "Lon": 132.247238,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kochi Ryoma Airport",
+    "gps_code": "RJOK",
+    "freq": "125.000",
+    "Lat": 33.546101,
+    "Lon": 133.669006,
+    "Ele": 12.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Matsuyama Airport",
+    "gps_code": "RJOM",
+    "freq": "128.000",
+    "Lat": 33.82720184326172,
+    "Lon": 132.6999969482422,
+    "Ele": 7.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Osaka International Airport",
+    "gps_code": "RJOO",
+    "freq": "120.450",
+    "Lat": 34.7855,
+    "Lon": 135.438004,
+    "Ele": 15.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tottori Sand Dunes Conan Airport",
+    "gps_code": "RJOR",
+    "freq": "118.150",
+    "Lat": 35.530102,
+    "Lon": 134.167007,
+    "Ele": 19.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tokushima Awaodori Airport / JMSDF Tokushima Air Base",
+    "gps_code": "RJOS",
+    "freq": "124.000",
+    "Lat": 34.132801,
+    "Lon": 134.606995,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Takamatsu Airport",
+    "gps_code": "RJOT",
+    "freq": "121.200",
+    "Lat": 34.2141990662,
+    "Lon": 134.01600647,
+    "Ele": 185.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iwami Airport",
+    "gps_code": "RJOW",
+    "freq": "118.550",
+    "Lat": 34.676399231,
+    "Lon": 131.789993286,
+    "Ele": 56.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yao Airport",
+    "gps_code": "RJOY",
+    "freq": "120.450",
+    "Lat": 34.59629821777344,
+    "Lon": 135.60299682617188,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ozuki Airfield",
+    "gps_code": "RJOZ",
+    "freq": "24.580",
+    "Lat": 34.0453,
+    "Lon": 131.052002,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aomori Airport",
+    "gps_code": "RJSA",
+    "freq": "133.300",
+    "Lat": 40.73469924926758,
+    "Lon": 140.6909942626953,
+    "Ele": 202.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yamagata Airport",
+    "gps_code": "RJSC",
+    "freq": "118.900",
+    "Lat": 38.4119,
+    "Lon": 140.371002,
+    "Ele": 107.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sado Airport",
+    "gps_code": "RJSD",
+    "freq": "118.150",
+    "Lat": 38.0601997375,
+    "Lon": 138.414001465,
+    "Ele": 26.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fukushima Airport",
+    "gps_code": "RJSF",
+    "freq": "118.050",
+    "Lat": 37.22740173339844,
+    "Lon": 140.43099975585938,
+    "Ele": 372.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "JMSDF Hachinohe Air Base / Hachinohe Airport",
+    "gps_code": "RJSH",
+    "freq": "120.700",
+    "Lat": 40.551181,
+    "Lon": 141.465428,
+    "Ele": 46.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iwate Hanamaki Airport",
+    "gps_code": "RJSI",
+    "freq": "124.500",
+    "Lat": 39.4286,
+    "Lon": 141.134995,
+    "Ele": 90.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Akita Airport",
+    "gps_code": "RJSK",
+    "freq": "127.100",
+    "Lat": 39.615601,
+    "Lon": 140.218994,
+    "Ele": 95.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Misawa Airport / Misawa Air Base",
+    "gps_code": "RJSM",
+    "freq": "120.700",
+    "Lat": 40.703201,
+    "Lon": 141.367996,
+    "Ele": 36.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Niigata Airport",
+    "gps_code": "RJSN",
+    "freq": "121.400",
+    "Lat": 37.9558982849,
+    "Lon": 139.121002197,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "JMSDF Ōminato Base",
+    "gps_code": "RJSO",
+    "freq": "",
+    "Lat": 41.232808,
+    "Lon": 141.132171,
+    "Ele": 7.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Odate Noshiro Airport",
+    "gps_code": "RJSR",
+    "freq": "118.750",
+    "Lat": 40.191898,
+    "Lon": 140.371002,
+    "Ele": 89.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Sendai Airport",
+    "gps_code": "RJSS",
+    "freq": "120.400",
+    "Lat": 38.139702,
+    "Lon": 140.917007,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "JASDF Matsushima Air Base",
+    "gps_code": "RJST",
+    "freq": "120.100",
+    "Lat": 38.4049,
+    "Lon": 141.220001,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "JGSDF Kasuminome Airfield",
+    "gps_code": "RJSU",
+    "freq": "",
+    "Lat": 38.2356,
+    "Lon": 140.923004,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shonai Airport",
+    "gps_code": "RJSY",
+    "freq": "118.800",
+    "Lat": 38.812199,
+    "Lon": 139.787003,
+    "Ele": 26.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Miho Airfield",
+    "gps_code": "RJT2",
+    "freq": "",
+    "Lat": 35.01394,
+    "Lon": 138.53074,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "JMSDF Atsugi Air Base / Naval Air Facility Atsugi",
+    "gps_code": "RJTA",
+    "freq": "305.000",
+    "Lat": 35.454601,
+    "Lon": 139.449997,
+    "Ele": 62.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tachikawa Airfield",
+    "gps_code": "RJTC",
+    "freq": "",
+    "Lat": 35.7121,
+    "Lon": 139.403243,
+    "Ele": 95.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "JMSDF Tateyama Air Base",
+    "gps_code": "RJTE",
+    "freq": "119.100",
+    "Lat": 34.987099,
+    "Lon": 139.828995,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chofu Airport",
+    "gps_code": "RJTF",
+    "freq": "",
+    "Lat": 35.6717,
+    "Lon": 139.528,
+    "Ele": 43.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hachijojima Airport",
+    "gps_code": "RJTH",
+    "freq": "118.700",
+    "Lat": 33.115002,
+    "Lon": 139.785995,
+    "Ele": 92.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iruma Air Base",
+    "gps_code": "RJTJ",
+    "freq": "118.300",
+    "Lat": 35.8419,
+    "Lon": 139.410995,
+    "Ele": 89.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "JGSDF Kisarazu Airfield",
+    "gps_code": "RJTK",
+    "freq": "119.100",
+    "Lat": 35.3983,
+    "Lon": 139.910004,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "JMSDF Shimofusa Air Base",
+    "gps_code": "RJTL",
+    "freq": "126.000",
+    "Lat": 35.798901,
+    "Lon": 140.011002,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oshima Airport",
+    "gps_code": "RJTO",
+    "freq": "118.600",
+    "Lat": 34.7820014954,
+    "Lon": 139.36000061,
+    "Ele": 39.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Miyakejima Airport",
+    "gps_code": "RJTQ",
+    "freq": "118.050",
+    "Lat": 34.073600769,
+    "Lon": 139.559997559,
+    "Ele": 20.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Tokyo Haneda International Airport",
+    "gps_code": "RJTT",
+    "freq": "126.900",
+    "Lat": 35.552299,
+    "Lon": 139.779999,
+    "Ele": 10.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Utsunomiya Airport",
+    "gps_code": "RJTU",
+    "freq": "120.100",
+    "Lat": 36.5145,
+    "Lon": 139.87101,
+    "Ele": 101.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Yokota Air Base",
+    "gps_code": "RJTY",
+    "freq": "29.210",
+    "Lat": 35.748501,
+    "Lon": 139.348007,
+    "Ele": 141.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Naha Airport / JASDF Naha Air Base",
+    "gps_code": "ROAH",
+    "freq": "126.900",
+    "Lat": 26.195801,
+    "Lon": 127.646004,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Iejima Auxiliary Air Base",
+    "gps_code": "RODE",
+    "freq": "28.730",
+    "Lat": 26.725953,
+    "Lon": 127.765217,
+    "Ele": 56.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Kadena Air Base",
+    "gps_code": "RODN",
+    "freq": "33.580",
+    "Lat": 26.351667,
+    "Lon": 127.769444,
+    "Ele": 43.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "New Ishigaki Airport",
+    "gps_code": "ROIG",
+    "freq": "",
+    "Lat": 24.396389,
+    "Lon": 124.245,
+    "Ele": 31.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kumejima Airport",
+    "gps_code": "ROKJ",
+    "freq": "122.700",
+    "Lat": 26.363445,
+    "Lon": 126.71384,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kerama Airport",
+    "gps_code": "ROKR",
+    "freq": "",
+    "Lat": 26.168337,
+    "Lon": 127.293423,
+    "Ele": 47.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Minamidaito Airport",
+    "gps_code": "ROMD",
+    "freq": "126.200",
+    "Lat": 25.8465,
+    "Lon": 131.263,
+    "Ele": 50.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Miyako Airport",
+    "gps_code": "ROMY",
+    "freq": "120.300",
+    "Lat": 24.782801,
+    "Lon": 125.294998,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aguni Airport",
+    "gps_code": "RORA",
+    "freq": "",
+    "Lat": 26.592755,
+    "Lon": 127.240335,
+    "Ele": 11.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iejima Airport",
+    "gps_code": "RORE",
+    "freq": "",
+    "Lat": 26.722537,
+    "Lon": 127.786801,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hateruma Airport",
+    "gps_code": "RORH",
+    "freq": "",
+    "Lat": 24.059751,
+    "Lon": 123.80558,
+    "Ele": 13.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kitadaito Airport",
+    "gps_code": "RORK",
+    "freq": "126.200",
+    "Lat": 25.9447002411,
+    "Lon": 131.32699585,
+    "Ele": 24.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Shimojishima Airport",
+    "gps_code": "RORS",
+    "freq": "120.300",
+    "Lat": 24.8267,
+    "Lon": 125.144997,
+    "Ele": 16.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tarama Airport",
+    "gps_code": "RORT",
+    "freq": "118.600",
+    "Lat": 24.653793,
+    "Lon": 124.675453,
+    "Ele": 11.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yoron Airport",
+    "gps_code": "RORY",
+    "freq": "118.300",
+    "Lat": 27.043847,
+    "Lon": 128.401648,
+    "Ele": 15.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Futenma Marine Corps Air Station",
+    "gps_code": "ROTM",
+    "freq": "23.030",
+    "Lat": 26.2743,
+    "Lon": 127.755997,
+    "Ele": 75.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yonaguni Airport",
+    "gps_code": "ROYN",
+    "freq": "118.500",
+    "Lat": 24.467298,
+    "Lon": 122.979827,
+    "Ele": 21.3
+  }
+]

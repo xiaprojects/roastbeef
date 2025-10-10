@@ -1,0 +1,128 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Kourou Airport",
+    "gps_code": "GF-0001",
+    "freq": "",
+    "Lat": 5.176046,
+    "Lon": -52.694206,
+    "Ele": 14.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ouanary Airport",
+    "gps_code": "GF-0002",
+    "freq": "",
+    "Lat": 4.21009,
+    "Lon": -51.667702,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint-Élie Airport",
+    "gps_code": "GF-0003",
+    "freq": "",
+    "Lat": 4.816117,
+    "Lon": -53.289505,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Camopi Airport",
+    "gps_code": "GF-0004",
+    "freq": "",
+    "Lat": 3.172847,
+    "Lon": -52.336142,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mana Airport",
+    "gps_code": "GF-0010",
+    "freq": "",
+    "Lat": 5.66342,
+    "Lon": -53.76469,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kouachinana Airport",
+    "gps_code": "GF-0012",
+    "freq": "",
+    "Lat": 5.6185,
+    "Lon": -53.68631,
+    "Ele": 7.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Cayenne – Félix Eboué Airport",
+    "gps_code": "SOCA",
+    "freq": "119.900",
+    "Lat": 4.819964,
+    "Lon": -52.361326,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Grand-Santi Airport",
+    "gps_code": "SOGS",
+    "freq": "",
+    "Lat": 4.285833,
+    "Lon": -54.373056,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Maripasoula Airport",
+    "gps_code": "SOOA",
+    "freq": "",
+    "Lat": 3.655907,
+    "Lon": -54.039431,
+    "Ele": 123.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saint-Georges-de-l'Oyapock Airport",
+    "gps_code": "SOOG",
+    "freq": "125.900",
+    "Lat": 3.8976,
+    "Lon": -51.8041,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saint-Laurent-du-Maroni Airport",
+    "gps_code": "SOOM",
+    "freq": "",
+    "Lat": 5.48306,
+    "Lon": -54.034401,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Régina Airport",
+    "gps_code": "SOOR",
+    "freq": "",
+    "Lat": 4.31339,
+    "Lon": -52.132745,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saül Airport",
+    "gps_code": "SOOS",
+    "freq": "",
+    "Lat": 3.61361,
+    "Lon": -53.204201,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sinnamary Airport",
+    "gps_code": "SOOY",
+    "freq": "",
+    "Lat": 5.373546,
+    "Lon": -52.945628,
+    "Ele": 10.1
+  }
+]

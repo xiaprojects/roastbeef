@@ -1,0 +1,839 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ambatolhy Airport",
+    "gps_code": "AHY",
+    "freq": "",
+    "Lat": -20.0158333333,
+    "Lon": 45.535,
+    "Ele": 103.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambatomainty Airport",
+    "gps_code": "AMY",
+    "freq": "",
+    "Lat": -17.686667,
+    "Lon": 45.623889,
+    "Ele": 312.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Besakoa Airport",
+    "gps_code": "BSV",
+    "freq": "",
+    "Lat": -15.6725,
+    "Lon": 47.061667,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bemolanga Airport",
+    "gps_code": "BZM",
+    "freq": "",
+    "Lat": -17.6925,
+    "Lon": 45.0888333333,
+    "Ele": 289.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Andavadoaka Airport",
+    "gps_code": "DVD",
+    "freq": "",
+    "Lat": -22.06608,
+    "Lon": 43.259573,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Antsiranana Andrakaka Airport",
+    "gps_code": "FM43",
+    "freq": "118.900",
+    "Lat": -12.2561,
+    "Lon": 49.2542,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Betainomby Airport",
+    "gps_code": "FMBI",
+    "freq": "118.300",
+    "Lat": -18.1958013864,
+    "Lon": 49.348526001,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambohibary Airport",
+    "gps_code": "FMFE",
+    "freq": "",
+    "Lat": -18.9175,
+    "Lon": 48.2181944444,
+    "Ele": 902.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Antananarivo Arivonimamo Airport",
+    "gps_code": "FMMA",
+    "freq": "",
+    "Lat": -19.028999,
+    "Lon": 47.171799,
+    "Ele": 1449.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Malaimbandy Airport",
+    "gps_code": "FMMC",
+    "freq": "",
+    "Lat": -20.3553902921,
+    "Lon": 45.5433726311,
+    "Ele": 182.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Antsirabe Airport",
+    "gps_code": "FMME",
+    "freq": "",
+    "Lat": -19.839221,
+    "Lon": 47.063713,
+    "Ele": 1523.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Antsalova Airport",
+    "gps_code": "FMMG",
+    "freq": "",
+    "Lat": -18.701273,
+    "Lon": 44.614921,
+    "Ele": 167.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mahanoro Airport",
+    "gps_code": "FMMH",
+    "freq": "",
+    "Lat": -19.83300018310547,
+    "Lon": 48.79999923706055,
+    "Ele": 4.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Ivato Airport",
+    "gps_code": "FMMI",
+    "freq": "120.100",
+    "Lat": -18.7969,
+    "Lon": 47.478802,
+    "Ele": 1279.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambohijanahary Airport",
+    "gps_code": "FMMJ",
+    "freq": "",
+    "Lat": -17.464479,
+    "Lon": 48.326712,
+    "Ele": 760.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ankavandra Airport",
+    "gps_code": "FMMK",
+    "freq": "",
+    "Lat": -18.80501,
+    "Lon": 45.273467,
+    "Ele": 130.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Belo sur Tsiribihina Airport",
+    "gps_code": "FMML",
+    "freq": "",
+    "Lat": -19.686701,
+    "Lon": 44.541901,
+    "Ele": 46.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Miandrivazo Airport",
+    "gps_code": "FMMN",
+    "freq": "548.400",
+    "Lat": -19.562799,
+    "Lon": 45.450802,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maintirano Airport",
+    "gps_code": "FMMO",
+    "freq": "",
+    "Lat": -18.049999,
+    "Lon": 44.033001,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Amparafaravola Airport",
+    "gps_code": "FMMP",
+    "freq": "",
+    "Lat": -17.654573,
+    "Lon": 48.214445,
+    "Ele": 785.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Atsinanana Airport",
+    "gps_code": "FMMQ",
+    "freq": "",
+    "Lat": -19.58300018310547,
+    "Lon": 48.803001403808594,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Morafenobe Airport",
+    "gps_code": "FMMR",
+    "freq": "",
+    "Lat": -17.850083,
+    "Lon": 44.920467,
+    "Ele": 228.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sainte Marie Airport",
+    "gps_code": "FMMS",
+    "freq": "548.400",
+    "Lat": -17.093901,
+    "Lon": 49.8158,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Toamasina Ambalamanasy Airport",
+    "gps_code": "FMMT",
+    "freq": "563.400",
+    "Lat": -18.109501,
+    "Lon": 49.392502,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tambohorano Airport",
+    "gps_code": "FMMU",
+    "freq": "",
+    "Lat": -17.476101,
+    "Lon": 43.972801,
+    "Ele": 7.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Morondava Airport",
+    "gps_code": "FMMV",
+    "freq": "548.400",
+    "Lat": -20.2847,
+    "Lon": 44.3176,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsiroanomandidy Airport",
+    "gps_code": "FMMX",
+    "freq": "",
+    "Lat": -18.759677,
+    "Lon": 46.054065,
+    "Ele": 846.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vatomandry Airport",
+    "gps_code": "FMMY",
+    "freq": "",
+    "Lat": -19.383333,
+    "Lon": 48.95,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambatondrazaka Airport",
+    "gps_code": "FMMZ",
+    "freq": "",
+    "Lat": -17.795378,
+    "Lon": 48.442583,
+    "Ele": 766.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arrachart Airport",
+    "gps_code": "FMNA",
+    "freq": "548.400",
+    "Lat": -12.3494,
+    "Lon": 49.291698,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ankaizina Airport",
+    "gps_code": "FMNB",
+    "freq": "",
+    "Lat": -14.544277,
+    "Lon": 48.691413,
+    "Ele": 1120.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mananara Nord Airport",
+    "gps_code": "FMNC",
+    "freq": "118.500",
+    "Lat": -16.1639,
+    "Lon": 49.7738,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Andapa Airport",
+    "gps_code": "FMND",
+    "freq": "",
+    "Lat": -14.651700019836426,
+    "Lon": 49.620601654052734,
+    "Ele": 473.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambilobe Airport",
+    "gps_code": "FMNE",
+    "freq": "",
+    "Lat": -13.1884,
+    "Lon": 48.987999,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Avaratra Airport",
+    "gps_code": "FMNF",
+    "freq": "",
+    "Lat": -15.199999809265137,
+    "Lon": 48.483001708984375,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Bergé Airport",
+    "gps_code": "FMNG",
+    "freq": "",
+    "Lat": -15.584286,
+    "Lon": 47.623587,
+    "Ele": 64.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Antsirabe Airport",
+    "gps_code": "FMNH",
+    "freq": "548.400",
+    "Lat": -14.9994,
+    "Lon": 50.320202,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Analalava Airport",
+    "gps_code": "FMNL",
+    "freq": "",
+    "Lat": -14.629514,
+    "Lon": 47.763555,
+    "Ele": 105.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amborovy Airport",
+    "gps_code": "FMNM",
+    "freq": "563.400",
+    "Lat": -15.666842,
+    "Lon": 46.351233,
+    "Ele": 26.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fascene Airport",
+    "gps_code": "FMNN",
+    "freq": "548.400",
+    "Lat": -13.3121,
+    "Lon": 48.3148,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Soalala Airport",
+    "gps_code": "FMNO",
+    "freq": "",
+    "Lat": -16.10169,
+    "Lon": 45.358837,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mampikony Airport",
+    "gps_code": "FMNP",
+    "freq": "",
+    "Lat": -16.071916,
+    "Lon": 47.642953,
+    "Ele": 36.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Besalampy Airport",
+    "gps_code": "FMNQ",
+    "freq": "",
+    "Lat": -16.74453,
+    "Lon": 44.482484,
+    "Ele": 38.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maroantsetra Airport",
+    "gps_code": "FMNR",
+    "freq": "548.400",
+    "Lat": -15.437742,
+    "Lon": 49.689081,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sambava Airport",
+    "gps_code": "FMNS",
+    "freq": "548.400",
+    "Lat": -14.2786,
+    "Lon": 50.174702,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsaratanana Airport",
+    "gps_code": "FMNT",
+    "freq": "",
+    "Lat": -16.751064,
+    "Lon": 47.619016,
+    "Ele": 327.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vohemar Airport",
+    "gps_code": "FMNV",
+    "freq": "119.500",
+    "Lat": -13.3758,
+    "Lon": 50.0028,
+    "Ele": 5.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ambalabe Airport",
+    "gps_code": "FMNW",
+    "freq": "548.400",
+    "Lat": -14.8988,
+    "Lon": 47.9939,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandritsara Airport",
+    "gps_code": "FMNX",
+    "freq": "",
+    "Lat": -15.845992,
+    "Lon": 48.834718,
+    "Ele": 306.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ampampamena Airport",
+    "gps_code": "FMNZ",
+    "freq": "",
+    "Lat": -13.484816,
+    "Lon": 48.632702,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambalavao Airport",
+    "gps_code": "FMSA",
+    "freq": "",
+    "Lat": -21.814891,
+    "Lon": 46.914024,
+    "Ele": 972.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Antsoa Airport",
+    "gps_code": "FMSB",
+    "freq": "",
+    "Lat": -21.6069837647,
+    "Lon": 45.1360201836,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mandabe Airport",
+    "gps_code": "FMSC",
+    "freq": "",
+    "Lat": -21.0463049303,
+    "Lon": 44.9404120445,
+    "Ele": 289.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tôlanaro Airport",
+    "gps_code": "FMSD",
+    "freq": "118.700",
+    "Lat": -25.038099,
+    "Lon": 46.9561,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Betroka Airport",
+    "gps_code": "FMSE",
+    "freq": "",
+    "Lat": -23.274308,
+    "Lon": 46.124983,
+    "Ele": 865.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fianarantsoa Airport",
+    "gps_code": "FMSF",
+    "freq": "548.400",
+    "Lat": -21.441601,
+    "Lon": 47.111698,
+    "Ele": 1115.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Farafangana Airport",
+    "gps_code": "FMSG",
+    "freq": "118.400",
+    "Lat": -22.8053,
+    "Lon": 47.820599,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ihosy Airport",
+    "gps_code": "FMSI",
+    "freq": "",
+    "Lat": -22.4047202024,
+    "Lon": 46.1649370193,
+    "Ele": 762.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manja Airport",
+    "gps_code": "FMSJ",
+    "freq": "",
+    "Lat": -21.426105,
+    "Lon": 44.316509,
+    "Ele": 239.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Manakara Airport",
+    "gps_code": "FMSK",
+    "freq": "548.400",
+    "Lat": -22.119699,
+    "Lon": 48.021702,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bekily Airport",
+    "gps_code": "FMSL",
+    "freq": "",
+    "Lat": -24.235694754699995,
+    "Lon": 45.3045272827,
+    "Ele": 387.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mananjary Airport",
+    "gps_code": "FMSM",
+    "freq": "548.400",
+    "Lat": -21.201799,
+    "Lon": 48.358299,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Samangoky Airport",
+    "gps_code": "FMSN",
+    "freq": "",
+    "Lat": -21.700000762939453,
+    "Lon": 43.733001708984375,
+    "Ele": 27.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Morombe Airport",
+    "gps_code": "FMSR",
+    "freq": "548.400",
+    "Lat": -21.753837,
+    "Lon": 43.374753,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Toliara Airport",
+    "gps_code": "FMST",
+    "freq": "548.400",
+    "Lat": -23.3834,
+    "Lon": 43.7285,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vangaindrano Airport",
+    "gps_code": "FMSU",
+    "freq": "",
+    "Lat": -23.3507665915,
+    "Lon": 47.5817012787,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Betioky Airport",
+    "gps_code": "FMSV",
+    "freq": "",
+    "Lat": -23.732999801635746,
+    "Lon": 44.38899993896485,
+    "Ele": 280.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ampanihy Airport",
+    "gps_code": "FMSY",
+    "freq": "",
+    "Lat": -24.699699,
+    "Lon": 44.7342,
+    "Ele": 235.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ankazoabo Airport",
+    "gps_code": "FMSZ",
+    "freq": "",
+    "Lat": -22.2964423522,
+    "Lon": 44.5315361023,
+    "Ele": 430.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Anjajavy Private Airport",
+    "gps_code": "MG-0002",
+    "freq": "",
+    "Lat": -15.0231,
+    "Lon": 47.2325,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Amboasary Sud Airport",
+    "gps_code": "MG-0003",
+    "freq": "",
+    "Lat": -25.075585,
+    "Lon": 46.393433,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Antanimora Airport",
+    "gps_code": "MG-0004",
+    "freq": "",
+    "Lat": -24.84006,
+    "Lon": 45.675457,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Itampolo Airport",
+    "gps_code": "MG-0005",
+    "freq": "",
+    "Lat": -24.691968,
+    "Lon": 43.950994,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fotadrevo Airport",
+    "gps_code": "MG-0006",
+    "freq": "",
+    "Lat": -24.031299,
+    "Lon": 45.026573,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ifotaka Airport",
+    "gps_code": "MG-0007",
+    "freq": "",
+    "Lat": -24.820849,
+    "Lon": 46.153777,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsihombe Airport",
+    "gps_code": "MG-0008",
+    "freq": "",
+    "Lat": -25.338352,
+    "Lon": 45.476395,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambovombe Airport",
+    "gps_code": "MG-0009",
+    "freq": "",
+    "Lat": -25.204247,
+    "Lon": 46.071143,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tranoroa Airport",
+    "gps_code": "MG-0010",
+    "freq": "",
+    "Lat": -24.717074,
+    "Lon": 45.059513,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maromby Airport",
+    "gps_code": "MG-0011",
+    "freq": "",
+    "Lat": -24.382498,
+    "Lon": 46.556238,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ambodiatafa Airport",
+    "gps_code": "MG-0012",
+    "freq": "",
+    "Lat": -16.739423,
+    "Lon": 49.972078,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Anahidrano Airport",
+    "gps_code": "MG-0013",
+    "freq": "",
+    "Lat": -15.022743,
+    "Lon": 47.909478,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Moramba Airport",
+    "gps_code": "MG-0014",
+    "freq": "",
+    "Lat": -14.86584,
+    "Lon": 47.29552,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Marovasa Private Airport",
+    "gps_code": "MG-0015",
+    "freq": "",
+    "Lat": -14.95568,
+    "Lon": 47.3065,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Antanimalandy Airport",
+    "gps_code": "MG-0016",
+    "freq": "",
+    "Lat": -15.13517,
+    "Lon": 47.10681,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chez Eric et Fleur Airport",
+    "gps_code": "MG-0017",
+    "freq": "",
+    "Lat": -15.14262,
+    "Lon": 47.07671,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lodge des Terre Blanches Airport",
+    "gps_code": "MG-0018",
+    "freq": "",
+    "Lat": -15.14858,
+    "Lon": 47.07741,
+    "Ele": 26.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Antetikireja Airport",
+    "gps_code": "MG-0019",
+    "freq": "",
+    "Lat": -14.71884,
+    "Lon": 47.47426,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ankokoambo Airport",
+    "gps_code": "MG-0020",
+    "freq": "",
+    "Lat": -16.594919,
+    "Lon": 44.453654,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Relais de la Reine Airport",
+    "gps_code": "MG-0021",
+    "freq": "",
+    "Lat": -22.645343,
+    "Lon": 45.323914,
+    "Ele": 826.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fihaonana Aerodrome",
+    "gps_code": "MG-0022",
+    "freq": "",
+    "Lat": -18.574666,
+    "Lon": 47.238588,
+    "Ele": 1375.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Doany Airport",
+    "gps_code": "MG-DOA",
+    "freq": "",
+    "Lat": -14.3681001663208,
+    "Lon": 49.51079940795898,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsimiroro Airport",
+    "gps_code": "TZO",
+    "freq": "",
+    "Lat": -18.345064,
+    "Lon": 45.015643,
+    "Ele": 230.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Andriamena Airport",
+    "gps_code": "WAD",
+    "freq": "",
+    "Lat": -17.631,
+    "Lon": 47.7233,
+    "Ele": 754.4
+  }
+]

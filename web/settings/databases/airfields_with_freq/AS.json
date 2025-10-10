@@ -1,0 +1,29 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ofu Airport",
+    "gps_code": "NSAS",
+    "freq": "",
+    "Lat": -14.1844,
+    "Lon": -169.669998,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fitiuta Airport",
+    "gps_code": "NSFQ",
+    "freq": "122.900",
+    "Lat": -14.216131,
+    "Lon": -169.423771,
+    "Ele": 33.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pago Pago International Airport",
+    "gps_code": "NSTU",
+    "freq": "126.900",
+    "Lat": -14.331,
+    "Lon": -170.710007,
+    "Ele": 9.8
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "George F. L. Charles Airport",
+    "gps_code": "TLPC",
+    "freq": "119.800",
+    "Lat": 14.0202,
+    "Lon": -60.992901,
+    "Ele": 6.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Hewanorra International Airport",
+    "gps_code": "TLPL",
+    "freq": "119.800",
+    "Lat": 13.7332,
+    "Lon": -60.952599,
+    "Ele": 4.3
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Akpaka Airport",
+    "gps_code": "DXAK",
+    "freq": "",
+    "Lat": 7.583,
+    "Lon": 1.117,
+    "Ele": 210.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Djangou Airport",
+    "gps_code": "DXDP",
+    "freq": "",
+    "Lat": 10.800417,
+    "Lon": 0.242372,
+    "Ele": 270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolokope Airport",
+    "gps_code": "DXKP",
+    "freq": "",
+    "Lat": 7.803451,
+    "Lon": 1.295966,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sansanné-Mango Airport",
+    "gps_code": "DXMG",
+    "freq": "",
+    "Lat": 10.373011,
+    "Lon": 0.471382,
+    "Ele": 140.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Niamtougou International Airport",
+    "gps_code": "DXNG",
+    "freq": "122.600",
+    "Lat": 9.767330169677734,
+    "Lon": 1.091249942779541,
+    "Ele": 461.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sokodé Airport",
+    "gps_code": "DXSK",
+    "freq": "",
+    "Lat": 8.994275,
+    "Lon": 1.153004,
+    "Ele": 370.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lomé–Tokoin International Airport",
+    "gps_code": "DXXX",
+    "freq": "123.600",
+    "Lat": 6.16561,
+    "Lon": 1.25451,
+    "Ele": 21.9
+  }
+]

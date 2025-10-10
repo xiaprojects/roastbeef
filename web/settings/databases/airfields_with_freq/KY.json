@@ -1,0 +1,29 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Charles Kirkconnell International Airport",
+    "gps_code": "MWCB",
+    "freq": "120.200",
+    "Lat": 19.687,
+    "Lon": -79.882797,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Edward Bodden Little Cayman Airfield",
+    "gps_code": "MWCL",
+    "freq": "",
+    "Lat": 19.660161,
+    "Lon": -80.088826,
+    "Ele": 0.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Owen Roberts International Airport",
+    "gps_code": "MWCR",
+    "freq": "120.200",
+    "Lat": 19.292801,
+    "Lon": -81.357697,
+    "Ele": 2.4
+  }
+]

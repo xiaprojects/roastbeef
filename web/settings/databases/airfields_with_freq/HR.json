@@ -1,0 +1,425 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Daruvar Airfield",
+    "gps_code": "HR-0001",
+    "freq": "",
+    "Lat": 45.585073,
+    "Lon": 17.211387,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nova Rača Airfield",
+    "gps_code": "HR-0004",
+    "freq": "",
+    "Lat": 45.78696,
+    "Lon": 16.96387,
+    "Ele": 129.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gradac Airstrip",
+    "gps_code": "HR-0005",
+    "freq": "",
+    "Lat": 45.310897,
+    "Lon": 17.821682,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pisarovina Airfield",
+    "gps_code": "HR-0006",
+    "freq": "",
+    "Lat": 45.618117,
+    "Lon": 15.79348,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lila Airstrip",
+    "gps_code": "HR-0009",
+    "freq": "",
+    "Lat": 45.553,
+    "Lon": 18.110166,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mirkovac Airstrip",
+    "gps_code": "HR-0010",
+    "freq": "",
+    "Lat": 45.7310129,
+    "Lon": 18.7884716,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prelog Marina Airfield",
+    "gps_code": "HR-0016",
+    "freq": "",
+    "Lat": 46.32439,
+    "Lon": 16.60041,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nedelišće Airstrip",
+    "gps_code": "HR-0018",
+    "freq": "",
+    "Lat": 46.362908,
+    "Lon": 16.386902,
+    "Ele": 171.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ramarin Airfield",
+    "gps_code": "HR-0023",
+    "freq": "",
+    "Lat": 45.178422,
+    "Lon": 18.179344,
+    "Ele": 85.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Poreč-Škagacer Airfield",
+    "gps_code": "HR-0027",
+    "freq": "",
+    "Lat": 45.21641,
+    "Lon": 13.60922,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pitomača Airfield",
+    "gps_code": "HR-0028",
+    "freq": "",
+    "Lat": 45.946747,
+    "Lon": 17.283494,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pik Airfield",
+    "gps_code": "HR-0029",
+    "freq": "",
+    "Lat": 45.17249,
+    "Lon": 17.51465,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Virovitica Airfield",
+    "gps_code": "HR-0030",
+    "freq": "",
+    "Lat": 45.84423,
+    "Lon": 17.3267,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Đakovo Airfield",
+    "gps_code": "HR-0031",
+    "freq": "",
+    "Lat": 45.31588,
+    "Lon": 18.44786,
+    "Ele": 110.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Udbina Airfield",
+    "gps_code": "HR-0034",
+    "freq": "118.200",
+    "Lat": 44.557598,
+    "Lon": 15.7744,
+    "Ele": 750.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Badljevina Airstrip",
+    "gps_code": "HR-0040",
+    "freq": "",
+    "Lat": 45.50546,
+    "Lon": 17.17799,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dubrovnik Ruđer Bošković Airport",
+    "gps_code": "LDDU",
+    "freq": "123.600",
+    "Lat": 42.562247,
+    "Lon": 18.265543,
+    "Ele": 160.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lošinj Airport",
+    "gps_code": "LDLO",
+    "freq": "",
+    "Lat": 44.566985,
+    "Lon": 14.393883,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vukovar Borovo Recreational Airfield",
+    "gps_code": "LDOB",
+    "freq": "",
+    "Lat": 45.386398,
+    "Lon": 18.962799,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Osijek-Čepin Airfield",
+    "gps_code": "LDOC",
+    "freq": "118.800",
+    "Lat": 45.542778,
+    "Lon": 18.631944,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Slavonski Jelas Airfield",
+    "gps_code": "LDOR",
+    "freq": "",
+    "Lat": 45.156101,
+    "Lon": 17.9881,
+    "Ele": 84.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Osijek Airport",
+    "gps_code": "LDOS",
+    "freq": "118.800",
+    "Lat": 45.462355,
+    "Lon": 18.811278,
+    "Ele": 88.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Vinkovci Sopot Airfield",
+    "gps_code": "LDOV",
+    "freq": "",
+    "Lat": 45.251099,
+    "Lon": 18.759199,
+    "Ele": 81.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pula Airport",
+    "gps_code": "LDPL",
+    "freq": "118.400",
+    "Lat": 44.893501,
+    "Lon": 13.9222,
+    "Ele": 83.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Medulin Campanoz Airfield",
+    "gps_code": "LDPM",
+    "freq": "",
+    "Lat": 44.843878,
+    "Lon": 13.904376,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Unije Airfield",
+    "gps_code": "LDPN",
+    "freq": "",
+    "Lat": 44.6283,
+    "Lon": 14.2411,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vrsar Crljenka Airfield",
+    "gps_code": "LDPV",
+    "freq": "",
+    "Lat": 45.141701,
+    "Lon": 13.6306,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Grobničko Polje Airfield",
+    "gps_code": "LDRG",
+    "freq": "123.500",
+    "Lat": 45.379501,
+    "Lon": 14.5038,
+    "Ele": 289.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rijeka Airport",
+    "gps_code": "LDRI",
+    "freq": "119.000",
+    "Lat": 45.2169,
+    "Lon": 14.5703,
+    "Ele": 84.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Otočac Airfield",
+    "gps_code": "LDRO",
+    "freq": "",
+    "Lat": 44.845517,
+    "Lon": 15.288607,
+    "Ele": 469.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Brač Airport",
+    "gps_code": "LDSB",
+    "freq": "118.025",
+    "Lat": 43.284454,
+    "Lon": 16.678362,
+    "Ele": 541.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hvar Airfield",
+    "gps_code": "LDSH",
+    "freq": "",
+    "Lat": 43.181702,
+    "Lon": 16.633301,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Split Airport",
+    "gps_code": "LDSP",
+    "freq": "120.875",
+    "Lat": 43.538898,
+    "Lon": 16.298,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sinj Piket Airfield",
+    "gps_code": "LDSS",
+    "freq": "",
+    "Lat": 43.700298,
+    "Lon": 16.6714,
+    "Ele": 299.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Varaždin Airfield",
+    "gps_code": "LDVA",
+    "freq": "",
+    "Lat": 46.294668,
+    "Lon": 16.383222,
+    "Ele": 167.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Čakovec Pribislavec Airfield",
+    "gps_code": "LDVC",
+    "freq": "",
+    "Lat": 46.391899,
+    "Lon": 16.500299,
+    "Ele": 156.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Daruvar Blagorod Airfield",
+    "gps_code": "LDVD",
+    "freq": "",
+    "Lat": 45.559399,
+    "Lon": 17.0331,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koprivnica Danic Airfield",
+    "gps_code": "LDVK",
+    "freq": "",
+    "Lat": 46.2131,
+    "Lon": 16.8372,
+    "Ele": 134.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Zagreb Franjo Tuđman International Airport",
+    "gps_code": "LDZA",
+    "freq": "120.700",
+    "Lat": 45.742901,
+    "Lon": 16.0688,
+    "Ele": 107.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Buševec Velika Glider Field",
+    "gps_code": "LDZB",
+    "freq": "",
+    "Lat": 45.647499,
+    "Lon": 16.124399,
+    "Ele": 103.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zadar Airport",
+    "gps_code": "LDZD",
+    "freq": "118.600",
+    "Lat": 44.094988,
+    "Lon": 15.354879,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zvekovac Airfield",
+    "gps_code": "LDZE",
+    "freq": "123.500",
+    "Lat": 45.823056,
+    "Lon": 16.5,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ivanić-Grad Airstrip",
+    "gps_code": "LDZI",
+    "freq": "",
+    "Lat": 45.719874,
+    "Lon": 16.343272,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bjelovar Brezovac Airfield",
+    "gps_code": "LDZJ",
+    "freq": "",
+    "Lat": 45.860802,
+    "Lon": 16.8358,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zabok-Gubaševo Airfield",
+    "gps_code": "LDZK",
+    "freq": "",
+    "Lat": 46.012746,
+    "Lon": 15.860159,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lučko Airfield",
+    "gps_code": "LDZL",
+    "freq": "",
+    "Lat": 45.766725,
+    "Lon": 15.849709,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sisak Airfield",
+    "gps_code": "LDZS",
+    "freq": "",
+    "Lat": 45.465556,
+    "Lon": 16.486389,
+    "Ele": 93.0
+  }
+]

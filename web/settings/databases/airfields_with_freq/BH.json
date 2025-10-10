@@ -1,0 +1,29 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Bahrain International Airport",
+    "gps_code": "OBBI",
+    "freq": "127.850",
+    "Lat": 26.267295,
+    "Lon": 50.63764,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sheik Isa Air Base",
+    "gps_code": "OBBS",
+    "freq": "32.137",
+    "Lat": 25.9184,
+    "Lon": 50.590599,
+    "Ele": 41.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Sakhir Air Base",
+    "gps_code": "OBKH",
+    "freq": "",
+    "Lat": 26.034533,
+    "Lon": 50.524544,
+    "Ele": 14.9
+  }
+]

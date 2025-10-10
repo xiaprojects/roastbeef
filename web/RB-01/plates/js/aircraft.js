@@ -1,7 +1,7 @@
 angular.module('appControllers').controller('AircraftCtrl', AircraftCtrl);
 
 
-var URL_AIRCRAFT_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/RB-01/settings/aircraft.json";
+var URL_AIRCRAFT_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/aircraft.json";
 
 function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 

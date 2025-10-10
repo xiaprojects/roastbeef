@@ -1,0 +1,29 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Palmyra (Cooper) Airport",
+    "gps_code": "PLPA",
+    "freq": "",
+    "Lat": 5.888748,
+    "Lon": -162.077866,
+    "Ele": 1.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Henderson Field",
+    "gps_code": "PMDY",
+    "freq": "118.325",
+    "Lat": 28.2017,
+    "Lon": -177.380997,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wake Island Airfield",
+    "gps_code": "PWAK",
+    "freq": "128.000",
+    "Lat": 19.282437,
+    "Lon": 166.636637,
+    "Ele": 4.3
+  }
+]

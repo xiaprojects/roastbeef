@@ -1,0 +1,47 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Argyle International Airport",
+    "gps_code": "TVSA",
+    "freq": "120.800",
+    "Lat": 13.156695,
+    "Lon": -61.149945,
+    "Ele": 41.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "J F Mitchell Airport",
+    "gps_code": "TVSB",
+    "freq": "121.900",
+    "Lat": 12.9884,
+    "Lon": -61.262001,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Canouan Airport",
+    "gps_code": "TVSC",
+    "freq": "121.600",
+    "Lat": 12.699,
+    "Lon": -61.3424,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mustique Airport",
+    "gps_code": "TVSM",
+    "freq": "123.000",
+    "Lat": 12.8879,
+    "Lon": -61.180199,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Union Island International Airport",
+    "gps_code": "TVSU",
+    "freq": "",
+    "Lat": 12.600135,
+    "Lon": -61.411945,
+    "Ele": 4.9
+  }
+]

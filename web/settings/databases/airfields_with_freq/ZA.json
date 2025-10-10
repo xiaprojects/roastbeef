@@ -1,0 +1,5186 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Alexander Bay Airport",
+    "gps_code": "FAAB",
+    "freq": "118.700",
+    "Lat": -28.575001,
+    "Lon": 16.5333,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aberdeen Airport",
+    "gps_code": "FAAE",
+    "freq": "",
+    "Lat": -32.466386,
+    "Lon": 24.064016,
+    "Ele": 750.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Andrew's Field",
+    "gps_code": "FAAF",
+    "freq": "",
+    "Lat": -34.763345,
+    "Lon": 20.036357,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aggeneys Airport",
+    "gps_code": "FAAG",
+    "freq": "122.700",
+    "Lat": -29.281799,
+    "Lon": 18.8139,
+    "Ele": 807.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Alldays Airport",
+    "gps_code": "FAAL",
+    "freq": "",
+    "Lat": -22.679001,
+    "Lon": 29.0555,
+    "Ele": 792.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Amsterdam Airport",
+    "gps_code": "FAAM",
+    "freq": "",
+    "Lat": -26.633803,
+    "Lon": 30.605561,
+    "Ele": 1313.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aliwal North Airport",
+    "gps_code": "FAAN",
+    "freq": "",
+    "Lat": -30.681072,
+    "Lon": 26.730141,
+    "Ele": 1342.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ashton Airport",
+    "gps_code": "FAAS",
+    "freq": "",
+    "Lat": -33.837978,
+    "Lon": 20.049838,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Microland Flight Park",
+    "gps_code": "FABA",
+    "freq": "120.350",
+    "Lat": -25.9762557716,
+    "Lon": 28.3890151978,
+    "Ele": 1669.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Brakpan Airport",
+    "gps_code": "FABB",
+    "freq": "122.700",
+    "Lat": -26.2386,
+    "Lon": 28.3018,
+    "Ele": 1615.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Burghersdorp Airport",
+    "gps_code": "FABD",
+    "freq": "",
+    "Lat": -30.977500915527344,
+    "Lon": 26.3080997467041,
+    "Ele": 1442.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bisho Airport",
+    "gps_code": "FABE",
+    "freq": "120.100",
+    "Lat": -32.897099,
+    "Lon": 27.2791,
+    "Ele": 594.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Barkly East Airport",
+    "gps_code": "FABF",
+    "freq": "",
+    "Lat": -30.9666671753,
+    "Lon": 27.604166030900004,
+    "Ele": 1810.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Buffelshoek Airport",
+    "gps_code": "FABG",
+    "freq": "",
+    "Lat": -24.702464,
+    "Lon": 31.587875,
+    "Ele": 410.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Belfast Aerodrome",
+    "gps_code": "FABH",
+    "freq": "",
+    "Lat": -25.6587417378,
+    "Lon": 30.041577816,
+    "Ele": 1905.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bushmans Kloof Airport",
+    "gps_code": "FABK",
+    "freq": "",
+    "Lat": -32.035,
+    "Lon": 19.0435,
+    "Ele": 320.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bram Fischer International Airport",
+    "gps_code": "FABL",
+    "freq": "119.400",
+    "Lat": -29.092699,
+    "Lon": 26.302401,
+    "Ele": 1358.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bethlehem Airport",
+    "gps_code": "FABM",
+    "freq": "124.800",
+    "Lat": -28.2484,
+    "Lon": 28.3361,
+    "Ele": 1695.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hendrik Potgieter Airport",
+    "gps_code": "FABO",
+    "freq": "",
+    "Lat": -27.36680030822754,
+    "Lon": 26.629199981689453,
+    "Ele": 1291.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Black Rock Airport",
+    "gps_code": "FABP",
+    "freq": "",
+    "Lat": -27.129724,
+    "Lon": 22.846255,
+    "Ele": 1051.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Barberton Airport",
+    "gps_code": "FABR",
+    "freq": "123.950",
+    "Lat": -25.717147,
+    "Lon": 30.974974,
+    "Ele": 685.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Brits Airport",
+    "gps_code": "FABS",
+    "freq": "",
+    "Lat": -25.532301,
+    "Lon": 27.7759,
+    "Ele": 1144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bethesda Road Airport",
+    "gps_code": "FABT",
+    "freq": "",
+    "Lat": -31.873199462890625,
+    "Lon": 24.796899795532227,
+    "Ele": 1411.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bultfontein Airport",
+    "gps_code": "FABU",
+    "freq": "",
+    "Lat": -28.273369,
+    "Lon": 26.135835,
+    "Ele": 1341.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Brandviei Airport",
+    "gps_code": "FABV",
+    "freq": "",
+    "Lat": -30.466699600219727,
+    "Lon": 20.466699600219727,
+    "Ele": 914.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Beaufort West Airport",
+    "gps_code": "FABW",
+    "freq": "",
+    "Lat": -32.299999,
+    "Lon": 22.67,
+    "Ele": 896.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Beatrix Airport",
+    "gps_code": "FABX",
+    "freq": "",
+    "Lat": -28.2450008392334,
+    "Lon": 26.771900177001957,
+    "Ele": 1377.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bizana Airport",
+    "gps_code": "FABZ",
+    "freq": "",
+    "Lat": -30.860300064086918,
+    "Lon": 29.86389923095703,
+    "Ele": 835.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Monte Carlo Airport",
+    "gps_code": "FACA",
+    "freq": "",
+    "Lat": -28.799999237060547,
+    "Lon": 27.41699981689453,
+    "Ele": 1522.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Colesberg Airport",
+    "gps_code": "FACB",
+    "freq": "",
+    "Lat": -30.73390007019043,
+    "Lon": 25.065000534057617,
+    "Ele": 1414.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arathusa Safari Lodge Airport",
+    "gps_code": "FACC",
+    "freq": "",
+    "Lat": -24.740527,
+    "Lon": 31.517973,
+    "Ele": 392.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cradock Airport",
+    "gps_code": "FACD",
+    "freq": "",
+    "Lat": -32.1567001343,
+    "Lon": 25.6455993652,
+    "Ele": 947.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ceres Airport",
+    "gps_code": "FACE",
+    "freq": "",
+    "Lat": -33.316594,
+    "Lon": 19.426676,
+    "Ele": 463.0
+  },
+  {
+    "type": "small_airport",
+    "name": "St Francis Airfield",
+    "gps_code": "FACF",
+    "freq": "",
+    "Lat": -34.186901,
+    "Lon": 24.834999,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Caledon Airfield",
+    "gps_code": "FACG",
+    "freq": "",
+    "Lat": -34.259523,
+    "Lon": 19.416214,
+    "Ele": 285.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Cookhouse Airport",
+    "gps_code": "FACH",
+    "freq": "",
+    "Lat": -32.74470138549805,
+    "Lon": 25.796300888061523,
+    "Ele": 577.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Citrusdal Airport",
+    "gps_code": "FACI",
+    "freq": "",
+    "Lat": -32.61968,
+    "Lon": 19.00384,
+    "Ele": 162.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Christiana Airport",
+    "gps_code": "FACK",
+    "freq": "",
+    "Lat": -27.877192,
+    "Lon": 25.204376,
+    "Ele": 1212.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Carolina Airport",
+    "gps_code": "FACL",
+    "freq": "",
+    "Lat": -26.078100204467773,
+    "Lon": 30.092500686645508,
+    "Ele": 1652.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carnarvon Airport",
+    "gps_code": "FACN",
+    "freq": "",
+    "Lat": -30.9886,
+    "Lon": 22.131701,
+    "Ele": 1268.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carltonville Airport",
+    "gps_code": "FACR",
+    "freq": "",
+    "Lat": -26.36666679382324,
+    "Lon": 27.34666633605957,
+    "Ele": 1524.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Cape Town International Airport",
+    "gps_code": "FACT",
+    "freq": "122.650",
+    "Lat": -33.9648017883,
+    "Lon": 18.6016998291,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Calvinia Airport",
+    "gps_code": "FACV",
+    "freq": "",
+    "Lat": -31.500299,
+    "Lon": 19.725901,
+    "Ele": 990.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Clanwilliam Airport",
+    "gps_code": "FACW",
+    "freq": "",
+    "Lat": -32.177,
+    "Lon": 18.8819,
+    "Ele": 126.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cathcart Airport",
+    "gps_code": "FACX",
+    "freq": "",
+    "Lat": -32.28710174560547,
+    "Lon": 27.1387996673584,
+    "Ele": 1206.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Stilbaai Airport",
+    "gps_code": "FACY",
+    "freq": "",
+    "Lat": -34.3517990112,
+    "Lon": 21.4248008728,
+    "Ele": 81.1
+  },
+  {
+    "type": "small_airport",
+    "name": "De Aar Airport",
+    "gps_code": "FADA",
+    "freq": "",
+    "Lat": -30.69219970703125,
+    "Lon": 24.02059936523437,
+    "Ele": 1266.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dwaalboom Airport",
+    "gps_code": "FADB",
+    "freq": "",
+    "Lat": -24.80719947814941,
+    "Lon": 26.829700469970703,
+    "Ele": 1113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Douglas Cape Airport",
+    "gps_code": "FADC",
+    "freq": "",
+    "Lat": -29.0746,
+    "Lon": 23.8009,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dundee Airport",
+    "gps_code": "FADD",
+    "freq": "",
+    "Lat": -28.1830997467041,
+    "Lon": 30.22249984741211,
+    "Ele": 1286.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delmas Airport",
+    "gps_code": "FADE",
+    "freq": "",
+    "Lat": -26.14166641235352,
+    "Lon": 28.69166755676269,
+    "Ele": 1546.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dordrecht Airport",
+    "gps_code": "FADG",
+    "freq": "",
+    "Lat": -31.38333320617676,
+    "Lon": 27.03333282470703,
+    "Ele": 1585.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Durnacol Airport",
+    "gps_code": "FADH",
+    "freq": "",
+    "Lat": -28.04610061645508,
+    "Lon": 30.00639915466309,
+    "Ele": 1315.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mubatuba Airport",
+    "gps_code": "FADK",
+    "freq": "",
+    "Lat": -28.36840057373047,
+    "Lon": 32.24810028076172,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delareyville Airport",
+    "gps_code": "FADL",
+    "freq": "",
+    "Lat": -26.67919921875,
+    "Lon": 25.47470092773437,
+    "Ele": 1362.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kokstad Airport",
+    "gps_code": "FADM",
+    "freq": "",
+    "Lat": -30.55649948120117,
+    "Lon": 29.40819931030273,
+    "Ele": 1244.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Dendron Airport",
+    "gps_code": "FADO",
+    "freq": "",
+    "Lat": -23.380599975585938,
+    "Lon": 29.32080078125,
+    "Ele": 1036.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Darlington Dam Lodge Airport",
+    "gps_code": "FADP",
+    "freq": "",
+    "Lat": -33.18320083618164,
+    "Lon": 25.193199157714844,
+    "Ele": 258.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Zulu Inyala Airport",
+    "gps_code": "FADQ",
+    "freq": "",
+    "Lat": -27.84939956665039,
+    "Lon": 32.30970001220703,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "De Doorns Airport",
+    "gps_code": "FADS",
+    "freq": "",
+    "Lat": -33.455557,
+    "Lon": 19.684493,
+    "Ele": 495.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Walkersons Field",
+    "gps_code": "FADU",
+    "freq": "124.800",
+    "Lat": -25.36278,
+    "Lon": 30.18778,
+    "Ele": 1841.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Devon Airport",
+    "gps_code": "FADV",
+    "freq": "",
+    "Lat": -26.358999252319336,
+    "Lon": 28.78969955444336,
+    "Ele": 1664.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta 200 Airstrip",
+    "gps_code": "FADX",
+    "freq": "124.400",
+    "Lat": -33.6494935368,
+    "Lon": 18.4718799591,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "De Aar Military Airport",
+    "gps_code": "FADY",
+    "freq": "",
+    "Lat": -30.636509,
+    "Lon": 23.919725,
+    "Ele": 1230.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Drakensberg Gardens Airport",
+    "gps_code": "FADZ",
+    "freq": "",
+    "Lat": -29.75,
+    "Lon": 29.25,
+    "Ele": 1813.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estcourt Airport",
+    "gps_code": "FAEC",
+    "freq": "",
+    "Lat": -29.047199249267575,
+    "Lon": 29.910600662231445,
+    "Ele": 1299.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Edenburg Airport",
+    "gps_code": "FAED",
+    "freq": "",
+    "Lat": -29.75,
+    "Lon": 25.899999618530277,
+    "Ele": 1374.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Egnep Airport",
+    "gps_code": "FAEG",
+    "freq": "",
+    "Lat": -24.566999435424805,
+    "Lon": 30.316999435424805,
+    "Ele": 700.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "King Phalo Airport",
+    "gps_code": "FAEL",
+    "freq": "120.100",
+    "Lat": -33.035599,
+    "Lon": 27.825899,
+    "Ele": 132.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Empangeni Airport",
+    "gps_code": "FAEM",
+    "freq": "",
+    "Lat": -28.71999931335449,
+    "Lon": 31.88999938964844,
+    "Ele": 76.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Entabeni Airstrip",
+    "gps_code": "FAEN",
+    "freq": "",
+    "Lat": -24.1933,
+    "Lon": 28.735,
+    "Ele": 1185.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ermelo Airport",
+    "gps_code": "FAEO",
+    "freq": "",
+    "Lat": -26.4956,
+    "Lon": 29.979799,
+    "Ele": 1737.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ellisras Matimba Airport",
+    "gps_code": "FAER",
+    "freq": "",
+    "Lat": -23.72669982910156,
+    "Lon": 27.68829917907715,
+    "Ele": 853.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Eshowe Airport",
+    "gps_code": "FAES",
+    "freq": "",
+    "Lat": -28.880199432373047,
+    "Lon": 31.45490074157715,
+    "Ele": 488.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Elliot Airport",
+    "gps_code": "FAET",
+    "freq": "",
+    "Lat": -31.306900024414062,
+    "Lon": 27.84950065612793,
+    "Ele": 1532.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ficksburg Sentraoes Airport",
+    "gps_code": "FAFB",
+    "freq": "",
+    "Lat": -28.82309913635254,
+    "Lon": 27.908899307250977,
+    "Ele": 1620.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Frankfort Airport",
+    "gps_code": "FAFF",
+    "freq": "",
+    "Lat": -27.286786,
+    "Lon": 28.514585,
+    "Ele": 1577.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Flamingo Vlei Airport",
+    "gps_code": "FAFG",
+    "freq": "",
+    "Lat": -30.49099922180176,
+    "Lon": 21.121700286865234,
+    "Ele": 990.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fort Beaufort Airport",
+    "gps_code": "FAFO",
+    "freq": "",
+    "Lat": -32.79050064086914,
+    "Lon": 26.577699661254883,
+    "Ele": 481.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fraserburg Airport",
+    "gps_code": "FAFR",
+    "freq": "",
+    "Lat": -31.933900833129883,
+    "Lon": 21.502500534057617,
+    "Ele": 1274.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Fraaiuitzicht Airport",
+    "gps_code": "FAFU",
+    "freq": "",
+    "Lat": -27.316999435424805,
+    "Lon": 27.25,
+    "Ele": 1475.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Freeway Airport",
+    "gps_code": "FAFW",
+    "freq": "",
+    "Lat": -25.47719955444336,
+    "Lon": 28.290000915527344,
+    "Ele": 1164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "The Grange Airport",
+    "gps_code": "FAGA",
+    "freq": "",
+    "Lat": -30.267,
+    "Lon": 29.966999,
+    "Ele": 792.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grand Central Airport",
+    "gps_code": "FAGC",
+    "freq": "122.800",
+    "Lat": -25.986299514799995,
+    "Lon": 28.1401004791,
+    "Ele": 1623.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "George Airport",
+    "gps_code": "FAGG",
+    "freq": "128.200",
+    "Lat": -34.0056,
+    "Lon": 22.378902,
+    "Ele": 197.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Glen Grey Airport",
+    "gps_code": "FAGH",
+    "freq": "",
+    "Lat": -28.83333396911621,
+    "Lon": 29.46666717529297,
+    "Ele": 1066.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Giyani Airport",
+    "gps_code": "FAGI",
+    "freq": "",
+    "Lat": -23.2833,
+    "Lon": 30.65,
+    "Ele": 482.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gifvlei Airport",
+    "gps_code": "FAGJ",
+    "freq": "",
+    "Lat": -30.38330078125,
+    "Lon": 20.033300399780277,
+    "Ele": 975.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Groblersdal Kob Airport",
+    "gps_code": "FAGL",
+    "freq": "",
+    "Lat": -25.186899,
+    "Lon": 29.403299,
+    "Ele": 929.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rand Airport",
+    "gps_code": "FAGM",
+    "freq": "124.500",
+    "Lat": -26.2425,
+    "Lon": 28.151199,
+    "Ele": 1671.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Gowrie Airport",
+    "gps_code": "FAGO",
+    "freq": "",
+    "Lat": -24.7371653036,
+    "Lon": 31.5602874756,
+    "Ele": 365.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Graaff Reinet Airport",
+    "gps_code": "FAGR",
+    "freq": "",
+    "Lat": -32.1936,
+    "Lon": 24.541401,
+    "Ele": 793.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Grahamstown Airport",
+    "gps_code": "FAGT",
+    "freq": "123.500",
+    "Lat": -33.284698,
+    "Lon": 26.4981,
+    "Ele": 650.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Gravelotte Airport",
+    "gps_code": "FAGV",
+    "freq": "",
+    "Lat": -23.91127,
+    "Lon": 30.696192,
+    "Ele": 502.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Magwa Airport",
+    "gps_code": "FAGW",
+    "freq": "",
+    "Lat": -31.39394187927246,
+    "Lon": 29.693470001220703,
+    "Ele": 555.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Greytown Airport",
+    "gps_code": "FAGY",
+    "freq": "119.100",
+    "Lat": -29.122,
+    "Lon": 30.5867,
+    "Ele": 1076.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Harmony Airport",
+    "gps_code": "FAHA",
+    "freq": "",
+    "Lat": -28.078699,
+    "Lon": 26.8612,
+    "Ele": 1340.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hartebeespoortdam Airport",
+    "gps_code": "FAHB",
+    "freq": "",
+    "Lat": -24.50239944458008,
+    "Lon": 28.079099655151367,
+    "Ele": 1140.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Howick Airport",
+    "gps_code": "FAHC",
+    "freq": "",
+    "Lat": -29.55279922485352,
+    "Lon": 30.21109962463379,
+    "Ele": 1103.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Humansdorp Airport",
+    "gps_code": "FAHD",
+    "freq": "",
+    "Lat": -34.036598205566406,
+    "Lon": 24.78890037536621,
+    "Ele": 105.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Pullenshope Hendrina Airport",
+    "gps_code": "FAHE",
+    "freq": "",
+    "Lat": -25.97780036926269,
+    "Lon": 29.618900299072266,
+    "Ele": 1576.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Henrys Flats Airport",
+    "gps_code": "FAHF",
+    "freq": "",
+    "Lat": -33.04610061645508,
+    "Lon": 25.71689987182617,
+    "Ele": 520.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Heidelburg Airport",
+    "gps_code": "FAHG",
+    "freq": "",
+    "Lat": -26.51,
+    "Lon": 28.389999,
+    "Ele": 1551.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hibberdene Airport",
+    "gps_code": "FAHH",
+    "freq": "",
+    "Lat": -30.583947,
+    "Lon": 30.558562,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Halfweg Airport",
+    "gps_code": "FAHI",
+    "freq": "",
+    "Lat": -30.0132999420166,
+    "Lon": 20.13920021057129,
+    "Ele": 962.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Harding Airport",
+    "gps_code": "FAHJ",
+    "freq": "",
+    "Lat": -30.574533,
+    "Lon": 29.90565,
+    "Ele": 880.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Haakdoornboom Airport",
+    "gps_code": "FAHK",
+    "freq": "",
+    "Lat": -25.58720016479492,
+    "Lon": 28.115800857543945,
+    "Ele": 1236.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hluhluwe Airport",
+    "gps_code": "FAHL",
+    "freq": "",
+    "Lat": -28.0166049887,
+    "Lon": 32.2751712799,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Heilbron Airport",
+    "gps_code": "FAHO",
+    "freq": "",
+    "Lat": -27.278600692749023,
+    "Lon": 27.9955997467041,
+    "Ele": 1585.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoopstad Airport",
+    "gps_code": "FAHP",
+    "freq": "",
+    "Lat": -27.82169914245605,
+    "Lon": 25.916900634765625,
+    "Ele": 1259.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Harrismith Airport",
+    "gps_code": "FAHR",
+    "freq": "125.400",
+    "Lat": -28.2351,
+    "Lon": 29.106199,
+    "Ele": 1702.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoedspruit Air Force Base Airport",
+    "gps_code": "FAHS",
+    "freq": "126.400",
+    "Lat": -24.3686008453,
+    "Lon": 31.0487003326,
+    "Ele": 531.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoedspruit Airport",
+    "gps_code": "FAHT",
+    "freq": "",
+    "Lat": -24.35169982910156,
+    "Lon": 30.94939994812012,
+    "Ele": 548.9
+  },
+  {
+    "type": "small_airport",
+    "name": "H M S Bastard Memorial Airport",
+    "gps_code": "FAHU",
+    "freq": "",
+    "Lat": -30.542499542236328,
+    "Lon": 29.499000549316406,
+    "Ele": 1432.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gariep Dam Airport",
+    "gps_code": "FAHV",
+    "freq": "",
+    "Lat": -30.562111,
+    "Lon": 25.529343,
+    "Ele": 1272.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Itala Airport",
+    "gps_code": "FAIA",
+    "freq": "",
+    "Lat": -27.4867000579834,
+    "Lon": 31.17110061645508,
+    "Ele": 812.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Idutywa Airport",
+    "gps_code": "FAID",
+    "freq": "",
+    "Lat": -32.099998474121094,
+    "Lon": 28.316699981689453,
+    "Ele": 771.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Isithebe Airport",
+    "gps_code": "FAIS",
+    "freq": "",
+    "Lat": -29.10555648803711,
+    "Lon": 31.40749931335449,
+    "Ele": 95.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingwavuma Airport",
+    "gps_code": "FAIV",
+    "freq": "",
+    "Lat": -27.11709976196289,
+    "Lon": 32.00870132446289,
+    "Ele": 640.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Indwe Airport",
+    "gps_code": "FAIW",
+    "freq": "",
+    "Lat": -31.483333587646484,
+    "Lon": 27.350000381469727,
+    "Ele": 1270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Jackalberry Airstrip",
+    "gps_code": "FAJC",
+    "freq": "",
+    "Lat": -24.508666,
+    "Lon": 31.142142,
+    "Ele": 563.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jagersfontain Airport",
+    "gps_code": "FAJF",
+    "freq": "",
+    "Lat": -29.762500762939453,
+    "Lon": 25.433000564575195,
+    "Ele": 1436.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Joubertina Airport",
+    "gps_code": "FAJP",
+    "freq": "",
+    "Lat": -33.830747,
+    "Lon": 23.827908,
+    "Ele": 611.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Jansenville Airport",
+    "gps_code": "FAJV",
+    "freq": "",
+    "Lat": -32.9390983581543,
+    "Lon": 24.670700073242188,
+    "Ele": 435.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kosibaai Airport",
+    "gps_code": "FAKB",
+    "freq": "",
+    "Lat": -27.018262,
+    "Lon": 32.750399,
+    "Ele": 42.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "P C Pelser Airport",
+    "gps_code": "FAKD",
+    "freq": "123.500",
+    "Lat": -26.871099,
+    "Lon": 26.718,
+    "Ele": 1354.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Keimouth Airport",
+    "gps_code": "FAKE",
+    "freq": "",
+    "Lat": -32.697337,
+    "Lon": 28.356291,
+    "Ele": 67.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Koffee Bay Airport",
+    "gps_code": "FAKF",
+    "freq": "",
+    "Lat": -31.957335,
+    "Lon": 29.174543,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Komati Power Station Airport",
+    "gps_code": "FAKG",
+    "freq": "",
+    "Lat": -26.093299865722656,
+    "Lon": 29.45560073852539,
+    "Ele": 1612.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenhardt Airport",
+    "gps_code": "FAKH",
+    "freq": "",
+    "Lat": -29.32670021057129,
+    "Lon": 21.188600540161133,
+    "Ele": 830.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kobb Inn Airport",
+    "gps_code": "FAKI",
+    "freq": "",
+    "Lat": -32.433799,
+    "Lon": 28.683467,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakamas Airport",
+    "gps_code": "FAKK",
+    "freq": "",
+    "Lat": -28.808598,
+    "Lon": 20.644936,
+    "Ele": 707.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kriel Airport",
+    "gps_code": "FAKL",
+    "freq": "",
+    "Lat": -26.251100540161133,
+    "Lon": 29.194700241088867,
+    "Ele": 1603.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kimberley Airport",
+    "gps_code": "FAKM",
+    "freq": "119.400",
+    "Lat": -28.802799224900003,
+    "Lon": 24.7651996613,
+    "Ele": 1204.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kruger Mpumalanga International Airport",
+    "gps_code": "FAKN",
+    "freq": "119.200",
+    "Lat": -25.3831996918,
+    "Lon": 31.1056003571,
+    "Ele": 862.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Komga Airport",
+    "gps_code": "FAKO",
+    "freq": "",
+    "Lat": -32.59280014038086,
+    "Lon": 27.87579917907715,
+    "Ele": 663.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Komatipoort Airport",
+    "gps_code": "FAKP",
+    "freq": "124.800",
+    "Lat": -25.44029998779297,
+    "Lon": 31.93000030517578,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Krugersdorp Airport",
+    "gps_code": "FAKR",
+    "freq": "122.000",
+    "Lat": -26.080826,
+    "Lon": 27.725915,
+    "Ele": 1676.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kroonstad Airport",
+    "gps_code": "FAKS",
+    "freq": "122.400",
+    "Lat": -27.660601,
+    "Lon": 27.3158,
+    "Ele": 1432.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kitty Hawk Airport",
+    "gps_code": "FAKT",
+    "freq": "120.650",
+    "Lat": -25.8600006104,
+    "Lon": 28.4500007629,
+    "Ele": 1407.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Johan Pienaar Airport",
+    "gps_code": "FAKU",
+    "freq": "",
+    "Lat": -27.45669937133789,
+    "Lon": 23.411399841308597,
+    "Ele": 1335.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Koffyfontein Min Airport",
+    "gps_code": "FAKV",
+    "freq": "",
+    "Lat": -29.43939971923828,
+    "Lon": 24.98859977722168,
+    "Ele": 1218.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kareedouw Airport",
+    "gps_code": "FAKW",
+    "freq": "",
+    "Lat": -33.96666717529297,
+    "Lon": 24.299999237060547,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kenton-on-Sea Airport",
+    "gps_code": "FAKX",
+    "freq": "122.400",
+    "Lat": -33.670329,
+    "Lon": 26.630593,
+    "Ele": 52.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kleinsee Airport",
+    "gps_code": "FAKZ",
+    "freq": "123.500",
+    "Lat": -29.6884002686,
+    "Lon": 17.093999862700002,
+    "Ele": 82.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lanseria International Airport",
+    "gps_code": "FALA",
+    "freq": "123.700",
+    "Lat": -25.938499,
+    "Lon": 27.9261,
+    "Ele": 1376.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ladybrand Airfield",
+    "gps_code": "FALB",
+    "freq": "",
+    "Lat": -29.181101,
+    "Lon": 27.4536,
+    "Ele": 1578.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lime Acres Finsch Mine Airport",
+    "gps_code": "FALC",
+    "freq": "123.500",
+    "Lat": -28.36009979248047,
+    "Lon": 23.43910026550293,
+    "Ele": 1493.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Londolozi Airport",
+    "gps_code": "FALD",
+    "freq": "",
+    "Lat": -24.7478,
+    "Lon": 31.4743,
+    "Ele": 396.2
+  },
+  {
+    "type": "large_airport",
+    "name": "King Shaka International Airport",
+    "gps_code": "FALE",
+    "freq": "125.750",
+    "Lat": -29.6144444444,
+    "Lon": 31.1197222222,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Loeriesfontein Airport",
+    "gps_code": "FALF",
+    "freq": "",
+    "Lat": -30.906400680541992,
+    "Lon": 19.42530059814453,
+    "Ele": 913.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lohathla Military Airport",
+    "gps_code": "FALH",
+    "freq": "",
+    "Lat": -28.036800384521484,
+    "Lon": 23.09869956970215,
+    "Ele": 1371.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lichtenburg Airport",
+    "gps_code": "FALI",
+    "freq": "124.800",
+    "Lat": -26.175699,
+    "Lon": 26.184601,
+    "Ele": 1485.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lydenburg Airport",
+    "gps_code": "FALL",
+    "freq": "",
+    "Lat": -25.10330009460449,
+    "Lon": 30.41419982910156,
+    "Ele": 1488.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makhado Air Force Base Airport",
+    "gps_code": "FALM",
+    "freq": "121.200",
+    "Lat": -23.159901,
+    "Lon": 29.696501,
+    "Ele": 935.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Louis Trichardt Airport",
+    "gps_code": "FALO",
+    "freq": "121.200",
+    "Lat": -23.061899185180664,
+    "Lon": 29.86470031738281,
+    "Ele": 922.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Mirador Airport",
+    "gps_code": "FALQ",
+    "freq": "",
+    "Lat": -28.98611068725586,
+    "Lon": 29.47972297668457,
+    "Ele": 1187.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Steytlerville Airport",
+    "gps_code": "FALR",
+    "freq": "",
+    "Lat": -33.33700180053711,
+    "Lon": 24.321399688720703,
+    "Ele": 442.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Somersveld Airport",
+    "gps_code": "FALS",
+    "freq": "",
+    "Lat": -33.2462272644043,
+    "Lon": 18.47999763488769,
+    "Ele": 59.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Langebaanweg Airport",
+    "gps_code": "FALW",
+    "freq": "122.500",
+    "Lat": -32.9688987732,
+    "Lon": 18.1602993011,
+    "Ele": 32.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ladysmith Airport",
+    "gps_code": "FALY",
+    "freq": "124.800",
+    "Lat": -28.5816993713,
+    "Lon": 29.7497005463,
+    "Ele": 1081.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Matatiele Airport",
+    "gps_code": "FAMA",
+    "freq": "",
+    "Lat": -30.322200775146484,
+    "Lon": 28.7942008972168,
+    "Ele": 1451.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Middelburg Airport",
+    "gps_code": "FAMB",
+    "freq": "127.950",
+    "Lat": -25.684799,
+    "Lon": 29.440201,
+    "Ele": 1489.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Middelburg 2 Airport",
+    "gps_code": "FAMC",
+    "freq": "",
+    "Lat": -31.547199249267575,
+    "Lon": 25.02939987182617,
+    "Ele": 1225.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malamala Airport",
+    "gps_code": "FAMD",
+    "freq": "124.800",
+    "Lat": -24.816866,
+    "Lon": 31.544085,
+    "Ele": 342.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Malabar Airport",
+    "gps_code": "FAMF",
+    "freq": "",
+    "Lat": -29.010929,
+    "Lon": 23.849489,
+    "Ele": 1020.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Margate Airport",
+    "gps_code": "FAMG",
+    "freq": "122.700",
+    "Lat": -30.8574008942,
+    "Lon": 30.343000412,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Musina(Messina) Airport",
+    "gps_code": "FAMH",
+    "freq": "",
+    "Lat": -22.355672,
+    "Lon": 29.9862,
+    "Ele": 580.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Marble Hall Airport",
+    "gps_code": "FAMI",
+    "freq": "",
+    "Lat": -24.9891,
+    "Lon": 29.2831,
+    "Ele": 908.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Majuba Power Station Airport",
+    "gps_code": "FAMJ",
+    "freq": "122.200",
+    "Lat": -27.0793,
+    "Lon": 29.7785,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mafeking Airport",
+    "gps_code": "FAMK",
+    "freq": "",
+    "Lat": -25.81666755676269,
+    "Lon": 25.61666679382324,
+    "Ele": 1280.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Manyani Game Lodge Airport",
+    "gps_code": "FAML",
+    "freq": "",
+    "Lat": -25.816699981689453,
+    "Lon": 25.716699600219727,
+    "Ele": 1335.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mmabatho International Airport",
+    "gps_code": "FAMM",
+    "freq": "119.300",
+    "Lat": -25.798400878900004,
+    "Lon": 25.5480003357,
+    "Ele": 1274.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Malelane Airport",
+    "gps_code": "FAMN",
+    "freq": "",
+    "Lat": -25.473581,
+    "Lon": 31.565947,
+    "Ele": 351.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mossel Bay Airport",
+    "gps_code": "FAMO",
+    "freq": "124.200",
+    "Lat": -34.158746,
+    "Lon": 22.055676,
+    "Ele": 161.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Madimbo Airport",
+    "gps_code": "FAMP",
+    "freq": "",
+    "Lat": -22.37470054626465,
+    "Lon": 30.88159942626953,
+    "Ele": 645.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maclear Airport",
+    "gps_code": "FAMQ",
+    "freq": "",
+    "Lat": -31.072201,
+    "Lon": 28.376141,
+    "Ele": 1251.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Morningside Farm Airport",
+    "gps_code": "FAMS",
+    "freq": "",
+    "Lat": -25.7045001984,
+    "Lon": 26.9090003967,
+    "Ele": 1295.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Molteno Airport",
+    "gps_code": "FAMT",
+    "freq": "",
+    "Lat": -31.38960075378418,
+    "Lon": 26.3484001159668,
+    "Ele": 1601.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mkuze Airport",
+    "gps_code": "FAMU",
+    "freq": "",
+    "Lat": -27.626100540161133,
+    "Lon": 32.0443000793457,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mbazwana Airport",
+    "gps_code": "FAMX",
+    "freq": "",
+    "Lat": -27.48139953613281,
+    "Lon": 32.59389877319336,
+    "Ele": 59.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Malmesbury Airport",
+    "gps_code": "FAMY",
+    "freq": "",
+    "Lat": -33.46189880371094,
+    "Lon": 18.7007999420166,
+    "Ele": 296.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Msauli Airport",
+    "gps_code": "FAMZ",
+    "freq": "",
+    "Lat": -26.049999237060547,
+    "Lon": 31.017000198364254,
+    "Ele": 776.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Nongoma Airport",
+    "gps_code": "FANA",
+    "freq": "",
+    "Lat": -27.91399955749512,
+    "Lon": 31.656200408935547,
+    "Ele": 791.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Newcastle Airport",
+    "gps_code": "FANC",
+    "freq": "124.800",
+    "Lat": -27.7705993652,
+    "Lon": 29.9769001007,
+    "Ele": 1241.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ngala Airport",
+    "gps_code": "FANG",
+    "freq": "",
+    "Lat": -24.389,
+    "Lon": 31.326,
+    "Ele": 1023.2
+  },
+  {
+    "type": "small_airport",
+    "name": "New Hanover Airport",
+    "gps_code": "FANH",
+    "freq": "",
+    "Lat": -29.356000900268555,
+    "Lon": 30.518400192260746,
+    "Ele": 759.0
+  },
+  {
+    "type": "small_airport",
+    "name": "New Largo Airport",
+    "gps_code": "FANL",
+    "freq": "",
+    "Lat": -25.978500366210938,
+    "Lon": 28.984399795532227,
+    "Ele": 1535.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Nelspruit Airport",
+    "gps_code": "FANS",
+    "freq": "",
+    "Lat": -25.5,
+    "Lon": 30.9137992859,
+    "Ele": 876.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Nieuwoudtville Airfield",
+    "gps_code": "FANV",
+    "freq": "",
+    "Lat": -31.350000381469727,
+    "Lon": 19.11666679382324,
+    "Ele": 576.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nylstroom Airfield",
+    "gps_code": "FANY",
+    "freq": "",
+    "Lat": -24.6861,
+    "Lon": 28.4349,
+    "Ele": 1188.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Overberg Airport",
+    "gps_code": "FAOB",
+    "freq": "119.800",
+    "Lat": -34.563474,
+    "Lon": 20.252438,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Odendaalsrus Airport",
+    "gps_code": "FAOD",
+    "freq": "",
+    "Lat": -27.871000289916992,
+    "Lon": 26.69339942932129,
+    "Ele": 408.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Jack Duvenhage Airport",
+    "gps_code": "FAOF",
+    "freq": "",
+    "Lat": -27.961700439453125,
+    "Lon": 22.71660041809082,
+    "Ele": 1285.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oudtshoorn Airport",
+    "gps_code": "FAOH",
+    "freq": "131.100",
+    "Lat": -33.6069984436,
+    "Lon": 22.188999176,
+    "Ele": 324.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Orient Glider Airport",
+    "gps_code": "FAOI",
+    "freq": "",
+    "Lat": -26.039400100708008,
+    "Lon": 27.595600128173828,
+    "Ele": 1555.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Othawa Airport",
+    "gps_code": "FAOL",
+    "freq": "",
+    "Lat": -24.732999801635746,
+    "Lon": 31.399999618530277,
+    "Ele": 334.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ornate Lake - St Lucia Airport",
+    "gps_code": "FAON",
+    "freq": "",
+    "Lat": -28.044900894165,
+    "Lon": 32.425399780273,
+    "Ele": 39.0
+  },
+  {
+    "type": "large_airport",
+    "name": "O.R. Tambo International Airport",
+    "gps_code": "FAOR",
+    "freq": "123.700",
+    "Lat": -26.1392,
+    "Lon": 28.246,
+    "Ele": 1694.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ottosdal Airport",
+    "gps_code": "FAOT",
+    "freq": "",
+    "Lat": -26.79829978942871,
+    "Lon": 26.00029945373535,
+    "Ele": 1481.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Orkney Airport",
+    "gps_code": "FAOY",
+    "freq": "",
+    "Lat": -26.98390007019043,
+    "Lon": 26.65139961242676,
+    "Ele": 1300.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Alfred Airport",
+    "gps_code": "FAPA",
+    "freq": "118.400",
+    "Lat": -33.555057,
+    "Lon": 26.881656,
+    "Ele": 83.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Prince Albert Airport",
+    "gps_code": "FAPC",
+    "freq": "",
+    "Lat": -33.20249938964844,
+    "Lon": 22.03219985961914,
+    "Ele": 609.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pofadder Airport",
+    "gps_code": "FAPD",
+    "freq": "",
+    "Lat": -29.141700744628903,
+    "Lon": 19.41309928894043,
+    "Ele": 987.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chief Dawid Stuurman International Airport",
+    "gps_code": "FAPE",
+    "freq": "120.400",
+    "Lat": -33.984901,
+    "Lon": 25.6173,
+    "Ele": 68.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Piet Retief Airport",
+    "gps_code": "FAPF",
+    "freq": "",
+    "Lat": -26.996901,
+    "Lon": 30.840799,
+    "Ele": 1348.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Plettenberg Bay Airport",
+    "gps_code": "FAPG",
+    "freq": "128.200",
+    "Lat": -34.08816,
+    "Lon": 23.328723,
+    "Ele": 141.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hendrik Van Eck Airport",
+    "gps_code": "FAPH",
+    "freq": "124.800",
+    "Lat": -23.9372005463,
+    "Lon": 31.1553993225,
+    "Ele": 436.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pietersburg Municipal Airport",
+    "gps_code": "FAPI",
+    "freq": "122.700",
+    "Lat": -23.9261,
+    "Lon": 29.4844,
+    "Ele": 1327.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Port St Johns Airport",
+    "gps_code": "FAPJ",
+    "freq": "",
+    "Lat": -31.60612,
+    "Lon": 29.52175,
+    "Ele": 374.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prieska Airport",
+    "gps_code": "FAPK",
+    "freq": "",
+    "Lat": -29.6835994720459,
+    "Lon": 22.77059936523437,
+    "Ele": 944.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pongola Airport",
+    "gps_code": "FAPL",
+    "freq": "",
+    "Lat": -27.3622,
+    "Lon": 31.606701,
+    "Ele": 287.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pietermaritzburg Airport",
+    "gps_code": "FAPM",
+    "freq": "125.750",
+    "Lat": -29.6490001678,
+    "Lon": 30.3987007141,
+    "Ele": 738.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilanesberg International Airport",
+    "gps_code": "FAPN",
+    "freq": "118.400",
+    "Lat": -25.333799,
+    "Lon": 27.173401,
+    "Ele": 1040.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilgrims Rest Airport",
+    "gps_code": "FAPO",
+    "freq": "",
+    "Lat": -24.785147,
+    "Lon": 30.791899,
+    "Ele": 1158.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Polokwane International Airport",
+    "gps_code": "FAPP",
+    "freq": "124.300",
+    "Lat": -23.845269,
+    "Lon": 29.458615,
+    "Ele": 1242.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Punda Maria(Malia) Airport",
+    "gps_code": "FAPQ",
+    "freq": "",
+    "Lat": -22.77,
+    "Lon": 31.0108,
+    "Ele": 457.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Potchefstroom Airport",
+    "gps_code": "FAPS",
+    "freq": "123.000",
+    "Lat": -26.670999527,
+    "Lon": 27.0818996429,
+    "Ele": 1377.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Posmasburg Soil Airport",
+    "gps_code": "FAPT",
+    "freq": "",
+    "Lat": -28.338600158691406,
+    "Lon": 23.079700469970703,
+    "Ele": 1310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paarl East Airport",
+    "gps_code": "FAPU",
+    "freq": "",
+    "Lat": -33.7107666667,
+    "Lon": 19.024388888900003,
+    "Ele": 181.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Petrusville Airport",
+    "gps_code": "FAPV",
+    "freq": "",
+    "Lat": -30.08180046081543,
+    "Lon": 24.67959976196289,
+    "Ele": 1254.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Pietersrus Airport",
+    "gps_code": "FAPW",
+    "freq": "",
+    "Lat": -26.60610008239746,
+    "Lon": 29.329200744628903,
+    "Ele": 1667.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paradise Beach Airport",
+    "gps_code": "FAPX",
+    "freq": "130.350",
+    "Lat": -34.10133,
+    "Lon": 24.884352,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Parys Airport",
+    "gps_code": "FAPY",
+    "freq": "123.500",
+    "Lat": -26.889299,
+    "Lon": 27.503401,
+    "Ele": 1444.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Progress Airport",
+    "gps_code": "FAPZ",
+    "freq": "",
+    "Lat": -33.926448,
+    "Lon": 25.371916,
+    "Ele": 228.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pomfret Airport",
+    "gps_code": "FAQF",
+    "freq": "",
+    "Lat": -25.847700119,
+    "Lon": 23.5373001099,
+    "Ele": 1163.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Queenstown Airport",
+    "gps_code": "FAQT",
+    "freq": "124.800",
+    "Lat": -31.92020034790039,
+    "Lon": 26.882200241088867,
+    "Ele": 1108.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Petit Airport",
+    "gps_code": "FARA",
+    "freq": "",
+    "Lat": -26.0845963451,
+    "Lon": 28.3903865814,
+    "Ele": 1664.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Richards Bay Airport",
+    "gps_code": "FARB",
+    "freq": "118.900",
+    "Lat": -28.740999221800003,
+    "Lon": 32.0920982361,
+    "Ele": 33.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Riversdale Airport",
+    "gps_code": "FARD",
+    "freq": "124.800",
+    "Lat": -34.111698150634766,
+    "Lon": 21.262800216674805,
+    "Ele": 180.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rustenburg Airport",
+    "gps_code": "FARG",
+    "freq": "122.400",
+    "Lat": -25.6443,
+    "Lon": 27.271099,
+    "Ele": 1127.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Reivilo Airport",
+    "gps_code": "FARI",
+    "freq": "",
+    "Lat": -27.547199249267575,
+    "Lon": 24.17250061035156,
+    "Ele": 1437.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Richmond Airport",
+    "gps_code": "FARM",
+    "freq": "",
+    "Lat": -31.42350006103516,
+    "Lon": 23.978200912475582,
+    "Ele": 1442.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rooiberg Airport",
+    "gps_code": "FARO",
+    "freq": "",
+    "Lat": -24.7777888889,
+    "Lon": 27.7523361111,
+    "Ele": 1161.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Robertson Airport",
+    "gps_code": "FARS",
+    "freq": "124.800",
+    "Lat": -33.812199,
+    "Lon": 19.9028,
+    "Ele": 195.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Reitz Airport",
+    "gps_code": "FARZ",
+    "freq": "",
+    "Lat": -22.78420066833496,
+    "Lon": 28.430299758911133,
+    "Ele": 1624.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Springbok Airport",
+    "gps_code": "FASB",
+    "freq": "",
+    "Lat": -29.68930053710937,
+    "Lon": 17.939599990844727,
+    "Ele": 819.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Secunda Airport",
+    "gps_code": "FASC",
+    "freq": "121.000",
+    "Lat": -26.52409935,
+    "Lon": 29.1700992584,
+    "Ele": 1600.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saldanha/Vredenburg Airport",
+    "gps_code": "FASD",
+    "freq": "122.500",
+    "Lat": -32.9641,
+    "Lon": 17.969299,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Sabi Sabi Airport",
+    "gps_code": "FASE",
+    "freq": "130.350",
+    "Lat": -24.9473754342,
+    "Lon": 31.4488477707,
+    "Ele": 388.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Schweizer Reneke Airport",
+    "gps_code": "FASG",
+    "freq": "",
+    "Lat": -27.16309928894043,
+    "Lon": 25.28610038757324,
+    "Ele": 1332.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stellenbosch Airport",
+    "gps_code": "FASH",
+    "freq": "119.300",
+    "Lat": -33.980983,
+    "Lon": 18.822327,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Springs Airfield",
+    "gps_code": "FASI",
+    "freq": "122.400",
+    "Lat": -26.2494,
+    "Lon": 28.398272,
+    "Ele": 1627.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Saffier Airport",
+    "gps_code": "FASJ",
+    "freq": "",
+    "Lat": -26.76000022888184,
+    "Lon": 27.76000022888184,
+    "Ele": 1432.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Swartkop Air Force Base",
+    "gps_code": "FASK",
+    "freq": "134.400",
+    "Lat": -25.8097,
+    "Lon": 28.1646,
+    "Ele": 1456.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sutherland Airport",
+    "gps_code": "FASL",
+    "freq": "",
+    "Lat": -32.48820114135742,
+    "Lon": 20.697099685668945,
+    "Ele": 1599.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Siteka Airport",
+    "gps_code": "FASM",
+    "freq": "",
+    "Lat": -29.325000762939453,
+    "Lon": 30.149200439453125,
+    "Ele": 1341.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Senekal Airport",
+    "gps_code": "FASN",
+    "freq": "",
+    "Lat": -28.31220054626465,
+    "Lon": 27.64609909057617,
+    "Ele": 1478.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sishen Airport",
+    "gps_code": "FASS",
+    "freq": "123.500",
+    "Lat": -27.6486,
+    "Lon": 22.9993,
+    "Ele": 1172.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Somerset East Airport",
+    "gps_code": "FAST",
+    "freq": "",
+    "Lat": -32.75019836425781,
+    "Lon": 25.59499931335449,
+    "Ele": 716.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sace Airport",
+    "gps_code": "FASU",
+    "freq": "",
+    "Lat": -25.956899642944336,
+    "Lon": 29.211700439453125,
+    "Ele": 1570.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Slurry Airport",
+    "gps_code": "FASW",
+    "freq": "",
+    "Lat": -25.81559944152832,
+    "Lon": 25.88640022277832,
+    "Ele": 1430.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hendrik Swellengrebel Airport",
+    "gps_code": "FASX",
+    "freq": "",
+    "Lat": -34.048199,
+    "Lon": 20.4746,
+    "Ele": 124.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Skukuza Airport",
+    "gps_code": "FASZ",
+    "freq": "124.800",
+    "Lat": -24.960899353,
+    "Lon": 31.5886993408,
+    "Ele": 310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tedderfield Air Park",
+    "gps_code": "FATA",
+    "freq": "125.600",
+    "Lat": -26.3520377385,
+    "Lon": 27.9681630135,
+    "Ele": 1584.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Thorny Bush Game Lodge Airport",
+    "gps_code": "FATB",
+    "freq": "",
+    "Lat": -24.416086,
+    "Lon": 31.164232,
+    "Ele": 579.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tommys Field Airport",
+    "gps_code": "FATF",
+    "freq": "",
+    "Lat": -28.26,
+    "Lon": 22.9932,
+    "Ele": 1328.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Thaba Tholo Airport",
+    "gps_code": "FATG",
+    "freq": "",
+    "Lat": -24.2811,
+    "Lon": 27.2294,
+    "Ele": 975.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Thohoyandou Airport",
+    "gps_code": "FATH",
+    "freq": "",
+    "Lat": -23.0769,
+    "Lon": 30.3836,
+    "Ele": 616.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Thabazimbi Airport",
+    "gps_code": "FATI",
+    "freq": "",
+    "Lat": -24.5760850299,
+    "Lon": 27.4196863174,
+    "Ele": 983.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stutterheim Airport",
+    "gps_code": "FATM",
+    "freq": "",
+    "Lat": -32.56666564941406,
+    "Lon": 27.450000762939453,
+    "Ele": 815.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Thaba Nchu Tar Airport",
+    "gps_code": "FATN",
+    "freq": "",
+    "Lat": -29.317800521850582,
+    "Lon": 26.822799682617188,
+    "Ele": 1506.0
+  },
+  {
+    "type": "small_airport",
+    "name": "New Tempe Airport",
+    "gps_code": "FATP",
+    "freq": "131.300",
+    "Lat": -29.035109,
+    "Lon": 26.16268,
+    "Ele": 1385.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Trennery's Airport",
+    "gps_code": "FATR",
+    "freq": "",
+    "Lat": -32.639682,
+    "Lon": 28.422969,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tutuka Power Station Airport",
+    "gps_code": "FATT",
+    "freq": "122.200",
+    "Lat": -26.775128,
+    "Lon": 29.337542,
+    "Ele": 1619.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Witberg Tswalu Airport",
+    "gps_code": "FATW",
+    "freq": "",
+    "Lat": -27.20499992370605,
+    "Lon": 22.48189926147461,
+    "Ele": 1195.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tzaneen Airport",
+    "gps_code": "FATZ",
+    "freq": "124.800",
+    "Lat": -23.8244,
+    "Lon": 30.3293,
+    "Ele": 583.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Underberg Airport",
+    "gps_code": "FAUB",
+    "freq": "",
+    "Lat": -29.78840065002441,
+    "Lon": 29.498300552368164,
+    "Ele": 1541.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulco Airport",
+    "gps_code": "FAUC",
+    "freq": "",
+    "Lat": -28.35449981689453,
+    "Lon": 24.22909927368164,
+    "Ele": 1070.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ugie Airport",
+    "gps_code": "FAUG",
+    "freq": "",
+    "Lat": -31.21999931335449,
+    "Lon": 28.209999084472656,
+    "Ele": 1396.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Uitenhage Airport",
+    "gps_code": "FAUH",
+    "freq": "",
+    "Lat": -33.785301208496094,
+    "Lon": 25.38330078125,
+    "Ele": 88.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Prince Mangosuthu Buthelezi Airport",
+    "gps_code": "FAUL",
+    "freq": "124.800",
+    "Lat": -28.3206005096,
+    "Lon": 31.4165000916,
+    "Ele": 524.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pierre Van Ryneveld Airport",
+    "gps_code": "FAUP",
+    "freq": "121.300",
+    "Lat": -28.39909935,
+    "Lon": 21.2602005005,
+    "Ele": 848.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Utrecht Airport",
+    "gps_code": "FAUR",
+    "freq": "",
+    "Lat": -27.680500030517575,
+    "Lon": 30.31679916381836,
+    "Ele": 1250.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulusaba Airport",
+    "gps_code": "FAUS",
+    "freq": "",
+    "Lat": -24.7854003906,
+    "Lon": 31.3549003601,
+    "Ele": 385.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "K. D. Matanzima Airport",
+    "gps_code": "FAUT",
+    "freq": "121.300",
+    "Lat": -31.5463631849,
+    "Lon": 28.6733551025,
+    "Ele": 731.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Vaalputs Airport",
+    "gps_code": "FAVA",
+    "freq": "",
+    "Lat": -30.13419914245605,
+    "Lon": 18.52669906616211,
+    "Ele": 1018.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vryburg Airport",
+    "gps_code": "FAVB",
+    "freq": "",
+    "Lat": -26.9824008942,
+    "Lon": 24.7287998199,
+    "Ele": 1194.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vrede Airport",
+    "gps_code": "FAVD",
+    "freq": "",
+    "Lat": -27.44029998779297,
+    "Lon": 29.153099060058597,
+    "Ele": 1676.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ventersdorp Airport",
+    "gps_code": "FAVE",
+    "freq": "",
+    "Lat": -26.300899505615234,
+    "Lon": 26.81419944763184,
+    "Ele": 1498.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Verborgenfontei Airport",
+    "gps_code": "FAVF",
+    "freq": "",
+    "Lat": -31.16580009460449,
+    "Lon": 23.80940055847168,
+    "Ele": 1328.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Virginia Airport",
+    "gps_code": "FAVG",
+    "freq": "119.100",
+    "Lat": -29.770599,
+    "Lon": 31.058399,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Von Abo's Villa Airport",
+    "gps_code": "FAVI",
+    "freq": "",
+    "Lat": -27.610599517822266,
+    "Lon": 26.683500289916992,
+    "Ele": 1311.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Venetia Mine Airport",
+    "gps_code": "FAVM",
+    "freq": "124.800",
+    "Lat": -22.448099,
+    "Lon": 29.3377,
+    "Ele": 711.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vanderbijlpark Airport",
+    "gps_code": "FAVP",
+    "freq": "",
+    "Lat": -26.69029998779297,
+    "Lon": 27.777099609375,
+    "Ele": 1481.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vredendal Airport",
+    "gps_code": "FAVR",
+    "freq": "",
+    "Lat": -31.641000747680664,
+    "Lon": 18.5447998046875,
+    "Ele": 100.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Vastrap Airport",
+    "gps_code": "FAVS",
+    "freq": "",
+    "Lat": -27.83458,
+    "Lon": 21.63037,
+    "Ele": 989.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Volksrust Airport",
+    "gps_code": "FAVU",
+    "freq": "",
+    "Lat": -27.37689971923828,
+    "Lon": 29.86000061035156,
+    "Ele": 1709.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vereeniging Airport",
+    "gps_code": "FAVV",
+    "freq": "122.100",
+    "Lat": -26.566401,
+    "Lon": 27.9608,
+    "Ele": 1477.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Victoria West Airport",
+    "gps_code": "FAVW",
+    "freq": "",
+    "Lat": -31.399401,
+    "Lon": 23.156401,
+    "Ele": 1257.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vryheid Airport",
+    "gps_code": "FAVY",
+    "freq": "",
+    "Lat": -27.78689956665039,
+    "Lon": 30.79640007019043,
+    "Ele": 1157.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Warmbaths Airport",
+    "gps_code": "FAWA",
+    "freq": "124.800",
+    "Lat": -24.90999984741211,
+    "Lon": 28.299999237060547,
+    "Ele": 1114.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wonderboom Airport",
+    "gps_code": "FAWB",
+    "freq": "120.600",
+    "Lat": -25.6539,
+    "Lon": 28.224199,
+    "Ele": 1248.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Worcester Glider Airport",
+    "gps_code": "FAWC",
+    "freq": "",
+    "Lat": -33.66310119628906,
+    "Lon": 19.41530036926269,
+    "Ele": 205.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wolmeransstad Airport",
+    "gps_code": "FAWD",
+    "freq": "",
+    "Lat": -27.170000076293945,
+    "Lon": 25.979999542236328,
+    "Ele": 1375.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Welgevonden Reserve",
+    "gps_code": "FAWE",
+    "freq": "",
+    "Lat": -24.2046,
+    "Lon": 27.9,
+    "Ele": 1100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Witbank Airport",
+    "gps_code": "FAWI",
+    "freq": "123.500",
+    "Lat": -25.8323,
+    "Lon": 29.191999,
+    "Ele": 1547.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Waterkloof Air Force Base",
+    "gps_code": "FAWK",
+    "freq": "134.400",
+    "Lat": -25.8299999237,
+    "Lon": 28.2224998474,
+    "Ele": 1505.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Williston Airport",
+    "gps_code": "FAWL",
+    "freq": "",
+    "Lat": -31.38360023498535,
+    "Lon": 20.93280029296875,
+    "Ele": 1061.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Welkom Airport",
+    "gps_code": "FAWM",
+    "freq": "118.000",
+    "Lat": -27.996825,
+    "Lon": 26.663334,
+    "Ele": 1347.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Cape Winelands Airport",
+    "gps_code": "FAWN",
+    "freq": "131.100",
+    "Lat": -33.77,
+    "Lon": 18.74,
+    "Ele": 121.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Willowmore Airport",
+    "gps_code": "FAWO",
+    "freq": "",
+    "Lat": -33.263301849365234,
+    "Lon": 23.4906005859375,
+    "Ele": 794.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Wavecrest Airport",
+    "gps_code": "FAWR",
+    "freq": "",
+    "Lat": -32.589906,
+    "Lon": 28.518491,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wesselbronn Af Airport",
+    "gps_code": "FAWS",
+    "freq": "",
+    "Lat": -27.84670066833496,
+    "Lon": 26.35059928894043,
+    "Ele": 1310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Winterveldt Mine Airport",
+    "gps_code": "FAWT",
+    "freq": "124.800",
+    "Lat": -24.660091,
+    "Lon": 30.180422,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "White River Mercy Air",
+    "gps_code": "FAWV",
+    "freq": "",
+    "Lat": -25.319676,
+    "Lon": 30.970782,
+    "Ele": 893.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ysterplaat Air Force Base",
+    "gps_code": "FAYP",
+    "freq": "119.700",
+    "Lat": -33.9002,
+    "Lon": 18.498301,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mazeppa Bay Airport",
+    "gps_code": "FAZP",
+    "freq": "",
+    "Lat": -32.472152,
+    "Lon": 28.65052,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Star Airport",
+    "gps_code": "FAZQ",
+    "freq": "",
+    "Lat": -26.89310073852539,
+    "Lon": 27.690000534057617,
+    "Ele": 1449.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zeerust Airport",
+    "gps_code": "FAZR",
+    "freq": "",
+    "Lat": -25.599001,
+    "Lon": 26.042299,
+    "Ele": 1297.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Motswari Airport",
+    "gps_code": "MWR",
+    "freq": "",
+    "Lat": -24.1903,
+    "Lon": 31.3864,
+    "Ele": 353.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Beulah Airport",
+    "gps_code": "ZA-0001",
+    "freq": "",
+    "Lat": -33.905277252197266,
+    "Lon": 24.95694351196289,
+    "Ele": 10.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Bhejane Game Reserve Airport",
+    "gps_code": "ZA-0002",
+    "freq": "",
+    "Lat": -33.1966667175293,
+    "Lon": 23.934667587280277,
+    "Ele": 577.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Koppies Airport",
+    "gps_code": "ZA-0003",
+    "freq": "",
+    "Lat": -27.25,
+    "Lon": 27.549999237060547,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brown's Landing Airport",
+    "gps_code": "ZA-0004",
+    "freq": "125.200",
+    "Lat": -32.69652,
+    "Lon": 28.321643,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Blanco Airport",
+    "gps_code": "ZA-0005",
+    "freq": "",
+    "Lat": -32.08333206176758,
+    "Lon": 26.299999237060547,
+    "Ele": 1280.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Brosterlea Farm Airport",
+    "gps_code": "ZA-0006",
+    "freq": "",
+    "Lat": -31.28333282470703,
+    "Lon": 26.56666755676269,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Philippolis Airport",
+    "gps_code": "ZA-0009",
+    "freq": "",
+    "Lat": -30.236791,
+    "Lon": 25.258439,
+    "Ele": 1431.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arbeitsgenot Airport",
+    "gps_code": "ZA-0010",
+    "freq": "",
+    "Lat": -28.73590087890625,
+    "Lon": 27.231800079345703,
+    "Ele": 1463.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brandfort Moreson Airport",
+    "gps_code": "ZA-0011",
+    "freq": "",
+    "Lat": -28.690399,
+    "Lon": 26.420799,
+    "Ele": 1416.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Arizona Airport",
+    "gps_code": "ZA-0012",
+    "freq": "",
+    "Lat": -28.453332901000977,
+    "Lon": 27.524999618530277,
+    "Ele": 1676.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Phuthadijhaba Airport",
+    "gps_code": "ZA-0013",
+    "freq": "",
+    "Lat": -28.406665802001957,
+    "Lon": 28.81083297729492,
+    "Ele": 1767.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sterkfontein Airport",
+    "gps_code": "ZA-0014",
+    "freq": "",
+    "Lat": -28.37680053710937,
+    "Lon": 29.006200790405277,
+    "Ele": 1670.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aldam Airport",
+    "gps_code": "ZA-0015",
+    "freq": "",
+    "Lat": -28.268888473510746,
+    "Lon": 27.1613883972168,
+    "Ele": 1556.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aero Farm Airport",
+    "gps_code": "ZA-0016",
+    "freq": "",
+    "Lat": -28.22361183166504,
+    "Lon": 29.115833282470703,
+    "Ele": 1700.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Alberta Airport",
+    "gps_code": "ZA-0017",
+    "freq": "",
+    "Lat": -27.984167098999023,
+    "Lon": 28.39444351196289,
+    "Ele": 1688.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bartsrus Airport",
+    "gps_code": "ZA-0018",
+    "freq": "",
+    "Lat": -27.96041679382324,
+    "Lon": 25.835832595825195,
+    "Ele": 1280.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Braehead Airport",
+    "gps_code": "ZA-0019",
+    "freq": "",
+    "Lat": -27.680500030517575,
+    "Lon": 27.25349998474121,
+    "Ele": 1310.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Anton Fourie Farm Airport",
+    "gps_code": "ZA-0020",
+    "freq": "",
+    "Lat": -27.5,
+    "Lon": 26.330554962158203,
+    "Ele": 1310.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Appleby Airport",
+    "gps_code": "ZA-0022",
+    "freq": "",
+    "Lat": -27.20133399963379,
+    "Lon": 26.903499603271484,
+    "Ele": 1310.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Villiers Airport",
+    "gps_code": "ZA-0023",
+    "freq": "",
+    "Lat": -27.049999237060547,
+    "Lon": 28.600000381469727,
+    "Ele": 1553.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Sun Valley Airfield",
+    "gps_code": "ZA-0024",
+    "freq": "",
+    "Lat": -26.033333,
+    "Lon": 27.9,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aero 57 Airport",
+    "gps_code": "ZA-0025",
+    "freq": "",
+    "Lat": -25.903165817260746,
+    "Lon": 28.082000732421875,
+    "Ele": 1554.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Blue Mountain Valley Airport",
+    "gps_code": "ZA-0026",
+    "freq": "",
+    "Lat": -25.857500076293945,
+    "Lon": 27.62777709960937,
+    "Ele": 1264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bronkhorstspruit Airport",
+    "gps_code": "ZA-0027",
+    "freq": "",
+    "Lat": -25.77138900756836,
+    "Lon": 28.72694396972656,
+    "Ele": 1463.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wakkerstroom Airport",
+    "gps_code": "ZA-0028",
+    "freq": "",
+    "Lat": -27.350000381469727,
+    "Lon": 30.166667938232425,
+    "Ele": 1782.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Amersfoort Airport",
+    "gps_code": "ZA-0029",
+    "freq": "",
+    "Lat": -27.020000457763672,
+    "Lon": 29.8700008392334,
+    "Ele": 1371.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Dasville Airport",
+    "gps_code": "ZA-0030",
+    "freq": "",
+    "Lat": -26.816668,
+    "Lon": 28.466667,
+    "Ele": 1600.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Evander Landing Strip Airport",
+    "gps_code": "ZA-0031",
+    "freq": "",
+    "Lat": -26.489999771118164,
+    "Lon": 29.07999992370605,
+    "Ele": 1611.8
+  },
+  {
+    "type": "small_airport",
+    "name": "New Scotland Airport",
+    "gps_code": "ZA-0032",
+    "freq": "",
+    "Lat": -26.299999237060547,
+    "Lon": 30.733333587646484,
+    "Ele": 1609.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Mooivlei Airport",
+    "gps_code": "ZA-0033",
+    "freq": "",
+    "Lat": -26.24799919128418,
+    "Lon": 29.71540069580078,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vanggatfontein Airport",
+    "gps_code": "ZA-0034",
+    "freq": "",
+    "Lat": -26.200001,
+    "Lon": 28.816668,
+    "Ele": 1554.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Blesbokfontain Airport",
+    "gps_code": "ZA-0035",
+    "freq": "",
+    "Lat": -26.17569923400879,
+    "Lon": 29.18219947814941,
+    "Ele": 1613.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Forel Airport",
+    "gps_code": "ZA-0036",
+    "freq": "",
+    "Lat": -25.950000762939453,
+    "Lon": 30.11666679382324,
+    "Ele": 1970.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Benics Airport",
+    "gps_code": "ZA-0037",
+    "freq": "",
+    "Lat": -25.8188991547,
+    "Lon": 29.2217006683,
+    "Ele": 1554.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hippo Pools Airport",
+    "gps_code": "ZA-0038",
+    "freq": "124.800",
+    "Lat": -24.1997222222,
+    "Lon": 30.8125,
+    "Ele": 349.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Blackie Swart Airport",
+    "gps_code": "ZA-0039",
+    "freq": "",
+    "Lat": -25.57550048828125,
+    "Lon": 30.975860595703125,
+    "Ele": 1005.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lavino Airport",
+    "gps_code": "ZA-0040",
+    "freq": "",
+    "Lat": -24.833334,
+    "Lon": 30.1,
+    "Ele": 777.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Londolozi Airstrip",
+    "gps_code": "ZA-0041",
+    "freq": "",
+    "Lat": -24.808094,
+    "Lon": 31.504564,
+    "Ele": 358.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Adamsfontein Airport",
+    "gps_code": "ZA-0042",
+    "freq": "",
+    "Lat": -30.580979,
+    "Lon": 25.263259,
+    "Ele": 1210.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bosluispan  Airport",
+    "gps_code": "ZA-0043",
+    "freq": "",
+    "Lat": -29.850276947021484,
+    "Lon": 18.96555519104004,
+    "Ele": 876.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bateleur Airport",
+    "gps_code": "ZA-0044",
+    "freq": "",
+    "Lat": -29.139166,
+    "Lon": 23.648333,
+    "Ele": 1026.6
+  },
+  {
+    "type": "small_airport",
+    "name": "John Weston Airport",
+    "gps_code": "ZA-0045",
+    "freq": "",
+    "Lat": -28.733333587646484,
+    "Lon": 24.66666603088379,
+    "Ele": 1199.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Schmidtsdrif Airport",
+    "gps_code": "ZA-0046",
+    "freq": "",
+    "Lat": -28.66666603088379,
+    "Lon": 24.03333282470703,
+    "Ele": 1026.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Augrabies Airport",
+    "gps_code": "ZA-0047",
+    "freq": "124.800",
+    "Lat": -28.627087,
+    "Lon": 20.324893,
+    "Ele": 670.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Barkly West Airport",
+    "gps_code": "ZA-0048",
+    "freq": "",
+    "Lat": -28.532047,
+    "Lon": 24.537843,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Baken Mine Airport",
+    "gps_code": "ZA-0049",
+    "freq": "",
+    "Lat": -28.40925025939941,
+    "Lon": 16.779722213745117,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bells Bank Airport",
+    "gps_code": "ZA-0051",
+    "freq": "",
+    "Lat": -28.104999542236328,
+    "Lon": 24.37833404541016,
+    "Ele": 1181.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dippiesfield Airport",
+    "gps_code": "ZA-0052",
+    "freq": "",
+    "Lat": -28.03222274780273,
+    "Lon": 23.202777862548828,
+    "Ele": 1371.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ganspan Airport",
+    "gps_code": "ZA-0053",
+    "freq": "",
+    "Lat": -27.94166755676269,
+    "Lon": 24.81999969482422,
+    "Ele": 1151.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Askham Airport",
+    "gps_code": "ZA-0054",
+    "freq": "",
+    "Lat": -26.9869441986,
+    "Lon": 20.7772216797,
+    "Ele": 853.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Barrange Airport",
+    "gps_code": "ZA-0055",
+    "freq": "",
+    "Lat": -26.125,
+    "Lon": 22.61888885498047,
+    "Ele": 1005.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Scottburg Airport",
+    "gps_code": "ZA-0056",
+    "freq": "",
+    "Lat": -30.28569984436035,
+    "Lon": 30.65690040588379,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Diamond Valley Airport",
+    "gps_code": "ZA-0057",
+    "freq": "",
+    "Lat": -30.27199935913086,
+    "Lon": 29.39739990234375,
+    "Ele": 1493.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Alverstone Airfield",
+    "gps_code": "ZA-0058",
+    "freq": "",
+    "Lat": -29.77972221374512,
+    "Lon": 30.718334197998047,
+    "Ele": 835.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Baynesfield Estate Airport",
+    "gps_code": "ZA-0059",
+    "freq": "",
+    "Lat": -29.761667251586918,
+    "Lon": 30.3397216796875,
+    "Ele": 844.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ballito Bay (Dolphin Coast) Airport",
+    "gps_code": "ZA-0060",
+    "freq": "",
+    "Lat": -29.488899,
+    "Lon": 31.179001,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Clan Airport",
+    "gps_code": "ZA-0061",
+    "freq": "",
+    "Lat": -29.354900360107425,
+    "Lon": 30.4281005859375,
+    "Ele": 664.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Amatikulu (Microlight) Airport",
+    "gps_code": "ZA-0062",
+    "freq": "",
+    "Lat": -29.098167419433597,
+    "Lon": 31.5049991607666,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Amphitheatre Lodge Airport",
+    "gps_code": "ZA-0063",
+    "freq": "",
+    "Lat": -28.639941,
+    "Lon": 29.147501,
+    "Ele": 1188.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Riverview Airport",
+    "gps_code": "ZA-0064",
+    "freq": "",
+    "Lat": -28.433332443237305,
+    "Lon": 32.150001525878906,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "St Lucia Estuary",
+    "gps_code": "ZA-0065",
+    "freq": "",
+    "Lat": -28.350000381469727,
+    "Lon": 32.41666793823242,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Battlefields Airport",
+    "gps_code": "ZA-0066",
+    "freq": "",
+    "Lat": -28.131526947021484,
+    "Lon": 30.290416717529297,
+    "Ele": 1231.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Jozini Airport",
+    "gps_code": "ZA-0067",
+    "freq": "",
+    "Lat": -27.350000381469727,
+    "Lon": 32.13333511352539,
+    "Ele": 108.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Bonwa Phala Airport",
+    "gps_code": "ZA-0068",
+    "freq": "",
+    "Lat": -24.886667251586918,
+    "Lon": 28.04722213745117,
+    "Ele": 1112.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Riverside Airport",
+    "gps_code": "ZA-0069",
+    "freq": "124.800",
+    "Lat": -25.428948,
+    "Lon": 31.577033,
+    "Ele": 312.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Batavia Airport",
+    "gps_code": "ZA-0070",
+    "freq": "",
+    "Lat": -24.668333053588867,
+    "Lon": 26.536666870117188,
+    "Ele": 973.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Blyde Canyon Airport",
+    "gps_code": "ZA-0071",
+    "freq": "",
+    "Lat": -24.57088,
+    "Lon": 30.77329,
+    "Ele": 1310.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanda Tula Airport",
+    "gps_code": "ZA-0072",
+    "freq": "",
+    "Lat": -24.525533,
+    "Lon": 31.289748,
+    "Ele": 474.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nederland Airport",
+    "gps_code": "ZA-0073",
+    "freq": "",
+    "Lat": -24.299759,
+    "Lon": 31.288934,
+    "Ele": 395.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Boulders Game Ranch Airport",
+    "gps_code": "ZA-0074",
+    "freq": "",
+    "Lat": -24.108055114746094,
+    "Lon": 30.90916633605957,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Boulders Game Ranch 2 (Microlight) Airport",
+    "gps_code": "ZA-0075",
+    "freq": "",
+    "Lat": -24.08666610717773,
+    "Lon": 30.843889236450195,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ranch Motel Airport",
+    "gps_code": "ZA-0076",
+    "freq": "",
+    "Lat": -24.041000366210938,
+    "Lon": 29.27589988708496,
+    "Ele": 1371.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Babala Lodge Airport",
+    "gps_code": "ZA-0077",
+    "freq": "",
+    "Lat": -23.328611373901367,
+    "Lon": 27.60961151123047,
+    "Ele": 823.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baltimore Airport",
+    "gps_code": "ZA-0078",
+    "freq": "",
+    "Lat": -23.257788,
+    "Lon": 28.408928,
+    "Ele": 976.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bergtop Airport",
+    "gps_code": "ZA-0079",
+    "freq": "",
+    "Lat": -22.917943954467773,
+    "Lon": 29.45783424377441,
+    "Ele": 798.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Swartwater Highway Strip Airport",
+    "gps_code": "ZA-0080",
+    "freq": "",
+    "Lat": -22.8395,
+    "Lon": 28.209708,
+    "Ele": 853.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Alldays (Greater Kuduland) Airport",
+    "gps_code": "ZA-0081",
+    "freq": "",
+    "Lat": -22.80380630493164,
+    "Lon": 28.995750427246094,
+    "Ele": 789.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Alldays Safaris Airport",
+    "gps_code": "ZA-0082",
+    "freq": "",
+    "Lat": -22.667200088500977,
+    "Lon": 29.315200805664062,
+    "Ele": 807.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Avarel Airport",
+    "gps_code": "ZA-0083",
+    "freq": "",
+    "Lat": -22.579599380493164,
+    "Lon": 29.968900680541992,
+    "Ele": 640.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mafeking North Airport",
+    "gps_code": "ZA-0085",
+    "freq": "",
+    "Lat": -25.79205703735352,
+    "Lon": 25.61103057861328,
+    "Ele": 1274.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aero Den Airport",
+    "gps_code": "ZA-0086",
+    "freq": "",
+    "Lat": -25.726667404174805,
+    "Lon": 27.739721298217773,
+    "Ele": 1234.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Botsalano Airport",
+    "gps_code": "ZA-0087",
+    "freq": "",
+    "Lat": -25.53333282470703,
+    "Lon": 25.733333587646484,
+    "Ele": 1420.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Beestekraal Airport",
+    "gps_code": "ZA-0088",
+    "freq": "",
+    "Lat": -25.299999237060547,
+    "Lon": 27.53333282470703,
+    "Ele": 975.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Lobatse Southeast Airport",
+    "gps_code": "ZA-0089",
+    "freq": "",
+    "Lat": -25.24620056152344,
+    "Lon": 25.88190078735352,
+    "Ele": 1140.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Assegaay Bosch Game Lodge Airport",
+    "gps_code": "ZA-0090",
+    "freq": "",
+    "Lat": -33.760250091552734,
+    "Lon": 21.54722213745117,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Altona Airport",
+    "gps_code": "ZA-0091",
+    "freq": "",
+    "Lat": -33.707637786865234,
+    "Lon": 18.646249771118164,
+    "Ele": 79.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Holrivier Airport",
+    "gps_code": "ZA-0092",
+    "freq": "",
+    "Lat": -31.56666755676269,
+    "Lon": 18.38333320617676,
+    "Ele": 68.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Britstown Airport",
+    "gps_code": "ZA-0093",
+    "freq": "",
+    "Lat": -30.58333396911621,
+    "Lon": 23.51666641235352,
+    "Ele": 1066.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hazyview Airport",
+    "gps_code": "ZA-0094",
+    "freq": "",
+    "Lat": -25.05010032653809,
+    "Lon": 31.13190078735352,
+    "Ele": 551.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Khoka Moya Airport",
+    "gps_code": "ZA-0095",
+    "freq": "",
+    "Lat": -24.593000411987305,
+    "Lon": 31.41510009765625,
+    "Ele": 438.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mkambati Airport",
+    "gps_code": "ZA-0096",
+    "freq": "",
+    "Lat": -31.2849,
+    "Lon": 29.9884,
+    "Ele": 170.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Inyati Airport",
+    "gps_code": "ZA-0097",
+    "freq": "",
+    "Lat": -24.777700424194336,
+    "Lon": 31.385499954223636,
+    "Ele": 379.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tshipise Airport",
+    "gps_code": "ZA-0098",
+    "freq": "",
+    "Lat": -22.61930084228516,
+    "Lon": 30.175600051879883,
+    "Ele": 544.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Holbank Airport",
+    "gps_code": "ZA-0099",
+    "freq": "",
+    "Lat": -26.57099914550781,
+    "Lon": 30.243000030517575,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bapsfontein Airport",
+    "gps_code": "ZA-0100",
+    "freq": "120.350",
+    "Lat": -25.991908,
+    "Lon": 28.415932,
+    "Ele": 1613.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sappi / Ngodwana",
+    "gps_code": "ZA-0101",
+    "freq": "",
+    "Lat": -25.58867835998535,
+    "Lon": 30.622364044189453,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kagga Kamma Airport",
+    "gps_code": "ZA-0104",
+    "freq": "",
+    "Lat": -32.732359,
+    "Lon": 19.540073,
+    "Ele": 1065.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviators Paradise Field",
+    "gps_code": "ZA-0105",
+    "freq": "124.800",
+    "Lat": -25.692875,
+    "Lon": 27.782657,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Benics Airport",
+    "gps_code": "ZA-0106",
+    "freq": "",
+    "Lat": -25.8188991547,
+    "Lon": 29.2217006683,
+    "Ele": 1554.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bethal Airport",
+    "gps_code": "ZA-0108",
+    "freq": "",
+    "Lat": -26.480902,
+    "Lon": 29.466671,
+    "Ele": 1668.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bloemhof Airport",
+    "gps_code": "ZA-0109",
+    "freq": "",
+    "Lat": -27.6094,
+    "Lon": 25.5794,
+    "Ele": 1257.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Panorama Airfield",
+    "gps_code": "ZA-0110",
+    "freq": "",
+    "Lat": -26.329316,
+    "Lon": 28.068469,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kudu Private Nature Reserve",
+    "gps_code": "ZA-0111",
+    "freq": "124.800",
+    "Lat": -24.995,
+    "Lon": 30.4033333333,
+    "Ele": 1396.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Inn Estate",
+    "gps_code": "ZA-0112",
+    "freq": "124.100",
+    "Lat": -25.9711496926,
+    "Lon": 28.3502766059,
+    "Ele": 1615.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sunset Shores Airfield",
+    "gps_code": "ZA-0113",
+    "freq": "124.800",
+    "Lat": -26.851201,
+    "Lon": 28.198428,
+    "Ele": 1510.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Zebula Airstrip",
+    "gps_code": "ZA-0114",
+    "freq": "124.800",
+    "Lat": -24.7567,
+    "Lon": 27.9691,
+    "Ele": 1282.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Knysna / High Way Airfield",
+    "gps_code": "ZA-0115",
+    "freq": "124.800",
+    "Lat": -33.950756,
+    "Lon": 22.979482,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pumba Airstrip",
+    "gps_code": "ZA-0116",
+    "freq": "",
+    "Lat": -33.391911,
+    "Lon": 26.346392,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Morningstar Airfield",
+    "gps_code": "ZA-0120",
+    "freq": "126.800",
+    "Lat": -33.758944,
+    "Lon": 18.548195,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Au Beep Flats Airport",
+    "gps_code": "ZA-0122",
+    "freq": "",
+    "Lat": -28.1081,
+    "Lon": 16.8936,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vanrhynsdorp Airport",
+    "gps_code": "ZA-0123",
+    "freq": "",
+    "Lat": -31.5943,
+    "Lon": 18.7468,
+    "Ele": 149.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Doringbaai Airstrip",
+    "gps_code": "ZA-0124",
+    "freq": "",
+    "Lat": -31.8057,
+    "Lon": 18.2384,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Papendorp Airport",
+    "gps_code": "ZA-0125",
+    "freq": "",
+    "Lat": -31.6736,
+    "Lon": 18.1737,
+    "Ele": 79.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Monosite Airfield",
+    "gps_code": "ZA-0126",
+    "freq": "",
+    "Lat": -31.1227,
+    "Lon": 18.6095,
+    "Ele": 286.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hondeklip Bay Airstrip",
+    "gps_code": "ZA-0129",
+    "freq": "",
+    "Lat": -30.3366,
+    "Lon": 17.2896,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Gamoep Airstrip",
+    "gps_code": "ZA-0130",
+    "freq": "",
+    "Lat": -29.9214,
+    "Lon": 18.4237,
+    "Ele": 957.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nababiep Airport",
+    "gps_code": "ZA-0131",
+    "freq": "",
+    "Lat": -29.524,
+    "Lon": 17.781,
+    "Ele": 862.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Buffels River Airport",
+    "gps_code": "ZA-0132",
+    "freq": "",
+    "Lat": -29.6265,
+    "Lon": 17.4522,
+    "Ele": 187.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Spektakel Airport",
+    "gps_code": "ZA-0133",
+    "freq": "",
+    "Lat": -29.6678,
+    "Lon": 17.6008,
+    "Ele": 187.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Annakop Airport",
+    "gps_code": "ZA-0134",
+    "freq": "",
+    "Lat": -29.1057,
+    "Lon": 19.0791,
+    "Ele": 770.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirstonia Airport",
+    "gps_code": "ZA-0136",
+    "freq": "",
+    "Lat": -25.4681,
+    "Lon": 23.6971,
+    "Ele": 1053.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Treverton College Airstrip",
+    "gps_code": "ZA-0137",
+    "freq": "",
+    "Lat": -29.1944,
+    "Lon": 30.0149,
+    "Ele": 1412.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Singita Safari Lodge Airport",
+    "gps_code": "ZA-0138",
+    "freq": "",
+    "Lat": -24.801985,
+    "Lon": 31.42194,
+    "Ele": 416.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tosca Airport",
+    "gps_code": "ZA-0139",
+    "freq": "",
+    "Lat": -25.875702,
+    "Lon": 23.962922,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Groblershoop Airport",
+    "gps_code": "ZA-0141",
+    "freq": "",
+    "Lat": -28.912138,
+    "Lon": 21.992947,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hopetown Airport",
+    "gps_code": "ZA-0142",
+    "freq": "",
+    "Lat": -29.630074,
+    "Lon": 24.095224,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Orania Airport",
+    "gps_code": "ZA-0143",
+    "freq": "",
+    "Lat": -29.816521,
+    "Lon": 24.394959,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Luckhof Airport",
+    "gps_code": "ZA-0144",
+    "freq": "",
+    "Lat": -29.737988,
+    "Lon": 24.780042,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jacobsdal Airport",
+    "gps_code": "ZA-0145",
+    "freq": "",
+    "Lat": -29.11701,
+    "Lon": 24.785856,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Griekwastad Airport",
+    "gps_code": "ZA-0146",
+    "freq": "",
+    "Lat": -28.832734,
+    "Lon": 23.27354,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lady Grey Golf Course Airstrip",
+    "gps_code": "ZA-0147",
+    "freq": "",
+    "Lat": -30.706581,
+    "Lon": 27.208231,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hanover Airport",
+    "gps_code": "ZA-0148",
+    "freq": "",
+    "Lat": -31.075719,
+    "Lon": 24.452623,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vosburg Airport",
+    "gps_code": "ZA-0149",
+    "freq": "",
+    "Lat": -30.588342,
+    "Lon": 22.894196,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Van Zylsrus Airport",
+    "gps_code": "ZA-0150",
+    "freq": "",
+    "Lat": -26.887344,
+    "Lon": 22.06304,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Leeukop Farm Airfield",
+    "gps_code": "ZA-0151",
+    "freq": "",
+    "Lat": -26.866842,
+    "Lon": 28.072443,
+    "Ele": 1510.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vaal Dam Airfield",
+    "gps_code": "ZA-0152",
+    "freq": "",
+    "Lat": -26.922516,
+    "Lon": 28.165097,
+    "Ele": 1524.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Elandspad Airfield",
+    "gps_code": "ZA-0153",
+    "freq": "",
+    "Lat": -34.433548,
+    "Lon": 20.722225,
+    "Ele": 89.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Shingwedzi Camp Airstrip",
+    "gps_code": "ZA-0154",
+    "freq": "",
+    "Lat": -23.114988,
+    "Lon": 31.427508,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Letaba Rest Camp Airstrip",
+    "gps_code": "ZA-0155",
+    "freq": "",
+    "Lat": -23.833534,
+    "Lon": 31.570522,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pafuri Camp Airstrip",
+    "gps_code": "ZA-0156",
+    "freq": "",
+    "Lat": -22.415096,
+    "Lon": 31.213011,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mutele-Masisi Airport",
+    "gps_code": "ZA-0157",
+    "freq": "",
+    "Lat": -22.507196,
+    "Lon": 30.891882,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "SKA SA Karoo Landing Strip",
+    "gps_code": "ZA-0159",
+    "freq": "",
+    "Lat": -30.6938,
+    "Lon": 21.4608,
+    "Ele": 1044.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Klipriver Airfield",
+    "gps_code": "ZA-0161",
+    "freq": "126.500",
+    "Lat": -26.475684,
+    "Lon": 28.111032,
+    "Ele": 1524.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bingelela",
+    "gps_code": "ZA-0162",
+    "freq": "124.800",
+    "Lat": -28.711116,
+    "Lon": 29.331242,
+    "Ele": 1137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalahari Oryx",
+    "gps_code": "ZA-0163",
+    "freq": "",
+    "Lat": -28.421977,
+    "Lon": 22.200966,
+    "Ele": 877.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vlakteplaas Airstrip",
+    "gps_code": "ZA-0164",
+    "freq": "",
+    "Lat": -33.969025,
+    "Lon": 24.939802,
+    "Ele": 65.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Manzengwenya Airstrip",
+    "gps_code": "ZA-0165",
+    "freq": "",
+    "Lat": -27.25942,
+    "Lon": 32.7522,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sodwana Airstrip",
+    "gps_code": "ZA-0166",
+    "freq": "",
+    "Lat": -27.56774,
+    "Lon": 32.65322,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lekoa Airstrip",
+    "gps_code": "ZA-0169",
+    "freq": "",
+    "Lat": -26.9457,
+    "Lon": 28.7136,
+    "Ele": 1549.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Scottburgh Airfield",
+    "gps_code": "ZA-0176",
+    "freq": "",
+    "Lat": -30.30557,
+    "Lon": 30.736022,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta Golf Airstrip",
+    "gps_code": "ZA-0177",
+    "freq": "",
+    "Lat": -30.773168,
+    "Lon": 30.423876,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "The Haven Airstrip",
+    "gps_code": "ZA-0179",
+    "freq": "",
+    "Lat": -32.242606,
+    "Lon": 28.910072,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Whats Landing Airport",
+    "gps_code": "ZA-0180",
+    "freq": "",
+    "Lat": -32.9019,
+    "Lon": 28.0491,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kwelega Road Airstrip",
+    "gps_code": "ZA-0181",
+    "freq": "",
+    "Lat": -32.905791,
+    "Lon": 28.039851,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wings Park Airfield",
+    "gps_code": "ZA-0182",
+    "freq": "",
+    "Lat": -32.8248,
+    "Lon": 27.83568,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mtwentwe Farm Airfield",
+    "gps_code": "ZA-0183",
+    "freq": "",
+    "Lat": -32.74585,
+    "Lon": 28.22815,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Haga Haga Airfield",
+    "gps_code": "ZA-0184",
+    "freq": "",
+    "Lat": -32.75634,
+    "Lon": 28.23044,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Seaview Airport",
+    "gps_code": "ZA-0185",
+    "freq": "",
+    "Lat": -34.0011,
+    "Lon": 25.3518,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stanley Island Airstrip",
+    "gps_code": "ZA-0186",
+    "freq": "",
+    "Lat": -34.0114,
+    "Lon": 23.3992,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dudley's Field",
+    "gps_code": "ZA-0187",
+    "freq": "",
+    "Lat": -34.0473,
+    "Lon": 23.3033,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bosrivier Airstrip",
+    "gps_code": "ZA-0188",
+    "freq": "",
+    "Lat": -34.0293,
+    "Lon": 23.2907,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Leppan Airfield",
+    "gps_code": "ZA-0189",
+    "freq": "",
+    "Lat": -33.939568,
+    "Lon": 22.66619,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bosbokduin Airstrip",
+    "gps_code": "ZA-0191",
+    "freq": "",
+    "Lat": -34.3956,
+    "Lon": 21.4017,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pearly Beach Airstrip",
+    "gps_code": "ZA-0192",
+    "freq": "",
+    "Lat": -34.6301,
+    "Lon": 19.4758,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Contermanskloof Airstrip",
+    "gps_code": "ZA-0195",
+    "freq": "",
+    "Lat": -33.8025,
+    "Lon": 18.5799,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lambert's Bay Airfield",
+    "gps_code": "ZA-0197",
+    "freq": "",
+    "Lat": -32.1018,
+    "Lon": 18.336,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Port Nolloth Airport",
+    "gps_code": "ZA-0199",
+    "freq": "",
+    "Lat": -29.235,
+    "Lon": 16.8728,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bierman Landgoed Airstrip",
+    "gps_code": "ZA-0216",
+    "freq": "",
+    "Lat": -26.9936,
+    "Lon": 28.3217,
+    "Ele": 1495.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jim Fouche Resort Airport",
+    "gps_code": "ZA-0217",
+    "freq": "",
+    "Lat": -27.0015,
+    "Lon": 28.3706,
+    "Ele": 1521.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tankwa International Airport",
+    "gps_code": "ZA-0218",
+    "freq": "",
+    "Lat": -32.334119,
+    "Lon": 19.753489,
+    "Ele": 315.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeropark Zyn Kraal",
+    "gps_code": "ZA-0219",
+    "freq": "",
+    "Lat": -25.902761,
+    "Lon": 28.5473,
+    "Ele": 1493.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Zilkaats Airstrip",
+    "gps_code": "ZA-0220",
+    "freq": "",
+    "Lat": -25.658442,
+    "Lon": 27.882507,
+    "Ele": 1213.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Belladona Airfield",
+    "gps_code": "ZA-0221",
+    "freq": "",
+    "Lat": -26.964755,
+    "Lon": 24.063159,
+    "Ele": 1349.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Buisfontein Airfield",
+    "gps_code": "ZA-0222",
+    "freq": "",
+    "Lat": -27.164519,
+    "Lon": 26.066372,
+    "Ele": 1453.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eagle Flight Academy Airfield",
+    "gps_code": "ZA-0223",
+    "freq": "",
+    "Lat": -27.796561,
+    "Lon": 24.973713,
+    "Ele": 1240.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Beefmaster Airfield",
+    "gps_code": "ZA-0224",
+    "freq": "",
+    "Lat": -27.820009,
+    "Lon": 25.220394,
+    "Ele": 1232.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Boscobel Airfield",
+    "gps_code": "ZA-0225",
+    "freq": "",
+    "Lat": -27.943429,
+    "Lon": 25.488965,
+    "Ele": 1285.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mawala Airstrip",
+    "gps_code": "ZA-0226",
+    "freq": "",
+    "Lat": -24.979776,
+    "Lon": 27.295747,
+    "Ele": 1040.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Satara (Singita Lebombo) Airport",
+    "gps_code": "ZA-0227",
+    "freq": "",
+    "Lat": -24.376984,
+    "Lon": 31.776495,
+    "Ele": 282.9
+  },
+  {
+    "type": "small_airport",
+    "name": "De Hoop Nature Reserve Airstrip",
+    "gps_code": "ZA-0228",
+    "freq": "",
+    "Lat": -34.454359,
+    "Lon": 20.417855,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Glendower Farm",
+    "gps_code": "ZA-0229",
+    "freq": "",
+    "Lat": -30.5978,
+    "Lon": 29.396,
+    "Ele": 1310.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Madikwe West Airport",
+    "gps_code": "ZA-0230",
+    "freq": "",
+    "Lat": -24.8231,
+    "Lon": 26.2236,
+    "Ele": 1111.3
+  },
+  {
+    "type": "small_airport",
+    "name": "SHAMWARI",
+    "gps_code": "ZA-0231",
+    "freq": "130.350",
+    "Lat": -33.457012,
+    "Lon": 26.051448,
+    "Ele": 211.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Welgevonden Western Airstrip",
+    "gps_code": "ZA-0232",
+    "freq": "",
+    "Lat": -24.286108,
+    "Lon": 27.786655,
+    "Ele": 1341.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Marataba Airport",
+    "gps_code": "ZA-0233",
+    "freq": "",
+    "Lat": -24.2408,
+    "Lon": 27.4908,
+    "Ele": 979.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ndlopfu Airfield",
+    "gps_code": "ZA-0234",
+    "freq": "",
+    "Lat": -24.1734,
+    "Lon": 31.3278,
+    "Ele": 344.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Palala Airfield",
+    "gps_code": "ZA-0235",
+    "freq": "",
+    "Lat": -23.1048,
+    "Lon": 27.879868,
+    "Ele": 798.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sanbona Wildlife Reserve Airfield",
+    "gps_code": "ZA-0238",
+    "freq": "",
+    "Lat": -33.7233,
+    "Lon": 20.615,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nambiti Airfield",
+    "gps_code": "ZA-0239",
+    "freq": "",
+    "Lat": -28.4628,
+    "Lon": 29.9682,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kwande Airstrip",
+    "gps_code": "ZA-0240",
+    "freq": "",
+    "Lat": -33.133964,
+    "Lon": 26.581936,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tutwa Airfield",
+    "gps_code": "ZA-0248",
+    "freq": "",
+    "Lat": -28.5967,
+    "Lon": 19.8414,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Glen Lyon Farm Airstrip",
+    "gps_code": "ZA-0249",
+    "freq": "",
+    "Lat": -28.812247,
+    "Lon": 22.383753,
+    "Ele": 1109.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Cape Blue Mine Airport",
+    "gps_code": "ZA-0252",
+    "freq": "",
+    "Lat": -29.334946,
+    "Lon": 22.264621,
+    "Ele": 929.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Glenside Airfield",
+    "gps_code": "ZA-0253",
+    "freq": "",
+    "Lat": -28.886091,
+    "Lon": 29.537859,
+    "Ele": 1072.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Auchas Airport",
+    "gps_code": "ZA-0254",
+    "freq": "",
+    "Lat": -28.33486,
+    "Lon": 16.79609,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grasdrif Airport",
+    "gps_code": "ZA-0255",
+    "freq": "",
+    "Lat": -28.38971,
+    "Lon": 17.40487,
+    "Ele": 125.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Onseepkans Airport",
+    "gps_code": "ZA-0256",
+    "freq": "",
+    "Lat": -28.75211,
+    "Lon": 19.32742,
+    "Ele": 440.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Southern Farms Airport",
+    "gps_code": "ZA-0257",
+    "freq": "",
+    "Lat": -28.54625,
+    "Lon": 19.71493,
+    "Ele": 533.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Augrabies South Airport",
+    "gps_code": "ZA-0258",
+    "freq": "",
+    "Lat": -28.64383,
+    "Lon": 20.30865,
+    "Ele": 688.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bakenrant Boerdery Airport",
+    "gps_code": "ZA-0259",
+    "freq": "",
+    "Lat": -28.62423,
+    "Lon": 20.44023,
+    "Ele": 672.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bakenrant North Airport",
+    "gps_code": "ZA-0260",
+    "freq": "",
+    "Lat": -28.62141,
+    "Lon": 20.45135,
+    "Ele": 684.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakamas West Airport",
+    "gps_code": "ZA-0261",
+    "freq": "",
+    "Lat": -28.76598,
+    "Lon": 20.57473,
+    "Ele": 677.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vaalkoppies Settlement Airport",
+    "gps_code": "ZA-0262",
+    "freq": "",
+    "Lat": -28.44628,
+    "Lon": 21.34287,
+    "Ele": 833.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Namakwari Safaris Airport",
+    "gps_code": "ZA-0263",
+    "freq": "",
+    "Lat": -28.54937,
+    "Lon": 21.79037,
+    "Ele": 855.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Skerpioenpunt Airport",
+    "gps_code": "ZA-0264",
+    "freq": "",
+    "Lat": -28.86887,
+    "Lon": 22.10493,
+    "Ele": 890.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mountain View Estate Airfield",
+    "gps_code": "ZA-0265",
+    "freq": "",
+    "Lat": -25.86641,
+    "Lon": 27.87726,
+    "Ele": 1442.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zilverstroom Farm Airport",
+    "gps_code": "ZA-0266",
+    "freq": "",
+    "Lat": -29.55615,
+    "Lon": 22.89679,
+    "Ele": 954.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bo Karoo South Airport",
+    "gps_code": "ZA-0267",
+    "freq": "",
+    "Lat": -29.33704,
+    "Lon": 23.17968,
+    "Ele": 979.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Higgs Hope Airport",
+    "gps_code": "ZA-0268",
+    "freq": "",
+    "Lat": -29.30453,
+    "Lon": 23.28233,
+    "Ele": 1024.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Bo Karoo North Airport",
+    "gps_code": "ZA-0269",
+    "freq": "",
+    "Lat": -29.26596,
+    "Lon": 23.20544,
+    "Ele": 1064.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Siyancuma West Airport",
+    "gps_code": "ZA-0270",
+    "freq": "",
+    "Lat": -29.19451,
+    "Lon": 23.34394,
+    "Ele": 999.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Siyancuma West 2 Airport",
+    "gps_code": "ZA-0271",
+    "freq": "",
+    "Lat": -29.22365,
+    "Lon": 23.48078,
+    "Ele": 994.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Siyancuma West 3 Airport",
+    "gps_code": "ZA-0272",
+    "freq": "",
+    "Lat": -29.18871,
+    "Lon": 23.55848,
+    "Ele": 1003.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bucklands Airport",
+    "gps_code": "ZA-0274",
+    "freq": "",
+    "Lat": -29.09647,
+    "Lon": 23.73104,
+    "Ele": 1012.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Douglas North Airport",
+    "gps_code": "ZA-0275",
+    "freq": "",
+    "Lat": -28.96775,
+    "Lon": 23.76557,
+    "Ele": 1050.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Witfontein Airport",
+    "gps_code": "ZA-0276",
+    "freq": "",
+    "Lat": -29.27692,
+    "Lon": 23.90523,
+    "Ele": 1072.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Klipkraal Airport",
+    "gps_code": "ZA-0277",
+    "freq": "",
+    "Lat": -29.58183,
+    "Lon": 24.14208,
+    "Ele": 1082.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tzamenkomst Airport",
+    "gps_code": "ZA-0278",
+    "freq": "",
+    "Lat": -30.59866,
+    "Lon": 25.30819,
+    "Ele": 1234.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Orange River Lodge Airport",
+    "gps_code": "ZA-0279",
+    "freq": "",
+    "Lat": -30.58907,
+    "Lon": 25.37353,
+    "Ele": 1237.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Corbetts Hope Airport",
+    "gps_code": "ZA-0280",
+    "freq": "",
+    "Lat": -30.62622,
+    "Lon": 26.34493,
+    "Ele": 1328.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Braklaagte East Airport",
+    "gps_code": "ZA-0281",
+    "freq": "",
+    "Lat": -30.59828,
+    "Lon": 26.94294,
+    "Ele": 1417.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mayaputi Game Reserve Airport",
+    "gps_code": "ZA-0282",
+    "freq": "",
+    "Lat": -30.42799,
+    "Lon": 27.31309,
+    "Ele": 1547.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Douglas Northeast Airport",
+    "gps_code": "ZA-0283",
+    "freq": "",
+    "Lat": -28.92598,
+    "Lon": 23.94547,
+    "Ele": 1008.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Farm Romance Airport",
+    "gps_code": "ZA-0284",
+    "freq": "",
+    "Lat": -28.4931,
+    "Lon": 24.67943,
+    "Ele": 1118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Holpan Airport",
+    "gps_code": "ZA-0285",
+    "freq": "",
+    "Lat": -28.38082,
+    "Lon": 24.60613,
+    "Ele": 1160.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Almar Exclusive Game Ranch Airport",
+    "gps_code": "ZA-0286",
+    "freq": "",
+    "Lat": -27.59869,
+    "Lon": 25.3439,
+    "Ele": 1264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Louwilla Lodge Airport",
+    "gps_code": "ZA-0287",
+    "freq": "",
+    "Lat": -27.58119,
+    "Lon": 25.32355,
+    "Ele": 1280.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Belle Rive Airport",
+    "gps_code": "ZA-0288",
+    "freq": "",
+    "Lat": -27.96792,
+    "Lon": 25.13416,
+    "Ele": 1219.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Balkfontein Airport",
+    "gps_code": "ZA-0289",
+    "freq": "",
+    "Lat": -27.41043,
+    "Lon": 26.46573,
+    "Ele": 1277.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Afrikaanse Hengel Vereeniging (Afrikaans Fishing Association) Airport",
+    "gps_code": "ZA-0293",
+    "freq": "",
+    "Lat": -26.93936,
+    "Lon": 28.32789,
+    "Ele": 1487.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Grootbraai Airport",
+    "gps_code": "ZA-0294",
+    "freq": "",
+    "Lat": -27.03587,
+    "Lon": 28.65938,
+    "Ele": 1528.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Twee Rivieren Airport",
+    "gps_code": "ZA-0296",
+    "freq": "",
+    "Lat": -26.44869,
+    "Lon": 20.60723,
+    "Ele": 894.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Madikwe East Airport",
+    "gps_code": "ZA-0297",
+    "freq": "",
+    "Lat": -24.733331,
+    "Lon": 26.40642,
+    "Ele": 942.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Umbabat Aero Camp Airfield",
+    "gps_code": "ZA-0298",
+    "freq": "",
+    "Lat": -24.5255,
+    "Lon": 31.1197,
+    "Ele": 577.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sandringham Farm Airstrip",
+    "gps_code": "ZA-0299",
+    "freq": "",
+    "Lat": -24.540155,
+    "Lon": 31.206096,
+    "Ele": 480.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sirkel N Airport",
+    "gps_code": "ZA-0300",
+    "freq": "",
+    "Lat": -23.20183,
+    "Lon": 28.48575,
+    "Ele": 933.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kokomori Airport",
+    "gps_code": "ZA-0301",
+    "freq": "",
+    "Lat": -23.08269,
+    "Lon": 27.90621,
+    "Ele": 784.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fort D'Acre Reserve Airport",
+    "gps_code": "ZA-0303",
+    "freq": "",
+    "Lat": -33.49369,
+    "Lon": 27.11207,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Regyne Protea Farm Airport",
+    "gps_code": "ZA-0305",
+    "freq": "",
+    "Lat": -34.0327,
+    "Lon": 24.2207,
+    "Ele": 205.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cannon Valley Estate Airport",
+    "gps_code": "ZA-0306",
+    "freq": "",
+    "Lat": -34.32444,
+    "Lon": 21.89169,
+    "Ele": 18.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bredasdorp Airport",
+    "gps_code": "ZA-0307",
+    "freq": "",
+    "Lat": -34.54802,
+    "Lon": 20.08476,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Modderrivier Airport",
+    "gps_code": "ZA-0308",
+    "freq": "",
+    "Lat": -29.01958,
+    "Lon": 24.6535,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mokala Airport",
+    "gps_code": "ZA-0309",
+    "freq": "",
+    "Lat": -29.17329,
+    "Lon": 24.26292,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Valencia Private Airstrip",
+    "gps_code": "ZA-0310",
+    "freq": "",
+    "Lat": -29.02745,
+    "Lon": 26.0948,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dorchester Farm Airport",
+    "gps_code": "ZA-0314",
+    "freq": "",
+    "Lat": -25.47443,
+    "Lon": 23.74773,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bray East Airport",
+    "gps_code": "ZA-0315",
+    "freq": "",
+    "Lat": -25.47992,
+    "Lon": 23.73199,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Himeville Airfield",
+    "gps_code": "ZA-0316",
+    "freq": "",
+    "Lat": -29.74906,
+    "Lon": 29.50408,
+    "Ele": 1630.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Eagles Creek Aviation Estate Airport",
+    "gps_code": "ZA-0317",
+    "freq": "",
+    "Lat": -25.907632,
+    "Lon": 28.035825,
+    "Ele": 1475.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Grasslands Airfield",
+    "gps_code": "ZA-0320",
+    "freq": "",
+    "Lat": -25.828611,
+    "Lon": 28.092778,
+    "Ele": 1389.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Black Oystercatcher",
+    "gps_code": "ZA-0321",
+    "freq": "",
+    "Lat": -34.631111,
+    "Lon": 19.8275,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Alkantpan Test Range Airport",
+    "gps_code": "ZA-0324",
+    "freq": "",
+    "Lat": -29.933201,
+    "Lon": 22.265741,
+    "Ele": 1075.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Farm Grootfontein Airfield",
+    "gps_code": "ZA-0326",
+    "freq": "",
+    "Lat": -29.192692,
+    "Lon": 24.739475,
+    "Ele": 1158.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Alkantpan Copper Airport",
+    "gps_code": "ZA-0338",
+    "freq": "",
+    "Lat": -29.906401,
+    "Lon": 22.3167,
+    "Ele": 1093.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Arnot Power Station Airport",
+    "gps_code": "ZA-0339",
+    "freq": "",
+    "Lat": -25.941099,
+    "Lon": 29.810301,
+    "Ele": 1705.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Baragwanath Airfield",
+    "gps_code": "ZA-0340",
+    "freq": "122.600",
+    "Lat": -26.348697,
+    "Lon": 27.779546,
+    "Ele": 1652.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunnottar Airfield",
+    "gps_code": "ZA-0341",
+    "freq": "",
+    "Lat": -26.3543156175,
+    "Lon": 28.466791153,
+    "Ele": 1597.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Gravelotte Mine Airstrip",
+    "gps_code": "ZA-0342",
+    "freq": "",
+    "Lat": -23.95812,
+    "Lon": 30.64612,
+    "Ele": 556.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Selati Airstrip",
+    "gps_code": "ZA-0343",
+    "freq": "",
+    "Lat": -24.01165,
+    "Lon": 30.68418,
+    "Ele": 506.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mica Village Airstrip",
+    "gps_code": "ZA-0344",
+    "freq": "",
+    "Lat": -24.15865,
+    "Lon": 30.83891,
+    "Ele": 452.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Garonga Airstrip",
+    "gps_code": "ZA-0345",
+    "freq": "",
+    "Lat": -24.09922,
+    "Lon": 30.71658,
+    "Ele": 480.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Askari Airstrip",
+    "gps_code": "ZA-0346",
+    "freq": "",
+    "Lat": -24.08148,
+    "Lon": 30.57187,
+    "Ele": 480.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wild Rivers Airfield",
+    "gps_code": "ZA-0347",
+    "freq": "",
+    "Lat": -24.27446,
+    "Lon": 30.8896,
+    "Ele": 499.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Silver Creek Gorge Estate Airfield",
+    "gps_code": "ZA-0349",
+    "freq": "",
+    "Lat": -25.801109,
+    "Lon": 27.515409,
+    "Ele": 1327.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingwelala",
+    "gps_code": "ZA-0350",
+    "freq": "",
+    "Lat": -24.16212,
+    "Lon": 31.39501,
+    "Ele": 338.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koingnaas Airport",
+    "gps_code": "ZA-KIG",
+    "freq": "",
+    "Lat": -30.187136,
+    "Lon": 17.282706,
+    "Ele": 69.5
+  }
+]

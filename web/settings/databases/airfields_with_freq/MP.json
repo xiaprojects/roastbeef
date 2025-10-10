@@ -1,0 +1,38 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Rota International Airport",
+    "gps_code": "PGRO",
+    "freq": "118.700",
+    "Lat": 14.1743,
+    "Lon": 145.242996,
+    "Ele": 185.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saipan International Airport",
+    "gps_code": "PGSN",
+    "freq": "127.200",
+    "Lat": 15.119,
+    "Lon": 145.729004,
+    "Ele": 65.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tinian International Airport",
+    "gps_code": "PGWT",
+    "freq": "118.400",
+    "Lat": 14.998101,
+    "Lon": 145.61923,
+    "Ele": 82.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Pagan Airstrip",
+    "gps_code": "TT01",
+    "freq": "",
+    "Lat": 18.12317,
+    "Lon": 145.763347,
+    "Ele": 10.4
+  }
+]

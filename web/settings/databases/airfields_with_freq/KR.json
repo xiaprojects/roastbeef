@@ -1,0 +1,830 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Jukbyeon Emergency Airstrip",
+    "gps_code": "KR-0011",
+    "freq": "",
+    "Lat": 37.059527,
+    "Lon": 129.409289,
+    "Ele": 50.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Yeongam Airport",
+    "gps_code": "KR-0017",
+    "freq": "",
+    "Lat": 34.695967,
+    "Lon": 126.519542,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alddreu Airfield (K-40) (Cheju-do No. 2)",
+    "gps_code": "KR-0041",
+    "freq": "",
+    "Lat": 33.203935,
+    "Lon": 126.271319,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Imdang-ri Airfield",
+    "gps_code": "KR-0199",
+    "freq": "",
+    "Lat": 38.19605,
+    "Lon": 128.041942,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "G-321 Airfield",
+    "gps_code": "KR-0207",
+    "freq": "",
+    "Lat": 38.268966,
+    "Lon": 127.55613,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chodang University Sani Airport (Yeongnong Airport)",
+    "gps_code": "KR-0257",
+    "freq": "",
+    "Lat": 34.62773,
+    "Lon": 126.42019,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Jeju  ROK Naval Air Facility",
+    "gps_code": "KR-0285",
+    "freq": "",
+    "Lat": 33.510775,
+    "Lon": 126.49913,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sky Nuri Flight School Airstrip",
+    "gps_code": "KR-0299",
+    "freq": "",
+    "Lat": 37.10731,
+    "Lon": 126.7644,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gyeryongdae Emergency Airfield",
+    "gps_code": "KR-0331",
+    "freq": "",
+    "Lat": 36.31421,
+    "Lon": 127.2343,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yeongju Emergency Runway Airfield",
+    "gps_code": "KR-0611",
+    "freq": "",
+    "Lat": 36.837592,
+    "Lon": 128.579607,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Namji Emergency Airfield",
+    "gps_code": "KR-0621",
+    "freq": "",
+    "Lat": 35.42819,
+    "Lon": 128.510084,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jinhae Naval Academy Airfield",
+    "gps_code": "KR-1054",
+    "freq": "",
+    "Lat": 35.12858,
+    "Lon": 128.66355,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Goheung Airport",
+    "gps_code": "KR-1055",
+    "freq": "",
+    "Lat": 34.61128,
+    "Lon": 127.20563,
+    "Ele": 0.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Jeonju Airfield",
+    "gps_code": "KR-1056",
+    "freq": "",
+    "Lat": 35.88025,
+    "Lon": 127.01474,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "SL Air Airstrip",
+    "gps_code": "KR-1057",
+    "freq": "",
+    "Lat": 35.45041,
+    "Lon": 127.43346,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hwangryong Airport",
+    "gps_code": "KR-1058",
+    "freq": "",
+    "Lat": 35.27741,
+    "Lon": 126.75491,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pocheon (G-217) Airport",
+    "gps_code": "QJP",
+    "freq": "120.500",
+    "Lat": 37.864555,
+    "Lon": 127.176633,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yanggu (G-404) Airport",
+    "gps_code": "RK13",
+    "freq": "120.000",
+    "Lat": 38.086574,
+    "Lon": 127.986817,
+    "Ele": 199.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Idong Airport (G-231)",
+    "gps_code": "RK14",
+    "freq": "35.000",
+    "Lat": 38.0266,
+    "Lon": 127.366997,
+    "Ele": 141.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ji Po Ri Airfield (G-237)",
+    "gps_code": "RK15",
+    "freq": "38.000",
+    "Lat": 38.155043,
+    "Lon": 127.314076,
+    "Ele": 155.4
+  },
+  {
+    "type": "small_airport",
+    "name": "G-312 Airport",
+    "gps_code": "RK16",
+    "freq": "32.300",
+    "Lat": 38.075739,
+    "Lon": 127.521122,
+    "Ele": 260.6
+  },
+  {
+    "type": "small_airport",
+    "name": "G-406 Airport",
+    "gps_code": "RK17",
+    "freq": "32.300",
+    "Lat": 38.139645,
+    "Lon": 128.009123,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "G 233 Airport",
+    "gps_code": "RK18",
+    "freq": "138.000",
+    "Lat": 38.083162,
+    "Lon": 127.269037,
+    "Ele": 103.6
+  },
+  {
+    "type": "small_airport",
+    "name": "G-314 Airport",
+    "gps_code": "RK19",
+    "freq": "32.300",
+    "Lat": 38.139884,
+    "Lon": 127.740111,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "G-413 Airport",
+    "gps_code": "RK21",
+    "freq": "32.300",
+    "Lat": 38.382541,
+    "Lon": 128.458071,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "G-313 Airport",
+    "gps_code": "RK22",
+    "freq": "36.900",
+    "Lat": 38.120023,
+    "Lon": 127.686067,
+    "Ele": 140.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tongjin Airfield - G-107 / N-225",
+    "gps_code": "RK25",
+    "freq": "",
+    "Lat": 37.715159,
+    "Lon": 126.560086,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "G-218 Airport",
+    "gps_code": "RK27",
+    "freq": "122.700",
+    "Lat": 37.895023,
+    "Lon": 126.970518,
+    "Ele": 116.1
+  },
+  {
+    "type": "small_airport",
+    "name": "G-219 Airport",
+    "gps_code": "RK28",
+    "freq": "35.000",
+    "Lat": 37.90939,
+    "Lon": 127.008455,
+    "Ele": 96.6
+  },
+  {
+    "type": "small_airport",
+    "name": "G-307 Airport",
+    "gps_code": "RK31",
+    "freq": "32.300",
+    "Lat": 37.929528,
+    "Lon": 127.75737,
+    "Ele": 82.3
+  },
+  {
+    "type": "small_airport",
+    "name": "G-420 Airport",
+    "gps_code": "RK32",
+    "freq": "32.300",
+    "Lat": 37.956177,
+    "Lon": 128.31645,
+    "Ele": 289.9
+  },
+  {
+    "type": "small_airport",
+    "name": "G-418 Airport",
+    "gps_code": "RK33",
+    "freq": "",
+    "Lat": 37.344616,
+    "Lon": 128.384085,
+    "Ele": 289.0
+  },
+  {
+    "type": "small_airport",
+    "name": "G 417 Airport",
+    "gps_code": "RK34",
+    "freq": "",
+    "Lat": 37.650036,
+    "Lon": 128.569608,
+    "Ele": 541.9
+  },
+  {
+    "type": "small_airport",
+    "name": "G 238 Airport",
+    "gps_code": "RK36",
+    "freq": "",
+    "Lat": 38.176646,
+    "Lon": 127.102139,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Baekui-ri (G-228) Airfield",
+    "gps_code": "RK38",
+    "freq": "",
+    "Lat": 38.028949,
+    "Lon": 127.141585,
+    "Ele": 71.3
+  },
+  {
+    "type": "small_airport",
+    "name": "G-240 Airport",
+    "gps_code": "RK40",
+    "freq": "",
+    "Lat": 38.248814,
+    "Lon": 127.378267,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "G-317 Airport",
+    "gps_code": "RK41",
+    "freq": "36.900",
+    "Lat": 38.2163,
+    "Lon": 127.656612,
+    "Ele": 228.6
+  },
+  {
+    "type": "small_airport",
+    "name": "G-311 Airport",
+    "gps_code": "RK42",
+    "freq": "32.300",
+    "Lat": 38.055851,
+    "Lon": 127.797384,
+    "Ele": 179.8
+  },
+  {
+    "type": "small_airport",
+    "name": "G-414 Airport",
+    "gps_code": "RK43",
+    "freq": "",
+    "Lat": 38.106192,
+    "Lon": 128.201002,
+    "Ele": 209.7
+  },
+  {
+    "type": "small_airport",
+    "name": "G-412 Airport",
+    "gps_code": "RK44",
+    "freq": "",
+    "Lat": 38.239776,
+    "Lon": 128.208289,
+    "Ele": 289.6
+  },
+  {
+    "type": "small_airport",
+    "name": "G-419 Airport",
+    "gps_code": "RK48",
+    "freq": "29.600",
+    "Lat": 37.703154,
+    "Lon": 127.904613,
+    "Ele": 137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "G 530 Airport",
+    "gps_code": "RK49",
+    "freq": "",
+    "Lat": 36.756523,
+    "Lon": 126.32886,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "G 526 Airport",
+    "gps_code": "RK50",
+    "freq": "",
+    "Lat": 36.588163,
+    "Lon": 126.658406,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "G 532 Airport",
+    "gps_code": "RK51",
+    "freq": "",
+    "Lat": 36.541607,
+    "Lon": 127.285833,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yongin (G-501) Airport",
+    "gps_code": "RK52",
+    "freq": "38.600",
+    "Lat": 37.286747,
+    "Lon": 127.225446,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "G 712 Airport",
+    "gps_code": "RK60",
+    "freq": "",
+    "Lat": 35.306607,
+    "Lon": 126.494962,
+    "Ele": 20.4
+  },
+  {
+    "type": "small_airport",
+    "name": "G 710 Airport",
+    "gps_code": "RK6D",
+    "freq": "",
+    "Lat": 35.342098,
+    "Lon": 127.029999,
+    "Ele": 52.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Jecheon (G-605) Airport",
+    "gps_code": "RK6O",
+    "freq": "",
+    "Lat": 37.16283,
+    "Lon": 128.219247,
+    "Ele": 281.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nogok-ri Airfield (G-130)",
+    "gps_code": "RK6X",
+    "freq": "",
+    "Lat": 37.993567,
+    "Lon": 126.919169,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "G-405 Airport",
+    "gps_code": "RK82",
+    "freq": "30.400",
+    "Lat": 38.119736,
+    "Lon": 128.040247,
+    "Ele": 219.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Namji",
+    "gps_code": "RKCH",
+    "freq": "",
+    "Lat": 35.429275,
+    "Lon": 128.510378,
+    "Ele": 7.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Muan International Airport",
+    "gps_code": "RKJB",
+    "freq": "",
+    "Lat": 34.991406,
+    "Lon": 126.382814,
+    "Ele": 10.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gwangju Airport",
+    "gps_code": "RKJJ",
+    "freq": "130.000",
+    "Lat": 35.123173,
+    "Lon": 126.805444,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gunsan Airport / Gunsan Air Base",
+    "gps_code": "RKJK",
+    "freq": "120.000",
+    "Lat": 35.903801,
+    "Lon": 126.615997,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mokpo Air Base",
+    "gps_code": "RKJM",
+    "freq": "130.000",
+    "Lat": 34.758979,
+    "Lon": 126.380324,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jeonju (G 703) Air Base",
+    "gps_code": "RKJU",
+    "freq": "120.000",
+    "Lat": 35.878289,
+    "Lon": 127.11894,
+    "Ele": 29.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yeosu Airport",
+    "gps_code": "RKJY",
+    "freq": "135.400",
+    "Lat": 34.84230041503906,
+    "Lon": 127.61699676513672,
+    "Ele": 16.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gangneung Airport (K-18)",
+    "gps_code": "RKNN",
+    "freq": "124.600",
+    "Lat": 37.753601,
+    "Lon": 128.943915,
+    "Ele": 10.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wonju Airport / Hoengseong Air Base (K-38/K-46)",
+    "gps_code": "RKNW",
+    "freq": "120.000",
+    "Lat": 37.437113,
+    "Lon": 127.960051,
+    "Ele": 100.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yangyang International Airport",
+    "gps_code": "RKNY",
+    "freq": "124.600",
+    "Lat": 38.061298,
+    "Lon": 128.669006,
+    "Ele": 73.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Jeju International Airport",
+    "gps_code": "RKPC",
+    "freq": "119.000",
+    "Lat": 33.512058,
+    "Lon": 126.492548,
+    "Ele": 36.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jeongseok Airport",
+    "gps_code": "RKPD",
+    "freq": "119.000",
+    "Lat": 33.3996009827,
+    "Lon": 126.711997986,
+    "Ele": 356.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jinhae Air Base",
+    "gps_code": "RKPE",
+    "freq": "120.000",
+    "Lat": 35.140248,
+    "Lon": 128.696229,
+    "Ele": 2.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Gimhae International Airport",
+    "gps_code": "RKPK",
+    "freq": "120.000",
+    "Lat": 35.179501,
+    "Lon": 128.938004,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sacheon Airport / Sacheon Air Base",
+    "gps_code": "RKPS",
+    "freq": "120.000",
+    "Lat": 35.088591,
+    "Lon": 128.071747,
+    "Ele": 7.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ulsan Airport",
+    "gps_code": "RKPU",
+    "freq": "120.000",
+    "Lat": 35.59349823,
+    "Lon": 129.352005005,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ganap-ri (G-222) Airport",
+    "gps_code": "RKRA",
+    "freq": "120.000",
+    "Lat": 37.830057,
+    "Lon": 126.99013,
+    "Ele": 87.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bucheon (G-103) Airfield",
+    "gps_code": "RKRB",
+    "freq": "120.800",
+    "Lat": 37.474918,
+    "Lon": 126.747272,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Yangpyeong (G-301) Airport",
+    "gps_code": "RKRG",
+    "freq": "38.000",
+    "Lat": 37.501169,
+    "Lon": 127.630212,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "G-213 Airport",
+    "gps_code": "RKRK",
+    "freq": "38.000",
+    "Lat": 37.812818,
+    "Lon": 127.357106,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Icheon (G-510) Airfield",
+    "gps_code": "RKRN",
+    "freq": "127.900",
+    "Lat": 37.200715,
+    "Lon": 127.469215,
+    "Ele": 77.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Paju (G-110) Airport",
+    "gps_code": "RKRP",
+    "freq": "36.900",
+    "Lat": 37.763489,
+    "Lon": 126.792548,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Susaek (G 113) Airport",
+    "gps_code": "RKRS",
+    "freq": "",
+    "Lat": 37.600539,
+    "Lon": 126.869516,
+    "Ele": 19.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Camp Humphreys (A-511) Desiderio Army Airfield",
+    "gps_code": "RKSG",
+    "freq": "127.900",
+    "Lat": 36.962363,
+    "Lon": 127.031126,
+    "Ele": 15.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Incheon International Airport",
+    "gps_code": "RKSI",
+    "freq": "120.800",
+    "Lat": 37.469101,
+    "Lon": 126.450996,
+    "Ele": 7.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Seoul Air Base (K-16)",
+    "gps_code": "RKSM",
+    "freq": "120.000",
+    "Lat": 37.444744,
+    "Lon": 127.112718,
+    "Ele": 28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Osan Air Base",
+    "gps_code": "RKSO",
+    "freq": "127.900",
+    "Lat": 37.091457,
+    "Lon": 127.029448,
+    "Ele": 11.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Gimpo International Airport",
+    "gps_code": "RKSS",
+    "freq": "127.100",
+    "Lat": 37.5583,
+    "Lon": 126.791,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Camp Casey-Dongduchon (Camp Mobile) (H-220) Airfield",
+    "gps_code": "RKST",
+    "freq": "",
+    "Lat": 37.920842,
+    "Lon": 127.055361,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Suwon Airport",
+    "gps_code": "RKSW",
+    "freq": "127.900",
+    "Lat": 37.239399,
+    "Lon": 127.007004,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Taean Airport",
+    "gps_code": "RKTA",
+    "freq": "",
+    "Lat": 36.593781,
+    "Lon": 126.29662,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Seongmu Airport",
+    "gps_code": "RKTE",
+    "freq": "134.550",
+    "Lat": 36.568199,
+    "Lon": 127.5,
+    "Ele": 78.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pohang Airport (G-815/K-3)",
+    "gps_code": "RKTH",
+    "freq": "124.250",
+    "Lat": 35.987955,
+    "Lon": 129.420383,
+    "Ele": 21.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jungwon Air Base/Chungju Airport",
+    "gps_code": "RKTI",
+    "freq": "132.550",
+    "Lat": 37.03024,
+    "Lon": 127.886353,
+    "Ele": 85.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Uljin Airport",
+    "gps_code": "RKTL",
+    "freq": "",
+    "Lat": 36.777049,
+    "Lon": 129.461861,
+    "Ele": 58.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Daegu Airport",
+    "gps_code": "RKTN",
+    "freq": "120.000",
+    "Lat": 35.896872,
+    "Lon": 128.65531,
+    "Ele": 35.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Seosan Air Base",
+    "gps_code": "RKTP",
+    "freq": "124.600",
+    "Lat": 36.703999,
+    "Lon": 126.486,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sangju Airfield",
+    "gps_code": "RKTS",
+    "freq": "",
+    "Lat": 36.407451,
+    "Lon": 128.177158,
+    "Ele": 150.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cheongju International Airport/Cheongju Air Base (K-59/G-513)",
+    "gps_code": "RKTU",
+    "freq": "120.000",
+    "Lat": 36.717008,
+    "Lon": 127.498741,
+    "Ele": 58.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yecheon Airbase",
+    "gps_code": "RKTY",
+    "freq": "120.000",
+    "Lat": 36.630373,
+    "Lon": 128.34971,
+    "Ele": 107.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jochiwon (G-505) Airfield",
+    "gps_code": "RKUC",
+    "freq": "40.600",
+    "Lat": 36.571949,
+    "Lon": 127.296067,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "G 536 Airport",
+    "gps_code": "RKUL",
+    "freq": "47.000",
+    "Lat": 36.267085,
+    "Lon": 127.108881,
+    "Ele": 31.7
+  }
+]

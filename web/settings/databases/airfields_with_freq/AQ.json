@@ -1,0 +1,281 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Punto Rothera",
+    "gps_code": "AAXX",
+    "freq": "",
+    "Lat": -67.566941,
+    "Lon": -68.126993,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novolazarevskaya Station",
+    "gps_code": "AQ-0001",
+    "freq": "",
+    "Lat": -70.8461,
+    "Lon": 11.8472,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Troll Airfield",
+    "gps_code": "AQ-0002",
+    "freq": "",
+    "Lat": -71.95714,
+    "Lon": 2.45257,
+    "Ele": 1270.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Enigma Lake Skiway",
+    "gps_code": "AQ-0007",
+    "freq": "",
+    "Lat": -74.71637,
+    "Lon": 164.03408,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wolfs Fang",
+    "gps_code": "AQ-0011",
+    "freq": "",
+    "Lat": -71.527201,
+    "Lon": 8.8333,
+    "Ele": 1129.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Navaid",
+    "gps_code": "AQ-0012",
+    "freq": "",
+    "Lat": -89.998,
+    "Lon": 139.273,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Boulder Clay Runway",
+    "gps_code": "AQBC",
+    "freq": "",
+    "Lat": -74.739373,
+    "Lon": 164.03539,
+    "Ele": 204.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Concordia Skyway",
+    "gps_code": "AT03",
+    "freq": "",
+    "Lat": -75.103278,
+    "Lon": 123.35825,
+    "Ele": 3269.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zucchelli Ice Runway",
+    "gps_code": "AT13",
+    "freq": "",
+    "Lat": -74.68109,
+    "Lon": 164.12756,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Showa Station Skiway",
+    "gps_code": "AT25",
+    "freq": "",
+    "Lat": -69.006167,
+    "Lon": 39.59,
+    "Ele": 29.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vostok Skiway",
+    "gps_code": "AT28",
+    "freq": "",
+    "Lat": -78.466139,
+    "Lon": 106.84825,
+    "Ele": 3489.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Halley Research Station",
+    "gps_code": "EGAH",
+    "freq": "",
+    "Lat": -75.567406,
+    "Lon": -25.516435,
+    "Ele": 31.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Rothera Research Station",
+    "gps_code": "EGAR",
+    "freq": "",
+    "Lat": -67.5675,
+    "Lon": -68.127403,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sky Blu Airstrip",
+    "gps_code": "EGAT",
+    "freq": "",
+    "Lat": -74.849722,
+    "Lon": -71.566666,
+    "Ele": 1444.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Palmer Station Airport",
+    "gps_code": "NZ12",
+    "freq": "118.100",
+    "Lat": -64.774582,
+    "Lon": -64.035907,
+    "Ele": 45.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Phoenix Airfield",
+    "gps_code": "NZFX",
+    "freq": "",
+    "Lat": -77.956389,
+    "Lon": 166.766667,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amundsen–Scott south Pole Station Airport",
+    "gps_code": "NZSP",
+    "freq": "118.200",
+    "Lat": -90.0,
+    "Lon": 0.0,
+    "Ele": 2834.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Williams Field Skiway",
+    "gps_code": "NZWD",
+    "freq": "118.200",
+    "Lat": -77.867401,
+    "Lon": 167.057007,
+    "Ele": 20.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Petrel Airport",
+    "gps_code": "SA47",
+    "freq": "118.100",
+    "Lat": -63.479,
+    "Lon": -56.2313,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Gustavo Marambio Airport",
+    "gps_code": "SAWB",
+    "freq": "118.100",
+    "Lat": -64.238297,
+    "Lon": -56.630798,
+    "Ele": 231.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Matienzo Airfield",
+    "gps_code": "SAWZ",
+    "freq": "",
+    "Lat": -64.976998,
+    "Lon": -60.108992,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Base Belgrano II Airport",
+    "gps_code": "SAYB",
+    "freq": "",
+    "Lat": -77.874055,
+    "Lon": -34.62616,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Esperanza Base",
+    "gps_code": "SAYE",
+    "freq": "",
+    "Lat": -63.400002,
+    "Lon": -56.983299,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jubany Airbase",
+    "gps_code": "SAYJ",
+    "freq": "",
+    "Lat": -62.2383,
+    "Lon": -58.666599,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "San Martín Base Airfield",
+    "gps_code": "SAYS",
+    "freq": "",
+    "Lat": -68.116699,
+    "Lon": -67.099998,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "General Bernardo O'Higgins Base Skyway",
+    "gps_code": "SCBO",
+    "freq": "",
+    "Lat": -63.344,
+    "Lon": -57.842,
+    "Ele": 274.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Union Glacier Blue-Ice Runway",
+    "gps_code": "SCGC",
+    "freq": "",
+    "Lat": -79.777778,
+    "Lon": -83.320833,
+    "Ele": 750.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Patriot Hills Airport",
+    "gps_code": "SCPZ",
+    "freq": "",
+    "Lat": -80.318307,
+    "Lon": -81.308128,
+    "Ele": 883.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Teniente Rodolfo Marsh Martin Airport",
+    "gps_code": "SCRM",
+    "freq": "118.100",
+    "Lat": -62.191026,
+    "Lon": -58.98669,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Casey Station Skiway",
+    "gps_code": "YCSK",
+    "freq": "",
+    "Lat": -66.288056,
+    "Lon": 110.7575,
+    "Ele": 359.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wilkins Runway",
+    "gps_code": "YWKS",
+    "freq": "",
+    "Lat": -66.690833,
+    "Lon": 111.523611,
+    "Ele": 770.8
+  }
+]

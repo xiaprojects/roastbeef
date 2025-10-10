@@ -1,0 +1,65 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Woleai Atoll Airport",
+    "gps_code": "FM-0001",
+    "freq": "",
+    "Lat": 7.376259803771973,
+    "Lon": 143.9080047607422,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "HOUK (PULUSUK) CIVIL AIRFIELD",
+    "gps_code": "FM-0002",
+    "freq": "",
+    "Lat": 6.675669,
+    "Lon": 149.299543,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulithi Airport",
+    "gps_code": "FM-ULI",
+    "freq": "",
+    "Lat": 10.0198,
+    "Lon": 139.789993,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chuuk International Airport",
+    "gps_code": "PTKK",
+    "freq": "123.600",
+    "Lat": 7.461870193481445,
+    "Lon": 151.84300231933594,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pohnpei International Airport",
+    "gps_code": "PTPN",
+    "freq": "123.600",
+    "Lat": 6.985099792480469,
+    "Lon": 158.20899963378906,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kosrae International Airport",
+    "gps_code": "PTSA",
+    "freq": "123.600",
+    "Lat": 5.35698,
+    "Lon": 162.957993,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Yap International Airport",
+    "gps_code": "PTYA",
+    "freq": "123.600",
+    "Lat": 9.49891,
+    "Lon": 138.082993,
+    "Ele": 27.7
+  }
+]

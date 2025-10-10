@@ -1,0 +1,290 @@
+[
+  {
+    "type": "medium_airport",
+    "name": "Zabrat Airport",
+    "gps_code": "AZ-0001",
+    "freq": "",
+    "Lat": 40.494884,
+    "Lon": 49.977065,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Khachmaz Airport",
+    "gps_code": "AZ-0002",
+    "freq": "",
+    "Lat": 41.459152,
+    "Lon": 48.832635,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Shaki Airport",
+    "gps_code": "AZ-0003",
+    "freq": "",
+    "Lat": 41.136553,
+    "Lon": 47.1595,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Naftalan Airport",
+    "gps_code": "AZ-0004",
+    "freq": "",
+    "Lat": 40.51592,
+    "Lon": 46.829481,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tanrykulular Airport",
+    "gps_code": "AZ-0005",
+    "freq": "",
+    "Lat": 40.7429001447,
+    "Lon": 46.8570113182,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bygyr Airport",
+    "gps_code": "AZ-0008",
+    "freq": "",
+    "Lat": 40.529074712500005,
+    "Lon": 47.8300738335,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mollakend Airport",
+    "gps_code": "AZ-0009",
+    "freq": "",
+    "Lat": 40.120419,
+    "Lon": 48.145716,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agjabedi Airport",
+    "gps_code": "AZ-0010",
+    "freq": "",
+    "Lat": 40.022291,
+    "Lon": 47.44935,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sitalchay Airbase",
+    "gps_code": "AZ-0013",
+    "freq": "",
+    "Lat": 40.807313,
+    "Lon": 49.431481,
+    "Ele": -14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Güzdək Military Airport",
+    "gps_code": "AZ-0014",
+    "freq": "",
+    "Lat": 40.347106,
+    "Lon": 49.671321,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sangachaly Air Base",
+    "gps_code": "AZ-0015",
+    "freq": "",
+    "Lat": 40.129771,
+    "Lon": 49.454956,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pirsagat Airport",
+    "gps_code": "AZ-0016",
+    "freq": "",
+    "Lat": 39.853999,
+    "Lon": 49.340018,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hajigabul Kazı Magomed Airport",
+    "gps_code": "AZ-0017",
+    "freq": "",
+    "Lat": 40.03094,
+    "Lon": 48.902764,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Qarachala Airport",
+    "gps_code": "AZ-0018",
+    "freq": "",
+    "Lat": 39.83179,
+    "Lon": 48.966751,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Salyan Air Base",
+    "gps_code": "AZ-0019",
+    "freq": "",
+    "Lat": 39.649811,
+    "Lon": 48.986884,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Qizilagach Air Base",
+    "gps_code": "AZ-0021",
+    "freq": "",
+    "Lat": 39.006162,
+    "Lon": 48.806312,
+    "Ele": -28.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nasosnaya Air Base",
+    "gps_code": "UB12",
+    "freq": "",
+    "Lat": 40.591599,
+    "Lon": 49.5574,
+    "Ele": -4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Khojaly Airport",
+    "gps_code": "UB13",
+    "freq": "",
+    "Lat": 39.901402,
+    "Lon": 46.786999,
+    "Ele": 609.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kyurdamir Air Base",
+    "gps_code": "UB14",
+    "freq": "",
+    "Lat": 40.27360153198242,
+    "Lon": 48.16360092163086,
+    "Ele": -10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Balakan Airport",
+    "gps_code": "UB16",
+    "freq": "",
+    "Lat": 41.733048,
+    "Lon": 46.355677,
+    "Ele": 285.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Baku Kala Air Base",
+    "gps_code": "UB18",
+    "freq": "",
+    "Lat": 40.408409,
+    "Lon": 50.200287,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Akstafa Airport",
+    "gps_code": "UBBA",
+    "freq": "",
+    "Lat": 41.123616,
+    "Lon": 45.420793,
+    "Ele": 330.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Heydar Aliyev International Airport",
+    "gps_code": "UBBB",
+    "freq": "129.300",
+    "Lat": 40.46749877929688,
+    "Lon": 50.04669952392578,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fuzuli International Airport",
+    "gps_code": "UBBF",
+    "freq": "",
+    "Lat": 39.594578,
+    "Lon": 47.196128,
+    "Ele": 380.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ganja International Airport",
+    "gps_code": "UBBG",
+    "freq": "124.000",
+    "Lat": 40.738935,
+    "Lon": 46.320067,
+    "Ele": 330.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lankaran International Airport",
+    "gps_code": "UBBL",
+    "freq": "",
+    "Lat": 38.757919,
+    "Lon": 48.807042,
+    "Ele": 9.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nakhchivan Airport",
+    "gps_code": "UBBN",
+    "freq": "127.900",
+    "Lat": 39.18880081176758,
+    "Lon": 45.45840072631836,
+    "Ele": 872.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gabala International Airport",
+    "gps_code": "UBBQ",
+    "freq": "",
+    "Lat": 40.808617,
+    "Lon": 47.725389,
+    "Ele": 285.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zaqatala International Airport",
+    "gps_code": "UBBY",
+    "freq": "",
+    "Lat": 41.557823,
+    "Lon": 46.669464,
+    "Ele": 389.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Zangilan International Airport",
+    "gps_code": "UBBZ",
+    "freq": "",
+    "Lat": 39.11443,
+    "Lon": 46.74392,
+    "Ele": 402.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Yevlakh Airport",
+    "gps_code": "UBEE",
+    "freq": "",
+    "Lat": 40.631901,
+    "Lon": 47.141899,
+    "Ele": 14.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dollyar Air Base",
+    "gps_code": "UG11",
+    "freq": "",
+    "Lat": 40.8876,
+    "Lon": 45.957001,
+    "Ele": 335.0
+  }
+]

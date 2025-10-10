@@ -6,7 +6,11 @@
 	<title>Stratux</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+	<!--
+		From original stratux commit: https://github.com/stratux/stratux/commit/e1f11be5dc9262486173d13cd0032e120791a123
+		In the RB-Avionics RB-01 and RB-03 there is already the support for https with a self signed certificate, due to 192.168.10.1, enabling this without correctly installing the certificate on each device results on browser stop, so at this time it is not enabled.
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	-->
 	<!-- android -->
 	<meta name="mobile-web-app-capable" content="yes">
 	<link href="img/logo-android3.png" rel="icon" />
@@ -110,8 +114,6 @@
 	<script src="js/keypad.js"></script>
 	<script src="plates/js/radio.js"></script>
 	<script src="plates/js/switchboard.js"></script>
-	<script src="plates/js/roundview.js"></script>
-	<script src="plates/js/resources.js"></script>
 	<script src="plates/js/developer.js"></script>
 	<script src="plates/js/hsi.js"></script>
 	<script src="plates/js/airfields.js"></script>

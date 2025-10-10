@@ -1,0 +1,128 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Medenine Airport",
+    "gps_code": "DT70",
+    "freq": "",
+    "Lat": 33.350201,
+    "Lon": 10.444,
+    "Ele": 130.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tabarka-Aïn Draham International Airport",
+    "gps_code": "DTKA",
+    "freq": "119.250",
+    "Lat": 36.98,
+    "Lon": 8.87694,
+    "Ele": 70.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Monastir Habib Bourguiba International Airport",
+    "gps_code": "DTMB",
+    "freq": "119.300",
+    "Lat": 35.75809860229492,
+    "Lon": 10.75469970703125,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Enfidha - Hammamet International Airport",
+    "gps_code": "DTNH",
+    "freq": "136.300",
+    "Lat": 36.075833,
+    "Lon": 10.438611,
+    "Ele": 6.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Tunis Carthage International Airport",
+    "gps_code": "DTTA",
+    "freq": "121.200",
+    "Lat": 36.851002,
+    "Lon": 10.2272,
+    "Ele": 6.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bizerte Sidi Ahmed Air Base",
+    "gps_code": "DTTB",
+    "freq": "",
+    "Lat": 37.242356,
+    "Lon": 9.787016,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Remada Air Base",
+    "gps_code": "DTTD",
+    "freq": "",
+    "Lat": 32.306198,
+    "Lon": 10.3821,
+    "Ele": 306.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gafsa Ksar International Airport",
+    "gps_code": "DTTF",
+    "freq": "122.100",
+    "Lat": 34.422000885009766,
+    "Lon": 8.822500228881836,
+    "Ele": 323.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gabès Matmata International Airport",
+    "gps_code": "DTTG",
+    "freq": "129.150",
+    "Lat": 33.733691,
+    "Lon": 9.91941,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Borj El Amri Airport",
+    "gps_code": "DTTI",
+    "freq": "123.000",
+    "Lat": 36.721298,
+    "Lon": 9.94315,
+    "Ele": 33.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Djerba Zarzis International Airport",
+    "gps_code": "DTTJ",
+    "freq": "120.300",
+    "Lat": 33.875,
+    "Lon": 10.7755,
+    "Ele": 5.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Borma Airport",
+    "gps_code": "DTTR",
+    "freq": "",
+    "Lat": 31.7043,
+    "Lon": 9.25462,
+    "Ele": 252.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sfax Thyna International Airport",
+    "gps_code": "DTTX",
+    "freq": "123.700",
+    "Lat": 34.71799850463867,
+    "Lon": 10.690999984741213,
+    "Ele": 25.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tozeur Nefta International Airport",
+    "gps_code": "DTTZ",
+    "freq": "120.700",
+    "Lat": 33.939701080322266,
+    "Lon": 8.110560417175293,
+    "Ele": 87.5
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Amílcar Cabral International Airport",
+    "gps_code": "GVAC",
+    "freq": "345.200",
+    "Lat": 16.7414,
+    "Lon": -22.9494,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Agostinho Neto Airport",
+    "gps_code": "GVAN",
+    "freq": "",
+    "Lat": 17.202800750732422,
+    "Lon": -25.090599060058597,
+    "Ele": 9.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rabil Airport",
+    "gps_code": "GVBA",
+    "freq": "118.900",
+    "Lat": 16.136499404907227,
+    "Lon": -22.888900756835938,
+    "Ele": 21.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maio Airport",
+    "gps_code": "GVMA",
+    "freq": "",
+    "Lat": 15.15590000152588,
+    "Lon": -23.213699340820312,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mosteiros Airport",
+    "gps_code": "GVMT",
+    "freq": "",
+    "Lat": 15.045,
+    "Lon": -24.339199,
+    "Ele": 20.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Nelson Mandela International Airport",
+    "gps_code": "GVNP",
+    "freq": "118.200",
+    "Lat": 14.941126,
+    "Lon": -23.484728,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "São Filipe Airport",
+    "gps_code": "GVSF",
+    "freq": "",
+    "Lat": 14.8850002289,
+    "Lon": -24.4799995422,
+    "Ele": 188.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Preguiça Airport",
+    "gps_code": "GVSN",
+    "freq": "",
+    "Lat": 16.588852,
+    "Lon": -24.284132,
+    "Ele": 203.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "São Pedro Airport",
+    "gps_code": "GVSV",
+    "freq": "118.400",
+    "Lat": 16.8332,
+    "Lon": -25.0553,
+    "Ele": 20.1
+  }
+]

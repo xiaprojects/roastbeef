@@ -1,0 +1,524 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Chiquimula Airport",
+    "gps_code": "GT-0001",
+    "freq": "",
+    "Lat": 14.83092,
+    "Lon": -89.520938,
+    "Ele": 452.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Dos Lagunas Airport",
+    "gps_code": "GT-0002",
+    "freq": "",
+    "Lat": 17.6124,
+    "Lon": -89.6884,
+    "Ele": 322.2
+  },
+  {
+    "type": "small_airport",
+    "name": "El Naranjo Airport",
+    "gps_code": "GT-0003",
+    "freq": "",
+    "Lat": 14.106931,
+    "Lon": -90.817496,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Paso Caballos Airport",
+    "gps_code": "GT-0004",
+    "freq": "",
+    "Lat": 17.2639007568,
+    "Lon": -90.2563018799,
+    "Ele": 64.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Naranjo Airport",
+    "gps_code": "GT-0005",
+    "freq": "",
+    "Lat": 17.228442,
+    "Lon": -90.811659,
+    "Ele": 117.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Uaxactun Airport",
+    "gps_code": "GT-0007",
+    "freq": "",
+    "Lat": 17.393888,
+    "Lon": -89.632744,
+    "Ele": 174.7
+  },
+  {
+    "type": "small_airport",
+    "name": "SANTIAGO",
+    "gps_code": "GT-0008",
+    "freq": "",
+    "Lat": 14.6092802945,
+    "Lon": -91.2441909313,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nebaj",
+    "gps_code": "GT-0009",
+    "freq": "",
+    "Lat": 15.4473101027,
+    "Lon": -91.162147522,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chajul Airport",
+    "gps_code": "GT-0010",
+    "freq": "",
+    "Lat": 15.477177,
+    "Lon": -91.034684,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barillas upper",
+    "gps_code": "GT-0012",
+    "freq": "",
+    "Lat": 15.8162861226,
+    "Lon": -91.2969017029,
+    "Ele": 1767.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Luis Ixcan Valle Uno Candelaria",
+    "gps_code": "GT-0013",
+    "freq": "",
+    "Lat": 15.798943330199998,
+    "Lon": -91.087474823,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rancho Pal",
+    "gps_code": "GT-0014",
+    "freq": "",
+    "Lat": 15.8751579288,
+    "Lon": -91.1430931091,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Xalbal",
+    "gps_code": "GT-0015",
+    "freq": "",
+    "Lat": 15.8692137295,
+    "Lon": -90.9983825684,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Flore del Norte Airport",
+    "gps_code": "GT-0016",
+    "freq": "",
+    "Lat": 16.0227158087,
+    "Lon": -91.1113786697,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Angeles Airstrip",
+    "gps_code": "GT-0017",
+    "freq": "",
+    "Lat": 16.043668785199998,
+    "Lon": -91.0667896271,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cuarto Pueblo Airport",
+    "gps_code": "GT-0018",
+    "freq": "",
+    "Lat": 16.0401217826,
+    "Lon": -90.9766244888,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ixquisis Airport",
+    "gps_code": "GT-0019",
+    "freq": "",
+    "Lat": 16.0622276524,
+    "Lon": -91.4198112488,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueva Generación Maya Airport",
+    "gps_code": "GT-0020",
+    "freq": "",
+    "Lat": 15.9803081736,
+    "Lon": -91.1800003052,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jayabaj Airport",
+    "gps_code": "GT-0021",
+    "freq": "",
+    "Lat": 14.9892915638,
+    "Lon": -90.7983756065,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zacualpa Airport",
+    "gps_code": "GT-0022",
+    "freq": "",
+    "Lat": 15.0155103165,
+    "Lon": -90.8985185623,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Canilla Airport",
+    "gps_code": "GT-0023",
+    "freq": "",
+    "Lat": 15.170063,
+    "Lon": -90.858736,
+    "Ele": 1211.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Uspantan Airport",
+    "gps_code": "GT-0024",
+    "freq": "",
+    "Lat": 15.342547366900002,
+    "Lon": -90.8727264404,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chisec Airport",
+    "gps_code": "GT-0025",
+    "freq": "",
+    "Lat": 15.816203,
+    "Lon": -90.275688,
+    "Ele": 220.1
+  },
+  {
+    "type": "small_airport",
+    "name": "San Pedro Cotija Airport",
+    "gps_code": "GT-0026",
+    "freq": "",
+    "Lat": 15.7038619663,
+    "Lon": -90.8883476257,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sayaxché Airport",
+    "gps_code": "GT-0027",
+    "freq": "",
+    "Lat": 16.52184,
+    "Lon": -90.195258,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Estor Airport",
+    "gps_code": "GT-0028",
+    "freq": "",
+    "Lat": 15.517008,
+    "Lon": -89.368374,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Champerico Airport",
+    "gps_code": "GT-0029",
+    "freq": "",
+    "Lat": 14.30694,
+    "Lon": -91.89955,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Noria Airport",
+    "gps_code": "GT-0030",
+    "freq": "",
+    "Lat": 14.26308,
+    "Lon": -91.35761,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tiquisate Airport",
+    "gps_code": "GT-0031",
+    "freq": "",
+    "Lat": 14.27213,
+    "Lon": -91.34686,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca El Alamo Airport",
+    "gps_code": "GT-0032",
+    "freq": "",
+    "Lat": 14.61875,
+    "Lon": -92.15506,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Macanche Airport",
+    "gps_code": "GT-0033",
+    "freq": "",
+    "Lat": 16.96356,
+    "Lon": -89.6214,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tikindustrias Airport",
+    "gps_code": "GT-0035",
+    "freq": "",
+    "Lat": 16.37362,
+    "Lon": -90.28819,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Industria Chuquibul Airport",
+    "gps_code": "GT-0036",
+    "freq": "",
+    "Lat": 16.03465,
+    "Lon": -90.39241,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fray Bartolome Airport",
+    "gps_code": "MG13",
+    "freq": "",
+    "Lat": 15.80405,
+    "Lon": -89.8507,
+    "Ele": 156.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bananera Airport",
+    "gps_code": "MGBN",
+    "freq": "",
+    "Lat": 15.4735,
+    "Lon": -88.837196,
+    "Ele": 39.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Coban Airport",
+    "gps_code": "MGCB",
+    "freq": "126.200",
+    "Lat": 15.469,
+    "Lon": -90.4067,
+    "Ele": 1322.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Carmelita Airport",
+    "gps_code": "MGCR",
+    "freq": "",
+    "Lat": 17.461201,
+    "Lon": -90.053703,
+    "Ele": 229.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Coatepeque Airport",
+    "gps_code": "MGCT",
+    "freq": "",
+    "Lat": 14.6942,
+    "Lon": -91.8825,
+    "Ele": 452.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Esquipulas Airport",
+    "gps_code": "MGES",
+    "freq": "",
+    "Lat": 14.567552,
+    "Lon": -89.326153,
+    "Ele": 941.8
+  },
+  {
+    "type": "large_airport",
+    "name": "La Aurora Airport",
+    "gps_code": "MGGT",
+    "freq": "126.900",
+    "Lat": 14.5833,
+    "Lon": -90.527496,
+    "Ele": 1509.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Iztapa Aeroclub",
+    "gps_code": "MGHH",
+    "freq": "",
+    "Lat": 13.930929,
+    "Lon": -90.728783,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Huehuetenango Airport",
+    "gps_code": "MGHT",
+    "freq": "",
+    "Lat": 15.316667,
+    "Lon": -91.505556,
+    "Ele": 1869.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jutiapa Airport",
+    "gps_code": "MGJU",
+    "freq": "",
+    "Lat": 14.291729,
+    "Lon": -89.941421,
+    "Ele": 898.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Libertad Airport",
+    "gps_code": "MGLL",
+    "freq": "",
+    "Lat": 16.750299,
+    "Lon": -90.139999,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Malacatán Airport",
+    "gps_code": "MGML",
+    "freq": "",
+    "Lat": 14.907464,
+    "Lon": -92.087921,
+    "Ele": 363.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Puerto Barrios Airport",
+    "gps_code": "MGPB",
+    "freq": "118.400",
+    "Lat": 15.7309,
+    "Lon": -88.583801,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Playa Grande Airport",
+    "gps_code": "MGPG",
+    "freq": "",
+    "Lat": 15.9975,
+    "Lon": -90.741699,
+    "Ele": 175.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Poptún Airport",
+    "gps_code": "MGPP",
+    "freq": "126.500",
+    "Lat": 16.325799942017,
+    "Lon": -89.41609954834,
+    "Ele": 548.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Quiché Airport",
+    "gps_code": "MGQC",
+    "freq": "",
+    "Lat": 15.0122,
+    "Lon": -91.150597,
+    "Ele": 2021.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Quezaltenango Airport",
+    "gps_code": "MGQZ",
+    "freq": "",
+    "Lat": 14.8656,
+    "Lon": -91.501999,
+    "Ele": 2371.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rubelsanto Airport",
+    "gps_code": "MGRB",
+    "freq": "122.900",
+    "Lat": 15.992,
+    "Lon": -90.445297,
+    "Ele": 129.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Vegas Airport",
+    "gps_code": "MGRD",
+    "freq": "",
+    "Lat": 15.668363,
+    "Lon": -88.961763,
+    "Ele": 8.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Monterrico Airport",
+    "gps_code": "MGRF",
+    "freq": "",
+    "Lat": 13.894942,
+    "Lon": -90.485092,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Retalhuleu Airport",
+    "gps_code": "MGRT",
+    "freq": "118.800",
+    "Lat": 14.521431,
+    "Lon": -91.697001,
+    "Ele": 199.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "San José Airport",
+    "gps_code": "MGSJ",
+    "freq": "118.500",
+    "Lat": 13.9362,
+    "Lon": -90.8358,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Marcos Airport",
+    "gps_code": "MGSM",
+    "freq": "",
+    "Lat": 14.955268,
+    "Lon": -91.808339,
+    "Ele": 2418.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mundo Maya International Airport",
+    "gps_code": "MGTK",
+    "freq": "121.400",
+    "Lat": 16.913799,
+    "Lon": -89.866402,
+    "Ele": 130.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zacapa Airport",
+    "gps_code": "MGZA",
+    "freq": "",
+    "Lat": 14.9603,
+    "Lon": -89.5392,
+    "Ele": 190.8
+  }
+]

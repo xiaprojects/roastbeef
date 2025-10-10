@@ -1,0 +1,5897 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Il Falco Airfield",
+    "gps_code": "IT-0001",
+    "freq": "130.000",
+    "Lat": 45.269254,
+    "Lon": 7.950733,
+    "Ele": 234.1
+  },
+  {
+    "type": "small_airport",
+    "name": "San Sepolcro Airfield",
+    "gps_code": "IT-0003",
+    "freq": "",
+    "Lat": 43.55916,
+    "Lon": 12.155903,
+    "Ele": 320.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eremo della Giubiliana Airfield",
+    "gps_code": "IT-0004",
+    "freq": "131.050",
+    "Lat": 36.861287,
+    "Lon": 14.627008,
+    "Ele": 427.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Bovarella",
+    "gps_code": "IT-0005",
+    "freq": "",
+    "Lat": 37.792694,
+    "Lon": 12.845078,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valbelice Airfield",
+    "gps_code": "IT-0006",
+    "freq": "",
+    "Lat": 37.674242,
+    "Lon": 12.774611,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo AvioClub Centro Sicilia",
+    "gps_code": "IT-0008",
+    "freq": "",
+    "Lat": 37.450962,
+    "Lon": 13.923111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Avioclub Ereo Airfield",
+    "gps_code": "IT-0009",
+    "freq": "130.000",
+    "Lat": 37.19222,
+    "Lon": 14.613297,
+    "Ele": 452.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Calatabiano (Aviosuperficie Angelo D'Arrigo)",
+    "gps_code": "IT-0010",
+    "freq": "",
+    "Lat": 37.799561,
+    "Lon": 15.22775,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rinaura Airfield",
+    "gps_code": "IT-0012",
+    "freq": "",
+    "Lat": 37.028647,
+    "Lon": 15.243509,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Minotaurus e Medusa",
+    "gps_code": "IT-0013",
+    "freq": "",
+    "Lat": 38.049105,
+    "Lon": 14.541306,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oasi dei Re Airfield",
+    "gps_code": "IT-0014",
+    "freq": "130.000",
+    "Lat": 36.722558,
+    "Lon": 14.774708,
+    "Ele": 39.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Ramacca",
+    "gps_code": "IT-0015",
+    "freq": "",
+    "Lat": 37.390652,
+    "Lon": 14.620249,
+    "Ele": 159.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Sorvoliamo",
+    "gps_code": "IT-0016",
+    "freq": "130.000",
+    "Lat": 37.0084558926,
+    "Lon": 14.5951116085,
+    "Ele": 220.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Terranova",
+    "gps_code": "IT-0017",
+    "freq": "130.000",
+    "Lat": 37.576624,
+    "Lon": 12.944491,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Capo d'Orlando",
+    "gps_code": "IT-0018",
+    "freq": "",
+    "Lat": 38.126421,
+    "Lon": 14.707904,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Aidone (cugno)",
+    "gps_code": "IT-0019",
+    "freq": "130.000",
+    "Lat": 37.432392,
+    "Lon": 14.61525,
+    "Ele": 137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Camemi Airfield",
+    "gps_code": "IT-0020",
+    "freq": "130.000",
+    "Lat": 37.263261,
+    "Lon": 14.626579,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Elpifly Airfield",
+    "gps_code": "IT-0021",
+    "freq": "130.000",
+    "Lat": 36.810908,
+    "Lon": 14.544772,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Marano",
+    "gps_code": "IT-0022",
+    "freq": "130.000",
+    "Lat": 37.386467,
+    "Lon": 14.143471,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Albatros Airfield",
+    "gps_code": "IT-0025",
+    "freq": "130.000",
+    "Lat": 37.972478,
+    "Lon": 13.77335,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Calabria Airfield",
+    "gps_code": "IT-0027",
+    "freq": "",
+    "Lat": 38.619653,
+    "Lon": 15.955976,
+    "Ele": 570.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Franca Airfield",
+    "gps_code": "IT-0029",
+    "freq": "",
+    "Lat": 39.189488,
+    "Lon": 16.671496,
+    "Ele": 1339.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Scalea Airport",
+    "gps_code": "IT-0030",
+    "freq": "128.450",
+    "Lat": 39.776188,
+    "Lon": 15.811343,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Grifo Airfield",
+    "gps_code": "IT-0032",
+    "freq": "130.000",
+    "Lat": 38.637255,
+    "Lon": 15.94775,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Giancarlo Filippi Airfield",
+    "gps_code": "IT-0034",
+    "freq": "",
+    "Lat": 44.414367,
+    "Lon": 7.811279,
+    "Ele": 430.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ivrea Montalto Dora Airfield",
+    "gps_code": "IT-0035",
+    "freq": "",
+    "Lat": 45.487546,
+    "Lon": 7.84323,
+    "Ele": 246.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Merlo Romano Airfield",
+    "gps_code": "IT-0037",
+    "freq": "",
+    "Lat": 44.834433,
+    "Lon": 7.363565,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Acqui Terme",
+    "gps_code": "IT-0038",
+    "freq": "",
+    "Lat": 44.677488,
+    "Lon": 8.50124,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Meggiana Altiport",
+    "gps_code": "IT-0039",
+    "freq": "",
+    "Lat": 45.746092,
+    "Lon": 8.040702,
+    "Ele": 1628.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Marc Ingegno Airfield",
+    "gps_code": "IT-0040",
+    "freq": "",
+    "Lat": 45.778056,
+    "Lon": 8.268611,
+    "Ele": 430.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Angiale Airfield",
+    "gps_code": "IT-0041",
+    "freq": "",
+    "Lat": 44.833611,
+    "Lon": 7.530556,
+    "Ele": 256.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Astigiana Airfield",
+    "gps_code": "IT-0042",
+    "freq": "",
+    "Lat": 44.888806,
+    "Lon": 8.354867,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Boglietto Airfield",
+    "gps_code": "IT-0043",
+    "freq": "130.000",
+    "Lat": 44.758611,
+    "Lon": 8.183056,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Beltrutta Airfield",
+    "gps_code": "IT-0044",
+    "freq": "",
+    "Lat": 44.496506,
+    "Lon": 7.722974,
+    "Ele": 357.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cascina Colombare Airfield",
+    "gps_code": "IT-0045",
+    "freq": "130.000",
+    "Lat": 45.49611,
+    "Lon": 8.52527,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cascina Valentino Airfield",
+    "gps_code": "IT-0047",
+    "freq": "",
+    "Lat": 44.69544,
+    "Lon": 7.40242,
+    "Ele": 85.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Castelnuovo Don Bosco Airfield",
+    "gps_code": "IT-0048",
+    "freq": "130.000",
+    "Lat": 45.024444,
+    "Lon": 7.966389,
+    "Ele": 222.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Chavez-Marini Airfield",
+    "gps_code": "IT-0049",
+    "freq": "",
+    "Lat": 46.134167,
+    "Lon": 8.306333,
+    "Ele": 278.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cossato Airfield",
+    "gps_code": "IT-0050",
+    "freq": "",
+    "Lat": 45.531909,
+    "Lon": 8.201143,
+    "Ele": 245.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cumiana Airfield",
+    "gps_code": "IT-0051",
+    "freq": "",
+    "Lat": 44.939043,
+    "Lon": 7.428925,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Francavilla Bisio",
+    "gps_code": "IT-0052",
+    "freq": "",
+    "Lat": 44.729868,
+    "Lon": 8.730075,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gattinara Airfield",
+    "gps_code": "IT-0053",
+    "freq": "",
+    "Lat": 45.604341,
+    "Lon": 8.324461,
+    "Ele": 281.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Picchio Airfield",
+    "gps_code": "IT-0054",
+    "freq": "",
+    "Lat": 45.708725,
+    "Lon": 8.595706,
+    "Ele": 213.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pegasus 2000 Airfield",
+    "gps_code": "IT-0055",
+    "freq": "130.000",
+    "Lat": 45.311672,
+    "Lon": 7.665153,
+    "Ele": 399.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alpi Marittime Airfield",
+    "gps_code": "IT-0056",
+    "freq": "",
+    "Lat": 44.391111,
+    "Lon": 7.725556,
+    "Ele": 444.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Piovera",
+    "gps_code": "IT-0057",
+    "freq": "",
+    "Lat": 44.935833,
+    "Lon": 8.749333,
+    "Ele": 95.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Prealpi-Musinè Airfield",
+    "gps_code": "IT-0058",
+    "freq": "130.000",
+    "Lat": 45.124499,
+    "Lon": 7.521442,
+    "Ele": 337.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Città di Tortona Airfield",
+    "gps_code": "IT-0059",
+    "freq": "",
+    "Lat": 44.938436,
+    "Lon": 8.865881,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Bosio Guido",
+    "gps_code": "IT-0062",
+    "freq": "130.000",
+    "Lat": 44.434208,
+    "Lon": 7.632153,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Country Fly Airfield",
+    "gps_code": "IT-0063",
+    "freq": "",
+    "Lat": 44.503056,
+    "Lon": 7.821667,
+    "Ele": 411.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di volo Ploia",
+    "gps_code": "IT-0064",
+    "freq": "",
+    "Lat": 44.884167,
+    "Lon": 8.780833,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Laghetto Airfield",
+    "gps_code": "IT-0065",
+    "freq": "130.000",
+    "Lat": 44.777885,
+    "Lon": 8.13034,
+    "Ele": 137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Altiporto Chamois",
+    "gps_code": "IT-0067",
+    "freq": "",
+    "Lat": 45.833793,
+    "Lon": 7.618504,
+    "Ele": 1706.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chatelair Airfield",
+    "gps_code": "IT-0068",
+    "freq": "",
+    "Lat": 45.74,
+    "Lon": 7.480556,
+    "Ele": 457.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Falchi della Baraggia Airfield",
+    "gps_code": "IT-0069",
+    "freq": "",
+    "Lat": 45.446617,
+    "Lon": 8.191496,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sant'Elia Airfield",
+    "gps_code": "IT-0071",
+    "freq": "130.000",
+    "Lat": 44.741963,
+    "Lon": 7.70987,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Val Triversa Airfield",
+    "gps_code": "IT-0072",
+    "freq": "",
+    "Lat": 44.906894,
+    "Lon": 8.034096,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Valsusa Airfield",
+    "gps_code": "IT-0073",
+    "freq": "130.000",
+    "Lat": 45.1125,
+    "Lon": 7.287222,
+    "Ele": 381.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carolina Airfield",
+    "gps_code": "IT-0074",
+    "freq": "130.000",
+    "Lat": 45.253154,
+    "Lon": 7.898977,
+    "Ele": 215.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerreto Castello Airfield",
+    "gps_code": "IT-0075",
+    "freq": "",
+    "Lat": 45.548056,
+    "Lon": 8.161111,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Canavese Ultralight Flight Club",
+    "gps_code": "IT-0076",
+    "freq": "130.000",
+    "Lat": 45.358734,
+    "Lon": 7.71929,
+    "Ele": 260.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prosecco Airfield",
+    "gps_code": "IT-0078",
+    "freq": "",
+    "Lat": 45.703333,
+    "Lon": 13.759722,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Speziana Airfield",
+    "gps_code": "IT-0079",
+    "freq": "",
+    "Lat": 45.128536,
+    "Lon": 9.362869,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mazarack Flying Field",
+    "gps_code": "IT-0080",
+    "freq": "",
+    "Lat": 45.639444,
+    "Lon": 12.943611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pradelle Airfield",
+    "gps_code": "IT-0081",
+    "freq": "",
+    "Lat": 45.49278,
+    "Lon": 10.119883,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Madonna di Loreto Airfield",
+    "gps_code": "IT-0082",
+    "freq": "",
+    "Lat": 43.43913,
+    "Lon": 13.57054,
+    "Ele": 14.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Vervò Airfield",
+    "gps_code": "IT-0084",
+    "freq": "",
+    "Lat": 46.313801,
+    "Lon": 11.111898,
+    "Ele": 938.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Samolaco Airfield",
+    "gps_code": "IT-0085",
+    "freq": "",
+    "Lat": 46.234686,
+    "Lon": 9.432771,
+    "Ele": 210.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Comina Airfield",
+    "gps_code": "IT-0086",
+    "freq": "",
+    "Lat": 45.991852,
+    "Lon": 12.65399,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Guglielmo Zamboni Airfield",
+    "gps_code": "IT-0087",
+    "freq": "128.450",
+    "Lat": 44.475,
+    "Lon": 11.541664,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Monti della Tolfa Airfield",
+    "gps_code": "IT-0088",
+    "freq": "",
+    "Lat": 42.0188,
+    "Lon": 11.9827,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trasimeno Airfield",
+    "gps_code": "IT-0089",
+    "freq": "",
+    "Lat": 43.136353,
+    "Lon": 12.030371,
+    "Ele": 261.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Mensanello Airfield",
+    "gps_code": "IT-0090",
+    "freq": "130.000",
+    "Lat": 43.373582,
+    "Lon": 11.123145,
+    "Ele": 189.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Termon Altiport",
+    "gps_code": "IT-0091",
+    "freq": "",
+    "Lat": 46.270833,
+    "Lon": 11.025833,
+    "Ele": 680.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Centro Volo Campania",
+    "gps_code": "IT-0092",
+    "freq": "",
+    "Lat": 40.9515272,
+    "Lon": 14.41188,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beppe Rascaglia Flying Field",
+    "gps_code": "IT-0093",
+    "freq": "130.000",
+    "Lat": 38.515556,
+    "Lon": 15.942222,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Masseria Macri Airfield",
+    "gps_code": "IT-0094",
+    "freq": "",
+    "Lat": 40.054607,
+    "Lon": 18.214738,
+    "Ele": 107.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Umberto Nobile Airfield",
+    "gps_code": "IT-0095",
+    "freq": "",
+    "Lat": 41.235278,
+    "Lon": 13.820556,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Sabaudia",
+    "gps_code": "IT-0096",
+    "freq": "",
+    "Lat": 41.333611,
+    "Lon": 13.021389,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Fly Club\"",
+    "gps_code": "IT-0097",
+    "freq": "",
+    "Lat": 41.10457,
+    "Lon": 14.45698,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Condor",
+    "gps_code": "IT-0098",
+    "freq": "",
+    "Lat": 41.415,
+    "Lon": 12.979444,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Tuscania\"",
+    "gps_code": "IT-0099",
+    "freq": "127.000",
+    "Lat": 42.410446,
+    "Lon": 11.898665,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Alisoriano",
+    "gps_code": "IT-0100",
+    "freq": "",
+    "Lat": 42.433658,
+    "Lon": 12.292147,
+    "Ele": 300.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerolight Marche Airfield",
+    "gps_code": "IT-0101",
+    "freq": "",
+    "Lat": 43.511883,
+    "Lon": 13.191231,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Montefano",
+    "gps_code": "IT-0102",
+    "freq": "",
+    "Lat": 43.42075,
+    "Lon": 13.39928,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali di Classe Airfield",
+    "gps_code": "IT-0103",
+    "freq": "",
+    "Lat": 44.323419,
+    "Lon": 12.307577,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Villafranca Airfield",
+    "gps_code": "IT-0104",
+    "freq": "",
+    "Lat": 44.291111,
+    "Lon": 12.026111,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lyra 34 Airfield",
+    "gps_code": "IT-0105",
+    "freq": "",
+    "Lat": 44.500278,
+    "Lon": 11.944444,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Filanti Airfield",
+    "gps_code": "IT-0106",
+    "freq": "",
+    "Lat": 44.582222,
+    "Lon": 11.923056,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Le Merline Airfield",
+    "gps_code": "IT-0108",
+    "freq": "",
+    "Lat": 44.97287,
+    "Lon": 9.479142,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Arbuschi Airfield",
+    "gps_code": "IT-0109",
+    "freq": "",
+    "Lat": 45.051392,
+    "Lon": 9.163255,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dovera Airfield",
+    "gps_code": "IT-0110",
+    "freq": "",
+    "Lat": 45.380312,
+    "Lon": 9.534945,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Navigli Airfield",
+    "gps_code": "IT-0111",
+    "freq": "",
+    "Lat": 45.414412,
+    "Lon": 8.895068,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volo Club Milano Airfield",
+    "gps_code": "IT-0112",
+    "freq": "",
+    "Lat": 45.449444,
+    "Lon": 8.998333,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Litorale di Caorle Airfield",
+    "gps_code": "IT-0113",
+    "freq": "118.125",
+    "Lat": 45.611944,
+    "Lon": 12.814722,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Zampieri Airfield",
+    "gps_code": "IT-0114",
+    "freq": "",
+    "Lat": 46.404329,
+    "Lon": 12.88536,
+    "Ele": 1000.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sterzing / Vipiteno Airfield",
+    "gps_code": "IT-0115",
+    "freq": "",
+    "Lat": 46.883764,
+    "Lon": 11.441338,
+    "Ele": 949.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Passo del Tonale Airfield",
+    "gps_code": "IT-0116",
+    "freq": "",
+    "Lat": 46.265134,
+    "Lon": 10.600662,
+    "Ele": 1996.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Nido delle Acquile Airfield",
+    "gps_code": "IT-0117",
+    "freq": "130.000",
+    "Lat": 40.93769,
+    "Lon": 16.497,
+    "Ele": 494.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mezzana Bigli Airfield",
+    "gps_code": "IT-0118",
+    "freq": "119.100",
+    "Lat": 45.065409,
+    "Lon": 8.835176,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Sa Doda\"",
+    "gps_code": "IT-0119",
+    "freq": "",
+    "Lat": 39.361731,
+    "Lon": 8.868309,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Sardegna",
+    "gps_code": "IT-0120",
+    "freq": "",
+    "Lat": 39.621944,
+    "Lon": 9.101944,
+    "Ele": 340.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Oasi da Peppe Airfield",
+    "gps_code": "IT-0121",
+    "freq": "",
+    "Lat": 40.452191,
+    "Lon": 15.000098,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerotre Airfield",
+    "gps_code": "IT-0122",
+    "freq": "",
+    "Lat": 40.449469,
+    "Lon": 17.623654,
+    "Ele": 78.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Volo Airfield",
+    "gps_code": "IT-0123",
+    "freq": "",
+    "Lat": 40.421944,
+    "Lon": 8.686667,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Quercia Airfield",
+    "gps_code": "IT-0124",
+    "freq": "",
+    "Lat": 40.963053,
+    "Lon": 16.633016,
+    "Ele": 360.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Platamona",
+    "gps_code": "IT-0125",
+    "freq": "",
+    "Lat": 40.813333,
+    "Lon": 8.470278,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "\"Delta Club Napoli\" Airfield",
+    "gps_code": "IT-0126",
+    "freq": "",
+    "Lat": 41.065757,
+    "Lon": 13.962901,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fiorano Wings Airfield",
+    "gps_code": "IT-0128",
+    "freq": "",
+    "Lat": 45.11933,
+    "Lon": 9.705951,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Caposile Airfield",
+    "gps_code": "IT-0129",
+    "freq": "",
+    "Lat": 45.56529,
+    "Lon": 12.576835,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aquile Randagie Airfield",
+    "gps_code": "IT-0130",
+    "freq": "",
+    "Lat": 45.165629,
+    "Lon": 11.03503,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chiusdino Airfield",
+    "gps_code": "IT-0131",
+    "freq": "",
+    "Lat": 43.189768,
+    "Lon": 11.146924,
+    "Ele": 279.8
+  },
+  {
+    "type": "small_airport",
+    "name": "CdV Ass.Sp. Parvolo",
+    "gps_code": "IT-0133",
+    "freq": "",
+    "Lat": 45.815556,
+    "Lon": 12.752222,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Careas Airfield",
+    "gps_code": "IT-0134",
+    "freq": "",
+    "Lat": 45.50668,
+    "Lon": 9.66814,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Zappaglia Airfield",
+    "gps_code": "IT-0135",
+    "freq": "",
+    "Lat": 45.326746,
+    "Lon": 10.378411,
+    "Ele": 65.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vigarolo Airfield",
+    "gps_code": "IT-0136",
+    "freq": "119.350",
+    "Lat": 45.217533,
+    "Lon": 9.467232,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Fenice Airfield",
+    "gps_code": "IT-0137",
+    "freq": "",
+    "Lat": 44.999883,
+    "Lon": 10.713286,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Air Folies Airfield",
+    "gps_code": "IT-0138",
+    "freq": "",
+    "Lat": 45.53297,
+    "Lon": 8.90103,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pravisdomini Airfield",
+    "gps_code": "IT-0140",
+    "freq": "",
+    "Lat": 45.821769,
+    "Lon": 12.68341,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Venete Airfield",
+    "gps_code": "IT-0141",
+    "freq": "",
+    "Lat": 45.664881,
+    "Lon": 11.807449,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Pioniero Airfield",
+    "gps_code": "IT-0142",
+    "freq": "",
+    "Lat": 45.083975,
+    "Lon": 11.663224,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"San Giuseppe\"",
+    "gps_code": "IT-0143",
+    "freq": "",
+    "Lat": 45.85649,
+    "Lon": 12.06555,
+    "Ele": 127.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Alla Colombara Airiield",
+    "gps_code": "IT-0144",
+    "freq": "",
+    "Lat": 45.752853,
+    "Lon": 11.6925,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cà del Conte Airfield",
+    "gps_code": "IT-0146",
+    "freq": "130.000",
+    "Lat": 44.870165,
+    "Lon": 9.938164,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Borgotaro Albareto",
+    "gps_code": "IT-0147",
+    "freq": "",
+    "Lat": 44.464558,
+    "Lon": 9.715806,
+    "Ele": 442.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Flying Buttero Airfield",
+    "gps_code": "IT-0148",
+    "freq": "",
+    "Lat": 42.517352,
+    "Lon": 11.319137,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Le Tartarughe Volanti Airfield",
+    "gps_code": "IT-0149",
+    "freq": "",
+    "Lat": 45.609722,
+    "Lon": 9.486667,
+    "Ele": 196.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Francesco Baracca Airfield",
+    "gps_code": "IT-0150",
+    "freq": "",
+    "Lat": 45.842203,
+    "Lon": 12.193594,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bibione Airfield",
+    "gps_code": "IT-0151",
+    "freq": "",
+    "Lat": 45.669654,
+    "Lon": 13.039451,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Olivola",
+    "gps_code": "IT-0152",
+    "freq": "",
+    "Lat": 41.17751,
+    "Lon": 14.74734,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volturno Fly Aviosuperficie",
+    "gps_code": "IT-0153",
+    "freq": "",
+    "Lat": 41.1575,
+    "Lon": 14.3669444,
+    "Ele": 19.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Alituscia Airfield",
+    "gps_code": "IT-0154",
+    "freq": "",
+    "Lat": 42.226894,
+    "Lon": 12.119422,
+    "Ele": 387.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Acquasparta Airfield",
+    "gps_code": "IT-0155",
+    "freq": "",
+    "Lat": 42.684167,
+    "Lon": 12.552778,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Terra del Sole Airfield",
+    "gps_code": "IT-0156",
+    "freq": "130.000",
+    "Lat": 42.774774,
+    "Lon": 11.15547,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali del Po Private Airfield",
+    "gps_code": "IT-0157",
+    "freq": "130.025",
+    "Lat": 44.971119,
+    "Lon": 10.294275,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Aerdomus",
+    "gps_code": "IT-0158",
+    "freq": "",
+    "Lat": 41.9419444,
+    "Lon": 12.1402778,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Ondalba",
+    "gps_code": "IT-0159",
+    "freq": "",
+    "Lat": 44.776117,
+    "Lon": 7.879334,
+    "Ele": 310.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Castel Caladan",
+    "gps_code": "IT-0160",
+    "freq": "",
+    "Lat": 45.461305,
+    "Lon": 9.576677,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volo Molise",
+    "gps_code": "IT-0161",
+    "freq": "",
+    "Lat": 41.45948,
+    "Lon": 14.53799,
+    "Ele": 529.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Blue Silo",
+    "gps_code": "IT-0162",
+    "freq": "",
+    "Lat": 45.8872222,
+    "Lon": 12.6277778,
+    "Ele": 9.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sagrantino Airfield",
+    "gps_code": "IT-0163",
+    "freq": "",
+    "Lat": 42.890278,
+    "Lon": 12.533056,
+    "Ele": 274.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Renzo Storai Airfield",
+    "gps_code": "IT-0165",
+    "freq": "",
+    "Lat": 43.96583,
+    "Lon": 11.458056,
+    "Ele": 271.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Alicocco",
+    "gps_code": "IT-0166",
+    "freq": "",
+    "Lat": 41.655,
+    "Lon": 13.226389,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ceresara Airfield",
+    "gps_code": "IT-0167",
+    "freq": "",
+    "Lat": 45.263695,
+    "Lon": 10.582549,
+    "Ele": 42.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Cab Club\"",
+    "gps_code": "IT-0168",
+    "freq": "",
+    "Lat": 45.057833,
+    "Lon": 8.066817,
+    "Ele": 232.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Flying Tigers Airfield",
+    "gps_code": "IT-0169",
+    "freq": "",
+    "Lat": 45.440878,
+    "Lon": 7.937,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kong Airfield",
+    "gps_code": "IT-0170",
+    "freq": "",
+    "Lat": 45.761969,
+    "Lon": 9.445002,
+    "Ele": 192.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Piancada Airfield",
+    "gps_code": "IT-0171",
+    "freq": "",
+    "Lat": 45.76417,
+    "Lon": 13.07304,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Stella Airfield",
+    "gps_code": "IT-0172",
+    "freq": "",
+    "Lat": 44.95094,
+    "Lon": 11.62722,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ultralight Friuli Airfield",
+    "gps_code": "IT-0173",
+    "freq": "",
+    "Lat": 45.93098,
+    "Lon": 13.362,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Libere",
+    "gps_code": "IT-0174",
+    "freq": "",
+    "Lat": 42.829833,
+    "Lon": 12.683383,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Stintino",
+    "gps_code": "IT-0175",
+    "freq": "",
+    "Lat": 40.88295,
+    "Lon": 8.25418,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Filanda Airfield",
+    "gps_code": "IT-0176",
+    "freq": "",
+    "Lat": 43.446407,
+    "Lon": 11.673973,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Enrico Mattei Airfield",
+    "gps_code": "IT-0177",
+    "freq": "",
+    "Lat": 40.431896,
+    "Lon": 16.5538,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pisticci Flying Field",
+    "gps_code": "IT-0178",
+    "freq": "",
+    "Lat": 40.399699,
+    "Lon": 16.636972,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sibari Fly Airfield",
+    "gps_code": "IT-0179",
+    "freq": "",
+    "Lat": 39.757785,
+    "Lon": 16.437453,
+    "Ele": 10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Gabbiano Airfield",
+    "gps_code": "IT-0180",
+    "freq": "",
+    "Lat": 43.051711,
+    "Lon": 10.552012,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aliscarlino Airfield",
+    "gps_code": "IT-0181",
+    "freq": "130.000",
+    "Lat": 42.912222,
+    "Lon": 10.816667,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "San Felice Airfield",
+    "gps_code": "IT-0182",
+    "freq": "",
+    "Lat": 44.8325,
+    "Lon": 11.120833,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Molise Ultravolo Airfield",
+    "gps_code": "IT-0183",
+    "freq": "",
+    "Lat": 41.97547,
+    "Lon": 15.02005,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pantano Airfield",
+    "gps_code": "IT-0185",
+    "freq": "",
+    "Lat": 40.56167,
+    "Lon": 15.7599,
+    "Ele": 800.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Ali Nettuno",
+    "gps_code": "IT-0186",
+    "freq": "",
+    "Lat": 41.503775,
+    "Lon": 12.701976,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Dorgali",
+    "gps_code": "IT-0187",
+    "freq": "",
+    "Lat": 40.348344,
+    "Lon": 9.547495,
+    "Ele": 178.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Thiesi",
+    "gps_code": "IT-0188",
+    "freq": "",
+    "Lat": 40.53542,
+    "Lon": 8.6055,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rivoli Avro Airfield",
+    "gps_code": "IT-0189",
+    "freq": "122.610",
+    "Lat": 46.233786,
+    "Lon": 13.072443,
+    "Ele": 169.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Baialupo Airfield",
+    "gps_code": "IT-0190",
+    "freq": "128.450",
+    "Lat": 45.5529,
+    "Lon": 9.50567,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "L'Elika Airfield",
+    "gps_code": "IT-0191",
+    "freq": "130.000",
+    "Lat": 44.88293,
+    "Lon": 7.56105,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Le Streghe Airfield",
+    "gps_code": "IT-0192",
+    "freq": "",
+    "Lat": 45.394518,
+    "Lon": 8.706932,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lucchina Fly Club Airfield",
+    "gps_code": "IT-0193",
+    "freq": "",
+    "Lat": 45.321482,
+    "Lon": 8.000236,
+    "Ele": 289.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Lucia Airfield",
+    "gps_code": "IT-0194",
+    "freq": "130.500",
+    "Lat": 45.483966,
+    "Lon": 9.953184,
+    "Ele": 108.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Corry's Airfield",
+    "gps_code": "IT-0195",
+    "freq": "130.000",
+    "Lat": 45.519248,
+    "Lon": 10.380685,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Natale/Battistoni Airfield",
+    "gps_code": "IT-0196",
+    "freq": "",
+    "Lat": 45.334957,
+    "Lon": 8.824167,
+    "Ele": 108.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Borro Airfield",
+    "gps_code": "IT-0197",
+    "freq": "",
+    "Lat": 43.536111,
+    "Lon": 11.705,
+    "Ele": 274.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Reno Air Club Airfield",
+    "gps_code": "IT-0198",
+    "freq": "",
+    "Lat": 44.612923,
+    "Lon": 11.324329,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sassuolo Airfield",
+    "gps_code": "IT-0200",
+    "freq": "124.000",
+    "Lat": 44.571667,
+    "Lon": 10.78,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie del Sole",
+    "gps_code": "IT-0201",
+    "freq": "",
+    "Lat": 40.624425,
+    "Lon": 14.845842,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Venaria Reale Mario Santi Airfield",
+    "gps_code": "IT-0202",
+    "freq": "",
+    "Lat": 45.130127,
+    "Lon": 7.612008,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rovigo Airfield",
+    "gps_code": "IT-0203",
+    "freq": "130.000",
+    "Lat": 45.031167,
+    "Lon": 11.823667,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sasso d'Oro Agrotourism Airfield",
+    "gps_code": "IT-0204",
+    "freq": "130.000",
+    "Lat": 46.181389,
+    "Lon": 12.8225,
+    "Ele": 237.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Gargano Pilot Captain Saverio Tadesco Airfield",
+    "gps_code": "IT-0205",
+    "freq": "",
+    "Lat": 41.635,
+    "Lon": 15.761667,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fondone Airfield",
+    "gps_code": "IT-0206",
+    "freq": "128.450",
+    "Lat": 40.355883,
+    "Lon": 18.232425,
+    "Ele": 39.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Pantalla Airfield",
+    "gps_code": "IT-0207",
+    "freq": "",
+    "Lat": 42.871082,
+    "Lon": 12.384741,
+    "Ele": 148.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Maccagno Airfield",
+    "gps_code": "IT-0208",
+    "freq": "",
+    "Lat": 44.423599,
+    "Lon": 7.459128,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Pinguino Airfield",
+    "gps_code": "IT-0209",
+    "freq": "",
+    "Lat": 43.87137,
+    "Lon": 10.94651,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Pegaso Flying Club",
+    "gps_code": "IT-0210",
+    "freq": "",
+    "Lat": 41.541847,
+    "Lon": 13.370451,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Casale Airfield",
+    "gps_code": "IT-0211",
+    "freq": "130.000",
+    "Lat": 45.984782,
+    "Lon": 12.923537,
+    "Ele": 45.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Air Patria\"",
+    "gps_code": "IT-0212",
+    "freq": "",
+    "Lat": 40.926943,
+    "Lon": 14.061944,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Aliquirra",
+    "gps_code": "IT-0213",
+    "freq": "",
+    "Lat": 39.678,
+    "Lon": 9.46299,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Peter Pan Airfield",
+    "gps_code": "IT-0214",
+    "freq": "",
+    "Lat": 42.97183,
+    "Lon": 12.371257,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Aligubbio\"",
+    "gps_code": "IT-0215",
+    "freq": "",
+    "Lat": 43.3173,
+    "Lon": 12.5731,
+    "Ele": 419.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie L'Aquila",
+    "gps_code": "IT-0216",
+    "freq": "",
+    "Lat": 42.300878,
+    "Lon": 13.517175,
+    "Ele": 570.9
+  },
+  {
+    "type": "small_airport",
+    "name": "VolAvisio Airfield",
+    "gps_code": "IT-0217",
+    "freq": "",
+    "Lat": 46.27888,
+    "Lon": 11.44837,
+    "Ele": 859.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Volopuro Airfield",
+    "gps_code": "IT-0218",
+    "freq": "",
+    "Lat": 45.564089,
+    "Lon": 8.54184,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuscany Flight Airfield",
+    "gps_code": "IT-0219",
+    "freq": "",
+    "Lat": 43.695365,
+    "Lon": 10.805435,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Avola-Gallina",
+    "gps_code": "IT-0220",
+    "freq": "",
+    "Lat": 36.945287,
+    "Lon": 15.170774,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Montagnana Airfield",
+    "gps_code": "IT-0221",
+    "freq": "118.975",
+    "Lat": 45.245222,
+    "Lon": 11.424673,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Divinangelo",
+    "gps_code": "IT-0222",
+    "freq": "130.000",
+    "Lat": 41.471944,
+    "Lon": 13.023611,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "K-Fly Flying Field",
+    "gps_code": "IT-0223",
+    "freq": "",
+    "Lat": 41.91128,
+    "Lon": 15.81102,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Monticchio Airfield",
+    "gps_code": "IT-0224",
+    "freq": "130.000",
+    "Lat": 40.377022,
+    "Lon": 17.386017,
+    "Ele": 37.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Artena",
+    "gps_code": "IT-0225",
+    "freq": "130.000",
+    "Lat": 41.673056,
+    "Lon": 12.845556,
+    "Ele": 197.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gianni Cerutti Airfield",
+    "gps_code": "IT-0228",
+    "freq": "123.450",
+    "Lat": 45.34921,
+    "Lon": 8.64632,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Natile Airfield",
+    "gps_code": "IT-0229",
+    "freq": "130.000",
+    "Lat": 40.59059,
+    "Lon": 16.769,
+    "Ele": 296.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Pietralunga",
+    "gps_code": "IT-0230",
+    "freq": "130.000",
+    "Lat": 43.450539,
+    "Lon": 12.401383,
+    "Ele": 689.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Cavola",
+    "gps_code": "IT-0231",
+    "freq": "130.000",
+    "Lat": 44.39646,
+    "Lon": 10.53613,
+    "Ele": 538.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Rita Airfield",
+    "gps_code": "IT-0232",
+    "freq": "130.000",
+    "Lat": 42.75654,
+    "Lon": 13.01628,
+    "Ele": 883.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cà Virginia Airfield",
+    "gps_code": "IT-0233",
+    "freq": "",
+    "Lat": 43.818795,
+    "Lon": 12.677264,
+    "Ele": 78.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Valdichiana Airfield",
+    "gps_code": "IT-0234",
+    "freq": "",
+    "Lat": 43.214021,
+    "Lon": 11.823111,
+    "Ele": 246.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ciannocio Airfield",
+    "gps_code": "IT-0235",
+    "freq": "",
+    "Lat": 43.120848,
+    "Lon": 11.920468,
+    "Ele": 251.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Policastro Airfield",
+    "gps_code": "IT-0236",
+    "freq": "130.000",
+    "Lat": 40.114874,
+    "Lon": 15.495315,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta Condor Airfield",
+    "gps_code": "IT-0238",
+    "freq": "",
+    "Lat": 43.868758,
+    "Lon": 10.302024,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Esperti Airfield",
+    "gps_code": "IT-0239",
+    "freq": "",
+    "Lat": 40.47894,
+    "Lon": 17.884616,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Monreale",
+    "gps_code": "IT-0240",
+    "freq": "",
+    "Lat": 39.583099,
+    "Lon": 8.773265,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Agrigento",
+    "gps_code": "IT-0241",
+    "freq": "130.000",
+    "Lat": 37.247222,
+    "Lon": 13.654722,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Corte Airfield",
+    "gps_code": "IT-0242",
+    "freq": "130.000",
+    "Lat": 40.107104,
+    "Lon": 18.257618,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Sabina Airfield",
+    "gps_code": "IT-0243",
+    "freq": "",
+    "Lat": 42.116667,
+    "Lon": 12.708056,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trike Team Cormorano",
+    "gps_code": "IT-0244",
+    "freq": "",
+    "Lat": 37.0994444,
+    "Lon": 14.17,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Val Vibrata Flying Field",
+    "gps_code": "IT-0245",
+    "freq": "130.000",
+    "Lat": 42.809474,
+    "Lon": 13.847142,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "AliVara Airfield",
+    "gps_code": "IT-0246",
+    "freq": "",
+    "Lat": 44.227697,
+    "Lon": 9.720077,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali sul Castello Airfield",
+    "gps_code": "IT-0247",
+    "freq": "",
+    "Lat": 41.063481,
+    "Lon": 16.280887,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Montecchio Podere Santa Apollonia Airfield",
+    "gps_code": "IT-0248",
+    "freq": "",
+    "Lat": 43.297074,
+    "Lon": 11.906888,
+    "Ele": 246.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Willy il Coyote Airfield",
+    "gps_code": "IT-0249",
+    "freq": "",
+    "Lat": 44.771828,
+    "Lon": 10.832155,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Valerio Glorialanza Airfield",
+    "gps_code": "IT-0250",
+    "freq": "",
+    "Lat": 44.376111,
+    "Lon": 9.290278,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Dalmazio Airfield",
+    "gps_code": "IT-0251",
+    "freq": "",
+    "Lat": 44.4125,
+    "Lon": 10.843611,
+    "Ele": 570.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta Culture Club Airfield",
+    "gps_code": "IT-0252",
+    "freq": "",
+    "Lat": 44.571111,
+    "Lon": 11.451667,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Castellazzo Airfield",
+    "gps_code": "IT-0253",
+    "freq": "",
+    "Lat": 44.683333,
+    "Lon": 10.739722,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cassola Airfield",
+    "gps_code": "IT-0254",
+    "freq": "",
+    "Lat": 45.741308,
+    "Lon": 11.806548,
+    "Ele": 97.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Molinella Airfield",
+    "gps_code": "IT-0255",
+    "freq": "126.950",
+    "Lat": 44.5982,
+    "Lon": 11.656286,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie di Rubbiano",
+    "gps_code": "IT-0256",
+    "freq": "130.000",
+    "Lat": 44.671947,
+    "Lon": 10.060862,
+    "Ele": 157.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Colli Euganei Airfield",
+    "gps_code": "IT-0257",
+    "freq": "",
+    "Lat": 45.202641,
+    "Lon": 11.793715,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Settecrociari Airfield",
+    "gps_code": "IT-0258",
+    "freq": "130.000",
+    "Lat": 44.13595,
+    "Lon": 12.18976,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campogalliano Airfield",
+    "gps_code": "IT-0259",
+    "freq": "156.725",
+    "Lat": 44.70355,
+    "Lon": 10.85416,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Obiettivo Volare Aeroclub",
+    "gps_code": "IT-0260",
+    "freq": "",
+    "Lat": 44.889329,
+    "Lon": 10.160223,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Achille Private Ultralight Airfield",
+    "gps_code": "IT-0261",
+    "freq": "",
+    "Lat": 43.99883,
+    "Lon": 12.10792,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Empoli Airstrip",
+    "gps_code": "IT-0262",
+    "freq": "130.000",
+    "Lat": 43.725153,
+    "Lon": 10.982175,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tignes Airfield",
+    "gps_code": "IT-0263",
+    "freq": "",
+    "Lat": 46.15401,
+    "Lon": 12.34751,
+    "Ele": 510.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Grumentum Airfield",
+    "gps_code": "IT-0264",
+    "freq": "",
+    "Lat": 40.27009,
+    "Lon": 15.91363,
+    "Ele": 611.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Torre Sant'Andrea Airfield",
+    "gps_code": "IT-0265",
+    "freq": "130.000",
+    "Lat": 40.247662,
+    "Lon": 18.436303,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Valicella",
+    "gps_code": "IT-0266",
+    "freq": "130.000",
+    "Lat": 42.21873,
+    "Lon": 12.24846,
+    "Ele": 262.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie F. Rossi",
+    "gps_code": "IT-0267",
+    "freq": "130.000",
+    "Lat": 43.34,
+    "Lon": 12.826944,
+    "Ele": 410.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Banda Bassotti Airfield",
+    "gps_code": "IT-0268",
+    "freq": "",
+    "Lat": 44.926373,
+    "Lon": 11.051473,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rovasenda 2000 Airfield",
+    "gps_code": "IT-0269",
+    "freq": "",
+    "Lat": 45.544351,
+    "Lon": 8.278914,
+    "Ele": 239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Canale Airfield",
+    "gps_code": "IT-0270",
+    "freq": "",
+    "Lat": 40.8125,
+    "Lon": 17.233056,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Agnedo Airfield",
+    "gps_code": "IT-0271",
+    "freq": "",
+    "Lat": 46.044722,
+    "Lon": 11.541944,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Costa d'Argento",
+    "gps_code": "IT-0272",
+    "freq": "",
+    "Lat": 42.495016,
+    "Lon": 11.238771,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Giuliano Borgonovi Airfield",
+    "gps_code": "IT-0273",
+    "freq": "",
+    "Lat": 45.187103,
+    "Lon": 9.042821,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Villa Selva Air Park\"",
+    "gps_code": "IT-0274",
+    "freq": "",
+    "Lat": 42.79277,
+    "Lon": 13.75146,
+    "Ele": 167.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Arcobaleno Airfield",
+    "gps_code": "IT-0275",
+    "freq": "",
+    "Lat": 44.496944,
+    "Lon": 11.243611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Ali del Montello\"",
+    "gps_code": "IT-0276",
+    "freq": "",
+    "Lat": 45.76157,
+    "Lon": 12.16361,
+    "Ele": 68.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie La Selva",
+    "gps_code": "IT-0277",
+    "freq": "",
+    "Lat": 41.155556,
+    "Lon": 14.21,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Falcone Airfield",
+    "gps_code": "IT-0278",
+    "freq": "123.450",
+    "Lat": 41.105084,
+    "Lon": 15.876483,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Celano",
+    "gps_code": "IT-0279",
+    "freq": "",
+    "Lat": 42.05167,
+    "Lon": 13.55722,
+    "Ele": 680.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cesare Rossi Airfield",
+    "gps_code": "IT-0280",
+    "freq": "130.000",
+    "Lat": 43.102879,
+    "Lon": 13.557816,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Piana Cinque Miglia Airfield",
+    "gps_code": "IT-0281",
+    "freq": "",
+    "Lat": 41.879201,
+    "Lon": 14.011133,
+    "Ele": 1257.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Collerotondo",
+    "gps_code": "IT-0282",
+    "freq": "",
+    "Lat": 42.289182,
+    "Lon": 13.745423,
+    "Ele": 410.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Carocci",
+    "gps_code": "IT-0283",
+    "freq": "",
+    "Lat": 42.247516,
+    "Lon": 12.308311,
+    "Ele": 239.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pegaso Airfield",
+    "gps_code": "IT-0284",
+    "freq": "",
+    "Lat": 45.318282,
+    "Lon": 12.056959,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Parco Livenza Airfield",
+    "gps_code": "IT-0285",
+    "freq": "",
+    "Lat": 45.740274,
+    "Lon": 12.704472,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skydive Venice Airfield",
+    "gps_code": "IT-0286",
+    "freq": "",
+    "Lat": 45.700009,
+    "Lon": 12.763909,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Conca del Re Airfield",
+    "gps_code": "IT-0289",
+    "freq": "",
+    "Lat": 39.854278,
+    "Lon": 16.19563,
+    "Ele": 667.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Il Pratone\"",
+    "gps_code": "IT-0290",
+    "freq": "",
+    "Lat": 42.093703,
+    "Lon": 13.042332,
+    "Ele": 577.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sky Ufita Airfield",
+    "gps_code": "IT-0291",
+    "freq": "",
+    "Lat": 41.046165,
+    "Lon": 15.121532,
+    "Ele": 349.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Blue Devil Centre Airfield",
+    "gps_code": "IT-0292",
+    "freq": "",
+    "Lat": 45.392393,
+    "Lon": 10.127678,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Le Panizze Airfield",
+    "gps_code": "IT-0293",
+    "freq": "",
+    "Lat": 45.419359,
+    "Lon": 10.557346,
+    "Ele": 102.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali della Libertà Airfield",
+    "gps_code": "IT-0297",
+    "freq": "",
+    "Lat": 44.516167,
+    "Lon": 11.100083,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Phoenix Airfield",
+    "gps_code": "IT-0298",
+    "freq": "",
+    "Lat": 44.74714,
+    "Lon": 11.34161,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Creva Air Club Airfield",
+    "gps_code": "IT-0299",
+    "freq": "",
+    "Lat": 44.737333,
+    "Lon": 11.183633,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Punto Volo Airfield",
+    "gps_code": "IT-0300",
+    "freq": "",
+    "Lat": 45.437917,
+    "Lon": 9.607472,
+    "Ele": 91.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Agriturismo Turus Airfield",
+    "gps_code": "IT-0301",
+    "freq": "",
+    "Lat": 45.923709,
+    "Lon": 13.541016,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "AS77 Airfield",
+    "gps_code": "IT-0302",
+    "freq": "",
+    "Lat": 45.961084,
+    "Lon": 13.204394,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Fattoria Airfield",
+    "gps_code": "IT-0303",
+    "freq": "",
+    "Lat": 45.291762,
+    "Lon": 12.075799,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Base Bravo Airfield",
+    "gps_code": "IT-0304",
+    "freq": "",
+    "Lat": 45.392864,
+    "Lon": 11.692645,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Da Domenico Airfield",
+    "gps_code": "IT-0305",
+    "freq": "",
+    "Lat": 45.233379,
+    "Lon": 11.797942,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Padova Sud Airfield",
+    "gps_code": "IT-0306",
+    "freq": "",
+    "Lat": 45.325086,
+    "Lon": 11.872916,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dominio di Bagnoli Airfield",
+    "gps_code": "IT-0307",
+    "freq": "",
+    "Lat": 45.183946,
+    "Lon": 11.857326,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Avioclub Alanno\"",
+    "gps_code": "IT-0309",
+    "freq": "",
+    "Lat": 42.31458,
+    "Lon": 14.000913,
+    "Ele": 116.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Avioclub Elice\"",
+    "gps_code": "IT-0310",
+    "freq": "",
+    "Lat": 42.49048,
+    "Lon": 13.995545,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Bonsciano",
+    "gps_code": "IT-0311",
+    "freq": "",
+    "Lat": 43.355854,
+    "Lon": 12.193534,
+    "Ele": 268.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Terenziano Airfield",
+    "gps_code": "IT-0312",
+    "freq": "",
+    "Lat": 42.85723,
+    "Lon": 12.473179,
+    "Ele": 511.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Maria Rossa Airfield",
+    "gps_code": "IT-0313",
+    "freq": "",
+    "Lat": 43.024026,
+    "Lon": 12.387359,
+    "Ele": 173.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Montefalco",
+    "gps_code": "IT-0314",
+    "freq": "",
+    "Lat": 42.885358,
+    "Lon": 12.693324,
+    "Ele": 211.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Molinella Airfield",
+    "gps_code": "IT-0315",
+    "freq": "",
+    "Lat": 43.122501,
+    "Lon": 12.206919,
+    "Ele": 240.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fant Air Club Airfield",
+    "gps_code": "IT-0317",
+    "freq": "",
+    "Lat": 46.085023,
+    "Lon": 12.068712,
+    "Ele": 281.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Paolo Airfield",
+    "gps_code": "IT-0319",
+    "freq": "",
+    "Lat": 45.378663,
+    "Lon": 10.037792,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "AliMatese Airfield",
+    "gps_code": "IT-0320",
+    "freq": "",
+    "Lat": 41.323638,
+    "Lon": 14.363949,
+    "Ele": 112.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vasto Flying Field",
+    "gps_code": "IT-0321",
+    "freq": "",
+    "Lat": 42.155381,
+    "Lon": 14.699362,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerlight Faenza Airfield",
+    "gps_code": "IT-0322",
+    "freq": "",
+    "Lat": 44.334746,
+    "Lon": 11.930103,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vallegaffaro Airfield",
+    "gps_code": "IT-0323",
+    "freq": "",
+    "Lat": 44.834414,
+    "Lon": 12.231261,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Borgo Castelvecchio Airfield",
+    "gps_code": "IT-0324",
+    "freq": "",
+    "Lat": 43.012021,
+    "Lon": 11.733956,
+    "Ele": 306.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Curtatone City San Silvestro Airfield",
+    "gps_code": "IT-0325",
+    "freq": "",
+    "Lat": 45.101547,
+    "Lon": 10.7492,
+    "Ele": 20.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Mantova Nord Airfield",
+    "gps_code": "IT-0327",
+    "freq": "",
+    "Lat": 45.172182,
+    "Lon": 10.858224,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Că Mantovane Airfield",
+    "gps_code": "IT-0328",
+    "freq": "",
+    "Lat": 45.239484,
+    "Lon": 10.889615,
+    "Ele": 33.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Condor Men\"",
+    "gps_code": "IT-0330",
+    "freq": "",
+    "Lat": 43.224706,
+    "Lon": 13.329554,
+    "Ele": 191.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Santa Anna",
+    "gps_code": "IT-0331",
+    "freq": "",
+    "Lat": 43.366053,
+    "Lon": 13.457496,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Ali del Chienti",
+    "gps_code": "IT-0332",
+    "freq": "",
+    "Lat": 43.260263,
+    "Lon": 13.518618,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "AliPuglia Airfield",
+    "gps_code": "IT-0333",
+    "freq": "",
+    "Lat": 40.474421,
+    "Lon": 17.609926,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Antares Aeroclub Brindisi Airfield",
+    "gps_code": "IT-0334",
+    "freq": "",
+    "Lat": 40.503697,
+    "Lon": 17.964934,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Base Aerea Molise",
+    "gps_code": "IT-0335",
+    "freq": "",
+    "Lat": 41.474462,
+    "Lon": 14.537457,
+    "Ele": 508.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Loelle",
+    "gps_code": "IT-0336",
+    "freq": "",
+    "Lat": 40.5701667,
+    "Lon": 9.3173667,
+    "Ele": 791.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Valledoria",
+    "gps_code": "IT-0337",
+    "freq": "",
+    "Lat": 40.929768,
+    "Lon": 8.812227,
+    "Ele": 8.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pista Vasa Airfield",
+    "gps_code": "IT-0338",
+    "freq": "",
+    "Lat": 41.046634,
+    "Lon": 8.997749,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gli Aironi Airfield",
+    "gps_code": "IT-0339",
+    "freq": "",
+    "Lat": 44.462771,
+    "Lon": 11.789613,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta Club Conselice Airfield",
+    "gps_code": "IT-0340",
+    "freq": "",
+    "Lat": 44.541928,
+    "Lon": 11.792177,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Oasi Airfield",
+    "gps_code": "IT-0341",
+    "freq": "",
+    "Lat": 45.696556,
+    "Lon": 8.826948,
+    "Ele": 298.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Umiltà",
+    "gps_code": "IT-0342",
+    "freq": "",
+    "Lat": 42.192111,
+    "Lon": 12.331621,
+    "Ele": 239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Santa Bruna",
+    "gps_code": "IT-0343",
+    "freq": "",
+    "Lat": 42.382873,
+    "Lon": 12.344158,
+    "Ele": 261.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Poggio Primavera",
+    "gps_code": "IT-0344",
+    "freq": "",
+    "Lat": 42.366412,
+    "Lon": 11.796702,
+    "Ele": 147.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Montalto di Castro",
+    "gps_code": "IT-0345",
+    "freq": "",
+    "Lat": 42.362738,
+    "Lon": 11.656572,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie San Teodoro",
+    "gps_code": "IT-0346",
+    "freq": "",
+    "Lat": 40.802484,
+    "Lon": 9.65839,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly and Go Airfield",
+    "gps_code": "IT-0350",
+    "freq": "",
+    "Lat": 41.344754,
+    "Lon": 15.526474,
+    "Ele": 126.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vivoli Airfield",
+    "gps_code": "IT-0351",
+    "freq": "",
+    "Lat": 42.992623,
+    "Lon": 10.806329,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Aviodelta",
+    "gps_code": "IT-0352",
+    "freq": "",
+    "Lat": 44.706594,
+    "Lon": 10.249517,
+    "Ele": 159.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Campore",
+    "gps_code": "IT-0353",
+    "freq": "",
+    "Lat": 44.827864,
+    "Lon": 10.010782,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Torretta Airfield",
+    "gps_code": "IT-0354",
+    "freq": "",
+    "Lat": 44.993187,
+    "Lon": 10.0599,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Vallesanta",
+    "gps_code": "IT-0355",
+    "freq": "",
+    "Lat": 42.427317,
+    "Lon": 12.805221,
+    "Ele": 379.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Giardini di Corcolle Airfield",
+    "gps_code": "IT-0356",
+    "freq": "",
+    "Lat": 41.900476,
+    "Lon": 12.741902,
+    "Ele": 98.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Air Ardara\"",
+    "gps_code": "IT-0357",
+    "freq": "",
+    "Lat": 40.625979,
+    "Lon": 8.868129,
+    "Ele": 223.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Cornegliano Airfield",
+    "gps_code": "IT-0358",
+    "freq": "",
+    "Lat": 45.288819,
+    "Lon": 9.491562,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Massalengo Airfield",
+    "gps_code": "IT-0359",
+    "freq": "",
+    "Lat": 45.275425,
+    "Lon": 9.482934,
+    "Ele": 72.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mezzana Casati Airfield",
+    "gps_code": "IT-0360",
+    "freq": "",
+    "Lat": 45.098258,
+    "Lon": 9.735884,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gragnano Airfield",
+    "gps_code": "IT-0362",
+    "freq": "",
+    "Lat": 45.0,
+    "Lon": 9.581999,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Aretusa Fly",
+    "gps_code": "IT-0364",
+    "freq": "",
+    "Lat": 37.03741,
+    "Lon": 15.09536,
+    "Ele": 308.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Chiusa-Zerfaliu",
+    "gps_code": "IT-0365",
+    "freq": "",
+    "Lat": 39.989504,
+    "Lon": 8.723266,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bedizzole Airfield",
+    "gps_code": "IT-0366",
+    "freq": "",
+    "Lat": 45.51851,
+    "Lon": 10.449577,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bosco di Mezzo Airfield (CTCAL)",
+    "gps_code": "IT-0367",
+    "freq": "",
+    "Lat": 37.1523,
+    "Lon": 14.59928,
+    "Ele": 398.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Amici del Volo\"",
+    "gps_code": "IT-0368",
+    "freq": "",
+    "Lat": 41.676997,
+    "Lon": 13.74285,
+    "Ele": 370.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Volo Leggero Airfield",
+    "gps_code": "IT-0369",
+    "freq": "",
+    "Lat": 45.261776,
+    "Lon": 11.192901,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pica Airfield",
+    "gps_code": "IT-0370",
+    "freq": "",
+    "Lat": 42.696389,
+    "Lon": 13.916985,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ca' Quinta di Sarego Airfield",
+    "gps_code": "IT-0371",
+    "freq": "",
+    "Lat": 45.432833,
+    "Lon": 11.383333,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "San Mauro Airfield",
+    "gps_code": "IT-0372",
+    "freq": "121.900",
+    "Lat": 46.068333,
+    "Lon": 13.366883,
+    "Ele": 107.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Serristori Airfield",
+    "gps_code": "IT-0373",
+    "freq": "",
+    "Lat": 43.332567,
+    "Lon": 11.857861,
+    "Ele": 261.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Asolo Flight Airfield",
+    "gps_code": "IT-0374",
+    "freq": "",
+    "Lat": 45.758333,
+    "Lon": 11.896111,
+    "Ele": 76.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Marco Volo Airfield",
+    "gps_code": "IT-0375",
+    "freq": "",
+    "Lat": 45.771043,
+    "Lon": 11.996559,
+    "Ele": 106.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Montebelluna Airfield",
+    "gps_code": "IT-0376",
+    "freq": "",
+    "Lat": 45.748181,
+    "Lon": 12.057152,
+    "Ele": 83.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Club Deltasport Airfield",
+    "gps_code": "IT-0377",
+    "freq": "",
+    "Lat": 44.653559,
+    "Lon": 10.991591,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ala Jonica Airfield",
+    "gps_code": "IT-0378",
+    "freq": "",
+    "Lat": 37.9371,
+    "Lon": 15.320702,
+    "Ele": 71.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Rosangeles Airfield",
+    "gps_code": "IT-0379",
+    "freq": "123.600",
+    "Lat": 45.362976,
+    "Lon": 9.017057,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulcor Airfield",
+    "gps_code": "IT-0380",
+    "freq": "",
+    "Lat": 39.9787,
+    "Lon": 8.6792,
+    "Ele": 47.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Vallermosa",
+    "gps_code": "IT-0381",
+    "freq": "",
+    "Lat": 39.3561,
+    "Lon": 8.7919,
+    "Ele": 71.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Gemini Flying Field",
+    "gps_code": "IT-0382",
+    "freq": "",
+    "Lat": 39.894733,
+    "Lon": 18.189937,
+    "Ele": 98.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Giovanni Zaccini",
+    "gps_code": "IT-0383",
+    "freq": "",
+    "Lat": 41.560349,
+    "Lon": 13.34412,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Grifo Airfield",
+    "gps_code": "IT-0384",
+    "freq": "",
+    "Lat": 41.671186,
+    "Lon": 13.278646,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rains Airfield",
+    "gps_code": "IT-0385",
+    "freq": "",
+    "Lat": 41.146,
+    "Lon": 14.338803,
+    "Ele": 29.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Delfina",
+    "gps_code": "IT-0387",
+    "freq": "",
+    "Lat": 42.842934,
+    "Lon": 12.734494,
+    "Ele": 215.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Panicarola Airfield",
+    "gps_code": "IT-0388",
+    "freq": "",
+    "Lat": 43.064444,
+    "Lon": 12.100556,
+    "Ele": 274.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Delta Top Pegaso\"",
+    "gps_code": "IT-0390",
+    "freq": "",
+    "Lat": 42.224206,
+    "Lon": 11.7948,
+    "Ele": 107.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarquinia San Giorgio Airfield",
+    "gps_code": "IT-0391",
+    "freq": "",
+    "Lat": 42.192687,
+    "Lon": 11.724573,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Montemelino Airfield",
+    "gps_code": "IT-0392",
+    "freq": "",
+    "Lat": 43.102464,
+    "Lon": 12.254116,
+    "Ele": 222.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Ala Airfield",
+    "gps_code": "IT-0394",
+    "freq": "",
+    "Lat": 42.841916,
+    "Lon": 10.82346,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Collina Airfield",
+    "gps_code": "IT-0395",
+    "freq": "",
+    "Lat": 43.988371,
+    "Lon": 11.389562,
+    "Ele": 289.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Friuli Airfield",
+    "gps_code": "IT-0397",
+    "freq": "",
+    "Lat": 46.056493,
+    "Lon": 13.426248,
+    "Ele": 112.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Amici dell'Aria",
+    "gps_code": "IT-0398",
+    "freq": "",
+    "Lat": 39.327868,
+    "Lon": 9.146871,
+    "Ele": 143.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Aliveneta",
+    "gps_code": "IT-0399",
+    "freq": "",
+    "Lat": 45.250934,
+    "Lon": 11.036059,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali del Brenta Airfield",
+    "gps_code": "IT-0400",
+    "freq": "",
+    "Lat": 45.157127,
+    "Lon": 12.110758,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Ranch Airfield",
+    "gps_code": "IT-0402",
+    "freq": "",
+    "Lat": 45.923428,
+    "Lon": 13.035592,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Always Airfield",
+    "gps_code": "IT-0403",
+    "freq": "",
+    "Lat": 46.133883,
+    "Lon": 13.278224,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chiasiellis Airfield",
+    "gps_code": "IT-0405",
+    "freq": "",
+    "Lat": 45.944928,
+    "Lon": 13.208403,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Synthesis Airfield",
+    "gps_code": "IT-0406",
+    "freq": "",
+    "Lat": 45.968667,
+    "Lon": 13.23355,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Evolution Flying Field",
+    "gps_code": "IT-0407",
+    "freq": "",
+    "Lat": 45.981982,
+    "Lon": 13.306923,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pranovi Airfield",
+    "gps_code": "IT-0408",
+    "freq": "",
+    "Lat": 45.371835,
+    "Lon": 12.037153,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Maraclub Icamar\"",
+    "gps_code": "IT-0409",
+    "freq": "",
+    "Lat": 39.278216,
+    "Lon": 9.25674,
+    "Ele": 87.8
+  },
+  {
+    "type": "small_airport",
+    "name": "SCUV Aero Club Valdarno Airfield",
+    "gps_code": "IT-0410",
+    "freq": "",
+    "Lat": 43.528658,
+    "Lon": 11.474759,
+    "Ele": 344.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Massimo Costa Airfield",
+    "gps_code": "IT-0411",
+    "freq": "",
+    "Lat": 43.092657,
+    "Lon": 10.556215,
+    "Ele": 33.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie del Parteolla",
+    "gps_code": "IT-0413",
+    "freq": "",
+    "Lat": 39.400471,
+    "Lon": 9.139151,
+    "Ele": 132.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"La Tana del Volo\"",
+    "gps_code": "IT-0414",
+    "freq": "",
+    "Lat": 39.269133,
+    "Lon": 8.771811,
+    "Ele": 82.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valeggio sul Mincio Airfield",
+    "gps_code": "IT-0415",
+    "freq": "",
+    "Lat": 45.317432,
+    "Lon": 10.708423,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arcadia Airfield",
+    "gps_code": "IT-0416",
+    "freq": "",
+    "Lat": 45.500837,
+    "Lon": 10.789056,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Sisto di Poviglio Airfield",
+    "gps_code": "IT-0419",
+    "freq": "",
+    "Lat": 44.847142,
+    "Lon": 10.505501,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Top Gun Airfield",
+    "gps_code": "IT-0420",
+    "freq": "",
+    "Lat": 44.682302,
+    "Lon": 10.568648,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bracciano Air Base",
+    "gps_code": "IT-0423",
+    "freq": "",
+    "Lat": 42.0822,
+    "Lon": 12.07459,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroteam Airfield",
+    "gps_code": "IT-0425",
+    "freq": "",
+    "Lat": 45.436236,
+    "Lon": 8.577373,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rivoli Tetti Neirotti Airfield",
+    "gps_code": "IT-0426",
+    "freq": "130.000",
+    "Lat": 45.046818,
+    "Lon": 7.536461,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Andrea Bozzo Airfield",
+    "gps_code": "IT-0427",
+    "freq": "",
+    "Lat": 44.863742,
+    "Lon": 7.407068,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Canonica Airfield",
+    "gps_code": "IT-0428",
+    "freq": "",
+    "Lat": 45.635467,
+    "Lon": 12.340599,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Albatros Airfield",
+    "gps_code": "IT-0429",
+    "freq": "",
+    "Lat": 45.770727,
+    "Lon": 12.244068,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dream Fly Airfield",
+    "gps_code": "IT-0430",
+    "freq": "",
+    "Lat": 45.930381,
+    "Lon": 12.257512,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Butterfly 2 Airfield",
+    "gps_code": "IT-0431",
+    "freq": "",
+    "Lat": 45.85255,
+    "Lon": 12.45734,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "L'Airone Airfield",
+    "gps_code": "IT-0434",
+    "freq": "",
+    "Lat": 45.152733,
+    "Lon": 8.655217,
+    "Ele": 103.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Fucecchio Airfield",
+    "gps_code": "IT-0435",
+    "freq": "",
+    "Lat": 43.751529,
+    "Lon": 10.8078,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Antica Sardegna",
+    "gps_code": "IT-0436",
+    "freq": "",
+    "Lat": 39.270695,
+    "Lon": 9.538871,
+    "Ele": 62.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Santo Stefano",
+    "gps_code": "IT-0437",
+    "freq": "",
+    "Lat": 42.072262,
+    "Lon": 12.2628,
+    "Ele": 221.0
+  },
+  {
+    "type": "small_airport",
+    "name": "AliLafer Airfield",
+    "gps_code": "IT-0438",
+    "freq": "",
+    "Lat": 45.033682,
+    "Lon": 9.791865,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Tucano",
+    "gps_code": "IT-0439",
+    "freq": "",
+    "Lat": 42.1324,
+    "Lon": 12.6263,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Grecciano",
+    "gps_code": "IT-0440",
+    "freq": "",
+    "Lat": 43.628814,
+    "Lon": 10.482438,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Air Country\"",
+    "gps_code": "IT-0442",
+    "freq": "",
+    "Lat": 42.806283,
+    "Lon": 13.785007,
+    "Ele": 139.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Costa del Monte Flying Field",
+    "gps_code": "IT-0443",
+    "freq": "",
+    "Lat": 42.733207,
+    "Lon": 13.891703,
+    "Ele": 151.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Roma East Airfield",
+    "gps_code": "IT-0444",
+    "freq": "",
+    "Lat": 41.914691,
+    "Lon": 12.769538,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Santarcangelo Airfield",
+    "gps_code": "IT-0445",
+    "freq": "",
+    "Lat": 44.030537,
+    "Lon": 12.426701,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Policoro Saline Flying Field",
+    "gps_code": "IT-0447",
+    "freq": "",
+    "Lat": 40.216161,
+    "Lon": 16.731721,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo MedFly",
+    "gps_code": "IT-0448",
+    "freq": "",
+    "Lat": 37.1055,
+    "Lon": 14.220061,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Club Aeronautico Gela",
+    "gps_code": "IT-0449",
+    "freq": "",
+    "Lat": 37.11314,
+    "Lon": 14.18929,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo \"Palazzone di Narni\"",
+    "gps_code": "IT-0450",
+    "freq": "",
+    "Lat": 42.536609,
+    "Lon": 12.553635,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Calledro",
+    "gps_code": "IT-0451",
+    "freq": "",
+    "Lat": 42.464848,
+    "Lon": 12.428715,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "ARMA Airfield",
+    "gps_code": "IT-0452",
+    "freq": "",
+    "Lat": 41.464419,
+    "Lon": 12.746515,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Roma-Nord",
+    "gps_code": "IT-0453",
+    "freq": "",
+    "Lat": 42.119945,
+    "Lon": 12.604453,
+    "Ele": 23.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Roma Airfield",
+    "gps_code": "IT-0454",
+    "freq": "",
+    "Lat": 41.884894,
+    "Lon": 12.718286,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Sangermano",
+    "gps_code": "IT-0455",
+    "freq": "",
+    "Lat": 41.991555,
+    "Lon": 12.13791,
+    "Ele": 102.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Alfina Airfield",
+    "gps_code": "IT-0456",
+    "freq": "",
+    "Lat": 42.739667,
+    "Lon": 11.983333,
+    "Ele": 552.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Ocria",
+    "gps_code": "IT-0457",
+    "freq": "",
+    "Lat": 42.427255,
+    "Lon": 12.457864,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Valcesano Airfield",
+    "gps_code": "IT-0459",
+    "freq": "",
+    "Lat": 43.700078,
+    "Lon": 13.073459,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pratello Airfield",
+    "gps_code": "IT-0460",
+    "freq": "",
+    "Lat": 43.55402,
+    "Lon": 10.752517,
+    "Ele": 52.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Groane Airfield",
+    "gps_code": "IT-0461",
+    "freq": "",
+    "Lat": 45.56612,
+    "Lon": 9.109705,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cogliate Airfield",
+    "gps_code": "IT-0462",
+    "freq": "",
+    "Lat": 45.639743,
+    "Lon": 9.065963,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pasiano Airfield",
+    "gps_code": "IT-0463",
+    "freq": "",
+    "Lat": 45.832273,
+    "Lon": 12.593565,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cordovado Airfield",
+    "gps_code": "IT-0464",
+    "freq": "",
+    "Lat": 45.836519,
+    "Lon": 12.892606,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Amyclae",
+    "gps_code": "IT-0466",
+    "freq": "",
+    "Lat": 41.314204,
+    "Lon": 13.345913,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Pontinia Eagles",
+    "gps_code": "IT-0467",
+    "freq": "",
+    "Lat": 41.372995,
+    "Lon": 13.136783,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Avio Pontina Fly",
+    "gps_code": "IT-0468",
+    "freq": "",
+    "Lat": 41.380947,
+    "Lon": 13.180648,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie La Celsetta",
+    "gps_code": "IT-0469",
+    "freq": "",
+    "Lat": 42.121667,
+    "Lon": 12.360556,
+    "Ele": 220.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Valmontone Airfield",
+    "gps_code": "IT-0470",
+    "freq": "",
+    "Lat": 41.765562,
+    "Lon": 12.864436,
+    "Ele": 353.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviocaipoli Airfield",
+    "gps_code": "IT-0471",
+    "freq": "",
+    "Lat": 41.891615,
+    "Lon": 12.783311,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Leonardo da Vinci Airfield",
+    "gps_code": "IT-0472",
+    "freq": "130.000",
+    "Lat": 45.288333,
+    "Lon": 8.8,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gallipoli Flying Field",
+    "gps_code": "IT-0473",
+    "freq": "",
+    "Lat": 40.015211,
+    "Lon": 18.023823,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Fiano Romano",
+    "gps_code": "IT-0474",
+    "freq": "",
+    "Lat": 42.1447222,
+    "Lon": 12.6333333,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Corfinio",
+    "gps_code": "IT-0475",
+    "freq": "",
+    "Lat": 42.109588,
+    "Lon": 13.84213,
+    "Ele": 360.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Carzago Riviera Airfield",
+    "gps_code": "IT-0476",
+    "freq": "130.000",
+    "Lat": 45.516789,
+    "Lon": 10.464759,
+    "Ele": 194.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Delta Club",
+    "gps_code": "IT-0477",
+    "freq": "",
+    "Lat": 41.716433,
+    "Lon": 13.094704,
+    "Ele": 200.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Azzanello Airfield",
+    "gps_code": "IT-0478",
+    "freq": "",
+    "Lat": 45.293845,
+    "Lon": 9.919281,
+    "Ele": 48.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Ali Umbre",
+    "gps_code": "IT-0479",
+    "freq": "",
+    "Lat": 43.27045,
+    "Lon": 12.7422267,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sturaro Airfield",
+    "gps_code": "IT-0480",
+    "freq": "",
+    "Lat": 45.196389,
+    "Lon": 12.068889,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "I Quattro Cantoni Airfield",
+    "gps_code": "IT-0481",
+    "freq": "",
+    "Lat": 44.803056,
+    "Lon": 11.138333,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Carzeto",
+    "gps_code": "IT-0482",
+    "freq": "",
+    "Lat": 44.96,
+    "Lon": 10.1838889,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "UFO Airfield",
+    "gps_code": "IT-0483",
+    "freq": "",
+    "Lat": 41.512595,
+    "Lon": 13.283537,
+    "Ele": 91.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Strozza Airfield",
+    "gps_code": "IT-0487",
+    "freq": "",
+    "Lat": 44.894653,
+    "Lon": 11.669125,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Francesco Cantelmo Airfield",
+    "gps_code": "IT-0488",
+    "freq": "",
+    "Lat": 42.488611,
+    "Lon": 11.798611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pellicano Airfield",
+    "gps_code": "IT-0489",
+    "freq": "",
+    "Lat": 44.847222,
+    "Lon": 7.562222,
+    "Ele": 247.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Torre Foghe",
+    "gps_code": "IT-0490",
+    "freq": "",
+    "Lat": 40.1833333,
+    "Lon": 8.4694444,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Felice-Trichiana Airfield",
+    "gps_code": "IT-0491",
+    "freq": "",
+    "Lat": 46.084723,
+    "Lon": 12.121052,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vraglia Airfield",
+    "gps_code": "IT-0492",
+    "freq": "",
+    "Lat": 44.413209,
+    "Lon": 11.747288,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Fly Center",
+    "gps_code": "IT-0493",
+    "freq": "",
+    "Lat": 41.5472222,
+    "Lon": 12.6708333,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Gruccione Airfield",
+    "gps_code": "IT-0494",
+    "freq": "",
+    "Lat": 43.605515,
+    "Lon": 10.411837,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bigarello Private Airfield",
+    "gps_code": "IT-0495",
+    "freq": "",
+    "Lat": 45.170815,
+    "Lon": 10.929061,
+    "Ele": 21.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Pellizzario",
+    "gps_code": "IT-0496",
+    "freq": "",
+    "Lat": 45.2927778,
+    "Lon": 10.4466667,
+    "Ele": 42.7
+  },
+  {
+    "type": "small_airport",
+    "name": "AvioSciacca Airfield",
+    "gps_code": "IT-0497",
+    "freq": "",
+    "Lat": 37.528056,
+    "Lon": 13.003611,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pietralata Flying Field",
+    "gps_code": "IT-0499",
+    "freq": "",
+    "Lat": 39.970654,
+    "Lon": 18.381006,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie La Smeraldina",
+    "gps_code": "IT-0500",
+    "freq": "",
+    "Lat": 41.05793,
+    "Lon": 9.433446,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Selva Negra Airfield",
+    "gps_code": "IT-0501",
+    "freq": "",
+    "Lat": 42.406825,
+    "Lon": 11.396192,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Curtatone Private Airfield",
+    "gps_code": "IT-0502",
+    "freq": "",
+    "Lat": 45.112207,
+    "Lon": 10.705383,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta Team Lucca Airfield",
+    "gps_code": "IT-0503",
+    "freq": "",
+    "Lat": 43.784226,
+    "Lon": 10.603388,
+    "Ele": 7.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Mantovana Airfield",
+    "gps_code": "IT-0504",
+    "freq": "",
+    "Lat": 44.726634,
+    "Lon": 8.593727,
+    "Ele": 224.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Felonica Airfield",
+    "gps_code": "IT-0505",
+    "freq": "",
+    "Lat": 44.966938,
+    "Lon": 11.354105,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tabularia Airfield",
+    "gps_code": "IT-0506",
+    "freq": "",
+    "Lat": 44.849794,
+    "Lon": 10.566058,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oasi del Volo Airfield",
+    "gps_code": "IT-0507",
+    "freq": "",
+    "Lat": 39.407537,
+    "Lon": 9.174867,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gsiesertal / Valle di Casies",
+    "gps_code": "IT-0508",
+    "freq": "",
+    "Lat": 46.7657842,
+    "Lon": 12.1556392,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Scortichino Airfield",
+    "gps_code": "IT-0509",
+    "freq": "",
+    "Lat": 44.859083,
+    "Lon": 11.353583,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie privata \"La Ceriella\"",
+    "gps_code": "IT-0511",
+    "freq": "",
+    "Lat": 45.220143,
+    "Lon": 8.659543,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Maletto Fly",
+    "gps_code": "IT-0512",
+    "freq": "",
+    "Lat": 37.845756,
+    "Lon": 14.869846,
+    "Ele": 840.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Le Prata Private Airfield",
+    "gps_code": "IT-0513",
+    "freq": "",
+    "Lat": 43.74537,
+    "Lon": 10.404967,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vallecamonica Airfield",
+    "gps_code": "IT-0514",
+    "freq": "",
+    "Lat": 45.855901,
+    "Lon": 10.147571,
+    "Ele": 205.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Altavillafly Airfield",
+    "gps_code": "IT-0515",
+    "freq": "",
+    "Lat": 40.545833,
+    "Lon": 15.101944,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Linnarta Airfield",
+    "gps_code": "IT-0516",
+    "freq": "",
+    "Lat": 40.412091,
+    "Lon": 9.723621,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Titta Airfield",
+    "gps_code": "IT-0517",
+    "freq": "",
+    "Lat": 43.491204,
+    "Lon": 12.2428,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grave di Papadopoli Jonathan Field",
+    "gps_code": "IT-0518",
+    "freq": "",
+    "Lat": 45.783887,
+    "Lon": 12.316765,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali Piacenza Airfield",
+    "gps_code": "IT-0519",
+    "freq": "",
+    "Lat": 45.030556,
+    "Lon": 9.605556,
+    "Ele": 64.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Medole Airfield",
+    "gps_code": "IT-0521",
+    "freq": "",
+    "Lat": 45.339031,
+    "Lon": 10.480944,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Privata Avielsar",
+    "gps_code": "IT-0522",
+    "freq": "",
+    "Lat": 39.498207,
+    "Lon": 9.612477,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "ASD Salento Fly Airfield",
+    "gps_code": "IT-0526",
+    "freq": "",
+    "Lat": 40.350138,
+    "Lon": 18.061007,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Corte Bariani Airfield",
+    "gps_code": "IT-0527",
+    "freq": "",
+    "Lat": 45.033193,
+    "Lon": 11.724132,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Casalfiumanese Airfield",
+    "gps_code": "IT-0530",
+    "freq": "",
+    "Lat": 44.28966,
+    "Lon": 11.625632,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Apricena Fly Airfield",
+    "gps_code": "IT-0531",
+    "freq": "",
+    "Lat": 41.79806,
+    "Lon": 15.419932,
+    "Ele": 135.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Volare Un Po Ultralight Airfield",
+    "gps_code": "IT-0532",
+    "freq": "",
+    "Lat": 45.01642,
+    "Lon": 10.100069,
+    "Ele": 30.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali dello Stilaro Flying Field",
+    "gps_code": "IT-0533",
+    "freq": "",
+    "Lat": 38.424475,
+    "Lon": 16.551869,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rivaltella Private Airfield",
+    "gps_code": "IT-0534",
+    "freq": "",
+    "Lat": 44.642004,
+    "Lon": 10.591759,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "CdV Colibri",
+    "gps_code": "IT-0537",
+    "freq": "",
+    "Lat": 42.3008333,
+    "Lon": 12.3797222,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Casa Bianca Model Airfield",
+    "gps_code": "IT-0542",
+    "freq": "",
+    "Lat": 45.466596,
+    "Lon": 10.347943,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rotocenter Airfield",
+    "gps_code": "IT-0543",
+    "freq": "",
+    "Lat": 43.715296,
+    "Lon": 10.743997,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Meda Airfield",
+    "gps_code": "IT-0549",
+    "freq": "",
+    "Lat": 45.676374,
+    "Lon": 8.486462,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Delta Club Ibis Airfield",
+    "gps_code": "IT-0551",
+    "freq": "",
+    "Lat": 43.022255,
+    "Lon": 10.611618,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alta Langa Airfield",
+    "gps_code": "IT-0554",
+    "freq": "",
+    "Lat": 44.411152,
+    "Lon": 8.120849,
+    "Ele": 191.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pianon Altiport",
+    "gps_code": "IT-0556",
+    "freq": "",
+    "Lat": 46.145432,
+    "Lon": 12.42808,
+    "Ele": 914.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Chiara Airfield",
+    "gps_code": "IT-0561",
+    "freq": "",
+    "Lat": 40.320012,
+    "Lon": 17.812786,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dune Airpark",
+    "gps_code": "IT-0565",
+    "freq": "",
+    "Lat": 40.794151,
+    "Lon": 17.491959,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Paretano Fly Airfield",
+    "gps_code": "IT-0566",
+    "freq": "",
+    "Lat": 40.82218,
+    "Lon": 17.285711,
+    "Ele": 313.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Batfly Airfield",
+    "gps_code": "IT-0569",
+    "freq": "",
+    "Lat": 41.343401,
+    "Lon": 16.213181,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Casera Razzo Altiport",
+    "gps_code": "IT-0613",
+    "freq": "",
+    "Lat": 46.476822,
+    "Lon": 12.614758,
+    "Ele": 1757.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Locher Field",
+    "gps_code": "IT-0620",
+    "freq": "",
+    "Lat": 46.600776,
+    "Lon": 11.380098,
+    "Ele": 914.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Chiusi Scalo",
+    "gps_code": "IT-0675",
+    "freq": "",
+    "Lat": 42.972564,
+    "Lon": 11.944301,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ozzano private airfield",
+    "gps_code": "IT-0677",
+    "freq": "",
+    "Lat": 45.12039,
+    "Lon": 8.35202,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barbarano Mossano Private Airstrip",
+    "gps_code": "IT-0679",
+    "freq": "",
+    "Lat": 45.398029,
+    "Lon": 11.549892,
+    "Ele": -0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperfice Tronto",
+    "gps_code": "IT-0681",
+    "freq": "",
+    "Lat": 42.89005,
+    "Lon": 13.87096,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "CdV Baia e Latina",
+    "gps_code": "IT-0682",
+    "freq": "",
+    "Lat": 41.29702,
+    "Lon": 14.27219,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Serra de' Conti Airfield",
+    "gps_code": "IT-0683",
+    "freq": "",
+    "Lat": 43.55993,
+    "Lon": 13.01976,
+    "Ele": 117.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Musciano Private Airstrip",
+    "gps_code": "IT-0685",
+    "freq": "",
+    "Lat": 43.66433,
+    "Lon": 10.72981,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aquila Solitaria Airfield",
+    "gps_code": "IT-0686",
+    "freq": "",
+    "Lat": 37.42709,
+    "Lon": 14.02916,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolgheri Airfield",
+    "gps_code": "IT-0709",
+    "freq": "130.000",
+    "Lat": 43.209663,
+    "Lon": 10.543751,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cascina Rosio Airfield",
+    "gps_code": "IT-0710",
+    "freq": "",
+    "Lat": 45.416086,
+    "Lon": 8.96513,
+    "Ele": 117.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperfice Eloro",
+    "gps_code": "IT-0711",
+    "freq": "",
+    "Lat": 36.85641,
+    "Lon": 15.08021,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Priolo Airfield",
+    "gps_code": "IT-0712",
+    "freq": "",
+    "Lat": 37.07992,
+    "Lon": 14.38008,
+    "Ele": 166.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Skydive Iseo Airfield",
+    "gps_code": "IT-0715",
+    "freq": "",
+    "Lat": 45.816298,
+    "Lon": 10.096242,
+    "Ele": 189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Templare Paestum",
+    "gps_code": "IT-0716",
+    "freq": "130.000",
+    "Lat": 40.472649,
+    "Lon": 14.959581,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eagles Airfield",
+    "gps_code": "IT-0717",
+    "freq": "130.000",
+    "Lat": 37.520917,
+    "Lon": 14.846016,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vicari Airfield",
+    "gps_code": "IT-0718",
+    "freq": "",
+    "Lat": 37.800747,
+    "Lon": 13.52314,
+    "Ele": 303.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di Volo Niscemi Parisi (CLNIS)",
+    "gps_code": "IT-0719",
+    "freq": "",
+    "Lat": 37.163224,
+    "Lon": 14.445664,
+    "Ele": 373.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Massarotti",
+    "gps_code": "IT-0720",
+    "freq": "130.000",
+    "Lat": 37.190835,
+    "Lon": 14.550211,
+    "Ele": 412.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Fly Team Paceco (TPPAC)",
+    "gps_code": "IT-0721",
+    "freq": "130.000",
+    "Lat": 37.960022,
+    "Lon": 12.615416,
+    "Ele": 66.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Masseria Antelmi Private Airfield",
+    "gps_code": "IT-0729",
+    "freq": "",
+    "Lat": 40.775846,
+    "Lon": 17.591987,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arca-Bessica Airfield",
+    "gps_code": "IT-0751",
+    "freq": "",
+    "Lat": 45.74325,
+    "Lon": 11.83564,
+    "Ele": 84.1
+  },
+  {
+    "type": "small_airport",
+    "name": "campo di volo Pian Mune'",
+    "gps_code": "IT-0756",
+    "freq": "130.000",
+    "Lat": 44.6458,
+    "Lon": 7.244931,
+    "Ele": 1495.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alino Airfield",
+    "gps_code": "IT-0757",
+    "freq": "130.000",
+    "Lat": 46.221329,
+    "Lon": 11.169695,
+    "Ele": 527.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di volo S.Elia (Buccino)",
+    "gps_code": "IT-0760",
+    "freq": "",
+    "Lat": 40.658381,
+    "Lon": 15.335616,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eurofly Airfield",
+    "gps_code": "IT-0761",
+    "freq": "",
+    "Lat": 45.690507,
+    "Lon": 11.746809,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Il Pianetto Airstrip",
+    "gps_code": "IT-0763",
+    "freq": "",
+    "Lat": 44.129994,
+    "Lon": 10.395309,
+    "Ele": 380.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dosolo Airfield",
+    "gps_code": "IT-0764",
+    "freq": "",
+    "Lat": 44.96078,
+    "Lon": 10.63557,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Azienda Agricola Balduit Giuliano Airfield",
+    "gps_code": "IT-0766",
+    "freq": "",
+    "Lat": 45.73732,
+    "Lon": 13.44837,
+    "Ele": -2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Leoni Airfield",
+    "gps_code": "IT-0767",
+    "freq": "",
+    "Lat": 45.66137,
+    "Lon": 8.48094,
+    "Ele": 278.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balbido Ultralight Airfield",
+    "gps_code": "IT-0768",
+    "freq": "",
+    "Lat": 46.00909,
+    "Lon": 10.82986,
+    "Ele": 663.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ronzo-Chienis Paraglider Field",
+    "gps_code": "IT-0769",
+    "freq": "",
+    "Lat": 45.901945,
+    "Lon": 10.975953,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Evi Airfield",
+    "gps_code": "IT-0770",
+    "freq": "",
+    "Lat": 45.90137,
+    "Lon": 12.13299,
+    "Ele": 148.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Perliera Airfield",
+    "gps_code": "IT-0771",
+    "freq": "",
+    "Lat": 45.05877,
+    "Lon": 11.62267,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rovigo Est Airfield",
+    "gps_code": "IT-0774",
+    "freq": "",
+    "Lat": 45.130463,
+    "Lon": 11.97921,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Verolengo Airstrip",
+    "gps_code": "IT-0775",
+    "freq": "",
+    "Lat": 45.18612,
+    "Lon": 7.98596,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo Volo Trens",
+    "gps_code": "IT-0777",
+    "freq": "",
+    "Lat": 46.873657,
+    "Lon": 11.472973,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rutor Glacier Altiport",
+    "gps_code": "IT-0780",
+    "freq": "",
+    "Lat": 45.632223,
+    "Lon": 7.005417,
+    "Ele": 3301.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Beverino Airfield",
+    "gps_code": "IT-0781",
+    "freq": "",
+    "Lat": 44.19713,
+    "Lon": 9.80555,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gh. del Mont Gelé",
+    "gps_code": "IT-0782",
+    "freq": "",
+    "Lat": 45.902684,
+    "Lon": 7.36571,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghiacciaio del Braoulé altiporto",
+    "gps_code": "IT-0783",
+    "freq": "",
+    "Lat": 45.951132,
+    "Lon": 7.52853,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nevaio del Fallére altiporto",
+    "gps_code": "IT-0784",
+    "freq": "",
+    "Lat": 45.758806,
+    "Lon": 7.189477,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghiacciaio del Lys",
+    "gps_code": "IT-0785",
+    "freq": "",
+    "Lat": 45.917118,
+    "Lon": 7.855349,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Champillon altiporto",
+    "gps_code": "IT-0786",
+    "freq": "",
+    "Lat": 45.850642,
+    "Lon": 7.273913,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fabbro Private Airstrip",
+    "gps_code": "IT-0787",
+    "freq": "",
+    "Lat": 44.79485,
+    "Lon": 11.58911,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Valsamoggia-Braglie Ultralight Airfield",
+    "gps_code": "IT-0788",
+    "freq": "",
+    "Lat": 44.49545,
+    "Lon": 11.10378,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Col di Rhémes",
+    "gps_code": "IT-0789",
+    "freq": "",
+    "Lat": 45.496135,
+    "Lon": 7.05721,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Granta Pareì ghiacciaio",
+    "gps_code": "IT-0790",
+    "freq": "",
+    "Lat": 45.492637,
+    "Lon": 7.060532,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gh. de la Sassiere",
+    "gps_code": "IT-0791",
+    "freq": "",
+    "Lat": 45.496949,
+    "Lon": 7.037968,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gh. del Miravidi breul",
+    "gps_code": "IT-0792",
+    "freq": "",
+    "Lat": 45.711963,
+    "Lon": 6.822829,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gh. del Léchaud",
+    "gps_code": "IT-0793",
+    "freq": "",
+    "Lat": 45.731861,
+    "Lon": 6.816234,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grillo Casa Airfield",
+    "gps_code": "IT-0798",
+    "freq": "",
+    "Lat": 43.32607,
+    "Lon": 11.56251,
+    "Ele": 220.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sant'Anna di Saluzzo Airfield",
+    "gps_code": "IT-0800",
+    "freq": "",
+    "Lat": 44.65943,
+    "Lon": 7.45636,
+    "Ele": 299.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ali sul Po Airfield",
+    "gps_code": "IT-0801",
+    "freq": "",
+    "Lat": 44.65734,
+    "Lon": 7.44981,
+    "Ele": 302.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie Airone",
+    "gps_code": "IT-0808",
+    "freq": "",
+    "Lat": 37.113977,
+    "Lon": 14.214206,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviovitombola Ultralight Strip",
+    "gps_code": "IT-0809",
+    "freq": "",
+    "Lat": 43.17619,
+    "Lon": 11.79623,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aviosuperficie \"Alvaro Leonardi\"",
+    "gps_code": "LIAA",
+    "freq": "128.450",
+    "Lat": 42.573333,
+    "Lon": 12.584444,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Foligno Airfield",
+    "gps_code": "LIAF",
+    "freq": "119.555",
+    "Lat": 42.9328,
+    "Lon": 12.71237,
+    "Ele": 222.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Sant'Illuminato Airfield",
+    "gps_code": "LIAL",
+    "freq": "",
+    "Lat": 43.354901,
+    "Lon": 12.21807,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "L'Aquila–Preturo Airport",
+    "gps_code": "LIAP",
+    "freq": "122.500",
+    "Lat": 42.379902,
+    "Lon": 13.3092,
+    "Ele": 673.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aquino Airfield",
+    "gps_code": "LIAQ",
+    "freq": "",
+    "Lat": 41.491983,
+    "Lon": 13.719342,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Furbara Air Base",
+    "gps_code": "LIAR",
+    "freq": "",
+    "Lat": 41.994141,
+    "Lon": 12.013544,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Valdera Airfield",
+    "gps_code": "LIAT",
+    "freq": "119.000",
+    "Lat": 43.592164,
+    "Lon": 10.696294,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Capua Airport",
+    "gps_code": "LIAU",
+    "freq": "",
+    "Lat": 41.116001,
+    "Lon": 14.178,
+    "Ele": 19.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Amendola Air Base",
+    "gps_code": "LIBA",
+    "freq": "118.850",
+    "Lat": 41.538443,
+    "Lon": 15.717181,
+    "Ele": 55.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Crotone Sant'Anna Pythagoras Airport",
+    "gps_code": "LIBC",
+    "freq": "119.100",
+    "Lat": 38.9972,
+    "Lon": 17.0802,
+    "Ele": 159.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Bari Karol Wojtyła International Airport",
+    "gps_code": "LIBD",
+    "freq": "119.500",
+    "Lat": 41.138901,
+    "Lon": 16.760599,
+    "Ele": 58.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Foggia Gino Lisa Airport",
+    "gps_code": "LIBF",
+    "freq": "120.100",
+    "Lat": 41.433596,
+    "Lon": 15.534566,
+    "Ele": 80.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Taranto-Grottaglie Marcello Arlotta Airport",
+    "gps_code": "LIBG",
+    "freq": "118.700",
+    "Lat": 40.517502,
+    "Lon": 17.4032,
+    "Ele": 65.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lecce Galatina Air Base / Galatina Fortunato Cesari Airport",
+    "gps_code": "LIBN",
+    "freq": "118.950",
+    "Lat": 40.239201,
+    "Lon": 18.133301,
+    "Ele": 47.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Abruzzo Airport",
+    "gps_code": "LIBP",
+    "freq": "120.050",
+    "Lat": 42.431702,
+    "Lon": 14.1811,
+    "Ele": 14.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Brindisi Airport",
+    "gps_code": "LIBR",
+    "freq": "36.365",
+    "Lat": 40.6576,
+    "Lon": 17.947001,
+    "Ele": 14.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gioia del Colle Antonio Ramirez Air Base",
+    "gps_code": "LIBV",
+    "freq": "122.100",
+    "Lat": 40.767799,
+    "Lon": 16.9333,
+    "Ele": 361.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lamezia Terme Sant'Eufemia International Airport",
+    "gps_code": "LICA",
+    "freq": "118.800",
+    "Lat": 38.905197,
+    "Lon": 16.243762,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Comiso Airport",
+    "gps_code": "LICB",
+    "freq": "108.900",
+    "Lat": 36.99583,
+    "Lon": 14.60889,
+    "Ele": 230.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Catania-Fontanarossa Airport",
+    "gps_code": "LICC",
+    "freq": "119.250",
+    "Lat": 37.466801,
+    "Lon": 15.0664,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lampedusa Airport",
+    "gps_code": "LICD",
+    "freq": "122.100",
+    "Lat": 35.497898,
+    "Lon": 12.6181,
+    "Ele": 21.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pantelleria Airport",
+    "gps_code": "LICG",
+    "freq": "118.450",
+    "Lat": 36.816502,
+    "Lon": 11.9689,
+    "Ele": 191.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Falcone–Borsellino Airport",
+    "gps_code": "LICJ",
+    "freq": "120.200",
+    "Lat": 38.175999,
+    "Lon": 13.091,
+    "Ele": 19.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Palermo-Boccadifalco Airport",
+    "gps_code": "LICP",
+    "freq": "122.100",
+    "Lat": 38.110802,
+    "Lon": 13.3133,
+    "Ele": 105.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Reggio Calabria Airport",
+    "gps_code": "LICR",
+    "freq": "120.275",
+    "Lat": 38.071201,
+    "Lon": 15.6516,
+    "Ele": 29.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vincenzo Florio Airport Trapani-Birgi",
+    "gps_code": "LICT",
+    "freq": "119.950",
+    "Lat": 37.9114,
+    "Lon": 12.488,
+    "Ele": 7.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sigonella Navy Air Base",
+    "gps_code": "LICZ",
+    "freq": "30.700",
+    "Lat": 37.401699,
+    "Lon": 14.9224,
+    "Ele": 24.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Asiago Romeo Sartori Airfield",
+    "gps_code": "LIDA",
+    "freq": "122.600",
+    "Lat": 45.886155,
+    "Lon": 11.515861,
+    "Ele": 1039.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Belluno Arturo dell'Oro Airport",
+    "gps_code": "LIDB",
+    "freq": "",
+    "Lat": 46.166549,
+    "Lon": 12.250389,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cà Negra Private Airstrip",
+    "gps_code": "LIDC",
+    "freq": "",
+    "Lat": 45.08608,
+    "Lon": 12.161455,
+    "Ele": 0.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Reggio Emilia Airport",
+    "gps_code": "LIDE",
+    "freq": "127.150",
+    "Lat": 44.697701,
+    "Lon": 10.666031,
+    "Ele": 46.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Fano Airfield",
+    "gps_code": "LIDF",
+    "freq": "119.650",
+    "Lat": 43.824032,
+    "Lon": 13.02588,
+    "Ele": 16.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lugo Francesco Baracca Airfield",
+    "gps_code": "LIDG",
+    "freq": "119.650",
+    "Lat": 44.397476,
+    "Lon": 11.854777,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Thiene Arturo Ferrarin Airfield",
+    "gps_code": "LIDH",
+    "freq": "",
+    "Lat": 45.67783,
+    "Lon": 11.496306,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Legnago Airfield",
+    "gps_code": "LIDL",
+    "freq": "",
+    "Lat": 45.129259,
+    "Lon": 11.293344,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pavullo Airfield",
+    "gps_code": "LIDP",
+    "freq": "124.980",
+    "Lat": 44.322399,
+    "Lon": 10.8317,
+    "Ele": 684.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ravenna Airport",
+    "gps_code": "LIDR",
+    "freq": "123.505",
+    "Lat": 44.364291,
+    "Lon": 12.224996,
+    "Ele": 0.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Trento-Mattarello Airport",
+    "gps_code": "LIDT",
+    "freq": "119.650",
+    "Lat": 46.0214,
+    "Lon": 11.1242,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Carpi-Budrione Airfield",
+    "gps_code": "LIDU",
+    "freq": "",
+    "Lat": 44.833231,
+    "Lon": 10.871186,
+    "Ele": 21.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prati Vecchi d'Aguscello Airfield",
+    "gps_code": "LIDV",
+    "freq": "",
+    "Lat": 44.790884,
+    "Lon": 11.671901,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Luciano Narder Airfield",
+    "gps_code": "LIDW",
+    "freq": "",
+    "Lat": 45.6992,
+    "Lon": 12.5431,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Alghero-Fertilia Airport",
+    "gps_code": "LIEA",
+    "freq": "128.550",
+    "Lat": 40.632099,
+    "Lon": 8.29077,
+    "Ele": 26.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Decimomannu Air Base",
+    "gps_code": "LIED",
+    "freq": "118.750",
+    "Lat": 39.354198,
+    "Lon": 8.97248,
+    "Ele": 30.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Cagliari Elmas Airport",
+    "gps_code": "LIEE",
+    "freq": "118.750",
+    "Lat": 39.251499,
+    "Lon": 9.05428,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Olbia Costa Smeralda Airport",
+    "gps_code": "LIEO",
+    "freq": "125.950",
+    "Lat": 40.898701,
+    "Lon": 9.51763,
+    "Ele": 11.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Oristano-Fenosu Airport",
+    "gps_code": "LIER",
+    "freq": "118.750",
+    "Lat": 39.895308,
+    "Lon": 8.642661,
+    "Ele": 11.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tortolì Airport",
+    "gps_code": "LIET",
+    "freq": "119.650",
+    "Lat": 39.9188,
+    "Lon": 9.68298,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Genesio Airfield",
+    "gps_code": "LIGT",
+    "freq": "130.000",
+    "Lat": 46.572786,
+    "Lon": 11.307635,
+    "Ele": 1298.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Alessandria Airfield",
+    "gps_code": "LILA",
+    "freq": "126.900",
+    "Lat": 44.925635,
+    "Lon": 8.626728,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Alzate Brianza Airfield",
+    "gps_code": "LILB",
+    "freq": "",
+    "Lat": 45.769644,
+    "Lon": 9.162333,
+    "Ele": 384.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Calcinate del Pesce Airfield",
+    "gps_code": "LILC",
+    "freq": "",
+    "Lat": 45.8097,
+    "Lon": 8.76806,
+    "Ele": 242.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Biella-Cerrione Airfield",
+    "gps_code": "LILE",
+    "freq": "123.050",
+    "Lat": 45.4953,
+    "Lon": 8.10278,
+    "Ele": 280.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Vergiate Airfield",
+    "gps_code": "LILG",
+    "freq": "",
+    "Lat": 45.712633,
+    "Lon": 8.700714,
+    "Ele": 263.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Voghera-Rivanazzano Airfield",
+    "gps_code": "LILH",
+    "freq": "123.000",
+    "Lat": 44.952,
+    "Lon": 9.01653,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vercelli Airport",
+    "gps_code": "LILI",
+    "freq": "124.925",
+    "Lat": 45.309935,
+    "Lon": 8.417931,
+    "Ele": 127.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Casale Monferrato Airfield",
+    "gps_code": "LILM",
+    "freq": "",
+    "Lat": 45.110039,
+    "Lon": 8.456898,
+    "Ele": 114.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Varese-Venegono Airport",
+    "gps_code": "LILN",
+    "freq": "128.550",
+    "Lat": 45.742199,
+    "Lon": 8.888233,
+    "Ele": 335.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Caiolo Sondrio Airfield",
+    "gps_code": "LILO",
+    "freq": "",
+    "Lat": 46.154448,
+    "Lon": 9.79507,
+    "Ele": 274.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Massa Cinquale Municipal Airfield",
+    "gps_code": "LILQ",
+    "freq": "120.350",
+    "Lat": 43.98598,
+    "Lon": 10.143785,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cremona-Migliaro Airfield",
+    "gps_code": "LILR",
+    "freq": "",
+    "Lat": 45.168261,
+    "Lon": 10.001864,
+    "Ele": 49.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Valbrembo Airfield",
+    "gps_code": "LILV",
+    "freq": "122.605",
+    "Lat": 45.719864,
+    "Lon": 9.593954,
+    "Ele": 227.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Torino-Aeritalia Airport",
+    "gps_code": "LIMA",
+    "freq": "119.800",
+    "Lat": 45.086399,
+    "Lon": 7.60337,
+    "Ele": 287.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Milano-Bresso Airfield",
+    "gps_code": "LIMB",
+    "freq": "122.005",
+    "Lat": 45.539182,
+    "Lon": 9.202452,
+    "Ele": 147.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Milan Malpensa International Airport",
+    "gps_code": "LIMC",
+    "freq": "132.700",
+    "Lat": 45.6306,
+    "Lon": 8.72811,
+    "Ele": 234.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Milan Bergamo Airport / Antonio Locatelli Air Base",
+    "gps_code": "LIME",
+    "freq": "126.750",
+    "Lat": 45.670725,
+    "Lon": 9.709223,
+    "Ele": 238.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Turin Airport",
+    "gps_code": "LIMF",
+    "freq": "23.440",
+    "Lat": 45.200802,
+    "Lon": 7.64963,
+    "Ele": 301.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Riviera Villanova d'Albenga International Airport",
+    "gps_code": "LIMG",
+    "freq": "123.850",
+    "Lat": 44.050598,
+    "Lon": 8.12743,
+    "Ele": 45.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Genoa Cristoforo Colombo Airport",
+    "gps_code": "LIMJ",
+    "freq": "119.600",
+    "Lat": 44.412039,
+    "Lon": 8.840732,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Milano Linate Airport",
+    "gps_code": "LIML",
+    "freq": "132.700",
+    "Lat": 45.445099,
+    "Lon": 9.27674,
+    "Ele": 107.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cameri Air Base [MIL]",
+    "gps_code": "LIMN",
+    "freq": "125.620",
+    "Lat": 45.529598,
+    "Lon": 8.66922,
+    "Ele": 178.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Parma Airport",
+    "gps_code": "LIMP",
+    "freq": "126.550",
+    "Lat": 44.826351,
+    "Lon": 10.29705,
+    "Ele": 49.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Novi Ligure Eugenio Mossi Airfield",
+    "gps_code": "LIMR",
+    "freq": "",
+    "Lat": 44.779999,
+    "Lon": 8.78639,
+    "Ele": 185.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Piacenza San Damiano Air Base",
+    "gps_code": "LIMS",
+    "freq": "123.925",
+    "Lat": 44.913102,
+    "Lon": 9.723322,
+    "Ele": 139.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aosta Corrado Gex Airport",
+    "gps_code": "LIMW",
+    "freq": "119.950",
+    "Lat": 45.738552,
+    "Lon": 7.3683,
+    "Ele": 545.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cuneo International Airport",
+    "gps_code": "LIMZ",
+    "freq": "119.550",
+    "Lat": 44.547001,
+    "Lon": 7.62322,
+    "Ele": 386.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Fermano Airfield",
+    "gps_code": "LINF",
+    "freq": "130.000",
+    "Lat": 43.22652,
+    "Lon": 13.74252,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lecce-San Cataldo Lepore Airfield",
+    "gps_code": "LINL",
+    "freq": "",
+    "Lat": 40.35974,
+    "Lon": 18.297923,
+    "Ele": 18.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aviano Air Base",
+    "gps_code": "LIPA",
+    "freq": "264.800",
+    "Lat": 46.031898,
+    "Lon": 12.596503,
+    "Ele": 125.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bolzano Airport",
+    "gps_code": "LIPB",
+    "freq": "120.600",
+    "Lat": 46.460201,
+    "Lon": 11.3264,
+    "Ele": 240.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cervia Air Base",
+    "gps_code": "LIPC",
+    "freq": "36.230",
+    "Lat": 44.224201,
+    "Lon": 12.3072,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Udine-Campoformido Airfield",
+    "gps_code": "LIPD",
+    "freq": "",
+    "Lat": 46.0308,
+    "Lon": 13.18225,
+    "Ele": 93.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Bologna Guglielmo Marconi Airport",
+    "gps_code": "LIPE",
+    "freq": "118.150",
+    "Lat": 44.5354,
+    "Lon": 11.2887,
+    "Ele": 37.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Ferrara-San Luca Airfield",
+    "gps_code": "LIPF",
+    "freq": "",
+    "Lat": 44.812328,
+    "Lon": 11.613884,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorizia Duca d'Aosta Airfield",
+    "gps_code": "LIPG",
+    "freq": "",
+    "Lat": 45.906898,
+    "Lon": 13.5993,
+    "Ele": 63.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Treviso Antonio Canova Airport",
+    "gps_code": "LIPH",
+    "freq": "36.230",
+    "Lat": 45.648399,
+    "Lon": 12.1944,
+    "Ele": 18.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Udine-Rivolto Air Base",
+    "gps_code": "LIPI",
+    "freq": "120.125",
+    "Lat": 45.978699,
+    "Lon": 13.0493,
+    "Ele": 54.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Forlì Luigi Ridolfi Airport",
+    "gps_code": "LIPK",
+    "freq": "37.975",
+    "Lat": 44.194801,
+    "Lon": 12.0701,
+    "Ele": 29.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ghedi Air Base",
+    "gps_code": "LIPL",
+    "freq": "124.450",
+    "Lat": 45.432551,
+    "Lon": 10.268612,
+    "Ele": 101.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Modena-Marzaglia Airfield",
+    "gps_code": "LIPM",
+    "freq": "",
+    "Lat": 44.631389,
+    "Lon": 10.808611,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Verona-Boscomantico Airfield",
+    "gps_code": "LIPN",
+    "freq": "125.250",
+    "Lat": 45.472,
+    "Lon": 10.9279,
+    "Ele": 87.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Brescia Gabriele d'Annunzio Airport",
+    "gps_code": "LIPO",
+    "freq": "124.450",
+    "Lat": 45.428902,
+    "Lon": 10.3306,
+    "Ele": 108.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Trieste–Friuli Venezia Giulia Airport",
+    "gps_code": "LIPQ",
+    "freq": "119.175",
+    "Lat": 45.827499,
+    "Lon": 13.4722,
+    "Ele": 11.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Federico Fellini International Airport",
+    "gps_code": "LIPR",
+    "freq": "36.230",
+    "Lat": 44.020302,
+    "Lon": 12.6117,
+    "Ele": 12.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Istrana Air Base",
+    "gps_code": "LIPS",
+    "freq": "36.230",
+    "Lat": 45.684358,
+    "Lon": 12.087107,
+    "Ele": 41.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Padova Gino Allegri Airfield",
+    "gps_code": "LIPU",
+    "freq": "123.250",
+    "Lat": 45.395316,
+    "Lon": 11.847124,
+    "Ele": 13.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Venice-Lido Giovanni Nicelli Airfield",
+    "gps_code": "LIPV",
+    "freq": "118.525",
+    "Lat": 45.428299,
+    "Lon": 12.3881,
+    "Ele": 4.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Verona Villafranca Valerio Catullo Airport",
+    "gps_code": "LIPX",
+    "freq": "36.230",
+    "Lat": 45.394955,
+    "Lon": 10.887303,
+    "Ele": 72.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Marche Airport",
+    "gps_code": "LIPY",
+    "freq": "37.975",
+    "Lat": 43.616299,
+    "Lon": 13.3623,
+    "Ele": 14.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Venice Marco Polo Airport",
+    "gps_code": "LIPZ",
+    "freq": "118.900",
+    "Lat": 45.505299,
+    "Lon": 12.3519,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Arezzo Molin Blanco Airfield",
+    "gps_code": "LIQB",
+    "freq": "",
+    "Lat": 43.455248,
+    "Lon": 11.847393,
+    "Ele": 248.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cecina Airfield",
+    "gps_code": "LIQG",
+    "freq": "130.000",
+    "Lat": 43.2856,
+    "Lon": 10.521183,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lucca-Tassignano Airport",
+    "gps_code": "LIQL",
+    "freq": "",
+    "Lat": 43.825825,
+    "Lon": 10.577928,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rieti Airfield",
+    "gps_code": "LIQN",
+    "freq": "",
+    "Lat": 42.4272,
+    "Lon": 12.8517,
+    "Ele": 389.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Siena-Ampugnano Airport",
+    "gps_code": "LIQS",
+    "freq": "122.600",
+    "Lat": 43.256302,
+    "Lon": 11.255,
+    "Ele": 193.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sarzana-Luni Air Base",
+    "gps_code": "LIQW",
+    "freq": "",
+    "Lat": 44.088001,
+    "Lon": 9.98795,
+    "Ele": 13.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ciampino–G. B. Pastine International Airport",
+    "gps_code": "LIRA",
+    "freq": "119.200",
+    "Lat": 41.7994,
+    "Lon": 12.5949,
+    "Ele": 130.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pratica Di Mare Air Base",
+    "gps_code": "LIRE",
+    "freq": "121.600",
+    "Lat": 41.654499,
+    "Lon": 12.4452,
+    "Ele": 12.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Rome–Fiumicino Leonardo da Vinci International Airport",
+    "gps_code": "LIRF",
+    "freq": "120.175",
+    "Lat": 41.804532,
+    "Lon": 12.251998,
+    "Ele": 4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Guidonia Air Base",
+    "gps_code": "LIRG",
+    "freq": "122.100",
+    "Lat": 41.990299,
+    "Lon": 12.7408,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Frosinone Air Base",
+    "gps_code": "LIRH",
+    "freq": "",
+    "Lat": 41.648537,
+    "Lon": 13.294573,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Salerno Costa d'Amalfi Airport",
+    "gps_code": "LIRI",
+    "freq": "119.175",
+    "Lat": 40.620399,
+    "Lon": 14.9113,
+    "Ele": 37.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Marina di Campo Airport",
+    "gps_code": "LIRJ",
+    "freq": "123.700",
+    "Lat": 42.760871,
+    "Lon": 10.239811,
+    "Ele": 9.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Latina Air Base",
+    "gps_code": "LIRL",
+    "freq": "122.100",
+    "Lat": 41.5424,
+    "Lon": 12.909,
+    "Ele": 28.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grazzanise Air Base",
+    "gps_code": "LIRM",
+    "freq": "140.400",
+    "Lat": 41.060799,
+    "Lon": 14.0819,
+    "Ele": 8.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Naples International Airport",
+    "gps_code": "LIRN",
+    "freq": "124.350",
+    "Lat": 40.886002,
+    "Lon": 14.2908,
+    "Ele": 89.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Pisa International Airport",
+    "gps_code": "LIRP",
+    "freq": "122.100",
+    "Lat": 43.683899,
+    "Lon": 10.3927,
+    "Ele": 1.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Florence Airport, Peretola",
+    "gps_code": "LIRQ",
+    "freq": "126.075",
+    "Lat": 43.808558,
+    "Lon": 11.202822,
+    "Ele": 43.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grosseto Corrado Baccarini Air Base / Grosseto Airport",
+    "gps_code": "LIRS",
+    "freq": "122.100",
+    "Lat": 42.759701,
+    "Lon": 11.0719,
+    "Ele": 5.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rome Urbe Airport",
+    "gps_code": "LIRU",
+    "freq": "122.700",
+    "Lat": 41.952096,
+    "Lon": 12.502231,
+    "Ele": 16.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Viterbo Airport",
+    "gps_code": "LIRV",
+    "freq": "122.100",
+    "Lat": 42.430199,
+    "Lon": 12.0642,
+    "Ele": 302.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Perugia San Francesco d'Assisi – Umbria International Airport",
+    "gps_code": "LIRZ",
+    "freq": "118.100",
+    "Lat": 43.095901,
+    "Lon": 12.5132,
+    "Ele": 212.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dobbiaco-Toblach Airstrip",
+    "gps_code": "LIVD",
+    "freq": "",
+    "Lat": 46.727021,
+    "Lon": 12.230723,
+    "Ele": 1239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Moncucco Airfield",
+    "gps_code": "LIVV",
+    "freq": "118.950",
+    "Lat": 45.344613,
+    "Lon": 7.919072,
+    "Ele": 238.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo di volo Porto Pino",
+    "gps_code": "SU01",
+    "freq": "130.000",
+    "Lat": 39.012206,
+    "Lon": 8.601758,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Megolo Airfield",
+    "gps_code": "VB02",
+    "freq": "",
+    "Lat": 45.996254,
+    "Lon": 8.303132,
+    "Ele": 216.1
+  }
+]

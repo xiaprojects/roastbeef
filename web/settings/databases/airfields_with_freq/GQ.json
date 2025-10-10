@@ -1,0 +1,65 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Annobón Airport",
+    "gps_code": "FGAB",
+    "freq": "",
+    "Lat": -1.408615,
+    "Lon": 5.624163,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bata Airport",
+    "gps_code": "FGBT",
+    "freq": "118.800",
+    "Lat": 1.90547,
+    "Lon": 9.80568,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "President Obiang Nguema International Airport",
+    "gps_code": "FGMY",
+    "freq": "",
+    "Lat": 1.685334,
+    "Lon": 11.024394,
+    "Ele": 659.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malabo Airport",
+    "gps_code": "FGSL",
+    "freq": "655.900",
+    "Lat": 3.755270004272461,
+    "Lon": 8.708720207214355,
+    "Ele": 23.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mongomo Airport",
+    "gps_code": "GQ-0001",
+    "freq": "",
+    "Lat": 1.636763,
+    "Lon": 11.302458,
+    "Ele": 648.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Médouneu Airport",
+    "gps_code": "MDV",
+    "freq": "",
+    "Lat": 1.0085,
+    "Lon": 10.7552,
+    "Ele": 640.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Corisco International Airport",
+    "gps_code": "OCS",
+    "freq": "",
+    "Lat": 0.9125,
+    "Lon": 9.3304,
+    "Ele": 16.8
+  }
+]

@@ -1,0 +1,2864 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Arłamów Airfield",
+    "gps_code": "EPAR",
+    "freq": "",
+    "Lat": 49.657501,
+    "Lon": 22.514298,
+    "Ele": 443.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bielsko-Biała Aleksandrowice Airfield",
+    "gps_code": "EPBA",
+    "freq": "122.200",
+    "Lat": 49.805,
+    "Lon": 19.0019,
+    "Ele": 402.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Babięta",
+    "gps_code": "EPBB",
+    "freq": "",
+    "Lat": 53.667905,
+    "Lon": 21.255426,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Warsaw Babice Airport",
+    "gps_code": "EPBC",
+    "freq": "119.175",
+    "Lat": 52.269199,
+    "Lon": 20.907203,
+    "Ele": 107.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Białystok-Krywlany Airfield",
+    "gps_code": "EPBK",
+    "freq": "",
+    "Lat": 53.101398,
+    "Lon": 23.170601,
+    "Ele": 153.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bydgoszcz Ignacy Jan Paderewski Airport",
+    "gps_code": "EPBY",
+    "freq": "128.500",
+    "Lat": 53.096802,
+    "Lon": 17.977699,
+    "Ele": 71.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Depułtycze Królewskie Airfield",
+    "gps_code": "EPCD",
+    "freq": "",
+    "Lat": 51.082067,
+    "Lon": 23.437014,
+    "Ele": 217.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cewice Naval Air Base",
+    "gps_code": "EPCE",
+    "freq": "128.500",
+    "Lat": 54.416525,
+    "Lon": 17.765734,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Darłówo Naval Air Base",
+    "gps_code": "EPDA",
+    "freq": "",
+    "Lat": 54.404701,
+    "Lon": 16.3531,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Deblin Military Air Base",
+    "gps_code": "EPDE",
+    "freq": "128.500",
+    "Lat": 51.551021,
+    "Lon": 21.892322,
+    "Ele": 119.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Debowa Klada Airfield",
+    "gps_code": "EPDK",
+    "freq": "",
+    "Lat": 51.6126,
+    "Lon": 23.0072,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Witków Airfield",
+    "gps_code": "EPDS",
+    "freq": "",
+    "Lat": 50.79686,
+    "Lon": 16.11448,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Elbląg Airfield",
+    "gps_code": "EPEL",
+    "freq": "122.305",
+    "Lat": 54.1408,
+    "Lon": 19.4233,
+    "Ele": 3.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Gdańsk Lech Wałęsa Airport",
+    "gps_code": "EPGD",
+    "freq": "127.275",
+    "Lat": 54.377602,
+    "Lon": 18.4662,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Giże Airfield",
+    "gps_code": "EPGE",
+    "freq": "",
+    "Lat": 53.982436,
+    "Lon": 22.403149,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grudziądz Lisie Kąty Airfield",
+    "gps_code": "EPGI",
+    "freq": "119.885",
+    "Lat": 53.524399,
+    "Lon": 18.849199,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gliwice-Trynek Airfield",
+    "gps_code": "EPGL",
+    "freq": "118.260",
+    "Lat": 50.268743,
+    "Lon": 18.672466,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Giżycko-Mazury Residence",
+    "gps_code": "EPGM",
+    "freq": "",
+    "Lat": 54.00645,
+    "Lon": 21.81824,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Łańsk / Gryźliny Airfield",
+    "gps_code": "EPGR",
+    "freq": "",
+    "Lat": 53.608072,
+    "Lon": 20.349692,
+    "Ele": 164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grójec-Słomczyn Airfield",
+    "gps_code": "EPGS",
+    "freq": "",
+    "Lat": 51.87549,
+    "Lon": 20.93774,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grądy Airfield",
+    "gps_code": "EPGY",
+    "freq": "",
+    "Lat": 52.836977,
+    "Lon": 21.777644,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Narew",
+    "gps_code": "EPHN",
+    "freq": "",
+    "Lat": 52.908777,
+    "Lon": 23.541338,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Inowrocław Airfield",
+    "gps_code": "EPIN",
+    "freq": "",
+    "Lat": 52.80648,
+    "Lon": 18.280698,
+    "Ele": 85.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Inowroclaw Military Air Base",
+    "gps_code": "EPIR",
+    "freq": "",
+    "Lat": 52.8293991089,
+    "Lon": 18.3306007385,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jastarnia Airfield",
+    "gps_code": "EPJA",
+    "freq": "",
+    "Lat": 54.710281,
+    "Lon": 18.645281,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jelenia Góra Airfield",
+    "gps_code": "EPJG",
+    "freq": "",
+    "Lat": 50.898899,
+    "Lon": 15.7856,
+    "Ele": 341.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Laszki Field",
+    "gps_code": "EPJL",
+    "freq": "",
+    "Lat": 50.008497,
+    "Lon": 22.918897,
+    "Ele": 185.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jeżów Sudecki Airfield",
+    "gps_code": "EPJS",
+    "freq": "",
+    "Lat": 50.944028,
+    "Lon": 15.766528,
+    "Ele": 559.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kielce-Masłów Airfield",
+    "gps_code": "EPKA",
+    "freq": "118.080",
+    "Lat": 50.896702,
+    "Lon": 20.731701,
+    "Ele": 307.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kazimierz Biskupi Airfield",
+    "gps_code": "EPKB",
+    "freq": "",
+    "Lat": 52.319549,
+    "Lon": 18.164322,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Końskie-Komaszyce",
+    "gps_code": "EPKD",
+    "freq": "",
+    "Lat": 51.25532,
+    "Lon": 20.47132,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kȩtrzyn-Wilamowo Airfield",
+    "gps_code": "EPKE",
+    "freq": "",
+    "Lat": 54.043598,
+    "Lon": 21.432199,
+    "Ele": 127.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kikity",
+    "gps_code": "EPKI",
+    "freq": "119.400",
+    "Lat": 53.983056,
+    "Lon": 20.877222,
+    "Ele": 171.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Kraków John Paul II International Airport",
+    "gps_code": "EPKK",
+    "freq": "121.075",
+    "Lat": 50.077702,
+    "Lon": 19.7848,
+    "Ele": 241.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Krasocin Field",
+    "gps_code": "EPKL",
+    "freq": "",
+    "Lat": 50.899319,
+    "Lon": 20.12804,
+    "Ele": 249.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Katowice-Muchowiec Airfield",
+    "gps_code": "EPKM",
+    "freq": "122.900",
+    "Lat": 50.238184,
+    "Lon": 19.033685,
+    "Ele": 277.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Opole-Kamień Śląski Airfield",
+    "gps_code": "EPKN",
+    "freq": "120.300",
+    "Lat": 50.530598,
+    "Lon": 18.079283,
+    "Ele": 208.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Pobiednik Wielki Airfield",
+    "gps_code": "EPKP",
+    "freq": "122.400",
+    "Lat": 50.08644,
+    "Lon": 20.200253,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Krosno Airfield",
+    "gps_code": "EPKR",
+    "freq": "119.555",
+    "Lat": 49.683807,
+    "Lon": 21.740953,
+    "Ele": 281.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Krzesiny Military Air Base",
+    "gps_code": "EPKS",
+    "freq": "128.725",
+    "Lat": 52.331699,
+    "Lon": 16.9664,
+    "Ele": 80.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Katowice Wojciech Korfanty International Airport",
+    "gps_code": "EPKT",
+    "freq": "121.075",
+    "Lat": 50.476015,
+    "Lon": 19.080705,
+    "Ele": 303.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bielsko-Biała Kaniów Airfield",
+    "gps_code": "EPKW",
+    "freq": "",
+    "Lat": 49.94159,
+    "Lon": 19.019566,
+    "Ele": 255.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lublin Airport",
+    "gps_code": "EPLB",
+    "freq": "136.420",
+    "Lat": 51.240157,
+    "Lon": 22.713461,
+    "Ele": 192.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Łask Air Base",
+    "gps_code": "EPLK",
+    "freq": "128.500",
+    "Lat": 51.551701,
+    "Lon": 19.1791,
+    "Ele": 192.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Łódź Władysław Reymont Airport",
+    "gps_code": "EPLL",
+    "freq": "135.680",
+    "Lat": 51.721901,
+    "Lon": 19.3981,
+    "Ele": 184.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lublin Radwiec Airfield",
+    "gps_code": "EPLR",
+    "freq": "",
+    "Lat": 51.221901,
+    "Lon": 22.394699,
+    "Ele": 241.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Leszno-Strzyzewice Airfield",
+    "gps_code": "EPLS",
+    "freq": "",
+    "Lat": 51.834999,
+    "Lon": 16.5219,
+    "Ele": 94.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lubin Airfield",
+    "gps_code": "EPLU",
+    "freq": "127.250",
+    "Lat": 51.423,
+    "Lon": 16.196199,
+    "Ele": 156.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Leźnica Wielka Air Base",
+    "gps_code": "EPLY",
+    "freq": "",
+    "Lat": 52.004945,
+    "Lon": 19.143792,
+    "Ele": 123.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Malbork Królewo Air Base",
+    "gps_code": "EPMB",
+    "freq": "124.500",
+    "Lat": 54.026598,
+    "Lon": 19.135718,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Miroslawiec Military Air Base",
+    "gps_code": "EPMI",
+    "freq": "128.500",
+    "Lat": 53.3951,
+    "Lon": 16.0828,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mielec Airfield",
+    "gps_code": "EPML",
+    "freq": "119.100",
+    "Lat": 50.3223,
+    "Lon": 21.462099,
+    "Ele": 167.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Minsk Mazowiecki Military Air Base",
+    "gps_code": "EPMM",
+    "freq": "128.500",
+    "Lat": 52.1954994202,
+    "Lon": 21.6558990479,
+    "Ele": 184.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Modlin Airport",
+    "gps_code": "EPMO",
+    "freq": "124.500",
+    "Lat": 52.451099,
+    "Lon": 20.6518,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mirosławice Private Airfield",
+    "gps_code": "EPMR",
+    "freq": "122.600",
+    "Lat": 50.957802,
+    "Lon": 16.7703,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Milewo Airfield",
+    "gps_code": "EPMX",
+    "freq": "",
+    "Lat": 52.665208,
+    "Lon": 20.428419,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Myślibórz-Giżyn Airfield",
+    "gps_code": "EPMY",
+    "freq": "118.825",
+    "Lat": 52.941164,
+    "Lon": 15.029812,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nadarzyce Air Base",
+    "gps_code": "EPNA",
+    "freq": "",
+    "Lat": 53.454885,
+    "Lon": 16.48946,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nowy Sącz-Łososina Dolna Airfield",
+    "gps_code": "EPNL",
+    "freq": "",
+    "Lat": 49.745324,
+    "Lon": 20.623472,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nowe Miasto nad Pilicą Airfield",
+    "gps_code": "EPNM",
+    "freq": "",
+    "Lat": 51.628335,
+    "Lon": 20.541228,
+    "Ele": 156.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nowy Targ Airfield",
+    "gps_code": "EPNT",
+    "freq": "",
+    "Lat": 49.462797,
+    "Lon": 20.050304,
+    "Ele": 627.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Olsztyn-Dajtki Airfield",
+    "gps_code": "EPOD",
+    "freq": "",
+    "Lat": 53.772901,
+    "Lon": 20.413087,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Oksywie Air Base / Gdynia-Kosakowo Airfield",
+    "gps_code": "EPOK",
+    "freq": "134.000",
+    "Lat": 54.5797,
+    "Lon": 18.5172,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ostrów Wielkopolski Michałków Airfield",
+    "gps_code": "EPOM",
+    "freq": "122.200",
+    "Lat": 51.700767,
+    "Lon": 17.84663,
+    "Ele": 145.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Opole-Polska Nowa Wieś Airfield",
+    "gps_code": "EPOP",
+    "freq": "",
+    "Lat": 50.633301,
+    "Lon": 17.7817,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pińczów Airfield",
+    "gps_code": "EPPC",
+    "freq": "",
+    "Lat": 50.517439,
+    "Lon": 20.516758,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Piła Airfield",
+    "gps_code": "EPPI",
+    "freq": "",
+    "Lat": 53.170095,
+    "Lon": 16.711092,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Poznań-Kobylnica Airfield",
+    "gps_code": "EPPK",
+    "freq": "122.900",
+    "Lat": 52.434582,
+    "Lon": 17.044036,
+    "Ele": 85.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Płock Airfield",
+    "gps_code": "EPPL",
+    "freq": "",
+    "Lat": 52.562225,
+    "Lon": 19.720322,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Poznań-Ławica Airport",
+    "gps_code": "EPPO",
+    "freq": "123.040",
+    "Lat": 52.421598,
+    "Lon": 16.823359,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pruszcz Gdański Air Base",
+    "gps_code": "EPPR",
+    "freq": "126.500",
+    "Lat": 54.248001,
+    "Lon": 18.6716,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Piotrków Trybunalski-Bujny Airfield",
+    "gps_code": "EPPT",
+    "freq": "119.305",
+    "Lat": 51.383099,
+    "Lon": 19.688299,
+    "Ele": 205.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Powidz Military Air Base",
+    "gps_code": "EPPW",
+    "freq": "128.500",
+    "Lat": 52.380087,
+    "Lon": 17.853155,
+    "Ele": 113.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Warsaw Radom Airport",
+    "gps_code": "EPRA",
+    "freq": "128.500",
+    "Lat": 51.38937,
+    "Lon": 21.214742,
+    "Ele": 185.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mazury Air Camp Airfield",
+    "gps_code": "EPRD",
+    "freq": "",
+    "Lat": 54.134375,
+    "Lon": 21.598754,
+    "Ele": 121.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Rybnik-Gotartowice Glider Field",
+    "gps_code": "EPRG",
+    "freq": "",
+    "Lat": 50.070801,
+    "Lon": 18.6283,
+    "Ele": 256.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rzeszów Sports Airfield",
+    "gps_code": "EPRJ",
+    "freq": "126.805",
+    "Lat": 50.104169,
+    "Lon": 22.047029,
+    "Ele": 199.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Radom-Piastrów Airfield",
+    "gps_code": "EPRP",
+    "freq": "",
+    "Lat": 51.478901,
+    "Lon": 21.110001,
+    "Ele": 146.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sochaczew-Rybno",
+    "gps_code": "EPRS",
+    "freq": "",
+    "Lat": 52.242789,
+    "Lon": 20.126579,
+    "Ele": 85.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Częstochowa-Rudniki Airport",
+    "gps_code": "EPRU",
+    "freq": "122.800",
+    "Lat": 50.884716,
+    "Lon": 19.201842,
+    "Ele": 262.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rzeszów-Jasionka Airport",
+    "gps_code": "EPRZ",
+    "freq": "124.955",
+    "Lat": 50.109791,
+    "Lon": 22.024155,
+    "Ele": 211.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Solidarity Szczecin–Goleniów Airport",
+    "gps_code": "EPSC",
+    "freq": "121.255",
+    "Lat": 53.584702,
+    "Lon": 14.9022,
+    "Ele": 46.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Szczecin-Dąbie Airfield",
+    "gps_code": "EPSD",
+    "freq": "122.200",
+    "Lat": 53.390659,
+    "Lon": 14.632774,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sobienie Field",
+    "gps_code": "EPSJ",
+    "freq": "",
+    "Lat": 51.951142,
+    "Lon": 21.35253,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Słupsk-Krȩpa Airfield",
+    "gps_code": "EPSK",
+    "freq": "",
+    "Lat": 54.410036,
+    "Lon": 17.090572,
+    "Ele": 75.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Swidwin Military Air Base",
+    "gps_code": "EPSN",
+    "freq": "128.500",
+    "Lat": 53.7906,
+    "Lon": 15.8263,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Świdnica - Krzczonów Airstrip",
+    "gps_code": "EPSS",
+    "freq": "",
+    "Lat": 50.8171823,
+    "Lon": 16.5818641,
+    "Ele": 253.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stalowa Wola-Turbia Airfield",
+    "gps_code": "EPST",
+    "freq": "",
+    "Lat": 50.62638,
+    "Lon": 21.998963,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Suwałki Airfield",
+    "gps_code": "EPSU",
+    "freq": "",
+    "Lat": 54.0728,
+    "Lon": 22.8992,
+    "Ele": 177.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Świdnik Airfield",
+    "gps_code": "EPSW",
+    "freq": "136.425",
+    "Lat": 51.231899,
+    "Lon": 22.6903,
+    "Ele": 200.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Olsztyn-Mazury Airport",
+    "gps_code": "EPSY",
+    "freq": "118.025",
+    "Lat": 53.481899,
+    "Lon": 20.9377,
+    "Ele": 141.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tomaszów Mazowiecki Military Air Base",
+    "gps_code": "EPTM",
+    "freq": "125.000",
+    "Lat": 51.5844,
+    "Lon": 20.097799,
+    "Ele": 174.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Toruń Airfield",
+    "gps_code": "EPTO",
+    "freq": "120.660",
+    "Lat": 53.029202,
+    "Lon": 18.5459,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Roszczep Airstrip",
+    "gps_code": "EPVA",
+    "freq": "",
+    "Lat": 52.4359,
+    "Lon": 21.33,
+    "Ele": 99.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Warsaw Chopin Airport",
+    "gps_code": "EPWA",
+    "freq": "125.055",
+    "Lat": 52.165699,
+    "Lon": 20.9671,
+    "Ele": 110.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Włocławek-Kruszyn Airfield",
+    "gps_code": "EPWK",
+    "freq": "",
+    "Lat": 52.584702,
+    "Lon": 19.0156,
+    "Ele": 67.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Copernicus Wrocław Airport",
+    "gps_code": "EPWR",
+    "freq": "123.040",
+    "Lat": 51.103719,
+    "Lon": 16.882096,
+    "Ele": 123.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wrocław-Szymanów Airfield",
+    "gps_code": "EPWS",
+    "freq": "",
+    "Lat": 51.2061,
+    "Lon": 16.9986,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zamość-Mokre Airfield",
+    "gps_code": "EPZA",
+    "freq": "122.800",
+    "Lat": 50.701698,
+    "Lon": 23.204399,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zborowo Airfield",
+    "gps_code": "EPZB",
+    "freq": "",
+    "Lat": 52.362056,
+    "Lon": 16.638722,
+    "Ele": 81.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zielona Góra-Babimost Airport",
+    "gps_code": "EPZG",
+    "freq": "118.750",
+    "Lat": 52.1385,
+    "Lon": 15.7986,
+    "Ele": 59.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zieleń Airfield",
+    "gps_code": "EPZI",
+    "freq": "",
+    "Lat": 53.1885,
+    "Lon": 18.9617,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Konopnica Airfield",
+    "gps_code": "EPZK",
+    "freq": "",
+    "Lat": 51.360179,
+    "Lon": 18.822057,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zdziar-Lopatki Airfield",
+    "gps_code": "EPZL",
+    "freq": "",
+    "Lat": 52.63547,
+    "Lon": 20.07036,
+    "Ele": 134.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zielona Góra-Przylep Airfield",
+    "gps_code": "EPZP",
+    "freq": "122.800",
+    "Lat": 51.978901,
+    "Lon": 15.4639,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Żar Airfield",
+    "gps_code": "EPZR",
+    "freq": "",
+    "Lat": 49.771099,
+    "Lon": 19.2181,
+    "Ele": 384.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Poznań-Bednary Airfield",
+    "gps_code": "PL-0001",
+    "freq": "129.200",
+    "Lat": 52.5344,
+    "Lon": 17.2188,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kołobrzeg-Bagicz Airfield",
+    "gps_code": "PL-0002",
+    "freq": "118.830",
+    "Lat": 54.200077,
+    "Lon": 15.683752,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Makowice Airfield",
+    "gps_code": "PL-0003",
+    "freq": "",
+    "Lat": 53.761082,
+    "Lon": 15.290194,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Borsk Airfield",
+    "gps_code": "PL-0004",
+    "freq": "",
+    "Lat": 53.951046,
+    "Lon": 17.948034,
+    "Ele": 142.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chojna Airfield",
+    "gps_code": "PL-0007",
+    "freq": "",
+    "Lat": 52.939445,
+    "Lon": 14.421667,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nasielsk-Chrcynno Airfield",
+    "gps_code": "PL-0008",
+    "freq": "",
+    "Lat": 52.571618,
+    "Lon": 20.871649,
+    "Ele": 112.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Brzezie Highway Strip",
+    "gps_code": "PL-0014",
+    "freq": "",
+    "Lat": 53.814197,
+    "Lon": 16.977513,
+    "Ele": 152.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chociw  (Kanice) Highway Strip",
+    "gps_code": "PL-0015",
+    "freq": "",
+    "Lat": 51.656912,
+    "Lon": 20.273529,
+    "Ele": 161.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Debrzno (Słupia) Highway Strip",
+    "gps_code": "PL-0016",
+    "freq": "",
+    "Lat": 53.570662,
+    "Lon": 17.26088,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dębnica Kaszubska Highway Strip",
+    "gps_code": "PL-0017",
+    "freq": "",
+    "Lat": 54.368483,
+    "Lon": 17.211674,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gdynia (Rumia) Highway Strip",
+    "gps_code": "PL-0018",
+    "freq": "",
+    "Lat": 54.604698,
+    "Lon": 18.4431,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Granowo Highway Strip",
+    "gps_code": "PL-0019",
+    "freq": "",
+    "Lat": 52.232200622558594,
+    "Lon": 16.596900939941406,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jarosławiec Highway Strip",
+    "gps_code": "PL-0020",
+    "freq": "",
+    "Lat": 54.525002,
+    "Lon": 16.506399,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kliniska  (Szczecin) Highway Strip",
+    "gps_code": "PL-0021",
+    "freq": "",
+    "Lat": 53.427439,
+    "Lon": 14.805435,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Koronowo Highway Strip",
+    "gps_code": "PL-0022",
+    "freq": "",
+    "Lat": 53.3114013671875,
+    "Lon": 18.01059913635254,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Leszno  (Rydzyna) Highway Strip",
+    "gps_code": "PL-0023",
+    "freq": "",
+    "Lat": 51.81499862670898,
+    "Lon": 16.623899459838867,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Łukęcin  (Pobierowo) Highway Strip",
+    "gps_code": "PL-0024",
+    "freq": "",
+    "Lat": 54.0453,
+    "Lon": 14.9053,
+    "Ele": 7.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Machliny Highway Strip",
+    "gps_code": "PL-0025",
+    "freq": "",
+    "Lat": 53.458327,
+    "Lon": 16.371672,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mieszkowice Highway Strip",
+    "gps_code": "PL-0026",
+    "freq": "",
+    "Lat": 52.750301361083984,
+    "Lon": 14.511699676513672,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mirosławiec  (Nowe Laski) Highway Strip",
+    "gps_code": "PL-0027",
+    "freq": "",
+    "Lat": 53.38610076904297,
+    "Lon": 16.15690040588379,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mostowo Highway Strip",
+    "gps_code": "PL-0028",
+    "freq": "",
+    "Lat": 54.069199,
+    "Lon": 16.537201,
+    "Ele": 84.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Osie  (Lipinki) Highway Strip",
+    "gps_code": "PL-0029",
+    "freq": "",
+    "Lat": 53.60829925537109,
+    "Lon": 18.45059967041016,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ostrowy  (Łobodno) Highway Strip",
+    "gps_code": "PL-0030",
+    "freq": "",
+    "Lat": 50.94829940795898,
+    "Lon": 19.013599395751957,
+    "Ele": 249.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rossoszyca  (Warta) Highway Strip",
+    "gps_code": "PL-0031",
+    "freq": "",
+    "Lat": 51.703899,
+    "Lon": 18.7183,
+    "Ele": 135.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Środa Śląska  (Komorniki) Highway Strip",
+    "gps_code": "PL-0032",
+    "freq": "",
+    "Lat": 51.16279983520508,
+    "Lon": 16.66860008239746,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Wielbark Highway Strip",
+    "gps_code": "PL-0033",
+    "freq": "",
+    "Lat": 53.36669921875,
+    "Lon": 20.791900634765625,
+    "Ele": 132.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Września Highway Strip",
+    "gps_code": "PL-0034",
+    "freq": "",
+    "Lat": 52.30110168457031,
+    "Lon": 17.622499465942383,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotnisko Białousy",
+    "gps_code": "PL-0036",
+    "freq": "",
+    "Lat": 53.40472,
+    "Lon": 23.228331,
+    "Ele": 178.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bezmiechowa Airfield",
+    "gps_code": "PL-0037",
+    "freq": "",
+    "Lat": 49.518996,
+    "Lon": 22.409148,
+    "Ele": 613.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sieradz Airfield",
+    "gps_code": "PL-0039",
+    "freq": "",
+    "Lat": 51.535556,
+    "Lon": 18.801389,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotnisko Sportowe Gubin",
+    "gps_code": "PL-0040",
+    "freq": "",
+    "Lat": 51.99179,
+    "Lon": 14.7319853,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Łagowo Airstrip",
+    "gps_code": "PL-0049",
+    "freq": "",
+    "Lat": 51.966667,
+    "Lon": 16.983334,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Przasnysz-Sierakowo Airfield",
+    "gps_code": "PL-0055",
+    "freq": "",
+    "Lat": 53.00835,
+    "Lon": 20.93157,
+    "Ele": 120.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Radzyń Podlaski-Marynin Airstrip",
+    "gps_code": "PL-0057",
+    "freq": "",
+    "Lat": 51.754169,
+    "Lon": 22.628611,
+    "Ele": 143.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Rostki Airstrip",
+    "gps_code": "PL-0058",
+    "freq": "",
+    "Lat": 53.709721,
+    "Lon": 21.909719,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Szadek Airstrip",
+    "gps_code": "PL-0060",
+    "freq": "",
+    "Lat": 51.700792,
+    "Lon": 18.999452,
+    "Ele": 166.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Drahimek Airfield",
+    "gps_code": "PL-0061",
+    "freq": "",
+    "Lat": 53.614404,
+    "Lon": 16.185951,
+    "Ele": 145.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Watorowo Airfield",
+    "gps_code": "PL-0062",
+    "freq": "",
+    "Lat": 53.298517,
+    "Lon": 18.414073,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Weremień Airfield",
+    "gps_code": "PL-0064",
+    "freq": "",
+    "Lat": 49.446505,
+    "Lon": 22.319455,
+    "Ele": 406.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gozdnica Airfield",
+    "gps_code": "PL-0069",
+    "freq": "",
+    "Lat": 51.459999084472656,
+    "Lon": 15.104999542236328,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Świebodzice Airfield",
+    "gps_code": "PL-0070",
+    "freq": "",
+    "Lat": 50.882999,
+    "Lon": 16.32,
+    "Ele": 267.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bystrzyca Klodzka Airfield",
+    "gps_code": "PL-0072",
+    "freq": "",
+    "Lat": 50.308715,
+    "Lon": 16.645908,
+    "Ele": 393.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kakolewo (former military)",
+    "gps_code": "PL-0074",
+    "freq": "119.935",
+    "Lat": 52.235001,
+    "Lon": 16.243,
+    "Ele": 100.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Przytoczna Airfield",
+    "gps_code": "PL-0075",
+    "freq": "",
+    "Lat": 52.52399826049805,
+    "Lon": 15.725000381469728,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Żerniki Gądki Airfield",
+    "gps_code": "PL-0076",
+    "freq": "128.725",
+    "Lat": 52.322536,
+    "Lon": 17.040853,
+    "Ele": 79.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Konstancin-Jeziorna Airfield",
+    "gps_code": "PL-0077",
+    "freq": "",
+    "Lat": 52.07500076293945,
+    "Lon": 21.187000274658203,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lipki Wielkie Airfield",
+    "gps_code": "PL-0078",
+    "freq": "",
+    "Lat": 52.715915,
+    "Lon": 15.51115,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Szczecinek-Wilcze Laski Airfield",
+    "gps_code": "PL-0080",
+    "freq": "",
+    "Lat": 53.594457,
+    "Lon": 16.724189,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Działyń Airstrip",
+    "gps_code": "PL-0081",
+    "freq": "",
+    "Lat": 52.603819,
+    "Lon": 17.477329,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kazimierza Mała Airfield",
+    "gps_code": "PL-0083",
+    "freq": "123.450",
+    "Lat": 50.260283,
+    "Lon": 20.541402,
+    "Ele": 187.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Stara Wieś Field",
+    "gps_code": "PL-0085",
+    "freq": "",
+    "Lat": 49.722995,
+    "Lon": 22.025378,
+    "Ele": 304.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Zator",
+    "gps_code": "PL-0087",
+    "freq": "",
+    "Lat": 49.959944,
+    "Lon": 19.402833,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Baranów Airfield",
+    "gps_code": "PL-0088",
+    "freq": "",
+    "Lat": 52.122083,
+    "Lon": 20.48175,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Korne Airfield",
+    "gps_code": "PL-0089",
+    "freq": "",
+    "Lat": 54.129767,
+    "Lon": 17.845354,
+    "Ele": 157.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tworzyjanów Airstrip",
+    "gps_code": "PL-0090",
+    "freq": "",
+    "Lat": 50.922834,
+    "Lon": 16.678917,
+    "Ele": 184.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Baryt Air Base",
+    "gps_code": "PL-0091",
+    "freq": "",
+    "Lat": 51.055531,
+    "Lon": 16.013636,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Annowo Airstrip",
+    "gps_code": "PL-0092",
+    "freq": "",
+    "Lat": 52.803389,
+    "Lon": 17.879678,
+    "Ele": 106.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lądowisko Wilga",
+    "gps_code": "PL-0093",
+    "freq": "",
+    "Lat": 51.8816709,
+    "Lon": 21.3653123,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Golędzinów Airstrip",
+    "gps_code": "PL-0094",
+    "freq": "",
+    "Lat": 51.262749,
+    "Lon": 16.921832,
+    "Ele": 139.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wyszonowice UL",
+    "gps_code": "PL-0095",
+    "freq": "",
+    "Lat": 50.782972,
+    "Lon": 17.161753,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chełmżyca Airstrip",
+    "gps_code": "PL-0096",
+    "freq": "",
+    "Lat": 53.670487,
+    "Lon": 19.46115,
+    "Ele": 98.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Nysa Airfield",
+    "gps_code": "PL-0097",
+    "freq": "",
+    "Lat": 50.471573,
+    "Lon": 17.266817,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Łagowiec",
+    "gps_code": "PL-0098",
+    "freq": "",
+    "Lat": 52.33525,
+    "Lon": 15.665277,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grabowiec Airstrip",
+    "gps_code": "PL-0099",
+    "freq": "",
+    "Lat": 51.901197,
+    "Lon": 15.270643,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Śmiłowo Henryk Stokłosa Airfield",
+    "gps_code": "PL-0100",
+    "freq": "",
+    "Lat": 53.144961,
+    "Lon": 16.882682,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Makosieje Airfield",
+    "gps_code": "PL-0101",
+    "freq": "",
+    "Lat": 53.807373,
+    "Lon": 22.540594,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Szklarka Przygodzicka Airfield",
+    "gps_code": "PL-0102",
+    "freq": "",
+    "Lat": 51.488091,
+    "Lon": 17.795207,
+    "Ele": 135.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamieńsk-Orla Góra Airfield",
+    "gps_code": "PL-0103",
+    "freq": "",
+    "Lat": 51.22536,
+    "Lon": 19.418021,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ulim",
+    "gps_code": "PL-0104",
+    "freq": "",
+    "Lat": 52.693563,
+    "Lon": 15.215912,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Linowiec Airfield",
+    "gps_code": "PL-0105",
+    "freq": "",
+    "Lat": 54.007897,
+    "Lon": 18.499983,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Jasienna Airfield",
+    "gps_code": "PL-0106",
+    "freq": "",
+    "Lat": 49.716723,
+    "Lon": 20.811763,
+    "Ele": 522.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mostki Airstrip",
+    "gps_code": "PL-0107",
+    "freq": "",
+    "Lat": 52.27189,
+    "Lon": 15.369729,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Herburtowo Forest Airfield",
+    "gps_code": "PL-0108",
+    "freq": "",
+    "Lat": 52.902234,
+    "Lon": 16.129615,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Konopki Airfield",
+    "gps_code": "PL-0109",
+    "freq": "",
+    "Lat": 52.989607,
+    "Lon": 20.506689,
+    "Ele": 125.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pacółtowo Airfield",
+    "gps_code": "PL-0110",
+    "freq": "",
+    "Lat": 53.5327,
+    "Lon": 20.1531,
+    "Ele": 196.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotnisko Mrągowo",
+    "gps_code": "PL-0111",
+    "freq": "",
+    "Lat": 53.825276,
+    "Lon": 21.318983,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pawłowiczki Airfield",
+    "gps_code": "PL-0112",
+    "freq": "",
+    "Lat": 50.244634,
+    "Lon": 18.023596,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Horodek Airfield",
+    "gps_code": "PL-0114",
+    "freq": "",
+    "Lat": 49.351199,
+    "Lon": 22.481757,
+    "Ele": 494.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Żernica Airfield",
+    "gps_code": "PL-0115",
+    "freq": "",
+    "Lat": 49.362597,
+    "Lon": 22.330595,
+    "Ele": 502.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kukały Airfield",
+    "gps_code": "PL-0117",
+    "freq": "",
+    "Lat": 51.875631,
+    "Lon": 21.003014,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oborniki Słonawy Airfield",
+    "gps_code": "PL-0118",
+    "freq": "",
+    "Lat": 52.666858,
+    "Lon": 16.774546,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Świebodzin Airstrip",
+    "gps_code": "PL-0119",
+    "freq": "",
+    "Lat": 52.252266,
+    "Lon": 15.566415,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bełchatów Airstrip",
+    "gps_code": "PL-0120",
+    "freq": "118.905",
+    "Lat": 51.402116,
+    "Lon": 19.378239,
+    "Ele": 217.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Rzepin Airstrip",
+    "gps_code": "PL-0121",
+    "freq": "",
+    "Lat": 52.3221807,
+    "Lon": 14.810701,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarnów Airfield",
+    "gps_code": "PL-0122",
+    "freq": "",
+    "Lat": 50.001572,
+    "Lon": 21.004145,
+    "Ele": 242.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Międzyrzecz Airfield",
+    "gps_code": "PL-0123",
+    "freq": "",
+    "Lat": 52.419281,
+    "Lon": 15.580507,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kępa Airfield",
+    "gps_code": "PL-0124",
+    "freq": "",
+    "Lat": 52.724271,
+    "Lon": 20.421352,
+    "Ele": 98.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Czyże",
+    "gps_code": "PL-0125",
+    "freq": "",
+    "Lat": 52.786205,
+    "Lon": 23.430968,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zawiszyn Airfield",
+    "gps_code": "PL-0127",
+    "freq": "",
+    "Lat": 54.277943,
+    "Lon": 22.537944,
+    "Ele": 220.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lisy Airstrip",
+    "gps_code": "PL-0128",
+    "freq": "",
+    "Lat": 54.219442,
+    "Lon": 22.044803,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stare Juchy Landing Site",
+    "gps_code": "PL-0129",
+    "freq": "",
+    "Lat": 53.90725,
+    "Lon": 22.233334,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bożykowo Airfield",
+    "gps_code": "PL-0130",
+    "freq": "",
+    "Lat": 54.073224,
+    "Lon": 21.83375,
+    "Ele": 149.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Zyzdrojowa Wola",
+    "gps_code": "PL-0132",
+    "freq": "",
+    "Lat": 53.657473,
+    "Lon": 21.277417,
+    "Ele": 137.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Lewickie Private Airstrip",
+    "gps_code": "PL-0133",
+    "freq": "",
+    "Lat": 53.029083,
+    "Lon": 23.134638,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Krynice Kolonia",
+    "gps_code": "PL-0134",
+    "freq": "",
+    "Lat": 53.231111,
+    "Lon": 23.044081,
+    "Ele": 176.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Brody Airfield",
+    "gps_code": "PL-0135",
+    "freq": "",
+    "Lat": 53.360165,
+    "Lon": 23.133138,
+    "Ele": 146.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Szorce Airstrip",
+    "gps_code": "PL-0136",
+    "freq": "",
+    "Lat": 53.285388,
+    "Lon": 22.674194,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Żłobek Mały Airfield",
+    "gps_code": "PL-0137",
+    "freq": "",
+    "Lat": 51.454611,
+    "Lon": 23.542472,
+    "Ele": 157.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oleszyce Airstrip",
+    "gps_code": "PL-0138",
+    "freq": "",
+    "Lat": 50.170308,
+    "Lon": 23.057722,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Jaryszewo Airstrip",
+    "gps_code": "PL-0140",
+    "freq": "",
+    "Lat": 52.69077,
+    "Lon": 16.615541,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wola Krakowiańska",
+    "gps_code": "PL-0141",
+    "freq": "",
+    "Lat": 52.027223,
+    "Lon": 20.807118,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Żabia Wola Airstrip",
+    "gps_code": "PL-0142",
+    "freq": "",
+    "Lat": 52.037988,
+    "Lon": 20.678865,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ryki Airstrip",
+    "gps_code": "PL-0143",
+    "freq": "",
+    "Lat": 51.644122,
+    "Lon": 21.94768,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Więckowy Airstrip",
+    "gps_code": "PL-0144",
+    "freq": "",
+    "Lat": 54.062273,
+    "Lon": 18.367292,
+    "Ele": 159.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dobrosułów Airfield",
+    "gps_code": "PL-0145",
+    "freq": "",
+    "Lat": 52.1989335,
+    "Lon": 15.1266946,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Natolin Airfield",
+    "gps_code": "PL-0146",
+    "freq": "",
+    "Lat": 51.016239,
+    "Lon": 18.754739,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Skorupy",
+    "gps_code": "PL-0147",
+    "freq": "",
+    "Lat": 52.055035,
+    "Lon": 21.428755,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Witnica Airstrip",
+    "gps_code": "PL-0149",
+    "freq": "",
+    "Lat": 52.6735,
+    "Lon": 14.8687,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Folwark Piaski Airfield",
+    "gps_code": "PL-0150",
+    "freq": "",
+    "Lat": 52.4798514,
+    "Lon": 17.7678974,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotnisko Orneta",
+    "gps_code": "PL-0151",
+    "freq": "",
+    "Lat": 54.126694,
+    "Lon": 20.0881201,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Donimierz Airfield",
+    "gps_code": "PL-0152",
+    "freq": "",
+    "Lat": 54.486777,
+    "Lon": 18.167569,
+    "Ele": 177.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lądowisko Pago Dąbcze",
+    "gps_code": "PL-0153",
+    "freq": "",
+    "Lat": 51.8187067,
+    "Lon": 16.6601499,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nieborów-Bobrowniki Airfield",
+    "gps_code": "PL-0154",
+    "freq": "",
+    "Lat": 52.065745,
+    "Lon": 20.032263,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Łowicz Airfield",
+    "gps_code": "PL-0155",
+    "freq": "",
+    "Lat": 52.083171,
+    "Lon": 19.858536,
+    "Ele": 92.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Brzeziny Airfield",
+    "gps_code": "PL-0156",
+    "freq": "",
+    "Lat": 51.808039,
+    "Lon": 19.738517,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kutno",
+    "gps_code": "PL-0157",
+    "freq": "",
+    "Lat": 52.2085919,
+    "Lon": 19.3907223,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Konary Airstrip",
+    "gps_code": "PL-0158",
+    "freq": "",
+    "Lat": 52.287427,
+    "Lon": 20.277461,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Suliszew 2 Airstrip",
+    "gps_code": "PL-0159",
+    "freq": "",
+    "Lat": 51.925352,
+    "Lon": 20.265214,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skierniewice-Psary Airstrip",
+    "gps_code": "PL-0160",
+    "freq": "",
+    "Lat": 51.886041,
+    "Lon": 20.324996,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Walendów",
+    "gps_code": "PL-0161",
+    "freq": "",
+    "Lat": 52.0805171,
+    "Lon": 20.8530837,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stary Wielisław Airfield",
+    "gps_code": "PL-0162",
+    "freq": "",
+    "Lat": 50.407065,
+    "Lon": 16.563007,
+    "Ele": 378.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sowiniec",
+    "gps_code": "PL-0164",
+    "freq": "",
+    "Lat": 52.237254,
+    "Lon": 16.889057,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ikar Jasło Airstrip",
+    "gps_code": "PL-0165",
+    "freq": "",
+    "Lat": 49.752745,
+    "Lon": 21.511692,
+    "Ele": 231.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Chojnice Airfield",
+    "gps_code": "PL-0167",
+    "freq": "",
+    "Lat": 53.680788,
+    "Lon": 17.533665,
+    "Ele": 163.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Stary Kamień Airstrip",
+    "gps_code": "PL-0168",
+    "freq": "",
+    "Lat": 53.724312,
+    "Lon": 19.205135,
+    "Ele": 102.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Rytel-Uboga Airstrip",
+    "gps_code": "PL-0169",
+    "freq": "",
+    "Lat": 53.739132,
+    "Lon": 17.830447,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dębiczek Airstrip",
+    "gps_code": "PL-0170",
+    "freq": "",
+    "Lat": 52.267907,
+    "Lon": 17.329428,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Różanki Airstrip",
+    "gps_code": "PL-0171",
+    "freq": "",
+    "Lat": 52.772424,
+    "Lon": 15.306475,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ldzań Airfield",
+    "gps_code": "PL-0172",
+    "freq": "",
+    "Lat": 51.58955,
+    "Lon": 19.25418,
+    "Ele": 185.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lądowisko Wlewsk",
+    "gps_code": "PL-0173",
+    "freq": "",
+    "Lat": 53.2755,
+    "Lon": 19.7606,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wieluń-Olewin Airfield",
+    "gps_code": "PL-0174",
+    "freq": "",
+    "Lat": 51.214465,
+    "Lon": 18.631675,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotnisko Wisznice",
+    "gps_code": "PL-0175",
+    "freq": "",
+    "Lat": 51.7789,
+    "Lon": 23.165767,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lotnisko Nadrybie",
+    "gps_code": "PL-0176",
+    "freq": "",
+    "Lat": 51.35107,
+    "Lon": 23.02698,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lądowisko Kamionka",
+    "gps_code": "PL-0177",
+    "freq": "",
+    "Lat": 53.67644,
+    "Lon": 18.63286,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Goczałkowice",
+    "gps_code": "PL-0178",
+    "freq": "",
+    "Lat": 49.9524,
+    "Lon": 18.9419,
+    "Ele": 265.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Wincentów Airstrip",
+    "gps_code": "PL-0179",
+    "freq": "",
+    "Lat": 51.93768,
+    "Lon": 21.16462,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kępno Airstrip",
+    "gps_code": "PL-0180",
+    "freq": "",
+    "Lat": 51.32205,
+    "Lon": 17.97273,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Majory Airstrip",
+    "gps_code": "PL-0181",
+    "freq": "",
+    "Lat": 51.4316,
+    "Lon": 18.05835,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Czersk Świecki",
+    "gps_code": "PL-0182",
+    "freq": "",
+    "Lat": 53.5779,
+    "Lon": 18.48456,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krośniewice Airstrip",
+    "gps_code": "PL-0184",
+    "freq": "",
+    "Lat": 52.25552,
+    "Lon": 19.15125,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Osieczna Airfield",
+    "gps_code": "PL-0185",
+    "freq": "",
+    "Lat": 51.915884,
+    "Lon": 16.708585,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karminek Airfield",
+    "gps_code": "PL-0186",
+    "freq": "",
+    "Lat": 51.82801,
+    "Lon": 17.6863,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Przyborów Airfield",
+    "gps_code": "PL-0187",
+    "freq": "",
+    "Lat": 51.800317,
+    "Lon": 15.802489,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dębno Airstrip",
+    "gps_code": "PL-0188",
+    "freq": "",
+    "Lat": 51.33468,
+    "Lon": 16.51771,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Święta Katarzyna Airstrip",
+    "gps_code": "PL-0189",
+    "freq": "",
+    "Lat": 51.01555,
+    "Lon": 17.10618,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wilków Średzki",
+    "gps_code": "PL-0190",
+    "freq": "",
+    "Lat": 51.06434,
+    "Lon": 16.6979,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Powodovo Airstrip",
+    "gps_code": "PL-0191",
+    "freq": "",
+    "Lat": 52.117,
+    "Lon": 16.05,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chalin 1 Airstrip",
+    "gps_code": "PL-0192",
+    "freq": "",
+    "Lat": 52.586038,
+    "Lon": 16.034364,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krępsko Airfield",
+    "gps_code": "PL-0193",
+    "freq": "",
+    "Lat": 53.25052,
+    "Lon": 16.75209,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rawicz Airstrip",
+    "gps_code": "PL-0194",
+    "freq": "",
+    "Lat": 51.61527,
+    "Lon": 16.90386,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Księginki Airstrip",
+    "gps_code": "PL-0195",
+    "freq": "",
+    "Lat": 51.95672,
+    "Lon": 17.07527,
+    "Ele": 101.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Podgórze Airstrip",
+    "gps_code": "PL-0196",
+    "freq": "",
+    "Lat": 51.34014,
+    "Lon": 16.28043,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bogatynia Airstrip",
+    "gps_code": "PL-0197",
+    "freq": "",
+    "Lat": 50.93039,
+    "Lon": 14.97937,
+    "Ele": 396.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Niegowoniczki Airfield",
+    "gps_code": "PL-0198",
+    "freq": "",
+    "Lat": 50.373651,
+    "Lon": 19.42111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Smolnik Altiport",
+    "gps_code": "PL-0199",
+    "freq": "",
+    "Lat": 49.281514,
+    "Lon": 22.119274,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Konopiska Airstrip",
+    "gps_code": "PL-0200",
+    "freq": "",
+    "Lat": 50.73958,
+    "Lon": 19.00814,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaczowice Airfield",
+    "gps_code": "PL-0201",
+    "freq": "",
+    "Lat": 50.690789,
+    "Lon": 17.110305,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Żodyń Airstrip",
+    "gps_code": "PL-0202",
+    "freq": "",
+    "Lat": 52.116033,
+    "Lon": 15.977104,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nowy Tomyśl Airstrip",
+    "gps_code": "PL-0203",
+    "freq": "",
+    "Lat": 52.308,
+    "Lon": 16.145643,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sławno Airfield",
+    "gps_code": "PL-0204",
+    "freq": "",
+    "Lat": 54.39293,
+    "Lon": 16.68227,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trzebicz Nowy Airfield",
+    "gps_code": "PL-0206",
+    "freq": "",
+    "Lat": 52.799733,
+    "Lon": 15.796799,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wilkowice Airstrip",
+    "gps_code": "PL-0207",
+    "freq": "",
+    "Lat": 51.89456,
+    "Lon": 16.5312,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ożarów Airfield",
+    "gps_code": "PL-0208",
+    "freq": "",
+    "Lat": 50.90226,
+    "Lon": 21.65701,
+    "Ele": 188.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuszów Narodowy Airfield",
+    "gps_code": "PL-0209",
+    "freq": "",
+    "Lat": 50.373179,
+    "Lon": 21.485498,
+    "Ele": 160.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brzeska Wola Airfield",
+    "gps_code": "PL-0210",
+    "freq": "",
+    "Lat": 51.60774,
+    "Lon": 21.00479,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rzędów Airstrip",
+    "gps_code": "PL-0211",
+    "freq": "",
+    "Lat": 50.75962,
+    "Lon": 18.12882,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ręczaje Airstrip",
+    "gps_code": "PL-0212",
+    "freq": "",
+    "Lat": 52.319791,
+    "Lon": 21.324851,
+    "Ele": 94.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Iwno Airstrip",
+    "gps_code": "PL-0213",
+    "freq": "",
+    "Lat": 52.39084,
+    "Lon": 17.282088,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marianka Airfield",
+    "gps_code": "PL-0214",
+    "freq": "",
+    "Lat": 51.75776,
+    "Lon": 14.740208,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bojszowy Airstrip",
+    "gps_code": "PL-0215",
+    "freq": "",
+    "Lat": 50.04975,
+    "Lon": 19.09411,
+    "Ele": 239.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Boronów",
+    "gps_code": "PL-0216",
+    "freq": "",
+    "Lat": 50.68065,
+    "Lon": 18.9154,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rewal-Ninikowo Private Airstrip",
+    "gps_code": "PL-0218",
+    "freq": "",
+    "Lat": 54.062735,
+    "Lon": 15.029036,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Górki Airfield",
+    "gps_code": "PL-0219",
+    "freq": "",
+    "Lat": 50.372316,
+    "Lon": 21.289942,
+    "Ele": 157.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Metelin Airstrip",
+    "gps_code": "PL-0221",
+    "freq": "",
+    "Lat": 50.74542,
+    "Lon": 23.83732,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gostkowo Ultralight Airfield",
+    "gps_code": "PL-0222",
+    "freq": "",
+    "Lat": 53.112161,
+    "Lon": 18.677819,
+    "Ele": 84.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Rysie Airstrip",
+    "gps_code": "PL-0223",
+    "freq": "",
+    "Lat": 52.22054,
+    "Lon": 21.47366,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cieszkowo Airstrip",
+    "gps_code": "PL-0224",
+    "freq": "",
+    "Lat": 52.70035,
+    "Lon": 20.27785,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Drożków Ultralight Airstrip",
+    "gps_code": "PL-0230",
+    "freq": "",
+    "Lat": 51.68613,
+    "Lon": 15.06566,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nowe Tarnowo",
+    "gps_code": "PL-0231",
+    "freq": "",
+    "Lat": 52.16494,
+    "Lon": 16.76524,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bauerówka Airfield",
+    "gps_code": "PL-0232",
+    "freq": "",
+    "Lat": 50.097599,
+    "Lon": 21.725037,
+    "Ele": 221.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lipowa Airstrip",
+    "gps_code": "PL-0233",
+    "freq": "",
+    "Lat": 50.73297,
+    "Lon": 17.4242,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Szczodrkowice Private Airstrip",
+    "gps_code": "PL-0234",
+    "freq": "",
+    "Lat": 50.18897,
+    "Lon": 19.89162,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lipowa Airfield",
+    "gps_code": "PL-0236",
+    "freq": "",
+    "Lat": 49.69775,
+    "Lon": 19.09678,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ikar Airfield",
+    "gps_code": "PL-0237",
+    "freq": "",
+    "Lat": 51.87889,
+    "Lon": 15.91943,
+    "Ele": 88.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Poręba Airfield",
+    "gps_code": "PL-0239",
+    "freq": "",
+    "Lat": 50.4878,
+    "Lon": 19.37662,
+    "Ele": 330.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wysoka Airfield",
+    "gps_code": "PL-0240",
+    "freq": "",
+    "Lat": 52.76275,
+    "Lon": 15.00426,
+    "Ele": 74.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuźnia Raciborska Firefighting Airstrip",
+    "gps_code": "PL-0241",
+    "freq": "",
+    "Lat": 50.22124,
+    "Lon": 18.32237,
+    "Ele": 199.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Żegocina Airfield",
+    "gps_code": "PL-0243",
+    "freq": "",
+    "Lat": 49.83316,
+    "Lon": 20.41098,
+    "Ele": 321.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Robakowo Airfield",
+    "gps_code": "PL-0244",
+    "freq": "",
+    "Lat": 53.35427,
+    "Lon": 18.66706,
+    "Ele": 83.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Krężce Airfield",
+    "gps_code": "PL-0245",
+    "freq": "",
+    "Lat": 51.93868,
+    "Lon": 20.09039,
+    "Ele": 132.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuszyn Airstrip",
+    "gps_code": "PL-0246",
+    "freq": "",
+    "Lat": 51.59209,
+    "Lon": 19.60617,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chobot Airstrip",
+    "gps_code": "PL-0247",
+    "freq": "",
+    "Lat": 52.25052,
+    "Lon": 21.40641,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nowy Bostów Airfield",
+    "gps_code": "PL-0248",
+    "freq": "",
+    "Lat": 50.92562,
+    "Lon": 21.08394,
+    "Ele": 309.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Suliszew 1 Airstrip",
+    "gps_code": "PL-0249",
+    "freq": "",
+    "Lat": 51.92745,
+    "Lon": 20.2756,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kościeleczki Airfield",
+    "gps_code": "PL-0250",
+    "freq": "",
+    "Lat": 54.06483,
+    "Lon": 19.00452,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zielone Zacisze Airfield",
+    "gps_code": "PL-0251",
+    "freq": "",
+    "Lat": 50.37751,
+    "Lon": 16.54321,
+    "Ele": 438.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gniewskie Pole Airfield",
+    "gps_code": "PL-0255",
+    "freq": "",
+    "Lat": 53.79081,
+    "Lon": 18.86246,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Dylew Airfield",
+    "gps_code": "PL-0256",
+    "freq": "",
+    "Lat": 51.71644,
+    "Lon": 20.77152,
+    "Ele": 138.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nadolna Airfield",
+    "gps_code": "PL-0257",
+    "freq": "",
+    "Lat": 51.91343,
+    "Lon": 19.8563,
+    "Ele": 187.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kielczyn Airfield",
+    "gps_code": "PL-0258",
+    "freq": "",
+    "Lat": 52.05561,
+    "Lon": 17.21515,
+    "Ele": 84.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pokrzywki Airfield",
+    "gps_code": "PL-0259",
+    "freq": "",
+    "Lat": 53.30729,
+    "Lon": 19.42302,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karlino Airfield",
+    "gps_code": "PL-0260",
+    "freq": "",
+    "Lat": 54.06462,
+    "Lon": 15.81256,
+    "Ele": 32.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wałyczyk Airfield",
+    "gps_code": "PL-0261",
+    "freq": "",
+    "Lat": 53.24402,
+    "Lon": 18.98651,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lojaka Airfield",
+    "gps_code": "PL-0262",
+    "freq": "",
+    "Lat": 52.5136,
+    "Lon": 21.05474,
+    "Ele": 107.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Niemiry Airstrip",
+    "gps_code": "PL-0263",
+    "freq": "",
+    "Lat": 52.64301,
+    "Lon": 21.57183,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sochaczew Air Base",
+    "gps_code": "PL-0273",
+    "freq": "",
+    "Lat": 52.198601,
+    "Lon": 20.292801,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bydgoszcz Aeroklub Airfield",
+    "gps_code": "PL-0274",
+    "freq": "",
+    "Lat": 53.105214,
+    "Lon": 17.960376,
+    "Ele": 70.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Borne Sulinowo Airfield",
+    "gps_code": "PL-0275",
+    "freq": "",
+    "Lat": 53.576149,
+    "Lon": 16.527729,
+    "Ele": 143.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dargomyśl-Dębno Airfield",
+    "gps_code": "PL-0276",
+    "freq": "",
+    "Lat": 52.72012,
+    "Lon": 14.6292,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cedynia Paraglider Field",
+    "gps_code": "PL-0277",
+    "freq": "",
+    "Lat": 52.83686,
+    "Lon": 14.31083,
+    "Ele": 64.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Czerwonak Paraglider Field",
+    "gps_code": "PL-0278",
+    "freq": "",
+    "Lat": 52.56005,
+    "Lon": 16.9934,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dejguny Airstrip",
+    "gps_code": "PL-0279",
+    "freq": "",
+    "Lat": 54.021285,
+    "Lon": 21.594777,
+    "Ele": 121.0
+  }
+]

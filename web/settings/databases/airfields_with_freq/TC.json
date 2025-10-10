@@ -1,0 +1,83 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Harold Charles International Airport",
+    "gps_code": "MBAC",
+    "freq": "",
+    "Lat": 21.302649,
+    "Lon": -71.637168,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "JAGS McCartney International Airport",
+    "gps_code": "MBGT",
+    "freq": "126.000",
+    "Lat": 21.4445,
+    "Lon": -71.142303,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Middle Caicos Airport",
+    "gps_code": "MBMC",
+    "freq": "",
+    "Lat": 21.82602,
+    "Lon": -71.8025,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "North Caicos Airport",
+    "gps_code": "MBNC",
+    "freq": "118.850",
+    "Lat": 21.916094,
+    "Lon": -71.942954,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pine Cay Airport",
+    "gps_code": "MBPI",
+    "freq": "",
+    "Lat": 21.874661,
+    "Lon": -72.090573,
+    "Ele": 0.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Providenciales International Airport",
+    "gps_code": "MBPV",
+    "freq": "126.000",
+    "Lat": 21.773697,
+    "Lon": -72.268321,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "South Caicos Airport",
+    "gps_code": "MBSC",
+    "freq": "118.900",
+    "Lat": 21.515699,
+    "Lon": -71.528503,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Salt Cay Airport",
+    "gps_code": "MBSY",
+    "freq": "",
+    "Lat": 21.3330001831,
+    "Lon": -71.1999969482,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "West Caicos Airport",
+    "gps_code": "TC-0001",
+    "freq": "",
+    "Lat": 21.68178,
+    "Lon": -72.46157,
+    "Ele": 0.0
+  }
+]

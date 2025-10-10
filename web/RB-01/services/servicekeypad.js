@@ -47,8 +47,8 @@ KeypadService.prototype = {
 };
 
 var URL_KEYPAD_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/keypad";
-var URL_KEYPAD_SETTINGS_GET = "settings/keypad.json";
-var URL_KEYPAD_NAVIGATION_GET = "settings/navigation.json";
+var URL_KEYPAD_SETTINGS_GET = "/settings/keypad.json";
+var URL_KEYPAD_NAVIGATION_GET = "/settings/navigation.json";
 
 const KEYPAD_MAPPING_PREV = "KEYPAD_MAPPING_PREV";
 const KEYPAD_MAPPING_TAP = "KEYPAD_MAPPING_TAP";

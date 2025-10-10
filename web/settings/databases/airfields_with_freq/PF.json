@@ -1,0 +1,488 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Faa'a International Airport",
+    "gps_code": "NTAA",
+    "freq": "118.100",
+    "Lat": -17.553699,
+    "Lon": -149.606995,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Rimatara Airport",
+    "gps_code": "NTAM",
+    "freq": "",
+    "Lat": -22.63725,
+    "Lon": -152.8059,
+    "Ele": 18.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rurutu Airport",
+    "gps_code": "NTAR",
+    "freq": "118.300",
+    "Lat": -22.43409919738769,
+    "Lon": -151.36099243164062,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tubuai Airport",
+    "gps_code": "NTAT",
+    "freq": "118.300",
+    "Lat": -23.36540031433105,
+    "Lon": -149.5240020751953,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Raivavae Airport",
+    "gps_code": "NTAV",
+    "freq": "",
+    "Lat": -23.885201,
+    "Lon": -147.662003,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Anaa Airport",
+    "gps_code": "NTGA",
+    "freq": "119.600",
+    "Lat": -17.3526,
+    "Lon": -145.509995,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fangatau Airport",
+    "gps_code": "NTGB",
+    "freq": "",
+    "Lat": -15.820044,
+    "Lon": -140.888071,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tikehau Airport",
+    "gps_code": "NTGC",
+    "freq": "119.500",
+    "Lat": -15.1196,
+    "Lon": -148.231003,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Apataki Airport",
+    "gps_code": "NTGD",
+    "freq": "",
+    "Lat": -15.5736,
+    "Lon": -146.414993,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Reao Airport",
+    "gps_code": "NTGE",
+    "freq": "",
+    "Lat": -18.46652,
+    "Lon": -136.43855,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Fakarava Airport",
+    "gps_code": "NTGF",
+    "freq": "119.900",
+    "Lat": -16.054100036621094,
+    "Lon": -145.65699768066406,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nengo-Nengo Airport",
+    "gps_code": "NTGG",
+    "freq": "",
+    "Lat": -18.7506,
+    "Lon": -141.7591,
+    "Ele": 6.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Hikueru Airport",
+    "gps_code": "NTGH",
+    "freq": "",
+    "Lat": -17.548297,
+    "Lon": -142.612037,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Manihi Airport",
+    "gps_code": "NTGI",
+    "freq": "124.300",
+    "Lat": -14.436800003051758,
+    "Lon": -146.07000732421875,
+    "Ele": 4.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Totegegie Airport",
+    "gps_code": "NTGJ",
+    "freq": "118.300",
+    "Lat": -23.07990074157715,
+    "Lon": -134.88999938964844,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kaukura Airport",
+    "gps_code": "NTGK",
+    "freq": "118.900",
+    "Lat": -15.6633,
+    "Lon": -146.884995,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Makemo Airport",
+    "gps_code": "NTGM",
+    "freq": "121.400",
+    "Lat": -16.5839,
+    "Lon": -143.658005,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Napuka Island Airport",
+    "gps_code": "NTGN",
+    "freq": "",
+    "Lat": -14.177397,
+    "Lon": -141.266112,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tatakoto Airport",
+    "gps_code": "NTGO",
+    "freq": "",
+    "Lat": -17.355226,
+    "Lon": -138.44734,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Puka Puka Airport",
+    "gps_code": "NTGP",
+    "freq": "",
+    "Lat": -14.80955,
+    "Lon": -138.812621,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pukaruha Airport",
+    "gps_code": "NTGQ",
+    "freq": "",
+    "Lat": -18.295726,
+    "Lon": -137.016291,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Aratika-Perles Airport",
+    "gps_code": "NTGR",
+    "freq": "",
+    "Lat": -15.622861,
+    "Lon": -145.496578,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Marutea Airport",
+    "gps_code": "NTGS",
+    "freq": "",
+    "Lat": -21.48219490051269,
+    "Lon": -135.63705444335938,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Takapoto Airport",
+    "gps_code": "NTGT",
+    "freq": "118.500",
+    "Lat": -14.709500312805176,
+    "Lon": -145.24600219726562,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arutua Airport",
+    "gps_code": "NTGU",
+    "freq": "118.900",
+    "Lat": -15.248299598693848,
+    "Lon": -146.61700439453125,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mataiva Airport",
+    "gps_code": "NTGV",
+    "freq": "119.900",
+    "Lat": -14.8681001663208,
+    "Lon": -148.7169952392578,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Nukutavake Airport",
+    "gps_code": "NTGW",
+    "freq": "",
+    "Lat": -19.284613,
+    "Lon": -138.768367,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tureia Airport",
+    "gps_code": "NTGY",
+    "freq": "",
+    "Lat": -20.784262,
+    "Lon": -138.56796,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ahe Airport",
+    "gps_code": "NTHE",
+    "freq": "118.900",
+    "Lat": -14.428099632263184,
+    "Lon": -146.2570037841797,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kauehi Airport",
+    "gps_code": "NTKA",
+    "freq": "",
+    "Lat": -15.780622,
+    "Lon": -145.128443,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Faaite Airport",
+    "gps_code": "NTKF",
+    "freq": "",
+    "Lat": -16.68657,
+    "Lon": -145.329394,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Fakahina Airport",
+    "gps_code": "NTKH",
+    "freq": "",
+    "Lat": -15.992259,
+    "Lon": -140.164246,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aratika Nord Airport",
+    "gps_code": "NTKK",
+    "freq": "",
+    "Lat": -15.485673,
+    "Lon": -145.464778,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Takume Airport",
+    "gps_code": "NTKM",
+    "freq": "",
+    "Lat": -15.857434,
+    "Lon": -142.266469,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Naiu Airport",
+    "gps_code": "NTKN",
+    "freq": "",
+    "Lat": -16.119296,
+    "Lon": -146.368768,
+    "Ele": 15.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Raroia Airport",
+    "gps_code": "NTKO",
+    "freq": "",
+    "Lat": -16.050485,
+    "Lon": -142.476568,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Takaroa Airport",
+    "gps_code": "NTKR",
+    "freq": "118.700",
+    "Lat": -14.45580005645752,
+    "Lon": -145.02499389648438,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Katiu Airport",
+    "gps_code": "NTKT",
+    "freq": "",
+    "Lat": -16.339681,
+    "Lon": -144.407966,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nukutepipi Airport",
+    "gps_code": "NTKU",
+    "freq": "",
+    "Lat": -20.700054,
+    "Lon": -143.045933,
+    "Ele": 9.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nuku Hiva Airport",
+    "gps_code": "NTMD",
+    "freq": "118.300",
+    "Lat": -8.7956,
+    "Lon": -140.229004,
+    "Ele": 67.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hiva Oa-Atuona Airport",
+    "gps_code": "NTMN",
+    "freq": "119.500",
+    "Lat": -9.76879024506,
+    "Lon": -139.011001587,
+    "Ele": 451.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ua Pou Airport",
+    "gps_code": "NTMP",
+    "freq": "",
+    "Lat": -9.35167,
+    "Lon": -140.078003,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ua Huka Airport",
+    "gps_code": "NTMU",
+    "freq": "",
+    "Lat": -8.936228,
+    "Lon": -139.554062,
+    "Ele": 48.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bora Bora Airport",
+    "gps_code": "NTTB",
+    "freq": "134.700",
+    "Lat": -16.444400787353516,
+    "Lon": -151.75100708007812,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tetiaroa Airport",
+    "gps_code": "NTTE",
+    "freq": "",
+    "Lat": -17.015095,
+    "Lon": -149.589372,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rangiroa Airport",
+    "gps_code": "NTTG",
+    "freq": "568.000",
+    "Lat": -14.954299926757812,
+    "Lon": -147.66099548339844,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Huahine-Fare Airport",
+    "gps_code": "NTTH",
+    "freq": "134.700",
+    "Lat": -16.687084,
+    "Lon": -151.021593,
+    "Ele": 2.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Moorea Temae Airport",
+    "gps_code": "NTTM",
+    "freq": "121.300",
+    "Lat": -17.48979,
+    "Lon": -149.761777,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hao Airport",
+    "gps_code": "NTTO",
+    "freq": "",
+    "Lat": -18.0748,
+    "Lon": -140.945999,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maupiti Airport",
+    "gps_code": "NTTP",
+    "freq": "134.700",
+    "Lat": -16.42650032043457,
+    "Lon": -152.24400329589844,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Raiatea Airport",
+    "gps_code": "NTTR",
+    "freq": "134.700",
+    "Lat": -16.7229,
+    "Lon": -151.466003,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tupai Airport",
+    "gps_code": "NTTU",
+    "freq": "",
+    "Lat": -16.2423,
+    "Lon": -151.8338,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Moruroa Airport",
+    "gps_code": "NTTX",
+    "freq": "",
+    "Lat": -21.80978,
+    "Lon": -138.813385,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vahitahi Airport",
+    "gps_code": "NTUV",
+    "freq": "",
+    "Lat": -18.780697,
+    "Lon": -138.85568,
+    "Ele": 2.7
+  }
+]

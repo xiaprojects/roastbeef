@@ -1,0 +1,182 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Dodji Airport",
+    "gps_code": "GO66",
+    "freq": "",
+    "Lat": 15.543899536132812,
+    "Lon": -14.95829963684082,
+    "Ele": 20.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Blaise Diagne International Airport",
+    "gps_code": "GOBD",
+    "freq": "120.500",
+    "Lat": 14.670878,
+    "Lon": -17.072829,
+    "Ele": 88.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolda Airport",
+    "gps_code": "GODK",
+    "freq": "",
+    "Lat": 12.8985,
+    "Lon": -14.9681,
+    "Ele": 36.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ziguinchor Airport",
+    "gps_code": "GOGG",
+    "freq": "568.000",
+    "Lat": 12.5556,
+    "Lon": -16.281799,
+    "Ele": 22.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cap Skirring Airport",
+    "gps_code": "GOGS",
+    "freq": "568.000",
+    "Lat": 12.39533,
+    "Lon": -16.748,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Linguère Airport",
+    "gps_code": "GOOG",
+    "freq": "",
+    "Lat": 15.402134,
+    "Lon": -15.080629,
+    "Ele": 20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kaolack Airport",
+    "gps_code": "GOOK",
+    "freq": "",
+    "Lat": 14.146900177001951,
+    "Lon": -16.051300048828125,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Léopold Sédar Senghor International Airport",
+    "gps_code": "GOOY",
+    "freq": "120.500",
+    "Lat": 14.7397,
+    "Lon": -17.4902,
+    "Ele": 25.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ouro Sogui Airport",
+    "gps_code": "GOSM",
+    "freq": "",
+    "Lat": 15.5936,
+    "Lon": -13.3228,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Podor Airport",
+    "gps_code": "GOSP",
+    "freq": "",
+    "Lat": 16.678155,
+    "Lon": -14.964957,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Richard Toll Airport",
+    "gps_code": "GOSR",
+    "freq": "",
+    "Lat": 16.437816,
+    "Lon": -15.656376,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Saint Louis Airport",
+    "gps_code": "GOSS",
+    "freq": "568.000",
+    "Lat": 16.049814,
+    "Lon": -16.461039,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bakel Airport",
+    "gps_code": "GOTB",
+    "freq": "",
+    "Lat": 14.847299575805664,
+    "Lon": -12.468299865722656,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kédougou Airport",
+    "gps_code": "GOTK",
+    "freq": "",
+    "Lat": 12.57229995727539,
+    "Lon": -12.22029972076416,
+    "Ele": 178.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Simenti Airport",
+    "gps_code": "GOTS",
+    "freq": "",
+    "Lat": 13.046799659729004,
+    "Lon": -13.29539966583252,
+    "Ele": 52.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tambacounda Airport",
+    "gps_code": "GOTT",
+    "freq": "568.000",
+    "Lat": 13.7368,
+    "Lon": -13.6531,
+    "Ele": 49.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Niokolo-Koba Airport",
+    "gps_code": "NIK",
+    "freq": "",
+    "Lat": 13.052014,
+    "Lon": -12.727162,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Thiès Airport",
+    "gps_code": "SN-0001",
+    "freq": "",
+    "Lat": 14.809398,
+    "Lon": -16.95066,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Djilor Pout Pout Airport",
+    "gps_code": "SN-0003",
+    "freq": "",
+    "Lat": 14.0866,
+    "Lon": -16.6659,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saly-Joseph Aerodrome",
+    "gps_code": "SN-0004",
+    "freq": "",
+    "Lat": 14.4646,
+    "Lon": -17.0136,
+    "Ele": 0.0
+  }
+]

@@ -1,0 +1,974 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ianca Airfield",
+    "gps_code": "LR79",
+    "freq": "130.000",
+    "Lat": 45.158655,
+    "Lon": 27.43093,
+    "Ele": 39.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Feteşti Borcea Air Base",
+    "gps_code": "LR80",
+    "freq": "130.000",
+    "Lat": 44.3923,
+    "Lon": 27.7267,
+    "Ele": 54.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Boboc Air Base",
+    "gps_code": "LR82",
+    "freq": "130.000",
+    "Lat": 45.2164,
+    "Lon": 26.9786,
+    "Ele": 104.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arad International Airport",
+    "gps_code": "LRAR",
+    "freq": "130.200",
+    "Lat": 46.176601,
+    "Lon": 21.261999,
+    "Ele": 107.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bacău George Enescu International  Airport",
+    "gps_code": "LRBC",
+    "freq": "118.600",
+    "Lat": 46.5219,
+    "Lon": 26.910299,
+    "Ele": 185.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maramureș International Airport",
+    "gps_code": "LRBM",
+    "freq": "118.855",
+    "Lat": 47.658444,
+    "Lon": 23.464445,
+    "Ele": 184.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Bistrița Airfield",
+    "gps_code": "LRBN",
+    "freq": "",
+    "Lat": 47.158575,
+    "Lon": 24.552311,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bucharest Băneasa Aurel Vlaicu International Airport",
+    "gps_code": "LRBS",
+    "freq": "118.250",
+    "Lat": 44.503201,
+    "Lon": 26.1021,
+    "Ele": 90.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Brașov-Ghimbav International Airport",
+    "gps_code": "LRBV",
+    "freq": "",
+    "Lat": 45.70558,
+    "Lon": 25.522871,
+    "Ele": 530.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Măgura Airfield",
+    "gps_code": "LRCD",
+    "freq": "131.405",
+    "Lat": 45.737222,
+    "Lon": 24.165278,
+    "Ele": 464.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mihail Kogălniceanu International Airport",
+    "gps_code": "LRCK",
+    "freq": "122.900",
+    "Lat": 44.362202,
+    "Lon": 28.4883,
+    "Ele": 107.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cluj Avram Iancu International Airport",
+    "gps_code": "LRCL",
+    "freq": "126.430",
+    "Lat": 46.787425,
+    "Lon": 23.684292,
+    "Ele": 316.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Clinceni Airfield",
+    "gps_code": "LRCN",
+    "freq": "128.300",
+    "Lat": 44.35902,
+    "Lon": 25.93196,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Caransebeş Airport",
+    "gps_code": "LRCS",
+    "freq": "125.850",
+    "Lat": 45.420142,
+    "Lon": 22.252507,
+    "Ele": 264.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Câmpia Turzii Air Base",
+    "gps_code": "LRCT",
+    "freq": "129.000",
+    "Lat": 46.5023,
+    "Lon": 23.8859,
+    "Ele": 330.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Craiova International Airport",
+    "gps_code": "LRCV",
+    "freq": "124.300",
+    "Lat": 44.3181,
+    "Lon": 23.888599,
+    "Ele": 190.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Floreni Airfield",
+    "gps_code": "LRFL",
+    "freq": "123.450",
+    "Lat": 47.362846,
+    "Lon": 25.21191,
+    "Ele": 886.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Iaşi Airport",
+    "gps_code": "LRIA",
+    "freq": "119.200",
+    "Lat": 47.180278,
+    "Lon": 27.620833,
+    "Ele": 125.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oradea International Airport",
+    "gps_code": "LROD",
+    "freq": "120.200",
+    "Lat": 47.025299072265625,
+    "Lon": 21.90250015258789,
+    "Ele": 141.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Bucharest Henri Coandă International Airport",
+    "gps_code": "LROP",
+    "freq": "118.250",
+    "Lat": 44.572127,
+    "Lon": 26.103396,
+    "Ele": 95.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Şirna Tăriceni Airfield",
+    "gps_code": "LRPH",
+    "freq": "",
+    "Lat": 44.783792,
+    "Lon": 25.983205,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Geamăna Airfield",
+    "gps_code": "LRPT",
+    "freq": "",
+    "Lat": 44.817504,
+    "Lon": 24.897822,
+    "Ele": 305.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ploiești-Strejnicu Airfield",
+    "gps_code": "LRPV",
+    "freq": "118.400",
+    "Lat": 44.92367,
+    "Lon": 25.963418,
+    "Ele": 73.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sibiu International Airport",
+    "gps_code": "LRSB",
+    "freq": "122.700",
+    "Lat": 45.785841,
+    "Lon": 24.086666,
+    "Ele": 456.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Satu Mare International Airport",
+    "gps_code": "LRSM",
+    "freq": "118.800",
+    "Lat": 47.7033,
+    "Lon": 22.8857,
+    "Ele": 123.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Suceava Stefan cel Mare Airport",
+    "gps_code": "LRSV",
+    "freq": "120.900",
+    "Lat": 47.6875,
+    "Lon": 26.35409927368164,
+    "Ele": 419.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tulcea Danube Delta Airport",
+    "gps_code": "LRTC",
+    "freq": "120.300",
+    "Lat": 45.0625,
+    "Lon": 28.7143,
+    "Ele": 61.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Târgu Mureş Transilvania International Airport",
+    "gps_code": "LRTM",
+    "freq": "121.900",
+    "Lat": 46.467701,
+    "Lon": 24.4125,
+    "Ele": 293.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Timişoara Traian Vuia Airport",
+    "gps_code": "LRTR",
+    "freq": "120.100",
+    "Lat": 45.809898,
+    "Lon": 21.3379,
+    "Ele": 106.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuzla Airport",
+    "gps_code": "LRTZ",
+    "freq": "",
+    "Lat": 43.984493,
+    "Lon": 28.606225,
+    "Ele": 49.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zanesti Airfield",
+    "gps_code": "RO-0001",
+    "freq": "",
+    "Lat": 46.84667,
+    "Lon": 26.55611,
+    "Ele": 288.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Bănești Airfield",
+    "gps_code": "RO-0002",
+    "freq": "",
+    "Lat": 45.068378,
+    "Lon": 25.806155,
+    "Ele": 367.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodrom Fratauti",
+    "gps_code": "RO-0003",
+    "freq": "123.450",
+    "Lat": 47.885278,
+    "Lon": 25.899167,
+    "Ele": 420.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ineu King's Land Airfield",
+    "gps_code": "RO-0004",
+    "freq": "120.200",
+    "Lat": 47.079167,
+    "Lon": 22.100278,
+    "Ele": 151.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sălicea Airfield",
+    "gps_code": "RO-0005",
+    "freq": "",
+    "Lat": 46.683817,
+    "Lon": 23.507843,
+    "Ele": 756.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sânpetru-Brașov Aerodrome",
+    "gps_code": "RO-0006",
+    "freq": "135.190",
+    "Lat": 45.721036,
+    "Lon": 25.633707,
+    "Ele": 523.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Săulești Airfield",
+    "gps_code": "RO-0007",
+    "freq": "",
+    "Lat": 45.864871,
+    "Lon": 22.970165,
+    "Ele": 195.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Elie Carafoli Sport Airfield",
+    "gps_code": "RO-0008",
+    "freq": "",
+    "Lat": 46.533241,
+    "Lon": 24.529298,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Charlie Bravo Șiria Airfield",
+    "gps_code": "RO-0009",
+    "freq": "",
+    "Lat": 46.26902,
+    "Lon": 21.605301,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghimbav Aerodrome",
+    "gps_code": "RO-0010",
+    "freq": "",
+    "Lat": 45.699386,
+    "Lon": 25.528414,
+    "Ele": 529.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Prejmer Aerodrome",
+    "gps_code": "RO-0011",
+    "freq": "",
+    "Lat": 45.697383,
+    "Lon": 25.783453,
+    "Ele": 537.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Costinești Aerodrome",
+    "gps_code": "RO-0012",
+    "freq": "",
+    "Lat": 43.926686,
+    "Lon": 28.629548,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Balta Verde Airfield",
+    "gps_code": "RO-0013",
+    "freq": "",
+    "Lat": 44.285839,
+    "Lon": 23.791537,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alexeni Airfield",
+    "gps_code": "RO-0014",
+    "freq": "",
+    "Lat": 44.709778,
+    "Lon": 26.721411,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerial Club Vădeni",
+    "gps_code": "RO-0016",
+    "freq": "",
+    "Lat": 45.364129,
+    "Lon": 27.938835,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cioca Airfield",
+    "gps_code": "RO-0017",
+    "freq": "",
+    "Lat": 45.78567,
+    "Lon": 21.188104,
+    "Ele": 89.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Comana Airstrip",
+    "gps_code": "RO-0019",
+    "freq": "",
+    "Lat": 44.200367,
+    "Lon": 26.139661,
+    "Ele": 51.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Buziaş Airfield",
+    "gps_code": "RO-0020",
+    "freq": "",
+    "Lat": 45.654129,
+    "Lon": 21.578748,
+    "Ele": 123.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Fazi Airstrip",
+    "gps_code": "RO-0021",
+    "freq": "",
+    "Lat": 46.347099,
+    "Lon": 25.873769,
+    "Ele": 901.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Joseni Airfield",
+    "gps_code": "RO-0022",
+    "freq": "",
+    "Lat": 46.726362,
+    "Lon": 25.509257,
+    "Ele": 748.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Drobeta-Turnu Severin Airfield",
+    "gps_code": "RO-0023",
+    "freq": "",
+    "Lat": 44.580503,
+    "Lon": 22.847785,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Piatra Craiului (Zărnești) Aerodrome",
+    "gps_code": "RO-0024",
+    "freq": "",
+    "Lat": 45.56553,
+    "Lon": 25.396588,
+    "Ele": 670.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Topoloveni Airfield",
+    "gps_code": "RO-0025",
+    "freq": "",
+    "Lat": 44.793683,
+    "Lon": 25.086322,
+    "Ele": 232.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Salonti Airstrip",
+    "gps_code": "RO-0026",
+    "freq": "",
+    "Lat": 45.941516,
+    "Lon": 23.760562,
+    "Ele": 288.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ciceu-Andras Airfield",
+    "gps_code": "RO-0027",
+    "freq": "",
+    "Lat": 46.392973,
+    "Lon": 25.775285,
+    "Ele": 666.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ghindari Airfield",
+    "gps_code": "RO-0028",
+    "freq": "",
+    "Lat": 46.519304,
+    "Lon": 24.945037,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Crasna Deltafly Airfield",
+    "gps_code": "RO-0031",
+    "freq": "",
+    "Lat": 47.167853,
+    "Lon": 22.854567,
+    "Ele": 280.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ciocănești - Popasul Zburatorilor Airfield",
+    "gps_code": "RO-0032",
+    "freq": "",
+    "Lat": 44.583121,
+    "Lon": 25.848514,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodromul Girov",
+    "gps_code": "RO-0033",
+    "freq": "",
+    "Lat": 46.961818,
+    "Lon": 26.485076,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Odorhei Airfield",
+    "gps_code": "RO-0034",
+    "freq": "",
+    "Lat": 46.32548,
+    "Lon": 25.28201,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dunavățu de Jos Aerodrome",
+    "gps_code": "RO-0041",
+    "freq": "",
+    "Lat": 44.985719,
+    "Lon": 29.213128,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Predeşti SkyFun Airfield",
+    "gps_code": "RO-0044",
+    "freq": "",
+    "Lat": 44.3743,
+    "Lon": 23.618503,
+    "Ele": 91.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Barza Târgu-Jiu Airfield",
+    "gps_code": "RO-0045",
+    "freq": "",
+    "Lat": 45.003929,
+    "Lon": 23.333545,
+    "Ele": 203.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ilfoveni (Aerogetic) Airfield",
+    "gps_code": "RO-0046",
+    "freq": "",
+    "Lat": 44.794536,
+    "Lon": 25.589261,
+    "Ele": 200.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fly Friends Airfield",
+    "gps_code": "RO-0047",
+    "freq": "",
+    "Lat": 44.491637,
+    "Lon": 25.584884,
+    "Ele": 126.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Mihăița Airstrip",
+    "gps_code": "RO-0048",
+    "freq": "",
+    "Lat": 44.391777,
+    "Lon": 23.671024,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Luncani Airfield",
+    "gps_code": "RO-0049",
+    "freq": "",
+    "Lat": 46.481669,
+    "Lon": 23.931478,
+    "Ele": 307.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Dezmir Airfield",
+    "gps_code": "RO-0050",
+    "freq": "",
+    "Lat": 46.779124,
+    "Lon": 23.71282,
+    "Ele": 307.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gagu Zenair Airfield",
+    "gps_code": "RO-0051",
+    "freq": "",
+    "Lat": 44.611058,
+    "Lon": 26.26066,
+    "Ele": 80.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Plopul Airstrip",
+    "gps_code": "RO-0053",
+    "freq": "",
+    "Lat": 45.00556,
+    "Lon": 29.1,
+    "Ele": 3.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Iaşi Sud",
+    "gps_code": "RO-0054",
+    "freq": "",
+    "Lat": 47.15778,
+    "Lon": 27.6375,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dumbrava Roșie Airfield",
+    "gps_code": "RO-0055",
+    "freq": "",
+    "Lat": 46.898853,
+    "Lon": 26.434307,
+    "Ele": 302.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Dărmănești",
+    "gps_code": "RO-0056",
+    "freq": "",
+    "Lat": 47.721693,
+    "Lon": 26.118418,
+    "Ele": 297.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Luica Airfield",
+    "gps_code": "RO-0057",
+    "freq": "",
+    "Lat": 44.262213,
+    "Lon": 26.651981,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Casa Teo Airstrip",
+    "gps_code": "RO-0058",
+    "freq": "",
+    "Lat": 45.02052,
+    "Lon": 25.855951,
+    "Ele": 280.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Copalnic-Manastur Airfield",
+    "gps_code": "RO-0059",
+    "freq": "",
+    "Lat": 47.509161,
+    "Lon": 23.68935,
+    "Ele": 248.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sânsimion Airfield",
+    "gps_code": "RO-0060",
+    "freq": "",
+    "Lat": 46.266714,
+    "Lon": 25.915817,
+    "Ele": 661.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Mugeni Airfield",
+    "gps_code": "RO-0061",
+    "freq": "",
+    "Lat": 46.249281,
+    "Lon": 25.222732,
+    "Ele": 449.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aripi  Ramnicene Airstrip",
+    "gps_code": "RO-0062",
+    "freq": "",
+    "Lat": 45.380489,
+    "Lon": 27.074475,
+    "Ele": 102.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Letca Nouă Airfield",
+    "gps_code": "RO-0065",
+    "freq": "",
+    "Lat": 44.22531,
+    "Lon": 25.75088,
+    "Ele": 86.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fibiș Airstrip",
+    "gps_code": "RO-0066",
+    "freq": "",
+    "Lat": 45.96196,
+    "Lon": 21.45735,
+    "Ele": 125.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Remetea Airifeld",
+    "gps_code": "RO-0067",
+    "freq": "",
+    "Lat": 46.819232,
+    "Lon": 25.412293,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Săcălășeni Airfield",
+    "gps_code": "RO-0069",
+    "freq": "",
+    "Lat": 47.578155,
+    "Lon": 23.53415,
+    "Ele": 191.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mânăstirea Airfield",
+    "gps_code": "RO-0071",
+    "freq": "",
+    "Lat": 44.21899,
+    "Lon": 26.8735,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Onesti Airifeld",
+    "gps_code": "RO-0078",
+    "freq": "",
+    "Lat": 46.29927,
+    "Lon": 26.75578,
+    "Ele": 209.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Amicii Dabija Airfield",
+    "gps_code": "RO-0080",
+    "freq": "",
+    "Lat": 46.09834,
+    "Lon": 27.54224,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Botoșani Airfield",
+    "gps_code": "RO-0081",
+    "freq": "",
+    "Lat": 47.791044,
+    "Lon": 26.65957,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "BM Paramotoring and Paragliding Field",
+    "gps_code": "RO-0086",
+    "freq": "",
+    "Lat": 44.70336,
+    "Lon": 27.91061,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Laci Oros Airfield",
+    "gps_code": "RO-0087",
+    "freq": "",
+    "Lat": 47.30468,
+    "Lon": 22.39987,
+    "Ele": 144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mujdeni Airfield",
+    "gps_code": "RO-0088",
+    "freq": "",
+    "Lat": 47.84848,
+    "Lon": 23.27101,
+    "Ele": 143.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sibiu Hermann Oberth Airfield",
+    "gps_code": "RO-0089",
+    "freq": "",
+    "Lat": 45.78231,
+    "Lon": 24.09139,
+    "Ele": 451.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rona de Sus Airfield",
+    "gps_code": "RO-0091",
+    "freq": "",
+    "Lat": 47.91088,
+    "Lon": 24.01891,
+    "Ele": 310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Golden Wings Airfield",
+    "gps_code": "RO-0092",
+    "freq": "",
+    "Lat": 45.682004,
+    "Lon": 21.022897,
+    "Ele": 81.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Florin Aerodrome",
+    "gps_code": "RO-0094",
+    "freq": "",
+    "Lat": 45.6884,
+    "Lon": 25.77167,
+    "Ele": 551.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Prejmer Corona 3 Aerodrome",
+    "gps_code": "RO-0095",
+    "freq": "",
+    "Lat": 45.68086,
+    "Lon": 25.74498,
+    "Ele": 572.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ciolpani Airfield",
+    "gps_code": "RO-0096",
+    "freq": "",
+    "Lat": 44.73839,
+    "Lon": 26.09206,
+    "Ele": 100.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nădab Airfield",
+    "gps_code": "RO-0097",
+    "freq": "",
+    "Lat": 46.46012,
+    "Lon": 21.47747,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mediaș (Flamingo) Airfield",
+    "gps_code": "RO-0100",
+    "freq": "",
+    "Lat": 46.13327,
+    "Lon": 24.33634,
+    "Ele": 328.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mihăieni Airfield",
+    "gps_code": "RO-0101",
+    "freq": "",
+    "Lat": 47.55131,
+    "Lon": 22.74838,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mocrea Airstrip",
+    "gps_code": "RO-0102",
+    "freq": "",
+    "Lat": 46.3786,
+    "Lon": 21.82322,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Poieni Airfield",
+    "gps_code": "RO-0103",
+    "freq": "",
+    "Lat": 46.92386,
+    "Lon": 22.84698,
+    "Ele": 492.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Viișoara Airfield",
+    "gps_code": "RO-0104",
+    "freq": "",
+    "Lat": 46.27613,
+    "Lon": 26.67312,
+    "Ele": 249.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mărgineni Airfield",
+    "gps_code": "RO-0106",
+    "freq": "",
+    "Lat": 46.59582,
+    "Lon": 26.87647,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grădiștea Airfield",
+    "gps_code": "RO-0108",
+    "freq": "",
+    "Lat": 44.225,
+    "Lon": 26.121389,
+    "Ele": 77.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Timișești Airfield",
+    "gps_code": "RO-0137",
+    "freq": "",
+    "Lat": 47.221111,
+    "Lon": 26.451111,
+    "Ele": 285.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerodrom Baia Mare",
+    "gps_code": "RO-0138",
+    "freq": "",
+    "Lat": 47.659081,
+    "Lon": 23.474513,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sarata Airfield",
+    "gps_code": "RO-0139",
+    "freq": "",
+    "Lat": 46.531054,
+    "Lon": 26.892739,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ruck Ventilatoare private airstrip",
+    "gps_code": "RO-0175",
+    "freq": "",
+    "Lat": 46.324995,
+    "Lon": 24.308566,
+    "Ele": 0.0
+  }
+]

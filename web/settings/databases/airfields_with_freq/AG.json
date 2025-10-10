@@ -1,0 +1,38 @@
+[
+  {
+    "type": "small_airport",
+    "name": "New Barbuda Airport",
+    "gps_code": "AG-0001",
+    "freq": "",
+    "Lat": 17.621194,
+    "Lon": -61.798347,
+    "Ele": 8.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "V C Bird International Airport",
+    "gps_code": "TAPA",
+    "freq": "119.100",
+    "Lat": 17.1367,
+    "Lon": -61.792702,
+    "Ele": 18.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Codrington Airport",
+    "gps_code": "TAPH",
+    "freq": "",
+    "Lat": 17.635799,
+    "Lon": -61.828602,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Coco Point Lodge Airstrip",
+    "gps_code": "TAPT",
+    "freq": "",
+    "Lat": 17.555599,
+    "Lon": -61.765301,
+    "Ele": 4.6
+  }
+]

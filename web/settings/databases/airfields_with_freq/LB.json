@@ -1,0 +1,65 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Baadarâne Airport",
+    "gps_code": "LB-0004",
+    "freq": "",
+    "Lat": 33.636065,
+    "Lon": 35.614209,
+    "Ele": 1067.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Zboud Airstrip",
+    "gps_code": "LB-0009",
+    "freq": "",
+    "Lat": 34.305368,
+    "Lon": 36.351591,
+    "Ele": 845.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Beirut Rafic Hariri International Airport",
+    "gps_code": "OLBA",
+    "freq": "120.300",
+    "Lat": 33.820899963378906,
+    "Lon": 35.488399505615234,
+    "Ele": 26.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rene Mouawad Air Base / Kleyate Airport",
+    "gps_code": "OLKA",
+    "freq": "119.500",
+    "Lat": 34.589298,
+    "Lon": 36.011299,
+    "Ele": 22.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rayak Air Base",
+    "gps_code": "OLRA",
+    "freq": "119.700",
+    "Lat": 33.850799560546875,
+    "Lon": 35.987701416015625,
+    "Ele": 919.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Jabbour Airfield",
+    "gps_code": "SY-0028",
+    "freq": "",
+    "Lat": 33.473974,
+    "Lon": 35.608798,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Wujah Al Hajar Air Base",
+    "gps_code": "Z19O",
+    "freq": "",
+    "Lat": 34.281226,
+    "Lon": 35.680096,
+    "Ele": 256.0
+  }
+]

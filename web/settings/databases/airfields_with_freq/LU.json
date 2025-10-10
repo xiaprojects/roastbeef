@@ -1,0 +1,29 @@
+[
+  {
+    "type": "large_airport",
+    "name": "Luxembourg-Findel International Airport",
+    "gps_code": "ELLX",
+    "freq": "120.885",
+    "Lat": 49.6233333,
+    "Lon": 6.2044444,
+    "Ele": 376.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Wiltz-Noertrange Airfield",
+    "gps_code": "ELNT",
+    "freq": "126.955",
+    "Lat": 49.981098,
+    "Lon": 5.91778,
+    "Ele": 463.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Useldange Glider Field",
+    "gps_code": "ELUS",
+    "freq": "129.435",
+    "Lat": 49.768155,
+    "Lon": 5.965962,
+    "Ele": 282.9
+  }
+]

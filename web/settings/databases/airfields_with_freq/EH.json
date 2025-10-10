@@ -1,0 +1,128 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Tifariti Airstrip",
+    "gps_code": "EH-0001",
+    "freq": "",
+    "Lat": 26.15126,
+    "Lon": -10.564245,
+    "Ele": 495.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Oum Dreyga Airfield",
+    "gps_code": "EH-0005",
+    "freq": "",
+    "Lat": 24.0917,
+    "Lon": -13.3113,
+    "Ele": 289.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Mahbes UN Airstrip",
+    "gps_code": "EH-0007",
+    "freq": "",
+    "Lat": 27.418767,
+    "Lon": -9.171517,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Farssia Airstrip",
+    "gps_code": "EH-0008",
+    "freq": "",
+    "Lat": 27.24568,
+    "Lon": -9.47312,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Boukraa Airport",
+    "gps_code": "EH-0011",
+    "freq": "",
+    "Lat": 26.35988,
+    "Lon": -12.84913,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agounit Airport",
+    "gps_code": "EH-0013",
+    "freq": "",
+    "Lat": 22.20343,
+    "Lon": -13.14609,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aousserd MINURSO Airstrip",
+    "gps_code": "EH-0016",
+    "freq": "",
+    "Lat": 22.5831,
+    "Lon": -14.35505,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Guerguerat Airport",
+    "gps_code": "EH-0020",
+    "freq": "",
+    "Lat": 21.3915,
+    "Lon": -16.95683,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tarfaya Airport",
+    "gps_code": "EH-0024",
+    "freq": "",
+    "Lat": 27.9487,
+    "Lon": -12.9166,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Al Mahbes Airstrip",
+    "gps_code": "EH-0026",
+    "freq": "",
+    "Lat": 27.409695,
+    "Lon": -9.073016,
+    "Ele": 463.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Smara Airport",
+    "gps_code": "GMMA",
+    "freq": "",
+    "Lat": 26.731987,
+    "Lon": -11.683655,
+    "Ele": 106.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dakhla Airport",
+    "gps_code": "GMMH",
+    "freq": "118.100",
+    "Lat": 23.7183,
+    "Lon": -15.932,
+    "Ele": 11.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hassan I Airport",
+    "gps_code": "GMML",
+    "freq": "127.500",
+    "Lat": 27.142467,
+    "Lon": -13.224947,
+    "Ele": 63.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mahbes Airbase",
+    "gps_code": "MA-0003",
+    "freq": "118.125",
+    "Lat": 27.726982,
+    "Lon": -9.237865,
+    "Ele": 494.7
+  }
+]

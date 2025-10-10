@@ -1,0 +1,740 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Arnissa Airfield",
+    "gps_code": "GR-0001",
+    "freq": "119.700",
+    "Lat": 40.840795,
+    "Lon": 21.823633,
+    "Ele": 631.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Dhokimion Airfield",
+    "gps_code": "GR-0002",
+    "freq": "",
+    "Lat": 38.613696,
+    "Lon": 21.392955,
+    "Ele": 46.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Florina Airfield",
+    "gps_code": "GR-0003",
+    "freq": "",
+    "Lat": 40.804194,
+    "Lon": 21.433211,
+    "Ele": 642.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Komotini Airfield",
+    "gps_code": "GR-0006",
+    "freq": "",
+    "Lat": 41.112123,
+    "Lon": 25.322385,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Missolonghi Aerodrome",
+    "gps_code": "GR-0008",
+    "freq": "",
+    "Lat": 38.356863,
+    "Lon": 21.48081,
+    "Ele": -0.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kopaida Dimitra Airfield",
+    "gps_code": "GR-0009",
+    "freq": "",
+    "Lat": 38.456549,
+    "Lon": 23.134646,
+    "Ele": 92.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Perneri Airfield",
+    "gps_code": "GR-0010",
+    "freq": "",
+    "Lat": 38.37548,
+    "Lon": 23.25761,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Maleme Air Base",
+    "gps_code": "GR-0011",
+    "freq": "",
+    "Lat": 35.5295502,
+    "Lon": 23.8330614,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Terpsithea Airfield",
+    "gps_code": "GR-0012",
+    "freq": "",
+    "Lat": 39.653506,
+    "Lon": 22.341098,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Myrini - Karditsa Airfield",
+    "gps_code": "GR-0014",
+    "freq": "",
+    "Lat": 39.407445,
+    "Lon": 21.995921,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Molos Airfield",
+    "gps_code": "GR-0015",
+    "freq": "",
+    "Lat": 38.826175,
+    "Lon": 22.661959,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dounis Airfield",
+    "gps_code": "GR-0016",
+    "freq": "",
+    "Lat": 38.02401,
+    "Lon": 23.30371,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kolchiko Airfield",
+    "gps_code": "GR-0017",
+    "freq": "",
+    "Lat": 40.745241,
+    "Lon": 23.122964,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Serres-Chortero Airfield",
+    "gps_code": "GR-0018",
+    "freq": "",
+    "Lat": 41.224442,
+    "Lon": 23.363543,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zalongo Airstrip",
+    "gps_code": "GR-0019",
+    "freq": "",
+    "Lat": 39.124454,
+    "Lon": 20.696021,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Serres Emmanuel Pappas Airfield",
+    "gps_code": "GR-0020",
+    "freq": "",
+    "Lat": 41.083282,
+    "Lon": 23.589499,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Silata Airfield",
+    "gps_code": "GR-0021",
+    "freq": "",
+    "Lat": 40.331426,
+    "Lon": 23.150311,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Neos Zigos Aerodrome",
+    "gps_code": "GR-0027",
+    "freq": "",
+    "Lat": 41.116,
+    "Lon": 24.9211,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eordaea Airfield",
+    "gps_code": "GR-0029",
+    "freq": "",
+    "Lat": 40.57211,
+    "Lon": 21.582899,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agios Pavlos Airfield",
+    "gps_code": "GR-0046",
+    "freq": "",
+    "Lat": 40.366439,
+    "Lon": 23.051291,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sitagroi Airstrip",
+    "gps_code": "GR-0047",
+    "freq": "",
+    "Lat": 41.12784,
+    "Lon": 24.01459,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lechaio Airfield",
+    "gps_code": "GR-0048",
+    "freq": "",
+    "Lat": 37.92649,
+    "Lon": 22.859559,
+    "Ele": 14.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Margariti Ultralight Airfield",
+    "gps_code": "GR-0049",
+    "freq": "",
+    "Lat": 39.37243,
+    "Lon": 20.4139,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hellenic Sport Aviation Airstrip",
+    "gps_code": "GR-0050",
+    "freq": "",
+    "Lat": 38.47819,
+    "Lon": 23.16007,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arachthos Airfield",
+    "gps_code": "GR-0059",
+    "freq": "",
+    "Lat": 39.089002,
+    "Lon": 20.970647,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Skotina Airfield",
+    "gps_code": "GR-0089",
+    "freq": "",
+    "Lat": 39.96895,
+    "Lon": 22.66324,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tympaki Air Base",
+    "gps_code": "LG54",
+    "freq": "122.100",
+    "Lat": 35.063702,
+    "Lon": 24.767401,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Triodos Airfield",
+    "gps_code": "LG55",
+    "freq": "",
+    "Lat": 37.094387,
+    "Lon": 21.990736,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Olimpoi Aerodrome",
+    "gps_code": "LG56",
+    "freq": "",
+    "Lat": 38.236208,
+    "Lon": 25.938721,
+    "Ele": 199.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Andravida Air Base",
+    "gps_code": "LGAD",
+    "freq": "120.650",
+    "Lat": 37.9207,
+    "Lon": 21.292601,
+    "Ele": 16.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Alexandroupoli Democritus Airport",
+    "gps_code": "LGAL",
+    "freq": "563.700",
+    "Lat": 40.8559,
+    "Lon": 25.956301,
+    "Ele": 7.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Athens Eleftherios Venizelos International Airport",
+    "gps_code": "LGAV",
+    "freq": "126.575",
+    "Lat": 37.936401,
+    "Lon": 23.9445,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alexandria (Gidas) Airfield",
+    "gps_code": "LGAX",
+    "freq": "123.500",
+    "Lat": 40.6511,
+    "Lon": 22.488701,
+    "Ele": 8.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nea Anchialos National Airport",
+    "gps_code": "LGBL",
+    "freq": "120.350",
+    "Lat": 39.219601,
+    "Lon": 22.7943,
+    "Ele": 25.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Elefsis Air Base",
+    "gps_code": "LGEL",
+    "freq": "119.100",
+    "Lat": 38.063801,
+    "Lon": 23.556,
+    "Ele": 43.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Epitalion Airfield",
+    "gps_code": "LGEP",
+    "freq": "",
+    "Lat": 37.613347,
+    "Lon": 21.496382,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chios Island National Airport",
+    "gps_code": "LGHI",
+    "freq": "563.700",
+    "Lat": 38.34320068359375,
+    "Lon": 26.140600204467773,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ikaria Airport",
+    "gps_code": "LGIK",
+    "freq": "122.300",
+    "Lat": 37.6827011108,
+    "Lon": 26.3470993042,
+    "Ele": 24.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ioannina King Pyrrhus National Airport",
+    "gps_code": "LGIO",
+    "freq": "118.600",
+    "Lat": 39.6964,
+    "Lon": 20.8225,
+    "Ele": 474.9
+  },
+  {
+    "type": "large_airport",
+    "name": "Heraklion International Nikos Kazantzakis Airport",
+    "gps_code": "LGIR",
+    "freq": "563.700",
+    "Lat": 35.339699,
+    "Lon": 25.1803,
+    "Ele": 35.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kastoria National Airport Aristotle",
+    "gps_code": "LGKA",
+    "freq": "563.700",
+    "Lat": 40.446301,
+    "Lon": 21.2822,
+    "Ele": 660.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kithira Airport",
+    "gps_code": "LGKC",
+    "freq": "563.700",
+    "Lat": 36.273978,
+    "Lon": 23.016719,
+    "Ele": 318.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kefallinia Airport",
+    "gps_code": "LGKF",
+    "freq": "563.700",
+    "Lat": 38.12009811401367,
+    "Lon": 20.5004997253418,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kastelorizo Airport",
+    "gps_code": "LGKJ",
+    "freq": "",
+    "Lat": 36.141701,
+    "Lon": 29.576401,
+    "Ele": 149.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kalamata Airport",
+    "gps_code": "LGKL",
+    "freq": "563.700",
+    "Lat": 37.06829833984375,
+    "Lon": 22.02549934387207,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kavala Amygdaleon Lydia Airfield",
+    "gps_code": "LGKM",
+    "freq": "122.100",
+    "Lat": 40.972801,
+    "Lon": 24.3414,
+    "Ele": 60.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kos Airport",
+    "gps_code": "LGKO",
+    "freq": "563.700",
+    "Lat": 36.794523,
+    "Lon": 27.09115,
+    "Ele": 125.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Karpathos Airport",
+    "gps_code": "LGKP",
+    "freq": "563.700",
+    "Lat": 35.421398,
+    "Lon": 27.146,
+    "Ele": 20.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Corfu Ioannis Kapodistrias International Airport",
+    "gps_code": "LGKR",
+    "freq": "563.700",
+    "Lat": 39.602024,
+    "Lon": 19.912038,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kasos Airport",
+    "gps_code": "LGKS",
+    "freq": "563.700",
+    "Lat": 35.4213981628,
+    "Lon": 26.9099998474,
+    "Ele": 10.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kavala Alexander the Great International Airport",
+    "gps_code": "LGKV",
+    "freq": "563.700",
+    "Lat": 40.9133,
+    "Lon": 24.6192,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalymnos Airport",
+    "gps_code": "LGKY",
+    "freq": "",
+    "Lat": 36.9632987976,
+    "Lon": 26.9405994415,
+    "Ele": 235.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kozani National Airport Filippos",
+    "gps_code": "LGKZ",
+    "freq": "563.700",
+    "Lat": 40.286098,
+    "Lon": 21.840799,
+    "Ele": 627.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Leros Airport",
+    "gps_code": "LGLE",
+    "freq": "563.700",
+    "Lat": 37.184898,
+    "Lon": 26.800301,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Limnos Airport",
+    "gps_code": "LGLM",
+    "freq": "563.700",
+    "Lat": 39.917098999,
+    "Lon": 25.236299514799995,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Larissa Air Base",
+    "gps_code": "LGLR",
+    "freq": "120.550",
+    "Lat": 39.650253,
+    "Lon": 22.4655,
+    "Ele": 73.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Megara Air Base",
+    "gps_code": "LGMG",
+    "freq": "130.875",
+    "Lat": 37.981098,
+    "Lon": 23.3654,
+    "Ele": 3.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mykonos Island National Airport",
+    "gps_code": "LGMK",
+    "freq": "563.700",
+    "Lat": 37.435101,
+    "Lon": 25.348101,
+    "Ele": 123.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Milos Airport",
+    "gps_code": "LGML",
+    "freq": "",
+    "Lat": 36.696899,
+    "Lon": 24.4769,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mytilene International Airport",
+    "gps_code": "LGMT",
+    "freq": "563.700",
+    "Lat": 39.057272,
+    "Lon": 26.598887,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Naxos Island National Airport",
+    "gps_code": "LGNX",
+    "freq": "",
+    "Lat": 37.0811,
+    "Lon": 25.368099,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Paros National Airport",
+    "gps_code": "LGPA",
+    "freq": "125.050",
+    "Lat": 37.020495,
+    "Lon": 25.113195,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Astypalaia Airport",
+    "gps_code": "LGPL",
+    "freq": "563.700",
+    "Lat": 36.5798988342,
+    "Lon": 26.3757991791,
+    "Ele": 50.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aktion National Airport",
+    "gps_code": "LGPZ",
+    "freq": "563.700",
+    "Lat": 38.925499,
+    "Lon": 20.765301,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Maritsa Air Base",
+    "gps_code": "LGRD",
+    "freq": "120.600",
+    "Lat": 36.383099,
+    "Lon": 28.1089,
+    "Ele": 62.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Diagoras Airport",
+    "gps_code": "LGRP",
+    "freq": "563.700",
+    "Lat": 36.405399,
+    "Lon": 28.086201,
+    "Ele": 5.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Patras Araxos Agamemnon Airport",
+    "gps_code": "LGRX",
+    "freq": "563.700",
+    "Lat": 38.1511,
+    "Lon": 21.4256,
+    "Ele": 14.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chania International Airport",
+    "gps_code": "LGSA",
+    "freq": "563.700",
+    "Lat": 35.5317,
+    "Lon": 24.1497,
+    "Ele": 149.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sedes Air Base",
+    "gps_code": "LGSD",
+    "freq": "",
+    "Lat": 40.5331,
+    "Lon": 23.025299,
+    "Ele": 25.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Skiathos Island National Airport",
+    "gps_code": "LGSK",
+    "freq": "563.700",
+    "Lat": 39.177101,
+    "Lon": 23.5037,
+    "Ele": 16.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Samos Airport",
+    "gps_code": "LGSM",
+    "freq": "563.700",
+    "Lat": 37.689999,
+    "Lon": 26.911699,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Syros Airport",
+    "gps_code": "LGSO",
+    "freq": "563.700",
+    "Lat": 37.4227981567,
+    "Lon": 24.9508991241,
+    "Ele": 71.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sparti Airfield",
+    "gps_code": "LGSP",
+    "freq": "",
+    "Lat": 36.9738,
+    "Lon": 22.525708,
+    "Ele": 152.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santorini Airport",
+    "gps_code": "LGSR",
+    "freq": "563.700",
+    "Lat": 36.399200439453125,
+    "Lon": 25.47929954528809,
+    "Ele": 38.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sitia Airport",
+    "gps_code": "LGST",
+    "freq": "563.700",
+    "Lat": 35.21609878540039,
+    "Lon": 26.101299285888672,
+    "Ele": 114.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Skiros Airport",
+    "gps_code": "LGSY",
+    "freq": "563.700",
+    "Lat": 38.9676017761,
+    "Lon": 24.4871997833,
+    "Ele": 13.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tanagra Air Base",
+    "gps_code": "LGTG",
+    "freq": "120.250",
+    "Lat": 38.339802,
+    "Lon": 23.565001,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kasteli Airport",
+    "gps_code": "LGTL",
+    "freq": "122.100",
+    "Lat": 35.192001,
+    "Lon": 25.327,
+    "Ele": 359.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tripolis Air Base",
+    "gps_code": "LGTP",
+    "freq": "122.100",
+    "Lat": 37.530602,
+    "Lon": 22.403601,
+    "Ele": 644.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Thessaloniki Macedonia International Airport",
+    "gps_code": "LGTS",
+    "freq": "563.700",
+    "Lat": 40.51928,
+    "Lon": 22.970009,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tatoi Airport",
+    "gps_code": "LGTT",
+    "freq": "119.100",
+    "Lat": 38.108898,
+    "Lon": 23.7838,
+    "Ele": 239.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zakynthos International Airport Dionysios Solomos",
+    "gps_code": "LGZA",
+    "freq": "563.700",
+    "Lat": 37.7509,
+    "Lon": 20.8843,
+    "Ele": 3.7
+  }
+]

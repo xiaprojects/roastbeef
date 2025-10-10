@@ -1,0 +1,380 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ajdovščina Airfield",
+    "gps_code": "LJAJ",
+    "freq": "123.505",
+    "Lat": 45.889198,
+    "Lon": 13.8869,
+    "Ele": 116.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lesce Airfield",
+    "gps_code": "LJBL",
+    "freq": "122.505",
+    "Lat": 46.357201,
+    "Lon": 14.1739,
+    "Ele": 504.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bovec Airfield",
+    "gps_code": "LJBO",
+    "freq": "123.505",
+    "Lat": 46.329017,
+    "Lon": 13.550231,
+    "Ele": 431.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cerklje ob Krki Air Base",
+    "gps_code": "LJCE",
+    "freq": "",
+    "Lat": 45.900002,
+    "Lon": 15.5302,
+    "Ele": 155.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Celje Airfield",
+    "gps_code": "LJCL",
+    "freq": "128.800",
+    "Lat": 46.245602,
+    "Lon": 15.2231,
+    "Ele": 244.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Divača Airfield",
+    "gps_code": "LJDI",
+    "freq": "123.505",
+    "Lat": 45.682778,
+    "Lon": 14.003234,
+    "Ele": 432.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Ljubljana Jože Pučnik Airport",
+    "gps_code": "LJLJ",
+    "freq": "135.275",
+    "Lat": 46.223701,
+    "Lon": 14.4576,
+    "Ele": 388.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maribor Edvard Rusjan Airport",
+    "gps_code": "LJMB",
+    "freq": "119.200",
+    "Lat": 46.4799,
+    "Lon": 15.6861,
+    "Ele": 267.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Murska Sobota Airfield",
+    "gps_code": "LJMS",
+    "freq": "123.500",
+    "Lat": 46.629398,
+    "Lon": 16.174999,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Novo Mesto Airfield",
+    "gps_code": "LJNM",
+    "freq": "123.500",
+    "Lat": 45.801743,
+    "Lon": 15.104544,
+    "Ele": 174.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Postojna Airfield",
+    "gps_code": "LJPO",
+    "freq": "123.500",
+    "Lat": 45.752201,
+    "Lon": 14.1947,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ptuj Airfield",
+    "gps_code": "LJPT",
+    "freq": "122.500",
+    "Lat": 46.42709,
+    "Lon": 15.98609,
+    "Ele": 210.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Portorož Airport",
+    "gps_code": "LJPZ",
+    "freq": "124.875",
+    "Lat": 45.47201,
+    "Lon": 13.615951,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Slovenj Gradec Airfield",
+    "gps_code": "LJSG",
+    "freq": "123.500",
+    "Lat": 46.472,
+    "Lon": 15.117,
+    "Ele": 501.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Slovenske Konjice Airfield",
+    "gps_code": "LJSK",
+    "freq": "",
+    "Lat": 46.31033,
+    "Lon": 15.492024,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Šoštanj Airfield",
+    "gps_code": "LJVE",
+    "freq": "122.100",
+    "Lat": 46.397499,
+    "Lon": 15.0453,
+    "Ele": 391.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dobova Airfield",
+    "gps_code": "SI-0001",
+    "freq": "123.500",
+    "Lat": 45.887046,
+    "Lon": 15.650925,
+    "Ele": 141.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mostje Lendava Airfield",
+    "gps_code": "SI-0002",
+    "freq": "123.500",
+    "Lat": 46.599656,
+    "Lon": 16.432071,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krapje Veržej Airfield",
+    "gps_code": "SI-0003",
+    "freq": "123.500",
+    "Lat": 46.572685,
+    "Lon": 16.190973,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marič Airfield",
+    "gps_code": "SI-0004",
+    "freq": "",
+    "Lat": 46.682156,
+    "Lon": 16.203745,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Metlika Prilozje Airfield",
+    "gps_code": "SI-0005",
+    "freq": "",
+    "Lat": 45.58896,
+    "Lon": 15.2597,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Novi Lazi Airstrip",
+    "gps_code": "SI-0006",
+    "freq": "",
+    "Lat": 45.571455,
+    "Lon": 14.857163,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerkvenjak-Čagona Airfield",
+    "gps_code": "SI-0007",
+    "freq": "123.500",
+    "Lat": 46.547725,
+    "Lon": 15.915213,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Imeno Field",
+    "gps_code": "SI-0009",
+    "freq": "",
+    "Lat": 46.12669,
+    "Lon": 15.603708,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamnik - Dulnica Airfield",
+    "gps_code": "SI-0010",
+    "freq": "123.500",
+    "Lat": 46.197037,
+    "Lon": 14.580982,
+    "Ele": 349.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Šentvid pri Stični Airfield",
+    "gps_code": "SI-0011",
+    "freq": "123.500",
+    "Lat": 45.944112,
+    "Lon": 14.850583,
+    "Ele": 309.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Pobrežje Airfield",
+    "gps_code": "SI-0012",
+    "freq": "123.500",
+    "Lat": 46.304296,
+    "Lon": 14.904525,
+    "Ele": 371.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaplja Vas ULM",
+    "gps_code": "SI-0013",
+    "freq": "",
+    "Lat": 46.242379,
+    "Lon": 15.07335,
+    "Ele": 276.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Andoljšek - Ribnica Ultralight Field",
+    "gps_code": "SI-0014",
+    "freq": "123.500",
+    "Lat": 45.743935,
+    "Lon": 14.713,
+    "Ele": 499.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Radenci Airfield",
+    "gps_code": "SI-0015",
+    "freq": "",
+    "Lat": 46.628605,
+    "Lon": 16.046244,
+    "Ele": 217.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorica pri Šmartnem Airstrip",
+    "gps_code": "SI-0016",
+    "freq": "",
+    "Lat": 46.27079,
+    "Lon": 15.23875,
+    "Ele": 252.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Zgornja Kostrivnica ULM",
+    "gps_code": "SI-0017",
+    "freq": "",
+    "Lat": 46.258411,
+    "Lon": 15.584676,
+    "Ele": 147.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Podpeč Airfield",
+    "gps_code": "SI-0018",
+    "freq": "",
+    "Lat": 45.973447,
+    "Lon": 14.412345,
+    "Ele": 288.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Črnotiče Airfield",
+    "gps_code": "SI-0019",
+    "freq": "123.500",
+    "Lat": 45.557193,
+    "Lon": 13.91304,
+    "Ele": 437.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sostro Private Airstrip",
+    "gps_code": "SI-0020",
+    "freq": "",
+    "Lat": 46.04315,
+    "Lon": 14.615308,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerknica-Marof Airfield",
+    "gps_code": "SI-0021",
+    "freq": "",
+    "Lat": 45.777647,
+    "Lon": 14.388172,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hude Ravne - Dole pri Litiji Airfield",
+    "gps_code": "SI-0022",
+    "freq": "",
+    "Lat": 46.008708,
+    "Lon": 15.038019,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Libeliče Airfield",
+    "gps_code": "SI-0023",
+    "freq": "",
+    "Lat": 46.623795,
+    "Lon": 14.954946,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zagorje ob Savi Airfield",
+    "gps_code": "SI-0024",
+    "freq": "",
+    "Lat": 46.142412,
+    "Lon": 14.998541,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Prekopa Airstrip",
+    "gps_code": "SI-0025",
+    "freq": "",
+    "Lat": 46.25017,
+    "Lon": 14.99706,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dol pri Ljubljani Ultralight Airfield",
+    "gps_code": "SI-0026",
+    "freq": "",
+    "Lat": 46.089601,
+    "Lon": 14.647086,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Trebnje Airfield",
+    "gps_code": "SI-0027",
+    "freq": "",
+    "Lat": 45.9122,
+    "Lon": 15.00256,
+    "Ele": 0.0
+  }
+]

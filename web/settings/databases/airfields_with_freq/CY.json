@@ -1,0 +1,137 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Lakatamia Airfield",
+    "gps_code": "CY-0001",
+    "freq": "",
+    "Lat": 35.106384,
+    "Lon": 33.321304,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pınarbaşı Air Base",
+    "gps_code": "CY-0003",
+    "freq": "",
+    "Lat": 35.276018,
+    "Lon": 33.267503,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kingsfield Air Base",
+    "gps_code": "CY-0004",
+    "freq": "",
+    "Lat": 35.014275,
+    "Lon": 33.715851,
+    "Ele": 87.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Kornos Highway Strip",
+    "gps_code": "CY-0005",
+    "freq": "",
+    "Lat": 34.909671783447266,
+    "Lon": 33.40373229980469,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kophinou Highway Strip",
+    "gps_code": "CY-0006",
+    "freq": "",
+    "Lat": 34.8404183033,
+    "Lon": 33.4244763851,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marki Airfield",
+    "gps_code": "CY-0007",
+    "freq": "",
+    "Lat": 35.01622,
+    "Lon": 33.310869,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "RAF Dhekelia Airfield",
+    "gps_code": "CY-0041",
+    "freq": "",
+    "Lat": 34.994262,
+    "Lon": 33.749133,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mammari Aerial Firefighting Base",
+    "gps_code": "CY-0066",
+    "freq": "",
+    "Lat": 35.16884,
+    "Lon": 33.219964,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cyprus Gliding Club",
+    "gps_code": "CY-0081",
+    "freq": "",
+    "Lat": 35.17626,
+    "Lon": 33.18416,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Unmanned Systems Research Laboratory (USRL) Runway",
+    "gps_code": "CY-0089",
+    "freq": "",
+    "Lat": 35.095038,
+    "Lon": 33.08165,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Nicosia (Lefkoşa) Ercan International Airport",
+    "gps_code": "LCEN",
+    "freq": "126.900",
+    "Lat": 35.152337,
+    "Lon": 33.506584,
+    "Ele": 123.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lefkoniko Airport / Geçitkale Air Base",
+    "gps_code": "LCGK",
+    "freq": "",
+    "Lat": 35.23591,
+    "Lon": 33.720088,
+    "Ele": 44.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Larnaca International Airport",
+    "gps_code": "LCLK",
+    "freq": "121.200",
+    "Lat": 34.875099,
+    "Lon": 33.624901,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Paphos International Airport",
+    "gps_code": "LCPH",
+    "freq": "120.800",
+    "Lat": 34.717999,
+    "Lon": 32.485699,
+    "Ele": 12.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "RAF Akrotiri",
+    "gps_code": "LCRA",
+    "freq": "122.100",
+    "Lat": 34.590401,
+    "Lon": 32.9879,
+    "Ele": 23.2
+  }
+]

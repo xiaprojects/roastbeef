@@ -1,0 +1,6878 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Cullen Airport",
+    "gps_code": "AR-0001",
+    "freq": "",
+    "Lat": -52.88574,
+    "Lon": -68.414956,
+    "Ele": 40.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Los Cerros Airport",
+    "gps_code": "AR-0002",
+    "freq": "",
+    "Lat": -54.343,
+    "Lon": -67.837532,
+    "Ele": 583.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Bellavista Airport",
+    "gps_code": "AR-0003",
+    "freq": "",
+    "Lat": -53.98270034790039,
+    "Lon": -68.52359771728516,
+    "Ele": 61.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Bragado Airport",
+    "gps_code": "AR-0005",
+    "freq": "",
+    "Lat": -35.145811,
+    "Lon": -60.480294,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Rulos Airport",
+    "gps_code": "AR-0006",
+    "freq": "",
+    "Lat": -28.933839,
+    "Lon": -62.792315,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Caleta Olivia Airport",
+    "gps_code": "AR-0007",
+    "freq": "",
+    "Lat": -46.37428,
+    "Lon": -67.59409,
+    "Ele": 11.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub Chaco Airport",
+    "gps_code": "AR-0008",
+    "freq": "",
+    "Lat": -27.6311,
+    "Lon": -59.1797,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Charata Airport",
+    "gps_code": "AR-0009",
+    "freq": "123.500",
+    "Lat": -27.2164,
+    "Lon": -61.2103,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "General Villegas Airport",
+    "gps_code": "AR-0010",
+    "freq": "",
+    "Lat": -34.995728,
+    "Lon": -62.999725,
+    "Ele": 116.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Menucos Airport",
+    "gps_code": "AR-0011",
+    "freq": "",
+    "Lat": -40.817699,
+    "Lon": -68.074699,
+    "Ele": 783.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerofumigaciones Don Alejandro Airport",
+    "gps_code": "AR-0012",
+    "freq": "",
+    "Lat": -33.306157,
+    "Lon": -60.656387,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Agro Servicio Yoris Airport",
+    "gps_code": "AR-0013",
+    "freq": "",
+    "Lat": -26.583055,
+    "Lon": -64.529724,
+    "Ele": 317.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroaire Airport",
+    "gps_code": "AR-0014",
+    "freq": "",
+    "Lat": -27.4978,
+    "Lon": -61.6586,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valcheta Airport",
+    "gps_code": "AR-0017",
+    "freq": "",
+    "Lat": -40.700001,
+    "Lon": -66.150002,
+    "Ele": 191.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Mercedes Airport",
+    "gps_code": "AR-0018",
+    "freq": "",
+    "Lat": -33.640858,
+    "Lon": -65.420074,
+    "Ele": 514.8
+  },
+  {
+    "type": "small_airport",
+    "name": "13 De Diciembre Airport",
+    "gps_code": "AR-0019",
+    "freq": "",
+    "Lat": -45.90417,
+    "Lon": -67.559295,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Acindar Airport",
+    "gps_code": "AR-0021",
+    "freq": "",
+    "Lat": -33.2647,
+    "Lon": -60.2842,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroboero Airport",
+    "gps_code": "AR-0022",
+    "freq": "",
+    "Lat": -30.7286,
+    "Lon": -62.0078,
+    "Ele": 95.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahía Blanca Aeroclub Airport",
+    "gps_code": "AR-0023",
+    "freq": "",
+    "Lat": -38.672059,
+    "Lon": -62.352846,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Balcarce Aeroclub Airport",
+    "gps_code": "AR-0024",
+    "freq": "",
+    "Lat": -37.9156,
+    "Lon": -58.3442,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cipoletti Aeroclub Airport",
+    "gps_code": "AR-0025",
+    "freq": "",
+    "Lat": -38.8931007385,
+    "Lon": -67.9886016846,
+    "Ele": 269.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Olavarria Aeroclub Airport",
+    "gps_code": "AR-0026",
+    "freq": "",
+    "Lat": -36.9644012451,
+    "Lon": -60.2757987976,
+    "Ele": 184.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Rauch Airport",
+    "gps_code": "AR-0027",
+    "freq": "",
+    "Lat": -36.771887,
+    "Lon": -59.057837,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tandil Aeroclub Airport",
+    "gps_code": "AR-0028",
+    "freq": "",
+    "Lat": -37.265598,
+    "Lon": -59.0933,
+    "Ele": 177.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerotec Airport",
+    "gps_code": "AR-0029",
+    "freq": "",
+    "Lat": -33.206943512,
+    "Lon": -68.492225647,
+    "Ele": 664.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Alagro Fumigaciones Airport",
+    "gps_code": "AR-0030",
+    "freq": "",
+    "Lat": -32.8878,
+    "Lon": -60.8436,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "San Andrés de Giles Airport",
+    "gps_code": "AR-0031",
+    "freq": "",
+    "Lat": -34.470347,
+    "Lon": -59.42461,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alejandro Roca Airport",
+    "gps_code": "AR-0032",
+    "freq": "",
+    "Lat": -33.3488998413,
+    "Lon": -63.7299995422,
+    "Ele": 209.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Alfredo Sanchez Airport",
+    "gps_code": "AR-0033",
+    "freq": "",
+    "Lat": -34.8011,
+    "Lon": -61.865,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Algarrobo/La Reforma Airport",
+    "gps_code": "AR-0034",
+    "freq": "",
+    "Lat": -38.7306,
+    "Lon": -63.2869,
+    "Ele": 66.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Allen Airport",
+    "gps_code": "AR-0035",
+    "freq": "123.500",
+    "Lat": -38.958099365200006,
+    "Lon": -67.8035964966,
+    "Ele": 289.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alta Gracia Airport",
+    "gps_code": "AR-0036",
+    "freq": "",
+    "Lat": -31.6513996124,
+    "Lon": -64.39389801029999,
+    "Ele": 532.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Alumine Airport",
+    "gps_code": "AR-0037",
+    "freq": "",
+    "Lat": -38.9502983093,
+    "Lon": -71.0492019653,
+    "Ele": 1164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alvear Airpark",
+    "gps_code": "AR-0038",
+    "freq": "123.500",
+    "Lat": -33.0467,
+    "Lon": -60.5969,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alvear Airport",
+    "gps_code": "AR-0039",
+    "freq": "",
+    "Lat": -29.064722,
+    "Lon": -56.541111,
+    "Ele": 68.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ameghino Airport",
+    "gps_code": "AR-0040",
+    "freq": "",
+    "Lat": -34.845619,
+    "Lon": -62.482648,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "América Airport",
+    "gps_code": "AR-0041",
+    "freq": "",
+    "Lat": -35.5017,
+    "Lon": -62.99,
+    "Ele": 105.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Añatuya Airport",
+    "gps_code": "AR-0042",
+    "freq": "",
+    "Lat": -28.4797000885,
+    "Lon": -62.8457984924,
+    "Ele": 107.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Andacollo Airport",
+    "gps_code": "AR-0043",
+    "freq": "",
+    "Lat": -37.20333480834961,
+    "Lon": -70.69666290283203,
+    "Ele": 1074.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Anibal Brizi Airport",
+    "gps_code": "AR-0044",
+    "freq": "",
+    "Lat": -31.4042,
+    "Lon": -60.8992,
+    "Ele": 38.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Arrecifes Aeroclub Airport",
+    "gps_code": "AR-0047",
+    "freq": "",
+    "Lat": -34.079724,
+    "Lon": -60.046412,
+    "Ele": 43.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arribeños Airport",
+    "gps_code": "AR-0048",
+    "freq": "",
+    "Lat": -34.2228,
+    "Lon": -61.3858,
+    "Ele": 81.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Arroyito/Arcor Airport",
+    "gps_code": "AR-0049",
+    "freq": "",
+    "Lat": -31.4221992493,
+    "Lon": -63.0041999817,
+    "Ele": 147.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Presidente Avellaneda Airport",
+    "gps_code": "AR-0052",
+    "freq": "",
+    "Lat": -29.1061,
+    "Lon": -59.6569,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ayacucho Airport",
+    "gps_code": "AR-0053",
+    "freq": "",
+    "Lat": -37.1639,
+    "Lon": -58.4719,
+    "Ele": 67.4
+  },
+  {
+    "type": "small_airport",
+    "name": "B&B Servicios Agropecuarios Airport",
+    "gps_code": "AR-0056",
+    "freq": "",
+    "Lat": -32.1147,
+    "Lon": -61.6328,
+    "Ele": 72.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Baradero Airport",
+    "gps_code": "AR-0058",
+    "freq": "",
+    "Lat": -33.821693,
+    "Lon": -59.492806,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barrancas Airport",
+    "gps_code": "AR-0059",
+    "freq": "",
+    "Lat": -36.7756004333,
+    "Lon": -69.8593978882,
+    "Ele": 1061.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Basavilbaso Airport",
+    "gps_code": "AR-0060",
+    "freq": "",
+    "Lat": -32.3611,
+    "Lon": -58.8808,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Batan Airport",
+    "gps_code": "AR-0061",
+    "freq": "",
+    "Lat": -38.0117,
+    "Lon": -57.6775,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Escobar Aeroclub",
+    "gps_code": "AR-0062",
+    "freq": "",
+    "Lat": -34.2986,
+    "Lon": -58.7989,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bellamar Airport",
+    "gps_code": "AR-0063",
+    "freq": "",
+    "Lat": -38.3858,
+    "Lon": -58.1336,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Blondi Airport",
+    "gps_code": "AR-0065",
+    "freq": "",
+    "Lat": -34.61333465576172,
+    "Lon": -61.02305603027344,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gran Ancona Airport",
+    "gps_code": "AR-0066",
+    "freq": "",
+    "Lat": -33.4383,
+    "Lon": -61.3017,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bonetti Airport",
+    "gps_code": "AR-0067",
+    "freq": "",
+    "Lat": -27.604166030900004,
+    "Lon": -55.8638877869,
+    "Ele": 140.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pablo Sierra Aeroaplicaciones Airport",
+    "gps_code": "AR-0068",
+    "freq": "",
+    "Lat": -30.9294,
+    "Lon": -62.0506,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cabildo Airport",
+    "gps_code": "AR-0071",
+    "freq": "",
+    "Lat": -38.4986000061,
+    "Lon": -61.8843994141,
+    "Ele": 158.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Caleufu Airport",
+    "gps_code": "AR-0074",
+    "freq": "",
+    "Lat": -40.39390182495117,
+    "Lon": -70.96330261230469,
+    "Ele": 708.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Canals Airport",
+    "gps_code": "AR-0076",
+    "freq": "",
+    "Lat": -33.5622,
+    "Lon": -62.8692,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cañada de Gomez Airport",
+    "gps_code": "AR-0077",
+    "freq": "",
+    "Lat": -32.808687,
+    "Lon": -61.36574,
+    "Ele": 81.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Cañada Rosquin Airport",
+    "gps_code": "AR-0078",
+    "freq": "",
+    "Lat": -32.0994,
+    "Lon": -61.5839,
+    "Ele": 66.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cañuelas Airport",
+    "gps_code": "AR-0079",
+    "freq": "123.000",
+    "Lat": -35.1119,
+    "Lon": -58.7261,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub Capitan Sarmiento",
+    "gps_code": "AR-0080",
+    "freq": "",
+    "Lat": -34.1639,
+    "Lon": -59.7311,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vedia Aeroclub",
+    "gps_code": "AR-0081",
+    "freq": "",
+    "Lat": -34.4817,
+    "Lon": -61.4903,
+    "Ele": 88.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Carhue Airport",
+    "gps_code": "AR-0082",
+    "freq": "",
+    "Lat": -37.1942,
+    "Lon": -62.7814,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Carlos Casares Airport",
+    "gps_code": "AR-0083",
+    "freq": "",
+    "Lat": -35.6328,
+    "Lon": -61.3842,
+    "Ele": 83.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Ensenadas Airport",
+    "gps_code": "AR-0084",
+    "freq": "",
+    "Lat": -31.4552993774,
+    "Lon": -64.5263977051,
+    "Ele": 729.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Carlos Tejedor Airport",
+    "gps_code": "AR-0085",
+    "freq": "",
+    "Lat": -35.4256,
+    "Lon": -62.4697,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Carmen de Areco Airport",
+    "gps_code": "AR-0086",
+    "freq": "",
+    "Lat": -34.4175,
+    "Lon": -59.8719,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Casilda Airport",
+    "gps_code": "AR-0088",
+    "freq": "",
+    "Lat": -33.0617,
+    "Lon": -61.21,
+    "Ele": 76.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Castelli Airport",
+    "gps_code": "AR-0089",
+    "freq": "",
+    "Lat": -36.11000061035156,
+    "Lon": -57.86194610595703,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Castelli Airport",
+    "gps_code": "AR-0090",
+    "freq": "",
+    "Lat": -25.93083381652832,
+    "Lon": -60.628055572509766,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cereales Anahi Ruca Airport",
+    "gps_code": "AR-0094",
+    "freq": "",
+    "Lat": -35.6736106873,
+    "Lon": -63.7180557251,
+    "Ele": 138.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Chacabuco Airport",
+    "gps_code": "AR-0096",
+    "freq": "",
+    "Lat": -34.6069,
+    "Lon": -60.4097,
+    "Ele": 68.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chacharramendi Airport",
+    "gps_code": "AR-0097",
+    "freq": "",
+    "Lat": -37.340599,
+    "Lon": -65.646698,
+    "Ele": 289.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chajari Airport",
+    "gps_code": "AR-0098",
+    "freq": "",
+    "Lat": -30.7542,
+    "Lon": -58.0,
+    "Ele": 52.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Chañar Ladeado Airport",
+    "gps_code": "AR-0099",
+    "freq": "",
+    "Lat": -33.3333,
+    "Lon": -62.0333,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chascomús Airport",
+    "gps_code": "AR-0100",
+    "freq": "",
+    "Lat": -35.542621,
+    "Lon": -58.052137,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Chivilcoy Airport",
+    "gps_code": "AR-0101",
+    "freq": "",
+    "Lat": -34.9639,
+    "Lon": -60.0333,
+    "Ele": 52.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Cholila Airport",
+    "gps_code": "AR-0102",
+    "freq": "",
+    "Lat": -42.480501,
+    "Lon": -71.456902,
+    "Ele": 573.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cinco Saltos Airport",
+    "gps_code": "AR-0103",
+    "freq": "",
+    "Lat": -38.801666,
+    "Lon": -68.037224,
+    "Ele": 356.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Colón Airport",
+    "gps_code": "AR-0107",
+    "freq": "",
+    "Lat": -33.9231,
+    "Lon": -61.0461,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Colon Airport",
+    "gps_code": "AR-0108",
+    "freq": "",
+    "Lat": -32.2614,
+    "Lon": -58.1556,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Concepcion Del Uruguay Airport",
+    "gps_code": "AR-0110",
+    "freq": "",
+    "Lat": -32.4519,
+    "Lon": -58.3058,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Concordia Aeroclub Airport",
+    "gps_code": "AR-0111",
+    "freq": "",
+    "Lat": -31.3042,
+    "Lon": -58.0153,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Confluencia Airport",
+    "gps_code": "AR-0112",
+    "freq": "",
+    "Lat": -36.7714004517,
+    "Lon": -69.5385971069,
+    "Ele": 1513.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Coronel Dorrego Airport",
+    "gps_code": "AR-0113",
+    "freq": "",
+    "Lat": -38.7411,
+    "Lon": -61.2561,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Coronel Pringles Airport",
+    "gps_code": "AR-0114",
+    "freq": "",
+    "Lat": -38.0066680908,
+    "Lon": -61.331943512,
+    "Ele": 246.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Coronel Vidal Airport",
+    "gps_code": "AR-0115",
+    "freq": "",
+    "Lat": -37.4689,
+    "Lon": -57.7669,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Corral De Bustos Airport",
+    "gps_code": "AR-0116",
+    "freq": "",
+    "Lat": -33.2811,
+    "Lon": -62.1514,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa María Airport",
+    "gps_code": "AR-0117",
+    "freq": "",
+    "Lat": -31.2861,
+    "Lon": -64.455299,
+    "Ele": 699.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cruz Alta Airport",
+    "gps_code": "AR-0118",
+    "freq": "",
+    "Lat": -33.0078,
+    "Lon": -61.8369,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Curuzu Cuatia Aeroclub Airport",
+    "gps_code": "AR-0119",
+    "freq": "",
+    "Lat": -29.7789,
+    "Lon": -58.0958,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Rodriguez Airport",
+    "gps_code": "AR-0121",
+    "freq": "",
+    "Lat": -36.590491,
+    "Lon": -61.774888,
+    "Ele": 113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Darregueira Airport",
+    "gps_code": "AR-0122",
+    "freq": "",
+    "Lat": -37.7127990723,
+    "Lon": -63.1618995667,
+    "Ele": 197.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Dean Funes Airport",
+    "gps_code": "AR-0124",
+    "freq": "",
+    "Lat": -30.3791999817,
+    "Lon": -64.379699707,
+    "Ele": 688.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Diamante Airport",
+    "gps_code": "AR-0125",
+    "freq": "",
+    "Lat": -32.0161,
+    "Lon": -60.5825,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agrocelta Servicios Aereos Airport",
+    "gps_code": "AR-0127",
+    "freq": "",
+    "Lat": -33.8867,
+    "Lon": -60.8628,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saavedra Airport",
+    "gps_code": "AR-0128",
+    "freq": "",
+    "Lat": -37.750242,
+    "Lon": -62.33425,
+    "Ele": 317.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eduardo Castex Airport",
+    "gps_code": "AR-0130",
+    "freq": "",
+    "Lat": -35.8805541992,
+    "Lon": -64.2738876343,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Alamito Airport",
+    "gps_code": "AR-0131",
+    "freq": "",
+    "Lat": -37.27361297607422,
+    "Lon": -70.38972473144531,
+    "Ele": 1090.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Establecimiento El Araza Airport",
+    "gps_code": "AR-0132",
+    "freq": "",
+    "Lat": -36.7756,
+    "Lon": -57.6414,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Corcovado Airport",
+    "gps_code": "AR-0134",
+    "freq": "",
+    "Lat": -43.5336,
+    "Lon": -71.484703,
+    "Ele": 599.8
+  },
+  {
+    "type": "small_airport",
+    "name": "El Gaucho Airport",
+    "gps_code": "AR-0135",
+    "freq": "",
+    "Lat": -32.6294,
+    "Lon": -61.5444,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Pajaro Airport",
+    "gps_code": "AR-0137",
+    "freq": "123.200",
+    "Lat": -34.823537,
+    "Lon": -58.316307,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "El Pampero Airport",
+    "gps_code": "AR-0138",
+    "freq": "",
+    "Lat": -36.5928001404,
+    "Lon": -64.1866989136,
+    "Ele": 177.7
+  },
+  {
+    "type": "small_airport",
+    "name": "El Trebol Airport",
+    "gps_code": "AR-0139",
+    "freq": "",
+    "Lat": -32.2153,
+    "Lon": -61.7161,
+    "Ele": 91.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Esperanza Airport",
+    "gps_code": "AR-0141",
+    "freq": "",
+    "Lat": -31.4736,
+    "Lon": -60.8447,
+    "Ele": 37.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Esquina Airport",
+    "gps_code": "AR-0142",
+    "freq": "",
+    "Lat": -30.0489,
+    "Lon": -59.5353,
+    "Ele": 38.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Don Roberto Airport",
+    "gps_code": "AR-0143",
+    "freq": "",
+    "Lat": -34.0013999939,
+    "Lon": -65.366897583,
+    "Ele": 435.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Choza Airport",
+    "gps_code": "AR-0147",
+    "freq": "",
+    "Lat": -30.5389,
+    "Lon": -58.2928,
+    "Ele": 71.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Laurita Airport",
+    "gps_code": "AR-0148",
+    "freq": "",
+    "Lat": -44.7761116027832,
+    "Lon": -70.1963882446289,
+    "Ele": 559.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Llamuco Airport",
+    "gps_code": "AR-0149",
+    "freq": "",
+    "Lat": -38.79944610595703,
+    "Lon": -70.43472290039062,
+    "Ele": 1196.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Los Cardos Airport",
+    "gps_code": "AR-0150",
+    "freq": "",
+    "Lat": -37.7356,
+    "Lon": -58.0342,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Nueva Lubecka Airport",
+    "gps_code": "AR-0151",
+    "freq": "",
+    "Lat": -44.44194412231445,
+    "Lon": -70.44222259521484,
+    "Ele": 616.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia San Juan Airport",
+    "gps_code": "AR-0153",
+    "freq": "",
+    "Lat": -29.6028,
+    "Lon": -58.0281,
+    "Ele": 81.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia San Ramón Airport",
+    "gps_code": "AR-0154",
+    "freq": "",
+    "Lat": -50.303495,
+    "Lon": -69.926057,
+    "Ele": 373.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Santa Ana Airport",
+    "gps_code": "AR-0155",
+    "freq": "",
+    "Lat": -51.680841,
+    "Lon": -71.9652,
+    "Ele": 202.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estindher Airport",
+    "gps_code": "AR-0157",
+    "freq": "",
+    "Lat": -33.0931015015,
+    "Lon": -64.42919921880001,
+    "Ele": 466.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ezpeleta Airport",
+    "gps_code": "AR-0158",
+    "freq": "123.500",
+    "Lat": -34.7464,
+    "Lon": -58.2033,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Firmat Aeroclub Airport",
+    "gps_code": "AR-0160",
+    "freq": "",
+    "Lat": -33.4289,
+    "Lon": -61.5108,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo sede del Aeroclub Formosa",
+    "gps_code": "AR-0161",
+    "freq": "",
+    "Lat": -26.3014,
+    "Lon": -58.2983,
+    "Ele": 69.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fortín De Gainza Airport",
+    "gps_code": "AR-0162",
+    "freq": "",
+    "Lat": -34.5494,
+    "Lon": -63.1225,
+    "Ele": 129.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Stadler Airport",
+    "gps_code": "AR-0164",
+    "freq": "",
+    "Lat": -32.5786,
+    "Lon": -60.9119,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Galvez Airport",
+    "gps_code": "AR-0165",
+    "freq": "",
+    "Lat": -32.0322,
+    "Lon": -61.1758,
+    "Ele": 52.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General Alvear Aeroclub Airport",
+    "gps_code": "AR-0166",
+    "freq": "",
+    "Lat": -34.9730987549,
+    "Lon": -67.7236022949,
+    "Ele": 465.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General Belgrano Airport",
+    "gps_code": "AR-0167",
+    "freq": "",
+    "Lat": -35.7519,
+    "Lon": -58.4633,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "General Deheza Airport",
+    "gps_code": "AR-0168",
+    "freq": "",
+    "Lat": -32.745300293,
+    "Lon": -63.7957992554,
+    "Ele": 273.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General La Madrid Airport",
+    "gps_code": "AR-0169",
+    "freq": "",
+    "Lat": -37.226261,
+    "Lon": -61.279101,
+    "Ele": 170.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General Las Heras Aeroclub",
+    "gps_code": "AR-0170",
+    "freq": "",
+    "Lat": -34.9206,
+    "Lon": -58.9164,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General Levalle Airport",
+    "gps_code": "AR-0171",
+    "freq": "",
+    "Lat": -34.0038871765,
+    "Lon": -63.9308319092,
+    "Ele": 187.1
+  },
+  {
+    "type": "small_airport",
+    "name": "General Madariaga Airport",
+    "gps_code": "AR-0172",
+    "freq": "",
+    "Lat": -37.0392,
+    "Lon": -57.1372,
+    "Ele": 6.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General Pìnedo Airport",
+    "gps_code": "AR-0173",
+    "freq": "",
+    "Lat": -27.3394,
+    "Lon": -61.2744,
+    "Ele": 90.8
+  },
+  {
+    "type": "small_airport",
+    "name": "General Pinto Airport",
+    "gps_code": "AR-0174",
+    "freq": "",
+    "Lat": -34.7861,
+    "Lon": -61.9142,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Toldos Airport",
+    "gps_code": "AR-0176",
+    "freq": "",
+    "Lat": -34.97726,
+    "Lon": -61.020942,
+    "Ele": 71.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gobernador Crespo Aeroclub Airport",
+    "gps_code": "AR-0177",
+    "freq": "",
+    "Lat": -30.3878,
+    "Lon": -60.3656,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gobernador Santillán Airport",
+    "gps_code": "AR-0178",
+    "freq": "",
+    "Lat": -27.90139961242676,
+    "Lon": -64.24970245361328,
+    "Ele": 210.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gomez Airport",
+    "gps_code": "AR-0179",
+    "freq": "",
+    "Lat": -35.0956,
+    "Lon": -58.0853,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gonzales Chaves Airport",
+    "gps_code": "AR-0180",
+    "freq": "",
+    "Lat": -38.02949,
+    "Lon": -60.135654,
+    "Ele": 193.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Goya Aeroclub",
+    "gps_code": "AR-0181",
+    "freq": "",
+    "Lat": -29.1678,
+    "Lon": -59.2464,
+    "Ele": 37.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Guadalupe Airport",
+    "gps_code": "AR-0182",
+    "freq": "",
+    "Lat": -31.584,
+    "Lon": -60.668,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gualeguay Airport",
+    "gps_code": "AR-0183",
+    "freq": "",
+    "Lat": -33.1036109924,
+    "Lon": -59.3747215271,
+    "Ele": 11.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Agro Aereo Gualeguay Airport",
+    "gps_code": "AR-0184",
+    "freq": "",
+    "Lat": -33.0386,
+    "Lon": -59.4383,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Henderson Airport",
+    "gps_code": "AR-0193",
+    "freq": "",
+    "Lat": -36.3147010803,
+    "Lon": -61.7477989197,
+    "Ele": 150.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Huanguelen Airport",
+    "gps_code": "AR-0198",
+    "freq": "",
+    "Lat": -37.0330543518,
+    "Lon": -61.934165954600005,
+    "Ele": 157.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Huinca Renanco Airport",
+    "gps_code": "AR-0199",
+    "freq": "",
+    "Lat": -34.8203010559,
+    "Lon": -64.3731002808,
+    "Ele": 179.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingeniero Luiggi Airport",
+    "gps_code": "AR-0200",
+    "freq": "",
+    "Lat": -35.3549995422,
+    "Lon": -64.4758300781,
+    "Ele": 192.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroservicio Doña Teresa Airport",
+    "gps_code": "AR-0201",
+    "freq": "",
+    "Lat": -28.8494,
+    "Lon": -62.2625,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Establecimiento La Susana",
+    "gps_code": "AR-0202",
+    "freq": "",
+    "Lat": -34.909168,
+    "Lon": -59.348888,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Intendente Alvear Airport",
+    "gps_code": "AR-0203",
+    "freq": "",
+    "Lat": -35.2592,
+    "Lon": -63.5328,
+    "Ele": 126.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Intendente Alvear",
+    "gps_code": "AR-0204",
+    "freq": "",
+    "Lat": -35.2494,
+    "Lon": -63.5342,
+    "Ele": 126.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Herbinsec Airport",
+    "gps_code": "AR-0205",
+    "freq": "",
+    "Lat": -35.138611,
+    "Lon": -62.705278,
+    "Ele": 111.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Don Hector Biondi Airport",
+    "gps_code": "AR-0207",
+    "freq": "",
+    "Lat": -33.2464,
+    "Lon": -62.4167,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Italaviation Airport",
+    "gps_code": "AR-0208",
+    "freq": "",
+    "Lat": -29.1608,
+    "Lon": -59.1814,
+    "Ele": 63.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Jacinto Arauz Airport",
+    "gps_code": "AR-0209",
+    "freq": "",
+    "Lat": -38.066101074200006,
+    "Lon": -63.4282989502,
+    "Ele": 159.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Jardin De América Airport",
+    "gps_code": "AR-0210",
+    "freq": "",
+    "Lat": -27.032499,
+    "Lon": -55.198055,
+    "Ele": 204.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Jesús Maria Airport",
+    "gps_code": "AR-0211",
+    "freq": "",
+    "Lat": -30.9881000519,
+    "Lon": -64.0768966675,
+    "Ele": 529.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Agropecuaria Rio Juramento Airport",
+    "gps_code": "AR-0212",
+    "freq": "",
+    "Lat": -25.1867008209,
+    "Lon": -64.0828018188,
+    "Ele": 360.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tres Lomas Airport",
+    "gps_code": "AR-0213",
+    "freq": "",
+    "Lat": -36.4439,
+    "Lon": -62.8792,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Juan Carlos Bagur Airport",
+    "gps_code": "AR-0214",
+    "freq": "",
+    "Lat": -32.4186,
+    "Lon": -59.8158,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Juarez Celman Airport",
+    "gps_code": "AR-0216",
+    "freq": "",
+    "Lat": -31.2113895416,
+    "Lon": -64.1613922119,
+    "Ele": 512.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Angelita Airport",
+    "gps_code": "AR-0217",
+    "freq": "",
+    "Lat": -30.8522,
+    "Lon": -58.7067,
+    "Ele": 69.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Trenque Lauquen Airport",
+    "gps_code": "AR-0218",
+    "freq": "",
+    "Lat": -36.0158,
+    "Lon": -62.6939,
+    "Ele": 98.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Caida Airport",
+    "gps_code": "AR-0219",
+    "freq": "",
+    "Lat": -34.859281,
+    "Lon": -58.342426,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Consulta Airport",
+    "gps_code": "AR-0222",
+    "freq": "",
+    "Lat": -33.7308349609375,
+    "Lon": -69.17388916015625,
+    "Ele": 1072.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Laja Airport",
+    "gps_code": "AR-0224",
+    "freq": "",
+    "Lat": -31.3513889313,
+    "Lon": -68.47305297850001,
+    "Ele": 649.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Quebracho Herrado Airport",
+    "gps_code": "AR-0225",
+    "freq": "",
+    "Lat": -34.1553,
+    "Lon": -59.8739,
+    "Ele": 51.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Mezquita Airport",
+    "gps_code": "AR-0227",
+    "freq": "",
+    "Lat": -31.400800705,
+    "Lon": -64.3003005981,
+    "Ele": 509.6
+  },
+  {
+    "type": "small_airport",
+    "name": "La Nueva Airport",
+    "gps_code": "AR-0229",
+    "freq": "",
+    "Lat": -34.9464,
+    "Lon": -61.3042,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Paz Aeroclub Airport",
+    "gps_code": "AR-0230",
+    "freq": "",
+    "Lat": -30.743991,
+    "Lon": -59.569333,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Pelada Airport",
+    "gps_code": "AR-0231",
+    "freq": "",
+    "Lat": -30.9556,
+    "Lon": -60.8858,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Siesta Airport",
+    "gps_code": "AR-0232",
+    "freq": "",
+    "Lat": -33.6939,
+    "Lon": -62.0625,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Laborde Airport",
+    "gps_code": "AR-0234",
+    "freq": "",
+    "Lat": -33.1567,
+    "Lon": -62.8906,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago Buenos Aires (Aeroclub Perito Moreno) Airfield",
+    "gps_code": "AR-0235",
+    "freq": "",
+    "Lat": -46.576307,
+    "Lon": -70.947871,
+    "Ele": 383.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago La Esperanza Airport",
+    "gps_code": "AR-0237",
+    "freq": "",
+    "Lat": -42.217499,
+    "Lon": -71.805003,
+    "Ele": 559.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago Nahuel Huapi Airfield",
+    "gps_code": "AR-0238",
+    "freq": "",
+    "Lat": -41.096709,
+    "Lon": -71.178021,
+    "Ele": 779.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Laguna Aeroclub Airport",
+    "gps_code": "AR-0239",
+    "freq": "",
+    "Lat": -34.40888977050781,
+    "Lon": -59.45833206176758,
+    "Ele": 45.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Laguna De Gomez Airport",
+    "gps_code": "AR-0240",
+    "freq": "",
+    "Lat": -34.6539,
+    "Lon": -61.01,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Laprida Airport",
+    "gps_code": "AR-0241",
+    "freq": "",
+    "Lat": -37.520913,
+    "Lon": -60.778141,
+    "Ele": 214.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Cortaderas Airport",
+    "gps_code": "AR-0244",
+    "freq": "",
+    "Lat": -38.3547,
+    "Lon": -58.1089,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Marias Airport",
+    "gps_code": "AR-0245",
+    "freq": "",
+    "Lat": -28.1,
+    "Lon": -56.05,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Ovejas Airport",
+    "gps_code": "AR-0246",
+    "freq": "",
+    "Lat": -36.999699,
+    "Lon": -70.741897,
+    "Ele": 1199.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Rosas Airport",
+    "gps_code": "AR-0247",
+    "freq": "",
+    "Lat": -32.4922,
+    "Lon": -61.5806,
+    "Ele": 101.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Varillas Airport",
+    "gps_code": "AR-0248",
+    "freq": "",
+    "Lat": -31.8914,
+    "Lon": -62.7047,
+    "Ele": 134.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Lanzillota Airport",
+    "gps_code": "AR-0249",
+    "freq": "",
+    "Lat": -32.7214012146,
+    "Lon": -68.6342010498,
+    "Ele": 569.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Leones Airport",
+    "gps_code": "AR-0251",
+    "freq": "",
+    "Lat": -32.6368,
+    "Lon": -62.3148,
+    "Ele": 113.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Luján Airport",
+    "gps_code": "AR-0252",
+    "freq": "",
+    "Lat": -34.5514,
+    "Lon": -59.0783,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lincoln Airport",
+    "gps_code": "AR-0253",
+    "freq": "",
+    "Lat": -34.8911,
+    "Lon": -61.5306,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Mirador",
+    "gps_code": "AR-0254",
+    "freq": "",
+    "Lat": -34.538887,
+    "Lon": -59.585278,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Loberia Airport",
+    "gps_code": "AR-0255",
+    "freq": "",
+    "Lat": -38.1906,
+    "Lon": -58.7864,
+    "Ele": 80.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Nika Airport",
+    "gps_code": "AR-0256",
+    "freq": "",
+    "Lat": -38.143874,
+    "Lon": -58.7479,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lobos Airport",
+    "gps_code": "AR-0257",
+    "freq": "",
+    "Lat": -35.210784,
+    "Lon": -59.137149,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Cardos Airport",
+    "gps_code": "AR-0258",
+    "freq": "",
+    "Lat": -32.2719,
+    "Lon": -61.6622,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Perales Airport",
+    "gps_code": "AR-0260",
+    "freq": "",
+    "Lat": -46.1907997131,
+    "Lon": -69.28029632570001,
+    "Ele": 425.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Tucanes Airport",
+    "gps_code": "AR-0261",
+    "freq": "",
+    "Lat": -27.0358333588,
+    "Lon": -65.1566696167,
+    "Ele": 363.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Macachin Airport",
+    "gps_code": "AR-0262",
+    "freq": "",
+    "Lat": -37.143716,
+    "Lon": -63.678678,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maipú Airport",
+    "gps_code": "AR-0264",
+    "freq": "",
+    "Lat": -36.8903,
+    "Lon": -57.8503,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Marcos Paz Airfield",
+    "gps_code": "AR-0266",
+    "freq": "",
+    "Lat": -34.7975,
+    "Lon": -58.8969,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Martín Fierro Airport",
+    "gps_code": "AR-0267",
+    "freq": "",
+    "Lat": -33.9402999878,
+    "Lon": -64.3696975708,
+    "Ele": 229.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Meliquina Airport",
+    "gps_code": "AR-0269",
+    "freq": "",
+    "Lat": -40.33530044555664,
+    "Lon": -71.33920288085938,
+    "Ele": 933.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mercedes Airport",
+    "gps_code": "AR-0271",
+    "freq": "",
+    "Lat": -34.638136,
+    "Lon": -59.455395,
+    "Ele": 41.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Azcarate Irastorza Airport",
+    "gps_code": "AR-0272",
+    "freq": "",
+    "Lat": -35.1994,
+    "Lon": -63.6008,
+    "Ele": 126.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Metán Airport",
+    "gps_code": "AR-0273",
+    "freq": "",
+    "Lat": -25.5144004822,
+    "Lon": -64.9655990601,
+    "Ele": 842.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mina Clavero Airport",
+    "gps_code": "AR-0274",
+    "freq": "",
+    "Lat": -31.7331008911,
+    "Lon": -64.98560333249999,
+    "Ele": 969.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Monte Maiz Airport",
+    "gps_code": "AR-0276",
+    "freq": "",
+    "Lat": -33.2103,
+    "Lon": -62.6297,
+    "Ele": 112.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Moromar Airport",
+    "gps_code": "AR-0278",
+    "freq": "",
+    "Lat": -38.425775,
+    "Lon": -58.371331,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Morteros Airport",
+    "gps_code": "AR-0280",
+    "freq": "",
+    "Lat": -30.6778,
+    "Lon": -62.0267,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Navarro Airport",
+    "gps_code": "AR-0281",
+    "freq": "",
+    "Lat": -35.0236,
+    "Lon": -59.2858,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nogoya Airport",
+    "gps_code": "AR-0282",
+    "freq": "",
+    "Lat": -32.4025,
+    "Lon": -59.7461,
+    "Ele": 41.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Oliva Airport",
+    "gps_code": "AR-0285",
+    "freq": "",
+    "Lat": -32.060798645,
+    "Lon": -63.5469017029,
+    "Ele": 267.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Haydee Airport",
+    "gps_code": "AR-0288",
+    "freq": "",
+    "Lat": -35.669894,
+    "Lon": -61.405525,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Parana Aeroclub Airport",
+    "gps_code": "AR-0289",
+    "freq": "",
+    "Lat": -31.7578,
+    "Lon": -60.3733,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Parana Club De Planeadores Airport",
+    "gps_code": "AR-0290",
+    "freq": "",
+    "Lat": -31.7314,
+    "Lon": -60.22,
+    "Ele": 46.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Parque Hermoso Airport",
+    "gps_code": "AR-0291",
+    "freq": "",
+    "Lat": -38.0287,
+    "Lon": -57.6393,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Pedro Luro Airport",
+    "gps_code": "AR-0292",
+    "freq": "",
+    "Lat": -39.4561,
+    "Lon": -62.6747,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pellegrini Airport",
+    "gps_code": "AR-0293",
+    "freq": "",
+    "Lat": -36.2828,
+    "Lon": -63.1342,
+    "Ele": 112.8
+  },
+  {
+    "type": "small_airport",
+    "name": "LAD 2198 Juan Jose Angelini",
+    "gps_code": "AR-0294",
+    "freq": "",
+    "Lat": -34.426945,
+    "Lon": -59.480278,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilcaniyeu Airport",
+    "gps_code": "AR-0295",
+    "freq": "",
+    "Lat": -41.12666702270508,
+    "Lon": -70.7138900756836,
+    "Ele": 972.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pinamar Airport",
+    "gps_code": "AR-0296",
+    "freq": "",
+    "Lat": -37.0911,
+    "Lon": -56.9783,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Poblet Airport",
+    "gps_code": "AR-0298",
+    "freq": "",
+    "Lat": -35.0881,
+    "Lon": -57.9492,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Puán Airport",
+    "gps_code": "AR-0304",
+    "freq": "",
+    "Lat": -37.5393981934,
+    "Lon": -62.7341995239,
+    "Ele": 239.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pueblo Esther Airport",
+    "gps_code": "AR-0305",
+    "freq": "123.500",
+    "Lat": -33.0817,
+    "Lon": -60.5647,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Terminal 6 Airport",
+    "gps_code": "AR-0306",
+    "freq": "",
+    "Lat": -32.6417,
+    "Lon": -60.7539,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pulmari Airport",
+    "gps_code": "AR-0307",
+    "freq": "",
+    "Lat": -39.10055541992188,
+    "Lon": -70.99888610839844,
+    "Ele": 989.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Alta Airport",
+    "gps_code": "AR-0308",
+    "freq": "",
+    "Lat": -38.8342,
+    "Lon": -62.0869,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Igualdad Airport",
+    "gps_code": "AR-0311",
+    "freq": "",
+    "Lat": -35.5133,
+    "Lon": -58.3531,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rawson Airport",
+    "gps_code": "AR-0312",
+    "freq": "",
+    "Lat": -43.2944,
+    "Lon": -65.0644,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Realicó Airport",
+    "gps_code": "AR-0313",
+    "freq": "",
+    "Lat": -35.0592002869,
+    "Lon": -64.2110977173,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueva Valencia Airport",
+    "gps_code": "AR-0314",
+    "freq": "",
+    "Lat": -27.5864,
+    "Lon": -58.8203,
+    "Ele": 56.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Don Jose Airport",
+    "gps_code": "AR-0315",
+    "freq": "",
+    "Lat": -32.8275,
+    "Lon": -60.7817,
+    "Ele": 25.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Chico Airport",
+    "gps_code": "AR-0316",
+    "freq": "",
+    "Lat": -51.668997,
+    "Lon": -69.266365,
+    "Ele": 20.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Rivadavia Airport",
+    "gps_code": "AR-0318",
+    "freq": "",
+    "Lat": -33.227222,
+    "Lon": -68.474167,
+    "Ele": 659.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rojas Airport",
+    "gps_code": "AR-0319",
+    "freq": "",
+    "Lat": -34.215,
+    "Lon": -60.6725,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Rosario De La Frontera Airport",
+    "gps_code": "AR-0320",
+    "freq": "",
+    "Lat": -25.8280563354,
+    "Lon": -64.9680557251,
+    "Ele": 837.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rosario Del Tala Airport",
+    "gps_code": "AR-0321",
+    "freq": "",
+    "Lat": -32.3289,
+    "Lon": -59.1906,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rufino Airport",
+    "gps_code": "AR-0322",
+    "freq": "",
+    "Lat": -34.2831,
+    "Lon": -62.6719,
+    "Ele": 118.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Salliqueló Airport",
+    "gps_code": "AR-0323",
+    "freq": "",
+    "Lat": -36.756401062,
+    "Lon": -62.9444007874,
+    "Ele": 144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Salto Airport",
+    "gps_code": "AR-0324",
+    "freq": "",
+    "Lat": -34.306864,
+    "Lon": -60.286489,
+    "Ele": 58.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Benito Airport",
+    "gps_code": "AR-0325",
+    "freq": "",
+    "Lat": -31.8086,
+    "Lon": -60.4517,
+    "Ele": 58.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Cayetano Heliport",
+    "gps_code": "AR-0326",
+    "freq": "",
+    "Lat": -38.33388900756836,
+    "Lon": -59.630279541015625,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Cristobal Airport",
+    "gps_code": "AR-0327",
+    "freq": "",
+    "Lat": -30.2642,
+    "Lon": -61.2203,
+    "Ele": 73.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Francisco Airport",
+    "gps_code": "AR-0328",
+    "freq": "",
+    "Lat": -31.4142,
+    "Lon": -62.1336,
+    "Ele": 114.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Jorge Airport",
+    "gps_code": "AR-0331",
+    "freq": "",
+    "Lat": -31.8836,
+    "Lon": -61.8442,
+    "Ele": 105.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Justo Airport",
+    "gps_code": "AR-0332",
+    "freq": "",
+    "Lat": -30.7642,
+    "Lon": -60.5653,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub San Martín",
+    "gps_code": "AR-0333",
+    "freq": "",
+    "Lat": -33.061883,
+    "Lon": -68.508644,
+    "Ele": 656.5
+  },
+  {
+    "type": "small_airport",
+    "name": "San Miguel del Monte Airport",
+    "gps_code": "AR-0334",
+    "freq": "",
+    "Lat": -35.4594,
+    "Lon": -58.7636,
+    "Ele": 23.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahía Dorada Airport",
+    "gps_code": "AR-0335",
+    "freq": "",
+    "Lat": -41.8428,
+    "Lon": -65.0822,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Vicente Airport",
+    "gps_code": "AR-0336",
+    "freq": "",
+    "Lat": -26.9533004761,
+    "Lon": -54.4878005981,
+    "Ele": 549.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santo Tome Airport",
+    "gps_code": "AR-0338",
+    "freq": "",
+    "Lat": -28.5272216796875,
+    "Lon": -56.10944366455078,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Scaro Airport",
+    "gps_code": "AR-0341",
+    "freq": "",
+    "Lat": -24.4480552673,
+    "Lon": -65.1758346558,
+    "Ele": 983.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa de María de Río Seco Airport",
+    "gps_code": "AR-0342",
+    "freq": "",
+    "Lat": -29.9,
+    "Lon": -63.683,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stroeder Airport",
+    "gps_code": "AR-0344",
+    "freq": "",
+    "Lat": -40.207635,
+    "Lon": -62.61858,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Suboficial Auxiliar Miguel A. Cardone Airport",
+    "gps_code": "AR-0345",
+    "freq": "",
+    "Lat": -33.9617,
+    "Lon": -61.6325,
+    "Ele": 102.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Tecka Airport",
+    "gps_code": "AR-0349",
+    "freq": "",
+    "Lat": -43.6122207642,
+    "Lon": -71.0219421387,
+    "Ele": 719.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Tilisarao Airport",
+    "gps_code": "AR-0352",
+    "freq": "",
+    "Lat": -32.75,
+    "Lon": -65.28220367429999,
+    "Ele": 750.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tolosa Airport",
+    "gps_code": "AR-0354",
+    "freq": "",
+    "Lat": -34.8747,
+    "Lon": -57.9608,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Tornquist Airport",
+    "gps_code": "AR-0355",
+    "freq": "",
+    "Lat": -38.0956,
+    "Lon": -62.250301,
+    "Ele": 284.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Tostado Airport",
+    "gps_code": "AR-0356",
+    "freq": "",
+    "Lat": -29.2358,
+    "Lon": -61.7886,
+    "Ele": 68.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Chevron Texaco Airport",
+    "gps_code": "AR-0369",
+    "freq": "",
+    "Lat": -37.365002,
+    "Lon": -69.300278,
+    "Ele": 882.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Horco Molle Aeroclub Airport",
+    "gps_code": "AR-0370",
+    "freq": "",
+    "Lat": -26.7961006165,
+    "Lon": -65.3091964722,
+    "Ele": 579.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Urdinarrain Airport",
+    "gps_code": "AR-0372",
+    "freq": "",
+    "Lat": -32.6964,
+    "Lon": -58.8992,
+    "Ele": 65.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Veinticinco De Mayo Airport",
+    "gps_code": "AR-0373",
+    "freq": "",
+    "Lat": -35.4464,
+    "Lon": -60.0886,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vera Airport",
+    "gps_code": "AR-0374",
+    "freq": "",
+    "Lat": -29.4681,
+    "Lon": -60.2261,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Veronica Airport",
+    "gps_code": "AR-0375",
+    "freq": "",
+    "Lat": -35.4,
+    "Lon": -57.3667,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Victoria Airport",
+    "gps_code": "AR-0376",
+    "freq": "",
+    "Lat": -32.5844,
+    "Lon": -60.1847,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Victorica Airport",
+    "gps_code": "AR-0377",
+    "freq": "",
+    "Lat": -36.2374992371,
+    "Lon": -65.450553894,
+    "Ele": 310.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Del Rosario Airport",
+    "gps_code": "AR-0378",
+    "freq": "",
+    "Lat": -31.579313,
+    "Lon": -63.539184,
+    "Ele": 253.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa General Belgrano Airport",
+    "gps_code": "AR-0379",
+    "freq": "",
+    "Lat": -31.9652996063,
+    "Lon": -64.5643997192,
+    "Ele": 839.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Ocampo Airport",
+    "gps_code": "AR-0380",
+    "freq": "",
+    "Lat": -28.4969,
+    "Lon": -59.3256,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Regina Airport",
+    "gps_code": "AR-0381",
+    "freq": "",
+    "Lat": -39.073601,
+    "Lon": -67.080002,
+    "Ele": 284.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Rumipal Airport",
+    "gps_code": "AR-0382",
+    "freq": "",
+    "Lat": -32.1850013733,
+    "Lon": -64.4882965088,
+    "Ele": 665.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Zarate Airport",
+    "gps_code": "AR-0383",
+    "freq": "",
+    "Lat": -34.119912,
+    "Lon": -59.083198,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Belingueres Aviación Airport",
+    "gps_code": "AR-0384",
+    "freq": "",
+    "Lat": -34.2778,
+    "Lon": -60.5044,
+    "Ele": 63.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Bocca Airport",
+    "gps_code": "AR-0385",
+    "freq": "",
+    "Lat": -31.8711,
+    "Lon": -61.9511,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Buena Esperanza Airport",
+    "gps_code": "AR-0386",
+    "freq": "",
+    "Lat": -30.5306,
+    "Lon": -58.3972,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Buenos Aires Airport",
+    "gps_code": "AR-0387",
+    "freq": "",
+    "Lat": -33.859722,
+    "Lon": -59.468887,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Burdisso Airport",
+    "gps_code": "AR-0388",
+    "freq": "",
+    "Lat": -32.2406,
+    "Lon": -61.7583,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Carmen de Patagones Airport",
+    "gps_code": "AR-0390",
+    "freq": "",
+    "Lat": -40.7781,
+    "Lon": -62.9803,
+    "Ele": 39.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Mar del Plata Gliding Club",
+    "gps_code": "AR-0391",
+    "freq": "",
+    "Lat": -38.0153,
+    "Lon": -57.6536,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Colonia Tirolesa Airport",
+    "gps_code": "AR-0392",
+    "freq": "",
+    "Lat": -31.244722,
+    "Lon": -64.035278,
+    "Ele": 406.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Comandante Eduardo A. Olivero Airport",
+    "gps_code": "AR-0393",
+    "freq": "",
+    "Lat": -37.347686,
+    "Lon": -58.9853,
+    "Ele": 192.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Concepción Airport",
+    "gps_code": "AR-0394",
+    "freq": "",
+    "Lat": -27.345434,
+    "Lon": -65.617973,
+    "Ele": 365.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Brandsen Airport",
+    "gps_code": "AR-0395",
+    "freq": "",
+    "Lat": -35.1828,
+    "Lon": -58.2839,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Coronel Moldes Airport",
+    "gps_code": "AR-0396",
+    "freq": "",
+    "Lat": -33.616669,
+    "Lon": -64.612503,
+    "Ele": 356.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Di Giuseppe Airport",
+    "gps_code": "AR-0397",
+    "freq": "",
+    "Lat": -32.8908,
+    "Lon": -61.1239,
+    "Ele": 88.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Dinaluca S.A. Airport",
+    "gps_code": "AR-0398",
+    "freq": "",
+    "Lat": -27.3828,
+    "Lon": -57.6442,
+    "Ele": 66.8
+  },
+  {
+    "type": "small_airport",
+    "name": "General Rodriguez Ildefonso Durana Airport",
+    "gps_code": "AR-0399",
+    "freq": "123.200",
+    "Lat": -34.6803,
+    "Lon": -59.0358,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "El Girasol Airport",
+    "gps_code": "AR-0400",
+    "freq": "",
+    "Lat": -33.6661,
+    "Lon": -59.8339,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "El Gringo Airport",
+    "gps_code": "AR-0401",
+    "freq": "",
+    "Lat": -27.3086,
+    "Lon": -61.2114,
+    "Ele": 91.7
+  },
+  {
+    "type": "small_airport",
+    "name": "El Jagüel Airport",
+    "gps_code": "AR-0402",
+    "freq": "",
+    "Lat": -31.7994,
+    "Lon": -59.0339,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Malagueño Airport",
+    "gps_code": "AR-0403",
+    "freq": "",
+    "Lat": -31.6994,
+    "Lon": -59.4006,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Pilincho Airport",
+    "gps_code": "AR-0404",
+    "freq": "",
+    "Lat": -30.3872,
+    "Lon": -57.9683,
+    "Ele": 69.5
+  },
+  {
+    "type": "small_airport",
+    "name": "El Toto Airport",
+    "gps_code": "AR-0405",
+    "freq": "",
+    "Lat": -31.650278,
+    "Lon": -64.368889,
+    "Ele": 164.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Establecimiento La Adelita Airport",
+    "gps_code": "AR-0406",
+    "freq": "",
+    "Lat": -31.3925,
+    "Lon": -61.1431,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Establecimiento La Florencia Airport",
+    "gps_code": "AR-0407",
+    "freq": "",
+    "Lat": -33.0769,
+    "Lon": -61.3178,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Caridad Airport",
+    "gps_code": "AR-0408",
+    "freq": "",
+    "Lat": -43.72139,
+    "Lon": -71.24556,
+    "Ele": 739.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Estancia La Leonor",
+    "gps_code": "AR-0410",
+    "freq": "",
+    "Lat": -26.1494,
+    "Lon": -59.6672,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Providencia Airport",
+    "gps_code": "AR-0411",
+    "freq": "",
+    "Lat": -32.9411,
+    "Lon": -58.565,
+    "Ele": 19.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia La Salvación",
+    "gps_code": "AR-0412",
+    "freq": "",
+    "Lat": -25.2767,
+    "Lon": -58.9375,
+    "Ele": 97.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Lucila Airport",
+    "gps_code": "AR-0413",
+    "freq": "",
+    "Lat": -38.3086,
+    "Lon": -58.105,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia San Vicente Airport",
+    "gps_code": "AR-0414",
+    "freq": "",
+    "Lat": -32.9989,
+    "Lon": -61.7781,
+    "Ele": 69.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Santa Romana Airport",
+    "gps_code": "AR-0415",
+    "freq": "",
+    "Lat": -33.753334,
+    "Lon": -65.246391,
+    "Ele": 471.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Villa Corina Airport",
+    "gps_code": "AR-0416",
+    "freq": "",
+    "Lat": -28.035,
+    "Lon": -56.0678,
+    "Ele": 122.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Villa María",
+    "gps_code": "AR-0417",
+    "freq": "",
+    "Lat": -34.6433,
+    "Lon": -59.1272,
+    "Ele": 31.7
+  },
+  {
+    "type": "small_airport",
+    "name": "F.A.T. Airport",
+    "gps_code": "AR-0418",
+    "freq": "",
+    "Lat": -34.1767,
+    "Lon": -61.5069,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca La Frontera Airport",
+    "gps_code": "AR-0419",
+    "freq": "",
+    "Lat": -22.12351,
+    "Lon": -63.29055,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Firmat Airport",
+    "gps_code": "AR-0420",
+    "freq": "",
+    "Lat": -33.4661,
+    "Lon": -61.4842,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Campagnucci Airport",
+    "gps_code": "AR-0421",
+    "freq": "",
+    "Lat": -33.3239,
+    "Lon": -60.6658,
+    "Ele": 47.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Fredy Airport",
+    "gps_code": "AR-0422",
+    "freq": "",
+    "Lat": -34.2361,
+    "Lon": -60.5819,
+    "Ele": 53.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones González Airport",
+    "gps_code": "AR-0423",
+    "freq": "",
+    "Lat": -32.3589,
+    "Lon": -60.9797,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "General Belgrano Airport",
+    "gps_code": "AR-0424",
+    "freq": "",
+    "Lat": -24.745834,
+    "Lon": -65.418892,
+    "Ele": 1260.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General San Martin (La Pampa) Airport",
+    "gps_code": "AR-0425",
+    "freq": "",
+    "Lat": -37.94972,
+    "Lon": -63.6175,
+    "Ele": 160.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ginevro Airport",
+    "gps_code": "AR-0426",
+    "freq": "",
+    "Lat": -31.864445,
+    "Lon": -62.844166,
+    "Ele": 144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gualeguay Aeroclub Airport",
+    "gps_code": "AR-0427",
+    "freq": "",
+    "Lat": -33.0994,
+    "Lon": -59.4172,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Haras La Pomme Airport",
+    "gps_code": "AR-0429",
+    "freq": "",
+    "Lat": -34.2078,
+    "Lon": -59.3856,
+    "Ele": 27.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Hosteria San Huberto Airport",
+    "gps_code": "AR-0431",
+    "freq": "",
+    "Lat": -39.7038879395,
+    "Lon": -71.16999816890001,
+    "Ele": 856.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Iriberri Airport",
+    "gps_code": "AR-0432",
+    "freq": "",
+    "Lat": -38.478789,
+    "Lon": -58.804836,
+    "Ele": 32.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Islas Del Ibicuy Airport",
+    "gps_code": "AR-0433",
+    "freq": "",
+    "Lat": -33.75,
+    "Lon": -58.7,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Carlota Airport",
+    "gps_code": "AR-0434",
+    "freq": "",
+    "Lat": -33.450000762900004,
+    "Lon": -63.3499984741,
+    "Ele": 153.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Chacra Airport",
+    "gps_code": "AR-0435",
+    "freq": "",
+    "Lat": -34.81255,
+    "Lon": -62.522467,
+    "Ele": 108.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Esmeralda Airport",
+    "gps_code": "AR-0436",
+    "freq": "",
+    "Lat": -29.9939,
+    "Lon": -57.8378,
+    "Ele": 80.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Lucía Airport",
+    "gps_code": "AR-0437",
+    "freq": "",
+    "Lat": -33.0119,
+    "Lon": -61.0608,
+    "Ele": 72.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Madrugada Airport",
+    "gps_code": "AR-0438",
+    "freq": "",
+    "Lat": -38.0036,
+    "Lon": -59.3489,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Mariela Airport",
+    "gps_code": "AR-0439",
+    "freq": "",
+    "Lat": -35.7828,
+    "Lon": -61.9342,
+    "Ele": 86.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Zulema Airport",
+    "gps_code": "AR-0440",
+    "freq": "",
+    "Lat": -32.4897,
+    "Lon": -62.6714,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Lilas Airport",
+    "gps_code": "AR-0441",
+    "freq": "",
+    "Lat": -35.1328,
+    "Lon": -62.2175,
+    "Ele": 106.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Malabrigo Airport",
+    "gps_code": "AR-0442",
+    "freq": "",
+    "Lat": -29.35,
+    "Lon": -59.9667,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Montes De Oca Airport",
+    "gps_code": "AR-0444",
+    "freq": "",
+    "Lat": -32.5811,
+    "Lon": -61.8408,
+    "Ele": 18.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ñancu Airport",
+    "gps_code": "AR-0445",
+    "freq": "",
+    "Lat": -35.6161,
+    "Lon": -63.7508,
+    "Ele": 135.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pedro Ferrari Airport",
+    "gps_code": "AR-0446",
+    "freq": "",
+    "Lat": -32.9278,
+    "Lon": -62.4336,
+    "Ele": 107.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Petrazzini Airport",
+    "gps_code": "AR-0447",
+    "freq": "",
+    "Lat": -38.3478,
+    "Lon": -60.2761,
+    "Ele": 106.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Petruk",
+    "gps_code": "AR-0448",
+    "freq": "",
+    "Lat": -27.0878,
+    "Lon": -58.6694,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pettilep Airport",
+    "gps_code": "AR-0449",
+    "freq": "",
+    "Lat": -33.005,
+    "Lon": -61.0194,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pettilep II Airport",
+    "gps_code": "AR-0450",
+    "freq": "",
+    "Lat": -32.8039,
+    "Lon": -60.7989,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Puerta De Avalos Airport",
+    "gps_code": "AR-0451",
+    "freq": "",
+    "Lat": -24.314679,
+    "Lon": -65.247198,
+    "Ele": 1189.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pulverizaciones M.H. Airport",
+    "gps_code": "AR-0452",
+    "freq": "",
+    "Lat": -27.4831,
+    "Lon": -61.6486,
+    "Ele": 96.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Saldungaray Airport",
+    "gps_code": "AR-0453",
+    "freq": "",
+    "Lat": -38.205278,
+    "Lon": -61.761111,
+    "Ele": 227.7
+  },
+  {
+    "type": "small_airport",
+    "name": "San Cayetano Airport",
+    "gps_code": "AR-0454",
+    "freq": "",
+    "Lat": -38.3339,
+    "Lon": -59.6303,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San Gregorio Airport",
+    "gps_code": "AR-0455",
+    "freq": "",
+    "Lat": -34.3169,
+    "Lon": -62.0192,
+    "Ele": 105.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Ignacio Airport",
+    "gps_code": "AR-0456",
+    "freq": "",
+    "Lat": -39.8474998474,
+    "Lon": -70.8638916016,
+    "Ele": 691.0
+  },
+  {
+    "type": "small_airport",
+    "name": "San José De La Dormida Airport",
+    "gps_code": "AR-0457",
+    "freq": "",
+    "Lat": -30.2775001526,
+    "Lon": -63.8574981689,
+    "Ele": 422.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Santo Tomás de La Sierra Airport",
+    "gps_code": "AR-0458",
+    "freq": "",
+    "Lat": -38.241804,
+    "Lon": -61.827675,
+    "Ele": 272.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Savesa Airport",
+    "gps_code": "AR-0459",
+    "freq": "",
+    "Lat": -33.7792,
+    "Lon": -61.9775,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sigfrido Rohr Aviagro S.R.L. Airport",
+    "gps_code": "AR-0460",
+    "freq": "",
+    "Lat": -34.8306,
+    "Lon": -62.4678,
+    "Ele": 109.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Skare Airport",
+    "gps_code": "AR-0461",
+    "freq": "",
+    "Lat": -34.3571833134,
+    "Lon": -60.1559829712,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Timboy Airport",
+    "gps_code": "AR-0463",
+    "freq": "",
+    "Lat": -30.2236,
+    "Lon": -57.8444,
+    "Ele": 64.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Trevelin Airport",
+    "gps_code": "AR-0464",
+    "freq": "",
+    "Lat": -43.08797,
+    "Lon": -71.47868,
+    "Ele": 379.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Casilda Fumigaciones Airport",
+    "gps_code": "AR-0465",
+    "freq": "",
+    "Lat": -33.176429,
+    "Lon": -61.20299,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Yapeyú Airport",
+    "gps_code": "AR-0466",
+    "freq": "",
+    "Lat": -29.44393,
+    "Lon": -56.823915,
+    "Ele": 65.2
+  },
+  {
+    "type": "small_airport",
+    "name": "San Patricio Airport",
+    "gps_code": "AR-0485",
+    "freq": "",
+    "Lat": -34.0403,
+    "Lon": -59.6944,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Cura Malal Airport",
+    "gps_code": "AR-0486",
+    "freq": "",
+    "Lat": -34.074938,
+    "Lon": -60.140829,
+    "Ele": 36.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Argentina Airport",
+    "gps_code": "AR-0492",
+    "freq": "",
+    "Lat": -35.996667,
+    "Lon": -62.705278,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Paz Airport",
+    "gps_code": "AR-0493",
+    "freq": "",
+    "Lat": -33.467,
+    "Lon": -67.55,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Colonia Sarmiento Airport",
+    "gps_code": "AR-0494",
+    "freq": "",
+    "Lat": -45.582371,
+    "Lon": -68.999841,
+    "Ele": 267.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroaire Airport",
+    "gps_code": "AR-0495",
+    "freq": "",
+    "Lat": -27.476346,
+    "Lon": -61.624434,
+    "Ele": 100.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub de El Chaltén Alf. G.N.A. Walter Omar D Anna",
+    "gps_code": "AR-0496",
+    "freq": "",
+    "Lat": -49.53531,
+    "Lon": -72.51997,
+    "Ele": 389.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hipólito Yrigoyen Lago Posadas Airport",
+    "gps_code": "AR-0497",
+    "freq": "",
+    "Lat": -47.565833,
+    "Lon": -71.74,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Adela Airport",
+    "gps_code": "AR-0498",
+    "freq": "",
+    "Lat": -42.526064,
+    "Lon": -64.278661,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Delgada Airport",
+    "gps_code": "AR-0499",
+    "freq": "",
+    "Lat": -42.766485,
+    "Lon": -63.645458,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Camarones Airfield",
+    "gps_code": "AR-0500",
+    "freq": "",
+    "Lat": -44.779007,
+    "Lon": -65.719672,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Caleta Valdés Field",
+    "gps_code": "AR-0501",
+    "freq": "",
+    "Lat": -42.454874,
+    "Lon": -63.61908,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Telsen",
+    "gps_code": "AR-0502",
+    "freq": "",
+    "Lat": -42.383333,
+    "Lon": -66.95,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gan Gan Field",
+    "gps_code": "AR-0503",
+    "freq": "",
+    "Lat": -42.521363,
+    "Lon": -68.287861,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gastre Field",
+    "gps_code": "AR-0504",
+    "freq": "",
+    "Lat": -42.276165,
+    "Lon": -69.221892,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cushamen Field",
+    "gps_code": "AR-0505",
+    "freq": "",
+    "Lat": -42.17195981,
+    "Lon": -70.666176,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Plumas Filed",
+    "gps_code": "AR-0506",
+    "freq": "",
+    "Lat": -43.729305,
+    "Lon": -67.284822,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Cullen South Airport",
+    "gps_code": "AR-0507",
+    "freq": "",
+    "Lat": -52.9435,
+    "Lon": -68.4021,
+    "Ele": 36.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Sara Airport",
+    "gps_code": "AR-0508",
+    "freq": "",
+    "Lat": -53.432,
+    "Lon": -68.167,
+    "Ele": 15.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Chico Highway Strip",
+    "gps_code": "AR-0509",
+    "freq": "",
+    "Lat": -53.642,
+    "Lon": -67.9486,
+    "Ele": 7.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Robles Airport",
+    "gps_code": "AR-0510",
+    "freq": "",
+    "Lat": -54.069,
+    "Lon": -67.6536,
+    "Ele": 31.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroalvear S.R.L. Airport",
+    "gps_code": "AR-0511",
+    "freq": "",
+    "Lat": -33.06833,
+    "Lon": -60.66694,
+    "Ele": 31.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Arias Airport",
+    "gps_code": "AR-0512",
+    "freq": "",
+    "Lat": -33.664,
+    "Lon": -62.3751,
+    "Ele": 126.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Alborada",
+    "gps_code": "AR-0513",
+    "freq": "",
+    "Lat": -37.462706,
+    "Lon": -58.188557,
+    "Ele": 63.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca Cuchuy Airport",
+    "gps_code": "AR-0514",
+    "freq": "",
+    "Lat": -23.04,
+    "Lon": -63.7211,
+    "Ele": 282.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Calchaqui Airport",
+    "gps_code": "AR-0515",
+    "freq": "",
+    "Lat": -29.85167,
+    "Lon": -60.29194,
+    "Ele": 56.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Stiefel Airport",
+    "gps_code": "AR-0516",
+    "freq": "",
+    "Lat": -31.99472,
+    "Lon": -61.60278,
+    "Ele": 70.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumagro Airport",
+    "gps_code": "AR-0517",
+    "freq": "",
+    "Lat": -37.214729,
+    "Lon": -62.780581,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Establecimiento La Maria Pilar Airport",
+    "gps_code": "AR-0518",
+    "freq": "",
+    "Lat": -36.488606,
+    "Lon": -63.432958,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroservicios Airport",
+    "gps_code": "AR-0519",
+    "freq": "",
+    "Lat": -33.2723,
+    "Lon": -60.5707,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Alfomso Mengo Airport",
+    "gps_code": "AR-0520",
+    "freq": "",
+    "Lat": -32.02444,
+    "Lon": -64.27944,
+    "Ele": 542.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lomas del Espinillo Airport",
+    "gps_code": "AR-0521",
+    "freq": "",
+    "Lat": -32.08806,
+    "Lon": -64.16972,
+    "Ele": 439.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Ita Ibate Airport",
+    "gps_code": "AR-0522",
+    "freq": "",
+    "Lat": -27.44833,
+    "Lon": -57.422241,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de la Estancia San Rafael",
+    "gps_code": "AR-0523",
+    "freq": "",
+    "Lat": -25.04347,
+    "Lon": -58.5915,
+    "Ele": 87.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bernardo's Airport",
+    "gps_code": "AR-0524",
+    "freq": "",
+    "Lat": -32.2506,
+    "Lon": -61.6519,
+    "Ele": 88.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Salvita Airport",
+    "gps_code": "AR-0525",
+    "freq": "",
+    "Lat": -23.2128,
+    "Lon": -64.0339,
+    "Ele": 282.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Desafio",
+    "gps_code": "AR-0526",
+    "freq": "",
+    "Lat": -23.2426,
+    "Lon": -63.323,
+    "Ele": 243.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca La Hercilia Airport",
+    "gps_code": "AR-0527",
+    "freq": "",
+    "Lat": -22.6147,
+    "Lon": -63.662759,
+    "Ele": 374.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalbermatter Airport",
+    "gps_code": "AR-0528",
+    "freq": "",
+    "Lat": -27.26028,
+    "Lon": -61.47444,
+    "Ele": 100.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Potrero Airport",
+    "gps_code": "AR-0529",
+    "freq": "",
+    "Lat": -32.97472,
+    "Lon": -58.25389,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Plus Agroservicios Aereos S.R.L. Airport",
+    "gps_code": "AR-0530",
+    "freq": "",
+    "Lat": -33.8136,
+    "Lon": -61.3357,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Biondi Airport]",
+    "gps_code": "AR-0531",
+    "freq": "",
+    "Lat": -33.2232,
+    "Lon": -62.4046,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Casajus",
+    "gps_code": "AR-0532",
+    "freq": "",
+    "Lat": -33.3882,
+    "Lon": -63.3055,
+    "Ele": 144.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Don Emilio Airport",
+    "gps_code": "AR-0533",
+    "freq": "",
+    "Lat": -26.73247,
+    "Lon": -64.88455,
+    "Ele": 464.8
+  },
+  {
+    "type": "small_airport",
+    "name": "AeroSoluciones Airport",
+    "gps_code": "AR-0534",
+    "freq": "",
+    "Lat": -24.74889,
+    "Lon": -64.235,
+    "Ele": 491.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Don Alberto Airport",
+    "gps_code": "AR-0535",
+    "freq": "",
+    "Lat": -35.8696,
+    "Lon": -57.8768,
+    "Ele": 10.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Ortega Airport",
+    "gps_code": "AR-0536",
+    "freq": "",
+    "Lat": -35.275617,
+    "Lon": -61.55652,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo San Jose Airport",
+    "gps_code": "AR-0537",
+    "freq": "",
+    "Lat": -30.77778,
+    "Lon": -62.01472,
+    "Ele": 100.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pulverizaciones Aerosur Airport",
+    "gps_code": "AR-0538",
+    "freq": "",
+    "Lat": -38.576401,
+    "Lon": -58.796429,
+    "Ele": 16.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca Toloche Airport",
+    "gps_code": "AR-0539",
+    "freq": "",
+    "Lat": -25.4346,
+    "Lon": -63.8578,
+    "Ele": 317.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Noria Agricultural Airport",
+    "gps_code": "AR-0540",
+    "freq": "",
+    "Lat": -33.85696,
+    "Lon": -60.70038,
+    "Ele": 77.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Servicios Aeronauticos",
+    "gps_code": "AR-0541",
+    "freq": "",
+    "Lat": -37.523004,
+    "Lon": -62.452319,
+    "Ele": 263.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Carolina Airport",
+    "gps_code": "AR-0542",
+    "freq": "",
+    "Lat": -33.07558,
+    "Lon": -60.715,
+    "Ele": 33.5
+  },
+  {
+    "type": "small_airport",
+    "name": "SAS Aeroaplicaciones Airport",
+    "gps_code": "AR-0543",
+    "freq": "",
+    "Lat": -24.80667,
+    "Lon": -64.18111,
+    "Ele": 456.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Vale Airport",
+    "gps_code": "AR-0544",
+    "freq": "",
+    "Lat": -37.06556,
+    "Lon": -69.39556,
+    "Ele": 929.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroagereo",
+    "gps_code": "AR-0545",
+    "freq": "",
+    "Lat": -35.13588,
+    "Lon": -61.99717,
+    "Ele": 99.7
+  },
+  {
+    "type": "small_airport",
+    "name": "La Amalia",
+    "gps_code": "AR-0546",
+    "freq": "",
+    "Lat": -35.10042,
+    "Lon": -62.01656,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "BSG Airport",
+    "gps_code": "AR-0547",
+    "freq": "",
+    "Lat": -34.24968,
+    "Lon": -62.67416,
+    "Ele": 119.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Abelenda Airport",
+    "gps_code": "AR-0548",
+    "freq": "",
+    "Lat": -35.738533,
+    "Lon": -59.76201,
+    "Ele": 38.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Vergnano Airport",
+    "gps_code": "AR-0549",
+    "freq": "",
+    "Lat": -30.32012,
+    "Lon": -61.90165,
+    "Ele": 95.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeroclub San Javier",
+    "gps_code": "AR-0550",
+    "freq": "",
+    "Lat": -30.5559,
+    "Lon": -59.9907,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Chialva S. H. Airport",
+    "gps_code": "AR-0551",
+    "freq": "",
+    "Lat": -32.736945,
+    "Lon": -62.531378,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Clara de Saguier Airport",
+    "gps_code": "AR-0552",
+    "freq": "",
+    "Lat": -31.35549,
+    "Lon": -61.82983,
+    "Ele": 108.5
+  },
+  {
+    "type": "small_airport",
+    "name": "San Alberto Airport",
+    "gps_code": "AR-0553",
+    "freq": "",
+    "Lat": -36.592071,
+    "Lon": -64.220437,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cóndor del Aire Airport",
+    "gps_code": "AR-0554",
+    "freq": "",
+    "Lat": -33.46587,
+    "Lon": -60.62854,
+    "Ele": 60.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Nando Airport",
+    "gps_code": "AR-0555",
+    "freq": "",
+    "Lat": -29.77963,
+    "Lon": -62.03181,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Establecimiento El 21 Airport",
+    "gps_code": "AR-0556",
+    "freq": "",
+    "Lat": -26.8952,
+    "Lon": -62.30962,
+    "Ele": 166.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tío Pujio Airport",
+    "gps_code": "AR-0557",
+    "freq": "",
+    "Lat": -32.29307,
+    "Lon": -63.40197,
+    "Ele": 236.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Santagiulian Airport",
+    "gps_code": "AR-0558",
+    "freq": "",
+    "Lat": -38.40573,
+    "Lon": -60.29968,
+    "Ele": 106.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Los Lobles Airport",
+    "gps_code": "AR-0559",
+    "freq": "",
+    "Lat": -36.552913,
+    "Lon": -63.766652,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Criolla Airport",
+    "gps_code": "AR-0560",
+    "freq": "",
+    "Lat": -35.537034,
+    "Lon": -60.129512,
+    "Ele": 48.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Servicios Agroaereos Airport",
+    "gps_code": "AR-0561",
+    "freq": "",
+    "Lat": -35.449205,
+    "Lon": -60.160708,
+    "Ele": 50.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Don Angel Airport",
+    "gps_code": "AR-0562",
+    "freq": "",
+    "Lat": -33.93823,
+    "Lon": -64.40774,
+    "Ele": 243.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Beneficios S.R.L. Airport",
+    "gps_code": "AR-0563",
+    "freq": "",
+    "Lat": -33.93759,
+    "Lon": -64.415095,
+    "Ele": 243.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Comequechen Airport",
+    "gps_code": "AR-0564",
+    "freq": "",
+    "Lat": -33.93402,
+    "Lon": -64.415946,
+    "Ele": 245.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Isabel Airport",
+    "gps_code": "AR-0565",
+    "freq": "",
+    "Lat": -36.23682,
+    "Lon": -66.94624,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Limay Mahuida Airport",
+    "gps_code": "AR-0566",
+    "freq": "",
+    "Lat": -37.1201,
+    "Lon": -66.704,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueva Galia Airport",
+    "gps_code": "AR-0567",
+    "freq": "",
+    "Lat": -35.089382,
+    "Lon": -65.197724,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "RAIG S.A. Airport",
+    "gps_code": "AR-0568",
+    "freq": "",
+    "Lat": -32.4382,
+    "Lon": -63.2893,
+    "Ele": 208.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Suarez Aviación Airport",
+    "gps_code": "AR-0569",
+    "freq": "",
+    "Lat": -32.4272,
+    "Lon": -63.3024,
+    "Ele": 213.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Valeria Airport",
+    "gps_code": "AR-0570",
+    "freq": "",
+    "Lat": -34.35653,
+    "Lon": -64.90136,
+    "Ele": 291.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Coy Aike Airport",
+    "gps_code": "AR-0579",
+    "freq": "",
+    "Lat": -51.162246,
+    "Lon": -69.487675,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Elena Airport",
+    "gps_code": "AR-0580",
+    "freq": "",
+    "Lat": -49.727768,
+    "Lon": -68.756606,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fortin Lugones Airport",
+    "gps_code": "AR-0581",
+    "freq": "",
+    "Lat": -24.300451,
+    "Lon": -59.830954,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Posta Cambio a Zalazar Airport",
+    "gps_code": "AR-0582",
+    "freq": "",
+    "Lat": -24.214972,
+    "Lon": -60.201023,
+    "Ele": 134.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Cnel. Alfonso",
+    "gps_code": "AR-0583",
+    "freq": "",
+    "Lat": -25.130442,
+    "Lon": -58.217977,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo San Hilario",
+    "gps_code": "AR-0584",
+    "freq": "",
+    "Lat": -25.86448,
+    "Lon": -58.672887,
+    "Ele": 71.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Elena Airport",
+    "gps_code": "AR-0585",
+    "freq": "",
+    "Lat": -30.976069,
+    "Lon": -59.776894,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Augusto Leguizamon Airport",
+    "gps_code": "AR-0586",
+    "freq": "",
+    "Lat": -34.818011,
+    "Lon": -62.477107,
+    "Ele": 108.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Dutto Airport",
+    "gps_code": "AR-0587",
+    "freq": "",
+    "Lat": -28.870432,
+    "Lon": -62.241535,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Malfatto Airport",
+    "gps_code": "AR-0588",
+    "freq": "",
+    "Lat": -35.1517,
+    "Lon": -60.5056,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cañada Quiroz Airport",
+    "gps_code": "AR-0589",
+    "freq": "",
+    "Lat": -27.5497,
+    "Lon": -58.7175,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Malatini Airport",
+    "gps_code": "AR-0590",
+    "freq": "",
+    "Lat": -35.569123,
+    "Lon": -61.368224,
+    "Ele": 81.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ottaviani Airport",
+    "gps_code": "AR-0591",
+    "freq": "",
+    "Lat": -35.648137,
+    "Lon": -61.350425,
+    "Ele": 81.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Copetonas Airport",
+    "gps_code": "AR-0592",
+    "freq": "",
+    "Lat": -38.743657,
+    "Lon": -60.553332,
+    "Ele": 50.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Don Moises Airport",
+    "gps_code": "AR-0593",
+    "freq": "",
+    "Lat": -32.039622,
+    "Lon": -64.192827,
+    "Ele": 488.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Itati Airport",
+    "gps_code": "AR-0594",
+    "freq": "",
+    "Lat": -27.305297,
+    "Lon": -58.313924,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Las 2 A Airport",
+    "gps_code": "AR-0595",
+    "freq": "",
+    "Lat": -34.811475,
+    "Lon": -60.51701,
+    "Ele": 59.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Daireaux Airport",
+    "gps_code": "AR-0596",
+    "freq": "",
+    "Lat": -36.580056,
+    "Lon": -61.784878,
+    "Ele": 115.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Santa Elisa Airport",
+    "gps_code": "AR-0597",
+    "freq": "",
+    "Lat": -29.304436,
+    "Lon": -56.881343,
+    "Ele": 62.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Hernando Airport",
+    "gps_code": "AR-0598",
+    "freq": "",
+    "Lat": -32.337145,
+    "Lon": -63.685178,
+    "Ele": 281.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Antares Airport",
+    "gps_code": "AR-0599",
+    "freq": "",
+    "Lat": -34.528223,
+    "Lon": -63.960879,
+    "Ele": 153.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Lanteri Airpiort",
+    "gps_code": "AR-0600",
+    "freq": "",
+    "Lat": -28.86085,
+    "Lon": -59.673331,
+    "Ele": 55.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroalas S.R.L. Airport",
+    "gps_code": "AR-0601",
+    "freq": "",
+    "Lat": -26.870159,
+    "Lon": -64.74663,
+    "Ele": 345.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Horizonte Aplicaciones Areas Airport",
+    "gps_code": "AR-0602",
+    "freq": "",
+    "Lat": -32.521761,
+    "Lon": -61.550695,
+    "Ele": 97.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Samave Airport",
+    "gps_code": "AR-0603",
+    "freq": "",
+    "Lat": -33.786401,
+    "Lon": -62.127806,
+    "Ele": 108.8
+  },
+  {
+    "type": "small_airport",
+    "name": "El Recuerdo S.R.L. Airport",
+    "gps_code": "AR-0604",
+    "freq": "",
+    "Lat": -33.10549,
+    "Lon": -63.192986,
+    "Ele": 137.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Rovere Airport",
+    "gps_code": "AR-0605",
+    "freq": "",
+    "Lat": -26.783029,
+    "Lon": -60.487414,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Elba",
+    "gps_code": "AR-0606",
+    "freq": "",
+    "Lat": -44.5728,
+    "Lon": -65.3706,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Fumigaciones Herbinsec Airport",
+    "gps_code": "AR-0607",
+    "freq": "",
+    "Lat": -35.13652,
+    "Lon": -61.99028,
+    "Ele": 102.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Parajon Airport",
+    "gps_code": "AR-0608",
+    "freq": "",
+    "Lat": -34.576385,
+    "Lon": -61.005748,
+    "Ele": 83.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Bahía Laura Airport",
+    "gps_code": "AR-0609",
+    "freq": "",
+    "Lat": -48.331097,
+    "Lon": -66.417847,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Fitz Roy Airport",
+    "gps_code": "AR-0610",
+    "freq": "",
+    "Lat": -47.021639,
+    "Lon": -67.241585,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tres Cerros Airport",
+    "gps_code": "AR-0611",
+    "freq": "",
+    "Lat": -48.138678,
+    "Lon": -67.655065,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ministro Ramos Mexía Airport",
+    "gps_code": "AR-0612",
+    "freq": "",
+    "Lat": -40.523752,
+    "Lon": -67.214651,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arroyo de la Ventana Airport",
+    "gps_code": "AR-0613",
+    "freq": "",
+    "Lat": -41.669222,
+    "Lon": -66.097071,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dique Florentino Ameghino Airport",
+    "gps_code": "AR-0614",
+    "freq": "",
+    "Lat": -43.674928,
+    "Lon": -66.493948,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Arroyo Los Berros Airport",
+    "gps_code": "AR-0615",
+    "freq": "",
+    "Lat": -41.438981,
+    "Lon": -66.090185,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Caldonia Airport",
+    "gps_code": "AR-0616",
+    "freq": "",
+    "Lat": -32.1306,
+    "Lon": -61.8935,
+    "Ele": 111.3
+  },
+  {
+    "type": "small_airport",
+    "name": "El Ocho Airstrip",
+    "gps_code": "AR-0617",
+    "freq": "",
+    "Lat": -31.799689,
+    "Lon": -59.703579,
+    "Ele": 78.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Timbo Airstrip",
+    "gps_code": "AR-0618",
+    "freq": "",
+    "Lat": -31.8266,
+    "Lon": -59.0333,
+    "Ele": 57.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Puerto San Antonio Este Airstrip",
+    "gps_code": "AR-0619",
+    "freq": "",
+    "Lat": -40.799532,
+    "Lon": -64.864185,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Guardia Mitre Airstrip",
+    "gps_code": "AR-0620",
+    "freq": "",
+    "Lat": -40.418091,
+    "Lon": -63.663347,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Sistina Airstrip",
+    "gps_code": "AR-0621",
+    "freq": "",
+    "Lat": -36.974031,
+    "Lon": -62.436969,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Anillaco Airport",
+    "gps_code": "AR-0622",
+    "freq": "",
+    "Lat": -28.795111,
+    "Lon": -66.914675,
+    "Ele": 1299.7
+  },
+  {
+    "type": "small_airport",
+    "name": "El Sauzalito Airport",
+    "gps_code": "AR-0623",
+    "freq": "",
+    "Lat": -24.443851,
+    "Lon": -61.68824,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingeniero Juárez Airport",
+    "gps_code": "AR-0624",
+    "freq": "",
+    "Lat": -23.904822,
+    "Lon": -61.820092,
+    "Ele": 181.4
+  },
+  {
+    "type": "small_airport",
+    "name": "La Cruz Airport",
+    "gps_code": "AR-0625",
+    "freq": "",
+    "Lat": -29.159962,
+    "Lon": -56.658639,
+    "Ele": 66.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Loma Alta Airport",
+    "gps_code": "AR-0626",
+    "freq": "",
+    "Lat": -29.049088,
+    "Lon": -57.081729,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Itá Caabó Airport",
+    "gps_code": "AR-0627",
+    "freq": "",
+    "Lat": -29.29287,
+    "Lon": -57.727213,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Cencerro Airport",
+    "gps_code": "AR-0628",
+    "freq": "",
+    "Lat": -30.534775,
+    "Lon": -60.438022,
+    "Ele": 50.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Pinocho",
+    "gps_code": "AR-0629",
+    "freq": "",
+    "Lat": -32.564739,
+    "Lon": -58.51746,
+    "Ele": 17.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Elisa Airport",
+    "gps_code": "AR-0630",
+    "freq": "",
+    "Lat": -34.038888,
+    "Lon": -59.776944,
+    "Ele": 46.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Los Leones Airport",
+    "gps_code": "AR-0631",
+    "freq": "",
+    "Lat": -31.170558,
+    "Lon": -60.718125,
+    "Ele": 38.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Trebolares Airport",
+    "gps_code": "AR-0632",
+    "freq": "",
+    "Lat": -35.636734,
+    "Lon": -63.498798,
+    "Ele": 114.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rincón de Luna Airport",
+    "gps_code": "AR-0633",
+    "freq": "",
+    "Lat": -28.470238,
+    "Lon": -58.249234,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Finca Porvenir 8 Airport",
+    "gps_code": "AR-0634",
+    "freq": "",
+    "Lat": -24.994562,
+    "Lon": -64.341664,
+    "Ele": 527.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Cabaña Los Gatos Airport",
+    "gps_code": "AR-0635",
+    "freq": "",
+    "Lat": -27.142412,
+    "Lon": -61.764272,
+    "Ele": 167.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Las Marias Airport",
+    "gps_code": "AR-0636",
+    "freq": "",
+    "Lat": -32.470437,
+    "Lon": -66.082103,
+    "Ele": 645.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia 13 de Abril Airport",
+    "gps_code": "AR-0638",
+    "freq": "",
+    "Lat": -35.515511,
+    "Lon": -61.758924,
+    "Ele": 84.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pichanal-Franzini Airport",
+    "gps_code": "AR-0640",
+    "freq": "",
+    "Lat": -23.338946,
+    "Lon": -64.247126,
+    "Ele": 306.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Traill Southeast Airport",
+    "gps_code": "AR-0641",
+    "freq": "",
+    "Lat": -31.922586,
+    "Lon": -61.692139,
+    "Ele": 75.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Cuadrado Airport",
+    "gps_code": "AR-0643",
+    "freq": "",
+    "Lat": -28.285565,
+    "Lon": -61.764686,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Los Amores NW Airport",
+    "gps_code": "AR-0645",
+    "freq": "",
+    "Lat": -28.069557,
+    "Lon": -60.00947,
+    "Ele": 60.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Juana Airport",
+    "gps_code": "AR-0650",
+    "freq": "",
+    "Lat": -28.955846,
+    "Lon": -56.742668,
+    "Ele": 65.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Matilde Airport",
+    "gps_code": "AR-0655",
+    "freq": "",
+    "Lat": -29.356949,
+    "Lon": -59.872313,
+    "Ele": 53.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Lola Airport",
+    "gps_code": "AR-0656",
+    "freq": "",
+    "Lat": -29.261898,
+    "Lon": -59.736593,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Blondi Airport",
+    "gps_code": "AR-0657",
+    "freq": "",
+    "Lat": -30.75769,
+    "Lon": -63.74818,
+    "Ele": 249.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chajari Sur Airport",
+    "gps_code": "AR-0658",
+    "freq": "",
+    "Lat": -30.80228,
+    "Lon": -58.014325,
+    "Ele": 68.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Norberto de La Riestra Airport",
+    "gps_code": "AR-0668",
+    "freq": "",
+    "Lat": -35.327705,
+    "Lon": -59.791042,
+    "Ele": 38.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Triángulo Airport",
+    "gps_code": "AR-0669",
+    "freq": "",
+    "Lat": -36.349041,
+    "Lon": -62.226133,
+    "Ele": 103.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hallpa Huayra Airport",
+    "gps_code": "AR-0670",
+    "freq": "",
+    "Lat": -32.207863,
+    "Lon": -64.533906,
+    "Ele": 556.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Totoritas Airport",
+    "gps_code": "AR-0671",
+    "freq": "",
+    "Lat": -33.842439,
+    "Lon": -65.324836,
+    "Ele": 448.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerofumigaciones Bartoli Hermanos Airstrip",
+    "gps_code": "AR-0672",
+    "freq": "",
+    "Lat": -33.471415,
+    "Lon": -62.327058,
+    "Ele": 123.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Suyai - Lago Pueyrredon Airstrip",
+    "gps_code": "AR-0673",
+    "freq": "",
+    "Lat": -47.365317,
+    "Lon": -71.97239,
+    "Ele": 159.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mahmet Fumigaciones Aereas Airport",
+    "gps_code": "AR-0674",
+    "freq": "",
+    "Lat": -35.1486,
+    "Lon": -60.5245,
+    "Ele": 59.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Agroaereo Bragado Airport",
+    "gps_code": "AR-0675",
+    "freq": "",
+    "Lat": -35.1755,
+    "Lon": -60.4563,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Laguna El Abuelo Airstrip",
+    "gps_code": "AR-0676",
+    "freq": "",
+    "Lat": -35.24815,
+    "Lon": -60.487,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cerro Vanguardia Airstrip",
+    "gps_code": "AR-0677",
+    "freq": "",
+    "Lat": -48.373634,
+    "Lon": -68.107842,
+    "Ele": 176.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Santa Elena Airport",
+    "gps_code": "AR-0679",
+    "freq": "",
+    "Lat": -47.78901,
+    "Lon": -65.92325,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia 8 de Julio Airport",
+    "gps_code": "AR-0680",
+    "freq": "",
+    "Lat": -47.89627,
+    "Lon": -66.06144,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campamento Darwin Airport",
+    "gps_code": "AR-0681",
+    "freq": "",
+    "Lat": -47.89664,
+    "Lon": -66.46093,
+    "Ele": 117.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Chaira Airport",
+    "gps_code": "AR-0682",
+    "freq": "",
+    "Lat": -48.17187,
+    "Lon": -66.81911,
+    "Ele": 135.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campamento Darwin West Airport",
+    "gps_code": "AR-0683",
+    "freq": "",
+    "Lat": -47.88052,
+    "Lon": -66.47105,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago Escondido Airport",
+    "gps_code": "AR-0684",
+    "freq": "",
+    "Lat": -54.63158,
+    "Lon": -67.7555,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Monte Aymond Airport",
+    "gps_code": "AR-0685",
+    "freq": "",
+    "Lat": -52.12706,
+    "Lon": -69.50706,
+    "Ele": 164.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Monte León Landing Strip",
+    "gps_code": "AR-0687",
+    "freq": "",
+    "Lat": -50.28512,
+    "Lon": -69.1858,
+    "Ele": 352.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Las Lagunas Airport",
+    "gps_code": "AR-0688",
+    "freq": "",
+    "Lat": -49.72988,
+    "Lon": -68.34898,
+    "Ele": 104.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Salado Airport",
+    "gps_code": "AR-0689",
+    "freq": "",
+    "Lat": -48.72272,
+    "Lon": -67.71851,
+    "Ele": 142.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Río Seco Airport",
+    "gps_code": "AR-0690",
+    "freq": "",
+    "Lat": -48.53148,
+    "Lon": -67.20996,
+    "Ele": 89.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Laguna Flamenco Airport",
+    "gps_code": "AR-0691",
+    "freq": "",
+    "Lat": -48.38114,
+    "Lon": -66.83524,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Laguna Salada Airport",
+    "gps_code": "AR-0692",
+    "freq": "",
+    "Lat": -48.4233,
+    "Lon": -66.83072,
+    "Ele": 70.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Mercedes Airport",
+    "gps_code": "AR-0693",
+    "freq": "",
+    "Lat": -48.38884,
+    "Lon": -66.4837,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Mercedes West Airport",
+    "gps_code": "AR-0694",
+    "freq": "",
+    "Lat": -48.42077,
+    "Lon": -66.65689,
+    "Ele": 28.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Cabo Tres Puntas Airport",
+    "gps_code": "AR-0695",
+    "freq": "",
+    "Lat": -47.12832,
+    "Lon": -66.06579,
+    "Ele": 143.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Estrella Airport",
+    "gps_code": "AR-0696",
+    "freq": "",
+    "Lat": -47.31099,
+    "Lon": -65.9749,
+    "Ele": 124.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tellier Airport",
+    "gps_code": "AR-0697",
+    "freq": "",
+    "Lat": -47.59579,
+    "Lon": -66.07211,
+    "Ele": 113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Polvorin Airport",
+    "gps_code": "AR-0698",
+    "freq": "",
+    "Lat": -47.11292,
+    "Lon": -66.48299,
+    "Ele": 160.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Mazaredo Airport",
+    "gps_code": "AR-0699",
+    "freq": "",
+    "Lat": -47.07713,
+    "Lon": -66.69364,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "La Floradora Airport",
+    "gps_code": "AR-0700",
+    "freq": "",
+    "Lat": -47.11304,
+    "Lon": -66.80995,
+    "Ele": 178.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Manantiales Behr Compressor Plant Airport",
+    "gps_code": "AR-0701",
+    "freq": "",
+    "Lat": -45.55715,
+    "Lon": -67.66875,
+    "Ele": 641.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gravina Peninsula Airport",
+    "gps_code": "AR-0702",
+    "freq": "",
+    "Lat": -45.15064,
+    "Lon": -66.49068,
+    "Ele": 24.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Garayalde Airport",
+    "gps_code": "AR-0703",
+    "freq": "",
+    "Lat": -44.70351,
+    "Lon": -66.64073,
+    "Ele": 445.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Maciega Airport",
+    "gps_code": "AR-0704",
+    "freq": "",
+    "Lat": -44.45854,
+    "Lon": -65.60563,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "La Lonja Airport",
+    "gps_code": "AR-0705",
+    "freq": "",
+    "Lat": -43.90377,
+    "Lon": -65.70839,
+    "Ele": 275.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Ninfas Airport",
+    "gps_code": "AR-0706",
+    "freq": "",
+    "Lat": -42.97667,
+    "Lon": -64.3528,
+    "Ele": 73.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Mejillón Airport",
+    "gps_code": "AR-0707",
+    "freq": "",
+    "Lat": -40.98547,
+    "Lon": -64.17166,
+    "Ele": 25.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pico Sayago Airport",
+    "gps_code": "AR-0708",
+    "freq": "",
+    "Lat": -42.815058,
+    "Lon": -64.026432,
+    "Ele": 55.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Haras Wassermann Airport",
+    "gps_code": "AR-0709",
+    "freq": "",
+    "Lat": -40.59622,
+    "Lon": -62.19203,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Reducto Airport",
+    "gps_code": "AR-0710",
+    "freq": "",
+    "Lat": -39.7964,
+    "Lon": -62.31613,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campamento Jorge Cepernic Airport",
+    "gps_code": "AR-0712",
+    "freq": "",
+    "Lat": -50.30009,
+    "Lon": -70.15045,
+    "Ele": 387.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Horquetas Airport",
+    "gps_code": "AR-0713",
+    "freq": "",
+    "Lat": -51.39524,
+    "Lon": -70.23175,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rospentek Airport",
+    "gps_code": "AR-0714",
+    "freq": "",
+    "Lat": -51.66915,
+    "Lon": -72.13719,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Tapi Aike Airport",
+    "gps_code": "AR-0715",
+    "freq": "",
+    "Lat": -51.05038,
+    "Lon": -71.81291,
+    "Ele": 296.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Fuentes de Coyle Airport",
+    "gps_code": "AR-0716",
+    "freq": "",
+    "Lat": -51.03431,
+    "Lon": -71.48158,
+    "Ele": 284.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Río Bote Airport",
+    "gps_code": "AR-0717",
+    "freq": "",
+    "Lat": -50.26132,
+    "Lon": -71.72777,
+    "Ele": 177.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Gendarme Barreto West Airport",
+    "gps_code": "AR-0718",
+    "freq": "",
+    "Lat": -50.27839,
+    "Lon": -71.04281,
+    "Ele": 250.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gendarme Barreto Airport",
+    "gps_code": "AR-0719",
+    "freq": "",
+    "Lat": -50.28758,
+    "Lon": -70.90429,
+    "Ele": 299.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chucuruc Aike Airport",
+    "gps_code": "AR-0720",
+    "freq": "",
+    "Lat": -50.10765,
+    "Lon": -69.38463,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Julia Airport",
+    "gps_code": "AR-0721",
+    "freq": "",
+    "Lat": -49.58133,
+    "Lon": -69.59216,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Casa Riera Airport",
+    "gps_code": "AR-0722",
+    "freq": "",
+    "Lat": -48.40504,
+    "Lon": -70.56118,
+    "Ele": 448.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Silvina Airport",
+    "gps_code": "AR-0723",
+    "freq": "",
+    "Lat": -48.35107,
+    "Lon": -70.80247,
+    "Ele": 501.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Yacimiento el Valle Lago del Desierto Airport",
+    "gps_code": "AR-0724",
+    "freq": "",
+    "Lat": -46.71752,
+    "Lon": -68.30155,
+    "Ele": 248.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Stroeder Southeast Airport",
+    "gps_code": "AR-0725",
+    "freq": "",
+    "Lat": -40.20968,
+    "Lon": -62.60485,
+    "Ele": 28.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahía de los Moros Airport",
+    "gps_code": "AR-0726",
+    "freq": "",
+    "Lat": -38.51425,
+    "Lon": -58.47415,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Quequén Airport",
+    "gps_code": "AR-0727",
+    "freq": "",
+    "Lat": -38.505,
+    "Lon": -58.69127,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campomar Airport",
+    "gps_code": "AR-0728",
+    "freq": "",
+    "Lat": -38.64912,
+    "Lon": -59.00613,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Itatí",
+    "gps_code": "AR-0729",
+    "freq": "",
+    "Lat": -27.288045,
+    "Lon": -58.244662,
+    "Ele": 63.1
+  },
+  {
+    "type": "small_airport",
+    "name": "El Chaltén North Airport",
+    "gps_code": "AR-0730",
+    "freq": "",
+    "Lat": -49.27908,
+    "Lon": -72.88582,
+    "Ele": 416.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Pastosa Airport",
+    "gps_code": "AR-0735",
+    "freq": "",
+    "Lat": -42.76575,
+    "Lon": -63.74213,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ushuaia Aeroclub Airport",
+    "gps_code": "AR-0736",
+    "freq": "122.100",
+    "Lat": -54.8227,
+    "Lon": -68.3043,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Aristóbulo del Valle Aeroclub",
+    "gps_code": "AR-0737",
+    "freq": "",
+    "Lat": -27.138559,
+    "Lon": -54.887205,
+    "Ele": 470.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingenio San Isidro airstrip",
+    "gps_code": "AR-0738",
+    "freq": "",
+    "Lat": -24.68473,
+    "Lon": -65.017047,
+    "Ele": 211.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Piñero Airfield",
+    "gps_code": "AR-0739",
+    "freq": "",
+    "Lat": -33.097044,
+    "Lon": -60.777807,
+    "Ele": 37.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Pedro Airport",
+    "gps_code": "AR-0756",
+    "freq": "",
+    "Lat": -33.704077,
+    "Lon": -59.725788,
+    "Ele": 26.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia San José Airstrip",
+    "gps_code": "AR-0757",
+    "freq": "",
+    "Lat": -49.410757,
+    "Lon": -72.780266,
+    "Ele": 275.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago Buenos Aires (Los Antiguos) Airfield",
+    "gps_code": "AR-0758",
+    "freq": "",
+    "Lat": -46.55788,
+    "Lon": -71.61054,
+    "Ele": 289.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia Victoria Airstrip",
+    "gps_code": "AR-0759",
+    "freq": "",
+    "Lat": -46.27989,
+    "Lon": -71.6778,
+    "Ele": 307.8
+  },
+  {
+    "type": "small_airport",
+    "name": "El Aduar Airstrip",
+    "gps_code": "AR-0760",
+    "freq": "",
+    "Lat": -28.574444,
+    "Lon": -60.2625,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "El Chou Airstrip",
+    "gps_code": "AR-0761",
+    "freq": "",
+    "Lat": -31.491111,
+    "Lon": -59.597222,
+    "Ele": 80.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Teresa Airstrip",
+    "gps_code": "AR-0762",
+    "freq": "",
+    "Lat": -27.454674,
+    "Lon": -61.49453,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia 10 Noviembre Airstrip",
+    "gps_code": "AR-0763",
+    "freq": "",
+    "Lat": -35.58308,
+    "Lon": -62.481018,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia El Destino Airfield",
+    "gps_code": "AR-0765",
+    "freq": "",
+    "Lat": -38.76672,
+    "Lon": -60.45403,
+    "Ele": 43.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Moderna Airfield",
+    "gps_code": "AR-0766",
+    "freq": "",
+    "Lat": -37.95225,
+    "Lon": -59.8382,
+    "Ele": 185.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aeroestación Yabotí",
+    "gps_code": "AR-0767",
+    "freq": "",
+    "Lat": -27.180308,
+    "Lon": -54.107368,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aerocampo CSA airport",
+    "gps_code": "CSA",
+    "freq": "123.450",
+    "Lat": -31.6614544415,
+    "Lon": -63.277130127,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Loncopue Airport",
+    "gps_code": "LCP",
+    "freq": "",
+    "Lat": -38.081902,
+    "Lon": -70.643898,
+    "Ele": 1105.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Cachi Airport",
+    "gps_code": "SA01",
+    "freq": "",
+    "Lat": -25.1049995422,
+    "Lon": -66.15720367429999,
+    "Ele": 2509.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Cafayate Airport",
+    "gps_code": "SA02",
+    "freq": "",
+    "Lat": -26.056101,
+    "Lon": -65.936897,
+    "Ele": 1638.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Minetti Airport",
+    "gps_code": "SA03",
+    "freq": "",
+    "Lat": -28.6201,
+    "Lon": -61.6038,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Isla Martin Garcia Airport",
+    "gps_code": "SA04",
+    "freq": "",
+    "Lat": -34.1821,
+    "Lon": -58.2469,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bell Ville Airport",
+    "gps_code": "SA05",
+    "freq": "",
+    "Lat": -32.6599,
+    "Lon": -62.702,
+    "Ele": 130.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Rita Airport",
+    "gps_code": "SA06",
+    "freq": "",
+    "Lat": -35.8283,
+    "Lon": -60.1467,
+    "Ele": 53.9
+  },
+  {
+    "type": "small_airport",
+    "name": "El Porton Airport",
+    "gps_code": "SA07",
+    "freq": "",
+    "Lat": -37.19432,
+    "Lon": -69.612619,
+    "Ele": 869.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo Estancia Don Panos",
+    "gps_code": "SA10",
+    "freq": "",
+    "Lat": -26.2959,
+    "Lon": -59.5353,
+    "Ele": 79.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo Arenal Airport",
+    "gps_code": "SA11",
+    "freq": "",
+    "Lat": -27.0723,
+    "Lon": -66.586098,
+    "Ele": 2323.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Quemu Quemu Airport",
+    "gps_code": "SA12",
+    "freq": "",
+    "Lat": -36.0587,
+    "Lon": -63.6313,
+    "Ele": 120.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Estancia La Estrella Airport",
+    "gps_code": "SA13",
+    "freq": "",
+    "Lat": -37.559399,
+    "Lon": -58.666,
+    "Ele": 139.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Miramar Airport",
+    "gps_code": "SA14",
+    "freq": "",
+    "Lat": -38.2271,
+    "Lon": -57.8697,
+    "Ele": 12.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago Fagnano North Airport",
+    "gps_code": "SA15",
+    "freq": "",
+    "Lat": -54.499699,
+    "Lon": -67.173103,
+    "Ele": 182.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Puntilla Airport",
+    "gps_code": "SA16",
+    "freq": "119.900",
+    "Lat": -32.962799,
+    "Lon": -68.873703,
+    "Ele": 942.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Cuarto Aeroclub Airport",
+    "gps_code": "SA17",
+    "freq": "",
+    "Lat": -33.1605987549,
+    "Lon": -64.3382034302,
+    "Ele": 433.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Puerto Deseado West Airport",
+    "gps_code": "SA19",
+    "freq": "",
+    "Lat": -47.7201004028,
+    "Lon": -65.9324035645,
+    "Ele": 82.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Loma La Lata Airport",
+    "gps_code": "SA20",
+    "freq": "",
+    "Lat": -38.413799,
+    "Lon": -68.737297,
+    "Ele": 404.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Veinticinco De Mayo Airport",
+    "gps_code": "SA21",
+    "freq": "",
+    "Lat": -37.8097991943,
+    "Lon": -67.6593017578,
+    "Ele": 346.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Victoria Airport",
+    "gps_code": "SA22",
+    "freq": "",
+    "Lat": -22.2856998444,
+    "Lon": -62.7136993408,
+    "Ele": 279.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Apóstoles Airport",
+    "gps_code": "SA23",
+    "freq": "",
+    "Lat": -27.9032001495,
+    "Lon": -55.765499115,
+    "Ele": 177.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Calilegua Airport",
+    "gps_code": "SA24",
+    "freq": "",
+    "Lat": -23.7819,
+    "Lon": -64.749496,
+    "Ele": 441.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Cañadon Seco Airport",
+    "gps_code": "SA25",
+    "freq": "",
+    "Lat": -46.539,
+    "Lon": -67.5639,
+    "Ele": 89.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bella Vista Airport",
+    "gps_code": "SA26",
+    "freq": "",
+    "Lat": -28.5262,
+    "Lon": -59.0385,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Puerto Rosales Airport",
+    "gps_code": "SA27",
+    "freq": "",
+    "Lat": -38.897434,
+    "Lon": -62.010217,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Choele Choel Airport",
+    "gps_code": "SA29",
+    "freq": "",
+    "Lat": -39.2863998413,
+    "Lon": -65.6102981567,
+    "Ele": 195.7
+  },
+  {
+    "type": "small_airport",
+    "name": "San Nicolas de los Arroyos Airport",
+    "gps_code": "SA31",
+    "freq": "",
+    "Lat": -33.3907,
+    "Lon": -60.1957,
+    "Ele": 29.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Venado Tuerto Airport",
+    "gps_code": "SA32",
+    "freq": "",
+    "Lat": -33.6818,
+    "Lon": -61.9564,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Comandante Luis Piedrabuena Airport",
+    "gps_code": "SA33",
+    "freq": "",
+    "Lat": -49.9951,
+    "Lon": -68.9531,
+    "Ele": 23.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Trelew Aeroclub Airport",
+    "gps_code": "SA34",
+    "freq": "",
+    "Lat": -43.2356,
+    "Lon": -65.3241,
+    "Ele": 38.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Andalgalá Airport",
+    "gps_code": "SA35",
+    "freq": "",
+    "Lat": -27.631701,
+    "Lon": -66.3508,
+    "Ele": 899.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Saladillo Airport",
+    "gps_code": "SA36",
+    "freq": "",
+    "Lat": -35.604891,
+    "Lon": -59.816513,
+    "Ele": 44.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Lajas Airport",
+    "gps_code": "SA38",
+    "freq": "",
+    "Lat": -38.538898,
+    "Lon": -70.337097,
+    "Ele": 849.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Jujuy Aeroclub Airport",
+    "gps_code": "SA39",
+    "freq": "",
+    "Lat": -24.2364997864,
+    "Lon": -65.2690963745,
+    "Ele": 1233.5
+  },
+  {
+    "type": "small_airport",
+    "name": "San Juan Aeroclub Airport",
+    "gps_code": "SA40",
+    "freq": "",
+    "Lat": -31.6028003693,
+    "Lon": -68.5473022461,
+    "Ele": 633.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo El Colorado",
+    "gps_code": "SA41",
+    "freq": "",
+    "Lat": -26.316687,
+    "Lon": -59.339764,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Santa Maria Airport",
+    "gps_code": "SA42",
+    "freq": "",
+    "Lat": -26.673400878900004,
+    "Lon": -66.0240020752,
+    "Ele": 1799.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Londres/Belén Airport",
+    "gps_code": "SA44",
+    "freq": "",
+    "Lat": -27.7078990936,
+    "Lon": -67.0951004028,
+    "Ele": 1199.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Frias Airport",
+    "gps_code": "SA45",
+    "freq": "",
+    "Lat": -28.6343994141,
+    "Lon": -65.1091995239,
+    "Ele": 329.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Fiambala Airport",
+    "gps_code": "SA46",
+    "freq": "",
+    "Lat": -27.6422,
+    "Lon": -67.624702,
+    "Ele": 1532.8
+  },
+  {
+    "type": "small_airport",
+    "name": "San Antonio de Areco Airport",
+    "gps_code": "SAAA",
+    "freq": "",
+    "Lat": -34.2214,
+    "Lon": -59.4422,
+    "Ele": 29.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Comodoro Pierrestegui Airport",
+    "gps_code": "SAAC",
+    "freq": "122.100",
+    "Lat": -31.2969,
+    "Lon": -57.9966,
+    "Ele": 34.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gualeguaychu Airport",
+    "gps_code": "SAAG",
+    "freq": "118.400",
+    "Lat": -33.005567,
+    "Lon": -58.612833,
+    "Ele": 22.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta Indio Naval Air Base",
+    "gps_code": "SAAI",
+    "freq": "",
+    "Lat": -35.353298,
+    "Lon": -57.290001,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pergamino Airport",
+    "gps_code": "SAAN",
+    "freq": "",
+    "Lat": -33.919,
+    "Lon": -60.648,
+    "Ele": 71.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "General Urquiza Airport",
+    "gps_code": "SAAP",
+    "freq": "119.600",
+    "Lat": -31.7948,
+    "Lon": -60.4804,
+    "Ele": 73.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rosario Islas Malvinas International Airport",
+    "gps_code": "SAAR",
+    "freq": "118.700",
+    "Lat": -32.9036,
+    "Lon": -60.785,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Villaguay Airport",
+    "gps_code": "SAAU",
+    "freq": "",
+    "Lat": -31.855,
+    "Lon": -59.0756,
+    "Ele": 39.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sauce Viejo Airport",
+    "gps_code": "SAAV",
+    "freq": "118.950",
+    "Lat": -31.7117,
+    "Lon": -60.8117,
+    "Ele": 16.8
+  },
+  {
+    "type": "large_airport",
+    "name": "Jorge Newbery Airpark",
+    "gps_code": "SABE",
+    "freq": "120.600",
+    "Lat": -34.5592,
+    "Lon": -58.4156,
+    "Ele": 5.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Captain D Omar Darío Gelardi Airport",
+    "gps_code": "SACA",
+    "freq": "121.900",
+    "Lat": -31.4419,
+    "Lon": -64.258202,
+    "Ele": 485.9
+  },
+  {
+    "type": "small_airport",
+    "name": "La Cumbre Airport",
+    "gps_code": "SACC",
+    "freq": "",
+    "Lat": -31.0058,
+    "Lon": -64.531898,
+    "Ele": 1137.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Coronel Olmedo Airport",
+    "gps_code": "SACD",
+    "freq": "",
+    "Lat": -31.487499,
+    "Lon": -64.141403,
+    "Ele": 431.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Escuela de Aviación Militar (Military Aviation School) Airport",
+    "gps_code": "SACE",
+    "freq": "",
+    "Lat": -31.444223,
+    "Lon": -64.283377,
+    "Ele": 501.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilar Airport",
+    "gps_code": "SACI",
+    "freq": "",
+    "Lat": -31.6819992065,
+    "Lon": -63.8638000488,
+    "Ele": 326.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Laguna Larga Airport",
+    "gps_code": "SACL",
+    "freq": "",
+    "Lat": -31.0,
+    "Lon": -63.0,
+    "Ele": 308.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa General Mitre Airport",
+    "gps_code": "SACM",
+    "freq": "",
+    "Lat": -30.7006,
+    "Lon": -64.043098,
+    "Ele": 536.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Ascochinga Airport",
+    "gps_code": "SACN",
+    "freq": "",
+    "Lat": -30.96792,
+    "Lon": -64.27774,
+    "Ele": 206.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ingeniero Ambrosio Taravella Airport",
+    "gps_code": "SACO",
+    "freq": "114.500",
+    "Lat": -31.323601,
+    "Lon": -64.208,
+    "Ele": 488.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Monte Quemado Airport",
+    "gps_code": "SACQ",
+    "freq": "",
+    "Lat": -25.783563,
+    "Lon": -62.82884,
+    "Ele": 220.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa De Soto Airport",
+    "gps_code": "SACS",
+    "freq": "",
+    "Lat": -30.875419,
+    "Lon": -64.99288,
+    "Ele": 613.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Maria Airport",
+    "gps_code": "SACV",
+    "freq": "",
+    "Lat": -32.3894004822,
+    "Lon": -63.2585983276,
+    "Ele": 204.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "San Fernando Airport",
+    "gps_code": "SADF",
+    "freq": "121.650",
+    "Lat": -34.4532,
+    "Lon": -58.5896,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mariano Moreno Airport",
+    "gps_code": "SADJ",
+    "freq": "119.700",
+    "Lat": -34.5606,
+    "Lon": -58.7896,
+    "Ele": 32.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "La Plata Airport",
+    "gps_code": "SADL",
+    "freq": "119.300",
+    "Lat": -34.9722,
+    "Lon": -57.8947,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Morón Airport",
+    "gps_code": "SADM",
+    "freq": "120.750",
+    "Lat": -34.6763,
+    "Lon": -58.6428,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Campo de Mayo Military Airport",
+    "gps_code": "SADO",
+    "freq": "124.500",
+    "Lat": -34.5344,
+    "Lon": -58.6717,
+    "Ele": 23.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Palomar Airport",
+    "gps_code": "SADP",
+    "freq": "118.900",
+    "Lat": -34.6099,
+    "Lon": -58.6126,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Quilmes Airport",
+    "gps_code": "SADQ",
+    "freq": "",
+    "Lat": -34.7064,
+    "Lon": -58.2444,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Matanza Airport",
+    "gps_code": "SADZ",
+    "freq": "123.500",
+    "Lat": -34.728367,
+    "Lon": -58.500855,
+    "Ele": 2.7
+  },
+  {
+    "type": "small_airport",
+    "name": "General Acha Airport",
+    "gps_code": "SAEA",
+    "freq": "",
+    "Lat": -37.400799,
+    "Lon": -64.612801,
+    "Ele": 276.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Flores Airport",
+    "gps_code": "SAEL",
+    "freq": "",
+    "Lat": -36.0672,
+    "Lon": -59.1042,
+    "Ele": 33.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ñanco Lauquen Airport",
+    "gps_code": "SAET",
+    "freq": "",
+    "Lat": -35.9715,
+    "Lon": -62.7724,
+    "Ele": 91.7
+  },
+  {
+    "type": "large_airport",
+    "name": "Minister Pistarini International Airport",
+    "gps_code": "SAEZ",
+    "freq": "124.900",
+    "Lat": -34.8222,
+    "Lon": -58.5358,
+    "Ele": 20.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Rafaela Airport",
+    "gps_code": "SAFR",
+    "freq": "",
+    "Lat": -31.2825,
+    "Lon": -61.5017,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sunchales Aeroclub Airport",
+    "gps_code": "SAFS",
+    "freq": "",
+    "Lat": -30.9575,
+    "Lon": -61.5283,
+    "Ele": 91.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Chos Malal Airport",
+    "gps_code": "SAHC",
+    "freq": "",
+    "Lat": -37.444698,
+    "Lon": -70.222504,
+    "Ele": 849.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Caviahue Airport",
+    "gps_code": "SAHE",
+    "freq": "",
+    "Lat": -37.851398,
+    "Lon": -71.009201,
+    "Ele": 1656.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Dr. Arturo H. Illia Airport",
+    "gps_code": "SAHR",
+    "freq": "119.400",
+    "Lat": -39.000702,
+    "Lon": -67.620499,
+    "Ele": 259.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rincon De Los Sauces Airport",
+    "gps_code": "SAHS",
+    "freq": "",
+    "Lat": -37.390598,
+    "Lon": -68.904198,
+    "Ele": 599.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Zapala Airport",
+    "gps_code": "SAHZ",
+    "freq": "",
+    "Lat": -38.975498,
+    "Lon": -70.113602,
+    "Ele": 1015.0
+  },
+  {
+    "type": "small_airport",
+    "name": "General Alvear Airport",
+    "gps_code": "SAMA",
+    "freq": "",
+    "Lat": -35.058899,
+    "Lon": -67.692802,
+    "Ele": 453.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Cristo Redentor Airport",
+    "gps_code": "SAMC",
+    "freq": "",
+    "Lat": -32.807300567599995,
+    "Lon": -70.06819915770001,
+    "Ele": 3193.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Plumerillo Airport",
+    "gps_code": "SAME",
+    "freq": "114.900",
+    "Lat": -32.8316993713,
+    "Lon": -68.7929000854,
+    "Ele": 704.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Valle Hermoso Airport",
+    "gps_code": "SAMH",
+    "freq": "",
+    "Lat": -35.1461982727,
+    "Lon": -70.2053985596,
+    "Ele": 762.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jachal Airport",
+    "gps_code": "SAMJ",
+    "freq": "",
+    "Lat": -30.248242,
+    "Lon": -68.764791,
+    "Ele": 1155.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Punta De Vacas Airport",
+    "gps_code": "SAML",
+    "freq": "",
+    "Lat": -32.854599,
+    "Lon": -69.760498,
+    "Ele": 2409.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Comodoro D.R. Salomón Airport",
+    "gps_code": "SAMM",
+    "freq": "118.250",
+    "Lat": -35.493599,
+    "Lon": -69.574303,
+    "Ele": 1428.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mendoza Airpark",
+    "gps_code": "SAMQ",
+    "freq": "",
+    "Lat": -32.8652992249,
+    "Lon": -68.87190246579999,
+    "Ele": 821.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Suboficial Ay Santiago Germano Airport",
+    "gps_code": "SAMR",
+    "freq": "118.100",
+    "Lat": -34.588299,
+    "Lon": -68.4039,
+    "Ele": 752.9
+  },
+  {
+    "type": "small_airport",
+    "name": "San Carlos Airport",
+    "gps_code": "SAMS",
+    "freq": "",
+    "Lat": -33.7757,
+    "Lon": -69.053703,
+    "Ele": 929.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Uspallata Airport",
+    "gps_code": "SAMU",
+    "freq": "",
+    "Lat": -32.538898,
+    "Lon": -69.345802,
+    "Ele": 1988.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Coronel Felipe Varela International Airport",
+    "gps_code": "SANC",
+    "freq": "118.150",
+    "Lat": -28.593117,
+    "Lon": -65.7512,
+    "Ele": 463.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vicecomodoro Angel D. La Paz Aragonés Airport",
+    "gps_code": "SANE",
+    "freq": "118.700",
+    "Lat": -27.7655563354,
+    "Lon": -64.3099975586,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Las Termas Airport",
+    "gps_code": "SANH",
+    "freq": "",
+    "Lat": -27.4737,
+    "Lon": -64.905502,
+    "Ele": 82.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Capitan V A Almonacid Airport",
+    "gps_code": "SANL",
+    "freq": "118.450",
+    "Lat": -29.381599,
+    "Lon": -66.795799,
+    "Ele": 438.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Chilecito Airport",
+    "gps_code": "SANO",
+    "freq": "",
+    "Lat": -29.2239,
+    "Lon": -67.438904,
+    "Ele": 944.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Termas de Río Hondo international Airport",
+    "gps_code": "SANR",
+    "freq": "",
+    "Lat": -27.4966,
+    "Lon": -64.93595,
+    "Ele": 285.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Teniente Benjamin Matienzo Airport",
+    "gps_code": "SANT",
+    "freq": "122.500",
+    "Lat": -26.8409,
+    "Lon": -65.104897,
+    "Ele": 455.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Domingo Faustino Sarmiento Airport",
+    "gps_code": "SANU",
+    "freq": "119.350",
+    "Lat": -31.571501,
+    "Lon": -68.418198,
+    "Ele": 596.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ceres Airport",
+    "gps_code": "SANW",
+    "freq": "",
+    "Lat": -29.872292,
+    "Lon": -61.927925,
+    "Ele": 86.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Area De Material Airport",
+    "gps_code": "SAOC",
+    "freq": "118.750",
+    "Lat": -33.085098,
+    "Lon": -64.261299,
+    "Ele": 420.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Villa Dolores Airport",
+    "gps_code": "SAOD",
+    "freq": "118.100",
+    "Lat": -31.9452,
+    "Lon": -65.146301,
+    "Ele": 563.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Tercero Airport",
+    "gps_code": "SAOE",
+    "freq": "",
+    "Lat": -32.173302,
+    "Lon": -64.088303,
+    "Ele": 379.8
+  },
+  {
+    "type": "small_airport",
+    "name": "La Quiaca Airport",
+    "gps_code": "SAOL",
+    "freq": "",
+    "Lat": -22.165264,
+    "Lon": -65.569918,
+    "Ele": 3479.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Marcos Juarez Airport",
+    "gps_code": "SAOM",
+    "freq": "118.600",
+    "Lat": -32.6836,
+    "Lon": -62.157801,
+    "Ele": 109.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Villa Reynolds Airport",
+    "gps_code": "SAOR",
+    "freq": "122.100",
+    "Lat": -33.7299003601,
+    "Lon": -65.3873977661,
+    "Ele": 484.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valle Del Conlara International Airport",
+    "gps_code": "SAOS",
+    "freq": "122.100",
+    "Lat": -32.384701,
+    "Lon": -65.186501,
+    "Ele": 616.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Brigadier Mayor D Cesar Raul Ojeda Airport",
+    "gps_code": "SAOU",
+    "freq": "118.400",
+    "Lat": -33.273201,
+    "Lon": -66.3564,
+    "Ele": 709.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Presidente Néstor Kirchner Regional Airport",
+    "gps_code": "SAOV",
+    "freq": "",
+    "Lat": -32.3201,
+    "Lon": -63.22663,
+    "Ele": 204.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Corrientes Airport",
+    "gps_code": "SARC",
+    "freq": "118.300",
+    "Lat": -27.4455,
+    "Lon": -58.7619,
+    "Ele": 61.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Resistencia International Airport",
+    "gps_code": "SARE",
+    "freq": "119.500",
+    "Lat": -27.45,
+    "Lon": -59.0561,
+    "Ele": 52.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Formosa National Airport",
+    "gps_code": "SARF",
+    "freq": "119.100",
+    "Lat": -26.2127,
+    "Lon": -58.2281,
+    "Ele": 58.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Caa Cati Airport",
+    "gps_code": "SARG",
+    "freq": "",
+    "Lat": -27.755300521900004,
+    "Lon": -57.6329994202,
+    "Ele": 75.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cataratas Del Iguazú International Airport",
+    "gps_code": "SARI",
+    "freq": "120.700",
+    "Lat": -25.737301,
+    "Lon": -54.4734,
+    "Ele": 279.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Paso De Los Libres Airport",
+    "gps_code": "SARL",
+    "freq": "120.300",
+    "Lat": -29.6894,
+    "Lon": -57.1521,
+    "Ele": 70.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Monte Caseros Airport",
+    "gps_code": "SARM",
+    "freq": "118.700",
+    "Lat": -30.2719,
+    "Lon": -57.6402,
+    "Ele": 51.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Libertador Gral D Jose De San Martin Airport",
+    "gps_code": "SARP",
+    "freq": "120.100",
+    "Lat": -27.3858,
+    "Lon": -55.9707,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Termal Airport",
+    "gps_code": "SARS",
+    "freq": "118.900",
+    "Lat": -26.753611,
+    "Lon": -60.492222,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Villa Angela Airport",
+    "gps_code": "SARV",
+    "freq": "",
+    "Lat": -27.5915,
+    "Lon": -60.6864,
+    "Ele": 75.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Martin Miguel De Guemes International Airport",
+    "gps_code": "SASA",
+    "freq": "126.900",
+    "Lat": -24.8560009003,
+    "Lon": -65.4861984253,
+    "Ele": 1246.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gobernador Horacio Guzman International Airport",
+    "gps_code": "SASJ",
+    "freq": "118.700",
+    "Lat": -24.392799,
+    "Lon": -65.097801,
+    "Ele": 920.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Salar De Cauchari Airport",
+    "gps_code": "SASL",
+    "freq": "",
+    "Lat": -24.0191993713,
+    "Lon": -66.797203064,
+    "Ele": 3962.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Orán Airport",
+    "gps_code": "SASO",
+    "freq": "118.500",
+    "Lat": -23.1528,
+    "Lon": -64.329201,
+    "Ele": 356.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Laboulaye Airport",
+    "gps_code": "SASQ",
+    "freq": "",
+    "Lat": -34.135399,
+    "Lon": -63.362301,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rivadavia Airport",
+    "gps_code": "SASR",
+    "freq": "",
+    "Lat": -24.188600540200003,
+    "Lon": -62.8833999634,
+    "Ele": 207.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "General Enrique Mosconi Airport",
+    "gps_code": "SAST",
+    "freq": "118.600",
+    "Lat": -22.616877,
+    "Lon": -63.793015,
+    "Ele": 448.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Aeródromo de Clorinda",
+    "gps_code": "SATC",
+    "freq": "",
+    "Lat": -25.3036,
+    "Lon": -57.7344,
+    "Ele": 62.8
+  },
+  {
+    "type": "small_airport",
+    "name": "El Dorado Airport",
+    "gps_code": "SATD",
+    "freq": "",
+    "Lat": -26.397499,
+    "Lon": -54.574699,
+    "Ele": 208.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Goya Airport",
+    "gps_code": "SATG",
+    "freq": "118.100",
+    "Lat": -29.1058,
+    "Lon": -59.2189,
+    "Ele": 39.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bernardo de Irigoyen Airport",
+    "gps_code": "SATI",
+    "freq": "",
+    "Lat": -26.281458,
+    "Lon": -53.672578,
+    "Ele": 814.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Alferez Armando Rodriguez Airport",
+    "gps_code": "SATK",
+    "freq": "",
+    "Lat": -24.721399,
+    "Lon": -60.548801,
+    "Ele": 129.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Mercedes Airport",
+    "gps_code": "SATM",
+    "freq": "",
+    "Lat": -29.221399,
+    "Lon": -58.087799,
+    "Ele": 109.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Oberá Airport",
+    "gps_code": "SATO",
+    "freq": "",
+    "Lat": -27.5182,
+    "Lon": -55.124199,
+    "Ele": 342.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Reconquista Airport",
+    "gps_code": "SATR",
+    "freq": "119.000",
+    "Lat": -29.210278,
+    "Lon": -59.683333,
+    "Ele": 48.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Curuzu Cuatia Airport",
+    "gps_code": "SATU",
+    "freq": "118.100",
+    "Lat": -29.7706,
+    "Lon": -57.9789,
+    "Ele": 69.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Piedra Del Aguila Airport",
+    "gps_code": "SAVA",
+    "freq": "",
+    "Lat": -40.192199707,
+    "Lon": -70.0100021362,
+    "Ele": 648.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Bolsón Airfield",
+    "gps_code": "SAVB",
+    "freq": "118.400",
+    "Lat": -41.943199,
+    "Lon": -71.532303,
+    "Ele": 347.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "General E. Mosconi Airport",
+    "gps_code": "SAVC",
+    "freq": "124.300",
+    "Lat": -45.7853,
+    "Lon": -67.4655,
+    "Ele": 57.6
+  },
+  {
+    "type": "small_airport",
+    "name": "El Maitén Airport",
+    "gps_code": "SAVD",
+    "freq": "",
+    "Lat": -42.029202,
+    "Lon": -71.172501,
+    "Ele": 717.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Esquel Brigadier Antonio Parodi International Airport",
+    "gps_code": "SAVE",
+    "freq": "118.100",
+    "Lat": -42.908001,
+    "Lon": -71.139503,
+    "Ele": 798.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Las Heras Airport",
+    "gps_code": "SAVH",
+    "freq": "",
+    "Lat": -46.538517,
+    "Lon": -68.965323,
+    "Ele": 329.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Ingeniero Jacobacci - Captain H R Bordón Airport",
+    "gps_code": "SAVJ",
+    "freq": "122.300",
+    "Lat": -41.3209,
+    "Lon": -69.574898,
+    "Ele": 891.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Lago Musters Airport",
+    "gps_code": "SAVM",
+    "freq": "",
+    "Lat": -45.5752,
+    "Lon": -69.077,
+    "Ele": 271.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Antoine de Saint Exupéry Airport",
+    "gps_code": "SAVN",
+    "freq": "118.400",
+    "Lat": -40.7512,
+    "Lon": -65.0343,
+    "Ele": 25.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paso De Los Indios Airport",
+    "gps_code": "SAVP",
+    "freq": "",
+    "Lat": -43.8666992188,
+    "Lon": -69.05000305179999,
+    "Ele": 175.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Maquinchao Airport",
+    "gps_code": "SAVQ",
+    "freq": "",
+    "Lat": -41.2430992126,
+    "Lon": -68.7078018188,
+    "Ele": 887.6
+  },
+  {
+    "type": "small_airport",
+    "name": "D. Casimiro Szlapelis Airport",
+    "gps_code": "SAVR",
+    "freq": "",
+    "Lat": -45.013599,
+    "Lon": -70.812202,
+    "Ele": 696.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Sierra Grande Airport",
+    "gps_code": "SAVS",
+    "freq": "",
+    "Lat": -41.591702,
+    "Lon": -65.339401,
+    "Ele": 209.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Almirante Marco Andres Zar Airport",
+    "gps_code": "SAVT",
+    "freq": "122.100",
+    "Lat": -43.2105,
+    "Lon": -65.2703,
+    "Ele": 43.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gobernador Castello Airport",
+    "gps_code": "SAVV",
+    "freq": "118.300",
+    "Lat": -40.8692,
+    "Lon": -63.0004,
+    "Ele": 6.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Tehuelche Airport",
+    "gps_code": "SAVY",
+    "freq": "119.500",
+    "Lat": -42.7592,
+    "Lon": -65.1027,
+    "Ele": 130.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "El Calafate - Commander Armando Tola International Airport",
+    "gps_code": "SAWC",
+    "freq": "119.950",
+    "Lat": -50.2803,
+    "Lon": -72.053101,
+    "Ele": 203.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Puerto Deseado Airport",
+    "gps_code": "SAWD",
+    "freq": "118.300",
+    "Lat": -47.7353,
+    "Lon": -65.9041,
+    "Ele": 81.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gobernador Ramón Trejo Noel International Airport",
+    "gps_code": "SAWE",
+    "freq": "118.300",
+    "Lat": -53.7777,
+    "Lon": -67.7494,
+    "Ele": 19.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Piloto Civil N. Fernández Airport",
+    "gps_code": "SAWG",
+    "freq": "119.100",
+    "Lat": -51.6089,
+    "Lon": -69.3126,
+    "Ele": 18.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ushuaia - Malvinas Argentinas International Airport",
+    "gps_code": "SAWH",
+    "freq": "122.100",
+    "Lat": -54.8433,
+    "Lon": -68.2958,
+    "Ele": 31.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Capitan D Daniel Vazquez Airport",
+    "gps_code": "SAWJ",
+    "freq": "118.100",
+    "Lat": -49.306816,
+    "Lon": -67.802596,
+    "Ele": 61.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tolhuin Lago Fagnano Airport",
+    "gps_code": "SAWL",
+    "freq": "",
+    "Lat": -54.499596,
+    "Lon": -67.172084,
+    "Ele": 27.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Mayo Airport",
+    "gps_code": "SAWM",
+    "freq": "",
+    "Lat": -45.703899,
+    "Lon": -70.245598,
+    "Ele": 543.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Perito Moreno Jalil Hamer Airport",
+    "gps_code": "SAWP",
+    "freq": "118.100",
+    "Lat": -46.537899,
+    "Lon": -70.978699,
+    "Ele": 429.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Gobernador Gregores Airport",
+    "gps_code": "SAWR",
+    "freq": "",
+    "Lat": -48.7831,
+    "Lon": -70.150002,
+    "Ele": 108.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Jose De San Martin Airport",
+    "gps_code": "SAWS",
+    "freq": "",
+    "Lat": -44.0485992432,
+    "Lon": -70.4589004517,
+    "Ele": 733.7
+  },
+  {
+    "type": "small_airport",
+    "name": "28 de Noviembre Airport",
+    "gps_code": "SAWT",
+    "freq": "",
+    "Lat": -51.605,
+    "Lon": -72.2203,
+    "Ele": 277.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santa Cruz Airport",
+    "gps_code": "SAWU",
+    "freq": "118.600",
+    "Lat": -50.0165,
+    "Lon": -68.5792,
+    "Ele": 110.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Azul Airport",
+    "gps_code": "SAZA",
+    "freq": "",
+    "Lat": -36.836899,
+    "Lon": -59.880299,
+    "Ele": 145.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Comandante Espora Airport",
+    "gps_code": "SAZB",
+    "freq": "124.800",
+    "Lat": -38.725,
+    "Lon": -62.1693,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brigadier D.H.E. Ruiz Airport",
+    "gps_code": "SAZC",
+    "freq": "",
+    "Lat": -37.446098,
+    "Lon": -61.889301,
+    "Ele": 233.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolores Airport",
+    "gps_code": "SAZD",
+    "freq": "123.500",
+    "Lat": -36.3225,
+    "Lon": -57.7214,
+    "Ele": 9.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pigüé Airport",
+    "gps_code": "SAZE",
+    "freq": "",
+    "Lat": -37.607098,
+    "Lon": -62.382641,
+    "Ele": 303.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Olavarria Airport",
+    "gps_code": "SAZF",
+    "freq": "118.100",
+    "Lat": -36.889999,
+    "Lon": -60.216599,
+    "Ele": 167.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "General Pico Airport",
+    "gps_code": "SAZG",
+    "freq": "119.000",
+    "Lat": -35.696201,
+    "Lon": -63.758301,
+    "Ele": 139.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tres Arroyos Airport",
+    "gps_code": "SAZH",
+    "freq": "",
+    "Lat": -38.3869,
+    "Lon": -60.3297,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Bolívar Airport",
+    "gps_code": "SAZI",
+    "freq": "",
+    "Lat": -36.1866,
+    "Lon": -61.0764,
+    "Ele": 93.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Benito Juarez Airport",
+    "gps_code": "SAZJ",
+    "freq": "",
+    "Lat": -37.7061,
+    "Lon": -59.791901,
+    "Ele": 207.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santa Teresita Airport",
+    "gps_code": "SAZL",
+    "freq": "122.100",
+    "Lat": -36.5423,
+    "Lon": -56.7218,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ástor Piazzola International Airport",
+    "gps_code": "SAZM",
+    "freq": "124.400",
+    "Lat": -37.9342,
+    "Lon": -57.5733,
+    "Ele": 21.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Presidente Peron Airport",
+    "gps_code": "SAZN",
+    "freq": "119.300",
+    "Lat": -38.949001,
+    "Lon": -68.155701,
+    "Ele": 272.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Necochea Airport",
+    "gps_code": "SAZO",
+    "freq": "118.100",
+    "Lat": -38.490746,
+    "Lon": -58.816337,
+    "Ele": 21.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Comodoro Pedro Zanni Airport",
+    "gps_code": "SAZP",
+    "freq": "118.350",
+    "Lat": -35.8446,
+    "Lon": -61.8576,
+    "Ele": 84.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Rio Colorado Airport",
+    "gps_code": "SAZQ",
+    "freq": "",
+    "Lat": -38.995,
+    "Lon": -64.1408,
+    "Ele": 83.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Santa Rosa Airport",
+    "gps_code": "SAZR",
+    "freq": "296.500",
+    "Lat": -36.588299,
+    "Lon": -64.275703,
+    "Ele": 192.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "San Carlos de Bariloche Airport",
+    "gps_code": "SAZS",
+    "freq": "127.900",
+    "Lat": -41.151199,
+    "Lon": -71.157501,
+    "Ele": 845.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Héroes de Malvinas Airport",
+    "gps_code": "SAZT",
+    "freq": "119.400",
+    "Lat": -37.234634,
+    "Lon": -59.228647,
+    "Ele": 175.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Puelches Airport",
+    "gps_code": "SAZU",
+    "freq": "",
+    "Lat": -38.145103,
+    "Lon": -65.922943,
+    "Ele": 54.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Villa Gesell Airport",
+    "gps_code": "SAZV",
+    "freq": "119.000",
+    "Lat": -37.2354,
+    "Lon": -57.0292,
+    "Ele": 9.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Cutral-Co Airport",
+    "gps_code": "SAZW",
+    "freq": "121.900",
+    "Lat": -38.939701,
+    "Lon": -69.264603,
+    "Ele": 649.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Nueve de Julio Airport",
+    "gps_code": "SAZX",
+    "freq": "",
+    "Lat": -35.3997,
+    "Lon": -60.9358,
+    "Ele": 75.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Aviador C. Campos Airport",
+    "gps_code": "SAZY",
+    "freq": "121.700",
+    "Lat": -40.075401,
+    "Lon": -71.137299,
+    "Ele": 783.0
+  }
+]

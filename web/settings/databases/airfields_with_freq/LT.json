@@ -1,0 +1,587 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Alytus Airfield",
+    "gps_code": "EYAL",
+    "freq": "",
+    "Lat": 54.412525,
+    "Lon": 24.059929,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Biržai Airfield",
+    "gps_code": "EYBI",
+    "freq": "",
+    "Lat": 56.1758,
+    "Lon": 24.7603,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Druskininkai Airfield",
+    "gps_code": "EYDR",
+    "freq": "",
+    "Lat": 54.015793,
+    "Lon": 23.944797,
+    "Ele": 92.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ignalina",
+    "gps_code": "EYIG",
+    "freq": "",
+    "Lat": 55.244167,
+    "Lon": 26.172222,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jurbarkas Aerodromas",
+    "gps_code": "EYJB",
+    "freq": "",
+    "Lat": 55.118049621,
+    "Lon": 22.7648735,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kaunas International Airport",
+    "gps_code": "EYKA",
+    "freq": "124.200",
+    "Lat": 54.96390151977539,
+    "Lon": 24.084800720214844,
+    "Ele": 78.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kėdainiai Air Base",
+    "gps_code": "EYKD",
+    "freq": "",
+    "Lat": 55.31169891357422,
+    "Lon": 23.95639991760254,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Klaipėda Airfield",
+    "gps_code": "EYKL",
+    "freq": "119.600",
+    "Lat": 55.712021,
+    "Lon": 21.242892,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "S. Darius and S. Girėnas Airfield",
+    "gps_code": "EYKS",
+    "freq": "135.500",
+    "Lat": 54.879799,
+    "Lon": 23.8815,
+    "Ele": 75.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kartena Airfield",
+    "gps_code": "EYKT",
+    "freq": "",
+    "Lat": 55.921791,
+    "Lon": 21.566704,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valenčiūnai Airfield",
+    "gps_code": "EYLN",
+    "freq": "",
+    "Lat": 55.0214,
+    "Lon": 22.9739,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mazeikiai / J.Kumpikeviciaus Airfield",
+    "gps_code": "EYMA",
+    "freq": "",
+    "Lat": 56.230598,
+    "Lon": 22.259399,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sasnava Airfield",
+    "gps_code": "EYMM",
+    "freq": "",
+    "Lat": 54.66433,
+    "Lon": 23.455279,
+    "Ele": 73.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Molėtai Airfield",
+    "gps_code": "EYMO",
+    "freq": "",
+    "Lat": 55.112801,
+    "Lon": 25.336399,
+    "Ele": 198.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Akmenė Airfield",
+    "gps_code": "EYNA",
+    "freq": "",
+    "Lat": 56.242199,
+    "Lon": 22.733101,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nida Airfield",
+    "gps_code": "EYND",
+    "freq": "",
+    "Lat": 55.327778,
+    "Lon": 21.045834,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Palanga International Airport",
+    "gps_code": "EYPA",
+    "freq": "124.300",
+    "Lat": 55.97320175170898,
+    "Lon": 21.093900680541992,
+    "Ele": 10.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Panevėžys Istra Airfield",
+    "gps_code": "EYPI",
+    "freq": "",
+    "Lat": 55.827499,
+    "Lon": 24.358299,
+    "Ele": 52.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Panevėžys Airfield",
+    "gps_code": "EYPN",
+    "freq": "",
+    "Lat": 55.709512,
+    "Lon": 24.345188,
+    "Ele": 52.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Panevėžys Air Base",
+    "gps_code": "EYPP",
+    "freq": "122.550",
+    "Lat": 55.729400634765625,
+    "Lon": 24.46080017089844,
+    "Ele": 60.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pociūnai Airfield",
+    "gps_code": "EYPR",
+    "freq": "125.000",
+    "Lat": 54.649399,
+    "Lon": 24.061899,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rūdiškės Airfield",
+    "gps_code": "EYRD",
+    "freq": "",
+    "Lat": 54.495602,
+    "Lon": 24.717501,
+    "Ele": 159.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Rokiškio aerodromas",
+    "gps_code": "EYRK",
+    "freq": "",
+    "Lat": 55.971924,
+    "Lon": 25.604239,
+    "Ele": 139.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rojūnai Airfield",
+    "gps_code": "EYRO",
+    "freq": "",
+    "Lat": 55.610802,
+    "Lon": 24.2208,
+    "Ele": 54.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Šiauliai International Airport",
+    "gps_code": "EYSA",
+    "freq": "120.400",
+    "Lat": 55.89390182495117,
+    "Lon": 23.395000457763672,
+    "Ele": 135.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Barysiai Airfield",
+    "gps_code": "EYSB",
+    "freq": "122.050",
+    "Lat": 56.070599,
+    "Lon": 23.5581,
+    "Ele": 82.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Šeduva Airfield",
+    "gps_code": "EYSE",
+    "freq": "",
+    "Lat": 55.746399,
+    "Lon": 23.804701,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Šilute Air Base",
+    "gps_code": "EYSI",
+    "freq": "122.000",
+    "Lat": 55.336899,
+    "Lon": 21.5306,
+    "Ele": 18.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Telšiai Airfield",
+    "gps_code": "EYTL",
+    "freq": "",
+    "Lat": 55.986401,
+    "Lon": 22.2878,
+    "Ele": 125.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Utena Airfield",
+    "gps_code": "EYUT",
+    "freq": "",
+    "Lat": 55.490002,
+    "Lon": 25.7169,
+    "Ele": 189.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Vilnius International Airport",
+    "gps_code": "EYVI",
+    "freq": "120.700",
+    "Lat": 54.634102,
+    "Lon": 25.285801,
+    "Ele": 197.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kyviškes Airfield",
+    "gps_code": "EYVK",
+    "freq": "",
+    "Lat": 54.668301,
+    "Lon": 25.5158,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Paluknys Airfield",
+    "gps_code": "EYVP",
+    "freq": "119.100",
+    "Lat": 54.484848,
+    "Lon": 24.987373,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Zarasai Airfield",
+    "gps_code": "EYZA",
+    "freq": "",
+    "Lat": 55.752499,
+    "Lon": 26.256901,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Trakėnai Airstrip",
+    "gps_code": "LT-0003",
+    "freq": "",
+    "Lat": 54.365886,
+    "Lon": 23.167256,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kupiškio aerodromas",
+    "gps_code": "LT-0004",
+    "freq": "",
+    "Lat": 55.8529062,
+    "Lon": 24.957929,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pečiulių aerodromas",
+    "gps_code": "LT-0005",
+    "freq": "",
+    "Lat": 55.4936031,
+    "Lon": 25.1949249,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tauragės Aerodromas",
+    "gps_code": "LT-0006",
+    "freq": "",
+    "Lat": 55.23201,
+    "Lon": 22.150068,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ličiūnai Airstrip",
+    "gps_code": "LT-0007",
+    "freq": "",
+    "Lat": 56.061212,
+    "Lon": 24.544761,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vilkaviškis Airfield",
+    "gps_code": "LT-0008",
+    "freq": "",
+    "Lat": 54.688091,
+    "Lon": 23.001315,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Naukaimio aerodromas",
+    "gps_code": "LT-0009",
+    "freq": "",
+    "Lat": 55.131368,
+    "Lon": 22.964454,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Griškabūdis Airstrip",
+    "gps_code": "LT-0010",
+    "freq": "",
+    "Lat": 54.830228,
+    "Lon": 23.197771,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Slikiai Airstrip",
+    "gps_code": "LT-0011",
+    "freq": "",
+    "Lat": 55.208166,
+    "Lon": 24.068935,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalno aerodromas",
+    "gps_code": "LT-0014",
+    "freq": "",
+    "Lat": 55.984197,
+    "Lon": 24.34608,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Keturvalakiai Airstrip",
+    "gps_code": "LT-0015",
+    "freq": "",
+    "Lat": 54.570783,
+    "Lon": 23.156836,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirkliai Airstrip",
+    "gps_code": "LT-0016",
+    "freq": "",
+    "Lat": 55.9251137,
+    "Lon": 22.5959212,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gėluvos Airstrip",
+    "gps_code": "LT-0017",
+    "freq": "",
+    "Lat": 55.254035,
+    "Lon": 23.5148404,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Valkininkai Airstrip",
+    "gps_code": "LT-0018",
+    "freq": "",
+    "Lat": 54.3756647,
+    "Lon": 24.8454637,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Žeimelis Airstrip",
+    "gps_code": "LT-0019",
+    "freq": "",
+    "Lat": 56.267717,
+    "Lon": 24.01368,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Klebonai Airstrip",
+    "gps_code": "LT-0020",
+    "freq": "",
+    "Lat": 55.50751,
+    "Lon": 24.41479,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Upitėnai Airstrip",
+    "gps_code": "LT-0021",
+    "freq": "",
+    "Lat": 55.60306,
+    "Lon": 21.62339,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aukštelkai Airfield",
+    "gps_code": "LT-0022",
+    "freq": "",
+    "Lat": 55.863079,
+    "Lon": 23.62833,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Paberžės Aerodromas",
+    "gps_code": "LT-0023",
+    "freq": "",
+    "Lat": 54.98973,
+    "Lon": 25.27568,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pociūnai Airstrip",
+    "gps_code": "LT-0024",
+    "freq": "",
+    "Lat": 55.59152,
+    "Lon": 23.96661,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bistrampolis Airfield",
+    "gps_code": "LT-0025",
+    "freq": "",
+    "Lat": 55.59597,
+    "Lon": 24.36418,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dainava Airstrip",
+    "gps_code": "LT-0026",
+    "freq": "",
+    "Lat": 54.32387,
+    "Lon": 25.24008,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ėriškiai Airstrip",
+    "gps_code": "LT-0027",
+    "freq": "",
+    "Lat": 55.57675,
+    "Lon": 24.26939,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Balbieriškis airstrip",
+    "gps_code": "LT-0028",
+    "freq": "",
+    "Lat": 54.53103,
+    "Lon": 23.84071,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dievogala Airstrip",
+    "gps_code": "LT-0029",
+    "freq": "",
+    "Lat": 54.85452,
+    "Lon": 23.74284,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Norkaičiai Airstrip",
+    "gps_code": "LT-0030",
+    "freq": "",
+    "Lat": 55.29042,
+    "Lon": 22.26759,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krokialaukis",
+    "gps_code": "LT-0031",
+    "freq": "",
+    "Lat": 54.426259,
+    "Lon": 23.774189,
+    "Ele": 82.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Daugodai",
+    "gps_code": "LT-0032",
+    "freq": "",
+    "Lat": 55.421154,
+    "Lon": 23.215259,
+    "Ele": 108.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vainiai",
+    "gps_code": "LT-0033",
+    "freq": "",
+    "Lat": 54.596634,
+    "Lon": 24.861428,
+    "Ele": 156.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Skaudvilė airstrip",
+    "gps_code": "LT-0035",
+    "freq": "",
+    "Lat": 55.395323,
+    "Lon": 22.591957,
+    "Ele": 84.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jonava Air Base",
+    "gps_code": "LT-9520",
+    "freq": "",
+    "Lat": 55.009998,
+    "Lon": 24.3633,
+    "Ele": 75.0
+  }
+]

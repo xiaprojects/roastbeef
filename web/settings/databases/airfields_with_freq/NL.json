@@ -1,0 +1,371 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ameland Airport Ballum",
+    "gps_code": "EHAL",
+    "freq": "132.350",
+    "Lat": 53.453612,
+    "Lon": 5.678396,
+    "Ele": 3.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Amsterdam Airport Schiphol",
+    "gps_code": "EHAM",
+    "freq": "119.055",
+    "Lat": 52.308601,
+    "Lon": 4.76389,
+    "Ele": -3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kempen Airport Budel",
+    "gps_code": "EHBD",
+    "freq": "122.155",
+    "Lat": 51.255299,
+    "Lon": 5.60139,
+    "Ele": 34.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Maastricht Aachen Airport",
+    "gps_code": "EHBK",
+    "freq": "120.205",
+    "Lat": 50.911701,
+    "Lon": 5.77014,
+    "Ele": 114.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Deelen Air Base",
+    "gps_code": "EHDL",
+    "freq": "120.305",
+    "Lat": 52.0606,
+    "Lon": 5.87306,
+    "Ele": 48.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Drachten Airfield",
+    "gps_code": "EHDR",
+    "freq": "132.350",
+    "Lat": 53.117933,
+    "Lon": 6.127324,
+    "Ele": 4.3
+  },
+  {
+    "type": "large_airport",
+    "name": "Eindhoven Airport",
+    "gps_code": "EHEH",
+    "freq": "123.180",
+    "Lat": 51.4500999451,
+    "Lon": 5.37452983856,
+    "Ele": 22.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Groningen Airport Eelde",
+    "gps_code": "EHGG",
+    "freq": "120.305",
+    "Lat": 53.119701,
+    "Lon": 6.57944,
+    "Ele": 5.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gilze Rijen Air Base",
+    "gps_code": "EHGR",
+    "freq": "123.580",
+    "Lat": 51.567402,
+    "Lon": 4.93183,
+    "Ele": 14.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hoogeveen Airfield",
+    "gps_code": "EHHO",
+    "freq": "132.350",
+    "Lat": 52.730801,
+    "Lon": 6.51611,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Hilversum Airfield",
+    "gps_code": "EHHV",
+    "freq": "124.300",
+    "Lat": 52.191898,
+    "Lon": 5.14694,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "De Kooy Airfield / Den Helder Naval Air Station",
+    "gps_code": "EHKD",
+    "freq": "124.230",
+    "Lat": 52.923401,
+    "Lon": 4.78062,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lelystad Airport",
+    "gps_code": "EHLE",
+    "freq": "119.055",
+    "Lat": 52.453188,
+    "Lon": 5.514622,
+    "Ele": -4.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Leeuwarden Air Base",
+    "gps_code": "EHLW",
+    "freq": "132.030",
+    "Lat": 53.22859954833984,
+    "Lon": 5.760560035705566,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Midden-Zeeland Airfield",
+    "gps_code": "EHMZ",
+    "freq": "124.300",
+    "Lat": 51.512199,
+    "Lon": 3.73111,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Oostwold Airfield",
+    "gps_code": "EHOW",
+    "freq": "120.305",
+    "Lat": 53.208775,
+    "Lon": 7.033053,
+    "Ele": 0.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rotterdam The Hague Airport",
+    "gps_code": "EHRD",
+    "freq": "122.990",
+    "Lat": 51.956902,
+    "Lon": 4.43722,
+    "Ele": -4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Breda International Airport",
+    "gps_code": "EHSE",
+    "freq": "132.350",
+    "Lat": 51.554901,
+    "Lon": 4.553003,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Stadskanaal Airfield",
+    "gps_code": "EHST",
+    "freq": "128.960",
+    "Lat": 52.9986,
+    "Lon": 7.02278,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Teuge Airport",
+    "gps_code": "EHTE",
+    "freq": "132.350",
+    "Lat": 52.242764,
+    "Lon": 6.050004,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Terlet Glidersite",
+    "gps_code": "EHTL",
+    "freq": "132.350",
+    "Lat": 52.057201,
+    "Lon": 5.92444,
+    "Ele": 84.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Twente Airport",
+    "gps_code": "EHTW",
+    "freq": "132.355",
+    "Lat": 52.275833,
+    "Lon": 6.889167,
+    "Ele": 34.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Texel International Airport",
+    "gps_code": "EHTX",
+    "freq": "132.350",
+    "Lat": 53.114962,
+    "Lon": 4.830552,
+    "Ele": 0.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Volkel Air Base",
+    "gps_code": "EHVK",
+    "freq": "122.100",
+    "Lat": 51.657222,
+    "Lon": 5.707778,
+    "Ele": 21.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Woensdrecht Air Base",
+    "gps_code": "EHWO",
+    "freq": "123.580",
+    "Lat": 51.4491,
+    "Lon": 4.34203,
+    "Ele": 19.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Malden Glidersite",
+    "gps_code": "NL-0023",
+    "freq": "123.350",
+    "Lat": 51.785259,
+    "Lon": 5.88099,
+    "Ele": 27.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Middenmeer Airfield",
+    "gps_code": "NL-0024",
+    "freq": "123.430",
+    "Lat": 52.814876,
+    "Lon": 5.021245,
+    "Ele": -4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Axel Glidersite",
+    "gps_code": "NL-0027",
+    "freq": "",
+    "Lat": 51.255556,
+    "Lon": 3.891389,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Castricum Glidersite",
+    "gps_code": "NL-0029",
+    "freq": "",
+    "Lat": 52.536667,
+    "Lon": 4.626667,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "De Voorst Glidersite",
+    "gps_code": "NL-0030",
+    "freq": "",
+    "Lat": 52.684722,
+    "Lon": 5.910556,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Haamstede Glidersite",
+    "gps_code": "NL-0031",
+    "freq": "",
+    "Lat": 51.708889,
+    "Lon": 3.712222,
+    "Ele": 4.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Langeveld Glidersite",
+    "gps_code": "NL-0033",
+    "freq": "",
+    "Lat": 52.297387,
+    "Lon": 4.511962,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nistelrode Glidersite",
+    "gps_code": "NL-0034",
+    "freq": "",
+    "Lat": 51.683333,
+    "Lon": 5.549444,
+    "Ele": 9.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Schinveld Glidersite",
+    "gps_code": "NL-0035",
+    "freq": "",
+    "Lat": 50.980833,
+    "Lon": 5.998611,
+    "Ele": 54.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Veendam Glidersite",
+    "gps_code": "NL-0036",
+    "freq": "",
+    "Lat": 53.084444,
+    "Lon": 6.823611,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Venlo Glidersite",
+    "gps_code": "NL-0037",
+    "freq": "130.655",
+    "Lat": 51.363056,
+    "Lon": 6.216111,
+    "Ele": 44.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Soesterberg Glidersite",
+    "gps_code": "NL-0050",
+    "freq": "",
+    "Lat": 52.133889,
+    "Lon": 5.264167,
+    "Ele": 20.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Noordkop Glidersite",
+    "gps_code": "NL-0052",
+    "freq": "",
+    "Lat": 52.89512,
+    "Lon": 5.004628,
+    "Ele": 0.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Royal Dutch Aerospace Center",
+    "gps_code": "NL-0075",
+    "freq": "",
+    "Lat": 52.680884,
+    "Lon": 5.922704,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Salland Glider Field",
+    "gps_code": "NL-0076",
+    "freq": "",
+    "Lat": 52.468333,
+    "Lon": 6.333333,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Slootdorp Glidersite",
+    "gps_code": "NL-0143",
+    "freq": "",
+    "Lat": 52.8353,
+    "Lon": 4.95056,
+    "Ele": 1.5
+  }
+]

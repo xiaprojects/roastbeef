@@ -1,0 +1,182 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ciljuge Sport Airfield",
+    "gps_code": "BA-0001",
+    "freq": "123.600",
+    "Lat": 44.436094,
+    "Lon": 18.686457,
+    "Ele": 221.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Banja Luka Zalužani Airfield",
+    "gps_code": "BA-0002",
+    "freq": "",
+    "Lat": 44.8482,
+    "Lon": 17.222826,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Brčko-Brod Airfield",
+    "gps_code": "BA-0003",
+    "freq": "",
+    "Lat": 44.846235,
+    "Lon": 18.761888,
+    "Ele": 102.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Kreševo Airstrip",
+    "gps_code": "BA-0006",
+    "freq": "",
+    "Lat": 43.885661,
+    "Lon": 18.068562,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorice Airfield",
+    "gps_code": "BA-0007",
+    "freq": "",
+    "Lat": 44.911565,
+    "Lon": 18.738884,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dragon Airfield",
+    "gps_code": "BA-0010",
+    "freq": "",
+    "Lat": 44.67767,
+    "Lon": 19.12988,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "PPG Paragliding Field",
+    "gps_code": "BA-0011",
+    "freq": "",
+    "Lat": 44.77271,
+    "Lon": 16.64856,
+    "Ele": 160.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Koprivna Begovac Airfield",
+    "gps_code": "BA-0012",
+    "freq": "",
+    "Lat": 44.9157,
+    "Lon": 18.15029,
+    "Ele": 142.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bihać Golubić Airfield",
+    "gps_code": "LQBI",
+    "freq": "123.500",
+    "Lat": 44.797061,
+    "Lon": 15.904474,
+    "Ele": 232.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Banja Luka International Airport",
+    "gps_code": "LQBK",
+    "freq": "118.950",
+    "Lat": 44.941399,
+    "Lon": 17.297501,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Tuzla Jegin Lug Sport Airfield",
+    "gps_code": "LQJL",
+    "freq": "123.500",
+    "Lat": 44.4578,
+    "Lon": 18.808122,
+    "Ele": 264.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Livno Brda Bosni Airfield",
+    "gps_code": "LQLV",
+    "freq": "",
+    "Lat": 43.791141,
+    "Lon": 16.893268,
+    "Ele": 716.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mostar International Airport",
+    "gps_code": "LQMO",
+    "freq": "122.700",
+    "Lat": 43.282901763916016,
+    "Lon": 17.84589958190918,
+    "Ele": 47.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Medeno Polje Airstrip",
+    "gps_code": "LQMP",
+    "freq": "",
+    "Lat": 44.57383,
+    "Lon": 16.28217,
+    "Ele": 601.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nisici Airfield",
+    "gps_code": "LQNI",
+    "freq": "",
+    "Lat": 44.069444,
+    "Lon": 18.508974,
+    "Ele": 961.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Prijedor Urije Airfield",
+    "gps_code": "LQPD",
+    "freq": "",
+    "Lat": 44.993986,
+    "Lon": 16.735457,
+    "Ele": 180.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Sport Airfield Popovi",
+    "gps_code": "LQPP",
+    "freq": "",
+    "Lat": 44.767693,
+    "Lon": 19.297417,
+    "Ele": 94.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Sarajevo International Airport",
+    "gps_code": "LQSA",
+    "freq": "136.450",
+    "Lat": 43.8246,
+    "Lon": 18.331499,
+    "Ele": 520.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tuzla International Airport",
+    "gps_code": "LQTZ",
+    "freq": "125.800",
+    "Lat": 44.458698,
+    "Lon": 18.7248,
+    "Ele": 239.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Visoko Kenan Jusufbasic Airfield",
+    "gps_code": "LQVI",
+    "freq": "",
+    "Lat": 44.025059,
+    "Lon": 18.097114,
+    "Ele": 448.1
+  }
+]

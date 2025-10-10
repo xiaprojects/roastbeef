@@ -81,12 +81,15 @@ apt install -y iptables
 apt install -y libttspico-utils
 apt install -y bluez bluez-firmware
 apt install -y chromium
+# some distribution name it -browser
 apt install -y chromium-browser
 apt install -y usbmuxd
 apt install -y dnsmasq
 apt install -y libtool
 apt install -y libfftw3-dev
 apt install -y rtl-sdr
+# Used to change display resolution or power off
+apt install -y wlr-randr
 
 # OGN ESP Updater
 apt install -y python3-pip
@@ -106,7 +109,7 @@ chmod a+x *.sh
 
 
 # Enable I2C
-cp $USER_HOME/config.txt /boot/firmware/config.txt
+#cat $USER_HOME/config-add-i2c-uart.txt >> /boot/firmware/config.txt
 # Enable 80 mm round display
 #cat $USER_HOME/config-add-80mm.txt >> /boot/firmware/config.txt
 # Enable DSI 6.25" display
@@ -149,6 +152,8 @@ systemctl disable systemd-ask-password-wall.path
 systemctl disable dphys-swapfile.service
 systemctl disable rpc-statd-notify.service
 systemctl disable rpi-eeprom-update.service
+# Trixie will use directly Network manager
+systemctl disable dnsmasq.service
 
 # RB-Avionics ethernet service
 systemctl enable accesspoint.service
@@ -208,6 +213,8 @@ raspi-config nonint do_i2c 0
 
 # Enable the Overlay
 raspi-config nonint do_overlayfs 0
+# Ensure boot still RW
+raspi-config nonint disable_bootro
 # In the future to write into the root you shall:
 #sudo mount -o remount,rw /media/root-ro
 # In the future to readonly into the root you shall:

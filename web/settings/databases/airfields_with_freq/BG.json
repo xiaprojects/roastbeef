@@ -1,0 +1,965 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Trastikovo Airstrip",
+    "gps_code": "BG-0003",
+    "freq": "",
+    "Lat": 42.414645,
+    "Lon": 27.293919,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Zagortsi Airfield",
+    "gps_code": "BG-0004",
+    "freq": "",
+    "Lat": 42.401306,
+    "Lon": 27.070605,
+    "Ele": 112.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Svishtov Airfield",
+    "gps_code": "BG-0005",
+    "freq": "",
+    "Lat": 43.618179,
+    "Lon": 25.283663,
+    "Ele": 18.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Selanovtsi Airfield",
+    "gps_code": "BG-0009",
+    "freq": "",
+    "Lat": 43.65401,
+    "Lon": 24.010749,
+    "Ele": 163.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Dve Mogili Airfield",
+    "gps_code": "BG-0013",
+    "freq": "",
+    "Lat": 43.606541,
+    "Lon": 25.89069,
+    "Ele": 255.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Raykova Mogila Airfield",
+    "gps_code": "BG-0016",
+    "freq": "",
+    "Lat": 41.815966,
+    "Lon": 26.304145,
+    "Ele": 210.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ostrovo Airfield",
+    "gps_code": "BG-0023",
+    "freq": "",
+    "Lat": 43.693874,
+    "Lon": 26.579964,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krivnya Agricultural Airfield",
+    "gps_code": "BG-0024",
+    "freq": "",
+    "Lat": 43.66307,
+    "Lon": 26.422251,
+    "Ele": 299.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Belchinski Bani Airstrip",
+    "gps_code": "BG-0025",
+    "freq": "",
+    "Lat": 42.374713,
+    "Lon": 23.392548,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Blagoevo Airfield",
+    "gps_code": "BG-0028",
+    "freq": "",
+    "Lat": 43.455488,
+    "Lon": 26.431655,
+    "Ele": 361.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Staro Selishte Airfield",
+    "gps_code": "BG-0029",
+    "freq": "",
+    "Lat": 43.650178,
+    "Lon": 26.754078,
+    "Ele": 306.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Draganovtsi Airfield",
+    "gps_code": "BG-0031",
+    "freq": "",
+    "Lat": 42.943042,
+    "Lon": 25.169528,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Breznik Airfield",
+    "gps_code": "BG-0032",
+    "freq": "",
+    "Lat": 42.693305,
+    "Lon": 22.896559,
+    "Ele": 213.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Slivnitsa Airfield",
+    "gps_code": "BG-0033",
+    "freq": "",
+    "Lat": 42.844082,
+    "Lon": 23.014162,
+    "Ele": 618.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Orlyak Airfield",
+    "gps_code": "BG-0037",
+    "freq": "",
+    "Lat": 43.634864,
+    "Lon": 27.396855,
+    "Ele": 269.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Suvorovo Airstrip",
+    "gps_code": "BG-0038",
+    "freq": "",
+    "Lat": 43.358727,
+    "Lon": 27.583126,
+    "Ele": 310.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Branichevo Airstrip",
+    "gps_code": "BG-0039",
+    "freq": "",
+    "Lat": 43.666213,
+    "Lon": 27.100207,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Air Belozem Airstrip",
+    "gps_code": "BG-0040",
+    "freq": "",
+    "Lat": 42.216573,
+    "Lon": 25.068086,
+    "Ele": 157.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Selskostopansko Airstrip",
+    "gps_code": "BG-0041",
+    "freq": "",
+    "Lat": 42.544095,
+    "Lon": 26.673452,
+    "Ele": 255.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Selskostopansko Airstrip",
+    "gps_code": "BG-0042",
+    "freq": "",
+    "Lat": 43.236482,
+    "Lon": 27.045656,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikola Kozlevo Airstrip",
+    "gps_code": "BG-0043",
+    "freq": "",
+    "Lat": 43.553365,
+    "Lon": 27.222824,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mogilishte Airstrip",
+    "gps_code": "BG-0045",
+    "freq": "",
+    "Lat": 43.49156,
+    "Lon": 28.351996,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dzhulyunitsa Airstrip",
+    "gps_code": "BG-0046",
+    "freq": "",
+    "Lat": 43.5858,
+    "Lon": 25.614431,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rakovski Airstrip",
+    "gps_code": "BG-0047",
+    "freq": "",
+    "Lat": 42.293515,
+    "Lon": 24.947137,
+    "Ele": 185.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pishtigovo Airstrip",
+    "gps_code": "BG-0048",
+    "freq": "",
+    "Lat": 42.230186,
+    "Lon": 24.439594,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Koynare Airstrip",
+    "gps_code": "BG-0050",
+    "freq": "",
+    "Lat": 43.371055,
+    "Lon": 24.130442,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Staroseltsi",
+    "gps_code": "BG-0053",
+    "freq": "",
+    "Lat": 43.531511,
+    "Lon": 24.2967868,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Shumen Airfield",
+    "gps_code": "BG-0055",
+    "freq": "",
+    "Lat": 43.287027,
+    "Lon": 26.942278,
+    "Ele": 232.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lozen Airstrip",
+    "gps_code": "BG-0057",
+    "freq": "",
+    "Lat": 43.301985,
+    "Lon": 25.862821,
+    "Ele": 228.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Slavovitsa Airstrip",
+    "gps_code": "BG-0059",
+    "freq": "",
+    "Lat": 43.580888,
+    "Lon": 24.447176,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Panicharevo Airfield",
+    "gps_code": "BG-0060",
+    "freq": "",
+    "Lat": 42.276287,
+    "Lon": 22.990773,
+    "Ele": 552.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Knezha Airstrip",
+    "gps_code": "BG-0062",
+    "freq": "",
+    "Lat": 43.546246,
+    "Lon": 24.094756,
+    "Ele": 150.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Brenitsa Airstrip",
+    "gps_code": "BG-0063",
+    "freq": "",
+    "Lat": 43.4415329,
+    "Lon": 24.1403714,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gradishte Airstrip",
+    "gps_code": "BG-0064",
+    "freq": "",
+    "Lat": 43.333531,
+    "Lon": 26.853869,
+    "Ele": 283.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Borovan Airstrip",
+    "gps_code": "BG-0065",
+    "freq": "",
+    "Lat": 43.426891,
+    "Lon": 23.77037,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Tervel Airstrip",
+    "gps_code": "BG-0066",
+    "freq": "",
+    "Lat": 43.717833,
+    "Lon": 27.440139,
+    "Ele": 257.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Aytos Airstrip",
+    "gps_code": "BG-0067",
+    "freq": "",
+    "Lat": 42.677296,
+    "Lon": 27.254723,
+    "Ele": 76.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Lozarevo Airstrip",
+    "gps_code": "BG-0068",
+    "freq": "",
+    "Lat": 42.757368,
+    "Lon": 26.900321,
+    "Ele": 311.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Bedzhene Airstrip",
+    "gps_code": "BG-0069",
+    "freq": "",
+    "Lat": 43.447841,
+    "Lon": 27.276943,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krivodol Airstrip",
+    "gps_code": "BG-0070",
+    "freq": "",
+    "Lat": 43.37501,
+    "Lon": 23.510399,
+    "Ele": 253.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Medovnitsa Airstrip",
+    "gps_code": "BG-0071",
+    "freq": "",
+    "Lat": 43.647866,
+    "Lon": 22.797611,
+    "Ele": 294.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Slatina Airstrip",
+    "gps_code": "BG-0072",
+    "freq": "",
+    "Lat": 43.272279,
+    "Lon": 24.739494,
+    "Ele": 360.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vetrino Airstrip",
+    "gps_code": "BG-0075",
+    "freq": "",
+    "Lat": 43.31172,
+    "Lon": 27.41527,
+    "Ele": 210.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ruen Airstrip",
+    "gps_code": "BG-0077",
+    "freq": "",
+    "Lat": 42.801632,
+    "Lon": 27.29394,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Belozem SSA Airstrip",
+    "gps_code": "BG-0078",
+    "freq": "",
+    "Lat": 42.21439,
+    "Lon": 25.05879,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zavet Airstrip",
+    "gps_code": "BG-0079",
+    "freq": "",
+    "Lat": 43.74425,
+    "Lon": 26.66147,
+    "Ele": 269.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Selskostopansko Airstrip",
+    "gps_code": "BG-0080",
+    "freq": "",
+    "Lat": 43.40321,
+    "Lon": 25.8523,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalugerene Airstrip",
+    "gps_code": "BG-0081",
+    "freq": "",
+    "Lat": 43.906551,
+    "Lon": 26.866593,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Moskovets Airstrip",
+    "gps_code": "BG-0083",
+    "freq": "",
+    "Lat": 42.65839,
+    "Lon": 24.68383,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nedelevo Airstrip",
+    "gps_code": "BG-0084",
+    "freq": "",
+    "Lat": 42.338768,
+    "Lon": 24.610223,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vabel Airstrip",
+    "gps_code": "BG-0086",
+    "freq": "",
+    "Lat": 43.664115,
+    "Lon": 24.913237,
+    "Ele": 206.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Omarchevo Airstrip",
+    "gps_code": "BG-0088",
+    "freq": "",
+    "Lat": 42.46799,
+    "Lon": 26.144074,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Popovo Airfield",
+    "gps_code": "BG-0089",
+    "freq": "",
+    "Lat": 43.35958,
+    "Lon": 26.238574,
+    "Ele": 227.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nikolovo Airfield",
+    "gps_code": "BG-0090",
+    "freq": "",
+    "Lat": 43.861685,
+    "Lon": 26.1328,
+    "Ele": 153.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pirgovo Airfield",
+    "gps_code": "BG-0091",
+    "freq": "",
+    "Lat": 43.7063,
+    "Lon": 25.89486,
+    "Ele": 171.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Asenovgrad Airfield",
+    "gps_code": "BG-0102",
+    "freq": "",
+    "Lat": 42.0099,
+    "Lon": 24.9264,
+    "Ele": 281.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pet Mogili Airstrip",
+    "gps_code": "BG-0110",
+    "freq": "",
+    "Lat": 42.32262,
+    "Lon": 26.06231,
+    "Ele": 149.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ekzarh Yosif Airstrip",
+    "gps_code": "BG-0117",
+    "freq": "",
+    "Lat": 43.62617,
+    "Lon": 25.78988,
+    "Ele": 189.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sokolare Highway Strip",
+    "gps_code": "BG-0123",
+    "freq": "",
+    "Lat": 43.44957,
+    "Lon": 23.85738,
+    "Ele": 174.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Krushari Airfield",
+    "gps_code": "BG-0157",
+    "freq": "",
+    "Lat": 43.83178,
+    "Lon": 27.76284,
+    "Ele": 217.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Belitsa Airfield",
+    "gps_code": "BG-0159",
+    "freq": "",
+    "Lat": 43.94283,
+    "Lon": 26.66035,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Borisovo Airfield",
+    "gps_code": "BG-0160",
+    "freq": "",
+    "Lat": 43.92375,
+    "Lon": 26.24698,
+    "Ele": 54.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Doyrantsi Airstrip",
+    "gps_code": "BG-0184",
+    "freq": "",
+    "Lat": 43.610644,
+    "Lon": 27.153111,
+    "Ele": 274.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Malevo Airfield",
+    "gps_code": "BG-HKV",
+    "freq": "",
+    "Lat": 41.871799,
+    "Lon": 25.604799,
+    "Ele": 182.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bezmer Air Base",
+    "gps_code": "BG-JAM",
+    "freq": "",
+    "Lat": 42.454899,
+    "Lon": 26.3522,
+    "Ele": 155.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Tsalapitsa Airfield",
+    "gps_code": "LB11",
+    "freq": "",
+    "Lat": 42.188747,
+    "Lon": 24.535716,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sofia West Airfield",
+    "gps_code": "LB13",
+    "freq": "",
+    "Lat": 42.444199,
+    "Lon": 22.9835,
+    "Ele": 639.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Tenevo Airstrip",
+    "gps_code": "LB18",
+    "freq": "",
+    "Lat": 42.346401,
+    "Lon": 26.5739,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Maslarevo Airstrip",
+    "gps_code": "LB29",
+    "freq": "",
+    "Lat": 43.405399,
+    "Lon": 25.474001,
+    "Ele": 106.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Stryama Airfield",
+    "gps_code": "LB30",
+    "freq": "",
+    "Lat": 42.281706,
+    "Lon": 24.866967,
+    "Ele": 170.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Levski Airfield",
+    "gps_code": "LB31",
+    "freq": "",
+    "Lat": 43.3694,
+    "Lon": 25.149099,
+    "Ele": 45.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Leskovo Airfield",
+    "gps_code": "LB33",
+    "freq": "",
+    "Lat": 43.724185,
+    "Lon": 27.690751,
+    "Ele": 213.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Golyama Smolnitsa Airstrip",
+    "gps_code": "LB35",
+    "freq": "",
+    "Lat": 43.627269,
+    "Lon": 27.695203,
+    "Ele": 246.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Sokolovo Airstrip",
+    "gps_code": "LB36",
+    "freq": "",
+    "Lat": 43.475641,
+    "Lon": 28.103522,
+    "Ele": 231.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kamenets Air Base",
+    "gps_code": "LB42",
+    "freq": "",
+    "Lat": 43.327301,
+    "Lon": 25.003401,
+    "Ele": 128.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alfa-Metal Airfield",
+    "gps_code": "LBAM",
+    "freq": "",
+    "Lat": 42.948664,
+    "Lon": 25.358928,
+    "Ele": 617.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Bahovitsa Airfield",
+    "gps_code": "LBBA",
+    "freq": "",
+    "Lat": 43.206111,
+    "Lon": 24.655556,
+    "Ele": 390.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Burgas Airport",
+    "gps_code": "LBBG",
+    "freq": "125.100",
+    "Lat": 42.569917,
+    "Lon": 27.515173,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Bohot Airfield",
+    "gps_code": "LBBO",
+    "freq": "",
+    "Lat": 43.306875,
+    "Lon": 24.691729,
+    "Ele": 354.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Byala Airfield",
+    "gps_code": "LBBQ",
+    "freq": "",
+    "Lat": 43.463484,
+    "Lon": 25.711613,
+    "Ele": 64.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Bazan Airstrip",
+    "gps_code": "LBBZ",
+    "freq": "",
+    "Lat": 43.728429,
+    "Lon": 26.119696,
+    "Ele": 176.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Daskal-Atanasovo Airfield",
+    "gps_code": "LBDA",
+    "freq": "",
+    "Lat": 42.321322,
+    "Lon": 25.893692,
+    "Ele": 128.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Dolna Banya Airfield",
+    "gps_code": "LBDB",
+    "freq": "",
+    "Lat": 42.309091,
+    "Lon": 23.820177,
+    "Ele": 542.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Gorski Izvor Airstrip",
+    "gps_code": "LBGI",
+    "freq": "",
+    "Lat": 42.035833,
+    "Lon": 25.408333,
+    "Ele": 50.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Gorna Oryahovitsa Airport",
+    "gps_code": "LBGO",
+    "freq": "119.700",
+    "Lat": 43.151402,
+    "Lon": 25.7129,
+    "Ele": 86.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Grivitsa Airfield",
+    "gps_code": "LBGR",
+    "freq": "",
+    "Lat": 43.414941,
+    "Lon": 24.733714,
+    "Ele": 280.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ihtiman Airfield",
+    "gps_code": "LBHT",
+    "freq": "119.250",
+    "Lat": 42.42189,
+    "Lon": 23.767221,
+    "Ele": 644.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kaynardzha Airfield",
+    "gps_code": "LBKJ",
+    "freq": "",
+    "Lat": 43.969999,
+    "Lon": 27.469754,
+    "Ele": 175.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalvacha Airfield",
+    "gps_code": "LBKL",
+    "freq": "",
+    "Lat": 42.585997,
+    "Lon": 25.426976,
+    "Ele": 330.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Lesnovo Airfield",
+    "gps_code": "LBLS",
+    "freq": "",
+    "Lat": 42.632465,
+    "Lon": 23.650102,
+    "Ele": 556.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Maritsa Airfield",
+    "gps_code": "LBMA",
+    "freq": "",
+    "Lat": 42.2652,
+    "Lon": 24.7205,
+    "Ele": 192.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Montana Airfield",
+    "gps_code": "LBMO",
+    "freq": "",
+    "Lat": 43.382619,
+    "Lon": 23.263203,
+    "Ele": 237.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Plovdiv International Airport",
+    "gps_code": "LBPD",
+    "freq": "119.600",
+    "Lat": 42.067799,
+    "Lon": 24.8508,
+    "Ele": 182.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Graf Ignatievo Air Base",
+    "gps_code": "LBPG",
+    "freq": "",
+    "Lat": 42.290401,
+    "Lon": 24.714001,
+    "Ele": 57.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Dolna Mitropoliya Air Base",
+    "gps_code": "LBPL",
+    "freq": "",
+    "Lat": 43.451771,
+    "Lon": 24.502423,
+    "Ele": 100.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Primorsko Airfield",
+    "gps_code": "LBPR",
+    "freq": "",
+    "Lat": 42.2596,
+    "Lon": 27.703846,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Erden Airfield",
+    "gps_code": "LBRD",
+    "freq": "",
+    "Lat": 43.499168,
+    "Lon": 23.304722,
+    "Ele": 188.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ruse Airport",
+    "gps_code": "LBRS",
+    "freq": "",
+    "Lat": 43.694801,
+    "Lon": 26.0567,
+    "Ele": 187.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Slanchev Bryag (Sunny Beach) Airstrip",
+    "gps_code": "LBSB",
+    "freq": "",
+    "Lat": 42.727816,
+    "Lon": 27.622204,
+    "Ele": 46.6
+  },
+  {
+    "type": "large_airport",
+    "name": "Sofia Airport",
+    "gps_code": "LBSF",
+    "freq": "123.700",
+    "Lat": 42.696357,
+    "Lon": 23.417671,
+    "Ele": 531.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Sliven Barshen Airfield",
+    "gps_code": "LBSL",
+    "freq": "",
+    "Lat": 42.645272,
+    "Lon": 26.358791,
+    "Ele": 199.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Stryama Airfield",
+    "gps_code": "LBST",
+    "freq": "",
+    "Lat": 42.537873,
+    "Lon": 24.827384,
+    "Ele": 279.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Stara Zagora Airport",
+    "gps_code": "LBSZ",
+    "freq": "",
+    "Lat": 42.376667,
+    "Lon": 25.655,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Vidin Smurdan Airfield",
+    "gps_code": "LBVD",
+    "freq": "",
+    "Lat": 44.0224,
+    "Lon": 22.816099,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vratsa Airfield",
+    "gps_code": "LBVR",
+    "freq": "",
+    "Lat": 43.2559,
+    "Lon": 23.5327,
+    "Ele": 285.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Balchik Airfield",
+    "gps_code": "LBWB",
+    "freq": "",
+    "Lat": 43.423801,
+    "Lon": 28.181299,
+    "Ele": 201.2
+  },
+  {
+    "type": "large_airport",
+    "name": "Varna Airport",
+    "gps_code": "LBWN",
+    "freq": "121.000",
+    "Lat": 43.232101,
+    "Lon": 27.8251,
+    "Ele": 70.1
+  }
+]

@@ -1,0 +1,884 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Aavahelukka Airfield",
+    "gps_code": "EFAA",
+    "freq": "126.100",
+    "Lat": 67.6036,
+    "Lon": 23.971701,
+    "Ele": 224.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ahmosuo Airfield",
+    "gps_code": "EFAH",
+    "freq": "124.200",
+    "Lat": 64.895302,
+    "Lon": 25.752199,
+    "Ele": 29.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Alavus Airfield",
+    "gps_code": "EFAL",
+    "freq": "127.100",
+    "Lat": 62.554699,
+    "Lon": 23.573299,
+    "Ele": 124.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Enontekio Airport",
+    "gps_code": "EFET",
+    "freq": "122.450",
+    "Lat": 68.362602233887,
+    "Lon": 23.424299240112,
+    "Ele": 306.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Eura Airfield",
+    "gps_code": "EFEU",
+    "freq": "123.550",
+    "Lat": 61.1161,
+    "Lon": 22.201401,
+    "Ele": 78.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Forssa Airfield",
+    "gps_code": "EFFO",
+    "freq": "121.300",
+    "Lat": 60.803683,
+    "Lon": 23.650802,
+    "Ele": 99.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Genböle Airfield UL",
+    "gps_code": "EFGE",
+    "freq": "132.675",
+    "Lat": 60.086899,
+    "Lon": 22.5219,
+    "Ele": 14.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Halli Airport",
+    "gps_code": "EFHA",
+    "freq": "124.550",
+    "Lat": 61.856039,
+    "Lon": 24.786686,
+    "Ele": 146.0
+  },
+  {
+    "type": "large_airport",
+    "name": "Helsinki Vantaa Airport",
+    "gps_code": "EFHK",
+    "freq": "119.100",
+    "Lat": 60.318363,
+    "Lon": 24.963341,
+    "Ele": 54.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Hailuoto Airfield",
+    "gps_code": "EFHL",
+    "freq": "124.200",
+    "Lat": 64.969553,
+    "Lon": 24.704218,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Hämeenkyrö Airfield",
+    "gps_code": "EFHM",
+    "freq": "123.150",
+    "Lat": 61.689701,
+    "Lon": 23.0737,
+    "Ele": 136.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Hanko Airfield",
+    "gps_code": "EFHN",
+    "freq": "123.600",
+    "Lat": 59.8489,
+    "Lon": 23.083599,
+    "Ele": 6.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Haapavesi Airfield",
+    "gps_code": "EFHP",
+    "freq": "124.200",
+    "Lat": 64.113098,
+    "Lon": 25.5042,
+    "Ele": 96.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hyvinkää Airfield",
+    "gps_code": "EFHV",
+    "freq": "122.500",
+    "Lat": 60.6544,
+    "Lon": 24.8811,
+    "Ele": 131.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Iisalmi Airfield",
+    "gps_code": "EFII",
+    "freq": "132.325",
+    "Lat": 63.631901,
+    "Lon": 27.1222,
+    "Ele": 117.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiikala Airfield",
+    "gps_code": "EFIK",
+    "freq": "123.600",
+    "Lat": 60.462502,
+    "Lon": 23.6525,
+    "Ele": 116.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Immola Airfield",
+    "gps_code": "EFIM",
+    "freq": "123.600",
+    "Lat": 61.249199,
+    "Lon": 28.9037,
+    "Ele": 103.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kitee Airport",
+    "gps_code": "EFIT",
+    "freq": "123.450",
+    "Lat": 62.1661,
+    "Lon": 30.073601,
+    "Ele": 110.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ivalo Airport",
+    "gps_code": "EFIV",
+    "freq": "123.200",
+    "Lat": 68.607299804688,
+    "Lon": 27.405300140381,
+    "Ele": 146.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Ilvesjoki UL",
+    "gps_code": "EFJI",
+    "freq": "",
+    "Lat": 62.324167,
+    "Lon": 22.694167,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Jämijärvi Airfield",
+    "gps_code": "EFJM",
+    "freq": "127.100",
+    "Lat": 61.778599,
+    "Lon": 22.716101,
+    "Ele": 153.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Joensuu Airport",
+    "gps_code": "EFJO",
+    "freq": "115.700",
+    "Lat": 62.658815,
+    "Lon": 29.619398,
+    "Ele": 121.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Jäkäläpää Airfield",
+    "gps_code": "EFJP",
+    "freq": "",
+    "Lat": 68.711403,
+    "Lon": 25.7528,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jyväskylä Airport",
+    "gps_code": "EFJY",
+    "freq": "119.700",
+    "Lat": 62.399502,
+    "Lon": 25.678301,
+    "Ele": 139.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kauhava Airfield",
+    "gps_code": "EFKA",
+    "freq": "130.100",
+    "Lat": 63.127102,
+    "Lon": 23.051399,
+    "Ele": 46.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kemi-Tornio Airport",
+    "gps_code": "EFKE",
+    "freq": "123.150",
+    "Lat": 65.778701782227,
+    "Lon": 24.582099914551,
+    "Ele": 18.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kumlinge Airfield",
+    "gps_code": "EFKG",
+    "freq": "121.300",
+    "Lat": 60.246899,
+    "Lon": 20.804701,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kuhmo Airfield",
+    "gps_code": "EFKH",
+    "freq": "124.200",
+    "Lat": 64.112503,
+    "Lon": 29.438601,
+    "Ele": 174.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kajaani Airport",
+    "gps_code": "EFKI",
+    "freq": "118.100",
+    "Lat": 64.2855,
+    "Lon": 27.6924,
+    "Ele": 147.2
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kauhajoki Airfield",
+    "gps_code": "EFKJ",
+    "freq": "118.450",
+    "Lat": 62.463212,
+    "Lon": 22.390817,
+    "Ele": 124.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kokkola-Pietarsaari Airport",
+    "gps_code": "EFKK",
+    "freq": "125.025",
+    "Lat": 63.721199,
+    "Lon": 23.143101,
+    "Ele": 25.6
+  },
+  {
+    "type": "small_airport",
+    "name": "Kemijärvi Airfield",
+    "gps_code": "EFKM",
+    "freq": "123.500",
+    "Lat": 66.712898,
+    "Lon": 27.156799,
+    "Ele": 210.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kannus Airfield",
+    "gps_code": "EFKN",
+    "freq": "127.100",
+    "Lat": 63.920601,
+    "Lon": 24.0867,
+    "Ele": 103.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kalajoki Airfield",
+    "gps_code": "EFKO",
+    "freq": "123.400",
+    "Lat": 64.2286,
+    "Lon": 23.826401,
+    "Ele": 13.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Kärsämäki Airfield",
+    "gps_code": "EFKR",
+    "freq": "124.200",
+    "Lat": 63.989201,
+    "Lon": 25.743601,
+    "Ele": 106.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kuusamo Airport",
+    "gps_code": "EFKS",
+    "freq": "118.650",
+    "Lat": 65.987602,
+    "Lon": 29.239401,
+    "Ele": 264.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kittilä Airport",
+    "gps_code": "EFKT",
+    "freq": "118.950",
+    "Lat": 67.700996398926,
+    "Lon": 24.846799850464,
+    "Ele": 196.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Kuopio Airport",
+    "gps_code": "EFKU",
+    "freq": "130.600",
+    "Lat": 63.007099,
+    "Lon": 27.7978,
+    "Ele": 98.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Kivijärvi Airfield",
+    "gps_code": "EFKV",
+    "freq": "132.325",
+    "Lat": 63.125301,
+    "Lon": 25.124201,
+    "Ele": 153.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kymi Airfield",
+    "gps_code": "EFKY",
+    "freq": "135.525",
+    "Lat": 60.5714,
+    "Lon": 26.896099,
+    "Ele": 68.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lahti Vesivehmaa Airfield",
+    "gps_code": "EFLA",
+    "freq": "132.325",
+    "Lat": 61.144199,
+    "Lon": 25.693501,
+    "Ele": 153.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lapinlahti Airfield",
+    "gps_code": "EFLL",
+    "freq": "135.525",
+    "Lat": 63.399399,
+    "Lon": 27.478901,
+    "Ele": 100.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lieksa Nurmes Airfield",
+    "gps_code": "EFLN",
+    "freq": "123.400",
+    "Lat": 63.511902,
+    "Lon": 29.6292,
+    "Ele": 114.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Lappeenranta Airport",
+    "gps_code": "EFLP",
+    "freq": "112.500",
+    "Lat": 61.044601,
+    "Lon": 28.144743,
+    "Ele": 106.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mariehamn Airport",
+    "gps_code": "EFMA",
+    "freq": "130.425",
+    "Lat": 60.1222,
+    "Lon": 19.898199,
+    "Ele": 5.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Menkijärvi Airfield",
+    "gps_code": "EFME",
+    "freq": "123.500",
+    "Lat": 62.946701,
+    "Lon": 23.5189,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mikkeli Airport",
+    "gps_code": "EFMI",
+    "freq": "123.000",
+    "Lat": 61.6866,
+    "Lon": 27.201799,
+    "Ele": 100.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Ii Airfield",
+    "gps_code": "EFML",
+    "freq": "120.650",
+    "Lat": 65.301144,
+    "Lon": 25.416226,
+    "Ele": 12.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Mäntsälä Airfield UL",
+    "gps_code": "EFMN",
+    "freq": "132.325",
+    "Lat": 60.572498,
+    "Lon": 25.5089,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Savikko Airfield",
+    "gps_code": "EFNS",
+    "freq": "127.100",
+    "Lat": 60.52,
+    "Lon": 24.831699,
+    "Ele": 71.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nummela Airfield",
+    "gps_code": "EFNU",
+    "freq": "135.825",
+    "Lat": 60.3339,
+    "Lon": 24.2964,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Oripää Airfield",
+    "gps_code": "EFOP",
+    "freq": "127.100",
+    "Lat": 60.8764,
+    "Lon": 22.744699,
+    "Ele": 100.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Oulu Airport",
+    "gps_code": "EFOU",
+    "freq": "135.450",
+    "Lat": 64.930099,
+    "Lon": 25.354601,
+    "Ele": 14.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Pokka Airfield",
+    "gps_code": "EFPA",
+    "freq": "126.100",
+    "Lat": 68.150223,
+    "Lon": 25.829372,
+    "Ele": 260.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Piikajarvi Airfield",
+    "gps_code": "EFPI",
+    "freq": "123.550",
+    "Lat": 61.245602,
+    "Lon": 22.193399,
+    "Ele": 45.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Pieksämäki Airfield",
+    "gps_code": "EFPK",
+    "freq": "135.525",
+    "Lat": 62.264702,
+    "Lon": 27.0028,
+    "Ele": 118.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Punkaharju Airfield",
+    "gps_code": "EFPN",
+    "freq": "135.525",
+    "Lat": 61.728901,
+    "Lon": 29.3936,
+    "Ele": 77.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Pori Airport",
+    "gps_code": "EFPO",
+    "freq": "128.650",
+    "Lat": 61.4617,
+    "Lon": 21.799999,
+    "Ele": 13.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Helsinki East-Redstone Aerodrome",
+    "gps_code": "EFPR",
+    "freq": "118.475",
+    "Lat": 60.479167,
+    "Lon": 26.593889,
+    "Ele": 21.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pudasjärvi Airfield",
+    "gps_code": "EFPU",
+    "freq": "124.200",
+    "Lat": 65.402199,
+    "Lon": 26.946899,
+    "Ele": 121.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Pyhäsalmi Airfield",
+    "gps_code": "EFPY",
+    "freq": "121.600",
+    "Lat": 63.731899,
+    "Lon": 25.9263,
+    "Ele": 160.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rautavaara Airfield",
+    "gps_code": "EFRA",
+    "freq": "135.525",
+    "Lat": 63.424198,
+    "Lon": 28.124201,
+    "Ele": 145.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Raahe Pattijoki Airfield",
+    "gps_code": "EFRH",
+    "freq": "123.500",
+    "Lat": 64.688103,
+    "Lon": 24.695801,
+    "Ele": 36.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rantasalmi Airfield",
+    "gps_code": "EFRN",
+    "freq": "123.200",
+    "Lat": 62.065498,
+    "Lon": 28.356501,
+    "Ele": 89.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rovaniemi Airport",
+    "gps_code": "EFRO",
+    "freq": "125.800",
+    "Lat": 66.564796447754,
+    "Lon": 25.830400466919,
+    "Ele": 195.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Ranua Airfield",
+    "gps_code": "EFRU",
+    "freq": "124.200",
+    "Lat": 65.973099,
+    "Lon": 26.365299,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Kiuruvesi Airfield",
+    "gps_code": "EFRV",
+    "freq": "132.325",
+    "Lat": 63.705601,
+    "Lon": 26.6164,
+    "Ele": 157.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Räyskälä Airfield",
+    "gps_code": "EFRY",
+    "freq": "121.300",
+    "Lat": 60.744701,
+    "Lon": 24.1078,
+    "Ele": 124.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Savonlinna Airport",
+    "gps_code": "EFSA",
+    "freq": "118.800",
+    "Lat": 61.9431,
+    "Lon": 28.945101,
+    "Ele": 94.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Selanpaa Airfield",
+    "gps_code": "EFSE",
+    "freq": "123.200",
+    "Lat": 61.062401,
+    "Lon": 26.798901,
+    "Ele": 127.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Seinäjoki Airport",
+    "gps_code": "EFSI",
+    "freq": "123.600",
+    "Lat": 62.692101,
+    "Lon": 22.8323,
+    "Ele": 92.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Sodankyla Airport",
+    "gps_code": "EFSO",
+    "freq": "123.400",
+    "Lat": 67.3949966431,
+    "Lon": 26.6191005707,
+    "Ele": 183.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Suomussalmi Airfield",
+    "gps_code": "EFSU",
+    "freq": "124.200",
+    "Lat": 64.821899,
+    "Lon": 28.7103,
+    "Ele": 164.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Torbacka Airfield",
+    "gps_code": "EFTO",
+    "freq": "132.675",
+    "Lat": 60.079201,
+    "Lon": 24.172199,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Tampere-Pirkkala Airport",
+    "gps_code": "EFTP",
+    "freq": "126.200",
+    "Lat": 61.414101,
+    "Lon": 23.604401,
+    "Ele": 118.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Turku Airport",
+    "gps_code": "EFTU",
+    "freq": "130.050",
+    "Lat": 60.514099,
+    "Lon": 22.2628,
+    "Ele": 49.1
+  },
+  {
+    "type": "medium_airport",
+    "name": "Utti Air Base",
+    "gps_code": "EFUT",
+    "freq": "114.600",
+    "Lat": 60.8964,
+    "Lon": 26.9384,
+    "Ele": 103.3
+  },
+  {
+    "type": "medium_airport",
+    "name": "Vaasa Airport",
+    "gps_code": "EFVA",
+    "freq": "114.500",
+    "Lat": 63.050701,
+    "Lon": 21.762199,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Viitasaari Airfield",
+    "gps_code": "EFVI",
+    "freq": "132.325",
+    "Lat": 63.122501,
+    "Lon": 25.816099,
+    "Ele": 110.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vaala Airfield",
+    "gps_code": "EFVL",
+    "freq": "124.200",
+    "Lat": 64.5019,
+    "Lon": 26.76,
+    "Ele": 135.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vampula Airfield",
+    "gps_code": "EFVP",
+    "freq": "127.100",
+    "Lat": 61.0397,
+    "Lon": 22.5917,
+    "Ele": 89.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Varkaus Airport",
+    "gps_code": "EFVR",
+    "freq": "128.325",
+    "Lat": 62.171101,
+    "Lon": 27.868601,
+    "Ele": 87.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Sulkaharju Airfield",
+    "gps_code": "EFVT",
+    "freq": "127.100",
+    "Lat": 63.3978,
+    "Lon": 24.0306,
+    "Ele": 121.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Vuotso Airfield",
+    "gps_code": "EFVU",
+    "freq": "",
+    "Lat": 68.087196,
+    "Lon": 27.123899,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Wredeby Airfield",
+    "gps_code": "EFWB",
+    "freq": "135.525",
+    "Lat": 60.663601,
+    "Lon": 26.7458,
+    "Ele": 25.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Ylivieska Airfield",
+    "gps_code": "EFYL",
+    "freq": "122.500",
+    "Lat": 64.054722,
+    "Lon": 24.725278,
+    "Ele": 76.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Pistohiekan Glider Field",
+    "gps_code": "FI-0001",
+    "freq": "",
+    "Lat": 61.567659,
+    "Lon": 28.01329,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ummeljoki KW Ultralight Airfield",
+    "gps_code": "FI-0002",
+    "freq": "",
+    "Lat": 60.75732,
+    "Lon": 26.734313,
+    "Ele": 41.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Nummijärvi Airfield",
+    "gps_code": "FI-0003",
+    "freq": "",
+    "Lat": 62.308695,
+    "Lon": 22.518812,
+    "Ele": 170.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Ähtäri Airfield",
+    "gps_code": "FI-0004",
+    "freq": "",
+    "Lat": 62.513442,
+    "Lon": 24.068282,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mänttä - Sassi Airfield",
+    "gps_code": "FI-0005",
+    "freq": "",
+    "Lat": 62.028,
+    "Lon": 24.664,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taivalkoski",
+    "gps_code": "FI-0006",
+    "freq": "",
+    "Lat": 65.34774,
+    "Lon": 28.34182,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Parkano Airfield",
+    "gps_code": "FI-0007",
+    "freq": "",
+    "Lat": 62.01534,
+    "Lon": 23.05801,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Soini Airfield",
+    "gps_code": "FI-0008",
+    "freq": "",
+    "Lat": 62.861405,
+    "Lon": 24.165115,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Leivonmäki Airstrip",
+    "gps_code": "FI-0012",
+    "freq": "",
+    "Lat": 61.89421,
+    "Lon": 26.18803,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Hermunen Private Airstrip",
+    "gps_code": "FI-0013",
+    "freq": "",
+    "Lat": 61.04778,
+    "Lon": 27.2256,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Turenki Private Airstrip",
+    "gps_code": "FI-0014",
+    "freq": "",
+    "Lat": 60.946,
+    "Lon": 24.66863,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Rekikoski Airfield",
+    "gps_code": "FI-0015",
+    "freq": "",
+    "Lat": 61.20674,
+    "Lon": 22.88885,
+    "Ele": 0.0
+  }
+]

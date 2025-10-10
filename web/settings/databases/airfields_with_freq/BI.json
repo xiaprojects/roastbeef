@@ -1,0 +1,56 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ruyigi Airport",
+    "gps_code": "BI-0001",
+    "freq": "",
+    "Lat": -3.471371,
+    "Lon": 30.231485,
+    "Ele": 1583.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Mwumba Airport",
+    "gps_code": "BI-0002",
+    "freq": "",
+    "Lat": -2.879447,
+    "Lon": 29.832178,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Bujumbura Melchior Ndadaye International Airport",
+    "gps_code": "HBBA",
+    "freq": "119.700",
+    "Lat": -3.32402,
+    "Lon": 29.318501,
+    "Ele": 787.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gitega Airport",
+    "gps_code": "HBBE",
+    "freq": "",
+    "Lat": -3.417209,
+    "Lon": 29.911308,
+    "Ele": 1749.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Gihohi Airport",
+    "gps_code": "HBBK",
+    "freq": "",
+    "Lat": -4.0342,
+    "Lon": 30.1318,
+    "Ele": 1239.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Kirundo Airport",
+    "gps_code": "HBBO",
+    "freq": "",
+    "Lat": -2.544772,
+    "Lon": 30.094575,
+    "Ele": 1375.0
+  }
+]

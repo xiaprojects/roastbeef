@@ -1,0 +1,488 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Cape Santa Maria Airstrip",
+    "gps_code": "BS-0003",
+    "freq": "",
+    "Lat": 23.649674,
+    "Lon": -75.32409,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cave Cay Airstrip",
+    "gps_code": "BS-0004",
+    "freq": "",
+    "Lat": 23.911301835800003,
+    "Lon": -76.27444982530001,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Farmers Cay Airstrip",
+    "gps_code": "BS-0005",
+    "freq": "",
+    "Lat": 23.961372,
+    "Lon": -76.326206,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Moores Island Airport",
+    "gps_code": "MYA0",
+    "freq": "",
+    "Lat": 26.317729,
+    "Lon": -77.561331,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Clarence A. Bain Airport",
+    "gps_code": "MYAB",
+    "freq": "",
+    "Lat": 24.287701,
+    "Lon": -77.684601,
+    "Ele": 5.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "Andros Town Airport",
+    "gps_code": "MYAF",
+    "freq": "126.300",
+    "Lat": 24.697901,
+    "Lon": -77.795601,
+    "Ele": 1.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Congo Town Airport",
+    "gps_code": "MYAK",
+    "freq": "122.800",
+    "Lat": 24.158701,
+    "Lon": -77.589798,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "Leonard M Thompson International Airport",
+    "gps_code": "MYAM",
+    "freq": "126.500",
+    "Lat": 26.510711,
+    "Lon": -77.084262,
+    "Ele": 1.8
+  },
+  {
+    "type": "medium_airport",
+    "name": "San Andros Airport",
+    "gps_code": "MYAN",
+    "freq": "122.800",
+    "Lat": 25.053800582885746,
+    "Lon": -78.04900360107422,
+    "Ele": 1.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Spring Point Airport",
+    "gps_code": "MYAP",
+    "freq": "",
+    "Lat": 22.441799,
+    "Lon": -73.970901,
+    "Ele": 3.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Sandy Point Airport",
+    "gps_code": "MYAS",
+    "freq": "",
+    "Lat": 26.004698,
+    "Lon": -77.395622,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Treasure Cay Airport",
+    "gps_code": "MYAT",
+    "freq": "121.000",
+    "Lat": 26.745300293,
+    "Lon": -77.3912963867,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Walkers Cay Airport",
+    "gps_code": "MYAW",
+    "freq": "",
+    "Lat": 27.259656,
+    "Lon": -78.400455,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Spanish Cay Airport",
+    "gps_code": "MYAX",
+    "freq": "122.800",
+    "Lat": 26.9503,
+    "Lon": -77.5438,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Chub Cay Airport",
+    "gps_code": "MYBC",
+    "freq": "122.800",
+    "Lat": 25.417101,
+    "Lon": -77.880898,
+    "Ele": 1.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Great Harbour Cay Airport",
+    "gps_code": "MYBG",
+    "freq": "122.800",
+    "Lat": 25.7383,
+    "Lon": -77.840103,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "South Bimini Airport",
+    "gps_code": "MYBS",
+    "freq": "124.200",
+    "Lat": 25.6998996735,
+    "Lon": -79.2647018433,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Arthur's Town Airport",
+    "gps_code": "MYCA",
+    "freq": "",
+    "Lat": 24.6294,
+    "Lon": -75.673797,
+    "Ele": 5.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "New Bight Airport",
+    "gps_code": "MYCB",
+    "freq": "",
+    "Lat": 24.3153,
+    "Lon": -75.452301,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Cat Cay Airport",
+    "gps_code": "MYCC",
+    "freq": "",
+    "Lat": 25.554425,
+    "Lon": -79.275404,
+    "Ele": 4.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Hawks Nest Airport",
+    "gps_code": "MYCH",
+    "freq": "",
+    "Lat": 24.15449,
+    "Lon": -75.51796,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Colonel Hill Airport",
+    "gps_code": "MYCI",
+    "freq": "",
+    "Lat": 22.7456,
+    "Lon": -74.182404,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Pitts Town Airport",
+    "gps_code": "MYCP",
+    "freq": "",
+    "Lat": 22.8297,
+    "Lon": -74.3461,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cay Sal Airport",
+    "gps_code": "MYCS",
+    "freq": "",
+    "Lat": 23.697625,
+    "Lon": -80.389781,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Black Point Airstrip",
+    "gps_code": "MYEB",
+    "freq": "",
+    "Lat": 24.089488,
+    "Lon": -76.397917,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Exuma International Airport",
+    "gps_code": "MYEF",
+    "freq": "118.000",
+    "Lat": 23.562599,
+    "Lon": -75.877998,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "North Eleuthera Airport",
+    "gps_code": "MYEH",
+    "freq": "124.100",
+    "Lat": 25.474899292,
+    "Lon": -76.6835021973,
+    "Ele": 4.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lee Stocking Airport",
+    "gps_code": "MYEL",
+    "freq": "",
+    "Lat": 23.7756,
+    "Lon": -76.1036,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Governor's Harbour Airport",
+    "gps_code": "MYEM",
+    "freq": "122.800",
+    "Lat": 25.2847,
+    "Lon": -76.331001,
+    "Ele": 7.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Normans Cay Airport",
+    "gps_code": "MYEN",
+    "freq": "122.800",
+    "Lat": 24.594299,
+    "Lon": -76.820198,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Rock Sound Airport",
+    "gps_code": "MYER",
+    "freq": "122.800",
+    "Lat": 24.8950787333,
+    "Lon": -76.1768817902,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Staniel Cay Airport",
+    "gps_code": "MYES",
+    "freq": "122.800",
+    "Lat": 24.1691,
+    "Lon": -76.439102,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Torch Cay Airport",
+    "gps_code": "MYEY",
+    "freq": "",
+    "Lat": 23.3972,
+    "Lon": -75.496902,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Deep Water Cay Airport",
+    "gps_code": "MYGD",
+    "freq": "",
+    "Lat": 26.631701,
+    "Lon": -77.9217,
+    "Ele": 0.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Grand Bahama International Airport",
+    "gps_code": "MYGF",
+    "freq": "126.500",
+    "Lat": 26.5587005615,
+    "Lon": -78.695602417,
+    "Ele": 2.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Grand Bahama Auxiliary Airfield",
+    "gps_code": "MYGM",
+    "freq": "",
+    "Lat": 26.631901,
+    "Lon": -78.3592,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "West End Airport",
+    "gps_code": "MYGW",
+    "freq": "",
+    "Lat": 26.685301,
+    "Lon": -78.974998,
+    "Ele": 1.5
+  },
+  {
+    "type": "medium_airport",
+    "name": "Inagua Airport",
+    "gps_code": "MYIG",
+    "freq": "124.200",
+    "Lat": 20.975,
+    "Lon": -73.666901,
+    "Ele": 2.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Deadman's Cay Airport",
+    "gps_code": "MYLD",
+    "freq": "",
+    "Lat": 23.1790008545,
+    "Lon": -75.09359741210001,
+    "Ele": 2.7
+  },
+  {
+    "type": "medium_airport",
+    "name": "Hard Bargain Airport",
+    "gps_code": "MYLR",
+    "freq": "",
+    "Lat": 23.009934,
+    "Lon": -74.904851,
+    "Ele": 3.4
+  },
+  {
+    "type": "medium_airport",
+    "name": "Stella Maris Airport",
+    "gps_code": "MYLS",
+    "freq": "122.800",
+    "Lat": 23.582317,
+    "Lon": -75.268621,
+    "Ele": 3.0
+  },
+  {
+    "type": "medium_airport",
+    "name": "Mayaguana Airport",
+    "gps_code": "MYMM",
+    "freq": "",
+    "Lat": 22.379499,
+    "Lon": -73.013494,
+    "Ele": 3.4
+  },
+  {
+    "type": "large_airport",
+    "name": "Lynden Pindling International Airport",
+    "gps_code": "MYNN",
+    "freq": "121.000",
+    "Lat": 25.039,
+    "Lon": -77.466202,
+    "Ele": 4.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Duncan Town Airport",
+    "gps_code": "MYRD",
+    "freq": "",
+    "Lat": 22.181801,
+    "Lon": -75.7295,
+    "Ele": 1.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Rum Cay International Airport",
+    "gps_code": "MYRP",
+    "freq": "122.800",
+    "Lat": 23.68344,
+    "Lon": -74.836302,
+    "Ele": 4.6
+  },
+  {
+    "type": "medium_airport",
+    "name": "San Salvador Airport",
+    "gps_code": "MYSM",
+    "freq": "124.600",
+    "Lat": 24.063299,
+    "Lon": -74.524002,
+    "Ele": 7.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Big Whale Cay Airport",
+    "gps_code": "MYX4",
+    "freq": "",
+    "Lat": 25.399599,
+    "Lon": -77.791,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Rudder Cut Cay Airport",
+    "gps_code": "MYX7",
+    "freq": "",
+    "Lat": 23.88640022277832,
+    "Lon": -76.25370025634766,
+    "Ele": 3.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Darby Island Airport",
+    "gps_code": "MYX8",
+    "freq": "",
+    "Lat": 23.85029983520508,
+    "Lon": -76.22820281982422,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Hog Cay North Airport",
+    "gps_code": "MYXC",
+    "freq": "",
+    "Lat": 23.6007,
+    "Lon": -75.339302,
+    "Ele": 1.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Leaf Cay Airport",
+    "gps_code": "MYXD",
+    "freq": "",
+    "Lat": 24.149435,
+    "Lon": -76.472843,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Little Darby Island Airport",
+    "gps_code": "MYXF",
+    "freq": "",
+    "Lat": 23.85814,
+    "Lon": -76.22309,
+    "Ele": 13.7
+  },
+  {
+    "type": "small_airport",
+    "name": "Sampson Cay Airport",
+    "gps_code": "MYXH",
+    "freq": "",
+    "Lat": 24.216079,
+    "Lon": -76.478458,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Little Whale Cay Berry Islands Airport",
+    "gps_code": "MYZ3",
+    "freq": "",
+    "Lat": 25.449349,
+    "Lon": -77.759991,
+    "Ele": 1.5
+  }
+]

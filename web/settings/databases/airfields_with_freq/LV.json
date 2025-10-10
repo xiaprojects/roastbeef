@@ -1,0 +1,506 @@
+[
+  {
+    "type": "small_airport",
+    "name": "Ādaži Airfield",
+    "gps_code": "EVAD",
+    "freq": "123.950",
+    "Lat": 57.098591,
+    "Lon": 24.266718,
+    "Ele": 2.4
+  },
+  {
+    "type": "small_airport",
+    "name": "Limbaži Airfield",
+    "gps_code": "EVAH",
+    "freq": "",
+    "Lat": 57.485476,
+    "Lon": 24.672384,
+    "Ele": 64.3
+  },
+  {
+    "type": "small_airport",
+    "name": "Lielvarde Air Base",
+    "gps_code": "EVGA",
+    "freq": "",
+    "Lat": 56.778301,
+    "Lon": 24.853901,
+    "Ele": 61.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Cīrava Airfield",
+    "gps_code": "EVIA",
+    "freq": "",
+    "Lat": 56.738062,
+    "Lon": 21.359786,
+    "Ele": 22.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jēkabpils Air Base",
+    "gps_code": "EVKA",
+    "freq": "",
+    "Lat": 56.534698,
+    "Lon": 25.8925,
+    "Ele": 88.1
+  },
+  {
+    "type": "large_airport",
+    "name": "Liepāja International Airport",
+    "gps_code": "EVLA",
+    "freq": "129.400",
+    "Lat": 56.517502,
+    "Lon": 21.096901,
+    "Ele": 4.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Ikshkile Airfield",
+    "gps_code": "EVPA",
+    "freq": "",
+    "Lat": 56.815668,
+    "Lon": 24.524324,
+    "Ele": 19.5
+  },
+  {
+    "type": "large_airport",
+    "name": "Riga International Airport",
+    "gps_code": "EVRA",
+    "freq": "129.925",
+    "Lat": 56.920752,
+    "Lon": 23.970711,
+    "Ele": 11.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Spilve Aerodrome",
+    "gps_code": "EVRS",
+    "freq": "123.950",
+    "Lat": 56.9911,
+    "Lon": 24.075001,
+    "Ele": 0.9
+  },
+  {
+    "type": "medium_airport",
+    "name": "Jūrmala Airport",
+    "gps_code": "EVTA",
+    "freq": "",
+    "Lat": 56.9422,
+    "Lon": 23.2239,
+    "Ele": 67.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Talsi Airfield",
+    "gps_code": "EVTE",
+    "freq": "",
+    "Lat": 57.254398,
+    "Lon": 22.566218,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ventspils International Airport",
+    "gps_code": "EVVA",
+    "freq": "126.805",
+    "Lat": 57.3578,
+    "Lon": 21.544201,
+    "Ele": 5.8
+  },
+  {
+    "type": "small_airport",
+    "name": "Vaski Airstrip",
+    "gps_code": "LT-0012",
+    "freq": "",
+    "Lat": 56.836457,
+    "Lon": 23.020737,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gančauski Airfield",
+    "gps_code": "LV-0001",
+    "freq": "",
+    "Lat": 56.043395,
+    "Lon": 26.369549,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Griva Airfield",
+    "gps_code": "LV-0002",
+    "freq": "",
+    "Lat": 55.889985,
+    "Lon": 26.45999,
+    "Ele": 93.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Saldus Airfield",
+    "gps_code": "LV-0003",
+    "freq": "",
+    "Lat": 56.6922177555,
+    "Lon": 22.4695301056,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Praulienas lidlauks",
+    "gps_code": "LV-0004",
+    "freq": "",
+    "Lat": 56.8516882,
+    "Lon": 26.3126111,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mālpils Airfield",
+    "gps_code": "LV-0006",
+    "freq": "",
+    "Lat": 57.045431,
+    "Lon": 24.945953,
+    "Ele": 113.1
+  },
+  {
+    "type": "small_airport",
+    "name": "Skrunda Airfield",
+    "gps_code": "LV-0007",
+    "freq": "",
+    "Lat": 56.683379,
+    "Lon": 21.998273,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ragana Airstrip",
+    "gps_code": "LV-0008",
+    "freq": "",
+    "Lat": 57.20293,
+    "Lon": 24.75348,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Valmiera Airfield",
+    "gps_code": "LV-0009",
+    "freq": "",
+    "Lat": 57.558552,
+    "Lon": 25.444296,
+    "Ele": 57.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Valgundes lidlauks",
+    "gps_code": "LV-0010",
+    "freq": "",
+    "Lat": 56.7713125,
+    "Lon": 23.6550662,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Taurene Airfield",
+    "gps_code": "LV-0011",
+    "freq": "",
+    "Lat": 57.169426,
+    "Lon": 25.676857,
+    "Ele": 197.5
+  },
+  {
+    "type": "small_airport",
+    "name": "Zabulnieki Airstrip",
+    "gps_code": "LV-0012",
+    "freq": "",
+    "Lat": 56.422305,
+    "Lon": 26.728749,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Grotūžis Airstrip",
+    "gps_code": "LV-0014",
+    "freq": "",
+    "Lat": 57.440742,
+    "Lon": 25.875658,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Madliena Airfield",
+    "gps_code": "LV-0015",
+    "freq": "",
+    "Lat": 56.792113,
+    "Lon": 25.123042,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Mežāre Airstrip",
+    "gps_code": "LV-0017",
+    "freq": "",
+    "Lat": 56.515676,
+    "Lon": 26.257966,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Strēlnieks Airstrip",
+    "gps_code": "LV-0018",
+    "freq": "",
+    "Lat": 56.508202,
+    "Lon": 24.076641,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Aloja Airstrip",
+    "gps_code": "LV-0019",
+    "freq": "",
+    "Lat": 57.774561,
+    "Lon": 24.887069,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Višķi Airstrip",
+    "gps_code": "LV-0020",
+    "freq": "",
+    "Lat": 56.03673,
+    "Lon": 26.792944,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zaļenieki Airstrip",
+    "gps_code": "LV-0021",
+    "freq": "",
+    "Lat": 56.546718,
+    "Lon": 23.534192,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lube Airfield",
+    "gps_code": "LV-0022",
+    "freq": "",
+    "Lat": 57.440644,
+    "Lon": 22.58316,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Barkava Airstrip",
+    "gps_code": "LV-0023",
+    "freq": "",
+    "Lat": 56.749886,
+    "Lon": 26.5977,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Adamova Airstrip",
+    "gps_code": "LV-0024",
+    "freq": "",
+    "Lat": 56.566385,
+    "Lon": 27.347882,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Karķu lidlauks",
+    "gps_code": "LV-0025",
+    "freq": "",
+    "Lat": 57.786686,
+    "Lon": 25.603455,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Žocene Airfield",
+    "gps_code": "LV-0026",
+    "freq": "",
+    "Lat": 57.532464,
+    "Lon": 22.69939,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Stalbe Airfield",
+    "gps_code": "LV-0029",
+    "freq": "",
+    "Lat": 57.380083,
+    "Lon": 25.011103,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Zasa Airstrip",
+    "gps_code": "LV-0030",
+    "freq": "",
+    "Lat": 56.273317,
+    "Lon": 26.034956,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vitrupe Airstrip",
+    "gps_code": "LV-0031",
+    "freq": "",
+    "Lat": 57.6476,
+    "Lon": 24.392398,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Viļāni Airstrip",
+    "gps_code": "LV-0033",
+    "freq": "",
+    "Lat": 56.592333,
+    "Lon": 26.943647,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Eleja Airstrip",
+    "gps_code": "LV-0034",
+    "freq": "",
+    "Lat": 56.47609,
+    "Lon": 23.699509,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dundaga Airfield",
+    "gps_code": "LV-0038",
+    "freq": "",
+    "Lat": 57.499354,
+    "Lon": 22.402131,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Dricāni Airstrip",
+    "gps_code": "LV-0039",
+    "freq": "",
+    "Lat": 56.663395,
+    "Lon": 27.176464,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Priekuļu lidlauks",
+    "gps_code": "LV-0040",
+    "freq": "",
+    "Lat": 56.4297479,
+    "Lon": 21.5796735,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Slampe Airfield",
+    "gps_code": "LV-0041",
+    "freq": "",
+    "Lat": 56.846598,
+    "Lon": 23.267005,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vārmes lidlauks",
+    "gps_code": "LV-0043",
+    "freq": "",
+    "Lat": 56.854677,
+    "Lon": 22.211771,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gudenieku lidlauks",
+    "gps_code": "LV-0044",
+    "freq": "",
+    "Lat": 56.903657,
+    "Lon": 21.639275,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Nereta Airstrip",
+    "gps_code": "LV-0048",
+    "freq": "",
+    "Lat": 56.22175,
+    "Lon": 25.29949,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Vidzeme Aeroclub",
+    "gps_code": "LV-0049",
+    "freq": "",
+    "Lat": 57.329502,
+    "Lon": 25.321079,
+    "Ele": 107.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Pilsrundāle Rural Airstrip",
+    "gps_code": "LV-0050",
+    "freq": "",
+    "Lat": 56.42202,
+    "Lon": 23.97632,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Ošupe Airstrip",
+    "gps_code": "LV-0051",
+    "freq": "",
+    "Lat": 56.80478,
+    "Lon": 26.77088,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Biržu lidlauks",
+    "gps_code": "LV-0052",
+    "freq": "",
+    "Lat": 56.40475,
+    "Lon": 25.79567,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Gātciema Airfield",
+    "gps_code": "LV-0053",
+    "freq": "",
+    "Lat": 56.9212,
+    "Lon": 23.64144,
+    "Ele": 0.0
+  },
+  {
+    "type": "small_airport",
+    "name": "Lejasciems airfield",
+    "gps_code": "LV-0054",
+    "freq": "",
+    "Lat": 57.290981,
+    "Lon": 26.618413,
+    "Ele": 94.2
+  },
+  {
+    "type": "small_airport",
+    "name": "Cesis \"old\" airfield",
+    "gps_code": "LV-8043",
+    "freq": "",
+    "Lat": 57.32379,
+    "Lon": 25.323229,
+    "Ele": 111.9
+  },
+  {
+    "type": "small_airport",
+    "name": "Saraiķi lidlauks",
+    "gps_code": "LV-8044",
+    "freq": "",
+    "Lat": 56.698941,
+    "Lon": 21.062459,
+    "Ele": 0.0
+  }
+]
