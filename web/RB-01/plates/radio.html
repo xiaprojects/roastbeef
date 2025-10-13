@@ -6,7 +6,7 @@
         </div>
                 <div style="font-size: 28cqmin;padding: 0px;" class="Radio">
                     {{radio.active}}</div>
-                <div style="font-size: 10cqmin;padding: 0px;margin:0px; white-space:nowrap;overflow:hidden;">{{radioFindFrequency(radio.active)}}</div>
+                <div style="font-size: 10cqmin;padding: 0px;margin:0px; white-space:nowrap;overflow:hidden;">{{radio.label}}</div>
     </div>
     <div class="panel panel-default {{radio.className}}">
         <div class="panel-heading">
@@ -26,7 +26,7 @@
                     style="pointer-events: none;font-size: 20cqmin;padding: 0px;">
                     {{radio.standby}}
                 </div>
-                <div style="font-size: 10cqmin;padding: 0px;margin: 0px;white-space:nowrap;overflow:hidden;">{{radioFindFrequency(radio.standby)}}</div>
+                <div style="font-size: 10cqmin;padding: 0px;margin: 0px;white-space:nowrap;overflow:hidden;">{{radio.standbyLabel}}</div>
 
                 <a ng-click="increaseFreq(radio,-1000)" class="btn btn-default  {{radio.classStandByLeft}}" style="width:  15%;">&#9660;</a>
                 <a ng-click="search(radio)" class="btn btn-default " style="width: 20%;min-width: 90px;">SEARCH</a>

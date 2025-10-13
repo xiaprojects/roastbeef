@@ -89,6 +89,8 @@ type RadioStatus struct {
 	Driver string
 	Path string
 	serialPort *serial.Port
+	LabelActive      string
+	LabelStandby     string
 }
 
 type RadioStratuxPlugin struct {
@@ -105,13 +107,7 @@ func (radioInstance *RadioStratuxPlugin) InitFunc() bool {
 	radioInstance.Name = "Radio"
 	radioInstance.radioDataMutex = &sync.Mutex{}
 	radioInstance.requestToExit = false
-	radioInstance.radioData = make([]RadioStatus, 0)
-
-	radioInstance.radioData = append(radioInstance.radioData, RadioStatus{Name: "KRT2 Remote Radio",SquelchLevel: 5,VolumeLevel: 8,FrequencyActive: "125.600",FrequencyStandby: "125.750",Enabled: false,Driver: "SERIAL",Path: ""})
-	radioInstance.radioData = append(radioInstance.radioData, RadioStatus{Name: "SDR Internal Radio",SquelchLevel: 5,VolumeLevel: 8,FrequencyActive: "130.000",FrequencyStandby: "118.180",Enabled: true,Driver: "SDR",Path: ""})
-
-	// Manual Debug, to be removed
-	radioInstance.radioData[0].Path="/dev/prolific0"
+	radioInstance.radioData = globalSettings.Radio
 
 	// Reset all Comms
 	for comm := range radioInstance.radioData {
@@ -130,14 +126,22 @@ func (radioInstance *RadioStratuxPlugin) radioThread() {
 			// TODO: Apply config at runtime
 			for comm := range radioInstance.radioData {
 				thisRadio := &radioInstance.radioData[comm]
-				if(thisRadio.serialPort == nil && thisRadio.Path != "" && thisRadio.Driver == RADIO_DRIVER_RS232){
-					// SERIAL Driver and Port is not yet opened, also Path is set
-					if _, err := os.Stat(thisRadio.Path); errors.Is(err, os.ErrNotExist) {
-						// Ops /dev/path is not exist
+				if thisRadio.Path != "" && thisRadio.Driver == RADIO_DRIVER_RS232 {
+					if thisRadio.serialPort == nil {
+						// SERIAL Driver and Port is not yet opened, also Path is set
+						if _, err := os.Stat(thisRadio.Path); errors.Is(err, os.ErrNotExist) {
+							// Ops /dev/path is not exist
+						} else {
+							thisRadio.serialPort = openRadioSerial(thisRadio.Path, RADIO_DRIVER_RS232_BAUD)
+							if thisRadio.serialPort != nil {
+								defer thisRadio.serialPort.Close()
+							}
+						}
 					} else {
-						thisRadio.serialPort = openRadioSerial(thisRadio.Path, RADIO_DRIVER_RS232_BAUD)
-						if(thisRadio.serialPort != nil){
-							defer thisRadio.serialPort.Close()
+						// Protocol requires ping-pong but due to WRITE line only connected we try to send some bytes
+						// My Radio does not require the "r" to be replied in 60ms
+						if(false){
+							radioSerialSetDual(thisRadio.serialPort, thisRadio.Dual)
 						}
 					}
 				}
@@ -153,7 +157,7 @@ func (radioInstance *RadioStratuxPlugin) ShutdownFunc() bool {
 	return true
 }
 
-func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency string, toActive bool) bool {
+func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency string, toActive bool, label string) bool {
 	if(index>=len(radioInstance.radioData)){
 		return false
 	}
@@ -162,7 +166,7 @@ func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency 
 	switch thisRadio.Driver {
 	case RADIO_DRIVER_RS232:
 		if(thisRadio.serialPort != nil){
-			return radioSerialSetFrequency(thisRadio.serialPort , frequency, toActive)
+			return radioSerialSetFrequency(thisRadio.serialPort, frequency, toActive, label)
 		}
 		break
 	}
@@ -202,7 +206,16 @@ func openRadioSerial(device string, baudrate int) *serial.Port {
 	return p
 }
 
-func radioSerialSetFrequency(serialPort *serial.Port, frequency string, toActive bool) bool {
+func padTo8Bytes(s string) [8]byte {
+	var buf [8]byte
+	copy(buf[:], s) // copy as many as fit (max 8)
+	for i := len(s); i < 8 && i < len(buf); i++ {
+		buf[i] = ' ' // pad with spaces
+	}
+	return buf
+}
+
+func radioSerialSetFrequency(serialPort *serial.Port, frequency string, toActive bool, label string) bool {
 	var command byte
 	var mhz byte
 	var khz byte
@@ -235,7 +248,7 @@ func radioSerialSetFrequency(serialPort *serial.Port, frequency string, toActive
 		log.Printf("radioSerialSetFrequency:error: %s\n", err2.Error())
 		return false
 	}
-	
+	label8byte := padTo8Bytes(label)
 	mhz = byte(mhzInt)
 	khz = byte((khzInt % 1000) / 5)
 	checksum = mhz ^ khz
@@ -244,14 +257,14 @@ func radioSerialSetFrequency(serialPort *serial.Port, frequency string, toActive
 	msg[1] = command
 	msg[2] = mhz
 	msg[3] = khz
-	msg[4] = ' ' // 0
-	msg[5] = ' ' // 1
-	msg[6] = ' ' // 2
-	msg[7] = ' ' // 3
-	msg[8] = ' ' // 4
-	msg[9] = ' ' // 5
-	msg[10] = ' ' // 6
-	msg[11] = ' ' // 7
+	msg[4] = label8byte[0]
+	msg[5] = label8byte[1]
+	msg[6] = label8byte[2]
+	msg[7] = label8byte[3]
+	msg[8] = label8byte[4]
+	msg[9] = label8byte[5]
+	msg[10] = label8byte[6]
+	msg[11] = label8byte[7]
 	msg[12] = checksum
 
 	written, err := serialPort.Write(msg)

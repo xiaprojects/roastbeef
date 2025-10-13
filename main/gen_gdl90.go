@@ -1259,6 +1259,7 @@ type settings struct {
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
 	Camera_Enabled       bool // USB Camera and WebCam
 	Radio_Enabled        bool // RTL SDR Used as Audio Radio
+	Radio                []RadioStatus // Radio settings with device path
 	Cameras              []cameraModel // Camera Settings
 	EMS_Enabled       	 bool // Engine Monitoring System
 	Keypad_Enabled       bool

@@ -798,9 +798,10 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 		}
 		if(radio.radioData[radioIndex].FrequencyActive != msg.FrequencyActive){
 			// ActiveFrequency is Changed
-			ret := radio.radioSetFrequency(radioIndex,msg.FrequencyActive,true)
+			ret := radio.radioSetFrequency(radioIndex, msg.FrequencyActive, true, msg.LabelActive)
 			if(ret==true){
 				radio.radioData[radioIndex].FrequencyActive = msg.FrequencyActive
+				radio.radioData[radioIndex].LabelActive = msg.LabelActive				
 			} else {
 					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Active fail"), time.Now()})
@@ -808,9 +809,10 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 			}
 		if(radio.radioData[radioIndex].FrequencyStandby != msg.FrequencyStandby){
 			// FrequencyStandby is Changed
-			ret := radio.radioSetFrequency(radioIndex,msg.FrequencyStandby,true)
+			ret := radio.radioSetFrequency(radioIndex, msg.FrequencyStandby, false, msg.LabelStandby)
 			if(ret==true){
 				radio.radioData[radioIndex].FrequencyStandby = msg.FrequencyStandby
+				radio.radioData[radioIndex].LabelStandby = msg.LabelStandby				
 			} else {
 					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Standby fail"), time.Now()})

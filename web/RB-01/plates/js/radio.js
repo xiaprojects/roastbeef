@@ -54,14 +54,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     */
     $scope.db = {"global":{}};
 
-    $scope.radioList = [
-
-			{ "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "name": "KRT2", "active": "130.000", "standby": "125.600", "dual": false, "index": 0, "label": "LOCAL AIRFIELD", "standbyLabel": "LIRZ APP" }
-,
-			{ "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "name": "KRT2", "active": "130.000", "standby": "125.600", "dual": false, "index": 0, "label": "LOCAL AIRFIELD", "standbyLabel": "LIRZ APP" }
-
-
-    ];
+    $scope.radioList = [];
 
     $state.get('radio').onEnter = function () {
         // everything gets handled correctly by the controller
@@ -71,6 +64,8 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         var item = {
             "FrequencyActive": $scope.radioList[index].active,
             "FrequencyStandby": $scope.radioList[index].standby,
+            "LabelActive": $scope.radioList[index].label,
+            "LabelStandby": $scope.radioList[index].standbyLabel,
             "Dual": $scope.radioList[index].dual
         };
         let msg = JSON.stringify(item);
@@ -102,6 +97,12 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             template.standby = status[index]["FrequencyStandby"];
             template.dual = status[index]["Dual"];
             template.index = index;
+            // Check for valid data
+            if(template.active.length<1)template.active="118.000";
+            if(template.standby.length<1)template.standby="118.000";
+
+            template.label = $scope.radioFindFrequency(template.active);
+            template.standbyLabel = $scope.radioFindFrequency(template.standby);
         }
         // Auto select the first Radio only the first time
         if(radioList.length>0 && $scope.radioList.length==0){
@@ -121,6 +122,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.radioList[radio.index].standbyMem = radio.activeMem;
         $scope.radioList[radio.index].active = standby;
         $scope.radioList[radio.index].activeMem = standbyMem;
+        var label = radio.LabelActive;
+        $scope.radioList[radio.index].LabelActive = radio.LabelStandby;
+        $scope.radioList[radio.index].LabelStandby = label;
 
         $scope.radioApply(radio.index);
     }
@@ -139,8 +143,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         if (increase >= 1000 || increase <= -1000) {
             mhzFinal = parseInt(mhz) + increase / 1000;
         }
-        var khzFinal = (parseInt(khz) + increase % 1000) % 1000;
+        var khzFinal = (""+(parseInt(khz) + increase % 1000) % 1000).padEnd(3,"0");
         $scope.radioList[radio.index].standby = mhzFinal + "." + khzFinal;
+        $scope.radioList[radio.index].standbyLabel = $scope.radioFindFrequency($scope.radioList[radio.index].standby);
 
         $scope.radioApply(radio.index);
     }
