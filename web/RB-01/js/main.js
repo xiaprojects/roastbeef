@@ -193,7 +193,12 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 			$scope.statusService = new StatusService($scope, $http, $state);
 		}
 	}
-
+	// TODO: radio is optional, so we can manage this condition
+	if (true) {
+		if (($scope.radioService === undefined) || ($scope.radioService === null)) {
+			$scope.radioService = new RadioService($scope, $http, $state);
+		}
+	}
 	$scope.fabClick = (direction, item, browserEvent) => {
 		console.log(direction + " " + item + " " + browserEvent);
 		const proxy = new KeyboardEvent("key", { key: "DOM_CLICK_" + direction });

@@ -712,7 +712,7 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
 }
 
 /***
- * Autopilot REST API End
+ * Audio replay REST API End
  */
 
 func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
@@ -743,6 +743,29 @@ func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
 /***
  * Radio REST API
  */
+
+var radioUpdate *uibroadcaster
+
+func handleRadioWS(conn *websocket.Conn) {
+	radioUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		// Send status via polling.
+		// Disabled because it is managed by interrupt on WebSocket or setEMS
+		if(false){
+			radio.radioDataMutex.Lock()
+			update, _ := json.Marshal(&radio.radioData)
+			radio.radioDataMutex.Unlock()
+			_, err := conn.Write(update)
+			if err != nil {
+				//			log.Printf("Web client disconnected.\n")
+				break
+			}
+		}
+		<-timer.C
+	}
+}
+
 func handleRadioGet(w http.ResponseWriter, r *http.Request) {
 	radio.radioDataMutex.Lock()
 	statusJSON, err := json.Marshal(&radio.radioData)
@@ -819,11 +842,13 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 				}
 			}
 	}
-
+	// Store the current configuration back to facilitate the restore
+	globalSettings.Radio = radio.radioData
 	statusJSON, err4 := json.Marshal(&radio.radioData)
 	radio.radioDataMutex.Unlock()
 	if err4 == nil {
 		fmt.Fprintf(w, "%s\n", statusJSON)
+		radioUpdate.Send(statusJSON)
 	} else {
 		fmt.Fprintf(w, "[]\n")
 		log.Printf("%s", err4)
@@ -2130,6 +2155,7 @@ func managementInterface() {
 	alertUpdate = NewUIBroadcaster()
 	keypadUpdate = NewUIBroadcaster()
 	emsUpdate = NewUIBroadcaster()
+	radioUpdate = NewUIBroadcaster()
 	autopilotUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
@@ -2147,6 +2173,13 @@ func managementInterface() {
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleStatusWS)}
+			s.ServeHTTP(w, req)
+		})
+	// Radio Feature
+	http.HandleFunc("/radioStatus",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleRadioWS)}
 			s.ServeHTTP(w, req)
 		})
 	// EMS Feature

@@ -1,9 +1,32 @@
-/*
-    Copyright (c) 2023 XIAPROJECTS SRL
-    Distributable under the terms of The "BSD New" License
-    that can be found in the LICENSE file, herein included
-    as part of this header.
+/**
+ * This file is part of RB.
+ *
+ * Copyright (C) 2023 XIAPROJECTS SRL
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
 
+ * This source is part of the project RB:
+ * 01 -> Display with Synthetic vision, Autopilot and ADSB
+ * 02 -> Display with SixPack
+ * 03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+ * 04 -> Display with EMS: Engine monitoring system
+ * 05 -> Display with Stratux BLE Traffic
+ * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ *
+ * Community edition will be free for all builders and personal use as defined by the licensing model
+ * Dual licensing for commercial agreement is available
+ * Please join Discord community
+ *
     radio.js: Radio interface
 
     Feature:
@@ -84,6 +107,13 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.radioRefresh = function(){
     $http.get(URL_RADIO_GET).then(function (response) {
         var status = angular.fromJson(response.data);
+        if(status === undefined || status === null){
+            return;
+        }
+                $scope.radioReceivedNewStatus(status);
+    });
+    }
+    $scope.radioReceivedNewStatus = function(status) {
         var radioList = $scope.radioList;
         for(var index=0;index<status.length;index++){
             var template = { "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "name": "", "active": "000.000", "standby": "000.000", "dual": false, "index": 0 };
@@ -111,7 +141,6 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         $scope.radioList = radioList;
         $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
-    });
     }
     $scope.radioRefresh();
 
@@ -122,9 +151,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.radioList[radio.index].standbyMem = radio.activeMem;
         $scope.radioList[radio.index].active = standby;
         $scope.radioList[radio.index].activeMem = standbyMem;
-        var label = radio.LabelActive;
-        $scope.radioList[radio.index].LabelActive = radio.LabelStandby;
-        $scope.radioList[radio.index].LabelStandby = label;
+        var label = radio.label;
+        $scope.radioList[radio.index].label = radio.standbyLabel;
+        $scope.radioList[radio.index].standbyLabel = label;
 
         $scope.radioApply(radio.index);
     }
@@ -156,6 +185,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('radio').onExit = function () {
+        removeEventListener("RadioUpdated", radioUpdateEventListener);
         clearInterval($scope.tickerPlayback);
         delete $scope.tickerPlayback;
         removeEventListener("keypad", keypadEventListener);
@@ -165,7 +195,15 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
 */
     };
 
-
+    addEventListener("RadioUpdated", radioUpdateEventListener);
+    function radioUpdateEventListener(event) {
+        if (($scope === undefined) || ($scope === null) ) {
+            removeEventListener("RadioUpdated", radioUpdateEventListener);
+            return; // we are getting called once after clicking away from the status page
+        }
+        $scope.radioReceivedNewStatus(event.detail);
+        $scope.$apply(); // trigger any needed refreshing of data
+    }
 
     // Key pad management
     function keypadEventListener(event) {

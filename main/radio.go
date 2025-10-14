@@ -1,8 +1,31 @@
 /*
-	Copyright (c) 2023 XIAPROJECTS SRL
-	Distributable under the terms of The "BSD New" License
-	that can be found in the LICENSE file, herein included
-	as part of this header.
+	This file is part of RB.
+
+	Copyright (C) 2023 XIAPROJECTS SRL
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published
+	by the Free Software Foundation, version 3.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+	This source is part of the project RB:
+	01 -> Display with Synthetic vision, Autopilot and ADSB
+	02 -> Display with SixPack
+	03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+	04 -> Display with EMS: Engine monitoring system
+	05 -> Display with Stratux BLE Traffic
+	06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+
+	Community edition will be free for all builders and personal use as defined by the licensing model
+	Dual licensing for commercial agreement is available
+	Please join Discord community
 
 	radio.go: Radio Management
 	Features:
@@ -49,6 +72,7 @@
 package main
 
 import (
+	"fmt"	
 	"errors"
 	"log"
 	"os"
@@ -126,7 +150,7 @@ func (radioInstance *RadioStratuxPlugin) radioThread() {
 			// TODO: Apply config at runtime
 			for comm := range radioInstance.radioData {
 				thisRadio := &radioInstance.radioData[comm]
-				if thisRadio.Path != "" && thisRadio.Driver == RADIO_DRIVER_RS232 {
+				if thisRadio.Path != "" && (thisRadio.Driver == RADIO_DRIVER_RS232 || thisRadio.Driver == RADIO_DRIVER_RS232_NMEA) {
 					if thisRadio.serialPort == nil {
 						// SERIAL Driver and Port is not yet opened, also Path is set
 						if _, err := os.Stat(thisRadio.Path); errors.Is(err, os.ErrNotExist) {
@@ -157,6 +181,18 @@ func (radioInstance *RadioStratuxPlugin) ShutdownFunc() bool {
 	return true
 }
 
+func makeNMEARadioString(prefix string, active string, standby string, labelActive string, labelStandby string) string {
+	msg := fmt.Sprintf("%s,%s,%s,%s,%s",
+	prefix,
+	active,
+	standby,
+	labelActive,
+	labelStandby)
+	msg = appendNmeaChecksum(msg)
+	msg += "\r\n"
+	return msg
+}
+
 func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency string, toActive bool, label string) bool {
 	if(index>=len(radioInstance.radioData)){
 		return false
@@ -167,6 +203,32 @@ func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency 
 	case RADIO_DRIVER_RS232:
 		if(thisRadio.serialPort != nil){
 			return radioSerialSetFrequency(thisRadio.serialPort, frequency, toActive, label)
+		}
+		break
+	case RADIO_DRIVER_RS232_NMEA:
+		if(toActive == true) {
+			thisRadio.FrequencyActive = frequency
+			thisRadio.LabelActive = label
+			
+		} else {
+			thisRadio.FrequencyStandby = frequency
+			thisRadio.LabelStandby = label			
+		}
+
+		nmeaRadioUpdate := makeNMEARadioString("$PGRMC", thisRadio.FrequencyActive, thisRadio.FrequencyStandby, thisRadio.LabelActive, thisRadio.LabelStandby)
+		log.Println("radioSetFrequency NMEA ",nmeaRadioUpdate)
+		// if the user specified a dedicated port we use it
+		if(thisRadio.serialPort != nil) {
+				written, err := serialPort.Write([]byte(nmeaRadioUpdate))
+				if err != nil || written==0 {
+					return false
+				} else {
+					return true
+				}
+		} else {
+			// use existing NMEA output channel
+			sendNetFLARM(nmeaRadioUpdate,time.Second, 0)
+			return true
 		}
 		break
 	}
