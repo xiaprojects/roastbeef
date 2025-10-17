@@ -1064,6 +1064,30 @@ func handleEMSRequest(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func handleEMSMinRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	ems.emsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&ems.emsDataMin)
+	ems.emsDataMutex.Unlock()
+	if err == nil {
+	fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+	}
+}
+func handleEMSMaxRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	ems.emsDataMutex.Lock()
+	statusJSON, err := json.Marshal(&ems.emsDataMax)
+	ems.emsDataMutex.Unlock()
+	if err == nil {
+	fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+	}
+}
 
 // AJAX call - /setEMS. receives via POST command, any/all EMS data.
 func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
@@ -1094,12 +1118,24 @@ func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
 					//ival,err2 := strconv.Atoi(val)					
 					//if(err2==nil){
 						ems.emsDataMutex.Lock()
-					if(ems.emsData[key]!=ival){
+
+					prevValue, hasExistingValue := ems.emsData[key]
+					if hasExistingValue {
+						if prevValue != ival {
 						ems.emsData[key]=ival
 						reconfigureEMS = true
-
-					//}
-					
+						if ems.emsDataMax[key] < ival {
+							ems.emsDataMax[key] = ival
+						}
+						if ems.emsDataMin[key] > ival {
+							ems.emsDataMin[key] = ival
+						}
+						}
+					} else {
+						ems.emsData[key] = ival
+						reconfigureEMS = true
+						ems.emsDataMax[key] = ival
+						ems.emsDataMin[key] = ival
 				}
 				ems.emsDataMutex.Unlock()
 				}
@@ -1353,6 +1389,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						if v != globalSettings.ReplayLog { // Don't mark the files unless there is a change.
 							globalSettings.ReplayLog = v
 						}
+					case "SwitchBoard_Enabled":
+						globalSettings.SwitchBoard_Enabled = val.(bool)
 					case "Radio_Enabled":
 						globalSettings.Radio_Enabled = val.(bool)
 					case "TraceLog":
@@ -2262,6 +2300,8 @@ func managementInterface() {
 	http.HandleFunc("/radio/", handleRadioRest)
 	// EMS Feature
 	http.HandleFunc("/getEMS", handleEMSRequest)
+	http.HandleFunc("/getEMSMax", handleEMSMaxRequest)
+	http.HandleFunc("/getEMSMin", handleEMSMinRequest)
 	http.HandleFunc("/setEMS", handleEMSSetRequest)
 	http.HandleFunc("/getRegion", handleRegionGet)
 	http.HandleFunc("/setRegion", handleRegionSet)

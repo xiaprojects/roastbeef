@@ -46,6 +46,7 @@ function EMSService($scope, $http) {
 
     var simulatorSeed = 0;
     // Demo purposes
+    /*
     window.setInterval(() => {
         var ems = {
 
@@ -84,4 +85,5 @@ function EMSService($scope, $http) {
         const proxy = new CustomEvent("EMSUpdated", { detail: ems });
         dispatchEvent(proxy);
     }, 100);
+    */
 }

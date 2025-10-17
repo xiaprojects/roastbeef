@@ -66,9 +66,71 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"strconv"
 	"strings"
 	"time"
 )
+
+// parseLatLon converts ddmm.mmmm or dddmm.mmmm format to decimal degrees
+func parseLatLon(value, hemisphere string, isLatitude bool) (float64, error) {
+	if len(value) < 4 {
+		return 0, fmt.Errorf("invalid coordinate format: %s", value)
+	}
+
+	// Latitude: ddmm.mmmm, Longitude: dddmm.mmmm
+	degLen := 2
+	if !isLatitude {
+		degLen = 3
+	}
+
+	degPart := value[:degLen]
+	minPart := value[degLen:]
+
+	deg, err1 := strconv.ParseFloat(degPart, 64)
+	min, err2 := strconv.ParseFloat(minPart, 64)
+	if err1 != nil || err2 != nil {
+		return 0, fmt.Errorf("invalid lat/lon number: %v, %v", err1, err2)
+	}
+
+	decimal := deg + min/60.0
+	if hemisphere == "S" || hemisphere == "W" {
+		decimal *= -1
+	}
+	return decimal, nil
+}
+
+func ParseGPRMB(nmea string) (*GPRMBData, error) {
+	if !strings.HasPrefix(nmea, "$GPRMB") {
+		return nil, fmt.Errorf("not a GPRMB sentence")
+	}
+
+	// Split off checksum
+	parts := strings.SplitN(nmea, "*", 2)
+	data := strings.Split(parts[0], ",")
+	if len(data) < 14 {
+		return nil, fmt.Errorf("invalid GPRMB field count")
+	}
+
+	xte, _ := strconv.ParseFloat(data[2], 64)
+	rng, _ := strconv.ParseFloat(data[10], 64)
+	brg, _ := strconv.ParseFloat(data[11], 64)
+	vel, _ := strconv.ParseFloat(data[12], 64)
+	lat, _ := parseLatLon(data[6], data[7], true)
+	lon, _ := parseLatLon(data[8], data[9], false)
+
+	return &GPRMBData{
+		Status:        data[1],
+		XTRKDistance:  xte,
+		Steer:         data[3],
+		WaypointStart: data[4],
+		WaypointDest:  data[5],
+		Lat:           float32(lat),
+		Lon:           float32(lon),
+		Distance:      rng,
+		TrueBearing:   brg,
+		Knots:         vel,
+		Arrived:       data[13]}, nil
+}
 
 /*
 	Radio parsing in case we need to switch from NMEA UDP Input to TQ KRT2 Binary protocol
@@ -208,6 +270,28 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 				for _, approvedSentence := range passthruePrefixes {
 
 					if strings.HasPrefix(nmeaSentence, approvedSentence) {
+						if strings.HasPrefix(nmeaSentence, "$GPRMB") {
+							gprmb, error := ParseGPRMB(nmeaSentence)
+							if error == nil {
+								// Stop internal AP
+								autopilot.waypointsDataMutex.Lock()
+								autopilot.status.Active = false
+								// Store current waypath to be ready to switch on internal AP in case of timeout
+								var msg []Waypoint
+								To := Waypoint{Lat: gprmb.Lat, Lon: gprmb.Lon, Ele: int32(mySituation.GPSAltitudeMSL), Status: WAYPOINT_STATUS_TARGET, Cmt: gprmb.WaypointDest}
+								From := Waypoint{Lat: mySituation.GPSLatitude, Lon: mySituation.GPSLongitude, Ele: int32(mySituation.GPSAltitudeMSL), Status: WAYPOINT_STATUS_PAST, Cmt: gprmb.WaypointStart}
+								msg = make([]Waypoint, 0)
+								msg = append(msg, From)
+								msg = append(msg, To)
+								autopilot.waypointsData = msg
+								// Store last status
+								autopilot.status.GPRMB = *gprmb
+								autopilot.status.To = To
+								// Socket updated on Autopilot Thread
+								//autopilotUpdate.SendJSON(autopilot.status)
+								autopilot.waypointsDataMutex.Unlock()
+							}
+						}
 						//fmt.Println(nmeaSentence)
 						sendNetFLARM(nmeaSentence+"\n", time.Second, 0)
 					}
