@@ -29,7 +29,12 @@ if [ "$(cat /boot/firmware/stratux.conf | grep 'PersistentLogging.:\s*true')" !=
 else
     raspi-config nonint do_overlayfs 0
 fi
+
+# If we are in the overlay fs this will not work
 raspi-config nonint disable_bootro
+# Manually apply on both
+sed -i /etc/fstab -e "s#\(.*/boot$FIRMWARE.*\)defaults,ro\(.*\)#\1defaults\2#"
+sed -i /media/root-ro/etc/fstab -e "s#\(.*/boot$FIRMWARE.*\)defaults,ro\(.*\)#\1defaults\2#"
 
 # Check for settings moved on the boot partition
 export RB_SETTINGS_FOLDER="/boot/firmware/rb"

@@ -152,6 +152,16 @@ systemctl disable systemd-ask-password-wall.path
 systemctl disable dphys-swapfile.service
 systemctl disable rpc-statd-notify.service
 systemctl disable rpi-eeprom-update.service
+systemctl disable getty.target
+systemctl disable getty@tty1.service
+systemctl mask serial-getty@ttyAMA0.service
+systemctl disable console-getty.service
+systemctl disable cloud-init-hotplugd.service
+systemctl disable cloud-init-main.service
+systemctl disable cloud-init-local.service
+systemctl disable cloud-final.service
+systemctl disable cloud-init-network.service
+systemctl disable cloud-config.service
 # Trixie will use directly Network manager
 systemctl disable dnsmasq.service
 
@@ -207,6 +217,9 @@ ln -s $RB_SETTINGS_FOLDER $RB_WWW_SETTINGS
 # I2C Enable
 raspi-config nonint do_i2c 0
 
+# SPI Enable for RB-04 EMS
+#raspi-config nonint do_spi 0
+
 # Debugging purposes
 #raspi-config nonint do_ssh 1
 
@@ -215,6 +228,7 @@ raspi-config nonint do_i2c 0
 raspi-config nonint do_overlayfs 0
 # Ensure boot still RW
 raspi-config nonint disable_bootro
+# sed -i /media/root-ro/etc/fstab -e "s#\(.*/boot$FIRMWARE.*\)defaults,ro\(.*\)#\1defaults\2#"
 # In the future to write into the root you shall:
 #sudo mount -o remount,rw /media/root-ro
 # In the future to readonly into the root you shall:
