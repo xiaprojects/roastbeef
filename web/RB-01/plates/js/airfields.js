@@ -500,7 +500,7 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
             if (status.length > 0) {
                 $scope.airfields = [];
                 status.forEach(element => {
-                    element.Cmt = (element.gps_code==""?"":element.gps_code + " - ") + (element.local_code==""?"":element.local_code+" - ") + element.name
+                    element.Cmt = (element.gps_code===undefined?"":element.gps_code + " - ") + (element.local_code===undefined?"":element.local_code+" - ") + (element.name===undefined?"":element.name)
                     element.className ="keypadSelectedNo";
                     $scope.airfields.push(element);
                 });
