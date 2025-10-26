@@ -1,8 +1,32 @@
-/*
-    Copyright (c) 2023 XIAPROJECTS SRL
-    Distributable under the terms of The "BSD New" License
-    that can be found in the LICENSE file, herein included
-    as part of this header.
+/**
+ * This file is part of RB.
+ *
+ * Copyright (C) 2023 XIAPROJECTS SRL
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+ * This source is part of the project RB:
+ * 01 -> Display with Synthetic vision, Autopilot and ADSB
+ * 02 -> Display with SixPack
+ * 03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+ * 04 -> Display with EMS: Engine monitoring system
+ * 05 -> Display with Stratux BLE Traffic
+ * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ *
+ * Community edition will be free for all builders and personal use as defined by the licensing model
+ * Dual licensing for commercial agreement is available
+ * Please join Discord community
+ *
 
     airfields.js
 */
@@ -42,46 +66,6 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.gpx = { "routes": [] };
 
 
-    /*****************************************************
-     * XTRK Routines
-     */
-
-    // Converts from degrees to radians.
-    function toRadians(degrees) {
-        return degrees * Math.PI / 180;
-    };
-
-    // Converts from radians to degrees.
-    function toDegrees(radians) {
-        return radians * 180 / Math.PI;
-    }
-
-    function bearing(startLng, startLat, destLng, destLat) {
-        startLat = toRadians(startLat);
-        startLng = toRadians(startLng);
-        destLat = toRadians(destLat);
-        destLng = toRadians(destLng);
-
-        y = Math.sin(destLng - startLng) * Math.cos(destLat);
-        x = Math.cos(startLat) * Math.sin(destLat) - Math.sin(startLat) * Math.cos(destLat) * Math.cos(destLng - startLng);
-        brng = Math.atan2(y, x);
-        brng = toDegrees(brng);
-        return (brng + 360) % 360;
-    }
-
-    function distance(lon1, lat1, lon2, lat2) {
-        var R = 6371; // Radius of the earth in km
-        var dLat = toRadians(lat2 - lat1);  // deg2rad below
-        var dLon = toRadians(lon2 - lon1);
-        var a =
-            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
-            Math.sin(dLon / 2) * Math.sin(dLon / 2)
-            ;
-        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        var d = R * c; // Distance in km
-        return d;
-    }
 
     $scope.calcRouting = function (currentTrk, currentAltitude, destElevantion, lat1, lon1, lat2, lon2) {
         var trk = bearing(lon1, lat1, lon2, lat2)

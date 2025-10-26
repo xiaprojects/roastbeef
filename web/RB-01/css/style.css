@@ -101,19 +101,19 @@ body {
 
 .semiroundtop {
   border-radius: 0px 0px 10px 10px;
-  /*background: #80808050;*/
 }
 
 .semiroundleft {
   border-radius: 0px 10px 10px 0px;
-  /*background: #80808050;*/
 }
 
 .semiroundright {
   border-radius: 10px 0px 00px 10px;
-  /*background: #80808050;*/
 }
 
+.semiroundbottom {
+  border-radius: 10px 10px 0px 0px;
+}
 
 
 html,
@@ -149,115 +149,92 @@ body {
   display: inline-block;
 }
 
-.fabSouth {
+.fabNavigation {
   z-index: 9999999;
   cursor: pointer;
   position: absolute;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  animation: fadeBackground 3s forwards; /* run once, keep end color */
+}
+
+@keyframes fadeBackground {
+  from {
+    background-color: #acacac;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.fabSouth {
   width: 30%;
   height: 10cqw;
   margin-left: 35%;
-  padding: 0;
   bottom: 0px;
-
-  text-align: center;
+  align-items: flex-end;
 }
 
 
 .fabNorth {
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 30%;
   height: 10cqw;
   margin-left: 35%;
-
-  padding: 0;
   top: 0px;
-
-  text-align: center;
 }
 
 
 .fabWest {
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 10%;
   height: 25%;
-  margin: 0;
-  padding: 0;
   margin-top: 35cqh;
   left: 0px;
-
-
+  justify-content: left;
+  align-items: center;
 }
 
 .fabEast {
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 10%;
   height: 25%;
-  margin: 0;
-  padding: 0;
   margin-top: 35cqh;
   right: 0px;
-
+  justify-content: right;
+  align-items: center;
 }
 
 .fabNorthEast {
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 4cqmin;
   height: 4cqmin;
-  margin: 0;
-  padding: 0;
   top: 0px;
   right: 0%;
 
   font-size: 4cqmin;
-  text-align: center;
 }
 
 .fabNorthWest {
-  text-align: center;
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 4cqmin;
   height: 4cqmin;
-  margin: 0;
-  padding: 0;
   top: 0px;
   left: 0px;
   font-size: 4cqmin;
 }
 
 .fabSouthEast {
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 10%;
   height: 25%;
-  margin: 0;
-  padding: 0;
+
   bottom: 0px;
   right: 0px;
-
 }
 
 .fabSouthWest {
-  z-index: 9999999;
-  cursor: pointer;
-  position: absolute;
   width: 10%;
   height: 25%;
-  margin: 0;
-  padding: 0;
   bottom: 0px;
   left: 0px;
-
 }
 
 @container (width<700px) {
@@ -331,4 +308,8 @@ body {
     -moz-transition: -moz-transform 0 ease;
     transition: transform 0 ease;
   }
+}
+
+.label {
+  font-size: 100%;
 }

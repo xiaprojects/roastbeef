@@ -5,7 +5,7 @@ After=NetworkManager.service
 [Service]
 Type=forking
 ExecStart=/bin/bash -lc /home/pi/enable_accesspoint.sh
-Restart=once
+Restart=no
 User=root
 RestartSec=5
 

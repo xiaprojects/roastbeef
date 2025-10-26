@@ -29,7 +29,7 @@
     
                     <tr ng-repeat="point in airfields"
                         ng-click="directToAirfield(point)"
-                        style="margin: 0px;padding:0px;border-top: 1px #acacac;{{point.style}}" ng-class="point.className" id="line_0_{{point.index}}">
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" ng-class="point.className" id="line_0_{{point.index}}">
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
                                 <i class="fa fa-location-arrow" aria-hidden="true"
                                     style="font-size: 4cqmin;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>

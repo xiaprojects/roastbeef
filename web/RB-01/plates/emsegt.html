@@ -1,0 +1,18 @@
+<div ui-content-for="title">EGT</div>
+<div style="  max-height: 100cqh;
+  aspect-ratio: 1/1;
+  position: relative;">
+    <div style="display:flex;flex-direction: row;width: 100%;height:100%;justify-content: space-between;">
+        <div ng-repeat="bar in bars"
+            style="padding-left: 1%;padding-right: 1%;width: 100%;display:flex;flex-direction:column;justify-content: space-between;text-align: center;position: relative;">
+            <div
+                style="box-sizing: border-box;border: 4px solid white;width: 100%;height: 4cqmin;position: absolute;top: {{bar.displace}};left:0%;">
+            </div>
+            <div style="font-size: 4cqmin;">{{bar.format}}</div>
+            <div ng-repeat="range in bar.ranges" style="height:100%;background-color: {{range.color}};">
+                <div style="width: 100%;height: 2px;background-color: darkgray;"></div>
+            </div>
+            <div style="font-size: 4cqmin;">{{bar.name}}</div>
+        </div>
+    </div>
+</div>

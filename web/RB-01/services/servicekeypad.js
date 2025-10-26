@@ -296,6 +296,10 @@ function KeypadService($scope, $http, $state) {
                 }
             */
             }
+            else {
+                // in case we are in a unknown navigation place, we brings the pilot to the home
+                document.location = "#/";
+            }
         }
     });
 

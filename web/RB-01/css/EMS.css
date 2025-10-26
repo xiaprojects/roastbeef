@@ -1,12 +1,3 @@
-.ems {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url("EMS.png");
-    aspect-ratio: 1/1;
-    position: relative;
-}
-
 .ems_intrument {
     width: 50%;
     float: left;

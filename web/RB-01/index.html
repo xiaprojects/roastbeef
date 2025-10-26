@@ -113,6 +113,7 @@
 	<script src="plates/js/bottom.js"></script>
 	<script src="plates/js/radio.js"></script>
 	<script src="plates/js/timers.js"></script>
+	<script src="plates/js/emsegt.js"></script>
 	<script src="plates/js/ems.js"></script>
 	<script src="plates/js/synthview.js"></script>
 	<script src="plates/js/switchboard.js"></script>
@@ -131,6 +132,7 @@
 	<script src="/synthview/GLTFLoader.js"></script>
 	<script src="/plates/js/cockpit_widgets.js"></script>
 	<script src="/js/chart.js"></script>
+	<script src="/js/GPXParser.js"></script>
 	<style>
 	</style>
 </head>
@@ -145,7 +147,7 @@
 	<div ui-track-as-search-param='true' class="sidebar sidebar-left">
 		<div class="scrollable">
 			<div class="scrollable-content">
-				<a class="fabNorthEast" ng-click="fabClick('NW',this,$event);" ui-toggle="uiSidebarLeft">
+				<a class="fabNavigation fabNorthEast" ng-click="fabClick('NW',this,$event);" ui-toggle="uiSidebarLeft">
 					<i class="fa fa-caret-right pull-right"></i>
 				</a>
 				<div style="container-type: inline-size;width: 100%;" ng-repeat="item in leftpages"
@@ -159,7 +161,7 @@
 		<div class="scrollable">
 			<div class="scrollable-content">
 
-				<a class="fabNorthWest" ng-click="fabClick('NE',this,$event);" ui-toggle="uiSidebarRight">
+				<a class="fabNavigation fabNorthWest" ng-click="fabClick('NE',this,$event);" ui-toggle="uiSidebarRight">
 					<i class="fa fa-caret-left pull-left"></i>
 				</a>
 
@@ -187,15 +189,17 @@
 		<a class="fabSouthWest" ng-click="fabClick('SW',this,$event);">
 		</a>
 -->
-		<a class="fabEast" ng-click="fabClick('E',this,$event);">
+		<a class="fabNavigation fabEast semiroundright" ng-click="fabClick('E',this,$event);" ng-if="fabEastEnabled">
+			<i class="fa fa-caret-left"></i>
 		</a>
-		<a class="fabWest" ng-click="fabClick('W',this,$event);">
+		<a class="fabNavigation fabWest semiroundleft" ng-click="fabClick('W',this,$event);"  ng-if="fabWestEnabled">
+			<i class="fa fa-caret-right"></i>
 		</a>
-		<a class="fabNorth" ng-click="fabClick('N',this,$event);" ng-if="!uiSidebarTop">
+		<a class="fabNavigation fabNorth semiroundtop" ng-click="fabClick('N',this,$event);" ng-if="!uiSidebarTop && fabNorthEnabled">
 			<i class="fa fa-caret-down"></i>
 		</a>
-		<a class="fabSouth" ng-click="fabClick('S',this,$event);" ng-if="!uiSidebarBottom">
-	
+		<a class="fabNavigation fabSouth semiroundbottom" ng-click="fabClick('S',this,$event);" ng-if="!uiSidebarBottom && fabSouthEnabled">
+			<i class="fa fa-caret-up"></i>
 		</a>
 		<div class="navbar navbar-app navbar-absolute-top" ng-if="uiSidebarTop" ng-include="'plates/sidebottom.html'"
 			ng-controller="BottomCtrl" ng-init="init('top')"></div>

@@ -70,6 +70,18 @@ function SituationService($scope, $http) {
         $scope.situationSocket.onerror = function (msg) {
         };
 
+        $scope.situationByPilot = {
+            QNH: 1013,
+        };
+
+        function situationUpdatedByPilot(event) {
+            if(event.detail.hasOwnProperty("QNH") && parseInt(event.detail.QNH)>900) {
+                $scope.situationByPilot.QNH = event.detail.QNH;
+            }
+        }
+
+        addEventListener("SituationUpdatedByPilot", situationUpdatedByPilot);
+
         $scope.sendSituationTimer = 0;
         $scope.situationSocket.onmessage = function (msg) {
             if (($scope === undefined) || ($scope === null))
@@ -86,7 +98,7 @@ function SituationService($scope, $http) {
                 $scope.sendSituationTimer = 0;
 
                 // RB-Addons
-                if (situation.hasOwnProperty("BaroPressureAltitude")) {
+                if (situation.hasOwnProperty("BaroPressureAltitude") && situation.GPSFixQuality > 0) {
                     var altitudeVsMillibar = 8 / 0.3048;
                     var a = (situation.BaroPressureAltitude / altitudeVsMillibar).toFixed(0);
                     var b = (situation.GPSAltitudeMSL / altitudeVsMillibar).toFixed(0);
@@ -94,7 +106,7 @@ function SituationService($scope, $http) {
                     situation.QNH = 1013 + c;
                 }
                 else {
-                    situation.QNH = 1013;
+                    situation.QNH = $scope.situationByPilot.QNH;
                 }
 
                 //situation.GPSAltitudeMSL = situation.GPSAltitudeMSL + 1000;

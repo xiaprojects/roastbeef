@@ -807,6 +807,12 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 		log.Printf("handleRadioPost:error: %s\n", err2.Error())
 		http.Error(w, err2.Error(), 500)
 	} else {
+		// Multi radio support
+		if(msg.Enabled == true) {
+			for index, _ := range radio.radioData {
+				radio.radioData[index].Enabled = (index == radioIndex)
+			}	
+		}
 		// no need for Mutex because the writer is here, no other thread will access to the array
 		if(radio.radioData[radioIndex].Dual != msg.Dual){
 			// Dual is Changed

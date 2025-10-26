@@ -30,6 +30,8 @@
  */
 var app = angular.module('bobby', ['ui.router', 'mobile-angular-ui', 'appControllers']);
 
+var URL_EMS_SETTINGS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/ems.json";
+
 var appControllers = angular.module('appControllers', []);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -154,6 +156,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'MapCtrl',
 			reloadOnSearch: false
 		})
+		.state('emsegt', {
+			url: '/emsegt',
+			templateUrl: 'plates/emsegt.html',
+			controller: 'EmsegtCtrl',
+			reloadOnSearch: false
+		})
 		.state('ems', {
 			url: '/ems',
 			templateUrl: 'plates/ems.html',
@@ -265,6 +273,15 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 	$scope.uiSidebarTop = false;
 	$scope.uiSidebarBottom = false;
 
+	$scope.fabEastEnabled = true;
+	$scope.fabWestEnabled = true;
+	$scope.fabNorthEnabled = false;
+	$scope.fabSouthEnabled = false;
+
+	if (window.innerHeight > 512) {
+		$scope.fabNorthEnabled = true;
+		$scope.fabSouthEnabled = true;
+	}
 
 
 	$scope.rightpages = [
@@ -274,94 +291,22 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 	];
 
 	$scope.leftpages = [
-		{ "url": "plates/ems.html", "ctrl": EMSCtrl, pointer: null, "name": "ems" }
-
+		{ "url": "plates/ems.html", "ctrl": EMSCtrl, pointer: null, "name": "ems", "height":"100px" }
+		,{ "url": "plates/emsegt.html", "ctrl": EmsegtCtrl, pointer: null, "name": "emsegt", "height":"200px" }
 	];
 
 
-	$scope.COMMS = {
-		"radioList": [
-			{ "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "name": "KRT2", "active": "130.000", "standby": "125.600", "dual": false, "index": 0, "label": "LOCAL AIRFIELD", "standbyLabel": "LIRZ APP" }
-		]
-	};
 	$scope.EMS = [
-
-		{
-			"speed": 0,
-			"endSpeedDegree": 495,
-
-			"label": "OIL TEMP",
-			"unit": "°C",
-			"backgroundColor": "#000000",
-			"startSpeedDegree": 225,
-			"minSpeed": 0,
-			"maxSpeed": 110,
-			"speedDegree": "45deg",
-			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 40, "backgroundColor": "#00aa00" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 90, "backgroundColor": "#aaaa00" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 120, "backgroundColor": "#aa0000" }
-			],
-			"speedTicks": []
-		},
-		{
-			"speed": 0,
-			"endSpeedDegree": 495,
-
-			"label": "OIL PRES",
-			"unit": "PSI",
-			"backgroundColor": "#000000",
-			"startSpeedDegree": 225,
-			"minSpeed": 0,
-			"maxSpeed": 8,
-			"speedDegree": "45deg",
-			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 0, "backgroundColor": "#000000" }
-			],
-			"speedTicks": []
-		},
-		{
-			"speed": 0,
-			"endSpeedDegree": 495,
-			"label": "RPM",
-			"unit": "100rpm",
-			"backgroundColor": "#000000",
-			"startSpeedDegree": 225,
-			"minSpeed": 0,
-			"maxSpeed": 6000,
-			"speedDegree": "45deg",
-			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 0, "backgroundColor": "#00aa00" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 0, "backgroundColor": "#aaaa00" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 0, "backgroundColor": "#aa0000" }
-			],
-			"speedTicks": []
-		},
-		{
-			"speed": 27,
-			"endSpeedDegree": 495,
-			"label": "MAP",
-			"unit": "mmHg",
-			"backgroundColor": "#000000",
-			"startSpeedDegree": 225,
-			"minSpeed": 0,
-			"maxSpeed": 30,
-			"speedDegree": "180deg",
-			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 0, "backgroundColor": "#000000" }
-			],
-			"speedTicks": []
-		}
 	];
 
+	$http.get(URL_EMS_SETTINGS_GET).then(function (response) {
+            var status = angular.fromJson(response.data);
+			if(status.hasOwnProperty("widgets")) {
+				$scope.EMS = status.widgets;
+				// Gracefully load to avoid bloat the startup
+				//$scope.$apply();
+			}
+	});
 
 
 	// Sidebar simulation to be moved

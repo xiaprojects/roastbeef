@@ -84,7 +84,12 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $scope.radioApply = function(index){
+        for (var i = 0; i < $scope.radioList.length; i++) {
+            $scope.radioList[i].enabled = (i == index);
+        }
+
         var item = {
+            "Enabled": $scope.radioList[index].enabled,
             "FrequencyActive": $scope.radioList[index].active,
             "FrequencyStandby": $scope.radioList[index].standby,
             "LabelActive": $scope.radioList[index].label,
@@ -126,6 +131,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             template.active = status[index]["FrequencyActive"];
             template.standby = status[index]["FrequencyStandby"];
             template.dual = status[index]["Dual"];
+            template.enabled = status[index]["Enabled"];
             template.index = index;
             // Check for valid data
             if(template.active.length<1)template.active="118.000";
@@ -168,6 +174,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         increase = parseInt(increase);
         var mhz = $scope.radioList[radio.index].standby.split(".")[0];
         var khz = $scope.radioList[radio.index].standby.split(".")[1];
+        if (Number.isNaN(parseInt(mhz))) mhz = 118;
+        if (Number.isNaN(parseInt(khz))) khz = 0;
+        if (parseInt(mhz) < 118) mhz = 118;
         var mhzFinal = mhz;
         if (increase >= 1000 || increase <= -1000) {
             mhzFinal = parseInt(mhz) + increase / 1000;
@@ -381,16 +390,164 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     addEventListener("keypad", keypadEventListener);
+    /**
+     * Keypad composer
+     */
+    $scope.toggleKeypad = function (radio) {
+        $scope.radioList[radio.index].keypadVisible = !$scope.radioList[radio.index].keypadVisible;
+        if ($scope.radioList[radio.index].keypadVisible == true) {
+            $scope.radioList[radio.index].keypadDigitIndex = 1;
+            $scope.radioList[radio.index].standby = "1--.---";
+            // ng-if div is not present
+            //if(true) {
+            window.setTimeout(() => {
+                var div = document.getElementById("radio_keypad_" + radio.index);
+                if (div !== undefined && div != null) {
+                    /*
+                    div.parentElement.parentElement.parentElement.parentElement.scrollTo({
+                        top: div.getBoundingClientRect().top,
+                        left: div.getBoundingClientRect().left,
+                        behavior: "smooth",
+                    });
+                    */
+                    div.scrollIntoView({ behavior: "instant", block: "end", inline: "nearest" });
+                }
+            }
+            , 10);
+        }
+    }
+
+    $scope.digitKeypad = function (radio, digit) {
+
+        if ($scope.radioList[radio.index].keypadVisible == true) {
+            switch ($scope.radioList[radio.index].keypadDigitIndex) {
+                case 1:
+                    if (digit != 1 && digit != 2 && digit != 3) {
+                        return;
+                    }
+                    break;
+                case 6:
+                    if (digit != 0 && digit != 5) {
+                        return;
+                    }
+                    break;
+
+            }
+
+
+            if ($scope.radioList[radio.index].keypadDigitIndex < 7) {
+                if ($scope.radioList[radio.index].keypadDigitIndex == 1) {
+                    $scope.radioList[radio.index].standby = "1--.---";
+                }
+                $scope.radioList[radio.index].standby =
+                    $scope.radioList[radio.index].standby.slice(0, $scope.radioList[radio.index].keypadDigitIndex)
+                    + digit +
+                    $scope.radioList[radio.index].standby.slice($scope.radioList[radio.index].keypadDigitIndex + 1)
+                    ;
+                $scope.radioList[radio.index].keypadDigitIndex++;
+                if ($scope.radioList[radio.index].keypadDigitIndex == 3) {
+                    $scope.radioList[radio.index].keypadDigitIndex++;
+                }
+            }
+            if ($scope.radioList[radio.index].keypadDigitIndex > 6) {
+                $scope.radioList[radio.index].standbyLabel = $scope.radioFindFrequency($scope.radioList[radio.index].standby);
+                $scope.radioList[radio.index].keypadDigitIndex = 1;
+                $scope.radioApply(radio.index);
+            }
+        }
+    }
+
+    /**
+     * Nearby and Search
+     */
+    $scope.nearby = [];
+
+    $scope.search = function(radio) {
+        $scope.radioList[radio.index].searchEnabled = !$scope.radioList[radio.index].searchEnabled;
+    }
+
+    $scope.setFrequency = function(radio,frequency,label) {
+        $scope.radioList[radio.index].standby = frequency;
+        $scope.radioList[radio.index].standbyLabel = label;
+        $scope.radioApply(radio.index);
+    }
 
     function convertAirFieldDBToAirFrequencies(airfieldDataset,frequencyDB) {
+        const orig = {
+            Lat: $scope.situation.GPSLatitude,
+            Lon: $scope.situation.GPSLongitude
+        }
+
+        var airfieldDatasetSorted = [];
+        for (var index = 0; index < airfieldDataset.length; index++) {
+            if (airfieldDataset[index].hasOwnProperty("freq") && airfieldDataset[index]["freq"].length > 0) {
+                var pointDistance = $scope.calcDistance(
+                    orig.Lat,
+                    orig.Lon,
+                    airfieldDataset[index].Lat,
+                    airfieldDataset[index].Lon
+                )
+
+                airfieldDataset[index].dist = parseInt(pointDistance);
+                if (pointDistance < 200) {
+                    airfieldDatasetSorted.push(airfieldDataset[index]);
+                }
+            }
+        }
+        airfieldDatasetSorted.sort((a, b) => a.dist - b.dist);
+        airfieldDataset = airfieldDatasetSorted;
+        $scope.nearby = [];
+        var nearbyDictionary = {};
+        for (var index = 0; index < airfieldDataset.length; index++) {
+            if (nearbyDictionary.hasOwnProperty(airfieldDataset[index].freq)) {
+                continue;
+            }
+            $scope.nearby.push(airfieldDataset[index]);
+            nearbyDictionary[airfieldDataset[index].freq] = true;
+            if ($scope.nearby.length > 10) {
+                break;
+            }
+        }
+
+        // TODO: db.frequencies.json shall be changed from dictionary to array
+        var frequencyDBFreqs = Object.keys(frequencyDB.global);
+        for (var f = 0; f < frequencyDBFreqs.length; f++) {
+            var freq = frequencyDBFreqs[f];
+            var item = frequencyDB.global[freq];
+            var pointDistance = $scope.calcDistance(
+                    orig.Lat,
+                    orig.Lon,
+                    item.gps.lat,
+                    item.gps.lon
+                )
+
+                item.dist = parseInt(pointDistance);
+                if (pointDistance < 200) {
+                    item.freq=freq;
+                    $scope.nearby.push(item);
+                }
+        }
+
+        $scope.nearby .sort((a, b) => a.dist - b.dist);
+
         airfieldDataset.forEach((airfield) => {
             if (airfield.hasOwnProperty("freq") && airfield["freq"].length > 0) {
                 // TODO: use the GPS position to match the nearest
-                var freq = airfield["freq"].padEnd(7, "0");
+                var comps = airfield["freq"].split(".");
+                var freq =  airfield["freq"].padEnd(7, "0");
+                if(comps == 1){
+                    // bad cases where input frequency is "118"
+                    freq =  (airfield["freq"]+".").padEnd(7, "0");
+                }
+                // skip duplicates since we already sorted it
+                if(frequencyDB.global.hasOwnProperty(freq)){
+                    return;
+                }
                 frequencyDB.global[freq] = {
                     "gps": {
                         "lat": airfield["Lat"],
                         "lon": airfield["Lon"],
+                        "dist": airfield["dist"],
                         "range": 50000
                     },
                     "name": airfield["name"]
@@ -399,6 +556,56 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         });
         return frequencyDB;
     }
+
+    // TODO: unify the code with Airfields
+    $scope.calcDistance = function (lat1, lon1, lat2, lon2) {
+        return distance(lon1, lat1, lon2, lat2) / 1.852;
+    }
+
+    $scope.situation = {GPSLatitude:0,GPSLongitude:0};
+
+    $scope.calculateDistanceFromAirfields = function () {
+            for (var y = 0; y < $scope.db.length; y++) {
+                var orig = {
+                    Lat:$scope.situation.GPSLatitude,
+                    Lon:$scope.situation.GPSLongitude
+                }
+                var point = $scope.db[y];
+                var pointDistance = $scope.calcDistance(
+                    orig.Lat,
+                    orig.Lon,
+                    point.Lat,
+                    point.Lon
+                )
+
+                $scope.db[y].dist = pointDistance;
+            }
+    }
+
+
+    $scope.refreshLabels = function () {
+
+        for(var index=0;index<$scope.radioList.length;index++){
+           $scope.radioList[index].standbyLabel = $scope.radioFindFrequency($scope.radioList[index].standby);
+           $scope.radioList[index].label = $scope.radioFindFrequency($scope.radioList[index].active);
+        }
+    }
+    // Try to wait for situation update, this will allow to calculate also the first point
+    function situationUpdated(event) {
+
+		if (($scope === undefined) || ($scope === null)) {
+			removeEventListener("SituationUpdated", situationUpdated);
+			return; // we are getting called once after clicking away from the status page
+		}
+        $scope.situation = event.detail;
+        if($scope.situation.GPSFixQuality > 0 ) {
+        // when database is ready we load labels
+            $scope.radioDBReload();
+            removeEventListener("SituationUpdated", situationUpdated);
+        }
+	}
+
+    addEventListener("SituationUpdated", situationUpdated);    
 
     $scope.radioDBReload = function () {
         // Load the Radio DB, format:
@@ -414,7 +621,17 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
 
                 }
                 else {
+                    if($scope.situation.GPSLatitude==0){
+                        // too early the GPS is not ready, check for the window
+                        if(window.situation !== undefined){
+                            $scope.situation = window.situation;
+                        }
+
+                    }
                     $scope.db=convertAirFieldDBToAirFrequencies(airfields,$scope.db);
+                    $scope.calculateDistanceFromAirfields();
+                    // when database is ready we load labels
+                    $scope.refreshLabels();
                 }
             });
             $scope.playbackReload();
@@ -425,7 +642,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             }
         });
     }
-    $scope.radioDBReload();
+
     // TODO: Add WebSocket to avoid Polling
     $scope.playbackReload = function() {
     // Load the Playback:
