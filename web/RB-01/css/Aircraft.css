@@ -12,24 +12,16 @@
 }
 
 .aircraft-item-container-left {
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   position: absolute;
-  top: 50%;
-  left: 25%;
   width: 40%;
 text-align: right;
 }
 
 .aircraft-item-container-right {
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   position: absolute;
   width: 40%;
 text-align: left;
-
-  top: 50%;
-  left: 75%;
+  left: 60%;
 }
 
 .aircraft-item {
@@ -51,9 +43,9 @@ text-align: left;
   font-size: 4cqmin;
   font-weight: bolder;
   color: white;
-  border-radius: 5%;
-  border-width: 1%;
-  padding-left: 1%;
-  padding-right: 1%;
+  border-radius: 1cqmin;
+  border-width: 1cqmin;
+  padding-left: 1cqmin;
+  padding-right: 1cqmin;
 
 }

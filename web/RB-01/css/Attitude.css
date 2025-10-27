@@ -1,5 +1,6 @@
 .attitude {
-    /*border-radius: 50%;*/
+
+  border-radius: 50%;
 
   margin: 0 auto;
   max-height: 100cqh;
@@ -8,6 +9,23 @@
   overflow: hidden;
 }
 
+.attitude-doughnut { 
+    border: 4px solid #ffffff7f;
+    border-radius: 50%;
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+.attitude-doughnut-inside { 
+    border: 30px solid #0000003f;
+    border-radius: 50%;
+    height:100%;
+    width:100%;
+    top:0%;
+    left:0%;
+    position: absolute;
+}
 
 
 .attitude-roll {
@@ -48,7 +66,7 @@
 
 .attitude-rollpitch-sky {
     position: absolute;
-    background-color: blue;
+    background-color: deepskyblue;
     width: 140%;
     height: 90%;
     left: -20%;
@@ -58,7 +76,7 @@
 
 .attitude-rollpitch-terrain {
     position: absolute;
-    background-color: brown;
+    background-color: chocolate;
     width: 140%;
     height: 90%;
     left: -20%;
