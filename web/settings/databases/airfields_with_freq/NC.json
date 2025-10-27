@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -22.041724,
     "Lon": 166.03215,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "NC-0001",
+    "iso_country": "NC"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -22.16896,
     "Lon": 166.4332,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NC-0002",
+    "iso_country": "NC"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": -21.96923,
     "Lon": 166.672,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "NC-0005",
+    "iso_country": "NC"
   },
   {
     "type": "medium_airport",
@@ -33,7 +39,11 @@
     "freq": "",
     "Lat": -21.096407,
     "Lon": 167.80379,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "NWWA",
+    "iso_country": "NC",
+    "icao_code": "NWWA",
+    "iata_code": "TGJ"
   },
   {
     "type": "small_airport",
@@ -42,7 +52,13 @@
     "freq": "",
     "Lat": -21.609604,
     "Lon": 165.397103,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NWWB",
+    "iso_country": "NC",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -51,7 +67,15 @@
     "freq": "",
     "Lat": -19.720521,
     "Lon": 163.661077,
-    "Ele": 93.3
+    "Ele": 93.3,
+    "ident": "NWWC",
+    "iso_country": "NC",
+    "icao_code": "NWWC",
+    "iata_code": "BMY",
+    "length_ft": 1969,
+    "width_ft": 66,
+    "heading": 107.2,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -60,7 +84,15 @@
     "freq": "122.500",
     "Lat": -21.053551,
     "Lon": 164.838768,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "NWWD",
+    "iso_country": "NC",
+    "icao_code": "NWWD",
+    "iata_code": "KNQ",
+    "length_ft": 3281,
+    "width_ft": 66,
+    "heading": 99.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -69,7 +101,15 @@
     "freq": "128.300",
     "Lat": -22.58889961242676,
     "Lon": 167.45599365234375,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "NWWE",
+    "iso_country": "NC",
+    "icao_code": "NWWE",
+    "iata_code": "ILP",
+    "length_ft": 3608,
+    "width_ft": 76,
+    "heading": 114.1,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -78,7 +118,12 @@
     "freq": "",
     "Lat": -21.257288,
     "Lon": 165.61821,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NWWH",
+    "iso_country": "NC",
+    "length_ft": 3281,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -87,7 +132,9 @@
     "freq": "",
     "Lat": -20.69446,
     "Lon": 164.99249,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "NWWI",
+    "iso_country": "NC"
   },
   {
     "type": "small_airport",
@@ -96,7 +143,15 @@
     "freq": "128.200",
     "Lat": -20.546323,
     "Lon": 164.255648,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "NWWK",
+    "iso_country": "NC",
+    "icao_code": "NWWK",
+    "iata_code": "KOC",
+    "length_ft": 3616,
+    "width_ft": 85,
+    "heading": 67.5,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -105,7 +160,15 @@
     "freq": "125.100",
     "Lat": -20.774563,
     "Lon": 167.239328,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "NWWL",
+    "iso_country": "NC",
+    "icao_code": "NWWL",
+    "iata_code": "LIF",
+    "length_ft": 3609,
+    "width_ft": 98,
+    "heading": 134.9,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -114,7 +177,15 @@
     "freq": "124.300",
     "Lat": -22.25812,
     "Lon": 166.472783,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NWWM",
+    "iso_country": "NC",
+    "icao_code": "NWWM",
+    "iata_code": "GEA",
+    "length_ft": 4101,
+    "width_ft": 98,
+    "heading": 178.6,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -123,7 +194,11 @@
     "freq": "",
     "Lat": -20.289155,
     "Lon": 164.09935,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "NWWP",
+    "iso_country": "NC",
+    "icao_code": "NWWP",
+    "iata_code": "PUV"
   },
   {
     "type": "small_airport",
@@ -132,7 +207,11 @@
     "freq": "",
     "Lat": -21.316456,
     "Lon": 164.999399,
-    "Ele": 80.5
+    "Ele": 80.5,
+    "ident": "NWWQ",
+    "iso_country": "NC",
+    "icao_code": "NWWQ",
+    "iata_code": "PDC"
   },
   {
     "type": "medium_airport",
@@ -141,7 +220,15 @@
     "freq": "121.100",
     "Lat": -21.482438,
     "Lon": 168.038465,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "NWWR",
+    "iso_country": "NC",
+    "icao_code": "NWWR",
+    "iata_code": "MEE",
+    "length_ft": 3281,
+    "width_ft": 82,
+    "heading": 138.9,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -150,7 +237,13 @@
     "freq": "",
     "Lat": -21.819700241088867,
     "Lon": 165.86099243164062,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "NWWT",
+    "iso_country": "NC",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -159,7 +252,15 @@
     "freq": "121.300",
     "Lat": -20.790127,
     "Lon": 165.259524,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NWWU",
+    "iso_country": "NC",
+    "icao_code": "NWWU",
+    "iata_code": "TOU",
+    "length_ft": 3609,
+    "width_ft": 98,
+    "heading": 145.6,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -168,7 +269,15 @@
     "freq": "118.700",
     "Lat": -20.640932,
     "Lon": 166.573024,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "NWWV",
+    "iso_country": "NC",
+    "icao_code": "NWWV",
+    "iata_code": "UVE",
+    "length_ft": 3609,
+    "width_ft": 98,
+    "heading": 143,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -177,7 +286,15 @@
     "freq": "119.700",
     "Lat": -22.014601,
     "Lon": 166.212997,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "NWWW",
+    "iso_country": "NC",
+    "icao_code": "NWWW",
+    "iata_code": "NOU",
+    "length_ft": 10663,
+    "width_ft": 148,
+    "heading": 121.1,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -186,6 +303,8 @@
     "freq": "",
     "Lat": -20.855494,
     "Lon": 164.535542,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "NWWY",
+    "iso_country": "NC"
   }
 ]

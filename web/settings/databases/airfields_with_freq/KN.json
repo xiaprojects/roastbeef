@@ -6,7 +6,15 @@
     "freq": "119.600",
     "Lat": 17.311199188232422,
     "Lon": -62.71870040893555,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "TKPK",
+    "iso_country": "KN",
+    "icao_code": "TKPK",
+    "iata_code": "SKB",
+    "length_ft": 7602,
+    "width_ft": 148,
+    "heading": 57.1,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -15,6 +23,14 @@
     "freq": "121.600",
     "Lat": 17.205699920654297,
     "Lon": -62.58990097045898,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "TKPN",
+    "iso_country": "KN",
+    "icao_code": "TKPN",
+    "iata_code": "NEV",
+    "length_ft": 4006,
+    "width_ft": 98,
+    "heading": 89,
+    "QFU": "28"
   }
 ]

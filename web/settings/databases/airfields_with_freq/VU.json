@@ -6,7 +6,15 @@
     "freq": "",
     "Lat": -13.666,
     "Lon": 167.712006,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "NVSA",
+    "iso_country": "VU",
+    "icao_code": "NVSA",
+    "iata_code": "MTV",
+    "length_ft": 2953,
+    "width_ft": 82,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -15,7 +23,15 @@
     "freq": "",
     "Lat": -13.8516998291,
     "Lon": 167.537002563,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NVSC",
+    "iso_country": "VU",
+    "icao_code": "NVSC",
+    "iata_code": "SLH",
+    "length_ft": 2723,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -24,7 +40,15 @@
     "freq": "",
     "Lat": -13.328,
     "Lon": 166.638,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "NVSD",
+    "iso_country": "VU",
+    "icao_code": "NVSD",
+    "iata_code": "TOH",
+    "length_ft": 2789,
+    "width_ft": 82,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -33,7 +57,15 @@
     "freq": "",
     "Lat": -17.0903,
     "Lon": 168.343002,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NVSE",
+    "iso_country": "VU",
+    "icao_code": "NVSE",
+    "iata_code": "EAE",
+    "length_ft": 2307,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -42,7 +74,15 @@
     "freq": "",
     "Lat": -16.264999,
     "Lon": 167.923996,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "NVSF",
+    "iso_country": "VU",
+    "icao_code": "NVSF",
+    "iata_code": "CCV",
+    "length_ft": 2674,
+    "width_ft": 69,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -51,7 +91,15 @@
     "freq": "",
     "Lat": -15.3066997528,
     "Lon": 167.966995239,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "NVSG",
+    "iso_country": "VU",
+    "icao_code": "NVSG",
+    "iata_code": "LOD",
+    "length_ft": 2887,
+    "width_ft": 92,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -60,7 +108,15 @@
     "freq": "",
     "Lat": -15.4708003998,
     "Lon": 168.151992798,
-    "Ele": 150.3
+    "Ele": 150.3,
+    "ident": "NVSH",
+    "iso_country": "VU",
+    "icao_code": "NVSH",
+    "iata_code": "SSR",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -69,7 +125,15 @@
     "freq": "",
     "Lat": -16.431955,
     "Lon": 168.235511,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "NVSI",
+    "iso_country": "VU",
+    "icao_code": "NVSI",
+    "iata_code": "PBJ",
+    "length_ft": 1968,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -78,7 +142,11 @@
     "freq": "",
     "Lat": -16.4611228,
     "Lon": 167.829253,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NVSL",
+    "iso_country": "VU",
+    "icao_code": "NVSL",
+    "iata_code": "LPM"
   },
   {
     "type": "small_airport",
@@ -87,7 +155,15 @@
     "freq": "",
     "Lat": -16.584199905400002,
     "Lon": 168.158996582,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NVSM",
+    "iso_country": "VU",
+    "icao_code": "NVSM",
+    "iata_code": "LNB",
+    "length_ft": 2789,
+    "width_ft": 79,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -96,7 +172,15 @@
     "freq": "",
     "Lat": -14.997222,
     "Lon": 168.081111,
-    "Ele": 155.1
+    "Ele": 155.1,
+    "ident": "NVSN",
+    "iso_country": "VU",
+    "icao_code": "NVSN",
+    "iata_code": "MWF",
+    "length_ft": 2789,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -105,7 +189,15 @@
     "freq": "",
     "Lat": -15.8655996323,
     "Lon": 168.17199707,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "NVSO",
+    "iso_country": "VU",
+    "icao_code": "NVSO",
+    "iata_code": "LNE",
+    "length_ft": 2175,
+    "width_ft": 66,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -114,7 +206,15 @@
     "freq": "",
     "Lat": -16.0797,
     "Lon": 167.401001,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "NVSP",
+    "iso_country": "VU",
+    "icao_code": "NVSP",
+    "iata_code": "NUS",
+    "length_ft": 2972,
+    "width_ft": 49,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -123,7 +223,15 @@
     "freq": "",
     "Lat": -14.2181,
     "Lon": 167.587006,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "NVSQ",
+    "iso_country": "VU",
+    "icao_code": "NVSQ",
+    "iata_code": "ZGU",
+    "length_ft": 2802,
+    "width_ft": 59,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -132,7 +240,15 @@
     "freq": "",
     "Lat": -15.472,
     "Lon": 167.835007,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "NVSR",
+    "iso_country": "VU",
+    "icao_code": "NVSR",
+    "iata_code": "RCL",
+    "length_ft": 2165,
+    "width_ft": 75,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -141,7 +257,15 @@
     "freq": "118.100",
     "Lat": -15.505000114399998,
     "Lon": 167.220001221,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "NVSS",
+    "iso_country": "VU",
+    "icao_code": "NVSS",
+    "iata_code": "SON",
+    "length_ft": 6523,
+    "width_ft": 98,
+    "heading": 129,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -150,7 +274,15 @@
     "freq": "",
     "Lat": -16.8910999298,
     "Lon": 168.550994873,
-    "Ele": 135.0
+    "Ele": 135,
+    "ident": "NVST",
+    "iso_country": "VU",
+    "icao_code": "NVST",
+    "iata_code": "TGH",
+    "length_ft": 2329,
+    "width_ft": 75,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -159,7 +291,15 @@
     "freq": "",
     "Lat": -16.3297,
     "Lon": 168.3011,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "NVSU",
+    "iso_country": "VU",
+    "icao_code": "NVSU",
+    "iata_code": "ULB",
+    "length_ft": 2789,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -168,7 +308,15 @@
     "freq": "",
     "Lat": -16.796100616500002,
     "Lon": 168.177001953,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NVSV",
+    "iso_country": "VU",
+    "icao_code": "NVSV",
+    "iata_code": "VLS",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -177,7 +325,15 @@
     "freq": "",
     "Lat": -15.412,
     "Lon": 167.690994,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "NVSW",
+    "iso_country": "VU",
+    "icao_code": "NVSW",
+    "iata_code": "WLH",
+    "length_ft": 2379,
+    "width_ft": 115,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -186,7 +342,15 @@
     "freq": "",
     "Lat": -16.4864,
     "Lon": 167.4472,
-    "Ele": 20.7
+    "Ele": 20.7,
+    "ident": "NVSX",
+    "iso_country": "VU",
+    "icao_code": "NVSX",
+    "iata_code": "SWJ",
+    "length_ft": 2674,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -195,7 +359,15 @@
     "freq": "",
     "Lat": -14.881699562099998,
     "Lon": 166.557998657,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "NVSZ",
+    "iso_country": "VU",
+    "icao_code": "NVSZ",
+    "iata_code": "OLJ",
+    "length_ft": 2362,
+    "width_ft": 82,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -204,7 +376,15 @@
     "freq": "",
     "Lat": -20.249142,
     "Lon": 169.770758,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NVVA",
+    "iso_country": "VU",
+    "icao_code": "NVVA",
+    "iata_code": "AUY",
+    "length_ft": 2001,
+    "width_ft": 75,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -213,7 +393,15 @@
     "freq": "",
     "Lat": -19.2346,
     "Lon": 169.6009,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "NVVB",
+    "iso_country": "VU",
+    "icao_code": "NVVB",
+    "iata_code": "AWD",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -222,7 +410,15 @@
     "freq": "",
     "Lat": -18.7694,
     "Lon": 169.001007,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "NVVD",
+    "iso_country": "VU",
+    "icao_code": "NVVD",
+    "iata_code": "DLY",
+    "length_ft": 2428,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -231,7 +427,15 @@
     "freq": "",
     "Lat": -19.5163993835,
     "Lon": 170.231994629,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "NVVF",
+    "iso_country": "VU",
+    "icao_code": "NVVF",
+    "iata_code": "FTA",
+    "length_ft": 2297,
+    "width_ft": 115,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -240,7 +444,15 @@
     "freq": "",
     "Lat": -18.856389,
     "Lon": 169.283333,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "NVVI",
+    "iso_country": "VU",
+    "icao_code": "NVVI",
+    "iata_code": "IPA",
+    "length_ft": 2995,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -249,7 +461,9 @@
     "freq": "",
     "Lat": -17.701099395751953,
     "Lon": 168.52699279785156,
-    "Ele": 107.0
+    "Ele": 107,
+    "ident": "NVVJ",
+    "iso_country": "VU"
   },
   {
     "type": "small_airport",
@@ -258,7 +472,13 @@
     "freq": "",
     "Lat": -19.5161,
     "Lon": 169.2625,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "NVVK",
+    "iso_country": "VU",
+    "length_ft": 2953,
+    "width_ft": 105,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "large_airport",
@@ -267,7 +487,15 @@
     "freq": "120.700",
     "Lat": -17.699301,
     "Lon": 168.320007,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "NVVV",
+    "iso_country": "VU",
+    "icao_code": "NVVV",
+    "iata_code": "VLI",
+    "length_ft": 3310,
+    "width_ft": 105,
+    "heading": 117.9,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -276,6 +504,14 @@
     "freq": "655.300",
     "Lat": -19.455099,
     "Lon": 169.223999,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "NVVW",
+    "iso_country": "VU",
+    "icao_code": "NVVW",
+    "iata_code": "TAH",
+    "length_ft": 4035,
+    "width_ft": 98,
+    "heading": 157.6,
+    "QFU": "33"
   }
 ]

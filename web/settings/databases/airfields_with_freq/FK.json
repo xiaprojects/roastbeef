@@ -6,7 +6,15 @@
     "freq": "118.500",
     "Lat": -51.82279968261719,
     "Lon": -58.44720077514648,
-    "Ele": 74.4
+    "Ele": 74.4,
+    "ident": "EGYP",
+    "iso_country": "FK",
+    "icao_code": "EGYP",
+    "iata_code": "MPN",
+    "length_ft": 8497,
+    "width_ft": 150,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,9 @@
     "freq": "",
     "Lat": -51.933694,
     "Lon": -60.061595,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0001",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -24,7 +34,9 @@
     "freq": "",
     "Lat": -51.30978775024414,
     "Lon": -59.60877227783203,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0002",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,9 @@
     "freq": "",
     "Lat": -52.428215,
     "Lon": -59.077744,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0003",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -42,7 +56,9 @@
     "freq": "",
     "Lat": -51.345611572265625,
     "Lon": -60.6839714050293,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0004",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -51,7 +67,9 @@
     "freq": "",
     "Lat": -51.819282,
     "Lon": -58.980893,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0005",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -60,7 +78,9 @@
     "freq": "",
     "Lat": -51.539398193359375,
     "Lon": -60.35639953613281,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0006",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -69,7 +89,9 @@
     "freq": "",
     "Lat": -51.82929992675781,
     "Lon": -60.45140075683594,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0007",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -78,7 +100,9 @@
     "freq": "",
     "Lat": -51.50166702270508,
     "Lon": -59.00361251831055,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0008",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -87,7 +111,9 @@
     "freq": "",
     "Lat": -51.5681,
     "Lon": -59.533699,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0009",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -96,7 +122,9 @@
     "freq": "",
     "Lat": -51.37810134887695,
     "Lon": -60.091609954833984,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0010",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -105,7 +133,9 @@
     "freq": "",
     "Lat": -51.263671875,
     "Lon": -60.592079162597656,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0011",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -114,7 +144,9 @@
     "freq": "",
     "Lat": -52.09473,
     "Lon": -60.852379,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0012",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -123,7 +155,9 @@
     "freq": "",
     "Lat": -52.205532,
     "Lon": -60.535062,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0013",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -132,7 +166,9 @@
     "freq": "",
     "Lat": -51.753339,
     "Lon": -60.415834,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0014",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -141,7 +177,9 @@
     "freq": "",
     "Lat": -51.755735,
     "Lon": -60.534498,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0015",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -150,7 +188,9 @@
     "freq": "",
     "Lat": -51.504427,
     "Lon": -60.144435,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0016",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -159,7 +199,9 @@
     "freq": "",
     "Lat": -51.719307,
     "Lon": -60.062361,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0017",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -168,7 +210,9 @@
     "freq": "",
     "Lat": -51.746491,
     "Lon": -61.281616,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0018",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -177,7 +221,9 @@
     "freq": "",
     "Lat": -52.123295,
     "Lon": -59.370239,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0019",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -186,7 +232,9 @@
     "freq": "",
     "Lat": -51.436639,
     "Lon": -58.378874,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0020",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -195,7 +243,9 @@
     "freq": "",
     "Lat": -51.995626,
     "Lon": -58.459238,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0022",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -204,7 +254,9 @@
     "freq": "",
     "Lat": -52.349583,
     "Lon": -59.758717,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0023",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -213,7 +265,9 @@
     "freq": "",
     "Lat": -51.459942,
     "Lon": -58.612131,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0024",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -222,7 +276,9 @@
     "freq": "",
     "Lat": -52.2299,
     "Lon": -59.744502,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0026",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -231,7 +287,9 @@
     "freq": "",
     "Lat": -52.181403,
     "Lon": -58.858788,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0027",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -240,7 +298,9 @@
     "freq": "",
     "Lat": -51.875659,
     "Lon": -60.90601,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0028",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -249,7 +309,9 @@
     "freq": "",
     "Lat": -51.84025,
     "Lon": -61.23365,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0029",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -258,7 +320,9 @@
     "freq": "",
     "Lat": -52.090803,
     "Lon": -60.282682,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "FK-0032",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -267,7 +331,9 @@
     "freq": "",
     "Lat": -51.613225,
     "Lon": -59.516675,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0033",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -276,7 +342,9 @@
     "freq": "",
     "Lat": -52.441146,
     "Lon": -59.127616,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0034",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -285,7 +353,9 @@
     "freq": "",
     "Lat": -51.955049,
     "Lon": -60.06315,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FK-0035",
+    "iso_country": "FK"
   },
   {
     "type": "small_airport",
@@ -294,7 +364,9 @@
     "freq": "",
     "Lat": -51.310931,
     "Lon": -59.566162,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "FK-0036",
+    "iso_country": "FK"
   },
   {
     "type": "medium_airport",
@@ -303,6 +375,14 @@
     "freq": "558.000",
     "Lat": -51.685699462891,
     "Lon": -57.777599334717,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SFAL",
+    "iso_country": "FK",
+    "icao_code": "SFAL",
+    "iata_code": "PSY",
+    "length_ft": 1110,
+    "width_ft": 42,
+    "heading": 179.9,
+    "QFU": "36"
   }
 ]

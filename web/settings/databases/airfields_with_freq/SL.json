@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 7.9444,
     "Lon": -11.761,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "GFBO",
+    "iso_country": "SL",
+    "icao_code": "GFBO",
+    "iata_code": "KBS",
+    "length_ft": 4003,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -15,7 +22,11 @@
     "freq": "",
     "Lat": 7.812535,
     "Lon": -12.377815,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "GFGK",
+    "iso_country": "SL",
+    "icao_code": "GFGK",
+    "iata_code": "GBK"
   },
   {
     "type": "small_airport",
@@ -24,7 +35,11 @@
     "freq": "",
     "Lat": 8.394348,
     "Lon": -13.128891,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "GFHA",
+    "iso_country": "SL",
+    "icao_code": "GFHA",
+    "iata_code": "HGS"
   },
   {
     "type": "small_airport",
@@ -33,7 +48,11 @@
     "freq": "",
     "Lat": 9.63832291343,
     "Lon": -11.5155601501,
-    "Ele": 308.5
+    "Ele": 308.5,
+    "ident": "GFKB",
+    "iso_country": "SL",
+    "icao_code": "GFKB",
+    "iata_code": "KBA"
   },
   {
     "type": "medium_airport",
@@ -42,7 +61,14 @@
     "freq": "",
     "Lat": 7.896364,
     "Lon": -11.174126,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "GFKE",
+    "iso_country": "SL",
+    "icao_code": "GFKE",
+    "iata_code": "KEN",
+    "length_ft": 3770,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -51,7 +77,15 @@
     "freq": "667.300",
     "Lat": 8.61644,
     "Lon": -13.1955,
-    "Ele": 25.6
+    "Ele": 25.6,
+    "ident": "GFLL",
+    "iso_country": "SL",
+    "icao_code": "GFLL",
+    "iata_code": "FNA",
+    "length_ft": 10498,
+    "width_ft": 150,
+    "heading": 107,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -60,7 +94,9 @@
     "freq": "",
     "Lat": 8.217000007629395,
     "Lon": -11.06700038909912,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "GFTO",
+    "iso_country": "SL"
   },
   {
     "type": "medium_airport",
@@ -69,6 +105,13 @@
     "freq": "",
     "Lat": 8.61047,
     "Lon": -11.0454,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "GFYE",
+    "iso_country": "SL",
+    "icao_code": "GFYE",
+    "iata_code": "WYE",
+    "length_ft": 3000,
+    "QFU": "33",
+    "heading": 330
   }
 ]

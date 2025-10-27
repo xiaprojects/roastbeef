@@ -6,7 +6,15 @@
     "freq": "119.500",
     "Lat": 5.605189800262451,
     "Lon": -0.1667860001325607,
-    "Ele": 62.5
+    "Ele": 62.5,
+    "ident": "DGAA",
+    "iso_country": "GH",
+    "icao_code": "DGAA",
+    "iata_code": "ACC",
+    "length_ft": 11165,
+    "width_ft": 200,
+    "heading": 22,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,15 @@
     "freq": "118.400",
     "Lat": 6.579691,
     "Lon": 0.532547,
-    "Ele": 108.5
+    "Ele": 108.5,
+    "ident": "DGAH",
+    "iso_country": "GH",
+    "icao_code": "DGAH",
+    "local_code": "HZ09",
+    "length_ft": 5266,
+    "width_ft": 100,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -24,7 +40,15 @@
     "freq": "658.600",
     "Lat": 9.55718994140625,
     "Lon": -0.8632140159606934,
-    "Ele": 168.6
+    "Ele": 168.6,
+    "ident": "DGLE",
+    "iso_country": "GH",
+    "icao_code": "DGLE",
+    "iata_code": "TML",
+    "length_ft": 7999,
+    "width_ft": 148,
+    "heading": 45,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -33,7 +57,10 @@
     "freq": "",
     "Lat": 10.943081,
     "Lon": -1.087356,
-    "Ele": 206.7
+    "Ele": 206.7,
+    "ident": "DGLN",
+    "iso_country": "GH",
+    "icao_code": "DGLN"
   },
   {
     "type": "small_airport",
@@ -42,7 +69,15 @@
     "freq": "",
     "Lat": 10.0827,
     "Lon": -2.50769,
-    "Ele": 323.1
+    "Ele": 323.1,
+    "ident": "DGLW",
+    "iso_country": "GH",
+    "icao_code": "DGLW",
+    "iata_code": "WZA",
+    "length_ft": 6612,
+    "width_ft": 145,
+    "heading": 20,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -51,7 +86,10 @@
     "freq": "",
     "Lat": 9.425,
     "Lon": -0.004722,
-    "Ele": 734.0
+    "Ele": 734,
+    "ident": "DGLY",
+    "iso_country": "GH",
+    "icao_code": "DGLY"
   },
   {
     "type": "medium_airport",
@@ -60,7 +98,15 @@
     "freq": "658.600",
     "Lat": 6.714560031890869,
     "Lon": -1.5908199548721311,
-    "Ele": 287.1
+    "Ele": 287.1,
+    "ident": "DGSI",
+    "iso_country": "GH",
+    "icao_code": "DGSI",
+    "iata_code": "KMS",
+    "length_ft": 6502,
+    "width_ft": 148,
+    "heading": 12,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -69,7 +115,15 @@
     "freq": "658.600",
     "Lat": 7.36183,
     "Lon": -2.32876,
-    "Ele": 309.1
+    "Ele": 309.1,
+    "ident": "DGSN",
+    "iso_country": "GH",
+    "icao_code": "DGSN",
+    "iata_code": "NYI",
+    "length_ft": 4227,
+    "width_ft": 148,
+    "heading": 63.2,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -78,7 +132,15 @@
     "freq": "658.600",
     "Lat": 4.896059989929199,
     "Lon": -1.7747600078582764,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "DGTK",
+    "iso_country": "GH",
+    "icao_code": "DGTK",
+    "iata_code": "TKD",
+    "length_ft": 5745,
+    "width_ft": 148,
+    "heading": 30,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -87,7 +149,9 @@
     "freq": "",
     "Lat": 6.114864,
     "Lon": 0.057761,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "GH-0001",
+    "iso_country": "GH"
   },
   {
     "type": "small_airport",
@@ -96,6 +160,8 @@
     "freq": "",
     "Lat": 6.322619,
     "Lon": 0.087893,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "GH-0002",
+    "iso_country": "GH"
   }
 ]

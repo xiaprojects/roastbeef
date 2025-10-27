@@ -6,7 +6,12 @@
     "freq": "",
     "Lat": 1.20532,
     "Lon": 103.719002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SG-0002",
+    "iso_country": "SG",
+    "length_ft": 7999,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -15,7 +20,9 @@
     "freq": "",
     "Lat": 1.390671,
     "Lon": 103.698435,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SG-0003",
+    "iso_country": "SG"
   },
   {
     "type": "small_airport",
@@ -33,7 +40,9 @@
     "freq": "",
     "Lat": 1.3441400528,
     "Lon": 104.009002686,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "WSAC",
+    "iso_country": "SG"
   },
   {
     "type": "medium_airport",
@@ -42,7 +51,13 @@
     "freq": "120.300",
     "Lat": 1.42526,
     "Lon": 103.813004,
-    "Ele": 26.2
+    "Ele": 26.2,
+    "ident": "WSAG",
+    "iso_country": "SG",
+    "length_ft": 3400,
+    "width_ft": 100,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -51,7 +66,15 @@
     "freq": "127.300",
     "Lat": 1.36042,
     "Lon": 103.910004,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "WSAP",
+    "iso_country": "SG",
+    "icao_code": "WSAP",
+    "iata_code": "QPG",
+    "length_ft": 12401,
+    "width_ft": 200,
+    "heading": 22.9,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -60,7 +83,15 @@
     "freq": "120.300",
     "Lat": 1.387561,
     "Lon": 103.708291,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "WSAT",
+    "iso_country": "SG",
+    "icao_code": "WSAT",
+    "iata_code": "TGA",
+    "length_ft": 1155,
+    "width_ft": 236,
+    "heading": 184.7,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -69,7 +100,15 @@
     "freq": "120.300",
     "Lat": 1.41555,
     "Lon": 103.86673,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "WSSL",
+    "iso_country": "SG",
+    "icao_code": "WSSL",
+    "iata_code": "XSP",
+    "length_ft": 6023,
+    "width_ft": 151,
+    "heading": 33,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -78,6 +117,14 @@
     "freq": "120.300",
     "Lat": 1.35019,
     "Lon": 103.994003,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "WSSS",
+    "iso_country": "SG",
+    "icao_code": "WSSS",
+    "iata_code": "SIN",
+    "length_ft": 13123,
+    "width_ft": 197,
+    "heading": 23,
+    "QFU": "20"
   }
 ]

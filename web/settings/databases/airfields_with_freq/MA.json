@@ -6,7 +6,14 @@
     "freq": "120.300",
     "Lat": 30.381399,
     "Lon": -9.54631,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "GMAA",
+    "iso_country": "MA",
+    "icao_code": "GMAA",
+    "length_ft": 9547,
+    "width_ft": 148,
+    "heading": 97.5,
+    "QFU": "28"
   },
   {
     "type": "large_airport",
@@ -15,7 +22,15 @@
     "freq": "120.900",
     "Lat": 30.322478,
     "Lon": -9.412003,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "GMAD",
+    "iso_country": "MA",
+    "icao_code": "GMAD",
+    "iata_code": "AGA",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,15 @@
     "freq": "129.700",
     "Lat": 28.44820022583008,
     "Lon": -11.161299705505373,
-    "Ele": 199.0
+    "Ele": 199,
+    "ident": "GMAT",
+    "iso_country": "MA",
+    "icao_code": "GMAT",
+    "iata_code": "TTA",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 27.8,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -33,7 +56,11 @@
     "freq": "",
     "Lat": 30.263858,
     "Lon": -5.853341,
-    "Ele": 735.8
+    "Ele": 735.8,
+    "ident": "GMAZ",
+    "iso_country": "MA",
+    "icao_code": "GMAZ",
+    "iata_code": "OZG"
   },
   {
     "type": "small_airport",
@@ -42,7 +69,10 @@
     "freq": "",
     "Lat": 34.793361,
     "Lon": -5.635986,
-    "Ele": 174.0
+    "Ele": 174,
+    "ident": "GMFA",
+    "iso_country": "MA",
+    "icao_code": "GMFA"
   },
   {
     "type": "medium_airport",
@@ -51,7 +81,15 @@
     "freq": "",
     "Lat": 32.514306,
     "Lon": -1.983056,
-    "Ele": 1106.4
+    "Ele": 1106.4,
+    "ident": "GMFB",
+    "iso_country": "MA",
+    "icao_code": "GMFB",
+    "iata_code": "UAR",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "large_airport",
@@ -60,7 +98,15 @@
     "freq": "118.600",
     "Lat": 33.927299,
     "Lon": -4.97796,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "GMFF",
+    "iso_country": "MA",
+    "icao_code": "GMFF",
+    "iata_code": "FEZ",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -69,7 +115,14 @@
     "freq": "131.000",
     "Lat": 33.505299,
     "Lon": -5.1529,
-    "Ele": 1663.9
+    "Ele": 1663.9,
+    "ident": "GMFI",
+    "iso_country": "MA",
+    "icao_code": "GMFI",
+    "length_ft": 6920,
+    "width_ft": 115,
+    "heading": 25,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -78,7 +131,15 @@
     "freq": "122.700",
     "Lat": 31.9475002289,
     "Lon": -4.39833021164,
-    "Ele": 1044.9
+    "Ele": 1044.9,
+    "ident": "GMFK",
+    "iso_country": "MA",
+    "icao_code": "GMFK",
+    "iata_code": "ERH",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 125.1,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -87,7 +148,15 @@
     "freq": "124.500",
     "Lat": 33.879101,
     "Lon": -5.51512,
-    "Ele": 576.1
+    "Ele": 576.1,
+    "ident": "GMFM",
+    "iso_country": "MA",
+    "icao_code": "GMFM",
+    "iata_code": "MEK",
+    "length_ft": 9252,
+    "width_ft": 164,
+    "heading": 83,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -96,7 +165,15 @@
     "freq": "136.600",
     "Lat": 34.789558,
     "Lon": -1.926041,
-    "Ele": 467.9
+    "Ele": 467.9,
+    "ident": "GMFO",
+    "iso_country": "MA",
+    "icao_code": "GMFO",
+    "iata_code": "OUD",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 132,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -105,7 +182,10 @@
     "freq": "",
     "Lat": 34.231887,
     "Lon": -3.94701,
-    "Ele": 576.1
+    "Ele": 576.1,
+    "ident": "GMFZ",
+    "iso_country": "MA",
+    "icao_code": "GMFZ"
   },
   {
     "type": "small_airport",
@@ -114,7 +194,15 @@
     "freq": "",
     "Lat": 33.655399,
     "Lon": -7.22145,
-    "Ele": 191.1
+    "Ele": 191.1,
+    "ident": "GMMB",
+    "iso_country": "MA",
+    "icao_code": "GMMB",
+    "iata_code": "GMD",
+    "length_ft": 10085,
+    "width_ft": 150,
+    "heading": 141,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -123,7 +211,15 @@
     "freq": "119.000",
     "Lat": 32.401895,
     "Lon": -6.315905,
-    "Ele": 516.3
+    "Ele": 516.3,
+    "ident": "GMMD",
+    "iso_country": "MA",
+    "icao_code": "GMMD",
+    "iata_code": "BEM",
+    "length_ft": 8169,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "large_airport",
@@ -132,7 +228,15 @@
     "freq": "118.900",
     "Lat": 34.051498,
     "Lon": -6.75152,
-    "Ele": 84.1
+    "Ele": 84.1,
+    "ident": "GMME",
+    "iso_country": "MA",
+    "icao_code": "GMME",
+    "iata_code": "RBA",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 33,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -141,7 +245,15 @@
     "freq": "121.200",
     "Lat": 31.397499,
     "Lon": -9.68167,
-    "Ele": 117.0
+    "Ele": 117,
+    "ident": "GMMI",
+    "iso_country": "MA",
+    "icao_code": "GMMI",
+    "iata_code": "ESU",
+    "length_ft": 8553,
+    "width_ft": 148,
+    "heading": 159,
+    "QFU": "34"
   },
   {
     "type": "large_airport",
@@ -150,7 +262,15 @@
     "freq": "119.900",
     "Lat": 33.3675,
     "Lon": -7.58997,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "GMMN",
+    "iso_country": "MA",
+    "icao_code": "GMMN",
+    "iata_code": "CMN",
+    "length_ft": 12205,
+    "width_ft": 148,
+    "heading": 164,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -159,7 +279,10 @@
     "freq": "",
     "Lat": 30.503487,
     "Lon": -8.821549,
-    "Ele": 264.9
+    "Ele": 264.9,
+    "ident": "GMMO",
+    "iso_country": "MA",
+    "icao_code": "GMMO"
   },
   {
     "type": "small_airport",
@@ -168,7 +291,13 @@
     "freq": "",
     "Lat": 33.5975,
     "Lon": -7.465,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "GMMT",
+    "iso_country": "MA",
+    "length_ft": 3687,
+    "width_ft": 50,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -177,7 +306,15 @@
     "freq": "118.650",
     "Lat": 34.9888,
     "Lon": -3.02821,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "GMMW",
+    "iso_country": "MA",
+    "icao_code": "GMMW",
+    "iata_code": "NDR",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 78,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -186,7 +323,15 @@
     "freq": "119.700",
     "Lat": 31.606899,
     "Lon": -8.0363,
-    "Ele": 470.9
+    "Ele": 470.9,
+    "ident": "GMMX",
+    "iso_country": "MA",
+    "icao_code": "GMMX",
+    "iata_code": "RAK",
+    "length_ft": 10170,
+    "width_ft": 148,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -195,7 +340,14 @@
     "freq": "124.500",
     "Lat": 34.298901,
     "Lon": -6.59588,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "GMMY",
+    "iso_country": "MA",
+    "iata_code": "NNA",
+    "length_ft": 7995,
+    "width_ft": 150,
+    "heading": 63,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -204,7 +356,15 @@
     "freq": "119.300",
     "Lat": 30.9391002655,
     "Lon": -6.909430027010001,
-    "Ele": 1152.8
+    "Ele": 1152.8,
+    "ident": "GMMZ",
+    "iso_country": "MA",
+    "icao_code": "GMMZ",
+    "iata_code": "OZZ",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 116.8,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -213,7 +373,14 @@
     "freq": "124.500",
     "Lat": 34.230598,
     "Lon": -6.05014,
-    "Ele": 54.6
+    "Ele": 54.6,
+    "ident": "GMSL",
+    "iso_country": "MA",
+    "icao_code": "GMSL",
+    "length_ft": 11302,
+    "width_ft": 140,
+    "heading": 72,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -222,7 +389,15 @@
     "freq": "118.700",
     "Lat": 35.177101,
     "Lon": -3.83952,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "GMTA",
+    "iso_country": "MA",
+    "icao_code": "GMTA",
+    "iata_code": "AHU",
+    "length_ft": 10511,
+    "width_ft": 148,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -231,7 +406,15 @@
     "freq": "119.000",
     "Lat": 35.594299,
     "Lon": -5.32002,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "GMTN",
+    "iso_country": "MA",
+    "icao_code": "GMTN",
+    "iata_code": "TTU",
+    "length_ft": 10784,
+    "width_ft": 148,
+    "heading": 54,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -240,7 +423,15 @@
     "freq": "121.200",
     "Lat": 35.731741,
     "Lon": -5.921459,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "GMTT",
+    "iso_country": "MA",
+    "icao_code": "GMTT",
+    "iata_code": "TNG",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -249,7 +440,9 @@
     "freq": "",
     "Lat": 30.49707,
     "Lon": -8.63648,
-    "Ele": 367.0
+    "Ele": 367,
+    "ident": "MA-0002",
+    "iso_country": "MA"
   },
   {
     "type": "small_airport",
@@ -258,7 +451,9 @@
     "freq": "",
     "Lat": 29.557381,
     "Lon": -8.007671,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MA-0004",
+    "iso_country": "MA"
   },
   {
     "type": "small_airport",
@@ -267,7 +462,9 @@
     "freq": "",
     "Lat": 32.85821,
     "Lon": -6.9461,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MA-0006",
+    "iso_country": "MA"
   },
   {
     "type": "small_airport",
@@ -276,7 +473,9 @@
     "freq": "",
     "Lat": 32.8767,
     "Lon": -7.08445,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MA-0007",
+    "iso_country": "MA"
   },
   {
     "type": "small_airport",
@@ -285,7 +484,9 @@
     "freq": "",
     "Lat": 32.124889,
     "Lon": -7.877884,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MA-0008",
+    "iso_country": "MA"
   },
   {
     "type": "small_airport",
@@ -294,7 +495,9 @@
     "freq": "",
     "Lat": 31.63833,
     "Lon": -8.34768,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MA-0009",
+    "iso_country": "MA"
   },
   {
     "type": "small_airport",
@@ -303,6 +506,10 @@
     "freq": "",
     "Lat": 29.026699,
     "Lon": -10.0503,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "MA-GLN",
+    "iso_country": "MA",
+    "icao_code": "GMAG",
+    "iata_code": "GLN"
   }
 ]

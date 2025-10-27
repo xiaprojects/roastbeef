@@ -6,7 +6,15 @@
     "freq": "118.700",
     "Lat": 15.336693,
     "Lon": -61.392108,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "TDCF",
+    "iso_country": "DM",
+    "icao_code": "TDCF",
+    "iata_code": "DCF",
+    "length_ft": 3130,
+    "width_ft": 75,
+    "heading": 356.3,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -15,6 +23,14 @@
     "freq": "118.900",
     "Lat": 15.547,
     "Lon": -61.299999,
-    "Ele": 22.3
+    "Ele": 22.3,
+    "ident": "TDPD",
+    "iso_country": "DM",
+    "icao_code": "TDPD",
+    "iata_code": "DOM",
+    "length_ft": 5761,
+    "width_ft": 148,
+    "heading": 70,
+    "QFU": "27"
   }
 ]

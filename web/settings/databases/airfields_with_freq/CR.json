@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 9.012758,
     "Lon": -83.180511,
-    "Ele": 166.4
+    "Ele": 166.4,
+    "ident": "CR-0001",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 8.43267,
     "Lon": -83.10151,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "CR-0005",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,10 @@
     "freq": "",
     "Lat": 9.693365,
     "Lon": -85.091216,
-    "Ele": 153.0
+    "Ele": 153,
+    "ident": "CR-0006",
+    "iso_country": "CR",
+    "iata_code": "ACO"
   },
   {
     "type": "large_airport",
@@ -33,7 +40,9 @@
     "freq": "",
     "Lat": 10.229845,
     "Lon": -85.539551,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CR-0009",
+    "iso_country": "CR"
   },
   {
     "type": "large_airport",
@@ -42,7 +51,7 @@
     "freq": "",
     "Lat": 10.465923,
     "Lon": -85.534058,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -51,7 +60,9 @@
     "freq": "",
     "Lat": 10.518483,
     "Lon": -85.556313,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "MECT",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -60,7 +71,9 @@
     "freq": "",
     "Lat": 9.81112003326416,
     "Lon": -85.29550170898438,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "MLLJ",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -69,7 +82,9 @@
     "freq": "",
     "Lat": 9.45777702331543,
     "Lon": -84.20899963378906,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "MRAD",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -78,7 +93,9 @@
     "freq": "",
     "Lat": 9.332707,
     "Lon": -83.582653,
-    "Ele": 965.6
+    "Ele": 965.6,
+    "ident": "MRAG",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -87,7 +104,9 @@
     "freq": "",
     "Lat": 10.057268,
     "Lon": -84.807556,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "MRAJ",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -96,7 +115,9 @@
     "freq": "",
     "Lat": 9.363861,
     "Lon": -83.626046,
-    "Ele": 860.1
+    "Ele": 860.1,
+    "ident": "MRAL",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -105,7 +126,9 @@
     "freq": "",
     "Lat": 9.52163028717041,
     "Lon": -82.95469665527344,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "MRAM",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -114,7 +137,14 @@
     "freq": "",
     "Lat": 10.469311,
     "Lon": -84.579073,
-    "Ele": 104.2
+    "Ele": 104.2,
+    "ident": "MRAN",
+    "iso_country": "CR",
+    "icao_code": "MRAN",
+    "iata_code": "FON",
+    "length_ft": 2625,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -123,7 +153,13 @@
     "freq": "126.800",
     "Lat": 10.42,
     "Lon": -83.6095,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "MRAO",
+    "iso_country": "CR",
+    "length_ft": 3118,
+    "width_ft": 39,
+    "heading": 19.6,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -132,7 +168,9 @@
     "freq": "",
     "Lat": 9.850000381469728,
     "Lon": -83.6500015258789,
-    "Ele": 590.1
+    "Ele": 590.1,
+    "ident": "MRAR",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -141,7 +179,9 @@
     "freq": "",
     "Lat": 10.51669979095459,
     "Lon": -84.36669921875,
-    "Ele": 68.9
+    "Ele": 68.9,
+    "ident": "MRAT",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -150,7 +190,15 @@
     "freq": "126.800",
     "Lat": 9.163949,
     "Lon": -83.330171,
-    "Ele": 370.0
+    "Ele": 370,
+    "ident": "MRBA",
+    "iso_country": "CR",
+    "icao_code": "MRBA",
+    "iata_code": "BAI",
+    "length_ft": 3248,
+    "width_ft": 33,
+    "heading": 9.7,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -159,7 +207,9 @@
     "freq": "",
     "Lat": 10.133333206176758,
     "Lon": -83.58333587646484,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "MRBB",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -168,7 +218,15 @@
     "freq": "126.800",
     "Lat": 10.7687,
     "Lon": -83.585602,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MRBC",
+    "iso_country": "CR",
+    "icao_code": "MRBC",
+    "iata_code": "BCL",
+    "length_ft": 3281,
+    "width_ft": 39,
+    "heading": 164.4,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -177,7 +235,9 @@
     "freq": "",
     "Lat": 10.219499588012695,
     "Lon": -83.58450317382812,
-    "Ele": 31.1
+    "Ele": 31.1,
+    "ident": "MRBM",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -186,7 +246,9 @@
     "freq": "",
     "Lat": 10.083333015441896,
     "Lon": -83.31666564941406,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "MRBN",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -195,7 +257,9 @@
     "freq": "",
     "Lat": 9.401526,
     "Lon": -84.11896,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MRBO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -204,7 +268,9 @@
     "freq": "",
     "Lat": 10.3,
     "Lon": -83.349998,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRBP",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -213,7 +279,11 @@
     "freq": "",
     "Lat": 10.569,
     "Lon": -83.5149,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "MRBT",
+    "iso_country": "CR",
+    "icao_code": "MRBT",
+    "iata_code": "TTQ"
   },
   {
     "type": "small_airport",
@@ -222,7 +292,9 @@
     "freq": "",
     "Lat": 10.414,
     "Lon": -85.091698,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "MRCA",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -231,7 +303,15 @@
     "freq": "126.800",
     "Lat": 8.60156,
     "Lon": -82.968754,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MRCC",
+    "iso_country": "CR",
+    "icao_code": "MRCC",
+    "iata_code": "OTR",
+    "length_ft": 3281,
+    "width_ft": 66,
+    "heading": 180.4,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -240,7 +320,9 @@
     "freq": "",
     "Lat": 8.5,
     "Lon": -82.983333,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "MRCD",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -249,7 +331,9 @@
     "freq": "",
     "Lat": 8.441979,
     "Lon": -83.459058,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MRCE",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -258,7 +342,15 @@
     "freq": "",
     "Lat": 9.98141,
     "Lon": -84.772697,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRCH",
+    "iso_country": "CR",
+    "icao_code": "MRCH",
+    "iata_code": "JAP",
+    "length_ft": 4921,
+    "width_ft": 50,
+    "heading": 96.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -267,7 +359,9 @@
     "freq": "",
     "Lat": 10.516667366027832,
     "Lon": -85.3499984741211,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "MRCI",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -276,7 +370,9 @@
     "freq": "",
     "Lat": 9.38862,
     "Lon": -83.68812,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "MRCJ",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -285,7 +381,9 @@
     "freq": "",
     "Lat": 10.667222023010254,
     "Lon": -85.51139068603516,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "MRCL",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -294,7 +392,9 @@
     "freq": "",
     "Lat": 10.45359992980957,
     "Lon": -85.55819702148438,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "MRCO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -303,7 +403,11 @@
     "freq": "",
     "Lat": 9.87051,
     "Lon": -85.4814,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "MRCR",
+    "iso_country": "CR",
+    "icao_code": "MRCR",
+    "iata_code": "PLD"
   },
   {
     "type": "small_airport",
@@ -312,7 +416,13 @@
     "freq": "126.800",
     "Lat": 10.3557,
     "Lon": -85.852898,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRCV",
+    "iso_country": "CR",
+    "length_ft": 3281,
+    "width_ft": 33,
+    "heading": 39.6,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -321,7 +431,9 @@
     "freq": "",
     "Lat": 10.087599754333496,
     "Lon": -84.16950225830078,
-    "Ele": 1417.3
+    "Ele": 1417.3,
+    "ident": "MRCZ",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -330,7 +442,13 @@
     "freq": "",
     "Lat": 10.351499557495115,
     "Lon": -83.63050079345703,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "MRDC",
+    "iso_country": "CR",
+    "length_ft": 3163,
+    "width_ft": 39,
+    "heading": 91.6,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -339,7 +457,9 @@
     "freq": "",
     "Lat": 9.550000190734863,
     "Lon": -82.88333129882812,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "MRDD",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -348,7 +468,14 @@
     "freq": "",
     "Lat": 8.71889019012,
     "Lon": -83.6417007446,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "MRDK",
+    "iso_country": "CR",
+    "icao_code": "MRDK",
+    "iata_code": "DRK",
+    "length_ft": 2461,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -357,7 +484,9 @@
     "freq": "",
     "Lat": 9.92790985107422,
     "Lon": -84.98999786376953,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MRDM",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -366,7 +495,9 @@
     "freq": "",
     "Lat": 8.903091,
     "Lon": -83.426444,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "MRDO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -375,7 +506,9 @@
     "freq": "",
     "Lat": 10.421667,
     "Lon": -84.268167,
-    "Ele": 233.2
+    "Ele": 233.2,
+    "ident": "MRDV",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -384,7 +517,13 @@
     "freq": "126.800",
     "Lat": 10.202,
     "Lon": -83.472198,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "MREC",
+    "iso_country": "CR",
+    "length_ft": 3350,
+    "width_ft": 33,
+    "heading": 79.6,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -393,7 +532,9 @@
     "freq": "",
     "Lat": 10.868741,
     "Lon": -84.529054,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "MRED",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -402,7 +543,9 @@
     "freq": "",
     "Lat": 10.533332824707031,
     "Lon": -83.8499984741211,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MREO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -411,7 +554,9 @@
     "freq": "",
     "Lat": 10.300299644470217,
     "Lon": -84.45010375976562,
-    "Ele": 642.8
+    "Ele": 642.8,
+    "ident": "MRER",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -420,7 +565,9 @@
     "freq": "",
     "Lat": 9.533332824707031,
     "Lon": -84.46666717529297,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MRET",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -429,7 +576,9 @@
     "freq": "",
     "Lat": 9.884443,
     "Lon": -85.564507,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MRFC",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -438,7 +587,9 @@
     "freq": "",
     "Lat": 8.957706,
     "Lon": -83.550308,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MRFD",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -447,7 +598,13 @@
     "freq": "126.800",
     "Lat": 8.91635,
     "Lon": -83.507301,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "MRFI",
+    "iso_country": "CR",
+    "length_ft": 4700,
+    "width_ft": 75,
+    "heading": 33,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -456,7 +613,10 @@
     "freq": "",
     "Lat": 10.41860008239746,
     "Lon": -85.78269958496094,
-    "Ele": 82.3
+    "Ele": 82.3,
+    "ident": "MRFL",
+    "iso_country": "CR",
+    "iata_code": "FMG"
   },
   {
     "type": "small_airport",
@@ -465,7 +625,9 @@
     "freq": "",
     "Lat": 10.447400093078612,
     "Lon": -84.36900329589844,
-    "Ele": 188.1
+    "Ele": 188.1,
+    "ident": "MRFP",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -474,7 +636,9 @@
     "freq": "",
     "Lat": 8.6525,
     "Lon": -83.0653,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "MRFS",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -483,7 +647,9 @@
     "freq": "",
     "Lat": 9.91670036315918,
     "Lon": -85.63330078125,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MRGA",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -492,7 +658,15 @@
     "freq": "126.800",
     "Lat": 8.65401,
     "Lon": -83.182198,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "MRGF",
+    "iso_country": "CR",
+    "icao_code": "MRGF",
+    "iata_code": "GLF",
+    "length_ft": 4593,
+    "width_ft": 66,
+    "heading": 135.1,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -501,7 +675,15 @@
     "freq": "126.800",
     "Lat": 10.2172002792,
     "Lon": -83.79699707030001,
-    "Ele": 269.1
+    "Ele": 269.1,
+    "ident": "MRGP",
+    "iso_country": "CR",
+    "icao_code": "MRGP",
+    "iata_code": "GPL",
+    "length_ft": 3609,
+    "width_ft": 30,
+    "heading": 36.2,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -510,7 +692,9 @@
     "freq": "",
     "Lat": 10.68333339691162,
     "Lon": -84.83333587646484,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "MRGT",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -519,7 +703,9 @@
     "freq": "",
     "Lat": 10.449999809265137,
     "Lon": -84.08333587646484,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "MRHG",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -528,7 +714,9 @@
     "freq": "",
     "Lat": 10.800000190734863,
     "Lon": -84.36666870117188,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "MRHH",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -537,7 +725,9 @@
     "freq": "",
     "Lat": 10.56666660308838,
     "Lon": -84.1500015258789,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "MRHO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -546,7 +736,9 @@
     "freq": "",
     "Lat": 10.451918,
     "Lon": -85.149725,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "MRHP",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -555,7 +747,9 @@
     "freq": "",
     "Lat": 10.449999809265137,
     "Lon": -83.66666412353516,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "MRHS",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -564,7 +758,14 @@
     "freq": "",
     "Lat": 9.85611,
     "Lon": -85.370796,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRIA",
+    "iso_country": "CR",
+    "icao_code": "MRIA",
+    "iata_code": "PBP",
+    "length_ft": 2625,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -573,7 +774,9 @@
     "freq": "",
     "Lat": 10.558300018310549,
     "Lon": -83.9740982055664,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "MRIS",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -582,7 +785,9 @@
     "freq": "",
     "Lat": 9.55527,
     "Lon": -84.556396,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MRJO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -591,7 +796,9 @@
     "freq": "",
     "Lat": 10.266667366027832,
     "Lon": -85.43333435058594,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "MRLA",
+    "iso_country": "CR"
   },
   {
     "type": "large_airport",
@@ -600,7 +807,15 @@
     "freq": "119.800",
     "Lat": 10.5933,
     "Lon": -85.544403,
-    "Ele": 82.3
+    "Ele": 82.3,
+    "ident": "MRLB",
+    "iso_country": "CR",
+    "icao_code": "MRLB",
+    "iata_code": "LIR",
+    "length_ft": 9022,
+    "width_ft": 148,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -609,7 +824,15 @@
     "freq": "126.800",
     "Lat": 11.0353,
     "Lon": -84.7061,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "MRLC",
+    "iso_country": "CR",
+    "icao_code": "MRLC",
+    "iata_code": "LSL",
+    "length_ft": 4265,
+    "width_ft": 49,
+    "heading": 60,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -618,7 +841,9 @@
     "freq": "",
     "Lat": 8.440854,
     "Lon": -82.909253,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "MRLE",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -627,7 +852,9 @@
     "freq": "",
     "Lat": 10.65,
     "Lon": -85.532997,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "MRLF",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -636,7 +863,9 @@
     "freq": "",
     "Lat": 10.800000190734863,
     "Lon": -84.91666412353516,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "MRLG",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -645,7 +874,9 @@
     "freq": "",
     "Lat": 9.515270233154297,
     "Lon": -84.30149841308594,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MRLI",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -654,7 +885,9 @@
     "freq": "",
     "Lat": 10.06666660308838,
     "Lon": -83.58333587646484,
-    "Ele": 403.9
+    "Ele": 403.9,
+    "ident": "MRLL",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -663,7 +896,15 @@
     "freq": "118.800",
     "Lat": 9.95796012878418,
     "Lon": -83.02200317382812,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRLM",
+    "iso_country": "CR",
+    "icao_code": "MRLM",
+    "iata_code": "LIO",
+    "length_ft": 5906,
+    "width_ft": 98,
+    "heading": 146,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -672,7 +913,9 @@
     "freq": "",
     "Lat": 10.420700073242188,
     "Lon": -85.47200012207031,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRLN",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -681,7 +924,9 @@
     "freq": "",
     "Lat": 10.355624,
     "Lon": -85.204731,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "MRLP",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -690,7 +935,9 @@
     "freq": "",
     "Lat": 10.56700038909912,
     "Lon": -85.5999984741211,
-    "Ele": 20.7
+    "Ele": 20.7,
+    "ident": "MRLT",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -699,7 +946,9 @@
     "freq": "",
     "Lat": 10.68120002746582,
     "Lon": -85.5280990600586,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "MRLV",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -708,7 +957,9 @@
     "freq": "",
     "Lat": 9.550000190734863,
     "Lon": -84.56666564941406,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "MRLY",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -717,7 +968,9 @@
     "freq": "",
     "Lat": 10.483599662780762,
     "Lon": -85.46199798583984,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "MRLZ",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -726,7 +979,9 @@
     "freq": "",
     "Lat": 10.083333015441896,
     "Lon": -85.26667022705078,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "MRMA",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -735,7 +990,9 @@
     "freq": "",
     "Lat": 10.916666984558104,
     "Lon": -85.71666717529297,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "MRMC",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -744,7 +1001,11 @@
     "freq": "",
     "Lat": 10.4307003021,
     "Lon": -85.17459869380001,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "MRMJ",
+    "iso_country": "CR",
+    "icao_code": "MRMJ",
+    "iata_code": "CSC"
   },
   {
     "type": "small_airport",
@@ -753,7 +1014,9 @@
     "freq": "",
     "Lat": 9.89932,
     "Lon": -85.550098,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRMR",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -762,7 +1025,11 @@
     "freq": "",
     "Lat": 10.1394,
     "Lon": -85.445801,
-    "Ele": 111.3
+    "Ele": 111.3,
+    "ident": "MRNC",
+    "iso_country": "CR",
+    "icao_code": "MRNC",
+    "iata_code": "NCT"
   },
   {
     "type": "small_airport",
@@ -771,7 +1038,9 @@
     "freq": "",
     "Lat": 9.389821,
     "Lon": -83.677897,
-    "Ele": 805.6
+    "Ele": 805.6,
+    "ident": "MRNI",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -780,7 +1049,15 @@
     "freq": "126.800",
     "Lat": 9.97649002075,
     "Lon": -85.65299987790002,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRNS",
+    "iso_country": "CR",
+    "icao_code": "MRNS",
+    "iata_code": "NOB",
+    "length_ft": 3281,
+    "width_ft": 59,
+    "heading": 36,
+    "QFU": "24"
   },
   {
     "type": "large_airport",
@@ -789,7 +1066,15 @@
     "freq": "119.600",
     "Lat": 9.99386,
     "Lon": -84.208801,
-    "Ele": 920.8
+    "Ele": 920.8,
+    "ident": "MROC",
+    "iso_country": "CR",
+    "icao_code": "MROC",
+    "iata_code": "SJO",
+    "length_ft": 9882,
+    "width_ft": 151,
+    "heading": 69.1,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -798,7 +1083,9 @@
     "freq": "",
     "Lat": 9.85141,
     "Lon": -85.2379,
-    "Ele": 98.8
+    "Ele": 98.8,
+    "ident": "MRPA",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -807,7 +1094,13 @@
     "freq": "126.800",
     "Lat": 9.73217,
     "Lon": -82.9832,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "MRPD",
+    "iso_country": "CR",
+    "length_ft": 3280,
+    "width_ft": 65,
+    "heading": 83,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -816,7 +1109,14 @@
     "freq": "",
     "Lat": 8.533329963684082,
     "Lon": -83.30000305175781,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRPJ",
+    "iso_country": "CR",
+    "icao_code": "MRPJ",
+    "iata_code": "PJM",
+    "length_ft": 2707,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -825,7 +1125,9 @@
     "freq": "",
     "Lat": 9.157537,
     "Lon": -83.735446,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "MRPK",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -834,7 +1136,9 @@
     "freq": "",
     "Lat": 9.357979774475098,
     "Lon": -83.97949981689453,
-    "Ele": 62.8
+    "Ele": 62.8,
+    "ident": "MRPL",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -843,7 +1147,15 @@
     "freq": "126.800",
     "Lat": 8.95103,
     "Lon": -83.468597,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "MRPM",
+    "iso_country": "CR",
+    "icao_code": "MRPM",
+    "iata_code": "PMZ",
+    "length_ft": 4593,
+    "width_ft": 60,
+    "heading": 32.9,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -852,7 +1164,9 @@
     "freq": "",
     "Lat": 10.486700057983398,
     "Lon": -85.41419982910156,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "MRPN",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -861,7 +1175,9 @@
     "freq": "",
     "Lat": 8.35731029510498,
     "Lon": -83.13690185546875,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MRPO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -870,7 +1186,9 @@
     "freq": "",
     "Lat": 9.858309745788574,
     "Lon": -84.69439697265625,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MRPP",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -879,7 +1197,9 @@
     "freq": "",
     "Lat": 9.578667,
     "Lon": -84.3445,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "MRPR",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -888,7 +1208,9 @@
     "freq": "",
     "Lat": 10.315600395202637,
     "Lon": -85.6780014038086,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "MRPS",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -897,7 +1219,9 @@
     "freq": "",
     "Lat": 9.750128,
     "Lon": -85.250738,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRPT",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1230,15 @@
     "freq": "121.700",
     "Lat": 9.95705,
     "Lon": -84.139801,
-    "Ele": 1001.9
+    "Ele": 1001.9,
+    "ident": "MRPV",
+    "iso_country": "CR",
+    "icao_code": "MRPV",
+    "iata_code": "SYQ",
+    "length_ft": 5138,
+    "width_ft": 75,
+    "heading": 95,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -915,7 +1247,9 @@
     "freq": "",
     "Lat": 9.12242031097412,
     "Lon": -83.7063980102539,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MRPY",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -924,7 +1258,9 @@
     "freq": "",
     "Lat": 10.400451,
     "Lon": -84.487567,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "MRQA",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -933,7 +1269,9 @@
     "freq": "",
     "Lat": 9.392994,
     "Lon": -84.125782,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MRQN",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -942,7 +1280,15 @@
     "freq": "126.800",
     "Lat": 9.44316,
     "Lon": -84.129799,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "MRQP",
+    "iso_country": "CR",
+    "icao_code": "MRQP",
+    "iata_code": "XQP",
+    "length_ft": 3609,
+    "width_ft": 36,
+    "heading": 41,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -951,7 +1297,11 @@
     "freq": "",
     "Lat": 10.327400207519531,
     "Lon": -83.88760375976562,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "MRRF",
+    "iso_country": "CR",
+    "icao_code": "MRRF",
+    "iata_code": "RFR"
   },
   {
     "type": "small_airport",
@@ -960,7 +1310,9 @@
     "freq": "",
     "Lat": 10.31666660308838,
     "Lon": -85.33333587646484,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRRH",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -969,7 +1321,9 @@
     "freq": "",
     "Lat": 9.570401,
     "Lon": -84.52399,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRRN",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -978,7 +1332,9 @@
     "freq": "",
     "Lat": 10.308199882507324,
     "Lon": -83.75430297851562,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "MRRX",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -987,7 +1343,9 @@
     "freq": "",
     "Lat": 10.148099,
     "Lon": -83.490772,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "MRSA",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -996,7 +1354,9 @@
     "freq": "",
     "Lat": 10.5,
     "Lon": -84.56666564941406,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "MRSB",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1365,9 @@
     "freq": "",
     "Lat": 10.273799896240234,
     "Lon": -85.59149932861328,
-    "Ele": 62.8
+    "Ele": 62.8,
+    "ident": "MRSC",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1376,9 @@
     "freq": "",
     "Lat": 9.300000190734863,
     "Lon": -83.61666870117188,
-    "Ele": 608.1
+    "Ele": 608.1,
+    "ident": "MRSF",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1387,13 @@
     "freq": "126.800",
     "Lat": 10.2883,
     "Lon": -83.713501,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "MRSG",
+    "iso_country": "CR",
+    "length_ft": 3215,
+    "width_ft": 36,
+    "heading": 5.9,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1402,9 @@
     "freq": "",
     "Lat": 9.580769538879396,
     "Lon": -82.95989990234375,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MRSH",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1413,11 @@
     "freq": "",
     "Lat": 9.348676,
     "Lon": -83.712301,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "MRSI",
+    "iso_country": "CR",
+    "icao_code": "MRSI",
+    "iata_code": "IPZ"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1426,9 @@
     "freq": "",
     "Lat": 8.789362,
     "Lon": -83.271432,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "MRSL",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1437,9 @@
     "freq": "",
     "Lat": 9.916666984558104,
     "Lon": -84.61666870117188,
-    "Ele": 127.1
+    "Ele": 127.1,
+    "ident": "MRSM",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1448,9 @@
     "freq": "",
     "Lat": 8.4776,
     "Lon": -83.591343,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "MRSN",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1459,9 @@
     "freq": "",
     "Lat": 10.270833,
     "Lon": -83.583885,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRSO",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1470,9 @@
     "freq": "",
     "Lat": 10.41790008544922,
     "Lon": -83.75299835205078,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "MRSP",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1481,9 @@
     "freq": "",
     "Lat": 10.471518,
     "Lon": -83.906788,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "MRSQ",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1492,9 @@
     "freq": "",
     "Lat": 10.064518,
     "Lon": -84.876189,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "MRST",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1503,15 @@
     "freq": "126.800",
     "Lat": 8.826971,
     "Lon": -82.958922,
-    "Ele": 983.9
+    "Ele": 983.9,
+    "ident": "MRSV",
+    "iso_country": "CR",
+    "icao_code": "MRSV",
+    "iata_code": "TOO",
+    "length_ft": 3215,
+    "width_ft": 36,
+    "heading": 81.4,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1520,9 @@
     "freq": "",
     "Lat": 9.503889,
     "Lon": -82.63135,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MRSX",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1531,9 @@
     "freq": "",
     "Lat": 10.396111,
     "Lon": -83.829445,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "MRTB",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1542,9 @@
     "freq": "",
     "Lat": 10.366667,
     "Lon": -85.1665,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "MRTG",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1553,9 @@
     "freq": "",
     "Lat": 10.30840015411377,
     "Lon": -85.46839904785156,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRTL",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1564,14 @@
     "freq": "",
     "Lat": 10.313500404358,
     "Lon": -85.815498352051,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "MRTM",
+    "iso_country": "CR",
+    "icao_code": "MRTM",
+    "iata_code": "TNO",
+    "length_ft": 2625,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1167,7 +1580,14 @@
     "freq": "",
     "Lat": 9.739307,
     "Lon": -85.016199,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MRTR",
+    "iso_country": "CR",
+    "icao_code": "MRTR",
+    "iata_code": "TMU",
+    "length_ft": 2723,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1176,7 +1596,9 @@
     "freq": "",
     "Lat": 9.690254,
     "Lon": -85.182878,
-    "Ele": 25.6
+    "Ele": 25.6,
+    "ident": "MRTS",
+    "iso_country": "CR"
   },
   {
     "type": "medium_airport",
@@ -1185,7 +1607,15 @@
     "freq": "126.800",
     "Lat": 10.8922,
     "Lon": -85.016197,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "MRUP",
+    "iso_country": "CR",
+    "icao_code": "MRUP",
+    "iata_code": "UPL",
+    "length_ft": 3536,
+    "width_ft": 59,
+    "heading": 44,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1624,9 @@
     "freq": "",
     "Lat": 10.333333015441896,
     "Lon": -83.66666412353516,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "MRYT",
+    "iso_country": "CR"
   },
   {
     "type": "small_airport",
@@ -1203,6 +1635,8 @@
     "freq": "",
     "Lat": 9.994009971618652,
     "Lon": -85.3102035522461,
-    "Ele": 397.8
+    "Ele": 397.8,
+    "ident": "MRZP",
+    "iso_country": "CR"
   }
 ]

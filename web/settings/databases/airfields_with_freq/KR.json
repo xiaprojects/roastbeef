@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 37.059527,
     "Lon": 129.409289,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "KR-0011",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 34.695967,
     "Lon": 126.519542,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0017",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 33.203935,
     "Lon": 126.271319,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0041",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 38.19605,
     "Lon": 128.041942,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0199",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 38.268966,
     "Lon": 127.55613,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0207",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 34.62773,
     "Lon": 126.42019,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "KR-0257",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 33.510775,
     "Lon": 126.49913,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0285",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": 37.10731,
     "Lon": 126.7644,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "KR-0299",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,9 @@
     "freq": "",
     "Lat": 36.31421,
     "Lon": 127.2343,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "KR-0331",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -87,7 +105,9 @@
     "freq": "",
     "Lat": 36.837592,
     "Lon": 128.579607,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0611",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -96,7 +116,9 @@
     "freq": "",
     "Lat": 35.42819,
     "Lon": 128.510084,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-0621",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -105,7 +127,9 @@
     "freq": "",
     "Lat": 35.12858,
     "Lon": 128.66355,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KR-1054",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -114,7 +138,9 @@
     "freq": "",
     "Lat": 34.61128,
     "Lon": 127.20563,
-    "Ele": 0.6
+    "Ele": 0.6,
+    "ident": "KR-1055",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -123,7 +149,9 @@
     "freq": "",
     "Lat": 35.88025,
     "Lon": 127.01474,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "KR-1056",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -132,7 +160,9 @@
     "freq": "",
     "Lat": 35.45041,
     "Lon": 127.43346,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "KR-1057",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -141,7 +171,9 @@
     "freq": "",
     "Lat": 35.27741,
     "Lon": 126.75491,
-    "Ele": 38.1
+    "Ele": 38.1,
+    "ident": "KR-1058",
+    "iso_country": "KR"
   },
   {
     "type": "small_airport",
@@ -150,7 +182,14 @@
     "freq": "120.500",
     "Lat": 37.864555,
     "Lon": 127.176633,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "QJP",
+    "iso_country": "KR",
+    "iata_code": "QJP",
+    "length_ft": 3640,
+    "width_ft": 80,
+    "heading": 35.8,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -159,7 +198,14 @@
     "freq": "120.000",
     "Lat": 38.086574,
     "Lon": 127.986817,
-    "Ele": 199.6
+    "Ele": 199.6,
+    "ident": "RK13",
+    "iso_country": "KR",
+    "local_code": "RK13",
+    "length_ft": 3600,
+    "width_ft": 100,
+    "heading": 173.4,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -168,7 +214,14 @@
     "freq": "35.000",
     "Lat": 38.0266,
     "Lon": 127.366997,
-    "Ele": 141.4
+    "Ele": 141.4,
+    "ident": "RK14",
+    "iso_country": "KR",
+    "local_code": "RK14",
+    "length_ft": 2345,
+    "width_ft": 60,
+    "heading": 174.6,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -177,7 +230,14 @@
     "freq": "38.000",
     "Lat": 38.155043,
     "Lon": 127.314076,
-    "Ele": 155.4
+    "Ele": 155.4,
+    "ident": "RK15",
+    "iso_country": "KR",
+    "local_code": "RK15",
+    "length_ft": 3900,
+    "width_ft": 200,
+    "heading": 20.6,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -186,7 +246,14 @@
     "freq": "32.300",
     "Lat": 38.075739,
     "Lon": 127.521122,
-    "Ele": 260.6
+    "Ele": 260.6,
+    "ident": "RK16",
+    "iso_country": "KR",
+    "local_code": "RK16",
+    "length_ft": 1200,
+    "width_ft": 40,
+    "heading": 22,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -195,7 +262,14 @@
     "freq": "32.300",
     "Lat": 38.139645,
     "Lon": 128.009123,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "RK17",
+    "iso_country": "KR",
+    "local_code": "RK17",
+    "length_ft": 2000,
+    "width_ft": 45,
+    "heading": 32,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -204,7 +278,14 @@
     "freq": "138.000",
     "Lat": 38.083162,
     "Lon": 127.269037,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "RK18",
+    "iso_country": "KR",
+    "local_code": "RK18",
+    "length_ft": 2300,
+    "width_ft": 40,
+    "heading": 161.2,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -213,7 +294,14 @@
     "freq": "32.300",
     "Lat": 38.139884,
     "Lon": 127.740111,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "RK19",
+    "iso_country": "KR",
+    "local_code": "RK19",
+    "length_ft": 1900,
+    "width_ft": 80,
+    "heading": 165.2,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -222,7 +310,14 @@
     "freq": "32.300",
     "Lat": 38.382541,
     "Lon": 128.458071,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "RK21",
+    "iso_country": "KR",
+    "local_code": "RK21",
+    "length_ft": 2305,
+    "width_ft": 70,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -231,7 +326,14 @@
     "freq": "36.900",
     "Lat": 38.120023,
     "Lon": 127.686067,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "RK22",
+    "iso_country": "KR",
+    "local_code": "RK22",
+    "length_ft": 1788,
+    "width_ft": 50,
+    "heading": 2.9,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -240,7 +342,14 @@
     "freq": "",
     "Lat": 37.715159,
     "Lon": 126.560086,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "RK25",
+    "iso_country": "KR",
+    "local_code": "RK25",
+    "length_ft": 1362,
+    "width_ft": 82,
+    "heading": 92,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -249,7 +358,14 @@
     "freq": "122.700",
     "Lat": 37.895023,
     "Lon": 126.970518,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "RK27",
+    "iso_country": "KR",
+    "local_code": "RK27",
+    "length_ft": 1700,
+    "width_ft": 70,
+    "heading": 122,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -258,7 +374,14 @@
     "freq": "35.000",
     "Lat": 37.90939,
     "Lon": 127.008455,
-    "Ele": 96.6
+    "Ele": 96.6,
+    "ident": "RK28",
+    "iso_country": "KR",
+    "local_code": "RK28",
+    "length_ft": 1700,
+    "width_ft": 60,
+    "heading": 82,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -267,7 +390,14 @@
     "freq": "32.300",
     "Lat": 37.929528,
     "Lon": 127.75737,
-    "Ele": 82.3
+    "Ele": 82.3,
+    "ident": "RK31",
+    "iso_country": "KR",
+    "local_code": "RK31",
+    "length_ft": 1870,
+    "width_ft": 50,
+    "heading": 74.7,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -276,7 +406,14 @@
     "freq": "32.300",
     "Lat": 37.956177,
     "Lon": 128.31645,
-    "Ele": 289.9
+    "Ele": 289.9,
+    "ident": "RK32",
+    "iso_country": "KR",
+    "local_code": "RK32",
+    "length_ft": 2735,
+    "width_ft": 100,
+    "heading": 25.3,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -285,7 +422,14 @@
     "freq": "",
     "Lat": 37.344616,
     "Lon": 128.384085,
-    "Ele": 289.0
+    "Ele": 289,
+    "ident": "RK33",
+    "iso_country": "KR",
+    "local_code": "RK33",
+    "length_ft": 1000,
+    "width_ft": 50,
+    "heading": 69.8,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -294,7 +438,14 @@
     "freq": "",
     "Lat": 37.650036,
     "Lon": 128.569608,
-    "Ele": 541.9
+    "Ele": 541.9,
+    "ident": "RK34",
+    "iso_country": "KR",
+    "local_code": "RK34",
+    "length_ft": 1300,
+    "width_ft": 60,
+    "heading": 11,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -303,7 +454,14 @@
     "freq": "",
     "Lat": 38.176646,
     "Lon": 127.102139,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "RK36",
+    "iso_country": "KR",
+    "local_code": "RK36",
+    "length_ft": 1700,
+    "width_ft": 70,
+    "heading": 12,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -312,7 +470,14 @@
     "freq": "",
     "Lat": 38.028949,
     "Lon": 127.141585,
-    "Ele": 71.3
+    "Ele": 71.3,
+    "ident": "RK38",
+    "iso_country": "KR",
+    "local_code": "RK38",
+    "length_ft": 1900,
+    "width_ft": 62,
+    "heading": 178,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -321,7 +486,14 @@
     "freq": "",
     "Lat": 38.248814,
     "Lon": 127.378267,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "RK40",
+    "iso_country": "KR",
+    "local_code": "RK40",
+    "length_ft": 1800,
+    "width_ft": 60,
+    "heading": 60.2,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -330,7 +502,14 @@
     "freq": "36.900",
     "Lat": 38.2163,
     "Lon": 127.656612,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "RK41",
+    "iso_country": "KR",
+    "local_code": "RK41",
+    "length_ft": 1862,
+    "width_ft": 30,
+    "heading": 127.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -339,7 +518,14 @@
     "freq": "32.300",
     "Lat": 38.055851,
     "Lon": 127.797384,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "RK42",
+    "iso_country": "KR",
+    "local_code": "RK42",
+    "length_ft": 1410,
+    "width_ft": 42,
+    "heading": 71.3,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -348,7 +534,14 @@
     "freq": "",
     "Lat": 38.106192,
     "Lon": 128.201002,
-    "Ele": 209.7
+    "Ele": 209.7,
+    "ident": "RK43",
+    "iso_country": "KR",
+    "local_code": "RK43",
+    "length_ft": 1700,
+    "width_ft": 80,
+    "heading": 48,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -357,7 +550,14 @@
     "freq": "",
     "Lat": 38.239776,
     "Lon": 128.208289,
-    "Ele": 289.6
+    "Ele": 289.6,
+    "ident": "RK44",
+    "iso_country": "KR",
+    "local_code": "RK44",
+    "length_ft": 2400,
+    "width_ft": 70,
+    "heading": 37.9,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -366,7 +566,14 @@
     "freq": "29.600",
     "Lat": 37.703154,
     "Lon": 127.904613,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "RK48",
+    "iso_country": "KR",
+    "local_code": "RK48",
+    "length_ft": 2300,
+    "width_ft": 75,
+    "heading": 63,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -375,7 +582,14 @@
     "freq": "",
     "Lat": 36.756523,
     "Lon": 126.32886,
-    "Ele": 27.7
+    "Ele": 27.7,
+    "ident": "RK49",
+    "iso_country": "KR",
+    "local_code": "RK49",
+    "length_ft": 1200,
+    "width_ft": 70,
+    "heading": 69.4,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -384,7 +598,14 @@
     "freq": "",
     "Lat": 36.588163,
     "Lon": 126.658406,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "RK50",
+    "iso_country": "KR",
+    "local_code": "RK50",
+    "length_ft": 1500,
+    "width_ft": 50,
+    "heading": 27,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -393,7 +614,14 @@
     "freq": "",
     "Lat": 36.541607,
     "Lon": 127.285833,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "RK51",
+    "iso_country": "KR",
+    "local_code": "RK51",
+    "length_ft": 1600,
+    "width_ft": 65,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -402,7 +630,14 @@
     "freq": "38.600",
     "Lat": 37.286747,
     "Lon": 127.225446,
-    "Ele": 74.1
+    "Ele": 74.1,
+    "ident": "RK52",
+    "iso_country": "KR",
+    "local_code": "RK52",
+    "length_ft": 2001,
+    "width_ft": 75,
+    "heading": 15.3,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -411,7 +646,14 @@
     "freq": "",
     "Lat": 35.306607,
     "Lon": 126.494962,
-    "Ele": 20.4
+    "Ele": 20.4,
+    "ident": "RK60",
+    "iso_country": "KR",
+    "local_code": "RK60",
+    "length_ft": 1700,
+    "width_ft": 60,
+    "heading": 145,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -420,7 +662,14 @@
     "freq": "",
     "Lat": 35.342098,
     "Lon": 127.029999,
-    "Ele": 52.7
+    "Ele": 52.7,
+    "ident": "RK6D",
+    "iso_country": "KR",
+    "local_code": "RK6D",
+    "length_ft": 1200,
+    "width_ft": 50,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -429,7 +678,14 @@
     "freq": "",
     "Lat": 37.16283,
     "Lon": 128.219247,
-    "Ele": 281.9
+    "Ele": 281.9,
+    "ident": "RK6O",
+    "iso_country": "KR",
+    "local_code": "RK6O",
+    "length_ft": 3705,
+    "width_ft": 80,
+    "heading": 91,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -438,7 +694,14 @@
     "freq": "",
     "Lat": 37.993567,
     "Lon": 126.919169,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "RK6X",
+    "iso_country": "KR",
+    "local_code": "RK6X",
+    "length_ft": 1600,
+    "width_ft": 70,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -447,7 +710,14 @@
     "freq": "30.400",
     "Lat": 38.119736,
     "Lon": 128.040247,
-    "Ele": 219.8
+    "Ele": 219.8,
+    "ident": "RK82",
+    "iso_country": "KR",
+    "local_code": "RK82",
+    "length_ft": 1300,
+    "width_ft": 80,
+    "heading": 33,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -456,7 +726,9 @@
     "freq": "",
     "Lat": 35.429275,
     "Lon": 128.510378,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "RKCH",
+    "iso_country": "KR"
   },
   {
     "type": "large_airport",
@@ -465,7 +737,14 @@
     "freq": "",
     "Lat": 34.991406,
     "Lon": 126.382814,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "RKJB",
+    "iso_country": "KR",
+    "icao_code": "RKJB",
+    "iata_code": "MWX",
+    "length_ft": 9186,
+    "heading": 14,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -474,7 +753,15 @@
     "freq": "130.000",
     "Lat": 35.123173,
     "Lon": 126.805444,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "RKJJ",
+    "iso_country": "KR",
+    "icao_code": "RKJJ",
+    "iata_code": "KWJ",
+    "length_ft": 9300,
+    "width_ft": 150,
+    "heading": 29.9,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -483,7 +770,15 @@
     "freq": "120.000",
     "Lat": 35.903801,
     "Lon": 126.615997,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "RKJK",
+    "iso_country": "KR",
+    "icao_code": "RKJK",
+    "iata_code": "KUV",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 169,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -492,7 +787,13 @@
     "freq": "130.000",
     "Lat": 34.758979,
     "Lon": 126.380324,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "RKJM",
+    "iso_country": "KR",
+    "length_ft": 5249,
+    "width_ft": 98,
+    "heading": 50.3,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -501,7 +802,15 @@
     "freq": "120.000",
     "Lat": 35.878289,
     "Lon": 127.11894,
-    "Ele": 29.3
+    "Ele": 29.3,
+    "ident": "RKJU",
+    "iso_country": "KR",
+    "icao_code": "RKJU",
+    "iata_code": "CHN",
+    "length_ft": 4800,
+    "width_ft": 100,
+    "heading": 69,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -510,7 +819,15 @@
     "freq": "135.400",
     "Lat": 34.84230041503906,
     "Lon": 127.61699676513672,
-    "Ele": 16.2
+    "Ele": 16.2,
+    "ident": "RKJY",
+    "iso_country": "KR",
+    "icao_code": "RKJY",
+    "iata_code": "RSU",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 158,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -519,7 +836,15 @@
     "freq": "124.600",
     "Lat": 37.753601,
     "Lon": 128.943915,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "RKNN",
+    "iso_country": "KR",
+    "icao_code": "RKNN",
+    "iata_code": "KAG",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 68,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -528,7 +853,15 @@
     "freq": "120.000",
     "Lat": 37.437113,
     "Lon": 127.960051,
-    "Ele": 100.3
+    "Ele": 100.3,
+    "ident": "RKNW",
+    "iso_country": "KR",
+    "icao_code": "RKNW",
+    "iata_code": "WJU",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 26.1,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -537,7 +870,15 @@
     "freq": "124.600",
     "Lat": 38.061298,
     "Lon": 128.669006,
-    "Ele": 73.5
+    "Ele": 73.5,
+    "ident": "RKNY",
+    "iso_country": "KR",
+    "icao_code": "RKNY",
+    "iata_code": "YNY",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 141,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -546,7 +887,15 @@
     "freq": "119.000",
     "Lat": 33.512058,
     "Lon": 126.492548,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "RKPC",
+    "iso_country": "KR",
+    "icao_code": "RKPC",
+    "iata_code": "CJU",
+    "length_ft": 6268,
+    "width_ft": 148,
+    "heading": 125.6,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -555,7 +904,15 @@
     "freq": "119.000",
     "Lat": 33.3996009827,
     "Lon": 126.711997986,
-    "Ele": 356.9
+    "Ele": 356.9,
+    "ident": "RKPD",
+    "iso_country": "KR",
+    "icao_code": "RKPD",
+    "iata_code": "JDG",
+    "length_ft": 4974,
+    "width_ft": 80,
+    "heading": 142.2,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -564,7 +921,15 @@
     "freq": "120.000",
     "Lat": 35.140248,
     "Lon": 128.696229,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "RKPE",
+    "iso_country": "KR",
+    "icao_code": "RKPE",
+    "iata_code": "CHF",
+    "length_ft": 3766,
+    "width_ft": 78,
+    "heading": 169,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -573,7 +938,15 @@
     "freq": "120.000",
     "Lat": 35.179501,
     "Lon": 128.938004,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "RKPK",
+    "iso_country": "KR",
+    "icao_code": "RKPK",
+    "iata_code": "PUS",
+    "length_ft": 10499,
+    "width_ft": 197,
+    "heading": 173.9,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -582,7 +955,15 @@
     "freq": "120.000",
     "Lat": 35.088591,
     "Lon": 128.071747,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "RKPS",
+    "iso_country": "KR",
+    "icao_code": "RKPS",
+    "iata_code": "HIN",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -591,7 +972,15 @@
     "freq": "120.000",
     "Lat": 35.59349823,
     "Lon": 129.352005005,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "RKPU",
+    "iso_country": "KR",
+    "icao_code": "RKPU",
+    "iata_code": "USN",
+    "length_ft": 6561,
+    "width_ft": 148,
+    "heading": 176,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -600,7 +989,13 @@
     "freq": "120.000",
     "Lat": 37.830057,
     "Lon": 126.99013,
-    "Ele": 87.5
+    "Ele": 87.5,
+    "ident": "RKRA",
+    "iso_country": "KR",
+    "length_ft": 3915,
+    "width_ft": 115,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -609,7 +1004,14 @@
     "freq": "120.800",
     "Lat": 37.474918,
     "Lon": 126.747272,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "RKRB",
+    "iso_country": "KR",
+    "local_code": "RK53",
+    "length_ft": 1608,
+    "width_ft": 92,
+    "heading": 162.9,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -618,7 +1020,14 @@
     "freq": "38.000",
     "Lat": 37.501169,
     "Lon": 127.630212,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "RKRG",
+    "iso_country": "KR",
+    "local_code": "RK30",
+    "length_ft": 1600,
+    "width_ft": 100,
+    "heading": 146.1,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -627,7 +1036,14 @@
     "freq": "38.000",
     "Lat": 37.812818,
     "Lon": 127.357106,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "RKRK",
+    "iso_country": "KR",
+    "local_code": "RK56",
+    "length_ft": 1515,
+    "width_ft": 76,
+    "heading": 160,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -636,7 +1052,13 @@
     "freq": "127.900",
     "Lat": 37.200715,
     "Lon": 127.469215,
-    "Ele": 77.7
+    "Ele": 77.7,
+    "ident": "RKRN",
+    "iso_country": "KR",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -645,7 +1067,14 @@
     "freq": "36.900",
     "Lat": 37.763489,
     "Lon": 126.792548,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "RKRP",
+    "iso_country": "KR",
+    "local_code": "RK45",
+    "length_ft": 1620,
+    "width_ft": 55,
+    "heading": 155,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -654,7 +1083,13 @@
     "freq": "",
     "Lat": 37.600539,
     "Lon": 126.869516,
-    "Ele": 19.5
+    "Ele": 19.5,
+    "ident": "RKRS",
+    "iso_country": "KR",
+    "length_ft": 3680,
+    "width_ft": 64,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -663,7 +1098,13 @@
     "freq": "127.900",
     "Lat": 36.962363,
     "Lon": 127.031126,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "RKSG",
+    "iso_country": "KR",
+    "length_ft": 8217,
+    "width_ft": 150,
+    "heading": 132,
+    "QFU": "32"
   },
   {
     "type": "large_airport",
@@ -672,7 +1113,15 @@
     "freq": "120.800",
     "Lat": 37.469101,
     "Lon": 126.450996,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "RKSI",
+    "iso_country": "KR",
+    "icao_code": "RKSI",
+    "iata_code": "ICN",
+    "length_ft": 12303,
+    "width_ft": 197,
+    "heading": 145,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -681,7 +1130,14 @@
     "freq": "120.000",
     "Lat": 37.444744,
     "Lon": 127.112718,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "RKSM",
+    "iso_country": "KR",
+    "iata_code": "SSN",
+    "length_ft": 9700,
+    "width_ft": 150,
+    "heading": 8,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -690,7 +1146,15 @@
     "freq": "127.900",
     "Lat": 37.091457,
     "Lon": 127.029448,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "RKSO",
+    "iso_country": "KR",
+    "icao_code": "RKSO",
+    "iata_code": "OSN",
+    "length_ft": 9004,
+    "width_ft": 150,
+    "heading": 84,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -699,7 +1163,15 @@
     "freq": "127.100",
     "Lat": 37.5583,
     "Lon": 126.791,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "RKSS",
+    "iso_country": "KR",
+    "icao_code": "RKSS",
+    "iata_code": "GMP",
+    "length_ft": 10499,
+    "width_ft": 197,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -708,7 +1180,9 @@
     "freq": "",
     "Lat": 37.920842,
     "Lon": 127.055361,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RKST",
+    "iso_country": "KR"
   },
   {
     "type": "medium_airport",
@@ -717,7 +1191,15 @@
     "freq": "127.900",
     "Lat": 37.239399,
     "Lon": 127.007004,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "RKSW",
+    "iso_country": "KR",
+    "icao_code": "RKSW",
+    "iata_code": "SWU",
+    "length_ft": 7535,
+    "width_ft": 143,
+    "heading": 158,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -726,7 +1208,14 @@
     "freq": "",
     "Lat": 36.593781,
     "Lon": 126.29662,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "RKTA",
+    "iso_country": "KR",
+    "iata_code": "QDY",
+    "length_ft": 3871,
+    "width_ft": 82,
+    "heading": 158,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -735,7 +1224,13 @@
     "freq": "134.550",
     "Lat": 36.568199,
     "Lon": 127.5,
-    "Ele": 78.6
+    "Ele": 78.6,
+    "ident": "RKTE",
+    "iso_country": "KR",
+    "length_ft": 4000,
+    "width_ft": 120,
+    "heading": 156.6,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -744,7 +1239,15 @@
     "freq": "124.250",
     "Lat": 35.987955,
     "Lon": 129.420383,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "RKTH",
+    "iso_country": "KR",
+    "icao_code": "RKTH",
+    "iata_code": "KPO",
+    "length_ft": 7000,
+    "width_ft": 150,
+    "heading": 89.3,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -753,7 +1256,16 @@
     "freq": "132.550",
     "Lat": 37.03024,
     "Lon": 127.886353,
-    "Ele": 85.6
+    "Ele": 85.6,
+    "ident": "RKTI",
+    "iso_country": "KR",
+    "icao_code": "RKTI",
+    "iata_code": "JWO",
+    "local_code": "RKTV",
+    "length_ft": 9330,
+    "width_ft": 120,
+    "heading": 175.5,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -762,7 +1274,11 @@
     "freq": "",
     "Lat": 36.777049,
     "Lon": 129.461861,
-    "Ele": 58.2
+    "Ele": 58.2,
+    "ident": "RKTL",
+    "iso_country": "KR",
+    "icao_code": "RKTL",
+    "iata_code": "UJN"
   },
   {
     "type": "medium_airport",
@@ -771,7 +1287,15 @@
     "freq": "120.000",
     "Lat": 35.896872,
     "Lon": 128.65531,
-    "Ele": 35.4
+    "Ele": 35.4,
+    "ident": "RKTN",
+    "iso_country": "KR",
+    "icao_code": "RKTN",
+    "iata_code": "TAE",
+    "length_ft": 9039,
+    "width_ft": 150,
+    "heading": 124,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -780,7 +1304,16 @@
     "freq": "124.600",
     "Lat": 36.703999,
     "Lon": 126.486,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "RKTP",
+    "iso_country": "KR",
+    "icao_code": "RKTP",
+    "iata_code": "HMY",
+    "local_code": "RK6U",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 24.6,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -789,7 +1322,9 @@
     "freq": "",
     "Lat": 36.407451,
     "Lon": 128.177158,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "RKTS",
+    "iso_country": "KR"
   },
   {
     "type": "medium_airport",
@@ -798,7 +1333,15 @@
     "freq": "120.000",
     "Lat": 36.717008,
     "Lon": 127.498741,
-    "Ele": 58.2
+    "Ele": 58.2,
+    "ident": "RKTU",
+    "iso_country": "KR",
+    "icao_code": "RKTU",
+    "iata_code": "CJJ",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 52,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -807,7 +1350,15 @@
     "freq": "120.000",
     "Lat": 36.630373,
     "Lon": 128.34971,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "RKTY",
+    "iso_country": "KR",
+    "icao_code": "RKTY",
+    "iata_code": "YEC",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 88.8,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -816,7 +1367,13 @@
     "freq": "40.600",
     "Lat": 36.571949,
     "Lon": 127.296067,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "RKUC",
+    "iso_country": "KR",
+    "length_ft": 3100,
+    "width_ft": 120,
+    "heading": 133.2,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -825,6 +1382,12 @@
     "freq": "47.000",
     "Lat": 36.267085,
     "Lon": 127.108881,
-    "Ele": 31.7
+    "Ele": 31.7,
+    "ident": "RKUL",
+    "iso_country": "KR",
+    "length_ft": 1476,
+    "width_ft": 105,
+    "heading": 110.1,
+    "QFU": "29"
   }
 ]

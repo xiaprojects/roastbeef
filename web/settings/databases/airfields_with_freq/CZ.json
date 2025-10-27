@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 50.210856,
     "Lon": 14.657693,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0048",
+    "iso_country": "CZ",
+    "local_code": "LKBORE"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,13 @@
     "freq": "125.825",
     "Lat": 49.5682909,
     "Lon": 16.9991842,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0050",
+    "iso_country": "CZ",
+    "length_ft": 1100,
+    "width_ft": 100,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -24,7 +33,9 @@
     "freq": "",
     "Lat": 49.899713,
     "Lon": 12.964956,
-    "Ele": 606.9
+    "Ele": 606.9,
+    "ident": "CZ-0051",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -33,7 +44,10 @@
     "freq": "",
     "Lat": 50.821899,
     "Lon": 14.27174,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0053",
+    "iso_country": "CZ",
+    "local_code": "LKBYNO"
   },
   {
     "type": "small_airport",
@@ -42,7 +56,10 @@
     "freq": "",
     "Lat": 50.641667,
     "Lon": 14.541389,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0054",
+    "iso_country": "CZ",
+    "local_code": "LKRAMS"
   },
   {
     "type": "small_airport",
@@ -51,7 +68,10 @@
     "freq": "",
     "Lat": 49.91,
     "Lon": 16.455278,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0055",
+    "iso_country": "CZ",
+    "local_code": "LKCTRE"
   },
   {
     "type": "small_airport",
@@ -60,7 +80,10 @@
     "freq": "",
     "Lat": 50.678056,
     "Lon": 14.999722,
-    "Ele": 391.1
+    "Ele": 391.1,
+    "ident": "CZ-0056",
+    "iso_country": "CZ",
+    "local_code": "LKCDUB"
   },
   {
     "type": "small_airport",
@@ -69,7 +92,9 @@
     "freq": "",
     "Lat": 49.12821,
     "Lon": 14.17325,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0057",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -78,7 +103,14 @@
     "freq": "120.325",
     "Lat": 49.409349,
     "Lon": 15.143687,
-    "Ele": 587.0
+    "Ele": 587,
+    "ident": "CZ-0058",
+    "iso_country": "CZ",
+    "local_code": "LKCAST",
+    "length_ft": 1640,
+    "width_ft": 49,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -87,7 +119,12 @@
     "freq": "128.825",
     "Lat": 49.747569,
     "Lon": 15.06424,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0059",
+    "iso_country": "CZ",
+    "length_ft": 1542,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -96,7 +133,14 @@
     "freq": "125.825",
     "Lat": 50.549584,
     "Lon": 15.535908,
-    "Ele": 549.9
+    "Ele": 549.9,
+    "ident": "CZ-0060",
+    "iso_country": "CZ",
+    "local_code": "LKSTUD",
+    "length_ft": 2002,
+    "width_ft": 115,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -105,7 +149,14 @@
     "freq": "122.400",
     "Lat": 50.620826,
     "Lon": 13.809772,
-    "Ele": 349.9
+    "Ele": 349.9,
+    "ident": "CZ-0061",
+    "iso_country": "CZ",
+    "local_code": "LKTEPL",
+    "length_ft": 1575,
+    "width_ft": 115,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -114,7 +165,10 @@
     "freq": "",
     "Lat": 49.651667,
     "Lon": 13.189722,
-    "Ele": 360.0
+    "Ele": 360,
+    "ident": "CZ-0062",
+    "iso_country": "CZ",
+    "local_code": "LKCHOV"
   },
   {
     "type": "small_airport",
@@ -123,7 +177,10 @@
     "freq": "",
     "Lat": 49.363986,
     "Lon": 16.784899,
-    "Ele": 566.9
+    "Ele": 566.9,
+    "ident": "CZ-0063",
+    "iso_country": "CZ",
+    "local_code": "LKKOTV"
   },
   {
     "type": "small_airport",
@@ -132,7 +189,14 @@
     "freq": "122.400",
     "Lat": 48.915,
     "Lon": 14.726389,
-    "Ele": 502.9
+    "Ele": 502.9,
+    "ident": "CZ-0064",
+    "iso_country": "CZ",
+    "local_code": "LKKRAM",
+    "length_ft": 1493,
+    "width_ft": 49,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -141,7 +205,14 @@
     "freq": "125.825",
     "Lat": 49.552222,
     "Lon": 15.155556,
-    "Ele": 513.0
+    "Ele": 513,
+    "ident": "CZ-0065",
+    "iso_country": "CZ",
+    "local_code": "LKJIRI",
+    "length_ft": 1969,
+    "width_ft": 115,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -150,7 +221,14 @@
     "freq": "125.825",
     "Lat": 48.718611,
     "Lon": 14.450556,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "CZ-0066",
+    "iso_country": "CZ",
+    "local_code": "LKKAPL",
+    "length_ft": 1476,
+    "width_ft": 66,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -159,7 +237,14 @@
     "freq": "125.825",
     "Lat": 48.698611,
     "Lon": 14.1975,
-    "Ele": 798.0
+    "Ele": 798,
+    "ident": "CZ-0067",
+    "iso_country": "CZ",
+    "local_code": "LKFRYM",
+    "length_ft": 1526,
+    "width_ft": 115,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -168,7 +253,14 @@
     "freq": "125.825",
     "Lat": 50.728056,
     "Lon": 14.924722,
-    "Ele": 459.9
+    "Ele": 459.9,
+    "ident": "CZ-0069",
+    "iso_country": "CZ",
+    "local_code": "LKDRUZ",
+    "length_ft": 1444,
+    "width_ft": 59,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -177,7 +269,9 @@
     "freq": "",
     "Lat": 49.996795,
     "Lon": 12.575119,
-    "Ele": 641.9
+    "Ele": 641.9,
+    "ident": "CZ-0070",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -186,7 +280,14 @@
     "freq": "125.825",
     "Lat": 50.039543,
     "Lon": 14.822745,
-    "Ele": 314.9
+    "Ele": 314.9,
+    "ident": "CZ-0071",
+    "iso_country": "CZ",
+    "local_code": "LKVRAT",
+    "length_ft": 2198,
+    "width_ft": 49,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -195,7 +296,14 @@
     "freq": "125.825",
     "Lat": 50.008926,
     "Lon": 14.037743,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "CZ-0072",
+    "iso_country": "CZ",
+    "local_code": "LKBURA",
+    "length_ft": 1804,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -204,7 +312,14 @@
     "freq": "125.825",
     "Lat": 49.435539,
     "Lon": 16.593046,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "CZ-0073",
+    "iso_country": "CZ",
+    "local_code": "LKBORI",
+    "length_ft": 2789,
+    "width_ft": 66,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -213,7 +328,14 @@
     "freq": "120.675",
     "Lat": 48.931667,
     "Lon": 16.339722,
-    "Ele": 217.9
+    "Ele": 217.9,
+    "ident": "CZ-0074",
+    "iso_country": "CZ",
+    "local_code": "LKMIRA",
+    "length_ft": 2313,
+    "width_ft": 115,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -222,7 +344,10 @@
     "freq": "",
     "Lat": 49.259034,
     "Lon": 17.813344,
-    "Ele": 352.0
+    "Ele": 352,
+    "ident": "CZ-0075",
+    "iso_country": "CZ",
+    "local_code": "LKSLUS"
   },
   {
     "type": "small_airport",
@@ -231,7 +356,10 @@
     "freq": "",
     "Lat": 50.858193,
     "Lon": 14.46569,
-    "Ele": 384.0
+    "Ele": 384,
+    "ident": "CZ-0077",
+    "iso_country": "CZ",
+    "local_code": "LKCHRI"
   },
   {
     "type": "small_airport",
@@ -240,7 +368,10 @@
     "freq": "",
     "Lat": 50.520273,
     "Lon": 14.272242,
-    "Ele": 210.9
+    "Ele": 210.9,
+    "ident": "CZ-0078",
+    "iso_country": "CZ",
+    "local_code": "LKPOLE"
   },
   {
     "type": "small_airport",
@@ -249,7 +380,10 @@
     "freq": "",
     "Lat": 49.974444,
     "Lon": 14.649167,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0079",
+    "iso_country": "CZ",
+    "local_code": "LKRICA"
   },
   {
     "type": "small_airport",
@@ -258,7 +392,10 @@
     "freq": "",
     "Lat": 49.887833,
     "Lon": 14.940548,
-    "Ele": 410.0
+    "Ele": 410,
+    "ident": "CZ-0080",
+    "iso_country": "CZ",
+    "local_code": "LKSAZA"
   },
   {
     "type": "small_airport",
@@ -267,7 +404,10 @@
     "freq": "",
     "Lat": 49.198333,
     "Lon": 15.903056,
-    "Ele": 485.9
+    "Ele": 485.9,
+    "ident": "CZ-0081",
+    "iso_country": "CZ",
+    "local_code": "LKTREB"
   },
   {
     "type": "small_airport",
@@ -276,7 +416,10 @@
     "freq": "",
     "Lat": 49.358611,
     "Lon": 16.242222,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0082",
+    "iso_country": "CZ",
+    "local_code": "LKBORO"
   },
   {
     "type": "small_airport",
@@ -285,7 +428,9 @@
     "freq": "",
     "Lat": 50.021944,
     "Lon": 15.520556,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0083",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -294,7 +439,9 @@
     "freq": "",
     "Lat": 49.06986,
     "Lon": 15.456004,
-    "Ele": 494.1
+    "Ele": 494.1,
+    "ident": "CZ-0084",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -303,7 +450,10 @@
     "freq": "",
     "Lat": 49.965,
     "Lon": 16.309722,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "CZ-0085",
+    "iso_country": "CZ",
+    "local_code": "LKJEHN"
   },
   {
     "type": "small_airport",
@@ -312,7 +462,10 @@
     "freq": "",
     "Lat": 50.068333,
     "Lon": 15.8125,
-    "Ele": 221.9
+    "Ele": 221.9,
+    "ident": "CZ-0086",
+    "iso_country": "CZ",
+    "local_code": "LKKUNE"
   },
   {
     "type": "small_airport",
@@ -321,7 +474,10 @@
     "freq": "",
     "Lat": 50.433427,
     "Lon": 13.811113,
-    "Ele": 278.9
+    "Ele": 278.9,
+    "ident": "CZ-0087",
+    "iso_country": "CZ",
+    "local_code": "LKCHAR"
   },
   {
     "type": "small_airport",
@@ -330,7 +486,10 @@
     "freq": "",
     "Lat": 49.546667,
     "Lon": 16.598611,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0088",
+    "iso_country": "CZ",
+    "local_code": "LKLETO"
   },
   {
     "type": "small_airport",
@@ -339,7 +498,10 @@
     "freq": "",
     "Lat": 50.54,
     "Lon": 15.388056,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0089",
+    "iso_country": "CZ",
+    "local_code": "LKLOMN"
   },
   {
     "type": "small_airport",
@@ -348,7 +510,10 @@
     "freq": "",
     "Lat": 49.051389,
     "Lon": 17.3675,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0090",
+    "iso_country": "CZ",
+    "local_code": "LKBORS"
   },
   {
     "type": "small_airport",
@@ -357,7 +522,10 @@
     "freq": "",
     "Lat": 50.418117,
     "Lon": 14.384269,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0091",
+    "iso_country": "CZ",
+    "local_code": "LKPOCA"
   },
   {
     "type": "small_airport",
@@ -366,7 +534,10 @@
     "freq": "",
     "Lat": 48.887778,
     "Lon": 17.294444,
-    "Ele": 187.1
+    "Ele": 187.1,
+    "ident": "CZ-0092",
+    "iso_country": "CZ",
+    "local_code": "LKSTRZ"
   },
   {
     "type": "small_airport",
@@ -375,7 +546,10 @@
     "freq": "",
     "Lat": 48.961944,
     "Lon": 16.831667,
-    "Ele": 197.8
+    "Ele": 197.8,
+    "ident": "CZ-0093",
+    "iso_country": "CZ",
+    "local_code": "LKBOLE"
   },
   {
     "type": "small_airport",
@@ -384,7 +558,10 @@
     "freq": "",
     "Lat": 49.940556,
     "Lon": 17.986111,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "CZ-0094",
+    "iso_country": "CZ",
+    "local_code": "LKOPAV"
   },
   {
     "type": "small_airport",
@@ -393,7 +570,14 @@
     "freq": "125.825",
     "Lat": 48.885037,
     "Lon": 14.486375,
-    "Ele": 470.0
+    "Ele": 470,
+    "ident": "CZ-0095",
+    "iso_country": "CZ",
+    "local_code": "LKDOUD",
+    "length_ft": 1640,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -402,7 +586,12 @@
     "freq": "",
     "Lat": 50.21695,
     "Lon": 12.77669,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "CZ-0096",
+    "iso_country": "CZ",
+    "local_code": "LKHORY",
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -411,7 +600,10 @@
     "freq": "",
     "Lat": 50.336285,
     "Lon": 12.969146,
-    "Ele": 512.1
+    "Ele": 512.1,
+    "ident": "CZ-0098",
+    "iso_country": "CZ",
+    "local_code": "LKOSTR"
   },
   {
     "type": "small_airport",
@@ -420,7 +612,10 @@
     "freq": "125.830",
     "Lat": 49.522778,
     "Lon": 16.232222,
-    "Ele": 591.9
+    "Ele": 591.9,
+    "ident": "CZ-0099",
+    "iso_country": "CZ",
+    "local_code": "LKBYST"
   },
   {
     "type": "small_airport",
@@ -429,7 +624,14 @@
     "freq": "125.825",
     "Lat": 50.433889,
     "Lon": 15.530556,
-    "Ele": 328.0
+    "Ele": 328,
+    "ident": "CZ-0100",
+    "iso_country": "CZ",
+    "local_code": "LKCHOT",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -438,7 +640,14 @@
     "freq": "125.825",
     "Lat": 49.729167,
     "Lon": 17.118056,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "CZ-0101",
+    "iso_country": "CZ",
+    "local_code": "LKDETR",
+    "length_ft": 1870,
+    "width_ft": 82,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -447,7 +656,13 @@
     "freq": "125.825",
     "Lat": 49.466389,
     "Lon": 17.665278,
-    "Ele": 317.0
+    "Ele": 317,
+    "ident": "CZ-0102",
+    "iso_country": "CZ",
+    "length_ft": 1476,
+    "width_ft": 82,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -456,7 +671,14 @@
     "freq": "125.825",
     "Lat": 49.772222,
     "Lon": 13.162222,
-    "Ele": 408.1
+    "Ele": 408.1,
+    "ident": "CZ-0104",
+    "iso_country": "CZ",
+    "local_code": "LKPLES",
+    "length_ft": 2625,
+    "width_ft": 66,
+    "QFU": "27G",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -465,7 +687,14 @@
     "freq": "136.650",
     "Lat": 49.981944,
     "Lon": 15.392778,
-    "Ele": 207.0
+    "Ele": 207,
+    "ident": "CZ-0105",
+    "iso_country": "CZ",
+    "local_code": "LKROHO",
+    "length_ft": 1936,
+    "width_ft": 66,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -474,7 +703,10 @@
     "freq": "",
     "Lat": 49.5086111,
     "Lon": 15.9711111,
-    "Ele": 556.9
+    "Ele": 556.9,
+    "ident": "CZ-0106",
+    "iso_country": "CZ",
+    "local_code": "LKSAZO"
   },
   {
     "type": "small_airport",
@@ -483,7 +715,9 @@
     "freq": "",
     "Lat": 50.356925,
     "Lon": 14.8068316,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0108",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -492,7 +726,10 @@
     "freq": "",
     "Lat": 50.412778,
     "Lon": 14.198056,
-    "Ele": 221.9
+    "Ele": 221.9,
+    "ident": "CZ-0109",
+    "iso_country": "CZ",
+    "local_code": "LKDUSN"
   },
   {
     "type": "small_airport",
@@ -501,7 +738,10 @@
     "freq": "",
     "Lat": 48.931389,
     "Lon": 16.298611,
-    "Ele": 238.0
+    "Ele": 238,
+    "ident": "CZ-0110",
+    "iso_country": "CZ",
+    "local_code": "LKMIRO"
   },
   {
     "type": "small_airport",
@@ -510,7 +750,9 @@
     "freq": "",
     "Lat": 50.44135,
     "Lon": 15.235979,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0111",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -519,7 +761,9 @@
     "freq": "",
     "Lat": 49.985091,
     "Lon": 13.528817,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0112",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -528,7 +772,9 @@
     "freq": "",
     "Lat": 49.268355,
     "Lon": 13.800776,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0113",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -537,7 +783,10 @@
     "freq": "",
     "Lat": 50.478623,
     "Lon": 15.005508,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0115",
+    "iso_country": "CZ",
+    "local_code": "ULKNEZ"
   },
   {
     "type": "small_airport",
@@ -546,7 +795,10 @@
     "freq": "",
     "Lat": 49.128341,
     "Lon": 14.633441,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0116",
+    "iso_country": "CZ",
+    "local_code": "ULDYNI"
   },
   {
     "type": "small_airport",
@@ -555,7 +807,10 @@
     "freq": "",
     "Lat": 50.111532,
     "Lon": 16.517451,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0117",
+    "iso_country": "CZ",
+    "local_code": "ULZBUD"
   },
   {
     "type": "small_airport",
@@ -564,7 +819,10 @@
     "freq": "",
     "Lat": 50.325005,
     "Lon": 15.388904,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0118",
+    "iso_country": "CZ",
+    "local_code": "ULKOZO"
   },
   {
     "type": "small_airport",
@@ -573,7 +831,9 @@
     "freq": "",
     "Lat": 49.475933,
     "Lon": 17.92634,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0119",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -582,7 +842,9 @@
     "freq": "",
     "Lat": 49.095374,
     "Lon": 16.480516,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0120",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -591,7 +853,9 @@
     "freq": "",
     "Lat": 49.457771,
     "Lon": 17.820171,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0121",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -600,7 +864,10 @@
     "freq": "",
     "Lat": 50.465,
     "Lon": 14.4061111,
-    "Ele": 239.9
+    "Ele": 239.9,
+    "ident": "CZ-0123",
+    "iso_country": "CZ",
+    "local_code": "LKSTET"
   },
   {
     "type": "small_airport",
@@ -609,7 +876,10 @@
     "freq": "",
     "Lat": 50.555107,
     "Lon": 15.094614,
-    "Ele": 250.9
+    "Ele": 250.9,
+    "ident": "CZ-0124",
+    "iso_country": "CZ",
+    "local_code": "LKVSEN"
   },
   {
     "type": "small_airport",
@@ -618,7 +888,10 @@
     "freq": "",
     "Lat": 50.262998,
     "Lon": 15.297407,
-    "Ele": 217.0
+    "Ele": 217,
+    "ident": "CZ-0125",
+    "iso_country": "CZ",
+    "local_code": "ULKNZC"
   },
   {
     "type": "small_airport",
@@ -627,7 +900,10 @@
     "freq": "",
     "Lat": 50.184305,
     "Lon": 15.166551,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0126",
+    "iso_country": "CZ",
+    "local_code": "ULPODE"
   },
   {
     "type": "small_airport",
@@ -636,7 +912,10 @@
     "freq": "",
     "Lat": 49.899167,
     "Lon": 17.922959,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0127",
+    "iso_country": "CZ",
+    "local_code": "ULOPAK"
   },
   {
     "type": "small_airport",
@@ -645,7 +924,10 @@
     "freq": "",
     "Lat": 48.880556,
     "Lon": 16.825,
-    "Ele": 171.0
+    "Ele": 171,
+    "ident": "CZ-0128",
+    "iso_country": "CZ",
+    "local_code": "LKPAVL"
   },
   {
     "type": "small_airport",
@@ -654,7 +936,14 @@
     "freq": "",
     "Lat": 50.01647,
     "Lon": 14.772211,
-    "Ele": 390.1
+    "Ele": 390.1,
+    "ident": "CZ-0129",
+    "iso_country": "CZ",
+    "local_code": "LKOSIC",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -663,7 +952,9 @@
     "freq": "",
     "Lat": 50.703013,
     "Lon": 14.498985,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "CZ-0130",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -672,7 +963,9 @@
     "freq": "",
     "Lat": 49.330555,
     "Lon": 14.658889,
-    "Ele": 461.2
+    "Ele": 461.2,
+    "ident": "CZ-0131",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -681,7 +974,9 @@
     "freq": "",
     "Lat": 49.0302777,
     "Lon": 17.8172221,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0132",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -690,7 +985,9 @@
     "freq": "",
     "Lat": 50.2547,
     "Lon": 15.125108,
-    "Ele": 196.9
+    "Ele": 196.9,
+    "ident": "CZ-0133",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -699,7 +996,10 @@
     "freq": "",
     "Lat": 49.267222,
     "Lon": 15.077778,
-    "Ele": 538.0
+    "Ele": 538,
+    "ident": "CZ-0134",
+    "iso_country": "CZ",
+    "local_code": "LKNVCE"
   },
   {
     "type": "small_airport",
@@ -708,7 +1008,9 @@
     "freq": "",
     "Lat": 49.874138,
     "Lon": 16.336405,
-    "Ele": 383.4
+    "Ele": 383.4,
+    "ident": "CZ-0135",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -717,7 +1019,9 @@
     "freq": "",
     "Lat": 48.806694,
     "Lon": 16.161479,
-    "Ele": 211.8
+    "Ele": 211.8,
+    "ident": "CZ-0136",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -726,7 +1030,10 @@
     "freq": "",
     "Lat": 50.409051,
     "Lon": 14.084008,
-    "Ele": 164.0
+    "Ele": 164,
+    "ident": "CZ-0137",
+    "iso_country": "CZ",
+    "local_code": "LKRADO"
   },
   {
     "type": "small_airport",
@@ -735,7 +1042,10 @@
     "freq": "",
     "Lat": 50.278744,
     "Lon": 15.061007,
-    "Ele": 193.9
+    "Ele": 193.9,
+    "ident": "CZ-0138",
+    "iso_country": "CZ",
+    "local_code": "LKLOUC"
   },
   {
     "type": "small_airport",
@@ -744,7 +1054,9 @@
     "freq": "",
     "Lat": 49.448033,
     "Lon": 15.440085,
-    "Ele": 631.2
+    "Ele": 631.2,
+    "ident": "CZ-0142",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -753,7 +1065,9 @@
     "freq": "",
     "Lat": 50.501389,
     "Lon": 15.483056,
-    "Ele": 484.0
+    "Ele": 484,
+    "ident": "CZ-0143",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -762,7 +1076,9 @@
     "freq": "",
     "Lat": 51.008731,
     "Lon": 14.343853,
-    "Ele": 381.9
+    "Ele": 381.9,
+    "ident": "CZ-0145",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -771,7 +1087,9 @@
     "freq": "",
     "Lat": 49.226931,
     "Lon": 16.176596,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0146",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -780,7 +1098,10 @@
     "freq": "",
     "Lat": 48.983399,
     "Lon": 17.704586,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0147",
+    "iso_country": "CZ",
+    "local_code": "LKBANO"
   },
   {
     "type": "small_airport",
@@ -789,7 +1110,10 @@
     "freq": "",
     "Lat": 50.00682,
     "Lon": 15.616915,
-    "Ele": 246.6
+    "Ele": 246.6,
+    "ident": "CZ-0148",
+    "iso_country": "CZ",
+    "local_code": "LKVESE"
   },
   {
     "type": "small_airport",
@@ -798,7 +1122,10 @@
     "freq": "",
     "Lat": 50.5675,
     "Lon": 15.865278,
-    "Ele": 452.9
+    "Ele": 452.9,
+    "ident": "CZ-0152",
+    "iso_country": "CZ",
+    "local_code": "LKTRUT"
   },
   {
     "type": "small_airport",
@@ -807,7 +1134,10 @@
     "freq": "",
     "Lat": 49.6527778,
     "Lon": 18.3458333,
-    "Ele": 324.9
+    "Ele": 324.9,
+    "ident": "CZ-0153",
+    "iso_country": "CZ",
+    "local_code": "LKMIST"
   },
   {
     "type": "small_airport",
@@ -816,7 +1146,10 @@
     "freq": "",
     "Lat": 49.951812,
     "Lon": 18.2651648,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0154",
+    "iso_country": "CZ",
+    "local_code": "LKHATH"
   },
   {
     "type": "small_airport",
@@ -825,7 +1158,10 @@
     "freq": "",
     "Lat": 50.412962,
     "Lon": 16.121845,
-    "Ele": 439.8
+    "Ele": 439.8,
+    "ident": "CZ-0155",
+    "iso_country": "CZ",
+    "local_code": "LKNACH"
   },
   {
     "type": "small_airport",
@@ -834,7 +1170,13 @@
     "freq": "118.550",
     "Lat": 49.786111,
     "Lon": 17.486111,
-    "Ele": 676.0
+    "Ele": 676,
+    "ident": "CZ-0156",
+    "iso_country": "CZ",
+    "local_code": "LKMBER",
+    "length_ft": 1348,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -843,7 +1185,12 @@
     "freq": "",
     "Lat": 49.845196,
     "Lon": 17.138485,
-    "Ele": 274.9
+    "Ele": 274.9,
+    "ident": "CZ-0157",
+    "iso_country": "CZ",
+    "local_code": "LKSUMV",
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -852,7 +1199,9 @@
     "freq": "",
     "Lat": 49.7220654,
     "Lon": 18.3749167,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0158",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -861,7 +1210,10 @@
     "freq": "",
     "Lat": 49.951101,
     "Lon": 14.869944,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0159",
+    "iso_country": "CZ",
+    "local_code": "LKNUCI"
   },
   {
     "type": "small_airport",
@@ -870,7 +1222,9 @@
     "freq": "",
     "Lat": 50.164121,
     "Lon": 12.464089,
-    "Ele": 467.9
+    "Ele": 467.9,
+    "ident": "CZ-0160",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -879,7 +1233,10 @@
     "freq": "",
     "Lat": 49.088188,
     "Lon": 17.718769,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0161",
+    "iso_country": "CZ",
+    "icao_code": "LKLU"
   },
   {
     "type": "small_airport",
@@ -888,7 +1245,10 @@
     "freq": "",
     "Lat": 50.243594,
     "Lon": 14.855856,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0162",
+    "iso_country": "CZ",
+    "local_code": "LKMLAD"
   },
   {
     "type": "small_airport",
@@ -897,7 +1257,14 @@
     "freq": "",
     "Lat": 48.761552,
     "Lon": 16.055408,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0163",
+    "iso_country": "CZ",
+    "local_code": "LKEXCA",
+    "length_ft": 2700,
+    "width_ft": 200,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -906,7 +1273,9 @@
     "freq": "",
     "Lat": 49.945996,
     "Lon": 15.89545,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0164",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -915,7 +1284,10 @@
     "freq": "",
     "Lat": 48.917038,
     "Lon": 16.841317,
-    "Ele": 178.0
+    "Ele": 178,
+    "ident": "CZ-0165",
+    "iso_country": "CZ",
+    "local_code": "LKKRAV"
   },
   {
     "type": "small_airport",
@@ -924,7 +1296,10 @@
     "freq": "",
     "Lat": 50.108633,
     "Lon": 15.926742,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0166",
+    "iso_country": "CZ",
+    "local_code": "LKCHVO"
   },
   {
     "type": "small_airport",
@@ -933,7 +1308,9 @@
     "freq": "",
     "Lat": 48.85482,
     "Lon": 17.01794,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0167",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -942,7 +1319,9 @@
     "freq": "",
     "Lat": 49.355643,
     "Lon": 15.928996,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0168",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -951,7 +1330,10 @@
     "freq": "",
     "Lat": 49.591899,
     "Lon": 15.401365,
-    "Ele": 484.0
+    "Ele": 484,
+    "ident": "CZ-0169",
+    "iso_country": "CZ",
+    "local_code": "LKKEJZ"
   },
   {
     "type": "small_airport",
@@ -960,7 +1342,10 @@
     "freq": "",
     "Lat": 49.078687,
     "Lon": 16.355617,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0170",
+    "iso_country": "CZ",
+    "local_code": "LKBUDK"
   },
   {
     "type": "small_airport",
@@ -969,7 +1354,13 @@
     "freq": "",
     "Lat": 50.101134,
     "Lon": 12.678759,
-    "Ele": 774.5
+    "Ele": 774.5,
+    "ident": "CZ-0171",
+    "iso_country": "CZ",
+    "length_ft": 1968,
+    "width_ft": 38,
+    "QFU": "09",
+    "heading": 90
   },
   {
     "type": "small_airport",
@@ -978,7 +1369,9 @@
     "freq": "",
     "Lat": 49.85503,
     "Lon": 18.43521,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0172",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -987,7 +1380,9 @@
     "freq": "",
     "Lat": 50.399669,
     "Lon": 15.991023,
-    "Ele": 337.1
+    "Ele": 337.1,
+    "ident": "CZ-0173",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -996,7 +1391,9 @@
     "freq": "",
     "Lat": 48.91722,
     "Lon": 16.65883,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0174",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1402,10 @@
     "freq": "",
     "Lat": 49.4955,
     "Lon": 16.10199,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0175",
+    "iso_country": "CZ",
+    "local_code": "LKBOBR"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1414,10 @@
     "freq": "",
     "Lat": 50.43546,
     "Lon": 15.69312,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "CZ-0176",
+    "iso_country": "CZ",
+    "local_code": "LKTRBH"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1426,9 @@
     "freq": "",
     "Lat": 49.38244,
     "Lon": 15.71368,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0177",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1437,9 @@
     "freq": "",
     "Lat": 49.06812,
     "Lon": 13.7603,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0178",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1448,9 @@
     "freq": "",
     "Lat": 49.28438,
     "Lon": 13.968444,
-    "Ele": 401.1
+    "Ele": 401.1,
+    "ident": "CZ-0179",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1459,9 @@
     "freq": "",
     "Lat": 50.68215,
     "Lon": 15.48237,
-    "Ele": 776.0
+    "Ele": 776,
+    "ident": "CZ-0180",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1470,9 @@
     "freq": "",
     "Lat": 49.982799,
     "Lon": 13.227839,
-    "Ele": 481.0
+    "Ele": 481,
+    "ident": "CZ-0181",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1481,9 @@
     "freq": "",
     "Lat": 49.67076,
     "Lon": 13.03224,
-    "Ele": 481.9
+    "Ele": 481.9,
+    "ident": "CZ-0182",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1492,9 @@
     "freq": "",
     "Lat": 49.042693,
     "Lon": 15.828638,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0183",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1503,9 @@
     "freq": "",
     "Lat": 50.61056,
     "Lon": 15.538616,
-    "Ele": 541.3
+    "Ele": 541.3,
+    "ident": "CZ-0184",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1514,9 @@
     "freq": "",
     "Lat": 50.59624,
     "Lon": 15.48122,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0185",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1525,9 @@
     "freq": "",
     "Lat": 49.906716,
     "Lon": 16.006719,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0186",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1536,9 @@
     "freq": "",
     "Lat": 49.444719,
     "Lon": 17.541561,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0187",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1547,9 @@
     "freq": "",
     "Lat": 50.53714,
     "Lon": 15.15714,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0188",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1558,10 @@
     "freq": "",
     "Lat": 49.908788,
     "Lon": 17.535768,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0189",
+    "iso_country": "CZ",
+    "local_code": "LKHART"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1570,9 @@
     "freq": "",
     "Lat": 49.4619,
     "Lon": 15.98493,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0190",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1581,12 @@
     "freq": "",
     "Lat": 49.97728,
     "Lon": 16.184921,
-    "Ele": 266.1
+    "Ele": 266.1,
+    "ident": "CZ-0192",
+    "iso_country": "CZ",
+    "local_code": "LKCHOC",
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1158,7 +1595,14 @@
     "freq": "119.415",
     "Lat": 49.339444,
     "Lon": 14.113889,
-    "Ele": 411.8
+    "Ele": 411.8,
+    "ident": "CZ-0194",
+    "iso_country": "CZ",
+    "local_code": "LKPISK",
+    "length_ft": 1903,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -1167,7 +1611,9 @@
     "freq": "",
     "Lat": 50.25067,
     "Lon": 13.40972,
-    "Ele": 323.1
+    "Ele": 323.1,
+    "ident": "CZ-0197",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1622,10 @@
     "freq": "",
     "Lat": 49.410857,
     "Lon": 16.499441,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0198",
+    "iso_country": "CZ",
+    "local_code": "LKBRTO"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1634,10 @@
     "freq": "",
     "Lat": 49.075525,
     "Lon": 15.546556,
-    "Ele": 534.0
+    "Ele": 534,
+    "ident": "CZ-0199",
+    "iso_country": "CZ",
+    "local_code": "LKBUDI"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1646,10 @@
     "freq": "",
     "Lat": 50.05872,
     "Lon": 14.92307,
-    "Ele": 267.0
+    "Ele": 267,
+    "ident": "CZ-0209",
+    "iso_country": "CZ",
+    "local_code": "LKCHRA"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1658,9 @@
     "freq": "",
     "Lat": 49.08774,
     "Lon": 16.54078,
-    "Ele": 257.9
+    "Ele": 257.9,
+    "ident": "CZ-0212",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1669,9 @@
     "freq": "",
     "Lat": 49.953134,
     "Lon": 16.107759,
-    "Ele": 369.1
+    "Ele": 369.1,
+    "ident": "CZ-0213",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1680,9 @@
     "freq": "",
     "Lat": 50.26494,
     "Lon": 15.73942,
-    "Ele": 286.8
+    "Ele": 286.8,
+    "ident": "CZ-0216",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1691,9 @@
     "freq": "",
     "Lat": 49.38575,
     "Lon": 15.93104,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0227",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1702,9 @@
     "freq": "",
     "Lat": 50.40943,
     "Lon": 13.44546,
-    "Ele": 337.1
+    "Ele": 337.1,
+    "ident": "CZ-0228",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1713,7 @@
     "freq": "",
     "Lat": 49.35782,
     "Lon": 15.93147,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -1257,7 +1722,9 @@
     "freq": "",
     "Lat": 49.15434,
     "Lon": 13.95672,
-    "Ele": 542.8
+    "Ele": 542.8,
+    "ident": "CZ-0239",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1733,10 @@
     "freq": "",
     "Lat": 49.338891,
     "Lon": 16.23137,
-    "Ele": 512.1
+    "Ele": 512.1,
+    "ident": "CZ-0241",
+    "iso_country": "CZ",
+    "local_code": "LKBREZ"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1745,10 @@
     "freq": "",
     "Lat": 50.237435,
     "Lon": 14.909992,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "CZ-0242",
+    "iso_country": "CZ",
+    "local_code": "LKMILO"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1757,10 @@
     "freq": "",
     "Lat": 49.47985,
     "Lon": 16.17137,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0243",
+    "iso_country": "CZ",
+    "local_code": "LKMLYN"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1769,10 @@
     "freq": "",
     "Lat": 50.20843,
     "Lon": 14.92585,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0244",
+    "iso_country": "CZ",
+    "local_code": "LKKOST"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1781,10 @@
     "freq": "",
     "Lat": 49.318678,
     "Lon": 16.496816,
-    "Ele": 306.0
+    "Ele": 306,
+    "ident": "CZ-0245",
+    "iso_country": "CZ",
+    "local_code": "LKCEBI"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1793,10 @@
     "freq": "",
     "Lat": 49.686095,
     "Lon": 16.730912,
-    "Ele": 344.1
+    "Ele": 344.1,
+    "ident": "CZ-0246",
+    "iso_country": "CZ",
+    "local_code": "LKCHOR"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1805,10 @@
     "freq": "",
     "Lat": 49.066944,
     "Lon": 14.241389,
-    "Ele": 435.9
+    "Ele": 435.9,
+    "ident": "CZ-0247",
+    "iso_country": "CZ",
+    "local_code": "LKHLAS"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1817,10 @@
     "freq": "",
     "Lat": 50.325921,
     "Lon": 14.665533,
-    "Ele": 244.8
+    "Ele": 244.8,
+    "ident": "CZ-0248",
+    "iso_country": "CZ",
+    "local_code": "LKKRPY"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1829,10 @@
     "freq": "",
     "Lat": 50.370444,
     "Lon": 15.201044,
-    "Ele": 224.9
+    "Ele": 224.9,
+    "ident": "CZ-0249",
+    "iso_country": "CZ",
+    "local_code": "LKLIBA"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1841,10 @@
     "freq": "",
     "Lat": 49.198889,
     "Lon": 13.6,
-    "Ele": 536.8
+    "Ele": 536.8,
+    "ident": "CZ-0250",
+    "iso_country": "CZ",
+    "local_code": "LKNAPA"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1853,10 @@
     "freq": "",
     "Lat": 50.229444,
     "Lon": 15.703611,
-    "Ele": 269.7
+    "Ele": 269.7,
+    "ident": "CZ-0251",
+    "iso_country": "CZ",
+    "local_code": "LKPRIM"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1865,10 @@
     "freq": "",
     "Lat": 50.519444,
     "Lon": 14.155833,
-    "Ele": 146.9
+    "Ele": 146.9,
+    "ident": "CZ-0252",
+    "iso_country": "CZ",
+    "local_code": "LKTERE"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1877,10 @@
     "freq": "",
     "Lat": 49.91333,
     "Lon": 18.1643,
-    "Ele": 269.7
+    "Ele": 269.7,
+    "ident": "CZ-0253",
+    "iso_country": "CZ",
+    "local_code": "LKKOZY"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1889,9 @@
     "freq": "",
     "Lat": 48.98146,
     "Lon": 17.23771,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0254",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1900,9 @@
     "freq": "",
     "Lat": 49.18714,
     "Lon": 15.04273,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0256",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1911,9 @@
     "freq": "",
     "Lat": 49.63195,
     "Lon": 18.12781,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0266",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1922,10 @@
     "freq": "",
     "Lat": 50.619247,
     "Lon": 14.732753,
-    "Ele": 278.0
+    "Ele": 278,
+    "ident": "CZ-0273",
+    "iso_country": "CZ",
+    "local_code": "LKHRAD"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1934,10 @@
     "freq": "",
     "Lat": 49.272778,
     "Lon": 17.746389,
-    "Ele": 331.0
+    "Ele": 331,
+    "ident": "CZ-0274",
+    "iso_country": "CZ",
+    "local_code": "LKSTIP"
   },
   {
     "type": "small_airport",
@@ -1428,7 +1946,10 @@
     "freq": "",
     "Lat": 49.69157,
     "Lon": 18.16402,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "CZ-0275",
+    "iso_country": "CZ",
+    "local_code": "LKTRNA"
   },
   {
     "type": "small_airport",
@@ -1437,7 +1958,10 @@
     "freq": "",
     "Lat": 49.367884,
     "Lon": 17.652277,
-    "Ele": 314.9
+    "Ele": 314.9,
+    "ident": "CZ-0276",
+    "iso_country": "CZ",
+    "local_code": "LKBRUS"
   },
   {
     "type": "small_airport",
@@ -1446,7 +1970,10 @@
     "freq": "",
     "Lat": 50.511019,
     "Lon": 13.339142,
-    "Ele": 662.0
+    "Ele": 662,
+    "ident": "CZ-0277",
+    "iso_country": "CZ",
+    "local_code": "LKLUKL"
   },
   {
     "type": "small_airport",
@@ -1455,7 +1982,9 @@
     "freq": "",
     "Lat": 49.11761,
     "Lon": 16.89077,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CZ-0278",
+    "iso_country": "CZ"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1993,10 @@
     "freq": "",
     "Lat": 50.372723,
     "Lon": 13.633981,
-    "Ele": 232.9
+    "Ele": 232.9,
+    "ident": "CZ-0281",
+    "iso_country": "CZ",
+    "local_code": "LKBITO"
   },
   {
     "type": "small_airport",
@@ -1473,7 +2005,10 @@
     "freq": "",
     "Lat": 50.038665,
     "Lon": 13.696813,
-    "Ele": 474.9
+    "Ele": 474.9,
+    "ident": "CZ-0282",
+    "iso_country": "CZ",
+    "local_code": "LKPANO"
   },
   {
     "type": "small_airport",
@@ -1482,7 +2017,10 @@
     "freq": "",
     "Lat": 49.674905,
     "Lon": 13.099417,
-    "Ele": 392.9
+    "Ele": 392.9,
+    "ident": "CZ-0283",
+    "iso_country": "CZ",
+    "local_code": "LKLOCH"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2029,10 @@
     "freq": "",
     "Lat": 50.0825,
     "Lon": 14.222778,
-    "Ele": 378.9
+    "Ele": 378.9,
+    "ident": "CZ-0284",
+    "iso_country": "CZ",
+    "local_code": "LKJENE"
   },
   {
     "type": "small_airport",
@@ -1500,7 +2041,10 @@
     "freq": "",
     "Lat": 49.275146,
     "Lon": 13.627812,
-    "Ele": 451.1
+    "Ele": 451.1,
+    "ident": "CZ-0285",
+    "iso_country": "CZ",
+    "local_code": "LKRABI"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2053,14 @@
     "freq": "119.655",
     "Lat": 48.790439,
     "Lon": 16.892531,
-    "Ele": 161.8
+    "Ele": 161.8,
+    "ident": "LKBA",
+    "iso_country": "CZ",
+    "icao_code": "LKBA",
+    "length_ft": 2428,
+    "width_ft": 361,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2069,14 @@
     "freq": "118.005",
     "Lat": 49.740799,
     "Lon": 14.6447,
-    "Ele": 402.0
+    "Ele": 402,
+    "ident": "LKBE",
+    "iso_country": "CZ",
+    "icao_code": "LKBE",
+    "length_ft": 2461,
+    "width_ft": 59,
+    "heading": 87,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2085,14 @@
     "freq": "118.280",
     "Lat": 49.670601,
     "Lon": 17.295,
-    "Ele": 235.0
+    "Ele": 235,
+    "ident": "LKBO",
+    "iso_country": "CZ",
+    "icao_code": "LKBO",
+    "length_ft": 2723,
+    "width_ft": 59,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2101,14 @@
     "freq": "123.490",
     "Lat": 50.561901,
     "Lon": 16.3428,
-    "Ele": 409.0
+    "Ele": 409,
+    "ident": "LKBR",
+    "iso_country": "CZ",
+    "icao_code": "LKBR",
+    "length_ft": 3018,
+    "width_ft": 59,
+    "heading": 137,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2117,14 @@
     "freq": "134.305",
     "Lat": 49.9744,
     "Lon": 14.1781,
-    "Ele": 427.0
+    "Ele": 427,
+    "ident": "LKBU",
+    "iso_country": "CZ",
+    "icao_code": "LKBU",
+    "length_ft": 2395,
+    "width_ft": 75,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2133,14 @@
     "freq": "122.205",
     "Lat": 50.066101,
     "Lon": 12.4117,
-    "Ele": 483.1
+    "Ele": 483.1,
+    "ident": "LKCB",
+    "iso_country": "CZ",
+    "icao_code": "LKCB",
+    "length_ft": 3280,
+    "width_ft": 59,
+    "heading": 53,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2149,14 @@
     "freq": "123.590",
     "Lat": 50.7094,
     "Lon": 14.5667,
-    "Ele": 284.1
+    "Ele": 284.1,
+    "ident": "LKCE",
+    "iso_country": "CZ",
+    "icao_code": "LKCE",
+    "length_ft": 2296,
+    "width_ft": 131,
+    "heading": 309,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2165,14 @@
     "freq": "123.600",
     "Lat": 50.468899,
     "Lon": 13.4681,
-    "Ele": 345.0
+    "Ele": 345,
+    "ident": "LKCH",
+    "iso_country": "CZ",
+    "icao_code": "LKCH",
+    "length_ft": 2725,
+    "width_ft": 131,
+    "heading": 139,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2181,14 @@
     "freq": "122.405",
     "Lat": 49.236698,
     "Lon": 16.555,
-    "Ele": 260.0
+    "Ele": 260,
+    "ident": "LKCM",
+    "iso_country": "CZ",
+    "icao_code": "LKCM",
+    "length_ft": 2919,
+    "width_ft": 242,
+    "heading": 155,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2197,14 @@
     "freq": "122.805",
     "Lat": 49.936401,
     "Lon": 15.7806,
-    "Ele": 299.0
+    "Ele": 299,
+    "ident": "LKCR",
+    "iso_country": "CZ",
+    "icao_code": "LKCR",
+    "length_ft": 3215,
+    "width_ft": 85,
+    "heading": 60,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2213,15 @@
     "freq": "129.250",
     "Lat": 48.9464,
     "Lon": 14.4275,
-    "Ele": 431.9
+    "Ele": 431.9,
+    "ident": "LKCS",
+    "iso_country": "CZ",
+    "icao_code": "LKCS",
+    "iata_code": "JCL",
+    "length_ft": 8202,
+    "width_ft": 262,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2230,14 @@
     "freq": "122.205",
     "Lat": 49.685799,
     "Lon": 15.6761,
-    "Ele": 594.1
+    "Ele": 594.1,
+    "ident": "LKCT",
+    "iso_country": "CZ",
+    "icao_code": "LKCT",
+    "length_ft": 3313,
+    "width_ft": 164,
+    "heading": 165,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -1617,7 +2246,14 @@
     "freq": "130.280",
     "Lat": 49.939701,
     "Lon": 15.3818,
-    "Ele": 242.0
+    "Ele": 242,
+    "ident": "LKCV",
+    "iso_country": "CZ",
+    "icao_code": "LKCV",
+    "length_ft": 7875,
+    "width_ft": 197,
+    "QFU": "31",
+    "heading": 137
   },
   {
     "type": "small_airport",
@@ -1626,7 +2262,14 @@
     "freq": "119.610",
     "Lat": 50.4142,
     "Lon": 15.8369,
-    "Ele": 284.1
+    "Ele": 284.1,
+    "ident": "LKDK",
+    "iso_country": "CZ",
+    "icao_code": "LKDK",
+    "length_ft": 2821,
+    "width_ft": 328,
+    "heading": 98,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2278,14 @@
     "freq": "123.490",
     "Lat": 49.802799,
     "Lon": 13.0381,
-    "Ele": 479.1
+    "Ele": 479.1,
+    "ident": "LKER",
+    "iso_country": "CZ",
+    "icao_code": "LKER",
+    "length_ft": 2821,
+    "width_ft": 131,
+    "heading": 108,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2294,14 @@
     "freq": "123.490",
     "Lat": 49.589401,
     "Lon": 18.3792,
-    "Ele": 438.9
+    "Ele": 438.9,
+    "ident": "LKFR",
+    "iso_country": "CZ",
+    "icao_code": "LKFR",
+    "length_ft": 2625,
+    "width_ft": 213,
+    "heading": 84,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2310,14 @@
     "freq": "120.900",
     "Lat": 49.597198,
     "Lon": 15.5492,
-    "Ele": 463.0
+    "Ele": 463,
+    "ident": "LKHB",
+    "iso_country": "CZ",
+    "icao_code": "LKHB",
+    "length_ft": 3280,
+    "width_ft": 164,
+    "heading": 111,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2326,14 @@
     "freq": "120.315",
     "Lat": 50.3576,
     "Lon": 15.576983,
-    "Ele": 281.0
+    "Ele": 281,
+    "ident": "LKHC",
+    "iso_country": "CZ",
+    "icao_code": "LKHC",
+    "length_ft": 2427,
+    "width_ft": 75,
+    "heading": 125,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2342,14 @@
     "freq": "120.905",
     "Lat": 50.6572,
     "Lon": 15.0778,
-    "Ele": 451.1
+    "Ele": 451.1,
+    "ident": "LKHD",
+    "iso_country": "CZ",
+    "icao_code": "LKHD",
+    "length_ft": 3215,
+    "width_ft": 328,
+    "heading": 8,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1680,7 +2358,14 @@
     "freq": "122.000",
     "Lat": 50.253201,
     "Lon": 15.8452,
-    "Ele": 241.1
+    "Ele": 241.1,
+    "ident": "LKHK",
+    "iso_country": "CZ",
+    "icao_code": "LKHK",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2374,14 @@
     "freq": "123.510",
     "Lat": 49.5461,
     "Lon": 17.704399,
-    "Ele": 242.9
+    "Ele": 242.9,
+    "ident": "LKHN",
+    "iso_country": "CZ",
+    "icao_code": "LKHN",
+    "length_ft": 2412,
+    "width_ft": 492,
+    "heading": 54,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2390,14 @@
     "freq": "130.200",
     "Lat": 49.040001,
     "Lon": 14.495,
-    "Ele": 494.1
+    "Ele": 494.1,
+    "ident": "LKHS",
+    "iso_country": "CZ",
+    "icao_code": "LKHS",
+    "length_ft": 3279,
+    "width_ft": 164,
+    "heading": 58,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2406,14 @@
     "freq": "127.125",
     "Lat": 49.848099,
     "Lon": 13.8935,
-    "Ele": 370.0
+    "Ele": 370,
+    "ident": "LKHV",
+    "iso_country": "CZ",
+    "icao_code": "LKHV",
+    "length_ft": 3838,
+    "width_ft": 100,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2422,14 @@
     "freq": "119.105",
     "Lat": 50.331402,
     "Lon": 15.9539,
-    "Ele": 271.0
+    "Ele": 271,
+    "ident": "LKJA",
+    "iso_country": "CZ",
+    "icao_code": "LKJA",
+    "length_ft": 3083,
+    "width_ft": 295,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2438,14 @@
     "freq": "118.080",
     "Lat": 50.43,
     "Lon": 15.3331,
-    "Ele": 263.0
+    "Ele": 263,
+    "ident": "LKJC",
+    "iso_country": "CZ",
+    "icao_code": "LKJC",
+    "length_ft": 3280,
+    "width_ft": 328,
+    "heading": 123,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2454,14 @@
     "freq": "123.605",
     "Lat": 49.150682,
     "Lon": 14.972413,
-    "Ele": 508.1
+    "Ele": 508.1,
+    "ident": "LKJH",
+    "iso_country": "CZ",
+    "icao_code": "LKJH",
+    "length_ft": 2296,
+    "width_ft": 177,
+    "heading": 69,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2470,14 @@
     "freq": "123.500",
     "Lat": 49.419399,
     "Lon": 15.6353,
-    "Ele": 555.0
+    "Ele": 555,
+    "ident": "LKJI",
+    "iso_country": "CZ",
+    "icao_code": "LKJI",
+    "length_ft": 3018,
+    "width_ft": 525,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2486,14 @@
     "freq": "133.155",
     "Lat": 49.368301,
     "Lon": 16.1161,
-    "Ele": 558.1
+    "Ele": 558.1,
+    "ident": "LKKA",
+    "iso_country": "CZ",
+    "icao_code": "LKKA",
+    "length_ft": 2296,
+    "width_ft": 328,
+    "heading": 134,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -1761,7 +2502,14 @@
     "freq": "124.680",
     "Lat": 50.121399,
     "Lon": 14.5436,
-    "Ele": 286.2
+    "Ele": 286.2,
+    "ident": "LKKB",
+    "iso_country": "CZ",
+    "icao_code": "LKKB",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2518,10 @@
     "freq": "",
     "Lat": 49.870602,
     "Lon": 12.7725,
-    "Ele": 632.8
+    "Ele": 632.8,
+    "ident": "LKKC",
+    "iso_country": "CZ",
+    "local_code": "LKKRIZ"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2530,14 @@
     "freq": "123.480",
     "Lat": 50.112801,
     "Lon": 14.0897,
-    "Ele": 433.1
+    "Ele": 433.1,
+    "ident": "LKKL",
+    "iso_country": "CZ",
+    "icao_code": "LKKL",
+    "length_ft": 3215,
+    "width_ft": 459,
+    "heading": 124,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2546,14 @@
     "freq": "122.205",
     "Lat": 49.285599,
     "Lon": 17.4158,
-    "Ele": 189.0
+    "Ele": 189,
+    "ident": "LKKM",
+    "iso_country": "CZ",
+    "icao_code": "LKKM",
+    "length_ft": 2526,
+    "width_ft": 98,
+    "heading": 19,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2562,14 @@
     "freq": "129.155",
     "Lat": 50.0019,
     "Lon": 15.1733,
-    "Ele": 284.1
+    "Ele": 284.1,
+    "ident": "LKKO",
+    "iso_country": "CZ",
+    "icao_code": "LKKO",
+    "length_ft": 2789,
+    "width_ft": 114,
+    "heading": 26,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1806,7 +2578,14 @@
     "freq": "122.610",
     "Lat": 50.074407,
     "Lon": 17.695219,
-    "Ele": 374.9
+    "Ele": 374.9,
+    "ident": "LKKR",
+    "iso_country": "CZ",
+    "icao_code": "LKKR",
+    "length_ft": 2460,
+    "width_ft": 410,
+    "heading": 117,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2594,14 @@
     "freq": "122.210",
     "Lat": 49.418301,
     "Lon": 13.3219,
-    "Ele": 395.9
+    "Ele": 395.9,
+    "ident": "LKKT",
+    "iso_country": "CZ",
+    "icao_code": "LKKT",
+    "length_ft": 2690,
+    "width_ft": 82,
+    "heading": 87,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1824,7 +2610,15 @@
     "freq": "120.105",
     "Lat": 49.0294,
     "Lon": 17.439699,
-    "Ele": 177.1
+    "Ele": 177.1,
+    "ident": "LKKU",
+    "iso_country": "CZ",
+    "icao_code": "LKKU",
+    "iata_code": "UHE",
+    "length_ft": 5544,
+    "width_ft": 197,
+    "heading": 25,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1833,7 +2627,15 @@
     "freq": "121.225",
     "Lat": 50.202999,
     "Lon": 12.915,
-    "Ele": 606.2
+    "Ele": 606.2,
+    "ident": "LKKV",
+    "iso_country": "CZ",
+    "icao_code": "LKKV",
+    "iata_code": "KLV",
+    "length_ft": 2624,
+    "width_ft": 59,
+    "heading": 110,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1842,7 +2644,14 @@
     "freq": "130.610",
     "Lat": 48.98,
     "Lon": 17.124701,
-    "Ele": 210.0
+    "Ele": 210,
+    "ident": "LKKY",
+    "iso_country": "CZ",
+    "icao_code": "LKKY",
+    "length_ft": 3300,
+    "width_ft": 400,
+    "heading": 146,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2660,14 @@
     "freq": "122.605",
     "Lat": 50.767053,
     "Lon": 15.023071,
-    "Ele": 405.1
+    "Ele": 405.1,
+    "ident": "LKLB",
+    "iso_country": "CZ",
+    "icao_code": "LKLB",
+    "length_ft": 3346,
+    "width_ft": 164,
+    "heading": 162,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1860,7 +2676,14 @@
     "freq": "129.005",
     "Lat": 49.675201,
     "Lon": 13.2746,
-    "Ele": 362.1
+    "Ele": 362.1,
+    "ident": "LKLN",
+    "iso_country": "CZ",
+    "icao_code": "LKLN",
+    "length_ft": 4757,
+    "width_ft": 197,
+    "heading": 56.4,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1869,7 +2692,14 @@
     "freq": "120.325",
     "Lat": 50.131401,
     "Lon": 14.5256,
-    "Ele": 277.1
+    "Ele": 277.1,
+    "ident": "LKLT",
+    "iso_country": "CZ",
+    "icao_code": "LKLT",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1878,7 +2708,14 @@
     "freq": "123.610",
     "Lat": 50.3983,
     "Lon": 14.8983,
-    "Ele": 238.0
+    "Ele": 238,
+    "ident": "LKMB",
+    "iso_country": "CZ",
+    "icao_code": "LKMB",
+    "length_ft": 2953,
+    "width_ft": 328,
+    "heading": 155,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1887,7 +2724,15 @@
     "freq": "130.200",
     "Lat": 50.540199,
     "Lon": 15.0066,
-    "Ele": 243.8
+    "Ele": 243.8,
+    "ident": "LKMH",
+    "iso_country": "CZ",
+    "icao_code": "LKMH",
+    "iata_code": "HRA",
+    "length_ft": 3231,
+    "width_ft": 200,
+    "heading": 66.7,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2741,14 @@
     "freq": "123.510",
     "Lat": 50.301701,
     "Lon": 17.297501,
-    "Ele": 420.9
+    "Ele": 420.9,
+    "ident": "LKMI",
+    "iso_country": "CZ",
+    "icao_code": "LKMI",
+    "length_ft": 3279,
+    "width_ft": 75,
+    "heading": 52,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2757,14 @@
     "freq": "130.540",
     "Lat": 49.798302,
     "Lon": 16.687799,
-    "Ele": 402.9
+    "Ele": 402.9,
+    "ident": "LKMK",
+    "iso_country": "CZ",
+    "icao_code": "LKMK",
+    "length_ft": 2362,
+    "width_ft": 196,
+    "heading": 78,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1914,7 +2773,14 @@
     "freq": "123.500",
     "Lat": 50.525002,
     "Lon": 13.6831,
-    "Ele": 331.9
+    "Ele": 331.9,
+    "ident": "LKMO",
+    "iso_country": "CZ",
+    "icao_code": "LKMO",
+    "length_ft": 3705,
+    "width_ft": 229,
+    "heading": 18,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1923,7 +2789,15 @@
     "freq": "118.375",
     "Lat": 49.696301,
     "Lon": 18.111099,
-    "Ele": 257.3
+    "Ele": 257.3,
+    "ident": "LKMT",
+    "iso_country": "CZ",
+    "icao_code": "LKMT",
+    "iata_code": "OSR",
+    "length_ft": 11484,
+    "width_ft": 207,
+    "heading": 46.1,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -1932,7 +2806,14 @@
     "freq": "118.155",
     "Lat": 49.166272,
     "Lon": 16.123981,
-    "Ele": 471.8
+    "Ele": 471.8,
+    "ident": "LKNA",
+    "iso_country": "CZ",
+    "icao_code": "LKNA",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 129,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1941,7 +2822,14 @@
     "freq": "123.405",
     "Lat": 50.364201,
     "Lon": 16.1136,
-    "Ele": 305.1
+    "Ele": 305.1,
+    "ident": "LKNM",
+    "iso_country": "CZ",
+    "icao_code": "LKNM",
+    "length_ft": 2953,
+    "width_ft": 98,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1950,7 +2838,10 @@
     "freq": "",
     "Lat": 50.169101,
     "Lon": 15.05245,
-    "Ele": 185.0
+    "Ele": 185,
+    "ident": "LKNY",
+    "iso_country": "CZ",
+    "local_code": "LKNYMB"
   },
   {
     "type": "small_airport",
@@ -1959,7 +2850,15 @@
     "freq": "118.005",
     "Lat": 49.587712,
     "Lon": 17.209275,
-    "Ele": 264.9
+    "Ele": 264.9,
+    "ident": "LKOL",
+    "iso_country": "CZ",
+    "icao_code": "LKOL",
+    "iata_code": "OLO",
+    "length_ft": 1378,
+    "width_ft": 131,
+    "heading": 93,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1968,7 +2867,14 @@
     "freq": "",
     "Lat": 49.198299,
     "Lon": 17.517799,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "LKOT",
+    "iso_country": "CZ",
+    "icao_code": "LKZL",
+    "length_ft": 1968,
+    "width_ft": 131,
+    "heading": 167,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1977,7 +2883,14 @@
     "freq": "122.590",
     "Lat": 49.739399,
     "Lon": 16.2589,
-    "Ele": 604.1
+    "Ele": 604.1,
+    "ident": "LKPA",
+    "iso_country": "CZ",
+    "icao_code": "LKPA",
+    "length_ft": 4921,
+    "width_ft": 114,
+    "heading": 155,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2899,14 @@
     "freq": "118.575",
     "Lat": 50.306099,
     "Lon": 13.9342,
-    "Ele": 367.9
+    "Ele": 367.9,
+    "ident": "LKPC",
+    "iso_country": "CZ",
+    "icao_code": "LKPC",
+    "length_ft": 8218,
+    "width_ft": 95,
+    "heading": 86,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1995,7 +2915,15 @@
     "freq": "128.365",
     "Lat": 50.01340103149414,
     "Lon": 15.73859977722168,
-    "Ele": 225.9
+    "Ele": 225.9,
+    "ident": "LKPD",
+    "iso_country": "CZ",
+    "icao_code": "LKPD",
+    "iata_code": "PED",
+    "length_ft": 8203,
+    "width_ft": 246,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2932,14 @@
     "freq": "123.610",
     "Lat": 49.580799,
     "Lon": 15.7628,
-    "Ele": 530.0
+    "Ele": 530,
+    "ident": "LKPI",
+    "iso_country": "CZ",
+    "icao_code": "LKPI",
+    "length_ft": 2509,
+    "width_ft": 98,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2013,7 +2948,13 @@
     "freq": "126.905",
     "Lat": 49.4478,
     "Lon": 17.1339,
-    "Ele": 213.1
+    "Ele": 213.1,
+    "ident": "LKPJ",
+    "iso_country": "CZ",
+    "length_ft": 3281,
+    "width_ft": 196,
+    "heading": 122,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2022,7 +2963,14 @@
     "freq": "130.610",
     "Lat": 49.723099,
     "Lon": 13.4522,
-    "Ele": 417.9
+    "Ele": 417.9,
+    "ident": "LKPL",
+    "iso_country": "CZ",
+    "icao_code": "LKPL",
+    "length_ft": 2296,
+    "width_ft": 65,
+    "heading": 83,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2031,7 +2979,14 @@
     "freq": "118.755",
     "Lat": 49.7201,
     "Lon": 14.1006,
-    "Ele": 466.0
+    "Ele": 466,
+    "ident": "LKPM",
+    "iso_country": "CZ",
+    "icao_code": "LKPM",
+    "length_ft": 4527,
+    "width_ft": 98,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -2040,7 +2995,13 @@
     "freq": "123.590",
     "Lat": 49.939201,
     "Lon": 15.5497,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "LKPN",
+    "iso_country": "CZ",
+    "length_ft": 2100,
+    "width_ft": 302,
+    "heading": 128,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -2049,7 +3010,15 @@
     "freq": "123.300",
     "Lat": 49.4258,
     "Lon": 17.404699,
-    "Ele": 206.0
+    "Ele": 206,
+    "ident": "LKPO",
+    "iso_country": "CZ",
+    "icao_code": "LKPO",
+    "iata_code": "PRV",
+    "length_ft": 8123,
+    "width_ft": 197,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "large_airport",
@@ -2058,7 +3027,15 @@
     "freq": "120.530",
     "Lat": 50.100874,
     "Lon": 14.259911,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "LKPR",
+    "iso_country": "CZ",
+    "icao_code": "LKPR",
+    "iata_code": "PRG",
+    "length_ft": 10663,
+    "width_ft": 148,
+    "heading": 127,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2067,7 +3044,14 @@
     "freq": "123.590",
     "Lat": 49.9203,
     "Lon": 13.3769,
-    "Ele": 435.9
+    "Ele": 435.9,
+    "ident": "LKPS",
+    "iso_country": "CZ",
+    "icao_code": "LKPS",
+    "length_ft": 2755,
+    "width_ft": 328,
+    "heading": 34,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -2076,7 +3060,14 @@
     "freq": "126.855",
     "Lat": 50.4039,
     "Lon": 13.7519,
-    "Ele": 267.9
+    "Ele": 267.9,
+    "ident": "LKRA",
+    "iso_country": "CZ",
+    "icao_code": "LKRA",
+    "length_ft": 2460,
+    "width_ft": 328,
+    "heading": 45,
+    "QFU": "04"
   },
   {
     "type": "small_airport",
@@ -2085,7 +3076,14 @@
     "freq": "123.510",
     "Lat": 50.0942,
     "Lon": 13.6889,
-    "Ele": 387.1
+    "Ele": 387.1,
+    "ident": "LKRK",
+    "iso_country": "CZ",
+    "icao_code": "LKRK",
+    "length_ft": 3068,
+    "width_ft": 295,
+    "heading": 87,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2094,7 +3092,14 @@
     "freq": "122.205",
     "Lat": 50.410186,
     "Lon": 14.22708,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "LKRO",
+    "iso_country": "CZ",
+    "icao_code": "LKRO",
+    "length_ft": 4593,
+    "width_ft": 206,
+    "heading": 133,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2103,7 +3108,14 @@
     "freq": "119.660",
     "Lat": 49.751944,
     "Lon": 13.589722,
-    "Ele": 405.1
+    "Ele": 405.1,
+    "ident": "LKRY",
+    "iso_country": "CZ",
+    "icao_code": "LKRY",
+    "length_ft": 2413,
+    "width_ft": 92,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2112,7 +3124,14 @@
     "freq": "123.610",
     "Lat": 49.566515,
     "Lon": 13.04867,
-    "Ele": 427.9
+    "Ele": 427.9,
+    "ident": "LKSA",
+    "iso_country": "CZ",
+    "icao_code": "LKSA",
+    "length_ft": 2164,
+    "width_ft": 131,
+    "heading": 71,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2121,7 +3140,14 @@
     "freq": "120.680",
     "Lat": 49.48739,
     "Lon": 17.05261,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "LKSB",
+    "iso_country": "CZ",
+    "icao_code": "LKSB",
+    "length_ft": 2887,
+    "width_ft": 98,
+    "heading": 135,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2130,7 +3156,14 @@
     "freq": "123.510",
     "Lat": 49.827801,
     "Lon": 16.0058,
-    "Ele": 488.0
+    "Ele": 488,
+    "ident": "LKSK",
+    "iso_country": "CZ",
+    "icao_code": "LKSK",
+    "length_ft": 2881,
+    "width_ft": 656,
+    "heading": 124,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2139,7 +3172,14 @@
     "freq": "122.405",
     "Lat": 50.21639,
     "Lon": 14.087845,
-    "Ele": 328.9
+    "Ele": 328.9,
+    "ident": "LKSN",
+    "iso_country": "CZ",
+    "icao_code": "LKSN",
+    "length_ft": 2493,
+    "width_ft": 131,
+    "heading": 72,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2148,7 +3188,14 @@
     "freq": "122.190",
     "Lat": 49.2455,
     "Lon": 14.712993,
-    "Ele": 409.0
+    "Ele": 409,
+    "ident": "LKSO",
+    "iso_country": "CZ",
+    "icao_code": "LKSO",
+    "length_ft": 2427,
+    "width_ft": 98,
+    "heading": 182,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2157,7 +3204,14 @@
     "freq": "123.505",
     "Lat": 49.0825,
     "Lon": 14.0758,
-    "Ele": 479.1
+    "Ele": 479.1,
+    "ident": "LKSR",
+    "iso_country": "CZ",
+    "icao_code": "LKSR",
+    "length_ft": 2952,
+    "width_ft": 75,
+    "heading": 152,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2166,7 +3220,14 @@
     "freq": "118.760",
     "Lat": 49.251701,
     "Lon": 13.8928,
-    "Ele": 420.9
+    "Ele": 420.9,
+    "ident": "LKST",
+    "iso_country": "CZ",
+    "icao_code": "LKST",
+    "length_ft": 2559,
+    "width_ft": 82,
+    "heading": 129,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2175,7 +3236,14 @@
     "freq": "122.605",
     "Lat": 49.960602,
     "Lon": 17.017799,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "LKSU",
+    "iso_country": "CZ",
+    "icao_code": "LKSU",
+    "length_ft": 2230,
+    "width_ft": 59,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2184,7 +3252,14 @@
     "freq": "119.640",
     "Lat": 50.324699,
     "Lon": 14.2589,
-    "Ele": 232.0
+    "Ele": 232,
+    "ident": "LKSZ",
+    "iso_country": "CZ",
+    "icao_code": "LKSZ",
+    "length_ft": 4314,
+    "width_ft": 394,
+    "heading": 145,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2193,7 +3268,14 @@
     "freq": "122.610",
     "Lat": 49.391102,
     "Lon": 14.7083,
-    "Ele": 438.9
+    "Ele": 438.9,
+    "ident": "LKTA",
+    "iso_country": "CZ",
+    "icao_code": "LKTA",
+    "length_ft": 2789,
+    "width_ft": 328,
+    "heading": 160,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -2202,7 +3284,15 @@
     "freq": "127.350",
     "Lat": 49.15129852294922,
     "Lon": 16.694400787353516,
-    "Ele": 237.1
+    "Ele": 237.1,
+    "ident": "LKTB",
+    "iso_country": "CZ",
+    "icao_code": "LKTB",
+    "iata_code": "BRQ",
+    "length_ft": 8694,
+    "width_ft": 197,
+    "heading": 94,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2211,7 +3301,14 @@
     "freq": "123.410",
     "Lat": 49.985435,
     "Lon": 14.426465,
-    "Ele": 313.0
+    "Ele": 313,
+    "ident": "LKTC",
+    "iso_country": "CZ",
+    "icao_code": "LKTC",
+    "length_ft": 2854,
+    "width_ft": 98,
+    "heading": 87,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2220,7 +3317,14 @@
     "freq": "123.405",
     "Lat": 49.797223,
     "Lon": 12.707169,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "LKTD",
+    "iso_country": "CZ",
+    "icao_code": "LKTD",
+    "length_ft": 3609,
+    "width_ft": 75,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2229,7 +3333,14 @@
     "freq": "122.605",
     "Lat": 50.086399,
     "Lon": 12.9528,
-    "Ele": 652.0
+    "Ele": 652,
+    "ident": "LKTO",
+    "iso_country": "CZ",
+    "icao_code": "LKTO",
+    "length_ft": 4232,
+    "width_ft": 328,
+    "heading": 75,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2238,7 +3349,14 @@
     "freq": "123.405",
     "Lat": 50.699699,
     "Lon": 13.9697,
-    "Ele": 241.1
+    "Ele": 241.1,
+    "ident": "LKUL",
+    "iso_country": "CZ",
+    "icao_code": "LKUL",
+    "length_ft": 2559,
+    "width_ft": 98,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2247,7 +3365,14 @@
     "freq": "122.210",
     "Lat": 49.9786,
     "Lon": 16.426399,
-    "Ele": 409.0
+    "Ele": 409,
+    "ident": "LKUO",
+    "iso_country": "CZ",
+    "icao_code": "LKUO",
+    "length_ft": 2910,
+    "width_ft": 328,
+    "heading": 143,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2256,7 +3381,14 @@
     "freq": "119.655",
     "Lat": 49.728901,
     "Lon": 14.8789,
-    "Ele": 433.1
+    "Ele": 433.1,
+    "ident": "LKVL",
+    "iso_country": "CZ",
+    "icao_code": "LKVL",
+    "length_ft": 2788,
+    "width_ft": 131,
+    "heading": 132,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2265,7 +3397,14 @@
     "freq": "130.605",
     "Lat": 49.928102,
     "Lon": 16.185029,
-    "Ele": 302.1
+    "Ele": 302.1,
+    "ident": "LKVM",
+    "iso_country": "CZ",
+    "icao_code": "LKVM",
+    "length_ft": 3280,
+    "width_ft": 262,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -2274,7 +3413,15 @@
     "freq": "127.480",
     "Lat": 50.216599,
     "Lon": 14.3958,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "LKVO",
+    "iso_country": "CZ",
+    "icao_code": "LKVO",
+    "iata_code": "VOD",
+    "length_ft": 5905,
+    "width_ft": 164,
+    "heading": 101,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2283,7 +3430,14 @@
     "freq": "122.190",
     "Lat": 50.4678,
     "Lon": 16.205601,
-    "Ele": 402.9
+    "Ele": 402.9,
+    "ident": "LKVP",
+    "iso_country": "CZ",
+    "icao_code": "LKVP",
+    "length_ft": 1804,
+    "width_ft": 98,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2292,7 +3446,14 @@
     "freq": "125.330",
     "Lat": 50.624199,
     "Lon": 15.6464,
-    "Ele": 491.0
+    "Ele": 491,
+    "ident": "LKVR",
+    "iso_country": "CZ",
+    "icao_code": "LKVR",
+    "length_ft": 2755,
+    "width_ft": 410,
+    "heading": 112,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2301,7 +3462,14 @@
     "freq": "120.330",
     "Lat": 49.300301,
     "Lon": 17.025299,
-    "Ele": 281.0
+    "Ele": 281,
+    "ident": "LKVY",
+    "iso_country": "CZ",
+    "icao_code": "LKVY",
+    "length_ft": 4199,
+    "width_ft": 196,
+    "heading": 17,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -2310,7 +3478,15 @@
     "freq": "123.605",
     "Lat": 49.928258,
     "Lon": 18.075557,
-    "Ele": 241.1
+    "Ele": 241.1,
+    "ident": "LKZA",
+    "iso_country": "CZ",
+    "icao_code": "LKZA",
+    "iata_code": "ZBE",
+    "length_ft": 2952,
+    "width_ft": 295,
+    "heading": 97,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3495,14 @@
     "freq": "126.630",
     "Lat": 49.814201,
     "Lon": 15.2017,
-    "Ele": 494.1
+    "Ele": 494.1,
+    "ident": "LKZB",
+    "iso_country": "CZ",
+    "icao_code": "LKZB",
+    "length_ft": 2559,
+    "width_ft": 492,
+    "heading": 154,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3511,14 @@
     "freq": "122.810",
     "Lat": 50.317501,
     "Lon": 13.5128,
-    "Ele": 267.9
+    "Ele": 267.9,
+    "ident": "LKZD",
+    "iso_country": "CZ",
+    "icao_code": "LKZD",
+    "length_ft": 3675,
+    "width_ft": 131,
+    "heading": 109,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2337,7 +3527,14 @@
     "freq": "122.610",
     "Lat": 50.0839,
     "Lon": 16.443899,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "LKZM",
+    "iso_country": "CZ",
+    "icao_code": "LKZM",
+    "length_ft": 2378,
+    "width_ft": 328,
+    "heading": 134,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2346,6 +3543,21 @@
     "freq": "130.590",
     "Lat": 48.817744,
     "Lon": 16.065831,
-    "Ele": 253.0
+    "Ele": 253,
+    "ident": "LKZN",
+    "iso_country": "CZ",
+    "icao_code": "LKZN",
+    "length_ft": 2822,
+    "width_ft": 59,
+    "heading": 80,
+    "QFU": "26"
+  },
+  {
+    "Lat": 49.3983,
+    "Lon": 16.32169,
+    "type": "small_airport",
+    "ident": "CZ-0286",
+    "name": "Jilmovi Ultralight Strip",
+    "iso_country": "CZ"
   }
 ]

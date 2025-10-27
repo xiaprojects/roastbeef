@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": -17.7432994843,
     "Lon": -179.341995239,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "NFCI",
+    "iso_country": "FJ",
+    "icao_code": "NFCI",
+    "iata_code": "ICI"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,9 @@
     "freq": "",
     "Lat": -17.530799,
     "Lon": 177.690506,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "NFFA",
+    "iso_country": "FJ"
   },
   {
     "type": "medium_airport",
@@ -24,7 +30,15 @@
     "freq": "346.700",
     "Lat": -17.755399703979492,
     "Lon": 177.4429931640625,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "NFFN",
+    "iso_country": "FJ",
+    "icao_code": "NFFN",
+    "iata_code": "null",
+    "length_ft": 7007,
+    "width_ft": 150,
+    "heading": 104.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -33,7 +47,11 @@
     "freq": "",
     "Lat": -17.778448,
     "Lon": 177.196996,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NFFO",
+    "iso_country": "FJ",
+    "icao_code": "NFFO",
+    "iata_code": "PTF"
   },
   {
     "type": "small_airport",
@@ -42,7 +60,11 @@
     "freq": "",
     "Lat": -16.5337,
     "Lon": 179.9757,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "NFFR",
+    "iso_country": "FJ",
+    "icao_code": "NFFR",
+    "iata_code": "RBI"
   },
   {
     "type": "small_airport",
@@ -51,7 +73,9 @@
     "freq": "",
     "Lat": -17.438646,
     "Lon": -179.163601,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "NFGO",
+    "iso_country": "FJ"
   },
   {
     "type": "small_airport",
@@ -60,7 +84,9 @@
     "freq": "",
     "Lat": -17.254199981689453,
     "Lon": -179.48899841308594,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NFKB",
+    "iso_country": "FJ"
   },
   {
     "type": "small_airport",
@@ -69,7 +95,11 @@
     "freq": "",
     "Lat": -19.0580997467,
     "Lon": 178.156997681,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "NFKD",
+    "iso_country": "FJ",
+    "icao_code": "NFKD",
+    "iata_code": "KDV"
   },
   {
     "type": "small_airport",
@@ -78,7 +108,11 @@
     "freq": "",
     "Lat": -17.672844,
     "Lon": 177.0985,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NFMA",
+    "iso_country": "FJ",
+    "icao_code": "NFMA",
+    "iata_code": "MNF"
   },
   {
     "type": "small_airport",
@@ -87,7 +121,11 @@
     "freq": "",
     "Lat": -18.5666999817,
     "Lon": 179.951004028,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "NFMO",
+    "iso_country": "FJ",
+    "icao_code": "NFMO",
+    "iata_code": "MFJ"
   },
   {
     "type": "medium_airport",
@@ -96,7 +134,15 @@
     "freq": "119.700",
     "Lat": -18.04330062866211,
     "Lon": 178.5590057373047,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "NFNA",
+    "iso_country": "FJ",
+    "icao_code": "NFNA",
+    "iata_code": "SUV",
+    "length_ft": 7047,
+    "width_ft": 148,
+    "heading": 109,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -105,7 +151,11 @@
     "freq": "",
     "Lat": -17.7110996246,
     "Lon": 178.759002686,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "NFNB",
+    "iso_country": "FJ",
+    "icao_code": "NFNB",
+    "iata_code": "LEV"
   },
   {
     "type": "small_airport",
@@ -114,7 +164,15 @@
     "freq": "",
     "Lat": -18.2553,
     "Lon": 178.0492,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "NFND",
+    "iso_country": "FJ",
+    "icao_code": "NFND",
+    "iata_code": "PHR",
+    "length_ft": 2395,
+    "width_ft": 50,
+    "heading": 155,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -123,7 +181,11 @@
     "freq": "",
     "Lat": -18.1156005859,
     "Lon": 179.339996338,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "NFNG",
+    "iso_country": "FJ",
+    "icao_code": "NFNG",
+    "iata_code": "NGI"
   },
   {
     "type": "small_airport",
@@ -132,7 +194,11 @@
     "freq": "",
     "Lat": -16.7481,
     "Lon": -179.667007,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NFNH",
+    "iso_country": "FJ",
+    "icao_code": "NFNH",
+    "iata_code": "LUC"
   },
   {
     "type": "small_airport",
@@ -141,7 +207,11 @@
     "freq": "",
     "Lat": -18.1991996765,
     "Lon": -178.817001343,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "NFNK",
+    "iso_country": "FJ",
+    "icao_code": "NFNK",
+    "iata_code": "LKB"
   },
   {
     "type": "medium_airport",
@@ -150,7 +220,15 @@
     "freq": "122.900",
     "Lat": -16.4667,
     "Lon": 179.339996,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "NFNL",
+    "iso_country": "FJ",
+    "icao_code": "NFNL",
+    "iata_code": "LBS",
+    "length_ft": 3507,
+    "width_ft": 98,
+    "heading": 146,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -159,7 +237,15 @@
     "freq": "",
     "Lat": -16.690599,
     "Lon": -179.876999,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "NFNM",
+    "iso_country": "FJ",
+    "icao_code": "NFNM",
+    "iata_code": "TVU",
+    "length_ft": 3232,
+    "width_ft": 75,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -168,7 +254,11 @@
     "freq": "",
     "Lat": -17.3458003998,
     "Lon": 179.42199707,
-    "Ele": 109.1
+    "Ele": 109.1,
+    "ident": "NFNO",
+    "iso_country": "FJ",
+    "icao_code": "NFNO",
+    "iata_code": "KXF"
   },
   {
     "type": "small_airport",
@@ -177,7 +267,14 @@
     "freq": "",
     "Lat": -12.482500076293944,
     "Lon": 177.0709991455078,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "NFNR",
+    "iso_country": "FJ",
+    "icao_code": "NFNR",
+    "iata_code": "RTA",
+    "length_ft": 4806,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -186,7 +283,15 @@
     "freq": "",
     "Lat": -16.803394,
     "Lon": 179.340587,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "NFNS",
+    "iso_country": "FJ",
+    "icao_code": "NFNS",
+    "iata_code": "SVU",
+    "length_ft": 2833,
+    "width_ft": 59,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -195,7 +300,11 @@
     "freq": "",
     "Lat": -17.617000579833984,
     "Lon": 179.01699829101562,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "NFNW",
+    "iso_country": "FJ",
+    "icao_code": "NFNW",
+    "iata_code": "KAY"
   },
   {
     "type": "small_airport",
@@ -204,7 +313,11 @@
     "freq": "",
     "Lat": -20.6589,
     "Lon": -178.7411,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "NFOL",
+    "iso_country": "FJ",
+    "icao_code": "NFOL",
+    "iata_code": "ONU"
   },
   {
     "type": "small_airport",
@@ -213,7 +326,14 @@
     "freq": "",
     "Lat": -16.7589,
     "Lon": 177.544998,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "NFSW",
+    "iso_country": "FJ",
+    "icao_code": "NFSW",
+    "iata_code": "YAS",
+    "length_ft": 1950,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -222,7 +342,11 @@
     "freq": "",
     "Lat": -17.268999099731445,
     "Lon": -178.9759979248047,
-    "Ele": 23.2
+    "Ele": 23.2,
+    "ident": "NFVB",
+    "iso_country": "FJ",
+    "icao_code": "NFVB",
+    "iata_code": "VBV"
   },
   {
     "type": "small_airport",
@@ -231,6 +355,10 @@
     "freq": "",
     "Lat": -18.512500762939453,
     "Lon": 177.63900756835938,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "NFVL",
+    "iso_country": "FJ",
+    "icao_code": "NFVL",
+    "iata_code": "VTF"
   }
 ]

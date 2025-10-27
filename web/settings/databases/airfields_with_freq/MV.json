@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 6.162443,
     "Lon": 73.28752,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FND",
+    "iso_country": "MV",
+    "iata_code": "FND",
+    "local_code": "FND"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,10 @@
     "freq": "",
     "Lat": 5.457545,
     "Lon": 73.370261,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "LMV",
+    "iso_country": "MV",
+    "iata_code": "LMV"
   },
   {
     "type": "small_airport",
@@ -24,7 +31,10 @@
     "freq": "",
     "Lat": 0.192647,
     "Lon": 73.196755,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MV-0012",
+    "iso_country": "MV",
+    "iata_code": "FMT"
   },
   {
     "type": "small_airport",
@@ -33,7 +43,14 @@
     "freq": "",
     "Lat": 2.911389,
     "Lon": 73.583611,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MV-0013",
+    "iso_country": "MV",
+    "iata_code": "MUM",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -42,7 +59,10 @@
     "freq": "",
     "Lat": 6.96967,
     "Lon": 72.896287,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VRAH",
+    "iso_country": "MV",
+    "iata_code": "HRF"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,11 @@
     "freq": "",
     "Lat": 6.630762,
     "Lon": 73.067815,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VRBK",
+    "iso_country": "MV",
+    "iata_code": "HDK",
+    "local_code": "HDK"
   },
   {
     "type": "medium_airport",
@@ -60,7 +84,14 @@
     "freq": "",
     "Lat": 5.818394,
     "Lon": 73.469181,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRDA",
+    "iso_country": "MV",
+    "iata_code": "NMF",
+    "length_ft": 9350,
+    "width_ft": 148,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -69,7 +100,11 @@
     "freq": "118.350",
     "Lat": 5.7083,
     "Lon": 73.025,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VREI",
+    "iso_country": "MV",
+    "icao_code": "VREI",
+    "iata_code": "IFU"
   },
   {
     "type": "small_airport",
@@ -78,7 +113,14 @@
     "freq": "",
     "Lat": 5.1561,
     "Lon": 73.1302,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRMD",
+    "iso_country": "MV",
+    "icao_code": "VRMD",
+    "iata_code": "DRV",
+    "length_ft": 3901,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -87,7 +129,10 @@
     "freq": "",
     "Lat": -0.309722,
     "Lon": 73.435,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "VRMF",
+    "iso_country": "MV",
+    "iata_code": "FVM"
   },
   {
     "type": "medium_airport",
@@ -96,7 +141,15 @@
     "freq": "119.100",
     "Lat": -0.692694,
     "Lon": 73.151557,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRMG",
+    "iso_country": "MV",
+    "icao_code": "VRMG",
+    "iata_code": "GAN",
+    "length_ft": 12000,
+    "width_ft": 165,
+    "heading": 99,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -105,7 +158,15 @@
     "freq": "119.100",
     "Lat": 6.744229793548584,
     "Lon": 73.17050170898438,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "VRMH",
+    "iso_country": "MV",
+    "icao_code": "VRMH",
+    "iata_code": "HAQ",
+    "length_ft": 4003,
+    "width_ft": 98,
+    "heading": 27,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -114,7 +175,15 @@
     "freq": "119.600",
     "Lat": 1.8591699600219729,
     "Lon": 73.52189636230469,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "VRMK",
+    "iso_country": "MV",
+    "icao_code": "VRMK",
+    "iata_code": "KDO",
+    "length_ft": 4003,
+    "width_ft": 98,
+    "heading": 25.4,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -123,7 +192,15 @@
     "freq": "119.700",
     "Lat": 4.191830158233643,
     "Lon": 73.52909851074219,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRMM",
+    "iso_country": "MV",
+    "icao_code": "VRMM",
+    "iata_code": "MLE",
+    "length_ft": 11155,
+    "width_ft": 197,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -132,7 +209,15 @@
     "freq": "",
     "Lat": 0.7324,
     "Lon": 73.4336,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "VRMO",
+    "iso_country": "MV",
+    "icao_code": "VRMO",
+    "iata_code": "GKK",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -141,7 +226,15 @@
     "freq": "119.400",
     "Lat": 0.488131,
     "Lon": 72.996902,
-    "Ele": 0.6
+    "Ele": 0.6,
+    "ident": "VRMT",
+    "iso_country": "MV",
+    "icao_code": "VRMT",
+    "iata_code": "KDM",
+    "length_ft": 4003,
+    "width_ft": 98,
+    "heading": 155.2,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -150,7 +243,14 @@
     "freq": "",
     "Lat": 2.666075,
     "Lon": 72.887118,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRMU",
+    "iso_country": "MV",
+    "icao_code": "VRMU",
+    "iata_code": "DDD",
+    "length_ft": 6099,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -159,7 +259,15 @@
     "freq": "",
     "Lat": 3.470556,
     "Lon": 72.835833,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRMV",
+    "iso_country": "MV",
+    "icao_code": "VRMV",
+    "iata_code": "VAM",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -168,7 +276,11 @@
     "freq": "",
     "Lat": 2.211,
     "Lon": 73.1533,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VRNT",
+    "iso_country": "MV",
+    "icao_code": "VRNT",
+    "iata_code": "TMF"
   },
   {
     "type": "small_airport",
@@ -177,6 +289,10 @@
     "freq": "",
     "Lat": 0.338085,
     "Lon": 73.512869,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VRQM",
+    "iso_country": "MV",
+    "iata_code": "RUL",
+    "local_code": "RUL"
   }
 ]

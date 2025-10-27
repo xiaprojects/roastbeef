@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 10.42242,
     "Lon": -9.77592,
-    "Ele": 419.1
+    "Ele": 419.1,
+    "ident": "GN-0001",
+    "iso_country": "GN",
+    "local_code": "GUNE"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,13 @@
     "freq": "",
     "Lat": 10.784886,
     "Lon": -8.868887,
-    "Ele": 378.6
+    "Ele": 378.6,
+    "ident": "GN-0003",
+    "iso_country": "GN",
+    "length_ft": 4642,
+    "width_ft": 75,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,13 @@
     "freq": "",
     "Lat": 8.697222,
     "Lon": -8.713889,
-    "Ele": 667.5
+    "Ele": 667.5,
+    "ident": "GUBE",
+    "iso_country": "GN",
+    "icao_code": "GUBE",
+    "length_ft": 6000,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -33,7 +48,15 @@
     "freq": "658.900",
     "Lat": 9.57689,
     "Lon": -13.612,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "GUCY",
+    "iso_country": "GN",
+    "icao_code": "GUCY",
+    "iata_code": "CKY",
+    "length_ft": 10826,
+    "width_ft": 148,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -42,7 +65,15 @@
     "freq": "658.900",
     "Lat": 10.3506,
     "Lon": -13.5692,
-    "Ele": 152.1
+    "Ele": 152.1,
+    "ident": "GUFA",
+    "iso_country": "GN",
+    "icao_code": "GUFA",
+    "iata_code": "FIG",
+    "length_ft": 5249,
+    "width_ft": 131,
+    "heading": 48.1,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -51,7 +82,15 @@
     "freq": "658.900",
     "Lat": 10.0354995728,
     "Lon": -10.7698001862,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "GUFH",
+    "iso_country": "GN",
+    "icao_code": "GUFH",
+    "iata_code": "FAA",
+    "length_ft": 7595,
+    "width_ft": 148,
+    "heading": 84,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -60,7 +99,13 @@
     "freq": "",
     "Lat": 9.24284,
     "Lon": -9.29997,
-    "Ele": 650.1
+    "Ele": 650.1,
+    "ident": "GUGO",
+    "iso_country": "GN",
+    "icao_code": "GUGO",
+    "length_ft": 5249,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -69,7 +114,13 @@
     "freq": "",
     "Lat": 10.657484,
     "Lon": -14.532337,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "GUKR",
+    "iso_country": "GN",
+    "icao_code": "GUKR",
+    "length_ft": 5118,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -78,7 +129,14 @@
     "freq": "",
     "Lat": 9.1605596542358,
     "Lon": -10.124400138855,
-    "Ele": 551.1
+    "Ele": 551.1,
+    "ident": "GUKU",
+    "iso_country": "GN",
+    "icao_code": "GUKU",
+    "iata_code": "KSI",
+    "length_ft": 5922,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -87,7 +145,15 @@
     "freq": "658.900",
     "Lat": 11.337512,
     "Lon": -12.290869,
-    "Ele": 1035.1
+    "Ele": 1035.1,
+    "ident": "GULB",
+    "iso_country": "GN",
+    "icao_code": "GULB",
+    "iata_code": "LEK",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 51,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -96,7 +162,14 @@
     "freq": "",
     "Lat": 8.481456,
     "Lon": -9.526048,
-    "Ele": 515.1
+    "Ele": 515.1,
+    "ident": "GUMA",
+    "iso_country": "GN",
+    "icao_code": "GUMA",
+    "iata_code": "MCA",
+    "length_ft": 4921,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -105,7 +178,14 @@
     "freq": "",
     "Lat": 7.810413,
     "Lon": -8.702073,
-    "Ele": 505.1
+    "Ele": 505.1,
+    "ident": "GUNZ",
+    "iso_country": "GN",
+    "icao_code": "GUNZ",
+    "iata_code": "NZE",
+    "length_ft": 4921,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -114,7 +194,14 @@
     "freq": "",
     "Lat": 10.9658,
     "Lon": -14.2811,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "GUOK",
+    "iso_country": "GN",
+    "icao_code": "GUOK",
+    "iata_code": "BKJ",
+    "length_ft": 5052,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -123,7 +210,13 @@
     "freq": "",
     "Lat": 11.114558,
     "Lon": -13.815834,
-    "Ele": 209.1
+    "Ele": 209.1,
+    "ident": "GUSA",
+    "iso_country": "GN",
+    "icao_code": "GUSA",
+    "length_ft": 3773,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -132,7 +225,14 @@
     "freq": "",
     "Lat": 12.575315,
     "Lon": -13.363349,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "GUSB",
+    "iso_country": "GN",
+    "icao_code": "GUSB",
+    "iata_code": "SBI",
+    "length_ft": 4921,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -141,7 +241,14 @@
     "freq": "",
     "Lat": 11.399833,
     "Lon": -9.18841,
-    "Ele": 395.0
+    "Ele": 395,
+    "ident": "GUSI",
+    "iso_country": "GN",
+    "icao_code": "GUSI",
+    "iata_code": "GII",
+    "length_ft": 4905,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -150,6 +257,10 @@
     "freq": "",
     "Lat": 10.448438,
     "Lon": -9.228757,
-    "Ele": 376.1
+    "Ele": 376.1,
+    "ident": "GXUD",
+    "iso_country": "GN",
+    "icao_code": "GXUD",
+    "iata_code": "KNN"
   }
 ]

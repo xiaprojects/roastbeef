@@ -6,7 +6,14 @@
     "freq": "130.000",
     "Lat": 45.158655,
     "Lon": 27.43093,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "LR79",
+    "iso_country": "RO",
+    "icao_code": "LRIC",
+    "length_ft": 3280,
+    "width_ft": 98,
+    "heading": 2,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,14 @@
     "freq": "130.000",
     "Lat": 44.3923,
     "Lon": 27.7267,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "LR80",
+    "iso_country": "RO",
+    "icao_code": "LRFT",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 185,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -24,7 +38,14 @@
     "freq": "130.000",
     "Lat": 45.2164,
     "Lon": 26.9786,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "LR82",
+    "iso_country": "RO",
+    "icao_code": "LRBO",
+    "length_ft": 8202,
+    "width_ft": 262,
+    "heading": 43.5,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -33,7 +54,15 @@
     "freq": "130.200",
     "Lat": 46.176601,
     "Lon": 21.261999,
-    "Ele": 107.3
+    "Ele": 107.3,
+    "ident": "LRAR",
+    "iso_country": "RO",
+    "icao_code": "LRAR",
+    "iata_code": "ARW",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 95,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -42,7 +71,15 @@
     "freq": "118.600",
     "Lat": 46.5219,
     "Lon": 26.910299,
-    "Ele": 185.0
+    "Ele": 185,
+    "ident": "LRBC",
+    "iso_country": "RO",
+    "icao_code": "LRBC",
+    "iata_code": "BCM",
+    "length_ft": 8203,
+    "width_ft": 262,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -51,7 +88,15 @@
     "freq": "118.855",
     "Lat": 47.658444,
     "Lon": 23.464445,
-    "Ele": 184.4
+    "Ele": 184.4,
+    "ident": "LRBM",
+    "iso_country": "RO",
+    "icao_code": "LRBM",
+    "iata_code": "BAY",
+    "length_ft": 7054,
+    "width_ft": 148,
+    "heading": 99,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -60,7 +105,9 @@
     "freq": "",
     "Lat": 47.158575,
     "Lon": 24.552311,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LRBN",
+    "iso_country": "RO"
   },
   {
     "type": "medium_airport",
@@ -69,7 +116,15 @@
     "freq": "118.250",
     "Lat": 44.503201,
     "Lon": 26.1021,
-    "Ele": 90.5
+    "Ele": 90.5,
+    "ident": "LRBS",
+    "iso_country": "RO",
+    "icao_code": "LRBS",
+    "iata_code": "BBU",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -78,7 +133,15 @@
     "freq": "",
     "Lat": 45.70558,
     "Lon": 25.522871,
-    "Ele": 530.4
+    "Ele": 530.4,
+    "ident": "LRBV",
+    "iso_country": "RO",
+    "icao_code": "LRBV",
+    "iata_code": "GHV",
+    "length_ft": 9252,
+    "width_ft": 148,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -87,7 +150,14 @@
     "freq": "131.405",
     "Lat": 45.737222,
     "Lon": 24.165278,
-    "Ele": 464.5
+    "Ele": 464.5,
+    "ident": "LRCD",
+    "iso_country": "RO",
+    "icao_code": "LRCD",
+    "length_ft": 1970,
+    "width_ft": 60,
+    "heading": 146,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -96,7 +166,15 @@
     "freq": "122.900",
     "Lat": 44.362202,
     "Lon": 28.4883,
-    "Ele": 107.6
+    "Ele": 107.6,
+    "ident": "LRCK",
+    "iso_country": "RO",
+    "icao_code": "LRCK",
+    "iata_code": "CND",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 186,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -105,7 +183,15 @@
     "freq": "126.430",
     "Lat": 46.787425,
     "Lon": 23.684292,
-    "Ele": 316.7
+    "Ele": 316.7,
+    "ident": "LRCL",
+    "iso_country": "RO",
+    "icao_code": "LRCL",
+    "iata_code": "CLJ",
+    "length_ft": 6693,
+    "width_ft": 148,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -114,7 +200,13 @@
     "freq": "128.300",
     "Lat": 44.35902,
     "Lon": 25.93196,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LRCN",
+    "iso_country": "RO",
+    "length_ft": 3281,
+    "width_ft": 197,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -123,7 +215,15 @@
     "freq": "125.850",
     "Lat": 45.420142,
     "Lon": 22.252507,
-    "Ele": 264.0
+    "Ele": 264,
+    "ident": "LRCS",
+    "iso_country": "RO",
+    "icao_code": "LRCS",
+    "iata_code": "CSB",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 109,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -132,7 +232,14 @@
     "freq": "129.000",
     "Lat": 46.5023,
     "Lon": 23.8859,
-    "Ele": 330.1
+    "Ele": 330.1,
+    "ident": "LRCT",
+    "iso_country": "RO",
+    "icao_code": "LRCT",
+    "length_ft": 8202,
+    "width_ft": 164,
+    "heading": 156,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -141,7 +248,15 @@
     "freq": "124.300",
     "Lat": 44.3181,
     "Lon": 23.888599,
-    "Ele": 190.8
+    "Ele": 190.8,
+    "ident": "LRCV",
+    "iso_country": "RO",
+    "icao_code": "LRCV",
+    "iata_code": "CRA",
+    "length_ft": 8203,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -150,7 +265,12 @@
     "freq": "123.450",
     "Lat": 47.362846,
     "Lon": 25.21191,
-    "Ele": 886.4
+    "Ele": 886.4,
+    "ident": "LRFL",
+    "iso_country": "RO",
+    "length_ft": 1968,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -159,7 +279,15 @@
     "freq": "119.200",
     "Lat": 47.180278,
     "Lon": 27.620833,
-    "Ele": 125.3
+    "Ele": 125.3,
+    "ident": "LRIA",
+    "iso_country": "RO",
+    "icao_code": "LRIA",
+    "iata_code": "IAS",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 154,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -168,7 +296,15 @@
     "freq": "120.200",
     "Lat": 47.025299072265625,
     "Lon": 21.90250015258789,
-    "Ele": 141.7
+    "Ele": 141.7,
+    "ident": "LROD",
+    "iso_country": "RO",
+    "icao_code": "LROD",
+    "iata_code": "OMR",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 11,
+    "QFU": "19"
   },
   {
     "type": "large_airport",
@@ -177,7 +313,15 @@
     "freq": "118.250",
     "Lat": 44.572127,
     "Lon": 26.103396,
-    "Ele": 95.7
+    "Ele": 95.7,
+    "ident": "LROP",
+    "iso_country": "RO",
+    "icao_code": "LROP",
+    "iata_code": "OTP",
+    "length_ft": 11484,
+    "width_ft": 148,
+    "heading": 84,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -186,7 +330,9 @@
     "freq": "",
     "Lat": 44.783792,
     "Lon": 25.983205,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LRPH",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -195,7 +341,10 @@
     "freq": "",
     "Lat": 44.817504,
     "Lon": 24.897822,
-    "Ele": 305.1
+    "Ele": 305.1,
+    "ident": "LRPT",
+    "iso_country": "RO",
+    "icao_code": "LRPT"
   },
   {
     "type": "small_airport",
@@ -204,7 +353,14 @@
     "freq": "118.400",
     "Lat": 44.92367,
     "Lon": 25.963418,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "LRPV",
+    "iso_country": "RO",
+    "icao_code": "LRPW",
+    "length_ft": 2592,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 93
   },
   {
     "type": "medium_airport",
@@ -213,7 +369,15 @@
     "freq": "122.700",
     "Lat": 45.785841,
     "Lon": 24.086666,
-    "Ele": 456.0
+    "Ele": 456,
+    "ident": "LRSB",
+    "iso_country": "RO",
+    "icao_code": "LRSB",
+    "iata_code": "SBZ",
+    "length_ft": 8629,
+    "width_ft": 148,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -222,7 +386,15 @@
     "freq": "118.800",
     "Lat": 47.7033,
     "Lon": 22.8857,
-    "Ele": 123.4
+    "Ele": 123.4,
+    "ident": "LRSM",
+    "iso_country": "RO",
+    "icao_code": "LRSM",
+    "iata_code": "SUJ",
+    "length_ft": 8160,
+    "width_ft": 148,
+    "heading": 13,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -231,7 +403,15 @@
     "freq": "120.900",
     "Lat": 47.6875,
     "Lon": 26.35409927368164,
-    "Ele": 419.1
+    "Ele": 419.1,
+    "ident": "LRSV",
+    "iso_country": "RO",
+    "icao_code": "LRSV",
+    "iata_code": "SCV",
+    "length_ft": 8070,
+    "width_ft": 148,
+    "heading": 163,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -240,7 +420,15 @@
     "freq": "120.300",
     "Lat": 45.0625,
     "Lon": 28.7143,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "LRTC",
+    "iso_country": "RO",
+    "icao_code": "LRTC",
+    "iata_code": "TCE",
+    "length_ft": 6517,
+    "width_ft": 98,
+    "heading": 167,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -249,7 +437,15 @@
     "freq": "121.900",
     "Lat": 46.467701,
     "Lon": 24.4125,
-    "Ele": 293.5
+    "Ele": 293.5,
+    "ident": "LRTM",
+    "iso_country": "RO",
+    "icao_code": "LRTM",
+    "iata_code": "TGM",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -258,7 +454,15 @@
     "freq": "120.100",
     "Lat": 45.809898,
     "Lon": 21.3379,
-    "Ele": 106.1
+    "Ele": 106.1,
+    "ident": "LRTR",
+    "iso_country": "RO",
+    "icao_code": "LRTR",
+    "iata_code": "TSR",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -267,7 +471,13 @@
     "freq": "",
     "Lat": 43.984493,
     "Lon": 28.606225,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "LRTZ",
+    "iso_country": "RO",
+    "icao_code": "LRTZ",
+    "length_ft": 3117,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -276,7 +486,9 @@
     "freq": "",
     "Lat": 46.84667,
     "Lon": 26.55611,
-    "Ele": 288.6
+    "Ele": 288.6,
+    "ident": "RO-0001",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -285,7 +497,9 @@
     "freq": "",
     "Lat": 45.068378,
     "Lon": 25.806155,
-    "Ele": 367.9
+    "Ele": 367.9,
+    "ident": "RO-0002",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -294,7 +508,12 @@
     "freq": "123.450",
     "Lat": 47.885278,
     "Lon": 25.899167,
-    "Ele": 420.6
+    "Ele": 420.6,
+    "ident": "RO-0003",
+    "iso_country": "RO",
+    "length_ft": 3300,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -303,7 +522,12 @@
     "freq": "120.200",
     "Lat": 47.079167,
     "Lon": 22.100278,
-    "Ele": 151.8
+    "Ele": 151.8,
+    "ident": "RO-0004",
+    "iso_country": "RO",
+    "length_ft": 2560,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -312,7 +536,9 @@
     "freq": "",
     "Lat": 46.683817,
     "Lon": 23.507843,
-    "Ele": 756.8
+    "Ele": 756.8,
+    "ident": "RO-0005",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -321,7 +547,14 @@
     "freq": "135.190",
     "Lat": 45.721036,
     "Lon": 25.633707,
-    "Ele": 523.0
+    "Ele": 523,
+    "ident": "RO-0006",
+    "iso_country": "RO",
+    "icao_code": "LRSP",
+    "length_ft": 1970,
+    "width_ft": 60,
+    "heading": 120,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -330,7 +563,9 @@
     "freq": "",
     "Lat": 45.864871,
     "Lon": 22.970165,
-    "Ele": 195.1
+    "Ele": 195.1,
+    "ident": "RO-0007",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -339,7 +574,10 @@
     "freq": "",
     "Lat": 46.533241,
     "Lon": 24.529298,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0008",
+    "iso_country": "RO",
+    "icao_code": "LRMS"
   },
   {
     "type": "small_airport",
@@ -348,7 +586,14 @@
     "freq": "",
     "Lat": 46.26902,
     "Lon": 21.605301,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "RO-0009",
+    "iso_country": "RO",
+    "icao_code": "LRCB",
+    "length_ft": 2592,
+    "width_ft": 131,
+    "heading": 188,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -366,7 +611,13 @@
     "freq": "",
     "Lat": 45.697383,
     "Lon": 25.783453,
-    "Ele": 537.1
+    "Ele": 537.1,
+    "ident": "RO-0011",
+    "iso_country": "RO",
+    "length_ft": 3000,
+    "width_ft": 45,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -375,7 +626,9 @@
     "freq": "",
     "Lat": 43.926686,
     "Lon": 28.629548,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "RO-0012",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -384,7 +637,9 @@
     "freq": "",
     "Lat": 44.285839,
     "Lon": 23.791537,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0013",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -393,7 +648,9 @@
     "freq": "",
     "Lat": 44.709778,
     "Lon": 26.721411,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0014",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -402,7 +659,9 @@
     "freq": "",
     "Lat": 45.364129,
     "Lon": 27.938835,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0016",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -411,7 +670,13 @@
     "freq": "",
     "Lat": 45.78567,
     "Lon": 21.188104,
-    "Ele": 89.0
+    "Ele": 89,
+    "ident": "RO-0017",
+    "iso_country": "RO",
+    "length_ft": 2400,
+    "width_ft": 100,
+    "heading": 50,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -420,7 +685,9 @@
     "freq": "",
     "Lat": 44.200367,
     "Lon": 26.139661,
-    "Ele": 51.2
+    "Ele": 51.2,
+    "ident": "RO-0019",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -429,7 +696,9 @@
     "freq": "",
     "Lat": 45.654129,
     "Lon": 21.578748,
-    "Ele": 123.1
+    "Ele": 123.1,
+    "ident": "RO-0020",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -438,7 +707,9 @@
     "freq": "",
     "Lat": 46.347099,
     "Lon": 25.873769,
-    "Ele": 901.6
+    "Ele": 901.6,
+    "ident": "RO-0021",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -447,7 +718,9 @@
     "freq": "",
     "Lat": 46.726362,
     "Lon": 25.509257,
-    "Ele": 748.9
+    "Ele": 748.9,
+    "ident": "RO-0022",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -456,7 +729,13 @@
     "freq": "",
     "Lat": 44.580503,
     "Lon": 22.847785,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0023",
+    "iso_country": "RO",
+    "length_ft": 4921,
+    "width_ft": 196,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -465,7 +744,9 @@
     "freq": "",
     "Lat": 45.56553,
     "Lon": 25.396588,
-    "Ele": 670.0
+    "Ele": 670,
+    "ident": "RO-0024",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -474,7 +755,9 @@
     "freq": "",
     "Lat": 44.793683,
     "Lon": 25.086322,
-    "Ele": 232.3
+    "Ele": 232.3,
+    "ident": "RO-0025",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -483,7 +766,9 @@
     "freq": "",
     "Lat": 45.941516,
     "Lon": 23.760562,
-    "Ele": 288.0
+    "Ele": 288,
+    "ident": "RO-0026",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -492,7 +777,9 @@
     "freq": "",
     "Lat": 46.392973,
     "Lon": 25.775285,
-    "Ele": 666.0
+    "Ele": 666,
+    "ident": "RO-0027",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -501,7 +788,9 @@
     "freq": "",
     "Lat": 46.519304,
     "Lon": 24.945037,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0028",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -510,7 +799,13 @@
     "freq": "",
     "Lat": 47.167853,
     "Lon": 22.854567,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "RO-0031",
+    "iso_country": "RO",
+    "length_ft": 890,
+    "width_ft": 100,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -519,7 +814,9 @@
     "freq": "",
     "Lat": 44.583121,
     "Lon": 25.848514,
-    "Ele": 114.0
+    "Ele": 114,
+    "ident": "RO-0032",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -528,7 +825,9 @@
     "freq": "",
     "Lat": 46.961818,
     "Lon": 26.485076,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0033",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -537,7 +836,9 @@
     "freq": "",
     "Lat": 46.32548,
     "Lon": 25.28201,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0034",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -546,7 +847,9 @@
     "freq": "",
     "Lat": 44.985719,
     "Lon": 29.213128,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "RO-0041",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -555,7 +858,9 @@
     "freq": "",
     "Lat": 44.3743,
     "Lon": 23.618503,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "RO-0044",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -564,7 +869,9 @@
     "freq": "",
     "Lat": 45.003929,
     "Lon": 23.333545,
-    "Ele": 203.3
+    "Ele": 203.3,
+    "ident": "RO-0045",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -573,7 +880,9 @@
     "freq": "",
     "Lat": 44.794536,
     "Lon": 25.589261,
-    "Ele": 200.9
+    "Ele": 200.9,
+    "ident": "RO-0046",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -582,7 +891,9 @@
     "freq": "",
     "Lat": 44.491637,
     "Lon": 25.584884,
-    "Ele": 126.5
+    "Ele": 126.5,
+    "ident": "RO-0047",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -591,7 +902,9 @@
     "freq": "",
     "Lat": 44.391777,
     "Lon": 23.671024,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "RO-0048",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -600,7 +913,9 @@
     "freq": "",
     "Lat": 46.481669,
     "Lon": 23.931478,
-    "Ele": 307.8
+    "Ele": 307.8,
+    "ident": "RO-0049",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -609,7 +924,9 @@
     "freq": "",
     "Lat": 46.779124,
     "Lon": 23.71282,
-    "Ele": 307.8
+    "Ele": 307.8,
+    "ident": "RO-0050",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -618,7 +935,9 @@
     "freq": "",
     "Lat": 44.611058,
     "Lon": 26.26066,
-    "Ele": 80.8
+    "Ele": 80.8,
+    "ident": "RO-0051",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -627,7 +946,9 @@
     "freq": "",
     "Lat": 45.00556,
     "Lon": 29.1,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "RO-0053",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -636,7 +957,10 @@
     "freq": "",
     "Lat": 47.15778,
     "Lon": 27.6375,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "RO-0054",
+    "iso_country": "RO",
+    "icao_code": "LRIS"
   },
   {
     "type": "small_airport",
@@ -645,7 +969,9 @@
     "freq": "",
     "Lat": 46.898853,
     "Lon": 26.434307,
-    "Ele": 302.4
+    "Ele": 302.4,
+    "ident": "RO-0055",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -654,7 +980,9 @@
     "freq": "",
     "Lat": 47.721693,
     "Lon": 26.118418,
-    "Ele": 297.2
+    "Ele": 297.2,
+    "ident": "RO-0056",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -663,7 +991,9 @@
     "freq": "",
     "Lat": 44.262213,
     "Lon": 26.651981,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "RO-0057",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -672,7 +1002,9 @@
     "freq": "",
     "Lat": 45.02052,
     "Lon": 25.855951,
-    "Ele": 280.7
+    "Ele": 280.7,
+    "ident": "RO-0058",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -681,7 +1013,9 @@
     "freq": "",
     "Lat": 47.509161,
     "Lon": 23.68935,
-    "Ele": 248.4
+    "Ele": 248.4,
+    "ident": "RO-0059",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -690,7 +1024,9 @@
     "freq": "",
     "Lat": 46.266714,
     "Lon": 25.915817,
-    "Ele": 661.4
+    "Ele": 661.4,
+    "ident": "RO-0060",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -699,7 +1035,9 @@
     "freq": "",
     "Lat": 46.249281,
     "Lon": 25.222732,
-    "Ele": 449.6
+    "Ele": 449.6,
+    "ident": "RO-0061",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -708,7 +1046,9 @@
     "freq": "",
     "Lat": 45.380489,
     "Lon": 27.074475,
-    "Ele": 102.1
+    "Ele": 102.1,
+    "ident": "RO-0062",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -717,7 +1057,9 @@
     "freq": "",
     "Lat": 44.22531,
     "Lon": 25.75088,
-    "Ele": 86.0
+    "Ele": 86,
+    "ident": "RO-0065",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -726,7 +1068,9 @@
     "freq": "",
     "Lat": 45.96196,
     "Lon": 21.45735,
-    "Ele": 125.9
+    "Ele": 125.9,
+    "ident": "RO-0066",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -735,7 +1079,9 @@
     "freq": "",
     "Lat": 46.819232,
     "Lon": 25.412293,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0067",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -744,7 +1090,9 @@
     "freq": "",
     "Lat": 47.578155,
     "Lon": 23.53415,
-    "Ele": 191.1
+    "Ele": 191.1,
+    "ident": "RO-0069",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -753,7 +1101,9 @@
     "freq": "",
     "Lat": 44.21899,
     "Lon": 26.8735,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "RO-0071",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -762,7 +1112,9 @@
     "freq": "",
     "Lat": 46.29927,
     "Lon": 26.75578,
-    "Ele": 209.1
+    "Ele": 209.1,
+    "ident": "RO-0078",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -771,7 +1123,9 @@
     "freq": "",
     "Lat": 46.09834,
     "Lon": 27.54224,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "RO-0080",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -780,7 +1134,9 @@
     "freq": "",
     "Lat": 47.791044,
     "Lon": 26.65957,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0081",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -789,7 +1145,9 @@
     "freq": "",
     "Lat": 44.70336,
     "Lon": 27.91061,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "RO-0086",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -798,7 +1156,9 @@
     "freq": "",
     "Lat": 47.30468,
     "Lon": 22.39987,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "RO-0087",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -807,7 +1167,9 @@
     "freq": "",
     "Lat": 47.84848,
     "Lon": 23.27101,
-    "Ele": 143.9
+    "Ele": 143.9,
+    "ident": "RO-0088",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -825,7 +1187,9 @@
     "freq": "",
     "Lat": 47.91088,
     "Lon": 24.01891,
-    "Ele": 310.9
+    "Ele": 310.9,
+    "ident": "RO-0091",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -834,7 +1198,9 @@
     "freq": "",
     "Lat": 45.682004,
     "Lon": 21.022897,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "RO-0092",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -852,7 +1218,9 @@
     "freq": "",
     "Lat": 45.68086,
     "Lon": 25.74498,
-    "Ele": 572.1
+    "Ele": 572.1,
+    "ident": "RO-0095",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -861,7 +1229,9 @@
     "freq": "",
     "Lat": 44.73839,
     "Lon": 26.09206,
-    "Ele": 100.9
+    "Ele": 100.9,
+    "ident": "RO-0096",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -870,7 +1240,9 @@
     "freq": "",
     "Lat": 46.46012,
     "Lon": 21.47747,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "RO-0097",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -879,7 +1251,9 @@
     "freq": "",
     "Lat": 46.13327,
     "Lon": 24.33634,
-    "Ele": 328.0
+    "Ele": 328,
+    "ident": "RO-0100",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -888,7 +1262,9 @@
     "freq": "",
     "Lat": 47.55131,
     "Lon": 22.74838,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "RO-0101",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -897,7 +1273,9 @@
     "freq": "",
     "Lat": 46.3786,
     "Lon": 21.82322,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "RO-0102",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -906,7 +1284,9 @@
     "freq": "",
     "Lat": 46.92386,
     "Lon": 22.84698,
-    "Ele": 492.9
+    "Ele": 492.9,
+    "ident": "RO-0103",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -915,7 +1295,9 @@
     "freq": "",
     "Lat": 46.27613,
     "Lon": 26.67312,
-    "Ele": 249.0
+    "Ele": 249,
+    "ident": "RO-0104",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -924,7 +1306,9 @@
     "freq": "",
     "Lat": 46.59582,
     "Lon": 26.87647,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "RO-0106",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -933,7 +1317,14 @@
     "freq": "",
     "Lat": 44.225,
     "Lon": 26.121389,
-    "Ele": 77.4
+    "Ele": 77.4,
+    "ident": "RO-0108",
+    "iso_country": "RO",
+    "icao_code": "LRBA",
+    "length_ft": 1509,
+    "width_ft": 131,
+    "heading": 44,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -942,7 +1333,9 @@
     "freq": "",
     "Lat": 47.221111,
     "Lon": 26.451111,
-    "Ele": 285.9
+    "Ele": 285.9,
+    "ident": "RO-0137",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -951,7 +1344,7 @@
     "freq": "",
     "Lat": 47.659081,
     "Lon": 23.474513,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -960,7 +1353,9 @@
     "freq": "",
     "Lat": 46.531054,
     "Lon": 26.892739,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0139",
+    "iso_country": "RO"
   },
   {
     "type": "small_airport",
@@ -969,6 +1364,8 @@
     "freq": "",
     "Lat": 46.324995,
     "Lon": 24.308566,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RO-0175",
+    "iso_country": "RO"
   }
 ]

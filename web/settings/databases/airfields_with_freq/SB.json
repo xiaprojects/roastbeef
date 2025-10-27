@@ -6,7 +6,15 @@
     "freq": "",
     "Lat": -9.191389,
     "Lon": 160.948611,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "AGAF",
+    "iso_country": "SB",
+    "icao_code": "AGAF",
+    "iata_code": "AFT",
+    "length_ft": 1501,
+    "width_ft": 131,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -15,7 +23,15 @@
     "freq": "",
     "Lat": -9.86054358262,
     "Lon": 161.979546547,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "AGAR",
+    "iso_country": "SB",
+    "icao_code": "AGAR",
+    "iata_code": "RNA",
+    "length_ft": 2822,
+    "width_ft": 66,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -24,7 +40,15 @@
     "freq": "",
     "Lat": -8.87333,
     "Lon": 161.011002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGAT",
+    "iso_country": "SB",
+    "icao_code": "AGAT",
+    "iata_code": "ATD",
+    "length_ft": 2769,
+    "width_ft": 49,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -33,7 +57,11 @@
     "freq": "",
     "Lat": -7.912779808044434,
     "Lon": 156.70599365234375,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGBA",
+    "iso_country": "SB",
+    "icao_code": "AGBA",
+    "iata_code": "VEV"
   },
   {
     "type": "small_airport",
@@ -42,7 +70,15 @@
     "freq": "",
     "Lat": -8.56202777778,
     "Lon": 158.119305556,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "AGBT",
+    "iso_country": "SB",
+    "icao_code": "AGBT",
+    "iata_code": "BPF",
+    "length_ft": 2028,
+    "width_ft": 49,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -51,7 +87,15 @@
     "freq": "",
     "Lat": -7.575829982757568,
     "Lon": 156.5970001220703,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGEV",
+    "iso_country": "SB",
+    "icao_code": "AGEV",
+    "iata_code": "GEF",
+    "length_ft": 2297,
+    "width_ft": 82,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -60,7 +104,14 @@
     "freq": "",
     "Lat": -8.70257,
     "Lon": 160.682007,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "AGGA",
+    "iso_country": "SB",
+    "icao_code": "AGGA",
+    "iata_code": "AKS",
+    "length_ft": 3100,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -69,7 +120,15 @@
     "freq": "",
     "Lat": -11.3022222222,
     "Lon": 159.798333333,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AGGB",
+    "iso_country": "SB",
+    "icao_code": "AGGB",
+    "iata_code": "BNY",
+    "length_ft": 2187,
+    "width_ft": 59,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -78,7 +137,15 @@
     "freq": "",
     "Lat": -6.711944,
     "Lon": 156.396111,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGGC",
+    "iso_country": "SB",
+    "icao_code": "AGGC",
+    "iata_code": "CHY",
+    "length_ft": 2164,
+    "width_ft": 82,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -87,7 +154,14 @@
     "freq": "",
     "Lat": -6.990745,
     "Lon": 155.886656,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "AGGE",
+    "iso_country": "SB",
+    "icao_code": "AGGE",
+    "iata_code": "BAS",
+    "length_ft": 5413,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -96,7 +170,15 @@
     "freq": "",
     "Lat": -8.1075,
     "Lon": 159.576996,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "AGGF",
+    "iso_country": "SB",
+    "icao_code": "AGGF",
+    "iata_code": "FRE",
+    "length_ft": 1854,
+    "width_ft": 82,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "large_airport",
@@ -105,7 +187,15 @@
     "freq": "118.100",
     "Lat": -9.428,
     "Lon": 160.054993,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "AGGH",
+    "iso_country": "SB",
+    "icao_code": "AGGH",
+    "iata_code": "HIR",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "heading": 68,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -114,7 +204,15 @@
     "freq": "",
     "Lat": -9.7475,
     "Lon": 159.839005,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGGI",
+    "iso_country": "SB",
+    "icao_code": "AGGI",
+    "iata_code": "MBU",
+    "length_ft": 1953,
+    "width_ft": 72,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -123,7 +221,15 @@
     "freq": "",
     "Lat": -9.868333,
     "Lon": 160.410556,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "AGGJ",
+    "iso_country": "SB",
+    "icao_code": "AGGJ",
+    "iata_code": "AVU",
+    "length_ft": 2461,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -132,7 +238,14 @@
     "freq": "",
     "Lat": -10.4497003555,
     "Lon": 161.897994995,
-    "Ele": 16.5
+    "Ele": 16.5,
+    "ident": "AGGK",
+    "iso_country": "SB",
+    "icao_code": "AGGK",
+    "iata_code": "IRA",
+    "length_ft": 4377,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -141,7 +254,14 @@
     "freq": "",
     "Lat": -10.7203,
     "Lon": 165.794998,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "AGGL",
+    "iso_country": "SB",
+    "icao_code": "AGGL",
+    "iata_code": "SCZ",
+    "length_ft": 2999,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -150,7 +270,15 @@
     "freq": "118.100",
     "Lat": -8.32797,
     "Lon": 157.263,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AGGM",
+    "iso_country": "SB",
+    "icao_code": "AGGM",
+    "iata_code": "MUA",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "heading": 78.9,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -159,7 +287,15 @@
     "freq": "",
     "Lat": -8.09778022766,
     "Lon": 156.863998413,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "AGGN",
+    "iso_country": "SB",
+    "icao_code": "AGGN",
+    "iata_code": "GZO",
+    "length_ft": 2871,
+    "width_ft": 75,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -168,7 +304,14 @@
     "freq": "",
     "Lat": -7.41694,
     "Lon": 155.565002,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "AGGO",
+    "iso_country": "SB",
+    "icao_code": "AGGO",
+    "iata_code": "MNY",
+    "length_ft": 3281,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -177,7 +320,15 @@
     "freq": "",
     "Lat": -9.64167022705078,
     "Lon": 161.4250030517578,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGGP",
+    "iso_country": "SB",
+    "icao_code": "AGGP",
+    "iata_code": "PRS",
+    "length_ft": 2156,
+    "width_ft": 79,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -186,7 +337,15 @@
     "freq": "",
     "Lat": -11.55,
     "Lon": 160.062778,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "AGGR",
+    "iso_country": "SB",
+    "icao_code": "AGGR",
+    "iata_code": "RNL",
+    "length_ft": 2206,
+    "width_ft": 66,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -195,7 +354,14 @@
     "freq": "",
     "Lat": -8.57889,
     "Lon": 157.876007,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGGS",
+    "iso_country": "SB",
+    "icao_code": "AGGS",
+    "iata_code": "EGM",
+    "length_ft": 3002,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -204,7 +370,15 @@
     "freq": "",
     "Lat": -10.847994,
     "Lon": 162.454108,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "AGGT",
+    "iso_country": "SB",
+    "icao_code": "AGGT",
+    "iata_code": "NNB",
+    "length_ft": 2655,
+    "width_ft": 75,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -213,7 +387,15 @@
     "freq": "",
     "Lat": -9.86167,
     "Lon": 160.824997,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "AGGU",
+    "iso_country": "SB",
+    "icao_code": "AGGU",
+    "iata_code": "RUS",
+    "length_ft": 2001,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -222,7 +404,15 @@
     "freq": "",
     "Lat": -7.58556,
     "Lon": 158.731003,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "AGGV",
+    "iso_country": "SB",
+    "icao_code": "AGGV",
+    "iata_code": "VAO",
+    "length_ft": 2789,
+    "width_ft": 79,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -231,7 +421,11 @@
     "freq": "",
     "Lat": -9.092816,
     "Lon": 159.21841,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AGGY",
+    "iso_country": "SB",
+    "icao_code": "AGGY",
+    "iata_code": "XYA"
   },
   {
     "type": "small_airport",
@@ -240,7 +434,15 @@
     "freq": "",
     "Lat": -7.3305,
     "Lon": 157.585,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "AGKG",
+    "iso_country": "SB",
+    "icao_code": "AGKG",
+    "iata_code": "KGE",
+    "length_ft": 2428,
+    "width_ft": 148,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -249,7 +451,15 @@
     "freq": "",
     "Lat": -8.0262,
     "Lon": 156.94783,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "AGKU",
+    "iso_country": "SB",
+    "icao_code": "AGKU",
+    "iata_code": "KUE",
+    "length_ft": 1821,
+    "width_ft": 66,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -258,7 +468,15 @@
     "freq": "",
     "Lat": -8.360508,
     "Lon": 160.775127,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "AGKW",
+    "iso_country": "SB",
+    "icao_code": "AGKW",
+    "iata_code": "KWS",
+    "length_ft": 1896,
+    "width_ft": 66,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -267,7 +485,15 @@
     "freq": "",
     "Lat": -10.296828,
     "Lon": 166.327322,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "AGLM",
+    "iso_country": "SB",
+    "icao_code": "AGLM",
+    "iata_code": "LLM",
+    "length_ft": 3477,
+    "width_ft": 98,
+    "heading": 100,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -276,7 +502,15 @@
     "freq": "",
     "Lat": -10.6758,
     "Lon": 162.2049,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AGNA",
+    "iso_country": "SB",
+    "icao_code": "AGNA",
+    "iata_code": "NAZ",
+    "length_ft": 2657,
+    "width_ft": 66,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -285,7 +519,11 @@
     "freq": "",
     "Lat": -8.325008,
     "Lon": 160.80051,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "AGOB",
+    "iso_country": "SB",
+    "icao_code": "AGOB",
+    "iata_code": "MHM"
   },
   {
     "type": "small_airport",
@@ -294,7 +532,15 @@
     "freq": "",
     "Lat": -8.738358,
     "Lon": 158.202836,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "AGOK",
+    "iso_country": "SB",
+    "icao_code": "AGOK",
+    "iata_code": "GTA",
+    "length_ft": 1936,
+    "width_ft": 121,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -303,7 +549,15 @@
     "freq": "",
     "Lat": -8.12639045715332,
     "Lon": 157.14300537109375,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGRC",
+    "iso_country": "SB",
+    "icao_code": "AGRC",
+    "iata_code": "RIN",
+    "length_ft": 2461,
+    "width_ft": 75,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -312,7 +566,14 @@
     "freq": "",
     "Lat": -8.168060302734375,
     "Lon": 157.64300537109375,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AGRM",
+    "iso_country": "SB",
+    "icao_code": "AGRM",
+    "iata_code": "RBV",
+    "length_ft": 2500,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -321,6 +582,10 @@
     "freq": "",
     "Lat": -8.508457,
     "Lon": 157.689986,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "SB-VIU",
+    "iso_country": "SB",
+    "icao_code": "AGVH",
+    "iata_code": "VIU"
   }
 ]

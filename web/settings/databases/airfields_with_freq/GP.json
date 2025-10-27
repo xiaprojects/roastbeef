@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 16.296902,
     "Lon": -61.0844,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "TFFA",
+    "iso_country": "GP",
+    "icao_code": "TFFA",
+    "iata_code": "DSD",
+    "length_ft": 1985,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -15,7 +22,11 @@
     "freq": "",
     "Lat": 16.013648,
     "Lon": -61.742928,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "TFFB",
+    "iso_country": "GP",
+    "icao_code": "TFFB",
+    "iata_code": "BBR"
   },
   {
     "type": "small_airport",
@@ -24,7 +35,11 @@
     "freq": "",
     "Lat": 16.257799,
     "Lon": -61.262501,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "TFFC",
+    "iso_country": "GP",
+    "icao_code": "TFFC",
+    "iata_code": "SFC"
   },
   {
     "type": "medium_airport",
@@ -33,7 +48,15 @@
     "freq": "119.300",
     "Lat": 15.868925,
     "Lon": -61.270087,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "TFFM",
+    "iso_country": "GP",
+    "icao_code": "TFFM",
+    "iata_code": "GBJ",
+    "length_ft": 4068,
+    "width_ft": 98,
+    "heading": 78.3,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -42,7 +65,15 @@
     "freq": "121.300",
     "Lat": 16.265301,
     "Lon": -61.531799,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "TFFR",
+    "iso_country": "GP",
+    "icao_code": "TFFR",
+    "iata_code": "PTP",
+    "length_ft": 11499,
+    "width_ft": 148,
+    "heading": 101,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -51,6 +82,14 @@
     "freq": "",
     "Lat": 15.86439991,
     "Lon": -61.5806007385,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "TFFS",
+    "iso_country": "GP",
+    "icao_code": "TFFS",
+    "iata_code": "LSS",
+    "length_ft": 1786,
+    "width_ft": 49,
+    "heading": 78,
+    "QFU": "27"
   }
 ]

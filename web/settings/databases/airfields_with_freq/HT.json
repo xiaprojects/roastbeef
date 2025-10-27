@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 18.841212,
     "Lon": -72.880232,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "HT-0002",
+    "iso_country": "HT"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 19.13874,
     "Lon": -72.016,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0003",
+    "iso_country": "HT"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 18.07058,
     "Lon": -73.59194,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0004",
+    "iso_country": "HT"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,12 @@
     "freq": "",
     "Lat": 19.66631,
     "Lon": -73.07227,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0005",
+    "iso_country": "HT",
+    "length_ft": 1936,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -42,7 +53,10 @@
     "freq": "",
     "Lat": 18.616667,
     "Lon": -74.416667,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0007",
+    "iso_country": "HT",
+    "local_code": "DMM"
   },
   {
     "type": "small_airport",
@@ -51,7 +65,9 @@
     "freq": "",
     "Lat": 18.286235,
     "Lon": -73.111922,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0008",
+    "iso_country": "HT"
   },
   {
     "type": "small_airport",
@@ -60,7 +76,9 @@
     "freq": "",
     "Lat": 19.834269,
     "Lon": -73.358116,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "HT-0009",
+    "iso_country": "HT"
   },
   {
     "type": "small_airport",
@@ -69,7 +87,10 @@
     "freq": "",
     "Lat": 19.5375,
     "Lon": -71.72861,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0010",
+    "iso_country": "HT",
+    "local_code": "OAN"
   },
   {
     "type": "small_airport",
@@ -78,7 +99,10 @@
     "freq": "",
     "Lat": 19.68055,
     "Lon": -71.90555,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0011",
+    "iso_country": "HT",
+    "local_code": "FLT"
   },
   {
     "type": "small_airport",
@@ -87,7 +111,9 @@
     "freq": "",
     "Lat": 19.32361,
     "Lon": -72.11666,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0012",
+    "iso_country": "HT"
   },
   {
     "type": "small_airport",
@@ -96,7 +122,9 @@
     "freq": "",
     "Lat": 18.06444,
     "Lon": -73.9125,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HT-0013",
+    "iso_country": "HT"
   },
   {
     "type": "medium_airport",
@@ -105,7 +133,15 @@
     "freq": "118.500",
     "Lat": 18.271099,
     "Lon": -73.7883,
-    "Ele": 61.9
+    "Ele": 61.9,
+    "ident": "MTCA",
+    "iso_country": "HT",
+    "icao_code": "MTCA",
+    "iata_code": "CYA",
+    "length_ft": 3220,
+    "width_ft": 80,
+    "heading": 75,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -114,7 +150,15 @@
     "freq": "118.700",
     "Lat": 19.726734,
     "Lon": -72.199576,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MTCH",
+    "iso_country": "HT",
+    "icao_code": "MTCH",
+    "iata_code": "CAP",
+    "length_ft": 8701,
+    "width_ft": 148,
+    "heading": 39,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -123,7 +167,15 @@
     "freq": "118.500",
     "Lat": 18.2411,
     "Lon": -72.518501,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "MTJA",
+    "iso_country": "HT",
+    "icao_code": "MTJA",
+    "iata_code": "JAK",
+    "length_ft": 3300,
+    "width_ft": 95,
+    "heading": 5,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -132,7 +184,13 @@
     "freq": "",
     "Lat": 18.663099,
     "Lon": -74.170303,
-    "Ele": 44.8
+    "Ele": 44.8,
+    "ident": "MTJE",
+    "iso_country": "HT",
+    "icao_code": "MTJE",
+    "iata_code": "JEE",
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "large_airport",
@@ -141,7 +199,15 @@
     "freq": "119.800",
     "Lat": 18.580023,
     "Lon": -72.292596,
-    "Ele": 37.2
+    "Ele": 37.2,
+    "ident": "MTPP",
+    "iso_country": "HT",
+    "icao_code": "MTPP",
+    "iata_code": "PAP",
+    "length_ft": 9974,
+    "width_ft": 141,
+    "heading": 87,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -150,6 +216,13 @@
     "freq": "",
     "Lat": 19.934045,
     "Lon": -72.84801,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "MTPX",
+    "iso_country": "HT",
+    "icao_code": "MTPX",
+    "iata_code": "PAX",
+    "length_ft": 2100,
+    "QFU": "23",
+    "heading": 230
   }
 ]

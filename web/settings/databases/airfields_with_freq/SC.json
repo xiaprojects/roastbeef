@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": -7.00478,
     "Lon": 52.7262,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSAL",
+    "iso_country": "SC",
+    "icao_code": "FSAL",
+    "length_ft": 3983,
+    "width_ft": 75,
+    "heading": 144.9,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -15,7 +22,14 @@
     "freq": "",
     "Lat": -9.74222,
     "Lon": 46.506802,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSAS",
+    "iso_country": "SC",
+    "icao_code": "FSAS",
+    "length_ft": 1210,
+    "width_ft": 100,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -24,7 +38,10 @@
     "freq": "",
     "Lat": -5.417354,
     "Lon": 53.295536,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSDA",
+    "iso_country": "SC",
+    "icao_code": "FSDA"
   },
   {
     "type": "small_airport",
@@ -33,7 +50,15 @@
     "freq": "",
     "Lat": -5.6967,
     "Lon": 53.6558,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSDR",
+    "iso_country": "SC",
+    "icao_code": "FSDR",
+    "iata_code": "DES",
+    "length_ft": 4531,
+    "width_ft": 33,
+    "heading": 110,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -42,7 +67,14 @@
     "freq": "",
     "Lat": -10.1096,
     "Lon": 51.176102,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSFA",
+    "iso_country": "SC",
+    "icao_code": "FSFA",
+    "length_ft": 3035,
+    "width_ft": 75,
+    "heading": 128,
+    "QFU": "31"
   },
   {
     "type": "large_airport",
@@ -51,7 +83,15 @@
     "freq": "119.700",
     "Lat": -4.67434,
     "Lon": 55.521801,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSIA",
+    "iso_country": "SC",
+    "icao_code": "FSIA",
+    "iata_code": "SEZ",
+    "length_ft": 9800,
+    "width_ft": 151,
+    "heading": 125,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -60,7 +100,10 @@
     "freq": "",
     "Lat": -6.177405,
     "Lon": 53.145429,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "FSMA",
+    "iso_country": "SC",
+    "icao_code": "FSMA"
   },
   {
     "type": "small_airport",
@@ -69,7 +112,10 @@
     "freq": "",
     "Lat": -5.863604,
     "Lon": 55.384541,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "FSPL",
+    "iso_country": "SC",
+    "icao_code": "FSPL"
   },
   {
     "type": "medium_airport",
@@ -78,7 +124,15 @@
     "freq": "121.800",
     "Lat": -4.319256,
     "Lon": 55.691561,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSPP",
+    "iso_country": "SC",
+    "icao_code": "FSPP",
+    "iata_code": "PRI",
+    "length_ft": 4318,
+    "width_ft": 104,
+    "heading": 149,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -87,7 +141,9 @@
     "freq": "",
     "Lat": -10.061373,
     "Lon": 47.749765,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FSSA",
+    "iso_country": "SC"
   },
   {
     "type": "small_airport",
@@ -96,7 +152,11 @@
     "freq": "",
     "Lat": -3.723683,
     "Lon": 55.206106,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "FSSB",
+    "iso_country": "SC",
+    "icao_code": "FSSB",
+    "iata_code": "BDI"
   },
   {
     "type": "small_airport",
@@ -105,7 +165,11 @@
     "freq": "",
     "Lat": -7.13457,
     "Lon": 56.278198,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSSC",
+    "iso_country": "SC",
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -114,7 +178,11 @@
     "freq": "",
     "Lat": -3.802067,
     "Lon": 55.667439,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FSSD",
+    "iso_country": "SC",
+    "icao_code": "FSSD",
+    "iata_code": "DEI"
   },
   {
     "type": "small_airport",
@@ -123,7 +191,11 @@
     "freq": "",
     "Lat": -4.582785,
     "Lon": 55.944928,
-    "Ele": 185.9
+    "Ele": 185.9,
+    "ident": "FSSF",
+    "iso_country": "SC",
+    "icao_code": "FSSF",
+    "iata_code": "FRK"
   },
   {
     "type": "small_airport",
@@ -132,7 +204,10 @@
     "freq": "",
     "Lat": -5.11722,
     "Lon": 53.312199,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "FSSR",
+    "iso_country": "SC",
+    "icao_code": "FSSR"
   },
   {
     "type": "small_airport",
@@ -141,6 +216,8 @@
     "freq": "",
     "Lat": -5.746533,
     "Lon": 53.305593,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SC-0007",
+    "iso_country": "SC"
   }
 ]

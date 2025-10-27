@@ -6,7 +6,13 @@
     "freq": "",
     "Lat": 46.803936,
     "Lon": 20.527838,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "HU-0001",
+    "iso_country": "HU",
+    "length_ft": 2133,
+    "width_ft": 230,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -15,7 +21,14 @@
     "freq": "135.390",
     "Lat": 46.55149,
     "Lon": 18.942299,
-    "Ele": 91.1
+    "Ele": 91.1,
+    "ident": "HU-0002",
+    "iso_country": "HU",
+    "icao_code": "LHKA",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -24,7 +37,9 @@
     "freq": "",
     "Lat": 46.800343,
     "Lon": 19.68257,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "HU-0003",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -33,7 +48,13 @@
     "freq": "123.200",
     "Lat": 46.322651,
     "Lon": 20.053209,
-    "Ele": 76.5
+    "Ele": 76.5,
+    "ident": "HU-0006",
+    "iso_country": "HU",
+    "length_ft": 2600,
+    "width_ft": 160,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -42,7 +63,9 @@
     "freq": "",
     "Lat": 47.129833,
     "Lon": 18.50029,
-    "Ele": 119.5
+    "Ele": 119.5,
+    "ident": "HU-0007",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -51,7 +74,9 @@
     "freq": "",
     "Lat": 47.493935,
     "Lon": 16.897216,
-    "Ele": 151.5
+    "Ele": 151.5,
+    "ident": "HU-0008",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -60,7 +85,9 @@
     "freq": "",
     "Lat": 47.390839,
     "Lon": 20.785009,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "HU-0010",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -69,7 +96,9 @@
     "freq": "",
     "Lat": 46.809114,
     "Lon": 17.19974,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "HU-0012",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -78,7 +107,9 @@
     "freq": "",
     "Lat": 46.145347,
     "Lon": 19.043172,
-    "Ele": 115.2
+    "Ele": 115.2,
+    "ident": "HU-0013",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -87,7 +118,9 @@
     "freq": "",
     "Lat": 46.693034,
     "Lon": 17.397773,
-    "Ele": 102.7
+    "Ele": 102.7,
+    "ident": "HU-0014",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -96,7 +129,9 @@
     "freq": "",
     "Lat": 47.271801,
     "Lon": 17.4105,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "HU-0015",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -105,7 +140,9 @@
     "freq": "",
     "Lat": 46.8618,
     "Lon": 19.5566,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "HU-0016",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -114,7 +151,13 @@
     "freq": "",
     "Lat": 47.6672,
     "Lon": 17.784801,
-    "Ele": 149.4
+    "Ele": 149.4,
+    "ident": "HU-0017",
+    "iso_country": "HU",
+    "length_ft": 2461,
+    "width_ft": 167,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -123,7 +166,9 @@
     "freq": "",
     "Lat": 47.0065,
     "Lon": 18.21188,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0018",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -132,7 +177,9 @@
     "freq": "",
     "Lat": 48.025531,
     "Lon": 19.805066,
-    "Ele": 264.9
+    "Ele": 264.9,
+    "ident": "HU-0019",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -141,7 +188,9 @@
     "freq": "",
     "Lat": 47.932748,
     "Lon": 19.122283,
-    "Ele": 219.2
+    "Ele": 219.2,
+    "ident": "HU-0020",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -150,7 +199,13 @@
     "freq": "",
     "Lat": 46.874977,
     "Lon": 18.039036,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "HU-0021",
+    "iso_country": "HU",
+    "length_ft": 2034,
+    "width_ft": 59,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -159,7 +214,14 @@
     "freq": "",
     "Lat": 46.384444,
     "Lon": 20.308333,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "HU-0023",
+    "iso_country": "HU",
+    "icao_code": "LHHM",
+    "length_ft": 2608,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -168,7 +230,9 @@
     "freq": "",
     "Lat": 46.57687,
     "Lon": 19.99022,
-    "Ele": 89.0
+    "Ele": 89,
+    "ident": "HU-0024",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -177,7 +241,13 @@
     "freq": "",
     "Lat": 46.760514,
     "Lon": 17.689823,
-    "Ele": 128.9
+    "Ele": 128.9,
+    "ident": "HU-0025",
+    "iso_country": "HU",
+    "length_ft": 580,
+    "width_ft": 95,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -186,7 +256,9 @@
     "freq": "",
     "Lat": 47.500436,
     "Lon": 19.504709,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "HU-0026",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -195,7 +267,9 @@
     "freq": "",
     "Lat": 46.79941,
     "Lon": 17.11188,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "HU-0027",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -204,7 +278,9 @@
     "freq": "",
     "Lat": 47.9327379,
     "Lon": 19.7747449,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0028",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -213,7 +289,13 @@
     "freq": "129.985",
     "Lat": 47.720908,
     "Lon": 19.904652,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "HU-0029",
+    "iso_country": "HU",
+    "length_ft": 2630,
+    "width_ft": 200,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -222,7 +304,9 @@
     "freq": "",
     "Lat": 46.8687,
     "Lon": 17.407322,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0030",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -231,7 +315,9 @@
     "freq": "",
     "Lat": 46.784913,
     "Lon": 17.378794,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0031",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -240,7 +326,9 @@
     "freq": "",
     "Lat": 46.296989,
     "Lon": 20.813389,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0032",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -249,7 +337,14 @@
     "freq": "133.425",
     "Lat": 47.142891,
     "Lon": 17.997437,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0033",
+    "iso_country": "HU",
+    "icao_code": "LHHK",
+    "length_ft": 1427,
+    "width_ft": 164,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -258,7 +353,9 @@
     "freq": "",
     "Lat": 47.774341,
     "Lon": 19.062484,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "HU-0035",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -267,7 +364,13 @@
     "freq": "",
     "Lat": 48.318035,
     "Lon": 21.586117,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "HU-0036",
+    "iso_country": "HU",
+    "length_ft": 3281,
+    "width_ft": 98,
+    "heading": 129,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -276,7 +379,9 @@
     "freq": "",
     "Lat": 47.263641,
     "Lon": 19.313225,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0038",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -285,7 +390,9 @@
     "freq": "",
     "Lat": 46.9112958,
     "Lon": 20.7615195,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0039",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -294,7 +401,13 @@
     "freq": "",
     "Lat": 46.36935,
     "Lon": 19.477426,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "HU-0040",
+    "iso_country": "HU",
+    "length_ft": 1967,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -303,7 +416,9 @@
     "freq": "",
     "Lat": 47.264102,
     "Lon": 19.173974,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0041",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -312,7 +427,9 @@
     "freq": "",
     "Lat": 46.546667,
     "Lon": 19.96,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0042",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -321,7 +438,9 @@
     "freq": "",
     "Lat": 46.251378,
     "Lon": 19.949197,
-    "Ele": 89.0
+    "Ele": 89,
+    "ident": "HU-0043",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -330,7 +449,9 @@
     "freq": "",
     "Lat": 47.011512,
     "Lon": 20.982331,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0044",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -339,7 +460,9 @@
     "freq": "",
     "Lat": 47.521857,
     "Lon": 20.16257,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "HU-0046",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -348,7 +471,9 @@
     "freq": "",
     "Lat": 46.11381,
     "Lon": 19.48895,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "HU-0047",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -357,7 +482,9 @@
     "freq": "",
     "Lat": 47.1336,
     "Lon": 17.640073,
-    "Ele": 402.0
+    "Ele": 402,
+    "ident": "HU-0049",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -366,7 +493,9 @@
     "freq": "",
     "Lat": 46.96852,
     "Lon": 17.84473,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0050",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -375,7 +504,9 @@
     "freq": "",
     "Lat": 46.57223,
     "Lon": 19.42941,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0051",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -384,7 +515,9 @@
     "freq": "",
     "Lat": 46.432148,
     "Lon": 16.778913,
-    "Ele": 139.0
+    "Ele": 139,
+    "ident": "HU-0052",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -393,7 +526,9 @@
     "freq": "",
     "Lat": 47.03787,
     "Lon": 17.78407,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0054",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -402,7 +537,9 @@
     "freq": "",
     "Lat": 47.259864,
     "Lon": 17.838192,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0055",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -411,7 +548,9 @@
     "freq": "",
     "Lat": 47.771461,
     "Lon": 21.815028,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "HU-0056",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -420,7 +559,9 @@
     "freq": "",
     "Lat": 46.65295,
     "Lon": 20.96272,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0061",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -429,7 +570,9 @@
     "freq": "",
     "Lat": 47.43479,
     "Lon": 18.78092,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0062",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -438,7 +581,9 @@
     "freq": "",
     "Lat": 47.01397,
     "Lon": 20.28573,
-    "Ele": -0.6
+    "Ele": -0.6,
+    "ident": "HU-0063",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -447,7 +592,9 @@
     "freq": "",
     "Lat": 47.89016,
     "Lon": 17.34828,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "HU-0064",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -456,7 +603,9 @@
     "freq": "",
     "Lat": 47.49786,
     "Lon": 19.4594,
-    "Ele": 178.0
+    "Ele": 178,
+    "ident": "HU-0070",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -465,7 +614,9 @@
     "freq": "",
     "Lat": 47.25452,
     "Lon": 18.64159,
-    "Ele": 125.9
+    "Ele": 125.9,
+    "ident": "HU-0071",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -474,7 +625,10 @@
     "freq": "",
     "Lat": 47.30361,
     "Lon": 19.52895,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HU-0080",
+    "iso_country": "HU",
+    "icao_code": "LHPL"
   },
   {
     "type": "small_airport",
@@ -483,7 +637,13 @@
     "freq": "",
     "Lat": 46.373168,
     "Lon": 17.428007,
-    "Ele": 143.0
+    "Ele": 143,
+    "ident": "LH0",
+    "iso_country": "HU",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -492,7 +652,13 @@
     "freq": "123.260",
     "Lat": 46.677132,
     "Lon": 21.161188,
-    "Ele": 87.2
+    "Ele": 87.2,
+    "ident": "LHBC",
+    "iso_country": "HU",
+    "length_ft": 2591,
+    "width_ft": 131,
+    "heading": 174,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -501,7 +667,9 @@
     "freq": "",
     "Lat": 47.3848,
     "Lon": 16.80264,
-    "Ele": 166.1
+    "Ele": 166.1,
+    "ident": "LHBF",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -510,7 +678,9 @@
     "freq": "",
     "Lat": 47.137425,
     "Lon": 21.675425,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "LHBI",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -519,7 +689,9 @@
     "freq": "",
     "Lat": 46.153445,
     "Lon": 19.149051,
-    "Ele": 156.1
+    "Ele": 156.1,
+    "ident": "LHBO",
+    "iso_country": "HU"
   },
   {
     "type": "large_airport",
@@ -528,7 +700,15 @@
     "freq": "129.700",
     "Lat": 47.43018,
     "Lon": 19.262393,
-    "Ele": 150.9
+    "Ele": 150.9,
+    "ident": "LHBP",
+    "iso_country": "HU",
+    "icao_code": "LHBP",
+    "iata_code": "BUD",
+    "length_ft": 9875,
+    "width_ft": 148,
+    "heading": 132,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -537,7 +717,13 @@
     "freq": "",
     "Lat": 47.451099,
     "Lon": 18.9806,
-    "Ele": 121.0
+    "Ele": 121,
+    "ident": "LHBS",
+    "iso_country": "HU",
+    "length_ft": 3215,
+    "width_ft": 197,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -546,7 +732,9 @@
     "freq": "",
     "Lat": 47.162621,
     "Lon": 19.877401,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "LHCL",
+    "iso_country": "HU"
   },
   {
     "type": "medium_airport",
@@ -555,7 +743,15 @@
     "freq": "125.900",
     "Lat": 47.488899,
     "Lon": 21.615299,
-    "Ele": 109.4
+    "Ele": 109.4,
+    "ident": "LHDC",
+    "iso_country": "HU",
+    "icao_code": "LHDC",
+    "iata_code": "DEB",
+    "length_ft": 8087,
+    "width_ft": 230,
+    "heading": 48,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -564,7 +760,9 @@
     "freq": "",
     "Lat": 47.613899,
     "Lon": 19.143299,
-    "Ele": 121.0
+    "Ele": 121,
+    "ident": "LHDK",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -573,7 +771,9 @@
     "freq": "",
     "Lat": 46.895802,
     "Lon": 18.9139,
-    "Ele": 120.1
+    "Ele": 120.1,
+    "ident": "LHDV",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -582,7 +782,12 @@
     "freq": "128.650",
     "Lat": 47.756811,
     "Lon": 18.730459,
-    "Ele": 104.2
+    "Ele": 104.2,
+    "ident": "LHEM",
+    "iso_country": "HU",
+    "length_ft": 3281,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -591,7 +796,12 @@
     "freq": "",
     "Lat": 47.9052,
     "Lon": 20.4055,
-    "Ele": 240.8
+    "Ele": 240.8,
+    "ident": "LHER",
+    "iso_country": "HU",
+    "length_ft": 2623,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -600,7 +810,9 @@
     "freq": "",
     "Lat": 47.444629,
     "Lon": 18.557102,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "LHFC",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -609,7 +821,9 @@
     "freq": "",
     "Lat": 47.4869,
     "Lon": 18.9147,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "LHFH",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -618,7 +832,13 @@
     "freq": "124.450",
     "Lat": 47.582802,
     "Lon": 16.8454,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "LHFM",
+    "iso_country": "HU",
+    "length_ft": 3232,
+    "width_ft": 75,
+    "heading": 158.5,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -627,7 +847,9 @@
     "freq": "",
     "Lat": 47.744444,
     "Lon": 16.614167,
-    "Ele": 148.1
+    "Ele": 148.1,
+    "ident": "LHFP",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -636,7 +858,14 @@
     "freq": "118.650",
     "Lat": 47.571662,
     "Lon": 19.336796,
-    "Ele": 217.9
+    "Ele": 217.9,
+    "ident": "LHGD",
+    "iso_country": "HU",
+    "icao_code": "LHGD",
+    "length_ft": 3280,
+    "width_ft": 190,
+    "heading": 128,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -645,7 +874,14 @@
     "freq": "",
     "Lat": 47.391333,
     "Lon": 18.756989,
-    "Ele": 195.1
+    "Ele": 195.1,
+    "ident": "LHGR",
+    "iso_country": "HU",
+    "icao_code": "LHGR",
+    "length_ft": 2789,
+    "width_ft": 656,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -654,7 +890,14 @@
     "freq": "",
     "Lat": 47.814279,
     "Lon": 19.976792,
-    "Ele": 350.5
+    "Ele": 350.5,
+    "ident": "LHGY",
+    "iso_country": "HU",
+    "icao_code": "LHGY",
+    "length_ft": 2493,
+    "width_ft": 394,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -663,7 +906,14 @@
     "freq": "",
     "Lat": 47.551503,
     "Lon": 18.976386,
-    "Ele": 292.6
+    "Ele": 292.6,
+    "ident": "LHHH",
+    "iso_country": "HU",
+    "icao_code": "LHHH",
+    "length_ft": 3281,
+    "width_ft": 328,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -672,7 +922,14 @@
     "freq": "",
     "Lat": 47.459717,
     "Lon": 21.390904,
-    "Ele": 102.1
+    "Ele": 102.1,
+    "ident": "LHHO",
+    "iso_country": "HU",
+    "icao_code": "LHHO",
+    "length_ft": 3281,
+    "width_ft": 164,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -681,7 +938,14 @@
     "freq": "",
     "Lat": 46.747855,
     "Lon": 19.604754,
-    "Ele": 106.1
+    "Ele": 106.1,
+    "ident": "LHJK",
+    "iso_country": "HU",
+    "icao_code": "LHJK",
+    "length_ft": 3281,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -690,7 +954,14 @@
     "freq": "120.610",
     "Lat": 47.517121,
     "Lon": 18.325024,
-    "Ele": 173.7
+    "Ele": 173.7,
+    "ident": "LHKD",
+    "iso_country": "HU",
+    "icao_code": "LHKD",
+    "length_ft": 3937,
+    "width_ft": 82,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -699,7 +970,14 @@
     "freq": "120.250",
     "Lat": 46.9175,
     "Lon": 19.749201,
-    "Ele": 114.6
+    "Ele": 114.6,
+    "ident": "LHKE",
+    "iso_country": "HU",
+    "icao_code": "LHKE",
+    "length_ft": 8200,
+    "width_ft": 197,
+    "heading": 123,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -708,7 +986,13 @@
     "freq": "118.850",
     "Lat": 46.733101,
     "Lon": 19.893299,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "LHKH",
+    "iso_country": "HU",
+    "length_ft": 1760,
+    "width_ft": 300,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -717,7 +1001,9 @@
     "freq": "",
     "Lat": 46.656791,
     "Lon": 19.242997,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "LHKI",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -726,7 +1012,13 @@
     "freq": "124.035",
     "Lat": 47.174484,
     "Lon": 19.077501,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "LHKK",
+    "iso_country": "HU",
+    "length_ft": 2608,
+    "width_ft": 147,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -735,7 +1027,13 @@
     "freq": "",
     "Lat": 46.247418,
     "Lon": 17.607822,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LHKT",
+    "iso_country": "HU",
+    "length_ft": 2625,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -744,7 +1042,13 @@
     "freq": "125.060",
     "Lat": 46.386398,
     "Lon": 17.733479,
-    "Ele": 152.1
+    "Ele": 152.1,
+    "ident": "LHKV",
+    "iso_country": "HU",
+    "length_ft": 3937,
+    "width_ft": 656,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -753,7 +1057,9 @@
     "freq": "",
     "Lat": 47.8575,
     "Lon": 17.448333,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "LHLI",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -762,7 +1068,9 @@
     "freq": "",
     "Lat": 47.811857,
     "Lon": 20.422254,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "LHMR",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -771,7 +1079,13 @@
     "freq": "",
     "Lat": 46.428304,
     "Lon": 16.957569,
-    "Ele": 142.0
+    "Ele": 142,
+    "ident": "LHNK",
+    "iso_country": "HU",
+    "length_ft": 3281,
+    "width_ft": 328,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -780,7 +1094,9 @@
     "freq": "",
     "Lat": 46.698056,
     "Lon": 20.668611,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LHNS",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -789,7 +1105,13 @@
     "freq": "127.600",
     "Lat": 47.983898,
     "Lon": 21.692301,
-    "Ele": 103.0
+    "Ele": 103,
+    "ident": "LHNY",
+    "iso_country": "HU",
+    "length_ft": 3281,
+    "width_ft": 66,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -798,7 +1120,13 @@
     "freq": "",
     "Lat": 46.306138,
     "Lon": 18.767386,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "LHOY",
+    "iso_country": "HU",
+    "length_ft": 5249,
+    "width_ft": 984,
+    "heading": 175,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -807,7 +1135,12 @@
     "freq": "",
     "Lat": 47.363602,
     "Lon": 17.500799,
-    "Ele": 142.0
+    "Ele": 142,
+    "ident": "LHPA",
+    "iso_country": "HU",
+    "length_ft": 7869,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -816,7 +1149,15 @@
     "freq": "126.900",
     "Lat": 45.988891,
     "Lon": 18.242044,
-    "Ele": 198.4
+    "Ele": 198.4,
+    "ident": "LHPP",
+    "iso_country": "HU",
+    "icao_code": "LHPP",
+    "iata_code": "PEV",
+    "length_ft": 4922,
+    "width_ft": 98,
+    "heading": 157,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -825,7 +1166,14 @@
     "freq": "129.900",
     "Lat": 47.628436,
     "Lon": 17.804718,
-    "Ele": 129.2
+    "Ele": 129.2,
+    "ident": "LHPR",
+    "iso_country": "HU",
+    "icao_code": "LHPR",
+    "length_ft": 3720,
+    "width_ft": 140,
+    "heading": 119.2,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -834,7 +1182,13 @@
     "freq": "127.000",
     "Lat": 47.0779,
     "Lon": 17.968399,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "LHSA",
+    "iso_country": "HU",
+    "length_ft": 5365,
+    "width_ft": 200,
+    "heading": 161.8,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -843,7 +1197,9 @@
     "freq": "",
     "Lat": 46.900278,
     "Lon": 19.366389,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "LHSB",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -852,7 +1208,9 @@
     "freq": "",
     "Lat": 47.234558,
     "Lon": 17.027178,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LHSI",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -861,7 +1219,12 @@
     "freq": "",
     "Lat": 46.856899,
     "Lon": 18.0958,
-    "Ele": 127.1
+    "Ele": 127.1,
+    "ident": "LHSK",
+    "iso_country": "HU",
+    "length_ft": 6562,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -870,7 +1233,15 @@
     "freq": "127.600",
     "Lat": 46.686391,
     "Lon": 17.159084,
-    "Ele": 124.4
+    "Ele": 124.4,
+    "ident": "LHSM",
+    "iso_country": "HU",
+    "icao_code": "LHSM",
+    "iata_code": "SOB",
+    "length_ft": 3100,
+    "width_ft": 212,
+    "heading": 167,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -879,7 +1250,13 @@
     "freq": "129.000",
     "Lat": 47.122897,
     "Lon": 20.2355,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "LHSN",
+    "iso_country": "HU",
+    "length_ft": 6562,
+    "width_ft": 229,
+    "heading": 21,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -888,7 +1265,9 @@
     "freq": "",
     "Lat": 47.144402,
     "Lon": 20.1978,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "LHSS",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -897,7 +1276,9 @@
     "freq": "",
     "Lat": 47.199968,
     "Lon": 20.481934,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LHSU",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -906,7 +1287,9 @@
     "freq": "",
     "Lat": 47.279999,
     "Lon": 16.6264,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "LHSY",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -915,7 +1298,12 @@
     "freq": "123.810",
     "Lat": 46.6133,
     "Lon": 20.282801,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "LHSZ",
+    "iso_country": "HU",
+    "length_ft": 2500,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -924,7 +1312,12 @@
     "freq": "",
     "Lat": 46.393101,
     "Lon": 17.9175,
-    "Ele": 161.8
+    "Ele": 161.8,
+    "ident": "LHTA",
+    "iso_country": "HU",
+    "length_ft": 8205,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -933,7 +1326,13 @@
     "freq": "127.550",
     "Lat": 47.345299,
     "Lon": 18.980801,
-    "Ele": 96.9
+    "Ele": 96.9,
+    "ident": "LHTL",
+    "iso_country": "HU",
+    "length_ft": 5800,
+    "width_ft": 197,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -942,7 +1341,9 @@
     "freq": "",
     "Lat": 47.310956,
     "Lon": 19.777364,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LHTM",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -951,7 +1352,13 @@
     "freq": "122.810",
     "Lat": 46.245127,
     "Lon": 20.092217,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "LHUD",
+    "iso_country": "HU",
+    "length_ft": 4921,
+    "QFU": "36",
+    "width_ft": 98,
+    "heading": 168
   },
   {
     "type": "small_airport",
@@ -960,7 +1367,13 @@
     "freq": "135.700",
     "Lat": 47.128198,
     "Lon": 18.312986,
-    "Ele": 192.9
+    "Ele": 192.9,
+    "ident": "LHUH",
+    "iso_country": "HU",
+    "length_ft": 2297,
+    "width_ft": 102,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -969,7 +1382,9 @@
     "freq": "",
     "Lat": 47.638107,
     "Lon": 19.255007,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LHVE",
+    "iso_country": "HU"
   },
   {
     "type": "small_airport",
@@ -978,7 +1393,14 @@
     "freq": "0.000",
     "Lat": 46.884701,
     "Lon": 16.7889,
-    "Ele": 188.1
+    "Ele": 188.1,
+    "ident": "LHZA",
+    "iso_country": "HU",
+    "icao_code": "LHZA",
+    "length_ft": 4921,
+    "width_ft": 82,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -987,6 +1409,13 @@
     "freq": "134.585",
     "Lat": 46.5539,
     "Lon": 17.15118,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "LHZK",
+    "iso_country": "HU",
+    "icao_code": "LHZK",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "heading": 29,
+    "QFU": "20"
   }
 ]

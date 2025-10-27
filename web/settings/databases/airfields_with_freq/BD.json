@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 22.7389,
     "Lon": 91.06489,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "BD-0019",
+    "iso_country": "BD"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 22.37647,
     "Lon": 90.32213,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BD-0022",
+    "iso_country": "BD"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 24.8668,
     "Lon": 89.3165,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "VGBG",
+    "iso_country": "BD"
   },
   {
     "type": "medium_airport",
@@ -33,7 +39,15 @@
     "freq": "122.900",
     "Lat": 22.801001,
     "Lon": 90.301201,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "VGBR",
+    "iso_country": "BD",
+    "icao_code": "VGBR",
+    "iata_code": "BZL",
+    "length_ft": 5995,
+    "width_ft": 100,
+    "heading": 173.9,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -42,7 +56,15 @@
     "freq": "129.500",
     "Lat": 21.457517,
     "Lon": 91.963263,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "VGCB",
+    "iso_country": "BD",
+    "icao_code": "VGCB",
+    "iata_code": "CXB",
+    "length_ft": 6790,
+    "width_ft": 125,
+    "heading": 169,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -51,7 +73,11 @@
     "freq": "",
     "Lat": 23.440133,
     "Lon": 91.188685,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "VGCM",
+    "iso_country": "BD",
+    "icao_code": "VGCM",
+    "iata_code": "CLA"
   },
   {
     "type": "medium_airport",
@@ -60,7 +86,15 @@
     "freq": "127.600",
     "Lat": 22.249599,
     "Lon": 91.813301,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "VGEG",
+    "iso_country": "BD",
+    "icao_code": "VGEG",
+    "iata_code": "CGP",
+    "length_ft": 9646,
+    "width_ft": 150,
+    "heading": 48.4,
+    "QFU": "23"
   },
   {
     "type": "large_airport",
@@ -69,7 +103,16 @@
     "freq": "121.300",
     "Lat": 23.843347,
     "Lon": 90.397783,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "VGHS",
+    "iso_country": "BD",
+    "icao_code": "VGHS",
+    "iata_code": "DAC",
+    "local_code": "5500",
+    "length_ft": 11500,
+    "width_ft": 150,
+    "heading": 144,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -78,7 +121,15 @@
     "freq": "122.900",
     "Lat": 24.1525,
     "Lon": 89.0494,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "VGIS",
+    "iso_country": "BD",
+    "icao_code": "VGIS",
+    "iata_code": "IRD",
+    "length_ft": 4700,
+    "width_ft": 80,
+    "heading": 154,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -87,7 +138,15 @@
     "freq": "123.200",
     "Lat": 23.1838,
     "Lon": 89.160797,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VGJR",
+    "iso_country": "BD",
+    "icao_code": "VGJR",
+    "iata_code": "JSR",
+    "length_ft": 8000,
+    "width_ft": 150,
+    "heading": 157.5,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -96,7 +155,10 @@
     "freq": "",
     "Lat": 25.887624,
     "Lon": 89.431254,
-    "Ele": 32.3
+    "Ele": 32.3,
+    "ident": "VGLM",
+    "iso_country": "BD",
+    "icao_code": "VGLM"
   },
   {
     "type": "medium_airport",
@@ -105,7 +167,15 @@
     "freq": "122.900",
     "Lat": 24.437201,
     "Lon": 88.616501,
-    "Ele": 19.5
+    "Ele": 19.5,
+    "ident": "VGRJ",
+    "iso_country": "BD",
+    "icao_code": "VGRJ",
+    "iata_code": "RJH",
+    "length_ft": 6000,
+    "width_ft": 100,
+    "heading": 170.1,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -114,7 +184,15 @@
     "freq": "122.900",
     "Lat": 25.759199,
     "Lon": 88.908897,
-    "Ele": 38.1
+    "Ele": 38.1,
+    "ident": "VGSD",
+    "iso_country": "BD",
+    "icao_code": "VGSD",
+    "iata_code": "SPD",
+    "length_ft": 6000,
+    "width_ft": 100,
+    "heading": 159.6,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -123,7 +201,11 @@
     "freq": "",
     "Lat": 26.016378,
     "Lon": 88.402092,
-    "Ele": 53.6
+    "Ele": 53.6,
+    "ident": "VGSG",
+    "iso_country": "BD",
+    "icao_code": "VGSG",
+    "iata_code": "TKR"
   },
   {
     "type": "small_airport",
@@ -132,7 +214,11 @@
     "freq": "",
     "Lat": 24.398333,
     "Lon": 91.916944,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "VGSH",
+    "iso_country": "BD",
+    "icao_code": "VGSH",
+    "iata_code": "ZHM"
   },
   {
     "type": "medium_airport",
@@ -141,7 +227,15 @@
     "freq": "122.900",
     "Lat": 24.963832,
     "Lon": 91.864843,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "VGSY",
+    "iso_country": "BD",
+    "icao_code": "VGSY",
+    "iata_code": "ZYL",
+    "length_ft": 9478,
+    "width_ft": 150,
+    "heading": 113,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -150,6 +244,13 @@
     "freq": "123.000",
     "Lat": 23.778507,
     "Lon": 90.382719,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "VGTJ",
+    "iso_country": "BD",
+    "icao_code": "VGTJ",
+    "length_ft": 9315,
+    "width_ft": 98,
+    "heading": 164.4,
+    "QFU": "35"
   }
 ]

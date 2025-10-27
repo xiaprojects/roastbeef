@@ -6,7 +6,12 @@
     "freq": "",
     "Lat": 18.068039,
     "Lon": 102.910591,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LA-0005",
+    "iso_country": "LA",
+    "length_ft": 2200,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -15,7 +20,14 @@
     "freq": "",
     "Lat": 20.323986,
     "Lon": 100.165392,
-    "Ele": 358.1
+    "Ele": 358.1,
+    "ident": "LA-0006",
+    "iso_country": "LA",
+    "iata_code": "BOR",
+    "length_ft": 8858,
+    "width_ft": 197,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -24,7 +36,10 @@
     "freq": "",
     "Lat": 21.6475,
     "Lon": 101.9,
-    "Ele": 929.6
+    "Ele": 929.6,
+    "ident": "PCQ",
+    "iso_country": "LA",
+    "iata_code": "PCQ"
   },
   {
     "type": "small_airport",
@@ -33,7 +48,11 @@
     "freq": "",
     "Lat": 14.793056,
     "Lon": 107.045278,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "VLAP",
+    "iso_country": "LA",
+    "icao_code": "VLAP",
+    "iata_code": "AOU"
   },
   {
     "type": "small_airport",
@@ -42,7 +61,15 @@
     "freq": "",
     "Lat": 20.257299,
     "Lon": 100.436996,
-    "Ele": 420.6
+    "Ele": 420.6,
+    "ident": "VLHS",
+    "iso_country": "LA",
+    "icao_code": "VLHS",
+    "iata_code": "HOE",
+    "length_ft": 4922,
+    "width_ft": 75,
+    "heading": 156.2,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -51,7 +78,15 @@
     "freq": "118.500",
     "Lat": 19.897300720214844,
     "Lon": 102.16100311279295,
-    "Ele": 291.1
+    "Ele": 291.1,
+    "ident": "VLLB",
+    "iso_country": "LA",
+    "icao_code": "VLLB",
+    "iata_code": "LPQ",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "heading": 61.2,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -60,7 +95,15 @@
     "freq": "",
     "Lat": 20.966999,
     "Lon": 101.400002,
-    "Ele": 599.8
+    "Ele": 599.8,
+    "ident": "VLLN",
+    "iso_country": "LA",
+    "icao_code": "VLLN",
+    "iata_code": "LXG",
+    "length_ft": 5249,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -69,7 +112,9 @@
     "freq": "",
     "Lat": 20.613333,
     "Lon": 104.066109,
-    "Ele": 1067.7
+    "Ele": 1067.7,
+    "ident": "VLNK",
+    "iso_country": "LA"
   },
   {
     "type": "small_airport",
@@ -78,7 +123,11 @@
     "freq": "",
     "Lat": 20.68269920349121,
     "Lon": 101.99400329589844,
-    "Ele": 549.9
+    "Ele": 549.9,
+    "ident": "VLOS",
+    "iso_country": "LA",
+    "icao_code": "VLOS",
+    "iata_code": "ODY"
   },
   {
     "type": "medium_airport",
@@ -87,7 +136,15 @@
     "freq": "118.500",
     "Lat": 15.132100105285645,
     "Lon": 105.78099822998048,
-    "Ele": 107.0
+    "Ele": 107,
+    "ident": "VLPS",
+    "iso_country": "LA",
+    "icao_code": "VLPS",
+    "iata_code": "PKZ",
+    "length_ft": 7874,
+    "width_ft": 147,
+    "heading": 147,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -96,7 +153,13 @@
     "freq": "",
     "Lat": 19.45490074157715,
     "Lon": 103.21800231933594,
-    "Ele": 1105.8
+    "Ele": 1105.8,
+    "ident": "VLPV",
+    "iso_country": "LA",
+    "length_ft": 3090,
+    "width_ft": 65,
+    "heading": 139.1,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -105,7 +168,11 @@
     "freq": "",
     "Lat": 19.2436,
     "Lon": 101.7093,
-    "Ele": 293.2
+    "Ele": 293.2,
+    "ident": "VLSB",
+    "iso_country": "LA",
+    "icao_code": "VLSB",
+    "iata_code": "ZBY"
   },
   {
     "type": "medium_airport",
@@ -114,7 +181,15 @@
     "freq": "118.500",
     "Lat": 16.55660057067871,
     "Lon": 104.76000213623048,
-    "Ele": 155.1
+    "Ele": 155.1,
+    "ident": "VLSK",
+    "iso_country": "LA",
+    "icao_code": "VLSK",
+    "iata_code": "ZVK",
+    "length_ft": 5358,
+    "width_ft": 125,
+    "heading": 39.3,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -123,7 +198,15 @@
     "freq": "",
     "Lat": 20.4184,
     "Lon": 104.067001,
-    "Ele": 1000.0
+    "Ele": 1000,
+    "ident": "VLSN",
+    "iso_country": "LA",
+    "icao_code": "VLSN",
+    "iata_code": "NEU",
+    "length_ft": 3715,
+    "width_ft": 80,
+    "heading": 76.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -132,7 +215,9 @@
     "freq": "",
     "Lat": 16.95917,
     "Lon": 105.98167,
-    "Ele": 214.0
+    "Ele": 214,
+    "ident": "VLSP",
+    "iso_country": "LA"
   },
   {
     "type": "small_airport",
@@ -141,7 +226,11 @@
     "freq": "",
     "Lat": 15.709026,
     "Lon": 106.410937,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "VLSV",
+    "iso_country": "LA",
+    "icao_code": "VLSV",
+    "iata_code": "VNA"
   },
   {
     "type": "small_airport",
@@ -150,7 +239,11 @@
     "freq": "",
     "Lat": 17.377917,
     "Lon": 104.857378,
-    "Ele": 136.9
+    "Ele": 136.9,
+    "ident": "VLTK",
+    "iso_country": "LA",
+    "icao_code": "VLTK",
+    "iata_code": "THK"
   },
   {
     "type": "medium_airport",
@@ -159,7 +252,15 @@
     "freq": "119.700",
     "Lat": 17.988300323500003,
     "Lon": 102.56300354,
-    "Ele": 171.9
+    "Ele": 171.9,
+    "ident": "VLVT",
+    "iso_country": "LA",
+    "icao_code": "VLVT",
+    "iata_code": "VTE",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 135.3,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -168,7 +269,15 @@
     "freq": "",
     "Lat": 19.450001,
     "Lon": 103.157997,
-    "Ele": 1050.0
+    "Ele": 1050,
+    "ident": "VLXK",
+    "iso_country": "LA",
+    "icao_code": "VLXK",
+    "iata_code": "XKH",
+    "length_ft": 8555,
+    "width_ft": 130,
+    "heading": 72,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -177,6 +286,9 @@
     "freq": "",
     "Lat": 19.6203,
     "Lon": 100.815332,
-    "Ele": 557.8
+    "Ele": 557.8,
+    "ident": "VLXL",
+    "iso_country": "LA",
+    "iata_code": "XIE"
   }
 ]

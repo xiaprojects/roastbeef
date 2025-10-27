@@ -476,7 +476,27 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
 
     // GPS Controller tasks
 
+    function formatAirfieldNameByItem(element) {
+        var Cmt = "";
+        Cmt += (element.name === undefined ? "" : element.name);
+        Cmt += (element.local_code === undefined ? "" : ", " + element.local_code);
+        Cmt += (element.gps_code === undefined ? "" : ", " + element.gps_code);
+        return Cmt;
+    }
 
+    function calculateQFU(element) {
+        var QFU = "";
+        if (element.QFU !== undefined && element.QFU != "") {
+            var heading10 = parseInt(element.QFU);
+            if (heading10 > 18) {
+                QFU = "" + (heading10 - 18) + "/" + heading10;
+            }
+            else {
+                QFU = "" + (heading10) + "/" + (heading10 + 18);
+            }
+        }
+        return QFU;
+    }
 
     $scope.airfieldsReload = function () {
         $http.get(URL_AIRFIELDS_GET).then(function (response) {
@@ -484,7 +504,8 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
             if (status.length > 0) {
                 $scope.airfields = [];
                 status.forEach(element => {
-                    element.Cmt = (element.gps_code===undefined?"":element.gps_code + " - ") + (element.local_code===undefined?"":element.local_code+" - ") + (element.name===undefined?"":element.name)
+                    element.Cmt = formatAirfieldNameByItem(element);
+                    element.QFU = calculateQFU(element);
                     element.className ="keypadSelectedNo";
                     $scope.airfields.push(element);
                 });

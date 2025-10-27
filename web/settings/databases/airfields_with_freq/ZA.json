@@ -6,7 +6,15 @@
     "freq": "118.700",
     "Lat": -28.575001,
     "Lon": 16.5333,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "FAAB",
+    "iso_country": "ZA",
+    "icao_code": "FAAB",
+    "iata_code": "ALJ",
+    "length_ft": 4823,
+    "width_ft": 115,
+    "heading": 88,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,10 @@
     "freq": "",
     "Lat": -32.466386,
     "Lon": 24.064016,
-    "Ele": 750.1
+    "Ele": 750.1,
+    "ident": "FAAE",
+    "iso_country": "ZA",
+    "icao_code": "FAAE"
   },
   {
     "type": "small_airport",
@@ -24,7 +35,10 @@
     "freq": "",
     "Lat": -34.763345,
     "Lon": 20.036357,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "FAAF",
+    "iso_country": "ZA",
+    "icao_code": "FAAF"
   },
   {
     "type": "medium_airport",
@@ -33,7 +47,15 @@
     "freq": "122.700",
     "Lat": -29.281799,
     "Lon": 18.8139,
-    "Ele": 807.1
+    "Ele": 807.1,
+    "ident": "FAAG",
+    "iso_country": "ZA",
+    "icao_code": "FAAG",
+    "iata_code": "AGZ",
+    "length_ft": 6824,
+    "width_ft": 66,
+    "heading": 49,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -42,7 +64,15 @@
     "freq": "",
     "Lat": -22.679001,
     "Lon": 29.0555,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "FAAL",
+    "iso_country": "ZA",
+    "icao_code": "FAAL",
+    "iata_code": "ADY",
+    "length_ft": 4757,
+    "width_ft": 100,
+    "heading": 84,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -51,7 +81,10 @@
     "freq": "",
     "Lat": -26.633803,
     "Lon": 30.605561,
-    "Ele": 1313.7
+    "Ele": 1313.7,
+    "ident": "FAAM",
+    "iso_country": "ZA",
+    "icao_code": "FAAM"
   },
   {
     "type": "small_airport",
@@ -60,7 +93,10 @@
     "freq": "",
     "Lat": -30.681072,
     "Lon": 26.730141,
-    "Ele": 1342.6
+    "Ele": 1342.6,
+    "ident": "FAAN",
+    "iso_country": "ZA",
+    "icao_code": "FAAN"
   },
   {
     "type": "small_airport",
@@ -69,7 +105,10 @@
     "freq": "",
     "Lat": -33.837978,
     "Lon": 20.049838,
-    "Ele": 160.0
+    "Ele": 160,
+    "ident": "FAAS",
+    "iso_country": "ZA",
+    "icao_code": "FAAS"
   },
   {
     "type": "small_airport",
@@ -78,7 +117,11 @@
     "freq": "120.350",
     "Lat": -25.9762557716,
     "Lon": 28.3890151978,
-    "Ele": 1669.1
+    "Ele": 1669.1,
+    "ident": "FABA",
+    "iso_country": "ZA",
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -87,7 +130,14 @@
     "freq": "122.700",
     "Lat": -26.2386,
     "Lon": 28.3018,
-    "Ele": 1615.4
+    "Ele": 1615.4,
+    "ident": "FABB",
+    "iso_country": "ZA",
+    "icao_code": "FABB",
+    "length_ft": 5902,
+    "width_ft": 49,
+    "heading": 159,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -96,7 +146,9 @@
     "freq": "",
     "Lat": -30.977500915527344,
     "Lon": 26.3080997467041,
-    "Ele": 1442.9
+    "Ele": 1442.9,
+    "ident": "FABD",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -105,7 +157,15 @@
     "freq": "120.100",
     "Lat": -32.897099,
     "Lon": 27.2791,
-    "Ele": 594.4
+    "Ele": 594.4,
+    "ident": "FABE",
+    "iso_country": "ZA",
+    "icao_code": "FABE",
+    "iata_code": "BIY",
+    "length_ft": 8202,
+    "width_ft": 197,
+    "heading": 57,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -114,7 +174,9 @@
     "freq": "",
     "Lat": -30.9666671753,
     "Lon": 27.604166030900004,
-    "Ele": 1810.5
+    "Ele": 1810.5,
+    "ident": "FABF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -123,7 +185,9 @@
     "freq": "",
     "Lat": -24.702464,
     "Lon": 31.587875,
-    "Ele": 410.6
+    "Ele": 410.6,
+    "ident": "FABG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -132,7 +196,9 @@
     "freq": "",
     "Lat": -25.6587417378,
     "Lon": 30.041577816,
-    "Ele": 1905.0
+    "Ele": 1905,
+    "ident": "FABH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -141,7 +207,9 @@
     "freq": "",
     "Lat": -32.035,
     "Lon": 19.0435,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "FABK",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -150,7 +218,15 @@
     "freq": "119.400",
     "Lat": -29.092699,
     "Lon": 26.302401,
-    "Ele": 1358.5
+    "Ele": 1358.5,
+    "ident": "FABL",
+    "iso_country": "ZA",
+    "icao_code": "FABL",
+    "iata_code": "BFN",
+    "length_ft": 7202,
+    "width_ft": 151,
+    "heading": 102,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -159,7 +235,13 @@
     "freq": "124.800",
     "Lat": -28.2484,
     "Lon": 28.3361,
-    "Ele": 1695.0
+    "Ele": 1695,
+    "ident": "FABM",
+    "iso_country": "ZA",
+    "length_ft": 4301,
+    "width_ft": 150,
+    "heading": 108,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -168,7 +250,13 @@
     "freq": "",
     "Lat": -27.36680030822754,
     "Lon": 26.629199981689453,
-    "Ele": 1291.1
+    "Ele": 1291.1,
+    "ident": "FABO",
+    "iso_country": "ZA",
+    "length_ft": 4003,
+    "width_ft": 30,
+    "heading": 53,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -177,7 +265,9 @@
     "freq": "",
     "Lat": -27.129724,
     "Lon": 22.846255,
-    "Ele": 1051.6
+    "Ele": 1051.6,
+    "ident": "FABP",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -186,7 +276,14 @@
     "freq": "123.950",
     "Lat": -25.717147,
     "Lon": 30.974974,
-    "Ele": 685.8
+    "Ele": 685.8,
+    "ident": "FABR",
+    "iso_country": "ZA",
+    "local_code": "FA0002",
+    "length_ft": 3300,
+    "width_ft": 50,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -195,7 +292,9 @@
     "freq": "",
     "Lat": -25.532301,
     "Lon": 27.7759,
-    "Ele": 1144.8
+    "Ele": 1144.8,
+    "ident": "FABS",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -204,7 +303,9 @@
     "freq": "",
     "Lat": -31.873199462890625,
     "Lon": 24.796899795532227,
-    "Ele": 1411.2
+    "Ele": 1411.2,
+    "ident": "FABT",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -213,7 +314,11 @@
     "freq": "",
     "Lat": -28.273369,
     "Lon": 26.135835,
-    "Ele": 1341.1
+    "Ele": 1341.1,
+    "ident": "FABU",
+    "iso_country": "ZA",
+    "icao_code": "FABU",
+    "iata_code": "UTE"
   },
   {
     "type": "small_airport",
@@ -222,7 +327,9 @@
     "freq": "",
     "Lat": -30.466699600219727,
     "Lon": 20.466699600219727,
-    "Ele": 914.1
+    "Ele": 914.1,
+    "ident": "FABV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -231,7 +338,10 @@
     "freq": "",
     "Lat": -32.299999,
     "Lon": 22.67,
-    "Ele": 896.4
+    "Ele": 896.4,
+    "ident": "FABW",
+    "iso_country": "ZA",
+    "icao_code": "FABW"
   },
   {
     "type": "small_airport",
@@ -240,7 +350,9 @@
     "freq": "",
     "Lat": -28.2450008392334,
     "Lon": 26.771900177001957,
-    "Ele": 1377.1
+    "Ele": 1377.1,
+    "ident": "FABX",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -249,7 +361,9 @@
     "freq": "",
     "Lat": -30.860300064086918,
     "Lon": 29.86389923095703,
-    "Ele": 835.2
+    "Ele": 835.2,
+    "ident": "FABZ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -258,7 +372,9 @@
     "freq": "",
     "Lat": -28.799999237060547,
     "Lon": 27.41699981689453,
-    "Ele": 1522.5
+    "Ele": 1522.5,
+    "ident": "FACA",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -267,7 +383,9 @@
     "freq": "",
     "Lat": -30.73390007019043,
     "Lon": 25.065000534057617,
-    "Ele": 1414.0
+    "Ele": 1414,
+    "ident": "FACB",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -276,7 +394,11 @@
     "freq": "",
     "Lat": -24.740527,
     "Lon": 31.517973,
-    "Ele": 392.9
+    "Ele": 392.9,
+    "ident": "FACC",
+    "iso_country": "ZA",
+    "icao_code": "FAAR",
+    "iata_code": "ASS"
   },
   {
     "type": "small_airport",
@@ -285,7 +407,11 @@
     "freq": "",
     "Lat": -32.1567001343,
     "Lon": 25.6455993652,
-    "Ele": 947.9
+    "Ele": 947.9,
+    "ident": "FACD",
+    "iso_country": "ZA",
+    "icao_code": "FACD",
+    "iata_code": "CDO"
   },
   {
     "type": "small_airport",
@@ -294,7 +420,9 @@
     "freq": "",
     "Lat": -33.316594,
     "Lon": 19.426676,
-    "Ele": 463.0
+    "Ele": 463,
+    "ident": "FACE",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -303,7 +431,9 @@
     "freq": "",
     "Lat": -34.186901,
     "Lon": 24.834999,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "FACF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -312,7 +442,9 @@
     "freq": "",
     "Lat": -34.259523,
     "Lon": 19.416214,
-    "Ele": 285.3
+    "Ele": 285.3,
+    "ident": "FACG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -321,7 +453,9 @@
     "freq": "",
     "Lat": -32.74470138549805,
     "Lon": 25.796300888061523,
-    "Ele": 577.0
+    "Ele": 577,
+    "ident": "FACH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -330,7 +464,9 @@
     "freq": "",
     "Lat": -32.61968,
     "Lon": 19.00384,
-    "Ele": 162.2
+    "Ele": 162.2,
+    "ident": "FACI",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -339,7 +475,9 @@
     "freq": "",
     "Lat": -27.877192,
     "Lon": 25.204376,
-    "Ele": 1212.5
+    "Ele": 1212.5,
+    "ident": "FACK",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -348,7 +486,9 @@
     "freq": "",
     "Lat": -26.078100204467773,
     "Lon": 30.092500686645508,
-    "Ele": 1652.0
+    "Ele": 1652,
+    "ident": "FACL",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -357,7 +497,10 @@
     "freq": "",
     "Lat": -30.9886,
     "Lon": 22.131701,
-    "Ele": 1268.0
+    "Ele": 1268,
+    "ident": "FACN",
+    "iso_country": "ZA",
+    "icao_code": "FACN"
   },
   {
     "type": "small_airport",
@@ -366,7 +509,9 @@
     "freq": "",
     "Lat": -26.36666679382324,
     "Lon": 27.34666633605957,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "FACR",
+    "iso_country": "ZA"
   },
   {
     "type": "large_airport",
@@ -375,7 +520,15 @@
     "freq": "122.650",
     "Lat": -33.9648017883,
     "Lon": 18.6016998291,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "FACT",
+    "iso_country": "ZA",
+    "icao_code": "FACT",
+    "iata_code": "CPT",
+    "length_ft": 5581,
+    "width_ft": 151,
+    "heading": 136,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -384,7 +537,13 @@
     "freq": "",
     "Lat": -31.500299,
     "Lon": 19.725901,
-    "Ele": 990.6
+    "Ele": 990.6,
+    "ident": "FACV",
+    "iso_country": "ZA",
+    "length_ft": 4101,
+    "width_ft": 49,
+    "heading": 67,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -393,7 +552,10 @@
     "freq": "",
     "Lat": -32.177,
     "Lon": 18.8819,
-    "Ele": 126.8
+    "Ele": 126.8,
+    "ident": "FACW",
+    "iso_country": "ZA",
+    "icao_code": "FACW"
   },
   {
     "type": "small_airport",
@@ -402,7 +564,9 @@
     "freq": "",
     "Lat": -32.28710174560547,
     "Lon": 27.1387996673584,
-    "Ele": 1206.7
+    "Ele": 1206.7,
+    "ident": "FACX",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -411,7 +575,9 @@
     "freq": "",
     "Lat": -34.3517990112,
     "Lon": 21.4248008728,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "FACY",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -420,7 +586,12 @@
     "freq": "",
     "Lat": -30.69219970703125,
     "Lon": 24.02059936523437,
-    "Ele": 1266.1
+    "Ele": 1266.1,
+    "ident": "FADA",
+    "iso_country": "ZA",
+    "length_ft": 4483,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -429,7 +600,9 @@
     "freq": "",
     "Lat": -24.80719947814941,
     "Lon": 26.829700469970703,
-    "Ele": 1113.1
+    "Ele": 1113.1,
+    "ident": "FADB",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -438,7 +611,9 @@
     "freq": "",
     "Lat": -29.0746,
     "Lon": 23.8009,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FADC",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -447,7 +622,13 @@
     "freq": "",
     "Lat": -28.1830997467041,
     "Lon": 30.22249984741211,
-    "Ele": 1286.0
+    "Ele": 1286,
+    "ident": "FADD",
+    "iso_country": "ZA",
+    "length_ft": 3343,
+    "width_ft": 62,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -456,7 +637,9 @@
     "freq": "",
     "Lat": -26.14166641235352,
     "Lon": 28.69166755676269,
-    "Ele": 1546.9
+    "Ele": 1546.9,
+    "ident": "FADE",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -465,7 +648,9 @@
     "freq": "",
     "Lat": -31.38333320617676,
     "Lon": 27.03333282470703,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "FADG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -474,7 +659,9 @@
     "freq": "",
     "Lat": -28.04610061645508,
     "Lon": 30.00639915466309,
-    "Ele": 1315.8
+    "Ele": 1315.8,
+    "ident": "FADH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -483,7 +670,16 @@
     "freq": "",
     "Lat": -28.36840057373047,
     "Lon": 32.24810028076172,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "FADK",
+    "iso_country": "ZA",
+    "icao_code": "FADK",
+    "iata_code": "DUK",
+    "local_code": "FA65",
+    "length_ft": 4003,
+    "width_ft": 151,
+    "heading": 21.9,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -492,7 +688,9 @@
     "freq": "",
     "Lat": -26.67919921875,
     "Lon": 25.47470092773437,
-    "Ele": 1362.2
+    "Ele": 1362.2,
+    "ident": "FADL",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -501,7 +699,9 @@
     "freq": "",
     "Lat": -30.55649948120117,
     "Lon": 29.40819931030273,
-    "Ele": 1244.8
+    "Ele": 1244.8,
+    "ident": "FADM",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -510,7 +710,9 @@
     "freq": "",
     "Lat": -23.380599975585938,
     "Lon": 29.32080078125,
-    "Ele": 1036.0
+    "Ele": 1036,
+    "ident": "FADO",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -519,7 +721,9 @@
     "freq": "",
     "Lat": -33.18320083618164,
     "Lon": 25.193199157714844,
-    "Ele": 258.2
+    "Ele": 258.2,
+    "ident": "FADP",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -528,7 +732,11 @@
     "freq": "",
     "Lat": -27.84939956665039,
     "Lon": 32.30970001220703,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "FADQ",
+    "iso_country": "ZA",
+    "icao_code": "FADQ",
+    "iata_code": "PZL"
   },
   {
     "type": "small_airport",
@@ -537,7 +745,9 @@
     "freq": "",
     "Lat": -33.455557,
     "Lon": 19.684493,
-    "Ele": 495.6
+    "Ele": 495.6,
+    "ident": "FADS",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -546,7 +756,14 @@
     "freq": "124.800",
     "Lat": -25.36278,
     "Lon": 30.18778,
-    "Ele": 1841.3
+    "Ele": 1841.3,
+    "ident": "FADU",
+    "iso_country": "ZA",
+    "local_code": "FADU",
+    "length_ft": 3215,
+    "width_ft": 40,
+    "heading": 164,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -555,7 +772,9 @@
     "freq": "",
     "Lat": -26.358999252319336,
     "Lon": 28.78969955444336,
-    "Ele": 1664.2
+    "Ele": 1664.2,
+    "ident": "FADV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -564,7 +783,13 @@
     "freq": "124.400",
     "Lat": -33.6494935368,
     "Lon": 18.4718799591,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "FADX",
+    "iso_country": "ZA",
+    "length_ft": 2410,
+    "width_ft": 30,
+    "QFU": "02",
+    "heading": 20
   },
   {
     "type": "small_airport",
@@ -573,7 +798,9 @@
     "freq": "",
     "Lat": -30.636509,
     "Lon": 23.919725,
-    "Ele": 1230.5
+    "Ele": 1230.5,
+    "ident": "FADY",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -582,7 +809,9 @@
     "freq": "",
     "Lat": -29.75,
     "Lon": 29.25,
-    "Ele": 1813.0
+    "Ele": 1813,
+    "ident": "FADZ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -591,7 +820,12 @@
     "freq": "",
     "Lat": -29.047199249267575,
     "Lon": 29.910600662231445,
-    "Ele": 1299.1
+    "Ele": 1299.1,
+    "ident": "FAEC",
+    "iso_country": "ZA",
+    "length_ft": 4026,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -600,7 +834,9 @@
     "freq": "",
     "Lat": -29.75,
     "Lon": 25.899999618530277,
-    "Ele": 1374.3
+    "Ele": 1374.3,
+    "ident": "FAED",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -609,7 +845,9 @@
     "freq": "",
     "Lat": -24.566999435424805,
     "Lon": 30.316999435424805,
-    "Ele": 700.7
+    "Ele": 700.7,
+    "ident": "FAEG",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -618,7 +856,15 @@
     "freq": "120.100",
     "Lat": -33.035599,
     "Lon": 27.825899,
-    "Ele": 132.6
+    "Ele": 132.6,
+    "ident": "FAEL",
+    "iso_country": "ZA",
+    "icao_code": "FAEL",
+    "iata_code": "ELS",
+    "length_ft": 6362,
+    "width_ft": 150,
+    "heading": 82,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -627,7 +873,11 @@
     "freq": "",
     "Lat": -28.71999931335449,
     "Lon": 31.88999938964844,
-    "Ele": 76.5
+    "Ele": 76.5,
+    "ident": "FAEM",
+    "iso_country": "ZA",
+    "icao_code": "FAEM",
+    "iata_code": "EMG"
   },
   {
     "type": "small_airport",
@@ -636,7 +886,9 @@
     "freq": "",
     "Lat": -24.1933,
     "Lon": 28.735,
-    "Ele": 1185.7
+    "Ele": 1185.7,
+    "ident": "FAEN",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -645,7 +897,14 @@
     "freq": "",
     "Lat": -26.4956,
     "Lon": 29.979799,
-    "Ele": 1737.4
+    "Ele": 1737.4,
+    "ident": "FAEO",
+    "iso_country": "ZA",
+    "icao_code": "FAEO",
+    "length_ft": 5085,
+    "width_ft": 33,
+    "heading": 113,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -654,7 +913,11 @@
     "freq": "",
     "Lat": -23.72669982910156,
     "Lon": 27.68829917907715,
-    "Ele": 853.1
+    "Ele": 853.1,
+    "ident": "FAER",
+    "iso_country": "ZA",
+    "icao_code": "FAER",
+    "iata_code": "ELL"
   },
   {
     "type": "small_airport",
@@ -663,7 +926,9 @@
     "freq": "",
     "Lat": -28.880199432373047,
     "Lon": 31.45490074157715,
-    "Ele": 488.0
+    "Ele": 488,
+    "ident": "FAES",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -672,7 +937,9 @@
     "freq": "",
     "Lat": -31.306900024414062,
     "Lon": 27.84950065612793,
-    "Ele": 1532.5
+    "Ele": 1532.5,
+    "ident": "FAET",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -681,7 +948,15 @@
     "freq": "",
     "Lat": -28.82309913635254,
     "Lon": 27.908899307250977,
-    "Ele": 1620.0
+    "Ele": 1620,
+    "ident": "FAFB",
+    "iso_country": "ZA",
+    "icao_code": "FAFB",
+    "iata_code": "FCB",
+    "length_ft": 4593,
+    "width_ft": 49,
+    "heading": 60,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -690,7 +965,9 @@
     "freq": "",
     "Lat": -27.286786,
     "Lon": 28.514585,
-    "Ele": 1577.6
+    "Ele": 1577.6,
+    "ident": "FAFF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -699,7 +976,9 @@
     "freq": "",
     "Lat": -30.49099922180176,
     "Lon": 21.121700286865234,
-    "Ele": 990.0
+    "Ele": 990,
+    "ident": "FAFG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -708,7 +987,9 @@
     "freq": "",
     "Lat": -32.79050064086914,
     "Lon": 26.577699661254883,
-    "Ele": 481.9
+    "Ele": 481.9,
+    "ident": "FAFO",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -717,7 +998,9 @@
     "freq": "",
     "Lat": -31.933900833129883,
     "Lon": 21.502500534057617,
-    "Ele": 1274.1
+    "Ele": 1274.1,
+    "ident": "FAFR",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -726,7 +1009,9 @@
     "freq": "",
     "Lat": -27.316999435424805,
     "Lon": 27.25,
-    "Ele": 1475.5
+    "Ele": 1475.5,
+    "ident": "FAFU",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -735,7 +1020,9 @@
     "freq": "",
     "Lat": -25.47719955444336,
     "Lon": 28.290000915527344,
-    "Ele": 1164.0
+    "Ele": 1164,
+    "ident": "FAFW",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -744,7 +1031,10 @@
     "freq": "",
     "Lat": -30.267,
     "Lon": 29.966999,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "FAGA",
+    "iso_country": "ZA",
+    "local_code": "FA0068"
   },
   {
     "type": "medium_airport",
@@ -753,7 +1043,15 @@
     "freq": "122.800",
     "Lat": -25.986299514799995,
     "Lon": 28.1401004791,
-    "Ele": 1623.1
+    "Ele": 1623.1,
+    "ident": "FAGC",
+    "iso_country": "ZA",
+    "icao_code": "FAGC",
+    "iata_code": "GCJ",
+    "length_ft": 6004,
+    "width_ft": 75,
+    "heading": 153,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -762,7 +1060,15 @@
     "freq": "128.200",
     "Lat": -34.0056,
     "Lon": 22.378902,
-    "Ele": 197.5
+    "Ele": 197.5,
+    "ident": "FAGG",
+    "iso_country": "ZA",
+    "icao_code": "FAGG",
+    "iata_code": "GRJ",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -771,7 +1077,9 @@
     "freq": "",
     "Lat": -28.83333396911621,
     "Lon": 29.46666717529297,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "FAGH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -780,7 +1088,11 @@
     "freq": "",
     "Lat": -23.2833,
     "Lon": 30.65,
-    "Ele": 482.8
+    "Ele": 482.8,
+    "ident": "FAGI",
+    "iso_country": "ZA",
+    "icao_code": "FAGI",
+    "iata_code": "GIY"
   },
   {
     "type": "small_airport",
@@ -789,7 +1101,9 @@
     "freq": "",
     "Lat": -30.38330078125,
     "Lon": 20.033300399780277,
-    "Ele": 975.1
+    "Ele": 975.1,
+    "ident": "FAGJ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -798,7 +1112,9 @@
     "freq": "",
     "Lat": -25.186899,
     "Lon": 29.403299,
-    "Ele": 929.9
+    "Ele": 929.9,
+    "ident": "FAGL",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -807,7 +1123,15 @@
     "freq": "124.500",
     "Lat": -26.2425,
     "Lon": 28.151199,
-    "Ele": 1671.2
+    "Ele": 1671.2,
+    "ident": "FAGM",
+    "iso_country": "ZA",
+    "icao_code": "FAGM",
+    "iata_code": "QRA",
+    "length_ft": 4898,
+    "width_ft": 50,
+    "heading": 158,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -816,7 +1140,9 @@
     "freq": "",
     "Lat": -24.7371653036,
     "Lon": 31.5602874756,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "FAGO",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -825,7 +1151,14 @@
     "freq": "",
     "Lat": -32.1936,
     "Lon": 24.541401,
-    "Ele": 793.7
+    "Ele": 793.7,
+    "ident": "FAGR",
+    "iso_country": "ZA",
+    "icao_code": "FAGR",
+    "length_ft": 2801,
+    "width_ft": 98,
+    "heading": 127,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -834,7 +1167,14 @@
     "freq": "123.500",
     "Lat": -33.284698,
     "Lon": 26.4981,
-    "Ele": 650.7
+    "Ele": 650.7,
+    "ident": "FAGT",
+    "iso_country": "ZA",
+    "icao_code": "FAGT",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 136,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -843,7 +1183,9 @@
     "freq": "",
     "Lat": -23.91127,
     "Lon": 30.696192,
-    "Ele": 502.9
+    "Ele": 502.9,
+    "ident": "FAGV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -852,7 +1194,9 @@
     "freq": "",
     "Lat": -31.39394187927246,
     "Lon": 29.693470001220703,
-    "Ele": 555.7
+    "Ele": 555.7,
+    "ident": "FAGW",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -861,7 +1205,14 @@
     "freq": "119.100",
     "Lat": -29.122,
     "Lon": 30.5867,
-    "Ele": 1076.2
+    "Ele": 1076.2,
+    "ident": "FAGY",
+    "iso_country": "ZA",
+    "icao_code": "FAGY",
+    "length_ft": 5328,
+    "width_ft": 36,
+    "heading": 41.8,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -870,7 +1221,14 @@
     "freq": "",
     "Lat": -28.078699,
     "Lon": 26.8612,
-    "Ele": 1340.8
+    "Ele": 1340.8,
+    "ident": "FAHA",
+    "iso_country": "ZA",
+    "icao_code": "FAHA",
+    "length_ft": 2999,
+    "width_ft": 98,
+    "heading": 130,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -879,7 +1237,9 @@
     "freq": "",
     "Lat": -24.50239944458008,
     "Lon": 28.079099655151367,
-    "Ele": 1140.0
+    "Ele": 1140,
+    "ident": "FAHB",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -888,7 +1248,9 @@
     "freq": "",
     "Lat": -29.55279922485352,
     "Lon": 30.21109962463379,
-    "Ele": 1103.1
+    "Ele": 1103.1,
+    "ident": "FAHC",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -897,7 +1259,9 @@
     "freq": "",
     "Lat": -34.036598205566406,
     "Lon": 24.78890037536621,
-    "Ele": 105.2
+    "Ele": 105.2,
+    "ident": "FAHD",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -906,7 +1270,9 @@
     "freq": "",
     "Lat": -25.97780036926269,
     "Lon": 29.618900299072266,
-    "Ele": 1576.1
+    "Ele": 1576.1,
+    "ident": "FAHE",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -915,7 +1281,9 @@
     "freq": "",
     "Lat": -33.04610061645508,
     "Lon": 25.71689987182617,
-    "Ele": 520.9
+    "Ele": 520.9,
+    "ident": "FAHF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -924,7 +1292,14 @@
     "freq": "",
     "Lat": -26.51,
     "Lon": 28.389999,
-    "Ele": 1551.1
+    "Ele": 1551.1,
+    "ident": "FAHG",
+    "iso_country": "ZA",
+    "icao_code": "FAHG",
+    "length_ft": 2639,
+    "width_ft": 55,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -933,7 +1308,9 @@
     "freq": "",
     "Lat": -30.583947,
     "Lon": 30.558562,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "FAHH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -942,7 +1319,9 @@
     "freq": "",
     "Lat": -30.0132999420166,
     "Lon": 20.13920021057129,
-    "Ele": 962.9
+    "Ele": 962.9,
+    "ident": "FAHI",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -951,7 +1330,9 @@
     "freq": "",
     "Lat": -30.574533,
     "Lon": 29.90565,
-    "Ele": 880.9
+    "Ele": 880.9,
+    "ident": "FAHJ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -960,7 +1341,9 @@
     "freq": "",
     "Lat": -25.58720016479492,
     "Lon": 28.115800857543945,
-    "Ele": 1236.0
+    "Ele": 1236,
+    "ident": "FAHK",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -969,7 +1352,14 @@
     "freq": "",
     "Lat": -28.0166049887,
     "Lon": 32.2751712799,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "FAHL",
+    "iso_country": "ZA",
+    "icao_code": "FAHL",
+    "iata_code": "HLW",
+    "length_ft": 3963,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -978,7 +1368,9 @@
     "freq": "",
     "Lat": -27.278600692749023,
     "Lon": 27.9955997467041,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "FAHO",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -987,7 +1379,9 @@
     "freq": "",
     "Lat": -27.82169914245605,
     "Lon": 25.916900634765625,
-    "Ele": 1259.1
+    "Ele": 1259.1,
+    "ident": "FAHP",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -996,7 +1390,15 @@
     "freq": "125.400",
     "Lat": -28.2351,
     "Lon": 29.106199,
-    "Ele": 1702.3
+    "Ele": 1702.3,
+    "ident": "FAHR",
+    "iso_country": "ZA",
+    "icao_code": "FAHR",
+    "iata_code": "HRS",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 135,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1407,15 @@
     "freq": "126.400",
     "Lat": -24.3686008453,
     "Lon": 31.0487003326,
-    "Ele": 531.3
+    "Ele": 531.3,
+    "ident": "FAHS",
+    "iso_country": "ZA",
+    "icao_code": "FAHS",
+    "iata_code": "HDS",
+    "length_ft": 13095,
+    "width_ft": 151,
+    "heading": 164,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1424,9 @@
     "freq": "",
     "Lat": -24.35169982910156,
     "Lon": 30.94939994812012,
-    "Ele": 548.9
+    "Ele": 548.9,
+    "ident": "FAHT",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1435,9 @@
     "freq": "",
     "Lat": -30.542499542236328,
     "Lon": 29.499000549316406,
-    "Ele": 1432.9
+    "Ele": 1432.9,
+    "ident": "FAHU",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1446,14 @@
     "freq": "",
     "Lat": -30.562111,
     "Lon": 25.529343,
-    "Ele": 1272.8
+    "Ele": 1272.8,
+    "ident": "FAHV",
+    "iso_country": "ZA",
+    "icao_code": "FAHV",
+    "length_ft": 3694,
+    "width_ft": 75,
+    "heading": 124,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1462,9 @@
     "freq": "",
     "Lat": -27.4867000579834,
     "Lon": 31.17110061645508,
-    "Ele": 812.3
+    "Ele": 812.3,
+    "ident": "FAIA",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1473,9 @@
     "freq": "",
     "Lat": -32.099998474121094,
     "Lon": 28.316699981689453,
-    "Ele": 771.1
+    "Ele": 771.1,
+    "ident": "FAID",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1484,9 @@
     "freq": "",
     "Lat": -29.10555648803711,
     "Lon": 31.40749931335449,
-    "Ele": 95.4
+    "Ele": 95.4,
+    "ident": "FAIS",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1495,9 @@
     "freq": "",
     "Lat": -27.11709976196289,
     "Lon": 32.00870132446289,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "FAIV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1506,9 @@
     "freq": "",
     "Lat": -31.483333587646484,
     "Lon": 27.350000381469727,
-    "Ele": 1270.1
+    "Ele": 1270.1,
+    "ident": "FAIW",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1517,9 @@
     "freq": "",
     "Lat": -24.508666,
     "Lon": 31.142142,
-    "Ele": 563.9
+    "Ele": 563.9,
+    "ident": "FAJC",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1528,9 @@
     "freq": "",
     "Lat": -29.762500762939453,
     "Lon": 25.433000564575195,
-    "Ele": 1436.8
+    "Ele": 1436.8,
+    "ident": "FAJF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1539,9 @@
     "freq": "",
     "Lat": -33.830747,
     "Lon": 23.827908,
-    "Ele": 611.7
+    "Ele": 611.7,
+    "ident": "FAJP",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1550,9 @@
     "freq": "",
     "Lat": -32.9390983581543,
     "Lon": 24.670700073242188,
-    "Ele": 435.9
+    "Ele": 435.9,
+    "ident": "FAJV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1561,9 @@
     "freq": "",
     "Lat": -27.018262,
     "Lon": 32.750399,
-    "Ele": 42.7
+    "Ele": 42.7,
+    "ident": "FAKB",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1131,7 +1572,15 @@
     "freq": "123.500",
     "Lat": -26.871099,
     "Lon": 26.718,
-    "Ele": 1354.5
+    "Ele": 1354.5,
+    "ident": "FAKD",
+    "iso_country": "ZA",
+    "icao_code": "FAKD",
+    "iata_code": "KXE",
+    "length_ft": 4921,
+    "width_ft": 59,
+    "heading": 166,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1589,9 @@
     "freq": "",
     "Lat": -32.697337,
     "Lon": 28.356291,
-    "Ele": 67.7
+    "Ele": 67.7,
+    "ident": "FAKE",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1600,9 @@
     "freq": "",
     "Lat": -31.957335,
     "Lon": 29.174543,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FAKF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1611,9 @@
     "freq": "",
     "Lat": -26.093299865722656,
     "Lon": 29.45560073852539,
-    "Ele": 1612.1
+    "Ele": 1612.1,
+    "ident": "FAKG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1622,9 @@
     "freq": "",
     "Lat": -29.32670021057129,
     "Lon": 21.188600540161133,
-    "Ele": 830.0
+    "Ele": 830,
+    "ident": "FAKH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1633,9 @@
     "freq": "",
     "Lat": -32.433799,
     "Lon": 28.683467,
-    "Ele": 44.8
+    "Ele": 44.8,
+    "ident": "FAKI",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1644,9 @@
     "freq": "",
     "Lat": -28.808598,
     "Lon": 20.644936,
-    "Ele": 707.7
+    "Ele": 707.7,
+    "ident": "FAKK",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1655,9 @@
     "freq": "",
     "Lat": -26.251100540161133,
     "Lon": 29.194700241088867,
-    "Ele": 1603.9
+    "Ele": 1603.9,
+    "ident": "FAKL",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1203,7 +1666,15 @@
     "freq": "119.400",
     "Lat": -28.802799224900003,
     "Lon": 24.7651996613,
-    "Ele": 1204.0
+    "Ele": 1204,
+    "ident": "FAKM",
+    "iso_country": "ZA",
+    "icao_code": "FAKM",
+    "iata_code": "KIM",
+    "length_ft": 8002,
+    "width_ft": 148,
+    "heading": 80,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -1212,7 +1683,15 @@
     "freq": "119.200",
     "Lat": -25.3831996918,
     "Lon": 31.1056003571,
-    "Ele": 862.3
+    "Ele": 862.3,
+    "ident": "FAKN",
+    "iso_country": "ZA",
+    "icao_code": "FAKN",
+    "iata_code": "MQP",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 34.2,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1700,9 @@
     "freq": "",
     "Lat": -32.59280014038086,
     "Lon": 27.87579917907715,
-    "Ele": 663.9
+    "Ele": 663.9,
+    "ident": "FAKO",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1711,15 @@
     "freq": "124.800",
     "Lat": -25.44029998779297,
     "Lon": 31.93000030517578,
-    "Ele": 164.9
+    "Ele": 164.9,
+    "ident": "FAKP",
+    "iso_country": "ZA",
+    "icao_code": "FAKP",
+    "iata_code": "KOF",
+    "length_ft": 4265,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1239,7 +1728,14 @@
     "freq": "122.000",
     "Lat": -26.080826,
     "Lon": 27.725915,
-    "Ele": 1676.1
+    "Ele": 1676.1,
+    "ident": "FAKR",
+    "iso_country": "ZA",
+    "icao_code": "FAKR",
+    "length_ft": 2260,
+    "width_ft": 104,
+    "heading": 138,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1744,14 @@
     "freq": "122.400",
     "Lat": -27.660601,
     "Lon": 27.3158,
-    "Ele": 1432.6
+    "Ele": 1432.6,
+    "ident": "FAKS",
+    "iso_country": "ZA",
+    "icao_code": "FAKS",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 104,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1760,13 @@
     "freq": "120.650",
     "Lat": -25.8600006104,
     "Lon": 28.4500007629,
-    "Ele": 1407.9
+    "Ele": 1407.9,
+    "ident": "FAKT",
+    "iso_country": "ZA",
+    "length_ft": 2658,
+    "width_ft": 60,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -1266,7 +1775,15 @@
     "freq": "",
     "Lat": -27.45669937133789,
     "Lon": 23.411399841308597,
-    "Ele": 1335.6
+    "Ele": 1335.6,
+    "ident": "FAKU",
+    "iso_country": "ZA",
+    "icao_code": "FAKU",
+    "iata_code": "KMH",
+    "length_ft": 5578,
+    "width_ft": 49,
+    "heading": 4,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1792,9 @@
     "freq": "",
     "Lat": -29.43939971923828,
     "Lon": 24.98859977722168,
-    "Ele": 1218.0
+    "Ele": 1218,
+    "ident": "FAKV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1803,9 @@
     "freq": "",
     "Lat": -33.96666717529297,
     "Lon": 24.299999237060547,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "FAKW",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1814,9 @@
     "freq": "122.400",
     "Lat": -33.670329,
     "Lon": 26.630593,
-    "Ele": 52.4
+    "Ele": 52.4,
+    "ident": "FAKX",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1302,7 +1825,15 @@
     "freq": "123.500",
     "Lat": -29.6884002686,
     "Lon": 17.093999862700002,
-    "Ele": 82.3
+    "Ele": 82.3,
+    "ident": "FAKZ",
+    "iso_country": "ZA",
+    "icao_code": "FAKZ",
+    "iata_code": "KLZ",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 4,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1311,7 +1842,15 @@
     "freq": "123.700",
     "Lat": -25.938499,
     "Lon": 27.9261,
-    "Ele": 1376.8
+    "Ele": 1376.8,
+    "ident": "FALA",
+    "iso_country": "ZA",
+    "icao_code": "FALA",
+    "iata_code": "HLA",
+    "length_ft": 9996,
+    "width_ft": 147,
+    "heading": 57,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1859,9 @@
     "freq": "",
     "Lat": -29.181101,
     "Lon": 27.4536,
-    "Ele": 1578.9
+    "Ele": 1578.9,
+    "ident": "FALB",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1329,7 +1870,15 @@
     "freq": "123.500",
     "Lat": -28.36009979248047,
     "Lon": 23.43910026550293,
-    "Ele": 1493.5
+    "Ele": 1493.5,
+    "ident": "FALC",
+    "iso_country": "ZA",
+    "icao_code": "FALC",
+    "iata_code": "LMR",
+    "length_ft": 5249,
+    "width_ft": 49,
+    "heading": 127,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1887,14 @@
     "freq": "",
     "Lat": -24.7478,
     "Lon": 31.4743,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "FALD",
+    "iso_country": "ZA",
+    "icao_code": "FALD",
+    "iata_code": "LDZ",
+    "length_ft": 3000,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "large_airport",
@@ -1347,7 +1903,15 @@
     "freq": "125.750",
     "Lat": -29.6144444444,
     "Lon": 31.1197222222,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "FALE",
+    "iso_country": "ZA",
+    "icao_code": "FALE",
+    "iata_code": "DUR",
+    "length_ft": 12139,
+    "width_ft": 197,
+    "heading": 61,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1920,9 @@
     "freq": "",
     "Lat": -30.906400680541992,
     "Lon": 19.42530059814453,
-    "Ele": 913.5
+    "Ele": 913.5,
+    "ident": "FALF",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1931,9 @@
     "freq": "",
     "Lat": -28.036800384521484,
     "Lon": 23.09869956970215,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "FALH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1942,14 @@
     "freq": "124.800",
     "Lat": -26.175699,
     "Lon": 26.184601,
-    "Ele": 1485.9
+    "Ele": 1485.9,
+    "ident": "FALI",
+    "iso_country": "ZA",
+    "icao_code": "FALI",
+    "length_ft": 4154,
+    "width_ft": 49,
+    "heading": 166,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1958,12 @@
     "freq": "",
     "Lat": -25.10330009460449,
     "Lon": 30.41419982910156,
-    "Ele": 1488.0
+    "Ele": 1488,
+    "ident": "FALL",
+    "iso_country": "ZA",
+    "length_ft": 4462,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1392,7 +1972,14 @@
     "freq": "121.200",
     "Lat": -23.159901,
     "Lon": 29.696501,
-    "Ele": 935.4
+    "Ele": 935.4,
+    "ident": "FALM",
+    "iso_country": "ZA",
+    "icao_code": "FALM",
+    "length_ft": 1640,
+    "width_ft": 49,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1988,15 @@
     "freq": "121.200",
     "Lat": -23.061899185180664,
     "Lon": 29.86470031738281,
-    "Ele": 922.0
+    "Ele": 922,
+    "ident": "FALO",
+    "iso_country": "ZA",
+    "icao_code": "FALO",
+    "iata_code": "LCD",
+    "length_ft": 3937,
+    "width_ft": 59,
+    "heading": 81,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1410,7 +2005,9 @@
     "freq": "",
     "Lat": -28.98611068725586,
     "Lon": 29.47972297668457,
-    "Ele": 1187.8
+    "Ele": 1187.8,
+    "ident": "FALQ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1419,7 +2016,9 @@
     "freq": "",
     "Lat": -33.33700180053711,
     "Lon": 24.321399688720703,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "FALR",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1428,7 +2027,9 @@
     "freq": "",
     "Lat": -33.2462272644043,
     "Lon": 18.47999763488769,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "FALS",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1437,7 +2038,15 @@
     "freq": "122.500",
     "Lat": -32.9688987732,
     "Lon": 18.1602993011,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "FALW",
+    "iso_country": "ZA",
+    "icao_code": "FALW",
+    "iata_code": "SDB",
+    "length_ft": 6533,
+    "width_ft": 150,
+    "heading": 136,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1446,7 +2055,15 @@
     "freq": "124.800",
     "Lat": -28.5816993713,
     "Lon": 29.7497005463,
-    "Ele": 1081.4
+    "Ele": 1081.4,
+    "ident": "FALY",
+    "iso_country": "ZA",
+    "icao_code": "FALY",
+    "iata_code": "LAY",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 90,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1455,7 +2072,9 @@
     "freq": "",
     "Lat": -30.322200775146484,
     "Lon": 28.7942008972168,
-    "Ele": 1451.5
+    "Ele": 1451.5,
+    "ident": "FAMA",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1464,7 +2083,14 @@
     "freq": "127.950",
     "Lat": -25.684799,
     "Lon": 29.440201,
-    "Ele": 1489.3
+    "Ele": 1489.3,
+    "ident": "FAMB",
+    "iso_country": "ZA",
+    "icao_code": "FAMB",
+    "length_ft": 5905,
+    "width_ft": 48,
+    "heading": 128,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1473,7 +2099,9 @@
     "freq": "",
     "Lat": -31.547199249267575,
     "Lon": 25.02939987182617,
-    "Ele": 1225.9
+    "Ele": 1225.9,
+    "ident": "FAMC",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1482,7 +2110,15 @@
     "freq": "124.800",
     "Lat": -24.816866,
     "Lon": 31.544085,
-    "Ele": 342.6
+    "Ele": 342.6,
+    "ident": "FAMD",
+    "iso_country": "ZA",
+    "icao_code": "FAMD",
+    "iata_code": "AAM",
+    "length_ft": 4145,
+    "width_ft": 75,
+    "heading": 141,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2127,9 @@
     "freq": "",
     "Lat": -29.010929,
     "Lon": 23.849489,
-    "Ele": 1020.5
+    "Ele": 1020.5,
+    "ident": "FAMF",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1500,7 +2138,15 @@
     "freq": "122.700",
     "Lat": -30.8574008942,
     "Lon": 30.343000412,
-    "Ele": 150.9
+    "Ele": 150.9,
+    "ident": "FAMG",
+    "iso_country": "ZA",
+    "icao_code": "FAMG",
+    "iata_code": "MGH",
+    "length_ft": 4495,
+    "width_ft": 100,
+    "heading": 22,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2155,10 @@
     "freq": "",
     "Lat": -22.355672,
     "Lon": 29.9862,
-    "Ele": 580.3
+    "Ele": 580.3,
+    "ident": "FAMH",
+    "iso_country": "ZA",
+    "iata_code": "MEZ"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2167,14 @@
     "freq": "",
     "Lat": -24.9891,
     "Lon": 29.2831,
-    "Ele": 908.3
+    "Ele": 908.3,
+    "ident": "FAMI",
+    "iso_country": "ZA",
+    "icao_code": "FAMI",
+    "length_ft": 3281,
+    "width_ft": 33,
+    "heading": 41,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2183,14 @@
     "freq": "122.200",
     "Lat": -27.0793,
     "Lon": 29.7785,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "FAMJ",
+    "iso_country": "ZA",
+    "icao_code": "FAMJ",
+    "length_ft": 4921,
+    "width_ft": 49,
+    "heading": 123,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2199,9 @@
     "freq": "",
     "Lat": -25.81666755676269,
     "Lon": 25.61666679382324,
-    "Ele": 1280.5
+    "Ele": 1280.5,
+    "ident": "FAMK",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2210,9 @@
     "freq": "",
     "Lat": -25.816699981689453,
     "Lon": 25.716699600219727,
-    "Ele": 1335.9
+    "Ele": 1335.9,
+    "ident": "FAML",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1554,7 +2221,15 @@
     "freq": "119.300",
     "Lat": -25.798400878900004,
     "Lon": 25.5480003357,
-    "Ele": 1274.4
+    "Ele": 1274.4,
+    "ident": "FAMM",
+    "iso_country": "ZA",
+    "icao_code": "FAMM",
+    "iata_code": "MBD",
+    "length_ft": 15157,
+    "width_ft": 148,
+    "heading": 23,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2238,14 @@
     "freq": "",
     "Lat": -25.473581,
     "Lon": 31.565947,
-    "Ele": 351.4
+    "Ele": 351.4,
+    "ident": "FAMN",
+    "iso_country": "ZA",
+    "icao_code": "FAMN",
+    "iata_code": "LLE",
+    "length_ft": 4101,
+    "heading": 72,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2254,14 @@
     "freq": "124.200",
     "Lat": -34.158746,
     "Lon": 22.055676,
-    "Ele": 161.8
+    "Ele": 161.8,
+    "ident": "FAMO",
+    "iso_country": "ZA",
+    "icao_code": "FAMO",
+    "iata_code": "MZY",
+    "length_ft": 3694,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1581,7 +2270,9 @@
     "freq": "",
     "Lat": -22.37470054626465,
     "Lon": 30.88159942626953,
-    "Ele": 645.0
+    "Ele": 645,
+    "ident": "FAMP",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2281,9 @@
     "freq": "",
     "Lat": -31.072201,
     "Lon": 28.376141,
-    "Ele": 1251.5
+    "Ele": 1251.5,
+    "ident": "FAMQ",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1599,7 +2292,14 @@
     "freq": "",
     "Lat": -25.7045001984,
     "Lon": 26.9090003967,
-    "Ele": 1295.7
+    "Ele": 1295.7,
+    "ident": "FAMS",
+    "iso_country": "ZA",
+    "icao_code": "FAMS",
+    "length_ft": 5046,
+    "width_ft": 33,
+    "heading": 16.5,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2308,9 @@
     "freq": "",
     "Lat": -31.38960075378418,
     "Lon": 26.3484001159668,
-    "Ele": 1601.4
+    "Ele": 1601.4,
+    "ident": "FAMT",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1617,7 +2319,15 @@
     "freq": "",
     "Lat": -27.626100540161133,
     "Lon": 32.0443000793457,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "FAMU",
+    "iso_country": "ZA",
+    "icao_code": "FAMU",
+    "iata_code": "MZQ",
+    "length_ft": 6059,
+    "width_ft": 98,
+    "heading": 157,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2336,9 @@
     "freq": "",
     "Lat": -27.48139953613281,
     "Lon": 32.59389877319336,
-    "Ele": 59.4
+    "Ele": 59.4,
+    "ident": "FAMX",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2347,9 @@
     "freq": "",
     "Lat": -33.46189880371094,
     "Lon": 18.7007999420166,
-    "Ele": 296.0
+    "Ele": 296,
+    "ident": "FAMY",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2358,9 @@
     "freq": "",
     "Lat": -26.049999237060547,
     "Lon": 31.017000198364254,
-    "Ele": 776.6
+    "Ele": 776.6,
+    "ident": "FAMZ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2369,9 @@
     "freq": "",
     "Lat": -27.91399955749512,
     "Lon": 31.656200408935547,
-    "Ele": 791.3
+    "Ele": 791.3,
+    "ident": "FANA",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1662,7 +2380,15 @@
     "freq": "124.800",
     "Lat": -27.7705993652,
     "Lon": 29.9769001007,
-    "Ele": 1241.8
+    "Ele": 1241.8,
+    "ident": "FANC",
+    "iso_country": "ZA",
+    "icao_code": "FANC",
+    "iata_code": "NCS",
+    "length_ft": 4921,
+    "width_ft": 75,
+    "heading": 90,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2397,15 @@
     "freq": "",
     "Lat": -24.389,
     "Lon": 31.326,
-    "Ele": 1023.2
+    "Ele": 1023.2,
+    "ident": "FANG",
+    "iso_country": "ZA",
+    "icao_code": "FANG",
+    "iata_code": "NGL",
+    "length_ft": 3658,
+    "width_ft": 30,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1680,7 +2414,9 @@
     "freq": "",
     "Lat": -29.356000900268555,
     "Lon": 30.518400192260746,
-    "Ele": 759.0
+    "Ele": 759,
+    "ident": "FANH",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2425,9 @@
     "freq": "",
     "Lat": -25.978500366210938,
     "Lon": 28.984399795532227,
-    "Ele": 1535.6
+    "Ele": 1535.6,
+    "ident": "FANL",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2436,14 @@
     "freq": "",
     "Lat": -25.5,
     "Lon": 30.9137992859,
-    "Ele": 876.3
+    "Ele": 876.3,
+    "ident": "FANS",
+    "iso_country": "ZA",
+    "icao_code": "FANS",
+    "iata_code": "NLP",
+    "length_ft": 3419,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1707,7 +2452,9 @@
     "freq": "",
     "Lat": -31.350000381469727,
     "Lon": 19.11666679382324,
-    "Ele": 576.1
+    "Ele": 576.1,
+    "ident": "FANV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2463,14 @@
     "freq": "",
     "Lat": -24.6861,
     "Lon": 28.4349,
-    "Ele": 1188.7
+    "Ele": 1188.7,
+    "ident": "FANY",
+    "iso_country": "ZA",
+    "icao_code": "FANY",
+    "length_ft": 3970,
+    "width_ft": 56,
+    "heading": 85,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2479,15 @@
     "freq": "119.800",
     "Lat": -34.563474,
     "Lon": 20.252438,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "FAOB",
+    "iso_country": "ZA",
+    "icao_code": "FAOB",
+    "iata_code": "OVG",
+    "length_ft": 10220,
+    "width_ft": 151,
+    "heading": 145,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2496,9 @@
     "freq": "",
     "Lat": -27.871000289916992,
     "Lon": 26.69339942932129,
-    "Ele": 408.4
+    "Ele": 408.4,
+    "ident": "FAOD",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2507,9 @@
     "freq": "",
     "Lat": -27.961700439453125,
     "Lon": 22.71660041809082,
-    "Ele": 1285.0
+    "Ele": 1285,
+    "ident": "FAOF",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1752,7 +2518,16 @@
     "freq": "131.100",
     "Lat": -33.6069984436,
     "Lon": 22.188999176,
-    "Ele": 324.0
+    "Ele": 324,
+    "ident": "FAOH",
+    "iso_country": "ZA",
+    "icao_code": "FAOH",
+    "iata_code": "OUH",
+    "local_code": "FAOH",
+    "length_ft": 5577,
+    "width_ft": 98,
+    "heading": 13,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2536,9 @@
     "freq": "",
     "Lat": -26.039400100708008,
     "Lon": 27.595600128173828,
-    "Ele": 1555.1
+    "Ele": 1555.1,
+    "ident": "FAOI",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2547,9 @@
     "freq": "",
     "Lat": -24.732999801635746,
     "Lon": 31.399999618530277,
-    "Ele": 334.7
+    "Ele": 334.7,
+    "ident": "FAOL",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2558,9 @@
     "freq": "",
     "Lat": -28.044900894165,
     "Lon": 32.425399780273,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "FAON",
+    "iso_country": "ZA"
   },
   {
     "type": "large_airport",
@@ -1788,7 +2569,15 @@
     "freq": "123.700",
     "Lat": -26.1392,
     "Lon": 28.246,
-    "Ele": 1694.1
+    "Ele": 1694.1,
+    "ident": "FAOR",
+    "iso_country": "ZA",
+    "icao_code": "FAOR",
+    "iata_code": "JNB",
+    "length_ft": 11155,
+    "width_ft": 197,
+    "heading": 14,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2586,9 @@
     "freq": "",
     "Lat": -26.79829978942871,
     "Lon": 26.00029945373535,
-    "Ele": 1481.3
+    "Ele": 1481.3,
+    "ident": "FAOT",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1806,7 +2597,9 @@
     "freq": "",
     "Lat": -26.98390007019043,
     "Lon": 26.65139961242676,
-    "Ele": 1300.0
+    "Ele": 1300,
+    "ident": "FAOY",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2608,15 @@
     "freq": "118.400",
     "Lat": -33.555057,
     "Lon": 26.881656,
-    "Ele": 83.8
+    "Ele": 83.8,
+    "ident": "FAPA",
+    "iso_country": "ZA",
+    "icao_code": "FAPA",
+    "iata_code": "AFD",
+    "length_ft": 2624,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1824,7 +2625,9 @@
     "freq": "",
     "Lat": -33.20249938964844,
     "Lon": 22.03219985961914,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "FAPC",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1833,7 +2636,9 @@
     "freq": "",
     "Lat": -29.141700744628903,
     "Lon": 19.41309928894043,
-    "Ele": 987.9
+    "Ele": 987.9,
+    "ident": "FAPD",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1842,7 +2647,15 @@
     "freq": "120.400",
     "Lat": -33.984901,
     "Lon": 25.6173,
-    "Ele": 68.9
+    "Ele": 68.9,
+    "ident": "FAPE",
+    "iso_country": "ZA",
+    "icao_code": "FAPE",
+    "iata_code": "PLZ",
+    "length_ft": 5502,
+    "width_ft": 151,
+    "heading": 146,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2664,13 @@
     "freq": "",
     "Lat": -26.996901,
     "Lon": 30.840799,
-    "Ele": 1348.1
+    "Ele": 1348.1,
+    "ident": "FAPF",
+    "iso_country": "ZA",
+    "icao_code": "FAPF",
+    "length_ft": 4498,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -1860,7 +2679,15 @@
     "freq": "128.200",
     "Lat": -34.08816,
     "Lon": 23.328723,
-    "Ele": 141.7
+    "Ele": 141.7,
+    "ident": "FAPG",
+    "iso_country": "ZA",
+    "icao_code": "FAPG",
+    "iata_code": "PBZ",
+    "length_ft": 4003,
+    "width_ft": 66,
+    "heading": 100,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1869,7 +2696,15 @@
     "freq": "124.800",
     "Lat": -23.9372005463,
     "Lon": 31.1553993225,
-    "Ele": 436.5
+    "Ele": 436.5,
+    "ident": "FAPH",
+    "iso_country": "ZA",
+    "icao_code": "FAPH",
+    "iata_code": "PHW",
+    "length_ft": 4491,
+    "width_ft": 60,
+    "heading": 354,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -1878,7 +2713,14 @@
     "freq": "122.700",
     "Lat": -23.9261,
     "Lon": 29.4844,
-    "Ele": 1327.1
+    "Ele": 1327.1,
+    "ident": "FAPI",
+    "iso_country": "ZA",
+    "icao_code": "FAPI",
+    "length_ft": 7218,
+    "width_ft": 82,
+    "heading": 61,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -1887,7 +2729,15 @@
     "freq": "",
     "Lat": -31.60612,
     "Lon": 29.52175,
-    "Ele": 374.0
+    "Ele": 374,
+    "ident": "FAPJ",
+    "iso_country": "ZA",
+    "icao_code": "FAPJ",
+    "iata_code": "JOH",
+    "length_ft": 3610,
+    "width_ft": 100,
+    "heading": 64,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2746,11 @@
     "freq": "",
     "Lat": -29.6835994720459,
     "Lon": 22.77059936523437,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "FAPK",
+    "iso_country": "ZA",
+    "icao_code": "FAPK",
+    "iata_code": "PRK"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2759,14 @@
     "freq": "",
     "Lat": -27.3622,
     "Lon": 31.606701,
-    "Ele": 287.1
+    "Ele": 287.1,
+    "ident": "FAPL",
+    "iso_country": "ZA",
+    "icao_code": "FAPL",
+    "length_ft": 2290,
+    "width_ft": 59,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -1914,7 +2775,15 @@
     "freq": "125.750",
     "Lat": -29.6490001678,
     "Lon": 30.3987007141,
-    "Ele": 738.5
+    "Ele": 738.5,
+    "ident": "FAPM",
+    "iso_country": "ZA",
+    "icao_code": "FAPM",
+    "iata_code": "PZB",
+    "length_ft": 5043,
+    "width_ft": 98,
+    "heading": 142,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1923,7 +2792,15 @@
     "freq": "118.400",
     "Lat": -25.333799,
     "Lon": 27.173401,
-    "Ele": 1040.0
+    "Ele": 1040,
+    "ident": "FAPN",
+    "iso_country": "ZA",
+    "icao_code": "FAPN",
+    "iata_code": "NTY",
+    "length_ft": 9022,
+    "width_ft": 98,
+    "heading": 37,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1932,7 +2809,9 @@
     "freq": "",
     "Lat": -24.785147,
     "Lon": 30.791899,
-    "Ele": 1158.8
+    "Ele": 1158.8,
+    "ident": "FAPO",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1941,7 +2820,15 @@
     "freq": "124.300",
     "Lat": -23.845269,
     "Lon": 29.458615,
-    "Ele": 1242.4
+    "Ele": 1242.4,
+    "ident": "FAPP",
+    "iso_country": "ZA",
+    "icao_code": "FAPP",
+    "iata_code": "PTG",
+    "length_ft": 7612,
+    "width_ft": 148,
+    "heading": 38,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1950,7 +2837,9 @@
     "freq": "",
     "Lat": -22.77,
     "Lon": 31.0108,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "FAPQ",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -1959,7 +2848,15 @@
     "freq": "123.000",
     "Lat": -26.670999527,
     "Lon": 27.0818996429,
-    "Ele": 1377.7
+    "Ele": 1377.7,
+    "ident": "FAPS",
+    "iso_country": "ZA",
+    "icao_code": "FAPS",
+    "iata_code": "PCF",
+    "length_ft": 3281,
+    "width_ft": 98,
+    "heading": 134.6,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1968,7 +2865,13 @@
     "freq": "",
     "Lat": -28.338600158691406,
     "Lon": 23.079700469970703,
-    "Ele": 1310.9
+    "Ele": 1310.9,
+    "ident": "FAPT",
+    "iso_country": "ZA",
+    "length_ft": 2696,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1977,7 +2880,9 @@
     "freq": "",
     "Lat": -33.7107666667,
     "Lon": 19.024388888900003,
-    "Ele": 181.7
+    "Ele": 181.7,
+    "ident": "FAPU",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2891,9 @@
     "freq": "",
     "Lat": -30.08180046081543,
     "Lon": 24.67959976196289,
-    "Ele": 1254.6
+    "Ele": 1254.6,
+    "ident": "FAPV",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2902,9 @@
     "freq": "",
     "Lat": -26.60610008239746,
     "Lon": 29.329200744628903,
-    "Ele": 1667.9
+    "Ele": 1667.9,
+    "ident": "FAPW",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2913,12 @@
     "freq": "130.350",
     "Lat": -34.10133,
     "Lon": 24.884352,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "FAPX",
+    "iso_country": "ZA",
+    "length_ft": 3281,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -2013,7 +2927,14 @@
     "freq": "123.500",
     "Lat": -26.889299,
     "Lon": 27.503401,
-    "Ele": 1444.8
+    "Ele": 1444.8,
+    "ident": "FAPY",
+    "iso_country": "ZA",
+    "icao_code": "FAPY",
+    "length_ft": 2387,
+    "width_ft": 150,
+    "heading": 96,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2022,7 +2943,9 @@
     "freq": "",
     "Lat": -33.926448,
     "Lon": 25.371916,
-    "Ele": 228.0
+    "Ele": 228,
+    "ident": "FAPZ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2031,7 +2954,9 @@
     "freq": "",
     "Lat": -25.847700119,
     "Lon": 23.5373001099,
-    "Ele": 1163.4
+    "Ele": 1163.4,
+    "ident": "FAQF",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2040,7 +2965,15 @@
     "freq": "124.800",
     "Lat": -31.92020034790039,
     "Lon": 26.882200241088867,
-    "Ele": 1108.6
+    "Ele": 1108.6,
+    "ident": "FAQT",
+    "iso_country": "ZA",
+    "icao_code": "FAQT",
+    "iata_code": "UTW",
+    "length_ft": 3937,
+    "width_ft": 66,
+    "heading": 95,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2049,7 +2982,9 @@
     "freq": "",
     "Lat": -26.0845963451,
     "Lon": 28.3903865814,
-    "Ele": 1664.2
+    "Ele": 1664.2,
+    "ident": "FARA",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2058,7 +2993,15 @@
     "freq": "118.900",
     "Lat": -28.740999221800003,
     "Lon": 32.0920982361,
-    "Ele": 33.2
+    "Ele": 33.2,
+    "ident": "FARB",
+    "iso_country": "ZA",
+    "icao_code": "FARB",
+    "iata_code": "RCB",
+    "length_ft": 4265,
+    "width_ft": 69,
+    "heading": 34,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2067,7 +3010,11 @@
     "freq": "124.800",
     "Lat": -34.111698150634766,
     "Lon": 21.262800216674805,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "FARD",
+    "iso_country": "ZA",
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -2076,7 +3023,14 @@
     "freq": "122.400",
     "Lat": -25.6443,
     "Lon": 27.271099,
-    "Ele": 1127.8
+    "Ele": 1127.8,
+    "ident": "FARG",
+    "iso_country": "ZA",
+    "icao_code": "FARG",
+    "length_ft": 4019,
+    "width_ft": 50,
+    "heading": 145,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -2085,7 +3039,11 @@
     "freq": "",
     "Lat": -27.547199249267575,
     "Lon": 24.17250061035156,
-    "Ele": 1437.1
+    "Ele": 1437.1,
+    "ident": "FARI",
+    "iso_country": "ZA",
+    "icao_code": "FARI",
+    "iata_code": "RVO"
   },
   {
     "type": "small_airport",
@@ -2094,7 +3052,9 @@
     "freq": "",
     "Lat": -31.42350006103516,
     "Lon": 23.978200912475582,
-    "Ele": 1442.0
+    "Ele": 1442,
+    "ident": "FARM",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2103,7 +3063,12 @@
     "freq": "",
     "Lat": -24.7777888889,
     "Lon": 27.7523361111,
-    "Ele": 1161.6
+    "Ele": 1161.6,
+    "ident": "FARO",
+    "iso_country": "ZA",
+    "length_ft": 3728,
+    "heading": 25,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -2112,7 +3077,15 @@
     "freq": "124.800",
     "Lat": -33.812199,
     "Lon": 19.9028,
-    "Ele": 195.1
+    "Ele": 195.1,
+    "ident": "FARS",
+    "iso_country": "ZA",
+    "icao_code": "FARS",
+    "iata_code": "ROD",
+    "length_ft": 2395,
+    "width_ft": 59,
+    "heading": 113,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2121,7 +3094,9 @@
     "freq": "",
     "Lat": -22.78420066833496,
     "Lon": 28.430299758911133,
-    "Ele": 1624.9
+    "Ele": 1624.9,
+    "ident": "FARZ",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2130,7 +3105,15 @@
     "freq": "",
     "Lat": -29.68930053710937,
     "Lon": 17.939599990844727,
-    "Ele": 819.9
+    "Ele": 819.9,
+    "ident": "FASB",
+    "iso_country": "ZA",
+    "icao_code": "FASB",
+    "iata_code": "SBU",
+    "length_ft": 5213,
+    "width_ft": 66,
+    "heading": 74,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2139,7 +3122,15 @@
     "freq": "121.000",
     "Lat": -26.52409935,
     "Lon": 29.1700992584,
-    "Ele": 1600.2
+    "Ele": 1600.2,
+    "ident": "FASC",
+    "iso_country": "ZA",
+    "icao_code": "FASC",
+    "iata_code": "ZEC",
+    "length_ft": 3609,
+    "width_ft": 59,
+    "heading": 91,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2148,7 +3139,14 @@
     "freq": "122.500",
     "Lat": -32.9641,
     "Lon": 17.969299,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "FASD",
+    "iso_country": "ZA",
+    "icao_code": "FASD",
+    "length_ft": 4665,
+    "width_ft": 82,
+    "heading": 358,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -2157,7 +3155,14 @@
     "freq": "130.350",
     "Lat": -24.9473754342,
     "Lon": 31.4488477707,
-    "Ele": 388.9
+    "Ele": 388.9,
+    "ident": "FASE",
+    "iso_country": "ZA",
+    "iata_code": "GSS",
+    "length_ft": 4921,
+    "width_ft": 59,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -2166,7 +3171,9 @@
     "freq": "",
     "Lat": -27.16309928894043,
     "Lon": 25.28610038757324,
-    "Ele": 1332.9
+    "Ele": 1332.9,
+    "ident": "FASG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2175,7 +3182,13 @@
     "freq": "119.300",
     "Lat": -33.980983,
     "Lon": 18.822327,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "FASH",
+    "iso_country": "ZA",
+    "icao_code": "FASH",
+    "length_ft": 2492,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2184,7 +3197,14 @@
     "freq": "122.400",
     "Lat": -26.2494,
     "Lon": 28.398272,
-    "Ele": 1627.6
+    "Ele": 1627.6,
+    "ident": "FASI",
+    "iso_country": "ZA",
+    "icao_code": "FASI",
+    "length_ft": 1818,
+    "width_ft": 70,
+    "heading": 118,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2193,7 +3213,9 @@
     "freq": "",
     "Lat": -26.76000022888184,
     "Lon": 27.76000022888184,
-    "Ele": 1432.6
+    "Ele": 1432.6,
+    "ident": "FASJ",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2202,7 +3224,14 @@
     "freq": "134.400",
     "Lat": -25.8097,
     "Lon": 28.1646,
-    "Ele": 1456.9
+    "Ele": 1456.9,
+    "ident": "FASK",
+    "iso_country": "ZA",
+    "icao_code": "FASK",
+    "length_ft": 6589,
+    "width_ft": 147,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -2211,7 +3240,9 @@
     "freq": "",
     "Lat": -32.48820114135742,
     "Lon": 20.697099685668945,
-    "Ele": 1599.3
+    "Ele": 1599.3,
+    "ident": "FASL",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2220,7 +3251,9 @@
     "freq": "",
     "Lat": -29.325000762939453,
     "Lon": 30.149200439453125,
-    "Ele": 1341.1
+    "Ele": 1341.1,
+    "ident": "FASM",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2229,7 +3262,9 @@
     "freq": "",
     "Lat": -28.31220054626465,
     "Lon": 27.64609909057617,
-    "Ele": 1478.0
+    "Ele": 1478,
+    "ident": "FASN",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2238,7 +3273,15 @@
     "freq": "123.500",
     "Lat": -27.6486,
     "Lon": 22.9993,
-    "Ele": 1172.9
+    "Ele": 1172.9,
+    "ident": "FASS",
+    "iso_country": "ZA",
+    "icao_code": "FASS",
+    "iata_code": "SIS",
+    "length_ft": 5709,
+    "width_ft": 75,
+    "heading": 153,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -2247,7 +3290,9 @@
     "freq": "",
     "Lat": -32.75019836425781,
     "Lon": 25.59499931335449,
-    "Ele": 716.0
+    "Ele": 716,
+    "ident": "FAST",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2256,7 +3301,9 @@
     "freq": "",
     "Lat": -25.956899642944336,
     "Lon": 29.211700439453125,
-    "Ele": 1570.0
+    "Ele": 1570,
+    "ident": "FASU",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2265,7 +3312,9 @@
     "freq": "",
     "Lat": -25.81559944152832,
     "Lon": 25.88640022277832,
-    "Ele": 1430.1
+    "Ele": 1430.1,
+    "ident": "FASW",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2274,7 +3323,14 @@
     "freq": "",
     "Lat": -34.048199,
     "Lon": 20.4746,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "FASX",
+    "iso_country": "ZA",
+    "icao_code": "FASX",
+    "length_ft": 3291,
+    "width_ft": 39,
+    "heading": 126,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -2283,7 +3339,15 @@
     "freq": "124.800",
     "Lat": -24.960899353,
     "Lon": 31.5886993408,
-    "Ele": 310.9
+    "Ele": 310.9,
+    "ident": "FASZ",
+    "iso_country": "ZA",
+    "icao_code": "FASZ",
+    "iata_code": "SZK",
+    "length_ft": 5085,
+    "width_ft": 98,
+    "heading": 156,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -2292,7 +3356,13 @@
     "freq": "125.600",
     "Lat": -26.3520377385,
     "Lon": 27.9681630135,
-    "Ele": 1584.4
+    "Ele": 1584.4,
+    "ident": "FATA",
+    "iso_country": "ZA",
+    "length_ft": 3655,
+    "width_ft": 25,
+    "heading": 95,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2301,7 +3371,9 @@
     "freq": "",
     "Lat": -24.416086,
     "Lon": 31.164232,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "FATB",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2310,7 +3382,14 @@
     "freq": "",
     "Lat": -28.26,
     "Lon": 22.9932,
-    "Ele": 1328.9
+    "Ele": 1328.9,
+    "ident": "FATF",
+    "iso_country": "ZA",
+    "icao_code": "FATF",
+    "length_ft": 4593,
+    "width_ft": 110,
+    "heading": 141,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3398,9 @@
     "freq": "",
     "Lat": -24.2811,
     "Lon": 27.2294,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "FATG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3409,11 @@
     "freq": "",
     "Lat": -23.0769,
     "Lon": 30.3836,
-    "Ele": 616.0
+    "Ele": 616,
+    "ident": "FATH",
+    "iso_country": "ZA",
+    "icao_code": "FATH",
+    "iata_code": "THY"
   },
   {
     "type": "small_airport",
@@ -2337,7 +3422,9 @@
     "freq": "",
     "Lat": -24.5760850299,
     "Lon": 27.4196863174,
-    "Ele": 983.0
+    "Ele": 983,
+    "ident": "FATI",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3433,9 @@
     "freq": "",
     "Lat": -32.56666564941406,
     "Lon": 27.450000762939453,
-    "Ele": 815.3
+    "Ele": 815.3,
+    "ident": "FATM",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2355,7 +3444,11 @@
     "freq": "",
     "Lat": -29.317800521850582,
     "Lon": 26.822799682617188,
-    "Ele": 1506.0
+    "Ele": 1506,
+    "ident": "FATN",
+    "iso_country": "ZA",
+    "icao_code": "FATN",
+    "iata_code": "TCU"
   },
   {
     "type": "small_airport",
@@ -2364,7 +3457,14 @@
     "freq": "131.300",
     "Lat": -29.035109,
     "Lon": 26.16268,
-    "Ele": 1385.9
+    "Ele": 1385.9,
+    "ident": "FATP",
+    "iso_country": "ZA",
+    "icao_code": "FATP",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 78,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2373,7 +3473,9 @@
     "freq": "",
     "Lat": -32.639682,
     "Lon": 28.422969,
-    "Ele": 34.7
+    "Ele": 34.7,
+    "ident": "FATR",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3484,14 @@
     "freq": "122.200",
     "Lat": -26.775128,
     "Lon": 29.337542,
-    "Ele": 1619.4
+    "Ele": 1619.4,
+    "ident": "FATT",
+    "iso_country": "ZA",
+    "icao_code": "FATT",
+    "length_ft": 4941,
+    "width_ft": 62,
+    "heading": 18,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -2391,7 +3500,9 @@
     "freq": "",
     "Lat": -27.20499992370605,
     "Lon": 22.48189926147461,
-    "Ele": 1195.1
+    "Ele": 1195.1,
+    "ident": "FATW",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2400,7 +3511,15 @@
     "freq": "124.800",
     "Lat": -23.8244,
     "Lon": 30.3293,
-    "Ele": 583.4
+    "Ele": 583.4,
+    "ident": "FATZ",
+    "iso_country": "ZA",
+    "icao_code": "FATZ",
+    "iata_code": "LTA",
+    "length_ft": 4659,
+    "width_ft": 66,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -2409,7 +3528,9 @@
     "freq": "",
     "Lat": -29.78840065002441,
     "Lon": 29.498300552368164,
-    "Ele": 1541.4
+    "Ele": 1541.4,
+    "ident": "FAUB",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2418,7 +3539,9 @@
     "freq": "",
     "Lat": -28.35449981689453,
     "Lon": 24.22909927368164,
-    "Ele": 1070.5
+    "Ele": 1070.5,
+    "ident": "FAUC",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2427,7 +3550,9 @@
     "freq": "",
     "Lat": -31.21999931335449,
     "Lon": 28.209999084472656,
-    "Ele": 1396.0
+    "Ele": 1396,
+    "ident": "FAUG",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2436,7 +3561,9 @@
     "freq": "",
     "Lat": -33.785301208496094,
     "Lon": 25.38330078125,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "FAUH",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2445,7 +3572,15 @@
     "freq": "124.800",
     "Lat": -28.3206005096,
     "Lon": 31.4165000916,
-    "Ele": 524.3
+    "Ele": 524.3,
+    "ident": "FAUL",
+    "iso_country": "ZA",
+    "icao_code": "FAUL",
+    "iata_code": "ULD",
+    "length_ft": 5381,
+    "width_ft": 75,
+    "heading": 34,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -2454,7 +3589,15 @@
     "freq": "121.300",
     "Lat": -28.39909935,
     "Lon": 21.2602005005,
-    "Ele": 848.0
+    "Ele": 848,
+    "ident": "FAUP",
+    "iso_country": "ZA",
+    "icao_code": "FAUP",
+    "iata_code": "UTN",
+    "length_ft": 16076,
+    "width_ft": 197,
+    "heading": 153,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -2463,7 +3606,9 @@
     "freq": "",
     "Lat": -27.680500030517575,
     "Lon": 30.31679916381836,
-    "Ele": 1250.0
+    "Ele": 1250,
+    "ident": "FAUR",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2472,7 +3617,15 @@
     "freq": "",
     "Lat": -24.7854003906,
     "Lon": 31.3549003601,
-    "Ele": 385.0
+    "Ele": 385,
+    "ident": "FAUS",
+    "iso_country": "ZA",
+    "icao_code": "FAUS",
+    "iata_code": "ULX",
+    "length_ft": 4440,
+    "width_ft": 56,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -2481,7 +3634,15 @@
     "freq": "121.300",
     "Lat": -31.5463631849,
     "Lon": 28.6733551025,
-    "Ele": 731.5
+    "Ele": 731.5,
+    "ident": "FAUT",
+    "iso_country": "ZA",
+    "icao_code": "FAUT",
+    "iata_code": "UTT",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 113,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2490,7 +3651,9 @@
     "freq": "",
     "Lat": -30.13419914245605,
     "Lon": 18.52669906616211,
-    "Ele": 1018.0
+    "Ele": 1018,
+    "ident": "FAVA",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2499,7 +3662,15 @@
     "freq": "",
     "Lat": -26.9824008942,
     "Lon": 24.7287998199,
-    "Ele": 1194.8
+    "Ele": 1194.8,
+    "ident": "FAVB",
+    "iso_country": "ZA",
+    "icao_code": "FAVB",
+    "iata_code": "VRU",
+    "length_ft": 3937,
+    "width_ft": 66,
+    "heading": 164,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2508,7 +3679,9 @@
     "freq": "",
     "Lat": -27.44029998779297,
     "Lon": 29.153099060058597,
-    "Ele": 1676.1
+    "Ele": 1676.1,
+    "ident": "FAVD",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2517,7 +3690,9 @@
     "freq": "",
     "Lat": -26.300899505615234,
     "Lon": 26.81419944763184,
-    "Ele": 1498.7
+    "Ele": 1498.7,
+    "ident": "FAVE",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2526,7 +3701,9 @@
     "freq": "",
     "Lat": -31.16580009460449,
     "Lon": 23.80940055847168,
-    "Ele": 1328.9
+    "Ele": 1328.9,
+    "ident": "FAVF",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2535,7 +3712,15 @@
     "freq": "119.100",
     "Lat": -29.770599,
     "Lon": 31.058399,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "FAVG",
+    "iso_country": "ZA",
+    "icao_code": "FAVG",
+    "iata_code": "VIR",
+    "length_ft": 3035,
+    "width_ft": 72,
+    "heading": 28,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2544,7 +3729,9 @@
     "freq": "",
     "Lat": -27.610599517822266,
     "Lon": 26.683500289916992,
-    "Ele": 1311.9
+    "Ele": 1311.9,
+    "ident": "FAVI",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2553,7 +3740,14 @@
     "freq": "124.800",
     "Lat": -22.448099,
     "Lon": 29.3377,
-    "Ele": 711.1
+    "Ele": 711.1,
+    "ident": "FAVM",
+    "iso_country": "ZA",
+    "icao_code": "FAVM",
+    "length_ft": 5085,
+    "width_ft": 49,
+    "heading": 71,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2562,7 +3756,9 @@
     "freq": "",
     "Lat": -26.69029998779297,
     "Lon": 27.777099609375,
-    "Ele": 1481.6
+    "Ele": 1481.6,
+    "ident": "FAVP",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2571,7 +3767,15 @@
     "freq": "",
     "Lat": -31.641000747680664,
     "Lon": 18.5447998046875,
-    "Ele": 100.6
+    "Ele": 100.6,
+    "ident": "FAVR",
+    "iso_country": "ZA",
+    "icao_code": "FAVR",
+    "iata_code": "VRE",
+    "length_ft": 4265,
+    "width_ft": 59,
+    "heading": 57,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2580,7 +3784,9 @@
     "freq": "",
     "Lat": -27.83458,
     "Lon": 21.63037,
-    "Ele": 989.1
+    "Ele": 989.1,
+    "ident": "FAVS",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2589,7 +3795,9 @@
     "freq": "",
     "Lat": -27.37689971923828,
     "Lon": 29.86000061035156,
-    "Ele": 1709.9
+    "Ele": 1709.9,
+    "ident": "FAVU",
+    "iso_country": "ZA"
   },
   {
     "type": "medium_airport",
@@ -2598,7 +3806,14 @@
     "freq": "122.100",
     "Lat": -26.566401,
     "Lon": 27.9608,
-    "Ele": 1477.1
+    "Ele": 1477.1,
+    "ident": "FAVV",
+    "iso_country": "ZA",
+    "icao_code": "FAVV",
+    "length_ft": 3724,
+    "width_ft": 52,
+    "heading": 125,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2607,7 +3822,10 @@
     "freq": "",
     "Lat": -31.399401,
     "Lon": 23.156401,
-    "Ele": 1257.0
+    "Ele": 1257,
+    "ident": "FAVW",
+    "iso_country": "ZA",
+    "icao_code": "FAVW"
   },
   {
     "type": "small_airport",
@@ -2616,7 +3834,11 @@
     "freq": "",
     "Lat": -27.78689956665039,
     "Lon": 30.79640007019043,
-    "Ele": 1157.9
+    "Ele": 1157.9,
+    "ident": "FAVY",
+    "iso_country": "ZA",
+    "icao_code": "FAVY",
+    "iata_code": "VYD"
   },
   {
     "type": "small_airport",
@@ -2625,7 +3847,13 @@
     "freq": "124.800",
     "Lat": -24.90999984741211,
     "Lon": 28.299999237060547,
-    "Ele": 1114.0
+    "Ele": 1114,
+    "ident": "FAWA",
+    "iso_country": "ZA",
+    "length_ft": 3937,
+    "width_ft": 75,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -2634,7 +3862,15 @@
     "freq": "120.600",
     "Lat": -25.6539,
     "Lon": 28.224199,
-    "Ele": 1248.2
+    "Ele": 1248.2,
+    "ident": "FAWB",
+    "iso_country": "ZA",
+    "icao_code": "FAWB",
+    "iata_code": "PRY",
+    "length_ft": 5998,
+    "width_ft": 98,
+    "heading": 93,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2643,7 +3879,9 @@
     "freq": "",
     "Lat": -33.66310119628906,
     "Lon": 19.41530036926269,
-    "Ele": 205.1
+    "Ele": 205.1,
+    "ident": "FAWC",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2652,7 +3890,9 @@
     "freq": "",
     "Lat": -27.170000076293945,
     "Lon": 25.979999542236328,
-    "Ele": 1375.6
+    "Ele": 1375.6,
+    "ident": "FAWD",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2661,7 +3901,9 @@
     "freq": "",
     "Lat": -24.2046,
     "Lon": 27.9,
-    "Ele": 1100.0
+    "Ele": 1100,
+    "ident": "FAWE",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2670,7 +3912,14 @@
     "freq": "123.500",
     "Lat": -25.8323,
     "Lon": 29.191999,
-    "Ele": 1547.8
+    "Ele": 1547.8,
+    "ident": "FAWI",
+    "iso_country": "ZA",
+    "icao_code": "FAWI",
+    "length_ft": 2500,
+    "width_ft": 30,
+    "heading": 19,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -2679,7 +3928,15 @@
     "freq": "134.400",
     "Lat": -25.8299999237,
     "Lon": 28.2224998474,
-    "Ele": 1505.7
+    "Ele": 1505.7,
+    "ident": "FAWK",
+    "iso_country": "ZA",
+    "icao_code": "FAWK",
+    "iata_code": "WKF",
+    "length_ft": 6299,
+    "width_ft": 148,
+    "heading": 44,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -2688,7 +3945,9 @@
     "freq": "",
     "Lat": -31.38360023498535,
     "Lon": 20.93280029296875,
-    "Ele": 1061.9
+    "Ele": 1061.9,
+    "ident": "FAWL",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2697,7 +3956,15 @@
     "freq": "118.000",
     "Lat": -27.996825,
     "Lon": 26.663334,
-    "Ele": 1347.5
+    "Ele": 1347.5,
+    "ident": "FAWM",
+    "iso_country": "ZA",
+    "icao_code": "FAWM",
+    "iata_code": "WEL",
+    "length_ft": 6578,
+    "width_ft": 59,
+    "heading": 50,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2706,7 +3973,14 @@
     "freq": "131.100",
     "Lat": -33.77,
     "Lon": 18.74,
-    "Ele": 121.6
+    "Ele": 121.6,
+    "ident": "FAWN",
+    "iso_country": "ZA",
+    "icao_code": "FAWN",
+    "length_ft": 2296,
+    "width_ft": 65,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2715,7 +3989,9 @@
     "freq": "",
     "Lat": -33.263301849365234,
     "Lon": 23.4906005859375,
-    "Ele": 794.9
+    "Ele": 794.9,
+    "ident": "FAWO",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2724,7 +4000,9 @@
     "freq": "",
     "Lat": -32.589906,
     "Lon": 28.518491,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "FAWR",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2733,7 +4011,9 @@
     "freq": "",
     "Lat": -27.84670066833496,
     "Lon": 26.35059928894043,
-    "Ele": 1310.9
+    "Ele": 1310.9,
+    "ident": "FAWS",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2742,7 +4022,14 @@
     "freq": "124.800",
     "Lat": -24.660091,
     "Lon": 30.180422,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "FAWT",
+    "iso_country": "ZA",
+    "local_code": "FAWT",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 136,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2751,7 +4038,12 @@
     "freq": "",
     "Lat": -25.319676,
     "Lon": 30.970782,
-    "Ele": 893.7
+    "Ele": 893.7,
+    "ident": "FAWV",
+    "iso_country": "ZA",
+    "length_ft": 2132,
+    "heading": 85,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2760,7 +4052,14 @@
     "freq": "119.700",
     "Lat": -33.9002,
     "Lon": 18.498301,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "FAYP",
+    "iso_country": "ZA",
+    "icao_code": "FAYP",
+    "length_ft": 5200,
+    "width_ft": 75,
+    "heading": 356,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -2769,7 +4068,9 @@
     "freq": "",
     "Lat": -32.472152,
     "Lon": 28.65052,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "FAZP",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2778,7 +4079,9 @@
     "freq": "",
     "Lat": -26.89310073852539,
     "Lon": 27.690000534057617,
-    "Ele": 1449.0
+    "Ele": 1449,
+    "ident": "FAZQ",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2787,7 +4090,14 @@
     "freq": "",
     "Lat": -25.599001,
     "Lon": 26.042299,
-    "Ele": 1297.8
+    "Ele": 1297.8,
+    "ident": "FAZR",
+    "iso_country": "ZA",
+    "icao_code": "FAZR",
+    "length_ft": 6480,
+    "width_ft": 100,
+    "heading": 27,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -2796,7 +4106,10 @@
     "freq": "",
     "Lat": -24.1903,
     "Lon": 31.3864,
-    "Ele": 353.6
+    "Ele": 353.6,
+    "ident": "MWR",
+    "iso_country": "ZA",
+    "iata_code": "MWR"
   },
   {
     "type": "small_airport",
@@ -2805,7 +4118,9 @@
     "freq": "",
     "Lat": -33.905277252197266,
     "Lon": 24.95694351196289,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "ZA-0001",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2814,7 +4129,9 @@
     "freq": "",
     "Lat": -33.1966667175293,
     "Lon": 23.934667587280277,
-    "Ele": 577.6
+    "Ele": 577.6,
+    "ident": "ZA-0002",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2823,7 +4140,9 @@
     "freq": "",
     "Lat": -27.25,
     "Lon": 27.549999237060547,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0003",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2832,7 +4151,13 @@
     "freq": "125.200",
     "Lat": -32.69652,
     "Lon": 28.321643,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "ZA-0004",
+    "iso_country": "ZA",
+    "length_ft": 1800,
+    "width_ft": 60,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2841,7 +4166,9 @@
     "freq": "",
     "Lat": -32.08333206176758,
     "Lon": 26.299999237060547,
-    "Ele": 1280.2
+    "Ele": 1280.2,
+    "ident": "ZA-0005",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2850,7 +4177,9 @@
     "freq": "",
     "Lat": -31.28333282470703,
     "Lon": 26.56666755676269,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "ZA-0006",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2859,7 +4188,9 @@
     "freq": "",
     "Lat": -30.236791,
     "Lon": 25.258439,
-    "Ele": 1431.0
+    "Ele": 1431,
+    "ident": "ZA-0009",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2868,7 +4199,9 @@
     "freq": "",
     "Lat": -28.73590087890625,
     "Lon": 27.231800079345703,
-    "Ele": 1463.0
+    "Ele": 1463,
+    "ident": "ZA-0010",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2877,7 +4210,9 @@
     "freq": "",
     "Lat": -28.690399,
     "Lon": 26.420799,
-    "Ele": 1416.4
+    "Ele": 1416.4,
+    "ident": "ZA-0011",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2886,7 +4221,9 @@
     "freq": "",
     "Lat": -28.453332901000977,
     "Lon": 27.524999618530277,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "ZA-0012",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2895,7 +4232,9 @@
     "freq": "",
     "Lat": -28.406665802001957,
     "Lon": 28.81083297729492,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "ZA-0013",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2904,7 +4243,9 @@
     "freq": "",
     "Lat": -28.37680053710937,
     "Lon": 29.006200790405277,
-    "Ele": 1670.0
+    "Ele": 1670,
+    "ident": "ZA-0014",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2913,7 +4254,9 @@
     "freq": "",
     "Lat": -28.268888473510746,
     "Lon": 27.1613883972168,
-    "Ele": 1556.0
+    "Ele": 1556,
+    "ident": "ZA-0015",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2922,7 +4265,9 @@
     "freq": "",
     "Lat": -28.22361183166504,
     "Lon": 29.115833282470703,
-    "Ele": 1700.8
+    "Ele": 1700.8,
+    "ident": "ZA-0016",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2931,7 +4276,9 @@
     "freq": "",
     "Lat": -27.984167098999023,
     "Lon": 28.39444351196289,
-    "Ele": 1688.6
+    "Ele": 1688.6,
+    "ident": "ZA-0017",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2940,7 +4287,9 @@
     "freq": "",
     "Lat": -27.96041679382324,
     "Lon": 25.835832595825195,
-    "Ele": 1280.2
+    "Ele": 1280.2,
+    "ident": "ZA-0018",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2949,7 +4298,9 @@
     "freq": "",
     "Lat": -27.680500030517575,
     "Lon": 27.25349998474121,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "ZA-0019",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2958,7 +4309,9 @@
     "freq": "",
     "Lat": -27.5,
     "Lon": 26.330554962158203,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "ZA-0020",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2967,7 +4320,9 @@
     "freq": "",
     "Lat": -27.20133399963379,
     "Lon": 26.903499603271484,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "ZA-0022",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2976,7 +4331,9 @@
     "freq": "",
     "Lat": -27.049999237060547,
     "Lon": 28.600000381469727,
-    "Ele": 1553.6
+    "Ele": 1553.6,
+    "ident": "ZA-0023",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -2985,7 +4342,10 @@
     "freq": "",
     "Lat": -26.033333,
     "Lon": 27.9,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "ZA-0024",
+    "iso_country": "ZA",
+    "local_code": "FA0066"
   },
   {
     "type": "small_airport",
@@ -2994,7 +4354,9 @@
     "freq": "",
     "Lat": -25.903165817260746,
     "Lon": 28.082000732421875,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "ZA-0025",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3003,7 +4365,9 @@
     "freq": "",
     "Lat": -25.857500076293945,
     "Lon": 27.62777709960937,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "ZA-0026",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3012,7 +4376,9 @@
     "freq": "",
     "Lat": -25.77138900756836,
     "Lon": 28.72694396972656,
-    "Ele": 1463.0
+    "Ele": 1463,
+    "ident": "ZA-0027",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3021,7 +4387,9 @@
     "freq": "",
     "Lat": -27.350000381469727,
     "Lon": 30.166667938232425,
-    "Ele": 1782.5
+    "Ele": 1782.5,
+    "ident": "ZA-0028",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3030,7 +4398,9 @@
     "freq": "",
     "Lat": -27.020000457763672,
     "Lon": 29.8700008392334,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "ZA-0029",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3039,7 +4409,10 @@
     "freq": "",
     "Lat": -26.816668,
     "Lon": 28.466667,
-    "Ele": 1600.2
+    "Ele": 1600.2,
+    "ident": "ZA-0030",
+    "iso_country": "ZA",
+    "local_code": "FA0015"
   },
   {
     "type": "small_airport",
@@ -3048,7 +4421,9 @@
     "freq": "",
     "Lat": -26.489999771118164,
     "Lon": 29.07999992370605,
-    "Ele": 1611.8
+    "Ele": 1611.8,
+    "ident": "ZA-0031",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3057,7 +4432,9 @@
     "freq": "",
     "Lat": -26.299999237060547,
     "Lon": 30.733333587646484,
-    "Ele": 1609.3
+    "Ele": 1609.3,
+    "ident": "ZA-0032",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3066,7 +4443,9 @@
     "freq": "",
     "Lat": -26.24799919128418,
     "Lon": 29.71540069580078,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "ZA-0033",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3075,7 +4454,10 @@
     "freq": "",
     "Lat": -26.200001,
     "Lon": 28.816668,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "ZA-0034",
+    "iso_country": "ZA",
+    "local_code": "FA0069"
   },
   {
     "type": "small_airport",
@@ -3084,7 +4466,9 @@
     "freq": "",
     "Lat": -26.17569923400879,
     "Lon": 29.18219947814941,
-    "Ele": 1613.6
+    "Ele": 1613.6,
+    "ident": "ZA-0035",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3093,7 +4477,9 @@
     "freq": "",
     "Lat": -25.950000762939453,
     "Lon": 30.11666679382324,
-    "Ele": 1970.2
+    "Ele": 1970.2,
+    "ident": "ZA-0036",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3102,7 +4488,9 @@
     "freq": "",
     "Lat": -25.8188991547,
     "Lon": 29.2217006683,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "ZA-0037",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3111,7 +4499,13 @@
     "freq": "124.800",
     "Lat": -24.1997222222,
     "Lon": 30.8125,
-    "Ele": 349.0
+    "Ele": 349,
+    "ident": "ZA-0038",
+    "iso_country": "ZA",
+    "length_ft": 2624,
+    "width_ft": 22,
+    "heading": 357,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -3120,7 +4514,9 @@
     "freq": "",
     "Lat": -25.57550048828125,
     "Lon": 30.975860595703125,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "ZA-0039",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3129,7 +4525,9 @@
     "freq": "",
     "Lat": -24.833334,
     "Lon": 30.1,
-    "Ele": 777.2
+    "Ele": 777.2,
+    "ident": "ZA-0040",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3138,7 +4536,9 @@
     "freq": "",
     "Lat": -24.808094,
     "Lon": 31.504564,
-    "Ele": 358.4
+    "Ele": 358.4,
+    "ident": "ZA-0041",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3147,7 +4547,9 @@
     "freq": "",
     "Lat": -30.580979,
     "Lon": 25.263259,
-    "Ele": 1210.1
+    "Ele": 1210.1,
+    "ident": "ZA-0042",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3156,7 +4558,9 @@
     "freq": "",
     "Lat": -29.850276947021484,
     "Lon": 18.96555519104004,
-    "Ele": 876.0
+    "Ele": 876,
+    "ident": "ZA-0043",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3165,7 +4569,9 @@
     "freq": "",
     "Lat": -29.139166,
     "Lon": 23.648333,
-    "Ele": 1026.6
+    "Ele": 1026.6,
+    "ident": "ZA-0044",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3174,7 +4580,9 @@
     "freq": "",
     "Lat": -28.733333587646484,
     "Lon": 24.66666603088379,
-    "Ele": 1199.7
+    "Ele": 1199.7,
+    "ident": "ZA-0045",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3183,7 +4591,9 @@
     "freq": "",
     "Lat": -28.66666603088379,
     "Lon": 24.03333282470703,
-    "Ele": 1026.0
+    "Ele": 1026,
+    "ident": "ZA-0046",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3192,7 +4602,13 @@
     "freq": "124.800",
     "Lat": -28.627087,
     "Lon": 20.324893,
-    "Ele": 670.6
+    "Ele": 670.6,
+    "ident": "ZA-0047",
+    "iso_country": "ZA",
+    "length_ft": 4593,
+    "width_ft": 52,
+    "heading": 60,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -3201,7 +4617,9 @@
     "freq": "",
     "Lat": -28.532047,
     "Lon": 24.537843,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "ZA-0048",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3210,7 +4628,9 @@
     "freq": "",
     "Lat": -28.40925025939941,
     "Lon": 16.779722213745117,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "ZA-0049",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3219,7 +4639,9 @@
     "freq": "",
     "Lat": -28.104999542236328,
     "Lon": 24.37833404541016,
-    "Ele": 1181.1
+    "Ele": 1181.1,
+    "ident": "ZA-0051",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3228,7 +4650,9 @@
     "freq": "",
     "Lat": -28.03222274780273,
     "Lon": 23.202777862548828,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "ZA-0052",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3237,7 +4661,9 @@
     "freq": "",
     "Lat": -27.94166755676269,
     "Lon": 24.81999969482422,
-    "Ele": 1151.5
+    "Ele": 1151.5,
+    "ident": "ZA-0053",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3246,7 +4672,9 @@
     "freq": "",
     "Lat": -26.9869441986,
     "Lon": 20.7772216797,
-    "Ele": 853.7
+    "Ele": 853.7,
+    "ident": "ZA-0054",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3255,7 +4683,9 @@
     "freq": "",
     "Lat": -26.125,
     "Lon": 22.61888885498047,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "ZA-0055",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3264,7 +4694,9 @@
     "freq": "",
     "Lat": -30.28569984436035,
     "Lon": 30.65690040588379,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "ZA-0056",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3273,7 +4705,9 @@
     "freq": "",
     "Lat": -30.27199935913086,
     "Lon": 29.39739990234375,
-    "Ele": 1493.5
+    "Ele": 1493.5,
+    "ident": "ZA-0057",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3282,7 +4716,9 @@
     "freq": "",
     "Lat": -29.77972221374512,
     "Lon": 30.718334197998047,
-    "Ele": 835.2
+    "Ele": 835.2,
+    "ident": "ZA-0058",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3291,7 +4727,9 @@
     "freq": "",
     "Lat": -29.761667251586918,
     "Lon": 30.3397216796875,
-    "Ele": 844.9
+    "Ele": 844.9,
+    "ident": "ZA-0059",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3300,7 +4738,9 @@
     "freq": "",
     "Lat": -29.488899,
     "Lon": 31.179001,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "ZA-0060",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3309,7 +4749,9 @@
     "freq": "",
     "Lat": -29.354900360107425,
     "Lon": 30.4281005859375,
-    "Ele": 664.5
+    "Ele": 664.5,
+    "ident": "ZA-0061",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3318,7 +4760,9 @@
     "freq": "",
     "Lat": -29.098167419433597,
     "Lon": 31.5049991607666,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "ZA-0062",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3327,7 +4771,13 @@
     "freq": "",
     "Lat": -28.639941,
     "Lon": 29.147501,
-    "Ele": 1188.7
+    "Ele": 1188.7,
+    "ident": "ZA-0063",
+    "iso_country": "ZA",
+    "length_ft": 3448,
+    "width_ft": 52,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3336,7 +4786,9 @@
     "freq": "",
     "Lat": -28.433332443237305,
     "Lon": 32.150001525878906,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "ZA-0064",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3345,7 +4797,9 @@
     "freq": "",
     "Lat": -28.350000381469727,
     "Lon": 32.41666793823242,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "ZA-0065",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3354,7 +4808,9 @@
     "freq": "",
     "Lat": -28.131526947021484,
     "Lon": 30.290416717529297,
-    "Ele": 1231.4
+    "Ele": 1231.4,
+    "ident": "ZA-0066",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3363,7 +4819,9 @@
     "freq": "",
     "Lat": -27.350000381469727,
     "Lon": 32.13333511352539,
-    "Ele": 108.2
+    "Ele": 108.2,
+    "ident": "ZA-0067",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3372,7 +4830,9 @@
     "freq": "",
     "Lat": -24.886667251586918,
     "Lon": 28.04722213745117,
-    "Ele": 1112.5
+    "Ele": 1112.5,
+    "ident": "ZA-0068",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3381,7 +4841,14 @@
     "freq": "124.800",
     "Lat": -25.428948,
     "Lon": 31.577033,
-    "Ele": 312.1
+    "Ele": 312.1,
+    "ident": "ZA-0069",
+    "iso_country": "ZA",
+    "local_code": "R326",
+    "length_ft": 3281,
+    "width_ft": 33,
+    "heading": 45,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -3390,7 +4857,9 @@
     "freq": "",
     "Lat": -24.668333053588867,
     "Lon": 26.536666870117188,
-    "Ele": 973.8
+    "Ele": 973.8,
+    "ident": "ZA-0070",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3399,7 +4868,9 @@
     "freq": "",
     "Lat": -24.57088,
     "Lon": 30.77329,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "ZA-0071",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3408,7 +4879,10 @@
     "freq": "",
     "Lat": -24.525533,
     "Lon": 31.289748,
-    "Ele": 474.0
+    "Ele": 474,
+    "ident": "ZA-0072",
+    "iso_country": "ZA",
+    "iata_code": "TDT"
   },
   {
     "type": "small_airport",
@@ -3417,7 +4891,9 @@
     "freq": "",
     "Lat": -24.299759,
     "Lon": 31.288934,
-    "Ele": 395.6
+    "Ele": 395.6,
+    "ident": "ZA-0073",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3426,7 +4902,9 @@
     "freq": "",
     "Lat": -24.108055114746094,
     "Lon": 30.90916633605957,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "ZA-0074",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3435,7 +4913,9 @@
     "freq": "",
     "Lat": -24.08666610717773,
     "Lon": 30.843889236450195,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "ZA-0075",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3444,7 +4924,9 @@
     "freq": "",
     "Lat": -24.041000366210938,
     "Lon": 29.27589988708496,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "ZA-0076",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3453,7 +4935,9 @@
     "freq": "",
     "Lat": -23.328611373901367,
     "Lon": 27.60961151123047,
-    "Ele": 823.0
+    "Ele": 823,
+    "ident": "ZA-0077",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3462,7 +4946,10 @@
     "freq": "",
     "Lat": -23.257788,
     "Lon": 28.408928,
-    "Ele": 976.3
+    "Ele": 976.3,
+    "ident": "ZA-0078",
+    "iso_country": "ZA",
+    "local_code": "FA0003"
   },
   {
     "type": "small_airport",
@@ -3471,7 +4958,9 @@
     "freq": "",
     "Lat": -22.917943954467773,
     "Lon": 29.45783424377441,
-    "Ele": 798.6
+    "Ele": 798.6,
+    "ident": "ZA-0079",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3480,7 +4969,10 @@
     "freq": "",
     "Lat": -22.8395,
     "Lon": 28.209708,
-    "Ele": 853.4
+    "Ele": 853.4,
+    "ident": "ZA-0080",
+    "iso_country": "ZA",
+    "local_code": "FA0067"
   },
   {
     "type": "small_airport",
@@ -3489,7 +4981,9 @@
     "freq": "",
     "Lat": -22.80380630493164,
     "Lon": 28.995750427246094,
-    "Ele": 789.4
+    "Ele": 789.4,
+    "ident": "ZA-0081",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3498,7 +4992,9 @@
     "freq": "",
     "Lat": -22.667200088500977,
     "Lon": 29.315200805664062,
-    "Ele": 807.7
+    "Ele": 807.7,
+    "ident": "ZA-0082",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3507,7 +5003,9 @@
     "freq": "",
     "Lat": -22.579599380493164,
     "Lon": 29.968900680541992,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "ZA-0083",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3516,7 +5014,9 @@
     "freq": "",
     "Lat": -25.79205703735352,
     "Lon": 25.61103057861328,
-    "Ele": 1274.4
+    "Ele": 1274.4,
+    "ident": "ZA-0085",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3525,7 +5025,9 @@
     "freq": "",
     "Lat": -25.726667404174805,
     "Lon": 27.739721298217773,
-    "Ele": 1234.4
+    "Ele": 1234.4,
+    "ident": "ZA-0086",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3534,7 +5036,9 @@
     "freq": "",
     "Lat": -25.53333282470703,
     "Lon": 25.733333587646484,
-    "Ele": 1420.1
+    "Ele": 1420.1,
+    "ident": "ZA-0087",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3543,7 +5047,9 @@
     "freq": "",
     "Lat": -25.299999237060547,
     "Lon": 27.53333282470703,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "ZA-0088",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3552,7 +5058,9 @@
     "freq": "",
     "Lat": -25.24620056152344,
     "Lon": 25.88190078735352,
-    "Ele": 1140.6
+    "Ele": 1140.6,
+    "ident": "ZA-0089",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3561,7 +5069,9 @@
     "freq": "",
     "Lat": -33.760250091552734,
     "Lon": 21.54722213745117,
-    "Ele": 189.0
+    "Ele": 189,
+    "ident": "ZA-0090",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3570,7 +5080,9 @@
     "freq": "",
     "Lat": -33.707637786865234,
     "Lon": 18.646249771118164,
-    "Ele": 79.6
+    "Ele": 79.6,
+    "ident": "ZA-0091",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3579,7 +5091,9 @@
     "freq": "",
     "Lat": -31.56666755676269,
     "Lon": 18.38333320617676,
-    "Ele": 68.6
+    "Ele": 68.6,
+    "ident": "ZA-0092",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3588,7 +5102,9 @@
     "freq": "",
     "Lat": -30.58333396911621,
     "Lon": 23.51666641235352,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "ZA-0093",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3597,7 +5113,10 @@
     "freq": "",
     "Lat": -25.05010032653809,
     "Lon": 31.13190078735352,
-    "Ele": 551.7
+    "Ele": 551.7,
+    "ident": "ZA-0094",
+    "iso_country": "ZA",
+    "iata_code": "HZV"
   },
   {
     "type": "small_airport",
@@ -3606,7 +5125,10 @@
     "freq": "",
     "Lat": -24.593000411987305,
     "Lon": 31.41510009765625,
-    "Ele": 438.9
+    "Ele": 438.9,
+    "ident": "ZA-0095",
+    "iso_country": "ZA",
+    "iata_code": "KHO"
   },
   {
     "type": "small_airport",
@@ -3615,7 +5137,10 @@
     "freq": "",
     "Lat": -31.2849,
     "Lon": 29.9884,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "ZA-0096",
+    "iso_country": "ZA",
+    "iata_code": "MBM"
   },
   {
     "type": "small_airport",
@@ -3624,7 +5149,10 @@
     "freq": "",
     "Lat": -24.777700424194336,
     "Lon": 31.385499954223636,
-    "Ele": 379.5
+    "Ele": 379.5,
+    "ident": "ZA-0097",
+    "iso_country": "ZA",
+    "iata_code": "INY"
   },
   {
     "type": "small_airport",
@@ -3633,7 +5161,10 @@
     "freq": "",
     "Lat": -22.61930084228516,
     "Lon": 30.175600051879883,
-    "Ele": 544.4
+    "Ele": 544.4,
+    "ident": "ZA-0098",
+    "iso_country": "ZA",
+    "iata_code": "TSD"
   },
   {
     "type": "small_airport",
@@ -3642,7 +5173,9 @@
     "freq": "",
     "Lat": -26.57099914550781,
     "Lon": 30.243000030517575,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0099",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3651,7 +5184,10 @@
     "freq": "120.350",
     "Lat": -25.991908,
     "Lon": 28.415932,
-    "Ele": 1613.0
+    "Ele": 1613,
+    "ident": "ZA-0100",
+    "iso_country": "ZA",
+    "local_code": "FA0004"
   },
   {
     "type": "small_airport",
@@ -3660,7 +5196,9 @@
     "freq": "",
     "Lat": -25.58867835998535,
     "Lon": 30.622364044189453,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0101",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3669,7 +5207,9 @@
     "freq": "",
     "Lat": -32.732359,
     "Lon": 19.540073,
-    "Ele": 1065.0
+    "Ele": 1065,
+    "ident": "ZA-0104",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3678,7 +5218,14 @@
     "freq": "124.800",
     "Lat": -25.692875,
     "Lon": 27.782657,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "ZA-0105",
+    "iso_country": "ZA",
+    "icao_code": "FAAP",
+    "length_ft": 2460,
+    "width_ft": 33,
+    "heading": 12,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -3696,7 +5243,9 @@
     "freq": "",
     "Lat": -26.480902,
     "Lon": 29.466671,
-    "Ele": 1668.8
+    "Ele": 1668.8,
+    "ident": "ZA-0108",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3705,7 +5254,9 @@
     "freq": "",
     "Lat": -27.6094,
     "Lon": 25.5794,
-    "Ele": 1257.9
+    "Ele": 1257.9,
+    "ident": "ZA-0109",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3714,7 +5265,10 @@
     "freq": "",
     "Lat": -26.329316,
     "Lon": 28.068469,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "ZA-0110",
+    "iso_country": "ZA",
+    "local_code": "PAN"
   },
   {
     "type": "small_airport",
@@ -3723,7 +5277,9 @@
     "freq": "124.800",
     "Lat": -24.995,
     "Lon": 30.4033333333,
-    "Ele": 1396.0
+    "Ele": 1396,
+    "ident": "ZA-0111",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3732,7 +5288,13 @@
     "freq": "124.100",
     "Lat": -25.9711496926,
     "Lon": 28.3502766059,
-    "Ele": 1615.4
+    "Ele": 1615.4,
+    "ident": "ZA-0112",
+    "iso_country": "ZA",
+    "length_ft": 3100,
+    "width_ft": 45,
+    "heading": 39,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -3741,7 +5303,13 @@
     "freq": "124.800",
     "Lat": -26.851201,
     "Lon": 28.198428,
-    "Ele": 1510.3
+    "Ele": 1510.3,
+    "ident": "ZA-0113",
+    "iso_country": "ZA",
+    "length_ft": 3100,
+    "width_ft": 30,
+    "heading": 56,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -3750,7 +5318,13 @@
     "freq": "124.800",
     "Lat": -24.7567,
     "Lon": 27.9691,
-    "Ele": 1282.9
+    "Ele": 1282.9,
+    "ident": "ZA-0114",
+    "iso_country": "ZA",
+    "length_ft": 4593,
+    "width_ft": 42,
+    "heading": 64,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -3759,7 +5333,13 @@
     "freq": "124.800",
     "Lat": -33.950756,
     "Lon": 22.979482,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0115",
+    "iso_country": "ZA",
+    "length_ft": 2200,
+    "width_ft": 60,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -3768,7 +5348,9 @@
     "freq": "",
     "Lat": -33.391911,
     "Lon": 26.346392,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0116",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3777,7 +5359,13 @@
     "freq": "126.800",
     "Lat": -33.758944,
     "Lon": 18.548195,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "ZA-0120",
+    "iso_country": "ZA",
+    "length_ft": 2116,
+    "width_ft": 40,
+    "heading": 20,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -3786,7 +5374,9 @@
     "freq": "",
     "Lat": -28.1081,
     "Lon": 16.8936,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "ZA-0122",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3795,7 +5385,9 @@
     "freq": "",
     "Lat": -31.5943,
     "Lon": 18.7468,
-    "Ele": 149.4
+    "Ele": 149.4,
+    "ident": "ZA-0123",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3804,7 +5396,9 @@
     "freq": "",
     "Lat": -31.8057,
     "Lon": 18.2384,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "ZA-0124",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3813,7 +5407,9 @@
     "freq": "",
     "Lat": -31.6736,
     "Lon": 18.1737,
-    "Ele": 79.2
+    "Ele": 79.2,
+    "ident": "ZA-0125",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3822,7 +5418,9 @@
     "freq": "",
     "Lat": -31.1227,
     "Lon": 18.6095,
-    "Ele": 286.5
+    "Ele": 286.5,
+    "ident": "ZA-0126",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3831,7 +5429,9 @@
     "freq": "",
     "Lat": -30.3366,
     "Lon": 17.2896,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "ZA-0129",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3840,7 +5440,9 @@
     "freq": "",
     "Lat": -29.9214,
     "Lon": 18.4237,
-    "Ele": 957.1
+    "Ele": 957.1,
+    "ident": "ZA-0130",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3849,7 +5451,9 @@
     "freq": "",
     "Lat": -29.524,
     "Lon": 17.781,
-    "Ele": 862.6
+    "Ele": 862.6,
+    "ident": "ZA-0131",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3858,7 +5462,9 @@
     "freq": "",
     "Lat": -29.6265,
     "Lon": 17.4522,
-    "Ele": 187.5
+    "Ele": 187.5,
+    "ident": "ZA-0132",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3867,7 +5473,9 @@
     "freq": "",
     "Lat": -29.6678,
     "Lon": 17.6008,
-    "Ele": 187.5
+    "Ele": 187.5,
+    "ident": "ZA-0133",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3876,7 +5484,9 @@
     "freq": "",
     "Lat": -29.1057,
     "Lon": 19.0791,
-    "Ele": 770.5
+    "Ele": 770.5,
+    "ident": "ZA-0134",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3885,7 +5495,9 @@
     "freq": "",
     "Lat": -25.4681,
     "Lon": 23.6971,
-    "Ele": 1053.1
+    "Ele": 1053.1,
+    "ident": "ZA-0136",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3894,7 +5506,9 @@
     "freq": "",
     "Lat": -29.1944,
     "Lon": 30.0149,
-    "Ele": 1412.7
+    "Ele": 1412.7,
+    "ident": "ZA-0137",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3903,7 +5517,10 @@
     "freq": "",
     "Lat": -24.801985,
     "Lon": 31.42194,
-    "Ele": 416.1
+    "Ele": 416.1,
+    "ident": "ZA-0138",
+    "iso_country": "ZA",
+    "iata_code": "SSX"
   },
   {
     "type": "small_airport",
@@ -3912,7 +5529,9 @@
     "freq": "",
     "Lat": -25.875702,
     "Lon": 23.962922,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0139",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3921,7 +5540,9 @@
     "freq": "",
     "Lat": -28.912138,
     "Lon": 21.992947,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0141",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3930,7 +5551,9 @@
     "freq": "",
     "Lat": -29.630074,
     "Lon": 24.095224,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0142",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3939,7 +5562,9 @@
     "freq": "",
     "Lat": -29.816521,
     "Lon": 24.394959,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0143",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3948,7 +5573,9 @@
     "freq": "",
     "Lat": -29.737988,
     "Lon": 24.780042,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0144",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3957,7 +5584,9 @@
     "freq": "",
     "Lat": -29.11701,
     "Lon": 24.785856,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0145",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3966,7 +5595,9 @@
     "freq": "",
     "Lat": -28.832734,
     "Lon": 23.27354,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0146",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3975,7 +5606,9 @@
     "freq": "",
     "Lat": -30.706581,
     "Lon": 27.208231,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0147",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3984,7 +5617,9 @@
     "freq": "",
     "Lat": -31.075719,
     "Lon": 24.452623,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0148",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -3993,7 +5628,9 @@
     "freq": "",
     "Lat": -30.588342,
     "Lon": 22.894196,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0149",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4002,7 +5639,9 @@
     "freq": "",
     "Lat": -26.887344,
     "Lon": 22.06304,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0150",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4011,7 +5650,9 @@
     "freq": "",
     "Lat": -26.866842,
     "Lon": 28.072443,
-    "Ele": 1510.0
+    "Ele": 1510,
+    "ident": "ZA-0151",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4020,7 +5661,9 @@
     "freq": "",
     "Lat": -26.922516,
     "Lon": 28.165097,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "ZA-0152",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4029,7 +5672,9 @@
     "freq": "",
     "Lat": -34.433548,
     "Lon": 20.722225,
-    "Ele": 89.3
+    "Ele": 89.3,
+    "ident": "ZA-0153",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4038,7 +5683,9 @@
     "freq": "",
     "Lat": -23.114988,
     "Lon": 31.427508,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0154",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4047,7 +5694,9 @@
     "freq": "",
     "Lat": -23.833534,
     "Lon": 31.570522,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0155",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4056,7 +5705,9 @@
     "freq": "",
     "Lat": -22.415096,
     "Lon": 31.213011,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0156",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4065,7 +5716,9 @@
     "freq": "",
     "Lat": -22.507196,
     "Lon": 30.891882,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0157",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4074,7 +5727,9 @@
     "freq": "",
     "Lat": -30.6938,
     "Lon": 21.4608,
-    "Ele": 1044.5
+    "Ele": 1044.5,
+    "ident": "ZA-0159",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4083,7 +5738,12 @@
     "freq": "126.500",
     "Lat": -26.475684,
     "Lon": 28.111032,
-    "Ele": 1524.3
+    "Ele": 1524.3,
+    "ident": "ZA-0161",
+    "iso_country": "ZA",
+    "length_ft": 900,
+    "heading": 13,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -4092,7 +5752,13 @@
     "freq": "124.800",
     "Lat": -28.711116,
     "Lon": 29.331242,
-    "Ele": 1137.2
+    "Ele": 1137.2,
+    "ident": "ZA-0162",
+    "iso_country": "ZA",
+    "length_ft": 3940,
+    "width_ft": 50,
+    "QFU": "15",
+    "heading": 150
   },
   {
     "type": "small_airport",
@@ -4101,7 +5767,9 @@
     "freq": "",
     "Lat": -28.421977,
     "Lon": 22.200966,
-    "Ele": 877.8
+    "Ele": 877.8,
+    "ident": "ZA-0163",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4110,7 +5778,9 @@
     "freq": "",
     "Lat": -33.969025,
     "Lon": 24.939802,
-    "Ele": 65.8
+    "Ele": 65.8,
+    "ident": "ZA-0164",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4119,7 +5789,9 @@
     "freq": "",
     "Lat": -27.25942,
     "Lon": 32.7522,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0165",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4128,7 +5800,9 @@
     "freq": "",
     "Lat": -27.56774,
     "Lon": 32.65322,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0166",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4137,7 +5811,9 @@
     "freq": "",
     "Lat": -26.9457,
     "Lon": 28.7136,
-    "Ele": 1549.9
+    "Ele": 1549.9,
+    "ident": "ZA-0169",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4146,7 +5822,9 @@
     "freq": "",
     "Lat": -30.30557,
     "Lon": 30.736022,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0176",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4155,7 +5833,9 @@
     "freq": "",
     "Lat": -30.773168,
     "Lon": 30.423876,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0177",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4164,7 +5844,9 @@
     "freq": "",
     "Lat": -32.242606,
     "Lon": 28.910072,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0179",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4173,7 +5855,9 @@
     "freq": "",
     "Lat": -32.9019,
     "Lon": 28.0491,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0180",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4182,7 +5866,7 @@
     "freq": "",
     "Lat": -32.905791,
     "Lon": 28.039851,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -4191,7 +5875,9 @@
     "freq": "",
     "Lat": -32.8248,
     "Lon": 27.83568,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0182",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4200,7 +5886,9 @@
     "freq": "",
     "Lat": -32.74585,
     "Lon": 28.22815,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0183",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4209,7 +5897,7 @@
     "freq": "",
     "Lat": -32.75634,
     "Lon": 28.23044,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -4218,7 +5906,9 @@
     "freq": "",
     "Lat": -34.0011,
     "Lon": 25.3518,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0185",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4227,7 +5917,9 @@
     "freq": "",
     "Lat": -34.0114,
     "Lon": 23.3992,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0186",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4236,7 +5928,9 @@
     "freq": "",
     "Lat": -34.0473,
     "Lon": 23.3033,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0187",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4245,7 +5939,9 @@
     "freq": "",
     "Lat": -34.0293,
     "Lon": 23.2907,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0188",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4254,7 +5950,9 @@
     "freq": "",
     "Lat": -33.939568,
     "Lon": 22.66619,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0189",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4263,7 +5961,9 @@
     "freq": "",
     "Lat": -34.3956,
     "Lon": 21.4017,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0191",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4272,7 +5972,9 @@
     "freq": "",
     "Lat": -34.6301,
     "Lon": 19.4758,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0192",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4281,7 +5983,9 @@
     "freq": "",
     "Lat": -33.8025,
     "Lon": 18.5799,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0195",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4290,7 +5994,9 @@
     "freq": "",
     "Lat": -32.1018,
     "Lon": 18.336,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0197",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4299,7 +6005,9 @@
     "freq": "",
     "Lat": -29.235,
     "Lon": 16.8728,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0199",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4308,7 +6016,9 @@
     "freq": "",
     "Lat": -26.9936,
     "Lon": 28.3217,
-    "Ele": 1495.0
+    "Ele": 1495,
+    "ident": "ZA-0216",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4317,7 +6027,9 @@
     "freq": "",
     "Lat": -27.0015,
     "Lon": 28.3706,
-    "Ele": 1521.9
+    "Ele": 1521.9,
+    "ident": "ZA-0217",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4326,7 +6038,9 @@
     "freq": "",
     "Lat": -32.334119,
     "Lon": 19.753489,
-    "Ele": 315.8
+    "Ele": 315.8,
+    "ident": "ZA-0218",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4335,7 +6049,13 @@
     "freq": "",
     "Lat": -25.902761,
     "Lon": 28.5473,
-    "Ele": 1493.5
+    "Ele": 1493.5,
+    "ident": "ZA-0219",
+    "iso_country": "ZA",
+    "length_ft": 2976,
+    "width_ft": 26,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4344,7 +6064,9 @@
     "freq": "",
     "Lat": -25.658442,
     "Lon": 27.882507,
-    "Ele": 1213.1
+    "Ele": 1213.1,
+    "ident": "ZA-0220",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4353,7 +6075,9 @@
     "freq": "",
     "Lat": -26.964755,
     "Lon": 24.063159,
-    "Ele": 1349.7
+    "Ele": 1349.7,
+    "ident": "ZA-0221",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4362,7 +6086,9 @@
     "freq": "",
     "Lat": -27.164519,
     "Lon": 26.066372,
-    "Ele": 1453.0
+    "Ele": 1453,
+    "ident": "ZA-0222",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4371,7 +6097,9 @@
     "freq": "",
     "Lat": -27.796561,
     "Lon": 24.973713,
-    "Ele": 1240.5
+    "Ele": 1240.5,
+    "ident": "ZA-0223",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4380,7 +6108,9 @@
     "freq": "",
     "Lat": -27.820009,
     "Lon": 25.220394,
-    "Ele": 1232.6
+    "Ele": 1232.6,
+    "ident": "ZA-0224",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4389,7 +6119,9 @@
     "freq": "",
     "Lat": -27.943429,
     "Lon": 25.488965,
-    "Ele": 1285.0
+    "Ele": 1285,
+    "ident": "ZA-0225",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4398,7 +6130,9 @@
     "freq": "",
     "Lat": -24.979776,
     "Lon": 27.295747,
-    "Ele": 1040.0
+    "Ele": 1040,
+    "ident": "ZA-0226",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4407,7 +6141,9 @@
     "freq": "",
     "Lat": -24.376984,
     "Lon": 31.776495,
-    "Ele": 282.9
+    "Ele": 282.9,
+    "ident": "ZA-0227",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4416,7 +6152,9 @@
     "freq": "",
     "Lat": -34.454359,
     "Lon": 20.417855,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "ZA-0228",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4425,7 +6163,9 @@
     "freq": "",
     "Lat": -30.5978,
     "Lon": 29.396,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "ZA-0229",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4434,7 +6174,9 @@
     "freq": "",
     "Lat": -24.8231,
     "Lon": 26.2236,
-    "Ele": 1111.3
+    "Ele": 1111.3,
+    "ident": "ZA-0230",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4443,7 +6185,13 @@
     "freq": "130.350",
     "Lat": -33.457012,
     "Lon": 26.051448,
-    "Ele": 211.8
+    "Ele": 211.8,
+    "ident": "ZA-0231",
+    "iso_country": "ZA",
+    "length_ft": 3323,
+    "width_ft": 45,
+    "heading": 92,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -4452,7 +6200,9 @@
     "freq": "",
     "Lat": -24.286108,
     "Lon": 27.786655,
-    "Ele": 1341.1
+    "Ele": 1341.1,
+    "ident": "ZA-0232",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4461,7 +6211,9 @@
     "freq": "",
     "Lat": -24.2408,
     "Lon": 27.4908,
-    "Ele": 979.9
+    "Ele": 979.9,
+    "ident": "ZA-0233",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4470,7 +6222,9 @@
     "freq": "",
     "Lat": -24.1734,
     "Lon": 31.3278,
-    "Ele": 344.1
+    "Ele": 344.1,
+    "ident": "ZA-0234",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4479,7 +6233,9 @@
     "freq": "",
     "Lat": -23.1048,
     "Lon": 27.879868,
-    "Ele": 798.0
+    "Ele": 798,
+    "ident": "ZA-0235",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4488,7 +6244,9 @@
     "freq": "",
     "Lat": -33.7233,
     "Lon": 20.615,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0238",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4497,7 +6255,9 @@
     "freq": "",
     "Lat": -28.4628,
     "Lon": 29.9682,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0239",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4506,7 +6266,9 @@
     "freq": "",
     "Lat": -33.133964,
     "Lon": 26.581936,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0240",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4515,7 +6277,9 @@
     "freq": "",
     "Lat": -28.5967,
     "Lon": 19.8414,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0248",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4524,7 +6288,9 @@
     "freq": "",
     "Lat": -28.812247,
     "Lon": 22.383753,
-    "Ele": 1109.5
+    "Ele": 1109.5,
+    "ident": "ZA-0249",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4533,7 +6299,9 @@
     "freq": "",
     "Lat": -29.334946,
     "Lon": 22.264621,
-    "Ele": 929.6
+    "Ele": 929.6,
+    "ident": "ZA-0252",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4542,7 +6310,9 @@
     "freq": "",
     "Lat": -28.886091,
     "Lon": 29.537859,
-    "Ele": 1072.9
+    "Ele": 1072.9,
+    "ident": "ZA-0253",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4551,7 +6321,9 @@
     "freq": "",
     "Lat": -28.33486,
     "Lon": 16.79609,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "ZA-0254",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4560,7 +6332,9 @@
     "freq": "",
     "Lat": -28.38971,
     "Lon": 17.40487,
-    "Ele": 125.9
+    "Ele": 125.9,
+    "ident": "ZA-0255",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4569,7 +6343,9 @@
     "freq": "",
     "Lat": -28.75211,
     "Lon": 19.32742,
-    "Ele": 440.1
+    "Ele": 440.1,
+    "ident": "ZA-0256",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4578,7 +6354,9 @@
     "freq": "",
     "Lat": -28.54625,
     "Lon": 19.71493,
-    "Ele": 533.1
+    "Ele": 533.1,
+    "ident": "ZA-0257",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4587,7 +6365,9 @@
     "freq": "",
     "Lat": -28.64383,
     "Lon": 20.30865,
-    "Ele": 688.8
+    "Ele": 688.8,
+    "ident": "ZA-0258",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4596,7 +6376,9 @@
     "freq": "",
     "Lat": -28.62423,
     "Lon": 20.44023,
-    "Ele": 672.1
+    "Ele": 672.1,
+    "ident": "ZA-0259",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4605,7 +6387,7 @@
     "freq": "",
     "Lat": -28.62141,
     "Lon": 20.45135,
-    "Ele": 684.0
+    "Ele": 684
   },
   {
     "type": "small_airport",
@@ -4614,7 +6396,9 @@
     "freq": "",
     "Lat": -28.76598,
     "Lon": 20.57473,
-    "Ele": 677.9
+    "Ele": 677.9,
+    "ident": "ZA-0261",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4623,7 +6407,9 @@
     "freq": "",
     "Lat": -28.44628,
     "Lon": 21.34287,
-    "Ele": 833.0
+    "Ele": 833,
+    "ident": "ZA-0262",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4632,7 +6418,9 @@
     "freq": "",
     "Lat": -28.54937,
     "Lon": 21.79037,
-    "Ele": 855.9
+    "Ele": 855.9,
+    "ident": "ZA-0263",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4641,7 +6429,9 @@
     "freq": "",
     "Lat": -28.86887,
     "Lon": 22.10493,
-    "Ele": 890.9
+    "Ele": 890.9,
+    "ident": "ZA-0264",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4650,7 +6440,9 @@
     "freq": "",
     "Lat": -25.86641,
     "Lon": 27.87726,
-    "Ele": 1442.0
+    "Ele": 1442,
+    "ident": "ZA-0265",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4659,7 +6451,9 @@
     "freq": "",
     "Lat": -29.55615,
     "Lon": 22.89679,
-    "Ele": 954.0
+    "Ele": 954,
+    "ident": "ZA-0266",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4668,7 +6462,9 @@
     "freq": "",
     "Lat": -29.33704,
     "Lon": 23.17968,
-    "Ele": 979.0
+    "Ele": 979,
+    "ident": "ZA-0267",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4677,7 +6473,9 @@
     "freq": "",
     "Lat": -29.30453,
     "Lon": 23.28233,
-    "Ele": 1024.7
+    "Ele": 1024.7,
+    "ident": "ZA-0268",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4686,7 +6484,9 @@
     "freq": "",
     "Lat": -29.26596,
     "Lon": 23.20544,
-    "Ele": 1064.1
+    "Ele": 1064.1,
+    "ident": "ZA-0269",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4695,7 +6495,9 @@
     "freq": "",
     "Lat": -29.19451,
     "Lon": 23.34394,
-    "Ele": 999.1
+    "Ele": 999.1,
+    "ident": "ZA-0270",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4704,7 +6506,9 @@
     "freq": "",
     "Lat": -29.22365,
     "Lon": 23.48078,
-    "Ele": 994.0
+    "Ele": 994,
+    "ident": "ZA-0271",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4713,7 +6517,9 @@
     "freq": "",
     "Lat": -29.18871,
     "Lon": 23.55848,
-    "Ele": 1003.1
+    "Ele": 1003.1,
+    "ident": "ZA-0272",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4722,7 +6528,9 @@
     "freq": "",
     "Lat": -29.09647,
     "Lon": 23.73104,
-    "Ele": 1012.9
+    "Ele": 1012.9,
+    "ident": "ZA-0274",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4731,7 +6539,9 @@
     "freq": "",
     "Lat": -28.96775,
     "Lon": 23.76557,
-    "Ele": 1050.0
+    "Ele": 1050,
+    "ident": "ZA-0275",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4740,7 +6550,9 @@
     "freq": "",
     "Lat": -29.27692,
     "Lon": 23.90523,
-    "Ele": 1072.9
+    "Ele": 1072.9,
+    "ident": "ZA-0276",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4749,7 +6561,9 @@
     "freq": "",
     "Lat": -29.58183,
     "Lon": 24.14208,
-    "Ele": 1082.0
+    "Ele": 1082,
+    "ident": "ZA-0277",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4758,7 +6572,9 @@
     "freq": "",
     "Lat": -30.59866,
     "Lon": 25.30819,
-    "Ele": 1234.1
+    "Ele": 1234.1,
+    "ident": "ZA-0278",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4767,7 +6583,9 @@
     "freq": "",
     "Lat": -30.58907,
     "Lon": 25.37353,
-    "Ele": 1237.5
+    "Ele": 1237.5,
+    "ident": "ZA-0279",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4776,7 +6594,9 @@
     "freq": "",
     "Lat": -30.62622,
     "Lon": 26.34493,
-    "Ele": 1328.9
+    "Ele": 1328.9,
+    "ident": "ZA-0280",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4785,7 +6605,9 @@
     "freq": "",
     "Lat": -30.59828,
     "Lon": 26.94294,
-    "Ele": 1417.0
+    "Ele": 1417,
+    "ident": "ZA-0281",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4794,7 +6616,9 @@
     "freq": "",
     "Lat": -30.42799,
     "Lon": 27.31309,
-    "Ele": 1547.2
+    "Ele": 1547.2,
+    "ident": "ZA-0282",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4803,7 +6627,9 @@
     "freq": "",
     "Lat": -28.92598,
     "Lon": 23.94547,
-    "Ele": 1008.9
+    "Ele": 1008.9,
+    "ident": "ZA-0283",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4812,7 +6638,9 @@
     "freq": "",
     "Lat": -28.4931,
     "Lon": 24.67943,
-    "Ele": 1118.0
+    "Ele": 1118,
+    "ident": "ZA-0284",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4821,7 +6649,9 @@
     "freq": "",
     "Lat": -28.38082,
     "Lon": 24.60613,
-    "Ele": 1160.1
+    "Ele": 1160.1,
+    "ident": "ZA-0285",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4830,7 +6660,9 @@
     "freq": "",
     "Lat": -27.59869,
     "Lon": 25.3439,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "ZA-0286",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4839,7 +6671,9 @@
     "freq": "",
     "Lat": -27.58119,
     "Lon": 25.32355,
-    "Ele": 1280.2
+    "Ele": 1280.2,
+    "ident": "ZA-0287",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4848,7 +6682,9 @@
     "freq": "",
     "Lat": -27.96792,
     "Lon": 25.13416,
-    "Ele": 1219.2
+    "Ele": 1219.2,
+    "ident": "ZA-0288",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4857,7 +6693,9 @@
     "freq": "",
     "Lat": -27.41043,
     "Lon": 26.46573,
-    "Ele": 1277.1
+    "Ele": 1277.1,
+    "ident": "ZA-0289",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4866,7 +6704,9 @@
     "freq": "",
     "Lat": -26.93936,
     "Lon": 28.32789,
-    "Ele": 1487.1
+    "Ele": 1487.1,
+    "ident": "ZA-0293",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4875,7 +6715,9 @@
     "freq": "",
     "Lat": -27.03587,
     "Lon": 28.65938,
-    "Ele": 1528.9
+    "Ele": 1528.9,
+    "ident": "ZA-0294",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4884,7 +6726,9 @@
     "freq": "",
     "Lat": -26.44869,
     "Lon": 20.60723,
-    "Ele": 894.0
+    "Ele": 894,
+    "ident": "ZA-0296",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4893,7 +6737,13 @@
     "freq": "",
     "Lat": -24.733331,
     "Lon": 26.40642,
-    "Ele": 942.1
+    "Ele": 942.1,
+    "ident": "ZA-0297",
+    "iso_country": "ZA",
+    "length_ft": 4878,
+    "width_ft": 49,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -4902,7 +6752,9 @@
     "freq": "",
     "Lat": -24.5255,
     "Lon": 31.1197,
-    "Ele": 577.9
+    "Ele": 577.9,
+    "ident": "ZA-0298",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4911,7 +6763,9 @@
     "freq": "",
     "Lat": -24.540155,
     "Lon": 31.206096,
-    "Ele": 480.1
+    "Ele": 480.1,
+    "ident": "ZA-0299",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4920,7 +6774,9 @@
     "freq": "",
     "Lat": -23.20183,
     "Lon": 28.48575,
-    "Ele": 933.0
+    "Ele": 933,
+    "ident": "ZA-0300",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4929,7 +6785,9 @@
     "freq": "",
     "Lat": -23.08269,
     "Lon": 27.90621,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "ZA-0301",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4938,7 +6796,9 @@
     "freq": "",
     "Lat": -33.49369,
     "Lon": 27.11207,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "ZA-0303",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4947,7 +6807,9 @@
     "freq": "",
     "Lat": -34.0327,
     "Lon": 24.2207,
-    "Ele": 205.1
+    "Ele": 205.1,
+    "ident": "ZA-0305",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4956,7 +6818,9 @@
     "freq": "",
     "Lat": -34.32444,
     "Lon": 21.89169,
-    "Ele": 18.6
+    "Ele": 18.6,
+    "ident": "ZA-0306",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4965,7 +6829,9 @@
     "freq": "",
     "Lat": -34.54802,
     "Lon": 20.08476,
-    "Ele": 32.0
+    "Ele": 32,
+    "ident": "ZA-0307",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4974,7 +6840,9 @@
     "freq": "",
     "Lat": -29.01958,
     "Lon": 24.6535,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0308",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4983,7 +6851,9 @@
     "freq": "",
     "Lat": -29.17329,
     "Lon": 24.26292,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0309",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -4992,7 +6862,9 @@
     "freq": "",
     "Lat": -29.02745,
     "Lon": 26.0948,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0310",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5001,7 +6873,9 @@
     "freq": "",
     "Lat": -25.47443,
     "Lon": 23.74773,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0314",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5010,7 +6884,9 @@
     "freq": "",
     "Lat": -25.47992,
     "Lon": 23.73199,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZA-0315",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5019,7 +6895,9 @@
     "freq": "",
     "Lat": -29.74906,
     "Lon": 29.50408,
-    "Ele": 1630.4
+    "Ele": 1630.4,
+    "ident": "ZA-0316",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5028,7 +6906,12 @@
     "freq": "",
     "Lat": -25.907632,
     "Lon": 28.035825,
-    "Ele": 1475.5
+    "Ele": 1475.5,
+    "ident": "ZA-0317",
+    "iso_country": "ZA",
+    "length_ft": 2887,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -5037,7 +6920,9 @@
     "freq": "",
     "Lat": -25.828611,
     "Lon": 28.092778,
-    "Ele": 1389.6
+    "Ele": 1389.6,
+    "ident": "ZA-0320",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5046,7 +6931,9 @@
     "freq": "",
     "Lat": -34.631111,
     "Lon": 19.8275,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "ZA-0321",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5055,7 +6942,10 @@
     "freq": "",
     "Lat": -29.933201,
     "Lon": 22.265741,
-    "Ele": 1075.9
+    "Ele": 1075.9,
+    "ident": "ZA-0324",
+    "iso_country": "ZA",
+    "icao_code": "FACO"
   },
   {
     "type": "small_airport",
@@ -5064,7 +6954,9 @@
     "freq": "",
     "Lat": -29.192692,
     "Lon": 24.739475,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "ZA-0326",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5073,7 +6965,12 @@
     "freq": "",
     "Lat": -29.906401,
     "Lon": 22.3167,
-    "Ele": 1093.9
+    "Ele": 1093.9,
+    "ident": "ZA-0338",
+    "iso_country": "ZA",
+    "length_ft": 4921,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -5082,7 +6979,10 @@
     "freq": "",
     "Lat": -25.941099,
     "Lon": 29.810301,
-    "Ele": 1705.1
+    "Ele": 1705.1,
+    "ident": "ZA-0339",
+    "iso_country": "ZA",
+    "local_code": "FA0001"
   },
   {
     "type": "small_airport",
@@ -5091,7 +6991,14 @@
     "freq": "122.600",
     "Lat": -26.348697,
     "Lon": 27.779546,
-    "Ele": 1652.0
+    "Ele": 1652,
+    "ident": "ZA-0340",
+    "iso_country": "ZA",
+    "icao_code": "FASY",
+    "local_code": "5407",
+    "length_ft": 3640,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -5100,7 +7007,10 @@
     "freq": "",
     "Lat": -26.3543156175,
     "Lon": 28.466791153,
-    "Ele": 1597.5
+    "Ele": 1597.5,
+    "ident": "ZA-0341",
+    "iso_country": "ZA",
+    "local_code": "FADR"
   },
   {
     "type": "small_airport",
@@ -5109,7 +7019,9 @@
     "freq": "",
     "Lat": -23.95812,
     "Lon": 30.64612,
-    "Ele": 556.0
+    "Ele": 556,
+    "ident": "ZA-0342",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5118,7 +7030,9 @@
     "freq": "",
     "Lat": -24.01165,
     "Lon": 30.68418,
-    "Ele": 506.9
+    "Ele": 506.9,
+    "ident": "ZA-0343",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5127,7 +7041,9 @@
     "freq": "",
     "Lat": -24.15865,
     "Lon": 30.83891,
-    "Ele": 452.9
+    "Ele": 452.9,
+    "ident": "ZA-0344",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5136,7 +7052,9 @@
     "freq": "",
     "Lat": -24.09922,
     "Lon": 30.71658,
-    "Ele": 480.1
+    "Ele": 480.1,
+    "ident": "ZA-0345",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5145,7 +7063,9 @@
     "freq": "",
     "Lat": -24.08148,
     "Lon": 30.57187,
-    "Ele": 480.1
+    "Ele": 480.1,
+    "ident": "ZA-0346",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5154,7 +7074,9 @@
     "freq": "",
     "Lat": -24.27446,
     "Lon": 30.8896,
-    "Ele": 499.0
+    "Ele": 499,
+    "ident": "ZA-0347",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5163,7 +7085,9 @@
     "freq": "",
     "Lat": -25.801109,
     "Lon": 27.515409,
-    "Ele": 1327.1
+    "Ele": 1327.1,
+    "ident": "ZA-0349",
+    "iso_country": "ZA"
   },
   {
     "type": "small_airport",
@@ -5172,7 +7096,13 @@
     "freq": "",
     "Lat": -24.16212,
     "Lon": 31.39501,
-    "Ele": 338.0
+    "Ele": 338,
+    "ident": "ZA-0350",
+    "iso_country": "ZA",
+    "local_code": "R429",
+    "length_ft": 4150,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -5181,6 +7111,9 @@
     "freq": "",
     "Lat": -30.187136,
     "Lon": 17.282706,
-    "Ele": 69.5
+    "Ele": 69.5,
+    "ident": "ZA-KIG",
+    "iso_country": "ZA",
+    "iata_code": "KIG"
   }
 ]

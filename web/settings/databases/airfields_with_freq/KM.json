@@ -6,7 +6,15 @@
     "freq": "465.700",
     "Lat": -11.5337,
     "Lon": 43.2719,
-    "Ele": 28.3
+    "Ele": 28.3,
+    "ident": "FMCH",
+    "iso_country": "KM",
+    "icao_code": "FMCH",
+    "iata_code": "HAH",
+    "length_ft": 9514,
+    "width_ft": 148,
+    "heading": 10,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,15 @@
     "freq": "119.700",
     "Lat": -12.2981,
     "Lon": 43.766399,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "FMCI",
+    "iso_country": "KM",
+    "icao_code": "FMCI",
+    "iata_code": "NWA",
+    "length_ft": 4265,
+    "width_ft": 98,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -24,6 +40,14 @@
     "freq": "548.400",
     "Lat": -12.131047,
     "Lon": 44.430044,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "FMCV",
+    "iso_country": "KM",
+    "icao_code": "FMCV",
+    "iata_code": "AJN",
+    "length_ft": 4429,
+    "width_ft": 92,
+    "heading": 94.9,
+    "QFU": "28"
   }
 ]

@@ -6,7 +6,14 @@
     "freq": "135.225",
     "Lat": 25.700539,
     "Lon": 51.36303,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "OT62",
+    "iso_country": "QA",
+    "local_code": "OT62",
+    "length_ft": 1640,
+    "width_ft": 65,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "121.100",
     "Lat": 25.261101,
     "Lon": 51.565102,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "OTBD",
+    "iso_country": "QA",
+    "icao_code": "OTBD",
+    "iata_code": "DIA",
+    "length_ft": 15000,
+    "width_ft": 151,
+    "heading": 158.2,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,15 @@
     "freq": "28.145",
     "Lat": 25.1173000336,
     "Lon": 51.3149986267,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "OTBH",
+    "iso_country": "QA",
+    "icao_code": "OTBH",
+    "iata_code": "XJD",
+    "length_ft": 12303,
+    "width_ft": 148,
+    "heading": 158,
+    "QFU": "34"
   },
   {
     "type": "large_airport",
@@ -33,7 +56,15 @@
     "freq": "128.850",
     "Lat": 25.273056,
     "Lon": 51.608056,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "OTHH",
+    "iso_country": "QA",
+    "icao_code": "OTHH",
+    "iata_code": "DOH",
+    "length_ft": 13944,
+    "width_ft": 197,
+    "heading": 156,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -42,7 +73,9 @@
     "freq": "",
     "Lat": 25.467722,
     "Lon": 50.999479,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "QA-0001",
+    "iso_country": "QA"
   },
   {
     "type": "small_airport",
@@ -51,7 +84,9 @@
     "freq": "",
     "Lat": 24.988976,
     "Lon": 51.50031,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "QA-0009",
+    "iso_country": "QA"
   },
   {
     "type": "small_airport",
@@ -60,6 +95,8 @@
     "freq": "",
     "Lat": 25.753967,
     "Lon": 51.292675,
-    "Ele": 34.1
+    "Ele": 34.1,
+    "ident": "QA-0012",
+    "iso_country": "QA"
   }
 ]

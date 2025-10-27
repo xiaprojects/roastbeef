@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 6.095802,
     "Lon": 46.6375,
-    "Ele": 305.1
+    "Ele": 305.1,
+    "ident": "AAD",
+    "iso_country": "SO",
+    "icao_code": "HCAD",
+    "iata_code": "AAD"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,10 @@
     "freq": "",
     "Lat": 3.32294,
     "Lon": 42.21309,
-    "Ele": 230.1
+    "Ele": 230.1,
+    "ident": "GBM",
+    "iso_country": "SO",
+    "iata_code": "GBM"
   },
   {
     "type": "small_airport",
@@ -24,7 +31,9 @@
     "freq": "",
     "Lat": 5.472,
     "Lon": 46.359833,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "HCDM",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -33,7 +42,11 @@
     "freq": "",
     "Lat": 11.9582,
     "Lon": 50.748,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "HCMA",
+    "iso_country": "SO",
+    "icao_code": "HCMA",
+    "iata_code": "ALU"
   },
   {
     "type": "small_airport",
@@ -42,7 +55,11 @@
     "freq": "",
     "Lat": 3.10192,
     "Lon": 43.627137,
-    "Ele": 554.7
+    "Ele": 554.7,
+    "ident": "HCMB",
+    "iso_country": "SO",
+    "icao_code": "HCMB",
+    "iata_code": "BIB"
   },
   {
     "type": "small_airport",
@@ -51,7 +68,15 @@
     "freq": "",
     "Lat": 11.495627,
     "Lon": 49.909816,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "HCMC",
+    "iso_country": "SO",
+    "icao_code": "HCMC",
+    "iata_code": "CXN",
+    "length_ft": 3610,
+    "width_ft": 215,
+    "heading": 41,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -60,7 +85,14 @@
     "freq": "",
     "Lat": 2.330195,
     "Lon": 42.311802,
-    "Ele": 120.7
+    "Ele": 120.7,
+    "ident": "HCMD",
+    "iso_country": "SO",
+    "icao_code": "HCMD",
+    "iata_code": "BSY",
+    "length_ft": 4017,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -69,7 +101,15 @@
     "freq": "",
     "Lat": 8.104,
     "Lon": 49.82,
-    "Ele": 267.9
+    "Ele": 267.9,
+    "ident": "HCME",
+    "iso_country": "SO",
+    "icao_code": "HCME",
+    "iata_code": "HCM",
+    "length_ft": 3445,
+    "width_ft": 164,
+    "heading": 57,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -78,7 +118,15 @@
     "freq": "",
     "Lat": 11.275235,
     "Lon": 49.139231,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "HCMF",
+    "iso_country": "SO",
+    "icao_code": "HCMF",
+    "iata_code": "BSA",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -87,7 +135,11 @@
     "freq": "",
     "Lat": 9.545975,
     "Lon": 49.119148,
-    "Ele": 802.2
+    "Ele": 802.2,
+    "ident": "HCMG",
+    "iso_country": "SO",
+    "icao_code": "HCMG",
+    "iata_code": "GSR"
   },
   {
     "type": "medium_airport",
@@ -96,7 +148,15 @@
     "freq": "",
     "Lat": 9.513207,
     "Lon": 44.082389,
-    "Ele": 1362.8
+    "Ele": 1362.8,
+    "ident": "HCMH",
+    "iso_country": "SO",
+    "icao_code": "HCMH",
+    "iata_code": "HGA",
+    "length_ft": 12139,
+    "width_ft": 148,
+    "heading": 55,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -105,7 +165,15 @@
     "freq": "123.900",
     "Lat": 10.385035,
     "Lon": 44.936723,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "HCMI",
+    "iso_country": "SO",
+    "icao_code": "HCMI",
+    "iata_code": "BBO",
+    "length_ft": 13582,
+    "width_ft": 164,
+    "heading": 46.9,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -114,7 +182,11 @@
     "freq": "",
     "Lat": 3.8124,
     "Lon": 42.5459,
-    "Ele": 154.5
+    "Ele": 154.5,
+    "ident": "HCMJ",
+    "iso_country": "SO",
+    "icao_code": "HCMJ",
+    "iata_code": "LGX"
   },
   {
     "type": "medium_airport",
@@ -123,7 +195,15 @@
     "freq": "121.900",
     "Lat": -0.377353,
     "Lon": 42.459202,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "HCMK",
+    "iso_country": "SO",
+    "icao_code": "HCMK",
+    "iata_code": "KMU",
+    "length_ft": 12139,
+    "width_ft": 147,
+    "heading": 43,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -132,7 +212,15 @@
     "freq": "132.500",
     "Lat": 2.014440059661865,
     "Lon": 45.3046989440918,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "HCMM",
+    "iso_country": "SO",
+    "icao_code": "HCMM",
+    "iata_code": "MGQ",
+    "length_ft": 10446,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -141,7 +229,14 @@
     "freq": "",
     "Lat": 4.766976,
     "Lon": 45.2388,
-    "Ele": 170.4
+    "Ele": 170.4,
+    "ident": "HCMN",
+    "iso_country": "SO",
+    "icao_code": "HCMN",
+    "iata_code": "BLW",
+    "length_ft": 7218,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -150,7 +245,11 @@
     "freq": "",
     "Lat": 5.358003,
     "Lon": 48.515281,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "HCMO",
+    "iso_country": "SO",
+    "icao_code": "HCMO",
+    "iata_code": "CMO"
   },
   {
     "type": "small_airport",
@@ -159,7 +258,14 @@
     "freq": "",
     "Lat": 6.78082990646,
     "Lon": 47.45470047,
-    "Ele": 297.2
+    "Ele": 297.2,
+    "ident": "HCMR",
+    "iso_country": "SO",
+    "icao_code": "HCMR",
+    "iata_code": "GLK",
+    "length_ft": 9859,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -168,7 +274,11 @@
     "freq": "",
     "Lat": 10.313889,
     "Lon": 50.205556,
-    "Ele": 341.7
+    "Ele": 341.7,
+    "ident": "HCMS",
+    "iso_country": "SO",
+    "icao_code": "HCMS",
+    "iata_code": "CMS"
   },
   {
     "type": "small_airport",
@@ -177,7 +287,11 @@
     "freq": "",
     "Lat": 10.642050549,
     "Lon": 47.3879814148,
-    "Ele": 1743.5
+    "Ele": 1743.5,
+    "ident": "HCMU",
+    "iso_country": "SO",
+    "icao_code": "HCMU",
+    "iata_code": "ERA"
   },
   {
     "type": "small_airport",
@@ -186,7 +300,14 @@
     "freq": "",
     "Lat": 9.5275,
     "Lon": 45.5549,
-    "Ele": 1036.3
+    "Ele": 1036.3,
+    "ident": "HCMV",
+    "iso_country": "SO",
+    "icao_code": "HCMV",
+    "iata_code": "BUO",
+    "length_ft": 7875,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -195,7 +316,13 @@
     "freq": "118.400",
     "Lat": 8.457942,
     "Lon": 48.567407,
-    "Ele": 446.5
+    "Ele": 446.5,
+    "ident": "HCMW",
+    "iso_country": "SO",
+    "iata_code": "GGR",
+    "length_ft": 6562,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -204,7 +331,9 @@
     "freq": "",
     "Lat": 2.00528,
     "Lon": 44.986599,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "SO-0001",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -213,7 +342,10 @@
     "freq": "132.500",
     "Lat": 2.670742,
     "Lon": 44.792897,
-    "Ele": 90.5
+    "Ele": 90.5,
+    "ident": "SO-0002",
+    "iso_country": "SO",
+    "local_code": "HC01"
   },
   {
     "type": "small_airport",
@@ -222,7 +354,9 @@
     "freq": "",
     "Lat": 1.972613,
     "Lon": 45.222878,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0003",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -231,7 +365,10 @@
     "freq": "",
     "Lat": 10.445,
     "Lon": 51.2466,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "SO-0004",
+    "iso_country": "SO",
+    "icao_code": "HCBA"
   },
   {
     "type": "small_airport",
@@ -240,7 +377,10 @@
     "freq": "",
     "Lat": 10.4154,
     "Lon": 51.3256,
-    "Ele": 169.2
+    "Ele": 169.2,
+    "ident": "SO-0005",
+    "iso_country": "SO",
+    "icao_code": "HCBG"
   },
   {
     "type": "small_airport",
@@ -249,7 +389,9 @@
     "freq": "",
     "Lat": 3.157458,
     "Lon": 42.525189,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0006",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -258,7 +400,9 @@
     "freq": "",
     "Lat": 0.399533,
     "Lon": 40.99606,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0007",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -267,7 +411,10 @@
     "freq": "",
     "Lat": 11.17348,
     "Lon": 48.21426,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0008",
+    "iso_country": "SO",
+    "iata_code": "LKR"
   },
   {
     "type": "small_airport",
@@ -276,7 +423,9 @@
     "freq": "",
     "Lat": 9.4603,
     "Lon": 50.7416,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0010",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -285,7 +434,9 @@
     "freq": "",
     "Lat": 6.8773,
     "Lon": 49.2476,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0011",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -294,7 +445,9 @@
     "freq": "",
     "Lat": 2.122039,
     "Lon": 45.268856,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0013",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -303,7 +456,9 @@
     "freq": "",
     "Lat": 1.09438,
     "Lon": 43.99532,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0015",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -312,7 +467,9 @@
     "freq": "",
     "Lat": 0.05754,
     "Lon": 42.755045,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0016",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -321,7 +478,9 @@
     "freq": "",
     "Lat": 0.53769,
     "Lon": 42.05637,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "SO-0017",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -330,7 +489,9 @@
     "freq": "",
     "Lat": 1.26821,
     "Lon": 42.58794,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "SO-0018",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -339,7 +500,9 @@
     "freq": "",
     "Lat": 4.1493,
     "Lon": 42.08119,
-    "Ele": 190.5
+    "Ele": 190.5,
+    "ident": "SO-0019",
+    "iso_country": "SO"
   },
   {
     "type": "small_airport",
@@ -348,7 +511,10 @@
     "freq": "",
     "Lat": 5.317412,
     "Lon": 45.985308,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-0020",
+    "iso_country": "SO",
+    "iata_code": "GUO"
   },
   {
     "type": "small_airport",
@@ -357,6 +523,9 @@
     "freq": "",
     "Lat": 9.9463,
     "Lon": 43.1495,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SO-BXX",
+    "iso_country": "SO",
+    "iata_code": "BXX"
   }
 ]

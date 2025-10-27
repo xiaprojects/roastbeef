@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -5.2475,
     "Lon": -75.678,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "PE-0001",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -3.7422,
     "Lon": -73.2604,
-    "Ele": 117.0
+    "Ele": 117,
+    "ident": "PE-0002",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": -0.952,
     "Lon": -75.179731,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PE-0003",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": -11.940815,
     "Lon": -68.994212,
-    "Ele": 261.2
+    "Ele": 261.2,
+    "ident": "PE-0004",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": -11.876932,
     "Lon": -73.916868,
-    "Ele": 405.1
+    "Ele": 405.1,
+    "ident": "PE-0006",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": -8.361953,
     "Lon": -74.656877,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "PE-0007",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": -4.707892,
     "Lon": -74.876733,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "PE-0008",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": -4.824369,
     "Lon": -76.56032,
-    "Ele": 132.0
+    "Ele": 132,
+    "ident": "PE-0009",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,9 @@
     "freq": "",
     "Lat": -10.705015,
     "Lon": -77.800884,
-    "Ele": 43.9
+    "Ele": 43.9,
+    "ident": "PE-0010",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -87,7 +105,9 @@
     "freq": "",
     "Lat": -10.714039,
     "Lon": -77.746854,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "PE-0011",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -105,7 +125,9 @@
     "freq": "",
     "Lat": -13.56872,
     "Lon": -72.82457,
-    "Ele": 3963.0
+    "Ele": 3963,
+    "ident": "PE-0019",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -114,7 +136,9 @@
     "freq": "",
     "Lat": -12.50306,
     "Lon": -73.85287,
-    "Ele": 536.1
+    "Ele": 536.1,
+    "ident": "PE-0021",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -123,7 +147,9 @@
     "freq": "",
     "Lat": -8.58173,
     "Lon": -78.68142,
-    "Ele": 69.5
+    "Ele": 69.5,
+    "ident": "PE-0022",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -132,7 +158,11 @@
     "freq": "",
     "Lat": -4.08687,
     "Lon": -81.02577,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "PE-0023",
+    "iso_country": "PE",
+    "iata_code": "PTL",
+    "local_code": "SPWB"
   },
   {
     "type": "small_airport",
@@ -141,7 +171,9 @@
     "freq": "",
     "Lat": -5.06777,
     "Lon": -80.14731,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "PE-0024",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -150,7 +182,9 @@
     "freq": "",
     "Lat": -11.11008,
     "Lon": -77.55382,
-    "Ele": 103.0
+    "Ele": 103,
+    "ident": "PE-0025",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -159,7 +193,9 @@
     "freq": "",
     "Lat": -14.03561,
     "Lon": -75.76004,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "PE-0026",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -168,7 +204,9 @@
     "freq": "",
     "Lat": -12.38084,
     "Lon": -76.78206,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PE-0027",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -177,7 +215,9 @@
     "freq": "",
     "Lat": -12.91902,
     "Lon": -76.49186,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PE-0029",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -186,7 +226,9 @@
     "freq": "",
     "Lat": -12.40001,
     "Lon": -76.76806,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PE-0030",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -195,7 +237,9 @@
     "freq": "",
     "Lat": -15.63627,
     "Lon": -71.61376,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PE-0032",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -204,7 +248,10 @@
     "freq": "",
     "Lat": -7.06056,
     "Lon": -76.582199,
-    "Ele": 298.7
+    "Ele": 298.7,
+    "ident": "PE-0056",
+    "iso_country": "PE",
+    "iata_code": "BLP"
   },
   {
     "type": "small_airport",
@@ -213,7 +260,9 @@
     "freq": "",
     "Lat": -7.63332986831665,
     "Lon": -78.6500015258789,
-    "Ele": 1581.9
+    "Ele": 1581.9,
+    "ident": "SOML",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -222,7 +271,9 @@
     "freq": "",
     "Lat": -9.05142879486084,
     "Lon": -77.81014251708984,
-    "Ele": 2255.8
+    "Ele": 2255.8,
+    "ident": "SPAA",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -231,7 +282,14 @@
     "freq": "",
     "Lat": -5.256770133972168,
     "Lon": -79.44290161132812,
-    "Ele": 1923.9
+    "Ele": 1923.9,
+    "ident": "SPAB",
+    "iso_country": "PE",
+    "local_code": "SP72",
+    "length_ft": 3600,
+    "width_ft": 75,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -240,7 +298,12 @@
     "freq": "",
     "Lat": -4.607492,
     "Lon": -77.940935,
-    "Ele": 166.7
+    "Ele": 166.7,
+    "ident": "SPAC",
+    "iso_country": "PE",
+    "length_ft": 5249,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -249,7 +312,9 @@
     "freq": "",
     "Lat": -9.037409782409668,
     "Lon": -75.50920104980469,
-    "Ele": 1784.0
+    "Ele": 1784,
+    "ident": "SPAG",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -258,7 +323,9 @@
     "freq": "",
     "Lat": -8.3495,
     "Lon": -77.3985,
-    "Ele": 3169.9
+    "Ele": 3169.9,
+    "ident": "SPAI",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -267,7 +334,9 @@
     "freq": "",
     "Lat": -6.5,
     "Lon": -76.7166976928711,
-    "Ele": 530.4
+    "Ele": 530.4,
+    "ident": "SPAL",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -276,7 +345,9 @@
     "freq": "",
     "Lat": -6.909451,
     "Lon": -76.32909,
-    "Ele": 289.0
+    "Ele": 289,
+    "ident": "SPAP",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -285,7 +356,11 @@
     "freq": "",
     "Lat": -11.65018,
     "Lon": -69.229614,
-    "Ele": 242.9
+    "Ele": 242.9,
+    "ident": "SPAR",
+    "iso_country": "PE",
+    "icao_code": "SPAR",
+    "iata_code": "ALD"
   },
   {
     "type": "small_airport",
@@ -294,7 +369,14 @@
     "freq": "118.200",
     "Lat": -2.79612994194,
     "Lon": -76.46659851070001,
-    "Ele": 221.9
+    "Ele": 221.9,
+    "ident": "SPAS",
+    "iso_country": "PE",
+    "iata_code": "AOP",
+    "length_ft": 6749,
+    "width_ft": 131,
+    "heading": 119,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -303,7 +385,9 @@
     "freq": "",
     "Lat": -8.833330154418945,
     "Lon": -74.68329620361328,
-    "Ele": 2999.2
+    "Ele": 2999.2,
+    "ident": "SPAT",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -312,7 +396,15 @@
     "freq": "126.900",
     "Lat": -10.7291,
     "Lon": -73.766502,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "SPAY",
+    "iso_country": "PE",
+    "icao_code": "SPAY",
+    "iata_code": "AYX",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 45,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -321,7 +413,11 @@
     "freq": "",
     "Lat": -6.018889,
     "Lon": -76.988327,
-    "Ele": 837.9
+    "Ele": 837.9,
+    "ident": "SPBB",
+    "iso_country": "PE",
+    "icao_code": "SPBB",
+    "iata_code": "MBP"
   },
   {
     "type": "medium_airport",
@@ -330,7 +426,14 @@
     "freq": "",
     "Lat": -3.91686010361,
     "Lon": -70.5082015991,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SPBC",
+    "iso_country": "PE",
+    "local_code": "LHC",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "heading": 116.7,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -339,7 +442,14 @@
     "freq": "",
     "Lat": -10.029555,
     "Lon": -73.943375,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "SPBL",
+    "iso_country": "PE",
+    "icao_code": "SPBL",
+    "length_ft": 3871,
+    "width_ft": 59,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -348,7 +458,9 @@
     "freq": "",
     "Lat": -15.45003,
     "Lon": -74.74423,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SPBQ",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -357,7 +469,15 @@
     "freq": "",
     "Lat": -11.4116,
     "Lon": -69.488701,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "SPBR",
+    "iso_country": "PE",
+    "icao_code": "SPBR",
+    "iata_code": "IBP",
+    "length_ft": 4429,
+    "width_ft": 59,
+    "heading": 126.1,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -366,7 +486,9 @@
     "freq": "",
     "Lat": -5.28839,
     "Lon": -76.292099,
-    "Ele": 205.7
+    "Ele": 205.7,
+    "ident": "SPBS",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -375,7 +497,9 @@
     "freq": "",
     "Lat": -10.755137,
     "Lon": -74.221749,
-    "Ele": 1002.8
+    "Ele": 1002.8,
+    "ident": "SPBT",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -384,7 +508,9 @@
     "freq": "",
     "Lat": -9.865278,
     "Lon": -75.008888,
-    "Ele": 236.2
+    "Ele": 236.2,
+    "ident": "SPCC",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -393,7 +519,9 @@
     "freq": "",
     "Lat": -7.743888854980469,
     "Lon": -79.18638610839844,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "SPCG",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -402,7 +530,10 @@
     "freq": "",
     "Lat": -8.195356,
     "Lon": -76.530241,
-    "Ele": 497.1
+    "Ele": 497.1,
+    "ident": "SPCH",
+    "iso_country": "PE",
+    "local_code": "TCG"
   },
   {
     "type": "small_airport",
@@ -411,7 +542,9 @@
     "freq": "",
     "Lat": -17.615403,
     "Lon": -71.330883,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "SPCI",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -420,7 +553,15 @@
     "freq": "118.100",
     "Lat": -8.37794017791748,
     "Lon": -74.57430267333984,
-    "Ele": 156.4
+    "Ele": 156.4,
+    "ident": "SPCL",
+    "iso_country": "PE",
+    "icao_code": "SPCL",
+    "iata_code": "PCL",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "heading": 20,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -429,7 +570,10 @@
     "freq": "",
     "Lat": -7.335827,
     "Lon": -74.992531,
-    "Ele": 146.3
+    "Ele": 146.3,
+    "ident": "SPCM",
+    "iso_country": "PE",
+    "local_code": "CTF"
   },
   {
     "type": "small_airport",
@@ -438,7 +582,9 @@
     "freq": "",
     "Lat": -6.843543,
     "Lon": -76.33959,
-    "Ele": 297.8
+    "Ele": 297.8,
+    "ident": "SPCP",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -447,7 +593,9 @@
     "freq": "",
     "Lat": -15.5,
     "Lon": -74.66667175292969,
-    "Ele": 164.6
+    "Ele": 164.6,
+    "ident": "SPCR",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -456,7 +604,9 @@
     "freq": "",
     "Lat": -6.550000190734863,
     "Lon": -78.6500015258789,
-    "Ele": 2377.4
+    "Ele": 2377.4,
+    "ident": "SPCT",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -465,7 +615,9 @@
     "freq": "",
     "Lat": -5.137125,
     "Lon": -72.867889,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "SPDN",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -474,7 +626,9 @@
     "freq": "",
     "Lat": -17.045401,
     "Lon": -71.983704,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "SPDO",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -483,7 +637,15 @@
     "freq": "122.000",
     "Lat": -3.80601,
     "Lon": -75.039299,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "SPDR",
+    "iso_country": "PE",
+    "icao_code": "SPDR",
+    "iata_code": "TDP",
+    "length_ft": 6075,
+    "width_ft": 100,
+    "heading": 104.2,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -492,7 +654,9 @@
     "freq": "",
     "Lat": -17.070833,
     "Lon": -70.770833,
-    "Ele": 3415.0
+    "Ele": 3415,
+    "ident": "SPDS",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -501,7 +665,9 @@
     "freq": "",
     "Lat": -9.664617,
     "Lon": -75.285337,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "SPDU",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -510,7 +676,9 @@
     "freq": "",
     "Lat": -3.3333001136779785,
     "Lon": -71.81670379638672,
-    "Ele": 116.7
+    "Ele": 116.7,
+    "ident": "SPEB",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -519,7 +687,14 @@
     "freq": "",
     "Lat": -2.45406,
     "Lon": -72.670601,
-    "Ele": 128.3
+    "Ele": 128.3,
+    "ident": "SPEE",
+    "iso_country": "PE",
+    "local_code": "SP69",
+    "length_ft": 3956,
+    "width_ft": 92,
+    "heading": 122.6,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -528,7 +703,9 @@
     "freq": "",
     "Lat": -10.18299961090088,
     "Lon": -75.1500015258789,
-    "Ele": 273.7
+    "Ele": 273.7,
+    "ident": "SPEN",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -537,7 +714,15 @@
     "freq": "118.100",
     "Lat": -9.14961,
     "Lon": -78.523804,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "SPEO",
+    "iso_country": "PE",
+    "icao_code": "SPEO",
+    "iata_code": "CHM",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "heading": 7.3,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -546,7 +731,13 @@
     "freq": "",
     "Lat": -9.76813,
     "Lon": -70.706497,
-    "Ele": 221.0
+    "Ele": 221,
+    "ident": "SPEP",
+    "iso_country": "PE",
+    "length_ft": 5922,
+    "width_ft": 98,
+    "heading": 71.1,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -555,7 +746,13 @@
     "freq": "128.900",
     "Lat": -17.179001,
     "Lon": -70.930801,
-    "Ele": 1365.5
+    "Ele": 1365.5,
+    "ident": "SPEQ",
+    "iso_country": "PE",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -564,7 +761,9 @@
     "freq": "",
     "Lat": -10.299200057983398,
     "Lon": -74.93720245361328,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "SPEZ",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -573,7 +772,13 @@
     "freq": "",
     "Lat": -4.03188,
     "Lon": -77.758797,
-    "Ele": 182.0
+    "Ele": 182,
+    "ident": "SPGB",
+    "iso_country": "PE",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 170.8,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -582,7 +787,11 @@
     "freq": "",
     "Lat": -7.797624,
     "Lon": -77.651249,
-    "Ele": 1209.1
+    "Ele": 1209.1,
+    "ident": "SPGL",
+    "iso_country": "PE",
+    "icao_code": "SPGL",
+    "iata_code": "CGL"
   },
   {
     "type": "small_airport",
@@ -591,7 +800,15 @@
     "freq": "",
     "Lat": -9.289667,
     "Lon": -76.005058,
-    "Ele": 654.1
+    "Ele": 654.1,
+    "ident": "SPGM",
+    "iso_country": "PE",
+    "icao_code": "SPGM",
+    "iata_code": "TGI",
+    "length_ft": 6890,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -600,7 +817,14 @@
     "freq": "",
     "Lat": -0.119056,
     "Lon": -75.247902,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "SPGP",
+    "iso_country": "PE",
+    "local_code": "SP01",
+    "length_ft": 4219,
+    "width_ft": 145,
+    "heading": 45.4,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -609,7 +833,9 @@
     "freq": "",
     "Lat": -6.900000095367432,
     "Lon": -78.63333129882812,
-    "Ele": 3863.3
+    "Ele": 3863.3,
+    "ident": "SPGS",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -618,7 +844,9 @@
     "freq": "",
     "Lat": -9.902609825134276,
     "Lon": -74.96410369873047,
-    "Ele": 238.4
+    "Ele": 238.4,
+    "ident": "SPGT",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -627,7 +855,9 @@
     "freq": "",
     "Lat": -5.634722232818604,
     "Lon": -78.53055572509766,
-    "Ele": 419.1
+    "Ele": 419.1,
+    "ident": "SPGU",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -636,7 +866,9 @@
     "freq": "",
     "Lat": -15.80703,
     "Lon": -74.28699,
-    "Ele": 34.1
+    "Ele": 34.1,
+    "ident": "SPHC",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -645,7 +877,15 @@
     "freq": "121.900",
     "Lat": -6.78748,
     "Lon": -79.828102,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "SPHI",
+    "iso_country": "PE",
+    "icao_code": "SPHI",
+    "iata_code": "CIX",
+    "length_ft": 8266,
+    "width_ft": 148,
+    "heading": 7,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -654,7 +894,15 @@
     "freq": "126.900",
     "Lat": -13.1548,
     "Lon": -74.204399,
-    "Ele": 2717.9
+    "Ele": 2717.9,
+    "ident": "SPHO",
+    "iso_country": "PE",
+    "icao_code": "SPHO",
+    "iata_code": "AYP",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "heading": 22.6,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -663,7 +911,9 @@
     "freq": "",
     "Lat": -12.069899559020996,
     "Lon": -75.19850158691406,
-    "Ele": 3291.8
+    "Ele": 3291.8,
+    "ident": "SPHU",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -672,7 +922,9 @@
     "freq": "",
     "Lat": -9.92632007598877,
     "Lon": -76.23390197753906,
-    "Ele": 1926.3
+    "Ele": 1926.3,
+    "ident": "SPHV",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -681,7 +933,15 @@
     "freq": "126.900",
     "Lat": -13.70639991760254,
     "Lon": -73.35040283203125,
-    "Ele": 3444.2
+    "Ele": 3444.2,
+    "ident": "SPHY",
+    "iso_country": "PE",
+    "icao_code": "SPHY",
+    "iata_code": "ANS",
+    "length_ft": 8202,
+    "width_ft": 98,
+    "heading": 31.8,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -690,7 +950,15 @@
     "freq": "126.900",
     "Lat": -9.347439765930176,
     "Lon": -77.59839630126953,
-    "Ele": 2772.8
+    "Ele": 2772.8,
+    "ident": "SPHZ",
+    "iso_country": "PE",
+    "icao_code": "SPHZ",
+    "iata_code": "ATA",
+    "length_ft": 10007,
+    "width_ft": 98,
+    "heading": 161.7,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -699,7 +967,11 @@
     "freq": "",
     "Lat": -13.231357,
     "Lon": -70.75145,
-    "Ele": 623.9
+    "Ele": 623.9,
+    "ident": "SPIL",
+    "iso_country": "PE",
+    "icao_code": "SPIL",
+    "iata_code": "UMI"
   },
   {
     "type": "large_airport",
@@ -708,7 +980,15 @@
     "freq": "119.700",
     "Lat": -12.0219,
     "Lon": -77.114305,
-    "Ele": 34.4
+    "Ele": 34.4,
+    "ident": "SPIM",
+    "iso_country": "PE",
+    "icao_code": "SPJC",
+    "iata_code": "LIM",
+    "length_ft": 11417,
+    "width_ft": 148,
+    "heading": 153,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -717,7 +997,9 @@
     "freq": "",
     "Lat": -10.979,
     "Lon": -69.559402,
-    "Ele": 279.5
+    "Ele": 279.5,
+    "ident": "SPIN",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -726,7 +1008,9 @@
     "freq": "",
     "Lat": -12.966295,
     "Lon": -71.429936,
-    "Ele": 677.9
+    "Ele": 677.9,
+    "ident": "SPIR",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -735,7 +1019,9 @@
     "freq": "",
     "Lat": -7.92062,
     "Lon": -77.52518,
-    "Ele": 2590.8
+    "Ele": 2590.8,
+    "ident": "SPIS",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -744,7 +1030,9 @@
     "freq": "",
     "Lat": -5.085949897766113,
     "Lon": -81.15280151367188,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "SPIT",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -753,7 +1041,9 @@
     "freq": "",
     "Lat": -14.796129,
     "Lon": -71.431818,
-    "Ele": 3953.9
+    "Ele": 3953.9,
+    "ident": "SPIY",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -762,7 +1052,10 @@
     "freq": "",
     "Lat": -8.467,
     "Lon": -76.349998,
-    "Ele": 598.9
+    "Ele": 598.9,
+    "ident": "SPIZ",
+    "iso_country": "PE",
+    "iata_code": "UCZ"
   },
   {
     "type": "medium_airport",
@@ -771,7 +1064,15 @@
     "freq": "118.300",
     "Lat": -6.06786,
     "Lon": -77.160004,
-    "Ele": 825.1
+    "Ele": 825.1,
+    "ident": "SPJA",
+    "iso_country": "PE",
+    "icao_code": "SPJA",
+    "iata_code": "RIJ",
+    "length_ft": 6168,
+    "width_ft": 98,
+    "heading": 166,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -780,7 +1081,9 @@
     "freq": "",
     "Lat": -7.61447,
     "Lon": -78.06159,
-    "Ele": 2660.0
+    "Ele": 2660,
+    "ident": "SPJB",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -789,7 +1092,15 @@
     "freq": "126.900",
     "Lat": -5.59248,
     "Lon": -78.774002,
-    "Ele": 755.0
+    "Ele": 755,
+    "ident": "SPJE",
+    "iso_country": "PE",
+    "icao_code": "SPJE",
+    "iata_code": "JAE",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 163.1,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -798,7 +1109,15 @@
     "freq": "118.100",
     "Lat": -7.1691,
     "Lon": -76.7286,
-    "Ele": 349.9
+    "Ele": 349.9,
+    "ident": "SPJI",
+    "iso_country": "PE",
+    "icao_code": "SPJI",
+    "iata_code": "JJI",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 34,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -807,7 +1126,15 @@
     "freq": "126.900",
     "Lat": -11.7831001282,
     "Lon": -75.47339630130001,
-    "Ele": 3363.2
+    "Ele": 3363.2,
+    "ident": "SPJJ",
+    "iso_country": "PE",
+    "icao_code": "SPJJ",
+    "iata_code": "JAU",
+    "length_ft": 9220,
+    "width_ft": 148,
+    "heading": 128,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -816,7 +1143,15 @@
     "freq": "118.100",
     "Lat": -15.467100143432615,
     "Lon": -70.158203125,
-    "Ele": 3825.8
+    "Ele": 3825.8,
+    "ident": "SPJL",
+    "iso_country": "PE",
+    "icao_code": "SPJL",
+    "iata_code": "JUL",
+    "length_ft": 13779,
+    "width_ft": 150,
+    "heading": 112,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -825,7 +1160,15 @@
     "freq": "",
     "Lat": -15.357508,
     "Lon": -75.135005,
-    "Ele": 43.9
+    "Ele": 43.9,
+    "ident": "SPJN",
+    "iso_country": "PE",
+    "icao_code": "SPJN",
+    "iata_code": "SJA",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -834,7 +1177,15 @@
     "freq": "118.100",
     "Lat": -7.13918,
     "Lon": -78.489403,
-    "Ele": 2676.4
+    "Ele": 2676.4,
+    "ident": "SPJR",
+    "iso_country": "PE",
+    "icao_code": "SPJR",
+    "iata_code": "CJA",
+    "length_ft": 8201,
+    "width_ft": 148,
+    "heading": 157.7,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -843,7 +1194,9 @@
     "freq": "",
     "Lat": -12.673815,
     "Lon": -73.710266,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SPLA",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -852,7 +1205,13 @@
     "freq": "",
     "Lat": -16.7915,
     "Lon": -71.886597,
-    "Ele": 1185.7
+    "Ele": 1185.7,
+    "ident": "SPLC",
+    "iso_country": "PE",
+    "length_ft": 13064,
+    "width_ft": 160,
+    "heading": 174,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -861,7 +1220,9 @@
     "freq": "",
     "Lat": -6.867599964141846,
     "Lon": -78.14990234375,
-    "Ele": 2621.3
+    "Ele": 2621.3,
+    "ident": "SPLD",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -870,7 +1231,9 @@
     "freq": "",
     "Lat": -12.641599655151367,
     "Lon": -69.8375015258789,
-    "Ele": 232.6
+    "Ele": 232.6,
+    "ident": "SPLG",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -879,7 +1242,15 @@
     "freq": "",
     "Lat": -6.39231,
     "Lon": -77.501198,
-    "Ele": 1549.0
+    "Ele": 1549,
+    "ident": "SPLN",
+    "iso_country": "PE",
+    "icao_code": "SPLN",
+    "iata_code": "RIM",
+    "length_ft": 5915,
+    "width_ft": 98,
+    "heading": 109,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -888,7 +1259,15 @@
     "freq": "126.900",
     "Lat": -17.695,
     "Lon": -71.344002,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "SPLO",
+    "iso_country": "PE",
+    "icao_code": "SPLO",
+    "iata_code": "ILQ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 114.8,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -897,7 +1276,13 @@
     "freq": "124.000",
     "Lat": -12.16069984436,
     "Lon": -76.998901367188,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "SPLP",
+    "iso_country": "PE",
+    "length_ft": 8019,
+    "width_ft": 150,
+    "heading": 18,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -906,7 +1291,9 @@
     "freq": "",
     "Lat": -8.416999816894531,
     "Lon": -75.13300323486328,
-    "Ele": 216.7
+    "Ele": 216.7,
+    "ident": "SPLS",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -915,7 +1302,9 @@
     "freq": "",
     "Lat": -12.38875,
     "Lon": -76.75834,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "SPLX",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -924,7 +1313,15 @@
     "freq": "118.700",
     "Lat": -3.552074,
     "Lon": -80.381086,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "SPME",
+    "iso_country": "PE",
+    "icao_code": "SPME",
+    "iata_code": "TBP",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 141,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -933,7 +1330,15 @@
     "freq": "118.300",
     "Lat": -11.3254,
     "Lon": -74.535598,
-    "Ele": 684.9
+    "Ele": 684.9,
+    "ident": "SPMF",
+    "iso_country": "PE",
+    "icao_code": "SPMF",
+    "iata_code": "MZA",
+    "length_ft": 5775,
+    "width_ft": 98,
+    "heading": 151.5,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -942,7 +1347,15 @@
     "freq": "118.100",
     "Lat": -5.89377,
     "Lon": -76.118202,
-    "Ele": 178.9
+    "Ele": 178.9,
+    "ident": "SPMS",
+    "iso_country": "PE",
+    "icao_code": "SPMS",
+    "iata_code": "YMS",
+    "length_ft": 5912,
+    "width_ft": 98,
+    "heading": 94,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -951,7 +1364,15 @@
     "freq": "126.900",
     "Lat": -9.878809928894045,
     "Lon": -76.20480346679688,
-    "Ele": 1850.1
+    "Ele": 1850.1,
+    "ident": "SPNC",
+    "iso_country": "PE",
+    "icao_code": "SPNC",
+    "iata_code": "HUU",
+    "length_ft": 8202,
+    "width_ft": 98,
+    "heading": 68,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -960,7 +1381,9 @@
     "freq": "",
     "Lat": -13.16569995880127,
     "Lon": -75.0719985961914,
-    "Ele": 4561.3
+    "Ele": 4561.3,
+    "ident": "SPNH",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -969,7 +1392,9 @@
     "freq": "",
     "Lat": -11.541500091552734,
     "Lon": -73.14219665527344,
-    "Ele": 332.2
+    "Ele": 332.2,
+    "ident": "SPNM",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -978,7 +1403,9 @@
     "freq": "",
     "Lat": -15.85131,
     "Lon": -70.05871,
-    "Ele": 3999.9
+    "Ele": 3999.9,
+    "ident": "SPNP",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -987,7 +1414,9 @@
     "freq": "",
     "Lat": -10.777950286865234,
     "Lon": -76.25131225585938,
-    "Ele": 4181.9
+    "Ele": 4181.9,
+    "ident": "SPNR",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -996,7 +1425,9 @@
     "freq": "",
     "Lat": -3.5829999446868896,
     "Lon": -74.75,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "SPNT",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1436,9 @@
     "freq": "",
     "Lat": -12.289721,
     "Lon": -70.890199,
-    "Ele": 307.8
+    "Ele": 307.8,
+    "ident": "SPNU",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1447,11 @@
     "freq": "",
     "Lat": -6.96003,
     "Lon": -76.768402,
-    "Ele": 299.3
+    "Ele": 299.3,
+    "ident": "SPOA",
+    "iso_country": "PE",
+    "icao_code": "SPOA",
+    "iata_code": "SQU"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1460,9 @@
     "freq": "",
     "Lat": -6.896733,
     "Lon": -75.153182,
-    "Ele": 129.2
+    "Ele": 129.2,
+    "ident": "SPON",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1471,9 @@
     "freq": "",
     "Lat": -15.315232,
     "Lon": -72.352095,
-    "Ele": 3718.6
+    "Ele": 3718.6,
+    "ident": "SPOR",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1482,9 @@
     "freq": "",
     "Lat": -11.9,
     "Lon": -69.167,
-    "Ele": 228.0
+    "Ele": 228,
+    "ident": "SPOV",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1493,13 @@
     "freq": "",
     "Lat": -16.232846,
     "Lon": -73.605652,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "SPOY",
+    "iso_country": "PE",
+    "length_ft": 4900,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1059,7 +1508,9 @@
     "freq": "",
     "Lat": -9.53306,
     "Lon": -72.756897,
-    "Ele": 238.7
+    "Ele": 238.7,
+    "ident": "SPPB",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1519,9 @@
     "freq": "",
     "Lat": -12.763889,
     "Lon": -73.652778,
-    "Ele": 605.9
+    "Ele": 605.9,
+    "ident": "SPPE",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1530,9 @@
     "freq": "",
     "Lat": -7.206774,
     "Lon": -75.297559,
-    "Ele": 155.4
+    "Ele": 155.4,
+    "ident": "SPPH",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1541,9 @@
     "freq": "",
     "Lat": -8.517820358276367,
     "Lon": -76.48049926757812,
-    "Ele": 630.9
+    "Ele": 630.9,
+    "ident": "SPPL",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1552,9 @@
     "freq": "",
     "Lat": -8.343722,
     "Lon": -76.48935,
-    "Ele": 508.1
+    "Ele": 508.1,
+    "ident": "SPPN",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1563,9 @@
     "freq": "",
     "Lat": -10.07009983062744,
     "Lon": -75.55000305175781,
-    "Ele": 737.6
+    "Ele": 737.6,
+    "ident": "SPPO",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1574,9 @@
     "freq": "",
     "Lat": -14.14334,
     "Lon": -72.33455,
-    "Ele": 4002.0
+    "Ele": 4002,
+    "ident": "SPPP",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1122,7 +1585,15 @@
     "freq": "126.900",
     "Lat": -6.201911,
     "Lon": -77.856195,
-    "Ele": 2539.9
+    "Ele": 2539.9,
+    "ident": "SPPY",
+    "iso_country": "PE",
+    "icao_code": "SPPY",
+    "iata_code": "CHH",
+    "length_ft": 6496,
+    "width_ft": 98,
+    "heading": 131.9,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1602,9 @@
     "freq": "",
     "Lat": -9.895833015441896,
     "Lon": -75.1177749633789,
-    "Ele": 284.1
+    "Ele": 284.1,
+    "ident": "SPPZ",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1613,9 @@
     "freq": "",
     "Lat": -12.648669,
     "Lon": -73.036579,
-    "Ele": 789.1
+    "Ele": 789.1,
+    "ident": "SPQI",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1624,9 @@
     "freq": "",
     "Lat": -15.466667175292969,
     "Lon": -74.43333435058594,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SPQJ",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1635,9 @@
     "freq": "",
     "Lat": -7.96666669845581,
     "Lon": -78.19999694824219,
-    "Ele": 4117.5
+    "Ele": 4117.5,
+    "ident": "SPQR",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1167,7 +1646,15 @@
     "freq": "124.100",
     "Lat": -3.78474,
     "Lon": -73.3088,
-    "Ele": 93.3
+    "Ele": 93.3,
+    "ident": "SPQT",
+    "iso_country": "PE",
+    "icao_code": "SPQT",
+    "iata_code": "IQT",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 56.7,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -1176,7 +1663,15 @@
     "freq": "118.700",
     "Lat": -16.3411006927,
     "Lon": -71.5830993652,
-    "Ele": 2561.8
+    "Ele": 2561.8,
+    "ident": "SPQU",
+    "iso_country": "PE",
+    "icao_code": "SPQU",
+    "iata_code": "AQP",
+    "length_ft": 9777,
+    "width_ft": 148,
+    "heading": 93,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1680,9 @@
     "freq": "",
     "Lat": -14.28201,
     "Lon": -70.37989,
-    "Ele": 4395.8
+    "Ele": 4395.8,
+    "ident": "SPRF",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1691,9 @@
     "freq": "",
     "Lat": -13.5113,
     "Lon": -76.08398,
-    "Ele": 89.6
+    "Ele": 89.6,
+    "ident": "SPRG",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1702,9 @@
     "freq": "",
     "Lat": -12.31666660308838,
     "Lon": -75.06666564941406,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SPRL",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1713,13 @@
     "freq": "",
     "Lat": -11.128600120544434,
     "Lon": -75.35050201416016,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "SPRM",
+    "iso_country": "PE",
+    "length_ft": 3281,
+    "width_ft": 59,
+    "heading": 12.6,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1728,9 @@
     "freq": "",
     "Lat": -13.22283,
     "Lon": -76.26927,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "SPRR",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1230,7 +1739,15 @@
     "freq": "118.700",
     "Lat": -8.08141040802002,
     "Lon": -79.10880279541016,
-    "Ele": 32.3
+    "Ele": 32.3,
+    "ident": "SPRU",
+    "iso_country": "PE",
+    "icao_code": "SPRU",
+    "iata_code": "TRU",
+    "length_ft": 9920,
+    "width_ft": 145,
+    "heading": 17,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1756,9 @@
     "freq": "",
     "Lat": -9.450235,
     "Lon": -78.294346,
-    "Ele": 75.6
+    "Ele": 75.6,
+    "ident": "SPSA",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1767,9 @@
     "freq": "",
     "Lat": -11.14227,
     "Lon": -73.034327,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "SPSE",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1778,9 @@
     "freq": "",
     "Lat": -6.6166801452637,
     "Lon": -77.766700744629,
-    "Ele": 2500.0
+    "Ele": 2500,
+    "ident": "SPSF",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1789,9 @@
     "freq": "",
     "Lat": -16.367000579833984,
     "Lon": -72.16699981689453,
-    "Ele": 1438.7
+    "Ele": 1438.7,
+    "ident": "SPSI",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1800,9 @@
     "freq": "",
     "Lat": -6.616489887237549,
     "Lon": -76.68840026855469,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "SPSJ",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1811,9 @@
     "freq": "",
     "Lat": -6.416666507720947,
     "Lon": -76.53333282470703,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "SPSL",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1822,9 @@
     "freq": "",
     "Lat": -6.5797200202941895,
     "Lon": -76.26280212402344,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "SPSN",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1302,7 +1833,15 @@
     "freq": "118.300",
     "Lat": -13.7449,
     "Lon": -76.220299,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "SPSO",
+    "iso_country": "PE",
+    "icao_code": "SPSO",
+    "iata_code": "PIO",
+    "length_ft": 9908,
+    "width_ft": 148,
+    "heading": 38,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1850,9 @@
     "freq": "",
     "Lat": -8.61142,
     "Lon": -74.309962,
-    "Ele": 159.1
+    "Ele": 159.1,
+    "ident": "SPSS",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1320,7 +1861,15 @@
     "freq": "118.400",
     "Lat": -6.508739948272705,
     "Lon": -76.37319946289062,
-    "Ele": 264.9
+    "Ele": 264.9,
+    "ident": "SPST",
+    "iso_country": "PE",
+    "icao_code": "SPST",
+    "iata_code": "TPP",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1878,11 @@
     "freq": "",
     "Lat": -11.898,
     "Lon": -69.0625,
-    "Ele": 260.9
+    "Ele": 260.9,
+    "ident": "SPSY",
+    "iso_country": "PE",
+    "icao_code": "SPSY",
+    "iata_code": "SYC"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1891,9 @@
     "freq": "",
     "Lat": -4.54186,
     "Lon": -73.562951,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "SPTA",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1902,9 @@
     "freq": "",
     "Lat": -12.532999992370604,
     "Lon": -73.80000305175781,
-    "Ele": 761.7
+    "Ele": 761.7,
+    "ident": "SPTE",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1913,9 @@
     "freq": "",
     "Lat": -9.383000373840332,
     "Lon": -74.96700286865234,
-    "Ele": 177.7
+    "Ele": 177.7,
+    "ident": "SPTI",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1365,7 +1924,15 @@
     "freq": "126.900",
     "Lat": -18.0533008575,
     "Lon": -70.2758026123,
-    "Ele": 468.8
+    "Ele": 468.8,
+    "ident": "SPTN",
+    "iso_country": "PE",
+    "icao_code": "SPTN",
+    "iata_code": "TCQ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 20,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1941,9 @@
     "freq": "",
     "Lat": -8.127167,
     "Lon": -77.988,
-    "Ele": 3262.0
+    "Ele": 3262,
+    "ident": "SPTO",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1952,9 @@
     "freq": "",
     "Lat": -4.54981,
     "Lon": -81.224098,
-    "Ele": 87.2
+    "Ele": 87.2,
+    "ident": "SPTP",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1963,9 @@
     "freq": "",
     "Lat": -17.2995,
     "Lon": -70.652802,
-    "Ele": 2601.8
+    "Ele": 2601.8,
+    "ident": "SPTQ",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1974,9 @@
     "freq": "",
     "Lat": -8.922406,
     "Lon": -74.715234,
-    "Ele": 197.8
+    "Ele": 197.8,
+    "ident": "SPTR",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1410,7 +1985,15 @@
     "freq": "118.800",
     "Lat": -12.6135997772,
     "Lon": -69.2285995483,
-    "Ele": 200.9
+    "Ele": 200.9,
+    "ident": "SPTU",
+    "iso_country": "PE",
+    "icao_code": "SPTU",
+    "iata_code": "PEM",
+    "length_ft": 11482,
+    "width_ft": 148,
+    "heading": 2.1,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1419,7 +2002,9 @@
     "freq": "",
     "Lat": -7.81808,
     "Lon": -78.02834,
-    "Ele": 3159.9
+    "Ele": 3159.9,
+    "ident": "SPUC",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1428,7 +2013,15 @@
     "freq": "118.400",
     "Lat": -5.20574998856,
     "Lon": -80.61640167239999,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "SPUR",
+    "iso_country": "PE",
+    "icao_code": "SPUR",
+    "iata_code": "PIU",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 12.5,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1437,7 +2030,9 @@
     "freq": "",
     "Lat": -5.672621,
     "Lon": -78.644257,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SPVA",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1446,7 +2041,9 @@
     "freq": "",
     "Lat": -10.847844,
     "Lon": -76.246956,
-    "Ele": 4103.8
+    "Ele": 4103.8,
+    "ident": "SPVI",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1455,7 +2052,9 @@
     "freq": "",
     "Lat": -15.77904,
     "Lon": -73.36176,
-    "Ele": 1729.7
+    "Ele": 1729.7,
+    "ident": "SPVL",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1464,7 +2063,9 @@
     "freq": "",
     "Lat": -13.67817,
     "Lon": -73.927,
-    "Ele": 3646.9
+    "Ele": 3646.9,
+    "ident": "SPVN",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1473,7 +2074,9 @@
     "freq": "",
     "Lat": -16.429199,
     "Lon": -71.837799,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SPVR",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1482,7 +2085,9 @@
     "freq": "",
     "Lat": -6.691699981689453,
     "Lon": -79.70169830322266,
-    "Ele": 90.8
+    "Ele": 90.8,
+    "ident": "SPYA",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2096,9 @@
     "freq": "",
     "Lat": -8.340436,
     "Lon": -74.597906,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "SPYC",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1500,7 +2107,15 @@
     "freq": "119.500",
     "Lat": -4.57664,
     "Lon": -81.254097,
-    "Ele": 86.0
+    "Ele": 86,
+    "ident": "SPYL",
+    "iso_country": "PE",
+    "icao_code": "SPYL",
+    "iata_code": "TYL",
+    "length_ft": 8038,
+    "width_ft": 148,
+    "heading": 169.9,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2124,9 @@
     "freq": "",
     "Lat": -7.40694,
     "Lon": -79.568901,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "SPYO",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2135,9 @@
     "freq": "",
     "Lat": -15.618900299072266,
     "Lon": -74.53610229492188,
-    "Ele": 148.7
+    "Ele": 148.7,
+    "ident": "SPYU",
+    "iso_country": "PE"
   },
   {
     "type": "medium_airport",
@@ -1527,7 +2146,15 @@
     "freq": "121.900",
     "Lat": -14.854,
     "Lon": -74.961502,
-    "Ele": 566.9
+    "Ele": 566.9,
+    "ident": "SPZA",
+    "iso_country": "PE",
+    "icao_code": "SPZA",
+    "iata_code": "NZC",
+    "length_ft": 3355,
+    "width_ft": 65,
+    "heading": 66,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2163,9 @@
     "freq": "",
     "Lat": -7.299280166625977,
     "Lon": -76.77459716796875,
-    "Ele": 335.9
+    "Ele": 335.9,
+    "ident": "SPZH",
+    "iso_country": "PE"
   },
   {
     "type": "large_airport",
@@ -1545,7 +2174,15 @@
     "freq": "120.600",
     "Lat": -13.535699844400002,
     "Lon": -71.9387969971,
-    "Ele": 3310.1
+    "Ele": 3310.1,
+    "ident": "SPZO",
+    "iso_country": "PE",
+    "icao_code": "SPZO",
+    "iata_code": "CUZ",
+    "length_ft": 11146,
+    "width_ft": 148,
+    "heading": 95.9,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2191,9 @@
     "freq": "",
     "Lat": -6.574166774749756,
     "Lon": -76.13666534423828,
-    "Ele": 230.7
+    "Ele": 230.7,
+    "ident": "SPZT",
+    "iso_country": "PE"
   },
   {
     "type": "small_airport",
@@ -1563,6 +2202,9 @@
     "freq": "",
     "Lat": -11.854861,
     "Lon": -72.939332,
-    "Ele": 391.7
+    "Ele": 391.7,
+    "ident": "VVN",
+    "iso_country": "PE",
+    "iata_code": "VVN"
   }
 ]

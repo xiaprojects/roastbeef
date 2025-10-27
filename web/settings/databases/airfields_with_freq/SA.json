@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 24.214693,
     "Lon": 51.44989,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AE-0001",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,14 @@
     "freq": "",
     "Lat": 21.323601,
     "Lon": 41.198299,
-    "Ele": 1266.4
+    "Ele": 1266.4,
+    "ident": "OE43",
+    "iso_country": "SA",
+    "local_code": "OE43",
+    "length_ft": 6726,
+    "width_ft": 82,
+    "heading": 114,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,14 @@
     "freq": "",
     "Lat": 28.3899,
     "Lon": 48.516499,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "OE45",
+    "iso_country": "SA",
+    "local_code": "OE45",
+    "length_ft": 5715,
+    "width_ft": 70,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -33,7 +49,14 @@
     "freq": "",
     "Lat": 20.47590065002441,
     "Lon": 44.75749969482422,
-    "Ele": 678.2
+    "Ele": 678.2,
+    "ident": "OE46",
+    "iso_country": "SA",
+    "local_code": "OE46",
+    "length_ft": 5365,
+    "width_ft": 133,
+    "heading": 115,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -42,7 +65,14 @@
     "freq": "",
     "Lat": 24.060722,
     "Lon": 47.410805,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "OE47",
+    "iso_country": "SA",
+    "local_code": "OE47",
+    "length_ft": 10500,
+    "width_ft": 150,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -51,7 +81,14 @@
     "freq": "",
     "Lat": 18.8932,
     "Lon": 41.355,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "OE48",
+    "iso_country": "SA",
+    "local_code": "OE48",
+    "length_ft": 7235,
+    "width_ft": 98,
+    "heading": 21,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -60,7 +97,14 @@
     "freq": "",
     "Lat": 21.4375,
     "Lon": 39.994202,
-    "Ele": 368.8
+    "Ele": 368.8,
+    "ident": "OE49",
+    "iso_country": "SA",
+    "local_code": "OE49",
+    "length_ft": 7865,
+    "width_ft": 140,
+    "heading": 12,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -69,7 +113,13 @@
     "freq": "122.800",
     "Lat": 26.941601,
     "Lon": 49.704102,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "OE50",
+    "iso_country": "SA",
+    "length_ft": 7972,
+    "width_ft": 148,
+    "heading": 145.8,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -78,7 +128,14 @@
     "freq": "",
     "Lat": 24.05150032043457,
     "Lon": 47.65420150756836,
-    "Ele": 502.9
+    "Ele": 502.9,
+    "ident": "OE51",
+    "iso_country": "SA",
+    "local_code": "OE51",
+    "length_ft": 4245,
+    "width_ft": 60,
+    "heading": 175.7,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -87,7 +144,14 @@
     "freq": "",
     "Lat": 26.61160087585449,
     "Lon": 45.321998596191406,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "OE52",
+    "iso_country": "SA",
+    "local_code": "OE52",
+    "length_ft": 6900,
+    "width_ft": 150,
+    "heading": 33,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -96,7 +160,14 @@
     "freq": "122.800",
     "Lat": 24.942100524902344,
     "Lon": 46.39120101928711,
-    "Ele": 737.6
+    "Ele": 737.6,
+    "ident": "OE53",
+    "iso_country": "SA",
+    "local_code": "OE53",
+    "length_ft": 7531,
+    "width_ft": 83,
+    "heading": 150.7,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -105,7 +176,14 @@
     "freq": "",
     "Lat": 25.99340057373047,
     "Lon": 46.53670120239258,
-    "Ele": 600.5
+    "Ele": 600.5,
+    "ident": "OE54",
+    "iso_country": "SA",
+    "local_code": "OE54",
+    "length_ft": 7315,
+    "width_ft": 148,
+    "heading": 151.6,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -114,7 +192,13 @@
     "freq": "",
     "Lat": 21.226999,
     "Lon": 55.2673,
-    "Ele": 213.1
+    "Ele": 213.1,
+    "ident": "OE55",
+    "iso_country": "SA",
+    "length_ft": 6915,
+    "width_ft": 99,
+    "heading": 34,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -123,7 +207,13 @@
     "freq": "",
     "Lat": 22.709952,
     "Lon": 53.281131,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "OE56",
+    "iso_country": "SA",
+    "length_ft": 6888,
+    "width_ft": 95,
+    "heading": 128.4,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -132,7 +222,13 @@
     "freq": "",
     "Lat": 27.319099,
     "Lon": 49.587101,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "OEAA",
+    "iso_country": "SA",
+    "length_ft": 4956,
+    "width_ft": 90,
+    "heading": 149,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -141,7 +237,15 @@
     "freq": "124.500",
     "Lat": 18.2404,
     "Lon": 42.656601,
-    "Ele": 2090.3
+    "Ele": 2090.3,
+    "ident": "OEAB",
+    "iso_country": "SA",
+    "icao_code": "OEAB",
+    "iata_code": "AHB",
+    "length_ft": 10991,
+    "width_ft": 148,
+    "heading": 129,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -150,7 +254,15 @@
     "freq": "122.800",
     "Lat": 25.285299,
     "Lon": 49.485199,
-    "Ele": 179.2
+    "Ele": 179.2,
+    "ident": "OEAH",
+    "iso_country": "SA",
+    "icao_code": "OEAH",
+    "iata_code": "HOF",
+    "length_ft": 10039,
+    "width_ft": 148,
+    "heading": 164.9,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -159,7 +271,15 @@
     "freq": "",
     "Lat": 26.483333,
     "Lon": 38.116944,
-    "Ele": 624.8
+    "Ele": 624.8,
+    "ident": "OEAO",
+    "iso_country": "SA",
+    "icao_code": "OEAO",
+    "iata_code": "ULH",
+    "length_ft": 10007,
+    "width_ft": 164,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -168,7 +288,15 @@
     "freq": "122.800",
     "Lat": 20.298506,
     "Lon": 41.636153,
-    "Ele": 1672.1
+    "Ele": 1672.1,
+    "ident": "OEBA",
+    "iso_country": "SA",
+    "icao_code": "OEBA",
+    "iata_code": "ABT",
+    "length_ft": 10991,
+    "width_ft": 148,
+    "heading": 70.8,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -177,7 +305,15 @@
     "freq": "122.800",
     "Lat": 19.9844,
     "Lon": 42.620899,
-    "Ele": 1184.8
+    "Ele": 1184.8,
+    "ident": "OEBH",
+    "iso_country": "SA",
+    "icao_code": "OEBH",
+    "iata_code": "BHH",
+    "length_ft": 10007,
+    "width_ft": 147,
+    "heading": 186,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -186,7 +322,9 @@
     "freq": "",
     "Lat": 19.831632,
     "Lon": 54.022115,
-    "Ele": 122.8
+    "Ele": 122.8,
+    "ident": "OEBN",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -195,7 +333,13 @@
     "freq": "138.220",
     "Lat": 25.911301,
     "Lon": 49.591202,
-    "Ele": 69.8
+    "Ele": 69.8,
+    "ident": "OEBQ",
+    "iso_country": "SA",
+    "length_ft": 6075,
+    "width_ft": 111,
+    "heading": 150.2,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -204,7 +348,15 @@
     "freq": "125.000",
     "Lat": 26.471201,
     "Lon": 49.797901,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "OEDF",
+    "iso_country": "SA",
+    "icao_code": "OEDF",
+    "iata_code": "DMM",
+    "length_ft": 13124,
+    "width_ft": 197,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -213,7 +365,14 @@
     "freq": "122.800",
     "Lat": 24.4499,
     "Lon": 44.121201,
-    "Ele": 922.3
+    "Ele": 922.3,
+    "ident": "OEDM",
+    "iso_country": "SA",
+    "iata_code": "DWD",
+    "length_ft": 10006,
+    "width_ft": 147,
+    "heading": 153.8,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -222,7 +381,15 @@
     "freq": "127.900",
     "Lat": 26.2654,
     "Lon": 50.152,
-    "Ele": 25.6
+    "Ele": 25.6,
+    "ident": "OEDR",
+    "iso_country": "SA",
+    "icao_code": "OEDR",
+    "iata_code": "DHA",
+    "length_ft": 12008,
+    "width_ft": 148,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -231,7 +398,15 @@
     "freq": "121.900",
     "Lat": 16.9011,
     "Lon": 42.5858,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "OEGN",
+    "iso_country": "SA",
+    "icao_code": "OEGN",
+    "iata_code": "GIZ",
+    "length_ft": 10006,
+    "width_ft": 148,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -240,7 +415,15 @@
     "freq": "131.500",
     "Lat": 26.302799,
     "Lon": 43.774399,
-    "Ele": 648.0
+    "Ele": 648,
+    "ident": "OEGS",
+    "iso_country": "SA",
+    "icao_code": "OEGS",
+    "iata_code": "ELQ",
+    "length_ft": 9843,
+    "width_ft": 147,
+    "heading": 153,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -249,7 +432,15 @@
     "freq": "122.800",
     "Lat": 31.412413,
     "Lon": 37.278898,
-    "Ele": 509.6
+    "Ele": 509.6,
+    "ident": "OEGT",
+    "iso_country": "SA",
+    "icao_code": "OEGT",
+    "iata_code": "URY",
+    "length_ft": 10007,
+    "width_ft": 147,
+    "heading": 106,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -258,7 +449,15 @@
     "freq": "131.500",
     "Lat": 27.437901,
     "Lon": 41.686298,
-    "Ele": 1015.3
+    "Ele": 1015.3,
+    "ident": "OEHL",
+    "iso_country": "SA",
+    "icao_code": "OEHL",
+    "iata_code": "HAS",
+    "length_ft": 12204,
+    "width_ft": 148,
+    "heading": 184,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -267,7 +466,12 @@
     "freq": "",
     "Lat": 24.09653,
     "Lon": 49.22432,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "OEHR",
+    "iso_country": "SA",
+    "length_ft": 8006,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -276,7 +480,13 @@
     "freq": "138.250",
     "Lat": 22.9678,
     "Lon": 46.899502,
-    "Ele": 637.3
+    "Ele": 637.3,
+    "ident": "OEHW",
+    "iso_country": "SA",
+    "length_ft": 8497,
+    "width_ft": 98,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -285,7 +495,14 @@
     "freq": "130.500",
     "Lat": 27.039,
     "Lon": 49.405102,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "OEJB",
+    "iso_country": "SA",
+    "iata_code": "QJB",
+    "length_ft": 13124,
+    "width_ft": 148,
+    "heading": 167,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -294,7 +511,13 @@
     "freq": "",
     "Lat": 21.348100662231445,
     "Lon": 39.17300033569336,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "OEJF",
+    "iso_country": "SA",
+    "length_ft": 8964,
+    "width_ft": 148,
+    "heading": 155.1,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -303,7 +526,15 @@
     "freq": "119.100",
     "Lat": 21.6796,
     "Lon": 39.156502,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "OEJN",
+    "iso_country": "SA",
+    "icao_code": "OEJN",
+    "iata_code": "JED",
+    "length_ft": 12467,
+    "width_ft": 197,
+    "heading": 160,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -312,7 +543,13 @@
     "freq": "",
     "Lat": 26.085278,
     "Lon": 45.196667,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OEKF",
+    "iso_country": "SA",
+    "length_ft": 8203,
+    "width_ft": 148,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -321,7 +558,15 @@
     "freq": "120.700",
     "Lat": 27.9009,
     "Lon": 45.528198,
-    "Ele": 412.1
+    "Ele": 412.1,
+    "ident": "OEKK",
+    "iso_country": "SA",
+    "icao_code": "OEKK",
+    "iata_code": "KMC",
+    "length_ft": 12005,
+    "width_ft": 148,
+    "heading": 129.9,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -330,7 +575,15 @@
     "freq": "130.500",
     "Lat": 18.2973,
     "Lon": 42.803501,
-    "Ele": 2065.9
+    "Ele": 2065.9,
+    "ident": "OEKM",
+    "iso_country": "SA",
+    "icao_code": "OEKM",
+    "iata_code": "KMX",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "heading": 140.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -339,7 +592,13 @@
     "freq": "138.220",
     "Lat": 25.069599,
     "Lon": 48.194901,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "OEKR",
+    "iso_country": "SA",
+    "length_ft": 6250,
+    "width_ft": 98,
+    "heading": 162.6,
+    "QFU": "34"
   },
   {
     "type": "large_airport",
@@ -348,7 +607,15 @@
     "freq": "124.200",
     "Lat": 24.5534,
     "Lon": 39.705101,
-    "Ele": 655.6
+    "Ele": 655.6,
+    "ident": "OEMA",
+    "iso_country": "SA",
+    "icao_code": "OEMA",
+    "iata_code": "MED",
+    "length_ft": 10039,
+    "width_ft": 147,
+    "heading": 184,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -357,7 +624,9 @@
     "freq": "",
     "Lat": 24.626,
     "Lon": 39.195,
-    "Ele": 582.2
+    "Ele": 582.2,
+    "ident": "OEMD",
+    "iso_country": "SA"
   },
   {
     "type": "medium_airport",
@@ -366,7 +635,15 @@
     "freq": "122.800",
     "Lat": 17.611401,
     "Lon": 44.419201,
-    "Ele": 1213.7
+    "Ele": 1213.7,
+    "ident": "OENG",
+    "iso_country": "SA",
+    "icao_code": "OENG",
+    "iata_code": "EAM",
+    "length_ft": 10007,
+    "width_ft": 147,
+    "heading": 60,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -375,7 +652,15 @@
     "freq": "",
     "Lat": 27.927598,
     "Lon": 35.28874,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "OENN",
+    "iso_country": "SA",
+    "icao_code": "OENN",
+    "iata_code": "NUM",
+    "length_ft": 12326,
+    "width_ft": 164,
+    "heading": 155,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -384,7 +669,9 @@
     "freq": "",
     "Lat": 27.5,
     "Lon": 48.5,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "OENR",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -393,7 +680,9 @@
     "freq": "",
     "Lat": 19.11176,
     "Lon": 50.127353,
-    "Ele": 262.1
+    "Ele": 262.1,
+    "ident": "OEOM",
+    "iso_country": "SA"
   },
   {
     "type": "medium_airport",
@@ -402,7 +691,15 @@
     "freq": "122.800",
     "Lat": 28.335199,
     "Lon": 46.125099,
-    "Ele": 357.8
+    "Ele": 357.8,
+    "ident": "OEPA",
+    "iso_country": "SA",
+    "icao_code": "OEPA",
+    "iata_code": "AQI",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 158,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -411,7 +708,13 @@
     "freq": "138.250",
     "Lat": 25.1745,
     "Lon": 47.4884,
-    "Ele": 530.4
+    "Ele": 530.4,
+    "ident": "OEPC",
+    "iso_country": "SA",
+    "length_ft": 8005,
+    "width_ft": 115,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -420,7 +723,13 @@
     "freq": "138.250",
     "Lat": 24.71030044555664,
     "Lon": 44.964500427246094,
-    "Ele": 771.1
+    "Ele": 771.1,
+    "ident": "OEPF",
+    "iso_country": "SA",
+    "length_ft": 8005,
+    "width_ft": 115,
+    "heading": 168.2,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -429,7 +738,13 @@
     "freq": "138.250",
     "Lat": 24.276100158691406,
     "Lon": 42.143699645996094,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "OEPI",
+    "iso_country": "SA",
+    "length_ft": 8008,
+    "width_ft": 98,
+    "heading": 167.7,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -438,7 +753,13 @@
     "freq": "138.250",
     "Lat": 24.1072998046875,
     "Lon": 41.0359992980957,
-    "Ele": 865.6
+    "Ele": 865.6,
+    "ident": "OEPJ",
+    "iso_country": "SA",
+    "length_ft": 6398,
+    "width_ft": 115,
+    "heading": 178,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -447,7 +768,13 @@
     "freq": "138.250",
     "Lat": 27.954201,
     "Lon": 46.742599,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "OEPK",
+    "iso_country": "SA",
+    "length_ft": 6007,
+    "width_ft": 98,
+    "heading": 163.5,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -456,7 +783,15 @@
     "freq": "123.425",
     "Lat": 24.0627,
     "Lon": 47.580502,
-    "Ele": 503.2
+    "Ele": 503.2,
+    "ident": "OEPS",
+    "iso_country": "SA",
+    "icao_code": "OEPS",
+    "iata_code": "AKH",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "heading": 175,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -465,7 +800,13 @@
     "freq": "122.800",
     "Lat": 22.7026,
     "Lon": 39.069801,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "OERB",
+    "iso_country": "SA",
+    "length_ft": 7741,
+    "width_ft": 105,
+    "heading": 153,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -474,7 +815,15 @@
     "freq": "122.800",
     "Lat": 29.626399993896484,
     "Lon": 43.4906005859375,
-    "Ele": 449.3
+    "Ele": 449.3,
+    "ident": "OERF",
+    "iso_country": "SA",
+    "icao_code": "OERF",
+    "iata_code": "RAH",
+    "length_ft": 9834,
+    "width_ft": 147,
+    "heading": 114,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -483,7 +832,9 @@
     "freq": "",
     "Lat": 25.669,
     "Lon": 43.54969,
-    "Ele": 736.7
+    "Ele": 736.7,
+    "ident": "OERG",
+    "iso_country": "SA"
   },
   {
     "type": "large_airport",
@@ -492,7 +843,15 @@
     "freq": "120.000",
     "Lat": 24.9576,
     "Lon": 46.698799,
-    "Ele": 624.5
+    "Ele": 624.5,
+    "ident": "OERK",
+    "iso_country": "SA",
+    "icao_code": "OERK",
+    "iata_code": "RUH",
+    "length_ft": 13796,
+    "width_ft": 197,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -501,7 +860,13 @@
     "freq": "122.800",
     "Lat": 28.079599,
     "Lon": 48.611,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "OERM",
+    "iso_country": "SA",
+    "length_ft": 11058,
+    "width_ft": 98,
+    "heading": 164,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -510,7 +875,15 @@
     "freq": "122.800",
     "Lat": 30.90660095214844,
     "Lon": 41.13819885253906,
-    "Ele": 552.6
+    "Ele": 552.6,
+    "ident": "OERR",
+    "iso_country": "SA",
+    "icao_code": "OERR",
+    "iata_code": "RAE",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -519,7 +892,13 @@
     "freq": "138.200",
     "Lat": 26.723101,
     "Lon": 50.0308,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "OERT",
+    "iso_country": "SA",
+    "length_ft": 7063,
+    "width_ft": 98,
+    "heading": 152,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -528,7 +907,13 @@
     "freq": "138.250",
     "Lat": 22.514781,
     "Lon": 53.964114,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "OESB",
+    "iso_country": "SA",
+    "length_ft": 10005,
+    "width_ft": 98,
+    "heading": 87.1,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -537,7 +922,15 @@
     "freq": "122.800",
     "Lat": 17.4669,
     "Lon": 47.121399,
-    "Ele": 720.2
+    "Ele": 720.2,
+    "ident": "OESH",
+    "iso_country": "SA",
+    "icao_code": "OESH",
+    "iata_code": "SHW",
+    "length_ft": 11975,
+    "width_ft": 147,
+    "heading": 85,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -546,7 +939,15 @@
     "freq": "122.800",
     "Lat": 29.78510093688965,
     "Lon": 40.09999847412109,
-    "Ele": 689.2
+    "Ele": 689.2,
+    "ident": "OESK",
+    "iso_country": "SA",
+    "icao_code": "OESK",
+    "iata_code": "AJF",
+    "length_ft": 12011,
+    "width_ft": 147,
+    "heading": 99.8,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -555,7 +956,15 @@
     "freq": "",
     "Lat": 20.464701,
     "Lon": 45.619598,
-    "Ele": 616.0
+    "Ele": 616,
+    "ident": "OESL",
+    "iso_country": "SA",
+    "icao_code": "OESL",
+    "iata_code": "SLF",
+    "length_ft": 9860,
+    "width_ft": 148,
+    "heading": 101.2,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -564,7 +973,9 @@
     "freq": "",
     "Lat": 26.000097,
     "Lon": 44.880062,
-    "Ele": 668.1
+    "Ele": 668.1,
+    "ident": "OESS",
+    "iso_country": "SA"
   },
   {
     "type": "medium_airport",
@@ -573,7 +984,15 @@
     "freq": "24.590",
     "Lat": 28.3654,
     "Lon": 36.6189,
-    "Ele": 777.5
+    "Ele": 777.5,
+    "ident": "OETB",
+    "iso_country": "SA",
+    "icao_code": "OETB",
+    "iata_code": "TUU",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 132.9,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -582,7 +1001,15 @@
     "freq": "131.500",
     "Lat": 21.483001,
     "Lon": 40.543442,
-    "Ele": 1477.7
+    "Ele": 1477.7,
+    "ident": "OETF",
+    "iso_country": "SA",
+    "icao_code": "OETF",
+    "iata_code": "TIF",
+    "length_ft": 10991,
+    "width_ft": 148,
+    "heading": 172.2,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -591,7 +1018,14 @@
     "freq": "",
     "Lat": 25.212999,
     "Lon": 46.640999,
-    "Ele": 570.0
+    "Ele": 570,
+    "ident": "OETH",
+    "iso_country": "SA",
+    "local_code": "OE44",
+    "length_ft": 13170,
+    "width_ft": 200,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -600,7 +1034,13 @@
     "freq": "138.200",
     "Lat": 27.8678,
     "Lon": 48.7691,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "OETN",
+    "iso_country": "SA",
+    "length_ft": 8005,
+    "width_ft": 98,
+    "heading": 154.2,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -609,7 +1049,15 @@
     "freq": "131.500",
     "Lat": 31.692188,
     "Lon": 38.731544,
-    "Ele": 854.4
+    "Ele": 854.4,
+    "ident": "OETR",
+    "iso_country": "SA",
+    "icao_code": "OETR",
+    "iata_code": "TUI",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -618,7 +1066,13 @@
     "freq": "138.220",
     "Lat": 25.1511001587,
     "Lon": 49.3288002014,
-    "Ele": 231.3
+    "Ele": 231.3,
+    "ident": "OEUD",
+    "iso_country": "SA",
+    "length_ft": 7171,
+    "width_ft": 98,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -627,7 +1081,13 @@
     "freq": "",
     "Lat": 25.285833,
     "Lon": 37.199167,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "OEUM",
+    "iso_country": "SA",
+    "length_ft": 8200,
+    "width_ft": 197,
+    "heading": 140,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -636,7 +1096,15 @@
     "freq": "122.800",
     "Lat": 20.504299,
     "Lon": 45.1996,
-    "Ele": 628.5
+    "Ele": 628.5,
+    "ident": "OEWD",
+    "iso_country": "SA",
+    "icao_code": "OEWD",
+    "iata_code": "WAE",
+    "length_ft": 10007,
+    "width_ft": 147,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -645,7 +1113,15 @@
     "freq": "122.800",
     "Lat": 26.198601,
     "Lon": 36.476398,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "OEWJ",
+    "iso_country": "SA",
+    "icao_code": "OEWJ",
+    "iata_code": "EJH",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -654,7 +1130,15 @@
     "freq": "118.100",
     "Lat": 24.144199,
     "Lon": 38.0634,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "OEYN",
+    "iso_country": "SA",
+    "icao_code": "OEYN",
+    "iata_code": "YNB",
+    "length_ft": 10532,
+    "width_ft": 148,
+    "heading": 103.2,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -663,7 +1147,12 @@
     "freq": "",
     "Lat": 26.350000381469727,
     "Lon": 44.83300018310547,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "OEZL",
+    "iso_country": "SA",
+    "icao_code": "OEZL",
+    "iata_code": "ZUL",
+    "length_ft": 5300
   },
   {
     "type": "medium_airport",
@@ -672,7 +1161,13 @@
     "freq": "",
     "Lat": 25.627975,
     "Lon": 37.088914,
-    "Ele": 42.7
+    "Ele": 42.7,
+    "ident": "RSI",
+    "iso_country": "SA",
+    "iata_code": "RSI",
+    "length_ft": 12139,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -681,7 +1176,9 @@
     "freq": "",
     "Lat": 28.886,
     "Lon": 36.158833,
-    "Ele": 723.9
+    "Ele": 723.9,
+    "ident": "SA-0001",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -690,7 +1187,9 @@
     "freq": "",
     "Lat": 27.645834,
     "Lon": 47.993057,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0002",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -699,7 +1198,9 @@
     "freq": "",
     "Lat": 27.975000381469727,
     "Lon": 37.951942443847656,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0003",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -708,7 +1209,9 @@
     "freq": "",
     "Lat": 25.406473,
     "Lon": 49.484428,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0005",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -717,7 +1220,9 @@
     "freq": "",
     "Lat": 24.794468,
     "Lon": 50.742459,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0006",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -726,7 +1231,9 @@
     "freq": "",
     "Lat": 30.3469725273,
     "Lon": 42.2126054764,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0007",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -735,7 +1242,12 @@
     "freq": "",
     "Lat": 25.26533,
     "Lon": 48.178333,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0010",
+    "iso_country": "SA",
+    "length_ft": 7972,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -744,7 +1256,9 @@
     "freq": "",
     "Lat": 28.13516,
     "Lon": 34.92503,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0014",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -753,7 +1267,9 @@
     "freq": "",
     "Lat": 22.99304,
     "Lon": 46.92114,
-    "Ele": 644.0
+    "Ele": 644,
+    "ident": "SA-0023",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -762,7 +1278,11 @@
     "freq": "",
     "Lat": 24.620335,
     "Lon": 46.918402,
-    "Ele": 563.3
+    "Ele": 563.3,
+    "ident": "SA-0057",
+    "iso_country": "SA",
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -771,7 +1291,9 @@
     "freq": "",
     "Lat": 24.665125,
     "Lon": 46.924925,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0058",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -780,7 +1302,11 @@
     "freq": "",
     "Lat": 24.244617,
     "Lon": 44.705515,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0076",
+    "iso_country": "SA",
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -789,7 +1315,9 @@
     "freq": "",
     "Lat": 24.602309,
     "Lon": 44.108562,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0078",
+    "iso_country": "SA"
   },
   {
     "type": "small_airport",
@@ -798,7 +1326,9 @@
     "freq": "",
     "Lat": 27.94323,
     "Lon": 34.59492,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SA-0086",
+    "iso_country": "SA"
   },
   {
     "type": "medium_airport",
@@ -807,6 +1337,9 @@
     "freq": "",
     "Lat": 24.465259,
     "Lon": 46.659279,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SA-0094",
+    "iso_country": "SA",
+    "icao_code": "OERY"
   }
 ]

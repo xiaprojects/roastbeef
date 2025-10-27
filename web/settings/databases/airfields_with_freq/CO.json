@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": -2.143713,
     "Lon": -71.75935,
-    "Ele": 96.3
+    "Ele": 96.3,
+    "ident": "ACM",
+    "iso_country": "CO",
+    "iata_code": "ACM"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 8.128611,
     "Lon": -73.584722,
-    "Ele": 92.4
+    "Ele": 92.4,
+    "ident": "AGI",
+    "iso_country": "CO",
+    "local_code": "AGI"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,9 @@
     "freq": "",
     "Lat": 12.075256,
     "Lon": -71.125725,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CO-0001",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -33,7 +41,9 @@
     "freq": "",
     "Lat": -3.524,
     "Lon": -70.328,
-    "Ele": 153.9
+    "Ele": 153.9,
+    "ident": "CO-0052",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -42,7 +52,13 @@
     "freq": "",
     "Lat": 11.4988,
     "Lon": -72.9892,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "CO-0054",
+    "iso_country": "CO",
+    "length_ft": 8268,
+    "width_ft": 66,
+    "heading": 61,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -51,7 +67,9 @@
     "freq": "",
     "Lat": 8.3909,
     "Lon": -75.7911,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "CO-0055",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -60,7 +78,9 @@
     "freq": "",
     "Lat": 8.231858,
     "Lon": -75.058043,
-    "Ele": 44.2
+    "Ele": 44.2,
+    "ident": "CO-0056",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -69,7 +89,9 @@
     "freq": "",
     "Lat": -0.56784,
     "Lon": -69.638809,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CO-0057",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -78,7 +100,9 @@
     "freq": "",
     "Lat": 5.922102,
     "Lon": -74.728632,
-    "Ele": 236.2
+    "Ele": 236.2,
+    "ident": "CO-0058",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -87,7 +111,9 @@
     "freq": "",
     "Lat": 6.159436,
     "Lon": -69.032764,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "CO-0059",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -96,7 +122,9 @@
     "freq": "",
     "Lat": 11.98163,
     "Lon": -71.19072,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CO-0061",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -105,7 +133,9 @@
     "freq": "",
     "Lat": 2.43252,
     "Lon": -68.92068,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CO-0063",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -114,7 +144,9 @@
     "freq": "",
     "Lat": 2.27219,
     "Lon": -68.35831,
-    "Ele": 89.6
+    "Ele": 89.6,
+    "ident": "CO-0064",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -123,7 +155,9 @@
     "freq": "",
     "Lat": 3.99822,
     "Lon": -68.33819,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "CO-0065",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -132,7 +166,9 @@
     "freq": "",
     "Lat": 3.60726,
     "Lon": -69.046761,
-    "Ele": 148.1
+    "Ele": 148.1,
+    "ident": "CO-0066",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -141,7 +177,9 @@
     "freq": "",
     "Lat": 3.31229,
     "Lon": -73.36607,
-    "Ele": 245.1
+    "Ele": 245.1,
+    "ident": "CO-0067",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -150,7 +188,10 @@
     "freq": "",
     "Lat": 3.70239,
     "Lon": -73.68825,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "CO-0068",
+    "iso_country": "CO",
+    "local_code": "SNR"
   },
   {
     "type": "small_airport",
@@ -159,7 +200,9 @@
     "freq": "",
     "Lat": 10.35052,
     "Lon": -75.50218,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "CO-0070",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -168,7 +211,9 @@
     "freq": "",
     "Lat": 1.766012,
     "Lon": -71.290267,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CO-0074",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -177,7 +222,9 @@
     "freq": "",
     "Lat": 1.726449,
     "Lon": -71.22671,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CO-0075",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -186,7 +233,9 @@
     "freq": "",
     "Lat": 7.395196,
     "Lon": -76.587925,
-    "Ele": 38.1
+    "Ele": 38.1,
+    "ident": "CO-0077",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -195,7 +244,9 @@
     "freq": "",
     "Lat": 7.44249,
     "Lon": -76.59209,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "CO-0078",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -204,7 +255,9 @@
     "freq": "",
     "Lat": 7.90635,
     "Lon": -76.65152,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "CO-0079",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -213,7 +266,9 @@
     "freq": "",
     "Lat": 8.27745,
     "Lon": -77.14141,
-    "Ele": 68.9
+    "Ele": 68.9,
+    "ident": "CO-0080",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -222,7 +277,9 @@
     "freq": "",
     "Lat": 8.39047,
     "Lon": -77.27398,
-    "Ele": 79.2
+    "Ele": 79.2,
+    "ident": "CO-0081",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -231,7 +288,9 @@
     "freq": "",
     "Lat": 2.258121,
     "Lon": -69.913469,
-    "Ele": 152.1
+    "Ele": 152.1,
+    "ident": "CO-0496",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -240,7 +299,10 @@
     "freq": "",
     "Lat": -1.456361,
     "Lon": -72.801086,
-    "Ele": 171.9
+    "Ele": 171.9,
+    "ident": "CO-LCR",
+    "iso_country": "CO",
+    "iata_code": "LCR"
   },
   {
     "type": "small_airport",
@@ -249,7 +311,14 @@
     "freq": "",
     "Lat": 6.4884,
     "Lon": -72.50388,
-    "Ele": 2172.0
+    "Ele": 2172,
+    "ident": "EEB",
+    "iso_country": "CO",
+    "local_code": "EEB",
+    "length_ft": 2707,
+    "width_ft": 33,
+    "heading": 71,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -258,7 +327,11 @@
     "freq": "",
     "Lat": -1.75333333333,
     "Lon": -73.20472222219999,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "SK-002",
+    "iso_country": "CO",
+    "iata_code": "ECO",
+    "local_code": "ECO"
   },
   {
     "type": "small_airport",
@@ -267,7 +340,11 @@
     "freq": "",
     "Lat": -0.886017,
     "Lon": -70.983446,
-    "Ele": 124.7
+    "Ele": 124.7,
+    "ident": "SK-003",
+    "iso_country": "CO",
+    "iata_code": "MIX",
+    "local_code": "MIX"
   },
   {
     "type": "small_airport",
@@ -276,7 +353,11 @@
     "freq": "",
     "Lat": 8.855118,
     "Lon": -76.422676,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SK-005",
+    "iso_country": "CO",
+    "iata_code": "ARO",
+    "local_code": "ARO"
   },
   {
     "type": "small_airport",
@@ -285,7 +366,10 @@
     "freq": "",
     "Lat": 6.730556,
     "Lon": -76.146389,
-    "Ele": 1693.2
+    "Ele": 1693.2,
+    "ident": "SK-006",
+    "iso_country": "CO",
+    "local_code": "FRO"
   },
   {
     "type": "small_airport",
@@ -294,7 +378,10 @@
     "freq": "",
     "Lat": 7.943978,
     "Lon": -76.696973,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SK-007",
+    "iso_country": "CO",
+    "local_code": "INA"
   },
   {
     "type": "small_airport",
@@ -303,7 +390,10 @@
     "freq": "",
     "Lat": 6.516667,
     "Lon": -76.6,
-    "Ele": 665.7
+    "Ele": 665.7,
+    "ident": "SK-008",
+    "iso_country": "CO",
+    "local_code": "JUO"
   },
   {
     "type": "small_airport",
@@ -312,7 +402,10 @@
     "freq": "",
     "Lat": 7.165278,
     "Lon": -75.725278,
-    "Ele": 1710.2
+    "Ele": 1710.2,
+    "ident": "SK-009",
+    "iso_country": "CO",
+    "local_code": "ITG"
   },
   {
     "type": "small_airport",
@@ -321,7 +414,10 @@
     "freq": "",
     "Lat": 7.791594,
     "Lon": -76.651962,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "SK-010",
+    "iso_country": "CO",
+    "local_code": "LAO"
   },
   {
     "type": "small_airport",
@@ -330,7 +426,10 @@
     "freq": "",
     "Lat": 7.833184,
     "Lon": -76.645445,
-    "Ele": 48.2
+    "Ele": 48.2,
+    "ident": "SK-011",
+    "iso_country": "CO",
+    "local_code": "LPL"
   },
   {
     "type": "small_airport",
@@ -339,7 +438,11 @@
     "freq": "",
     "Lat": 8.64019,
     "Lon": -76.71884,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SK-012",
+    "iso_country": "CO",
+    "iata_code": "ULS",
+    "local_code": "ULS"
   },
   {
     "type": "small_airport",
@@ -348,7 +451,10 @@
     "freq": "",
     "Lat": 6.981667,
     "Lon": -76.813889,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "SK-013",
+    "iso_country": "CO",
+    "local_code": "MRI"
   },
   {
     "type": "small_airport",
@@ -357,7 +463,10 @@
     "freq": "",
     "Lat": 7.250316,
     "Lon": -76.444173,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SK-014",
+    "iso_country": "CO",
+    "local_code": "MTA"
   },
   {
     "type": "small_airport",
@@ -366,7 +475,10 @@
     "freq": "",
     "Lat": 8.616667,
     "Lon": -76.666667,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "SK-015",
+    "iso_country": "CO",
+    "local_code": "NFA"
   },
   {
     "type": "small_airport",
@@ -375,7 +487,10 @@
     "freq": "",
     "Lat": 5.991776,
     "Lon": -74.57009,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "SK-016",
+    "iso_country": "CO",
+    "local_code": "PFO"
   },
   {
     "type": "small_airport",
@@ -384,7 +499,10 @@
     "freq": "",
     "Lat": 6.522222,
     "Lon": -75.808056,
-    "Ele": 450.8
+    "Ele": 450.8,
+    "ident": "SK-017",
+    "iso_country": "CO",
+    "local_code": "RAN"
   },
   {
     "type": "small_airport",
@@ -393,7 +511,10 @@
     "freq": "",
     "Lat": 6.933333,
     "Lon": -74.716667,
-    "Ele": 769.0
+    "Ele": 769,
+    "ident": "SK-018",
+    "iso_country": "CO",
+    "local_code": "OTU"
   },
   {
     "type": "small_airport",
@@ -402,7 +523,10 @@
     "freq": "",
     "Lat": 8.35,
     "Lon": -76.333333,
-    "Ele": 98.8
+    "Ele": 98.8,
+    "ident": "SK-019",
+    "iso_country": "CO",
+    "local_code": "SJM"
   },
   {
     "type": "small_airport",
@@ -411,7 +535,11 @@
     "freq": "",
     "Lat": 8.766667,
     "Lon": -76.533333,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SK-020",
+    "iso_country": "CO",
+    "iata_code": "SJR",
+    "local_code": "SJR"
   },
   {
     "type": "small_airport",
@@ -420,7 +548,16 @@
     "freq": "",
     "Lat": 8.289325,
     "Lon": -76.375006,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "SK-021",
+    "iso_country": "CO",
+    "iata_code": "NPU",
+    "local_code": "PDA",
+    "icao_code": "SKPD",
+    "length_ft": 5910,
+    "width_ft": 85,
+    "heading": 168.7,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -429,7 +566,10 @@
     "freq": "",
     "Lat": 7.335227,
     "Lon": -75.613747,
-    "Ele": 1952.5
+    "Ele": 1952.5,
+    "ident": "SK-023",
+    "iso_country": "CO",
+    "local_code": "STR"
   },
   {
     "type": "small_airport",
@@ -438,7 +578,10 @@
     "freq": "",
     "Lat": 6.498056,
     "Lon": -75.785278,
-    "Ele": 490.4
+    "Ele": 490.4,
+    "ident": "SK-024",
+    "iso_country": "CO",
+    "local_code": "SOP"
   },
   {
     "type": "small_airport",
@@ -447,7 +590,10 @@
     "freq": "",
     "Lat": 6.583333,
     "Lon": -76.883333,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "SK-025",
+    "iso_country": "CO",
+    "local_code": "VDF"
   },
   {
     "type": "small_airport",
@@ -456,7 +602,10 @@
     "freq": "",
     "Lat": 6.773056,
     "Lon": -70.018889,
-    "Ele": 97.2
+    "Ele": 97.2,
+    "ident": "SK-028",
+    "iso_country": "CO",
+    "local_code": "ARA"
   },
   {
     "type": "small_airport",
@@ -465,7 +614,10 @@
     "freq": "",
     "Lat": 6.284479,
     "Lon": -71.097732,
-    "Ele": 136.2
+    "Ele": 136.2,
+    "ident": "SK-029",
+    "iso_country": "CO",
+    "local_code": "RDN"
   },
   {
     "type": "small_airport",
@@ -474,7 +626,10 @@
     "freq": "",
     "Lat": 10.4552,
     "Lon": -74.9623,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "SK-030",
+    "iso_country": "CO",
+    "local_code": "EEA"
   },
   {
     "type": "small_airport",
@@ -483,7 +638,9 @@
     "freq": "",
     "Lat": 10.573707,
     "Lon": -75.064791,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "SK-031",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -492,7 +649,10 @@
     "freq": "",
     "Lat": 10.481667,
     "Lon": -75.413611,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "SK-032",
+    "iso_country": "CO",
+    "local_code": "BYA"
   },
   {
     "type": "small_airport",
@@ -501,7 +661,10 @@
     "freq": "",
     "Lat": 9.972222,
     "Lon": -75.374167,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SK-033",
+    "iso_country": "CO",
+    "local_code": "HOB"
   },
   {
     "type": "small_airport",
@@ -510,7 +673,10 @@
     "freq": "",
     "Lat": 9.856389,
     "Lon": -74.895833,
-    "Ele": 23.5
+    "Ele": 23.5,
+    "ident": "SK-034",
+    "iso_country": "CO",
+    "local_code": "LVB"
   },
   {
     "type": "small_airport",
@@ -519,7 +685,10 @@
     "freq": "",
     "Lat": 7.928889,
     "Lon": -73.967222,
-    "Ele": 53.6
+    "Ele": 53.6,
+    "ident": "SK-035",
+    "iso_country": "CO",
+    "local_code": "STI"
   },
   {
     "type": "small_airport",
@@ -528,7 +697,10 @@
     "freq": "",
     "Lat": 9.736667,
     "Lon": -74.829444,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SK-036",
+    "iso_country": "CO",
+    "local_code": "MBO"
   },
   {
     "type": "small_airport",
@@ -537,7 +709,10 @@
     "freq": "",
     "Lat": 10.047222,
     "Lon": -75.265278,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "SK-037",
+    "iso_country": "CO",
+    "local_code": "SPO"
   },
   {
     "type": "small_airport",
@@ -546,7 +721,10 @@
     "freq": "",
     "Lat": 7.991389,
     "Lon": -74.036111,
-    "Ele": 414.2
+    "Ele": 414.2,
+    "ident": "SK-038",
+    "iso_country": "CO",
+    "local_code": "SRD"
   },
   {
     "type": "small_airport",
@@ -564,7 +742,10 @@
     "freq": "",
     "Lat": 5.547222,
     "Lon": -74.112778,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "SK-040",
+    "iso_country": "CO",
+    "local_code": "MUZ"
   },
   {
     "type": "small_airport",
@@ -573,7 +754,10 @@
     "freq": "",
     "Lat": 5.030278,
     "Lon": -75.616667,
-    "Ele": 1536.8
+    "Ele": 1536.8,
+    "ident": "SK-041",
+    "iso_country": "CO",
+    "local_code": "LAE"
   },
   {
     "type": "small_airport",
@@ -582,7 +766,10 @@
     "freq": "",
     "Lat": 5.369722,
     "Lon": -75.140833,
-    "Ele": 2324.4
+    "Ele": 2324.4,
+    "ident": "SK-042",
+    "iso_country": "CO",
+    "local_code": "PEN"
   },
   {
     "type": "small_airport",
@@ -591,7 +778,10 @@
     "freq": "",
     "Lat": 5.441667,
     "Lon": -75.65,
-    "Ele": 1146.7
+    "Ele": 1146.7,
+    "ident": "SK-043",
+    "iso_country": "CO",
+    "local_code": "VDR"
   },
   {
     "type": "small_airport",
@@ -600,7 +790,10 @@
     "freq": "",
     "Lat": 1.583333,
     "Lon": -73.866667,
-    "Ele": 289.6
+    "Ele": 289.6,
+    "ident": "SK-044",
+    "iso_country": "CO",
+    "local_code": "CDY"
   },
   {
     "type": "small_airport",
@@ -609,7 +802,11 @@
     "freq": "",
     "Lat": 1.916667,
     "Lon": -75.166667,
-    "Ele": 298.7
+    "Ele": 298.7,
+    "ident": "SK-045",
+    "iso_country": "CO",
+    "iata_code": "PCC",
+    "local_code": "PCC"
   },
   {
     "type": "small_airport",
@@ -618,7 +815,11 @@
     "freq": "",
     "Lat": 0.702022,
     "Lon": -75.2505,
-    "Ele": 262.1
+    "Ele": 262.1,
+    "ident": "SK-046",
+    "iso_country": "CO",
+    "iata_code": "SQF",
+    "local_code": "SQF"
   },
   {
     "type": "small_airport",
@@ -627,7 +828,11 @@
     "freq": "",
     "Lat": -0.383333,
     "Lon": -72.266667,
-    "Ele": 173.4
+    "Ele": 173.4,
+    "ident": "SK-047",
+    "iso_country": "CO",
+    "iata_code": "AYI",
+    "local_code": "AYI"
   },
   {
     "type": "small_airport",
@@ -636,7 +841,10 @@
     "freq": "",
     "Lat": 4.758611,
     "Lon": -71.638611,
-    "Ele": 142.3
+    "Ele": 142.3,
+    "ident": "SK-049",
+    "iso_country": "CO",
+    "local_code": "ALT"
   },
   {
     "type": "small_airport",
@@ -645,7 +853,10 @@
     "freq": "",
     "Lat": 5.413221,
     "Lon": -72.28317,
-    "Ele": 239.0
+    "Ele": 239,
+    "ident": "SK-050",
+    "iso_country": "CO",
+    "local_code": "ARG"
   },
   {
     "type": "small_airport",
@@ -654,7 +865,10 @@
     "freq": "",
     "Lat": 5.463056,
     "Lon": -72.063056,
-    "Ele": 210.0
+    "Ele": 210,
+    "ident": "SK-051",
+    "iso_country": "CO",
+    "local_code": "BAN"
   },
   {
     "type": "small_airport",
@@ -663,7 +877,10 @@
     "freq": "",
     "Lat": 5.4225,
     "Lon": -71.993611,
-    "Ele": 194.2
+    "Ele": 194.2,
+    "ident": "SK-052",
+    "iso_country": "CO",
+    "local_code": "BIZ"
   },
   {
     "type": "small_airport",
@@ -672,7 +889,10 @@
     "freq": "",
     "Lat": 4.836111,
     "Lon": -71.502222,
-    "Ele": 139.3
+    "Ele": 139.3,
+    "ident": "SK-053",
+    "iso_country": "CO",
+    "local_code": "OCU"
   },
   {
     "type": "small_airport",
@@ -681,7 +901,10 @@
     "freq": "",
     "Lat": 5.591667,
     "Lon": -71.589444,
-    "Ele": 165.8
+    "Ele": 165.8,
+    "ident": "SK-054",
+    "iso_country": "CO",
+    "local_code": "PAZ"
   },
   {
     "type": "small_airport",
@@ -690,7 +913,10 @@
     "freq": "",
     "Lat": 5.1725,
     "Lon": -71.141944,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "SK-055",
+    "iso_country": "CO",
+    "local_code": "CAA"
   },
   {
     "type": "small_airport",
@@ -699,7 +925,10 @@
     "freq": "",
     "Lat": 5.56,
     "Lon": -71.217222,
-    "Ele": 139.0
+    "Ele": 139,
+    "ident": "SK-056",
+    "iso_country": "CO",
+    "local_code": "PZR"
   },
   {
     "type": "small_airport",
@@ -708,7 +937,10 @@
     "freq": "",
     "Lat": 5.248056,
     "Lon": -72.868611,
-    "Ele": 1606.3
+    "Ele": 1606.3,
+    "ident": "SK-057",
+    "iso_country": "CO",
+    "local_code": "YPL"
   },
   {
     "type": "small_airport",
@@ -717,7 +949,10 @@
     "freq": "",
     "Lat": 4.487222,
     "Lon": -72.760278,
-    "Ele": 178.3
+    "Ele": 178.3,
+    "ident": "SK-058",
+    "iso_country": "CO",
+    "local_code": "VNL"
   },
   {
     "type": "small_airport",
@@ -725,8 +960,12 @@
     "gps_code": "SK-059",
     "freq": "",
     "Lat": 4.666667,
-    "Lon": -72.0,
-    "Ele": 150.9
+    "Lon": -72,
+    "Ele": 150.9,
+    "ident": "SK-059",
+    "iso_country": "CO",
+    "iata_code": "CUI",
+    "local_code": "CUI"
   },
   {
     "type": "small_airport",
@@ -735,7 +974,10 @@
     "freq": "",
     "Lat": 4.973889,
     "Lon": -72.636667,
-    "Ele": 258.2
+    "Ele": 258.2,
+    "ident": "SK-060",
+    "iso_country": "CO",
+    "local_code": "CUS"
   },
   {
     "type": "small_airport",
@@ -744,7 +986,10 @@
     "freq": "",
     "Lat": 4.481667,
     "Lon": -72.04,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SK-061",
+    "iso_country": "CO",
+    "local_code": "MIN"
   },
   {
     "type": "small_airport",
@@ -753,7 +998,10 @@
     "freq": "",
     "Lat": 4.734722,
     "Lon": -71.503333,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "SK-062",
+    "iso_country": "CO",
+    "local_code": "ORR"
   },
   {
     "type": "small_airport",
@@ -762,7 +1010,10 @@
     "freq": "",
     "Lat": 4.856389,
     "Lon": -71.683889,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "SK-063",
+    "iso_country": "CO",
+    "local_code": "ORE"
   },
   {
     "type": "small_airport",
@@ -771,7 +1022,10 @@
     "freq": "",
     "Lat": 6.064722,
     "Lon": -71.204444,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "SK-064",
+    "iso_country": "CO",
+    "local_code": "HCO"
   },
   {
     "type": "small_airport",
@@ -780,7 +1034,10 @@
     "freq": "",
     "Lat": 6.261111,
     "Lon": -71.224722,
-    "Ele": 146.3
+    "Ele": 146.3,
+    "ident": "SK-065",
+    "iso_country": "CO",
+    "local_code": "HTC"
   },
   {
     "type": "small_airport",
@@ -789,7 +1046,10 @@
     "freq": "",
     "Lat": 5.621944,
     "Lon": -72.067778,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "SK-066",
+    "iso_country": "CO",
+    "local_code": "NUN"
   },
   {
     "type": "small_airport",
@@ -798,7 +1058,10 @@
     "freq": "",
     "Lat": 4.799722,
     "Lon": -71.7125,
-    "Ele": 146.6
+    "Ele": 146.6,
+    "ident": "SK-067",
+    "iso_country": "CO",
+    "local_code": "ORU"
   },
   {
     "type": "small_airport",
@@ -807,7 +1070,10 @@
     "freq": "",
     "Lat": 5.015556,
     "Lon": -72.406944,
-    "Ele": 204.2
+    "Ele": 204.2,
+    "ident": "SK-068",
+    "iso_country": "CO",
+    "local_code": "AGM"
   },
   {
     "type": "small_airport",
@@ -816,7 +1082,10 @@
     "freq": "",
     "Lat": 5.320556,
     "Lon": -72.577778,
-    "Ele": 829.7
+    "Ele": 829.7,
+    "ident": "SK-070",
+    "iso_country": "CO",
+    "local_code": "ELE"
   },
   {
     "type": "small_airport",
@@ -825,7 +1094,10 @@
     "freq": "",
     "Lat": 4.753889,
     "Lon": -71.931667,
-    "Ele": 149.7
+    "Ele": 149.7,
+    "ident": "SK-071",
+    "iso_country": "CO",
+    "local_code": "ORM"
   },
   {
     "type": "small_airport",
@@ -834,7 +1106,10 @@
     "freq": "",
     "Lat": 4.8875,
     "Lon": -71.568333,
-    "Ele": 145.1
+    "Ele": 145.1,
+    "ident": "SK-072",
+    "iso_country": "CO",
+    "local_code": "OCE"
   },
   {
     "type": "small_airport",
@@ -843,7 +1118,10 @@
     "freq": "",
     "Lat": 4.562222,
     "Lon": -72.9425,
-    "Ele": 221.0
+    "Ele": 221,
+    "ident": "SK-073",
+    "iso_country": "CO",
+    "local_code": "EVC"
   },
   {
     "type": "small_airport",
@@ -852,7 +1130,10 @@
     "freq": "",
     "Lat": 5.14919,
     "Lon": -72.35147,
-    "Ele": 209.7
+    "Ele": 209.7,
+    "ident": "SK-074",
+    "iso_country": "CO",
+    "local_code": "ELZ"
   },
   {
     "type": "small_airport",
@@ -861,7 +1142,10 @@
     "freq": "",
     "Lat": 5.504444,
     "Lon": -71.770833,
-    "Ele": 177.1
+    "Ele": 177.1,
+    "ident": "SK-075",
+    "iso_country": "CO",
+    "local_code": "TDI"
   },
   {
     "type": "small_airport",
@@ -870,7 +1154,10 @@
     "freq": "",
     "Lat": 4.676389,
     "Lon": -72.123611,
-    "Ele": 159.7
+    "Ele": 159.7,
+    "ident": "SK-076",
+    "iso_country": "CO",
+    "local_code": "MAI"
   },
   {
     "type": "small_airport",
@@ -879,7 +1166,10 @@
     "freq": "",
     "Lat": 5.153112,
     "Lon": -72.516871,
-    "Ele": 260.0
+    "Ele": 260,
+    "ident": "SK-077",
+    "iso_country": "CO",
+    "local_code": "FCA"
   },
   {
     "type": "small_airport",
@@ -888,7 +1178,10 @@
     "freq": "",
     "Lat": 5.187451,
     "Lon": -72.31939,
-    "Ele": 214.0
+    "Ele": 214,
+    "ident": "SK-078",
+    "iso_country": "CO",
+    "local_code": "YPP"
   },
   {
     "type": "small_airport",
@@ -897,7 +1190,10 @@
     "freq": "",
     "Lat": 5.180556,
     "Lon": -71.428889,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "SK-079",
+    "iso_country": "CO",
+    "local_code": "ORO"
   },
   {
     "type": "small_airport",
@@ -906,7 +1202,10 @@
     "freq": "",
     "Lat": 4.89,
     "Lon": -71.592222,
-    "Ele": 1943.1
+    "Ele": 1943.1,
+    "ident": "SK-080",
+    "iso_country": "CO",
+    "local_code": "ORA"
   },
   {
     "type": "small_airport",
@@ -915,7 +1214,10 @@
     "freq": "",
     "Lat": 6.033056,
     "Lon": -71.381944,
-    "Ele": 156.1
+    "Ele": 156.1,
+    "ident": "SK-081",
+    "iso_country": "CO",
+    "local_code": "HOZ"
   },
   {
     "type": "small_airport",
@@ -924,7 +1226,10 @@
     "freq": "",
     "Lat": 5.090241,
     "Lon": -72.447047,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "SK-082",
+    "iso_country": "CO",
+    "local_code": "AGJ"
   },
   {
     "type": "small_airport",
@@ -933,7 +1238,10 @@
     "freq": "",
     "Lat": 5.396111,
     "Lon": -71.911667,
-    "Ele": 181.1
+    "Ele": 181.1,
+    "ident": "SK-083",
+    "iso_country": "CO",
+    "local_code": "LAB"
   },
   {
     "type": "small_airport",
@@ -942,7 +1250,10 @@
     "freq": "",
     "Lat": 5.195556,
     "Lon": -71.7475,
-    "Ele": 162.5
+    "Ele": 162.5,
+    "ident": "SK-084",
+    "iso_country": "CO",
+    "local_code": "SLI"
   },
   {
     "type": "small_airport",
@@ -951,7 +1262,10 @@
     "freq": "",
     "Lat": 5.111111,
     "Lon": -71.628056,
-    "Ele": 155.1
+    "Ele": 155.1,
+    "ident": "SK-085",
+    "iso_country": "CO",
+    "local_code": "ORX"
   },
   {
     "type": "small_airport",
@@ -960,7 +1274,10 @@
     "freq": "",
     "Lat": 5.958611,
     "Lon": -70.94,
-    "Ele": 128.9
+    "Ele": 128.9,
+    "ident": "SK-086",
+    "iso_country": "CO",
+    "local_code": "LAP"
   },
   {
     "type": "small_airport",
@@ -969,7 +1286,10 @@
     "freq": "",
     "Lat": 5.445833,
     "Lon": -72.003889,
-    "Ele": 289.0
+    "Ele": 289,
+    "ident": "SK-087",
+    "iso_country": "CO",
+    "local_code": "NUA"
   },
   {
     "type": "small_airport",
@@ -978,7 +1298,10 @@
     "freq": "",
     "Lat": 5.933333,
     "Lon": -71.45,
-    "Ele": 162.8
+    "Ele": 162.8,
+    "ident": "SK-088",
+    "iso_country": "CO",
+    "local_code": "CHP"
   },
   {
     "type": "small_airport",
@@ -987,7 +1310,10 @@
     "freq": "",
     "Lat": 5.763889,
     "Lon": -71.531389,
-    "Ele": 169.5
+    "Ele": 169.5,
+    "ident": "SK-089",
+    "iso_country": "CO",
+    "local_code": "PDR"
   },
   {
     "type": "small_airport",
@@ -996,7 +1322,10 @@
     "freq": "",
     "Lat": 4.930833,
     "Lon": -72.641389,
-    "Ele": 241.1
+    "Ele": 241.1,
+    "ident": "SK-090",
+    "iso_country": "CO",
+    "local_code": "TRM"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1334,10 @@
     "freq": "",
     "Lat": 4.9025,
     "Lon": -71.634722,
-    "Ele": 145.7
+    "Ele": 145.7,
+    "ident": "SK-091",
+    "iso_country": "CO",
+    "local_code": "ORJ"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1346,10 @@
     "freq": "",
     "Lat": 4.413333,
     "Lon": -72.570556,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "SK-092",
+    "iso_country": "CO",
+    "local_code": "TRE"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1358,10 @@
     "freq": "",
     "Lat": 5.209722,
     "Lon": -71.810556,
-    "Ele": 167.3
+    "Ele": 167.3,
+    "ident": "SK-093",
+    "iso_country": "CO",
+    "local_code": "NUC"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1370,10 @@
     "freq": "",
     "Lat": 5.006389,
     "Lon": -72.356111,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "SK-094",
+    "iso_country": "CO",
+    "local_code": "MNO"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1382,10 @@
     "freq": "",
     "Lat": 5.512222,
     "Lon": -72.129167,
-    "Ele": 233.5
+    "Ele": 233.5,
+    "ident": "SK-095",
+    "iso_country": "CO",
+    "local_code": "NIA"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1394,10 @@
     "freq": "",
     "Lat": 4.827778,
     "Lon": -71.6675,
-    "Ele": 145.4
+    "Ele": 145.4,
+    "ident": "SK-096",
+    "iso_country": "CO",
+    "local_code": "LAL"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1406,10 @@
     "freq": "",
     "Lat": 5.429444,
     "Lon": -72.163611,
-    "Ele": 215.5
+    "Ele": 215.5,
+    "ident": "SK-097",
+    "iso_country": "CO",
+    "local_code": "NCC"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1418,10 @@
     "freq": "",
     "Lat": 6.022778,
     "Lon": -70.8975,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "SK-098",
+    "iso_country": "CO",
+    "local_code": "PDE"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1439,10 @@
     "freq": "",
     "Lat": 4.710833,
     "Lon": -71.549444,
-    "Ele": 135.9
+    "Ele": 135.9,
+    "ident": "SK-100",
+    "iso_country": "CO",
+    "local_code": "LAS"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1451,10 @@
     "freq": "",
     "Lat": 5.441944,
     "Lon": -72.234444,
-    "Ele": 222.5
+    "Ele": 222.5,
+    "ident": "SK-101",
+    "iso_country": "CO",
+    "local_code": "YYP"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1463,10 @@
     "freq": "",
     "Lat": 4.798056,
     "Lon": -72.234167,
-    "Ele": 171.9
+    "Ele": 171.9,
+    "ident": "SK-102",
+    "iso_country": "CO",
+    "local_code": "LOM"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1475,10 @@
     "freq": "",
     "Lat": 5.4275,
     "Lon": -71.216389,
-    "Ele": 136.2
+    "Ele": 136.2,
+    "ident": "SK-103",
+    "iso_country": "CO",
+    "local_code": "TRI"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1487,10 @@
     "freq": "",
     "Lat": 5.468889,
     "Lon": -71.369167,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "SK-104",
+    "iso_country": "CO",
+    "local_code": "MAL"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1508,10 @@
     "freq": "",
     "Lat": 5.054167,
     "Lon": -72.445278,
-    "Ele": 217.9
+    "Ele": 217.9,
+    "ident": "SK-107",
+    "iso_country": "CO",
+    "local_code": "AGU"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1520,10 @@
     "freq": "",
     "Lat": 5.213889,
     "Lon": -71.853333,
-    "Ele": 171.9
+    "Ele": 171.9,
+    "ident": "SK-108",
+    "iso_country": "CO",
+    "local_code": "SLY"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1532,11 @@
     "freq": "",
     "Lat": 4.906926,
     "Lon": -72.894809,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "SK-109",
+    "iso_country": "CO",
+    "iata_code": "MOY",
+    "local_code": "MOY"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1545,11 @@
     "freq": "",
     "Lat": 5.65,
     "Lon": -72.2,
-    "Ele": 563.6
+    "Ele": 563.6,
+    "ident": "SK-110",
+    "iso_country": "CO",
+    "iata_code": "NUH",
+    "local_code": "NUH"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1558,10 @@
     "freq": "",
     "Lat": 5.566667,
     "Lon": -72.06,
-    "Ele": 223.4
+    "Ele": 223.4,
+    "ident": "SK-111",
+    "iso_country": "CO",
+    "local_code": "NUT"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1570,10 @@
     "freq": "",
     "Lat": 4.498611,
     "Lon": -72.845833,
-    "Ele": 198.7
+    "Ele": 198.7,
+    "ident": "SK-112",
+    "iso_country": "CO",
+    "local_code": "VLU"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1582,10 @@
     "freq": "",
     "Lat": 5.332222,
     "Lon": -71.234722,
-    "Ele": 136.9
+    "Ele": 136.9,
+    "ident": "SK-113",
+    "iso_country": "CO",
+    "local_code": "TRD"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1594,10 @@
     "freq": "",
     "Lat": 4.601944,
     "Lon": -72.829722,
-    "Ele": 199.6
+    "Ele": 199.6,
+    "ident": "SK-114",
+    "iso_country": "CO",
+    "local_code": "VIL"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1606,11 @@
     "freq": "",
     "Lat": 4.401295,
     "Lon": -73.188381,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "SK-115",
+    "iso_country": "CO",
+    "iata_code": "EUO",
+    "local_code": "EUO"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1619,11 @@
     "freq": "",
     "Lat": 5.733333,
     "Lon": -71.983333,
-    "Ele": 297.2
+    "Ele": 297.2,
+    "ident": "SK-116",
+    "iso_country": "CO",
+    "iata_code": "PRE",
+    "local_code": "POR"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1632,10 @@
     "freq": "",
     "Lat": 4.971389,
     "Lon": -72.595833,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "SK-117",
+    "iso_country": "CO",
+    "local_code": "TNU"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1644,10 @@
     "freq": "",
     "Lat": 4.816667,
     "Lon": -73.033333,
-    "Ele": 362.1
+    "Ele": 362.1,
+    "ident": "SK-118",
+    "iso_country": "CO",
+    "local_code": "SLC"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1656,10 @@
     "freq": "",
     "Lat": 5.663502,
     "Lon": -71.681594,
-    "Ele": 178.0
+    "Ele": 178,
+    "ident": "SK-119",
+    "iso_country": "CO",
+    "local_code": "SAN"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1668,11 @@
     "freq": "",
     "Lat": 5.400181,
     "Lon": -71.7001,
-    "Ele": 167.9
+    "Ele": 167.9,
+    "ident": "SK-120",
+    "iso_country": "CO",
+    "iata_code": "SQE",
+    "local_code": "SQE"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1681,10 @@
     "freq": "",
     "Lat": 4.785833,
     "Lon": -71.630833,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "SK-121",
+    "iso_country": "CO",
+    "local_code": "OOR"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1693,10 @@
     "freq": "",
     "Lat": 5.087778,
     "Lon": -71.789722,
-    "Ele": 164.6
+    "Ele": 164.6,
+    "ident": "SK-122",
+    "iso_country": "CO",
+    "local_code": "SAA"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1705,10 @@
     "freq": "",
     "Lat": 4.415833,
     "Lon": -72.773889,
-    "Ele": 170.4
+    "Ele": 170.4,
+    "ident": "SK-123",
+    "iso_country": "CO",
+    "local_code": "SAT"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1717,10 @@
     "freq": "",
     "Lat": 4.35,
     "Lon": -72.760278,
-    "Ele": 166.4
+    "Ele": 166.4,
+    "ident": "SK-124",
+    "iso_country": "CO",
+    "local_code": "SHL"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1729,10 @@
     "freq": "",
     "Lat": 4.983611,
     "Lon": -71.513333,
-    "Ele": 145.7
+    "Ele": 145.7,
+    "ident": "SK-126",
+    "iso_country": "CO",
+    "local_code": "ORS"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1741,10 @@
     "freq": "",
     "Lat": 4.387778,
     "Lon": -72.7775,
-    "Ele": 171.0
+    "Ele": 171,
+    "ident": "SK-127",
+    "iso_country": "CO",
+    "local_code": "VLE"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1753,10 @@
     "freq": "",
     "Lat": 4.483889,
     "Lon": -72.8225,
-    "Ele": 186.5
+    "Ele": 186.5,
+    "ident": "SK-128",
+    "iso_country": "CO",
+    "local_code": "VNU"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1765,11 @@
     "freq": "",
     "Lat": 5.726667,
     "Lon": -72.100556,
-    "Ele": 489.2
+    "Ele": 489.2,
+    "ident": "SK-129",
+    "iso_country": "CO",
+    "iata_code": "TTM",
+    "local_code": "TTM"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1778,10 @@
     "freq": "",
     "Lat": 4.755556,
     "Lon": -72.699167,
-    "Ele": 214.0
+    "Ele": 214,
+    "ident": "SK-130",
+    "iso_country": "CO",
+    "local_code": "TMA"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1790,10 @@
     "freq": "",
     "Lat": 4.903052,
     "Lon": -72.368127,
-    "Ele": 185.3
+    "Ele": 185.3,
+    "ident": "SK-132",
+    "iso_country": "CO",
+    "local_code": "MYN"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1802,10 @@
     "freq": "",
     "Lat": 5.129167,
     "Lon": -72.180833,
-    "Ele": 193.9
+    "Ele": 193.9,
+    "ident": "SK-133",
+    "iso_country": "CO",
+    "local_code": "YOP"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1814,10 @@
     "freq": "",
     "Lat": 5.691944,
     "Lon": -70.739722,
-    "Ele": 118.6
+    "Ele": 118.6,
+    "ident": "SK-134",
+    "iso_country": "CO",
+    "local_code": "PZI"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1835,10 @@
     "freq": "",
     "Lat": 2.091111,
     "Lon": -76.955,
-    "Ele": 908.3
+    "Ele": 908.3,
+    "ident": "SK-136",
+    "iso_country": "CO",
+    "local_code": "EGY"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1847,10 @@
     "freq": "",
     "Lat": 3.268889,
     "Lon": -76.333889,
-    "Ele": 991.2
+    "Ele": 991.2,
+    "ident": "SK-137",
+    "iso_country": "CO",
+    "local_code": "MDA"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1859,10 @@
     "freq": "",
     "Lat": 3.125,
     "Lon": -76.431667,
-    "Ele": 988.8
+    "Ele": 988.8,
+    "ident": "SK-138",
+    "iso_country": "CO",
+    "local_code": "LAR"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1871,10 @@
     "freq": "",
     "Lat": 3.04428,
     "Lon": -76.4106,
-    "Ele": 1083.3
+    "Ele": 1083.3,
+    "ident": "SK-139",
+    "iso_country": "CO",
+    "local_code": "CTO"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1883,11 @@
     "freq": "",
     "Lat": 2.841177,
     "Lon": -77.237214,
-    "Ele": 33.8
+    "Ele": 33.8,
+    "ident": "SK-140",
+    "iso_country": "CO",
+    "iata_code": "LMX",
+    "local_code": "LMX"
   },
   {
     "type": "small_airport",
@@ -1428,7 +1896,10 @@
     "freq": "",
     "Lat": 3.185833,
     "Lon": -76.326111,
-    "Ele": 994.0
+    "Ele": 994,
+    "ident": "SK-141",
+    "iso_country": "CO",
+    "local_code": "SJP"
   },
   {
     "type": "small_airport",
@@ -1437,7 +1908,10 @@
     "freq": "",
     "Lat": 10.0375,
     "Lon": -73.283611,
-    "Ele": 100.9
+    "Ele": 100.9,
+    "ident": "SK-143",
+    "iso_country": "CO",
+    "local_code": "ANN"
   },
   {
     "type": "small_airport",
@@ -1446,7 +1920,11 @@
     "freq": "",
     "Lat": 8.602149,
     "Lon": -73.612866,
-    "Ele": 126.5
+    "Ele": 126.5,
+    "ident": "SK-144",
+    "iso_country": "CO",
+    "iata_code": "AYC",
+    "local_code": "AYC"
   },
   {
     "type": "small_airport",
@@ -1455,7 +1933,10 @@
     "freq": "",
     "Lat": 8.2025,
     "Lon": -73.631667,
-    "Ele": 96.6
+    "Ele": 96.6,
+    "ident": "SK-145",
+    "iso_country": "CO",
+    "local_code": "AGY"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1945,10 @@
     "freq": "",
     "Lat": 8.621196,
     "Lon": -73.726693,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "SK-146",
+    "iso_country": "CO",
+    "local_code": "LGL"
   },
   {
     "type": "small_airport",
@@ -1473,7 +1957,10 @@
     "freq": "",
     "Lat": 10.116667,
     "Lon": -74.425,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "SK-147",
+    "iso_country": "CO",
+    "local_code": "CES"
   },
   {
     "type": "small_airport",
@@ -1482,7 +1969,10 @@
     "freq": "",
     "Lat": 9.02,
     "Lon": -73.6725,
-    "Ele": 68.3
+    "Ele": 68.3,
+    "ident": "SK-148",
+    "iso_country": "CO",
+    "local_code": "BNP"
   },
   {
     "type": "small_airport",
@@ -1491,7 +1981,10 @@
     "freq": "",
     "Lat": 9.652073,
     "Lon": -73.495134,
-    "Ele": 59.4
+    "Ele": 59.4,
+    "ident": "SK-149",
+    "iso_country": "CO",
+    "local_code": "LLO"
   },
   {
     "type": "small_airport",
@@ -1500,7 +1993,10 @@
     "freq": "",
     "Lat": 8.283333,
     "Lon": -73.645833,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "SK-150",
+    "iso_country": "CO",
+    "local_code": "CAL"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2005,10 @@
     "freq": "",
     "Lat": 10.6475,
     "Lon": -73.148056,
-    "Ele": 206.3
+    "Ele": 206.3,
+    "ident": "SK-151",
+    "iso_country": "CO",
+    "local_code": "VAP"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2017,10 @@
     "freq": "",
     "Lat": 9.928056,
     "Lon": -73.253056,
-    "Ele": 97.8
+    "Ele": 97.8,
+    "ident": "SK-152",
+    "iso_country": "CO",
+    "local_code": "CAG"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2029,10 @@
     "freq": "",
     "Lat": 9.562222,
     "Lon": -73.293889,
-    "Ele": 174.3
+    "Ele": 174.3,
+    "ident": "SK-153",
+    "iso_country": "CO",
+    "local_code": "LJD"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2041,10 @@
     "freq": "",
     "Lat": 7.810556,
     "Lon": -73.448333,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "SK-155",
+    "iso_country": "CO",
+    "local_code": "SAR"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2053,10 @@
     "freq": "",
     "Lat": 8.944722,
     "Lon": -73.258333,
-    "Ele": 227.1
+    "Ele": 227.1,
+    "ident": "SK-156",
+    "iso_country": "CO",
+    "local_code": "ACI"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2065,10 @@
     "freq": "",
     "Lat": 9.587778,
     "Lon": -73.455278,
-    "Ele": 69.8
+    "Ele": 69.8,
+    "ident": "SK-158",
+    "iso_country": "CO",
+    "local_code": "LJB"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2077,10 @@
     "freq": "",
     "Lat": 8.247222,
     "Lon": -73.693611,
-    "Ele": 58.2
+    "Ele": 58.2,
+    "ident": "SK-159",
+    "iso_country": "CO",
+    "local_code": "AFC"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2089,11 @@
     "freq": "",
     "Lat": 8.20199,
     "Lon": -73.7653,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "SK-160",
+    "iso_country": "CO",
+    "iata_code": "GRA",
+    "local_code": "GRA"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2102,10 @@
     "freq": "",
     "Lat": 8.333333,
     "Lon": -73.695,
-    "Ele": 68.6
+    "Ele": 68.6,
+    "ident": "SK-161",
+    "iso_country": "CO",
+    "local_code": "GER"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2114,10 @@
     "freq": "",
     "Lat": 7.892778,
     "Lon": -73.462222,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "SK-162",
+    "iso_country": "CO",
+    "local_code": "SNL"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2126,10 @@
     "freq": "",
     "Lat": 7.734444,
     "Lon": -73.434167,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SK-163",
+    "iso_country": "CO",
+    "local_code": "IRH"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2138,10 @@
     "freq": "",
     "Lat": 9.942222,
     "Lon": -73.868056,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "SK-164",
+    "iso_country": "CO",
+    "local_code": "BCO"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2150,10 @@
     "freq": "",
     "Lat": 7.985833,
     "Lon": -73.577778,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "SK-165",
+    "iso_country": "CO",
+    "local_code": "LCI"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2162,10 @@
     "freq": "",
     "Lat": 9.895,
     "Lon": -73.408889,
-    "Ele": 63.4
+    "Ele": 63.4,
+    "ident": "SK-166",
+    "iso_country": "CO",
+    "local_code": "LAD"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2174,10 @@
     "freq": "",
     "Lat": 9.907778,
     "Lon": -73.3225,
-    "Ele": 77.7
+    "Ele": 77.7,
+    "ident": "SK-167",
+    "iso_country": "CO",
+    "local_code": "EPZ"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2186,10 @@
     "freq": "",
     "Lat": 10.130278,
     "Lon": -74.039444,
-    "Ele": 103.3
+    "Ele": 103.3,
+    "ident": "SK-168",
+    "iso_country": "CO",
+    "local_code": "ECU"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2198,10 @@
     "freq": "",
     "Lat": 9.619722,
     "Lon": -73.630833,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "SK-169",
+    "iso_country": "CO",
+    "local_code": "LAI"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2210,10 @@
     "freq": "",
     "Lat": 9.620556,
     "Lon": -73.536389,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "SK-170",
+    "iso_country": "CO",
+    "local_code": "LJC"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2222,10 @@
     "freq": "",
     "Lat": 10.207222,
     "Lon": -73.263333,
-    "Ele": 104.5
+    "Ele": 104.5,
+    "ident": "SK-171",
+    "iso_country": "CO",
+    "local_code": "LAT"
   },
   {
     "type": "small_airport",
@@ -1680,7 +2234,10 @@
     "freq": "",
     "Lat": 8.206111,
     "Lon": -73.700833,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "SK-172",
+    "iso_country": "CO",
+    "local_code": "GAM"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2246,10 @@
     "freq": "",
     "Lat": 9.839444,
     "Lon": -73.867222,
-    "Ele": 53.3
+    "Ele": 53.3,
+    "ident": "SK-173",
+    "iso_country": "CO",
+    "local_code": "LPA"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2258,11 @@
     "freq": "",
     "Lat": 10.096608,
     "Lon": -73.2337,
-    "Ele": 121.6
+    "Ele": 121.6,
+    "ident": "SK-174",
+    "iso_country": "CO",
+    "iata_code": "DZI",
+    "local_code": "LFL"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2271,10 @@
     "freq": "",
     "Lat": 8.686667,
     "Lon": -73.765278,
-    "Ele": 35.4
+    "Ele": 35.4,
+    "ident": "SK-175",
+    "iso_country": "CO",
+    "local_code": "LTA"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2283,10 @@
     "freq": "",
     "Lat": 7.992778,
     "Lon": -73.675,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "SK-176",
+    "iso_country": "CO",
+    "local_code": "SNT"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2295,10 @@
     "freq": "",
     "Lat": 10.3275,
     "Lon": -73.371944,
-    "Ele": 117.3
+    "Ele": 117.3,
+    "ident": "SK-177",
+    "iso_country": "CO",
+    "local_code": "VDP"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2307,10 @@
     "freq": "",
     "Lat": 9.886389,
     "Lon": -73.2425,
-    "Ele": 108.5
+    "Ele": 108.5,
+    "ident": "SK-178",
+    "iso_country": "CO",
+    "local_code": "MOC"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2319,10 @@
     "freq": "",
     "Lat": 9.578889,
     "Lon": -73.373056,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "SK-179",
+    "iso_country": "CO",
+    "local_code": "LJI"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2331,10 @@
     "freq": "",
     "Lat": 9.9375,
     "Lon": -73.273889,
-    "Ele": 88.7
+    "Ele": 88.7,
+    "ident": "SK-180",
+    "iso_country": "CO",
+    "local_code": "PRO"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2343,10 @@
     "freq": "",
     "Lat": 8.025556,
     "Lon": -73.515833,
-    "Ele": 97.2
+    "Ele": 97.2,
+    "ident": "SK-181",
+    "iso_country": "CO",
+    "local_code": "SMD"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2355,10 @@
     "freq": "",
     "Lat": 10.355556,
     "Lon": -73.333333,
-    "Ele": 118.3
+    "Ele": 118.3,
+    "ident": "SK-182",
+    "iso_country": "CO",
+    "local_code": "SSC"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2367,11 @@
     "freq": "",
     "Lat": 10.766667,
     "Lon": -73.016667,
-    "Ele": 1099.7
+    "Ele": 1099.7,
+    "ident": "SK-183",
+    "iso_country": "CO",
+    "iata_code": "SJH",
+    "local_code": "SJH"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2380,10 @@
     "freq": "",
     "Lat": 9.955556,
     "Lon": -73.875556,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "SK-184",
+    "iso_country": "CO",
+    "local_code": "BOC"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2392,10 @@
     "freq": "",
     "Lat": 9.916667,
     "Lon": -73.231389,
-    "Ele": 106.1
+    "Ele": 106.1,
+    "ident": "SK-185",
+    "iso_country": "CO",
+    "local_code": "COZ"
   },
   {
     "type": "small_airport",
@@ -1806,7 +2404,10 @@
     "freq": "",
     "Lat": 7.963056,
     "Lon": -73.593889,
-    "Ele": 59.4
+    "Ele": 59.4,
+    "ident": "SK-186",
+    "iso_country": "CO",
+    "local_code": "VOA"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2416,10 @@
     "freq": "",
     "Lat": 10.203889,
     "Lon": -73.555556,
-    "Ele": 96.3
+    "Ele": 96.3,
+    "ident": "SK-187",
+    "iso_country": "CO",
+    "local_code": "VDL"
   },
   {
     "type": "small_airport",
@@ -1824,7 +2428,10 @@
     "freq": "",
     "Lat": 7.008728,
     "Lon": -77.667303,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "SK-188",
+    "iso_country": "CO",
+    "local_code": "ALR"
   },
   {
     "type": "small_airport",
@@ -1833,7 +2440,10 @@
     "freq": "",
     "Lat": 6.55,
     "Lon": -77.3263,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "SK-189",
+    "iso_country": "CO",
+    "local_code": "BHF"
   },
   {
     "type": "small_airport",
@@ -1842,7 +2452,10 @@
     "freq": "",
     "Lat": 6.881389,
     "Lon": -77.680556,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "SK-190",
+    "iso_country": "CO",
+    "local_code": "CAM"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2464,11 @@
     "freq": "",
     "Lat": 4.961621,
     "Lon": -77.363913,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "SK-195",
+    "iso_country": "CO",
+    "iata_code": "PZR",
+    "local_code": "BBA"
   },
   {
     "type": "small_airport",
@@ -1860,7 +2477,10 @@
     "freq": "",
     "Lat": 8.175247,
     "Lon": -77.057762,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "SK-196",
+    "iso_country": "CO",
+    "local_code": "SMC"
   },
   {
     "type": "small_airport",
@@ -1869,7 +2489,11 @@
     "freq": "",
     "Lat": 8.032714,
     "Lon": -77.091751,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "SK-197",
+    "iso_country": "CO",
+    "iata_code": "UNC",
+    "local_code": "UNC"
   },
   {
     "type": "small_airport",
@@ -1878,7 +2502,11 @@
     "freq": "",
     "Lat": 8.3,
     "Lon": -75.15,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "SK-198",
+    "iso_country": "CO",
+    "iata_code": "AYA",
+    "local_code": "AYA"
   },
   {
     "type": "small_airport",
@@ -1887,7 +2515,10 @@
     "freq": "",
     "Lat": 7.346944,
     "Lon": -76.079722,
-    "Ele": 719.3
+    "Ele": 719.3,
+    "ident": "SK-199",
+    "iso_country": "CO",
+    "local_code": "CHR"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2527,10 @@
     "freq": "",
     "Lat": 8.329167,
     "Lon": -75.132222,
-    "Ele": 24.7
+    "Ele": 24.7,
+    "ident": "SK-200",
+    "iso_country": "CO",
+    "local_code": "CEB"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2539,10 @@
     "freq": "",
     "Lat": 8.119444,
     "Lon": -75.008611,
-    "Ele": 62.5
+    "Ele": 62.5,
+    "ident": "SK-201",
+    "iso_country": "CO",
+    "local_code": "LAN"
   },
   {
     "type": "small_airport",
@@ -1914,7 +2551,10 @@
     "freq": "",
     "Lat": 7.868889,
     "Lon": -75.675556,
-    "Ele": 79.6
+    "Ele": 79.6,
+    "ident": "SK-202",
+    "iso_country": "CO",
+    "local_code": "PLK"
   },
   {
     "type": "small_airport",
@@ -1923,7 +2563,10 @@
     "freq": "",
     "Lat": 8.91,
     "Lon": -75.799167,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "SK-203",
+    "iso_country": "CO",
+    "local_code": "LME"
   },
   {
     "type": "small_airport",
@@ -1932,7 +2575,10 @@
     "freq": "",
     "Lat": 9.058381,
     "Lon": -75.782021,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "SK-205",
+    "iso_country": "CO",
+    "local_code": "SNP"
   },
   {
     "type": "small_airport",
@@ -1950,7 +2596,11 @@
     "freq": "",
     "Lat": 8.5,
     "Lon": -76.175,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "SK-207",
+    "iso_country": "CO",
+    "iata_code": "SCA",
+    "local_code": "SCA"
   },
   {
     "type": "small_airport",
@@ -1959,7 +2609,10 @@
     "freq": "",
     "Lat": 8.005278,
     "Lon": -76.2275,
-    "Ele": 180.4
+    "Ele": 180.4,
+    "ident": "SK-208",
+    "iso_country": "CO",
+    "local_code": "URT"
   },
   {
     "type": "small_airport",
@@ -1968,7 +2621,10 @@
     "freq": "",
     "Lat": 4.739167,
     "Lon": -74.805,
-    "Ele": 227.1
+    "Ele": 227.1,
+    "ident": "SK-210",
+    "iso_country": "CO",
+    "local_code": "COL"
   },
   {
     "type": "small_airport",
@@ -1977,7 +2633,10 @@
     "freq": "",
     "Lat": 4.304444,
     "Lon": -73.256667,
-    "Ele": 246.3
+    "Ele": 246.3,
+    "ident": "SK-211",
+    "iso_country": "CO",
+    "local_code": "PRB"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2645,10 @@
     "freq": "",
     "Lat": 5.756111,
     "Lon": -74.513056,
-    "Ele": 190.5
+    "Ele": 190.5,
+    "ident": "SK-212",
+    "iso_country": "CO",
+    "local_code": "PTS"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2657,10 @@
     "freq": "",
     "Lat": 4.919444,
     "Lon": -74.055833,
-    "Ele": 2563.4
+    "Ele": 2563.4,
+    "ident": "SK-213",
+    "iso_country": "CO",
+    "local_code": "CJI"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2669,10 @@
     "freq": "",
     "Lat": 4.297778,
     "Lon": -73.189167,
-    "Ele": 222.2
+    "Ele": 222.2,
+    "ident": "SK-214",
+    "iso_country": "CO",
+    "local_code": "LAZ"
   },
   {
     "type": "small_airport",
@@ -2013,7 +2681,10 @@
     "freq": "",
     "Lat": 4.287778,
     "Lon": -73.133889,
-    "Ele": 202.7
+    "Ele": 202.7,
+    "ident": "SK-215",
+    "iso_country": "CO",
+    "local_code": "PBR"
   },
   {
     "type": "small_airport",
@@ -2022,7 +2693,11 @@
     "freq": "",
     "Lat": 4.483687,
     "Lon": -73.344739,
-    "Ele": 400.8
+    "Ele": 400.8,
+    "ident": "SK-217",
+    "iso_country": "CO",
+    "iata_code": "MND",
+    "local_code": "MND"
   },
   {
     "type": "small_airport",
@@ -2031,7 +2706,10 @@
     "freq": "",
     "Lat": 4.334722,
     "Lon": -73.143889,
-    "Ele": 208.8
+    "Ele": 208.8,
+    "ident": "SK-219",
+    "iso_country": "CO",
+    "local_code": "PRI"
   },
   {
     "type": "small_airport",
@@ -2040,7 +2718,10 @@
     "freq": "",
     "Lat": 4.65,
     "Lon": -73.333333,
-    "Ele": 749.8
+    "Ele": 749.8,
+    "ident": "SK-221",
+    "iso_country": "CO",
+    "local_code": "SJG"
   },
   {
     "type": "small_airport",
@@ -2049,7 +2730,10 @@
     "freq": "",
     "Lat": 3.333333,
     "Lon": -70.333333,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "SK-222",
+    "iso_country": "CO",
+    "local_code": "BMG"
   },
   {
     "type": "small_airport",
@@ -2058,7 +2742,11 @@
     "freq": "",
     "Lat": 2.808967,
     "Lon": -67.621683,
-    "Ele": 99.7
+    "Ele": 99.7,
+    "ident": "SK-223",
+    "iso_country": "CO",
+    "iata_code": "NAD",
+    "local_code": "NAD"
   },
   {
     "type": "small_airport",
@@ -2067,7 +2755,10 @@
     "freq": "",
     "Lat": 1.91502,
     "Lon": -67.0814,
-    "Ele": 111.3
+    "Ele": 111.3,
+    "ident": "SK-224",
+    "iso_country": "CO",
+    "local_code": "SSD"
   },
   {
     "type": "small_airport",
@@ -2076,7 +2767,10 @@
     "freq": "",
     "Lat": 1.546667,
     "Lon": -72.325833,
-    "Ele": 226.2
+    "Ele": 226.2,
+    "ident": "SK-225",
+    "iso_country": "CO",
+    "local_code": "BOL"
   },
   {
     "type": "small_airport",
@@ -2085,7 +2779,10 @@
     "freq": "",
     "Lat": 1.955556,
     "Lon": -72.533333,
-    "Ele": 257.9
+    "Ele": 257.9,
+    "ident": "SK-226",
+    "iso_country": "CO",
+    "local_code": "CLM"
   },
   {
     "type": "small_airport",
@@ -2094,16 +2791,22 @@
     "freq": "",
     "Lat": 1.21,
     "Lon": -71.955,
-    "Ele": 199.3
+    "Ele": 199.3,
+    "ident": "SK-227",
+    "iso_country": "CO",
+    "local_code": "MRF"
   },
   {
     "type": "small_airport",
     "name": "Morichal Papanagu Airport",
     "gps_code": "SK-228",
     "freq": "",
-    "Lat": 2.0,
+    "Lat": 2,
     "Lon": -70.883333,
-    "Ele": 186.5
+    "Ele": 186.5,
+    "ident": "SK-228",
+    "iso_country": "CO",
+    "local_code": "MCG"
   },
   {
     "type": "small_airport",
@@ -2112,7 +2815,10 @@
     "freq": "",
     "Lat": 2.308889,
     "Lon": -71.773333,
-    "Ele": 172.5
+    "Ele": 172.5,
+    "ident": "SK-229",
+    "iso_country": "CO",
+    "local_code": "TPI"
   },
   {
     "type": "small_airport",
@@ -2121,7 +2827,10 @@
     "freq": "",
     "Lat": 1.206389,
     "Lon": -72.7325,
-    "Ele": 222.5
+    "Ele": 222.5,
+    "ident": "SK-230",
+    "iso_country": "CO",
+    "local_code": "TRR"
   },
   {
     "type": "small_airport",
@@ -2130,7 +2839,10 @@
     "freq": "",
     "Lat": 3.4025,
     "Lon": -75.173611,
-    "Ele": 349.0
+    "Ele": 349,
+    "ident": "SK-231",
+    "iso_country": "CO",
+    "local_code": "BJA"
   },
   {
     "type": "small_airport",
@@ -2139,7 +2851,10 @@
     "freq": "",
     "Lat": 2.663056,
     "Lon": -75.34,
-    "Ele": 536.4
+    "Ele": 536.4,
+    "ident": "SK-232",
+    "iso_country": "CO",
+    "local_code": "CMP"
   },
   {
     "type": "small_airport",
@@ -2148,7 +2863,10 @@
     "freq": "",
     "Lat": 2.846944,
     "Lon": -75.313056,
-    "Ele": 464.5
+    "Ele": 464.5,
+    "ident": "SK-233",
+    "iso_country": "CO",
+    "local_code": "EJU"
   },
   {
     "type": "small_airport",
@@ -2157,7 +2875,10 @@
     "freq": "",
     "Lat": 2.626944,
     "Lon": -75.356944,
-    "Ele": 575.5
+    "Ele": 575.5,
+    "ident": "SK-234",
+    "iso_country": "CO",
+    "local_code": "ELH"
   },
   {
     "type": "small_airport",
@@ -2166,7 +2887,10 @@
     "freq": "",
     "Lat": 2.734167,
     "Lon": -75.331944,
-    "Ele": 481.3
+    "Ele": 481.3,
+    "ident": "SK-235",
+    "iso_country": "CO",
+    "local_code": "CUM"
   },
   {
     "type": "small_airport",
@@ -2175,7 +2899,11 @@
     "freq": "",
     "Lat": 2.283333,
     "Lon": -74.95,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "SK-236",
+    "iso_country": "CO",
+    "iata_code": "GCA",
+    "local_code": "GCA"
   },
   {
     "type": "small_airport",
@@ -2184,7 +2912,10 @@
     "freq": "",
     "Lat": 2.914167,
     "Lon": -75.396667,
-    "Ele": 540.4
+    "Ele": 540.4,
+    "ident": "SK-237",
+    "iso_country": "CO",
+    "local_code": "GUN"
   },
   {
     "type": "small_airport",
@@ -2193,7 +2924,10 @@
     "freq": "",
     "Lat": 2.629722,
     "Lon": -75.576111,
-    "Ele": 637.0
+    "Ele": 637,
+    "ident": "SK-238",
+    "iso_country": "CO",
+    "local_code": "LFT"
   },
   {
     "type": "small_airport",
@@ -2202,7 +2936,10 @@
     "freq": "",
     "Lat": 3.246944,
     "Lon": -75.246111,
-    "Ele": 402.0
+    "Ele": 402,
+    "ident": "SK-239",
+    "iso_country": "CO",
+    "local_code": "AIH"
   },
   {
     "type": "small_airport",
@@ -2211,7 +2948,10 @@
     "freq": "",
     "Lat": 3.266667,
     "Lon": -75.168056,
-    "Ele": 391.7
+    "Ele": 391.7,
+    "ident": "SK-240",
+    "iso_country": "CO",
+    "local_code": "POL"
   },
   {
     "type": "small_airport",
@@ -2220,7 +2960,10 @@
     "freq": "",
     "Lat": 3.066667,
     "Lon": -75.1875,
-    "Ele": 532.5
+    "Ele": 532.5,
+    "ident": "SK-241",
+    "iso_country": "CO",
+    "local_code": "TLO"
   },
   {
     "type": "small_airport",
@@ -2229,7 +2972,10 @@
     "freq": "",
     "Lat": 2.305,
     "Lon": -75.644444,
-    "Ele": 685.5
+    "Ele": 685.5,
+    "ident": "SK-242",
+    "iso_country": "CO",
+    "local_code": "SFC"
   },
   {
     "type": "small_airport",
@@ -2238,7 +2984,10 @@
     "freq": "",
     "Lat": 2.929722,
     "Lon": -75.42,
-    "Ele": 551.1
+    "Ele": 551.1,
+    "ident": "SK-243",
+    "iso_country": "CO",
+    "local_code": "PMO"
   },
   {
     "type": "small_airport",
@@ -2247,7 +2996,10 @@
     "freq": "",
     "Lat": 2.458333,
     "Lon": -75.741944,
-    "Ele": 821.7
+    "Ele": 821.7,
+    "ident": "SK-244",
+    "iso_country": "CO",
+    "local_code": "TSI"
   },
   {
     "type": "small_airport",
@@ -2256,7 +3008,11 @@
     "freq": "",
     "Lat": 2.216667,
     "Lon": -75.25,
-    "Ele": 1834.0
+    "Ele": 1834,
+    "ident": "SK-245",
+    "iso_country": "CO",
+    "iata_code": "SRO",
+    "local_code": "SRO"
   },
   {
     "type": "small_airport",
@@ -2265,7 +3021,10 @@
     "freq": "",
     "Lat": 3.332222,
     "Lon": -75.186111,
-    "Ele": 370.0
+    "Ele": 370,
+    "ident": "SK-246",
+    "iso_country": "CO",
+    "local_code": "VVJ"
   },
   {
     "type": "small_airport",
@@ -2274,7 +3033,10 @@
     "freq": "",
     "Lat": 2.456389,
     "Lon": -75.450278,
-    "Ele": 1600.8
+    "Ele": 1600.8,
+    "ident": "SK-247",
+    "iso_country": "CO",
+    "local_code": "TES"
   },
   {
     "type": "small_airport",
@@ -2283,7 +3045,10 @@
     "freq": "",
     "Lat": 11.038056,
     "Lon": -72.695,
-    "Ele": 120.4
+    "Ele": 120.4,
+    "ident": "SK-248",
+    "iso_country": "CO",
+    "local_code": "BCA"
   },
   {
     "type": "small_airport",
@@ -2292,7 +3057,10 @@
     "freq": "",
     "Lat": 11.223611,
     "Lon": -72.836111,
-    "Ele": 58.5
+    "Ele": 58.5,
+    "ident": "SK-249",
+    "iso_country": "CO",
+    "local_code": "CTP"
   },
   {
     "type": "small_airport",
@@ -2301,7 +3069,10 @@
     "freq": "",
     "Lat": 11.783333,
     "Lon": -72.416667,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SK-250",
+    "iso_country": "CO",
+    "local_code": "MAG"
   },
   {
     "type": "small_airport",
@@ -2310,7 +3081,10 @@
     "freq": "",
     "Lat": 12.35,
     "Lon": -71.3,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SK-252",
+    "iso_country": "CO",
+    "local_code": "URA"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3093,10 @@
     "freq": "",
     "Lat": 10.744444,
     "Lon": -72.994444,
-    "Ele": 202.1
+    "Ele": 202.1,
+    "ident": "SK-253",
+    "iso_country": "CO",
+    "local_code": "DJV"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3105,10 @@
     "freq": "",
     "Lat": 10.583333,
     "Lon": -73.016667,
-    "Ele": 203.3
+    "Ele": 203.3,
+    "ident": "SK-254",
+    "iso_country": "CO",
+    "local_code": "VLL"
   },
   {
     "type": "small_airport",
@@ -2337,7 +3117,10 @@
     "freq": "",
     "Lat": 10.235833,
     "Lon": -74.053611,
-    "Ele": 115.5
+    "Ele": 115.5,
+    "ident": "SK-255",
+    "iso_country": "CO",
+    "local_code": "FUN"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3129,11 @@
     "freq": "",
     "Lat": 10.016667,
     "Lon": -74.683333,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "SK-256",
+    "iso_country": "CO",
+    "iata_code": "IVO",
+    "local_code": "IVO"
   },
   {
     "type": "small_airport",
@@ -2355,7 +3142,10 @@
     "freq": "",
     "Lat": 9.693611,
     "Lon": -74.645833,
-    "Ele": 37.8
+    "Ele": 37.8,
+    "ident": "SK-257",
+    "iso_country": "CO",
+    "local_code": "CRN"
   },
   {
     "type": "small_airport",
@@ -2364,7 +3154,10 @@
     "freq": "",
     "Lat": 9.170278,
     "Lon": -74.211944,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "SK-258",
+    "iso_country": "CO",
+    "local_code": "ECM"
   },
   {
     "type": "small_airport",
@@ -2373,7 +3166,10 @@
     "freq": "",
     "Lat": 10.038056,
     "Lon": -74.02,
-    "Ele": 79.2
+    "Ele": 79.2,
+    "ident": "SK-259",
+    "iso_country": "CO",
+    "local_code": "AUR"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3178,10 @@
     "freq": "",
     "Lat": 9.519722,
     "Lon": -74.339167,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "SK-260",
+    "iso_country": "CO",
+    "local_code": "STA"
   },
   {
     "type": "small_airport",
@@ -2391,7 +3190,11 @@
     "freq": "",
     "Lat": 9.15,
     "Lon": -74.233333,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "SK-261",
+    "iso_country": "CO",
+    "iata_code": "GAA",
+    "local_code": "GAA"
   },
   {
     "type": "small_airport",
@@ -2400,7 +3203,10 @@
     "freq": "",
     "Lat": 10.860833,
     "Lon": -74.145833,
-    "Ele": 34.4
+    "Ele": 34.4,
+    "ident": "SK-262",
+    "iso_country": "CO",
+    "local_code": "AMA"
   },
   {
     "type": "small_airport",
@@ -2409,7 +3215,10 @@
     "freq": "",
     "Lat": 10.788056,
     "Lon": -74.104444,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "SK-263",
+    "iso_country": "CO",
+    "local_code": "CGA"
   },
   {
     "type": "small_airport",
@@ -2418,7 +3227,10 @@
     "freq": "",
     "Lat": 10.667778,
     "Lon": -74.201667,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "SK-264",
+    "iso_country": "CO",
+    "local_code": "CIE"
   },
   {
     "type": "small_airport",
@@ -2427,7 +3239,10 @@
     "freq": "",
     "Lat": 11.245278,
     "Lon": -73.716667,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "SK-265",
+    "iso_country": "CO",
+    "local_code": "SNM"
   },
   {
     "type": "small_airport",
@@ -2436,7 +3251,10 @@
     "freq": "",
     "Lat": 10.854722,
     "Lon": -74.171111,
-    "Ele": 17.7
+    "Ele": 17.7,
+    "ident": "SK-266",
+    "iso_country": "CO",
+    "local_code": "LFE"
   },
   {
     "type": "small_airport",
@@ -2445,7 +3263,10 @@
     "freq": "",
     "Lat": 9.644444,
     "Lon": -74.425,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "SK-267",
+    "iso_country": "CO",
+    "local_code": "LEB"
   },
   {
     "type": "small_airport",
@@ -2454,7 +3275,10 @@
     "freq": "",
     "Lat": 10.609722,
     "Lon": -74.298333,
-    "Ele": 19.5
+    "Ele": 19.5,
+    "ident": "SK-268",
+    "iso_country": "CO",
+    "local_code": "PIV"
   },
   {
     "type": "small_airport",
@@ -2463,7 +3287,10 @@
     "freq": "",
     "Lat": 11.0025,
     "Lon": -74.211667,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "SK-269",
+    "iso_country": "CO",
+    "local_code": "LAY"
   },
   {
     "type": "small_airport",
@@ -2472,7 +3299,10 @@
     "freq": "",
     "Lat": 9.922778,
     "Lon": -74.095,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "SK-270",
+    "iso_country": "CO",
+    "local_code": "ELF"
   },
   {
     "type": "small_airport",
@@ -2481,7 +3311,10 @@
     "freq": "",
     "Lat": 3.988056,
     "Lon": -73.299444,
-    "Ele": 239.0
+    "Ele": 239,
+    "ident": "SK-271",
+    "iso_country": "CO",
+    "local_code": "VVM"
   },
   {
     "type": "small_airport",
@@ -2490,7 +3323,11 @@
     "freq": "",
     "Lat": 4.583333,
     "Lon": -72.966667,
-    "Ele": 204.2
+    "Ele": 204.2,
+    "ident": "SK-272",
+    "iso_country": "CO",
+    "iata_code": "BAC",
+    "local_code": "BAC"
   },
   {
     "type": "small_airport",
@@ -2499,7 +3336,10 @@
     "freq": "",
     "Lat": 4.291667,
     "Lon": -72.504167,
-    "Ele": 176.2
+    "Ele": 176.2,
+    "ident": "SK-273",
+    "iso_country": "CO",
+    "local_code": "PLE"
   },
   {
     "type": "small_airport",
@@ -2508,7 +3348,10 @@
     "freq": "",
     "Lat": 4.118056,
     "Lon": -73.266944,
-    "Ele": 232.0
+    "Ele": 232,
+    "ident": "SK-274",
+    "iso_country": "CO",
+    "local_code": "CMA"
   },
   {
     "type": "small_airport",
@@ -2517,7 +3360,11 @@
     "freq": "",
     "Lat": 2.066667,
     "Lon": -74.583333,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SK-275",
+    "iso_country": "CO",
+    "iata_code": "CJD",
+    "local_code": "CJD"
   },
   {
     "type": "small_airport",
@@ -2526,7 +3373,10 @@
     "freq": "",
     "Lat": 3.29,
     "Lon": -73.463333,
-    "Ele": 244.8
+    "Ele": 244.8,
+    "ident": "SK-276",
+    "iso_country": "CO",
+    "local_code": "FTE"
   },
   {
     "type": "small_airport",
@@ -2535,7 +3385,11 @@
     "freq": "",
     "Lat": 2.033333,
     "Lon": -74.216667,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "SK-277",
+    "iso_country": "CO",
+    "iata_code": "CQT",
+    "local_code": "CQT"
   },
   {
     "type": "small_airport",
@@ -2544,7 +3398,10 @@
     "freq": "",
     "Lat": 3.773056,
     "Lon": -73.385833,
-    "Ele": 258.8
+    "Ele": 258.8,
+    "ident": "SK-278",
+    "iso_country": "CO",
+    "local_code": "ELC"
   },
   {
     "type": "small_airport",
@@ -2553,7 +3410,10 @@
     "freq": "",
     "Lat": 4.026944,
     "Lon": -73.355556,
-    "Ele": 256.9
+    "Ele": 256.9,
+    "ident": "SK-279",
+    "iso_country": "CO",
+    "local_code": "VIC"
   },
   {
     "type": "small_airport",
@@ -2562,7 +3422,10 @@
     "freq": "",
     "Lat": 3.893333,
     "Lon": -73.176667,
-    "Ele": 212.8
+    "Ele": 212.8,
+    "ident": "SK-280",
+    "iso_country": "CO",
+    "local_code": "VCC"
   },
   {
     "type": "small_airport",
@@ -2571,7 +3434,10 @@
     "freq": "",
     "Lat": 4.304167,
     "Lon": -73.074167,
-    "Ele": 192.6
+    "Ele": 192.6,
+    "ident": "SK-281",
+    "iso_country": "CO",
+    "local_code": "CYO"
   },
   {
     "type": "small_airport",
@@ -2580,7 +3446,10 @@
     "freq": "",
     "Lat": 3.718889,
     "Lon": -73.308611,
-    "Ele": 236.8
+    "Ele": 236.8,
+    "ident": "SK-282",
+    "iso_country": "CO",
+    "local_code": "SCG"
   },
   {
     "type": "small_airport",
@@ -2589,16 +3458,23 @@
     "freq": "",
     "Lat": 3.477891,
     "Lon": -73.730831,
-    "Ele": 287.7
+    "Ele": 287.7,
+    "ident": "SK-283",
+    "iso_country": "CO",
+    "local_code": "GAN"
   },
   {
     "type": "small_airport",
     "name": "El Recreo Airport",
     "gps_code": "SK-284",
     "freq": "",
-    "Lat": 2.0,
+    "Lat": 2,
     "Lon": -74.133333,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "SK-284",
+    "iso_country": "CO",
+    "iata_code": "ELJ",
+    "local_code": "ELJ"
   },
   {
     "type": "small_airport",
@@ -2607,7 +3483,10 @@
     "freq": "",
     "Lat": 3.927222,
     "Lon": -73.081111,
-    "Ele": 187.5
+    "Ele": 187.5,
+    "ident": "SK-285",
+    "iso_country": "CO",
+    "local_code": "PPZ"
   },
   {
     "type": "small_airport",
@@ -2616,7 +3495,10 @@
     "freq": "",
     "Lat": 4.415,
     "Lon": -71.590278,
-    "Ele": 190.2
+    "Ele": 190.2,
+    "ident": "SK-286",
+    "iso_country": "CO",
+    "local_code": "PGO"
   },
   {
     "type": "small_airport",
@@ -2625,7 +3507,10 @@
     "freq": "",
     "Lat": 3.781111,
     "Lon": -73.481667,
-    "Ele": 290.5
+    "Ele": 290.5,
+    "ident": "SK-287",
+    "iso_country": "CO",
+    "local_code": "ELU"
   },
   {
     "type": "small_airport",
@@ -2634,7 +3519,10 @@
     "freq": "",
     "Lat": 4.20644,
     "Lon": -72.997149,
-    "Ele": 179.5
+    "Ele": 179.5,
+    "ident": "SK-288",
+    "iso_country": "CO",
+    "local_code": "CRY"
   },
   {
     "type": "small_airport",
@@ -2643,7 +3531,10 @@
     "freq": "",
     "Lat": 3.365833,
     "Lon": -73.4675,
-    "Ele": 245.4
+    "Ele": 245.4,
+    "ident": "SK-289",
+    "iso_country": "CO",
+    "local_code": "PUL"
   },
   {
     "type": "small_airport",
@@ -2652,7 +3543,10 @@
     "freq": "",
     "Lat": 4.460556,
     "Lon": -72.95,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "SK-290",
+    "iso_country": "CO",
+    "local_code": "BAR"
   },
   {
     "type": "small_airport",
@@ -2661,7 +3555,10 @@
     "freq": "",
     "Lat": 3.827778,
     "Lon": -73.476389,
-    "Ele": 289.6
+    "Ele": 289.6,
+    "ident": "SK-291",
+    "iso_country": "CO",
+    "local_code": "CVA"
   },
   {
     "type": "small_airport",
@@ -2670,7 +3567,10 @@
     "freq": "",
     "Lat": 3.353889,
     "Lon": -73.577778,
-    "Ele": 253.6
+    "Ele": 253.6,
+    "ident": "SK-292",
+    "iso_country": "CO",
+    "local_code": "FEO"
   },
   {
     "type": "small_airport",
@@ -2679,7 +3579,10 @@
     "freq": "",
     "Lat": 3.633333,
     "Lon": -71.166667,
-    "Ele": 184.7
+    "Ele": 184.7,
+    "ident": "SK-293",
+    "iso_country": "CO",
+    "local_code": "GMC"
   },
   {
     "type": "small_airport",
@@ -2688,7 +3591,10 @@
     "freq": "",
     "Lat": 3.373056,
     "Lon": -73.613333,
-    "Ele": 259.7
+    "Ele": 259.7,
+    "ident": "SK-294",
+    "iso_country": "CO",
+    "local_code": "FUR"
   },
   {
     "type": "small_airport",
@@ -2697,7 +3603,10 @@
     "freq": "",
     "Lat": 4.2375,
     "Lon": -71.718056,
-    "Ele": 203.0
+    "Ele": 203,
+    "ident": "SK-295",
+    "iso_country": "CO",
+    "local_code": "HLE"
   },
   {
     "type": "small_airport",
@@ -2706,7 +3615,10 @@
     "freq": "",
     "Lat": 4.393333,
     "Lon": -72.989167,
-    "Ele": 187.5
+    "Ele": 187.5,
+    "ident": "SK-296",
+    "iso_country": "CO",
+    "local_code": "CBY"
   },
   {
     "type": "small_airport",
@@ -2715,7 +3627,10 @@
     "freq": "",
     "Lat": 4.301944,
     "Lon": -73.369722,
-    "Ele": 312.4
+    "Ele": 312.4,
+    "ident": "SK-297",
+    "iso_country": "CO",
+    "local_code": "LAC"
   },
   {
     "type": "small_airport",
@@ -2724,7 +3639,10 @@
     "freq": "",
     "Lat": 3.951389,
     "Lon": -73.347222,
-    "Ele": 257.3
+    "Ele": 257.3,
+    "ident": "SK-298",
+    "iso_country": "CO",
+    "local_code": "SCM"
   },
   {
     "type": "small_airport",
@@ -2733,7 +3651,10 @@
     "freq": "",
     "Lat": 3.421389,
     "Lon": -73.725833,
-    "Ele": 306.0
+    "Ele": 306,
+    "ident": "SK-299",
+    "iso_country": "CO",
+    "local_code": "FNO"
   },
   {
     "type": "small_airport",
@@ -2742,7 +3663,10 @@
     "freq": "",
     "Lat": 3.688889,
     "Lon": -73.2325,
-    "Ele": 217.0
+    "Ele": 217,
+    "ident": "SK-300",
+    "iso_country": "CO",
+    "local_code": "SIN"
   },
   {
     "type": "small_airport",
@@ -2751,7 +3675,10 @@
     "freq": "",
     "Lat": 4.064167,
     "Lon": -73.383611,
-    "Ele": 310.6
+    "Ele": 310.6,
+    "ident": "SK-301",
+    "iso_country": "CO",
+    "local_code": "LAM"
   },
   {
     "type": "small_airport",
@@ -2760,7 +3687,10 @@
     "freq": "",
     "Lat": 3.804722,
     "Lon": -73.520278,
-    "Ele": 302.7
+    "Ele": 302.7,
+    "ident": "SK-302",
+    "iso_country": "CO",
+    "local_code": "CAX"
   },
   {
     "type": "small_airport",
@@ -2769,7 +3699,10 @@
     "freq": "",
     "Lat": 4.088333,
     "Lon": -73.367778,
-    "Ele": 281.6
+    "Ele": 281.6,
+    "ident": "SK-303",
+    "iso_country": "CO",
+    "local_code": "LEM"
   },
   {
     "type": "small_airport",
@@ -2778,7 +3711,10 @@
     "freq": "",
     "Lat": 3.911944,
     "Lon": -73.295556,
-    "Ele": 235.3
+    "Ele": 235.3,
+    "ident": "SK-304",
+    "iso_country": "CO",
+    "local_code": "SGG"
   },
   {
     "type": "small_airport",
@@ -2787,7 +3723,10 @@
     "freq": "",
     "Lat": 3.674167,
     "Lon": -73.403889,
-    "Ele": 253.6
+    "Ele": 253.6,
+    "ident": "SK-305",
+    "iso_country": "CO",
+    "local_code": "SRT"
   },
   {
     "type": "small_airport",
@@ -2796,7 +3735,10 @@
     "freq": "",
     "Lat": 3.449167,
     "Lon": -73.584444,
-    "Ele": 290.8
+    "Ele": 290.8,
+    "ident": "SK-306",
+    "iso_country": "CO",
+    "local_code": "FOO"
   },
   {
     "type": "small_airport",
@@ -2805,7 +3747,10 @@
     "freq": "",
     "Lat": 3.779444,
     "Lon": -73.220556,
-    "Ele": 217.3
+    "Ele": 217.3,
+    "ident": "SK-308",
+    "iso_country": "CO",
+    "local_code": "SDG"
   },
   {
     "type": "small_airport",
@@ -2814,7 +3759,10 @@
     "freq": "",
     "Lat": 4.241389,
     "Lon": -73.217222,
-    "Ele": 219.5
+    "Ele": 219.5,
+    "ident": "SK-309",
+    "iso_country": "CO",
+    "local_code": "CMR"
   },
   {
     "type": "small_airport",
@@ -2823,7 +3771,10 @@
     "freq": "",
     "Lat": 3.488056,
     "Lon": -71.375556,
-    "Ele": 193.5
+    "Ele": 193.5,
+    "ident": "SK-310",
+    "iso_country": "CO",
+    "local_code": "PGP"
   },
   {
     "type": "small_airport",
@@ -2832,7 +3783,10 @@
     "freq": "",
     "Lat": 3.999167,
     "Lon": -73.376389,
-    "Ele": 265.5
+    "Ele": 265.5,
+    "ident": "SK-311",
+    "iso_country": "CO",
+    "local_code": "VCI"
   },
   {
     "type": "small_airport",
@@ -2841,7 +3795,10 @@
     "freq": "",
     "Lat": 4.062778,
     "Lon": -73.139167,
-    "Ele": 197.8
+    "Ele": 197.8,
+    "ident": "SK-312",
+    "iso_country": "CO",
+    "local_code": "PTE"
   },
   {
     "type": "small_airport",
@@ -2850,7 +3807,10 @@
     "freq": "",
     "Lat": 3.331667,
     "Lon": -73.295,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SK-313",
+    "iso_country": "CO",
+    "local_code": "CLA"
   },
   {
     "type": "small_airport",
@@ -2859,7 +3819,10 @@
     "freq": "",
     "Lat": 4.156728,
     "Lon": -72.907257,
-    "Ele": 221.3
+    "Ele": 221.3,
+    "ident": "SK-314",
+    "iso_country": "CO",
+    "local_code": "LAJ"
   },
   {
     "type": "small_airport",
@@ -2868,7 +3831,10 @@
     "freq": "",
     "Lat": 4.0625,
     "Lon": -73.412222,
-    "Ele": 306.9
+    "Ele": 306.9,
+    "ident": "SK-315",
+    "iso_country": "CO",
+    "local_code": "VVD"
   },
   {
     "type": "small_airport",
@@ -2877,7 +3843,10 @@
     "freq": "",
     "Lat": 4.196389,
     "Lon": -73.073056,
-    "Ele": 182.6
+    "Ele": 182.6,
+    "ident": "SK-316",
+    "iso_country": "CO",
+    "local_code": "CUA"
   },
   {
     "type": "small_airport",
@@ -2886,7 +3855,10 @@
     "freq": "",
     "Lat": 3.823333,
     "Lon": -73.532222,
-    "Ele": 310.0
+    "Ele": 310,
+    "ident": "SK-317",
+    "iso_country": "CO",
+    "local_code": "LAU"
   },
   {
     "type": "small_airport",
@@ -2895,7 +3867,10 @@
     "freq": "",
     "Lat": 3.770833,
     "Lon": -71.823889,
-    "Ele": 216.1
+    "Ele": 216.1,
+    "ident": "SK-318",
+    "iso_country": "CO",
+    "local_code": "LML"
   },
   {
     "type": "small_airport",
@@ -2904,7 +3879,10 @@
     "freq": "",
     "Lat": 4.131389,
     "Lon": -73.140833,
-    "Ele": 201.5
+    "Ele": 201.5,
+    "ident": "SK-319",
+    "iso_country": "CO",
+    "local_code": "LOB"
   },
   {
     "type": "small_airport",
@@ -2913,7 +3891,7 @@
     "freq": "",
     "Lat": 4.203521,
     "Lon": -72.98107,
-    "Ele": 178.0
+    "Ele": 178
   },
   {
     "type": "small_airport",
@@ -2922,7 +3900,10 @@
     "freq": "",
     "Lat": 3.463341,
     "Lon": -73.602582,
-    "Ele": 292.6
+    "Ele": 292.6,
+    "ident": "SK-321",
+    "iso_country": "CO",
+    "local_code": "FUT"
   },
   {
     "type": "small_airport",
@@ -2931,7 +3912,10 @@
     "freq": "",
     "Lat": 4.0675,
     "Lon": -73.005,
-    "Ele": 186.2
+    "Ele": 186.2,
+    "ident": "SK-322",
+    "iso_country": "CO",
+    "local_code": "LVE"
   },
   {
     "type": "small_airport",
@@ -2940,7 +3924,10 @@
     "freq": "",
     "Lat": 3.390278,
     "Lon": -73.696389,
-    "Ele": 289.9
+    "Ele": 289.9,
+    "ident": "SK-323",
+    "iso_country": "CO",
+    "local_code": "FUO"
   },
   {
     "type": "small_airport",
@@ -2949,7 +3936,10 @@
     "freq": "",
     "Lat": 3.423889,
     "Lon": -73.769167,
-    "Ele": 331.3
+    "Ele": 331.3,
+    "ident": "SK-324",
+    "iso_country": "CO",
+    "local_code": "GRN"
   },
   {
     "type": "small_airport",
@@ -2958,7 +3948,10 @@
     "freq": "",
     "Lat": 2.898013,
     "Lon": -72.14143,
-    "Ele": 222.5
+    "Ele": 222.5,
+    "ident": "SK-325",
+    "iso_country": "CO",
+    "local_code": "MAP"
   },
   {
     "type": "small_airport",
@@ -2967,7 +3960,10 @@
     "freq": "",
     "Lat": 3.595278,
     "Lon": -73.403611,
-    "Ele": 286.2
+    "Ele": 286.2,
+    "ident": "SK-326",
+    "iso_country": "CO",
+    "local_code": "MTU"
   },
   {
     "type": "small_airport",
@@ -2976,7 +3972,11 @@
     "freq": "",
     "Lat": 3.750453,
     "Lon": -71.456137,
-    "Ele": 185.0
+    "Ele": 185,
+    "ident": "SK-327",
+    "iso_country": "CO",
+    "iata_code": "MSK",
+    "local_code": "PGT"
   },
   {
     "type": "small_airport",
@@ -2985,7 +3985,10 @@
     "freq": "",
     "Lat": 4.330278,
     "Lon": -72.32,
-    "Ele": 181.1
+    "Ele": 181.1,
+    "ident": "SK-328",
+    "iso_country": "CO",
+    "local_code": "MUN"
   },
   {
     "type": "small_airport",
@@ -2994,7 +3997,10 @@
     "freq": "",
     "Lat": 4.069722,
     "Lon": -73.180556,
-    "Ele": 205.4
+    "Ele": 205.4,
+    "ident": "SK-329",
+    "iso_country": "CO",
+    "local_code": "PRL"
   },
   {
     "type": "small_airport",
@@ -3003,7 +4009,10 @@
     "freq": "",
     "Lat": 4.089722,
     "Lon": -73.232778,
-    "Ele": 221.3
+    "Ele": 221.3,
+    "ident": "SK-330",
+    "iso_country": "CO",
+    "local_code": "VVN"
   },
   {
     "type": "small_airport",
@@ -3012,7 +4021,10 @@
     "freq": "",
     "Lat": 4.127222,
     "Lon": -73.076667,
-    "Ele": 187.8
+    "Ele": 187.8,
+    "ident": "SK-331",
+    "iso_country": "CO",
+    "local_code": "PLO"
   },
   {
     "type": "small_airport",
@@ -3021,7 +4033,10 @@
     "freq": "",
     "Lat": 4.361667,
     "Lon": -72.827778,
-    "Ele": 174.3
+    "Ele": 174.3,
+    "ident": "SK-332",
+    "iso_country": "CO",
+    "local_code": "CEU"
   },
   {
     "type": "small_airport",
@@ -3030,7 +4045,10 @@
     "freq": "",
     "Lat": 2.902778,
     "Lon": -71.749444,
-    "Ele": 162.2
+    "Ele": 162.2,
+    "ident": "SK-333",
+    "iso_country": "CO",
+    "local_code": "PCJ"
   },
   {
     "type": "small_airport",
@@ -3039,7 +4057,10 @@
     "freq": "",
     "Lat": 3.289302,
     "Lon": -73.379286,
-    "Ele": 245.4
+    "Ele": 245.4,
+    "ident": "SK-334",
+    "iso_country": "CO",
+    "local_code": "PLL"
   },
   {
     "type": "small_airport",
@@ -3048,7 +4069,10 @@
     "freq": "",
     "Lat": 2.939576,
     "Lon": -73.199167,
-    "Ele": 216.1
+    "Ele": 216.1,
+    "ident": "SK-335",
+    "iso_country": "CO",
+    "local_code": "PUE"
   },
   {
     "type": "small_airport",
@@ -3057,7 +4081,10 @@
     "freq": "",
     "Lat": 3.945278,
     "Lon": -73.536667,
-    "Ele": 341.1
+    "Ele": 341.1,
+    "ident": "SK-336",
+    "iso_country": "CO",
+    "local_code": "ACS"
   },
   {
     "type": "small_airport",
@@ -3066,7 +4093,10 @@
     "freq": "",
     "Lat": 3.854167,
     "Lon": -72.973611,
-    "Ele": 235.9
+    "Ele": 235.9,
+    "ident": "SK-337",
+    "iso_country": "CO",
+    "local_code": "RCN"
   },
   {
     "type": "small_airport",
@@ -3075,7 +4105,10 @@
     "freq": "",
     "Lat": 3.931667,
     "Lon": -72.043333,
-    "Ele": 208.2
+    "Ele": 208.2,
+    "ident": "SK-338",
+    "iso_country": "CO",
+    "local_code": "PGN"
   },
   {
     "type": "small_airport",
@@ -3084,7 +4117,10 @@
     "freq": "",
     "Lat": 4.127222,
     "Lon": -73.238889,
-    "Ele": 224.9
+    "Ele": 224.9,
+    "ident": "SK-339",
+    "iso_country": "CO",
+    "local_code": "PLD"
   },
   {
     "type": "small_airport",
@@ -3093,7 +4129,10 @@
     "freq": "",
     "Lat": 4.433333,
     "Lon": -73.65,
-    "Ele": 2498.8
+    "Ele": 2498.8,
+    "ident": "SK-340",
+    "iso_country": "CO",
+    "local_code": "SJJ"
   },
   {
     "type": "small_airport",
@@ -3102,7 +4141,10 @@
     "freq": "",
     "Lat": 3.501944,
     "Lon": -73.669722,
-    "Ele": 316.7
+    "Ele": 316.7,
+    "ident": "SK-341",
+    "iso_country": "CO",
+    "local_code": "FUL"
   },
   {
     "type": "small_airport",
@@ -3111,7 +4153,10 @@
     "freq": "",
     "Lat": 4.049167,
     "Lon": -73.191111,
-    "Ele": 207.9
+    "Ele": 207.9,
+    "ident": "SK-342",
+    "iso_country": "CO",
+    "local_code": "VVE"
   },
   {
     "type": "small_airport",
@@ -3120,7 +4165,7 @@
     "freq": "",
     "Lat": 3.70239,
     "Lon": -73.68825,
-    "Ele": 420.0
+    "Ele": 420
   },
   {
     "type": "small_airport",
@@ -3129,7 +4174,10 @@
     "freq": "",
     "Lat": 3.868056,
     "Lon": -73.252778,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "SK-344",
+    "iso_country": "CO",
+    "local_code": "SNU"
   },
   {
     "type": "small_airport",
@@ -3138,7 +4186,10 @@
     "freq": "",
     "Lat": 3.840833,
     "Lon": -73.456389,
-    "Ele": 285.6
+    "Ele": 285.6,
+    "ident": "SK-345",
+    "iso_country": "CO",
+    "local_code": "GNU"
   },
   {
     "type": "small_airport",
@@ -3147,7 +4198,10 @@
     "freq": "",
     "Lat": 4.233889,
     "Lon": -73.256111,
-    "Ele": 235.0
+    "Ele": 235,
+    "ident": "SK-346",
+    "iso_country": "CO",
+    "local_code": "CRL"
   },
   {
     "type": "small_airport",
@@ -3156,7 +4210,10 @@
     "freq": "",
     "Lat": 3.988889,
     "Lon": -73.209167,
-    "Ele": 216.7
+    "Ele": 216.7,
+    "ident": "SK-347",
+    "iso_country": "CO",
+    "local_code": "VVU"
   },
   {
     "type": "small_airport",
@@ -3165,7 +4222,11 @@
     "freq": "",
     "Lat": 3.016667,
     "Lon": -71.75,
-    "Ele": 198.7
+    "Ele": 198.7,
+    "ident": "SK-348",
+    "iso_country": "CO",
+    "iata_code": "SOH",
+    "local_code": "SOH"
   },
   {
     "type": "small_airport",
@@ -3174,7 +4235,9 @@
     "freq": "",
     "Lat": 3.926111,
     "Lon": -73.254444,
-    "Ele": 228.0
+    "Ele": 228,
+    "ident": "SK-349",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -3183,7 +4246,10 @@
     "freq": "",
     "Lat": 4.416667,
     "Lon": -73.4975,
-    "Ele": 1724.6
+    "Ele": 1724.6,
+    "ident": "SK-350",
+    "iso_country": "CO",
+    "local_code": "VVL"
   },
   {
     "type": "small_airport",
@@ -3192,7 +4258,10 @@
     "freq": "",
     "Lat": 3.95,
     "Lon": -71.133333,
-    "Ele": 177.7
+    "Ele": 177.7,
+    "ident": "SK-351",
+    "iso_country": "CO",
+    "local_code": "TBI"
   },
   {
     "type": "small_airport",
@@ -3201,7 +4270,10 @@
     "freq": "",
     "Lat": 4.078611,
     "Lon": -73.079444,
-    "Ele": 184.1
+    "Ele": 184.1,
+    "ident": "SK-352",
+    "iso_country": "CO",
+    "local_code": "PLS"
   },
   {
     "type": "small_airport",
@@ -3210,7 +4282,10 @@
     "freq": "",
     "Lat": 4.190422,
     "Lon": -73.261111,
-    "Ele": 226.5
+    "Ele": 226.5,
+    "ident": "SK-353",
+    "iso_country": "CO",
+    "local_code": "UMB"
   },
   {
     "type": "small_airport",
@@ -3219,7 +4294,10 @@
     "freq": "",
     "Lat": 3.146667,
     "Lon": -73.771111,
-    "Ele": 277.1
+    "Ele": 277.1,
+    "ident": "SK-355",
+    "iso_country": "CO",
+    "local_code": "VIH"
   },
   {
     "type": "small_airport",
@@ -3228,7 +4306,10 @@
     "freq": "",
     "Lat": 4.335,
     "Lon": -73.045833,
-    "Ele": 191.7
+    "Ele": 191.7,
+    "ident": "SK-357",
+    "iso_country": "CO",
+    "local_code": "CYE"
   },
   {
     "type": "small_airport",
@@ -3237,7 +4318,10 @@
     "freq": "",
     "Lat": 3.793889,
     "Lon": -72.477778,
-    "Ele": 176.8
+    "Ele": 176.8,
+    "ident": "SK-358",
+    "iso_country": "CO",
+    "local_code": "PTZ"
   },
   {
     "type": "small_airport",
@@ -3246,7 +4330,10 @@
     "freq": "",
     "Lat": 2.35,
     "Lon": -78.316667,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "SK-359",
+    "iso_country": "CO",
+    "local_code": "BDS"
   },
   {
     "type": "small_airport",
@@ -3255,7 +4342,10 @@
     "freq": "",
     "Lat": 1.727778,
     "Lon": -78.940278,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "SK-361",
+    "iso_country": "CO",
+    "local_code": "GUI"
   },
   {
     "type": "small_airport",
@@ -3264,7 +4354,10 @@
     "freq": "",
     "Lat": 2.65,
     "Lon": -78.3,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SK-363",
+    "iso_country": "CO",
+    "local_code": "LMN"
   },
   {
     "type": "small_airport",
@@ -3273,7 +4366,10 @@
     "freq": "",
     "Lat": 1.746389,
     "Lon": -78.165,
-    "Ele": 96.3
+    "Ele": 96.3,
+    "ident": "SK-364",
+    "iso_country": "CO",
+    "local_code": "MGP"
   },
   {
     "type": "small_airport",
@@ -3282,7 +4378,11 @@
     "freq": "",
     "Lat": 2.64955,
     "Lon": -78.3361,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "SK-365",
+    "iso_country": "CO",
+    "iata_code": "MQR",
+    "local_code": "MQR"
   },
   {
     "type": "small_airport",
@@ -3291,7 +4391,11 @@
     "freq": "",
     "Lat": 1.8,
     "Lon": -78.166667,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "SK-366",
+    "iso_country": "CO",
+    "iata_code": "PYN",
+    "local_code": "PYN"
   },
   {
     "type": "small_airport",
@@ -3300,7 +4404,11 @@
     "freq": "",
     "Lat": 2.445825,
     "Lon": -77.981753,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SK-367",
+    "iso_country": "CO",
+    "iata_code": "ISD",
+    "local_code": "SBN"
   },
   {
     "type": "small_airport",
@@ -3309,7 +4417,10 @@
     "freq": "",
     "Lat": 8.2,
     "Lon": -72.5,
-    "Ele": 71.0
+    "Ele": 71,
+    "ident": "SK-368",
+    "iso_country": "CO",
+    "local_code": "CRA"
   },
   {
     "type": "small_airport",
@@ -3318,7 +4429,10 @@
     "freq": "",
     "Lat": 8.497222,
     "Lon": -72.596667,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "SK-369",
+    "iso_country": "CO",
+    "local_code": "PET"
   },
   {
     "type": "small_airport",
@@ -3327,7 +4441,10 @@
     "freq": "",
     "Lat": 8.043373,
     "Lon": -73.211586,
-    "Ele": 1438.7
+    "Ele": 1438.7,
+    "ident": "SK-370",
+    "iso_country": "CO",
+    "local_code": "SLU"
   },
   {
     "type": "small_airport",
@@ -3336,7 +4453,10 @@
     "freq": "",
     "Lat": -0.166505,
     "Lon": -74.7667,
-    "Ele": 191.4
+    "Ele": 191.4,
+    "ident": "SK-371",
+    "iso_country": "CO",
+    "local_code": "LGZ"
   },
   {
     "type": "small_airport",
@@ -3345,7 +4465,10 @@
     "freq": "",
     "Lat": 4.556944,
     "Lon": -75.723889,
-    "Ele": 1330.8
+    "Ele": 1330.8,
+    "ident": "SK-372",
+    "iso_country": "CO",
+    "local_code": "ARE"
   },
   {
     "type": "small_airport",
@@ -3354,7 +4477,10 @@
     "freq": "",
     "Lat": 4.428056,
     "Lon": -75.796944,
-    "Ele": 1167.7
+    "Ele": 1167.7,
+    "ident": "SK-373",
+    "iso_country": "CO",
+    "local_code": "LTB"
   },
   {
     "type": "small_airport",
@@ -3363,7 +4489,10 @@
     "freq": "",
     "Lat": 4.385833,
     "Lon": -75.767778,
-    "Ele": 1157.3
+    "Ele": 1157.3,
+    "ident": "SK-374",
+    "iso_country": "CO",
+    "local_code": "AMN"
   },
   {
     "type": "small_airport",
@@ -3372,7 +4501,10 @@
     "freq": "",
     "Lat": 4.823611,
     "Lon": -75.845278,
-    "Ele": 1186.0
+    "Ele": 1186,
+    "ident": "SK-375",
+    "iso_country": "CO",
+    "local_code": "PEP"
   },
   {
     "type": "small_airport",
@@ -3381,7 +4513,10 @@
     "freq": "",
     "Lat": 4.895556,
     "Lon": -75.915833,
-    "Ele": 896.1
+    "Ele": 896.1,
+    "ident": "SK-376",
+    "iso_country": "CO",
+    "local_code": "BAL"
   },
   {
     "type": "small_airport",
@@ -3390,7 +4525,10 @@
     "freq": "",
     "Lat": 5.943333,
     "Lon": -73.611389,
-    "Ele": 1577.6
+    "Ele": 1577.6,
+    "ident": "SK-377",
+    "iso_country": "CO",
+    "local_code": "BSA"
   },
   {
     "type": "small_airport",
@@ -3399,7 +4537,10 @@
     "freq": "",
     "Lat": 7.463889,
     "Lon": -76.746111,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "SK-378",
+    "iso_country": "CO",
+    "local_code": "BNO"
   },
   {
     "type": "small_airport",
@@ -3408,7 +4549,10 @@
     "freq": "",
     "Lat": 6.75,
     "Lon": -73.916667,
-    "Ele": 94.5
+    "Ele": 94.5,
+    "ident": "SK-379",
+    "iso_country": "CO",
+    "local_code": "CAC"
   },
   {
     "type": "small_airport",
@@ -3417,7 +4561,10 @@
     "freq": "",
     "Lat": 6.386667,
     "Lon": -73.256389,
-    "Ele": 1566.1
+    "Ele": 1566.1,
+    "ident": "SK-380",
+    "iso_country": "CO",
+    "local_code": "ELS"
   },
   {
     "type": "small_airport",
@@ -3426,7 +4573,10 @@
     "freq": "",
     "Lat": 6.740556,
     "Lon": -73.554444,
-    "Ele": 291.4
+    "Ele": 291.4,
+    "ident": "SK-381",
+    "iso_country": "CO",
+    "local_code": "ECC"
   },
   {
     "type": "small_airport",
@@ -3435,7 +4585,10 @@
     "freq": "",
     "Lat": 7.428333,
     "Lon": -73.376111,
-    "Ele": 126.8
+    "Ele": 126.8,
+    "ident": "SK-382",
+    "iso_country": "CO",
+    "local_code": "ELM"
   },
   {
     "type": "small_airport",
@@ -3444,7 +4597,10 @@
     "freq": "",
     "Lat": 7.310278,
     "Lon": -73.578611,
-    "Ele": 152.1
+    "Ele": 152.1,
+    "ident": "SK-383",
+    "iso_country": "CO",
+    "local_code": "PWC"
   },
   {
     "type": "small_airport",
@@ -3453,7 +4609,10 @@
     "freq": "",
     "Lat": 7.621667,
     "Lon": -73.6225,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "SK-384",
+    "iso_country": "CO",
+    "local_code": "ETO"
   },
   {
     "type": "small_airport",
@@ -3462,7 +4621,10 @@
     "freq": "",
     "Lat": 7.167139,
     "Lon": -73.577728,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SK-385",
+    "iso_country": "CO",
+    "local_code": "BJE"
   },
   {
     "type": "small_airport",
@@ -3471,7 +4633,10 @@
     "freq": "",
     "Lat": 7.274167,
     "Lon": -73.8225,
-    "Ele": 92.7
+    "Ele": 92.7,
+    "ident": "SK-386",
+    "iso_country": "CO",
+    "local_code": "LPS"
   },
   {
     "type": "small_airport",
@@ -3480,7 +4645,10 @@
     "freq": "",
     "Lat": 7.363333,
     "Lon": -73.771944,
-    "Ele": 69.5
+    "Ele": 69.5,
+    "ident": "SK-388",
+    "iso_country": "CO",
+    "local_code": "PTW"
   },
   {
     "type": "small_airport",
@@ -3489,7 +4657,10 @@
     "freq": "",
     "Lat": 7.530556,
     "Lon": -73.601667,
-    "Ele": 68.3
+    "Ele": 68.3,
+    "ident": "SK-389",
+    "iso_country": "CO",
+    "local_code": "MAT"
   },
   {
     "type": "small_airport",
@@ -3498,7 +4669,10 @@
     "freq": "",
     "Lat": 7.35,
     "Lon": -73.9,
-    "Ele": 62.2
+    "Ele": 62.2,
+    "ident": "SK-390",
+    "iso_country": "CO",
+    "local_code": "PWT"
   },
   {
     "type": "small_airport",
@@ -3507,7 +4681,10 @@
     "freq": "",
     "Lat": 6.891,
     "Lon": -73.4295,
-    "Ele": 585.2
+    "Ele": 585.2,
+    "ident": "SK-391",
+    "iso_country": "CO",
+    "local_code": "SVT"
   },
   {
     "type": "small_airport",
@@ -3516,7 +4693,11 @@
     "freq": "",
     "Lat": 6.767724,
     "Lon": -73.284444,
-    "Ele": 1943.7
+    "Ele": 1943.7,
+    "ident": "SK-392",
+    "iso_country": "CO",
+    "iata_code": "AZT",
+    "local_code": "AZT"
   },
   {
     "type": "small_airport",
@@ -3525,7 +4706,10 @@
     "freq": "",
     "Lat": 8.501111,
     "Lon": -75.070833,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "SK-393",
+    "iso_country": "CO",
+    "local_code": "EAS"
   },
   {
     "type": "small_airport",
@@ -3534,7 +4718,10 @@
     "freq": "",
     "Lat": 9.774167,
     "Lon": -75.638056,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "SK-394",
+    "iso_country": "CO",
+    "local_code": "SOR"
   },
   {
     "type": "small_airport",
@@ -3543,7 +4730,10 @@
     "freq": "",
     "Lat": 9.715501,
     "Lon": -75.65094,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SK-395",
+    "iso_country": "CO",
+    "local_code": "LMR"
   },
   {
     "type": "small_airport",
@@ -3552,7 +4742,10 @@
     "freq": "",
     "Lat": 8.65,
     "Lon": -75.166667,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "SK-396",
+    "iso_country": "CO",
+    "local_code": "SRS"
   },
   {
     "type": "small_airport",
@@ -3561,7 +4754,10 @@
     "freq": "",
     "Lat": 9.34,
     "Lon": -74.9575,
-    "Ele": 94.8
+    "Ele": 94.8,
+    "ident": "SK-397",
+    "iso_country": "CO",
+    "local_code": "BVS"
   },
   {
     "type": "small_airport",
@@ -3570,7 +4766,10 @@
     "freq": "",
     "Lat": 4.183889,
     "Lon": -74.834722,
-    "Ele": 292.0
+    "Ele": 292,
+    "ident": "SK-398",
+    "iso_country": "CO",
+    "local_code": "FLD"
   },
   {
     "type": "small_airport",
@@ -3579,7 +4778,10 @@
     "freq": "",
     "Lat": 4.467222,
     "Lon": -74.993333,
-    "Ele": 585.2
+    "Ele": 585.2,
+    "ident": "SK-399",
+    "iso_country": "CO",
+    "local_code": "ABT"
   },
   {
     "type": "small_airport",
@@ -3588,7 +4790,10 @@
     "freq": "",
     "Lat": 4.185556,
     "Lon": -74.895833,
-    "Ele": 325.5
+    "Ele": 325.5,
+    "ident": "SK-400",
+    "iso_country": "CO",
+    "local_code": "AGB"
   },
   {
     "type": "small_airport",
@@ -3597,7 +4802,10 @@
     "freq": "",
     "Lat": 4.123056,
     "Lon": -74.910833,
-    "Ele": 322.5
+    "Ele": 322.5,
+    "ident": "SK-401",
+    "iso_country": "CO",
+    "local_code": "ESS"
   },
   {
     "type": "small_airport",
@@ -3606,7 +4814,10 @@
     "freq": "",
     "Lat": 3.570833,
     "Lon": -75.411111,
-    "Ele": 459.0
+    "Ele": 459,
+    "ident": "SK-402",
+    "iso_country": "CO",
+    "local_code": "ATC"
   },
   {
     "type": "small_airport",
@@ -3615,7 +4826,10 @@
     "freq": "",
     "Lat": 4.693611,
     "Lon": -74.891944,
-    "Ele": 301.1
+    "Ele": 301.1,
+    "ident": "SK-403",
+    "iso_country": "CO",
+    "local_code": "BNI"
   },
   {
     "type": "small_airport",
@@ -3624,7 +4838,10 @@
     "freq": "",
     "Lat": 4.488611,
     "Lon": -75.01,
-    "Ele": 616.9
+    "Ele": 616.9,
+    "ident": "SK-404",
+    "iso_country": "CO",
+    "local_code": "CAT"
   },
   {
     "type": "small_airport",
@@ -3633,7 +4850,10 @@
     "freq": "",
     "Lat": 4.841625,
     "Lon": -74.775853,
-    "Ele": 230.4
+    "Ele": 230.4,
+    "ident": "SK-405",
+    "iso_country": "CO",
+    "local_code": "CRR"
   },
   {
     "type": "small_airport",
@@ -3642,7 +4862,10 @@
     "freq": "",
     "Lat": 4.202222,
     "Lon": -74.969722,
-    "Ele": 380.4
+    "Ele": 380.4,
+    "ident": "SK-406",
+    "iso_country": "CO",
+    "local_code": "CHA"
   },
   {
     "type": "small_airport",
@@ -3651,7 +4874,10 @@
     "freq": "",
     "Lat": 4.41,
     "Lon": -75.14,
-    "Ele": 926.3
+    "Ele": 926.3,
+    "ident": "SK-407",
+    "iso_country": "CO",
+    "local_code": "CVT"
   },
   {
     "type": "small_airport",
@@ -3660,7 +4886,10 @@
     "freq": "",
     "Lat": 4.347222,
     "Lon": -75.024167,
-    "Ele": 649.5
+    "Ele": 649.5,
+    "ident": "SK-408",
+    "iso_country": "CO",
+    "local_code": "ECB"
   },
   {
     "type": "small_airport",
@@ -3669,7 +4898,10 @@
     "freq": "",
     "Lat": 4.571667,
     "Lon": -74.939167,
-    "Ele": 386.5
+    "Ele": 386.5,
+    "ident": "SK-409",
+    "iso_country": "CO",
+    "local_code": "ALV"
   },
   {
     "type": "small_airport",
@@ -3678,7 +4910,10 @@
     "freq": "",
     "Lat": 4.395556,
     "Lon": -75.070833,
-    "Ele": 755.6
+    "Ele": 755.6,
+    "ident": "SK-410",
+    "iso_country": "CO",
+    "local_code": "EET"
   },
   {
     "type": "small_airport",
@@ -3687,7 +4922,10 @@
     "freq": "",
     "Lat": 4.150556,
     "Lon": -74.871111,
-    "Ele": 314.2
+    "Ele": 314.2,
+    "ident": "SK-411",
+    "iso_country": "CO",
+    "local_code": "ESP"
   },
   {
     "type": "small_airport",
@@ -3696,7 +4934,10 @@
     "freq": "",
     "Lat": 4.386667,
     "Lon": -75.023333,
-    "Ele": 666.6
+    "Ele": 666.6,
+    "ident": "SK-412",
+    "iso_country": "CO",
+    "local_code": "EPR"
   },
   {
     "type": "small_airport",
@@ -3705,7 +4946,10 @@
     "freq": "",
     "Lat": 4.242778,
     "Lon": -74.8375,
-    "Ele": 295.0
+    "Ele": 295,
+    "ident": "SK-413",
+    "iso_country": "CO",
+    "local_code": "ELR"
   },
   {
     "type": "small_airport",
@@ -3714,7 +4958,10 @@
     "freq": "",
     "Lat": 4.905278,
     "Lon": -74.785,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "SK-414",
+    "iso_country": "CO",
+    "local_code": "AMB"
   },
   {
     "type": "small_airport",
@@ -3723,7 +4970,10 @@
     "freq": "",
     "Lat": 4.868889,
     "Lon": -74.8025,
-    "Ele": 232.0
+    "Ele": 232,
+    "ident": "SK-415",
+    "iso_country": "CO",
+    "local_code": "ETR"
   },
   {
     "type": "small_airport",
@@ -3732,7 +4982,10 @@
     "freq": "",
     "Lat": 3.916667,
     "Lon": -75.016667,
-    "Ele": 309.1
+    "Ele": 309.1,
+    "ident": "SK-416",
+    "iso_country": "CO",
+    "local_code": "SSL"
   },
   {
     "type": "small_airport",
@@ -3741,7 +4994,10 @@
     "freq": "",
     "Lat": 5.170278,
     "Lon": -74.764167,
-    "Ele": 232.3
+    "Ele": 232.3,
+    "ident": "SK-417",
+    "iso_country": "CO",
+    "local_code": "GTT"
   },
   {
     "type": "small_airport",
@@ -3750,16 +5006,22 @@
     "freq": "",
     "Lat": 4.366944,
     "Lon": -75.159444,
-    "Ele": 887.9
+    "Ele": 887.9,
+    "ident": "SK-418",
+    "iso_country": "CO",
+    "local_code": "GUT"
   },
   {
     "type": "small_airport",
     "name": "Guamo - Asta Airport",
     "gps_code": "SK-419",
     "freq": "",
-    "Lat": 4.0,
+    "Lat": 4,
     "Lon": -74.95,
-    "Ele": 305.7
+    "Ele": 305.7,
+    "ident": "SK-419",
+    "iso_country": "CO",
+    "local_code": "GMO"
   },
   {
     "type": "small_airport",
@@ -3768,7 +5030,10 @@
     "freq": "",
     "Lat": 4.853889,
     "Lon": -74.889167,
-    "Ele": 331.3
+    "Ele": 331.3,
+    "ident": "SK-420",
+    "iso_country": "CO",
+    "local_code": "LRI"
   },
   {
     "type": "small_airport",
@@ -3777,7 +5042,10 @@
     "freq": "",
     "Lat": 4.421667,
     "Lon": -75.083056,
-    "Ele": 792.8
+    "Ele": 792.8,
+    "ident": "SK-421",
+    "iso_country": "CO",
+    "local_code": "HOP"
   },
   {
     "type": "small_airport",
@@ -3786,7 +5054,11 @@
     "freq": "",
     "Lat": 3.216667,
     "Lon": -75.85,
-    "Ele": 1749.6
+    "Ele": 1749.6,
+    "ident": "SK-422",
+    "iso_country": "CO",
+    "iata_code": "HRR",
+    "local_code": "HRR"
   },
   {
     "type": "small_airport",
@@ -3795,7 +5067,10 @@
     "freq": "",
     "Lat": 3.842222,
     "Lon": -75.033611,
-    "Ele": 315.2
+    "Ele": 315.2,
+    "ident": "SK-423",
+    "iso_country": "CO",
+    "local_code": "JAB"
   },
   {
     "type": "small_airport",
@@ -3804,7 +5079,10 @@
     "freq": "",
     "Lat": 4.093333,
     "Lon": -74.910278,
-    "Ele": 314.2
+    "Ele": 314.2,
+    "ident": "SK-424",
+    "iso_country": "CO",
+    "local_code": "LAA"
   },
   {
     "type": "small_airport",
@@ -3813,7 +5091,10 @@
     "freq": "",
     "Lat": 4.816111,
     "Lon": -74.931944,
-    "Ele": 438.0
+    "Ele": 438,
+    "ident": "SK-425",
+    "iso_country": "CO",
+    "local_code": "LER"
   },
   {
     "type": "small_airport",
@@ -3822,7 +5103,10 @@
     "freq": "",
     "Lat": 3.882443,
     "Lon": -74.986899,
-    "Ele": 302.7
+    "Ele": 302.7,
+    "ident": "SK-426",
+    "iso_country": "CO",
+    "local_code": "LMT"
   },
   {
     "type": "small_airport",
@@ -3831,7 +5115,10 @@
     "freq": "",
     "Lat": 4.451389,
     "Lon": -74.965556,
-    "Ele": 565.7
+    "Ele": 565.7,
+    "ident": "SK-427",
+    "iso_country": "CO",
+    "local_code": "PRA"
   },
   {
     "type": "small_airport",
@@ -3840,7 +5127,10 @@
     "freq": "",
     "Lat": 3.751111,
     "Lon": -75.9475,
-    "Ele": 3998.7
+    "Ele": 3998.7,
+    "ident": "SK-428",
+    "iso_country": "CO",
+    "local_code": "LGA"
   },
   {
     "type": "small_airport",
@@ -3849,7 +5139,10 @@
     "freq": "",
     "Lat": 4.463611,
     "Lon": -75.033611,
-    "Ele": 669.6
+    "Ele": 669.6,
+    "ident": "SK-429",
+    "iso_country": "CO",
+    "local_code": "LCT"
   },
   {
     "type": "small_airport",
@@ -3858,7 +5151,10 @@
     "freq": "",
     "Lat": 4.258889,
     "Lon": -75.01,
-    "Ele": 452.9
+    "Ele": 452.9,
+    "ident": "SK-430",
+    "iso_country": "CO",
+    "local_code": "SLR"
   },
   {
     "type": "small_airport",
@@ -3867,7 +5163,10 @@
     "freq": "",
     "Lat": 3.915833,
     "Lon": -74.981944,
-    "Ele": 305.1
+    "Ele": 305.1,
+    "ident": "SK-431",
+    "iso_country": "CO",
+    "local_code": "LMS"
   },
   {
     "type": "small_airport",
@@ -3876,7 +5175,10 @@
     "freq": "",
     "Lat": 4.133333,
     "Lon": -74.9,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "SK-432",
+    "iso_country": "CO",
+    "local_code": "NYY"
   },
   {
     "type": "small_airport",
@@ -3885,7 +5187,10 @@
     "freq": "",
     "Lat": 4.759444,
     "Lon": -74.833056,
-    "Ele": 233.8
+    "Ele": 233.8,
+    "ident": "SK-433",
+    "iso_country": "CO",
+    "local_code": "PJS"
   },
   {
     "type": "small_airport",
@@ -3894,7 +5199,15 @@
     "freq": "",
     "Lat": 3.197051,
     "Lon": -75.642042,
-    "Ele": 1198.2
+    "Ele": 1198.2,
+    "ident": "SK-434",
+    "iso_country": "CO",
+    "iata_code": "PLA",
+    "local_code": "PLA",
+    "length_ft": 2214,
+    "width_ft": 59,
+    "heading": 13,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -3903,7 +5216,10 @@
     "freq": "",
     "Lat": 4.329444,
     "Lon": -75.081944,
-    "Ele": 724.2
+    "Ele": 724.2,
+    "ident": "SK-435",
+    "iso_country": "CO",
+    "local_code": "PPT"
   },
   {
     "type": "small_airport",
@@ -3912,7 +5228,10 @@
     "freq": "",
     "Lat": 4.442222,
     "Lon": -75.114722,
-    "Ele": 873.6
+    "Ele": 873.6,
+    "ident": "SK-436",
+    "iso_country": "CO",
+    "local_code": "RGR"
   },
   {
     "type": "small_airport",
@@ -3921,7 +5240,10 @@
     "freq": "",
     "Lat": 3.945278,
     "Lon": -74.940556,
-    "Ele": 299.3
+    "Ele": 299.3,
+    "ident": "SK-437",
+    "iso_country": "CO",
+    "local_code": "SDA"
   },
   {
     "type": "small_airport",
@@ -3930,7 +5252,10 @@
     "freq": "",
     "Lat": 3.650833,
     "Lon": -75.100278,
-    "Ele": 329.5
+    "Ele": 329.5,
+    "ident": "SK-438",
+    "iso_country": "CO",
+    "local_code": "SGT"
   },
   {
     "type": "small_airport",
@@ -3939,7 +5264,11 @@
     "freq": "",
     "Lat": 4.401389,
     "Lon": -75.035556,
-    "Ele": 691.9
+    "Ele": 691.9,
+    "ident": "SK-439",
+    "iso_country": "CO",
+    "local_code": "SJT",
+    "iata_code": "SQB"
   },
   {
     "type": "small_airport",
@@ -3948,7 +5277,10 @@
     "freq": "",
     "Lat": 4.376389,
     "Lon": -74.9,
-    "Ele": 497.7
+    "Ele": 497.7,
+    "ident": "SK-440",
+    "iso_country": "CO",
+    "local_code": "SCY"
   },
   {
     "type": "small_airport",
@@ -3957,7 +5289,10 @@
     "freq": "",
     "Lat": 4.942222,
     "Lon": -74.906389,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SK-441",
+    "iso_country": "CO",
+    "local_code": "LRA"
   },
   {
     "type": "small_airport",
@@ -3975,7 +5310,10 @@
     "freq": "",
     "Lat": 3.790278,
     "Lon": -75.081111,
-    "Ele": 328.0
+    "Ele": 328,
+    "ident": "SK-443",
+    "iso_country": "CO",
+    "local_code": "CYA"
   },
   {
     "type": "small_airport",
@@ -3984,7 +5322,10 @@
     "freq": "",
     "Lat": 4.427989,
     "Lon": -75.01546,
-    "Ele": 670.9
+    "Ele": 670.9,
+    "ident": "SK-444",
+    "iso_country": "CO",
+    "local_code": "TEU"
   },
   {
     "type": "small_airport",
@@ -3993,7 +5334,10 @@
     "freq": "",
     "Lat": 4.014043,
     "Lon": -75.146348,
-    "Ele": 398.7
+    "Ele": 398.7,
+    "ident": "SK-445",
+    "iso_country": "CO",
+    "local_code": "VAV"
   },
   {
     "type": "small_airport",
@@ -4002,7 +5346,10 @@
     "freq": "",
     "Lat": 4.516667,
     "Lon": -74.983333,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "SK-446",
+    "iso_country": "CO",
+    "local_code": "VTQ"
   },
   {
     "type": "small_airport",
@@ -4011,7 +5358,10 @@
     "freq": "",
     "Lat": 4.442222,
     "Lon": -75.035556,
-    "Ele": 689.5
+    "Ele": 689.5,
+    "ident": "SK-447",
+    "iso_country": "CO",
+    "local_code": "PIE"
   },
   {
     "type": "small_airport",
@@ -4020,7 +5370,10 @@
     "freq": "",
     "Lat": 3.361667,
     "Lon": -76.283056,
-    "Ele": 1007.1
+    "Ele": 1007.1,
+    "ident": "SK-448",
+    "iso_country": "CO",
+    "local_code": "CST"
   },
   {
     "type": "small_airport",
@@ -4029,7 +5382,10 @@
     "freq": "",
     "Lat": 3.409444,
     "Lon": -76.406944,
-    "Ele": 960.4
+    "Ele": 960.4,
+    "ident": "SK-449",
+    "iso_country": "CO",
+    "local_code": "CVS"
   },
   {
     "type": "small_airport",
@@ -4038,7 +5394,10 @@
     "freq": "",
     "Lat": 3.973056,
     "Lon": -76.2775,
-    "Ele": 938.2
+    "Ele": 938.2,
+    "ident": "SK-450",
+    "iso_country": "CO",
+    "local_code": "CHB"
   },
   {
     "type": "small_airport",
@@ -4047,7 +5406,10 @@
     "freq": "",
     "Lat": 3.95,
     "Lon": -76.516667,
-    "Ele": 2260.7
+    "Ele": 2260.7,
+    "ident": "SK-451",
+    "iso_country": "CO",
+    "local_code": "DAR"
   },
   {
     "type": "small_airport",
@@ -4056,7 +5418,10 @@
     "freq": "",
     "Lat": 3.853889,
     "Lon": -76.337222,
-    "Ele": 939.4
+    "Ele": 939.4,
+    "ident": "SK-452",
+    "iso_country": "CO",
+    "local_code": "BGN"
   },
   {
     "type": "small_airport",
@@ -4065,7 +5430,10 @@
     "freq": "",
     "Lat": 4.618056,
     "Lon": -75.921667,
-    "Ele": 1008.0
+    "Ele": 1008,
+    "ident": "SK-453",
+    "iso_country": "CO",
+    "local_code": "HEV"
   },
   {
     "type": "small_airport",
@@ -4074,7 +5442,10 @@
     "freq": "",
     "Lat": 3.598889,
     "Lon": -76.303611,
-    "Ele": 1008.9
+    "Ele": 1008.9,
+    "ident": "SK-454",
+    "iso_country": "CO",
+    "local_code": "PMM"
   },
   {
     "type": "small_airport",
@@ -4083,7 +5454,10 @@
     "freq": "",
     "Lat": 3.395,
     "Lon": -76.326944,
-    "Ele": 985.7
+    "Ele": 985.7,
+    "ident": "SK-455",
+    "iso_country": "CO",
+    "local_code": "CAD"
   },
   {
     "type": "small_airport",
@@ -4092,7 +5466,10 @@
     "freq": "",
     "Lat": 3.638333,
     "Lon": -76.305,
-    "Ele": 1008.0
+    "Ele": 1008,
+    "ident": "SK-456",
+    "iso_country": "CO",
+    "local_code": "ELT"
   },
   {
     "type": "small_airport",
@@ -4101,7 +5478,10 @@
     "freq": "",
     "Lat": 3.763056,
     "Lon": -76.349722,
-    "Ele": 960.1
+    "Ele": 960.1,
+    "ident": "SK-457",
+    "iso_country": "CO",
+    "local_code": "GUE"
   },
   {
     "type": "small_airport",
@@ -4110,7 +5490,10 @@
     "freq": "",
     "Lat": 3.779444,
     "Lon": -76.324722,
-    "Ele": 976.9
+    "Ele": 976.9,
+    "ident": "SK-458",
+    "iso_country": "CO",
+    "local_code": "GUR"
   },
   {
     "type": "small_airport",
@@ -4119,7 +5502,10 @@
     "freq": "",
     "Lat": 3.379722,
     "Lon": -76.398889,
-    "Ele": 962.9
+    "Ele": 962.9,
+    "ident": "SK-459",
+    "iso_country": "CO",
+    "local_code": "CDA"
   },
   {
     "type": "small_airport",
@@ -4128,7 +5514,10 @@
     "freq": "",
     "Lat": 3.980556,
     "Lon": -76.249167,
-    "Ele": 955.5
+    "Ele": 955.5,
+    "ident": "SK-460",
+    "iso_country": "CO",
+    "local_code": "SDO"
   },
   {
     "type": "small_airport",
@@ -4137,7 +5526,10 @@
     "freq": "",
     "Lat": 4.563889,
     "Lon": -76.023889,
-    "Ele": 907.4
+    "Ele": 907.4,
+    "ident": "SK-461",
+    "iso_country": "CO",
+    "local_code": "LVC"
   },
   {
     "type": "small_airport",
@@ -4146,7 +5538,10 @@
     "freq": "",
     "Lat": 3.309167,
     "Lon": -76.338889,
-    "Ele": 989.4
+    "Ele": 989.4,
+    "ident": "SK-463",
+    "iso_country": "CO",
+    "local_code": "CNL"
   },
   {
     "type": "small_airport",
@@ -4155,7 +5550,10 @@
     "freq": "",
     "Lat": 4.589167,
     "Lon": -75.981667,
-    "Ele": 922.0
+    "Ele": 922,
+    "ident": "SK-464",
+    "iso_country": "CO",
+    "local_code": "OBA"
   },
   {
     "type": "small_airport",
@@ -4164,7 +5562,10 @@
     "freq": "",
     "Lat": 4.317222,
     "Lon": -76.093611,
-    "Ele": 927.5
+    "Ele": 927.5,
+    "ident": "SK-465",
+    "iso_country": "CO",
+    "local_code": "OPA"
   },
   {
     "type": "small_airport",
@@ -4182,7 +5583,13 @@
     "freq": "",
     "Lat": 4.375313,
     "Lon": -76.074034,
-    "Ele": 927.8
+    "Ele": 927.8,
+    "ident": "SK-467",
+    "iso_country": "CO",
+    "local_code": "ZAR",
+    "length_ft": 4080,
+    "heading": 166,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -4191,7 +5598,10 @@
     "freq": "",
     "Lat": 4.201667,
     "Lon": -76.016944,
-    "Ele": 1046.7
+    "Ele": 1046.7,
+    "ident": "SK-468",
+    "iso_country": "CO",
+    "local_code": "BDE"
   },
   {
     "type": "small_airport",
@@ -4200,7 +5610,10 @@
     "freq": "",
     "Lat": 4.413056,
     "Lon": -76.123333,
-    "Ele": 911.4
+    "Ele": 911.4,
+    "ident": "SK-469",
+    "iso_country": "CO",
+    "local_code": "TIB"
   },
   {
     "type": "small_airport",
@@ -4209,7 +5622,10 @@
     "freq": "",
     "Lat": 3.233889,
     "Lon": -76.503889,
-    "Ele": 958.0
+    "Ele": 958,
+    "ident": "SK-470",
+    "iso_country": "CO",
+    "local_code": "JDI"
   },
   {
     "type": "small_airport",
@@ -4218,7 +5634,11 @@
     "freq": "",
     "Lat": 0.533333,
     "Lon": -70.133333,
-    "Ele": 178.9
+    "Ele": 178.9,
+    "ident": "SK-471",
+    "iso_country": "CO",
+    "iata_code": "ARF",
+    "local_code": "ARF"
   },
   {
     "type": "small_airport",
@@ -4227,7 +5647,10 @@
     "freq": "",
     "Lat": 0.470833,
     "Lon": -70.184722,
-    "Ele": 172.8
+    "Ele": 172.8,
+    "ident": "SK-472",
+    "iso_country": "CO",
+    "local_code": "MIB"
   },
   {
     "type": "small_airport",
@@ -4236,7 +5659,10 @@
     "freq": "",
     "Lat": 1.5975,
     "Lon": -70.799444,
-    "Ele": 190.8
+    "Ele": 190.8,
+    "ident": "SK-473",
+    "iso_country": "CO",
+    "local_code": "MBQ"
   },
   {
     "type": "small_airport",
@@ -4245,7 +5671,10 @@
     "freq": "",
     "Lat": 0.020278,
     "Lon": -71.0075,
-    "Ele": 157.9
+    "Ele": 157.9,
+    "ident": "SK-474",
+    "iso_country": "CO",
+    "local_code": "MTN"
   },
   {
     "type": "small_airport",
@@ -4254,7 +5683,10 @@
     "freq": "",
     "Lat": 0.554167,
     "Lon": -71.926389,
-    "Ele": 169.8
+    "Ele": 169.8,
+    "ident": "SK-475",
+    "iso_country": "CO",
+    "local_code": "MCP"
   },
   {
     "type": "small_airport",
@@ -4263,7 +5695,10 @@
     "freq": "",
     "Lat": 0.545,
     "Lon": -70.928611,
-    "Ele": 196.6
+    "Ele": 196.6,
+    "ident": "SK-476",
+    "iso_country": "CO",
+    "local_code": "MCI"
   },
   {
     "type": "small_airport",
@@ -4272,7 +5707,10 @@
     "freq": "",
     "Lat": 0.365,
     "Lon": -70.443333,
-    "Ele": 212.1
+    "Ele": 212.1,
+    "ident": "SK-477",
+    "iso_country": "CO",
+    "local_code": "MOL"
   },
   {
     "type": "small_airport",
@@ -4281,7 +5719,10 @@
     "freq": "",
     "Lat": 0.970556,
     "Lon": -69.230556,
-    "Ele": 125.9
+    "Ele": 125.9,
+    "ident": "SK-478",
+    "iso_country": "CO",
+    "local_code": "MIC"
   },
   {
     "type": "small_airport",
@@ -4290,7 +5731,10 @@
     "freq": "",
     "Lat": 1.726111,
     "Lon": -69.845278,
-    "Ele": 176.2
+    "Ele": 176.2,
+    "ident": "SK-479",
+    "iso_country": "CO",
+    "local_code": "MKA"
   },
   {
     "type": "small_airport",
@@ -4299,7 +5743,10 @@
     "freq": "",
     "Lat": 0.576389,
     "Lon": -70.129722,
-    "Ele": 183.2
+    "Ele": 183.2,
+    "ident": "SK-480",
+    "iso_country": "CO",
+    "local_code": "MVU"
   },
   {
     "type": "small_airport",
@@ -4308,7 +5755,11 @@
     "freq": "",
     "Lat": 0.633333,
     "Lon": -69.75,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "SK-481",
+    "iso_country": "CO",
+    "iata_code": "MFB",
+    "local_code": "MFB"
   },
   {
     "type": "small_airport",
@@ -4317,7 +5768,11 @@
     "freq": "",
     "Lat": 1.75,
     "Lon": -69.916667,
-    "Ele": 168.2
+    "Ele": 168.2,
+    "ident": "SK-482",
+    "iso_country": "CO",
+    "iata_code": "MHF",
+    "local_code": "MHF"
   },
   {
     "type": "small_airport",
@@ -4326,7 +5781,10 @@
     "freq": "",
     "Lat": 0.066667,
     "Lon": -71.208333,
-    "Ele": 167.3
+    "Ele": 167.3,
+    "ident": "SK-484",
+    "iso_country": "CO",
+    "local_code": "PCA"
   },
   {
     "type": "small_airport",
@@ -4335,7 +5793,10 @@
     "freq": "",
     "Lat": 1.630833,
     "Lon": -70.363889,
-    "Ele": 184.4
+    "Ele": 184.4,
+    "ident": "SK-485",
+    "iso_country": "CO",
+    "local_code": "MPU"
   },
   {
     "type": "small_airport",
@@ -4344,7 +5805,10 @@
     "freq": "",
     "Lat": 1.907222,
     "Lon": -70.761944,
-    "Ele": 156.4
+    "Ele": 156.4,
+    "ident": "SK-486",
+    "iso_country": "CO",
+    "local_code": "MTC"
   },
   {
     "type": "small_airport",
@@ -4353,7 +5817,10 @@
     "freq": "",
     "Lat": 0.670278,
     "Lon": -69.651389,
-    "Ele": 139.3
+    "Ele": 139.3,
+    "ident": "SK-488",
+    "iso_country": "CO",
+    "local_code": "MPI"
   },
   {
     "type": "small_airport",
@@ -4362,7 +5829,10 @@
     "freq": "",
     "Lat": 0.679722,
     "Lon": -70.4375,
-    "Ele": 197.8
+    "Ele": 197.8,
+    "ident": "SK-489",
+    "iso_country": "CO",
+    "local_code": "MSA"
   },
   {
     "type": "small_airport",
@@ -4371,7 +5841,10 @@
     "freq": "",
     "Lat": 0.769722,
     "Lon": -70.284722,
-    "Ele": 176.8
+    "Ele": 176.8,
+    "ident": "SK-490",
+    "iso_country": "CO",
+    "local_code": "MGO"
   },
   {
     "type": "small_airport",
@@ -4380,7 +5853,10 @@
     "freq": "",
     "Lat": 0.874444,
     "Lon": -70.346389,
-    "Ele": 193.5
+    "Ele": 193.5,
+    "ident": "SK-491",
+    "iso_country": "CO",
+    "local_code": "MSP"
   },
   {
     "type": "small_airport",
@@ -4389,7 +5865,10 @@
     "freq": "",
     "Lat": 0.003889,
     "Lon": -70.497222,
-    "Ele": 129.2
+    "Ele": 129.2,
+    "ident": "SK-492",
+    "iso_country": "CO",
+    "local_code": "MGU"
   },
   {
     "type": "small_airport",
@@ -4398,7 +5877,10 @@
     "freq": "",
     "Lat": 0.783056,
     "Lon": -70.322778,
-    "Ele": 179.5
+    "Ele": 179.5,
+    "ident": "SK-493",
+    "iso_country": "CO",
+    "local_code": "MSN"
   },
   {
     "type": "small_airport",
@@ -4407,7 +5889,10 @@
     "freq": "",
     "Lat": 0.117778,
     "Lon": -70.193056,
-    "Ele": 181.7
+    "Ele": 181.7,
+    "ident": "SK-494",
+    "iso_country": "CO",
+    "local_code": "MIS"
   },
   {
     "type": "small_airport",
@@ -4416,7 +5901,10 @@
     "freq": "",
     "Lat": 1.382852,
     "Lon": -70.006889,
-    "Ele": 231.0
+    "Ele": 231,
+    "ident": "SK-495",
+    "iso_country": "CO",
+    "local_code": "MSI"
   },
   {
     "type": "small_airport",
@@ -4425,7 +5913,10 @@
     "freq": "",
     "Lat": 1.652778,
     "Lon": -70.409722,
-    "Ele": 185.3
+    "Ele": 185.3,
+    "ident": "SK-496",
+    "iso_country": "CO",
+    "local_code": "MSR"
   },
   {
     "type": "small_airport",
@@ -4434,7 +5925,10 @@
     "freq": "",
     "Lat": 0.130833,
     "Lon": -70.579167,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "SK-497",
+    "iso_country": "CO",
+    "local_code": "MSO"
   },
   {
     "type": "small_airport",
@@ -4443,7 +5937,10 @@
     "freq": "",
     "Lat": 1.473056,
     "Lon": -70.162778,
-    "Ele": 189.3
+    "Ele": 189.3,
+    "ident": "SK-498",
+    "iso_country": "CO",
+    "local_code": "MUR"
   },
   {
     "type": "small_airport",
@@ -4452,7 +5949,10 @@
     "freq": "",
     "Lat": 0.5675,
     "Lon": -69.637222,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SK-499",
+    "iso_country": "CO",
+    "local_code": "TAR"
   },
   {
     "type": "small_airport",
@@ -4461,7 +5961,10 @@
     "freq": "",
     "Lat": 0.738056,
     "Lon": -69.471389,
-    "Ele": 126.2
+    "Ele": 126.2,
+    "ident": "SK-500",
+    "iso_country": "CO",
+    "local_code": "MTS"
   },
   {
     "type": "small_airport",
@@ -4470,7 +5973,10 @@
     "freq": "",
     "Lat": 0.234167,
     "Lon": -70.168889,
-    "Ele": 157.9
+    "Ele": 157.9,
+    "ident": "SK-501",
+    "iso_country": "CO",
+    "local_code": "MTI"
   },
   {
     "type": "small_airport",
@@ -4479,7 +5985,10 @@
     "freq": "",
     "Lat": 0.974444,
     "Lon": -69.956944,
-    "Ele": 177.7
+    "Ele": 177.7,
+    "ident": "SK-502",
+    "iso_country": "CO",
+    "local_code": "MVI"
   },
   {
     "type": "small_airport",
@@ -4488,7 +5997,10 @@
     "freq": "",
     "Lat": 0.260556,
     "Lon": -71.356389,
-    "Ele": 167.3
+    "Ele": 167.3,
+    "ident": "SK-503",
+    "iso_country": "CO",
+    "local_code": "MVA"
   },
   {
     "type": "small_airport",
@@ -4497,7 +6009,10 @@
     "freq": "",
     "Lat": 0.280556,
     "Lon": -70.456667,
-    "Ele": 189.6
+    "Ele": 189.6,
+    "ident": "SK-504",
+    "iso_country": "CO",
+    "local_code": "MVN"
   },
   {
     "type": "small_airport",
@@ -4506,7 +6021,10 @@
     "freq": "",
     "Lat": 0.2,
     "Lon": -70.225,
-    "Ele": 175.9
+    "Ele": 175.9,
+    "ident": "SK-505",
+    "iso_country": "CO",
+    "local_code": "MIT"
   },
   {
     "type": "small_airport",
@@ -4515,7 +6033,10 @@
     "freq": "",
     "Lat": 0.866667,
     "Lon": -69.617222,
-    "Ele": 140.5
+    "Ele": 140.5,
+    "ident": "SK-506",
+    "iso_country": "CO",
+    "local_code": "MWA"
   },
   {
     "type": "small_airport",
@@ -4524,7 +6045,10 @@
     "freq": "",
     "Lat": 1.660833,
     "Lon": -70.019444,
-    "Ele": 172.8
+    "Ele": 172.8,
+    "ident": "SK-507",
+    "iso_country": "CO",
+    "local_code": "MWY"
   },
   {
     "type": "small_airport",
@@ -4533,7 +6057,10 @@
     "freq": "",
     "Lat": 1.0825,
     "Lon": -69.491389,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "SK-508",
+    "iso_country": "CO",
+    "local_code": "YAP"
   },
   {
     "type": "small_airport",
@@ -4542,7 +6069,10 @@
     "freq": "",
     "Lat": 0.621667,
     "Lon": -70.351667,
-    "Ele": 185.9
+    "Ele": 185.9,
+    "ident": "SK-509",
+    "iso_country": "CO",
+    "local_code": "MYA"
   },
   {
     "type": "small_airport",
@@ -4551,7 +6081,11 @@
     "freq": "",
     "Lat": 0.611772,
     "Lon": -69.207369,
-    "Ele": 106.4
+    "Ele": 106.4,
+    "ident": "SK-510",
+    "iso_country": "CO",
+    "iata_code": "VAB",
+    "local_code": "VAB"
   },
   {
     "type": "small_airport",
@@ -4560,7 +6094,11 @@
     "freq": "",
     "Lat": 5.833333,
     "Lon": -68.133333,
-    "Ele": 74.7
+    "Ele": 74.7,
+    "ident": "SK-511",
+    "iso_country": "CO",
+    "iata_code": "CSR",
+    "local_code": "CSR"
   },
   {
     "type": "small_airport",
@@ -4569,7 +6107,10 @@
     "freq": "",
     "Lat": 5.335174,
     "Lon": -67.866615,
-    "Ele": 83.5
+    "Ele": 83.5,
+    "ident": "SK-512",
+    "iso_country": "CO",
+    "local_code": "CAO"
   },
   {
     "type": "small_airport",
@@ -4578,7 +6119,10 @@
     "freq": "",
     "Lat": 4.016667,
     "Lon": -70.883333,
-    "Ele": 132.0
+    "Ele": 132,
+    "ident": "SK-513",
+    "iso_country": "CO",
+    "local_code": "CAV"
   },
   {
     "type": "small_airport",
@@ -4587,7 +6131,10 @@
     "freq": "",
     "Lat": 4.4483,
     "Lon": -69.7807,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "SK-514",
+    "iso_country": "CO",
+    "local_code": "PCE"
   },
   {
     "type": "small_airport",
@@ -4596,7 +6143,10 @@
     "freq": "",
     "Lat": 5.939722,
     "Lon": -69.264444,
-    "Ele": 109.4
+    "Ele": 109.4,
+    "ident": "SK-515",
+    "iso_country": "CO",
+    "local_code": "LPR"
   },
   {
     "type": "small_airport",
@@ -4605,7 +6155,10 @@
     "freq": "",
     "Lat": 5.226667,
     "Lon": -69.737222,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "SK-516",
+    "iso_country": "CO",
+    "local_code": "LPG"
   },
   {
     "type": "small_airport",
@@ -4614,7 +6167,10 @@
     "freq": "",
     "Lat": 5.15,
     "Lon": -69.183333,
-    "Ele": 127.7
+    "Ele": 127.7,
+    "ident": "SK-517",
+    "iso_country": "CO",
+    "local_code": "ETA"
   },
   {
     "type": "small_airport",
@@ -4623,7 +6179,11 @@
     "freq": "",
     "Lat": 3.629996,
     "Lon": -70.323028,
-    "Ele": 143.6
+    "Ele": 143.6,
+    "ident": "SK-518",
+    "iso_country": "CO",
+    "iata_code": "GMC",
+    "local_code": "GRM"
   },
   {
     "type": "small_airport",
@@ -4632,7 +6192,10 @@
     "freq": "",
     "Lat": 4.883889,
     "Lon": -68.356389,
-    "Ele": 108.5
+    "Ele": 108.5,
+    "ident": "SK-519",
+    "iso_country": "CO",
+    "local_code": "PRR"
   },
   {
     "type": "small_airport",
@@ -4641,7 +6204,10 @@
     "freq": "",
     "Lat": 5.307778,
     "Lon": -69.831944,
-    "Ele": 115.8
+    "Ele": 115.8,
+    "ident": "SK-520",
+    "iso_country": "CO",
+    "local_code": "LJV"
   },
   {
     "type": "small_airport",
@@ -4650,7 +6216,10 @@
     "freq": "",
     "Lat": 3.828056,
     "Lon": -70.589167,
-    "Ele": 133.5
+    "Ele": 133.5,
+    "ident": "SK-522",
+    "iso_country": "CO",
+    "local_code": "PTC"
   },
   {
     "type": "small_airport",
@@ -4659,7 +6228,9 @@
     "freq": "",
     "Lat": 4.583333,
     "Lon": -70.833333,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "SK-523",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -4668,7 +6239,10 @@
     "freq": "",
     "Lat": 6.1525,
     "Lon": -68.817778,
-    "Ele": 71.3
+    "Ele": 71.3,
+    "ident": "SK-524",
+    "iso_country": "CO",
+    "local_code": "PNQ"
   },
   {
     "type": "small_airport",
@@ -4677,7 +6251,10 @@
     "freq": "",
     "Lat": 5.322778,
     "Lon": -69.950556,
-    "Ele": 118.0
+    "Ele": 118,
+    "ident": "SK-525",
+    "iso_country": "CO",
+    "local_code": "LPV"
   },
   {
     "type": "small_airport",
@@ -4686,7 +6263,10 @@
     "freq": "",
     "Lat": 4.033333,
     "Lon": -70.833333,
-    "Ele": 136.9
+    "Ele": 136.9,
+    "ident": "SK-526",
+    "iso_country": "CO",
+    "local_code": "SCS"
   },
   {
     "type": "small_airport",
@@ -4695,7 +6275,10 @@
     "freq": "",
     "Lat": 4.082222,
     "Lon": -70.253889,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "SK-527",
+    "iso_country": "CO",
+    "local_code": "PRE"
   },
   {
     "type": "small_airport",
@@ -4713,7 +6296,14 @@
     "freq": "",
     "Lat": 3.88,
     "Lon": -73.339996,
-    "Ele": 254.8
+    "Ele": 254.8,
+    "ident": "SK53",
+    "iso_country": "CO",
+    "local_code": "SK53",
+    "length_ft": 4198,
+    "width_ft": 49,
+    "heading": 65,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -4722,7 +6312,12 @@
     "freq": "",
     "Lat": -0.600854,
     "Lon": -72.398011,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "SKAC",
+    "iso_country": "CO",
+    "icao_code": "SKAC",
+    "iata_code": "ACR",
+    "local_code": "ACR"
   },
   {
     "type": "small_airport",
@@ -4731,7 +6326,12 @@
     "freq": "",
     "Lat": 8.497847,
     "Lon": -77.274106,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "SKAD",
+    "iso_country": "CO",
+    "icao_code": "SKAD",
+    "iata_code": "ACD",
+    "local_code": "ACD"
   },
   {
     "type": "small_airport",
@@ -4740,7 +6340,16 @@
     "freq": "",
     "Lat": 8.247,
     "Lon": -73.5814,
-    "Ele": 166.1
+    "Ele": 166.1,
+    "ident": "SKAG",
+    "iso_country": "CO",
+    "icao_code": "SKAG",
+    "iata_code": "HAY",
+    "local_code": "AGH",
+    "length_ft": 3937,
+    "width_ft": 148,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4749,7 +6358,12 @@
     "freq": "",
     "Lat": 6.895033,
     "Lon": -75.047334,
-    "Ele": 1678.5
+    "Ele": 1678.5,
+    "ident": "SKAM",
+    "iso_country": "CO",
+    "icao_code": "SKAM",
+    "iata_code": "AFI",
+    "local_code": "AFI"
   },
   {
     "type": "medium_airport",
@@ -4758,7 +6372,16 @@
     "freq": "119.300",
     "Lat": 4.07607,
     "Lon": -73.5627,
-    "Ele": 367.9
+    "Ele": 367.9,
+    "ident": "SKAP",
+    "iso_country": "CO",
+    "icao_code": "SKAP",
+    "iata_code": "API",
+    "local_code": "APY",
+    "QFU": "28",
+    "length_ft": 8204,
+    "width_ft": 164,
+    "heading": 95
   },
   {
     "type": "medium_airport",
@@ -4767,7 +6390,16 @@
     "freq": "120.700",
     "Lat": 4.45278,
     "Lon": -75.7664,
-    "Ele": 1216.2
+    "Ele": 1216.2,
+    "ident": "SKAR",
+    "iso_country": "CO",
+    "icao_code": "SKAR",
+    "iata_code": "AXM",
+    "local_code": "AXM",
+    "length_ft": 7045,
+    "width_ft": 118,
+    "heading": 13,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -4776,7 +6408,16 @@
     "freq": "348.800",
     "Lat": 0.505228,
     "Lon": -76.5008,
-    "Ele": 248.4
+    "Ele": 248.4,
+    "ident": "SKAS",
+    "iso_country": "CO",
+    "icao_code": "SKAS",
+    "iata_code": "PUU",
+    "local_code": "PUU",
+    "length_ft": 5331,
+    "width_ft": 131,
+    "heading": 8.6,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -4785,7 +6426,12 @@
     "freq": "",
     "Lat": 7.02106,
     "Lon": -71.388901,
-    "Ele": 156.1
+    "Ele": 156.1,
+    "ident": "SKAT",
+    "iso_country": "CO",
+    "icao_code": "SKAT",
+    "iata_code": "ARQ",
+    "local_code": "ARQ"
   },
   {
     "type": "medium_airport",
@@ -4794,7 +6440,16 @@
     "freq": "348.800",
     "Lat": 9.04554,
     "Lon": -73.9749,
-    "Ele": 33.8
+    "Ele": 33.8,
+    "ident": "SKBC",
+    "iso_country": "CO",
+    "icao_code": "SKBC",
+    "iata_code": "ELB",
+    "local_code": "ELB",
+    "length_ft": 3985,
+    "width_ft": 93,
+    "heading": 99.7,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -4803,7 +6458,10 @@
     "freq": "",
     "Lat": 9.66278,
     "Lon": -73.2744,
-    "Ele": 132.0
+    "Ele": 132,
+    "ident": "SKBE",
+    "iso_country": "CO",
+    "local_code": "BEC"
   },
   {
     "type": "medium_airport",
@@ -4812,7 +6470,16 @@
     "freq": "348.800",
     "Lat": 7.1265,
     "Lon": -73.1848,
-    "Ele": 1187.8
+    "Ele": 1187.8,
+    "ident": "SKBG",
+    "iso_country": "CO",
+    "icao_code": "SKBG",
+    "iata_code": "BGA",
+    "local_code": "BGA",
+    "length_ft": 7381,
+    "width_ft": 131,
+    "heading": 159,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -4821,7 +6488,11 @@
     "freq": "",
     "Lat": 3.490691,
     "Lon": -69.808151,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "SKBM",
+    "iso_country": "CO",
+    "icao_code": "SKBM",
+    "iata_code": "NBB"
   },
   {
     "type": "small_airport",
@@ -4830,7 +6501,14 @@
     "freq": "",
     "Lat": 10.8879,
     "Lon": -72.9004,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "SKBN",
+    "iso_country": "CO",
+    "local_code": "BVA",
+    "length_ft": 4935,
+    "width_ft": 98,
+    "heading": 26.7,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -4839,7 +6517,16 @@
     "freq": "119.500",
     "Lat": 4.70159,
     "Lon": -74.1469,
-    "Ele": 2548.4
+    "Ele": 2548.4,
+    "ident": "SKBO",
+    "iso_country": "CO",
+    "icao_code": "SKBO",
+    "iata_code": "BOG",
+    "local_code": "BOG",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "heading": 127,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -4848,7 +6535,16 @@
     "freq": "119.100",
     "Lat": 10.8896,
     "Lon": -74.7808,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "SKBQ",
+    "iso_country": "CO",
+    "icao_code": "SKBQ",
+    "iata_code": "BAQ",
+    "local_code": "BAQ",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 40,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -4857,7 +6553,10 @@
     "freq": "",
     "Lat": 8.885319,
     "Lon": -75.682189,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "SKBR",
+    "iso_country": "CO",
+    "local_code": "BIC"
   },
   {
     "type": "medium_airport",
@@ -4866,7 +6565,16 @@
     "freq": "348.800",
     "Lat": 6.20292,
     "Lon": -77.3947,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "SKBS",
+    "iso_country": "CO",
+    "icao_code": "SKBS",
+    "iata_code": "BSC",
+    "local_code": "BSC",
+    "QFU": "36",
+    "length_ft": 3973,
+    "width_ft": 78,
+    "heading": 174
   },
   {
     "type": "medium_airport",
@@ -4875,7 +6583,16 @@
     "freq": "348.800",
     "Lat": 3.81963,
     "Lon": -76.9898,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "SKBU",
+    "iso_country": "CO",
+    "icao_code": "SKBU",
+    "iata_code": "BUN",
+    "local_code": "BUN",
+    "length_ft": 3945,
+    "width_ft": 76,
+    "heading": 86,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -4884,7 +6601,12 @@
     "freq": "",
     "Lat": 8.632169,
     "Lon": -77.350262,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "SKCA",
+    "iso_country": "CO",
+    "icao_code": "SKCA",
+    "iata_code": "CPB",
+    "local_code": "CPB"
   },
   {
     "type": "small_airport",
@@ -4893,7 +6615,10 @@
     "freq": "",
     "Lat": 9.68417,
     "Lon": -75.1261,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SKCB",
+    "iso_country": "CO",
+    "local_code": "CBR"
   },
   {
     "type": "medium_airport",
@@ -4902,7 +6627,16 @@
     "freq": "119.900",
     "Lat": 7.92757,
     "Lon": -72.5115,
-    "Ele": 334.1
+    "Ele": 334.1,
+    "ident": "SKCC",
+    "iso_country": "CO",
+    "icao_code": "SKCC",
+    "iata_code": "CUC",
+    "local_code": "CUC",
+    "length_ft": 7700,
+    "width_ft": 148,
+    "heading": 148,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -4911,7 +6645,16 @@
     "freq": "",
     "Lat": 5.072007,
     "Lon": -76.676373,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "SKCD",
+    "iso_country": "CO",
+    "icao_code": "SKCD",
+    "iata_code": "COG",
+    "local_code": "COG",
+    "length_ft": 3980,
+    "width_ft": 72,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -4920,7 +6663,16 @@
     "freq": "119.100",
     "Lat": 10.4424,
     "Lon": -75.513,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "SKCG",
+    "iso_country": "CO",
+    "icao_code": "SKCG",
+    "iata_code": "CTG",
+    "local_code": "CTG",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -4929,7 +6681,10 @@
     "freq": "",
     "Lat": 1.35,
     "Lon": -74.84,
-    "Ele": 229.8
+    "Ele": 229.8,
+    "ident": "SKCH",
+    "iso_country": "CO",
+    "local_code": "CCH"
   },
   {
     "type": "small_airport",
@@ -4938,7 +6693,12 @@
     "freq": "",
     "Lat": 4.56417,
     "Lon": -71.3364,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "SKCI",
+    "iso_country": "CO",
+    "icao_code": "SKCI",
+    "iata_code": "CCO",
+    "local_code": "CCO"
   },
   {
     "type": "medium_airport",
@@ -4947,7 +6707,16 @@
     "freq": "119.100",
     "Lat": 3.54322,
     "Lon": -76.3816,
-    "Ele": 963.8
+    "Ele": 963.8,
+    "ident": "SKCL",
+    "iso_country": "CO",
+    "icao_code": "SKCL",
+    "iata_code": "CLO",
+    "local_code": "CLO",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 10,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -4956,7 +6725,12 @@
     "freq": "",
     "Lat": 6.367484,
     "Lon": -73.970658,
-    "Ele": 225.6
+    "Ele": 225.6,
+    "ident": "SKCM",
+    "iso_country": "CO",
+    "icao_code": "SKCM",
+    "iata_code": "CIM",
+    "local_code": "CIM"
   },
   {
     "type": "small_airport",
@@ -4965,7 +6739,16 @@
     "freq": "",
     "Lat": 6.316404,
     "Lon": -70.21137,
-    "Ele": 103.9
+    "Ele": 103.9,
+    "ident": "SKCN",
+    "iso_country": "CO",
+    "icao_code": "SKCN",
+    "iata_code": "RAV",
+    "local_code": "RAV",
+    "length_ft": 3675,
+    "width_ft": 45,
+    "heading": 39.9,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -4974,7 +6757,16 @@
     "freq": "348.800",
     "Lat": 1.81442,
     "Lon": -78.7492,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "SKCO",
+    "iso_country": "CO",
+    "icao_code": "SKCO",
+    "iata_code": "TCO",
+    "local_code": "TCO",
+    "length_ft": 5249,
+    "width_ft": 90,
+    "heading": 54,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -4983,7 +6775,11 @@
     "freq": "",
     "Lat": 6.694817,
     "Lon": -77.493643,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SKCP",
+    "iso_country": "CO",
+    "icao_code": "SKCP",
+    "iata_code": "BHF"
   },
   {
     "type": "small_airport",
@@ -4992,7 +6788,12 @@
     "freq": "",
     "Lat": 1.013822,
     "Lon": -71.297343,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "SKCR",
+    "iso_country": "CO",
+    "icao_code": "SKCR",
+    "iata_code": "CUO",
+    "local_code": "CRU"
   },
   {
     "type": "medium_airport",
@@ -5001,7 +6802,16 @@
     "freq": "",
     "Lat": 7.96847,
     "Lon": -75.1985,
-    "Ele": 53.0
+    "Ele": 53,
+    "ident": "SKCU",
+    "iso_country": "CO",
+    "icao_code": "SKCU",
+    "iata_code": "CAQ",
+    "local_code": "CAQ",
+    "length_ft": 3794,
+    "width_ft": 66,
+    "heading": 14,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -5010,7 +6820,16 @@
     "freq": "126.200",
     "Lat": 9.40092,
     "Lon": -75.6913,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "SKCV",
+    "iso_country": "CO",
+    "icao_code": "SKCV",
+    "iata_code": "CVE",
+    "local_code": "CVE",
+    "length_ft": 4396,
+    "width_ft": 98,
+    "heading": 50.2,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -5019,7 +6838,16 @@
     "freq": "348.800",
     "Lat": 9.33274,
     "Lon": -75.2856,
-    "Ele": 160.9
+    "Ele": 160.9,
+    "ident": "SKCZ",
+    "iso_country": "CO",
+    "icao_code": "SKCZ",
+    "iata_code": "CZU",
+    "local_code": "CZU",
+    "length_ft": 4930,
+    "width_ft": 98,
+    "heading": 19.8,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5028,7 +6856,16 @@
     "freq": "",
     "Lat": 7.59647,
     "Lon": -74.8089,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "SKEB",
+    "iso_country": "CO",
+    "icao_code": "SKEB",
+    "iata_code": "EBG",
+    "local_code": "EBG",
+    "length_ft": 4310,
+    "width_ft": 40,
+    "heading": 184,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -5037,7 +6874,12 @@
     "freq": "",
     "Lat": 2.44944444444,
     "Lon": -78.0941666667,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "SKEH",
+    "iso_country": "CO",
+    "icao_code": "SKEH",
+    "iata_code": "ECR",
+    "local_code": "ECR"
   },
   {
     "type": "medium_airport",
@@ -5046,7 +6888,16 @@
     "freq": "119.000",
     "Lat": 7.02433,
     "Lon": -73.8068,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "SKEJ",
+    "iso_country": "CO",
+    "icao_code": "SKEJ",
+    "iata_code": "EJA",
+    "local_code": "EJA",
+    "length_ft": 5905,
+    "width_ft": 148,
+    "heading": 31,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -5055,7 +6906,16 @@
     "freq": "348.800",
     "Lat": 1.58919,
     "Lon": -75.5644,
-    "Ele": 244.8
+    "Ele": 244.8,
+    "ident": "SKFL",
+    "iso_country": "CO",
+    "icao_code": "SKFL",
+    "iata_code": "FLA",
+    "local_code": "FLA",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 116,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -5064,7 +6924,10 @@
     "freq": "",
     "Lat": 5.5275,
     "Lon": -74.1869,
-    "Ele": 1173.5
+    "Ele": 1173.5,
+    "ident": "SKFR",
+    "iso_country": "CO",
+    "local_code": "QPM"
   },
   {
     "type": "small_airport",
@@ -5073,7 +6936,11 @@
     "freq": "",
     "Lat": 10.5333,
     "Lon": -74.2,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "SKFU",
+    "iso_country": "CO",
+    "iata_code": "FDA",
+    "local_code": "FDA"
   },
   {
     "type": "small_airport",
@@ -5082,7 +6949,14 @@
     "freq": "",
     "Lat": 4.550543,
     "Lon": -70.925353,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "SKGA",
+    "iso_country": "CO",
+    "icao_code": "SKGA",
+    "iata_code": "LGT",
+    "length_ft": 4446,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -5091,7 +6965,13 @@
     "freq": "119.100",
     "Lat": 3.45899,
     "Lon": -76.4966,
-    "Ele": 964.7
+    "Ele": 964.7,
+    "ident": "SKGB",
+    "iso_country": "CO",
+    "length_ft": 6233,
+    "width_ft": 98,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -5100,7 +6980,16 @@
     "freq": "348.800",
     "Lat": 4.27624,
     "Lon": -74.7967,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "SKGI",
+    "iso_country": "CO",
+    "icao_code": "SKGI",
+    "iata_code": "GIR",
+    "local_code": "GIR",
+    "length_ft": 5249,
+    "width_ft": 92,
+    "heading": 12.4,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5109,7 +6998,16 @@
     "freq": "119.900",
     "Lat": 4.75818,
     "Lon": -75.9557,
-    "Ele": 908.0
+    "Ele": 908,
+    "ident": "SKGO",
+    "iso_country": "CO",
+    "icao_code": "SKGO",
+    "iata_code": "CRC",
+    "local_code": "CRC",
+    "length_ft": 6644,
+    "width_ft": 131,
+    "heading": 5,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -5118,7 +7016,16 @@
     "freq": "348.800",
     "Lat": 2.57013,
     "Lon": -77.897969,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "SKGP",
+    "iso_country": "CO",
+    "icao_code": "SKGP",
+    "iata_code": "GPI",
+    "local_code": "GPI",
+    "length_ft": 4256,
+    "width_ft": 66,
+    "heading": 18,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -5127,7 +7034,14 @@
     "freq": "119.500",
     "Lat": 4.81233,
     "Lon": -74.0649,
-    "Ele": 2557.3
+    "Ele": 2557.3,
+    "ident": "SKGY",
+    "iso_country": "CO",
+    "local_code": "GYM",
+    "QFU": "29",
+    "length_ft": 5643,
+    "width_ft": 66,
+    "heading": 103
   },
   {
     "type": "small_airport",
@@ -5136,7 +7050,10 @@
     "freq": "",
     "Lat": 2.1464,
     "Lon": -75.6944,
-    "Ele": 798.6
+    "Ele": 798.6,
+    "ident": "SKGZ",
+    "iso_country": "CO",
+    "local_code": "GLJ"
   },
   {
     "type": "small_airport",
@@ -5145,7 +7062,12 @@
     "freq": "",
     "Lat": 3.724293,
     "Lon": -75.465785,
-    "Ele": 832.1
+    "Ele": 832.1,
+    "ident": "SKHA",
+    "iso_country": "CO",
+    "icao_code": "SKHA",
+    "iata_code": "CPL",
+    "local_code": "CPL"
   },
   {
     "type": "small_airport",
@@ -5154,7 +7076,12 @@
     "freq": "",
     "Lat": 6.153311,
     "Lon": -71.761969,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "SKHC",
+    "iso_country": "CO",
+    "icao_code": "SKHC",
+    "iata_code": "HTZ",
+    "local_code": "HTZ"
   },
   {
     "type": "medium_airport",
@@ -5163,7 +7090,16 @@
     "freq": "119.500",
     "Lat": 4.42161,
     "Lon": -75.1333,
-    "Ele": 914.1
+    "Ele": 914.1,
+    "ident": "SKIB",
+    "iso_country": "CO",
+    "icao_code": "SKIB",
+    "iata_code": "IBE",
+    "local_code": "IBE",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "heading": 131,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -5172,7 +7108,12 @@
     "freq": "",
     "Lat": 7.677606,
     "Lon": -76.683165,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "SKIG",
+    "iso_country": "CO",
+    "icao_code": "SKIG",
+    "iata_code": "IGO",
+    "local_code": "IGO"
   },
   {
     "type": "small_airport",
@@ -5181,7 +7122,12 @@
     "freq": "",
     "Lat": 5.4776,
     "Lon": -70.4212,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "SKIM",
+    "iso_country": "CO",
+    "icao_code": "SKIM",
+    "iata_code": "LPE",
+    "local_code": "PIM"
   },
   {
     "type": "small_airport",
@@ -5190,7 +7136,14 @@
     "freq": "",
     "Lat": 9.26878,
     "Lon": -74.6523,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "SKIO",
+    "iso_country": "CO",
+    "local_code": "CIO",
+    "length_ft": 4167,
+    "width_ft": 66,
+    "heading": 55.4,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -5199,7 +7152,16 @@
     "freq": "120.100",
     "Lat": 0.861946,
     "Lon": -77.671783,
-    "Ele": 2976.4
+    "Ele": 2976.4,
+    "ident": "SKIP",
+    "iso_country": "CO",
+    "icao_code": "SKIP",
+    "iata_code": "IPI",
+    "local_code": "IPI",
+    "length_ft": 8202,
+    "width_ft": 118,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -5208,7 +7170,12 @@
     "freq": "",
     "Lat": 3.933991,
     "Lon": -77.361453,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "SKJC",
+    "iso_country": "CO",
+    "length_ft": 4003,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -5217,7 +7184,12 @@
     "freq": "",
     "Lat": 7.07181,
     "Lon": -77.727117,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SKJU",
+    "iso_country": "CO",
+    "icao_code": "SKJU",
+    "iata_code": "JUO",
+    "local_code": "JUR"
   },
   {
     "type": "small_airport",
@@ -5226,7 +7198,10 @@
     "freq": "",
     "Lat": 6.70472,
     "Lon": -72.7303,
-    "Ele": 2045.2
+    "Ele": 2045.2,
+    "ident": "SKLA",
+    "iso_country": "CO",
+    "local_code": "MLG"
   },
   {
     "type": "medium_airport",
@@ -5235,7 +7210,16 @@
     "freq": "348.800",
     "Lat": 7.81196,
     "Lon": -76.7164,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "SKLC",
+    "iso_country": "CO",
+    "icao_code": "SKLC",
+    "iata_code": "APO",
+    "local_code": "APO",
+    "length_ft": 7153,
+    "width_ft": 98,
+    "heading": 149.5,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -5244,7 +7228,16 @@
     "freq": "348.800",
     "Lat": -0.182278,
     "Lon": -74.7708,
-    "Ele": 174.7
+    "Ele": 174.7,
+    "ident": "SKLG",
+    "iso_country": "CO",
+    "icao_code": "SKLG",
+    "iata_code": "LQM",
+    "local_code": "LQM",
+    "length_ft": 3937,
+    "width_ft": 82,
+    "heading": 117.4,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -5253,7 +7246,16 @@
     "freq": "118.500",
     "Lat": 11.2325,
     "Lon": -72.4901,
-    "Ele": 85.6
+    "Ele": 85.6,
+    "ident": "SKLM",
+    "iso_country": "CO",
+    "icao_code": "SKLM",
+    "iata_code": "MCJ",
+    "local_code": "LMA",
+    "length_ft": 4876,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -5262,7 +7264,15 @@
     "freq": "",
     "Lat": -1.324882,
     "Lon": -69.581294,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SKLP",
+    "iso_country": "CO",
+    "icao_code": "SKLP",
+    "iata_code": "LPD",
+    "local_code": "LPD",
+    "length_ft": 5643,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -5271,7 +7281,16 @@
     "freq": "119.100",
     "Lat": -4.19355,
     "Lon": -69.9432,
-    "Ele": 84.4
+    "Ele": 84.4,
+    "ident": "SKLT",
+    "iso_country": "CO",
+    "icao_code": "SKLT",
+    "iata_code": "LET",
+    "local_code": "LET",
+    "length_ft": 6168,
+    "width_ft": 131,
+    "heading": 20.8,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -5280,7 +7299,13 @@
     "freq": "",
     "Lat": 4.727953,
     "Lon": -74.2756,
-    "Ele": 2537.5
+    "Ele": 2537.5,
+    "ident": "SKMA",
+    "iso_country": "CO",
+    "length_ft": 6070,
+    "width_ft": 80,
+    "heading": 58.8,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -5289,7 +7314,12 @@
     "freq": "",
     "Lat": 2.778569,
     "Lon": -77.668045,
-    "Ele": 44.2
+    "Ele": 44.2,
+    "ident": "SKMB",
+    "iso_country": "CO",
+    "icao_code": "SKMB",
+    "iata_code": "TBD",
+    "local_code": "TBD"
   },
   {
     "type": "medium_airport",
@@ -5298,7 +7328,16 @@
     "freq": "121.100",
     "Lat": 6.219686,
     "Lon": -75.590597,
-    "Ele": 1508.5
+    "Ele": 1508.5,
+    "ident": "SKMD",
+    "iso_country": "CO",
+    "icao_code": "SKMD",
+    "iata_code": "EOH",
+    "local_code": "EOH",
+    "length_ft": 8202,
+    "width_ft": 125,
+    "heading": 16,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -5307,7 +7346,13 @@
     "freq": "126.200",
     "Lat": 4.21644,
     "Lon": -74.635,
-    "Ele": 313.3
+    "Ele": 313.3,
+    "ident": "SKME",
+    "iso_country": "CO",
+    "length_ft": 3785,
+    "width_ft": 92,
+    "heading": 41,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -5316,7 +7361,12 @@
     "freq": "",
     "Lat": 1.35,
     "Lon": -71.9444,
-    "Ele": 222.5
+    "Ele": 222.5,
+    "ident": "SKMF",
+    "iso_country": "CO",
+    "icao_code": "SKMF",
+    "iata_code": "MFS",
+    "local_code": "MFS"
   },
   {
     "type": "medium_airport",
@@ -5325,7 +7375,16 @@
     "freq": "348.800",
     "Lat": 9.28474,
     "Lon": -74.8461,
-    "Ele": 54.3
+    "Ele": 54.3,
+    "ident": "SKMG",
+    "iso_country": "CO",
+    "icao_code": "SKMG",
+    "iata_code": "MGN",
+    "local_code": "MGN",
+    "length_ft": 4921,
+    "width_ft": 70,
+    "heading": 101.6,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -5334,7 +7393,14 @@
     "freq": "",
     "Lat": 11.3899,
     "Lon": -72.239197,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "SKMJ",
+    "iso_country": "CO",
+    "local_code": "MCJ",
+    "length_ft": 5300,
+    "width_ft": 98,
+    "heading": 72,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -5343,7 +7409,16 @@
     "freq": "",
     "Lat": 7.97174,
     "Lon": -75.4325,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "SKML",
+    "iso_country": "CO",
+    "icao_code": "SKML",
+    "iata_code": "MTB",
+    "local_code": "MTB",
+    "length_ft": 3560,
+    "width_ft": 82,
+    "heading": 174.2,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -5352,7 +7427,10 @@
     "freq": "",
     "Lat": 4.83333,
     "Lon": -72.2667,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "SKMN",
+    "iso_country": "CO",
+    "local_code": "MNI"
   },
   {
     "type": "small_airport",
@@ -5361,7 +7439,16 @@
     "freq": "",
     "Lat": 9.258348,
     "Lon": -74.438393,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "SKMP",
+    "iso_country": "CO",
+    "icao_code": "SKMP",
+    "iata_code": "MMP",
+    "local_code": "MMP",
+    "length_ft": 4068,
+    "width_ft": 48,
+    "heading": 15.6,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5370,7 +7457,16 @@
     "freq": "127.500",
     "Lat": 8.82374,
     "Lon": -75.8258,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "SKMR",
+    "iso_country": "CO",
+    "icao_code": "SKMR",
+    "iata_code": "MTR",
+    "local_code": "MTR",
+    "length_ft": 7539,
+    "width_ft": 150,
+    "heading": 138,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -5379,7 +7475,16 @@
     "freq": "348.800",
     "Lat": 1.25366,
     "Lon": -70.2339,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "SKMU",
+    "iso_country": "CO",
+    "icao_code": "SKMU",
+    "iata_code": "MVP",
+    "local_code": "MVP",
+    "length_ft": 5889,
+    "width_ft": 66,
+    "heading": 11,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5388,7 +7493,16 @@
     "freq": "121.100",
     "Lat": 5.0296,
     "Lon": -75.4647,
-    "Ele": 2094.3
+    "Ele": 2094.3,
+    "ident": "SKMZ",
+    "iso_country": "CO",
+    "icao_code": "SKMZ",
+    "iata_code": "MZL",
+    "local_code": "MZL",
+    "QFU": "28",
+    "length_ft": 4835,
+    "width_ft": 65,
+    "heading": 95
   },
   {
     "type": "small_airport",
@@ -5397,7 +7511,11 @@
     "freq": "",
     "Lat": 2.17565,
     "Lon": -73.78674,
-    "Ele": 240.8
+    "Ele": 240.8,
+    "ident": "SKNA",
+    "iso_country": "CO",
+    "icao_code": "SKNA",
+    "iata_code": "LMC"
   },
   {
     "type": "small_airport",
@@ -5406,7 +7524,12 @@
     "freq": "",
     "Lat": 8.454429,
     "Lon": -76.779326,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "SKNC",
+    "iso_country": "CO",
+    "icao_code": "SKNC",
+    "iata_code": "NCI",
+    "local_code": "NCI"
   },
   {
     "type": "small_airport",
@@ -5415,7 +7538,15 @@
     "freq": "",
     "Lat": 5.710348,
     "Lon": -77.261868,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "SKNQ",
+    "iso_country": "CO",
+    "icao_code": "SKNQ",
+    "iata_code": "NQU",
+    "local_code": "NQU",
+    "length_ft": 3937,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -5424,7 +7555,16 @@
     "freq": "127.100",
     "Lat": 2.95015,
     "Lon": -75.294,
-    "Ele": 446.2
+    "Ele": 446.2,
+    "ident": "SKNV",
+    "iso_country": "CO",
+    "icao_code": "SKNV",
+    "iata_code": "NVA",
+    "local_code": "NVA",
+    "length_ft": 5880,
+    "width_ft": 131,
+    "heading": 14,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5433,7 +7573,16 @@
     "freq": "348.800",
     "Lat": 8.31506,
     "Lon": -73.3583,
-    "Ele": 1173.5
+    "Ele": 1173.5,
+    "ident": "SKOC",
+    "iso_country": "CO",
+    "icao_code": "SKOC",
+    "iata_code": "OCV",
+    "local_code": "OCV",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 6.4,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -5442,7 +7591,12 @@
     "freq": "",
     "Lat": 4.79222,
     "Lon": -71.3564,
-    "Ele": 132.3
+    "Ele": 132.3,
+    "ident": "SKOE",
+    "iso_country": "CO",
+    "icao_code": "SKOE",
+    "iata_code": "ORC",
+    "local_code": "ORC"
   },
   {
     "type": "small_airport",
@@ -5451,7 +7605,9 @@
     "freq": "",
     "Lat": 4.089869,
     "Lon": -72.976483,
-    "Ele": 182.6
+    "Ele": 182.6,
+    "ident": "SKOL",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -5460,7 +7616,10 @@
     "freq": "",
     "Lat": 0.669444,
     "Lon": -76.88,
-    "Ele": 345.0
+    "Ele": 345,
+    "ident": "SKOR",
+    "iso_country": "CO",
+    "local_code": "ORI"
   },
   {
     "type": "small_airport",
@@ -5469,7 +7628,15 @@
     "freq": "348.800",
     "Lat": 7.010532,
     "Lon": -74.715398,
-    "Ele": 627.9
+    "Ele": 627.9,
+    "ident": "SKOT",
+    "iso_country": "CO",
+    "icao_code": "SKOT",
+    "iata_code": "OTU",
+    "length_ft": 3103,
+    "width_ft": 50,
+    "heading": 159.7,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -5478,7 +7645,15 @@
     "freq": "",
     "Lat": 5.76454,
     "Lon": -73.1054,
-    "Ele": 2500.9
+    "Ele": 2500.9,
+    "ident": "SKPA",
+    "iso_country": "CO",
+    "icao_code": "SKPA",
+    "iata_code": "RON",
+    "length_ft": 5382,
+    "width_ft": 98,
+    "heading": 37,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -5487,7 +7662,14 @@
     "freq": "118.600",
     "Lat": 12.2215,
     "Lon": -71.9848,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "SKPB",
+    "iso_country": "CO",
+    "local_code": "PBO",
+    "length_ft": 5540,
+    "width_ft": 148,
+    "heading": 82.8,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -5496,7 +7678,16 @@
     "freq": "348.800",
     "Lat": 6.18472,
     "Lon": -67.4932,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "SKPC",
+    "iso_country": "CO",
+    "icao_code": "SKPC",
+    "iata_code": "PCR",
+    "local_code": "PCR",
+    "length_ft": 5907,
+    "width_ft": 69,
+    "heading": 60,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -5514,7 +7705,16 @@
     "freq": "120.700",
     "Lat": 4.81267,
     "Lon": -75.7395,
-    "Ele": 1346.0
+    "Ele": 1346,
+    "ident": "SKPE",
+    "iso_country": "CO",
+    "icao_code": "SKPE",
+    "iata_code": "PEI",
+    "local_code": "PEI",
+    "length_ft": 6627,
+    "width_ft": 148,
+    "heading": 73,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -5523,7 +7723,9 @@
     "freq": "",
     "Lat": 4.30444,
     "Lon": -72.0844,
-    "Ele": 155.4
+    "Ele": 155.4,
+    "ident": "SKPG",
+    "iso_country": "CO"
   },
   {
     "type": "medium_airport",
@@ -5532,7 +7734,15 @@
     "freq": "348.800",
     "Lat": 1.85777,
     "Lon": -76.0857,
-    "Ele": 1283.8
+    "Ele": 1283.8,
+    "ident": "SKPI",
+    "iso_country": "CO",
+    "icao_code": "SKPI",
+    "iata_code": "PTX",
+    "length_ft": 4912,
+    "width_ft": 98,
+    "heading": 60,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -5541,7 +7751,12 @@
     "freq": "",
     "Lat": 9.8,
     "Lon": -74.7833,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "SKPL",
+    "iso_country": "CO",
+    "icao_code": "SKPL",
+    "iata_code": "PLT",
+    "local_code": "PLT"
   },
   {
     "type": "small_airport",
@@ -5550,7 +7765,16 @@
     "freq": "",
     "Lat": 6.21002,
     "Lon": -74.5906,
-    "Ele": 145.1
+    "Ele": 145.1,
+    "ident": "SKPN",
+    "iso_country": "CO",
+    "icao_code": "SKPN",
+    "iata_code": "NAR",
+    "local_code": "NAR",
+    "length_ft": 3310,
+    "width_ft": 35,
+    "heading": 71,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -5559,7 +7783,16 @@
     "freq": "119.100",
     "Lat": 2.4544,
     "Lon": -76.6093,
-    "Ele": 1733.4
+    "Ele": 1733.4,
+    "ident": "SKPP",
+    "iso_country": "CO",
+    "icao_code": "SKPP",
+    "iata_code": "PPN",
+    "local_code": "PPN",
+    "length_ft": 6266,
+    "width_ft": 98,
+    "heading": 70.8,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -5568,7 +7801,16 @@
     "freq": "127.900",
     "Lat": 5.48361,
     "Lon": -74.6574,
-    "Ele": 172.5
+    "Ele": 172.5,
+    "ident": "SKPQ",
+    "iso_country": "CO",
+    "icao_code": "SKPQ",
+    "iata_code": "PAL",
+    "local_code": "PQE",
+    "length_ft": 9987,
+    "width_ft": 164,
+    "heading": 3,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -5577,7 +7819,16 @@
     "freq": "",
     "Lat": 6.46034,
     "Lon": -74.4105,
-    "Ele": 135.6
+    "Ele": 135.6,
+    "ident": "SKPR",
+    "iso_country": "CO",
+    "icao_code": "SKPR",
+    "iata_code": "PBE",
+    "local_code": "PBE",
+    "length_ft": 4230,
+    "width_ft": 82,
+    "heading": 173,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -5586,7 +7837,16 @@
     "freq": "348.800",
     "Lat": 1.39625,
     "Lon": -77.2915,
-    "Ele": 1813.9
+    "Ele": 1813.9,
+    "ident": "SKPS",
+    "iso_country": "CO",
+    "icao_code": "SKPS",
+    "iata_code": "PSO",
+    "local_code": "PSO",
+    "length_ft": 7585,
+    "width_ft": 130,
+    "heading": 16,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5595,7 +7855,16 @@
     "freq": "119.300",
     "Lat": 13.357461,
     "Lon": -81.357977,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SKPV",
+    "iso_country": "CO",
+    "icao_code": "SKPV",
+    "iata_code": "PVA",
+    "local_code": "PVA",
+    "length_ft": 3832,
+    "width_ft": 50,
+    "heading": 169.1,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -5604,7 +7873,16 @@
     "freq": "",
     "Lat": 5.87615,
     "Lon": -71.8866,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "SKPZ",
+    "iso_country": "CO",
+    "icao_code": "SKPZ",
+    "iata_code": "PZA",
+    "local_code": "PZA",
+    "length_ft": 4935,
+    "width_ft": 98,
+    "heading": 33.1,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -5613,7 +7891,16 @@
     "freq": "119.500",
     "Lat": 5.21256,
     "Lon": -74.8836,
-    "Ele": 466.6
+    "Ele": 466.6,
+    "ident": "SKQU",
+    "iso_country": "CO",
+    "icao_code": "SKQU",
+    "iata_code": "MQU",
+    "local_code": "MQU",
+    "length_ft": 5905,
+    "width_ft": 164,
+    "heading": 2.8,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -5622,7 +7909,14 @@
     "freq": "",
     "Lat": -2.895802,
     "Lon": -69.749762,
-    "Ele": 77.1
+    "Ele": 77.1,
+    "ident": "SKRA",
+    "iso_country": "CO",
+    "icao_code": "SKRA",
+    "iata_code": "TCD",
+    "length_ft": 3527,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -5631,7 +7925,16 @@
     "freq": "121.100",
     "Lat": 6.16454,
     "Lon": -75.4231,
-    "Ele": 2119.9
+    "Ele": 2119.9,
+    "ident": "SKRG",
+    "iso_country": "CO",
+    "icao_code": "SKRG",
+    "iata_code": "MDE",
+    "local_code": "MDE",
+    "length_ft": 11286,
+    "width_ft": 148,
+    "heading": 360,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -5640,7 +7943,16 @@
     "freq": "348.800",
     "Lat": 11.5262,
     "Lon": -72.926,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "SKRH",
+    "iso_country": "CO",
+    "icao_code": "SKRH",
+    "iata_code": "RCH",
+    "local_code": "RCH",
+    "length_ft": 5413,
+    "width_ft": 98,
+    "heading": 88.3,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -5649,7 +7961,11 @@
     "freq": "",
     "Lat": 7.38322,
     "Lon": -73.505402,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "SKRU",
+    "iso_country": "CO",
+    "icao_code": "SKRU",
+    "iata_code": "SNT"
   },
   {
     "type": "small_airport",
@@ -5658,7 +7974,16 @@
     "freq": "",
     "Lat": 6.951868,
     "Lon": -71.857179,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "SKSA",
+    "iso_country": "CO",
+    "icao_code": "SKSA",
+    "iata_code": "RVE",
+    "local_code": "SRV",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 150,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -5667,7 +7992,10 @@
     "freq": "",
     "Lat": 6.58444,
     "Lon": -73.1283,
-    "Ele": 1675.8
+    "Ele": 1675.8,
+    "ident": "SKSG",
+    "iso_country": "CO",
+    "local_code": "SGL"
   },
   {
     "type": "small_airport",
@@ -5676,7 +8004,13 @@
     "freq": "",
     "Lat": 4.73214,
     "Lon": -72.323196,
-    "Ele": 174.7
+    "Ele": 174.7,
+    "ident": "SKSI",
+    "iso_country": "CO",
+    "length_ft": 3930,
+    "width_ft": 75,
+    "heading": 32.9,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -5685,7 +8019,16 @@
     "freq": "119.300",
     "Lat": 2.57969,
     "Lon": -72.6394,
-    "Ele": 184.4
+    "Ele": 184.4,
+    "ident": "SKSJ",
+    "iso_country": "CO",
+    "icao_code": "SKSJ",
+    "iata_code": "SJE",
+    "local_code": "SJE",
+    "length_ft": 4897,
+    "width_ft": 66,
+    "heading": 5.3,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -5694,7 +8037,11 @@
     "freq": "",
     "Lat": 5.1309,
     "Lon": -70.8682,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "SKSL",
+    "iso_country": "CO",
+    "icao_code": "SKSL",
+    "iata_code": "SSL"
   },
   {
     "type": "medium_airport",
@@ -5703,7 +8050,16 @@
     "freq": "119.100",
     "Lat": 11.1196,
     "Lon": -74.2306,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "SKSM",
+    "iso_country": "CO",
+    "icao_code": "SKSM",
+    "iata_code": "SMR",
+    "local_code": "SMR",
+    "length_ft": 5577,
+    "width_ft": 131,
+    "heading": 359,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -5712,7 +8068,16 @@
     "freq": "655.300",
     "Lat": 5.67732,
     "Lon": -72.9703,
-    "Ele": 2485.6
+    "Ele": 2485.6,
+    "ident": "SKSO",
+    "iso_country": "CO",
+    "icao_code": "SKSO",
+    "iata_code": "SOX",
+    "local_code": "SOX",
+    "length_ft": 6171,
+    "width_ft": 80,
+    "heading": 39.9,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -5721,7 +8086,16 @@
     "freq": "119.300",
     "Lat": 12.5836,
     "Lon": -81.7112,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "SKSP",
+    "iso_country": "CO",
+    "icao_code": "SKSP",
+    "iata_code": "ADZ",
+    "local_code": "ADZ",
+    "length_ft": 7808,
+    "width_ft": 148,
+    "heading": 59.3,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -5730,7 +8104,10 @@
     "freq": "",
     "Lat": 8.69,
     "Lon": -75.156,
-    "Ele": 42.7
+    "Ele": 42.7,
+    "ident": "SKSR",
+    "iso_country": "CO",
+    "iata_code": "SRS"
   },
   {
     "type": "medium_airport",
@@ -5739,7 +8116,16 @@
     "freq": "348.800",
     "Lat": 2.15217,
     "Lon": -74.7663,
-    "Ele": 280.4
+    "Ele": 280.4,
+    "ident": "SKSV",
+    "iso_country": "CO",
+    "icao_code": "SKSV",
+    "iata_code": "SVI",
+    "local_code": "SVI",
+    "QFU": "32",
+    "length_ft": 4921,
+    "width_ft": 85,
+    "heading": 132
   },
   {
     "type": "small_airport",
@@ -5748,7 +8134,12 @@
     "freq": "",
     "Lat": 5.01281,
     "Lon": -72.7424,
-    "Ele": 445.6
+    "Ele": 445.6,
+    "ident": "SKTA",
+    "iso_country": "CO",
+    "icao_code": "SKTA",
+    "iata_code": "TAU",
+    "local_code": "TAU"
   },
   {
     "type": "small_airport",
@@ -5757,7 +8148,16 @@
     "freq": "",
     "Lat": 8.63152,
     "Lon": -72.7304,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "SKTB",
+    "iso_country": "CO",
+    "icao_code": "SKTB",
+    "iata_code": "TIB",
+    "local_code": "TBU",
+    "length_ft": 4921,
+    "width_ft": 66,
+    "heading": 83.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -5766,7 +8166,15 @@
     "freq": "",
     "Lat": 5.43278,
     "Lon": -71.6625,
-    "Ele": 197.8
+    "Ele": 197.8,
+    "ident": "SKTD",
+    "iso_country": "CO",
+    "icao_code": "SKTD",
+    "iata_code": "TDA",
+    "local_code": "TDA",
+    "length_ft": 3609,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -5775,7 +8183,14 @@
     "freq": "",
     "Lat": 4.2448,
     "Lon": -74.649901,
-    "Ele": 492.9
+    "Ele": 492.9,
+    "ident": "SKTI",
+    "iso_country": "CO",
+    "local_code": "TOL",
+    "length_ft": 1431,
+    "width_ft": 65,
+    "heading": 34.5,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -5784,7 +8199,13 @@
     "freq": "",
     "Lat": 5.54138,
     "Lon": -73.3445,
-    "Ele": 2724.9
+    "Ele": 2724.9,
+    "ident": "SKTJ",
+    "iso_country": "CO",
+    "length_ft": 3635,
+    "width_ft": 66,
+    "heading": 34.3,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -5793,7 +8214,15 @@
     "freq": "",
     "Lat": 9.50945,
     "Lon": -75.5854,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "SKTL",
+    "iso_country": "CO",
+    "icao_code": "SKTL",
+    "iata_code": "TLU",
+    "local_code": "TLU",
+    "length_ft": 4429,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -5802,7 +8231,16 @@
     "freq": "348.800",
     "Lat": 6.45108,
     "Lon": -71.7603,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "SKTM",
+    "iso_country": "CO",
+    "icao_code": "SKTM",
+    "iata_code": "TME",
+    "local_code": "TME",
+    "length_ft": 6561,
+    "width_ft": 98,
+    "heading": 59,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -5811,7 +8249,16 @@
     "freq": "124.500",
     "Lat": 0.7459,
     "Lon": -75.234,
-    "Ele": 178.3
+    "Ele": 178.3,
+    "ident": "SKTQ",
+    "iso_country": "CO",
+    "icao_code": "SKTQ",
+    "iata_code": "TQS",
+    "local_code": "TQS",
+    "length_ft": 6220,
+    "width_ft": 79,
+    "heading": 64,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -5820,7 +8267,14 @@
     "freq": "124.100",
     "Lat": 5.52448,
     "Lon": -68.6856,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "SKUA",
+    "iso_country": "CO",
+    "local_code": "MQZ",
+    "length_ft": 6780,
+    "width_ft": 145,
+    "heading": 63.4,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -5829,7 +8283,14 @@
     "freq": "",
     "Lat": 3.2375,
     "Lon": -74.347222,
-    "Ele": 2553.3
+    "Ele": 2553.3,
+    "ident": "SKUB",
+    "iso_country": "CO",
+    "icao_code": "SKUB",
+    "iata_code": "URI",
+    "length_ft": 2750,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -5838,7 +8299,16 @@
     "freq": "118.100",
     "Lat": 7.06888,
     "Lon": -70.7369,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "SKUC",
+    "iso_country": "CO",
+    "icao_code": "SKUC",
+    "iata_code": "AUC",
+    "local_code": "AUC",
+    "length_ft": 6890,
+    "width_ft": 98,
+    "heading": 98,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -5847,7 +8317,16 @@
     "freq": "348.800",
     "Lat": 5.69076,
     "Lon": -76.6412,
-    "Ele": 62.2
+    "Ele": 62.2,
+    "ident": "SKUI",
+    "iso_country": "CO",
+    "icao_code": "SKUI",
+    "iata_code": "UIB",
+    "local_code": "UIB",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "heading": 122,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -5856,7 +8335,16 @@
     "freq": "119.100",
     "Lat": 4.08836,
     "Lon": -76.2351,
-    "Ele": 954.6
+    "Ele": 954.6,
+    "ident": "SKUL",
+    "iso_country": "CO",
+    "icao_code": "SKUL",
+    "iata_code": "ULQ",
+    "local_code": "ULQ",
+    "length_ft": 3495,
+    "width_ft": 100,
+    "heading": 11.4,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -5865,7 +8353,12 @@
     "freq": "",
     "Lat": 6.32883,
     "Lon": -76.1425,
-    "Ele": 1856.2
+    "Ele": 1856.2,
+    "ident": "SKUR",
+    "iso_country": "CO",
+    "icao_code": "SKUR",
+    "iata_code": "URR",
+    "local_code": "URR"
   },
   {
     "type": "small_airport",
@@ -5874,7 +8367,16 @@
     "freq": "",
     "Lat": 0.978767,
     "Lon": -76.6056,
-    "Ele": 380.4
+    "Ele": 380.4,
+    "ident": "SKVG",
+    "iso_country": "CO",
+    "icao_code": "SKVG",
+    "iata_code": "VGZ",
+    "local_code": "VGZ",
+    "length_ft": 4320,
+    "width_ft": 40,
+    "heading": 165.9,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -5883,7 +8385,15 @@
     "freq": "348.800",
     "Lat": 5.93904,
     "Lon": -74.457,
-    "Ele": 172.5
+    "Ele": 172.5,
+    "ident": "SKVL",
+    "iso_country": "CO",
+    "icao_code": "SKVL",
+    "iata_code": "PYA",
+    "length_ft": 5520,
+    "width_ft": 50,
+    "heading": 150.4,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -5892,7 +8402,10 @@
     "freq": "",
     "Lat": 4.62472,
     "Lon": -72.9469,
-    "Ele": 305.4
+    "Ele": 305.4,
+    "ident": "SKVN",
+    "iso_country": "CO",
+    "local_code": "VLA"
   },
   {
     "type": "medium_airport",
@@ -5901,7 +8414,16 @@
     "freq": "348.800",
     "Lat": 10.435,
     "Lon": -73.2495,
-    "Ele": 147.2
+    "Ele": 147.2,
+    "ident": "SKVP",
+    "iso_country": "CO",
+    "icao_code": "SKVP",
+    "iata_code": "VUP",
+    "local_code": "VUP",
+    "length_ft": 6890,
+    "width_ft": 115,
+    "heading": 10,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -5910,7 +8432,16 @@
     "freq": "119.300",
     "Lat": 4.16787,
     "Lon": -73.6138,
-    "Ele": 424.9
+    "Ele": 424.9,
+    "ident": "SKVV",
+    "iso_country": "CO",
+    "icao_code": "SKVV",
+    "iata_code": "VVC",
+    "local_code": "VVC",
+    "length_ft": 5616,
+    "width_ft": 98,
+    "heading": 39,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -5919,7 +8450,12 @@
     "freq": "",
     "Lat": 1.54417,
     "Lon": -73.9333,
-    "Ele": 247.5
+    "Ele": 247.5,
+    "ident": "SKYA",
+    "iso_country": "CO",
+    "icao_code": "SKYA",
+    "iata_code": "AYG",
+    "local_code": "AYG"
   },
   {
     "type": "medium_airport",
@@ -5928,7 +8464,16 @@
     "freq": "126.800",
     "Lat": 5.31911,
     "Lon": -72.384,
-    "Ele": 313.3
+    "Ele": 313.3,
+    "ident": "SKYP",
+    "iso_country": "CO",
+    "icao_code": "SKYP",
+    "iata_code": "EYP",
+    "local_code": "EYP",
+    "length_ft": 8448,
+    "width_ft": 98,
+    "heading": 45.1,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -5937,7 +8482,9 @@
     "freq": "",
     "Lat": 6.982348,
     "Lon": -70.880857,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "SQED",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -5946,7 +8493,9 @@
     "freq": "",
     "Lat": 10.712573,
     "Lon": -75.264825,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SQIR",
+    "iso_country": "CO"
   },
   {
     "type": "small_airport",
@@ -5955,6 +8504,8 @@
     "freq": "",
     "Lat": 10.883168,
     "Lon": -75.032145,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "SQKS",
+    "iso_country": "CO"
   }
 ]

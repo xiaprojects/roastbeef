@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -16.578408,
     "Lon": 35.116148,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "FWBG",
+    "iso_country": "MW"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -10.439073,
     "Lon": 34.246055,
-    "Ele": 491.0
+    "Ele": 491,
+    "ident": "FWCB",
+    "iso_country": "MW"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,11 @@
     "freq": "",
     "Lat": -10.55,
     "Lon": 33.799999,
-    "Ele": 2364.9
+    "Ele": 2364.9,
+    "ident": "FWCD",
+    "iso_country": "MW",
+    "icao_code": "FWCD",
+    "iata_code": "CEH"
   },
   {
     "type": "medium_airport",
@@ -33,7 +41,15 @@
     "freq": "124.900",
     "Lat": -15.679100036621094,
     "Lon": 34.9739990234375,
-    "Ele": 778.8
+    "Ele": 778.8,
+    "ident": "FWCL",
+    "iso_country": "MW",
+    "icao_code": "FWCL",
+    "iata_code": "BLZ",
+    "length_ft": 4501,
+    "width_ft": 98,
+    "heading": 141,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,14 @@
     "freq": "",
     "Lat": -14.306483,
     "Lon": 35.131477,
-    "Ele": 483.7
+    "Ele": 483.7,
+    "ident": "FWCM",
+    "iso_country": "MW",
+    "icao_code": "FWCM",
+    "iata_code": "CMK",
+    "length_ft": 3800,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -51,7 +74,10 @@
     "freq": "",
     "Lat": -13.3758,
     "Lon": 33.864498,
-    "Ele": 1310.9
+    "Ele": 1310.9,
+    "ident": "FWCS",
+    "iso_country": "MW",
+    "icao_code": "FWCS"
   },
   {
     "type": "small_airport",
@@ -60,7 +86,10 @@
     "freq": "",
     "Lat": -9.7,
     "Lon": 33.266998,
-    "Ele": 1301.5
+    "Ele": 1301.5,
+    "ident": "FWCT",
+    "iso_country": "MW",
+    "icao_code": "FWCT"
   },
   {
     "type": "medium_airport",
@@ -69,7 +98,14 @@
     "freq": "",
     "Lat": -12.517527,
     "Lon": 34.131877,
-    "Ele": 489.2
+    "Ele": 489.2,
+    "ident": "FWDW",
+    "iso_country": "MW",
+    "icao_code": "FWDW",
+    "iata_code": "DWA",
+    "length_ft": 3980,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -78,7 +114,15 @@
     "freq": "118.100",
     "Lat": -9.953571,
     "Lon": 33.893264,
-    "Ele": 538.0
+    "Ele": 538,
+    "ident": "FWKA",
+    "iso_country": "MW",
+    "icao_code": "FWKA",
+    "iata_code": "KGJ",
+    "length_ft": 4200,
+    "width_ft": 59,
+    "heading": 138,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -87,7 +131,15 @@
     "freq": "",
     "Lat": -13.0146,
     "Lon": 33.468601,
-    "Ele": 1057.7
+    "Ele": 1057.7,
+    "ident": "FWKG",
+    "iso_country": "MW",
+    "icao_code": "FWKG",
+    "iata_code": "KBQ",
+    "length_ft": 3937,
+    "width_ft": 57,
+    "heading": 74,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -96,7 +148,15 @@
     "freq": "128.000",
     "Lat": -13.7894,
     "Lon": 33.780998,
-    "Ele": 1229.9
+    "Ele": 1229.9,
+    "ident": "FWKI",
+    "iso_country": "MW",
+    "icao_code": "FWKI",
+    "iata_code": "LLW",
+    "length_ft": 11614,
+    "width_ft": 148,
+    "heading": 130.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -105,7 +165,14 @@
     "freq": "120.600",
     "Lat": -13.966,
     "Lon": 33.701801,
-    "Ele": 1134.5
+    "Ele": 1134.5,
+    "ident": "FWLE",
+    "iso_country": "MW",
+    "icao_code": "FWLE",
+    "length_ft": 4615,
+    "width_ft": 134,
+    "heading": 163.8,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -114,7 +181,11 @@
     "freq": "",
     "Lat": -12.079787,
     "Lon": 34.736253,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "FWLK",
+    "iso_country": "MW",
+    "icao_code": "FWLK",
+    "iata_code": "LIX"
   },
   {
     "type": "small_airport",
@@ -123,7 +194,10 @@
     "freq": "",
     "Lat": -13.05,
     "Lon": 33.150002,
-    "Ele": 1013.8
+    "Ele": 1013.8,
+    "ident": "FWLP",
+    "iso_country": "MW",
+    "icao_code": "FWLP"
   },
   {
     "type": "small_airport",
@@ -132,7 +206,10 @@
     "freq": "",
     "Lat": -13.8,
     "Lon": 32.900002,
-    "Ele": 1189.0
+    "Ele": 1189,
+    "ident": "FWMC",
+    "iso_country": "MW",
+    "icao_code": "FWMC"
   },
   {
     "type": "small_airport",
@@ -141,7 +218,11 @@
     "freq": "",
     "Lat": -14.0836000443,
     "Lon": 34.9197006226,
-    "Ele": 481.6
+    "Ele": 481.6,
+    "ident": "FWMY",
+    "iso_country": "MW",
+    "icao_code": "FWMY",
+    "iata_code": "MYZ"
   },
   {
     "type": "small_airport",
@@ -150,7 +231,9 @@
     "freq": "",
     "Lat": -11.883000373840332,
     "Lon": 33.617000579833984,
-    "Ele": 1353.3
+    "Ele": 1353.3,
+    "ident": "FWMZ",
+    "iso_country": "MW"
   },
   {
     "type": "small_airport",
@@ -159,7 +242,9 @@
     "freq": "",
     "Lat": -16.498324,
     "Lon": 34.864218,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "FWNB",
+    "iso_country": "MW"
   },
   {
     "type": "small_airport",
@@ -168,7 +253,10 @@
     "freq": "",
     "Lat": -16.921115,
     "Lon": 35.25269,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "FWSJ",
+    "iso_country": "MW",
+    "icao_code": "FWSJ"
   },
   {
     "type": "small_airport",
@@ -177,7 +265,11 @@
     "freq": "",
     "Lat": -13.755893,
     "Lon": 34.584188,
-    "Ele": 514.5
+    "Ele": 514.5,
+    "ident": "FWSM",
+    "iso_country": "MW",
+    "icao_code": "FWSM",
+    "iata_code": "LMB"
   },
   {
     "type": "small_airport",
@@ -186,7 +278,14 @@
     "freq": "",
     "Lat": -16.269338,
     "Lon": 34.877216,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "FWSU",
+    "iso_country": "MW",
+    "icao_code": "FWSU",
+    "length_ft": 4100,
+    "width_ft": 75,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -195,7 +294,9 @@
     "freq": "",
     "Lat": -14.217000007629396,
     "Lon": 34.53300094604492,
-    "Ele": 525.8
+    "Ele": 525.8,
+    "ident": "FWTK",
+    "iso_country": "MW"
   },
   {
     "type": "medium_airport",
@@ -204,7 +305,15 @@
     "freq": "118.100",
     "Lat": -11.4447,
     "Lon": 34.011799,
-    "Ele": 1254.3
+    "Ele": 1254.3,
+    "ident": "FWUU",
+    "iso_country": "MW",
+    "icao_code": "FWUU",
+    "iata_code": "ZZU",
+    "length_ft": 4291,
+    "width_ft": 62,
+    "heading": 161.1,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -213,7 +322,14 @@
     "freq": "",
     "Lat": -15.386309,
     "Lon": 35.383575,
-    "Ele": 807.7
+    "Ele": 807.7,
+    "ident": "FWZA",
+    "iso_country": "MW",
+    "icao_code": "FWZA",
+    "length_ft": 4100,
+    "width_ft": 55,
+    "heading": 78.5,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -222,7 +338,10 @@
     "freq": "",
     "Lat": -11.8353,
     "Lon": 34.16446,
-    "Ele": 502.9
+    "Ele": 502.9,
+    "ident": "MW-0001",
+    "iso_country": "MW",
+    "icao_code": "FWCC"
   },
   {
     "type": "small_airport",
@@ -231,6 +350,9 @@
     "freq": "",
     "Lat": -14.838611,
     "Lon": 35.301389,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "VUU",
+    "iso_country": "MW",
+    "iata_code": "VUU"
   }
 ]

@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 15.543899536132812,
     "Lon": -14.95829963684082,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "GO66",
+    "iso_country": "SN",
+    "local_code": "GO66",
+    "length_ft": 5230,
+    "width_ft": 144,
+    "heading": 15,
+    "QFU": "20"
   },
   {
     "type": "large_airport",
@@ -15,7 +22,15 @@
     "freq": "120.500",
     "Lat": 14.670878,
     "Lon": -17.072829,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "GOBD",
+    "iso_country": "SN",
+    "icao_code": "GOBD",
+    "iata_code": "DSS",
+    "length_ft": 11483,
+    "width_ft": 197,
+    "heading": 359,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -24,7 +39,15 @@
     "freq": "",
     "Lat": 12.8985,
     "Lon": -14.9681,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "GODK",
+    "iso_country": "SN",
+    "icao_code": "GOGK",
+    "iata_code": "KDA",
+    "length_ft": 4927,
+    "width_ft": 50,
+    "heading": 28,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -33,7 +56,15 @@
     "freq": "568.000",
     "Lat": 12.5556,
     "Lon": -16.281799,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "GOGG",
+    "iso_country": "SN",
+    "icao_code": "GOGG",
+    "iata_code": "ZIG",
+    "length_ft": 5069,
+    "width_ft": 98,
+    "heading": 88,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -42,7 +73,15 @@
     "freq": "568.000",
     "Lat": 12.39533,
     "Lon": -16.748,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "GOGS",
+    "iso_country": "SN",
+    "icao_code": "GOGS",
+    "iata_code": "CSK",
+    "length_ft": 6573,
+    "width_ft": 98,
+    "heading": 136,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -51,7 +90,10 @@
     "freq": "",
     "Lat": 15.402134,
     "Lon": -15.080629,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "GOOG",
+    "iso_country": "SN",
+    "icao_code": "GOOG"
   },
   {
     "type": "medium_airport",
@@ -60,7 +102,15 @@
     "freq": "",
     "Lat": 14.146900177001951,
     "Lon": -16.051300048828125,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "GOOK",
+    "iso_country": "SN",
+    "icao_code": "GOOK",
+    "iata_code": "KLC",
+    "length_ft": 5249,
+    "width_ft": 98,
+    "heading": 50,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -69,7 +119,15 @@
     "freq": "120.500",
     "Lat": 14.7397,
     "Lon": -17.4902,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "GOOY",
+    "iso_country": "SN",
+    "icao_code": "GOOY",
+    "iata_code": "DKR",
+    "length_ft": 11450,
+    "width_ft": 148,
+    "heading": 172.6,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -78,7 +136,14 @@
     "freq": "",
     "Lat": 15.5936,
     "Lon": -13.3228,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "GOSM",
+    "iso_country": "SN",
+    "icao_code": "GOSM",
+    "iata_code": "MAX",
+    "length_ft": 6299,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -87,7 +152,11 @@
     "freq": "",
     "Lat": 16.678155,
     "Lon": -14.964957,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "GOSP",
+    "iso_country": "SN",
+    "icao_code": "GOSP",
+    "iata_code": "POD"
   },
   {
     "type": "small_airport",
@@ -96,7 +165,14 @@
     "freq": "",
     "Lat": 16.437816,
     "Lon": -15.656376,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "GOSR",
+    "iso_country": "SN",
+    "icao_code": "GOSR",
+    "iata_code": "RDT",
+    "length_ft": 5085,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -105,7 +181,15 @@
     "freq": "568.000",
     "Lat": 16.049814,
     "Lon": -16.461039,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "GOSS",
+    "iso_country": "SN",
+    "icao_code": "GOSS",
+    "iata_code": "XLS",
+    "length_ft": 6230,
+    "width_ft": 100,
+    "heading": 172.6,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -114,7 +198,15 @@
     "freq": "",
     "Lat": 14.847299575805664,
     "Lon": -12.468299865722656,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "GOTB",
+    "iso_country": "SN",
+    "icao_code": "GOTB",
+    "iata_code": "BXE",
+    "length_ft": 5741,
+    "width_ft": 98,
+    "heading": 59,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -123,7 +215,15 @@
     "freq": "",
     "Lat": 12.57229995727539,
     "Lon": -12.22029972076416,
-    "Ele": 178.0
+    "Ele": 178,
+    "ident": "GOTK",
+    "iso_country": "SN",
+    "icao_code": "GOTK",
+    "iata_code": "KGG",
+    "length_ft": 5906,
+    "width_ft": 148,
+    "heading": 103,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -132,7 +232,11 @@
     "freq": "",
     "Lat": 13.046799659729004,
     "Lon": -13.29539966583252,
-    "Ele": 52.1
+    "Ele": 52.1,
+    "ident": "GOTS",
+    "iso_country": "SN",
+    "icao_code": "GOTS",
+    "iata_code": "SMY"
   },
   {
     "type": "medium_airport",
@@ -141,7 +245,15 @@
     "freq": "568.000",
     "Lat": 13.7368,
     "Lon": -13.6531,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "GOTT",
+    "iso_country": "SN",
+    "icao_code": "GOTT",
+    "iata_code": "TUD",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -150,7 +262,14 @@
     "freq": "",
     "Lat": 13.052014,
     "Lon": -12.727162,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "NIK",
+    "iso_country": "SN",
+    "iata_code": "NIK",
+    "length_ft": 4760,
+    "width_ft": 82,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -159,7 +278,11 @@
     "freq": "",
     "Lat": 14.809398,
     "Lon": -16.95066,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SN-0001",
+    "iso_country": "SN",
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -168,7 +291,9 @@
     "freq": "",
     "Lat": 14.0866,
     "Lon": -16.6659,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SN-0003",
+    "iso_country": "SN"
   },
   {
     "type": "small_airport",
@@ -177,6 +302,8 @@
     "freq": "",
     "Lat": 14.4646,
     "Lon": -17.0136,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SN-0004",
+    "iso_country": "SN"
   }
 ]

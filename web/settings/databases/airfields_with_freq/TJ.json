@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 39.221141,
     "Lon": 71.207804,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TJ-0001",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 37.369998931884766,
     "Lon": 68.68399810791016,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TJ-0002",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 39.4055555556,
     "Lon": 68.5227777778,
-    "Ele": 1418.8
+    "Ele": 1418.8,
+    "ident": "TJ-0003",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 39.4822222222,
     "Lon": 67.6055555556,
-    "Ele": 1036.3
+    "Ele": 1036.3,
+    "ident": "TJ-0004",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 39.0038888889,
     "Lon": 70.2902777778,
-    "Ele": 1304.5
+    "Ele": 1304.5,
+    "ident": "TJ-0005",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 37.256862,
     "Lon": 69.092327,
-    "Ele": 377.0
+    "Ele": 377,
+    "ident": "TJ-0006",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 38.078537,
     "Lon": 69.320385,
-    "Ele": 636.7
+    "Ele": 636.7,
+    "ident": "TJ-0007",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": 36.73138,
     "Lon": 71.597087,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TJ-0008",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,9 @@
     "freq": "",
     "Lat": 40.34394,
     "Lon": 70.512219,
-    "Ele": 485.9
+    "Ele": 485.9,
+    "ident": "TJ-0009",
+    "iso_country": "TJ"
   },
   {
     "type": "small_airport",
@@ -87,7 +105,13 @@
     "freq": "",
     "Lat": 38.19039916992188,
     "Lon": 74.02469635009766,
-    "Ele": 3646.0
+    "Ele": 3646,
+    "ident": "TJ-UT44",
+    "iso_country": "TJ",
+    "length_ft": 8208,
+    "width_ft": 88,
+    "heading": 69.1,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -96,7 +120,13 @@
     "freq": "",
     "Lat": 38.512298584,
     "Lon": 68.67250061040001,
-    "Ele": 725.1
+    "Ele": 725.1,
+    "ident": "TJ-UT45",
+    "iso_country": "TJ",
+    "length_ft": 8270,
+    "width_ft": 162,
+    "heading": 82.9,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -105,7 +135,13 @@
     "freq": "",
     "Lat": 37.46979904169999,
     "Lon": 69.3807983398,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "TJ-UT46",
+    "iso_country": "TJ",
+    "length_ft": 2585,
+    "width_ft": 72,
+    "heading": 42.7,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -114,7 +150,13 @@
     "freq": "",
     "Lat": 40.121545,
     "Lon": 70.667209,
-    "Ele": 857.7
+    "Ele": 857.7,
+    "ident": "UT1A",
+    "iso_country": "TJ",
+    "length_ft": 9525,
+    "width_ft": 145,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -123,7 +165,13 @@
     "freq": "",
     "Lat": 37.64039993286133,
     "Lon": 69.64659881591797,
-    "Ele": 495.0
+    "Ele": 495,
+    "ident": "UT1B",
+    "iso_country": "TJ",
+    "length_ft": 5012,
+    "width_ft": 98,
+    "heading": 130.5,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -132,7 +180,13 @@
     "freq": "",
     "Lat": 37.502222,
     "Lon": 71.513333,
-    "Ele": 2042.2
+    "Ele": 2042.2,
+    "ident": "UT1C",
+    "iso_country": "TJ",
+    "length_ft": 6036,
+    "width_ft": 160,
+    "heading": 157.8,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -141,7 +195,15 @@
     "freq": "127.100",
     "Lat": 38.543746,
     "Lon": 68.822977,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "UTDD",
+    "iso_country": "TJ",
+    "icao_code": "UTDD",
+    "iata_code": "DYU",
+    "length_ft": 10170,
+    "width_ft": 147,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -150,7 +212,15 @@
     "freq": "118.500",
     "Lat": 37.98809814453125,
     "Lon": 69.80500030517578,
-    "Ele": 698.9
+    "Ele": 698.9,
+    "ident": "UTDK",
+    "iso_country": "TJ",
+    "icao_code": "UTDK",
+    "iata_code": "TJU",
+    "length_ft": 9843,
+    "width_ft": 137,
+    "heading": 16.7,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -159,7 +229,15 @@
     "freq": "124.800",
     "Lat": 40.215401,
     "Lon": 69.694702,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "UTDL",
+    "iso_country": "TJ",
+    "icao_code": "UTDL",
+    "iata_code": "LBD",
+    "length_ft": 10433,
+    "width_ft": 164,
+    "heading": 82,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -168,6 +246,13 @@
     "freq": "",
     "Lat": 37.86640167236328,
     "Lon": 68.86470031738281,
-    "Ele": 449.0
+    "Ele": 449,
+    "ident": "UTDT",
+    "iso_country": "TJ",
+    "icao_code": "UTDT",
+    "iata_code": "KQT",
+    "length_ft": 7497,
+    "QFU": "35",
+    "heading": 350
   }
 ]

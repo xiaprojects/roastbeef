@@ -6,7 +6,15 @@
     "freq": "120.200",
     "Lat": 19.687,
     "Lon": -79.882797,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MWCB",
+    "iso_country": "KY",
+    "icao_code": "MWCB",
+    "iata_code": "CYB",
+    "length_ft": 6000,
+    "width_ft": 148,
+    "heading": 84,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,14 @@
     "freq": "",
     "Lat": 19.660161,
     "Lon": -80.088826,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MWCL",
+    "iso_country": "KY",
+    "icao_code": "MWCL",
+    "iata_code": "LYB",
+    "length_ft": 3275,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "large_airport",
@@ -24,6 +39,14 @@
     "freq": "120.200",
     "Lat": 19.292801,
     "Lon": -81.357697,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MWCR",
+    "iso_country": "KY",
+    "icao_code": "MWCR",
+    "iata_code": "GCM",
+    "length_ft": 7021,
+    "width_ft": 148,
+    "heading": 76,
+    "QFU": "26"
   }
 ]

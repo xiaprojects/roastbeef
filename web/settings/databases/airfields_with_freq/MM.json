@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 17.633329391500002,
     "Lon": 95.4666976929,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "MM-0002",
+    "iso_country": "MM",
+    "iata_code": "HEB"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,9 @@
     "freq": "",
     "Lat": 20.350000381469727,
     "Lon": 98.01667022705078,
-    "Ele": 309.1
+    "Ele": 309.1,
+    "ident": "MM-0003",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -24,7 +29,9 @@
     "freq": "",
     "Lat": 16.570999145507812,
     "Lon": 94.93229675292967,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "MM-0004",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -33,7 +40,9 @@
     "freq": "",
     "Lat": 26.68600082397461,
     "Lon": 96.2104034423828,
-    "Ele": 512.1
+    "Ele": 512.1,
+    "ident": "MM-0005",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -42,7 +51,14 @@
     "freq": "",
     "Lat": 20.153600692749023,
     "Lon": 94.96869659423828,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "VY02",
+    "iso_country": "MM",
+    "local_code": "VY02",
+    "length_ft": 8500,
+    "width_ft": 98,
+    "heading": 9.2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -51,7 +67,15 @@
     "freq": "118.700",
     "Lat": 19.769199,
     "Lon": 94.0261,
-    "Ele": 22.6
+    "Ele": 22.6,
+    "ident": "VYAN",
+    "iso_country": "MM",
+    "icao_code": "VYAN",
+    "iata_code": "VBA",
+    "length_ft": 8500,
+    "width_ft": 100,
+    "heading": 181.9,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -60,7 +84,13 @@
     "freq": "",
     "Lat": 21.9554,
     "Lon": 96.406097,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "VYAS",
+    "iso_country": "MM",
+    "length_ft": 10020,
+    "width_ft": 205,
+    "heading": 25,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -69,7 +99,15 @@
     "freq": "119.700",
     "Lat": 21.178800582885746,
     "Lon": 94.9301986694336,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "VYBG",
+    "iso_country": "MM",
+    "icao_code": "VYBG",
+    "iata_code": "NYU",
+    "length_ft": 8500,
+    "width_ft": 100,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -78,7 +116,15 @@
     "freq": "118.700",
     "Lat": 24.27044,
     "Lon": 97.2476,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "VYBM",
+    "iso_country": "MM",
+    "icao_code": "VYBM",
+    "iata_code": "BMO",
+    "length_ft": 5502,
+    "width_ft": 102,
+    "heading": 148.1,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -87,7 +133,15 @@
     "freq": "",
     "Lat": 11.1494,
     "Lon": 98.735901,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "VYBP",
+    "iso_country": "MM",
+    "icao_code": "VYBP",
+    "iata_code": "VBP",
+    "length_ft": 10024,
+    "width_ft": 102,
+    "heading": 166,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -96,7 +150,13 @@
     "freq": "",
     "Lat": 14.137964,
     "Lon": 93.367853,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VYCI",
+    "iso_country": "MM",
+    "length_ft": 4443,
+    "width_ft": 101,
+    "heading": 10,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -105,7 +165,15 @@
     "freq": "119.700",
     "Lat": 21.9405,
     "Lon": 96.0896,
-    "Ele": 76.8
+    "Ele": 76.8,
+    "ident": "VYCZ",
+    "iso_country": "MM",
+    "icao_code": "VYCZ",
+    "iata_code": "VBC",
+    "length_ft": 6500,
+    "width_ft": 100,
+    "heading": 8.1,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -114,7 +182,15 @@
     "freq": "119.700",
     "Lat": 14.103899955749512,
     "Lon": 98.20359802246094,
-    "Ele": 25.6
+    "Ele": 25.6,
+    "ident": "VYDW",
+    "iso_country": "MM",
+    "icao_code": "VYDW",
+    "iata_code": "TVY",
+    "length_ft": 7005,
+    "width_ft": 100,
+    "heading": 157,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -123,7 +199,10 @@
     "freq": "",
     "Lat": 22.939167,
     "Lon": 93.615333,
-    "Ele": 1832.5
+    "Ele": 1832.5,
+    "ident": "VYFS",
+    "iso_country": "MM",
+    "iata_code": "SRU"
   },
   {
     "type": "small_airport",
@@ -132,7 +211,11 @@
     "freq": "",
     "Lat": 22.174699783325195,
     "Lon": 94.1343994140625,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "VYGG",
+    "iso_country": "MM",
+    "icao_code": "VYGG",
+    "iata_code": "GAW"
   },
   {
     "type": "small_airport",
@@ -141,7 +224,11 @@
     "freq": "",
     "Lat": 17.600000381469727,
     "Lon": 94.5832977294922,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "VYGW",
+    "iso_country": "MM",
+    "icao_code": "VYGW",
+    "iata_code": "GWA"
   },
   {
     "type": "small_airport",
@@ -150,7 +237,9 @@
     "freq": "",
     "Lat": 17.11669921875,
     "Lon": 96.06670379638672,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "VYHB",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -159,7 +248,11 @@
     "freq": "",
     "Lat": 20.74714,
     "Lon": 96.792029,
-    "Ele": 1175.9
+    "Ele": 1175.9,
+    "ident": "VYHH",
+    "iso_country": "MM",
+    "icao_code": "VYHH",
+    "iata_code": "HEH"
   },
   {
     "type": "small_airport",
@@ -168,7 +261,15 @@
     "freq": "",
     "Lat": 24.899599,
     "Lon": 94.914001,
-    "Ele": 162.8
+    "Ele": 162.8,
+    "ident": "VYHL",
+    "iso_country": "MM",
+    "icao_code": "VYHL",
+    "iata_code": "HOX",
+    "length_ft": 11970,
+    "width_ft": 200,
+    "heading": 160.6,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -177,7 +278,11 @@
     "freq": "",
     "Lat": 21.700000762939453,
     "Lon": 94.0999984741211,
-    "Ele": 422.1
+    "Ele": 422.1,
+    "ident": "VYHN",
+    "iso_country": "MM",
+    "icao_code": "VYHN",
+    "iata_code": "TIO"
   },
   {
     "type": "medium_airport",
@@ -186,7 +291,15 @@
     "freq": "118.700",
     "Lat": 21.30159950256348,
     "Lon": 99.63600158691406,
-    "Ele": 852.8
+    "Ele": 852.8,
+    "ident": "VYKG",
+    "iso_country": "MM",
+    "icao_code": "VYKG",
+    "iata_code": "KET",
+    "length_ft": 7815,
+    "width_ft": 75,
+    "heading": 120.9,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -195,7 +308,11 @@
     "freq": "",
     "Lat": 25.9883,
     "Lon": 95.6744,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "VYKI",
+    "iso_country": "MM",
+    "icao_code": "VYKI",
+    "iata_code": "KHM"
   },
   {
     "type": "small_airport",
@@ -204,7 +321,15 @@
     "freq": "118.700",
     "Lat": 23.188801,
     "Lon": 94.051102,
-    "Ele": 133.8
+    "Ele": 133.8,
+    "ident": "VYKL",
+    "iso_country": "MM",
+    "icao_code": "VYKL",
+    "iata_code": "KMV",
+    "length_ft": 5502,
+    "width_ft": 102,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -213,7 +338,15 @@
     "freq": "118.700",
     "Lat": 19.42639923095703,
     "Lon": 93.53479766845705,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VYKP",
+    "iso_country": "MM",
+    "icao_code": "VYKP",
+    "iata_code": "KYP",
+    "length_ft": 4600,
+    "width_ft": 100,
+    "heading": 179.9,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -222,7 +355,15 @@
     "freq": "118.700",
     "Lat": 10.04930019378662,
     "Lon": 98.53800201416016,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "VYKT",
+    "iso_country": "MM",
+    "icao_code": "VYKT",
+    "iata_code": "KAW",
+    "length_ft": 6000,
+    "width_ft": 150,
+    "heading": 17.8,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -231,7 +372,11 @@
     "freq": "",
     "Lat": 21.399999618530277,
     "Lon": 94.13330078125,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "VYKU",
+    "iso_country": "MM",
+    "icao_code": "VYKU",
+    "iata_code": "KYT"
   },
   {
     "type": "medium_airport",
@@ -240,7 +385,15 @@
     "freq": "118.700",
     "Lat": 19.691499710083008,
     "Lon": 97.2147979736328,
-    "Ele": 896.1
+    "Ele": 896.1,
+    "ident": "VYLK",
+    "iso_country": "MM",
+    "icao_code": "VYLK",
+    "iata_code": "LIW",
+    "length_ft": 5200,
+    "width_ft": 75,
+    "heading": 4,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -249,7 +402,9 @@
     "freq": "",
     "Lat": 25.649999618530277,
     "Lon": 96.36699676513672,
-    "Ele": 307.8
+    "Ele": 307.8,
+    "ident": "VYLN",
+    "iso_country": "MM"
   },
   {
     "type": "medium_airport",
@@ -258,7 +413,15 @@
     "freq": "118.700",
     "Lat": 22.9778995513916,
     "Lon": 97.752197265625,
-    "Ele": 746.8
+    "Ele": 746.8,
+    "ident": "VYLS",
+    "iso_country": "MM",
+    "icao_code": "VYLS",
+    "iata_code": "LSH",
+    "length_ft": 5285,
+    "width_ft": 95,
+    "heading": 4.4,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -267,7 +430,13 @@
     "freq": "",
     "Lat": 20.940399169921875,
     "Lon": 94.82260131835938,
-    "Ele": 53.3
+    "Ele": 53.3,
+    "ident": "VYLY",
+    "iso_country": "MM",
+    "length_ft": 3821,
+    "width_ft": 61,
+    "heading": 182.7,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -276,7 +445,15 @@
     "freq": "119.200",
     "Lat": 21.70219993591309,
     "Lon": 95.97789764404295,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "VYMD",
+    "iso_country": "MM",
+    "icao_code": "VYMD",
+    "iata_code": "MDL",
+    "length_ft": 14003,
+    "width_ft": 200,
+    "heading": 170.5,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -285,7 +462,15 @@
     "freq": "119.700",
     "Lat": 12.439800262451172,
     "Lon": 98.62149810791016,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "VYME",
+    "iso_country": "MM",
+    "icao_code": "VYME",
+    "iata_code": "MGZ",
+    "length_ft": 8795,
+    "width_ft": 180,
+    "heading": 182.5,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -294,7 +479,9 @@
     "freq": "",
     "Lat": 20.83300018310547,
     "Lon": 99.9499969482422,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "VYMH",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -303,7 +490,9 @@
     "freq": "",
     "Lat": 22.482999801635746,
     "Lon": 98.03299713134766,
-    "Ele": 883.9
+    "Ele": 883.9,
+    "ident": "VYMI",
+    "iso_country": "MM"
   },
   {
     "type": "medium_airport",
@@ -312,7 +501,15 @@
     "freq": "119.700",
     "Lat": 25.3836,
     "Lon": 97.351898,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "VYMK",
+    "iso_country": "MM",
+    "icao_code": "VYMK",
+    "iata_code": "MYT",
+    "length_ft": 6100,
+    "width_ft": 100,
+    "heading": 38.2,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -321,7 +518,9 @@
     "freq": "",
     "Lat": 20.88640022277832,
     "Lon": 95.89279174804688,
-    "Ele": 213.1
+    "Ele": 213.1,
+    "ident": "VYML",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -330,7 +529,15 @@
     "freq": "118.700",
     "Lat": 16.444700241088867,
     "Lon": 97.66069793701172,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "VYMM",
+    "iso_country": "MM",
+    "icao_code": "VYMM",
+    "iata_code": "MNU",
+    "length_ft": 5260,
+    "width_ft": 150,
+    "heading": 35,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -339,7 +546,11 @@
     "freq": "",
     "Lat": 18.8458,
     "Lon": 93.688904,
-    "Ele": 31.1
+    "Ele": 31.1,
+    "ident": "VYMN",
+    "iso_country": "MM",
+    "icao_code": "VYMN",
+    "iata_code": "MGU"
   },
   {
     "type": "medium_airport",
@@ -348,7 +559,15 @@
     "freq": "118.700",
     "Lat": 23.092500686645508,
     "Lon": 96.64530181884766,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "VYMO",
+    "iso_country": "MM",
+    "icao_code": "VYMO",
+    "iata_code": "MOE",
+    "length_ft": 4498,
+    "width_ft": 102,
+    "heading": 115.9,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -357,7 +576,9 @@
     "freq": "",
     "Lat": 21.350000381469727,
     "Lon": 99.03299713134766,
-    "Ele": 462.1
+    "Ele": 462.1,
+    "ident": "VYMP",
+    "iso_country": "MM"
   },
   {
     "type": "medium_airport",
@@ -366,7 +587,15 @@
     "freq": "118.700",
     "Lat": 20.51679992675781,
     "Lon": 99.25679779052734,
-    "Ele": 571.5
+    "Ele": 571.5,
+    "ident": "VYMS",
+    "iso_country": "MM",
+    "icao_code": "VYMS",
+    "iata_code": "MOG",
+    "length_ft": 5000,
+    "width_ft": 102,
+    "heading": 123,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -375,7 +604,11 @@
     "freq": "",
     "Lat": 20.29669952392578,
     "Lon": 98.8989028930664,
-    "Ele": 560.8
+    "Ele": 560.8,
+    "ident": "VYMT",
+    "iso_country": "MM",
+    "icao_code": "VYMT",
+    "iata_code": "MGK"
   },
   {
     "type": "small_airport",
@@ -384,7 +617,9 @@
     "freq": "",
     "Lat": 20.525901,
     "Lon": 93.252979,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "VYMU",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -393,7 +628,14 @@
     "freq": "",
     "Lat": 20.1656,
     "Lon": 94.941399,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "VYMW",
+    "iso_country": "MM",
+    "icao_code": "VYMW",
+    "iata_code": "MWQ",
+    "length_ft": 8530,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -402,7 +644,15 @@
     "freq": "",
     "Lat": 22.221638,
     "Lon": 95.093479,
-    "Ele": 90.8
+    "Ele": 90.8,
+    "ident": "VYMY",
+    "iso_country": "MM",
+    "icao_code": "VYMY",
+    "iata_code": "NYW",
+    "length_ft": 8530,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -411,7 +661,9 @@
     "freq": "",
     "Lat": 27.5,
     "Lon": 97.81700134277344,
-    "Ele": 670.6
+    "Ele": 670.6,
+    "ident": "VYNM",
+    "iso_country": "MM"
   },
   {
     "type": "medium_airport",
@@ -420,7 +672,13 @@
     "freq": "119.700",
     "Lat": 25.3544006348,
     "Lon": 97.2951965332,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "VYNP",
+    "iso_country": "MM",
+    "length_ft": 11025,
+    "width_ft": 190,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -429,7 +687,15 @@
     "freq": "118.700",
     "Lat": 20.890499114990234,
     "Lon": 97.73590087890624,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "VYNS",
+    "iso_country": "MM",
+    "icao_code": "VYNS",
+    "iata_code": "NMS",
+    "length_ft": 12005,
+    "width_ft": 200,
+    "heading": 27,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -438,7 +704,15 @@
     "freq": "118.700",
     "Lat": 19.623501,
     "Lon": 96.200996,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "VYNT",
+    "iso_country": "MM",
+    "icao_code": "VYNT",
+    "iata_code": "NYT",
+    "length_ft": 12000,
+    "width_ft": 500,
+    "heading": 157.1,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -447,7 +721,10 @@
     "freq": "",
     "Lat": 23.083,
     "Lon": 97.383003,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "VYNU",
+    "iso_country": "MM",
+    "iata_code": "NMT"
   },
   {
     "type": "small_airport",
@@ -456,7 +733,15 @@
     "freq": "118.700",
     "Lat": 16.8937,
     "Lon": 97.674599,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "VYPA",
+    "iso_country": "MM",
+    "icao_code": "VYPA",
+    "iata_code": "PAA",
+    "length_ft": 4502,
+    "width_ft": 102,
+    "heading": 31,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -465,7 +750,9 @@
     "freq": "",
     "Lat": 24.25,
     "Lon": 94.78299713134766,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "VYPB",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -474,7 +761,9 @@
     "freq": "",
     "Lat": 21.28416,
     "Lon": 92.90048,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "VYPE",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -483,7 +772,9 @@
     "freq": "",
     "Lat": 11.276081,
     "Lon": 98.213278,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "VYPI",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -492,7 +783,11 @@
     "freq": "",
     "Lat": 21.4492,
     "Lon": 94.4869,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "VYPK",
+    "iso_country": "MM",
+    "icao_code": "VYPK",
+    "iata_code": "PAU"
   },
   {
     "type": "small_airport",
@@ -501,7 +796,9 @@
     "freq": "",
     "Lat": 24.08300018310547,
     "Lon": 95.36699676513672,
-    "Ele": 253.0
+    "Ele": 253,
+    "ident": "VYPL",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -510,7 +807,15 @@
     "freq": "118.700",
     "Lat": 16.815201,
     "Lon": 94.7799,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VYPN",
+    "iso_country": "MM",
+    "icao_code": "VYPN",
+    "iata_code": "BSX",
+    "length_ft": 4400,
+    "width_ft": 100,
+    "heading": 64,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -519,7 +824,11 @@
     "freq": "",
     "Lat": 18.0666999817,
     "Lon": 97.449798584,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "VYPP",
+    "iso_country": "MM",
+    "icao_code": "VYPP",
+    "iata_code": "PPU"
   },
   {
     "type": "medium_airport",
@@ -528,7 +837,15 @@
     "freq": "118.700",
     "Lat": 27.32990074157715,
     "Lon": 97.42630004882812,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "VYPT",
+    "iso_country": "MM",
+    "icao_code": "VYPT",
+    "iata_code": "PBU",
+    "length_ft": 7002,
+    "width_ft": 102,
+    "heading": 174.1,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -537,7 +854,14 @@
     "freq": "",
     "Lat": 21.4043,
     "Lon": 95.11125,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "VYPU",
+    "iso_country": "MM",
+    "icao_code": "VYPU",
+    "iata_code": "PKK",
+    "length_ft": 8530,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -546,7 +870,9 @@
     "freq": "",
     "Lat": 12.959289,
     "Lon": 98.641627,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "VYPW",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -555,7 +881,15 @@
     "freq": "",
     "Lat": 18.824499130249023,
     "Lon": 95.26599884033205,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "VYPY",
+    "iso_country": "MM",
+    "icao_code": "VYPY",
+    "iata_code": "PRU",
+    "length_ft": 4502,
+    "width_ft": 131,
+    "heading": 65,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -564,7 +898,9 @@
     "freq": "",
     "Lat": 21.16699981689453,
     "Lon": 94.16699981689452,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "VYSA",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -573,7 +909,9 @@
     "freq": "",
     "Lat": 22.100000381469727,
     "Lon": 95.01699829101562,
-    "Ele": 80.5
+    "Ele": 80.5,
+    "ident": "VYSL",
+    "iso_country": "MM"
   },
   {
     "type": "medium_airport",
@@ -582,7 +920,13 @@
     "freq": "119.700",
     "Lat": 20.941699981689453,
     "Lon": 95.91449737548828,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "VYST",
+    "iso_country": "MM",
+    "length_ft": 8501,
+    "width_ft": 150,
+    "heading": 6.6,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -591,7 +935,15 @@
     "freq": "119.700",
     "Lat": 20.133165,
     "Lon": 92.870693,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "VYSW",
+    "iso_country": "MM",
+    "icao_code": "VYSW",
+    "iata_code": "AKY",
+    "length_ft": 6001,
+    "width_ft": 151,
+    "heading": 104,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -600,7 +952,15 @@
     "freq": "118.700",
     "Lat": 18.4606990814209,
     "Lon": 94.30010223388672,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VYTD",
+    "iso_country": "MM",
+    "icao_code": "VYTD",
+    "iata_code": "SNW",
+    "length_ft": 5502,
+    "width_ft": 102,
+    "heading": 20,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -609,7 +969,15 @@
     "freq": "118.700",
     "Lat": 20.483800888061523,
     "Lon": 99.9354019165039,
-    "Ele": 390.1
+    "Ele": 390.1,
+    "ident": "VYTL",
+    "iso_country": "MM",
+    "icao_code": "VYTL",
+    "iata_code": "THL",
+    "length_ft": 7002,
+    "width_ft": 102,
+    "heading": 37.6,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -618,7 +986,9 @@
     "freq": "",
     "Lat": 26.367000579833984,
     "Lon": 96.73300170898438,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "VYTN",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -627,7 +997,13 @@
     "freq": "119.700",
     "Lat": 19.031299591064453,
     "Lon": 96.40119934082033,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "VYTO",
+    "iso_country": "MM",
+    "length_ft": 12005,
+    "width_ft": 200,
+    "heading": 180.2,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -636,7 +1012,9 @@
     "freq": "",
     "Lat": 22.482999801635746,
     "Lon": 98.4000015258789,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "VYTY",
+    "iso_country": "MM"
   },
   {
     "type": "small_airport",
@@ -645,7 +1023,13 @@
     "freq": "",
     "Lat": 21.406700134277344,
     "Lon": 94.13030242919922,
-    "Ele": 410.0
+    "Ele": 410,
+    "ident": "VYXG",
+    "iso_country": "MM",
+    "length_ft": 6560,
+    "width_ft": 102,
+    "heading": 40,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -654,7 +1038,11 @@
     "freq": "",
     "Lat": 15.301361,
     "Lon": 97.864288,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "VYYE",
+    "iso_country": "MM",
+    "icao_code": "VYYE",
+    "iata_code": "XYE"
   },
   {
     "type": "large_airport",
@@ -663,6 +1051,14 @@
     "freq": "119.700",
     "Lat": 16.907300949099998,
     "Lon": 96.1332015991,
-    "Ele": 33.2
+    "Ele": 33.2,
+    "ident": "VYYY",
+    "iso_country": "MM",
+    "icao_code": "VYYY",
+    "iata_code": "RGN",
+    "length_ft": 11200,
+    "width_ft": 200,
+    "heading": 33.1,
+    "QFU": "21"
   }
 ]

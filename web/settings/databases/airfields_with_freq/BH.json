@@ -6,7 +6,15 @@
     "freq": "127.850",
     "Lat": 26.267295,
     "Lon": 50.63764,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "OBBI",
+    "iso_country": "BH",
+    "icao_code": "OBBI",
+    "iata_code": "BAH",
+    "length_ft": 8302,
+    "width_ft": 148,
+    "heading": 123,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,14 @@
     "freq": "32.137",
     "Lat": 25.9184,
     "Lon": 50.590599,
-    "Ele": 41.5
+    "Ele": 41.5,
+    "ident": "OBBS",
+    "iso_country": "BH",
+    "icao_code": "OBBS",
+    "length_ft": 12467,
+    "width_ft": 147,
+    "heading": 153.8,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -24,6 +39,13 @@
     "freq": "",
     "Lat": 26.034533,
     "Lon": 50.524544,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "OBKH",
+    "iso_country": "BH",
+    "icao_code": "OBKH",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   }
 ]

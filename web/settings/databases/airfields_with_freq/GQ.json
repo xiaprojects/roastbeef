@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": -1.408615,
     "Lon": 5.624163,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "FGAB",
+    "iso_country": "GQ",
+    "iata_code": "NBN",
+    "length_ft": 6177,
+    "width_ft": 100,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "118.800",
     "Lat": 1.90547,
     "Lon": 9.80568,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "FGBT",
+    "iso_country": "GQ",
+    "icao_code": "FGBT",
+    "iata_code": "BSG",
+    "length_ft": 7001,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 41
   },
   {
     "type": "small_airport",
@@ -24,7 +39,14 @@
     "freq": "",
     "Lat": 1.685334,
     "Lon": 11.024394,
-    "Ele": 659.9
+    "Ele": 659.9,
+    "ident": "FGMY",
+    "iso_country": "GQ",
+    "icao_code": "FGMY",
+    "iata_code": "GEM",
+    "length_ft": 9843,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -33,7 +55,15 @@
     "freq": "655.900",
     "Lat": 3.755270004272461,
     "Lon": 8.708720207214355,
-    "Ele": 23.2
+    "Ele": 23.2,
+    "ident": "FGSL",
+    "iso_country": "GQ",
+    "icao_code": "FGSL",
+    "iata_code": "SSG",
+    "length_ft": 9647,
+    "width_ft": 151,
+    "heading": 42,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -42,7 +72,9 @@
     "freq": "",
     "Lat": 1.636763,
     "Lon": 11.302458,
-    "Ele": 648.0
+    "Ele": 648,
+    "ident": "GQ-0001",
+    "iso_country": "GQ"
   },
   {
     "type": "small_airport",
@@ -51,7 +83,10 @@
     "freq": "",
     "Lat": 1.0085,
     "Lon": 10.7552,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "MDV",
+    "iso_country": "GQ",
+    "iata_code": "MDV"
   },
   {
     "type": "small_airport",
@@ -60,6 +95,12 @@
     "freq": "",
     "Lat": 0.9125,
     "Lon": 9.3304,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "OCS",
+    "iso_country": "GQ",
+    "iata_code": "OCS",
+    "length_ft": 10220,
+    "QFU": "19",
+    "heading": 190
   }
 ]

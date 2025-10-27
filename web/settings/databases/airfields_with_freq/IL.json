@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 32.7617093312,
     "Lon": 34.9535393715,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0001",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 31.883434,
     "Lon": 34.948411,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0002",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 31.2277,
     "Lon": 34.4604,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0003",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 31.1252,
     "Lon": 34.3777,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0004",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 31.8692,
     "Lon": 34.6907,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0005",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 31.8851,
     "Lon": 34.8862,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0006",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,14 @@
     "freq": "126.900",
     "Lat": 31.9672,
     "Lon": 34.7536,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "IL-0007",
+    "iso_country": "IL",
+    "icao_code": "LLRS",
+    "length_ft": 2165,
+    "width_ft": 30,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -69,7 +88,9 @@
     "freq": "",
     "Lat": 32.2636,
     "Lon": 34.9511,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0008",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -78,7 +99,9 @@
     "freq": "",
     "Lat": 31.69692,
     "Lon": 34.76821,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "IL-0011",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -87,7 +110,9 @@
     "freq": "",
     "Lat": 31.06104,
     "Lon": 35.01049,
-    "Ele": 548.0
+    "Ele": 548,
+    "ident": "IL-0012",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -96,7 +121,9 @@
     "freq": "",
     "Lat": 33.021598,
     "Lon": 35.464788,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0015",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -105,7 +132,9 @@
     "freq": "",
     "Lat": 31.679159,
     "Lon": 34.702879,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "IL-0019",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -114,7 +143,9 @@
     "freq": "",
     "Lat": 32.906065,
     "Lon": 35.18946,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IL-0020",
+    "iso_country": "IL"
   },
   {
     "type": "small_airport",
@@ -123,7 +154,14 @@
     "freq": "",
     "Lat": 31.26070022583008,
     "Lon": 34.64039993286133,
-    "Ele": 201.2
+    "Ele": 201.2,
+    "ident": "LL1A",
+    "iso_country": "IL",
+    "local_code": "LL1A",
+    "length_ft": 6204,
+    "width_ft": 98,
+    "heading": 103,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -132,7 +170,14 @@
     "freq": "120.900",
     "Lat": 31.22916984558105,
     "Lon": 35.18903732299805,
-    "Ele": 595.0
+    "Ele": 595,
+    "ident": "LL1B",
+    "iso_country": "IL",
+    "local_code": "LL1B",
+    "length_ft": 4593,
+    "width_ft": 45,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -141,7 +186,14 @@
     "freq": "120.900",
     "Lat": 31.8979,
     "Lon": 34.6908,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "LL59",
+    "iso_country": "IL",
+    "local_code": "LL59",
+    "length_ft": 2636,
+    "width_ft": 100,
+    "heading": 127,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -150,7 +202,14 @@
     "freq": "",
     "Lat": 30.8594,
     "Lon": 34.4431,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "LL60",
+    "iso_country": "IL",
+    "local_code": "LL60",
+    "length_ft": 4905,
+    "width_ft": 95,
+    "heading": 146.8,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -159,7 +218,15 @@
     "freq": "120.500",
     "Lat": 32.011398,
     "Lon": 34.8867,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "LLBG",
+    "iso_country": "IL",
+    "icao_code": "LLBG",
+    "iata_code": "TLV",
+    "length_ft": 10209,
+    "width_ft": 148,
+    "heading": 121.4,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -168,7 +235,14 @@
     "freq": "129.150",
     "Lat": 32.649854,
     "Lon": 34.933126,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "LLBO",
+    "iso_country": "IL",
+    "icao_code": "LLBO",
+    "length_ft": 2625,
+    "width_ft": 59,
+    "heading": 188,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -177,7 +251,15 @@
     "freq": "120.900",
     "Lat": 31.287000656128,
     "Lon": 34.722999572754,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "LLBS",
+    "iso_country": "IL",
+    "icao_code": "LLBS",
+    "iata_code": "BEV",
+    "length_ft": 3384,
+    "width_ft": 69,
+    "heading": 136.5,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -186,7 +268,14 @@
     "freq": "120.900",
     "Lat": 31.8395,
     "Lon": 34.8218,
-    "Ele": 58.8
+    "Ele": 58.8,
+    "ident": "LLEK",
+    "iso_country": "IL",
+    "icao_code": "LLEK",
+    "length_ft": 7880,
+    "width_ft": 150,
+    "heading": 184,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -195,7 +284,14 @@
     "freq": "",
     "Lat": 29.727009,
     "Lon": 35.014116,
-    "Ele": 87.8
+    "Ele": 87.8,
+    "ident": "LLER",
+    "iso_country": "IL",
+    "icao_code": "LLER",
+    "iata_code": "ETM",
+    "length_ft": 11811,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -204,7 +300,14 @@
     "freq": "132.050",
     "Lat": 32.4408,
     "Lon": 35.007702,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "LLES",
+    "iso_country": "IL",
+    "icao_code": "LLES",
+    "length_ft": 3990,
+    "width_ft": 100,
+    "heading": 97.8,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -213,7 +316,15 @@
     "freq": "",
     "Lat": 30.621700286865234,
     "Lon": 35.20330047607422,
-    "Ele": -50.0
+    "Ele": -50,
+    "ident": "LLEY",
+    "iso_country": "IL",
+    "icao_code": "LLEY",
+    "iata_code": "EIY",
+    "length_ft": 3943,
+    "width_ft": 60,
+    "heading": 11,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -222,7 +333,14 @@
     "freq": "",
     "Lat": 32.786389,
     "Lon": 35.717499,
-    "Ele": 371.2
+    "Ele": 371.2,
+    "ident": "LLFK",
+    "iso_country": "IL",
+    "icao_code": "LLFK",
+    "length_ft": 4265,
+    "width_ft": 98,
+    "heading": 38,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -231,7 +349,15 @@
     "freq": "135.400",
     "Lat": 32.80939865112305,
     "Lon": 35.04309844970703,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "LLHA",
+    "iso_country": "IL",
+    "icao_code": "LLHA",
+    "iata_code": "HFA",
+    "length_ft": 4324,
+    "width_ft": 98,
+    "heading": 159,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -240,7 +366,14 @@
     "freq": "",
     "Lat": 31.2334,
     "Lon": 34.662601,
-    "Ele": 221.0
+    "Ele": 221,
+    "ident": "LLHB",
+    "iso_country": "IL",
+    "icao_code": "LLHB",
+    "length_ft": 5800,
+    "width_ft": 75,
+    "heading": 143,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -249,7 +382,14 @@
     "freq": "120.900",
     "Lat": 31.762501,
     "Lon": 34.7272,
-    "Ele": 45.1
+    "Ele": 45.1,
+    "ident": "LLHS",
+    "iso_country": "IL",
+    "icao_code": "LLHS",
+    "length_ft": 8040,
+    "width_ft": 150,
+    "heading": 111.6,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -258,7 +398,14 @@
     "freq": "122.200",
     "Lat": 32.180599,
     "Lon": 34.834702,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "LLHZ",
+    "iso_country": "IL",
+    "icao_code": "LLHZ",
+    "length_ft": 2963,
+    "width_ft": 59,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -267,7 +414,15 @@
     "freq": "132.450",
     "Lat": 32.980999,
     "Lon": 35.571899,
-    "Ele": 269.4
+    "Ele": 269.4,
+    "ident": "LLIB",
+    "iso_country": "IL",
+    "icao_code": "LLIB",
+    "iata_code": "RPN",
+    "length_ft": 3655,
+    "width_ft": 100,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -276,7 +431,15 @@
     "freq": "126.900",
     "Lat": 33.216275,
     "Lon": 35.59622,
-    "Ele": 117.7
+    "Ele": 117.7,
+    "ident": "LLKS",
+    "iso_country": "IL",
+    "icao_code": "LLKS",
+    "iata_code": "KSW",
+    "length_ft": 4423,
+    "width_ft": 98,
+    "heading": 33,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -285,7 +448,14 @@
     "freq": "124.300",
     "Lat": 32.597301,
     "Lon": 35.228802,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "LLMG",
+    "iso_country": "IL",
+    "icao_code": "LLMG",
+    "length_ft": 6982,
+    "width_ft": 78,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -294,7 +464,10 @@
     "freq": "",
     "Lat": 30.65060043334961,
     "Lon": 34.80690002441406,
-    "Ele": 779.1
+    "Ele": 779.1,
+    "ident": "LLMR",
+    "iso_country": "IL",
+    "icao_code": "LLMR"
   },
   {
     "type": "medium_airport",
@@ -303,7 +476,15 @@
     "freq": "120.900",
     "Lat": 31.328199,
     "Lon": 35.388599,
-    "Ele": -385.9
+    "Ele": -385.9,
+    "ident": "LLMZ",
+    "iso_country": "IL",
+    "icao_code": "LLMZ",
+    "iata_code": "MTZ",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 9.6,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -312,7 +493,15 @@
     "freq": "120.900",
     "Lat": 31.2082996368,
     "Lon": 35.012298584,
-    "Ele": 405.4
+    "Ele": 405.4,
+    "ident": "LLNV",
+    "iso_country": "IL",
+    "icao_code": "LLNV",
+    "iata_code": "VTM",
+    "length_ft": 2806,
+    "width_ft": 70,
+    "heading": 146.9,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -321,7 +510,15 @@
     "freq": "129.900",
     "Lat": 29.9403,
     "Lon": 34.935799,
-    "Ele": 454.8
+    "Ele": 454.8,
+    "ident": "LLOV",
+    "iso_country": "IL",
+    "icao_code": "LLOV",
+    "iata_code": "VDA",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 22,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -330,7 +527,14 @@
     "freq": "125.800",
     "Lat": 32.6651,
     "Lon": 35.179501,
-    "Ele": 56.4
+    "Ele": 56.4,
+    "ident": "LLRD",
+    "iso_country": "IL",
+    "icao_code": "LLRD",
+    "length_ft": 7895,
+    "width_ft": 150,
+    "heading": 145,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -339,7 +543,15 @@
     "freq": "120.900",
     "Lat": 30.7761,
     "Lon": 34.666698,
-    "Ele": 648.0
+    "Ele": 648,
+    "ident": "LLRM",
+    "iso_country": "IL",
+    "icao_code": "LLRM",
+    "iata_code": "MIP",
+    "length_ft": 9876,
+    "width_ft": 148,
+    "heading": 66.5,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -348,7 +560,14 @@
     "freq": "123.700",
     "Lat": 32.308611,
     "Lon": 34.978333,
-    "Ele": 30.2
+    "Ele": 30.2,
+    "ident": "LLTN",
+    "iso_country": "IL",
+    "icao_code": "LLTN",
+    "length_ft": 2224,
+    "width_ft": 32,
+    "heading": 114,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -357,6 +576,14 @@
     "freq": "126.900",
     "Lat": 29.901111,
     "Lon": 35.0675,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "LLYT",
+    "iso_country": "IL",
+    "icao_code": "LLYT",
+    "iata_code": "YOT",
+    "length_ft": 3346,
+    "width_ft": 52,
+    "heading": 27,
+    "QFU": "20"
   }
 ]

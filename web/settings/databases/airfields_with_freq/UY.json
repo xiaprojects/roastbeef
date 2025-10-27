@@ -6,7 +6,13 @@
     "freq": "122.100",
     "Lat": -34.7892,
     "Lon": -56.264702,
-    "Ele": 53.0
+    "Ele": 53,
+    "ident": "SUAA",
+    "iso_country": "UY",
+    "length_ft": 4101,
+    "width_ft": 75,
+    "heading": 7,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -15,7 +21,14 @@
     "freq": "",
     "Lat": -30.4007,
     "Lon": -56.5079,
-    "Ele": 125.0
+    "Ele": 125,
+    "ident": "SUAG",
+    "iso_country": "UY",
+    "icao_code": "SUAG",
+    "iata_code": "ATI",
+    "length_ft": 4183,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -24,7 +37,13 @@
     "freq": "",
     "Lat": -34.270516,
     "Lon": -57.964383,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "SUAN",
+    "iso_country": "UY",
+    "length_ft": 4100,
+    "width_ft": 131,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -33,7 +52,9 @@
     "freq": "",
     "Lat": -30.938271,
     "Lon": -57.517528,
-    "Ele": 46.6
+    "Ele": 46.6,
+    "ident": "SUAY",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -42,7 +63,9 @@
     "freq": "",
     "Lat": -34.811533,
     "Lon": -56.164317,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "SUBL",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -51,7 +74,12 @@
     "freq": "",
     "Lat": -30.319807,
     "Lon": -57.558823,
-    "Ele": 76.8
+    "Ele": 76.8,
+    "ident": "SUBU",
+    "iso_country": "UY",
+    "icao_code": "SUBU",
+    "iata_code": "BUV",
+    "local_code": "1290"
   },
   {
     "type": "small_airport",
@@ -60,7 +88,14 @@
     "freq": "120.800",
     "Lat": -34.456402,
     "Lon": -57.770599,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "SUCA",
+    "iso_country": "UY",
+    "icao_code": "SUCA",
+    "iata_code": "CYR",
+    "length_ft": 4495,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -69,7 +104,13 @@
     "freq": "",
     "Lat": -33.875502,
     "Lon": -57.397875,
-    "Ele": 168.9
+    "Ele": 168.9,
+    "ident": "SUCD",
+    "iso_country": "UY",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -78,7 +119,13 @@
     "freq": "",
     "Lat": -33.71085,
     "Lon": -53.471334,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SUCH",
+    "iso_country": "UY",
+    "length_ft": 2789,
+    "width_ft": 82,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -87,7 +134,13 @@
     "freq": "",
     "Lat": -34.286766,
     "Lon": -55.354757,
-    "Ele": 152.7
+    "Ele": 152.7,
+    "ident": "SUCL",
+    "iso_country": "UY",
+    "length_ft": 5577,
+    "width_ft": 148,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -96,7 +149,13 @@
     "freq": "122.100",
     "Lat": -33.96611,
     "Lon": -58.325279,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "SUCM",
+    "iso_country": "UY",
+    "length_ft": 3478,
+    "width_ft": 92,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -105,7 +164,13 @@
     "freq": "",
     "Lat": -34.515153,
     "Lon": -56.261384,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "SUCN",
+    "iso_country": "UY",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -114,7 +179,15 @@
     "freq": "120.400",
     "Lat": -33.358898,
     "Lon": -56.499199,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "SUDU",
+    "iso_country": "UY",
+    "icao_code": "SUDU",
+    "iata_code": "DZO",
+    "length_ft": 4764,
+    "width_ft": 98,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -123,7 +196,9 @@
     "freq": "",
     "Lat": -31.703611,
     "Lon": -55.943056,
-    "Ele": 149.4
+    "Ele": 149.4,
+    "ident": "SUFT",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -132,7 +207,9 @@
     "freq": "",
     "Lat": -34.7469,
     "Lon": -55.961,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "SUGA",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -141,7 +218,13 @@
     "freq": "",
     "Lat": -32.3478,
     "Lon": -57.1894,
-    "Ele": 88.7
+    "Ele": 88.7,
+    "ident": "SUGN",
+    "iso_country": "UY",
+    "length_ft": 1640,
+    "width_ft": 66,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -150,7 +233,9 @@
     "freq": "",
     "Lat": -34.415352,
     "Lon": -57.46422,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "SUJL",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -159,7 +244,9 @@
     "freq": "",
     "Lat": -33.4753,
     "Lon": -54.539702,
-    "Ele": 96.3
+    "Ele": 96.3,
+    "ident": "SUJP",
+    "iso_country": "UY"
   },
   {
     "type": "medium_airport",
@@ -168,7 +255,15 @@
     "freq": "122.100",
     "Lat": -34.855099,
     "Lon": -55.094299,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "SULS",
+    "iso_country": "UY",
+    "icao_code": "SULS",
+    "iata_code": "PDP",
+    "length_ft": 6998,
+    "width_ft": 148,
+    "heading": 72.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -177,7 +272,12 @@
     "freq": "",
     "Lat": -33.2489,
     "Lon": -58.0737,
-    "Ele": 20.7
+    "Ele": 20.7,
+    "ident": "SUME",
+    "iso_country": "UY",
+    "length_ft": 3675,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -186,7 +286,9 @@
     "freq": "",
     "Lat": -34.345455,
     "Lon": -55.227522,
-    "Ele": 139.6
+    "Ele": 139.6,
+    "ident": "SUMI",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -195,7 +297,15 @@
     "freq": "",
     "Lat": -32.337898,
     "Lon": -54.216702,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "SUMO",
+    "iso_country": "UY",
+    "icao_code": "SUMO",
+    "iata_code": "MLZ",
+    "length_ft": 4573,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "large_airport",
@@ -204,7 +314,15 @@
     "freq": "119.200",
     "Lat": -34.835647,
     "Lon": -56.026497,
-    "Ele": 32.0
+    "Ele": 32,
+    "ident": "SUMU",
+    "iso_country": "UY",
+    "icao_code": "SUMU",
+    "iata_code": "MVD",
+    "length_ft": 5577,
+    "width_ft": 148,
+    "heading": 90.8,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -213,7 +331,9 @@
     "freq": "",
     "Lat": -32.96963,
     "Lon": -57.982351,
-    "Ele": 48.2
+    "Ele": 48.2,
+    "ident": "SUNM",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -222,7 +342,9 @@
     "freq": "",
     "Lat": -32.379601,
     "Lon": -58.029761,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "SUPC",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -231,7 +353,13 @@
     "freq": "118.700",
     "Lat": -34.909716,
     "Lon": -54.920212,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "SUPE",
+    "iso_country": "UY",
+    "length_ft": 1870,
+    "width_ft": 65,
+    "heading": 17,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -240,7 +368,10 @@
     "freq": "",
     "Lat": -34.88278,
     "Lon": -55.24861,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "SUPL",
+    "iso_country": "UY",
+    "local_code": "SUPL"
   },
   {
     "type": "medium_airport",
@@ -249,7 +380,15 @@
     "freq": "",
     "Lat": -32.3633,
     "Lon": -58.061901,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "SUPU",
+    "iso_country": "UY",
+    "icao_code": "SUPU",
+    "iata_code": "PDU",
+    "length_ft": 2953,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -258,7 +397,12 @@
     "freq": "",
     "Lat": -32.583057,
     "Lon": -53.454166,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "SURB",
+    "iso_country": "UY",
+    "length_ft": 2815,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -267,7 +411,14 @@
     "freq": "",
     "Lat": -30.9746,
     "Lon": -55.4762,
-    "Ele": 217.0
+    "Ele": 217,
+    "ident": "SURV",
+    "iso_country": "UY",
+    "icao_code": "SURV",
+    "iata_code": "RVY",
+    "length_ft": 6004,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -276,7 +427,9 @@
     "freq": "",
     "Lat": -32.526501,
     "Lon": -55.841636,
-    "Ele": 113.1
+    "Ele": 113.1,
+    "ident": "SUSG",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -285,7 +438,13 @@
     "freq": "",
     "Lat": -34.350554,
     "Lon": -56.752438,
-    "Ele": 69.8
+    "Ele": 69.8,
+    "ident": "SUSJ",
+    "iso_country": "UY",
+    "length_ft": 2034,
+    "width_ft": 115,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -294,7 +453,15 @@
     "freq": "286.000",
     "Lat": -31.438499,
     "Lon": -57.985298,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "SUSO",
+    "iso_country": "UY",
+    "icao_code": "SUSO",
+    "iata_code": "STY",
+    "length_ft": 2461,
+    "width_ft": 164,
+    "heading": 116,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -303,7 +470,14 @@
     "freq": "",
     "Lat": -31.749001,
     "Lon": -55.925801,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "SUTB",
+    "iso_country": "UY",
+    "icao_code": "SUTB",
+    "iata_code": "TAW",
+    "length_ft": 3806,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -312,7 +486,12 @@
     "freq": "",
     "Lat": -30.436607,
     "Lon": -57.446726,
-    "Ele": 83.2
+    "Ele": 83.2,
+    "ident": "SUTG",
+    "iso_country": "UY",
+    "length_ft": 3609,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -321,7 +500,15 @@
     "freq": "",
     "Lat": -33.195714,
     "Lon": -54.347246,
-    "Ele": 102.7
+    "Ele": 102.7,
+    "ident": "SUTR",
+    "iso_country": "UY",
+    "icao_code": "SUTR",
+    "iata_code": "TYT",
+    "length_ft": 1970,
+    "width_ft": 80,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -330,7 +517,13 @@
     "freq": "",
     "Lat": -32.960353,
     "Lon": -53.930913,
-    "Ele": 31.1
+    "Ele": 31.1,
+    "ident": "SUVE",
+    "iso_country": "UY",
+    "length_ft": 2165,
+    "width_ft": 79,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -339,7 +532,11 @@
     "freq": "",
     "Lat": -31.739166,
     "Lon": -54.587776,
-    "Ele": 148.7
+    "Ele": 148.7,
+    "ident": "SUVO",
+    "iso_country": "UY",
+    "icao_code": "SUVO",
+    "iata_code": "VCH"
   },
   {
     "type": "small_airport",
@@ -348,7 +545,13 @@
     "freq": "",
     "Lat": -33.311667,
     "Lon": -55.600278,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "SUYI",
+    "iso_country": "UY",
+    "length_ft": 1969,
+    "width_ft": 148,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -357,7 +560,9 @@
     "freq": "",
     "Lat": -32.6872,
     "Lon": -57.6581,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "SUYN",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -366,7 +571,9 @@
     "freq": "",
     "Lat": -33.14196,
     "Lon": -58.293759,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "UY-0001",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -375,7 +582,13 @@
     "freq": "",
     "Lat": -34.479077,
     "Lon": -54.283494,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "UY-0002",
+    "iso_country": "UY",
+    "length_ft": 2789,
+    "width_ft": 91,
+    "heading": 84,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -384,7 +597,9 @@
     "freq": "",
     "Lat": -32.396295,
     "Lon": -56.588257,
-    "Ele": 136.6
+    "Ele": 136.6,
+    "ident": "UY-0004",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -393,7 +608,9 @@
     "freq": "",
     "Lat": -31.868851,
     "Lon": -55.498746,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UY-0005",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -402,7 +619,7 @@
     "freq": "",
     "Lat": -31.869065,
     "Lon": -55.491636,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -411,7 +628,13 @@
     "freq": "",
     "Lat": -30.952597,
     "Lon": -55.5353,
-    "Ele": 226.5
+    "Ele": 226.5,
+    "ident": "UY-0007",
+    "iso_country": "UY",
+    "length_ft": 2067,
+    "width_ft": 75,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -420,7 +643,13 @@
     "freq": "",
     "Lat": -34.312485,
     "Lon": -57.041631,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "UY-0008",
+    "iso_country": "UY",
+    "length_ft": 2625,
+    "width_ft": 92,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -438,7 +667,9 @@
     "freq": "",
     "Lat": -33.755113,
     "Lon": -54.148823,
-    "Ele": 49.7
+    "Ele": 49.7,
+    "ident": "UY-0010",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -447,7 +678,13 @@
     "freq": "",
     "Lat": -30.4053,
     "Lon": -57.2756,
-    "Ele": 77.7
+    "Ele": 77.7,
+    "ident": "UY-0011",
+    "iso_country": "UY",
+    "length_ft": 2953,
+    "width_ft": 82,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -456,7 +693,9 @@
     "freq": "123.500",
     "Lat": -34.08392,
     "Lon": -56.186665,
-    "Ele": 57.3
+    "Ele": 57.3,
+    "ident": "UY-0013",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -465,7 +704,13 @@
     "freq": "",
     "Lat": -33.485556,
     "Lon": -56.890833,
-    "Ele": 128.9
+    "Ele": 128.9,
+    "ident": "UY-0014",
+    "iso_country": "UY",
+    "length_ft": 2051,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -474,7 +719,9 @@
     "freq": "",
     "Lat": -34.18717,
     "Lon": -58.0733,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "UY-0015",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -483,7 +730,10 @@
     "freq": "",
     "Lat": -34.72139,
     "Lon": -56.61134,
-    "Ele": 31.7
+    "Ele": 31.7,
+    "ident": "UY-0016",
+    "iso_country": "UY",
+    "local_code": "1001"
   },
   {
     "type": "small_airport",
@@ -492,7 +742,9 @@
     "freq": "",
     "Lat": -34.66828,
     "Lon": -56.71273,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "UY-0017",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -501,7 +753,9 @@
     "freq": "",
     "Lat": -34.56547,
     "Lon": -56.72975,
-    "Ele": 43.9
+    "Ele": 43.9,
+    "ident": "UY-0018",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -510,7 +764,9 @@
     "freq": "",
     "Lat": -34.76568,
     "Lon": -55.48423,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "UY-0019",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -519,7 +775,9 @@
     "freq": "",
     "Lat": -34.76896,
     "Lon": -55.95315,
-    "Ele": 25.3
+    "Ele": 25.3,
+    "ident": "UY-0020",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -528,7 +786,9 @@
     "freq": "",
     "Lat": -34.66773,
     "Lon": -54.30602,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "UY-0021",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -537,7 +797,9 @@
     "freq": "",
     "Lat": -34.244003,
     "Lon": -57.205465,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "UY-0022",
+    "iso_country": "UY"
   },
   {
     "type": "small_airport",
@@ -546,7 +808,13 @@
     "freq": "",
     "Lat": -31.804875,
     "Lon": -54.264035,
-    "Ele": 170.1
+    "Ele": 170.1,
+    "ident": "UY-0023",
+    "iso_country": "UY",
+    "length_ft": 3281,
+    "width_ft": 59,
+    "heading": 113,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -555,7 +823,14 @@
     "freq": "",
     "Lat": -33.217597,
     "Lon": -54.330647,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "UY-0024",
+    "iso_country": "UY",
+    "local_code": "1109",
+    "length_ft": 1968,
+    "width_ft": 66,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -564,7 +839,10 @@
     "freq": "",
     "Lat": -31.661925,
     "Lon": -54.664019,
-    "Ele": 153.0
+    "Ele": 153,
+    "ident": "UY-0026",
+    "iso_country": "UY",
+    "local_code": "1003"
   },
   {
     "type": "small_airport",
@@ -573,7 +851,10 @@
     "freq": "",
     "Lat": -33.834374,
     "Lon": -54.000696,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "UY-0027",
+    "iso_country": "UY",
+    "local_code": "1004"
   },
   {
     "type": "small_airport",
@@ -582,6 +863,8 @@
     "freq": "",
     "Lat": -31.741739,
     "Lon": -58.026713,
-    "Ele": 17.7
+    "Ele": 17.7,
+    "ident": "UY-0029",
+    "iso_country": "UY"
   }
 ]

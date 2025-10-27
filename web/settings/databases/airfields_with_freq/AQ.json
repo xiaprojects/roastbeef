@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -67.566941,
     "Lon": -68.126993,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AAXX",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,13 @@
     "freq": "",
     "Lat": -70.8461,
     "Lon": 11.8472,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "AQ-0001",
+    "iso_country": "AQ",
+    "length_ft": 10823,
+    "width_ft": 328,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -24,7 +32,13 @@
     "freq": "",
     "Lat": -71.95714,
     "Lon": 2.45257,
-    "Ele": 1270.1
+    "Ele": 1270.1,
+    "ident": "AQ-0002",
+    "iso_country": "AQ",
+    "local_code": "AT27",
+    "length_ft": 9927,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -33,7 +47,9 @@
     "freq": "",
     "Lat": -74.71637,
     "Lon": 164.03408,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AQ-0007",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,13 @@
     "freq": "",
     "Lat": -71.527201,
     "Lon": 8.8333,
-    "Ele": 1129.9
+    "Ele": 1129.9,
+    "ident": "AQ-0011",
+    "iso_country": "AQ",
+    "length_ft": 9842,
+    "width_ft": 197,
+    "heading": 175,
+    "QFU": "18"
   },
   {
     "type": "small_airport",
@@ -51,7 +73,9 @@
     "freq": "",
     "Lat": -89.998,
     "Lon": 139.273,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AQ-0012",
+    "iso_country": "AQ"
   },
   {
     "type": "medium_airport",
@@ -60,7 +84,9 @@
     "freq": "",
     "Lat": -74.739373,
     "Lon": 164.03539,
-    "Ele": 204.8
+    "Ele": 204.8,
+    "ident": "AQBC",
+    "iso_country": "AQ"
   },
   {
     "type": "medium_airport",
@@ -69,7 +95,9 @@
     "freq": "",
     "Lat": -75.103278,
     "Lon": 123.35825,
-    "Ele": 3269.0
+    "Ele": 3269,
+    "ident": "AT03",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -78,7 +106,9 @@
     "freq": "",
     "Lat": -74.68109,
     "Lon": 164.12756,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AT13",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -87,7 +117,12 @@
     "freq": "",
     "Lat": -69.006167,
     "Lon": 39.59,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "AT25",
+    "iso_country": "AQ",
+    "length_ft": 3274,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -96,7 +131,9 @@
     "freq": "",
     "Lat": -78.466139,
     "Lon": 106.84825,
-    "Ele": 3489.0
+    "Ele": 3489,
+    "ident": "AT28",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -105,7 +142,13 @@
     "freq": "",
     "Lat": -75.567406,
     "Lon": -25.516435,
-    "Ele": 31.4
+    "Ele": 31.4,
+    "ident": "EGAH",
+    "iso_country": "AQ",
+    "length_ft": 3280,
+    "width_ft": 164,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -114,7 +157,13 @@
     "freq": "",
     "Lat": -67.5675,
     "Lon": -68.127403,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "EGAR",
+    "iso_country": "AQ",
+    "length_ft": 2950,
+    "width_ft": 900,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -123,7 +172,9 @@
     "freq": "",
     "Lat": -74.849722,
     "Lon": -71.566666,
-    "Ele": 1444.8
+    "Ele": 1444.8,
+    "ident": "EGAT",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -132,7 +183,14 @@
     "freq": "118.100",
     "Lat": -64.774582,
     "Lon": -64.035907,
-    "Ele": 45.4
+    "Ele": 45.4,
+    "ident": "NZ12",
+    "iso_country": "AQ",
+    "local_code": "NZ0B",
+    "length_ft": 2500,
+    "width_ft": 100,
+    "heading": 27.5,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -141,16 +199,29 @@
     "freq": "",
     "Lat": -77.956389,
     "Lon": 166.766667,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "NZFX",
+    "iso_country": "AQ",
+    "length_ft": 10000,
+    "width_ft": 200,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
     "name": "Amundsen–Scott south Pole Station Airport",
     "gps_code": "NZSP",
     "freq": "118.200",
-    "Lat": -90.0,
-    "Lon": 0.0,
-    "Ele": 2834.6
+    "Lat": -90,
+    "Lon": 0,
+    "Ele": 2834.6,
+    "ident": "NZSP",
+    "iso_country": "AQ",
+    "icao_code": "NZSP",
+    "length_ft": 12013,
+    "width_ft": 220,
+    "heading": 129,
+    "QFU": "20T"
   },
   {
     "type": "medium_airport",
@@ -159,7 +230,13 @@
     "freq": "118.200",
     "Lat": -77.867401,
     "Lon": 167.057007,
-    "Ele": 20.7
+    "Ele": 20.7,
+    "ident": "NZWD",
+    "iso_country": "AQ",
+    "length_ft": 10000,
+    "width_ft": 220,
+    "heading": 295.9,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -168,7 +245,14 @@
     "freq": "118.100",
     "Lat": -63.479,
     "Lon": -56.2313,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "SA47",
+    "iso_country": "AQ",
+    "local_code": "PET",
+    "length_ft": 3500,
+    "width_ft": 1,
+    "heading": 90,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -177,7 +261,14 @@
     "freq": "118.100",
     "Lat": -64.238297,
     "Lon": -56.630798,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "SAWB",
+    "iso_country": "AQ",
+    "local_code": "MBI",
+    "length_ft": 4134,
+    "width_ft": 115,
+    "heading": 72,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -186,7 +277,10 @@
     "freq": "",
     "Lat": -64.976998,
     "Lon": -60.108992,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SAWZ",
+    "iso_country": "AQ",
+    "local_code": "BTM"
   },
   {
     "type": "small_airport",
@@ -195,7 +289,10 @@
     "freq": "",
     "Lat": -77.874055,
     "Lon": -34.62616,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "SAYB",
+    "iso_country": "AQ",
+    "local_code": "BEB"
   },
   {
     "type": "small_airport",
@@ -204,7 +301,10 @@
     "freq": "",
     "Lat": -63.400002,
     "Lon": -56.983299,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SAYE",
+    "iso_country": "AQ",
+    "local_code": "BET"
   },
   {
     "type": "small_airport",
@@ -213,7 +313,10 @@
     "freq": "",
     "Lat": -62.2383,
     "Lon": -58.666599,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "SAYJ",
+    "iso_country": "AQ",
+    "local_code": "BJY"
   },
   {
     "type": "small_airport",
@@ -222,7 +325,10 @@
     "freq": "",
     "Lat": -68.116699,
     "Lon": -67.099998,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SAYS",
+    "iso_country": "AQ",
+    "local_code": "BSM"
   },
   {
     "type": "small_airport",
@@ -231,7 +337,9 @@
     "freq": "",
     "Lat": -63.344,
     "Lon": -57.842,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "SCBO",
+    "iso_country": "AQ"
   },
   {
     "type": "small_airport",
@@ -240,7 +348,15 @@
     "freq": "",
     "Lat": -79.777778,
     "Lon": -83.320833,
-    "Ele": 750.1
+    "Ele": 750.1,
+    "ident": "SCGC",
+    "iso_country": "AQ",
+    "icao_code": "SCGC",
+    "iata_code": "UGL",
+    "length_ft": 9843,
+    "width_ft": 164,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -249,7 +365,10 @@
     "freq": "",
     "Lat": -80.318307,
     "Lon": -81.308128,
-    "Ele": 883.9
+    "Ele": 883.9,
+    "ident": "SCPZ",
+    "iso_country": "AQ",
+    "icao_code": "SCPZ"
   },
   {
     "type": "small_airport",
@@ -258,7 +377,15 @@
     "freq": "118.100",
     "Lat": -62.191026,
     "Lon": -58.98669,
-    "Ele": 44.8
+    "Ele": 44.8,
+    "ident": "SCRM",
+    "iso_country": "AQ",
+    "icao_code": "SCRM",
+    "iata_code": "TNM",
+    "length_ft": 4238,
+    "width_ft": 125,
+    "heading": 122,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -267,7 +394,13 @@
     "freq": "",
     "Lat": -66.288056,
     "Lon": 110.7575,
-    "Ele": 359.1
+    "Ele": 359.1,
+    "ident": "YCSK",
+    "iso_country": "AQ",
+    "length_ft": 6556,
+    "width_ft": 279,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -276,6 +409,11 @@
     "freq": "",
     "Lat": -66.690833,
     "Lon": 111.523611,
-    "Ele": 770.8
+    "Ele": 770.8,
+    "ident": "YWKS",
+    "iso_country": "AQ",
+    "length_ft": 10499,
+    "QFU": "27T",
+    "heading": 270
   }
 ]

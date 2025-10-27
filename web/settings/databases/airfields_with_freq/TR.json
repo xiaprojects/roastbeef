@@ -6,7 +6,13 @@
     "freq": "118.675",
     "Lat": 39.9350013733,
     "Lon": 32.7407989502,
-    "Ele": 819.0
+    "Ele": 819,
+    "ident": "LTAB",
+    "iso_country": "TR",
+    "length_ft": 2854,
+    "width_ft": 98,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -15,7 +21,15 @@
     "freq": "119.100",
     "Lat": 40.128101,
     "Lon": 32.995098,
-    "Ele": 952.5
+    "Ele": 952.5,
+    "ident": "LTAC",
+    "iso_country": "TR",
+    "icao_code": "LTAC",
+    "iata_code": "ESB",
+    "length_ft": 12303,
+    "width_ft": 197,
+    "heading": 35.4,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -24,7 +38,15 @@
     "freq": "119.100",
     "Lat": 39.949798584,
     "Lon": 32.6885986328,
-    "Ele": 808.6
+    "Ele": 808.6,
+    "ident": "LTAD",
+    "iso_country": "TR",
+    "icao_code": "LTAD",
+    "iata_code": "ANK",
+    "length_ft": 4951,
+    "width_ft": 148,
+    "heading": 113,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -33,7 +55,13 @@
     "freq": "119.100",
     "Lat": 40.0788993835,
     "Lon": 32.5656013489,
-    "Ele": 843.4
+    "Ele": 843.4,
+    "ident": "LTAE",
+    "iso_country": "TR",
+    "length_ft": 10991,
+    "width_ft": 148,
+    "heading": 32.8,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -42,7 +70,15 @@
     "freq": "126.500",
     "Lat": 36.982201,
     "Lon": 35.280399,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "LTAF",
+    "iso_country": "TR",
+    "icao_code": "LTAF",
+    "iata_code": "ADA",
+    "length_ft": 9022,
+    "width_ft": 148,
+    "heading": 54,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -51,7 +87,15 @@
     "freq": "126.500",
     "Lat": 37.002102,
     "Lon": 35.4259,
-    "Ele": 72.5
+    "Ele": 72.5,
+    "ident": "LTAG",
+    "iso_country": "TR",
+    "icao_code": "LTAG",
+    "iata_code": "UAB",
+    "length_ft": 10000,
+    "width_ft": 148,
+    "heading": 52.9,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -60,7 +104,15 @@
     "freq": "122.100",
     "Lat": 38.726398,
     "Lon": 30.601101,
-    "Ele": 1008.9
+    "Ele": 1008.9,
+    "ident": "LTAH",
+    "iso_country": "TR",
+    "icao_code": "LTAH",
+    "iata_code": "AFY",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 134,
+    "QFU": "31"
   },
   {
     "type": "large_airport",
@@ -69,7 +121,15 @@
     "freq": "122.050",
     "Lat": 36.898701,
     "Lon": 30.800501,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "LTAI",
+    "iso_country": "TR",
+    "icao_code": "LTAI",
+    "iata_code": "AYT",
+    "length_ft": 9811,
+    "width_ft": 148,
+    "heading": 186,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -78,7 +138,15 @@
     "freq": "120.100",
     "Lat": 36.947201,
     "Lon": 37.478699,
-    "Ele": 705.6
+    "Ele": 705.6,
+    "ident": "LTAJ",
+    "iso_country": "TR",
+    "icao_code": "LTAJ",
+    "iata_code": "GZT",
+    "length_ft": 9842,
+    "width_ft": 100,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -87,7 +155,15 @@
     "freq": "",
     "Lat": 41.314201,
     "Lon": 33.795799,
-    "Ele": 1072.9
+    "Ele": 1072.9,
+    "ident": "LTAL",
+    "iso_country": "TR",
+    "icao_code": "LTAL",
+    "iata_code": "KFS",
+    "length_ft": 7382,
+    "width_ft": 148,
+    "heading": 182,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -96,7 +172,15 @@
     "freq": "121.500",
     "Lat": 37.979,
     "Lon": 32.561901,
-    "Ele": 1033.9
+    "Ele": 1033.9,
+    "ident": "LTAN",
+    "iso_country": "TR",
+    "icao_code": "LTAN",
+    "iata_code": "KYA",
+    "length_ft": 10984,
+    "width_ft": 148,
+    "heading": 17,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -105,7 +189,13 @@
     "freq": "125.600",
     "Lat": 38.353699,
     "Lon": 38.253899,
-    "Ele": 919.3
+    "Ele": 919.3,
+    "ident": "LTAO",
+    "iso_country": "TR",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 47,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -114,7 +204,15 @@
     "freq": "122.100",
     "Lat": 40.829399,
     "Lon": 35.521999,
-    "Ele": 535.8
+    "Ele": 535.8,
+    "ident": "LTAP",
+    "iso_country": "TR",
+    "icao_code": "LTAP",
+    "iata_code": "MZH",
+    "length_ft": 9600,
+    "width_ft": 148,
+    "heading": 54.6,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -123,7 +221,15 @@
     "freq": "121.900",
     "Lat": 39.813801,
     "Lon": 36.9035,
-    "Ele": 1596.8
+    "Ele": 1596.8,
+    "ident": "LTAR",
+    "iso_country": "TR",
+    "icao_code": "LTAR",
+    "iata_code": "VAS",
+    "length_ft": 12503,
+    "width_ft": 148,
+    "heading": 18,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -132,7 +238,15 @@
     "freq": "",
     "Lat": 41.506401,
     "Lon": 32.0886,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "LTAS",
+    "iso_country": "TR",
+    "icao_code": "LTAS",
+    "iata_code": "ONQ",
+    "length_ft": 6991,
+    "width_ft": 148,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -141,7 +255,15 @@
     "freq": "122.100",
     "Lat": 38.4352989197,
     "Lon": 38.0909996033,
-    "Ele": 862.0
+    "Ele": 862,
+    "ident": "LTAT",
+    "iso_country": "TR",
+    "icao_code": "LTAT",
+    "iata_code": "MLX",
+    "length_ft": 10990,
+    "width_ft": 148,
+    "heading": 31,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -150,7 +272,15 @@
     "freq": "122.100",
     "Lat": 38.770401001,
     "Lon": 35.4953994751,
-    "Ele": 1055.5
+    "Ele": 1055.5,
+    "ident": "LTAU",
+    "iso_country": "TR",
+    "icao_code": "LTAU",
+    "iata_code": "ASR",
+    "length_ft": 9841,
+    "width_ft": 145,
+    "heading": 76,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -159,7 +289,13 @@
     "freq": "122.100",
     "Lat": 39.45149993896485,
     "Lon": 31.36529922485352,
-    "Ele": 970.8
+    "Ele": 970.8,
+    "ident": "LTAV",
+    "iso_country": "TR",
+    "length_ft": 11156,
+    "width_ft": 98,
+    "heading": 113,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -168,7 +304,15 @@
     "freq": "118.700",
     "Lat": 40.32472,
     "Lon": 36.39056,
-    "Ele": 566.6
+    "Ele": 566.6,
+    "ident": "LTAW",
+    "iso_country": "TR",
+    "icao_code": "LTAW",
+    "iata_code": "TJK",
+    "length_ft": 8858,
+    "width_ft": 148,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -177,7 +321,15 @@
     "freq": "121.600",
     "Lat": 37.7855987549,
     "Lon": 29.7012996674,
-    "Ele": 851.9
+    "Ele": 851.9,
+    "ident": "LTAY",
+    "iso_country": "TR",
+    "icao_code": "LTAY",
+    "iata_code": "DNZ",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 59,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -186,7 +338,15 @@
     "freq": "119.100",
     "Lat": 38.7719,
     "Lon": 34.5345,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "LTAZ",
+    "iso_country": "TR",
+    "icao_code": "LTAZ",
+    "iata_code": "NAV",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 117,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -195,7 +355,15 @@
     "freq": "120.500",
     "Lat": 40.971913,
     "Lon": 28.823714,
-    "Ele": 49.7
+    "Ele": 49.7,
+    "ident": "LTBA",
+    "iso_country": "TR",
+    "icao_code": "LTBA",
+    "iata_code": "ISL",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 178,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -204,7 +372,15 @@
     "freq": "",
     "Lat": 37.815389,
     "Lon": 27.887566,
-    "Ele": 31.1
+    "Ele": 31.1,
+    "ident": "LTBD",
+    "iso_country": "TR",
+    "icao_code": "LTBD",
+    "iata_code": "CII",
+    "length_ft": 4708,
+    "width_ft": 98,
+    "heading": 86,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -213,7 +389,10 @@
     "freq": "",
     "Lat": 40.233243,
     "Lon": 29.005583,
-    "Ele": 100.9
+    "Ele": 100.9,
+    "ident": "LTBE",
+    "iso_country": "TR",
+    "icao_code": "LTBE"
   },
   {
     "type": "medium_airport",
@@ -222,7 +401,15 @@
     "freq": "122.100",
     "Lat": 39.619301,
     "Lon": 27.926001,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "LTBF",
+    "iso_country": "TR",
+    "icao_code": "LTBF",
+    "iata_code": "BZI",
+    "length_ft": 9810,
+    "width_ft": 144,
+    "heading": 182.2,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -231,7 +418,15 @@
     "freq": "122.100",
     "Lat": 40.318001,
     "Lon": 27.977699,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "LTBG",
+    "iso_country": "TR",
+    "icao_code": "LTBG",
+    "iata_code": "BDM",
+    "length_ft": 9875,
+    "width_ft": 151,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -240,7 +435,15 @@
     "freq": "122.100",
     "Lat": 40.1376991272,
     "Lon": 26.4267997742,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "LTBH",
+    "iso_country": "TR",
+    "icao_code": "LTBH",
+    "iata_code": "CKZ",
+    "length_ft": 7710,
+    "width_ft": 148,
+    "heading": 41,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -249,7 +452,15 @@
     "freq": "122.100",
     "Lat": 39.7841,
     "Lon": 30.5821,
-    "Ele": 786.7
+    "Ele": 786.7,
+    "ident": "LTBI",
+    "iso_country": "TR",
+    "icao_code": "LTBI",
+    "iata_code": "ESK",
+    "length_ft": 10006,
+    "width_ft": 150,
+    "heading": 90,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -258,7 +469,15 @@
     "freq": "119.500",
     "Lat": 38.2924,
     "Lon": 27.157,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "LTBJ",
+    "iso_country": "TR",
+    "icao_code": "LTBJ",
+    "iata_code": "ADB",
+    "length_ft": 10630,
+    "width_ft": 147,
+    "heading": 167,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -267,7 +486,13 @@
     "freq": "120.100",
     "Lat": 38.319099,
     "Lon": 27.159401,
-    "Ele": 132.0
+    "Ele": 132,
+    "ident": "LTBK",
+    "iso_country": "TR",
+    "length_ft": 4453,
+    "width_ft": 131,
+    "heading": 168,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -276,7 +501,14 @@
     "freq": "120.100",
     "Lat": 38.513,
     "Lon": 27.010099,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "LTBL",
+    "iso_country": "TR",
+    "iata_code": "IGL",
+    "length_ft": 9821,
+    "width_ft": 147,
+    "heading": 176,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -285,7 +517,13 @@
     "freq": "",
     "Lat": 37.78512191772461,
     "Lon": 30.59001922607422,
-    "Ele": 990.6
+    "Ele": 990.6,
+    "ident": "LTBM",
+    "iso_country": "TR",
+    "length_ft": 3283,
+    "width_ft": 95,
+    "heading": 148,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -294,7 +532,13 @@
     "freq": "25.125",
     "Lat": 39.426701,
     "Lon": 30.016899,
-    "Ele": 922.3
+    "Ele": 922.3,
+    "ident": "LTBN",
+    "iso_country": "TR",
+    "length_ft": 4950,
+    "width_ft": 132,
+    "heading": 159,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -303,7 +547,15 @@
     "freq": "122.350",
     "Lat": 38.681499,
     "Lon": 29.471701,
-    "Ele": 883.0
+    "Ele": 883,
+    "ident": "LTBO",
+    "iso_country": "TR",
+    "icao_code": "LTBO",
+    "iata_code": "USQ",
+    "length_ft": 8390,
+    "width_ft": 148,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -312,7 +564,13 @@
     "freq": "121.950",
     "Lat": 40.686279,
     "Lon": 29.37707,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "LTBP",
+    "iso_country": "TR",
+    "length_ft": 4425,
+    "width_ft": 130,
+    "heading": 183,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -321,7 +579,15 @@
     "freq": "120.500",
     "Lat": 40.735001,
     "Lon": 30.0833,
-    "Ele": 55.5
+    "Ele": 55.5,
+    "ident": "LTBQ",
+    "iso_country": "TR",
+    "icao_code": "LTBQ",
+    "iata_code": "KCO",
+    "length_ft": 9842,
+    "width_ft": 98,
+    "heading": 96,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -330,7 +596,15 @@
     "freq": "120.325",
     "Lat": 40.255199,
     "Lon": 29.562599,
-    "Ele": 232.9
+    "Ele": 232.9,
+    "ident": "LTBR",
+    "iso_country": "TR",
+    "icao_code": "LTBR",
+    "iata_code": "YEI",
+    "length_ft": 9818,
+    "width_ft": 98,
+    "heading": 75,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -339,7 +613,15 @@
     "freq": "119.225",
     "Lat": 36.7131004333,
     "Lon": 28.7924995422,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "LTBS",
+    "iso_country": "TR",
+    "icao_code": "LTBS",
+    "iata_code": "DLM",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 15.3,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -348,7 +630,13 @@
     "freq": "120.100",
     "Lat": 38.808899,
     "Lon": 27.8339,
-    "Ele": 80.2
+    "Ele": 80.2,
+    "ident": "LTBT",
+    "iso_country": "TR",
+    "length_ft": 9815,
+    "width_ft": 98,
+    "heading": 139,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -357,7 +645,15 @@
     "freq": "120.500",
     "Lat": 41.13819885253906,
     "Lon": 27.919099807739254,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "LTBU",
+    "iso_country": "TR",
+    "icao_code": "LTBU",
+    "iata_code": "TEQ",
+    "length_ft": 9844,
+    "width_ft": 148,
+    "heading": 49,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -366,7 +662,15 @@
     "freq": "126.000",
     "Lat": 37.140099,
     "Lon": 27.669701,
-    "Ele": 61.6
+    "Ele": 61.6,
+    "ident": "LTBV",
+    "iso_country": "TR",
+    "icao_code": "LTBV",
+    "iata_code": "BXN",
+    "length_ft": 5151,
+    "width_ft": 98,
+    "heading": 65.6,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -375,7 +679,13 @@
     "freq": "118.250",
     "Lat": 41.1036,
     "Lon": 28.547701,
-    "Ele": 18.6
+    "Ele": 18.6,
+    "ident": "LTBW",
+    "iso_country": "TR",
+    "length_ft": 1755,
+    "width_ft": 59,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -384,7 +694,13 @@
     "freq": "132.000",
     "Lat": 40.993,
     "Lon": 29.216499,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "LTBX",
+    "iso_country": "TR",
+    "length_ft": 4528,
+    "width_ft": 98,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -393,7 +709,15 @@
     "freq": "123.750",
     "Lat": 39.809898,
     "Lon": 30.5194,
-    "Ele": 788.8
+    "Ele": 788.8,
+    "ident": "LTBY",
+    "iso_country": "TR",
+    "icao_code": "LTBY",
+    "iata_code": "AOE",
+    "length_ft": 8261,
+    "width_ft": 98,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -402,7 +726,15 @@
     "freq": "",
     "Lat": 39.113079,
     "Lon": 30.128111,
-    "Ele": 1014.1
+    "Ele": 1014.1,
+    "ident": "LTBZ",
+    "iso_country": "TR",
+    "icao_code": "LTBZ",
+    "iata_code": "KZR",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -411,7 +743,15 @@
     "freq": "118.100",
     "Lat": 38.597974,
     "Lon": 39.28348,
-    "Ele": 892.1
+    "Ele": 892.1,
+    "ident": "LTCA",
+    "iso_country": "TR",
+    "icao_code": "LTCA",
+    "iata_code": "EZS",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 71,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -420,7 +760,16 @@
     "freq": "",
     "Lat": 40.966872,
     "Lon": 38.085995,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "LTCB",
+    "iso_country": "TR",
+    "icao_code": "LTCB",
+    "iata_code": "OGU",
+    "local_code": "OGU",
+    "length_ft": 9848,
+    "width_ft": 148,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -429,7 +778,15 @@
     "freq": "123.200",
     "Lat": 37.893902,
     "Lon": 40.201,
-    "Ele": 686.1
+    "Ele": 686.1,
+    "ident": "LTCC",
+    "iso_country": "TR",
+    "icao_code": "LTCC",
+    "iata_code": "DIY",
+    "length_ft": 11644,
+    "width_ft": 148,
+    "heading": 162.6,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -438,7 +795,15 @@
     "freq": "121.900",
     "Lat": 39.7102012634,
     "Lon": 39.5270004272,
-    "Ele": 1153.1
+    "Ele": 1153.1,
+    "ident": "LTCD",
+    "iso_country": "TR",
+    "icao_code": "LTCD",
+    "iata_code": "ERC",
+    "length_ft": 5800,
+    "width_ft": 137,
+    "heading": 127.1,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -447,7 +812,15 @@
     "freq": "118.100",
     "Lat": 39.956501,
     "Lon": 41.1702,
-    "Ele": 1756.6
+    "Ele": 1756.6,
+    "ident": "LTCE",
+    "iso_country": "TR",
+    "icao_code": "LTCE",
+    "iata_code": "ERZ",
+    "length_ft": 12500,
+    "width_ft": 98,
+    "heading": 88,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -456,7 +829,15 @@
     "freq": "122.400",
     "Lat": 40.562198638916016,
     "Lon": 43.1150016784668,
-    "Ele": 1795.0
+    "Ele": 1795,
+    "ident": "LTCF",
+    "iso_country": "TR",
+    "icao_code": "LTCF",
+    "iata_code": "KSY",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 64.4,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -465,7 +846,15 @@
     "freq": "120.100",
     "Lat": 40.995098,
     "Lon": 39.7897,
-    "Ele": 31.7
+    "Ele": 31.7,
+    "ident": "LTCG",
+    "iso_country": "TR",
+    "icao_code": "LTCG",
+    "iata_code": "TZX",
+    "length_ft": 8661,
+    "width_ft": 148,
+    "heading": 112.2,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -474,7 +863,15 @@
     "freq": "118.100",
     "Lat": 38.46820068359375,
     "Lon": 43.332298278808594,
-    "Ele": 1670.3
+    "Ele": 1670.3,
+    "ident": "LTCI",
+    "iso_country": "TR",
+    "icao_code": "LTCI",
+    "iata_code": "VAN",
+    "length_ft": 9022,
+    "width_ft": 148,
+    "heading": 38,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -483,7 +880,15 @@
     "freq": "122.100",
     "Lat": 37.9290008545,
     "Lon": 41.1166000366,
-    "Ele": 555.3
+    "Ele": 555.3,
+    "ident": "LTCJ",
+    "iso_country": "TR",
+    "icao_code": "LTCJ",
+    "iata_code": "BAL",
+    "length_ft": 10000,
+    "width_ft": 150,
+    "heading": 26,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -492,7 +897,15 @@
     "freq": "122.100",
     "Lat": 38.74779891967773,
     "Lon": 41.66120147705078,
-    "Ele": 1267.1
+    "Ele": 1267.1,
+    "ident": "LTCK",
+    "iso_country": "TR",
+    "icao_code": "LTCK",
+    "iata_code": "MSR",
+    "length_ft": 11649,
+    "width_ft": 148,
+    "heading": 116,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -501,7 +914,15 @@
     "freq": "132.050",
     "Lat": 37.97890090942383,
     "Lon": 41.84040069580078,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "LTCL",
+    "iso_country": "TR",
+    "icao_code": "LTCL",
+    "iata_code": "SXZ",
+    "length_ft": 5905,
+    "width_ft": 98,
+    "heading": 68.3,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -510,7 +931,15 @@
     "freq": "",
     "Lat": 42.018313,
     "Lon": 35.071774,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "LTCM",
+    "iso_country": "TR",
+    "icao_code": "LTCM",
+    "iata_code": "NOP",
+    "length_ft": 6482,
+    "width_ft": 148,
+    "heading": 54,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -519,7 +948,15 @@
     "freq": "123.100",
     "Lat": 37.5388259888,
     "Lon": 36.9535217285,
-    "Ele": 525.2
+    "Ele": 525.2,
+    "ident": "LTCN",
+    "iso_country": "TR",
+    "icao_code": "LTCN",
+    "iata_code": "KCM",
+    "length_ft": 7546,
+    "width_ft": 98,
+    "heading": 76,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -528,7 +965,15 @@
     "freq": "118.475",
     "Lat": 39.655642,
     "Lon": 43.025742,
-    "Ele": 1664.8
+    "Ele": 1664.8,
+    "ident": "LTCO",
+    "iso_country": "TR",
+    "icao_code": "LTCO",
+    "iata_code": "AJI",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -537,7 +982,15 @@
     "freq": "119.050",
     "Lat": 37.7314,
     "Lon": 38.468899,
-    "Ele": 675.4
+    "Ele": 675.4,
+    "ident": "LTCP",
+    "iso_country": "TR",
+    "icao_code": "LTCP",
+    "iata_code": "ADF",
+    "length_ft": 8153,
+    "width_ft": 148,
+    "heading": 49,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -546,7 +999,15 @@
     "freq": "118.650",
     "Lat": 37.2233009338,
     "Lon": 40.6316986084,
-    "Ele": 527.0
+    "Ele": 527,
+    "ident": "LTCR",
+    "iso_country": "TR",
+    "icao_code": "LTCR",
+    "iata_code": "MQM",
+    "length_ft": 8204,
+    "width_ft": 148,
+    "heading": 37,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -555,7 +1016,15 @@
     "freq": "",
     "Lat": 37.445663,
     "Lon": 38.895592,
-    "Ele": 825.4
+    "Ele": 825.4,
+    "ident": "LTCS",
+    "iso_country": "TR",
+    "icao_code": "LTCS",
+    "iata_code": "GNY",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "heading": 36,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -564,7 +1033,15 @@
     "freq": "119.600",
     "Lat": 39.976627,
     "Lon": 43.876648,
-    "Ele": 945.2
+    "Ele": 945.2,
+    "ident": "LTCT",
+    "iso_country": "TR",
+    "icao_code": "LTCT",
+    "iata_code": "IGD",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 120,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -573,7 +1050,15 @@
     "freq": "",
     "Lat": 38.860131,
     "Lon": 40.594489,
-    "Ele": 1068.6
+    "Ele": 1068.6,
+    "ident": "LTCU",
+    "iso_country": "TR",
+    "icao_code": "LTCU",
+    "iata_code": "BGG",
+    "length_ft": 7546,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -582,7 +1067,15 @@
     "freq": "",
     "Lat": 37.3647,
     "Lon": 42.0582,
-    "Ele": 621.2
+    "Ele": 621.2,
+    "ident": "LTCV",
+    "iso_country": "TR",
+    "icao_code": "LTCV",
+    "iata_code": "NKT",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -591,7 +1084,15 @@
     "freq": "",
     "Lat": 37.5497,
     "Lon": 44.2381,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "LTCW",
+    "iso_country": "TR",
+    "icao_code": "LTCW",
+    "iata_code": "YKO",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -600,7 +1101,15 @@
     "freq": "",
     "Lat": 36.362778,
     "Lon": 36.282223,
-    "Ele": 82.0
+    "Ele": 82,
+    "ident": "LTDA",
+    "iso_country": "TR",
+    "icao_code": "LTDA",
+    "iata_code": "HTY",
+    "length_ft": 6830,
+    "width_ft": 148,
+    "heading": 42,
+    "QFU": "22"
   },
   {
     "type": "large_airport",
@@ -609,7 +1118,15 @@
     "freq": "",
     "Lat": 36.890908,
     "Lon": 35.070522,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "LTDB",
+    "iso_country": "TR",
+    "icao_code": "LTDB",
+    "iata_code": "COV",
+    "length_ft": 11482,
+    "width_ft": 197,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -618,7 +1135,13 @@
     "freq": "120.100",
     "Lat": 38.517601,
     "Lon": 26.9774,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "LTFA",
+    "iso_country": "TR",
+    "length_ft": 9844,
+    "width_ft": 141,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -627,7 +1150,15 @@
     "freq": "133.050",
     "Lat": 37.950699,
     "Lon": 27.329,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "LTFB",
+    "iso_country": "TR",
+    "icao_code": "LTFB",
+    "iata_code": "IZM",
+    "length_ft": 5151,
+    "width_ft": 98,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -636,7 +1167,15 @@
     "freq": "121.700",
     "Lat": 37.8554,
     "Lon": 30.368401,
-    "Ele": 864.1
+    "Ele": 864.1,
+    "ident": "LTFC",
+    "iso_country": "TR",
+    "icao_code": "LTFC",
+    "iata_code": "ISE",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 49.6,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -645,7 +1184,15 @@
     "freq": "123.100",
     "Lat": 39.5546,
     "Lon": 27.0138,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "LTFD",
+    "iso_country": "TR",
+    "icao_code": "LTFD",
+    "iata_code": "EDO",
+    "length_ft": 9842,
+    "width_ft": 147,
+    "heading": 53.7,
+    "QFU": "23"
   },
   {
     "type": "large_airport",
@@ -654,7 +1201,15 @@
     "freq": "119.500",
     "Lat": 37.250599,
     "Lon": 27.664301,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "LTFE",
+    "iso_country": "TR",
+    "icao_code": "LTFE",
+    "iata_code": "BJV",
+    "length_ft": 9646,
+    "width_ft": 148,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -663,7 +1218,15 @@
     "freq": "119.250",
     "Lat": 36.299217,
     "Lon": 32.300598,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "LTFG",
+    "iso_country": "TR",
+    "icao_code": "LTFG",
+    "iata_code": "GZP",
+    "length_ft": 7710,
+    "width_ft": 148,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -672,7 +1235,15 @@
     "freq": "118.175",
     "Lat": 41.253988,
     "Lon": 36.567546,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "LTFH",
+    "iso_country": "TR",
+    "icao_code": "LTFH",
+    "iata_code": "SZF",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 133.5,
+    "QFU": "31"
   },
   {
     "type": "large_airport",
@@ -681,7 +1252,15 @@
     "freq": "128.200",
     "Lat": 40.898602,
     "Lon": 29.3092,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "LTFJ",
+    "iso_country": "TR",
+    "icao_code": "LTFJ",
+    "iata_code": "SAW",
+    "length_ft": 11614,
+    "width_ft": 197,
+    "heading": 64,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -690,7 +1269,15 @@
     "freq": "",
     "Lat": 40.204498,
     "Lon": 25.883302,
-    "Ele": 22.3
+    "Ele": 22.3,
+    "ident": "LTFK",
+    "iso_country": "TR",
+    "icao_code": "LTFK",
+    "iata_code": "GKD",
+    "length_ft": 3915,
+    "width_ft": 100,
+    "heading": 28,
+    "QFU": "20"
   },
   {
     "type": "large_airport",
@@ -699,7 +1286,15 @@
     "freq": "127.100",
     "Lat": 41.261297,
     "Lon": 28.741951,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "LTFM",
+    "iso_country": "TR",
+    "icao_code": "LTFM",
+    "iata_code": "IST",
+    "length_ft": 10039,
+    "width_ft": 148,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -708,7 +1303,9 @@
     "freq": "",
     "Lat": 37.863665,
     "Lon": 30.355,
-    "Ele": 876.0
+    "Ele": 876,
+    "ident": "LTFN",
+    "iso_country": "TR"
   },
   {
     "type": "medium_airport",
@@ -717,7 +1314,15 @@
     "freq": "127.150",
     "Lat": 41.179766,
     "Lon": 40.848802,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "LTFO",
+    "iso_country": "TR",
+    "icao_code": "LTFO",
+    "iata_code": "RZV",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -726,7 +1331,9 @@
     "freq": "",
     "Lat": 37.09644317626953,
     "Lon": 30.647735595703125,
-    "Ele": 309.4
+    "Ele": 309.4,
+    "ident": "LTXE",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -735,7 +1342,9 @@
     "freq": "",
     "Lat": 38.976571,
     "Lon": 27.853267,
-    "Ele": 123.4
+    "Ele": 123.4,
+    "ident": "TR-0001",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -744,7 +1353,9 @@
     "freq": "",
     "Lat": 39.3316650390625,
     "Lon": 38.0918197631836,
-    "Ele": 1074.7
+    "Ele": 1074.7,
+    "ident": "TR-0002",
+    "iso_country": "TR"
   },
   {
     "type": "medium_airport",
@@ -753,7 +1364,9 @@
     "freq": "",
     "Lat": 39.73885726928711,
     "Lon": 32.378639221191406,
-    "Ele": 748.9
+    "Ele": 748.9,
+    "ident": "TR-0004",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -762,7 +1375,9 @@
     "freq": "",
     "Lat": 40.822643,
     "Lon": 29.335127,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "TR-0005",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -771,7 +1386,9 @@
     "freq": "",
     "Lat": 39.837845,
     "Lon": 25.995106,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0008",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -780,7 +1397,9 @@
     "freq": "",
     "Lat": 37.828125,
     "Lon": 29.637863159179688,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0009",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -789,7 +1408,9 @@
     "freq": "",
     "Lat": 38.01278305053711,
     "Lon": 39.95493698120117,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0011",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -798,7 +1419,9 @@
     "freq": "",
     "Lat": 38.24319839477539,
     "Lon": 26.424999237060547,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0012",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -807,7 +1430,9 @@
     "freq": "",
     "Lat": 38.314704,
     "Lon": 33.8055,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0014",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -816,7 +1441,9 @@
     "freq": "",
     "Lat": 38.4689457144,
     "Lon": 38.3651590347,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0015",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -825,7 +1452,9 @@
     "freq": "",
     "Lat": 40.74797058105469,
     "Lon": 31.650066375732425,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0018",
+    "iso_country": "TR"
   },
   {
     "type": "medium_airport",
@@ -834,7 +1463,9 @@
     "freq": "",
     "Lat": 39.84389877319336,
     "Lon": 30.968000411987305,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0021",
+    "iso_country": "TR"
   },
   {
     "type": "medium_airport",
@@ -843,7 +1474,9 @@
     "freq": "",
     "Lat": 40.787068,
     "Lon": 26.606655,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0028",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -852,7 +1485,9 @@
     "freq": "",
     "Lat": 37.846042,
     "Lon": 34.473324,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0029",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -861,7 +1496,9 @@
     "freq": "",
     "Lat": 40.222900390625,
     "Lon": 39.79309844970703,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0032",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -870,7 +1507,9 @@
     "freq": "",
     "Lat": 39.273658752441406,
     "Lon": 26.68694877624512,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0033",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -879,7 +1518,9 @@
     "freq": "",
     "Lat": 39.82091522216797,
     "Lon": 30.11874008178711,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0034",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -888,7 +1529,9 @@
     "freq": "",
     "Lat": 38.54180145263672,
     "Lon": 42.332401275634766,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0035",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -897,7 +1540,9 @@
     "freq": "",
     "Lat": 38.7861877312,
     "Lon": 41.4696979523,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0037",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -906,7 +1551,9 @@
     "freq": "",
     "Lat": 37.5439478243,
     "Lon": 44.3380093575,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0038",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -915,7 +1562,9 @@
     "freq": "",
     "Lat": 38.7029942184,
     "Lon": 35.504550933800004,
-    "Ele": 1070.2
+    "Ele": 1070.2,
+    "ident": "TR-0039",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -924,7 +1573,9 @@
     "freq": "",
     "Lat": 36.7357458756,
     "Lon": 31.5086495876,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "TR-0040",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -933,7 +1584,13 @@
     "freq": "433.000",
     "Lat": 39.092842,
     "Lon": 27.148651,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "TR-0041",
+    "iso_country": "TR",
+    "length_ft": 885,
+    "width_ft": 100,
+    "heading": 64,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -942,7 +1599,9 @@
     "freq": "",
     "Lat": 36.8309,
     "Lon": 36.2172,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0078",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -951,7 +1610,9 @@
     "freq": "",
     "Lat": 36.80834,
     "Lon": 31.369507,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0079",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -960,7 +1621,10 @@
     "freq": "",
     "Lat": 41.5129,
     "Lon": 36.1203,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "TR-0080",
+    "iso_country": "TR",
+    "icao_code": "LTON"
   },
   {
     "type": "small_airport",
@@ -969,7 +1633,9 @@
     "freq": "",
     "Lat": 36.93968,
     "Lon": 35.563492,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0092",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -978,7 +1644,9 @@
     "freq": "",
     "Lat": 36.748762,
     "Lon": 31.479854,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0159",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -987,7 +1655,9 @@
     "freq": "",
     "Lat": 39.49862,
     "Lon": 26.35856,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "TR-0224",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -996,7 +1666,9 @@
     "freq": "",
     "Lat": 40.487089,
     "Lon": 30.169232,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0282",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1677,9 @@
     "freq": "",
     "Lat": 38.095469,
     "Lon": 32.779033,
-    "Ele": 306.3
+    "Ele": 306.3,
+    "ident": "TR-0283",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1688,9 @@
     "freq": "",
     "Lat": 39.670069,
     "Lon": 32.201065,
-    "Ele": 890.0
+    "Ele": 890,
+    "ident": "TR-0289",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1699,9 @@
     "freq": "",
     "Lat": 38.700849,
     "Lon": 27.453658,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0291",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1710,9 @@
     "freq": "",
     "Lat": 38.331013,
     "Lon": 27.245631,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TR-0292",
+    "iso_country": "TR"
   },
   {
     "type": "small_airport",
@@ -1041,6 +1721,8 @@
     "freq": "",
     "Lat": 39.30217,
     "Lon": 31.49727,
-    "Ele": 865.9
+    "Ele": 865.9,
+    "ident": "TR-0295",
+    "iso_country": "TR"
   }
 ]

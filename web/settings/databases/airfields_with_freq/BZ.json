@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 17.5664,
     "Lon": -89.0468,
-    "Ele": 123.1
+    "Ele": 123.1,
+    "ident": "BZ-0001",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 17.452965,
     "Lon": -87.500671,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BZ-0002",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 17.88531,
     "Lon": -88.887286,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "BZ-0003",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 17.039,
     "Lon": -88.9547,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "BZ-0007",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 17.90194,
     "Lon": -88.986833,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BZ-0014",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 17.85615,
     "Lon": -88.58883,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BZ-0015",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,10 @@
     "freq": "",
     "Lat": 17.269603,
     "Lon": -88.776496,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "BZ-BCV",
+    "iso_country": "BZ",
+    "iata_code": "BCV"
   },
   {
     "type": "small_airport",
@@ -69,7 +84,10 @@
     "freq": "",
     "Lat": 16.519369,
     "Lon": -88.407913,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "BZ-BGK",
+    "iso_country": "BZ",
+    "iata_code": "BGK"
   },
   {
     "type": "medium_airport",
@@ -78,7 +96,10 @@
     "freq": "",
     "Lat": 17.735015,
     "Lon": -88.032862,
-    "Ele": 0.6
+    "Ele": 0.6,
+    "ident": "BZ-CUK",
+    "iso_country": "BZ",
+    "iata_code": "CUK"
   },
   {
     "type": "medium_airport",
@@ -87,7 +108,10 @@
     "freq": "",
     "Lat": 17.683792,
     "Lon": -88.044985,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "BZ-CYC",
+    "iso_country": "BZ",
+    "iata_code": "CYC"
   },
   {
     "type": "medium_airport",
@@ -96,7 +120,14 @@
     "freq": "",
     "Lat": 18.3822,
     "Lon": -88.411903,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "BZ-CZH",
+    "iso_country": "BZ",
+    "iata_code": "CZH",
+    "length_ft": 2198,
+    "width_ft": 48,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -105,7 +136,10 @@
     "freq": "",
     "Lat": 16.98251,
     "Lon": -88.230988,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "BZ-DGA",
+    "iso_country": "BZ",
+    "iata_code": "DGA"
   },
   {
     "type": "small_airport",
@@ -114,7 +148,10 @@
     "freq": "",
     "Lat": 16.53456,
     "Lon": -88.441615,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "BZ-INB",
+    "iso_country": "BZ",
+    "iata_code": "INB"
   },
   {
     "type": "small_airport",
@@ -123,7 +160,10 @@
     "freq": "",
     "Lat": 17.004299,
     "Lon": -88.304199,
-    "Ele": 30.8
+    "Ele": 30.8,
+    "ident": "BZ-MDB",
+    "iso_country": "BZ",
+    "iata_code": "MDB"
   },
   {
     "type": "small_airport",
@@ -132,7 +172,10 @@
     "freq": "",
     "Lat": 18.046767,
     "Lon": -88.583858,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "BZ-ORZ",
+    "iso_country": "BZ",
+    "iata_code": "ORZ"
   },
   {
     "type": "medium_airport",
@@ -141,7 +184,15 @@
     "freq": "",
     "Lat": 16.1024,
     "Lon": -88.808296,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "BZ-PND",
+    "iso_country": "BZ",
+    "iata_code": "PND",
+    "local_code": "PND",
+    "length_ft": 2372,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -150,7 +201,14 @@
     "freq": "",
     "Lat": 18.3561,
     "Lon": -88.130798,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "BZ-SJX",
+    "iso_country": "BZ",
+    "iata_code": "SJX",
+    "length_ft": 2510,
+    "width_ft": 48,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -159,7 +217,12 @@
     "freq": "",
     "Lat": 17.9139,
     "Lon": -87.9711,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "BZ-SPR",
+    "iso_country": "BZ",
+    "iata_code": "SPR",
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -168,7 +231,10 @@
     "freq": "",
     "Lat": 17.185898,
     "Lon": -89.009936,
-    "Ele": 60.7
+    "Ele": 60.7,
+    "ident": "BZ-SQS",
+    "iso_country": "BZ",
+    "iata_code": "SQS"
   },
   {
     "type": "small_airport",
@@ -177,7 +243,10 @@
     "freq": "",
     "Lat": 18.2721004486084,
     "Lon": -88.456298828125,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "BZ-STU",
+    "iso_country": "BZ",
+    "iata_code": "STU"
   },
   {
     "type": "small_airport",
@@ -186,7 +255,13 @@
     "freq": "",
     "Lat": 16.728338,
     "Lon": -88.369174,
-    "Ele": 65.8
+    "Ele": 65.8,
+    "ident": "BZ-SVK",
+    "iso_country": "BZ",
+    "iata_code": "SVK",
+    "length_ft": 2887,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -195,7 +270,10 @@
     "freq": "",
     "Lat": 17.517239,
     "Lon": -88.195775,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "BZ-TZA",
+    "iso_country": "BZ",
+    "iata_code": "TZA"
   },
   {
     "type": "large_airport",
@@ -204,7 +282,15 @@
     "freq": "121.000",
     "Lat": 17.539951,
     "Lon": -88.303556,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MZBZ",
+    "iso_country": "BZ",
+    "icao_code": "MZBZ",
+    "iata_code": "BZE",
+    "length_ft": 9678,
+    "width_ft": 148,
+    "heading": 77,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -213,7 +299,10 @@
     "freq": "",
     "Lat": 17.27846,
     "Lon": -89.0238,
-    "Ele": 104.5
+    "Ele": 104.5,
+    "ident": "MZE",
+    "iso_country": "BZ",
+    "iata_code": "MZE"
   },
   {
     "type": "small_airport",
@@ -222,7 +311,9 @@
     "freq": "",
     "Lat": 18.44031,
     "Lon": -88.45334,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MZJC",
+    "iso_country": "BZ"
   },
   {
     "type": "small_airport",
@@ -231,7 +322,12 @@
     "freq": "",
     "Lat": 17.104872,
     "Lon": -89.101129,
-    "Ele": 107.0
+    "Ele": 107,
+    "ident": "MZMF",
+    "iso_country": "BZ",
+    "iata_code": "CYD",
+    "length_ft": 2135,
+    "width_ft": 31
   },
   {
     "type": "medium_airport",
@@ -240,6 +336,29 @@
     "freq": "",
     "Lat": 16.536957,
     "Lon": -88.361511,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MZPL",
+    "iso_country": "BZ",
+    "icao_code": "MZPL",
+    "iata_code": "PLJ",
+    "local_code": "PLJ",
+    "length_ft": 2133,
+    "width_ft": 65,
+    "QFU": "26",
+    "heading": 260
+  },
+  {
+    "Lat": 17.231754,
+    "Lon": -87.865442,
+    "type": "small_airport",
+    "ident": "MZHR",
+    "name": "Belize Dive Haven Airstrip",
+    "Ele": 16,
+    "iso_country": "BZ",
+    "gps_code": "MZHR",
+    "length_ft": 2400,
+    "width_ft": 40,
+    "QFU": "30",
+    "heading": 300
   }
 ]

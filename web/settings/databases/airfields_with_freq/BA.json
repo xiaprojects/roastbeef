@@ -6,7 +6,12 @@
     "freq": "123.600",
     "Lat": 44.436094,
     "Lon": 18.686457,
-    "Ele": 221.0
+    "Ele": 221,
+    "ident": "BA-0001",
+    "iso_country": "BA",
+    "icao_code": "LQCG",
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -15,7 +20,10 @@
     "freq": "",
     "Lat": 44.8482,
     "Lon": 17.222826,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BA-0002",
+    "iso_country": "BA",
+    "icao_code": "LQBZ"
   },
   {
     "type": "small_airport",
@@ -24,7 +32,13 @@
     "freq": "",
     "Lat": 44.846235,
     "Lon": 18.761888,
-    "Ele": 102.7
+    "Ele": 102.7,
+    "ident": "BA-0003",
+    "iso_country": "BA",
+    "length_ft": 1911,
+    "width_ft": 33,
+    "heading": 10,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -33,7 +47,9 @@
     "freq": "",
     "Lat": 43.885661,
     "Lon": 18.068562,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BA-0006",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,9 @@
     "freq": "",
     "Lat": 44.911565,
     "Lon": 18.738884,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BA-0007",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -51,7 +69,9 @@
     "freq": "",
     "Lat": 44.67767,
     "Lon": 19.12988,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BA-0010",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -60,7 +80,9 @@
     "freq": "",
     "Lat": 44.77271,
     "Lon": 16.64856,
-    "Ele": 160.9
+    "Ele": 160.9,
+    "ident": "BA-0011",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -69,7 +91,9 @@
     "freq": "",
     "Lat": 44.9157,
     "Lon": 18.15029,
-    "Ele": 142.0
+    "Ele": 142,
+    "ident": "BA-0012",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -78,7 +102,14 @@
     "freq": "123.500",
     "Lat": 44.797061,
     "Lon": 15.904474,
-    "Ele": 232.0
+    "Ele": 232,
+    "ident": "LQBI",
+    "iso_country": "BA",
+    "icao_code": "LQBI",
+    "length_ft": 3600,
+    "width_ft": 250,
+    "heading": 121,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -87,7 +118,15 @@
     "freq": "118.950",
     "Lat": 44.941399,
     "Lon": 17.297501,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "LQBK",
+    "iso_country": "BA",
+    "icao_code": "LQBK",
+    "iata_code": "BNX",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 170,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -96,7 +135,14 @@
     "freq": "123.500",
     "Lat": 44.4578,
     "Lon": 18.808122,
-    "Ele": 264.9
+    "Ele": 264.9,
+    "ident": "LQJL",
+    "iso_country": "BA",
+    "icao_code": "LQJL",
+    "length_ft": 3940,
+    "width_ft": 295,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -105,7 +151,10 @@
     "freq": "",
     "Lat": 43.791141,
     "Lon": 16.893268,
-    "Ele": 716.0
+    "Ele": 716,
+    "ident": "LQLV",
+    "iso_country": "BA",
+    "icao_code": "LQLV"
   },
   {
     "type": "medium_airport",
@@ -114,7 +163,15 @@
     "freq": "122.700",
     "Lat": 43.282901763916016,
     "Lon": 17.84589958190918,
-    "Ele": 47.5
+    "Ele": 47.5,
+    "ident": "LQMO",
+    "iso_country": "BA",
+    "icao_code": "LQMO",
+    "iata_code": "OMO",
+    "length_ft": 7874,
+    "width_ft": 158,
+    "heading": 158,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -123,7 +180,9 @@
     "freq": "",
     "Lat": 44.57383,
     "Lon": 16.28217,
-    "Ele": 601.1
+    "Ele": 601.1,
+    "ident": "LQMP",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -132,7 +191,9 @@
     "freq": "",
     "Lat": 44.069444,
     "Lon": 18.508974,
-    "Ele": 961.6
+    "Ele": 961.6,
+    "ident": "LQNI",
+    "iso_country": "BA"
   },
   {
     "type": "small_airport",
@@ -141,7 +202,10 @@
     "freq": "",
     "Lat": 44.993986,
     "Lon": 16.735457,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "LQPD",
+    "iso_country": "BA",
+    "icao_code": "LQPD"
   },
   {
     "type": "small_airport",
@@ -150,7 +214,9 @@
     "freq": "",
     "Lat": 44.767693,
     "Lon": 19.297417,
-    "Ele": 94.5
+    "Ele": 94.5,
+    "ident": "LQPP",
+    "iso_country": "BA"
   },
   {
     "type": "large_airport",
@@ -159,7 +225,15 @@
     "freq": "136.450",
     "Lat": 43.8246,
     "Lon": 18.331499,
-    "Ele": 520.6
+    "Ele": 520.6,
+    "ident": "LQSA",
+    "iso_country": "BA",
+    "icao_code": "LQSA",
+    "iata_code": "SJJ",
+    "length_ft": 8666,
+    "width_ft": 150,
+    "heading": 117,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -168,7 +242,15 @@
     "freq": "125.800",
     "Lat": 44.458698,
     "Lon": 18.7248,
-    "Ele": 239.0
+    "Ele": 239,
+    "ident": "LQTZ",
+    "iso_country": "BA",
+    "icao_code": "LQTZ",
+    "iata_code": "TZL",
+    "length_ft": 8152,
+    "width_ft": 148,
+    "heading": 96,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -177,6 +259,13 @@
     "freq": "",
     "Lat": 44.025059,
     "Lon": 18.097114,
-    "Ele": 448.1
+    "Ele": 448.1,
+    "ident": "LQVI",
+    "iso_country": "BA",
+    "icao_code": "LQVI",
+    "length_ft": 2362,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   }
 ]

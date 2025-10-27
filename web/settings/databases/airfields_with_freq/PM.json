@@ -6,7 +6,15 @@
     "freq": "119.100",
     "Lat": 47.095501,
     "Lon": -56.380299,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "LFVM",
+    "iso_country": "PM",
+    "icao_code": "LFVM",
+    "iata_code": "MQC",
+    "length_ft": 3280,
+    "width_ft": 65,
+    "heading": 98,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -15,6 +23,14 @@
     "freq": "118.500",
     "Lat": 46.76290130615234,
     "Lon": -56.173099517822266,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "LFVP",
+    "iso_country": "PM",
+    "icao_code": "LFVP",
+    "iata_code": "FSP",
+    "length_ft": 5900,
+    "width_ft": 150,
+    "heading": 59,
+    "QFU": "26"
   }
 ]

@@ -6,7 +6,15 @@
     "freq": "347.600",
     "Lat": -20.430201,
     "Lon": 57.683601,
-    "Ele": 56.7
+    "Ele": 56.7,
+    "ident": "FIMP",
+    "iso_country": "MU",
+    "icao_code": "FIMP",
+    "iata_code": "MRU",
+    "length_ft": 11056,
+    "width_ft": 148,
+    "heading": 117,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,15 @@
     "freq": "123.300",
     "Lat": -19.7577,
     "Lon": 63.361,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "FIMR",
+    "iso_country": "MU",
+    "icao_code": "FIMR",
+    "iata_code": "RRG",
+    "length_ft": 4223,
+    "width_ft": 98,
+    "heading": 106,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -24,7 +40,14 @@
     "freq": "",
     "Lat": -10.3731,
     "Lon": 56.609798,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MU-0001",
+    "iso_country": "MU",
+    "iata_code": "AHG",
+    "length_ft": 4275,
+    "width_ft": 90,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -33,7 +56,9 @@
     "freq": "",
     "Lat": -20.123793,
     "Lon": 57.681656,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MU-0002",
+    "iso_country": "MU"
   },
   {
     "type": "medium_airport",
@@ -42,6 +67,6 @@
     "freq": "",
     "Lat": -10.372483,
     "Lon": 56.603537,
-    "Ele": 0.0
+    "Ele": 0
   }
 ]

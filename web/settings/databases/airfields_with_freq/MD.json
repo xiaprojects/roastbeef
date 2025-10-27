@@ -6,7 +6,15 @@
     "freq": "122.300",
     "Lat": 47.837666,
     "Lon": 27.781108,
-    "Ele": 231.0
+    "Ele": 231,
+    "ident": "LUBL",
+    "iso_country": "MD",
+    "icao_code": "LUBL",
+    "iata_code": "BZY",
+    "length_ft": 7245,
+    "width_ft": 140,
+    "heading": 153.4,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,14 @@
     "freq": "",
     "Lat": 47.862701,
     "Lon": 28.212799,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "LUBM",
+    "iso_country": "MD",
+    "icao_code": "LUBM",
+    "length_ft": 8235,
+    "width_ft": 129,
+    "heading": 71,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,10 @@
     "freq": "",
     "Lat": 45.8438,
     "Lon": 28.2637,
-    "Ele": 198.7
+    "Ele": 198.7,
+    "ident": "LUCH",
+    "iso_country": "MD",
+    "icao_code": "LUCH"
   },
   {
     "type": "medium_airport",
@@ -33,7 +51,15 @@
     "freq": "125.900",
     "Lat": 46.9277,
     "Lon": 28.931,
-    "Ele": 121.6
+    "Ele": 121.6,
+    "ident": "LUKK",
+    "iso_country": "MD",
+    "icao_code": "LUKK",
+    "iata_code": "RMO",
+    "length_ft": 7818,
+    "width_ft": 148,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -42,7 +68,9 @@
     "freq": "",
     "Lat": 46.868099,
     "Lon": 29.590599,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "LUTR",
+    "iso_country": "MD"
   },
   {
     "type": "small_airport",
@@ -51,7 +79,9 @@
     "freq": "",
     "Lat": 47.0681,
     "Lon": 29.0954,
-    "Ele": 166.4
+    "Ele": 166.4,
+    "ident": "MD-0002",
+    "iso_country": "MD"
   },
   {
     "type": "small_airport",
@@ -60,7 +90,9 @@
     "freq": "",
     "Lat": 46.83656,
     "Lon": 28.901639,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MD-0003",
+    "iso_country": "MD"
   },
   {
     "type": "small_airport",
@@ -69,7 +101,9 @@
     "freq": "",
     "Lat": 47.2521452,
     "Lon": 28.2802413,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MD-0004",
+    "iso_country": "MD"
   },
   {
     "type": "small_airport",
@@ -78,7 +112,9 @@
     "freq": "",
     "Lat": 46.18065,
     "Lon": 28.38241,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MD-0006",
+    "iso_country": "MD"
   },
   {
     "type": "small_airport",
@@ -87,6 +123,8 @@
     "freq": "",
     "Lat": 46.45025,
     "Lon": 29.92919,
-    "Ele": 137.5
+    "Ele": 137.5,
+    "ident": "MD-0007",
+    "iso_country": "MD"
   }
 ]

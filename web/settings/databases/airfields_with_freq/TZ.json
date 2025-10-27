@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -6.957292,
     "Lon": 39.505588,
-    "Ele": 34.7
+    "Ele": 34.7,
+    "ident": "HTAG",
+    "iso_country": "TZ"
   },
   {
     "type": "medium_airport",
@@ -15,7 +17,15 @@
     "freq": "118.400",
     "Lat": -3.3677899837493896,
     "Lon": 36.63330078125,
-    "Ele": 1386.8
+    "Ele": 1386.8,
+    "ident": "HTAR",
+    "iso_country": "TZ",
+    "icao_code": "HTAR",
+    "iata_code": "ARK",
+    "length_ft": 5377,
+    "width_ft": 105,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -24,7 +34,9 @@
     "freq": "",
     "Lat": -7.748241,
     "Lon": 38.001833,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "HTBB",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,9 @@
     "freq": "",
     "Lat": -11.331675,
     "Lon": 37.067816,
-    "Ele": 603.5
+    "Ele": 603.5,
+    "ident": "HTBS",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -42,7 +56,15 @@
     "freq": "",
     "Lat": -1.332,
     "Lon": 31.8212,
-    "Ele": 1153.4
+    "Ele": 1153.4,
+    "ident": "HTBU",
+    "iso_country": "TZ",
+    "icao_code": "HTBU",
+    "iata_code": "BKZ",
+    "length_ft": 4535,
+    "width_ft": 93,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -51,7 +73,9 @@
     "freq": "",
     "Lat": -8.558318,
     "Lon": 33.436368,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "HTCH",
+    "iso_country": "TZ"
   },
   {
     "type": "large_airport",
@@ -60,7 +84,15 @@
     "freq": "119.300",
     "Lat": -6.87811,
     "Lon": 39.202599,
-    "Ele": 55.5
+    "Ele": 55.5,
+    "ident": "HTDA",
+    "iso_country": "TZ",
+    "icao_code": "HTDA",
+    "iata_code": "DAR",
+    "length_ft": 3280,
+    "width_ft": 98,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -69,7 +101,15 @@
     "freq": "119.200",
     "Lat": -6.17044,
     "Lon": 35.752602,
-    "Ele": 1119.5
+    "Ele": 1119.5,
+    "ident": "HTDO",
+    "iso_country": "TZ",
+    "icao_code": "HTDO",
+    "iata_code": "DOD",
+    "length_ft": 6700,
+    "width_ft": 98,
+    "heading": 91,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -78,7 +118,9 @@
     "freq": "",
     "Lat": -3.194243,
     "Lon": 35.26315,
-    "Ele": 1658.7
+    "Ele": 1658.7,
+    "ident": "HTEN",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -87,7 +129,11 @@
     "freq": "",
     "Lat": -2.74233,
     "Lon": 31.70683,
-    "Ele": 1188.1
+    "Ele": 1188.1,
+    "ident": "HTGE",
+    "iso_country": "TZ",
+    "icao_code": "HTGE",
+    "iata_code": "GTC"
   },
   {
     "type": "small_airport",
@@ -96,7 +142,11 @@
     "freq": "",
     "Lat": -2.160833,
     "Lon": 34.225556,
-    "Ele": 1210.1
+    "Ele": 1210.1,
+    "ident": "HTGR",
+    "iso_country": "TZ",
+    "icao_code": "HTGR",
+    "iata_code": "GTZ"
   },
   {
     "type": "medium_airport",
@@ -105,7 +155,15 @@
     "freq": "",
     "Lat": -8.919942,
     "Lon": 33.273981,
-    "Ele": 1344.8
+    "Ele": 1344.8,
+    "ident": "HTGW",
+    "iso_country": "TZ",
+    "icao_code": "HTGW",
+    "iata_code": "MBI",
+    "length_ft": 10925,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -114,7 +172,15 @@
     "freq": "118.100",
     "Lat": -7.66863,
     "Lon": 35.752102,
-    "Ele": 1425.9
+    "Ele": 1425.9,
+    "ident": "HTIR",
+    "iso_country": "TZ",
+    "icao_code": "HTIR",
+    "iata_code": "IRI",
+    "length_ft": 5508,
+    "width_ft": 98,
+    "heading": 13,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -123,7 +189,9 @@
     "freq": "",
     "Lat": -6.719232,
     "Lon": 32.062657,
-    "Ele": 1155.2
+    "Ele": 1155.2,
+    "ident": "HTIY",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -132,7 +200,14 @@
     "freq": "",
     "Lat": -4.8862,
     "Lon": 29.6709,
-    "Ele": 823.0
+    "Ele": 823,
+    "ident": "HTKA",
+    "iso_country": "TZ",
+    "icao_code": "HTKA",
+    "iata_code": "TKQ",
+    "length_ft": 5797,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -141,7 +216,9 @@
     "freq": "",
     "Lat": -3.525979995727539,
     "Lon": 30.650400161743164,
-    "Ele": 1299.1
+    "Ele": 1299.1,
+    "ident": "HTKB",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -150,7 +227,9 @@
     "freq": "",
     "Lat": -4.893710136413574,
     "Lon": 35.7682991027832,
-    "Ele": 1395.4
+    "Ele": 1395.4,
+    "ident": "HTKD",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -159,7 +238,14 @@
     "freq": "",
     "Lat": -8.91123,
     "Lon": 39.508619,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "HTKI",
+    "iso_country": "TZ",
+    "icao_code": "HTKI",
+    "iata_code": "KIY",
+    "length_ft": 5906,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -168,7 +254,15 @@
     "freq": "119.900",
     "Lat": -3.42941,
     "Lon": 37.074501,
-    "Ele": 893.7
+    "Ele": 893.7,
+    "ident": "HTKJ",
+    "iso_country": "TZ",
+    "icao_code": "HTKJ",
+    "iata_code": "JRO",
+    "length_ft": 11834,
+    "width_ft": 148,
+    "heading": 87,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -177,7 +271,9 @@
     "freq": "",
     "Lat": -4.312575,
     "Lon": 34.346453,
-    "Ele": 1534.1
+    "Ele": 1534.1,
+    "ident": "HTKL",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -186,7 +282,9 @@
     "freq": "",
     "Lat": -6.150000095367432,
     "Lon": 36.41699981689453,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "HTKO",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -195,7 +293,9 @@
     "freq": "",
     "Lat": -6.864605,
     "Lon": 37.00845,
-    "Ele": 477.6
+    "Ele": 477.6,
+    "ident": "HTKS",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -204,7 +304,9 @@
     "freq": "",
     "Lat": -5.831378,
     "Lon": 34.966387,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "HTKT",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -213,7 +315,9 @@
     "freq": "",
     "Lat": -2.06969,
     "Lon": 35.5457,
-    "Ele": 2017.8
+    "Ele": 2017.8,
+    "ident": "HTLD",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -222,7 +326,14 @@
     "freq": "",
     "Lat": -9.851005,
     "Lon": 39.75911,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "HTLI",
+    "iso_country": "TZ",
+    "icao_code": "HTLI",
+    "iata_code": "LDI",
+    "length_ft": 5735,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -231,7 +342,9 @@
     "freq": "",
     "Lat": -11.116399765014648,
     "Lon": 34.652198791503906,
-    "Ele": 508.1
+    "Ele": 508.1,
+    "ident": "HTLL",
+    "iso_country": "TZ"
   },
   {
     "type": "medium_airport",
@@ -240,7 +353,15 @@
     "freq": "",
     "Lat": -3.37631,
     "Lon": 35.818298,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "HTLM",
+    "iso_country": "TZ",
+    "icao_code": "HTLM",
+    "iata_code": "LKY",
+    "length_ft": 4003,
+    "width_ft": 66,
+    "heading": 119,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -249,7 +370,14 @@
     "freq": "",
     "Lat": -7.917478,
     "Lon": 39.668502,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "HTMA",
+    "iso_country": "TZ",
+    "icao_code": "HTMA",
+    "iata_code": "MFA",
+    "length_ft": 5348,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -258,7 +386,13 @@
     "freq": "",
     "Lat": -8.919444,
     "Lon": 33.463889,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "HTMB",
+    "iso_country": "TZ",
+    "icao_code": "HTMB",
+    "length_ft": 4921,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -267,7 +401,11 @@
     "freq": "",
     "Lat": -3.521332,
     "Lon": 33.615542,
-    "Ele": 1210.1
+    "Ele": 1210.1,
+    "ident": "HTMD",
+    "iso_country": "TZ",
+    "icao_code": "HTMD",
+    "iata_code": "MWN"
   },
   {
     "type": "small_airport",
@@ -276,7 +414,9 @@
     "freq": "",
     "Lat": -8.732040405273438,
     "Lon": 35.3026008605957,
-    "Ele": 1272.5
+    "Ele": 1272.5,
+    "ident": "HTMF",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -285,7 +425,9 @@
     "freq": "",
     "Lat": -6.79722,
     "Lon": 37.653099,
-    "Ele": 510.8
+    "Ele": 510.8,
+    "ident": "HTMG",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -294,7 +436,11 @@
     "freq": "",
     "Lat": -10.733,
     "Lon": 38.766998,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "HTMI",
+    "iso_country": "TZ",
+    "icao_code": "HTMI",
+    "iata_code": "XMI"
   },
   {
     "type": "small_airport",
@@ -303,7 +449,9 @@
     "freq": "",
     "Lat": -7.333427906036377,
     "Lon": 37.11635971069336,
-    "Ele": 529.4
+    "Ele": 529.4,
+    "ident": "HTMK",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -312,7 +460,9 @@
     "freq": "",
     "Lat": -6.012913,
     "Lon": 29.766937,
-    "Ele": 780.6
+    "Ele": 780.6,
+    "ident": "HTML",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -321,7 +471,9 @@
     "freq": "",
     "Lat": -4.899146,
     "Lon": 38.240289,
-    "Ele": 411.5
+    "Ele": 411.5,
+    "ident": "HTMO",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -330,7 +482,11 @@
     "freq": "",
     "Lat": -6.355374,
     "Lon": 31.084116,
-    "Ele": 1072.9
+    "Ele": 1072.9,
+    "ident": "HTMP",
+    "iso_country": "TZ",
+    "icao_code": "HTMP",
+    "iata_code": "NPY"
   },
   {
     "type": "small_airport",
@@ -339,7 +495,11 @@
     "freq": "",
     "Lat": -3.36333,
     "Lon": 37.3269,
-    "Ele": 853.7
+    "Ele": 853.7,
+    "ident": "HTMS",
+    "iso_country": "TZ",
+    "icao_code": "HTMS",
+    "iata_code": "QSI"
   },
   {
     "type": "medium_airport",
@@ -348,7 +508,15 @@
     "freq": "118.100",
     "Lat": -10.336204,
     "Lon": 40.181997,
-    "Ele": 113.1
+    "Ele": 113.1,
+    "ident": "HTMT",
+    "iso_country": "TZ",
+    "icao_code": "HTMT",
+    "iata_code": "MYW",
+    "length_ft": 3815,
+    "width_ft": 98,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -357,7 +525,15 @@
     "freq": "",
     "Lat": -1.503,
     "Lon": 33.8021,
-    "Ele": 1160.1
+    "Ele": 1160.1,
+    "ident": "HTMU",
+    "iso_country": "TZ",
+    "icao_code": "HTMU",
+    "iata_code": "MUZ",
+    "length_ft": 5249,
+    "width_ft": 108,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -366,7 +542,15 @@
     "freq": "123.100",
     "Lat": -2.4444899559021,
     "Lon": 32.932701110839844,
-    "Ele": 1147.0
+    "Ele": 1147,
+    "ident": "HTMW",
+    "iso_country": "TZ",
+    "icao_code": "HTMW",
+    "iata_code": "MWZ",
+    "length_ft": 10212,
+    "width_ft": 148,
+    "heading": 116,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -375,7 +559,9 @@
     "freq": "",
     "Lat": -6.349999904632568,
     "Lon": 36.483001708984375,
-    "Ele": 987.6
+    "Ele": 987.6,
+    "ident": "HTMX",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -384,7 +570,11 @@
     "freq": "",
     "Lat": -10.3575,
     "Lon": 38.779202,
-    "Ele": 426.7
+    "Ele": 426.7,
+    "ident": "HTNA",
+    "iso_country": "TZ",
+    "icao_code": "HTNA",
+    "iata_code": "NCH"
   },
   {
     "type": "small_airport",
@@ -393,7 +583,9 @@
     "freq": "",
     "Lat": -6.717083,
     "Lon": 38.153944,
-    "Ele": 224.9
+    "Ele": 224.9,
+    "ident": "HTNG",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -402,7 +594,11 @@
     "freq": "",
     "Lat": -9.35,
     "Lon": 34.799999,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "HTNJ",
+    "iso_country": "TZ",
+    "icao_code": "HTNJ",
+    "iata_code": "JOM"
   },
   {
     "type": "small_airport",
@@ -411,7 +607,10 @@
     "freq": "",
     "Lat": -2.54179,
     "Lon": 30.7031,
-    "Ele": 1533.1
+    "Ele": 1533.1,
+    "ident": "HTNR",
+    "iso_country": "TZ",
+    "icao_code": "HTNR"
   },
   {
     "type": "small_airport",
@@ -420,7 +619,9 @@
     "freq": "",
     "Lat": -4.287732,
     "Lon": 36.616115,
-    "Ele": 1422.8
+    "Ele": 1422.8,
+    "ident": "HTOL",
+    "iso_country": "TZ"
   },
   {
     "type": "medium_airport",
@@ -429,7 +630,15 @@
     "freq": "122.500",
     "Lat": -5.25726,
     "Lon": 39.811401,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "HTPE",
+    "iso_country": "TZ",
+    "icao_code": "HTPE",
+    "iata_code": "PMA",
+    "length_ft": 5003,
+    "width_ft": 98,
+    "heading": 22,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -438,7 +647,9 @@
     "freq": "",
     "Lat": -4.810928,
     "Lon": 34.724762,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "HTSD",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -447,7 +658,9 @@
     "freq": "",
     "Lat": -4.053634,
     "Lon": 37.789462,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "HTSE",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -456,7 +669,9 @@
     "freq": "",
     "Lat": -8.350000381469727,
     "Lon": 35.29999923706055,
-    "Ele": 1920.2
+    "Ele": 1920.2,
+    "ident": "HTSH",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -465,7 +680,14 @@
     "freq": "",
     "Lat": -2.45806,
     "Lon": 34.822498,
-    "Ele": 1548.4
+    "Ele": 1548.4,
+    "ident": "HTSN",
+    "iso_country": "TZ",
+    "icao_code": "HTSN",
+    "iata_code": "SEU",
+    "length_ft": 7480,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -474,7 +696,11 @@
     "freq": "",
     "Lat": -10.683,
     "Lon": 35.583,
-    "Ele": 1050.0
+    "Ele": 1050,
+    "ident": "HTSO",
+    "iso_country": "TZ",
+    "icao_code": "HTSO",
+    "iata_code": "SGX"
   },
   {
     "type": "small_airport",
@@ -483,7 +709,13 @@
     "freq": "",
     "Lat": -7.948889,
     "Lon": 31.610278,
-    "Ele": 1816.6
+    "Ele": 1816.6,
+    "ident": "HTSU",
+    "iso_country": "TZ",
+    "icao_code": "HTSU",
+    "iata_code": "SUT",
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -492,7 +724,14 @@
     "freq": "",
     "Lat": -3.6093,
     "Lon": 33.5035,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "HTSY",
+    "iso_country": "TZ",
+    "icao_code": "HTSY",
+    "iata_code": "SHY",
+    "length_ft": 6785,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -501,7 +740,14 @@
     "freq": "",
     "Lat": -5.07639,
     "Lon": 32.833302,
-    "Ele": 1179.0
+    "Ele": 1179,
+    "ident": "HTTB",
+    "iso_country": "TZ",
+    "icao_code": "HTTB",
+    "iata_code": "TBO",
+    "length_ft": 6234,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -510,7 +756,15 @@
     "freq": "122.100",
     "Lat": -5.09236,
     "Lon": 39.071201,
-    "Ele": 39.3
+    "Ele": 39.3,
+    "ident": "HTTG",
+    "iso_country": "TZ",
+    "icao_code": "HTTG",
+    "iata_code": "TGT",
+    "length_ft": 4160,
+    "width_ft": 102,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -519,7 +773,9 @@
     "freq": "",
     "Lat": -11.100000381469728,
     "Lon": 37.367000579833984,
-    "Ele": 670.6
+    "Ele": 670.6,
+    "ident": "HTTU",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -528,7 +784,9 @@
     "freq": "",
     "Lat": -2.043529987335205,
     "Lon": 33.06439971923828,
-    "Ele": 1222.2
+    "Ele": 1222.2,
+    "ident": "HTUK",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -537,7 +795,9 @@
     "freq": "",
     "Lat": -5.075635,
     "Lon": 32.079868,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "HTUR",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -546,7 +806,9 @@
     "freq": "",
     "Lat": -7.999667,
     "Lon": 38.760234,
-    "Ele": 63.4
+    "Ele": 63.4,
+    "ident": "HTUT",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -555,7 +817,9 @@
     "freq": "",
     "Lat": -5.090771,
     "Lon": 30.406772,
-    "Ele": 171.6
+    "Ele": 171.6,
+    "ident": "HTUV",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -563,8 +827,10 @@
     "gps_code": "HTWK",
     "freq": "",
     "Lat": -3.05,
-    "Lon": 37.0,
-    "Ele": 1310.6
+    "Lon": 37,
+    "Ele": 1310.6,
+    "ident": "HTWK",
+    "iso_country": "TZ"
   },
   {
     "type": "large_airport",
@@ -573,7 +839,15 @@
     "freq": "121.200",
     "Lat": -6.22202,
     "Lon": 39.224899,
-    "Ele": 16.5
+    "Ele": 16.5,
+    "ident": "HTZA",
+    "iso_country": "TZ",
+    "icao_code": "HTZA",
+    "iata_code": "ZNZ",
+    "length_ft": 9915,
+    "width_ft": 148,
+    "heading": 174,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -582,7 +856,10 @@
     "freq": "",
     "Lat": -3.847,
     "Lon": 32.6865,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KBH",
+    "iso_country": "TZ",
+    "iata_code": "KBH"
   },
   {
     "type": "small_airport",
@@ -591,7 +868,9 @@
     "freq": "",
     "Lat": -7.097152,
     "Lon": 35.981575,
-    "Ele": 731.2
+    "Ele": 731.2,
+    "ident": "TZ-0001",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -600,7 +879,9 @@
     "freq": "",
     "Lat": -5.72119,
     "Lon": 34.838487,
-    "Ele": 1243.6
+    "Ele": 1243.6,
+    "ident": "TZ-0002",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -609,7 +890,9 @@
     "freq": "",
     "Lat": -10.96399974822998,
     "Lon": 35.01179885864258,
-    "Ele": 1321.3
+    "Ele": 1321.3,
+    "ident": "TZ-0003",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -618,7 +901,9 @@
     "freq": "",
     "Lat": -5.4892401695251465,
     "Lon": 33.87820053100586,
-    "Ele": 1285.0
+    "Ele": 1285,
+    "ident": "TZ-0004",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -627,7 +912,9 @@
     "freq": "",
     "Lat": -6.376389,
     "Lon": 35.898611,
-    "Ele": 1050.0
+    "Ele": 1050,
+    "ident": "TZ-0005",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -636,7 +923,9 @@
     "freq": "",
     "Lat": -4.549167,
     "Lon": 30.102222,
-    "Ele": 1272.5
+    "Ele": 1272.5,
+    "ident": "TZ-0006",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -645,7 +934,9 @@
     "freq": "",
     "Lat": -3.210604,
     "Lon": 31.546516,
-    "Ele": 1202.1
+    "Ele": 1202.1,
+    "ident": "TZ-0007",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -654,7 +945,9 @@
     "freq": "",
     "Lat": -3.186741,
     "Lon": 33.792056,
-    "Ele": 1278.9
+    "Ele": 1278.9,
+    "ident": "TZ-0008",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -663,7 +956,9 @@
     "freq": "",
     "Lat": -2.663273,
     "Lon": 31.36515,
-    "Ele": 1439.6
+    "Ele": 1439.6,
+    "ident": "TZ-0009",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -672,7 +967,9 @@
     "freq": "",
     "Lat": -5.758501,
     "Lon": 34.799656,
-    "Ele": 1244.8
+    "Ele": 1244.8,
+    "ident": "TZ-0010",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -681,7 +978,9 @@
     "freq": "",
     "Lat": -9.796886,
     "Lon": 37.870732,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0011",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -690,7 +989,9 @@
     "freq": "",
     "Lat": -8.064876,
     "Lon": 36.698112,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0012",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -699,7 +1000,9 @@
     "freq": "",
     "Lat": -5.719283,
     "Lon": 38.828465,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0013",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -708,7 +1011,9 @@
     "freq": "",
     "Lat": -11.303451,
     "Lon": 34.842717,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0014",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -717,7 +1022,9 @@
     "freq": "",
     "Lat": -6.908626,
     "Lon": 31.166407,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0015",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -726,7 +1033,9 @@
     "freq": "",
     "Lat": -2.073124,
     "Lon": 34.510235,
-    "Ele": 1310.9
+    "Ele": 1310.9,
+    "ident": "TZ-0016",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -735,7 +1044,9 @@
     "freq": "",
     "Lat": -7.894934,
     "Lon": 34.580821,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "TZ-0017",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -744,7 +1055,9 @@
     "freq": "",
     "Lat": -1.568396,
     "Lon": 34.886933,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0018",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -753,7 +1066,9 @@
     "freq": "",
     "Lat": -2.009865,
     "Lon": 35.159105,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "TZ-0020",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -762,7 +1077,9 @@
     "freq": "",
     "Lat": -7.042659,
     "Lon": 34.724101,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0021",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -771,7 +1088,9 @@
     "freq": "",
     "Lat": -3.761121,
     "Lon": 36.027171,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0022",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -780,7 +1099,9 @@
     "freq": "",
     "Lat": -2.30078,
     "Lon": 31.849455,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0023",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -789,7 +1110,9 @@
     "freq": "",
     "Lat": -3.030715,
     "Lon": 34.988468,
-    "Ele": 1631.6
+    "Ele": 1631.6,
+    "ident": "TZ-0024",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -798,7 +1121,9 @@
     "freq": "",
     "Lat": -6.631518,
     "Lon": 31.135481,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0025",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -807,7 +1132,9 @@
     "freq": "",
     "Lat": -2.080103,
     "Lon": 34.62952,
-    "Ele": 1344.8
+    "Ele": 1344.8,
+    "ident": "TZ-0026",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -816,7 +1143,9 @@
     "freq": "",
     "Lat": -4.007918,
     "Lon": 36.076105,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0027",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -825,7 +1154,9 @@
     "freq": "",
     "Lat": -7.684811,
     "Lon": 34.922282,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "TZ-0028",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -834,7 +1165,9 @@
     "freq": "",
     "Lat": -7.719942,
     "Lon": 34.226726,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0029",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -843,7 +1176,9 @@
     "freq": "",
     "Lat": -7.666746,
     "Lon": 37.927229,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "TZ-0030",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -852,7 +1187,9 @@
     "freq": "",
     "Lat": -8.188467,
     "Lon": 36.91211,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0031",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -861,7 +1198,9 @@
     "freq": "",
     "Lat": -3.199844,
     "Lon": 34.436504,
-    "Ele": 1441.7
+    "Ele": 1441.7,
+    "ident": "TZ-0032",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -870,7 +1209,9 @@
     "freq": "",
     "Lat": -4.805057,
     "Lon": 31.276613,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "TZ-0033",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -879,7 +1220,9 @@
     "freq": "",
     "Lat": -7.527162,
     "Lon": 33.884071,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0034",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -888,7 +1231,9 @@
     "freq": "",
     "Lat": -3.838092,
     "Lon": 30.640202,
-    "Ele": 1337.8
+    "Ele": 1337.8,
+    "ident": "TZ-0035",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -897,7 +1242,9 @@
     "freq": "",
     "Lat": -9.0411,
     "Lon": 38.273756,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0036",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -906,7 +1253,9 @@
     "freq": "",
     "Lat": -9.447883,
     "Lon": 36.848932,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0037",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -915,7 +1264,9 @@
     "freq": "",
     "Lat": -7.528887,
     "Lon": 37.76201,
-    "Ele": 178.3
+    "Ele": 178.3,
+    "ident": "TZ-0039",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -924,7 +1275,9 @@
     "freq": "",
     "Lat": -8.978724,
     "Lon": 36.869154,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0041",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -933,7 +1286,9 @@
     "freq": "",
     "Lat": -8.958151,
     "Lon": 37.338793,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0042",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -942,7 +1297,9 @@
     "freq": "",
     "Lat": -4.079592,
     "Lon": 38.086684,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0043",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -951,7 +1308,9 @@
     "freq": "",
     "Lat": -9.966951,
     "Lon": 36.878941,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0044",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -960,7 +1319,9 @@
     "freq": "",
     "Lat": -9.426932,
     "Lon": 37.519672,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0045",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -969,7 +1330,9 @@
     "freq": "",
     "Lat": -6.259359,
     "Lon": 33.619996,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0046",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -978,7 +1341,9 @@
     "freq": "",
     "Lat": -11.206844,
     "Lon": 38.162974,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0047",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -987,7 +1352,9 @@
     "freq": "",
     "Lat": -7.750093,
     "Lon": 38.208474,
-    "Ele": 65.8
+    "Ele": 65.8,
+    "ident": "TZ-0048",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -996,7 +1363,9 @@
     "freq": "",
     "Lat": -5.770289,
     "Lon": 31.721521,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0049",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1374,9 @@
     "freq": "",
     "Lat": -11.61227,
     "Lon": 37.564572,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "TZ-0050",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1385,9 @@
     "freq": "",
     "Lat": -6.935716,
     "Lon": 33.530089,
-    "Ele": 1252.7
+    "Ele": 1252.7,
+    "ident": "TZ-0051",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1396,9 @@
     "freq": "",
     "Lat": -6.030896,
     "Lon": 38.770264,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0052",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1407,9 @@
     "freq": "",
     "Lat": -5.713026,
     "Lon": 31.83135,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0053",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1418,9 @@
     "freq": "",
     "Lat": -7.6847,
     "Lon": 38.136731,
-    "Ele": 59.4
+    "Ele": 59.4,
+    "ident": "TZ-0054",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1429,9 @@
     "freq": "",
     "Lat": -3.221398,
     "Lon": 35.476965,
-    "Ele": 2375.9
+    "Ele": 2375.9,
+    "ident": "TZ-0055",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1440,9 @@
     "freq": "",
     "Lat": -2.602346,
     "Lon": 33.676018,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "TZ-0056",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1451,9 @@
     "freq": "",
     "Lat": -5.428612,
     "Lon": 35.166079,
-    "Ele": 1295.4
+    "Ele": 1295.4,
+    "ident": "TZ-0057",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1462,9 @@
     "freq": "",
     "Lat": -3.2292,
     "Lon": 32.473316,
-    "Ele": 1202.1
+    "Ele": 1202.1,
+    "ident": "TZ-0058",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1473,9 @@
     "freq": "",
     "Lat": -6.565131,
     "Lon": 35.1737,
-    "Ele": 1118.6
+    "Ele": 1118.6,
+    "ident": "TZ-0059",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1484,9 @@
     "freq": "",
     "Lat": -3.711702,
     "Lon": 35.270623,
-    "Ele": 1325.9
+    "Ele": 1325.9,
+    "ident": "TZ-0060",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1495,9 @@
     "freq": "",
     "Lat": -4.080354,
     "Lon": 33.160212,
-    "Ele": 1154.9
+    "Ele": 1154.9,
+    "ident": "TZ-0061",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1506,9 @@
     "freq": "",
     "Lat": -4.837753,
     "Lon": 35.366121,
-    "Ele": 1420.4
+    "Ele": 1420.4,
+    "ident": "TZ-0062",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1517,9 @@
     "freq": "",
     "Lat": -7.868375,
     "Lon": 32.48466,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0063",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1528,9 @@
     "freq": "",
     "Lat": -4.954854,
     "Lon": 35.323672,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "TZ-0064",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1539,9 @@
     "freq": "",
     "Lat": -3.868369,
     "Lon": 35.396409,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "TZ-0065",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1550,9 @@
     "freq": "",
     "Lat": -4.198626,
     "Lon": 35.018655,
-    "Ele": 1752.6
+    "Ele": 1752.6,
+    "ident": "TZ-0066",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1561,9 @@
     "freq": "",
     "Lat": -1.074975,
     "Lon": 30.51758,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "TZ-0067",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1572,9 @@
     "freq": "",
     "Lat": -8.065451,
     "Lon": 35.430749,
-    "Ele": 1750.8
+    "Ele": 1750.8,
+    "ident": "TZ-0068",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1583,9 @@
     "freq": "",
     "Lat": -1.233641,
     "Lon": 31.327325,
-    "Ele": 1167.4
+    "Ele": 1167.4,
+    "ident": "TZ-0069",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1594,9 @@
     "freq": "",
     "Lat": -5.904938,
     "Lon": 30.082868,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "TZ-0070",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1605,9 @@
     "freq": "",
     "Lat": -8.357716,
     "Lon": 32.103045,
-    "Ele": 856.5
+    "Ele": 856.5,
+    "ident": "TZ-0071",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1616,9 @@
     "freq": "",
     "Lat": -1.552361,
     "Lon": 31.104871,
-    "Ele": 1493.5
+    "Ele": 1493.5,
+    "ident": "TZ-0072",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1627,9 @@
     "freq": "",
     "Lat": -7.797941,
     "Lon": 35.762345,
-    "Ele": 1440.2
+    "Ele": 1440.2,
+    "ident": "TZ-0073",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1638,9 @@
     "freq": "",
     "Lat": -8.412202,
     "Lon": 35.094073,
-    "Ele": 1914.4
+    "Ele": 1914.4,
+    "ident": "TZ-0074",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1649,9 @@
     "freq": "",
     "Lat": -8.653119,
     "Lon": 35.865055,
-    "Ele": 291.7
+    "Ele": 291.7,
+    "ident": "TZ-0075",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1660,9 @@
     "freq": "",
     "Lat": -7.687751,
     "Lon": 36.986496,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "TZ-0076",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1671,9 @@
     "freq": "",
     "Lat": -6.32536,
     "Lon": 34.173759,
-    "Ele": 1383.8
+    "Ele": 1383.8,
+    "ident": "TZ-0077",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1682,9 @@
     "freq": "",
     "Lat": -2.015174,
     "Lon": 35.273109,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "TZ-0078",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1693,9 @@
     "freq": "",
     "Lat": -2.820447,
     "Lon": 36.323156,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0079",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1704,9 @@
     "freq": "",
     "Lat": -5.512166,
     "Lon": 38.965097,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "TZ-0080",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1715,9 @@
     "freq": "",
     "Lat": -4.549415,
     "Lon": 37.024381,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "TZ-0081",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1726,9 @@
     "freq": "",
     "Lat": -7.918083,
     "Lon": 33.552315,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0082",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1737,9 @@
     "freq": "",
     "Lat": -6.15954,
     "Lon": 30.298705,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "TZ-0083",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1748,9 @@
     "freq": "",
     "Lat": -7.599608,
     "Lon": 32.3072,
-    "Ele": 1219.2
+    "Ele": 1219.2,
+    "ident": "TZ-0084",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1759,9 @@
     "freq": "",
     "Lat": -8.391651,
     "Lon": 37.168761,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0085",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1770,9 @@
     "freq": "",
     "Lat": -8.643293,
     "Lon": 37.673992,
-    "Ele": 317.0
+    "Ele": 317,
+    "ident": "TZ-0086",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1781,9 @@
     "freq": "",
     "Lat": -6.135581,
     "Lon": 35.049797,
-    "Ele": 835.2
+    "Ele": 835.2,
+    "ident": "TZ-0087",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1792,9 @@
     "freq": "",
     "Lat": -3.367409,
     "Lon": 34.824166,
-    "Ele": 1563.9
+    "Ele": 1563.9,
+    "ident": "TZ-0088",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1803,9 @@
     "freq": "",
     "Lat": -4.793813,
     "Lon": 30.712949,
-    "Ele": 1164.0
+    "Ele": 1164,
+    "ident": "TZ-0089",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1814,9 @@
     "freq": "",
     "Lat": -2.657814,
     "Lon": 34.394518,
-    "Ele": 1447.8
+    "Ele": 1447.8,
+    "ident": "TZ-0090",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1825,9 @@
     "freq": "",
     "Lat": -5.470712,
     "Lon": 38.955266,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "TZ-0091",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1836,9 @@
     "freq": "",
     "Lat": -7.267927,
     "Lon": 34.218247,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0092",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1847,9 @@
     "freq": "",
     "Lat": -10.763142,
     "Lon": 36.953222,
-    "Ele": 823.0
+    "Ele": 823,
+    "ident": "TZ-0093",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1858,9 @@
     "freq": "",
     "Lat": -6.248936,
     "Lon": 38.678104,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "TZ-0094",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1869,9 @@
     "freq": "",
     "Lat": -8.656494,
     "Lon": 34.273113,
-    "Ele": 1046.1
+    "Ele": 1046.1,
+    "ident": "TZ-0095",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1880,9 @@
     "freq": "",
     "Lat": -3.11141,
     "Lon": 34.660824,
-    "Ele": 1621.5
+    "Ele": 1621.5,
+    "ident": "TZ-0096",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1428,7 +1891,9 @@
     "freq": "",
     "Lat": -1.774223,
     "Lon": 34.098139,
-    "Ele": 1382.0
+    "Ele": 1382,
+    "ident": "TZ-0097",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1437,7 +1902,9 @@
     "freq": "",
     "Lat": -7.772857,
     "Lon": 39.019695,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "TZ-0098",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1446,7 +1913,9 @@
     "freq": "",
     "Lat": -2.723808,
     "Lon": 36.135783,
-    "Ele": 1127.8
+    "Ele": 1127.8,
+    "ident": "TZ-0099",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1455,7 +1924,9 @@
     "freq": "",
     "Lat": -7.233234,
     "Lon": 32.063351,
-    "Ele": 999.1
+    "Ele": 999.1,
+    "ident": "TZ-0100",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1935,9 @@
     "freq": "",
     "Lat": -6.784087,
     "Lon": 31.367951,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "TZ-0101",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1473,7 +1946,9 @@
     "freq": "",
     "Lat": -8.364091,
     "Lon": 36.103211,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0102",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1482,7 +1957,9 @@
     "freq": "",
     "Lat": -2.878109,
     "Lon": 37.135211,
-    "Ele": 1889.8
+    "Ele": 1889.8,
+    "ident": "TZ-0103",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1491,7 +1968,9 @@
     "freq": "",
     "Lat": -6.339313,
     "Lon": 31.849913,
-    "Ele": 1130.8
+    "Ele": 1130.8,
+    "ident": "TZ-0104",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1500,7 +1979,9 @@
     "freq": "",
     "Lat": -5.839096,
     "Lon": 31.459827,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "TZ-0105",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1509,7 +1990,9 @@
     "freq": "",
     "Lat": -6.148889,
     "Lon": 37.661551,
-    "Ele": 376.1
+    "Ele": 376.1,
+    "ident": "TZ-0106",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2001,9 @@
     "freq": "",
     "Lat": -6.139352,
     "Lon": 34.464442,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "TZ-0107",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2012,9 @@
     "freq": "",
     "Lat": -4.185382,
     "Lon": 31.293522,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "TZ-0108",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2023,9 @@
     "freq": "",
     "Lat": -4.469807,
     "Lon": 36.669798,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0109",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2034,9 @@
     "freq": "",
     "Lat": -8.522635,
     "Lon": 35.179545,
-    "Ele": 1841.0
+    "Ele": 1841,
+    "ident": "TZ-0110",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2045,9 @@
     "freq": "",
     "Lat": -1.425761,
     "Lon": 34.543508,
-    "Ele": 1349.7
+    "Ele": 1349.7,
+    "ident": "TZ-0111",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2056,9 @@
     "freq": "",
     "Lat": -7.20467,
     "Lon": 32.925773,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "TZ-0112",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2067,9 @@
     "freq": "",
     "Lat": -6.93512,
     "Lon": 39.492977,
-    "Ele": 43.9
+    "Ele": 43.9,
+    "ident": "TZ-0113",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2078,9 @@
     "freq": "",
     "Lat": -7.107139,
     "Lon": 32.481492,
-    "Ele": 1086.6
+    "Ele": 1086.6,
+    "ident": "TZ-0114",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2089,9 @@
     "freq": "",
     "Lat": -6.322146,
     "Lon": 32.562788,
-    "Ele": 1112.5
+    "Ele": 1112.5,
+    "ident": "TZ-0115",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2100,9 @@
     "freq": "",
     "Lat": -8.528092,
     "Lon": 39.506976,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "TZ-0116",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2111,9 @@
     "freq": "",
     "Lat": -1.293878,
     "Lon": 34.420428,
-    "Ele": 1472.2
+    "Ele": 1472.2,
+    "ident": "TZ-0117",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2122,9 @@
     "freq": "",
     "Lat": -3.500144,
     "Lon": 37.323855,
-    "Ele": 701.0
+    "Ele": 701,
+    "ident": "TZ-0118",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2133,9 @@
     "freq": "",
     "Lat": -2.402902,
     "Lon": 36.120142,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0119",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2144,9 @@
     "freq": "",
     "Lat": -3.961546,
     "Lon": 35.144932,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TZ-0120",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2155,9 @@
     "freq": "",
     "Lat": -9.17479,
     "Lon": 35.966534,
-    "Ele": 311.2
+    "Ele": 311.2,
+    "ident": "TZ-0121",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2166,9 @@
     "freq": "",
     "Lat": -2.476768,
     "Lon": 36.25761,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "TZ-0122",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2177,9 @@
     "freq": "",
     "Lat": -1.775438,
     "Lon": 35.278282,
-    "Ele": 1920.2
+    "Ele": 1920.2,
+    "ident": "TZ-0123",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2188,9 @@
     "freq": "",
     "Lat": -1.561738,
     "Lon": 34.702039,
-    "Ele": 1344.2
+    "Ele": 1344.2,
+    "ident": "TZ-0124",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1680,7 +2199,9 @@
     "freq": "",
     "Lat": -8.916494,
     "Lon": 36.126593,
-    "Ele": 287.4
+    "Ele": 287.4,
+    "ident": "TZ-0125",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2210,9 @@
     "freq": "",
     "Lat": -9.022345,
     "Lon": 37.289976,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "TZ-0126",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2221,9 @@
     "freq": "",
     "Lat": -6.982929,
     "Lon": 30.894894,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "TZ-0127",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2232,9 @@
     "freq": "",
     "Lat": -6.817874,
     "Lon": 34.218918,
-    "Ele": 1219.2
+    "Ele": 1219.2,
+    "ident": "TZ-0128",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2243,9 @@
     "freq": "",
     "Lat": -2.272545,
     "Lon": 35.808636,
-    "Ele": 1219.2
+    "Ele": 1219.2,
+    "ident": "TZ-0129",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2254,9 @@
     "freq": "",
     "Lat": -10.256118,
     "Lon": 40.093869,
-    "Ele": 41.5
+    "Ele": 41.5,
+    "ident": "TZ-0130",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2265,9 @@
     "freq": "",
     "Lat": -7.119408,
     "Lon": 31.839151,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "TZ-0131",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2276,9 @@
     "freq": "",
     "Lat": -1.870455,
     "Lon": 34.645517,
-    "Ele": 1576.4
+    "Ele": 1576.4,
+    "ident": "TZ-0132",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2287,9 @@
     "freq": "",
     "Lat": -4.425665,
     "Lon": 33.450677,
-    "Ele": 1219.2
+    "Ele": 1219.2,
+    "ident": "TZ-0133",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2298,9 @@
     "freq": "",
     "Lat": -6.918093,
     "Lon": 34.871684,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "TZ-0134",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2309,9 @@
     "freq": "",
     "Lat": -2.40866,
     "Lon": 35.627164,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "TZ-0135",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2320,9 @@
     "freq": "",
     "Lat": -6.471723,
     "Lon": 38.880082,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "TZ-0136",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2331,9 @@
     "freq": "",
     "Lat": -5.627718,
     "Lon": 32.762082,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "TZ-0137",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2342,9 @@
     "freq": "",
     "Lat": -5.784903,
     "Lon": 31.355212,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "TZ-0138",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1806,7 +2353,9 @@
     "freq": "",
     "Lat": -3.111222,
     "Lon": 32.21536,
-    "Ele": 1219.2
+    "Ele": 1219.2,
+    "ident": "TZ-0139",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2364,9 @@
     "freq": "",
     "Lat": -3.095158,
     "Lon": 32.019562,
-    "Ele": 1224.4
+    "Ele": 1224.4,
+    "ident": "TZ-0140",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1824,7 +2375,9 @@
     "freq": "",
     "Lat": -7.820084,
     "Lon": 37.87828,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "TZ-0141",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1833,7 +2386,9 @@
     "freq": "",
     "Lat": -7.884957,
     "Lon": 37.678091,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "TZ-0142",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1842,7 +2397,9 @@
     "freq": "",
     "Lat": -1.40561,
     "Lon": 30.74995,
-    "Ele": 1304.2
+    "Ele": 1304.2,
+    "ident": "TZ-0144",
+    "iso_country": "TZ"
   },
   {
     "type": "small_airport",
@@ -1851,6 +2408,9 @@
     "freq": "",
     "Lat": -2.813667,
     "Lon": 32.172472,
-    "Ele": 1205.5
+    "Ele": 1205.5,
+    "ident": "TZ-GIT",
+    "iso_country": "TZ",
+    "iata_code": "GIT"
   }
 ]

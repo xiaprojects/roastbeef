@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 1.79861,
     "Lon": 173.041,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "NGAB",
+    "iso_country": "KI",
+    "icao_code": "NGAB",
+    "iata_code": "ABF"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,11 @@
     "freq": "",
     "Lat": -1.35472,
     "Lon": 176.007004,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "NGBR",
+    "iso_country": "KI",
+    "icao_code": "NGBR",
+    "iata_code": "BEZ"
   },
   {
     "type": "small_airport",
@@ -24,7 +32,11 @@
     "freq": "",
     "Lat": 0.218611,
     "Lon": 173.442001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NGKT",
+    "iso_country": "KI",
+    "icao_code": "NGKT",
+    "iata_code": "KUC"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,11 @@
     "freq": "",
     "Lat": 1.00361,
     "Lon": 173.031006,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "NGMA",
+    "iso_country": "KI",
+    "icao_code": "NGMA",
+    "iata_code": "MNK"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,11 @@
     "freq": "",
     "Lat": 2.05861,
     "Lon": 173.270996,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NGMK",
+    "iso_country": "KI",
+    "icao_code": "NGMK",
+    "iata_code": "MZK"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,11 @@
     "freq": "",
     "Lat": 3.37444,
     "Lon": 172.992004,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NGMN",
+    "iso_country": "KI",
+    "icao_code": "NGMN",
+    "iata_code": "MTK"
   },
   {
     "type": "small_airport",
@@ -60,7 +84,11 @@
     "freq": "",
     "Lat": -1.31444001198,
     "Lon": 176.410003662,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "NGNU",
+    "iso_country": "KI",
+    "icao_code": "NGNU",
+    "iata_code": "NIG"
   },
   {
     "type": "small_airport",
@@ -69,7 +97,11 @@
     "freq": "",
     "Lat": -1.79611,
     "Lon": 175.526001,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NGON",
+    "iso_country": "KI",
+    "icao_code": "NGON",
+    "iata_code": "OOT"
   },
   {
     "type": "medium_airport",
@@ -78,7 +110,15 @@
     "freq": "118.100",
     "Lat": 1.38164,
     "Lon": 173.147003,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "NGTA",
+    "iso_country": "KI",
+    "icao_code": "NGTA",
+    "iata_code": "TRW",
+    "length_ft": 6598,
+    "width_ft": 135,
+    "heading": 97.2,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -87,7 +127,11 @@
     "freq": "",
     "Lat": 0.490759,
     "Lon": 173.830287,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "NGTB",
+    "iso_country": "KI",
+    "icao_code": "NGTB",
+    "iata_code": "AEA"
   },
   {
     "type": "medium_airport",
@@ -96,7 +140,15 @@
     "freq": "655.300",
     "Lat": -1.22447,
     "Lon": 174.776001,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NGTE",
+    "iso_country": "KI",
+    "icao_code": "NGTE",
+    "iata_code": "TBF",
+    "length_ft": 3365,
+    "width_ft": 103,
+    "heading": 153,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -105,7 +157,11 @@
     "freq": "",
     "Lat": -2.48583,
     "Lon": 175.970001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NGTM",
+    "iso_country": "KI",
+    "icao_code": "NGTM",
+    "iata_code": "TMN"
   },
   {
     "type": "small_airport",
@@ -114,7 +170,11 @@
     "freq": "",
     "Lat": -0.639722,
     "Lon": 174.427994,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NGTO",
+    "iso_country": "KI",
+    "icao_code": "NGTO",
+    "iata_code": "NON"
   },
   {
     "type": "small_airport",
@@ -123,7 +183,11 @@
     "freq": "",
     "Lat": -2.616233,
     "Lon": 176.802209,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NGTR",
+    "iso_country": "KI",
+    "icao_code": "NGTR",
+    "iata_code": "AIS"
   },
   {
     "type": "small_airport",
@@ -132,7 +196,11 @@
     "freq": "",
     "Lat": -1.47444,
     "Lon": 175.063995,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NGTS",
+    "iso_country": "KI",
+    "icao_code": "NGTS",
+    "iata_code": "TSU"
   },
   {
     "type": "small_airport",
@@ -141,7 +209,11 @@
     "freq": "",
     "Lat": 3.08583,
     "Lon": 172.811005,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "NGTU",
+    "iso_country": "KI",
+    "icao_code": "NGTU",
+    "iata_code": "BBG"
   },
   {
     "type": "small_airport",
@@ -150,7 +222,11 @@
     "freq": "",
     "Lat": 0.185278,
     "Lon": 173.636993,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "NGUK",
+    "iso_country": "KI",
+    "icao_code": "NGUK",
+    "iata_code": "AAK"
   },
   {
     "type": "medium_airport",
@@ -159,7 +235,15 @@
     "freq": "",
     "Lat": -2.7681200504300003,
     "Lon": -171.710006714,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "PCIS",
+    "iso_country": "KI",
+    "icao_code": "PCIS",
+    "iata_code": "CIS",
+    "length_ft": 6230,
+    "width_ft": 140,
+    "heading": 101.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -168,7 +252,15 @@
     "freq": "118.100",
     "Lat": 1.986278,
     "Lon": -157.350011,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "PLCH",
+    "iso_country": "KI",
+    "icao_code": "PLCH",
+    "iata_code": "CXI",
+    "length_ft": 6900,
+    "width_ft": 98,
+    "heading": 90,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -177,7 +269,11 @@
     "freq": "",
     "Lat": 3.89944,
     "Lon": -159.389008,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PLFA",
+    "iso_country": "KI",
+    "icao_code": "PLFA",
+    "iata_code": "TNV"
   },
   {
     "type": "small_airport",
@@ -186,6 +282,10 @@
     "freq": "",
     "Lat": 4.698359,
     "Lon": -160.394376,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "PLWN",
+    "iso_country": "KI",
+    "icao_code": "PLWN",
+    "iata_code": "TNQ"
   }
 ]

@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": -13.505132,
     "Lon": -172.627888,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NSAU",
+    "iso_country": "WS",
+    "icao_code": "NSAU",
+    "iata_code": "AAU"
   },
   {
     "type": "medium_airport",
@@ -15,7 +19,15 @@
     "freq": "118.100",
     "Lat": -13.829999923706056,
     "Lon": -172.00799560546875,
-    "Ele": 17.7
+    "Ele": 17.7,
+    "ident": "NSFA",
+    "iso_country": "WS",
+    "icao_code": "NSFA",
+    "iata_code": "APW",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -24,7 +36,14 @@
     "freq": "",
     "Lat": -13.849167,
     "Lon": -171.739866,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "NSFI",
+    "iso_country": "WS",
+    "icao_code": "NSFI",
+    "iata_code": "FGI",
+    "length_ft": 2198,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -33,6 +52,10 @@
     "freq": "",
     "Lat": -13.7423,
     "Lon": -172.257996,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NSMA",
+    "iso_country": "WS",
+    "icao_code": "NSMA",
+    "iata_code": "MXS"
   }
 ]

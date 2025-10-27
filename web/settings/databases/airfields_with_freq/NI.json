@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 13.5123,
     "Lon": -84.247101,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "MNAL",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 12.135983,
     "Lon": -85.716461,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "MNAM",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 12.46909999847412,
     "Lon": -85.66259765625,
-    "Ele": 360.9
+    "Ele": 360.9,
+    "ident": "MNBC",
+    "iso_country": "NI"
   },
   {
     "type": "medium_airport",
@@ -33,7 +39,15 @@
     "freq": "118.500",
     "Lat": 11.991,
     "Lon": -83.774101,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MNBL",
+    "iso_country": "NI",
+    "icao_code": "MNBL",
+    "iata_code": "BEF",
+    "length_ft": 6625,
+    "width_ft": 98,
+    "heading": 56.9,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -42,7 +56,13 @@
     "freq": "",
     "Lat": 12.19,
     "Lon": -86.353897,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "MNBR",
+    "iso_country": "NI",
+    "length_ft": 3061,
+    "width_ft": 75,
+    "heading": 99,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,14 @@
     "freq": "",
     "Lat": 14.031524,
     "Lon": -84.624311,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "MNBZ",
+    "iso_country": "NI",
+    "icao_code": "MNBZ",
+    "iata_code": "BZA",
+    "length_ft": 4583,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -60,7 +87,16 @@
     "freq": "119.400",
     "Lat": 11.427542,
     "Lon": -86.033361,
-    "Ele": 25.6
+    "Ele": 25.6,
+    "ident": "MNCE",
+    "iso_country": "NI",
+    "icao_code": "MNCE",
+    "iata_code": "ECI",
+    "local_code": "ECI",
+    "length_ft": 5003,
+    "width_ft": 98,
+    "heading": 34,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -69,7 +105,9 @@
     "freq": "",
     "Lat": 12.639548,
     "Lon": -87.137753,
-    "Ele": 53.0
+    "Ele": 53,
+    "ident": "MNCH",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -78,7 +116,14 @@
     "freq": "",
     "Lat": 12.174785,
     "Lon": -83.059445,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "MNCI",
+    "iso_country": "NI",
+    "icao_code": "MNCI",
+    "iata_code": "RNI",
+    "length_ft": 6234,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -87,7 +132,9 @@
     "freq": "",
     "Lat": 12.478899955749512,
     "Lon": -87.17720031738281,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "MNCT",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -96,7 +143,9 @@
     "freq": "",
     "Lat": 12.80049991607666,
     "Lon": -86.14830017089844,
-    "Ele": 447.8
+    "Ele": 447.8,
+    "ident": "MNDM",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -105,7 +154,9 @@
     "freq": "",
     "Lat": 13.111700057983398,
     "Lon": -86.36329650878906,
-    "Ele": 856.8
+    "Ele": 856.8,
+    "ident": "MNES",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -114,7 +165,14 @@
     "freq": "",
     "Lat": 12.3534,
     "Lon": -86.182899,
-    "Ele": 66.1
+    "Ele": 66.1,
+    "ident": "MNFC",
+    "iso_country": "NI",
+    "local_code": "MN1A",
+    "length_ft": 9862,
+    "width_ft": 148,
+    "heading": 106.1,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -123,7 +181,9 @@
     "freq": "",
     "Lat": 11.981199,
     "Lon": -85.43357,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "MNHG",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -132,7 +192,9 @@
     "freq": "",
     "Lat": 13.085700035095217,
     "Lon": -85.98770141601562,
-    "Ele": 985.1
+    "Ele": 985.1,
+    "ident": "MNJG",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -141,7 +203,9 @@
     "freq": "",
     "Lat": 12.8921,
     "Lon": -83.582901,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MNKW",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -150,7 +214,13 @@
     "freq": "",
     "Lat": 12.4292,
     "Lon": -86.902802,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "MNLN",
+    "iso_country": "NI",
+    "length_ft": 3048,
+    "width_ft": 82,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -159,7 +229,9 @@
     "freq": "",
     "Lat": 11.523616,
     "Lon": -85.702995,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "MNLP",
+    "iso_country": "NI"
   },
   {
     "type": "medium_airport",
@@ -168,7 +240,15 @@
     "freq": "119.400",
     "Lat": 12.14150047302246,
     "Lon": -86.16819763183594,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "MNMG",
+    "iso_country": "NI",
+    "icao_code": "MNMG",
+    "iata_code": "MGA",
+    "length_ft": 8012,
+    "width_ft": 148,
+    "heading": 97,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -177,7 +257,14 @@
     "freq": "",
     "Lat": 11.8052,
     "Lon": -86.511299,
-    "Ele": 28.7
+    "Ele": 28.7,
+    "ident": "MNMR",
+    "iso_country": "NI",
+    "local_code": "MN1B",
+    "length_ft": 6680,
+    "width_ft": 150,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -186,7 +273,12 @@
     "freq": "",
     "Lat": 12.996027,
     "Lon": -85.852146,
-    "Ele": 737.6
+    "Ele": 737.6,
+    "ident": "MNMT",
+    "iso_country": "NI",
+    "length_ft": 2428,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -195,7 +287,15 @@
     "freq": "118.000",
     "Lat": 14.047200202941896,
     "Lon": -83.38670349121094,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "MNPC",
+    "iso_country": "NI",
+    "icao_code": "MNPC",
+    "iata_code": "PUZ",
+    "length_ft": 8130,
+    "width_ft": 167,
+    "heading": 92.1,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -204,7 +304,9 @@
     "freq": "",
     "Lat": 12.4657,
     "Lon": -86.467903,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "MNPP",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -213,7 +315,9 @@
     "freq": "",
     "Lat": 11.42770004272461,
     "Lon": -85.8385009765625,
-    "Ele": 53.0
+    "Ele": 53,
+    "ident": "MNRS",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -222,7 +326,11 @@
     "freq": "",
     "Lat": 13.889699935913086,
     "Lon": -84.40889739990234,
-    "Ele": 58.8
+    "Ele": 58.8,
+    "ident": "MNRT",
+    "iso_country": "NI",
+    "icao_code": "MNRT",
+    "iata_code": "RFS"
   },
   {
     "type": "small_airport",
@@ -231,7 +339,11 @@
     "freq": "",
     "Lat": 11.13556,
     "Lon": -84.768727,
-    "Ele": 27.7
+    "Ele": 27.7,
+    "ident": "MNSC",
+    "iso_country": "NI",
+    "icao_code": "MNSC",
+    "iata_code": "NCR"
   },
   {
     "type": "small_airport",
@@ -240,7 +352,11 @@
     "freq": "",
     "Lat": 13.727222,
     "Lon": -84.777779,
-    "Ele": 184.7
+    "Ele": 184.7,
+    "ident": "MNSI",
+    "iso_country": "NI",
+    "icao_code": "MNSI",
+    "iata_code": "SIU"
   },
   {
     "type": "small_airport",
@@ -249,7 +365,9 @@
     "freq": "",
     "Lat": 10.920328,
     "Lon": -83.707764,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "MNSN",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -258,7 +376,11 @@
     "freq": "",
     "Lat": 14.7392,
     "Lon": -83.969398,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "MNWP",
+    "iso_country": "NI",
+    "icao_code": "MNWP",
+    "iata_code": "WSP"
   },
   {
     "type": "small_airport",
@@ -267,7 +389,9 @@
     "freq": "",
     "Lat": 12.50328,
     "Lon": -86.41501,
-    "Ele": 46.6
+    "Ele": 46.6,
+    "ident": "NI-0001",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -276,7 +400,9 @@
     "freq": "",
     "Lat": 12.15541,
     "Lon": -85.84428,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "NI-0002",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -285,7 +411,9 @@
     "freq": "",
     "Lat": 12.19348,
     "Lon": -85.92086,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "NI-0003",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -294,7 +422,10 @@
     "freq": "",
     "Lat": 12.15303,
     "Lon": -85.90848,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "NI-0004",
+    "iso_country": "NI",
+    "icao_code": "MNLL"
   },
   {
     "type": "small_airport",
@@ -303,7 +434,9 @@
     "freq": "",
     "Lat": 12.22735,
     "Lon": -85.92473,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "NI-0005",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -312,7 +445,9 @@
     "freq": "",
     "Lat": 11.31509,
     "Lon": -85.90843,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "NI-0006",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -321,7 +456,9 @@
     "freq": "",
     "Lat": 12.25094,
     "Lon": -83.75679,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "NI-0007",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -330,7 +467,9 @@
     "freq": "",
     "Lat": 12.35403,
     "Lon": -86.78902,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "NI-0008",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -339,7 +478,9 @@
     "freq": "",
     "Lat": 12.37954,
     "Lon": -86.82237,
-    "Ele": 82.9
+    "Ele": 82.9,
+    "ident": "NI-0009",
+    "iso_country": "NI"
   },
   {
     "type": "small_airport",
@@ -348,6 +489,8 @@
     "freq": "",
     "Lat": 11.95437,
     "Lon": -85.44539,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NI-0010",
+    "iso_country": "NI"
   }
 ]

@@ -6,7 +6,15 @@
     "freq": "118.700",
     "Lat": -1.6771999597549438,
     "Lon": 29.258899688720703,
-    "Ele": 1549.0
+    "Ele": 1549,
+    "ident": "HRYG",
+    "iso_country": "RW",
+    "icao_code": "HRYG",
+    "iata_code": "GYI",
+    "length_ft": 3330,
+    "width_ft": 75,
+    "heading": 10,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,15 @@
     "freq": "",
     "Lat": -2.59583,
     "Lon": 29.7367,
-    "Ele": 1768.1
+    "Ele": 1768.1,
+    "ident": "HRYI",
+    "iso_country": "RW",
+    "icao_code": "HRYI",
+    "iata_code": "BTQ",
+    "length_ft": 4000,
+    "width_ft": 50,
+    "heading": 70,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -24,7 +40,10 @@
     "freq": "",
     "Lat": -2.333,
     "Lon": 30.200001,
-    "Ele": 1495.0
+    "Ele": 1495,
+    "ident": "HRYN",
+    "iso_country": "RW",
+    "icao_code": "HRYN"
   },
   {
     "type": "small_airport",
@@ -33,7 +52,9 @@
     "freq": "",
     "Lat": -1.5499999523162842,
     "Lon": 30.382999420166016,
-    "Ele": 1464.9
+    "Ele": 1464.9,
+    "ident": "HRYO",
+    "iso_country": "RW"
   },
   {
     "type": "large_airport",
@@ -42,7 +63,15 @@
     "freq": "124.300",
     "Lat": -1.96863,
     "Lon": 30.1395,
-    "Ele": 1481.0
+    "Ele": 1481,
+    "ident": "HRYR",
+    "iso_country": "RW",
+    "icao_code": "HRYR",
+    "iata_code": "KGL",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 100,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -51,7 +80,15 @@
     "freq": "",
     "Lat": -1.496873,
     "Lon": 29.631343,
-    "Ele": 1859.9
+    "Ele": 1859.9,
+    "ident": "HRYU",
+    "iso_country": "RW",
+    "icao_code": "HRYU",
+    "iata_code": "RHG",
+    "length_ft": 4000,
+    "width_ft": 100,
+    "heading": 140,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -60,7 +97,15 @@
     "freq": "120.700",
     "Lat": -2.462239980697632,
     "Lon": 28.907899856567383,
-    "Ele": 1582.5
+    "Ele": 1582.5,
+    "ident": "HRZA",
+    "iso_country": "RW",
+    "icao_code": "HRZA",
+    "iata_code": "KME",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 17,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -69,6 +114,8 @@
     "freq": "",
     "Lat": -2.2308,
     "Lon": 30.1809,
-    "Ele": 1453.9
+    "Ele": 1453.9,
+    "ident": "RW-0001",
+    "iso_country": "RW"
   }
 ]

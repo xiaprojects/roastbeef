@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 7.3121,
     "Lon": -58.4873,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "GY-0002",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 6.9851,
     "Lon": -58.5005,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "GY-0003",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 6.37616,
     "Lon": -57.606478,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "GY-0004",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 4.628142,
     "Lon": -60.056977,
-    "Ele": 529.7
+    "Ele": 529.7,
+    "ident": "GY-0005",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 6.15153,
     "Lon": -57.22611,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "GY-0006",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 6.55935,
     "Lon": -57.87218,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "GY-0007",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,10 @@
     "freq": "",
     "Lat": 7.640212,
     "Lon": -58.961786,
-    "Ele": 28.7
+    "Ele": 28.7,
+    "ident": "GY-BCG",
+    "iso_country": "GY",
+    "iata_code": "BCG"
   },
   {
     "type": "small_airport",
@@ -69,7 +84,10 @@
     "freq": "",
     "Lat": 7.256583,
     "Lon": -58.545671,
-    "Ele": 16.2
+    "Ele": 16.2,
+    "ident": "SYAG",
+    "iso_country": "GY",
+    "icao_code": "SYAG"
   },
   {
     "type": "small_airport",
@@ -78,7 +96,13 @@
     "freq": "",
     "Lat": 2.47403,
     "Lon": -59.320786,
-    "Ele": 178.9
+    "Ele": 178.9,
+    "ident": "SYAH",
+    "iso_country": "GY",
+    "icao_code": "SYAH",
+    "iata_code": "AHL",
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -87,7 +111,10 @@
     "freq": "",
     "Lat": 6.24662,
     "Lon": -57.379596,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SYAL",
+    "iso_country": "GY",
+    "icao_code": "SYAL"
   },
   {
     "type": "small_airport",
@@ -96,7 +123,11 @@
     "freq": "",
     "Lat": 3.95944,
     "Lon": -59.124199,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "SYAN",
+    "iso_country": "GY",
+    "icao_code": "SYAN",
+    "iata_code": "NAI"
   },
   {
     "type": "small_airport",
@@ -105,7 +136,10 @@
     "freq": "",
     "Lat": 4.015973,
     "Lon": -58.602934,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "SYAP",
+    "iso_country": "GY",
+    "icao_code": "SYAP"
   },
   {
     "type": "small_airport",
@@ -114,7 +148,10 @@
     "freq": "",
     "Lat": 2.647442,
     "Lon": -59.194686,
-    "Ele": 242.9
+    "Ele": 242.9,
+    "ident": "SYAW",
+    "iso_country": "GY",
+    "icao_code": "SYAW"
   },
   {
     "type": "small_airport",
@@ -123,7 +160,10 @@
     "freq": "",
     "Lat": 6.34056,
     "Lon": -58.591526,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "SYBG",
+    "iso_country": "GY",
+    "icao_code": "SYBG"
   },
   {
     "type": "small_airport",
@@ -132,7 +172,11 @@
     "freq": "",
     "Lat": 7.370120048522949,
     "Lon": -60.48799896240234,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SYBR",
+    "iso_country": "GY",
+    "icao_code": "SYBR",
+    "iata_code": "BMJ"
   },
   {
     "type": "small_airport",
@@ -141,7 +185,11 @@
     "freq": "",
     "Lat": 6.358864,
     "Lon": -58.655207,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SYBT",
+    "iso_country": "GY",
+    "icao_code": "SYBT",
+    "iata_code": "GFO"
   },
   {
     "type": "medium_airport",
@@ -150,7 +198,15 @@
     "freq": "119.400",
     "Lat": 6.49855,
     "Lon": -58.254101,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "SYCJ",
+    "iso_country": "GY",
+    "icao_code": "SYCJ",
+    "iata_code": "GEO",
+    "length_ft": 5002,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -159,7 +215,9 @@
     "freq": "",
     "Lat": 4.81955,
     "Lon": -60.025623,
-    "Ele": 586.4
+    "Ele": 586.4,
+    "ident": "SYCP",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -168,7 +226,9 @@
     "freq": "",
     "Lat": 2.82555,
     "Lon": -59.5242,
-    "Ele": 113.4
+    "Ele": 113.4,
+    "ident": "SYDW",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -177,7 +237,9 @@
     "freq": "",
     "Lat": 5.56855,
     "Lon": -57.77521,
-    "Ele": 44.8
+    "Ele": 44.8,
+    "ident": "SYEB",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -186,7 +248,9 @@
     "freq": "",
     "Lat": 6.400333,
     "Lon": -60.854,
-    "Ele": 670.9
+    "Ele": 670.9,
+    "ident": "SYEK",
+    "iso_country": "GY"
   },
   {
     "type": "medium_airport",
@@ -195,7 +259,14 @@
     "freq": "118.550",
     "Lat": 6.80628,
     "Lon": -58.1059,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SYGO",
+    "iso_country": "GY",
+    "iata_code": "OGL",
+    "length_ft": 4201,
+    "width_ft": 100,
+    "heading": 69,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -204,7 +275,11 @@
     "freq": "",
     "Lat": 5.70811,
     "Lon": -60.294201,
-    "Ele": 501.7
+    "Ele": 501.7,
+    "ident": "SYIB",
+    "iso_country": "GY",
+    "icao_code": "SYIB",
+    "iata_code": "IMB"
   },
   {
     "type": "medium_airport",
@@ -213,7 +288,14 @@
     "freq": "",
     "Lat": 5.177349,
     "Lon": -59.48898,
-    "Ele": 463.3
+    "Ele": 463.3,
+    "ident": "SYKA",
+    "iso_country": "GY",
+    "icao_code": "SYKA",
+    "iata_code": "KAI",
+    "length_ft": 2018,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -222,7 +304,9 @@
     "freq": "",
     "Lat": 6.433119,
     "Lon": -58.6225,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SYKI",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -231,7 +315,10 @@
     "freq": "",
     "Lat": 4.715324,
     "Lon": -59.91045,
-    "Ele": 975.1
+    "Ele": 975.1,
+    "ident": "SYKK",
+    "iso_country": "GY",
+    "icao_code": "SYKK"
   },
   {
     "type": "small_airport",
@@ -240,7 +327,11 @@
     "freq": "",
     "Lat": 5.86534,
     "Lon": -60.614201,
-    "Ele": 488.0
+    "Ele": 488,
+    "ident": "SYKM",
+    "iso_country": "GY",
+    "icao_code": "SYKM",
+    "iata_code": "KAR"
   },
   {
     "type": "small_airport",
@@ -249,7 +340,9 @@
     "freq": "",
     "Lat": 6.173673,
     "Lon": -61.145637,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SYKN",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -258,7 +351,14 @@
     "freq": "",
     "Lat": 3.752572,
     "Lon": -59.30902,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "SYKR",
+    "iso_country": "GY",
+    "icao_code": "SYKR",
+    "iata_code": "KRM",
+    "length_ft": 4501,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -267,7 +367,11 @@
     "freq": "",
     "Lat": 4.03005,
     "Lon": -59.54749,
-    "Ele": 222.8
+    "Ele": 222.8,
+    "ident": "SYKS",
+    "iso_country": "GY",
+    "icao_code": "SYKS",
+    "iata_code": "KRG"
   },
   {
     "type": "small_airport",
@@ -276,7 +380,11 @@
     "freq": "",
     "Lat": 4.64916,
     "Lon": -59.832199,
-    "Ele": 700.7
+    "Ele": 700.7,
+    "ident": "SYKT",
+    "iso_country": "GY",
+    "icao_code": "SYKT",
+    "iata_code": "KTO"
   },
   {
     "type": "small_airport",
@@ -285,7 +393,10 @@
     "freq": "",
     "Lat": 5.259252,
     "Lon": -58.065176,
-    "Ele": 44.8
+    "Ele": 44.8,
+    "ident": "SYKW",
+    "iso_country": "GY",
+    "icao_code": "SYKW"
   },
   {
     "type": "small_airport",
@@ -294,7 +405,11 @@
     "freq": "",
     "Lat": 5.2684,
     "Lon": -58.995,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "SYKZ",
+    "iso_country": "GY",
+    "icao_code": "SYKZ",
+    "iata_code": "KKG"
   },
   {
     "type": "small_airport",
@@ -303,7 +418,13 @@
     "freq": "",
     "Lat": 5.96592,
     "Lon": -58.270302,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "SYLD",
+    "iso_country": "GY",
+    "length_ft": 5000,
+    "width_ft": 98,
+    "heading": 91,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -312,7 +433,11 @@
     "freq": "",
     "Lat": 2.39392995834,
     "Lon": -59.4410018921,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SYLP",
+    "iso_country": "GY",
+    "icao_code": "SYLP",
+    "iata_code": "LUB"
   },
   {
     "type": "medium_airport",
@@ -321,7 +446,15 @@
     "freq": "",
     "Lat": 3.37276,
     "Lon": -59.789398,
-    "Ele": 107.0
+    "Ele": 107,
+    "ident": "SYLT",
+    "iso_country": "GY",
+    "icao_code": "SYLT",
+    "iata_code": "LTM",
+    "length_ft": 5985,
+    "width_ft": 98,
+    "heading": 57.3,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -330,7 +463,11 @@
     "freq": "",
     "Lat": 8.20017,
     "Lon": -59.777965,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "SYMB",
+    "iso_country": "GY",
+    "icao_code": "SYMB",
+    "iata_code": "USI"
   },
   {
     "type": "small_airport",
@@ -339,7 +476,11 @@
     "freq": "",
     "Lat": 5.272845,
     "Lon": -59.149296,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "SYMD",
+    "iso_country": "GY",
+    "icao_code": "SYMD",
+    "iata_code": "MHA"
   },
   {
     "type": "small_airport",
@@ -348,7 +489,11 @@
     "freq": "",
     "Lat": 4.898172,
     "Lon": -59.817027,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "SYMK",
+    "iso_country": "GY",
+    "icao_code": "SYMK",
+    "iata_code": "VEG"
   },
   {
     "type": "small_airport",
@@ -357,7 +502,11 @@
     "freq": "",
     "Lat": 4.452267,
     "Lon": -59.603126,
-    "Ele": 517.9
+    "Ele": 517.9,
+    "ident": "SYMM",
+    "iso_country": "GY",
+    "icao_code": "SYMM",
+    "iata_code": "MYM"
   },
   {
     "type": "small_airport",
@@ -366,7 +515,9 @@
     "freq": "",
     "Lat": 3.433000087738037,
     "Lon": -59.56700134277344,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "SYMN",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -375,7 +526,9 @@
     "freq": "",
     "Lat": 2.998971,
     "Lon": -59.629261,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "SYMP",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -384,7 +537,11 @@
     "freq": "",
     "Lat": 7.487736,
     "Lon": -60.185237,
-    "Ele": 98.8
+    "Ele": 98.8,
+    "ident": "SYMR",
+    "iso_country": "GY",
+    "icao_code": "SYMR",
+    "iata_code": "MWJ"
   },
   {
     "type": "small_airport",
@@ -393,7 +550,9 @@
     "freq": "",
     "Lat": 2.728699,
     "Lon": -59.149733,
-    "Ele": 310.0
+    "Ele": 310,
+    "ident": "SYMW",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -402,7 +561,10 @@
     "freq": "",
     "Lat": 6.244324,
     "Lon": -57.474172,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SYNA",
+    "iso_country": "GY",
+    "iata_code": "QSX"
   },
   {
     "type": "small_airport",
@@ -411,7 +573,11 @@
     "freq": "",
     "Lat": 4.72527,
     "Lon": -60.035,
-    "Ele": 547.7
+    "Ele": 547.7,
+    "ident": "SYOR",
+    "iso_country": "GY",
+    "icao_code": "SYOR",
+    "iata_code": "ORJ"
   },
   {
     "type": "small_airport",
@@ -420,7 +586,10 @@
     "freq": "",
     "Lat": 7.7424,
     "Lon": -59.8819,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SYPK",
+    "iso_country": "GY",
+    "iata_code": "PKM"
   },
   {
     "type": "small_airport",
@@ -429,7 +598,10 @@
     "freq": "",
     "Lat": 5.356667,
     "Lon": -60.381,
-    "Ele": 502.9
+    "Ele": 502.9,
+    "ident": "SYPL",
+    "iso_country": "GY",
+    "iata_code": "PIQ"
   },
   {
     "type": "small_airport",
@@ -438,7 +610,11 @@
     "freq": "",
     "Lat": 4.699587,
     "Lon": -59.713841,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "SYPM",
+    "iso_country": "GY",
+    "icao_code": "SYPM",
+    "iata_code": "PMT"
   },
   {
     "type": "small_airport",
@@ -447,7 +623,11 @@
     "freq": "",
     "Lat": 5.81724,
     "Lon": -61.055489,
-    "Ele": 538.0
+    "Ele": 538,
+    "ident": "SYPR",
+    "iso_country": "GY",
+    "icao_code": "SYPR",
+    "iata_code": "PRR"
   },
   {
     "type": "small_airport",
@@ -456,7 +636,11 @@
     "freq": "",
     "Lat": 2.9913,
     "Lon": -59.51,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SYSC",
+    "iso_country": "GY",
+    "icao_code": "SYSC",
+    "iata_code": "SDC"
   },
   {
     "type": "small_airport",
@@ -465,7 +649,10 @@
     "freq": "",
     "Lat": 5.8599,
     "Lon": -57.14894,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SYSK",
+    "iso_country": "GY",
+    "iata_code": "SKM"
   },
   {
     "type": "small_airport",
@@ -474,7 +661,9 @@
     "freq": "",
     "Lat": 6.257711,
     "Lon": -57.650478,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "SYVB",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -483,7 +672,9 @@
     "freq": "",
     "Lat": 2.867792,
     "Lon": -59.531156,
-    "Ele": 157.9
+    "Ele": 157.9,
+    "ident": "SYWI",
+    "iso_country": "GY"
   },
   {
     "type": "small_airport",
@@ -492,6 +683,8 @@
     "freq": "",
     "Lat": 7.36883,
     "Lon": -59.74667,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "SYYS",
+    "iso_country": "GY"
   }
 ]

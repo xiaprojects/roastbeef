@@ -6,7 +6,15 @@
     "freq": "345.200",
     "Lat": 16.7414,
     "Lon": -22.9494,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "GVAC",
+    "iso_country": "CV",
+    "icao_code": "GVAC",
+    "iata_code": "SID",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 58,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,15 @@
     "freq": "",
     "Lat": 17.202800750732422,
     "Lon": -25.090599060058597,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "GVAN",
+    "iso_country": "CV",
+    "icao_code": "GVAN",
+    "iata_code": "NTO",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -24,7 +40,15 @@
     "freq": "118.900",
     "Lat": 16.136499404907227,
     "Lon": -22.888900756835938,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "GVBA",
+    "iso_country": "CV",
+    "icao_code": "GVBA",
+    "iata_code": "BVC",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 16,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -33,7 +57,14 @@
     "freq": "",
     "Lat": 15.15590000152588,
     "Lon": -23.213699340820312,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "GVMA",
+    "iso_country": "CV",
+    "icao_code": "GVMA",
+    "iata_code": "MMO",
+    "length_ft": 3937,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -42,7 +73,11 @@
     "freq": "",
     "Lat": 15.045,
     "Lon": -24.339199,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "GVMT",
+    "iso_country": "CV",
+    "icao_code": "GVMT",
+    "iata_code": "MTI"
   },
   {
     "type": "large_airport",
@@ -51,7 +86,15 @@
     "freq": "118.200",
     "Lat": 14.941126,
     "Lon": -23.484728,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "GVNP",
+    "iso_country": "CV",
+    "icao_code": "GVNP",
+    "iata_code": "RAI",
+    "length_ft": 6876,
+    "width_ft": 148,
+    "heading": 22,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -60,7 +103,14 @@
     "freq": "",
     "Lat": 14.8850002289,
     "Lon": -24.4799995422,
-    "Ele": 188.1
+    "Ele": 188.1,
+    "ident": "GVSF",
+    "iso_country": "CV",
+    "icao_code": "GVSF",
+    "iata_code": "SFL",
+    "length_ft": 3937,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -69,7 +119,15 @@
     "freq": "",
     "Lat": 16.588852,
     "Lon": -24.284132,
-    "Ele": 203.9
+    "Ele": 203.9,
+    "ident": "GVSN",
+    "iso_country": "CV",
+    "icao_code": "GVSN",
+    "iata_code": "SNE",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "heading": 356,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -78,6 +136,14 @@
     "freq": "118.400",
     "Lat": 16.8332,
     "Lon": -25.0553,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "GVSV",
+    "iso_country": "CV",
+    "icao_code": "GVSV",
+    "iata_code": "VXE",
+    "length_ft": 6561,
+    "width_ft": 98,
+    "heading": 54,
+    "QFU": "24"
   }
 ]

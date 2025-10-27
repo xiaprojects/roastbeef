@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 11.94411,
     "Lon": 11.80845,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "DMDM",
+    "iso_country": "NG",
+    "icao_code": "DMDM"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,14 @@
     "freq": "",
     "Lat": 9.884650230407717,
     "Lon": 6.818630218505859,
-    "Ele": 397.8
+    "Ele": 397.8,
+    "ident": "DN50",
+    "iso_country": "NG",
+    "local_code": "DN50",
+    "length_ft": 4170,
+    "width_ft": 49,
+    "heading": 61,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -24,7 +34,14 @@
     "freq": "",
     "Lat": 7.457871,
     "Lon": 6.460837,
-    "Ele": 189.0
+    "Ele": 189,
+    "ident": "DN51",
+    "iso_country": "NG",
+    "local_code": "DN51",
+    "length_ft": 4983,
+    "width_ft": 148,
+    "heading": 57,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -33,7 +50,14 @@
     "freq": "118.500",
     "Lat": 10.598899841308594,
     "Lon": 7.448709964752197,
-    "Ele": 648.0
+    "Ele": 648,
+    "ident": "DN53",
+    "iso_country": "NG",
+    "local_code": "DN53",
+    "length_ft": 8612,
+    "width_ft": 102,
+    "heading": 46,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -42,7 +66,14 @@
     "freq": "",
     "Lat": 10.919899940490724,
     "Lon": 11.50119972229004,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "DN54",
+    "iso_country": "NG",
+    "local_code": "DN54",
+    "length_ft": 4950,
+    "width_ft": 75,
+    "heading": 48,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -51,7 +82,14 @@
     "freq": "118.300",
     "Lat": 4.642841,
     "Lon": 7.949139,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "DN55",
+    "iso_country": "NG",
+    "icao_code": "DNEK",
+    "length_ft": 4266,
+    "width_ft": 70,
+    "heading": 10,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -60,7 +98,14 @@
     "freq": "0.000",
     "Lat": 5.61673,
     "Lon": 5.188485,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "DN56",
+    "iso_country": "NG",
+    "icao_code": "DNES",
+    "length_ft": 5085,
+    "width_ft": 98,
+    "heading": 125,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -69,7 +114,15 @@
     "freq": "125.000",
     "Lat": 13.0078,
     "Lon": 7.66045,
-    "Ele": 506.0
+    "Ele": 506,
+    "ident": "DN57",
+    "iso_country": "NG",
+    "icao_code": "DNKT",
+    "iata_code": "DKA",
+    "length_ft": 9947,
+    "width_ft": 98,
+    "heading": 37,
+    "QFU": "22"
   },
   {
     "type": "large_airport",
@@ -78,7 +131,15 @@
     "freq": "127.900",
     "Lat": 9.00679,
     "Lon": 7.26317,
-    "Ele": 342.3
+    "Ele": 342.3,
+    "ident": "DNAA",
+    "iso_country": "NG",
+    "icao_code": "DNAA",
+    "iata_code": "ABV",
+    "length_ft": 11842,
+    "width_ft": 197,
+    "heading": 35,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -87,7 +148,14 @@
     "freq": "",
     "Lat": 4.8725,
     "Lon": 8.093,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "DNAI",
+    "iso_country": "NG",
+    "icao_code": "DNAI",
+    "iata_code": "QUO",
+    "length_ft": 11811,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -96,7 +164,15 @@
     "freq": "118.200",
     "Lat": 7.246739864349365,
     "Lon": 5.3010101318359375,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "DNAK",
+    "iso_country": "NG",
+    "icao_code": "DNAK",
+    "iata_code": "AKR",
+    "length_ft": 9195,
+    "width_ft": 148,
+    "heading": 24,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -105,7 +181,10 @@
     "freq": "",
     "Lat": 6.267167,
     "Lon": 6.871333,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "Dnull",
+    "iso_country": "NG",
+    "icao_code": "Dnull"
   },
   {
     "type": "medium_airport",
@@ -114,7 +193,15 @@
     "freq": "112.600",
     "Lat": 6.204167,
     "Lon": 6.665278,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "DNAS",
+    "iso_country": "NG",
+    "icao_code": "DNAS",
+    "iata_code": "ABB",
+    "length_ft": 11155,
+    "width_ft": 190,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -123,7 +210,14 @@
     "freq": "",
     "Lat": 6.6215,
     "Lon": 9.319001,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "DNBB",
+    "iso_country": "NG",
+    "icao_code": "DNBB",
+    "length_ft": 5577,
+    "width_ft": 75,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -132,7 +226,15 @@
     "freq": "124.500",
     "Lat": 10.482833,
     "Lon": 9.744,
-    "Ele": 598.9
+    "Ele": 598.9,
+    "ident": "DNBC",
+    "iso_country": "NG",
+    "icao_code": "DNBC",
+    "iata_code": "BCU",
+    "length_ft": 11154,
+    "width_ft": 140,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -141,7 +243,15 @@
     "freq": "122.500",
     "Lat": 6.316979885101318,
     "Lon": 5.599500179290772,
-    "Ele": 78.6
+    "Ele": 78.6,
+    "ident": "DNBE",
+    "iso_country": "NG",
+    "icao_code": "DNBE",
+    "iata_code": "BNI",
+    "length_ft": 7870,
+    "width_ft": 148,
+    "heading": 46,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -150,7 +260,14 @@
     "freq": "",
     "Lat": 9.102856,
     "Lon": 6.01475,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "DNBI",
+    "iso_country": "NG",
+    "icao_code": "DNBI",
+    "length_ft": 3900,
+    "width_ft": 65,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -159,7 +276,12 @@
     "freq": "",
     "Lat": 4.95759,
     "Lon": 6.203327,
-    "Ele": 20.4
+    "Ele": 20.4,
+    "ident": "DNBY",
+    "iso_country": "NG",
+    "length_ft": 12139,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -168,7 +290,15 @@
     "freq": "124.500",
     "Lat": 4.976019859313965,
     "Lon": 8.347200393676758,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "DNCA",
+    "iso_country": "NG",
+    "icao_code": "DNCA",
+    "iata_code": "CBQ",
+    "length_ft": 8040,
+    "width_ft": 148,
+    "heading": 27,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -177,7 +307,14 @@
     "freq": "120.500",
     "Lat": 11.795131,
     "Lon": 9.301164,
-    "Ele": 416.1
+    "Ele": 416.1,
+    "ident": "DNDS",
+    "iso_country": "NG",
+    "icao_code": "DNDS",
+    "length_ft": 9840,
+    "width_ft": 155,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -186,7 +323,15 @@
     "freq": "115.700",
     "Lat": 6.474269866943359,
     "Lon": 7.561960220336914,
-    "Ele": 142.0
+    "Ele": 142,
+    "ident": "DNEN",
+    "iso_country": "NG",
+    "icao_code": "DNEN",
+    "iata_code": "ENU",
+    "length_ft": 7879,
+    "width_ft": 148,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -195,7 +340,14 @@
     "freq": "",
     "Lat": 4.40481,
     "Lon": 7.180867,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DNFB",
+    "iso_country": "NG",
+    "icao_code": "DNFB",
+    "length_ft": 5582,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -204,7 +356,14 @@
     "freq": "",
     "Lat": 5.355,
     "Lon": 5.349002,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "DNFD",
+    "iso_country": "NG",
+    "icao_code": "DNFD",
+    "length_ft": 3165,
+    "width_ft": 60,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -213,7 +372,15 @@
     "freq": "",
     "Lat": 10.298889,
     "Lon": 10.9,
-    "Ele": 484.6
+    "Ele": 484.6,
+    "ident": "DNGO",
+    "iso_country": "NG",
+    "icao_code": "DNGO",
+    "iata_code": "GMO",
+    "length_ft": 10827,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -222,7 +389,14 @@
     "freq": "",
     "Lat": 12.17286,
     "Lon": 6.696136,
-    "Ele": 463.3
+    "Ele": 463.3,
+    "ident": "DNGU",
+    "iso_country": "NG",
+    "icao_code": "DNGU",
+    "length_ft": 4800,
+    "width_ft": 148,
+    "heading": 46.8,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -231,7 +405,15 @@
     "freq": "122.600",
     "Lat": 7.362460136413574,
     "Lon": 3.97832989692688,
-    "Ele": 221.0
+    "Ele": 221,
+    "ident": "DNIB",
+    "iso_country": "NG",
+    "icao_code": "DNIB",
+    "iata_code": "IBA",
+    "length_ft": 7875,
+    "width_ft": 147,
+    "heading": 40,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -240,7 +422,15 @@
     "freq": "121.200",
     "Lat": 8.440210342407227,
     "Lon": 4.493919849395752,
-    "Ele": 343.2
+    "Ele": 343.2,
+    "ident": "DNIL",
+    "iso_country": "NG",
+    "icao_code": "DNIL",
+    "iata_code": "ILR",
+    "length_ft": 10169,
+    "width_ft": 197,
+    "heading": 49,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -249,7 +439,15 @@
     "freq": "118.400",
     "Lat": 5.427060127258301,
     "Lon": 7.206029891967773,
-    "Ele": 113.7
+    "Ele": 113.7,
+    "ident": "DNIM",
+    "iso_country": "NG",
+    "icao_code": "DNIM",
+    "iata_code": "QOW",
+    "length_ft": 8858,
+    "width_ft": 148,
+    "heading": 167,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -258,7 +456,10 @@
     "freq": "",
     "Lat": 8.901997,
     "Lon": 11.283454,
-    "Ele": 208.8
+    "Ele": 208.8,
+    "ident": "DNJA",
+    "iso_country": "NG",
+    "icao_code": "DNJA"
   },
   {
     "type": "medium_airport",
@@ -267,7 +468,15 @@
     "freq": "122.700",
     "Lat": 9.639829635620115,
     "Lon": 8.869050025939941,
-    "Ele": 1289.9
+    "Ele": 1289.9,
+    "ident": "DNJO",
+    "iso_country": "NG",
+    "icao_code": "DNJO",
+    "iata_code": "JOS",
+    "length_ft": 9845,
+    "width_ft": 148,
+    "heading": 95,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -276,7 +485,15 @@
     "freq": "122.300",
     "Lat": 10.696000099182127,
     "Lon": 7.320109844207764,
-    "Ele": 631.9
+    "Ele": 631.9,
+    "ident": "DNKA",
+    "iso_country": "NG",
+    "icao_code": "DNKA",
+    "iata_code": "KAD",
+    "length_ft": 9843,
+    "width_ft": 197,
+    "heading": 50,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -285,7 +502,15 @@
     "freq": "124.100",
     "Lat": 12.0476,
     "Lon": 8.52462,
-    "Ele": 476.1
+    "Ele": 476.1,
+    "ident": "DNKN",
+    "iso_country": "NG",
+    "icao_code": "DNKN",
+    "iata_code": "KAN",
+    "length_ft": 10831,
+    "width_ft": 197,
+    "heading": 61,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -294,7 +519,15 @@
     "freq": "123.100",
     "Lat": 11.855299949645996,
     "Lon": 13.080900192260742,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "DNMA",
+    "iso_country": "NG",
+    "icao_code": "DNMA",
+    "iata_code": "MIU",
+    "length_ft": 9846,
+    "width_ft": 197,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -303,7 +536,15 @@
     "freq": "125.500",
     "Lat": 7.70388,
     "Lon": 8.61394,
-    "Ele": 113.1
+    "Ele": 113.1,
+    "ident": "DNMK",
+    "iso_country": "NG",
+    "icao_code": "DNMK",
+    "iata_code": "MDI",
+    "length_ft": 9830,
+    "width_ft": 164,
+    "heading": 52,
+    "QFU": "23"
   },
   {
     "type": "large_airport",
@@ -312,7 +553,15 @@
     "freq": "120.900",
     "Lat": 6.57737,
     "Lon": 3.32116,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "DNMM",
+    "iso_country": "NG",
+    "icao_code": "DNMM",
+    "iata_code": "LOS",
+    "length_ft": 12794,
+    "width_ft": 197,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -321,7 +570,15 @@
     "freq": "118.300",
     "Lat": 9.652170181274414,
     "Lon": 6.462259769439697,
-    "Ele": 254.2
+    "Ele": 254.2,
+    "ident": "DNMN",
+    "iso_country": "NG",
+    "icao_code": "DNMN",
+    "iata_code": "MXJ",
+    "length_ft": 11153,
+    "width_ft": 145,
+    "heading": 45,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -330,7 +587,9 @@
     "freq": "",
     "Lat": 7.782999992370605,
     "Lon": 4.482999801635742,
-    "Ele": 303.9
+    "Ele": 303.9,
+    "ident": "DNOS",
+    "iso_country": "NG"
   },
   {
     "type": "medium_airport",
@@ -339,7 +598,15 @@
     "freq": "124.900",
     "Lat": 5.0154900550842285,
     "Lon": 6.94959020614624,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "DNPO",
+    "iso_country": "NG",
+    "icao_code": "DNPO",
+    "iata_code": "PHC",
+    "length_ft": 9846,
+    "width_ft": 197,
+    "heading": 28,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -348,7 +615,15 @@
     "freq": "122.100",
     "Lat": 12.916299819946287,
     "Lon": 5.207190036773682,
-    "Ele": 307.8
+    "Ele": 307.8,
+    "ident": "DNSO",
+    "iso_country": "NG",
+    "icao_code": "DNSO",
+    "iata_code": "SKO",
+    "length_ft": 9844,
+    "width_ft": 197,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -357,7 +632,13 @@
     "freq": "129.100",
     "Lat": 5.59821,
     "Lon": 5.8187,
-    "Ele": 73.8
+    "Ele": 73.8,
+    "ident": "DNSU",
+    "iso_country": "NG",
+    "icao_code": "DNSU",
+    "iata_code": "QRW",
+    "length_ft": 6868,
+    "width_ft": 98
   },
   {
     "type": "medium_airport",
@@ -366,7 +647,15 @@
     "freq": "122.500",
     "Lat": 9.257550239562988,
     "Lon": 12.430399894714355,
-    "Ele": 182.6
+    "Ele": 182.6,
+    "ident": "DNYO",
+    "iso_country": "NG",
+    "icao_code": "DNYO",
+    "iata_code": "YOL",
+    "length_ft": 9840,
+    "width_ft": 148,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -375,7 +664,15 @@
     "freq": "123.300",
     "Lat": 11.1302,
     "Lon": 7.68581,
-    "Ele": 661.4
+    "Ele": 661.4,
+    "ident": "DNZA",
+    "iso_country": "NG",
+    "icao_code": "DNZA",
+    "iata_code": "ZAR",
+    "length_ft": 5462,
+    "width_ft": 151,
+    "heading": 50,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -384,7 +681,9 @@
     "freq": "",
     "Lat": 9.895279,
     "Lon": 4.484224,
-    "Ele": 210.0
+    "Ele": 210,
+    "ident": "NG-0002",
+    "iso_country": "NG"
   },
   {
     "type": "small_airport",
@@ -393,7 +692,14 @@
     "freq": "",
     "Lat": 4.846111,
     "Lon": 7.021389,
-    "Ele": 17.4
+    "Ele": 17.4,
+    "ident": "NG-0004",
+    "iso_country": "NG",
+    "icao_code": "DNPM",
+    "iata_code": "PHG",
+    "length_ft": 6923,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -402,7 +708,14 @@
     "freq": "",
     "Lat": 12.479048,
     "Lon": 4.369132,
-    "Ele": 236.2
+    "Ele": 236.2,
+    "ident": "NG-0005",
+    "iso_country": "NG",
+    "icao_code": "DNBK",
+    "length_ft": 10171,
+    "width_ft": 197,
+    "heading": 61,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -411,7 +724,9 @@
     "freq": "",
     "Lat": 4.29802,
     "Lon": 6.27635,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "NG-0006",
+    "iso_country": "NG"
   },
   {
     "type": "small_airport",
@@ -420,7 +735,9 @@
     "freq": "",
     "Lat": 7.801829,
     "Lon": 6.582793,
-    "Ele": 97.5
+    "Ele": 97.5,
+    "ident": "NG-0007",
+    "iso_country": "NG"
   },
   {
     "type": "small_airport",
@@ -429,7 +746,9 @@
     "freq": "",
     "Lat": 10.833636,
     "Lon": 7.538232,
-    "Ele": 684.0
+    "Ele": 684,
+    "ident": "NG-0017",
+    "iso_country": "NG"
   },
   {
     "type": "small_airport",
@@ -438,7 +757,12 @@
     "freq": "",
     "Lat": 9.0421,
     "Lon": 4.9188,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "NG-0024",
+    "iso_country": "NG",
+    "length_ft": 2953,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -447,7 +771,9 @@
     "freq": "",
     "Lat": 9.8927,
     "Lon": 4.6133,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "NG-0026",
+    "iso_country": "NG"
   },
   {
     "type": "small_airport",
@@ -456,6 +782,9 @@
     "freq": "",
     "Lat": 10.294402,
     "Lon": 9.816672,
-    "Ele": 609.0
+    "Ele": 609,
+    "ident": "NG-BCU",
+    "iso_country": "NG",
+    "icao_code": "DNBA"
   }
 ]

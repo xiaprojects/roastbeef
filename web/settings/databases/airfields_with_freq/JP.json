@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 33.026331,
     "Lon": 131.505577,
-    "Ele": 235.0
+    "Ele": 235,
+    "ident": "JP-0007",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 43.69892,
     "Lon": 142.03745,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0013",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 42.40013,
     "Lon": 141.088906,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "JP-0019",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 44.384575,
     "Lon": 142.442508,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0039",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 42.499971,
     "Lon": 143.441759,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "JP-0052",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 43.10809,
     "Lon": 141.62755,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "JP-0071",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,13 @@
     "freq": "",
     "Lat": 34.624145,
     "Lon": 132.79609,
-    "Ele": 595.0
+    "Ele": 595,
+    "ident": "JP-0090",
+    "iso_country": "JP",
+    "length_ft": 690,
+    "width_ft": 50,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -69,7 +87,14 @@
     "freq": "",
     "Lat": 35.85937,
     "Lon": 140.241219,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "JP-0092",
+    "iso_country": "JP",
+    "local_code": "RJA2",
+    "length_ft": 1970,
+    "width_ft": 60,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -78,7 +103,13 @@
     "freq": "",
     "Lat": 35.906276,
     "Lon": 140.242152,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0093",
+    "iso_country": "JP",
+    "local_code": "RJA3",
+    "length_ft": 2625,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -87,7 +118,9 @@
     "freq": "",
     "Lat": 35.929944,
     "Lon": 139.974189,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0095",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -96,7 +129,9 @@
     "freq": "",
     "Lat": 36.015713,
     "Lon": 139.873595,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0096",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -105,7 +140,9 @@
     "freq": "",
     "Lat": 36.015574,
     "Lon": 139.816561,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0097",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -114,7 +151,9 @@
     "freq": "",
     "Lat": 36.03903,
     "Lon": 139.81066,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0098",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -123,7 +162,9 @@
     "freq": "",
     "Lat": 36.16458,
     "Lon": 139.67117,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0099",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -132,7 +173,9 @@
     "freq": "",
     "Lat": 36.1866,
     "Lon": 139.61748,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0100",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -141,7 +184,9 @@
     "freq": "",
     "Lat": 36.19942,
     "Lon": 139.6031,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0101",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -150,7 +195,9 @@
     "freq": "",
     "Lat": 36.21338,
     "Lon": 139.41697,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "JP-0102",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -159,7 +206,9 @@
     "freq": "",
     "Lat": 36.20044,
     "Lon": 139.43405,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0103",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -168,7 +217,9 @@
     "freq": "",
     "Lat": 36.251671,
     "Lon": 139.677944,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0104",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -177,7 +228,9 @@
     "freq": "",
     "Lat": 36.26616,
     "Lon": 139.63388,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "JP-0105",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -186,7 +239,9 @@
     "freq": "",
     "Lat": 36.2697,
     "Lon": 139.59103,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0106",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -195,7 +250,9 @@
     "freq": "",
     "Lat": 36.68102,
     "Lon": 139.94322,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0108",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -204,7 +261,9 @@
     "freq": "",
     "Lat": 36.30085,
     "Lon": 139.90523,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0109",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -213,7 +272,9 @@
     "freq": "",
     "Lat": 35.12073,
     "Lon": 138.6318,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "JP-0110",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -222,7 +283,9 @@
     "freq": "",
     "Lat": 34.83975,
     "Lon": 137.82417,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0111",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -231,7 +294,9 @@
     "freq": "",
     "Lat": 34.94533,
     "Lon": 137.14662,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0112",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -240,7 +305,10 @@
     "freq": "",
     "Lat": 34.476022,
     "Lon": 133.488961,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "JP-0113",
+    "iso_country": "JP",
+    "local_code": "RJKS"
   },
   {
     "type": "small_airport",
@@ -249,7 +317,9 @@
     "freq": "",
     "Lat": 35.4395,
     "Lon": 133.7043,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0114",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -258,7 +328,9 @@
     "freq": "",
     "Lat": 35.638194,
     "Lon": 139.935061,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0117",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -267,7 +339,10 @@
     "freq": "",
     "Lat": 35.97633,
     "Lon": 139.524125,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0320",
+    "iso_country": "JP",
+    "local_code": "RJT1"
   },
   {
     "type": "small_airport",
@@ -276,7 +351,9 @@
     "freq": "",
     "Lat": 34.61506,
     "Lon": 132.27509,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0329",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -285,7 +362,9 @@
     "freq": "",
     "Lat": 36.26608,
     "Lon": 140.07195,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0333",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -294,7 +373,9 @@
     "freq": "",
     "Lat": 35.69042,
     "Lon": 138.46484,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0334",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -303,7 +384,9 @@
     "freq": "",
     "Lat": 35.68141,
     "Lon": 138.48345,
-    "Ele": 313.3
+    "Ele": 313.3,
+    "ident": "JP-0335",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -312,7 +395,9 @@
     "freq": "",
     "Lat": 35.782031,
     "Lon": 139.738133,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0361",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -321,7 +406,9 @@
     "freq": "",
     "Lat": 36.298871,
     "Lon": 139.158261,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0363",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -330,7 +417,9 @@
     "freq": "",
     "Lat": 36.03546,
     "Lon": 139.50088,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0394",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -339,7 +428,9 @@
     "freq": "",
     "Lat": 36.00216,
     "Lon": 139.498,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0395",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -348,7 +439,7 @@
     "freq": "",
     "Lat": 36.011448,
     "Lon": 139.500289,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -357,7 +448,9 @@
     "freq": "",
     "Lat": 36.27324,
     "Lon": 139.1518,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0400",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -366,7 +459,9 @@
     "freq": "",
     "Lat": 36.08799,
     "Lon": 139.43146,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0401",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -375,7 +470,9 @@
     "freq": "",
     "Lat": 36.0811,
     "Lon": 139.45908,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0402",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -384,7 +481,9 @@
     "freq": "",
     "Lat": 36.11246,
     "Lon": 139.4131,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0403",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -393,7 +492,9 @@
     "freq": "",
     "Lat": 35.21016,
     "Lon": 136.67814,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "JP-0422",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -402,7 +503,9 @@
     "freq": "",
     "Lat": 35.4492,
     "Lon": 136.60299,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "JP-0423",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -411,7 +514,9 @@
     "freq": "",
     "Lat": 36.17939,
     "Lon": 137.313573,
-    "Ele": 714.1
+    "Ele": 714.1,
+    "ident": "JP-0424",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -420,7 +525,9 @@
     "freq": "",
     "Lat": 37.10633,
     "Lon": 138.76491,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0438",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -429,7 +536,9 @@
     "freq": "",
     "Lat": 36.23945,
     "Lon": 139.31917,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0449",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -438,7 +547,9 @@
     "freq": "",
     "Lat": 43.17089,
     "Lon": 140.80753,
-    "Ele": 42.4
+    "Ele": 42.4,
+    "ident": "JP-0453",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -447,7 +558,9 @@
     "freq": "",
     "Lat": 26.93657,
     "Lon": 127.91536,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "JP-0454",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -456,7 +569,9 @@
     "freq": "",
     "Lat": 38.01017,
     "Lon": 140.80282,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "JP-0455",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -465,7 +580,9 @@
     "freq": "",
     "Lat": 33.03444,
     "Lon": 131.23344,
-    "Ele": 800.1
+    "Ele": 800.1,
+    "ident": "JP-0456",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -474,7 +591,9 @@
     "freq": "",
     "Lat": 42.536824,
     "Lon": 141.254919,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "JP-0457",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -483,7 +602,9 @@
     "freq": "",
     "Lat": 43.07622,
     "Lon": 142.87658,
-    "Ele": 210.9
+    "Ele": 210.9,
+    "ident": "JP-0458",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -492,7 +613,10 @@
     "freq": "",
     "Lat": 43.38992,
     "Lon": 141.85892,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "JP-0459",
+    "iso_country": "JP",
+    "local_code": "RJBI"
   },
   {
     "type": "small_airport",
@@ -501,7 +625,9 @@
     "freq": "",
     "Lat": 43.77998,
     "Lon": 143.73064,
-    "Ele": 185.6
+    "Ele": 185.6,
+    "ident": "JP-0460",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -510,7 +636,10 @@
     "freq": "",
     "Lat": 29.60624,
     "Lon": 129.70221,
-    "Ele": 107.0
+    "Ele": 107,
+    "ident": "JP-0461",
+    "iso_country": "JP",
+    "local_code": "RJX8"
   },
   {
     "type": "small_airport",
@@ -519,7 +648,9 @@
     "freq": "",
     "Lat": 38.68017,
     "Lon": 141.02163,
-    "Ele": 52.1
+    "Ele": 52.1,
+    "ident": "JP-0462",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -528,7 +659,9 @@
     "freq": "",
     "Lat": 43.549349,
     "Lon": 141.894103,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "JP-0463",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -537,7 +670,10 @@
     "freq": "",
     "Lat": 37.82322,
     "Lon": 140.38767,
-    "Ele": 401.7
+    "Ele": 401.7,
+    "ident": "JP-0465",
+    "iso_country": "JP",
+    "local_code": "RJFH"
   },
   {
     "type": "small_airport",
@@ -546,7 +682,9 @@
     "freq": "",
     "Lat": 43.47484,
     "Lon": 144.78309,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "JP-0466",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -555,7 +693,9 @@
     "freq": "",
     "Lat": 32.776029,
     "Lon": 130.630532,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0467",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -564,7 +704,9 @@
     "freq": "",
     "Lat": 33.00891,
     "Lon": 131.10005,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0468",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -573,7 +715,9 @@
     "freq": "",
     "Lat": 34.03937,
     "Lon": 131.54031,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0469",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -582,7 +726,9 @@
     "freq": "",
     "Lat": 36.63339,
     "Lon": 138.256073,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0470",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -591,7 +737,9 @@
     "freq": "",
     "Lat": 36.09332,
     "Lon": 138.16283,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0471",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -600,7 +748,13 @@
     "freq": "",
     "Lat": 43.2743,
     "Lon": 141.652436,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0472",
+    "iso_country": "JP",
+    "length_ft": 3280,
+    "width_ft": 25,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -609,7 +763,13 @@
     "freq": "",
     "Lat": 43.87484,
     "Lon": 142.51119,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0473",
+    "iso_country": "JP",
+    "length_ft": 2630,
+    "width_ft": 65,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -618,7 +778,13 @@
     "freq": "",
     "Lat": 43.53125,
     "Lon": 142.56389,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0474",
+    "iso_country": "JP",
+    "length_ft": 1960,
+    "width_ft": 60,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -627,7 +793,9 @@
     "freq": "",
     "Lat": 36.10811,
     "Lon": 136.33646,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0484",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -636,7 +804,9 @@
     "freq": "",
     "Lat": 36.666323,
     "Lon": 140.66923,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0591",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -645,7 +815,9 @@
     "freq": "",
     "Lat": 35.33082,
     "Lon": 137.34719,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0592",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -654,7 +826,9 @@
     "freq": "",
     "Lat": 37.632442,
     "Lon": 141.008363,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0596",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -663,7 +837,9 @@
     "freq": "",
     "Lat": 37.50672,
     "Lon": 141.032,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0597",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -672,7 +848,9 @@
     "freq": "",
     "Lat": 38.35937,
     "Lon": 140.98477,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0598",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -681,7 +859,9 @@
     "freq": "",
     "Lat": 37.86812,
     "Lon": 140.604283,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0599",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -690,7 +870,9 @@
     "freq": "",
     "Lat": 38.16359,
     "Lon": 140.0619,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0600",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -699,7 +881,13 @@
     "freq": "",
     "Lat": 39.6158,
     "Lon": 140.40957,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "JP-0601",
+    "iso_country": "JP",
+    "length_ft": 725,
+    "width_ft": 12,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -708,7 +896,9 @@
     "freq": "",
     "Lat": 40.370013,
     "Lon": 140.735114,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0602",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -717,7 +907,9 @@
     "freq": "",
     "Lat": 42.462803,
     "Lon": 142.454649,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0623",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -726,7 +918,9 @@
     "freq": "",
     "Lat": 43.81589,
     "Lon": 144.07879,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0626",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -735,7 +929,9 @@
     "freq": "",
     "Lat": 34.49568,
     "Lon": 135.46242,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0634",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -744,7 +940,9 @@
     "freq": "",
     "Lat": 34.89599,
     "Lon": 134.90918,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0635",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -753,7 +951,7 @@
     "freq": "",
     "Lat": 34.892392,
     "Lon": 134.904728,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -762,7 +960,9 @@
     "freq": "",
     "Lat": 35.42106,
     "Lon": 139.91993,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0638",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -771,7 +971,9 @@
     "freq": "",
     "Lat": 35.4651,
     "Lon": 138.86428,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0648",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -780,7 +982,9 @@
     "freq": "",
     "Lat": 34.50577,
     "Lon": 131.59634,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0690",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -789,7 +993,9 @@
     "freq": "",
     "Lat": 36.57566,
     "Lon": 139.96614,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0707",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -798,7 +1004,7 @@
     "freq": "",
     "Lat": 36.10627,
     "Lon": 139.43258,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -807,7 +1013,9 @@
     "freq": "",
     "Lat": 35.08479,
     "Lon": 135.94852,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0826",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -816,7 +1024,9 @@
     "freq": "",
     "Lat": 35.28523,
     "Lon": 135.18161,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0829",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -825,7 +1035,9 @@
     "freq": "",
     "Lat": 34.638053,
     "Lon": 136.545568,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0855",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -834,7 +1046,9 @@
     "freq": "",
     "Lat": 34.59808,
     "Lon": 136.57514,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0856",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -843,7 +1057,9 @@
     "freq": "",
     "Lat": 36.11309,
     "Lon": 140.48573,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0860",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -852,7 +1068,9 @@
     "freq": "",
     "Lat": 36.22588,
     "Lon": 140.00184,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0865",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -861,7 +1079,9 @@
     "freq": "",
     "Lat": 36.32147,
     "Lon": 140.51258,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0874",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -870,7 +1090,9 @@
     "freq": "",
     "Lat": 36.30517,
     "Lon": 140.50303,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0876",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -879,7 +1101,9 @@
     "freq": "",
     "Lat": 34.99628,
     "Lon": 139.0045,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-0898",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -888,7 +1112,9 @@
     "freq": "",
     "Lat": 43.82618,
     "Lon": 144.16707,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1045",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -897,7 +1123,9 @@
     "freq": "",
     "Lat": 30.73569,
     "Lon": 130.851216,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1131",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -906,7 +1134,9 @@
     "freq": "",
     "Lat": 43.244787,
     "Lon": 143.277673,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1184",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -915,7 +1145,9 @@
     "freq": "",
     "Lat": 42.859581,
     "Lon": 143.311721,
-    "Ele": 43.9
+    "Ele": 43.9,
+    "ident": "JP-1185",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -924,7 +1156,9 @@
     "freq": "",
     "Lat": 45.114106,
     "Lon": 141.654321,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1186",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -933,7 +1167,13 @@
     "freq": "",
     "Lat": 43.343161,
     "Lon": 141.435487,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1189",
+    "iso_country": "JP",
+    "length_ft": 770,
+    "width_ft": 40,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -942,7 +1182,9 @@
     "freq": "",
     "Lat": 39.299205,
     "Lon": 140.054859,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1226",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -951,7 +1193,9 @@
     "freq": "",
     "Lat": 36.142082,
     "Lon": 140.253211,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "JP-1267",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -960,7 +1204,9 @@
     "freq": "",
     "Lat": 40.293173,
     "Lon": 140.469894,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1271",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -969,7 +1215,9 @@
     "freq": "",
     "Lat": 32.276669,
     "Lon": 130.915607,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1303",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -978,7 +1226,9 @@
     "freq": "",
     "Lat": 33.148715,
     "Lon": 130.187592,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1333",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -987,7 +1237,9 @@
     "freq": "",
     "Lat": 32.98732,
     "Lon": 131.209242,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1334",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -996,7 +1248,9 @@
     "freq": "",
     "Lat": 33.318118,
     "Lon": 129.997357,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1335",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1259,9 @@
     "freq": "",
     "Lat": 43.32851,
     "Lon": 144.7079,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "JP-1652",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1270,9 @@
     "freq": "",
     "Lat": 43.2872,
     "Lon": 144.9978,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "JP-1653",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1281,9 @@
     "freq": "",
     "Lat": 42.665802,
     "Lon": 141.101933,
-    "Ele": 494.1
+    "Ele": 494.1,
+    "ident": "JP-1660",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1292,9 @@
     "freq": "",
     "Lat": 34.66842,
     "Lon": 137.18636,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "JP-1679",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1303,9 @@
     "freq": "",
     "Lat": 43.31811,
     "Lon": 143.43245,
-    "Ele": 242.9
+    "Ele": 242.9,
+    "ident": "JP-1712",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1314,9 @@
     "freq": "",
     "Lat": 42.64362,
     "Lon": 141.87865,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "JP-1716",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1325,9 @@
     "freq": "",
     "Lat": 35.71426,
     "Lon": 140.06481,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "JP-1900",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1336,9 @@
     "freq": "",
     "Lat": 34.6744,
     "Lon": 134.07234,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "JP-1904",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1347,9 @@
     "freq": "",
     "Lat": 26.72998,
     "Lon": 127.75647,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-1931",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1358,9 @@
     "freq": "",
     "Lat": 40.70151,
     "Lon": 140.3239,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "JP-2073",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1369,9 @@
     "freq": "",
     "Lat": 40.629479,
     "Lon": 141.37704,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "JP-2079",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1380,9 @@
     "freq": "",
     "Lat": 36.285424,
     "Lon": 139.907005,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "JP-2148",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1391,9 @@
     "freq": "",
     "Lat": 36.96241,
     "Lon": 139.97566,
-    "Ele": 344.4
+    "Ele": 344.4,
+    "ident": "JP-2082",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1402,9 @@
     "freq": "",
     "Lat": 36.5229,
     "Lon": 136.67166,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-2089",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1413,9 @@
     "freq": "",
     "Lat": 36.99445,
     "Lon": 137.86808,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-2114",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1424,9 @@
     "freq": "",
     "Lat": 36.23878,
     "Lon": 140.06,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-2137",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1444,9 @@
     "freq": "",
     "Lat": 34.89433,
     "Lon": 137.34113,
-    "Ele": 234.1
+    "Ele": 234.1,
+    "ident": "JP-2174",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1455,9 @@
     "freq": "",
     "Lat": 36.53145,
     "Lon": 140.35816,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "JP-2254",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1466,9 @@
     "freq": "",
     "Lat": 33.89122,
     "Lon": 132.27028,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "JP-2286",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1477,9 @@
     "freq": "",
     "Lat": 35.23572,
     "Lon": 136.19201,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "JP-2314",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1488,9 @@
     "freq": "",
     "Lat": 35.15797,
     "Lon": 136.68484,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "JP-2543",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1499,9 @@
     "freq": "",
     "Lat": 34.66876,
     "Lon": 136.42173,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "JP-2558",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1510,9 @@
     "freq": "",
     "Lat": 36.12158,
     "Lon": 139.40029,
-    "Ele": 26.2
+    "Ele": 26.2,
+    "ident": "JP-3029",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1521,9 @@
     "freq": "",
     "Lat": 36.13585,
     "Lon": 139.90626,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "JP-3047",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1532,9 @@
     "freq": "",
     "Lat": 39.36165,
     "Lon": 141.45675,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "JP-3069",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1543,9 @@
     "freq": "",
     "Lat": 33.57508,
     "Lon": 133.06374,
-    "Ele": 823.9
+    "Ele": 823.9,
+    "ident": "JP-3085",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1554,9 @@
     "freq": "",
     "Lat": 34.95518,
     "Lon": 138.10416,
-    "Ele": 592.8
+    "Ele": 592.8,
+    "ident": "JP-3095",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1565,9 @@
     "freq": "",
     "Lat": 38.4368,
     "Lon": 140.99466,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "JP-3126",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1576,9 @@
     "freq": "",
     "Lat": 38.39275,
     "Lon": 140.72037,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "JP-3127",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1587,9 @@
     "freq": "",
     "Lat": 35.90741,
     "Lon": 140.40668,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "JP-3163",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1598,9 @@
     "freq": "",
     "Lat": 36.57134,
     "Lon": 137.8226,
-    "Ele": 1281.1
+    "Ele": 1281.1,
+    "ident": "JP-3253",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1609,9 @@
     "freq": "",
     "Lat": 35.11956,
     "Lon": 134.13694,
-    "Ele": 252.1
+    "Ele": 252.1,
+    "ident": "JP-3352",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1620,9 @@
     "freq": "",
     "Lat": 35.10152,
     "Lon": 139.01496,
-    "Ele": 235.0
+    "Ele": 235,
+    "ident": "JP-3438",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1640,13 @@
     "freq": "",
     "Lat": 30.784722,
     "Lon": 130.270556,
-    "Ele": 103.0
+    "Ele": 103,
+    "ident": "JP-3600",
+    "iso_country": "JP",
+    "length_ft": 1713,
+    "width_ft": 82,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1329,7 +1655,9 @@
     "freq": "",
     "Lat": 35.769209,
     "Lon": 140.385232,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JP-3601",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1666,14 @@
     "freq": "",
     "Lat": 42.045033,
     "Lon": 140.793293,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "RJ04",
+    "iso_country": "JP",
+    "local_code": "RJ04",
+    "length_ft": 3313,
+    "width_ft": 98,
+    "heading": 58.4,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -1347,7 +1682,15 @@
     "freq": "124.400",
     "Lat": 35.764702,
     "Lon": 140.386002,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "RJAA",
+    "iso_country": "JP",
+    "icao_code": "RJAA",
+    "iata_code": "NRT",
+    "length_ft": 13123,
+    "width_ft": 196,
+    "heading": 150,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1356,7 +1699,15 @@
     "freq": "132.450",
     "Lat": 36.166801,
     "Lon": 137.923004,
-    "Ele": 665.1
+    "Ele": 665.1,
+    "ident": "RJAF",
+    "iso_country": "JP",
+    "icao_code": "RJAF",
+    "iata_code": "MMJ",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 171,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1365,7 +1716,15 @@
     "freq": "120.100",
     "Lat": 36.181099,
     "Lon": 140.414993,
-    "Ele": 32.0
+    "Ele": 32,
+    "ident": "RJAH",
+    "iso_country": "JP",
+    "icao_code": "RJAH",
+    "iata_code": "IBR",
+    "length_ft": 8860,
+    "width_ft": 150,
+    "heading": 19.9,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1733,9 @@
     "freq": "",
     "Lat": 36.034698,
     "Lon": 140.192993,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "RJAK",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1744,15 @@
     "freq": "126.200",
     "Lat": 24.2897,
     "Lon": 153.979004,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "RJAM",
+    "iso_country": "JP",
+    "icao_code": "RJAM",
+    "iata_code": "MUS",
+    "length_ft": 4500,
+    "width_ft": 145,
+    "heading": 46,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1761,12 @@
     "freq": "",
     "Lat": 34.3694000244,
     "Lon": 139.268997192,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "RJAN",
+    "iso_country": "JP",
+    "length_ft": 2625,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -1401,7 +1775,15 @@
     "freq": "138.300",
     "Lat": 24.784153,
     "Lon": 141.32261,
-    "Ele": 117.0
+    "Ele": 117,
+    "ident": "RJAW",
+    "iso_country": "JP",
+    "icao_code": "RJAW",
+    "iata_code": "IWO",
+    "length_ft": 8700,
+    "width_ft": 200,
+    "heading": 68.1,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1792,12 @@
     "freq": "",
     "Lat": 34.1899986267,
     "Lon": 139.134002686,
-    "Ele": 137.8
+    "Ele": 137.8,
+    "ident": "RJAZ",
+    "iso_country": "JP",
+    "length_ft": 2625,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "large_airport",
@@ -1419,7 +1806,15 @@
     "freq": "120.250",
     "Lat": 34.427299,
     "Lon": 135.244003,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "RJBB",
+    "iso_country": "JP",
+    "icao_code": "RJBB",
+    "iata_code": "KIX",
+    "length_ft": 11483,
+    "width_ft": 196,
+    "heading": 51,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -1428,7 +1823,15 @@
     "freq": "118.550",
     "Lat": 33.6622009277,
     "Lon": 135.363998413,
-    "Ele": 90.8
+    "Ele": 90.8,
+    "ident": "RJBD",
+    "iso_country": "JP",
+    "icao_code": "RJBD",
+    "iata_code": "SHM",
+    "length_ft": 4327,
+    "width_ft": 98,
+    "heading": 157.2,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1437,7 +1840,15 @@
     "freq": "121.150",
     "Lat": 34.6328010559082,
     "Lon": 135.2239990234375,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "RJBE",
+    "iso_country": "JP",
+    "icao_code": "RJBE",
+    "iata_code": "UKB",
+    "length_ft": 8202,
+    "width_ft": 200,
+    "heading": 84.6,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1446,7 +1857,13 @@
     "freq": "130.750",
     "Lat": 34.590801,
     "Lon": 133.932999,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "RJBK",
+    "iso_country": "JP",
+    "length_ft": 4327,
+    "width_ft": 100,
+    "heading": 86,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1455,7 +1872,15 @@
     "freq": "118.400",
     "Lat": 35.512798,
     "Lon": 134.787003,
-    "Ele": 178.0
+    "Ele": 178,
+    "ident": "RJBT",
+    "iso_country": "JP",
+    "icao_code": "RJBT",
+    "iata_code": "TJH",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 3,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1889,13 @@
     "freq": "126.200",
     "Lat": 43.794734,
     "Lon": 142.365432,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "RJCA",
+    "iso_country": "JP",
+    "length_ft": 2624,
+    "width_ft": 164,
+    "heading": 73.1,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -1473,7 +1904,15 @@
     "freq": "128.325",
     "Lat": 42.7332992554,
     "Lon": 143.216995239,
-    "Ele": 153.9
+    "Ele": 153.9,
+    "ident": "RJCB",
+    "iso_country": "JP",
+    "icao_code": "RJCB",
+    "iata_code": "OBO",
+    "length_ft": 8202,
+    "width_ft": 150,
+    "heading": 159.3,
+    "QFU": "35"
   },
   {
     "type": "large_airport",
@@ -1482,7 +1921,15 @@
     "freq": "110.900",
     "Lat": 42.7752,
     "Lon": 141.692001,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "RJCC",
+    "iso_country": "JP",
+    "icao_code": "RJCC",
+    "iata_code": "CTS",
+    "length_ft": 9840,
+    "width_ft": 200,
+    "heading": 352.6,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -1491,7 +1938,15 @@
     "freq": "119.000",
     "Lat": 41.77,
     "Lon": 140.822006,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "RJCH",
+    "iso_country": "JP",
+    "icao_code": "RJCH",
+    "iata_code": "HKD",
+    "length_ft": 9842,
+    "width_ft": 150,
+    "heading": 108,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1500,7 +1955,13 @@
     "freq": "120.100",
     "Lat": 42.794498,
     "Lon": 141.666,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "RJCJ",
+    "iso_country": "JP",
+    "length_ft": 8860,
+    "width_ft": 148,
+    "heading": 172.5,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1509,7 +1970,15 @@
     "freq": "127.500",
     "Lat": 43.041,
     "Lon": 144.192993,
-    "Ele": 99.7
+    "Ele": 99.7,
+    "ident": "RJCK",
+    "iso_country": "JP",
+    "icao_code": "RJCK",
+    "iata_code": "KUH",
+    "length_ft": 8202,
+    "width_ft": 150,
+    "heading": 159,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -1518,7 +1987,15 @@
     "freq": "118.850",
     "Lat": 43.8805999756,
     "Lon": 144.164001465,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "RJCM",
+    "iso_country": "JP",
+    "icao_code": "RJCM",
+    "iata_code": "MMB",
+    "length_ft": 8202,
+    "width_ft": 150,
+    "heading": 174.7,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1527,7 +2004,15 @@
     "freq": "122.700",
     "Lat": 43.5774993896,
     "Lon": 144.960006714,
-    "Ele": 71.3
+    "Ele": 71.3,
+    "ident": "RJCN",
+    "iso_country": "JP",
+    "icao_code": "RJCN",
+    "iata_code": "SHB",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 71,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -1536,7 +2021,15 @@
     "freq": "127.500",
     "Lat": 43.117447,
     "Lon": 141.38134,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "RJCO",
+    "iso_country": "JP",
+    "icao_code": "RJCO",
+    "iata_code": "OKD",
+    "length_ft": 4920,
+    "width_ft": 148,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2038,14 @@
     "freq": "",
     "Lat": 45.4550018311,
     "Lon": 141.039001465,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "RJCR",
+    "iso_country": "JP",
+    "icao_code": "RJCR",
+    "iata_code": "RBJ",
+    "length_ft": 2625,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -1554,7 +2054,9 @@
     "freq": "",
     "Lat": 43.425154,
     "Lon": 144.741354,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RJCS",
+    "iso_country": "JP"
   },
   {
     "type": "medium_airport",
@@ -1563,7 +2065,13 @@
     "freq": "126.200",
     "Lat": 42.890499,
     "Lon": 143.158005,
-    "Ele": 85.6
+    "Ele": 85.6,
+    "ident": "RJCT",
+    "iso_country": "JP",
+    "length_ft": 1308,
+    "width_ft": 75,
+    "heading": 123.6,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -1572,7 +2080,15 @@
     "freq": "118.300",
     "Lat": 45.4042015076,
     "Lon": 141.800994873,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "RJCW",
+    "iso_country": "JP",
+    "icao_code": "RJCW",
+    "iata_code": "WKJ",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 68.9,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2097,9 @@
     "freq": "",
     "Lat": 42.245955,
     "Lon": 140.265729,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "RJCY",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2108,15 @@
     "freq": "130.775",
     "Lat": 32.482498,
     "Lon": 130.158997,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "RJDA",
+    "iso_country": "JP",
+    "icao_code": "RJDA",
+    "iata_code": "AXJ",
+    "length_ft": 3281,
+    "width_ft": 99,
+    "heading": 124.5,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -1599,7 +2125,15 @@
     "freq": "118.200",
     "Lat": 33.7490005493,
     "Lon": 129.785003662,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "RJDB",
+    "iso_country": "JP",
+    "icao_code": "RJDB",
+    "iata_code": "IKI",
+    "length_ft": 4331,
+    "width_ft": 100,
+    "heading": 9,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1608,7 +2142,15 @@
     "freq": "118.050",
     "Lat": 33.930000305200004,
     "Lon": 131.279006958,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "RJDC",
+    "iso_country": "JP",
+    "icao_code": "RJDC",
+    "iata_code": "UBJ",
+    "length_ft": 8200,
+    "width_ft": 150,
+    "heading": 62.3,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2159,12 @@
     "freq": "",
     "Lat": 33.013576,
     "Lon": 129.192363,
-    "Ele": 80.2
+    "Ele": 80.2,
+    "ident": "RJDK",
+    "iso_country": "JP",
+    "length_ft": 2625,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1626,7 +2173,9 @@
     "freq": "",
     "Lat": 33.325445,
     "Lon": 130.413787,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "RJDM",
+    "iso_country": "JP"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2184,12 @@
     "freq": "",
     "Lat": 33.1907997131,
     "Lon": 129.089996338,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "RJDO",
+    "iso_country": "JP",
+    "length_ft": 2625,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -1644,7 +2198,15 @@
     "freq": "124.300",
     "Lat": 34.2849006653,
     "Lon": 129.330993652,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "RJDT",
+    "iso_country": "JP",
+    "icao_code": "RJDT",
+    "iata_code": "TSJ",
+    "length_ft": 6234,
+    "width_ft": 150,
+    "heading": 136,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2215,11 @@
     "freq": "",
     "Lat": 32.928046,
     "Lon": 129.934168,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RJDU",
+    "iso_country": "JP",
+    "icao_code": "RJDU",
+    "iata_code": "OMJ"
   },
   {
     "type": "medium_airport",
@@ -1662,7 +2228,15 @@
     "freq": "118.150",
     "Lat": 44.3039016724,
     "Lon": 143.404006958,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "RJEB",
+    "iso_country": "JP",
+    "icao_code": "RJEB",
+    "iata_code": "MBE",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 131.9,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -1671,7 +2245,15 @@
     "freq": "127.500",
     "Lat": 43.670799,
     "Lon": 142.447006,
-    "Ele": 219.8
+    "Ele": 219.8,
+    "ident": "RJEC",
+    "iso_country": "JP",
+    "icao_code": "RJEC",
+    "iata_code": "AKJ",
+    "length_ft": 8200,
+    "width_ft": 200,
+    "heading": 154.2,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1680,7 +2262,15 @@
     "freq": "122.700",
     "Lat": 42.0717010498,
     "Lon": 139.432998657,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "RJEO",
+    "iso_country": "JP",
+    "icao_code": "RJEO",
+    "iata_code": "OIR",
+    "length_ft": 4922,
+    "width_ft": 147,
+    "heading": 121,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -1689,7 +2279,15 @@
     "freq": "122.700",
     "Lat": 45.2420005798,
     "Lon": 141.186004639,
-    "Ele": 34.1
+    "Ele": 34.1,
+    "ident": "RJER",
+    "iso_country": "JP",
+    "icao_code": "RJER",
+    "iata_code": "RIS",
+    "length_ft": 5906,
+    "width_ft": 148,
+    "heading": 57,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1698,7 +2296,13 @@
     "freq": "119.650",
     "Lat": 33.883099,
     "Lon": 130.653,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "RJFA",
+    "iso_country": "JP",
+    "length_ft": 5380,
+    "width_ft": 150,
+    "heading": 115.7,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1707,7 +2311,15 @@
     "freq": "118.650",
     "Lat": 30.385599,
     "Lon": 130.658997,
-    "Ele": 37.8
+    "Ele": 37.8,
+    "ident": "RJFC",
+    "iso_country": "JP",
+    "icao_code": "RJFC",
+    "iata_code": "KUM",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 133.9,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -1716,7 +2328,15 @@
     "freq": "118.350",
     "Lat": 32.666302,
     "Lon": 128.832993,
-    "Ele": 83.2
+    "Ele": 83.2,
+    "ident": "RJFE",
+    "iso_country": "JP",
+    "icao_code": "RJFE",
+    "iata_code": "FUJ",
+    "length_ft": 6561,
+    "width_ft": 150,
+    "heading": 25.8,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -1725,7 +2345,15 @@
     "freq": "119.100",
     "Lat": 33.585899353027344,
     "Lon": 130.4510040283203,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "RJFF",
+    "iso_country": "JP",
+    "icao_code": "RJFF",
+    "iata_code": "FUK",
+    "length_ft": 8202,
+    "width_ft": 197,
+    "heading": 150,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1734,7 +2362,15 @@
     "freq": "118.750",
     "Lat": 30.6051006317,
     "Lon": 130.990997314,
-    "Ele": 234.1
+    "Ele": 234.1,
+    "ident": "RJFG",
+    "iso_country": "JP",
+    "icao_code": "RJFG",
+    "iata_code": "TNE",
+    "length_ft": 6544,
+    "width_ft": 147,
+    "heading": 122.7,
+    "QFU": "31"
   },
   {
     "type": "large_airport",
@@ -1743,7 +2379,15 @@
     "freq": "126.000",
     "Lat": 31.8034,
     "Lon": 130.718994,
-    "Ele": 276.1
+    "Ele": 276.1,
+    "ident": "RJFK",
+    "iso_country": "JP",
+    "icao_code": "RJFK",
+    "iata_code": "KOJ",
+    "length_ft": 9840,
+    "width_ft": 150,
+    "heading": 150,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1752,7 +2396,15 @@
     "freq": "121.400",
     "Lat": 31.877199173,
     "Lon": 131.449005127,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "RJFM",
+    "iso_country": "JP",
+    "icao_code": "RJFM",
+    "iata_code": "KMI",
+    "length_ft": 8200,
+    "width_ft": 150,
+    "heading": 85.2,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2413,13 @@
     "freq": "120.100",
     "Lat": 32.083599,
     "Lon": 131.451004,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "RJFN",
+    "iso_country": "JP",
+    "length_ft": 8860,
+    "width_ft": 150,
+    "heading": 101.6,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -1770,7 +2428,15 @@
     "freq": "120.600",
     "Lat": 33.479400634799994,
     "Lon": 131.736999512,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "RJFO",
+    "iso_country": "JP",
+    "icao_code": "RJFO",
+    "iata_code": "OIT",
+    "length_ft": 9840,
+    "width_ft": 150,
+    "heading": 0.4,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -1779,7 +2445,15 @@
     "freq": "118.850",
     "Lat": 33.845901,
     "Lon": 131.035004,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "RJFR",
+    "iso_country": "JP",
+    "icao_code": "RJFR",
+    "iata_code": "KKJ",
+    "length_ft": 8202,
+    "width_ft": 197,
+    "heading": 170,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1788,7 +2462,15 @@
     "freq": "118.050",
     "Lat": 33.149700164799995,
     "Lon": 130.302001953,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "RJFS",
+    "iso_country": "JP",
+    "icao_code": "RJFS",
+    "iata_code": "HSG",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 99.2,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -1797,7 +2479,15 @@
     "freq": "118.900",
     "Lat": 32.83729934692383,
     "Lon": 130.85499572753906,
-    "Ele": 195.7
+    "Ele": 195.7,
+    "ident": "RJFT",
+    "iso_country": "JP",
+    "icao_code": "RJFT",
+    "iata_code": "KMJ",
+    "length_ft": 9840,
+    "width_ft": 150,
+    "heading": 64.9,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1806,7 +2496,15 @@
     "freq": "119.175",
     "Lat": 32.916901,
     "Lon": 129.914001,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "RJFU",
+    "iso_country": "JP",
+    "icao_code": "RJFU",
+    "iata_code": "NGS",
+    "length_ft": 4350,
+    "width_ft": 100,
+    "heading": 174.2,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1815,7 +2513,13 @@
     "freq": "122.150",
     "Lat": 31.36672,
     "Lon": 130.838805,
-    "Ele": 65.2
+    "Ele": 65.2,
+    "ident": "RJFY",
+    "iso_country": "JP",
+    "length_ft": 7382,
+    "width_ft": 148,
+    "heading": 79.4,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -1824,7 +2528,13 @@
     "freq": "120.100",
     "Lat": 33.685001,
     "Lon": 131.039993,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "RJFZ",
+    "iso_country": "JP",
+    "length_ft": 7870,
+    "width_ft": 150,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -1833,7 +2543,15 @@
     "freq": "121.050",
     "Lat": 34.858398,
     "Lon": 136.804993,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "RJGG",
+    "iso_country": "JP",
+    "icao_code": "RJGG",
+    "iata_code": "NGO",
+    "length_ft": 11483,
+    "width_ft": 197,
+    "heading": 168.8,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1842,7 +2560,15 @@
     "freq": "118.150",
     "Lat": 28.430599212646484,
     "Lon": 129.71299743652344,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "RJKA",
+    "iso_country": "JP",
+    "icao_code": "RJKA",
+    "iata_code": "ASJ",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 26,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -1851,7 +2577,15 @@
     "freq": "118.050",
     "Lat": 27.431604,
     "Lon": 128.705564,
-    "Ele": 30.8
+    "Ele": 30.8,
+    "ident": "RJKB",
+    "iso_country": "JP",
+    "icao_code": "RJKB",
+    "iata_code": "OKE",
+    "length_ft": 4430,
+    "width_ft": 147,
+    "heading": 34,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -1860,7 +2594,15 @@
     "freq": "118.000",
     "Lat": 28.3213005066,
     "Lon": 129.927993774,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "RJKI",
+    "iso_country": "JP",
+    "icao_code": "RJKI",
+    "iata_code": "KKX",
+    "length_ft": 4307,
+    "width_ft": 98,
+    "heading": 65.9,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1869,7 +2611,15 @@
     "freq": "122.700",
     "Lat": 27.836382,
     "Lon": 128.881356,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "RJKN",
+    "iso_country": "JP",
+    "icao_code": "RJKN",
+    "iata_code": "TKN",
+    "length_ft": 6561,
+    "width_ft": 150,
+    "heading": 6,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -1878,7 +2628,15 @@
     "freq": "121.050",
     "Lat": 35.255759,
     "Lon": 136.924095,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "RJNA",
+    "iso_country": "JP",
+    "icao_code": "RJNA",
+    "iata_code": "NKM",
+    "length_ft": 8990,
+    "width_ft": 150,
+    "heading": 152.5,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -1887,7 +2645,15 @@
     "freq": "120.100",
     "Lat": 36.142799,
     "Lon": 136.223999,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "RJNF",
+    "iso_country": "JP",
+    "icao_code": "RJNF",
+    "iata_code": "FKJ",
+    "length_ft": 4329,
+    "width_ft": 100,
+    "heading": 176,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -1896,7 +2662,14 @@
     "freq": "120.300",
     "Lat": 35.3941,
     "Lon": 136.869995,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "RJNG",
+    "iso_country": "JP",
+    "iata_code": "QGU",
+    "length_ft": 8860,
+    "width_ft": 150,
+    "heading": 92.2,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -1905,7 +2678,13 @@
     "freq": "120.100",
     "Lat": 34.750198,
     "Lon": 137.703003,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "RJNH",
+    "iso_country": "JP",
+    "length_ft": 8366,
+    "width_ft": 148,
+    "heading": 90.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1914,7 +2693,15 @@
     "freq": "120.100",
     "Lat": 36.3946,
     "Lon": 136.406998,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "RJNK",
+    "iso_country": "JP",
+    "icao_code": "RJNK",
+    "iata_code": "KMQ",
+    "length_ft": 8876,
+    "width_ft": 148,
+    "heading": 55.5,
+    "QFU": "24T"
   },
   {
     "type": "medium_airport",
@@ -1923,7 +2710,15 @@
     "freq": "118.650",
     "Lat": 36.178388,
     "Lon": 133.323566,
-    "Ele": 94.8
+    "Ele": 94.8,
+    "ident": "RJNO",
+    "iso_country": "JP",
+    "icao_code": "RJNO",
+    "iata_code": "OKI",
+    "QFU": "26",
+    "length_ft": 6531,
+    "width_ft": 148,
+    "heading": 60
   },
   {
     "type": "medium_airport",
@@ -1932,7 +2727,14 @@
     "freq": "",
     "Lat": 34.796043,
     "Lon": 138.187752,
-    "Ele": 132.0
+    "Ele": 132,
+    "ident": "RJNS",
+    "iso_country": "JP",
+    "icao_code": "RJNS",
+    "iata_code": "FSZ",
+    "length_ft": 7218,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -1941,7 +2743,15 @@
     "freq": "124.300",
     "Lat": 36.64830017089844,
     "Lon": 137.18800354003906,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "RJNT",
+    "iso_country": "JP",
+    "icao_code": "RJNT",
+    "iata_code": "TOY",
+    "length_ft": 6562,
+    "width_ft": 150,
+    "heading": 13.6,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1950,7 +2760,15 @@
     "freq": "132.450",
     "Lat": 37.293098,
     "Lon": 136.962006,
-    "Ele": 218.8
+    "Ele": 218.8,
+    "ident": "RJNW",
+    "iso_country": "JP",
+    "icao_code": "RJNW",
+    "iata_code": "NTQ",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 66.8,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1959,7 +2777,13 @@
     "freq": "120.100",
     "Lat": 34.812801,
     "Lon": 138.298004,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "RJNY",
+    "iso_country": "JP",
+    "length_ft": 4920,
+    "width_ft": 150,
+    "heading": 87.1,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1968,7 +2792,15 @@
     "freq": "124.050",
     "Lat": 34.4361,
     "Lon": 132.919006,
-    "Ele": 331.6
+    "Ele": 331.6,
+    "ident": "RJOA",
+    "iso_country": "JP",
+    "icao_code": "RJOA",
+    "iata_code": "HIJ",
+    "length_ft": 9842,
+    "width_ft": 200,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -1977,7 +2809,15 @@
     "freq": "120.400",
     "Lat": 34.756901,
     "Lon": 133.854996,
-    "Ele": 245.7
+    "Ele": 245.7,
+    "ident": "RJOB",
+    "iso_country": "JP",
+    "icao_code": "RJOB",
+    "iata_code": "OKJ",
+    "length_ft": 9843,
+    "width_ft": 150,
+    "heading": 59,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1986,7 +2826,15 @@
     "freq": "120.100",
     "Lat": 35.413601,
     "Lon": 132.889999,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "RJOC",
+    "iso_country": "JP",
+    "icao_code": "RJOC",
+    "iata_code": "IZO",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 59.2,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2843,9 @@
     "freq": "",
     "Lat": 34.533298,
     "Lon": 136.671997,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "RJOE",
+    "iso_country": "JP"
   },
   {
     "type": "medium_airport",
@@ -2004,7 +2854,13 @@
     "freq": "133.000",
     "Lat": 34.034746,
     "Lon": 131.548716,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "RJOF",
+    "iso_country": "JP",
+    "length_ft": 4856,
+    "width_ft": 148,
+    "heading": 109,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -2013,7 +2869,15 @@
     "freq": "120.100",
     "Lat": 35.492199,
     "Lon": 133.235992,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "RJOH",
+    "iso_country": "JP",
+    "icao_code": "RJOH",
+    "iata_code": "YGJ",
+    "length_ft": 8202,
+    "width_ft": 98,
+    "heading": 63.9,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -2022,7 +2886,15 @@
     "freq": "126.100",
     "Lat": 34.146333,
     "Lon": 132.247238,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "RJOI",
+    "iso_country": "JP",
+    "icao_code": "RJOI",
+    "iata_code": "IWK",
+    "length_ft": 1200,
+    "width_ft": 150,
+    "heading": 9.3,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -2031,7 +2903,15 @@
     "freq": "125.000",
     "Lat": 33.546101,
     "Lon": 133.669006,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "RJOK",
+    "iso_country": "JP",
+    "icao_code": "RJOK",
+    "iata_code": "KCZ",
+    "length_ft": 8203,
+    "width_ft": 148,
+    "heading": 131,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -2040,7 +2920,15 @@
     "freq": "128.000",
     "Lat": 33.82720184326172,
     "Lon": 132.6999969482422,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "RJOM",
+    "iso_country": "JP",
+    "icao_code": "RJOM",
+    "iata_code": "MYJ",
+    "length_ft": 8200,
+    "width_ft": 150,
+    "heading": 130.5,
+    "QFU": "32"
   },
   {
     "type": "large_airport",
@@ -2049,7 +2937,15 @@
     "freq": "120.450",
     "Lat": 34.7855,
     "Lon": 135.438004,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "RJOO",
+    "iso_country": "JP",
+    "icao_code": "RJOO",
+    "iata_code": "ITM",
+    "length_ft": 9840,
+    "width_ft": 200,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -2058,7 +2954,15 @@
     "freq": "118.150",
     "Lat": 35.530102,
     "Lon": 134.167007,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "RJOR",
+    "iso_country": "JP",
+    "icao_code": "RJOR",
+    "iata_code": "TTJ",
+    "length_ft": 6562,
+    "width_ft": 150,
+    "heading": 94,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2067,7 +2971,15 @@
     "freq": "124.000",
     "Lat": 34.132801,
     "Lon": 134.606995,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "RJOS",
+    "iso_country": "JP",
+    "icao_code": "RJOS",
+    "iata_code": "TKS",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 102.4,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2076,7 +2988,15 @@
     "freq": "121.200",
     "Lat": 34.2141990662,
     "Lon": 134.01600647,
-    "Ele": 185.0
+    "Ele": 185,
+    "ident": "RJOT",
+    "iso_country": "JP",
+    "icao_code": "RJOT",
+    "iata_code": "TAK",
+    "length_ft": 8200,
+    "width_ft": 200,
+    "heading": 72.8,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2085,7 +3005,15 @@
     "freq": "118.550",
     "Lat": 34.676399231,
     "Lon": 131.789993286,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "RJOW",
+    "iso_country": "JP",
+    "icao_code": "RJOW",
+    "iata_code": "IWJ",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 104.8,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2094,7 +3022,13 @@
     "freq": "120.450",
     "Lat": 34.59629821777344,
     "Lon": 135.60299682617188,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "RJOY",
+    "iso_country": "JP",
+    "length_ft": 3940,
+    "width_ft": 100,
+    "heading": 127.3,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2103,7 +3037,13 @@
     "freq": "24.580",
     "Lat": 34.0453,
     "Lon": 131.052002,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "RJOZ",
+    "iso_country": "JP",
+    "length_ft": 3940,
+    "width_ft": 200,
+    "heading": 160.5,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -2112,7 +3052,15 @@
     "freq": "133.300",
     "Lat": 40.73469924926758,
     "Lon": 140.6909942626953,
-    "Ele": 202.4
+    "Ele": 202.4,
+    "ident": "RJSA",
+    "iso_country": "JP",
+    "icao_code": "RJSA",
+    "iata_code": "AOJ",
+    "length_ft": 9846,
+    "width_ft": 200,
+    "heading": 52,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2121,7 +3069,15 @@
     "freq": "118.900",
     "Lat": 38.4119,
     "Lon": 140.371002,
-    "Ele": 107.6
+    "Ele": 107.6,
+    "ident": "RJSC",
+    "iso_country": "JP",
+    "icao_code": "RJSC",
+    "iata_code": "GAJ",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 6.6,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -2130,7 +3086,15 @@
     "freq": "118.150",
     "Lat": 38.0601997375,
     "Lon": 138.414001465,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "RJSD",
+    "iso_country": "JP",
+    "icao_code": "RJSD",
+    "iata_code": "SDS",
+    "length_ft": 3390,
+    "width_ft": 85,
+    "heading": 96.4,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2139,7 +3103,15 @@
     "freq": "118.050",
     "Lat": 37.22740173339844,
     "Lon": 140.43099975585938,
-    "Ele": 372.2
+    "Ele": 372.2,
+    "ident": "RJSF",
+    "iso_country": "JP",
+    "icao_code": "RJSF",
+    "iata_code": "FKS",
+    "length_ft": 8202,
+    "width_ft": 197,
+    "heading": 2.2,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -2148,7 +3120,15 @@
     "freq": "120.700",
     "Lat": 40.551181,
     "Lon": 141.465428,
-    "Ele": 46.3
+    "Ele": 46.3,
+    "ident": "RJSH",
+    "iso_country": "JP",
+    "icao_code": "RJSH",
+    "iata_code": "HHE",
+    "length_ft": 1180,
+    "width_ft": 50,
+    "heading": 109,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -2157,7 +3137,15 @@
     "freq": "124.500",
     "Lat": 39.4286,
     "Lon": 141.134995,
-    "Ele": 90.5
+    "Ele": 90.5,
+    "ident": "RJSI",
+    "iso_country": "JP",
+    "icao_code": "RJSI",
+    "iata_code": "HNA",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 11,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -2166,7 +3154,15 @@
     "freq": "127.100",
     "Lat": 39.615601,
     "Lon": 140.218994,
-    "Ele": 95.4
+    "Ele": 95.4,
+    "ident": "RJSK",
+    "iso_country": "JP",
+    "icao_code": "RJSK",
+    "iata_code": "AXT",
+    "length_ft": 8200,
+    "width_ft": 200,
+    "heading": 96.6,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2175,7 +3171,15 @@
     "freq": "120.700",
     "Lat": 40.703201,
     "Lon": 141.367996,
-    "Ele": 36.3
+    "Ele": 36.3,
+    "ident": "RJSM",
+    "iso_country": "JP",
+    "icao_code": "RJSM",
+    "iata_code": "MSJ",
+    "length_ft": 10000,
+    "width_ft": 150,
+    "heading": 95.1,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2184,7 +3188,15 @@
     "freq": "121.400",
     "Lat": 37.9558982849,
     "Lon": 139.121002197,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "RJSN",
+    "iso_country": "JP",
+    "icao_code": "RJSN",
+    "iata_code": "KIJ",
+    "length_ft": 8200,
+    "width_ft": 150,
+    "heading": 92.7,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2193,7 +3205,9 @@
     "freq": "",
     "Lat": 41.232808,
     "Lon": 141.132171,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "RJSO",
+    "iso_country": "JP"
   },
   {
     "type": "medium_airport",
@@ -2202,7 +3216,15 @@
     "freq": "118.750",
     "Lat": 40.191898,
     "Lon": 140.371002,
-    "Ele": 89.0
+    "Ele": 89,
+    "ident": "RJSR",
+    "iso_country": "JP",
+    "icao_code": "RJSR",
+    "iata_code": "ONJ",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 100.3,
+    "QFU": "29"
   },
   {
     "type": "large_airport",
@@ -2211,7 +3233,15 @@
     "freq": "120.400",
     "Lat": 38.139702,
     "Lon": 140.917007,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "RJSS",
+    "iso_country": "JP",
+    "icao_code": "RJSS",
+    "iata_code": "SDJ",
+    "length_ft": 3940,
+    "width_ft": 150,
+    "heading": 117.7,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -2220,7 +3250,13 @@
     "freq": "120.100",
     "Lat": 38.4049,
     "Lon": 141.220001,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "RJST",
+    "iso_country": "JP",
+    "length_ft": 4920,
+    "width_ft": 150,
+    "heading": 139.8,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2229,7 +3265,9 @@
     "freq": "",
     "Lat": 38.2356,
     "Lon": 140.923004,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "RJSU",
+    "iso_country": "JP"
   },
   {
     "type": "medium_airport",
@@ -2238,7 +3276,15 @@
     "freq": "118.800",
     "Lat": 38.812199,
     "Lon": 139.787003,
-    "Ele": 26.2
+    "Ele": 26.2,
+    "ident": "RJSY",
+    "iso_country": "JP",
+    "icao_code": "RJSY",
+    "iata_code": "SYO",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 79.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2247,7 +3293,10 @@
     "freq": "",
     "Lat": 35.01394,
     "Lon": 138.53074,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "RJT2",
+    "iso_country": "JP",
+    "local_code": "RJT2"
   },
   {
     "type": "medium_airport",
@@ -2256,7 +3305,15 @@
     "freq": "305.000",
     "Lat": 35.454601,
     "Lon": 139.449997,
-    "Ele": 62.5
+    "Ele": 62.5,
+    "ident": "RJTA",
+    "iso_country": "JP",
+    "icao_code": "RJTA",
+    "iata_code": "NJA",
+    "length_ft": 8000,
+    "width_ft": 150,
+    "heading": 359.2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -2265,7 +3322,12 @@
     "freq": "",
     "Lat": 35.7121,
     "Lon": 139.403243,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "RJTC",
+    "iso_country": "JP",
+    "length_ft": 2953,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -2274,7 +3336,13 @@
     "freq": "119.100",
     "Lat": 34.987099,
     "Lon": 139.828995,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "RJTE",
+    "iso_country": "JP",
+    "length_ft": 984,
+    "width_ft": 148,
+    "heading": 85.3,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2283,7 +3351,12 @@
     "freq": "",
     "Lat": 35.6717,
     "Lon": 139.528,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "RJTF",
+    "iso_country": "JP",
+    "length_ft": 2625,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -2292,7 +3365,15 @@
     "freq": "118.700",
     "Lat": 33.115002,
     "Lon": 139.785995,
-    "Ele": 92.4
+    "Ele": 92.4,
+    "ident": "RJTH",
+    "iso_country": "JP",
+    "icao_code": "RJTH",
+    "iata_code": "HAC",
+    "length_ft": 6563,
+    "width_ft": 148,
+    "heading": 69.6,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2301,7 +3382,13 @@
     "freq": "118.300",
     "Lat": 35.8419,
     "Lon": 139.410995,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "RJTJ",
+    "iso_country": "JP",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 159.9,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -2310,7 +3397,13 @@
     "freq": "119.100",
     "Lat": 35.3983,
     "Lon": 139.910004,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "RJTK",
+    "iso_country": "JP",
+    "length_ft": 6004,
+    "width_ft": 150,
+    "heading": 15.4,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -2319,7 +3412,13 @@
     "freq": "126.000",
     "Lat": 35.798901,
     "Lon": 140.011002,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "RJTL",
+    "iso_country": "JP",
+    "length_ft": 7380,
+    "width_ft": 150,
+    "heading": 359,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -2328,7 +3427,15 @@
     "freq": "118.600",
     "Lat": 34.7820014954,
     "Lon": 139.36000061,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "RJTO",
+    "iso_country": "JP",
+    "icao_code": "RJTO",
+    "iata_code": "OIM",
+    "length_ft": 5905,
+    "width_ft": 150,
+    "heading": 19.8,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -2337,7 +3444,15 @@
     "freq": "118.050",
     "Lat": 34.073600769,
     "Lon": 139.559997559,
-    "Ele": 20.4
+    "Ele": 20.4,
+    "ident": "RJTQ",
+    "iso_country": "JP",
+    "icao_code": "RJTQ",
+    "iata_code": "MYE",
+    "length_ft": 4350,
+    "width_ft": 100,
+    "heading": 17,
+    "QFU": "20"
   },
   {
     "type": "large_airport",
@@ -2346,7 +3461,15 @@
     "freq": "126.900",
     "Lat": 35.552299,
     "Lon": 139.779999,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "RJTT",
+    "iso_country": "JP",
+    "icao_code": "RJTT",
+    "iata_code": "HND",
+    "length_ft": 9843,
+    "width_ft": 200,
+    "heading": 149.9,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -2355,7 +3478,13 @@
     "freq": "120.100",
     "Lat": 36.5145,
     "Lon": 139.87101,
-    "Ele": 101.8
+    "Ele": 101.8,
+    "ident": "RJTU",
+    "iso_country": "JP",
+    "length_ft": 5570,
+    "width_ft": 150,
+    "heading": 4.3,
+    "QFU": "19"
   },
   {
     "type": "large_airport",
@@ -2364,7 +3493,15 @@
     "freq": "29.210",
     "Lat": 35.748501,
     "Lon": 139.348007,
-    "Ele": 141.1
+    "Ele": 141.1,
+    "ident": "RJTY",
+    "iso_country": "JP",
+    "icao_code": "RJTY",
+    "iata_code": "OKO",
+    "length_ft": 11000,
+    "width_ft": 200,
+    "heading": 170.3,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -2373,7 +3510,15 @@
     "freq": "126.900",
     "Lat": 26.195801,
     "Lon": 127.646004,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "ROAH",
+    "iso_country": "JP",
+    "icao_code": "ROAH",
+    "iata_code": "OKA",
+    "length_ft": 8858,
+    "width_ft": 197,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3527,13 @@
     "freq": "28.730",
     "Lat": 26.725953,
     "Lon": 127.765217,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "RODE",
+    "iso_country": "JP",
+    "length_ft": 1200,
+    "width_ft": 180,
+    "heading": 43.2,
+    "QFU": "23"
   },
   {
     "type": "large_airport",
@@ -2391,7 +3542,15 @@
     "freq": "33.580",
     "Lat": 26.351667,
     "Lon": 127.769444,
-    "Ele": 43.6
+    "Ele": 43.6,
+    "ident": "RODN",
+    "iso_country": "JP",
+    "icao_code": "RODN",
+    "iata_code": "DNA",
+    "length_ft": 12100,
+    "width_ft": 200,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -2400,7 +3559,15 @@
     "freq": "",
     "Lat": 24.396389,
     "Lon": 124.245,
-    "Ele": 31.1
+    "Ele": 31.1,
+    "ident": "ROIG",
+    "iso_country": "JP",
+    "icao_code": "ROIG",
+    "iata_code": "ISG",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -2409,7 +3576,15 @@
     "freq": "122.700",
     "Lat": 26.363445,
     "Lon": 126.71384,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "ROKJ",
+    "iso_country": "JP",
+    "icao_code": "ROKJ",
+    "iata_code": "UEO",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 21.2,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -2418,7 +3593,15 @@
     "freq": "",
     "Lat": 26.168337,
     "Lon": 127.293423,
-    "Ele": 47.5
+    "Ele": 47.5,
+    "ident": "ROKR",
+    "iso_country": "JP",
+    "icao_code": "ROKR",
+    "iata_code": "KJP",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -2427,7 +3610,15 @@
     "freq": "126.200",
     "Lat": 25.8465,
     "Lon": 131.263,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "ROMD",
+    "iso_country": "JP",
+    "icao_code": "ROMD",
+    "iata_code": "MMD",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 15.7,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -2436,7 +3627,15 @@
     "freq": "120.300",
     "Lat": 24.782801,
     "Lon": 125.294998,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "ROMY",
+    "iso_country": "JP",
+    "icao_code": "ROMY",
+    "iata_code": "MMY",
+    "length_ft": 6560,
+    "width_ft": 150,
+    "heading": 37.8,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -2445,7 +3644,14 @@
     "freq": "",
     "Lat": 26.592755,
     "Lon": 127.240335,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "RORA",
+    "iso_country": "JP",
+    "icao_code": "RORA",
+    "iata_code": "AGJ",
+    "length_ft": 2625,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -2454,7 +3660,15 @@
     "freq": "",
     "Lat": 26.722537,
     "Lon": 127.786801,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "RORE",
+    "iso_country": "JP",
+    "icao_code": "RORE",
+    "iata_code": "IEJ",
+    "length_ft": 4961,
+    "width_ft": 92,
+    "heading": 41.6,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2463,7 +3677,14 @@
     "freq": "",
     "Lat": 24.059751,
     "Lon": 123.80558,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "RORH",
+    "iso_country": "JP",
+    "icao_code": "RORH",
+    "iata_code": "HTR",
+    "length_ft": 2625,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -2472,7 +3693,15 @@
     "freq": "126.200",
     "Lat": 25.9447002411,
     "Lon": 131.32699585,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "RORK",
+    "iso_country": "JP",
+    "icao_code": "RORK",
+    "iata_code": "KTD",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -2481,7 +3710,15 @@
     "freq": "120.300",
     "Lat": 24.8267,
     "Lon": 125.144997,
-    "Ele": 16.5
+    "Ele": 16.5,
+    "ident": "RORS",
+    "iso_country": "JP",
+    "icao_code": "RORS",
+    "iata_code": "SHI",
+    "length_ft": 9842,
+    "width_ft": 200,
+    "heading": 166,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -2490,7 +3727,15 @@
     "freq": "118.600",
     "Lat": 24.653793,
     "Lon": 124.675453,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "RORT",
+    "iso_country": "JP",
+    "icao_code": "RORT",
+    "iata_code": "TRA",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 172.4,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -2499,7 +3744,15 @@
     "freq": "118.300",
     "Lat": 27.043847,
     "Lon": 128.401648,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "RORY",
+    "iso_country": "JP",
+    "icao_code": "RORY",
+    "iata_code": "RNJ",
+    "length_ft": 4340,
+    "width_ft": 100,
+    "heading": 138.1,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -2508,7 +3761,13 @@
     "freq": "23.030",
     "Lat": 26.2743,
     "Lon": 127.755997,
-    "Ele": 75.3
+    "Ele": 75.3,
+    "ident": "ROTM",
+    "iso_country": "JP",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 55,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2517,6 +3776,14 @@
     "freq": "118.500",
     "Lat": 24.467298,
     "Lon": 122.979827,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "ROYN",
+    "iso_country": "JP",
+    "icao_code": "ROYN",
+    "iata_code": "OGN",
+    "length_ft": 4920,
+    "width_ft": 150,
+    "heading": 75.3,
+    "QFU": "26"
   }
 ]

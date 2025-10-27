@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 5.888748,
     "Lon": -162.077866,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "PLPA",
+    "iso_country": "UM",
+    "icao_code": "PLPA",
+    "local_code": "P16"
   },
   {
     "type": "medium_airport",
@@ -15,7 +19,16 @@
     "freq": "118.325",
     "Lat": 28.2017,
     "Lon": -177.380997,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "PMDY",
+    "iso_country": "UM",
+    "icao_code": "PMDY",
+    "iata_code": "MDY",
+    "local_code": "MDY",
+    "length_ft": 7904,
+    "width_ft": 200,
+    "heading": 69,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -24,6 +37,15 @@
     "freq": "128.000",
     "Lat": 19.282437,
     "Lon": 166.636637,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "PWAK",
+    "iso_country": "UM",
+    "icao_code": "PWAK",
+    "iata_code": "AWK",
+    "local_code": "AWK",
+    "length_ft": 9843,
+    "width_ft": 150,
+    "heading": 95,
+    "QFU": "28"
   }
 ]

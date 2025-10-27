@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -3.471371,
     "Lon": 30.231485,
-    "Ele": 1583.1
+    "Ele": 1583.1,
+    "ident": "BI-0001",
+    "iso_country": "BI"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -2.879447,
     "Lon": 29.832178,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BI-0002",
+    "iso_country": "BI"
   },
   {
     "type": "medium_airport",
@@ -24,7 +28,15 @@
     "freq": "119.700",
     "Lat": -3.32402,
     "Lon": 29.318501,
-    "Ele": 787.0
+    "Ele": 787,
+    "ident": "HBBA",
+    "iso_country": "BI",
+    "icao_code": "HBBA",
+    "iata_code": "BJM",
+    "QFU": "35",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 172
   },
   {
     "type": "small_airport",
@@ -33,7 +45,14 @@
     "freq": "",
     "Lat": -3.417209,
     "Lon": 29.911308,
-    "Ele": 1749.9
+    "Ele": 1749.9,
+    "ident": "HBBE",
+    "iso_country": "BI",
+    "icao_code": "HBBE",
+    "iata_code": "GID",
+    "length_ft": 3117,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -42,7 +61,10 @@
     "freq": "",
     "Lat": -4.0342,
     "Lon": 30.1318,
-    "Ele": 1239.0
+    "Ele": 1239,
+    "ident": "HBBK",
+    "iso_country": "BI",
+    "icao_code": "HBBK"
   },
   {
     "type": "small_airport",
@@ -51,6 +73,13 @@
     "freq": "",
     "Lat": -2.544772,
     "Lon": 30.094575,
-    "Ele": 1375.0
+    "Ele": 1375,
+    "ident": "HBBO",
+    "iso_country": "BI",
+    "icao_code": "HBBO",
+    "iata_code": "KRE",
+    "length_ft": 3281,
+    "QFU": "30",
+    "heading": 300
   }
 ]

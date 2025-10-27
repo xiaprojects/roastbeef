@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 9.3066,
     "Lon": 80.489,
-    "Ele": 55.8
+    "Ele": 55.8,
+    "ident": "LK-0001",
+    "iso_country": "LK"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 7.979668,
     "Lon": 79.856495,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "LK-0002",
+    "iso_country": "LK"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 8.9426,
     "Lon": 79.94759,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "LK-0003",
+    "iso_country": "LK"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 9.26869,
     "Lon": 80.72741,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "LK-0004",
+    "iso_country": "LK"
   },
   {
     "type": "large_airport",
@@ -42,7 +50,15 @@
     "freq": "120.900",
     "Lat": 7.180759906768799,
     "Lon": 79.88410186767578,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "VCBI",
+    "iso_country": "LK",
+    "icao_code": "VCBI",
+    "iata_code": "CMB",
+    "length_ft": 10991,
+    "width_ft": 148,
+    "heading": 37,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -51,7 +67,15 @@
     "freq": "126.700",
     "Lat": 8.301542,
     "Lon": 80.42848,
-    "Ele": 98.8
+    "Ele": 98.8,
+    "ident": "VCCA",
+    "iso_country": "LK",
+    "icao_code": "VCCA",
+    "iata_code": "ACJ",
+    "length_ft": 4876,
+    "width_ft": 150,
+    "heading": 46.3,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -60,7 +84,15 @@
     "freq": "118.100",
     "Lat": 7.70576,
     "Lon": 81.678802,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VCCB",
+    "iso_country": "LK",
+    "icao_code": "VCCB",
+    "iata_code": "BTC",
+    "length_ft": 3592,
+    "width_ft": 40,
+    "heading": 61.4,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -69,7 +101,15 @@
     "freq": "119.100",
     "Lat": 6.821990013122559,
     "Lon": 79.88619995117188,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "VCCC",
+    "iso_country": "LK",
+    "icao_code": "VCCC",
+    "iata_code": "RML",
+    "length_ft": 6013,
+    "width_ft": 100,
+    "heading": 33.3,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -78,7 +118,15 @@
     "freq": "118.100",
     "Lat": 7.336745,
     "Lon": 81.623869,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "VCCG",
+    "iso_country": "LK",
+    "icao_code": "VCCG",
+    "iata_code": "ADP",
+    "length_ft": 3600,
+    "width_ft": 151,
+    "heading": 65,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -87,7 +135,11 @@
     "freq": "",
     "Lat": 8.04981,
     "Lon": 80.9814,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "VCCH",
+    "iso_country": "LK",
+    "icao_code": "VCCH",
+    "iata_code": "HIM"
   },
   {
     "type": "medium_airport",
@@ -96,7 +148,15 @@
     "freq": "124.300",
     "Lat": 9.79233,
     "Lon": 80.070099,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "VCCJ",
+    "iso_country": "LK",
+    "icao_code": "VCCJ",
+    "iata_code": "JAF",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -105,7 +165,15 @@
     "freq": "118.100",
     "Lat": 5.993680000305176,
     "Lon": 80.32029724121094,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "VCCK",
+    "iso_country": "LK",
+    "icao_code": "VCCK",
+    "iata_code": "KCT",
+    "length_ft": 3142,
+    "width_ft": 140,
+    "heading": 69.7,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -114,7 +182,16 @@
     "freq": "118.400",
     "Lat": 6.55212020874,
     "Lon": 79.9775009155,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "VCCN",
+    "iso_country": "LK",
+    "icao_code": "VCCN",
+    "iata_code": "KTY",
+    "local_code": "VC14",
+    "length_ft": 3200,
+    "width_ft": 145,
+    "heading": 108.3,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -123,7 +200,15 @@
     "freq": "118.100",
     "Lat": 7.95667,
     "Lon": 80.7285,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "VCCS",
+    "iso_country": "LK",
+    "icao_code": "VCCS",
+    "iata_code": "GIU",
+    "length_ft": 5925,
+    "width_ft": 145,
+    "heading": 39.4,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -132,7 +217,15 @@
     "freq": "118.100",
     "Lat": 8.539159,
     "Lon": 81.18128,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VCCT",
+    "iso_country": "LK",
+    "icao_code": "VCCT",
+    "iata_code": "TRR",
+    "length_ft": 7850,
+    "width_ft": 85,
+    "heading": 59.3,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -141,7 +234,13 @@
     "freq": "118.100",
     "Lat": 8.741009,
     "Lon": 80.497845,
-    "Ele": 91.1
+    "Ele": 91.1,
+    "ident": "VCCV",
+    "iso_country": "LK",
+    "length_ft": 5060,
+    "width_ft": 80,
+    "heading": 41,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -150,7 +249,15 @@
     "freq": "118.100",
     "Lat": 6.25449,
     "Lon": 81.235199,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "VCCW",
+    "iso_country": "LK",
+    "icao_code": "VCCW",
+    "iata_code": "WRZ",
+    "length_ft": 4000,
+    "width_ft": 93,
+    "heading": 68.8,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -159,6 +266,15 @@
     "freq": "121.700",
     "Lat": 6.284467,
     "Lon": 81.124128,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "VCRI",
+    "iso_country": "LK",
+    "icao_code": "VCRI",
+    "iata_code": "HRI",
+    "local_code": "VCRI",
+    "length_ft": 11483,
+    "width_ft": 197,
+    "QFU": "23",
+    "heading": 230
   }
 ]

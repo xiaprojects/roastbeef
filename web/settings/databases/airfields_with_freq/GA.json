@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": -1.701616,
     "Lon": 10.409681,
-    "Ele": 125.9
+    "Ele": 125.9,
+    "ident": "FO10",
+    "iso_country": "GA",
+    "local_code": "FO08"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,11 @@
     "freq": "",
     "Lat": -1.13967001438,
     "Lon": 13.9035997391,
-    "Ele": 506.0
+    "Ele": 506,
+    "ident": "FOGA",
+    "iso_country": "GA",
+    "icao_code": "FOGA",
+    "iata_code": "AKE"
   },
   {
     "type": "small_airport",
@@ -24,7 +31,11 @@
     "freq": "",
     "Lat": -0.1075,
     "Lon": 11.9438,
-    "Ele": 184.1
+    "Ele": 184.1,
+    "ident": "FOGB",
+    "iso_country": "GA",
+    "icao_code": "FOGB",
+    "iata_code": "BGB"
   },
   {
     "type": "small_airport",
@@ -33,7 +44,11 @@
     "freq": "",
     "Lat": -2.4,
     "Lon": 11.367,
-    "Ele": 127.1
+    "Ele": 127.1,
+    "ident": "FOGE",
+    "iso_country": "GA",
+    "icao_code": "FOGE",
+    "iata_code": "KDN"
   },
   {
     "type": "small_airport",
@@ -42,7 +57,11 @@
     "freq": "",
     "Lat": -1.278325,
     "Lon": 10.612497,
-    "Ele": 80.2
+    "Ele": 80.2,
+    "ident": "FOGF",
+    "iso_country": "GA",
+    "icao_code": "FOGF",
+    "iata_code": "FOU"
   },
   {
     "type": "small_airport",
@@ -51,7 +70,11 @@
     "freq": "",
     "Lat": -1.893056,
     "Lon": 11.9125,
-    "Ele": 715.1
+    "Ele": 715.1,
+    "ident": "FOGG",
+    "iso_country": "GA",
+    "icao_code": "FOGG",
+    "iata_code": "MBC"
   },
   {
     "type": "small_airport",
@@ -60,7 +83,11 @@
     "freq": "",
     "Lat": -2.455187,
     "Lon": 10.9358,
-    "Ele": 239.9
+    "Ele": 239.9,
+    "ident": "FOGI",
+    "iso_country": "GA",
+    "icao_code": "FOGI",
+    "iata_code": "MGX"
   },
   {
     "type": "small_airport",
@@ -69,7 +96,11 @@
     "freq": "",
     "Lat": -0.183,
     "Lon": 10.75,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "FOGJ",
+    "iso_country": "GA",
+    "icao_code": "FOGJ",
+    "iata_code": "KDJ"
   },
   {
     "type": "medium_airport",
@@ -78,7 +109,15 @@
     "freq": "112.750",
     "Lat": -1.18461,
     "Lon": 12.4413,
-    "Ele": 326.1
+    "Ele": 326.1,
+    "ident": "FOGK",
+    "iso_country": "GA",
+    "icao_code": "FOGK",
+    "iata_code": "KOU",
+    "length_ft": 5841,
+    "width_ft": 148,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -87,7 +126,15 @@
     "freq": "122.500",
     "Lat": -1.84514,
     "Lon": 11.0567,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "FOGM",
+    "iso_country": "GA",
+    "icao_code": "FOGM",
+    "iata_code": "MJL",
+    "length_ft": 5891,
+    "width_ft": 100,
+    "heading": 167.6,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -96,7 +143,15 @@
     "freq": "118.400",
     "Lat": 1.5431100130081177,
     "Lon": 11.58139991760254,
-    "Ele": 657.8
+    "Ele": 657.8,
+    "ident": "FOGO",
+    "iso_country": "GA",
+    "icao_code": "FOGO",
+    "iata_code": "OYE",
+    "length_ft": 5906,
+    "width_ft": 98,
+    "heading": 25,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -105,7 +160,15 @@
     "freq": "",
     "Lat": -0.665214,
     "Lon": 13.6731,
-    "Ele": 403.9
+    "Ele": 403.9,
+    "ident": "FOGQ",
+    "iso_country": "GA",
+    "icao_code": "FOGQ",
+    "iata_code": "OKN",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 73,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -114,7 +177,15 @@
     "freq": "118.600",
     "Lat": -0.704389,
     "Lon": 10.2457,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "FOGR",
+    "iso_country": "GA",
+    "icao_code": "FOGR",
+    "iata_code": "LBQ",
+    "length_ft": 7555,
+    "width_ft": 148,
+    "heading": 42,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -123,7 +194,11 @@
     "freq": "",
     "Lat": 2.152413,
     "Lon": 12.108044,
-    "Ele": 600.2
+    "Ele": 600.2,
+    "ident": "FOGV",
+    "iso_country": "GA",
+    "icao_code": "FOGV",
+    "iata_code": "MVX"
   },
   {
     "type": "small_airport",
@@ -132,7 +207,11 @@
     "freq": "",
     "Lat": -0.545,
     "Lon": 9.444,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "FOGW",
+    "iso_country": "GA",
+    "icao_code": "FOGW",
+    "iata_code": "AWE"
   },
   {
     "type": "medium_airport",
@@ -141,7 +220,15 @@
     "freq": "",
     "Lat": 2.07564,
     "Lon": 11.4932,
-    "Ele": 600.2
+    "Ele": 600.2,
+    "ident": "FOOB",
+    "iso_country": "GA",
+    "icao_code": "FOOB",
+    "iata_code": "BMM",
+    "length_ft": 5726,
+    "width_ft": 98,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -150,7 +237,15 @@
     "freq": "",
     "Lat": -1.526558,
     "Lon": 13.251332,
-    "Ele": 572.1
+    "Ele": 572.1,
+    "ident": "FOOD",
+    "iso_country": "GA",
+    "icao_code": "FOOD",
+    "iata_code": "MFF",
+    "length_ft": 5906,
+    "width_ft": 92,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -159,7 +254,11 @@
     "freq": "",
     "Lat": 0.976706,
     "Lon": 13.968462,
-    "Ele": 509.9
+    "Ele": 509.9,
+    "ident": "FOOE",
+    "iso_country": "GA",
+    "icao_code": "FOOE",
+    "iata_code": "MKB"
   },
   {
     "type": "medium_airport",
@@ -168,7 +267,15 @@
     "freq": "655.900",
     "Lat": -0.7117390036582947,
     "Lon": 8.754380226135254,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "FOOG",
+    "iso_country": "GA",
+    "icao_code": "FOOG",
+    "iata_code": "POG",
+    "length_ft": 6234,
+    "width_ft": 148,
+    "heading": 22,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -177,7 +284,15 @@
     "freq": "122.500",
     "Lat": -1.57473,
     "Lon": 9.26269,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "FOOH",
+    "iso_country": "GA",
+    "icao_code": "FOOH",
+    "iata_code": "OMB",
+    "length_ft": 5285,
+    "width_ft": 98,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -186,7 +301,11 @@
     "freq": "",
     "Lat": -1.930801,
     "Lon": 9.319577,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "FOOI",
+    "iso_country": "GA",
+    "icao_code": "FOOI",
+    "iata_code": "IGE"
   },
   {
     "type": "medium_airport",
@@ -195,7 +314,15 @@
     "freq": "118.500",
     "Lat": 0.5792109966278076,
     "Lon": 12.890899658203123,
-    "Ele": 526.1
+    "Ele": 526.1,
+    "ident": "FOOK",
+    "iso_country": "GA",
+    "icao_code": "FOOK",
+    "iata_code": "MKU",
+    "length_ft": 5892,
+    "width_ft": 148,
+    "heading": 58,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -204,7 +331,15 @@
     "freq": "655.900",
     "Lat": 0.458600014448,
     "Lon": 9.4122800827,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "FOOL",
+    "iso_country": "GA",
+    "icao_code": "FOOL",
+    "iata_code": "LBV",
+    "length_ft": 9844,
+    "width_ft": 148,
+    "heading": 154,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -213,7 +348,11 @@
     "freq": "",
     "Lat": 0.783,
     "Lon": 11.55,
-    "Ele": 583.1
+    "Ele": 583.1,
+    "ident": "FOOM",
+    "iso_country": "GA",
+    "icao_code": "FOOM",
+    "iata_code": "MZC"
   },
   {
     "type": "medium_airport",
@@ -222,7 +361,15 @@
     "freq": "655.900",
     "Lat": -1.6561599969863892,
     "Lon": 13.437999725341797,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "FOON",
+    "iso_country": "GA",
+    "icao_code": "FOON",
+    "iata_code": "MVB",
+    "length_ft": 10105,
+    "width_ft": 148,
+    "heading": 144,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -231,7 +378,11 @@
     "freq": "",
     "Lat": -0.826667,
     "Lon": 12.7486,
-    "Ele": 483.1
+    "Ele": 483.1,
+    "ident": "FOOR",
+    "iso_country": "GA",
+    "icao_code": "FOOR",
+    "iata_code": "LTL"
   },
   {
     "type": "small_airport",
@@ -240,7 +391,10 @@
     "freq": "",
     "Lat": -2.53732,
     "Lon": 9.76386,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "FOOS",
+    "iso_country": "GA",
+    "icao_code": "FOOS"
   },
   {
     "type": "small_airport",
@@ -249,7 +403,14 @@
     "freq": "124.900",
     "Lat": -2.88848,
     "Lon": 10.955429,
-    "Ele": 82.0
+    "Ele": 82,
+    "ident": "FOOT",
+    "iso_country": "GA",
+    "icao_code": "FOOT",
+    "iata_code": "TCH",
+    "length_ft": 5906,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -258,7 +419,11 @@
     "freq": "",
     "Lat": -3.458372,
     "Lon": 10.676539,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "FOOY",
+    "iso_country": "GA",
+    "icao_code": "FOOY",
+    "iata_code": "MYB"
   },
   {
     "type": "small_airport",
@@ -267,7 +432,9 @@
     "freq": "",
     "Lat": -1.106,
     "Lon": 12.503,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "GA-0001",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -276,7 +443,9 @@
     "freq": "",
     "Lat": 0.287176,
     "Lon": 11.386303,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GA-0002",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -285,7 +454,9 @@
     "freq": "",
     "Lat": -1.895675,
     "Lon": 9.31777,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GA-0003",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -294,7 +465,9 @@
     "freq": "",
     "Lat": -1.442,
     "Lon": 9.1188,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GA-0004",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -303,7 +476,10 @@
     "freq": "",
     "Lat": 0.3843,
     "Lon": 9.75364,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GA-0005",
+    "iso_country": "GA",
+    "iata_code": "NKA"
   },
   {
     "type": "small_airport",
@@ -312,7 +488,10 @@
     "freq": "",
     "Lat": -0.02894,
     "Lon": 11.418021,
-    "Ele": 294.1
+    "Ele": 294.1,
+    "ident": "GA-0006",
+    "iso_country": "GA",
+    "iata_code": "GIM"
   },
   {
     "type": "small_airport",
@@ -321,7 +500,9 @@
     "freq": "",
     "Lat": -0.099464,
     "Lon": 11.777114,
-    "Ele": 168.2
+    "Ele": 168.2,
+    "ident": "GA-0007",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -330,7 +511,9 @@
     "freq": "",
     "Lat": -0.144131,
     "Lon": 12.187929,
-    "Ele": 221.3
+    "Ele": 221.3,
+    "ident": "GA-0008",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -339,7 +522,9 @@
     "freq": "",
     "Lat": -0.539352,
     "Lon": 12.633707,
-    "Ele": 285.9
+    "Ele": 285.9,
+    "ident": "GA-0009",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -348,7 +533,9 @@
     "freq": "",
     "Lat": -1.311,
     "Lon": 13.2722,
-    "Ele": 340.2
+    "Ele": 340.2,
+    "ident": "GA-0010",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -357,7 +544,9 @@
     "freq": "",
     "Lat": -0.483557,
     "Lon": 9.592044,
-    "Ele": 91.1
+    "Ele": 91.1,
+    "ident": "GA-0011",
+    "iso_country": "GA"
   },
   {
     "type": "small_airport",
@@ -366,7 +555,15 @@
     "freq": "",
     "Lat": -2.785278,
     "Lon": 10.047222,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "GA-GAX",
+    "iso_country": "GA",
+    "icao_code": "FOGX",
+    "iata_code": "GAX",
+    "length_ft": 5906,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -375,6 +572,9 @@
     "freq": "",
     "Lat": -1.5724,
     "Lon": 14.2878,
-    "Ele": 620.6
+    "Ele": 620.6,
+    "ident": "LEO",
+    "iso_country": "GA",
+    "iata_code": "LEO"
   }
 ]

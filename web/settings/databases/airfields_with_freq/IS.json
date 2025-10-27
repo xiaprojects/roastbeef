@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 65.90470123291016,
     "Lon": -22.363300323486328,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "BIAE",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 63.53979,
     "Lon": -18.44374,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "BIAL",
+    "iso_country": "IS"
   },
   {
     "type": "medium_airport",
@@ -24,7 +28,15 @@
     "freq": "119.700",
     "Lat": 65.656573,
     "Lon": -18.072018,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "BIAR",
+    "iso_country": "IS",
+    "icao_code": "BIAR",
+    "iata_code": "AEY",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 355,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,10 @@
     "freq": "",
     "Lat": 63.556099,
     "Lon": -20.137501,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "BIBA",
+    "iso_country": "IS",
+    "icao_code": "BIBA"
   },
   {
     "type": "small_airport",
@@ -42,7 +57,15 @@
     "freq": "119.700",
     "Lat": 65.641296,
     "Lon": -23.5462,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "BIBD",
+    "iso_country": "IS",
+    "icao_code": "BIBD",
+    "iata_code": "BIU",
+    "length_ft": 3084,
+    "width_ft": 98,
+    "heading": 28,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -51,7 +74,11 @@
     "freq": "",
     "Lat": 65.516769,
     "Lon": -13.81578,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "BIBF",
+    "iso_country": "IS",
+    "icao_code": "BIBF",
+    "iata_code": "BGJ"
   },
   {
     "type": "small_airport",
@@ -60,7 +87,9 @@
     "freq": "",
     "Lat": 66.097838,
     "Lon": -22.569713,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "BIBI",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -69,7 +98,11 @@
     "freq": "",
     "Lat": 66.02189636230469,
     "Lon": -14.824399948120115,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "BIBK",
+    "iso_country": "IS",
+    "icao_code": "BIBK",
+    "iata_code": "BJD"
   },
   {
     "type": "small_airport",
@@ -78,7 +111,14 @@
     "freq": "",
     "Lat": 65.644997,
     "Lon": -20.2875,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "BIBL",
+    "iso_country": "IS",
+    "icao_code": "BIBL",
+    "iata_code": "BLO",
+    "length_ft": 3182,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -87,7 +127,10 @@
     "freq": "",
     "Lat": 65.074583,
     "Lon": -21.802193,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "BIBR",
+    "iso_country": "IS",
+    "icao_code": "BIBR"
   },
   {
     "type": "small_airport",
@@ -96,7 +139,11 @@
     "freq": "",
     "Lat": 64.790037,
     "Lon": -14.043927,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "BIBV",
+    "iso_country": "IS",
+    "icao_code": "BIBV",
+    "iata_code": "BXV"
   },
   {
     "type": "small_airport",
@@ -105,7 +152,9 @@
     "freq": "",
     "Lat": 64.744617,
     "Lon": -23.726521,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "BIDA",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -114,7 +163,11 @@
     "freq": "",
     "Lat": 64.642372,
     "Lon": -14.277297,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "BIDV",
+    "iso_country": "IS",
+    "icao_code": "BIDV",
+    "iata_code": "DJU"
   },
   {
     "type": "medium_airport",
@@ -123,7 +176,15 @@
     "freq": "119.700",
     "Lat": 65.2833023071289,
     "Lon": -14.401399612426758,
-    "Ele": 23.2
+    "Ele": 23.2,
+    "ident": "BIEG",
+    "iso_country": "IS",
+    "icao_code": "BIEG",
+    "iata_code": "EGS",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 25,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -132,7 +193,11 @@
     "freq": "",
     "Lat": 64.931456,
     "Lon": -14.047957,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "BIFF",
+    "iso_country": "IS",
+    "icao_code": "BIFF",
+    "iata_code": "FAS"
   },
   {
     "type": "small_airport",
@@ -141,7 +206,9 @@
     "freq": "",
     "Lat": 64.1427993774414,
     "Lon": -20.326099395751957,
-    "Ele": 82.3
+    "Ele": 82.3,
+    "ident": "BIFL",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -150,7 +217,11 @@
     "freq": "",
     "Lat": 63.874699,
     "Lon": -16.6411,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "BIFM",
+    "iso_country": "IS",
+    "icao_code": "BIFM",
+    "iata_code": "FAG"
   },
   {
     "type": "small_airport",
@@ -159,7 +230,13 @@
     "freq": "",
     "Lat": 63.84816,
     "Lon": -20.716267,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "BIFZ",
+    "iso_country": "IS",
+    "length_ft": 2510,
+    "width_ft": 115,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -168,7 +245,11 @@
     "freq": "",
     "Lat": 64.991402,
     "Lon": -23.224701,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "BIGF",
+    "iso_country": "IS",
+    "icao_code": "BIGF",
+    "iata_code": "GUU"
   },
   {
     "type": "small_airport",
@@ -177,7 +258,9 @@
     "freq": "",
     "Lat": 63.85329818725586,
     "Lon": -20.262800216674805,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "BIGH",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -186,7 +269,14 @@
     "freq": "",
     "Lat": 65.9953,
     "Lon": -21.3269,
-    "Ele": 25.3
+    "Ele": 25.3,
+    "ident": "BIGJ",
+    "iso_country": "IS",
+    "icao_code": "BIGJ",
+    "iata_code": "GJR",
+    "length_ft": 3041,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -195,7 +285,15 @@
     "freq": "",
     "Lat": 66.5458,
     "Lon": -18.0173,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "BIGR",
+    "iso_country": "IS",
+    "icao_code": "BIGR",
+    "iata_code": "GRY",
+    "length_ft": 1150,
+    "width_ft": 80,
+    "heading": 160,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -204,7 +302,9 @@
     "freq": "",
     "Lat": 65.63249969482422,
     "Lon": -16.148300170898438,
-    "Ele": 389.8
+    "Ele": 389.8,
+    "ident": "BIGS",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -213,7 +313,9 @@
     "freq": "",
     "Lat": 65.188599,
     "Lon": -16.1947,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "BIHE",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -222,7 +324,9 @@
     "freq": "",
     "Lat": 64.88610076904297,
     "Lon": -19.49250030517578,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "BIHI",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -231,7 +335,14 @@
     "freq": "",
     "Lat": 65.704697,
     "Lon": -21.6964,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "BIHK",
+    "iso_country": "IS",
+    "icao_code": "BIHK",
+    "iata_code": "HVK",
+    "length_ft": 3280,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -240,7 +351,9 @@
     "freq": "",
     "Lat": 63.83580017089844,
     "Lon": -20.377500534057617,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "BIHL",
+    "iso_country": "IS"
   },
   {
     "type": "medium_airport",
@@ -249,7 +362,15 @@
     "freq": "119.700",
     "Lat": 64.295601,
     "Lon": -15.2272,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "BIHN",
+    "iso_country": "IS",
+    "icao_code": "BIHN",
+    "iata_code": "HFN",
+    "length_ft": 4921,
+    "width_ft": 148,
+    "heading": 168,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -258,7 +379,9 @@
     "freq": "",
     "Lat": 63.752743,
     "Lon": -20.250893,
-    "Ele": 33.2
+    "Ele": 33.2,
+    "ident": "BIHR",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -267,7 +390,9 @@
     "freq": "",
     "Lat": 65.75716,
     "Lon": -23.461404,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "BIHS",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -276,7 +401,10 @@
     "freq": "",
     "Lat": 66.0141804294,
     "Lon": -23.4416913986,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "BIHT",
+    "iso_country": "IS",
+    "iata_code": "FLI"
   },
   {
     "type": "medium_airport",
@@ -285,7 +413,15 @@
     "freq": "119.700",
     "Lat": 65.952301,
     "Lon": -17.426001,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "BIHU",
+    "iso_country": "IS",
+    "icao_code": "BIHU",
+    "iata_code": "HZK",
+    "length_ft": 5266,
+    "width_ft": 157,
+    "heading": 12,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -294,7 +430,9 @@
     "freq": "",
     "Lat": 65.270241,
     "Lon": -20.848696,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "BIHV",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -303,7 +441,9 @@
     "freq": "",
     "Lat": 65.989204,
     "Lon": -18.394117,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "BIHY",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -312,7 +452,9 @@
     "freq": "",
     "Lat": 64.69969940185547,
     "Lon": -20.88360023498535,
-    "Ele": 115.8
+    "Ele": 115.8,
+    "ident": "BIHZ",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -321,7 +463,10 @@
     "freq": "",
     "Lat": 66.05000305175781,
     "Lon": -23.69610023498535,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "BIID",
+    "iso_country": "IS",
+    "iata_code": "HLO"
   },
   {
     "type": "medium_airport",
@@ -330,7 +475,15 @@
     "freq": "119.700",
     "Lat": 66.058098,
     "Lon": -23.1353,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "BIIS",
+    "iso_country": "IS",
+    "icao_code": "BIIS",
+    "iata_code": "IFJ",
+    "length_ft": 4593,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -339,7 +492,9 @@
     "freq": "",
     "Lat": 64.77890014648438,
     "Lon": -22.25690078735352,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "BIKA",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -348,7 +503,9 @@
     "freq": "",
     "Lat": 64.70500183105469,
     "Lon": -19.410600662231445,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "BIKE",
+    "iso_country": "IS"
   },
   {
     "type": "large_airport",
@@ -357,7 +514,15 @@
     "freq": "131.900",
     "Lat": 63.985001,
     "Lon": -22.6056,
-    "Ele": 52.1
+    "Ele": 52.1,
+    "ident": "BIKF",
+    "iso_country": "IS",
+    "icao_code": "BIKF",
+    "iata_code": "KEF",
+    "length_ft": 10056,
+    "width_ft": 197,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -366,7 +531,9 @@
     "freq": "",
     "Lat": 65.46700286865234,
     "Lon": -21.950000762939453,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "BIKJ",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -375,7 +542,9 @@
     "freq": "",
     "Lat": 63.792685,
     "Lon": -18.004684,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "BIKL",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -384,7 +553,11 @@
     "freq": "",
     "Lat": 66.310799,
     "Lon": -16.4667,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "BIKP",
+    "iso_country": "IS",
+    "icao_code": "BIKP",
+    "iata_code": "OPA"
   },
   {
     "type": "small_airport",
@@ -393,7 +566,15 @@
     "freq": "",
     "Lat": 65.73169708249999,
     "Lon": -19.5727996826,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "BIKR",
+    "iso_country": "IS",
+    "icao_code": "BIKR",
+    "iata_code": "SAK",
+    "length_ft": 6191,
+    "width_ft": 90,
+    "heading": 351,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -402,7 +583,9 @@
     "freq": "",
     "Lat": 63.71419906616211,
     "Lon": -19.879199981689453,
-    "Ele": 82.9
+    "Ele": 82.9,
+    "ident": "BIMK",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -411,7 +594,9 @@
     "freq": "",
     "Lat": 65.4832992553711,
     "Lon": -18.16670036315918,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "BIMM",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -420,7 +605,9 @@
     "freq": "118.200",
     "Lat": 64.18109893798828,
     "Lon": -21.707799911499023,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "BIMS",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -429,7 +616,9 @@
     "freq": "",
     "Lat": 64.72059631347656,
     "Lon": -18.066699981689453,
-    "Ele": 800.1
+    "Ele": 800.1,
+    "ident": "BIND",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -438,7 +627,14 @@
     "freq": "",
     "Lat": 65.131897,
     "Lon": -13.7464,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "BINF",
+    "iso_country": "IS",
+    "icao_code": "BINF",
+    "iata_code": "NOR",
+    "length_ft": 3648,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -447,7 +643,11 @@
     "freq": "",
     "Lat": 66.083298,
     "Lon": -18.6667,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "BIOF",
+    "iso_country": "IS",
+    "icao_code": "BIOF",
+    "iata_code": "OFJ"
   },
   {
     "type": "small_airport",
@@ -456,7 +656,15 @@
     "freq": "119.700",
     "Lat": 65.555801,
     "Lon": -23.965,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "BIPA",
+    "iso_country": "IS",
+    "icao_code": "BIPA",
+    "iata_code": "PFJ",
+    "length_ft": 4593,
+    "width_ft": 148,
+    "heading": 119.1,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -465,7 +673,11 @@
     "freq": "",
     "Lat": 65.45262908935547,
     "Lon": -22.20611572265625,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "BIRE",
+    "iso_country": "IS",
+    "icao_code": "BIRE",
+    "iata_code": "RHA"
   },
   {
     "type": "small_airport",
@@ -474,7 +686,11 @@
     "freq": "",
     "Lat": 64.9114,
     "Lon": -23.823099,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "BIRF",
+    "iso_country": "IS",
+    "icao_code": "BIRF",
+    "iata_code": "OLI"
   },
   {
     "type": "small_airport",
@@ -483,7 +699,14 @@
     "freq": "",
     "Lat": 66.406403,
     "Lon": -15.9183,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "BIRG",
+    "iso_country": "IS",
+    "icao_code": "BIRG",
+    "iata_code": "RFN",
+    "length_ft": 3533,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -492,7 +715,15 @@
     "freq": "119.000",
     "Lat": 64.128732,
     "Lon": -21.93759,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "BIRK",
+    "iso_country": "IS",
+    "icao_code": "BIRK",
+    "iata_code": "RKV",
+    "length_ft": 4035,
+    "width_ft": 148,
+    "heading": 117,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -501,7 +732,11 @@
     "freq": "",
     "Lat": 65.6558,
     "Lon": -16.9181,
-    "Ele": 313.9
+    "Ele": 313.9,
+    "ident": "BIRL",
+    "iso_country": "IS",
+    "icao_code": "BIRL",
+    "iata_code": "MVA"
   },
   {
     "type": "small_airport",
@@ -510,7 +745,9 @@
     "freq": "",
     "Lat": 65.91419982910156,
     "Lon": -22.42140007019043,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "BIRS",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -519,7 +756,9 @@
     "freq": "118.100",
     "Lat": 65.1343994140625,
     "Lon": -19.66309928894043,
-    "Ele": 481.6
+    "Ele": 481.6,
+    "ident": "BISA",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -528,7 +767,12 @@
     "freq": "",
     "Lat": 63.929199,
     "Lon": -21.0378,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "BISF",
+    "iso_country": "IS",
+    "length_ft": 3478,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -537,7 +781,9 @@
     "freq": "",
     "Lat": 64.16547,
     "Lon": -15.91334,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "BISG",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -546,7 +792,9 @@
     "freq": "",
     "Lat": 65.4000015258789,
     "Lon": -21.933000564575195,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "BISH",
+    "iso_country": "IS"
   },
   {
     "type": "medium_airport",
@@ -555,7 +803,15 @@
     "freq": "119.700",
     "Lat": 66.137847,
     "Lon": -18.908157,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "BISI",
+    "iso_country": "IS",
+    "icao_code": "BISI",
+    "iata_code": "SIJ",
+    "length_ft": 3556,
+    "width_ft": 105,
+    "heading": 43,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -564,7 +820,9 @@
     "freq": "",
     "Lat": 63.5172,
     "Lon": -19.489201,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "BISK",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -573,7 +831,9 @@
     "freq": "",
     "Lat": 64.384723,
     "Lon": -15.371935,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "BISN",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -582,7 +842,9 @@
     "freq": "",
     "Lat": 64.6541976928711,
     "Lon": -18.49690055847168,
-    "Ele": 624.8
+    "Ele": 624.8,
+    "ident": "BISP",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -591,7 +853,10 @@
     "freq": "",
     "Lat": 64.6343994140625,
     "Lon": -21.487499237060547,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "BISR",
+    "iso_country": "IS",
+    "icao_code": "BISR"
   },
   {
     "type": "small_airport",
@@ -600,7 +865,14 @@
     "freq": "119.900",
     "Lat": 64.06079864501953,
     "Lon": -21.57469940185547,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "BISS",
+    "iso_country": "IS",
+    "icao_code": "BISS",
+    "length_ft": 2578,
+    "width_ft": 59,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -609,7 +881,14 @@
     "freq": "",
     "Lat": 65.058851,
     "Lon": -22.764616,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "BIST",
+    "iso_country": "IS",
+    "icao_code": "BIST",
+    "iata_code": "SYK",
+    "length_ft": 3675,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -618,7 +897,10 @@
     "freq": "",
     "Lat": 64.11579895019531,
     "Lon": -18.783300399780277,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "BISV",
+    "iso_country": "IS",
+    "icao_code": "BISV"
   },
   {
     "type": "small_airport",
@@ -627,7 +909,14 @@
     "freq": "",
     "Lat": 65.8703,
     "Lon": -23.559999,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "BITE",
+    "iso_country": "IS",
+    "icao_code": "BITE",
+    "iata_code": "TEY",
+    "length_ft": 3117,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -636,7 +925,10 @@
     "freq": "",
     "Lat": 63.68999862670898,
     "Lon": -19.563100814819336,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "BITM",
+    "iso_country": "IS",
+    "icao_code": "BITM"
   },
   {
     "type": "small_airport",
@@ -645,7 +937,15 @@
     "freq": "119.700",
     "Lat": 66.218498,
     "Lon": -15.3356,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "BITN",
+    "iso_country": "IS",
+    "icao_code": "BITN",
+    "iata_code": "THO",
+    "length_ft": 3934,
+    "width_ft": 98,
+    "heading": 3,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -654,7 +954,9 @@
     "freq": "",
     "Lat": 64.354373,
     "Lon": -18.836514,
-    "Ele": 560.8
+    "Ele": 560.8,
+    "ident": "BITO",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -663,7 +965,9 @@
     "freq": "",
     "Lat": 64.03309631347656,
     "Lon": -20.651100158691406,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BIVA",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -672,7 +976,9 @@
     "freq": "",
     "Lat": 65.55694580078125,
     "Lon": -19.428056716918945,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "BIVH",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -681,7 +987,10 @@
     "freq": "",
     "Lat": 63.42169952392578,
     "Lon": -18.8882999420166,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "BIVI",
+    "iso_country": "IS",
+    "icao_code": "BIVI"
   },
   {
     "type": "medium_airport",
@@ -690,7 +999,15 @@
     "freq": "119.700",
     "Lat": 63.42430114746094,
     "Lon": -20.27890014648437,
-    "Ele": 99.4
+    "Ele": 99.4,
+    "ident": "BIVM",
+    "iso_country": "IS",
+    "icao_code": "BIVM",
+    "iata_code": "VEY",
+    "length_ft": 3934,
+    "width_ft": 148,
+    "heading": 110,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -699,7 +1016,15 @@
     "freq": "",
     "Lat": 65.720596,
     "Lon": -14.8506,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "BIVO",
+    "iso_country": "IS",
+    "icao_code": "BIVO",
+    "iata_code": "VPN",
+    "length_ft": 2904,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -708,7 +1033,10 @@
     "freq": "",
     "Lat": 66.1318,
     "Lon": -23.544,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "IS-0001",
+    "iso_country": "IS",
+    "local_code": "SUY"
   },
   {
     "type": "small_airport",
@@ -717,7 +1045,9 @@
     "freq": "",
     "Lat": 63.99948,
     "Lon": -16.94116,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "IS-0003",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -726,7 +1056,9 @@
     "freq": "",
     "Lat": 64.57267,
     "Lon": -21.89826,
-    "Ele": 24.7
+    "Ele": 24.7,
+    "ident": "IS-0004",
+    "iso_country": "IS"
   },
   {
     "type": "small_airport",
@@ -735,7 +1067,13 @@
     "freq": "122.700",
     "Lat": 64.111441,
     "Lon": -21.706037,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "IS-0005",
+    "iso_country": "IS",
+    "length_ft": 1310,
+    "QFU": "31",
+    "width_ft": 60,
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -744,6 +1082,9 @@
     "freq": "",
     "Lat": 65.384167,
     "Lon": -15.904444,
-    "Ele": 449.6
+    "Ele": 449.6,
+    "ident": "IS-0014",
+    "iso_country": "IS",
+    "local_code": "BI55"
   }
 ]

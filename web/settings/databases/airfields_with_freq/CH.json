@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 46.123348,
     "Lon": 7.234131,
-    "Ele": 2160.1
+    "Ele": 2160.1,
+    "ident": "CH-0002",
+    "iso_country": "CH"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 46.064289,
     "Lon": 7.354317,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CH-0003",
+    "iso_country": "CH"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 46.320653,
     "Lon": 7.23288,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CH-0004",
+    "iso_country": "CH"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,14 @@
     "freq": "122.155",
     "Lat": 46.258301,
     "Lon": 6.98639,
-    "Ele": 399.9
+    "Ele": 399.9,
+    "ident": "LSGB",
+    "iso_country": "CH",
+    "icao_code": "LSGB",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -42,7 +55,14 @@
     "freq": "118.125",
     "Lat": 47.0839004517,
     "Lon": 6.792840003970001,
-    "Ele": 1026.6
+    "Ele": 1026.6,
+    "ident": "LSGC",
+    "iso_country": "CH",
+    "icao_code": "LSGC",
+    "length_ft": 3707,
+    "width_ft": 89,
+    "heading": 54,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,14 @@
     "freq": "120.630",
     "Lat": 46.755279,
     "Lon": 7.075746,
-    "Ele": 698.9
+    "Ele": 698.9,
+    "ident": "LSGE",
+    "iso_country": "CH",
+    "icao_code": "LSGE",
+    "length_ft": 2625,
+    "width_ft": 75,
+    "heading": 95,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -60,7 +87,15 @@
     "freq": "120.300",
     "Lat": 46.238098,
     "Lon": 6.10895,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "LSGG",
+    "iso_country": "CH",
+    "icao_code": "LSGG",
+    "iata_code": "GVA",
+    "length_ft": 2700,
+    "width_ft": 98,
+    "heading": 46,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -69,7 +104,14 @@
     "freq": "119.425",
     "Lat": 46.486525,
     "Lon": 7.248359,
-    "Ele": 1008.0
+    "Ele": 1008,
+    "ident": "LSGK",
+    "iso_country": "CH",
+    "icao_code": "LSGK",
+    "length_ft": 4593,
+    "width_ft": 131,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -78,7 +120,14 @@
     "freq": "123.205",
     "Lat": 46.5453,
     "Lon": 6.61667,
-    "Ele": 622.1
+    "Ele": 622.1,
+    "ident": "LSGL",
+    "iso_country": "CH",
+    "icao_code": "LSGL",
+    "length_ft": 2871,
+    "width_ft": 75,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -87,7 +136,14 @@
     "freq": "123.600",
     "Lat": 46.957371,
     "Lon": 6.864574,
-    "Ele": 434.9
+    "Ele": 434.9,
+    "ident": "LSGN",
+    "iso_country": "CH",
+    "icao_code": "LSGN",
+    "length_ft": 2295,
+    "width_ft": 66,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -96,7 +152,14 @@
     "freq": "123.655",
     "Lat": 46.406399,
     "Lon": 6.25806,
-    "Ele": 412.1
+    "Ele": 412.1,
+    "ident": "LSGP",
+    "iso_country": "CH",
+    "icao_code": "LSGP",
+    "length_ft": 1837,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -105,7 +168,14 @@
     "freq": "127.705",
     "Lat": 46.613602,
     "Lon": 7.67778,
-    "Ele": 726.9
+    "Ele": 726.9,
+    "ident": "LSGR",
+    "iso_country": "CH",
+    "icao_code": "LSGR",
+    "length_ft": 2641,
+    "width_ft": 59,
+    "heading": 38,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -114,7 +184,15 @@
     "freq": "134.275",
     "Lat": 46.219166,
     "Lon": 7.326944,
-    "Ele": 482.2
+    "Ele": 482.2,
+    "ident": "LSGS",
+    "iso_country": "CH",
+    "icao_code": "LSGS",
+    "iata_code": "SIR",
+    "length_ft": 6562,
+    "width_ft": 131,
+    "heading": 73,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -123,7 +201,14 @@
     "freq": "",
     "Lat": 46.5942,
     "Lon": 7.09444,
-    "Ele": 687.9
+    "Ele": 687.9,
+    "ident": "LSGT",
+    "iso_country": "CH",
+    "icao_code": "LSGT",
+    "length_ft": 2661,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -132,7 +217,14 @@
     "freq": "131.130",
     "Lat": 46.761902,
     "Lon": 6.61333,
-    "Ele": 433.1
+    "Ele": 433.1,
+    "ident": "LSGY",
+    "iso_country": "CH",
+    "icao_code": "LSGY",
+    "length_ft": 2379,
+    "width_ft": 66,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -141,7 +233,14 @@
     "freq": "33.787",
     "Lat": 46.943901,
     "Lon": 8.28417,
-    "Ele": 445.0
+    "Ele": 445,
+    "ident": "LSMA",
+    "iso_country": "CH",
+    "icao_code": "LSMA",
+    "length_ft": 6135,
+    "width_ft": 131,
+    "heading": 11,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -150,7 +249,14 @@
     "freq": "37.680",
     "Lat": 47.398602,
     "Lon": 8.64823,
-    "Ele": 448.1
+    "Ele": 448.1,
+    "ident": "LSMD",
+    "iso_country": "CH",
+    "icao_code": "LSMD",
+    "length_ft": 2130,
+    "width_ft": 98,
+    "heading": 108.3,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -159,7 +265,15 @@
     "freq": "36.052",
     "Lat": 47.092444,
     "Lon": 8.305184,
-    "Ele": 426.7
+    "Ele": 426.7,
+    "ident": "LSME",
+    "iso_country": "CH",
+    "icao_code": "LSME",
+    "iata_code": "EML",
+    "length_ft": 8208,
+    "width_ft": 130,
+    "heading": 37.6,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -168,7 +282,9 @@
     "freq": "",
     "Lat": 46.295898,
     "Lon": 8.99213,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "LSML",
+    "iso_country": "CH"
   },
   {
     "type": "small_airport",
@@ -177,7 +293,13 @@
     "freq": "37.012",
     "Lat": 46.742324,
     "Lon": 8.108919,
-    "Ele": 577.6
+    "Ele": 577.6,
+    "ident": "LSMM",
+    "iso_country": "CH",
+    "length_ft": 6571,
+    "width_ft": 130,
+    "heading": 95.2,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -186,7 +308,15 @@
     "freq": "141.800",
     "Lat": 46.8432,
     "Lon": 6.91506,
-    "Ele": 446.5
+    "Ele": 446.5,
+    "ident": "LSMP",
+    "iso_country": "CH",
+    "icao_code": "LSMP",
+    "iata_code": "VIP",
+    "length_ft": 9376,
+    "width_ft": 130,
+    "heading": 48.4,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -195,7 +325,14 @@
     "freq": "",
     "Lat": 47.573983,
     "Lon": 9.047785,
-    "Ele": 417.9
+    "Ele": 417.9,
+    "ident": "LSPA",
+    "iso_country": "CH",
+    "icao_code": "LSPA",
+    "length_ft": 2559,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -204,7 +341,13 @@
     "freq": "118.180",
     "Lat": 47.438599,
     "Lon": 7.49139,
-    "Ele": 535.8
+    "Ele": 535.8,
+    "ident": "LSPD",
+    "iso_country": "CH",
+    "length_ft": 2034,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -213,7 +356,13 @@
     "freq": "",
     "Lat": 47.690203,
     "Lon": 8.526178,
-    "Ele": 463.0
+    "Ele": 463,
+    "ident": "LSPF",
+    "iso_country": "CH",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -222,7 +371,14 @@
     "freq": "134.125",
     "Lat": 46.908298,
     "Lon": 8.25417,
-    "Ele": 464.8
+    "Ele": 464.8,
+    "ident": "LSPG",
+    "iso_country": "CH",
+    "icao_code": "LSPG",
+    "length_ft": 2953,
+    "width_ft": 131,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -231,7 +387,14 @@
     "freq": "134.975",
     "Lat": 47.514999,
     "Lon": 8.77194,
-    "Ele": 459.0
+    "Ele": 459,
+    "ident": "LSPH",
+    "iso_country": "CH",
+    "icao_code": "LSPH",
+    "length_ft": 2280,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -240,7 +403,14 @@
     "freq": "119.405",
     "Lat": 47.18281,
     "Lon": 7.741191,
-    "Ele": 480.1
+    "Ele": 480.1,
+    "ident": "LSPL",
+    "iso_country": "CH",
+    "icao_code": "LSPL",
+    "length_ft": 1099,
+    "width_ft": 66,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -249,7 +419,14 @@
     "freq": "118.525",
     "Lat": 46.512501,
     "Lon": 8.68978,
-    "Ele": 987.9
+    "Ele": 987.9,
+    "ident": "LSPM",
+    "iso_country": "CH",
+    "icao_code": "LSPM",
+    "length_ft": 6529,
+    "width_ft": 131,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -258,7 +435,14 @@
     "freq": "124.525",
     "Lat": 47.2267,
     "Lon": 8.07806,
-    "Ele": 485.9
+    "Ele": 485.9,
+    "ident": "LSPN",
+    "iso_country": "CH",
+    "icao_code": "LSPN",
+    "length_ft": 1870,
+    "width_ft": 49,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -267,7 +451,9 @@
     "freq": "",
     "Lat": 47.34131,
     "Lon": 7.88494,
-    "Ele": 417.0
+    "Ele": 417,
+    "ident": "LSPO",
+    "iso_country": "CH"
   },
   {
     "type": "small_airport",
@@ -276,7 +462,10 @@
     "freq": "",
     "Lat": 46.480301,
     "Lon": 8.26333,
-    "Ele": 1335.0
+    "Ele": 1335,
+    "ident": "LSPU",
+    "iso_country": "CH",
+    "icao_code": "LSPU"
   },
   {
     "type": "small_airport",
@@ -285,7 +474,14 @@
     "freq": "123.200",
     "Lat": 47.204835,
     "Lon": 8.867346,
-    "Ele": 406.9
+    "Ele": 406.9,
+    "ident": "LSPV",
+    "iso_country": "CH",
+    "icao_code": "LSPV",
+    "length_ft": 1640,
+    "width_ft": 59,
+    "heading": 74,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -294,7 +490,14 @@
     "freq": "",
     "Lat": 46.30449,
     "Lon": 7.819085,
-    "Ele": 618.4
+    "Ele": 618.4,
+    "ident": "LSTA",
+    "iso_country": "CH",
+    "icao_code": "LSTA",
+    "length_ft": 1817,
+    "width_ft": 131,
+    "heading": 91,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -303,7 +506,13 @@
     "freq": "",
     "Lat": 46.979315,
     "Lon": 7.13253,
-    "Ele": 433.1
+    "Ele": 433.1,
+    "ident": "LSTB",
+    "iso_country": "CH",
+    "length_ft": 1608,
+    "width_ft": 164,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -312,7 +521,14 @@
     "freq": "",
     "Lat": 46.916698,
     "Lon": 6.615,
-    "Ele": 732.1
+    "Ele": 732.1,
+    "ident": "LSTO",
+    "iso_country": "CH",
+    "icao_code": "LSTO",
+    "length_ft": 1857,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -321,7 +537,13 @@
     "freq": "",
     "Lat": 46.590263,
     "Lon": 6.400591,
-    "Ele": 663.9
+    "Ele": 663.9,
+    "ident": "LSTR",
+    "iso_country": "CH",
+    "length_ft": 2001,
+    "width_ft": 131,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -330,7 +552,14 @@
     "freq": "119.425",
     "Lat": 46.497398,
     "Lon": 7.41257,
-    "Ele": 1007.1
+    "Ele": 1007.1,
+    "ident": "LSTS",
+    "iso_country": "CH",
+    "icao_code": "LSTS",
+    "length_ft": 6726,
+    "width_ft": 131,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -339,7 +568,14 @@
     "freq": "",
     "Lat": 46.551713,
     "Lon": 7.381012,
-    "Ele": 935.1
+    "Ele": 935.1,
+    "ident": "LSTZ",
+    "iso_country": "CH",
+    "icao_code": "LSTZ",
+    "length_ft": 1594,
+    "width_ft": 130,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -348,7 +584,10 @@
     "freq": "",
     "Lat": 46.821944,
     "Lon": 8.880277,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSVD",
+    "iso_country": "CH",
+    "icao_code": "LSVD"
   },
   {
     "type": "small_airport",
@@ -357,7 +596,10 @@
     "freq": "",
     "Lat": 46.468889,
     "Lon": 7.828333,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSVP",
+    "iso_country": "CH",
+    "icao_code": "LSVP"
   },
   {
     "type": "small_airport",
@@ -366,7 +608,10 @@
     "freq": "",
     "Lat": 46.878333,
     "Lon": 9.151944,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSVV",
+    "iso_country": "CH",
+    "icao_code": "LSVV"
   },
   {
     "type": "small_airport",
@@ -375,7 +620,10 @@
     "freq": "",
     "Lat": 46.810556,
     "Lon": 8.967778,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSYI",
+    "iso_country": "CH",
+    "icao_code": "LSYI"
   },
   {
     "type": "small_airport",
@@ -384,7 +632,10 @@
     "freq": "",
     "Lat": 46.485833,
     "Lon": 7.828333,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSYK",
+    "iso_country": "CH",
+    "icao_code": "LSYK"
   },
   {
     "type": "small_airport",
@@ -393,7 +644,10 @@
     "freq": "",
     "Lat": 46.060833,
     "Lon": 7.354722,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSYR",
+    "iso_country": "CH",
+    "icao_code": "LSYR"
   },
   {
     "type": "small_airport",
@@ -402,7 +656,10 @@
     "freq": "",
     "Lat": 45.9883,
     "Lon": 7.0425,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LSYX",
+    "iso_country": "CH",
+    "icao_code": "LSYX"
   },
   {
     "type": "medium_airport",
@@ -411,7 +668,15 @@
     "freq": "121.175",
     "Lat": 46.004299,
     "Lon": 8.91058,
-    "Ele": 278.9
+    "Ele": 278.9,
+    "ident": "LSZA",
+    "iso_country": "CH",
+    "icao_code": "LSZA",
+    "iata_code": "LUG",
+    "length_ft": 4642,
+    "width_ft": 98,
+    "heading": 19,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -420,7 +685,15 @@
     "freq": "127.325",
     "Lat": 46.912868,
     "Lon": 7.498512,
-    "Ele": 509.3
+    "Ele": 509.3,
+    "ident": "LSZB",
+    "iso_country": "CH",
+    "icao_code": "LSZB",
+    "iata_code": "BRN",
+    "length_ft": 2125,
+    "width_ft": 98,
+    "heading": 140,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -429,7 +702,15 @@
     "freq": "134.125",
     "Lat": 46.974444,
     "Lon": 8.396944,
-    "Ele": 449.6
+    "Ele": 449.6,
+    "ident": "LSZC",
+    "iso_country": "CH",
+    "icao_code": "LSZC",
+    "iata_code": "BXO",
+    "length_ft": 2771,
+    "width_ft": 130,
+    "heading": 62,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -438,7 +719,14 @@
     "freq": "",
     "Lat": 47.014904,
     "Lon": 9.481815,
-    "Ele": 492.9
+    "Ele": 492.9,
+    "ident": "LSZE",
+    "iso_country": "CH",
+    "icao_code": "LSZE",
+    "length_ft": 1624,
+    "width_ft": 36,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -447,7 +735,14 @@
     "freq": "123.550",
     "Lat": 47.4436,
     "Lon": 8.23361,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "LSZF",
+    "iso_country": "CH",
+    "icao_code": "LSZF",
+    "length_ft": 2264,
+    "width_ft": 66,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -456,7 +751,14 @@
     "freq": "127.325",
     "Lat": 47.181599,
     "Lon": 7.41719,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "LSZG",
+    "iso_country": "CH",
+    "icao_code": "LSZG",
+    "length_ft": 2297,
+    "width_ft": 66,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -465,7 +767,15 @@
     "freq": "118.000",
     "Lat": 47.458056,
     "Lon": 8.548056,
-    "Ele": 431.9
+    "Ele": 431.9,
+    "ident": "LSZH",
+    "iso_country": "CH",
+    "icao_code": "LSZH",
+    "iata_code": "ZRH",
+    "length_ft": 12139,
+    "width_ft": 197,
+    "heading": 155,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -474,7 +784,14 @@
     "freq": "119.550",
     "Lat": 47.5089,
     "Lon": 7.95,
-    "Ele": 545.0
+    "Ele": 545,
+    "ident": "LSZI",
+    "iso_country": "CH",
+    "icao_code": "LSZI",
+    "length_ft": 1739,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -483,7 +800,13 @@
     "freq": "",
     "Lat": 47.183601,
     "Lon": 7.09083,
-    "Ele": 684.9
+    "Ele": 684.9,
+    "ident": "LSZJ",
+    "iso_country": "CH",
+    "length_ft": 1837,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -492,7 +815,14 @@
     "freq": "120.350",
     "Lat": 47.3764,
     "Lon": 8.7575,
-    "Ele": 532.8
+    "Ele": 532.8,
+    "ident": "LSZK",
+    "iso_country": "CH",
+    "icao_code": "LSZK",
+    "length_ft": 2051,
+    "width_ft": 59,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -501,7 +831,14 @@
     "freq": "",
     "Lat": 46.160801,
     "Lon": 8.87861,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "LSZL",
+    "iso_country": "CH",
+    "icao_code": "LSZL",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "heading": 78,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -510,7 +847,14 @@
     "freq": "134.825",
     "Lat": 47.078353,
     "Lon": 9.064662,
-    "Ele": 452.6
+    "Ele": 452.6,
+    "ident": "LSZM",
+    "iso_country": "CH",
+    "icao_code": "LSZM",
+    "length_ft": 5905,
+    "width_ft": 130,
+    "heading": 13,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -519,7 +863,14 @@
     "freq": "130.755",
     "Lat": 47.238602,
     "Lon": 8.51556,
-    "Ele": 587.7
+    "Ele": 587.7,
+    "ident": "LSZN",
+    "iso_country": "CH",
+    "icao_code": "LSZN",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "heading": 91,
+    "QFU": "27G"
   },
   {
     "type": "small_airport",
@@ -528,7 +879,14 @@
     "freq": "122.450",
     "Lat": 47.188993,
     "Lon": 8.204556,
-    "Ele": 654.1
+    "Ele": 654.1,
+    "ident": "LSZO",
+    "iso_country": "CH",
+    "icao_code": "LSZO",
+    "length_ft": 1591,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -537,7 +895,13 @@
     "freq": "",
     "Lat": 47.089199,
     "Lon": 7.29,
-    "Ele": 438.0
+    "Ele": 438,
+    "ident": "LSZP",
+    "iso_country": "CH",
+    "length_ft": 2264,
+    "width_ft": 82,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -546,7 +910,14 @@
     "freq": "122.050",
     "Lat": 47.392677,
     "Lon": 7.028648,
-    "Ele": 568.8
+    "Ele": 568.8,
+    "ident": "LSZQ",
+    "iso_country": "CH",
+    "icao_code": "LSZQ",
+    "length_ft": 2625,
+    "width_ft": 59,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -555,7 +926,15 @@
     "freq": "133.900",
     "Lat": 47.485001,
     "Lon": 9.56077,
-    "Ele": 398.1
+    "Ele": 398.1,
+    "ident": "LSZR",
+    "iso_country": "CH",
+    "icao_code": "LSZR",
+    "iata_code": "ACH",
+    "QFU": "28G",
+    "length_ft": 2657,
+    "width_ft": 65,
+    "heading": 99
   },
   {
     "type": "medium_airport",
@@ -564,7 +943,15 @@
     "freq": "123.670",
     "Lat": 46.5341,
     "Lon": 9.88411,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "LSZS",
+    "iso_country": "CH",
+    "icao_code": "LSZS",
+    "iata_code": "SMV",
+    "length_ft": 5905,
+    "width_ft": 130,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -573,7 +960,14 @@
     "freq": "119.300",
     "Lat": 47.524399,
     "Lon": 9.00306,
-    "Ele": 469.1
+    "Ele": 469.1,
+    "ident": "LSZT",
+    "iso_country": "CH",
+    "icao_code": "LSZT",
+    "length_ft": 2018,
+    "width_ft": 66,
+    "heading": 63,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -582,7 +976,14 @@
     "freq": "122.150",
     "Lat": 47.264702,
     "Lon": 8.3025,
-    "Ele": 723.0
+    "Ele": 723,
+    "ident": "LSZU",
+    "iso_country": "CH",
+    "icao_code": "LSZU",
+    "length_ft": 2215,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -591,7 +992,13 @@
     "freq": "",
     "Lat": 47.5089,
     "Lon": 9.26278,
-    "Ele": 506.0
+    "Ele": 506,
+    "ident": "LSZV",
+    "iso_country": "CH",
+    "length_ft": 1575,
+    "width_ft": 66,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -600,7 +1007,14 @@
     "freq": "123.255",
     "Lat": 46.756401,
     "Lon": 7.60056,
-    "Ele": 559.9
+    "Ele": 559.9,
+    "ident": "LSZW",
+    "iso_country": "CH",
+    "icao_code": "LSZW",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -609,6 +1023,13 @@
     "freq": "",
     "Lat": 47.1717,
     "Lon": 9.03944,
-    "Ele": 416.1
+    "Ele": 416.1,
+    "ident": "LSZX",
+    "iso_country": "CH",
+    "icao_code": "LSZX",
+    "length_ft": 1706,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   }
 ]

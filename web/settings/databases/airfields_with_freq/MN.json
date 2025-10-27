@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 48.983056,
     "Lon": 104.150556,
-    "Ele": 1280.2
+    "Ele": 1280.2,
+    "ident": "ERT",
+    "iso_country": "MN",
+    "iata_code": "ERT"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,9 @@
     "freq": "",
     "Lat": 44.09521,
     "Lon": 103.53464,
-    "Ele": 1314.0
+    "Ele": 1314,
+    "ident": "MN-0003",
+    "iso_country": "MN"
   },
   {
     "type": "medium_airport",
@@ -24,7 +29,9 @@
     "freq": "",
     "Lat": 45.9467,
     "Lon": 109.1233,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MN-0005",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -33,7 +40,9 @@
     "freq": "",
     "Lat": 47.7417,
     "Lon": 107.3717,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MN-5M",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -42,7 +51,9 @@
     "freq": "",
     "Lat": 47.3667,
     "Lon": 107.4567,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MN-5Z",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -51,7 +62,9 @@
     "freq": "",
     "Lat": 46.5767,
     "Lon": 108.3233,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MN-60",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -60,7 +73,9 @@
     "freq": "",
     "Lat": 47.7146987915,
     "Lon": 96.8471984863,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MN-ULZ",
+    "iso_country": "MN"
   },
   {
     "type": "medium_airport",
@@ -69,7 +84,14 @@
     "freq": "",
     "Lat": 46.250301361083984,
     "Lon": 102.802001953125,
-    "Ele": 1808.1
+    "Ele": 1808.1,
+    "ident": "ZMAH",
+    "iso_country": "MN",
+    "icao_code": "ZMAH",
+    "iata_code": "AVK",
+    "length_ft": 7546,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -78,7 +100,14 @@
     "freq": "",
     "Lat": 46.37639999389648,
     "Lon": 96.22109985351562,
-    "Ele": 2212.8
+    "Ele": 2212.8,
+    "ident": "ZMAT",
+    "iso_country": "MN",
+    "icao_code": "ZMAT",
+    "iata_code": "LTI",
+    "length_ft": 7513,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -87,7 +116,12 @@
     "freq": "",
     "Lat": 48.6067008972168,
     "Lon": 110.60800170898438,
-    "Ele": 1043.0
+    "Ele": 1043,
+    "ident": "ZMBD",
+    "iso_country": "MN",
+    "length_ft": 3938,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -96,7 +130,15 @@
     "freq": "130.000",
     "Lat": 46.16329956054688,
     "Lon": 100.7040023803711,
-    "Ele": 1854.7
+    "Ele": 1854.7,
+    "ident": "ZMBH",
+    "iso_country": "MN",
+    "icao_code": "ZMBH",
+    "iata_code": "BYN",
+    "length_ft": 6889,
+    "width_ft": 164,
+    "heading": 156.5,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -105,7 +147,14 @@
     "freq": "",
     "Lat": 48.85499954223633,
     "Lon": 103.47599792480467,
-    "Ele": 1314.0
+    "Ele": 1314,
+    "ident": "ZMBN",
+    "iso_country": "MN",
+    "icao_code": "ZMBN",
+    "iata_code": "UGA",
+    "length_ft": 6234,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -114,7 +163,11 @@
     "freq": "",
     "Lat": 43.749304,
     "Lon": 104.114985,
-    "Ele": 1420.1
+    "Ele": 1420.1,
+    "ident": "ZMBR",
+    "iso_country": "MN",
+    "icao_code": "ZMBR",
+    "iata_code": "UGT"
   },
   {
     "type": "small_airport",
@@ -123,7 +176,14 @@
     "freq": "",
     "Lat": 46.100601,
     "Lon": 91.584198,
-    "Ele": 1195.1
+    "Ele": 1195.1,
+    "ident": "ZMBS",
+    "iso_country": "MN",
+    "icao_code": "ZMBS",
+    "iata_code": "HBU",
+    "length_ft": 5906,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -132,7 +192,15 @@
     "freq": "130.000",
     "Lat": 46.660301208496094,
     "Lon": 113.28500366210938,
-    "Ele": 976.9
+    "Ele": 976.9,
+    "ident": "ZMBU",
+    "iso_country": "MN",
+    "icao_code": "ZMBU",
+    "iata_code": "UUN",
+    "length_ft": 7217,
+    "width_ft": 164,
+    "heading": 172.1,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -141,7 +209,15 @@
     "freq": "130.000",
     "Lat": 48.13570022583008,
     "Lon": 114.64600372314452,
-    "Ele": 748.9
+    "Ele": 748.9,
+    "ident": "ZMCD",
+    "iso_country": "MN",
+    "icao_code": "ZMCD",
+    "iata_code": "COQ",
+    "length_ft": 8530,
+    "width_ft": 131,
+    "heading": 112.2,
+    "QFU": "30"
   },
   {
     "type": "large_airport",
@@ -150,7 +226,15 @@
     "freq": "120.000",
     "Lat": 47.646916,
     "Lon": 106.819833,
-    "Ele": 1366.1
+    "Ele": 1366.1,
+    "ident": "ZMCK",
+    "iso_country": "MN",
+    "icao_code": "ZMCK",
+    "iata_code": "UBN",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 105,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -159,7 +243,9 @@
     "freq": "",
     "Lat": 49.0124,
     "Lon": 111.509,
-    "Ele": 981.5
+    "Ele": 981.5,
+    "ident": "ZMDA",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -168,7 +254,11 @@
     "freq": "",
     "Lat": 47.7093,
     "Lon": 96.5258,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "ZMDN",
+    "iso_country": "MN",
+    "icao_code": "ZMDN",
+    "iata_code": "ULZ"
   },
   {
     "type": "medium_airport",
@@ -177,7 +267,15 @@
     "freq": "128.000",
     "Lat": 43.608628,
     "Lon": 104.367734,
-    "Ele": 1459.1
+    "Ele": 1459.1,
+    "ident": "ZMDZ",
+    "iso_country": "MN",
+    "icao_code": "ZMDZ",
+    "iata_code": "DLZ",
+    "length_ft": 7545,
+    "width_ft": 164,
+    "heading": 26.5,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -186,7 +284,9 @@
     "freq": "",
     "Lat": 43.01192,
     "Lon": 101.333781,
-    "Ele": 1576.1
+    "Ele": 1576.1,
+    "ident": "ZMGT",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -195,7 +295,11 @@
     "freq": "",
     "Lat": 50.435988,
     "Lon": 100.139532,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "ZMHG",
+    "iso_country": "MN",
+    "icao_code": "ZMHG",
+    "iata_code": "HTM"
   },
   {
     "type": "small_airport",
@@ -204,7 +308,14 @@
     "freq": "",
     "Lat": 47.246667,
     "Lon": 102.826111,
-    "Ele": 1450.5
+    "Ele": 1450.5,
+    "ident": "ZMHH",
+    "iso_country": "MN",
+    "icao_code": "ZMHH",
+    "iata_code": "KHR",
+    "length_ft": 5905,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -213,7 +324,14 @@
     "freq": "",
     "Lat": 46.9258003235,
     "Lon": 102.773002625,
-    "Ele": 1683.1
+    "Ele": 1683.1,
+    "ident": "ZMHU",
+    "iso_country": "MN",
+    "icao_code": "ZMHU",
+    "iata_code": "HJT",
+    "length_ft": 7218,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -222,7 +340,15 @@
     "freq": "130.000",
     "Lat": 47.9541015625,
     "Lon": 91.6281967163086,
-    "Ele": 1492.9
+    "Ele": 1492.9,
+    "ident": "ZMKD",
+    "iso_country": "MN",
+    "icao_code": "ZMKD",
+    "iata_code": "HVD",
+    "QFU": "34",
+    "length_ft": 6535,
+    "width_ft": 164,
+    "heading": 158.1
   },
   {
     "type": "small_airport",
@@ -231,7 +357,11 @@
     "freq": "",
     "Lat": 45.7380981445,
     "Lon": 106.268997192,
-    "Ele": 1386.8
+    "Ele": 1386.8,
+    "ident": "ZMMG",
+    "iso_country": "MN",
+    "icao_code": "ZMMG",
+    "iata_code": "MXW"
   },
   {
     "type": "medium_airport",
@@ -240,7 +370,15 @@
     "freq": "128.000",
     "Lat": 49.66329956054688,
     "Lon": 100.0989990234375,
-    "Ele": 1302.1
+    "Ele": 1302.1,
+    "ident": "ZMMN",
+    "iso_country": "MN",
+    "icao_code": "ZMMN",
+    "iata_code": "MXV",
+    "length_ft": 8005,
+    "width_ft": 137,
+    "heading": 102.2,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -249,7 +387,9 @@
     "freq": "",
     "Lat": 43.145552,
     "Lon": 106.843509,
-    "Ele": 1196.0
+    "Ele": 1196,
+    "ident": "ZMOT",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -258,7 +398,9 @@
     "freq": "",
     "Lat": 47.773056,
     "Lon": 107.437778,
-    "Ele": 1471.9
+    "Ele": 1471.9,
+    "ident": "ZMSF",
+    "iso_country": "MN"
   },
   {
     "type": "small_airport",
@@ -267,7 +409,12 @@
     "freq": "",
     "Lat": 44.984831,
     "Lon": 110.17651,
-    "Ele": 921.1
+    "Ele": 921.1,
+    "ident": "ZMSH",
+    "iso_country": "MN",
+    "length_ft": 9183,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -276,7 +423,11 @@
     "freq": "",
     "Lat": 47.461476,
     "Lon": 101.483804,
-    "Ele": 1685.5
+    "Ele": 1685.5,
+    "ident": "ZMTG",
+    "iso_country": "MN",
+    "icao_code": "ZMTG",
+    "iata_code": "TSZ"
   },
   {
     "type": "small_airport",
@@ -285,7 +436,11 @@
     "freq": "",
     "Lat": 48.73887,
     "Lon": 98.2941,
-    "Ele": 1709.9
+    "Ele": 1709.9,
+    "ident": "ZMTL",
+    "iso_country": "MN",
+    "icao_code": "ZMTL",
+    "iata_code": "TNZ"
   },
   {
     "type": "small_airport",
@@ -294,7 +449,13 @@
     "freq": "",
     "Lat": 43.773667,
     "Lon": 105.578667,
-    "Ele": 1460.9
+    "Ele": 1460.9,
+    "ident": "ZMTT",
+    "iso_country": "MN",
+    "length_ft": 7710,
+    "width_ft": 98,
+    "heading": 144,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -303,7 +464,15 @@
     "freq": "120.000",
     "Lat": 47.843102,
     "Lon": 106.766998,
-    "Ele": 1330.1
+    "Ele": 1330.1,
+    "ident": "ZMUB",
+    "iso_country": "MN",
+    "icao_code": "ZMUB",
+    "iata_code": "ULN",
+    "length_ft": 6560,
+    "width_ft": 131,
+    "heading": 145,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -312,7 +481,15 @@
     "freq": "",
     "Lat": 50.066588,
     "Lon": 91.938273,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZMUG",
+    "iso_country": "MN",
+    "icao_code": "ZMUG",
+    "iata_code": "ULO",
+    "length_ft": 8815,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -321,7 +498,11 @@
     "freq": "",
     "Lat": 47.30486,
     "Lon": 110.6092,
-    "Ele": 1039.4
+    "Ele": 1039.4,
+    "ident": "ZMUH",
+    "iso_country": "MN",
+    "icao_code": "ZMUH",
+    "iata_code": "UNR"
   },
   {
     "type": "small_airport",
@@ -330,6 +511,13 @@
     "freq": "",
     "Lat": 48.993301,
     "Lon": 89.922501,
-    "Ele": 1747.1
+    "Ele": 1747.1,
+    "ident": "ZMUL",
+    "iso_country": "MN",
+    "icao_code": "ZMUL",
+    "iata_code": "ULG",
+    "length_ft": 7874,
+    "QFU": "31",
+    "heading": 310
   }
 ]

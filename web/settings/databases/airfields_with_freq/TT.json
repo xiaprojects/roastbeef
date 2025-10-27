@@ -6,7 +6,14 @@
     "freq": "129.900",
     "Lat": 10.4263,
     "Lon": -61.439701,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "TT-TT01",
+    "iso_country": "TT",
+    "local_code": "TT01",
+    "length_ft": 4301,
+    "width_ft": 50,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "119.000",
     "Lat": 11.1497,
     "Lon": -60.832199,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "TTCP",
+    "iso_country": "TT",
+    "icao_code": "TTCP",
+    "iata_code": "TAB",
+    "length_ft": 9002,
+    "width_ft": 159,
+    "heading": 94.1,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -24,6 +39,14 @@
     "freq": "123.700",
     "Lat": 10.5954,
     "Lon": -61.3372,
-    "Ele": 17.7
+    "Ele": 17.7,
+    "ident": "TTPP",
+    "iso_country": "TT",
+    "icao_code": "TTPP",
+    "iata_code": "POS",
+    "length_ft": 10500,
+    "width_ft": 150,
+    "heading": 90,
+    "QFU": "28"
   }
 ]

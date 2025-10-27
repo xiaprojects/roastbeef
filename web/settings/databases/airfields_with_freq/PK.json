@@ -6,7 +6,15 @@
     "freq": "",
     "Lat": 27.2005,
     "Lon": 69.153801,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "OP10",
+    "iso_country": "PK",
+    "icao_code": "OPKW",
+    "iata_code": "KCF",
+    "length_ft": 4833,
+    "width_ft": 85,
+    "heading": 120.3,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,14 @@
     "freq": "",
     "Lat": 31.191082,
     "Lon": 70.183532,
-    "Ele": 716.3
+    "Ele": 716.3,
+    "ident": "OP11",
+    "iso_country": "PK",
+    "local_code": "OP11",
+    "length_ft": 2713,
+    "width_ft": 100,
+    "heading": 100.2,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,13 @@
     "freq": "",
     "Lat": 27.8465,
     "Lon": 65.160004,
-    "Ele": 769.3
+    "Ele": 769.3,
+    "ident": "OP12",
+    "iso_country": "PK",
+    "length_ft": 9120,
+    "width_ft": 99,
+    "heading": 38.7,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -33,7 +54,14 @@
     "freq": "",
     "Lat": 28.356199264526367,
     "Lon": 70.6001968383789,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "OP13",
+    "iso_country": "PK",
+    "local_code": "OP13",
+    "length_ft": 7875,
+    "width_ft": 205,
+    "heading": 77.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -42,7 +70,14 @@
     "freq": "",
     "Lat": 30.34000015258789,
     "Lon": 70.55670166015625,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "OP14",
+    "iso_country": "PK",
+    "local_code": "OP14",
+    "length_ft": 4910,
+    "width_ft": 50,
+    "heading": 23.7,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -51,7 +86,14 @@
     "freq": "",
     "Lat": 30.25078,
     "Lon": 70.23205,
-    "Ele": 710.5
+    "Ele": 710.5,
+    "ident": "OP15",
+    "iso_country": "PK",
+    "local_code": "OP15",
+    "length_ft": 2830,
+    "width_ft": 90,
+    "heading": 161.7,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -60,7 +102,14 @@
     "freq": "",
     "Lat": 24.787201,
     "Lon": 68.557198,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "OP16",
+    "iso_country": "PK",
+    "local_code": "OP16",
+    "length_ft": 3935,
+    "width_ft": 65,
+    "heading": 57.6,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -69,7 +118,15 @@
     "freq": "",
     "Lat": 26.740800857543945,
     "Lon": 67.6666030883789,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "OP17",
+    "iso_country": "PK",
+    "iata_code": "DDU",
+    "local_code": "OP17",
+    "length_ft": 5243,
+    "width_ft": 75,
+    "heading": 167.3,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -78,7 +135,14 @@
     "freq": "",
     "Lat": 30.49489974975586,
     "Lon": 70.97109985351562,
-    "Ele": 128.9
+    "Ele": 128.9,
+    "ident": "OP18",
+    "iso_country": "PK",
+    "local_code": "OP18",
+    "length_ft": 3405,
+    "width_ft": 80,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -87,7 +151,14 @@
     "freq": "",
     "Lat": 32.4244995117,
     "Lon": 71.4585037231,
-    "Ele": 196.6
+    "Ele": 196.6,
+    "ident": "OP19",
+    "iso_country": "PK",
+    "local_code": "OP19",
+    "length_ft": 3500,
+    "width_ft": 50,
+    "heading": 60.8,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -96,7 +167,14 @@
     "freq": "",
     "Lat": 26.198099,
     "Lon": 67.5037,
-    "Ele": 127.4
+    "Ele": 127.4,
+    "ident": "OP1A",
+    "iso_country": "PK",
+    "icao_code": "OPBT",
+    "length_ft": 5470,
+    "width_ft": 98,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -105,7 +183,14 @@
     "freq": "",
     "Lat": 32.0778007507,
     "Lon": 73.79019927979999,
-    "Ele": 189.0
+    "Ele": 189,
+    "ident": "OP1Y",
+    "iso_country": "PK",
+    "local_code": "OP1Y",
+    "length_ft": 9000,
+    "width_ft": 75,
+    "heading": 50,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -114,7 +199,14 @@
     "freq": "",
     "Lat": 30.0914,
     "Lon": 72.153801,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "OP21",
+    "iso_country": "PK",
+    "local_code": "OP21",
+    "length_ft": 10283,
+    "width_ft": 149,
+    "heading": 168,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -123,7 +215,14 @@
     "freq": "",
     "Lat": 29.263999938964844,
     "Lon": 70.1864013671875,
-    "Ele": 122.2
+    "Ele": 122.2,
+    "ident": "OP22",
+    "iso_country": "PK",
+    "local_code": "OP22",
+    "length_ft": 10000,
+    "width_ft": 150,
+    "heading": 24.9,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -132,7 +231,14 @@
     "freq": "",
     "Lat": 33.38759994506836,
     "Lon": 70.58879852294922,
-    "Ele": 807.7
+    "Ele": 807.7,
+    "ident": "OP23",
+    "iso_country": "PK",
+    "local_code": "OP23",
+    "length_ft": 4525,
+    "width_ft": 148,
+    "heading": 21,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -141,7 +247,13 @@
     "freq": "",
     "Lat": 32.60139846801758,
     "Lon": 73.5083999633789,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "OP24",
+    "iso_country": "PK",
+    "length_ft": 2903,
+    "width_ft": 81,
+    "heading": 27,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -150,7 +262,14 @@
     "freq": "",
     "Lat": 32.8785018921,
     "Lon": 73.60530090329999,
-    "Ele": 243.8
+    "Ele": 243.8,
+    "ident": "OP25",
+    "iso_country": "PK",
+    "local_code": "OP25",
+    "length_ft": 3028,
+    "width_ft": 33,
+    "heading": 125,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -159,7 +278,14 @@
     "freq": "",
     "Lat": 32.62910079956055,
     "Lon": 73.02259826660156,
-    "Ele": 233.8
+    "Ele": 233.8,
+    "ident": "OP26",
+    "iso_country": "PK",
+    "local_code": "OP26",
+    "length_ft": 3552,
+    "width_ft": 40,
+    "heading": 163,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -168,7 +294,14 @@
     "freq": "",
     "Lat": 32.23899841308594,
     "Lon": 74.13099670410156,
-    "Ele": 227.1
+    "Ele": 227.1,
+    "ident": "OP27",
+    "iso_country": "PK",
+    "local_code": "OP27",
+    "length_ft": 2322,
+    "width_ft": 85,
+    "heading": 150.1,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -177,7 +310,14 @@
     "freq": "",
     "Lat": 29.92329978942871,
     "Lon": 66.74610137939453,
-    "Ele": 1589.5
+    "Ele": 1589.5,
+    "ident": "OP28",
+    "iso_country": "PK",
+    "local_code": "OP28",
+    "length_ft": 8100,
+    "width_ft": 60,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -186,7 +326,14 @@
     "freq": "",
     "Lat": 28.470600128173828,
     "Lon": 69.5990982055664,
-    "Ele": 79.2
+    "Ele": 79.2,
+    "ident": "OP31",
+    "iso_country": "PK",
+    "local_code": "OP31",
+    "length_ft": 3876,
+    "width_ft": 72,
+    "heading": 29.4,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -195,7 +342,14 @@
     "freq": "",
     "Lat": 28.03610038757324,
     "Lon": 69.67489624023438,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "OP32",
+    "iso_country": "PK",
+    "local_code": "OP32",
+    "length_ft": 3000,
+    "width_ft": 65,
+    "heading": 66,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -204,7 +358,14 @@
     "freq": "",
     "Lat": 28.27400016784668,
     "Lon": 69.2760009765625,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "OP33",
+    "iso_country": "PK",
+    "local_code": "OP33",
+    "length_ft": 3862,
+    "width_ft": 80,
+    "heading": 61,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -213,7 +374,14 @@
     "freq": "",
     "Lat": 28.81940078735352,
     "Lon": 62.7307014465332,
-    "Ele": 678.8
+    "Ele": 678.8,
+    "ident": "OP34",
+    "iso_country": "PK",
+    "local_code": "OP34",
+    "length_ft": 3722,
+    "width_ft": 90,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -222,7 +390,14 @@
     "freq": "",
     "Lat": 29.04050064086914,
     "Lon": 61.64739990234375,
-    "Ele": 872.0
+    "Ele": 872,
+    "ident": "OP35",
+    "iso_country": "PK",
+    "local_code": "OP35",
+    "length_ft": 5015,
+    "width_ft": 100,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -231,7 +406,14 @@
     "freq": "",
     "Lat": 26.251688,
     "Lon": 63.129933,
-    "Ele": 560.8
+    "Ele": 560.8,
+    "ident": "OP36",
+    "iso_country": "PK",
+    "local_code": "OP36",
+    "length_ft": 4464,
+    "width_ft": 128,
+    "heading": 75.4,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -240,7 +422,14 @@
     "freq": "",
     "Lat": 27.813100814819336,
     "Lon": 69.16709899902344,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "OP37",
+    "iso_country": "PK",
+    "local_code": "OP37",
+    "length_ft": 6015,
+    "width_ft": 150,
+    "heading": 140,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -249,7 +438,14 @@
     "freq": "",
     "Lat": 32.056098938,
     "Lon": 72.94840240479999,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "OPBG",
+    "iso_country": "PK",
+    "iata_code": "BHW",
+    "length_ft": 5020,
+    "width_ft": 150,
+    "heading": 163,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -258,7 +454,9 @@
     "freq": "",
     "Lat": 29.49220085144043,
     "Lon": 71.11840057373047,
-    "Ele": 105.8
+    "Ele": 105.8,
+    "ident": "OPBL",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -267,7 +465,14 @@
     "freq": "",
     "Lat": 32.9729,
     "Lon": 70.527901,
-    "Ele": 403.9
+    "Ele": 403.9,
+    "ident": "OPBN",
+    "iso_country": "PK",
+    "icao_code": "OPBN",
+    "iata_code": "BNP",
+    "length_ft": 6001,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -276,7 +481,10 @@
     "freq": "",
     "Lat": 29.9463005065918,
     "Lon": 73.24909973144531,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "OPBR",
+    "iso_country": "PK",
+    "iata_code": "WGB"
   },
   {
     "type": "medium_airport",
@@ -285,7 +493,15 @@
     "freq": "121.800",
     "Lat": 29.348100662231445,
     "Lon": 71.71800231933594,
-    "Ele": 119.5
+    "Ele": 119.5,
+    "ident": "OPBW",
+    "iso_country": "PK",
+    "icao_code": "OPBW",
+    "iata_code": "BHV",
+    "length_ft": 9345,
+    "width_ft": 98,
+    "heading": 78.9,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -294,7 +510,15 @@
     "freq": "121.800",
     "Lat": 35.886213,
     "Lon": 71.799922,
-    "Ele": 1499.6
+    "Ele": 1499.6,
+    "ident": "OPCH",
+    "iso_country": "PK",
+    "icao_code": "OPCH",
+    "iata_code": "CJL",
+    "length_ft": 5741,
+    "width_ft": 98,
+    "heading": 27,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -303,7 +527,11 @@
     "freq": "",
     "Lat": 35.426700592,
     "Lon": 74.081703186,
-    "Ele": 1263.7
+    "Ele": 1263.7,
+    "ident": "OPCL",
+    "iso_country": "PK",
+    "icao_code": "OPCL",
+    "iata_code": "CHB"
   },
   {
     "type": "small_airport",
@@ -312,7 +540,10 @@
     "freq": "",
     "Lat": 33.968101501464844,
     "Lon": 71.96749877929688,
-    "Ele": 363.3
+    "Ele": 363.3,
+    "ident": "OPCT",
+    "iso_country": "PK",
+    "icao_code": "OPCT"
   },
   {
     "type": "small_airport",
@@ -321,7 +552,11 @@
     "freq": "",
     "Lat": 28.8782997131,
     "Lon": 64.3998031616,
-    "Ele": 853.4
+    "Ele": 853.4,
+    "ident": "OPDB",
+    "iso_country": "PK",
+    "icao_code": "OPDB",
+    "iata_code": "DBA"
   },
   {
     "type": "medium_airport",
@@ -330,7 +565,15 @@
     "freq": "119.400",
     "Lat": 29.961000442504883,
     "Lon": 70.48590087890625,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "OPDG",
+    "iso_country": "PK",
+    "icao_code": "OPDG",
+    "iata_code": "DEA",
+    "length_ft": 6499,
+    "width_ft": 98,
+    "heading": 180.8,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -339,7 +582,15 @@
     "freq": "121.800",
     "Lat": 31.909401,
     "Lon": 70.896599,
-    "Ele": 181.1
+    "Ele": 181.1,
+    "ident": "OPDI",
+    "iso_country": "PK",
+    "icao_code": "OPDI",
+    "iata_code": "DSK",
+    "length_ft": 5000,
+    "width_ft": 75,
+    "heading": 118.8,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -348,7 +599,9 @@
     "freq": "",
     "Lat": 28.5,
     "Lon": 69.69999694824219,
-    "Ele": 83.5
+    "Ele": 83.5,
+    "ident": "OPDK",
+    "iso_country": "PK"
   },
   {
     "type": "medium_airport",
@@ -357,7 +610,15 @@
     "freq": "121.800",
     "Lat": 31.364999771118164,
     "Lon": 72.99479675292969,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "OPFA",
+    "iso_country": "PK",
+    "icao_code": "OPFA",
+    "iata_code": "LYP",
+    "length_ft": 9324,
+    "width_ft": 150,
+    "QFU": "21",
+    "heading": 36
   },
   {
     "type": "medium_airport",
@@ -366,7 +627,14 @@
     "freq": "",
     "Lat": 25.296733,
     "Lon": 62.498822,
-    "Ele": 18.6
+    "Ele": 18.6,
+    "ident": "OPGW",
+    "iso_country": "PK",
+    "icao_code": "OPGD",
+    "length_ft": 6503,
+    "width_ft": 75,
+    "heading": 63,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -375,7 +643,15 @@
     "freq": "292.300",
     "Lat": 35.918800354003906,
     "Lon": 74.33360290527344,
-    "Ele": 1461.8
+    "Ele": 1461.8,
+    "ident": "OPGT",
+    "iso_country": "PK",
+    "icao_code": "OPGT",
+    "iata_code": "GIL",
+    "length_ft": 983,
+    "width_ft": 49,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -384,7 +660,15 @@
     "freq": "122.500",
     "Lat": 25.232391,
     "Lon": 62.327671,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "OPGD",
+    "iso_country": "PK",
+    "icao_code": "OPGW",
+    "iata_code": "GWD",
+    "length_ft": 12789,
+    "width_ft": 246,
+    "heading": 69,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -393,7 +677,15 @@
     "freq": "121.650",
     "Lat": 33.549,
     "Lon": 72.82566,
-    "Ele": 536.8
+    "Ele": 536.8,
+    "ident": "OPIS",
+    "iso_country": "PK",
+    "icao_code": "OPIS",
+    "iata_code": "ISB",
+    "length_ft": 12001,
+    "width_ft": 197,
+    "heading": 100,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -402,7 +694,15 @@
     "freq": "29.040",
     "Lat": 28.28420066833496,
     "Lon": 68.44969940185547,
-    "Ele": 56.4
+    "Ele": 56.4,
+    "ident": "OPJA",
+    "iso_country": "PK",
+    "icao_code": "OPJA",
+    "iata_code": "JAG",
+    "length_ft": 10081,
+    "width_ft": 80,
+    "heading": 147.3,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -411,7 +711,10 @@
     "freq": "",
     "Lat": 24.828406,
     "Lon": 66.666029,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "OPKA",
+    "iso_country": "PK",
+    "icao_code": "OPKA"
   },
   {
     "type": "large_airport",
@@ -420,7 +723,15 @@
     "freq": "125.500",
     "Lat": 24.9065,
     "Lon": 67.160797,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "OPKC",
+    "iso_country": "PK",
+    "icao_code": "OPKC",
+    "iata_code": "KHI",
+    "length_ft": 11155,
+    "width_ft": 151,
+    "heading": 74.3,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -429,7 +740,15 @@
     "freq": "",
     "Lat": 25.3181,
     "Lon": 68.366096,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "OPKD",
+    "iso_country": "PK",
+    "icao_code": "OPKD",
+    "iata_code": "HDD",
+    "length_ft": 6998,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -438,7 +757,10 @@
     "freq": "",
     "Lat": 25.525999069213867,
     "Lon": 69.77179718017578,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "OPKE",
+    "iso_country": "PK",
+    "icao_code": "OPKE"
   },
   {
     "type": "small_airport",
@@ -447,7 +769,10 @@
     "freq": "",
     "Lat": 24.72900009155273,
     "Lon": 67.58760070800781,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "OPKF",
+    "iso_country": "PK",
+    "icao_code": "OPKF"
   },
   {
     "type": "small_airport",
@@ -456,7 +781,14 @@
     "freq": "",
     "Lat": 27.790599823,
     "Lon": 66.6473007202,
-    "Ele": 1222.9
+    "Ele": 1222.9,
+    "ident": "OPKH",
+    "iso_country": "PK",
+    "icao_code": "OPKH",
+    "iata_code": "KDD",
+    "length_ft": 6001,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -465,7 +797,11 @@
     "freq": "",
     "Lat": 33.5699996948,
     "Lon": 71.4400024414,
-    "Ele": 502.9
+    "Ele": 502.9,
+    "ident": "OPKT",
+    "iso_country": "PK",
+    "icao_code": "OPKT",
+    "iata_code": "OHT"
   },
   {
     "type": "large_airport",
@@ -474,7 +810,15 @@
     "freq": "121.300",
     "Lat": 31.521601,
     "Lon": 74.403603,
-    "Ele": 217.0
+    "Ele": 217,
+    "ident": "OPLA",
+    "iso_country": "PK",
+    "icao_code": "OPLA",
+    "iata_code": "LHE",
+    "length_ft": 9000,
+    "width_ft": 151,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -483,7 +827,7 @@
     "freq": "119.400",
     "Lat": 31.494323,
     "Lon": 74.346914,
-    "Ele": 207.0
+    "Ele": 207
   },
   {
     "type": "small_airport",
@@ -492,7 +836,11 @@
     "freq": "",
     "Lat": 30.355499267578125,
     "Lon": 68.6135025024414,
-    "Ele": 1411.5
+    "Ele": 1411.5,
+    "ident": "OPLL",
+    "iso_country": "PK",
+    "icao_code": "OPLL",
+    "iata_code": "LRG"
   },
   {
     "type": "medium_airport",
@@ -501,7 +849,15 @@
     "freq": "118.400",
     "Lat": 33.05009841918945,
     "Lon": 73.63839721679688,
-    "Ele": 274.9
+    "Ele": 274.9,
+    "ident": "OPMA",
+    "iso_country": "PK",
+    "icao_code": "OPMA",
+    "iata_code": "XJM",
+    "length_ft": 5000,
+    "width_ft": 100,
+    "heading": 135.9,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -510,7 +866,15 @@
     "freq": "121.800",
     "Lat": 34.339001,
     "Lon": 73.508598,
-    "Ele": 820.2
+    "Ele": 820.2,
+    "ident": "OPMF",
+    "iso_country": "PK",
+    "icao_code": "OPMF",
+    "iata_code": "MFG",
+    "length_ft": 2960,
+    "width_ft": 75,
+    "heading": 132,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -519,7 +883,15 @@
     "freq": "",
     "Lat": 32.5630989074707,
     "Lon": 71.5707015991211,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "OPMI",
+    "iso_country": "PK",
+    "icao_code": "OPMI",
+    "iata_code": "MWD",
+    "length_ft": 10161,
+    "width_ft": 156,
+    "heading": 61.1,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -528,7 +900,15 @@
     "freq": "121.800",
     "Lat": 27.335199,
     "Lon": 68.143097,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "OPMJ",
+    "iso_country": "PK",
+    "icao_code": "OPMJ",
+    "iata_code": "MJD",
+    "length_ft": 6512,
+    "width_ft": 98,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -537,7 +917,9 @@
     "freq": "",
     "Lat": 25.682501,
     "Lon": 69.0728,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "OPMK",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -546,7 +928,9 @@
     "freq": "",
     "Lat": 33.01470184326172,
     "Lon": 70.06439971923828,
-    "Ele": 921.1
+    "Ele": 921.1,
+    "ident": "OPMN",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -555,7 +939,11 @@
     "freq": "",
     "Lat": 25.68280029296875,
     "Lon": 69.07279968261719,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "OPMP",
+    "iso_country": "PK",
+    "icao_code": "OPMP",
+    "iata_code": "MPD"
   },
   {
     "type": "medium_airport",
@@ -564,7 +952,13 @@
     "freq": "32.420",
     "Lat": 24.893600463867188,
     "Lon": 66.93879699707031,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "OPMR",
+    "iso_country": "PK",
+    "length_ft": 9022,
+    "width_ft": 200,
+    "heading": 89.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -573,7 +967,14 @@
     "freq": "",
     "Lat": 33.8690986633,
     "Lon": 72.4009017944,
-    "Ele": 311.8
+    "Ele": 311.8,
+    "ident": "OPMS",
+    "iso_country": "PK",
+    "iata_code": "ATG",
+    "length_ft": 9950,
+    "width_ft": 165,
+    "heading": 121,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -582,7 +983,15 @@
     "freq": "119.100",
     "Lat": 30.20319938659668,
     "Lon": 71.41909790039062,
-    "Ele": 122.8
+    "Ele": 122.8,
+    "ident": "OPMT",
+    "iso_country": "PK",
+    "icao_code": "OPMT",
+    "iata_code": "MUX",
+    "length_ft": 9046,
+    "width_ft": 98,
+    "heading": 183.3,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -591,7 +1000,15 @@
     "freq": "121.800",
     "Lat": 26.2194,
     "Lon": 68.390099,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "OPNH",
+    "iso_country": "PK",
+    "icao_code": "OPNH",
+    "iata_code": "WNS",
+    "length_ft": 8999,
+    "width_ft": 150,
+    "heading": 21,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -600,7 +1017,13 @@
     "freq": "",
     "Lat": 30.740999221800003,
     "Lon": 73.3576965332,
-    "Ele": 173.1
+    "Ele": 173.1,
+    "ident": "OPOK",
+    "iso_country": "PK",
+    "length_ft": 10995,
+    "width_ft": 80,
+    "heading": 180.1,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -609,7 +1032,14 @@
     "freq": "",
     "Lat": 25.276625,
     "Lon": 64.588343,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "OPOR",
+    "iso_country": "PK",
+    "icao_code": "OPOR",
+    "iata_code": "ORW",
+    "length_ft": 5000,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -618,7 +1048,14 @@
     "freq": "",
     "Lat": 33.9021,
     "Lon": 70.071602,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "OPPC",
+    "iso_country": "PK",
+    "icao_code": "OPPC",
+    "iata_code": "PAJ",
+    "length_ft": 3999,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -627,7 +1064,15 @@
     "freq": "121.800",
     "Lat": 26.9545,
     "Lon": 64.1325,
-    "Ele": 1002.5
+    "Ele": 1002.5,
+    "ident": "OPPG",
+    "iso_country": "PK",
+    "icao_code": "OPPG",
+    "iata_code": "PJG",
+    "length_ft": 5000,
+    "width_ft": 75,
+    "heading": 131.9,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -636,7 +1081,15 @@
     "freq": "121.800",
     "Lat": 25.290501,
     "Lon": 63.3451,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "OPPI",
+    "iso_country": "PK",
+    "icao_code": "OPPI",
+    "iata_code": "PSI",
+    "length_ft": 8999,
+    "width_ft": 151,
+    "heading": 58.4,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -645,7 +1098,9 @@
     "freq": "",
     "Lat": 30.552457,
     "Lon": 66.984768,
-    "Ele": 1546.9
+    "Ele": 1546.9,
+    "ident": "OPPN",
+    "iso_country": "PK"
   },
   {
     "type": "medium_airport",
@@ -654,7 +1109,15 @@
     "freq": "125.600",
     "Lat": 33.993900299072266,
     "Lon": 71.51460266113281,
-    "Ele": 353.0
+    "Ele": 353,
+    "ident": "OPPS",
+    "iso_country": "PK",
+    "icao_code": "OPPS",
+    "iata_code": "PEW",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 175.9,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -663,7 +1126,13 @@
     "freq": "118.100",
     "Lat": 33.5602,
     "Lon": 73.033203,
-    "Ele": 481.9
+    "Ele": 481.9,
+    "ident": "OPQS",
+    "iso_country": "PK",
+    "length_ft": 6693,
+    "width_ft": 148,
+    "heading": 142.7,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -672,7 +1141,15 @@
     "freq": "292.300",
     "Lat": 30.251399993896484,
     "Lon": 66.93779754638672,
-    "Ele": 1605.4
+    "Ele": 1605.4,
+    "ident": "OPQT",
+    "iso_country": "PK",
+    "icao_code": "OPQT",
+    "iata_code": "UET",
+    "length_ft": 9022,
+    "width_ft": 110,
+    "heading": 136,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -681,7 +1158,15 @@
     "freq": "121.800",
     "Lat": 28.383899688720703,
     "Lon": 70.27960205078125,
-    "Ele": 82.6
+    "Ele": 82.6,
+    "ident": "OPRK",
+    "iso_country": "PK",
+    "icao_code": "OPRK",
+    "iata_code": "RYK",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 14.6,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -690,7 +1175,13 @@
     "freq": "124.900",
     "Lat": 33.616699,
     "Lon": 73.099197,
-    "Ele": 508.4
+    "Ele": 508.4,
+    "ident": "OPRN",
+    "iso_country": "PK",
+    "length_ft": 10785,
+    "width_ft": 150,
+    "heading": 118.2,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -699,7 +1190,13 @@
     "freq": "",
     "Lat": 30.758100509643555,
     "Lon": 72.28250122070312,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "OPRQ",
+    "iso_country": "PK",
+    "length_ft": 9621,
+    "width_ft": 100,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -708,7 +1205,13 @@
     "freq": "125.600",
     "Lat": 34.08110046386719,
     "Lon": 71.97260284423828,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "OPRS",
+    "iso_country": "PK",
+    "length_ft": 9085,
+    "width_ft": 164,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -717,7 +1220,15 @@
     "freq": "121.800",
     "Lat": 33.849701,
     "Lon": 73.798103,
-    "Ele": 1670.0
+    "Ele": 1670,
+    "ident": "OPRT",
+    "iso_country": "PK",
+    "icao_code": "OPRT",
+    "iata_code": "RAZ",
+    "length_ft": 2958,
+    "width_ft": 75,
+    "heading": 13,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -726,7 +1237,11 @@
     "freq": "",
     "Lat": 29.571199,
     "Lon": 67.8479,
-    "Ele": 132.9
+    "Ele": 132.9,
+    "ident": "OPSB",
+    "iso_country": "PK",
+    "icao_code": "OPSB",
+    "iata_code": "SBQ"
   },
   {
     "type": "medium_airport",
@@ -735,7 +1250,15 @@
     "freq": "121.800",
     "Lat": 35.33549880981445,
     "Lon": 75.53600311279297,
-    "Ele": 2229.9
+    "Ele": 2229.9,
+    "ident": "OPSD",
+    "iso_country": "PK",
+    "icao_code": "OPSD",
+    "iata_code": "KDU",
+    "length_ft": 6501,
+    "width_ft": 101,
+    "heading": 152.6,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -744,7 +1267,13 @@
     "freq": "122.500",
     "Lat": 24.87420082092285,
     "Lon": 67.11849975585938,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "OPSF",
+    "iso_country": "PK",
+    "length_ft": 8060,
+    "width_ft": 150,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -753,7 +1282,15 @@
     "freq": "121.800",
     "Lat": 27.722000122070312,
     "Lon": 68.79170227050781,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "OPSK",
+    "iso_country": "PK",
+    "icao_code": "OPSK",
+    "iata_code": "SKZ",
+    "length_ft": 9000,
+    "width_ft": 98,
+    "heading": 140.5,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -762,7 +1299,14 @@
     "freq": "",
     "Lat": 26.473101,
     "Lon": 67.717201,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "OPSN",
+    "iso_country": "PK",
+    "icao_code": "OPSN",
+    "iata_code": "SYW",
+    "length_ft": 6562,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -771,7 +1315,11 @@
     "freq": "",
     "Lat": 32.04859924316406,
     "Lon": 72.66500091552734,
-    "Ele": 187.1
+    "Ele": 187.1,
+    "ident": "OPSR",
+    "iso_country": "PK",
+    "icao_code": "OPSR",
+    "iata_code": "SGI"
   },
   {
     "type": "medium_airport",
@@ -780,7 +1328,15 @@
     "freq": "121.800",
     "Lat": 34.813599,
     "Lon": 72.352798,
-    "Ele": 970.2
+    "Ele": 970.2,
+    "ident": "OPSS",
+    "iso_country": "PK",
+    "icao_code": "OPSS",
+    "iata_code": "SDT",
+    "length_ft": 5745,
+    "width_ft": 151,
+    "heading": 52,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -789,7 +1345,15 @@
     "freq": "",
     "Lat": 32.535557,
     "Lon": 74.363892,
-    "Ele": 255.1
+    "Ele": 255.1,
+    "ident": "OPST",
+    "iso_country": "PK",
+    "icao_code": "OPST",
+    "iata_code": "SKT",
+    "length_ft": 11811,
+    "width_ft": 150,
+    "QFU": "04",
+    "heading": 40
   },
   {
     "type": "medium_airport",
@@ -798,7 +1362,15 @@
     "freq": "",
     "Lat": 28.645099639892575,
     "Lon": 69.1769027709961,
-    "Ele": 232.6
+    "Ele": 232.6,
+    "ident": "OPSU",
+    "iso_country": "PK",
+    "icao_code": "OPSU",
+    "iata_code": "SUL",
+    "length_ft": 6000,
+    "width_ft": 100,
+    "heading": 6.3,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -807,7 +1379,15 @@
     "freq": "",
     "Lat": 26.9662,
     "Lon": 68.878098,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "OPSW",
+    "iso_country": "PK",
+    "icao_code": "OPSW",
+    "iata_code": "RZS",
+    "length_ft": 5462,
+    "width_ft": 100,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -816,7 +1396,11 @@
     "freq": "",
     "Lat": 33.9860992432,
     "Lon": 72.61139678960001,
-    "Ele": 339.5
+    "Ele": 339.5,
+    "ident": "OPTA",
+    "iso_country": "PK",
+    "icao_code": "OPTA",
+    "iata_code": "TLB"
   },
   {
     "type": "small_airport",
@@ -825,7 +1409,15 @@
     "freq": "",
     "Lat": 24.84149932861328,
     "Lon": 68.8384017944336,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "OPTH",
+    "iso_country": "PK",
+    "icao_code": "OPTH",
+    "iata_code": "BDN",
+    "length_ft": 8968,
+    "width_ft": 75,
+    "heading": 60.7,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -834,7 +1426,10 @@
     "freq": "",
     "Lat": 28.96419906616211,
     "Lon": 61.595401763916016,
-    "Ele": 835.8
+    "Ele": 835.8,
+    "ident": "OPTT",
+    "iso_country": "PK",
+    "iata_code": "TFT"
   },
   {
     "type": "medium_airport",
@@ -843,7 +1438,15 @@
     "freq": "121.800",
     "Lat": 25.986400604248047,
     "Lon": 63.03020095825195,
-    "Ele": 151.8
+    "Ele": 151.8,
+    "ident": "OPTU",
+    "iso_country": "PK",
+    "icao_code": "OPTU",
+    "iata_code": "TUK",
+    "length_ft": 6000,
+    "width_ft": 98,
+    "heading": 83,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -852,7 +1455,15 @@
     "freq": "",
     "Lat": 32.3046989440918,
     "Lon": 69.57039642333984,
-    "Ele": 1386.8
+    "Ele": 1386.8,
+    "ident": "OPWN",
+    "iso_country": "PK",
+    "icao_code": "OPWN",
+    "iata_code": "WAF",
+    "length_ft": 2993,
+    "width_ft": 100,
+    "heading": 91.6,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -861,7 +1472,15 @@
     "freq": "121.800",
     "Lat": 31.358400344848636,
     "Lon": 69.4636001586914,
-    "Ele": 1441.1
+    "Ele": 1441.1,
+    "ident": "OPZB",
+    "iso_country": "PK",
+    "icao_code": "OPZB",
+    "iata_code": "PZH",
+    "length_ft": 6001,
+    "width_ft": 98,
+    "heading": 100,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -870,7 +1489,9 @@
     "freq": "",
     "Lat": 33.529998779296875,
     "Lon": 72.26000213623047,
-    "Ele": 120.7
+    "Ele": 120.7,
+    "ident": "PK-0002",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -879,7 +1500,9 @@
     "freq": "",
     "Lat": 28.620667,
     "Lon": 65.471001,
-    "Ele": 734.0
+    "Ele": 734,
+    "ident": "PK-0006",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -888,7 +1511,9 @@
     "freq": "",
     "Lat": 32.909616,
     "Lon": 72.773895,
-    "Ele": 164.6
+    "Ele": 164.6,
+    "ident": "PK-0009",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -897,7 +1522,9 @@
     "freq": "",
     "Lat": 32.514722,
     "Lon": 74.528889,
-    "Ele": 632.2
+    "Ele": 632.2,
+    "ident": "PK-0013",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -906,7 +1533,9 @@
     "freq": "",
     "Lat": 28.6433333333,
     "Lon": 70.6325,
-    "Ele": 86.3
+    "Ele": 86.3,
+    "ident": "PK-0014",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -915,7 +1544,9 @@
     "freq": "",
     "Lat": 27.4831,
     "Lon": 68.1926,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "PK-0015",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -924,7 +1555,9 @@
     "freq": "",
     "Lat": 25.5448,
     "Lon": 68.3265,
-    "Ele": 34.4
+    "Ele": 34.4,
+    "ident": "PK-0016",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -933,7 +1566,9 @@
     "freq": "",
     "Lat": 24.8366,
     "Lon": 67.7619,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "PK-0017",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -942,7 +1577,9 @@
     "freq": "",
     "Lat": 24.6141,
     "Lon": 68.0827,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "PK-0020",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -951,7 +1588,9 @@
     "freq": "",
     "Lat": 28.50676,
     "Lon": 70.06305,
-    "Ele": 82.9
+    "Ele": 82.9,
+    "ident": "PK-0045",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -960,7 +1599,9 @@
     "freq": "",
     "Lat": 28.29812,
     "Lon": 70.48936,
-    "Ele": 84.1
+    "Ele": 84.1,
+    "ident": "PK-0046",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -969,7 +1610,9 @@
     "freq": "",
     "Lat": 28.05091,
     "Lon": 69.36057,
-    "Ele": 71.0
+    "Ele": 71,
+    "ident": "PK-0047",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -978,7 +1621,11 @@
     "freq": "",
     "Lat": 30.2376,
     "Lon": 67.03685,
-    "Ele": 1727.9
+    "Ele": 1727.9,
+    "ident": "PK-0049",
+    "iso_country": "PK",
+    "QFU": "12",
+    "heading": 120
   },
   {
     "type": "small_airport",
@@ -987,7 +1634,9 @@
     "freq": "",
     "Lat": 25.19102,
     "Lon": 66.74428,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "PK-0062",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -996,7 +1645,9 @@
     "freq": "",
     "Lat": 25.242056,
     "Lon": 68.035583,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PK-0070",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1656,9 @@
     "freq": "",
     "Lat": 30.97834,
     "Lon": 73.94222,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PK-0075",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1667,10 @@
     "freq": "",
     "Lat": 33.96099853515625,
     "Lon": 73.4520034790039,
-    "Ele": 1752.6
+    "Ele": 1752.6,
+    "ident": "PK-BHC",
+    "iso_country": "PK",
+    "iata_code": "BHC"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1679,10 @@
     "freq": "",
     "Lat": 33.766700744628906,
     "Lon": 72.36689758300781,
-    "Ele": 358.1
+    "Ele": 358.1,
+    "ident": "PK-CWP",
+    "iso_country": "PK",
+    "iata_code": "CWP"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1691,10 @@
     "freq": "",
     "Lat": 32.62826,
     "Lon": 74.067287,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "PK-GRT",
+    "iso_country": "PK",
+    "iata_code": "GRT"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1703,9 @@
     "freq": "",
     "Lat": 27.1667003632,
     "Lon": 69.31670379639999,
-    "Ele": 75.6
+    "Ele": 75.6,
+    "ident": "PK-KCF",
+    "iso_country": "PK"
   },
   {
     "type": "small_airport",
@@ -1050,6 +1714,37 @@
     "freq": "",
     "Lat": 29.04692,
     "Lon": 62.196819,
-    "Ele": 848.6
+    "Ele": 848.6,
+    "ident": "PK-REQ",
+    "iso_country": "PK",
+    "iata_code": "REQ",
+    "length_ft": 5577,
+    "width_ft": 98,
+    "heading": 175,
+    "QFU": "36"
+  },
+  {
+    "Lat": 25.067801,
+    "Lon": 61.805401,
+    "type": "small_airport",
+    "ident": "PK-0083",
+    "name": "Jiwani Airport (INACTIVE}",
+    "Ele": 180,
+    "iso_country": "PK",
+    "icao_code": "OPJI",
+    "iata_code": "JIW",
+    "gps_code": "OPJI",
+    "length_ft": 5850,
+    "QFU": "21",
+    "heading": 210
+  },
+  {
+    "Lat": 24.847086,
+    "Lon": 70.096098,
+    "type": "medium_airport",
+    "ident": "PK-0092",
+    "name": "Mai Bakhtawar International Airport",
+    "Ele": 182,
+    "iso_country": "PK"
   }
 ]

@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 13.624787,
     "Lon": 144.857358,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GU-0001",
+    "iso_country": "GU"
   },
   {
     "type": "medium_airport",
@@ -15,7 +17,16 @@
     "freq": "118.700",
     "Lat": 13.584,
     "Lon": 144.929998,
-    "Ele": 191.1
+    "Ele": 191.1,
+    "ident": "PGUA",
+    "iso_country": "GU",
+    "icao_code": "PGUA",
+    "iata_code": "UAM",
+    "local_code": "UAM",
+    "length_ft": 11185,
+    "width_ft": 200,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "large_airport",
@@ -24,6 +35,15 @@
     "freq": "118.700",
     "Lat": 13.485,
     "Lon": 144.797282,
-    "Ele": 90.8
+    "Ele": 90.8,
+    "ident": "PGUM",
+    "iso_country": "GU",
+    "icao_code": "PGUM",
+    "iata_code": "GUM",
+    "local_code": "GUM",
+    "length_ft": 10014,
+    "width_ft": 150,
+    "heading": 65,
+    "QFU": "24"
   }
 ]

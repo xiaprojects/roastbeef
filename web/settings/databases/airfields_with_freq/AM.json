@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 39.202272,
     "Lon": 46.455204,
-    "Ele": 703.5
+    "Ele": 703.5,
+    "ident": "AM-0001",
+    "iso_country": "AM",
+    "icao_code": "UDCK",
+    "iata_code": "YUK"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,11 @@
     "freq": "",
     "Lat": 39.450989,
     "Lon": 46.34724,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AM-0002",
+    "iso_country": "AM",
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -24,7 +32,9 @@
     "freq": "",
     "Lat": 40.0809774791,
     "Lon": 43.8822698593,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AM-0003",
+    "iso_country": "AM"
   },
   {
     "type": "small_airport",
@@ -33,7 +43,9 @@
     "freq": "",
     "Lat": 40.9254056063,
     "Lon": 45.4614043236,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AM-0004",
+    "iso_country": "AM"
   },
   {
     "type": "small_airport",
@@ -42,7 +54,9 @@
     "freq": "",
     "Lat": 39.54694,
     "Lon": 46.05694,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AM-0008",
+    "iso_country": "AM"
   },
   {
     "type": "small_airport",
@@ -51,7 +65,9 @@
     "freq": "",
     "Lat": 40.07953,
     "Lon": 44.60577,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AM-0009",
+    "iso_country": "AM"
   },
   {
     "type": "small_airport",
@@ -60,7 +76,14 @@
     "freq": "",
     "Lat": 40.294102,
     "Lon": 44.564602,
-    "Ele": 1346.0
+    "Ele": 1346,
+    "ident": "UD21",
+    "iso_country": "AM",
+    "local_code": "UD21",
+    "length_ft": 3252,
+    "width_ft": 250,
+    "heading": 186.1,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -69,7 +92,13 @@
     "freq": "130.300",
     "Lat": 41.048500061,
     "Lon": 44.3372001648,
-    "Ele": 1474.0
+    "Ele": 1474,
+    "ident": "UDLS",
+    "iso_country": "AM",
+    "length_ft": 6555,
+    "width_ft": 92,
+    "heading": 130.7,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -78,7 +107,15 @@
     "freq": "127.700",
     "Lat": 40.750401,
     "Lon": 43.859299,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "UDSG",
+    "iso_country": "AM",
+    "icao_code": "UDSG",
+    "iata_code": "LWN",
+    "length_ft": 10564,
+    "width_ft": 147,
+    "heading": 24,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -87,7 +124,13 @@
     "freq": "119.400",
     "Lat": 40.1221008301,
     "Lon": 44.465000152600005,
-    "Ele": 898.6
+    "Ele": 898.6,
+    "ident": "UDYE",
+    "iso_country": "AM",
+    "length_ft": 9134,
+    "width_ft": 132,
+    "heading": 32.8,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -96,6 +139,14 @@
     "freq": "126.000",
     "Lat": 40.1473007202,
     "Lon": 44.3959007263,
-    "Ele": 865.0
+    "Ele": 865,
+    "ident": "UDYZ",
+    "iso_country": "AM",
+    "icao_code": "UDYZ",
+    "iata_code": "EVN",
+    "length_ft": 12631,
+    "width_ft": 184,
+    "heading": 90,
+    "QFU": "26"
   }
 ]

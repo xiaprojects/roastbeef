@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 26.15126,
     "Lon": -10.564245,
-    "Ele": 495.0
+    "Ele": 495,
+    "ident": "EH-0001",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 24.0917,
     "Lon": -13.3113,
-    "Ele": 289.0
+    "Ele": 289,
+    "ident": "EH-0005",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 27.418767,
     "Lon": -9.171517,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EH-0007",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 27.24568,
     "Lon": -9.47312,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EH-0008",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 26.35988,
     "Lon": -12.84913,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EH-0011",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 22.20343,
     "Lon": -13.14609,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EH-0013",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 22.5831,
     "Lon": -14.35505,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EH-0016",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": 21.3915,
     "Lon": -16.95683,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EH-0020",
+    "iso_country": "EH"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,10 @@
     "freq": "",
     "Lat": 27.9487,
     "Lon": -12.9166,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "EH-0024",
+    "iso_country": "EH",
+    "local_code": "TFY"
   },
   {
     "type": "small_airport",
@@ -87,7 +106,10 @@
     "freq": "",
     "Lat": 27.409695,
     "Lon": -9.073016,
-    "Ele": 463.3
+    "Ele": 463.3,
+    "ident": "EH-0026",
+    "iso_country": "EH",
+    "local_code": "AG5964"
   },
   {
     "type": "medium_airport",
@@ -96,7 +118,15 @@
     "freq": "",
     "Lat": 26.731987,
     "Lon": -11.683655,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "GMMA",
+    "iso_country": "EH",
+    "icao_code": "GMMA",
+    "iata_code": "SMW",
+    "length_ft": 9850,
+    "width_ft": 100,
+    "heading": 151.5,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -105,7 +135,15 @@
     "freq": "118.100",
     "Lat": 23.7183,
     "Lon": -15.932,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "GMMH",
+    "iso_country": "EH",
+    "icao_code": "GMMH",
+    "iata_code": "VIL",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 22.7,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -114,7 +152,15 @@
     "freq": "127.500",
     "Lat": 27.142467,
     "Lon": -13.224947,
-    "Ele": 63.1
+    "Ele": 63.1,
+    "ident": "GMML",
+    "iso_country": "EH",
+    "icao_code": "GMML",
+    "iata_code": "EUN",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 32,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -123,6 +169,8 @@
     "freq": "118.125",
     "Lat": 27.726982,
     "Lon": -9.237865,
-    "Ele": 494.7
+    "Ele": 494.7,
+    "ident": "MA-0003",
+    "iso_country": "EH"
   }
 ]

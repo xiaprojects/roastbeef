@@ -21,7 +21,10 @@
                             Waypoint
                         </td>
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
-                            &nbsp;Time/Distance NM&nbsp;
+                            QFU
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+                            &nbsp;Time/Dist.NM&nbsp;
                         </td>
 
                     </tr>
@@ -39,8 +42,11 @@
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
                             <strong>{{point.Cmt}}</strong>
                         </td>
-
-                        <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;font-size: 4cqmin;">
+                        <td class="text-center"
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            {{point.QFU}}
+                        </td>
+                        <td class="text-center" style="margin: 0px;padding:0px;font-size: 4cqmin;">
                             {{point.time.toFixed(0)}}/{{point.dist.toFixed(1)}}
     
                         </td>

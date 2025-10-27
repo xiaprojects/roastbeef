@@ -6,7 +6,12 @@
     "freq": "",
     "Lat": -17.05396,
     "Lon": 42.7193,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "FMZJ",
+    "iso_country": "TF",
+    "length_ft": 4265,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -15,7 +20,10 @@
     "freq": "",
     "Lat": -22.3486995697,
     "Lon": 40.3515014648,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FR-0314",
+    "iso_country": "TF",
+    "length_ft": 4921
   },
   {
     "type": "small_airport",
@@ -24,7 +32,9 @@
     "freq": "",
     "Lat": -15.8916666667,
     "Lon": 54.5222222222,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "TF-0001",
+    "iso_country": "TF"
   },
   {
     "type": "small_airport",
@@ -33,6 +43,8 @@
     "freq": "",
     "Lat": -11.5842777778,
     "Lon": 47.296388888900005,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "ZZ-0002",
+    "iso_country": "TF"
   }
 ]

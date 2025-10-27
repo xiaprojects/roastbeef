@@ -6,7 +6,14 @@
     "freq": "118.450",
     "Lat": 19.198524,
     "Lon": -69.429815,
-    "Ele": 17.4
+    "Ele": 17.4,
+    "ident": "MDAB",
+    "iso_country": "DO",
+    "icao_code": "MDAB",
+    "length_ft": 3830,
+    "width_ft": 82,
+    "heading": 99.5,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -15,7 +22,9 @@
     "freq": "",
     "Lat": 18.425501,
     "Lon": -70.7314,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "MDAD",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,12 @@
     "freq": "",
     "Lat": 19.131599,
     "Lon": -70.221603,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "MDAN",
+    "iso_country": "DO",
+    "length_ft": 2953,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -33,7 +47,9 @@
     "freq": "",
     "Lat": 18.683332,
     "Lon": -69.383331,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "MDBA",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,12 @@
     "freq": "",
     "Lat": 18.479700088500977,
     "Lon": -68.91590118408203,
-    "Ele": 68.0
+    "Ele": 68,
+    "ident": "MDBC",
+    "iso_country": "DO",
+    "length_ft": 3281,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -51,7 +72,9 @@
     "freq": "",
     "Lat": 18.58679962158203,
     "Lon": -69.0553970336914,
-    "Ele": 76.8
+    "Ele": 76.8,
+    "ident": "MDBE",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -60,7 +83,9 @@
     "freq": "",
     "Lat": 18.5324,
     "Lon": -68.67,
-    "Ele": 130.8
+    "Ele": 130.8,
+    "ident": "MDBG",
+    "iso_country": "DO"
   },
   {
     "type": "medium_airport",
@@ -69,7 +94,15 @@
     "freq": "119.500",
     "Lat": 18.25149917602539,
     "Lon": -71.12039947509766,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MDBH",
+    "iso_country": "DO",
+    "icao_code": "MDBH",
+    "iata_code": "BRX",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 118,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -78,7 +111,9 @@
     "freq": "",
     "Lat": 18.4508,
     "Lon": -69.592598,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "MDBL",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -87,7 +122,9 @@
     "freq": "",
     "Lat": 18.44809913635254,
     "Lon": -69.28119659423828,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "MDBM",
+    "iso_country": "DO"
   },
   {
     "type": "medium_airport",
@@ -96,7 +133,15 @@
     "freq": "122.700",
     "Lat": 17.929000854492188,
     "Lon": -71.6447982788086,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "MDCR",
+    "iso_country": "DO",
+    "icao_code": "MDCR",
+    "iata_code": "CBJ",
+    "length_ft": 4950,
+    "width_ft": 98,
+    "heading": 109,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -105,7 +150,15 @@
     "freq": "",
     "Lat": 19.269259,
     "Lon": -69.737405,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MDCY",
+    "iso_country": "DO",
+    "icao_code": "MDCY",
+    "iata_code": "AZS",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -114,7 +167,15 @@
     "freq": "",
     "Lat": 18.907499,
     "Lon": -70.721901,
-    "Ele": 1204.6
+    "Ele": 1204.6,
+    "ident": "MDCZ",
+    "iso_country": "DO",
+    "icao_code": "MDCZ",
+    "iata_code": "COZ",
+    "length_ft": 6234,
+    "width_ft": 75,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -123,7 +184,12 @@
     "freq": "",
     "Lat": 19.563601,
     "Lon": -71.680801,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "MDDJ",
+    "iso_country": "DO",
+    "length_ft": 5249,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -132,7 +198,9 @@
     "freq": "",
     "Lat": 19.1848132376,
     "Lon": -70.36496400829999,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "MDER",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -141,7 +209,9 @@
     "freq": "",
     "Lat": 19.584112,
     "Lon": -70.956724,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "MDES",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -150,7 +220,9 @@
     "freq": "",
     "Lat": 17.872519,
     "Lon": -71.268718,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "MDHN",
+    "iso_country": "DO"
   },
   {
     "type": "medium_airport",
@@ -159,7 +231,15 @@
     "freq": "121.700",
     "Lat": 18.57250022888184,
     "Lon": -69.98560333251953,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "MDJB",
+    "iso_country": "DO",
+    "icao_code": "MDJB",
+    "iata_code": "JBQ",
+    "length_ft": 5412,
+    "width_ft": 100,
+    "heading": 6.4,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -168,7 +248,9 @@
     "freq": "",
     "Lat": 18.5964259778,
     "Lon": -69.5257759094,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "MDLL",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -177,7 +259,9 @@
     "freq": "",
     "Lat": 18.521233,
     "Lon": -70.099132,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "MDLM",
+    "iso_country": "DO"
   },
   {
     "type": "large_airport",
@@ -186,7 +270,15 @@
     "freq": "118.600",
     "Lat": 18.452222,
     "Lon": -68.911111,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "MDLR",
+    "iso_country": "DO",
+    "icao_code": "MDLR",
+    "iata_code": "LRM",
+    "length_ft": 9678,
+    "width_ft": 148,
+    "heading": 109,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -195,7 +287,9 @@
     "freq": "",
     "Lat": 18.501933,
     "Lon": -68.799099,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "MDMA",
+    "iso_country": "DO"
   },
   {
     "type": "small_airport",
@@ -204,7 +298,12 @@
     "freq": "",
     "Lat": 19.865299224900003,
     "Lon": -71.6453018188,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "MDMC",
+    "iso_country": "DO",
+    "length_ft": 2625,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "large_airport",
@@ -213,7 +312,15 @@
     "freq": "119.700",
     "Lat": 18.5674,
     "Lon": -68.363403,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "MDPC",
+    "iso_country": "DO",
+    "icao_code": "MDPC",
+    "iata_code": "PUJ",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 83,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -222,7 +329,9 @@
     "freq": "",
     "Lat": 19.5977273869,
     "Lon": -71.205970645,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "MDPM",
+    "iso_country": "DO"
   },
   {
     "type": "medium_airport",
@@ -231,7 +340,15 @@
     "freq": "119.000",
     "Lat": 19.7579,
     "Lon": -70.57,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MDPP",
+    "iso_country": "DO",
+    "icao_code": "MDPP",
+    "iata_code": "POP",
+    "length_ft": 10108,
+    "width_ft": 151,
+    "heading": 73,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -240,7 +357,9 @@
     "freq": "",
     "Lat": 18.8255004883,
     "Lon": -71.2313995361,
-    "Ele": 399.0
+    "Ele": 399,
+    "ident": "MDSA",
+    "iso_country": "DO"
   },
   {
     "type": "large_airport",
@@ -249,7 +368,15 @@
     "freq": "119.300",
     "Lat": 18.42970085144,
     "Lon": -69.668899536133,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "MDSD",
+    "iso_country": "DO",
+    "icao_code": "MDSD",
+    "iata_code": "SDQ",
+    "length_ft": 11000,
+    "width_ft": 200,
+    "heading": 161,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -258,7 +385,13 @@
     "freq": "122.700",
     "Lat": 18.503700256347656,
     "Lon": -69.76170349121094,
-    "Ele": 33.8
+    "Ele": 33.8,
+    "ident": "MDSI",
+    "iso_country": "DO",
+    "length_ft": 7000,
+    "width_ft": 200,
+    "heading": 26,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -267,7 +400,9 @@
     "freq": "",
     "Lat": 18.451906,
     "Lon": -69.168373,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "MDSP",
+    "iso_country": "DO"
   },
   {
     "type": "medium_airport",
@@ -276,7 +411,15 @@
     "freq": "119.000",
     "Lat": 19.406099319458008,
     "Lon": -70.60469818115234,
-    "Ele": 172.2
+    "Ele": 172.2,
+    "ident": "MDST",
+    "iso_country": "DO",
+    "icao_code": "MDST",
+    "iata_code": "STI",
+    "length_ft": 8595,
+    "width_ft": 148,
+    "heading": 103,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -285,6 +428,8 @@
     "freq": "",
     "Lat": 19.757867,
     "Lon": -71.623482,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MDWO",
+    "iso_country": "DO"
   }
 ]

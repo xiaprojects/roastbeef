@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": -6.06462,
     "Lon": 141.095173,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "ABP",
+    "iso_country": "PG",
+    "iata_code": "ABP",
+    "local_code": "AKA"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,11 @@
     "freq": "",
     "Lat": -4.057077,
     "Lon": 144.073841,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "AGG",
+    "iso_country": "PG",
+    "iata_code": "AGG",
+    "local_code": "ANG"
   },
   {
     "type": "small_airport",
@@ -24,7 +32,10 @@
     "freq": "",
     "Lat": -6.396388888890001,
     "Lon": 143.853611111,
-    "Ele": 1630.7
+    "Ele": 1630.7,
+    "ident": "AGK",
+    "iso_country": "PG",
+    "iata_code": "AGK"
   },
   {
     "type": "small_airport",
@@ -33,7 +44,11 @@
     "freq": "",
     "Lat": -4.90416666667,
     "Lon": 144.635833333,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "AOB",
+    "iso_country": "PG",
+    "iata_code": "AOB",
+    "local_code": "ANB"
   },
   {
     "type": "small_airport",
@@ -42,7 +57,11 @@
     "freq": "",
     "Lat": -8.979167,
     "Lon": 148.103611,
-    "Ele": 588.3
+    "Ele": 588.3,
+    "ident": "APP",
+    "iso_country": "PG",
+    "iata_code": "APP",
+    "local_code": "APA"
   },
   {
     "type": "small_airport",
@@ -51,7 +70,11 @@
     "freq": "",
     "Lat": -9.88333333333,
     "Lon": 149.483333333,
-    "Ele": 533.4
+    "Ele": 533.4,
+    "ident": "ARP",
+    "iso_country": "PG",
+    "iata_code": "ARP",
+    "local_code": "AGP"
   },
   {
     "type": "small_airport",
@@ -60,7 +83,11 @@
     "freq": "",
     "Lat": -6.009722222220001,
     "Lon": 150.368611111,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "ASZ",
+    "iso_country": "PG",
+    "iata_code": "ASZ",
+    "local_code": "ASM"
   },
   {
     "type": "small_airport",
@@ -69,7 +96,14 @@
     "freq": "",
     "Lat": -3.386,
     "Lon": 141.5868,
-    "Ele": 215.5
+    "Ele": 215.5,
+    "ident": "ATUA",
+    "iso_country": "PG",
+    "local_code": "UTAI",
+    "length_ft": 1844,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -78,7 +112,12 @@
     "freq": "",
     "Lat": -4.122278,
     "Lon": 144.853292,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "AWR",
+    "iso_country": "PG",
+    "iata_code": "AWR",
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -87,7 +126,16 @@
     "freq": "",
     "Lat": -4.10111111111,
     "Lon": 141.67,
-    "Ele": 44.2
+    "Ele": 44.2,
+    "ident": "AYAA",
+    "iso_country": "PG",
+    "icao_code": "AYAA",
+    "iata_code": "AMF",
+    "local_code": "AMA",
+    "length_ft": 2300,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -96,7 +144,16 @@
     "freq": "",
     "Lat": -6.229978,
     "Lon": 144.664181,
-    "Ele": 1295.4
+    "Ele": 1295.4,
+    "ident": "AYAE",
+    "iso_country": "PG",
+    "icao_code": "AYAE",
+    "iata_code": "UAE",
+    "local_code": "AUE",
+    "length_ft": 1903,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -105,7 +162,16 @@
     "freq": "",
     "Lat": -9.13867,
     "Lon": 148.390701,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "AYAF",
+    "iso_country": "PG",
+    "icao_code": "AYAF",
+    "iata_code": "AFR",
+    "local_code": "AFE",
+    "length_ft": 2073,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -114,7 +180,16 @@
     "freq": "",
     "Lat": -9.927715,
     "Lon": 149.389951,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "AYAG",
+    "iso_country": "PG",
+    "icao_code": "AYAG",
+    "iata_code": "AUP",
+    "local_code": "AUN",
+    "length_ft": 2981,
+    "width_ft": 148,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -123,7 +198,16 @@
     "freq": "",
     "Lat": -3.143611,
     "Lon": 142.346806,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYAI",
+    "iso_country": "PG",
+    "icao_code": "AYAI",
+    "iata_code": "ATP",
+    "local_code": "APE",
+    "length_ft": 2769,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -132,7 +216,16 @@
     "freq": "",
     "Lat": -7.342777777779999,
     "Lon": 141.2675,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "AYAK",
+    "iso_country": "PG",
+    "icao_code": "AYAK",
+    "iata_code": "AIH",
+    "local_code": "AMB",
+    "length_ft": 2526,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -141,7 +234,16 @@
     "freq": "",
     "Lat": -3.586,
     "Lon": 141.214333333,
-    "Ele": 398.4
+    "Ele": 398.4,
+    "ident": "AYAM",
+    "iso_country": "PG",
+    "icao_code": "AYAM",
+    "iata_code": "AMU",
+    "local_code": "ANA",
+    "length_ft": 1900,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -150,7 +252,16 @@
     "freq": "",
     "Lat": -7.13722222222,
     "Lon": 145.744722222,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "AYAN",
+    "iso_country": "PG",
+    "icao_code": "AYAN",
+    "iata_code": "ADC",
+    "local_code": "ADK",
+    "length_ft": 1552,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -159,7 +270,15 @@
     "freq": "",
     "Lat": -5.145699978,
     "Lon": 144.7307003,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "AYAO",
+    "iso_country": "PG",
+    "icao_code": "AYAO",
+    "iata_code": "AIE",
+    "local_code": "AIO",
+    "length_ft": 3281,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -168,7 +287,16 @@
     "freq": "",
     "Lat": -5.38166666667,
     "Lon": 143.924722222,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "AYAQ",
+    "iso_country": "PG",
+    "icao_code": "AYAQ",
+    "iata_code": "KPM",
+    "local_code": "KOM",
+    "length_ft": 2559,
+    "width_ft": 59,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -177,7 +305,16 @@
     "freq": "",
     "Lat": -4.21566666667,
     "Lon": 142.823166667,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "AYAT",
+    "iso_country": "PG",
+    "icao_code": "AYAT",
+    "iata_code": "AUJ",
+    "local_code": "AMI",
+    "length_ft": 2461,
+    "width_ft": 147,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -186,7 +323,14 @@
     "freq": "",
     "Lat": -5.4951,
     "Lon": 142.5137,
-    "Ele": 1472.2
+    "Ele": 1472.2,
+    "ident": "AYAU",
+    "iso_country": "PG",
+    "icao_code": "AYAU",
+    "length_ft": 2001,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -195,7 +339,16 @@
     "freq": "",
     "Lat": -8.013414,
     "Lon": 142.752099,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "AYAW",
+    "iso_country": "PG",
+    "icao_code": "AYAW",
+    "iata_code": "AWB",
+    "local_code": "AWB",
+    "length_ft": 2313,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -204,7 +357,16 @@
     "freq": "",
     "Lat": -7.350805,
     "Lon": 146.193994,
-    "Ele": 1251.5
+    "Ele": 1251.5,
+    "ident": "AYAX",
+    "iso_country": "PG",
+    "icao_code": "AYAX",
+    "iata_code": "AEK",
+    "local_code": "ASE",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -213,7 +375,15 @@
     "freq": "",
     "Lat": -6.33805555556,
     "Lon": 145.904166667,
-    "Ele": 1632.2
+    "Ele": 1632.2,
+    "ident": "AYAY",
+    "iso_country": "PG",
+    "icao_code": "AYAY",
+    "iata_code": "AYU",
+    "local_code": "AYU",
+    "length_ft": 4200,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -222,7 +392,16 @@
     "freq": "",
     "Lat": -7.496955,
     "Lon": 144.821756,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "AYBA",
+    "iso_country": "PG",
+    "icao_code": "AYBA",
+    "iata_code": "VMU",
+    "local_code": "BMU",
+    "length_ft": 2953,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -231,7 +410,14 @@
     "freq": "",
     "Lat": -5.2685,
     "Lon": 142.097,
-    "Ele": 1658.1
+    "Ele": 1658.1,
+    "ident": "AYBB",
+    "iso_country": "PG",
+    "local_code": "BAK",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -240,7 +426,16 @@
     "freq": "",
     "Lat": -5.863611111110001,
     "Lon": 146.4925,
-    "Ele": 2069.6
+    "Ele": 2069.6,
+    "ident": "AYBC",
+    "iso_country": "PG",
+    "icao_code": "AYBC",
+    "iata_code": "BCP",
+    "local_code": "BAM",
+    "length_ft": 1345,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -249,7 +444,12 @@
     "freq": "",
     "Lat": -9.10777777778,
     "Lon": 147.666722222,
-    "Ele": 1127.8
+    "Ele": 1127.8,
+    "ident": "AYBD",
+    "iso_country": "PG",
+    "icao_code": "AYBD",
+    "iata_code": "BNM",
+    "local_code": "BNU"
   },
   {
     "type": "small_airport",
@@ -258,7 +458,16 @@
     "freq": "",
     "Lat": -7.8485,
     "Lon": 143.2433,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "AYBF",
+    "iso_country": "PG",
+    "icao_code": "AYBF",
+    "iata_code": "BMZ",
+    "local_code": "BAMU",
+    "length_ft": 1549,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -267,7 +476,16 @@
     "freq": "",
     "Lat": -6.34722222222,
     "Lon": 146.942222222,
-    "Ele": 1341.1
+    "Ele": 1341.1,
+    "ident": "AYBG",
+    "iso_country": "PG",
+    "icao_code": "AYBG",
+    "iata_code": "BDZ",
+    "local_code": "BDO",
+    "length_ft": 1542,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -276,7 +494,16 @@
     "freq": "",
     "Lat": -8.85805555556,
     "Lon": 141.259444444,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "AYBH",
+    "iso_country": "PG",
+    "icao_code": "AYBH",
+    "iata_code": "BSP",
+    "local_code": "BEN",
+    "length_ft": 2772,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -285,7 +512,16 @@
     "freq": "",
     "Lat": -3.0216666666700003,
     "Lon": 141.165277778,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "AYBI",
+    "iso_country": "PG",
+    "icao_code": "AYBI",
+    "iata_code": "BWP",
+    "local_code": "BEW",
+    "length_ft": 2500,
+    "width_ft": 59,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -294,7 +530,15 @@
     "freq": "127.100",
     "Lat": -5.422299,
     "Lon": 154.672698,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "AYBK",
+    "iso_country": "PG",
+    "icao_code": "AYBK",
+    "iata_code": "BUA",
+    "length_ft": 5125,
+    "width_ft": 98,
+    "heading": 48,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -303,7 +547,12 @@
     "freq": "",
     "Lat": -5.3305602073700005,
     "Lon": 151.007995605,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "AYBL",
+    "iso_country": "PG",
+    "icao_code": "AYBL",
+    "iata_code": "BAA",
+    "local_code": "BIA"
   },
   {
     "type": "medium_airport",
@@ -312,7 +561,12 @@
     "freq": "",
     "Lat": -8.05000019073,
     "Lon": 142.932998657,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "AYBM",
+    "iso_country": "PG",
+    "icao_code": "AYBM",
+    "iata_code": "OPU",
+    "local_code": "BLI"
   },
   {
     "type": "small_airport",
@@ -321,7 +575,16 @@
     "freq": "",
     "Lat": -6.37316666667,
     "Lon": 144.637,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "AYBO",
+    "iso_country": "PG",
+    "icao_code": "AYBO",
+    "iata_code": "BMH",
+    "local_code": "BOM",
+    "length_ft": 2395,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -330,7 +593,16 @@
     "freq": "",
     "Lat": -7.743611111110001,
     "Lon": 147.020555556,
-    "Ele": 893.1
+    "Ele": 893.1,
+    "ident": "AYBP",
+    "iso_country": "PG",
+    "icao_code": "AYBP",
+    "iata_code": "BPD",
+    "local_code": "BAPI",
+    "length_ft": 1624,
+    "width_ft": 148,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -339,7 +611,16 @@
     "freq": "",
     "Lat": -5.526389,
     "Lon": 141.744583,
-    "Ele": 325.8
+    "Ele": 325.8,
+    "ident": "AYBQ",
+    "iso_country": "PG",
+    "icao_code": "AYBQ",
+    "iata_code": "BPK",
+    "local_code": "BIP",
+    "length_ft": 1378,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -348,7 +629,15 @@
     "freq": "",
     "Lat": -7.6693,
     "Lon": 146.7594,
-    "Ele": 1493.5
+    "Ele": 1493.5,
+    "ident": "AYBR",
+    "iso_country": "PG",
+    "icao_code": "AYBR",
+    "iata_code": "BRP",
+    "local_code": "BRU",
+    "length_ft": 1982,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -357,7 +646,15 @@
     "freq": "",
     "Lat": -5.388248,
     "Lon": 145.447394,
-    "Ele": 298.7
+    "Ele": 298.7,
+    "ident": "AYBS",
+    "iso_country": "PG",
+    "icao_code": "AYBS",
+    "local_code": "BGI",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -366,7 +663,15 @@
     "freq": "",
     "Lat": -6.551861,
     "Lon": 143.943905,
-    "Ele": 1374.6
+    "Ele": 1374.6,
+    "ident": "AYBT",
+    "iso_country": "PG",
+    "icao_code": "AYBT",
+    "local_code": "BTR",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -375,7 +680,15 @@
     "freq": "",
     "Lat": -7.216286671410001,
     "Lon": 146.649541855,
-    "Ele": 682.8
+    "Ele": 682.8,
+    "ident": "AYBU",
+    "iso_country": "PG",
+    "icao_code": "AYBU",
+    "iata_code": "BUL",
+    "local_code": "BUO",
+    "length_ft": 4373,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -384,7 +697,13 @@
     "freq": "",
     "Lat": -2.618211,
     "Lon": 141.091971,
-    "Ele": 17.7
+    "Ele": 17.7,
+    "ident": "AYBW",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -393,7 +712,14 @@
     "freq": "",
     "Lat": -7.3405,
     "Lon": 144.5477,
-    "Ele": 22.6
+    "Ele": 22.6,
+    "ident": "AYBX",
+    "iso_country": "PG",
+    "local_code": "WWB",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -402,7 +728,11 @@
     "freq": "",
     "Lat": -6.838474,
     "Lon": 145.873207,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "AYBY",
+    "iso_country": "PG",
+    "icao_code": "AYBY",
+    "local_code": "WUO"
   },
   {
     "type": "small_airport",
@@ -411,7 +741,16 @@
     "freq": "",
     "Lat": -9.6425,
     "Lon": 149.303889,
-    "Ele": 65.5
+    "Ele": 65.5,
+    "ident": "AYBZ",
+    "iso_country": "PG",
+    "icao_code": "AYBZ",
+    "iata_code": "XBN",
+    "local_code": "BNI",
+    "length_ft": 1919,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -420,7 +759,12 @@
     "freq": "",
     "Lat": -4.80662,
     "Lon": 144.714996,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "AYCB",
+    "iso_country": "PG",
+    "icao_code": "AYCB",
+    "iata_code": "CVB",
+    "local_code": "CBU"
   },
   {
     "type": "small_airport",
@@ -429,7 +773,16 @@
     "freq": "",
     "Lat": -5.455231,
     "Lon": 148.422289,
-    "Ele": 23.8
+    "Ele": 23.8,
+    "ident": "AYCG",
+    "iso_country": "PG",
+    "icao_code": "AYCG",
+    "iata_code": "CGC",
+    "local_code": "CPG",
+    "length_ft": 3543,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -438,7 +791,15 @@
     "freq": "",
     "Lat": -6.024290084838867,
     "Lon": 144.9709930419922,
-    "Ele": 1516.1
+    "Ele": 1516.1,
+    "ident": "AYCH",
+    "iso_country": "PG",
+    "icao_code": "AYCH",
+    "iata_code": "CMU",
+    "length_ft": 3330,
+    "width_ft": 89,
+    "heading": 35.6,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -447,7 +808,13 @@
     "freq": "",
     "Lat": -4.328652,
     "Lon": 143.74058,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "AYCN",
+    "iso_country": "PG",
+    "local_code": "CGW",
+    "length_ft": 1968,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -456,7 +823,12 @@
     "freq": "",
     "Lat": -10.5627777778,
     "Lon": 150.690694444,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYCS",
+    "iso_country": "PG",
+    "icao_code": "AYCS",
+    "iata_code": "SQT",
+    "local_code": "CHS"
   },
   {
     "type": "small_airport",
@@ -465,7 +837,16 @@
     "freq": "",
     "Lat": -6.30861111111,
     "Lon": 141.905555556,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "AYDB",
+    "iso_country": "PG",
+    "icao_code": "AYDB",
+    "iata_code": "DBP",
+    "local_code": "DBP",
+    "length_ft": 2585,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -474,7 +855,10 @@
     "freq": "",
     "Lat": -6.6305,
     "Lon": 144.6383,
-    "Ele": 949.5
+    "Ele": 949.5,
+    "ident": "AYDD",
+    "iso_country": "PG",
+    "local_code": "DOBU"
   },
   {
     "type": "small_airport",
@@ -483,7 +867,16 @@
     "freq": "",
     "Lat": -6.14472222222,
     "Lon": 147.107222222,
-    "Ele": 1478.3
+    "Ele": 1478.3,
+    "ident": "AYDE",
+    "iso_country": "PG",
+    "icao_code": "AYDE",
+    "iata_code": "DER",
+    "local_code": "DEM",
+    "length_ft": 1549,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -492,7 +885,16 @@
     "freq": "",
     "Lat": -5.742222222220001,
     "Lon": 145.2275,
-    "Ele": 1341.1
+    "Ele": 1341.1,
+    "ident": "AYDI",
+    "iso_country": "PG",
+    "icao_code": "AYDI",
+    "iata_code": "BNT",
+    "local_code": "BDI",
+    "length_ft": 2198,
+    "width_ft": 148,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -501,7 +903,15 @@
     "freq": "",
     "Lat": -4.6204,
     "Lon": 143.4516,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "AYDK",
+    "iso_country": "PG",
+    "icao_code": "AYDK",
+    "iata_code": "MDM",
+    "local_code": "MUN",
+    "length_ft": 2800,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -510,7 +920,12 @@
     "freq": "",
     "Lat": -8.5336,
     "Lon": 142.5049,
-    "Ele": 40.2
+    "Ele": 40.2,
+    "ident": "AYDL",
+    "iso_country": "PG",
+    "icao_code": "AYDL",
+    "iata_code": "KPF",
+    "local_code": "KDB"
   },
   {
     "type": "small_airport",
@@ -519,7 +934,12 @@
     "freq": "",
     "Lat": -6.1546,
     "Lon": 146.6772,
-    "Ele": 1618.2
+    "Ele": 1618.2,
+    "ident": "AYDN",
+    "iso_country": "PG",
+    "icao_code": "AYDN",
+    "iata_code": "DNU",
+    "local_code": "DIN"
   },
   {
     "type": "small_airport",
@@ -528,7 +948,16 @@
     "freq": "",
     "Lat": -10.7009,
     "Lon": 150.7218,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "AYDO",
+    "iso_country": "PG",
+    "icao_code": "AYDO",
+    "iata_code": "DOI",
+    "local_code": "DOI",
+    "length_ft": 2051,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -537,7 +966,14 @@
     "freq": "",
     "Lat": -5.3599,
     "Lon": 144.4462,
-    "Ele": 477.0
+    "Ele": 477,
+    "ident": "AYDP",
+    "iso_country": "PG",
+    "local_code": "TNP",
+    "length_ft": 1706,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -546,7 +982,14 @@
     "freq": "",
     "Lat": -8.6298,
     "Lon": 142.2162,
-    "Ele": 50.6
+    "Ele": 50.6,
+    "ident": "AYDQ",
+    "iso_country": "PG",
+    "local_code": "DIM",
+    "length_ft": 1936,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -555,7 +998,12 @@
     "freq": "",
     "Lat": -9.461855,
     "Lon": 147.920907,
-    "Ele": 538.6
+    "Ele": 538.6,
+    "ident": "AYDR",
+    "iso_country": "PG",
+    "icao_code": "AYDR",
+    "iata_code": "DOO",
+    "local_code": "DOR"
   },
   {
     "type": "small_airport",
@@ -564,7 +1012,14 @@
     "freq": "",
     "Lat": -5.184135,
     "Lon": 144.411965,
-    "Ele": 1920.2
+    "Ele": 1920.2,
+    "ident": "AYDS",
+    "iso_country": "PG",
+    "local_code": "DUS",
+    "length_ft": 1509,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -573,7 +1028,15 @@
     "freq": "124.900",
     "Lat": -9.08676,
     "Lon": 143.207993,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "AYDU",
+    "iso_country": "PG",
+    "icao_code": "AYDU",
+    "iata_code": "DAU",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -582,7 +1045,14 @@
     "freq": "",
     "Lat": -8.3802,
     "Lon": 142.4475,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "AYDW",
+    "iso_country": "PG",
+    "local_code": "DWR",
+    "length_ft": 2129,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -591,7 +1061,14 @@
     "freq": "",
     "Lat": -7.0077,
     "Lon": 145.7965,
-    "Ele": 1740.4
+    "Ele": 1740.4,
+    "ident": "AYDY",
+    "iso_country": "PG",
+    "local_code": "SDI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -600,7 +1077,16 @@
     "freq": "",
     "Lat": -8.271612,
     "Lon": 147.071899,
-    "Ele": 2243.3
+    "Ele": 2243.3,
+    "ident": "AYEA",
+    "iso_country": "PG",
+    "icao_code": "AYEA",
+    "iata_code": "KRU",
+    "local_code": "KEU",
+    "length_ft": 1900,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -609,7 +1095,16 @@
     "freq": "",
     "Lat": -9.447,
     "Lon": 148.7628,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "AYEB",
+    "iso_country": "PG",
+    "icao_code": "AYEB",
+    "iata_code": "EMS",
+    "local_code": "EMB",
+    "length_ft": 1640,
+    "width_ft": 148,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -618,7 +1113,16 @@
     "freq": "",
     "Lat": -3.883986,
     "Lon": 141.792234,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "AYED",
+    "iso_country": "PG",
+    "icao_code": "AYED",
+    "iata_code": "XYR",
+    "local_code": "EWK",
+    "length_ft": 2415,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -627,7 +1131,15 @@
     "freq": "",
     "Lat": -1.653949991,
     "Lon": 149.9757667,
-    "Ele": 52.4
+    "Ele": 52.4,
+    "ident": "AYEE",
+    "iso_country": "PG",
+    "icao_code": "AYEE",
+    "iata_code": "EMI",
+    "local_code": "ERU",
+    "length_ft": 4773,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -636,7 +1148,16 @@
     "freq": "",
     "Lat": -9.15380555556,
     "Lon": 147.659805556,
-    "Ele": 1188.7
+    "Ele": 1188.7,
+    "ident": "AYEF",
+    "iso_country": "PG",
+    "icao_code": "AYEF",
+    "iata_code": "EFG",
+    "local_code": "EFO",
+    "length_ft": 1598,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -645,7 +1166,14 @@
     "freq": "",
     "Lat": -6.4836,
     "Lon": 144.986,
-    "Ele": 1287.5
+    "Ele": 1287.5,
+    "ident": "AYEG",
+    "iso_country": "PG",
+    "local_code": "MEN",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -654,7 +1182,15 @@
     "freq": "",
     "Lat": -8.71411111111,
     "Lon": 141.644444444,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "AYEH",
+    "iso_country": "PG",
+    "icao_code": "AYEH",
+    "iata_code": "MHY",
+    "local_code": "MHD",
+    "length_ft": 4298,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -663,7 +1199,10 @@
     "freq": "",
     "Lat": -9.0794,
     "Lon": 147.602,
-    "Ele": 658.4
+    "Ele": 658.4,
+    "ident": "AYEI",
+    "iso_country": "PG",
+    "local_code": "MIL"
   },
   {
     "type": "small_airport",
@@ -672,7 +1211,14 @@
     "freq": "",
     "Lat": -6.4744,
     "Lon": 141.019,
-    "Ele": 16.5
+    "Ele": 16.5,
+    "ident": "AYEK",
+    "iso_country": "PG",
+    "local_code": "MBK",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -681,7 +1227,16 @@
     "freq": "",
     "Lat": -5.0412,
     "Lon": 141.6779,
-    "Ele": 1470.7
+    "Ele": 1470.7,
+    "ident": "AYEL",
+    "iso_country": "PG",
+    "icao_code": "AYEL",
+    "iata_code": "EPT",
+    "local_code": "ELP",
+    "length_ft": 1739,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -690,7 +1245,14 @@
     "freq": "",
     "Lat": -4.8141,
     "Lon": 143.9103,
-    "Ele": 71.0
+    "Ele": 71,
+    "ident": "AYEM",
+    "iso_country": "PG",
+    "local_code": "ELM",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -699,7 +1261,16 @@
     "freq": "",
     "Lat": -6.9179,
     "Lon": 146.1053,
-    "Ele": 1132.3
+    "Ele": 1132.3,
+    "ident": "AYEN",
+    "iso_country": "PG",
+    "icao_code": "AYEN",
+    "iata_code": "EGA",
+    "local_code": "EGT",
+    "length_ft": 1312,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -708,7 +1279,16 @@
     "freq": "",
     "Lat": -9.1234,
     "Lon": 148.0415,
-    "Ele": 682.8
+    "Ele": 682.8,
+    "ident": "AYEO",
+    "iso_country": "PG",
+    "icao_code": "AYEO",
+    "iata_code": "EMO",
+    "local_code": "EMO",
+    "length_ft": 1804,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -717,7 +1297,12 @@
     "freq": "",
     "Lat": -8.2538,
     "Lon": 146.9747,
-    "Ele": 2039.1
+    "Ele": 2039.1,
+    "ident": "AYER",
+    "iso_country": "PG",
+    "icao_code": "AYER",
+    "iata_code": "ERU",
+    "local_code": "EME"
   },
   {
     "type": "small_airport",
@@ -726,7 +1311,10 @@
     "freq": "",
     "Lat": -6.1364,
     "Lon": 149.1183,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "AYES",
+    "iso_country": "PG",
+    "iata_code": "MFZ"
   },
   {
     "type": "small_airport",
@@ -735,7 +1323,16 @@
     "freq": "",
     "Lat": -7.237257,
     "Lon": 141.1063222,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "AYET",
+    "iso_country": "PG",
+    "icao_code": "AYET",
+    "iata_code": "BOT",
+    "local_code": "BST",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -744,7 +1341,10 @@
     "freq": "",
     "Lat": -1.5601,
     "Lon": 149.6318,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "AYEU",
+    "iso_country": "PG",
+    "local_code": "ELO"
   },
   {
     "type": "small_airport",
@@ -753,7 +1353,12 @@
     "freq": "",
     "Lat": -6.60646315446,
     "Lon": 143.900213242,
-    "Ele": 1112.5
+    "Ele": 1112.5,
+    "ident": "AYEV",
+    "iso_country": "PG",
+    "icao_code": "AYEV",
+    "iata_code": "ERE",
+    "local_code": "ERV"
   },
   {
     "type": "small_airport",
@@ -762,7 +1367,16 @@
     "freq": "",
     "Lat": -6.284181,
     "Lon": 147.582371,
-    "Ele": 1816.6
+    "Ele": 1816.6,
+    "ident": "AYEW",
+    "iso_country": "PG",
+    "icao_code": "AYEW",
+    "iata_code": "SWE",
+    "local_code": "SIW",
+    "length_ft": 1549,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -771,7 +1385,14 @@
     "freq": "",
     "Lat": -4.0621,
     "Lon": 142.6609,
-    "Ele": 32.6
+    "Ele": 32.6,
+    "ident": "AYEY",
+    "iso_country": "PG",
+    "local_code": "MSY",
+    "length_ft": 1936,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -780,7 +1401,10 @@
     "freq": "",
     "Lat": -4.587055,
     "Lon": 142.335691,
-    "Ele": 45.4
+    "Ele": 45.4,
+    "ident": "AYEZ",
+    "iso_country": "PG",
+    "local_code": "MTE"
   },
   {
     "type": "small_airport",
@@ -789,7 +1413,12 @@
     "freq": "",
     "Lat": -8.54927777778,
     "Lon": 147.085833333,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "AYFA",
+    "iso_country": "PG",
+    "icao_code": "AYFA",
+    "iata_code": "FNE",
+    "local_code": "FANE"
   },
   {
     "type": "small_airport",
@@ -798,7 +1427,15 @@
     "freq": "",
     "Lat": -5.208,
     "Lon": 141.6988,
-    "Ele": 1418.8
+    "Ele": 1418.8,
+    "ident": "AYFE",
+    "iso_country": "PG",
+    "iata_code": "FRQ",
+    "local_code": "FMN",
+    "length_ft": 2165,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -807,7 +1444,10 @@
     "freq": "",
     "Lat": -7.160353,
     "Lon": 143.531317,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "AYFF",
+    "iso_country": "PG",
+    "icao_code": "AYFF"
   },
   {
     "type": "small_airport",
@@ -816,7 +1456,12 @@
     "freq": "",
     "Lat": -6.621750109,
     "Lon": 147.85405,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AYFI",
+    "iso_country": "PG",
+    "icao_code": "AYFI",
+    "iata_code": "FIN",
+    "local_code": "FIN"
   },
   {
     "type": "small_airport",
@@ -825,7 +1470,14 @@
     "freq": "",
     "Lat": -5.3283,
     "Lon": 144.8944,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "AYFK",
+    "iso_country": "PG",
+    "local_code": "FRO",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -834,7 +1486,14 @@
     "freq": "",
     "Lat": -6.5096,
     "Lon": 143.0794,
-    "Ele": 224.6
+    "Ele": 224.6,
+    "ident": "AYFO",
+    "iso_country": "PG",
+    "local_code": "FGM",
+    "length_ft": 1998,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -843,7 +1502,12 @@
     "freq": "",
     "Lat": -4.610468,
     "Lon": 141.960138,
-    "Ele": 66.1
+    "Ele": 66.1,
+    "ident": "AYFR",
+    "iso_country": "PG",
+    "icao_code": "AYFR",
+    "iata_code": "FAQ",
+    "local_code": "FRR"
   },
   {
     "type": "small_airport",
@@ -852,7 +1516,14 @@
     "freq": "",
     "Lat": -3.1983,
     "Lon": 141.472,
-    "Ele": 371.6
+    "Ele": 371.6,
+    "ident": "AYFS",
+    "iso_country": "PG",
+    "local_code": "FAS",
+    "length_ft": 1532,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -861,7 +1532,16 @@
     "freq": "",
     "Lat": -6.3933,
     "Lon": 142.4408,
-    "Ele": 142.0
+    "Ele": 142,
+    "ident": "AYFU",
+    "iso_country": "PG",
+    "icao_code": "AYFU",
+    "iata_code": "FUM",
+    "local_code": "FUMA",
+    "length_ft": 2500,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -870,7 +1550,10 @@
     "freq": "",
     "Lat": -3.6005,
     "Lon": 141.7674,
-    "Ele": 157.0
+    "Ele": 157,
+    "ident": "AYFW",
+    "iso_country": "PG",
+    "local_code": "KWM"
   },
   {
     "type": "medium_airport",
@@ -879,7 +1562,15 @@
     "freq": "118.700",
     "Lat": -6.081689834590001,
     "Lon": 145.391998291,
-    "Ele": 1610.0
+    "Ele": 1610,
+    "ident": "AYGA",
+    "iso_country": "PG",
+    "icao_code": "AYGA",
+    "iata_code": "GKA",
+    "length_ft": 5400,
+    "width_ft": 98,
+    "heading": 176,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -888,7 +1579,16 @@
     "freq": "",
     "Lat": -9.2263,
     "Lon": 148.4949,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "AYGC",
+    "iso_country": "PG",
+    "icao_code": "AYGC",
+    "iata_code": "GEW",
+    "local_code": "GEW",
+    "length_ft": 1490,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -897,7 +1597,13 @@
     "freq": "",
     "Lat": -6.6482,
     "Lon": 145.4003,
-    "Ele": 1553.3
+    "Ele": 1553.3,
+    "ident": "AYGD",
+    "iso_country": "PG",
+    "local_code": "GIMI",
+    "length_ft": 1706,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -906,7 +1612,14 @@
     "freq": "",
     "Lat": -4.1055,
     "Lon": 143.3056,
-    "Ele": 22.6
+    "Ele": 22.6,
+    "ident": "AYGE",
+    "iso_country": "PG",
+    "local_code": "GEI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -915,7 +1628,12 @@
     "freq": "",
     "Lat": -8.1286,
     "Lon": 146.8722,
-    "Ele": 1966.0
+    "Ele": 1966,
+    "ident": "AYGF",
+    "iso_country": "PG",
+    "icao_code": "AYGF",
+    "iata_code": "GUG",
+    "local_code": "GAI"
   },
   {
     "type": "small_airport",
@@ -924,7 +1642,12 @@
     "freq": "",
     "Lat": -7.980713,
     "Lon": 147.213461,
-    "Ele": 773.9
+    "Ele": 773.9,
+    "ident": "AYGG",
+    "iso_country": "PG",
+    "icao_code": "AYGG",
+    "iata_code": "GRL",
+    "local_code": "GSA"
   },
   {
     "type": "small_airport",
@@ -933,7 +1656,14 @@
     "freq": "",
     "Lat": -5.6957,
     "Lon": 146.1116,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "AYGH",
+    "iso_country": "PG",
+    "local_code": "GUHU",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -942,7 +1672,12 @@
     "freq": "",
     "Lat": -7.875625,
     "Lon": 147.141266,
-    "Ele": 761.1
+    "Ele": 761.1,
+    "ident": "AYGI",
+    "iso_country": "PG",
+    "icao_code": "AYGI",
+    "iata_code": "GAR",
+    "local_code": "GNA"
   },
   {
     "type": "small_airport",
@@ -951,7 +1686,15 @@
     "freq": "",
     "Lat": -9.225918,
     "Lon": 152.944352,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYGJ",
+    "iso_country": "PG",
+    "icao_code": "AYGJ",
+    "iata_code": "GAZ",
+    "local_code": "GPA",
+    "length_ft": 3593,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -960,7 +1703,12 @@
     "freq": "",
     "Lat": -5.527716614,
     "Lon": 151.5733333,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "AYGL",
+    "iso_country": "PG",
+    "icao_code": "AYGL",
+    "iata_code": "GOE",
+    "local_code": "GON"
   },
   {
     "type": "small_airport",
@@ -969,7 +1717,14 @@
     "freq": "",
     "Lat": -6.803088,
     "Lon": 145.775866,
-    "Ele": 1636.8
+    "Ele": 1636.8,
+    "ident": "AYGM",
+    "iso_country": "PG",
+    "local_code": "GEMA",
+    "length_ft": 1837,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -978,7 +1733,15 @@
     "freq": "124.100",
     "Lat": -10.3114995956,
     "Lon": 150.333999634,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "AYGN",
+    "iso_country": "PG",
+    "icao_code": "AYGN",
+    "iata_code": "GUR",
+    "length_ft": 5546,
+    "width_ft": 98,
+    "heading": 101.3,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -987,7 +1750,14 @@
     "freq": "",
     "Lat": -4.9136,
     "Lon": 144.49,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "AYGO",
+    "iso_country": "PG",
+    "local_code": "GTO",
+    "length_ft": 2001,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -996,7 +1766,12 @@
     "freq": "",
     "Lat": -6.053196,
     "Lon": 145.959047,
-    "Ele": 458.4
+    "Ele": 458.4,
+    "ident": "AYGP",
+    "iso_country": "PG",
+    "icao_code": "AYGP",
+    "iata_code": "GAP",
+    "local_code": "GSP"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1780,14 @@
     "freq": "",
     "Lat": -5.259,
     "Lon": 142.233,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "AYGQ",
+    "iso_country": "PG",
+    "local_code": "GAWA",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -1014,7 +1796,15 @@
     "freq": "",
     "Lat": -8.80453968048,
     "Lon": 148.309005737,
-    "Ele": 94.8
+    "Ele": 94.8,
+    "ident": "AYGR",
+    "iso_country": "PG",
+    "icao_code": "AYGR",
+    "iata_code": "PNP",
+    "length_ft": 5485,
+    "width_ft": 98,
+    "heading": 38.1,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1813,12 @@
     "freq": "",
     "Lat": -6.1028,
     "Lon": 141.7393,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "AYGS",
+    "iso_country": "PG",
+    "icao_code": "AYGS",
+    "iata_code": "GBC",
+    "local_code": "GSK"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1827,12 @@
     "freq": "",
     "Lat": -6.27111005783,
     "Lon": 150.330993652,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "AYGT",
+    "iso_country": "PG",
+    "icao_code": "AYGT",
+    "iata_code": "GMI",
+    "local_code": "GMA"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1841,16 @@
     "freq": "",
     "Lat": -3.560504,
     "Lon": 142.217307,
-    "Ele": 285.6
+    "Ele": 285.6,
+    "ident": "AYGU",
+    "iso_country": "PG",
+    "icao_code": "AYGU",
+    "iata_code": "AKG",
+    "local_code": "AGK",
+    "length_ft": 2526,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1050,7 +1859,12 @@
     "freq": "",
     "Lat": -3.90224289894,
     "Lon": 141.170516968,
-    "Ele": 85.6
+    "Ele": 85.6,
+    "ident": "AYGV",
+    "iso_country": "PG",
+    "icao_code": "AYGV",
+    "iata_code": "GVI",
+    "local_code": "GRN"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1873,9 @@
     "freq": "",
     "Lat": -6.465838,
     "Lon": 145.083968,
-    "Ele": 1463.0
+    "Ele": 1463,
+    "ident": "AYGW",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1884,16 @@
     "freq": "",
     "Lat": -9.0021,
     "Lon": 148.2364,
-    "Ele": 761.1
+    "Ele": 761.1,
+    "ident": "AYGX",
+    "iso_country": "PG",
+    "icao_code": "AYGX",
+    "iata_code": "GOC",
+    "local_code": "GORA",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -1077,7 +1902,13 @@
     "freq": "",
     "Lat": -6.87,
     "Lon": 142.7537,
-    "Ele": 92.4
+    "Ele": 92.4,
+    "ident": "AYGY",
+    "iso_country": "PG",
+    "length_ft": 2625,
+    "width_ft": 75,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1086,7 +1917,14 @@
     "freq": "",
     "Lat": -6.707421,
     "Lon": 144.997398,
-    "Ele": 741.9
+    "Ele": 741.9,
+    "ident": "AYHA",
+    "iso_country": "PG",
+    "local_code": "HAIA",
+    "length_ft": 1982,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -1095,7 +1933,16 @@
     "freq": "",
     "Lat": -6.32,
     "Lon": 142.4893,
-    "Ele": 302.7
+    "Ele": 302.7,
+    "ident": "AYHB",
+    "iso_country": "PG",
+    "icao_code": "AYHB",
+    "iata_code": "HBD",
+    "local_code": "HABI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -1104,7 +1951,16 @@
     "freq": "",
     "Lat": -7.4223,
     "Lon": 146.4276,
-    "Ele": 1060.7
+    "Ele": 1060.7,
+    "ident": "AYHE",
+    "iso_country": "PG",
+    "icao_code": "AYHE",
+    "iata_code": "HNI",
+    "local_code": "HWI",
+    "length_ft": 1404,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -1113,7 +1969,15 @@
     "freq": "",
     "Lat": -3.69838,
     "Lon": 143.057902,
-    "Ele": 142.0
+    "Ele": 142,
+    "ident": "AYHF",
+    "iso_country": "PG",
+    "icao_code": "AYHF",
+    "iata_code": "HYF",
+    "local_code": "HFD",
+    "length_ft": 3097,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1122,7 +1986,16 @@
     "freq": "",
     "Lat": -6.2457,
     "Lon": 142.1771,
-    "Ele": 137.8
+    "Ele": 137.8,
+    "ident": "AYHH",
+    "iso_country": "PG",
+    "icao_code": "AYHH",
+    "iata_code": "HNN",
+    "local_code": "HBI",
+    "length_ft": 1348,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1131,7 +2004,14 @@
     "freq": "",
     "Lat": -5.1914,
     "Lon": 142.9595,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "AYHJ",
+    "iso_country": "PG",
+    "local_code": "HEWA",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "09",
+    "heading": 90
   },
   {
     "type": "medium_airport",
@@ -1140,7 +2020,15 @@
     "freq": "127.100",
     "Lat": -5.463846,
     "Lon": 150.407327,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "AYHK",
+    "iso_country": "PG",
+    "icao_code": "AYHK",
+    "iata_code": "HKN",
+    "length_ft": 6644,
+    "width_ft": 98,
+    "heading": 133,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1149,7 +2037,10 @@
     "freq": "",
     "Lat": -6.6,
     "Lon": 142.3502,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "AYHL",
+    "iso_country": "PG",
+    "local_code": "HLB"
   },
   {
     "type": "small_airport",
@@ -1157,8 +2048,15 @@
     "gps_code": "AYHN",
     "freq": "",
     "Lat": -6.6671,
-    "Lon": 146.0,
-    "Ele": 1889.8
+    "Lon": 146,
+    "Ele": 1889.8,
+    "ident": "AYHN",
+    "iso_country": "PG",
+    "local_code": "HAA",
+    "length_ft": 1968,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1167,7 +2065,16 @@
     "freq": "",
     "Lat": -6.9406,
     "Lon": 143.059,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "AYHO",
+    "iso_country": "PG",
+    "icao_code": "AYHO",
+    "iata_code": "HIT",
+    "local_code": "HWO",
+    "length_ft": 1641,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -1176,7 +2083,14 @@
     "freq": "",
     "Lat": -4.2994,
     "Lon": 142.2305,
-    "Ele": 22.3
+    "Ele": 22.3,
+    "ident": "AYHQ",
+    "iso_country": "PG",
+    "local_code": "HNA",
+    "length_ft": 1585,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -1185,7 +2099,14 @@
     "freq": "",
     "Lat": -4.5845,
     "Lon": 141.5742,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "AYHT",
+    "iso_country": "PG",
+    "local_code": "HOT",
+    "length_ft": 1509,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1194,7 +2115,16 @@
     "freq": "",
     "Lat": -7.392994,
     "Lon": 146.003487,
-    "Ele": 1390.8
+    "Ele": 1390.8,
+    "ident": "AYHU",
+    "iso_country": "PG",
+    "icao_code": "AYHU",
+    "iata_code": "HWA",
+    "local_code": "HBA",
+    "length_ft": 1358,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -1203,7 +2133,13 @@
     "freq": "",
     "Lat": -5.7219,
     "Lon": 141.3205,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "AYHW",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -1212,7 +2148,14 @@
     "freq": "",
     "Lat": -6.6229,
     "Lon": 145.1972,
-    "Ele": 1431.0
+    "Ele": 1431,
+    "ident": "AYHX",
+    "iso_country": "PG",
+    "local_code": "HRW",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1221,7 +2164,10 @@
     "freq": "",
     "Lat": -6.2734,
     "Lon": 142.7061,
-    "Ele": 795.8
+    "Ele": 795.8,
+    "ident": "AYHY",
+    "iso_country": "PG",
+    "local_code": "HUYA"
   },
   {
     "type": "small_airport",
@@ -1230,7 +2176,12 @@
     "freq": "",
     "Lat": -4.49972009659,
     "Lon": 154.225997925,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "AYIA",
+    "iso_country": "PG",
+    "icao_code": "AYIA",
+    "iata_code": "IIS",
+    "local_code": "NIS"
   },
   {
     "type": "small_airport",
@@ -1239,7 +2190,14 @@
     "freq": "",
     "Lat": -4.6828,
     "Lon": 141.0316,
-    "Ele": 265.2
+    "Ele": 265.2,
+    "ident": "AYIB",
+    "iso_country": "PG",
+    "local_code": "IBIL",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -1248,7 +2206,16 @@
     "freq": "",
     "Lat": -6.22663,
     "Lon": 147.244,
-    "Ele": 1764.2
+    "Ele": 1764.2,
+    "ident": "AYID",
+    "iso_country": "PG",
+    "icao_code": "AYID",
+    "iata_code": "IDN",
+    "local_code": "IGN",
+    "length_ft": 1699,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1257,7 +2224,15 @@
     "freq": "",
     "Lat": -6.7524,
     "Lon": 146.1072,
-    "Ele": 1176.5
+    "Ele": 1176.5,
+    "ident": "AYII",
+    "iso_country": "PG",
+    "icao_code": "AYII",
+    "iata_code": "IMN",
+    "local_code": "IMN",
+    "length_ft": 1640,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -1266,7 +2241,15 @@
     "freq": "",
     "Lat": -5.671,
     "Lon": 141.03,
-    "Ele": 106.4
+    "Ele": 106.4,
+    "ident": "AYIM",
+    "iso_country": "PG",
+    "icao_code": "AYIM",
+    "iata_code": "KGM",
+    "local_code": "KNM",
+    "length_ft": 1391,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1275,7 +2258,14 @@
     "freq": "",
     "Lat": -4.9166,
     "Lon": 141.1548,
-    "Ele": 1661.2
+    "Ele": 1661.2,
+    "ident": "AYIN",
+    "iso_country": "PG",
+    "local_code": "BSM",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1284,7 +2274,12 @@
     "freq": "",
     "Lat": -3.328,
     "Lon": 141.1573,
-    "Ele": 301.8
+    "Ele": 301.8,
+    "ident": "AYIO",
+    "iso_country": "PG",
+    "icao_code": "AYIO",
+    "iata_code": "IMD",
+    "local_code": "IMO"
   },
   {
     "type": "small_airport",
@@ -1293,7 +2288,14 @@
     "freq": "",
     "Lat": -5.032639,
     "Lon": 143.871117,
-    "Ele": 1581.9
+    "Ele": 1581.9,
+    "ident": "AYIP",
+    "iso_country": "PG",
+    "local_code": "IRP",
+    "length_ft": 1509,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1302,7 +2304,15 @@
     "freq": "",
     "Lat": -6.305417,
     "Lon": 155.728139,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "AYIQ",
+    "iso_country": "PG",
+    "icao_code": "AYIQ",
+    "iata_code": "KIE",
+    "local_code": "KIA",
+    "length_ft": 5397,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1311,7 +2321,14 @@
     "freq": "",
     "Lat": -4.6316,
     "Lon": 142.8913,
-    "Ele": 54.3
+    "Ele": 54.3,
+    "ident": "AYIR",
+    "iso_country": "PG",
+    "local_code": "INR",
+    "length_ft": 1837,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1320,7 +2337,14 @@
     "freq": "",
     "Lat": -5.9781,
     "Lon": 146.61975,
-    "Ele": 2119.9
+    "Ele": 2119.9,
+    "ident": "AYIS",
+    "iso_country": "PG",
+    "local_code": "ISAN",
+    "length_ft": 1345,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -1329,7 +2353,10 @@
     "freq": "",
     "Lat": -4.2418,
     "Lon": 141.5234,
-    "Ele": 73.8
+    "Ele": 73.8,
+    "ident": "AYIT",
+    "iso_country": "PG",
+    "local_code": "ITR"
   },
   {
     "type": "small_airport",
@@ -1338,7 +2365,15 @@
     "freq": "",
     "Lat": -6.2782,
     "Lon": 143.9944,
-    "Ele": 2053.1
+    "Ele": 2053.1,
+    "ident": "AYIU",
+    "iso_country": "PG",
+    "iata_code": "IAL",
+    "local_code": "IBU",
+    "length_ft": 3478,
+    "width_ft": 196,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1347,7 +2382,15 @@
     "freq": "",
     "Lat": -8.2836,
     "Lon": 142.8697,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "AYIW",
+    "iso_country": "PG",
+    "icao_code": "AYIW",
+    "iata_code": "WSA",
+    "local_code": "WAA",
+    "length_ft": 2000,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1356,7 +2399,15 @@
     "freq": "",
     "Lat": -4.689522,
     "Lon": 149.440112,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "AYIX",
+    "iso_country": "PG",
+    "icao_code": "AYIX",
+    "iata_code": "WIU",
+    "local_code": "WITU",
+    "length_ft": 3035,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1365,7 +2416,16 @@
     "freq": "",
     "Lat": -4.903055555560001,
     "Lon": 141.620833333,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "AYIY",
+    "iso_country": "PG",
+    "icao_code": "AYIY",
+    "iata_code": "MPX",
+    "local_code": "MIM",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1374,7 +2434,9 @@
     "freq": "",
     "Lat": -5.237,
     "Lon": 144.6007,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "AYJE",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -1383,7 +2445,12 @@
     "freq": "",
     "Lat": -8.5289,
     "Lon": 147.4603,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "AYJO",
+    "iso_country": "PG",
+    "icao_code": "AYJO",
+    "iata_code": "KGH",
+    "local_code": "YON"
   },
   {
     "type": "small_airport",
@@ -1392,7 +2459,15 @@
     "freq": "",
     "Lat": -4.74708333333,
     "Lon": 145.007083333,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "AYJS",
+    "iso_country": "PG",
+    "icao_code": "AYJS",
+    "iata_code": "JOP",
+    "local_code": "JSL",
+    "length_ft": 3117,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -1401,7 +2476,13 @@
     "freq": "",
     "Lat": -4.182032,
     "Lon": 141.19829,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "AYJW",
+    "iso_country": "PG",
+    "local_code": "WUR",
+    "length_ft": 2290,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1410,7 +2491,14 @@
     "freq": "",
     "Lat": -8.505820274353027,
     "Lon": 151.08099365234375,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "AYKA",
+    "iso_country": "PG",
+    "icao_code": "AYKA",
+    "iata_code": "LSA",
+    "length_ft": 5348,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1419,7 +2507,12 @@
     "freq": "",
     "Lat": -6.15547222222,
     "Lon": 147.191472222,
-    "Ele": 1356.4
+    "Ele": 1356.4,
+    "ident": "AYKB",
+    "iso_country": "PG",
+    "icao_code": "AYKB",
+    "iata_code": "KBM",
+    "local_code": "KBM"
   },
   {
     "type": "small_airport",
@@ -1428,7 +2521,12 @@
     "freq": "",
     "Lat": -6.19217,
     "Lon": 149.54783,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "AYKC",
+    "iso_country": "PG",
+    "icao_code": "AYKC",
+    "iata_code": "KDR",
+    "local_code": "KDR"
   },
   {
     "type": "small_airport",
@@ -1437,7 +2535,15 @@
     "freq": "",
     "Lat": -7.64925,
     "Lon": 145.956944444,
-    "Ele": 657.5
+    "Ele": 657.5,
+    "ident": "AYKD",
+    "iso_country": "PG",
+    "icao_code": "AYKD",
+    "iata_code": "KMF",
+    "local_code": "KMN",
+    "length_ft": 1148,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1446,7 +2552,12 @@
     "freq": "",
     "Lat": -5.3883,
     "Lon": 142.4977,
-    "Ele": 1354.8
+    "Ele": 1354.8,
+    "ident": "AYKG",
+    "iso_country": "PG",
+    "icao_code": "AYKG",
+    "iata_code": "KPA",
+    "local_code": "KGO"
   },
   {
     "type": "small_airport",
@@ -1455,7 +2566,16 @@
     "freq": "",
     "Lat": -8.150694444440001,
     "Lon": 146.834,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "AYKH",
+    "iso_country": "PG",
+    "icao_code": "AYKH",
+    "iata_code": "KAQ",
+    "local_code": "KML",
+    "length_ft": 1578,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1464,7 +2584,14 @@
     "freq": "",
     "Lat": -6.1257100105285645,
     "Lon": 141.28199768066406,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "AYKI",
+    "iso_country": "PG",
+    "icao_code": "AYKI",
+    "iata_code": "UNG",
+    "length_ft": 3691,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1473,7 +2600,15 @@
     "freq": "",
     "Lat": -5.2903,
     "Lon": 144.7072,
-    "Ele": 1238.7
+    "Ele": 1238.7,
+    "ident": "AYKJ",
+    "iso_country": "PG",
+    "icao_code": "AYKJ",
+    "iata_code": "KNE",
+    "local_code": "KNJ",
+    "length_ft": 1273,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1482,7 +2617,11 @@
     "freq": "",
     "Lat": -7.42438,
     "Lon": 144.250076,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "AYKK",
+    "iso_country": "PG",
+    "icao_code": "AYKK",
+    "iata_code": "KRI"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2630,10 @@
     "freq": "",
     "Lat": -3.75,
     "Lon": 142.59,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "AYKL",
+    "iso_country": "PG",
+    "local_code": "KFL"
   },
   {
     "type": "medium_airport",
@@ -1500,7 +2642,15 @@
     "freq": "120.900",
     "Lat": -7.96361017227,
     "Lon": 145.770996094,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYKM",
+    "iso_country": "PG",
+    "icao_code": "AYKM",
+    "iata_code": "KMA",
+    "length_ft": 3044,
+    "width_ft": 60,
+    "heading": 146,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2659,9 @@
     "freq": "",
     "Lat": -8.6917,
     "Lon": 146.7566,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "AYKN",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2670,16 @@
     "freq": "",
     "Lat": -8.884679,
     "Lon": 147.730957,
-    "Ele": 378.0
+    "Ele": 378,
+    "ident": "AYKO",
+    "iso_country": "PG",
+    "icao_code": "AYKO",
+    "iata_code": "KKD",
+    "local_code": "KOK",
+    "length_ft": 2805,
+    "width_ft": 147,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1527,7 +2688,16 @@
     "freq": "",
     "Lat": -9.13591666667,
     "Lon": 147.669444444,
-    "Ele": 1280.2
+    "Ele": 1280.2,
+    "ident": "AYKQ",
+    "iso_country": "PG",
+    "icao_code": "AYKQ",
+    "iata_code": "KGW",
+    "local_code": "KAGI",
+    "length_ft": 1467,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1536,7 +2706,15 @@
     "freq": "",
     "Lat": -4.557,
     "Lon": 145.9404,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "AYKR",
+    "iso_country": "PG",
+    "icao_code": "AYKR",
+    "iata_code": "KRX",
+    "local_code": "KKR",
+    "length_ft": 2953,
+    "heading": 159.6,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2723,16 @@
     "freq": "",
     "Lat": -7.50025,
     "Lon": 146.033833333,
-    "Ele": 624.8
+    "Ele": 624.8,
+    "ident": "AYKT",
+    "iso_country": "PG",
+    "icao_code": "AYKT",
+    "iata_code": "KZF",
+    "local_code": "KNT",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -1554,7 +2741,12 @@
     "freq": "",
     "Lat": -7.135083,
     "Lon": 143.276111,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "AYKU",
+    "iso_country": "PG",
+    "icao_code": "AYKU",
+    "iata_code": "KUQ",
+    "local_code": "KURI"
   },
   {
     "type": "medium_airport",
@@ -1563,7 +2755,15 @@
     "freq": "127.100",
     "Lat": -2.57940006256,
     "Lon": 150.807998657,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "AYKV",
+    "iso_country": "PG",
+    "icao_code": "AYKV",
+    "iata_code": "KVG",
+    "length_ft": 5592,
+    "width_ft": 98,
+    "heading": 124.9,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2772,12 @@
     "freq": "",
     "Lat": -7.977006912229999,
     "Lon": 142.823577881,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "AYKW",
+    "iso_country": "PG",
+    "icao_code": "AYKW",
+    "iata_code": "KWO",
+    "local_code": "KWT"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2786,14 @@
     "freq": "",
     "Lat": -3.04361009598,
     "Lon": 152.628997803,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "AYKY",
+    "iso_country": "PG",
+    "icao_code": "AYKY",
+    "iata_code": "LNV",
+    "length_ft": 3937,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1590,7 +2802,10 @@
     "freq": "",
     "Lat": -3.3687,
     "Lon": 143.5546,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AYKZ",
+    "iso_country": "PG",
+    "local_code": "KAI"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2814,12 @@
     "freq": "",
     "Lat": -5.7204,
     "Lon": 148.0566,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "AYLB",
+    "iso_country": "PG",
+    "icao_code": "AYLB",
+    "iata_code": "LAB",
+    "local_code": "LAB"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2828,9 @@
     "freq": "",
     "Lat": -6.7486,
     "Lon": 142.6037,
-    "Ele": 178.3
+    "Ele": 178.3,
+    "ident": "AYLC",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2839,14 @@
     "freq": "",
     "Lat": -5.2192,
     "Lon": 151.3938,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "AYLE",
+    "iso_country": "PG",
+    "local_code": "LELE",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "heading": 29,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2855,15 @@
     "freq": "",
     "Lat": -5.83277777778,
     "Lon": 145.097222222,
-    "Ele": 2560.3
+    "Ele": 2560.3,
+    "ident": "AYLG",
+    "iso_country": "PG",
+    "icao_code": "AYLG",
+    "iata_code": "KEG",
+    "local_code": "KEG",
+    "length_ft": 2132,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1635,7 +2872,13 @@
     "freq": "",
     "Lat": -4.1305,
     "Lon": 142.2495,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "AYLH",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -1644,7 +2887,16 @@
     "freq": "",
     "Lat": -9.006528,
     "Lon": 142.698056,
-    "Ele": 16.5
+    "Ele": 16.5,
+    "ident": "AYLI",
+    "iso_country": "PG",
+    "icao_code": "AYLI",
+    "iata_code": "KII",
+    "local_code": "KBL",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1653,7 +2905,10 @@
     "freq": "",
     "Lat": -5.819043,
     "Lon": 149.305308,
-    "Ele": 150.3
+    "Ele": 150.3,
+    "ident": "AYLJ",
+    "iso_country": "PG",
+    "local_code": "LMG"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2917,15 @@
     "freq": "",
     "Lat": -5.5319444444400006,
     "Lon": 149.734166667,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "AYLL",
+    "iso_country": "PG",
+    "icao_code": "AYLL",
+    "iata_code": "LGN",
+    "local_code": "LLA",
+    "length_ft": 2461,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -1671,7 +2934,15 @@
     "freq": "",
     "Lat": -7.22313888889,
     "Lon": 146.227083333,
-    "Ele": 1562.7
+    "Ele": 1562.7,
+    "ident": "AYLN",
+    "iso_country": "PG",
+    "icao_code": "AYLN",
+    "iata_code": "LNM",
+    "local_code": "LNM",
+    "length_ft": 1654,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1680,7 +2951,15 @@
     "freq": "",
     "Lat": -6.3344,
     "Lon": 146.6458,
-    "Ele": 883.9
+    "Ele": 883.9,
+    "ident": "AYLO",
+    "iso_country": "PG",
+    "icao_code": "AYLO",
+    "iata_code": "LWI",
+    "local_code": "LOW",
+    "length_ft": 1640,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1689,7 +2968,12 @@
     "freq": "",
     "Lat": -6.3917,
     "Lon": 146.3434,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "AYLP",
+    "iso_country": "PG",
+    "icao_code": "AYLP",
+    "iata_code": "LPN",
+    "local_code": "LPS"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2982,10 @@
     "freq": "",
     "Lat": -8.8186,
     "Lon": 143.1317,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "AYLQ",
+    "iso_country": "PG",
+    "local_code": "LGN"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2994,15 @@
     "freq": "",
     "Lat": -8.2799,
     "Lon": 146.2765,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "AYLS",
+    "iso_country": "PG",
+    "icao_code": "AYLS",
+    "iata_code": "LNG",
+    "local_code": "LESE",
+    "length_ft": 2520,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1716,7 +3011,15 @@
     "freq": "",
     "Lat": -6.384611111110001,
     "Lon": 147.368638889,
-    "Ele": 1752.6
+    "Ele": 1752.6,
+    "ident": "AYLT",
+    "iso_country": "PG",
+    "icao_code": "AYLT",
+    "iata_code": "LNC",
+    "local_code": "LNG",
+    "length_ft": 1535,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1725,7 +3028,12 @@
     "freq": "",
     "Lat": -3.47683951134,
     "Lon": 142.041292191,
-    "Ele": 533.4
+    "Ele": 533.4,
+    "ident": "AYLU",
+    "iso_country": "PG",
+    "icao_code": "AYLU",
+    "iata_code": "LMI",
+    "local_code": "LUMI"
   },
   {
     "type": "small_airport",
@@ -1734,7 +3042,16 @@
     "freq": "",
     "Lat": -5.3604,
     "Lon": 147.0177,
-    "Ele": 35.4
+    "Ele": 35.4,
+    "ident": "AYLX",
+    "iso_country": "PG",
+    "icao_code": "AYLX",
+    "iata_code": "LSJ",
+    "local_code": "LIS",
+    "length_ft": 2015,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1743,7 +3060,10 @@
     "freq": "",
     "Lat": -9.151573,
     "Lon": 147.762322,
-    "Ele": 2052.8
+    "Ele": 2052.8,
+    "ident": "AYLY",
+    "iso_country": "PG",
+    "local_code": "MYA"
   },
   {
     "type": "small_airport",
@@ -1752,7 +3072,14 @@
     "freq": "",
     "Lat": -4.0322,
     "Lon": 143.1831,
-    "Ele": 23.5
+    "Ele": 23.5,
+    "ident": "AYLZ",
+    "iso_country": "PG",
+    "local_code": "SLAI",
+    "length_ft": 2044,
+    "width_ft": 147,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1761,7 +3088,12 @@
     "freq": "",
     "Lat": -9.1908,
     "Lon": 147.6219,
-    "Ele": 801.6
+    "Ele": 801.6,
+    "ident": "AYMA",
+    "iso_country": "PG",
+    "icao_code": "AYMA",
+    "iata_code": "MRM",
+    "local_code": "MRI"
   },
   {
     "type": "small_airport",
@@ -1770,7 +3102,15 @@
     "freq": "",
     "Lat": -7.74,
     "Lon": 147.59,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "AYMB",
+    "iso_country": "PG",
+    "icao_code": "AYMB",
+    "iata_code": "OBM",
+    "local_code": "MBE",
+    "length_ft": 1998,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1779,7 +3119,12 @@
     "freq": "",
     "Lat": -7.21166666667,
     "Lon": 146.019361111,
-    "Ele": 1182.6
+    "Ele": 1182.6,
+    "ident": "AYMC",
+    "iso_country": "PG",
+    "icao_code": "AYMC",
+    "iata_code": "MYX",
+    "local_code": "MYY"
   },
   {
     "type": "medium_airport",
@@ -1788,7 +3133,15 @@
     "freq": "127.800",
     "Lat": -5.20707988739,
     "Lon": 145.789001465,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "AYMD",
+    "iso_country": "PG",
+    "icao_code": "AYMD",
+    "iata_code": "MAG",
+    "length_ft": 5174,
+    "width_ft": 105,
+    "heading": 75,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1797,7 +3150,10 @@
     "freq": "",
     "Lat": -6.503221,
     "Lon": 145.03266,
-    "Ele": 1588.9
+    "Ele": 1588.9,
+    "ident": "AYMF",
+    "iso_country": "PG",
+    "local_code": "MFU"
   },
   {
     "type": "small_airport",
@@ -1806,7 +3162,10 @@
     "freq": "",
     "Lat": -4.052061,
     "Lon": 141.986281,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "AYMG",
+    "iso_country": "PG",
+    "local_code": "MAG"
   },
   {
     "type": "medium_airport",
@@ -1815,7 +3174,15 @@
     "freq": "128.400",
     "Lat": -5.828212,
     "Lon": 144.299412,
-    "Ele": 1642.3
+    "Ele": 1642.3,
+    "ident": "AYMH",
+    "iso_country": "PG",
+    "icao_code": "AYMH",
+    "iata_code": "HGU",
+    "length_ft": 7185,
+    "width_ft": 98,
+    "heading": 121,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1824,7 +3191,12 @@
     "freq": "",
     "Lat": -6.47166666667,
     "Lon": 147.441138889,
-    "Ele": 1280.2
+    "Ele": 1280.2,
+    "ident": "AYMI",
+    "iso_country": "PG",
+    "icao_code": "AYMI",
+    "iata_code": "MXK",
+    "local_code": "MIK"
   },
   {
     "type": "small_airport",
@@ -1833,7 +3205,15 @@
     "freq": "",
     "Lat": -6.532222222220001,
     "Lon": 147.651166667,
-    "Ele": 771.1
+    "Ele": 771.1,
+    "ident": "AYMJ",
+    "iso_country": "PG",
+    "icao_code": "AYMJ",
+    "iata_code": "MPG",
+    "local_code": "MAK",
+    "length_ft": 1565,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -1842,7 +3222,10 @@
     "freq": "",
     "Lat": -5.730238,
     "Lon": 149.056583,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "AYMK",
+    "iso_country": "PG",
+    "local_code": "MOK"
   },
   {
     "type": "small_airport",
@@ -1851,7 +3234,12 @@
     "freq": "",
     "Lat": -6.280859,
     "Lon": 142.420775,
-    "Ele": 251.5
+    "Ele": 251.5,
+    "ident": "AYML",
+    "iso_country": "PG",
+    "icao_code": "AYML",
+    "iata_code": "GUV",
+    "local_code": "MGU"
   },
   {
     "type": "medium_airport",
@@ -1860,7 +3248,15 @@
     "freq": "",
     "Lat": -6.14774,
     "Lon": 143.656998,
-    "Ele": 1731.3
+    "Ele": 1731.3,
+    "ident": "AYMN",
+    "iso_country": "PG",
+    "icao_code": "AYMN",
+    "iata_code": "MDU",
+    "length_ft": 4411,
+    "width_ft": 98,
+    "heading": 172.8,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -1869,7 +3265,15 @@
     "freq": "129.350",
     "Lat": -2.06189,
     "Lon": 147.423996,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "AYMO",
+    "iso_country": "PG",
+    "icao_code": "AYMO",
+    "iata_code": "MAS",
+    "length_ft": 6136,
+    "width_ft": 148,
+    "heading": 161,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1878,7 +3282,15 @@
     "freq": "",
     "Lat": -8.07138888889,
     "Lon": 146.155472222,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "AYMP",
+    "iso_country": "PG",
+    "icao_code": "AYMP",
+    "iata_code": "MLQ",
+    "local_code": "MLU",
+    "length_ft": 3609,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1887,7 +3299,15 @@
     "freq": "",
     "Lat": -8.70916666667,
     "Lon": 142.649722222,
-    "Ele": 38.4
+    "Ele": 38.4,
+    "ident": "AYMQ",
+    "iso_country": "PG",
+    "icao_code": "AYMQ",
+    "iata_code": "MQO",
+    "local_code": "MAA",
+    "length_ft": 2359,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1896,7 +3316,14 @@
     "freq": "",
     "Lat": -6.36332988739,
     "Lon": 143.238006592,
-    "Ele": 835.2
+    "Ele": 835.2,
+    "ident": "AYMR",
+    "iso_country": "PG",
+    "icao_code": "AYMR",
+    "iata_code": "MXH",
+    "length_ft": 5774,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1905,7 +3332,14 @@
     "freq": "",
     "Lat": -10.6892004013,
     "Lon": 152.837997437,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "AYMS",
+    "iso_country": "PG",
+    "icao_code": "AYMS",
+    "iata_code": "MIS",
+    "length_ft": 3937,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -1914,7 +3348,13 @@
     "freq": "",
     "Lat": -6.426481,
     "Lon": 142.767485,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "AYMU",
+    "iso_country": "PG",
+    "local_code": "MLM",
+    "length_ft": 2165,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1923,7 +3363,15 @@
     "freq": "",
     "Lat": -4.02343055556,
     "Lon": 153.657277778,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "AYMV",
+    "iso_country": "PG",
+    "icao_code": "AYMV",
+    "iata_code": "MKN",
+    "local_code": "MKO",
+    "length_ft": 3050,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1932,7 +3380,12 @@
     "freq": "",
     "Lat": -6.9736,
     "Lon": 145.8849,
-    "Ele": 1844.0
+    "Ele": 1844,
+    "ident": "AYMW",
+    "iso_country": "PG",
+    "icao_code": "AYMW",
+    "iata_code": "MWG",
+    "local_code": "MWK"
   },
   {
     "type": "small_airport",
@@ -1941,7 +3394,10 @@
     "freq": "",
     "Lat": -5.196945,
     "Lon": 144.191831,
-    "Ele": 310.9
+    "Ele": 310.9,
+    "ident": "AYMX",
+    "iso_country": "PG",
+    "local_code": "MSI"
   },
   {
     "type": "small_airport",
@@ -1950,7 +3406,14 @@
     "freq": "",
     "Lat": -3.3158,
     "Lon": 141.2461,
-    "Ele": 222.2
+    "Ele": 222.2,
+    "ident": "AYMY",
+    "iso_country": "PG",
+    "local_code": "SMOK",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1959,7 +3422,15 @@
     "freq": "",
     "Lat": -2.81138888889,
     "Lon": 151.991111111,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "AYMZ",
+    "iso_country": "PG",
+    "icao_code": "AYMZ",
+    "iata_code": "MPU",
+    "local_code": "MBU",
+    "length_ft": 1969,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1968,7 +3439,12 @@
     "freq": "",
     "Lat": -5.837,
     "Lon": 146.4533,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "AYNA",
+    "iso_country": "PG",
+    "icao_code": "AYNA",
+    "iata_code": "NKN",
+    "local_code": "NKN"
   },
   {
     "type": "small_airport",
@@ -1977,7 +3453,16 @@
     "freq": "",
     "Lat": -7.538888888890001,
     "Lon": 145.905,
-    "Ele": 1307.0
+    "Ele": 1307,
+    "ident": "AYNB",
+    "iso_country": "PG",
+    "icao_code": "AYNB",
+    "iata_code": "KEX",
+    "local_code": "KEA",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -1986,7 +3471,15 @@
     "freq": "",
     "Lat": -9.14355555556,
     "Lon": 147.68425,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "AYNC",
+    "iso_country": "PG",
+    "icao_code": "AYNC",
+    "iata_code": "NDN",
+    "local_code": "NDM",
+    "length_ft": 1362,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1995,7 +3488,15 @@
     "freq": "",
     "Lat": -1.46055555556,
     "Lon": 143.064722222,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "AYND",
+    "iso_country": "PG",
+    "icao_code": "AYND",
+    "iata_code": "AUI",
+    "local_code": "AUA",
+    "length_ft": 3015,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2004,7 +3505,12 @@
     "freq": "",
     "Lat": -6.567778,
     "Lon": 144.703058,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "AYNE",
+    "iso_country": "PG",
+    "icao_code": "AYNE",
+    "iata_code": "GBF",
+    "local_code": "NBO"
   },
   {
     "type": "small_airport",
@@ -2013,7 +3519,10 @@
     "freq": "",
     "Lat": -4.091586,
     "Lon": 142.592937,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "AYNF",
+    "iso_country": "PG",
+    "local_code": "NGR"
   },
   {
     "type": "small_airport",
@@ -2022,7 +3531,11 @@
     "freq": "",
     "Lat": -5.577778,
     "Lon": 151.792333,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "AYNG",
+    "iso_country": "PG",
+    "iata_code": "MFO",
+    "local_code": "MGA"
   },
   {
     "type": "small_airport",
@@ -2031,7 +3544,10 @@
     "freq": "",
     "Lat": -5.842728,
     "Lon": 146.112601,
-    "Ele": 1987.3
+    "Ele": 1987.3,
+    "ident": "AYNH",
+    "iso_country": "PG",
+    "local_code": "NAHU"
   },
   {
     "type": "small_airport",
@@ -2040,7 +3556,15 @@
     "freq": "",
     "Lat": -3.4075,
     "Lon": 154.7383,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "AYNI",
+    "iso_country": "PG",
+    "icao_code": "AYNI",
+    "iata_code": "NUG",
+    "local_code": "NGA",
+    "length_ft": 2799,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2049,7 +3573,15 @@
     "freq": "",
     "Lat": -9.47375,
     "Lon": 148.329416667,
-    "Ele": 318.2
+    "Ele": 318.2,
+    "ident": "AYNJ",
+    "iso_country": "PG",
+    "icao_code": "AYNJ",
+    "iata_code": "NDI",
+    "local_code": "NAM",
+    "length_ft": 2953,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2058,7 +3590,16 @@
     "freq": "",
     "Lat": -6.3819,
     "Lon": 146.9859,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "AYNM",
+    "iso_country": "PG",
+    "icao_code": "AYNM",
+    "iata_code": "KSB",
+    "local_code": "KNB",
+    "length_ft": 1499,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2067,7 +3608,15 @@
     "freq": "",
     "Lat": -5.84061111111,
     "Lon": 143.507222222,
-    "Ele": 2350.0
+    "Ele": 2350,
+    "ident": "AYNN",
+    "iso_country": "PG",
+    "icao_code": "AYNN",
+    "iata_code": "KDP",
+    "local_code": "KDP",
+    "length_ft": 2800,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2076,7 +3625,15 @@
     "freq": "",
     "Lat": -6.32183,
     "Lon": 145.070667,
-    "Ele": 1838.6
+    "Ele": 1838.6,
+    "ident": "AYNO",
+    "iso_country": "PG",
+    "icao_code": "AYNO",
+    "iata_code": "NMN",
+    "local_code": "NOM",
+    "length_ft": 1627,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -2085,7 +3642,10 @@
     "freq": "",
     "Lat": -4.504308,
     "Lon": 144.231471,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "AYNP",
+    "iso_country": "PG",
+    "local_code": "MOP"
   },
   {
     "type": "small_airport",
@@ -2094,7 +3654,16 @@
     "freq": "",
     "Lat": -5.7243,
     "Lon": 147.8667,
-    "Ele": 61.3
+    "Ele": 61.3,
+    "ident": "AYNS",
+    "iso_country": "PG",
+    "icao_code": "AYNS",
+    "iata_code": "BXZ",
+    "local_code": "BSL",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2103,7 +3672,14 @@
     "freq": "",
     "Lat": -6.7227,
     "Lon": 143.5636,
-    "Ele": 422.1
+    "Ele": 422.1,
+    "ident": "AYNT",
+    "iso_country": "PG",
+    "local_code": "KNO",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2112,7 +3688,16 @@
     "freq": "",
     "Lat": -3.676651,
     "Lon": 142.484334,
-    "Ele": 265.2
+    "Ele": 265.2,
+    "ident": "AYNU",
+    "iso_country": "PG",
+    "icao_code": "AYNU",
+    "iata_code": "UKU",
+    "local_code": "NUKU",
+    "length_ft": 2418,
+    "width_ft": 147,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2121,7 +3706,15 @@
     "freq": "",
     "Lat": -3.6695,
     "Lon": 152.438,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "AYNX",
+    "iso_country": "PG",
+    "icao_code": "AYNX",
+    "iata_code": "ATN",
+    "local_code": "NTI",
+    "length_ft": 3494,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2130,7 +3723,12 @@
     "freq": "",
     "Lat": -6.2412,
     "Lon": 145.2424,
-    "Ele": 1691.6
+    "Ele": 1691.6,
+    "ident": "AYNY",
+    "iso_country": "PG",
+    "icao_code": "AYNY",
+    "iata_code": "NBA",
+    "local_code": "NBF"
   },
   {
     "type": "medium_airport",
@@ -2139,7 +3737,15 @@
     "freq": "118.600",
     "Lat": -6.569803,
     "Lon": 146.725977,
-    "Ele": 72.8
+    "Ele": 72.8,
+    "ident": "AYNZ",
+    "iso_country": "PG",
+    "icao_code": "AYNZ",
+    "iata_code": "LAE",
+    "length_ft": 7999,
+    "width_ft": 148,
+    "heading": 95,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2148,7 +3754,10 @@
     "freq": "",
     "Lat": -3.598,
     "Lon": 141.3614,
-    "Ele": 111.6
+    "Ele": 111.6,
+    "ident": "AYOA",
+    "iso_country": "PG",
+    "local_code": "KWO"
   },
   {
     "type": "small_airport",
@@ -2157,7 +3766,16 @@
     "freq": "",
     "Lat": -7.590622421369999,
     "Lon": 141.324262619,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "AYOB",
+    "iso_country": "PG",
+    "icao_code": "AYOB",
+    "iata_code": "OBX",
+    "local_code": "OBO",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2166,7 +3784,14 @@
     "freq": "",
     "Lat": -6.5507,
     "Lon": 145.9728,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "AYOD",
+    "iso_country": "PG",
+    "local_code": "OBU",
+    "length_ft": 1870,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2175,7 +3800,15 @@
     "freq": "",
     "Lat": -6.2239,
     "Lon": 147.2152,
-    "Ele": 1798.3
+    "Ele": 1798.3,
+    "ident": "AYOE",
+    "iso_country": "PG",
+    "icao_code": "AYOE",
+    "iata_code": "KGB",
+    "local_code": "KGE",
+    "length_ft": 2014,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2184,7 +3817,16 @@
     "freq": "",
     "Lat": -5.55666666667,
     "Lon": 141.032777778,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "AYOF",
+    "iso_country": "PG",
+    "icao_code": "AYOF",
+    "iata_code": "OKV",
+    "local_code": "OKO",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2193,7 +3835,16 @@
     "freq": "",
     "Lat": -6.46675,
     "Lon": 147.364166667,
-    "Ele": 1783.1
+    "Ele": 1783.1,
+    "ident": "AYOG",
+    "iso_country": "PG",
+    "icao_code": "AYOG",
+    "iata_code": "OGE",
+    "local_code": "OGN",
+    "length_ft": 1804,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2202,7 +3853,14 @@
     "freq": "",
     "Lat": -4.7065,
     "Lon": 141.9006,
-    "Ele": 94.5
+    "Ele": 94.5,
+    "ident": "AYOH",
+    "iso_country": "PG",
+    "local_code": "OKS",
+    "length_ft": 2182,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2211,7 +3869,16 @@
     "freq": "",
     "Lat": -5.2261,
     "Lon": 142.2259,
-    "Ele": 1566.7
+    "Ele": 1566.7,
+    "ident": "AYOJ",
+    "iso_country": "PG",
+    "icao_code": "AYOJ",
+    "iata_code": "OKP",
+    "local_code": "OKN",
+    "length_ft": 2215,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2220,7 +3887,15 @@
     "freq": "",
     "Lat": -7.3984,
     "Lon": 145.8827,
-    "Ele": 1207.0
+    "Ele": 1207,
+    "ident": "AYOK",
+    "iso_country": "PG",
+    "icao_code": "AYOK",
+    "iata_code": "HOC",
+    "local_code": "KMA",
+    "length_ft": 1224,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -2229,7 +3904,16 @@
     "freq": "",
     "Lat": -5.73116666667,
     "Lon": 144.846,
-    "Ele": 1630.7
+    "Ele": 1630.7,
+    "ident": "AYOL",
+    "iso_country": "PG",
+    "icao_code": "AYOL",
+    "iata_code": "KQL",
+    "local_code": "KOL",
+    "length_ft": 1647,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2238,7 +3922,16 @@
     "freq": "",
     "Lat": -7.82777777778,
     "Lon": 147.080638889,
-    "Ele": 774.2
+    "Ele": 774.2,
+    "ident": "AYOM",
+    "iso_country": "PG",
+    "icao_code": "AYOM",
+    "iata_code": "OSE",
+    "local_code": "OOA",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2247,7 +3940,16 @@
     "freq": "",
     "Lat": -6.0682,
     "Lon": 142.8598,
-    "Ele": 1541.4
+    "Ele": 1541.4,
+    "ident": "AYOO",
+    "iso_country": "PG",
+    "icao_code": "AYOO",
+    "iata_code": "KOM",
+    "local_code": "KOMO",
+    "length_ft": 2592,
+    "width_ft": 147,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2256,7 +3958,14 @@
     "freq": "",
     "Lat": -8.450716,
     "Lon": 147.209195,
-    "Ele": 1935.5
+    "Ele": 1935.5,
+    "ident": "AYOP",
+    "iso_country": "PG",
+    "icao_code": "AYOP",
+    "iata_code": "KSP",
+    "length_ft": 1968,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2265,7 +3974,12 @@
     "freq": "",
     "Lat": -7.2714,
     "Lon": 143.5952,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "AYOQ",
+    "iso_country": "PG",
+    "icao_code": "AYOQ",
+    "iata_code": "KCJ",
+    "local_code": "KOI"
   },
   {
     "type": "small_airport",
@@ -2274,7 +3988,12 @@
     "freq": "",
     "Lat": -3.9522,
     "Lon": 143.1767,
-    "Ele": 45.4
+    "Ele": 45.4,
+    "ident": "AYOS",
+    "iso_country": "PG",
+    "length_ft": 1968,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -2283,7 +4002,14 @@
     "freq": "",
     "Lat": -5.3817,
     "Lon": 144.6355,
-    "Ele": 1645.9
+    "Ele": 1645.9,
+    "ident": "AYOU",
+    "iso_country": "PG",
+    "local_code": "KBK",
+    "length_ft": 1381,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2292,7 +4018,16 @@
     "freq": "",
     "Lat": -5.3897222222200005,
     "Lon": 141.515277778,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "AYOV",
+    "iso_country": "PG",
+    "icao_code": "AYOV",
+    "iata_code": "OLQ",
+    "local_code": "OLS",
+    "length_ft": 2018,
+    "width_ft": 147,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2301,7 +4036,11 @@
     "freq": "",
     "Lat": -5.6952,
     "Lon": 142.7441,
-    "Ele": 1718.5
+    "Ele": 1718.5,
+    "ident": "AYOW",
+    "iso_country": "PG",
+    "icao_code": "AYOW",
+    "iata_code": "KDE"
   },
   {
     "type": "small_airport",
@@ -2310,7 +4049,14 @@
     "freq": "",
     "Lat": -4.1615,
     "Lon": 141.2478,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "AYOX",
+    "iso_country": "PG",
+    "local_code": "MOI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2319,7 +4065,14 @@
     "freq": "",
     "Lat": -4.794727,
     "Lon": 151.696195,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "AYOY",
+    "iso_country": "PG",
+    "iata_code": "OPB",
+    "local_code": "OBY",
+    "length_ft": 3524,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2328,7 +4081,10 @@
     "freq": "",
     "Lat": -6.4304,
     "Lon": 145.0931,
-    "Ele": 1751.1
+    "Ele": 1751.1,
+    "ident": "AYOZ",
+    "iso_country": "PG",
+    "local_code": "KORA"
   },
   {
     "type": "small_airport",
@@ -2337,7 +4093,13 @@
     "freq": "",
     "Lat": -7.0838,
     "Lon": 142.514,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "AYPA",
+    "iso_country": "PG",
+    "length_ft": 1680,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -2346,7 +4108,16 @@
     "freq": "",
     "Lat": -5.372407,
     "Lon": 142.975774,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "AYPB",
+    "iso_country": "PG",
+    "icao_code": "AYPB",
+    "iata_code": "PLE",
+    "local_code": "PAL",
+    "length_ft": 1598,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2355,7 +4126,16 @@
     "freq": "",
     "Lat": -7.0226,
     "Lon": 141.5605,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AYPC",
+    "iso_country": "PG",
+    "icao_code": "AYPC",
+    "iata_code": "PGB",
+    "local_code": "PGA",
+    "length_ft": 2396,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2364,7 +4144,16 @@
     "freq": "",
     "Lat": -6.445138888890001,
     "Lon": 147.515833333,
-    "Ele": 912.9
+    "Ele": 912.9,
+    "ident": "AYPD",
+    "iso_country": "PG",
+    "icao_code": "AYPD",
+    "iata_code": "PDI",
+    "local_code": "PDU",
+    "length_ft": 2001,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -2373,7 +4162,16 @@
     "freq": "",
     "Lat": -4.67666666667,
     "Lon": 142.540138889,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "AYPE",
+    "iso_country": "PG",
+    "icao_code": "AYPE",
+    "iata_code": "APR",
+    "local_code": "APR",
+    "length_ft": 2034,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2382,7 +4180,12 @@
     "freq": "",
     "Lat": -6.386,
     "Lon": 144.1084,
-    "Ele": 1627.6
+    "Ele": 1627.6,
+    "ident": "AYPG",
+    "iso_country": "PG",
+    "icao_code": "AYPG",
+    "iata_code": "PGN",
+    "local_code": "PNA"
   },
   {
     "type": "small_airport",
@@ -2391,7 +4194,14 @@
     "freq": "",
     "Lat": -6.371,
     "Lon": 144.6839,
-    "Ele": 1038.8
+    "Ele": 1038.8,
+    "ident": "AYPI",
+    "iso_country": "PG",
+    "local_code": "KAPI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -2400,7 +4210,16 @@
     "freq": "",
     "Lat": -6.49916666667,
     "Lon": 143.510277778,
-    "Ele": 836.7
+    "Ele": 836.7,
+    "ident": "AYPJ",
+    "iso_country": "PG",
+    "icao_code": "AYPJ",
+    "iata_code": "PMP",
+    "local_code": "PAG",
+    "length_ft": 2904,
+    "width_ft": 59,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2409,7 +4228,15 @@
     "freq": "",
     "Lat": -7.979,
     "Lon": 143.1694,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "AYPO",
+    "iso_country": "PG",
+    "icao_code": "AYPO",
+    "iata_code": "MPF",
+    "local_code": "MPO",
+    "length_ft": 1706,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2418,7 +4245,16 @@
     "freq": "",
     "Lat": -9.7469,
     "Lon": 149.4766,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "AYPQ",
+    "iso_country": "PG",
+    "icao_code": "AYPQ",
+    "iata_code": "PMN",
+    "local_code": "PMN",
+    "length_ft": 2001,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2427,7 +4263,13 @@
     "freq": "",
     "Lat": -4.545971,
     "Lon": 142.221074,
-    "Ele": 31.7
+    "Ele": 31.7,
+    "ident": "AYPS",
+    "iso_country": "PG",
+    "local_code": "MPI",
+    "length_ft": 1640,
+    "QFU": "19A",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2436,7 +4278,10 @@
     "freq": "",
     "Lat": -6.475161,
     "Lon": 143.987222,
-    "Ele": 1844.0
+    "Ele": 1844,
+    "ident": "AYPU",
+    "iso_country": "PG",
+    "iata_code": "WLU"
   },
   {
     "type": "small_airport",
@@ -2445,7 +4290,9 @@
     "freq": "",
     "Lat": -7.67205555556,
     "Lon": 143.124722222,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "AYPW",
+    "iso_country": "PG"
   },
   {
     "type": "large_airport",
@@ -2454,7 +4301,15 @@
     "freq": "125.800",
     "Lat": -9.44338035583496,
     "Lon": 147.22000122070312,
-    "Ele": 44.5
+    "Ele": 44.5,
+    "ident": "AYPY",
+    "iso_country": "PG",
+    "icao_code": "AYPY",
+    "iata_code": "POM",
+    "length_ft": 4625,
+    "width_ft": 148,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2463,7 +4318,12 @@
     "freq": "",
     "Lat": -4.59666666667,
     "Lon": 143.5225,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "AYQA",
+    "iso_country": "PG",
+    "icao_code": "AYQA",
+    "iata_code": "KRJ",
+    "local_code": "KRR"
   },
   {
     "type": "small_airport",
@@ -2472,7 +4332,14 @@
     "freq": "",
     "Lat": -6.9623,
     "Lon": 145.6448,
-    "Ele": 1085.1
+    "Ele": 1085.1,
+    "ident": "AYQB",
+    "iso_country": "PG",
+    "local_code": "SBR",
+    "length_ft": 1378,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2481,7 +4348,16 @@
     "freq": "",
     "Lat": -4.7748,
     "Lon": 141.0133,
-    "Ele": 1094.2
+    "Ele": 1094.2,
+    "ident": "AYQL",
+    "iso_country": "PG",
+    "icao_code": "AYQL",
+    "iata_code": "TLP",
+    "local_code": "TUM",
+    "length_ft": 1627,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2490,7 +4366,14 @@
     "freq": "",
     "Lat": -6.8008,
     "Lon": 145.7134,
-    "Ele": 1521.0
+    "Ele": 1521,
+    "ident": "AYQM",
+    "iso_country": "PG",
+    "local_code": "SMG",
+    "length_ft": 1706,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2499,7 +4382,12 @@
     "freq": "",
     "Lat": -8.3038,
     "Lon": 147.1659,
-    "Ele": 2005.6
+    "Ele": 2005.6,
+    "ident": "AYQO",
+    "iso_country": "PG",
+    "icao_code": "AYQO",
+    "iata_code": "SPH",
+    "local_code": "SOPU"
   },
   {
     "type": "small_airport",
@@ -2508,7 +4396,16 @@
     "freq": "",
     "Lat": -8.67436111111,
     "Lon": 147.262416667,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "AYQQ",
+    "iso_country": "PG",
+    "icao_code": "AYQQ",
+    "iata_code": "ONB",
+    "local_code": "ONG",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2517,7 +4414,12 @@
     "freq": "",
     "Lat": -4.323914,
     "Lon": 141.375632,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "AYQR",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2526,7 +4428,12 @@
     "freq": "",
     "Lat": -6.0908,
     "Lon": 147.5955,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "AYQS",
+    "iso_country": "PG",
+    "icao_code": "AYQS",
+    "iata_code": "SXA",
+    "local_code": "SLU"
   },
   {
     "type": "small_airport",
@@ -2535,7 +4442,10 @@
     "freq": "",
     "Lat": -4.6581,
     "Lon": 144.6082,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "AYQU",
+    "iso_country": "PG",
+    "local_code": "TSU"
   },
   {
     "type": "small_airport",
@@ -2544,7 +4454,13 @@
     "freq": "",
     "Lat": -3.9925,
     "Lon": 141.5537,
-    "Ele": 55.8
+    "Ele": 55.8,
+    "ident": "AYQV",
+    "iso_country": "PG",
+    "length_ft": 2021,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2553,7 +4469,14 @@
     "freq": "",
     "Lat": -4.7508,
     "Lon": 142.3686,
-    "Ele": 141.7
+    "Ele": 141.7,
+    "ident": "AYQW",
+    "iso_country": "PG",
+    "local_code": "SMR",
+    "length_ft": 1942,
+    "width_ft": 49,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2562,7 +4485,16 @@
     "freq": "",
     "Lat": -8.065111111110001,
     "Lon": 147.332027778,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "AYRA",
+    "iso_country": "PG",
+    "icao_code": "AYRA",
+    "iata_code": "KIQ",
+    "local_code": "KIRA",
+    "length_ft": 1804,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2571,7 +4503,9 @@
     "freq": "",
     "Lat": -5.959437,
     "Lon": 151.171703,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "AYRD",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -2580,7 +4514,15 @@
     "freq": "",
     "Lat": -9.97111111111,
     "Lon": 149.832222222,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "AYRE",
+    "iso_country": "PG",
+    "icao_code": "AYRE",
+    "iata_code": "RBP",
+    "local_code": "RBA",
+    "length_ft": 2592,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2589,7 +4531,16 @@
     "freq": "",
     "Lat": -5.89722222222,
     "Lon": 141.271666667,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "AYRG",
+    "iso_country": "PG",
+    "icao_code": "AYRG",
+    "iata_code": "RMN",
+    "local_code": "RMG",
+    "length_ft": 1952,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2598,7 +4549,15 @@
     "freq": "",
     "Lat": -6.4921,
     "Lon": 144.823,
-    "Ele": 1109.5
+    "Ele": 1109.5,
+    "ident": "AYRI",
+    "iso_country": "PG",
+    "icao_code": "AYRI",
+    "iata_code": "KMR",
+    "local_code": "KRI",
+    "length_ft": 2900,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2607,7 +4566,10 @@
     "freq": "",
     "Lat": -4.612389,
     "Lon": 143.247027,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AYRJ",
+    "iso_country": "PG",
+    "local_code": "MRA"
   },
   {
     "type": "small_airport",
@@ -2616,7 +4578,15 @@
     "freq": "",
     "Lat": -8.817000054,
     "Lon": 146.5243833,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "AYRK",
+    "iso_country": "PG",
+    "icao_code": "AYRK",
+    "iata_code": "RKU",
+    "local_code": "KKU",
+    "length_ft": 3117,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2625,7 +4595,9 @@
     "freq": "",
     "Lat": -6.9015,
     "Lon": 146.3698,
-    "Ele": 131.4
+    "Ele": 131.4,
+    "ident": "AYRL",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -2634,7 +4606,12 @@
     "freq": "",
     "Lat": -5.13,
     "Lon": 143.4829,
-    "Ele": 1572.8
+    "Ele": 1572.8,
+    "ident": "AYRM",
+    "iso_country": "PG",
+    "icao_code": "AYRM",
+    "iata_code": "MWI",
+    "local_code": "MAR"
   },
   {
     "type": "small_airport",
@@ -2643,7 +4620,10 @@
     "freq": "",
     "Lat": -6.9125,
     "Lon": 145.6731,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "AYRN",
+    "iso_country": "PG",
+    "local_code": "NMB"
   },
   {
     "type": "small_airport",
@@ -2652,7 +4632,16 @@
     "freq": "",
     "Lat": -7.83466666667,
     "Lon": 146.5335,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "AYRO",
+    "iso_country": "PG",
+    "icao_code": "AYRO",
+    "iata_code": "KOR",
+    "local_code": "KKO",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2661,7 +4650,14 @@
     "freq": "",
     "Lat": -6.6815,
     "Lon": 144.1842,
-    "Ele": 1385.3
+    "Ele": 1385.3,
+    "ident": "AYRR",
+    "iso_country": "PG",
+    "local_code": "TIRI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -2670,7 +4666,14 @@
     "freq": "",
     "Lat": -4.2839,
     "Lon": 143.1512,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "AYRT",
+    "iso_country": "PG",
+    "local_code": "KBT",
+    "length_ft": 2014,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2679,7 +4682,15 @@
     "freq": "",
     "Lat": -4.3615,
     "Lon": 141.785,
-    "Ele": 32.6
+    "Ele": 32.6,
+    "ident": "AYRV",
+    "iso_country": "PG",
+    "iata_code": "MRH",
+    "local_code": "MRV",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -2688,7 +4699,12 @@
     "freq": "",
     "Lat": -6.10444444444,
     "Lon": 142.278333333,
-    "Ele": 141.7
+    "Ele": 141.7,
+    "ident": "AYSA",
+    "iso_country": "PG",
+    "icao_code": "AYSA",
+    "iata_code": "SBE",
+    "local_code": "SUA"
   },
   {
     "type": "small_airport",
@@ -2697,7 +4713,13 @@
     "freq": "",
     "Lat": -7.2196,
     "Lon": 144.2352,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "AYSB",
+    "iso_country": "PG",
+    "length_ft": 2953,
+    "width_ft": 82,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2706,7 +4728,15 @@
     "freq": "",
     "Lat": -5.62713888889,
     "Lon": 146.462777778,
-    "Ele": 25.3
+    "Ele": 25.3,
+    "ident": "AYSD",
+    "iso_country": "PG",
+    "icao_code": "AYSD",
+    "iata_code": "SDI",
+    "local_code": "SDA",
+    "length_ft": 3806,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2715,7 +4745,12 @@
     "freq": "",
     "Lat": -2.66222222222,
     "Lon": 151.997777778,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYSE",
+    "iso_country": "PG",
+    "icao_code": "AYSE",
+    "iata_code": "NIS",
+    "local_code": "SBI"
   },
   {
     "type": "small_airport",
@@ -2724,7 +4759,15 @@
     "freq": "",
     "Lat": -9.59305555556,
     "Lon": 148.636111111,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "AYSF",
+    "iso_country": "PG",
+    "icao_code": "AYSF",
+    "iata_code": "SFU",
+    "local_code": "SFA",
+    "length_ft": 3543,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -2733,7 +4776,12 @@
     "freq": "",
     "Lat": -9.07355555556,
     "Lon": 148.38925,
-    "Ele": 679.7
+    "Ele": 679.7,
+    "ident": "AYSG",
+    "iso_country": "PG",
+    "icao_code": "AYSG",
+    "iata_code": "SIL",
+    "local_code": "SILA"
   },
   {
     "type": "small_airport",
@@ -2742,7 +4790,12 @@
     "freq": "",
     "Lat": -5.5765,
     "Lon": 155.0489,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYSH",
+    "iso_country": "PG",
+    "icao_code": "AYSH",
+    "iata_code": "SBV",
+    "local_code": "SAB"
   },
   {
     "type": "small_airport",
@@ -2751,7 +4804,14 @@
     "freq": "",
     "Lat": -5.4122,
     "Lon": 141.8252,
-    "Ele": 1306.1
+    "Ele": 1306.1,
+    "ident": "AYSI",
+    "iso_country": "PG",
+    "local_code": "SLT",
+    "length_ft": 1181,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2760,7 +4820,12 @@
     "freq": "",
     "Lat": -5.278611111110001,
     "Lon": 144.544722222,
-    "Ele": 1769.1
+    "Ele": 1769.1,
+    "ident": "AYSJ",
+    "iso_country": "PG",
+    "icao_code": "AYSJ",
+    "iata_code": "SIM",
+    "local_code": "SAI"
   },
   {
     "type": "small_airport",
@@ -2769,7 +4834,16 @@
     "freq": "",
     "Lat": -5.12583333333,
     "Lon": 144.323611111,
-    "Ele": 1902.6
+    "Ele": 1902.6,
+    "ident": "AYSK",
+    "iso_country": "PG",
+    "icao_code": "AYSK",
+    "iata_code": "SGK",
+    "local_code": "SNI",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2778,7 +4852,15 @@
     "freq": "",
     "Lat": -9.96452777778,
     "Lon": 151.161861111,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "AYSL",
+    "iso_country": "PG",
+    "icao_code": "AYSL",
+    "iata_code": "SXH",
+    "local_code": "SEH",
+    "length_ft": 3150,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2787,7 +4869,10 @@
     "freq": "",
     "Lat": -6.7193,
     "Lon": 143.9338,
-    "Ele": 1167.4
+    "Ele": 1167.4,
+    "ident": "AYSM",
+    "iso_country": "PG",
+    "local_code": "SGI"
   },
   {
     "type": "small_airport",
@@ -2796,7 +4881,12 @@
     "freq": "",
     "Lat": -5.315,
     "Lon": 141.752,
-    "Ele": 1563.6
+    "Ele": 1563.6,
+    "ident": "AYSO",
+    "iso_country": "PG",
+    "icao_code": "AYSO",
+    "iata_code": "SBC",
+    "local_code": "SEL"
   },
   {
     "type": "small_airport",
@@ -2805,7 +4895,16 @@
     "freq": "",
     "Lat": -6.075277777779999,
     "Lon": 146.811111111,
-    "Ele": 887.6
+    "Ele": 887.6,
+    "ident": "AYSP",
+    "iso_country": "PG",
+    "icao_code": "AYSP",
+    "iata_code": "SMH",
+    "local_code": "SAG",
+    "length_ft": 1526,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2814,7 +4913,11 @@
     "freq": "",
     "Lat": -3.8821,
     "Lon": 143.6734,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "AYSQ",
+    "iso_country": "PG",
+    "iata_code": "SPV",
+    "local_code": "SPP"
   },
   {
     "type": "small_airport",
@@ -2823,7 +4926,14 @@
     "freq": "",
     "Lat": -3.9678,
     "Lon": 143.2763,
-    "Ele": 38.7
+    "Ele": 38.7,
+    "ident": "AYSR",
+    "iso_country": "PG",
+    "local_code": "SGA",
+    "length_ft": 2159,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2832,7 +4942,15 @@
     "freq": "",
     "Lat": -7.6217,
     "Lon": 142.868,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "AYSS",
+    "iso_country": "PG",
+    "icao_code": "AYSS",
+    "iata_code": "TDS",
+    "length_ft": 2953,
+    "width_ft": 147,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2841,7 +4959,10 @@
     "freq": "",
     "Lat": -8.1525,
     "Lon": 142.268444444,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "AYST",
+    "iso_country": "PG",
+    "local_code": "STI"
   },
   {
     "type": "small_airport",
@@ -2850,7 +4971,12 @@
     "freq": "",
     "Lat": -8.0466,
     "Lon": 141.7222,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "AYSU",
+    "iso_country": "PG",
+    "icao_code": "AYSU",
+    "iata_code": "SKC",
+    "local_code": "SUKI"
   },
   {
     "type": "small_airport",
@@ -2859,7 +4985,12 @@
     "freq": "",
     "Lat": -5.9701,
     "Lon": 148.8543,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "AYSV",
+    "iso_country": "PG",
+    "icao_code": "AYSV",
+    "iata_code": "SXW",
+    "local_code": "SAU"
   },
   {
     "type": "small_airport",
@@ -2868,7 +4999,16 @@
     "freq": "",
     "Lat": -6.13955555556,
     "Lon": 147.279166667,
-    "Ele": 1275.6
+    "Ele": 1275.6,
+    "ident": "AYSW",
+    "iso_country": "PG",
+    "icao_code": "AYSW",
+    "iata_code": "SWG",
+    "local_code": "SWG",
+    "length_ft": 2051,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2877,7 +5017,15 @@
     "freq": "",
     "Lat": -6.345,
     "Lon": 147.591,
-    "Ele": 1798.3
+    "Ele": 1798.3,
+    "ident": "AYSX",
+    "iso_country": "PG",
+    "icao_code": "AYSX",
+    "iata_code": "MBV",
+    "local_code": "MASA",
+    "length_ft": 1263,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -2886,7 +5034,10 @@
     "freq": "",
     "Lat": -2.9739,
     "Lon": 141.9297,
-    "Ele": 11.3
+    "Ele": 11.3,
+    "ident": "AYSY",
+    "iso_country": "PG",
+    "local_code": "SER"
   },
   {
     "type": "small_airport",
@@ -2895,7 +5046,10 @@
     "freq": "",
     "Lat": -6.4513,
     "Lon": 147.0673,
-    "Ele": 1841.6
+    "Ele": 1841.6,
+    "ident": "AYSZ",
+    "iso_country": "PG",
+    "local_code": "SMZ"
   },
   {
     "type": "small_airport",
@@ -2904,7 +5058,14 @@
     "freq": "",
     "Lat": -5.845,
     "Lon": 142.947998,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "AYTA",
+    "iso_country": "PG",
+    "icao_code": "AYTA",
+    "iata_code": "TIZ",
+    "length_ft": 5197,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2913,7 +5074,14 @@
     "freq": "",
     "Lat": -5.280471,
     "Lon": 141.227576,
-    "Ele": 478.5
+    "Ele": 478.5,
+    "ident": "AYTB",
+    "iso_country": "PG",
+    "icao_code": "AYTB",
+    "iata_code": "TBG",
+    "length_ft": 4232,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2922,7 +5090,10 @@
     "freq": "",
     "Lat": -8.4188,
     "Lon": 142.9043,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "AYTC",
+    "iso_country": "PG",
+    "local_code": "TPL"
   },
   {
     "type": "small_airport",
@@ -2931,7 +5102,13 @@
     "freq": "",
     "Lat": -7.3205,
     "Lon": 144.6384,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "AYTD",
+    "iso_country": "PG",
+    "length_ft": 2953,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2940,7 +5117,12 @@
     "freq": "",
     "Lat": -5.12608,
     "Lon": 141.641922,
-    "Ele": 1508.8
+    "Ele": 1508.8,
+    "ident": "AYTE",
+    "iso_country": "PG",
+    "icao_code": "AYTE",
+    "iata_code": "TFM",
+    "local_code": "TLF"
   },
   {
     "type": "small_airport",
@@ -2949,7 +5131,16 @@
     "freq": "",
     "Lat": -9.1586,
     "Lon": 148.0686,
-    "Ele": 1025.7
+    "Ele": 1025.7,
+    "ident": "AYTF",
+    "iso_country": "PG",
+    "icao_code": "AYTF",
+    "iata_code": "TDB",
+    "local_code": "TEB",
+    "length_ft": 1854,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2958,7 +5149,16 @@
     "freq": "",
     "Lat": -11.3311111111,
     "Lon": 153.202916667,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "AYTG",
+    "iso_country": "PG",
+    "icao_code": "AYTG",
+    "iata_code": "TGL",
+    "local_code": "TAG",
+    "length_ft": 2313,
+    "QFU": "32",
+    "width_ft": 147,
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2967,7 +5167,16 @@
     "freq": "",
     "Lat": -5.117249,
     "Lon": 141.418076,
-    "Ele": 1443.2
+    "Ele": 1443.2,
+    "ident": "AYTH",
+    "iso_country": "PG",
+    "icao_code": "AYTH",
+    "iata_code": "TFB",
+    "local_code": "TFM",
+    "length_ft": 2133,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -2976,7 +5185,12 @@
     "freq": "",
     "Lat": -8.35666666667,
     "Lon": 146.989166667,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "AYTI",
+    "iso_country": "PG",
+    "icao_code": "AYTI",
+    "iata_code": "TPI",
+    "local_code": "TAP"
   },
   {
     "type": "medium_airport",
@@ -2985,7 +5199,15 @@
     "freq": "127.100",
     "Lat": -4.34046,
     "Lon": 152.380005,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "AYTK",
+    "iso_country": "PG",
+    "icao_code": "AYTK",
+    "iata_code": "RAB",
+    "length_ft": 5643,
+    "width_ft": 98,
+    "heading": 106,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2994,7 +5216,10 @@
     "freq": "",
     "Lat": -6.3708,
     "Lon": 144.7167,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "AYTL",
+    "iso_country": "PG",
+    "local_code": "TLK"
   },
   {
     "type": "small_airport",
@@ -3003,7 +5228,14 @@
     "freq": "",
     "Lat": -4.7246,
     "Lon": 144.1529,
-    "Ele": 42.7
+    "Ele": 42.7,
+    "ident": "AYTM",
+    "iso_country": "PG",
+    "local_code": "TAMO",
+    "length_ft": 1854,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -3012,7 +5244,12 @@
     "freq": "",
     "Lat": -5.243667,
     "Lon": 142.165194,
-    "Ele": 1763.3
+    "Ele": 1763.3,
+    "ident": "AYTN",
+    "iso_country": "PG",
+    "icao_code": "AYTN",
+    "iata_code": "TKW",
+    "local_code": "TEK"
   },
   {
     "type": "small_airport",
@@ -3021,7 +5258,16 @@
     "freq": "",
     "Lat": -3.600556,
     "Lon": 141.051667,
-    "Ele": 411.5
+    "Ele": 411.5,
+    "ident": "AYTO",
+    "iso_country": "PG",
+    "icao_code": "AYTO",
+    "iata_code": "KDQ",
+    "local_code": "KTO",
+    "length_ft": 1673,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -3030,7 +5276,12 @@
     "freq": "",
     "Lat": -5.9553,
     "Lon": 146.5595,
-    "Ele": 2137.0
+    "Ele": 2137,
+    "ident": "AYTP",
+    "iso_country": "PG",
+    "icao_code": "AYTP",
+    "iata_code": "TEP",
+    "local_code": "TEP"
   },
   {
     "type": "small_airport",
@@ -3039,7 +5290,13 @@
     "freq": "",
     "Lat": -5.855907,
     "Lon": 146.638405,
-    "Ele": 1544.1
+    "Ele": 1544.1,
+    "ident": "AYTQ",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "width_ft": 30,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3048,7 +5305,16 @@
     "freq": "",
     "Lat": -6.46666666667,
     "Lon": 145.532222222,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "AYTR",
+    "iso_country": "PG",
+    "icao_code": "AYTR",
+    "iata_code": "TBQ",
+    "local_code": "TRB",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -3057,7 +5323,16 @@
     "freq": "",
     "Lat": -7.0695,
     "Lon": 146.1272,
-    "Ele": 1275.6
+    "Ele": 1275.6,
+    "ident": "AYTS",
+    "iso_country": "PG",
+    "icao_code": "AYTS",
+    "iata_code": "TSW",
+    "local_code": "TSE",
+    "length_ft": 1804,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -3066,7 +5341,16 @@
     "freq": "",
     "Lat": -5.614,
     "Lon": 141.0421,
-    "Ele": 85.6
+    "Ele": 85.6,
+    "ident": "AYTT",
+    "iso_country": "PG",
+    "icao_code": "AYTT",
+    "iata_code": "TRJ",
+    "local_code": "TRT",
+    "length_ft": 1909,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3075,7 +5359,16 @@
     "freq": "",
     "Lat": -9.07595443726,
     "Lon": 149.319839478,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "AYTU",
+    "iso_country": "PG",
+    "icao_code": "AYTU",
+    "iata_code": "TFI",
+    "local_code": "TUFI",
+    "length_ft": 2887,
+    "width_ft": 59,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -3084,7 +5377,16 @@
     "freq": "",
     "Lat": -4.196633,
     "Lon": 143.519222,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "AYTV",
+    "iso_country": "PG",
+    "icao_code": "AYTV",
+    "iata_code": "TBE",
+    "local_code": "TIM",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -3093,7 +5395,16 @@
     "freq": "",
     "Lat": -7.4463,
     "Lon": 146.1067,
-    "Ele": 1530.1
+    "Ele": 1530.1,
+    "ident": "AYTW",
+    "iso_country": "PG",
+    "icao_code": "AYTW",
+    "iata_code": "TWY",
+    "local_code": "TAWA",
+    "length_ft": 1529,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -3102,7 +5413,10 @@
     "freq": "",
     "Lat": -6.174544,
     "Lon": 146.392339,
-    "Ele": 1269.2
+    "Ele": 1269.2,
+    "ident": "AYTX",
+    "iso_country": "PG",
+    "local_code": "MTK"
   },
   {
     "type": "small_airport",
@@ -3111,7 +5425,16 @@
     "freq": "",
     "Lat": -8.16972222222,
     "Lon": 146.194444444,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "AYTY",
+    "iso_country": "PG",
+    "icao_code": "AYTY",
+    "iata_code": "TEO",
+    "local_code": "TPO",
+    "length_ft": 2756,
+    "width_ft": 147,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -3120,7 +5443,16 @@
     "freq": "",
     "Lat": -7.6808,
     "Lon": 146.5503,
-    "Ele": 399.3
+    "Ele": 399.3,
+    "ident": "AYTZ",
+    "iso_country": "PG",
+    "icao_code": "AYTZ",
+    "iata_code": "TKB",
+    "local_code": "TKD",
+    "length_ft": 1411,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -3138,7 +5470,16 @@
     "freq": "",
     "Lat": -7.0214,
     "Lon": 145.966,
-    "Ele": 1813.6
+    "Ele": 1813.6,
+    "ident": "AYUC",
+    "iso_country": "PG",
+    "icao_code": "AYUC",
+    "iata_code": "UMC",
+    "local_code": "UMBA",
+    "length_ft": 1598,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -3147,7 +5488,16 @@
     "freq": "",
     "Lat": -9.5162,
     "Lon": 148.5591,
-    "Ele": 146.6
+    "Ele": 146.6,
+    "ident": "AYUE",
+    "iso_country": "PG",
+    "icao_code": "AYUE",
+    "iata_code": "URU",
+    "local_code": "URO",
+    "length_ft": 1575,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -3156,7 +5506,14 @@
     "freq": "",
     "Lat": -3.6381,
     "Lon": 142.8379,
-    "Ele": 181.4
+    "Ele": 181.4,
+    "ident": "AYUG",
+    "iso_country": "PG",
+    "local_code": "BRG",
+    "length_ft": 1594,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -3165,7 +5522,16 @@
     "freq": "",
     "Lat": -6.72916666667,
     "Lon": 155.683333333,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "AYUI",
+    "iso_country": "PG",
+    "icao_code": "AYUI",
+    "iata_code": "UBI",
+    "local_code": "BUIN",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -3174,7 +5540,10 @@
     "freq": "",
     "Lat": -8.256643,
     "Lon": 141.765132,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "AYUJ",
+    "iso_country": "PG",
+    "local_code": "MVI"
   },
   {
     "type": "small_airport",
@@ -3183,7 +5552,13 @@
     "freq": "",
     "Lat": -3.685602,
     "Lon": 142.364531,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "AYUK",
+    "iso_country": "PG",
+    "local_code": "MUK",
+    "length_ft": 1178,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -3192,7 +5567,10 @@
     "freq": "",
     "Lat": -6.8385,
     "Lon": 142.8983,
-    "Ele": 225.6
+    "Ele": 225.6,
+    "ident": "AYUL",
+    "iso_country": "PG",
+    "local_code": "MSL"
   },
   {
     "type": "small_airport",
@@ -3201,7 +5579,16 @@
     "freq": "",
     "Lat": -5.731111111110001,
     "Lon": 148.445277778,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "AYUM",
+    "iso_country": "PG",
+    "icao_code": "AYUM",
+    "iata_code": "AUV",
+    "local_code": "AUMO",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3210,7 +5597,14 @@
     "freq": "",
     "Lat": -4.6564,
     "Lon": 144.2517,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "AYUN",
+    "iso_country": "PG",
+    "local_code": "BNM",
+    "length_ft": 1998,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -3219,7 +5613,14 @@
     "freq": "",
     "Lat": -6.3679,
     "Lon": 145.9902,
-    "Ele": 1481.3
+    "Ele": 1481.3,
+    "ident": "AYUO",
+    "iso_country": "PG",
+    "local_code": "ORA",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -3228,7 +5629,16 @@
     "freq": "",
     "Lat": -5.2808,
     "Lon": 141.5411,
-    "Ele": 1493.5
+    "Ele": 1493.5,
+    "ident": "AYUP",
+    "iso_country": "PG",
+    "icao_code": "AYUP",
+    "iata_code": "GLP",
+    "local_code": "GUP",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -3237,7 +5647,13 @@
     "freq": "",
     "Lat": -5.5078,
     "Lon": 144.1171,
-    "Ele": 1239.6
+    "Ele": 1239.6,
+    "ident": "AYUQ",
+    "iso_country": "PG",
+    "local_code": "KUM",
+    "length_ft": 2172,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -3246,7 +5662,12 @@
     "freq": "",
     "Lat": -8.5411,
     "Lon": 142.6503,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "AYUR",
+    "iso_country": "PG",
+    "icao_code": "AYUR",
+    "iata_code": "UPR",
+    "local_code": "UPA"
   },
   {
     "type": "small_airport",
@@ -3255,7 +5676,13 @@
     "freq": "",
     "Lat": -8.3684,
     "Lon": 142.5862,
-    "Ele": 21.6
+    "Ele": 21.6,
+    "ident": "AYUS",
+    "iso_country": "PG",
+    "length_ft": 2165,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3264,7 +5691,14 @@
     "freq": "",
     "Lat": -6.005,
     "Lon": 146.7205,
-    "Ele": 1749.6
+    "Ele": 1749.6,
+    "ident": "AYUT",
+    "iso_country": "PG",
+    "local_code": "BWT",
+    "length_ft": 1575,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3273,7 +5707,14 @@
     "freq": "",
     "Lat": -6.6025,
     "Lon": 145.8372,
-    "Ele": 1615.4
+    "Ele": 1615.4,
+    "ident": "AYUV",
+    "iso_country": "PG",
+    "local_code": "TUV",
+    "length_ft": 1903,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3282,7 +5723,14 @@
     "freq": "",
     "Lat": -6.9858,
     "Lon": 145.8102,
-    "Ele": 1773.9
+    "Ele": 1773.9,
+    "ident": "AYUX",
+    "iso_country": "PG",
+    "local_code": "URP",
+    "length_ft": 1499,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -3291,7 +5739,15 @@
     "freq": "",
     "Lat": -5.372361111110001,
     "Lon": 141.623888889,
-    "Ele": 1002.8
+    "Ele": 1002.8,
+    "ident": "AYUY",
+    "iso_country": "PG",
+    "icao_code": "AYUY",
+    "iata_code": "KUX",
+    "local_code": "KYL",
+    "length_ft": 1640,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -3300,7 +5756,16 @@
     "freq": "",
     "Lat": -6.0178,
     "Lon": 150.9557,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "AYUZ",
+    "iso_country": "PG",
+    "icao_code": "AYUZ",
+    "iata_code": "UVO",
+    "local_code": "UVOL",
+    "length_ft": 2756,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -3309,7 +5774,13 @@
     "freq": "",
     "Lat": -7.7677,
     "Lon": 145.4857,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "AYVA",
+    "iso_country": "PG",
+    "length_ft": 2953,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -3318,7 +5789,14 @@
     "freq": "",
     "Lat": -6.4026,
     "Lon": 147.4223,
-    "Ele": 1442.3
+    "Ele": 1442.3,
+    "ident": "AYVB",
+    "iso_country": "PG",
+    "local_code": "TOB",
+    "length_ft": 1558,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -3327,7 +5805,13 @@
     "freq": "",
     "Lat": -3.772955,
     "Lon": 141.979065,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "AYVK",
+    "iso_country": "PG",
+    "local_code": "WKE",
+    "length_ft": 1499,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -3336,7 +5820,16 @@
     "freq": "",
     "Lat": -5.2726,
     "Lon": 150.0089,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "AYVL",
+    "iso_country": "PG",
+    "icao_code": "AYVL",
+    "iata_code": "TLW",
+    "local_code": "TLS",
+    "length_ft": 5250,
+    "width_ft": 82,
+    "heading": 143,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -3345,7 +5838,16 @@
     "freq": "",
     "Lat": -4.0165,
     "Lon": 143.1329,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "AYVM",
+    "iso_country": "PG",
+    "icao_code": "AYVM",
+    "iata_code": "TCJ",
+    "local_code": "TBI",
+    "length_ft": 2500,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -3354,7 +5856,15 @@
     "freq": "126.700",
     "Lat": -2.6926,
     "Lon": 141.3028,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "AYVN",
+    "iso_country": "PG",
+    "icao_code": "AYVN",
+    "iata_code": "VAI",
+    "length_ft": 5775,
+    "width_ft": 85,
+    "heading": 130,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -3363,7 +5873,16 @@
     "freq": "",
     "Lat": -6.6552,
     "Lon": 155.4326,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "AYVO",
+    "iso_country": "PG",
+    "icao_code": "AYVO",
+    "iata_code": "TON",
+    "local_code": "TONU",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -3372,7 +5891,14 @@
     "freq": "",
     "Lat": -6.6577,
     "Lon": 144.2974,
-    "Ele": 612.3
+    "Ele": 612.3,
+    "ident": "AYVP",
+    "iso_country": "PG",
+    "local_code": "WOS",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -3381,7 +5907,12 @@
     "freq": "",
     "Lat": -1.73611111111,
     "Lon": 142.836666667,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "AYVW",
+    "iso_country": "PG",
+    "icao_code": "AYVW",
+    "iata_code": "WUV",
+    "local_code": "WUV"
   },
   {
     "type": "small_airport",
@@ -3390,7 +5921,9 @@
     "freq": "",
     "Lat": -4.469824,
     "Lon": 143.148521,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "AYVY",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -3399,7 +5932,16 @@
     "freq": "",
     "Lat": -6.98944444444,
     "Lon": 145.075111111,
-    "Ele": 40.2
+    "Ele": 40.2,
+    "ident": "AYWB",
+    "iso_country": "PG",
+    "icao_code": "AYWB",
+    "iata_code": "WAO",
+    "local_code": "WABO",
+    "length_ft": 2379,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3408,7 +5950,12 @@
     "freq": "",
     "Lat": -6.1325,
     "Lon": 146.467777778,
-    "Ele": 1188.7
+    "Ele": 1188.7,
+    "ident": "AYWC",
+    "iso_country": "PG",
+    "icao_code": "AYWC",
+    "iata_code": "WTT",
+    "local_code": "WNT"
   },
   {
     "type": "medium_airport",
@@ -3417,7 +5964,15 @@
     "freq": "",
     "Lat": -5.635293,
     "Lon": 143.892231,
-    "Ele": 1795.0
+    "Ele": 1795,
+    "ident": "AYWD",
+    "iso_country": "PG",
+    "icao_code": "AYWD",
+    "iata_code": "WBM",
+    "length_ft": 5052,
+    "width_ft": 75,
+    "heading": 139,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -3426,7 +5981,12 @@
     "freq": "",
     "Lat": -5.743216,
     "Lon": 146.148414,
-    "Ele": 1296.9
+    "Ele": 1296.9,
+    "ident": "AYWE",
+    "iso_country": "PG",
+    "length_ft": 1968,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3435,7 +5995,12 @@
     "freq": "",
     "Lat": -6.9523,
     "Lon": 142.6557,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "AYWF",
+    "iso_country": "PG",
+    "icao_code": "AYWF",
+    "iata_code": "WAJ",
+    "local_code": "WWF"
   },
   {
     "type": "small_airport",
@@ -3444,7 +6009,12 @@
     "freq": "",
     "Lat": -9.3375,
     "Lon": 149.155556,
-    "Ele": 16.2
+    "Ele": 16.2,
+    "ident": "AYWG",
+    "iso_country": "PG",
+    "icao_code": "AYWG",
+    "iata_code": "AGL",
+    "local_code": "WGL"
   },
   {
     "type": "small_airport",
@@ -3453,7 +6023,15 @@
     "freq": "",
     "Lat": -4.8961,
     "Lon": 145.3213,
-    "Ele": 688.8
+    "Ele": 688.8,
+    "ident": "AYWH",
+    "iso_country": "PG",
+    "icao_code": "AYWH",
+    "iata_code": "WNU",
+    "local_code": "WUA",
+    "length_ft": 1525,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -3462,7 +6040,15 @@
     "freq": "",
     "Lat": -9.3376,
     "Lon": 150.5093,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "AYWJ",
+    "iso_country": "PG",
+    "icao_code": "AYWJ",
+    "iata_code": "WBC",
+    "local_code": "WPL",
+    "length_ft": 2625,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -3471,7 +6057,15 @@
     "freq": "128.200",
     "Lat": -3.58383011818,
     "Lon": 143.669006348,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "AYWK",
+    "iso_country": "PG",
+    "icao_code": "AYWK",
+    "iata_code": "WWK",
+    "length_ft": 5234,
+    "width_ft": 98,
+    "heading": 103.9,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -3480,7 +6074,13 @@
     "freq": "",
     "Lat": -6.343247,
     "Lon": 142.825402,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "AYWL",
+    "iso_country": "PG",
+    "local_code": "WLG",
+    "length_ft": 1985,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3489,7 +6089,13 @@
     "freq": "",
     "Lat": -3.295507,
     "Lon": 141.072672,
-    "Ele": 390.1
+    "Ele": 390.1,
+    "ident": "AYWM",
+    "iso_country": "PG",
+    "local_code": "WSL",
+    "length_ft": 1574,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -3498,7 +6104,14 @@
     "freq": "",
     "Lat": -3.8183,
     "Lon": 142.835,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "AYWN",
+    "iso_country": "PG",
+    "local_code": "NUG",
+    "length_ft": 1440,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3507,7 +6120,16 @@
     "freq": "",
     "Lat": -6.796861111110001,
     "Lon": 145.891944444,
-    "Ele": 1532.5
+    "Ele": 1532.5,
+    "ident": "AYWO",
+    "iso_country": "PG",
+    "icao_code": "AYWO",
+    "iata_code": "WOA",
+    "local_code": "WOA",
+    "length_ft": 1394,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -3516,7 +6138,12 @@
     "freq": "",
     "Lat": -5.8603,
     "Lon": 155.2223,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "AYWQ",
+    "iso_country": "PG",
+    "icao_code": "AYWQ",
+    "iata_code": "WKN",
+    "local_code": "WAI"
   },
   {
     "type": "small_airport",
@@ -3525,7 +6152,12 @@
     "freq": "",
     "Lat": -5.96170944919,
     "Lon": 147.19822526,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "AYWS",
+    "iso_country": "PG",
+    "icao_code": "AYWS",
+    "iata_code": "WSU",
+    "local_code": "WASU"
   },
   {
     "type": "small_airport",
@@ -3534,7 +6166,12 @@
     "freq": "",
     "Lat": -8.545833,
     "Lon": 147.2525,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "AYWT",
+    "iso_country": "PG",
+    "icao_code": "AYWT",
+    "iata_code": "WTP",
+    "local_code": "WTP"
   },
   {
     "type": "small_airport",
@@ -3543,7 +6180,12 @@
     "freq": "",
     "Lat": -7.345556,
     "Lon": 146.718611,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "AYWU",
+    "iso_country": "PG",
+    "icao_code": "AYWU",
+    "iata_code": "WUG",
+    "local_code": "WAU"
   },
   {
     "type": "small_airport",
@@ -3552,7 +6194,10 @@
     "freq": "",
     "Lat": -4.012,
     "Lon": 142.51,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "AYWV",
+    "iso_country": "PG",
+    "local_code": "WSI"
   },
   {
     "type": "small_airport",
@@ -3561,7 +6206,9 @@
     "freq": "",
     "Lat": -4.408708,
     "Lon": 142.226985,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "AYWX",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -3570,7 +6217,13 @@
     "freq": "",
     "Lat": -6.536847,
     "Lon": 143.197869,
-    "Ele": 444.4
+    "Ele": 444.4,
+    "ident": "AYWY",
+    "iso_country": "PG",
+    "local_code": "WARO",
+    "length_ft": 2198,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -3579,7 +6232,13 @@
     "freq": "",
     "Lat": -7.163746,
     "Lon": 145.633686,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "AYXA",
+    "iso_country": "PG",
+    "local_code": "WIA",
+    "length_ft": 1804,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -3588,7 +6247,14 @@
     "freq": "",
     "Lat": -3.6753,
     "Lon": 142.0151,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "AYXB",
+    "iso_country": "PG",
+    "local_code": "BWO",
+    "length_ft": 2448,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -3597,7 +6263,12 @@
     "freq": "",
     "Lat": -7.548,
     "Lon": 146.188,
-    "Ele": 1374.6
+    "Ele": 1374.6,
+    "ident": "AYXE",
+    "iso_country": "PG",
+    "icao_code": "AYXE",
+    "iata_code": "YVD",
+    "local_code": "YEVA"
   },
   {
     "type": "small_airport",
@@ -3606,7 +6277,10 @@
     "freq": "",
     "Lat": -6.3907,
     "Lon": 143.5565,
-    "Ele": 1251.2
+    "Ele": 1251.2,
+    "ident": "AYXG",
+    "iso_country": "PG",
+    "local_code": "SUGU"
   },
   {
     "type": "small_airport",
@@ -3615,7 +6289,16 @@
     "freq": "",
     "Lat": -7.75,
     "Lon": 146.9273,
-    "Ele": 1664.2
+    "Ele": 1664.2,
+    "ident": "AYXI",
+    "iso_country": "PG",
+    "icao_code": "AYXI",
+    "iata_code": "SMJ",
+    "local_code": "SIM",
+    "length_ft": 1384,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3624,7 +6307,16 @@
     "freq": "",
     "Lat": -4.98083019257,
     "Lon": 152.009994507,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "AYXO",
+    "iso_country": "PG",
+    "icao_code": "AYXO",
+    "iata_code": "TLO",
+    "local_code": "TOL",
+    "length_ft": 2789,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -3633,7 +6325,16 @@
     "freq": "",
     "Lat": -8.78822,
     "Lon": 142.882004,
-    "Ele": 52.7
+    "Ele": 52.7,
+    "ident": "AYXP",
+    "iso_country": "PG",
+    "icao_code": "AYXP",
+    "iata_code": "WPM",
+    "local_code": "WPM",
+    "length_ft": 1637,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -3642,7 +6343,10 @@
     "freq": "",
     "Lat": -5.1363,
     "Lon": 142.284,
-    "Ele": 510.5
+    "Ele": 510.5,
+    "ident": "AYXS",
+    "iso_country": "PG",
+    "local_code": "SIS"
   },
   {
     "type": "small_airport",
@@ -3651,7 +6355,15 @@
     "freq": "",
     "Lat": -8.6184,
     "Lon": 141.1381,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "AYXW",
+    "iso_country": "PG",
+    "icao_code": "AYXW",
+    "iata_code": "WEP",
+    "local_code": "WEAM",
+    "length_ft": 2707,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -3660,7 +6372,14 @@
     "freq": "",
     "Lat": -3.4625,
     "Lon": 141.9559,
-    "Ele": 426.7
+    "Ele": 426.7,
+    "ident": "AYXY",
+    "iso_country": "PG",
+    "local_code": "YBL",
+    "length_ft": 1299,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -3669,7 +6388,13 @@
     "freq": "",
     "Lat": -3.967337,
     "Lon": 141.191726,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "AYYA",
+    "iso_country": "PG",
+    "local_code": "YBU",
+    "length_ft": 2503,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -3678,7 +6403,13 @@
     "freq": "",
     "Lat": -4.017672,
     "Lon": 143.217395,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "AYYC",
+    "iso_country": "PG",
+    "local_code": "YGP",
+    "length_ft": 2615,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -3687,7 +6418,13 @@
     "freq": "",
     "Lat": -5.0949,
     "Lon": 142.3846,
-    "Ele": 627.9
+    "Ele": 627.9,
+    "ident": "AYYD",
+    "iso_country": "PG",
+    "length_ft": 1991,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -3696,7 +6433,12 @@
     "freq": "",
     "Lat": -6.09,
     "Lon": 147.0117,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "AYYE",
+    "iso_country": "PG",
+    "icao_code": "AYYE",
+    "iata_code": "KYX",
+    "local_code": "YLT"
   },
   {
     "type": "small_airport",
@@ -3705,7 +6447,10 @@
     "freq": "",
     "Lat": -3.967,
     "Lon": 142.2912,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "AYYG",
+    "iso_country": "PG",
+    "local_code": "YMN"
   },
   {
     "type": "small_airport",
@@ -3714,7 +6459,14 @@
     "freq": "",
     "Lat": -3.5322,
     "Lon": 142.1645,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "AYYI",
+    "iso_country": "PG",
+    "local_code": "YILI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -3723,7 +6475,10 @@
     "freq": "",
     "Lat": -3.4574,
     "Lon": 142.54,
-    "Ele": 573.0
+    "Ele": 573,
+    "ident": "AYYJ",
+    "iso_country": "PG",
+    "local_code": "YGN"
   },
   {
     "type": "small_airport",
@@ -3732,7 +6487,16 @@
     "freq": "",
     "Lat": -5.10972222222,
     "Lon": 143.917666667,
-    "Ele": 1125.3
+    "Ele": 1125.3,
+    "ident": "AYYK",
+    "iso_country": "PG",
+    "icao_code": "AYYK",
+    "iata_code": "YEQ",
+    "local_code": "YIS",
+    "length_ft": 1526,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -3741,7 +6505,16 @@
     "freq": "",
     "Lat": -4.0949,
     "Lon": 143.3838,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "AYYL",
+    "iso_country": "PG",
+    "icao_code": "AYYL",
+    "iata_code": "TCK",
+    "local_code": "TOI",
+    "length_ft": 2198,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -3750,7 +6523,12 @@
     "freq": "",
     "Lat": -4.855941,
     "Lon": 141.220165,
-    "Ele": 952.8
+    "Ele": 952.8,
+    "ident": "AYYM",
+    "iso_country": "PG",
+    "icao_code": "AYYM",
+    "iata_code": "LNF",
+    "local_code": "MBL"
   },
   {
     "type": "small_airport",
@@ -3759,7 +6537,14 @@
     "freq": "",
     "Lat": -5.1441,
     "Lon": 144.5956,
-    "Ele": 1463.0
+    "Ele": 1463,
+    "ident": "AYYN",
+    "iso_country": "PG",
+    "local_code": "YML",
+    "length_ft": 1558,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -3768,7 +6553,16 @@
     "freq": "",
     "Lat": -9.632916666669995,
     "Lon": 148.048055556,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "AYYO",
+    "iso_country": "PG",
+    "icao_code": "AYYO",
+    "iata_code": "RAX",
+    "local_code": "ORAM",
+    "length_ft": 1355,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -3777,7 +6571,12 @@
     "freq": "",
     "Lat": -4.6280555555600005,
     "Lon": 141.094166667,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "AYYP",
+    "iso_country": "PG",
+    "icao_code": "AYYP",
+    "iata_code": "KPE",
+    "local_code": "YAP"
   },
   {
     "type": "small_airport",
@@ -3786,7 +6585,14 @@
     "freq": "",
     "Lat": -3.585,
     "Lon": 142.6285,
-    "Ele": 459.9
+    "Ele": 459.9,
+    "ident": "AYYQ",
+    "iso_country": "PG",
+    "local_code": "YMK",
+    "length_ft": 1493,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -3795,7 +6601,12 @@
     "freq": "",
     "Lat": -6.6015,
     "Lon": 146.1813,
-    "Ele": 463.3
+    "Ele": 463.3,
+    "ident": "AYYR",
+    "iso_country": "PG",
+    "icao_code": "AYYR",
+    "iata_code": "KSX",
+    "local_code": "YAS"
   },
   {
     "type": "small_airport",
@@ -3804,7 +6615,13 @@
     "freq": "",
     "Lat": -6.7293,
     "Lon": 144.303,
-    "Ele": 1127.8
+    "Ele": 1127.8,
+    "ident": "AYYT",
+    "iso_country": "PG",
+    "local_code": "MTA",
+    "length_ft": 1500,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -3813,7 +6630,13 @@
     "freq": "",
     "Lat": -4.7912,
     "Lon": 144.3113,
-    "Ele": 40.2
+    "Ele": 40.2,
+    "ident": "AYYU",
+    "iso_country": "PG",
+    "local_code": "MUI",
+    "length_ft": 1995,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -3822,7 +6645,14 @@
     "freq": "",
     "Lat": -4.1003,
     "Lon": 142.1351,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "AYYV",
+    "iso_country": "PG",
+    "local_code": "YAWA",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3831,7 +6661,13 @@
     "freq": "",
     "Lat": -6.1339,
     "Lon": 146.8438,
-    "Ele": 1484.4
+    "Ele": 1484.4,
+    "ident": "AYYW",
+    "iso_country": "PG",
+    "local_code": "YWN",
+    "length_ft": 1188,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3840,7 +6676,14 @@
     "freq": "",
     "Lat": -4.995345,
     "Lon": 143.96143,
-    "Ele": 194.2
+    "Ele": 194.2,
+    "ident": "AYYZ",
+    "iso_country": "PG",
+    "local_code": "YTK",
+    "length_ft": 1500,
+    "width_ft": 100,
+    "heading": 213,
+    "QFU": "03"
   },
   {
     "type": "small_airport",
@@ -3849,7 +6692,16 @@
     "freq": "",
     "Lat": -6.9522222222200005,
     "Lon": 146.61625,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "AYZA",
+    "iso_country": "PG",
+    "icao_code": "AYZA",
+    "iata_code": "ZEN",
+    "local_code": "ZEN",
+    "length_ft": 1598,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3858,7 +6710,10 @@
     "freq": "",
     "Lat": -3.4458,
     "Lon": 142.501,
-    "Ele": 710.2
+    "Ele": 710.2,
+    "ident": "AYZB",
+    "iso_country": "PG",
+    "local_code": "SIB"
   },
   {
     "type": "small_airport",
@@ -3867,7 +6722,16 @@
     "freq": "",
     "Lat": -4.52988888889,
     "Lon": 153.054444444,
-    "Ele": 66.1
+    "Ele": 66.1,
+    "ident": "AYZI",
+    "iso_country": "PG",
+    "icao_code": "AYZI",
+    "iata_code": "SWR",
+    "local_code": "SLR",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3876,7 +6740,14 @@
     "freq": "",
     "Lat": -6.0491,
     "Lon": 149.337,
-    "Ele": 53.3
+    "Ele": 53.3,
+    "ident": "AYZM",
+    "iso_country": "PG",
+    "iata_code": "WUM",
+    "local_code": "WSM",
+    "length_ft": 3740,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -3885,7 +6756,16 @@
     "freq": "",
     "Lat": -2.99944444444,
     "Lon": 142.0445,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "AYZN",
+    "iso_country": "PG",
+    "icao_code": "AYZN",
+    "iata_code": "SIZ",
+    "local_code": "SNO",
+    "length_ft": 1608,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -3894,7 +6774,14 @@
     "freq": "",
     "Lat": -6.7887,
     "Lon": 144.1593,
-    "Ele": 1051.6
+    "Ele": 1051.6,
+    "ident": "AYZQ",
+    "iso_country": "PG",
+    "local_code": "SPS",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -3903,7 +6790,16 @@
     "freq": "",
     "Lat": -2.91555555556,
     "Lon": 141.297305556,
-    "Ele": 62.5
+    "Ele": 62.5,
+    "ident": "AYZS",
+    "iso_country": "PG",
+    "icao_code": "AYZS",
+    "iata_code": "OSG",
+    "local_code": "OSA",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3912,7 +6808,14 @@
     "freq": "",
     "Lat": -4.2684,
     "Lon": 142.1273,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "AYZU",
+    "iso_country": "PG",
+    "local_code": "OUM",
+    "length_ft": 2090,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -3921,7 +6824,14 @@
     "freq": "",
     "Lat": -4.061,
     "Lon": 141.4197,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "AYZW",
+    "iso_country": "PG",
+    "local_code": "SII",
+    "length_ft": 1476,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -3930,7 +6840,10 @@
     "freq": "",
     "Lat": -3.9292,
     "Lon": 142.2045,
-    "Ele": 80.8
+    "Ele": 80.8,
+    "ident": "AYZY",
+    "iso_country": "PG",
+    "local_code": "YLU"
   },
   {
     "type": "small_airport",
@@ -3939,7 +6852,14 @@
     "freq": "",
     "Lat": -6.3088,
     "Lon": 146.5568,
-    "Ele": 1085.1
+    "Ele": 1085.1,
+    "ident": "AYZZ",
+    "iso_country": "PG",
+    "local_code": "ZBK",
+    "length_ft": 1378,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -3948,7 +6868,14 @@
     "freq": "",
     "Lat": -10.2991666667,
     "Lon": 149.338333333,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "AZB",
+    "iso_country": "PG",
+    "iata_code": "AZB",
+    "local_code": "AZB",
+    "length_ft": 2871,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -3957,7 +6884,11 @@
     "freq": "",
     "Lat": -4.88333333333,
     "Lon": 149.133333333,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "BAJ",
+    "iso_country": "PG",
+    "iata_code": "BAJ",
+    "local_code": "BALI"
   },
   {
     "type": "small_airport",
@@ -3966,7 +6897,12 @@
     "freq": "",
     "Lat": -6.426631,
     "Lon": 146.826697,
-    "Ele": 899.2
+    "Ele": 899.2,
+    "ident": "BNV",
+    "iso_country": "PG",
+    "iata_code": "BNV",
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3975,7 +6911,14 @@
     "freq": "",
     "Lat": -3.3834,
     "Lon": 153.2812,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "BOV",
+    "iso_country": "PG",
+    "iata_code": "BOV",
+    "local_code": "BOG",
+    "length_ft": 2024,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3984,7 +6927,11 @@
     "freq": "",
     "Lat": -6.396944444440001,
     "Lon": 146.881666667,
-    "Ele": 1432.6
+    "Ele": 1432.6,
+    "ident": "BWJ",
+    "iso_country": "PG",
+    "iata_code": "BWJ",
+    "local_code": "BWN"
   },
   {
     "type": "small_airport",
@@ -3993,7 +6940,11 @@
     "freq": "",
     "Lat": -5.44833333333,
     "Lon": 152.081944444,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "CPI",
+    "iso_country": "PG",
+    "iata_code": "CPI",
+    "local_code": "COF"
   },
   {
     "type": "small_airport",
@@ -4002,7 +6953,11 @@
     "freq": "",
     "Lat": -9.67,
     "Lon": 150.019722222,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "CVL",
+    "iso_country": "PG",
+    "iata_code": "CVL",
+    "local_code": "CVG"
   },
   {
     "type": "small_airport",
@@ -4011,7 +6966,11 @@
     "freq": "",
     "Lat": -4.7403,
     "Lon": 145.9515,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "DAF",
+    "iso_country": "PG",
+    "iata_code": "DAF",
+    "local_code": "DAUP"
   },
   {
     "type": "small_airport",
@@ -4020,7 +6979,11 @@
     "freq": "",
     "Lat": -8.431944444440001,
     "Lon": 147.843055556,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "DAO",
+    "iso_country": "PG",
+    "iata_code": "DAO",
+    "local_code": "DABO"
   },
   {
     "type": "small_airport",
@@ -4029,7 +6992,11 @@
     "freq": "",
     "Lat": -8.17736111111,
     "Lon": 147.809444444,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "DDM",
+    "iso_country": "PG",
+    "iata_code": "DDM",
+    "local_code": "DDM"
   },
   {
     "type": "small_airport",
@@ -4038,7 +7005,14 @@
     "freq": "",
     "Lat": -6.1518,
     "Lon": 150.6264,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "FUB",
+    "iso_country": "PG",
+    "iata_code": "FUB",
+    "local_code": "FUL",
+    "length_ft": 1985,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -4047,7 +7021,11 @@
     "freq": "",
     "Lat": -3.583167,
     "Lon": 141.5895,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "GUE",
+    "iso_country": "PG",
+    "iata_code": "GUE",
+    "local_code": "KSO"
   },
   {
     "type": "small_airport",
@@ -4056,7 +7034,11 @@
     "freq": "",
     "Lat": -4.4033,
     "Lon": 145.2056,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "HAZ",
+    "iso_country": "PG",
+    "iata_code": "HAZ",
+    "local_code": "HTZ"
   },
   {
     "type": "small_airport",
@@ -4065,7 +7047,15 @@
     "freq": "",
     "Lat": -9.13658,
     "Lon": 147.598434,
-    "Ele": 980.5
+    "Ele": 980.5,
+    "ident": "HEO",
+    "iso_country": "PG",
+    "iata_code": "HEO",
+    "local_code": "HLG",
+    "length_ft": 1411,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4074,7 +7064,11 @@
     "freq": "",
     "Lat": -5.5536,
     "Lon": 149.19,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "IBI",
+    "iso_country": "PG",
+    "iata_code": "IBI",
+    "local_code": "IBK"
   },
   {
     "type": "small_airport",
@@ -4083,7 +7077,14 @@
     "freq": "",
     "Lat": -9.5107,
     "Lon": 150.5246,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "IMA",
+    "iso_country": "PG",
+    "iata_code": "IMA",
+    "local_code": "IAM",
+    "length_ft": 2953,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -4092,7 +7093,14 @@
     "freq": "",
     "Lat": -8.401,
     "Lon": 146.277,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "IOK",
+    "iso_country": "PG",
+    "iata_code": "IOK",
+    "local_code": "IOK",
+    "length_ft": 1780,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -4101,7 +7109,11 @@
     "freq": "",
     "Lat": -8.3614,
     "Lon": 147.84,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "IOP",
+    "iso_country": "PG",
+    "iata_code": "IOP",
+    "local_code": "IOMA"
   },
   {
     "type": "small_airport",
@@ -4110,7 +7122,15 @@
     "freq": "",
     "Lat": -9.201527,
     "Lon": 148.264261,
-    "Ele": 781.2
+    "Ele": 781.2,
+    "ident": "ITK",
+    "iso_country": "PG",
+    "iata_code": "ITK",
+    "local_code": "ITK",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -4119,7 +7139,11 @@
     "freq": "",
     "Lat": -6.2655,
     "Lon": 155.3052,
-    "Ele": 33.2
+    "Ele": 33.2,
+    "ident": "KAF",
+    "iso_country": "PG",
+    "iata_code": "KAF",
+    "local_code": "KRT"
   },
   {
     "type": "small_airport",
@@ -4128,7 +7152,14 @@
     "freq": "",
     "Lat": -6.2452,
     "Lon": 143.5516,
-    "Ele": 1513.3
+    "Ele": 1513.3,
+    "ident": "KAK",
+    "iso_country": "PG",
+    "iata_code": "KAK",
+    "local_code": "KAR",
+    "length_ft": 1949,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4137,7 +7168,15 @@
     "freq": "",
     "Lat": -5.4875,
     "Lon": 144.606944,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "KMB",
+    "iso_country": "PG",
+    "iata_code": "KMB",
+    "local_code": "KOE",
+    "length_ft": 1434,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -4146,7 +7185,11 @@
     "freq": "",
     "Lat": -8.630184,
     "Lon": 142.823756,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "KPL",
+    "iso_country": "PG",
+    "iata_code": "KPL",
+    "local_code": "KPL"
   },
   {
     "type": "small_airport",
@@ -4155,7 +7198,14 @@
     "freq": "",
     "Lat": -10.0736,
     "Lon": 148.218,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "KUP",
+    "iso_country": "PG",
+    "iata_code": "KUP",
+    "local_code": "KPN",
+    "length_ft": 3200,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4164,7 +7214,11 @@
     "freq": "",
     "Lat": -8.6285,
     "Lon": 151.327,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "KVE",
+    "iso_country": "PG",
+    "iata_code": "KVE",
+    "local_code": "KTV"
   },
   {
     "type": "small_airport",
@@ -4173,7 +7227,15 @@
     "freq": "",
     "Lat": -2.8337,
     "Lon": 141.6257,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "LTF",
+    "iso_country": "PG",
+    "iata_code": "LTF",
+    "local_code": "LRE",
+    "length_ft": 2362,
+    "width_ft": 98,
+    "heading": 115,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -4182,7 +7244,11 @@
     "freq": "",
     "Lat": -10.290833,
     "Lon": 149.519167,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "MAP",
+    "iso_country": "PG",
+    "iata_code": "MAP",
+    "local_code": "MAM"
   },
   {
     "type": "small_airport",
@@ -4191,7 +7257,14 @@
     "freq": "",
     "Lat": -4.147,
     "Lon": 153.0186,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "MGP",
+    "iso_country": "PG",
+    "iata_code": "MGP",
+    "local_code": "MNA",
+    "length_ft": 2641,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -4200,7 +7273,11 @@
     "freq": "",
     "Lat": -5.7181,
     "Lon": 145.2404,
-    "Ele": 923.5
+    "Ele": 923.5,
+    "ident": "MJJ",
+    "iso_country": "PG",
+    "iata_code": "MJJ",
+    "local_code": "MOKI"
   },
   {
     "type": "small_airport",
@@ -4209,7 +7286,15 @@
     "freq": "",
     "Lat": -1.39139,
     "Lon": 144.17131,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "MMV",
+    "iso_country": "PG",
+    "iata_code": "MMV",
+    "local_code": "MAL",
+    "length_ft": 2165,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -4218,7 +7303,13 @@
     "freq": "",
     "Lat": -1.550403,
     "Lon": 145.017504,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MNP",
+    "iso_country": "PG",
+    "iata_code": "MNP",
+    "length_ft": 2400,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -4227,7 +7318,13 @@
     "freq": "",
     "Lat": -1.45,
     "Lon": 149.7,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "MWU",
+    "iso_country": "PG",
+    "iata_code": "MWU",
+    "length_ft": 3117,
+    "heading": 175,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -4236,7 +7333,14 @@
     "freq": "",
     "Lat": -6.294,
     "Lon": 142.234167,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "NOM",
+    "iso_country": "PG",
+    "iata_code": "NOM",
+    "local_code": "NDR",
+    "length_ft": 3002,
+    "QFU": "26A",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -4245,7 +7349,14 @@
     "freq": "",
     "Lat": -9.254455,
     "Lon": 147.621352,
-    "Ele": 723.0
+    "Ele": 723,
+    "ident": "NOO",
+    "iso_country": "PG",
+    "iata_code": "NOO",
+    "local_code": "NAO",
+    "length_ft": 1476,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4254,7 +7365,10 @@
     "freq": "",
     "Lat": -6.1454,
     "Lon": 143.4531,
-    "Ele": 1757.2
+    "Ele": 1757.2,
+    "ident": "NPG",
+    "iso_country": "PG",
+    "iata_code": "NPG"
   },
   {
     "type": "small_airport",
@@ -4263,7 +7377,15 @@
     "freq": "",
     "Lat": -9.984166666669998,
     "Lon": 149.729166667,
-    "Ele": 621.8
+    "Ele": 621.8,
+    "ident": "NWT",
+    "iso_country": "PG",
+    "iata_code": "NWT",
+    "local_code": "NTA",
+    "length_ft": 2310,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -4272,7 +7394,14 @@
     "freq": "",
     "Lat": -5.344377,
     "Lon": 142.214241,
-    "Ele": 838.2
+    "Ele": 838.2,
+    "ident": "PG-0001",
+    "iso_country": "PG",
+    "local_code": "ALI",
+    "length_ft": 1991,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -4281,7 +7410,13 @@
     "freq": "",
     "Lat": -6.5,
     "Lon": 145.241388889,
-    "Ele": 1729.7
+    "Ele": 1729.7,
+    "ident": "PG-0002",
+    "iso_country": "PG",
+    "local_code": "AGU",
+    "length_ft": 1300,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -4290,7 +7425,14 @@
     "freq": "",
     "Lat": -3.94,
     "Lon": 141.832778,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "PG-0003",
+    "iso_country": "PG",
+    "icao_code": "AYAC",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -4299,7 +7441,14 @@
     "freq": "",
     "Lat": -7.925845,
     "Lon": 142.343456,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "PG-0004",
+    "iso_country": "PG",
+    "icao_code": "AYAH",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -4308,7 +7457,14 @@
     "freq": "",
     "Lat": -10.179823004,
     "Lon": 148.379030228,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "PG-0005",
+    "iso_country": "PG",
+    "iata_code": "CPN",
+    "local_code": "CPR",
+    "length_ft": 4265,
+    "heading": 100,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -4317,7 +7473,11 @@
     "freq": "",
     "Lat": -9.87432702318,
     "Lon": 150.954208374,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "PG-0008",
+    "iso_country": "PG",
+    "iata_code": "ESA",
+    "local_code": "ESA"
   },
   {
     "type": "small_airport",
@@ -4326,7 +7486,13 @@
     "freq": "",
     "Lat": -6.877773,
     "Lon": 143.721843,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "PG-0010",
+    "iso_country": "PG",
+    "local_code": "GOBE",
+    "length_ft": 3445,
+    "heading": 136,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -4335,7 +7501,15 @@
     "freq": "",
     "Lat": -5.961487,
     "Lon": 143.060403,
-    "Ele": 2011.7
+    "Ele": 2011.7,
+    "ident": "PG-0012",
+    "iso_country": "PG",
+    "icao_code": "AYAJ",
+    "local_code": "ABA",
+    "length_ft": 2395,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -4344,7 +7518,14 @@
     "freq": "",
     "Lat": -5.720278,
     "Lon": 144.921111,
-    "Ele": 2001.9
+    "Ele": 2001.9,
+    "ident": "PG-0013",
+    "iso_country": "PG",
+    "icao_code": "AYAB",
+    "local_code": "ABU",
+    "length_ft": 1348,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4353,7 +7534,14 @@
     "freq": "",
     "Lat": -4.6,
     "Lon": 143.843472222,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "PG-0014",
+    "iso_country": "PG",
+    "local_code": "ALO",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -4362,7 +7550,15 @@
     "freq": "",
     "Lat": -7.020833,
     "Lon": 145.822222,
-    "Ele": 1645.9
+    "Ele": 1645.9,
+    "ident": "PG-0015",
+    "iso_country": "PG",
+    "icao_code": "AYAD",
+    "local_code": "ANDE",
+    "length_ft": 1706,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4371,7 +7567,14 @@
     "freq": "",
     "Lat": -8.75388888889,
     "Lon": 141.911388889,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "PG-0016",
+    "iso_country": "PG",
+    "local_code": "ARU",
+    "length_ft": 2185,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -4380,7 +7583,14 @@
     "freq": "",
     "Lat": -8.02333333333,
     "Lon": 147.271666667,
-    "Ele": 548.6
+    "Ele": 548.6,
+    "ident": "PG-0017",
+    "iso_country": "PG",
+    "local_code": "AAM",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -4389,7 +7599,15 @@
     "freq": "",
     "Lat": -8.605307,
     "Lon": 147.592742,
-    "Ele": 356.6
+    "Ele": 356.6,
+    "ident": "PG-0018",
+    "iso_country": "PG",
+    "icao_code": "AYAZ",
+    "local_code": "ASB",
+    "length_ft": 1654,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4398,7 +7616,14 @@
     "freq": "",
     "Lat": -6.023611111110001,
     "Lon": 149.785833333,
-    "Ele": 472.4
+    "Ele": 472.4,
+    "ident": "PG-0019",
+    "iso_country": "PG",
+    "local_code": "ASN",
+    "length_ft": 1558,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -4407,7 +7632,14 @@
     "freq": "",
     "Lat": -6.05888888889,
     "Lon": 143.033888889,
-    "Ele": 1511.8
+    "Ele": 1511.8,
+    "ident": "PG-0021",
+    "iso_country": "PG",
+    "local_code": "BNR",
+    "length_ft": 1785,
+    "width_ft": 151,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4416,7 +7648,14 @@
     "freq": "",
     "Lat": -5.667222,
     "Lon": 151.099444,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "PG-0023",
+    "iso_country": "PG",
+    "local_code": "BILI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -4425,7 +7664,13 @@
     "freq": "",
     "Lat": -5.27472222222,
     "Lon": 142.034166667,
-    "Ele": 1844.0
+    "Ele": 1844,
+    "ident": "PG-0024",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4434,7 +7679,10 @@
     "freq": "",
     "Lat": -4.72166666667,
     "Lon": 142.977222222,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "PG-0025",
+    "iso_country": "PG",
+    "local_code": "BSO"
   },
   {
     "type": "small_airport",
@@ -4443,7 +7691,14 @@
     "freq": "",
     "Lat": -7.038611111110001,
     "Lon": 145.734166667,
-    "Ele": 1467.9
+    "Ele": 1467.9,
+    "ident": "PG-0026",
+    "iso_country": "PG",
+    "local_code": "BOK",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -4452,7 +7707,14 @@
     "freq": "",
     "Lat": -6.46166666667,
     "Lon": 142.841111111,
-    "Ele": 716.3
+    "Ele": 716.3,
+    "ident": "PG-0027",
+    "iso_country": "PG",
+    "local_code": "BSV",
+    "length_ft": 1900,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4461,7 +7723,15 @@
     "freq": "",
     "Lat": -9.618504,
     "Lon": 148.746318,
-    "Ele": 161.5
+    "Ele": 161.5,
+    "ident": "PG-0028",
+    "iso_country": "PG",
+    "icao_code": "AYBE",
+    "local_code": "BRE",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4470,7 +7740,10 @@
     "freq": "",
     "Lat": -4.33666666667,
     "Lon": 144.480694444,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "PG-0029",
+    "iso_country": "PG",
+    "local_code": "JGT"
   },
   {
     "type": "small_airport",
@@ -4479,7 +7752,13 @@
     "freq": "",
     "Lat": -5.42316666667,
     "Lon": 145.010027778,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "PG-0030",
+    "iso_country": "PG",
+    "length_ft": 1969,
+    "width_ft": 30,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -4488,7 +7767,14 @@
     "freq": "",
     "Lat": -3.32161111111,
     "Lon": 141.858416667,
-    "Ele": 637.0
+    "Ele": 637,
+    "ident": "PG-0031",
+    "iso_country": "PG",
+    "local_code": "KBI",
+    "length_ft": 1460,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -4497,7 +7783,10 @@
     "freq": "",
     "Lat": -5.753194444440001,
     "Lon": 141.993611111,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "PG-0032",
+    "iso_country": "PG",
+    "local_code": "DMO"
   },
   {
     "type": "small_airport",
@@ -4506,7 +7795,14 @@
     "freq": "",
     "Lat": -5.52777777778,
     "Lon": 144.065555556,
-    "Ele": 1506.6
+    "Ele": 1506.6,
+    "ident": "PG-0033",
+    "iso_country": "PG",
+    "local_code": "LMS",
+    "length_ft": 1870,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -4515,7 +7811,10 @@
     "freq": "",
     "Lat": -4.919068,
     "Lon": 143.160849,
-    "Ele": 716.3
+    "Ele": 716.3,
+    "ident": "PG-0034",
+    "iso_country": "PG",
+    "local_code": "MLD"
   },
   {
     "type": "small_airport",
@@ -4524,7 +7823,10 @@
     "freq": "",
     "Lat": -5.902962,
     "Lon": 144.686586,
-    "Ele": 1606.0
+    "Ele": 1606,
+    "ident": "PG-0035",
+    "iso_country": "PG",
+    "iata_code": "MZN"
   },
   {
     "type": "small_airport",
@@ -4533,7 +7835,14 @@
     "freq": "",
     "Lat": -5.01363,
     "Lon": 144.842428,
-    "Ele": 77.7
+    "Ele": 77.7,
+    "ident": "PG-0036",
+    "iso_country": "PG",
+    "local_code": "PSK",
+    "length_ft": 1811,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -4542,7 +7851,12 @@
     "freq": "",
     "Lat": -7.391111111110001,
     "Lon": 145.166519,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "PG-0037",
+    "iso_country": "PG",
+    "local_code": "PRI",
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4551,7 +7865,14 @@
     "freq": "",
     "Lat": -6.586888888890001,
     "Lon": 143.515,
-    "Ele": 563.9
+    "Ele": 563.9,
+    "ident": "PG-0039",
+    "iso_country": "PG",
+    "local_code": "KAFA",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4560,7 +7881,10 @@
     "freq": "",
     "Lat": -6.37111111111,
     "Lon": 143.1725,
-    "Ele": 877.8
+    "Ele": 877.8,
+    "ident": "PG-0040",
+    "iso_country": "PG",
+    "local_code": "KBO"
   },
   {
     "type": "small_airport",
@@ -4569,7 +7893,10 @@
     "freq": "",
     "Lat": -5.445807,
     "Lon": 143.17018,
-    "Ele": 2237.2
+    "Ele": 2237.2,
+    "ident": "PG-0041",
+    "iso_country": "PG",
+    "local_code": "KRK"
   },
   {
     "type": "small_airport",
@@ -4578,7 +7905,14 @@
     "freq": "",
     "Lat": -4.883308,
     "Lon": 141.525381,
-    "Ele": 670.6
+    "Ele": 670.6,
+    "ident": "PG-0042",
+    "iso_country": "PG",
+    "local_code": "GBL",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -4587,7 +7921,13 @@
     "freq": "",
     "Lat": -8.608765,
     "Lon": 141.919638,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "PG-0043",
+    "iso_country": "PG",
+    "length_ft": 2215,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -4596,7 +7936,14 @@
     "freq": "",
     "Lat": -4.973205,
     "Lon": 141.908161,
-    "Ele": 1185.7
+    "Ele": 1185.7,
+    "ident": "PG-0044",
+    "iso_country": "PG",
+    "local_code": "DUR",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -4605,7 +7952,15 @@
     "freq": "",
     "Lat": -5.364716,
     "Lon": 144.690471,
-    "Ele": 1204.9
+    "Ele": 1204.9,
+    "ident": "PG-0045",
+    "iso_country": "PG",
+    "icao_code": "AYBJ",
+    "local_code": "BANK",
+    "length_ft": 1549,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4614,7 +7969,14 @@
     "freq": "",
     "Lat": -6.516759,
     "Lon": 144.706808,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "PG-0046",
+    "iso_country": "PG",
+    "local_code": "APPA",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4623,7 +7985,15 @@
     "freq": "",
     "Lat": -3.777177,
     "Lon": 142.622672,
-    "Ele": 189.6
+    "Ele": 189.6,
+    "ident": "PG-0047",
+    "iso_country": "PG",
+    "icao_code": "AYAV",
+    "local_code": "ARK",
+    "length_ft": 1207,
+    "width_ft": 98,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -4632,7 +8002,14 @@
     "freq": "",
     "Lat": -8.437,
     "Lon": 141.5142,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "PG-0049",
+    "iso_country": "PG",
+    "local_code": "KRW",
+    "length_ft": 2198,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -4641,7 +8018,10 @@
     "freq": "",
     "Lat": -6.6962,
     "Lon": 145.8094,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "PG-0050",
+    "iso_country": "PG",
+    "local_code": "OWN"
   },
   {
     "type": "small_airport",
@@ -4650,7 +8030,14 @@
     "freq": "",
     "Lat": -7.4846,
     "Lon": 143.8224,
-    "Ele": 30.2
+    "Ele": 30.2,
+    "ident": "PG-0051",
+    "iso_country": "PG",
+    "local_code": "KBN",
+    "length_ft": 1411,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -4659,7 +8046,13 @@
     "freq": "",
     "Lat": -3.2148,
     "Lon": 141.3642,
-    "Ele": 333.8
+    "Ele": 333.8,
+    "ident": "PG-0052",
+    "iso_country": "PG",
+    "local_code": "KIS",
+    "length_ft": 2297,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4668,7 +8061,10 @@
     "freq": "",
     "Lat": -8.86,
     "Lon": 143.18,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "PG-0053",
+    "iso_country": "PG",
+    "local_code": "ORI"
   },
   {
     "type": "small_airport",
@@ -4677,7 +8073,13 @@
     "freq": "",
     "Lat": -4.5362,
     "Lon": 142.5176,
-    "Ele": 37.8
+    "Ele": 37.8,
+    "ident": "PG-0054",
+    "iso_country": "PG",
+    "local_code": "PPK",
+    "length_ft": 1968,
+    "heading": 179,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -4686,7 +8088,13 @@
     "freq": "",
     "Lat": -4.3655,
     "Lon": 144.0612,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "PG-0055",
+    "iso_country": "PG",
+    "local_code": "SMN",
+    "length_ft": 2296,
+    "heading": 32,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -4695,7 +8103,13 @@
     "freq": "",
     "Lat": -7.0287,
     "Lon": 145.7678,
-    "Ele": 1798.3
+    "Ele": 1798.3,
+    "ident": "PG-0056",
+    "iso_country": "PG",
+    "length_ft": 1837,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -4704,7 +8118,13 @@
     "freq": "",
     "Lat": -5.51,
     "Lon": 142.6392,
-    "Ele": 1571.2
+    "Ele": 1571.2,
+    "ident": "PG-0057",
+    "iso_country": "PG",
+    "length_ft": 1772,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4713,7 +8133,10 @@
     "freq": "",
     "Lat": -6.7495,
     "Lon": 145.8535,
-    "Ele": 1295.4
+    "Ele": 1295.4,
+    "ident": "PG-0058",
+    "iso_country": "PG",
+    "local_code": "AZA"
   },
   {
     "type": "small_airport",
@@ -4722,7 +8145,15 @@
     "freq": "",
     "Lat": -6.89124,
     "Lon": 143.683083,
-    "Ele": 65.5
+    "Ele": 65.5,
+    "ident": "PG-0059",
+    "iso_country": "PG",
+    "icao_code": "AYBN",
+    "local_code": "BNA",
+    "length_ft": 1522,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -4731,7 +8162,13 @@
     "freq": "",
     "Lat": -7.4011,
     "Lon": 145.8149,
-    "Ele": 1204.0
+    "Ele": 1204,
+    "ident": "PG-0060",
+    "iso_country": "PG",
+    "local_code": "BUU",
+    "length_ft": 1640,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -4740,7 +8177,10 @@
     "freq": "",
     "Lat": -6.2437,
     "Lon": 142.6158,
-    "Ele": 582.2
+    "Ele": 582.2,
+    "ident": "PG-0064",
+    "iso_country": "PG",
+    "local_code": "DMN"
   },
   {
     "type": "small_airport",
@@ -4749,7 +8189,10 @@
     "freq": "",
     "Lat": -4.6771,
     "Lon": 141.5666,
-    "Ele": 105.8
+    "Ele": 105.8,
+    "ident": "PG-0065",
+    "iso_country": "PG",
+    "local_code": "FYK"
   },
   {
     "type": "small_airport",
@@ -4758,7 +8201,14 @@
     "freq": "",
     "Lat": -5.7169,
     "Lon": 142.6968,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "PG-0066",
+    "iso_country": "PG",
+    "local_code": "FUG",
+    "length_ft": 2402,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -4767,7 +8217,14 @@
     "freq": "",
     "Lat": -5.7835,
     "Lon": 144.5568,
-    "Ele": 1563.0
+    "Ele": 1563,
+    "ident": "PG-0067",
+    "iso_country": "PG",
+    "local_code": "GBN",
+    "length_ft": 2526,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -4776,7 +8233,14 @@
     "freq": "",
     "Lat": -4.1432,
     "Lon": 141.2592,
-    "Ele": 64.3
+    "Ele": 64.3,
+    "ident": "PG-0068",
+    "iso_country": "PG",
+    "local_code": "IDAM",
+    "length_ft": 1916,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -4785,7 +8249,14 @@
     "freq": "",
     "Lat": -5.5659,
     "Lon": 142.5666,
-    "Ele": 1695.3
+    "Ele": 1695.3,
+    "ident": "PG-0069",
+    "iso_country": "PG",
+    "local_code": "KLO",
+    "length_ft": 1509,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4794,7 +8265,9 @@
     "freq": "",
     "Lat": -10.739,
     "Lon": 151.7255,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "PG-0070",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -4803,7 +8276,9 @@
     "freq": "",
     "Lat": -5.5782,
     "Lon": 142.7065,
-    "Ele": 1595.6
+    "Ele": 1595.6,
+    "ident": "PG-0071",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -4812,7 +8287,13 @@
     "freq": "",
     "Lat": -6.3928,
     "Lon": 142.2661,
-    "Ele": 102.1
+    "Ele": 102.1,
+    "ident": "PG-0072",
+    "iso_country": "PG",
+    "local_code": "YEH",
+    "length_ft": 1913,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4821,7 +8302,7 @@
     "freq": "",
     "Lat": -6.4445,
     "Lon": 155.6832,
-    "Ele": 570.0
+    "Ele": 570
   },
   {
     "type": "small_airport",
@@ -4830,7 +8311,13 @@
     "freq": "",
     "Lat": -7.4021,
     "Lon": 145.7899,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "PG-0074",
+    "iso_country": "PG",
+    "local_code": "AGI",
+    "length_ft": 1411,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4839,7 +8326,10 @@
     "freq": "",
     "Lat": -7.991,
     "Lon": 147.24,
-    "Ele": 670.6
+    "Ele": 670.6,
+    "ident": "PG-0079",
+    "iso_country": "PG",
+    "local_code": "ARO"
   },
   {
     "type": "small_airport",
@@ -4848,7 +8338,10 @@
     "freq": "",
     "Lat": -5.817,
     "Lon": 141.1614,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "PG-0083",
+    "iso_country": "PG",
+    "local_code": "MMA"
   },
   {
     "type": "small_airport",
@@ -4857,7 +8350,10 @@
     "freq": "",
     "Lat": -4.2028,
     "Lon": 143.2767,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "PG-0091",
+    "iso_country": "PG",
+    "local_code": "KAP"
   },
   {
     "type": "small_airport",
@@ -4866,7 +8362,10 @@
     "freq": "",
     "Lat": -5.502442,
     "Lon": 144.458104,
-    "Ele": 571.8
+    "Ele": 571.8,
+    "ident": "PG-0093",
+    "iso_country": "PG",
+    "local_code": "SPM"
   },
   {
     "type": "small_airport",
@@ -4875,7 +8374,13 @@
     "freq": "",
     "Lat": -6.062507,
     "Lon": 142.876575,
-    "Ele": 1592.0
+    "Ele": 1592,
+    "ident": "PG-0094",
+    "iso_country": "PG",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 162,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -4884,7 +8389,14 @@
     "freq": "",
     "Lat": -6.265091,
     "Lon": 144.987345,
-    "Ele": 2048.6
+    "Ele": 2048.6,
+    "ident": "PG-0096",
+    "iso_country": "PG",
+    "local_code": "AIBA",
+    "length_ft": 1500,
+    "width_ft": 66,
+    "heading": 50,
+    "QFU": "23A"
   },
   {
     "type": "small_airport",
@@ -4893,7 +8405,11 @@
     "freq": "",
     "Lat": -4.35,
     "Lon": 151.55,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "PG-0100",
+    "iso_country": "PG",
+    "iata_code": "SMP",
+    "local_code": "STK"
   },
   {
     "type": "small_airport",
@@ -4902,7 +8418,9 @@
     "freq": "",
     "Lat": -5.885577,
     "Lon": 143.95683,
-    "Ele": 2307.0
+    "Ele": 2307,
+    "ident": "PG-0103",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -4911,7 +8429,10 @@
     "freq": "",
     "Lat": -5.741032,
     "Lon": 145.378518,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "PG-0107",
+    "iso_country": "PG",
+    "iata_code": "BRH"
   },
   {
     "type": "small_airport",
@@ -4920,7 +8441,10 @@
     "freq": "",
     "Lat": -5.577463,
     "Lon": 146.33401,
-    "Ele": 299.0
+    "Ele": 299,
+    "ident": "PG-0108",
+    "iso_country": "PG",
+    "iata_code": "BIJ"
   },
   {
     "type": "small_airport",
@@ -4929,7 +8453,10 @@
     "freq": "",
     "Lat": -5.125941,
     "Lon": 142.825963,
-    "Ele": 990.6
+    "Ele": 990.6,
+    "ident": "PG-0110",
+    "iso_country": "PG",
+    "local_code": "YIFKI"
   },
   {
     "type": "small_airport",
@@ -4938,7 +8465,9 @@
     "freq": "",
     "Lat": -5.810699,
     "Lon": 146.37307,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "PG-0111",
+    "iso_country": "PG"
   },
   {
     "type": "small_airport",
@@ -4947,7 +8476,13 @@
     "freq": "",
     "Lat": -5.254801,
     "Lon": 142.521895,
-    "Ele": 670.6
+    "Ele": 670.6,
+    "ident": "PG-0112",
+    "iso_country": "PG",
+    "local_code": "WNA",
+    "length_ft": 1985,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -4956,7 +8491,11 @@
     "freq": "",
     "Lat": -3.198192,
     "Lon": 142.430964,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "PG-ATP",
+    "iso_country": "PG",
+    "iata_code": "TAJ",
+    "local_code": "TAD"
   },
   {
     "type": "small_airport",
@@ -4965,7 +8504,15 @@
     "freq": "",
     "Lat": -7.89756,
     "Lon": 145.395996,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "PG-IHU",
+    "iso_country": "PG",
+    "iata_code": "IHU",
+    "local_code": "IHU",
+    "length_ft": 2648,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4974,7 +8521,11 @@
     "freq": "",
     "Lat": -5.6525,
     "Lon": 151.507004,
-    "Ele": 41.5
+    "Ele": 41.5,
+    "ident": "PG-JAQ",
+    "iso_country": "PG",
+    "iata_code": "JAQ",
+    "local_code": "JCB"
   },
   {
     "type": "small_airport",
@@ -4983,7 +8534,11 @@
     "freq": "",
     "Lat": -7.420347,
     "Lon": 143.121811,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "PG-KUY",
+    "iso_country": "PG",
+    "iata_code": "KUY",
+    "local_code": "KSI"
   },
   {
     "type": "small_airport",
@@ -4992,7 +8547,11 @@
     "freq": "",
     "Lat": -7.00992012024,
     "Lon": 141.494003296,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "PG-LMY",
+    "iso_country": "PG",
+    "iata_code": "LMY",
+    "local_code": "LKM"
   },
   {
     "type": "small_airport",
@@ -5001,7 +8560,10 @@
     "freq": "",
     "Lat": -4.974720001220703,
     "Lon": 151.2969970703125,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "PG-ULE",
+    "iso_country": "PG",
+    "iata_code": "ULE"
   },
   {
     "type": "small_airport",
@@ -5010,7 +8572,11 @@
     "freq": "",
     "Lat": -7.134444444440001,
     "Lon": 146.156388889,
-    "Ele": 1273.8
+    "Ele": 1273.8,
+    "ident": "PGE",
+    "iso_country": "PG",
+    "iata_code": "PGE",
+    "local_code": "YEG"
   },
   {
     "type": "small_airport",
@@ -5019,7 +8585,14 @@
     "freq": "",
     "Lat": -9.99,
     "Lon": 149.477,
-    "Ele": 1368.6
+    "Ele": 1368.6,
+    "ident": "PPX",
+    "iso_country": "PG",
+    "iata_code": "PPX",
+    "local_code": "PAM",
+    "length_ft": 1772,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -5028,7 +8601,14 @@
     "freq": "",
     "Lat": -2.395,
     "Lon": 150.2361,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "PUA",
+    "iso_country": "PG",
+    "iata_code": "PUA",
+    "local_code": "PUAS",
+    "length_ft": 2200,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -5037,7 +8617,11 @@
     "freq": "",
     "Lat": -4.2096,
     "Lon": 152.4385,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "RAA",
+    "iso_country": "PG",
+    "iata_code": "RAA",
+    "local_code": "RAK"
   },
   {
     "type": "small_airport",
@@ -5046,7 +8630,11 @@
     "freq": "",
     "Lat": -6.220556,
     "Lon": 155.571389,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "RAW",
+    "iso_country": "PG",
+    "iata_code": "RAW",
+    "local_code": "ARA"
   },
   {
     "type": "small_airport",
@@ -5055,7 +8643,11 @@
     "freq": "",
     "Lat": -5.334444444440001,
     "Lon": 144.256666667,
-    "Ele": 521.2
+    "Ele": 521.2,
+    "ident": "RUU",
+    "iso_country": "PG",
+    "iata_code": "RUU",
+    "local_code": "RUTI"
   },
   {
     "type": "small_airport",
@@ -5064,7 +8656,11 @@
     "freq": "",
     "Lat": -9.6701,
     "Lon": 150.7903,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SAM",
+    "iso_country": "PG",
+    "iata_code": "SAM",
+    "local_code": "SAO"
   },
   {
     "type": "small_airport",
@@ -5073,7 +8669,11 @@
     "freq": "",
     "Lat": -5.5965,
     "Lon": 147.8106,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "SSS",
+    "iso_country": "PG",
+    "iata_code": "SSS",
+    "local_code": "SSI"
   },
   {
     "type": "small_airport",
@@ -5082,7 +8682,11 @@
     "freq": "",
     "Lat": -6.2015,
     "Lon": 155.063,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "TOK",
+    "iso_country": "PG",
+    "iata_code": "TOK",
+    "local_code": "TKN"
   },
   {
     "type": "small_airport",
@@ -5091,7 +8695,11 @@
     "freq": "",
     "Lat": -6.8498,
     "Lon": 146.3554,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "TSI",
+    "iso_country": "PG",
+    "iata_code": "TSI",
+    "local_code": "TSL"
   },
   {
     "type": "small_airport",
@@ -5100,7 +8708,11 @@
     "freq": "",
     "Lat": -9.0746,
     "Lon": 147.5735,
-    "Ele": 548.6
+    "Ele": 548.6,
+    "ident": "UUU",
+    "iso_country": "PG",
+    "iata_code": "UUU",
+    "local_code": "MMU"
   },
   {
     "type": "small_airport",
@@ -5109,7 +8721,11 @@
     "freq": "",
     "Lat": -9.30333333333,
     "Lon": 150.318888889,
-    "Ele": 35.7
+    "Ele": 35.7,
+    "ident": "VIV",
+    "iso_country": "PG",
+    "iata_code": "VIV",
+    "local_code": "VIV"
   },
   {
     "type": "small_airport",
@@ -5118,6 +8734,10 @@
     "freq": "",
     "Lat": -10.0954,
     "Lon": 150.0826,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "WED",
+    "iso_country": "PG",
+    "iata_code": "WED",
+    "local_code": "WDU"
   }
 ]

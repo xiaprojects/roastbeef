@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 11.536858,
     "Lon": -14.761904,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "GG64",
+    "iso_country": "GW",
+    "local_code": "GG64",
+    "length_ft": 3958,
+    "width_ft": 70,
+    "heading": 134,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -15,7 +22,9 @@
     "freq": "",
     "Lat": 12.176437,
     "Lon": -14.657811,
-    "Ele": 43.9
+    "Ele": 43.9,
+    "ident": "GGBF",
+    "iso_country": "GW"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,11 @@
     "freq": "",
     "Lat": 11.297356,
     "Lon": -15.838079,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GGBU",
+    "iso_country": "GW",
+    "icao_code": "GGBU",
+    "iata_code": "BQE"
   },
   {
     "type": "small_airport",
@@ -33,7 +46,14 @@
     "freq": "",
     "Lat": 11.2879,
     "Lon": -15.1805,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "GGCF",
+    "iso_country": "GW",
+    "icao_code": "GGCF",
+    "length_ft": 6231,
+    "width_ft": 74,
+    "heading": 50,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -42,7 +62,9 @@
     "freq": "",
     "Lat": 12.292002,
     "Lon": -14.236044,
-    "Ele": 68.0
+    "Ele": 68,
+    "ident": "GGGB",
+    "iso_country": "GW"
   },
   {
     "type": "medium_airport",
@@ -51,7 +73,15 @@
     "freq": "343.200",
     "Lat": 11.894800186157228,
     "Lon": -15.65369987487793,
-    "Ele": 39.3
+    "Ele": 39.3,
+    "ident": "GGOV",
+    "iso_country": "GW",
+    "icao_code": "GGOV",
+    "iata_code": "OXB",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 19,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -60,6 +90,8 @@
     "freq": "",
     "Lat": 12.32008,
     "Lon": -13.958281,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "GW-0001",
+    "iso_country": "GW"
   }
 ]

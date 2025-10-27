@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 33.485298,
     "Lon": 67.144096,
-    "Ele": 2537.2
+    "Ele": 2537.2,
+    "ident": "AF-0001",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 36.646099,
     "Lon": 67.032303,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "AF-0002",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 35.142523,
     "Lon": 69.304742,
-    "Ele": 1697.4
+    "Ele": 1697.4,
+    "ident": "AF-0003",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 34.171971,
     "Lon": 69.035309,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AF-0006",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 33.50443,
     "Lon": 68.414262,
-    "Ele": 2165.9
+    "Ele": 2165.9,
+    "ident": "AF-0011",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 36.282828,
     "Lon": 68.020254,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AF-0013",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 33.375169,
     "Lon": 69.96954,
-    "Ele": 1145.1
+    "Ele": 1145.1,
+    "ident": "AF-0014",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": 34.49927,
     "Lon": 70.11921,
-    "Ele": 705.9
+    "Ele": 705.9,
+    "ident": "AF-0015",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,9 @@
     "freq": "",
     "Lat": 33.333401,
     "Lon": 69.952003,
-    "Ele": 1144.8
+    "Ele": 1144.8,
+    "ident": "AF-0017",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -87,7 +105,14 @@
     "freq": "118.300",
     "Lat": 36.942659,
     "Lon": 65.206746,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "AF-0020",
+    "iso_country": "AF",
+    "icao_code": "OAAK",
+    "length_ft": 2480,
+    "width_ft": 60,
+    "heading": 78,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -96,7 +121,10 @@
     "freq": "",
     "Lat": 33.9865,
     "Lon": 69.023102,
-    "Ele": 1930.3
+    "Ele": 1930.3,
+    "ident": "AF-0021",
+    "iso_country": "AF",
+    "icao_code": "OALG"
   },
   {
     "type": "small_airport",
@@ -105,7 +133,13 @@
     "freq": "",
     "Lat": 34.506716,
     "Lon": 66.298068,
-    "Ele": 2810.3
+    "Ele": 2810.3,
+    "ident": "AF-0022",
+    "iso_country": "AF",
+    "length_ft": 4200,
+    "width_ft": 100,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -114,7 +148,10 @@
     "freq": "",
     "Lat": 32.879601,
     "Lon": 67.848602,
-    "Ele": 2011.7
+    "Ele": 2011.7,
+    "ident": "AF-0023",
+    "iso_country": "AF",
+    "icao_code": "OAMK"
   },
   {
     "type": "small_airport",
@@ -123,7 +160,14 @@
     "freq": "",
     "Lat": 34.391726,
     "Lon": 67.020445,
-    "Ele": 2682.2
+    "Ele": 2682.2,
+    "ident": "AF-0024",
+    "iso_country": "AF",
+    "icao_code": "OAPJ",
+    "length_ft": 1200,
+    "width_ft": 75,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -132,7 +176,14 @@
     "freq": "",
     "Lat": 33.54309,
     "Lon": 64.42542,
-    "Ele": 2246.4
+    "Ele": 2246.4,
+    "ident": "AF-0025",
+    "iso_country": "AF",
+    "icao_code": "OATW",
+    "length_ft": 1950,
+    "width_ft": 100,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -150,7 +201,10 @@
     "freq": "",
     "Lat": 30.303216,
     "Lon": 61.868904,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AF04",
+    "iso_country": "AF",
+    "local_code": "AF04"
   },
   {
     "type": "small_airport",
@@ -159,7 +213,9 @@
     "freq": "",
     "Lat": 37.071098,
     "Lon": 69.495003,
-    "Ele": 501.4
+    "Ele": 501.4,
+    "ident": "AF06",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -177,7 +233,9 @@
     "freq": "",
     "Lat": 34.192902,
     "Lon": 69.135696,
-    "Ele": 1912.0
+    "Ele": 1912,
+    "ident": "AF08",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -186,7 +244,9 @@
     "freq": "",
     "Lat": 34.687099,
     "Lon": 66.893204,
-    "Ele": 2636.5
+    "Ele": 2636.5,
+    "ident": "AF09",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -195,7 +255,9 @@
     "freq": "",
     "Lat": 34.778601,
     "Lon": 67.489557,
-    "Ele": 3197.4
+    "Ele": 3197.4,
+    "ident": "AF13",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -204,7 +266,9 @@
     "freq": "",
     "Lat": 32.745098,
     "Lon": 62.598701,
-    "Ele": 799.2
+    "Ele": 799.2,
+    "ident": "AF14",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -213,7 +277,11 @@
     "freq": "",
     "Lat": 34.808916,
     "Lon": 67.816629,
-    "Ele": 2550.3
+    "Ele": 2550.3,
+    "ident": "OABN",
+    "iso_country": "AF",
+    "icao_code": "OABN",
+    "iata_code": "BIN"
   },
   {
     "type": "small_airport",
@@ -222,7 +290,15 @@
     "freq": "",
     "Lat": 31.5597,
     "Lon": 64.364998,
-    "Ele": 751.0
+    "Ele": 751,
+    "ident": "OABT",
+    "iso_country": "AF",
+    "icao_code": "OABT",
+    "iata_code": "BST",
+    "length_ft": 7549,
+    "width_ft": 101,
+    "heading": 5,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -231,7 +307,11 @@
     "freq": "",
     "Lat": 34.526465,
     "Lon": 65.27102,
-    "Ele": 2250.3
+    "Ele": 2250.3,
+    "ident": "OACC",
+    "iso_country": "AF",
+    "icao_code": "OACC",
+    "iata_code": "CCN"
   },
   {
     "type": "small_airport",
@@ -240,7 +320,11 @@
     "freq": "",
     "Lat": 33.3207015991,
     "Lon": 68.6364974976,
-    "Ele": 2124.8
+    "Ele": 2124.8,
+    "ident": "OADS",
+    "iso_country": "AF",
+    "icao_code": "OADS",
+    "iata_code": "SBF"
   },
   {
     "type": "small_airport",
@@ -249,7 +333,11 @@
     "freq": "",
     "Lat": 31.091265,
     "Lon": 64.066053,
-    "Ele": 725.4
+    "Ele": 725.4,
+    "ident": "OADY",
+    "iso_country": "AF",
+    "icao_code": "OADY",
+    "iata_code": "DWR"
   },
   {
     "type": "small_airport",
@@ -258,7 +346,11 @@
     "freq": "",
     "Lat": 38.461798,
     "Lon": 70.881606,
-    "Ele": 1600.2
+    "Ele": 1600.2,
+    "ident": "OADZ",
+    "iso_country": "AF",
+    "icao_code": "OADZ",
+    "iata_code": "DAZ"
   },
   {
     "type": "small_airport",
@@ -267,7 +359,13 @@
     "freq": "",
     "Lat": 36.71272,
     "Lon": 71.61261,
-    "Ele": 2566.4
+    "Ele": 2566.4,
+    "ident": "OAEM",
+    "iso_country": "AF",
+    "icao_code": "OAEM",
+    "length_ft": 2940,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -276,7 +374,11 @@
     "freq": "",
     "Lat": 32.366667,
     "Lon": 62.165347,
-    "Ele": 939.7
+    "Ele": 939.7,
+    "ident": "OAFR",
+    "iso_country": "AF",
+    "icao_code": "OAFR",
+    "iata_code": "FAH"
   },
   {
     "type": "small_airport",
@@ -285,7 +387,14 @@
     "freq": "",
     "Lat": 37.122148,
     "Lon": 70.5201,
-    "Ele": 1180.2
+    "Ele": 1180.2,
+    "ident": "OAFZ",
+    "iso_country": "AF",
+    "icao_code": "OAFZ",
+    "iata_code": "FBD",
+    "length_ft": 6049,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -294,7 +403,11 @@
     "freq": "",
     "Lat": 33.487853,
     "Lon": 68.525243,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OAGN",
+    "iso_country": "AF",
+    "icao_code": "OAGN",
+    "iata_code": "GZI"
   },
   {
     "type": "small_airport",
@@ -303,7 +416,11 @@
     "freq": "",
     "Lat": 33.627366,
     "Lon": 69.237023,
-    "Ele": 2374.4
+    "Ele": 2374.4,
+    "ident": "OAGZ",
+    "iso_country": "AF",
+    "icao_code": "OAGZ",
+    "iata_code": "GRG"
   },
   {
     "type": "small_airport",
@@ -312,7 +429,11 @@
     "freq": "",
     "Lat": 37.890021,
     "Lon": 70.20383,
-    "Ele": 1095.1
+    "Ele": 1095.1,
+    "ident": "OAHN",
+    "iso_country": "AF",
+    "icao_code": "OAHN",
+    "iata_code": "KWH"
   },
   {
     "type": "medium_airport",
@@ -321,7 +442,15 @@
     "freq": "118.100",
     "Lat": 34.209999,
     "Lon": 62.228298,
-    "Ele": 977.2
+    "Ele": 977.2,
+    "ident": "OAHR",
+    "iso_country": "AF",
+    "icao_code": "OAHR",
+    "iata_code": "HEA",
+    "length_ft": 9888,
+    "width_ft": 150,
+    "heading": 187,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -330,7 +459,15 @@
     "freq": "133.350",
     "Lat": 34.946098,
     "Lon": 69.264999,
-    "Ele": 1492.0
+    "Ele": 1492,
+    "ident": "OAIX",
+    "iso_country": "AF",
+    "icao_code": "OAIX",
+    "iata_code": "OAI",
+    "length_ft": 11820,
+    "width_ft": 151,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -339,7 +476,9 @@
     "freq": "",
     "Lat": 33.158323,
     "Lon": 67.546136,
-    "Ele": 2514.0
+    "Ele": 2514,
+    "ident": "OAJG",
+    "iso_country": "AF"
   },
   {
     "type": "medium_airport",
@@ -348,7 +487,15 @@
     "freq": "118.500",
     "Lat": 34.399799,
     "Lon": 70.498596,
-    "Ele": 552.9
+    "Ele": 552.9,
+    "ident": "OAJL",
+    "iso_country": "AF",
+    "icao_code": "OAJL",
+    "iata_code": "JAA",
+    "length_ft": 7262,
+    "width_ft": 148,
+    "heading": 131,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -357,7 +504,15 @@
     "freq": "131.600",
     "Lat": 34.565899,
     "Lon": 69.212303,
-    "Ele": 1791.3
+    "Ele": 1791.3,
+    "ident": "OAKB",
+    "iso_country": "AF",
+    "icao_code": "OAKB",
+    "iata_code": "KBL",
+    "length_ft": 11483,
+    "width_ft": 164,
+    "heading": 107,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -366,7 +521,9 @@
     "freq": "",
     "Lat": 37.083,
     "Lon": 69.366997,
-    "Ele": 489.8
+    "Ele": 489.8,
+    "ident": "OAKG",
+    "iso_country": "AF"
   },
   {
     "type": "medium_airport",
@@ -375,7 +532,15 @@
     "freq": "25.320",
     "Lat": 31.5058,
     "Lon": 65.847801,
-    "Ele": 1017.1
+    "Ele": 1017.1,
+    "ident": "OAKN",
+    "iso_country": "AF",
+    "icao_code": "OAKN",
+    "iata_code": "KDH",
+    "length_ft": 10532,
+    "width_ft": 148,
+    "heading": 55,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -384,7 +549,14 @@
     "freq": "",
     "Lat": 33.284605,
     "Lon": 69.80734,
-    "Ele": 1281.4
+    "Ele": 1281.4,
+    "ident": "OAKS",
+    "iso_country": "AF",
+    "icao_code": "OAKS",
+    "iata_code": "KHT",
+    "length_ft": 8740,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -393,7 +565,13 @@
     "freq": "",
     "Lat": 37.244444,
     "Lon": 74.251944,
-    "Ele": 4066.0
+    "Ele": 4066,
+    "ident": "OALP",
+    "iso_country": "AF",
+    "length_ft": 3858,
+    "width_ft": 72,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -402,7 +580,15 @@
     "freq": "118.100",
     "Lat": 35.930801,
     "Lon": 64.760902,
-    "Ele": 836.1
+    "Ele": 836.1,
+    "ident": "OAMN",
+    "iso_country": "AF",
+    "icao_code": "OAMN",
+    "iata_code": "MMZ",
+    "length_ft": 5090,
+    "width_ft": 76,
+    "heading": 143.2,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -411,7 +597,15 @@
     "freq": "121.250",
     "Lat": 36.706902,
     "Lon": 67.209702,
-    "Ele": 391.4
+    "Ele": 391.4,
+    "ident": "OAMS",
+    "iso_country": "AF",
+    "icao_code": "OAMS",
+    "iata_code": "MZR",
+    "length_ft": 9843,
+    "width_ft": 147,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -420,7 +614,10 @@
     "freq": "",
     "Lat": 33.739456,
     "Lon": 66.157408,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OANL",
+    "iso_country": "AF",
+    "icao_code": "OANL"
   },
   {
     "type": "small_airport",
@@ -429,7 +626,10 @@
     "freq": "",
     "Lat": 30.963333,
     "Lon": 62.060833,
-    "Ele": 481.9
+    "Ele": 481.9,
+    "ident": "OANZ",
+    "iso_country": "AF",
+    "icao_code": "OANZ"
   },
   {
     "type": "small_airport",
@@ -438,7 +638,11 @@
     "freq": "",
     "Lat": 32.939933,
     "Lon": 69.150064,
-    "Ele": 2225.0
+    "Ele": 2225,
+    "ident": "OAOG",
+    "iso_country": "AF",
+    "icao_code": "OAOG",
+    "iata_code": "URN"
   },
   {
     "type": "small_airport",
@@ -447,7 +651,10 @@
     "freq": "",
     "Lat": 32.133839,
     "Lon": 66.898917,
-    "Ele": 1640.7
+    "Ele": 1640.7,
+    "ident": "OAQA",
+    "iso_country": "AF",
+    "icao_code": "OAQA"
   },
   {
     "type": "small_airport",
@@ -456,7 +663,9 @@
     "freq": "",
     "Lat": 36.01707,
     "Lon": 70.76085,
-    "Ele": 2566.4
+    "Ele": 2566.4,
+    "ident": "OAQM",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -465,7 +674,11 @@
     "freq": "",
     "Lat": 34.985472,
     "Lon": 63.117404,
-    "Ele": 914.1
+    "Ele": 914.1,
+    "ident": "OAQN",
+    "iso_country": "AF",
+    "icao_code": "OAQN",
+    "iata_code": "LQN"
   },
   {
     "type": "small_airport",
@@ -474,7 +687,11 @@
     "freq": "",
     "Lat": 32.9029998779,
     "Lon": 66.630897522,
-    "Ele": 2049.8
+    "Ele": 2049.8,
+    "ident": "OARG",
+    "iso_country": "AF",
+    "icao_code": "OARG",
+    "iata_code": "URZ"
   },
   {
     "type": "small_airport",
@@ -483,7 +700,9 @@
     "freq": "",
     "Lat": 37.10681,
     "Lon": 69.848892,
-    "Ele": 1384.7
+    "Ele": 1384.7,
+    "ident": "OART",
+    "iso_country": "AF"
   },
   {
     "type": "small_airport",
@@ -492,7 +711,11 @@
     "freq": "",
     "Lat": 36.029893,
     "Lon": 70.714159,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OARZ",
+    "iso_country": "AF",
+    "icao_code": "OARZ",
+    "iata_code": "KUR"
   },
   {
     "type": "small_airport",
@@ -501,7 +724,11 @@
     "freq": "",
     "Lat": 33.12575,
     "Lon": 68.838517,
-    "Ele": 2237.2
+    "Ele": 2237.2,
+    "ident": "OASA",
+    "iso_country": "AF",
+    "icao_code": "OASA",
+    "iata_code": "OAS"
   },
   {
     "type": "small_airport",
@@ -510,7 +737,15 @@
     "freq": "",
     "Lat": 33.3913,
     "Lon": 62.261002,
-    "Ele": 1150.0
+    "Ele": 1150,
+    "ident": "OASD",
+    "iso_country": "AF",
+    "icao_code": "OASD",
+    "iata_code": "OAH",
+    "length_ft": 9140,
+    "width_ft": 160,
+    "heading": 182.5,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -519,7 +754,14 @@
     "freq": "118.100",
     "Lat": 36.751076,
     "Lon": 65.913038,
-    "Ele": 321.0
+    "Ele": 321,
+    "ident": "OASG",
+    "iso_country": "AF",
+    "icao_code": "OASG",
+    "length_ft": 4582,
+    "width_ft": 70,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -528,7 +770,11 @@
     "freq": "",
     "Lat": 33.922217,
     "Lon": 69.07794,
-    "Ele": 2100.1
+    "Ele": 2100.1,
+    "ident": "OASH",
+    "iso_country": "AF",
+    "icao_code": "OASH",
+    "iata_code": "OAA"
   },
   {
     "type": "small_airport",
@@ -537,7 +783,11 @@
     "freq": "",
     "Lat": 33.3638,
     "Lon": 69.9561,
-    "Ele": 1152.1
+    "Ele": 1152.1,
+    "ident": "OASL",
+    "iso_country": "AF",
+    "icao_code": "OASL",
+    "iata_code": "OLR"
   },
   {
     "type": "small_airport",
@@ -546,7 +796,11 @@
     "freq": "",
     "Lat": 37.497642,
     "Lon": 71.508484,
-    "Ele": 2042.2
+    "Ele": 2042.2,
+    "ident": "OASN",
+    "iso_country": "AF",
+    "icao_code": "OASN",
+    "iata_code": "SGA"
   },
   {
     "type": "small_airport",
@@ -555,7 +809,15 @@
     "freq": "",
     "Lat": 32.604198,
     "Lon": 65.865799,
-    "Ele": 1350.0
+    "Ele": 1350,
+    "ident": "OATN",
+    "iso_country": "AF",
+    "icao_code": "OATN",
+    "iata_code": "TII",
+    "length_ft": 7300,
+    "width_ft": 90,
+    "heading": 122,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -564,7 +826,11 @@
     "freq": "",
     "Lat": 36.770699,
     "Lon": 69.531998,
-    "Ele": 794.3
+    "Ele": 794.3,
+    "ident": "OATQ",
+    "iso_country": "AF",
+    "icao_code": "OATQ",
+    "iata_code": "TQN"
   },
   {
     "type": "medium_airport",
@@ -573,7 +839,15 @@
     "freq": "130.350",
     "Lat": 36.6651,
     "Lon": 68.910797,
-    "Ele": 444.1
+    "Ele": 444.1,
+    "ident": "OAUZ",
+    "iso_country": "AF",
+    "icao_code": "OAUZ",
+    "iata_code": "UND",
+    "length_ft": 6558,
+    "width_ft": 148,
+    "heading": 113,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -582,7 +856,10 @@
     "freq": "",
     "Lat": 37.459,
     "Lon": 69.646599,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "OAYQ",
+    "iso_country": "AF",
+    "icao_code": "OAYQ"
   },
   {
     "type": "small_airport",
@@ -591,7 +868,10 @@
     "freq": "",
     "Lat": 37.563636,
     "Lon": 70.444496,
-    "Ele": 1720.6
+    "Ele": 1720.6,
+    "ident": "OAYW",
+    "iso_country": "AF",
+    "icao_code": "OAYW"
   },
   {
     "type": "small_airport",
@@ -600,7 +880,11 @@
     "freq": "",
     "Lat": 31.848735,
     "Lon": 64.223175,
-    "Ele": 897.0
+    "Ele": 897,
+    "ident": "OAZI",
+    "iso_country": "AF",
+    "icao_code": "OAZI",
+    "iata_code": "OAZ"
   },
   {
     "type": "small_airport",
@@ -609,6 +893,10 @@
     "freq": "",
     "Lat": 30.972222,
     "Lon": 61.865833,
-    "Ele": 479.1
+    "Ele": 479.1,
+    "ident": "OAZJ",
+    "iso_country": "AF",
+    "icao_code": "OAZJ",
+    "iata_code": "ZAJ"
   }
 ]

@@ -6,7 +6,15 @@
     "freq": "135.905",
     "Lat": 54.083302,
     "Lon": -4.62389,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "EGNS",
+    "iso_country": "IM",
+    "icao_code": "EGNS",
+    "iata_code": "IOM",
+    "length_ft": 2963,
+    "width_ft": 89,
+    "heading": 175,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,9 @@
     "freq": "",
     "Lat": 54.371111,
     "Lon": -4.423333,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "IM-0001",
+    "iso_country": "IM"
   },
   {
     "type": "small_airport",
@@ -24,7 +34,9 @@
     "freq": "",
     "Lat": 54.182127,
     "Lon": -4.51311,
-    "Ele": 96.3
+    "Ele": 96.3,
+    "ident": "IM-0003",
+    "iso_country": "IM"
   },
   {
     "type": "small_airport",
@@ -33,6 +45,8 @@
     "freq": "",
     "Lat": 54.356006,
     "Lon": -4.438477,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IM-0004",
+    "iso_country": "IM"
   }
 ]

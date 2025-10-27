@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 11.9787,
     "Lon": 107.5638,
-    "Ele": 691.9
+    "Ele": 691.9,
+    "ident": "HOO",
+    "iso_country": "VN",
+    "iata_code": "HOO"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 9.5814,
     "Lon": 105.9602,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SOA",
+    "iso_country": "VN",
+    "iata_code": "SOA"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,9 @@
     "freq": "",
     "Lat": 21.732873,
     "Lon": 104.853601,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "VN-0004",
+    "iso_country": "VN"
   },
   {
     "type": "small_airport",
@@ -33,7 +41,12 @@
     "freq": "",
     "Lat": 8.644541,
     "Lon": 111.920347,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VN-0005",
+    "iso_country": "VN",
+    "length_ft": 1970,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -42,7 +55,9 @@
     "freq": "",
     "Lat": 10.53367,
     "Lon": 108.92867,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "VN-0019",
+    "iso_country": "VN"
   },
   {
     "type": "small_airport",
@@ -51,7 +66,9 @@
     "freq": "",
     "Lat": 21.028531,
     "Lon": 105.487428,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "VN-0030",
+    "iso_country": "VN"
   },
   {
     "type": "small_airport",
@@ -60,7 +77,13 @@
     "freq": "",
     "Lat": 10.9766998291,
     "Lon": 106.818000793,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "VV02",
+    "iso_country": "VN",
+    "length_ft": 10007,
+    "width_ft": 156,
+    "heading": 86.3,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -69,7 +92,13 @@
     "freq": "",
     "Lat": 20.8034,
     "Lon": 106.605003,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "VV03",
+    "iso_country": "VN",
+    "length_ft": 8200,
+    "width_ft": 131,
+    "heading": 46.8,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -78,7 +107,15 @@
     "freq": "118.300",
     "Lat": 12.668299675,
     "Lon": 108.120002747,
-    "Ele": 527.0
+    "Ele": 527,
+    "ident": "VVBM",
+    "iso_country": "VN",
+    "icao_code": "VVBM",
+    "iata_code": "BMV",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 90.9,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -87,7 +124,15 @@
     "freq": "118.250",
     "Lat": 15.4033,
     "Lon": 108.706001,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "VVCA",
+    "iso_country": "VN",
+    "icao_code": "VVCA",
+    "iata_code": "VCL",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -96,7 +141,15 @@
     "freq": "",
     "Lat": 20.81686,
     "Lon": 106.722994,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VVCI",
+    "iso_country": "VN",
+    "icao_code": "VVCI",
+    "iata_code": "HPH",
+    "length_ft": 10007,
+    "width_ft": 164,
+    "heading": 72,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -105,7 +158,15 @@
     "freq": "",
     "Lat": 9.177667,
     "Lon": 105.177778,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VVCM",
+    "iso_country": "VN",
+    "icao_code": "VVCM",
+    "iata_code": "CAH",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -114,7 +175,15 @@
     "freq": "",
     "Lat": 11.9982,
     "Lon": 109.219002,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "VVCR",
+    "iso_country": "VN",
+    "icao_code": "VVCR",
+    "iata_code": "CXR",
+    "length_ft": 10000,
+    "width_ft": 150,
+    "heading": 19,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -123,7 +192,15 @@
     "freq": "",
     "Lat": 8.73183,
     "Lon": 106.633003,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VVCS",
+    "iso_country": "VN",
+    "icao_code": "VVCS",
+    "iata_code": "VCS",
+    "length_ft": 6004,
+    "width_ft": 98,
+    "heading": 111,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -132,7 +209,15 @@
     "freq": "118.800",
     "Lat": 10.0851,
     "Lon": 105.711998,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "VVCT",
+    "iso_country": "VN",
+    "icao_code": "VVCT",
+    "iata_code": "VCA",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 60,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -141,7 +226,15 @@
     "freq": "118.700",
     "Lat": 21.3974990845,
     "Lon": 103.008003235,
-    "Ele": 491.0
+    "Ele": 491,
+    "ident": "VVDB",
+    "iso_country": "VN",
+    "icao_code": "VVDB",
+    "iata_code": "DIN",
+    "length_ft": 7874,
+    "width_ft": 98,
+    "heading": 156,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -150,7 +243,15 @@
     "freq": "",
     "Lat": 17.515,
     "Lon": 106.590556,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "VVDH",
+    "iso_country": "VN",
+    "icao_code": "VVDH",
+    "iata_code": "VDH",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 114,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -159,7 +260,15 @@
     "freq": "",
     "Lat": 11.750556,
     "Lon": 108.366997,
-    "Ele": 961.9
+    "Ele": 961.9,
+    "ident": "VVDL",
+    "iso_country": "VN",
+    "icao_code": "VVDL",
+    "iata_code": "DLI",
+    "length_ft": 10663,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -168,7 +277,15 @@
     "freq": "125.300",
     "Lat": 16.0439,
     "Lon": 108.198997,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "VVDN",
+    "iso_country": "VN",
+    "icao_code": "VVDN",
+    "iata_code": "DAD",
+    "length_ft": 10000,
+    "width_ft": 148,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -177,7 +294,13 @@
     "freq": "",
     "Lat": 21.040501,
     "Lon": 105.886002,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "VVGL",
+    "iso_country": "VN",
+    "length_ft": 6571,
+    "width_ft": 100,
+    "heading": 23.9,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -186,7 +309,13 @@
     "freq": "",
     "Lat": 21.3946,
     "Lon": 106.261002,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "VVKP",
+    "iso_country": "VN",
+    "length_ft": 7230,
+    "width_ft": 150,
+    "heading": 67.3,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -195,7 +324,15 @@
     "freq": "120.075",
     "Lat": 21.221201,
     "Lon": 105.806999,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "VVNB",
+    "iso_country": "VN",
+    "icao_code": "VVNB",
+    "iata_code": "HAN",
+    "length_ft": 12466,
+    "width_ft": 148,
+    "heading": 107.1,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -204,7 +341,14 @@
     "freq": "",
     "Lat": 21.215301,
     "Lon": 104.032803,
-    "Ele": 650.1
+    "Ele": 650.1,
+    "ident": "VVNS",
+    "iso_country": "VN",
+    "icao_code": "VVNS",
+    "iata_code": "SQH",
+    "length_ft": 7874,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -213,7 +357,15 @@
     "freq": "118.800",
     "Lat": 16.400628,
     "Lon": 107.703094,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "VVPB",
+    "iso_country": "VN",
+    "icao_code": "VVPB",
+    "iata_code": "HUI",
+    "length_ft": 8775,
+    "width_ft": 130,
+    "heading": 93.1,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -222,7 +374,15 @@
     "freq": "",
     "Lat": 13.955,
     "Lon": 109.042,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "VVPC",
+    "iso_country": "VN",
+    "icao_code": "VVPC",
+    "iata_code": "UIH",
+    "length_ft": 10010,
+    "width_ft": 148,
+    "heading": 146.7,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -231,7 +391,15 @@
     "freq": "118.100",
     "Lat": 14.00450038909912,
     "Lon": 108.01699829101562,
-    "Ele": 741.9
+    "Ele": 741.9,
+    "ident": "VVPK",
+    "iso_country": "VN",
+    "icao_code": "VVPK",
+    "iata_code": "PXU",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -240,7 +408,15 @@
     "freq": "118.600",
     "Lat": 10.1698,
     "Lon": 103.9931,
-    "Ele": 11.3
+    "Ele": 11.3,
+    "ident": "VVPQ",
+    "iso_country": "VN",
+    "icao_code": "VVPQ",
+    "iata_code": "PQC",
+    "length_ft": 9843,
+    "width_ft": 150,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -249,7 +425,15 @@
     "freq": "",
     "Lat": 11.6335,
     "Lon": 108.952003,
-    "Ele": 30.8
+    "Ele": 30.8,
+    "ident": "VVPR",
+    "iso_country": "VN",
+    "icao_code": "VVPR",
+    "iata_code": "PHA",
+    "length_ft": 9990,
+    "width_ft": 148,
+    "heading": 46.7,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -258,7 +442,15 @@
     "freq": "",
     "Lat": 9.95802997234,
     "Lon": 105.132379532,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "VVRG",
+    "iso_country": "VN",
+    "icao_code": "VVRG",
+    "iata_code": "VKG",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -267,7 +459,15 @@
     "freq": "",
     "Lat": 13.0496,
     "Lon": 109.334,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VVTH",
+    "iso_country": "VN",
+    "icao_code": "VVTH",
+    "iata_code": "TBB",
+    "length_ft": 9300,
+    "width_ft": 150,
+    "heading": 29.9,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -276,7 +476,15 @@
     "freq": "125.500",
     "Lat": 10.8188,
     "Lon": 106.652,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "VVTS",
+    "iso_country": "VN",
+    "icao_code": "VVTS",
+    "iata_code": "SGN",
+    "length_ft": 12468,
+    "width_ft": 148,
+    "heading": 69,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -285,7 +493,15 @@
     "freq": "",
     "Lat": 19.901667,
     "Lon": 105.467778,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "VVTX",
+    "iso_country": "VN",
+    "icao_code": "VVTX",
+    "iata_code": "THD",
+    "length_ft": 10499,
+    "width_ft": 164,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -294,7 +510,15 @@
     "freq": "",
     "Lat": 21.120693,
     "Lon": 107.41539,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "VVVD",
+    "iso_country": "VN",
+    "icao_code": "VVVD",
+    "iata_code": "VDO",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -303,7 +527,15 @@
     "freq": "",
     "Lat": 18.7376003265,
     "Lon": 105.67099762,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "VVVH",
+    "iso_country": "VN",
+    "icao_code": "VVVH",
+    "iata_code": "VII",
+    "length_ft": 7875,
+    "width_ft": 148,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -312,15 +544,23 @@
     "freq": "",
     "Lat": 10.375093,
     "Lon": 107.096185,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "VVVT",
+    "iso_country": "VN",
+    "icao_code": "VVVT",
+    "iata_code": "VTG"
   },
   {
     "type": "medium_airport",
     "name": "Ok365comdev",
     "gps_code": "XCBA",
     "freq": "",
-    "Lat": 10.0,
-    "Lon": 12.0,
-    "Ele": 3.7
+    "Lat": 10,
+    "Lon": 12,
+    "Ele": 3.7,
+    "ident": "XCBA",
+    "iso_country": "VN",
+    "icao_code": "CCAA",
+    "local_code": "CA12"
   }
 ]

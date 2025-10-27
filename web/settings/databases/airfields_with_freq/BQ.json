@@ -6,7 +6,15 @@
     "freq": "118.700",
     "Lat": 12.131,
     "Lon": -68.268501,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "TNCB",
+    "iso_country": "BQ",
+    "icao_code": "TNCB",
+    "iata_code": "BON",
+    "length_ft": 9449,
+    "width_ft": 148,
+    "heading": 91.7,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,15 @@
     "freq": "118.100",
     "Lat": 17.4965,
     "Lon": -62.979401,
-    "Ele": 39.3
+    "Ele": 39.3,
+    "ident": "TNCE",
+    "iso_country": "BQ",
+    "icao_code": "TNCE",
+    "iata_code": "EUX",
+    "length_ft": 4265,
+    "width_ft": 100,
+    "heading": 50.2,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -24,6 +40,13 @@
     "freq": "",
     "Lat": 17.645351,
     "Lon": -63.220571,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "TNCS",
+    "iso_country": "BQ",
+    "icao_code": "TNCS",
+    "iata_code": "SAB",
+    "length_ft": 1312,
+    "QFU": "30",
+    "heading": 300
   }
 ]

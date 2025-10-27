@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 5.296,
     "Lon": 35.8682,
-    "Ele": 427.6
+    "Ele": 427.6,
+    "ident": "ET-0002",
+    "iso_country": "ET"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 5.337166,
     "Lon": 37.022991,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ET-0003",
+    "iso_country": "ET"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 11.1269,
     "Lon": 35.04396,
-    "Ele": 623.9
+    "Ele": 623.9,
+    "ident": "ET-0006",
+    "iso_country": "ET"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 4.17489,
     "Lon": 42.03296,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "ET-0007",
+    "iso_country": "ET"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 4.80059,
     "Lon": 36.12643,
-    "Ele": 378.9
+    "Ele": 378.9,
+    "ident": "ET-0008",
+    "iso_country": "ET"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,10 @@
     "freq": "",
     "Lat": 6.984439849849999,
     "Lon": 46.4213981628,
-    "Ele": 421.5
+    "Ele": 421.5,
+    "ident": "ET-GLC",
+    "iso_country": "ET",
+    "iata_code": "GLC"
   },
   {
     "type": "small_airport",
@@ -60,7 +73,10 @@
     "freq": "",
     "Lat": 14.075699,
     "Lon": 38.273592,
-    "Ele": 1891.9
+    "Ele": 1891.9,
+    "ident": "ET-SHC",
+    "iso_country": "ET",
+    "iata_code": "SHC"
   },
   {
     "type": "large_airport",
@@ -69,7 +85,15 @@
     "freq": "119.700",
     "Lat": 8.97789,
     "Lon": 38.799301,
-    "Ele": 2325.6
+    "Ele": 2325.6,
+    "ident": "HAAB",
+    "iso_country": "ET",
+    "icao_code": "HAAB",
+    "iata_code": "ADD",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "heading": 73.6,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -78,7 +102,10 @@
     "freq": "",
     "Lat": 7.022953,
     "Lon": 39.273162,
-    "Ele": 2406.7
+    "Ele": 2406.7,
+    "ident": "HAAD",
+    "iso_country": "ET",
+    "icao_code": "HAAD"
   },
   {
     "type": "small_airport",
@@ -87,7 +114,14 @@
     "freq": "119.100",
     "Lat": 9.003685,
     "Lon": 38.725498,
-    "Ele": 2361.9
+    "Ele": 2361.9,
+    "ident": "HAAL",
+    "iso_country": "ET",
+    "icao_code": "HAAL",
+    "length_ft": 3839,
+    "width_ft": 64,
+    "heading": 121,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -96,7 +130,15 @@
     "freq": "",
     "Lat": 6.03939,
     "Lon": 37.5905,
-    "Ele": 1189.0
+    "Ele": 1189,
+    "ident": "HAAM",
+    "iso_country": "ET",
+    "icao_code": "HAAM",
+    "iata_code": "AMH",
+    "length_ft": 9170,
+    "width_ft": 153,
+    "heading": 32,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -105,7 +147,15 @@
     "freq": "118.300",
     "Lat": 14.1468,
     "Lon": 38.7728,
-    "Ele": 2121.1
+    "Ele": 2121.1,
+    "ident": "HAAX",
+    "iso_country": "ET",
+    "icao_code": "HAAX",
+    "iata_code": "AXU",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 160,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -114,7 +164,11 @@
     "freq": "",
     "Lat": 5.783333,
     "Lon": 36.55,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "HABC",
+    "iso_country": "ET",
+    "icao_code": "HABC",
+    "iata_code": "BCO"
   },
   {
     "type": "medium_airport",
@@ -123,7 +177,15 @@
     "freq": "121.900",
     "Lat": 11.6081,
     "Lon": 37.321602,
-    "Ele": 1822.1
+    "Ele": 1822.1,
+    "ident": "HABD",
+    "iso_country": "ET",
+    "icao_code": "HABD",
+    "iata_code": "BJR",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 45,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -132,7 +194,11 @@
     "freq": "",
     "Lat": 9.38639,
     "Lon": 34.5219,
-    "Ele": 1649.0
+    "Ele": 1649,
+    "ident": "HABE",
+    "iso_country": "ET",
+    "icao_code": "HABE",
+    "iata_code": "BEI"
   },
   {
     "type": "small_airport",
@@ -141,7 +207,11 @@
     "freq": "",
     "Lat": 11.10975,
     "Lon": 39.725911,
-    "Ele": 1865.4
+    "Ele": 1865.4,
+    "ident": "HADC",
+    "iso_country": "ET",
+    "icao_code": "HADC",
+    "iata_code": "DSE"
   },
   {
     "type": "small_airport",
@@ -150,7 +220,15 @@
     "freq": "",
     "Lat": 8.554,
     "Lon": 34.858002,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "HADD",
+    "iso_country": "ET",
+    "icao_code": "HADD",
+    "iata_code": "DEM",
+    "length_ft": 6139,
+    "width_ft": 98,
+    "heading": 145,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -159,7 +237,11 @@
     "freq": "",
     "Lat": 10.321501,
     "Lon": 37.741887,
-    "Ele": 2479.9
+    "Ele": 2479.9,
+    "ident": "HADM",
+    "iso_country": "ET",
+    "icao_code": "HADM",
+    "iata_code": "DBM"
   },
   {
     "type": "small_airport",
@@ -168,7 +250,10 @@
     "freq": "",
     "Lat": 7.02056,
     "Lon": 39.051102,
-    "Ele": 2509.7
+    "Ele": 2509.7,
+    "ident": "HADO",
+    "iso_country": "ET",
+    "icao_code": "HADO"
   },
   {
     "type": "medium_airport",
@@ -177,7 +262,15 @@
     "freq": "120.100",
     "Lat": 9.624699592590332,
     "Lon": 41.85419845581055,
-    "Ele": 1166.5
+    "Ele": 1166.5,
+    "ident": "HADR",
+    "iso_country": "ET",
+    "icao_code": "HADR",
+    "iata_code": "DIR",
+    "length_ft": 8791,
+    "width_ft": 148,
+    "heading": 152,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -186,7 +279,11 @@
     "freq": "",
     "Lat": 11.884808,
     "Lon": 38.009241,
-    "Ele": 2587.8
+    "Ele": 2587.8,
+    "ident": "HADT",
+    "iso_country": "ET",
+    "icao_code": "HADT",
+    "iata_code": "DBT"
   },
   {
     "type": "small_airport",
@@ -195,7 +292,11 @@
     "freq": "",
     "Lat": 9.584387,
     "Lon": 37.377855,
-    "Ele": 2316.5
+    "Ele": 2316.5,
+    "ident": "HAFN",
+    "iso_country": "ET",
+    "icao_code": "HAFN",
+    "iata_code": "FNH"
   },
   {
     "type": "small_airport",
@@ -204,7 +305,11 @@
     "freq": "",
     "Lat": 7.119033,
     "Lon": 40.045166,
-    "Ele": 2405.5
+    "Ele": 2405.5,
+    "ident": "HAGB",
+    "iso_country": "ET",
+    "icao_code": "HAGB",
+    "iata_code": "GOB"
   },
   {
     "type": "small_airport",
@@ -213,7 +318,11 @@
     "freq": "",
     "Lat": 7.15000009537,
     "Lon": 40.716999054,
-    "Ele": 1980.9
+    "Ele": 1980.9,
+    "ident": "HAGH",
+    "iso_country": "ET",
+    "icao_code": "HAGH",
+    "iata_code": "GNN"
   },
   {
     "type": "medium_airport",
@@ -222,7 +331,15 @@
     "freq": "121.900",
     "Lat": 8.12876,
     "Lon": 34.563099,
-    "Ele": 491.9
+    "Ele": 491.9,
+    "ident": "HAGM",
+    "iso_country": "ET",
+    "icao_code": "HAGM",
+    "iata_code": "GMB",
+    "length_ft": 8248,
+    "width_ft": 148,
+    "heading": 179.7,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -231,7 +348,15 @@
     "freq": "121.900",
     "Lat": 12.5199,
     "Lon": 37.433998,
-    "Ele": 1965.7
+    "Ele": 1965.7,
+    "ident": "HAGN",
+    "iso_country": "ET",
+    "icao_code": "HAGN",
+    "iata_code": "GDQ",
+    "length_ft": 9072,
+    "width_ft": 145,
+    "heading": 170,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -240,7 +365,15 @@
     "freq": "125.200",
     "Lat": 5.93513011932,
     "Lon": 43.5786018372,
-    "Ele": 254.2
+    "Ele": 254.2,
+    "ident": "HAGO",
+    "iso_country": "ET",
+    "icao_code": "HAGO",
+    "iata_code": "GDE",
+    "length_ft": 7505,
+    "width_ft": 115,
+    "heading": 38.7,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -249,7 +382,12 @@
     "freq": "",
     "Lat": 8.1614,
     "Lon": 35.5529,
-    "Ele": 2005.6
+    "Ele": 2005.6,
+    "ident": "HAGR",
+    "iso_country": "ET",
+    "icao_code": "HAGR",
+    "iata_code": "GOR",
+    "length_ft": 3900
   },
   {
     "type": "medium_airport",
@@ -258,7 +396,14 @@
     "freq": "",
     "Lat": 8.7163,
     "Lon": 39.0059,
-    "Ele": 1890.1
+    "Ele": 1890.1,
+    "ident": "HAHM",
+    "iso_country": "ET",
+    "icao_code": "HAHM",
+    "iata_code": "QHR",
+    "length_ft": 5940,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -267,7 +412,11 @@
     "freq": "",
     "Lat": 13.83012,
     "Lon": 36.88237,
-    "Ele": 588.3
+    "Ele": 588.3,
+    "ident": "HAHU",
+    "iso_country": "ET",
+    "icao_code": "HAHU",
+    "iata_code": "HUE"
   },
   {
     "type": "medium_airport",
@@ -276,7 +425,14 @@
     "freq": "",
     "Lat": 9.3325,
     "Lon": 42.9121,
-    "Ele": 1814.8
+    "Ele": 1814.8,
+    "ident": "HAJJ",
+    "iso_country": "ET",
+    "icao_code": "HAJJ",
+    "iata_code": "JIJ",
+    "length_ft": 8202,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -285,7 +441,9 @@
     "freq": "",
     "Lat": 5.7495,
     "Lon": 36.559667,
-    "Ele": 1364.0
+    "Ele": 1364,
+    "ident": "HAJK",
+    "iso_country": "ET"
   },
   {
     "type": "medium_airport",
@@ -294,7 +452,15 @@
     "freq": "121.900",
     "Lat": 7.66609001159668,
     "Lon": 36.81660079956055,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "HAJM",
+    "iso_country": "ET",
+    "icao_code": "HAJM",
+    "iata_code": "JIM",
+    "length_ft": 6562,
+    "width_ft": 163,
+    "heading": 125,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -303,7 +469,14 @@
     "freq": "",
     "Lat": 6.732577,
     "Lon": 44.241339,
-    "Ele": 548.6
+    "Ele": 548.6,
+    "ident": "HAKD",
+    "iso_country": "ET",
+    "icao_code": "HAKD",
+    "iata_code": "ABK",
+    "length_ft": 8202,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -312,7 +485,11 @@
     "freq": "",
     "Lat": 5.6570000648498535,
     "Lon": 44.34999847412109,
-    "Ele": 527.3
+    "Ele": 527.3,
+    "ident": "HAKL",
+    "iso_country": "ET",
+    "icao_code": "HAKL",
+    "iata_code": "LFO"
   },
   {
     "type": "medium_airport",
@@ -321,7 +498,15 @@
     "freq": "",
     "Lat": 7.099869,
     "Lon": 38.396187,
-    "Ele": 1661.2
+    "Ele": 1661.2,
+    "ident": "HALA",
+    "iso_country": "ET",
+    "icao_code": "HALA",
+    "iata_code": "AWA",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -330,7 +515,15 @@
     "freq": "",
     "Lat": 11.975225,
     "Lon": 38.980198,
-    "Ele": 1983.0
+    "Ele": 1983,
+    "ident": "HALL",
+    "iso_country": "ET",
+    "icao_code": "HALL",
+    "iata_code": "LLI",
+    "length_ft": 7990,
+    "width_ft": 175,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -339,7 +532,11 @@
     "freq": "",
     "Lat": 10.7254,
     "Lon": 38.7415,
-    "Ele": 2561.8
+    "Ele": 2561.8,
+    "ident": "HAMA",
+    "iso_country": "ET",
+    "icao_code": "HAMA",
+    "iata_code": "MKS"
   },
   {
     "type": "small_airport",
@@ -348,7 +545,10 @@
     "freq": "",
     "Lat": 5.833,
     "Lon": 35.533001,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "HAMJ",
+    "iso_country": "ET",
+    "icao_code": "HAMJ"
   },
   {
     "type": "medium_airport",
@@ -357,7 +557,15 @@
     "freq": "121.900",
     "Lat": 13.4674,
     "Lon": 39.533501,
-    "Ele": 2254.3
+    "Ele": 2254.3,
+    "ident": "HAMK",
+    "iso_country": "ET",
+    "icao_code": "HAMK",
+    "iata_code": "MQX",
+    "length_ft": 11825,
+    "width_ft": 142,
+    "heading": 112,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -366,7 +574,11 @@
     "freq": "",
     "Lat": 12.932999610899998,
     "Lon": 36.1669998169,
-    "Ele": 807.7
+    "Ele": 807.7,
+    "ident": "HAMM",
+    "iso_country": "ET",
+    "icao_code": "HAMM",
+    "iata_code": "ETE"
   },
   {
     "type": "small_airport",
@@ -375,7 +587,11 @@
     "freq": "",
     "Lat": 9.767,
     "Lon": 35.099998,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "HAMN",
+    "iso_country": "ET",
+    "icao_code": "HAMN",
+    "iata_code": "NDM"
   },
   {
     "type": "small_airport",
@@ -384,7 +600,11 @@
     "freq": "",
     "Lat": 5.8646,
     "Lon": 35.7485,
-    "Ele": 559.0
+    "Ele": 559,
+    "ident": "HAMR",
+    "iso_country": "ET",
+    "icao_code": "HAMR",
+    "iata_code": "MUJ"
   },
   {
     "type": "small_airport",
@@ -393,7 +613,11 @@
     "freq": "",
     "Lat": 6.9571,
     "Lon": 35.5547,
-    "Ele": 1339.9
+    "Ele": 1339.9,
+    "ident": "HAMT",
+    "iso_country": "ET",
+    "icao_code": "HAMT",
+    "iata_code": "MTF"
   },
   {
     "type": "small_airport",
@@ -402,7 +626,11 @@
     "freq": "",
     "Lat": 5.2897,
     "Lon": 39.7023,
-    "Ele": 1594.1
+    "Ele": 1594.1,
+    "ident": "HANG",
+    "iso_country": "ET",
+    "icao_code": "HANG",
+    "iata_code": "EGL"
   },
   {
     "type": "small_airport",
@@ -411,7 +639,11 @@
     "freq": "",
     "Lat": 9.55,
     "Lon": 35.466995,
-    "Ele": 1874.5
+    "Ele": 1874.5,
+    "ident": "HANJ",
+    "iso_country": "ET",
+    "icao_code": "HANJ",
+    "iata_code": "NEJ"
   },
   {
     "type": "small_airport",
@@ -420,7 +652,11 @@
     "freq": "",
     "Lat": 9.034333,
     "Lon": 36.613154,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "HANK",
+    "iso_country": "ET",
+    "icao_code": "HANK",
+    "iata_code": "NEK"
   },
   {
     "type": "small_airport",
@@ -429,7 +665,11 @@
     "freq": "",
     "Lat": 11.3126,
     "Lon": 36.4164,
-    "Ele": 1126.2
+    "Ele": 1126.2,
+    "ident": "HAPW",
+    "iso_country": "ET",
+    "icao_code": "HAPW",
+    "iata_code": "PWI"
   },
   {
     "type": "small_airport",
@@ -438,7 +678,11 @@
     "freq": "",
     "Lat": 6.80281,
     "Lon": 37.68622,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "HASD",
+    "iso_country": "ET",
+    "icao_code": "HASD",
+    "iata_code": "SXU"
   },
   {
     "type": "small_airport",
@@ -447,7 +691,9 @@
     "freq": "",
     "Lat": 7.74175,
     "Lon": 40.69557,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "HASH",
+    "iso_country": "ET"
   },
   {
     "type": "small_airport",
@@ -456,7 +702,11 @@
     "freq": "",
     "Lat": 5.6923,
     "Lon": 38.9764,
-    "Ele": 1772.4
+    "Ele": 1772.4,
+    "ident": "HASK",
+    "iso_country": "ET",
+    "icao_code": "HASK",
+    "iata_code": "SKR"
   },
   {
     "type": "small_airport",
@@ -465,7 +715,11 @@
     "freq": "",
     "Lat": 6.077545,
     "Lon": 44.763736,
-    "Ele": 395.0
+    "Ele": 395,
+    "ident": "HASL",
+    "iso_country": "ET",
+    "icao_code": "HASL",
+    "iata_code": "HIL"
   },
   {
     "type": "small_airport",
@@ -474,7 +728,14 @@
     "freq": "",
     "Lat": 11.7875,
     "Lon": 40.9915,
-    "Ele": 423.7
+    "Ele": 423.7,
+    "ident": "HASM",
+    "iso_country": "ET",
+    "icao_code": "HASM",
+    "iata_code": "SZE",
+    "length_ft": 8202,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -483,7 +744,15 @@
     "freq": "118.500",
     "Lat": 10.018500328063965,
     "Lon": 34.586299896240234,
-    "Ele": 1554.5
+    "Ele": 1554.5,
+    "ident": "HASO",
+    "iso_country": "ET",
+    "icao_code": "HASO",
+    "iata_code": "ASO",
+    "length_ft": 8218,
+    "width_ft": 148,
+    "heading": 115,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -492,7 +761,11 @@
     "freq": "",
     "Lat": 7.2024,
     "Lon": 35.415,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "HATP",
+    "iso_country": "ET",
+    "icao_code": "HATP",
+    "iata_code": "TIE"
   },
   {
     "type": "small_airport",
@@ -501,7 +774,11 @@
     "freq": "",
     "Lat": 6.9724,
     "Lon": 45.3334,
-    "Ele": 563.9
+    "Ele": 563.9,
+    "ident": "HAWR",
+    "iso_country": "ET",
+    "icao_code": "HAWR",
+    "iata_code": "WRA"
   },
   {
     "type": "small_airport",
@@ -510,7 +787,10 @@
     "freq": "",
     "Lat": 3.5623,
     "Lon": 39.0433,
-    "Ele": 1184.8
+    "Ele": 1184.8,
+    "ident": "MYS",
+    "iso_country": "ET",
+    "iata_code": "MYS"
   },
   {
     "type": "small_airport",
@@ -519,6 +799,9 @@
     "freq": "",
     "Lat": 6.26,
     "Lon": 35.5184,
-    "Ele": 1432.6
+    "Ele": 1432.6,
+    "ident": "TUJ",
+    "iso_country": "ET",
+    "iata_code": "TUJ"
   }
 ]

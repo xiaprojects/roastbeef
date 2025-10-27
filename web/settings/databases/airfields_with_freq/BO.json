@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -14.2626,
     "Lon": -64.8721,
-    "Ele": 148.4
+    "Ele": 148.4,
+    "ident": "BO-0003",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -12.3431,
     "Lon": -64.5205,
-    "Ele": 145.7
+    "Ele": 145.7,
+    "ident": "BO-0004",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": -12.2974,
     "Lon": -65.0986,
-    "Ele": 152.1
+    "Ele": 152.1,
+    "ident": "BO-0005",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": -12.4274,
     "Lon": -65.5061,
-    "Ele": 148.1
+    "Ele": 148.1,
+    "ident": "BO-0006",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": -14.0807,
     "Lon": -65.658,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "BO-0007",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": -13.9698,
     "Lon": -65.6699,
-    "Ele": 150.3
+    "Ele": 150.3,
+    "ident": "BO-0008",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": -19.3911991119,
     "Lon": -63.072101593,
-    "Ele": 621.5
+    "Ele": 621.5,
+    "ident": "BO-0009",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": -13.657813,
     "Lon": -62.801874,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BO-0010",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,9 @@
     "freq": "",
     "Lat": -14.130654,
     "Lon": -61.820904,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BO-0011",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -87,7 +105,9 @@
     "freq": "",
     "Lat": -21.532782,
     "Lon": -62.971537,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BO-0012",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -96,7 +116,9 @@
     "freq": "",
     "Lat": -15.190029,
     "Lon": -64.757926,
-    "Ele": 162.8
+    "Ele": 162.8,
+    "ident": "BO-0013",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -105,7 +127,9 @@
     "freq": "",
     "Lat": -16.226916,
     "Lon": -60.546454,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BO-0014",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -114,7 +138,9 @@
     "freq": "",
     "Lat": -10.05245,
     "Lon": -65.33933,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "BO-0015",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -123,7 +149,9 @@
     "freq": "",
     "Lat": -17.43685,
     "Lon": -62.34296,
-    "Ele": 269.7
+    "Ele": 269.7,
+    "ident": "BO-0018",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -132,7 +160,9 @@
     "freq": "",
     "Lat": -18.839831,
     "Lon": -64.620142,
-    "Ele": 2479.9
+    "Ele": 2479.9,
+    "ident": "BO-0019",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -141,7 +171,10 @@
     "freq": "",
     "Lat": -14.162648,
     "Lon": -64.759276,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "BO-0021",
+    "iso_country": "BO",
+    "local_code": "SLJN"
   },
   {
     "type": "small_airport",
@@ -150,7 +183,10 @@
     "freq": "",
     "Lat": -13.654426,
     "Lon": -63.704718,
-    "Ele": 143.3
+    "Ele": 143.3,
+    "ident": "BO-BVL",
+    "iso_country": "BO",
+    "iata_code": "BVL"
   },
   {
     "type": "small_airport",
@@ -159,7 +195,11 @@
     "freq": "",
     "Lat": -19.827,
     "Lon": -63.960999,
-    "Ele": 1119.8
+    "Ele": 1119.8,
+    "ident": "SLAG",
+    "iso_country": "BO",
+    "icao_code": "SLAG",
+    "iata_code": "MHW"
   },
   {
     "type": "medium_airport",
@@ -168,7 +208,13 @@
     "freq": "",
     "Lat": -19.246835,
     "Lon": -65.149611,
-    "Ele": 3104.1
+    "Ele": 3104.1,
+    "ident": "SLAL",
+    "iso_country": "BO",
+    "iata_code": "SRE",
+    "length_ft": 11811,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -177,7 +223,9 @@
     "freq": "",
     "Lat": -17.883333,
     "Lon": -66.099998,
-    "Ele": 3124.2
+    "Ele": 3124.2,
+    "ident": "SLAM",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -186,7 +234,9 @@
     "freq": "",
     "Lat": -14.4323,
     "Lon": -65.768799,
-    "Ele": 222.8
+    "Ele": 222.8,
+    "ident": "SLAN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -195,7 +245,11 @@
     "freq": "",
     "Lat": -14.7356,
     "Lon": -68.411903,
-    "Ele": 1414.0
+    "Ele": 1414,
+    "ident": "SLAP",
+    "iso_country": "BO",
+    "icao_code": "SLAP",
+    "iata_code": "APB"
   },
   {
     "type": "small_airport",
@@ -204,7 +258,9 @@
     "freq": "",
     "Lat": -18.215401,
     "Lon": -65.187798,
-    "Ele": 2197.0
+    "Ele": 2197,
+    "ident": "SLAQ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -213,7 +269,11 @@
     "freq": "",
     "Lat": -15.933365,
     "Lon": -63.155575,
-    "Ele": 246.0
+    "Ele": 246,
+    "ident": "SLAS",
+    "iso_country": "BO",
+    "icao_code": "SLAS",
+    "iata_code": "ASC"
   },
   {
     "type": "small_airport",
@@ -222,7 +282,9 @@
     "freq": "",
     "Lat": -17.257334,
     "Lon": -64.366669,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "SLBB",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -231,7 +293,9 @@
     "freq": "",
     "Lat": -11.7272,
     "Lon": -66.9263,
-    "Ele": 182.3
+    "Ele": 182.3,
+    "ident": "SLBF",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -240,7 +304,9 @@
     "freq": "",
     "Lat": -12.133333,
     "Lon": -66.533333,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SLBH",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -249,7 +315,15 @@
     "freq": "662.200",
     "Lat": -22.7733001709,
     "Lon": -64.31289672850001,
-    "Ele": 380.7
+    "Ele": 380.7,
+    "ident": "SLBJ",
+    "iso_country": "BO",
+    "icao_code": "SLBJ",
+    "iata_code": "BJO",
+    "length_ft": 4921,
+    "width_ft": 118,
+    "heading": 1.9,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -258,7 +332,9 @@
     "freq": "",
     "Lat": -13.633333,
     "Lon": -65.283333,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLBN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -267,7 +343,9 @@
     "freq": "",
     "Lat": -13.416667,
     "Lon": -63.483334,
-    "Ele": 235.9
+    "Ele": 235.9,
+    "ident": "SLBR",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -276,7 +354,9 @@
     "freq": "",
     "Lat": -14.2677001953125,
     "Lon": -64.29900360107422,
-    "Ele": 235.9
+    "Ele": 235.9,
+    "ident": "SLBS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -285,7 +365,9 @@
     "freq": "",
     "Lat": -13.9,
     "Lon": -66.550003,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "SLBT",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -294,7 +376,9 @@
     "freq": "",
     "Lat": -13.85,
     "Lon": -66.366669,
-    "Ele": 158.2
+    "Ele": 158.2,
+    "ident": "SLBV",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -303,7 +387,11 @@
     "freq": "",
     "Lat": -20.00656,
     "Lon": -63.527827,
-    "Ele": 796.7
+    "Ele": 796.7,
+    "ident": "SLCA",
+    "iso_country": "BO",
+    "icao_code": "SLCA",
+    "iata_code": "CAM"
   },
   {
     "type": "medium_airport",
@@ -312,7 +400,15 @@
     "freq": "119.300",
     "Lat": -17.421100616455078,
     "Lon": -66.1771011352539,
-    "Ele": 2548.1
+    "Ele": 2548.1,
+    "ident": "SLCB",
+    "iso_country": "BO",
+    "icao_code": "SLCB",
+    "iata_code": "CBB",
+    "length_ft": 12460,
+    "width_ft": 148,
+    "heading": 131.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -321,7 +417,9 @@
     "freq": "",
     "Lat": -16.191099,
     "Lon": -69.095596,
-    "Ele": 3837.7
+    "Ele": 3837.7,
+    "ident": "SLCC",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -330,7 +428,9 @@
     "freq": "",
     "Lat": -20.0254,
     "Lon": -63.0891,
-    "Ele": 595.6
+    "Ele": 595.6,
+    "ident": "SLCD",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -339,7 +439,12 @@
     "freq": "",
     "Lat": -18.797433,
     "Lon": -63.301611,
-    "Ele": 404.8
+    "Ele": 404.8,
+    "ident": "SLCE",
+    "iso_country": "BO",
+    "length_ft": 2001,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -348,7 +453,9 @@
     "freq": "",
     "Lat": -19.785601,
     "Lon": -63.1884,
-    "Ele": 621.8
+    "Ele": 621.8,
+    "ident": "SLCG",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -357,7 +464,13 @@
     "freq": "",
     "Lat": -21.136389,
     "Lon": -63.752778,
-    "Ele": 513.6
+    "Ele": 513.6,
+    "ident": "SLCI",
+    "iso_country": "BO",
+    "length_ft": 5108,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -366,7 +479,9 @@
     "freq": "",
     "Lat": -18.891666,
     "Lon": -66.783333,
-    "Ele": 3714.0
+    "Ele": 3714,
+    "ident": "SLCL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -375,7 +490,9 @@
     "freq": "",
     "Lat": -11.505,
     "Lon": -67.6847,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "SLCM",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -384,7 +501,9 @@
     "freq": "",
     "Lat": -17.5947,
     "Lon": -69.433098,
-    "Ele": 4065.7
+    "Ele": 4065.7,
+    "ident": "SLCN",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -393,7 +512,15 @@
     "freq": "662.200",
     "Lat": -11.040399551400002,
     "Lon": -68.7829971313,
-    "Ele": 271.0
+    "Ele": 271,
+    "ident": "SLCO",
+    "iso_country": "BO",
+    "icao_code": "SLCO",
+    "iata_code": "CIJ",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 11,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -402,7 +529,15 @@
     "freq": "",
     "Lat": -16.142688,
     "Lon": -62.026595,
-    "Ele": 493.8
+    "Ele": 493.8,
+    "ident": "SLCP",
+    "iso_country": "BO",
+    "icao_code": "SLCP",
+    "iata_code": "CEP",
+    "length_ft": 5653,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -411,7 +546,9 @@
     "freq": "",
     "Lat": -17.913601,
     "Lon": -64.517799,
-    "Ele": 1885.5
+    "Ele": 1885.5,
+    "ident": "SLCR",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -420,7 +557,9 @@
     "freq": "",
     "Lat": -20.808333,
     "Lon": -66.401111,
-    "Ele": 3852.7
+    "Ele": 3852.7,
+    "ident": "SLCS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -429,7 +568,9 @@
     "freq": "",
     "Lat": -13.5145,
     "Lon": -64.965202,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SLCT",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -438,7 +579,9 @@
     "freq": "",
     "Lat": -20.833334,
     "Lon": -64.966667,
-    "Ele": 2949.2
+    "Ele": 2949.2,
+    "ident": "SLCU",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -447,7 +590,9 @@
     "freq": "",
     "Lat": -12.5498,
     "Lon": -66.912498,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SLCV",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -456,7 +601,9 @@
     "freq": "",
     "Lat": -12.377833366394045,
     "Lon": -68.56766510009766,
-    "Ele": 188.4
+    "Ele": 188.4,
+    "ident": "SLCX",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -465,7 +612,9 @@
     "freq": "",
     "Lat": -17.565000534057617,
     "Lon": -63.17470169067383,
-    "Ele": 356.6
+    "Ele": 356.6,
+    "ident": "SLCY",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -474,7 +623,9 @@
     "freq": "",
     "Lat": -17.512562,
     "Lon": -63.537002,
-    "Ele": 329.8
+    "Ele": 329.8,
+    "ident": "SLDA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -483,7 +634,9 @@
     "freq": "",
     "Lat": -17.4426,
     "Lon": -62.2442,
-    "Ele": 270.7
+    "Ele": 270.7,
+    "ident": "SLDL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -492,7 +645,9 @@
     "freq": "",
     "Lat": -14.2736,
     "Lon": -65.440002,
-    "Ele": 222.5
+    "Ele": 222.5,
+    "ident": "SLDN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -501,7 +656,9 @@
     "freq": "",
     "Lat": -13.569948,
     "Lon": -66.071841,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLEA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -510,7 +667,9 @@
     "freq": "",
     "Lat": -13.783334,
     "Lon": -66.400002,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLEC",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -519,7 +678,9 @@
     "freq": "",
     "Lat": -21.466999,
     "Lon": -63.352798,
-    "Ele": 379.8
+    "Ele": 379.8,
+    "ident": "SLEE",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -528,7 +689,9 @@
     "freq": "",
     "Lat": -13.883333,
     "Lon": -65.76667,
-    "Ele": 148.1
+    "Ele": 148.1,
+    "ident": "SLEF",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -537,7 +700,9 @@
     "freq": "",
     "Lat": -13.05,
     "Lon": -65.033333,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLEH",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -546,7 +711,9 @@
     "freq": "",
     "Lat": -19.2999,
     "Lon": -63.209,
-    "Ele": 705.0
+    "Ele": 705,
+    "ident": "SLEI",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -555,7 +722,9 @@
     "freq": "",
     "Lat": -21.700834,
     "Lon": -63.456833,
-    "Ele": 528.5
+    "Ele": 528.5,
+    "ident": "SLEK",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -564,7 +733,9 @@
     "freq": "",
     "Lat": -14.383333,
     "Lon": -65.849998,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLEO",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -573,7 +744,9 @@
     "freq": "",
     "Lat": -14.603954,
     "Lon": -65.635157,
-    "Ele": 160.9
+    "Ele": 160.9,
+    "ident": "SLEP",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -582,7 +755,9 @@
     "freq": "",
     "Lat": -20.01666641235352,
     "Lon": -64.03333282470703,
-    "Ele": 1005.8
+    "Ele": 1005.8,
+    "ident": "SLER",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -591,7 +766,9 @@
     "freq": "",
     "Lat": -18.450000762939453,
     "Lon": -66.91666412353516,
-    "Ele": 3797.8
+    "Ele": 3797.8,
+    "ident": "SLES",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -600,7 +777,15 @@
     "freq": "119.700",
     "Lat": -17.8115997314,
     "Lon": -63.1715011597,
-    "Ele": 417.9
+    "Ele": 417.9,
+    "ident": "SLET",
+    "iso_country": "BO",
+    "icao_code": "SLET",
+    "iata_code": "SRZ",
+    "length_ft": 9098,
+    "width_ft": 131,
+    "heading": 144,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -609,7 +794,9 @@
     "freq": "",
     "Lat": -14.4983,
     "Lon": -66.762901,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "SLEV",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -618,7 +805,9 @@
     "freq": "",
     "Lat": -14.766666412353516,
     "Lon": -65.53333282470703,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "SLEZ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -627,7 +816,9 @@
     "freq": "",
     "Lat": -15.333333,
     "Lon": -66.800003,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SLFA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -636,7 +827,9 @@
     "freq": "",
     "Lat": -14.607418,
     "Lon": -61.198396,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "SLFL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -645,7 +838,9 @@
     "freq": "",
     "Lat": -13.5548,
     "Lon": -61.004101,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "SLFO",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -654,7 +849,9 @@
     "freq": "",
     "Lat": -15.683333,
     "Lon": -65.566666,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "SLFR",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -663,7 +860,14 @@
     "freq": "",
     "Lat": -10.88856,
     "Lon": -65.380955,
-    "Ele": 139.0
+    "Ele": 139,
+    "ident": "SLGM",
+    "iso_country": "BO",
+    "iata_code": "GYA",
+    "length_ft": 5767,
+    "width_ft": 69,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -672,7 +876,9 @@
     "freq": "",
     "Lat": -18.056,
     "Lon": -63.163166,
-    "Ele": 455.1
+    "Ele": 455.1,
+    "ident": "SLGP",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -681,7 +887,9 @@
     "freq": "",
     "Lat": -18.5222,
     "Lon": -60.6804,
-    "Ele": 322.5
+    "Ele": 322.5,
+    "ident": "SLGQ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -690,7 +898,13 @@
     "freq": "",
     "Lat": -10.820306,
     "Lon": -65.346494,
-    "Ele": 169.8
+    "Ele": 169.8,
+    "ident": "SLGY",
+    "iso_country": "BO",
+    "icao_code": "SLGY",
+    "length_ft": 5905,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -699,7 +913,9 @@
     "freq": "",
     "Lat": -13.5,
     "Lon": -64.199997,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLHA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -708,7 +924,9 @@
     "freq": "",
     "Lat": -20.3908,
     "Lon": -64.015404,
-    "Ele": 1422.8
+    "Ele": 1422.8,
+    "ident": "SLHC",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -717,7 +935,15 @@
     "freq": "",
     "Lat": -16.976834,
     "Lon": -65.145568,
-    "Ele": 266.7
+    "Ele": 266.7,
+    "ident": "SLHI",
+    "iso_country": "BO",
+    "icao_code": "SLHI",
+    "iata_code": "CCA",
+    "length_ft": 4801,
+    "width_ft": 67,
+    "heading": 162.2,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -726,7 +952,11 @@
     "freq": "",
     "Lat": -13.605556,
     "Lon": -63.879444,
-    "Ele": 257.9
+    "Ele": 257.9,
+    "ident": "SLHJ",
+    "iso_country": "BO",
+    "icao_code": "SLHJ",
+    "iata_code": "BVK"
   },
   {
     "type": "small_airport",
@@ -735,7 +965,9 @@
     "freq": "",
     "Lat": -19.594801,
     "Lon": -62.565701,
-    "Ele": 438.0
+    "Ele": 438,
+    "ident": "SLHS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -744,7 +976,9 @@
     "freq": "",
     "Lat": -13.4438,
     "Lon": -66.505997,
-    "Ele": 237.7
+    "Ele": 237.7,
+    "ident": "SLIG",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -753,7 +987,9 @@
     "freq": "",
     "Lat": -15.5,
     "Lon": -65.91666412353516,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLIN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -762,7 +998,9 @@
     "freq": "",
     "Lat": -18.193056,
     "Lon": -63.877778,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "SLIP",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -771,7 +1009,9 @@
     "freq": "",
     "Lat": -13.050000190734863,
     "Lon": -63.66666793823242,
-    "Ele": 236.2
+    "Ele": 236.2,
+    "ident": "SLIR",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -780,7 +1020,9 @@
     "freq": "",
     "Lat": -19.7775,
     "Lon": -63.087799,
-    "Ele": 487.1
+    "Ele": 487.1,
+    "ident": "SLIT",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -789,7 +1031,9 @@
     "freq": "",
     "Lat": -13.76,
     "Lon": -68.136833,
-    "Ele": 221.0
+    "Ele": 221,
+    "ident": "SLIX",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -798,7 +1042,9 @@
     "freq": "",
     "Lat": -17.795833,
     "Lon": -67.434722,
-    "Ele": 3799.9
+    "Ele": 3799.9,
+    "ident": "SLIY",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -807,7 +1053,9 @@
     "freq": "",
     "Lat": -18.663834,
     "Lon": -63.002335,
-    "Ele": 329.8
+    "Ele": 329.8,
+    "ident": "SLIZ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -816,7 +1064,9 @@
     "freq": "",
     "Lat": -11.772833,
     "Lon": -67.255997,
-    "Ele": 175.3
+    "Ele": 175.3,
+    "ident": "SLJA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -825,7 +1075,11 @@
     "freq": "",
     "Lat": -17.830799,
     "Lon": -60.743099,
-    "Ele": 296.9
+    "Ele": 296.9,
+    "ident": "SLJE",
+    "iso_country": "BO",
+    "icao_code": "SLJE",
+    "iata_code": "SJS"
   },
   {
     "type": "small_airport",
@@ -834,7 +1088,11 @@
     "freq": "",
     "Lat": -13.0528,
     "Lon": -64.661697,
-    "Ele": 139.0
+    "Ele": 139,
+    "ident": "SLJO",
+    "iso_country": "BO",
+    "icao_code": "SLJO",
+    "iata_code": "SJB"
   },
   {
     "type": "small_airport",
@@ -843,7 +1101,9 @@
     "freq": "",
     "Lat": -13.083333,
     "Lon": -66.166664,
-    "Ele": 151.8
+    "Ele": 151.8,
+    "ident": "SLJS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -852,7 +1112,11 @@
     "freq": "",
     "Lat": -16.2708,
     "Lon": -62.470299,
-    "Ele": 518.8
+    "Ele": 518.8,
+    "ident": "SLJV",
+    "iso_country": "BO",
+    "icao_code": "SLJV",
+    "iata_code": "SJV"
   },
   {
     "type": "small_airport",
@@ -861,7 +1125,9 @@
     "freq": "",
     "Lat": -14.516666,
     "Lon": -65.76667,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLLB",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -870,7 +1136,9 @@
     "freq": "",
     "Lat": -14.016666412353516,
     "Lon": -63.53333282470703,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "SLLH",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -879,7 +1147,9 @@
     "freq": "",
     "Lat": -13.573833,
     "Lon": -66.83567,
-    "Ele": 164.6
+    "Ele": 164.6,
+    "ident": "SLLI",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -888,7 +1158,9 @@
     "freq": "",
     "Lat": -16.533899307250977,
     "Lon": -68.30059814453125,
-    "Ele": 3689.0
+    "Ele": 3689,
+    "ident": "SLLJ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -897,7 +1169,9 @@
     "freq": "",
     "Lat": -14.283333,
     "Lon": -66.7925,
-    "Ele": 219.5
+    "Ele": 219.5,
+    "ident": "SLLL",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1180,15 @@
     "freq": "119.500",
     "Lat": -16.5132999420166,
     "Lon": -68.19229888916016,
-    "Ele": 4070.6
+    "Ele": 4070.6,
+    "ident": "SLLP",
+    "iso_country": "BO",
+    "icao_code": "SLLP",
+    "iata_code": "LPB",
+    "length_ft": 6725,
+    "width_ft": 300,
+    "heading": 98,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -915,7 +1197,9 @@
     "freq": "",
     "Lat": -19.33333396911621,
     "Lon": -67.08333587646484,
-    "Ele": 3703.3
+    "Ele": 3703.3,
+    "ident": "SLLQ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -924,7 +1208,9 @@
     "freq": "",
     "Lat": -19.600000381469727,
     "Lon": -63.650001525878906,
-    "Ele": 899.2
+    "Ele": 899.2,
+    "ident": "SLLS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -933,7 +1219,9 @@
     "freq": "",
     "Lat": -15.383333,
     "Lon": -65.75,
-    "Ele": 251.5
+    "Ele": 251.5,
+    "ident": "SLLZ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -942,7 +1230,9 @@
     "freq": "",
     "Lat": -13.787833213806152,
     "Lon": -68.35466766357422,
-    "Ele": 362.7
+    "Ele": 362.7,
+    "ident": "SLMB",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -951,7 +1241,9 @@
     "freq": "",
     "Lat": -13.383333206176758,
     "Lon": -68.6500015258789,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "SLMD",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -960,7 +1252,9 @@
     "freq": "",
     "Lat": -20.39800071716309,
     "Lon": -63.14049911499024,
-    "Ele": 407.8
+    "Ele": 407.8,
+    "ident": "SLME",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -969,7 +1263,14 @@
     "freq": "",
     "Lat": -13.2607483767,
     "Lon": -64.0607643127,
-    "Ele": 140.8
+    "Ele": 140.8,
+    "ident": "SLMG",
+    "iso_country": "BO",
+    "icao_code": "SLMG",
+    "iata_code": "MGD",
+    "length_ft": 4593,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -978,7 +1279,9 @@
     "freq": "",
     "Lat": -14.60849952697754,
     "Lon": -61.19183349609375,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "SLMM",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -987,7 +1290,9 @@
     "freq": "",
     "Lat": -11.7385,
     "Lon": -68.354668,
-    "Ele": 214.9
+    "Ele": 214.9,
+    "ident": "SLMN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -996,7 +1301,9 @@
     "freq": "",
     "Lat": -17.33333396911621,
     "Lon": -64.16666412353516,
-    "Ele": 371.9
+    "Ele": 371.9,
+    "ident": "SLMX",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1312,9 @@
     "freq": "",
     "Lat": -17.931,
     "Lon": -65.380203,
-    "Ele": 2142.7
+    "Ele": 2142.7,
+    "ident": "SLMZ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1323,9 @@
     "freq": "",
     "Lat": -17.601,
     "Lon": -62.3957,
-    "Ele": 364.8
+    "Ele": 364.8,
+    "ident": "SLNL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1334,9 @@
     "freq": "",
     "Lat": -14.433333,
     "Lon": -66.066666,
-    "Ele": 167.0
+    "Ele": 167,
+    "ident": "SLNO",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1345,9 @@
     "freq": "",
     "Lat": -14.016666,
     "Lon": -65.800003,
-    "Ele": 237.7
+    "Ele": 237.7,
+    "ident": "SLNV",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1041,7 +1356,15 @@
     "freq": "662.200",
     "Lat": -17.962601,
     "Lon": -67.076202,
-    "Ele": 3703.9
+    "Ele": 3703.9,
+    "ident": "SLOR",
+    "iso_country": "BO",
+    "icao_code": "SLOR",
+    "iata_code": "ORU",
+    "length_ft": 8075,
+    "width_ft": 75,
+    "heading": 182,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1373,9 @@
     "freq": "",
     "Lat": -18.97166633605957,
     "Lon": -62.97533416748047,
-    "Ele": 409.0
+    "Ele": 409,
+    "ident": "SLPA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1384,13 @@
     "freq": "",
     "Lat": -21.395556,
     "Lon": -63.756667,
-    "Ele": 683.4
+    "Ele": 683.4,
+    "ident": "SLPB",
+    "iso_country": "BO",
+    "length_ft": 3838,
+    "width_ft": 75,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -1068,7 +1399,9 @@
     "freq": "",
     "Lat": -13.628834,
     "Lon": -61.738667,
-    "Ele": 175.3
+    "Ele": 175.3,
+    "ident": "SLPF",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1410,9 @@
     "freq": "",
     "Lat": -14.1784,
     "Lon": -65.375603,
-    "Ele": 229.8
+    "Ele": 229.8,
+    "ident": "SLPG",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1421,9 @@
     "freq": "",
     "Lat": -15.808492,
     "Lon": -65.619471,
-    "Ele": 184.4
+    "Ele": 184.4,
+    "ident": "SLPI",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1432,9 @@
     "freq": "",
     "Lat": -19.2994,
     "Lon": -64.294098,
-    "Ele": 2063.5
+    "Ele": 2063.5,
+    "ident": "SLPL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1443,9 @@
     "freq": "",
     "Lat": -13.737951,
     "Lon": -66.409333,
-    "Ele": 161.5
+    "Ele": 161.5,
+    "ident": "SLPM",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1454,9 @@
     "freq": "",
     "Lat": -13.987333,
     "Lon": -61.545666,
-    "Ele": 181.4
+    "Ele": 181.4,
+    "ident": "SLPN",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1122,7 +1465,15 @@
     "freq": "662.200",
     "Lat": -19.543331,
     "Lon": -65.723734,
-    "Ele": 3938.6
+    "Ele": 3938.6,
+    "ident": "SLPO",
+    "iso_country": "BO",
+    "icao_code": "SLPO",
+    "iata_code": "POI",
+    "length_ft": 9130,
+    "width_ft": 98,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1482,11 @@
     "freq": "",
     "Lat": -11.107663,
     "Lon": -67.551155,
-    "Ele": 182.0
+    "Ele": 182,
+    "ident": "SLPR",
+    "iso_country": "BO",
+    "icao_code": "SLPR",
+    "iata_code": "PUR"
   },
   {
     "type": "medium_airport",
@@ -1140,7 +1495,15 @@
     "freq": "662.200",
     "Lat": -18.975301,
     "Lon": -57.820599,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "SLPS",
+    "iso_country": "BO",
+    "icao_code": "SLPS",
+    "iata_code": "PSZ",
+    "length_ft": 6562,
+    "width_ft": 118,
+    "heading": 32,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1512,9 @@
     "freq": "",
     "Lat": -20.7547,
     "Lon": -63.2094,
-    "Ele": 682.1
+    "Ele": 682.1,
+    "ident": "SLPW",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1523,9 @@
     "freq": "",
     "Lat": -18.333499908447266,
     "Lon": -63.192501068115234,
-    "Ele": 527.3
+    "Ele": 527.3,
+    "ident": "SLPY",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1166,8 +1533,10 @@
     "gps_code": "SLQN",
     "freq": "",
     "Lat": -13.183333,
-    "Lon": -67.0,
-    "Ele": 163.1
+    "Lon": -67,
+    "Ele": 163.1,
+    "ident": "SLQN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1545,11 @@
     "freq": "",
     "Lat": -13.2639,
     "Lon": -64.603897,
-    "Ele": 212.8
+    "Ele": 212.8,
+    "ident": "SLRA",
+    "iso_country": "BO",
+    "icao_code": "SLRA",
+    "iata_code": "SRD"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1558,15 @@
     "freq": "",
     "Lat": -18.328224,
     "Lon": -59.765339,
-    "Ele": 275.8
+    "Ele": 275.8,
+    "ident": "SLRB",
+    "iso_country": "BO",
+    "icao_code": "SLRB",
+    "iata_code": "RBO",
+    "length_ft": 3940,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1194,7 +1575,9 @@
     "freq": "",
     "Lat": -14.7627,
     "Lon": -61.032001,
-    "Ele": 185.9
+    "Ele": 185.9,
+    "ident": "SLRF",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1586,9 @@
     "freq": "",
     "Lat": -12.166667,
     "Lon": -65.783333,
-    "Ele": 229.8
+    "Ele": 229.8,
+    "ident": "SLRH",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1212,7 +1597,14 @@
     "freq": "",
     "Lat": -11.009355,
     "Lon": -66.075468,
-    "Ele": 140.8
+    "Ele": 140.8,
+    "ident": "SLRI",
+    "iso_country": "BO",
+    "icao_code": "SLRI",
+    "iata_code": "RIB",
+    "length_ft": 5906,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1221,7 +1613,9 @@
     "freq": "",
     "Lat": -13.975000381469728,
     "Lon": -65.625,
-    "Ele": 146.9
+    "Ele": 146.9,
+    "ident": "SLRL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1624,9 @@
     "freq": "",
     "Lat": -18.64166641235352,
     "Lon": -67.55833435058594,
-    "Ele": 3730.8
+    "Ele": 3730.8,
+    "ident": "SLRP",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1635,14 @@
     "freq": "",
     "Lat": -14.4279,
     "Lon": -67.496803,
-    "Ele": 206.0
+    "Ele": 206,
+    "ident": "SLRQ",
+    "iso_country": "BO",
+    "icao_code": "SLRQ",
+    "iata_code": "RBQ",
+    "length_ft": 4757,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1248,7 +1651,9 @@
     "freq": "",
     "Lat": -14.483334,
     "Lon": -66.349998,
-    "Ele": 169.5
+    "Ele": 169.5,
+    "ident": "SLRR",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1662,9 @@
     "freq": "",
     "Lat": -18.200834274291992,
     "Lon": -63.25600051879883,
-    "Ele": 559.6
+    "Ele": 559.6,
+    "ident": "SLRS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1673,9 @@
     "freq": "",
     "Lat": -13.933333,
     "Lon": -66.333336,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "SLRT",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1684,9 @@
     "freq": "",
     "Lat": -18.200834,
     "Lon": -58.169998,
-    "Ele": 202.4
+    "Ele": 202.4,
+    "ident": "SLRX",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1695,14 @@
     "freq": "",
     "Lat": -14.3044,
     "Lon": -67.353401,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "SLRY",
+    "iso_country": "BO",
+    "icao_code": "SLRY",
+    "iata_code": "REY",
+    "length_ft": 4921,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -1293,7 +1711,15 @@
     "freq": "662.200",
     "Lat": -13.7622003555,
     "Lon": -65.4352035522,
-    "Ele": 143.9
+    "Ele": 143.9,
+    "ident": "SLSA",
+    "iso_country": "BO",
+    "icao_code": "SLSA",
+    "iata_code": "SBL",
+    "length_ft": 5013,
+    "width_ft": 69,
+    "heading": 140.2,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1728,14 @@
     "freq": "",
     "Lat": -14.8592,
     "Lon": -66.737503,
-    "Ele": 192.9
+    "Ele": 192.9,
+    "ident": "SLSB",
+    "iso_country": "BO",
+    "icao_code": "SLSB",
+    "iata_code": "SRJ",
+    "length_ft": 5906,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1311,7 +1744,9 @@
     "freq": "",
     "Lat": -14.5611,
     "Lon": -65.527199,
-    "Ele": 554.7
+    "Ele": 554.7,
+    "ident": "SLSD",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1755,9 @@
     "freq": "",
     "Lat": -16.285,
     "Lon": -59.495167,
-    "Ele": 230.4
+    "Ele": 230.4,
+    "ident": "SLSE",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1766,9 @@
     "freq": "",
     "Lat": -17.2891,
     "Lon": -62.304,
-    "Ele": 271.3
+    "Ele": 271.3,
+    "ident": "SLSF",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1777,9 @@
     "freq": "",
     "Lat": -13.9021,
     "Lon": -66.1567,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "SLSG",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1788,9 @@
     "freq": "",
     "Lat": -15.483334,
     "Lon": -67.48333,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "SLSH",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1799,15 @@
     "freq": "",
     "Lat": -16.38719,
     "Lon": -60.962318,
-    "Ele": 412.7
+    "Ele": 412.7,
+    "ident": "SLSI",
+    "iso_country": "BO",
+    "icao_code": "SLSI",
+    "iata_code": "SNG",
+    "length_ft": 3936,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1365,7 +1816,9 @@
     "freq": "",
     "Lat": -19.5,
     "Lon": -67.33333587646484,
-    "Ele": 3665.8
+    "Ele": 3665.8,
+    "ident": "SLSJ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1827,9 @@
     "freq": "",
     "Lat": -17.104719,
     "Lon": -63.608372,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "SLSK",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1838,11 @@
     "freq": "",
     "Lat": -14.9658,
     "Lon": -65.6338,
-    "Ele": 166.1
+    "Ele": 166.1,
+    "ident": "SLSM",
+    "iso_country": "BO",
+    "icao_code": "SLSM",
+    "iata_code": "SNM"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1851,9 @@
     "freq": "",
     "Lat": -21.649999618530277,
     "Lon": -63.59999847412109,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "SLSN",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1862,9 @@
     "freq": "",
     "Lat": -21.0735,
     "Lon": -63.109501,
-    "Ele": 426.7
+    "Ele": 426.7,
+    "ident": "SLSP",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1873,9 @@
     "freq": "",
     "Lat": -18.3458,
     "Lon": -59.604801,
-    "Ele": 606.6
+    "Ele": 606.6,
+    "ident": "SLSQ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1884,15 @@
     "freq": "",
     "Lat": -14.0662,
     "Lon": -66.786797,
-    "Ele": 224.9
+    "Ele": 224.9,
+    "ident": "SLSR",
+    "iso_country": "BO",
+    "icao_code": "SLSR",
+    "iata_code": "SRB",
+    "length_ft": 4925,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -1428,7 +1901,9 @@
     "freq": "",
     "Lat": -18.4754,
     "Lon": -58.2767,
-    "Ele": 260.6
+    "Ele": 260.6,
+    "ident": "SLSS",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1437,7 +1912,14 @@
     "freq": "119.100",
     "Lat": -19.007099,
     "Lon": -65.288696,
-    "Ele": 2907.8
+    "Ele": 2907.8,
+    "ident": "SLSU",
+    "iso_country": "BO",
+    "icao_code": "SLSU",
+    "length_ft": 9300,
+    "width_ft": 98,
+    "heading": 46,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1446,7 +1928,13 @@
     "freq": "",
     "Lat": -16.401239,
     "Lon": -61.0452,
-    "Ele": 450.2
+    "Ele": 450.2,
+    "ident": "SLSV",
+    "iso_country": "BO",
+    "length_ft": 9055,
+    "width_ft": 148,
+    "heading": 169,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1455,7 +1943,9 @@
     "freq": "",
     "Lat": -20.3433,
     "Lon": -63.1394,
-    "Ele": 713.2
+    "Ele": 713.2,
+    "ident": "SLTA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1954,9 @@
     "freq": "",
     "Lat": -17.3604,
     "Lon": -62.2796,
-    "Ele": 268.2
+    "Ele": 268.2,
+    "ident": "SLTC",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1473,7 +1965,9 @@
     "freq": "",
     "Lat": -15.498333,
     "Lon": -67.816666,
-    "Ele": 426.7
+    "Ele": 426.7,
+    "ident": "SLTE",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1482,7 +1976,9 @@
     "freq": "",
     "Lat": -15.2278,
     "Lon": -65.450104,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SLTG",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1491,7 +1987,15 @@
     "freq": "",
     "Lat": -16.339199,
     "Lon": -58.401901,
-    "Ele": 122.8
+    "Ele": 122.8,
+    "ident": "SLTI",
+    "iso_country": "BO",
+    "icao_code": "SLTI",
+    "iata_code": "MQK",
+    "length_ft": 6234,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -1500,7 +2004,15 @@
     "freq": "119.400",
     "Lat": -21.5557,
     "Lon": -64.701302,
-    "Ele": 1852.9
+    "Ele": 1852.9,
+    "ident": "SLTJ",
+    "iso_country": "BO",
+    "icao_code": "SLTJ",
+    "iata_code": "TJA",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 124.3,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2021,9 @@
     "freq": "",
     "Lat": -21.175602,
     "Lon": -67.166689,
-    "Ele": 3596.6
+    "Ele": 3596.6,
+    "ident": "SLTL",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2032,9 @@
     "freq": "",
     "Lat": -17.798166275024414,
     "Lon": -68.09349822998047,
-    "Ele": 3819.1
+    "Ele": 3819.1,
+    "ident": "SLTO",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1527,7 +2043,15 @@
     "freq": "119.100",
     "Lat": -14.8187,
     "Lon": -64.917999,
-    "Ele": 155.1
+    "Ele": 155.1,
+    "ident": "SLTR",
+    "iso_country": "BO",
+    "icao_code": "SLTR",
+    "iata_code": "TDD",
+    "length_ft": 7874,
+    "width_ft": 98,
+    "heading": 134.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2060,9 @@
     "freq": "",
     "Lat": -18.19583320617676,
     "Lon": -68.14199829101562,
-    "Ele": 3810.0
+    "Ele": 3810,
+    "ident": "SLTU",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2071,9 @@
     "freq": "",
     "Lat": -18.46640014648437,
     "Lon": -62.11199951171875,
-    "Ele": 399.9
+    "Ele": 399.9,
+    "ident": "SLTW",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2082,9 @@
     "freq": "",
     "Lat": -14.31666660308838,
     "Lon": -68.58333587646484,
-    "Ele": 719.3
+    "Ele": 719.3,
+    "ident": "SLTX",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2093,9 @@
     "freq": "",
     "Lat": -13.800000190734863,
     "Lon": -66.23332977294922,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLTY",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2104,9 @@
     "freq": "",
     "Lat": -21.337012,
     "Lon": -65.612228,
-    "Ele": 3444.2
+    "Ele": 3444.2,
+    "ident": "SLTZ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2115,9 @@
     "freq": "",
     "Lat": -20.480499,
     "Lon": -63.528168,
-    "Ele": 1048.5
+    "Ele": 1048.5,
+    "ident": "SLUC",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2126,9 @@
     "freq": "",
     "Lat": -17.98579978942871,
     "Lon": -68.39430236816406,
-    "Ele": 3938.0
+    "Ele": 3938,
+    "ident": "SLUK",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2137,9 @@
     "freq": "",
     "Lat": -11.7616,
     "Lon": -67.95864,
-    "Ele": 174.0
+    "Ele": 174,
+    "ident": "SLUP",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2148,9 @@
     "freq": "",
     "Lat": -14.316667,
     "Lon": -66.166664,
-    "Ele": 245.4
+    "Ele": 245.4,
+    "ident": "SLUS",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2159,9 @@
     "freq": "",
     "Lat": -15.033334,
     "Lon": -69.25,
-    "Ele": 4376.9
+    "Ele": 4376.9,
+    "ident": "SLUU",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2170,15 @@
     "freq": "",
     "Lat": -20.441304,
     "Lon": -66.857553,
-    "Ele": 3394.3
+    "Ele": 3394.3,
+    "ident": "SLUY",
+    "iso_country": "BO",
+    "icao_code": "SLUY",
+    "iata_code": "UYU",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1635,7 +2187,9 @@
     "freq": "",
     "Lat": -17.32101,
     "Lon": -67.75322,
-    "Ele": 3820.1
+    "Ele": 3820.1,
+    "ident": "SLVA",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2198,9 @@
     "freq": "",
     "Lat": -15.833333,
     "Lon": -67.083336,
-    "Ele": 1489.6
+    "Ele": 1489.6,
+    "ident": "SLVD",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2209,9 @@
     "freq": "",
     "Lat": -14.636,
     "Lon": -66.750298,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLVE",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2220,11 @@
     "freq": "",
     "Lat": -18.4825,
     "Lon": -64.099403,
-    "Ele": 1996.7
+    "Ele": 1996.7,
+    "ident": "SLVG",
+    "iso_country": "BO",
+    "icao_code": "SLVG",
+    "iata_code": "VAH"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2233,9 @@
     "freq": "",
     "Lat": -15.75,
     "Lon": -67.56666564941406,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "SLVI",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1680,7 +2244,15 @@
     "freq": "662.200",
     "Lat": -21.2551994324,
     "Lon": -63.4056015015,
-    "Ele": 397.8
+    "Ele": 397.8,
+    "ident": "SLVM",
+    "iso_country": "BO",
+    "icao_code": "SLVM",
+    "iata_code": "VLM",
+    "length_ft": 4918,
+    "width_ft": 115,
+    "heading": 175.3,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2261,9 @@
     "freq": "",
     "Lat": -13.2658,
     "Lon": -65.875801,
-    "Ele": 265.8
+    "Ele": 265.8,
+    "ident": "SLVN",
+    "iso_country": "BO"
   },
   {
     "type": "large_airport",
@@ -1698,7 +2272,15 @@
     "freq": "119.700",
     "Lat": -17.6448,
     "Lon": -63.135399,
-    "Ele": 373.1
+    "Ele": 373.1,
+    "ident": "SLVR",
+    "iso_country": "BO",
+    "icao_code": "SLVR",
+    "iata_code": "VVI",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 147,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2289,9 @@
     "freq": "",
     "Lat": -21.266666,
     "Lon": -63.358334,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "SLVT",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2300,9 @@
     "freq": "",
     "Lat": -20.904833,
     "Lon": -63.192165,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "SLVU",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2311,9 @@
     "freq": "",
     "Lat": -13.6443,
     "Lon": -64.440804,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SLVV",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2322,9 @@
     "freq": "",
     "Lat": -22.053604,
     "Lon": -65.639249,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "SLVZ",
+    "iso_country": "BO"
   },
   {
     "type": "medium_airport",
@@ -1743,7 +2333,15 @@
     "freq": "662.200",
     "Lat": -21.960899353027344,
     "Lon": -63.65169906616211,
-    "Ele": 643.7
+    "Ele": 643.7,
+    "ident": "SLYA",
+    "iso_country": "BO",
+    "icao_code": "SLYA",
+    "iata_code": "BYC",
+    "length_ft": 6890,
+    "width_ft": 118,
+    "heading": 20.3,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2350,9 @@
     "freq": "",
     "Lat": -18.654499,
     "Lon": -63.132801,
-    "Ele": 430.4
+    "Ele": 430.4,
+    "ident": "SLYG",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2361,9 @@
     "freq": "",
     "Lat": -17.015667,
     "Lon": -64.056335,
-    "Ele": 248.7
+    "Ele": 248.7,
+    "ident": "SLYI",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2372,9 @@
     "freq": "",
     "Lat": -14.866667,
     "Lon": -65.650002,
-    "Ele": 219.5
+    "Ele": 219.5,
+    "ident": "SLZB",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2383,9 @@
     "freq": "",
     "Lat": -17.427798,
     "Lon": -63.674953,
-    "Ele": 350.5
+    "Ele": 350.5,
+    "ident": "SLZC",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2394,9 @@
     "freq": "",
     "Lat": -13.7486,
     "Lon": -64.453697,
-    "Ele": 146.9
+    "Ele": 146.9,
+    "ident": "SLZF",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2405,9 @@
     "freq": "",
     "Lat": -14.216666,
     "Lon": -63.650002,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "SLZJ",
+    "iso_country": "BO"
   },
   {
     "type": "small_airport",
@@ -1806,6 +2416,8 @@
     "freq": "",
     "Lat": -16.273701,
     "Lon": -60.090698,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SLZV",
+    "iso_country": "BO"
   }
 ]

@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": -20.0158333333,
     "Lon": 45.535,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "AHY",
+    "iso_country": "MG",
+    "iata_code": "AHY"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,11 @@
     "freq": "",
     "Lat": -17.686667,
     "Lon": 45.623889,
-    "Ele": 312.4
+    "Ele": 312.4,
+    "ident": "AMY",
+    "iso_country": "MG",
+    "icao_code": "FMMB",
+    "iata_code": "AMY"
   },
   {
     "type": "small_airport",
@@ -24,7 +31,10 @@
     "freq": "",
     "Lat": -15.6725,
     "Lon": 47.061667,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "BSV",
+    "iso_country": "MG",
+    "iata_code": "BSV"
   },
   {
     "type": "small_airport",
@@ -33,7 +43,10 @@
     "freq": "",
     "Lat": -17.6925,
     "Lon": 45.0888333333,
-    "Ele": 289.6
+    "Ele": 289.6,
+    "ident": "BZM",
+    "iso_country": "MG",
+    "iata_code": "BZM"
   },
   {
     "type": "small_airport",
@@ -42,7 +55,10 @@
     "freq": "",
     "Lat": -22.06608,
     "Lon": 43.259573,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "DVD",
+    "iso_country": "MG",
+    "iata_code": "DVD"
   },
   {
     "type": "small_airport",
@@ -51,7 +67,15 @@
     "freq": "118.900",
     "Lat": -12.2561,
     "Lon": 49.2542,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "FM43",
+    "iso_country": "MG",
+    "icao_code": "FMNK",
+    "local_code": "FM43",
+    "length_ft": 8211,
+    "width_ft": 148,
+    "heading": 127,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -60,7 +84,12 @@
     "freq": "118.300",
     "Lat": -18.1958013864,
     "Lon": 49.348526001,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "FMBI",
+    "iso_country": "MG",
+    "local_code": "MBI",
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -69,7 +98,12 @@
     "freq": "",
     "Lat": -18.9175,
     "Lon": 48.2181944444,
-    "Ele": 902.2
+    "Ele": 902.2,
+    "ident": "FMFE",
+    "iso_country": "MG",
+    "icao_code": "FMFE",
+    "iata_code": "OHB",
+    "local_code": "OMB"
   },
   {
     "type": "small_airport",
@@ -78,7 +112,14 @@
     "freq": "",
     "Lat": -19.028999,
     "Lon": 47.171799,
-    "Ele": 1449.9
+    "Ele": 1449.9,
+    "ident": "FMMA",
+    "iso_country": "MG",
+    "icao_code": "FMMA",
+    "length_ft": 8237,
+    "width_ft": 148,
+    "heading": 106,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -87,7 +128,11 @@
     "freq": "",
     "Lat": -20.3553902921,
     "Lon": 45.5433726311,
-    "Ele": 182.0
+    "Ele": 182,
+    "ident": "FMMC",
+    "iso_country": "MG",
+    "icao_code": "FMMC",
+    "iata_code": "WML"
   },
   {
     "type": "small_airport",
@@ -96,7 +141,15 @@
     "freq": "",
     "Lat": -19.839221,
     "Lon": 47.063713,
-    "Ele": 1523.1
+    "Ele": 1523.1,
+    "ident": "FMME",
+    "iso_country": "MG",
+    "icao_code": "FMME",
+    "iata_code": "ATJ",
+    "length_ft": 4921,
+    "width_ft": 150,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -105,7 +158,11 @@
     "freq": "",
     "Lat": -18.701273,
     "Lon": 44.614921,
-    "Ele": 167.9
+    "Ele": 167.9,
+    "ident": "FMMG",
+    "iso_country": "MG",
+    "icao_code": "FMMG",
+    "iata_code": "WAQ"
   },
   {
     "type": "small_airport",
@@ -114,7 +171,11 @@
     "freq": "",
     "Lat": -19.83300018310547,
     "Lon": 48.79999923706055,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "FMMH",
+    "iso_country": "MG",
+    "icao_code": "FMMH",
+    "iata_code": "VVB"
   },
   {
     "type": "large_airport",
@@ -123,7 +184,15 @@
     "freq": "120.100",
     "Lat": -18.7969,
     "Lon": 47.478802,
-    "Ele": 1279.6
+    "Ele": 1279.6,
+    "ident": "FMMI",
+    "iso_country": "MG",
+    "icao_code": "FMMI",
+    "iata_code": "TNR",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 99,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -132,7 +201,10 @@
     "freq": "",
     "Lat": -17.464479,
     "Lon": 48.326712,
-    "Ele": 760.8
+    "Ele": 760.8,
+    "ident": "FMMJ",
+    "iso_country": "MG",
+    "icao_code": "FMMJ"
   },
   {
     "type": "small_airport",
@@ -141,7 +213,11 @@
     "freq": "",
     "Lat": -18.80501,
     "Lon": 45.273467,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "FMMK",
+    "iso_country": "MG",
+    "icao_code": "FMMK",
+    "iata_code": "JVA"
   },
   {
     "type": "small_airport",
@@ -150,7 +226,11 @@
     "freq": "",
     "Lat": -19.686701,
     "Lon": 44.541901,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "FMML",
+    "iso_country": "MG",
+    "icao_code": "FMML",
+    "iata_code": "BMD"
   },
   {
     "type": "medium_airport",
@@ -159,7 +239,15 @@
     "freq": "548.400",
     "Lat": -19.562799,
     "Lon": 45.450802,
-    "Ele": 61.9
+    "Ele": 61.9,
+    "ident": "FMMN",
+    "iso_country": "MG",
+    "icao_code": "FMMN",
+    "iata_code": "ZVA",
+    "length_ft": 3609,
+    "width_ft": 98,
+    "heading": 147.7,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -168,7 +256,11 @@
     "freq": "",
     "Lat": -18.049999,
     "Lon": 44.033001,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "FMMO",
+    "iso_country": "MG",
+    "icao_code": "FMMO",
+    "iata_code": "MXT"
   },
   {
     "type": "small_airport",
@@ -177,7 +269,10 @@
     "freq": "",
     "Lat": -17.654573,
     "Lon": 48.214445,
-    "Ele": 785.2
+    "Ele": 785.2,
+    "ident": "FMMP",
+    "iso_country": "MG",
+    "icao_code": "FMMP"
   },
   {
     "type": "small_airport",
@@ -186,7 +281,11 @@
     "freq": "",
     "Lat": -19.58300018310547,
     "Lon": 48.803001403808594,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "FMMQ",
+    "iso_country": "MG",
+    "icao_code": "FMMQ",
+    "iata_code": "ILK"
   },
   {
     "type": "small_airport",
@@ -195,7 +294,11 @@
     "freq": "",
     "Lat": -17.850083,
     "Lon": 44.920467,
-    "Ele": 228.0
+    "Ele": 228,
+    "ident": "FMMR",
+    "iso_country": "MG",
+    "icao_code": "FMMR",
+    "iata_code": "TVA"
   },
   {
     "type": "medium_airport",
@@ -204,7 +307,15 @@
     "freq": "548.400",
     "Lat": -17.093901,
     "Lon": 49.8158,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "FMMS",
+    "iso_country": "MG",
+    "icao_code": "FMMS",
+    "iata_code": "SMS",
+    "length_ft": 3451,
+    "width_ft": 98,
+    "heading": 353.9,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -213,7 +324,15 @@
     "freq": "563.400",
     "Lat": -18.109501,
     "Lon": 49.392502,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "FMMT",
+    "iso_country": "MG",
+    "icao_code": "FMMT",
+    "iata_code": "TMM",
+    "length_ft": 7218,
+    "width_ft": 131,
+    "heading": 354,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -222,7 +341,11 @@
     "freq": "",
     "Lat": -17.476101,
     "Lon": 43.972801,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "FMMU",
+    "iso_country": "MG",
+    "icao_code": "FMMU",
+    "iata_code": "WTA"
   },
   {
     "type": "medium_airport",
@@ -231,7 +354,15 @@
     "freq": "548.400",
     "Lat": -20.2847,
     "Lon": 44.3176,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "FMMV",
+    "iso_country": "MG",
+    "icao_code": "FMMV",
+    "iata_code": "MOQ",
+    "length_ft": 4413,
+    "width_ft": 115,
+    "heading": 124,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -240,7 +371,11 @@
     "freq": "",
     "Lat": -18.759677,
     "Lon": 46.054065,
-    "Ele": 846.1
+    "Ele": 846.1,
+    "ident": "FMMX",
+    "iso_country": "MG",
+    "icao_code": "FMMX",
+    "iata_code": "WTS"
   },
   {
     "type": "small_airport",
@@ -249,7 +384,11 @@
     "freq": "",
     "Lat": -19.383333,
     "Lon": 48.95,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "FMMY",
+    "iso_country": "MG",
+    "icao_code": "FMMY",
+    "iata_code": "VAT"
   },
   {
     "type": "small_airport",
@@ -258,7 +397,14 @@
     "freq": "",
     "Lat": -17.795378,
     "Lon": 48.442583,
-    "Ele": 766.0
+    "Ele": 766,
+    "ident": "FMMZ",
+    "iso_country": "MG",
+    "icao_code": "FMMZ",
+    "iata_code": "WAM",
+    "length_ft": 3937,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -267,7 +413,15 @@
     "freq": "548.400",
     "Lat": -12.3494,
     "Lon": 49.291698,
-    "Ele": 114.0
+    "Ele": 114,
+    "ident": "FMNA",
+    "iso_country": "MG",
+    "icao_code": "FMNA",
+    "iata_code": "DIE",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 124,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -276,7 +430,10 @@
     "freq": "",
     "Lat": -14.544277,
     "Lon": 48.691413,
-    "Ele": 1120.1
+    "Ele": 1120.1,
+    "ident": "FMNB",
+    "iso_country": "MG",
+    "iata_code": "WBE"
   },
   {
     "type": "medium_airport",
@@ -285,7 +442,15 @@
     "freq": "118.500",
     "Lat": -16.1639,
     "Lon": 49.7738,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "FMNC",
+    "iso_country": "MG",
+    "icao_code": "FMNC",
+    "iata_code": "WMR",
+    "length_ft": 4101,
+    "width_ft": 82,
+    "heading": 98,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -294,7 +459,15 @@
     "freq": "",
     "Lat": -14.651700019836426,
     "Lon": 49.620601654052734,
-    "Ele": 473.0
+    "Ele": 473,
+    "ident": "FMND",
+    "iso_country": "MG",
+    "icao_code": "FMND",
+    "iata_code": "ZWA",
+    "length_ft": 4153,
+    "width_ft": 98,
+    "heading": 5.4,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -303,7 +476,15 @@
     "freq": "",
     "Lat": -13.1884,
     "Lon": 48.987999,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "FMNE",
+    "iso_country": "MG",
+    "icao_code": "FMNE",
+    "iata_code": "AMB",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 103,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -312,7 +493,11 @@
     "freq": "",
     "Lat": -15.199999809265137,
     "Lon": 48.483001708984375,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "FMNF",
+    "iso_country": "MG",
+    "icao_code": "FMNF",
+    "iata_code": "WBD"
   },
   {
     "type": "small_airport",
@@ -321,7 +506,11 @@
     "freq": "",
     "Lat": -15.584286,
     "Lon": 47.623587,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "FMNG",
+    "iso_country": "MG",
+    "icao_code": "FMNG",
+    "iata_code": "WPB"
   },
   {
     "type": "medium_airport",
@@ -330,7 +519,15 @@
     "freq": "548.400",
     "Lat": -14.9994,
     "Lon": 50.320202,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "FMNH",
+    "iso_country": "MG",
+    "icao_code": "FMNH",
+    "iata_code": "ANM",
+    "length_ft": 3914,
+    "width_ft": 89,
+    "heading": 163,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -339,7 +536,15 @@
     "freq": "",
     "Lat": -14.629514,
     "Lon": 47.763555,
-    "Ele": 105.2
+    "Ele": 105.2,
+    "ident": "FMNL",
+    "iso_country": "MG",
+    "icao_code": "FMNL",
+    "iata_code": "HVA",
+    "length_ft": 3937,
+    "width_ft": 72,
+    "heading": 101,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -348,7 +553,15 @@
     "freq": "563.400",
     "Lat": -15.666842,
     "Lon": 46.351233,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "FMNM",
+    "iso_country": "MG",
+    "icao_code": "FMNM",
+    "iata_code": "MJN",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "heading": 132,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -357,7 +570,15 @@
     "freq": "548.400",
     "Lat": -13.3121,
     "Lon": 48.3148,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "FMNN",
+    "iso_country": "MG",
+    "icao_code": "FMNN",
+    "iata_code": "NOS",
+    "length_ft": 7185,
+    "width_ft": 148,
+    "heading": 43,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -366,7 +587,11 @@
     "freq": "",
     "Lat": -16.10169,
     "Lon": 45.358837,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "FMNO",
+    "iso_country": "MG",
+    "icao_code": "FMNO",
+    "iata_code": "DWB"
   },
   {
     "type": "small_airport",
@@ -375,7 +600,11 @@
     "freq": "",
     "Lat": -16.071916,
     "Lon": 47.642953,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "FMNP",
+    "iso_country": "MG",
+    "icao_code": "FMNP",
+    "iata_code": "WMP"
   },
   {
     "type": "medium_airport",
@@ -384,7 +613,15 @@
     "freq": "",
     "Lat": -16.74453,
     "Lon": 44.482484,
-    "Ele": 38.1
+    "Ele": 38.1,
+    "ident": "FMNQ",
+    "iso_country": "MG",
+    "icao_code": "FMNQ",
+    "iata_code": "BPY",
+    "length_ft": 4046,
+    "width_ft": 66,
+    "heading": 72,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -393,7 +630,15 @@
     "freq": "548.400",
     "Lat": -15.437742,
     "Lon": 49.689081,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "FMNR",
+    "iso_country": "MG",
+    "icao_code": "FMNR",
+    "iata_code": "WMN",
+    "length_ft": 4265,
+    "width_ft": 98,
+    "heading": 128.4,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -402,7 +647,15 @@
     "freq": "548.400",
     "Lat": -14.2786,
     "Lon": 50.174702,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "FMNS",
+    "iso_country": "MG",
+    "icao_code": "FMNS",
+    "iata_code": "SVB",
+    "length_ft": 4577,
+    "width_ft": 98,
+    "heading": 151.9,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -411,7 +664,11 @@
     "freq": "",
     "Lat": -16.751064,
     "Lon": 47.619016,
-    "Ele": 327.1
+    "Ele": 327.1,
+    "ident": "FMNT",
+    "iso_country": "MG",
+    "icao_code": "FMNT",
+    "iata_code": "TTS"
   },
   {
     "type": "medium_airport",
@@ -420,7 +677,15 @@
     "freq": "119.500",
     "Lat": -13.3758,
     "Lon": 50.0028,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "FMNV",
+    "iso_country": "MG",
+    "icao_code": "FMNV",
+    "iata_code": "VOH",
+    "length_ft": 4236,
+    "width_ft": 82,
+    "heading": 132,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -429,7 +694,15 @@
     "freq": "548.400",
     "Lat": -14.8988,
     "Lon": 47.9939,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "FMNW",
+    "iso_country": "MG",
+    "icao_code": "FMNW",
+    "iata_code": "WAI",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -438,7 +711,11 @@
     "freq": "",
     "Lat": -15.845992,
     "Lon": 48.834718,
-    "Ele": 306.9
+    "Ele": 306.9,
+    "ident": "FMNX",
+    "iso_country": "MG",
+    "icao_code": "FMNX",
+    "iata_code": "WMA"
   },
   {
     "type": "small_airport",
@@ -447,7 +724,14 @@
     "freq": "",
     "Lat": -13.484816,
     "Lon": 48.632702,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "FMNZ",
+    "iso_country": "MG",
+    "iata_code": "IVA",
+    "length_ft": 4450,
+    "width_ft": 44,
+    "heading": 140,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -456,7 +740,10 @@
     "freq": "",
     "Lat": -21.814891,
     "Lon": 46.914024,
-    "Ele": 972.0
+    "Ele": 972,
+    "ident": "FMSA",
+    "iso_country": "MG",
+    "icao_code": "FMSA"
   },
   {
     "type": "small_airport",
@@ -465,7 +752,11 @@
     "freq": "",
     "Lat": -21.6069837647,
     "Lon": 45.1360201836,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "FMSB",
+    "iso_country": "MG",
+    "icao_code": "FMSB",
+    "iata_code": "WBO"
   },
   {
     "type": "small_airport",
@@ -474,7 +765,11 @@
     "freq": "",
     "Lat": -21.0463049303,
     "Lon": 44.9404120445,
-    "Ele": 289.9
+    "Ele": 289.9,
+    "ident": "FMSC",
+    "iso_country": "MG",
+    "icao_code": "FMSC",
+    "iata_code": "WMD"
   },
   {
     "type": "medium_airport",
@@ -483,7 +778,15 @@
     "freq": "118.700",
     "Lat": -25.038099,
     "Lon": 46.9561,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "FMSD",
+    "iso_country": "MG",
+    "icao_code": "FMSD",
+    "iata_code": "FTU",
+    "length_ft": 5280,
+    "width_ft": 98,
+    "heading": 53,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -492,7 +795,10 @@
     "freq": "",
     "Lat": -23.274308,
     "Lon": 46.124983,
-    "Ele": 865.9
+    "Ele": 865.9,
+    "ident": "FMSE",
+    "iso_country": "MG",
+    "icao_code": "FMSE"
   },
   {
     "type": "medium_airport",
@@ -501,7 +807,15 @@
     "freq": "548.400",
     "Lat": -21.441601,
     "Lon": 47.111698,
-    "Ele": 1115.0
+    "Ele": 1115,
+    "ident": "FMSF",
+    "iso_country": "MG",
+    "icao_code": "FMSF",
+    "iata_code": "WFI",
+    "length_ft": 4101,
+    "width_ft": 82,
+    "heading": 62,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -510,7 +824,15 @@
     "freq": "118.400",
     "Lat": -22.8053,
     "Lon": 47.820599,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "FMSG",
+    "iso_country": "MG",
+    "icao_code": "FMSG",
+    "iata_code": "RVA",
+    "length_ft": 3445,
+    "width_ft": 82,
+    "heading": 108,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -519,7 +841,11 @@
     "freq": "",
     "Lat": -22.4047202024,
     "Lon": 46.1649370193,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "FMSI",
+    "iso_country": "MG",
+    "icao_code": "FMSI",
+    "iata_code": "IHO"
   },
   {
     "type": "small_airport",
@@ -528,7 +854,14 @@
     "freq": "",
     "Lat": -21.426105,
     "Lon": 44.316509,
-    "Ele": 239.9
+    "Ele": 239.9,
+    "ident": "FMSJ",
+    "iso_country": "MG",
+    "icao_code": "FMSJ",
+    "iata_code": "MJA",
+    "length_ft": 5249,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -537,7 +870,15 @@
     "freq": "548.400",
     "Lat": -22.119699,
     "Lon": 48.021702,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "FMSK",
+    "iso_country": "MG",
+    "icao_code": "FMSK",
+    "iata_code": "WVK",
+    "length_ft": 3886,
+    "width_ft": 79,
+    "heading": 33.7,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -546,7 +887,11 @@
     "freq": "",
     "Lat": -24.235694754699995,
     "Lon": 45.3045272827,
-    "Ele": 387.1
+    "Ele": 387.1,
+    "ident": "FMSL",
+    "iso_country": "MG",
+    "icao_code": "FMSL",
+    "iata_code": "OVA"
   },
   {
     "type": "medium_airport",
@@ -555,7 +900,15 @@
     "freq": "548.400",
     "Lat": -21.201799,
     "Lon": 48.358299,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "FMSM",
+    "iso_country": "MG",
+    "icao_code": "FMSM",
+    "iata_code": "MNJ",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 22,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -564,7 +917,11 @@
     "freq": "",
     "Lat": -21.700000762939453,
     "Lon": 43.733001708984375,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "FMSN",
+    "iso_country": "MG",
+    "icao_code": "FMSN",
+    "iata_code": "TDV"
   },
   {
     "type": "medium_airport",
@@ -573,7 +930,15 @@
     "freq": "548.400",
     "Lat": -21.753837,
     "Lon": 43.374753,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "FMSR",
+    "iso_country": "MG",
+    "icao_code": "FMSR",
+    "iata_code": "MXM",
+    "length_ft": 4265,
+    "width_ft": 98,
+    "heading": 28,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -582,7 +947,15 @@
     "freq": "548.400",
     "Lat": -23.3834,
     "Lon": 43.7285,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "FMST",
+    "iso_country": "MG",
+    "icao_code": "FMST",
+    "iata_code": "TLE",
+    "length_ft": 2625,
+    "width_ft": 42,
+    "heading": 88,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -591,7 +964,11 @@
     "freq": "",
     "Lat": -23.3507665915,
     "Lon": 47.5817012787,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "FMSU",
+    "iso_country": "MG",
+    "icao_code": "FMSU",
+    "iata_code": "VND"
   },
   {
     "type": "small_airport",
@@ -600,7 +977,11 @@
     "freq": "",
     "Lat": -23.732999801635746,
     "Lon": 44.38899993896485,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "FMSV",
+    "iso_country": "MG",
+    "icao_code": "FMSV",
+    "iata_code": "BKU"
   },
   {
     "type": "small_airport",
@@ -609,7 +990,11 @@
     "freq": "",
     "Lat": -24.699699,
     "Lon": 44.7342,
-    "Ele": 235.0
+    "Ele": 235,
+    "ident": "FMSY",
+    "iso_country": "MG",
+    "icao_code": "FMSY",
+    "iata_code": "AMP"
   },
   {
     "type": "small_airport",
@@ -618,7 +1003,11 @@
     "freq": "",
     "Lat": -22.2964423522,
     "Lon": 44.5315361023,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "FMSZ",
+    "iso_country": "MG",
+    "icao_code": "FMSZ",
+    "iata_code": "WAK"
   },
   {
     "type": "small_airport",
@@ -627,7 +1016,9 @@
     "freq": "",
     "Lat": -15.0231,
     "Lon": 47.2325,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "MG-0002",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -636,7 +1027,9 @@
     "freq": "",
     "Lat": -25.075585,
     "Lon": 46.393433,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0003",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -645,7 +1038,9 @@
     "freq": "",
     "Lat": -24.84006,
     "Lon": 45.675457,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0004",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -654,7 +1049,9 @@
     "freq": "",
     "Lat": -24.691968,
     "Lon": 43.950994,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0005",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -663,7 +1060,9 @@
     "freq": "",
     "Lat": -24.031299,
     "Lon": 45.026573,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0006",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -672,7 +1071,9 @@
     "freq": "",
     "Lat": -24.820849,
     "Lon": 46.153777,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0007",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -681,7 +1082,9 @@
     "freq": "",
     "Lat": -25.338352,
     "Lon": 45.476395,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0008",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -690,7 +1093,9 @@
     "freq": "",
     "Lat": -25.204247,
     "Lon": 46.071143,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0009",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -699,7 +1104,9 @@
     "freq": "",
     "Lat": -24.717074,
     "Lon": 45.059513,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0010",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -708,7 +1115,9 @@
     "freq": "",
     "Lat": -24.382498,
     "Lon": 46.556238,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0011",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -717,7 +1126,9 @@
     "freq": "",
     "Lat": -16.739423,
     "Lon": 49.972078,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-0012",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -726,7 +1137,9 @@
     "freq": "",
     "Lat": -15.022743,
     "Lon": 47.909478,
-    "Ele": 74.1
+    "Ele": 74.1,
+    "ident": "MG-0013",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -735,7 +1148,10 @@
     "freq": "",
     "Lat": -14.86584,
     "Lon": 47.29552,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MG-0014",
+    "iso_country": "MG",
+    "local_code": "WOR"
   },
   {
     "type": "small_airport",
@@ -744,7 +1160,9 @@
     "freq": "",
     "Lat": -14.95568,
     "Lon": 47.3065,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "MG-0015",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -753,7 +1171,9 @@
     "freq": "",
     "Lat": -15.13517,
     "Lon": 47.10681,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "MG-0016",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -762,7 +1182,9 @@
     "freq": "",
     "Lat": -15.14262,
     "Lon": 47.07671,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "MG-0017",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -780,7 +1202,9 @@
     "freq": "",
     "Lat": -14.71884,
     "Lon": 47.47426,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "MG-0019",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -789,7 +1213,10 @@
     "freq": "",
     "Lat": -16.594919,
     "Lon": 44.453654,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "MG-0020",
+    "iso_country": "MG",
+    "iata_code": "NKO"
   },
   {
     "type": "small_airport",
@@ -798,7 +1225,10 @@
     "freq": "",
     "Lat": -22.645343,
     "Lon": 45.323914,
-    "Ele": 826.9
+    "Ele": 826.9,
+    "ident": "MG-0021",
+    "iso_country": "MG",
+    "iata_code": "RLR"
   },
   {
     "type": "small_airport",
@@ -807,7 +1237,9 @@
     "freq": "",
     "Lat": -18.574666,
     "Lon": 47.238588,
-    "Ele": 1375.0
+    "Ele": 1375,
+    "ident": "MG-0022",
+    "iso_country": "MG"
   },
   {
     "type": "small_airport",
@@ -816,7 +1248,10 @@
     "freq": "",
     "Lat": -14.3681001663208,
     "Lon": 49.51079940795898,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MG-DOA",
+    "iso_country": "MG",
+    "iata_code": "DOA"
   },
   {
     "type": "small_airport",
@@ -825,7 +1260,10 @@
     "freq": "",
     "Lat": -18.345064,
     "Lon": 45.015643,
-    "Ele": 230.1
+    "Ele": 230.1,
+    "ident": "TZO",
+    "iso_country": "MG",
+    "iata_code": "TZO"
   },
   {
     "type": "small_airport",
@@ -834,6 +1272,9 @@
     "freq": "",
     "Lat": -17.631,
     "Lon": 47.7233,
-    "Ele": 754.4
+    "Ele": 754.4,
+    "ident": "WAD",
+    "iso_country": "MG",
+    "iata_code": "WAD"
   }
 ]

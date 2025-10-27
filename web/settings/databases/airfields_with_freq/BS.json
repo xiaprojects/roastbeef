@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 23.649674,
     "Lon": -75.32409,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BS-0003",
+    "iso_country": "BS",
+    "icao_code": "MYLM"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,9 @@
     "freq": "",
     "Lat": 23.911301835800003,
     "Lon": -76.27444982530001,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "BS-0004",
+    "iso_country": "BS"
   },
   {
     "type": "small_airport",
@@ -24,7 +29,9 @@
     "freq": "",
     "Lat": 23.961372,
     "Lon": -76.326206,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "BS-0005",
+    "iso_country": "BS"
   },
   {
     "type": "small_airport",
@@ -33,7 +40,11 @@
     "freq": "",
     "Lat": 26.317729,
     "Lon": -77.561331,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MYA0",
+    "iso_country": "BS",
+    "icao_code": "MYAO",
+    "local_code": "MYAO"
   },
   {
     "type": "medium_airport",
@@ -42,7 +53,15 @@
     "freq": "",
     "Lat": 24.287701,
     "Lon": -77.684601,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "MYAB",
+    "iso_country": "BS",
+    "icao_code": "MYAB",
+    "iata_code": "MAY",
+    "length_ft": 5000,
+    "width_ft": 75,
+    "heading": 82.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -51,7 +70,15 @@
     "freq": "126.300",
     "Lat": 24.697901,
     "Lon": -77.795601,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYAF",
+    "iso_country": "BS",
+    "icao_code": "MYAF",
+    "iata_code": "ASD",
+    "length_ft": 4355,
+    "width_ft": 100,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -60,7 +87,16 @@
     "freq": "122.800",
     "Lat": 24.158701,
     "Lon": -77.589798,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MYAK",
+    "iso_country": "BS",
+    "icao_code": "MYAK",
+    "iata_code": "TZN",
+    "local_code": "COX",
+    "length_ft": 5300,
+    "width_ft": 100,
+    "heading": 101,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -69,7 +105,15 @@
     "freq": "126.500",
     "Lat": 26.510711,
     "Lon": -77.084262,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "MYAM",
+    "iso_country": "BS",
+    "icao_code": "MYAM",
+    "iata_code": "MHH",
+    "length_ft": 6100,
+    "width_ft": 100,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -78,7 +122,15 @@
     "freq": "122.800",
     "Lat": 25.053800582885746,
     "Lon": -78.04900360107422,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYAN",
+    "iso_country": "BS",
+    "icao_code": "MYAN",
+    "iata_code": "SAQ",
+    "length_ft": 5025,
+    "width_ft": 75,
+    "heading": 111.7,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -87,7 +139,15 @@
     "freq": "",
     "Lat": 22.441799,
     "Lon": -73.970901,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "MYAP",
+    "iso_country": "BS",
+    "icao_code": "MYAP",
+    "iata_code": "AXP",
+    "length_ft": 5000,
+    "width_ft": 150,
+    "heading": 126.6,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -96,7 +156,14 @@
     "freq": "",
     "Lat": 26.004698,
     "Lon": -77.395622,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MYAS",
+    "iso_country": "BS",
+    "icao_code": "MYAS",
+    "length_ft": 4500,
+    "width_ft": 100,
+    "heading": 98.7,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -105,7 +172,15 @@
     "freq": "121.000",
     "Lat": 26.745300293,
     "Lon": -77.3912963867,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MYAT",
+    "iso_country": "BS",
+    "icao_code": "MYAT",
+    "iata_code": "TCB",
+    "length_ft": 7001,
+    "width_ft": 150,
+    "heading": 133,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -114,7 +189,11 @@
     "freq": "",
     "Lat": 27.259656,
     "Lon": -78.400455,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYAW",
+    "iso_country": "BS",
+    "icao_code": "MYAW",
+    "iata_code": "WKR"
   },
   {
     "type": "small_airport",
@@ -123,7 +202,14 @@
     "freq": "122.800",
     "Lat": 26.9503,
     "Lon": -77.5438,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYAX",
+    "iso_country": "BS",
+    "icao_code": "MYAX",
+    "length_ft": 4402,
+    "width_ft": 70,
+    "heading": 127,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -132,7 +218,15 @@
     "freq": "122.800",
     "Lat": 25.417101,
     "Lon": -77.880898,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYBC",
+    "iso_country": "BS",
+    "icao_code": "MYBC",
+    "iata_code": "CCZ",
+    "length_ft": 5000,
+    "width_ft": 78,
+    "heading": 105,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -141,7 +235,15 @@
     "freq": "122.800",
     "Lat": 25.7383,
     "Lon": -77.840103,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "MYBG",
+    "iso_country": "BS",
+    "icao_code": "MYBG",
+    "iata_code": "GHC",
+    "length_ft": 4536,
+    "width_ft": 80,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -150,7 +252,15 @@
     "freq": "124.200",
     "Lat": 25.6998996735,
     "Lon": -79.2647018433,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYBS",
+    "iso_country": "BS",
+    "icao_code": "MYBS",
+    "iata_code": "BIM",
+    "length_ft": 5409,
+    "width_ft": 100,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -159,7 +269,15 @@
     "freq": "",
     "Lat": 24.6294,
     "Lon": -75.673797,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "MYCA",
+    "iso_country": "BS",
+    "icao_code": "MYCA",
+    "iata_code": "ATC",
+    "length_ft": 7000,
+    "width_ft": 150,
+    "heading": 111.3,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -168,7 +286,15 @@
     "freq": "",
     "Lat": 24.3153,
     "Lon": -75.452301,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYCB",
+    "iso_country": "BS",
+    "icao_code": "MYCB",
+    "iata_code": "TBI",
+    "length_ft": 5050,
+    "width_ft": 100,
+    "heading": 85.7,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -177,7 +303,11 @@
     "freq": "",
     "Lat": 25.554425,
     "Lon": -79.275404,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "MYCC",
+    "iso_country": "BS",
+    "icao_code": "MYCC",
+    "iata_code": "CXY"
   },
   {
     "type": "small_airport",
@@ -186,7 +316,9 @@
     "freq": "",
     "Lat": 24.15449,
     "Lon": -75.51796,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MYCH",
+    "iso_country": "BS"
   },
   {
     "type": "medium_airport",
@@ -195,7 +327,15 @@
     "freq": "",
     "Lat": 22.7456,
     "Lon": -74.182404,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYCI",
+    "iso_country": "BS",
+    "icao_code": "MYCI",
+    "iata_code": "CRI",
+    "length_ft": 4061,
+    "width_ft": 60,
+    "heading": 86.7,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -204,7 +344,11 @@
     "freq": "",
     "Lat": 22.8297,
     "Lon": -74.3461,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MYCP",
+    "iso_country": "BS",
+    "icao_code": "MYCP",
+    "iata_code": "PWN"
   },
   {
     "type": "small_airport",
@@ -213,7 +357,13 @@
     "freq": "",
     "Lat": 23.697625,
     "Lon": -80.389781,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYCS",
+    "iso_country": "BS",
+    "icao_code": "MYCS",
+    "length_ft": 2401,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -222,7 +372,14 @@
     "freq": "",
     "Lat": 24.089488,
     "Lon": -76.397917,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYEB",
+    "iso_country": "BS",
+    "icao_code": "MYEB",
+    "length_ft": 2500,
+    "width_ft": 80,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -231,7 +388,15 @@
     "freq": "118.000",
     "Lat": 23.562599,
     "Lon": -75.877998,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "MYEF",
+    "iso_country": "BS",
+    "icao_code": "MYEF",
+    "iata_code": "GGT",
+    "length_ft": 7051,
+    "width_ft": 150,
+    "heading": 118,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -240,7 +405,15 @@
     "freq": "124.100",
     "Lat": 25.474899292,
     "Lon": -76.6835021973,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "MYEH",
+    "iso_country": "BS",
+    "icao_code": "MYEH",
+    "iata_code": "ELH",
+    "length_ft": 6020,
+    "width_ft": 100,
+    "heading": 68.2,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -249,7 +422,9 @@
     "freq": "",
     "Lat": 23.7756,
     "Lon": -76.1036,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MYEL",
+    "iso_country": "BS"
   },
   {
     "type": "medium_airport",
@@ -258,7 +433,15 @@
     "freq": "122.800",
     "Lat": 25.2847,
     "Lon": -76.331001,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MYEM",
+    "iso_country": "BS",
+    "icao_code": "MYEM",
+    "iata_code": "GHB",
+    "length_ft": 8024,
+    "width_ft": 150,
+    "heading": 144.8,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -267,7 +450,15 @@
     "freq": "122.800",
     "Lat": 24.594299,
     "Lon": -76.820198,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MYEN",
+    "iso_country": "BS",
+    "icao_code": "MYEN",
+    "iata_code": "NMC",
+    "length_ft": 4703,
+    "width_ft": 80,
+    "heading": 25,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -276,7 +467,15 @@
     "freq": "122.800",
     "Lat": 24.8950787333,
     "Lon": -76.1768817902,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYER",
+    "iso_country": "BS",
+    "icao_code": "MYER",
+    "iata_code": "RSD",
+    "length_ft": 7213,
+    "width_ft": 150,
+    "heading": 87.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -285,7 +484,15 @@
     "freq": "122.800",
     "Lat": 24.1691,
     "Lon": -76.439102,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYES",
+    "iso_country": "BS",
+    "icao_code": "MYES",
+    "iata_code": "TYM",
+    "length_ft": 3030,
+    "width_ft": 75,
+    "heading": 164,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -294,7 +501,14 @@
     "freq": "",
     "Lat": 23.3972,
     "Lon": -75.496902,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYEY",
+    "iso_country": "BS",
+    "icao_code": "MYTC",
+    "length_ft": 5300,
+    "width_ft": 100,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -303,7 +517,10 @@
     "freq": "",
     "Lat": 26.631701,
     "Lon": -77.9217,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MYGD",
+    "iso_country": "BS",
+    "icao_code": "MYGD"
   },
   {
     "type": "medium_airport",
@@ -312,7 +529,15 @@
     "freq": "126.500",
     "Lat": 26.5587005615,
     "Lon": -78.695602417,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MYGF",
+    "iso_country": "BS",
+    "icao_code": "MYGF",
+    "iata_code": "FPO",
+    "length_ft": 11019,
+    "width_ft": 151,
+    "heading": 61,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -321,7 +546,9 @@
     "freq": "",
     "Lat": 26.631901,
     "Lon": -78.3592,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MYGM",
+    "iso_country": "BS"
   },
   {
     "type": "small_airport",
@@ -330,7 +557,11 @@
     "freq": "",
     "Lat": 26.685301,
     "Lon": -78.974998,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYGW",
+    "iso_country": "BS",
+    "icao_code": "MYGW",
+    "iata_code": "WTD"
   },
   {
     "type": "medium_airport",
@@ -339,7 +570,15 @@
     "freq": "124.200",
     "Lat": 20.975,
     "Lon": -73.666901,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MYIG",
+    "iso_country": "BS",
+    "icao_code": "MYIG",
+    "iata_code": "IGA",
+    "length_ft": 7020,
+    "width_ft": 100,
+    "heading": 95,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -348,7 +587,15 @@
     "freq": "",
     "Lat": 23.1790008545,
     "Lon": -75.09359741210001,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "MYLD",
+    "iso_country": "BS",
+    "icao_code": "MYLD",
+    "iata_code": "LGI",
+    "length_ft": 4000,
+    "width_ft": 100,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -357,7 +604,9 @@
     "freq": "",
     "Lat": 23.009934,
     "Lon": -74.904851,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "MYLR",
+    "iso_country": "BS"
   },
   {
     "type": "medium_airport",
@@ -366,7 +615,15 @@
     "freq": "122.800",
     "Lat": 23.582317,
     "Lon": -75.268621,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYLS",
+    "iso_country": "BS",
+    "icao_code": "MYLS",
+    "iata_code": "SML",
+    "length_ft": 4000,
+    "width_ft": 75,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -375,7 +632,15 @@
     "freq": "",
     "Lat": 22.379499,
     "Lon": -73.013494,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "MYMM",
+    "iso_country": "BS",
+    "icao_code": "MYMM",
+    "iata_code": "MYG",
+    "length_ft": 7297,
+    "width_ft": 150,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "large_airport",
@@ -384,7 +649,15 @@
     "freq": "121.000",
     "Lat": 25.039,
     "Lon": -77.466202,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MYNN",
+    "iso_country": "BS",
+    "icao_code": "MYNN",
+    "iata_code": "NAS",
+    "length_ft": 11353,
+    "width_ft": 150,
+    "heading": 135,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -393,7 +666,15 @@
     "freq": "",
     "Lat": 22.181801,
     "Lon": -75.7295,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "MYRD",
+    "iso_country": "BS",
+    "icao_code": "MYRD",
+    "iata_code": "DCT",
+    "length_ft": 3800,
+    "width_ft": 75,
+    "heading": 129.7,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -402,7 +683,15 @@
     "freq": "122.800",
     "Lat": 23.68344,
     "Lon": -74.836302,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MYRP",
+    "iso_country": "BS",
+    "icao_code": "MYRP",
+    "iata_code": "RCY",
+    "length_ft": 4500,
+    "width_ft": 100,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -411,7 +700,15 @@
     "freq": "124.600",
     "Lat": 24.063299,
     "Lon": -74.524002,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "MYSM",
+    "iso_country": "BS",
+    "icao_code": "MYSM",
+    "iata_code": "ZSA",
+    "length_ft": 8000,
+    "width_ft": 150,
+    "heading": 95.1,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -420,7 +717,10 @@
     "freq": "",
     "Lat": 25.399599,
     "Lon": -77.791,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "MYX4",
+    "iso_country": "BS",
+    "icao_code": "MYBW"
   },
   {
     "type": "small_airport",
@@ -429,7 +729,10 @@
     "freq": "",
     "Lat": 23.88640022277832,
     "Lon": -76.25370025634766,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MYX7",
+    "iso_country": "BS",
+    "local_code": "MYX7"
   },
   {
     "type": "small_airport",
@@ -438,7 +741,10 @@
     "freq": "",
     "Lat": 23.85029983520508,
     "Lon": -76.22820281982422,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYX8",
+    "iso_country": "BS",
+    "local_code": "MYX8"
   },
   {
     "type": "small_airport",
@@ -447,7 +753,10 @@
     "freq": "",
     "Lat": 23.6007,
     "Lon": -75.339302,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYXC",
+    "iso_country": "BS",
+    "local_code": "MYXC"
   },
   {
     "type": "small_airport",
@@ -456,7 +765,13 @@
     "freq": "",
     "Lat": 24.149435,
     "Lon": -76.472843,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MYXD",
+    "iso_country": "BS",
+    "local_code": "MYXD",
+    "length_ft": 1200,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -474,7 +789,10 @@
     "freq": "",
     "Lat": 24.216079,
     "Lon": -76.478458,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MYXH",
+    "iso_country": "BS",
+    "local_code": "MYXH"
   },
   {
     "type": "small_airport",
@@ -483,6 +801,10 @@
     "freq": "",
     "Lat": 25.449349,
     "Lon": -77.759991,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MYZ3",
+    "iso_country": "BS",
+    "icao_code": "MYBX",
+    "local_code": "MYZ3"
   }
 ]

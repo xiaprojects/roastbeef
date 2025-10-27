@@ -6,7 +6,15 @@
     "freq": "119.400",
     "Lat": 12.0042,
     "Lon": -61.786201,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "TGPY",
+    "iso_country": "GD",
+    "icao_code": "TGPY",
+    "iata_code": "GND",
+    "length_ft": 9003,
+    "width_ft": 148,
+    "heading": 90.3,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -15,6 +23,13 @@
     "freq": "120.800",
     "Lat": 12.4761,
     "Lon": -61.472801,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "TGPZ",
+    "iso_country": "GD",
+    "icao_code": "TGPZ",
+    "iata_code": "CRU",
+    "length_ft": 2625,
+    "QFU": "27",
+    "heading": 270
   }
 ]

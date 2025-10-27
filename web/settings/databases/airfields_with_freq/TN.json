@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 33.350201,
     "Lon": 10.444,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "DT70",
+    "iso_country": "TN",
+    "local_code": "DT70",
+    "length_ft": 3952,
+    "width_ft": 40,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "119.250",
     "Lat": 36.98,
     "Lon": 8.87694,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "DTKA",
+    "iso_country": "TN",
+    "icao_code": "DTKA",
+    "iata_code": "TBJ",
+    "length_ft": 9416,
+    "width_ft": 148,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,15 @@
     "freq": "119.300",
     "Lat": 35.75809860229492,
     "Lon": 10.75469970703125,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "DTMB",
+    "iso_country": "TN",
+    "icao_code": "DTMB",
+    "iata_code": "MIR",
+    "length_ft": 9678,
+    "width_ft": 148,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -33,7 +56,16 @@
     "freq": "136.300",
     "Lat": 36.075833,
     "Lon": 10.438611,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "DTNH",
+    "iso_country": "TN",
+    "icao_code": "DTNH",
+    "iata_code": "NBE",
+    "local_code": "DTNH",
+    "length_ft": 10827,
+    "width_ft": 197,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -42,7 +74,15 @@
     "freq": "121.200",
     "Lat": 36.851002,
     "Lon": 10.2272,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "DTTA",
+    "iso_country": "TN",
+    "icao_code": "DTTA",
+    "iata_code": "TUN",
+    "length_ft": 9318,
+    "width_ft": 148,
+    "heading": 112.5,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -51,7 +91,14 @@
     "freq": "",
     "Lat": 37.242356,
     "Lon": 9.787016,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "DTTB",
+    "iso_country": "TN",
+    "icao_code": "DTTB",
+    "length_ft": 3975,
+    "width_ft": 164,
+    "heading": 111,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -60,7 +107,13 @@
     "freq": "",
     "Lat": 32.306198,
     "Lon": 10.3821,
-    "Ele": 306.0
+    "Ele": 306,
+    "ident": "DTTD",
+    "iso_country": "TN",
+    "length_ft": 7812,
+    "width_ft": 148,
+    "heading": 23,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -69,7 +122,15 @@
     "freq": "122.100",
     "Lat": 34.422000885009766,
     "Lon": 8.822500228881836,
-    "Ele": 323.1
+    "Ele": 323.1,
+    "ident": "DTTF",
+    "iso_country": "TN",
+    "icao_code": "DTTF",
+    "iata_code": "GAF",
+    "length_ft": 9514,
+    "width_ft": 148,
+    "heading": 48.5,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -78,7 +139,15 @@
     "freq": "129.150",
     "Lat": 33.733691,
     "Lon": 9.91941,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "DTTG",
+    "iso_country": "TN",
+    "icao_code": "DTTG",
+    "iata_code": "GAE",
+    "length_ft": 3702,
+    "width_ft": 82,
+    "heading": 60.7,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -87,7 +156,13 @@
     "freq": "123.000",
     "Lat": 36.721298,
     "Lon": 9.94315,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "DTTI",
+    "iso_country": "TN",
+    "length_ft": 3407,
+    "width_ft": 98,
+    "heading": 126,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -96,7 +171,15 @@
     "freq": "120.300",
     "Lat": 33.875,
     "Lon": 10.7755,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "DTTJ",
+    "iso_country": "TN",
+    "icao_code": "DTTJ",
+    "iata_code": "DJE",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 88.3,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -105,7 +188,15 @@
     "freq": "",
     "Lat": 31.7043,
     "Lon": 9.25462,
-    "Ele": 252.1
+    "Ele": 252.1,
+    "ident": "DTTR",
+    "iso_country": "TN",
+    "icao_code": "DTTR",
+    "iata_code": "EBM",
+    "length_ft": 8858,
+    "width_ft": 148,
+    "heading": 115.1,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -114,7 +205,15 @@
     "freq": "123.700",
     "Lat": 34.71799850463867,
     "Lon": 10.690999984741213,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "DTTX",
+    "iso_country": "TN",
+    "icao_code": "DTTX",
+    "iata_code": "SFA",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 148.1,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -123,6 +222,14 @@
     "freq": "120.700",
     "Lat": 33.939701080322266,
     "Lon": 8.110560417175293,
-    "Ele": 87.5
+    "Ele": 87.5,
+    "ident": "DTTZ",
+    "iso_country": "TN",
+    "icao_code": "DTTZ",
+    "iata_code": "TOE",
+    "length_ft": 10581,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "27"
   }
 ]

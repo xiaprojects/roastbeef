@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 57.984603,
     "Lon": 22.195027,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EE-0010",
+    "iso_country": "EE",
+    "local_code": "EE0010"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 59.40601,
     "Lon": 25.26657,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EE-0011",
+    "iso_country": "EE",
+    "local_code": "EE0011"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,9 @@
     "freq": "",
     "Lat": 59.409187,
     "Lon": 27.551925,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EE-0015",
+    "iso_country": "EE"
   },
   {
     "type": "small_airport",
@@ -33,7 +41,9 @@
     "freq": "",
     "Lat": 59.384655,
     "Lon": 27.02493,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EE-0016",
+    "iso_country": "EE"
   },
   {
     "type": "small_airport",
@@ -42,7 +52,9 @@
     "freq": "",
     "Lat": 59.239749,
     "Lon": 25.017607,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EE-0017",
+    "iso_country": "EE"
   },
   {
     "type": "small_airport",
@@ -51,7 +63,14 @@
     "freq": "",
     "Lat": 59.364032,
     "Lon": 26.35874,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "EE-9281",
+    "iso_country": "EE",
+    "icao_code": "EERE",
+    "length_ft": 2461,
+    "width_ft": 82,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -60,7 +79,9 @@
     "freq": "",
     "Lat": 59.335726,
     "Lon": 24.520798,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EE-9282",
+    "iso_country": "EE"
   },
   {
     "type": "small_airport",
@@ -69,7 +90,14 @@
     "freq": "",
     "Lat": 57.826111,
     "Lon": 26.4925,
-    "Ele": 78.6
+    "Ele": 78.6,
+    "ident": "EEAA",
+    "iso_country": "EE",
+    "icao_code": "EEAA",
+    "length_ft": 2067,
+    "width_ft": 66,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -78,7 +106,9 @@
     "freq": "",
     "Lat": 59.204711,
     "Lon": 24.610995,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "EEAE",
+    "iso_country": "EE"
   },
   {
     "type": "medium_airport",
@@ -87,7 +117,14 @@
     "freq": "120.900",
     "Lat": 59.259599,
     "Lon": 24.204799,
-    "Ele": 19.8
+    "Ele": 19.8,
+    "ident": "EEEI",
+    "iso_country": "EE",
+    "icao_code": "EEEI",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -96,7 +133,14 @@
     "freq": "127.905",
     "Lat": 59.3579,
     "Lon": 24.3795,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "EEHA",
+    "iso_country": "EE",
+    "icao_code": "EEHA",
+    "length_ft": 1378,
+    "width_ft": 66,
+    "heading": 44,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -105,7 +149,14 @@
     "freq": "",
     "Lat": 59.325974,
     "Lon": 27.392883,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "EEJI",
+    "iso_country": "EE",
+    "icao_code": "EEJI",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -114,7 +165,15 @@
     "freq": "133.405",
     "Lat": 58.99079895019531,
     "Lon": 22.830699920654297,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "EEKA",
+    "iso_country": "EE",
+    "icao_code": "EEKA",
+    "iata_code": "KDL",
+    "length_ft": 4987,
+    "width_ft": 98,
+    "heading": 147,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -123,7 +182,15 @@
     "freq": "118.050",
     "Lat": 58.22990036010742,
     "Lon": 22.50950050354004,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "EEKE",
+    "iso_country": "EE",
+    "icao_code": "EEKE",
+    "iata_code": "URE",
+    "length_ft": 4980,
+    "width_ft": 98,
+    "heading": 180,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -132,7 +199,14 @@
     "freq": "",
     "Lat": 58.117078,
     "Lon": 25.552783,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "EEKI",
+    "iso_country": "EE",
+    "icao_code": "EEKI",
+    "length_ft": 2215,
+    "width_ft": 161,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -141,7 +215,9 @@
     "freq": "",
     "Lat": 59.168317,
     "Lon": 25.07097,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EEKO",
+    "iso_country": "EE"
   },
   {
     "type": "small_airport",
@@ -150,7 +226,10 @@
     "freq": "",
     "Lat": 58.148039,
     "Lon": 23.998523,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "EEKU",
+    "iso_country": "EE",
+    "icao_code": "EEKU"
   },
   {
     "type": "small_airport",
@@ -159,7 +238,14 @@
     "freq": "133.905",
     "Lat": 58.290658,
     "Lon": 26.767748,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EELM",
+    "iso_country": "EE",
+    "icao_code": "EELM",
+    "length_ft": 1345,
+    "width_ft": 79,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -168,7 +254,10 @@
     "freq": "",
     "Lat": 59.02211,
     "Lon": 23.57808,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "EELU",
+    "iso_country": "EE",
+    "icao_code": "EELU"
   },
   {
     "type": "small_airport",
@@ -177,7 +266,9 @@
     "freq": "",
     "Lat": 58.653495,
     "Lon": 23.271369,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "EEMU",
+    "iso_country": "EE"
   },
   {
     "type": "small_airport",
@@ -186,7 +277,14 @@
     "freq": "",
     "Lat": 59.388599,
     "Lon": 28.1136,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "EENA",
+    "iso_country": "EE",
+    "icao_code": "EENA",
+    "length_ft": 2000,
+    "width_ft": 164,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -195,7 +293,9 @@
     "freq": "",
     "Lat": 59.018446,
     "Lon": 23.489258,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EEPA",
+    "iso_country": "EE"
   },
   {
     "type": "medium_airport",
@@ -204,7 +304,15 @@
     "freq": "132.000",
     "Lat": 58.41899871826172,
     "Lon": 24.47279930114746,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "EEPU",
+    "iso_country": "EE",
+    "icao_code": "EEPU",
+    "iata_code": "EPU",
+    "length_ft": 6463,
+    "width_ft": 98,
+    "heading": 35,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -213,7 +321,10 @@
     "freq": "131.030",
     "Lat": 58.99028,
     "Lon": 24.716386,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "EERA",
+    "iso_country": "EE",
+    "icao_code": "EERA"
   },
   {
     "type": "small_airport",
@@ -222,7 +333,14 @@
     "freq": "",
     "Lat": 58.08457,
     "Lon": 25.89877,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "EERD",
+    "iso_country": "EE",
+    "icao_code": "EERD",
+    "length_ft": 1969,
+    "width_ft": 66,
+    "heading": 87,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -231,7 +349,13 @@
     "freq": "118.455",
     "Lat": 57.939999,
     "Lon": 26.979,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "EERI",
+    "iso_country": "EE",
+    "icao_code": "EERI",
+    "length_ft": 3937,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -240,7 +364,14 @@
     "freq": "",
     "Lat": 57.78559,
     "Lon": 23.262377,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "EERU",
+    "iso_country": "EE",
+    "icao_code": "EERU",
+    "length_ft": 1967,
+    "width_ft": 65,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -249,7 +380,9 @@
     "freq": "",
     "Lat": 57.952306,
     "Lon": 26.476493,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EETI",
+    "iso_country": "EE"
   },
   {
     "type": "large_airport",
@@ -258,7 +391,15 @@
     "freq": "127.905",
     "Lat": 59.413246,
     "Lon": 24.83264,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "EETN",
+    "iso_country": "EE",
+    "icao_code": "EETN",
+    "iata_code": "TLL",
+    "length_ft": 11417,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -267,7 +408,9 @@
     "freq": "",
     "Lat": 58.809444,
     "Lon": 24.184723,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "EETS",
+    "iso_country": "EE"
   },
   {
     "type": "medium_airport",
@@ -276,7 +419,15 @@
     "freq": "123.130",
     "Lat": 58.307438,
     "Lon": 26.686473,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "EETU",
+    "iso_country": "EE",
+    "icao_code": "EETU",
+    "iata_code": "TAY",
+    "length_ft": 5905,
+    "width_ft": 101,
+    "heading": 88,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -285,7 +436,14 @@
     "freq": "",
     "Lat": 58.348374,
     "Lon": 25.494831,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "EEVI",
+    "iso_country": "EE",
+    "icao_code": "EEVI",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -294,7 +452,10 @@
     "freq": "",
     "Lat": 58.985169,
     "Lon": 23.252056,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "EEVO",
+    "iso_country": "EE",
+    "icao_code": "EEVO"
   },
   {
     "type": "small_airport",
@@ -303,6 +464,13 @@
     "freq": "",
     "Lat": 57.63288,
     "Lon": 26.671085,
-    "Ele": 83.8
+    "Ele": 83.8,
+    "ident": "EEVU",
+    "iso_country": "EE",
+    "icao_code": "EEVU",
+    "length_ft": 1312,
+    "width_ft": 66,
+    "QFU": "21",
+    "heading": 210
   }
 ]

@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": -3.983363,
     "Lon": 39.730982,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "BMQ",
+    "iso_country": "KE",
+    "iata_code": "BMQ"
   },
   {
     "type": "medium_airport",
@@ -15,7 +18,14 @@
     "freq": "",
     "Lat": -2.645050048828125,
     "Lon": 37.25310134887695,
-    "Ele": 1144.5
+    "Ele": 1144.5,
+    "ident": "HKAM",
+    "iso_country": "KE",
+    "icao_code": "HKAM",
+    "iata_code": "ASV",
+    "length_ft": 3284,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -24,7 +34,10 @@
     "freq": "",
     "Lat": -1.1,
     "Lon": 39.950001,
-    "Ele": 105.2
+    "Ele": 105.2,
+    "ident": "HKBR",
+    "iso_country": "KE",
+    "icao_code": "HKBR"
   },
   {
     "type": "medium_airport",
@@ -33,7 +46,15 @@
     "freq": "119.400",
     "Lat": 0.4044579863548279,
     "Lon": 35.23889923095703,
-    "Ele": 2115.6
+    "Ele": 2115.6,
+    "ident": "HKEL",
+    "iso_country": "KE",
+    "icao_code": "HKEL",
+    "iata_code": "EDL",
+    "length_ft": 11480,
+    "width_ft": 147,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -42,7 +63,14 @@
     "freq": "",
     "Lat": -0.57327,
     "Lon": 37.49726,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "HKEM",
+    "iso_country": "KE",
+    "icao_code": "HKEM",
+    "length_ft": 5246,
+    "width_ft": 65,
+    "heading": 140,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -51,7 +79,11 @@
     "freq": "",
     "Lat": 3.23635,
     "Lon": 35.97664,
-    "Ele": 425.2
+    "Ele": 425.2,
+    "ident": "HKES",
+    "iso_country": "KE",
+    "icao_code": "HKES",
+    "iata_code": "EYS"
   },
   {
     "type": "small_airport",
@@ -60,7 +92,9 @@
     "freq": "",
     "Lat": 2.732842,
     "Lon": 40.927505,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HKEW",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -69,7 +103,11 @@
     "freq": "",
     "Lat": 3.49161,
     "Lon": 35.836777,
-    "Ele": 379.5
+    "Ele": 379.5,
+    "ident": "HKFG",
+    "iso_country": "KE",
+    "icao_code": "HKFG",
+    "iata_code": "KLK"
   },
   {
     "type": "small_airport",
@@ -78,7 +116,15 @@
     "freq": "",
     "Lat": -0.463508,
     "Lon": 39.6483,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "HKGA",
+    "iso_country": "KE",
+    "icao_code": "HKGA",
+    "iata_code": "GAS",
+    "length_ft": 3556,
+    "width_ft": 61,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -87,7 +133,10 @@
     "freq": "",
     "Lat": 0.533333,
     "Lon": 38.516667,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "HKGT",
+    "iso_country": "KE",
+    "icao_code": "HKGT"
   },
   {
     "type": "small_airport",
@@ -96,7 +145,10 @@
     "freq": "",
     "Lat": -0.587322,
     "Lon": 34.476467,
-    "Ele": 1304.5
+    "Ele": 1304.5,
+    "ident": "HKHB",
+    "iso_country": "KE",
+    "icao_code": "HKHB"
   },
   {
     "type": "small_airport",
@@ -105,7 +157,11 @@
     "freq": "",
     "Lat": -1.522,
     "Lon": 40.004002,
-    "Ele": 59.4
+    "Ele": 59.4,
+    "ident": "HKHO",
+    "iso_country": "KE",
+    "icao_code": "HKHO",
+    "iata_code": "HOA"
   },
   {
     "type": "small_airport",
@@ -114,7 +170,10 @@
     "freq": "",
     "Lat": 0.338171,
     "Lon": 37.591694,
-    "Ele": 1065.3
+    "Ele": 1065.3,
+    "ident": "HKIS",
+    "iso_country": "KE",
+    "icao_code": "HKIS"
   },
   {
     "type": "large_airport",
@@ -123,7 +182,15 @@
     "freq": "122.300",
     "Lat": -1.31923997402,
     "Lon": 36.9277992249,
-    "Ele": 1624.6
+    "Ele": 1624.6,
+    "ident": "HKJK",
+    "iso_country": "KE",
+    "icao_code": "HKJK",
+    "iata_code": "NBO",
+    "length_ft": 13507,
+    "width_ft": 148,
+    "heading": 54,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -132,7 +199,9 @@
     "freq": "",
     "Lat": -0.6330000162124634,
     "Lon": 37.882999420166016,
-    "Ele": 746.8
+    "Ele": 746.8,
+    "ident": "HKKB",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -141,7 +210,11 @@
     "freq": "",
     "Lat": -1.586345,
     "Lon": 35.257455,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "HKKE",
+    "iso_country": "KE",
+    "icao_code": "HKKE",
+    "iata_code": "KEU"
   },
   {
     "type": "small_airport",
@@ -150,7 +223,15 @@
     "freq": "",
     "Lat": 0.271342009306,
     "Lon": 34.7873001099,
-    "Ele": 1530.1
+    "Ele": 1530.1,
+    "ident": "HKKG",
+    "iso_country": "KE",
+    "icao_code": "HKKG",
+    "iata_code": "GGM",
+    "length_ft": 3420,
+    "width_ft": 49,
+    "heading": 79,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -159,7 +240,15 @@
     "freq": "121.600",
     "Lat": -0.0861390009522438,
     "Lon": 34.72890090942383,
-    "Ele": 1138.1
+    "Ele": 1138.1,
+    "ident": "HKKI",
+    "iso_country": "KE",
+    "icao_code": "HKKI",
+    "iata_code": "KIS",
+    "length_ft": 10823,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -168,7 +257,11 @@
     "freq": "",
     "Lat": -2.91061,
     "Lon": 38.065201,
-    "Ele": 838.2
+    "Ele": 838.2,
+    "ident": "HKKL",
+    "iso_country": "KE",
+    "icao_code": "HKKL",
+    "iata_code": "ILU"
   },
   {
     "type": "small_airport",
@@ -177,7 +270,11 @@
     "freq": "",
     "Lat": -0.3899,
     "Lon": 35.242093,
-    "Ele": 1964.7
+    "Ele": 1964.7,
+    "ident": "HKKR",
+    "iso_country": "KE",
+    "icao_code": "HKKR",
+    "iata_code": "KEY"
   },
   {
     "type": "small_airport",
@@ -186,7 +283,10 @@
     "freq": "",
     "Lat": -0.672514,
     "Lon": 34.690923,
-    "Ele": 1495.0
+    "Ele": 1495,
+    "ident": "HKKS",
+    "iso_country": "KE",
+    "icao_code": "HKKS"
   },
   {
     "type": "medium_airport",
@@ -195,7 +295,15 @@
     "freq": "",
     "Lat": 0.971989,
     "Lon": 34.958599,
-    "Ele": 1850.1
+    "Ele": 1850.1,
+    "ident": "HKKT",
+    "iso_country": "KE",
+    "icao_code": "HKKT",
+    "iata_code": "KTL",
+    "length_ft": 4757,
+    "width_ft": 75,
+    "heading": 40,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -204,7 +312,13 @@
     "freq": "",
     "Lat": -1.372789978981018,
     "Lon": 37.97809982299805,
-    "Ele": 1155.2
+    "Ele": 1155.2,
+    "ident": "HKKU",
+    "iso_country": "KE",
+    "length_ft": 3116,
+    "width_ft": 65,
+    "heading": 53,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -213,7 +327,10 @@
     "freq": "",
     "Lat": 4.319205,
     "Lon": 35.688641,
-    "Ele": 550.2
+    "Ele": 550.2,
+    "ident": "HKLG",
+    "iso_country": "KE",
+    "icao_code": "HKLG"
   },
   {
     "type": "medium_airport",
@@ -222,7 +339,15 @@
     "freq": "125.900",
     "Lat": 4.20412,
     "Lon": 34.348202,
-    "Ele": 632.2
+    "Ele": 632.2,
+    "ident": "HKLK",
+    "iso_country": "KE",
+    "icao_code": "HKLK",
+    "iata_code": "LKG",
+    "length_ft": 6195,
+    "width_ft": 62,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -231,7 +356,15 @@
     "freq": "",
     "Lat": 3.12197,
     "Lon": 35.6087,
-    "Ele": 522.7
+    "Ele": 522.7,
+    "ident": "HKLO",
+    "iso_country": "KE",
+    "icao_code": "HKLO",
+    "iata_code": "LOK",
+    "QFU": "27",
+    "length_ft": 3281,
+    "width_ft": 64,
+    "heading": 83
   },
   {
     "type": "medium_airport",
@@ -240,7 +373,15 @@
     "freq": "",
     "Lat": -2.252431,
     "Lon": 40.912892,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "HKLU",
+    "iso_country": "KE",
+    "icao_code": "HKLU",
+    "iata_code": "LAU",
+    "length_ft": 6561,
+    "width_ft": 105,
+    "heading": 152,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -249,7 +390,11 @@
     "freq": "",
     "Lat": 2.75,
     "Lon": 36.716999,
-    "Ele": 364.2
+    "Ele": 364.2,
+    "ident": "HKLY",
+    "iso_country": "KE",
+    "icao_code": "HKLY",
+    "iata_code": "LOY"
   },
   {
     "type": "small_airport",
@@ -258,7 +403,14 @@
     "freq": "",
     "Lat": 3.934045,
     "Lon": 41.844437,
-    "Ele": 245.4
+    "Ele": 245.4,
+    "ident": "HKMA",
+    "iso_country": "KE",
+    "icao_code": "HKMA",
+    "iata_code": "NDE",
+    "length_ft": 3609,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -267,7 +419,11 @@
     "freq": "",
     "Lat": 2.344254,
     "Lon": 37.999996,
-    "Ele": 1339.6
+    "Ele": 1339.6,
+    "ident": "HKMB",
+    "iso_country": "KE",
+    "icao_code": "HKMB",
+    "iata_code": "RBT"
   },
   {
     "type": "small_airport",
@@ -276,7 +432,10 @@
     "freq": "",
     "Lat": 0.95,
     "Lon": 36.799999,
-    "Ele": 1810.5
+    "Ele": 1810.5,
+    "ident": "HKMI",
+    "iso_country": "KE",
+    "icao_code": "HKMI"
   },
   {
     "type": "small_airport",
@@ -285,7 +444,14 @@
     "freq": "",
     "Lat": 0.165083,
     "Lon": 38.195141,
-    "Ele": 679.7
+    "Ele": 679.7,
+    "ident": "HKMK",
+    "iso_country": "KE",
+    "icao_code": "HKMK",
+    "iata_code": "JJM",
+    "length_ft": 3281,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -294,7 +460,14 @@
     "freq": "",
     "Lat": -3.2293100357055664,
     "Lon": 40.10169982910156,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "HKML",
+    "iso_country": "KE",
+    "icao_code": "HKML",
+    "iata_code": "MYD",
+    "length_ft": 4600,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -303,7 +476,9 @@
     "freq": "",
     "Lat": -1.116,
     "Lon": 34.485833,
-    "Ele": 1407.0
+    "Ele": 1407,
+    "ident": "HKMM",
+    "iso_country": "KE"
   },
   {
     "type": "large_airport",
@@ -312,7 +487,15 @@
     "freq": "120.300",
     "Lat": -4.03483,
     "Lon": 39.5942,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "HKMO",
+    "iso_country": "KE",
+    "icao_code": "HKMO",
+    "iata_code": "MBA",
+    "length_ft": 4473,
+    "width_ft": 118,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -321,7 +504,14 @@
     "freq": "",
     "Lat": -1.406111,
     "Lon": 35.008057,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "HKMS",
+    "iso_country": "KE",
+    "icao_code": "HKMS",
+    "iata_code": "MRE",
+    "length_ft": 3450,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -330,7 +520,10 @@
     "freq": "",
     "Lat": -2.289713,
     "Lon": 37.828621,
-    "Ele": 1070.8
+    "Ele": 1070.8,
+    "ident": "HKMU",
+    "iso_country": "KE",
+    "icao_code": "HKMU"
   },
   {
     "type": "small_airport",
@@ -339,7 +532,14 @@
     "freq": "",
     "Lat": 3.46972,
     "Lon": 39.101398,
-    "Ele": 850.4
+    "Ele": 850.4,
+    "ident": "HKMY",
+    "iso_country": "KE",
+    "icao_code": "HKMY",
+    "iata_code": "OYL",
+    "length_ft": 4265,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -348,7 +548,11 @@
     "freq": "",
     "Lat": -0.364414,
     "Lon": 36.978485,
-    "Ele": 1777.0
+    "Ele": 1777,
+    "ident": "HKNI",
+    "iso_country": "KE",
+    "icao_code": "HKNI",
+    "iata_code": "NYE"
   },
   {
     "type": "small_airport",
@@ -357,7 +561,14 @@
     "freq": "118.000",
     "Lat": -0.298067,
     "Lon": 36.159302,
-    "Ele": 1900.1
+    "Ele": 1900.1,
+    "ident": "HKNK",
+    "iso_country": "KE",
+    "icao_code": "HKNK",
+    "iata_code": "NUU",
+    "length_ft": 5607,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -366,7 +577,14 @@
     "freq": "",
     "Lat": -0.062399,
     "Lon": 37.041008,
-    "Ele": 1905.0
+    "Ele": 1905,
+    "ident": "HKNL",
+    "iso_country": "KE",
+    "icao_code": "HKNL",
+    "iata_code": "NYK",
+    "length_ft": 3900,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -375,7 +593,10 @@
     "freq": "",
     "Lat": -1.128103,
     "Lon": 35.785685,
-    "Ele": 1923.6
+    "Ele": 1923.6,
+    "ident": "HKNO",
+    "iso_country": "KE",
+    "icao_code": "HKNO"
   },
   {
     "type": "small_airport",
@@ -384,7 +605,14 @@
     "freq": "",
     "Lat": -0.787953,
     "Lon": 36.433494,
-    "Ele": 1944.6
+    "Ele": 1944.6,
+    "ident": "HKNV",
+    "iso_country": "KE",
+    "icao_code": "HKNV",
+    "length_ft": 3616,
+    "width_ft": 55,
+    "heading": 185.4,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -393,7 +621,15 @@
     "freq": "118.100",
     "Lat": -1.321720004081726,
     "Lon": 36.81480026245117,
-    "Ele": 1687.4
+    "Ele": 1687.4,
+    "ident": "HKNW",
+    "iso_country": "KE",
+    "icao_code": "HKNW",
+    "iata_code": "WIL",
+    "length_ft": 5052,
+    "width_ft": 76,
+    "heading": 134,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -402,7 +638,10 @@
     "freq": "",
     "Lat": 0.032933,
     "Lon": 37.026901,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HKNY",
+    "iso_country": "KE",
+    "icao_code": "HKNY"
   },
   {
     "type": "medium_airport",
@@ -411,7 +650,14 @@
     "freq": "124.300",
     "Lat": -1.27727,
     "Lon": 36.862301,
-    "Ele": 1626.4
+    "Ele": 1626.4,
+    "ident": "HKRE",
+    "iso_country": "KE",
+    "icao_code": "HKRE",
+    "length_ft": 7998,
+    "width_ft": 151,
+    "heading": 57,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -420,7 +666,14 @@
     "freq": "",
     "Lat": 0.534069,
     "Lon": 37.531991,
-    "Ele": 1004.3
+    "Ele": 1004.3,
+    "ident": "HKSB",
+    "iso_country": "KE",
+    "icao_code": "HKSB",
+    "iata_code": "UAS",
+    "length_ft": 2650,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -429,7 +682,9 @@
     "freq": "",
     "Lat": -2.73,
     "Lon": 37.427,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "HKTW",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -438,7 +693,14 @@
     "freq": "",
     "Lat": -4.29333,
     "Lon": 39.571098,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "HKUK",
+    "iso_country": "KE",
+    "icao_code": "HKUK",
+    "iata_code": "UKA",
+    "length_ft": 3851,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -447,7 +709,10 @@
     "freq": "",
     "Lat": -3.374539,
     "Lon": 38.534748,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "HKVO",
+    "iso_country": "KE",
+    "icao_code": "HKVO"
   },
   {
     "type": "small_airport",
@@ -456,7 +721,9 @@
     "freq": "",
     "Lat": 0.6169999837875366,
     "Lon": 34.78300094604492,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "HKWE",
+    "iso_country": "KE"
   },
   {
     "type": "medium_airport",
@@ -465,7 +732,15 @@
     "freq": "118.200",
     "Lat": 1.73324,
     "Lon": 40.091599,
-    "Ele": 234.7
+    "Ele": 234.7,
+    "ident": "HKWJ",
+    "iso_country": "KE",
+    "icao_code": "HKWJ",
+    "iata_code": "WJR",
+    "length_ft": 9193,
+    "width_ft": 104,
+    "heading": 146.4,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -474,7 +749,9 @@
     "freq": "",
     "Lat": -0.4665,
     "Lon": 34.063998,
-    "Ele": 1143.0
+    "Ele": 1143,
+    "ident": "KE-0001",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -483,7 +760,9 @@
     "freq": "",
     "Lat": 0.1333329975605011,
     "Lon": 34.08333206176758,
-    "Ele": 1149.1
+    "Ele": 1149.1,
+    "ident": "KE-0002",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -492,7 +771,9 @@
     "freq": "",
     "Lat": -0.4126670062541961,
     "Lon": 34.14250183105469,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "KE-0003",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -501,7 +782,10 @@
     "freq": "",
     "Lat": 3.810904,
     "Lon": 34.360943,
-    "Ele": 866.2
+    "Ele": 866.2,
+    "ident": "KE-0004",
+    "iso_country": "KE",
+    "icao_code": "HKOL"
   },
   {
     "type": "small_airport",
@@ -510,7 +794,9 @@
     "freq": "",
     "Lat": -1.0692780017852783,
     "Lon": 35.050777435302734,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-0005",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -519,7 +805,9 @@
     "freq": "",
     "Lat": -2.169513,
     "Lon": 40.896414,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0006",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -528,7 +816,9 @@
     "freq": "",
     "Lat": -0.3860000073909759,
     "Lon": 35.334110260009766,
-    "Ele": 2119.9
+    "Ele": 2119.9,
+    "ident": "KE-0007",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -537,7 +827,9 @@
     "freq": "",
     "Lat": -1.1359169483184814,
     "Lon": 35.33414077758789,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "KE-0008",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -546,7 +838,9 @@
     "freq": "",
     "Lat": 0.6499999761581421,
     "Lon": 35.383331298828125,
-    "Ele": 2194.6
+    "Ele": 2194.6,
+    "ident": "KE-0009",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -555,7 +849,9 @@
     "freq": "",
     "Lat": -1.4833329916000366,
     "Lon": 35.41666793823242,
-    "Ele": 1630.7
+    "Ele": 1630.7,
+    "ident": "KE-0010",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -564,7 +860,9 @@
     "freq": "",
     "Lat": 0.9859439730644226,
     "Lon": 35.550804138183594,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "KE-0011",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -573,7 +871,9 @@
     "freq": "",
     "Lat": -0.972346007823944,
     "Lon": 35.74672317504883,
-    "Ele": 2042.2
+    "Ele": 2042.2,
+    "ident": "KE-0012",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -582,7 +882,9 @@
     "freq": "",
     "Lat": -0.335999995470047,
     "Lon": 35.91747283935547,
-    "Ele": 2164.1
+    "Ele": 2164.1,
+    "ident": "KE-0013",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -591,7 +893,9 @@
     "freq": "",
     "Lat": -0.1877959966659546,
     "Lon": 35.967098236083984,
-    "Ele": 1941.0
+    "Ele": 1941,
+    "ident": "KE-0014",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -600,7 +904,10 @@
     "freq": "",
     "Lat": 0.603167,
     "Lon": 36.013,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "KE-0015",
+    "iso_country": "KE",
+    "iata_code": "LBN"
   },
   {
     "type": "small_airport",
@@ -609,7 +916,9 @@
     "freq": "",
     "Lat": -2.0203330516815186,
     "Lon": 36.03911209106445,
-    "Ele": 624.8
+    "Ele": 624.8,
+    "ident": "KE-0016",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -618,7 +927,9 @@
     "freq": "",
     "Lat": -1.9755829572677608,
     "Lon": 36.04838943481445,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "KE-0017",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -627,7 +938,9 @@
     "freq": "",
     "Lat": 1.1638610363006592,
     "Lon": 36.08416748046875,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "KE-0018",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -636,7 +949,9 @@
     "freq": "",
     "Lat": -0.4565829932689667,
     "Lon": 36.084999084472656,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-0019",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -645,7 +960,10 @@
     "freq": "",
     "Lat": -0.483944,
     "Lon": 36.124359,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "KE-0020",
+    "iso_country": "KE",
+    "local_code": "CONGRIE"
   },
   {
     "type": "small_airport",
@@ -654,7 +972,9 @@
     "freq": "",
     "Lat": -0.7430350184440613,
     "Lon": 36.17222213745117,
-    "Ele": 2164.1
+    "Ele": 2164.1,
+    "ident": "KE-0021",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -663,7 +983,9 @@
     "freq": "",
     "Lat": 4.377778053283691,
     "Lon": 36.21666717529297,
-    "Ele": 411.5
+    "Ele": 411.5,
+    "ident": "KE-0022",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -672,7 +994,9 @@
     "freq": "",
     "Lat": -0.8666669726371765,
     "Lon": 36.23333358764648,
-    "Ele": 2011.7
+    "Ele": 2011.7,
+    "ident": "KE-0023",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -681,7 +1005,9 @@
     "freq": "",
     "Lat": -0.4025560021400451,
     "Lon": 36.23605728149414,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "KE-0024",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -690,7 +1016,9 @@
     "freq": "",
     "Lat": 1.5172220468521118,
     "Lon": 36.2852783203125,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "KE-0025",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -699,7 +1027,9 @@
     "freq": "",
     "Lat": -0.8190000057220459,
     "Lon": 36.28783416748047,
-    "Ele": 1889.8
+    "Ele": 1889.8,
+    "ident": "KE-0026",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -708,7 +1038,9 @@
     "freq": "",
     "Lat": -0.699999988079071,
     "Lon": 36.31666564941406,
-    "Ele": 600.5
+    "Ele": 600.5,
+    "ident": "KE-0027",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -717,7 +1049,9 @@
     "freq": "",
     "Lat": -0.494715,
     "Lon": 36.352908,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "KE-0028",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -726,7 +1060,9 @@
     "freq": "",
     "Lat": -0.0137670002877712,
     "Lon": 36.36973571777344,
-    "Ele": 2362.2
+    "Ele": 2362.2,
+    "ident": "KE-0029",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -735,7 +1071,9 @@
     "freq": "",
     "Lat": -0.5677779912948608,
     "Lon": 36.38336181640625,
-    "Ele": 2052.5
+    "Ele": 2052.5,
+    "ident": "KE-0030",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -744,7 +1082,9 @@
     "freq": "",
     "Lat": -0.5193060040473938,
     "Lon": 36.38414001464844,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "KE-0031",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -753,7 +1093,9 @@
     "freq": "",
     "Lat": 0.714812,
     "Lon": 36.586594,
-    "Ele": 1874.5
+    "Ele": 1874.5,
+    "ident": "KE-0032",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -762,7 +1104,9 @@
     "freq": "",
     "Lat": 0.413292,
     "Lon": 36.651665,
-    "Ele": 1798.3
+    "Ele": 1798.3,
+    "ident": "KE-0033",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -771,7 +1115,12 @@
     "freq": "",
     "Lat": -1.581194,
     "Lon": 36.812832,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "KE-0034",
+    "iso_country": "KE",
+    "local_code": "ORLY",
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -780,7 +1129,9 @@
     "freq": "",
     "Lat": -2.122875928878784,
     "Lon": 36.817481994628906,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "KE-0035",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -789,7 +1140,9 @@
     "freq": "",
     "Lat": 0.6472219824790955,
     "Lon": 36.850860595703125,
-    "Ele": 1767.8
+    "Ele": 1767.8,
+    "ident": "KE-0036",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -798,7 +1151,9 @@
     "freq": "",
     "Lat": -0.141092,
     "Lon": 36.914995,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "KE-0037",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -807,7 +1162,9 @@
     "freq": "",
     "Lat": 0.0306109990924596,
     "Lon": 36.90083312988281,
-    "Ele": 1781.6
+    "Ele": 1781.6,
+    "ident": "KE-0038",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -816,7 +1173,9 @@
     "freq": "",
     "Lat": 0.1972499936819076,
     "Lon": 36.91749954223633,
-    "Ele": 1737.4
+    "Ele": 1737.4,
+    "ident": "KE-0039",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -825,7 +1184,9 @@
     "freq": "",
     "Lat": -1.1459519863128662,
     "Lon": 36.91798782348633,
-    "Ele": 1557.5
+    "Ele": 1557.5,
+    "ident": "KE-0040",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -834,7 +1195,9 @@
     "freq": "",
     "Lat": -0.298471,
     "Lon": 36.947185,
-    "Ele": 1837.9
+    "Ele": 1837.9,
+    "ident": "KE-0041",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -843,7 +1206,9 @@
     "freq": "",
     "Lat": 0.9333329796791076,
     "Lon": 37.06666564941406,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "KE-0042",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -852,7 +1217,9 @@
     "freq": "",
     "Lat": 2.930361032485962,
     "Lon": 37.067527770996094,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "KE-0043",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -861,7 +1228,9 @@
     "freq": "",
     "Lat": 0.1338440030813217,
     "Lon": 37.15920639038086,
-    "Ele": 1990.3
+    "Ele": 1990.3,
+    "ident": "KE-0044",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -870,7 +1239,9 @@
     "freq": "",
     "Lat": 0.0472779981791973,
     "Lon": 37.20083236694336,
-    "Ele": 2133.6
+    "Ele": 2133.6,
+    "ident": "KE-0045",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -879,7 +1250,9 @@
     "freq": "",
     "Lat": 0.0972779989242553,
     "Lon": 37.30086135864258,
-    "Ele": 2377.4
+    "Ele": 2377.4,
+    "ident": "KE-0046",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -888,7 +1261,9 @@
     "freq": "",
     "Lat": 0.4262219965457916,
     "Lon": 37.33402633666992,
-    "Ele": 1036.3
+    "Ele": 1036.3,
+    "ident": "KE-0047",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -897,7 +1272,9 @@
     "freq": "",
     "Lat": -0.6966760158538818,
     "Lon": 37.37461853027344,
-    "Ele": 1036.3
+    "Ele": 1036.3,
+    "ident": "KE-0048",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -906,7 +1283,9 @@
     "freq": "",
     "Lat": 0.635479,
     "Lon": 37.380327,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "KE-0049",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -915,7 +1294,9 @@
     "freq": "",
     "Lat": -1.0499999523162842,
     "Lon": 37.43333435058594,
-    "Ele": 1146.0
+    "Ele": 1146,
+    "ident": "KE-0050",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -924,7 +1305,9 @@
     "freq": "",
     "Lat": -0.0526540018618106,
     "Lon": 37.464542388916016,
-    "Ele": 3109.0
+    "Ele": 3109,
+    "ident": "KE-0051",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -933,7 +1316,9 @@
     "freq": "",
     "Lat": 0.1972499936819076,
     "Lon": 37.467529296875,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "KE-0052",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -942,7 +1327,9 @@
     "freq": "",
     "Lat": -2.560832977294922,
     "Lon": 37.54100036621094,
-    "Ele": 1188.7
+    "Ele": 1188.7,
+    "ident": "KE-0053",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -951,7 +1338,9 @@
     "freq": "",
     "Lat": 3.416666984558105,
     "Lon": 37.76666641235352,
-    "Ele": 1310.6
+    "Ele": 1310.6,
+    "ident": "KE-0054",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -960,7 +1349,9 @@
     "freq": "",
     "Lat": -3.616944074630737,
     "Lon": 37.77891540527344,
-    "Ele": 731.5
+    "Ele": 731.5,
+    "ident": "KE-0055",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -969,7 +1360,9 @@
     "freq": "",
     "Lat": -2.94596791267395,
     "Lon": 37.91468811035156,
-    "Ele": 805.9
+    "Ele": 805.9,
+    "ident": "KE-0056",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -978,7 +1371,9 @@
     "freq": "",
     "Lat": -3.408166885375977,
     "Lon": 38.119667053222656,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "KE-0057",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -987,7 +1382,9 @@
     "freq": "",
     "Lat": -2.75,
     "Lon": 38.119998931884766,
-    "Ele": 855.0
+    "Ele": 855,
+    "ident": "KE-0058",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -996,7 +1393,9 @@
     "freq": "",
     "Lat": -3.179363965988159,
     "Lon": 38.13101196289063,
-    "Ele": 929.6
+    "Ele": 929.6,
+    "ident": "KE-0059",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1404,9 @@
     "freq": "",
     "Lat": 4.1232,
     "Lon": 35.85745,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0060",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1415,9 @@
     "freq": "",
     "Lat": -2.216722011566162,
     "Lon": 38.38689041137695,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "KE-0061",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1426,9 @@
     "freq": "",
     "Lat": -3.393749952316284,
     "Lon": 38.94686126708984,
-    "Ele": 426.7
+    "Ele": 426.7,
+    "ident": "KE-0062",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1437,9 @@
     "freq": "",
     "Lat": -2.219193935394287,
     "Lon": 39.100887298583984,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-0063",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1448,9 @@
     "freq": "",
     "Lat": 3.450000047683716,
     "Lon": 39.132999420166016,
-    "Ele": 850.4
+    "Ele": 850.4,
+    "ident": "KE-0064",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1459,9 @@
     "freq": "",
     "Lat": -3.0691111087799072,
     "Lon": 39.234222412109375,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-0065",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1470,9 @@
     "freq": "",
     "Lat": -4.169795036315918,
     "Lon": 39.43186569213867,
-    "Ele": 420.6
+    "Ele": 420.6,
+    "ident": "KE-0066",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1481,9 @@
     "freq": "",
     "Lat": -2.733333110809326,
     "Lon": 39.53333282470703,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-0067",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1492,9 @@
     "freq": "",
     "Lat": -2.916666984558105,
     "Lon": 39.55091857910156,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-0068",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1503,10 @@
     "freq": "",
     "Lat": -3.80666666667,
     "Lon": 39.7973888889,
-    "Ele": 26.2
+    "Ele": 26.2,
+    "ident": "KE-0069",
+    "iso_country": "KE",
+    "iata_code": "VPG"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1515,9 @@
     "freq": "",
     "Lat": -3.8431389331817623,
     "Lon": 39.80516815185547,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "KE-0070",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1526,9 @@
     "freq": "",
     "Lat": -2.2680559158325195,
     "Lon": 40.09377670288086,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "KE-0071",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1537,9 @@
     "freq": "",
     "Lat": 3.923082113265991,
     "Lon": 41.22369003295898,
-    "Ele": 245.4
+    "Ele": 245.4,
+    "ident": "KE-0072",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1548,9 @@
     "freq": "",
     "Lat": 0.231557,
     "Lon": 37.364159,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-0073",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1559,9 @@
     "freq": "",
     "Lat": 0.26957,
     "Lon": 37.328098,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0074",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1570,9 @@
     "freq": "",
     "Lat": -0.1621779948472976,
     "Lon": 37.445899963378906,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0076",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1581,9 @@
     "freq": "",
     "Lat": 1.994582,
     "Lon": 37.916434,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0077",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1592,9 @@
     "freq": "",
     "Lat": 3.134855,
     "Lon": 37.426236,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0078",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1603,9 @@
     "freq": "",
     "Lat": 1.06402,
     "Lon": 37.720198,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0079",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1614,9 @@
     "freq": "",
     "Lat": -1.847326,
     "Lon": 40.091586,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "KE-0080",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1625,9 @@
     "freq": "",
     "Lat": -1.189574,
     "Lon": 39.81448,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "KE-0081",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1636,9 @@
     "freq": "",
     "Lat": -0.069552,
     "Lon": 38.382484,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0082",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1647,9 @@
     "freq": "",
     "Lat": -0.049021,
     "Lon": 38.308839,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0083",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1658,9 @@
     "freq": "",
     "Lat": 0.118977,
     "Lon": 38.268425,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0084",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1669,9 @@
     "freq": "",
     "Lat": 0.02597,
     "Lon": 38.065436,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0085",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1680,13 @@
     "freq": "",
     "Lat": -0.802034,
     "Lon": 36.411967,
-    "Ele": 1889.8
+    "Ele": 1889.8,
+    "ident": "KE-0086",
+    "iso_country": "KE",
+    "length_ft": 4573,
+    "width_ft": 82,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1695,9 @@
     "freq": "",
     "Lat": 2.267596,
     "Lon": 35.029196,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "KE-0087",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1706,9 @@
     "freq": "",
     "Lat": 3.705058,
     "Lon": 36.262236,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0088",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1717,9 @@
     "freq": "",
     "Lat": 3.566973,
     "Lon": 41.511833,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0089",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1728,9 @@
     "freq": "",
     "Lat": -0.107107,
     "Lon": 39.046973,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-0090",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1739,9 @@
     "freq": "",
     "Lat": -1.51094,
     "Lon": 37.034369,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0091",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1750,9 @@
     "freq": "",
     "Lat": -3.663575,
     "Lon": 38.945339,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "KE-0092",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1761,9 @@
     "freq": "",
     "Lat": 1.807578,
     "Lon": 36.679137,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0093",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1772,9 @@
     "freq": "",
     "Lat": 1.340706,
     "Lon": 36.856679,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0094",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1783,9 @@
     "freq": "",
     "Lat": -0.795118,
     "Lon": 36.295698,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0095",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1794,9 @@
     "freq": "",
     "Lat": -0.767433,
     "Lon": 36.397561,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0096",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1805,9 @@
     "freq": "",
     "Lat": 2.505995,
     "Lon": 37.565966,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0097",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1816,9 @@
     "freq": "",
     "Lat": -2.136863,
     "Lon": 36.838493,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0098",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1827,9 @@
     "freq": "",
     "Lat": -1.040713,
     "Lon": 36.992879,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0099",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1838,9 @@
     "freq": "",
     "Lat": -1.014198,
     "Lon": 35.342806,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0100",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1849,9 @@
     "freq": "",
     "Lat": -0.776471,
     "Lon": 35.318411,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0101",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1860,9 @@
     "freq": "",
     "Lat": 2.80117,
     "Lon": 39.481787,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0102",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1871,9 @@
     "freq": "",
     "Lat": 3.337517,
     "Lon": 39.41424,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0103",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1882,9 @@
     "freq": "",
     "Lat": -0.191457,
     "Lon": 35.864189,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0104",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1893,9 @@
     "freq": "",
     "Lat": 0.667151,
     "Lon": 37.910007,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0105",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1904,9 @@
     "freq": "",
     "Lat": -2.527368,
     "Lon": 37.731488,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0106",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1915,9 @@
     "freq": "",
     "Lat": -1.680954,
     "Lon": 35.344401,
-    "Ele": 1761.7
+    "Ele": 1761.7,
+    "ident": "KE-0107",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1428,7 +1926,9 @@
     "freq": "",
     "Lat": 0.058189,
     "Lon": 40.318055,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "KE-0108",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1437,7 +1937,9 @@
     "freq": "",
     "Lat": 0.367944,
     "Lon": 37.141442,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0109",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1446,7 +1948,9 @@
     "freq": "",
     "Lat": 1.465284,
     "Lon": 37.073011,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0110",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1455,7 +1959,9 @@
     "freq": "",
     "Lat": 0.237853,
     "Lon": 37.077848,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0111",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1970,9 @@
     "freq": "",
     "Lat": 0.510757,
     "Lon": 36.294394,
-    "Ele": 1970.2
+    "Ele": 1970.2,
+    "ident": "KE-0112",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1473,7 +1981,9 @@
     "freq": "",
     "Lat": -1.783522,
     "Lon": 36.057783,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0113",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1482,7 +1992,9 @@
     "freq": "",
     "Lat": -1.842318,
     "Lon": 35.86778,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0114",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2003,9 @@
     "freq": "",
     "Lat": -4.573672,
     "Lon": 39.447079,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0115",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1500,7 +2014,9 @@
     "freq": "",
     "Lat": -3.062141,
     "Lon": 39.331661,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0116",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2025,9 @@
     "freq": "",
     "Lat": 2.636477,
     "Lon": 36.932055,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0117",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2036,7 @@
     "freq": "",
     "Lat": -0.502798,
     "Lon": 36.356915,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -1527,7 +2045,7 @@
     "freq": "",
     "Lat": -0.18786,
     "Lon": 35.856818,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -1536,7 +2054,9 @@
     "freq": "",
     "Lat": 1.016215,
     "Lon": 39.505836,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0120",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2065,9 @@
     "freq": "",
     "Lat": 4.281881,
     "Lon": 36.266951,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0121",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2076,9 @@
     "freq": "",
     "Lat": 4.304698,
     "Lon": 36.235572,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0122",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2087,9 @@
     "freq": "",
     "Lat": -1.806828,
     "Lon": 35.704339,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0123",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2098,9 @@
     "freq": "",
     "Lat": -0.523628,
     "Lon": 36.187582,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0124",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2109,9 @@
     "freq": "",
     "Lat": 0.694423,
     "Lon": 37.611987,
-    "Ele": 894.3
+    "Ele": 894.3,
+    "ident": "KE-0125",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2120,9 @@
     "freq": "",
     "Lat": -0.823913,
     "Lon": 37.715869,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0126",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2131,9 @@
     "freq": "",
     "Lat": 0.601706,
     "Lon": 36.73699,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0127",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2142,9 @@
     "freq": "",
     "Lat": -2.75235,
     "Lon": 37.878257,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0128",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2153,9 @@
     "freq": "",
     "Lat": -3.85072,
     "Lon": 38.515401,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0129",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2164,9 @@
     "freq": "",
     "Lat": 3.756125,
     "Lon": 35.833843,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0130",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2175,9 @@
     "freq": "",
     "Lat": 2.284583,
     "Lon": 35.429495,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0131",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2186,9 @@
     "freq": "",
     "Lat": -1.299226,
     "Lon": 36.475029,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0132",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2197,10 @@
     "freq": "",
     "Lat": -1.263497,
     "Lon": 35.027533,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0133",
+    "iso_country": "KE",
+    "iata_code": "KTJ"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2209,9 @@
     "freq": "",
     "Lat": 0.173081,
     "Lon": 36.583018,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0134",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2220,9 @@
     "freq": "",
     "Lat": -0.956812,
     "Lon": 36.592155,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0135",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1680,7 +2231,9 @@
     "freq": "",
     "Lat": -2.627593,
     "Lon": 38.338681,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0136",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2242,9 @@
     "freq": "",
     "Lat": -2.752942,
     "Lon": 37.525214,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0137",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2253,9 @@
     "freq": "",
     "Lat": -0.454084,
     "Lon": 36.493097,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0138",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2264,9 @@
     "freq": "",
     "Lat": 0.598082,
     "Lon": 37.319715,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0139",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2275,9 @@
     "freq": "",
     "Lat": 0.512642,
     "Lon": 36.694537,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0140",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2286,9 @@
     "freq": "",
     "Lat": -1.917027,
     "Lon": 36.004027,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0141",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2297,9 @@
     "freq": "",
     "Lat": -0.843317,
     "Lon": 36.259475,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0142",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2308,9 @@
     "freq": "",
     "Lat": 2.013786,
     "Lon": 37.516742,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0143",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2319,9 @@
     "freq": "",
     "Lat": 2.007568,
     "Lon": 37.492219,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0144",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2330,9 @@
     "freq": "",
     "Lat": 2.00616,
     "Lon": 36.8299,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0145",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2341,9 @@
     "freq": "",
     "Lat": -1.12471,
     "Lon": 35.197795,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0146",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2352,9 @@
     "freq": "",
     "Lat": 0.645962,
     "Lon": 36.427784,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0147",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2363,9 @@
     "freq": "",
     "Lat": -2.228949,
     "Lon": 40.971447,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0148",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2374,9 @@
     "freq": "",
     "Lat": -1.536513,
     "Lon": 36.020637,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0149",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1806,7 +2385,9 @@
     "freq": "",
     "Lat": 0.591385,
     "Lon": 37.586685,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0150",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2396,9 @@
     "freq": "",
     "Lat": 1.547691,
     "Lon": 37.108677,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0151",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1824,7 +2407,9 @@
     "freq": "",
     "Lat": 2.243084,
     "Lon": 36.670897,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0152",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1833,7 +2418,9 @@
     "freq": "",
     "Lat": 0.504473,
     "Lon": 37.006397,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0153",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1842,7 +2429,9 @@
     "freq": "",
     "Lat": -1.106687,
     "Lon": 36.688778,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0154",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2440,9 @@
     "freq": "",
     "Lat": 0.107106,
     "Lon": 37.278907,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0155",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1860,7 +2451,9 @@
     "freq": "",
     "Lat": -0.817072,
     "Lon": 36.391407,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0156",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1869,7 +2462,9 @@
     "freq": "",
     "Lat": 4.284767,
     "Lon": 35.870662,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0157",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1878,7 +2473,9 @@
     "freq": "",
     "Lat": -3.048607,
     "Lon": 38.689626,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0158",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1887,7 +2484,9 @@
     "freq": "",
     "Lat": -1.483679,
     "Lon": 37.098339,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0159",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2495,9 @@
     "freq": "",
     "Lat": -3.094749,
     "Lon": 38.476476,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0160",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2506,9 @@
     "freq": "",
     "Lat": -0.436093,
     "Lon": 35.298761,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0161",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1914,7 +2517,9 @@
     "freq": "",
     "Lat": -0.043734,
     "Lon": 37.145506,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0162",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1923,7 +2528,9 @@
     "freq": "",
     "Lat": -0.397362,
     "Lon": 36.215325,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0163",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1932,7 +2539,9 @@
     "freq": "",
     "Lat": 1.089888,
     "Lon": 38.600205,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0164",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1941,7 +2550,9 @@
     "freq": "",
     "Lat": -0.1115,
     "Lon": 36.124334,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0165",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1950,7 +2561,9 @@
     "freq": "",
     "Lat": 1.209714,
     "Lon": 34.796225,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0166",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1959,7 +2572,9 @@
     "freq": "",
     "Lat": 0.353531,
     "Lon": 36.892033,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0167",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1968,7 +2583,9 @@
     "freq": "",
     "Lat": 0.29012,
     "Lon": 36.892436,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0168",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1977,7 +2594,9 @@
     "freq": "",
     "Lat": 0.126097,
     "Lon": 38.132497,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0169",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2605,9 @@
     "freq": "",
     "Lat": 0.251711,
     "Lon": 36.805338,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0170",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2616,9 @@
     "freq": "",
     "Lat": -1.846779,
     "Lon": 38.204732,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0171",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2627,9 @@
     "freq": "",
     "Lat": -3.517815,
     "Lon": 38.442556,
-    "Ele": 786.4
+    "Ele": 786.4,
+    "ident": "KE-0172",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2013,7 +2638,9 @@
     "freq": "",
     "Lat": 1.058237,
     "Lon": 37.437892,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "KE-0173",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2022,7 +2649,9 @@
     "freq": "",
     "Lat": 4.114358,
     "Lon": 35.842295,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "KE-0174",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2031,7 +2660,9 @@
     "freq": "",
     "Lat": -0.170666,
     "Lon": 37.136612,
-    "Ele": 2286.0
+    "Ele": 2286,
+    "ident": "KE-0175",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2040,7 +2671,9 @@
     "freq": "",
     "Lat": 1.170659,
     "Lon": 37.252765,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "KE-0176",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2049,7 +2682,9 @@
     "freq": "",
     "Lat": -2.42834,
     "Lon": 40.193087,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "KE-0177",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2058,7 +2693,9 @@
     "freq": "",
     "Lat": 1.735737,
     "Lon": 37.3216,
-    "Ele": 975.4
+    "Ele": 975.4,
+    "ident": "KE-0178",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2067,7 +2704,9 @@
     "freq": "",
     "Lat": -1.713528,
     "Lon": 35.560338,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "KE-0179",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2076,7 +2715,9 @@
     "freq": "",
     "Lat": -1.813717,
     "Lon": 36.018261,
-    "Ele": 1356.4
+    "Ele": 1356.4,
+    "ident": "KE-0180",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2085,7 +2726,9 @@
     "freq": "",
     "Lat": 0.659821,
     "Lon": 36.868623,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-0181",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2094,7 +2737,10 @@
     "freq": "",
     "Lat": -1.378382,
     "Lon": 35.378453,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "KE-0182",
+    "iso_country": "KE",
+    "iata_code": "OSJ"
   },
   {
     "type": "small_airport",
@@ -2103,7 +2749,9 @@
     "freq": "",
     "Lat": 0.60964,
     "Lon": 37.53018,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "KE-0183",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2112,7 +2760,9 @@
     "freq": "",
     "Lat": -1.606288,
     "Lon": 35.436835,
-    "Ele": 1737.4
+    "Ele": 1737.4,
+    "ident": "KE-0184",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2121,7 +2771,9 @@
     "freq": "",
     "Lat": 2.846734,
     "Lon": 35.050887,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "KE-0185",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2130,7 +2782,9 @@
     "freq": "",
     "Lat": -3.575566,
     "Lon": 38.760165,
-    "Ele": 538.6
+    "Ele": 538.6,
+    "ident": "KE-0186",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2139,7 +2793,9 @@
     "freq": "",
     "Lat": 0.431231,
     "Lon": 36.729133,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "KE-0187",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2148,7 +2804,9 @@
     "freq": "",
     "Lat": -3.072405,
     "Lon": 39.215665,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0188",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2157,7 +2815,9 @@
     "freq": "",
     "Lat": 2.314229,
     "Lon": 36.88698,
-    "Ele": 868.7
+    "Ele": 868.7,
+    "ident": "KE-0189",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2166,7 +2826,9 @@
     "freq": "",
     "Lat": 2.544761,
     "Lon": 37.944126,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "KE-0190",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2175,7 +2837,9 @@
     "freq": "",
     "Lat": 0.658176,
     "Lon": 37.700377,
-    "Ele": 792.5
+    "Ele": 792.5,
+    "ident": "KE-0191",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2184,7 +2848,9 @@
     "freq": "",
     "Lat": -2.669606,
     "Lon": 38.367137,
-    "Ele": 548.6
+    "Ele": 548.6,
+    "ident": "KE-0192",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2193,7 +2859,9 @@
     "freq": "",
     "Lat": 1.58209,
     "Lon": 35.471191,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "KE-0193",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2202,7 +2870,9 @@
     "freq": "",
     "Lat": -0.721299,
     "Lon": 36.28709,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "KE-0194",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2211,7 +2881,9 @@
     "freq": "",
     "Lat": 0.418494,
     "Lon": 36.738667,
-    "Ele": 1737.4
+    "Ele": 1737.4,
+    "ident": "KE-0195",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2220,7 +2892,9 @@
     "freq": "",
     "Lat": 2.172091,
     "Lon": 36.906929,
-    "Ele": 883.9
+    "Ele": 883.9,
+    "ident": "KE-0196",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2229,7 +2903,9 @@
     "freq": "",
     "Lat": -0.273941,
     "Lon": 35.767293,
-    "Ele": 2510.3
+    "Ele": 2510.3,
+    "ident": "KE-0197",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2238,7 +2914,9 @@
     "freq": "",
     "Lat": 1.077515,
     "Lon": 37.092131,
-    "Ele": 1249.7
+    "Ele": 1249.7,
+    "ident": "KE-0198",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2247,7 +2925,9 @@
     "freq": "",
     "Lat": -0.017443,
     "Lon": 35.351428,
-    "Ele": 2042.2
+    "Ele": 2042.2,
+    "ident": "KE-0199",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2256,7 +2936,9 @@
     "freq": "",
     "Lat": -2.683608,
     "Lon": 37.178328,
-    "Ele": 1160.1
+    "Ele": 1160.1,
+    "ident": "KE-0200",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2265,7 +2947,9 @@
     "freq": "",
     "Lat": -2.638919,
     "Lon": 38.364736,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "KE-0201",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2274,7 +2958,9 @@
     "freq": "",
     "Lat": 2.141479,
     "Lon": 36.759077,
-    "Ele": 1371.6
+    "Ele": 1371.6,
+    "ident": "KE-0202",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2283,7 +2969,9 @@
     "freq": "",
     "Lat": -3.245484,
     "Lon": 38.181924,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "KE-0203",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2292,7 +2980,9 @@
     "freq": "",
     "Lat": -1.363068,
     "Lon": 35.189882,
-    "Ele": 1524.0
+    "Ele": 1524,
+    "ident": "KE-0204",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2301,7 +2991,9 @@
     "freq": "",
     "Lat": 0.61196,
     "Lon": 36.800095,
-    "Ele": 1750.8
+    "Ele": 1750.8,
+    "ident": "KE-0207",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2310,7 +3002,10 @@
     "freq": "",
     "Lat": -1.324213,
     "Lon": 35.246106,
-    "Ele": 1761.4
+    "Ele": 1761.4,
+    "ident": "KE-0208",
+    "iso_country": "KE",
+    "iata_code": "OLG"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3014,9 @@
     "freq": "",
     "Lat": -2.446286,
     "Lon": 40.754641,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0209",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3025,7 @@
     "freq": "",
     "Lat": -2.447421,
     "Lon": 40.740016,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -2337,7 +3034,9 @@
     "freq": "",
     "Lat": -2.37964,
     "Lon": 40.44099,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KE-0211",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3045,9 @@
     "freq": "",
     "Lat": 1.578387,
     "Lon": 37.810799,
-    "Ele": 568.8
+    "Ele": 568.8,
+    "ident": "KE-6002",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2355,7 +3056,9 @@
     "freq": "",
     "Lat": 1.966667,
     "Lon": 36.016668,
-    "Ele": 606.6
+    "Ele": 606.6,
+    "ident": "KE-6007",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2364,7 +3067,9 @@
     "freq": "",
     "Lat": -0.623426,
     "Lon": 35.065867,
-    "Ele": 1815.1
+    "Ele": 1815.1,
+    "ident": "KE-6012",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2373,7 +3078,9 @@
     "freq": "",
     "Lat": 3.646972,
     "Lon": 37.350861,
-    "Ele": 609.6
+    "Ele": 609.6,
+    "ident": "KE-6013",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3089,9 @@
     "freq": "",
     "Lat": -1.434722,
     "Lon": 35.193249,
-    "Ele": 1539.2
+    "Ele": 1539.2,
+    "ident": "KE-6018",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2391,7 +3100,9 @@
     "freq": "",
     "Lat": -0.467954,
     "Lon": 36.191218,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "KE-6019",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2400,7 +3111,9 @@
     "freq": "",
     "Lat": -1.135916,
     "Lon": 34.83411,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-6020",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2409,7 +3122,9 @@
     "freq": "",
     "Lat": -0.8029670119285583,
     "Lon": 36.09061050415039,
-    "Ele": 2834.6
+    "Ele": 2834.6,
+    "ident": "KE-6021",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2418,7 +3133,9 @@
     "freq": "",
     "Lat": 1.2666670083999634,
     "Lon": 35.033329010009766,
-    "Ele": 1633.7
+    "Ele": 1633.7,
+    "ident": "KE-6024",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2427,7 +3144,9 @@
     "freq": "",
     "Lat": 0.0472779981791973,
     "Lon": 37.4341926574707,
-    "Ele": 2377.4
+    "Ele": 2377.4,
+    "ident": "KE-6025",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2436,7 +3155,9 @@
     "freq": "",
     "Lat": 0.013944000005722,
     "Lon": 36.80083465576172,
-    "Ele": 1917.2
+    "Ele": 1917.2,
+    "ident": "KE-6027",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2445,7 +3166,9 @@
     "freq": "",
     "Lat": -3.083333,
     "Lon": 39.416668,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-6028",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2454,7 +3177,9 @@
     "freq": "",
     "Lat": -1.2999999523162842,
     "Lon": 36.95000076293945,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "KE-6029",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2463,7 +3188,9 @@
     "freq": "",
     "Lat": 0.1253229975700378,
     "Lon": 40.28998565673828,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "KE-6033",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2472,7 +3199,9 @@
     "freq": "",
     "Lat": 0.031057,
     "Lon": 35.988683,
-    "Ele": 1585.0
+    "Ele": 1585,
+    "ident": "KE-6034",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2481,7 +3210,9 @@
     "freq": "",
     "Lat": 2.345275,
     "Lon": 35.882778,
-    "Ele": 613.0
+    "Ele": 613,
+    "ident": "KE-6035",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2490,7 +3221,9 @@
     "freq": "",
     "Lat": 3.033333,
     "Lon": 36.049999,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "KE-6036",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2499,7 +3232,9 @@
     "freq": "",
     "Lat": 1.9833329916000368,
     "Lon": 36.04999923706055,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "KE-6037",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2508,7 +3243,9 @@
     "freq": "",
     "Lat": -0.2360280007123947,
     "Lon": 36.00080490112305,
-    "Ele": 2026.9
+    "Ele": 2026.9,
+    "ident": "KE-6040",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2517,7 +3254,9 @@
     "freq": "",
     "Lat": -1.0423929691314695,
     "Lon": 35.24995422363281,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-6041",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2526,7 +3265,9 @@
     "freq": "",
     "Lat": 2.0137779712677,
     "Lon": 38.634220123291016,
-    "Ele": 350.5
+    "Ele": 350.5,
+    "ident": "KE-6042",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2535,7 +3276,9 @@
     "freq": "",
     "Lat": -0.2860000133514404,
     "Lon": 36.15080642700195,
-    "Ele": 1889.8
+    "Ele": 1889.8,
+    "ident": "KE-6043",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2544,7 +3287,9 @@
     "freq": "",
     "Lat": -1.8359440565109253,
     "Lon": 37.78419494628906,
-    "Ele": 1917.2
+    "Ele": 1917.2,
+    "ident": "KE-6044",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2553,7 +3298,9 @@
     "freq": "",
     "Lat": -0.316978,
     "Lon": 35.922549,
-    "Ele": 2176.3
+    "Ele": 2176.3,
+    "ident": "KE-6045",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2562,7 +3309,9 @@
     "freq": "",
     "Lat": -1.0166670083999634,
     "Lon": 35.83333206176758,
-    "Ele": 2042.2
+    "Ele": 2042.2,
+    "ident": "KE-6046",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2571,7 +3320,9 @@
     "freq": "",
     "Lat": 0.013944000005722,
     "Lon": 36.8841667175293,
-    "Ele": 1700.8
+    "Ele": 1700.8,
+    "ident": "KE-6048",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2580,7 +3331,9 @@
     "freq": "",
     "Lat": -0.0527219995856285,
     "Lon": 37.73419570922852,
-    "Ele": 1159.8
+    "Ele": 1159.8,
+    "ident": "KE-6050",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2589,7 +3342,9 @@
     "freq": "",
     "Lat": -3.5123889446258545,
     "Lon": 38.250221252441406,
-    "Ele": 960.1
+    "Ele": 960.1,
+    "ident": "KE-6053",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2598,7 +3353,9 @@
     "freq": "",
     "Lat": -3.418889045715332,
     "Lon": 37.6341667175293,
-    "Ele": 769.6
+    "Ele": 769.6,
+    "ident": "KE-6054",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2607,7 +3364,9 @@
     "freq": "",
     "Lat": 1.895681,
     "Lon": 35.38826,
-    "Ele": 800.1
+    "Ele": 800.1,
+    "ident": "KE-6055",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2616,7 +3375,9 @@
     "freq": "",
     "Lat": -3.2193610668182373,
     "Lon": 37.80072021484375,
-    "Ele": 922.0
+    "Ele": 922,
+    "ident": "KE-6056",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2625,7 +3386,9 @@
     "freq": "",
     "Lat": -2.3691670894622803,
     "Lon": 39.617584228515625,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-6058",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2634,7 +3397,9 @@
     "freq": "",
     "Lat": 2.552500009536743,
     "Lon": 39.66758346557617,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-6061",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2643,7 +3408,9 @@
     "freq": "",
     "Lat": 0.07766,
     "Lon": 37.34969,
-    "Ele": 2641.4
+    "Ele": 2641.4,
+    "ident": "KE-6062",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2652,7 +3419,9 @@
     "freq": "",
     "Lat": -1.083519,
     "Lon": 35.18565,
-    "Ele": 1679.4
+    "Ele": 1679.4,
+    "ident": "KE-6066",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2661,7 +3430,9 @@
     "freq": "",
     "Lat": -0.1360000073909759,
     "Lon": 36.01747131347656,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "KE-6067",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2670,7 +3441,9 @@
     "freq": "",
     "Lat": 0.7138890027999878,
     "Lon": 36.86750030517578,
-    "Ele": 1563.6
+    "Ele": 1563.6,
+    "ident": "KE-6068",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2679,7 +3452,9 @@
     "freq": "",
     "Lat": 0.3305830061435699,
     "Lon": 36.65083312988281,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "KE-6071",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2688,7 +3463,9 @@
     "freq": "",
     "Lat": -0.6026390194892883,
     "Lon": 36.36747360229492,
-    "Ele": 1935.5
+    "Ele": 1935.5,
+    "ident": "KE-6072",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2697,7 +3474,9 @@
     "freq": "",
     "Lat": 3.0199999809265137,
     "Lon": 37.448333740234375,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "KE-6074",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2715,7 +3494,9 @@
     "freq": "",
     "Lat": 0.1821729987859726,
     "Lon": 36.911842346191406,
-    "Ele": 1737.4
+    "Ele": 1737.4,
+    "ident": "KE-6076",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2724,7 +3505,9 @@
     "freq": "",
     "Lat": -3.135777950286865,
     "Lon": 39.30088806152344,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "KE-6077",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2733,7 +3516,9 @@
     "freq": "",
     "Lat": -1.079585,
     "Lon": 34.87741,
-    "Ele": 1754.1
+    "Ele": 1754.1,
+    "ident": "KE-6079",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2751,7 +3536,9 @@
     "freq": "",
     "Lat": 0.3166669905185699,
     "Lon": 38.20000076293945,
-    "Ele": 673.9
+    "Ele": 673.9,
+    "ident": "KE-6082",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2760,7 +3547,9 @@
     "freq": "",
     "Lat": -0.6696670055389404,
     "Lon": 36.310279846191406,
-    "Ele": 2069.9
+    "Ele": 2069.9,
+    "ident": "KE-6084",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2769,7 +3558,10 @@
     "freq": "",
     "Lat": -1.14542,
     "Lon": 35.124922,
-    "Ele": 1676.4
+    "Ele": 1676.4,
+    "ident": "KE-6087",
+    "iso_country": "KE",
+    "iata_code": "HKR"
   },
   {
     "type": "small_airport",
@@ -2787,7 +3579,9 @@
     "freq": "",
     "Lat": 0.933333,
     "Lon": 35.166668,
-    "Ele": 2127.5
+    "Ele": 2127.5,
+    "ident": "KE-6089",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2796,7 +3590,9 @@
     "freq": "",
     "Lat": -3.6333329677581783,
     "Lon": 39.84999847412109,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "KE-6095",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2805,7 +3601,9 @@
     "freq": "",
     "Lat": -0.1096829995512962,
     "Lon": 37.79010009765625,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "KE-6109",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2814,7 +3612,9 @@
     "freq": "",
     "Lat": -2.228892,
     "Lon": 40.845313,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "KE-6110",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2823,7 +3623,10 @@
     "freq": "",
     "Lat": -1.27156,
     "Lon": 34.955513,
-    "Ele": 1883.7
+    "Ele": 1883.7,
+    "ident": "KE-6112",
+    "iso_country": "KE",
+    "iata_code": "ANA"
   },
   {
     "type": "small_airport",
@@ -2832,7 +3635,11 @@
     "freq": "",
     "Lat": -1.298636,
     "Lon": 35.063885,
-    "Ele": 1559.7
+    "Ele": 1559.7,
+    "ident": "KE-6121",
+    "iso_country": "KE",
+    "iata_code": "MDR",
+    "length_ft": 5249
   },
   {
     "type": "small_airport",
@@ -2841,7 +3648,9 @@
     "freq": "",
     "Lat": -2.57938888889,
     "Lon": 36.9121666667,
-    "Ele": 1243.6
+    "Ele": 1243.6,
+    "ident": "KE-6123",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2850,7 +3659,9 @@
     "freq": "",
     "Lat": 3.316666,
     "Lon": 37.066666,
-    "Ele": 361.8
+    "Ele": 361.8,
+    "ident": "KE-6127",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2859,7 +3670,9 @@
     "freq": "",
     "Lat": -0.245167002081871,
     "Lon": 36.8848876953125,
-    "Ele": 1920.2
+    "Ele": 1920.2,
+    "ident": "KE-6151",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2868,7 +3681,9 @@
     "freq": "",
     "Lat": 0.2775940001010895,
     "Lon": 36.53333282470703,
-    "Ele": 1848.9
+    "Ele": 1848.9,
+    "ident": "KE-6152",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2877,7 +3692,9 @@
     "freq": "",
     "Lat": 4.333976,
     "Lon": 36.906768,
-    "Ele": 701.0
+    "Ele": 701,
+    "ident": "KE-6153",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2886,7 +3703,9 @@
     "freq": "",
     "Lat": 0.290272,
     "Lon": 36.940397,
-    "Ele": 1719.1
+    "Ele": 1719.1,
+    "ident": "KE-6158",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2895,7 +3714,9 @@
     "freq": "",
     "Lat": 4.47532,
     "Lon": 35.91425,
-    "Ele": 364.2
+    "Ele": 364.2,
+    "ident": "KE-6166",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2904,7 +3725,9 @@
     "freq": "",
     "Lat": -3.362721920013428,
     "Lon": 38.605167388916016,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "KE-6175",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2913,7 +3736,9 @@
     "freq": "",
     "Lat": 0.9777780175209044,
     "Lon": 37.31888198852539,
-    "Ele": 1318.0
+    "Ele": 1318,
+    "ident": "KE-6178",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2922,7 +3747,10 @@
     "freq": "",
     "Lat": -1.408586,
     "Lon": 35.110689,
-    "Ele": 1527.4
+    "Ele": 1527.4,
+    "ident": "KE-6208",
+    "iso_country": "KE",
+    "iata_code": "OLX"
   },
   {
     "type": "small_airport",
@@ -2931,7 +3759,9 @@
     "freq": "",
     "Lat": 0.5833330154418945,
     "Lon": 36.43333435058594,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "KE-6320",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2940,7 +3770,9 @@
     "freq": "",
     "Lat": -4.52864,
     "Lon": 39.152237,
-    "Ele": 58.8
+    "Ele": 58.8,
+    "ident": "KE-6394",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2949,7 +3781,9 @@
     "freq": "",
     "Lat": 1.099450945854187,
     "Lon": 36.69509506225586,
-    "Ele": 1966.0
+    "Ele": 1966,
+    "ident": "KE-6396",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2958,7 +3792,10 @@
     "freq": "",
     "Lat": 3.705094,
     "Lon": 34.871293,
-    "Ele": 580.9
+    "Ele": 580.9,
+    "ident": "KE-6557",
+    "iso_country": "KE",
+    "icao_code": "HKKM"
   },
   {
     "type": "small_airport",
@@ -2967,7 +3804,9 @@
     "freq": "",
     "Lat": -3.3947649002075195,
     "Lon": 37.69775772094727,
-    "Ele": 910.7
+    "Ele": 910.7,
+    "ident": "KE-6576",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2976,7 +3815,9 @@
     "freq": "",
     "Lat": -1.850000023841858,
     "Lon": 36.78333282470703,
-    "Ele": 1707.8
+    "Ele": 1707.8,
+    "ident": "KE-6596",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2985,7 +3826,9 @@
     "freq": "",
     "Lat": -0.3405900001525879,
     "Lon": 36.91352462768555,
-    "Ele": 1950.7
+    "Ele": 1950.7,
+    "ident": "KE-6646",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -2994,7 +3837,9 @@
     "freq": "",
     "Lat": 0.9666669964790344,
     "Lon": 36.01666641235352,
-    "Ele": 721.8
+    "Ele": 721.8,
+    "ident": "KE-6647",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3003,7 +3848,9 @@
     "freq": "",
     "Lat": -2.947635,
     "Lon": 38.250075,
-    "Ele": 762.0
+    "Ele": 762,
+    "ident": "KE-6648",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3012,7 +3859,9 @@
     "freq": "",
     "Lat": 3.426179,
     "Lon": 40.229733,
-    "Ele": 606.9
+    "Ele": 606.9,
+    "ident": "KE-6649",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3021,7 +3870,9 @@
     "freq": "",
     "Lat": 3.554547071456909,
     "Lon": 38.64363479614258,
-    "Ele": 699.8
+    "Ele": 699.8,
+    "ident": "KE-6650",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3030,7 +3881,9 @@
     "freq": "",
     "Lat": 3.897056,
     "Lon": 40.320253,
-    "Ele": 913.8
+    "Ele": 913.8,
+    "ident": "KE-6656",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3039,7 +3892,9 @@
     "freq": "",
     "Lat": 0.6166669726371765,
     "Lon": 35.29999923706055,
-    "Ele": 2097.0
+    "Ele": 2097,
+    "ident": "KE-6873",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3048,7 +3903,9 @@
     "freq": "",
     "Lat": -1.2356940507888794,
     "Lon": 39.41755676269531,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "KE-6878",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3075,7 +3932,9 @@
     "freq": "",
     "Lat": 0.1303399950265884,
     "Lon": 35.2208251953125,
-    "Ele": 533.4
+    "Ele": 533.4,
+    "ident": "KE-6888",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3084,7 +3943,9 @@
     "freq": "",
     "Lat": 1.7814079523086548,
     "Lon": 36.801368713378906,
-    "Ele": 1280.8
+    "Ele": 1280.8,
+    "ident": "KE-6890",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3093,7 +3954,9 @@
     "freq": "",
     "Lat": -0.476943999529,
     "Lon": 35.2422218323,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "KE-6893",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3102,7 +3965,9 @@
     "freq": "",
     "Lat": 0.2305829972028732,
     "Lon": 37.2841682434082,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "KE-6894",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3111,7 +3976,9 @@
     "freq": "",
     "Lat": -2.316667079925537,
     "Lon": 37.91666793823242,
-    "Ele": 942.7
+    "Ele": 942.7,
+    "ident": "KE-6907",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3120,7 +3987,9 @@
     "freq": "",
     "Lat": -3.766666889190674,
     "Lon": 39.28333282470703,
-    "Ele": 294.7
+    "Ele": 294.7,
+    "ident": "KE-6911",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3129,7 +3998,9 @@
     "freq": "",
     "Lat": -1.6956549882888794,
     "Lon": 40.1257209777832,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "KE-6920",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3138,7 +4009,9 @@
     "freq": "",
     "Lat": 0.7223730087280273,
     "Lon": 39.17614364624024,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "KE-6924",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3147,7 +4020,9 @@
     "freq": "",
     "Lat": 2.3833329677581787,
     "Lon": 35.650001525878906,
-    "Ele": 743.7
+    "Ele": 743.7,
+    "ident": "KE-6937",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3156,7 +4031,9 @@
     "freq": "",
     "Lat": 1.2693220376968384,
     "Lon": 35.076324462890625,
-    "Ele": 1975.7
+    "Ele": 1975.7,
+    "ident": "KE-6946",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3165,7 +4042,9 @@
     "freq": "",
     "Lat": -1.135972023010254,
     "Lon": 41.05097198486328,
-    "Ele": 149.4
+    "Ele": 149.4,
+    "ident": "KE-6951",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3174,7 +4053,9 @@
     "freq": "",
     "Lat": -3.3333330154418945,
     "Lon": 38.76666641235352,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "KE-6957",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3183,7 +4064,10 @@
     "freq": "",
     "Lat": 0.319638,
     "Lon": 35.66256,
-    "Ele": 1318.3
+    "Ele": 1318.3,
+    "ident": "KE-6978",
+    "iso_country": "KE",
+    "iata_code": "KRV"
   },
   {
     "type": "small_airport",
@@ -3192,7 +4076,9 @@
     "freq": "",
     "Lat": 0.536848,
     "Lon": 35.728044,
-    "Ele": 1891.3
+    "Ele": 1891.3,
+    "ident": "KE-6996",
+    "iso_country": "KE"
   },
   {
     "type": "small_airport",
@@ -3201,7 +4087,10 @@
     "freq": "",
     "Lat": 0.45708501338959,
     "Lon": 34.130279541016,
-    "Ele": 1215.8
+    "Ele": 1215.8,
+    "ident": "KE-6997",
+    "iso_country": "KE",
+    "local_code": "HKBA"
   },
   {
     "type": "small_airport",
@@ -3210,7 +4099,10 @@
     "freq": "",
     "Lat": 0.57620799541473,
     "Lon": 34.553451538086,
-    "Ele": 1440.5
+    "Ele": 1440.5,
+    "ident": "KE-6998",
+    "iso_country": "KE",
+    "local_code": "HKBU"
   },
   {
     "type": "small_airport",
@@ -3219,7 +4111,10 @@
     "freq": "",
     "Lat": 0.536926,
     "Lon": 35.280518,
-    "Ele": 2148.8
+    "Ele": 2148.8,
+    "ident": "KE-6999",
+    "iso_country": "KE",
+    "local_code": "HKED"
   },
   {
     "type": "small_airport",
@@ -3228,7 +4123,10 @@
     "freq": "",
     "Lat": -2.909884929657,
     "Lon": 37.526107788086,
-    "Ele": 1621.5
+    "Ele": 1621.5,
+    "ident": "KE-7000",
+    "iso_country": "KE",
+    "local_code": "HKLT"
   },
   {
     "type": "small_airport",
@@ -3237,7 +4135,10 @@
     "freq": "",
     "Lat": -1.9480570554733,
     "Lon": 36.283332824707,
-    "Ele": 595.9
+    "Ele": 595.9,
+    "ident": "KE-7001",
+    "iso_country": "KE",
+    "local_code": "HKMG"
   },
   {
     "type": "small_airport",
@@ -3246,7 +4147,10 @@
     "freq": "",
     "Lat": -3.730548,
     "Lon": 39.039413,
-    "Ele": 440.7
+    "Ele": 440.7,
+    "ident": "KE-7002",
+    "iso_country": "KE",
+    "local_code": "HKMR"
   },
   {
     "type": "small_airport",
@@ -3255,7 +4159,10 @@
     "freq": "",
     "Lat": -2.7170820236206,
     "Lon": 38.197566986084,
-    "Ele": 730.6
+    "Ele": 730.6,
+    "ident": "KE-7003",
+    "iso_country": "KE",
+    "local_code": "HKMT"
   },
   {
     "type": "small_airport",
@@ -3264,7 +4171,10 @@
     "freq": "",
     "Lat": -1.2982189655304,
     "Lon": 36.915546417236,
-    "Ele": 1632.8
+    "Ele": 1632.8,
+    "ident": "KE-7004",
+    "iso_country": "KE",
+    "local_code": "HKSA"
   },
   {
     "type": "small_airport",
@@ -3273,7 +4183,10 @@
     "freq": "",
     "Lat": -1.7438290119171145,
     "Lon": 41.48434448242188,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "KE-KIU",
+    "iso_country": "KE",
+    "iata_code": "KIU"
   },
   {
     "type": "small_airport",
@@ -3282,7 +4195,10 @@
     "freq": "",
     "Lat": 0.348333,
     "Lon": 40.881699,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "KE-LBK",
+    "iso_country": "KE",
+    "iata_code": "LBK"
   },
   {
     "type": "small_airport",
@@ -3291,7 +4207,10 @@
     "freq": "",
     "Lat": 3.416256,
     "Lon": 35.885468,
-    "Ele": 396.2
+    "Ele": 396.2,
+    "ident": "KE-LKU",
+    "iso_country": "KE",
+    "iata_code": "LKU"
   },
   {
     "type": "small_airport",
@@ -3300,7 +4219,9 @@
     "freq": "",
     "Lat": 0.355399,
     "Lon": 34.528234,
-    "Ele": 1268.9
+    "Ele": 1268.9,
+    "ident": "KE-MUM",
+    "iso_country": "KE"
   },
   {
     "type": "medium_airport",
@@ -3309,6 +4230,9 @@
     "freq": "",
     "Lat": -1.96056,
     "Lon": 41.297501,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "KWY",
+    "iso_country": "KE",
+    "iata_code": "KWY"
   }
 ]

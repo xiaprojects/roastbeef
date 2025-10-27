@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 5.79,
     "Lon": 101.15,
-    "Ele": 239.3
+    "Ele": 239.3,
+    "ident": "BTZ",
+    "iso_country": "TH",
+    "iata_code": "BTZ",
+    "length_ft": 5906
   },
   {
     "type": "small_airport",
@@ -15,7 +19,13 @@
     "freq": "122.300",
     "Lat": 12.902439,
     "Lon": 100.933227,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "TH-0001",
+    "iso_country": "TH",
+    "local_code": "EFC",
+    "length_ft": 1500,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -24,7 +34,9 @@
     "freq": "",
     "Lat": 14.170617,
     "Lon": 100.691757,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0002",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,11 @@
     "freq": "131.000",
     "Lat": 14.114705,
     "Lon": 100.949485,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "TH-0003",
+    "iso_country": "TH",
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -42,7 +58,9 @@
     "freq": "",
     "Lat": 14.163603,
     "Lon": 101.337118,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0004",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -51,7 +69,9 @@
     "freq": "",
     "Lat": 14.03662,
     "Lon": 100.69448,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0005",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -60,7 +80,11 @@
     "freq": "",
     "Lat": 13.94571,
     "Lon": 100.57441,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "TH-0006",
+    "iso_country": "TH",
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -69,7 +93,10 @@
     "freq": "",
     "Lat": 12.63247,
     "Lon": 102.02603,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "TH-0007",
+    "iso_country": "TH",
+    "icao_code": "VTBC"
   },
   {
     "type": "small_airport",
@@ -78,7 +105,11 @@
     "freq": "",
     "Lat": 11.717453,
     "Lon": 102.520332,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "TH-0008",
+    "iso_country": "TH",
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -87,7 +118,9 @@
     "freq": "",
     "Lat": 12.709905,
     "Lon": 101.630542,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0010",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -96,7 +129,12 @@
     "freq": "122.300",
     "Lat": 13.14027,
     "Lon": 101.04642,
-    "Ele": 65.2
+    "Ele": 65.2,
+    "ident": "TH-0011",
+    "iso_country": "TH",
+    "length_ft": 2200,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -105,7 +143,9 @@
     "freq": "",
     "Lat": 13.236033,
     "Lon": 100.994902,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0012",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -114,7 +154,9 @@
     "freq": "",
     "Lat": 13.3938,
     "Lon": 101.32055,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0013",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -123,7 +165,9 @@
     "freq": "",
     "Lat": 13.85782,
     "Lon": 100.32493,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0014",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -132,7 +176,12 @@
     "freq": "124.350",
     "Lat": 13.54018,
     "Lon": 100.32936,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0015",
+    "iso_country": "TH",
+    "length_ft": 2600,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -141,7 +190,9 @@
     "freq": "",
     "Lat": 13.57376,
     "Lon": 99.75296,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0016",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -150,7 +201,9 @@
     "freq": "",
     "Lat": 12.87173,
     "Lon": 99.79265,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0017",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -159,7 +212,9 @@
     "freq": "",
     "Lat": 7.1349,
     "Lon": 100.33063,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0019",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -168,7 +223,10 @@
     "freq": "",
     "Lat": 13.7553,
     "Lon": 101.395,
-    "Ele": 50.6
+    "Ele": 50.6,
+    "ident": "TH-0021",
+    "iso_country": "TH",
+    "local_code": "PMM"
   },
   {
     "type": "small_airport",
@@ -177,7 +235,7 @@
     "freq": "",
     "Lat": 5.78161,
     "Lon": 101.159256,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -186,7 +244,11 @@
     "freq": "122.300",
     "Lat": 13.14421,
     "Lon": 101.106062,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0023",
+    "iso_country": "TH",
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -195,7 +257,11 @@
     "freq": "",
     "Lat": 13.94495,
     "Lon": 102.00432,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0024",
+    "iso_country": "TH",
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -204,7 +270,13 @@
     "freq": "122.775",
     "Lat": 12.6714,
     "Lon": 101.5476,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0025",
+    "iso_country": "TH",
+    "length_ft": 2296,
+    "width_ft": 65,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -213,7 +285,10 @@
     "freq": "",
     "Lat": 18.67614,
     "Lon": 99.10522,
-    "Ele": 301.8
+    "Ele": 301.8,
+    "ident": "TH-0027",
+    "iso_country": "TH",
+    "icao_code": "VTCM"
   },
   {
     "type": "small_airport",
@@ -222,7 +297,9 @@
     "freq": "",
     "Lat": 16.77324,
     "Lon": 104.03372,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0029",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -231,7 +308,9 @@
     "freq": "",
     "Lat": 12.8351,
     "Lon": 100.98118,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0032",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -240,7 +319,13 @@
     "freq": "125.800",
     "Lat": 14.08045,
     "Lon": 100.852589,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "TH-0034",
+    "iso_country": "TH",
+    "length_ft": 2690,
+    "width_ft": 75,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -249,7 +334,9 @@
     "freq": "",
     "Lat": 14.11717,
     "Lon": 100.76169,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0035",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -258,7 +345,9 @@
     "freq": "",
     "Lat": 14.021443,
     "Lon": 101.702989,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "TH-0036",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -267,7 +356,9 @@
     "freq": "",
     "Lat": 14.125242,
     "Lon": 99.446955,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0037",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -276,7 +367,9 @@
     "freq": "",
     "Lat": 14.06445,
     "Lon": 99.36168,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0038",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -285,7 +378,9 @@
     "freq": "",
     "Lat": 13.77697,
     "Lon": 101.61345,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0039",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -294,7 +389,13 @@
     "freq": "122.400",
     "Lat": 14.63123,
     "Lon": 101.4659,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0040",
+    "iso_country": "TH",
+    "length_ft": 2340,
+    "width_ft": 60,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -303,7 +404,11 @@
     "freq": "123.000",
     "Lat": 18.70403,
     "Lon": 99.11917,
-    "Ele": 310.9
+    "Ele": 310.9,
+    "ident": "TH-0042",
+    "iso_country": "TH",
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -312,7 +417,13 @@
     "freq": "122.400",
     "Lat": 17.522045,
     "Lon": 103.551192,
-    "Ele": 168.9
+    "Ele": 168.9,
+    "ident": "TH-0043",
+    "iso_country": "TH",
+    "length_ft": 2400,
+    "width_ft": 60,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -321,7 +432,13 @@
     "freq": "122.300",
     "Lat": 14.7712,
     "Lon": 100.776,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "TH-0044",
+    "iso_country": "TH",
+    "length_ft": 2290,
+    "width_ft": 60,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -330,7 +447,10 @@
     "freq": "",
     "Lat": 12.920684,
     "Lon": 101.183631,
-    "Ele": 56.7
+    "Ele": 56.7,
+    "ident": "TH-0045",
+    "iso_country": "TH",
+    "local_code": "VTX9"
   },
   {
     "type": "small_airport",
@@ -339,7 +459,9 @@
     "freq": "",
     "Lat": 13.289235,
     "Lon": 100.963154,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TH-0049",
+    "iso_country": "TH"
   },
   {
     "type": "small_airport",
@@ -348,7 +470,11 @@
     "freq": "",
     "Lat": 12.85511,
     "Lon": 100.990908,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "TH-0050",
+    "iso_country": "TH",
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -357,7 +483,10 @@
     "freq": "",
     "Lat": 14.10993,
     "Lon": 101.00166,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "VN-0020",
+    "iso_country": "TH",
+    "local_code": "VT16"
   },
   {
     "type": "large_airport",
@@ -366,7 +495,15 @@
     "freq": "119.400",
     "Lat": 13.9126,
     "Lon": 100.607002,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "VTBD",
+    "iso_country": "TH",
+    "icao_code": "VTBD",
+    "iata_code": "DMK",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -375,7 +512,14 @@
     "freq": "552.000",
     "Lat": 14.9494,
     "Lon": 100.642998,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "VTBH",
+    "iso_country": "TH",
+    "icao_code": "VTBH",
+    "length_ft": 3890,
+    "width_ft": 98,
+    "heading": 58,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -384,7 +528,13 @@
     "freq": "133.100",
     "Lat": 14.0778,
     "Lon": 101.379997,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "VTBI",
+    "iso_country": "TH",
+    "length_ft": 3280,
+    "width_ft": 112,
+    "heading": 172.3,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -393,7 +543,15 @@
     "freq": "127.750",
     "Lat": 14.1020002365,
     "Lon": 99.9171981812,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "VTBK",
+    "iso_country": "TH",
+    "icao_code": "VTBK",
+    "iata_code": "KDT",
+    "length_ft": 9000,
+    "width_ft": 148,
+    "heading": 30,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -402,7 +560,15 @@
     "freq": "121.750",
     "Lat": 14.87462,
     "Lon": 100.663397,
-    "Ele": 37.5
+    "Ele": 37.5,
+    "ident": "VTBL",
+    "iso_country": "TH",
+    "icao_code": "VTBL",
+    "iata_code": "KKM",
+    "length_ft": 7252,
+    "width_ft": 148,
+    "heading": 160.3,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -411,7 +577,9 @@
     "freq": "",
     "Lat": 12.417200088500977,
     "Lon": 99.86940002441406,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VTBN",
+    "iso_country": "TH"
   },
   {
     "type": "medium_airport",
@@ -420,7 +588,15 @@
     "freq": "118.600",
     "Lat": 12.2746,
     "Lon": 102.319,
-    "Ele": 32.0
+    "Ele": 32,
+    "ident": "VTBO",
+    "iso_country": "TH",
+    "icao_code": "VTBO",
+    "iata_code": "TDX",
+    "length_ft": 5899,
+    "width_ft": 150,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -429,7 +605,14 @@
     "freq": "39.060",
     "Lat": 11.7884,
     "Lon": 99.804703,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "VTBP",
+    "iso_country": "TH",
+    "icao_code": "VTBP",
+    "length_ft": 3281,
+    "width_ft": 131,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -438,7 +621,15 @@
     "freq": "127.800",
     "Lat": 13.6811,
     "Lon": 100.747002,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "VTBS",
+    "iso_country": "TH",
+    "icao_code": "VTBS",
+    "iata_code": "BKK",
+    "length_ft": 12139,
+    "width_ft": 197,
+    "heading": 14,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -447,7 +638,13 @@
     "freq": "119.700",
     "Lat": 13.232426,
     "Lon": 100.956802,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "VTBT",
+    "iso_country": "TH",
+    "icao_code": "VTBT",
+    "length_ft": 3031,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -456,7 +653,15 @@
     "freq": "119.700",
     "Lat": 12.67990016937256,
     "Lon": 101.00499725341795,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "VTBU",
+    "iso_country": "TH",
+    "icao_code": "VTBU",
+    "iata_code": "UTP",
+    "length_ft": 11500,
+    "width_ft": 197,
+    "heading": 185,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -465,7 +670,10 @@
     "freq": "",
     "Lat": 12.254042,
     "Lon": 102.518522,
-    "Ele": -0.3
+    "Ele": -0.3,
+    "ident": "VTBV",
+    "iso_country": "TH",
+    "icao_code": "VTBV"
   },
   {
     "type": "small_airport",
@@ -474,7 +682,14 @@
     "freq": "118.100",
     "Lat": 13.769203,
     "Lon": 102.316017,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "VTBW",
+    "iso_country": "TH",
+    "icao_code": "VTBW",
+    "length_ft": 4922,
+    "width_ft": 115,
+    "heading": 50,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -483,7 +698,9 @@
     "freq": "",
     "Lat": 19.5,
     "Lon": 100.28299713134766,
-    "Ele": 387.7
+    "Ele": 387.7,
+    "ident": "VTCB",
+    "iso_country": "TH"
   },
   {
     "type": "large_airport",
@@ -492,7 +709,15 @@
     "freq": "129.600",
     "Lat": 18.7667999268,
     "Lon": 98.962600708,
-    "Ele": 315.8
+    "Ele": 315.8,
+    "ident": "VTCC",
+    "iso_country": "TH",
+    "icao_code": "VTCC",
+    "iata_code": "CNX",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -501,7 +726,15 @@
     "freq": "126.200",
     "Lat": 19.3013,
     "Lon": 97.9758,
-    "Ele": 283.2
+    "Ele": 283.2,
+    "ident": "VTCH",
+    "iso_country": "TH",
+    "icao_code": "VTCH",
+    "iata_code": "HGN",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 107,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -510,7 +743,14 @@
     "freq": "123.000",
     "Lat": 19.372054,
     "Lon": 98.435904,
-    "Ele": 510.8
+    "Ele": 510.8,
+    "ident": "VTCI",
+    "iso_country": "TH",
+    "iata_code": "PYY",
+    "length_ft": 2329,
+    "width_ft": 59,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -519,7 +759,15 @@
     "freq": "119.300",
     "Lat": 18.27090072631836,
     "Lon": 99.50420379638672,
-    "Ele": 247.2
+    "Ele": 247.2,
+    "ident": "VTCL",
+    "iso_country": "TH",
+    "icao_code": "VTCL",
+    "iata_code": "LPT",
+    "length_ft": 6465,
+    "width_ft": 95,
+    "heading": 175.4,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -528,7 +776,15 @@
     "freq": "120.250",
     "Lat": 18.807899475097656,
     "Lon": 100.78299713134766,
-    "Ele": 208.8
+    "Ele": 208.8,
+    "ident": "VTCN",
+    "iso_country": "TH",
+    "icao_code": "VTCN",
+    "iata_code": "NNT",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 20.7,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -537,7 +793,10 @@
     "freq": "",
     "Lat": 18.548986,
     "Lon": 99.012426,
-    "Ele": 281.9
+    "Ele": 281.9,
+    "ident": "VTCO",
+    "iso_country": "TH",
+    "icao_code": "VTCO"
   },
   {
     "type": "medium_airport",
@@ -546,7 +805,15 @@
     "freq": "120.100",
     "Lat": 18.1322,
     "Lon": 100.165001,
-    "Ele": 164.0
+    "Ele": 164,
+    "ident": "VTCP",
+    "iso_country": "TH",
+    "icao_code": "VTCP",
+    "iata_code": "PRH",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 6,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -555,7 +822,12 @@
     "freq": "122.300",
     "Lat": 18.180962,
     "Lon": 97.930627,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "VTCS",
+    "iso_country": "TH",
+    "length_ft": 2400,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -564,7 +836,14 @@
     "freq": "163.050",
     "Lat": 19.952299,
     "Lon": 99.882896,
-    "Ele": 390.1
+    "Ele": 390.1,
+    "ident": "VTCT",
+    "iso_country": "TH",
+    "iata_code": "CEI",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -573,7 +852,12 @@
     "freq": "",
     "Lat": 18.6762,
     "Lon": 99.11157,
-    "Ele": 299.6
+    "Ele": 299.6,
+    "ident": "VTCY",
+    "iso_country": "TH",
+    "icao_code": "VTCY",
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -582,7 +866,9 @@
     "freq": "",
     "Lat": 17.382999,
     "Lon": 102.800003,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "VTED",
+    "iso_country": "TH"
   },
   {
     "type": "medium_airport",
@@ -591,7 +877,15 @@
     "freq": "126.700",
     "Lat": 16.6760005951,
     "Lon": 101.194999695,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "VTPB",
+    "iso_country": "TH",
+    "icao_code": "VTPB",
+    "iata_code": "PHY",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -600,7 +894,15 @@
     "freq": "126.200",
     "Lat": 12.6361999512,
     "Lon": 99.951499939,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "VTPH",
+    "iso_country": "TH",
+    "icao_code": "VTPH",
+    "iata_code": "HHQ",
+    "length_ft": 6890,
+    "width_ft": 115,
+    "heading": 159.7,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -609,7 +911,15 @@
     "freq": "124.000",
     "Lat": 15.277299881,
     "Lon": 100.29599762,
-    "Ele": 32.6
+    "Ele": 32.6,
+    "ident": "VTPI",
+    "iso_country": "TH",
+    "icao_code": "VTPI",
+    "iata_code": "TKH",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 181.3,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -618,7 +928,14 @@
     "freq": "",
     "Lat": 16.824057,
     "Lon": 101.251244,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "VTPL",
+    "iso_country": "TH",
+    "icao_code": "VTPL",
+    "length_ft": 3281,
+    "width_ft": 98,
+    "heading": 7.9,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -627,7 +944,15 @@
     "freq": "120.650",
     "Lat": 16.699899673461914,
     "Lon": 98.54509735107422,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "VTPM",
+    "iso_country": "TH",
+    "icao_code": "VTPM",
+    "iata_code": "MAQ",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 89.1,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -636,7 +961,14 @@
     "freq": "122.300",
     "Lat": 15.673,
     "Lon": 100.137001,
-    "Ele": 34.4
+    "Ele": 34.4,
+    "ident": "VTPN",
+    "iso_country": "TH",
+    "icao_code": "VTPN",
+    "length_ft": 4481,
+    "width_ft": 98,
+    "heading": 53.1,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -645,7 +977,15 @@
     "freq": "120.700",
     "Lat": 17.238000869750977,
     "Lon": 99.81819915771484,
-    "Ele": 54.6
+    "Ele": 54.6,
+    "ident": "VTPO",
+    "iso_country": "TH",
+    "icao_code": "VTPO",
+    "iata_code": "THS",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -654,7 +994,15 @@
     "freq": "120.700",
     "Lat": 16.7829,
     "Lon": 100.278999,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "VTPP",
+    "iso_country": "TH",
+    "icao_code": "VTPP",
+    "iata_code": "PHS",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 144,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -663,7 +1011,10 @@
     "freq": "",
     "Lat": 13.6686,
     "Lon": 99.7314,
-    "Ele": 26.8
+    "Ele": 26.8,
+    "ident": "VTPR",
+    "iso_country": "TH",
+    "icao_code": "VTPR"
   },
   {
     "type": "medium_airport",
@@ -672,7 +1023,15 @@
     "freq": "120.700",
     "Lat": 16.896,
     "Lon": 99.253304,
-    "Ele": 145.7
+    "Ele": 145.7,
+    "ident": "VTPT",
+    "iso_country": "TH",
+    "icao_code": "VTPT",
+    "iata_code": "TKT",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 90.3,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -681,7 +1040,14 @@
     "freq": "122.300",
     "Lat": 17.2342,
     "Lon": 99.057899,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "VTPY",
+    "iso_country": "TH",
+    "icao_code": "VTPY",
+    "length_ft": 4899,
+    "width_ft": 98,
+    "heading": 47.5,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -690,7 +1056,14 @@
     "freq": "",
     "Lat": 6.6614,
     "Lon": 100.080002,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "VTSA",
+    "iso_country": "TH",
+    "icao_code": "VTSA",
+    "length_ft": 3609,
+    "width_ft": 131,
+    "heading": 173.8,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -699,7 +1072,15 @@
     "freq": "129.600",
     "Lat": 9.13259983063,
     "Lon": 99.135597229,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VTSB",
+    "iso_country": "TH",
+    "icao_code": "VTSB",
+    "iata_code": "URT",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 44.2,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -708,7 +1089,15 @@
     "freq": "125.550",
     "Lat": 6.519919872283936,
     "Lon": 101.74299621582033,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "VTSC",
+    "iso_country": "TH",
+    "icao_code": "VTSC",
+    "iata_code": "NAW",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 23,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -717,7 +1106,15 @@
     "freq": "119.750",
     "Lat": 10.7112,
     "Lon": 99.361702,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "VTSE",
+    "iso_country": "TH",
+    "icao_code": "VTSE",
+    "iata_code": "CJM",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 60.1,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -726,7 +1123,15 @@
     "freq": "119.750",
     "Lat": 8.539620399475098,
     "Lon": 99.9447021484375,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "VTSF",
+    "iso_country": "TH",
+    "icao_code": "VTSF",
+    "iata_code": "NST",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 6,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -735,7 +1140,15 @@
     "freq": "120.050",
     "Lat": 8.09912014008,
     "Lon": 98.9861984253,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "VTSG",
+    "iso_country": "TH",
+    "icao_code": "VTSG",
+    "iata_code": "KBV",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "heading": 140.6,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -744,7 +1157,15 @@
     "freq": "126.200",
     "Lat": 7.186560153961182,
     "Lon": 100.60800170898438,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "VTSH",
+    "iso_country": "TH",
+    "icao_code": "VTSH",
+    "iata_code": "SGZ",
+    "length_ft": 4954,
+    "width_ft": 148,
+    "heading": 134.8,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -753,7 +1174,15 @@
     "freq": "125.550",
     "Lat": 6.78546,
     "Lon": 101.153999,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "VTSK",
+    "iso_country": "TH",
+    "icao_code": "VTSK",
+    "iata_code": "PAN",
+    "length_ft": 4593,
+    "width_ft": 131,
+    "heading": 86,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -762,7 +1191,15 @@
     "freq": "129.600",
     "Lat": 9.54779,
     "Lon": 100.061996,
-    "Ele": 19.5
+    "Ele": 19.5,
+    "ident": "VTSM",
+    "iso_country": "TH",
+    "icao_code": "VTSM",
+    "iata_code": "USM",
+    "length_ft": 6759,
+    "width_ft": 148,
+    "heading": 174.5,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -771,7 +1208,14 @@
     "freq": "657.700",
     "Lat": 8.47115,
     "Lon": 99.955597,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "VTSN",
+    "iso_country": "TH",
+    "icao_code": "VTSN",
+    "length_ft": 7546,
+    "width_ft": 148,
+    "heading": 173,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -780,7 +1224,15 @@
     "freq": "124.700",
     "Lat": 8.1132,
     "Lon": 98.316902,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "VTSP",
+    "iso_country": "TH",
+    "icao_code": "VTSP",
+    "iata_code": "HKT",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 84.5,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -789,7 +1241,15 @@
     "freq": "125.100",
     "Lat": 9.77762,
     "Lon": 98.585503,
-    "Ele": 17.4
+    "Ele": 17.4,
+    "ident": "VTSR",
+    "iso_country": "TH",
+    "icao_code": "VTSR",
+    "iata_code": "UNN",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 24,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -798,7 +1258,15 @@
     "freq": "126.700",
     "Lat": 6.93320989609,
     "Lon": 100.392997742,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "VTSS",
+    "iso_country": "TH",
+    "icao_code": "VTSS",
+    "iata_code": "HDY",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 83,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -807,7 +1275,15 @@
     "freq": "125.300",
     "Lat": 7.50874,
     "Lon": 99.6166,
-    "Ele": 20.4
+    "Ele": 20.4,
+    "ident": "VTST",
+    "iso_country": "TH",
+    "icao_code": "VTST",
+    "iata_code": "TST",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 80.9,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -816,7 +1292,13 @@
     "freq": "124.700",
     "Lat": 8.018733,
     "Lon": 98.40291,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "VTSW",
+    "iso_country": "TH",
+    "length_ft": 1640,
+    "width_ft": 59,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -825,7 +1307,15 @@
     "freq": "126.200",
     "Lat": 17.386400222800003,
     "Lon": 102.788002014,
-    "Ele": 176.5
+    "Ele": 176.5,
+    "ident": "VTUD",
+    "iso_country": "TH",
+    "icao_code": "VTUD",
+    "iata_code": "UTH",
+    "length_ft": 10000,
+    "width_ft": 148,
+    "heading": 117,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -834,7 +1324,15 @@
     "freq": "123.350",
     "Lat": 17.195100784301758,
     "Lon": 104.11900329589844,
-    "Ele": 161.2
+    "Ele": 161.2,
+    "ident": "VTUI",
+    "iso_country": "TH",
+    "icao_code": "VTUI",
+    "iata_code": "SNO",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 45,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -843,7 +1341,15 @@
     "freq": "123.600",
     "Lat": 14.868300437927,
     "Lon": 103.49800109863,
-    "Ele": 145.7
+    "Ele": 145.7,
+    "ident": "VTUJ",
+    "iso_country": "TH",
+    "icao_code": "VTUJ",
+    "iata_code": "PXR",
+    "length_ft": 5053,
+    "width_ft": 115,
+    "heading": 7.5,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -852,7 +1358,15 @@
     "freq": "123.400",
     "Lat": 16.466600418099997,
     "Lon": 102.783996582,
-    "Ele": 204.2
+    "Ele": 204.2,
+    "ident": "VTUK",
+    "iso_country": "TH",
+    "icao_code": "VTUK",
+    "iata_code": "KKC",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 32.9,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -861,7 +1375,15 @@
     "freq": "122.550",
     "Lat": 17.43910026550293,
     "Lon": 101.72200012207033,
-    "Ele": 262.1
+    "Ele": 262.1,
+    "ident": "VTUL",
+    "iso_country": "TH",
+    "icao_code": "VTUL",
+    "iata_code": "LOE",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 16.8,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -870,7 +1392,14 @@
     "freq": "129.750",
     "Lat": 14.934713,
     "Lon": 102.078945,
-    "Ele": 222.2
+    "Ele": 222.2,
+    "ident": "VTUN",
+    "iso_country": "TH",
+    "icao_code": "VTUN",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 62.1,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -879,7 +1408,15 @@
     "freq": "123.600",
     "Lat": 15.2295,
     "Lon": 103.252998,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "VTUO",
+    "iso_country": "TH",
+    "icao_code": "VTUO",
+    "iata_code": "BFV",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 35.1,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -888,7 +1425,15 @@
     "freq": "123.600",
     "Lat": 14.9495,
     "Lon": 102.313004,
-    "Ele": 233.2
+    "Ele": 233.2,
+    "ident": "VTUQ",
+    "iso_country": "TH",
+    "icao_code": "VTUQ",
+    "iata_code": "NAK",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 61.3,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -897,7 +1442,14 @@
     "freq": "125.400",
     "Lat": 16.0704,
     "Lon": 103.646004,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "VTUR",
+    "iso_country": "TH",
+    "icao_code": "VTUR",
+    "length_ft": 3125,
+    "width_ft": 98,
+    "heading": 166.6,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1458,15 @@
     "freq": "123.500",
     "Lat": 15.2512998581,
     "Lon": 104.870002747,
-    "Ele": 123.7
+    "Ele": 123.7,
+    "ident": "VTUU",
+    "iso_country": "TH",
+    "icao_code": "VTUU",
+    "iata_code": "UBP",
+    "length_ft": 9848,
+    "width_ft": 148,
+    "heading": 51.5,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -915,7 +1475,15 @@
     "freq": "125.400",
     "Lat": 16.1168,
     "Lon": 103.774002,
-    "Ele": 137.5
+    "Ele": 137.5,
+    "ident": "VTUV",
+    "iso_country": "TH",
+    "icao_code": "VTUV",
+    "iata_code": "ROI",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 182.5,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -924,7 +1492,15 @@
     "freq": "123.350",
     "Lat": 17.383801,
     "Lon": 104.642998,
-    "Ele": 178.9
+    "Ele": 178.9,
+    "ident": "VTUW",
+    "iso_country": "TH",
+    "icao_code": "VTUW",
+    "iata_code": "KOP",
+    "length_ft": 8203,
+    "width_ft": 148,
+    "heading": 144.8,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -933,6 +1509,12 @@
     "freq": "",
     "Lat": 16.65220069885254,
     "Lon": 102.96700286865234,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VTUZ",
+    "iso_country": "TH",
+    "length_ft": 10359,
+    "width_ft": 148,
+    "heading": 7,
+    "QFU": "19"
   }
 ]

@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 30.3435,
     "Lon": 36.147701,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0002",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 30.01919937133789,
     "Lon": 36.12590026855469,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0003",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 32.0267062933,
     "Lon": 36.4086914062,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0004",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 32.730667612,
     "Lon": 38.9783120155,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0005",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 31.5965854628,
     "Lon": 36.9232356548,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0006",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,10 @@
     "freq": "",
     "Lat": 31.251992,
     "Lon": 36.223211,
-    "Ele": 850.4
+    "Ele": 850.4,
+    "ident": "JO-0007",
+    "iso_country": "JO",
+    "local_code": "Z17G"
   },
   {
     "type": "small_airport",
@@ -60,7 +73,9 @@
     "freq": "",
     "Lat": 29.8239934905,
     "Lon": 35.3279650211,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0008",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -69,7 +84,9 @@
     "freq": "",
     "Lat": 31.7856760596,
     "Lon": 36.2213230133,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0009",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -78,7 +95,9 @@
     "freq": "",
     "Lat": 31.568827,
     "Lon": 36.778292,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "JO-0015",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -87,7 +106,9 @@
     "freq": "",
     "Lat": 31.772909,
     "Lon": 35.576362,
-    "Ele": -367.9
+    "Ele": -367.9,
+    "ident": "JO-0016",
+    "iso_country": "JO"
   },
   {
     "type": "small_airport",
@@ -96,7 +117,14 @@
     "freq": "",
     "Lat": 32.025299072265625,
     "Lon": 36.144798278808594,
-    "Ele": 731.5
+    "Ele": 731.5,
+    "ident": "OJ38",
+    "iso_country": "JO",
+    "local_code": "OJ38",
+    "length_ft": 4146,
+    "width_ft": 80,
+    "heading": 105.8,
+    "QFU": "28"
   },
   {
     "type": "large_airport",
@@ -105,7 +133,15 @@
     "freq": "128.900",
     "Lat": 31.7226009369,
     "Lon": 35.9931983948,
-    "Ele": 730.0
+    "Ele": 730,
+    "ident": "OJAI",
+    "iso_country": "JO",
+    "icao_code": "OJAI",
+    "iata_code": "AMM",
+    "length_ft": 12008,
+    "width_ft": 200,
+    "heading": 81.4,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -114,7 +150,15 @@
     "freq": "128.900",
     "Lat": 31.9727,
     "Lon": 35.9916,
-    "Ele": 778.8
+    "Ele": 778.8,
+    "ident": "OJAM",
+    "iso_country": "JO",
+    "icao_code": "OJAM",
+    "iata_code": "ADJ",
+    "length_ft": 10745,
+    "width_ft": 148,
+    "heading": 65,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -123,7 +167,15 @@
     "freq": "119.200",
     "Lat": 29.61160087585449,
     "Lon": 35.01810073852539,
-    "Ele": 53.3
+    "Ele": 53.3,
+    "ident": "OJAQ",
+    "iso_country": "JO",
+    "icao_code": "OJAQ",
+    "iata_code": "AQJ",
+    "length_ft": 9855,
+    "width_ft": 148,
+    "heading": 19,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -132,7 +184,13 @@
     "freq": "128.900",
     "Lat": 32.160702,
     "Lon": 37.149399,
-    "Ele": 676.7
+    "Ele": 676.7,
+    "ident": "OJHF",
+    "iso_country": "JO",
+    "length_ft": 9802,
+    "width_ft": 140,
+    "heading": 131,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -141,7 +199,13 @@
     "freq": "",
     "Lat": 32.5392,
     "Lon": 38.195,
-    "Ele": 685.8
+    "Ele": 685.8,
+    "ident": "OJHR",
+    "iso_country": "JO",
+    "length_ft": 8215,
+    "width_ft": 98,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -150,7 +214,15 @@
     "freq": "",
     "Lat": 32.3564,
     "Lon": 36.259201,
-    "Ele": 682.8
+    "Ele": 682.8,
+    "ident": "OJMF",
+    "iso_country": "JO",
+    "icao_code": "OJMF",
+    "iata_code": "OMF",
+    "length_ft": 9819,
+    "width_ft": 148,
+    "heading": 130.4,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -159,6 +231,13 @@
     "freq": "",
     "Lat": 31.8256,
     "Lon": 36.782001,
-    "Ele": 520.0
+    "Ele": 520,
+    "ident": "OJMS",
+    "iso_country": "JO",
+    "local_code": "OJ40",
+    "length_ft": 9777,
+    "width_ft": 148,
+    "heading": 131.1,
+    "QFU": "31"
   }
 ]

@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 7.583,
     "Lon": 1.117,
-    "Ele": 210.0
+    "Ele": 210,
+    "ident": "DXAK",
+    "iso_country": "TG",
+    "icao_code": "DXAK"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 10.800417,
     "Lon": 0.242372,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "DXDP",
+    "iso_country": "TG",
+    "icao_code": "DXDP"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,10 @@
     "freq": "",
     "Lat": 7.803451,
     "Lon": 1.295966,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "DXKP",
+    "iso_country": "TG",
+    "icao_code": "DXKP"
   },
   {
     "type": "small_airport",
@@ -33,7 +42,10 @@
     "freq": "",
     "Lat": 10.373011,
     "Lon": 0.471382,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "DXMG",
+    "iso_country": "TG",
+    "icao_code": "DXMG"
   },
   {
     "type": "medium_airport",
@@ -42,7 +54,15 @@
     "freq": "122.600",
     "Lat": 9.767330169677734,
     "Lon": 1.091249942779541,
-    "Ele": 461.8
+    "Ele": 461.8,
+    "ident": "DXNG",
+    "iso_country": "TG",
+    "icao_code": "DXNG",
+    "iata_code": "LRL",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 21.8,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,10 @@
     "freq": "",
     "Lat": 8.994275,
     "Lon": 1.153004,
-    "Ele": 370.0
+    "Ele": 370,
+    "ident": "DXSK",
+    "iso_country": "TG",
+    "icao_code": "DXSK"
   },
   {
     "type": "medium_airport",
@@ -60,6 +83,14 @@
     "freq": "123.600",
     "Lat": 6.16561,
     "Lon": 1.25451,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "DXXX",
+    "iso_country": "TG",
+    "icao_code": "DXXX",
+    "iata_code": "LFW",
+    "length_ft": 9847,
+    "width_ft": 148,
+    "heading": 39,
+    "QFU": "22"
   }
 ]

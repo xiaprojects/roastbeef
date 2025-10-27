@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 19.8730555556,
     "Lon": 56.0677777778,
-    "Ele": 157.0
+    "Ele": 157,
+    "ident": "BJQ",
+    "iso_country": "OM",
+    "iata_code": "BJQ"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 25.614229,
     "Lon": 56.2444,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "OM-0001",
+    "iso_country": "OM",
+    "iata_code": "BYB"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,10 @@
     "freq": "",
     "Lat": 22.4919444444,
     "Lon": 57.3838888889,
-    "Ele": 327.7
+    "Ele": 327.7,
+    "ident": "OM-0002",
+    "iso_country": "OM",
+    "iata_code": "AOM"
   },
   {
     "type": "large_airport",
@@ -33,7 +42,14 @@
     "freq": "",
     "Lat": 19.501944,
     "Lon": 57.634167,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "OM-0003",
+    "iso_country": "OM",
+    "iata_code": "DQM",
+    "length_ft": 13123,
+    "width_ft": 197,
+    "heading": 45,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -42,7 +58,10 @@
     "freq": "",
     "Lat": 23.640556,
     "Lon": 57.4875,
-    "Ele": 113.4
+    "Ele": 113.4,
+    "ident": "OM-0004",
+    "iso_country": "OM",
+    "iata_code": "MNH"
   },
   {
     "type": "medium_airport",
@@ -51,7 +70,9 @@
     "freq": "",
     "Lat": 22.25691,
     "Lon": 59.74067,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OM-0007",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -60,7 +81,9 @@
     "freq": "",
     "Lat": 25.28637,
     "Lon": 56.342934,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OM-0008",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -69,7 +92,9 @@
     "freq": "",
     "Lat": 23.50882,
     "Lon": 58.24631,
-    "Ele": 117.0
+    "Ele": 117,
+    "ident": "OM-0009",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -78,7 +103,9 @@
     "freq": "",
     "Lat": 25.86257,
     "Lon": 56.28591,
-    "Ele": 402.9
+    "Ele": 402.9,
+    "ident": "OM-0010",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -87,7 +114,9 @@
     "freq": "",
     "Lat": 26.36779,
     "Lon": 56.3568,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "OM-0011",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -96,7 +125,9 @@
     "freq": "",
     "Lat": 25.94993,
     "Lon": 56.41864,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "OM-0013",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -105,7 +136,9 @@
     "freq": "",
     "Lat": 20.49128,
     "Lon": 58.79389,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "OM-0020",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -114,7 +147,9 @@
     "freq": "",
     "Lat": 17.46854,
     "Lon": 53.36056,
-    "Ele": 572.7
+    "Ele": 572.7,
+    "ident": "OM-0023",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -123,7 +158,9 @@
     "freq": "",
     "Lat": 19.53667,
     "Lon": 54.8847,
-    "Ele": 139.0
+    "Ele": 139,
+    "ident": "OM-0025",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -132,7 +169,9 @@
     "freq": "",
     "Lat": 22.18087,
     "Lon": 55.99709,
-    "Ele": 103.9
+    "Ele": 103.9,
+    "ident": "OM-0027",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -141,7 +180,9 @@
     "freq": "",
     "Lat": 16.7011,
     "Lon": 53.09786,
-    "Ele": 1328.9
+    "Ele": 1328.9,
+    "ident": "OM-0036",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -150,7 +191,13 @@
     "freq": "",
     "Lat": 16.990400314331055,
     "Lon": 53.35879898071289,
-    "Ele": 969.9
+    "Ele": 969.9,
+    "ident": "OO42",
+    "iso_country": "OM",
+    "length_ft": 4928,
+    "width_ft": 100,
+    "heading": 157.9,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -159,7 +206,9 @@
     "freq": "",
     "Lat": 21.178,
     "Lon": 55.463682,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "OOBB",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -168,7 +217,11 @@
     "freq": "",
     "Lat": 24.241626,
     "Lon": 55.783674,
-    "Ele": 295.7
+    "Ele": 295.7,
+    "ident": "OOBR",
+    "iso_country": "OM",
+    "icao_code": "OOBR",
+    "iata_code": "RMB"
   },
   {
     "type": "small_airport",
@@ -177,7 +230,15 @@
     "freq": "",
     "Lat": 22.354759,
     "Lon": 56.484146,
-    "Ele": 168.2
+    "Ele": 168.2,
+    "ident": "OOFD",
+    "iso_country": "OM",
+    "icao_code": "OOFD",
+    "iata_code": "FAU",
+    "length_ft": 8399,
+    "width_ft": 148,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -186,7 +247,11 @@
     "freq": "",
     "Lat": 21.377199,
     "Lon": 57.056293,
-    "Ele": 135.0
+    "Ele": 135,
+    "ident": "OOGB",
+    "iso_country": "OM",
+    "icao_code": "OOGB",
+    "iata_code": "RNM"
   },
   {
     "type": "small_airport",
@@ -195,7 +260,9 @@
     "freq": "",
     "Lat": 19.975608,
     "Lon": 56.282444,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "OOHA",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -204,7 +271,9 @@
     "freq": "",
     "Lat": 22.732778,
     "Lon": 58.513611,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "OOIA",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -213,7 +282,9 @@
     "freq": "",
     "Lat": 23.18626,
     "Lon": 56.43333,
-    "Ele": 325.8
+    "Ele": 325.8,
+    "ident": "OOII",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -222,7 +293,9 @@
     "freq": "",
     "Lat": 22.892627,
     "Lon": 57.759094,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "OOIZ",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -231,7 +304,10 @@
     "freq": "",
     "Lat": 19.4749,
     "Lon": 57.3083,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "OOJA",
+    "iso_country": "OM",
+    "iata_code": "JNJ"
   },
   {
     "type": "medium_airport",
@@ -240,7 +316,15 @@
     "freq": "",
     "Lat": 26.171,
     "Lon": 56.240601,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "OOKB",
+    "iso_country": "OM",
+    "icao_code": "OOKB",
+    "iata_code": "KHS",
+    "length_ft": 8202,
+    "width_ft": 75,
+    "heading": 13.9,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -249,7 +333,11 @@
     "freq": "",
     "Lat": 22.804866,
     "Lon": 55.372801,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "OOLK",
+    "iso_country": "OM",
+    "icao_code": "OOLK",
+    "iata_code": "LKW"
   },
   {
     "type": "medium_airport",
@@ -258,7 +346,15 @@
     "freq": "121.300",
     "Lat": 20.6754,
     "Lon": 58.890499,
-    "Ele": 19.5
+    "Ele": 19.5,
+    "ident": "OOMA",
+    "iso_country": "OM",
+    "icao_code": "OOMA",
+    "iata_code": "MSH",
+    "length_ft": 10005,
+    "width_ft": 148,
+    "heading": 166.8,
+    "QFU": "35"
   },
   {
     "type": "large_airport",
@@ -267,7 +363,15 @@
     "freq": "121.200",
     "Lat": 23.5933,
     "Lon": 58.284401,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "OOMS",
+    "iso_country": "OM",
+    "icao_code": "OOMS",
+    "iata_code": "MCT",
+    "length_ft": 13386,
+    "width_ft": 148,
+    "heading": 85,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -276,7 +380,15 @@
     "freq": "",
     "Lat": 18.138999,
     "Lon": 55.179005,
-    "Ele": 281.9
+    "Ele": 281.9,
+    "ident": "OOMX",
+    "iso_country": "OM",
+    "icao_code": "OOMX",
+    "iata_code": "OMM",
+    "length_ft": 8635,
+    "width_ft": 190,
+    "heading": 136.2,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -285,7 +397,15 @@
     "freq": "119.100",
     "Lat": 17.038700103759766,
     "Lon": 54.09130096435547,
-    "Ele": 22.3
+    "Ele": 22.3,
+    "ident": "OOSA",
+    "iso_country": "OM",
+    "icao_code": "OOSA",
+    "iata_code": "SLL",
+    "length_ft": 4196,
+    "width_ft": 59,
+    "heading": 174.1,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -294,7 +414,15 @@
     "freq": "",
     "Lat": 24.38604,
     "Lon": 56.62541,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "OOSH",
+    "iso_country": "OM",
+    "icao_code": "OOSH",
+    "iata_code": "OHS",
+    "length_ft": 13100,
+    "width_ft": 194,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -303,7 +431,9 @@
     "freq": "",
     "Lat": 23.075545,
     "Lon": 57.643271,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "OOSQ",
+    "iso_country": "OM"
   },
   {
     "type": "medium_airport",
@@ -312,7 +442,15 @@
     "freq": "125.000",
     "Lat": 17.666,
     "Lon": 54.024601,
-    "Ele": 478.5
+    "Ele": 478.5,
+    "ident": "OOTH",
+    "iso_country": "OM",
+    "icao_code": "OOTH",
+    "iata_code": "TTH",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -321,7 +459,9 @@
     "freq": "",
     "Lat": 22.2015,
     "Lon": 56.034401,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "OOYB",
+    "iso_country": "OM"
   },
   {
     "type": "small_airport",
@@ -330,6 +470,9 @@
     "freq": "",
     "Lat": 19.386389,
     "Lon": 56.401389,
-    "Ele": 144.2
+    "Ele": 144.2,
+    "ident": "UKH",
+    "iso_country": "OM",
+    "iata_code": "UKH"
   }
 ]

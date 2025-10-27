@@ -6,7 +6,15 @@
     "freq": "",
     "Lat": 42.035802,
     "Lon": 20.415955,
-    "Ele": 341.4
+    "Ele": 341.4,
+    "ident": "LAKU",
+    "iso_country": "AL",
+    "icao_code": "LAKU",
+    "iata_code": "KFZ",
+    "length_ft": 7211,
+    "width_ft": 98,
+    "heading": 12,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,13 @@
     "freq": "124.500",
     "Lat": 40.7719,
     "Lon": 19.901899,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "LAKV",
+    "iso_country": "AL",
+    "length_ft": 9318,
+    "width_ft": 220,
+    "heading": 137,
+    "QFU": "32"
   },
   {
     "type": "large_airport",
@@ -24,6 +38,14 @@
     "freq": "127.500",
     "Lat": 41.4147,
     "Lon": 19.7206,
-    "Ele": 38.4
+    "Ele": 38.4,
+    "ident": "LATI",
+    "iso_country": "AL",
+    "icao_code": "LATI",
+    "iata_code": "TIA",
+    "length_ft": 9009,
+    "width_ft": 148,
+    "heading": 174,
+    "QFU": "35"
   }
 ]

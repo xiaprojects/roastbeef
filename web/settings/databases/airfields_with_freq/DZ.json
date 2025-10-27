@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 26.573601,
     "Lon": 8.48366,
-    "Ele": 541.9
+    "Ele": 541.9,
+    "ident": "DA10",
+    "iso_country": "DZ",
+    "local_code": "DA10",
+    "length_ft": 7794,
+    "width_ft": 175,
+    "heading": 95,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -15,7 +22,14 @@
     "freq": "",
     "Lat": 30.879,
     "Lon": -3.06775,
-    "Ele": 748.0
+    "Ele": 748,
+    "ident": "DA11",
+    "iso_country": "DZ",
+    "local_code": "DA11",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 85.5,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -24,7 +38,14 @@
     "freq": "",
     "Lat": 32.898499,
     "Lon": 0.524694,
-    "Ele": 903.7
+    "Ele": 903.7,
+    "ident": "DA12",
+    "iso_country": "DZ",
+    "local_code": "DA12",
+    "length_ft": 6608,
+    "width_ft": 105,
+    "heading": 115.4,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -33,7 +54,14 @@
     "freq": "",
     "Lat": 28.879299,
     "Lon": -5.8229,
-    "Ele": 549.9
+    "Ele": 549.9,
+    "ident": "DA13",
+    "iso_country": "DZ",
+    "local_code": "DA13",
+    "length_ft": 7740,
+    "width_ft": 100,
+    "heading": 51,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -42,7 +70,15 @@
     "freq": "",
     "Lat": 35.90518,
     "Lon": 0.144539,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "DA14",
+    "iso_country": "DZ",
+    "iata_code": "MQV",
+    "local_code": "DA14",
+    "length_ft": 2275,
+    "width_ft": 100,
+    "heading": 126.7,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -51,7 +87,14 @@
     "freq": "",
     "Lat": 34.897202,
     "Lon": 0.151694,
-    "Ele": 744.9
+    "Ele": 744.9,
+    "ident": "DA15",
+    "iso_country": "DZ",
+    "local_code": "DA15",
+    "length_ft": 4248,
+    "width_ft": 98,
+    "heading": 175.1,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -60,7 +103,14 @@
     "freq": "",
     "Lat": 27.585899,
     "Lon": -7.50011,
-    "Ele": 434.3
+    "Ele": 434.3,
+    "ident": "DA16",
+    "iso_country": "DZ",
+    "local_code": "DA16",
+    "length_ft": 7765,
+    "width_ft": 140,
+    "heading": 82.5,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -69,7 +119,14 @@
     "freq": "",
     "Lat": 36.503601,
     "Lon": 2.81417,
-    "Ele": 163.1
+    "Ele": 163.1,
+    "ident": "DAAB",
+    "iso_country": "DZ",
+    "icao_code": "DAAB",
+    "length_ft": 5833,
+    "width_ft": 150,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -78,7 +135,15 @@
     "freq": "118.100",
     "Lat": 35.3325,
     "Lon": 4.20639,
-    "Ele": 459.0
+    "Ele": 459,
+    "ident": "DAAD",
+    "iso_country": "DZ",
+    "icao_code": "DAAD",
+    "iata_code": "BUJ",
+    "length_ft": 7218,
+    "width_ft": 98,
+    "heading": 42,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -87,7 +152,16 @@
     "freq": "118.900",
     "Lat": 36.711952,
     "Lon": 5.069804,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "DAAE",
+    "iso_country": "DZ",
+    "icao_code": "DAAE",
+    "iata_code": "BJA",
+    "local_code": "BJ1",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -96,7 +170,13 @@
     "freq": "",
     "Lat": 27.0624,
     "Lon": 1.1111,
-    "Ele": 310.0
+    "Ele": 310,
+    "ident": "DAAF",
+    "iso_country": "DZ",
+    "length_ft": 6285,
+    "width_ft": 95,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -105,7 +185,15 @@
     "freq": "121.400",
     "Lat": 36.693886,
     "Lon": 3.214531,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "DAAG",
+    "iso_country": "DZ",
+    "icao_code": "DAAG",
+    "iata_code": "ALG",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -114,7 +202,15 @@
     "freq": "889.400",
     "Lat": 24.292801,
     "Lon": 9.45244,
-    "Ele": 968.0
+    "Ele": 968,
+    "ident": "DAAJ",
+    "iso_country": "DZ",
+    "icao_code": "DAAJ",
+    "iata_code": "DJG",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 125,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -123,7 +219,14 @@
     "freq": "",
     "Lat": 36.545799,
     "Lon": 2.87611,
-    "Ele": 102.1
+    "Ele": 102.1,
+    "ident": "DAAK",
+    "iso_country": "DZ",
+    "icao_code": "DAAK",
+    "length_ft": 11883,
+    "width_ft": 148,
+    "heading": 44,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -132,7 +235,10 @@
     "freq": "",
     "Lat": 36.1087,
     "Lon": 6.3646,
-    "Ele": 757.1
+    "Ele": 757.1,
+    "ident": "DAAM",
+    "iso_country": "DZ",
+    "icao_code": "DAAM"
   },
   {
     "type": "small_airport",
@@ -141,7 +247,14 @@
     "freq": "",
     "Lat": 26.712418,
     "Lon": 0.288219,
-    "Ele": 291.1
+    "Ele": 291.1,
+    "ident": "DAAN",
+    "iso_country": "DZ",
+    "icao_code": "DAAN",
+    "length_ft": 8216,
+    "width_ft": 98,
+    "heading": 71.3,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -150,7 +263,15 @@
     "freq": "118.700",
     "Lat": 26.723499,
     "Lon": 8.62265,
-    "Ele": 541.9
+    "Ele": 541.9,
+    "ident": "DAAP",
+    "iso_country": "DZ",
+    "icao_code": "DAAP",
+    "iata_code": "VVZ",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -159,7 +280,14 @@
     "freq": "",
     "Lat": 35.525398,
     "Lon": 2.87871,
-    "Ele": 649.8
+    "Ele": 649.8,
+    "ident": "DAAQ",
+    "iso_country": "DZ",
+    "icao_code": "DAAQ",
+    "length_ft": 10696,
+    "width_ft": 148,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -168,7 +296,15 @@
     "freq": "",
     "Lat": 36.178100585900005,
     "Lon": 5.32449007034,
-    "Ele": 1024.1
+    "Ele": 1024.1,
+    "ident": "DAAS",
+    "iso_country": "DZ",
+    "icao_code": "DAAS",
+    "iata_code": "QSF",
+    "length_ft": 9498,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -177,7 +313,15 @@
     "freq": "119.700",
     "Lat": 22.811501,
     "Lon": 5.45108,
-    "Ele": 1377.1
+    "Ele": 1377.1,
+    "ident": "DAAT",
+    "iso_country": "DZ",
+    "icao_code": "DAAT",
+    "iata_code": "TMR",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 82,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -186,7 +330,15 @@
     "freq": "119.700",
     "Lat": 36.795101,
     "Lon": 5.87361,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "DAAV",
+    "iso_country": "DZ",
+    "icao_code": "DAAV",
+    "iata_code": "GJL",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -195,7 +347,10 @@
     "freq": "",
     "Lat": 28.136042,
     "Lon": 6.836156,
-    "Ele": 367.9
+    "Ele": 367.9,
+    "ident": "DAAW",
+    "iso_country": "DZ",
+    "icao_code": "DAAW"
   },
   {
     "type": "small_airport",
@@ -204,7 +359,10 @@
     "freq": "",
     "Lat": 36.7782,
     "Lon": 2.9284,
-    "Ele": 120.7
+    "Ele": 120.7,
+    "ident": "DAAX",
+    "iso_country": "DZ",
+    "icao_code": "DAAX"
   },
   {
     "type": "medium_airport",
@@ -213,7 +371,15 @@
     "freq": "",
     "Lat": 33.535900116,
     "Lon": -0.242353007197,
-    "Ele": 1175.0
+    "Ele": 1175,
+    "ident": "DAAY",
+    "iso_country": "DZ",
+    "icao_code": "DAAY",
+    "iata_code": "MZW",
+    "length_ft": 9436,
+    "width_ft": 100,
+    "heading": 160,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -222,7 +388,14 @@
     "freq": "",
     "Lat": 35.752955,
     "Lon": 0.625877,
-    "Ele": 86.0
+    "Ele": 86,
+    "ident": "DAAZ",
+    "iso_country": "DZ",
+    "icao_code": "DAAZ",
+    "length_ft": 4265,
+    "width_ft": 70,
+    "heading": 66.9,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -231,7 +404,15 @@
     "freq": "119.000",
     "Lat": 36.826781,
     "Lon": 7.81334,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "DABB",
+    "iso_country": "DZ",
+    "icao_code": "DABB",
+    "iata_code": "AAE",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 186.9,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -240,7 +421,15 @@
     "freq": "120.100",
     "Lat": 36.2760009765625,
     "Lon": 6.620389938354492,
-    "Ele": 690.4
+    "Ele": 690.4,
+    "ident": "DABC",
+    "iso_country": "DZ",
+    "icao_code": "DABC",
+    "iata_code": "CZL",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 159,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -249,7 +438,10 @@
     "freq": "",
     "Lat": 35.8797,
     "Lon": 7.2708,
-    "Ele": 908.3
+    "Ele": 908.3,
+    "ident": "DABO",
+    "iso_country": "DZ",
+    "iata_code": "QMH"
   },
   {
     "type": "medium_airport",
@@ -258,7 +450,15 @@
     "freq": "118.100",
     "Lat": 35.4315986633,
     "Lon": 8.12071990967,
-    "Ele": 811.1
+    "Ele": 811.1,
+    "ident": "DABS",
+    "iso_country": "DZ",
+    "icao_code": "DABS",
+    "iata_code": "TEE",
+    "length_ft": 7874,
+    "width_ft": 98,
+    "heading": 122,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -267,7 +467,15 @@
     "freq": "118.100",
     "Lat": 35.752102,
     "Lon": 6.30859,
-    "Ele": 822.0
+    "Ele": 822,
+    "ident": "DABT",
+    "iso_country": "DZ",
+    "icao_code": "DABT",
+    "iata_code": "BLJ",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 54.9,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -276,7 +484,15 @@
     "freq": "",
     "Lat": 32.930401,
     "Lon": 3.31154,
-    "Ele": 774.2
+    "Ele": 774.2,
+    "ident": "DAFH",
+    "iso_country": "DZ",
+    "icao_code": "DAFH",
+    "iata_code": "HRM",
+    "length_ft": 4695,
+    "width_ft": 100,
+    "heading": 88.1,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -285,7 +501,10 @@
     "freq": "",
     "Lat": 34.6657,
     "Lon": 3.351,
-    "Ele": 1143.9
+    "Ele": 1143.9,
+    "ident": "DAFI",
+    "iso_country": "DZ",
+    "icao_code": "DAFI"
   },
   {
     "type": "medium_airport",
@@ -294,7 +513,15 @@
     "freq": "118.100",
     "Lat": 35.341099,
     "Lon": 1.46315,
-    "Ele": 989.1
+    "Ele": 989.1,
+    "ident": "DAOB",
+    "iso_country": "DZ",
+    "icao_code": "DAOB",
+    "iata_code": "TID",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -303,7 +530,10 @@
     "freq": "",
     "Lat": 31.642901,
     "Lon": -2.18466,
-    "Ele": 810.8
+    "Ele": 810.8,
+    "ident": "DAOC",
+    "iso_country": "DZ",
+    "icao_code": "DAOC"
   },
   {
     "type": "small_airport",
@@ -312,7 +542,14 @@
     "freq": "",
     "Lat": 35.735401,
     "Lon": -0.805389,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "DAOE",
+    "iso_country": "DZ",
+    "icao_code": "DAOE",
+    "length_ft": 9834,
+    "width_ft": 148,
+    "heading": 64.2,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -321,7 +558,15 @@
     "freq": "",
     "Lat": 27.7003993988,
     "Lon": -8.167099952700001,
-    "Ele": 442.9
+    "Ele": 442.9,
+    "ident": "DAOF",
+    "iso_country": "DZ",
+    "icao_code": "DAOF",
+    "iata_code": "TIN",
+    "length_ft": 9840,
+    "width_ft": 148,
+    "heading": 76,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -330,7 +575,15 @@
     "freq": "119.000",
     "Lat": 36.217166,
     "Lon": 1.342237,
-    "Ele": 141.1
+    "Ele": 141.1,
+    "ident": "DAOI",
+    "iso_country": "DZ",
+    "icao_code": "DAOI",
+    "iata_code": "CFK",
+    "length_ft": 8793,
+    "width_ft": 148,
+    "heading": 66,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -339,7 +592,15 @@
     "freq": "118.300",
     "Lat": 35.5424,
     "Lon": -0.532278,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "DAOL",
+    "iso_country": "DZ",
+    "icao_code": "DAOL",
+    "iata_code": "TAF",
+    "length_ft": 9037,
+    "width_ft": 140,
+    "heading": 75.6,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -348,7 +609,15 @@
     "freq": "119.700",
     "Lat": 35.013426,
     "Lon": -1.457191,
-    "Ele": 248.1
+    "Ele": 248.1,
+    "ident": "DAON",
+    "iso_country": "DZ",
+    "icao_code": "DAON",
+    "iata_code": "TLM",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -357,7 +626,15 @@
     "freq": "128.200",
     "Lat": 35.623901,
     "Lon": -0.621183,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "DAOO",
+    "iso_country": "DZ",
+    "icao_code": "DAOO",
+    "iata_code": "ORN",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 67,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -366,7 +643,15 @@
     "freq": "",
     "Lat": 31.645700454711918,
     "Lon": -2.269860029220581,
-    "Ele": 811.1
+    "Ele": 811.1,
+    "ident": "DAOR",
+    "iso_country": "DZ",
+    "icao_code": "DAOR",
+    "iata_code": "CBH",
+    "length_ft": 9840,
+    "width_ft": 148,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -375,7 +660,15 @@
     "freq": "",
     "Lat": 35.1717987061,
     "Lon": -0.593275010586,
-    "Ele": 491.9
+    "Ele": 491.9,
+    "ident": "DAOS",
+    "iso_country": "DZ",
+    "icao_code": "DAOS",
+    "iata_code": "BFW",
+    "length_ft": 4868,
+    "width_ft": 100,
+    "heading": 97.7,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -384,7 +677,15 @@
     "freq": "119.700",
     "Lat": 35.207699,
     "Lon": 0.147142,
-    "Ele": 513.9
+    "Ele": 513.9,
+    "ident": "DAOV",
+    "iso_country": "DZ",
+    "icao_code": "DAOV",
+    "iata_code": "MUW",
+    "length_ft": 5577,
+    "width_ft": 98,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -393,7 +694,15 @@
     "freq": "",
     "Lat": 33.721667,
     "Lon": 1.0925,
-    "Ele": 1369.5
+    "Ele": 1369.5,
+    "ident": "DAOY",
+    "iso_country": "DZ",
+    "icao_code": "DAOY",
+    "iata_code": "EBH",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -402,7 +711,15 @@
     "freq": "",
     "Lat": 19.560518,
     "Lon": 5.749326,
-    "Ele": 399.9
+    "Ele": 399.9,
+    "ident": "DATG",
+    "iso_country": "DZ",
+    "icao_code": "DATG",
+    "iata_code": "INF",
+    "length_ft": 7218,
+    "width_ft": 98,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -411,7 +728,15 @@
     "freq": "",
     "Lat": 21.3778,
     "Lon": 0.92698,
-    "Ele": 397.2
+    "Ele": 397.2,
+    "ident": "DATM",
+    "iso_country": "DZ",
+    "icao_code": "DATM",
+    "iata_code": "BMW",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -420,7 +745,15 @@
     "freq": "889.400",
     "Lat": 27.837601,
     "Lon": -0.186414,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "DAUA",
+    "iso_country": "DZ",
+    "icao_code": "DAUA",
+    "iata_code": "AZR",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 40,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -429,7 +762,15 @@
     "freq": "",
     "Lat": 34.793301,
     "Lon": 5.73823,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "DAUB",
+    "iso_country": "DZ",
+    "icao_code": "DAUB",
+    "iata_code": "BSK",
+    "length_ft": 9469,
+    "width_ft": 148,
+    "heading": 130,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -438,7 +779,15 @@
     "freq": "889.400",
     "Lat": 30.580732,
     "Lon": 2.861595,
-    "Ele": 398.1
+    "Ele": 398.1,
+    "ident": "DAUE",
+    "iso_country": "DZ",
+    "icao_code": "DAUE",
+    "iata_code": "ELG",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -447,7 +796,15 @@
     "freq": "889.400",
     "Lat": 32.384102,
     "Lon": 3.79411,
-    "Ele": 460.9
+    "Ele": 460.9,
+    "ident": "DAUG",
+    "iso_country": "DZ",
+    "icao_code": "DAUG",
+    "iata_code": "GHA",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 183,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -456,7 +813,15 @@
     "freq": "120.000",
     "Lat": 31.673,
     "Lon": 6.14044,
-    "Ele": 141.1
+    "Ele": 141.1,
+    "ident": "DAUH",
+    "iso_country": "DZ",
+    "icao_code": "DAUH",
+    "iata_code": "HME",
+    "QFU": "36",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 184
   },
   {
     "type": "medium_airport",
@@ -465,7 +830,15 @@
     "freq": "889.400",
     "Lat": 27.250999,
     "Lon": 2.51202,
-    "Ele": 273.1
+    "Ele": 273.1,
+    "ident": "DAUI",
+    "iso_country": "DZ",
+    "icao_code": "DAUI",
+    "iata_code": "INZ",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -474,7 +847,15 @@
     "freq": "889.400",
     "Lat": 33.067799,
     "Lon": 6.08867,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "DAUK",
+    "iso_country": "DZ",
+    "icao_code": "DAUK",
+    "iata_code": "TGR",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 9,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -483,7 +864,15 @@
     "freq": "",
     "Lat": 33.7644,
     "Lon": 2.92834,
-    "Ele": 765.0
+    "Ele": 765,
+    "ident": "DAUL",
+    "iso_country": "DZ",
+    "icao_code": "DAUL",
+    "iata_code": "LOO",
+    "length_ft": 12477,
+    "width_ft": 148,
+    "heading": 156.9,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -492,7 +881,15 @@
     "freq": "889.400",
     "Lat": 33.511398,
     "Lon": 6.77679,
-    "Ele": 61.9
+    "Ele": 61.9,
+    "ident": "DAUO",
+    "iso_country": "DZ",
+    "icao_code": "DAUO",
+    "iata_code": "ELU",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 130,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -501,7 +898,15 @@
     "freq": "889.400",
     "Lat": 29.237101,
     "Lon": 0.276033,
-    "Ele": 313.0
+    "Ele": 313,
+    "ident": "DAUT",
+    "iso_country": "DZ",
+    "icao_code": "DAUT",
+    "iata_code": "TMX",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -510,7 +915,15 @@
     "freq": "",
     "Lat": 31.9172,
     "Lon": 5.41278,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "DAUU",
+    "iso_country": "DZ",
+    "icao_code": "DAUU",
+    "iata_code": "OGX",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -519,7 +932,15 @@
     "freq": "889.400",
     "Lat": 28.0515,
     "Lon": 9.64291,
-    "Ele": 563.0
+    "Ele": 563,
+    "ident": "DAUZ",
+    "iso_country": "DZ",
+    "icao_code": "DAUZ",
+    "iata_code": "IAM",
+    "length_ft": 7218,
+    "width_ft": 98,
+    "heading": 145,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -528,7 +949,9 @@
     "freq": "",
     "Lat": 29.221376,
     "Lon": 6.48863,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0001",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -537,7 +960,9 @@
     "freq": "",
     "Lat": 26.88352,
     "Lon": -7.16477,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0002",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -546,7 +971,10 @@
     "freq": "",
     "Lat": 30.12558,
     "Lon": -2.13726,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0004",
+    "iso_country": "DZ",
+    "local_code": "BBS"
   },
   {
     "type": "small_airport",
@@ -555,7 +983,9 @@
     "freq": "",
     "Lat": 29.6397,
     "Lon": -3.9939,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0005",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -564,7 +994,9 @@
     "freq": "",
     "Lat": 26.80634,
     "Lon": 0.20704,
-    "Ele": 269.1
+    "Ele": 269.1,
+    "ident": "DZ-0012",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -573,7 +1005,9 @@
     "freq": "",
     "Lat": 26.91535,
     "Lon": 0.07195,
-    "Ele": 273.1
+    "Ele": 273.1,
+    "ident": "DZ-0013",
+    "iso_country": "DZ"
   },
   {
     "type": "medium_airport",
@@ -582,7 +1016,13 @@
     "freq": "",
     "Lat": 26.393417,
     "Lon": 5.325419,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "DZ-0016",
+    "iso_country": "DZ",
+    "length_ft": 8858,
+    "width_ft": 147,
+    "heading": 179,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -591,7 +1031,9 @@
     "freq": "",
     "Lat": 30.33557,
     "Lon": 7.834783,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0017",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -600,7 +1042,9 @@
     "freq": "",
     "Lat": 30.30442,
     "Lon": 8.16308,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0018",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -609,7 +1053,9 @@
     "freq": "",
     "Lat": 28.68354,
     "Lon": 6.49767,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0019",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -618,7 +1064,9 @@
     "freq": "",
     "Lat": 30.51446,
     "Lon": 6.45266,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0020",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -627,7 +1075,9 @@
     "freq": "",
     "Lat": 31.12059,
     "Lon": 6.34713,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0021",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -636,7 +1086,9 @@
     "freq": "",
     "Lat": 31.57946,
     "Lon": 9.12337,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0023",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -645,7 +1097,9 @@
     "freq": "",
     "Lat": 31.5822,
     "Lon": 8.23678,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0024",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -654,7 +1108,9 @@
     "freq": "",
     "Lat": 31.3859,
     "Lon": 6.95362,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0025",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -663,7 +1119,9 @@
     "freq": "",
     "Lat": 31.50603,
     "Lon": 6.64072,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0026",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -672,7 +1130,9 @@
     "freq": "",
     "Lat": 31.68858,
     "Lon": 3.71568,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0027",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -681,7 +1141,9 @@
     "freq": "",
     "Lat": 28.141556,
     "Lon": 0.244846,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0028",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -690,7 +1152,9 @@
     "freq": "",
     "Lat": 28.21292,
     "Lon": 0.20262,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0029",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -699,7 +1163,9 @@
     "freq": "",
     "Lat": 19.99369,
     "Lon": 3.0223,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0030",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -708,7 +1174,9 @@
     "freq": "",
     "Lat": 29.071282,
     "Lon": 2.2059,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0034",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -717,7 +1185,9 @@
     "freq": "",
     "Lat": 28.46911,
     "Lon": 2.51871,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0035",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -726,7 +1196,9 @@
     "freq": "",
     "Lat": 28.07732,
     "Lon": 2.12826,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0036",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -735,7 +1207,9 @@
     "freq": "",
     "Lat": 28.08605,
     "Lon": 2.14052,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0037",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -744,7 +1218,9 @@
     "freq": "",
     "Lat": 28.11892,
     "Lon": 0.32861,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0038",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -753,7 +1229,9 @@
     "freq": "",
     "Lat": 27.81997,
     "Lon": 0.23896,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0039",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -762,7 +1240,9 @@
     "freq": "",
     "Lat": 34.23833,
     "Lon": 4.46004,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DZ-0040",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -771,7 +1251,9 @@
     "freq": "",
     "Lat": 24.42643,
     "Lon": 10.43748,
-    "Ele": 835.2
+    "Ele": 835.2,
+    "ident": "DZ-0042",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -780,7 +1262,9 @@
     "freq": "",
     "Lat": 27.893493,
     "Lon": 9.147415,
-    "Ele": 615.1
+    "Ele": 615.1,
+    "ident": "DZ-0043",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -789,7 +1273,9 @@
     "freq": "",
     "Lat": 28.43879,
     "Lon": 7.55191,
-    "Ele": 476.1
+    "Ele": 476.1,
+    "ident": "DZ-0046",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -798,7 +1284,9 @@
     "freq": "",
     "Lat": 28.41106,
     "Lon": 7.56872,
-    "Ele": 492.9
+    "Ele": 492.9,
+    "ident": "DZ-0047",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -807,7 +1295,9 @@
     "freq": "",
     "Lat": 28.73085,
     "Lon": 8.88037,
-    "Ele": 537.1
+    "Ele": 537.1,
+    "ident": "DZ-0048",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -816,7 +1306,9 @@
     "freq": "",
     "Lat": 28.41563,
     "Lon": 8.24115,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "DZ-0049",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -825,7 +1317,9 @@
     "freq": "",
     "Lat": 28.62995,
     "Lon": 9.85223,
-    "Ele": 712.0
+    "Ele": 712,
+    "ident": "DZ-0050",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -834,7 +1328,9 @@
     "freq": "",
     "Lat": 27.06086,
     "Lon": 1.58229,
-    "Ele": 307.8
+    "Ele": 307.8,
+    "ident": "DZ-0051",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -843,7 +1339,9 @@
     "freq": "",
     "Lat": 27.25148,
     "Lon": -0.16633,
-    "Ele": 271.9
+    "Ele": 271.9,
+    "ident": "DZ-0052",
+    "iso_country": "DZ"
   },
   {
     "type": "small_airport",
@@ -852,6 +1350,8 @@
     "freq": "",
     "Lat": 28.61283,
     "Lon": 0.03651,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "DZ-0053",
+    "iso_country": "DZ"
   }
 ]

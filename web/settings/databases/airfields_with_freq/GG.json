@@ -6,7 +6,15 @@
     "freq": "128.650",
     "Lat": 49.706104,
     "Lon": -2.21472,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "EGJA",
+    "iso_country": "GG",
+    "icao_code": "EGJA",
+    "iata_code": "ACI",
+    "length_ft": 2405,
+    "width_ft": 121,
+    "heading": 133,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -15,6 +23,14 @@
     "freq": "128.650",
     "Lat": 49.435001,
     "Lon": -2.60197,
-    "Ele": 102.4
+    "Ele": 102.4,
+    "ident": "EGJB",
+    "iso_country": "GG",
+    "icao_code": "EGJB",
+    "iata_code": "GCI",
+    "length_ft": 5194,
+    "width_ft": 148,
+    "heading": 88,
+    "QFU": "27"
   }
 ]

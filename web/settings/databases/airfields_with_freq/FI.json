@@ -6,7 +6,13 @@
     "freq": "126.100",
     "Lat": 67.6036,
     "Lon": 23.971701,
-    "Ele": 224.9
+    "Ele": 224.9,
+    "ident": "EFAA",
+    "iso_country": "FI",
+    "length_ft": 2834,
+    "width_ft": 65,
+    "heading": 137.9,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -15,7 +21,13 @@
     "freq": "124.200",
     "Lat": 64.895302,
     "Lon": 25.752199,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "EFAH",
+    "iso_country": "FI",
+    "length_ft": 2624,
+    "width_ft": 75,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -24,7 +36,13 @@
     "freq": "127.100",
     "Lat": 62.554699,
     "Lon": 23.573299,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "EFAL",
+    "iso_country": "FI",
+    "length_ft": 2460,
+    "width_ft": 59,
+    "heading": 79.8,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -33,7 +51,15 @@
     "freq": "122.450",
     "Lat": 68.362602233887,
     "Lon": 23.424299240112,
-    "Ele": 306.3
+    "Ele": 306.3,
+    "ident": "EFET",
+    "iso_country": "FI",
+    "icao_code": "EFET",
+    "iata_code": "ENF",
+    "length_ft": 6565,
+    "width_ft": 148,
+    "heading": 34.7,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -42,7 +68,13 @@
     "freq": "123.550",
     "Lat": 61.1161,
     "Lon": 22.201401,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "EFEU",
+    "iso_country": "FI",
+    "length_ft": 3281,
+    "width_ft": 59,
+    "heading": 116,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -51,7 +83,13 @@
     "freq": "121.300",
     "Lat": 60.803683,
     "Lon": 23.650802,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "EFFO",
+    "iso_country": "FI",
+    "length_ft": 2690,
+    "width_ft": 59,
+    "heading": 42.8,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -60,7 +98,13 @@
     "freq": "132.675",
     "Lat": 60.086899,
     "Lon": 22.5219,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "EFGE",
+    "iso_country": "FI",
+    "length_ft": 2066,
+    "width_ft": 39,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -69,7 +113,15 @@
     "freq": "124.550",
     "Lat": 61.856039,
     "Lon": 24.786686,
-    "Ele": 146.0
+    "Ele": 146,
+    "ident": "EFHA",
+    "iso_country": "FI",
+    "icao_code": "EFHA",
+    "iata_code": "KEV",
+    "length_ft": 8533,
+    "width_ft": 197,
+    "heading": 86,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -78,7 +130,15 @@
     "freq": "119.100",
     "Lat": 60.318363,
     "Lon": 24.963341,
-    "Ele": 54.6
+    "Ele": 54.6,
+    "ident": "EFHK",
+    "iso_country": "FI",
+    "icao_code": "EFHK",
+    "iata_code": "HEL",
+    "length_ft": 9518,
+    "width_ft": 197,
+    "heading": 154.1,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -87,7 +147,13 @@
     "freq": "124.200",
     "Lat": 64.969553,
     "Lon": 24.704218,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "EFHL",
+    "iso_country": "FI",
+    "length_ft": 1640,
+    "width_ft": 49,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -96,7 +162,13 @@
     "freq": "123.150",
     "Lat": 61.689701,
     "Lon": 23.0737,
-    "Ele": 136.9
+    "Ele": 136.9,
+    "ident": "EFHM",
+    "iso_country": "FI",
+    "length_ft": 3000,
+    "width_ft": 45,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -105,7 +177,13 @@
     "freq": "123.600",
     "Lat": 59.8489,
     "Lon": 23.083599,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "EFHN",
+    "iso_country": "FI",
+    "length_ft": 5249,
+    "width_ft": 59,
+    "heading": 33.8,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -114,7 +192,13 @@
     "freq": "124.200",
     "Lat": 64.113098,
     "Lon": 25.5042,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "EFHP",
+    "iso_country": "FI",
+    "length_ft": 2526,
+    "width_ft": 49,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -123,7 +207,15 @@
     "freq": "122.500",
     "Lat": 60.6544,
     "Lon": 24.8811,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "EFHV",
+    "iso_country": "FI",
+    "icao_code": "EFHV",
+    "iata_code": "HYV",
+    "length_ft": 2592,
+    "width_ft": 49,
+    "heading": 127,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -132,7 +224,13 @@
     "freq": "132.325",
     "Lat": 63.631901,
     "Lon": 27.1222,
-    "Ele": 117.0
+    "Ele": 117,
+    "ident": "EFII",
+    "iso_country": "FI",
+    "length_ft": 2165,
+    "width_ft": 59,
+    "heading": 179,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -141,7 +239,13 @@
     "freq": "123.600",
     "Lat": 60.462502,
     "Lon": 23.6525,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "EFIK",
+    "iso_country": "FI",
+    "length_ft": 3051,
+    "width_ft": 49,
+    "heading": 182,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -150,7 +254,13 @@
     "freq": "123.600",
     "Lat": 61.249199,
     "Lon": 28.9037,
-    "Ele": 103.0
+    "Ele": 103,
+    "ident": "EFIM",
+    "iso_country": "FI",
+    "length_ft": 4929,
+    "width_ft": 49,
+    "heading": 96,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -159,7 +269,15 @@
     "freq": "123.450",
     "Lat": 62.1661,
     "Lon": 30.073601,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "EFIT",
+    "iso_country": "FI",
+    "icao_code": "EFIT",
+    "iata_code": "KTQ",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 19,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -168,7 +286,15 @@
     "freq": "123.200",
     "Lat": 68.607299804688,
     "Lon": 27.405300140381,
-    "Ele": 146.6
+    "Ele": 146.6,
+    "ident": "EFIV",
+    "iso_country": "FI",
+    "icao_code": "EFIV",
+    "iata_code": "IVL",
+    "length_ft": 2625,
+    "width_ft": 148,
+    "heading": 92,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -177,7 +303,9 @@
     "freq": "",
     "Lat": 62.324167,
     "Lon": 22.694167,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EFJI",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -186,7 +314,13 @@
     "freq": "127.100",
     "Lat": 61.778599,
     "Lon": 22.716101,
-    "Ele": 153.9
+    "Ele": 153.9,
+    "ident": "EFJM",
+    "iso_country": "FI",
+    "length_ft": 2723,
+    "width_ft": 49,
+    "heading": 153.6,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -195,7 +329,15 @@
     "freq": "115.700",
     "Lat": 62.658815,
     "Lon": 29.619398,
-    "Ele": 121.3
+    "Ele": 121.3,
+    "ident": "EFJO",
+    "iso_country": "FI",
+    "icao_code": "EFJO",
+    "iata_code": "JOE",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 181,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -204,7 +346,9 @@
     "freq": "",
     "Lat": 68.711403,
     "Lon": 25.7528,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EFJP",
+    "iso_country": "FI"
   },
   {
     "type": "medium_airport",
@@ -213,7 +357,15 @@
     "freq": "119.700",
     "Lat": 62.399502,
     "Lon": 25.678301,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "EFJY",
+    "iso_country": "FI",
+    "icao_code": "EFJY",
+    "iata_code": "JYV",
+    "length_ft": 8533,
+    "width_ft": 197,
+    "heading": 134,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -222,7 +374,15 @@
     "freq": "130.100",
     "Lat": 63.127102,
     "Lon": 23.051399,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "EFKA",
+    "iso_country": "FI",
+    "icao_code": "EFKA",
+    "iata_code": "KAU",
+    "length_ft": 8858,
+    "width_ft": 197,
+    "heading": 177,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -231,7 +391,15 @@
     "freq": "123.150",
     "Lat": 65.778701782227,
     "Lon": 24.582099914551,
-    "Ele": 18.6
+    "Ele": 18.6,
+    "ident": "EFKE",
+    "iso_country": "FI",
+    "icao_code": "EFKE",
+    "iata_code": "KEM",
+    "length_ft": 8212,
+    "width_ft": 157,
+    "heading": 188,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -240,7 +408,13 @@
     "freq": "121.300",
     "Lat": 60.246899,
     "Lon": 20.804701,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "EFKG",
+    "iso_country": "FI",
+    "length_ft": 1968,
+    "width_ft": 59,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -249,7 +423,13 @@
     "freq": "124.200",
     "Lat": 64.112503,
     "Lon": 29.438601,
-    "Ele": 174.0
+    "Ele": 174,
+    "ident": "EFKH",
+    "iso_country": "FI",
+    "length_ft": 2788,
+    "width_ft": 49,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -258,7 +438,15 @@
     "freq": "118.100",
     "Lat": 64.2855,
     "Lon": 27.6924,
-    "Ele": 147.2
+    "Ele": 147.2,
+    "ident": "EFKI",
+    "iso_country": "FI",
+    "icao_code": "EFKI",
+    "iata_code": "KAJ",
+    "length_ft": 8199,
+    "width_ft": 157,
+    "heading": 80,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -267,7 +455,15 @@
     "freq": "118.450",
     "Lat": 62.463212,
     "Lon": 22.390817,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "EFKJ",
+    "iso_country": "FI",
+    "icao_code": "EFKJ",
+    "iata_code": "KHJ",
+    "length_ft": 3806,
+    "width_ft": 75,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -276,7 +472,15 @@
     "freq": "125.025",
     "Lat": 63.721199,
     "Lon": 23.143101,
-    "Ele": 25.6
+    "Ele": 25.6,
+    "ident": "EFKK",
+    "iso_country": "FI",
+    "icao_code": "EFKK",
+    "iata_code": "KOK",
+    "length_ft": 2297,
+    "width_ft": 66,
+    "heading": 112,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -285,7 +489,13 @@
     "freq": "123.500",
     "Lat": 66.712898,
     "Lon": 27.156799,
-    "Ele": 210.9
+    "Ele": 210.9,
+    "ident": "EFKM",
+    "iso_country": "FI",
+    "length_ft": 4593,
+    "width_ft": 75,
+    "heading": 175,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -294,7 +504,13 @@
     "freq": "127.100",
     "Lat": 63.920601,
     "Lon": 24.0867,
-    "Ele": 103.0
+    "Ele": 103,
+    "ident": "EFKN",
+    "iso_country": "FI",
+    "length_ft": 2296,
+    "width_ft": 59,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -303,7 +519,13 @@
     "freq": "123.400",
     "Lat": 64.2286,
     "Lon": 23.826401,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "EFKO",
+    "iso_country": "FI",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 57,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -312,7 +534,13 @@
     "freq": "124.200",
     "Lat": 63.989201,
     "Lon": 25.743601,
-    "Ele": 106.1
+    "Ele": 106.1,
+    "ident": "EFKR",
+    "iso_country": "FI",
+    "length_ft": 2296,
+    "width_ft": 32,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -321,7 +549,15 @@
     "freq": "118.650",
     "Lat": 65.987602,
     "Lon": 29.239401,
-    "Ele": 264.0
+    "Ele": 264,
+    "ident": "EFKS",
+    "iso_country": "FI",
+    "icao_code": "EFKS",
+    "iata_code": "KAO",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 132,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -330,7 +566,15 @@
     "freq": "118.950",
     "Lat": 67.700996398926,
     "Lon": 24.846799850464,
-    "Ele": 196.3
+    "Ele": 196.3,
+    "ident": "EFKT",
+    "iso_country": "FI",
+    "icao_code": "EFKT",
+    "iata_code": "KTT",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 166,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -339,7 +583,15 @@
     "freq": "130.600",
     "Lat": 63.007099,
     "Lon": 27.7978,
-    "Ele": 98.5
+    "Ele": 98.5,
+    "ident": "EFKU",
+    "iso_country": "FI",
+    "icao_code": "EFKU",
+    "iata_code": "KUO",
+    "length_ft": 9186,
+    "width_ft": 197,
+    "heading": 157.1,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -348,7 +600,13 @@
     "freq": "132.325",
     "Lat": 63.125301,
     "Lon": 25.124201,
-    "Ele": 153.0
+    "Ele": 153,
+    "ident": "EFKV",
+    "iso_country": "FI",
+    "length_ft": 2952,
+    "width_ft": 75,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -357,7 +615,13 @@
     "freq": "135.525",
     "Lat": 60.5714,
     "Lon": 26.896099,
-    "Ele": 68.0
+    "Ele": 68,
+    "ident": "EFKY",
+    "iso_country": "FI",
+    "length_ft": 2765,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -366,7 +630,13 @@
     "freq": "132.325",
     "Lat": 61.144199,
     "Lon": 25.693501,
-    "Ele": 153.0
+    "Ele": 153,
+    "ident": "EFLA",
+    "iso_country": "FI",
+    "length_ft": 1804,
+    "width_ft": 75,
+    "heading": 185,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -375,7 +645,13 @@
     "freq": "135.525",
     "Lat": 63.399399,
     "Lon": 27.478901,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "EFLL",
+    "iso_country": "FI",
+    "length_ft": 1115,
+    "width_ft": 49,
+    "heading": 40.5,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -384,7 +660,13 @@
     "freq": "123.400",
     "Lat": 63.511902,
     "Lon": 29.6292,
-    "Ele": 114.0
+    "Ele": 114,
+    "ident": "EFLN",
+    "iso_country": "FI",
+    "length_ft": 3084,
+    "width_ft": 59,
+    "heading": 119,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -393,7 +675,15 @@
     "freq": "112.500",
     "Lat": 61.044601,
     "Lon": 28.144743,
-    "Ele": 106.4
+    "Ele": 106.4,
+    "ident": "EFLP",
+    "iso_country": "FI",
+    "icao_code": "EFLP",
+    "iata_code": "LPP",
+    "length_ft": 8202,
+    "width_ft": 197,
+    "heading": 67,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -402,7 +692,15 @@
     "freq": "130.425",
     "Lat": 60.1222,
     "Lon": 19.898199,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "EFMA",
+    "iso_country": "FI",
+    "icao_code": "EFMA",
+    "iata_code": "MHQ",
+    "length_ft": 6243,
+    "width_ft": 197,
+    "heading": 23,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -411,7 +709,13 @@
     "freq": "123.500",
     "Lat": 62.946701,
     "Lon": 23.5189,
-    "Ele": 100.9
+    "Ele": 100.9,
+    "ident": "EFME",
+    "iso_country": "FI",
+    "length_ft": 3937,
+    "width_ft": 72,
+    "heading": 46,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -420,7 +724,15 @@
     "freq": "123.000",
     "Lat": 61.6866,
     "Lon": 27.201799,
-    "Ele": 100.3
+    "Ele": 100.3,
+    "ident": "EFMI",
+    "iso_country": "FI",
+    "icao_code": "EFMI",
+    "iata_code": "MIK",
+    "length_ft": 5584,
+    "width_ft": 144,
+    "heading": 113,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -429,7 +741,13 @@
     "freq": "120.650",
     "Lat": 65.301144,
     "Lon": 25.416226,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "EFML",
+    "iso_country": "FI",
+    "length_ft": 2461,
+    "width_ft": 66,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -438,7 +756,13 @@
     "freq": "132.325",
     "Lat": 60.572498,
     "Lon": 25.5089,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "EFMN",
+    "iso_country": "FI",
+    "length_ft": 1312,
+    "width_ft": 59,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -447,7 +771,13 @@
     "freq": "127.100",
     "Lat": 60.52,
     "Lon": 24.831699,
-    "Ele": 71.0
+    "Ele": 71,
+    "ident": "EFNS",
+    "iso_country": "FI",
+    "length_ft": 1443,
+    "width_ft": 75,
+    "heading": 60.5,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -456,7 +786,13 @@
     "freq": "135.825",
     "Lat": 60.3339,
     "Lon": 24.2964,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "EFNU",
+    "iso_country": "FI",
+    "length_ft": 2132,
+    "width_ft": 32,
+    "heading": 96,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -465,7 +801,13 @@
     "freq": "127.100",
     "Lat": 60.8764,
     "Lon": 22.744699,
-    "Ele": 100.9
+    "Ele": 100.9,
+    "ident": "EFOP",
+    "iso_country": "FI",
+    "length_ft": 3083,
+    "width_ft": 52,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -474,7 +816,15 @@
     "freq": "135.450",
     "Lat": 64.930099,
     "Lon": 25.354601,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "EFOU",
+    "iso_country": "FI",
+    "icao_code": "EFOU",
+    "iata_code": "OUL",
+    "length_ft": 8205,
+    "width_ft": 197,
+    "heading": 121,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -483,7 +833,13 @@
     "freq": "126.100",
     "Lat": 68.150223,
     "Lon": 25.829372,
-    "Ele": 260.0
+    "Ele": 260,
+    "ident": "EFPA",
+    "iso_country": "FI",
+    "length_ft": 2625,
+    "width_ft": 59,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -492,7 +848,13 @@
     "freq": "123.550",
     "Lat": 61.245602,
     "Lon": 22.193399,
-    "Ele": 45.1
+    "Ele": 45.1,
+    "ident": "EFPI",
+    "iso_country": "FI",
+    "length_ft": 3773,
+    "width_ft": 59,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -501,7 +863,13 @@
     "freq": "135.525",
     "Lat": 62.264702,
     "Lon": 27.0028,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "EFPK",
+    "iso_country": "FI",
+    "length_ft": 2427,
+    "width_ft": 59,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -510,7 +878,13 @@
     "freq": "135.525",
     "Lat": 61.728901,
     "Lon": 29.3936,
-    "Ele": 77.1
+    "Ele": 77.1,
+    "ident": "EFPN",
+    "iso_country": "FI",
+    "length_ft": 1640,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -519,7 +893,15 @@
     "freq": "128.650",
     "Lat": 61.4617,
     "Lon": 21.799999,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "EFPO",
+    "iso_country": "FI",
+    "icao_code": "EFPO",
+    "iata_code": "POR",
+    "length_ft": 2628,
+    "width_ft": 98,
+    "heading": 174,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -528,7 +910,13 @@
     "freq": "118.475",
     "Lat": 60.479167,
     "Lon": 26.593889,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "EFPR",
+    "iso_country": "FI",
+    "length_ft": 3280,
+    "width_ft": 100,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -537,7 +925,13 @@
     "freq": "124.200",
     "Lat": 65.402199,
     "Lon": 26.946899,
-    "Ele": 121.0
+    "Ele": 121,
+    "ident": "EFPU",
+    "iso_country": "FI",
+    "length_ft": 6528,
+    "width_ft": 148,
+    "heading": 91.8,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -546,7 +940,13 @@
     "freq": "121.600",
     "Lat": 63.731899,
     "Lon": 25.9263,
-    "Ele": 160.9
+    "Ele": 160.9,
+    "ident": "EFPY",
+    "iso_country": "FI",
+    "length_ft": 3281,
+    "width_ft": 66,
+    "heading": 155.6,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -555,7 +955,13 @@
     "freq": "135.525",
     "Lat": 63.424198,
     "Lon": 28.124201,
-    "Ele": 145.1
+    "Ele": 145.1,
+    "ident": "EFRA",
+    "iso_country": "FI",
+    "length_ft": 4035,
+    "width_ft": 75,
+    "QFU": "36",
+    "heading": 185.5
   },
   {
     "type": "small_airport",
@@ -564,7 +970,13 @@
     "freq": "123.500",
     "Lat": 64.688103,
     "Lon": 24.695801,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "EFRH",
+    "iso_country": "FI",
+    "length_ft": 3281,
+    "width_ft": 75,
+    "heading": 107,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -573,7 +985,13 @@
     "freq": "123.200",
     "Lat": 62.065498,
     "Lon": 28.356501,
-    "Ele": 89.0
+    "Ele": 89,
+    "ident": "EFRN",
+    "iso_country": "FI",
+    "length_ft": 3101,
+    "width_ft": 60,
+    "heading": 190,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -582,7 +1000,15 @@
     "freq": "125.800",
     "Lat": 66.564796447754,
     "Lon": 25.830400466919,
-    "Ele": 195.7
+    "Ele": 195.7,
+    "ident": "EFRO",
+    "iso_country": "FI",
+    "icao_code": "EFRO",
+    "iata_code": "RVN",
+    "length_ft": 9849,
+    "width_ft": 197,
+    "heading": 37,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -591,7 +1017,13 @@
     "freq": "124.200",
     "Lat": 65.973099,
     "Lon": 26.365299,
-    "Ele": 164.9
+    "Ele": 164.9,
+    "ident": "EFRU",
+    "iso_country": "FI",
+    "length_ft": 3937,
+    "width_ft": 75,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -600,7 +1032,13 @@
     "freq": "132.325",
     "Lat": 63.705601,
     "Lon": 26.6164,
-    "Ele": 157.0
+    "Ele": 157,
+    "ident": "EFRV",
+    "iso_country": "FI",
+    "length_ft": 2755,
+    "width_ft": 59,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -609,7 +1047,13 @@
     "freq": "121.300",
     "Lat": 60.744701,
     "Lon": 24.1078,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "EFRY",
+    "iso_country": "FI",
+    "length_ft": 1575,
+    "width_ft": 33,
+    "heading": 129.7,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -618,7 +1062,15 @@
     "freq": "118.800",
     "Lat": 61.9431,
     "Lon": 28.945101,
-    "Ele": 94.8
+    "Ele": 94.8,
+    "ident": "EFSA",
+    "iso_country": "FI",
+    "icao_code": "EFSA",
+    "iata_code": "SVL",
+    "length_ft": 7546,
+    "width_ft": 148,
+    "heading": 126,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -627,7 +1079,13 @@
     "freq": "123.200",
     "Lat": 61.062401,
     "Lon": 26.798901,
-    "Ele": 127.1
+    "Ele": 127.1,
+    "ident": "EFSE",
+    "iso_country": "FI",
+    "length_ft": 4344,
+    "width_ft": 49,
+    "heading": 132.9,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -636,7 +1094,15 @@
     "freq": "123.600",
     "Lat": 62.692101,
     "Lon": 22.8323,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "EFSI",
+    "iso_country": "FI",
+    "icao_code": "EFSI",
+    "iata_code": "SJY",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 136,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -645,7 +1111,15 @@
     "freq": "123.400",
     "Lat": 67.3949966431,
     "Lon": 26.6191005707,
-    "Ele": 183.5
+    "Ele": 183.5,
+    "ident": "EFSO",
+    "iso_country": "FI",
+    "icao_code": "EFSO",
+    "iata_code": "SOT",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -654,7 +1128,13 @@
     "freq": "124.200",
     "Lat": 64.821899,
     "Lon": 28.7103,
-    "Ele": 164.9
+    "Ele": 164.9,
+    "ident": "EFSU",
+    "iso_country": "FI",
+    "length_ft": 2624,
+    "width_ft": 49,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -663,7 +1143,13 @@
     "freq": "132.675",
     "Lat": 60.079201,
     "Lon": 24.172199,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "EFTO",
+    "iso_country": "FI",
+    "length_ft": 1181,
+    "width_ft": 49,
+    "heading": 88.8,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -672,7 +1158,15 @@
     "freq": "126.200",
     "Lat": 61.414101,
     "Lon": 23.604401,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "EFTP",
+    "iso_country": "FI",
+    "icao_code": "EFTP",
+    "iata_code": "TMP",
+    "length_ft": 8858,
+    "width_ft": 148,
+    "heading": 64.3,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -681,7 +1175,15 @@
     "freq": "130.050",
     "Lat": 60.514099,
     "Lon": 22.2628,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "EFTU",
+    "iso_country": "FI",
+    "icao_code": "EFTU",
+    "iata_code": "TKU",
+    "length_ft": 8202,
+    "width_ft": 197,
+    "heading": 85,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -690,7 +1192,15 @@
     "freq": "114.600",
     "Lat": 60.8964,
     "Lon": 26.9384,
-    "Ele": 103.3
+    "Ele": 103.3,
+    "ident": "EFUT",
+    "iso_country": "FI",
+    "icao_code": "EFUT",
+    "iata_code": "UTI",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 78,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -699,7 +1209,15 @@
     "freq": "114.500",
     "Lat": 63.050701,
     "Lon": 21.762199,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "EFVA",
+    "iso_country": "FI",
+    "icao_code": "EFVA",
+    "iata_code": "VAA",
+    "length_ft": 8727,
+    "QFU": "34",
+    "width_ft": 157,
+    "heading": 163
   },
   {
     "type": "small_airport",
@@ -708,7 +1226,13 @@
     "freq": "132.325",
     "Lat": 63.122501,
     "Lon": 25.816099,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "EFVI",
+    "iso_country": "FI",
+    "length_ft": 951,
+    "width_ft": 82,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -717,7 +1241,13 @@
     "freq": "124.200",
     "Lat": 64.5019,
     "Lon": 26.76,
-    "Ele": 135.0
+    "Ele": 135,
+    "ident": "EFVL",
+    "iso_country": "FI",
+    "length_ft": 2624,
+    "width_ft": 49,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -726,7 +1256,13 @@
     "freq": "127.100",
     "Lat": 61.0397,
     "Lon": 22.5917,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "EFVP",
+    "iso_country": "FI",
+    "length_ft": 2950,
+    "width_ft": 65,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -735,7 +1271,15 @@
     "freq": "128.325",
     "Lat": 62.171101,
     "Lon": 27.868601,
-    "Ele": 87.2
+    "Ele": 87.2,
+    "ident": "EFVR",
+    "iso_country": "FI",
+    "icao_code": "EFVR",
+    "iata_code": "VRK",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -744,7 +1288,13 @@
     "freq": "127.100",
     "Lat": 63.3978,
     "Lon": 24.0306,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "EFVT",
+    "iso_country": "FI",
+    "length_ft": 2427,
+    "width_ft": 62,
+    "heading": 72.1,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -753,7 +1303,9 @@
     "freq": "",
     "Lat": 68.087196,
     "Lon": 27.123899,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EFVU",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -762,7 +1314,13 @@
     "freq": "135.525",
     "Lat": 60.663601,
     "Lon": 26.7458,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "EFWB",
+    "iso_country": "FI",
+    "length_ft": 2263,
+    "width_ft": 49,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -771,7 +1329,15 @@
     "freq": "122.500",
     "Lat": 64.054722,
     "Lon": 24.725278,
-    "Ele": 76.8
+    "Ele": 76.8,
+    "ident": "EFYL",
+    "iso_country": "FI",
+    "icao_code": "EFYL",
+    "iata_code": "YLI",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 155.1,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -780,7 +1346,9 @@
     "freq": "",
     "Lat": 61.567659,
     "Lon": 28.01329,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0001",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -789,7 +1357,9 @@
     "freq": "",
     "Lat": 60.75732,
     "Lon": 26.734313,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "FI-0002",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -798,7 +1368,9 @@
     "freq": "",
     "Lat": 62.308695,
     "Lon": 22.518812,
-    "Ele": 170.1
+    "Ele": 170.1,
+    "ident": "FI-0003",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -807,7 +1379,9 @@
     "freq": "",
     "Lat": 62.513442,
     "Lon": 24.068282,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0004",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -816,7 +1390,9 @@
     "freq": "",
     "Lat": 62.028,
     "Lon": 24.664,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0005",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -825,7 +1401,9 @@
     "freq": "",
     "Lat": 65.34774,
     "Lon": 28.34182,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0006",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -834,7 +1412,9 @@
     "freq": "",
     "Lat": 62.01534,
     "Lon": 23.05801,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0007",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -843,7 +1423,9 @@
     "freq": "",
     "Lat": 62.861405,
     "Lon": 24.165115,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0008",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -852,7 +1434,9 @@
     "freq": "",
     "Lat": 61.89421,
     "Lon": 26.18803,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0012",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -861,7 +1445,9 @@
     "freq": "",
     "Lat": 61.04778,
     "Lon": 27.2256,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0013",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -870,7 +1456,9 @@
     "freq": "",
     "Lat": 60.946,
     "Lon": 24.66863,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0014",
+    "iso_country": "FI"
   },
   {
     "type": "small_airport",
@@ -879,6 +1467,8 @@
     "freq": "",
     "Lat": 61.20674,
     "Lon": 22.88885,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FI-0015",
+    "iso_country": "FI"
   }
 ]

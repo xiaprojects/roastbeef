@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 40.944401,
     "Lon": 72.977798,
-    "Ele": 789.7
+    "Ele": 789.7,
+    "ident": "KG-0001",
+    "iso_country": "KG",
+    "icao_code": "UCFD",
+    "length_ft": 5708,
+    "width_ft": 115,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -15,7 +22,12 @@
     "freq": "",
     "Lat": 41.441502,
     "Lon": 76.1306,
-    "Ele": 2133.0
+    "Ele": 2133,
+    "ident": "KG-0002",
+    "iso_country": "KG",
+    "length_ft": 7037,
+    "width_ft": 131,
+    "QFU": "00"
   },
   {
     "type": "small_airport",
@@ -24,7 +36,10 @@
     "freq": "",
     "Lat": 41.877998,
     "Lon": 72.862396,
-    "Ele": 962.3
+    "Ele": 962.3,
+    "ident": "KG-0003",
+    "iso_country": "KG",
+    "local_code": "THL"
   },
   {
     "type": "small_airport",
@@ -33,7 +48,13 @@
     "freq": "",
     "Lat": 42.505901,
     "Lon": 72.2631,
-    "Ele": 1265.8
+    "Ele": 1265.8,
+    "ident": "KG-0004",
+    "iso_country": "KG",
+    "length_ft": 5577,
+    "width_ft": 115,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -42,7 +63,9 @@
     "freq": "",
     "Lat": 42.99909973144531,
     "Lon": 74.29930114746094,
-    "Ele": 648.0
+    "Ele": 648,
+    "ident": "KG-0005",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -51,7 +74,13 @@
     "freq": "",
     "Lat": 42.1530990601,
     "Lon": 77.5639038086,
-    "Ele": 1723.6
+    "Ele": 1723.6,
+    "ident": "KG-0006",
+    "iso_country": "KG",
+    "length_ft": 2788,
+    "width_ft": 574,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -60,7 +89,11 @@
     "freq": "",
     "Lat": 42.828899,
     "Lon": 75.335999,
-    "Ele": 844.3
+    "Ele": 844.3,
+    "ident": "KG-0007",
+    "iso_country": "KG",
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -69,7 +102,9 @@
     "freq": "",
     "Lat": 42.81560134887695,
     "Lon": 74.58560180664062,
-    "Ele": 901.6
+    "Ele": 901.6,
+    "ident": "KG-0008",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -78,7 +113,9 @@
     "freq": "",
     "Lat": 42.91419982910156,
     "Lon": 74.50830078125,
-    "Ele": 704.4
+    "Ele": 704.4,
+    "ident": "KG-0010",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -87,7 +124,9 @@
     "freq": "",
     "Lat": 42.91429901123047,
     "Lon": 74.11900329589844,
-    "Ele": 659.0
+    "Ele": 659,
+    "ident": "KG-0011",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -96,7 +135,9 @@
     "freq": "",
     "Lat": 42.74369812011719,
     "Lon": 74.54239654541016,
-    "Ele": 1196.3
+    "Ele": 1196.3,
+    "ident": "KG-0012",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -105,7 +146,13 @@
     "freq": "",
     "Lat": 41.484501,
     "Lon": 71.733704,
-    "Ele": 1279.9
+    "Ele": 1279.9,
+    "ident": "KG-0014",
+    "iso_country": "KG",
+    "length_ft": 5708,
+    "width_ft": 115,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -114,7 +161,13 @@
     "freq": "",
     "Lat": 40.271702,
     "Lon": 72.047096,
-    "Ele": 892.5
+    "Ele": 892.5,
+    "ident": "KG-0018",
+    "iso_country": "KG",
+    "length_ft": 5249,
+    "width_ft": 115,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -123,7 +176,9 @@
     "freq": "",
     "Lat": 42.7156982421875,
     "Lon": 71.70999908447266,
-    "Ele": 833.3
+    "Ele": 833.3,
+    "ident": "KG-0021",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -132,7 +187,9 @@
     "freq": "",
     "Lat": 42.89127,
     "Lon": 74.749743,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KG-0022",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -141,7 +198,9 @@
     "freq": "",
     "Lat": 42.889604,
     "Lon": 73.929985,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KG-0043",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -150,7 +209,9 @@
     "freq": "",
     "Lat": 42.88958,
     "Lon": 73.602004,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KG-0044",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -159,7 +220,9 @@
     "freq": "",
     "Lat": 40.629006,
     "Lon": 73.622493,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KG-0046",
+    "iso_country": "KG"
   },
   {
     "type": "medium_airport",
@@ -168,7 +231,14 @@
     "freq": "",
     "Lat": 40.042899,
     "Lon": 70.83784,
-    "Ele": 1097.9
+    "Ele": 1097.9,
+    "ident": "UA30",
+    "iso_country": "KG",
+    "icao_code": "UCFB",
+    "length_ft": 5905,
+    "width_ft": 115,
+    "heading": 143.8,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -177,7 +247,9 @@
     "freq": "",
     "Lat": 42.753693,
     "Lon": 75.33263,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UABA",
+    "iso_country": "KG"
   },
   {
     "type": "small_airport",
@@ -186,7 +258,13 @@
     "freq": "",
     "Lat": 42.64948,
     "Lon": 77.058381,
-    "Ele": 1652.0
+    "Ele": 1652,
+    "ident": "UAFG",
+    "iso_country": "KG",
+    "length_ft": 5708,
+    "width_ft": 131,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -195,7 +273,14 @@
     "freq": "",
     "Lat": 39.824737,
     "Lon": 69.56882,
-    "Ele": 1475.2
+    "Ele": 1475.2,
+    "ident": "UAFI",
+    "iso_country": "KG",
+    "icao_code": "UCFR",
+    "length_ft": 5577,
+    "width_ft": 115,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "large_airport",
@@ -204,7 +289,15 @@
     "freq": "132.200",
     "Lat": 43.061298,
     "Lon": 74.4776,
-    "Ele": 627.3
+    "Ele": 627.3,
+    "ident": "UAFM",
+    "iso_country": "KG",
+    "icao_code": "UCFM",
+    "iata_code": "BSZ",
+    "length_ft": 13780,
+    "width_ft": 180,
+    "heading": 80,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -213,7 +306,15 @@
     "freq": "124.200",
     "Lat": 40.609001,
     "Lon": 72.793297,
-    "Ele": 892.1
+    "Ele": 892.1,
+    "ident": "UAFO",
+    "iso_country": "KG",
+    "icao_code": "UCFO",
+    "iata_code": "OSS",
+    "length_ft": 10538,
+    "width_ft": 148,
+    "heading": 125,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -222,7 +323,15 @@
     "freq": "",
     "Lat": 42.508099,
     "Lon": 78.407799,
-    "Ele": 1703.8
+    "Ele": 1703.8,
+    "ident": "UAFP",
+    "iso_country": "KG",
+    "icao_code": "UCFK",
+    "iata_code": "IKG",
+    "length_ft": 6561,
+    "width_ft": 115,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -231,7 +340,13 @@
     "freq": "124.600",
     "Lat": 42.85319900512695,
     "Lon": 74.84649658203125,
-    "Ele": 776.9
+    "Ele": 776.9,
+    "ident": "UAFW",
+    "iso_country": "KG",
+    "length_ft": 8859,
+    "width_ft": 164,
+    "heading": 114.6,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -240,7 +355,9 @@
     "freq": "",
     "Lat": 41.410291,
     "Lon": 74.044418,
-    "Ele": 1310.0
+    "Ele": 1310,
+    "ident": "UAFZ",
+    "iso_country": "KG"
   },
   {
     "type": "medium_airport",
@@ -249,6 +366,15 @@
     "freq": "118.700",
     "Lat": 42.585584,
     "Lon": 76.701181,
-    "Ele": 1653.5
+    "Ele": 1653.5,
+    "ident": "UCFL",
+    "iso_country": "KG",
+    "icao_code": "UCFL",
+    "iata_code": "IKU",
+    "local_code": "IKU",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "heading": 74,
+    "QFU": "25"
   }
 ]

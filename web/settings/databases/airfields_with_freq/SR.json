@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 4.217511,
     "Lon": -55.447054,
-    "Ele": 73.8
+    "Ele": 73.8,
+    "ident": "GY-BTO",
+    "iso_country": "SR",
+    "iata_code": "BTO"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 4.005713,
     "Lon": -55.481644,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "GY-DOE",
+    "iso_country": "SR",
+    "iata_code": "DOE"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,9 @@
     "freq": "",
     "Lat": 4.998505,
     "Lon": -54.992033,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "SMAF",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -33,7 +41,9 @@
     "freq": "",
     "Lat": 3.619932,
     "Lon": -54.142714,
-    "Ele": 225.6
+    "Ele": 225.6,
+    "ident": "SMAN",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -42,7 +52,9 @@
     "freq": "",
     "Lat": 4.778882,
     "Lon": -56.768699,
-    "Ele": 93.6
+    "Ele": 93.6,
+    "ident": "SMBG",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -51,7 +63,11 @@
     "freq": "",
     "Lat": 5.51272,
     "Lon": -54.050098,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "SMBN",
+    "iso_country": "SR",
+    "icao_code": "SMBN",
+    "iata_code": "ABN"
   },
   {
     "type": "small_airport",
@@ -60,7 +76,11 @@
     "freq": "",
     "Lat": 3.898681,
     "Lon": -55.577907,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SMCA",
+    "iso_country": "SR",
+    "icao_code": "SMCA",
+    "iata_code": "AAJ"
   },
   {
     "type": "small_airport",
@@ -69,7 +89,9 @@
     "freq": "",
     "Lat": 4.852778,
     "Lon": -55.593056,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SMCB",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -78,7 +100,9 @@
     "freq": "",
     "Lat": 3.370684,
     "Lon": -57.346046,
-    "Ele": 146.0
+    "Ele": 146,
+    "ident": "SMCI",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -87,7 +111,11 @@
     "freq": "",
     "Lat": 5.86583,
     "Lon": -56.327499,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SMCO",
+    "iso_country": "SR",
+    "icao_code": "SMCO",
+    "iata_code": "TOT"
   },
   {
     "type": "small_airport",
@@ -96,7 +124,9 @@
     "freq": "",
     "Lat": 3.85216,
     "Lon": -54.228201,
-    "Ele": 100.6
+    "Ele": 100.6,
+    "ident": "SMCT",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -105,7 +135,11 @@
     "freq": "",
     "Lat": 4.111359,
     "Lon": -54.672766,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "SMDA",
+    "iso_country": "SR",
+    "icao_code": "SMDA",
+    "iata_code": "DRJ"
   },
   {
     "type": "small_airport",
@@ -114,7 +148,9 @@
     "freq": "",
     "Lat": 5.350385,
     "Lon": -56.363047,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SMDK",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -123,7 +159,11 @@
     "freq": "",
     "Lat": 4.376108,
     "Lon": -55.407057,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "SMDO",
+    "iso_country": "SR",
+    "icao_code": "SMDO",
+    "iata_code": "LDO"
   },
   {
     "type": "small_airport",
@@ -132,7 +172,9 @@
     "freq": "",
     "Lat": 2.5235,
     "Lon": -56.3247,
-    "Ele": 268.2
+    "Ele": 268.2,
+    "ident": "SMDU",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -141,7 +183,9 @@
     "freq": "",
     "Lat": 4.454167,
     "Lon": -54.445833,
-    "Ele": 58.5
+    "Ele": 58.5,
+    "ident": "SMGA",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -150,7 +194,9 @@
     "freq": "",
     "Lat": 4.0583,
     "Lon": -54.7861,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "SMGH",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -159,7 +205,9 @@
     "freq": "",
     "Lat": 5.091667,
     "Lon": -55.249167,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SMGR",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -168,7 +216,9 @@
     "freq": "",
     "Lat": 5.831891,
     "Lon": -55.636875,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "SMHA",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -177,7 +227,9 @@
     "freq": "",
     "Lat": 5.826389,
     "Lon": -55.3375,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "SMJA",
+    "iso_country": "SR"
   },
   {
     "type": "large_airport",
@@ -186,7 +238,15 @@
     "freq": "129.200",
     "Lat": 5.45283,
     "Lon": -55.187801,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SMJP",
+    "iso_country": "SR",
+    "icao_code": "SMJP",
+    "iata_code": "PBM",
+    "length_ft": 11417,
+    "width_ft": 148,
+    "heading": 89.7,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -195,7 +255,9 @@
     "freq": "",
     "Lat": 4.406617,
     "Lon": -57.223678,
-    "Ele": 163.1
+    "Ele": 163.1,
+    "ident": "SMKA",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -204,7 +266,9 @@
     "freq": "",
     "Lat": 3.094343,
     "Lon": -56.472702,
-    "Ele": 258.8
+    "Ele": 258.8,
+    "ident": "SMKE",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -213,7 +277,9 @@
     "freq": "",
     "Lat": 3.410484,
     "Lon": -54.028294,
-    "Ele": 113.7
+    "Ele": 113.7,
+    "ident": "SMLA",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -222,7 +288,9 @@
     "freq": "",
     "Lat": 4.268056,
     "Lon": -54.743056,
-    "Ele": 675.7
+    "Ele": 675.7,
+    "ident": "SMLI",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -231,7 +299,9 @@
     "freq": "",
     "Lat": 4.996111,
     "Lon": -54.441667,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SMLT",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -240,7 +310,11 @@
     "freq": "",
     "Lat": 5.6076,
     "Lon": -54.4003,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "SMMO",
+    "iso_country": "SR",
+    "icao_code": "SMMO",
+    "iata_code": "MOJ"
   },
   {
     "type": "small_airport",
@@ -249,7 +323,11 @@
     "freq": "",
     "Lat": 5.955435,
     "Lon": -57.040617,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "SMNI",
+    "iso_country": "SR",
+    "icao_code": "SMNI",
+    "iata_code": "ICK"
   },
   {
     "type": "small_airport",
@@ -258,7 +336,9 @@
     "freq": "",
     "Lat": 3.104167,
     "Lon": -54.543056,
-    "Ele": 147.2
+    "Ele": 147.2,
+    "ident": "SMOL",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -267,7 +347,11 @@
     "freq": "",
     "Lat": 3.346051,
     "Lon": -55.443707,
-    "Ele": 217.6
+    "Ele": 217.6,
+    "ident": "SMPA",
+    "iso_country": "SR",
+    "icao_code": "SMPA",
+    "iata_code": "OEM"
   },
   {
     "type": "small_airport",
@@ -276,7 +360,9 @@
     "freq": "",
     "Lat": 4.126389,
     "Lon": -54.623611,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SMPE",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -285,7 +371,9 @@
     "freq": "",
     "Lat": 4.397914,
     "Lon": -55.793374,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "SMPG",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -294,7 +382,9 @@
     "freq": "",
     "Lat": 3.502836,
     "Lon": -55.057989,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SMPT",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -303,7 +393,9 @@
     "freq": "",
     "Lat": 4.722778,
     "Lon": -56.208333,
-    "Ele": 33.2
+    "Ele": 33.2,
+    "ident": "SMRA",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -312,7 +404,9 @@
     "freq": "",
     "Lat": 4.884722,
     "Lon": -56.940278,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "SMRN",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -321,7 +415,9 @@
     "freq": "",
     "Lat": 2.026438,
     "Lon": -56.126412,
-    "Ele": 226.8
+    "Ele": 226.8,
+    "ident": "SMSI",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -330,7 +426,9 @@
     "freq": "",
     "Lat": 4.318516,
     "Lon": -54.967227,
-    "Ele": 68.0
+    "Ele": 68,
+    "ident": "SMSK",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -339,7 +437,9 @@
     "freq": "",
     "Lat": 2.354427,
     "Lon": -56.792431,
-    "Ele": 275.8
+    "Ele": 275.8,
+    "ident": "SMSM",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -348,7 +448,11 @@
     "freq": "",
     "Lat": 4.351389,
     "Lon": -54.418056,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "SMST",
+    "iso_country": "SR",
+    "icao_code": "SMST",
+    "iata_code": "SMZ"
   },
   {
     "type": "small_airport",
@@ -357,7 +461,9 @@
     "freq": "",
     "Lat": 3.679806,
     "Lon": -54.085207,
-    "Ele": 94.2
+    "Ele": 94.2,
+    "ident": "SMTA",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -366,7 +472,9 @@
     "freq": "",
     "Lat": 3.787625,
     "Lon": -56.149487,
-    "Ele": 338.9
+    "Ele": 338.9,
+    "ident": "SMTB",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -375,7 +483,11 @@
     "freq": "",
     "Lat": 3.15000009537,
     "Lon": -55.716999054,
-    "Ele": 181.7
+    "Ele": 181.7,
+    "ident": "SMTP",
+    "iso_country": "SR",
+    "icao_code": "SMTP",
+    "iata_code": "KCB"
   },
   {
     "type": "small_airport",
@@ -384,7 +496,9 @@
     "freq": "",
     "Lat": 1.9625,
     "Lon": -55.929167,
-    "Ele": 338.3
+    "Ele": 338.3,
+    "ident": "SMVG",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -393,7 +507,9 @@
     "freq": "",
     "Lat": 4.825685,
     "Lon": -57.282415,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SMVO",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -402,7 +518,11 @@
     "freq": "",
     "Lat": 5.841252,
     "Lon": -56.673247,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "SMWA",
+    "iso_country": "SR",
+    "icao_code": "SMWA",
+    "iata_code": "AGI"
   },
   {
     "type": "small_airport",
@@ -411,7 +531,11 @@
     "freq": "",
     "Lat": 5.215277,
     "Lon": -57.185302,
-    "Ele": 20.7
+    "Ele": 20.7,
+    "ident": "SMWS",
+    "iso_country": "SR",
+    "icao_code": "SMWS",
+    "iata_code": "WSO"
   },
   {
     "type": "small_airport",
@@ -420,7 +544,15 @@
     "freq": "",
     "Lat": 5.811131,
     "Lon": -55.1913,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SMZO",
+    "iso_country": "SR",
+    "icao_code": "SMZO",
+    "iata_code": "ORG",
+    "length_ft": 2461,
+    "width_ft": 56,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -429,7 +561,9 @@
     "freq": "",
     "Lat": 3.547885,
     "Lon": -57.633958,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SR-0001",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -438,7 +572,9 @@
     "freq": "",
     "Lat": 4.935714,
     "Lon": -55.534735,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "SR-0002",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -447,7 +583,9 @@
     "freq": "",
     "Lat": 5.022859,
     "Lon": -55.165171,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SR-0003",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -456,7 +594,9 @@
     "freq": "",
     "Lat": 5.821147,
     "Lon": -56.81464,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SR-0004",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -465,7 +605,9 @@
     "freq": "",
     "Lat": 5.83756,
     "Lon": -55.77047,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SR-0005",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -474,7 +616,9 @@
     "freq": "",
     "Lat": 5.88091,
     "Lon": -56.81213,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SR-0006",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -483,7 +627,9 @@
     "freq": "",
     "Lat": 5.881552,
     "Lon": -56.956718,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SR-0007",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -492,7 +638,9 @@
     "freq": "",
     "Lat": 5.88444,
     "Lon": -56.97911,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SR-0008",
+    "iso_country": "SR"
   },
   {
     "type": "small_airport",
@@ -501,6 +649,14 @@
     "freq": "",
     "Lat": 5.8604,
     "Lon": -55.192,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "SR-0009",
+    "iso_country": "SR",
+    "icao_code": "SMEG",
+    "iata_code": "EAX",
+    "length_ft": 3934,
+    "width_ft": 75,
+    "QFU": "29",
+    "heading": 290
   }
 ]

@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 14.596943855285645,
     "Lon": -86.50749969482422,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "HN-0001",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 15.745400428771973,
     "Lon": -85.722900390625,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "HN-0002",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,12 @@
     "freq": "",
     "Lat": 14.087192,
     "Lon": -86.649427,
-    "Ele": 259.7
+    "Ele": 259.7,
+    "ident": "HN-0003",
+    "iso_country": "HN",
+    "length_ft": 2500,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -33,7 +42,9 @@
     "freq": "",
     "Lat": 15.183333,
     "Lon": -87.069443,
-    "Ele": 700.1
+    "Ele": 700.1,
+    "ident": "HN-0006",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -42,7 +53,10 @@
     "freq": "",
     "Lat": 14.0266666412,
     "Lon": -88.3441696167,
-    "Ele": 170.7
+    "Ele": 170.7,
+    "ident": "HN-0030",
+    "iso_country": "HN",
+    "local_code": "MHCC"
   },
   {
     "type": "small_airport",
@@ -51,7 +65,9 @@
     "freq": "",
     "Lat": 14.800347,
     "Lon": -85.849222,
-    "Ele": 342.0
+    "Ele": 342,
+    "ident": "HN-0031",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -60,7 +76,9 @@
     "freq": "",
     "Lat": 13.0600004196167,
     "Lon": -86.9574966430664,
-    "Ele": 38.4
+    "Ele": 38.4,
+    "ident": "HN-MOP",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -69,7 +87,9 @@
     "freq": "",
     "Lat": 15.0297,
     "Lon": -84.279297,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "HN-MOR",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -78,7 +98,9 @@
     "freq": "",
     "Lat": 14.876943588256836,
     "Lon": -86.19139099121094,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "HN-MSF",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -87,7 +109,9 @@
     "freq": "",
     "Lat": 13.23916721343994,
     "Lon": -87.00555419921875,
-    "Ele": 401.7
+    "Ele": 401.7,
+    "ident": "HN-MST",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -96,7 +120,10 @@
     "freq": "",
     "Lat": 14.235833,
     "Lon": -88.437225,
-    "Ele": 1279.9
+    "Ele": 1279.9,
+    "ident": "HN-MUG",
+    "iso_country": "HN",
+    "iata_code": "EDQ"
   },
   {
     "type": "small_airport",
@@ -105,7 +132,10 @@
     "freq": "",
     "Lat": 15.442801,
     "Lon": -87.898564,
-    "Ele": 29.3
+    "Ele": 29.3,
+    "ident": "LLH",
+    "iso_country": "HN",
+    "iata_code": "LLH"
   },
   {
     "type": "small_airport",
@@ -114,7 +144,11 @@
     "freq": "",
     "Lat": 13.243481,
     "Lon": -87.341427,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "MHAC",
+    "iso_country": "HN",
+    "length_ft": 2624,
+    "width_ft": 72
   },
   {
     "type": "small_airport",
@@ -123,7 +157,11 @@
     "freq": "",
     "Lat": 13.250055,
     "Lon": -87.357187,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "MHAG",
+    "iso_country": "HN",
+    "length_ft": 700,
+    "width_ft": 20
   },
   {
     "type": "small_airport",
@@ -132,7 +170,11 @@
     "freq": "",
     "Lat": 15.4722,
     "Lon": -84.352203,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "MHAH",
+    "iso_country": "HN",
+    "icao_code": "MHAH",
+    "iata_code": "AHS"
   },
   {
     "type": "small_airport",
@@ -141,7 +183,9 @@
     "freq": "",
     "Lat": 14.493332862854004,
     "Lon": -87.10639190673828,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "MHAL",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -150,7 +194,9 @@
     "freq": "",
     "Lat": 14.74583339691162,
     "Lon": -87.40528106689453,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "MHAN",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -159,7 +205,9 @@
     "freq": "",
     "Lat": 14.01083278656006,
     "Lon": -86.38916778564453,
-    "Ele": 143.3
+    "Ele": 143.3,
+    "ident": "MHAP",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -168,7 +216,9 @@
     "freq": "",
     "Lat": 14.2852783203125,
     "Lon": -87.22916412353516,
-    "Ele": 266.7
+    "Ele": 266.7,
+    "ident": "MHAR",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -177,7 +227,9 @@
     "freq": "",
     "Lat": 14.717778205871582,
     "Lon": -86.57083129882812,
-    "Ele": 216.4
+    "Ele": 216.4,
+    "ident": "MHAU",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -186,7 +238,9 @@
     "freq": "",
     "Lat": 15.735278129577637,
     "Lon": -84.5433349609375,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MHAY",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -195,7 +249,9 @@
     "freq": "",
     "Lat": 14.43333339691162,
     "Lon": -86.08916473388672,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "MHAZ",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -204,7 +260,9 @@
     "freq": "",
     "Lat": 16.432216,
     "Lon": -86.139299,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MHBA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -213,7 +271,9 @@
     "freq": "",
     "Lat": 13.101943969726562,
     "Lon": -87.1419448852539,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "MHBE",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -222,7 +282,10 @@
     "freq": "",
     "Lat": 15.7631,
     "Lon": -84.543602,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "MHBL",
+    "iso_country": "HN",
+    "iata_code": "BHG"
   },
   {
     "type": "small_airport",
@@ -231,7 +294,9 @@
     "freq": "",
     "Lat": 14.917,
     "Lon": -85.900002,
-    "Ele": 453.8
+    "Ele": 453.8,
+    "ident": "MHCA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -240,7 +305,9 @@
     "freq": "",
     "Lat": 15.888333320617676,
     "Lon": -84.75555419921875,
-    "Ele": 0.6
+    "Ele": 0.6,
+    "ident": "MHCB",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -249,7 +316,9 @@
     "freq": "",
     "Lat": 15.831944465637209,
     "Lon": -85.02694702148438,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MHCI",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -258,7 +327,9 @@
     "freq": "",
     "Lat": 14.890107,
     "Lon": -88.404515,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "MHCM",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -267,7 +338,9 @@
     "freq": "",
     "Lat": 15.252778053283691,
     "Lon": -84.23332977294922,
-    "Ele": 18.6
+    "Ele": 18.6,
+    "ident": "MHCO",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -276,7 +349,10 @@
     "freq": "",
     "Lat": 15.033192,
     "Lon": -86.692334,
-    "Ele": 800.1
+    "Ele": 800.1,
+    "ident": "MHCR",
+    "iso_country": "HN",
+    "iata_code": "LUI"
   },
   {
     "type": "small_airport",
@@ -285,7 +361,11 @@
     "freq": "",
     "Lat": 15.445556,
     "Lon": -86.675278,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "MHCS",
+    "iso_country": "HN",
+    "icao_code": "MHCS",
+    "iata_code": "CYL"
   },
   {
     "type": "small_airport",
@@ -294,7 +374,10 @@
     "freq": "",
     "Lat": 15.316667,
     "Lon": -83.591667,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "MHCU",
+    "iso_country": "HN",
+    "iata_code": "CDD"
   },
   {
     "type": "small_airport",
@@ -303,7 +386,9 @@
     "freq": "",
     "Lat": 14.9891,
     "Lon": -84.220802,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "MHDU",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -312,7 +397,11 @@
     "freq": "",
     "Lat": 15.505556,
     "Lon": -86.574722,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "MHEA",
+    "iso_country": "HN",
+    "icao_code": "MHEA",
+    "iata_code": "OAN"
   },
   {
     "type": "small_airport",
@@ -321,7 +410,9 @@
     "freq": "",
     "Lat": 14.457777976989746,
     "Lon": -87.05860900878906,
-    "Ele": 237.7
+    "Ele": 237.7,
+    "ident": "MHEC",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -330,7 +421,9 @@
     "freq": "",
     "Lat": 15.648611068725586,
     "Lon": -87.788330078125,
-    "Ele": 16.2
+    "Ele": 16.2,
+    "ident": "MHEI",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -339,7 +432,9 @@
     "freq": "",
     "Lat": 13.873056411743164,
     "Lon": -86.56055450439453,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "MHEL",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -348,7 +443,9 @@
     "freq": "",
     "Lat": 14.661944389343262,
     "Lon": -86.91500091552734,
-    "Ele": 295.7
+    "Ele": 295.7,
+    "ident": "MHEN",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -357,7 +454,9 @@
     "freq": "",
     "Lat": 15.609722,
     "Lon": -86.139442,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "MHEZ",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -366,7 +465,9 @@
     "freq": "",
     "Lat": 14.598055839538574,
     "Lon": -86.48388671875,
-    "Ele": 196.9
+    "Ele": 196.9,
+    "ident": "MHFA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -375,7 +476,9 @@
     "freq": "",
     "Lat": 16.403823,
     "Lon": -86.286635,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MHFC",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -384,7 +487,9 @@
     "freq": "",
     "Lat": 14.113332748413086,
     "Lon": -86.9527816772461,
-    "Ele": 197.5
+    "Ele": 197.5,
+    "ident": "MHFN",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -393,7 +498,9 @@
     "freq": "",
     "Lat": 15.24246,
     "Lon": -88.49044,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "MHGA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -402,7 +509,9 @@
     "freq": "",
     "Lat": 14.74666690826416,
     "Lon": -87.37527465820312,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "MHGB",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -411,7 +520,9 @@
     "freq": "",
     "Lat": 14.838610649108888,
     "Lon": -85.86833190917969,
-    "Ele": 115.2
+    "Ele": 115.2,
+    "ident": "MHGC",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -420,7 +531,15 @@
     "freq": "",
     "Lat": 14.875,
     "Lon": -85.776108,
-    "Ele": 395.0
+    "Ele": 395,
+    "ident": "MHGE",
+    "iso_country": "HN",
+    "icao_code": "MHGE",
+    "iata_code": "CAA",
+    "length_ft": 5052,
+    "width_ft": 85,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -429,7 +548,9 @@
     "freq": "",
     "Lat": 15.974482,
     "Lon": -85.079753,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MHGR",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -438,7 +559,10 @@
     "freq": "",
     "Lat": 14.573492,
     "Lon": -88.595801,
-    "Ele": 912.9
+    "Ele": 912.9,
+    "ident": "MHGS",
+    "iso_country": "HN",
+    "iata_code": "GAC"
   },
   {
     "type": "small_airport",
@@ -447,7 +571,9 @@
     "freq": "",
     "Lat": 14.784722328186035,
     "Lon": -86.86333465576172,
-    "Ele": 233.2
+    "Ele": 233.2,
+    "ident": "MHGY",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -456,7 +582,9 @@
     "freq": "",
     "Lat": 14.755000114440918,
     "Lon": -86.00416564941406,
-    "Ele": 104.2
+    "Ele": 104.2,
+    "ident": "MHHE",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -465,7 +593,9 @@
     "freq": "",
     "Lat": 14.598889350891112,
     "Lon": -86.46083068847656,
-    "Ele": 188.4
+    "Ele": 188.4,
+    "ident": "MHHG",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -474,7 +604,9 @@
     "freq": "",
     "Lat": 15.430653,
     "Lon": -86.891049,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "MHHO",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -483,7 +615,9 @@
     "freq": "",
     "Lat": 17.407301,
     "Lon": -83.932701,
-    "Ele": 11.3
+    "Ele": 11.3,
+    "ident": "MHIC",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -492,7 +626,9 @@
     "freq": "",
     "Lat": 14.78861141204834,
     "Lon": -87.34972381591797,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "MHIN",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -501,7 +637,11 @@
     "freq": "",
     "Lat": 15.9391670227,
     "Lon": -85.13722229,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MHIR",
+    "iso_country": "HN",
+    "icao_code": "MHIR",
+    "iata_code": "IRN"
   },
   {
     "type": "small_airport",
@@ -510,7 +650,9 @@
     "freq": "",
     "Lat": 15.878055572509766,
     "Lon": -84.72638702392578,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MHJE",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -519,7 +661,9 @@
     "freq": "",
     "Lat": 15.006111,
     "Lon": -86.049164,
-    "Ele": 650.1
+    "Ele": 650.1,
+    "ident": "MHJI",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -528,7 +672,9 @@
     "freq": "",
     "Lat": 14.80472183227539,
     "Lon": -86.9191665649414,
-    "Ele": 237.7
+    "Ele": 237.7,
+    "ident": "MHJO",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -537,7 +683,9 @@
     "freq": "",
     "Lat": 14.838889122009276,
     "Lon": -86.96221923828125,
-    "Ele": 271.3
+    "Ele": 271.3,
+    "ident": "MHJQ",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -546,7 +694,11 @@
     "freq": "",
     "Lat": 14.652600288391112,
     "Lon": -86.22029876708984,
-    "Ele": 400.5
+    "Ele": 400.5,
+    "ident": "MHJU",
+    "iso_country": "HN",
+    "icao_code": "MHJU",
+    "iata_code": "JUT"
   },
   {
     "type": "small_airport",
@@ -555,7 +707,9 @@
     "freq": "",
     "Lat": 14.108888626098633,
     "Lon": -88.53388977050781,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "MHLA",
+    "iso_country": "HN"
   },
   {
     "type": "medium_airport",
@@ -564,7 +718,15 @@
     "freq": "121.900",
     "Lat": 15.7425,
     "Lon": -86.852997,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "MHLC",
+    "iso_country": "HN",
+    "icao_code": "MHLC",
+    "iata_code": "LCE",
+    "length_ft": 9875,
+    "width_ft": 147,
+    "heading": 67,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -573,7 +735,11 @@
     "freq": "",
     "Lat": 14.291111,
     "Lon": -88.175003,
-    "Ele": 1668.8
+    "Ele": 1668.8,
+    "ident": "MHLE",
+    "iso_country": "HN",
+    "icao_code": "MHLE",
+    "iata_code": "LEZ"
   },
   {
     "type": "small_airport",
@@ -582,7 +748,9 @@
     "freq": "",
     "Lat": 14.423333168029783,
     "Lon": -87.11972045898438,
-    "Ele": 246.9
+    "Ele": 246.9,
+    "ident": "MHLF",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -591,7 +759,11 @@
     "freq": "",
     "Lat": 13.214629,
     "Lon": -87.360374,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "MHLG",
+    "iso_country": "HN",
+    "length_ft": 2296,
+    "width_ft": 72
   },
   {
     "type": "small_airport",
@@ -600,7 +772,9 @@
     "freq": "",
     "Lat": 14.487500190734863,
     "Lon": -87.17972564697266,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "MHLI",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -609,7 +783,9 @@
     "freq": "",
     "Lat": 14.89472198486328,
     "Lon": -86.57472229003906,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "MHLJ",
+    "iso_country": "HN"
   },
   {
     "type": "medium_airport",
@@ -618,7 +794,15 @@
     "freq": "119.700",
     "Lat": 15.4526,
     "Lon": -87.923599,
-    "Ele": 27.7
+    "Ele": 27.7,
+    "ident": "MHLM",
+    "iso_country": "HN",
+    "icao_code": "MHLM",
+    "iata_code": "SAP",
+    "length_ft": 9203,
+    "width_ft": 148,
+    "heading": 40,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -627,7 +811,10 @@
     "freq": "",
     "Lat": 15.856066,
     "Lon": -85.443978,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MHLN",
+    "iso_country": "HN",
+    "iata_code": "LMH"
   },
   {
     "type": "small_airport",
@@ -636,7 +823,9 @@
     "freq": "",
     "Lat": 14.034167289733888,
     "Lon": -88.62833404541016,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "MHLP",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -645,7 +834,9 @@
     "freq": "",
     "Lat": 14.644700050354004,
     "Lon": -86.0698013305664,
-    "Ele": 107.6
+    "Ele": 107.6,
+    "ident": "MHLS",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -654,7 +845,9 @@
     "freq": "",
     "Lat": 14.076666831970217,
     "Lon": -86.84166717529297,
-    "Ele": 190.5
+    "Ele": 190.5,
+    "ident": "MHLT",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -663,7 +856,9 @@
     "freq": "",
     "Lat": 15.133798,
     "Lon": -88.442409,
-    "Ele": 232.9
+    "Ele": 232.9,
+    "ident": "MHLU",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -672,7 +867,9 @@
     "freq": "",
     "Lat": 15.016667366027832,
     "Lon": -88.80000305175781,
-    "Ele": 678.8
+    "Ele": 678.8,
+    "ident": "MHLZ",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -681,7 +878,11 @@
     "freq": "",
     "Lat": 13.179444313049316,
     "Lon": -87.18555450439453,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "MHML",
+    "iso_country": "HN",
+    "length_ft": 2296,
+    "width_ft": 98
   },
   {
     "type": "small_airport",
@@ -690,7 +891,11 @@
     "freq": "",
     "Lat": 15.652999877929688,
     "Lon": -87.08769989013672,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "MHMN",
+    "iso_country": "HN",
+    "length_ft": 3280,
+    "width_ft": 23
   },
   {
     "type": "small_airport",
@@ -699,7 +904,9 @@
     "freq": "",
     "Lat": 14.413056373596191,
     "Lon": -88.95194244384766,
-    "Ele": 292.9
+    "Ele": 292.9,
+    "ident": "MHMO",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -708,7 +915,9 @@
     "freq": "",
     "Lat": 15.284682,
     "Lon": -87.885518,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "MHMP",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -717,7 +926,9 @@
     "freq": "",
     "Lat": 15.672778129577637,
     "Lon": -84.84471893310547,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MHMS",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -726,7 +937,9 @@
     "freq": "",
     "Lat": 14.915555953979492,
     "Lon": -86.38166809082031,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "MHMT",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -735,7 +948,9 @@
     "freq": "",
     "Lat": 14.043299674987791,
     "Lon": -86.4207992553711,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "MHNB",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -744,7 +959,11 @@
     "freq": "",
     "Lat": 13.319825,
     "Lon": -87.149025,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "MHNC",
+    "iso_country": "HN",
+    "length_ft": 4100,
+    "width_ft": 98
   },
   {
     "type": "medium_airport",
@@ -753,7 +972,15 @@
     "freq": "",
     "Lat": 16.4454,
     "Lon": -85.906601,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "MHNJ",
+    "iso_country": "HN",
+    "icao_code": "MHNJ",
+    "iata_code": "GJA",
+    "length_ft": 3990,
+    "width_ft": 66,
+    "heading": 115.2,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -762,7 +989,9 @@
     "freq": "",
     "Lat": 14.204254,
     "Lon": -88.019564,
-    "Ele": 359.7
+    "Ele": 359.7,
+    "ident": "MHNS",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -771,7 +1000,9 @@
     "freq": "",
     "Lat": 14.428889,
     "Lon": -89.193886,
-    "Ele": 850.1
+    "Ele": 850.1,
+    "ident": "MHNV",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -780,7 +1011,9 @@
     "freq": "",
     "Lat": 15.669166564941406,
     "Lon": -85.19444274902344,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "MHOT",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -789,7 +1022,9 @@
     "freq": "",
     "Lat": 15.80138874053955,
     "Lon": -84.29666900634766,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MHPA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -798,7 +1033,11 @@
     "freq": "",
     "Lat": 15.955,
     "Lon": -84.941391,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "MHPC",
+    "iso_country": "HN",
+    "icao_code": "MHPC",
+    "iata_code": "PCH"
   },
   {
     "type": "small_airport",
@@ -807,7 +1046,11 @@
     "freq": "",
     "Lat": 13.296314,
     "Lon": -87.33838,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "MHPI",
+    "iso_country": "HN",
+    "length_ft": 2296,
+    "width_ft": 66
   },
   {
     "type": "small_airport",
@@ -816,7 +1059,11 @@
     "freq": "",
     "Lat": 15.2622,
     "Lon": -83.781197,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "MHPL",
+    "iso_country": "HN",
+    "icao_code": "MHPL",
+    "iata_code": "PEU"
   },
   {
     "type": "small_airport",
@@ -825,7 +1072,9 @@
     "freq": "",
     "Lat": 14.595832824707031,
     "Lon": -86.1500015258789,
-    "Ele": 120.4
+    "Ele": 120.4,
+    "ident": "MHPS",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -834,7 +1083,9 @@
     "freq": "",
     "Lat": 15.530278,
     "Lon": -86.273613,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "MHPV",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -843,7 +1094,9 @@
     "freq": "",
     "Lat": 14.07361125946045,
     "Lon": -86.91000366210938,
-    "Ele": 196.6
+    "Ele": 196.6,
+    "ident": "MHRA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -852,7 +1105,9 @@
     "freq": "",
     "Lat": 14.787221908569336,
     "Lon": -84.36972045898438,
-    "Ele": 52.7
+    "Ele": 52.7,
+    "ident": "MHRD",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -861,7 +1116,9 @@
     "freq": "",
     "Lat": 15.563332557678224,
     "Lon": -86.19139099121094,
-    "Ele": 61.6
+    "Ele": 61.6,
+    "ident": "MHRH",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -870,7 +1127,9 @@
     "freq": "",
     "Lat": 14.060999870300291,
     "Lon": -86.40750122070312,
-    "Ele": 146.9
+    "Ele": 146.9,
+    "ident": "MHRJ",
+    "iso_country": "HN"
   },
   {
     "type": "medium_airport",
@@ -879,7 +1138,15 @@
     "freq": "121.600",
     "Lat": 16.316799,
     "Lon": -86.523003,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "MHRO",
+    "iso_country": "HN",
+    "icao_code": "MHRO",
+    "iata_code": "RTB",
+    "length_ft": 7349,
+    "width_ft": 148,
+    "heading": 66,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -888,7 +1155,9 @@
     "freq": "",
     "Lat": 14.713055610656738,
     "Lon": -84.45249938964844,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "MHRR",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -897,7 +1166,10 @@
     "freq": "",
     "Lat": 14.914885,
     "Lon": -89.007837,
-    "Ele": 712.0
+    "Ele": 712,
+    "ident": "MHRU",
+    "iso_country": "HN",
+    "iata_code": "RUY"
   },
   {
     "type": "small_airport",
@@ -906,7 +1178,9 @@
     "freq": "",
     "Lat": 15.066389083862305,
     "Lon": -83.2972183227539,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MHRY",
+    "iso_country": "HN"
   },
   {
     "type": "medium_airport",
@@ -915,7 +1189,15 @@
     "freq": "125.800",
     "Lat": 14.3824,
     "Lon": -87.621201,
-    "Ele": 628.2
+    "Ele": 628.2,
+    "ident": "MHSC",
+    "iso_country": "HN",
+    "icao_code": "MHPR",
+    "iata_code": "XPL",
+    "length_ft": 8008,
+    "width_ft": 148,
+    "heading": 170,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -924,7 +1206,9 @@
     "freq": "",
     "Lat": 15.818611145019531,
     "Lon": -85.11444091796875,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MHSI",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -933,7 +1217,9 @@
     "freq": "",
     "Lat": 13.827777862548828,
     "Lon": -86.8102798461914,
-    "Ele": 138.4
+    "Ele": 138.4,
+    "ident": "MHSJ",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -942,7 +1228,9 @@
     "freq": "",
     "Lat": 13.442222,
     "Lon": -87.459724,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MHSL",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -951,7 +1239,9 @@
     "freq": "",
     "Lat": 15.69333267211914,
     "Lon": -85.95527648925781,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MHSN",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -960,7 +1250,9 @@
     "freq": "",
     "Lat": 15.183610916137695,
     "Lon": -84.36972045898438,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "MHSX",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -969,7 +1261,9 @@
     "freq": "",
     "Lat": 14.18000030517578,
     "Lon": -87.3499984741211,
-    "Ele": 329.2
+    "Ele": 329.2,
+    "ident": "MHTA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -978,7 +1272,9 @@
     "freq": "",
     "Lat": 15.175000190734863,
     "Lon": -83.68222045898438,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "MHTB",
+    "iso_country": "HN"
   },
   {
     "type": "medium_airport",
@@ -987,7 +1283,15 @@
     "freq": "",
     "Lat": 15.7759,
     "Lon": -87.4758,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "MHTE",
+    "iso_country": "HN",
+    "icao_code": "MHTE",
+    "iata_code": "TEA",
+    "length_ft": 4415,
+    "width_ft": 98,
+    "heading": 57.6,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -996,7 +1300,15 @@
     "freq": "119.100",
     "Lat": 14.0609,
     "Lon": -87.217201,
-    "Ele": 1004.0
+    "Ele": 1004,
+    "ident": "MHTG",
+    "iso_country": "HN",
+    "icao_code": "MHTG",
+    "iata_code": "TGU",
+    "length_ft": 6112,
+    "width_ft": 148,
+    "heading": 19,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1317,9 @@
     "freq": "",
     "Lat": 15.001111030578612,
     "Lon": -83.72222137451172,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "MHTI",
+    "iso_country": "HN"
   },
   {
     "type": "medium_airport",
@@ -1014,7 +1328,15 @@
     "freq": "",
     "Lat": 15.926599,
     "Lon": -85.938573,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MHTJ",
+    "iso_country": "HN",
+    "icao_code": "MHTJ",
+    "iata_code": "TJI",
+    "length_ft": 3515,
+    "width_ft": 95,
+    "heading": 61.2,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1345,10 @@
     "freq": "",
     "Lat": 15.659722,
     "Lon": -85.994164,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "MHTO",
+    "iso_country": "HN",
+    "iata_code": "TCF"
   },
   {
     "type": "small_airport",
@@ -1032,7 +1357,9 @@
     "freq": "",
     "Lat": 14.93722152709961,
     "Lon": -83.84416961669922,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "MHUC",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1368,9 @@
     "freq": "",
     "Lat": 15.476099967956545,
     "Lon": -83.91130065917969,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MHUH",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1379,11 @@
     "freq": "",
     "Lat": 14.90719985961914,
     "Lon": -87.26339721679688,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "MHUL",
+    "iso_country": "HN",
+    "icao_code": "MHUL",
+    "iata_code": "SCD"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1392,11 @@
     "freq": "",
     "Lat": 16.1131,
     "Lon": -86.880302,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "MHUT",
+    "iso_country": "HN",
+    "icao_code": "MHUT",
+    "iata_code": "UII"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1405,9 @@
     "freq": "",
     "Lat": 14.626943588256836,
     "Lon": -88.87638854980469,
-    "Ele": 245.4
+    "Ele": 245.4,
+    "ident": "MHUY",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1416,9 @@
     "freq": "",
     "Lat": 14.23027801513672,
     "Lon": -88.79944610595703,
-    "Ele": 390.1
+    "Ele": 390.1,
+    "ident": "MHVE",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1427,9 @@
     "freq": "",
     "Lat": 15.1602783203125,
     "Lon": -84.61722564697266,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "MHWA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1438,9 @@
     "freq": "",
     "Lat": 15.159167289733888,
     "Lon": -84.59833526611328,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "MHWD",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1449,9 @@
     "freq": "",
     "Lat": 15.213055610656738,
     "Lon": -84.06861114501953,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "MHWP",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1460,9 @@
     "freq": "",
     "Lat": 15.348610877990724,
     "Lon": -84.23444366455078,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "MHWR",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1471,9 @@
     "freq": "",
     "Lat": 15.481900215148926,
     "Lon": -84.41609954833984,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MHWS",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1482,9 @@
     "freq": "",
     "Lat": 15.41611099243164,
     "Lon": -84.4736099243164,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "MHWW",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1493,11 @@
     "freq": "",
     "Lat": 15.1275,
     "Lon": -87.135,
-    "Ele": 675.1
+    "Ele": 675.1,
+    "ident": "MHYR",
+    "iso_country": "HN",
+    "icao_code": "MHYR",
+    "iata_code": "ORO"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1506,9 @@
     "freq": "",
     "Lat": 15.27750015258789,
     "Lon": -83.82027435302734,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "MHYX",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1517,9 @@
     "freq": "",
     "Lat": 14.256943702697754,
     "Lon": -88.39250183105469,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "MHZA",
+    "iso_country": "HN"
   },
   {
     "type": "small_airport",
@@ -1167,6 +1528,8 @@
     "freq": "",
     "Lat": 14.9344,
     "Lon": -87.394,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "VTA",
+    "iso_country": "HN"
   }
 ]

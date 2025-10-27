@@ -6,7 +6,15 @@
     "freq": "118.100",
     "Lat": -17.553699,
     "Lon": -149.606995,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "NTAA",
+    "iso_country": "PF",
+    "icao_code": "NTAA",
+    "iata_code": "PPT",
+    "length_ft": 11360,
+    "width_ft": 148,
+    "heading": 54.3,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,14 @@
     "freq": "",
     "Lat": -22.63725,
     "Lon": -152.8059,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "NTAM",
+    "iso_country": "PF",
+    "icao_code": "NTAM",
+    "iata_code": "RMT",
+    "length_ft": 4565,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,15 @@
     "freq": "118.300",
     "Lat": -22.43409919738769,
     "Lon": -151.36099243164062,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "NTAR",
+    "iso_country": "PF",
+    "icao_code": "NTAR",
+    "iata_code": "RUR",
+    "length_ft": 4757,
+    "width_ft": 59,
+    "heading": 108,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -33,7 +56,15 @@
     "freq": "118.300",
     "Lat": -23.36540031433105,
     "Lon": -149.5240020751953,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTAT",
+    "iso_country": "PF",
+    "icao_code": "NTAT",
+    "iata_code": "TUB",
+    "length_ft": 4921,
+    "width_ft": 75,
+    "heading": 48.4,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -42,7 +73,15 @@
     "freq": "",
     "Lat": -23.885201,
     "Lon": -147.662003,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTAV",
+    "iso_country": "PF",
+    "icao_code": "NTAV",
+    "iata_code": "RVV",
+    "length_ft": 4592,
+    "width_ft": 100,
+    "heading": 72.6,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -51,7 +90,15 @@
     "freq": "119.600",
     "Lat": -17.3526,
     "Lon": -145.509995,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NTGA",
+    "iso_country": "PF",
+    "icao_code": "NTGA",
+    "iata_code": "AAA",
+    "length_ft": 4921,
+    "width_ft": 60,
+    "heading": 149.7,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -60,7 +107,15 @@
     "freq": "",
     "Lat": -15.820044,
     "Lon": -140.888071,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "NTGB",
+    "iso_country": "PF",
+    "icao_code": "NTGB",
+    "iata_code": "FGU",
+    "length_ft": 3936,
+    "width_ft": 50,
+    "heading": 85.2,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -69,7 +124,15 @@
     "freq": "119.500",
     "Lat": -15.1196,
     "Lon": -148.231003,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "NTGC",
+    "iso_country": "PF",
+    "icao_code": "NTGC",
+    "iata_code": "TIH",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 75.4,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -78,7 +141,14 @@
     "freq": "",
     "Lat": -15.5736,
     "Lon": -146.414993,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "NTGD",
+    "iso_country": "PF",
+    "icao_code": "NTGD",
+    "iata_code": "APK",
+    "length_ft": 2854,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -87,7 +157,15 @@
     "freq": "",
     "Lat": -18.46652,
     "Lon": -136.43855,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "NTGE",
+    "iso_country": "PF",
+    "icao_code": "NTGE",
+    "iata_code": "REA",
+    "length_ft": 3008,
+    "width_ft": 59,
+    "heading": 125.7,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -96,7 +174,15 @@
     "freq": "119.900",
     "Lat": -16.054100036621094,
     "Lon": -145.65699768066406,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "NTGF",
+    "iso_country": "PF",
+    "icao_code": "NTGF",
+    "iata_code": "FAV",
+    "length_ft": 4596,
+    "width_ft": 98,
+    "heading": 65,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -105,7 +191,10 @@
     "freq": "",
     "Lat": -18.7506,
     "Lon": -141.7591,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "NTGG",
+    "iso_country": "PF",
+    "icao_code": "NTGG"
   },
   {
     "type": "small_airport",
@@ -114,7 +203,11 @@
     "freq": "",
     "Lat": -17.548297,
     "Lon": -142.612037,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "NTGH",
+    "iso_country": "PF",
+    "icao_code": "NTGH",
+    "iata_code": "HHZ"
   },
   {
     "type": "medium_airport",
@@ -123,7 +216,15 @@
     "freq": "124.300",
     "Lat": -14.436800003051758,
     "Lon": -146.07000732421875,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "NTGI",
+    "iso_country": "PF",
+    "icao_code": "NTGI",
+    "iata_code": "XMH",
+    "length_ft": 3051,
+    "width_ft": 98,
+    "heading": 56.1,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -132,7 +233,15 @@
     "freq": "118.300",
     "Lat": -23.07990074157715,
     "Lon": -134.88999938964844,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTGJ",
+    "iso_country": "PF",
+    "icao_code": "NTGJ",
+    "iata_code": "GMR",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 136.5,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -141,7 +250,15 @@
     "freq": "118.900",
     "Lat": -15.6633,
     "Lon": -146.884995,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "NTGK",
+    "iso_country": "PF",
+    "icao_code": "NTGK",
+    "iata_code": "KKR",
+    "length_ft": 3543,
+    "width_ft": 66,
+    "heading": 28.5,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -150,7 +267,15 @@
     "freq": "121.400",
     "Lat": -16.5839,
     "Lon": -143.658005,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "NTGM",
+    "iso_country": "PF",
+    "icao_code": "NTGM",
+    "iata_code": "MKP",
+    "length_ft": 4920,
+    "width_ft": 98,
+    "heading": 123.4,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -159,7 +284,11 @@
     "freq": "",
     "Lat": -14.177397,
     "Lon": -141.266112,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTGN",
+    "iso_country": "PF",
+    "icao_code": "NTGN",
+    "iata_code": "NAU"
   },
   {
     "type": "small_airport",
@@ -168,7 +297,11 @@
     "freq": "",
     "Lat": -17.355226,
     "Lon": -138.44734,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "NTGO",
+    "iso_country": "PF",
+    "icao_code": "NTGO",
+    "iata_code": "TKV"
   },
   {
     "type": "small_airport",
@@ -177,7 +310,15 @@
     "freq": "",
     "Lat": -14.80955,
     "Lon": -138.812621,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "NTGP",
+    "iso_country": "PF",
+    "icao_code": "NTGP",
+    "iata_code": "PKP",
+    "length_ft": 3051,
+    "width_ft": 49,
+    "heading": 112.5,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -186,7 +327,11 @@
     "freq": "",
     "Lat": -18.295726,
     "Lon": -137.016291,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "NTGQ",
+    "iso_country": "PF",
+    "icao_code": "NTGQ",
+    "iata_code": "PUK"
   },
   {
     "type": "small_airport",
@@ -195,7 +340,10 @@
     "freq": "",
     "Lat": -15.622861,
     "Lon": -145.496578,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTGR",
+    "iso_country": "PF",
+    "icao_code": "NTGR"
   },
   {
     "type": "small_airport",
@@ -204,7 +352,12 @@
     "freq": "",
     "Lat": -21.48219490051269,
     "Lon": -135.63705444335938,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NTGS",
+    "iso_country": "PF",
+    "length_ft": 4250,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -213,7 +366,15 @@
     "freq": "118.500",
     "Lat": -14.709500312805176,
     "Lon": -145.24600219726562,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "NTGT",
+    "iso_country": "PF",
+    "icao_code": "NTGT",
+    "iata_code": "TKP",
+    "length_ft": 3018,
+    "width_ft": 65,
+    "heading": 80.2,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -222,7 +383,15 @@
     "freq": "118.900",
     "Lat": -15.248299598693848,
     "Lon": -146.61700439453125,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "NTGU",
+    "iso_country": "PF",
+    "icao_code": "NTGU",
+    "iata_code": "AXR",
+    "length_ft": 4268,
+    "width_ft": 98,
+    "heading": 116.5,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -231,7 +400,15 @@
     "freq": "119.900",
     "Lat": -14.8681001663208,
     "Lon": -148.7169952392578,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "NTGV",
+    "iso_country": "PF",
+    "icao_code": "NTGV",
+    "iata_code": "MVT",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 197.1,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -240,7 +417,11 @@
     "freq": "",
     "Lat": -19.284613,
     "Lon": -138.768367,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "NTGW",
+    "iso_country": "PF",
+    "icao_code": "NTGW",
+    "iata_code": "NUK"
   },
   {
     "type": "small_airport",
@@ -249,7 +430,15 @@
     "freq": "",
     "Lat": -20.784262,
     "Lon": -138.56796,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "NTGY",
+    "iso_country": "PF",
+    "icao_code": "NTGY",
+    "iata_code": "ZTA",
+    "length_ft": 4921,
+    "width_ft": 100,
+    "heading": 192,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -258,7 +447,15 @@
     "freq": "118.900",
     "Lat": -14.428099632263184,
     "Lon": -146.2570037841797,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "NTHE",
+    "iso_country": "PF",
+    "icao_code": "NTHE",
+    "iata_code": "AHE",
+    "length_ft": 4068,
+    "width_ft": 80,
+    "heading": 70.8,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -267,7 +464,11 @@
     "freq": "",
     "Lat": -15.780622,
     "Lon": -145.128443,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "NTKA",
+    "iso_country": "PF",
+    "icao_code": "NTKA",
+    "iata_code": "KHZ"
   },
   {
     "type": "small_airport",
@@ -276,7 +477,15 @@
     "freq": "",
     "Lat": -16.68657,
     "Lon": -145.329394,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTKF",
+    "iso_country": "PF",
+    "icao_code": "NTKF",
+    "iata_code": "FAC",
+    "length_ft": 3890,
+    "width_ft": 75,
+    "heading": 88.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -285,7 +494,11 @@
     "freq": "",
     "Lat": -15.992259,
     "Lon": -140.164246,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "NTKH",
+    "iso_country": "PF",
+    "icao_code": "NTKH",
+    "iata_code": "FHZ"
   },
   {
     "type": "small_airport",
@@ -294,7 +507,15 @@
     "freq": "",
     "Lat": -15.485673,
     "Lon": -145.464778,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NTKK",
+    "iso_country": "PF",
+    "icao_code": "NTKK",
+    "iata_code": "RKA",
+    "length_ft": 4150,
+    "width_ft": 75,
+    "heading": 83,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -303,7 +524,11 @@
     "freq": "",
     "Lat": -15.857434,
     "Lon": -142.266469,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTKM",
+    "iso_country": "PF",
+    "icao_code": "NTKM",
+    "iata_code": "TJN"
   },
   {
     "type": "small_airport",
@@ -312,7 +537,11 @@
     "freq": "",
     "Lat": -16.119296,
     "Lon": -146.368768,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "NTKN",
+    "iso_country": "PF",
+    "icao_code": "NTKN",
+    "iata_code": "NIU"
   },
   {
     "type": "small_airport",
@@ -321,7 +550,11 @@
     "freq": "",
     "Lat": -16.050485,
     "Lon": -142.476568,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "NTKO",
+    "iso_country": "PF",
+    "icao_code": "NTKO",
+    "iata_code": "RRR"
   },
   {
     "type": "medium_airport",
@@ -330,7 +563,15 @@
     "freq": "118.700",
     "Lat": -14.45580005645752,
     "Lon": -145.02499389648438,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "NTKR",
+    "iso_country": "PF",
+    "icao_code": "NTKR",
+    "iata_code": "TKX",
+    "length_ft": 3452,
+    "width_ft": 66,
+    "heading": 86.2,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -339,7 +580,11 @@
     "freq": "",
     "Lat": -16.339681,
     "Lon": -144.407966,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTKT",
+    "iso_country": "PF",
+    "icao_code": "NTKT",
+    "iata_code": "KXU"
   },
   {
     "type": "small_airport",
@@ -348,7 +593,10 @@
     "freq": "",
     "Lat": -20.700054,
     "Lon": -143.045933,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "NTKU",
+    "iso_country": "PF",
+    "iata_code": "NKP"
   },
   {
     "type": "medium_airport",
@@ -357,7 +605,15 @@
     "freq": "118.300",
     "Lat": -8.7956,
     "Lon": -140.229004,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "NTMD",
+    "iso_country": "PF",
+    "icao_code": "NTMD",
+    "iata_code": "NHV",
+    "length_ft": 5578,
+    "width_ft": 98,
+    "heading": 68.5,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -366,7 +622,15 @@
     "freq": "119.500",
     "Lat": -9.76879024506,
     "Lon": -139.011001587,
-    "Ele": 451.4
+    "Ele": 451.4,
+    "ident": "NTMN",
+    "iso_country": "PF",
+    "icao_code": "NTMN",
+    "iata_code": "AUQ",
+    "length_ft": 3986,
+    "width_ft": 75,
+    "heading": 31.3,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -375,7 +639,15 @@
     "freq": "",
     "Lat": -9.35167,
     "Lon": -140.078003,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "NTMP",
+    "iso_country": "PF",
+    "icao_code": "NTMP",
+    "iata_code": "UAP",
+    "length_ft": 2723,
+    "width_ft": 59,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -384,7 +656,15 @@
     "freq": "",
     "Lat": -8.936228,
     "Lon": -139.554062,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "NTMU",
+    "iso_country": "PF",
+    "icao_code": "NTMU",
+    "iata_code": "UAH",
+    "length_ft": 2477,
+    "width_ft": 66,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -393,7 +673,15 @@
     "freq": "134.700",
     "Lat": -16.444400787353516,
     "Lon": -151.75100708007812,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NTTB",
+    "iso_country": "PF",
+    "icao_code": "NTTB",
+    "iata_code": "BOB",
+    "length_ft": 3000,
+    "width_ft": 140,
+    "heading": 191.8,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -402,7 +690,11 @@
     "freq": "",
     "Lat": -17.015095,
     "Lon": -149.589372,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTTE",
+    "iso_country": "PF",
+    "icao_code": "NTTE",
+    "iata_code": "TTI"
   },
   {
     "type": "medium_airport",
@@ -411,7 +703,15 @@
     "freq": "568.000",
     "Lat": -14.954299926757812,
     "Lon": -147.66099548339844,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NTTG",
+    "iso_country": "PF",
+    "icao_code": "NTTG",
+    "iata_code": "RGI",
+    "length_ft": 6890,
+    "width_ft": 98,
+    "heading": 106.5,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -420,7 +720,15 @@
     "freq": "134.700",
     "Lat": -16.687084,
     "Lon": -151.021593,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTTH",
+    "iso_country": "PF",
+    "icao_code": "NTTH",
+    "iata_code": "HUH",
+    "length_ft": 4921,
+    "width_ft": 66,
+    "heading": 79.5,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -429,7 +737,15 @@
     "freq": "121.300",
     "Lat": -17.48979,
     "Lon": -149.761777,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "NTTM",
+    "iso_country": "PF",
+    "icao_code": "NTTM",
+    "iata_code": "MOZ",
+    "length_ft": 4035,
+    "width_ft": 98,
+    "heading": 135,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -438,7 +754,15 @@
     "freq": "",
     "Lat": -18.0748,
     "Lon": -140.945999,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NTTO",
+    "iso_country": "PF",
+    "icao_code": "NTTO",
+    "iata_code": "HOI",
+    "length_ft": 11089,
+    "width_ft": 148,
+    "heading": 134.8,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -447,7 +771,15 @@
     "freq": "134.700",
     "Lat": -16.42650032043457,
     "Lon": -152.24400329589844,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "NTTP",
+    "iso_country": "PF",
+    "icao_code": "NTTP",
+    "iata_code": "MAU",
+    "length_ft": 3135,
+    "width_ft": 75,
+    "heading": 89.1,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -456,7 +788,15 @@
     "freq": "134.700",
     "Lat": -16.7229,
     "Lon": -151.466003,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "NTTR",
+    "iso_country": "PF",
+    "icao_code": "NTTR",
+    "iata_code": "RFP",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "heading": 83.9,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -465,7 +805,11 @@
     "freq": "",
     "Lat": -16.2423,
     "Lon": -151.8338,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "NTTU",
+    "iso_country": "PF",
+    "icao_code": "NTTU",
+    "iata_code": "TPX"
   },
   {
     "type": "small_airport",
@@ -474,7 +818,11 @@
     "freq": "",
     "Lat": -21.80978,
     "Lon": -138.813385,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "NTTX",
+    "iso_country": "PF",
+    "icao_code": "NTTX",
+    "iata_code": "UOA"
   },
   {
     "type": "small_airport",
@@ -483,6 +831,10 @@
     "freq": "",
     "Lat": -18.780697,
     "Lon": -138.85568,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "NTUV",
+    "iso_country": "PF",
+    "icao_code": "NTUV",
+    "iata_code": "VHZ"
   }
 ]

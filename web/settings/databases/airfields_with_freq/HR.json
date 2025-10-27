@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 45.585073,
     "Lon": 17.211387,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "HR-0001",
+    "iso_country": "HR",
+    "icao_code": "LDVR"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,9 @@
     "freq": "",
     "Lat": 45.78696,
     "Lon": 16.96387,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "HR-0004",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -24,7 +29,9 @@
     "freq": "",
     "Lat": 45.310897,
     "Lon": 17.821682,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HR-0005",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -33,7 +40,9 @@
     "freq": "",
     "Lat": 45.618117,
     "Lon": 15.79348,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "HR-0006",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -42,7 +51,9 @@
     "freq": "",
     "Lat": 45.553,
     "Lon": 18.110166,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HR-0009",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -51,7 +62,9 @@
     "freq": "",
     "Lat": 45.7310129,
     "Lon": 18.7884716,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HR-0010",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -60,7 +73,9 @@
     "freq": "",
     "Lat": 46.32439,
     "Lon": 16.60041,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HR-0016",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -69,7 +84,9 @@
     "freq": "",
     "Lat": 46.362908,
     "Lon": 16.386902,
-    "Ele": 171.0
+    "Ele": 171,
+    "ident": "HR-0018",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -78,7 +95,9 @@
     "freq": "",
     "Lat": 45.178422,
     "Lon": 18.179344,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "HR-0023",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -87,7 +106,9 @@
     "freq": "",
     "Lat": 45.21641,
     "Lon": 13.60922,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "HR-0027",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -96,7 +117,9 @@
     "freq": "",
     "Lat": 45.946747,
     "Lon": 17.283494,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "HR-0028",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -105,7 +128,9 @@
     "freq": "",
     "Lat": 45.17249,
     "Lon": 17.51465,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "HR-0029",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -114,7 +139,9 @@
     "freq": "",
     "Lat": 45.84423,
     "Lon": 17.3267,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HR-0030",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -123,7 +150,9 @@
     "freq": "",
     "Lat": 45.31588,
     "Lon": 18.44786,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "HR-0031",
+    "iso_country": "HR"
   },
   {
     "type": "medium_airport",
@@ -132,7 +161,13 @@
     "freq": "118.200",
     "Lat": 44.557598,
     "Lon": 15.7744,
-    "Ele": 750.4
+    "Ele": 750.4,
+    "ident": "HR-0034",
+    "iso_country": "HR",
+    "length_ft": 9022,
+    "width_ft": 98,
+    "heading": 126.7,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -141,7 +176,9 @@
     "freq": "",
     "Lat": 45.50546,
     "Lon": 17.17799,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HR-0040",
+    "iso_country": "HR"
   },
   {
     "type": "medium_airport",
@@ -150,7 +187,15 @@
     "freq": "123.600",
     "Lat": 42.562247,
     "Lon": 18.265543,
-    "Ele": 160.6
+    "Ele": 160.6,
+    "ident": "LDDU",
+    "iso_country": "HR",
+    "icao_code": "LDDU",
+    "iata_code": "DBV",
+    "length_ft": 10597,
+    "width_ft": 148,
+    "heading": 118,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -159,7 +204,15 @@
     "freq": "",
     "Lat": 44.566985,
     "Lon": 14.393883,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "LDLO",
+    "iso_country": "HR",
+    "icao_code": "LDLO",
+    "iata_code": "LSZ",
+    "length_ft": 2953,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -168,7 +221,13 @@
     "freq": "",
     "Lat": 45.386398,
     "Lon": 18.962799,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "LDOB",
+    "iso_country": "HR",
+    "icao_code": "LDOB",
+    "length_ft": 2953,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -177,7 +236,14 @@
     "freq": "118.800",
     "Lat": 45.542778,
     "Lon": 18.631944,
-    "Ele": 91.1
+    "Ele": 91.1,
+    "ident": "LDOC",
+    "iso_country": "HR",
+    "icao_code": "LDOC",
+    "length_ft": 3615,
+    "width_ft": 148,
+    "heading": 102.8,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -186,7 +252,10 @@
     "freq": "",
     "Lat": 45.156101,
     "Lon": 17.9881,
-    "Ele": 84.1
+    "Ele": 84.1,
+    "ident": "LDOR",
+    "iso_country": "HR",
+    "icao_code": "LDOR"
   },
   {
     "type": "medium_airport",
@@ -195,7 +264,15 @@
     "freq": "118.800",
     "Lat": 45.462355,
     "Lon": 18.811278,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "LDOS",
+    "iso_country": "HR",
+    "icao_code": "LDOS",
+    "iata_code": "OSI",
+    "length_ft": 8199,
+    "width_ft": 148,
+    "heading": 111,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -204,7 +281,13 @@
     "freq": "",
     "Lat": 45.251099,
     "Lon": 18.759199,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "LDOV",
+    "iso_country": "HR",
+    "icao_code": "LDOV",
+    "length_ft": 2651,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -213,7 +296,15 @@
     "freq": "118.400",
     "Lat": 44.893501,
     "Lon": 13.9222,
-    "Ele": 83.5
+    "Ele": 83.5,
+    "ident": "LDPL",
+    "iso_country": "HR",
+    "icao_code": "LDPL",
+    "iata_code": "PUY",
+    "length_ft": 9678,
+    "width_ft": 148,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -222,7 +313,10 @@
     "freq": "",
     "Lat": 44.843878,
     "Lon": 13.904376,
-    "Ele": 52.1
+    "Ele": 52.1,
+    "ident": "LDPM",
+    "iso_country": "HR",
+    "icao_code": "LDPM"
   },
   {
     "type": "small_airport",
@@ -231,7 +325,13 @@
     "freq": "",
     "Lat": 44.6283,
     "Lon": 14.2411,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "LDPN",
+    "iso_country": "HR",
+    "icao_code": "LDPN",
+    "length_ft": 2789,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -240,7 +340,12 @@
     "freq": "",
     "Lat": 45.141701,
     "Lon": 13.6306,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "LDPV",
+    "iso_country": "HR",
+    "icao_code": "LDPV",
+    "heading": 1,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -249,7 +354,14 @@
     "freq": "123.500",
     "Lat": 45.379501,
     "Lon": 14.5038,
-    "Ele": 289.9
+    "Ele": 289.9,
+    "ident": "LDRG",
+    "iso_country": "HR",
+    "icao_code": "LDRG",
+    "length_ft": 6106,
+    "width_ft": 74,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -258,7 +370,15 @@
     "freq": "119.000",
     "Lat": 45.2169,
     "Lon": 14.5703,
-    "Ele": 84.7
+    "Ele": 84.7,
+    "ident": "LDRI",
+    "iso_country": "HR",
+    "icao_code": "LDRI",
+    "iata_code": "RJK",
+    "length_ft": 8164,
+    "width_ft": 148,
+    "heading": 143.7,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -267,7 +387,10 @@
     "freq": "",
     "Lat": 44.845517,
     "Lon": 15.288607,
-    "Ele": 469.1
+    "Ele": 469.1,
+    "ident": "LDRO",
+    "iso_country": "HR",
+    "icao_code": "LDRO"
   },
   {
     "type": "medium_airport",
@@ -276,7 +399,15 @@
     "freq": "118.025",
     "Lat": 43.284454,
     "Lon": 16.678362,
-    "Ele": 541.3
+    "Ele": 541.3,
+    "ident": "LDSB",
+    "iso_country": "HR",
+    "icao_code": "LDSB",
+    "iata_code": "BWK",
+    "length_ft": 5774,
+    "width_ft": 98,
+    "heading": 35,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -285,7 +416,14 @@
     "freq": "",
     "Lat": 43.181702,
     "Lon": 16.633301,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "LDSH",
+    "iso_country": "HR",
+    "icao_code": "LDSH",
+    "length_ft": 2454,
+    "width_ft": 98,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -294,7 +432,15 @@
     "freq": "120.875",
     "Lat": 43.538898,
     "Lon": 16.298,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "LDSP",
+    "iso_country": "HR",
+    "icao_code": "LDSP",
+    "iata_code": "SPU",
+    "length_ft": 8366,
+    "width_ft": 148,
+    "heading": 53,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -303,7 +449,13 @@
     "freq": "",
     "Lat": 43.700298,
     "Lon": 16.6714,
-    "Ele": 299.0
+    "Ele": 299,
+    "ident": "LDSS",
+    "iso_country": "HR",
+    "icao_code": "LDSS",
+    "length_ft": 3609,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -312,7 +464,14 @@
     "freq": "",
     "Lat": 46.294668,
     "Lon": 16.383222,
-    "Ele": 167.0
+    "Ele": 167,
+    "ident": "LDVA",
+    "iso_country": "HR",
+    "icao_code": "LDVA",
+    "length_ft": 5676,
+    "width_ft": 98,
+    "heading": 160.3,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -321,7 +480,13 @@
     "freq": "",
     "Lat": 46.391899,
     "Lon": 16.500299,
-    "Ele": 156.1
+    "Ele": 156.1,
+    "ident": "LDVC",
+    "iso_country": "HR",
+    "icao_code": "LDVC",
+    "length_ft": 3609,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -330,7 +495,10 @@
     "freq": "",
     "Lat": 45.559399,
     "Lon": 17.0331,
-    "Ele": 125.0
+    "Ele": 125,
+    "ident": "LDVD",
+    "iso_country": "HR",
+    "icao_code": "LDVD"
   },
   {
     "type": "small_airport",
@@ -339,7 +507,10 @@
     "freq": "",
     "Lat": 46.2131,
     "Lon": 16.8372,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "LDVK",
+    "iso_country": "HR",
+    "icao_code": "LDVK"
   },
   {
     "type": "large_airport",
@@ -348,7 +519,15 @@
     "freq": "120.700",
     "Lat": 45.742901,
     "Lon": 16.0688,
-    "Ele": 107.6
+    "Ele": 107.6,
+    "ident": "LDZA",
+    "iso_country": "HR",
+    "icao_code": "LDZA",
+    "iata_code": "ZAG",
+    "length_ft": 10669,
+    "width_ft": 148,
+    "heading": 47,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -357,7 +536,10 @@
     "freq": "",
     "Lat": 45.647499,
     "Lon": 16.124399,
-    "Ele": 103.9
+    "Ele": 103.9,
+    "ident": "LDZB",
+    "iso_country": "HR",
+    "icao_code": "LDZB"
   },
   {
     "type": "medium_airport",
@@ -366,7 +548,15 @@
     "freq": "118.600",
     "Lat": 44.094988,
     "Lon": 15.354879,
-    "Ele": 88.1
+    "Ele": 88.1,
+    "ident": "LDZD",
+    "iso_country": "HR",
+    "icao_code": "LDZD",
+    "iata_code": "ZAD",
+    "length_ft": 8202,
+    "width_ft": 147,
+    "heading": 136,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -375,7 +565,14 @@
     "freq": "123.500",
     "Lat": 45.823056,
     "Lon": 16.5,
-    "Ele": 114.0
+    "Ele": 114,
+    "ident": "LDZE",
+    "iso_country": "HR",
+    "icao_code": "LDZE",
+    "length_ft": 2083,
+    "width_ft": 125,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -384,7 +581,9 @@
     "freq": "",
     "Lat": 45.719874,
     "Lon": 16.343272,
-    "Ele": 114.0
+    "Ele": 114,
+    "ident": "LDZI",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -393,7 +592,9 @@
     "freq": "",
     "Lat": 45.860802,
     "Lon": 16.8358,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "LDZJ",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -402,7 +603,9 @@
     "freq": "",
     "Lat": 46.012746,
     "Lon": 15.860159,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LDZK",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -411,7 +614,9 @@
     "freq": "",
     "Lat": 45.766725,
     "Lon": 15.849709,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "LDZL",
+    "iso_country": "HR"
   },
   {
     "type": "small_airport",
@@ -420,6 +625,8 @@
     "freq": "",
     "Lat": 45.465556,
     "Lon": 16.486389,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "LDZS",
+    "iso_country": "HR"
   }
 ]

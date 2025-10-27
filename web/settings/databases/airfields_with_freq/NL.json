@@ -6,7 +6,14 @@
     "freq": "132.350",
     "Lat": 53.453612,
     "Lon": 5.678396,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "EHAL",
+    "iso_country": "NL",
+    "icao_code": "EHAL",
+    "length_ft": 2920,
+    "width_ft": 82,
+    "heading": 84,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -15,7 +22,15 @@
     "freq": "119.055",
     "Lat": 52.308601,
     "Lon": 4.76389,
-    "Ele": -3.4
+    "Ele": -3.4,
+    "ident": "EHAM",
+    "iso_country": "NL",
+    "icao_code": "EHAM",
+    "iata_code": "AMS",
+    "length_ft": 12467,
+    "width_ft": 198,
+    "heading": 183,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,14 @@
     "freq": "122.155",
     "Lat": 51.255299,
     "Lon": 5.60139,
-    "Ele": 34.7
+    "Ele": 34.7,
+    "ident": "EHBD",
+    "iso_country": "NL",
+    "icao_code": "EHBD",
+    "length_ft": 1969,
+    "width_ft": 99,
+    "heading": 27,
+    "QFU": "21G"
   },
   {
     "type": "medium_airport",
@@ -33,7 +55,15 @@
     "freq": "120.205",
     "Lat": 50.911701,
     "Lon": 5.77014,
-    "Ele": 114.3
+    "Ele": 114.3,
+    "ident": "EHBK",
+    "iso_country": "NL",
+    "icao_code": "EHBK",
+    "iata_code": "MST",
+    "length_ft": 9022,
+    "width_ft": 148,
+    "heading": 30,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -42,7 +72,14 @@
     "freq": "120.305",
     "Lat": 52.0606,
     "Lon": 5.87306,
-    "Ele": 48.2
+    "Ele": 48.2,
+    "ident": "EHDL",
+    "iso_country": "NL",
+    "icao_code": "EHDL",
+    "length_ft": 9678,
+    "width_ft": 164,
+    "heading": 18,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -51,7 +88,14 @@
     "freq": "132.350",
     "Lat": 53.117933,
     "Lon": 6.127324,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "EHDR",
+    "iso_country": "NL",
+    "icao_code": "EHDR",
+    "length_ft": 2395,
+    "width_ft": 79,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -60,7 +104,15 @@
     "freq": "123.180",
     "Lat": 51.4500999451,
     "Lon": 5.37452983856,
-    "Ele": 22.6
+    "Ele": 22.6,
+    "ident": "EHEH",
+    "iso_country": "NL",
+    "icao_code": "EHEH",
+    "iata_code": "EIN",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 31,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -69,7 +121,15 @@
     "freq": "120.305",
     "Lat": 53.119701,
     "Lon": 6.57944,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "EHGG",
+    "iso_country": "NL",
+    "icao_code": "EHGG",
+    "iata_code": "GRQ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 52,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -78,7 +138,15 @@
     "freq": "123.580",
     "Lat": 51.567402,
     "Lon": 4.93183,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "EHGR",
+    "iso_country": "NL",
+    "icao_code": "EHGR",
+    "iata_code": "GLZ",
+    "length_ft": 9081,
+    "width_ft": 148,
+    "heading": 98,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -87,7 +155,13 @@
     "freq": "132.350",
     "Lat": 52.730801,
     "Lon": 6.51611,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "EHHO",
+    "iso_country": "NL",
+    "length_ft": 3904,
+    "width_ft": 79,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -96,7 +170,13 @@
     "freq": "124.300",
     "Lat": 52.191898,
     "Lon": 5.14694,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "EHHV",
+    "iso_country": "NL",
+    "length_ft": 2297,
+    "width_ft": 164,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -105,7 +185,15 @@
     "freq": "124.230",
     "Lat": 52.923401,
     "Lon": 4.78062,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "EHKD",
+    "iso_country": "NL",
+    "icao_code": "EHKD",
+    "iata_code": "DHR",
+    "length_ft": 4183,
+    "width_ft": 98,
+    "heading": 30,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -114,7 +202,15 @@
     "freq": "119.055",
     "Lat": 52.453188,
     "Lon": 5.514622,
-    "Ele": -4.0
+    "Ele": -4,
+    "ident": "EHLE",
+    "iso_country": "NL",
+    "icao_code": "EHLE",
+    "iata_code": "LEY",
+    "length_ft": 4495,
+    "width_ft": 98,
+    "heading": 48,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -123,7 +219,15 @@
     "freq": "132.030",
     "Lat": 53.22859954833984,
     "Lon": 5.760560035705566,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "EHLW",
+    "iso_country": "NL",
+    "icao_code": "EHLW",
+    "iata_code": "LWR",
+    "length_ft": 6562,
+    "width_ft": 164,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -132,7 +236,13 @@
     "freq": "124.300",
     "Lat": 51.512199,
     "Lon": 3.73111,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "EHMZ",
+    "iso_country": "NL",
+    "length_ft": 3281,
+    "width_ft": 99,
+    "heading": 87,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -141,7 +251,13 @@
     "freq": "120.305",
     "Lat": 53.208775,
     "Lon": 7.033053,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "EHOW",
+    "iso_country": "NL",
+    "length_ft": 2625,
+    "width_ft": 66,
+    "heading": 64,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -150,7 +266,15 @@
     "freq": "122.990",
     "Lat": 51.956902,
     "Lon": 4.43722,
-    "Ele": -4.6
+    "Ele": -4.6,
+    "ident": "EHRD",
+    "iso_country": "NL",
+    "icao_code": "EHRD",
+    "iata_code": "RTM",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "heading": 56,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -159,7 +283,14 @@
     "freq": "132.350",
     "Lat": 51.554901,
     "Lon": 4.553003,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "EHSE",
+    "iso_country": "NL",
+    "icao_code": "EHSE",
+    "length_ft": 2723,
+    "width_ft": 75,
+    "heading": 63,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -168,7 +299,13 @@
     "freq": "128.960",
     "Lat": 52.9986,
     "Lon": 7.02278,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "EHST",
+    "iso_country": "NL",
+    "length_ft": 1639,
+    "width_ft": 99,
+    "heading": 58,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -177,7 +314,14 @@
     "freq": "132.350",
     "Lat": 52.242764,
     "Lon": 6.050004,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "EHTE",
+    "iso_country": "NL",
+    "icao_code": "EHTE",
+    "length_ft": 3934,
+    "width_ft": 88,
+    "heading": 84,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -186,7 +330,13 @@
     "freq": "132.350",
     "Lat": 52.057201,
     "Lon": 5.92444,
-    "Ele": 84.1
+    "Ele": 84.1,
+    "ident": "EHTL",
+    "iso_country": "NL",
+    "length_ft": 4500,
+    "width_ft": 910,
+    "heading": 139,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -195,7 +345,15 @@
     "freq": "132.355",
     "Lat": 52.275833,
     "Lon": 6.889167,
-    "Ele": 34.7
+    "Ele": 34.7,
+    "ident": "EHTW",
+    "iso_country": "NL",
+    "icao_code": "EHTW",
+    "iata_code": "ENS",
+    "length_ft": 6558,
+    "width_ft": 82,
+    "heading": 112,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -204,7 +362,14 @@
     "freq": "132.350",
     "Lat": 53.114962,
     "Lon": 4.830552,
-    "Ele": 0.6
+    "Ele": 0.6,
+    "ident": "EHTX",
+    "iso_country": "NL",
+    "icao_code": "EHTX",
+    "length_ft": 2041,
+    "width_ft": 131,
+    "heading": 124,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -213,7 +378,15 @@
     "freq": "122.100",
     "Lat": 51.657222,
     "Lon": 5.707778,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "EHVK",
+    "iso_country": "NL",
+    "icao_code": "EHVK",
+    "iata_code": "UDE",
+    "length_ft": 9931,
+    "width_ft": 74,
+    "heading": 55,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -222,7 +395,15 @@
     "freq": "123.580",
     "Lat": 51.4491,
     "Lon": 4.34203,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "EHWO",
+    "iso_country": "NL",
+    "icao_code": "EHWO",
+    "iata_code": "WOE",
+    "length_ft": 8015,
+    "width_ft": 148,
+    "heading": 67,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -231,7 +412,11 @@
     "freq": "123.350",
     "Lat": 51.785259,
     "Lon": 5.88099,
-    "Ele": 27.1
+    "Ele": 27.1,
+    "ident": "NL-0023",
+    "iso_country": "NL",
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -240,7 +425,14 @@
     "freq": "123.430",
     "Lat": 52.814876,
     "Lon": 5.021245,
-    "Ele": -4.3
+    "Ele": -4.3,
+    "ident": "NL-0024",
+    "iso_country": "NL",
+    "icao_code": "EHMM",
+    "length_ft": 1968,
+    "width_ft": 98,
+    "heading": 54,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -249,7 +441,9 @@
     "freq": "",
     "Lat": 51.255556,
     "Lon": 3.891389,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "NL-0027",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -258,7 +452,9 @@
     "freq": "",
     "Lat": 52.536667,
     "Lon": 4.626667,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "NL-0029",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -267,7 +463,9 @@
     "freq": "",
     "Lat": 52.684722,
     "Lon": 5.910556,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NL-0030",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -276,7 +474,9 @@
     "freq": "",
     "Lat": 51.708889,
     "Lon": 3.712222,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "NL-0031",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -285,7 +485,9 @@
     "freq": "",
     "Lat": 52.297387,
     "Lon": 4.511962,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NL-0033",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -294,7 +496,9 @@
     "freq": "",
     "Lat": 51.683333,
     "Lon": 5.549444,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "NL-0034",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -303,7 +507,13 @@
     "freq": "",
     "Lat": 50.980833,
     "Lon": 5.998611,
-    "Ele": 54.9
+    "Ele": 54.9,
+    "ident": "NL-0035",
+    "iso_country": "NL",
+    "length_ft": 3877,
+    "width_ft": 216,
+    "heading": 76,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -312,7 +522,9 @@
     "freq": "",
     "Lat": 53.084444,
     "Lon": 6.823611,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "NL-0036",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -321,7 +533,13 @@
     "freq": "130.655",
     "Lat": 51.363056,
     "Lon": 6.216111,
-    "Ele": 44.2
+    "Ele": 44.2,
+    "ident": "NL-0037",
+    "iso_country": "NL",
+    "length_ft": 3280,
+    "width_ft": 262,
+    "heading": 71,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -330,7 +548,9 @@
     "freq": "",
     "Lat": 52.133889,
     "Lon": 5.264167,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "NL-0050",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -339,7 +559,9 @@
     "freq": "",
     "Lat": 52.89512,
     "Lon": 5.004628,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "NL-0052",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -348,7 +570,7 @@
     "freq": "",
     "Lat": 52.680884,
     "Lon": 5.922704,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -357,7 +579,9 @@
     "freq": "",
     "Lat": 52.468333,
     "Lon": 6.333333,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "NL-0076",
+    "iso_country": "NL"
   },
   {
     "type": "small_airport",
@@ -366,6 +590,8 @@
     "freq": "",
     "Lat": 52.8353,
     "Lon": 4.95056,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "NL-0143",
+    "iso_country": "NL"
   }
 ]

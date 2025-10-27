@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 18.464924,
     "Lon": -66.363773,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "02PR",
+    "iso_country": "PR",
+    "local_code": "02PR",
+    "length_ft": 2000,
+    "width_ft": 50,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -15,7 +22,9 @@
     "freq": "",
     "Lat": 18.07651,
     "Lon": -67.931628,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "PR-0001",
+    "iso_country": "PR"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,9 @@
     "freq": "",
     "Lat": 18.008399963378906,
     "Lon": -66.50669860839844,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "PR-0002",
+    "iso_country": "PR"
   },
   {
     "type": "small_airport",
@@ -33,7 +44,9 @@
     "freq": "",
     "Lat": 18.448699951171875,
     "Lon": -67.0625991821289,
-    "Ele": 164.6
+    "Ele": 164.6,
+    "ident": "PR-0003",
+    "iso_country": "PR"
   },
   {
     "type": "small_airport",
@@ -42,7 +55,11 @@
     "freq": "",
     "Lat": 18.138082,
     "Lon": -65.800728,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "PR-HUC",
+    "iso_country": "PR",
+    "iata_code": "HUC",
+    "local_code": "X63"
   },
   {
     "type": "small_airport",
@@ -51,7 +68,14 @@
     "freq": "",
     "Lat": 18.010700225830078,
     "Lon": -67.14129638671875,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "PR10",
+    "iso_country": "PR",
+    "local_code": "PR10",
+    "length_ft": 3000,
+    "width_ft": 60,
+    "heading": 65.6,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -60,7 +84,14 @@
     "freq": "",
     "Lat": 18.1802,
     "Lon": -66.756897,
-    "Ele": 713.2
+    "Ele": 713.2,
+    "ident": "PR20",
+    "iso_country": "PR",
+    "local_code": "PR20",
+    "length_ft": 1600,
+    "width_ft": 40,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -69,7 +100,14 @@
     "freq": "",
     "Lat": 17.97640037536621,
     "Lon": -67.1707992553711,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "PR24",
+    "iso_country": "PR",
+    "local_code": "PR24",
+    "length_ft": 1500,
+    "width_ft": 66,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -78,7 +116,10 @@
     "freq": "",
     "Lat": 18.0125007629,
     "Lon": -67.0691986084,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "PR25",
+    "iso_country": "PR",
+    "local_code": "PR25"
   },
   {
     "type": "small_airport",
@@ -87,7 +128,14 @@
     "freq": "",
     "Lat": 17.963199615478516,
     "Lon": -66.39119720458984,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "PR27",
+    "iso_country": "PR",
+    "local_code": "PR27",
+    "length_ft": 4000,
+    "width_ft": 150,
+    "heading": 91.8,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -96,7 +144,16 @@
     "freq": "122.200",
     "Lat": 18.45085,
     "Lon": -66.675768,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "TJAB",
+    "iso_country": "PR",
+    "icao_code": "TJAB",
+    "iata_code": "ARE",
+    "local_code": "ABO",
+    "length_ft": 3975,
+    "width_ft": 60,
+    "heading": 67.8,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -105,7 +162,16 @@
     "freq": "135.700",
     "Lat": 18.4949,
     "Lon": -67.129402,
-    "Ele": 72.2
+    "Ele": 72.2,
+    "ident": "TJBQ",
+    "iso_country": "PR",
+    "icao_code": "TJBQ",
+    "iata_code": "BQN",
+    "local_code": "BQN",
+    "length_ft": 11702,
+    "width_ft": 200,
+    "heading": 72,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -114,7 +180,16 @@
     "freq": "",
     "Lat": 18.312954,
     "Lon": -65.303893,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "TJCP",
+    "iso_country": "PR",
+    "icao_code": "TJCP",
+    "iata_code": "CPX",
+    "local_code": "CPX",
+    "length_ft": 2600,
+    "width_ft": 50,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -123,7 +198,16 @@
     "freq": "119.400",
     "Lat": 18.45680046081543,
     "Lon": -66.09809875488281,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "TJIG",
+    "iso_country": "PR",
+    "icao_code": "TJIG",
+    "iata_code": "SIG",
+    "local_code": "SIG",
+    "length_ft": 5317,
+    "width_ft": 100,
+    "heading": 82.8,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -132,7 +216,16 @@
     "freq": "118.750",
     "Lat": 18.255699157714844,
     "Lon": -67.14849853515625,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "TJMZ",
+    "iso_country": "PR",
+    "icao_code": "TJMZ",
+    "iata_code": "MAZ",
+    "local_code": "MAZ",
+    "length_ft": 4998,
+    "width_ft": 100,
+    "heading": 76,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -141,7 +234,16 @@
     "freq": "118.750",
     "Lat": 18.00830078125,
     "Lon": -66.56300354003906,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "TJPS",
+    "iso_country": "PR",
+    "icao_code": "TJPS",
+    "iata_code": "PSE",
+    "local_code": "PSE",
+    "length_ft": 6904,
+    "width_ft": 150,
+    "heading": 108,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -150,7 +252,16 @@
     "freq": "",
     "Lat": 18.2453,
     "Lon": -65.643402,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "TJRV",
+    "iso_country": "PR",
+    "icao_code": "TJRV",
+    "iata_code": "NRR",
+    "local_code": "RVR",
+    "length_ft": 5800,
+    "width_ft": 100,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "large_airport",
@@ -159,7 +270,16 @@
     "freq": "119.400",
     "Lat": 18.4394,
     "Lon": -66.001801,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "TJSJ",
+    "iso_country": "PR",
+    "icao_code": "TJSJ",
+    "iata_code": "SJU",
+    "local_code": "SJU",
+    "length_ft": 8016,
+    "width_ft": 150,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -168,7 +288,16 @@
     "freq": "128.650",
     "Lat": 18.1348,
     "Lon": -65.493599,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "TJVQ",
+    "iso_country": "PR",
+    "icao_code": "TJVQ",
+    "iata_code": "VQS",
+    "local_code": "VQS",
+    "length_ft": 4301,
+    "width_ft": 75,
+    "heading": 77,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -177,6 +306,13 @@
     "freq": "",
     "Lat": 17.982200622558594,
     "Lon": -66.01930236816406,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "X64",
+    "iso_country": "PR",
+    "local_code": "X64",
+    "length_ft": 2000,
+    "width_ft": 50,
+    "QFU": "28",
+    "heading": 280
   }
 ]

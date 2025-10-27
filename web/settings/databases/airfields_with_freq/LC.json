@@ -6,7 +6,15 @@
     "freq": "119.800",
     "Lat": 14.0202,
     "Lon": -60.992901,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "TLPC",
+    "iso_country": "LC",
+    "icao_code": "TLPC",
+    "iata_code": "SLU",
+    "length_ft": 5735,
+    "width_ft": 148,
+    "heading": 75,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -15,6 +23,14 @@
     "freq": "119.800",
     "Lat": 13.7332,
     "Lon": -60.952599,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "TLPL",
+    "iso_country": "LC",
+    "icao_code": "TLPL",
+    "iata_code": "UVF",
+    "length_ft": 9003,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "28"
   }
 ]

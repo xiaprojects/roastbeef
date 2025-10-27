@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -29.424999,
     "Lon": 28.667,
-    "Ele": 2164.1
+    "Ele": 2164.1,
+    "ident": "FXBB",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -29.363701,
     "Lon": 28.5273,
-    "Ele": 2133.6
+    "Ele": 2133.6,
+    "ident": "FXKA",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": -29.380301,
     "Lon": 28.4907,
-    "Ele": 2133.6
+    "Ele": 2133.6,
+    "ident": "FXKB",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": -29.884519,
     "Lon": 28.361411,
-    "Ele": 2284.5
+    "Ele": 2284.5,
+    "ident": "FXKY",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,11 @@
     "freq": "",
     "Lat": -29.8908,
     "Lon": 28.6556,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "FXLK",
+    "iso_country": "LS",
+    "icao_code": "FXLK",
+    "iata_code": "LEF"
   },
   {
     "type": "small_airport",
@@ -51,7 +63,11 @@
     "freq": "",
     "Lat": -28.8556,
     "Lon": 28.052799,
-    "Ele": 1630.7
+    "Ele": 1630.7,
+    "ident": "FXLR",
+    "iso_country": "LS",
+    "icao_code": "FXLR",
+    "iata_code": "LRB"
   },
   {
     "type": "small_airport",
@@ -60,7 +76,11 @@
     "freq": "",
     "Lat": -29.755583,
     "Lon": 28.357054,
-    "Ele": 2173.2
+    "Ele": 2173.2,
+    "ident": "FXLS",
+    "iso_country": "LS",
+    "icao_code": "FXLS",
+    "iata_code": "LES"
   },
   {
     "type": "small_airport",
@@ -69,7 +89,9 @@
     "freq": "",
     "Lat": -29.0093,
     "Lon": 28.8547,
-    "Ele": 3169.9
+    "Ele": 3169.9,
+    "ident": "FXLT",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -78,7 +100,12 @@
     "freq": "",
     "Lat": -29.840562,
     "Lon": 28.77668,
-    "Ele": 1889.8
+    "Ele": 1889.8,
+    "ident": "FXMA",
+    "iso_country": "LS",
+    "icao_code": "FXMA",
+    "iata_code": "MSG",
+    "local_code": "MSG"
   },
   {
     "type": "small_airport",
@@ -87,7 +114,11 @@
     "freq": "",
     "Lat": -29.8011,
     "Lon": 27.243601,
-    "Ele": 1630.7
+    "Ele": 1630.7,
+    "ident": "FXMF",
+    "iso_country": "LS",
+    "icao_code": "FXMF",
+    "iata_code": "MFC"
   },
   {
     "type": "small_airport",
@@ -96,7 +127,9 @@
     "freq": "",
     "Lat": -30.144501,
     "Lon": 27.4708,
-    "Ele": 1568.5
+    "Ele": 1568.5,
+    "ident": "FXMH",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -105,7 +138,11 @@
     "freq": "",
     "Lat": -29.281799,
     "Lon": 29.0728,
-    "Ele": 2194.6
+    "Ele": 2194.6,
+    "ident": "FXMK",
+    "iso_country": "LS",
+    "icao_code": "FXMK",
+    "iata_code": "MKH"
   },
   {
     "type": "small_airport",
@@ -114,7 +151,9 @@
     "freq": "",
     "Lat": -29.333375,
     "Lon": 29.19187,
-    "Ele": 2519.8
+    "Ele": 2519.8,
+    "ident": "FXML",
+    "iso_country": "LS"
   },
   {
     "type": "medium_airport",
@@ -123,7 +162,15 @@
     "freq": "120.700",
     "Lat": -29.462299,
     "Lon": 27.5525,
-    "Ele": 1630.1
+    "Ele": 1630.1,
+    "ident": "FXMM",
+    "iso_country": "LS",
+    "icao_code": "FXMM",
+    "iata_code": "MSU",
+    "length_ft": 3314,
+    "width_ft": 75,
+    "heading": 85,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -132,7 +179,9 @@
     "freq": "",
     "Lat": -29.54515,
     "Lon": 28.270569,
-    "Ele": 2164.1
+    "Ele": 2164.1,
+    "ident": "FXMN",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -141,7 +190,9 @@
     "freq": "",
     "Lat": -29.586399,
     "Lon": 28.665591,
-    "Ele": 2223.2
+    "Ele": 2223.2,
+    "ident": "FXMP",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -150,7 +201,9 @@
     "freq": "",
     "Lat": -29.678025,
     "Lon": 28.805082,
-    "Ele": 2225.0
+    "Ele": 2225,
+    "ident": "FXMS",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -159,7 +212,9 @@
     "freq": "",
     "Lat": -29.783001,
     "Lon": 28.767,
-    "Ele": 1920.2
+    "Ele": 1920.2,
+    "ident": "FXMT",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -168,7 +223,14 @@
     "freq": "118.900",
     "Lat": -29.302799,
     "Lon": 27.502928,
-    "Ele": 1556.0
+    "Ele": 1556,
+    "ident": "FXMU",
+    "iso_country": "LS",
+    "icao_code": "FXMU",
+    "length_ft": 1542,
+    "width_ft": 98,
+    "heading": 85,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -177,7 +239,9 @@
     "freq": "",
     "Lat": -29.814699172973636,
     "Lon": 28.80820083618164,
-    "Ele": 1874.5
+    "Ele": 1874.5,
+    "ident": "FXMV",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -186,7 +250,9 @@
     "freq": "",
     "Lat": -30.066999,
     "Lon": 27.867001,
-    "Ele": 1645.9
+    "Ele": 1645.9,
+    "ident": "FXNH",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -195,7 +261,11 @@
     "freq": "",
     "Lat": -30.021699905396,
     "Lon": 28.196899414062,
-    "Ele": 1713.3
+    "Ele": 1713.3,
+    "ident": "FXNK",
+    "iso_country": "LS",
+    "icao_code": "FXNK",
+    "iata_code": "NKU"
   },
   {
     "type": "small_airport",
@@ -204,7 +274,11 @@
     "freq": "",
     "Lat": -29.088056,
     "Lon": 28.497222,
-    "Ele": 2194.6
+    "Ele": 2194.6,
+    "ident": "FXPG",
+    "iso_country": "LS",
+    "icao_code": "FXPG",
+    "iata_code": "PEL"
   },
   {
     "type": "small_airport",
@@ -213,7 +287,11 @@
     "freq": "",
     "Lat": -30.407499,
     "Lon": 27.6933,
-    "Ele": 1630.7
+    "Ele": 1630.7,
+    "ident": "FXQG",
+    "iso_country": "LS",
+    "icao_code": "FXQG",
+    "iata_code": "UTG"
   },
   {
     "type": "small_airport",
@@ -222,7 +300,11 @@
     "freq": "",
     "Lat": -30.1117,
     "Lon": 28.6719,
-    "Ele": 1859.3
+    "Ele": 1859.3,
+    "ident": "FXQN",
+    "iso_country": "LS",
+    "icao_code": "FXQN",
+    "iata_code": "UNE"
   },
   {
     "type": "small_airport",
@@ -231,7 +313,9 @@
     "freq": "",
     "Lat": -29.9158,
     "Lon": 29.038799,
-    "Ele": 2225.0
+    "Ele": 2225,
+    "ident": "FXSE",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -240,7 +324,11 @@
     "freq": "",
     "Lat": -29.731088,
     "Lon": 28.767945,
-    "Ele": 1981.2
+    "Ele": 1981.2,
+    "ident": "FXSH",
+    "iso_country": "LS",
+    "icao_code": "FXSH",
+    "iata_code": "SHK"
   },
   {
     "type": "small_airport",
@@ -249,7 +337,11 @@
     "freq": "",
     "Lat": -30.0389,
     "Lon": 28.3703,
-    "Ele": 1737.4
+    "Ele": 1737.4,
+    "ident": "FXSK",
+    "iso_country": "LS",
+    "icao_code": "FXSK",
+    "iata_code": "SKQ"
   },
   {
     "type": "small_airport",
@@ -258,7 +350,11 @@
     "freq": "",
     "Lat": -29.8386,
     "Lon": 28.059999,
-    "Ele": 2194.6
+    "Ele": 2194.6,
+    "ident": "FXSM",
+    "iso_country": "LS",
+    "icao_code": "FXSM",
+    "iata_code": "SOK"
   },
   {
     "type": "small_airport",
@@ -267,7 +363,11 @@
     "freq": "",
     "Lat": -29.267599,
     "Lon": 28.552299,
-    "Ele": 2133.6
+    "Ele": 2133.6,
+    "ident": "FXSS",
+    "iso_country": "LS",
+    "icao_code": "FXSS",
+    "iata_code": "SHZ"
   },
   {
     "type": "small_airport",
@@ -276,7 +376,9 @@
     "freq": "",
     "Lat": -29.617000579833984,
     "Lon": 28.78300094604492,
-    "Ele": 2072.6
+    "Ele": 2072.6,
+    "ident": "FXST",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -285,7 +387,11 @@
     "freq": "",
     "Lat": -29.5228,
     "Lon": 28.615801,
-    "Ele": 2286.0
+    "Ele": 2286,
+    "ident": "FXTA",
+    "iso_country": "LS",
+    "icao_code": "FXTA",
+    "iata_code": "THB"
   },
   {
     "type": "small_airport",
@@ -294,7 +400,9 @@
     "freq": "",
     "Lat": -30.051389,
     "Lon": 28.459722,
-    "Ele": 1706.9
+    "Ele": 1706.9,
+    "ident": "FXTB",
+    "iso_country": "LS"
   },
   {
     "type": "small_airport",
@@ -303,6 +411,10 @@
     "freq": "",
     "Lat": -29.233,
     "Lon": 28.882999,
-    "Ele": 2133.6
+    "Ele": 2133.6,
+    "ident": "FXTK",
+    "iso_country": "LS",
+    "icao_code": "FXTK",
+    "iata_code": "TKO"
   }
 ]

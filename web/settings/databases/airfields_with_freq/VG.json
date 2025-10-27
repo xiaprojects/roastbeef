@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 18.727734,
     "Lon": -64.32852,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "TUPA",
+    "iso_country": "VG",
+    "icao_code": "TUPA",
+    "iata_code": "NGD",
+    "length_ft": 2500,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "121.900",
     "Lat": 18.445492,
     "Lon": -64.541707,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "TUPJ",
+    "iso_country": "VG",
+    "icao_code": "TUPJ",
+    "iata_code": "EIS",
+    "length_ft": 4642,
+    "width_ft": 89,
+    "heading": 61,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -24,6 +39,13 @@
     "freq": "",
     "Lat": 18.446634,
     "Lon": -64.427932,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "TUPW",
+    "iso_country": "VG",
+    "icao_code": "TUPW",
+    "iata_code": "VIJ",
+    "length_ft": 3100,
+    "QFU": "21",
+    "heading": 210
   }
 ]

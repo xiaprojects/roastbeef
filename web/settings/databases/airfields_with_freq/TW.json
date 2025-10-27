@@ -6,7 +6,14 @@
     "freq": "119.500",
     "Lat": 22.782499,
     "Lon": 120.263,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "RCAY",
+    "iso_country": "TW",
+    "icao_code": "RCAY",
+    "QFU": "36",
+    "length_ft": 8019,
+    "width_ft": 145,
+    "heading": 181
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "124.600",
     "Lat": 24.4279,
     "Lon": 118.359001,
-    "Ele": 28.3
+    "Ele": 28.3,
+    "ident": "RCBS",
+    "iso_country": "TW",
+    "icao_code": "RCBS",
+    "iata_code": "KNH",
+    "length_ft": 9865,
+    "width_ft": 148,
+    "heading": 63.5,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -24,7 +39,11 @@
     "freq": "",
     "Lat": 23.213127,
     "Lon": 119.417539,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "RCCM",
+    "iso_country": "TW",
+    "icao_code": "RCCM",
+    "iata_code": "CMJ"
   },
   {
     "type": "medium_airport",
@@ -33,7 +52,14 @@
     "freq": "121.100",
     "Lat": 22.6724,
     "Lon": 120.461998,
-    "Ele": 23.8
+    "Ele": 23.8,
+    "ident": "RCDC",
+    "iso_country": "TW",
+    "icao_code": "RCDC",
+    "length_ft": 7828,
+    "width_ft": 148,
+    "heading": 87.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -42,7 +68,13 @@
     "freq": "135.100",
     "Lat": 24.853588,
     "Lon": 121.236392,
-    "Ele": 240.8
+    "Ele": 240.8,
+    "ident": "RCDI",
+    "iso_country": "TW",
+    "length_ft": 3260,
+    "width_ft": 100,
+    "heading": 34.7,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -51,7 +83,15 @@
     "freq": "125.500",
     "Lat": 26.159656,
     "Lon": 119.958376,
-    "Ele": 70.7
+    "Ele": 70.7,
+    "ident": "RCFG",
+    "iso_country": "TW",
+    "icao_code": "RCFG",
+    "iata_code": "LZN",
+    "length_ft": 5180,
+    "width_ft": 98,
+    "heading": 26.2,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -60,7 +100,15 @@
     "freq": "119.400",
     "Lat": 22.7549991607666,
     "Lon": 121.10199737548828,
-    "Ele": 43.6
+    "Ele": 43.6,
+    "ident": "RCFN",
+    "iso_country": "TW",
+    "icao_code": "RCFN",
+    "iata_code": "TTT",
+    "length_ft": 7999,
+    "width_ft": 148,
+    "heading": 38.8,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -69,7 +117,15 @@
     "freq": "118.800",
     "Lat": 22.673901,
     "Lon": 121.466003,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "RCGI",
+    "iso_country": "TW",
+    "icao_code": "RCGI",
+    "iata_code": "GNI",
+    "length_ft": 3255,
+    "width_ft": 75,
+    "heading": 164.4,
+    "QFU": "35"
   },
   {
     "type": "large_airport",
@@ -78,7 +134,15 @@
     "freq": "121.100",
     "Lat": 22.577101,
     "Lon": 120.349998,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "RCKH",
+    "iso_country": "TW",
+    "icao_code": "RCKH",
+    "iata_code": "KHH",
+    "length_ft": 10335,
+    "width_ft": 197,
+    "heading": 91.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -87,7 +151,15 @@
     "freq": "125.500",
     "Lat": 23.462577,
     "Lon": 120.390544,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "RCKU",
+    "iso_country": "TW",
+    "icao_code": "RCKU",
+    "iata_code": "CYI",
+    "QFU": "36",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 180
   },
   {
     "type": "medium_airport",
@@ -96,7 +168,15 @@
     "freq": "124.700",
     "Lat": 22.0411,
     "Lon": 120.730003,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "RCKW",
+    "iso_country": "TW",
+    "icao_code": "RCKW",
+    "iata_code": "HCN",
+    "length_ft": 5577,
+    "width_ft": 98,
+    "heading": 139,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -105,7 +185,14 @@
     "freq": "",
     "Lat": 20.7066,
     "Lon": 116.721001,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "RCLM",
+    "iso_country": "TW",
+    "icao_code": "RCLM",
+    "iata_code": "DSX",
+    "length_ft": 5085,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -114,7 +201,15 @@
     "freq": "118.500",
     "Lat": 22.027000427246094,
     "Lon": 121.53500366210938,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "RCLY",
+    "iso_country": "TW",
+    "icao_code": "RCLY",
+    "iata_code": "KYD",
+    "length_ft": 3852,
+    "width_ft": 79,
+    "heading": 130.2,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -123,7 +218,15 @@
     "freq": "120.400",
     "Lat": 24.2647,
     "Lon": 120.621002,
-    "Ele": 202.1
+    "Ele": 202.1,
+    "ident": "RCMQ",
+    "iso_country": "TW",
+    "icao_code": "RCMQ",
+    "iata_code": "RMQ",
+    "length_ft": 12000,
+    "width_ft": 148,
+    "heading": 176.5,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -132,7 +235,15 @@
     "freq": "125.500",
     "Lat": 26.224199,
     "Lon": 120.002998,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "RCMT",
+    "iso_country": "TW",
+    "icao_code": "RCMT",
+    "iata_code": "MFK",
+    "length_ft": 3773,
+    "width_ft": 98,
+    "heading": 27.1,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -141,7 +252,15 @@
     "freq": "121.100",
     "Lat": 22.950399,
     "Lon": 120.206001,
-    "Ele": 19.2
+    "Ele": 19.2,
+    "ident": "RCNN",
+    "iso_country": "TW",
+    "icao_code": "RCNN",
+    "iata_code": "TNN",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "heading": 178.6,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -150,7 +269,15 @@
     "freq": "123.500",
     "Lat": 24.8180007935,
     "Lon": 120.939002991,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "RCPO",
+    "iso_country": "TW",
+    "icao_code": "RCPO",
+    "iata_code": "HSZ",
+    "length_ft": 11955,
+    "width_ft": 148,
+    "heading": 44.8,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -159,7 +286,15 @@
     "freq": "128.100",
     "Lat": 23.568701,
     "Lon": 119.627998,
-    "Ele": 31.4
+    "Ele": 31.4,
+    "ident": "RCQC",
+    "iso_country": "TW",
+    "icao_code": "RCQC",
+    "iata_code": "MZG",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 18.2,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -168,7 +303,13 @@
     "freq": "119.400",
     "Lat": 22.7931,
     "Lon": 121.181999,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "RCQS",
+    "iso_country": "TW",
+    "length_ft": 11055,
+    "width_ft": 147,
+    "heading": 34.6,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -177,7 +318,12 @@
     "freq": "",
     "Lat": 10.377089,
     "Lon": 114.365637,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RCSP",
+    "iso_country": "TW",
+    "length_ft": 3935,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -186,7 +332,14 @@
     "freq": "121.100",
     "Lat": 22.700199,
     "Lon": 120.482002,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "RCSQ",
+    "iso_country": "TW",
+    "iata_code": "PIF",
+    "length_ft": 8012,
+    "width_ft": 148,
+    "heading": 78,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -195,7 +348,15 @@
     "freq": "119.700",
     "Lat": 25.069401,
     "Lon": 121.552002,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "RCSS",
+    "iso_country": "TW",
+    "icao_code": "RCSS",
+    "iata_code": "TSA",
+    "length_ft": 8547,
+    "width_ft": 197,
+    "heading": 92,
+    "QFU": "28"
   },
   {
     "type": "large_airport",
@@ -204,7 +365,15 @@
     "freq": "119.600",
     "Lat": 25.0777,
     "Lon": 121.233002,
-    "Ele": 32.3
+    "Ele": 32.3,
+    "ident": "RCTP",
+    "iso_country": "TW",
+    "icao_code": "RCTP",
+    "iata_code": "TPE",
+    "length_ft": 10991,
+    "width_ft": 197,
+    "heading": 49.3,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -213,7 +382,15 @@
     "freq": "118.100",
     "Lat": 23.369108,
     "Lon": 119.503598,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "RCWA",
+    "iso_country": "TW",
+    "icao_code": "RCWA",
+    "iata_code": "WOT",
+    "length_ft": 3051,
+    "width_ft": 76,
+    "heading": 20.9,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -222,7 +399,9 @@
     "freq": "",
     "Lat": 22.981438,
     "Lon": 120.284379,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RCXY",
+    "iso_country": "TW"
   },
   {
     "type": "medium_airport",
@@ -231,7 +410,15 @@
     "freq": "119.100",
     "Lat": 24.023099899291992,
     "Lon": 121.61799621582033,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "RCYU",
+    "iso_country": "TW",
+    "icao_code": "RCYU",
+    "iata_code": "HUN",
+    "length_ft": 9005,
+    "width_ft": 75,
+    "heading": 26.2,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -240,7 +427,9 @@
     "freq": "",
     "Lat": 24.26482,
     "Lon": 120.81644,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "TW-0002",
+    "iso_country": "TW"
   },
   {
     "type": "medium_airport",
@@ -249,7 +438,9 @@
     "freq": "",
     "Lat": 22.705,
     "Lon": 120.280998,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "TW-0004",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -258,7 +449,9 @@
     "freq": "",
     "Lat": 24.026161,
     "Lon": 121.589897,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "TW-0006",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -267,7 +460,9 @@
     "freq": "",
     "Lat": 23.538652,
     "Lon": 120.410156,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0007",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -276,7 +471,9 @@
     "freq": "",
     "Lat": 22.586871,
     "Lon": 121.000736,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0032",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -285,7 +482,9 @@
     "freq": "",
     "Lat": 22.45167,
     "Lon": 120.48565,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0034",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -294,7 +493,9 @@
     "freq": "",
     "Lat": 23.87514,
     "Lon": 121.54155,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0035",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -303,7 +504,9 @@
     "freq": "",
     "Lat": 23.77948,
     "Lon": 121.47453,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0036",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -312,7 +515,7 @@
     "freq": "",
     "Lat": 23.77262,
     "Lon": 121.47999,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -321,7 +524,9 @@
     "freq": "",
     "Lat": 22.75635,
     "Lon": 120.62325,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0038",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -330,7 +535,9 @@
     "freq": "",
     "Lat": 23.71454,
     "Lon": 121.42002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0039",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -339,7 +546,7 @@
     "freq": "",
     "Lat": 23.71842,
     "Lon": 121.4036,
-    "Ele": 0.0
+    "Ele": 0
   },
   {
     "type": "small_airport",
@@ -348,7 +555,9 @@
     "freq": "",
     "Lat": 23.96623,
     "Lon": 120.98246,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0041",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -357,7 +566,9 @@
     "freq": "",
     "Lat": 24.04881,
     "Lon": 120.63185,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "TW-0042",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -366,7 +577,9 @@
     "freq": "",
     "Lat": 23.89625,
     "Lon": 121.56376,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "TW-0053",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -393,7 +606,9 @@
     "freq": "",
     "Lat": 22.75312,
     "Lon": 120.64695,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0058",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -402,7 +617,9 @@
     "freq": "",
     "Lat": 23.05556,
     "Lon": 121.17125,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0061",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -411,7 +628,9 @@
     "freq": "",
     "Lat": 23.805319,
     "Lon": 120.554151,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0062",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -420,7 +639,9 @@
     "freq": "",
     "Lat": 23.86005,
     "Lon": 120.47462,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0063",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -429,7 +650,9 @@
     "freq": "",
     "Lat": 23.69765,
     "Lon": 120.44209,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0064",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -438,7 +661,9 @@
     "freq": "",
     "Lat": 23.96424,
     "Lon": 120.33447,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0065",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -447,7 +672,9 @@
     "freq": "",
     "Lat": 23.53923,
     "Lon": 121.38567,
-    "Ele": 118.0
+    "Ele": 118,
+    "ident": "TW-0066",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -456,7 +683,9 @@
     "freq": "",
     "Lat": 23.80368,
     "Lon": 121.4811,
-    "Ele": 113.1
+    "Ele": 113.1,
+    "ident": "TW-0067",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -465,7 +694,9 @@
     "freq": "",
     "Lat": 23.994525,
     "Lon": 120.509977,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0068",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -474,7 +705,9 @@
     "freq": "",
     "Lat": 23.237659,
     "Lon": 120.247668,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TW-0069",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -483,7 +716,9 @@
     "freq": "",
     "Lat": 24.10927,
     "Lon": 121.62397,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "TW-0070",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -492,7 +727,9 @@
     "freq": "",
     "Lat": 23.68923,
     "Lon": 121.47359,
-    "Ele": 106.1
+    "Ele": 106.1,
+    "ident": "TW-0088",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",
@@ -501,7 +738,9 @@
     "freq": "",
     "Lat": 22.78397,
     "Lon": 120.53482,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "TW-0093",
+    "iso_country": "TW"
   },
   {
     "type": "small_airport",

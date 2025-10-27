@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 33.636065,
     "Lon": 35.614209,
-    "Ele": 1067.1
+    "Ele": 1067.1,
+    "ident": "LB-0004",
+    "iso_country": "LB"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 34.305368,
     "Lon": 36.351591,
-    "Ele": 845.8
+    "Ele": 845.8,
+    "ident": "LB-0009",
+    "iso_country": "LB"
   },
   {
     "type": "large_airport",
@@ -24,7 +28,15 @@
     "freq": "120.300",
     "Lat": 33.820899963378906,
     "Lon": 35.488399505615234,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "OLBA",
+    "iso_country": "LB",
+    "icao_code": "OLBA",
+    "iata_code": "BEY",
+    "length_ft": 10663,
+    "width_ft": 197,
+    "heading": 177,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -33,7 +45,15 @@
     "freq": "119.500",
     "Lat": 34.589298,
     "Lon": 36.011299,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "OLKA",
+    "iso_country": "LB",
+    "icao_code": "OLKA",
+    "iata_code": "KYE",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -42,7 +62,13 @@
     "freq": "119.700",
     "Lat": 33.850799560546875,
     "Lon": 35.987701416015625,
-    "Ele": 919.9
+    "Ele": 919.9,
+    "ident": "OLRA",
+    "iso_country": "LB",
+    "length_ft": 9740,
+    "width_ft": 148,
+    "heading": 46.3,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -51,7 +77,9 @@
     "freq": "",
     "Lat": 33.473974,
     "Lon": 35.608798,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SY-0028",
+    "iso_country": "LB"
   },
   {
     "type": "medium_airport",
@@ -60,6 +88,12 @@
     "freq": "",
     "Lat": 34.281226,
     "Lon": 35.680096,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "Z19O",
+    "iso_country": "LB",
+    "local_code": "Z19O",
+    "length_ft": 6000,
+    "QFU": "23",
+    "heading": 230
   }
 ]

@@ -6,7 +6,12 @@
     "freq": "",
     "Lat": 10.914244,
     "Lon": 103.226652,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "KH-0001",
+    "iso_country": "KH",
+    "iata_code": "DSY",
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "large_airport",
@@ -15,7 +20,15 @@
     "freq": "",
     "Lat": 11.359987,
     "Lon": 104.921272,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "KH-0002",
+    "iso_country": "KH",
+    "icao_code": "VDTI",
+    "iata_code": "KTI",
+    "length_ft": 13123,
+    "width_ft": 197,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -24,7 +37,10 @@
     "freq": "",
     "Lat": 13.7597,
     "Lon": 104.97173,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "OMY",
+    "iso_country": "KH",
+    "iata_code": "OMY"
   },
   {
     "type": "medium_airport",
@@ -33,7 +49,15 @@
     "freq": "122.400",
     "Lat": 13.0956,
     "Lon": 103.223999,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "VDBG",
+    "iso_country": "KH",
+    "icao_code": "VDBG",
+    "iata_code": "BBM",
+    "length_ft": 5250,
+    "width_ft": 112,
+    "heading": 69,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -42,7 +66,10 @@
     "freq": "",
     "Lat": 12.028657,
     "Lon": 105.441165,
-    "Ele": 45.1
+    "Ele": 45.1,
+    "ident": "VDKC",
+    "iso_country": "KH",
+    "icao_code": "VDKC"
   },
   {
     "type": "medium_airport",
@@ -51,7 +78,15 @@
     "freq": "129.700",
     "Lat": 12.255032,
     "Lon": 104.564657,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "VDKH",
+    "iso_country": "KH",
+    "icao_code": "VDKH",
+    "iata_code": "KZC",
+    "length_ft": 7874,
+    "width_ft": 150,
+    "heading": 182.3,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -60,7 +95,11 @@
     "freq": "",
     "Lat": 11.613397,
     "Lon": 102.997084,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VDKK",
+    "iso_country": "KH",
+    "icao_code": "VDKK",
+    "iata_code": "KKZ"
   },
   {
     "type": "small_airport",
@@ -69,7 +108,11 @@
     "freq": "",
     "Lat": 12.464562,
     "Lon": 107.188039,
-    "Ele": 700.7
+    "Ele": 700.7,
+    "ident": "VDMK",
+    "iso_country": "KH",
+    "icao_code": "VDMK",
+    "iata_code": "MWV"
   },
   {
     "type": "large_airport",
@@ -78,7 +121,15 @@
     "freq": "127.500",
     "Lat": 11.5466,
     "Lon": 104.844002,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "VDPP",
+    "iso_country": "KH",
+    "icao_code": "VDPP",
+    "iata_code": "PNH",
+    "length_ft": 9843,
+    "width_ft": 144,
+    "heading": 45.8,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -87,7 +138,14 @@
     "freq": "",
     "Lat": 13.729999542236328,
     "Lon": 106.98699951171876,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VDRK",
+    "iso_country": "KH",
+    "icao_code": "VDRK",
+    "iata_code": "RBE",
+    "length_ft": 3937,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "large_airport",
@@ -96,7 +154,15 @@
     "freq": "",
     "Lat": 13.369167,
     "Lon": 104.223056,
-    "Ele": 58.2
+    "Ele": 58.2,
+    "ident": "VDSA",
+    "iso_country": "KH",
+    "icao_code": "VDSA",
+    "iata_code": "SAI",
+    "length_ft": 11827,
+    "width_ft": 197,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -105,7 +171,15 @@
     "freq": "116.000",
     "Lat": 10.571969,
     "Lon": 103.632689,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "VDSV",
+    "iso_country": "KH",
+    "icao_code": "VDSV",
+    "iata_code": "KOS",
+    "length_ft": 8202,
+    "width_ft": 112,
+    "heading": 27.6,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -114,6 +188,13 @@
     "freq": "",
     "Lat": 12.5385,
     "Lon": 104.1486,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "VDSY",
+    "iso_country": "KH",
+    "iata_code": "KZD",
+    "length_ft": 4800,
+    "width_ft": 148,
+    "QFU": "36",
+    "heading": 360
   }
 ]

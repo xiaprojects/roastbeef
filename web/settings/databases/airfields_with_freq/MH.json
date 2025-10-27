@@ -6,7 +6,15 @@
     "freq": "",
     "Lat": 11.222219,
     "Lon": 169.851429,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "03N",
+    "iso_country": "MH",
+    "iata_code": "UTK",
+    "local_code": "03N",
+    "length_ft": 2400,
+    "width_ft": 50,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -15,7 +23,10 @@
     "freq": "",
     "Lat": 7.279422,
     "Lon": 168.8257,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "AIP",
+    "iso_country": "MH",
+    "iata_code": "AIC"
   },
   {
     "type": "small_airport",
@@ -24,7 +35,10 @@
     "freq": "",
     "Lat": 9.319305555560002,
     "Lon": 166.847777778,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "EAL",
+    "iso_country": "MH",
+    "iata_code": "EAL"
   },
   {
     "type": "small_airport",
@@ -33,7 +47,10 @@
     "freq": "",
     "Lat": 4.5982,
     "Lon": 168.752,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "EBO",
+    "iso_country": "MH",
+    "iata_code": "EBO"
   },
   {
     "type": "small_airport",
@@ -42,7 +59,10 @@
     "freq": "",
     "Lat": 6.0404,
     "Lon": 171.9846,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "EJT",
+    "iso_country": "MH",
+    "iata_code": "EJT"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,14 @@
     "freq": "",
     "Lat": 8.90056,
     "Lon": 170.843994,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "KBT",
+    "iso_country": "MH",
+    "iata_code": "KBT",
+    "length_ft": 2802,
+    "width_ft": 210,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -60,7 +87,10 @@
     "freq": "",
     "Lat": 8.92806,
     "Lon": 165.761993,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "MH-0004",
+    "iso_country": "MH",
+    "iata_code": "UJE"
   },
   {
     "type": "small_airport",
@@ -69,7 +99,10 @@
     "freq": "",
     "Lat": 10.2168,
     "Lon": 169.983002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-AIM",
+    "iso_country": "MH",
+    "iata_code": "AIM"
   },
   {
     "type": "small_airport",
@@ -78,7 +111,10 @@
     "freq": "",
     "Lat": 8.14528,
     "Lon": 171.173004,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-AUL",
+    "iso_country": "MH",
+    "iata_code": "AUL"
   },
   {
     "type": "small_airport",
@@ -87,7 +123,10 @@
     "freq": "",
     "Lat": 11.5225,
     "Lon": 165.565002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-BII",
+    "iso_country": "MH",
+    "iata_code": "BII"
   },
   {
     "type": "small_airport",
@@ -96,7 +135,10 @@
     "freq": "",
     "Lat": 9.330559730529783,
     "Lon": 166.82000732421875,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-EBN",
+    "iso_country": "MH",
+    "iata_code": "EBN"
   },
   {
     "type": "small_airport",
@@ -105,7 +147,10 @@
     "freq": "",
     "Lat": 7.749775,
     "Lon": 168.977838,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "MH-JAT",
+    "iso_country": "MH",
+    "iata_code": "JAT"
   },
   {
     "type": "small_airport",
@@ -114,7 +159,11 @@
     "freq": "",
     "Lat": 7.565350055690001,
     "Lon": 168.962005615,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MH-JEJ",
+    "iso_country": "MH",
+    "iata_code": "JEJ",
+    "local_code": "JEJ"
   },
   {
     "type": "small_airport",
@@ -123,7 +172,10 @@
     "freq": "",
     "Lat": 9.82316,
     "Lon": 169.307999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-LIK",
+    "iso_country": "MH",
+    "iata_code": "LIK"
   },
   {
     "type": "small_airport",
@@ -132,7 +184,10 @@
     "freq": "",
     "Lat": 8.92111,
     "Lon": 166.264999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-LML",
+    "iso_country": "MH",
+    "iata_code": "LML"
   },
   {
     "type": "small_airport",
@@ -141,7 +196,15 @@
     "freq": "",
     "Lat": 8.70444,
     "Lon": 171.229996,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MH-MAV",
+    "iso_country": "MH",
+    "iata_code": "MAV",
+    "local_code": "3N1",
+    "length_ft": 3500,
+    "width_ft": 150,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -150,7 +213,15 @@
     "freq": "",
     "Lat": 10.283302,
     "Lon": 170.869,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "MH-MJB",
+    "iso_country": "MH",
+    "iata_code": "MJB",
+    "local_code": "C30",
+    "length_ft": 3000,
+    "width_ft": 50,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -159,7 +230,10 @@
     "freq": "",
     "Lat": 8.163362,
     "Lon": 168.173862,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "MH-MJE",
+    "iso_country": "MH",
+    "iata_code": "MJE"
   },
   {
     "type": "small_airport",
@@ -168,7 +242,15 @@
     "freq": "",
     "Lat": 5.633005,
     "Lon": 168.125631,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MH-NDK",
+    "iso_country": "MH",
+    "iata_code": "NDK",
+    "local_code": "3N0",
+    "length_ft": 2900,
+    "width_ft": 75,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -177,7 +259,10 @@
     "freq": "",
     "Lat": 11.1572,
     "Lon": 166.886993,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-RNP",
+    "iso_country": "MH",
+    "iata_code": "RNP"
   },
   {
     "type": "small_airport",
@@ -186,7 +271,15 @@
     "freq": "",
     "Lat": 7.121768,
     "Lon": 171.911584,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MH-TIC",
+    "iso_country": "MH",
+    "iata_code": "TIC",
+    "local_code": "N18",
+    "length_ft": 2850,
+    "width_ft": 45,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -195,7 +288,15 @@
     "freq": "",
     "Lat": 5.909213,
     "Lon": 169.637256,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MH-UIT",
+    "iso_country": "MH",
+    "iata_code": "UIT",
+    "local_code": "N55",
+    "length_ft": 5000,
+    "width_ft": 60,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -204,7 +305,10 @@
     "freq": "",
     "Lat": 7.450833,
     "Lon": 168.55,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-WJA",
+    "iso_country": "MH",
+    "iata_code": "WJA"
   },
   {
     "type": "small_airport",
@@ -213,7 +317,15 @@
     "freq": "",
     "Lat": 9.458333,
     "Lon": 170.238611,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MH-WTE",
+    "iso_country": "MH",
+    "iata_code": "WTE",
+    "local_code": "N36",
+    "length_ft": 4275,
+    "width_ft": 75,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -222,7 +334,10 @@
     "freq": "",
     "Lat": 10.1733,
     "Lon": 166.003006,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "MH-WTO",
+    "iso_country": "MH",
+    "iata_code": "WTO"
   },
   {
     "type": "small_airport",
@@ -231,7 +346,15 @@
     "freq": "",
     "Lat": 6.084754,
     "Lon": 171.731419,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "MLIP",
+    "iso_country": "MH",
+    "iata_code": "MIJ",
+    "local_code": "1Q9",
+    "length_ft": 2850,
+    "width_ft": 75,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -240,7 +363,15 @@
     "freq": "",
     "Lat": 7.005553,
     "Lon": 171.656959,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "N20",
+    "iso_country": "MH",
+    "iata_code": "IMI",
+    "local_code": "N20",
+    "length_ft": 2450,
+    "width_ft": 50,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -249,7 +380,15 @@
     "freq": "126.200",
     "Lat": 11.340700149536133,
     "Lon": 162.3280029296875,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "PKMA",
+    "iso_country": "MH",
+    "icao_code": "PKMA",
+    "iata_code": "ENT",
+    "length_ft": 7700,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -258,7 +397,16 @@
     "freq": "123.600",
     "Lat": 7.06476,
     "Lon": 171.272003,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "PKMJ",
+    "iso_country": "MH",
+    "icao_code": "PKMJ",
+    "iata_code": "MAJ",
+    "local_code": "MAJ",
+    "length_ft": 7897,
+    "width_ft": 150,
+    "heading": 76,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -267,7 +415,15 @@
     "freq": "299.800",
     "Lat": 9.39689,
     "Lon": 167.470993,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "PKRO",
+    "iso_country": "MH",
+    "icao_code": "PKRO",
+    "local_code": "ROI",
+    "length_ft": 4499,
+    "width_ft": 150,
+    "heading": 48,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -276,7 +432,16 @@
     "freq": "299.800",
     "Lat": 8.720120429992676,
     "Lon": 167.73199462890625,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "PKWA",
+    "iso_country": "MH",
+    "icao_code": "PKWA",
+    "iata_code": "KWA",
+    "local_code": "KWA",
+    "length_ft": 6668,
+    "width_ft": 198,
+    "heading": 73,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -285,7 +450,15 @@
     "freq": "",
     "Lat": 5.64386,
     "Lon": 169.124586,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "Q51",
+    "iso_country": "MH",
+    "iata_code": "KIO",
+    "local_code": "C51",
+    "length_ft": 4400,
+    "width_ft": 100,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -294,6 +467,9 @@
     "freq": "",
     "Lat": 8.3027,
     "Lon": 171.1615,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "TBV",
+    "iso_country": "MH",
+    "iata_code": "TBV"
   }
 ]

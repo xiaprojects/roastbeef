@@ -6,7 +6,15 @@
     "freq": "118.775",
     "Lat": 42.5728,
     "Lon": 21.035801,
-    "Ele": 545.3
+    "Ele": 545.3,
+    "ident": "BKPR",
+    "iso_country": "XK",
+    "icao_code": "BKPR",
+    "iata_code": "PRN",
+    "length_ft": 9974,
+    "width_ft": 148,
+    "heading": 176,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -15,6 +23,12 @@
     "freq": "125.000",
     "Lat": 42.435066,
     "Lon": 20.427768,
-    "Ele": 417.6
+    "Ele": 417.6,
+    "ident": "XK-0010",
+    "iso_country": "XK",
+    "length_ft": 5904,
+    "width_ft": 98,
+    "heading": 177.5,
+    "QFU": "36"
   }
 ]

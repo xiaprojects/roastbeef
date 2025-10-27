@@ -6,7 +6,16 @@
     "freq": "128.650",
     "Lat": 18.337091,
     "Lon": -64.977251,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "TIST",
+    "iso_country": "VI",
+    "icao_code": "TIST",
+    "iata_code": "STT",
+    "local_code": "STT",
+    "length_ft": 7000,
+    "width_ft": 150,
+    "heading": 87.5,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -15,6 +24,15 @@
     "freq": "128.650",
     "Lat": 17.701413,
     "Lon": -64.802608,
-    "Ele": 22.6
+    "Ele": 22.6,
+    "ident": "TISX",
+    "iso_country": "VI",
+    "icao_code": "TISX",
+    "iata_code": "STX",
+    "local_code": "STX",
+    "length_ft": 10004,
+    "width_ft": 150,
+    "heading": 84,
+    "QFU": "28"
   }
 ]

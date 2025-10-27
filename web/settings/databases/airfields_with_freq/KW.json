@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 28.60425,
     "Lon": 48.3093,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "KW-0016",
+    "iso_country": "KW"
   },
   {
     "type": "medium_airport",
@@ -15,7 +17,11 @@
     "freq": "",
     "Lat": 28.9347991943,
     "Lon": 47.7919006348,
-    "Ele": 124.7
+    "Ele": 124.7,
+    "ident": "OKAJ",
+    "iso_country": "KW",
+    "icao_code": "OKAJ",
+    "iata_code": "XIJ"
   },
   {
     "type": "medium_airport",
@@ -24,7 +30,13 @@
     "freq": "128.300",
     "Lat": 29.344632,
     "Lon": 47.511215,
-    "Ele": 143.9
+    "Ele": 143.9,
+    "ident": "OKAS",
+    "iso_country": "KW",
+    "length_ft": 9805,
+    "width_ft": 146,
+    "heading": 120,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,13 @@
     "freq": "128.300",
     "Lat": 29.697599411010746,
     "Lon": 47.43600082397461,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "OKDI",
+    "iso_country": "KW",
+    "length_ft": 5215,
+    "width_ft": 80,
+    "heading": 181.4,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -42,7 +60,15 @@
     "freq": "121.300",
     "Lat": 29.226601,
     "Lon": 47.968899,
-    "Ele": 62.8
+    "Ele": 62.8,
+    "ident": "OKKK",
+    "iso_country": "KW",
+    "icao_code": "OKKK",
+    "iata_code": "KWI",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 155,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -51,6 +77,8 @@
     "freq": "",
     "Lat": 29.045299530029297,
     "Lon": 47.79079818725586,
-    "Ele": 100.6
+    "Ele": 100.6,
+    "ident": "Z19M",
+    "iso_country": "KW"
   }
 ]

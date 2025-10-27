@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 11.4023,
     "Lon": 26.1186,
-    "Ele": 475.5
+    "Ele": 475.5,
+    "ident": "ADV",
+    "iso_country": "SD",
+    "iata_code": "ADV"
   },
   {
     "type": "small_airport",
@@ -15,7 +18,10 @@
     "freq": "",
     "Lat": 11.1994444444,
     "Lon": 28.5230555556,
-    "Ele": 515.1
+    "Ele": 515.1,
+    "ident": "BJE",
+    "iso_country": "SD",
+    "iata_code": "BJE"
   },
   {
     "type": "small_airport",
@@ -24,7 +30,14 @@
     "freq": "",
     "Lat": 17.710344,
     "Lon": 34.057018,
-    "Ele": 360.0
+    "Ele": 360,
+    "ident": "HSAT",
+    "iso_country": "SD",
+    "icao_code": "HSAT",
+    "iata_code": "ATB",
+    "length_ft": 5905,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -33,7 +46,10 @@
     "freq": "",
     "Lat": 18.751389,
     "Lon": 36.991667,
-    "Ele": 984.5
+    "Ele": 984.5,
+    "ident": "HSCG",
+    "iso_country": "SD",
+    "icao_code": "HSCG"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,15 @@
     "freq": "",
     "Lat": 18.0146,
     "Lon": 30.9595,
-    "Ele": 256.9
+    "Ele": 256.9,
+    "ident": "HSDB",
+    "iso_country": "SD",
+    "icao_code": "HSDB",
+    "iata_code": "EDB",
+    "length_ft": 4595,
+    "width_ft": 100,
+    "heading": 181.2,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -51,7 +75,10 @@
     "freq": "",
     "Lat": 11.9906,
     "Lon": 29.673201,
-    "Ele": 672.4
+    "Ele": 672.4,
+    "ident": "HSDL",
+    "iso_country": "SD",
+    "icao_code": "HSDL"
   },
   {
     "type": "medium_airport",
@@ -60,7 +87,15 @@
     "freq": "118.200",
     "Lat": 19.1539001465,
     "Lon": 30.4300994873,
-    "Ele": 235.3
+    "Ele": 235.3,
+    "ident": "HSDN",
+    "iso_country": "SD",
+    "icao_code": "HSDN",
+    "iata_code": "DOG",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -69,7 +104,15 @@
     "freq": "118.400",
     "Lat": 11.7859,
     "Lon": 34.3367,
-    "Ele": 482.2
+    "Ele": 482.2,
+    "ident": "HSDZ",
+    "iso_country": "SD",
+    "icao_code": "HSDZ",
+    "iata_code": "RSS",
+    "length_ft": 9020,
+    "width_ft": 148,
+    "heading": 170,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -78,7 +121,15 @@
     "freq": "127.300",
     "Lat": 13.61489963531494,
     "Lon": 25.32460021972656,
-    "Ele": 729.4
+    "Ele": 729.4,
+    "ident": "HSFS",
+    "iso_country": "SD",
+    "icao_code": "HSFS",
+    "iata_code": "ELF",
+    "length_ft": 5010,
+    "width_ft": 148,
+    "heading": 184,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -87,7 +138,11 @@
     "freq": "",
     "Lat": 12.532999992370604,
     "Lon": 35.06700134277344,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "HSGG",
+    "iso_country": "SD",
+    "icao_code": "HSGG",
+    "iata_code": "DNX"
   },
   {
     "type": "small_airport",
@@ -96,7 +151,14 @@
     "freq": "",
     "Lat": 13.481882,
     "Lon": 22.467119,
-    "Ele": 808.0
+    "Ele": 808,
+    "ident": "HSGN",
+    "iso_country": "SD",
+    "icao_code": "HSGN",
+    "iata_code": "EGN",
+    "length_ft": 6194,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -105,7 +167,9 @@
     "freq": "",
     "Lat": 18.867000579833984,
     "Lon": 28.117000579833984,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "HSGO",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -114,7 +178,11 @@
     "freq": "",
     "Lat": 9.994933,
     "Lon": 29.397718,
-    "Ele": 403.9
+    "Ele": 403.9,
+    "ident": "HSHG",
+    "iso_country": "SD",
+    "icao_code": "HSHG",
+    "iata_code": "HEG"
   },
   {
     "type": "medium_airport",
@@ -123,7 +191,15 @@
     "freq": "118.200",
     "Lat": 15.387499809265137,
     "Lon": 36.328800201416016,
-    "Ele": 509.3
+    "Ele": 509.3,
+    "ident": "HSKA",
+    "iso_country": "SD",
+    "icao_code": "HSKA",
+    "iata_code": "KSL",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 22,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -132,7 +208,11 @@
     "freq": "",
     "Lat": 14.925,
     "Lon": 35.877998,
-    "Ele": 475.5
+    "Ele": 475.5,
+    "ident": "HSKG",
+    "iso_country": "SD",
+    "icao_code": "HSKG",
+    "iata_code": "GBU"
   },
   {
     "type": "small_airport",
@@ -141,7 +221,10 @@
     "freq": "",
     "Lat": 13.05343,
     "Lon": 32.90732,
-    "Ele": 393.5
+    "Ele": 393.5,
+    "ident": "HSKN",
+    "iso_country": "SD",
+    "icao_code": "HSKN"
   },
   {
     "type": "small_airport",
@@ -150,7 +233,15 @@
     "freq": "120.700",
     "Lat": 11.137999534600002,
     "Lon": 29.7010993958,
-    "Ele": 563.3
+    "Ele": 563.3,
+    "ident": "HSLI",
+    "iso_country": "SD",
+    "icao_code": "HSLI",
+    "iata_code": "KDX",
+    "length_ft": 8375,
+    "width_ft": 175,
+    "heading": 62.6,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -159,7 +250,15 @@
     "freq": "118.400",
     "Lat": 18.443333,
     "Lon": 31.843333,
-    "Ele": 273.4
+    "Ele": 273.4,
+    "ident": "HSMN",
+    "iso_country": "SD",
+    "icao_code": "HSMN",
+    "iata_code": "MWE",
+    "length_ft": 13186,
+    "width_ft": 197,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -168,7 +267,13 @@
     "freq": "",
     "Lat": 18.455,
     "Lon": 31.8185,
-    "Ele": 263.3
+    "Ele": 263.3,
+    "ident": "HSMR",
+    "iso_country": "SD",
+    "icao_code": "HSMR",
+    "length_ft": 4921,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -177,7 +282,11 @@
     "freq": "",
     "Lat": 12.735513,
     "Lon": 28.410841,
-    "Ele": 595.9
+    "Ele": 595.9,
+    "ident": "HSNH",
+    "iso_country": "SD",
+    "icao_code": "HSNH",
+    "iata_code": "NUD"
   },
   {
     "type": "medium_airport",
@@ -186,7 +295,15 @@
     "freq": "118.100",
     "Lat": 12.0535,
     "Lon": 24.9562,
-    "Ele": 641.9
+    "Ele": 641.9,
+    "ident": "HSNN",
+    "iso_country": "SD",
+    "icao_code": "HSNN",
+    "iata_code": "UYL",
+    "length_ft": 9880,
+    "width_ft": 148,
+    "heading": 41.4,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -195,7 +312,11 @@
     "freq": "",
     "Lat": 15.3556,
     "Lon": 35.727798,
-    "Ele": 451.1
+    "Ele": 451.1,
+    "ident": "HSNW",
+    "iso_country": "SD",
+    "icao_code": "HSNW",
+    "iata_code": "NHF"
   },
   {
     "type": "medium_airport",
@@ -204,7 +325,15 @@
     "freq": "118.500",
     "Lat": 13.1532,
     "Lon": 30.2327,
-    "Ele": 587.3
+    "Ele": 587.3,
+    "ident": "HSOB",
+    "iso_country": "SD",
+    "icao_code": "HSOB",
+    "iata_code": "EBD",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 8,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -213,7 +342,15 @@
     "freq": "128.100",
     "Lat": 19.4335994720459,
     "Lon": 37.23410034179688,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "HSPN",
+    "iso_country": "SD",
+    "icao_code": "HSPN",
+    "iata_code": "PZU",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -222,7 +359,13 @@
     "freq": "",
     "Lat": 13.4774,
     "Lon": 22.53722,
-    "Ele": 802.5
+    "Ele": 802.5,
+    "ident": "HSSG",
+    "iso_country": "SD",
+    "length_ft": 9829,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -231,7 +374,15 @@
     "freq": "124.700",
     "Lat": 15.5895,
     "Lon": 32.5532,
-    "Ele": 385.6
+    "Ele": 385.6,
+    "ident": "HSSK",
+    "iso_country": "SD",
+    "icao_code": "HSSK",
+    "iata_code": "KRT",
+    "length_ft": 9751,
+    "width_ft": 148,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -240,7 +391,10 @@
     "freq": "",
     "Lat": 19.5765,
     "Lon": 37.2159,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "HSSP",
+    "iso_country": "SD",
+    "icao_code": "HSSP"
   },
   {
     "type": "small_airport",
@@ -249,7 +403,14 @@
     "freq": "",
     "Lat": 21.802698,
     "Lon": 31.521578,
-    "Ele": 284.4
+    "Ele": 284.4,
+    "ident": "HSSW",
+    "iso_country": "SD",
+    "icao_code": "HSSW",
+    "iata_code": "WHF",
+    "length_ft": 6562,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -258,7 +419,11 @@
     "freq": "",
     "Lat": 12.9437,
     "Lon": 23.5631,
-    "Ele": 900.1
+    "Ele": 900.1,
+    "ident": "HSZA",
+    "iso_country": "SD",
+    "icao_code": "HSZA",
+    "iata_code": "ZLX"
   },
   {
     "type": "medium_airport",
@@ -267,7 +432,10 @@
     "freq": "",
     "Lat": 15.815213,
     "Lon": 32.51401,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SD-0001",
+    "iso_country": "SD",
+    "local_code": "HSOM"
   },
   {
     "type": "small_airport",
@@ -276,7 +444,9 @@
     "freq": "",
     "Lat": 14.220586,
     "Lon": 24.633616,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SD-0003",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -285,7 +455,9 @@
     "freq": "",
     "Lat": 11.256023,
     "Lon": 25.143714,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SD-0004",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -294,7 +466,9 @@
     "freq": "",
     "Lat": 19.60021,
     "Lon": 33.32162,
-    "Ele": 334.4
+    "Ele": 334.4,
+    "ident": "SD-0005",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -303,7 +477,9 @@
     "freq": "",
     "Lat": 9.774332,
     "Lon": 24.306231,
-    "Ele": 552.6
+    "Ele": 552.6,
+    "ident": "SD-0006",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -312,7 +488,9 @@
     "freq": "",
     "Lat": 19.56507,
     "Lon": 33.31448,
-    "Ele": 331.0
+    "Ele": 331,
+    "ident": "SD-0007",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -321,7 +499,9 @@
     "freq": "",
     "Lat": 13.089439,
     "Lon": 32.853462,
-    "Ele": 387.1
+    "Ele": 387.1,
+    "ident": "SD-0009",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -330,7 +510,9 @@
     "freq": "",
     "Lat": 13.31905,
     "Lon": 33.61347,
-    "Ele": 451.1
+    "Ele": 451.1,
+    "ident": "SD-0013",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -339,7 +521,9 @@
     "freq": "",
     "Lat": 13.448558,
     "Lon": 34.621427,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SD-0014",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -348,7 +532,9 @@
     "freq": "",
     "Lat": 14.295991,
     "Lon": 33.547225,
-    "Ele": 413.0
+    "Ele": 413,
+    "ident": "SD-0015",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -357,7 +543,9 @@
     "freq": "",
     "Lat": 20.77819,
     "Lon": 30.3489,
-    "Ele": 210.9
+    "Ele": 210.9,
+    "ident": "SD-0016",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -366,7 +554,9 @@
     "freq": "",
     "Lat": 13.15052,
     "Lon": 33.01786,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SD-0018",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -375,7 +565,9 @@
     "freq": "",
     "Lat": 9.360009,
     "Lon": 28.584035,
-    "Ele": 402.0
+    "Ele": 402,
+    "ident": "SD-0019",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -384,7 +576,9 @@
     "freq": "",
     "Lat": 9.468244,
     "Lon": 28.466196,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "SD-0023",
+    "iso_country": "SD"
   },
   {
     "type": "small_airport",
@@ -393,7 +587,10 @@
     "freq": "",
     "Lat": 16.703775,
     "Lon": 33.446395,
-    "Ele": 360.0
+    "Ele": 360,
+    "ident": "SD-0026",
+    "iso_country": "SD",
+    "icao_code": "HSND"
   },
   {
     "type": "small_airport",
@@ -402,6 +599,8 @@
     "freq": "",
     "Lat": 13.76607,
     "Lon": 33.42155,
-    "Ele": 448.1
+    "Ele": 448.1,
+    "ident": "SD-0029",
+    "iso_country": "SD"
   }
 ]

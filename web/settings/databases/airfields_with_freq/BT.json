@@ -6,7 +6,14 @@
     "freq": "122.550",
     "Lat": 27.5622,
     "Lon": 90.7471,
-    "Ele": 2586.2
+    "Ele": 2586.2,
+    "ident": "VQBT",
+    "iso_country": "BT",
+    "icao_code": "VQBT",
+    "iata_code": "BUT",
+    "length_ft": 3937,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,15 @@
     "freq": "",
     "Lat": 26.88456,
     "Lon": 90.46412,
-    "Ele": 298.7
+    "Ele": 298.7,
+    "ident": "VQGP",
+    "iso_country": "BT",
+    "icao_code": "VQGP",
+    "iata_code": "GLU",
+    "length_ft": 4921,
+    "width_ft": 115,
+    "heading": 118.25,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -24,7 +39,15 @@
     "freq": "",
     "Lat": 27.4032,
     "Lon": 89.424599,
-    "Ele": 2244.5
+    "Ele": 2244.5,
+    "ident": "VQPR",
+    "iso_country": "BT",
+    "icao_code": "VQPR",
+    "iata_code": "PBH",
+    "length_ft": 7431,
+    "width_ft": 98,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -33,6 +56,14 @@
     "freq": "",
     "Lat": 27.25627,
     "Lon": 91.514633,
-    "Ele": 2743.2
+    "Ele": 2743.2,
+    "ident": "VQTY",
+    "iso_country": "BT",
+    "icao_code": "VQTY",
+    "iata_code": "YON",
+    "length_ft": 4154,
+    "width_ft": 120,
+    "heading": 123.7,
+    "QFU": "30"
   }
 ]

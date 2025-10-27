@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -8.349193,
     "Lon": 127.050793,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "ID-KCI",
+    "iso_country": "TL"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -8.455563,
     "Lon": 126.975861,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TL-0001",
+    "iso_country": "TL"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,11 @@
     "freq": "",
     "Lat": -8.243133,
     "Lon": 125.606378,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "WPAT",
+    "iso_country": "TL",
+    "icao_code": "WPAT",
+    "iata_code": "AUT"
   },
   {
     "type": "medium_airport",
@@ -33,7 +41,15 @@
     "freq": "127.100",
     "Lat": -9.30331039428711,
     "Lon": 125.28700256347656,
-    "Ele": 29.3
+    "Ele": 29.3,
+    "ident": "WPDB",
+    "iso_country": "TL",
+    "icao_code": "WPDB",
+    "iata_code": "UAI",
+    "length_ft": 3448,
+    "width_ft": 98,
+    "heading": 167.4,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -42,7 +58,15 @@
     "freq": "122.900",
     "Lat": -8.546562,
     "Lon": 125.524507,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "WPDL",
+    "iso_country": "TL",
+    "icao_code": "WPDL",
+    "iata_code": "DIL",
+    "length_ft": 6065,
+    "width_ft": 98,
+    "heading": 77.2,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -51,7 +75,15 @@
     "freq": "123.450",
     "Lat": -8.486479,
     "Lon": 126.399981,
-    "Ele": 539.8
+    "Ele": 539.8,
+    "ident": "WPEC",
+    "iso_country": "TL",
+    "icao_code": "WPEC",
+    "iata_code": "BCH",
+    "length_ft": 8233,
+    "width_ft": 182,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -60,7 +92,13 @@
     "freq": "",
     "Lat": -8.447964,
     "Lon": 126.987362,
-    "Ele": 416.4
+    "Ele": 416.4,
+    "ident": "WPFL",
+    "iso_country": "TL",
+    "length_ft": 1969,
+    "width_ft": 39,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -69,7 +107,11 @@
     "freq": "",
     "Lat": -8.97224,
     "Lon": 125.214996,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "WPMN",
+    "iso_country": "TL",
+    "icao_code": "WPMN",
+    "iata_code": "MPT"
   },
   {
     "type": "medium_airport",
@@ -78,7 +120,15 @@
     "freq": "",
     "Lat": -9.19806,
     "Lon": 124.343002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "WPOC",
+    "iso_country": "TL",
+    "icao_code": "WPOC",
+    "iata_code": "OEC",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -87,7 +137,9 @@
     "freq": "",
     "Lat": -9.000988,
     "Lon": 125.683942,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "WPSM",
+    "iso_country": "TL"
   },
   {
     "type": "small_airport",
@@ -96,6 +148,10 @@
     "freq": "",
     "Lat": -8.88379955291748,
     "Lon": 126.3730010986328,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "WPVQ",
+    "iso_country": "TL",
+    "icao_code": "WPVQ",
+    "iata_code": "VIQ"
   }
 ]

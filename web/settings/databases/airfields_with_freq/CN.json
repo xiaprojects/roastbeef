@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 43.908407,
     "Lon": 120.15099,
-    "Ele": 406.9
+    "Ele": 406.9,
+    "ident": "AEQ",
+    "iso_country": "CN",
+    "iata_code": "AEQ"
   },
   {
     "type": "medium_airport",
@@ -15,7 +18,14 @@
     "freq": "",
     "Lat": 38.748317,
     "Lon": 105.58416,
-    "Ele": 1389.9
+    "Ele": 1389.9,
+    "ident": "AXF",
+    "iso_country": "CN",
+    "icao_code": "ZBAL",
+    "iata_code": "AXF",
+    "length_ft": 7874,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -24,7 +34,9 @@
     "freq": "",
     "Lat": 39.669998,
     "Lon": 121.765999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0003",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -33,7 +45,9 @@
     "freq": "",
     "Lat": 39.450901,
     "Lon": 122.017998,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0004",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -42,7 +56,9 @@
     "freq": "",
     "Lat": 40.14916610717773,
     "Lon": 116.3213882446289,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0006",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -51,7 +67,9 @@
     "freq": "",
     "Lat": 39.81111145019531,
     "Lon": 116.70833587646484,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0007",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -60,7 +78,9 @@
     "freq": "",
     "Lat": 45.670924,
     "Lon": 126.521812,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0008",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -69,7 +89,9 @@
     "freq": "",
     "Lat": 45.663982,
     "Lon": 126.700099,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0009",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -78,7 +100,10 @@
     "freq": "",
     "Lat": 22.252075,
     "Lon": 113.590229,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "CN-0010",
+    "iso_country": "CN",
+    "local_code": "A97"
   },
   {
     "type": "small_airport",
@@ -87,7 +112,13 @@
     "freq": "",
     "Lat": 31.311688,
     "Lon": 119.904848,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "CN-0012",
+    "iso_country": "CN",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -96,7 +127,9 @@
     "freq": "",
     "Lat": 41.26079940795898,
     "Lon": 116.61799621582033,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0013",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -105,7 +138,9 @@
     "freq": "",
     "Lat": 40.737015,
     "Lon": 111.229749,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0014",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -114,7 +149,9 @@
     "freq": "",
     "Lat": 39.717499,
     "Lon": 113.142998,
-    "Ele": 993.6
+    "Ele": 993.6,
+    "ident": "CN-0015",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -123,7 +160,9 @@
     "freq": "",
     "Lat": 39.757801,
     "Lon": 116.125999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0016",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -132,7 +171,9 @@
     "freq": "",
     "Lat": 38.781101,
     "Lon": 117.068001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0018",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -141,7 +182,9 @@
     "freq": "",
     "Lat": 37.407799,
     "Lon": 111.966003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0020",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -150,7 +193,9 @@
     "freq": "",
     "Lat": 39.37329864501953,
     "Lon": 117.09500122070312,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0021",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -159,7 +204,9 @@
     "freq": "",
     "Lat": 40.50310134887695,
     "Lon": 116.10800170898438,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0022",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -168,7 +215,13 @@
     "freq": "",
     "Lat": 40.379146,
     "Lon": 115.937519,
-    "Ele": 533.4
+    "Ele": 533.4,
+    "ident": "CN-0023",
+    "iso_country": "CN",
+    "length_ft": 2700,
+    "width_ft": 106,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -177,7 +230,9 @@
     "freq": "",
     "Lat": 40.102501,
     "Lon": 117.887001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0025",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -186,7 +241,9 @@
     "freq": "",
     "Lat": 30.705299,
     "Lon": 103.949997,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0026",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -195,7 +252,9 @@
     "freq": "",
     "Lat": 9.551747,
     "Lon": 112.887697,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0029",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -204,7 +263,9 @@
     "freq": "",
     "Lat": 29.4953,
     "Lon": 106.359001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0030",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -213,7 +274,9 @@
     "freq": "",
     "Lat": 30.486273,
     "Lon": 91.082561,
-    "Ele": 4299.2
+    "Ele": 4299.2,
+    "ident": "CN-0033",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -222,7 +285,13 @@
     "freq": "",
     "Lat": 23.426901,
     "Lon": 116.762001,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "CN-0036",
+    "iso_country": "CN",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 39,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -231,7 +300,9 @@
     "freq": "",
     "Lat": 34.8723,
     "Lon": 110.361,
-    "Ele": 376.7
+    "Ele": 376.7,
+    "ident": "CN-0037",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -240,7 +311,9 @@
     "freq": "",
     "Lat": 23.5847,
     "Lon": 102.010003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0039",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -249,7 +322,9 @@
     "freq": "",
     "Lat": 24.988192,
     "Lon": 103.642833,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0041",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -258,7 +333,9 @@
     "freq": "",
     "Lat": 23.3953,
     "Lon": 103.334,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0043",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -267,7 +344,9 @@
     "freq": "",
     "Lat": 30.49099,
     "Lon": 103.466139,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0045",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -276,7 +355,9 @@
     "freq": "",
     "Lat": 23.715599060058597,
     "Lon": 103.8270034790039,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0048",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -285,7 +366,9 @@
     "freq": "",
     "Lat": 25.445299,
     "Lon": 100.735001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0049",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -294,7 +377,10 @@
     "freq": "",
     "Lat": 29.376484,
     "Lon": 104.625789,
-    "Ele": 345.3
+    "Ele": 345.3,
+    "ident": "CN-0051",
+    "iso_country": "CN",
+    "iata_code": "ZKL"
   },
   {
     "type": "small_airport",
@@ -303,7 +389,9 @@
     "freq": "",
     "Lat": 29.732148,
     "Lon": 103.613477,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0052",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -312,7 +400,9 @@
     "freq": "",
     "Lat": 22.120481,
     "Lon": 107.125046,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0053",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -321,7 +411,9 @@
     "freq": "",
     "Lat": 38.83359,
     "Lon": 115.521626,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0054",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -330,7 +422,9 @@
     "freq": "",
     "Lat": 28.068522,
     "Lon": 112.957306,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "CN-0055",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -339,7 +433,9 @@
     "freq": "",
     "Lat": 30.798599,
     "Lon": 111.809998,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0056",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -348,7 +444,9 @@
     "freq": "",
     "Lat": 18.6922,
     "Lon": 109.161003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0057",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -357,7 +455,9 @@
     "freq": "",
     "Lat": 23.1647,
     "Lon": 113.369003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0059",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -366,7 +466,9 @@
     "freq": "",
     "Lat": 36.990726,
     "Lon": 100.857505,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0060",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -375,7 +477,15 @@
     "freq": "",
     "Lat": 31.73842,
     "Lon": 106.644872,
-    "Ele": 549.9
+    "Ele": 549.9,
+    "ident": "CN-0062",
+    "iso_country": "CN",
+    "icao_code": "ZUBZ",
+    "iata_code": "BZX",
+    "local_code": "BZX",
+    "length_ft": 8530,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -384,7 +494,9 @@
     "freq": "",
     "Lat": 23.330799,
     "Lon": 110.009003,
-    "Ele": 52.1
+    "Ele": 52.1,
+    "ident": "CN-0063",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -393,7 +505,9 @@
     "freq": "",
     "Lat": 26.40994,
     "Lon": 106.532264,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0066",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -402,7 +516,9 @@
     "freq": "",
     "Lat": 19.697201,
     "Lon": 109.725998,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0069",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -411,7 +527,9 @@
     "freq": "",
     "Lat": 26.58720016479492,
     "Lon": 112.89199829101562,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0071",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -420,7 +538,9 @@
     "freq": "",
     "Lat": 18.4944,
     "Lon": 109.987999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0072",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -429,7 +549,10 @@
     "freq": "",
     "Lat": 33.708533,
     "Lon": 110.249284,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0073",
+    "iso_country": "CN",
+    "iata_code": "DFA"
   },
   {
     "type": "medium_airport",
@@ -438,7 +561,9 @@
     "freq": "",
     "Lat": 34.449507,
     "Lon": 115.459261,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0074",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -447,7 +572,9 @@
     "freq": "",
     "Lat": 34.86125,
     "Lon": 113.729631,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0076",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -456,7 +583,14 @@
     "freq": "",
     "Lat": 24.9786,
     "Lon": 113.420998,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "CN-0079",
+    "iso_country": "CN",
+    "icao_code": "ZGSG",
+    "iata_code": "HSC",
+    "length_ft": 9186,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -465,7 +599,13 @@
     "freq": "130.000",
     "Lat": 21.3958,
     "Lon": 110.199997,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0080",
+    "iso_country": "CN",
+    "length_ft": 9186,
+    "width_ft": 164,
+    "heading": 105,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -474,7 +614,14 @@
     "freq": "",
     "Lat": 26.856899,
     "Lon": 114.737,
-    "Ele": 85.6
+    "Ele": 85.6,
+    "ident": "CN-0081",
+    "iso_country": "CN",
+    "icao_code": "ZSGS",
+    "iata_code": "JGS",
+    "length_ft": 8530,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -483,7 +630,9 @@
     "freq": "",
     "Lat": 36.000428,
     "Lon": 117.625833,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0083",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -492,7 +641,9 @@
     "freq": "",
     "Lat": 30.95359,
     "Lon": 113.911774,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0085",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -501,7 +652,12 @@
     "freq": "",
     "Lat": 38.403025,
     "Lon": 116.930924,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0090",
+    "iso_country": "CN",
+    "length_ft": 8235,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -510,7 +666,9 @@
     "freq": "",
     "Lat": 36.331163,
     "Lon": 120.025538,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "CN-0092",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -519,7 +677,9 @@
     "freq": "",
     "Lat": 36.768569,
     "Lon": 116.639786,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "CN-0093",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -528,7 +688,9 @@
     "freq": "",
     "Lat": 37.491153,
     "Lon": 116.116726,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "CN-0094",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -537,7 +699,9 @@
     "freq": "",
     "Lat": 34.75389862060547,
     "Lon": 114.33899688720705,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0095",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -546,7 +710,9 @@
     "freq": "",
     "Lat": 36.9636,
     "Lon": 120.591003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0096",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -555,7 +721,9 @@
     "freq": "",
     "Lat": 33.685434,
     "Lon": 112.89053,
-    "Ele": 143.0
+    "Ele": 143,
+    "ident": "CN-0097",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -564,7 +732,9 @@
     "freq": "",
     "Lat": 49.164182,
     "Lon": 119.693685,
-    "Ele": 619.0
+    "Ele": 619,
+    "ident": "CN-0098",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -573,7 +743,9 @@
     "freq": "",
     "Lat": 48.425954,
     "Lon": 121.387768,
-    "Ele": 918.1
+    "Ele": 918.1,
+    "ident": "CN-0099",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -582,7 +754,9 @@
     "freq": "",
     "Lat": 36.158929,
     "Lon": 120.387832,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0100",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -591,7 +765,9 @@
     "freq": "",
     "Lat": 22.66392,
     "Lon": 113.46885,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0102",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -600,7 +776,9 @@
     "freq": "",
     "Lat": 34.56423,
     "Lon": 116.97377,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "CN-0105",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -609,7 +787,9 @@
     "freq": "",
     "Lat": 34.229285,
     "Lon": 117.245665,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0106",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -618,7 +798,9 @@
     "freq": "",
     "Lat": 10.923926,
     "Lon": 114.070648,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0108",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -627,7 +809,9 @@
     "freq": "",
     "Lat": 36.586649,
     "Lon": 118.527712,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0109",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -636,7 +820,9 @@
     "freq": "",
     "Lat": 9.92102,
     "Lon": 115.5059,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0110",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -645,7 +831,9 @@
     "freq": "",
     "Lat": 36.027468,
     "Lon": 119.43778,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0111",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -654,7 +842,9 @@
     "freq": "",
     "Lat": 34.53125,
     "Lon": 107.470679,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0114",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -663,7 +853,9 @@
     "freq": "",
     "Lat": 36.3367,
     "Lon": 100.480003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0117",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -672,7 +864,9 @@
     "freq": "",
     "Lat": 40.49979,
     "Lon": 120.659295,
-    "Ele": 29.6
+    "Ele": 29.6,
+    "ident": "CN-0121",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -681,7 +875,9 @@
     "freq": "",
     "Lat": 35.917801,
     "Lon": 104.218002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0123",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -690,7 +886,9 @@
     "freq": "",
     "Lat": 35.3083,
     "Lon": 103.835999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0125",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -699,7 +897,9 @@
     "freq": "",
     "Lat": 39.554699,
     "Lon": 98.884201,
-    "Ele": 1485.0
+    "Ele": 1485,
+    "ident": "CN-0127",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -708,7 +908,9 @@
     "freq": "",
     "Lat": 44.333051,
     "Lon": 86.116674,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0129",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -717,7 +919,9 @@
     "freq": "",
     "Lat": 43.466593,
     "Lon": 87.531177,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0132",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -726,7 +930,9 @@
     "freq": "",
     "Lat": 42.1814,
     "Lon": 87.188103,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0133",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -735,7 +941,9 @@
     "freq": "",
     "Lat": 34.275907,
     "Lon": 108.2658,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0134",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -744,7 +952,9 @@
     "freq": "",
     "Lat": 43.951175,
     "Lon": 87.079232,
-    "Ele": 739.1
+    "Ele": 739.1,
+    "ident": "CN-0135",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -753,7 +963,9 @@
     "freq": "",
     "Lat": 37.9883,
     "Lon": 102.567001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0136",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -762,7 +974,9 @@
     "freq": "",
     "Lat": 34.153059,
     "Lon": 108.599739,
-    "Ele": 407.5
+    "Ele": 407.5,
+    "ident": "CN-0137",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -771,7 +985,9 @@
     "freq": "",
     "Lat": 25.5483,
     "Lon": 114.619003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0138",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -780,7 +996,9 @@
     "freq": "",
     "Lat": 43.077202,
     "Lon": 92.808098,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0139",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -789,7 +1007,9 @@
     "freq": "",
     "Lat": 34.642248,
     "Lon": 109.241867,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0140",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -798,7 +1018,9 @@
     "freq": "",
     "Lat": 25.193836,
     "Lon": 110.32033,
-    "Ele": 145.1
+    "Ele": 145.1,
+    "ident": "CN-0141",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -807,7 +1029,9 @@
     "freq": "",
     "Lat": 30.968599,
     "Lon": 119.731003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0145",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -816,7 +1040,9 @@
     "freq": "",
     "Lat": 30.287581,
     "Lon": 122.144401,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "CN-0146",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -825,7 +1051,9 @@
     "freq": "",
     "Lat": 31.909401,
     "Lon": 117.658997,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0147",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -834,7 +1062,13 @@
     "freq": "",
     "Lat": 26.003857,
     "Lon": 119.312832,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "CN-0149",
+    "iso_country": "CN",
+    "length_ft": 7874,
+    "width_ft": 164,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -843,7 +1077,9 @@
     "freq": "",
     "Lat": 25.0261,
     "Lon": 118.806999,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "CN-0152",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -852,7 +1088,9 @@
     "freq": "",
     "Lat": 30.3353,
     "Lon": 120.240997,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0153",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -861,7 +1099,11 @@
     "freq": "",
     "Lat": 30.705535,
     "Lon": 120.679779,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "CN-0154",
+    "iso_country": "CN",
+    "icao_code": "ZSJX",
+    "iata_code": "JNH"
   },
   {
     "type": "small_airport",
@@ -870,7 +1112,9 @@
     "freq": "",
     "Lat": 31.664,
     "Lon": 121.5187,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "CN-0155",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -879,7 +1123,14 @@
     "freq": "",
     "Lat": 48.38745,
     "Lon": 124.43127,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "CN-0157",
+    "iso_country": "CN",
+    "iata_code": "DWS",
+    "length_ft": 3937,
+    "width_ft": 82,
+    "heading": 171,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -888,7 +1139,9 @@
     "freq": "",
     "Lat": 25.5728,
     "Lon": 119.459999,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "CN-0158",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -897,7 +1150,9 @@
     "freq": "",
     "Lat": 28.421205,
     "Lon": 115.923375,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "CN-0163",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1161,9 @@
     "freq": "",
     "Lat": 29.9228,
     "Lon": 121.573997,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0165",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -915,7 +1172,11 @@
     "freq": "",
     "Lat": 40.640982,
     "Lon": 81.273888,
-    "Ele": 1010.1
+    "Ele": 1010.1,
+    "ident": "CN-0166",
+    "iso_country": "CN",
+    "QFU": "01",
+    "heading": 10
   },
   {
     "type": "medium_airport",
@@ -924,7 +1185,9 @@
     "freq": "",
     "Lat": 31.324438,
     "Lon": 121.409508,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0169",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -933,7 +1196,10 @@
     "freq": "",
     "Lat": 37.91305,
     "Lon": 114.59166,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "CN-0177",
+    "iso_country": "CN",
+    "iata_code": "LCT"
   },
   {
     "type": "medium_airport",
@@ -942,7 +1208,10 @@
     "freq": "",
     "Lat": 30.25521,
     "Lon": 114.062805,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "CN-0178",
+    "iso_country": "CN",
+    "iata_code": "WHN"
   },
   {
     "type": "small_airport",
@@ -951,7 +1220,9 @@
     "freq": "",
     "Lat": 34.38946,
     "Lon": 107.12865,
-    "Ele": 803.1
+    "Ele": 803.1,
+    "ident": "CN-0179",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -960,7 +1231,9 @@
     "freq": "",
     "Lat": 39.14996,
     "Lon": 115.28795,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0180",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -969,7 +1242,9 @@
     "freq": "",
     "Lat": 39.25469,
     "Lon": 115.83329,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0181",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -978,7 +1253,9 @@
     "freq": "",
     "Lat": 28.023283,
     "Lon": 115.549649,
-    "Ele": 35.4
+    "Ele": 35.4,
+    "ident": "CN-0182",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -987,7 +1264,9 @@
     "freq": "",
     "Lat": 24.561621,
     "Lon": 117.654665,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0183",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -996,7 +1275,9 @@
     "freq": "",
     "Lat": 39.36942,
     "Lon": 115.93992,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0184",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1005,7 +1286,9 @@
     "freq": "",
     "Lat": 43.9053,
     "Lon": 125.197998,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0185",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1297,9 @@
     "freq": "",
     "Lat": 39.45692,
     "Lon": 116.00091,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0186",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1023,7 +1308,13 @@
     "freq": "",
     "Lat": 39.48595,
     "Lon": 116.37236,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0188",
+    "iso_country": "CN",
+    "iata_code": "NAY",
+    "length_ft": 12467,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -1032,7 +1323,9 @@
     "freq": "",
     "Lat": 40.401402,
     "Lon": 99.789398,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0190",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1041,7 +1334,9 @@
     "freq": "",
     "Lat": 42.078899,
     "Lon": 121.662003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0191",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1050,7 +1345,9 @@
     "freq": "",
     "Lat": 43.526293,
     "Lon": 124.78466,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0192",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1356,10 @@
     "freq": "",
     "Lat": 45.59886,
     "Lon": 126.65808,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0193",
+    "iso_country": "CN",
+    "iata_code": "PFA"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1368,9 @@
     "freq": "",
     "Lat": 40.749199,
     "Lon": 120.878998,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0194",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1077,7 +1379,9 @@
     "freq": "",
     "Lat": 41.187138,
     "Lon": 121.167239,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0195",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1086,7 +1390,9 @@
     "freq": "",
     "Lat": 42.525799,
     "Lon": 123.982002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0197",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1095,7 +1401,9 @@
     "freq": "",
     "Lat": 45.259457,
     "Lon": 126.893536,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0198",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1412,9 @@
     "freq": "",
     "Lat": 31.33396,
     "Lon": 121.62176,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0199",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1423,9 @@
     "freq": "",
     "Lat": 34.2879,
     "Lon": 117.1713,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0200",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1122,7 +1434,9 @@
     "freq": "",
     "Lat": 40.900409,
     "Lon": 118.677878,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0201",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1445,9 @@
     "freq": "",
     "Lat": 43.73361,
     "Lon": 125.25333,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0203",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1140,7 +1456,9 @@
     "freq": "",
     "Lat": 41.8708,
     "Lon": 123.439003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0204",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1467,9 @@
     "freq": "",
     "Lat": 31.77999,
     "Lon": 117.29833,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "CN-0205",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1158,7 +1478,9 @@
     "freq": "",
     "Lat": 41.822498,
     "Lon": 123.299004,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0206",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1489,9 @@
     "freq": "",
     "Lat": 45.406874,
     "Lon": 126.320977,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0207",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1176,7 +1500,9 @@
     "freq": "",
     "Lat": 43.156898,
     "Lon": 124.292,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0208",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1185,7 +1511,9 @@
     "freq": "",
     "Lat": 40.298992,
     "Lon": 120.36152,
-    "Ele": 13.1
+    "Ele": 13.1,
+    "ident": "CN-0209",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1194,7 +1522,9 @@
     "freq": "",
     "Lat": 38.912201,
     "Lon": 121.238998,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0210",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1533,9 @@
     "freq": "",
     "Lat": 36.3875,
     "Lon": 119.71194,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0211",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1544,9 @@
     "freq": "",
     "Lat": 31.6625,
     "Lon": 113.81777,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0213",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1555,9 @@
     "freq": "",
     "Lat": 30.90205,
     "Lon": 114.51008,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0214",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1566,9 @@
     "freq": "",
     "Lat": 33.79276,
     "Lon": 120.16497,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0215",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1577,9 @@
     "freq": "",
     "Lat": 37.55449,
     "Lon": 120.2724,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "CN-0216",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1588,10 @@
     "freq": "",
     "Lat": 37.80473,
     "Lon": 120.80954,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "CN-0217",
+    "iso_country": "CN",
+    "iata_code": "PNJ"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1600,14 @@
     "freq": "",
     "Lat": 37.61055,
     "Lon": 117.885699,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "CN-0218",
+    "iso_country": "CN",
+    "iata_code": "CBZ",
+    "length_ft": 7169,
+    "width_ft": 148,
+    "heading": 360,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1616,9 @@
     "freq": "",
     "Lat": 36.296834,
     "Lon": 116.439802,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "CN-0219",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1627,9 @@
     "freq": "",
     "Lat": 36.80982,
     "Lon": 117.8922,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "CN-0220",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1284,7 +1638,9 @@
     "freq": "",
     "Lat": 38.41903,
     "Lon": 117.29877,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "CN-0221",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1649,9 @@
     "freq": "",
     "Lat": 38.56417,
     "Lon": 117.31323,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "CN-0222",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1660,9 @@
     "freq": "",
     "Lat": 41.3282,
     "Lon": 122.45557,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "CN-0223",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1671,9 @@
     "freq": "",
     "Lat": 32.37938,
     "Lon": 118.79465,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "CN-0224",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1682,9 @@
     "freq": "",
     "Lat": 40.990059,
     "Lon": 80.094509,
-    "Ele": 1106.1
+    "Ele": 1106.1,
+    "ident": "CN-0226",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1693,9 @@
     "freq": "",
     "Lat": 42.55217,
     "Lon": 94.21869,
-    "Ele": 862.0
+    "Ele": 862,
+    "ident": "CN-0227",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1338,7 +1704,9 @@
     "freq": "",
     "Lat": 39.046062,
     "Lon": 100.168562,
-    "Ele": 1551.1
+    "Ele": 1551.1,
+    "ident": "CN-0228",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1715,9 @@
     "freq": "",
     "Lat": 39.93824,
     "Lon": 113.40345,
-    "Ele": 1018.0
+    "Ele": 1018,
+    "ident": "CN-0229",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1726,9 @@
     "freq": "",
     "Lat": 38.08191,
     "Lon": 114.41804,
-    "Ele": 86.0
+    "Ele": 86,
+    "ident": "CN-0230",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1737,9 @@
     "freq": "",
     "Lat": 35.29336,
     "Lon": 113.83837,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "CN-0231",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1748,9 @@
     "freq": "",
     "Lat": 30.40678,
     "Lon": 113.59485,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0232",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1759,9 @@
     "freq": "",
     "Lat": 31.97139,
     "Lon": 118.8404,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "CN-0235",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1392,7 +1770,11 @@
     "freq": "",
     "Lat": 28.604567,
     "Lon": 86.798,
-    "Ele": 4300.1
+    "Ele": 4300.1,
+    "ident": "CN-0236",
+    "iso_country": "CN",
+    "icao_code": "ZUDR",
+    "iata_code": "DDR"
   },
   {
     "type": "medium_airport",
@@ -1401,7 +1783,13 @@
     "freq": "",
     "Lat": 37.661333,
     "Lon": 75.288877,
-    "Ele": 3200.1
+    "Ele": 3200.1,
+    "ident": "CN-0237",
+    "iso_country": "CN",
+    "icao_code": "ZWTK",
+    "iata_code": "HQL",
+    "length_ft": 12467,
+    "width_ft": 148
   },
   {
     "type": "small_airport",
@@ -1410,7 +1798,10 @@
     "freq": "",
     "Lat": 29.122619,
     "Lon": 120.24289,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "CN-0238",
+    "iso_country": "CN",
+    "iata_code": "HEW"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1810,9 @@
     "freq": "",
     "Lat": 30.985923,
     "Lon": 112.05368,
-    "Ele": 138.4
+    "Ele": 138.4,
+    "ident": "CN-0241",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1428,7 +1821,9 @@
     "freq": "",
     "Lat": 42.390739,
     "Lon": 123.370464,
-    "Ele": 87.2
+    "Ele": 87.2,
+    "ident": "CN-0242",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1437,7 +1832,9 @@
     "freq": "",
     "Lat": 47.96256,
     "Lon": 133.18252,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "CN-0243",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1446,7 +1843,9 @@
     "freq": "",
     "Lat": 30.73019,
     "Lon": 104.09282,
-    "Ele": 506.0
+    "Ele": 506,
+    "ident": "CN-0244",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1455,7 +1854,9 @@
     "freq": "",
     "Lat": 30.60321,
     "Lon": 104.01766,
-    "Ele": 492.6
+    "Ele": 492.6,
+    "ident": "CN-0245",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1464,7 +1865,9 @@
     "freq": "",
     "Lat": 30.560102,
     "Lon": 103.730721,
-    "Ele": 501.4
+    "Ele": 501.4,
+    "ident": "CN-0246",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1473,7 +1876,9 @@
     "freq": "",
     "Lat": 30.4214,
     "Lon": 103.8444,
-    "Ele": 460.9
+    "Ele": 460.9,
+    "ident": "CN-0247",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1482,7 +1887,9 @@
     "freq": "",
     "Lat": 30.26485,
     "Lon": 103.8511,
-    "Ele": 441.0
+    "Ele": 441,
+    "ident": "CN-0248",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1491,7 +1898,9 @@
     "freq": "",
     "Lat": 33.42127,
     "Lon": 119.72231,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "CN-0250",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1500,7 +1909,9 @@
     "freq": "",
     "Lat": 36.43788,
     "Lon": 117.56978,
-    "Ele": 234.7
+    "Ele": 234.7,
+    "ident": "CN-0252",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1509,7 +1920,10 @@
     "freq": "",
     "Lat": 29.360905,
     "Lon": 119.180829,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "CN-0253",
+    "iso_country": "CN",
+    "iata_code": "JDE"
   },
   {
     "type": "small_airport",
@@ -1518,7 +1932,9 @@
     "freq": "",
     "Lat": 29.4535,
     "Lon": 121.0104,
-    "Ele": 207.9
+    "Ele": 207.9,
+    "ident": "CN-0255",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1527,7 +1943,9 @@
     "freq": "",
     "Lat": 34.13324,
     "Lon": 108.9848,
-    "Ele": 556.0
+    "Ele": 556,
+    "ident": "CN-0256",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1536,7 +1954,9 @@
     "freq": "",
     "Lat": 48.73158,
     "Lon": 127.37618,
-    "Ele": 385.9
+    "Ele": 385.9,
+    "ident": "CN-0258",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1545,7 +1965,9 @@
     "freq": "",
     "Lat": 48.20117,
     "Lon": 124.17853,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "CN-0261",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1554,7 +1976,9 @@
     "freq": "",
     "Lat": 47.57175,
     "Lon": 132.13077,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "CN-0262",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1563,7 +1987,9 @@
     "freq": "",
     "Lat": 48.30346,
     "Lon": 125.35989,
-    "Ele": 302.1
+    "Ele": 302.1,
+    "ident": "CN-0263",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1572,7 +1998,9 @@
     "freq": "",
     "Lat": 48.91567,
     "Lon": 126.91011,
-    "Ele": 388.9
+    "Ele": 388.9,
+    "ident": "CN-0264",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2009,9 @@
     "freq": "",
     "Lat": 48.65333,
     "Lon": 126.71333,
-    "Ele": 306.0
+    "Ele": 306,
+    "ident": "CN-0265",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2020,9 @@
     "freq": "",
     "Lat": 47.736986,
     "Lon": 133.234103,
-    "Ele": 61.9
+    "Ele": 61.9,
+    "ident": "CN-0266",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2031,9 @@
     "freq": "",
     "Lat": 46.79304,
     "Lon": 130.26974,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "CN-0267",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2042,10 @@
     "freq": "",
     "Lat": 46.12779,
     "Lon": 125.77354,
-    "Ele": 143.0
+    "Ele": 143,
+    "ident": "CN-0268",
+    "iso_country": "CN",
+    "iata_code": "HLJ"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2054,9 @@
     "freq": "",
     "Lat": 47.45055,
     "Lon": 134.06924,
-    "Ele": 66.1
+    "Ele": 66.1,
+    "ident": "CN-0269",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2065,9 @@
     "freq": "",
     "Lat": 41.66629,
     "Lon": 82.58655,
-    "Ele": 1028.1
+    "Ele": 1028.1,
+    "ident": "CN-0272",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2076,9 @@
     "freq": "",
     "Lat": 45.042755,
     "Lon": 86.131661,
-    "Ele": 341.1
+    "Ele": 341.1,
+    "ident": "CN-0273",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2087,9 @@
     "freq": "",
     "Lat": 41.77703,
     "Lon": 85.44939,
-    "Ele": 900.1
+    "Ele": 900.1,
+    "ident": "CN-0274",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2098,9 @@
     "freq": "",
     "Lat": 39.43714,
     "Lon": 78.25212,
-    "Ele": 1135.1
+    "Ele": 1135.1,
+    "ident": "CN-0275",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2109,9 @@
     "freq": "",
     "Lat": 43.298872,
     "Lon": 84.161324,
-    "Ele": 1535.0
+    "Ele": 1535,
+    "ident": "CN-0277",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2120,9 @@
     "freq": "",
     "Lat": 43.67233,
     "Lon": 87.32347,
-    "Ele": 1306.1
+    "Ele": 1306.1,
+    "ident": "CN-0278",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1680,7 +2131,9 @@
     "freq": "",
     "Lat": 47.22734,
     "Lon": 87.84022,
-    "Ele": 538.9
+    "Ele": 538.9,
+    "ident": "CN-0279",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2142,9 @@
     "freq": "",
     "Lat": 44.885235,
     "Lon": 84.720739,
-    "Ele": 302.1
+    "Ele": 302.1,
+    "ident": "CN-0280",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2153,9 @@
     "freq": "",
     "Lat": 47.03888,
     "Lon": 89.7825,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0281",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2164,9 @@
     "freq": "",
     "Lat": 47.6805,
     "Lon": 86.92763,
-    "Ele": 487.1
+    "Ele": 487.1,
+    "ident": "CN-0282",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2175,9 @@
     "freq": "",
     "Lat": 43.20563,
     "Lon": 81.79847,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0283",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2186,13 @@
     "freq": "",
     "Lat": 40.401005,
     "Lon": 116.881289,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "CN-0284",
+    "iso_country": "CN",
+    "length_ft": 2620,
+    "width_ft": 100,
+    "heading": 24,
+    "QFU": "02"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2201,9 @@
     "freq": "",
     "Lat": 19.55219,
     "Lon": 109.43658,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "CN-0287",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2212,9 @@
     "freq": "",
     "Lat": 19.67521,
     "Lon": 110.37968,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "CN-0288",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2223,9 @@
     "freq": "",
     "Lat": 18.28754,
     "Lon": 109.46372,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "CN-0290",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2234,9 @@
     "freq": "",
     "Lat": 22.33594,
     "Lon": 113.18911,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "CN-0291",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2245,9 @@
     "freq": "",
     "Lat": 36.983261,
     "Lon": 120.268279,
-    "Ele": 116.7
+    "Ele": 116.7,
+    "ident": "CN-0296",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2256,10 @@
     "freq": "",
     "Lat": 37.50312,
     "Lon": 112.424126,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0300",
+    "iso_country": "CN",
+    "iata_code": "TYC"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2268,9 @@
     "freq": "",
     "Lat": 47.6144,
     "Lon": 131.39497,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "CN-0306",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1797,7 +2279,13 @@
     "freq": "129.050",
     "Lat": 31.215334,
     "Lon": 120.789328,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "CN-0316",
+    "iso_country": "CN",
+    "length_ft": 2146,
+    "width_ft": 20,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -1806,7 +2294,13 @@
     "freq": "122.050",
     "Lat": 30.797725,
     "Lon": 119.590287,
-    "Ele": 41.8
+    "Ele": 41.8,
+    "ident": "CN-0321",
+    "iso_country": "CN",
+    "length_ft": 2625,
+    "width_ft": 100,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2309,10 @@
     "freq": "",
     "Lat": 46.01761,
     "Lon": 85.657436,
-    "Ele": 345.6
+    "Ele": 345.6,
+    "ident": "CN-0329",
+    "iso_country": "CN",
+    "iata_code": "WRH"
   },
   {
     "type": "medium_airport",
@@ -1824,7 +2321,11 @@
     "freq": "",
     "Lat": 26.998259,
     "Lon": 107.759571,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0331",
+    "iso_country": "CN",
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -1833,7 +2334,9 @@
     "freq": "",
     "Lat": 32.389746,
     "Lon": 112.140112,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0332",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1842,7 +2345,9 @@
     "freq": "",
     "Lat": 40.874146,
     "Lon": 109.577272,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0333",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2356,9 @@
     "freq": "",
     "Lat": 34.763616,
     "Lon": 119.434175,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0336",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1860,7 +2367,9 @@
     "freq": "",
     "Lat": 37.234774,
     "Lon": 79.34206,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0341",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1869,7 +2378,9 @@
     "freq": "",
     "Lat": 36.343009,
     "Lon": 78.033335,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0342",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1878,7 +2389,9 @@
     "freq": "",
     "Lat": 30.673944,
     "Lon": 114.63089,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0344",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1887,7 +2400,9 @@
     "freq": "",
     "Lat": 30.087612,
     "Lon": 114.31366,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0345",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2411,9 @@
     "freq": "",
     "Lat": 39.010014,
     "Lon": 83.608618,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0346",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2422,11 @@
     "freq": "",
     "Lat": 25.960236,
     "Lon": 116.077016,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "CN-0347",
+    "iso_country": "CN",
+    "icao_code": "ZSRJ",
+    "iata_code": "JRJ"
   },
   {
     "type": "small_airport",
@@ -1914,7 +2435,11 @@
     "freq": "",
     "Lat": 40.767539,
     "Lon": 89.275245,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0351",
+    "iso_country": "CN",
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1923,7 +2448,9 @@
     "freq": "",
     "Lat": 40.694827,
     "Lon": 89.075604,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0352",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -1932,7 +2459,11 @@
     "freq": "",
     "Lat": 30.397898,
     "Lon": 81.13317,
-    "Ele": 4249.8
+    "Ele": 4249.8,
+    "ident": "CN-0354",
+    "iso_country": "CN",
+    "icao_code": "ZUPL",
+    "iata_code": "APJ"
   },
   {
     "type": "small_airport",
@@ -1941,7 +2472,13 @@
     "freq": "",
     "Lat": 40.28566,
     "Lon": 116.232675,
-    "Ele": 107.0
+    "Ele": 107,
+    "ident": "CN-0357",
+    "iso_country": "CN",
+    "length_ft": 1695,
+    "width_ft": 98,
+    "heading": 8,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1950,7 +2487,9 @@
     "freq": "",
     "Lat": 29.659301,
     "Lon": 107.254987,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0358",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1959,7 +2498,12 @@
     "freq": "",
     "Lat": 43.088477,
     "Lon": 81.223013,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0359",
+    "iso_country": "CN",
+    "icao_code": "ZWZS",
+    "iata_code": "ZFL",
+    "length_ft": 9186
   },
   {
     "type": "small_airport",
@@ -1968,7 +2512,9 @@
     "freq": "",
     "Lat": 40.614366,
     "Lon": 108.998835,
-    "Ele": 1026.9
+    "Ele": 1026.9,
+    "ident": "CN-0360",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -1977,7 +2523,10 @@
     "freq": "",
     "Lat": 40.302832,
     "Lon": 107.010698,
-    "Ele": 1054.0
+    "Ele": 1054,
+    "ident": "CN-0361",
+    "iso_country": "CN",
+    "icao_code": "ZBMV"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2535,10 @@
     "freq": "",
     "Lat": 38.588095,
     "Lon": 106.539788,
-    "Ele": 1136.0
+    "Ele": 1136,
+    "ident": "CN-0362",
+    "iso_country": "CN",
+    "iata_code": "YEH"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2547,9 @@
     "freq": "",
     "Lat": 40.5392,
     "Lon": 100.0185,
-    "Ele": 1128.1
+    "Ele": 1128.1,
+    "ident": "CN-0363",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2558,9 @@
     "freq": "",
     "Lat": 39.41188,
     "Lon": 99.77868,
-    "Ele": 1342.0
+    "Ele": 1342,
+    "ident": "CN-0364",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2013,7 +2569,9 @@
     "freq": "",
     "Lat": 24.0452,
     "Lon": 117.8497,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "CN-0374",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2022,7 +2580,9 @@
     "freq": "",
     "Lat": 44.829507,
     "Lon": 126.421423,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0377",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2031,7 +2591,9 @@
     "freq": "",
     "Lat": 41.269306,
     "Lon": 122.141361,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0378",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2040,7 +2602,9 @@
     "freq": "",
     "Lat": 24.2956,
     "Lon": 103.40847,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0383",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2049,7 +2613,10 @@
     "freq": "",
     "Lat": 24.26652,
     "Lon": 97.9048,
-    "Ele": 1004.9
+    "Ele": 1004.9,
+    "ident": "CN-0384",
+    "iso_country": "CN",
+    "iata_code": "LCS"
   },
   {
     "type": "small_airport",
@@ -2058,7 +2625,10 @@
     "freq": "",
     "Lat": 26.64518,
     "Lon": 99.54419,
-    "Ele": 2522.5
+    "Ele": 2522.5,
+    "ident": "CN-0385",
+    "iso_country": "CN",
+    "iata_code": "LFH"
   },
   {
     "type": "small_airport",
@@ -2067,7 +2637,9 @@
     "freq": "",
     "Lat": 21.25491,
     "Lon": 109.79244,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0394",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2076,7 +2648,9 @@
     "freq": "",
     "Lat": 27.2235,
     "Lon": 111.6741,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0396",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2085,7 +2659,9 @@
     "freq": "",
     "Lat": 27.987589,
     "Lon": 112.604971,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0401",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2094,7 +2670,9 @@
     "freq": "",
     "Lat": 23.31635,
     "Lon": 112.96416,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "CN-0403",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2103,7 +2681,9 @@
     "freq": "",
     "Lat": 36.47054,
     "Lon": 120.951246,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0404",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2112,7 +2692,9 @@
     "freq": "",
     "Lat": 24.170412,
     "Lon": 114.799213,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0407",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2121,7 +2703,11 @@
     "freq": "",
     "Lat": 33.560777,
     "Lon": 115.911859,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0413",
+    "iso_country": "CN",
+    "icao_code": "ZSBO",
+    "iata_code": "BZJ"
   },
   {
     "type": "small_airport",
@@ -2130,7 +2716,10 @@
     "freq": "",
     "Lat": 41.656944,
     "Lon": 110.3125,
-    "Ele": 1415.8
+    "Ele": 1415.8,
+    "ident": "CN-0414",
+    "iso_country": "CN",
+    "iata_code": "BKV"
   },
   {
     "type": "small_airport",
@@ -2139,7 +2728,11 @@
     "freq": "",
     "Lat": 42.976395,
     "Lon": 83.995543,
-    "Ele": 2505.2
+    "Ele": 2505.2,
+    "ident": "CN-0415",
+    "iso_country": "CN",
+    "icao_code": "ZWHJ",
+    "iata_code": "HJB"
   },
   {
     "type": "small_airport",
@@ -2148,7 +2741,10 @@
     "freq": "",
     "Lat": 38.1712,
     "Lon": 107.3905,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0416",
+    "iso_country": "CN",
+    "iata_code": "OTQ"
   },
   {
     "type": "small_airport",
@@ -2157,7 +2753,11 @@
     "freq": "",
     "Lat": 44.166086,
     "Lon": 89.55014,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0417",
+    "iso_country": "CN",
+    "icao_code": "ZWQT",
+    "iata_code": "JBK"
   },
   {
     "type": "small_airport",
@@ -2166,7 +2766,13 @@
     "freq": "",
     "Lat": 40.480965,
     "Lon": 111.575174,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0418",
+    "iso_country": "CN",
+    "length_ft": 12467,
+    "width_ft": 197,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -2175,7 +2781,9 @@
     "freq": "",
     "Lat": 34.9074,
     "Lon": 117.408,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0419",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2184,7 +2792,9 @@
     "freq": "",
     "Lat": 23.464782,
     "Lon": 103.347487,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0420",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2193,7 +2803,9 @@
     "freq": "",
     "Lat": 27.2117,
     "Lon": 103.6993,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0421",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2202,7 +2814,11 @@
     "freq": "",
     "Lat": 28.3727,
     "Lon": 119.839,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0422",
+    "iso_country": "CN",
+    "icao_code": "ZSLI",
+    "iata_code": "LIJ"
   },
   {
     "type": "small_airport",
@@ -2211,7 +2827,10 @@
     "freq": "",
     "Lat": 28.700972,
     "Lon": 116.107694,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0423",
+    "iso_country": "CN",
+    "iata_code": "YHJ"
   },
   {
     "type": "small_airport",
@@ -2220,7 +2839,9 @@
     "freq": "",
     "Lat": 39.665872,
     "Lon": 105.464137,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0426",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2229,7 +2850,10 @@
     "freq": "",
     "Lat": 39.03139,
     "Lon": 107.98889,
-    "Ele": 1348.1
+    "Ele": 1348.1,
+    "ident": "CN-0427",
+    "iso_country": "CN",
+    "iata_code": "OTO"
   },
   {
     "type": "small_airport",
@@ -2238,7 +2862,9 @@
     "freq": "",
     "Lat": 39.26611,
     "Lon": 122.07957,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0428",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2247,7 +2873,9 @@
     "freq": "",
     "Lat": 38.101538,
     "Lon": 107.232569,
-    "Ele": 1354.5
+    "Ele": 1354.5,
+    "ident": "CN-0429",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2256,7 +2884,9 @@
     "freq": "",
     "Lat": 28.572398,
     "Lon": 121.576485,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0432",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2265,7 +2895,9 @@
     "freq": "",
     "Lat": 40.186433,
     "Lon": 116.360309,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "CN-0434",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2274,7 +2906,9 @@
     "freq": "",
     "Lat": 41.101398,
     "Lon": 121.061996,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0441",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2283,7 +2917,13 @@
     "freq": "118.450",
     "Lat": 37.396825,
     "Lon": 121.369571,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "CN-0443",
+    "iso_country": "CN",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 38,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -2292,7 +2932,12 @@
     "freq": "",
     "Lat": 34.571302,
     "Lon": 118.873143,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0444",
+    "iso_country": "CN",
+    "length_ft": 8202,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -2301,7 +2946,13 @@
     "freq": "",
     "Lat": 35.292778,
     "Lon": 116.346667,
-    "Ele": 40.8
+    "Ele": 40.8,
+    "ident": "CN-0446",
+    "iso_country": "CN",
+    "local_code": "ZLJN",
+    "length_ft": 9186,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2310,7 +2961,9 @@
     "freq": "",
     "Lat": 37.76514,
     "Lon": 108.847615,
-    "Ele": 1310.0
+    "Ele": 1310,
+    "ident": "CN-0467",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2319,7 +2972,9 @@
     "freq": "",
     "Lat": 26.941602,
     "Lon": 120.077384,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0469",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2328,7 +2983,9 @@
     "freq": "",
     "Lat": 27.771768,
     "Lon": 113.207248,
-    "Ele": 70.4
+    "Ele": 70.4,
+    "ident": "CN-0470",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2337,7 +2994,9 @@
     "freq": "",
     "Lat": 30.846557,
     "Lon": 103.61043,
-    "Ele": 632.2
+    "Ele": 632.2,
+    "ident": "CN-0471",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3005,9 @@
     "freq": "",
     "Lat": 35.087326,
     "Lon": 119.300545,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "CN-0472",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2355,7 +3016,9 @@
     "freq": "",
     "Lat": 29.345012,
     "Lon": 119.198245,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "CN-0473",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2364,7 +3027,11 @@
     "freq": "",
     "Lat": 33.165808,
     "Lon": 117.057295,
-    "Ele": 21.9
+    "Ele": 21.9,
+    "ident": "CN-0476",
+    "iso_country": "CN",
+    "icao_code": "ZSBA",
+    "iata_code": "BFY"
   },
   {
     "type": "small_airport",
@@ -2373,7 +3040,9 @@
     "freq": "",
     "Lat": 47.41079,
     "Lon": 130.61054,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0477",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3051,9 @@
     "freq": "",
     "Lat": 43.772537,
     "Lon": 87.372819,
-    "Ele": 1033.0
+    "Ele": 1033,
+    "ident": "CN-0478",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2391,7 +3062,9 @@
     "freq": "",
     "Lat": 32.977467,
     "Lon": 111.881872,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-0479",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2400,7 +3073,9 @@
     "freq": "",
     "Lat": 39.289671,
     "Lon": 121.762195,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CN-JNZ",
+    "iso_country": "CN"
   },
   {
     "type": "small_airport",
@@ -2409,7 +3084,10 @@
     "freq": "",
     "Lat": 30.504264,
     "Lon": 120.107388,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DEQ",
+    "iso_country": "CN",
+    "iata_code": "DEQ"
   },
   {
     "type": "small_airport",
@@ -2418,7 +3096,14 @@
     "freq": "",
     "Lat": 42.0155,
     "Lon": 101.0005,
-    "Ele": 937.9
+    "Ele": 937.9,
+    "ident": "EJN",
+    "iso_country": "CN",
+    "icao_code": "ZBEN",
+    "iata_code": "EJN",
+    "length_ft": 6562,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2427,7 +3112,10 @@
     "freq": "",
     "Lat": 34.842153,
     "Lon": 113.273983,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "HSJ",
+    "iso_country": "CN",
+    "iata_code": "HSJ"
   },
   {
     "type": "medium_airport",
@@ -2436,7 +3124,10 @@
     "freq": "",
     "Lat": 30.677339,
     "Lon": 104.529397,
-    "Ele": 442.9
+    "Ele": 442.9,
+    "ident": "HZU",
+    "iso_country": "CN",
+    "iata_code": "HZU"
   },
   {
     "type": "small_airport",
@@ -2445,7 +3136,14 @@
     "freq": "",
     "Lat": 30.7403,
     "Lon": 117.6856,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "JUH",
+    "iso_country": "CN",
+    "icao_code": "ZSJH",
+    "iata_code": "JUH",
+    "length_ft": 7874,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -2454,7 +3152,9 @@
     "freq": "",
     "Lat": 36.041083,
     "Lon": 111.491683,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "LFQ",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2463,7 +3163,12 @@
     "freq": "",
     "Lat": 31.50191,
     "Lon": 106.034417,
-    "Ele": 440.1
+    "Ele": 440.1,
+    "ident": "LZG",
+    "iso_country": "CN",
+    "icao_code": "ZULA",
+    "iata_code": "LZG",
+    "length_ft": 11811
   },
   {
     "type": "small_airport",
@@ -2472,7 +3177,10 @@
     "freq": "",
     "Lat": 49.236372,
     "Lon": 125.337052,
-    "Ele": 243.8
+    "Ele": 243.8,
+    "ident": "NJJ",
+    "iso_country": "CN",
+    "iata_code": "NJJ"
   },
   {
     "type": "medium_airport",
@@ -2481,7 +3189,15 @@
     "freq": "",
     "Lat": 27.5403,
     "Lon": 100.7593,
-    "Ele": 3293.1
+    "Ele": 3293.1,
+    "ident": "NLH",
+    "iso_country": "CN",
+    "icao_code": "ZPNL",
+    "iata_code": "NLH",
+    "length_ft": 11155,
+    "width_ft": 164,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -2490,7 +3206,14 @@
     "freq": "",
     "Lat": 39.225,
     "Lon": 101.546,
-    "Ele": 1420.1
+    "Ele": 1420.1,
+    "ident": "RHT",
+    "iso_country": "CN",
+    "icao_code": "ZBAR",
+    "iata_code": "RHT",
+    "length_ft": 7874,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -2499,7 +3222,16 @@
     "freq": "",
     "Lat": 39.886663,
     "Lon": 79.233408,
-    "Ele": 1086.9
+    "Ele": 1086.9,
+    "ident": "TWC",
+    "iso_country": "CN",
+    "icao_code": "ZWTS",
+    "iata_code": "TWC",
+    "local_code": "TWC",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -2508,7 +3240,10 @@
     "freq": "",
     "Lat": 41.460289,
     "Lon": 108.539085,
-    "Ele": 1218.0
+    "Ele": 1218,
+    "ident": "WZQ",
+    "iso_country": "CN",
+    "iata_code": "WZQ"
   },
   {
     "type": "small_airport",
@@ -2517,7 +3252,10 @@
     "freq": "",
     "Lat": 48.575585,
     "Lon": 116.939382,
-    "Ele": 548.0
+    "Ele": 548,
+    "ident": "XRQ",
+    "iso_country": "CN",
+    "iata_code": "XRQ"
   },
   {
     "type": "small_airport",
@@ -2526,7 +3264,13 @@
     "freq": "",
     "Lat": 38.481899,
     "Lon": 106.009003,
-    "Ele": 1149.1
+    "Ele": 1149.1,
+    "ident": "YEH",
+    "iso_country": "CN",
+    "local_code": "YEH",
+    "length_ft": 11155,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2535,7 +3279,14 @@
     "freq": "",
     "Lat": 29.356667,
     "Lon": 106.010441,
-    "Ele": 344.7
+    "Ele": 344.7,
+    "ident": "YGA",
+    "iso_country": "CN",
+    "iata_code": "YGA",
+    "length_ft": 3281,
+    "width_ft": 98,
+    "heading": 22,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -2544,7 +3295,15 @@
     "freq": "119.600",
     "Lat": 40.0801010131836,
     "Lon": 116.58499908447266,
-    "Ele": 35.4
+    "Ele": 35.4,
+    "ident": "ZBAA",
+    "iso_country": "CN",
+    "icao_code": "ZBAA",
+    "iata_code": "PEK",
+    "length_ft": 11302,
+    "width_ft": 164,
+    "heading": 173,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -2553,7 +3312,15 @@
     "freq": "126.100",
     "Lat": 39.509945,
     "Lon": 116.41092,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "ZBAD",
+    "iso_country": "CN",
+    "icao_code": "ZBAD",
+    "iata_code": "PKX",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "heading": 173,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -2562,7 +3329,12 @@
     "freq": "125.900",
     "Lat": 39.958592,
     "Lon": 116.256765,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "ZBBB",
+    "iso_country": "CN",
+    "icao_code": "ZBBB",
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -2571,7 +3343,15 @@
     "freq": "",
     "Lat": 41.1225,
     "Lon": 118.073889,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBCD",
+    "iso_country": "CN",
+    "icao_code": "ZBCD",
+    "iata_code": "CDE",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -2580,7 +3360,14 @@
     "freq": "",
     "Lat": 42.159723,
     "Lon": 118.840971,
-    "Ele": 615.1
+    "Ele": 615.1,
+    "ident": "ZBCF",
+    "iso_country": "CN",
+    "icao_code": "ZBCF",
+    "iata_code": "CIF",
+    "length_ft": 5774,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -2589,7 +3376,14 @@
     "freq": "",
     "Lat": 36.247501,
     "Lon": 113.125999,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBCZ",
+    "iso_country": "CN",
+    "icao_code": "ZBCZ",
+    "iata_code": "CIH",
+    "length_ft": 8530,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -2598,7 +3392,14 @@
     "freq": "",
     "Lat": 39.666384,
     "Lon": 119.061384,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "ZBDH",
+    "iso_country": "CN",
+    "icao_code": "ZBDH",
+    "iata_code": "BPE",
+    "length_ft": 8530,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -2607,7 +3408,15 @@
     "freq": "126.800",
     "Lat": 39.493514,
     "Lon": 109.8599,
-    "Ele": 1389.0
+    "Ele": 1389,
+    "ident": "ZBDS",
+    "iso_country": "CN",
+    "icao_code": "ZBDS",
+    "iata_code": "DSN",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 128,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2616,7 +3425,14 @@
     "freq": "",
     "Lat": 40.061614,
     "Lon": 113.480032,
-    "Ele": 1049.1
+    "Ele": 1049.1,
+    "ident": "ZBDT",
+    "iso_country": "CN",
+    "icao_code": "ZBDT",
+    "iata_code": "DAT",
+    "length_ft": 9843,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -2625,7 +3441,15 @@
     "freq": "",
     "Lat": 43.4225,
     "Lon": 112.096667,
-    "Ele": 1006.1
+    "Ele": 1006.1,
+    "ident": "ZBER",
+    "iso_country": "CN",
+    "icao_code": "ZBER",
+    "iata_code": "ERL",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -2634,7 +3458,14 @@
     "freq": "",
     "Lat": 47.3106,
     "Lon": 119.9117,
-    "Ele": 891.5
+    "Ele": 891.5,
+    "ident": "ZBES",
+    "iso_country": "CN",
+    "icao_code": "ZBES",
+    "iata_code": "YIE",
+    "length_ft": 7874,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -2643,7 +3474,15 @@
     "freq": "",
     "Lat": 36.525833,
     "Lon": 114.425556,
-    "Ele": 69.8
+    "Ele": 69.8,
+    "ident": "ZBHD",
+    "iso_country": "CN",
+    "icao_code": "ZBHD",
+    "iata_code": "HDG",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "large_airport",
@@ -2652,7 +3491,15 @@
     "freq": "126.250",
     "Lat": 40.849658,
     "Lon": 111.824598,
-    "Ele": 1083.9
+    "Ele": 1083.9,
+    "ident": "ZBHH",
+    "iso_country": "CN",
+    "icao_code": "ZBHH",
+    "iata_code": "HET",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 72.7,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2661,7 +3508,15 @@
     "freq": "",
     "Lat": 45.487222,
     "Lon": 119.407222,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBHZ",
+    "iso_country": "CN",
+    "icao_code": "ZBHZ",
+    "iata_code": "HUO",
+    "length_ft": 8858,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -2670,7 +3525,15 @@
     "freq": "118.100",
     "Lat": 49.205002,
     "Lon": 119.824997,
-    "Ele": 661.1
+    "Ele": 661.1,
+    "ident": "ZBLA",
+    "iso_country": "CN",
+    "icao_code": "ZBLA",
+    "iata_code": "HLD",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 83.8,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2679,7 +3542,15 @@
     "freq": "",
     "Lat": 36.132629,
     "Lon": 111.641236,
-    "Ele": 452.0
+    "Ele": 452,
+    "ident": "ZBLF",
+    "iso_country": "CN",
+    "icao_code": "ZBLF",
+    "iata_code": "LFQ",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -2688,7 +3559,14 @@
     "freq": "",
     "Lat": 37.683333,
     "Lon": 111.142778,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBLL",
+    "iso_country": "CN",
+    "icao_code": "ZBLL",
+    "iata_code": "LLV",
+    "length_ft": 8530,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -2697,7 +3575,15 @@
     "freq": "",
     "Lat": 49.566667,
     "Lon": 117.33,
-    "Ele": 680.0
+    "Ele": 680,
+    "ident": "ZBMZ",
+    "iso_country": "CN",
+    "icao_code": "ZBMZ",
+    "iata_code": "NZH",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "heading": 107,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -2706,7 +3592,15 @@
     "freq": "",
     "Lat": 40.560001,
     "Lon": 109.997002,
-    "Ele": 1012.2
+    "Ele": 1012.2,
+    "ident": "ZBOW",
+    "iso_country": "CN",
+    "icao_code": "ZBOW",
+    "iata_code": "BAV",
+    "length_ft": 9186,
+    "width_ft": 200,
+    "heading": 130,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2715,7 +3609,15 @@
     "freq": "",
     "Lat": 39.273241,
     "Lon": 112.691552,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBSG",
+    "iso_country": "CN",
+    "icao_code": "ZBSG",
+    "iata_code": "SZH",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 65,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -2724,7 +3626,9 @@
     "freq": "",
     "Lat": 39.968679,
     "Lon": 119.730635,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "ZBSH",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2733,7 +3637,15 @@
     "freq": "118.350",
     "Lat": 38.280701,
     "Lon": 114.696999,
-    "Ele": 71.0
+    "Ele": 71,
+    "ident": "ZBSJ",
+    "iso_country": "CN",
+    "icao_code": "ZBSJ",
+    "iata_code": "SJW",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 147.4,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2742,7 +3654,14 @@
     "freq": "",
     "Lat": 39.7178,
     "Lon": 118.002625,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "ZBSN",
+    "iso_country": "CN",
+    "icao_code": "ZBSN",
+    "iata_code": "TVS",
+    "length_ft": 8858,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2751,7 +3670,9 @@
     "freq": "",
     "Lat": 38.898114,
     "Lon": 117.657244,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBTG",
+    "iso_country": "CN"
   },
   {
     "type": "large_airport",
@@ -2760,7 +3681,15 @@
     "freq": "118.200",
     "Lat": 39.1244010925,
     "Lon": 117.346000671,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "ZBTJ",
+    "iso_country": "CN",
+    "icao_code": "ZBTJ",
+    "iata_code": "TSN",
+    "length_ft": 11811,
+    "width_ft": 197,
+    "heading": 155,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -2769,7 +3698,14 @@
     "freq": "",
     "Lat": 43.556702,
     "Lon": 122.199997,
-    "Ele": 730.0
+    "Ele": 730,
+    "ident": "ZBTL",
+    "iso_country": "CN",
+    "icao_code": "ZBTL",
+    "iata_code": "TGO",
+    "length_ft": 7546,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -2778,7 +3714,13 @@
     "freq": "",
     "Lat": 41.130266,
     "Lon": 113.107274,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBUC",
+    "iso_country": "CN",
+    "iata_code": "UCB",
+    "length_ft": 10499,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2787,7 +3729,15 @@
     "freq": "329.300",
     "Lat": 39.7934,
     "Lon": 106.7993,
-    "Ele": 1112.5
+    "Ele": 1112.5,
+    "ident": "ZBUH",
+    "iso_country": "CN",
+    "icao_code": "ZBUH",
+    "iata_code": "WUA",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 12,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -2796,7 +3746,14 @@
     "freq": "",
     "Lat": 46.195333,
     "Lon": 122.008333,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBUL",
+    "iso_country": "CN",
+    "icao_code": "ZBUL",
+    "iata_code": "HLH",
+    "length_ft": 5906,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2805,7 +3762,9 @@
     "freq": "",
     "Lat": 41.694354,
     "Lon": 108.378439,
-    "Ele": 1424.9
+    "Ele": 1424.9,
+    "ident": "ZBUT",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -2814,7 +3773,14 @@
     "freq": "",
     "Lat": 43.91559982299805,
     "Lon": 115.96399688720705,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZBXH",
+    "iso_country": "CN",
+    "icao_code": "ZBXH",
+    "iata_code": "XIL",
+    "length_ft": 9186,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -2823,7 +3789,11 @@
     "freq": "",
     "Lat": 36.8831,
     "Lon": 114.4293,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "ZBXT",
+    "iso_country": "CN",
+    "icao_code": "ZBXT",
+    "iata_code": "XNT"
   },
   {
     "type": "small_airport",
@@ -2832,7 +3802,14 @@
     "freq": "",
     "Lat": 38.597456,
     "Lon": 112.969173,
-    "Ele": 770.2
+    "Ele": 770.2,
+    "ident": "ZBXZ",
+    "iso_country": "CN",
+    "icao_code": "ZBXZ",
+    "iata_code": "WUT",
+    "length_ft": 8530,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -2841,7 +3818,15 @@
     "freq": "",
     "Lat": 35.116391,
     "Lon": 111.031389,
-    "Ele": 378.6
+    "Ele": 378.6,
+    "ident": "ZBYC",
+    "iso_country": "CN",
+    "icao_code": "ZBYC",
+    "iata_code": "YCU",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "large_airport",
@@ -2850,7 +3835,15 @@
     "freq": "118.250",
     "Lat": 37.746899,
     "Lon": 112.627998,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "ZBYN",
+    "iso_country": "CN",
+    "icao_code": "ZBYN",
+    "iata_code": "TYN",
+    "length_ft": 10500,
+    "width_ft": 148,
+    "heading": 127,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -2859,7 +3852,14 @@
     "freq": "",
     "Lat": 40.926,
     "Lon": 107.7428,
-    "Ele": 1036.3
+    "Ele": 1036.3,
+    "ident": "ZBYZ",
+    "iso_country": "CN",
+    "icao_code": "ZBYZ",
+    "iata_code": "RLK",
+    "length_ft": 8530,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -2868,7 +3868,15 @@
     "freq": "",
     "Lat": 40.738602,
     "Lon": 114.930278,
-    "Ele": 715.4
+    "Ele": 715.4,
+    "ident": "ZBZJ",
+    "iso_country": "CN",
+    "icao_code": "ZBZJ",
+    "iata_code": "ZQZ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -2877,7 +3885,15 @@
     "freq": "",
     "Lat": 47.865942,
     "Lon": 122.768662,
-    "Ele": 282.9
+    "Ele": 282.9,
+    "ident": "ZBZL",
+    "iso_country": "CN",
+    "icao_code": "ZBZL",
+    "iata_code": "NZL",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -2886,7 +3902,15 @@
     "freq": "",
     "Lat": 21.5394,
     "Lon": 109.293999,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "ZGBH",
+    "iso_country": "CN",
+    "icao_code": "ZGBH",
+    "iata_code": "BHY",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 11,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -2895,7 +3919,15 @@
     "freq": "",
     "Lat": 23.7206,
     "Lon": 106.959999,
-    "Ele": 149.4
+    "Ele": 149.4,
+    "ident": "ZGBS",
+    "iso_country": "CN",
+    "icao_code": "ZGBS",
+    "iata_code": "AEB",
+    "length_ft": 8202,
+    "width_ft": 145,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -2904,7 +3936,14 @@
     "freq": "",
     "Lat": 28.9189,
     "Lon": 111.639999,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "ZGCD",
+    "iso_country": "CN",
+    "icao_code": "ZGCD",
+    "iata_code": "CGD",
+    "length_ft": 8366,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -2913,7 +3952,14 @@
     "freq": "",
     "Lat": 27.443087,
     "Lon": 109.704666,
-    "Ele": 268.8
+    "Ele": 268.8,
+    "ident": "ZGCJ",
+    "iso_country": "CN",
+    "icao_code": "ZGCJ",
+    "iata_code": "HJJ",
+    "length_ft": 7218,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -2922,7 +3968,14 @@
     "freq": "",
     "Lat": 25.753419,
     "Lon": 112.845404,
-    "Ele": 326.4
+    "Ele": 326.4,
+    "ident": "ZGCZ",
+    "iso_country": "CN",
+    "icao_code": "ZGCZ",
+    "iata_code": "HCZ",
+    "length_ft": 8530,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2931,7 +3984,15 @@
     "freq": "",
     "Lat": 29.1028,
     "Lon": 110.443001,
-    "Ele": 2599.9
+    "Ele": 2599.9,
+    "ident": "ZGDY",
+    "iso_country": "CN",
+    "icao_code": "ZGDY",
+    "iata_code": "DYG",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -2940,7 +4001,15 @@
     "freq": "",
     "Lat": 23.0825,
     "Lon": 113.070833,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "ZGFS",
+    "iso_country": "CN",
+    "icao_code": "ZGFS",
+    "iata_code": "FUO",
+    "length_ft": 9186,
+    "width_ft": 180,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "large_airport",
@@ -2949,7 +4018,15 @@
     "freq": "120.400",
     "Lat": 23.392401,
     "Lon": 113.299004,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "ZGGG",
+    "iso_country": "CN",
+    "icao_code": "ZGGG",
+    "iata_code": "CAN",
+    "length_ft": 12467,
+    "width_ft": 197,
+    "QFU": "20",
+    "heading": 14
   },
   {
     "type": "large_airport",
@@ -2958,7 +4035,15 @@
     "freq": "119.650",
     "Lat": 28.189199,
     "Lon": 113.220001,
-    "Ele": 66.1
+    "Ele": 66.1,
+    "ident": "ZGHA",
+    "iso_country": "CN",
+    "icao_code": "ZGHA",
+    "iata_code": "CSX",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -2967,7 +4052,15 @@
     "freq": "",
     "Lat": 24.804344,
     "Lon": 107.710819,
-    "Ele": 677.0
+    "Ele": 677,
+    "ident": "ZGHC",
+    "iso_country": "CN",
+    "icao_code": "ZGHC",
+    "iata_code": "HCJ",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2976,7 +4069,14 @@
     "freq": "",
     "Lat": 26.72208,
     "Lon": 112.617958,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZGHY",
+    "iso_country": "CN",
+    "icao_code": "ZGHY",
+    "iata_code": "HNY",
+    "length_ft": 8530,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -2985,7 +4085,14 @@
     "freq": "",
     "Lat": 23.049999,
     "Lon": 114.599998,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "ZGHZ",
+    "iso_country": "CN",
+    "icao_code": "ZGHZ",
+    "iata_code": "HUZ",
+    "length_ft": 7874,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "large_airport",
@@ -2994,7 +4101,15 @@
     "freq": "126.450",
     "Lat": 25.219828,
     "Lon": 110.039553,
-    "Ele": 173.7
+    "Ele": 173.7,
+    "ident": "ZGKL",
+    "iso_country": "CN",
+    "icao_code": "ZGKL",
+    "iata_code": "KWL",
+    "length_ft": 10499,
+    "width_ft": 147,
+    "heading": 5,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -3003,7 +4118,9 @@
     "freq": "",
     "Lat": 22.711169,
     "Lon": 111.60134,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "ZGLD",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -3012,7 +4129,15 @@
     "freq": "",
     "Lat": 26.338661,
     "Lon": 111.610043,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "ZGLG",
+    "iso_country": "CN",
+    "icao_code": "ZGLG",
+    "iata_code": "LLF",
+    "length_ft": 8530,
+    "width_ft": 157,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3021,7 +4146,14 @@
     "freq": "",
     "Lat": 24.263425,
     "Lon": 116.097857,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "ZGMX",
+    "iso_country": "CN",
+    "icao_code": "ZGMX",
+    "iata_code": "MXZ",
+    "length_ft": 7874,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -3030,7 +4162,15 @@
     "freq": "121.750",
     "Lat": 22.608544,
     "Lon": 108.175335,
-    "Ele": 128.3
+    "Ele": 128.3,
+    "ident": "ZGNN",
+    "iso_country": "CN",
+    "icao_code": "ZGNN",
+    "iata_code": "NNG",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -3039,7 +4179,15 @@
     "freq": "",
     "Lat": 23.552,
     "Lon": 116.5033,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZGOW",
+    "iso_country": "CN",
+    "icao_code": "ZGOW",
+    "iata_code": "SWA",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 40,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -3048,7 +4196,15 @@
     "freq": "",
     "Lat": 22.006399,
     "Lon": 113.375999,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "ZGSD",
+    "iso_country": "CN",
+    "icao_code": "ZGSD",
+    "iata_code": "ZUH",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -3057,7 +4213,15 @@
     "freq": "",
     "Lat": 26.806123,
     "Lon": 110.641042,
-    "Ele": 440.1
+    "Ele": 440.1,
+    "ident": "ZGSY",
+    "iso_country": "CN",
+    "icao_code": "ZGSY",
+    "iata_code": "WGN",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "large_airport",
@@ -3066,7 +4230,15 @@
     "freq": "120.350",
     "Lat": 22.639299,
     "Lon": 113.810997,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "ZGSZ",
+    "iso_country": "CN",
+    "icao_code": "ZGSZ",
+    "iata_code": "SZX",
+    "length_ft": 12467,
+    "width_ft": 197,
+    "heading": 155,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -3075,7 +4247,16 @@
     "freq": "",
     "Lat": 23.40316,
     "Lon": 111.09331,
-    "Ele": 108.8
+    "Ele": 108.8,
+    "ident": "ZGWZ",
+    "iso_country": "CN",
+    "icao_code": "ZGWZ",
+    "iata_code": "WUZ",
+    "local_code": "WUZ",
+    "length_ft": 8202,
+    "width_ft": 118,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -3084,7 +4265,13 @@
     "freq": "",
     "Lat": 24.1492,
     "Lon": 115.758003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZGXN",
+    "iso_country": "CN",
+    "icao_code": "ZGXN",
+    "iata_code": "XIN",
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3093,7 +4280,14 @@
     "freq": "",
     "Lat": 28.4972,
     "Lon": 109.5218,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZGXX",
+    "iso_country": "CN",
+    "icao_code": "ZGXX",
+    "iata_code": "DXJ",
+    "length_ft": 8530,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -3102,7 +4296,9 @@
     "freq": "",
     "Lat": 21.961895,
     "Lon": 112.102408,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "ZGYJ",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -3111,7 +4307,14 @@
     "freq": "",
     "Lat": 22.438056,
     "Lon": 110.120833,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "ZGYL",
+    "iso_country": "CN",
+    "icao_code": "ZGYL",
+    "iata_code": "YLX",
+    "length_ft": 8530,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -3120,7 +4323,15 @@
     "freq": "",
     "Lat": 29.311699,
     "Lon": 113.281574,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "ZGYY",
+    "iso_country": "CN",
+    "icao_code": "ZGYY",
+    "iata_code": "YYA",
+    "local_code": "YYA",
+    "length_ft": 8530,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -3129,7 +4340,14 @@
     "freq": "",
     "Lat": 24.2075,
     "Lon": 109.390999,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "ZGZH",
+    "iso_country": "CN",
+    "icao_code": "ZGZH",
+    "iata_code": "LZH",
+    "length_ft": 8202,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -3138,7 +4356,14 @@
     "freq": "",
     "Lat": 21.481667,
     "Lon": 110.590278,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZGZJ",
+    "iso_country": "CN",
+    "icao_code": "ZGZJ",
+    "iata_code": "ZHA",
+    "length_ft": 10499,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3147,7 +4372,11 @@
     "freq": "",
     "Lat": 36.1339,
     "Lon": 114.344002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZHAY",
+    "iso_country": "CN",
+    "icao_code": "ZHAY",
+    "iata_code": "AYN"
   },
   {
     "type": "large_airport",
@@ -3156,7 +4385,15 @@
     "freq": "128.450",
     "Lat": 34.526497,
     "Lon": 113.849165,
-    "Ele": 150.9
+    "Ele": 150.9,
+    "ident": "ZHCC",
+    "iso_country": "CN",
+    "icao_code": "ZHCC",
+    "iata_code": "CGO",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 112,
+    "QFU": "30"
   },
   {
     "type": "large_airport",
@@ -3165,7 +4402,15 @@
     "freq": "",
     "Lat": 30.341178,
     "Lon": 115.03926,
-    "Ele": 26.2
+    "Ele": 26.2,
+    "ident": "ZHEC",
+    "iso_country": "CN",
+    "icao_code": "ZHEC",
+    "iata_code": "EHU",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -3174,7 +4419,14 @@
     "freq": "",
     "Lat": 30.320299,
     "Lon": 109.485001,
-    "Ele": 489.2
+    "Ele": 489.2,
+    "ident": "ZHES",
+    "iso_country": "CN",
+    "icao_code": "ZHES",
+    "iata_code": "ENH",
+    "length_ft": 6890,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -3183,7 +4435,11 @@
     "freq": "",
     "Lat": 32.38866,
     "Lon": 111.69425,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZHGH",
+    "iso_country": "CN",
+    "icao_code": "ZHGH",
+    "iata_code": "LHK"
   },
   {
     "type": "large_airport",
@@ -3192,7 +4448,15 @@
     "freq": "126.600",
     "Lat": 30.774798,
     "Lon": 114.213723,
-    "Ele": 34.4
+    "Ele": 34.4,
+    "ident": "ZHHH",
+    "iso_country": "CN",
+    "icao_code": "ZHHH",
+    "iata_code": "WUH",
+    "length_ft": 10498,
+    "width_ft": 148,
+    "heading": 46,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -3201,7 +4465,15 @@
     "freq": "",
     "Lat": 30.29281,
     "Lon": 112.44854,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "ZHJZ",
+    "iso_country": "CN",
+    "icao_code": "ZHJZ",
+    "iata_code": "SHS",
+    "local_code": "SHS",
+    "length_ft": 8530,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -3210,7 +4482,14 @@
     "freq": "",
     "Lat": 34.7411,
     "Lon": 112.388,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "ZHLY",
+    "iso_country": "CN",
+    "icao_code": "ZHLY",
+    "iata_code": "LYA",
+    "length_ft": 8202,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -3219,7 +4498,14 @@
     "freq": "",
     "Lat": 32.982696,
     "Lon": 112.617467,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "ZHNY",
+    "iso_country": "CN",
+    "icao_code": "ZHNY",
+    "iata_code": "NNY",
+    "length_ft": 9186,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -3228,7 +4514,14 @@
     "freq": "",
     "Lat": 35.870833,
     "Lon": 114.461944,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZHQQ",
+    "iso_country": "CN",
+    "icao_code": "ZHQQ",
+    "iata_code": "HQQ",
+    "length_ft": 8530,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -3237,7 +4530,14 @@
     "freq": "",
     "Lat": 31.626,
     "Lon": 110.34,
-    "Ele": 2549.7
+    "Ele": 2549.7,
+    "ident": "ZHSN",
+    "iso_country": "CN",
+    "icao_code": "ZHSN",
+    "iata_code": "HPG",
+    "length_ft": 9186,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -3246,7 +4546,15 @@
     "freq": "",
     "Lat": 32.592889,
     "Lon": 110.906296,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZHSY",
+    "iso_country": "CN",
+    "icao_code": "ZHSY",
+    "iata_code": "WDS",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -3255,7 +4563,15 @@
     "freq": "",
     "Lat": 32.152222,
     "Lon": 112.291666,
-    "Ele": 71.3
+    "Ele": 71.3,
+    "ident": "ZHXF",
+    "iso_country": "CN",
+    "icao_code": "ZHXF",
+    "iata_code": "XFN",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -3264,7 +4580,15 @@
     "freq": "",
     "Lat": 32.540819,
     "Lon": 114.079141,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "ZHXY",
+    "iso_country": "CN",
+    "icao_code": "ZHXY",
+    "iata_code": "XAI",
+    "length_ft": 8858,
+    "width_ft": 164,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -3273,7 +4597,15 @@
     "freq": "",
     "Lat": 30.554132,
     "Lon": 111.482563,
-    "Ele": 205.1
+    "Ele": 205.1,
+    "ident": "ZHYC",
+    "iso_country": "CN",
+    "icao_code": "ZHYC",
+    "iata_code": "YIH",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "large_airport",
@@ -3282,7 +4614,15 @@
     "freq": "119.150",
     "Lat": 19.9349,
     "Lon": 110.459,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "ZJHK",
+    "iso_country": "CN",
+    "icao_code": "ZJHK",
+    "iata_code": "HAK",
+    "length_ft": 11811,
+    "width_ft": 197,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -3291,7 +4631,15 @@
     "freq": "",
     "Lat": 19.140951,
     "Lon": 110.452766,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "ZJQH",
+    "iso_country": "CN",
+    "icao_code": "ZJQH",
+    "iata_code": "BAR",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "large_airport",
@@ -3300,7 +4648,15 @@
     "freq": "118.150",
     "Lat": 18.3029,
     "Lon": 109.412003,
-    "Ele": 28.0
+    "Ele": 28,
+    "ident": "ZJSY",
+    "iso_country": "CN",
+    "icao_code": "ZJSY",
+    "iata_code": "SYX",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 82.2,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -3309,7 +4665,15 @@
     "freq": "",
     "Lat": 32.75696,
     "Lon": 108.87338,
-    "Ele": 368.5
+    "Ele": 368.5,
+    "ident": "ZLAK",
+    "iso_country": "CN",
+    "icao_code": "ZLAK",
+    "iata_code": "AKA",
+    "length_ft": 8530,
+    "width_ft": 100,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -3318,7 +4682,15 @@
     "freq": "",
     "Lat": 40.161098,
     "Lon": 94.809196,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZLDH",
+    "iso_country": "CN",
+    "icao_code": "ZLDH",
+    "iata_code": "DNH",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -3327,7 +4699,14 @@
     "freq": "",
     "Lat": 37.125286,
     "Lon": 97.268658,
-    "Ele": 3000.1
+    "Ele": 3000.1,
+    "ident": "ZLDL",
+    "iso_country": "CN",
+    "icao_code": "ZLDL",
+    "iata_code": "HXD",
+    "length_ft": 9843,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -3336,7 +4715,15 @@
     "freq": "",
     "Lat": 34.418066,
     "Lon": 100.301144,
-    "Ele": 3787.4
+    "Ele": 3787.4,
+    "ident": "ZLGL",
+    "iso_country": "CN",
+    "icao_code": "ZLGL",
+    "iata_code": "GMQ",
+    "length_ft": 12467,
+    "width_ft": 150,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -3345,7 +4732,15 @@
     "freq": "",
     "Lat": 36.4006,
     "Lon": 94.786102,
-    "Ele": 2845.0
+    "Ele": 2845,
+    "ident": "ZLGM",
+    "iso_country": "CN",
+    "icao_code": "ZLGM",
+    "iata_code": "GOQ",
+    "length_ft": 15748,
+    "width_ft": 160,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -3354,7 +4749,15 @@
     "freq": "",
     "Lat": 36.078889,
     "Lon": 106.216944,
-    "Ele": 1745.6
+    "Ele": 1745.6,
+    "ident": "ZLGY",
+    "iso_country": "CN",
+    "icao_code": "ZLGY",
+    "iata_code": "GYU",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3363,7 +4766,14 @@
     "freq": "",
     "Lat": 38.008068,
     "Lon": 100.645065,
-    "Ele": 3162.9
+    "Ele": 3162.9,
+    "ident": "ZLHB",
+    "iso_country": "CN",
+    "icao_code": "ZLHB",
+    "iata_code": "HBQ",
+    "length_ft": 11155,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -3372,7 +4782,14 @@
     "freq": "",
     "Lat": 38.201645,
     "Lon": 90.837843,
-    "Ele": 897.6
+    "Ele": 897.6,
+    "ident": "ZLHX",
+    "iso_country": "CN",
+    "icao_code": "ZLHX",
+    "iata_code": "HTT",
+    "length_ft": 11811,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -3381,7 +4798,14 @@
     "freq": "",
     "Lat": 33.133527,
     "Lon": 107.203817,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZLHZ",
+    "iso_country": "CN",
+    "icao_code": "ZLHZ",
+    "iata_code": "HZG",
+    "length_ft": 8202,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -3390,7 +4814,15 @@
     "freq": "",
     "Lat": 38.322758,
     "Lon": 106.393214,
-    "Ele": 1140.9
+    "Ele": 1140.9,
+    "ident": "ZLIC",
+    "iso_country": "CN",
+    "icao_code": "ZLIC",
+    "iata_code": "INC",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -3399,7 +4831,14 @@
     "freq": "",
     "Lat": 38.542222,
     "Lon": 102.348333,
-    "Ele": 1444.8
+    "Ele": 1444.8,
+    "ident": "ZLJC",
+    "iso_country": "CN",
+    "icao_code": "ZLJC",
+    "iata_code": "JIC",
+    "length_ft": 9843,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -3408,7 +4847,15 @@
     "freq": "",
     "Lat": 39.856899,
     "Lon": 98.3414,
-    "Ele": 1558.1
+    "Ele": 1558.1,
+    "ident": "ZLJQ",
+    "iso_country": "CN",
+    "icao_code": "ZLJQ",
+    "iata_code": "JGN",
+    "length_ft": 9843,
+    "width_ft": 131,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "large_airport",
@@ -3417,7 +4864,15 @@
     "freq": "118.100",
     "Lat": 36.515202,
     "Lon": 103.620003,
-    "Ele": 1947.1
+    "Ele": 1947.1,
+    "ident": "ZLLL",
+    "iso_country": "CN",
+    "icao_code": "ZLLL",
+    "iata_code": "LHW",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -3426,7 +4881,15 @@
     "freq": "",
     "Lat": 33.789918,
     "Lon": 105.790014,
-    "Ele": 1129.9
+    "Ele": 1129.9,
+    "ident": "ZLLN",
+    "iso_country": "CN",
+    "icao_code": "ZLLN",
+    "iata_code": "LNL",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -3435,7 +4898,9 @@
     "freq": "",
     "Lat": 34.825791,
     "Lon": 109.535547,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZLPC",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -3444,7 +4909,15 @@
     "freq": "",
     "Lat": 35.802638,
     "Lon": 107.598896,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZLQY",
+    "iso_country": "CN",
+    "icao_code": "ZLQY",
+    "iata_code": "IQN",
+    "length_ft": 8530,
+    "width_ft": 157,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -3453,7 +4926,11 @@
     "freq": "",
     "Lat": 34.376701,
     "Lon": 109.120003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZLSN",
+    "iso_country": "CN",
+    "icao_code": "ZLSN",
+    "iata_code": "SIA"
   },
   {
     "type": "medium_airport",
@@ -3462,7 +4939,15 @@
     "freq": "",
     "Lat": 34.5601,
     "Lon": 105.860343,
-    "Ele": 1094.2
+    "Ele": 1094.2,
+    "ident": "ZLTS",
+    "iso_country": "CN",
+    "icao_code": "ZLTS",
+    "iata_code": "THQ",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -3471,7 +4956,14 @@
     "freq": "",
     "Lat": 34.819014,
     "Lon": 102.622261,
-    "Ele": 3203.4
+    "Ele": 3203.4,
+    "ident": "ZLXH",
+    "iso_country": "CN",
+    "icao_code": "ZLXH",
+    "iata_code": "GXH",
+    "length_ft": 10499,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -3480,7 +4972,15 @@
     "freq": "",
     "Lat": 36.530093,
     "Lon": 102.040062,
-    "Ele": 2169.9
+    "Ele": 2169.9,
+    "ident": "ZLXN",
+    "iso_country": "CN",
+    "icao_code": "ZLXN",
+    "iata_code": "XNN",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "large_airport",
@@ -3489,7 +4989,15 @@
     "freq": "119.600",
     "Lat": 34.447102,
     "Lon": 108.751999,
-    "Ele": 479.1
+    "Ele": 479.1,
+    "ident": "ZLXY",
+    "iso_country": "CN",
+    "icao_code": "ZLXY",
+    "iata_code": "XIY",
+    "length_ft": 12467,
+    "width_ft": 197,
+    "heading": 49,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -3498,7 +5006,16 @@
     "freq": "",
     "Lat": 36.479413,
     "Lon": 109.464083,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZLYA",
+    "iso_country": "CN",
+    "icao_code": "ZLYA",
+    "iata_code": "ENY",
+    "local_code": "ENY",
+    "length_ft": 9843,
+    "width_ft": 200,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -3507,7 +5024,14 @@
     "freq": "",
     "Lat": 38.35971,
     "Lon": 109.590927,
-    "Ele": 1186.0
+    "Ele": 1186,
+    "ident": "ZLYL",
+    "iso_country": "CN",
+    "icao_code": "ZLYL",
+    "iata_code": "UYN",
+    "length_ft": 9186,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -3516,7 +5040,14 @@
     "freq": "",
     "Lat": 32.836389,
     "Lon": 97.036389,
-    "Ele": 3906.3
+    "Ele": 3906.3,
+    "ident": "ZLYS",
+    "iso_country": "CN",
+    "icao_code": "ZLYS",
+    "iata_code": "YUS",
+    "length_ft": 12467,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -3525,7 +5056,14 @@
     "freq": "",
     "Lat": 37.573125,
     "Lon": 105.154454,
-    "Ele": 1246.0
+    "Ele": 1246,
+    "ident": "ZLZW",
+    "iso_country": "CN",
+    "icao_code": "ZLZW",
+    "iata_code": "ZHY",
+    "length_ft": 9186,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -3534,7 +5072,14 @@
     "freq": "",
     "Lat": 38.801899,
     "Lon": 100.675003,
-    "Ele": 1609.3
+    "Ele": 1609.3,
+    "ident": "ZLZY",
+    "iso_country": "CN",
+    "icao_code": "ZLZY",
+    "iata_code": "YZY",
+    "length_ft": 9843,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -3543,7 +5088,9 @@
     "freq": "",
     "Lat": 42.308371,
     "Lon": 97.077148,
-    "Ele": 1664.8
+    "Ele": 1664.8,
+    "ident": "ZMAZ",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -3552,7 +5099,14 @@
     "freq": "",
     "Lat": 25.053301,
     "Lon": 99.168297,
-    "Ele": 1662.1
+    "Ele": 1662.1,
+    "ident": "ZPBS",
+    "iso_country": "CN",
+    "icao_code": "ZPBS",
+    "iata_code": "BSD",
+    "length_ft": 7874,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -3561,7 +5115,15 @@
     "freq": "",
     "Lat": 23.276331,
     "Lon": 99.373169,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZPCW",
+    "iso_country": "CN",
+    "icao_code": "ZPCW",
+    "iata_code": "CWJ",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -3570,7 +5132,15 @@
     "freq": "",
     "Lat": 25.649401,
     "Lon": 100.319,
-    "Ele": 2148.8
+    "Ele": 2148.8,
+    "ident": "ZPDL",
+    "iso_country": "CN",
+    "icao_code": "ZPDL",
+    "iata_code": "DLU",
+    "length_ft": 8202,
+    "width_ft": 145,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -3579,7 +5149,14 @@
     "freq": "",
     "Lat": 27.7936,
     "Lon": 99.6772,
-    "Ele": 3280.0
+    "Ele": 3280,
+    "ident": "ZPDQ",
+    "iso_country": "CN",
+    "icao_code": "ZPDQ",
+    "iata_code": "DIG",
+    "length_ft": 11647,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -3588,7 +5165,15 @@
     "freq": "119.100",
     "Lat": 21.974648,
     "Lon": 100.762224,
-    "Ele": 553.2
+    "Ele": 553.2,
+    "ident": "ZPJH",
+    "iso_country": "CN",
+    "icao_code": "ZPJH",
+    "iata_code": "JHG",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 160,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -3597,7 +5182,15 @@
     "freq": "",
     "Lat": 22.417733,
     "Lon": 99.784012,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZPJM",
+    "iso_country": "CN",
+    "icao_code": "ZPJM",
+    "iata_code": "JMJ",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -3606,7 +5199,14 @@
     "freq": "",
     "Lat": 23.7381,
     "Lon": 100.025002,
-    "Ele": 1898.9
+    "Ele": 1898.9,
+    "ident": "ZPLC",
+    "iso_country": "CN",
+    "icao_code": "ZPLC",
+    "iata_code": "LNJ",
+    "length_ft": 7874,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -3615,7 +5215,15 @@
     "freq": "",
     "Lat": 26.68,
     "Lon": 100.246002,
-    "Ele": 2243.0
+    "Ele": 2243,
+    "ident": "ZPLJ",
+    "iso_country": "CN",
+    "icao_code": "ZPLJ",
+    "iata_code": "LJG",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -3624,7 +5232,14 @@
     "freq": "",
     "Lat": 24.4011,
     "Lon": 98.5317,
-    "Ele": 880.9
+    "Ele": 880.9,
+    "ident": "ZPMS",
+    "iso_country": "CN",
+    "icao_code": "ZPMS",
+    "iata_code": "LUM",
+    "length_ft": 7218,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "large_airport",
@@ -3633,7 +5248,15 @@
     "freq": "124.220",
     "Lat": 25.110313,
     "Lon": 102.936743,
-    "Ele": 2104.0
+    "Ele": 2104,
+    "ident": "ZPPP",
+    "iso_country": "CN",
+    "icao_code": "ZPPP",
+    "iata_code": "KMG",
+    "length_ft": 14764,
+    "width_ft": 197,
+    "heading": 39,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -3642,7 +5265,14 @@
     "freq": "",
     "Lat": 22.793301,
     "Lon": 100.959,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZPSM",
+    "iso_country": "CN",
+    "icao_code": "ZPSM",
+    "iata_code": "SYM",
+    "length_ft": 8104,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -3651,7 +5281,14 @@
     "freq": "",
     "Lat": 23.5583,
     "Lon": 104.3255,
-    "Ele": 1590.1
+    "Ele": 1590.1,
+    "ident": "ZPWS",
+    "iso_country": "CN",
+    "icao_code": "ZPWS",
+    "iata_code": "WNH",
+    "length_ft": 7874,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -3660,7 +5297,11 @@
     "freq": "",
     "Lat": 25.737499,
     "Lon": 101.882004,
-    "Ele": 1161.3
+    "Ele": 1161.3,
+    "ident": "ZPYM",
+    "iso_country": "CN",
+    "icao_code": "ZPYM",
+    "iata_code": "YUA"
   },
   {
     "type": "small_airport",
@@ -3669,7 +5310,15 @@
     "freq": "",
     "Lat": 27.327549,
     "Lon": 103.75617,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZPZT",
+    "iso_country": "CN",
+    "icao_code": "ZPZT",
+    "iata_code": "ZAT",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -3678,7 +5327,15 @@
     "freq": "121.350",
     "Lat": 24.54400062561035,
     "Lon": 118.12799835205078,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "ZSAM",
+    "iso_country": "CN",
+    "icao_code": "ZSAM",
+    "iata_code": "XMN",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 53,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -3687,7 +5344,14 @@
     "freq": "",
     "Lat": 30.582199,
     "Lon": 117.050003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSAQ",
+    "iso_country": "CN",
+    "icao_code": "ZSAQ",
+    "iata_code": "AQG",
+    "length_ft": 9186,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -3696,7 +5360,11 @@
     "freq": "",
     "Lat": 32.847733,
     "Lon": 117.320244,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "ZSBB",
+    "iso_country": "CN",
+    "icao_code": "ZSBB",
+    "iata_code": "BFU"
   },
   {
     "type": "medium_airport",
@@ -3705,7 +5373,14 @@
     "freq": "",
     "Lat": 31.920485,
     "Lon": 119.77546,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "ZSCG",
+    "iso_country": "CN",
+    "icao_code": "ZSCG",
+    "iata_code": "CZX",
+    "length_ft": 11155,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "large_airport",
@@ -3714,7 +5389,15 @@
     "freq": "128.400",
     "Lat": 28.864815,
     "Lon": 115.90271,
-    "Ele": 43.6
+    "Ele": 43.6,
+    "ident": "ZSCN",
+    "iso_country": "CN",
+    "icao_code": "ZSCN",
+    "iata_code": "KHN",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 23,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -3723,7 +5406,13 @@
     "freq": "",
     "Lat": 32.23649,
     "Lon": 119.718683,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "ZSDL",
+    "iso_country": "CN",
+    "icao_code": "ZSDL",
+    "iata_code": "AZJ",
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -3732,7 +5421,14 @@
     "freq": "",
     "Lat": 37.50137,
     "Lon": 118.789863,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "ZSDY",
+    "iso_country": "CN",
+    "icao_code": "ZSDY",
+    "iata_code": "DOY",
+    "length_ft": 9186,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -3741,7 +5437,14 @@
     "freq": "",
     "Lat": 32.882157,
     "Lon": 115.734364,
-    "Ele": 31.7
+    "Ele": 31.7,
+    "ident": "ZSFY",
+    "iso_country": "CN",
+    "icao_code": "ZSFY",
+    "iata_code": "FUG",
+    "length_ft": 7874,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "large_airport",
@@ -3750,7 +5453,16 @@
     "freq": "119.450",
     "Lat": 25.934669,
     "Lon": 119.66318,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "ZSFZ",
+    "iso_country": "CN",
+    "icao_code": "ZSFZ",
+    "iata_code": "FOC",
+    "local_code": "FOC",
+    "length_ft": 11841,
+    "width_ft": 150,
+    "heading": 30,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -3759,7 +5471,14 @@
     "freq": "",
     "Lat": 25.853333,
     "Lon": 114.778889,
-    "Ele": 118.0
+    "Ele": 118,
+    "ident": "ZSGZ",
+    "iso_country": "CN",
+    "icao_code": "ZSGZ",
+    "iata_code": "KOW",
+    "length_ft": 8530,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "large_airport",
@@ -3768,7 +5487,15 @@
     "freq": "125.550",
     "Lat": 30.23609,
     "Lon": 120.428865,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "ZSHC",
+    "iso_country": "CN",
+    "icao_code": "ZSHC",
+    "iata_code": "HGH",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 63,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -3777,7 +5504,14 @@
     "freq": "",
     "Lat": 35.212972,
     "Lon": 115.736748,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSHZ",
+    "iso_country": "CN",
+    "icao_code": "ZSHZ",
+    "iata_code": "HZA",
+    "length_ft": 8530,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -3786,7 +5520,14 @@
     "freq": "",
     "Lat": 29.3386,
     "Lon": 117.176003,
-    "Ele": 34.1
+    "Ele": 34.1,
+    "ident": "ZSJD",
+    "iso_country": "CN",
+    "icao_code": "ZSJD",
+    "iata_code": "JDZ",
+    "length_ft": 7874,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -3795,7 +5536,11 @@
     "freq": "",
     "Lat": 35.647358,
     "Lon": 116.743269,
-    "Ele": 52.1
+    "Ele": 52.1,
+    "ident": "ZSJG",
+    "iso_country": "CN",
+    "icao_code": "ZSJG",
+    "iata_code": "JNG"
   },
   {
     "type": "small_airport",
@@ -3804,7 +5549,14 @@
     "freq": "",
     "Lat": 29.476944,
     "Lon": 115.801111,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSJJ",
+    "iso_country": "CN",
+    "icao_code": "ZSJJ",
+    "iata_code": "JIU",
+    "length_ft": 9186,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -3813,7 +5565,15 @@
     "freq": "127.050",
     "Lat": 36.857201,
     "Lon": 117.216003,
-    "Ele": 23.2
+    "Ele": 23.2,
+    "ident": "ZSJN",
+    "iso_country": "CN",
+    "icao_code": "ZSJN",
+    "iata_code": "TNA",
+    "length_ft": 11812,
+    "width_ft": 148,
+    "heading": 360,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -3822,7 +5582,14 @@
     "freq": "",
     "Lat": 28.96613,
     "Lon": 118.898793,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "ZSJU",
+    "iso_country": "CN",
+    "icao_code": "ZSJU",
+    "iata_code": "JUZ",
+    "length_ft": 6234,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -3831,7 +5598,14 @@
     "freq": "",
     "Lat": 34.41406,
     "Lon": 119.17899,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSLG",
+    "iso_country": "CN",
+    "icao_code": "ZSLG",
+    "iata_code": "LYG",
+    "length_ft": 9186,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -3840,7 +5614,14 @@
     "freq": "",
     "Lat": 25.67592,
     "Lon": 116.745907,
-    "Ele": 373.4
+    "Ele": 373.4,
+    "ident": "ZSLO",
+    "iso_country": "CN",
+    "icao_code": "ZSLO",
+    "iata_code": "LCX",
+    "length_ft": 7874,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -3849,7 +5630,14 @@
     "freq": "",
     "Lat": 28.562201,
     "Lon": 121.429001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSLQ",
+    "iso_country": "CN",
+    "icao_code": "ZSLQ",
+    "iata_code": "HYN",
+    "length_ft": 8202,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -3858,7 +5646,15 @@
     "freq": "",
     "Lat": 35.052918,
     "Lon": 118.411828,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "ZSLY",
+    "iso_country": "CN",
+    "icao_code": "ZSLY",
+    "iata_code": "LYI",
+    "length_ft": 10498,
+    "width_ft": 196,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "large_airport",
@@ -3867,7 +5663,15 @@
     "freq": "121.850",
     "Lat": 29.82670021057129,
     "Lon": 121.46199798583984,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "ZSNB",
+    "iso_country": "CN",
+    "icao_code": "ZSNB",
+    "iata_code": "NGB",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "large_airport",
@@ -3876,7 +5680,15 @@
     "freq": "119.250",
     "Lat": 31.735032,
     "Lon": 118.865949,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "ZSNJ",
+    "iso_country": "CN",
+    "icao_code": "ZSNJ",
+    "iata_code": "NKG",
+    "length_ft": 11810,
+    "width_ft": 197,
+    "heading": 58,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -3885,7 +5697,15 @@
     "freq": "",
     "Lat": 32.073566,
     "Lon": 120.980076,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "ZSNT",
+    "iso_country": "CN",
+    "icao_code": "ZSNT",
+    "iata_code": "NTG",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -3894,7 +5714,15 @@
     "freq": "128.850",
     "Lat": 31.98779,
     "Lon": 116.9769,
-    "Ele": 63.1
+    "Ele": 63.1,
+    "ident": "ZSOF",
+    "iso_country": "CN",
+    "icao_code": "ZSOF",
+    "iata_code": "HFE",
+    "length_ft": 11155,
+    "width_ft": 164,
+    "heading": 135,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -3903,7 +5731,15 @@
     "freq": "119.750",
     "Lat": 31.1434,
     "Lon": 121.805,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "ZSPD",
+    "iso_country": "CN",
+    "icao_code": "ZSPD",
+    "iata_code": "PVG",
+    "length_ft": 11154,
+    "width_ft": 197,
+    "QFU": "35",
+    "heading": 162
   },
   {
     "type": "large_airport",
@@ -3912,7 +5748,15 @@
     "freq": "",
     "Lat": 36.361953,
     "Lon": 120.088171,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "ZSQD",
+    "iso_country": "CN",
+    "icao_code": "ZSQD",
+    "iata_code": "TAO",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -3921,7 +5765,15 @@
     "freq": "",
     "Lat": 24.796587,
     "Lon": 118.588883,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "ZSQZ",
+    "iso_country": "CN",
+    "icao_code": "ZSQZ",
+    "iata_code": "JJN",
+    "length_ft": 8530,
+    "width_ft": 164,
+    "heading": 34,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -3930,7 +5782,11 @@
     "freq": "",
     "Lat": 32.258341,
     "Lon": 120.501131,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSRG",
+    "iso_country": "CN",
+    "icao_code": "ZSRG",
+    "iata_code": "RUG"
   },
   {
     "type": "medium_airport",
@@ -3939,7 +5795,14 @@
     "freq": "",
     "Lat": 35.405033,
     "Lon": 119.324403,
-    "Ele": 36.9
+    "Ele": 36.9,
+    "ident": "ZSRZ",
+    "iso_country": "CN",
+    "icao_code": "ZSRZ",
+    "iata_code": "RIZ",
+    "length_ft": 8530,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -3948,7 +5811,15 @@
     "freq": "",
     "Lat": 33.790833,
     "Lon": 119.125,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "ZSSH",
+    "iso_country": "CN",
+    "icao_code": "ZSSH",
+    "iata_code": "HIA",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -3957,7 +5828,14 @@
     "freq": "",
     "Lat": 26.4263,
     "Lon": 117.8336,
-    "Ele": 253.0
+    "Ele": 253,
+    "ident": "ZSSM",
+    "iso_country": "CN",
+    "icao_code": "ZSSM",
+    "iata_code": "SQJ",
+    "length_ft": 8530,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -3966,7 +5844,15 @@
     "freq": "",
     "Lat": 28.3797,
     "Lon": 117.9643,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "ZSSR",
+    "iso_country": "CN",
+    "icao_code": "ZSSR",
+    "iata_code": "SQD",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "large_airport",
@@ -3975,7 +5861,15 @@
     "freq": "119.750",
     "Lat": 31.198104,
     "Lon": 121.33426,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "ZSSS",
+    "iso_country": "CN",
+    "icao_code": "ZSSS",
+    "iata_code": "SHA",
+    "length_ft": 10826,
+    "width_ft": 197,
+    "heading": 176,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -3984,7 +5878,11 @@
     "freq": "",
     "Lat": 31.2631,
     "Lon": 120.401001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSSZ",
+    "iso_country": "CN",
+    "icao_code": "ZSSZ",
+    "iata_code": "SZV"
   },
   {
     "type": "medium_airport",
@@ -3993,7 +5891,15 @@
     "freq": "",
     "Lat": 29.733299255371094,
     "Lon": 118.25599670410156,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSTX",
+    "iso_country": "CN",
+    "icao_code": "ZSTX",
+    "iata_code": "TXN",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -4002,7 +5908,15 @@
     "freq": "",
     "Lat": 31.1045,
     "Lon": 118.66687,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "ZSWA",
+    "iso_country": "CN",
+    "icao_code": "ZSWA",
+    "iata_code": "WHA",
+    "local_code": "WHA",
+    "length_ft": 9186,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -4011,7 +5925,14 @@
     "freq": "",
     "Lat": 36.646702,
     "Lon": 119.119003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZSWF",
+    "iso_country": "CN",
+    "icao_code": "ZSWF",
+    "iata_code": "WEF",
+    "length_ft": 8530,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -4020,7 +5941,15 @@
     "freq": "127.050",
     "Lat": 37.187099,
     "Lon": 122.228996,
-    "Ele": 44.2
+    "Ele": 44.2,
+    "ident": "ZSWH",
+    "iso_country": "CN",
+    "icao_code": "ZSWH",
+    "iata_code": "WEH",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 18.5,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -4029,7 +5958,10 @@
     "freq": "",
     "Lat": 31.3906,
     "Lon": 118.408997,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "ZSWU",
+    "iso_country": "CN",
+    "iata_code": "WHU"
   },
   {
     "type": "medium_airport",
@@ -4038,7 +5970,15 @@
     "freq": "",
     "Lat": 31.4944000244,
     "Lon": 120.429000854,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "ZSWX",
+    "iso_country": "CN",
+    "icao_code": "ZSWX",
+    "iata_code": "WUX",
+    "length_ft": 10499,
+    "width_ft": 164,
+    "heading": 20,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -4047,7 +5987,14 @@
     "freq": "",
     "Lat": 27.7019,
     "Lon": 118.000999,
-    "Ele": 187.1
+    "Ele": 187.1,
+    "ident": "ZSWY",
+    "iso_country": "CN",
+    "icao_code": "ZSWY",
+    "iata_code": "WUS",
+    "length_ft": 7874,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "large_airport",
@@ -4056,7 +6003,15 @@
     "freq": "",
     "Lat": 27.910572,
     "Lon": 120.853465,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "ZSWZ",
+    "iso_country": "CN",
+    "icao_code": "ZSWZ",
+    "iata_code": "WNZ",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -4065,7 +6020,15 @@
     "freq": "118.250",
     "Lat": 34.059056,
     "Lon": 117.555278,
-    "Ele": 32.9
+    "Ele": 32.9,
+    "ident": "ZSXZ",
+    "iso_country": "CN",
+    "icao_code": "ZSXZ",
+    "iata_code": "XUZ",
+    "length_ft": 11548,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -4074,7 +6037,15 @@
     "freq": "",
     "Lat": 32.5634,
     "Lon": 119.7198,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "ZSYA",
+    "iso_country": "CN",
+    "icao_code": "ZSYA",
+    "iata_code": "YTY",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -4083,7 +6054,14 @@
     "freq": "",
     "Lat": 27.8025,
     "Lon": 114.3062,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "ZSYC",
+    "iso_country": "CN",
+    "icao_code": "ZSYC",
+    "iata_code": "YIC",
+    "length_ft": 7874,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -4092,7 +6070,15 @@
     "freq": "",
     "Lat": 33.425833,
     "Lon": 120.203056,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "ZSYN",
+    "iso_country": "CN",
+    "icao_code": "ZSYN",
+    "iata_code": "YNZ",
+    "length_ft": 9186,
+    "width_ft": 164,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -4101,7 +6087,14 @@
     "freq": "",
     "Lat": 37.659724,
     "Lon": 120.978124,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "ZSYT",
+    "iso_country": "CN",
+    "icao_code": "ZSYT",
+    "iata_code": "YNT",
+    "length_ft": 11155,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -4110,7 +6103,15 @@
     "freq": "",
     "Lat": 29.342095,
     "Lon": 120.03116,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "ZSYW",
+    "iso_country": "CN",
+    "icao_code": "ZSYW",
+    "iata_code": "YIW",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -4119,7 +6120,14 @@
     "freq": "",
     "Lat": 29.9342,
     "Lon": 122.362,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "ZSZS",
+    "iso_country": "CN",
+    "icao_code": "ZSZS",
+    "iata_code": "HSN",
+    "length_ft": 7546,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -4128,7 +6136,14 @@
     "freq": "",
     "Lat": 32.09794,
     "Lon": 80.053971,
-    "Ele": 4273.9
+    "Ele": 4273.9,
+    "ident": "ZUAL",
+    "iso_country": "CN",
+    "icao_code": "ZUAL",
+    "iata_code": "NGQ",
+    "length_ft": 14764,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -4137,7 +6152,14 @@
     "freq": "",
     "Lat": 26.260556,
     "Lon": 105.873333,
-    "Ele": 1466.7
+    "Ele": 1466.7,
+    "ident": "ZUAS",
+    "iso_country": "CN",
+    "icao_code": "ZUAS",
+    "iata_code": "AVA",
+    "length_ft": 9186,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -4146,7 +6168,12 @@
     "freq": "",
     "Lat": 31.581474,
     "Lon": 104.459701,
-    "Ele": 613.3
+    "Ele": 613.3,
+    "ident": "ZUBC",
+    "iso_country": "CN",
+    "iata_code": "BCJ",
+    "length_ft": 3281,
+    "width_ft": 98
   },
   {
     "type": "medium_airport",
@@ -4155,7 +6182,15 @@
     "freq": "",
     "Lat": 30.553600311279297,
     "Lon": 97.1082992553711,
-    "Ele": 4334.0
+    "Ele": 4334,
+    "ident": "ZUBD",
+    "iso_country": "CN",
+    "icao_code": "ZUBD",
+    "iata_code": "BPX",
+    "length_ft": 14764,
+    "width_ft": 148,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -4164,7 +6199,15 @@
     "freq": "",
     "Lat": 27.267066,
     "Lon": 105.472097,
-    "Ele": 1448.1
+    "Ele": 1448.1,
+    "ident": "ZUBJ",
+    "iso_country": "CN",
+    "icao_code": "ZUBJ",
+    "iata_code": "BFJ",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "large_airport",
@@ -4173,7 +6216,15 @@
     "freq": "125.200",
     "Lat": 29.712254,
     "Lon": 106.651895,
-    "Ele": 416.1
+    "Ele": 416.1,
+    "ident": "ZUCK",
+    "iso_country": "CN",
+    "icao_code": "ZUCK",
+    "iata_code": "CKG",
+    "length_ft": 11154,
+    "width_ft": 148,
+    "heading": 17,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -4182,7 +6233,14 @@
     "freq": "",
     "Lat": 31.048815,
     "Lon": 107.435646,
-    "Ele": 409.0
+    "Ele": 409,
+    "ident": "ZUDA",
+    "iso_country": "CN",
+    "icao_code": "ZUDA",
+    "iata_code": "DZH",
+    "length_ft": 8530,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -4191,7 +6249,15 @@
     "freq": "",
     "Lat": 29.31632,
     "Lon": 100.060317,
-    "Ele": 4411.1
+    "Ele": 4411.1,
+    "ident": "ZUDC",
+    "iso_country": "CN",
+    "icao_code": "ZUDC",
+    "iata_code": "DCY",
+    "length_ft": 13780,
+    "width_ft": 148,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -4200,7 +6266,11 @@
     "freq": "",
     "Lat": 28.121,
     "Lon": 108.1631,
-    "Ele": 1079.6
+    "Ele": 1079.6,
+    "ident": "ZUDJ",
+    "iso_country": "CN",
+    "icao_code": "ZUDJ",
+    "iata_code": "DEJ"
   },
   {
     "type": "small_airport",
@@ -4209,7 +6279,14 @@
     "freq": "",
     "Lat": 31.1302,
     "Lon": 107.4295,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUDX",
+    "iso_country": "CN",
+    "icao_code": "ZUDX",
+    "iata_code": "DAX",
+    "length_ft": 6562,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -4218,7 +6295,11 @@
     "freq": "",
     "Lat": 29.636227,
     "Lon": 105.773621,
-    "Ele": 371.9
+    "Ele": 371.9,
+    "ident": "ZUDZ",
+    "iso_country": "CN",
+    "icao_code": "ZUDZ",
+    "iata_code": "DZU"
   },
   {
     "type": "small_airport",
@@ -4227,7 +6308,11 @@
     "freq": "",
     "Lat": 30.9485,
     "Lon": 104.3296,
-    "Ele": 466.6
+    "Ele": 466.6,
+    "ident": "ZUGH",
+    "iso_country": "CN",
+    "icao_code": "ZUGH",
+    "iata_code": "GHN"
   },
   {
     "type": "medium_airport",
@@ -4236,7 +6321,14 @@
     "freq": "",
     "Lat": 32.390254,
     "Lon": 105.694571,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUGU",
+    "iso_country": "CN",
+    "icao_code": "ZUGU",
+    "iata_code": "GYS",
+    "length_ft": 8202,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "large_airport",
@@ -4245,7 +6337,15 @@
     "freq": "126.050",
     "Lat": 26.541466,
     "Lon": 106.803331,
-    "Ele": 1138.7
+    "Ele": 1138.7,
+    "ident": "ZUGY",
+    "iso_country": "CN",
+    "icao_code": "ZUGY",
+    "iata_code": "KWE",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "heading": 10,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -4254,7 +6354,15 @@
     "freq": "",
     "Lat": 31.7575,
     "Lon": 99.554167,
-    "Ele": 4067.9
+    "Ele": 4067.9,
+    "ident": "ZUGZ",
+    "iso_country": "CN",
+    "icao_code": "ZUGZ",
+    "iata_code": "GZG",
+    "local_code": "GZG",
+    "length_ft": 13123,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -4263,7 +6371,15 @@
     "freq": "",
     "Lat": 32.53154,
     "Lon": 102.35224,
-    "Ele": 3535.7
+    "Ele": 3535.7,
+    "ident": "ZUHY",
+    "iso_country": "CN",
+    "icao_code": "ZUHY",
+    "iata_code": "AHJ",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 163,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -4272,7 +6388,14 @@
     "freq": "",
     "Lat": 32.853333,
     "Lon": 103.682222,
-    "Ele": 3452.5
+    "Ele": 3452.5,
+    "ident": "ZUJZ",
+    "iso_country": "CN",
+    "icao_code": "ZUJZ",
+    "iata_code": "JZH",
+    "length_ft": 10499,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -4281,7 +6404,15 @@
     "freq": "",
     "Lat": 30.142464,
     "Lon": 101.73872,
-    "Ele": 4280.0
+    "Ele": 4280,
+    "ident": "ZUKD",
+    "iso_country": "CN",
+    "icao_code": "ZUKD",
+    "iata_code": "KGT",
+    "length_ft": 13123,
+    "width_ft": 172,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -4290,7 +6421,14 @@
     "freq": "",
     "Lat": 26.972,
     "Lon": 107.988,
-    "Ele": 949.5
+    "Ele": 949.5,
+    "ident": "ZUKJ",
+    "iso_country": "CN",
+    "icao_code": "ZUKJ",
+    "iata_code": "KJH",
+    "length_ft": 8530,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -4299,7 +6437,15 @@
     "freq": "",
     "Lat": 25.4525,
     "Lon": 107.961667,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZULB",
+    "iso_country": "CN",
+    "icao_code": "ZULB",
+    "iata_code": "LLB",
+    "length_ft": 7546,
+    "width_ft": 90,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -4308,7 +6454,11 @@
     "freq": "",
     "Lat": 30.679399,
     "Lon": 107.786003,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZULP",
+    "iso_country": "CN",
+    "icao_code": "ZULP",
+    "iata_code": "LIA"
   },
   {
     "type": "medium_airport",
@@ -4317,7 +6467,15 @@
     "freq": "121.650",
     "Lat": 29.298001,
     "Lon": 90.911951,
-    "Ele": 3570.1
+    "Ele": 3570.1,
+    "ident": "ZULS",
+    "iso_country": "CN",
+    "icao_code": "ZULS",
+    "iata_code": "LXA",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -4326,7 +6484,14 @@
     "freq": "",
     "Lat": 29.030357,
     "Lon": 105.468407,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZULZ",
+    "iso_country": "CN",
+    "icao_code": "ZULZ",
+    "iata_code": "LZO",
+    "length_ft": 8858,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -4335,7 +6500,15 @@
     "freq": "",
     "Lat": 27.961837,
     "Lon": 106.435416,
-    "Ele": 1239.9
+    "Ele": 1239.9,
+    "ident": "ZUMT",
+    "iso_country": "CN",
+    "icao_code": "ZUMT",
+    "iata_code": "WMT",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -4344,7 +6517,14 @@
     "freq": "",
     "Lat": 31.428101,
     "Lon": 104.740997,
-    "Ele": 2400.0
+    "Ele": 2400,
+    "ident": "ZUMY",
+    "iso_country": "CN",
+    "icao_code": "ZUMY",
+    "iata_code": "MIG",
+    "length_ft": 7874,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -4353,7 +6533,14 @@
     "freq": "",
     "Lat": 30.798104,
     "Lon": 106.16415,
-    "Ele": 349.0
+    "Ele": 349,
+    "ident": "ZUNC",
+    "iso_country": "CN",
+    "icao_code": "ZUNC",
+    "iata_code": "NAO",
+    "length_ft": 7874,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -4362,7 +6549,14 @@
     "freq": "",
     "Lat": 26.32217,
     "Lon": 109.1499,
-    "Ele": 493.8
+    "Ele": 493.8,
+    "ident": "ZUNP",
+    "iso_country": "CN",
+    "icao_code": "ZUNP",
+    "iata_code": "HZH",
+    "length_ft": 7218,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -4371,7 +6565,14 @@
     "freq": "",
     "Lat": 29.303301,
     "Lon": 94.335297,
-    "Ele": 2948.9
+    "Ele": 2948.9,
+    "ident": "ZUNZ",
+    "iso_country": "CN",
+    "icao_code": "ZUNZ",
+    "iata_code": "LZY",
+    "length_ft": 9843,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -4380,7 +6581,14 @@
     "freq": "",
     "Lat": 26.609417,
     "Lon": 104.979,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUPS",
+    "iso_country": "CN",
+    "icao_code": "ZUPS",
+    "iata_code": "LPF",
+    "length_ft": 8202,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -4389,7 +6597,14 @@
     "freq": "",
     "Lat": 29.5133333333,
     "Lon": 108.831111111,
-    "Ele": 632.5
+    "Ele": 632.5,
+    "ident": "ZUQJ",
+    "iso_country": "CN",
+    "icao_code": "ZUQJ",
+    "iata_code": "JIQ",
+    "length_ft": 7874,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "medium_airport",
@@ -4398,7 +6613,15 @@
     "freq": "",
     "Lat": 29.3519,
     "Lon": 89.311401,
-    "Ele": 1152.8
+    "Ele": 1152.8,
+    "ident": "ZURK",
+    "iso_country": "CN",
+    "icao_code": "ZURK",
+    "iata_code": "RKZ",
+    "length_ft": 16404,
+    "width_ft": 197,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4407,7 +6630,11 @@
     "freq": "",
     "Lat": 28.422422,
     "Lon": 92.348082,
-    "Ele": 3949.9
+    "Ele": 3949.9,
+    "ident": "ZUSH",
+    "iso_country": "CN",
+    "icao_code": "ZUSH",
+    "iata_code": "LGZ"
   },
   {
     "type": "small_airport",
@@ -4416,7 +6643,9 @@
     "freq": "",
     "Lat": 30.471295,
     "Lon": 105.610925,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUSN",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -4425,7 +6654,14 @@
     "freq": "",
     "Lat": 24.938056,
     "Lon": 98.485833,
-    "Ele": 1905.0
+    "Ele": 1905,
+    "ident": "ZUTC",
+    "iso_country": "CN",
+    "icao_code": "ZPTC",
+    "iata_code": "TCZ",
+    "length_ft": 7710,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "large_airport",
@@ -4434,7 +6670,15 @@
     "freq": "",
     "Lat": 30.31252,
     "Lon": 104.441284,
-    "Ele": 438.9
+    "Ele": 438.9,
+    "ident": "ZUTF",
+    "iso_country": "CN",
+    "icao_code": "ZUTF",
+    "iata_code": "TFU",
+    "length_ft": 12467,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -4443,7 +6687,14 @@
     "freq": "",
     "Lat": 27.883333,
     "Lon": 109.308889,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUTR",
+    "iso_country": "CN",
+    "icao_code": "ZUTR",
+    "iata_code": "TEN",
+    "length_ft": 9022,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "large_airport",
@@ -4452,7 +6703,15 @@
     "freq": "119.700",
     "Lat": 30.558257,
     "Lon": 103.945966,
-    "Ele": 495.3
+    "Ele": 495.3,
+    "ident": "ZUUU",
+    "iso_country": "CN",
+    "icao_code": "ZUUU",
+    "iata_code": "CTU",
+    "length_ft": 11811,
+    "width_ft": 197,
+    "heading": 24,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -4461,7 +6720,14 @@
     "freq": "",
     "Lat": 29.465658,
     "Lon": 107.693664,
-    "Ele": 532.5
+    "Ele": 532.5,
+    "ident": "ZUWL",
+    "iso_country": "CN",
+    "icao_code": "ZUWL",
+    "iata_code": "CQW",
+    "length_ft": 9186,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -4470,7 +6736,15 @@
     "freq": "",
     "Lat": 31.06896,
     "Lon": 109.708958,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUWS",
+    "iso_country": "CN",
+    "icao_code": "ZUWS",
+    "iata_code": "WSK",
+    "local_code": "WSK",
+    "length_ft": 8530,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -4479,7 +6753,14 @@
     "freq": "",
     "Lat": 30.8017,
     "Lon": 108.433,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZUWX",
+    "iso_country": "CN",
+    "icao_code": "ZUWX",
+    "iata_code": "WXN",
+    "length_ft": 7874,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -4488,7 +6769,15 @@
     "freq": "130.000",
     "Lat": 27.9891,
     "Lon": 102.183998,
-    "Ele": 1558.1
+    "Ele": 1558.1,
+    "ident": "ZUXC",
+    "iso_country": "CN",
+    "icao_code": "ZUXC",
+    "iata_code": "XIC",
+    "length_ft": 11811,
+    "width_ft": 164,
+    "heading": 178.4,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -4497,7 +6786,15 @@
     "freq": "",
     "Lat": 28.858431,
     "Lon": 104.526157,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "ZUYB",
+    "iso_country": "CN",
+    "icao_code": "ZUYB",
+    "iata_code": "YBP",
+    "local_code": "YBP",
+    "length_ft": 8530,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -4506,7 +6803,14 @@
     "freq": "",
     "Lat": 25.083423,
     "Lon": 104.960804,
-    "Ele": 1264.9
+    "Ele": 1264.9,
+    "ident": "ZUYI",
+    "iso_country": "CN",
+    "icao_code": "ZUYI",
+    "iata_code": "ACX",
+    "length_ft": 7546,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -4515,7 +6819,14 @@
     "freq": "",
     "Lat": 26.54,
     "Lon": 101.79852,
-    "Ele": 493.8
+    "Ele": 493.8,
+    "ident": "ZUZH",
+    "iso_country": "CN",
+    "icao_code": "ZUZH",
+    "iata_code": "PZI",
+    "length_ft": 9186,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -4524,7 +6835,14 @@
     "freq": "",
     "Lat": 27.810723,
     "Lon": 107.247189,
-    "Ele": 830.0
+    "Ele": 830,
+    "ident": "ZUZY",
+    "iso_country": "CN",
+    "icao_code": "ZUZY",
+    "iata_code": "ZYI",
+    "length_ft": 9186,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -4533,7 +6851,14 @@
     "freq": "",
     "Lat": 41.262501,
     "Lon": 80.291702,
-    "Ele": 1163.1
+    "Ele": 1163.1,
+    "ident": "ZWAK",
+    "iso_country": "CN",
+    "icao_code": "ZWAK",
+    "iata_code": "AKU",
+    "length_ft": 7874,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4542,7 +6867,15 @@
     "freq": "",
     "Lat": 40.434748,
     "Lon": 81.26206,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZWAL",
+    "iso_country": "CN",
+    "icao_code": "ZWAL",
+    "iata_code": "ACF",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -4551,7 +6884,14 @@
     "freq": "",
     "Lat": 47.749886,
     "Lon": 88.085808,
-    "Ele": 749.8
+    "Ele": 749.8,
+    "ident": "ZWAT",
+    "iso_country": "CN",
+    "icao_code": "ZWAT",
+    "iata_code": "AAT",
+    "length_ft": 7218,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -4560,7 +6900,14 @@
     "freq": "",
     "Lat": 44.895461,
     "Lon": 82.30007,
-    "Ele": 381.9
+    "Ele": 381.9,
+    "ident": "ZWBL",
+    "iso_country": "CN",
+    "icao_code": "ZWBL",
+    "iata_code": "BPL",
+    "length_ft": 8530,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -4569,7 +6916,14 @@
     "freq": "",
     "Lat": 38.234516,
     "Lon": 85.465462,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZWCM",
+    "iso_country": "CN",
+    "icao_code": "ZWCM",
+    "iata_code": "IQM",
+    "length_ft": 9186,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -4578,7 +6932,14 @@
     "freq": "",
     "Lat": 46.804169,
     "Lon": 89.512006,
-    "Ele": 939.1
+    "Ele": 939.1,
+    "ident": "ZWFY",
+    "iso_country": "CN",
+    "icao_code": "ZWFY",
+    "iata_code": "FYN",
+    "length_ft": 8530,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -4587,7 +6948,14 @@
     "freq": "",
     "Lat": 42.8414,
     "Lon": 93.669197,
-    "Ele": 823.9
+    "Ele": 823.9,
+    "ident": "ZWHM",
+    "iso_country": "CN",
+    "icao_code": "ZWHM",
+    "iata_code": "HMI",
+    "length_ft": 7874,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -4596,7 +6964,14 @@
     "freq": "",
     "Lat": 44.2421,
     "Lon": 85.8905,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "ZWHZ",
+    "iso_country": "CN",
+    "icao_code": "ZWHZ",
+    "iata_code": "SHF",
+    "length_ft": 7874,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -4605,7 +6980,14 @@
     "freq": "",
     "Lat": 41.677856,
     "Lon": 82.872917,
-    "Ele": 1074.1
+    "Ele": 1074.1,
+    "ident": "ZWKC",
+    "iso_country": "CN",
+    "icao_code": "ZWKC",
+    "iata_code": "KCA",
+    "length_ft": 8530,
+    "heading": 83,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -4614,7 +6996,15 @@
     "freq": "",
     "Lat": 41.614979,
     "Lon": 86.140817,
-    "Ele": 926.9
+    "Ele": 926.9,
+    "ident": "ZWKL",
+    "iso_country": "CN",
+    "icao_code": "ZWKL",
+    "iata_code": "KRL",
+    "length_ft": 9121,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -4623,7 +7013,14 @@
     "freq": "",
     "Lat": 45.46655,
     "Lon": 84.9527,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZWKM",
+    "iso_country": "CN",
+    "icao_code": "ZWKM",
+    "iata_code": "KRY",
+    "length_ft": 8530,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -4632,7 +7029,14 @@
     "freq": "",
     "Lat": 48.2223,
     "Lon": 86.9959,
-    "Ele": 1195.1
+    "Ele": 1195.1,
+    "ident": "ZWKN",
+    "iso_country": "CN",
+    "icao_code": "ZWKN",
+    "iata_code": "KJI",
+    "length_ft": 8202,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -4641,7 +7045,15 @@
     "freq": "",
     "Lat": 43.4318,
     "Lon": 83.3786,
-    "Ele": 929.6
+    "Ele": 929.6,
+    "ident": "ZWNL",
+    "iso_country": "CN",
+    "icao_code": "ZWNL",
+    "iata_code": "NLT",
+    "length_ft": 7546,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -4650,7 +7062,15 @@
     "freq": "",
     "Lat": 38.974722,
     "Lon": 88.008333,
-    "Ele": 888.8
+    "Ele": 888.8,
+    "ident": "ZWRQ",
+    "iso_country": "CN",
+    "icao_code": "ZWRQ",
+    "iata_code": "RQA",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -4659,7 +7079,15 @@
     "freq": "",
     "Lat": 38.24542,
     "Lon": 77.056149,
-    "Ele": 1289.9
+    "Ele": 1289.9,
+    "ident": "ZWSC",
+    "iso_country": "CN",
+    "icao_code": "ZWSC",
+    "iata_code": "QSZ",
+    "length_ft": 9842,
+    "width_ft": 148,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -4668,7 +7096,15 @@
     "freq": "118.500",
     "Lat": 39.5429,
     "Lon": 76.019997,
-    "Ele": 1380.4
+    "Ele": 1380.4,
+    "ident": "ZWSH",
+    "iso_country": "CN",
+    "icao_code": "ZWSH",
+    "iata_code": "KHG",
+    "length_ft": 10499,
+    "width_ft": 135,
+    "heading": 85.9,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -4677,7 +7113,11 @@
     "freq": "",
     "Lat": 42.911701,
     "Lon": 90.247498,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZWSS",
+    "iso_country": "CN",
+    "icao_code": "ZWSS",
+    "iata_code": "SXJ"
   },
   {
     "type": "small_airport",
@@ -4686,7 +7126,15 @@
     "freq": "",
     "Lat": 46.672501,
     "Lon": 83.340797,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZWTC",
+    "iso_country": "CN",
+    "icao_code": "ZWTC",
+    "iata_code": "TCG",
+    "length_ft": 7808,
+    "width_ft": 148,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -4695,7 +7143,14 @@
     "freq": "",
     "Lat": 43.0308,
     "Lon": 89.0987,
-    "Ele": 284.7
+    "Ele": 284.7,
+    "ident": "ZWTL",
+    "iso_country": "CN",
+    "icao_code": "ZWTL",
+    "iata_code": "TLQ",
+    "length_ft": 9186,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -4704,7 +7159,15 @@
     "freq": "118.650",
     "Lat": 37.03850173950195,
     "Lon": 79.86489868164062,
-    "Ele": 1424.0
+    "Ele": 1424,
+    "ident": "ZWTN",
+    "iso_country": "CN",
+    "icao_code": "ZWTN",
+    "iata_code": "HTN",
+    "length_ft": 10499,
+    "width_ft": 164,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "large_airport",
@@ -4713,7 +7176,15 @@
     "freq": "126.700",
     "Lat": 43.907101,
     "Lon": 87.474197,
-    "Ele": 647.7
+    "Ele": 647.7,
+    "ident": "ZWWW",
+    "iso_country": "CN",
+    "icao_code": "ZWWW",
+    "iata_code": "URC",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 73.6,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -4722,7 +7193,15 @@
     "freq": "",
     "Lat": 43.955799,
     "Lon": 81.330299,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZWYN",
+    "iso_country": "CN",
+    "icao_code": "ZWYN",
+    "iata_code": "YIN",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -4731,7 +7210,16 @@
     "freq": "",
     "Lat": 36.8085,
     "Lon": 81.7827,
-    "Ele": 1442.0
+    "Ele": 1442,
+    "ident": "ZWYT",
+    "iso_country": "CN",
+    "icao_code": "ZWYT",
+    "iata_code": "YTW",
+    "local_code": "YTW",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -4740,7 +7228,14 @@
     "freq": "",
     "Lat": 41.105301,
     "Lon": 122.853996,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZYAS",
+    "iso_country": "CN",
+    "icao_code": "ZYAS",
+    "iata_code": "AOG",
+    "length_ft": 8530,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "medium_airport",
@@ -4749,7 +7244,15 @@
     "freq": "",
     "Lat": 45.505278,
     "Lon": 123.019722,
-    "Ele": 146.3
+    "Ele": 146.3,
+    "ident": "ZYBA",
+    "iso_country": "CN",
+    "icao_code": "ZYBA",
+    "iata_code": "DBC",
+    "length_ft": 8202,
+    "width_ft": 147,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -4758,7 +7261,14 @@
     "freq": "",
     "Lat": 42.066944,
     "Lon": 127.602222,
-    "Ele": 876.0
+    "Ele": 876,
+    "ident": "ZYBS",
+    "iso_country": "CN",
+    "icao_code": "ZYBS",
+    "iata_code": "NBS",
+    "length_ft": 8530,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "large_airport",
@@ -4767,7 +7277,15 @@
     "freq": "119.450",
     "Lat": 43.996201,
     "Lon": 125.684998,
-    "Ele": 215.2
+    "Ele": 215.2,
+    "ident": "ZYCC",
+    "iso_country": "CN",
+    "icao_code": "ZYCC",
+    "iata_code": "CGQ",
+    "length_ft": 10500,
+    "width_ft": 148,
+    "heading": 48.8,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -4776,7 +7294,14 @@
     "freq": "",
     "Lat": 39.266667,
     "Lon": 122.666944,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "ZYCH",
+    "iso_country": "CN",
+    "icao_code": "ZYCH",
+    "iata_code": "CNI",
+    "length_ft": 2789,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -4785,7 +7310,14 @@
     "freq": "",
     "Lat": 41.538101,
     "Lon": 120.434998,
-    "Ele": 173.1
+    "Ele": 173.1,
+    "ident": "ZYCY",
+    "iso_country": "CN",
+    "icao_code": "ZYCY",
+    "iata_code": "CHG",
+    "length_ft": 6562,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -4794,7 +7326,14 @@
     "freq": "",
     "Lat": 40.025453,
     "Lon": 124.28669,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "ZYDD",
+    "iso_country": "CN",
+    "icao_code": "ZYDD",
+    "iata_code": "DDG",
+    "length_ft": 8530,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -4803,7 +7342,15 @@
     "freq": "",
     "Lat": 46.750883,
     "Lon": 125.138642,
-    "Ele": 151.2
+    "Ele": 151.2,
+    "ident": "ZYDQ",
+    "iso_country": "CN",
+    "icao_code": "ZYDQ",
+    "iata_code": "DQA",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -4812,7 +7359,14 @@
     "freq": "",
     "Lat": 48.441037,
     "Lon": 126.128374,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "ZYDU",
+    "iso_country": "CN",
+    "icao_code": "ZYDU",
+    "iata_code": "DTU",
+    "length_ft": 8202,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -4821,7 +7375,9 @@
     "freq": "",
     "Lat": 42.069014,
     "Lon": 121.718122,
-    "Ele": 167.0
+    "Ele": 167,
+    "ident": "ZYFX",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -4830,7 +7386,15 @@
     "freq": "",
     "Lat": 48.197219,
     "Lon": 134.36298,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZYFY",
+    "iso_country": "CN",
+    "icao_code": "ZYFY",
+    "iata_code": "FYJ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -4839,7 +7403,9 @@
     "freq": "",
     "Lat": 50.700277,
     "Lon": 121.3825,
-    "Ele": 687.9
+    "Ele": 687.9,
+    "ident": "ZYGH",
+    "iso_country": "CN"
   },
   {
     "type": "large_airport",
@@ -4848,7 +7414,15 @@
     "freq": "127.400",
     "Lat": 45.623402,
     "Lon": 126.25,
-    "Ele": 139.3
+    "Ele": 139.3,
+    "ident": "ZYHB",
+    "iso_country": "CN",
+    "icao_code": "ZYHB",
+    "iata_code": "HRB",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 39,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -4857,7 +7431,15 @@
     "freq": "",
     "Lat": 50.171621,
     "Lon": 127.308884,
-    "Ele": 319.1
+    "Ele": 319.1,
+    "ident": "ZYHE",
+    "iso_country": "CN",
+    "icao_code": "ZYHE",
+    "iata_code": "HEK",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -4866,7 +7448,14 @@
     "freq": "",
     "Lat": 50.371389,
     "Lon": 124.1175,
-    "Ele": 367.3
+    "Ele": 367.3,
+    "ident": "ZYJD",
+    "iso_country": "CN",
+    "icao_code": "ZYJD",
+    "iata_code": "JGD",
+    "length_ft": 7546,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -4875,7 +7464,11 @@
     "freq": "",
     "Lat": 44.002652,
     "Lon": 126.395244,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZYJL",
+    "iso_country": "CN",
+    "icao_code": "ZYJL",
+    "iata_code": "JIL"
   },
   {
     "type": "medium_airport",
@@ -4884,7 +7477,15 @@
     "freq": "130.000",
     "Lat": 46.843399,
     "Lon": 130.464996,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "ZYJM",
+    "iso_country": "CN",
+    "icao_code": "ZYJM",
+    "iata_code": "JMU",
+    "length_ft": 7218,
+    "width_ft": 148,
+    "heading": 48.1,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -4893,7 +7494,14 @@
     "freq": "",
     "Lat": 47.108248,
     "Lon": 132.65792,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZYJS",
+    "iso_country": "CN",
+    "icao_code": "ZYJS",
+    "iata_code": "JSJ",
+    "length_ft": 8202,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -4902,7 +7510,15 @@
     "freq": "",
     "Lat": 45.293,
     "Lon": 131.193,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "ZYJX",
+    "iso_country": "CN",
+    "icao_code": "ZYJX",
+    "iata_code": "JXA",
+    "length_ft": 7546,
+    "width_ft": 155,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -4911,7 +7527,14 @@
     "freq": "",
     "Lat": 40.936032,
     "Lon": 121.277114,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZYJZ",
+    "iso_country": "CN",
+    "icao_code": "ZYJZ",
+    "iata_code": "JNZ",
+    "length_ft": 8202,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -4920,7 +7543,14 @@
     "freq": "",
     "Lat": 47.752056,
     "Lon": 129.019125,
-    "Ele": 241.1
+    "Ele": 241.1,
+    "ident": "ZYLD",
+    "iso_country": "CN",
+    "icao_code": "ZYLD",
+    "iata_code": "LDS",
+    "length_ft": 7546,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -4929,7 +7559,9 @@
     "freq": "",
     "Lat": 41.277976,
     "Lon": 123.078729,
-    "Ele": 17.4
+    "Ele": 17.4,
+    "ident": "ZYLY",
+    "iso_country": "CN"
   },
   {
     "type": "medium_airport",
@@ -4938,7 +7570,15 @@
     "freq": "130.000",
     "Lat": 44.5241012573,
     "Lon": 129.569000244,
-    "Ele": 269.1
+    "Ele": 269.1,
+    "ident": "ZYMD",
+    "iso_country": "CN",
+    "icao_code": "ZYMD",
+    "iata_code": "MDG",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 25.9,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -4947,7 +7587,14 @@
     "freq": "",
     "Lat": 52.916871,
     "Lon": 122.422759,
-    "Ele": 559.6
+    "Ele": 559.6,
+    "ident": "ZYMH",
+    "iso_country": "CN",
+    "icao_code": "ZYMH",
+    "iata_code": "OHE",
+    "length_ft": 7218,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "medium_airport",
@@ -4956,7 +7603,15 @@
     "freq": "130.000",
     "Lat": 47.23960113525391,
     "Lon": 123.91799926757812,
-    "Ele": 145.4
+    "Ele": 145.4,
+    "ident": "ZYQQ",
+    "iso_country": "CN",
+    "icao_code": "ZYQQ",
+    "iata_code": "NDG",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 157.5,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -4965,7 +7620,11 @@
     "freq": "",
     "Lat": 44.453889,
     "Lon": 130.843889,
-    "Ele": 428.9
+    "Ele": 428.9,
+    "ident": "ZYSD",
+    "iso_country": "CN",
+    "icao_code": "ZYSD",
+    "iata_code": "HSF"
   },
   {
     "type": "medium_airport",
@@ -4974,7 +7633,15 @@
     "freq": "",
     "Lat": 44.931143,
     "Lon": 124.552121,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "ZYSQ",
+    "iso_country": "CN",
+    "icao_code": "ZYSQ",
+    "iata_code": "YSQ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -4983,7 +7650,9 @@
     "freq": "",
     "Lat": 52.224444,
     "Lon": 124.720222,
-    "Ele": 378.0
+    "Ele": 378,
+    "ident": "ZYTH",
+    "iso_country": "CN"
   },
   {
     "type": "large_airport",
@@ -4992,7 +7661,15 @@
     "freq": "123.850",
     "Lat": 38.965719,
     "Lon": 121.538477,
-    "Ele": 32.6
+    "Ele": 32.6,
+    "ident": "ZYTL",
+    "iso_country": "CN",
+    "icao_code": "ZYTL",
+    "iata_code": "DLC",
+    "length_ft": 10827,
+    "width_ft": 148,
+    "heading": 95.6,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -5001,7 +7678,14 @@
     "freq": "",
     "Lat": 42.048435,
     "Lon": 125.733963,
-    "Ele": 410.6
+    "Ele": 410.6,
+    "ident": "ZYTN",
+    "iso_country": "CN",
+    "icao_code": "ZYTN",
+    "iata_code": "TNH",
+    "length_ft": 7546,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "large_airport",
@@ -5010,7 +7694,15 @@
     "freq": "119.825",
     "Lat": 41.639801,
     "Lon": 123.483002,
-    "Ele": 60.4
+    "Ele": 60.4,
+    "ident": "ZYTX",
+    "iso_country": "CN",
+    "icao_code": "ZYTX",
+    "iata_code": "SHE",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -5019,7 +7711,11 @@
     "freq": "",
     "Lat": 40.580328,
     "Lon": 120.700374,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "ZYXC",
+    "iso_country": "CN",
+    "icao_code": "ZYXC",
+    "iata_code": "XEN"
   },
   {
     "type": "small_airport",
@@ -5028,7 +7724,10 @@
     "freq": "",
     "Lat": 47.717936,
     "Lon": 128.830519,
-    "Ele": 243.2
+    "Ele": 243.2,
+    "ident": "ZYYC",
+    "iso_country": "CN",
+    "icao_code": "ZYYC"
   },
   {
     "type": "medium_airport",
@@ -5037,7 +7736,15 @@
     "freq": "130.000",
     "Lat": 42.8828010559,
     "Lon": 129.451004028,
-    "Ele": 190.2
+    "Ele": 190.2,
+    "ident": "ZYYJ",
+    "iso_country": "CN",
+    "icao_code": "ZYYJ",
+    "iata_code": "YNJ",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 81.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -5046,7 +7753,14 @@
     "freq": "",
     "Lat": 40.542524,
     "Lon": 122.3586,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ZYYK",
+    "iso_country": "CN",
+    "icao_code": "ZYYK",
+    "iata_code": "YKH",
+    "length_ft": 8202,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -5055,6 +7769,9 @@
     "freq": "",
     "Lat": 41.784354,
     "Lon": 123.496308,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "ZYYY",
+    "iso_country": "CN",
+    "icao_code": "ZYYY"
   }
 ]

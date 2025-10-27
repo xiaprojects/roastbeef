@@ -6,7 +6,15 @@
     "freq": "347.600",
     "Lat": -20.890087,
     "Lon": 55.518894,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "FMEE",
+    "iso_country": "RE",
+    "icao_code": "FMEE",
+    "iata_code": "RUN",
+    "length_ft": 8760,
+    "width_ft": 148,
+    "heading": 116,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,15 @@
     "freq": "122.400",
     "Lat": -21.319362,
     "Lon": 55.422506,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "FMEP",
+    "iso_country": "RE",
+    "icao_code": "FMEP",
+    "iata_code": "ZSE",
+    "length_ft": 7000,
+    "width_ft": 150,
+    "heading": 129,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -24,7 +40,9 @@
     "freq": "",
     "Lat": -21.111944,
     "Lon": 55.261667,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "RE-0001",
+    "iso_country": "RE"
   },
   {
     "type": "small_airport",
@@ -33,7 +51,10 @@
     "freq": "",
     "Lat": -20.985833,
     "Lon": 55.664444,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "RE-0002",
+    "iso_country": "RE",
+    "local_code": "LF9744"
   },
   {
     "type": "small_airport",
@@ -42,7 +63,9 @@
     "freq": "",
     "Lat": -21.15235,
     "Lon": 55.27887,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "RE-0006",
+    "iso_country": "RE"
   },
   {
     "type": "small_airport",
@@ -51,7 +74,10 @@
     "freq": "",
     "Lat": -20.963333,
     "Lon": 55.281667,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "RE-0008",
+    "iso_country": "RE",
+    "local_code": "LF9742"
   },
   {
     "type": "small_airport",
@@ -60,6 +86,9 @@
     "freq": "",
     "Lat": -21.288889,
     "Lon": 55.623611,
-    "Ele": 990.6
+    "Ele": 990.6,
+    "ident": "RE-0009",
+    "iso_country": "RE",
+    "local_code": "LF9743"
   }
 ]

@@ -6,7 +6,13 @@
     "freq": "",
     "Lat": 17.621194,
     "Lon": -61.798347,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "AG-0001",
+    "iso_country": "AG",
+    "length_ft": 6100,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -15,7 +21,15 @@
     "freq": "119.100",
     "Lat": 17.1367,
     "Lon": -61.792702,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "TAPA",
+    "iso_country": "AG",
+    "icao_code": "TAPA",
+    "iata_code": "ANU",
+    "length_ft": 9003,
+    "width_ft": 148,
+    "heading": 58.4,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -24,7 +38,14 @@
     "freq": "",
     "Lat": 17.635799,
     "Lon": -61.828602,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "TAPH",
+    "iso_country": "AG",
+    "icao_code": "TAPH",
+    "iata_code": "BBQ",
+    "length_ft": 1640,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -33,6 +54,9 @@
     "freq": "",
     "Lat": 17.555599,
     "Lon": -61.765301,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "TAPT",
+    "iso_country": "AG",
+    "icao_code": "TAPT"
   }
 ]

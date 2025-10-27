@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 48.657837,
     "Lon": 16.540234,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AT-0009",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 48.6976,
     "Lon": 16.6598,
-    "Ele": 291.1
+    "Ele": 291.1,
+    "ident": "AT-0011",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 48.69335,
     "Lon": 16.46472,
-    "Ele": 196.0
+    "Ele": 196,
+    "ident": "AT-0017",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 48.61453,
     "Lon": 15.40598,
-    "Ele": 537.1
+    "Ele": 537.1,
+    "ident": "AT-0024",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 48.31459,
     "Lon": 13.71796,
-    "Ele": 385.0
+    "Ele": 385,
+    "ident": "AT-0025",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 46.65278,
     "Lon": 13.89145,
-    "Ele": 502.0
+    "Ele": 502,
+    "ident": "AT-0029",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 47.93474,
     "Lon": 14.350854,
-    "Ele": 355.1
+    "Ele": 355.1,
+    "ident": "DE-0354",
+    "iso_country": "AT"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,14 @@
     "freq": "124.400",
     "Lat": 48.41856,
     "Lon": 15.215294,
-    "Ele": 873.9
+    "Ele": 873.9,
+    "ident": "LOAA",
+    "iso_country": "AT",
+    "icao_code": "LOAA",
+    "length_ft": 1693,
+    "width_ft": 82,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -78,7 +99,14 @@
     "freq": "",
     "Lat": 48.922113,
     "Lon": 15.296826,
-    "Ele": 524.3
+    "Ele": 524.3,
+    "ident": "LOAB",
+    "iso_country": "AT",
+    "icao_code": "LOAB",
+    "length_ft": 1935,
+    "width_ft": 98,
+    "QFU": "30G",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -87,7 +115,14 @@
     "freq": "",
     "Lat": 48.160081,
     "Lon": 15.58677,
-    "Ele": 324.0
+    "Ele": 324,
+    "ident": "LOAD",
+    "iso_country": "AT",
+    "icao_code": "LOAD",
+    "length_ft": 1644,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -96,7 +131,14 @@
     "freq": "122.700",
     "Lat": 48.446155,
     "Lon": 15.635011,
-    "Ele": 310.0
+    "Ele": 310,
+    "ident": "LOAG",
+    "iso_country": "AT",
+    "icao_code": "LOAG",
+    "length_ft": 2965,
+    "width_ft": 59,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -105,7 +147,14 @@
     "freq": "130.005",
     "Lat": 47.8433,
     "Lon": 16.260099,
-    "Ele": 273.1
+    "Ele": 273.1,
+    "ident": "LOAN",
+    "iso_country": "AT",
+    "icao_code": "LOAN",
+    "length_ft": 3500,
+    "width_ft": 75,
+    "heading": 97,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -114,7 +163,13 @@
     "freq": "125.250",
     "Lat": 48.6661,
     "Lon": 16.825,
-    "Ele": 184.1
+    "Ele": 184.1,
+    "ident": "LOAR",
+    "iso_country": "AT",
+    "length_ft": 1641,
+    "width_ft": 82,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -123,7 +178,14 @@
     "freq": "118.520",
     "Lat": 48.099157,
     "Lon": 16.933527,
-    "Ele": 189.9
+    "Ele": 189.9,
+    "ident": "LOAS",
+    "iso_country": "AT",
+    "icao_code": "LOAS",
+    "length_ft": 2297,
+    "width_ft": 82,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -132,7 +194,14 @@
     "freq": "",
     "Lat": 48.409121,
     "Lon": 16.191015,
-    "Ele": 209.1
+    "Ele": 209.1,
+    "ident": "LOAU",
+    "iso_country": "AT",
+    "icao_code": "LOAU",
+    "length_ft": 2625,
+    "width_ft": 59,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -141,7 +210,14 @@
     "freq": "118.605",
     "Lat": 47.965,
     "Lon": 16.26,
-    "Ele": 233.2
+    "Ele": 233.2,
+    "ident": "LOAV",
+    "iso_country": "AT",
+    "icao_code": "LOAV",
+    "length_ft": 2133,
+    "width_ft": 82,
+    "QFU": "13",
+    "heading": 306
   },
   {
     "type": "small_airport",
@@ -150,7 +226,14 @@
     "freq": "",
     "Lat": 47.061873,
     "Lon": 16.083901,
-    "Ele": 253.0
+    "Ele": 253,
+    "ident": "LOGF",
+    "iso_country": "AT",
+    "icao_code": "LOGF",
+    "length_ft": 820,
+    "width_ft": 98,
+    "QFU": "31G",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -159,7 +242,14 @@
     "freq": "123.205",
     "Lat": 47.146654,
     "Lon": 16.317058,
-    "Ele": 289.6
+    "Ele": 289.6,
+    "ident": "LOGG",
+    "iso_country": "AT",
+    "icao_code": "LOGG",
+    "length_ft": 2690,
+    "width_ft": 59,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -168,7 +258,13 @@
     "freq": "",
     "Lat": 47.493364,
     "Lon": 14.49558,
-    "Ele": 695.9
+    "Ele": 695.9,
+    "ident": "LOGI",
+    "iso_country": "AT",
+    "length_ft": 2575,
+    "width_ft": 59,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -177,7 +273,13 @@
     "freq": "",
     "Lat": 47.457544,
     "Lon": 15.331125,
-    "Ele": 524.0
+    "Ele": 524,
+    "ident": "LOGK",
+    "iso_country": "AT",
+    "length_ft": 1969,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -186,7 +288,14 @@
     "freq": "",
     "Lat": 47.556155,
     "Lon": 15.320327,
-    "Ele": 784.9
+    "Ele": 784.9,
+    "ident": "LOGL",
+    "iso_country": "AT",
+    "icao_code": "LOGL",
+    "length_ft": 2297,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -195,7 +304,14 @@
     "freq": "122.105",
     "Lat": 47.789733,
     "Lon": 15.300333,
-    "Ele": 860.1
+    "Ele": 860.1,
+    "ident": "LOGM",
+    "iso_country": "AT",
+    "icao_code": "LOGM",
+    "length_ft": 1640,
+    "width_ft": 59,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -204,7 +320,14 @@
     "freq": "",
     "Lat": 47.478742,
     "Lon": 14.007101,
-    "Ele": 652.9
+    "Ele": 652.9,
+    "ident": "LOGO",
+    "iso_country": "AT",
+    "icao_code": "LOGO",
+    "length_ft": 2395,
+    "width_ft": 98,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -213,7 +336,14 @@
     "freq": "",
     "Lat": 47.386684,
     "Lon": 16.112673,
-    "Ele": 408.1
+    "Ele": 408.1,
+    "ident": "LOGP",
+    "iso_country": "AT",
+    "icao_code": "LOGP",
+    "length_ft": 2067,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -222,7 +352,14 @@
     "freq": "122.305",
     "Lat": 47.379648,
     "Lon": 14.964044,
-    "Ele": 627.9
+    "Ele": 627.9,
+    "ident": "LOGT",
+    "iso_country": "AT",
+    "icao_code": "LOGT",
+    "length_ft": 2050,
+    "width_ft": 98,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -231,7 +368,14 @@
     "freq": "",
     "Lat": 47.170293,
     "Lon": 15.664468,
-    "Ele": 395.0
+    "Ele": 395,
+    "ident": "LOGW",
+    "iso_country": "AT",
+    "icao_code": "LOGW",
+    "length_ft": 1444,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -240,7 +384,15 @@
     "freq": "121.200",
     "Lat": 47.384477,
     "Lon": 9.699776,
-    "Ele": 412.1
+    "Ele": 412.1,
+    "ident": "LOIH",
+    "iso_country": "AT",
+    "icao_code": "LOIH",
+    "iata_code": "HOH",
+    "length_ft": 2067,
+    "width_ft": 59,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -249,7 +401,14 @@
     "freq": "120.350",
     "Lat": 47.5201,
     "Lon": 12.4497,
-    "Ele": 670.0
+    "Ele": 670,
+    "ident": "LOIJ",
+    "iso_country": "AT",
+    "icao_code": "LOIJ",
+    "length_ft": 2461,
+    "width_ft": 59,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -258,7 +417,14 @@
     "freq": "",
     "Lat": 47.564713,
     "Lon": 12.127576,
-    "Ele": 484.0
+    "Ele": 484,
+    "ident": "LOIK",
+    "iso_country": "AT",
+    "icao_code": "LOIK",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -267,7 +433,14 @@
     "freq": "",
     "Lat": 47.470897,
     "Lon": 10.6913,
-    "Ele": 855.3
+    "Ele": 855.3,
+    "ident": "LOIR",
+    "iso_country": "AT",
+    "icao_code": "LOIR",
+    "length_ft": 2228,
+    "width_ft": 60,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -276,7 +449,14 @@
     "freq": "",
     "Lat": 46.70893,
     "Lon": 14.076722,
-    "Ele": 520.0
+    "Ele": 520,
+    "ident": "LOKF",
+    "iso_country": "AT",
+    "icao_code": "LOKF",
+    "length_ft": 2296,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -285,7 +465,14 @@
     "freq": "",
     "Lat": 46.532778,
     "Lon": 14.330833,
-    "Ele": 456.6
+    "Ele": 456.6,
+    "ident": "LOKG",
+    "iso_country": "AT",
+    "icao_code": "LOKG",
+    "length_ft": 2028,
+    "width_ft": 82,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -294,7 +481,14 @@
     "freq": "",
     "Lat": 46.927491,
     "Lon": 14.431848,
-    "Ele": 615.4
+    "Ele": 615.4,
+    "ident": "LOKH",
+    "iso_country": "AT",
+    "icao_code": "LOKH",
+    "length_ft": 2320,
+    "width_ft": 98,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -303,7 +497,14 @@
     "freq": "",
     "Lat": 46.798069,
     "Lon": 12.87833,
-    "Ele": 637.9
+    "Ele": 637.9,
+    "ident": "LOKL",
+    "iso_country": "AT",
+    "icao_code": "LOKL",
+    "length_ft": 2034,
+    "width_ft": 59,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -312,7 +513,14 @@
     "freq": "",
     "Lat": 46.974996,
     "Lon": 14.371228,
-    "Ele": 645.9
+    "Ele": 645.9,
+    "ident": "LOKM",
+    "iso_country": "AT",
+    "icao_code": "LOKM",
+    "length_ft": 1312,
+    "width_ft": 82,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -321,7 +529,14 @@
     "freq": "",
     "Lat": 46.5811,
     "Lon": 13.6292,
-    "Ele": 548.9
+    "Ele": 548.9,
+    "ident": "LOKN",
+    "iso_country": "AT",
+    "icao_code": "LOKN",
+    "length_ft": 2329,
+    "width_ft": 82,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -330,7 +545,13 @@
     "freq": "",
     "Lat": 46.743139,
     "Lon": 14.413134,
-    "Ele": 536.1
+    "Ele": 536.1,
+    "ident": "LOKR",
+    "iso_country": "AT",
+    "length_ft": 1312,
+    "width_ft": 82,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -339,7 +560,14 @@
     "freq": "122.500",
     "Lat": 46.818202,
     "Lon": 14.825154,
-    "Ele": 445.0
+    "Ele": 445,
+    "ident": "LOKW",
+    "iso_country": "AT",
+    "icao_code": "LOKW",
+    "length_ft": 2427,
+    "width_ft": 98,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -348,7 +576,14 @@
     "freq": "",
     "Lat": 47.898602,
     "Lon": 13.9394,
-    "Ele": 531.0
+    "Ele": 531,
+    "ident": "LOLC",
+    "iso_country": "AT",
+    "icao_code": "LOLC",
+    "length_ft": 1942,
+    "width_ft": 98,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -357,7 +592,14 @@
     "freq": "",
     "Lat": 48.338793,
     "Lon": 13.985209,
-    "Ele": 270.4
+    "Ele": 270.4,
+    "ident": "LOLE",
+    "iso_country": "AT",
+    "icao_code": "LOLE",
+    "length_ft": 1394,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -366,7 +608,14 @@
     "freq": "",
     "Lat": 48.513748,
     "Lon": 14.406579,
-    "Ele": 681.8
+    "Ele": 681.8,
+    "ident": "LOLF",
+    "iso_country": "AT",
+    "icao_code": "LOLF",
+    "length_ft": 1312,
+    "width_ft": 82,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -375,7 +624,14 @@
     "freq": "122.405",
     "Lat": 48.10332,
     "Lon": 14.951091,
-    "Ele": 252.1
+    "Ele": 252.1,
+    "ident": "LOLG",
+    "iso_country": "AT",
+    "icao_code": "LOLG",
+    "length_ft": 1575,
+    "width_ft": 82,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -384,7 +640,14 @@
     "freq": "122.180",
     "Lat": 48.13911,
     "Lon": 14.33584,
-    "Ele": 358.1
+    "Ele": 358.1,
+    "ident": "LOLH",
+    "iso_country": "AT",
+    "icao_code": "LOLH",
+    "length_ft": 1476,
+    "width_ft": 82,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -393,7 +656,14 @@
     "freq": "",
     "Lat": 48.21227,
     "Lon": 13.345678,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "LOLK",
+    "iso_country": "AT",
+    "icao_code": "LOLK",
+    "length_ft": 2437,
+    "width_ft": 59,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -402,7 +672,14 @@
     "freq": "",
     "Lat": 47.871669,
     "Lon": 14.125149,
-    "Ele": 459.9
+    "Ele": 459.9,
+    "ident": "LOLM",
+    "iso_country": "AT",
+    "icao_code": "LOLM",
+    "length_ft": 1526,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -411,7 +688,14 @@
     "freq": "122.380",
     "Lat": 48.300044,
     "Lon": 14.333606,
-    "Ele": 252.1
+    "Ele": 252.1,
+    "ident": "LOLO",
+    "iso_country": "AT",
+    "icao_code": "LOLO",
+    "length_ft": 3084,
+    "width_ft": 98,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -420,7 +704,14 @@
     "freq": "",
     "Lat": 48.403301,
     "Lon": 13.4483,
-    "Ele": 326.1
+    "Ele": 326.1,
+    "ident": "LOLS",
+    "iso_country": "AT",
+    "icao_code": "LOLS",
+    "length_ft": 2625,
+    "width_ft": 75,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -429,7 +720,14 @@
     "freq": "123.605",
     "Lat": 48.050556,
     "Lon": 14.661944,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "LOLT",
+    "iso_country": "AT",
+    "icao_code": "LOLT",
+    "length_ft": 2723,
+    "width_ft": 82,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -438,7 +736,14 @@
     "freq": "",
     "Lat": 47.951541,
     "Lon": 13.867271,
-    "Ele": 509.0
+    "Ele": 509,
+    "ident": "LOLU",
+    "iso_country": "AT",
+    "icao_code": "LOLU",
+    "length_ft": 1804,
+    "width_ft": 59,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -447,7 +752,14 @@
     "freq": "119.700",
     "Lat": 48.182513,
     "Lon": 14.039283,
-    "Ele": 317.9
+    "Ele": 317.9,
+    "ident": "LOLW",
+    "iso_country": "AT",
+    "icao_code": "LOLW",
+    "length_ft": 2952,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -456,7 +768,14 @@
     "freq": "",
     "Lat": 47.131995,
     "Lon": 13.695867,
-    "Ele": 1110.1
+    "Ele": 1110.1,
+    "ident": "LOSM",
+    "iso_country": "AT",
+    "icao_code": "LOSM",
+    "length_ft": 2690,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -465,7 +784,15 @@
     "freq": "119.300",
     "Lat": 46.9911,
     "Lon": 15.4396,
-    "Ele": 339.9
+    "Ele": 339.9,
+    "ident": "LOWG",
+    "iso_country": "AT",
+    "icao_code": "LOWG",
+    "iata_code": "GRZ",
+    "length_ft": 2493,
+    "width_ft": 82,
+    "heading": 169,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -474,7 +801,15 @@
     "freq": "119.275",
     "Lat": 47.260201,
     "Lon": 11.344,
-    "Ele": 581.3
+    "Ele": 581.3,
+    "ident": "LOWI",
+    "iso_country": "AT",
+    "icao_code": "LOWI",
+    "iata_code": "INN",
+    "length_ft": 6562,
+    "width_ft": 148,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -483,7 +818,15 @@
     "freq": "126.825",
     "Lat": 46.642502,
     "Lon": 14.3377,
-    "Ele": 448.7
+    "Ele": 448.7,
+    "ident": "LOWK",
+    "iso_country": "AT",
+    "icao_code": "LOWK",
+    "iata_code": "KLU",
+    "length_ft": 2427,
+    "width_ft": 90,
+    "heading": 106,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -492,7 +835,15 @@
     "freq": "119.750",
     "Lat": 48.2332,
     "Lon": 14.1875,
-    "Ele": 298.7
+    "Ele": 298.7,
+    "ident": "LOWL",
+    "iso_country": "AT",
+    "icao_code": "LOWL",
+    "iata_code": "LNZ",
+    "QFU": "26E",
+    "length_ft": 2165,
+    "width_ft": 148,
+    "heading": 87
   },
   {
     "type": "medium_airport",
@@ -501,7 +852,15 @@
     "freq": "123.725",
     "Lat": 47.793301,
     "Lon": 13.0043,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "LOWS",
+    "iso_country": "AT",
+    "icao_code": "LOWS",
+    "iata_code": "SZG",
+    "length_ft": 9022,
+    "width_ft": 148,
+    "heading": 157,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -510,7 +869,15 @@
     "freq": "134.675",
     "Lat": 48.110298,
     "Lon": 16.5697,
-    "Ele": 182.9
+    "Ele": 182.9,
+    "ident": "LOWW",
+    "iso_country": "AT",
+    "icao_code": "LOWW",
+    "iata_code": "VIE",
+    "length_ft": 11811,
+    "width_ft": 148,
+    "heading": 164,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -519,7 +886,14 @@
     "freq": "119.705",
     "Lat": 47.291468,
     "Lon": 12.790632,
-    "Ele": 752.9
+    "Ele": 752.9,
+    "ident": "LOWZ",
+    "iso_country": "AT",
+    "icao_code": "LOWZ",
+    "length_ft": 984,
+    "width_ft": 164,
+    "heading": 70,
+    "QFU": "XX"
   },
   {
     "type": "small_airport",
@@ -528,7 +902,14 @@
     "freq": "",
     "Lat": 47.53573,
     "Lon": 14.141488,
-    "Ele": 637.9
+    "Ele": 637.9,
+    "ident": "LOXA",
+    "iso_country": "AT",
+    "icao_code": "LOXA",
+    "length_ft": 3034,
+    "width_ft": 131,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -537,7 +918,14 @@
     "freq": "130.150",
     "Lat": 47.836933,
     "Lon": 16.221838,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "LOXN",
+    "iso_country": "AT",
+    "icao_code": "LOXN",
+    "length_ft": 2852,
+    "width_ft": 99,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -546,7 +934,14 @@
     "freq": "",
     "Lat": 48.319247,
     "Lon": 16.114016,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "LOXT",
+    "iso_country": "AT",
+    "icao_code": "LOXT",
+    "length_ft": 4593,
+    "width_ft": 196,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -555,6 +950,13 @@
     "freq": "129.475",
     "Lat": 47.202801,
     "Lon": 14.7442,
-    "Ele": 690.1
+    "Ele": 690.1,
+    "ident": "LOXZ",
+    "iso_country": "AT",
+    "icao_code": "LOXZ",
+    "length_ft": 9022,
+    "width_ft": 197,
+    "heading": 81,
+    "QFU": "26"
   }
 ]

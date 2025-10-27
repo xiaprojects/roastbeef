@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 9.391186,
     "Lon": 2.507311,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "BJ-0001",
+    "iso_country": "BJ"
   },
   {
     "type": "medium_airport",
@@ -15,7 +17,15 @@
     "freq": "658.600",
     "Lat": 6.357230186462402,
     "Lon": 2.384350061416626,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "DBBB",
+    "iso_country": "BJ",
+    "icao_code": "DBBB",
+    "iata_code": "COO",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 53,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -24,7 +34,10 @@
     "freq": "",
     "Lat": 7.125417,
     "Lon": 2.046806,
-    "Ele": 167.0
+    "Ele": 167,
+    "ident": "DBBC",
+    "iso_country": "BJ",
+    "icao_code": "DBBC"
   },
   {
     "type": "small_airport",
@@ -33,7 +46,11 @@
     "freq": "",
     "Lat": 9.69208333333,
     "Lon": 1.63777777778,
-    "Ele": 451.1
+    "Ele": 451.1,
+    "ident": "DBBD",
+    "iso_country": "BJ",
+    "icao_code": "DBBD",
+    "iata_code": "DJA"
   },
   {
     "type": "small_airport",
@@ -42,7 +59,11 @@
     "freq": "",
     "Lat": 11.14479,
     "Lon": 2.940381,
-    "Ele": 289.9
+    "Ele": 289.9,
+    "ident": "DBBK",
+    "iso_country": "BJ",
+    "icao_code": "DBBK",
+    "iata_code": "KDC"
   },
   {
     "type": "small_airport",
@@ -51,7 +72,11 @@
     "freq": "",
     "Lat": 10.376965,
     "Lon": 1.360507,
-    "Ele": 460.9
+    "Ele": 460.9,
+    "ident": "DBBN",
+    "iso_country": "BJ",
+    "icao_code": "DBBN",
+    "iata_code": "NAE"
   },
   {
     "type": "small_airport",
@@ -60,7 +85,10 @@
     "freq": "",
     "Lat": 11.046563,
     "Lon": 0.992613,
-    "Ele": 161.8
+    "Ele": 161.8,
+    "ident": "DBBO",
+    "iso_country": "BJ",
+    "icao_code": "DBBO"
   },
   {
     "type": "small_airport",
@@ -69,7 +97,14 @@
     "freq": "",
     "Lat": 9.35768985748291,
     "Lon": 2.609679937362671,
-    "Ele": 385.9
+    "Ele": 385.9,
+    "ident": "DBBP",
+    "iso_country": "BJ",
+    "icao_code": "DBBP",
+    "iata_code": "PKO",
+    "length_ft": 5249,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -78,7 +113,10 @@
     "freq": "",
     "Lat": 10.27409,
     "Lon": 2.697082,
-    "Ele": 362.1
+    "Ele": 362.1,
+    "ident": "DBBR",
+    "iso_country": "BJ",
+    "icao_code": "DBBR"
   },
   {
     "type": "small_airport",
@@ -87,6 +125,10 @@
     "freq": "",
     "Lat": 8.018170356750488,
     "Lon": 2.4645800590515137,
-    "Ele": 182.0
+    "Ele": 182,
+    "ident": "DBBS",
+    "iso_country": "BJ",
+    "icao_code": "DBBS",
+    "iata_code": "SVF"
   }
 ]

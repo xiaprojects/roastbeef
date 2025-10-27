@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 7.584231,
     "Lon": 20.171798,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CF-0001",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 2.92405,
     "Lon": 16.265434,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CF-0002",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 4.313039,
     "Lon": 17.48594,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CF-0004",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 5.378512,
     "Lon": 26.476364,
-    "Ele": 642.5
+    "Ele": 642.5,
+    "ident": "CF-0005",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 9.271226,
     "Lon": 21.195556,
-    "Ele": 419.4
+    "Ele": 419.4,
+    "ident": "CF-0006",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 8.524158,
     "Lon": 23.240274,
-    "Ele": 800.1
+    "Ele": 800.1,
+    "ident": "CF-0007",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 3.507713,
     "Lon": 16.041763,
-    "Ele": 403.3
+    "Ele": 403.3,
+    "ident": "CF-0010",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": 4.99107,
     "Lon": 19.98374,
-    "Ele": 377.0
+    "Ele": 377,
+    "ident": "CF-0011",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,11 @@
     "freq": "",
     "Lat": 7.964938,
     "Lon": 23.526018,
-    "Ele": 730.0
+    "Ele": 730,
+    "ident": "CF-0012",
+    "iso_country": "CF",
+    "iata_code": "KWD",
+    "local_code": "FE02"
   },
   {
     "type": "small_airport",
@@ -87,7 +107,10 @@
     "freq": "",
     "Lat": 5.022184,
     "Lon": 21.198635,
-    "Ele": 448.1
+    "Ele": 448.1,
+    "ident": "FEFA",
+    "iso_country": "CF",
+    "icao_code": "FEFA"
   },
   {
     "type": "small_airport",
@@ -96,7 +119,10 @@
     "freq": "",
     "Lat": 5.403889,
     "Lon": 26.487222,
-    "Ele": 651.4
+    "Ele": 651.4,
+    "ident": "FEFB",
+    "iso_country": "CF",
+    "icao_code": "FEFB"
   },
   {
     "type": "small_airport",
@@ -105,7 +131,11 @@
     "freq": "",
     "Lat": 4.936999797821045,
     "Lon": 15.894000053405762,
-    "Ele": 605.0
+    "Ele": 605,
+    "ident": "FEFC",
+    "iso_country": "CF",
+    "icao_code": "FEFC",
+    "iata_code": "CRF"
   },
   {
     "type": "small_airport",
@@ -114,7 +144,9 @@
     "freq": "",
     "Lat": 4.949999809265137,
     "Lon": 18.700000762939453,
-    "Ele": 434.9
+    "Ele": 434.9,
+    "ident": "FEFD",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -123,7 +155,10 @@
     "freq": "",
     "Lat": 4.37465,
     "Lon": 21.131901,
-    "Ele": 406.0
+    "Ele": 406,
+    "ident": "FEFE",
+    "iso_country": "CF",
+    "icao_code": "FEFE"
   },
   {
     "type": "medium_airport",
@@ -132,7 +167,15 @@
     "freq": "655.900",
     "Lat": 4.39847993850708,
     "Lon": 18.518800735473636,
-    "Ele": 368.2
+    "Ele": 368.2,
+    "ident": "FEFF",
+    "iso_country": "CF",
+    "icao_code": "FEFF",
+    "iata_code": "BGF",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -141,7 +184,11 @@
     "freq": "",
     "Lat": 4.784999847412109,
     "Lon": 22.7810001373291,
-    "Ele": 520.0
+    "Ele": 520,
+    "ident": "FEFG",
+    "iso_country": "CF",
+    "icao_code": "FEFG",
+    "iata_code": "BGU"
   },
   {
     "type": "small_airport",
@@ -150,7 +197,11 @@
     "freq": "",
     "Lat": 10.23639965057373,
     "Lon": 22.71689987182617,
-    "Ele": 516.9
+    "Ele": 516.9,
+    "ident": "FEFI",
+    "iso_country": "CF",
+    "icao_code": "FEFI",
+    "iata_code": "IRO"
   },
   {
     "type": "small_airport",
@@ -159,7 +210,10 @@
     "freq": "",
     "Lat": 4.6,
     "Lon": 21.867001,
-    "Ele": 583.1
+    "Ele": 583.1,
+    "ident": "FEFK",
+    "iso_country": "CF",
+    "icao_code": "FEFK"
   },
   {
     "type": "small_airport",
@@ -168,7 +222,11 @@
     "freq": "",
     "Lat": 5.847012,
     "Lon": 20.64992,
-    "Ele": 472.1
+    "Ele": 472.1,
+    "ident": "FEFM",
+    "iso_country": "CF",
+    "icao_code": "FEFM",
+    "iata_code": "BBY"
   },
   {
     "type": "small_airport",
@@ -177,7 +235,14 @@
     "freq": "",
     "Lat": 8.427206039428711,
     "Lon": 20.635156631469727,
-    "Ele": 497.1
+    "Ele": 497.1,
+    "ident": "FEFN",
+    "iso_country": "CF",
+    "icao_code": "FEFN",
+    "iata_code": "NDL",
+    "length_ft": 4921,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -186,7 +251,11 @@
     "freq": "",
     "Lat": 5.958000183105469,
     "Lon": 15.63700008392334,
-    "Ele": 1024.1
+    "Ele": 1024.1,
+    "ident": "FEFO",
+    "iso_country": "CF",
+    "icao_code": "FEFO",
+    "iata_code": "BOP"
   },
   {
     "type": "small_airport",
@@ -195,7 +264,10 @@
     "freq": "",
     "Lat": 7.25,
     "Lon": 16.433001,
-    "Ele": 620.9
+    "Ele": 620.9,
+    "ident": "FEFP",
+    "iso_country": "CF",
+    "icao_code": "FEFP"
   },
   {
     "type": "small_airport",
@@ -204,7 +276,10 @@
     "freq": "",
     "Lat": 6.983,
     "Lon": 19.183001,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "FEFQ",
+    "iso_country": "CF",
+    "icao_code": "FEFQ"
   },
   {
     "type": "small_airport",
@@ -213,7 +288,14 @@
     "freq": "",
     "Lat": 6.527780055999756,
     "Lon": 21.98940086364746,
-    "Ele": 602.0
+    "Ele": 602,
+    "ident": "FEFR",
+    "iso_country": "CF",
+    "icao_code": "FEFR",
+    "iata_code": "BIV",
+    "length_ft": 5906,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -222,7 +304,11 @@
     "freq": "",
     "Lat": 6.492000102996826,
     "Lon": 17.429000854492188,
-    "Ele": 499.0
+    "Ele": 499,
+    "ident": "FEFS",
+    "iso_country": "CF",
+    "icao_code": "FEFS",
+    "iata_code": "BSN"
   },
   {
     "type": "medium_airport",
@@ -231,7 +317,15 @@
     "freq": "118.700",
     "Lat": 4.221580028533936,
     "Lon": 15.786399841308594,
-    "Ele": 588.0
+    "Ele": 588,
+    "ident": "FEFT",
+    "iso_country": "CF",
+    "icao_code": "FEFT",
+    "iata_code": "BBT",
+    "length_ft": 5446,
+    "width_ft": 98,
+    "heading": 167,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -240,7 +334,10 @@
     "freq": "",
     "Lat": 5.733,
     "Lon": 19.083,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "FEFU",
+    "iso_country": "CF",
+    "icao_code": "FEFU"
   },
   {
     "type": "small_airport",
@@ -249,7 +346,11 @@
     "freq": "",
     "Lat": 8.010560035705566,
     "Lon": 22.39859962463379,
-    "Ele": 750.1
+    "Ele": 750.1,
+    "ident": "FEFW",
+    "iso_country": "CF",
+    "icao_code": "FEFW",
+    "iata_code": "ODA"
   },
   {
     "type": "small_airport",
@@ -258,7 +359,14 @@
     "freq": "",
     "Lat": 6.519999980926514,
     "Lon": 23.26000022888184,
-    "Ele": 602.0
+    "Ele": 602,
+    "ident": "FEFY",
+    "iso_country": "CF",
+    "icao_code": "FEFY",
+    "iata_code": "AIG",
+    "length_ft": 3920,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -267,7 +375,11 @@
     "freq": "",
     "Lat": 5.002226,
     "Lon": 25.101857,
-    "Ele": 608.1
+    "Ele": 608.1,
+    "ident": "FEFZ",
+    "iso_country": "CF",
+    "icao_code": "FEFZ",
+    "iata_code": "IMO"
   },
   {
     "type": "small_airport",
@@ -276,7 +388,9 @@
     "freq": "",
     "Lat": 5.433000087738037,
     "Lon": 27.21699905395508,
-    "Ele": 690.1
+    "Ele": 690.1,
+    "ident": "FEGB",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -285,7 +399,10 @@
     "freq": "",
     "Lat": 6.917,
     "Lon": 15.617,
-    "Ele": 1055.8
+    "Ele": 1055.8,
+    "ident": "FEGC",
+    "iso_country": "CF",
+    "icao_code": "FEGC"
   },
   {
     "type": "small_airport",
@@ -294,7 +411,9 @@
     "freq": "",
     "Lat": 6.300000190734863,
     "Lon": 19.08300018310547,
-    "Ele": 549.9
+    "Ele": 549.9,
+    "ident": "FEGD",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -303,7 +422,11 @@
     "freq": "",
     "Lat": 5.33301019669,
     "Lon": 25.9319000244,
-    "Ele": 600.2
+    "Ele": 600.2,
+    "ident": "FEGE",
+    "iso_country": "CF",
+    "icao_code": "FEGE",
+    "iata_code": "MKI"
   },
   {
     "type": "small_airport",
@@ -312,7 +435,11 @@
     "freq": "",
     "Lat": 7.314109802246094,
     "Lon": 18.308799743652344,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "FEGF",
+    "iso_country": "CF",
+    "icao_code": "FEGF",
+    "iata_code": "BTG"
   },
   {
     "type": "small_airport",
@@ -321,7 +448,10 @@
     "freq": "",
     "Lat": 4.133,
     "Lon": 15.15,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "FEGG",
+    "iso_country": "CF",
+    "icao_code": "FEGG"
   },
   {
     "type": "small_airport",
@@ -330,7 +460,9 @@
     "freq": "",
     "Lat": 5.683000087738037,
     "Lon": 20.049999237060547,
-    "Ele": 399.9
+    "Ele": 399.9,
+    "ident": "FEGI",
+    "iso_country": "CF"
   },
   {
     "type": "small_airport",
@@ -339,7 +471,11 @@
     "freq": "",
     "Lat": 9.581117,
     "Lon": 21.728172,
-    "Ele": 434.9
+    "Ele": 434.9,
+    "ident": "FEGL",
+    "iso_country": "CF",
+    "icao_code": "FEGL",
+    "iata_code": "GDI"
   },
   {
     "type": "small_airport",
@@ -348,7 +484,11 @@
     "freq": "",
     "Lat": 5.693999767303467,
     "Lon": 22.801000595092773,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "FEGM",
+    "iso_country": "CF",
+    "icao_code": "FEGM",
+    "iata_code": "BMF"
   },
   {
     "type": "small_airport",
@@ -357,7 +497,11 @@
     "freq": "",
     "Lat": 8.899999618530273,
     "Lon": 22.78300094604492,
-    "Ele": 605.0
+    "Ele": 605,
+    "ident": "FEGO",
+    "iso_country": "CF",
+    "icao_code": "FEGO",
+    "iata_code": "ODJ"
   },
   {
     "type": "small_airport",
@@ -366,7 +510,11 @@
     "freq": "",
     "Lat": 4.988609790802002,
     "Lon": 23.92779922485352,
-    "Ele": 536.1
+    "Ele": 536.1,
+    "ident": "FEGR",
+    "iso_country": "CF",
+    "icao_code": "FEGR",
+    "iata_code": "RFA"
   },
   {
     "type": "small_airport",
@@ -375,7 +523,11 @@
     "freq": "",
     "Lat": 6.517000198364258,
     "Lon": 18.267000198364254,
-    "Ele": 467.0
+    "Ele": 467,
+    "ident": "FEGU",
+    "iso_country": "CF",
+    "icao_code": "FEGU",
+    "iata_code": "BCF"
   },
   {
     "type": "small_airport",
@@ -384,6 +536,10 @@
     "freq": "",
     "Lat": 6.344170093536377,
     "Lon": 16.3218994140625,
-    "Ele": 675.1
+    "Ele": 675.1,
+    "ident": "FEGZ",
+    "iso_country": "CF",
+    "icao_code": "FEGZ",
+    "iata_code": "BOZ"
   }
 ]

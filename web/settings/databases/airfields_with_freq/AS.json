@@ -6,7 +6,16 @@
     "freq": "",
     "Lat": -14.1844,
     "Lon": -169.669998,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "NSAS",
+    "iso_country": "AS",
+    "icao_code": "NSAS",
+    "iata_code": "OFU",
+    "local_code": "Z08",
+    "length_ft": 2000,
+    "width_ft": 60,
+    "heading": 98,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -15,7 +24,16 @@
     "freq": "122.900",
     "Lat": -14.216131,
     "Lon": -169.423771,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "NSFQ",
+    "iso_country": "AS",
+    "icao_code": "NSFQ",
+    "iata_code": "FTI",
+    "local_code": "FAQ",
+    "length_ft": 3190,
+    "width_ft": 75,
+    "heading": 134.1,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -24,6 +42,15 @@
     "freq": "126.900",
     "Lat": -14.331,
     "Lon": -170.710007,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "NSTU",
+    "iso_country": "AS",
+    "icao_code": "NSTU",
+    "iata_code": "PPG",
+    "local_code": "PPG",
+    "length_ft": 3800,
+    "width_ft": 100,
+    "heading": 90,
+    "QFU": "26"
   }
 ]

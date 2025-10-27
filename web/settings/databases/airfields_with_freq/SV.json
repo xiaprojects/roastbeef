@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 13.447990417480469,
     "Lon": -88.12010955810547,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "MSAC",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 13.265263,
     "Lon": -88.49913,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "MSBS",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 13.213011,
     "Lon": -88.602814,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MSCD",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 13.186094,
     "Lon": -88.406448,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "MSCH",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 13.205588,
     "Lon": -88.54734,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "MSCM",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,9 @@
     "freq": "",
     "Lat": 13.309973,
     "Lon": -88.505867,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "MSCN",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -60,7 +72,9 @@
     "freq": "",
     "Lat": 13.328703,
     "Lon": -88.52092,
-    "Ele": 77.4
+    "Ele": 77.4,
+    "ident": "MSCR",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -69,7 +83,9 @@
     "freq": "",
     "Lat": 13.219324,
     "Lon": -88.554047,
-    "Ele": 0.3
+    "Ele": 0.3,
+    "ident": "MSES",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -78,7 +94,14 @@
     "freq": "",
     "Lat": 13.1625995636,
     "Lon": -87.904800415,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MSET",
+    "iso_country": "SV",
+    "local_code": "MS1A",
+    "length_ft": 4400,
+    "width_ft": 75,
+    "heading": 156.5,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -87,7 +110,9 @@
     "freq": "",
     "Lat": 13.577824,
     "Lon": -89.733238,
-    "Ele": 38.7
+    "Ele": 38.7,
+    "ident": "MSJC",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -96,7 +121,9 @@
     "freq": "",
     "Lat": 14.00981,
     "Lon": -89.184761,
-    "Ele": 269.7
+    "Ele": 269.7,
+    "ident": "MSLC",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -105,7 +132,14 @@
     "freq": "",
     "Lat": 13.7262,
     "Lon": -88.106697,
-    "Ele": 280.1
+    "Ele": 280.1,
+    "ident": "MSLD",
+    "iso_country": "SV",
+    "local_code": "MS1B",
+    "length_ft": 3280,
+    "width_ft": 50,
+    "heading": 11.2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -114,7 +148,9 @@
     "freq": "",
     "Lat": 13.487070083618164,
     "Lon": -89.19265747070312,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "MSLM",
+    "iso_country": "SV"
   },
   {
     "type": "large_airport",
@@ -123,7 +159,15 @@
     "freq": "119.900",
     "Lat": 13.4409,
     "Lon": -89.055702,
-    "Ele": 30.8
+    "Ele": 30.8,
+    "ident": "MSLP",
+    "iso_country": "SV",
+    "icao_code": "MSLP",
+    "iata_code": "SAL",
+    "length_ft": 2625,
+    "width_ft": 75,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -132,7 +176,9 @@
     "freq": "",
     "Lat": 13.9453,
     "Lon": -89.062798,
-    "Ele": 412.7
+    "Ele": 412.7,
+    "ident": "MSPT",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -141,7 +187,9 @@
     "freq": "",
     "Lat": 14.318715,
     "Lon": -89.506897,
-    "Ele": 445.0
+    "Ele": 445,
+    "ident": "MSRC",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -150,7 +198,9 @@
     "freq": "",
     "Lat": 14.067222,
     "Lon": -89.632222,
-    "Ele": 679.4
+    "Ele": 679.4,
+    "ident": "MSSA",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -159,7 +209,9 @@
     "freq": "",
     "Lat": 13.178735,
     "Lon": -88.47316,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MSSJ",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -168,7 +220,9 @@
     "freq": "",
     "Lat": 13.4441,
     "Lon": -88.126999,
-    "Ele": 86.3
+    "Ele": 86.3,
+    "ident": "MSSM",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -177,7 +231,9 @@
     "freq": "",
     "Lat": 13.197465896606444,
     "Lon": -87.9609146118164,
-    "Ele": 11.3
+    "Ele": 11.3,
+    "ident": "MSSN",
+    "iso_country": "SV"
   },
   {
     "type": "medium_airport",
@@ -186,7 +242,15 @@
     "freq": "119.500",
     "Lat": 13.6995,
     "Lon": -89.119904,
-    "Ele": 617.8
+    "Ele": 617.8,
+    "ident": "MSSS",
+    "iso_country": "SV",
+    "icao_code": "MSSS",
+    "iata_code": "ILS",
+    "length_ft": 7349,
+    "width_ft": 148,
+    "heading": 153.5,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -195,7 +259,9 @@
     "freq": "",
     "Lat": 13.707954,
     "Lon": -90.026268,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "MSZT",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -204,7 +270,9 @@
     "freq": "",
     "Lat": 13.771100044250488,
     "Lon": -89.37139892578125,
-    "Ele": 485.9
+    "Ele": 485.9,
+    "ident": "SV-0001",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -213,7 +281,9 @@
     "freq": "",
     "Lat": 13.466724,
     "Lon": -89.191345,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "SV-0002",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -222,7 +292,9 @@
     "freq": "",
     "Lat": 13.616000175476074,
     "Lon": -87.86389923095703,
-    "Ele": 72.8
+    "Ele": 72.8,
+    "ident": "SV-0004",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -231,7 +303,9 @@
     "freq": "",
     "Lat": 13.33199,
     "Lon": -88.50131,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "SV-0005",
+    "iso_country": "SV"
   },
   {
     "type": "small_airport",
@@ -240,6 +314,8 @@
     "freq": "",
     "Lat": 13.29613,
     "Lon": -88.53113,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "SV-0006",
+    "iso_country": "SV"
   }
 ]

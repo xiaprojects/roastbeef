@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 11.30608,
     "Lon": 42.91968,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "DJ-0001",
+    "iso_country": "DJ"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 12.188882,
     "Lon": 42.637494,
-    "Ele": 624.8
+    "Ele": 624.8,
+    "ident": "HDAG",
+    "iso_country": "DJ"
   },
   {
     "type": "large_airport",
@@ -24,7 +28,15 @@
     "freq": "759.500",
     "Lat": 11.5473,
     "Lon": 43.1595,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "HDAM",
+    "iso_country": "DJ",
+    "icao_code": "HDAM",
+    "iata_code": "JIB",
+    "length_ft": 10335,
+    "width_ft": 148,
+    "heading": 91,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -33,7 +45,11 @@
     "freq": "",
     "Lat": 11.146889,
     "Lon": 42.72,
-    "Ele": 705.0
+    "Ele": 705,
+    "ident": "HDAS",
+    "iso_country": "DJ",
+    "icao_code": "HDAS",
+    "iata_code": "AII"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,14 @@
     "freq": "120.425",
     "Lat": 11.5168,
     "Lon": 43.061401,
-    "Ele": 85.0
+    "Ele": 85,
+    "ident": "HDCH",
+    "iso_country": "DJ",
+    "icao_code": "HDCH",
+    "length_ft": 7795,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -51,7 +74,13 @@
     "freq": "",
     "Lat": 11.097958,
     "Lon": 42.350556,
-    "Ele": 463.3
+    "Ele": 463.3,
+    "ident": "HDDK",
+    "iso_country": "DJ",
+    "icao_code": "HDDK",
+    "length_ft": 5770,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -60,7 +89,10 @@
     "freq": "",
     "Lat": 12.4449,
     "Lon": 43.292575,
-    "Ele": 11.6
+    "Ele": 11.6,
+    "ident": "HDHE",
+    "iso_country": "DJ",
+    "icao_code": "HDHE"
   },
   {
     "type": "small_airport",
@@ -69,7 +101,11 @@
     "freq": "",
     "Lat": 11.72975,
     "Lon": 43.209559,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HDMO",
+    "iso_country": "DJ",
+    "icao_code": "HDMO",
+    "iata_code": "MHI"
   },
   {
     "type": "small_airport",
@@ -78,7 +114,11 @@
     "freq": "",
     "Lat": 11.967000007629396,
     "Lon": 43.266998291015625,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "HDOB",
+    "iso_country": "DJ",
+    "icao_code": "HDOB",
+    "iata_code": "OBC"
   },
   {
     "type": "small_airport",
@@ -87,6 +127,10 @@
     "freq": "",
     "Lat": 11.787037,
     "Lon": 42.917376,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "HDTJ",
+    "iso_country": "DJ",
+    "icao_code": "HDTJ",
+    "iata_code": "TDJ"
   }
 ]

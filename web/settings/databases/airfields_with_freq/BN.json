@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 4.635158,
     "Lon": 114.378748,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "WBAK",
+    "iso_country": "BN",
+    "icao_code": "WBAK"
   },
   {
     "type": "large_airport",
@@ -15,6 +18,14 @@
     "freq": "121.300",
     "Lat": 4.9442,
     "Lon": 114.928001,
-    "Ele": 22.3
+    "Ele": 22.3,
+    "ident": "WBSB",
+    "iso_country": "BN",
+    "icao_code": "WBSB",
+    "iata_code": "BWN",
+    "length_ft": 12000,
+    "width_ft": 150,
+    "heading": 31.1,
+    "QFU": "21"
   }
 ]

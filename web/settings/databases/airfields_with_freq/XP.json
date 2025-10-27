@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 15.783471,
     "Lon": 111.20274,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "XP-0002",
+    "iso_country": "XP"
   },
   {
     "type": "small_airport",
@@ -15,6 +17,12 @@
     "freq": "",
     "Lat": 16.8328,
     "Lon": 112.344002,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "XP-0003",
+    "iso_country": "XP",
+    "length_ft": 8858,
+    "width_ft": 171,
+    "heading": 45,
+    "QFU": "23"
   }
 ]

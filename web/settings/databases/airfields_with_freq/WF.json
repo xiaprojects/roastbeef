@@ -6,7 +6,15 @@
     "freq": "",
     "Lat": -14.311565,
     "Lon": -178.066492,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "NLWF",
+    "iso_country": "WF",
+    "icao_code": "NLWF",
+    "iata_code": "FUT",
+    "length_ft": 3609,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -15,6 +23,14 @@
     "freq": "653.300",
     "Lat": -13.2383003235,
     "Lon": -176.199005127,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "NLWW",
+    "iso_country": "WF",
+    "icao_code": "NLWW",
+    "iata_code": "WLS",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 90,
+    "QFU": "26"
   }
 ]

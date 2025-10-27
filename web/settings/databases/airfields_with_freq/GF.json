@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 5.176046,
     "Lon": -52.694206,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "GF-0001",
+    "iso_country": "GF",
+    "icao_code": "SOOK",
+    "length_ft": 3630,
+    "width_ft": 50,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -15,7 +22,9 @@
     "freq": "",
     "Lat": 4.21009,
     "Lon": -51.667702,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "GF-0002",
+    "iso_country": "GF"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,13 @@
     "freq": "",
     "Lat": 4.816117,
     "Lon": -53.289505,
-    "Ele": 134.1
+    "Ele": 134.1,
+    "ident": "GF-0003",
+    "iso_country": "GF",
+    "length_ft": 1940,
+    "width_ft": 45,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -33,7 +48,10 @@
     "freq": "",
     "Lat": 3.172847,
     "Lon": -52.336142,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "GF-0004",
+    "iso_country": "GF",
+    "iata_code": "OYC"
   },
   {
     "type": "small_airport",
@@ -42,7 +60,9 @@
     "freq": "",
     "Lat": 5.66342,
     "Lon": -53.76469,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "GF-0010",
+    "iso_country": "GF"
   },
   {
     "type": "small_airport",
@@ -51,7 +71,9 @@
     "freq": "",
     "Lat": 5.6185,
     "Lon": -53.68631,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "GF-0012",
+    "iso_country": "GF"
   },
   {
     "type": "large_airport",
@@ -60,7 +82,15 @@
     "freq": "119.900",
     "Lat": 4.819964,
     "Lon": -52.361326,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SOCA",
+    "iso_country": "GF",
+    "icao_code": "SOCA",
+    "iata_code": "CAY",
+    "length_ft": 10486,
+    "width_ft": 148,
+    "heading": 65.3,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -69,7 +99,11 @@
     "freq": "",
     "Lat": 4.285833,
     "Lon": -54.373056,
-    "Ele": 63.1
+    "Ele": 63.1,
+    "ident": "SOGS",
+    "iso_country": "GF",
+    "icao_code": "SOGS",
+    "iata_code": "GSI"
   },
   {
     "type": "small_airport",
@@ -78,7 +112,15 @@
     "freq": "",
     "Lat": 3.655907,
     "Lon": -54.039431,
-    "Ele": 123.7
+    "Ele": 123.7,
+    "ident": "SOOA",
+    "iso_country": "GF",
+    "icao_code": "SOOA",
+    "iata_code": "MPY",
+    "length_ft": 3935,
+    "width_ft": 49,
+    "heading": 55,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -87,7 +129,15 @@
     "freq": "125.900",
     "Lat": 3.8976,
     "Lon": -51.8041,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "SOOG",
+    "iso_country": "GF",
+    "icao_code": "SOOG",
+    "iata_code": "OYP",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 18,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -96,7 +146,11 @@
     "freq": "",
     "Lat": 5.48306,
     "Lon": -54.034401,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "SOOM",
+    "iso_country": "GF",
+    "icao_code": "SOOM",
+    "iata_code": "LDX"
   },
   {
     "type": "small_airport",
@@ -105,7 +159,15 @@
     "freq": "",
     "Lat": 4.31339,
     "Lon": -52.132745,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "SOOR",
+    "iso_country": "GF",
+    "icao_code": "SOOR",
+    "iata_code": "REI",
+    "length_ft": 2625,
+    "width_ft": 49,
+    "heading": 39,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -114,7 +176,11 @@
     "freq": "",
     "Lat": 3.61361,
     "Lon": -53.204201,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SOOS",
+    "iso_country": "GF",
+    "icao_code": "SOOS",
+    "iata_code": "XAU"
   },
   {
     "type": "small_airport",
@@ -123,6 +189,12 @@
     "freq": "",
     "Lat": 5.373546,
     "Lon": -52.945628,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SOOY",
+    "iso_country": "GF",
+    "length_ft": 1640,
+    "width_ft": 67,
+    "QFU": "29",
+    "heading": 290
   }
 ]

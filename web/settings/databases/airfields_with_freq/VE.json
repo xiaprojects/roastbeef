@@ -6,7 +6,13 @@
     "freq": "",
     "Lat": 8.404430389404297,
     "Lon": -65.0155029296875,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SV02",
+    "iso_country": "VE",
+    "length_ft": 4885,
+    "width_ft": 75,
+    "heading": 56.5,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -15,7 +21,13 @@
     "freq": "",
     "Lat": 8.670319557189941,
     "Lon": -62.62540054321289,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "SV73",
+    "iso_country": "VE",
+    "length_ft": 3260,
+    "width_ft": 45,
+    "heading": 92.9,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -24,7 +36,13 @@
     "freq": "",
     "Lat": 9.581870079040527,
     "Lon": -72.78800201416016,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "SV74",
+    "iso_country": "VE",
+    "length_ft": 7086,
+    "width_ft": 66,
+    "heading": 67,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -33,7 +51,13 @@
     "freq": "",
     "Lat": 10.088299751281738,
     "Lon": -72.55480194091797,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "SV75",
+    "iso_country": "VE",
+    "length_ft": 5760,
+    "width_ft": 70,
+    "heading": 3.9,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -42,7 +66,15 @@
     "freq": "118.850",
     "Lat": 9.553375,
     "Lon": -69.237869,
-    "Ele": 195.1
+    "Ele": 195.1,
+    "ident": "SVAC",
+    "iso_country": "VE",
+    "icao_code": "SVAC",
+    "iata_code": "AGV",
+    "length_ft": 5990,
+    "width_ft": 131,
+    "heading": 105,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -51,7 +83,13 @@
     "freq": "",
     "Lat": 10.328100204467772,
     "Lon": -72.48100280761719,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SVAE",
+    "iso_country": "VE",
+    "length_ft": 4120,
+    "width_ft": 50,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -60,7 +98,9 @@
     "freq": "",
     "Lat": 6.933332920074463,
     "Lon": -68.01667022705078,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "SVAF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -69,7 +109,9 @@
     "freq": "",
     "Lat": 10.033332824707031,
     "Lon": -69.16666412353516,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SVAH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -78,7 +120,9 @@
     "freq": "",
     "Lat": 8.81893,
     "Lon": -65.886703,
-    "Ele": 120.1
+    "Ele": 120.1,
+    "ident": "VE-0028",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -87,7 +131,9 @@
     "freq": "",
     "Lat": 8.350000381469727,
     "Lon": -69.51667022705078,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "SVAL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -96,7 +142,9 @@
     "freq": "",
     "Lat": 7.316667079925537,
     "Lon": -69.19999694824219,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "SVAM",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -105,7 +153,15 @@
     "freq": "",
     "Lat": 9.430225,
     "Lon": -64.470726,
-    "Ele": 219.8
+    "Ele": 219.8,
+    "ident": "SVAN",
+    "iso_country": "VE",
+    "icao_code": "SVAN",
+    "iata_code": "AAO",
+    "length_ft": 4134,
+    "width_ft": 131,
+    "heading": 90.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -114,7 +170,9 @@
     "freq": "",
     "Lat": 9.863332748413086,
     "Lon": -66.2933349609375,
-    "Ele": 349.9
+    "Ele": 349.9,
+    "ident": "SVAO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -123,7 +181,9 @@
     "freq": "",
     "Lat": 7.918849945068359,
     "Lon": -68.48300170898438,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVAP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -132,7 +192,9 @@
     "freq": "",
     "Lat": 9.25,
     "Lon": -68.48332977294922,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "SVAQ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -141,7 +203,9 @@
     "freq": "",
     "Lat": 11.936079,
     "Lon": -69.811965,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "SVAR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -150,7 +214,14 @@
     "freq": "",
     "Lat": 6.57805,
     "Lon": -66.816902,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "SVAS",
+    "iso_country": "VE",
+    "iata_code": "LPJ",
+    "length_ft": 4592,
+    "width_ft": 72,
+    "heading": 47.2,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -159,7 +230,10 @@
     "freq": "",
     "Lat": 4.051683,
     "Lon": -67.701133,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "SVAT",
+    "iso_country": "VE",
+    "icao_code": "SVAT"
   },
   {
     "type": "small_airport",
@@ -168,7 +242,9 @@
     "freq": "",
     "Lat": 6.75,
     "Lon": -68.33333587646484,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVAU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -177,7 +253,9 @@
     "freq": "",
     "Lat": 9.273332595825195,
     "Lon": -63.41833114624024,
-    "Ele": 39.0
+    "Ele": 39,
+    "ident": "SVAV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -186,16 +264,24 @@
     "freq": "",
     "Lat": 7.483333110809326,
     "Lon": -67.8499984741211,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "SVAW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
     "name": "Los Andes Airport",
     "gps_code": "SVAX",
     "freq": "",
-    "Lat": 10.0,
+    "Lat": 10,
     "Lon": -72.583336,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "SVAX",
+    "iso_country": "VE",
+    "length_ft": 3345,
+    "width_ft": 70,
+    "heading": 0.8,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -204,7 +290,10 @@
     "freq": "",
     "Lat": 10.597324,
     "Lon": -64.272011,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SVAY",
+    "iso_country": "VE",
+    "icao_code": "SVAA"
   },
   {
     "type": "small_airport",
@@ -213,7 +302,9 @@
     "freq": "",
     "Lat": 8.433333396911621,
     "Lon": -68.55000305175781,
-    "Ele": 68.3
+    "Ele": 68.3,
+    "ident": "SVAZ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -222,7 +313,9 @@
     "freq": "",
     "Lat": 7.8333330154418945,
     "Lon": -70.26667022705078,
-    "Ele": 90.8
+    "Ele": 90.8,
+    "ident": "SVBA",
+    "iso_country": "VE"
   },
   {
     "type": "large_airport",
@@ -231,7 +324,15 @@
     "freq": "119.100",
     "Lat": 10.111111,
     "Lon": -64.692222,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SVBC",
+    "iso_country": "VE",
+    "icao_code": "SVBC",
+    "iata_code": "BLA",
+    "length_ft": 9842,
+    "width_ft": 131,
+    "heading": 142.6,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -240,7 +341,9 @@
     "freq": "",
     "Lat": 7.616666793823242,
     "Lon": -69.05000305175781,
-    "Ele": 97.8
+    "Ele": 97.8,
+    "ident": "SVBD",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -249,7 +352,9 @@
     "freq": "",
     "Lat": 9.666666984558104,
     "Lon": -72.58333587646484,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "SVBE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -258,7 +363,9 @@
     "freq": "",
     "Lat": 9.199999809265137,
     "Lon": -68.16666412353516,
-    "Ele": 83.2
+    "Ele": 83.2,
+    "ident": "SVBG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -267,7 +374,9 @@
     "freq": "",
     "Lat": 10.94166660308838,
     "Lon": -68.26667022705078,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SVBH",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -276,7 +385,15 @@
     "freq": "121.900",
     "Lat": 8.615,
     "Lon": -70.214167,
-    "Ele": 187.5
+    "Ele": 187.5,
+    "ident": "SVBI",
+    "iso_country": "VE",
+    "icao_code": "SVBI",
+    "iata_code": "BNS",
+    "length_ft": 6560,
+    "width_ft": 135,
+    "heading": 123,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -285,7 +402,9 @@
     "freq": "",
     "Lat": 7.321667194366455,
     "Lon": -69.66999816894531,
-    "Ele": 159.7
+    "Ele": 159.7,
+    "ident": "SVBJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -294,7 +413,13 @@
     "freq": "",
     "Lat": 9.266281,
     "Lon": -70.229855,
-    "Ele": 1581.0
+    "Ele": 1581,
+    "ident": "SVBK",
+    "iso_country": "VE",
+    "length_ft": 4199,
+    "width_ft": 59,
+    "heading": 36.4,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -303,7 +428,14 @@
     "freq": "119.300",
     "Lat": 10.183375,
     "Lon": -67.55732,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "SVBL",
+    "iso_country": "VE",
+    "local_code": "ELR",
+    "length_ft": 10400,
+    "width_ft": 157,
+    "heading": 81.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -312,7 +444,15 @@
     "freq": "569.650",
     "Lat": 10.042747,
     "Lon": -69.35862,
-    "Ele": 622.4
+    "Ele": 622.4,
+    "ident": "SVBM",
+    "iso_country": "VE",
+    "icao_code": "SVBM",
+    "iata_code": "BRM",
+    "length_ft": 9350,
+    "width_ft": 147,
+    "heading": 81,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -321,7 +461,9 @@
     "freq": "",
     "Lat": 6.599999904632568,
     "Lon": -62.73333358764648,
-    "Ele": 445.6
+    "Ele": 445.6,
+    "ident": "SVBN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -330,7 +472,9 @@
     "freq": "",
     "Lat": 7.590715,
     "Lon": -67.207841,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "SVBP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -339,7 +483,9 @@
     "freq": "",
     "Lat": 10.416666984558104,
     "Lon": -68.66666412353516,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVBR",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -348,7 +494,15 @@
     "freq": "127.600",
     "Lat": 10.249978,
     "Lon": -67.649422,
-    "Ele": 407.8
+    "Ele": 407.8,
+    "ident": "SVBS",
+    "iso_country": "VE",
+    "icao_code": "SVBS",
+    "iata_code": "MYC",
+    "length_ft": 6846,
+    "width_ft": 131,
+    "heading": 104.1,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -357,7 +511,9 @@
     "freq": "",
     "Lat": 9.199999809265137,
     "Lon": -69.75,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SVBT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -366,7 +522,9 @@
     "freq": "",
     "Lat": 9.173054,
     "Lon": -71.112871,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SVBU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -375,7 +533,9 @@
     "freq": "",
     "Lat": 8.733332633972168,
     "Lon": -69.53333282470703,
-    "Ele": 106.1
+    "Ele": 106.1,
+    "ident": "SVBV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -384,7 +544,9 @@
     "freq": "",
     "Lat": 7.128957,
     "Lon": -63.461154,
-    "Ele": 280.7
+    "Ele": 280.7,
+    "ident": "SVBW",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -393,7 +555,15 @@
     "freq": "115.100",
     "Lat": 8.122161,
     "Lon": -63.536957,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "SVCB",
+    "iso_country": "VE",
+    "icao_code": "SVCB",
+    "iata_code": "CBL",
+    "length_ft": 4605,
+    "width_ft": 135,
+    "heading": 116,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -402,7 +572,15 @@
     "freq": "",
     "Lat": 7.62551,
     "Lon": -66.162804,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "SVCD",
+    "iso_country": "VE",
+    "icao_code": "SVCD",
+    "iata_code": "CXA",
+    "length_ft": 4920,
+    "width_ft": 100,
+    "heading": 101.6,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -411,7 +589,14 @@
     "freq": "",
     "Lat": 9.350306,
     "Lon": -65.280655,
-    "Ele": 62.2
+    "Ele": 62.2,
+    "ident": "SVCE",
+    "iso_country": "VE",
+    "iata_code": "ZRZ",
+    "length_ft": 3350,
+    "width_ft": 50,
+    "heading": 108,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -420,7 +605,15 @@
     "freq": "",
     "Lat": 8.75814,
     "Lon": -72.536301,
-    "Ele": 30.2
+    "Ele": 30.2,
+    "ident": "SVCG",
+    "iso_country": "VE",
+    "icao_code": "SVCG",
+    "iata_code": "CUV",
+    "length_ft": 3450,
+    "width_ft": 70,
+    "heading": 92.8,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -429,7 +622,9 @@
     "freq": "",
     "Lat": 7.739999771118164,
     "Lon": -68.23999786376953,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "SVCH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -438,7 +633,13 @@
     "freq": "122.700",
     "Lat": 9.64772,
     "Lon": -68.574699,
-    "Ele": 156.1
+    "Ele": 156.1,
+    "ident": "SVCJ",
+    "iso_country": "VE",
+    "length_ft": 6575,
+    "width_ft": 98,
+    "heading": 141.5,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -447,7 +648,9 @@
     "freq": "",
     "Lat": 9.416666984558104,
     "Lon": -68.88333129882812,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "SVCK",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -456,7 +659,15 @@
     "freq": "118.450",
     "Lat": 8.924656,
     "Lon": -67.417091,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVCL",
+    "iso_country": "VE",
+    "icao_code": "SVCL",
+    "iata_code": "CLZ",
+    "length_ft": 4790,
+    "width_ft": 115,
+    "heading": 83.5,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -465,7 +676,9 @@
     "freq": "",
     "Lat": 9.68333339691162,
     "Lon": -68.41666412353516,
-    "Ele": 201.8
+    "Ele": 201.8,
+    "ident": "SVCM",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -474,7 +687,15 @@
     "freq": "131.200",
     "Lat": 6.231989,
     "Lon": -62.85485,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "SVCN",
+    "iso_country": "VE",
+    "icao_code": "SVCN",
+    "iata_code": "CAJ",
+    "length_ft": 7070,
+    "width_ft": 98,
+    "heading": 353.7,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -483,7 +704,15 @@
     "freq": "122.400",
     "Lat": 10.660014,
     "Lon": -63.261681,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SVCP",
+    "iso_country": "VE",
+    "icao_code": "SVCP",
+    "iata_code": "CUP",
+    "length_ft": 6611,
+    "width_ft": 148,
+    "heading": 167.6,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -492,7 +721,9 @@
     "freq": "",
     "Lat": 8.060600280761719,
     "Lon": -66.96990203857422,
-    "Ele": 194.8
+    "Ele": 194.8,
+    "ident": "SVCQ",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -501,7 +732,15 @@
     "freq": "121.900",
     "Lat": 11.414944,
     "Lon": -69.680901,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "SVCR",
+    "iso_country": "VE",
+    "icao_code": "SVCR",
+    "iata_code": "CZE",
+    "length_ft": 6761,
+    "width_ft": 148,
+    "heading": 79,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -510,7 +749,13 @@
     "freq": "119.200",
     "Lat": 10.286874,
     "Lon": -66.815847,
-    "Ele": 653.8
+    "Ele": 653.8,
+    "ident": "SVCS",
+    "iso_country": "VE",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 94.1,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -519,7 +764,9 @@
     "freq": "",
     "Lat": 6.883333206176758,
     "Lon": -68.38333129882812,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SVCT",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -528,7 +775,15 @@
     "freq": "113.300",
     "Lat": 10.450333,
     "Lon": -64.13047,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "SVCU",
+    "iso_country": "VE",
+    "icao_code": "SVCU",
+    "iata_code": "CUM",
+    "length_ft": 10171,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -537,7 +792,9 @@
     "freq": "",
     "Lat": 7.400000095367432,
     "Lon": -67.43333435058594,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVCV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -546,7 +803,9 @@
     "freq": "",
     "Lat": 9.326666831970217,
     "Lon": -70.93333435058594,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "SVCW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -555,7 +814,9 @@
     "freq": "",
     "Lat": 7.300000190734863,
     "Lon": -68.36666870117188,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SVCX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -564,7 +825,9 @@
     "freq": "",
     "Lat": 6.933332920074463,
     "Lon": -68.63333129882812,
-    "Ele": 134.7
+    "Ele": 134.7,
+    "ident": "SVCY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -573,7 +836,13 @@
     "freq": "118.550",
     "Lat": 9.37265,
     "Lon": -66.922798,
-    "Ele": 181.4
+    "Ele": 181.4,
+    "ident": "SVCZ",
+    "iso_country": "VE",
+    "length_ft": 9842,
+    "width_ft": 195,
+    "heading": 78.2,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -582,7 +851,9 @@
     "freq": "",
     "Lat": 10.946759,
     "Lon": -65.228966,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SVDA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -591,7 +862,9 @@
     "freq": "",
     "Lat": 9.333333015441896,
     "Lon": -68.43333435058594,
-    "Ele": 198.4
+    "Ele": 198.4,
+    "ident": "SVDB",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -600,7 +873,9 @@
     "freq": "",
     "Lat": 8.59000015258789,
     "Lon": -66.25499725341797,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "SVDC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -609,7 +884,9 @@
     "freq": "",
     "Lat": 6.866666793823242,
     "Lon": -68.78333282470703,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SVDF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -618,7 +895,9 @@
     "freq": "",
     "Lat": 9.649999618530272,
     "Lon": -63.7216682434082,
-    "Ele": 261.8
+    "Ele": 261.8,
+    "ident": "SVDG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -627,7 +906,9 @@
     "freq": "",
     "Lat": 11.794284,
     "Lon": -66.892958,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "SVDM",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -636,7 +917,9 @@
     "freq": "",
     "Lat": 4.730000019073486,
     "Lon": -60.96500015258789,
-    "Ele": 786.7
+    "Ele": 786.7,
+    "ident": "SVDP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -645,7 +928,9 @@
     "freq": "",
     "Lat": 7.903549,
     "Lon": -69.922972,
-    "Ele": 81.7
+    "Ele": 81.7,
+    "ident": "SVDR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -654,7 +939,9 @@
     "freq": "",
     "Lat": 4.7916669845581055,
     "Lon": -61.119998931884766,
-    "Ele": 868.7
+    "Ele": 868.7,
+    "ident": "SVDS",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -663,7 +950,9 @@
     "freq": "",
     "Lat": 11.0275,
     "Lon": -70.6925,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "SVDU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -672,7 +961,9 @@
     "freq": "",
     "Lat": 9.449999809265137,
     "Lon": -63.17499923706055,
-    "Ele": 72.8
+    "Ele": 72.8,
+    "ident": "SVDV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -681,7 +972,13 @@
     "freq": "",
     "Lat": 7.493790149688721,
     "Lon": -63.269798278808594,
-    "Ele": 267.9
+    "Ele": 267.9,
+    "ident": "SVDW",
+    "iso_country": "VE",
+    "length_ft": 5212,
+    "width_ft": 131,
+    "heading": 74,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -690,7 +987,9 @@
     "freq": "",
     "Lat": 8.466667175292969,
     "Lon": -62.48333358764648,
-    "Ele": 81.7
+    "Ele": 81.7,
+    "ident": "SVDX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -708,7 +1007,13 @@
     "freq": "",
     "Lat": 8.676159858703613,
     "Lon": -72.33560180664062,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "SVEB",
+    "iso_country": "VE",
+    "length_ft": 3281,
+    "width_ft": 42,
+    "heading": 91.4,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -717,7 +1022,15 @@
     "freq": "",
     "Lat": 6.71573,
     "Lon": -61.638786,
-    "Ele": 96.9
+    "Ele": 96.9,
+    "ident": "SVED",
+    "iso_country": "VE",
+    "icao_code": "SVED",
+    "iata_code": "EOR",
+    "length_ft": 4000,
+    "width_ft": 125,
+    "heading": 87.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -726,7 +1039,9 @@
     "freq": "",
     "Lat": 7.908332824707031,
     "Lon": -68.69667053222656,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SVEE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -735,7 +1050,9 @@
     "freq": "",
     "Lat": 10.595000267028809,
     "Lon": -68.49500274658203,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "SVEF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -744,7 +1061,9 @@
     "freq": "",
     "Lat": 9.699999809265137,
     "Lon": -68.33333587646484,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "SVEG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -753,7 +1072,9 @@
     "freq": "",
     "Lat": 9.449999809265137,
     "Lon": -70.80000305175781,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "SVEJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -762,7 +1083,9 @@
     "freq": "",
     "Lat": 10.11359977722168,
     "Lon": -72.57659912109375,
-    "Ele": 137.8
+    "Ele": 137.8,
+    "ident": "SVEK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -771,7 +1094,9 @@
     "freq": "",
     "Lat": 7.300000190734863,
     "Lon": -61.79999923706055,
-    "Ele": 227.7
+    "Ele": 227.7,
+    "ident": "SVEL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -780,7 +1105,9 @@
     "freq": "",
     "Lat": 8.333333015441895,
     "Lon": -70.375,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SVEM",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -798,7 +1125,13 @@
     "freq": "",
     "Lat": 10.206666946411133,
     "Lon": -67.44166564941406,
-    "Ele": 473.7
+    "Ele": 473.7,
+    "ident": "SVEP",
+    "iso_country": "VE",
+    "length_ft": 4137,
+    "width_ft": 49,
+    "heading": 65.7,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -807,7 +1140,9 @@
     "freq": "",
     "Lat": 7.216667175292969,
     "Lon": -68.98332977294922,
-    "Ele": 118.0
+    "Ele": 118,
+    "ident": "SVER",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -816,7 +1151,9 @@
     "freq": "",
     "Lat": 7.912350177764893,
     "Lon": -68.69270324707031,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "SVES",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -825,7 +1162,13 @@
     "freq": "",
     "Lat": 7.349514,
     "Lon": -62.531447,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SVET",
+    "iso_country": "VE",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 90.4,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -834,7 +1177,13 @@
     "freq": "",
     "Lat": 9.55,
     "Lon": -70.683334,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "SVEN",
+    "iso_country": "VE",
+    "length_ft": 4118,
+    "width_ft": 53,
+    "heading": 47.7,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -843,7 +1192,9 @@
     "freq": "",
     "Lat": 8.699999809265137,
     "Lon": -69.07499694824219,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "SVEX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -852,7 +1203,9 @@
     "freq": "",
     "Lat": 6.28000020980835,
     "Lon": -69.11666870117188,
-    "Ele": 96.9
+    "Ele": 96.9,
+    "ident": "SVEY",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -861,7 +1214,15 @@
     "freq": "",
     "Lat": 7.059677,
     "Lon": -69.4967,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVEZ",
+    "iso_country": "VE",
+    "icao_code": "SVEZ",
+    "iata_code": "EOZ",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 76.5,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -870,7 +1231,9 @@
     "freq": "",
     "Lat": 9.57438,
     "Lon": -72.565838,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "SVFE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -879,7 +1242,9 @@
     "freq": "",
     "Lat": 9.1856,
     "Lon": -67.032452,
-    "Ele": 202.1
+    "Ele": 202.1,
+    "ident": "SVFG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -888,7 +1253,9 @@
     "freq": "",
     "Lat": 9.483332633972168,
     "Lon": -67.81666564941406,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "SVFK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -897,7 +1264,9 @@
     "freq": "",
     "Lat": 7.199999809265137,
     "Lon": -68.13333129882812,
-    "Ele": 66.8
+    "Ele": 66.8,
+    "ident": "SVFL",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1275,13 @@
     "freq": "127.400",
     "Lat": 10.485033,
     "Lon": -66.843513,
-    "Ele": 834.8
+    "Ele": 834.8,
+    "ident": "SVFM",
+    "iso_country": "VE",
+    "length_ft": 6475,
+    "width_ft": 140,
+    "heading": 102.2,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -915,7 +1290,9 @@
     "freq": "",
     "Lat": 7.823332786560059,
     "Lon": -68.89833068847656,
-    "Ele": 66.8
+    "Ele": 66.8,
+    "ident": "SVFR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -924,7 +1301,9 @@
     "freq": "",
     "Lat": 9.401639938354492,
     "Lon": -66.64309692382812,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SVFS",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -933,7 +1312,9 @@
     "freq": "",
     "Lat": 7.1,
     "Lon": -69.583333,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "SVFT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -942,7 +1323,13 @@
     "freq": "",
     "Lat": 7.5833330154418945,
     "Lon": -71.46666717529297,
-    "Ele": 127.1
+    "Ele": 127.1,
+    "ident": "SVFU",
+    "iso_country": "VE",
+    "length_ft": 3278,
+    "width_ft": 50,
+    "heading": 74,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -951,7 +1338,9 @@
     "freq": "",
     "Lat": 9.868,
     "Lon": -63.752167,
-    "Ele": 182.0
+    "Ele": 182,
+    "ident": "SVFW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -960,7 +1349,9 @@
     "freq": "",
     "Lat": 7.2133331298828125,
     "Lon": -69.49666595458984,
-    "Ele": 134.7
+    "Ele": 134.7,
+    "ident": "SVFX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -969,7 +1360,9 @@
     "freq": "",
     "Lat": 9.033332824707031,
     "Lon": -69.0999984741211,
-    "Ele": 520.0
+    "Ele": 520,
+    "ident": "SVFY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -977,8 +1370,10 @@
     "gps_code": "SVGA",
     "freq": "",
     "Lat": 8.75,
-    "Lon": -70.0,
-    "Ele": 150.9
+    "Lon": -70,
+    "Ele": 150.9,
+    "ident": "SVGA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -987,7 +1382,13 @@
     "freq": "",
     "Lat": 9.77708,
     "Lon": -72.486801,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "SVGC",
+    "iso_country": "VE",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 28,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -996,7 +1397,15 @@
     "freq": "",
     "Lat": 7.210834,
     "Lon": -70.756386,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "SVGD",
+    "iso_country": "VE",
+    "icao_code": "SVGD",
+    "iata_code": "GDO",
+    "length_ft": 6792,
+    "width_ft": 98,
+    "heading": 56,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1005,7 +1414,9 @@
     "freq": "",
     "Lat": 9.210000038146973,
     "Lon": -69.5816650390625,
-    "Ele": 142.3
+    "Ele": 142.3,
+    "ident": "SVGE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1014,7 +1425,9 @@
     "freq": "",
     "Lat": 9.583333015441896,
     "Lon": -63.04999923706055,
-    "Ele": 154.5
+    "Ele": 154.5,
+    "ident": "SVGG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1023,7 +1436,9 @@
     "freq": "",
     "Lat": 9.53499984741211,
     "Lon": -66.7249984741211,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "SVGH",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1032,7 +1447,15 @@
     "freq": "118.200",
     "Lat": 10.5740776062,
     "Lon": -62.3126678467,
-    "Ele": 12.8
+    "Ele": 12.8,
+    "ident": "SVGI",
+    "iso_country": "VE",
+    "icao_code": "SVGI",
+    "iata_code": "GUI",
+    "length_ft": 6585,
+    "width_ft": 131,
+    "heading": 33,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1041,7 +1464,9 @@
     "freq": "",
     "Lat": 7.635000228881836,
     "Lon": -70.8499984741211,
-    "Ele": 127.1
+    "Ele": 127.1,
+    "ident": "SVGL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1475,9 @@
     "freq": "",
     "Lat": 9.633333206176758,
     "Lon": -67.18333435058594,
-    "Ele": 195.4
+    "Ele": 195.4,
+    "ident": "SVGP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1059,7 +1486,9 @@
     "freq": "",
     "Lat": 10.152999877929688,
     "Lon": -68.37519836425781,
-    "Ele": 613.6
+    "Ele": 613.6,
+    "ident": "SVGR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1068,7 +1497,9 @@
     "freq": "",
     "Lat": 7.475,
     "Lon": -61.900002,
-    "Ele": 297.8
+    "Ele": 297.8,
+    "ident": "SVGT",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1077,7 +1508,15 @@
     "freq": "121.900",
     "Lat": 9.026944,
     "Lon": -69.75515,
-    "Ele": 184.7
+    "Ele": 184.7,
+    "ident": "SVGU",
+    "iso_country": "VE",
+    "icao_code": "SVGU",
+    "iata_code": "GUQ",
+    "length_ft": 5905,
+    "width_ft": 131,
+    "heading": 44.8,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1525,9 @@
     "freq": "",
     "Lat": 8.749278,
     "Lon": -63.556488,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "SVGX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1536,9 @@
     "freq": "",
     "Lat": 7.949999809265137,
     "Lon": -69.11666870117188,
-    "Ele": 72.2
+    "Ele": 72.2,
+    "ident": "SVGZ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1104,7 +1547,9 @@
     "freq": "",
     "Lat": 7.599999904632568,
     "Lon": -63.21666717529297,
-    "Ele": 334.7
+    "Ele": 334.7,
+    "ident": "SVHA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1558,9 @@
     "freq": "",
     "Lat": 10.149999618530272,
     "Lon": -72.18333435058594,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "SVHC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1569,13 @@
     "freq": "",
     "Lat": 9.899999618530272,
     "Lon": -72.55000305175781,
-    "Ele": 80.5
+    "Ele": 80.5,
+    "ident": "SVHD",
+    "iso_country": "VE",
+    "length_ft": 3084,
+    "width_ft": 49,
+    "heading": 117.8,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1131,7 +1584,9 @@
     "freq": "",
     "Lat": 9.56666660308838,
     "Lon": -67.56666564941406,
-    "Ele": 162.8
+    "Ele": 162.8,
+    "ident": "SVHE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1595,15 @@
     "freq": "118.200",
     "Lat": 10.462474,
     "Lon": -66.092779,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "SVHG",
+    "iso_country": "VE",
+    "icao_code": "SVHG",
+    "iata_code": "HGE",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 70,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1149,7 +1612,13 @@
     "freq": "",
     "Lat": 10.808099746704102,
     "Lon": -69.63839721679688,
-    "Ele": 750.1
+    "Ele": 750.1,
+    "ident": "SVHH",
+    "iso_country": "VE",
+    "length_ft": 4265,
+    "width_ft": 66,
+    "heading": 114.5,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1627,9 @@
     "freq": "",
     "Lat": 9.399999618530272,
     "Lon": -67.78333282470703,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVHK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1638,9 @@
     "freq": "",
     "Lat": 9.716667175292969,
     "Lon": -66.78333282470703,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "SVHL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1649,9 @@
     "freq": "",
     "Lat": 9.333333015441896,
     "Lon": -67.91666412353516,
-    "Ele": 181.1
+    "Ele": 181.1,
+    "ident": "SVHM",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1660,9 @@
     "freq": "",
     "Lat": 8.105409622192383,
     "Lon": -68.71910095214844,
-    "Ele": 63.4
+    "Ele": 63.4,
+    "ident": "SVHN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1671,9 @@
     "freq": "",
     "Lat": 8.36822,
     "Lon": -69.9571,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "SVHO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1682,9 @@
     "freq": "",
     "Lat": 10.713333129882812,
     "Lon": -69.20833587646484,
-    "Ele": 150.9
+    "Ele": 150.9,
+    "ident": "SVHP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1693,9 @@
     "freq": "",
     "Lat": 9.5,
     "Lon": -67.94999694824219,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "SVHR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1704,9 @@
     "freq": "",
     "Lat": 8.245639,
     "Lon": -65.556921,
-    "Ele": 152.1
+    "Ele": 152.1,
+    "ident": "SVHS",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1715,9 @@
     "freq": "",
     "Lat": 9.366666793823242,
     "Lon": -63.08333206176758,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "SVHT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1726,9 @@
     "freq": "",
     "Lat": 8.683333396911621,
     "Lon": -67.71666717529297,
-    "Ele": 77.4
+    "Ele": 77.4,
+    "ident": "SVHX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1737,9 @@
     "freq": "",
     "Lat": 8.720000267028809,
     "Lon": -68.47166442871094,
-    "Ele": 319.7
+    "Ele": 319.7,
+    "ident": "SVHY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1257,7 +1748,11 @@
     "freq": "",
     "Lat": 4.33632,
     "Lon": -61.739601,
-    "Ele": 479.8
+    "Ele": 479.8,
+    "ident": "SVIC",
+    "iso_country": "VE",
+    "icao_code": "SVIC",
+    "iata_code": "ICA"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1761,15 @@
     "freq": "",
     "Lat": 10.794432,
     "Lon": -63.98159,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SVIE",
+    "iso_country": "VE",
+    "icao_code": "SVIE",
+    "iata_code": "ICC",
+    "length_ft": 3937,
+    "width_ft": 98,
+    "heading": 87.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1778,9 @@
     "freq": "",
     "Lat": 9.100000381469728,
     "Lon": -69.62000274658203,
-    "Ele": 140.8
+    "Ele": 140.8,
+    "ident": "SVIM",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1284,7 +1789,15 @@
     "freq": "118.450",
     "Lat": 11.780775,
     "Lon": -70.151497,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SVJC",
+    "iso_country": "VE",
+    "icao_code": "SVJC",
+    "iata_code": "LSP",
+    "length_ft": 9186,
+    "width_ft": 148,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1806,9 @@
     "freq": "",
     "Lat": 7.400000095367432,
     "Lon": -67.98332977294922,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "SVJF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1302,7 +1817,9 @@
     "freq": "",
     "Lat": 8.179719924926758,
     "Lon": -63.59600067138672,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "SVJH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1828,9 @@
     "freq": "",
     "Lat": 9.097180366516112,
     "Lon": -63.11859893798828,
-    "Ele": 80.5
+    "Ele": 80.5,
+    "ident": "SVJI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1320,7 +1839,9 @@
     "freq": "",
     "Lat": 7.443333148956299,
     "Lon": -67.79666900634766,
-    "Ele": 97.8
+    "Ele": 97.8,
+    "ident": "SVJJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1329,7 +1850,9 @@
     "freq": "",
     "Lat": 7.995295,
     "Lon": -67.403704,
-    "Ele": 40.2
+    "Ele": 40.2,
+    "ident": "SVJL",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1338,7 +1861,13 @@
     "freq": "",
     "Lat": 9.906953,
     "Lon": -67.379639,
-    "Ele": 427.9
+    "Ele": 427.9,
+    "ident": "SVJM",
+    "iso_country": "VE",
+    "length_ft": 4990,
+    "width_ft": 75,
+    "heading": 48.8,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1347,7 +1876,9 @@
     "freq": "",
     "Lat": 9.666666984558104,
     "Lon": -67.05000305175781,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "SVJO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1356,7 +1887,9 @@
     "freq": "",
     "Lat": 9.203088,
     "Lon": -68.10817,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVJU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1365,7 +1898,11 @@
     "freq": "",
     "Lat": 5.593056,
     "Lon": -61.763333,
-    "Ele": 1188.7
+    "Ele": 1188.7,
+    "ident": "SVKA",
+    "iso_country": "VE",
+    "icao_code": "SVKA",
+    "iata_code": "KAV"
   },
   {
     "type": "small_airport",
@@ -1374,7 +1911,9 @@
     "freq": "",
     "Lat": 7.983333110809326,
     "Lon": -70.0999984741211,
-    "Ele": 88.7
+    "Ele": 88.7,
+    "ident": "SVKB",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1383,7 +1922,9 @@
     "freq": "",
     "Lat": 8.543421,
     "Lon": -68.805013,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "SVEW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1392,7 +1933,9 @@
     "freq": "",
     "Lat": 7.547239,
     "Lon": -71.788179,
-    "Ele": 221.3
+    "Ele": 221.3,
+    "ident": "SVKI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1401,7 +1944,9 @@
     "freq": "",
     "Lat": 9.324999809265137,
     "Lon": -70.9749984741211,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "SVKL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1410,7 +1955,11 @@
     "freq": "",
     "Lat": 5.7171,
     "Lon": -62.33727,
-    "Ele": 539.5
+    "Ele": 539.5,
+    "ident": "SVKM",
+    "iso_country": "VE",
+    "icao_code": "SVKM",
+    "iata_code": "KTV"
   },
   {
     "type": "small_airport",
@@ -1419,7 +1968,9 @@
     "freq": "",
     "Lat": 5.5,
     "Lon": -65.61833190917969,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVKN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1428,7 +1979,9 @@
     "freq": "",
     "Lat": 9.016667366027832,
     "Lon": -63.75,
-    "Ele": 162.8
+    "Ele": 162.8,
+    "ident": "SVLA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1437,7 +1990,9 @@
     "freq": "",
     "Lat": 11.820709,
     "Lon": -64.586216,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SVLB",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1446,7 +2001,9 @@
     "freq": "",
     "Lat": 6.983333110809326,
     "Lon": -68.06666564941406,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVLC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1455,7 +2012,9 @@
     "freq": "",
     "Lat": 7.203332901000977,
     "Lon": -69.53666687011719,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVLD",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1464,7 +2023,15 @@
     "freq": "118.800",
     "Lat": 8.239167,
     "Lon": -72.271027,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "SVLF",
+    "iso_country": "VE",
+    "icao_code": "SVLF",
+    "iata_code": "LFR",
+    "length_ft": 6643,
+    "width_ft": 190,
+    "heading": 360,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1473,7 +2040,9 @@
     "freq": "",
     "Lat": 9.649999618530272,
     "Lon": -68.98332977294922,
-    "Ele": 241.7
+    "Ele": 241.7,
+    "ident": "SVLG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1482,7 +2051,9 @@
     "freq": "",
     "Lat": 7.1666669845581055,
     "Lon": -69.38333129882812,
-    "Ele": 113.7
+    "Ele": 113.7,
+    "ident": "SVLH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2062,9 @@
     "freq": "",
     "Lat": 7.30698,
     "Lon": -67.35287,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "SVLI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1500,7 +2073,9 @@
     "freq": "",
     "Lat": 9.68333339691162,
     "Lon": -64.18333435058594,
-    "Ele": 384.7
+    "Ele": 384.7,
+    "ident": "SVLJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1509,7 +2084,9 @@
     "freq": "",
     "Lat": 6.1666669845581055,
     "Lon": -69.16666412353516,
-    "Ele": 90.2
+    "Ele": 90.2,
+    "ident": "SVLK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1518,7 +2095,9 @@
     "freq": "",
     "Lat": 7.993762,
     "Lon": -69.634898,
-    "Ele": 63.7
+    "Ele": 63.7,
+    "ident": "SVLL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2106,13 @@
     "freq": "",
     "Lat": 9.497940063476562,
     "Lon": -62.90130615234375,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "SVLM",
+    "iso_country": "VE",
+    "length_ft": 4095,
+    "width_ft": 35,
+    "heading": 54.7,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2121,9 @@
     "freq": "",
     "Lat": 10.726699829101562,
     "Lon": -68.33350372314453,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "SVLN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1545,7 +2132,13 @@
     "freq": "",
     "Lat": 11.80823,
     "Lon": -66.180768,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "SVLO",
+    "iso_country": "VE",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 71.6,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2147,14 @@
     "freq": "",
     "Lat": 6.933333,
     "Lon": -68.366669,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "SVLP",
+    "iso_country": "VE",
+    "icao_code": "SVLP",
+    "length_ft": 6080,
+    "width_ft": 98,
+    "heading": 74.9,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2163,9 @@
     "freq": "",
     "Lat": 6.766666889190674,
     "Lon": -68.3499984741211,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVLS",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1572,7 +2174,9 @@
     "freq": "",
     "Lat": 7.5833330154418945,
     "Lon": -69.18333435058594,
-    "Ele": 82.3
+    "Ele": 82.3,
+    "ident": "SVLT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2185,9 @@
     "freq": "",
     "Lat": 9.300000190734863,
     "Lon": -66.67832946777344,
-    "Ele": 161.2
+    "Ele": 161.2,
+    "ident": "SVLU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2196,9 @@
     "freq": "",
     "Lat": 10.06833267211914,
     "Lon": -68.02166748046875,
-    "Ele": 469.4
+    "Ele": 469.4,
+    "ident": "SVLW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1599,7 +2207,9 @@
     "freq": "",
     "Lat": 6.966667175292969,
     "Lon": -69.3499984741211,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVLX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2218,9 @@
     "freq": "",
     "Lat": 7.283332824707031,
     "Lon": -68.53333282470703,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "SVLY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2229,9 @@
     "freq": "",
     "Lat": 8.328880310058594,
     "Lon": -68.75199890136719,
-    "Ele": 150.6
+    "Ele": 150.6,
+    "ident": "SVLZ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2240,10 @@
     "freq": "",
     "Lat": 10.1432,
     "Lon": -68.197899,
-    "Ele": 652.3
+    "Ele": 652.3,
+    "ident": "SVMA",
+    "iso_country": "VE",
+    "icao_code": "SVMA"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2252,9 @@
     "freq": "",
     "Lat": 8.671667098999023,
     "Lon": -66.50499725341797,
-    "Ele": 219.5
+    "Ele": 219.5,
+    "ident": "SVMB",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1644,7 +2263,15 @@
     "freq": "120.200",
     "Lat": 10.5582084656,
     "Lon": -71.7278594971,
-    "Ele": 72.8
+    "Ele": 72.8,
+    "ident": "SVMC",
+    "iso_country": "VE",
+    "icao_code": "SVMC",
+    "iata_code": "MAR",
+    "length_ft": 8202,
+    "width_ft": 98,
+    "heading": 31,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -1653,7 +2280,15 @@
     "freq": "121.900",
     "Lat": 8.582078,
     "Lon": -71.161041,
-    "Ele": 1526.1
+    "Ele": 1526.1,
+    "ident": "SVMD",
+    "iso_country": "VE",
+    "icao_code": "SVMD",
+    "iata_code": "MRD",
+    "length_ft": 5348,
+    "width_ft": 148,
+    "heading": 59,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1662,7 +2297,9 @@
     "freq": "",
     "Lat": 7.7386298179626465,
     "Lon": -64.71949768066406,
-    "Ele": 59.7
+    "Ele": 59.7,
+    "ident": "SVME",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2308,9 @@
     "freq": "",
     "Lat": 8.533332824707031,
     "Lon": -69.94999694824219,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "SVMF",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1680,7 +2319,15 @@
     "freq": "119.900",
     "Lat": 10.912603378295898,
     "Lon": -63.96659851074219,
-    "Ele": 22.6
+    "Ele": 22.6,
+    "ident": "SVMG",
+    "iso_country": "VE",
+    "icao_code": "SVMG",
+    "iata_code": "PMV",
+    "length_ft": 9958,
+    "width_ft": 100,
+    "heading": 78,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1688,8 +2335,10 @@
     "gps_code": "SVMH",
     "freq": "",
     "Lat": 7.316667,
-    "Lon": -68.0,
-    "Ele": 130.1
+    "Lon": -68,
+    "Ele": 130.1,
+    "ident": "SVMH",
+    "iso_country": "VE"
   },
   {
     "type": "large_airport",
@@ -1698,7 +2347,15 @@
     "freq": "120.100",
     "Lat": 10.601194,
     "Lon": -66.991222,
-    "Ele": 71.3
+    "Ele": 71.3,
+    "ident": "SVMI",
+    "iso_country": "VE",
+    "icao_code": "SVMI",
+    "iata_code": "CCS",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "heading": 88,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2364,9 @@
     "freq": "",
     "Lat": 10.598333358764648,
     "Lon": -68.53500366210938,
-    "Ele": 65.2
+    "Ele": 65.2,
+    "ident": "SVMJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2375,9 @@
     "freq": "",
     "Lat": 9.229999542236328,
     "Lon": -67.97000122070312,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVMK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2386,9 @@
     "freq": "",
     "Lat": 7.26544,
     "Lon": -67.279643,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "SVML",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2397,9 @@
     "freq": "",
     "Lat": 11.266667366027832,
     "Lon": -70.25,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "SVMM",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2408,10 @@
     "freq": "",
     "Lat": 9.805958,
     "Lon": -70.896256,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "SVMN",
+    "iso_country": "VE",
+    "icao_code": "SVMN"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2420,9 @@
     "freq": "",
     "Lat": 7.683332920074463,
     "Lon": -68.18333435058594,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVMO",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1761,7 +2431,14 @@
     "freq": "121.900",
     "Lat": 10.133169,
     "Lon": -66.787827,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "SVMP",
+    "iso_country": "VE",
+    "icao_code": "SVMP",
+    "length_ft": 4659,
+    "width_ft": 98,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2447,9 @@
     "freq": "",
     "Lat": 8.841667175292969,
     "Lon": -70.03333282470703,
-    "Ele": 196.9
+    "Ele": 196.9,
+    "ident": "SVMQ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1779,7 +2458,9 @@
     "freq": "",
     "Lat": 7.716667175292969,
     "Lon": -67.98332977294922,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVMS",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -1788,7 +2469,15 @@
     "freq": "121.900",
     "Lat": 9.749023,
     "Lon": -63.153348,
-    "Ele": 68.3
+    "Ele": 68.3,
+    "ident": "SVMT",
+    "iso_country": "VE",
+    "icao_code": "SVMT",
+    "iata_code": "MUN",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 49,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1797,7 +2486,9 @@
     "freq": "",
     "Lat": 2.725057,
     "Lon": -67.546875,
-    "Ele": 152.7
+    "Ele": 152.7,
+    "ident": "SVMV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1806,7 +2497,9 @@
     "freq": "",
     "Lat": 7.616666793823242,
     "Lon": -72.44999694824219,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "SVMW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2508,9 @@
     "freq": "",
     "Lat": 9.199999809265137,
     "Lon": -64.05000305175781,
-    "Ele": 211.8
+    "Ele": 211.8,
+    "ident": "SVMX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1824,7 +2519,9 @@
     "freq": "",
     "Lat": 5.313198,
     "Lon": -66.049775,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "SVMY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1833,7 +2530,13 @@
     "freq": "",
     "Lat": 7.55757999420166,
     "Lon": -69.1416015625,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVMZ",
+    "iso_country": "VE",
+    "length_ft": 3905,
+    "width_ft": 59,
+    "heading": 59,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1842,7 +2545,9 @@
     "freq": "",
     "Lat": 9.923020362854004,
     "Lon": -72.08049774169922,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "SVNA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2556,7 @@
     "freq": "",
     "Lat": 7.45448,
     "Lon": -65.17621,
-    "Ele": 61.0
+    "Ele": 61
   },
   {
     "type": "small_airport",
@@ -1860,7 +2565,9 @@
     "freq": "",
     "Lat": 7.766666889190674,
     "Lon": -70.26667022705078,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SVNE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1869,7 +2576,9 @@
     "freq": "",
     "Lat": 7.383333206176758,
     "Lon": -68.83333587646484,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "SVNF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1878,7 +2587,9 @@
     "freq": "",
     "Lat": 10.283332824707031,
     "Lon": -72.46666717529297,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "SVNG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1887,7 +2598,13 @@
     "freq": "",
     "Lat": 8.966667,
     "Lon": -66.083336,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "SVAJ",
+    "iso_country": "VE",
+    "length_ft": 4420,
+    "width_ft": 45,
+    "heading": 99.7,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2613,9 @@
     "freq": "",
     "Lat": 8.417778015136719,
     "Lon": -63.567779541015625,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVNK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2624,9 @@
     "freq": "",
     "Lat": 9.133333206176758,
     "Lon": -69.05500030517578,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVNP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1914,7 +2635,9 @@
     "freq": "",
     "Lat": 6.983333110809326,
     "Lon": -68.63333129882812,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SVNR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1923,7 +2646,9 @@
     "freq": "",
     "Lat": 7.699999809265137,
     "Lon": -69.30000305175781,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "SVNT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1932,7 +2657,9 @@
     "freq": "",
     "Lat": 6.583333015441895,
     "Lon": -66.19999694824219,
-    "Ele": 264.0
+    "Ele": 264,
+    "ident": "SVNV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1941,7 +2668,13 @@
     "freq": "130.700",
     "Lat": 8.828149795532227,
     "Lon": -63.095001220703125,
-    "Ele": 82.9
+    "Ele": 82.9,
+    "ident": "SVNX",
+    "iso_country": "VE",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 73,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1950,7 +2683,9 @@
     "freq": "",
     "Lat": 8.284722328186035,
     "Lon": -69.91666412353516,
-    "Ele": 114.0
+    "Ele": 114,
+    "ident": "SVOA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1959,7 +2694,9 @@
     "freq": "",
     "Lat": 11.050000190734863,
     "Lon": -68.48332977294922,
-    "Ele": 41.8
+    "Ele": 41.8,
+    "ident": "SVOB",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1968,7 +2705,9 @@
     "freq": "",
     "Lat": 6.966667175292969,
     "Lon": -68.33333587646484,
-    "Ele": 61.6
+    "Ele": 61.6,
+    "ident": "SVOC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1977,7 +2716,9 @@
     "freq": "",
     "Lat": 7.983333,
     "Lon": -67.650002,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVOD",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2727,13 @@
     "freq": "",
     "Lat": 8.744139671325684,
     "Lon": -69.91380310058594,
-    "Ele": 161.5
+    "Ele": 161.5,
+    "ident": "SVOE",
+    "iso_country": "VE",
+    "length_ft": 3675,
+    "width_ft": 72,
+    "heading": 76.3,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2742,13 @@
     "freq": "",
     "Lat": 9.69849967956543,
     "Lon": -63.62229919433594,
-    "Ele": 245.1
+    "Ele": 245.1,
+    "ident": "SVOF",
+    "iso_country": "VE",
+    "length_ft": 3609,
+    "width_ft": 59,
+    "heading": 90.6,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2757,9 @@
     "freq": "",
     "Lat": 3.953611,
     "Lon": -67.097778,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVOG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2013,7 +2768,9 @@
     "freq": "",
     "Lat": 8.350000381469727,
     "Lon": -70.05000305175781,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "SVOH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2022,7 +2779,9 @@
     "freq": "",
     "Lat": 7.300000190734863,
     "Lon": -68.06666564941406,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVOI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2031,7 +2790,9 @@
     "freq": "",
     "Lat": 8.066666603088379,
     "Lon": -70.18333435058594,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVOJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2040,7 +2801,13 @@
     "freq": "",
     "Lat": 9.061304,
     "Lon": -63.445116,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "SVOK",
+    "iso_country": "VE",
+    "length_ft": 3490,
+    "width_ft": 60,
+    "heading": 84.9,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2049,7 +2816,9 @@
     "freq": "",
     "Lat": 9.31666660308838,
     "Lon": -64.63333129882812,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SVOL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2058,7 +2827,15 @@
     "freq": "118.150",
     "Lat": 10.3307,
     "Lon": -71.322502,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "SVON",
+    "iso_country": "VE",
+    "icao_code": "SVON",
+    "iata_code": "CBS",
+    "length_ft": 6160,
+    "width_ft": 95,
+    "heading": 56.3,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -2067,7 +2844,9 @@
     "freq": "",
     "Lat": 7.650000095367432,
     "Lon": -69.41666412353516,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVOO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2076,7 +2855,9 @@
     "freq": "",
     "Lat": 7.599999904632568,
     "Lon": -68.43333435058594,
-    "Ele": 84.7
+    "Ele": 84.7,
+    "ident": "SVOP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2085,7 +2866,9 @@
     "freq": "",
     "Lat": 8.666666984558105,
     "Lon": -67.66666412353516,
-    "Ele": 254.8
+    "Ele": 254.8,
+    "ident": "SVOQ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2094,7 +2877,9 @@
     "freq": "",
     "Lat": 8.091667175292969,
     "Lon": -66.42166900634766,
-    "Ele": 70.4
+    "Ele": 70.4,
+    "ident": "SVOR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2103,7 +2888,9 @@
     "freq": "",
     "Lat": 7.466667175292969,
     "Lon": -68.66666412353516,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVOS",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2112,7 +2899,9 @@
     "freq": "",
     "Lat": 7.766666889190674,
     "Lon": -70.63333129882812,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "SVOT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2121,7 +2910,9 @@
     "freq": "",
     "Lat": 7.199999809265137,
     "Lon": -68.51667022705078,
-    "Ele": 115.8
+    "Ele": 115.8,
+    "ident": "SVOW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2130,7 +2921,9 @@
     "freq": "",
     "Lat": 7.783332824707031,
     "Lon": -68.5,
-    "Ele": 63.7
+    "Ele": 63.7,
+    "ident": "SVOZ",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2139,7 +2932,15 @@
     "freq": "118.300",
     "Lat": 5.61999,
     "Lon": -67.606102,
-    "Ele": 74.7
+    "Ele": 74.7,
+    "ident": "SVPA",
+    "iso_country": "VE",
+    "icao_code": "SVPA",
+    "iata_code": "PYH",
+    "length_ft": 8272,
+    "width_ft": 140,
+    "heading": 30,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -2148,7 +2949,13 @@
     "freq": "",
     "Lat": 10.783900260925291,
     "Lon": -68.34369659423828,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "SVPB",
+    "iso_country": "VE",
+    "length_ft": 3051,
+    "width_ft": 70,
+    "heading": 73.1,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2157,7 +2964,15 @@
     "freq": "121.900",
     "Lat": 10.4805,
     "Lon": -68.072998,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "SVPC",
+    "iso_country": "VE",
+    "icao_code": "SVPC",
+    "iata_code": "PBL",
+    "length_ft": 6970,
+    "width_ft": 145,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2166,7 +2981,9 @@
     "freq": "",
     "Lat": 7.099999904632568,
     "Lon": -67.9000015258789,
-    "Ele": 78.3
+    "Ele": 78.3,
+    "ident": "SVPD",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2175,7 +2992,15 @@
     "freq": "",
     "Lat": 9.978672,
     "Lon": -62.231318,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "SVPE",
+    "iso_country": "VE",
+    "icao_code": "SVPE",
+    "iata_code": "PDZ",
+    "length_ft": 4180,
+    "width_ft": 80,
+    "heading": 72,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2184,7 +3009,13 @@
     "freq": "",
     "Lat": 8.819120407104492,
     "Lon": -64.73970031738281,
-    "Ele": 239.9
+    "Ele": 239.9,
+    "ident": "SVPF",
+    "iso_country": "VE",
+    "length_ft": 3435,
+    "width_ft": 60,
+    "heading": 91,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2193,7 +3024,9 @@
     "freq": "",
     "Lat": 7.133333206176758,
     "Lon": -68.58333587646484,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "SVPG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2202,7 +3035,13 @@
     "freq": "",
     "Lat": 4.570275,
     "Lon": -61.520262,
-    "Ele": 900.1
+    "Ele": 900.1,
+    "ident": "SVPH",
+    "iso_country": "VE",
+    "iata_code": "PPH",
+    "length_ft": 3051,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2211,7 +3050,9 @@
     "freq": "",
     "Lat": 4.466667175292969,
     "Lon": -61.59333419799805,
-    "Ele": 827.8
+    "Ele": 827.8,
+    "ident": "SVPI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2220,7 +3061,9 @@
     "freq": "",
     "Lat": 6.283332824707031,
     "Lon": -69.31666564941406,
-    "Ele": 221.3
+    "Ele": 221.3,
+    "ident": "SVPJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2229,7 +3072,9 @@
     "freq": "",
     "Lat": 7.633333206176758,
     "Lon": -69.36666870117188,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVPK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2238,7 +3083,9 @@
     "freq": "",
     "Lat": 7.816667079925537,
     "Lon": -62.71666717529297,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "SVPL",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2247,7 +3094,15 @@
     "freq": "122.600",
     "Lat": 7.80132,
     "Lon": -72.202904,
-    "Ele": 1010.1
+    "Ele": 1010.1,
+    "ident": "SVPM",
+    "iso_country": "VE",
+    "icao_code": "SVPM",
+    "iata_code": "SCI",
+    "length_ft": 3571,
+    "width_ft": 129,
+    "heading": 12.5,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -2256,7 +3111,9 @@
     "freq": "",
     "Lat": 8.56350040435791,
     "Lon": -66.01830291748047,
-    "Ele": 210.0
+    "Ele": 210,
+    "ident": "SVPN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2265,7 +3122,9 @@
     "freq": "",
     "Lat": 7.550000190734863,
     "Lon": -68.25,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "SVPO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2274,7 +3133,14 @@
     "freq": "",
     "Lat": 5.791642,
     "Lon": -61.440721,
-    "Ele": 1295.4
+    "Ele": 1295.4,
+    "ident": "SVDZ",
+    "iso_country": "VE",
+    "icao_code": "SVPP",
+    "iata_code": "PPZ",
+    "length_ft": 7546,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -2283,7 +3149,15 @@
     "freq": "121.900",
     "Lat": 8.28853,
     "Lon": -62.760399,
-    "Ele": 143.9
+    "Ele": 143.9,
+    "ident": "SVPR",
+    "iso_country": "VE",
+    "icao_code": "SVPR",
+    "iata_code": "PZO",
+    "length_ft": 6726,
+    "width_ft": 148,
+    "heading": 64,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2292,7 +3166,9 @@
     "freq": "",
     "Lat": 9.890000343322754,
     "Lon": -70.12166595458984,
-    "Ele": 330.4
+    "Ele": 330.4,
+    "ident": "SVPS",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2301,7 +3177,15 @@
     "freq": "",
     "Lat": 7.575479,
     "Lon": -70.174435,
-    "Ele": 105.8
+    "Ele": 105.8,
+    "ident": "SVPT",
+    "iso_country": "VE",
+    "icao_code": "SVPT",
+    "iata_code": "PTM",
+    "length_ft": 3775,
+    "width_ft": 66,
+    "heading": 51.6,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2310,7 +3194,9 @@
     "freq": "",
     "Lat": 6.835093,
     "Lon": -63.34949,
-    "Ele": 242.9
+    "Ele": 242.9,
+    "ident": "SVPU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3205,9 @@
     "freq": "",
     "Lat": 7.9166669845581055,
     "Lon": -71.03333282470703,
-    "Ele": 168.9
+    "Ele": 168.9,
+    "ident": "SVPV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3216,9 @@
     "freq": "",
     "Lat": 9.01309,
     "Lon": -63.664095,
-    "Ele": 175.0
+    "Ele": 175,
+    "ident": "SVPW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2337,7 +3227,9 @@
     "freq": "",
     "Lat": 10.489999771118164,
     "Lon": -68.17500305175781,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "SVPY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3238,9 @@
     "freq": "",
     "Lat": 7.488333225250244,
     "Lon": -68.99333190917969,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "SVPZ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2355,7 +3249,9 @@
     "freq": "",
     "Lat": 7.466667175292969,
     "Lon": -65.56666564941406,
-    "Ele": 135.9
+    "Ele": 135.9,
+    "ident": "SVQA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2364,7 +3260,9 @@
     "freq": "",
     "Lat": 7.050000190734863,
     "Lon": -67.76667022705078,
-    "Ele": 66.8
+    "Ele": 66.8,
+    "ident": "SVQB",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2373,7 +3271,9 @@
     "freq": "",
     "Lat": 6.5,
     "Lon": -67.13333129882812,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "SVQC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3282,9 @@
     "freq": "",
     "Lat": 8.958333015441895,
     "Lon": -65.13833618164062,
-    "Ele": 214.9
+    "Ele": 214.9,
+    "ident": "SVQD",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2391,7 +3293,9 @@
     "freq": "",
     "Lat": 9.350000381469728,
     "Lon": -65.80000305175781,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "SVQI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2400,7 +3304,9 @@
     "freq": "",
     "Lat": 7.233333110809326,
     "Lon": -69.0999984741211,
-    "Ele": 81.4
+    "Ele": 81.4,
+    "ident": "SVQJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2409,7 +3315,9 @@
     "freq": "",
     "Lat": 9.678333282470703,
     "Lon": -66.163330078125,
-    "Ele": 281.6
+    "Ele": 281.6,
+    "ident": "SVQK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2418,7 +3326,13 @@
     "freq": "",
     "Lat": 7.757760047912598,
     "Lon": -63.082298278808594,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SVQL",
+    "iso_country": "VE",
+    "length_ft": 5905,
+    "width_ft": 82,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2427,7 +3341,9 @@
     "freq": "",
     "Lat": 8.316666603088379,
     "Lon": -70.05000305175781,
-    "Ele": 102.7
+    "Ele": 102.7,
+    "ident": "SVQN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2436,7 +3352,9 @@
     "freq": "",
     "Lat": 10.080336,
     "Lon": -68.121452,
-    "Ele": 521.2
+    "Ele": 521.2,
+    "ident": "SVQO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2445,7 +3363,9 @@
     "freq": "",
     "Lat": 8.995973,
     "Lon": -71.373576,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "SVQP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2454,7 +3374,9 @@
     "freq": "",
     "Lat": 9.850000381469728,
     "Lon": -65.31666564941406,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVQQ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2463,7 +3385,9 @@
     "freq": "",
     "Lat": 7.633333206176758,
     "Lon": -69.92500305175781,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SVQT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2472,7 +3396,13 @@
     "freq": "",
     "Lat": 8.749580383300781,
     "Lon": -69.72250366210938,
-    "Ele": 130.8
+    "Ele": 130.8,
+    "ident": "SVQU",
+    "iso_country": "VE",
+    "length_ft": 3720,
+    "width_ft": 39,
+    "heading": 95,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2481,7 +3411,9 @@
     "freq": "",
     "Lat": 8.833333015441895,
     "Lon": -66.36666870117188,
-    "Ele": 115.5
+    "Ele": 115.5,
+    "ident": "SVQW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2490,7 +3422,9 @@
     "freq": "",
     "Lat": 10.56666660308838,
     "Lon": -70.13333129882812,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "SVQX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2499,7 +3433,9 @@
     "freq": "",
     "Lat": 7.909999847412109,
     "Lon": -64.05833435058594,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "SVQY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2508,7 +3444,9 @@
     "freq": "",
     "Lat": 8.433333396911621,
     "Lon": -69.73332977294922,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "SVQZ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2517,7 +3455,13 @@
     "freq": "",
     "Lat": 10.571700096130373,
     "Lon": -62.9922981262207,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SVRA",
+    "iso_country": "VE",
+    "length_ft": 3281,
+    "width_ft": 49,
+    "heading": 86,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2526,7 +3470,13 @@
     "freq": "",
     "Lat": 11.512376,
     "Lon": -69.314507,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SVRB",
+    "iso_country": "VE",
+    "length_ft": 3910,
+    "width_ft": 70,
+    "heading": 76,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2535,7 +3485,9 @@
     "freq": "",
     "Lat": 10.783332824707031,
     "Lon": -68.55000305175781,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVRC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2544,7 +3496,9 @@
     "freq": "",
     "Lat": 8.393333435058594,
     "Lon": -65.86666870117188,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "SVRE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2553,7 +3507,9 @@
     "freq": "",
     "Lat": 7.349999904632568,
     "Lon": -69.3499984741211,
-    "Ele": 279.8
+    "Ele": 279.8,
+    "ident": "SVRG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2562,7 +3518,9 @@
     "freq": "",
     "Lat": 7.616666793823242,
     "Lon": -71.98332977294922,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "SVRH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2571,7 +3529,9 @@
     "freq": "",
     "Lat": 6.784060001373291,
     "Lon": -68.86509704589844,
-    "Ele": 134.7
+    "Ele": 134.7,
+    "ident": "SVRI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2580,7 +3540,9 @@
     "freq": "",
     "Lat": 9.166666984558104,
     "Lon": -67.75,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVRK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2589,7 +3551,9 @@
     "freq": "",
     "Lat": 8.516667366027832,
     "Lon": -69.64167022705078,
-    "Ele": 620.0
+    "Ele": 620,
+    "ident": "SVRL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2598,7 +3562,9 @@
     "freq": "",
     "Lat": 9.5,
     "Lon": -67.66666412353516,
-    "Ele": 202.7
+    "Ele": 202.7,
+    "ident": "SVRM",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2607,7 +3573,9 @@
     "freq": "",
     "Lat": 9.383333206176758,
     "Lon": -63.26666641235352,
-    "Ele": 114.6
+    "Ele": 114.6,
+    "ident": "SVRN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2616,7 +3584,9 @@
     "freq": "",
     "Lat": 10.436667442321776,
     "Lon": -63.91666793823242,
-    "Ele": 211.2
+    "Ele": 211.2,
+    "ident": "SVRO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2625,7 +3595,9 @@
     "freq": "",
     "Lat": 5.433332920074463,
     "Lon": -66.13417053222656,
-    "Ele": 167.6
+    "Ele": 167.6,
+    "ident": "SVRQ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2634,7 +3606,9 @@
     "freq": "",
     "Lat": 6.238992,
     "Lon": -62.830839,
-    "Ele": 470.0
+    "Ele": 470,
+    "ident": "SVRR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2643,7 +3617,14 @@
     "freq": "",
     "Lat": 11.946935,
     "Lon": -66.668333,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "SVRS",
+    "iso_country": "VE",
+    "icao_code": "SVRS",
+    "iata_code": "LRV",
+    "length_ft": 2756,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2652,7 +3633,9 @@
     "freq": "",
     "Lat": 7.050000190734863,
     "Lon": -68.56666564941406,
-    "Ele": 107.9
+    "Ele": 107.9,
+    "ident": "SVRT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2661,7 +3644,9 @@
     "freq": "",
     "Lat": 9.200220108032228,
     "Lon": -66.31111145019531,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "SVRU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2670,7 +3655,9 @@
     "freq": "",
     "Lat": 9.162762,
     "Lon": -72.486452,
-    "Ele": 36.0
+    "Ele": 36,
+    "ident": "SVRW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2679,7 +3666,13 @@
     "freq": "",
     "Lat": 9.843469619750977,
     "Lon": -72.54720306396484,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SVRX",
+    "iso_country": "VE",
+    "length_ft": 3835,
+    "width_ft": 55,
+    "heading": 122.8,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2688,7 +3681,9 @@
     "freq": "",
     "Lat": 8.166666984558105,
     "Lon": -62.83333206176758,
-    "Ele": 73.8
+    "Ele": 73.8,
+    "ident": "SVRY",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2697,7 +3692,9 @@
     "freq": "",
     "Lat": 8.466667175292969,
     "Lon": -66.03333282470703,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SVRZ",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2706,7 +3703,15 @@
     "freq": "121.900",
     "Lat": 7.84083,
     "Lon": -72.439697,
-    "Ele": 399.9
+    "Ele": 399.9,
+    "ident": "SVSA",
+    "iso_country": "VE",
+    "icao_code": "SVSA",
+    "iata_code": "SVZ",
+    "length_ft": 6135,
+    "width_ft": 131,
+    "heading": 165.5,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -2715,7 +3720,15 @@
     "freq": "",
     "Lat": 7.803514,
     "Lon": -71.165718,
-    "Ele": 179.8
+    "Ele": 179.8,
+    "ident": "SVSB",
+    "iso_country": "VE",
+    "icao_code": "SVSB",
+    "iata_code": "SBB",
+    "length_ft": 5560,
+    "width_ft": 131,
+    "heading": 111,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2724,7 +3737,9 @@
     "freq": "",
     "Lat": 1.9166669845581052,
     "Lon": -67.05000305175781,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "SVSC",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2733,7 +3748,9 @@
     "freq": "",
     "Lat": 8.816666603088379,
     "Lon": -69.63333129882812,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "SVSD",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2742,7 +3759,15 @@
     "freq": "",
     "Lat": 4.554699,
     "Lon": -61.145234,
-    "Ele": 895.5
+    "Ele": 895.5,
+    "ident": "SVSE",
+    "iso_country": "VE",
+    "icao_code": "SVSE",
+    "iata_code": "SNV",
+    "length_ft": 5445,
+    "width_ft": 98,
+    "heading": 102,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2751,7 +3776,9 @@
     "freq": "",
     "Lat": 11.050000190734863,
     "Lon": -68.38500213623047,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SVSF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2760,7 +3787,9 @@
     "freq": "",
     "Lat": 8.566666603088379,
     "Lon": -70.05000305175781,
-    "Ele": 140.2
+    "Ele": 140.2,
+    "ident": "SVSG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2769,7 +3798,9 @@
     "freq": "",
     "Lat": 7.191443,
     "Lon": -67.240615,
-    "Ele": 52.7
+    "Ele": 52.7,
+    "ident": "SVSH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2778,7 +3809,9 @@
     "freq": "",
     "Lat": 8.949999809265137,
     "Lon": -68.08333587646484,
-    "Ele": 75.9
+    "Ele": 75.9,
+    "ident": "SVSI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2787,7 +3820,9 @@
     "freq": "",
     "Lat": 9.778332710266112,
     "Lon": -68.17500305175781,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "SVSK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2796,7 +3831,9 @@
     "freq": "",
     "Lat": 10.31666660308838,
     "Lon": -66.30000305175781,
-    "Ele": 71.0
+    "Ele": 71,
+    "ident": "SVSL",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2805,7 +3842,9 @@
     "freq": "",
     "Lat": 8.321666717529297,
     "Lon": -70.24666595458984,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "SVSM",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2814,7 +3853,13 @@
     "freq": "",
     "Lat": 8.875639915466309,
     "Lon": -66.83989715576172,
-    "Ele": 120.1
+    "Ele": 120.1,
+    "ident": "SVSN",
+    "iso_country": "VE",
+    "length_ft": 4810,
+    "width_ft": 72,
+    "heading": 78.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2823,7 +3868,15 @@
     "freq": "121.900",
     "Lat": 7.56538,
     "Lon": -72.035103,
-    "Ele": 330.1
+    "Ele": 330.1,
+    "ident": "SVSO",
+    "iso_country": "VE",
+    "icao_code": "SVSO",
+    "iata_code": "STD",
+    "length_ft": 9990,
+    "width_ft": 148,
+    "heading": 110.4,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2832,7 +3885,15 @@
     "freq": "118.600",
     "Lat": 10.2787,
     "Lon": -68.755203,
-    "Ele": 232.0
+    "Ele": 232,
+    "ident": "SVSP",
+    "iso_country": "VE",
+    "icao_code": "SVSP",
+    "iata_code": "SNF",
+    "length_ft": 4921,
+    "width_ft": 131,
+    "heading": 36,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2841,7 +3902,9 @@
     "freq": "",
     "Lat": 7.033332824707031,
     "Lon": -68.33333587646484,
-    "Ele": 67.7
+    "Ele": 67.7,
+    "ident": "SVSQ",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2850,7 +3913,15 @@
     "freq": "121.900",
     "Lat": 7.88332,
     "Lon": -67.444,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "SVSR",
+    "iso_country": "VE",
+    "icao_code": "SVSR",
+    "iata_code": "SFD",
+    "length_ft": 6420,
+    "width_ft": 160,
+    "heading": 108,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2859,7 +3930,15 @@
     "freq": "118.850",
     "Lat": 8.9451465606689,
     "Lon": -64.151084899902,
-    "Ele": 262.4
+    "Ele": 262.4,
+    "ident": "SVST",
+    "iso_country": "VE",
+    "icao_code": "SVST",
+    "iata_code": "SOM",
+    "length_ft": 1785,
+    "width_ft": 90,
+    "heading": 171.4,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2868,7 +3947,9 @@
     "freq": "",
     "Lat": 10.30222225189209,
     "Lon": -72.0522232055664,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SVSU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2877,7 +3958,9 @@
     "freq": "",
     "Lat": 10.102222442626951,
     "Lon": -68.08333587646484,
-    "Ele": 452.3
+    "Ele": 452.3,
+    "ident": "SVSW",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2886,7 +3969,9 @@
     "freq": "",
     "Lat": 11.175000190734863,
     "Lon": -68.42166900634766,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "SVSX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2895,7 +3980,9 @@
     "freq": "",
     "Lat": 8.800000190734863,
     "Lon": -71.58333587646484,
-    "Ele": 30.2
+    "Ele": 30.2,
+    "ident": "SVSY",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2904,7 +3991,15 @@
     "freq": "122.400",
     "Lat": 8.97455,
     "Lon": -71.943253,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "SVSZ",
+    "iso_country": "VE",
+    "icao_code": "SVSZ",
+    "iata_code": "STB",
+    "length_ft": 8835,
+    "width_ft": 130,
+    "heading": 179,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2913,7 +4008,9 @@
     "freq": "",
     "Lat": 7.400000095367432,
     "Lon": -64.36666870117188,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "SVTB",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2922,7 +4019,15 @@
     "freq": "",
     "Lat": 9.088994,
     "Lon": -62.094173,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "SVTC",
+    "iso_country": "VE",
+    "icao_code": "SVTC",
+    "iata_code": "TUV",
+    "length_ft": 5512,
+    "width_ft": 131,
+    "heading": 65,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2931,7 +4036,9 @@
     "freq": "",
     "Lat": 7.400000095367432,
     "Lon": -69.06666564941406,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SVTD",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2940,7 +4047,9 @@
     "freq": "",
     "Lat": 6.483333110809326,
     "Lon": -62.883331298828125,
-    "Ele": 367.0
+    "Ele": 367,
+    "ident": "SVTE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2949,7 +4058,9 @@
     "freq": "",
     "Lat": 7.400000095367432,
     "Lon": -67.94999694824219,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "SVTF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2958,7 +4069,9 @@
     "freq": "",
     "Lat": 7.633333206176758,
     "Lon": -68.69999694824219,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SVTG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2967,7 +4080,9 @@
     "freq": "",
     "Lat": 10.157899856567385,
     "Lon": -68.86160278320312,
-    "Ele": 264.0
+    "Ele": 264,
+    "ident": "SVTJ",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -2976,7 +4091,13 @@
     "freq": "",
     "Lat": 7.108084,
     "Lon": -69.789227,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SVTK",
+    "iso_country": "VE",
+    "length_ft": 4836,
+    "width_ft": 64,
+    "heading": 63.9,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2985,7 +4106,9 @@
     "freq": "",
     "Lat": 6.941667079925537,
     "Lon": -65.89167022705078,
-    "Ele": 255.7
+    "Ele": 255.7,
+    "ident": "SVTL",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -2994,7 +4117,15 @@
     "freq": "",
     "Lat": 7.24938,
     "Lon": -61.52893,
-    "Ele": 105.2
+    "Ele": 105.2,
+    "ident": "SVTM",
+    "iso_country": "VE",
+    "icao_code": "SVTM",
+    "iata_code": "TMO",
+    "length_ft": 9765,
+    "width_ft": 125,
+    "heading": 68,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -3003,7 +4134,9 @@
     "freq": "",
     "Lat": 8.133333206176758,
     "Lon": -68.66666412353516,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "SVTN",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3012,7 +4145,9 @@
     "freq": "",
     "Lat": 9.199999809265137,
     "Lon": -64.8499984741211,
-    "Ele": 119.5
+    "Ele": 119.5,
+    "ident": "SVTO",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3021,7 +4156,11 @@
     "freq": "",
     "Lat": 10.141092,
     "Lon": -65.437757,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "SVTP",
+    "iso_country": "VE",
+    "heading": 115,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -3030,7 +4169,9 @@
     "freq": "",
     "Lat": 9.016667366027832,
     "Lon": -62.73333358764648,
-    "Ele": 31.7
+    "Ele": 31.7,
+    "ident": "SVTR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3039,7 +4180,9 @@
     "freq": "",
     "Lat": 9.511260032653809,
     "Lon": -66.55390167236328,
-    "Ele": 204.8
+    "Ele": 204.8,
+    "ident": "SVTT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3048,7 +4191,9 @@
     "freq": "",
     "Lat": 7.783332824707031,
     "Lon": -69.23332977294922,
-    "Ele": 103.0
+    "Ele": 103,
+    "ident": "SVTU",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3057,7 +4202,9 @@
     "freq": "",
     "Lat": 9.25,
     "Lon": -69.13333129882812,
-    "Ele": 158.8
+    "Ele": 158.8,
+    "ident": "SVTV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3066,7 +4213,12 @@
     "freq": "",
     "Lat": 9.130826,
     "Lon": -66.391153,
-    "Ele": 45.1
+    "Ele": 45.1,
+    "ident": "SVTY",
+    "iso_country": "VE",
+    "length_ft": 2296,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -3075,7 +4227,9 @@
     "freq": "",
     "Lat": 6.250135,
     "Lon": -62.785046,
-    "Ele": 509.6
+    "Ele": 509.6,
+    "ident": "SVUA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3084,7 +4238,9 @@
     "freq": "",
     "Lat": 9.449999809265137,
     "Lon": -68.36666870117188,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "SVUK",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3093,7 +4249,11 @@
     "freq": "",
     "Lat": 5.358118,
     "Lon": -62.671625,
-    "Ele": 349.9
+    "Ele": 349.9,
+    "ident": "SVUM",
+    "iso_country": "VE",
+    "icao_code": "SVUM",
+    "iata_code": "URM"
   },
   {
     "type": "small_airport",
@@ -3102,7 +4262,14 @@
     "freq": "",
     "Lat": 7.979201,
     "Lon": -62.32902,
-    "Ele": 321.9
+    "Ele": 321.9,
+    "ident": "SVUP",
+    "iso_country": "VE",
+    "icao_code": "SVUP",
+    "length_ft": 3645,
+    "width_ft": 98,
+    "heading": 117.1,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -3111,7 +4278,11 @@
     "freq": "",
     "Lat": 4.984002,
     "Lon": -61.730102,
-    "Ele": 859.5
+    "Ele": 859.5,
+    "ident": "SVUQ",
+    "iso_country": "VE",
+    "icao_code": "SVUQ",
+    "iata_code": "WOK"
   },
   {
     "type": "small_airport",
@@ -3120,7 +4291,10 @@
     "freq": "",
     "Lat": 5.680422,
     "Lon": -62.457705,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "SVUY",
+    "iso_country": "VE",
+    "icao_code": "SVUY"
   },
   {
     "type": "medium_airport",
@@ -3129,7 +4303,15 @@
     "freq": "127.800",
     "Lat": 10.14973258972168,
     "Lon": -67.92839813232422,
-    "Ele": 430.1
+    "Ele": 430.1,
+    "ident": "SVVA",
+    "iso_country": "VE",
+    "icao_code": "SVVA",
+    "iata_code": "VLN",
+    "length_ft": 9842,
+    "width_ft": 164,
+    "heading": 92.8,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -3138,7 +4320,9 @@
     "freq": "",
     "Lat": 9.05138874053955,
     "Lon": -66.46749877929688,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "SVVB",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3147,7 +4331,9 @@
     "freq": "",
     "Lat": 8.266667366027832,
     "Lon": -67.16666412353516,
-    "Ele": 192.3
+    "Ele": 192.3,
+    "ident": "SVVD",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -3156,7 +4342,15 @@
     "freq": "118.750",
     "Lat": 8.624139,
     "Lon": -71.672668,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "SVVG",
+    "iso_country": "VE",
+    "icao_code": "SVVG",
+    "iata_code": "VIG",
+    "length_ft": 10645,
+    "width_ft": 145,
+    "heading": 81.9,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -3165,7 +4359,9 @@
     "freq": "",
     "Lat": 9.366666793823242,
     "Lon": -62.91666793823242,
-    "Ele": 91.7
+    "Ele": 91.7,
+    "ident": "SVVH",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3174,7 +4370,9 @@
     "freq": "",
     "Lat": 7.133333206176758,
     "Lon": -69.05000305175781,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "SVVK",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -3183,7 +4381,15 @@
     "freq": "121.900",
     "Lat": 9.340478,
     "Lon": -70.584061,
-    "Ele": 627.9
+    "Ele": 627.9,
+    "ident": "SVVL",
+    "iso_country": "VE",
+    "icao_code": "SVVL",
+    "iata_code": "VLV",
+    "length_ft": 6791,
+    "width_ft": 148,
+    "heading": 27,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -3192,7 +4398,9 @@
     "freq": "",
     "Lat": 6.9166669845581055,
     "Lon": -68.1500015258789,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "SVVM",
+    "iso_country": "VE"
   },
   {
     "type": "medium_airport",
@@ -3201,7 +4409,15 @@
     "freq": "118.650",
     "Lat": 9.22202777863,
     "Lon": -65.9935836792,
-    "Ele": 125.0
+    "Ele": 125,
+    "ident": "SVVP",
+    "iso_country": "VE",
+    "icao_code": "SVVP",
+    "iata_code": "VDP",
+    "length_ft": 4921,
+    "width_ft": 164,
+    "heading": 72.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -3210,7 +4426,13 @@
     "freq": "",
     "Lat": 10.242799758911133,
     "Lon": -70.50180053710938,
-    "Ele": 600.2
+    "Ele": 600.2,
+    "ident": "SVVQ",
+    "iso_country": "VE",
+    "length_ft": 3800,
+    "width_ft": 44,
+    "heading": 122,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -3219,7 +4441,9 @@
     "freq": "",
     "Lat": 6.833333015441895,
     "Lon": -63.58333206176758,
-    "Ele": 329.8
+    "Ele": 329.8,
+    "ident": "SVVR",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3228,7 +4452,9 @@
     "freq": "",
     "Lat": 10.31666660308838,
     "Lon": -72.30000305175781,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "SVVS",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3237,7 +4463,9 @@
     "freq": "",
     "Lat": 10.540200233459473,
     "Lon": -68.24539947509766,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SVVV",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3246,7 +4474,9 @@
     "freq": "",
     "Lat": 6.561666965484619,
     "Lon": -66.00166320800781,
-    "Ele": 189.3
+    "Ele": 189.3,
+    "ident": "SVVX",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3255,7 +4485,9 @@
     "freq": "",
     "Lat": 7.316667079925537,
     "Lon": -67.90833282470703,
-    "Ele": 68.9
+    "Ele": 68.9,
+    "ident": "SVWA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3264,7 +4496,13 @@
     "freq": "",
     "Lat": 10.479499816894531,
     "Lon": -68.4728012084961,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "SVWB",
+    "iso_country": "VE",
+    "length_ft": 3915,
+    "width_ft": 50,
+    "heading": 89.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -3273,7 +4511,9 @@
     "freq": "",
     "Lat": 8.011667,
     "Lon": -69.831665,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "SVWE",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3282,7 +4522,13 @@
     "freq": "",
     "Lat": 8.59827,
     "Lon": -69.760803,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "SVWQ",
+    "iso_country": "VE",
+    "length_ft": 3585,
+    "width_ft": 40,
+    "heading": 158.2,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -3291,7 +4537,10 @@
     "freq": "",
     "Lat": 9.040833,
     "Lon": -67.603,
-    "Ele": 120.1
+    "Ele": 120.1,
+    "ident": "SVWX",
+    "iso_country": "VE",
+    "icao_code": "SVWX"
   },
   {
     "type": "small_airport",
@@ -3300,7 +4549,9 @@
     "freq": "",
     "Lat": 7.150000095367432,
     "Lon": -69.25,
-    "Ele": 119.8
+    "Ele": 119.8,
+    "ident": "SVXF",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3309,7 +4560,9 @@
     "freq": "",
     "Lat": 7.716667175292969,
     "Lon": -71.23332977294922,
-    "Ele": 146.9
+    "Ele": 146.9,
+    "ident": "SVYA",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3318,7 +4571,9 @@
     "freq": "",
     "Lat": 7.466667175292969,
     "Lon": -68.44999694824219,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "SVYG",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3327,7 +4582,9 @@
     "freq": "",
     "Lat": 5.458333015441895,
     "Lon": -65.89833068847656,
-    "Ele": 169.8
+    "Ele": 169.8,
+    "ident": "SVYI",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3336,7 +4593,9 @@
     "freq": "",
     "Lat": 7.199999809265137,
     "Lon": -69.31666564941406,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "SVYP",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3345,7 +4604,9 @@
     "freq": "",
     "Lat": 5.60978,
     "Lon": -66.110397,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "SVYT",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3354,7 +4615,9 @@
     "freq": "",
     "Lat": 3.233333110809326,
     "Lon": -65.94999694824219,
-    "Ele": 127.4
+    "Ele": 127.4,
+    "ident": "VE-0001",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3363,7 +4626,9 @@
     "freq": "",
     "Lat": 9.258333206176758,
     "Lon": -67.55833435058594,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "VE-0008",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3381,7 +4646,9 @@
     "freq": "",
     "Lat": 8.484167098999023,
     "Lon": -68.366943359375,
-    "Ele": 68.6
+    "Ele": 68.6,
+    "ident": "VE-0014",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3390,7 +4657,9 @@
     "freq": "",
     "Lat": 4.468889236450195,
     "Lon": -65.7691650390625,
-    "Ele": 239.6
+    "Ele": 239.6,
+    "ident": "VE-0015",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3399,7 +4668,9 @@
     "freq": "",
     "Lat": 5.199999809265137,
     "Lon": -65.58333587646484,
-    "Ele": 210.3
+    "Ele": 210.3,
+    "ident": "VE-0016",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3408,7 +4679,9 @@
     "freq": "",
     "Lat": 3.74666690826416,
     "Lon": -65.76333618164062,
-    "Ele": 175.9
+    "Ele": 175.9,
+    "ident": "VE-0021",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3417,7 +4690,9 @@
     "freq": "",
     "Lat": 3.5,
     "Lon": -65.33333587646484,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "VE-0023",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3426,7 +4701,9 @@
     "freq": "",
     "Lat": 4.062468,
     "Lon": -66.828305,
-    "Ele": 109.1
+    "Ele": 109.1,
+    "ident": "VE-0027",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3444,7 +4721,9 @@
     "freq": "",
     "Lat": 6.050000190734863,
     "Lon": -66.9000015258789,
-    "Ele": 248.1
+    "Ele": 248.1,
+    "ident": "VE-0029",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3453,7 +4732,9 @@
     "freq": "",
     "Lat": 5.108333110809326,
     "Lon": -66.25833129882812,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "VE-0031",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3462,7 +4743,9 @@
     "freq": "",
     "Lat": 9.8114595413208,
     "Lon": -66.8927993774414,
-    "Ele": 268.5
+    "Ele": 268.5,
+    "ident": "VE-0032",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3471,7 +4754,9 @@
     "freq": "",
     "Lat": 8.620490074157715,
     "Lon": -72.22599792480469,
-    "Ele": 26.5
+    "Ele": 26.5,
+    "ident": "VE-0033",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3480,7 +4765,9 @@
     "freq": "",
     "Lat": 5.050000190734863,
     "Lon": -65.61666870117188,
-    "Ele": 157.9
+    "Ele": 157.9,
+    "ident": "VE-0034",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3489,7 +4776,9 @@
     "freq": "",
     "Lat": 5.550000190734863,
     "Lon": -66.25,
-    "Ele": 222.5
+    "Ele": 222.5,
+    "ident": "VE-0035",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3498,7 +4787,9 @@
     "freq": "",
     "Lat": 4.599999904632568,
     "Lon": -63.93333435058594,
-    "Ele": 356.3
+    "Ele": 356.3,
+    "ident": "VE-0041",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3507,7 +4798,9 @@
     "freq": "",
     "Lat": 2.4215199947357178,
     "Lon": -64.29730224609375,
-    "Ele": 247.5
+    "Ele": 247.5,
+    "ident": "VE-0042",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3516,7 +4809,9 @@
     "freq": "",
     "Lat": 9.406841,
     "Lon": -71.039725,
-    "Ele": 12.5
+    "Ele": 12.5,
+    "ident": "VE-0043",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3525,7 +4820,9 @@
     "freq": "",
     "Lat": 7.5,
     "Lon": -63.400001525878906,
-    "Ele": 150.0
+    "Ele": 150,
+    "ident": "VE-0046",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3534,7 +4831,9 @@
     "freq": "",
     "Lat": 5.1483330726623535,
     "Lon": -64.84833526611328,
-    "Ele": 339.5
+    "Ele": 339.5,
+    "ident": "VE-0050",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3543,7 +4842,9 @@
     "freq": "",
     "Lat": 6.5883331298828125,
     "Lon": -68.28666687011719,
-    "Ele": 68.3
+    "Ele": 68.3,
+    "ident": "VE-0051",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3552,7 +4853,9 @@
     "freq": "",
     "Lat": 6.033332824707031,
     "Lon": -66.26667022705078,
-    "Ele": 351.7
+    "Ele": 351.7,
+    "ident": "VE-0052",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3561,7 +4864,9 @@
     "freq": "",
     "Lat": 10.033332824707031,
     "Lon": -69.25,
-    "Ele": 447.1
+    "Ele": 447.1,
+    "ident": "VE-0053",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3570,7 +4875,9 @@
     "freq": "",
     "Lat": 3.0833330154418945,
     "Lon": -65.81500244140625,
-    "Ele": 137.2
+    "Ele": 137.2,
+    "ident": "VE-0056",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3579,7 +4886,9 @@
     "freq": "",
     "Lat": 6.150000095367432,
     "Lon": -67.06666564941406,
-    "Ele": 64.9
+    "Ele": 64.9,
+    "ident": "VE-0057",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3588,7 +4897,9 @@
     "freq": "",
     "Lat": 7.431666851043701,
     "Lon": -69.32666778564453,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "VE-0058",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3597,7 +4908,9 @@
     "freq": "",
     "Lat": 6.434721946716309,
     "Lon": -65.81888580322266,
-    "Ele": 289.0
+    "Ele": 289,
+    "ident": "VE-0059",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3606,7 +4919,9 @@
     "freq": "",
     "Lat": 8.316666603088379,
     "Lon": -67.11166381835938,
-    "Ele": 58.5
+    "Ele": 58.5,
+    "ident": "VE-0061",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3615,7 +4930,9 @@
     "freq": "",
     "Lat": 8.543333053588867,
     "Lon": -70.16666412353516,
-    "Ele": 155.4
+    "Ele": 155.4,
+    "ident": "VE-0062",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3624,7 +4941,9 @@
     "freq": "",
     "Lat": 8.824999809265137,
     "Lon": -67.0183334350586,
-    "Ele": 101.8
+    "Ele": 101.8,
+    "ident": "VE-0063",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3633,7 +4952,9 @@
     "freq": "",
     "Lat": 5.958333015441895,
     "Lon": -64.43333435058594,
-    "Ele": 280.7
+    "Ele": 280.7,
+    "ident": "VE-0067",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3642,7 +4963,7 @@
     "freq": "",
     "Lat": 5.133333206176758,
     "Lon": -64.8499984741211,
-    "Ele": 381.0
+    "Ele": 381
   },
   {
     "type": "small_airport",
@@ -3651,7 +4972,9 @@
     "freq": "",
     "Lat": 8.673333168029785,
     "Lon": -69.18499755859375,
-    "Ele": 92.7
+    "Ele": 92.7,
+    "ident": "VE-0075",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3660,7 +4983,9 @@
     "freq": "",
     "Lat": 5.682809829711914,
     "Lon": -66.35800170898438,
-    "Ele": 152.7
+    "Ele": 152.7,
+    "ident": "VE-0076",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3669,7 +4994,9 @@
     "freq": "",
     "Lat": 5.633333206176758,
     "Lon": -66.21666717529297,
-    "Ele": 347.5
+    "Ele": 347.5,
+    "ident": "VE-0077",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3678,7 +5005,9 @@
     "freq": "",
     "Lat": 8.050000190734863,
     "Lon": -69.8499984741211,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "VE-0079",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3687,7 +5016,9 @@
     "freq": "",
     "Lat": 8.116666793823242,
     "Lon": -66.58333587646484,
-    "Ele": 48.5
+    "Ele": 48.5,
+    "ident": "VE-0081",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3696,7 +5027,9 @@
     "freq": "",
     "Lat": 8.966667175292969,
     "Lon": -67.80000305175781,
-    "Ele": 74.7
+    "Ele": 74.7,
+    "ident": "VE-0082",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3705,7 +5038,9 @@
     "freq": "",
     "Lat": 8.84000015258789,
     "Lon": -63.60166549682617,
-    "Ele": 172.2
+    "Ele": 172.2,
+    "ident": "VE-0083",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3714,7 +5049,9 @@
     "freq": "",
     "Lat": 8.805000305175781,
     "Lon": -67.13166809082031,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "VE-0084",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3723,7 +5060,9 @@
     "freq": "",
     "Lat": 8.991666793823242,
     "Lon": -68.2249984741211,
-    "Ele": 118.3
+    "Ele": 118.3,
+    "ident": "VE-0085",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3732,7 +5071,9 @@
     "freq": "",
     "Lat": 9.838333129882812,
     "Lon": -63.573333740234375,
-    "Ele": 221.6
+    "Ele": 221.6,
+    "ident": "VE-0086",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3741,7 +5082,9 @@
     "freq": "",
     "Lat": 9.635000228881836,
     "Lon": -65.80332946777344,
-    "Ele": 202.7
+    "Ele": 202.7,
+    "ident": "VE-0087",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3750,7 +5093,9 @@
     "freq": "",
     "Lat": 8.78499984741211,
     "Lon": -63.73833465576172,
-    "Ele": 192.3
+    "Ele": 192.3,
+    "ident": "VE-0088",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3759,7 +5104,9 @@
     "freq": "",
     "Lat": 9.050000190734863,
     "Lon": -67.6500015258789,
-    "Ele": 89.6
+    "Ele": 89.6,
+    "ident": "VE-0089",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3768,7 +5115,9 @@
     "freq": "",
     "Lat": 7.668333053588867,
     "Lon": -69.32499694824219,
-    "Ele": 189.9
+    "Ele": 189.9,
+    "ident": "VE-0090",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3777,7 +5126,12 @@
     "freq": "",
     "Lat": 6.989999771118164,
     "Lon": -68.26166534423828,
-    "Ele": 155.8
+    "Ele": 155.8,
+    "ident": "VE-0091",
+    "iso_country": "VE",
+    "length_ft": 4100,
+    "QFU": "04",
+    "heading": 40
   },
   {
     "type": "small_airport",
@@ -3786,7 +5140,9 @@
     "freq": "",
     "Lat": 8.704999923706055,
     "Lon": -64.62000274658203,
-    "Ele": 158.5
+    "Ele": 158.5,
+    "ident": "VE-0092",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3795,7 +5151,9 @@
     "freq": "",
     "Lat": 5.589670181274414,
     "Lon": -65.86070251464844,
-    "Ele": 126.5
+    "Ele": 126.5,
+    "ident": "VE-0093",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3804,7 +5162,9 @@
     "freq": "",
     "Lat": 5.050278186798096,
     "Lon": -67.81722259521484,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "VE-0096",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3813,7 +5173,9 @@
     "freq": "",
     "Lat": 7.431666851043701,
     "Lon": -68.13666534423828,
-    "Ele": 58.5
+    "Ele": 58.5,
+    "ident": "VE-0098",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3822,7 +5184,9 @@
     "freq": "",
     "Lat": 5.050000190734863,
     "Lon": -66.23332977294922,
-    "Ele": 123.1
+    "Ele": 123.1,
+    "ident": "VE-0099",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3831,7 +5195,9 @@
     "freq": "",
     "Lat": 4.433332920074463,
     "Lon": -64.13333129882812,
-    "Ele": 418.8
+    "Ele": 418.8,
+    "ident": "VE-0100",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3840,7 +5206,9 @@
     "freq": "",
     "Lat": 4.4166669845581055,
     "Lon": -64.11666870117188,
-    "Ele": 458.1
+    "Ele": 458.1,
+    "ident": "VE-0101",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3849,7 +5217,9 @@
     "freq": "",
     "Lat": 4.066667079925537,
     "Lon": -66.94999694824219,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "VE-0102",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3858,7 +5228,9 @@
     "freq": "",
     "Lat": 5.71196,
     "Lon": -62.409559,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "VE-0103",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3867,7 +5239,9 @@
     "freq": "",
     "Lat": 7.483333110809326,
     "Lon": -68.9000015258789,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "VE-0104",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3876,7 +5250,9 @@
     "freq": "",
     "Lat": 8.716667175292969,
     "Lon": -69.24166870117188,
-    "Ele": 90.5
+    "Ele": 90.5,
+    "ident": "VE-0105",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3885,7 +5261,9 @@
     "freq": "",
     "Lat": 3.172225,
     "Lon": -65.541086,
-    "Ele": 114.3
+    "Ele": 114.3,
+    "ident": "VE-0107",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3894,7 +5272,9 @@
     "freq": "",
     "Lat": 10.9266996383667,
     "Lon": -65.40889739990234,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "VE-0109",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3903,7 +5283,9 @@
     "freq": "",
     "Lat": 5.099999904632568,
     "Lon": -65.93333435058594,
-    "Ele": 134.4
+    "Ele": 134.4,
+    "ident": "VE-0110",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3921,7 +5303,10 @@
     "freq": "",
     "Lat": 10.12399959564209,
     "Lon": -71.23799896240234,
-    "Ele": 752.6
+    "Ele": 752.6,
+    "ident": "VE-0114",
+    "iso_country": "VE",
+    "iata_code": "LGY"
   },
   {
     "type": "small_airport",
@@ -3930,7 +5315,9 @@
     "freq": "",
     "Lat": 7.211667060852051,
     "Lon": -69.8499984741211,
-    "Ele": 129.8
+    "Ele": 129.8,
+    "ident": "VE-0116",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3939,7 +5326,9 @@
     "freq": "",
     "Lat": 6.953951,
     "Lon": -67.241082,
-    "Ele": 48.8
+    "Ele": 48.8,
+    "ident": "VE-0117",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3948,7 +5337,9 @@
     "freq": "",
     "Lat": 9.311667442321776,
     "Lon": -68.163330078125,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "VE-0119",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3957,7 +5348,9 @@
     "freq": "",
     "Lat": 9.616666793823242,
     "Lon": -68.4000015258789,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "VE-0120",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3966,7 +5359,9 @@
     "freq": "",
     "Lat": 8.276666641235352,
     "Lon": -62.39833450317383,
-    "Ele": 595.0
+    "Ele": 595,
+    "ident": "VE-0121",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3975,7 +5370,9 @@
     "freq": "",
     "Lat": 5.466667175292969,
     "Lon": -65.91666412353516,
-    "Ele": 126.8
+    "Ele": 126.8,
+    "ident": "VE-0122",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3984,7 +5381,9 @@
     "freq": "",
     "Lat": 5.133333206176758,
     "Lon": -65.03333282470703,
-    "Ele": 590.7
+    "Ele": 590.7,
+    "ident": "VE-0123",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -3993,7 +5392,9 @@
     "freq": "",
     "Lat": 5.233333110809326,
     "Lon": -64.9000015258789,
-    "Ele": 622.4
+    "Ele": 622.4,
+    "ident": "VE-0124",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4002,7 +5403,9 @@
     "freq": "",
     "Lat": 5.966667175292969,
     "Lon": -66.91666412353516,
-    "Ele": 230.1
+    "Ele": 230.1,
+    "ident": "VE-0126",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4011,7 +5414,9 @@
     "freq": "",
     "Lat": 5.164999961853027,
     "Lon": -66.5250015258789,
-    "Ele": 119.5
+    "Ele": 119.5,
+    "ident": "VE-0127",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4020,7 +5425,9 @@
     "freq": "",
     "Lat": 4.301667213439941,
     "Lon": -66.29666900634766,
-    "Ele": 116.7
+    "Ele": 116.7,
+    "ident": "VE-0128",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4029,7 +5436,9 @@
     "freq": "",
     "Lat": 8.416666984558105,
     "Lon": -68.44999694824219,
-    "Ele": 79.9
+    "Ele": 79.9,
+    "ident": "VE-0129",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4038,7 +5447,9 @@
     "freq": "",
     "Lat": 7.989630222320557,
     "Lon": -69.2782974243164,
-    "Ele": 78.0
+    "Ele": 78,
+    "ident": "VE-0130",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4047,7 +5458,9 @@
     "freq": "",
     "Lat": 2.537709951400757,
     "Lon": -65.20279693603516,
-    "Ele": 162.2
+    "Ele": 162.2,
+    "ident": "VE-0131",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4056,7 +5469,9 @@
     "freq": "",
     "Lat": 2.5206899642944336,
     "Lon": -65.1990966796875,
-    "Ele": 351.7
+    "Ele": 351.7,
+    "ident": "VE-0132",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4065,7 +5480,9 @@
     "freq": "",
     "Lat": 4.1666669845581055,
     "Lon": -65.19999694824219,
-    "Ele": 1222.6
+    "Ele": 1222.6,
+    "ident": "VE-0133",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4074,7 +5491,9 @@
     "freq": "",
     "Lat": 2.733333110809326,
     "Lon": -64.08333587646484,
-    "Ele": 1066.8
+    "Ele": 1066.8,
+    "ident": "VE-0134",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4083,7 +5502,9 @@
     "freq": "",
     "Lat": 7.131667137145996,
     "Lon": -69.23332977294922,
-    "Ele": 82.0
+    "Ele": 82,
+    "ident": "VE-0137",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4092,16 +5513,20 @@
     "freq": "",
     "Lat": 5.583333015441895,
     "Lon": -65.94999694824219,
-    "Ele": 157.6
+    "Ele": 157.6,
+    "ident": "VE-0138",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
     "name": "Misión Padamo Airport",
     "gps_code": "VE-0139",
     "freq": "",
-    "Lat": 3.0,
+    "Lat": 3,
     "Lon": -65.28333282470703,
-    "Ele": 160.9
+    "Ele": 160.9,
+    "ident": "VE-0139",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4110,7 +5535,9 @@
     "freq": "",
     "Lat": 4.716667175292969,
     "Lon": -66.33333587646484,
-    "Ele": 116.1
+    "Ele": 116.1,
+    "ident": "VE-0140",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4119,7 +5546,9 @@
     "freq": "",
     "Lat": 2.7895898818969727,
     "Lon": -65.216796875,
-    "Ele": 126.5
+    "Ele": 126.5,
+    "ident": "VE-0144",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4128,7 +5557,9 @@
     "freq": "",
     "Lat": 6.599999904632568,
     "Lon": -68.43333435058594,
-    "Ele": 63.7
+    "Ele": 63.7,
+    "ident": "VE-0145",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4137,7 +5568,9 @@
     "freq": "",
     "Lat": 2.7833330631256104,
     "Lon": -64.23332977294922,
-    "Ele": 868.7
+    "Ele": 868.7,
+    "ident": "VE-0146",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4146,7 +5579,9 @@
     "freq": "",
     "Lat": 5.4816670417785645,
     "Lon": -63.62166595458984,
-    "Ele": 316.4
+    "Ele": 316.4,
+    "ident": "VE-0148",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4155,7 +5590,9 @@
     "freq": "",
     "Lat": 6.102089881896973,
     "Lon": -67.06849670410156,
-    "Ele": 58.8
+    "Ele": 58.8,
+    "ident": "VE-0150",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4164,7 +5601,9 @@
     "freq": "",
     "Lat": 5.983333110809326,
     "Lon": -66.23332977294922,
-    "Ele": 420.3
+    "Ele": 420.3,
+    "ident": "VE-0151",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4173,7 +5612,9 @@
     "freq": "",
     "Lat": 2.429229974746704,
     "Lon": -64.90859985351562,
-    "Ele": 165.5
+    "Ele": 165.5,
+    "ident": "VE-0161",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4182,7 +5623,9 @@
     "freq": "",
     "Lat": 9.666666984558104,
     "Lon": -63.650001525878906,
-    "Ele": 168.6
+    "Ele": 168.6,
+    "ident": "VE-0165",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4191,7 +5634,9 @@
     "freq": "",
     "Lat": 4.800000190734863,
     "Lon": -65.38333129882812,
-    "Ele": 268.2
+    "Ele": 268.2,
+    "ident": "VE-0169",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4200,7 +5645,9 @@
     "freq": "",
     "Lat": 5.045000076293945,
     "Lon": -67.55500030517578,
-    "Ele": 97.8
+    "Ele": 97.8,
+    "ident": "VE-0170",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4209,7 +5656,9 @@
     "freq": "",
     "Lat": 10.283332824707031,
     "Lon": -65.80000305175781,
-    "Ele": 1.2
+    "Ele": 1.2,
+    "ident": "VE-0173",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4218,7 +5667,9 @@
     "freq": "",
     "Lat": 4.783332824707031,
     "Lon": -65.3499984741211,
-    "Ele": 266.4
+    "Ele": 266.4,
+    "ident": "VE-0174",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4227,7 +5678,9 @@
     "freq": "",
     "Lat": 3.463082,
     "Lon": -66.739923,
-    "Ele": 110.9
+    "Ele": 110.9,
+    "ident": "VE-0175",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4236,7 +5689,9 @@
     "freq": "",
     "Lat": 6.318333148956299,
     "Lon": -65.37666320800781,
-    "Ele": 340.8
+    "Ele": 340.8,
+    "ident": "VE-0178",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4245,7 +5700,9 @@
     "freq": "",
     "Lat": 5.5,
     "Lon": -66.71666717529297,
-    "Ele": 502.0
+    "Ele": 502,
+    "ident": "VE-0179",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4254,7 +5711,9 @@
     "freq": "",
     "Lat": 5.361667156219482,
     "Lon": -64.24333190917969,
-    "Ele": 301.8
+    "Ele": 301.8,
+    "ident": "VE-0180",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4263,7 +5722,9 @@
     "freq": "",
     "Lat": 1.2552000284194946,
     "Lon": -66.82630157470703,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "VE-0181",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4272,7 +5733,9 @@
     "freq": "",
     "Lat": 4.949999809265137,
     "Lon": -64.80000305175781,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "VE-0182",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4281,7 +5744,9 @@
     "freq": "",
     "Lat": 3.816667079925537,
     "Lon": -64.5999984741211,
-    "Ele": 783.3
+    "Ele": 783.3,
+    "ident": "VE-0184",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4290,7 +5755,9 @@
     "freq": "",
     "Lat": 6.258333,
     "Lon": -67.11,
-    "Ele": 74.7
+    "Ele": 74.7,
+    "ident": "VE-0185",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4299,7 +5766,9 @@
     "freq": "",
     "Lat": 4.650000095367432,
     "Lon": -66.30000305175781,
-    "Ele": 114.9
+    "Ele": 114.9,
+    "ident": "VE-0186",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4308,7 +5777,9 @@
     "freq": "",
     "Lat": 5.033332824707031,
     "Lon": -65.51667022705078,
-    "Ele": 247.2
+    "Ele": 247.2,
+    "ident": "VE-0188",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4317,7 +5788,9 @@
     "freq": "",
     "Lat": 5.033332824707031,
     "Lon": -65.63333129882812,
-    "Ele": 167.0
+    "Ele": 167,
+    "ident": "VE-0189",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4326,7 +5799,9 @@
     "freq": "",
     "Lat": 9.93333339691162,
     "Lon": -69.66666412353516,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "VE-0190",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4335,7 +5810,9 @@
     "freq": "",
     "Lat": 3.166666984558105,
     "Lon": -65.16666412353516,
-    "Ele": 178.3
+    "Ele": 178.3,
+    "ident": "VE-0191",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4344,7 +5821,9 @@
     "freq": "",
     "Lat": 8.108332633972168,
     "Lon": -66.43333435058594,
-    "Ele": 49.7
+    "Ele": 49.7,
+    "ident": "VE-0192",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4353,7 +5832,9 @@
     "freq": "",
     "Lat": 9.699999809265137,
     "Lon": -64.03333282470703,
-    "Ele": 299.0
+    "Ele": 299,
+    "ident": "VE-0195",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4362,7 +5843,9 @@
     "freq": "",
     "Lat": 4.333333015441895,
     "Lon": -65.25,
-    "Ele": 1058.6
+    "Ele": 1058.6,
+    "ident": "VE-0198",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4371,7 +5854,9 @@
     "freq": "",
     "Lat": 4.739109992980957,
     "Lon": -65.21530151367188,
-    "Ele": 283.5
+    "Ele": 283.5,
+    "ident": "VE-0199",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4380,7 +5865,9 @@
     "freq": "",
     "Lat": 3.4666669368743896,
     "Lon": -65.33333587646484,
-    "Ele": 181.4
+    "Ele": 181.4,
+    "ident": "VE-0200",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4389,7 +5876,9 @@
     "freq": "",
     "Lat": 3.616667032241821,
     "Lon": -65.19999694824219,
-    "Ele": 230.7
+    "Ele": 230.7,
+    "ident": "VE-0202",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4398,7 +5887,9 @@
     "freq": "",
     "Lat": 6.290535,
     "Lon": -67.175323,
-    "Ele": 46.6
+    "Ele": 46.6,
+    "ident": "VE-0204",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4407,16 +5898,22 @@
     "freq": "",
     "Lat": 8.2788,
     "Lon": -62.6652,
-    "Ele": 70.4
+    "Ele": 70.4,
+    "ident": "VE-0207",
+    "iso_country": "VE",
+    "iata_code": "SFX"
   },
   {
     "type": "small_airport",
     "name": "San Salvador de Paul Airport",
     "gps_code": "VE-0208",
     "freq": "",
-    "Lat": 7.0,
-    "Lon": -62.0,
-    "Ele": 175.6
+    "Lat": 7,
+    "Lon": -62,
+    "Ele": 175.6,
+    "ident": "VE-0208",
+    "iso_country": "VE",
+    "iata_code": "SVV"
   },
   {
     "type": "small_airport",
@@ -4425,7 +5922,9 @@
     "freq": "",
     "Lat": 5.25,
     "Lon": -61.733334,
-    "Ele": 990.6
+    "Ele": 990.6,
+    "ident": "VE-0209",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4434,7 +5933,13 @@
     "freq": "",
     "Lat": 9.284347,
     "Lon": -68.391008,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "VE-0210",
+    "iso_country": "VE",
+    "length_ft": 4943,
+    "width_ft": 80,
+    "heading": 149.8,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -4443,7 +5948,9 @@
     "freq": "",
     "Lat": 3.14861111111,
     "Lon": -65.8611111111,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VE-0211",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4452,7 +5959,9 @@
     "freq": "",
     "Lat": 9.453367,
     "Lon": -68.677618,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VE-0214",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4461,7 +5970,9 @@
     "freq": "",
     "Lat": 5.681915,
     "Lon": -62.409442,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VE-0215",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4470,7 +5981,9 @@
     "freq": "",
     "Lat": 9.429,
     "Lon": -63.3372,
-    "Ele": 96.9
+    "Ele": 96.9,
+    "ident": "VE-0216",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4479,7 +5992,9 @@
     "freq": "",
     "Lat": 11.82596,
     "Lon": -71.34955,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VE-0217",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4488,7 +6003,9 @@
     "freq": "",
     "Lat": 9.829045,
     "Lon": -72.244551,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "VE-0218",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4497,7 +6014,10 @@
     "freq": "",
     "Lat": 8.833546,
     "Lon": -64.20828,
-    "Ele": 255.1
+    "Ele": 255.1,
+    "ident": "VE-0222",
+    "iso_country": "VE",
+    "iata_code": "ELX"
   },
   {
     "type": "small_airport",
@@ -4506,7 +6026,10 @@
     "freq": "",
     "Lat": 6.99328,
     "Lon": -67.19261,
-    "Ele": 125.0
+    "Ele": 125,
+    "ident": "VE-0231",
+    "iso_country": "VE",
+    "local_code": "SVBF"
   },
   {
     "type": "small_airport",
@@ -4515,7 +6038,10 @@
     "freq": "",
     "Lat": 7.516667,
     "Lon": -68.683334,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "VE-0232",
+    "iso_country": "VE",
+    "local_code": "SVQR"
   },
   {
     "type": "small_airport",
@@ -4524,7 +6050,9 @@
     "freq": "",
     "Lat": 7.12859,
     "Lon": -66.9235,
-    "Ele": 47.9
+    "Ele": 47.9,
+    "ident": "VE-0233",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4533,7 +6061,10 @@
     "freq": "",
     "Lat": 7.57581,
     "Lon": -67.01453,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "VE-0234",
+    "iso_country": "VE",
+    "icao_code": "SVQS"
   },
   {
     "type": "small_airport",
@@ -4542,7 +6073,9 @@
     "freq": "",
     "Lat": 8.27121,
     "Lon": -67.61337,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "VE-0236",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4551,7 +6084,9 @@
     "freq": "",
     "Lat": 8.89058,
     "Lon": -67.56241,
-    "Ele": 82.0
+    "Ele": 82,
+    "ident": "VE-0238",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4560,7 +6095,9 @@
     "freq": "",
     "Lat": 8.86984,
     "Lon": -67.50918,
-    "Ele": 86.0
+    "Ele": 86,
+    "ident": "VE-0239",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4569,7 +6106,9 @@
     "freq": "",
     "Lat": 8.9317,
     "Lon": -67.47298,
-    "Ele": 89.9
+    "Ele": 89.9,
+    "ident": "VE-0240",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4578,7 +6117,9 @@
     "freq": "",
     "Lat": 9.16006,
     "Lon": -67.01918,
-    "Ele": 199.6
+    "Ele": 199.6,
+    "ident": "VE-0241",
+    "iso_country": "VE"
   },
   {
     "type": "small_airport",
@@ -4587,6 +6128,8 @@
     "freq": "",
     "Lat": 7.676141,
     "Lon": -66.252152,
-    "Ele": 55.2
+    "Ele": 55.2,
+    "ident": "VE-0243",
+    "iso_country": "VE"
   }
 ]

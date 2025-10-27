@@ -6,7 +6,15 @@
     "freq": "118.900",
     "Lat": 1.66294,
     "Lon": 7.41174,
-    "Ele": 180.1
+    "Ele": 180.1,
+    "ident": "FPPR",
+    "iso_country": "ST",
+    "icao_code": "FPPR",
+    "iata_code": "PCP",
+    "length_ft": 4331,
+    "width_ft": 98,
+    "heading": 168,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -15,6 +23,14 @@
     "freq": "118.900",
     "Lat": 0.378175,
     "Lon": 6.71215,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "FPST",
+    "iso_country": "ST",
+    "icao_code": "FPST",
+    "iata_code": "TMS",
+    "length_ft": 7283,
+    "width_ft": 148,
+    "heading": 103,
+    "QFU": "29"
   }
 ]

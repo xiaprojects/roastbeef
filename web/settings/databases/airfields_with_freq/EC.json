@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -3.6285500526428223,
     "Lon": -80.18779754638672,
-    "Ele": 38.4
+    "Ele": 38.4,
+    "ident": "EC-0001",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -0.927875,
     "Lon": -75.394383,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0004",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,13 @@
     "freq": "",
     "Lat": -1.615731,
     "Lon": -75.98772,
-    "Ele": 192.0
+    "Ele": 192,
+    "ident": "EC-0005",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 98,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -33,7 +43,13 @@
     "freq": "",
     "Lat": -1.578569,
     "Lon": -76.353395,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0006",
+    "iso_country": "EC",
+    "length_ft": 2133,
+    "width_ft": 82,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -42,7 +58,13 @@
     "freq": "",
     "Lat": -1.384429,
     "Lon": -76.958553,
-    "Ele": 258.8
+    "Ele": 258.8,
+    "ident": "EC-0007",
+    "iso_country": "EC",
+    "length_ft": 1706,
+    "width_ft": 66,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -51,7 +73,9 @@
     "freq": "",
     "Lat": -1.368989,
     "Lon": -76.947394,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0008",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -60,7 +84,9 @@
     "freq": "",
     "Lat": -1.497908,
     "Lon": -77.474409,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0009",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -69,7 +95,9 @@
     "freq": "",
     "Lat": -1.650816,
     "Lon": -77.596069,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0010",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -78,7 +106,9 @@
     "freq": "",
     "Lat": -1.739358,
     "Lon": -77.485087,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0011",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -87,7 +117,9 @@
     "freq": "",
     "Lat": -1.923175,
     "Lon": -77.211526,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0012",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -96,7 +128,9 @@
     "freq": "",
     "Lat": -1.828625,
     "Lon": -77.321688,
-    "Ele": 378.0
+    "Ele": 378,
+    "ident": "EC-0013",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -105,7 +139,14 @@
     "freq": "",
     "Lat": -2.145775,
     "Lon": -77.700306,
-    "Ele": 701.0
+    "Ele": 701,
+    "ident": "EC-0014",
+    "iso_country": "EC",
+    "icao_code": "SEAK",
+    "length_ft": 3323,
+    "width_ft": 82,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -114,7 +155,13 @@
     "freq": "",
     "Lat": -2.38364,
     "Lon": -76.656656,
-    "Ele": 257.3
+    "Ele": 257.3,
+    "ident": "EC-0015",
+    "iso_country": "EC",
+    "length_ft": 1745,
+    "width_ft": 66,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -123,7 +170,9 @@
     "freq": "",
     "Lat": -2.568889,
     "Lon": -76.660795,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0016",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -132,7 +181,13 @@
     "freq": "",
     "Lat": -2.483436,
     "Lon": -77.201006,
-    "Ele": 275.8
+    "Ele": 275.8,
+    "ident": "EC-0017",
+    "iso_country": "EC",
+    "length_ft": 1476,
+    "width_ft": 66,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -141,7 +196,9 @@
     "freq": "",
     "Lat": -1.502584,
     "Lon": -77.327519,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0018",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -150,7 +207,9 @@
     "freq": "",
     "Lat": -2.212734,
     "Lon": -77.572687,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0019",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -159,7 +218,9 @@
     "freq": "",
     "Lat": -2.164911,
     "Lon": -77.57744,
-    "Ele": 517.9
+    "Ele": 517.9,
+    "ident": "EC-0020",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -168,7 +229,13 @@
     "freq": "",
     "Lat": -2.082567,
     "Lon": -77.580241,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0021",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 33,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -177,7 +244,13 @@
     "freq": "",
     "Lat": -2.090779,
     "Lon": -77.446868,
-    "Ele": 411.5
+    "Ele": 411.5,
+    "ident": "EC-0022",
+    "iso_country": "EC",
+    "length_ft": 2133,
+    "width_ft": 95,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -186,7 +259,9 @@
     "freq": "",
     "Lat": -1.990084,
     "Lon": -77.716252,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0023",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -195,7 +270,14 @@
     "freq": "",
     "Lat": -2.463387,
     "Lon": -76.992629,
-    "Ele": 303.9
+    "Ele": 303.9,
+    "ident": "EC-0024",
+    "iso_country": "EC",
+    "icao_code": "SEAW",
+    "length_ft": 2329,
+    "width_ft": 56,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -204,7 +286,13 @@
     "freq": "",
     "Lat": -2.070324,
     "Lon": -77.173335,
-    "Ele": 333.1
+    "Ele": 333.1,
+    "ident": "EC-0025",
+    "iso_country": "EC",
+    "length_ft": 1985,
+    "width_ft": 82,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -213,7 +301,14 @@
     "freq": "",
     "Lat": -2.023662,
     "Lon": -77.468825,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "EC-0026",
+    "iso_country": "EC",
+    "icao_code": "SEAT",
+    "length_ft": 1968,
+    "width_ft": 62,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -222,7 +317,9 @@
     "freq": "",
     "Lat": -1.926173,
     "Lon": -77.505011,
-    "Ele": 446.2
+    "Ele": 446.2,
+    "ident": "EC-0027",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -231,7 +328,13 @@
     "freq": "",
     "Lat": -2.852197,
     "Lon": -77.942373,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "EC-0028",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 49,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -240,7 +343,9 @@
     "freq": "",
     "Lat": -2.543927,
     "Lon": -77.199249,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0029",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -249,7 +354,9 @@
     "freq": "",
     "Lat": -2.61555,
     "Lon": -77.023164,
-    "Ele": 254.2
+    "Ele": 254.2,
+    "ident": "EC-0030",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -258,7 +365,9 @@
     "freq": "",
     "Lat": -2.36646,
     "Lon": -76.513774,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0031",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -267,7 +376,9 @@
     "freq": "",
     "Lat": -1.873892,
     "Lon": -76.773644,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "EC-0032",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -276,7 +387,9 @@
     "freq": "",
     "Lat": -1.298779,
     "Lon": -76.154546,
-    "Ele": 256.0
+    "Ele": 256,
+    "ident": "EC-0033",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -285,7 +398,13 @@
     "freq": "",
     "Lat": -1.649742,
     "Lon": -77.047942,
-    "Ele": 300.2
+    "Ele": 300.2,
+    "ident": "EC-0034",
+    "iso_country": "EC",
+    "length_ft": 1444,
+    "width_ft": 49,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -294,7 +413,9 @@
     "freq": "",
     "Lat": -0.72495,
     "Lon": -79.46976,
-    "Ele": 135.6
+    "Ele": 135.6,
+    "ident": "EC-0035",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -303,7 +424,10 @@
     "freq": "",
     "Lat": -0.96115,
     "Lon": -79.4162,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "EC-0036",
+    "iso_country": "EC",
+    "icao_code": "SEAN"
   },
   {
     "type": "small_airport",
@@ -312,7 +436,13 @@
     "freq": "",
     "Lat": -0.93109,
     "Lon": -79.420359,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "EC-0037",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 52,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -321,7 +451,9 @@
     "freq": "",
     "Lat": -0.98999,
     "Lon": -79.43663,
-    "Ele": 63.1
+    "Ele": 63.1,
+    "ident": "EC-0038",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -330,7 +462,7 @@
     "freq": "",
     "Lat": -0.98762,
     "Lon": -79.4445,
-    "Ele": 64.0
+    "Ele": 64
   },
   {
     "type": "small_airport",
@@ -339,7 +471,9 @@
     "freq": "",
     "Lat": -0.94007,
     "Lon": -79.31379,
-    "Ele": 128.0
+    "Ele": 128,
+    "ident": "EC-0040",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -348,7 +482,13 @@
     "freq": "",
     "Lat": -1.98576,
     "Lon": -79.62703,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "EC-0041",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 49,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -357,7 +497,13 @@
     "freq": "",
     "Lat": -3.18885,
     "Lon": -79.86874,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "EC-0043",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 59,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -366,7 +512,9 @@
     "freq": "",
     "Lat": -3.01335,
     "Lon": -80.257,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "EC-0045",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -375,7 +523,13 @@
     "freq": "",
     "Lat": -2.72034,
     "Lon": -80.249194,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "EC-0047",
+    "iso_country": "EC",
+    "length_ft": 2133,
+    "width_ft": 59,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -384,7 +538,13 @@
     "freq": "",
     "Lat": -2.6338,
     "Lon": -80.40429,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "EC-0048",
+    "iso_country": "EC",
+    "length_ft": 1444,
+    "width_ft": 33,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -393,7 +553,9 @@
     "freq": "",
     "Lat": -2.53345,
     "Lon": -80.40968,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "EC-0049",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -402,7 +564,9 @@
     "freq": "",
     "Lat": -2.28323,
     "Lon": -80.10262,
-    "Ele": 32.0
+    "Ele": 32,
+    "ident": "EC-0050",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -411,7 +575,9 @@
     "freq": "",
     "Lat": -0.40349,
     "Lon": -78.52983,
-    "Ele": 2709.1
+    "Ele": 2709.1,
+    "ident": "EC-0052",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -420,7 +586,10 @@
     "freq": "",
     "Lat": -2.928941,
     "Lon": -80.075941,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "EC-0056",
+    "iso_country": "EC",
+    "icao_code": "SEAA"
   },
   {
     "type": "small_airport",
@@ -429,7 +598,9 @@
     "freq": "",
     "Lat": 1.064419,
     "Lon": -79.351037,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "EC-0057",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -438,7 +609,13 @@
     "freq": "",
     "Lat": -2.559842,
     "Lon": -77.172101,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "EC-0061",
+    "iso_country": "EC",
+    "length_ft": 1608,
+    "width_ft": 59,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -447,7 +624,13 @@
     "freq": "",
     "Lat": -1.627303,
     "Lon": -77.303546,
-    "Ele": 347.2
+    "Ele": 347.2,
+    "ident": "EC-0062",
+    "iso_country": "EC",
+    "length_ft": 1368,
+    "width_ft": 46,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -456,7 +639,10 @@
     "freq": "",
     "Lat": -2.733330011367798,
     "Lon": -78.31670379638672,
-    "Ele": 539.5
+    "Ele": 539.5,
+    "ident": "EC-MZD",
+    "iso_country": "EC",
+    "iata_code": "MZD"
   },
   {
     "type": "small_airport",
@@ -465,7 +651,13 @@
     "freq": "",
     "Lat": -2.173581,
     "Lon": -79.280763,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "SE01",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 33,
+    "heading": 78,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -474,7 +666,13 @@
     "freq": "",
     "Lat": -2.773399,
     "Lon": -79.702411,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "SE02",
+    "iso_country": "EC",
+    "length_ft": 3235,
+    "width_ft": 35,
+    "heading": 29,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -483,7 +681,13 @@
     "freq": "",
     "Lat": -2.94716,
     "Lon": -80.1007,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SE03",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 40,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -492,7 +696,14 @@
     "freq": "",
     "Lat": -2.054719924926758,
     "Lon": -79.43309783935547,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "SE08",
+    "iso_country": "EC",
+    "local_code": "SE08",
+    "length_ft": 4265,
+    "width_ft": 39,
+    "heading": 169.4,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -501,7 +712,13 @@
     "freq": "",
     "Lat": -2.174602,
     "Lon": -79.234887,
-    "Ele": 57.9
+    "Ele": 57.9,
+    "ident": "SE09",
+    "iso_country": "EC",
+    "length_ft": 4265,
+    "width_ft": 49,
+    "heading": 179.3,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -510,7 +727,13 @@
     "freq": "",
     "Lat": -1.59611,
     "Lon": -79.726097,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "SE10",
+    "iso_country": "EC",
+    "length_ft": 3001,
+    "width_ft": 59,
+    "heading": 29.5,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -519,7 +742,13 @@
     "freq": "",
     "Lat": -0.536183,
     "Lon": -79.371976,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "SE11",
+    "iso_country": "EC",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 9,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -528,7 +757,10 @@
     "freq": "",
     "Lat": -1.7033530473709106,
     "Lon": -79.53804779052734,
-    "Ele": 8.8
+    "Ele": 8.8,
+    "ident": "SE13",
+    "iso_country": "EC",
+    "local_code": "SE13"
   },
   {
     "type": "small_airport",
@@ -537,7 +769,9 @@
     "freq": "",
     "Lat": -2.21775,
     "Lon": -79.43136,
-    "Ele": 38.4
+    "Ele": 38.4,
+    "ident": "SE14",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -546,7 +780,10 @@
     "freq": "",
     "Lat": -0.9998260140419006,
     "Lon": -79.41535949707031,
-    "Ele": 95.7
+    "Ele": 95.7,
+    "ident": "SE15",
+    "iso_country": "EC",
+    "local_code": "SE15"
   },
   {
     "type": "small_airport",
@@ -555,7 +792,10 @@
     "freq": "",
     "Lat": -3.881423950195313,
     "Lon": -79.23474884033203,
-    "Ele": 2342.1
+    "Ele": 2342.1,
+    "ident": "SE16",
+    "iso_country": "EC",
+    "local_code": "SE16"
   },
   {
     "type": "small_airport",
@@ -564,7 +804,13 @@
     "freq": "",
     "Lat": -3.27905,
     "Lon": -79.80118,
-    "Ele": 34.1
+    "Ele": 34.1,
+    "ident": "SE22",
+    "iso_country": "EC",
+    "length_ft": 3280,
+    "width_ft": 40,
+    "heading": 20.8,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -573,7 +819,13 @@
     "freq": "",
     "Lat": -3.34094,
     "Lon": -79.8638,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "SE58",
+    "iso_country": "EC",
+    "length_ft": 3150,
+    "width_ft": 39,
+    "heading": 102.3,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -582,7 +834,13 @@
     "freq": "",
     "Lat": -3.202759,
     "Lon": -79.79825,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SE59",
+    "iso_country": "EC",
+    "length_ft": 3073,
+    "width_ft": 62,
+    "heading": 10.8,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -591,7 +849,13 @@
     "freq": "",
     "Lat": -2.443333,
     "Lon": -79.399167,
-    "Ele": 59.4
+    "Ele": 59.4,
+    "ident": "SE60",
+    "iso_country": "EC",
+    "length_ft": 2953,
+    "width_ft": 39,
+    "heading": 111,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -600,7 +864,11 @@
     "freq": "",
     "Lat": -2.156493,
     "Lon": -80.773187,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SEAB",
+    "iso_country": "EC",
+    "icao_code": "SEAB",
+    "length_ft": 2000
   },
   {
     "type": "small_airport",
@@ -609,7 +877,11 @@
     "freq": "",
     "Lat": -1.397507,
     "Lon": -77.19885,
-    "Ele": 335.9
+    "Ele": 335.9,
+    "ident": "SEAC",
+    "iso_country": "EC",
+    "icao_code": "SEAC",
+    "length_ft": 1400
   },
   {
     "type": "small_airport",
@@ -618,7 +890,11 @@
     "freq": "",
     "Lat": -2.137235,
     "Lon": -77.677402,
-    "Ele": 670.9
+    "Ele": 670.9,
+    "ident": "SEAD",
+    "iso_country": "EC",
+    "icao_code": "SEAD",
+    "length_ft": 1600
   },
   {
     "type": "small_airport",
@@ -627,7 +903,14 @@
     "freq": "",
     "Lat": -2.833653,
     "Lon": -77.761799,
-    "Ele": 274.9
+    "Ele": 274.9,
+    "ident": "SEAH",
+    "iso_country": "EC",
+    "icao_code": "SEAH",
+    "length_ft": 1424,
+    "width_ft": 33,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -636,7 +919,10 @@
     "freq": "",
     "Lat": -0.881361,
     "Lon": -79.396645,
-    "Ele": 124.1
+    "Ele": 124.1,
+    "ident": "SEAJ",
+    "iso_country": "EC",
+    "icao_code": "SEAJ"
   },
   {
     "type": "small_airport",
@@ -645,7 +931,14 @@
     "freq": "",
     "Lat": -2.288551,
     "Lon": -80.019765,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "SEAL",
+    "iso_country": "EC",
+    "icao_code": "SEAL",
+    "length_ft": 2953,
+    "width_ft": 39,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -654,7 +947,15 @@
     "freq": "118.200",
     "Lat": -1.21207,
     "Lon": -78.5746,
-    "Ele": 2591.4
+    "Ele": 2591.4,
+    "ident": "SEAM",
+    "iso_country": "EC",
+    "icao_code": "SEAM",
+    "iata_code": "ATF",
+    "length_ft": 6316,
+    "width_ft": 82,
+    "heading": 10.5,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -663,7 +964,10 @@
     "freq": "",
     "Lat": -2.453185,
     "Lon": -80.066835,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "SEAO",
+    "iso_country": "EC",
+    "icao_code": "SEAO"
   },
   {
     "type": "small_airport",
@@ -672,7 +976,9 @@
     "freq": "",
     "Lat": -1.85762,
     "Lon": -77.941399,
-    "Ele": 890.0
+    "Ele": 890,
+    "ident": "SEAP",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -681,7 +987,14 @@
     "freq": "",
     "Lat": -2.496764,
     "Lon": -80.552155,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "SEAQ",
+    "iso_country": "EC",
+    "icao_code": "SEAQ",
+    "length_ft": 2789,
+    "width_ft": 82,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -690,7 +1003,9 @@
     "freq": "",
     "Lat": -1.2357300519943235,
     "Lon": -77.6854019165039,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "SEAR",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -699,7 +1014,14 @@
     "freq": "",
     "Lat": -2.823807,
     "Lon": -77.771768,
-    "Ele": 303.9
+    "Ele": 303.9,
+    "ident": "SEAU",
+    "iso_country": "EC",
+    "icao_code": "SEAU",
+    "length_ft": 1312,
+    "width_ft": 66,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -708,7 +1030,10 @@
     "freq": "",
     "Lat": -2.757044,
     "Lon": -77.22027,
-    "Ele": 242.0
+    "Ele": 242,
+    "ident": "SEAX",
+    "iso_country": "EC",
+    "icao_code": "SEAX"
   },
   {
     "type": "small_airport",
@@ -717,7 +1042,10 @@
     "freq": "",
     "Lat": -1.977683,
     "Lon": -80.745158,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "SEAY",
+    "iso_country": "EC",
+    "icao_code": "SEAY"
   },
   {
     "type": "small_airport",
@@ -726,7 +1054,14 @@
     "freq": "",
     "Lat": -0.873078,
     "Lon": -79.327704,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "SEAZ",
+    "iso_country": "EC",
+    "icao_code": "SEAZ",
+    "length_ft": 2953,
+    "width_ft": 33,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -735,7 +1070,13 @@
     "freq": "",
     "Lat": -1.947116,
     "Lon": -76.308024,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "SEBL",
+    "iso_country": "EC",
+    "length_ft": 1804,
+    "width_ft": 56,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -744,7 +1085,13 @@
     "freq": "",
     "Lat": -2.828381,
     "Lon": -80.020884,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SEBM",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 49,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -753,7 +1100,9 @@
     "freq": "",
     "Lat": -1.423874,
     "Lon": -79.396144,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "SEBO",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -762,7 +1111,13 @@
     "freq": "",
     "Lat": -2.103534,
     "Lon": -79.469433,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "SEBP",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 59,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -771,7 +1126,13 @@
     "freq": "",
     "Lat": -2.094038,
     "Lon": -79.880885,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SEBT",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 39,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -780,7 +1141,13 @@
     "freq": "",
     "Lat": -2.192174,
     "Lon": -76.784617,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "SEBU",
+    "iso_country": "EC",
+    "length_ft": 1627,
+    "width_ft": 56,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -789,7 +1156,13 @@
     "freq": "",
     "Lat": -1.260964,
     "Lon": -76.387219,
-    "Ele": 262.1
+    "Ele": 262.1,
+    "ident": "SEBW",
+    "iso_country": "EC",
+    "length_ft": 1558,
+    "width_ft": 49,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -798,7 +1171,13 @@
     "freq": "",
     "Lat": -2.605359,
     "Lon": -79.614612,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "SEBX",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 33,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -807,7 +1186,13 @@
     "freq": "",
     "Lat": -4.018793,
     "Lon": -78.887293,
-    "Ele": 875.1
+    "Ele": 875.1,
+    "ident": "SEBZ",
+    "iso_country": "EC",
+    "length_ft": 4659,
+    "width_ft": 75,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -816,7 +1201,13 @@
     "freq": "",
     "Lat": 0.012807,
     "Lon": -79.367843,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "SECC",
+    "iso_country": "EC",
+    "length_ft": 2392,
+    "width_ft": 62,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -825,7 +1216,13 @@
     "freq": "",
     "Lat": -2.584669,
     "Lon": -79.964156,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SECD",
+    "iso_country": "EC",
+    "length_ft": 2133,
+    "width_ft": 66,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -834,7 +1231,13 @@
     "freq": "",
     "Lat": -2.230291,
     "Lon": -80.054455,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "SECG",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 39,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -843,7 +1246,9 @@
     "freq": "",
     "Lat": -0.6951010227203369,
     "Lon": -80.0886001586914,
-    "Ele": 15.5
+    "Ele": 15.5,
+    "ident": "SECH",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -852,7 +1257,13 @@
     "freq": "",
     "Lat": -2.516987,
     "Lon": -80.13594,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SECI",
+    "iso_country": "EC",
+    "length_ft": 2657,
+    "width_ft": 59,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -861,7 +1272,13 @@
     "freq": "",
     "Lat": -2.240933,
     "Lon": -77.459008,
-    "Ele": 456.9
+    "Ele": 456.9,
+    "ident": "SECK",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 82,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -870,7 +1287,13 @@
     "freq": "",
     "Lat": -1.7062699794769287,
     "Lon": -79.37889862060547,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "SECM",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 36,
+    "heading": 22,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -879,7 +1302,15 @@
     "freq": "119.700",
     "Lat": -0.462886,
     "Lon": -76.986801,
-    "Ele": 254.2
+    "Ele": 254.2,
+    "ident": "SECO",
+    "iso_country": "EC",
+    "icao_code": "SECO",
+    "iata_code": "OCC",
+    "length_ft": 6760,
+    "width_ft": 90,
+    "heading": 154,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -888,7 +1319,13 @@
     "freq": "",
     "Lat": 0.016175,
     "Lon": -80.091923,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "SECQ",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 49,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -897,7 +1334,9 @@
     "freq": "",
     "Lat": -1.384465,
     "Lon": -76.938944,
-    "Ele": 253.6
+    "Ele": 253.6,
+    "ident": "SECR",
+    "iso_country": "EC"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1345,15 @@
     "freq": "122.300",
     "Lat": -2.88947,
     "Lon": -78.984398,
-    "Ele": 2531.7
+    "Ele": 2531.7,
+    "ident": "SECU",
+    "iso_country": "EC",
+    "icao_code": "SECU",
+    "iata_code": "CUE",
+    "length_ft": 6234,
+    "width_ft": 118,
+    "heading": 52,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -915,7 +1362,9 @@
     "freq": "",
     "Lat": -2.534167,
     "Lon": -80.137167,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SECY",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -924,7 +1373,9 @@
     "freq": "",
     "Lat": -2.205134,
     "Lon": -80.049993,
-    "Ele": 540.1
+    "Ele": 540.1,
+    "ident": "SECZ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -933,7 +1384,13 @@
     "freq": "",
     "Lat": -2.361448,
     "Lon": -80.162387,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SEDA",
+    "iso_country": "EC",
+    "length_ft": 2493,
+    "width_ft": 59,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -942,7 +1399,13 @@
     "freq": "",
     "Lat": -2.551863,
     "Lon": -79.492396,
-    "Ele": 53.9
+    "Ele": 53.9,
+    "ident": "SEDB",
+    "iso_country": "EC",
+    "length_ft": 3937,
+    "width_ft": 46,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -951,7 +1414,9 @@
     "freq": "",
     "Lat": -2.58906,
     "Lon": -80.291019,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "SEDF",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -960,7 +1425,13 @@
     "freq": "",
     "Lat": -1.294722,
     "Lon": -77.319722,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "SEDM",
+    "iso_country": "EC",
+    "length_ft": 1670,
+    "width_ft": 69,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -969,7 +1440,13 @@
     "freq": "",
     "Lat": -2.698472,
     "Lon": -80.061409,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "SEDO",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 46,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -978,7 +1455,9 @@
     "freq": "",
     "Lat": -2.101027,
     "Lon": -77.15742,
-    "Ele": 336.5
+    "Ele": 336.5,
+    "ident": "SEDP",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -987,7 +1466,9 @@
     "freq": "",
     "Lat": -2.723363,
     "Lon": -80.13474,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "SEDS",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -996,7 +1477,13 @@
     "freq": "",
     "Lat": -0.365597,
     "Lon": -77.302946,
-    "Ele": 305.1
+    "Ele": 305.1,
+    "ident": "SEED",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 56,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1005,7 +1492,13 @@
     "freq": "",
     "Lat": -1.954569,
     "Lon": -76.554826,
-    "Ele": 305.1
+    "Ele": 305.1,
+    "ident": "SEEK",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 56,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1014,7 +1507,13 @@
     "freq": "",
     "Lat": -2.643455,
     "Lon": -80.350049,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SEEO",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 49,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -1023,7 +1522,13 @@
     "freq": "",
     "Lat": -2.341612,
     "Lon": -79.279642,
-    "Ele": 67.1
+    "Ele": 67.1,
+    "ident": "SEEP",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 33,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1032,7 +1537,13 @@
     "freq": "",
     "Lat": 1.221636,
     "Lon": -78.868266,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "SEER",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 49,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1041,7 +1552,13 @@
     "freq": "",
     "Lat": -2.905964,
     "Lon": -77.575509,
-    "Ele": 214.0
+    "Ele": 214,
+    "ident": "SEET",
+    "iso_country": "EC",
+    "length_ft": 1575,
+    "width_ft": 82,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1050,7 +1567,13 @@
     "freq": "",
     "Lat": -2.794536,
     "Lon": -77.281829,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "SEEU",
+    "iso_country": "EC",
+    "length_ft": 2133,
+    "width_ft": 49,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1059,7 +1582,13 @@
     "freq": "",
     "Lat": -2.515499,
     "Lon": -80.221437,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SEEX",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 59,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1068,7 +1597,13 @@
     "freq": "",
     "Lat": -2.750557,
     "Lon": -77.556644,
-    "Ele": 224.9
+    "Ele": 224.9,
+    "ident": "SEEZ",
+    "iso_country": "EC",
+    "length_ft": 2461,
+    "width_ft": 98,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1077,7 +1612,9 @@
     "freq": "",
     "Lat": -2.060004,
     "Lon": -77.608323,
-    "Ele": 514.8
+    "Ele": 514.8,
+    "ident": "SEFM",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1086,7 +1623,9 @@
     "freq": "",
     "Lat": -1.869181,
     "Lon": -80.011529,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "SEFR",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1095,7 +1634,13 @@
     "freq": "",
     "Lat": -2.563699,
     "Lon": -79.54552,
-    "Ele": 20.4
+    "Ele": 20.4,
+    "ident": "SEFU",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 39,
+    "QFU": "31A",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1104,7 +1649,9 @@
     "freq": "",
     "Lat": -1.61667001247406,
     "Lon": -80.2332992553711,
-    "Ele": 67.7
+    "Ele": 67.7,
+    "ident": "SEGE",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1113,7 +1660,9 @@
     "freq": "",
     "Lat": -1.274146,
     "Lon": -79.932926,
-    "Ele": 189.6
+    "Ele": 189.6,
+    "ident": "SEGH",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1122,7 +1671,13 @@
     "freq": "",
     "Lat": -1.860214,
     "Lon": -79.642868,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "SEGL",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 33,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -1131,7 +1686,9 @@
     "freq": "",
     "Lat": -2.037239,
     "Lon": -76.473366,
-    "Ele": 208.5
+    "Ele": 208.5,
+    "ident": "SEGN",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1140,7 +1697,13 @@
     "freq": "",
     "Lat": -2.770718,
     "Lon": -79.767049,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SEGO",
+    "iso_country": "EC",
+    "length_ft": 3937,
+    "width_ft": 59,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1149,7 +1712,9 @@
     "freq": "",
     "Lat": -2.235544,
     "Lon": -77.240177,
-    "Ele": 315.2
+    "Ele": 315.2,
+    "ident": "SEGR",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1158,7 +1723,15 @@
     "freq": "122.200",
     "Lat": -0.453758,
     "Lon": -90.2659,
-    "Ele": 63.1
+    "Ele": 63.1,
+    "ident": "SEGS",
+    "iso_country": "EC",
+    "icao_code": "SEGS",
+    "iata_code": "GPS",
+    "length_ft": 7876,
+    "width_ft": 115,
+    "heading": 143.8,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1740,13 @@
     "freq": "",
     "Lat": -1.400583,
     "Lon": -77.383055,
-    "Ele": 330.7
+    "Ele": 330.7,
+    "ident": "SEGT",
+    "iso_country": "EC",
+    "length_ft": 1552,
+    "width_ft": 49,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "large_airport",
@@ -1176,7 +1755,15 @@
     "freq": "123.450",
     "Lat": -2.15742,
     "Lon": -79.883598,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "SEGU",
+    "iso_country": "EC",
+    "icao_code": "SEGU",
+    "iata_code": "GYE",
+    "length_ft": 9154,
+    "width_ft": 151,
+    "heading": 30.6,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1772,13 @@
     "freq": "",
     "Lat": -3.42321,
     "Lon": -78.567001,
-    "Ele": 804.7
+    "Ele": 804.7,
+    "ident": "SEGZ",
+    "iso_country": "EC",
+    "length_ft": 6601,
+    "width_ft": 85,
+    "heading": 156,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1787,9 @@
     "freq": "",
     "Lat": -2.09847,
     "Lon": -77.477692,
-    "Ele": 427.9
+    "Ele": 427.9,
+    "ident": "SEHB",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1798,13 @@
     "freq": "",
     "Lat": -2.159177,
     "Lon": -77.322834,
-    "Ele": 349.6
+    "Ele": 349.6,
+    "ident": "SEHE",
+    "iso_country": "EC",
+    "length_ft": 1286,
+    "width_ft": 66,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1212,7 +1813,9 @@
     "freq": "",
     "Lat": -2.616113,
     "Lon": -76.916497,
-    "Ele": 260.3
+    "Ele": 260.3,
+    "ident": "SEHN",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1824,13 @@
     "freq": "",
     "Lat": -2.205549,
     "Lon": -77.265694,
-    "Ele": 337.4
+    "Ele": 337.4,
+    "ident": "SEHR",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 49,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -1230,7 +1839,13 @@
     "freq": "",
     "Lat": -2.698513,
     "Lon": -77.536647,
-    "Ele": 239.0
+    "Ele": 239,
+    "ident": "SEHS",
+    "iso_country": "EC",
+    "length_ft": 1345,
+    "width_ft": 85,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -1239,7 +1854,9 @@
     "freq": "",
     "Lat": -2.014083,
     "Lon": -76.681475,
-    "Ele": 229.2
+    "Ele": 229.2,
+    "ident": "SEHU",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1865,13 @@
     "freq": "",
     "Lat": -2.33171,
     "Lon": -80.20473,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "SEHV",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 39,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -1257,7 +1880,9 @@
     "freq": "",
     "Lat": -2.465768,
     "Lon": -77.039586,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "SEHW",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1266,7 +1891,9 @@
     "freq": "",
     "Lat": -2.363793,
     "Lon": -77.406923,
-    "Ele": 319.1
+    "Ele": 319.1,
+    "ident": "SEHZ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1275,7 +1902,13 @@
     "freq": "",
     "Lat": -2.898919,
     "Lon": -79.812775,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SEIA",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 43,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1284,7 +1917,9 @@
     "freq": "",
     "Lat": -2.566312,
     "Lon": -76.756598,
-    "Ele": 251.8
+    "Ele": 251.8,
+    "ident": "SEID",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1293,7 +1928,13 @@
     "freq": "",
     "Lat": -2.162952,
     "Lon": -77.484895,
-    "Ele": 423.4
+    "Ele": 423.4,
+    "ident": "SEIE",
+    "iso_country": "EC",
+    "length_ft": 1608,
+    "width_ft": 49,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1302,7 +1943,9 @@
     "freq": "",
     "Lat": -2.261075,
     "Lon": -77.33273,
-    "Ele": 350.5
+    "Ele": 350.5,
+    "ident": "SEIF",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1311,7 +1954,13 @@
     "freq": "",
     "Lat": -3.049372,
     "Lon": -78.010229,
-    "Ele": 304.5
+    "Ele": 304.5,
+    "ident": "SEIG",
+    "iso_country": "EC",
+    "length_ft": 2618,
+    "width_ft": 43,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1320,7 +1969,13 @@
     "freq": "",
     "Lat": -2.316061,
     "Lon": -77.410011,
-    "Ele": 347.5
+    "Ele": 347.5,
+    "ident": "SEIH",
+    "iso_country": "EC",
+    "length_ft": 1312,
+    "width_ft": 66,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1329,7 +1984,15 @@
     "freq": "",
     "Lat": -0.942628,
     "Lon": -90.953003,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "SEII",
+    "iso_country": "EC",
+    "icao_code": "SEII",
+    "iata_code": "IBB",
+    "length_ft": 4921,
+    "width_ft": 98,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1338,7 +2001,13 @@
     "freq": "",
     "Lat": -2.104494,
     "Lon": -79.381905,
-    "Ele": 44.8
+    "Ele": 44.8,
+    "ident": "SEIM",
+    "iso_country": "EC",
+    "length_ft": 3117,
+    "width_ft": 59,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1347,7 +2016,13 @@
     "freq": "",
     "Lat": -2.467547,
     "Lon": -77.145839,
-    "Ele": 277.1
+    "Ele": 277.1,
+    "ident": "SEIP",
+    "iso_country": "EC",
+    "length_ft": 1624,
+    "width_ft": 59,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1356,7 +2031,13 @@
     "freq": "",
     "Lat": -2.219802,
     "Lon": -76.814087,
-    "Ele": 286.8
+    "Ele": 286.8,
+    "ident": "SEIR",
+    "iso_country": "EC",
+    "length_ft": 1936,
+    "width_ft": 66,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1365,7 +2046,9 @@
     "freq": "",
     "Lat": -1.86667001247406,
     "Lon": -79.7332992553711,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SEIS",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1374,7 +2057,13 @@
     "freq": "",
     "Lat": -2.726732,
     "Lon": -77.537105,
-    "Ele": 229.5
+    "Ele": 229.5,
+    "ident": "SEIT",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1383,7 +2072,13 @@
     "freq": "",
     "Lat": -2.251998,
     "Lon": -77.401788,
-    "Ele": 377.3
+    "Ele": 377.3,
+    "ident": "SEIU",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 59,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -1392,7 +2087,13 @@
     "freq": "",
     "Lat": -2.111175,
     "Lon": -79.599184,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SEIV",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 46,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -1401,7 +2102,13 @@
     "freq": "",
     "Lat": -2.071725,
     "Lon": -77.523399,
-    "Ele": 456.9
+    "Ele": 456.9,
+    "ident": "SEIW",
+    "iso_country": "EC",
+    "length_ft": 1673,
+    "width_ft": 75,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1410,7 +2117,13 @@
     "freq": "",
     "Lat": -2.275,
     "Lon": -77.469444,
-    "Ele": 373.1
+    "Ele": 373.1,
+    "ident": "SEIX",
+    "iso_country": "EC",
+    "length_ft": 2297,
+    "width_ft": 49,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1419,7 +2132,13 @@
     "freq": "",
     "Lat": -2.748776,
     "Lon": -77.443761,
-    "Ele": 230.1
+    "Ele": 230.1,
+    "ident": "SEIY",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 49,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -1428,7 +2147,9 @@
     "freq": "",
     "Lat": -2.442218,
     "Lon": -79.35504,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "SEIZ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1437,7 +2158,9 @@
     "freq": "",
     "Lat": -1.730931,
     "Lon": -77.109686,
-    "Ele": 298.1
+    "Ele": 298.1,
+    "ident": "SEJA",
+    "iso_country": "EC"
   },
   {
     "type": "medium_airport",
@@ -1446,7 +2169,15 @@
     "freq": "",
     "Lat": -1.060185,
     "Lon": -77.580525,
-    "Ele": 376.1
+    "Ele": 376.1,
+    "ident": "SEJD",
+    "iso_country": "EC",
+    "icao_code": "SEJD",
+    "iata_code": "TNW",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1455,7 +2186,13 @@
     "freq": "",
     "Lat": -2.744252,
     "Lon": -77.487304,
-    "Ele": 224.0
+    "Ele": 224,
+    "ident": "SEJE",
+    "iso_country": "EC",
+    "length_ft": 1312,
+    "width_ft": 66,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1464,16 +2201,22 @@
     "freq": "",
     "Lat": -2.084547,
     "Lon": -79.672864,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "SEJG",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
     "name": "Jipijapa Airport",
     "gps_code": "SEJI",
     "freq": "",
-    "Lat": -1.0,
+    "Lat": -1,
     "Lon": -80.66666412353516,
-    "Ele": 68.0
+    "Ele": 68,
+    "ident": "SEJI",
+    "iso_country": "EC",
+    "icao_code": "SEJI",
+    "iata_code": "JIP"
   },
   {
     "type": "small_airport",
@@ -1482,7 +2225,9 @@
     "freq": "",
     "Lat": -2.721043,
     "Lon": -77.240896,
-    "Ele": 247.5
+    "Ele": 247.5,
+    "ident": "SEJK",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1491,7 +2236,9 @@
     "freq": "",
     "Lat": -0.2014970034360885,
     "Lon": -80.2654037475586,
-    "Ele": 11.3
+    "Ele": 11.3,
+    "ident": "SEJM",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1500,7 +2247,13 @@
     "freq": "",
     "Lat": -0.328361,
     "Lon": -76.879399,
-    "Ele": 275.5
+    "Ele": 275.5,
+    "ident": "SEJS",
+    "iso_country": "EC",
+    "length_ft": 951,
+    "width_ft": 39,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -1509,7 +2262,13 @@
     "freq": "",
     "Lat": -2.389295,
     "Lon": -77.509117,
-    "Ele": 444.1
+    "Ele": 444.1,
+    "ident": "SEJT",
+    "iso_country": "EC",
+    "length_ft": 1411,
+    "width_ft": 66,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1518,7 +2277,9 @@
     "freq": "",
     "Lat": -2.105596,
     "Lon": -77.519023,
-    "Ele": 498.3
+    "Ele": 498.3,
+    "ident": "SEJU",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2288,9 @@
     "freq": "",
     "Lat": -2.116691,
     "Lon": -76.20208,
-    "Ele": 193.2
+    "Ele": 193.2,
+    "ident": "SEJY",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2299,13 @@
     "freq": "",
     "Lat": -2.51669,
     "Lon": -77.432241,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "SEJZ",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 82,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -1545,7 +2314,9 @@
     "freq": "",
     "Lat": -2.873817,
     "Lon": -77.868204,
-    "Ele": 271.6
+    "Ele": 271.6,
+    "ident": "SEKA",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1554,7 +2325,9 @@
     "freq": "",
     "Lat": -2.515333,
     "Lon": -76.896588,
-    "Ele": 269.7
+    "Ele": 269.7,
+    "ident": "SEKB",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2336,13 @@
     "freq": "",
     "Lat": -2.639283,
     "Lon": -77.127571,
-    "Ele": 278.0
+    "Ele": 278,
+    "ident": "SEKC",
+    "iso_country": "EC",
+    "length_ft": 1411,
+    "width_ft": 49,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -1572,7 +2351,9 @@
     "freq": "",
     "Lat": -2.23362,
     "Lon": -77.735664,
-    "Ele": 588.3
+    "Ele": 588.3,
+    "ident": "SEKE",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1581,7 +2362,13 @@
     "freq": "",
     "Lat": -2.607173,
     "Lon": -76.934738,
-    "Ele": 260.6
+    "Ele": 260.6,
+    "ident": "SEKF",
+    "iso_country": "EC",
+    "length_ft": 2034,
+    "width_ft": 49,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1590,7 +2377,13 @@
     "freq": "",
     "Lat": -2.033081,
     "Lon": -77.670886,
-    "Ele": 603.2
+    "Ele": 603.2,
+    "ident": "SEKH",
+    "iso_country": "EC",
+    "length_ft": 1443,
+    "width_ft": 66,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1599,7 +2392,13 @@
     "freq": "",
     "Lat": 0.18465,
     "Lon": -79.391181,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "SEKK",
+    "iso_country": "EC",
+    "length_ft": 3060,
+    "width_ft": 65,
+    "heading": 179,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1608,7 +2407,9 @@
     "freq": "",
     "Lat": -0.03085,
     "Lon": -79.366315,
-    "Ele": 251.5
+    "Ele": 251.5,
+    "ident": "SEKL",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2418,10 @@
     "freq": "",
     "Lat": -0.739894,
     "Lon": -79.387207,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "SEKM",
+    "iso_country": "EC",
+    "icao_code": "SEKM"
   },
   {
     "type": "small_airport",
@@ -1626,7 +2430,9 @@
     "freq": "",
     "Lat": -2.710571,
     "Lon": -77.505235,
-    "Ele": 231.6
+    "Ele": 231.6,
+    "ident": "SEKN",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1635,7 +2441,13 @@
     "freq": "",
     "Lat": -2.681793,
     "Lon": -77.477093,
-    "Ele": 24.4
+    "Ele": 24.4,
+    "ident": "SEKP",
+    "iso_country": "EC",
+    "length_ft": 2854,
+    "width_ft": 66,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -1644,7 +2456,9 @@
     "freq": "",
     "Lat": -2.301939,
     "Lon": -77.357591,
-    "Ele": 359.7
+    "Ele": 359.7,
+    "ident": "SEKQ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1653,7 +2467,13 @@
     "freq": "",
     "Lat": -2.828304,
     "Lon": -77.71069,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "SEKS",
+    "iso_country": "EC",
+    "length_ft": 1476,
+    "width_ft": 59,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1662,7 +2482,9 @@
     "freq": "",
     "Lat": -2.096276,
     "Lon": -77.641338,
-    "Ele": 568.5
+    "Ele": 568.5,
+    "ident": "SEKT",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1671,7 +2493,13 @@
     "freq": "",
     "Lat": -2.644734,
     "Lon": -77.223029,
-    "Ele": 262.1
+    "Ele": 262.1,
+    "ident": "SEKU",
+    "iso_country": "EC",
+    "length_ft": 1700,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -1680,7 +2508,9 @@
     "freq": "",
     "Lat": -2.695432,
     "Lon": -77.379026,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "SEKV",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2519,9 @@
     "freq": "",
     "Lat": -2.534276,
     "Lon": -76.84217,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "SEKW",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1698,7 +2530,9 @@
     "freq": "",
     "Lat": -2.462189,
     "Lon": -77.459466,
-    "Ele": 281.9
+    "Ele": 281.9,
+    "ident": "SEKX",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2541,9 @@
     "freq": "",
     "Lat": -2.005646,
     "Lon": -77.73578,
-    "Ele": 662.9
+    "Ele": 662.9,
+    "ident": "SEKY",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1716,7 +2552,9 @@
     "freq": "",
     "Lat": -2.174349,
     "Lon": -77.368609,
-    "Ele": 388.3
+    "Ele": 388.3,
+    "ident": "SEKZ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2563,9 @@
     "freq": "",
     "Lat": -2.2078,
     "Lon": -80.083339,
-    "Ele": 65.5
+    "Ele": 65.5,
+    "ident": "SELD",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1734,7 +2574,9 @@
     "freq": "",
     "Lat": -0.4063630104064941,
     "Lon": -76.6238021850586,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "SELI",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1743,7 +2585,13 @@
     "freq": "",
     "Lat": -1.70438,
     "Lon": -79.552299,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "SELJ",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 49,
+    "heading": 29.9,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2600,9 @@
     "freq": "",
     "Lat": -2.802859,
     "Lon": -77.569399,
-    "Ele": 218.2
+    "Ele": 218.2,
+    "ident": "SELK",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2611,9 @@
     "freq": "",
     "Lat": -1.718359,
     "Lon": -79.591112,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SELL",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2622,9 @@
     "freq": "",
     "Lat": -1.501579999923706,
     "Lon": -79.48090362548828,
-    "Ele": 64.0
+    "Ele": 64,
+    "ident": "SELM",
+    "iso_country": "EC"
   },
   {
     "type": "medium_airport",
@@ -1779,7 +2633,14 @@
     "freq": "118.500",
     "Lat": -0.906833,
     "Lon": -78.615799,
-    "Ele": 2805.7
+    "Ele": 2805.7,
+    "ident": "SELT",
+    "iso_country": "EC",
+    "iata_code": "LTX",
+    "length_ft": 12117,
+    "width_ft": 148,
+    "heading": 184,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2649,9 @@
     "freq": "",
     "Lat": -1.225142,
     "Lon": -79.50581,
-    "Ele": 33.5
+    "Ele": 33.5,
+    "ident": "SELV",
+    "iso_country": "EC"
   },
   {
     "type": "medium_airport",
@@ -1797,7 +2660,15 @@
     "freq": "122.700",
     "Lat": -4.37823009491,
     "Lon": -79.94100189210002,
-    "Ele": 459.6
+    "Ele": 459.6,
+    "ident": "SEMA",
+    "iso_country": "EC",
+    "icao_code": "SEMA",
+    "iata_code": "MRR",
+    "length_ft": 3532,
+    "width_ft": 65,
+    "heading": 12,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -1806,7 +2677,15 @@
     "freq": "119.500",
     "Lat": -2.299170017242432,
     "Lon": -78.12079620361328,
-    "Ele": 1052.2
+    "Ele": 1052.2,
+    "ident": "SEMC",
+    "iso_country": "EC",
+    "icao_code": "SEMC",
+    "iata_code": "XMS",
+    "length_ft": 8202,
+    "width_ft": 98,
+    "heading": 15,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1815,7 +2694,10 @@
     "freq": "",
     "Lat": -2.753646,
     "Lon": -77.157786,
-    "Ele": 245.1
+    "Ele": 245.1,
+    "ident": "SEMK",
+    "iso_country": "EC",
+    "icao_code": "SEMK"
   },
   {
     "type": "small_airport",
@@ -1824,7 +2706,9 @@
     "freq": "",
     "Lat": -1.844848,
     "Lon": -80.73696,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SEML",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1833,7 +2717,13 @@
     "freq": "121.200",
     "Lat": -2.06701,
     "Lon": -76.9757,
-    "Ele": 292.6
+    "Ele": 292.6,
+    "ident": "SEMO",
+    "iso_country": "EC",
+    "length_ft": 4725,
+    "width_ft": 75,
+    "heading": 84.5,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -1842,7 +2732,15 @@
     "freq": "122.700",
     "Lat": -0.9460780024528505,
     "Lon": -80.67880249023438,
-    "Ele": 14.6
+    "Ele": 14.6,
+    "ident": "SEMT",
+    "iso_country": "EC",
+    "icao_code": "SEMT",
+    "iata_code": "MEC",
+    "length_ft": 9383,
+    "width_ft": 148,
+    "heading": 55.8,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1851,7 +2749,13 @@
     "freq": "",
     "Lat": -2.8511,
     "Lon": -79.803596,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "SEMX",
+    "iso_country": "EC",
+    "length_ft": 3280,
+    "width_ft": 26,
+    "heading": 94.4,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1860,7 +2764,9 @@
     "freq": "",
     "Lat": -1.7397199869155884,
     "Lon": -79.62149810791016,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "SEMY",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1869,7 +2775,9 @@
     "freq": "",
     "Lat": -2.407136,
     "Lon": -77.740141,
-    "Ele": 338.3
+    "Ele": 338.3,
+    "ident": "SENB",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1878,7 +2786,13 @@
     "freq": "",
     "Lat": -1.236018,
     "Lon": -77.25913,
-    "Ele": 305.7
+    "Ele": 305.7,
+    "ident": "SEND",
+    "iso_country": "EC",
+    "length_ft": 1509,
+    "width_ft": 62,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -1887,7 +2801,9 @@
     "freq": "",
     "Lat": -1.997976,
     "Lon": -76.764307,
-    "Ele": 248.1
+    "Ele": 248.1,
+    "ident": "SENE",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1896,7 +2812,13 @@
     "freq": "",
     "Lat": -2.52258,
     "Lon": -76.990489,
-    "Ele": 287.1
+    "Ele": 287.1,
+    "ident": "SENF",
+    "iso_country": "EC",
+    "length_ft": 2077,
+    "width_ft": 49,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1905,7 +2827,14 @@
     "freq": "",
     "Lat": 0.0930560007691,
     "Lon": -76.86750030520001,
-    "Ele": 298.7
+    "Ele": 298.7,
+    "ident": "SENL",
+    "iso_country": "EC",
+    "icao_code": "SENL",
+    "iata_code": "LGQ",
+    "length_ft": 7546,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -1914,7 +2843,13 @@
     "freq": "",
     "Lat": -1.910051,
     "Lon": -76.9596,
-    "Ele": 319.4
+    "Ele": 319.4,
+    "ident": "SEOC",
+    "iso_country": "EC",
+    "length_ft": 1394,
+    "width_ft": 52,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1923,7 +2858,13 @@
     "freq": "",
     "Lat": -2.436371,
     "Lon": -79.83377,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SEOI",
+    "iso_country": "EC",
+    "length_ft": 2461,
+    "width_ft": 59,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -1932,7 +2873,13 @@
     "freq": "",
     "Lat": -2.463834,
     "Lon": -80.13694,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SEOM",
+    "iso_country": "EC",
+    "length_ft": 2548,
+    "width_ft": 49,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -1941,7 +2888,13 @@
     "freq": "",
     "Lat": -1.871397,
     "Lon": -76.877802,
-    "Ele": 239.3
+    "Ele": 239.3,
+    "ident": "SEON",
+    "iso_country": "EC",
+    "length_ft": 2149,
+    "width_ft": 52,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -1950,7 +2903,13 @@
     "freq": "",
     "Lat": -0.076808,
     "Lon": -79.134895,
-    "Ele": 449.9
+    "Ele": 449.9,
+    "ident": "SEOU",
+    "iso_country": "EC",
+    "length_ft": 2953,
+    "width_ft": 59,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -1959,7 +2918,9 @@
     "freq": "",
     "Lat": -0.841075,
     "Lon": -79.288232,
-    "Ele": 157.0
+    "Ele": 157,
+    "ident": "SEOY",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1968,7 +2929,9 @@
     "freq": "",
     "Lat": -2.247454,
     "Lon": -77.712845,
-    "Ele": 578.5
+    "Ele": 578.5,
+    "ident": "SEPA",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1977,7 +2940,9 @@
     "freq": "",
     "Lat": -1.8115930557250977,
     "Lon": -80.23246002197266,
-    "Ele": 97.8
+    "Ele": 97.8,
+    "ident": "SEPB",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -1986,7 +2951,13 @@
     "freq": "",
     "Lat": -2.75172,
     "Lon": -78.263603,
-    "Ele": 542.8
+    "Ele": 542.8,
+    "ident": "SEPC",
+    "iso_country": "EC",
+    "length_ft": 5255,
+    "width_ft": 96,
+    "heading": 26.1,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1995,7 +2966,9 @@
     "freq": "",
     "Lat": 0.067619003355503,
     "Lon": -80.05049896240234,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "SEPD",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2004,7 +2977,9 @@
     "freq": "",
     "Lat": -2.658895,
     "Lon": -79.618793,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "SEPE",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2013,7 +2988,13 @@
     "freq": "",
     "Lat": -1.731878,
     "Lon": -76.60763,
-    "Ele": 209.1
+    "Ele": 209.1,
+    "ident": "SEPI",
+    "iso_country": "EC",
+    "length_ft": 1483,
+    "width_ft": 59,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -2022,7 +3003,13 @@
     "freq": "",
     "Lat": -2.32312,
     "Lon": -77.276133,
-    "Ele": 326.1
+    "Ele": 326.1,
+    "ident": "SEPK",
+    "iso_country": "EC",
+    "length_ft": 2028,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -2031,7 +3018,9 @@
     "freq": "",
     "Lat": -2.421208,
     "Lon": -80.65012,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "SEPN",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2040,7 +3029,9 @@
     "freq": "",
     "Lat": -2.681735,
     "Lon": -80.276606,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "SEPO",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2049,7 +3040,13 @@
     "freq": "",
     "Lat": -3.31967,
     "Lon": -79.769203,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "SEPS",
+    "iso_country": "EC",
+    "length_ft": 3774,
+    "width_ft": 57,
+    "heading": 105.9,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2058,7 +3055,11 @@
     "freq": "",
     "Lat": 0.115949,
     "Lon": -75.85022,
-    "Ele": 223.4
+    "Ele": 223.4,
+    "ident": "SEPT",
+    "iso_country": "EC",
+    "icao_code": "SEPT",
+    "iata_code": "PYO"
   },
   {
     "type": "medium_airport",
@@ -2067,7 +3068,15 @@
     "freq": "122.100",
     "Lat": -1.04165,
     "Lon": -80.472198,
-    "Ele": 39.6
+    "Ele": 39.6,
+    "ident": "SEPV",
+    "iso_country": "EC",
+    "icao_code": "SEPV",
+    "iata_code": "PVO",
+    "length_ft": 7451,
+    "width_ft": 89,
+    "heading": 128,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2076,7 +3085,9 @@
     "freq": "",
     "Lat": -2.292292,
     "Lon": -79.50222,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "SEPX",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2085,7 +3096,9 @@
     "freq": "",
     "Lat": -0.953189,
     "Lon": -79.375331,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "SEPZ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2094,7 +3107,13 @@
     "freq": "",
     "Lat": -0.989013,
     "Lon": -79.465571,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "SEQE",
+    "iso_country": "EC",
+    "length_ft": 4450,
+    "width_ft": 70,
+    "heading": 178.3,
+    "QFU": "36"
   },
   {
     "type": "large_airport",
@@ -2103,7 +3122,16 @@
     "freq": "119.700",
     "Lat": -0.125399,
     "Lon": -78.354306,
-    "Ele": 2389.9
+    "Ele": 2389.9,
+    "ident": "SEQM",
+    "iso_country": "EC",
+    "icao_code": "SEQM",
+    "iata_code": "UIO",
+    "local_code": "UIO",
+    "length_ft": 13445,
+    "width_ft": 148,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2112,7 +3140,13 @@
     "freq": "122.900",
     "Lat": -1.653324,
     "Lon": -78.656342,
-    "Ele": 2789.2
+    "Ele": 2789.2,
+    "ident": "SERB",
+    "iso_country": "EC",
+    "length_ft": 5250,
+    "width_ft": 95,
+    "heading": 55.9,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2121,7 +3155,9 @@
     "freq": "",
     "Lat": -1.177302,
     "Lon": -79.496123,
-    "Ele": 82.0
+    "Ele": 82,
+    "ident": "SERI",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2130,7 +3166,13 @@
     "freq": "",
     "Lat": -3.00529,
     "Lon": -80.229,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SERL",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 59,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -2139,7 +3181,15 @@
     "freq": "",
     "Lat": -3.441986,
     "Lon": -79.996957,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SERO",
+    "iso_country": "EC",
+    "icao_code": "SERO",
+    "iata_code": "ETR",
+    "length_ft": 8625,
+    "width_ft": 148,
+    "heading": 68,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -2148,7 +3198,9 @@
     "freq": "",
     "Lat": -0.999248,
     "Lon": -79.358836,
-    "Ele": 36.6
+    "Ele": 36.6,
+    "ident": "SERS",
+    "iso_country": "EC"
   },
   {
     "type": "medium_airport",
@@ -2157,7 +3209,15 @@
     "freq": "128.300",
     "Lat": -2.210057,
     "Lon": -80.985067,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "SESA",
+    "iso_country": "EC",
+    "icao_code": "SESA",
+    "iata_code": "SNC",
+    "length_ft": 7995,
+    "width_ft": 98,
+    "heading": 129,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2166,7 +3226,9 @@
     "freq": "",
     "Lat": -2.641853,
     "Lon": -77.15722,
-    "Ele": 257.6
+    "Ele": 257.6,
+    "ident": "SESB",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2175,7 +3237,15 @@
     "freq": "",
     "Lat": -2.474201,
     "Lon": -78.169041,
-    "Ele": 949.8
+    "Ele": 949.8,
+    "ident": "SESC",
+    "iso_country": "EC",
+    "icao_code": "SESC",
+    "iata_code": "SUQ",
+    "length_ft": 2297,
+    "width_ft": 120,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -2184,7 +3254,13 @@
     "freq": "",
     "Lat": -0.248288,
     "Lon": -79.209062,
-    "Ele": 499.9
+    "Ele": 499.9,
+    "ident": "SESD",
+    "iso_country": "EC",
+    "length_ft": 3668,
+    "width_ft": 82,
+    "heading": 108,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2193,7 +3269,13 @@
     "freq": "",
     "Lat": -2.579977,
     "Lon": -79.516547,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "SESE",
+    "iso_country": "EC",
+    "length_ft": 2122,
+    "width_ft": 33,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2202,7 +3284,9 @@
     "freq": "",
     "Lat": -0.195626,
     "Lon": -76.648237,
-    "Ele": 257.3
+    "Ele": 257.3,
+    "ident": "SESF",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2211,7 +3295,9 @@
     "freq": "",
     "Lat": -1.113791,
     "Lon": -79.680157,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "SESH",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2220,7 +3306,13 @@
     "freq": "",
     "Lat": -1.893894,
     "Lon": -79.490485,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "SESJ",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 33,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2229,7 +3321,13 @@
     "freq": "",
     "Lat": -2.663498,
     "Lon": -77.110696,
-    "Ele": 268.2
+    "Ele": 268.2,
+    "ident": "SESK",
+    "iso_country": "EC",
+    "length_ft": 1821,
+    "width_ft": 85,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -2238,7 +3336,13 @@
     "freq": "",
     "Lat": 1.264791,
     "Lon": -78.797094,
-    "Ele": 43.3
+    "Ele": 43.3,
+    "ident": "SESL",
+    "iso_country": "EC",
+    "length_ft": 3937,
+    "width_ft": 66,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2247,7 +3351,15 @@
     "freq": "119.500",
     "Lat": -1.50524,
     "Lon": -78.062698,
-    "Ele": 1056.1
+    "Ele": 1056.1,
+    "ident": "SESM",
+    "iso_country": "EC",
+    "icao_code": "SESM",
+    "iata_code": "PTZ",
+    "length_ft": 5052,
+    "width_ft": 82,
+    "heading": 119,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2256,7 +3368,13 @@
     "freq": "",
     "Lat": -1.567288,
     "Lon": -79.539826,
-    "Ele": 14.3
+    "Ele": 14.3,
+    "ident": "SESO",
+    "iso_country": "EC",
+    "length_ft": 2625,
+    "width_ft": 39,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -2265,7 +3383,9 @@
     "freq": "",
     "Lat": -2.578345,
     "Lon": -80.034351,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "SESP",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2274,7 +3394,13 @@
     "freq": "",
     "Lat": -2.055229,
     "Lon": -77.590771,
-    "Ele": 520.0
+    "Ele": 520,
+    "ident": "SESS",
+    "iso_country": "EC",
+    "length_ft": 1444,
+    "width_ft": 59,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2283,7 +3409,15 @@
     "freq": "122.500",
     "Lat": -0.910206,
     "Lon": -89.617401,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "SEST",
+    "iso_country": "EC",
+    "icao_code": "SEST",
+    "iata_code": "SCY",
+    "length_ft": 6214,
+    "width_ft": 66,
+    "heading": 169,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -2292,7 +3426,15 @@
     "freq": "118.400",
     "Lat": -0.608111,
     "Lon": -80.402702,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "SESV",
+    "iso_country": "EC",
+    "icao_code": "SESV",
+    "iata_code": "BHA",
+    "length_ft": 7227,
+    "width_ft": 98,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -2301,7 +3443,13 @@
     "freq": "",
     "Lat": -2.26104,
     "Lon": -79.680199,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "SETA",
+    "iso_country": "EC",
+    "length_ft": 10015,
+    "width_ft": 145,
+    "heading": 25.8,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -2310,7 +3458,13 @@
     "freq": "122.800",
     "Lat": -0.986767,
     "Lon": -77.819504,
-    "Ele": 520.6
+    "Ele": 520.6,
+    "ident": "SETE",
+    "iso_country": "EC",
+    "length_ft": 3937,
+    "width_ft": 49,
+    "heading": 101,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3473,9 @@
     "freq": "",
     "Lat": -2.998017,
     "Lon": -79.795922,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "SETG",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3484,15 @@
     "freq": "",
     "Lat": -2.38167,
     "Lon": -77.5028,
-    "Ele": 508.7
+    "Ele": 508.7,
+    "ident": "SETH",
+    "iso_country": "EC",
+    "icao_code": "SETH",
+    "iata_code": "TSC",
+    "length_ft": 3602,
+    "width_ft": 59,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2337,7 +3501,11 @@
     "freq": "",
     "Lat": -0.776111,
     "Lon": -75.526398,
-    "Ele": 303.9
+    "Ele": 303.9,
+    "ident": "SETI",
+    "iso_country": "EC",
+    "icao_code": "SETI",
+    "iata_code": "TPN"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3514,14 @@
     "freq": "128.300",
     "Lat": -3.995606,
     "Lon": -79.371902,
-    "Ele": 1236.3
+    "Ele": 1236.3,
+    "ident": "SETM",
+    "iso_country": "EC",
+    "iata_code": "LOH",
+    "length_ft": 6725,
+    "width_ft": 98,
+    "heading": 64,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2355,7 +3530,15 @@
     "freq": "126.900",
     "Lat": 0.978519,
     "Lon": -79.626602,
-    "Ele": 9.8
+    "Ele": 9.8,
+    "ident": "SETN",
+    "iso_country": "EC",
+    "icao_code": "SETN",
+    "iata_code": "ESM",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 183,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2364,7 +3547,9 @@
     "freq": "",
     "Lat": 0.061667,
     "Lon": -78.222833,
-    "Ele": 2974.8
+    "Ele": 2974.8,
+    "ident": "SETO",
+    "iso_country": "EC"
   },
   {
     "type": "medium_airport",
@@ -2373,7 +3558,15 @@
     "freq": "129.100",
     "Lat": -0.122956,
     "Lon": -76.337799,
-    "Ele": 248.1
+    "Ele": 248.1,
+    "ident": "SETR",
+    "iso_country": "EC",
+    "icao_code": "SETR",
+    "iata_code": "TPC",
+    "length_ft": 5151,
+    "width_ft": 49,
+    "heading": 122,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2382,7 +3575,13 @@
     "freq": "",
     "Lat": -2.55673,
     "Lon": -77.401593,
-    "Ele": 268.8
+    "Ele": 268.8,
+    "ident": "SETS",
+    "iso_country": "EC",
+    "length_ft": 1650,
+    "width_ft": 66,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -2391,7 +3590,15 @@
     "freq": "120.100",
     "Lat": 0.809506,
     "Lon": -77.708099,
-    "Ele": 2941.0
+    "Ele": 2941,
+    "ident": "SETU",
+    "iso_country": "EC",
+    "icao_code": "SETU",
+    "iata_code": "TUA",
+    "length_ft": 8071,
+    "width_ft": 98,
+    "heading": 55,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2400,7 +3607,13 @@
     "freq": "",
     "Lat": -1.321658,
     "Lon": -77.455634,
-    "Ele": 368.8
+    "Ele": 368.8,
+    "ident": "SETW",
+    "iso_country": "EC",
+    "length_ft": 1598,
+    "width_ft": 49,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -2409,7 +3622,13 @@
     "freq": "",
     "Lat": -0.050556,
     "Lon": -76.568889,
-    "Ele": 255.4
+    "Ele": 255.4,
+    "ident": "SEUA",
+    "iso_country": "EC",
+    "length_ft": 951,
+    "width_ft": 39,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2418,7 +3637,9 @@
     "freq": "",
     "Lat": -2.603056,
     "Lon": -77.116389,
-    "Ele": 253.9
+    "Ele": 253.9,
+    "ident": "SEUC",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2427,7 +3648,13 @@
     "freq": "",
     "Lat": -2.585928,
     "Lon": -77.218528,
-    "Ele": 271.3
+    "Ele": 271.3,
+    "ident": "SEUD",
+    "iso_country": "EC",
+    "length_ft": 1673,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2436,7 +3663,9 @@
     "freq": "",
     "Lat": -2.474584,
     "Lon": -77.333041,
-    "Ele": 286.8
+    "Ele": 286.8,
+    "ident": "SEUE",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2445,7 +3674,13 @@
     "freq": "",
     "Lat": -2.72319,
     "Lon": -77.681991,
-    "Ele": 219.5
+    "Ele": 219.5,
+    "ident": "SEUI",
+    "iso_country": "EC",
+    "length_ft": 1706,
+    "width_ft": 33,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2454,7 +3689,13 @@
     "freq": "",
     "Lat": -2.148425,
     "Lon": -77.3572,
-    "Ele": 366.7
+    "Ele": 366.7,
+    "ident": "SEUK",
+    "iso_country": "EC",
+    "length_ft": 1476,
+    "width_ft": 59,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -2463,7 +3704,13 @@
     "freq": "",
     "Lat": -2.596584,
     "Lon": -77.420483,
-    "Ele": 258.8
+    "Ele": 258.8,
+    "ident": "SEUN",
+    "iso_country": "EC",
+    "length_ft": 1837,
+    "width_ft": 66,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2472,7 +3719,9 @@
     "freq": "",
     "Lat": -2.452778,
     "Lon": -77.917728,
-    "Ele": 640.1
+    "Ele": 640.1,
+    "ident": "SEUQ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2481,7 +3730,9 @@
     "freq": "",
     "Lat": -2.78881,
     "Lon": -77.648093,
-    "Ele": 234.7
+    "Ele": 234.7,
+    "ident": "SEUR",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2490,7 +3741,13 @@
     "freq": "",
     "Lat": -2.548547,
     "Lon": -77.117863,
-    "Ele": 281.9
+    "Ele": 281.9,
+    "ident": "SEUV",
+    "iso_country": "EC",
+    "length_ft": 2329,
+    "width_ft": 95,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2499,7 +3756,13 @@
     "freq": "",
     "Lat": -2.555542,
     "Lon": -77.898885,
-    "Ele": 563.6
+    "Ele": 563.6,
+    "ident": "SEUW",
+    "iso_country": "EC",
+    "length_ft": 1509,
+    "width_ft": 49,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -2508,7 +3771,13 @@
     "freq": "",
     "Lat": -1.828889,
     "Lon": -77.676389,
-    "Ele": 494.1
+    "Ele": 494.1,
+    "ident": "SEUY",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "heading": 90,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2517,7 +3786,13 @@
     "freq": "",
     "Lat": -2.068437,
     "Lon": -76.794788,
-    "Ele": 294.1
+    "Ele": 294.1,
+    "ident": "SEUZ",
+    "iso_country": "EC",
+    "length_ft": 1312,
+    "width_ft": 49,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -2526,7 +3801,9 @@
     "freq": "",
     "Lat": -1.30789,
     "Lon": -79.560124,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "SEVS",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2535,7 +3812,13 @@
     "freq": "",
     "Lat": -2.573494,
     "Lon": -76.806843,
-    "Ele": 259.1
+    "Ele": 259.1,
+    "ident": "SEWA",
+    "iso_country": "EC",
+    "length_ft": 2789,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2544,7 +3827,13 @@
     "freq": "",
     "Lat": -1.023494,
     "Lon": -77.22108,
-    "Ele": 351.1
+    "Ele": 351.1,
+    "ident": "SEWE",
+    "iso_country": "EC",
+    "length_ft": 1421,
+    "width_ft": 49,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2553,7 +3842,13 @@
     "freq": "",
     "Lat": -2.547432,
     "Lon": -77.088446,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEWG",
+    "iso_country": "EC",
+    "length_ft": 1936,
+    "width_ft": 82,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2562,7 +3857,9 @@
     "freq": "",
     "Lat": -2.037259,
     "Lon": -77.562323,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "SEWH",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2571,7 +3868,13 @@
     "freq": "",
     "Lat": -2.742677,
     "Lon": -77.370289,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEWI",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 66,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2580,7 +3883,13 @@
     "freq": "",
     "Lat": -2.576955,
     "Lon": -77.346225,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "SEWK",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 82,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -2589,7 +3898,13 @@
     "freq": "",
     "Lat": -1.958333,
     "Lon": -76.146667,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEWM",
+    "iso_country": "EC",
+    "length_ft": 1739,
+    "width_ft": 66,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -2598,7 +3913,13 @@
     "freq": "",
     "Lat": -2.087305,
     "Lon": -77.491704,
-    "Ele": 456.9
+    "Ele": 456.9,
+    "ident": "SEWN",
+    "iso_country": "EC",
+    "length_ft": 1673,
+    "width_ft": 82,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2607,7 +3928,13 @@
     "freq": "",
     "Lat": -0.695957,
     "Lon": -79.417448,
-    "Ele": 136.9
+    "Ele": 136.9,
+    "ident": "SEWO",
+    "iso_country": "EC",
+    "length_ft": 3117,
+    "width_ft": 66,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -2616,7 +3943,13 @@
     "freq": "",
     "Lat": -3.169647,
     "Lon": -78.26025,
-    "Ele": 885.1
+    "Ele": 885.1,
+    "ident": "SEWR",
+    "iso_country": "EC",
+    "length_ft": 1870,
+    "width_ft": 52,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2625,7 +3958,9 @@
     "freq": "",
     "Lat": -2.610352,
     "Lon": -77.182968,
-    "Ele": 259.4
+    "Ele": 259.4,
+    "ident": "SEWT",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2634,7 +3969,13 @@
     "freq": "",
     "Lat": -2.113471,
     "Lon": -77.738423,
-    "Ele": 655.0
+    "Ele": 655,
+    "ident": "SEWU",
+    "iso_country": "EC",
+    "length_ft": 1453,
+    "width_ft": 66,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2643,7 +3984,13 @@
     "freq": "",
     "Lat": -2.001295,
     "Lon": -77.669082,
-    "Ele": 648.9
+    "Ele": 648.9,
+    "ident": "SEWX",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 82,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2652,7 +3999,9 @@
     "freq": "",
     "Lat": -2.441689,
     "Lon": -76.916739,
-    "Ele": 261.5
+    "Ele": 261.5,
+    "ident": "SEWY",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2661,7 +4010,9 @@
     "freq": "",
     "Lat": -2.738798,
     "Lon": -77.279803,
-    "Ele": 260.3
+    "Ele": 260.3,
+    "ident": "SEWZ",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2670,7 +4021,13 @@
     "freq": "",
     "Lat": -2.645666,
     "Lon": -77.294678,
-    "Ele": 265.2
+    "Ele": 265.2,
+    "ident": "SEXI",
+    "iso_country": "EC",
+    "length_ft": 1739,
+    "width_ft": 39,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2679,7 +4036,13 @@
     "freq": "",
     "Lat": -2.014226,
     "Lon": -76.832401,
-    "Ele": 366.1
+    "Ele": 366.1,
+    "ident": "SEXK",
+    "iso_country": "EC",
+    "length_ft": 1509,
+    "width_ft": 72,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2688,7 +4051,9 @@
     "freq": "",
     "Lat": -2.883111,
     "Lon": -79.743474,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "SEXM",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2697,7 +4062,9 @@
     "freq": "",
     "Lat": -1.353683,
     "Lon": -77.621933,
-    "Ele": 488.0
+    "Ele": 488,
+    "ident": "SEXP",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2706,7 +4073,13 @@
     "freq": "",
     "Lat": -0.749722,
     "Lon": -79.365556,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "SEXS",
+    "iso_country": "EC",
+    "length_ft": 2953,
+    "width_ft": 49,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2715,7 +4088,13 @@
     "freq": "",
     "Lat": -2.09426,
     "Lon": -77.551003,
-    "Ele": 519.1
+    "Ele": 519.1,
+    "ident": "SEXT",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 82,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -2724,7 +4103,9 @@
     "freq": "",
     "Lat": -2.047949,
     "Lon": -76.359451,
-    "Ele": 201.8
+    "Ele": 201.8,
+    "ident": "SEYD",
+    "iso_country": "EC"
   },
   {
     "type": "small_airport",
@@ -2733,7 +4114,13 @@
     "freq": "",
     "Lat": -1.615763,
     "Lon": -76.942377,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "SEYH",
+    "iso_country": "EC",
+    "length_ft": 1870,
+    "width_ft": 49,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2742,7 +4129,13 @@
     "freq": "",
     "Lat": -2.889273,
     "Lon": -79.650605,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "SEYJ",
+    "iso_country": "EC",
+    "length_ft": 3281,
+    "width_ft": 33,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2751,7 +4144,13 @@
     "freq": "",
     "Lat": -2.68365,
     "Lon": -77.309595,
-    "Ele": 249.0
+    "Ele": 249,
+    "ident": "SEYK",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 89,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2760,7 +4159,13 @@
     "freq": "",
     "Lat": -2.12698,
     "Lon": -77.513906,
-    "Ele": 456.9
+    "Ele": 456.9,
+    "ident": "SEYM",
+    "iso_country": "EC",
+    "length_ft": 1804,
+    "width_ft": 49,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -2769,7 +4174,13 @@
     "freq": "",
     "Lat": -1.953868,
     "Lon": -76.101964,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEYN",
+    "iso_country": "EC",
+    "length_ft": 1555,
+    "width_ft": 59,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2778,7 +4189,13 @@
     "freq": "",
     "Lat": -2.825404,
     "Lon": -77.928979,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "SEYP",
+    "iso_country": "EC",
+    "length_ft": 1870,
+    "width_ft": 52,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2787,7 +4204,13 @@
     "freq": "",
     "Lat": -2.650484,
     "Lon": -77.399815,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEYS",
+    "iso_country": "EC",
+    "length_ft": 1968,
+    "width_ft": 66,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2796,7 +4219,13 @@
     "freq": "",
     "Lat": -2.350797,
     "Lon": -76.45388,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "SEYT",
+    "iso_country": "EC",
+    "length_ft": 1204,
+    "width_ft": 69,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2805,7 +4234,13 @@
     "freq": "",
     "Lat": -2.783602,
     "Lon": -77.45764,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "SEYW",
+    "iso_country": "EC",
+    "length_ft": 1427,
+    "width_ft": 59,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -2814,7 +4249,13 @@
     "freq": "",
     "Lat": -2.223304,
     "Lon": -77.54792,
-    "Ele": 519.1
+    "Ele": 519.1,
+    "ident": "SEYX",
+    "iso_country": "EC",
+    "length_ft": 1640,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2823,7 +4264,14 @@
     "freq": "",
     "Lat": -2.554289,
     "Lon": -77.443745,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEZA",
+    "iso_country": "EC",
+    "icao_code": "SEZA",
+    "length_ft": 2297,
+    "width_ft": 66,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -2832,7 +4280,14 @@
     "freq": "",
     "Lat": -2.831069,
     "Lon": -77.369267,
-    "Ele": 242.9
+    "Ele": 242.9,
+    "ident": "SEZE",
+    "iso_country": "EC",
+    "icao_code": "SEZE",
+    "length_ft": 3051,
+    "width_ft": 95,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2841,7 +4296,14 @@
     "freq": "",
     "Lat": -1.918108,
     "Lon": -76.625161,
-    "Ele": 217.6
+    "Ele": 217.6,
+    "ident": "SEZI",
+    "iso_country": "EC",
+    "icao_code": "SEZI",
+    "length_ft": 1706,
+    "width_ft": 39,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -2850,7 +4312,14 @@
     "freq": "",
     "Lat": -2.785009,
     "Lon": -77.408045,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "SEZK",
+    "iso_country": "EC",
+    "icao_code": "SEZK",
+    "length_ft": 1804,
+    "width_ft": 49,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -2859,7 +4328,14 @@
     "freq": "",
     "Lat": -2.159088,
     "Lon": -77.613177,
-    "Ele": 671.2
+    "Ele": 671.2,
+    "ident": "SEZM",
+    "iso_country": "EC",
+    "icao_code": "SEZM",
+    "length_ft": 1739,
+    "width_ft": 39,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -2868,7 +4344,14 @@
     "freq": "",
     "Lat": -1.188339,
     "Lon": -77.230792,
-    "Ele": 328.9
+    "Ele": 328.9,
+    "ident": "SEZN",
+    "iso_country": "EC",
+    "icao_code": "SEZN",
+    "length_ft": 1919,
+    "width_ft": 43,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -2877,6 +4360,13 @@
     "freq": "",
     "Lat": -2.598404,
     "Lon": -77.089405,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "SEZR",
+    "iso_country": "EC",
+    "icao_code": "SEZR",
+    "length_ft": 1968,
+    "width_ft": 98,
+    "QFU": "36",
+    "heading": 360
   }
 ]

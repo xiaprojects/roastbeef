@@ -6,7 +6,15 @@
     "freq": "120.885",
     "Lat": 49.6233333,
     "Lon": 6.2044444,
-    "Ele": 376.1
+    "Ele": 376.1,
+    "ident": "ELLX",
+    "iso_country": "LU",
+    "icao_code": "ELLX",
+    "iata_code": "LUX",
+    "length_ft": 13130,
+    "width_ft": 148,
+    "heading": 57,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,13 @@
     "freq": "126.955",
     "Lat": 49.981098,
     "Lon": 5.91778,
-    "Ele": 463.9
+    "Ele": 463.9,
+    "ident": "ELNT",
+    "iso_country": "LU",
+    "length_ft": 2155,
+    "width_ft": 99,
+    "heading": 78,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -24,6 +38,12 @@
     "freq": "129.435",
     "Lat": 49.768155,
     "Lon": 5.965962,
-    "Ele": 282.9
+    "Ele": 282.9,
+    "ident": "ELUS",
+    "iso_country": "LU",
+    "length_ft": 2625,
+    "width_ft": 98,
+    "heading": 99,
+    "QFU": "28"
   }
 ]

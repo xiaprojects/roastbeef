@@ -6,7 +6,15 @@
     "freq": "122.400",
     "Lat": 22.308901,
     "Lon": 113.915001,
-    "Ele": 8.5
+    "Ele": 8.5,
+    "ident": "VHHH",
+    "iso_country": "HK",
+    "icao_code": "VHHH",
+    "iata_code": "HKG",
+    "length_ft": 12467,
+    "width_ft": 197,
+    "heading": 70.9,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -15,6 +23,13 @@
     "freq": "",
     "Lat": 22.4366,
     "Lon": 114.080002,
-    "Ele": 15.2
+    "Ele": 15.2,
+    "ident": "VHSK",
+    "iso_country": "HK",
+    "icao_code": "VHSK",
+    "length_ft": 6180,
+    "width_ft": 110,
+    "heading": 111,
+    "QFU": "29"
   }
 ]

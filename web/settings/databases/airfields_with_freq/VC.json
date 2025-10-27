@@ -6,7 +6,15 @@
     "freq": "120.800",
     "Lat": 13.156695,
     "Lon": -61.149945,
-    "Ele": 41.5
+    "Ele": 41.5,
+    "ident": "TVSA",
+    "iso_country": "VC",
+    "icao_code": "TVSA",
+    "iata_code": "SVD",
+    "length_ft": 9000,
+    "width_ft": 148,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -15,7 +23,15 @@
     "freq": "121.900",
     "Lat": 12.9884,
     "Lon": -61.262001,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "TVSB",
+    "iso_country": "VC",
+    "icao_code": "TVSB",
+    "iata_code": "BQU",
+    "length_ft": 3609,
+    "width_ft": 98,
+    "heading": 103,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -24,7 +40,15 @@
     "freq": "121.600",
     "Lat": 12.699,
     "Lon": -61.3424,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "TVSC",
+    "iso_country": "VC",
+    "icao_code": "TVSC",
+    "iata_code": "CIW",
+    "length_ft": 5900,
+    "width_ft": 98,
+    "heading": 122,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -33,7 +57,15 @@
     "freq": "123.000",
     "Lat": 12.8879,
     "Lon": -61.180199,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "TVSM",
+    "iso_country": "VC",
+    "icao_code": "TVSM",
+    "iata_code": "MQS",
+    "length_ft": 3255,
+    "width_ft": 75,
+    "heading": 71,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -42,6 +74,10 @@
     "freq": "",
     "Lat": 12.600135,
     "Lon": -61.411945,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "TVSU",
+    "iso_country": "VC",
+    "icao_code": "TVSU",
+    "iata_code": "UNI"
   }
 ]

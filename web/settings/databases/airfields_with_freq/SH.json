@@ -6,7 +6,15 @@
     "freq": "1124.700",
     "Lat": -7.9696,
     "Lon": -14.3937,
-    "Ele": 84.7
+    "Ele": 84.7,
+    "ident": "FHAW",
+    "iso_country": "SH",
+    "icao_code": "FHAW",
+    "iata_code": "ASI",
+    "length_ft": 10019,
+    "width_ft": 150,
+    "heading": 117,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -15,6 +23,14 @@
     "freq": "119.100",
     "Lat": -15.957725,
     "Lon": -5.645943,
-    "Ele": 310.0
+    "Ele": 310,
+    "ident": "FHSH",
+    "iso_country": "SH",
+    "icao_code": "FHSH",
+    "iata_code": "HLE",
+    "length_ft": 6398,
+    "width_ft": 148,
+    "heading": 359,
+    "QFU": "19"
   }
 ]

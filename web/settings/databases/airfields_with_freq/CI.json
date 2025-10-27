@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 5.17544,
     "Lon": -3.47049,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "CI-0001",
+    "iso_country": "CI"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 5.3156,
     "Lon": -4.6459,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CI-0002",
+    "iso_country": "CI"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 4.6874,
     "Lon": -7.0773,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "CI-0003",
+    "iso_country": "CI"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 6.215391,
     "Lon": -7.500315,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "CI-0005",
+    "iso_country": "CI"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,11 @@
     "freq": "",
     "Lat": 5.461944,
     "Lon": -3.234722,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "DIAO",
+    "iso_country": "CI",
+    "icao_code": "DIAO",
+    "iata_code": "ABO"
   },
   {
     "type": "medium_airport",
@@ -51,7 +63,15 @@
     "freq": "568.000",
     "Lat": 5.26139,
     "Lon": -3.92629,
-    "Ele": 6.4
+    "Ele": 6.4,
+    "ident": "DIAP",
+    "iso_country": "CI",
+    "icao_code": "DIAP",
+    "iata_code": "ABJ",
+    "length_ft": 9843,
+    "width_ft": 164,
+    "heading": 23,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -60,7 +80,11 @@
     "freq": "",
     "Lat": 6.71556,
     "Lon": -3.47028,
-    "Ele": 206.0
+    "Ele": 206,
+    "ident": "DIAU",
+    "iso_country": "CI",
+    "icao_code": "DIAU",
+    "iata_code": "OGO"
   },
   {
     "type": "small_airport",
@@ -69,7 +93,10 @@
     "freq": "",
     "Lat": 7.033,
     "Lon": -4.533,
-    "Ele": 130.1
+    "Ele": 130.1,
+    "ident": "DIBC",
+    "iso_country": "CI",
+    "icao_code": "DIBC"
   },
   {
     "type": "small_airport",
@@ -78,7 +105,11 @@
     "freq": "",
     "Lat": 9.540571,
     "Lon": -6.469831,
-    "Ele": 392.0
+    "Ele": 392,
+    "ident": "DIBI",
+    "iso_country": "CI",
+    "icao_code": "DIBI",
+    "iata_code": "BXI"
   },
   {
     "type": "medium_airport",
@@ -87,7 +118,15 @@
     "freq": "667.300",
     "Lat": 7.7388,
     "Lon": -5.07367,
-    "Ele": 374.9
+    "Ele": 374.9,
+    "ident": "DIBK",
+    "iso_country": "CI",
+    "icao_code": "DIBK",
+    "iata_code": "BYK",
+    "length_ft": 10827,
+    "width_ft": 148,
+    "heading": 24,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -96,7 +135,11 @@
     "freq": "",
     "Lat": 9.255556,
     "Lon": -3.033333,
-    "Ele": 349.9
+    "Ele": 349.9,
+    "ident": "DIBN",
+    "iso_country": "CI",
+    "icao_code": "DIBN",
+    "iata_code": "BQO"
   },
   {
     "type": "small_airport",
@@ -105,7 +148,14 @@
     "freq": "",
     "Lat": 8.01722,
     "Lon": -2.76194,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "DIBU",
+    "iso_country": "CI",
+    "icao_code": "DIBU",
+    "iata_code": "BDK",
+    "length_ft": 4921,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -114,7 +164,10 @@
     "freq": "",
     "Lat": 5.351385,
     "Lon": -4.403458,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "DIDB",
+    "iso_country": "CI",
+    "icao_code": "DIDB"
   },
   {
     "type": "small_airport",
@@ -123,7 +176,11 @@
     "freq": "",
     "Lat": 6.65167,
     "Lon": -4.64056,
-    "Ele": 104.9
+    "Ele": 104.9,
+    "ident": "DIDK",
+    "iso_country": "CI",
+    "icao_code": "DIDK",
+    "iata_code": "DIM"
   },
   {
     "type": "medium_airport",
@@ -132,7 +189,15 @@
     "freq": "118.700",
     "Lat": 6.79281,
     "Lon": -6.47319,
-    "Ele": 250.9
+    "Ele": 250.9,
+    "ident": "DIDL",
+    "iso_country": "CI",
+    "icao_code": "DIDL",
+    "iata_code": "DJO",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "heading": 28,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -141,7 +206,11 @@
     "freq": "",
     "Lat": 6.102855,
     "Lon": -5.986809,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "DIGA",
+    "iso_country": "CI",
+    "icao_code": "DIGA",
+    "iata_code": "GGN"
   },
   {
     "type": "small_airport",
@@ -150,7 +219,11 @@
     "freq": "",
     "Lat": 6.534711,
     "Lon": -7.526847,
-    "Ele": 220.1
+    "Ele": 220.1,
+    "ident": "DIGL",
+    "iso_country": "CI",
+    "icao_code": "DIGL",
+    "iata_code": "GGO"
   },
   {
     "type": "small_airport",
@@ -159,7 +232,11 @@
     "freq": "",
     "Lat": 4.64341306686,
     "Lon": -6.923961639400001,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "DIGN",
+    "iso_country": "CI",
+    "icao_code": "DIGN",
+    "iata_code": "BBV"
   },
   {
     "type": "medium_airport",
@@ -168,7 +245,15 @@
     "freq": "667.300",
     "Lat": 9.38718,
     "Lon": -5.55666,
-    "Ele": 370.0
+    "Ele": 370,
+    "ident": "DIKO",
+    "iso_country": "CI",
+    "icao_code": "DIKO",
+    "iata_code": "HGO",
+    "length_ft": 6890,
+    "width_ft": 98,
+    "heading": 80,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -177,7 +262,15 @@
     "freq": "667.300",
     "Lat": 7.27207,
     "Lon": -7.58736,
-    "Ele": 331.9
+    "Ele": 331.9,
+    "ident": "DIMN",
+    "iso_country": "CI",
+    "icao_code": "DIMN",
+    "iata_code": "MJC",
+    "length_ft": 6726,
+    "width_ft": 98,
+    "heading": 25,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -186,7 +279,11 @@
     "freq": "118.800",
     "Lat": 9.539457,
     "Lon": -7.56134,
-    "Ele": 416.1
+    "Ele": 416.1,
+    "ident": "DIOD",
+    "iso_country": "CI",
+    "icao_code": "DIOD",
+    "iata_code": "KEO"
   },
   {
     "type": "small_airport",
@@ -195,7 +292,11 @@
     "freq": "",
     "Lat": 9.6,
     "Lon": -4.05,
-    "Ele": 296.9
+    "Ele": 296.9,
+    "ident": "DIOF",
+    "iso_country": "CI",
+    "icao_code": "DIOF",
+    "iata_code": "OFI"
   },
   {
     "type": "small_airport",
@@ -204,7 +305,11 @@
     "freq": "",
     "Lat": 7.96,
     "Lon": -6.644167,
-    "Ele": 321.9
+    "Ele": 321.9,
+    "ident": "DISG",
+    "iso_country": "CI",
+    "icao_code": "DISG",
+    "iata_code": "SEO"
   },
   {
     "type": "medium_airport",
@@ -213,7 +318,15 @@
     "freq": "667.300",
     "Lat": 4.74672,
     "Lon": -6.66082,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "DISP",
+    "iso_country": "CI",
+    "icao_code": "DISP",
+    "iata_code": "SPY",
+    "length_ft": 6234,
+    "width_ft": 98,
+    "heading": 20,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -222,7 +335,11 @@
     "freq": "",
     "Lat": 4.928888,
     "Lon": -6.133156,
-    "Ele": 61.9
+    "Ele": 61.9,
+    "ident": "DISS",
+    "iso_country": "CI",
+    "icao_code": "DISS",
+    "iata_code": "ZSS"
   },
   {
     "type": "small_airport",
@@ -231,7 +348,11 @@
     "freq": "",
     "Lat": 4.437809467315674,
     "Lon": -7.362728118896484,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "DITB",
+    "iso_country": "CI",
+    "icao_code": "DITB",
+    "iata_code": "TXU"
   },
   {
     "type": "small_airport",
@@ -240,7 +361,11 @@
     "freq": "",
     "Lat": 8.2934,
     "Lon": -7.674,
-    "Ele": 482.5
+    "Ele": 482.5,
+    "ident": "DITM",
+    "iso_country": "CI",
+    "icao_code": "DITM",
+    "iata_code": "TOZ"
   },
   {
     "type": "medium_airport",
@@ -249,7 +374,15 @@
     "freq": "667.300",
     "Lat": 6.9031701088,
     "Lon": -5.36558008194,
-    "Ele": 213.1
+    "Ele": 213.1,
+    "ident": "DIYO",
+    "iso_country": "CI",
+    "icao_code": "DIYO",
+    "iata_code": "ASK",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 42,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -258,6 +391,9 @@
     "freq": "",
     "Lat": 8.132858,
     "Lon": -5.06487,
-    "Ele": 312.7
+    "Ele": 312.7,
+    "ident": "KTC",
+    "iso_country": "CI",
+    "iata_code": "KTC"
   }
 ]

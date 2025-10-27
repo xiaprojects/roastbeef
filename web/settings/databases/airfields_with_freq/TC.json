@@ -6,7 +6,10 @@
     "freq": "",
     "Lat": 21.302649,
     "Lon": -71.637168,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "MBAC",
+    "iso_country": "TC",
+    "icao_code": "MBAC"
   },
   {
     "type": "medium_airport",
@@ -15,7 +18,15 @@
     "freq": "126.000",
     "Lat": 21.4445,
     "Lon": -71.142303,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "MBGT",
+    "iso_country": "TC",
+    "icao_code": "MBGT",
+    "iata_code": "GDT",
+    "length_ft": 6362,
+    "width_ft": 151,
+    "heading": 104,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -24,7 +35,14 @@
     "freq": "",
     "Lat": 21.82602,
     "Lon": -71.8025,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "MBMC",
+    "iso_country": "TC",
+    "icao_code": "MBMC",
+    "iata_code": "MDS",
+    "length_ft": 2894,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -33,7 +51,15 @@
     "freq": "118.850",
     "Lat": 21.916094,
     "Lon": -71.942954,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "MBNC",
+    "iso_country": "TC",
+    "icao_code": "MBNC",
+    "iata_code": "NCA",
+    "length_ft": 4245,
+    "width_ft": 75,
+    "heading": 69.6,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -42,7 +68,14 @@
     "freq": "",
     "Lat": 21.874661,
     "Lon": -72.090573,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MBPI",
+    "iso_country": "TC",
+    "icao_code": "MBPI",
+    "iata_code": "PIC",
+    "length_ft": 2533,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "large_airport",
@@ -51,7 +84,15 @@
     "freq": "126.000",
     "Lat": 21.773697,
     "Lon": -72.268321,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "MBPV",
+    "iso_country": "TC",
+    "icao_code": "MBPV",
+    "iata_code": "PLS",
+    "length_ft": 9199,
+    "width_ft": 148,
+    "heading": 93,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -60,7 +101,15 @@
     "freq": "118.900",
     "Lat": 21.515699,
     "Lon": -71.528503,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "MBSC",
+    "iso_country": "TC",
+    "icao_code": "MBSC",
+    "iata_code": "XSC",
+    "length_ft": 6335,
+    "width_ft": 98,
+    "heading": 98,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -69,7 +118,11 @@
     "freq": "",
     "Lat": 21.3330001831,
     "Lon": -71.1999969482,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "MBSY",
+    "iso_country": "TC",
+    "icao_code": "MBSY",
+    "iata_code": "SLX"
   },
   {
     "type": "small_airport",
@@ -78,6 +131,8 @@
     "freq": "",
     "Lat": 21.68178,
     "Lon": -72.46157,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "TC-0001",
+    "iso_country": "TC"
   }
 ]

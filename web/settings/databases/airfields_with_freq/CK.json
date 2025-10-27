@@ -6,7 +6,15 @@
     "freq": "118.100",
     "Lat": -18.8309,
     "Lon": -159.764008,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "NCAI",
+    "iso_country": "CK",
+    "icao_code": "NCAI",
+    "iata_code": "AIT",
+    "length_ft": 5920,
+    "width_ft": 100,
+    "heading": 153.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -15,7 +23,14 @@
     "freq": "",
     "Lat": -19.96780014038086,
     "Lon": -158.11900329589844,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "NCAT",
+    "iso_country": "CK",
+    "icao_code": "NCAT",
+    "iata_code": "AIU",
+    "length_ft": 3947,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -24,7 +39,14 @@
     "freq": "",
     "Lat": -21.895987,
     "Lon": -157.906662,
-    "Ele": 13.7
+    "Ele": 13.7,
+    "ident": "NCMG",
+    "iso_country": "CK",
+    "icao_code": "NCMG",
+    "iata_code": "MGS",
+    "length_ft": 3274,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "small_airport",
@@ -33,7 +55,14 @@
     "freq": "",
     "Lat": -10.3767,
     "Lon": -161.001999,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "NCMH",
+    "iso_country": "CK",
+    "icao_code": "NCMH",
+    "iata_code": "MHX",
+    "length_ft": 3937,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -42,7 +71,14 @@
     "freq": "",
     "Lat": -20.13610076904297,
     "Lon": -157.34500122070312,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "NCMK",
+    "iso_country": "CK",
+    "icao_code": "NCMK",
+    "iata_code": "MUK",
+    "length_ft": 4921,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -51,7 +87,10 @@
     "freq": "",
     "Lat": -19.269152,
     "Lon": -158.959408,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "NCMN",
+    "iso_country": "CK",
+    "icao_code": "NCMN"
   },
   {
     "type": "small_airport",
@@ -60,7 +99,11 @@
     "freq": "",
     "Lat": -19.842501,
     "Lon": -157.703003,
-    "Ele": 7.6
+    "Ele": 7.6,
+    "ident": "NCMR",
+    "iso_country": "CK",
+    "icao_code": "NCMR",
+    "iata_code": "MOI"
   },
   {
     "type": "small_airport",
@@ -69,7 +112,11 @@
     "freq": "",
     "Lat": -10.9145,
     "Lon": -165.8393,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "NCPK",
+    "iso_country": "CK",
+    "icao_code": "NCPK",
+    "iata_code": "PZK"
   },
   {
     "type": "small_airport",
@@ -78,7 +125,15 @@
     "freq": "",
     "Lat": -9.01437,
     "Lon": -158.03241,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "NCPY",
+    "iso_country": "CK",
+    "icao_code": "NCPY",
+    "iata_code": "PYE",
+    "length_ft": 7077,
+    "width_ft": 98,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "medium_airport",
@@ -87,6 +142,14 @@
     "freq": "118.100",
     "Lat": -21.2027,
     "Lon": -159.806,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "NCRG",
+    "iso_country": "CK",
+    "icao_code": "NCRG",
+    "iata_code": "RAR",
+    "length_ft": 7638,
+    "width_ft": 150,
+    "heading": 90,
+    "QFU": "26"
   }
 ]

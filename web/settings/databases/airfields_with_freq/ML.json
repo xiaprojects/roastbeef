@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 14.431300163269045,
     "Lon": -11.43970012664795,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "GA1A",
+    "iso_country": "ML",
+    "local_code": "GA1A",
+    "length_ft": 3802,
+    "width_ft": 100,
+    "heading": 66,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -15,7 +22,10 @@
     "freq": "",
     "Lat": 15.700633,
     "Lon": 0.494052,
-    "Ele": 260.0
+    "Ele": 260,
+    "ident": "GAAO",
+    "iso_country": "ML",
+    "icao_code": "GAAO"
   },
   {
     "type": "small_airport",
@@ -24,7 +34,10 @@
     "freq": "",
     "Lat": 14.336931,
     "Lon": -3.609778,
-    "Ele": 399.9
+    "Ele": 399.9,
+    "ident": "GABD",
+    "iso_country": "ML",
+    "icao_code": "GABD"
   },
   {
     "type": "small_airport",
@@ -33,7 +46,10 @@
     "freq": "",
     "Lat": 13.80694,
     "Lon": -10.84779,
-    "Ele": 115.8
+    "Ele": 115.8,
+    "ident": "GABF",
+    "iso_country": "ML",
+    "icao_code": "GABF"
   },
   {
     "type": "small_airport",
@@ -42,7 +58,10 @@
     "freq": "",
     "Lat": 11.441892,
     "Lon": -7.506888,
-    "Ele": 347.2
+    "Ele": 347.2,
+    "ident": "GABG",
+    "iso_country": "ML",
+    "icao_code": "GABG"
   },
   {
     "type": "small_airport",
@@ -51,7 +70,10 @@
     "freq": "",
     "Lat": 17.0262,
     "Lon": -0.4063,
-    "Ele": 286.8
+    "Ele": 286.8,
+    "ident": "GABR",
+    "iso_country": "ML",
+    "icao_code": "GABR"
   },
   {
     "type": "large_airport",
@@ -60,7 +82,15 @@
     "freq": "667.300",
     "Lat": 12.5335,
     "Lon": -7.94994,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "GABS",
+    "iso_country": "ML",
+    "icao_code": "GABS",
+    "iata_code": "BKO",
+    "length_ft": 10498,
+    "width_ft": 148,
+    "heading": 57,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -69,16 +99,21 @@
     "freq": "",
     "Lat": 12.511918,
     "Lon": -6.801277,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "GADA",
+    "iso_country": "ML"
   },
   {
     "type": "small_airport",
     "name": "Douentza Airport",
     "gps_code": "GADZ",
     "freq": "",
-    "Lat": 15.0,
+    "Lat": 15,
     "Lon": -2.917,
-    "Ele": 299.9
+    "Ele": 299.9,
+    "ident": "GADZ",
+    "iso_country": "ML",
+    "icao_code": "GADZ"
   },
   {
     "type": "small_airport",
@@ -87,7 +122,9 @@
     "freq": "",
     "Lat": 13.15064,
     "Lon": -8.333459,
-    "Ele": 339.9
+    "Ele": 339.9,
+    "ident": "GAFD",
+    "iso_country": "ML"
   },
   {
     "type": "small_airport",
@@ -96,7 +133,14 @@
     "freq": "",
     "Lat": 16.358426,
     "Lon": -3.604536,
-    "Ele": 264.0
+    "Ele": 264,
+    "ident": "GAGM",
+    "iso_country": "ML",
+    "icao_code": "GAGM",
+    "iata_code": "GUD",
+    "length_ft": 4921,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -105,7 +149,15 @@
     "freq": "889.400",
     "Lat": 16.2484,
     "Lon": -0.005456,
-    "Ele": 265.2
+    "Ele": 265.2,
+    "ident": "GAGO",
+    "iso_country": "ML",
+    "icao_code": "GAGO",
+    "iata_code": "GAQ",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -114,7 +166,11 @@
     "freq": "",
     "Lat": 12.833,
     "Lon": -11.25,
-    "Ele": 136.9
+    "Ele": 136.9,
+    "ident": "GAKA",
+    "iso_country": "ML",
+    "icao_code": "GAKA",
+    "iata_code": "KNZ"
   },
   {
     "type": "small_airport",
@@ -123,7 +179,14 @@
     "freq": "",
     "Lat": 18.433001,
     "Lon": 1.417,
-    "Ele": 456.0
+    "Ele": 456,
+    "ident": "GAKL",
+    "iso_country": "ML",
+    "icao_code": "GAKL",
+    "length_ft": 6234,
+    "width_ft": 131,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -132,7 +195,10 @@
     "freq": "",
     "Lat": 13.533,
     "Lon": -8.05,
-    "Ele": 444.1
+    "Ele": 444.1,
+    "ident": "GAKN",
+    "iso_country": "ML",
+    "icao_code": "GAKN"
   },
   {
     "type": "small_airport",
@@ -141,7 +207,11 @@
     "freq": "",
     "Lat": 12.383000373840332,
     "Lon": -5.4670000076293945,
-    "Ele": 378.0
+    "Ele": 378,
+    "ident": "GAKO",
+    "iso_country": "ML",
+    "icao_code": "GAKO",
+    "iata_code": "KTX"
   },
   {
     "type": "small_airport",
@@ -150,7 +220,10 @@
     "freq": "",
     "Lat": 13.067,
     "Lon": -9.483,
-    "Ele": 342.0
+    "Ele": 342,
+    "ident": "GAKT",
+    "iso_country": "ML",
+    "icao_code": "GAKT"
   },
   {
     "type": "medium_airport",
@@ -159,7 +232,15 @@
     "freq": "886.100",
     "Lat": 14.482473,
     "Lon": -11.39971,
-    "Ele": 50.0
+    "Ele": 50,
+    "ident": "GAKY",
+    "iso_country": "ML",
+    "icao_code": "GAKD",
+    "iata_code": "KYS",
+    "length_ft": 5267,
+    "width_ft": 98,
+    "heading": 81,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -168,7 +249,15 @@
     "freq": "118.200",
     "Lat": 14.5128,
     "Lon": -4.07956,
-    "Ele": 276.1
+    "Ele": 276.1,
+    "ident": "GAMB",
+    "iso_country": "ML",
+    "icao_code": "GAMB",
+    "iata_code": "MZI",
+    "length_ft": 8340,
+    "width_ft": 94,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -177,7 +266,10 @@
     "freq": "",
     "Lat": 15.929102,
     "Lon": 2.346997,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "GAMK",
+    "iso_country": "ML",
+    "icao_code": "GAMK"
   },
   {
     "type": "small_airport",
@@ -186,7 +278,10 @@
     "freq": "",
     "Lat": 15.924035,
     "Lon": -4.007727,
-    "Ele": 264.0
+    "Ele": 264,
+    "ident": "GANF",
+    "iso_country": "ML",
+    "icao_code": "GANF"
   },
   {
     "type": "small_airport",
@@ -195,7 +290,15 @@
     "freq": "",
     "Lat": 15.22913,
     "Lon": -7.261965,
-    "Ele": 271.0
+    "Ele": 271,
+    "ident": "GANK",
+    "iso_country": "ML",
+    "icao_code": "GANK",
+    "iata_code": "NRM",
+    "length_ft": 1299,
+    "width_ft": 98,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -204,7 +307,14 @@
     "freq": "",
     "Lat": 15.2381,
     "Lon": -9.57611,
-    "Ele": 237.1
+    "Ele": 237.1,
+    "ident": "GANR",
+    "iso_country": "ML",
+    "icao_code": "GANR",
+    "iata_code": "NIX",
+    "length_ft": 4921,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -213,7 +323,15 @@
     "freq": "",
     "Lat": 11.328611,
     "Lon": -5.684722,
-    "Ele": 420.0
+    "Ele": 420,
+    "ident": "GASK",
+    "iso_country": "ML",
+    "icao_code": "GASK",
+    "iata_code": "KSS",
+    "length_ft": 9350,
+    "width_ft": 75,
+    "heading": 76,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -222,7 +340,14 @@
     "freq": "118.100",
     "Lat": 11.598,
     "Lon": -5.79971,
-    "Ele": 396.5
+    "Ele": 396.5,
+    "ident": "GASO",
+    "iso_country": "ML",
+    "local_code": "KSS",
+    "length_ft": 5255,
+    "width_ft": 100,
+    "heading": 70.6,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -231,7 +356,15 @@
     "freq": "118.300",
     "Lat": 16.730499,
     "Lon": -3.00758,
-    "Ele": 263.0
+    "Ele": 263,
+    "ident": "GATB",
+    "iso_country": "ML",
+    "icao_code": "GATB",
+    "iata_code": "TOM",
+    "length_ft": 6923,
+    "width_ft": 98,
+    "heading": 68,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -240,7 +373,14 @@
     "freq": "",
     "Lat": 20.243,
     "Lon": 0.977308,
-    "Ele": 494.1
+    "Ele": 494.1,
+    "ident": "GATS",
+    "iso_country": "ML",
+    "icao_code": "GATS",
+    "QFU": "34",
+    "length_ft": 3924,
+    "width_ft": 154,
+    "heading": 153
   },
   {
     "type": "small_airport",
@@ -249,7 +389,11 @@
     "freq": "",
     "Lat": 15.123682,
     "Lon": -10.571177,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "GAYE",
+    "iso_country": "ML",
+    "icao_code": "GAYE",
+    "iata_code": "EYL"
   },
   {
     "type": "small_airport",
@@ -258,7 +402,13 @@
     "freq": "",
     "Lat": 13.2555999756,
     "Lon": -10.5043001175,
-    "Ele": 164.0
+    "Ele": 164,
+    "ident": "ML-0001",
+    "iso_country": "ML",
+    "length_ft": 4946,
+    "width_ft": 98,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -267,6 +417,8 @@
     "freq": "",
     "Lat": 15.50438,
     "Lon": 0.71678,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ML-0002",
+    "iso_country": "ML"
   }
 ]

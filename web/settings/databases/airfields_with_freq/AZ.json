@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 40.494884,
     "Lon": 49.977065,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "AZ-0001",
+    "iso_country": "AZ",
+    "icao_code": "UBTT",
+    "iata_code": "ZXT"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,10 @@
     "freq": "",
     "Lat": 41.459152,
     "Lon": 48.832635,
-    "Ele": 18.9
+    "Ele": 18.9,
+    "ident": "AZ-0002",
+    "iso_country": "AZ",
+    "icao_code": "UBBH"
   },
   {
     "type": "small_airport",
@@ -24,7 +31,10 @@
     "freq": "",
     "Lat": 41.136553,
     "Lon": 47.1595,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0003",
+    "iso_country": "AZ",
+    "icao_code": "UBEI"
   },
   {
     "type": "small_airport",
@@ -33,7 +43,10 @@
     "freq": "",
     "Lat": 40.51592,
     "Lon": 46.829481,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0004",
+    "iso_country": "AZ",
+    "icao_code": "UBEN"
   },
   {
     "type": "small_airport",
@@ -42,7 +55,9 @@
     "freq": "",
     "Lat": 40.7429001447,
     "Lon": 46.8570113182,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0005",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -51,7 +66,9 @@
     "freq": "",
     "Lat": 40.529074712500005,
     "Lon": 47.8300738335,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0008",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -60,7 +77,9 @@
     "freq": "",
     "Lat": 40.120419,
     "Lon": 48.145716,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0009",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -69,7 +88,10 @@
     "freq": "",
     "Lat": 40.022291,
     "Lon": 47.44935,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0010",
+    "iso_country": "AZ",
+    "icao_code": "UBEY"
   },
   {
     "type": "medium_airport",
@@ -78,7 +100,9 @@
     "freq": "",
     "Lat": 40.807313,
     "Lon": 49.431481,
-    "Ele": -14.0
+    "Ele": -14,
+    "ident": "AZ-0013",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -87,7 +111,10 @@
     "freq": "",
     "Lat": 40.347106,
     "Lon": 49.671321,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0014",
+    "iso_country": "AZ",
+    "icao_code": "UBLL"
   },
   {
     "type": "small_airport",
@@ -96,7 +123,9 @@
     "freq": "",
     "Lat": 40.129771,
     "Lon": 49.454956,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0015",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -105,7 +134,9 @@
     "freq": "",
     "Lat": 39.853999,
     "Lon": 49.340018,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0016",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -114,7 +145,10 @@
     "freq": "",
     "Lat": 40.03094,
     "Lon": 48.902764,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0017",
+    "iso_country": "AZ",
+    "icao_code": "UBBM"
   },
   {
     "type": "small_airport",
@@ -123,7 +157,9 @@
     "freq": "",
     "Lat": 39.83179,
     "Lon": 48.966751,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0018",
+    "iso_country": "AZ"
   },
   {
     "type": "small_airport",
@@ -132,7 +168,9 @@
     "freq": "",
     "Lat": 39.649811,
     "Lon": 48.986884,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "AZ-0019",
+    "iso_country": "AZ"
   },
   {
     "type": "medium_airport",
@@ -141,7 +179,9 @@
     "freq": "",
     "Lat": 39.006162,
     "Lon": 48.806312,
-    "Ele": -28.0
+    "Ele": -28,
+    "ident": "AZ-0021",
+    "iso_country": "AZ"
   },
   {
     "type": "medium_airport",
@@ -150,7 +190,15 @@
     "freq": "",
     "Lat": 40.591599,
     "Lon": 49.5574,
-    "Ele": -4.0
+    "Ele": -4,
+    "ident": "UB12",
+    "iso_country": "AZ",
+    "icao_code": "UBBI",
+    "local_code": "UB12",
+    "length_ft": 8218,
+    "width_ft": 132,
+    "heading": 180,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -159,7 +207,15 @@
     "freq": "",
     "Lat": 39.901402,
     "Lon": 46.786999,
-    "Ele": 609.9
+    "Ele": 609.9,
+    "ident": "UB13",
+    "iso_country": "AZ",
+    "icao_code": "UBBS",
+    "local_code": "UB13",
+    "length_ft": 7145,
+    "width_ft": 120,
+    "heading": 58.6,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -168,7 +224,13 @@
     "freq": "",
     "Lat": 40.27360153198242,
     "Lon": 48.16360092163086,
-    "Ele": -10.7
+    "Ele": -10.7,
+    "ident": "UB14",
+    "iso_country": "AZ",
+    "length_ft": 8200,
+    "width_ft": 145,
+    "heading": 88.2,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -177,7 +239,14 @@
     "freq": "",
     "Lat": 41.733048,
     "Lon": 46.355677,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "UB16",
+    "iso_country": "AZ",
+    "local_code": "UB16",
+    "length_ft": 3966,
+    "width_ft": 120,
+    "heading": 138,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -186,7 +255,13 @@
     "freq": "",
     "Lat": 40.408409,
     "Lon": 50.200287,
-    "Ele": 12.2
+    "Ele": 12.2,
+    "ident": "UB18",
+    "iso_country": "AZ",
+    "length_ft": 8670,
+    "width_ft": 130,
+    "heading": 179.4,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -195,7 +270,9 @@
     "freq": "",
     "Lat": 41.123616,
     "Lon": 45.420793,
-    "Ele": 330.7
+    "Ele": 330.7,
+    "ident": "UBBA",
+    "iso_country": "AZ"
   },
   {
     "type": "large_airport",
@@ -204,7 +281,15 @@
     "freq": "129.300",
     "Lat": 40.46749877929688,
     "Lon": 50.04669952392578,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "UBBB",
+    "iso_country": "AZ",
+    "icao_code": "UBBB",
+    "iata_code": "GYD",
+    "length_ft": 10499,
+    "width_ft": 148,
+    "heading": 179,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -213,7 +298,15 @@
     "freq": "",
     "Lat": 39.594578,
     "Lon": 47.196128,
-    "Ele": 380.1
+    "Ele": 380.1,
+    "ident": "UBBF",
+    "iso_country": "AZ",
+    "icao_code": "UBBF",
+    "iata_code": "FZL",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -222,7 +315,15 @@
     "freq": "124.000",
     "Lat": 40.738935,
     "Lon": 46.320067,
-    "Ele": 330.1
+    "Ele": 330.1,
+    "ident": "UBBG",
+    "iso_country": "AZ",
+    "icao_code": "UBBG",
+    "iata_code": "GNJ",
+    "length_ft": 10827,
+    "width_ft": 148,
+    "heading": 128,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -231,7 +332,15 @@
     "freq": "",
     "Lat": 38.757919,
     "Lon": 48.807042,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "UBBL",
+    "iso_country": "AZ",
+    "icao_code": "UBBL",
+    "iata_code": "LLK",
+    "length_ft": 10837,
+    "width_ft": 148,
+    "heading": 151,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -240,7 +349,15 @@
     "freq": "127.900",
     "Lat": 39.18880081176758,
     "Lon": 45.45840072631836,
-    "Ele": 872.6
+    "Ele": 872.6,
+    "ident": "UBBN",
+    "iso_country": "AZ",
+    "icao_code": "UBBN",
+    "iata_code": "NAJ",
+    "length_ft": 10826,
+    "width_ft": 148,
+    "heading": 137.3,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -249,7 +366,15 @@
     "freq": "",
     "Lat": 40.808617,
     "Lon": 47.725389,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "UBBQ",
+    "iso_country": "AZ",
+    "icao_code": "UBBQ",
+    "iata_code": "GBB",
+    "length_ft": 11811,
+    "width_ft": 197,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -258,7 +383,15 @@
     "freq": "",
     "Lat": 41.557823,
     "Lon": 46.669464,
-    "Ele": 389.8
+    "Ele": 389.8,
+    "ident": "UBBY",
+    "iso_country": "AZ",
+    "icao_code": "UBBY",
+    "iata_code": "ZTU",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -267,7 +400,14 @@
     "freq": "",
     "Lat": 39.11443,
     "Lon": 46.74392,
-    "Ele": 402.3
+    "Ele": 402.3,
+    "ident": "UBBZ",
+    "iso_country": "AZ",
+    "iata_code": "ZZE",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -276,7 +416,11 @@
     "freq": "",
     "Lat": 40.631901,
     "Lon": 47.141899,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "UBEE",
+    "iso_country": "AZ",
+    "icao_code": "UBEE",
+    "iata_code": "YLV"
   },
   {
     "type": "medium_airport",
@@ -285,6 +429,13 @@
     "freq": "",
     "Lat": 40.8876,
     "Lon": 45.957001,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "UG11",
+    "iso_country": "AZ",
+    "local_code": "UB11",
+    "length_ft": 8182,
+    "width_ft": 135,
+    "heading": 110.2,
+    "QFU": "28"
   }
 ]

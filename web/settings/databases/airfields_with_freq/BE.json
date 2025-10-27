@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 50.740101,
     "Lon": 3.4849,
-    "Ele": 14.9
+    "Ele": 14.9,
+    "ident": "EBAM",
+    "iso_country": "BE",
+    "icao_code": "EBAM",
+    "length_ft": 2000,
+    "width_ft": 60,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -15,7 +22,14 @@
     "freq": "123.425",
     "Lat": 49.661981,
     "Lon": 5.885953,
-    "Ele": 346.9
+    "Ele": 346.9,
+    "ident": "EBAR",
+    "iso_country": "BE",
+    "icao_code": "EBAR",
+    "length_ft": 492,
+    "width_ft": 98,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -24,7 +38,10 @@
     "freq": "129.975",
     "Lat": 50.706147,
     "Lon": 5.067739,
-    "Ele": 120.1
+    "Ele": 120.1,
+    "ident": "EBAV",
+    "iso_country": "BE",
+    "icao_code": "EBAV"
   },
   {
     "type": "medium_airport",
@@ -33,7 +50,15 @@
     "freq": "118.255",
     "Lat": 51.190667,
     "Lon": 4.463153,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "EBAW",
+    "iso_country": "BE",
+    "icao_code": "EBAW",
+    "iata_code": "ANR",
+    "length_ft": 4954,
+    "width_ft": 148,
+    "heading": 109.8,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -42,7 +67,13 @@
     "freq": "122.500",
     "Lat": 50.758598,
     "Lon": 4.76833,
-    "Ele": 112.8
+    "Ele": 112.8,
+    "ident": "EBBE",
+    "iso_country": "BE",
+    "length_ft": 8038,
+    "width_ft": 74,
+    "heading": 39,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -51,7 +82,13 @@
     "freq": "134.480",
     "Lat": 51.168301,
     "Lon": 5.47,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "EBBL",
+    "iso_country": "BE",
+    "length_ft": 7874,
+    "width_ft": 75,
+    "heading": 50.1,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -60,7 +97,9 @@
     "freq": "",
     "Lat": 50.415001,
     "Lon": 6.27639,
-    "Ele": 630.0
+    "Ele": 630,
+    "ident": "EBBN",
+    "iso_country": "BE"
   },
   {
     "type": "large_airport",
@@ -69,7 +108,15 @@
     "freq": "118.255",
     "Lat": 50.901402,
     "Lon": 4.48444,
-    "Ele": 53.3
+    "Ele": 53.3,
+    "ident": "EBBR",
+    "iso_country": "BE",
+    "icao_code": "EBBR",
+    "iata_code": "BRU",
+    "length_ft": 10535,
+    "width_ft": 148,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -78,7 +125,14 @@
     "freq": "122.905",
     "Lat": 51.34259,
     "Lon": 4.503451,
-    "Ele": 23.2
+    "Ele": 23.2,
+    "ident": "EBBT",
+    "iso_country": "BE",
+    "icao_code": "EBBT",
+    "length_ft": 2621,
+    "width_ft": 98,
+    "heading": 163,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -87,7 +141,13 @@
     "freq": "",
     "Lat": 49.891483,
     "Lon": 5.227405,
-    "Ele": 461.5
+    "Ele": 461.5,
+    "ident": "EBBX",
+    "iso_country": "BE",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 58.4,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -96,7 +156,13 @@
     "freq": "132.000",
     "Lat": 50.568611,
     "Lon": 4.434722,
-    "Ele": 160.0
+    "Ele": 160,
+    "ident": "EBBY",
+    "iso_country": "BE",
+    "length_ft": 981,
+    "width_ft": 99,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -105,7 +171,13 @@
     "freq": "118.765",
     "Lat": 50.542335,
     "Lon": 4.382472,
-    "Ele": 159.1
+    "Ele": 159.1,
+    "ident": "EBBZ",
+    "iso_country": "BE",
+    "length_ft": 1469,
+    "width_ft": 131,
+    "heading": 152,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -114,7 +186,14 @@
     "freq": "123.200",
     "Lat": 50.152802,
     "Lon": 4.38722,
-    "Ele": 291.1
+    "Ele": 291.1,
+    "ident": "EBCF",
+    "iso_country": "BE",
+    "icao_code": "EBCF",
+    "length_ft": 2215,
+    "width_ft": 98,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "medium_airport",
@@ -123,7 +202,15 @@
     "freq": "133.125",
     "Lat": 50.460982,
     "Lon": 4.457158,
-    "Ele": 187.1
+    "Ele": 187.1,
+    "ident": "EBCI",
+    "iso_country": "BE",
+    "icao_code": "EBCI",
+    "iata_code": "CRL",
+    "length_ft": 10023,
+    "width_ft": 148,
+    "heading": 66,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -132,7 +219,13 @@
     "freq": "126.625",
     "Lat": 50.575801849365234,
     "Lon": 3.8310000896453857,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "EBCV",
+    "iso_country": "BE",
+    "length_ft": 8197,
+    "width_ft": 148,
+    "heading": 80,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -141,7 +234,14 @@
     "freq": "118.930",
     "Lat": 51.004032,
     "Lon": 5.064697,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "EBDT",
+    "iso_country": "BE",
+    "icao_code": "EBDT",
+    "length_ft": 2461,
+    "width_ft": 148,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "medium_airport",
@@ -150,7 +250,13 @@
     "freq": "122.500",
     "Lat": 51.090302,
     "Lon": 2.65278,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "EBFN",
+    "iso_country": "BE",
+    "length_ft": 8786,
+    "width_ft": 164,
+    "QFU": "29",
+    "heading": 108
   },
   {
     "type": "medium_airport",
@@ -159,7 +265,13 @@
     "freq": "122.500",
     "Lat": 50.2433013916,
     "Lon": 4.64583015442,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "EBFS",
+    "iso_country": "BE",
+    "length_ft": 7381,
+    "width_ft": 74,
+    "heading": 79.6,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -168,7 +280,13 @@
     "freq": "119.500",
     "Lat": 50.948546,
     "Lon": 4.39181,
-    "Ele": 21.3
+    "Ele": 21.3,
+    "ident": "EBGB",
+    "iso_country": "BE",
+    "icao_code": "EBGB",
+    "length_ft": 2016,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -177,7 +295,14 @@
     "freq": "",
     "Lat": 50.7556,
     "Lon": 3.86389,
-    "Ele": 17.1
+    "Ele": 17.1,
+    "ident": "EBGG",
+    "iso_country": "BE",
+    "icao_code": "EBGG",
+    "length_ft": 600,
+    "width_ft": 18,
+    "QFU": "21",
+    "heading": 210
   },
   {
     "type": "small_airport",
@@ -186,7 +311,12 @@
     "freq": "135.000",
     "Lat": 51.306099,
     "Lon": 4.38722,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "EBHN",
+    "iso_country": "BE",
+    "icao_code": "EBHN",
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -195,7 +325,13 @@
     "freq": "",
     "Lat": 50.663636,
     "Lon": 3.804681,
-    "Ele": 29.9
+    "Ele": 29.9,
+    "ident": "EBIS",
+    "iso_country": "BE",
+    "length_ft": 495,
+    "width_ft": 164,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -204,7 +340,14 @@
     "freq": "119.200",
     "Lat": 51.180957,
     "Lon": 5.221124,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "EBKH",
+    "iso_country": "BE",
+    "icao_code": "EBKH",
+    "length_ft": 2264,
+    "width_ft": 59,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -213,7 +356,15 @@
     "freq": "120.250",
     "Lat": 50.818878,
     "Lon": 3.209551,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "EBKT",
+    "iso_country": "BE",
+    "icao_code": "EBKT",
+    "iata_code": "KJK",
+    "length_ft": 6234,
+    "width_ft": 148,
+    "heading": 62,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -222,7 +373,14 @@
     "freq": "",
     "Lat": 51.12,
     "Lon": 5.307222,
-    "Ele": 63.1
+    "Ele": 63.1,
+    "ident": "EBLE",
+    "iso_country": "BE",
+    "icao_code": "EBLE",
+    "length_ft": 1969,
+    "width_ft": 59,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -231,7 +389,15 @@
     "freq": "119.280",
     "Lat": 50.638574,
     "Lon": 5.443897,
-    "Ele": 200.9
+    "Ele": 200.9,
+    "ident": "EBLG",
+    "iso_country": "BE",
+    "icao_code": "EBLG",
+    "iata_code": "LGG",
+    "length_ft": 12106,
+    "width_ft": 148,
+    "heading": 45,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -240,7 +406,10 @@
     "freq": "",
     "Lat": 50.913419,
     "Lon": 4.491005,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "EBMB",
+    "iso_country": "BE",
+    "icao_code": "EBMB"
   },
   {
     "type": "small_airport",
@@ -249,7 +418,9 @@
     "freq": "",
     "Lat": 50.104208,
     "Lon": 4.636063,
-    "Ele": 239.9
+    "Ele": 239.9,
+    "ident": "EBMG",
+    "iso_country": "BE"
   },
   {
     "type": "small_airport",
@@ -258,7 +429,12 @@
     "freq": "123.550",
     "Lat": 50.375033,
     "Lon": 4.926489,
-    "Ele": 270.1
+    "Ele": 270.1,
+    "ident": "EBML",
+    "iso_country": "BE",
+    "length_ft": 1311,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -267,7 +443,13 @@
     "freq": "",
     "Lat": 50.851285,
     "Lon": 3.147669,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "EBMO",
+    "iso_country": "BE",
+    "length_ft": 650,
+    "width_ft": 30,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "small_airport",
@@ -276,7 +458,14 @@
     "freq": "118.005",
     "Lat": 50.489705,
     "Lon": 4.769697,
-    "Ele": 181.1
+    "Ele": 181.1,
+    "ident": "EBNM",
+    "iso_country": "BE",
+    "icao_code": "EBNM",
+    "length_ft": 2264,
+    "width_ft": 82,
+    "heading": 64,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -285,7 +474,15 @@
     "freq": "120.600",
     "Lat": 51.1998,
     "Lon": 2.874673,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "EBOS",
+    "iso_country": "BE",
+    "icao_code": "EBOS",
+    "iata_code": "OST",
+    "length_ft": 2057,
+    "width_ft": 148,
+    "heading": 137,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -294,7 +491,14 @@
     "freq": "122.170",
     "Lat": 50.458009,
     "Lon": 3.821,
-    "Ele": 22.9
+    "Ele": 22.9,
+    "ident": "EBSG",
+    "iso_country": "BE",
+    "icao_code": "EBSG",
+    "length_ft": 2296,
+    "width_ft": 75,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -303,7 +507,14 @@
     "freq": "122.175",
     "Lat": 50.0359,
     "Lon": 5.40425,
-    "Ele": 588.3
+    "Ele": 588.3,
+    "ident": "EBSH",
+    "iso_country": "BE",
+    "icao_code": "EBSH",
+    "length_ft": 2621,
+    "width_ft": 492,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -312,7 +523,13 @@
     "freq": "",
     "Lat": 50.949352,
     "Lon": 5.593549,
-    "Ele": 95.1
+    "Ele": 95.1,
+    "ident": "EBSL",
+    "iso_country": "BE",
+    "length_ft": 9777,
+    "width_ft": 148,
+    "heading": 60,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -321,7 +538,9 @@
     "freq": "",
     "Lat": 51.268281,
     "Lon": 4.175453,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "EBSM",
+    "iso_country": "BE"
   },
   {
     "type": "small_airport",
@@ -330,7 +549,14 @@
     "freq": "124.640",
     "Lat": 50.482006,
     "Lon": 5.913434,
-    "Ele": 481.9
+    "Ele": 481.9,
+    "ident": "EBSP",
+    "iso_country": "BE",
+    "icao_code": "EBSP",
+    "length_ft": 2621,
+    "width_ft": 98,
+    "heading": 48,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -339,7 +565,13 @@
     "freq": "119.980",
     "Lat": 50.790772,
     "Lon": 5.19958,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "EBST",
+    "iso_country": "BE",
+    "length_ft": 3597,
+    "width_ft": 164,
+    "heading": 57.5,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -348,7 +580,13 @@
     "freq": "",
     "Lat": 50.034401,
     "Lon": 5.44081,
-    "Ele": 588.3
+    "Ele": 588.3,
+    "ident": "EBSU",
+    "iso_country": "BE",
+    "length_ft": 8528,
+    "width_ft": 147,
+    "heading": 66.6,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -357,7 +595,14 @@
     "freq": "125.375",
     "Lat": 50.7817,
     "Lon": 4.95778,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "EBTN",
+    "iso_country": "BE",
+    "icao_code": "EBTN",
+    "length_ft": 2560,
+    "width_ft": 100,
+    "heading": 60,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -366,7 +611,14 @@
     "freq": "119.000",
     "Lat": 50.551099,
     "Lon": 5.853996,
-    "Ele": 335.0
+    "Ele": 335,
+    "ident": "EBTX",
+    "iso_country": "BE",
+    "icao_code": "EBTX",
+    "length_ft": 2421,
+    "width_ft": 72,
+    "QFU": "24",
+    "heading": 240
   },
   {
     "type": "small_airport",
@@ -375,7 +627,14 @@
     "freq": "118.425",
     "Lat": 50.531639,
     "Lon": 3.496185,
-    "Ele": 49.1
+    "Ele": 49.1,
+    "ident": "EBTY",
+    "iso_country": "BE",
+    "icao_code": "EBTY",
+    "length_ft": 2067,
+    "width_ft": 59,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -384,7 +643,13 @@
     "freq": "135.130",
     "Lat": 51.144199,
     "Lon": 3.47556,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "EBUL",
+    "iso_country": "BE",
+    "length_ft": 9777,
+    "width_ft": 148,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -393,7 +658,13 @@
     "freq": "120.225",
     "Lat": 51.394798,
     "Lon": 4.96019,
-    "Ele": 32.0
+    "Ele": 32,
+    "ident": "EBWE",
+    "iso_country": "BE",
+    "length_ft": 9777,
+    "width_ft": 147,
+    "heading": 68,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -402,7 +673,13 @@
     "freq": "118.330",
     "Lat": 50.970375,
     "Lon": 5.375331,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "EBZH",
+    "iso_country": "BE",
+    "icao_code": "EBZH",
+    "length_ft": 1967,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -411,7 +688,15 @@
     "freq": "123.805",
     "Lat": 51.269092,
     "Lon": 4.762428,
-    "Ele": 16.2
+    "Ele": 16.2,
+    "ident": "EBZR",
+    "iso_country": "BE",
+    "icao_code": "EBZR",
+    "iata_code": "OBL",
+    "length_ft": 2621,
+    "width_ft": 148,
+    "heading": 48,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -420,7 +705,13 @@
     "freq": "123.425",
     "Lat": 51.25555,
     "Lon": 3.139858,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "EBZU",
+    "iso_country": "BE",
+    "length_ft": 400,
+    "width_ft": 18,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -429,6 +720,13 @@
     "freq": "120.400",
     "Lat": 51.0154,
     "Lon": 5.52647,
-    "Ele": 84.7
+    "Ele": 84.7,
+    "ident": "EBZW",
+    "iso_country": "BE",
+    "icao_code": "EBZW",
+    "length_ft": 2148,
+    "width_ft": 59,
+    "heading": 34,
+    "QFU": "21"
   }
 ]

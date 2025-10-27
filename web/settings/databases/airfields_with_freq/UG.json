@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 3.339239,
     "Lon": 31.763854,
-    "Ele": 795.8
+    "Ele": 795.8,
+    "ident": "HUAJ",
+    "iso_country": "UG",
+    "icao_code": "HUAJ",
+    "length_ft": 3710,
+    "width_ft": 65,
+    "heading": 91.7,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -15,7 +22,14 @@
     "freq": "",
     "Lat": 3.049152,
     "Lon": 30.911714,
-    "Ele": 1204.3
+    "Ele": 1204.3,
+    "ident": "HUAR",
+    "iso_country": "UG",
+    "icao_code": "HUAR",
+    "iata_code": "RUA",
+    "length_ft": 5600,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -24,7 +38,10 @@
     "freq": "",
     "Lat": 0.67349,
     "Lon": 30.025483,
-    "Ele": 944.9
+    "Ele": 944.9,
+    "ident": "HUBU",
+    "iso_country": "UG",
+    "icao_code": "HUBU"
   },
   {
     "type": "large_airport",
@@ -33,7 +50,15 @@
     "freq": "126.600",
     "Lat": 0.042386,
     "Lon": 32.443501,
-    "Ele": 1152.8
+    "Ele": 1152.8,
+    "ident": "HUEN",
+    "iso_country": "UG",
+    "icao_code": "HUEN",
+    "iata_code": "EBB",
+    "length_ft": 12000,
+    "width_ft": 150,
+    "heading": 171,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -42,7 +67,10 @@
     "freq": "",
     "Lat": 0.7063,
     "Lon": 30.2493,
-    "Ele": 1601.7
+    "Ele": 1601.7,
+    "ident": "HUFP",
+    "iso_country": "UG",
+    "local_code": "HUFP"
   },
   {
     "type": "small_airport",
@@ -51,7 +79,13 @@
     "freq": "",
     "Lat": 2.202788,
     "Lon": 31.554341,
-    "Ele": 753.5
+    "Ele": 753.5,
+    "ident": "HUGG",
+    "iso_country": "UG",
+    "icao_code": "HUGG",
+    "length_ft": 5055,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -60,7 +94,15 @@
     "freq": "123.700",
     "Lat": 2.805560111999512,
     "Lon": 32.27180099487305,
-    "Ele": 1069.8
+    "Ele": 1069.8,
+    "ident": "HUGU",
+    "iso_country": "UG",
+    "icao_code": "HUGU",
+    "iata_code": "ULU",
+    "length_ft": 10314,
+    "width_ft": 98,
+    "heading": 160,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -69,7 +111,11 @@
     "freq": "",
     "Lat": 0.453094,
     "Lon": 33.19356,
-    "Ele": 1175.0
+    "Ele": 1175,
+    "ident": "HUJI",
+    "iso_country": "UG",
+    "icao_code": "HUJI",
+    "iata_code": "JIN"
   },
   {
     "type": "small_airport",
@@ -78,7 +124,9 @@
     "freq": "",
     "Lat": -1.226111,
     "Lon": 29.96,
-    "Ele": 1828.8
+    "Ele": 1828.8,
+    "ident": "HUKB",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -87,7 +135,9 @@
     "freq": "",
     "Lat": 3.7176,
     "Lon": 33.7487,
-    "Ele": 1229.3
+    "Ele": 1229.3,
+    "ident": "HUKD",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -96,7 +146,14 @@
     "freq": "",
     "Lat": 0.1968,
     "Lon": 32.55297,
-    "Ele": 1140.9
+    "Ele": 1140.9,
+    "ident": "HUKJ",
+    "iso_country": "UG",
+    "iata_code": "KJJ",
+    "length_ft": 3630,
+    "width_ft": 81,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -105,7 +162,9 @@
     "freq": "",
     "Lat": 0.4933,
     "Lon": 33.281,
-    "Ele": 1207.6
+    "Ele": 1207.6,
+    "ident": "HUKK",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -114,7 +173,9 @@
     "freq": "",
     "Lat": 2.953,
     "Lon": 34.1232,
-    "Ele": 1225.3
+    "Ele": 1225.3,
+    "ident": "HUKO",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -123,7 +184,14 @@
     "freq": "",
     "Lat": 0.183,
     "Lon": 30.1,
-    "Ele": 958.9
+    "Ele": 958.9,
+    "ident": "HUKS",
+    "iso_country": "UG",
+    "icao_code": "HUKS",
+    "iata_code": "KSE",
+    "length_ft": 5151,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -132,7 +200,9 @@
     "freq": "",
     "Lat": 3.2817,
     "Lon": 32.8882,
-    "Ele": 954.0
+    "Ele": 954,
+    "ident": "HUKT",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -141,7 +211,9 @@
     "freq": "",
     "Lat": 2.25,
     "Lon": 32.9169998169,
-    "Ele": 1091.2
+    "Ele": 1091.2,
+    "ident": "HULI",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -150,7 +222,15 @@
     "freq": "",
     "Lat": -0.555278,
     "Lon": 30.5994,
-    "Ele": 1402.1
+    "Ele": 1402.1,
+    "ident": "HUMA",
+    "iso_country": "UG",
+    "icao_code": "HUMA",
+    "iata_code": "MBQ",
+    "length_ft": 5446,
+    "width_ft": 100,
+    "heading": 104,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -159,7 +239,11 @@
     "freq": "",
     "Lat": 1.75806,
     "Lon": 31.7367,
-    "Ele": 1173.5
+    "Ele": 1173.5,
+    "ident": "HUMI",
+    "iso_country": "UG",
+    "icao_code": "HUMI",
+    "iata_code": "KCU"
   },
   {
     "type": "small_airport",
@@ -168,7 +252,9 @@
     "freq": "",
     "Lat": 2.5051,
     "Lon": 34.5946,
-    "Ele": 1271.0
+    "Ele": 1271,
+    "ident": "HUMO",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -177,7 +263,9 @@
     "freq": "",
     "Lat": -0.194,
     "Lon": 29.8941,
-    "Ele": 963.2
+    "Ele": 963.2,
+    "ident": "HUMW",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -186,7 +274,15 @@
     "freq": "",
     "Lat": 2.326563,
     "Lon": 31.497698,
-    "Ele": 720.9
+    "Ele": 720.9,
+    "ident": "HUPA",
+    "iso_country": "UG",
+    "icao_code": "HUPA",
+    "iata_code": "PAF",
+    "length_ft": 5774,
+    "width_ft": 98,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -195,7 +291,15 @@
     "freq": "121.100",
     "Lat": 1.7276899814605713,
     "Lon": 33.622798919677734,
-    "Ele": 1126.8
+    "Ele": 1126.8,
+    "ident": "HUSO",
+    "iso_country": "UG",
+    "icao_code": "HUSO",
+    "iata_code": "SRT",
+    "length_ft": 2525,
+    "width_ft": 98,
+    "heading": 90.5,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -204,7 +308,11 @@
     "freq": "",
     "Lat": 0.683,
     "Lon": 34.167,
-    "Ele": 1170.4
+    "Ele": 1170.4,
+    "ident": "HUTO",
+    "iso_country": "UG",
+    "icao_code": "HUTO",
+    "iata_code": "TRY"
   },
   {
     "type": "small_airport",
@@ -213,7 +321,14 @@
     "freq": "",
     "Lat": -1.2837,
     "Lon": 29.7197,
-    "Ele": 1889.8
+    "Ele": 1889.8,
+    "ident": "UG-0001",
+    "iso_country": "UG",
+    "iata_code": "KXO",
+    "length_ft": 3937,
+    "width_ft": 72,
+    "heading": 172,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -222,7 +337,10 @@
     "freq": "",
     "Lat": -0.7165,
     "Lon": 29.6997,
-    "Ele": 1097.3
+    "Ele": 1097.3,
+    "ident": "UG-0002",
+    "iso_country": "UG",
+    "iata_code": "KHX"
   },
   {
     "type": "small_airport",
@@ -231,7 +349,9 @@
     "freq": "",
     "Lat": -0.9273,
     "Lon": 31.4417,
-    "Ele": 1164.3
+    "Ele": 1164.3,
+    "ident": "UG-0003",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -240,7 +360,9 @@
     "freq": "",
     "Lat": 1.4077,
     "Lon": 32.4642,
-    "Ele": 1086.6
+    "Ele": 1086.6,
+    "ident": "UG-0004",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -249,7 +371,9 @@
     "freq": "",
     "Lat": 3.409147,
     "Lon": 30.969793,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0005",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -258,7 +382,9 @@
     "freq": "",
     "Lat": 3.044704,
     "Lon": 33.379279,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0006",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -267,7 +393,10 @@
     "freq": "",
     "Lat": 2.239199,
     "Lon": 32.14468,
-    "Ele": 957.1
+    "Ele": 957.1,
+    "ident": "UG-0007",
+    "iso_country": "UG",
+    "local_code": "HUOY"
   },
   {
     "type": "small_airport",
@@ -276,7 +405,9 @@
     "freq": "",
     "Lat": 2.449456,
     "Lon": 34.396493,
-    "Ele": 1187.2
+    "Ele": 1187.2,
+    "ident": "UG-0008",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -285,7 +416,9 @@
     "freq": "",
     "Lat": 1.47099,
     "Lon": 30.93749,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0009",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -294,7 +427,9 @@
     "freq": "",
     "Lat": 1.246181,
     "Lon": 30.747939,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0010",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -303,7 +438,9 @@
     "freq": "",
     "Lat": 1.555726,
     "Lon": 31.094862,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0011",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -312,7 +449,9 @@
     "freq": "",
     "Lat": 1.80863,
     "Lon": 31.342983,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0012",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -321,7 +460,9 @@
     "freq": "",
     "Lat": -0.40721,
     "Lon": 32.50876,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0014",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -330,7 +471,9 @@
     "freq": "",
     "Lat": -0.02421,
     "Lon": 32.66506,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "UG-0015",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -339,7 +482,9 @@
     "freq": "",
     "Lat": -0.862163,
     "Lon": 29.639553,
-    "Ele": 1158.2
+    "Ele": 1158.2,
+    "ident": "UG-0016",
+    "iso_country": "UG"
   },
   {
     "type": "small_airport",
@@ -348,6 +493,12 @@
     "freq": "",
     "Lat": 3.6444,
     "Lon": 31.762762,
-    "Ele": 990.6
+    "Ele": 990.6,
+    "ident": "UG-OYG",
+    "iso_country": "UG",
+    "iata_code": "OYG",
+    "length_ft": 4260,
+    "QFU": "20",
+    "heading": 200
   }
 ]

@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": -26.867000579833984,
     "Lon": 31.933000564575195,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "FDBM",
+    "iso_country": "SZ"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": -26.836111,
     "Lon": 31.92,
-    "Ele": 164.9
+    "Ele": 164.9,
+    "ident": "FDBS",
+    "iso_country": "SZ"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,10 @@
     "freq": "",
     "Lat": -26.735201,
     "Lon": 31.7759,
-    "Ele": 181.4
+    "Ele": 181.4,
+    "ident": "FDBT",
+    "iso_country": "SZ",
+    "icao_code": "FDBT"
   },
   {
     "type": "small_airport",
@@ -33,7 +40,9 @@
     "freq": "",
     "Lat": -27.32010078430176,
     "Lon": 31.889799118041992,
-    "Ele": 171.6
+    "Ele": 171.6,
+    "ident": "FDGL",
+    "iso_country": "SZ"
   },
   {
     "type": "small_airport",
@@ -42,7 +51,10 @@
     "freq": "",
     "Lat": -26.881528,
     "Lon": 31.488889,
-    "Ele": 474.0
+    "Ele": 474,
+    "ident": "FDKB",
+    "iso_country": "SZ",
+    "icao_code": "FDKB"
   },
   {
     "type": "small_airport",
@@ -51,7 +63,10 @@
     "freq": "",
     "Lat": -26.0242,
     "Lon": 31.809999,
-    "Ele": 282.2
+    "Ele": 282.2,
+    "ident": "FDMH",
+    "iso_country": "SZ",
+    "icao_code": "FDMH"
   },
   {
     "type": "medium_airport",
@@ -60,7 +75,15 @@
     "freq": "124.900",
     "Lat": -26.528999,
     "Lon": 31.307501,
-    "Ele": 632.5
+    "Ele": 632.5,
+    "ident": "FDMS",
+    "iso_country": "SZ",
+    "icao_code": "FDMS",
+    "iata_code": "MTS",
+    "length_ft": 8530,
+    "width_ft": 148,
+    "heading": 53,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -69,7 +92,10 @@
     "freq": "",
     "Lat": -25.798056,
     "Lon": 31.4125,
-    "Ele": 429.8
+    "Ele": 429.8,
+    "ident": "FDNG",
+    "iso_country": "SZ",
+    "icao_code": "FDNG"
   },
   {
     "type": "small_airport",
@@ -78,7 +104,10 @@
     "freq": "",
     "Lat": -27.119494,
     "Lon": 31.212118,
-    "Ele": 1073.5
+    "Ele": 1073.5,
+    "ident": "FDNH",
+    "iso_country": "SZ",
+    "icao_code": "FDNH"
   },
   {
     "type": "small_airport",
@@ -87,7 +116,14 @@
     "freq": "",
     "Lat": -26.987222,
     "Lon": 31.937222,
-    "Ele": 187.1
+    "Ele": 187.1,
+    "ident": "FDNS",
+    "iso_country": "SZ",
+    "icao_code": "FDNS",
+    "length_ft": 3970,
+    "width_ft": 59,
+    "heading": 12,
+    "QFU": "21"
   },
   {
     "type": "large_airport",
@@ -96,7 +132,15 @@
     "freq": "128.000",
     "Lat": -26.358611,
     "Lon": 31.716944,
-    "Ele": 332.8
+    "Ele": 332.8,
+    "ident": "FDSK",
+    "iso_country": "SZ",
+    "icao_code": "FDSK",
+    "iata_code": "SHO",
+    "length_ft": 11811,
+    "width_ft": 197,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
@@ -105,7 +149,10 @@
     "freq": "",
     "Lat": -26.200001,
     "Lon": 31.933332,
-    "Ele": 205.1
+    "Ele": 205.1,
+    "ident": "FDSM",
+    "iso_country": "SZ",
+    "icao_code": "FDSM"
   },
   {
     "type": "small_airport",
@@ -114,7 +161,10 @@
     "freq": "",
     "Lat": -26.471957,
     "Lon": 31.942567,
-    "Ele": 676.7
+    "Ele": 676.7,
+    "ident": "FDST",
+    "iso_country": "SZ",
+    "icao_code": "FDST"
   },
   {
     "type": "small_airport",
@@ -123,7 +173,10 @@
     "freq": "",
     "Lat": -26.106429,
     "Lon": 31.919489,
-    "Ele": 247.2
+    "Ele": 247.2,
+    "ident": "FDTM",
+    "iso_country": "SZ",
+    "icao_code": "FDTM"
   },
   {
     "type": "small_airport",
@@ -132,7 +185,10 @@
     "freq": "",
     "Lat": -25.983334,
     "Lon": 31.200001,
-    "Ele": 310.9
+    "Ele": 310.9,
+    "ident": "FDTS",
+    "iso_country": "SZ",
+    "icao_code": "FDTS"
   },
   {
     "type": "small_airport",
@@ -141,6 +197,9 @@
     "freq": "",
     "Lat": -26.7708,
     "Lon": 31.936399,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "FDUB",
+    "iso_country": "SZ",
+    "icao_code": "FDUB"
   }
 ]

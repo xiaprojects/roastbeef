@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 35.396467,
     "Lon": 77.928965,
-    "Ele": 4937.8
+    "Ele": 4937.8,
+    "ident": "IN-0003",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 28.12967300415,
     "Lon": 97.019660949707,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0010",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -24,7 +28,11 @@
     "freq": "122.250",
     "Lat": 13.07674,
     "Lon": 77.597645,
-    "Ele": 918.4
+    "Ele": 918.4,
+    "ident": "IN-0011",
+    "iso_country": "IN",
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -33,7 +41,11 @@
     "freq": "",
     "Lat": 27.2313,
     "Lon": 88.587196,
-    "Ele": 1399.0
+    "Ele": 1399,
+    "ident": "IN-0012",
+    "iso_country": "IN",
+    "icao_code": "VEPY",
+    "iata_code": "PYG"
   },
   {
     "type": "small_airport",
@@ -42,7 +54,13 @@
     "freq": "123.250",
     "Lat": 17.306142,
     "Lon": 78.561004,
-    "Ele": 552.0
+    "Ele": 552,
+    "ident": "IN-0013",
+    "iso_country": "IN",
+    "length_ft": 3000,
+    "width_ft": 75,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -51,7 +69,9 @@
     "freq": "",
     "Lat": 25.661487579345703,
     "Lon": 90.34503936767578,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0015",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -60,7 +80,13 @@
     "freq": "",
     "Lat": 21.621416,
     "Lon": 71.226309,
-    "Ele": 130.5
+    "Ele": 130.5,
+    "ident": "IN-0023",
+    "iso_country": "IN",
+    "length_ft": 4600,
+    "width_ft": 90,
+    "heading": 44,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -69,7 +95,14 @@
     "freq": "129.250",
     "Lat": 18.226944,
     "Lon": 74.590833,
-    "Ele": 602.9
+    "Ele": 602.9,
+    "ident": "IN-0024",
+    "iso_country": "IN",
+    "local_code": "BMT",
+    "length_ft": 5500,
+    "width_ft": 100,
+    "heading": 110,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -78,7 +111,15 @@
     "freq": "120.450",
     "Lat": 26.751283,
     "Lon": 82.155295,
-    "Ele": 102.1
+    "Ele": 102.1,
+    "ident": "IN-0025",
+    "iso_country": "IN",
+    "icao_code": "VEAY",
+    "iata_code": "AYJ",
+    "length_ft": 8000,
+    "width_ft": 200,
+    "heading": 114,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -87,7 +128,13 @@
     "freq": "",
     "Lat": 22.4141666667,
     "Lon": 82.7194444444,
-    "Ele": 365.8
+    "Ele": 365.8,
+    "ident": "IN-0026",
+    "iso_country": "IN",
+    "length_ft": 3900,
+    "width_ft": 45,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -96,7 +143,14 @@
     "freq": "",
     "Lat": 18.609617,
     "Lon": 73.377583,
-    "Ele": 689.5
+    "Ele": 689.5,
+    "ident": "IN-0033",
+    "iso_country": "IN",
+    "icao_code": "VAAV",
+    "length_ft": 3937,
+    "width_ft": 99,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -105,7 +159,9 @@
     "freq": "",
     "Lat": 19.8841,
     "Lon": 73.84056666670001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0034",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -114,7 +170,13 @@
     "freq": "",
     "Lat": 13.236316,
     "Lon": 93.049731,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "IN-0053",
+    "iso_country": "IN",
+    "length_ft": 3300,
+    "width_ft": 75,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -123,7 +185,9 @@
     "freq": "",
     "Lat": 21.8100301946,
     "Lon": 75.55443763730001,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0060",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -132,7 +196,9 @@
     "freq": "",
     "Lat": 21.857117,
     "Lon": 76.336956,
-    "Ele": 328.9
+    "Ele": 328.9,
+    "ident": "IN-0061",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -141,7 +207,9 @@
     "freq": "122.750",
     "Lat": 21.3239987933,
     "Lon": 74.9567341805,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0062",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -150,7 +218,13 @@
     "freq": "",
     "Lat": 23.5325139099,
     "Lon": 80.80821990970001,
-    "Ele": 460.2
+    "Ele": 460.2,
+    "ident": "IN-0064",
+    "iso_country": "IN",
+    "length_ft": 4920,
+    "width_ft": 82,
+    "QFU": "32",
+    "heading": 320
   },
   {
     "type": "small_airport",
@@ -159,7 +233,10 @@
     "freq": "",
     "Lat": 20.814608,
     "Lon": 77.717765,
-    "Ele": 342.9
+    "Ele": 342.9,
+    "ident": "IN-0065",
+    "iso_country": "IN",
+    "icao_code": "VAAM"
   },
   {
     "type": "small_airport",
@@ -168,7 +245,9 @@
     "freq": "",
     "Lat": 26.329167,
     "Lon": 86.06,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0066",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -177,7 +256,11 @@
     "freq": "",
     "Lat": 25.42788,
     "Lon": 86.08819,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0067",
+    "iso_country": "IN",
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -186,7 +269,9 @@
     "freq": "",
     "Lat": 22.092639,
     "Lon": 80.595531,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0068",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -195,7 +280,11 @@
     "freq": "122.425",
     "Lat": 26.2475,
     "Lon": 82.0425,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0069",
+    "iso_country": "IN",
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -204,7 +293,13 @@
     "freq": "0.247",
     "Lat": 21.9352805556,
     "Lon": 83.3502138889,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0072",
+    "iso_country": "IN",
+    "length_ft": 6626,
+    "width_ft": 100,
+    "heading": 103,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -213,7 +308,13 @@
     "freq": "",
     "Lat": 20.910055,
     "Lon": 85.036669,
-    "Ele": 189.9
+    "Ele": 189.9,
+    "ident": "IN-0073",
+    "iso_country": "IN",
+    "length_ft": 4133,
+    "width_ft": 100,
+    "heading": 111,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -222,7 +323,14 @@
     "freq": "131.500",
     "Lat": 22.045829,
     "Lon": 85.373468,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0074",
+    "iso_country": "IN",
+    "icao_code": "VEBL",
+    "length_ft": 3255,
+    "width_ft": 50,
+    "heading": 4,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -231,7 +339,12 @@
     "freq": "",
     "Lat": 25.249535,
     "Lon": 87.011976,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0077",
+    "iso_country": "IN",
+    "length_ft": 3500,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -240,16 +353,24 @@
     "freq": "",
     "Lat": 26.434072,
     "Lon": 73.101472,
-    "Ele": 234.1
+    "Ele": 234.1,
+    "ident": "IN-0085",
+    "iso_country": "IN",
+    "length_ft": 4577,
+    "width_ft": 164,
+    "QFU": "20",
+    "heading": 200
   },
   {
     "type": "small_airport",
     "name": "CHINDWARA AIRFIELD",
     "gps_code": "IN-0086",
     "freq": "",
-    "Lat": 22.0,
+    "Lat": 22,
     "Lon": 78.93,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0086",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -258,7 +379,9 @@
     "freq": "",
     "Lat": 30.284585,
     "Lon": 79.161665,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0087",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -267,7 +390,9 @@
     "freq": "",
     "Lat": 33.76875,
     "Lon": 74.083753,
-    "Ele": 981.2
+    "Ele": 981.2,
+    "ident": "IN-0088",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -276,7 +401,9 @@
     "freq": "",
     "Lat": 22.192222,
     "Lon": 85.548889,
-    "Ele": 427.3
+    "Ele": 427.3,
+    "ident": "IN-0089",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -285,7 +412,9 @@
     "freq": "",
     "Lat": 25.892205,
     "Lon": 86.583016,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0091",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -294,7 +423,9 @@
     "freq": "",
     "Lat": 19.7194444444,
     "Lon": 83.3936111111,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0093",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -303,7 +434,9 @@
     "freq": "",
     "Lat": 25.8077,
     "Lon": 70.2943,
-    "Ele": 70.1
+    "Ele": 70.1,
+    "ident": "IN-0096",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -312,7 +445,9 @@
     "freq": "",
     "Lat": 24.18824,
     "Lon": 87.701722,
-    "Ele": 85.3
+    "Ele": 85.3,
+    "ident": "IN-0097",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -321,7 +456,9 @@
     "freq": "",
     "Lat": 23.58331,
     "Lon": 87.339787,
-    "Ele": 88.4
+    "Ele": 88.4,
+    "ident": "IN-0099",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -330,7 +467,9 @@
     "freq": "",
     "Lat": 24.231185,
     "Lon": 87.269989,
-    "Ele": 143.3
+    "Ele": 143.3,
+    "ident": "IN-0100",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -339,7 +478,9 @@
     "freq": "",
     "Lat": 26.407627,
     "Lon": 75.870128,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0101",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -348,7 +489,9 @@
     "freq": "",
     "Lat": 22.500929,
     "Lon": 80.331195,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0102",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -357,7 +500,9 @@
     "freq": "",
     "Lat": 22.412068,
     "Lon": 68.993632,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "IN-0106",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -366,7 +511,11 @@
     "freq": "",
     "Lat": 16.002552,
     "Lon": 73.529846,
-    "Ele": 61.9
+    "Ele": 61.9,
+    "ident": "IN-0107",
+    "iso_country": "IN",
+    "icao_code": "VOSR",
+    "iata_code": "SDW"
   },
   {
     "type": "small_airport",
@@ -375,7 +524,9 @@
     "freq": "",
     "Lat": 22.83932,
     "Lon": 69.30498,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0176",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -384,7 +535,9 @@
     "freq": "",
     "Lat": 23.60118,
     "Lon": 72.37399,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0177",
+    "iso_country": "IN"
   },
   {
     "type": "large_airport",
@@ -393,7 +546,15 @@
     "freq": "",
     "Lat": 18.984597,
     "Lon": 73.065253,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "IN-0276",
+    "iso_country": "IN",
+    "icao_code": "VANM",
+    "iata_code": "NMI",
+    "length_ft": 12139,
+    "width_ft": 197,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -402,7 +563,9 @@
     "freq": "",
     "Lat": 33.55493,
     "Lon": 78.72214,
-    "Ele": 4332.1
+    "Ele": 4332.1,
+    "ident": "IN-0279",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -411,7 +574,9 @@
     "freq": "",
     "Lat": 19.34564,
     "Lon": 83.43444,
-    "Ele": 253.0
+    "Ele": 253,
+    "ident": "IN-0283",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -420,7 +585,9 @@
     "freq": "",
     "Lat": 17.728462,
     "Lon": 78.700909,
-    "Ele": 612.6
+    "Ele": 612.6,
+    "ident": "IN-0300",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -429,7 +596,11 @@
     "freq": "",
     "Lat": 13.858024,
     "Lon": 75.618868,
-    "Ele": 614.8
+    "Ele": 614.8,
+    "ident": "IN-0301",
+    "iso_country": "IN",
+    "icao_code": "VOSH",
+    "iata_code": "RQY"
   },
   {
     "type": "small_airport",
@@ -438,7 +609,9 @@
     "freq": "",
     "Lat": 33.16913,
     "Lon": 78.72971,
-    "Ele": 4141.9
+    "Ele": 4141.9,
+    "ident": "IN-0302",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -447,7 +620,9 @@
     "freq": "",
     "Lat": 28.98876,
     "Lon": 94.89863,
-    "Ele": 476.1
+    "Ele": 476.1,
+    "ident": "IN-0307",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -456,7 +631,14 @@
     "freq": "",
     "Lat": 26.96683,
     "Lon": 93.638792,
-    "Ele": 100.0
+    "Ele": 100,
+    "ident": "IN-0308",
+    "iso_country": "IN",
+    "iata_code": "HGI",
+    "length_ft": 8000,
+    "width_ft": 200,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -465,7 +647,9 @@
     "freq": "",
     "Lat": 20.98366,
     "Lon": 85.681622,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "IN-0338",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -474,7 +658,9 @@
     "freq": "",
     "Lat": 27.316258,
     "Lon": 79.451555,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0341",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -483,7 +669,9 @@
     "freq": "",
     "Lat": 26.58182,
     "Lon": 79.96797,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0342",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -492,7 +680,9 @@
     "freq": "",
     "Lat": 25.67292,
     "Lon": 81.49592,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0343",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -501,7 +691,9 @@
     "freq": "",
     "Lat": 25.6155,
     "Lon": 83.56064,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0345",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -510,7 +702,10 @@
     "freq": "",
     "Lat": 25.59124,
     "Lon": 84.88312,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "IN-0346",
+    "iso_country": "IN",
+    "icao_code": "VEBT"
   },
   {
     "type": "small_airport",
@@ -519,7 +714,9 @@
     "freq": "",
     "Lat": 27.53606,
     "Lon": 95.2682,
-    "Ele": 118.9
+    "Ele": 118.9,
+    "ident": "IN-0360",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -528,7 +725,14 @@
     "freq": "123.450",
     "Lat": 20.9265,
     "Lon": 74.737099,
-    "Ele": 280.4
+    "Ele": 280.4,
+    "ident": "IN-0363",
+    "iso_country": "IN",
+    "local_code": "VA53",
+    "length_ft": 4115,
+    "width_ft": 100,
+    "heading": 95,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -537,7 +741,14 @@
     "freq": "",
     "Lat": 24.4942,
     "Lon": 72.781502,
-    "Ele": 266.7
+    "Ele": 266.7,
+    "ident": "IN-0364",
+    "iso_country": "IN",
+    "local_code": "VA74",
+    "length_ft": 3736,
+    "width_ft": 49,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -546,7 +757,10 @@
     "freq": "",
     "Lat": 22.874296,
     "Lon": 74.243247,
-    "Ele": 262.1
+    "Ele": 262.1,
+    "ident": "IN-0367",
+    "iso_country": "IN",
+    "local_code": "JLG"
   },
   {
     "type": "medium_airport",
@@ -555,7 +769,13 @@
     "freq": "",
     "Lat": 20.395781,
     "Lon": 78.216272,
-    "Ele": 427.6
+    "Ele": 427.6,
+    "ident": "IN-0369",
+    "iso_country": "IN",
+    "local_code": "VA78",
+    "length_ft": 7546,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -564,7 +784,9 @@
     "freq": "",
     "Lat": 26.65022,
     "Lon": 77.792484,
-    "Ele": 241.1
+    "Ele": 241.1,
+    "ident": "IN-0370",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -573,7 +795,9 @@
     "freq": "",
     "Lat": 27.729912,
     "Lon": 75.24086,
-    "Ele": 437.1
+    "Ele": 437.1,
+    "ident": "IN-0373",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -582,7 +806,10 @@
     "freq": "",
     "Lat": 20.097778,
     "Lon": 83.183333,
-    "Ele": 208.8
+    "Ele": 208.8,
+    "ident": "IN-0376",
+    "iso_country": "IN",
+    "iata_code": "UKE"
   },
   {
     "type": "small_airport",
@@ -591,7 +818,14 @@
     "freq": "",
     "Lat": 19.963699,
     "Lon": 73.807602,
-    "Ele": 597.1
+    "Ele": 597.1,
+    "ident": "IN-0382",
+    "iso_country": "IN",
+    "icao_code": "VANR",
+    "length_ft": 4520,
+    "width_ft": 150,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -600,7 +834,9 @@
     "freq": "",
     "Lat": 11.862516,
     "Lon": 75.366505,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "IN-0390",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -609,7 +845,10 @@
     "freq": "",
     "Lat": 28.175556,
     "Lon": 77.60611,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "IN-0392",
+    "iso_country": "IN",
+    "icao_code": "VIND"
   },
   {
     "type": "medium_airport",
@@ -618,7 +857,14 @@
     "freq": "",
     "Lat": 22.98753,
     "Lon": 83.19612,
-    "Ele": 588.3
+    "Ele": 588.3,
+    "ident": "IN-0393",
+    "iso_country": "IN",
+    "icao_code": "VEAP",
+    "iata_code": "AHA",
+    "length_ft": 6299,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "small_airport",
@@ -627,7 +873,12 @@
     "freq": "",
     "Lat": 19.074301,
     "Lon": 82.036797,
-    "Ele": 555.3
+    "Ele": 555.3,
+    "ident": "IN-JGB",
+    "iso_country": "IN",
+    "icao_code": "VEJR",
+    "iata_code": "JGB",
+    "local_code": "VEJR"
   },
   {
     "type": "small_airport",
@@ -636,7 +887,10 @@
     "freq": "",
     "Lat": 33.377899,
     "Lon": 74.315201,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "IN-RJI",
+    "iso_country": "IN",
+    "iata_code": "RJI"
   },
   {
     "type": "small_airport",
@@ -645,7 +899,14 @@
     "freq": "",
     "Lat": 24.895099639892575,
     "Lon": 72.84590148925781,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "IN-VA38",
+    "iso_country": "IN",
+    "local_code": "VA38",
+    "length_ft": 5780,
+    "width_ft": 50,
+    "heading": 128.8,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -654,7 +915,14 @@
     "freq": "",
     "Lat": 23.589259,
     "Lon": 74.314048,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "IN-VA51",
+    "iso_country": "IN",
+    "local_code": "VA51",
+    "length_ft": 4135,
+    "width_ft": 55,
+    "heading": 99.7,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -663,7 +931,9 @@
     "freq": "",
     "Lat": 18.281,
     "Lon": 76.0574,
-    "Ele": 694.0
+    "Ele": 694,
+    "ident": "OMN",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -672,7 +942,14 @@
     "freq": "",
     "Lat": 19.99469947814941,
     "Lon": 79.22250366210938,
-    "Ele": 190.5
+    "Ele": 190.5,
+    "ident": "VA1B",
+    "iso_country": "IN",
+    "local_code": "VA1B",
+    "length_ft": 3128,
+    "width_ft": 100,
+    "heading": 79.1,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -681,7 +958,14 @@
     "freq": "",
     "Lat": 23.4468994140625,
     "Lon": 75.42030334472656,
-    "Ele": 469.7
+    "Ele": 469.7,
+    "ident": "VA1C",
+    "iso_country": "IN",
+    "local_code": "VA1C",
+    "length_ft": 4887,
+    "width_ft": 80,
+    "heading": 140.3,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -690,7 +974,14 @@
     "freq": "122.100",
     "Lat": 24.125200271606445,
     "Lon": 83.04060363769531,
-    "Ele": 342.0
+    "Ele": 342,
+    "ident": "VA1D",
+    "iso_country": "IN",
+    "local_code": "VA1D",
+    "length_ft": 4665,
+    "width_ft": 85,
+    "heading": 84.3,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -699,7 +990,14 @@
     "freq": "",
     "Lat": 21.2942008972168,
     "Lon": 81.37950134277344,
-    "Ele": 309.1
+    "Ele": 309.1,
+    "ident": "VA1E",
+    "iso_country": "IN",
+    "local_code": "VA1E",
+    "length_ft": 3900,
+    "width_ft": 95,
+    "heading": 44.1,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -708,7 +1006,14 @@
     "freq": "",
     "Lat": 24.402299880981445,
     "Lon": 81.8147964477539,
-    "Ele": 333.1
+    "Ele": 333.1,
+    "ident": "VA1F",
+    "iso_country": "IN",
+    "local_code": "VA1F",
+    "length_ft": 3540,
+    "width_ft": 50,
+    "heading": 63.6,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -717,7 +1022,15 @@
     "freq": "",
     "Lat": 24.503401,
     "Lon": 81.220299,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "VA1G",
+    "iso_country": "IN",
+    "iata_code": "REW",
+    "local_code": "VA1G",
+    "length_ft": 4593,
+    "width_ft": 95,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -726,7 +1039,14 @@
     "freq": "",
     "Lat": 25.14150047302246,
     "Lon": 74.61150360107422,
-    "Ele": 442.0
+    "Ele": 442,
+    "ident": "VA1H",
+    "iso_country": "IN",
+    "local_code": "VA1H",
+    "length_ft": 3895,
+    "width_ft": 98,
+    "heading": 173,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -735,7 +1055,14 @@
     "freq": "122.600",
     "Lat": 23.75359916687012,
     "Lon": 78.85579681396484,
-    "Ele": 520.0
+    "Ele": 520,
+    "ident": "VA1J",
+    "iso_country": "IN",
+    "local_code": "VA1J",
+    "length_ft": 3260,
+    "width_ft": 75,
+    "heading": 172,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -744,7 +1071,13 @@
     "freq": "",
     "Lat": 23.2223,
     "Lon": 68.891296,
-    "Ele": 41.1
+    "Ele": 41.1,
+    "ident": "VA1K",
+    "iso_country": "IN",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 60.1,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -753,7 +1086,14 @@
     "freq": "",
     "Lat": 21.926399,
     "Lon": 78.113602,
-    "Ele": 742.2
+    "Ele": 742.2,
+    "ident": "VA1L",
+    "iso_country": "IN",
+    "local_code": "VA1L",
+    "length_ft": 2279,
+    "width_ft": 175,
+    "heading": 81.5,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -762,7 +1102,14 @@
     "freq": "",
     "Lat": 17.285900115966797,
     "Lon": 74.15809631347656,
-    "Ele": 576.1
+    "Ele": 576.1,
+    "ident": "VA1M",
+    "iso_country": "IN",
+    "local_code": "VA1M",
+    "length_ft": 4200,
+    "width_ft": 100,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -771,7 +1118,14 @@
     "freq": "",
     "Lat": 24.43079948425293,
     "Lon": 74.8677978515625,
-    "Ele": 492.9
+    "Ele": 492.9,
+    "ident": "VA1N",
+    "iso_country": "IN",
+    "local_code": "VA1N",
+    "length_ft": 3610,
+    "width_ft": 95,
+    "heading": 139.9,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -780,7 +1134,14 @@
     "freq": "",
     "Lat": 23.235200881958008,
     "Lon": 81.50370025634766,
-    "Ele": 457.2
+    "Ele": 457.2,
+    "ident": "VA1O",
+    "iso_country": "IN",
+    "local_code": "VA1O",
+    "length_ft": 3670,
+    "width_ft": 50,
+    "heading": 143,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -789,7 +1150,16 @@
     "freq": "",
     "Lat": 20.714185,
     "Lon": 70.921855,
-    "Ele": 9.4
+    "Ele": 9.4,
+    "ident": "VA1P",
+    "iso_country": "IN",
+    "icao_code": "VADU",
+    "iata_code": "DIU",
+    "local_code": "VADU",
+    "length_ft": 3555,
+    "width_ft": 100,
+    "heading": 131,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -798,7 +1168,14 @@
     "freq": "",
     "Lat": 27.11289978027344,
     "Lon": 72.38899993896484,
-    "Ele": 238.0
+    "Ele": 238,
+    "ident": "VA2A",
+    "iso_country": "IN",
+    "local_code": "VA2A",
+    "length_ft": 3565,
+    "width_ft": 55,
+    "heading": 116.4,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -807,7 +1184,14 @@
     "freq": "",
     "Lat": 28.904933,
     "Lon": 77.677524,
-    "Ele": 223.1
+    "Ele": 223.1,
+    "ident": "VA2B",
+    "iso_country": "IN",
+    "local_code": "VA2B",
+    "length_ft": 5124,
+    "width_ft": 75,
+    "heading": 111.4,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -816,7 +1200,16 @@
     "freq": "230.000",
     "Lat": 21.526817,
     "Lon": 80.290347,
-    "Ele": 300.8
+    "Ele": 300.8,
+    "ident": "VA2C",
+    "iso_country": "IN",
+    "icao_code": "VAGD",
+    "iata_code": "GDB",
+    "local_code": "VA2C",
+    "length_ft": 7500,
+    "width_ft": 150,
+    "heading": 44,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -825,7 +1218,14 @@
     "freq": "",
     "Lat": 23.38139915466309,
     "Lon": 75.02559661865234,
-    "Ele": 518.8
+    "Ele": 518.8,
+    "ident": "VA2D",
+    "iso_country": "IN",
+    "local_code": "VA2D",
+    "length_ft": 3753,
+    "width_ft": 75,
+    "heading": 77,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -834,7 +1234,15 @@
     "freq": "123.750",
     "Lat": 23.0772,
     "Lon": 72.634697,
-    "Ele": 57.6
+    "Ele": 57.6,
+    "ident": "VAAH",
+    "iso_country": "IN",
+    "icao_code": "VAAH",
+    "iata_code": "AMD",
+    "length_ft": 11447,
+    "width_ft": 150,
+    "heading": 45,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -843,7 +1251,15 @@
     "freq": "",
     "Lat": 20.698931,
     "Lon": 77.056883,
-    "Ele": 304.5
+    "Ele": 304.5,
+    "ident": "VAAK",
+    "iso_country": "IN",
+    "icao_code": "VAAK",
+    "iata_code": "AKD",
+    "length_ft": 4600,
+    "width_ft": 145,
+    "heading": 103.3,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -852,7 +1268,15 @@
     "freq": "122.300",
     "Lat": 19.862699508666992,
     "Lon": 75.39810180664062,
-    "Ele": 582.5
+    "Ele": 582.5,
+    "ident": "VAAU",
+    "iso_country": "IN",
+    "icao_code": "VAAU",
+    "iata_code": "IXU",
+    "length_ft": 9314,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -861,7 +1285,15 @@
     "freq": "120.500",
     "Lat": 19.0886993408,
     "Lon": 72.8678970337,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "VABB",
+    "iso_country": "IN",
+    "icao_code": "VABB",
+    "iata_code": "BOM",
+    "length_ft": 9419,
+    "width_ft": 148,
+    "heading": 134.2,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -870,7 +1302,15 @@
     "freq": "123.500",
     "Lat": 23.2877998352,
     "Lon": 69.6701965332,
-    "Ele": 81.7
+    "Ele": 81.7,
+    "ident": "VABJ",
+    "iso_country": "IN",
+    "icao_code": "VABJ",
+    "iata_code": "BHJ",
+    "length_ft": 8205,
+    "width_ft": 150,
+    "heading": 45.2,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -879,7 +1319,15 @@
     "freq": "123.500",
     "Lat": 15.8593,
     "Lon": 74.618301,
-    "Ele": 758.0
+    "Ele": 758,
+    "ident": "VABM",
+    "iso_country": "IN",
+    "icao_code": "VOBM",
+    "iata_code": "IXG",
+    "length_ft": 7546,
+    "width_ft": 148,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -888,7 +1336,15 @@
     "freq": "122.350",
     "Lat": 22.336201,
     "Lon": 73.226303,
-    "Ele": 39.3
+    "Ele": 39.3,
+    "ident": "VABO",
+    "iso_country": "IN",
+    "icao_code": "VABO",
+    "iata_code": "BDQ",
+    "length_ft": 8100,
+    "width_ft": 150,
+    "heading": 44,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -897,7 +1353,15 @@
     "freq": "118.050",
     "Lat": 23.2875003815,
     "Lon": 77.3374023438,
-    "Ele": 521.5
+    "Ele": 521.5,
+    "ident": "VABP",
+    "iso_country": "IN",
+    "icao_code": "VABP",
+    "iata_code": "BHO",
+    "length_ft": 6700,
+    "width_ft": 148,
+    "heading": 117.6,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -906,7 +1370,15 @@
     "freq": "120.800",
     "Lat": 21.752199173,
     "Lon": 72.1852035522,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "VABV",
+    "iso_country": "IN",
+    "icao_code": "VABV",
+    "iata_code": "BHU",
+    "length_ft": 6300,
+    "width_ft": 150,
+    "heading": 67.9,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -915,7 +1387,15 @@
     "freq": "118.700",
     "Lat": 20.434401,
     "Lon": 72.843201,
-    "Ele": 10.1
+    "Ele": 10.1,
+    "ident": "VADN",
+    "iso_country": "IN",
+    "icao_code": "VADN",
+    "iata_code": "NMB",
+    "length_ft": 3282,
+    "width_ft": 80,
+    "heading": 94.1,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -924,7 +1404,13 @@
     "freq": "",
     "Lat": 24.2679,
     "Lon": 72.204399,
-    "Ele": 147.8
+    "Ele": 147.8,
+    "ident": "VADS",
+    "iso_country": "IN",
+    "length_ft": 3300,
+    "width_ft": 65,
+    "heading": 52.7,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -933,7 +1419,15 @@
     "freq": "",
     "Lat": 24.654699,
     "Lon": 77.347298,
-    "Ele": 487.7
+    "Ele": 487.7,
+    "ident": "VAGN",
+    "iso_country": "IN",
+    "icao_code": "VAGN",
+    "iata_code": "GUX",
+    "length_ft": 3000,
+    "width_ft": 45,
+    "heading": 141,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -942,7 +1436,15 @@
     "freq": "122.200",
     "Lat": 15.3617,
     "Lon": 75.0849,
-    "Ele": 661.7
+    "Ele": 661.7,
+    "ident": "VAHB",
+    "iso_country": "IN",
+    "icao_code": "VOHB",
+    "iata_code": "HBX",
+    "length_ft": 5479,
+    "width_ft": 100,
+    "heading": 82.8,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -951,7 +1453,15 @@
     "freq": "",
     "Lat": 22.378824,
     "Lon": 71.039391,
-    "Ele": 197.2
+    "Ele": 197.2,
+    "ident": "VAHS",
+    "iso_country": "IN",
+    "icao_code": "VAHS",
+    "iata_code": "HSR",
+    "length_ft": 9974,
+    "width_ft": 148,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -960,7 +1470,15 @@
     "freq": "122.300",
     "Lat": 22.7217998505,
     "Lon": 75.8011016846,
-    "Ele": 563.9
+    "Ele": 563.9,
+    "ident": "VAID",
+    "iso_country": "IN",
+    "icao_code": "VAID",
+    "iata_code": "IDR",
+    "length_ft": 7480,
+    "width_ft": 148,
+    "heading": 65.1,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -969,7 +1487,15 @@
     "freq": "122.300",
     "Lat": 23.177799,
     "Lon": 80.052002,
-    "Ele": 495.0
+    "Ele": 495,
+    "ident": "VAJB",
+    "iso_country": "IN",
+    "icao_code": "VAJB",
+    "iata_code": "JLR",
+    "length_ft": 6522,
+    "width_ft": 150,
+    "heading": 58.5,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -978,7 +1504,12 @@
     "freq": "",
     "Lat": 19.098100662231445,
     "Lon": 72.83419799804688,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "VAJJ",
+    "iso_country": "IN",
+    "length_ft": 3750,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -987,7 +1518,15 @@
     "freq": "131.675",
     "Lat": 20.962678,
     "Lon": 75.627492,
-    "Ele": 249.3
+    "Ele": 249.3,
+    "ident": "VAJL",
+    "iso_country": "IN",
+    "icao_code": "VAJL",
+    "iata_code": "JLG",
+    "length_ft": 5958,
+    "width_ft": 75,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -996,7 +1535,15 @@
     "freq": "123.500",
     "Lat": 22.465499877929688,
     "Lon": 70.01260375976562,
-    "Ele": 21.0
+    "Ele": 21,
+    "ident": "VAJM",
+    "iso_country": "IN",
+    "icao_code": "VAJM",
+    "iata_code": "JGA",
+    "length_ft": 8236,
+    "width_ft": 148,
+    "heading": 116,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1005,7 +1552,15 @@
     "freq": "122.300",
     "Lat": 23.1127,
     "Lon": 70.100304,
-    "Ele": 29.3
+    "Ele": 29.3,
+    "ident": "VAKE",
+    "iso_country": "IN",
+    "icao_code": "VAKE",
+    "iata_code": "IXY",
+    "length_ft": 4997,
+    "width_ft": 94,
+    "heading": 50,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1014,7 +1569,14 @@
     "freq": "118.150",
     "Lat": 24.8172,
     "Lon": 79.918602,
-    "Ele": 221.9
+    "Ele": 221.9,
+    "ident": "VAKJ",
+    "iso_country": "IN",
+    "iata_code": "HJR",
+    "length_ft": 7460,
+    "width_ft": 148,
+    "heading": 13.4,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -1023,7 +1585,15 @@
     "freq": "126.900",
     "Lat": 16.6647,
     "Lon": 74.289398,
-    "Ele": 608.4
+    "Ele": 608.4,
+    "ident": "VAKP",
+    "iso_country": "IN",
+    "icao_code": "VAKP",
+    "iata_code": "KLH",
+    "length_ft": 6332,
+    "width_ft": 147,
+    "heading": 70,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1032,7 +1602,15 @@
     "freq": "122.300",
     "Lat": 21.317101,
     "Lon": 70.270401,
-    "Ele": 50.9
+    "Ele": 50.9,
+    "ident": "VAKS",
+    "iso_country": "IN",
+    "icao_code": "VAKS",
+    "iata_code": "IXK",
+    "length_ft": 4500,
+    "width_ft": 150,
+    "heading": 50.3,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1041,7 +1619,15 @@
     "freq": "118.250",
     "Lat": 18.411501,
     "Lon": 76.464699,
-    "Ele": 651.1
+    "Ele": 651.1,
+    "ident": "VALT",
+    "iso_country": "IN",
+    "icao_code": "VALT",
+    "iata_code": "LTU",
+    "length_ft": 7546,
+    "width_ft": 100,
+    "heading": 51,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1050,7 +1636,9 @@
     "freq": "",
     "Lat": 22.834795,
     "Lon": 69.765408,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VAMA",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -1059,7 +1647,15 @@
     "freq": "113.000",
     "Lat": 19.1833,
     "Lon": 77.316704,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "VAND",
+    "iso_country": "IN",
+    "iata_code": "NDC",
+    "local_code": "VOND",
+    "length_ft": 7546,
+    "width_ft": 148,
+    "heading": 99,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1068,7 +1664,15 @@
     "freq": "287.200",
     "Lat": 21.092199,
     "Lon": 79.047203,
-    "Ele": 314.9
+    "Ele": 314.9,
+    "ident": "VANP",
+    "iso_country": "IN",
+    "icao_code": "VANP",
+    "iata_code": "NAG",
+    "length_ft": 10500,
+    "width_ft": 150,
+    "heading": 143.4,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -1077,7 +1681,15 @@
     "freq": "122.700",
     "Lat": 20.119101,
     "Lon": 73.912903,
-    "Ele": 579.1
+    "Ele": 579.1,
+    "ident": "VAOZ",
+    "iso_country": "IN",
+    "icao_code": "VAOZ",
+    "iata_code": "ISK",
+    "length_ft": 9843,
+    "width_ft": 148,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1086,7 +1698,15 @@
     "freq": "123.500",
     "Lat": 18.5821,
     "Lon": 73.919701,
-    "Ele": 591.9
+    "Ele": 591.9,
+    "ident": "VAPO",
+    "iso_country": "IN",
+    "icao_code": "VAPO",
+    "iata_code": "PNQ",
+    "length_ft": 5893,
+    "width_ft": 150,
+    "heading": 134,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -1095,7 +1715,15 @@
     "freq": "122.300",
     "Lat": 21.649524,
     "Lon": 69.656405,
-    "Ele": 7.0
+    "Ele": 7,
+    "ident": "VAPR",
+    "iso_country": "IN",
+    "icao_code": "VAPR",
+    "iata_code": "PBD",
+    "length_ft": 4500,
+    "width_ft": 150,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1104,7 +1732,15 @@
     "freq": "",
     "Lat": 17.013599,
     "Lon": 73.327797,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "VARG",
+    "iso_country": "IN",
+    "icao_code": "VARG",
+    "iata_code": "RTC",
+    "length_ft": 6890,
+    "width_ft": 148,
+    "heading": 43,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1113,7 +1749,15 @@
     "freq": "122.300",
     "Lat": 22.3092,
     "Lon": 70.779503,
-    "Ele": 134.4
+    "Ele": 134.4,
+    "ident": "VARK",
+    "iso_country": "IN",
+    "icao_code": "VARK",
+    "iata_code": "RAJ",
+    "length_ft": 6040,
+    "width_ft": 148,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1122,7 +1766,14 @@
     "freq": "124.750",
     "Lat": 21.180401,
     "Lon": 81.7388,
-    "Ele": 317.3
+    "Ele": 317.3,
+    "ident": "VARP",
+    "iso_country": "IN",
+    "iata_code": "RPR",
+    "length_ft": 6414,
+    "width_ft": 150,
+    "heading": 58,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -1131,7 +1782,15 @@
     "freq": "",
     "Lat": 19.688752,
     "Lon": 74.377354,
-    "Ele": 587.0
+    "Ele": 587,
+    "ident": "VASD",
+    "iso_country": "IN",
+    "icao_code": "VASD",
+    "iata_code": "SAG",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1140,7 +1799,15 @@
     "freq": "",
     "Lat": 17.6280002594,
     "Lon": 75.93479919430001,
-    "Ele": 482.8
+    "Ele": 482.8,
+    "ident": "VASL",
+    "iso_country": "IN",
+    "icao_code": "VASL",
+    "iata_code": "SSE",
+    "length_ft": 6591,
+    "width_ft": 145,
+    "heading": 145,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -1149,7 +1816,15 @@
     "freq": "123.500",
     "Lat": 21.1141,
     "Lon": 72.741798,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "VASU",
+    "iso_country": "IN",
+    "icao_code": "VASU",
+    "iata_code": "STV",
+    "length_ft": 9530,
+    "width_ft": 148,
+    "heading": 43,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -1158,7 +1833,15 @@
     "freq": "118.650",
     "Lat": 24.6177005768,
     "Lon": 73.89610290530001,
-    "Ele": 513.3
+    "Ele": 513.3,
+    "ident": "VAUD",
+    "iso_country": "IN",
+    "icao_code": "VAUD",
+    "iata_code": "UDR",
+    "length_ft": 7484,
+    "width_ft": 150,
+    "heading": 82,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1167,7 +1850,14 @@
     "freq": "",
     "Lat": 23.631500244140625,
     "Lon": 86.97550201416016,
-    "Ele": 94.5
+    "Ele": 94.5,
+    "ident": "VE23",
+    "iso_country": "IN",
+    "local_code": "VE23",
+    "length_ft": 4010,
+    "width_ft": 75,
+    "heading": 88.1,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1176,7 +1866,14 @@
     "freq": "",
     "Lat": 27.5529,
     "Lon": 95.570602,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "VE24",
+    "iso_country": "IN",
+    "local_code": "VE24",
+    "length_ft": 6595,
+    "width_ft": 148,
+    "heading": 35,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -1185,7 +1882,14 @@
     "freq": "",
     "Lat": 20.511699676513672,
     "Lon": 83.4480972290039,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "VE36",
+    "iso_country": "IN",
+    "local_code": "VE36",
+    "length_ft": 4200,
+    "width_ft": 55,
+    "heading": 58.6,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1194,7 +1898,14 @@
     "freq": "",
     "Lat": 24.20190048217773,
     "Lon": 86.28980255126953,
-    "Ele": 304.8
+    "Ele": 304.8,
+    "ident": "VE41",
+    "iso_country": "IN",
+    "local_code": "VE41",
+    "length_ft": 3015,
+    "width_ft": 75,
+    "heading": 112.8,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1203,7 +1914,14 @@
     "freq": "",
     "Lat": 24.01930046081543,
     "Lon": 84.09510040283203,
-    "Ele": 244.8
+    "Ele": 244.8,
+    "ident": "VE54",
+    "iso_country": "IN",
+    "local_code": "VE54",
+    "length_ft": 3000,
+    "width_ft": 100,
+    "heading": 88.6,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1212,7 +1930,14 @@
     "freq": "",
     "Lat": 20.549601,
     "Lon": 85.886299,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "VE62",
+    "iso_country": "IN",
+    "local_code": "VE62",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 42.1,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1221,7 +1946,14 @@
     "freq": "",
     "Lat": 28.602458,
     "Lon": 94.126139,
-    "Ele": 2407.9
+    "Ele": 2407.9,
+    "ident": "VE67",
+    "iso_country": "IN",
+    "local_code": "VE67",
+    "length_ft": 4395,
+    "width_ft": 80,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1230,7 +1962,13 @@
     "freq": "",
     "Lat": 23.09510040283203,
     "Lon": 75.88529968261719,
-    "Ele": 507.8
+    "Ele": 507.8,
+    "ident": "VE85",
+    "iso_country": "IN",
+    "length_ft": 3491,
+    "width_ft": 70,
+    "heading": 127.2,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1239,7 +1977,14 @@
     "freq": "",
     "Lat": 27.1935997009,
     "Lon": 97.0037002563,
-    "Ele": 1270.1
+    "Ele": 1270.1,
+    "ident": "VE91",
+    "iso_country": "IN",
+    "local_code": "VE91",
+    "length_ft": 3980,
+    "width_ft": 70,
+    "heading": 120,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1248,7 +1993,14 @@
     "freq": "",
     "Lat": 22.00160026550293,
     "Lon": 78.91719818115234,
-    "Ele": 665.1
+    "Ele": 665.1,
+    "ident": "VE96",
+    "iso_country": "IN",
+    "local_code": "VE96",
+    "length_ft": 3785,
+    "width_ft": 98,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1257,7 +2009,10 @@
     "freq": "",
     "Lat": 26.153333,
     "Lon": 83.118333,
-    "Ele": 76.2
+    "Ele": 76.2,
+    "ident": "VEAH",
+    "iso_country": "IN",
+    "iata_code": "AZH"
   },
   {
     "type": "medium_airport",
@@ -1266,7 +2021,15 @@
     "freq": "",
     "Lat": 28.17530059814453,
     "Lon": 94.802001953125,
-    "Ele": 274.3
+    "Ele": 274.3,
+    "ident": "VEAN",
+    "iso_country": "IN",
+    "icao_code": "VEAN",
+    "iata_code": "IXV",
+    "length_ft": 3000,
+    "width_ft": 95,
+    "heading": 53.5,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1275,7 +2038,15 @@
     "freq": "123.500",
     "Lat": 23.886999,
     "Lon": 91.240402,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "VEAT",
+    "iso_country": "IN",
+    "icao_code": "VEAT",
+    "iata_code": "IXA",
+    "QFU": "36",
+    "length_ft": 7500,
+    "width_ft": 148,
+    "heading": 184
   },
   {
     "type": "small_airport",
@@ -1284,7 +2055,13 @@
     "freq": "122.300",
     "Lat": 23.746214,
     "Lon": 92.802846,
-    "Ele": 333.1
+    "Ele": 333.1,
+    "ident": "VEAZ",
+    "iso_country": "IN",
+    "length_ft": 3755,
+    "width_ft": 70,
+    "heading": 7,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1293,7 +2070,14 @@
     "freq": "",
     "Lat": 22.50423,
     "Lon": 88.293427,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "VEBA",
+    "iso_country": "IN",
+    "icao_code": "VEBA",
+    "length_ft": 2830,
+    "width_ft": 100,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -1302,7 +2086,15 @@
     "freq": "293.100",
     "Lat": 26.68120002746582,
     "Lon": 88.32859802246094,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "VEBD",
+    "iso_country": "IN",
+    "icao_code": "VEBD",
+    "iata_code": "IXB",
+    "length_ft": 9035,
+    "width_ft": 150,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1311,7 +2103,14 @@
     "freq": "",
     "Lat": 25.2617,
     "Lon": 88.795601,
-    "Ele": 23.8
+    "Ele": 23.8,
+    "ident": "VEBG",
+    "iso_country": "IN",
+    "icao_code": "VEBG",
+    "iata_code": "RGH",
+    "length_ft": 4906,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "medium_airport",
@@ -1320,7 +2119,15 @@
     "freq": "122.300",
     "Lat": 25.70359992980957,
     "Lon": 91.97869873046876,
-    "Ele": 887.0
+    "Ele": 887,
+    "ident": "VEBI",
+    "iso_country": "IN",
+    "icao_code": "VEBI",
+    "iata_code": "SHL",
+    "length_ft": 6000,
+    "width_ft": 150,
+    "heading": 39,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1329,7 +2136,14 @@
     "freq": "",
     "Lat": 23.643499,
     "Lon": 86.148903,
-    "Ele": 217.9
+    "Ele": 217.9,
+    "ident": "VEBK",
+    "iso_country": "IN",
+    "icao_code": "VEBK",
+    "length_ft": 5300,
+    "width_ft": 100,
+    "heading": 130.8,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1338,7 +2152,10 @@
     "freq": "",
     "Lat": 19.2975,
     "Lon": 84.876944,
-    "Ele": 30.5
+    "Ele": 30.5,
+    "ident": "VEBM",
+    "iso_country": "IN",
+    "icao_code": "VEBP"
   },
   {
     "type": "medium_airport",
@@ -1347,7 +2164,15 @@
     "freq": "132.400",
     "Lat": 25.452129,
     "Lon": 82.861805,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "VEBN",
+    "iso_country": "IN",
+    "icao_code": "VEBN",
+    "iata_code": "VNS",
+    "length_ft": 7238,
+    "width_ft": 150,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1356,7 +2181,15 @@
     "freq": "123.500",
     "Lat": 20.2444,
     "Lon": 85.817802,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "VEBS",
+    "iso_country": "IN",
+    "icao_code": "VEBS",
+    "iata_code": "BBI",
+    "length_ft": 9003,
+    "width_ft": 150,
+    "heading": 144,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -1365,7 +2198,15 @@
     "freq": "",
     "Lat": 21.9884,
     "Lon": 82.111,
-    "Ele": 274.0
+    "Ele": 274,
+    "ident": "VEBU",
+    "iso_country": "IN",
+    "icao_code": "VEBU",
+    "iata_code": "PAB",
+    "length_ft": 5035,
+    "width_ft": 82,
+    "heading": 168,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1374,7 +2215,14 @@
     "freq": "",
     "Lat": 27.4622,
     "Lon": 95.117699,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "VECA",
+    "iso_country": "IN",
+    "icao_code": "VECA",
+    "length_ft": 9003,
+    "width_ft": 148,
+    "heading": 49.7,
+    "QFU": "23"
   },
   {
     "type": "large_airport",
@@ -1383,7 +2231,15 @@
     "freq": "119.300",
     "Lat": 22.654699,
     "Lon": 88.446701,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "VECC",
+    "iso_country": "IN",
+    "icao_code": "VECC",
+    "iata_code": "CCU",
+    "length_ft": 11900,
+    "width_ft": 150,
+    "heading": 6.2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1392,7 +2248,10 @@
     "freq": "",
     "Lat": 22.463625,
     "Lon": 86.705219,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "VECK",
+    "iso_country": "IN",
+    "icao_code": "VECK"
   },
   {
     "type": "small_airport",
@@ -1401,7 +2260,15 @@
     "freq": "122.300",
     "Lat": 26.3305,
     "Lon": 89.467201,
-    "Ele": 42.1
+    "Ele": 42.1,
+    "ident": "VECO",
+    "iso_country": "IN",
+    "icao_code": "VECO",
+    "iata_code": "COH",
+    "length_ft": 3500,
+    "width_ft": 100,
+    "heading": 44.5,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1410,7 +2277,10 @@
     "freq": "",
     "Lat": 25.167694,
     "Lon": 80.9358,
-    "Ele": 320.0
+    "Ele": 320,
+    "ident": "VECT",
+    "iso_country": "IN",
+    "iata_code": "CWK"
   },
   {
     "type": "medium_airport",
@@ -1419,7 +2289,15 @@
     "freq": "",
     "Lat": 23.834,
     "Lon": 86.425301,
-    "Ele": 258.2
+    "Ele": 258.2,
+    "ident": "VEDB",
+    "iso_country": "IN",
+    "icao_code": "VEDB",
+    "iata_code": "DBD",
+    "length_ft": 3728,
+    "width_ft": 93,
+    "heading": 72,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -1428,7 +2306,15 @@
     "freq": "",
     "Lat": 23.6225,
     "Lon": 87.243,
-    "Ele": 91.4
+    "Ele": 91.4,
+    "ident": "VEDG",
+    "iso_country": "IN",
+    "icao_code": "VEDG",
+    "iata_code": "RDP",
+    "length_ft": 9186,
+    "width_ft": 138,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -1437,7 +2323,16 @@
     "freq": "",
     "Lat": 26.192801,
     "Lon": 85.916901,
-    "Ele": 47.5
+    "Ele": 47.5,
+    "ident": "VEDH",
+    "iso_country": "IN",
+    "icao_code": "VEDH",
+    "iata_code": "DBR",
+    "local_code": "VEDH",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 98,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1446,7 +2341,14 @@
     "freq": "",
     "Lat": 24.446842,
     "Lon": 86.704955,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "VEDO",
+    "iso_country": "IN",
+    "icao_code": "VEDO",
+    "iata_code": "DGH",
+    "length_ft": 2398,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -1455,7 +2357,14 @@
     "freq": "",
     "Lat": 22.3395,
     "Lon": 87.2145,
-    "Ele": 61.0
+    "Ele": 61,
+    "ident": "VEDX",
+    "iso_country": "IN",
+    "icao_code": "VEDX",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 172.5,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -1464,7 +2373,14 @@
     "freq": "",
     "Lat": 27.9855003357,
     "Lon": 94.22280120850002,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "VEDZ",
+    "iso_country": "IN",
+    "icao_code": "VEDZ",
+    "iata_code": "DEP",
+    "length_ft": 3030,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "medium_airport",
@@ -1473,7 +2389,15 @@
     "freq": "122.700",
     "Lat": 26.7397003174,
     "Lon": 83.4496994019,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "VEGK",
+    "iso_country": "IN",
+    "icao_code": "VEGK",
+    "iata_code": "GOP",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 113.1,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -1482,7 +2406,15 @@
     "freq": "123.300",
     "Lat": 26.10610008239746,
     "Lon": 91.58589935302734,
-    "Ele": 49.4
+    "Ele": 49.4,
+    "ident": "VEGT",
+    "iso_country": "IN",
+    "icao_code": "VEGT",
+    "iata_code": "GAU",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 22.8,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1491,7 +2423,15 @@
     "freq": "123.500",
     "Lat": 24.744301,
     "Lon": 84.951202,
-    "Ele": 115.8
+    "Ele": 115.8,
+    "ident": "VEGY",
+    "iso_country": "IN",
+    "icao_code": "VEGY",
+    "iata_code": "GAY",
+    "length_ft": 7500,
+    "width_ft": 148,
+    "heading": 103.7,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1500,7 +2440,14 @@
     "freq": "",
     "Lat": 21.5802,
     "Lon": 84.005699,
-    "Ele": 200.6
+    "Ele": 200.6,
+    "ident": "VEHK",
+    "iso_country": "IN",
+    "icao_code": "VEHK",
+    "length_ft": 4185,
+    "width_ft": 55,
+    "heading": 148.3,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -1509,7 +2456,15 @@
     "freq": "",
     "Lat": 26.698299,
     "Lon": 89.369102,
-    "Ele": 103.6
+    "Ele": 103.6,
+    "ident": "VEHX",
+    "iso_country": "IN",
+    "icao_code": "VEHX",
+    "local_code": "VE44",
+    "length_ft": 9000,
+    "width_ft": 148,
+    "heading": 106.2,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -1518,7 +2473,15 @@
     "freq": "123.500",
     "Lat": 24.7600002289,
     "Lon": 93.896697998,
-    "Ele": 774.2
+    "Ele": 774.2,
+    "ident": "VEIM",
+    "iso_country": "IN",
+    "icao_code": "VEIM",
+    "iata_code": "IMF",
+    "length_ft": 9009,
+    "width_ft": 148,
+    "heading": 34.6,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1527,7 +2490,15 @@
     "freq": "",
     "Lat": 21.9135,
     "Lon": 84.0504,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "VEJH",
+    "iso_country": "IN",
+    "icao_code": "VEJH",
+    "iata_code": "JRG",
+    "length_ft": 7844,
+    "width_ft": 148,
+    "heading": 63,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1536,7 +2507,14 @@
     "freq": "",
     "Lat": 18.879549,
     "Lon": 82.552478,
-    "Ele": 595.0
+    "Ele": 595,
+    "ident": "VEJP",
+    "iso_country": "IN",
+    "icao_code": "VEJP",
+    "iata_code": "PYB",
+    "length_ft": 3937,
+    "QFU": "34",
+    "heading": 340
   },
   {
     "type": "medium_airport",
@@ -1545,7 +2523,15 @@
     "freq": "122.100",
     "Lat": 22.813706,
     "Lon": 86.168981,
-    "Ele": 144.8
+    "Ele": 144.8,
+    "ident": "VEJS",
+    "iso_country": "IN",
+    "icao_code": "VEJS",
+    "iata_code": "IXW",
+    "length_ft": 4010,
+    "width_ft": 100,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -1554,7 +2540,15 @@
     "freq": "119.700",
     "Lat": 26.730456,
     "Lon": 94.175416,
-    "Ele": 94.8
+    "Ele": 94.8,
+    "ident": "VEJT",
+    "iso_country": "IN",
+    "icao_code": "VEJT",
+    "iata_code": "JRH",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 44,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1563,7 +2557,10 @@
     "freq": "",
     "Lat": 26.075836,
     "Lon": 87.93965,
-    "Ele": 42.4
+    "Ele": 42.4,
+    "ident": "VEKG",
+    "iso_country": "IN",
+    "icao_code": "VEKG"
   },
   {
     "type": "medium_airport",
@@ -1572,7 +2569,15 @@
     "freq": "",
     "Lat": 26.776534,
     "Lon": 83.889214,
-    "Ele": 81.1
+    "Ele": 81.1,
+    "ident": "VEKI",
+    "iso_country": "IN",
+    "icao_code": "VEKI",
+    "iata_code": "KBK",
+    "length_ft": 10500,
+    "width_ft": 148,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "small_airport",
@@ -1581,7 +2586,10 @@
     "freq": "",
     "Lat": 21.696667,
     "Lon": 85.581667,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VEKJ",
+    "iso_country": "IN",
+    "icao_code": "VEKJ"
   },
   {
     "type": "small_airport",
@@ -1590,7 +2598,14 @@
     "freq": "",
     "Lat": 24.134325,
     "Lon": 91.810769,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "VEKM",
+    "iso_country": "IN",
+    "icao_code": "VEKM",
+    "iata_code": "IXQ",
+    "length_ft": 4500,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "medium_airport",
@@ -1599,7 +2614,15 @@
     "freq": "122.300",
     "Lat": 24.308657,
     "Lon": 92.00768,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "VEKR",
+    "iso_country": "IN",
+    "icao_code": "VEKR",
+    "iata_code": "IXH",
+    "length_ft": 3300,
+    "width_ft": 100,
+    "heading": 26.7,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -1608,7 +2631,15 @@
     "freq": "122.700",
     "Lat": 24.9129009247,
     "Lon": 92.9786987305,
-    "Ele": 107.3
+    "Ele": 107.3,
+    "ident": "VEKU",
+    "iso_country": "IN",
+    "icao_code": "VEKU",
+    "iata_code": "IXS",
+    "length_ft": 5993,
+    "width_ft": 148,
+    "heading": 57,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -1617,7 +2648,14 @@
     "freq": "",
     "Lat": 24.061899,
     "Lon": 91.603897,
-    "Ele": 29.0
+    "Ele": 29,
+    "ident": "VEKW",
+    "iso_country": "IN",
+    "icao_code": "VEKW",
+    "iata_code": "IXN",
+    "length_ft": 3000,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -1626,7 +2664,15 @@
     "freq": "122.250",
     "Lat": 23.840599,
     "Lon": 92.619698,
-    "Ele": 426.1
+    "Ele": 426.1,
+    "ident": "VELP",
+    "iso_country": "IN",
+    "icao_code": "VELP",
+    "iata_code": "AJL",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 171.4,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -1635,7 +2681,15 @@
     "freq": "123.500",
     "Lat": 27.295682,
     "Lon": 94.097266,
-    "Ele": 100.6
+    "Ele": 100.6,
+    "ident": "VELR",
+    "iso_country": "IN",
+    "icao_code": "VELR",
+    "iata_code": "IXI",
+    "length_ft": 7500,
+    "width_ft": 150,
+    "heading": 42.6,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -1644,7 +2698,14 @@
     "freq": "",
     "Lat": 25.01018,
     "Lon": 88.126917,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "VEMH",
+    "iso_country": "IN",
+    "icao_code": "VEMH",
+    "iata_code": "LDA",
+    "length_ft": 3600,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -1653,7 +2714,15 @@
     "freq": "123.500",
     "Lat": 27.4839000702,
     "Lon": 95.0168991089,
-    "Ele": 110.3
+    "Ele": 110.3,
+    "ident": "VEMN",
+    "iso_country": "IN",
+    "icao_code": "VEMN",
+    "iata_code": "DIB",
+    "length_ft": 6000,
+    "width_ft": 148,
+    "heading": 45.4,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -1662,7 +2731,15 @@
     "freq": "123.500",
     "Lat": 25.8838996887,
     "Lon": 93.7711029053,
-    "Ele": 148.4
+    "Ele": 148.4,
+    "ident": "VEMR",
+    "iso_country": "IN",
+    "icao_code": "VEMR",
+    "iata_code": "DMU",
+    "length_ft": 7513,
+    "width_ft": 148,
+    "heading": 118,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1671,7 +2748,15 @@
     "freq": "",
     "Lat": 26.119101,
     "Lon": 85.313698,
-    "Ele": 53.0
+    "Ele": 53,
+    "ident": "VEMZ",
+    "iso_country": "IN",
+    "icao_code": "VEMZ",
+    "iata_code": "MZU",
+    "length_ft": 3990,
+    "width_ft": 90,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1680,7 +2765,13 @@
     "freq": "",
     "Lat": 20.870001,
     "Lon": 82.5196,
-    "Ele": 322.5
+    "Ele": 322.5,
+    "ident": "VENP",
+    "iso_country": "IN",
+    "length_ft": 3380,
+    "width_ft": 96,
+    "heading": 1.2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -1689,7 +2780,14 @@
     "freq": "",
     "Lat": 28.064786,
     "Lon": 95.336952,
-    "Ele": 145.4
+    "Ele": 145.4,
+    "ident": "VEPG",
+    "iso_country": "IN",
+    "icao_code": "VEPG",
+    "iata_code": "IXT",
+    "length_ft": 3300,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "medium_airport",
@@ -1698,7 +2796,13 @@
     "freq": "",
     "Lat": 23.4743003845,
     "Lon": 87.4274978638,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "VEPH",
+    "iso_country": "IN",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 149,
+    "QFU": "33"
   },
   {
     "type": "small_airport",
@@ -1707,7 +2811,14 @@
     "freq": "",
     "Lat": 22.7810001373,
     "Lon": 88.3591995239,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "VEPI",
+    "iso_country": "IN",
+    "local_code": "VE31",
+    "length_ft": 6116,
+    "width_ft": 150,
+    "heading": 17,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -1716,7 +2827,15 @@
     "freq": "118.300",
     "Lat": 25.591299,
     "Lon": 85.087997,
-    "Ele": 51.8
+    "Ele": 51.8,
+    "ident": "VEPT",
+    "iso_country": "IN",
+    "icao_code": "VEPT",
+    "iata_code": "PAT",
+    "length_ft": 6410,
+    "width_ft": 148,
+    "heading": 68.3,
+    "QFU": "25"
   },
   {
     "type": "small_airport",
@@ -1725,7 +2844,13 @@
     "freq": "",
     "Lat": 25.759599685668945,
     "Lon": 87.41000366210938,
-    "Ele": 39.3
+    "Ele": 39.3,
+    "ident": "VEPU",
+    "iso_country": "IN",
+    "length_ft": 8700,
+    "width_ft": 150,
+    "heading": 89.8,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -1734,7 +2859,15 @@
     "freq": "118.050",
     "Lat": 23.314300537100003,
     "Lon": 85.3217010498,
-    "Ele": 654.7
+    "Ele": 654.7,
+    "ident": "VERC",
+    "iso_country": "IN",
+    "icao_code": "VERC",
+    "iata_code": "IXR",
+    "length_ft": 8855,
+    "width_ft": 148,
+    "heading": 130.2,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -1743,7 +2876,15 @@
     "freq": "122.300",
     "Lat": 22.256571,
     "Lon": 84.815193,
-    "Ele": 200.9
+    "Ele": 200.9,
+    "ident": "VERK",
+    "iso_country": "IN",
+    "icao_code": "VERK",
+    "iata_code": "RRK",
+    "length_ft": 5987,
+    "width_ft": 98,
+    "heading": 89.3,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1752,7 +2893,9 @@
     "freq": "",
     "Lat": 26.9667,
     "Lon": 84.833298,
-    "Ele": 78.9
+    "Ele": 78.9,
+    "ident": "VERL",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -1761,7 +2904,11 @@
     "freq": "",
     "Lat": 26.141867,
     "Lon": 89.907892,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "VERU",
+    "iso_country": "IN",
+    "icao_code": "VERU",
+    "iata_code": "RUP"
   },
   {
     "type": "small_airport",
@@ -1770,7 +2917,14 @@
     "freq": "",
     "Lat": 27.9412002563,
     "Lon": 96.1343994141,
-    "Ele": 243.8
+    "Ele": 243.8,
+    "ident": "VETJ",
+    "iso_country": "IN",
+    "icao_code": "VETJ",
+    "iata_code": "TEI",
+    "length_ft": 4500,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -1779,7 +2933,15 @@
     "freq": "",
     "Lat": 26.7091007232666,
     "Lon": 92.78469848632812,
-    "Ele": 73.2
+    "Ele": 73.2,
+    "ident": "VETZ",
+    "iso_country": "IN",
+    "icao_code": "VETZ",
+    "iata_code": "TEZ",
+    "length_ft": 9010,
+    "width_ft": 150,
+    "heading": 44,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1788,7 +2950,14 @@
     "freq": "",
     "Lat": 20.097401,
     "Lon": 83.1838,
-    "Ele": 207.3
+    "Ele": 207.3,
+    "ident": "VEUK",
+    "iso_country": "IN",
+    "icao_code": "VEUK",
+    "length_ft": 3000,
+    "width_ft": 100,
+    "heading": 31.3,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -1797,7 +2966,15 @@
     "freq": "658.300",
     "Lat": 17.723506,
     "Lon": 83.227729,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "VEVZ",
+    "iso_country": "IN",
+    "icao_code": "VOVZ",
+    "iata_code": "VTZ",
+    "length_ft": 9996,
+    "width_ft": 148,
+    "heading": 96,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -1806,7 +2983,15 @@
     "freq": "122.700",
     "Lat": 27.588301,
     "Lon": 93.828102,
-    "Ele": 1646.8
+    "Ele": 1646.8,
+    "ident": "VEZO",
+    "iso_country": "IN",
+    "icao_code": "VEZO",
+    "iata_code": "ZER",
+    "length_ft": 4010,
+    "width_ft": 100,
+    "heading": 183.4,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -1815,7 +3000,12 @@
     "freq": "",
     "Lat": 26.9202,
     "Lon": 79.06277,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VI00",
+    "iso_country": "IN",
+    "length_ft": 8202,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "small_airport",
@@ -1824,7 +3014,14 @@
     "freq": "",
     "Lat": 28.077101,
     "Lon": 76.205002,
-    "Ele": 291.1
+    "Ele": 291.1,
+    "ident": "VI20",
+    "iso_country": "IN",
+    "local_code": "VI20",
+    "length_ft": 3480,
+    "width_ft": 80,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1833,7 +3030,14 @@
     "freq": "122.500",
     "Lat": 29.714663,
     "Lon": 77.037438,
-    "Ele": 252.7
+    "Ele": 252.7,
+    "ident": "VI40",
+    "iso_country": "IN",
+    "local_code": "VI40",
+    "length_ft": 3000,
+    "width_ft": 150,
+    "heading": 133.5,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1842,7 +3046,14 @@
     "freq": "",
     "Lat": 29.387800216674805,
     "Lon": 73.90390014648438,
-    "Ele": 168.9
+    "Ele": 168.9,
+    "ident": "VI43",
+    "iso_country": "IN",
+    "local_code": "VI43",
+    "length_ft": 8990,
+    "width_ft": 148,
+    "heading": 50.3,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1851,7 +3062,14 @@
     "freq": "",
     "Lat": 34.652599,
     "Lon": 77.375801,
-    "Ele": 3062.0
+    "Ele": 3062,
+    "ident": "VI57",
+    "iso_country": "IN",
+    "local_code": "VI57",
+    "length_ft": 10000,
+    "width_ft": 145,
+    "heading": 107,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1860,7 +3078,14 @@
     "freq": "",
     "Lat": 34.5243,
     "Lon": 76.155899,
-    "Ele": 2927.3
+    "Ele": 2927.3,
+    "ident": "VI65",
+    "iso_country": "IN",
+    "local_code": "VI65",
+    "length_ft": 6004,
+    "width_ft": 106,
+    "heading": 22,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -1869,7 +3094,14 @@
     "freq": "",
     "Lat": 32.937401,
     "Lon": 79.213203,
-    "Ele": 4175.8
+    "Ele": 4175.8,
+    "ident": "VI66",
+    "iso_country": "IN",
+    "local_code": "VI66",
+    "length_ft": 9002,
+    "width_ft": 164,
+    "heading": 137,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -1878,7 +3110,14 @@
     "freq": "",
     "Lat": 28.1067008972168,
     "Lon": 75.37560272216797,
-    "Ele": 338.3
+    "Ele": 338.3,
+    "ident": "VI69",
+    "iso_country": "IN",
+    "local_code": "VI69",
+    "length_ft": 4567,
+    "width_ft": 135,
+    "heading": 104,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -1887,7 +3126,14 @@
     "freq": "",
     "Lat": 28.348800659179688,
     "Lon": 75.59369659423828,
-    "Ele": 335.3
+    "Ele": 335.3,
+    "ident": "VI70",
+    "iso_country": "IN",
+    "local_code": "VI70",
+    "length_ft": 3825,
+    "width_ft": 150,
+    "heading": 110.3,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -1896,7 +3142,14 @@
     "freq": "122.500",
     "Lat": 30.82457,
     "Lon": 76.883652,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "VI71",
+    "iso_country": "IN",
+    "local_code": "VI71",
+    "length_ft": 3068,
+    "width_ft": 78,
+    "heading": 156,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1905,7 +3158,14 @@
     "freq": "",
     "Lat": 27.20829963684082,
     "Lon": 73.7114028930664,
-    "Ele": 289.6
+    "Ele": 289.6,
+    "ident": "VI73",
+    "iso_country": "IN",
+    "local_code": "VI73",
+    "length_ft": 3853,
+    "width_ft": 55,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -1914,7 +3174,13 @@
     "freq": "",
     "Lat": 26.520399,
     "Lon": 80.232904,
-    "Ele": 121.9
+    "Ele": 121.9,
+    "ident": "VI75",
+    "iso_country": "IN",
+    "length_ft": 2880,
+    "width_ft": 80,
+    "heading": 92.3,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -1923,7 +3189,14 @@
     "freq": "",
     "Lat": 26.000099182128903,
     "Lon": 78.26180267333984,
-    "Ele": 240.8
+    "Ele": 240.8,
+    "ident": "VI76",
+    "iso_country": "IN",
+    "local_code": "VI76",
+    "length_ft": 4027,
+    "width_ft": 150,
+    "heading": 84.3,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -1932,7 +3205,14 @@
     "freq": "",
     "Lat": 30.582583,
     "Lon": 78.323164,
-    "Ele": 909.2
+    "Ele": 909.2,
+    "ident": "VI82",
+    "iso_country": "IN",
+    "local_code": "VI82",
+    "length_ft": 3285,
+    "width_ft": 75,
+    "heading": 157.8,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1941,7 +3221,14 @@
     "freq": "",
     "Lat": 31.559999,
     "Lon": 75.341301,
-    "Ele": 225.9
+    "Ele": 225.9,
+    "ident": "VI88",
+    "iso_country": "IN",
+    "local_code": "VI88",
+    "length_ft": 4010,
+    "width_ft": 105,
+    "heading": 160.5,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -1950,7 +3237,14 @@
     "freq": "",
     "Lat": 26.447599,
     "Lon": 82.568199,
-    "Ele": 87.8
+    "Ele": 87.8,
+    "ident": "VI90",
+    "iso_country": "IN",
+    "local_code": "VI90",
+    "length_ft": 4260,
+    "width_ft": 75,
+    "heading": 108.2,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -1959,7 +3253,15 @@
     "freq": "122.300",
     "Lat": 27.157683,
     "Lon": 77.960942,
-    "Ele": 167.9
+    "Ele": 167.9,
+    "ident": "VIAG",
+    "iso_country": "IN",
+    "icao_code": "VIAG",
+    "iata_code": "AGR",
+    "length_ft": 5964,
+    "width_ft": 148,
+    "heading": 116.1,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -1968,7 +3270,14 @@
     "freq": "122.625",
     "Lat": 27.861437,
     "Lon": 78.145404,
-    "Ele": 188.7
+    "Ele": 188.7,
+    "ident": "VIAH",
+    "iso_country": "IN",
+    "iata_code": "HRH",
+    "length_ft": 4882,
+    "width_ft": 75,
+    "QFU": "29",
+    "heading": 290
   },
   {
     "type": "medium_airport",
@@ -1977,7 +3286,16 @@
     "freq": "122.700",
     "Lat": 25.4401,
     "Lon": 81.733902,
-    "Ele": 98.1
+    "Ele": 98.1,
+    "ident": "VIAL",
+    "iso_country": "IN",
+    "icao_code": "VEAB",
+    "iata_code": "IXD",
+    "local_code": "VEAB",
+    "length_ft": 8110,
+    "width_ft": 150,
+    "heading": 119,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1986,7 +3304,14 @@
     "freq": "",
     "Lat": 30.368099,
     "Lon": 76.816704,
-    "Ele": 277.1
+    "Ele": 277.1,
+    "ident": "VIAM",
+    "iso_country": "IN",
+    "local_code": "VI18",
+    "length_ft": 7952,
+    "width_ft": 150,
+    "heading": 122,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -1995,7 +3320,15 @@
     "freq": "119.700",
     "Lat": 31.7096,
     "Lon": 74.797302,
-    "Ele": 230.4
+    "Ele": 230.4,
+    "ident": "VIAR",
+    "iso_country": "IN",
+    "icao_code": "VIAR",
+    "iata_code": "ATQ",
+    "length_ft": 10791,
+    "width_ft": 148,
+    "heading": 157.6,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -2004,7 +3337,13 @@
     "freq": "",
     "Lat": 33.876598,
     "Lon": 74.9757,
-    "Ele": 1643.8
+    "Ele": 1643.8,
+    "ident": "VIAW",
+    "iso_country": "IN",
+    "length_ft": 10500,
+    "width_ft": 150,
+    "heading": 124,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2013,7 +3352,15 @@
     "freq": "",
     "Lat": 31.4338,
     "Lon": 75.758797,
-    "Ele": 236.2
+    "Ele": 236.2,
+    "ident": "VIAX",
+    "iso_country": "IN",
+    "icao_code": "VIAX",
+    "iata_code": "AIP",
+    "length_ft": 9039,
+    "width_ft": 148,
+    "heading": 133,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -2022,7 +3369,15 @@
     "freq": "",
     "Lat": 28.070601,
     "Lon": 73.207199,
-    "Ele": 228.6
+    "Ele": 228.6,
+    "ident": "VIBK",
+    "iso_country": "IN",
+    "icao_code": "VIBK",
+    "iata_code": "BKB",
+    "length_ft": 8960,
+    "width_ft": 148,
+    "heading": 45,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2031,7 +3386,13 @@
     "freq": "",
     "Lat": 26.9883,
     "Lon": 80.893097,
-    "Ele": 117.3
+    "Ele": 117.3,
+    "ident": "VIBL",
+    "iso_country": "IN",
+    "length_ft": 8990,
+    "width_ft": 150,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2040,7 +3401,15 @@
     "freq": "122.300",
     "Lat": 31.876699,
     "Lon": 77.154404,
-    "Ele": 1089.1
+    "Ele": 1089.1,
+    "ident": "VIBR",
+    "iso_country": "IN",
+    "icao_code": "VIBR",
+    "iata_code": "KUU",
+    "length_ft": 3690,
+    "width_ft": 100,
+    "heading": 158.8,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -2049,7 +3418,15 @@
     "freq": "",
     "Lat": 30.2701,
     "Lon": 74.755798,
-    "Ele": 201.8
+    "Ele": 201.8,
+    "ident": "VIBT",
+    "iso_country": "IN",
+    "icao_code": "VIBT",
+    "iata_code": "BUP",
+    "length_ft": 9200,
+    "width_ft": 150,
+    "heading": 130.7,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2058,7 +3435,13 @@
     "freq": "",
     "Lat": 28.837,
     "Lon": 76.1791,
-    "Ele": 219.5
+    "Ele": 219.5,
+    "ident": "VIBW",
+    "iso_country": "IN",
+    "length_ft": 4200,
+    "width_ft": 72,
+    "heading": 118,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -2067,7 +3450,15 @@
     "freq": "122.700",
     "Lat": 28.4221,
     "Lon": 79.450798,
-    "Ele": 176.8
+    "Ele": 176.8,
+    "ident": "VIBY",
+    "iso_country": "IN",
+    "icao_code": "VIBY",
+    "iata_code": "BEK",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 112,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2076,7 +3467,15 @@
     "freq": "118.300",
     "Lat": 30.6735,
     "Lon": 76.788498,
-    "Ele": 308.5
+    "Ele": 308.5,
+    "ident": "VICG",
+    "iso_country": "IN",
+    "icao_code": "VICG",
+    "iata_code": "IXC",
+    "length_ft": 9001,
+    "width_ft": 168,
+    "heading": 114.1,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2085,7 +3484,15 @@
     "freq": "122.700",
     "Lat": 26.404301,
     "Lon": 80.410103,
-    "Ele": 125.0
+    "Ele": 125,
+    "ident": "VICX",
+    "iso_country": "IN",
+    "iata_code": "KNU",
+    "local_code": "VEKA",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 88.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2094,7 +3501,14 @@
     "freq": "126.350",
     "Lat": 28.585453,
     "Lon": 77.203563,
-    "Ele": 214.9
+    "Ele": 214.9,
+    "ident": "VIDD",
+    "iso_country": "IN",
+    "icao_code": "VIDD",
+    "length_ft": 4520,
+    "width_ft": 150,
+    "heading": 125,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2103,7 +3517,13 @@
     "freq": "",
     "Lat": 29.593599,
     "Lon": 80.239197,
-    "Ele": 1496.6
+    "Ele": 1496.6,
+    "ident": "VIDF",
+    "iso_country": "IN",
+    "length_ft": 4335,
+    "width_ft": 50,
+    "heading": 142.5,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -2112,7 +3532,15 @@
     "freq": "122.300",
     "Lat": 30.189243,
     "Lon": 78.176651,
-    "Ele": 558.1
+    "Ele": 558.1,
+    "ident": "VIDN",
+    "iso_country": "IN",
+    "icao_code": "VIDN",
+    "iata_code": "DED",
+    "length_ft": 7000,
+    "width_ft": 150,
+    "heading": 79.7,
+    "QFU": "26"
   },
   {
     "type": "large_airport",
@@ -2121,7 +3549,15 @@
     "freq": "126.350",
     "Lat": 28.55563,
     "Lon": 77.09519,
-    "Ele": 236.8
+    "Ele": 236.8,
+    "ident": "VIDP",
+    "iso_country": "IN",
+    "icao_code": "VIDP",
+    "iata_code": "DEL",
+    "length_ft": 14534,
+    "width_ft": 197,
+    "heading": 103,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2130,7 +3566,15 @@
     "freq": "122.700",
     "Lat": 28.707701,
     "Lon": 77.358902,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "VIDX",
+    "iso_country": "IN",
+    "icao_code": "VIDX",
+    "iata_code": "HDO",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 90.3,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2139,7 +3583,15 @@
     "freq": "122.300",
     "Lat": 32.164902,
     "Lon": 76.263018,
-    "Ele": 769.6
+    "Ele": 769.6,
+    "ident": "VIGG",
+    "iso_country": "IN",
+    "icao_code": "VIGG",
+    "iata_code": "DHM",
+    "length_ft": 4620,
+    "width_ft": 98,
+    "heading": 147.5,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -2148,7 +3600,15 @@
     "freq": "123.500",
     "Lat": 26.29330062866211,
     "Lon": 78.22779846191406,
-    "Ele": 188.1
+    "Ele": 188.1,
+    "ident": "VIGR",
+    "iso_country": "IN",
+    "icao_code": "VIGR",
+    "iata_code": "GWL",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 60.8,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2157,7 +3617,15 @@
     "freq": "",
     "Lat": 29.179399,
     "Lon": 75.755302,
-    "Ele": 213.4
+    "Ele": 213.4,
+    "ident": "VIHR",
+    "iso_country": "IN",
+    "icao_code": "VIHR",
+    "iata_code": "HSS",
+    "length_ft": 9840,
+    "width_ft": 150,
+    "heading": 120,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2166,7 +3634,13 @@
     "freq": "",
     "Lat": 30.748501,
     "Lon": 75.629799,
-    "Ele": 240.8
+    "Ele": 240.8,
+    "ident": "VIHX",
+    "iso_country": "IN",
+    "length_ft": 8985,
+    "width_ft": 148,
+    "heading": 131,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2175,7 +3649,13 @@
     "freq": "",
     "Lat": 25.491199,
     "Lon": 78.558403,
-    "Ele": 244.1
+    "Ele": 244.1,
+    "ident": "VIJN",
+    "iso_country": "IN",
+    "length_ft": 3630,
+    "width_ft": 70,
+    "heading": 146.3,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -2184,7 +3664,15 @@
     "freq": "122.700",
     "Lat": 26.251100540161133,
     "Lon": 73.04889678955078,
-    "Ele": 218.5
+    "Ele": 218.5,
+    "ident": "VIJO",
+    "iso_country": "IN",
+    "icao_code": "VIJO",
+    "iata_code": "JDH",
+    "length_ft": 9005,
+    "width_ft": 150,
+    "heading": 44.8,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -2193,7 +3681,15 @@
     "freq": "126.600",
     "Lat": 26.8242,
     "Lon": 75.812202,
-    "Ele": 385.0
+    "Ele": 385,
+    "ident": "VIJP",
+    "iso_country": "IN",
+    "icao_code": "VIJP",
+    "iata_code": "JAI",
+    "length_ft": 5223,
+    "width_ft": 148,
+    "heading": 144.1,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -2202,7 +3698,15 @@
     "freq": "123.500",
     "Lat": 26.8887,
     "Lon": 70.864998,
-    "Ele": 228.9
+    "Ele": 228.9,
+    "ident": "VIJR",
+    "iso_country": "IN",
+    "icao_code": "VIJR",
+    "iata_code": "JSA",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 43,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -2211,7 +3715,15 @@
     "freq": "122.850",
     "Lat": 32.688849,
     "Lon": 74.838152,
-    "Ele": 303.6
+    "Ele": 303.6,
+    "ident": "VIJU",
+    "iso_country": "IN",
+    "icao_code": "VIJU",
+    "iata_code": "IXJ",
+    "length_ft": 6700,
+    "width_ft": 148,
+    "heading": 177,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2220,7 +3732,14 @@
     "freq": "122.300",
     "Lat": 26.440857,
     "Lon": 80.365029,
-    "Ele": 125.3
+    "Ele": 125.3,
+    "ident": "VIKA",
+    "iso_country": "IN",
+    "icao_code": "VIKA",
+    "length_ft": 3685,
+    "width_ft": 135,
+    "heading": 102,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2229,7 +3748,15 @@
     "freq": "",
     "Lat": 26.591007,
     "Lon": 74.812956,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VIKG",
+    "iso_country": "IN",
+    "icao_code": "VIKG",
+    "iata_code": "KQH",
+    "length_ft": 7060,
+    "width_ft": 150,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "medium_airport",
@@ -2238,7 +3765,15 @@
     "freq": "119.000",
     "Lat": 25.160200119,
     "Lon": 75.84559631350001,
-    "Ele": 273.1
+    "Ele": 273.1,
+    "ident": "VIKO",
+    "iso_country": "IN",
+    "icao_code": "VIKO",
+    "iata_code": "KTU",
+    "length_ft": 4078,
+    "width_ft": 150,
+    "heading": 76,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2247,7 +3782,15 @@
     "freq": "122.300",
     "Lat": 30.854700088500977,
     "Lon": 75.95259857177734,
-    "Ele": 254.2
+    "Ele": 254.2,
+    "ident": "VILD",
+    "iso_country": "IN",
+    "icao_code": "VILD",
+    "iata_code": "LUH",
+    "length_ft": 4800,
+    "width_ft": 98,
+    "heading": 119,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -2256,7 +3799,15 @@
     "freq": "",
     "Lat": 34.135899,
     "Lon": 77.546501,
-    "Ele": 3255.9
+    "Ele": 3255.9,
+    "ident": "VILH",
+    "iso_country": "IN",
+    "icao_code": "VILH",
+    "iata_code": "IXL",
+    "length_ft": 9040,
+    "width_ft": 150,
+    "heading": 68.5,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -2265,7 +3816,15 @@
     "freq": "120.450",
     "Lat": 26.7605991364,
     "Lon": 80.8892974854,
-    "Ele": 125.0
+    "Ele": 125,
+    "ident": "VILK",
+    "iso_country": "IN",
+    "icao_code": "VILK",
+    "iata_code": "LKO",
+    "length_ft": 8996,
+    "width_ft": 148,
+    "heading": 89,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2274,7 +3833,9 @@
     "freq": "",
     "Lat": 24.71699905395508,
     "Lon": 78.41699981689453,
-    "Ele": 367.0
+    "Ele": 367,
+    "ident": "VILP",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -2283,7 +3844,10 @@
     "freq": "",
     "Lat": 28.81746,
     "Lon": 78.92187,
-    "Ele": 194.2
+    "Ele": 194.2,
+    "ident": "VIMB",
+    "iso_country": "IN",
+    "iata_code": "MZS"
   },
   {
     "type": "medium_airport",
@@ -2292,7 +3856,15 @@
     "freq": "122.700",
     "Lat": 32.233611,
     "Lon": 75.634444,
-    "Ele": 310.0
+    "Ele": 310,
+    "ident": "VIPK",
+    "iso_country": "IN",
+    "icao_code": "VIPK",
+    "iata_code": "IXP",
+    "length_ft": 8970,
+    "width_ft": 150,
+    "heading": 9.2,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -2301,7 +3873,13 @@
     "freq": "122.500",
     "Lat": 30.3148,
     "Lon": 76.364502,
-    "Ele": 249.9
+    "Ele": 249.9,
+    "ident": "VIPL",
+    "iso_country": "IN",
+    "length_ft": 3830,
+    "width_ft": 150,
+    "heading": 149,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -2310,7 +3888,15 @@
     "freq": "122.300",
     "Lat": 29.0334,
     "Lon": 79.473701,
-    "Ele": 234.4
+    "Ele": 234.4,
+    "ident": "VIPT",
+    "iso_country": "IN",
+    "icao_code": "VIPT",
+    "iata_code": "PGH",
+    "length_ft": 4500,
+    "width_ft": 100,
+    "heading": 98,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2319,7 +3905,9 @@
     "freq": "",
     "Lat": 27.104866,
     "Lon": 72.212894,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "VIPX",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -2328,7 +3916,13 @@
     "freq": "122.650",
     "Lat": 26.248501,
     "Lon": 81.380501,
-    "Ele": 109.7
+    "Ele": 109.7,
+    "ident": "VIRB",
+    "iso_country": "IN",
+    "length_ft": 5650,
+    "width_ft": 138,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2337,7 +3931,13 @@
     "freq": "",
     "Lat": 29.5606,
     "Lon": 75.006104,
-    "Ele": 198.1
+    "Ele": 198.1,
+    "ident": "VISA",
+    "iso_country": "IN",
+    "length_ft": 8987,
+    "width_ft": 140,
+    "heading": 52.9,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2346,7 +3946,15 @@
     "freq": "122.500",
     "Lat": 31.0818,
     "Lon": 77.068001,
-    "Ele": 1545.9
+    "Ele": 1545.9,
+    "ident": "VISM",
+    "iso_country": "IN",
+    "icao_code": "VISM",
+    "iata_code": "SLV",
+    "length_ft": 4035,
+    "width_ft": 75,
+    "heading": 146.1,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2355,7 +3963,14 @@
     "freq": "123.500",
     "Lat": 29.994303,
     "Lon": 77.42456,
-    "Ele": 271.6
+    "Ele": 271.6,
+    "ident": "VISP",
+    "iso_country": "IN",
+    "iata_code": "SWN",
+    "length_ft": 9000,
+    "width_ft": 150,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2364,7 +3979,15 @@
     "freq": "893.900",
     "Lat": 33.987099,
     "Lon": 74.7742,
-    "Ele": 1654.8
+    "Ele": 1654.8,
+    "ident": "VISR",
+    "iso_country": "IN",
+    "icao_code": "VISR",
+    "iata_code": "SXR",
+    "length_ft": 12090,
+    "width_ft": 150,
+    "heading": 136,
+    "QFU": "31"
   },
   {
     "type": "small_airport",
@@ -2373,7 +3996,14 @@
     "freq": "",
     "Lat": 24.56262,
     "Lon": 80.852927,
-    "Ele": 323.1
+    "Ele": 323.1,
+    "ident": "VIST",
+    "iso_country": "IN",
+    "iata_code": "TNI",
+    "length_ft": 3476,
+    "width_ft": 95,
+    "heading": 108,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -2382,7 +4012,13 @@
     "freq": "",
     "Lat": 27.499732,
     "Lon": 82.032927,
-    "Ele": 111.6
+    "Ele": 111.6,
+    "ident": "VISV",
+    "iso_country": "IN",
+    "iata_code": "VSV",
+    "length_ft": 5019,
+    "QFU": "30",
+    "heading": 300
   },
   {
     "type": "small_airport",
@@ -2391,7 +4027,13 @@
     "freq": "",
     "Lat": 25.813,
     "Lon": 71.4823,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "VIUT",
+    "iso_country": "IN",
+    "length_ft": 9002,
+    "width_ft": 150,
+    "heading": 20.3,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -2400,7 +4042,13 @@
     "freq": "561.000",
     "Lat": 32.902152,
     "Lon": 75.155709,
-    "Ele": 629.7
+    "Ele": 629.7,
+    "ident": "VIUX",
+    "iso_country": "IN",
+    "length_ft": 9000,
+    "width_ft": 148,
+    "heading": 178.8,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -2409,7 +4057,14 @@
     "freq": "",
     "Lat": 9.15389,
     "Lon": 77.821198,
-    "Ele": 99.1
+    "Ele": 99.1,
+    "ident": "VO26",
+    "iso_country": "IN",
+    "local_code": "VO26",
+    "length_ft": 3967,
+    "width_ft": 50,
+    "heading": 163.3,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -2418,7 +4073,14 @@
     "freq": "",
     "Lat": 14.534533,
     "Lon": 75.786879,
-    "Ele": 533.4
+    "Ele": 533.4,
+    "ident": "VO52",
+    "iso_country": "IN",
+    "local_code": "VO52",
+    "length_ft": 4893,
+    "width_ft": 56,
+    "heading": 59.5,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2427,7 +4089,13 @@
     "freq": "",
     "Lat": 7.01304,
     "Lon": 93.922798,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "VO94",
+    "iso_country": "IN",
+    "length_ft": 3445,
+    "width_ft": 98,
+    "heading": 47,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2436,7 +4104,14 @@
     "freq": "129.800",
     "Lat": 12.661299705505373,
     "Lon": 77.76719665527344,
-    "Ele": 949.8
+    "Ele": 949.8,
+    "ident": "VO95",
+    "iso_country": "IN",
+    "local_code": "VO95",
+    "length_ft": 7200,
+    "width_ft": 150,
+    "heading": 88.7,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2445,7 +4120,13 @@
     "freq": "",
     "Lat": 13.0712,
     "Lon": 79.6912,
-    "Ele": 80.8
+    "Ele": 80.8,
+    "ident": "VOAR",
+    "iso_country": "IN",
+    "length_ft": 13460,
+    "width_ft": 155,
+    "heading": 59,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -2454,7 +4135,15 @@
     "freq": "",
     "Lat": 10.8237,
     "Lon": 72.176003,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "VOAT",
+    "iso_country": "IN",
+    "icao_code": "VOAT",
+    "iata_code": "AGX",
+    "length_ft": 4235,
+    "width_ft": 98,
+    "heading": 35.4,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -2463,7 +4152,13 @@
     "freq": "127.700",
     "Lat": 12.95,
     "Lon": 77.668198,
-    "Ele": 887.6
+    "Ele": 887.6,
+    "ident": "VOBG",
+    "iso_country": "IN",
+    "length_ft": 10850,
+    "width_ft": 200,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2472,7 +4167,15 @@
     "freq": "",
     "Lat": 15.162799835205078,
     "Lon": 76.88279724121094,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "VOBI",
+    "iso_country": "IN",
+    "icao_code": "VOBI",
+    "iata_code": "BEP",
+    "length_ft": 3630,
+    "width_ft": 50,
+    "heading": 123,
+    "QFU": "30"
   },
   {
     "type": "large_airport",
@@ -2481,7 +4184,15 @@
     "freq": "121.250",
     "Lat": 13.1979,
     "Lon": 77.706299,
-    "Ele": 914.4
+    "Ele": 914.4,
+    "ident": "VOBL",
+    "iso_country": "IN",
+    "icao_code": "VOBL",
+    "iata_code": "BLR",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "QFU": "27",
+    "heading": 92
   },
   {
     "type": "medium_airport",
@@ -2490,7 +4201,15 @@
     "freq": "122.850",
     "Lat": 17.9081,
     "Lon": 77.487099,
-    "Ele": 663.9
+    "Ele": 663.9,
+    "ident": "VOBR",
+    "iso_country": "IN",
+    "icao_code": "VOBR",
+    "iata_code": "IXX",
+    "length_ft": 6798,
+    "width_ft": 150,
+    "heading": 78.2,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2499,7 +4218,15 @@
     "freq": "123.500",
     "Lat": 16.530399,
     "Lon": 80.796799,
-    "Ele": 25.0
+    "Ele": 25,
+    "ident": "VOBZ",
+    "iso_country": "IN",
+    "icao_code": "VOBZ",
+    "iata_code": "VGA",
+    "length_ft": 11023,
+    "width_ft": 148,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2508,7 +4235,15 @@
     "freq": "120.050",
     "Lat": 11.029999733,
     "Lon": 77.0434036255,
-    "Ele": 403.6
+    "Ele": 403.6,
+    "ident": "VOCB",
+    "iso_country": "IN",
+    "icao_code": "VOCB",
+    "iata_code": "CJB",
+    "length_ft": 8480,
+    "width_ft": 150,
+    "heading": 46,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2517,7 +4252,13 @@
     "freq": "665.500",
     "Lat": 9.946064,
     "Lon": 76.271947,
-    "Ele": 2.4
+    "Ele": 2.4,
+    "ident": "VOCC",
+    "iso_country": "IN",
+    "length_ft": 5960,
+    "width_ft": 145,
+    "heading": 167,
+    "QFU": "35"
   },
   {
     "type": "large_airport",
@@ -2526,7 +4267,15 @@
     "freq": "119.750",
     "Lat": 10.151047,
     "Lon": 76.400838,
-    "Ele": 9.1
+    "Ele": 9.1,
+    "ident": "VOCI",
+    "iso_country": "IN",
+    "icao_code": "VOCI",
+    "iata_code": "COK",
+    "length_ft": 11155,
+    "width_ft": 148,
+    "heading": 87.9,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2535,7 +4284,15 @@
     "freq": "127.000",
     "Lat": 11.1368,
     "Lon": 75.955299,
-    "Ele": 104.2
+    "Ele": 104.2,
+    "ident": "VOCL",
+    "iso_country": "IN",
+    "icao_code": "VOCL",
+    "iata_code": "CCJ",
+    "length_ft": 9383,
+    "width_ft": 150,
+    "heading": 101,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -2544,7 +4301,15 @@
     "freq": "118.350",
     "Lat": 14.513154,
     "Lon": 78.769183,
-    "Ele": 131.1
+    "Ele": 131.1,
+    "ident": "VOCP",
+    "iso_country": "IN",
+    "icao_code": "VOCP",
+    "iata_code": "CDP",
+    "length_ft": 6562,
+    "width_ft": 150,
+    "heading": 108.4,
+    "QFU": "29"
   },
   {
     "type": "medium_airport",
@@ -2553,7 +4318,15 @@
     "freq": "669.600",
     "Lat": 9.153056,
     "Lon": 92.819273,
-    "Ele": 1.5
+    "Ele": 1.5,
+    "ident": "VOCX",
+    "iso_country": "IN",
+    "icao_code": "VOCX",
+    "iata_code": "CBD",
+    "length_ft": 8914,
+    "width_ft": 140,
+    "heading": 20,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -2562,7 +4335,13 @@
     "freq": "119.100",
     "Lat": 17.627199173,
     "Lon": 78.4033966064,
-    "Ele": 613.6
+    "Ele": 613.6,
+    "ident": "VODG",
+    "iso_country": "IN",
+    "length_ft": 6800,
+    "width_ft": 150,
+    "heading": 99.5,
+    "QFU": "28"
   },
   {
     "type": "large_airport",
@@ -2571,7 +4350,15 @@
     "freq": "",
     "Lat": 15.744257,
     "Lon": 73.860625,
-    "Ele": 168.2
+    "Ele": 168.2,
+    "ident": "VOGA",
+    "iso_country": "IN",
+    "icao_code": "VOGA",
+    "iata_code": "GOX",
+    "length_ft": 11483,
+    "width_ft": 148,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "small_airport",
@@ -2580,7 +4367,14 @@
     "freq": "",
     "Lat": 17.308154,
     "Lon": 76.965246,
-    "Ele": 478.8
+    "Ele": 478.8,
+    "ident": "VOGB",
+    "iso_country": "IN",
+    "icao_code": "VOGB",
+    "iata_code": "GBI",
+    "length_ft": 10417,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "large_airport",
@@ -2589,7 +4383,15 @@
     "freq": "119.700",
     "Lat": 15.3808,
     "Lon": 73.831398,
-    "Ele": 45.7
+    "Ele": 45.7,
+    "ident": "VOGO",
+    "iso_country": "IN",
+    "icao_code": "VOGO",
+    "iata_code": "GOI",
+    "length_ft": 11345,
+    "width_ft": 148,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -2598,7 +4400,13 @@
     "freq": "",
     "Lat": 17.553499,
     "Lon": 78.524902,
-    "Ele": 615.7
+    "Ele": 615.7,
+    "ident": "VOHK",
+    "iso_country": "IN",
+    "length_ft": 6873,
+    "width_ft": 148,
+    "heading": 85,
+    "QFU": "27"
   },
   {
     "type": "large_airport",
@@ -2607,7 +4415,15 @@
     "freq": "120.250",
     "Lat": 17.231318,
     "Lon": 78.429855,
-    "Ele": 616.9
+    "Ele": 616.9,
+    "ident": "VOHS",
+    "iso_country": "IN",
+    "icao_code": "VOHS",
+    "iata_code": "HYD",
+    "length_ft": 13976,
+    "width_ft": 197,
+    "heading": 90,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -2616,7 +4432,15 @@
     "freq": "129.700",
     "Lat": 17.4531,
     "Lon": 78.467598,
-    "Ele": 531.0
+    "Ele": 531,
+    "ident": "VOHY",
+    "iso_country": "IN",
+    "icao_code": "VOHY",
+    "iata_code": "BPM",
+    "length_ft": 10600,
+    "width_ft": 148,
+    "heading": 88.8,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2625,7 +4449,15 @@
     "freq": "0.217",
     "Lat": 15.175921,
     "Lon": 76.63303,
-    "Ele": 509.0
+    "Ele": 509,
+    "ident": "VOJV",
+    "iso_country": "IN",
+    "icao_code": "VOJV",
+    "iata_code": "VDY",
+    "length_ft": 5049,
+    "width_ft": 100,
+    "heading": 135,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -2634,7 +4466,15 @@
     "freq": "",
     "Lat": 11.918614,
     "Lon": 75.547211,
-    "Ele": 100.6
+    "Ele": 100.6,
+    "ident": "VOKN",
+    "iso_country": "IN",
+    "icao_code": "VOKN",
+    "iata_code": "CNN",
+    "length_ft": 10007,
+    "width_ft": 148,
+    "QFU": "25",
+    "heading": 250
   },
   {
     "type": "small_airport",
@@ -2643,7 +4483,12 @@
     "freq": "131.775",
     "Lat": 15.359481,
     "Lon": 76.219411,
-    "Ele": 518.2
+    "Ele": 518.2,
+    "ident": "VOKP",
+    "iso_country": "IN",
+    "length_ft": 6000,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -2652,7 +4497,16 @@
     "freq": "",
     "Lat": 15.716288,
     "Lon": 78.16923,
-    "Ele": 280.4
+    "Ele": 280.4,
+    "ident": "VOKU",
+    "iso_country": "IN",
+    "icao_code": "VOKU",
+    "iata_code": "KJB",
+    "local_code": "KJB",
+    "length_ft": 6562,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -2661,7 +4515,15 @@
     "freq": "122.800",
     "Lat": 9.83450984955,
     "Lon": 78.09339904790001,
-    "Ele": 139.9
+    "Ele": 139.9,
+    "ident": "VOMD",
+    "iso_country": "IN",
+    "icao_code": "VOMD",
+    "iata_code": "IXM",
+    "length_ft": 4603,
+    "width_ft": 148,
+    "heading": 126.5,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -2670,7 +4532,15 @@
     "freq": "127.550",
     "Lat": 12.9612998962,
     "Lon": 74.8900985718,
-    "Ele": 102.7
+    "Ele": 102.7,
+    "ident": "VOML",
+    "iso_country": "IN",
+    "icao_code": "VOML",
+    "iata_code": "IXE",
+    "length_ft": 5300,
+    "width_ft": 150,
+    "QFU": "27",
+    "heading": 89
   },
   {
     "type": "large_airport",
@@ -2679,7 +4549,15 @@
     "freq": "118.900",
     "Lat": 12.990005,
     "Lon": 80.169296,
-    "Ele": 15.8
+    "Ele": 15.8,
+    "ident": "VOMM",
+    "iso_country": "IN",
+    "icao_code": "VOMM",
+    "iata_code": "MAA",
+    "length_ft": 6708,
+    "width_ft": 148,
+    "heading": 117.6,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2688,7 +4566,15 @@
     "freq": "",
     "Lat": 12.23,
     "Lon": 76.655833,
-    "Ele": 716.0
+    "Ele": 716,
+    "ident": "VOMY",
+    "iso_country": "IN",
+    "icao_code": "VOMY",
+    "iata_code": "MYQ",
+    "length_ft": 5709,
+    "width_ft": 98,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2697,7 +4583,13 @@
     "freq": "",
     "Lat": 16.541574,
     "Lon": 79.316504,
-    "Ele": 200.6
+    "Ele": 200.6,
+    "ident": "VONS",
+    "iso_country": "IN",
+    "length_ft": 5050,
+    "width_ft": 100,
+    "heading": 87.9,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2706,7 +4598,11 @@
     "freq": "",
     "Lat": 11.612956,
     "Lon": 79.527382,
-    "Ele": 56.1
+    "Ele": 56.1,
+    "ident": "VONV",
+    "iso_country": "IN",
+    "icao_code": "VONV",
+    "iata_code": "NVY"
   },
   {
     "type": "medium_airport",
@@ -2715,7 +4611,15 @@
     "freq": "658.300",
     "Lat": 11.641208,
     "Lon": 92.729643,
-    "Ele": 4.0
+    "Ele": 4,
+    "ident": "VOPB",
+    "iso_country": "IN",
+    "icao_code": "VOPB",
+    "iata_code": "IXZ",
+    "length_ft": 10795,
+    "width_ft": 148,
+    "heading": 36,
+    "QFU": "22"
   },
   {
     "type": "medium_airport",
@@ -2724,7 +4628,15 @@
     "freq": "122.900",
     "Lat": 11.968,
     "Lon": 79.812,
-    "Ele": 40.8
+    "Ele": 40.8,
+    "ident": "VOPC",
+    "iso_country": "IN",
+    "icao_code": "VOPC",
+    "iata_code": "PNY",
+    "length_ft": 4921,
+    "width_ft": 100,
+    "heading": 68,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -2733,7 +4645,15 @@
     "freq": "118.400",
     "Lat": 14.1492996216,
     "Lon": 77.7910995483,
-    "Ele": 474.9
+    "Ele": 474.9,
+    "ident": "VOPN",
+    "iso_country": "IN",
+    "icao_code": "VOPN",
+    "iata_code": "PUT",
+    "length_ft": 7315,
+    "width_ft": 145,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -2742,7 +4662,11 @@
     "freq": "",
     "Lat": 18.701,
     "Lon": 79.3923,
-    "Ele": 204.2
+    "Ele": 204.2,
+    "ident": "VORG",
+    "iso_country": "IN",
+    "icao_code": "VORG",
+    "iata_code": "RMD"
   },
   {
     "type": "small_airport",
@@ -2751,7 +4675,13 @@
     "freq": "118.900",
     "Lat": 9.32509,
     "Lon": 78.971497,
-    "Ele": 4.9
+    "Ele": 4.9,
+    "ident": "VORM",
+    "iso_country": "IN",
+    "length_ft": 2385,
+    "width_ft": 150,
+    "QFU": "19",
+    "heading": 190
   },
   {
     "type": "small_airport",
@@ -2760,7 +4690,9 @@
     "freq": "",
     "Lat": 16.279722,
     "Lon": 77.360278,
-    "Ele": 374.9
+    "Ele": 374.9,
+    "ident": "VORR",
+    "iso_country": "IN"
   },
   {
     "type": "medium_airport",
@@ -2769,7 +4701,15 @@
     "freq": "122.300",
     "Lat": 17.105799,
     "Lon": 81.813204,
-    "Ele": 46.0
+    "Ele": 46,
+    "ident": "VORY",
+    "iso_country": "IN",
+    "icao_code": "VORY",
+    "iata_code": "RJA",
+    "length_ft": 10384,
+    "width_ft": 148,
+    "heading": 54,
+    "QFU": "23"
   },
   {
     "type": "medium_airport",
@@ -2778,7 +4718,15 @@
     "freq": "122.400",
     "Lat": 11.78330039978,
     "Lon": 78.06559753418,
-    "Ele": 307.2
+    "Ele": 307.2,
+    "ident": "VOSM",
+    "iso_country": "IN",
+    "icao_code": "VOSM",
+    "iata_code": "SXV",
+    "length_ft": 5925,
+    "width_ft": 150,
+    "heading": 34,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -2787,7 +4735,13 @@
     "freq": "122.300",
     "Lat": 11.0136,
     "Lon": 77.159698,
-    "Ele": 381.0
+    "Ele": 381,
+    "ident": "VOSX",
+    "iso_country": "IN",
+    "length_ft": 8255,
+    "width_ft": 148,
+    "heading": 48.9,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -2796,7 +4750,15 @@
     "freq": "",
     "Lat": 10.723835,
     "Lon": 79.109457,
-    "Ele": 77.1
+    "Ele": 77.1,
+    "ident": "VOTJ",
+    "iso_country": "IN",
+    "icao_code": "VOTJ",
+    "iata_code": "TJV",
+    "length_ft": 4757,
+    "width_ft": 150,
+    "heading": 136,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2805,7 +4767,15 @@
     "freq": "",
     "Lat": 8.724241,
     "Lon": 78.025803,
-    "Ele": 39.3
+    "Ele": 39.3,
+    "ident": "VOTK",
+    "iso_country": "IN",
+    "icao_code": "VOTK",
+    "iata_code": "TCR",
+    "length_ft": 4434,
+    "width_ft": 95,
+    "heading": 101,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -2814,7 +4784,15 @@
     "freq": "119.000",
     "Lat": 13.632499694800002,
     "Lon": 79.543296814,
-    "Ele": 106.7
+    "Ele": 106.7,
+    "ident": "VOTP",
+    "iso_country": "IN",
+    "icao_code": "VOTP",
+    "iata_code": "TIR",
+    "length_ft": 7500,
+    "width_ft": 148,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -2823,7 +4801,15 @@
     "freq": "119.700",
     "Lat": 10.766223,
     "Lon": 78.71774,
-    "Ele": 87.8
+    "Ele": 87.8,
+    "ident": "VOTR",
+    "iso_country": "IN",
+    "icao_code": "VOTR",
+    "iata_code": "TRZ",
+    "length_ft": 4776,
+    "width_ft": 150,
+    "heading": 149,
+    "QFU": "33"
   },
   {
     "type": "large_airport",
@@ -2832,7 +4818,15 @@
     "freq": "125.900",
     "Lat": 8.48212,
     "Lon": 76.920097,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "VOTV",
+    "iso_country": "IN",
+    "icao_code": "VOTV",
+    "iata_code": "TRV",
+    "length_ft": 11148,
+    "width_ft": 150,
+    "heading": 136,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -2841,7 +4835,13 @@
     "freq": "127.900",
     "Lat": 12.9072,
     "Lon": 80.121902,
-    "Ele": 27.4
+    "Ele": 27.4,
+    "ident": "VOTX",
+    "iso_country": "IN",
+    "length_ft": 5965,
+    "width_ft": 150,
+    "heading": 119.2,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -2850,7 +4850,9 @@
     "freq": "",
     "Lat": 12.9088,
     "Lon": 79.066803,
-    "Ele": 232.9
+    "Ele": 232.9,
+    "ident": "VOVR",
+    "iso_country": "IN"
   },
   {
     "type": "small_airport",
@@ -2859,7 +4861,14 @@
     "freq": "",
     "Lat": 17.9144,
     "Lon": 79.602203,
-    "Ele": 285.0
+    "Ele": 285,
+    "ident": "VOWA",
+    "iso_country": "IN",
+    "icao_code": "VOWA",
+    "iata_code": "WGC",
+    "length_ft": 6000,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -2868,6 +4877,12 @@
     "freq": "119.700",
     "Lat": 13.135499954223633,
     "Lon": 77.60600280761719,
-    "Ele": 928.1
+    "Ele": 928.1,
+    "ident": "VOYK",
+    "iso_country": "IN",
+    "length_ft": 7205,
+    "width_ft": 145,
+    "heading": 90.6,
+    "QFU": "27"
   }
 ]

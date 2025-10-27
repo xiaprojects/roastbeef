@@ -6,7 +6,9 @@
     "freq": "",
     "Lat": 15.68151,
     "Lon": 40.104431,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ER-0001",
+    "iso_country": "ER"
   },
   {
     "type": "small_airport",
@@ -15,7 +17,9 @@
     "freq": "",
     "Lat": 15.72753,
     "Lon": 40.07532,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ER-0002",
+    "iso_country": "ER"
   },
   {
     "type": "small_airport",
@@ -24,7 +28,9 @@
     "freq": "",
     "Lat": 15.75794,
     "Lon": 39.97046,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "ER-0003",
+    "iso_country": "ER"
   },
   {
     "type": "small_airport",
@@ -33,7 +39,9 @@
     "freq": "",
     "Lat": 14.32168,
     "Lon": 36.63028,
-    "Ele": 593.1
+    "Ele": 593.1,
+    "ident": "ER-0004",
+    "iso_country": "ER"
   },
   {
     "type": "small_airport",
@@ -42,7 +50,9 @@
     "freq": "",
     "Lat": 15.78437,
     "Lon": 38.42529,
-    "Ele": 1425.9
+    "Ele": 1425.9,
+    "ident": "ER-0006",
+    "iso_country": "ER"
   },
   {
     "type": "small_airport",
@@ -51,7 +61,10 @@
     "freq": "",
     "Lat": 15.536313,
     "Lon": 37.865546,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HHAG",
+    "iso_country": "ER",
+    "icao_code": "HHAG"
   },
   {
     "type": "medium_airport",
@@ -60,7 +73,15 @@
     "freq": "120.700",
     "Lat": 15.291899681091309,
     "Lon": 38.91070175170898,
-    "Ele": 2335.1
+    "Ele": 2335.1,
+    "ident": "HHAS",
+    "iso_country": "ER",
+    "icao_code": "HHAS",
+    "iata_code": "ASM",
+    "length_ft": 5951,
+    "width_ft": 148,
+    "heading": 119.5,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -69,7 +90,9 @@
     "freq": "",
     "Lat": 15.122394,
     "Lon": 37.614335,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "HHBA",
+    "iso_country": "ER"
   },
   {
     "type": "medium_airport",
@@ -78,7 +101,15 @@
     "freq": "123.900",
     "Lat": 15.67,
     "Lon": 39.370098,
-    "Ele": 59.1
+    "Ele": 59.1,
+    "ident": "HHMS",
+    "iso_country": "ER",
+    "icao_code": "HHMS",
+    "iata_code": "MSW",
+    "length_ft": 11384,
+    "width_ft": 148,
+    "heading": 75,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -87,7 +118,15 @@
     "freq": "118.600",
     "Lat": 13.0718,
     "Lon": 42.645,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "HHSB",
+    "iso_country": "ER",
+    "icao_code": "HHSB",
+    "iata_code": "ASA",
+    "length_ft": 11531,
+    "width_ft": 148,
+    "heading": 120.2,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -96,6 +135,10 @@
     "freq": "",
     "Lat": 15.104322,
     "Lon": 36.681711,
-    "Ele": 615.1
+    "Ele": 615.1,
+    "ident": "HHTS",
+    "iso_country": "ER",
+    "icao_code": "HHTS",
+    "iata_code": "TES"
   }
 ]

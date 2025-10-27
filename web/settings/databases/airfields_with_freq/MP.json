@@ -6,7 +6,16 @@
     "freq": "118.700",
     "Lat": 14.1743,
     "Lon": 145.242996,
-    "Ele": 185.0
+    "Ele": 185,
+    "ident": "PGRO",
+    "iso_country": "MP",
+    "icao_code": "PGRO",
+    "iata_code": "ROP",
+    "local_code": "GRO",
+    "length_ft": 6000,
+    "width_ft": 150,
+    "heading": 92,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -15,7 +24,16 @@
     "freq": "127.200",
     "Lat": 15.119,
     "Lon": 145.729004,
-    "Ele": 65.5
+    "Ele": 65.5,
+    "ident": "PGSN",
+    "iso_country": "MP",
+    "icao_code": "PGSN",
+    "iata_code": "SPN",
+    "local_code": "GSN",
+    "length_ft": 8700,
+    "width_ft": 200,
+    "heading": 68,
+    "QFU": "25"
   },
   {
     "type": "medium_airport",
@@ -24,7 +42,16 @@
     "freq": "118.400",
     "Lat": 14.998101,
     "Lon": 145.61923,
-    "Ele": 82.6
+    "Ele": 82.6,
+    "ident": "PGWT",
+    "iso_country": "MP",
+    "icao_code": "PGWT",
+    "iata_code": "TIQ",
+    "local_code": "TNI",
+    "length_ft": 8600,
+    "width_ft": 150,
+    "heading": 79,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -33,6 +60,13 @@
     "freq": "",
     "Lat": 18.12317,
     "Lon": 145.763347,
-    "Ele": 10.4
+    "Ele": 10.4,
+    "ident": "TT01",
+    "iso_country": "MP",
+    "local_code": "TT01",
+    "length_ft": 1500,
+    "width_ft": 120,
+    "QFU": "29",
+    "heading": 290
   }
 ]

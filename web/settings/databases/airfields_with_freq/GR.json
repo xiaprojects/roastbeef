@@ -6,7 +6,13 @@
     "freq": "119.700",
     "Lat": 40.840795,
     "Lon": 21.823633,
-    "Ele": 631.2
+    "Ele": 631.2,
+    "ident": "GR-0001",
+    "iso_country": "GR",
+    "length_ft": 2461,
+    "width_ft": 66,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "small_airport",
@@ -15,7 +21,10 @@
     "freq": "",
     "Lat": 38.613696,
     "Lon": 21.392955,
-    "Ele": 46.9
+    "Ele": 46.9,
+    "ident": "GR-0002",
+    "iso_country": "GR",
+    "icao_code": "LGAG"
   },
   {
     "type": "small_airport",
@@ -24,7 +33,9 @@
     "freq": "",
     "Lat": 40.804194,
     "Lon": 21.433211,
-    "Ele": 642.8
+    "Ele": 642.8,
+    "ident": "GR-0003",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -33,7 +44,9 @@
     "freq": "",
     "Lat": 41.112123,
     "Lon": 25.322385,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0006",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -42,7 +55,9 @@
     "freq": "",
     "Lat": 38.356863,
     "Lon": 21.48081,
-    "Ele": -0.6
+    "Ele": -0.6,
+    "ident": "GR-0008",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -51,7 +66,13 @@
     "freq": "",
     "Lat": 38.456549,
     "Lon": 23.134646,
-    "Ele": 92.0
+    "Ele": 92,
+    "ident": "GR-0009",
+    "iso_country": "GR",
+    "length_ft": 1936,
+    "width_ft": 82,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -60,7 +81,9 @@
     "freq": "",
     "Lat": 38.37548,
     "Lon": 23.25761,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0010",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -69,7 +92,9 @@
     "freq": "",
     "Lat": 35.5295502,
     "Lon": 23.8330614,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0011",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -78,7 +103,9 @@
     "freq": "",
     "Lat": 39.653506,
     "Lon": 22.341098,
-    "Ele": 75.0
+    "Ele": 75,
+    "ident": "GR-0012",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -87,7 +114,13 @@
     "freq": "",
     "Lat": 39.407445,
     "Lon": 21.995921,
-    "Ele": 96.0
+    "Ele": 96,
+    "ident": "GR-0014",
+    "iso_country": "GR",
+    "length_ft": 2230,
+    "width_ft": 65,
+    "QFU": "27",
+    "heading": 270
   },
   {
     "type": "small_airport",
@@ -96,7 +129,10 @@
     "freq": "",
     "Lat": 38.826175,
     "Lon": 22.661959,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0015",
+    "iso_country": "GR",
+    "icao_code": "LGMO"
   },
   {
     "type": "small_airport",
@@ -105,7 +141,9 @@
     "freq": "",
     "Lat": 38.02401,
     "Lon": 23.30371,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0016",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -114,7 +152,9 @@
     "freq": "",
     "Lat": 40.745241,
     "Lon": 23.122964,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0017",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -123,7 +163,9 @@
     "freq": "",
     "Lat": 41.224442,
     "Lon": 23.363543,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "GR-0018",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -132,7 +174,9 @@
     "freq": "",
     "Lat": 39.124454,
     "Lon": 20.696021,
-    "Ele": 86.9
+    "Ele": 86.9,
+    "ident": "GR-0019",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -141,7 +185,9 @@
     "freq": "",
     "Lat": 41.083282,
     "Lon": 23.589499,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0020",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -150,7 +196,9 @@
     "freq": "",
     "Lat": 40.331426,
     "Lon": 23.150311,
-    "Ele": 110.0
+    "Ele": 110,
+    "ident": "GR-0021",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -159,7 +207,9 @@
     "freq": "",
     "Lat": 41.116,
     "Lon": 24.9211,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0027",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -168,7 +218,9 @@
     "freq": "",
     "Lat": 40.57211,
     "Lon": 21.582899,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0029",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -177,7 +229,9 @@
     "freq": "",
     "Lat": 40.366439,
     "Lon": 23.051291,
-    "Ele": 57.0
+    "Ele": 57,
+    "ident": "GR-0046",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -186,7 +240,9 @@
     "freq": "",
     "Lat": 41.12784,
     "Lon": 24.01459,
-    "Ele": 91.1
+    "Ele": 91.1,
+    "ident": "GR-0047",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -195,7 +251,9 @@
     "freq": "",
     "Lat": 37.92649,
     "Lon": 22.859559,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "GR-0048",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -204,7 +262,9 @@
     "freq": "",
     "Lat": 39.37243,
     "Lon": 20.4139,
-    "Ele": 111.9
+    "Ele": 111.9,
+    "ident": "GR-0049",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -213,7 +273,9 @@
     "freq": "",
     "Lat": 38.47819,
     "Lon": 23.16007,
-    "Ele": 93.0
+    "Ele": 93,
+    "ident": "GR-0050",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -222,7 +284,9 @@
     "freq": "",
     "Lat": 39.089002,
     "Lon": 20.970647,
-    "Ele": 0.0
+    "Ele": 0,
+    "ident": "GR-0059",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -231,7 +295,9 @@
     "freq": "",
     "Lat": 39.96895,
     "Lon": 22.66324,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "GR-0089",
+    "iso_country": "GR"
   },
   {
     "type": "small_airport",
@@ -240,7 +306,13 @@
     "freq": "122.100",
     "Lat": 35.063702,
     "Lon": 24.767401,
-    "Ele": 2.1
+    "Ele": 2.1,
+    "ident": "LG54",
+    "iso_country": "GR",
+    "length_ft": 8900,
+    "width_ft": 160,
+    "heading": 88,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -249,7 +321,13 @@
     "freq": "",
     "Lat": 37.094387,
     "Lon": 21.990736,
-    "Ele": 11.0
+    "Ele": 11,
+    "ident": "LG55",
+    "iso_country": "GR",
+    "length_ft": 3405,
+    "width_ft": 98,
+    "heading": 152,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -258,7 +336,13 @@
     "freq": "",
     "Lat": 38.236208,
     "Lon": 25.938721,
-    "Ele": 199.9
+    "Ele": 199.9,
+    "ident": "LG56",
+    "iso_country": "GR",
+    "length_ft": 3330,
+    "width_ft": 50,
+    "heading": 86.6,
+    "QFU": "28"
   },
   {
     "type": "medium_airport",
@@ -267,7 +351,15 @@
     "freq": "120.650",
     "Lat": 37.9207,
     "Lon": 21.292601,
-    "Ele": 16.8
+    "Ele": 16.8,
+    "ident": "LGAD",
+    "iso_country": "GR",
+    "icao_code": "LGAD",
+    "iata_code": "PYR",
+    "length_ft": 10299,
+    "width_ft": 148,
+    "heading": 165,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -276,7 +368,15 @@
     "freq": "563.700",
     "Lat": 40.8559,
     "Lon": 25.956301,
-    "Ele": 7.3
+    "Ele": 7.3,
+    "ident": "LGAL",
+    "iso_country": "GR",
+    "icao_code": "LGAL",
+    "iata_code": "AXD",
+    "length_ft": 8471,
+    "width_ft": 148,
+    "heading": 73,
+    "QFU": "25"
   },
   {
     "type": "large_airport",
@@ -285,7 +385,15 @@
     "freq": "126.575",
     "Lat": 37.936401,
     "Lon": 23.9445,
-    "Ele": 93.9
+    "Ele": 93.9,
+    "ident": "LGAV",
+    "iso_country": "GR",
+    "icao_code": "LGAV",
+    "iata_code": "ATH",
+    "length_ft": 13123,
+    "width_ft": 148,
+    "heading": 36.6,
+    "QFU": "21"
   },
   {
     "type": "small_airport",
@@ -294,7 +402,13 @@
     "freq": "123.500",
     "Lat": 40.6511,
     "Lon": 22.488701,
-    "Ele": 8.2
+    "Ele": 8.2,
+    "ident": "LGAX",
+    "iso_country": "GR",
+    "length_ft": 5956,
+    "width_ft": 98,
+    "heading": 128,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -303,7 +417,15 @@
     "freq": "120.350",
     "Lat": 39.219601,
     "Lon": 22.7943,
-    "Ele": 25.3
+    "Ele": 25.3,
+    "ident": "LGBL",
+    "iso_country": "GR",
+    "icao_code": "LGBL",
+    "iata_code": "VOL",
+    "length_ft": 9052,
+    "width_ft": 148,
+    "heading": 81,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -312,7 +434,14 @@
     "freq": "119.100",
     "Lat": 38.063801,
     "Lon": 23.556,
-    "Ele": 43.6
+    "Ele": 43.6,
+    "ident": "LGEL",
+    "iso_country": "GR",
+    "icao_code": "LGEL",
+    "length_ft": 8985,
+    "width_ft": 131,
+    "heading": 180,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -321,7 +450,9 @@
     "freq": "",
     "Lat": 37.613347,
     "Lon": 21.496382,
-    "Ele": 0.9
+    "Ele": 0.9,
+    "ident": "LGEP",
+    "iso_country": "GR"
   },
   {
     "type": "medium_airport",
@@ -330,7 +461,15 @@
     "freq": "563.700",
     "Lat": 38.34320068359375,
     "Lon": 26.140600204467773,
-    "Ele": 4.6
+    "Ele": 4.6,
+    "ident": "LGHI",
+    "iso_country": "GR",
+    "icao_code": "LGHI",
+    "iata_code": "JKH",
+    "length_ft": 4957,
+    "width_ft": 98,
+    "heading": 10,
+    "QFU": "19"
   },
   {
     "type": "small_airport",
@@ -339,7 +478,15 @@
     "freq": "122.300",
     "Lat": 37.6827011108,
     "Lon": 26.3470993042,
-    "Ele": 24.1
+    "Ele": 24.1,
+    "ident": "LGIK",
+    "iso_country": "GR",
+    "icao_code": "LGIK",
+    "iata_code": "JIK",
+    "length_ft": 4551,
+    "width_ft": 98,
+    "heading": 152,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -348,7 +495,15 @@
     "freq": "118.600",
     "Lat": 39.6964,
     "Lon": 20.8225,
-    "Ele": 474.9
+    "Ele": 474.9,
+    "ident": "LGIO",
+    "iso_country": "GR",
+    "icao_code": "LGIO",
+    "iata_code": "IOA",
+    "length_ft": 7874,
+    "width_ft": 148,
+    "heading": 142,
+    "QFU": "32"
   },
   {
     "type": "large_airport",
@@ -357,7 +512,15 @@
     "freq": "563.700",
     "Lat": 35.339699,
     "Lon": 25.1803,
-    "Ele": 35.1
+    "Ele": 35.1,
+    "ident": "LGIR",
+    "iso_country": "GR",
+    "icao_code": "LGIR",
+    "iata_code": "HER",
+    "length_ft": 2559,
+    "width_ft": 131,
+    "heading": 180.4,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -366,7 +529,15 @@
     "freq": "563.700",
     "Lat": 40.446301,
     "Lon": 21.2822,
-    "Ele": 660.5
+    "Ele": 660.5,
+    "ident": "LGKA",
+    "iso_country": "GR",
+    "icao_code": "LGKA",
+    "iata_code": "KSO",
+    "length_ft": 8852,
+    "width_ft": 148,
+    "heading": 122,
+    "QFU": "30"
   },
   {
     "type": "small_airport",
@@ -375,7 +546,15 @@
     "freq": "563.700",
     "Lat": 36.273978,
     "Lon": 23.016719,
-    "Ele": 318.5
+    "Ele": 318.5,
+    "ident": "LGKC",
+    "iso_country": "GR",
+    "icao_code": "LGKC",
+    "iata_code": "KIT",
+    "length_ft": 4794,
+    "width_ft": 98,
+    "heading": 26,
+    "QFU": "20"
   },
   {
     "type": "medium_airport",
@@ -384,7 +563,15 @@
     "freq": "563.700",
     "Lat": 38.12009811401367,
     "Lon": 20.5004997253418,
-    "Ele": 18.0
+    "Ele": 18,
+    "ident": "LGKF",
+    "iso_country": "GR",
+    "icao_code": "LGKF",
+    "iata_code": "EFL",
+    "length_ft": 7992,
+    "width_ft": 148,
+    "heading": 146,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -393,7 +580,15 @@
     "freq": "",
     "Lat": 36.141701,
     "Lon": 29.576401,
-    "Ele": 149.0
+    "Ele": 149,
+    "ident": "LGKJ",
+    "iso_country": "GR",
+    "icao_code": "LGKJ",
+    "iata_code": "KZS",
+    "length_ft": 2618,
+    "width_ft": 82,
+    "QFU": "31",
+    "heading": 310
   },
   {
     "type": "medium_airport",
@@ -402,7 +597,15 @@
     "freq": "563.700",
     "Lat": 37.06829833984375,
     "Lon": 22.02549934387207,
-    "Ele": 7.9
+    "Ele": 7.9,
+    "ident": "LGKL",
+    "iso_country": "GR",
+    "icao_code": "LGKL",
+    "iata_code": "KLX",
+    "length_ft": 8868,
+    "width_ft": 148,
+    "heading": 169,
+    "QFU": "35"
   },
   {
     "type": "small_airport",
@@ -411,7 +614,14 @@
     "freq": "122.100",
     "Lat": 40.972801,
     "Lon": 24.3414,
-    "Ele": 60.7
+    "Ele": 60.7,
+    "ident": "LGKM",
+    "iso_country": "GR",
+    "icao_code": "LGKM",
+    "length_ft": 4364,
+    "width_ft": 92,
+    "heading": 137,
+    "QFU": "31"
   },
   {
     "type": "medium_airport",
@@ -420,7 +630,15 @@
     "freq": "563.700",
     "Lat": 36.794523,
     "Lon": 27.09115,
-    "Ele": 125.6
+    "Ele": 125.6,
+    "ident": "LGKO",
+    "iso_country": "GR",
+    "icao_code": "LGKO",
+    "iata_code": "KGS",
+    "length_ft": 7841,
+    "width_ft": 148,
+    "heading": 148,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -429,7 +647,15 @@
     "freq": "563.700",
     "Lat": 35.421398,
     "Lon": 27.146,
-    "Ele": 20.1
+    "Ele": 20.1,
+    "ident": "LGKP",
+    "iso_country": "GR",
+    "icao_code": "LGKP",
+    "iata_code": "AOK",
+    "length_ft": 7871,
+    "width_ft": 98,
+    "heading": 124,
+    "QFU": "30"
   },
   {
     "type": "medium_airport",
@@ -438,7 +664,15 @@
     "freq": "563.700",
     "Lat": 39.602024,
     "Lon": 19.912038,
-    "Ele": 1.8
+    "Ele": 1.8,
+    "ident": "LGKR",
+    "iso_country": "GR",
+    "icao_code": "LGKR",
+    "iata_code": "CFU",
+    "length_ft": 7792,
+    "width_ft": 148,
+    "heading": 169,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -447,7 +681,15 @@
     "freq": "563.700",
     "Lat": 35.4213981628,
     "Lon": 26.9099998474,
-    "Ele": 10.7
+    "Ele": 10.7,
+    "ident": "LGKS",
+    "iso_country": "GR",
+    "icao_code": "LGKS",
+    "iata_code": "KSJ",
+    "length_ft": 3221,
+    "width_ft": 82,
+    "heading": 93,
+    "QFU": "27"
   },
   {
     "type": "medium_airport",
@@ -456,7 +698,15 @@
     "freq": "563.700",
     "Lat": 40.9133,
     "Lon": 24.6192,
-    "Ele": 5.5
+    "Ele": 5.5,
+    "ident": "LGKV",
+    "iso_country": "GR",
+    "icao_code": "LGKV",
+    "iata_code": "KVA",
+    "length_ft": 9844,
+    "width_ft": 148,
+    "heading": 55,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -465,7 +715,15 @@
     "freq": "",
     "Lat": 36.9632987976,
     "Lon": 26.9405994415,
-    "Ele": 235.0
+    "Ele": 235,
+    "ident": "LGKY",
+    "iso_country": "GR",
+    "icao_code": "LGKY",
+    "iata_code": "JKL",
+    "length_ft": 3330,
+    "width_ft": 98,
+    "QFU": "28",
+    "heading": 280
   },
   {
     "type": "medium_airport",
@@ -474,7 +732,15 @@
     "freq": "563.700",
     "Lat": 40.286098,
     "Lon": 21.840799,
-    "Ele": 627.6
+    "Ele": 627.6,
+    "ident": "LGKZ",
+    "iso_country": "GR",
+    "icao_code": "LGKZ",
+    "iata_code": "KZI",
+    "length_ft": 5978,
+    "width_ft": 98,
+    "heading": 143,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -483,7 +749,15 @@
     "freq": "563.700",
     "Lat": 37.184898,
     "Lon": 26.800301,
-    "Ele": 11.9
+    "Ele": 11.9,
+    "ident": "LGLE",
+    "iso_country": "GR",
+    "icao_code": "LGLE",
+    "iata_code": "LRS",
+    "length_ft": 3320,
+    "width_ft": 98,
+    "heading": 144,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -492,7 +766,15 @@
     "freq": "563.700",
     "Lat": 39.917098999,
     "Lon": 25.236299514799995,
-    "Ele": 4.3
+    "Ele": 4.3,
+    "ident": "LGLM",
+    "iso_country": "GR",
+    "icao_code": "LGLM",
+    "iata_code": "LXS",
+    "length_ft": 9895,
+    "width_ft": 148,
+    "heading": 43,
+    "QFU": "22"
   },
   {
     "type": "small_airport",
@@ -501,7 +783,15 @@
     "freq": "120.550",
     "Lat": 39.650253,
     "Lon": 22.4655,
-    "Ele": 73.5
+    "Ele": 73.5,
+    "ident": "LGLR",
+    "iso_country": "GR",
+    "icao_code": "LGLR",
+    "iata_code": "LRA",
+    "length_ft": 9711,
+    "width_ft": 98,
+    "heading": 79.1,
+    "QFU": "26"
   },
   {
     "type": "small_airport",
@@ -510,7 +800,14 @@
     "freq": "130.875",
     "Lat": 37.981098,
     "Lon": 23.3654,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "LGMG",
+    "iso_country": "GR",
+    "icao_code": "LGMG",
+    "length_ft": 3953,
+    "width_ft": 125,
+    "heading": 82,
+    "QFU": "26"
   },
   {
     "type": "medium_airport",
@@ -519,7 +816,15 @@
     "freq": "563.700",
     "Lat": 37.435101,
     "Lon": 25.348101,
-    "Ele": 123.4
+    "Ele": 123.4,
+    "ident": "LGMK",
+    "iso_country": "GR",
+    "icao_code": "LGMK",
+    "iata_code": "JMK",
+    "length_ft": 6240,
+    "width_ft": 98,
+    "heading": 160,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -528,7 +833,15 @@
     "freq": "",
     "Lat": 36.696899,
     "Lon": 24.4769,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "LGML",
+    "iso_country": "GR",
+    "icao_code": "LGML",
+    "iata_code": "MLO",
+    "length_ft": 3527,
+    "width_ft": 82,
+    "QFU": "26",
+    "heading": 260
   },
   {
     "type": "medium_airport",
@@ -537,7 +850,15 @@
     "freq": "563.700",
     "Lat": 39.057272,
     "Lon": 26.598887,
-    "Ele": 18.3
+    "Ele": 18.3,
+    "ident": "LGMT",
+    "iso_country": "GR",
+    "icao_code": "LGMT",
+    "iata_code": "MJT",
+    "length_ft": 7894,
+    "width_ft": 148,
+    "heading": 148,
+    "QFU": "32"
   },
   {
     "type": "small_airport",
@@ -546,7 +867,14 @@
     "freq": "",
     "Lat": 37.0811,
     "Lon": 25.368099,
-    "Ele": 3.0
+    "Ele": 3,
+    "ident": "LGNX",
+    "iso_country": "GR",
+    "icao_code": "LGNX",
+    "iata_code": "JNX",
+    "length_ft": 2953,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "small_airport",
@@ -555,7 +883,15 @@
     "freq": "125.050",
     "Lat": 37.020495,
     "Lon": 25.113195,
-    "Ele": 39.9
+    "Ele": 39.9,
+    "ident": "LGPA",
+    "iso_country": "GR",
+    "icao_code": "LGPA",
+    "iata_code": "PAS",
+    "length_ft": 4593,
+    "width_ft": 98,
+    "QFU": "35",
+    "heading": 350
   },
   {
     "type": "small_airport",
@@ -564,7 +900,15 @@
     "freq": "563.700",
     "Lat": 36.5798988342,
     "Lon": 26.3757991791,
-    "Ele": 50.3
+    "Ele": 50.3,
+    "ident": "LGPL",
+    "iso_country": "GR",
+    "icao_code": "LGPL",
+    "iata_code": "JTY",
+    "length_ft": 3245,
+    "width_ft": 98,
+    "heading": 150,
+    "QFU": "33"
   },
   {
     "type": "medium_airport",
@@ -573,7 +917,15 @@
     "freq": "563.700",
     "Lat": 38.925499,
     "Lon": 20.765301,
-    "Ele": 3.4
+    "Ele": 3.4,
+    "ident": "LGPZ",
+    "iso_country": "GR",
+    "icao_code": "LGPZ",
+    "iata_code": "PVK",
+    "length_ft": 9419,
+    "width_ft": 148,
+    "heading": 68,
+    "QFU": "24"
   },
   {
     "type": "small_airport",
@@ -582,7 +934,13 @@
     "freq": "120.600",
     "Lat": 36.383099,
     "Lon": 28.1089,
-    "Ele": 62.2
+    "Ele": 62.2,
+    "ident": "LGRD",
+    "iso_country": "GR",
+    "length_ft": 3937,
+    "width_ft": 197,
+    "heading": 142.1,
+    "QFU": "32"
   },
   {
     "type": "medium_airport",
@@ -591,7 +949,15 @@
     "freq": "563.700",
     "Lat": 36.405399,
     "Lon": 28.086201,
-    "Ele": 5.2
+    "Ele": 5.2,
+    "ident": "LGRP",
+    "iso_country": "GR",
+    "icao_code": "LGRP",
+    "iata_code": "RHO",
+    "length_ft": 10846,
+    "width_ft": 148,
+    "heading": 70.1,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -600,7 +966,15 @@
     "freq": "563.700",
     "Lat": 38.1511,
     "Lon": 21.4256,
-    "Ele": 14.0
+    "Ele": 14,
+    "ident": "LGRX",
+    "iso_country": "GR",
+    "icao_code": "LGRX",
+    "iata_code": "GPA",
+    "length_ft": 10997,
+    "width_ft": 148,
+    "heading": 183,
+    "QFU": "36"
   },
   {
     "type": "medium_airport",
@@ -609,7 +983,15 @@
     "freq": "563.700",
     "Lat": 35.5317,
     "Lon": 24.1497,
-    "Ele": 149.4
+    "Ele": 149.4,
+    "ident": "LGSA",
+    "iso_country": "GR",
+    "icao_code": "LGSA",
+    "iata_code": "CHQ",
+    "length_ft": 10982,
+    "width_ft": 148,
+    "heading": 111,
+    "QFU": "29"
   },
   {
     "type": "small_airport",
@@ -618,7 +1000,9 @@
     "freq": "",
     "Lat": 40.5331,
     "Lon": 23.025299,
-    "Ele": 25.9
+    "Ele": 25.9,
+    "ident": "LGSD",
+    "iso_country": "GR"
   },
   {
     "type": "medium_airport",
@@ -627,7 +1011,15 @@
     "freq": "563.700",
     "Lat": 39.177101,
     "Lon": 23.5037,
-    "Ele": 16.5
+    "Ele": 16.5,
+    "ident": "LGSK",
+    "iso_country": "GR",
+    "icao_code": "LGSK",
+    "iata_code": "JSI",
+    "length_ft": 5341,
+    "width_ft": 98,
+    "heading": 19,
+    "QFU": "19"
   },
   {
     "type": "medium_airport",
@@ -636,7 +1028,15 @@
     "freq": "563.700",
     "Lat": 37.689999,
     "Lon": 26.911699,
-    "Ele": 5.8
+    "Ele": 5.8,
+    "ident": "LGSM",
+    "iso_country": "GR",
+    "icao_code": "LGSM",
+    "iata_code": "SMI",
+    "length_ft": 6706,
+    "width_ft": 148,
+    "heading": 94,
+    "QFU": "27"
   },
   {
     "type": "small_airport",
@@ -645,7 +1045,15 @@
     "freq": "563.700",
     "Lat": 37.4227981567,
     "Lon": 24.9508991241,
-    "Ele": 71.9
+    "Ele": 71.9,
+    "ident": "LGSO",
+    "iso_country": "GR",
+    "icao_code": "LGSO",
+    "iata_code": "JSY",
+    "length_ft": 3542,
+    "width_ft": 98,
+    "heading": 181,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -654,7 +1062,14 @@
     "freq": "",
     "Lat": 36.9738,
     "Lon": 22.525708,
-    "Ele": 152.4
+    "Ele": 152.4,
+    "ident": "LGSP",
+    "iso_country": "GR",
+    "iata_code": "SPJ",
+    "length_ft": 3280,
+    "width_ft": 75,
+    "heading": 61,
+    "QFU": "24"
   },
   {
     "type": "medium_airport",
@@ -663,7 +1078,15 @@
     "freq": "563.700",
     "Lat": 36.399200439453125,
     "Lon": 25.47929954528809,
-    "Ele": 38.7
+    "Ele": 38.7,
+    "ident": "LGSR",
+    "iso_country": "GR",
+    "icao_code": "LGSR",
+    "iata_code": "JTR",
+    "length_ft": 7208,
+    "width_ft": 98,
+    "heading": 159,
+    "QFU": "34"
   },
   {
     "type": "medium_airport",
@@ -672,7 +1095,15 @@
     "freq": "563.700",
     "Lat": 35.21609878540039,
     "Lon": 26.101299285888672,
-    "Ele": 114.6
+    "Ele": 114.6,
+    "ident": "LGST",
+    "iso_country": "GR",
+    "icao_code": "LGST",
+    "iata_code": "JSH",
+    "length_ft": 6804,
+    "width_ft": 148,
+    "heading": 50.5,
+    "QFU": "23"
   },
   {
     "type": "small_airport",
@@ -681,7 +1112,15 @@
     "freq": "563.700",
     "Lat": 38.9676017761,
     "Lon": 24.4871997833,
-    "Ele": 13.4
+    "Ele": 13.4,
+    "ident": "LGSY",
+    "iso_country": "GR",
+    "icao_code": "LGSY",
+    "iata_code": "SKU",
+    "length_ft": 9849,
+    "width_ft": 98,
+    "heading": 176,
+    "QFU": "35"
   },
   {
     "type": "medium_airport",
@@ -690,7 +1129,13 @@
     "freq": "120.250",
     "Lat": 38.339802,
     "Lon": 23.565001,
-    "Ele": 150.9
+    "Ele": 150.9,
+    "ident": "LGTG",
+    "iso_country": "GR",
+    "length_ft": 9810,
+    "width_ft": 148,
+    "heading": 105,
+    "QFU": "28"
   },
   {
     "type": "small_airport",
@@ -699,7 +1144,13 @@
     "freq": "122.100",
     "Lat": 35.192001,
     "Lon": 25.327,
-    "Ele": 359.7
+    "Ele": 359.7,
+    "ident": "LGTL",
+    "iso_country": "GR",
+    "length_ft": 8881,
+    "width_ft": 164,
+    "heading": 20,
+    "QFU": "20"
   },
   {
     "type": "small_airport",
@@ -708,7 +1159,13 @@
     "freq": "122.100",
     "Lat": 37.530602,
     "Lon": 22.403601,
-    "Ele": 644.0
+    "Ele": 644,
+    "ident": "LGTP",
+    "iso_country": "GR",
+    "length_ft": 6368,
+    "width_ft": 98,
+    "heading": 23,
+    "QFU": "20"
   },
   {
     "type": "large_airport",
@@ -717,7 +1174,15 @@
     "freq": "563.700",
     "Lat": 40.51928,
     "Lon": 22.970009,
-    "Ele": 6.7
+    "Ele": 6.7,
+    "ident": "LGTS",
+    "iso_country": "GR",
+    "icao_code": "LGTS",
+    "iata_code": "SKG",
+    "length_ft": 7907,
+    "width_ft": 197,
+    "heading": 166.3,
+    "QFU": "34"
   },
   {
     "type": "small_airport",
@@ -726,7 +1191,13 @@
     "freq": "119.100",
     "Lat": 38.108898,
     "Lon": 23.7838,
-    "Ele": 239.3
+    "Ele": 239.3,
+    "ident": "LGTT",
+    "iso_country": "GR",
+    "length_ft": 5311,
+    "width_ft": 149,
+    "heading": 31,
+    "QFU": "21"
   },
   {
     "type": "medium_airport",
@@ -735,6 +1206,14 @@
     "freq": "563.700",
     "Lat": 37.7509,
     "Lon": 20.8843,
-    "Ele": 3.7
+    "Ele": 3.7,
+    "ident": "LGZA",
+    "iso_country": "GR",
+    "icao_code": "LGZA",
+    "iata_code": "ZTH",
+    "length_ft": 7310,
+    "width_ft": 148,
+    "heading": 163,
+    "QFU": "34"
   }
 ]

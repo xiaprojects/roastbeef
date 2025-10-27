@@ -6,7 +6,11 @@
     "freq": "",
     "Lat": 42.8390007019043,
     "Lon": 19.86199951171875,
-    "Ele": 697.1
+    "Ele": 697.1,
+    "ident": "LYBR",
+    "iso_country": "ME",
+    "icao_code": "LYBR",
+    "iata_code": "IVG"
   },
   {
     "type": "small_airport",
@@ -15,7 +19,13 @@
     "freq": "",
     "Lat": 42.773039,
     "Lon": 18.916311,
-    "Ele": 612.0
+    "Ele": 612,
+    "ident": "LYNK",
+    "iso_country": "ME",
+    "icao_code": "LYNK",
+    "length_ft": 3937,
+    "QFU": "33",
+    "heading": 330
   },
   {
     "type": "large_airport",
@@ -24,7 +34,15 @@
     "freq": "118.700",
     "Lat": 42.359402,
     "Lon": 19.2519,
-    "Ele": 43.0
+    "Ele": 43,
+    "ident": "LYPG",
+    "iso_country": "ME",
+    "icao_code": "LYPG",
+    "iata_code": "TGD",
+    "length_ft": 8202,
+    "width_ft": 148,
+    "heading": 184.3,
+    "QFU": "36"
   },
   {
     "type": "small_airport",
@@ -33,7 +51,14 @@
     "freq": "",
     "Lat": 42.422306,
     "Lon": 19.291018,
-    "Ele": 60.0
+    "Ele": 60,
+    "ident": "LYPO",
+    "iso_country": "ME",
+    "icao_code": "LYPO",
+    "length_ft": 2624,
+    "width_ft": 88,
+    "QFU": "36",
+    "heading": 360
   },
   {
     "type": "medium_airport",
@@ -42,6 +67,14 @@
     "freq": "118.000",
     "Lat": 42.40470123291016,
     "Lon": 18.72330093383789,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "LYTV",
+    "iso_country": "ME",
+    "icao_code": "LYTV",
+    "iata_code": "TIV",
+    "length_ft": 8208,
+    "width_ft": 148,
+    "heading": 139,
+    "QFU": "32"
   }
 ]

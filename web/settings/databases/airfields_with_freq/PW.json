@@ -6,7 +6,14 @@
     "freq": "",
     "Lat": 6.906829,
     "Lon": 134.145386,
-    "Ele": 6.1
+    "Ele": 6.1,
+    "ident": "ANG",
+    "iso_country": "PW",
+    "local_code": "ANG",
+    "length_ft": 7000,
+    "width_ft": 150,
+    "QFU": "23",
+    "heading": 230
   },
   {
     "type": "small_airport",
@@ -15,7 +22,14 @@
     "freq": "",
     "Lat": 6.99744,
     "Lon": 134.232055,
-    "Ele": 2.7
+    "Ele": 2.7,
+    "ident": "C23",
+    "iso_country": "PW",
+    "local_code": "C23",
+    "length_ft": 6000,
+    "width_ft": 40,
+    "QFU": "22",
+    "heading": 220
   },
   {
     "type": "medium_airport",
@@ -24,6 +38,15 @@
     "freq": "123.600",
     "Lat": 7.36731,
     "Lon": 134.544236,
-    "Ele": 53.6
+    "Ele": 53.6,
+    "ident": "PTRO",
+    "iso_country": "PW",
+    "icao_code": "PTRO",
+    "iata_code": "ROR",
+    "local_code": "ROR",
+    "length_ft": 7200,
+    "width_ft": 150,
+    "heading": 91,
+    "QFU": "27"
   }
 ]
