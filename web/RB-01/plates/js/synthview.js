@@ -38,9 +38,19 @@ SynthViewCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']
 var URL_AIRFIELDS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/db.airfields.json";
 var URL_SYNTH_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/synthview.json";
 
+// POI Elevation based on current surface
+// TODO: move in setup
+const elevantionPOIfromSurface = 100;
+
 
 // create our controller function with all necessary logic
 function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
+    // RB-01, RB-03 using the Airfields integration we need a font, this is the default 3D font async loader
+    // TODO: move this part
+    const fontLoader = new THREE.FontLoader();
+    fontLoader.load("/synthview/helvetiker_regular.typeface.json", (font) => {
+        window.font = font;
+    });
     $scope.$parent.helppage = 'plates/synthview-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
@@ -418,6 +428,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 "reference": null,
                 "referenceTubeFront": null,
                 "referenceTubeVertical": null,
+                "referenceLabel": null,
                 "roll": 0,
                 "pitch": 0,
                 "direction": 0,
@@ -532,16 +543,19 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     var item = this.itemTemplate();
                     // TODO: fix Airfields database with real Elevations
                     //item.elevation = element.Ele + 20;
-                    // POI Elevation based on current surface
-                    item.elevation = this.terrain.elevationByLatLon(element.Lat, element.Lon) + 60;
+                    item.elevation = this.terrain.elevationByLatLon(element.Lat, element.Lon) + elevantionPOIfromSurface;
                     item.template = "map_pointer_places_of_interest";
-                    item.name = element.gps_code;
-                    if (item.name == "") {
-                        item.name = element.local_code;
-                    }
-                    if (item.name == "") {
-                        item.name = element.name;
-                    }
+
+                    // Runway Threshold
+                    if(item.name == "" && element.hasOwnProperty("icao_code")) item.name = element.icao_code;
+                    else  if(item.name == "" && element.hasOwnProperty("local_code")) item.name = element.local_code;
+                    else  if(item.name == "" && element.hasOwnProperty("name")) item.name = element.name;
+                    else  if(item.name == "" && element.hasOwnProperty("gps_code")) item.name = element.gps_code;
+
+                    if(element.hasOwnProperty("heading"))item.heading = element.heading;
+                    if(element.hasOwnProperty("length_ft"))item.length_ft = element.length_ft;
+                    if(element.hasOwnProperty("width_ft"))item.width_ft = element.width_ft;
+
                     item.scale = 100;
                     item.x = aXY[0] * this.setup.cellSize;
                     item.y = aXY[1] * this.setup.cellSize;
@@ -588,7 +602,6 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 const data = await response.json(); // Parse the JSON
                 const itemsToAdd = this.importAirfields(data);
                 this.items.push(...itemsToAdd);
-
             } catch (error) {
                 console.error('Error fetching data:', error);
                 throw error;
@@ -703,6 +716,15 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                         this.scene.add(items[i].referenceTubeVertical);
                     }
 
+                    items[i] = this.generateThreshold(itemReady, setup);
+                    if (items[i].referenceThreshold != null) {
+                        this.scene.add(items[i].referenceThreshold);
+                    }
+                    if (items[i].referenceLabel != null) {
+                        this.scene.add(items[i].referenceLabel);
+                    }
+
+                    // TODO: unify the code heading/direction (that shall be "projection")
                     if (items[i].direction == 0) {
 
                     }
@@ -751,6 +773,98 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             coneConeVertical.position.x = item.x
             coneConeVertical.position.z = item.y
             item.referenceTubeVertical = coneConeVertical;
+            return item;
+        }
+
+        generateThreshold(item, setup) {
+
+            var labelDisplacement = item.elevation + 120;
+
+            if (item.hasOwnProperty("heading")) {
+                if(item.heading>180) {
+                    item.heading = item.heading - 180;
+                }
+                const container = new THREE.Object3D();
+                container.position.y = item.elevation - elevantionPOIfromSurface + 10;
+                labelDisplacement = container.position.y + elevantionPOIfromSurface + 130;
+                container.position.x = item.x
+                container.position.z = item.y
+                container.rotation.y = (Math.PI * 2.0 / 360) * (-item.heading);
+                item.referenceThreshold = container;
+
+                var runwayLength = 1000;
+                var runwayWidth = 120;
+                const runwayHeight = 10;
+
+                if (item.hasOwnProperty("length_ft") && item.length_ft>runwayLength) runwayLength = item.length_ft / (setup.cellSize / 20);
+                if (item.hasOwnProperty("width_ft") && item.width_ft>runwayWidth) runwayWidth = item.width_ft;
+
+
+                const runwayGeometry = new THREE.BoxGeometry(runwayWidth, runwayHeight, runwayLength);
+                const runwayMaterial = new THREE.MeshBasicMaterial({ color: 0x555555 });
+                const runway = new THREE.Mesh(runwayGeometry, runwayMaterial);
+                container.add(runway);
+
+                if (window.hasOwnProperty("font")) {
+                    const fontSize = 75;
+                    var text1Text = "";
+                    var text2Text = "";
+                    if (item.heading > 180) {
+                        text1Text = "" + parseInt((item.heading - 180) / 10);
+                        text2Text = "" + parseInt((item.heading) / 10);
+                    } else {
+                        text1Text = "" + parseInt((item.heading) / 10);
+                        text2Text = "" + parseInt((item.heading + 180) / 10);
+                    }
+                    const text1Geo = new THREE.TextGeometry(text2Text.padStart(2, "0"), {
+                        font: window.font,
+                        size: fontSize,
+                        height: 10,
+                    });
+                    const text2Geo = new THREE.TextGeometry(text1Text.padStart(2, "0"), {
+                        font: window.font,
+                        size: fontSize,
+                        height: 10,
+                    });
+
+
+                    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+                    const text1 = new THREE.Mesh(text1Geo, textMaterial);
+                    const text2 = new THREE.Mesh(text2Geo, textMaterial);
+
+                    text1.geometry.center();
+                    text2.geometry.center();
+                    text1.position.z = -(runwayLength / 2 - fontSize/2);
+                    text2.position.z = (runwayLength / 2 - fontSize/2);
+
+                    text1.rotation.x = (Math.PI * 2.0 / 360) * (90)
+                    text2.rotation.x = (Math.PI * 2.0 / 360) * (-90)
+                    text1.rotation.y = (Math.PI * 2.0 / 360) * (180)
+                    container.add(text1);
+                    container.add(text2);
+                }
+            }
+
+            if (item.hasOwnProperty("name") && item.name != "" && item.name != "ME") {
+                if (window.hasOwnProperty("font")) {
+                    const fontSize = 100;
+                    const text = item.name.substring(0, 8);
+                    const text1Geo = new THREE.TextGeometry(text, {
+                        font: window.font,
+                        size: fontSize,
+                        height: 20,
+                    });
+
+                    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+                    const label = new THREE.Mesh(text1Geo, textMaterial);
+                    label.geometry.center();
+                    label.position.x = item.x;
+                    label.position.z = item.y;
+                    label.position.y = labelDisplacement;
+                    item.referenceLabel = label;
+                }
+            }
+
             return item;
         }
 
@@ -959,6 +1073,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             if (currentItem.ttl < now) {
                 rendering.scene.remove(currentItem.referenceTubeFront);
                 rendering.scene.remove(currentItem.referenceTubeVertical);
+                if(currentItem.referenceLabel != null)rendering.scene.remove(currentItem.referenceLabel);
                 rendering.scene.remove(currentItem.reference.scene);
 
                 resources.items.splice(i, 1);
@@ -975,6 +1090,12 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         if (element.Position_valid == false) return;
         var founded = -1;
+        // Tail will be drawn on top of the traffic
+        // TODO: improve this part
+        if(element.Tail != "") {
+            // overwriting this will make a miss on cache and recreate a new Aircraft with Tail name
+            element.Icao_addr = element.Tail;
+        }
         for (var i = resources.itemIndexStartingTraffic; i < resources.items.length; i++) {
             var currentItem = resources.items[i];
             if (currentItem.name == "" + element.Icao_addr) {
@@ -1022,7 +1143,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     item.referenceTubeFront.rotation.z = (Math.PI * 2.0 / 360) * (180 + item.direction)
                     item.referenceTubeFront.rotation.x = (Math.PI * 2.0 / 360) * (90)
                 }
-
+                if (item.referenceLabel != null) {
+                    item.referenceLabel.position.y = item.elevation + 120;
+                    item.referenceLabel.position.x = item.x
+                    item.referenceLabel.position.z = item.y
+                }
             }
         }
     }
