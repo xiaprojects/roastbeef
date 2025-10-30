@@ -53,8 +53,12 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 
 	const templateCHT = {
 		"displace": "90%",
+		"displaceMax": "90%",
+		"direction":"-",
 		"format": "---°",
 		"value": 0,
+		"valueMax": 0,
+		"valueAvg": 0,
 		"name": "CHT1",
 		"sensor": "cht1",
 		"ranges": [
@@ -71,8 +75,12 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 
 	const templateEGT = {
 		"displace": "90%",
+		"displaceMax": "90%",
+		"direction":"-",
 		"format": "---°",
 		"value": 0,
+		"valueMax": 0,
+		"valueAvg": 0,
 		"name": "CHT1",
 		"sensor": "cht1",
 		"ranges": [
@@ -96,12 +104,12 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 		for (var r = 0; r < item.ranges.length; r++) {
 			item.ranges[r].color = item.ranges[r].colorOff;
 		}
-		item.name = "CHT" + index;
+		item.name = "Cht" + index;
 		item.sensor = "cht" + index;
 		$scope.bars.push(item);
 		item = JSON.parse(JSON.stringify(templateEGT));
 		item.ranges = item.ranges.reverse();
-		item.name = "EGT" + index;
+		item.name = "Egt" + index;
 		item.sensor = "egt" + index;
 		for (var r = 0; r < item.ranges.length; r++) {
 			item.ranges[r].color = item.ranges[r].colorOff;
@@ -111,7 +119,22 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 
 	function barApplyValue(index, newValue) {
 		if (newValue != $scope.bars[index].value) {
+			$scope.bars[index].valueAvg = ($scope.bars[index].valueAvg * 9.0 + newValue) / 10.0;
+			if($scope.bars[index].valueAvg < newValue - 1){
+				$scope.bars[index].direction = String.fromCharCode(9650);
+			} else {
+				if($scope.bars[index].valueAvg > newValue + 1) {
+					$scope.bars[index].direction = String.fromCharCode(9660);
+				} else {
+					$scope.bars[index].direction = "=";
+				}
+			}
 			$scope.bars[index].value = newValue;
+			var isNewMax = false;
+			if ($scope.bars[index].valueMax < newValue) {
+				$scope.bars[index].valueMax = newValue;
+				isNewMax = true;
+			}
 			$scope.bars[index].format = parseInt(newValue) + "°";
 			// Linear range
 			var max = $scope.bars[index].ranges[0].max;
@@ -130,6 +153,10 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 					var lastColor = null;
 
 				}
+			}
+
+			if(isNewMax == true) {
+				$scope.bars[index].displaceMax = $scope.bars[index].displace;
 			}
 
 
@@ -151,7 +178,7 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 	}
 
 	function emsUpdated(emsData) {
-		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'EmsegtCtrl' && $scope.$parent.$parent.hasOwnProperty("radarSocket") == false )) {
+		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'EmsegtCtrl' && $scope.$parent.$parent.hasOwnProperty("radarSocket") == false)) {
 			removeEventListener("EMSUpdated", emsUpdated);
 			return; // we are getting called once after clicking away from the status page
 		}

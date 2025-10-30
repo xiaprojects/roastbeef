@@ -1,10 +1,8 @@
 <div ui-content-for="title">Checklist</div>
-<div class="col-sm-12">
 	<div class="panel panel-default" ng-repeat="checklist in data_list ">
 		<div class="panel-heading">
 			<span class="panel_label">{{checklist.name}} <em>{{checklist.text}}</em></span>
 		</div>
-		<div class="panel-body">
 			<table style="width:100%">
 				<tbody>
 					<tr class="checksline {{check.value}} {{check.isselected}}" ng-repeat="check in checklist.items ">
@@ -20,13 +18,13 @@
 								<option value="test" ng-selected="check.value=='test'">TODO</option>
 							</select>
 						</td>
-						<td class="alertstitle" width="20%">{{check.name}}</td>
-						<td class="alertstitle" width="100%">{{check.text}}</td>
+						<td class="alertstitle" width="90%">
+							<strong>{{check.name}}</strong><br />
+							{{check.text}}
+						</td>
 						<td style="padding-right: 4px;">{{check.dateParsed}}</td>
 						</th>
 					</tr>
 				</tbody>
 			</table>
-		</div>
 	</div>
-</div>

@@ -164,6 +164,14 @@ systemctl disable cloud-init-network.service
 systemctl disable cloud-config.service
 # Trixie will use directly Network manager
 systemctl disable dnsmasq.service
+# Disable swap and others
+swapoff -a
+systemctl disable rpi-setup-loop@var-swap.service
+systemctl mask systemd-zram-setup@zram0.service
+systemctl disable dev-zram0.swap
+systemctl stop systemd-zram-setup@zram0.service
+zramctl --reset /dev/zram0
+rm /var/swap
 
 # RB-Avionics ethernet service
 systemctl enable accesspoint.service
@@ -171,6 +179,8 @@ systemctl enable accesspoint.service
 systemctl enable wayfire.service
 # RB-03
 systemctl disable wayfire.service
+# RB-04
+#systemctl enable ems-chtegt.service
 
 
 # Prepare wiringpi for ogn trx via GPIO
@@ -238,6 +248,12 @@ raspi-config nonint disable_bootro
 # TODO: make everything without root
 chown -R $USER:$USER $USER_HOME
 chown -R $USER:$USER /opt/stratux/
+
+# Before flashing remember to clean up the logs and other /var DB
+#rm -Rf /var/log/*
+#rm -Rf /var/lib/bluetooth/*
+#rm -Rf /var/lib/NetworkManager/*
+#
 
 # Apply User Settings
 # Create USA SDCard with Maps and detailed elevations:

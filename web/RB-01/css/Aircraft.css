@@ -15,13 +15,14 @@
   position: absolute;
   width: 40%;
 text-align: right;
+  left: 5%;
 }
 
 .aircraft-item-container-right {
   position: absolute;
   width: 40%;
 text-align: left;
-  left: 60%;
+  left: 55%;
 }
 
 .aircraft-item {

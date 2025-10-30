@@ -446,6 +446,10 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	}
 
 	$scope.update = function () {
+		if (($scope === undefined) || ($scope === null) || $state.current.controller != 'MapCtrl') {
+			$interval.cancel($scope.updateTimer);
+			return;
+		}
 		$scope.updateAges();
 		$scope.removeStaleTraffic();
 	}
@@ -505,7 +509,7 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	$state.get('map').onExit = function () {
 
 		// stop stale traffic cleanup
-		$interval.cancel($scope.update);
+		$interval.cancel($scope.updateTimer);
 	}
 	// Try to wait for situation update, this will allow to calculate also the first point
 	function situationUpdated(event) {
@@ -519,5 +523,5 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	addEventListener("SituationUpdated", situationUpdated);
 	addEventListener("TrafficUpdated", $scope.onMessage);
 
-	$interval($scope.update, 1000);
+	$scope.updateTimer = $interval($scope.update, 1000);
 }

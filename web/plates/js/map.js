@@ -530,12 +530,12 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 			$scope.socketgps = null;
 		}
 		// stop stale traffic cleanup
-		$interval.cancel($scope.update);
+		$interval.cancel($scope.updateTimer);
 	}
 
 
 	connect($scope);
 
-	$interval($scope.update, 1000);
+	$scope.updateTimer = $interval($scope.update, 1000);
 
 }

@@ -40,7 +40,7 @@ $GPRMB,A,8.77,L,LIQQ,LIPE,4431.8501,N,01117.8167,E,88.5,336.1,1.0,V*18
 $GPAPB,A,A,8.77,L,N,V,V,342,M,LIPE,336,M,336,M*38
 $PGRMH,A,0,-999,0,0,1300,341,0*21
 $GPGGA,184851,4311.1168,N,01208.2004,E,3,0,0.0,335.3,M,0.0,M,,*43
-41
+
 
 	To avoid the conflict with existing Stratux RS232 messages, we added a whitelist prefixes.
 
@@ -52,6 +52,20 @@ $GPGGA,184851,4311.1168,N,01208.2004,E,3,0,0.0,335.3,M,0.0,M,,*43
 
 	Example of radio commands:
 	$PGRMC,119.000,125.600,Valdera,Perugia - Umbria*5B
+
+	SL40 Compact version:
+$PMRRC00G4N29
+$PMRRC01G4N29
+$PMRRC00H2N29
+$PGRMC01KFM2
+$PGRMC01N<004
+$PGRMC00Q70149
+$PGRMC06130005
+$PGRMC01MS0061
+$PGRMC01V4014<
+$PGRMC01N<004
+$PGRMC01V4014<
+$PGRMC01MS0061
 
 	How to test the UDP Command:
 	1) Enable UDP on a specific port
@@ -136,10 +150,70 @@ func ParseGPRMB(nmea string) (*GPRMBData, error) {
 	Radio parsing in case we need to switch from NMEA UDP Input to TQ KRT2 Binary protocol
 */
 
+// ParsePMRRCCompact parses a $PMRRC compact message (e.g. $PMRRC00G4N0)
+func ParsePMRRCCompact(sentence string, currentStatus RadioStatus) (*RadioStatus, error) {
+	hasOffset := false
+	requestedLen := 5
+	if strings.HasPrefix(sentence, "$PMRRC0") {
+	} else {
+		if strings.HasPrefix(sentence, "$PGRMC0") {
+
+			hasOffset = true
+			requestedLen = 6
+
+		} else {
+			return nil, errors.New("unsupported sentence type")
+		}
+	}
+	body := strings.TrimPrefix(strings.TrimPrefix(sentence, "$PGRMC"), "$PMRRC")
+	if len(body) < requestedLen {
+		return nil, fmt.Errorf("invalid compact sentence: %s", sentence)
+	}
+	// Extract MsgID (first 2 digits)
+	msgID, err := strconv.Atoi(body[0:2])
+	if err != nil {
+		return nil, fmt.Errorf("invalid MsgID: %v", err)
+	}
+	indexMhz := 2
+	indexKhz := 3
+	indexChangeType := 4
+	indexOffset := 5
+	// Extract characters
+	mhz := rune(body[indexMhz]) + 0x30
+	khz := rune(body[indexKhz]) - 0x30
+	changeType := rune(body[indexChangeType])
+	offset := 0
+	if hasOffset == true {
+		offsetStr := string(body[indexOffset])
+		offsetIn, err := strconv.Atoi(offsetStr)
+		if err == nil {
+			offset = offsetIn
+		}
+
+	}
+	switch changeType {
+	case 'N':
+		currentStatus.Dual = false
+		break
+	case 'M':
+		currentStatus.Dual = true
+		break
+	}
+	switch msgID {
+	case 0:
+		currentStatus.FrequencyActive = fmt.Sprintf("%d.%03d", mhz, 25*khz+rune(offset)*5)
+		break
+	case 1:
+		currentStatus.FrequencyStandby = fmt.Sprintf("%d.%03d", mhz, 25*khz+rune(offset)*5)
+		break
+	}
+	return &currentStatus, nil
+}
+
 // ParseNMEA parses a $PMRRC or $PGRMC sentence
 func ParseRadioNMEA(sentence string) (*RadioStatus, error) {
 	sentence = strings.TrimSpace(sentence)
-	if !(strings.HasPrefix(sentence, "$PMRRC") || strings.HasPrefix(sentence, "$PGRMC")) {
+	if !(strings.HasPrefix(sentence, "$PMRRC,") || strings.HasPrefix(sentence, "$PGRMC,")) {
 		return nil, errors.New("unsupported sentence type")
 	}
 
@@ -307,7 +381,7 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 								fmt.Println(nmeaSentence)
 								sendNetFLARM(nmeaSentence+"\n", time.Second, 0)
 								// Store latest configuration
-								newStatus, _ := ParseRadioNMEA(nmeaSentence)
+								newStatus, _ := ParsePMRRCCompact(nmeaSentence, radio.radioData[index])
 								if newStatus != nil {
 									radio.radioData[index].FrequencyActive = newStatus.FrequencyActive
 									radio.radioData[index].LabelActive = newStatus.LabelActive
@@ -316,7 +390,7 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 								}
 							} else {
 								// TODO: move the check into radio.go
-								newStatus, _ := ParseRadioNMEA(nmeaSentence)
+								newStatus, _ := ParsePMRRCCompact(nmeaSentence, radio.radioData[index])
 								if newStatus != nil {
 									radioIsChanged := 0
 									toActive := false
@@ -355,6 +429,10 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 											radio.radioSetFrequency(index, radio.radioData[index].FrequencyStandby, false, radio.radioData[index].LabelStandby)
 										}
 										break
+									}
+									if radio.radioData[index].Dual != newStatus.Dual {
+										radio.radioData[index].Dual = newStatus.Dual
+										radio.radioSetDual(index, radio.radioData[index].Dual)
 									}
 								}
 							}

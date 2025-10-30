@@ -1,5 +1,5 @@
 {
-  "DarkMode": false,
+  "DarkMode": true,
   "UAT_Enabled": false,
   "ES_Enabled": true,
   "OGN_Enabled": false,
@@ -56,6 +56,13 @@
       "UUIDGatt": "FFE1",
       "Characteristic": {}
     }
+    ,
+    {                                                                                                                              
+      "Capability": 8,                                                                                                             
+      "UUIDService": "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",                                                                       
+      "UUIDGatt": "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",                                                                          
+      "Characteristic": {}                                                                                                         
+    }                                                                                                                              
   ],
   "DisplayTrafficSource": false,
   "DEBUG": false,
@@ -90,7 +97,7 @@
   "OwnshipModeS": "F00000",
   "WatchList": "",
   "DeveloperMode": true,
-  "GLimits": "",
+  "GLimits": "6 -3",
   "StaticIps": [],
   "WiFiCountry": "",
   "WiFiSSID": "Stratux",
@@ -131,6 +138,34 @@
   "Audio_Enabled": true,
   "Camera_Enabled": true,
   "Radio_Enabled": true,
+  "Radio": [                                                                                                                       
+    {                                                                                                                              
+      "Name": "KRT2",                                                                                                              
+      "SquelchLevel": 0,                                                                                                           
+      "VolumeLevel": 0,                                                                                                            
+      "FrequencyActive": "",                                                                                                       
+      "FrequencyStandby": "",                                                                                                      
+      "Enabled": false,                                                                                                            
+      "Dual": false,                                                                                                               
+      "Driver": "SERIAL",                                                                                                          
+      "Path": "/dev/prolific0",                                                                                                    
+      "LabelActive": "",                                                                                                           
+      "LabelStandby": ""                                                                                                           
+    },                                                                                                                             
+    {                                                                                                                              
+      "Name": "TRIG",                                                                                                              
+      "SquelchLevel": 0,                                                                                                           
+      "VolumeLevel": 0,                                                                                                            
+      "FrequencyActive": "",                                                                                                       
+      "FrequencyStandby": "",                                                                                                      
+      "Enabled": false,                                                                                                            
+      "Dual": false,                                                                                                               
+      "Driver": "NMEA",                                                                                                            
+      "Path": "",                                                                                                      
+      "LabelActive": "",                                                                                                           
+      "LabelStandby": ""                                                                                                           
+    }                                                                                                                              
+  ],  
   "Cameras": [
     {
       "Name": "Windy",
@@ -171,7 +206,7 @@
   "EMS_Enabled": true,
   "Keypad_Enabled": false,
   "Charts_Enabled": true,
-  "SwitchBoard_Enabled": false,
+  "SwitchBoard_Enabled": true,
   "Switches": [
     {
       "Name": "Display OFF",
