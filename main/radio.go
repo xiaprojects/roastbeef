@@ -137,6 +137,12 @@ func (radioInstance *RadioStratuxPlugin) InitFunc() bool {
 	for comm := range radioInstance.radioData {
 		thisRadio := &radioInstance.radioData[comm]
 		thisRadio.serialPort = nil
+		if thisRadio.FrequencyActive == "" {
+			thisRadio.FrequencyActive = "118.000"
+		}
+		if thisRadio.FrequencyStandby == "" {
+			thisRadio.FrequencyStandby = "118.000"
+		}
 	}
 
 	go radioInstance.radioThread()
@@ -181,16 +187,62 @@ func (radioInstance *RadioStratuxPlugin) ShutdownFunc() bool {
 	return true
 }
 
-func makeNMEARadioString(prefix string, active string, standby string, labelActive string, labelStandby string) string {
-	msg := fmt.Sprintf("%s,%s,%s,%s,%s",
-	prefix,
-	active,
-	standby,
-	labelActive,
-	labelStandby)
-	msg = appendNmeaChecksum(msg)
-	msg += "\r\n"
-	return msg
+func appendNmeaRadioChecksum(nmea string) string {
+	start := 0
+
+	if nmea[0] == '$' {
+		start = 1
+	}
+
+	checksum := byte(0x00)
+	for i := start; i < len(nmea); i++ {
+		checksum = checksum + byte(nmea[i])
+	}
+	high := (checksum >> 4) & 0x07
+	low := checksum & 0x07
+	pack := []byte{high + 0x30, low + 0x30}
+	ret := fmt.Sprintf("%s%s", nmea, string(pack))
+	log.Println("Radio NMEA: ", ret)
+	return ret
+}
+
+func makePGRMCRadioString(setToActive bool, frequency string, monitor bool) (string, error) {
+	var charForMonitor byte = 'N'
+	if monitor == true {
+		charForMonitor = 'M'
+	}
+
+	var charForIndex byte = '1'
+	if setToActive == true {
+		charForIndex = '0'
+	}
+
+	freqSplit := strings.Split(frequency, ".")
+	if len(freqSplit) != 2 {
+		return "", fmt.Errorf("invalid Frequency: %s", frequency)
+	}
+
+	mhz, err1 := strconv.Atoi(freqSplit[0])
+	if err1 != nil {
+		return "", err1
+	}
+	if mhz > 137 || mhz < 118 {
+		return "", fmt.Errorf("invalid Frequency: %s", frequency)
+	}
+
+	khz, err2 := strconv.Atoi(freqSplit[1])
+	if err2 != nil {
+		return "", err2
+	}
+
+	mhz = mhz - 0x30
+	offset := ((khz % 25) / 5) + 0x30
+	khz = (khz / 25) + 0x30
+
+	pack := []byte{uint8(charForIndex), uint8(mhz), uint8(khz), charForMonitor, uint8(offset)}
+
+	msg := fmt.Sprintf("$PGRMC0%s", string(pack))
+	return msg, nil
 }
 
 func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency string, toActive bool, label string) bool {
@@ -209,25 +261,28 @@ func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency 
 		if(toActive == true) {
 			thisRadio.FrequencyActive = frequency
 			thisRadio.LabelActive = label
-			
+
 		} else {
 			thisRadio.FrequencyStandby = frequency
-			thisRadio.LabelStandby = label			
+			thisRadio.LabelStandby = label
 		}
 
-		nmeaRadioUpdate := makeNMEARadioString("$PGRMC", thisRadio.FrequencyActive, thisRadio.FrequencyStandby, thisRadio.LabelActive, thisRadio.LabelStandby)
-		log.Println("radioSetFrequency NMEA ",nmeaRadioUpdate)
+		nmeaRadioUpdate, err := makePGRMCRadioString(toActive, frequency, thisRadio.Dual)
+		log.Println("radioSetFrequency NMEA ", nmeaRadioUpdate)
+		if err != nil {
+			return false
+		}
 		// if the user specified a dedicated port we use it
 		if(thisRadio.serialPort != nil) {
-				written, err := serialPort.Write([]byte(nmeaRadioUpdate))
+			written, err := serialPort.Write([]byte(nmeaRadioUpdate))
 				if err != nil || written==0 {
-					return false
-				} else {
-					return true
-				}
+				return false
+			} else {
+				return true
+			}
 		} else {
 			// use existing NMEA output channel
-			sendNetFLARM(nmeaRadioUpdate,time.Second, 0)
+			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", time.Second, 0)
 			return true
 		}
 		break
@@ -244,8 +299,29 @@ func (radioInstance *RadioStratuxPlugin) radioSetDual(index int, dual bool) bool
 	thisRadio := &radioInstance.radioData[index]
 	switch thisRadio.Driver {
 	case RADIO_DRIVER_RS232:
-		if(thisRadio.serialPort != nil){
-			return radioSerialSetDual(thisRadio.serialPort , dual)
+		if thisRadio.serialPort != nil {
+			return radioSerialSetDual(thisRadio.serialPort, dual)
+		}
+		break
+	case RADIO_DRIVER_RS232_NMEA:
+		// in NMEA there is no dual command, so we rewrite the standby frequency with M enabled
+		nmeaRadioUpdate, err := makePGRMCRadioString(false, thisRadio.FrequencyStandby, dual)
+		log.Println("radioSetFrequency NMEA ", nmeaRadioUpdate)
+		if err != nil {
+			return false
+		}
+		// if the user specified a dedicated port we use it
+		if thisRadio.serialPort != nil {
+			written, err := serialPort.Write([]byte(nmeaRadioUpdate))
+			if err != nil || written == 0 {
+				return false
+			} else {
+				return true
+			}
+		} else {
+			// use existing NMEA output channel
+			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", time.Second, 0)
+			return true
 		}
 		break
 	}
@@ -344,7 +420,7 @@ func radioSerialSetFrequency(serialPort *serial.Port, frequency string, toActive
 
 func radioSerialSetDual(serialPort *serial.Port, dual bool) bool {
 	var command byte
-	command = 'O' 
+	command = 'O'
 	if(dual==false){
 		command = 'o'
 	}

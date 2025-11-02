@@ -1252,6 +1252,7 @@ type settings struct {
     GpsManualChip        string         // ublox8, ublox9, ublox
 	GpsManualTargetBaud  int            // default: 115200
 	// Plugins
+	BleParser_Enabled    bool // Receiving via BLE the Radio and Autopilot
 	Autopilot_Enabled    bool // Autopilot with HSI
 	AutopilotUdp_Enabled bool // Autopilot from UDP with HSI
 	AutopilotUdp_Port    int  // Autopilot UDP Port, default 1234
@@ -1342,6 +1343,7 @@ var noConfigFound bool
 
 func defaultSettings() {
 	// Plugin defaults
+	globalSettings.BleParser_Enabled = false
 	globalSettings.Autopilot_Enabled = false
 	globalSettings.AutopilotUdp_Enabled = false
 	globalSettings.AutopilotUdp_Port = 1234	

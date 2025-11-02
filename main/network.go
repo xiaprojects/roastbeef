@@ -20,7 +20,7 @@ import (
 	"strings"
 	"sync"
 	"time"
-
+	"encoding/json"
 	"github.com/tarm/serial"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
@@ -400,6 +400,64 @@ func parseBleUuid(uuidStr string) (uuid bluetooth.UUID) {
 	return
 }
 
+func bleRemoteWriteCommand(client bluetooth.Connection, offset int, value []byte) {
+	// Integration of remote commands via BLE
+	nmeaSentence := string(value)
+	passthruePrefixes := []string{
+		"$PGRMH",
+		"$GPVTG",
+		"$P3IGGA",
+		"$GPRMB",
+		"$GPAPB",
+		"$PMRRC",
+		"$PGRMC"}
+
+
+	for _, approvedSentence := range passthruePrefixes {
+		if strings.HasPrefix(nmeaSentence, approvedSentence) {
+			avoidLoopBackMutex.Lock()
+			isLoopBack := avoidLoopBackMap[approvedSentence] == nmeaSentence 
+			avoidLoopBackMutex.Unlock()
+
+			if(isLoopBack == true) {
+			} else {
+				log.Printf("BLE client %d: received %s", client, nmeaSentence)
+				avoidLoopBackMutex.Lock()
+				avoidLoopBackMap[approvedSentence] = nmeaSentence
+				avoidLoopBackMutex.Unlock()
+				// TODO: correctly dispatch the message
+				defer sendNetFLARM(nmeaSentence, time.Second, 0)
+
+				if strings.HasPrefix(nmeaSentence, "$GPRMB") {
+					parseAndManageGPRMB(nmeaSentence)
+				}
+				if strings.HasPrefix(nmeaSentence, "$PGRMC") && len(radio.radioData) > 0 {
+					// TODO: multi radio...
+					index := 0
+					newStatus, _ := ParsePMRRCCompact(nmeaSentence, radio.radioData[index])
+					if newStatus != nil {
+						radio.radioDataMutex.Lock()
+						radio.radioData[index].FrequencyActive = newStatus.FrequencyActive
+						radio.radioData[index].LabelActive = newStatus.LabelActive
+						radio.radioData[index].FrequencyStandby = newStatus.FrequencyStandby
+						radio.radioData[index].LabelStandby = newStatus.LabelStandby
+						radio.radioData[index].Dual = newStatus.Dual
+						globalSettings.Radio = radio.radioData
+						statusJSON, _ := json.Marshal(&radio.radioData)
+						radio.radioDataMutex.Unlock()
+						radioUpdate.Send(statusJSON)
+					}
+				}
+			}
+		}
+	}
+}
+
+// TODO: Improve this
+// Avoid Loopback on BLE
+var avoidLoopBackMap map[string]string
+var avoidLoopBackMutex *sync.Mutex
+
 var bleAdapter = bluetooth.DefaultAdapter
 func initBluetooth() {
 	if len(globalSettings.BleOutputs) == 0 {
@@ -421,7 +479,6 @@ func initBluetooth() {
 	adv := bleAdapter.DefaultAdvertisement()
 	adv.Configure(bluetooth.AdvertisementOptions{
 		LocalName: globalSettings.WiFiSSID,
-		ServiceUUIDs: services,
 	})
 	if err := adv.Start(); err != nil {
 		addSingleSystemErrorf("BLE", "BLE Advertising failed to start: %s", err.Error())
@@ -429,6 +486,10 @@ func initBluetooth() {
 	// TODO: not working if we have multiple GATTs in one service
 	for i := range globalSettings.BleOutputs {
 		conn := &globalSettings.BleOutputs[i]
+		var writeEventHandler bluetooth.WriteEvent = nil
+		if i==0 && globalSettings.BleParser_Enabled == true {
+			writeEventHandler = bleRemoteWriteCommand
+		}
 		err := bleAdapter.AddService(&bluetooth.Service{
 			UUID: parseBleUuid(conn.UUIDService),
 			Characteristics: []bluetooth.CharacteristicConfig {
@@ -436,10 +497,8 @@ func initBluetooth() {
 					Handle: &conn.Characteristic,
 					UUID:   parseBleUuid(conn.UUIDGatt),
 					Value:  []byte{},
-					Flags:  bluetooth.CharacteristicNotifyPermission | bluetooth.CharacteristicReadPermission | bluetooth.CharacteristicWriteWithoutResponsePermission,
-					//WriteEvent: func(client bluetooth.Connection, offset int, value []byte) {
-					//	log.Printf("client %d: received %s", client, string(value))
-					//},
+					Flags:  bluetooth.CharacteristicNotifyPermission | bluetooth.CharacteristicReadPermission | bluetooth.CharacteristicWriteWithoutResponsePermission | bluetooth.CharacteristicWritePermission,
+					WriteEvent: writeEventHandler,
 				},
 			},
 
@@ -560,6 +619,9 @@ func sendXPlane(msg []byte, maxAge time.Duration, priority int32) {
 }
 
 func sendNetFLARM(msg string, maxAge time.Duration, priority int32) {
+	avoidLoopBackMutex.Lock()
+	avoidLoopBackMap[msg[0:6]] = msg
+	avoidLoopBackMutex.Unlock()
 	sendMsg([]byte(msg), NETWORK_FLARM_NMEA, maxAge, priority)
 }
 
@@ -734,6 +796,8 @@ func networkStatsCounter() {
 func initNetwork() {
 	networkGDL90Chan = make(chan []byte, 1024)
 	clientConnections = make(map[string]connection)
+	avoidLoopBackMap = make(map[string]string)
+	avoidLoopBackMutex = &sync.Mutex{}
 
 	netMutex = &sync.Mutex{}
 	refreshConnectedClients()

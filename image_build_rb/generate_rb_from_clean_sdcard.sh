@@ -253,7 +253,7 @@ chown -R $USER:$USER /opt/stratux/
 #rm -Rf /var/log/*
 #rm -Rf /var/lib/bluetooth/*
 #rm -Rf /var/lib/NetworkManager/*
-#
+#rm -Rf /home/pi/folders
 
 # Apply User Settings
 # Create USA SDCard with Maps and detailed elevations:

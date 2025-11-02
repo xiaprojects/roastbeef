@@ -819,6 +819,8 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 			ret := radio.radioSetDual(radioIndex,msg.Dual)
 			if(ret==true){
 				radio.radioData[radioIndex].Dual = msg.Dual
+				globalSettings.Radio = radio.radioData
+				time.Sleep(250 * time.Millisecond)
 			} else {
 				log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 				alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio DUAL Set fail"), time.Now()})
@@ -831,6 +833,8 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 			if(ret==true){
 				radio.radioData[radioIndex].FrequencyActive = msg.FrequencyActive
 				radio.radioData[radioIndex].LabelActive = msg.LabelActive				
+				globalSettings.Radio = radio.radioData
+				time.Sleep(250 * time.Millisecond)
 			} else {
 					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Active fail"), time.Now()})
@@ -842,6 +846,8 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 			if(ret==true){
 				radio.radioData[radioIndex].FrequencyStandby = msg.FrequencyStandby
 				radio.radioData[radioIndex].LabelStandby = msg.LabelStandby				
+				globalSettings.Radio = radio.radioData
+				time.Sleep(250 * time.Millisecond)
 			} else {
 					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Standby fail"), time.Now()})
@@ -1399,6 +1405,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.SwitchBoard_Enabled = val.(bool)
 					case "Radio_Enabled":
 						globalSettings.Radio_Enabled = val.(bool)
+					case "BleParser_Enabled":
+						globalSettings.BleParser_Enabled = val.(bool)						
 					case "TraceLog":
 						globalSettings.TraceLog = val.(bool)
 					case "AHRSLog":

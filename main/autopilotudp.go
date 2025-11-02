@@ -298,6 +298,29 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) InitFunc() bool {
 	return true
 }
 
+func parseAndManageGPRMB(nmeaSentence string) {
+	gprmb, error := ParseGPRMB(nmeaSentence)
+	if error == nil {
+		// Stop internal AP
+		autopilot.waypointsDataMutex.Lock()
+		autopilot.status.Active = false
+		// Store current waypath to be ready to switch on internal AP in case of timeout
+		var msg []Waypoint
+		To := Waypoint{Lat: gprmb.Lat, Lon: gprmb.Lon, Ele: int32(mySituation.GPSAltitudeMSL), Status: WAYPOINT_STATUS_TARGET, Cmt: gprmb.WaypointDest}
+		From := Waypoint{Lat: mySituation.GPSLatitude, Lon: mySituation.GPSLongitude, Ele: int32(mySituation.GPSAltitudeMSL), Status: WAYPOINT_STATUS_PAST, Cmt: gprmb.WaypointStart}
+		msg = make([]Waypoint, 0)
+		msg = append(msg, From)
+		msg = append(msg, To)
+		autopilot.waypointsData = msg
+		// Store last status
+		autopilot.status.GPRMB = *gprmb
+		autopilot.status.To = To
+		// Socket updated on Autopilot Thread
+		//autopilotUpdate.SendJSON(autopilot.status)
+		autopilot.waypointsDataMutex.Unlock()
+	}
+}
+
 func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 	log.Println("Entered AutopilotUDPStratuxPlugin ENABLED on port: ", globalSettings.AutopilotUdp_Port)
 
@@ -345,26 +368,7 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 
 					if strings.HasPrefix(nmeaSentence, approvedSentence) {
 						if strings.HasPrefix(nmeaSentence, "$GPRMB") {
-							gprmb, error := ParseGPRMB(nmeaSentence)
-							if error == nil {
-								// Stop internal AP
-								autopilot.waypointsDataMutex.Lock()
-								autopilot.status.Active = false
-								// Store current waypath to be ready to switch on internal AP in case of timeout
-								var msg []Waypoint
-								To := Waypoint{Lat: gprmb.Lat, Lon: gprmb.Lon, Ele: int32(mySituation.GPSAltitudeMSL), Status: WAYPOINT_STATUS_TARGET, Cmt: gprmb.WaypointDest}
-								From := Waypoint{Lat: mySituation.GPSLatitude, Lon: mySituation.GPSLongitude, Ele: int32(mySituation.GPSAltitudeMSL), Status: WAYPOINT_STATUS_PAST, Cmt: gprmb.WaypointStart}
-								msg = make([]Waypoint, 0)
-								msg = append(msg, From)
-								msg = append(msg, To)
-								autopilot.waypointsData = msg
-								// Store last status
-								autopilot.status.GPRMB = *gprmb
-								autopilot.status.To = To
-								// Socket updated on Autopilot Thread
-								//autopilotUpdate.SendJSON(autopilot.status)
-								autopilot.waypointsDataMutex.Unlock()
-							}
+							parseAndManageGPRMB(nmeaSentence)
 						}
 						//fmt.Println(nmeaSentence)
 						sendNetFLARM(nmeaSentence+"\n", time.Second, 0)

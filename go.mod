@@ -1,9 +1,10 @@
 module github.com/stratux/stratux
 
-go 1.20
+go 1.22.1
 
 require (
 	github.com/BertoldVdb/go-ais v0.1.0
+	github.com/MarinX/keylogger v0.0.0-20240620105846-48ca9d01f566
 	github.com/bradfitz/gomemcache v0.0.0-20230124162541-5f7a7d875746
 	github.com/dustin/go-humanize v1.0.0
 	github.com/felixge/pidctrl v0.0.0-20160307080219-7b13bcae7243
@@ -19,11 +20,10 @@ require (
 	github.com/stratux/serial v0.0.0-20250124170838-6b3ab1cff00c
 	github.com/takama/daemon v1.0.0
 	github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07
-	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
+	golang.org/x/exp v0.0.0-20241204233417-43b7b7cde48d
 	golang.org/x/net v0.1.0
 	gonum.org/v1/plot v0.9.0
-	github.com/MarinX/keylogger v0.0.0-20240620105846-48ca9d01f566
-	tinygo.org/x/bluetooth v0.10.0
+	tinygo.org/x/bluetooth v0.13.0
 )
 
 require (
@@ -51,10 +51,10 @@ require (
 	github.com/saltosystems/winrt-go v0.0.0-20240509164145-4f7860a3bd2b // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/skelterjohn/go.matrix v0.0.0-20130517144113-daa59528eefd // indirect
-	github.com/soypat/cyw43439 v0.0.0-20240609122733-da9153086796 // indirect
-	github.com/soypat/seqs v0.0.0-20240527012110-1201bab640ef // indirect
+	github.com/soypat/cyw43439 v0.0.0-20250505012923-830110c8f4af // indirect
+	github.com/soypat/seqs v0.0.0-20250124201400-0d65bc7c1710 // indirect
 	github.com/tinygo-org/cbgo v0.0.4 // indirect
-	github.com/tinygo-org/pio v0.0.0-20231216154340-cd888eb58899 // indirect
+	github.com/tinygo-org/pio v0.2.0 // indirect
 	github.com/uavionix/serial v0.0.0-19700101022104-87f23b1d3198 // indirect
 	github.com/ziutek/mymysql v1.5.4 // indirect
 	golang.org/x/image v0.0.0-20210216034530-4410531fe030 // indirect
