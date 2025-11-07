@@ -739,6 +739,42 @@ func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+/***
+ * 
+ * Static resources REST API End
+ */
+type ResourceDataModel struct {
+	Name string
+	Source string
+	Path string
+	Size int64
+	ModTime time.Time
+	Ident string
+	Description string
+}
+func handleResourcesGet(w http.ResponseWriter, r *http.Request) {
+	fileInfo, err := ioutil.ReadDir(STRATUX_WWW_DIR + "resources")
+    if err != nil {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+
+	list := []ResourceDataModel{}
+
+	for i := range fileInfo {
+		r := ResourceDataModel{Name: fileInfo[i].Name(),Size: fileInfo[i].Size(),ModTime: fileInfo[i].ModTime(),Path: "/resources/"+fileInfo[i].Name(),Ident: "",Description: ""}
+		list = append(list, r)
+	}
+
+	statusJSON, err2 := json.Marshal(&list)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
 
 /***
  * Radio REST API
@@ -2297,6 +2333,8 @@ func managementInterface() {
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
 	// Radio Platback Feature
 	http.HandleFunc("/playback", handlePlaybackGet)
+	// Resources Feature
+	http.HandleFunc("/resources", handleResourcesGet)
 	// Checklist Feature
 	http.HandleFunc("/checklist/default/status", handleChecklistRest)
 	// Alerts Feature

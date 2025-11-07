@@ -2,13 +2,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url("/resources/SP01.jpg");
     margin: 0 auto;
     max-height: 100cqh;
     aspect-ratio: 1/1;
-    position: relative;
+    position: absolute;
+    display: none;
     overflow: hidden;
     container-type: inline-size;
-       -webkit-filter: invert(1);
-   filter: invert(1);
+    background-color: black;
 }
