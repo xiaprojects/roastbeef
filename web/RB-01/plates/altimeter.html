@@ -5,4 +5,9 @@
             <div class="altimeter-qnh">{{Altimeter.QNH}}</div>
             <div class="altimeter-gps">{{Altimeter.GPSAltitudeMSL}}</div>
             <div class="altimeter-label">GPS</div>
+            <div class="fabNavigation fabNorthCenter" ng-click="fabClick('NC',this,$event);"></div>
+            <div class="fabNavigation fabSouthCenter" ng-click="fabClick('SC',this,$event);"></div>
+            <div class="fabNavigation fabCenter" ng-click="fabClick('C',this,$event);"></div>
+            <div ng-if="Altimeter.AutoQNH==true" class="label label-success altimeter-qnh-auto" >AUTO</div>
+            <div ng-if="Altimeter.AutoQNH==false" class="label label-default altimeter-qnh-auto" >AUTO</div>
         </div>

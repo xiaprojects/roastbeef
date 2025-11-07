@@ -52,6 +52,14 @@
     margin-right: 8%;
 }
 
+.altimeter-qnh-auto {
+    position: absolute;
+    top: 53%;
+    right: 0%;
+    font-size: 4cqmin;
+    margin-right: 11%;
+}
+
 .altimeter-label {
     position: absolute;
     text-align: left;
