@@ -154,6 +154,7 @@
 					<i class="fa fa-caret-right pull-right"></i>
 				</a>
 				<div style="container-type: inline-size;width: 100%;" ng-repeat="item in leftpages"
+					ng-init="init({isSidebar:true,side:'left'})"
 					ng-include="item.url" ng-controller="item.ctrl"></div>
 
 			</div>
@@ -169,6 +170,7 @@
 				</a>
 
 				<div style="container-type: inline-size;width: 100%;" ng-repeat="item in rightpages"
+					ng-init="init({isSidebar:true,side:'right'})"
 					ng-include="item.url" ng-controller="item.ctrl"></div>
 
 			</div>
@@ -248,6 +250,7 @@
 		});
 
 	</script>
+	<script src="services/servicebuzzer.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+<div ui-content-for="title">Speed</div>
+<div class="speed">
+	<div class="arc"
+		style="transform: rotate({{arc.startDegree}});background-color: {{arc.color}};--a:{{arc.sizeDegree}};"
+		ng-repeat="arc in Speed.arcs"></div>
+	<div class="speed-number" style="left:{{arc.left}};top:{{arc.top}};" ng-repeat="arc in Speed.speedTicks">
+		{{arc.speed}}</div>
+	<div class="speed-label" >{{Speed.label}}</div>
+	<div class="speed-unit" >{{Speed.unit}}</div>
+	<div class="speed-fi_needle" style="transform: rotate({{Speed.speedDegree}});"></div>
+	<div class="speed-value" style="background-color: {{Speed.backgroundColor}};">{{Speed.speed}}</div>
+	
+</div>

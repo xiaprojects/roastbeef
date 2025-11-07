@@ -30,6 +30,8 @@
 */
 angular.module('appControllers').controller('SixPackInstrumentSixpack', SixPackInstrumentSixpack);
 SixPackInstrumentSixpack.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];
+angular.module('appControllers').controller('SixPackInstrumentGmetergauge', SixPackInstrumentGmetergauge);
+SixPackInstrumentGmetergauge.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];
 angular.module('appControllers').controller('SixPackInstrumentSpeed', SixPackInstrumentSpeed);
 SixPackInstrumentSpeed.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];
 angular.module('appControllers').controller('SixPackInstrumentAttitude', SixPackInstrumentAttitude);
@@ -42,7 +44,78 @@ angular.module('appControllers').controller('SixPackInstrumentHeading', SixPackI
 SixPackInstrumentHeading.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];
 angular.module('appControllers').controller('SixPackInstrumentVariometer', SixPackInstrumentVariometer);
 SixPackInstrumentVariometer.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];
+
+function createProgressiveTicksForRoundInstrument(maxValue = 100, minValue = 0, endDegree = 330, startDegree = 0,  numberOfTicks = 15, decimalNumber = 0, scaleMoltiplier = 1) {
+  var speedTicks = [];
+  const arcsArc = (endDegree - startDegree);
+  const tickSpedSlots = parseInt(arcsArc / numberOfTicks); // max is 15°
+  var tickSpedSlot = startDegree;
+  const tickSpeedIncrement = (maxValue - minValue) / numberOfTicks;
+  for (var tickSpeed = minValue; tickSpeed <= maxValue; tickSpeed += tickSpeedIncrement) {
+    const degree = tickSpedSlot - 90;
+    const radians = degree * Math.PI / 180;
+    const left = (45 + 40 * Math.cos(radians)) + "%";
+    const top = (46 + 40 * Math.sin(radians)) + "%";
+    speedTicks.push({ "degree": (tickSpedSlot), "speed": Number.parseFloat(tickSpeed * scaleMoltiplier).toFixed(decimalNumber), "top": top, "left": left });
+    tickSpedSlot += tickSpedSlots;
+  }
+  return speedTicks;
+}
+
+
+
 // create our controller function with all necessary logic
+function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interval) {
+  SixPackInstrument($rootScope, $scope, $state, $http, $interval, "gmetergauge");
+
+
+
+  $scope.Speed = {
+    "startSpeedDegree": -180,
+    "endSpeedDegree": 90,
+    "label": "G-Meter",
+    "unit": "G",
+    "speed": 0,
+    "minSpeed": -3,
+    "backgroundColor":"#000000",
+    "maxSpeed": 6,
+    "speedDegree": "45deg",
+    "arcs": [
+      { "color": "#ffffff", "sizeDegree": "45deg", "startDegree": "225deg" },
+      { "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "270deg" },
+      { "color": "#ffff00", "sizeDegree": "45deg", "startDegree": "180deg" },
+      { "color": "#ffff00", "sizeDegree": "90deg", "startDegree": "0deg" },
+      { "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "165deg" },
+      { "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "90deg" }
+    ],
+    "speedTicks": []
+  };
+
+
+
+  $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree,  15, 1);
+
+
+  $scope.updateSituation = (situation) => {
+    $scope.Speed.speed = Number.parseFloat(situation.AHRSGLoad).toFixed(1);
+    $scope.Speed.label = Number.parseFloat(situation.AHRSGLoadMax).toFixed(1)+String.fromCodePoint(9650);
+    $scope.Speed.unit = Number.parseFloat(situation.AHRSGLoadMin).toFixed(1)+String.fromCodePoint(9660);
+
+    const arcsArc = ($scope.Speed.endSpeedDegree - $scope.Speed.startSpeedDegree);
+    const speedIncrement = ($scope.Speed.maxSpeed - $scope.Speed.minSpeed);
+    const ratio = speedIncrement / arcsArc;
+
+    $scope.Speed.speedDegree = ((situation.AHRSGLoad-$scope.Speed.minSpeed) / ratio + $scope.Speed.startSpeedDegree + 90) + "deg";
+
+    if(true) {
+      window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
+    }
+
+  };
+}
+
+
+
 function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "speed");
 
@@ -59,32 +132,15 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
     "maxSpeed": 330,
     "speedDegree": "45deg",
     "arcs": [
-      { "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "45deg" },
-      { "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "135deg" },
-      { "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "225deg" },
-      { "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "300deg" }
+      { "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "45deg", "backgroundColor": "#000000" },
+      { "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "135deg", "backgroundColor": "#00aa00" },
+      { "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "225deg", "backgroundColor": "#aaaa00" },
+      { "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "300deg", "backgroundColor": "#aa0000" }
     ],
     "speedTicks": []
   };
 
-
-  var speedTicks = [];
-  const arcsArc = ($scope.Speed.endSpeedDegree - $scope.Speed.startSpeedDegree);
-  const tickSpedSlots = parseInt(arcsArc / 15); // max is 15°
-  var tickSpedSlot = $scope.Speed.startSpeedDegree;
-  const tickSpeedIncrement = ($scope.Speed.maxSpeed - $scope.Speed.minSpeed) / 15;
-  for (var tickSpeed = $scope.Speed.minSpeed; tickSpeed <= $scope.Speed.maxSpeed; tickSpeed += tickSpeedIncrement) {
-
-
-    const degree = tickSpedSlot - 90;
-    const radians = degree * Math.PI / 180;
-    const left = (45 + 40 * Math.cos(radians)) + "%";
-    const top = (46 + 40 * Math.sin(radians)) + "%";
-
-    speedTicks.push({ "degree": (tickSpedSlot), "speed": tickSpeed, "top": top, "left": left });
-    tickSpedSlot += tickSpedSlots;
-  }
-  $scope.Speed.speedTicks = speedTicks;
+   $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree);
 
 
   $scope.updateSituation = (situation) => {
@@ -106,12 +162,27 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "rollDegree": "0deg",
     "pitchOrigin": "50% 0%",
     "pitchTop": "50%",
+    "standalone" : true
   };
+  // TODO: unify
+  $scope.Speed = {
+    "speed": 0
+  };
+  $scope.Altimeter = {
+    "altitude": 0
+  };
+
+  if($scope.$parent.hasOwnProperty("$parent") 
+    && $scope.$parent.$parent.hasOwnProperty("instruments")) {
+    $scope.Attitude.standalone = false;
+  }
 
   $scope.updateSituation = (situation) => {
     $scope.Attitude.pitchTop = (situation.AHRSPitch) + "%";
     $scope.Attitude.pitchOrigin = "50% " + situation.AHRSPitch + "%";
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
+    $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
+    $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);    
   };
 }
 function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval) {
@@ -119,17 +190,39 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
 
   $scope.Altimeter = {
     "altitude": 0,
+    "AutoQNH": true,
     "altimeterDegreeM": "90deg",
     "altimeterDegreeC": "90deg",
   };
 
   $scope.updateSituation = (situation) => {
-    $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude);
+    const altitude1013 = situation.BaroPressureAltitude;
+    $scope.Altimeter.AutoQNH = situation.AutoQNH;
+    $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude+27*(situation.QNH-1013.25));
     $scope.Altimeter.GPSAltitudeMSL = parseInt(situation.GPSAltitudeMSL);
     $scope.Altimeter.QNH = parseInt(situation.QNH);
-    $scope.Altimeter.altimeterDegreeC = (90 + (360.0 * (situation.GPSAltitudeMSL / 1000) / 10.0)) + "deg";
-    $scope.Altimeter.altimeterDegreeM = (90 + (360.0 * (situation.GPSAltitudeMSL % 1000) / 1000.0)) + "deg";
+    $scope.Altimeter.altimeterDegreeC = (90 + (360.0 * ($scope.Altimeter.altitude / 1000) / 10.0)) + "deg";
+    $scope.Altimeter.altimeterDegreeM = (90 + (360.0 * ($scope.Altimeter.altitude % 1000) / 1000.0)) + "deg";
 
+  };
+
+  $scope.fabClick = (direction, item, browserEvent) => {
+    console.log(direction + " " + item + " " + browserEvent);
+
+    if (direction == "NC") {
+      $scope.Altimeter.QNH++;
+      const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {QNH:$scope.Altimeter.QNH,AutoQNH:false} });
+      dispatchEvent(proxy);
+    }
+    if (direction == "SC") {
+      $scope.Altimeter.QNH--;
+      const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {QNH:$scope.Altimeter.QNH,AutoQNH:false} });
+      dispatchEvent(proxy);
+    }
+    if (direction == "C") {
+      const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {AutoQNH:true} });
+      dispatchEvent(proxy);
+    }    
   };
 }
 function SixPackInstrumentTurnslip($rootScope, $scope, $state, $http, $interval) {
@@ -161,11 +254,19 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
 
   $scope.Heading = {
     "heading": 0
+    ,
+    "sourceName":"GYRO"
   };
 
 
   $scope.updateSituation = (situation) => {
+    if(situation.GPSFixQuality > 0) {
+      $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
+      $scope.Heading.sourceName = "GPS";
+    } else {
     $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+      $scope.Heading.sourceName = "GYRO";
+    }
   };
 }
 function SixPackInstrumentVariometer($rootScope, $scope, $state, $http, $interval) {
@@ -249,11 +350,15 @@ function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
     }
     var situation = event.detail;
     // Filter to avoid blow up CPU
+    /*
     const oldSituation = $scope.situation;
     const newSituation = situation;
     const ahrsThreshold = 1;
     const altitudeThreshold = 50 / 3.2808;
     const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+    */
+    // Service is already protecting the update
+    const requireRefresh = true;
     if (requireRefresh == true) {
       $scope.situation = situation;
       $scope.updateSituation(situation);
