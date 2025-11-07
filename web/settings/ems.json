@@ -2,76 +2,281 @@
     "widgets":
     [
 		{
+			"displayInSidebar": true,
 			"speed": 0,
+			"source": "oiltemperature",
 			"endSpeedDegree": 495,
 			"label": "OIL TEMP",
 			"unit": "°C",
 			"backgroundColor": "#000000",
 			"startSpeedDegree": 225,
-			"minSpeed": 0,
-			"maxSpeed": 110,
+			"minSpeed": 30,
+			"maxSpeed": 165,
 			"speedDegree": "45deg",
 			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 40, "backgroundColor": "#00aa00" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 90, "backgroundColor": "#aaaa00" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 120, "backgroundColor": "#aa0000" }
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 75, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "45deg", "threshold": 120, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "75deg", "threshold": 135, "backgroundColor": "#aa0000" }
 			],
 			"speedTicks": []
 		},
 		{
+			"displayInSidebar": true,
 			"speed": 0,
+			"source": "oilpressure",
 			"endSpeedDegree": 495,
 			"label": "OIL PRES",
 			"unit": "PSI",
 			"backgroundColor": "#000000",
 			"startSpeedDegree": 225,
 			"minSpeed": 0,
-			"maxSpeed": 8,
+			"maxSpeed": 135,
 			"speedDegree": "45deg",
 			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 0, "backgroundColor": "#000000" }
+				{ "color": "#ffffff", "sizeDegree": "45deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#ffff00", "sizeDegree": "45deg", "startDegree": "270deg", "threshold": 20, "backgroundColor": "#aaaa00" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 45, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 90, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 130, "backgroundColor": "#aa0000" }
 			],
 			"speedTicks": []
 		},
 		{
+			"displayInSidebar": true,
 			"speed": 0,
+			"source": "enginerpm",
 			"endSpeedDegree": 495,
 			"label": "RPM",
 			"unit": "100rpm",
 			"backgroundColor": "#000000",
 			"startSpeedDegree": 225,
-			"minSpeed": 0,
+			"minSpeed": 1500,
 			"maxSpeed": 6000,
 			"speedDegree": "45deg",
 			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 0, "backgroundColor": "#00aa00" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 0, "backgroundColor": "#aaaa00" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 0, "backgroundColor": "#aa0000" }
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "135deg", "startDegree": "315deg", "threshold": 3000, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "90deg", "threshold": 5500, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 5700, "backgroundColor": "#aa0000" }
 			],
 			"speedTicks": []
 		},
 		{
+			"displayInSidebar": true,
 			"speed": 0,
+			"source": "manifoldpressure",
 			"endSpeedDegree": 495,
 			"label": "MAP",
 			"unit": "mmHg",
 			"backgroundColor": "#000000",
 			"startSpeedDegree": 225,
-			"minSpeed": 0,
-			"maxSpeed": 30,
+			"minSpeed": 10,
+			"maxSpeed": 40,
 			"speedDegree": "180deg",
 			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 0, "backgroundColor": "#000000" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 0, "backgroundColor": "#000000" }
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 20, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 30, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 39, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "oiltemperature",
+			"endSpeedDegree": 495,
+			"label": "OIL TEMP",
+			"unit": "°C",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 30,
+			"maxSpeed": 165,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 75, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "45deg", "threshold": 120, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "75deg", "threshold": 135, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "oilpressure",
+			"endSpeedDegree": 495,
+			"label": "OIL PRES",
+			"unit": "PSI",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 135,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "45deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#ffff00", "sizeDegree": "45deg", "startDegree": "270deg", "threshold": 20, "backgroundColor": "#aaaa00" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 45, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 90, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 130, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "enginerpm",
+			"endSpeedDegree": 495,
+			"label": "RPM",
+			"unit": "100rpm",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 1500,
+			"maxSpeed": 6000,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "135deg", "startDegree": "315deg", "threshold": 3000, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "90deg", "threshold": 5500, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 5700, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "manifoldpressure",
+			"endSpeedDegree": 495,
+			"label": "MAP",
+			"unit": "mmHg",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 10,
+			"maxSpeed": 40,
+			"speedDegree": "180deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 20, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 30, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 39, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "fuelpressure",
+			"endSpeedDegree": 495,
+			"label": "FUEL PRES",
+			"unit": "PSI",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 11,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 4, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 7, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 11, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "fuel1",
+			"endSpeedDegree": 495,
+			"label": "FUEL LEFT",
+			"unit": "LT",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 60,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ff0000", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#aa0000" },
+				{ "color": "#ffff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 20, "backgroundColor": "#aaaa00" },
+				{ "color": "#00ff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 40, "backgroundColor": "#00aa00" },
+				{ "color": "#0000ff", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 55, "backgroundColor": "#0000aa" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "fuel2",
+			"endSpeedDegree": 495,
+			"label": "FUEL RIGHT",
+			"unit": "LT",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 60,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ff0000", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#aa0000" },
+				{ "color": "#ffff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 20, "backgroundColor": "#aaaa00" },
+				{ "color": "#00ff00", "sizeDegree": "75deg", "startDegree": "45deg", "threshold": 40, "backgroundColor": "#00aa00" },
+				{ "color": "#0000ff", "sizeDegree": "15deg", "startDegree": "120deg", "threshold": 55, "backgroundColor": "#0000aa" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source": "outsidetemperature",
+			"endSpeedDegree": 495,
+			"label": "OUT TEMP",
+			"unit": "°C",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 45,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#0000ff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#0000aa" },
+				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 15, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "15deg", "startDegree": "45deg", "threshold": 30, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "60deg", "threshold": 55, "backgroundColor": "#aa0000" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"speed": 0,
+			"source":"batteryvoltage",
+			"endSpeedDegree": 495,
+			"label": "BATTERY",
+			"unit": "Volt",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 18,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "270deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" }
+			],
+			"speedTicks": []
+		},
+		{
+			"displayInSidebar": false,
+			"source":"amps",
+			"speed": 0,
+			"endSpeedDegree": 495,
+			"label": "ALTERNATOR",
+			"unit": "AMPS",
+			"backgroundColor": "#000000",
+			"startSpeedDegree": 225,
+			"minSpeed": 0,
+			"maxSpeed": 27,
+			"speedDegree": "45deg",
+			"arcs": [
+				{ "color": "#ffffff", "sizeDegree": "270deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" }
 			],
 			"speedTicks": []
 		}
+		
     ]
 }

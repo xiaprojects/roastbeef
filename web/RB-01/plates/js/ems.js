@@ -27,12 +27,15 @@
  * Dual licensing for commercial agreement is available
  * Please join Discord community
  *
+ * Test this module with this command:
+ * curl -X POST -H 'Content-Type: application/json' -d '{"alternatorout":10,"amps":8,"batteryvoltage":13.4,"cht1":130,"cht2":110,"cht3":120,"cht4":140,"egt1":800,"egt2":700,"egt3":750,"egt4":600,"enginerpm":5200,"fuel":120,"fuel1":45,"fuel2":12,"fuelpressure":4,"fuelremaining":50,"manifoldpressure":27,"oilpressure":60,"oiltemperature":100,"outsidetemperature":24}' http://localhost/setEMS
 */
 angular.module('appControllers').controller('EMSCtrl', EMSCtrl);
 
 function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 
 	const name = "ems";
+	$scope.isSidebar = false;
 
 	$state.get(name).onEnter = function () {
 		console.log("onEnter" + name);
@@ -43,16 +46,28 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 		removeEventListener("EMSUpdated", emsUpdated);
 	};
 
+	$scope.init = function (params) {
+		console.log("New Ctrl: "+ name+ " params:"+JSON.stringify(params));
+		$scope.isSidebar = params.isSidebar;
+    }
+
 
 	$scope.updateChart = function (indexOut, keyIn, emsDataMap) {
 		//
 		if (!emsDataMap.hasOwnProperty(keyIn)) {
 			emsDataMap[keyIn] = 0;
 		}
+		var useThisValueForGauge = emsDataMap[keyIn];
+		if(useThisValueForGauge>$scope.EMS[indexOut].maxSpeed) {
+			useThisValueForGauge=$scope.EMS[indexOut].maxSpeed;
+		}
+		if(useThisValueForGauge<$scope.EMS[indexOut].minSpeed) {
+			useThisValueForGauge=$scope.EMS[indexOut].minSpeed;
+		}
 		//
 		var degreeOut = (
 			(
-				(emsDataMap[keyIn] - $scope.EMS[indexOut].minSpeed) / ($scope.EMS[indexOut].maxSpeed - $scope.EMS[indexOut].minSpeed)
+				(useThisValueForGauge - $scope.EMS[indexOut].minSpeed) / ($scope.EMS[indexOut].maxSpeed - $scope.EMS[indexOut].minSpeed)
 			)
 			*
 			($scope.EMS[indexOut].endSpeedDegree - $scope.EMS[indexOut].startSpeedDegree)
@@ -60,27 +75,39 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 		);
 		$scope.EMS[indexOut].speed = parseInt(emsDataMap[keyIn]);
 		$scope.EMS[indexOut].speedDegree = (degreeOut + 90) + "deg";
+		// Change color by threshold
+		$scope.EMS[indexOut].backgroundColor = "#000000";
+		for(var thresholdIndex = $scope.EMS[indexOut].arcs.length-1; thresholdIndex >= 0;thresholdIndex--) {
+			if($scope.EMS[indexOut].speed > $scope.EMS[indexOut].arcs[thresholdIndex].threshold) {
+				$scope.EMS[indexOut].backgroundColor = $scope.EMS[indexOut].arcs[thresholdIndex].backgroundColor;
+				break;
+			}
+		}
+		for(var thresholdIndex = $scope.EMS[indexOut].arcs.length-1; thresholdIndex >= 0;thresholdIndex--) {
+			if($scope.EMS[indexOut].speed > $scope.EMS[indexOut].arcs[thresholdIndex].threshold) {
+				$scope.EMS[indexOut].arcs[thresholdIndex].color = $scope.EMS[indexOut].arcs[thresholdIndex].activeColor;
+			}
+			else {
+				$scope.EMS[indexOut].arcs[thresholdIndex].color = $scope.EMS[indexOut].arcs[thresholdIndex].backgroundColor;
+			}
+		}
 		return degreeOut;
 	}
 
 
 	function emsUpdated(emsData) {
-
-		if (($scope === undefined) || ($scope === null) || $state.current.controller != 'EMSCtrl') {
+		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'EMSCtrl' && $scope.$parent.$parent.hasOwnProperty("radarSocket") == false)) {
 			removeEventListener("EMSUpdated", emsUpdated);
 			return; // we are getting called once after clicking away from the status page
 		}
 
-		const OILTEMP = 0;
-		const OILPRES = 1;
-		const RPM = 2;
-		const MAP = 3;
+		$scope.EMS.forEach(element => {
+			
+		});
 
-		$scope.updateChart(RPM, "rpm", emsData.detail);
-		$scope.updateChart(OILTEMP, "oiltemperature", emsData.detail);
-		$scope.updateChart(OILPRES, "oilpressure", emsData.detail);
-		$scope.updateChart(MAP, "map", emsData.detail);
-
+		for(var index=0;index<$scope.EMS.length;index++) {
+			$scope.updateChart(index, $scope.EMS[index].source, emsData.detail);
+		}
 		$scope.$apply();
 
 	};
