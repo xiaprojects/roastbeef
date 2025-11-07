@@ -34,6 +34,7 @@ package main
 
 import (
 	"log"
+	"strings"
 	"sync"
 )
 
@@ -57,6 +58,13 @@ func (emsInstance *EMSStratuxPlugin)InitFunc() bool {
 	emsInstance.emsData = make(map[string]float32)
 	emsInstance.emsDataMin = make(map[string]float32)
 	emsInstance.emsDataMax = make(map[string]float32)
+
+	// Pre-fill with default values
+	defaultEMSSensors := []string{"Egt1","Egt2","Egt3","Egt4","Cht1","Cht2","Cht3","Cht4","Fuel1","Fuel2","Fuel","Oilpressure","Oiltemperature","BatteryVoltage","AlternatorOut","ManifoldPressure","EngineRpm","Fuelpressure","Amps","Fuelremaining","OutsideTemperature"}
+	for _,key := range defaultEMSSensors {
+		emsInstance.emsData[strings.ToLower(key)] = 0
+	}
+
 	go emsInstance.ListenerFunc()
 	return true
 }

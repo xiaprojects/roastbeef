@@ -71,34 +71,34 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     $scope.items = [[
-        { "label": "Propeller", "value": "", "color": "#4444ff" },
-        { "label": "Engine", "value": "", "color": "#4444ff" },
-        { "label": "Fuel L", "value": "35L", "color": "#ff7c00" },
-        { "label": "", "value": null, "color": "transparent" },
-        { "label": "Flaps", "value": "0%", "color": "#007c00" },
-        { "label": "", "value": "", "color": "#00000000" },
-        { "label": "", "value": "", "color": "#00000000" },
-        { "label": "", "value": "", "color": "#00000000" },
+        { "label": "Propeller", "value": "", "color": "#4444ff","unit":"m" },
+        { "label": "Engine", "value": "", "color": "#4444ff","unit":"m" },
+        { "label": "Fuel L", "value": "35L", "color": "#ff7c00", "href":"#/ems","unit":"" },
+        { "label": "", "value": null, "color": "transparent","unit":"" },
+        { "label": "Flaps", "value": "0%", "color": "#007c00", "href":"#/switchboard","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
 
-        { "label": "EMS", "value": "OK", "color": "#007c00" },
-        { "label": "VP-X", "value": "14.4 V", "color": "#007c00" },
-        { "label": "BATT", "value": "11.9 V", "color": "#ff7c00" },
-        { "label": "CHECK", "value": "TODO", "color": "#ff7c00" },
+        { "label": "EMS", "value": "OK", "color": "#007c00", "href":"#/ems","unit":"" },
+        { "label": "VP-X", "value": "14.4 V", "color": "#007c00", "href":"#/switchboard","unit":"" },
+        { "label": "BATT", "value": "11.9 V", "color": "#ff7c00", "href":"#/ems","unit":"" },
+        { "label": "CHECK", "value": "TODO", "color": "#ff7c00", "href":"#/checklist","unit":"" },
     ], [
-        { "label": "Pilot", "value": "", "color": "#007c00" },
-        { "label": "CPU Temp", "value": "---", "color": "#007c00" },
-        { "label": "Fuel R", "value": "90L", "color": "#007c00" },
-        { "label": "", "value": null, "color": "transparent" },
-        { "label": "Trim", "value": "TO", "color": "#ff7c00" },
-        { "label": "", "value": "", "color": "#00000000" },
-        { "label": "", "value": "", "color": "#00000000" },
-        { "label": "", "value": "", "color": "#00000000" },
+        { "label": "Pilot", "value": "", "color": "#007c00","unit":"" },
+        { "label": "CPU", "value": "---", "color": "#007c00", "href":"#/charts","unit":"°C" },
+        { "label": "Fuel R", "value": "90L", "color": "#007c00", "href":"#/ems","unit":"" },
+        { "label": "", "value": null, "color": "transparent","unit":"" },
+        { "label": "Trim", "value": "TO", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
 
 
-        { "label": "Internet", "value": "OFFLINE", "color": "#ff0000" },
-        { "label": "ADS-B", "value": "OFF", "color": "#7c7c7c" },
-        { "label": "RADIO", "value": "KRT2", "color": "#007c00" },
-        { "label": "GPS", "value": "---", "color": "#007c00" },
+        { "label": "Internet", "value": "OFFLINE", "color": "#ff0000","unit":"" },
+        { "label": "ADS-B", "value": "OFF", "color": "#7c7c7c", "href":"#/radar","unit":""  },
+        { "label": "RADIO", "value": "KRT2", "color": "#007c00", "href":"#/radio","unit":"" },
+        { "label": "GPS", "value": "---", "color": "#007c00","unit":""  },
     ]
     ];
 
@@ -106,7 +106,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.applyNewData = function(newData){
         Object.keys(newData).forEach(key => {
             if($scope.mappingData.hasOwnProperty(key)==true){
-                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value=newData[key];
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value=newData[key] + $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].unit;
             }
         });
     }
@@ -138,6 +138,8 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.updateStatus = (status) => {
 
         $scope.status = status;
+        $scope.status["propellerTime"] = Number.parseFloat((status.Uptime/60000)).toFixed(0);
+        $scope.status["engineTime"] = Number.parseFloat((status.Uptime/60000)).toFixed(0);
         $scope.applyNewData(status);
         $scope.$apply(); // trigger any needed refreshing of data
     };
@@ -161,6 +163,13 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.situation = situation;
         $scope.updateSituation(situation);
     }
+
+    $scope.goTo = function(item) {
+        if(item.hasOwnProperty("href") == true) {
+            document.location = item.href;
+        }
+    }
+
     addEventListener("keypad", keypadEventListener);
     addEventListener("SituationUpdated", situationUpdateEventListener);
     addEventListener("StatusUpdated", statusUpdateEventListener);

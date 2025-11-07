@@ -1,8 +1,31 @@
 /*
-	Copyright (c) 2023 XIAPROJECTS SRL
-	Distributable under the terms of The "BSD New" License
-	that can be found in the LICENSE file, herein included
-	as part of this header.
+	This file is part of RB.
+
+	Copyright (C) 2023 XIAPROJECTS SRL
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published
+	by the Free Software Foundation, version 3.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+	This source is part of the project RB:
+	01 -> Display with Synthetic vision, Autopilot and ADSB
+	02 -> Display with SixPack
+	03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+	04 -> Display with EMS: Engine monitoring system
+	05 -> Display with Stratux BLE Traffic
+	06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+
+	Community edition will be free for all builders and personal use as defined by the licensing model
+	Dual licensing for commercial agreement is available
+	Please join Discord community
 
 	chart.go: Track in Memory the Chart data
 	The idea is to have an usable Chart data to be exported directly on Tablet/Smartphone until you poweroff the Stratux
@@ -60,6 +83,29 @@ type ChartDataCurrent struct {
 	AHRSGLoadMax float64
 	// Magnetometer
 	Magnetometer MagnetometerData
+	// EMS
+	// TODO: refactor to remove explicits
+	Fuel1 float32
+	Fuel2 float32
+	Fuel float32
+	Oilpressure float32
+	Oiltemperature int
+	Cht1 int
+	Cht2 int
+	Cht3 int
+	Cht4 int
+	Egt1 int
+	Egt2 int
+	Egt3 int
+	Egt4 int
+	BatteryVoltage float32
+	AlternatorOut float32
+	ManifoldPressure float32
+	EngineRpm int
+	Fuelpressure float32
+	Amps float32
+	Fuelremaining float32
+	OutsideTemperature float32
 }
 type ChartDataExport struct {
 	GPSGroundSpeed []float64
@@ -105,6 +151,29 @@ type ChartDataExport struct {
 	MagX		[]float64
 	MagY		[]float64
 	MagZ		[]float64
+	// EMS
+	// TODO: refactor to remove explicits
+	Fuel1 []float32
+	Fuel2 []float32
+	Fuel []float32
+	Oilpressure []float32
+	Oiltemperature []int
+	Cht1 []int
+	Cht2 []int
+	Cht3 []int
+	Cht4 []int
+	Egt1 []int
+	Egt2 []int
+	Egt3 []int
+	Egt4 []int
+	BatteryVoltage []float32
+	AlternatorOut []float32
+	ManifoldPressure []float32
+	EngineRpm []int
+	Fuelpressure []float32
+	Amps []float32
+	Fuelremaining []float32
+	OutsideTemperature []float32
 }
 
 type ChartsStratuxPlugin struct {
@@ -163,6 +232,31 @@ func (chartsInstance *ChartsStratuxPlugin) InitFunc() bool {
 	chartsInstance.export.MagX	= make([]float64, 0)
 	chartsInstance.export.MagY	= make([]float64, 0)
 	chartsInstance.export.MagZ	= make([]float64, 0)
+
+
+	// EMS
+	// TODO: refactor to remove explicits
+	chartsInstance.export.Fuel1 = make([]float32, 0)
+	chartsInstance.export.Fuel2 = make([]float32, 0)
+	chartsInstance.export.Fuel = make([]float32, 0)
+	chartsInstance.export.Oilpressure = make([]float32, 0)
+	chartsInstance.export.Oiltemperature = make([]int, 0)
+	chartsInstance.export.Cht1 = make([]int, 0)
+	chartsInstance.export.Cht2 = make([]int, 0)
+	chartsInstance.export.Cht3 = make([]int, 0)
+	chartsInstance.export.Cht4 = make([]int, 0)
+	chartsInstance.export.Egt1 = make([]int, 0)
+	chartsInstance.export.Egt2 = make([]int, 0)
+	chartsInstance.export.Egt3 = make([]int, 0)
+	chartsInstance.export.Egt4 = make([]int, 0)
+	chartsInstance.export.BatteryVoltage = make([]float32, 0)
+	chartsInstance.export.AlternatorOut = make([]float32, 0)
+	chartsInstance.export.ManifoldPressure = make([]float32, 0)
+	chartsInstance.export.EngineRpm = make([]int, 0)
+	chartsInstance.export.Fuelpressure = make([]float32, 0)
+	chartsInstance.export.Amps = make([]float32, 0)
+	chartsInstance.export.Fuelremaining = make([]float32, 0)
+	chartsInstance.export.OutsideTemperature = make([]float32, 0)
 
 	// Start File system recording:
 	exportGPX := ExportGPXStratuxPlugin{SessionName: time.Now().UTC().Format(time.RFC3339), FilePath: "/tmp/" + time.Now().UTC().Format(time.RFC3339) + ".gpx"}
@@ -248,6 +342,19 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 			//log.Println(exportGPX.generateHeader("Session Name"))
 			//log.Println(exportGPX.generatePointBySample(chartsInstance.last))
 			//log.Println(exportGPX.generateTrailerBySample())
+
+			// EMS
+			ems.emsDataMutex.Lock()
+			chartsInstance.export.Egt1	= append(chartsInstance.export.Egt1, int(ems.emsData["egt1"]))
+			chartsInstance.export.Egt2	= append(chartsInstance.export.Egt2, int(ems.emsData["egt2"]))
+			chartsInstance.export.Egt3	= append(chartsInstance.export.Egt3, int(ems.emsData["egt3"]))
+			chartsInstance.export.Egt4	= append(chartsInstance.export.Egt4, int(ems.emsData["egt4"]))
+			chartsInstance.export.Cht1	= append(chartsInstance.export.Cht1, int(ems.emsData["cht1"]))
+			chartsInstance.export.Cht2	= append(chartsInstance.export.Cht2, int(ems.emsData["cht2"]))
+			chartsInstance.export.Cht3	= append(chartsInstance.export.Cht3, int(ems.emsData["cht3"]))
+			chartsInstance.export.Cht4	= append(chartsInstance.export.Cht4, int(ems.emsData["cht4"]))
+			ems.emsDataMutex.Unlock()
+
 
 			// Digest
 			chartsInstance.last.AHRSPitch = 0
@@ -411,6 +518,29 @@ func chartsSamplesByIndexToSample(index int, samples ChartDataExport) ChartDataC
 			X: samples.MagX[index],
 			Y: samples.MagY[index],
 			Z: samples.MagZ[index],
-			Heading: int(samples.AHRSMagHeading[index])}}
+			Heading: int(samples.AHRSMagHeading[index]),
+		},
+	Fuel1 : samples.Fuel1[index],
+	Fuel2  : samples.Fuel2[index],
+	Fuel  : samples.Fuel[index],
+	Oilpressure  : samples.Oilpressure[index],
+	Oiltemperature  : samples.Oiltemperature[index],
+	Cht1  : samples.Cht1[index],
+	Cht2  : samples.Cht2[index],
+	Cht3  : samples.Cht3[index],
+	Cht4  : samples.Cht4[index],
+	Egt1  : samples.Egt1[index],
+	Egt2  : samples.Egt2[index],
+	Egt3  : samples.Egt3[index],
+	Egt4  : samples.Egt4[index],
+	BatteryVoltage  : samples.BatteryVoltage[index],
+	AlternatorOut  : samples.AlternatorOut[index],
+	ManifoldPressure  : samples.ManifoldPressure[index],
+	EngineRpm  : samples.EngineRpm[index],
+	Fuelpressure  : samples.Fuelpressure[index],
+	Amps  : samples.Amps[index],
+	Fuelremaining  : samples.Fuelremaining[index],
+	OutsideTemperature  : samples.OutsideTemperature[index],
+	}
 	return ret
 }

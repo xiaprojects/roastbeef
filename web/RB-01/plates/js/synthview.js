@@ -41,6 +41,7 @@ var URL_SYNTH_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/synthview.j
 // POI Elevation based on current surface
 // TODO: move in setup
 const elevantionPOIfromSurface = 100;
+const FollowMeDistance = 2;
 
 
 // create our controller function with all necessary logic
@@ -747,14 +748,14 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         cameraFollowItem(item, resources, distance = 10) {
             this.camera.position.set(
-                item.x - distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize,
+                item.x - distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize / FollowMeDistance,
                 item.elevation,
-                item.y - distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize
+                item.y - distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize / FollowMeDistance
             );
             this.controls.target.set(
-                item.x + distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize,
+                item.x + distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize / FollowMeDistance,
                 item.elevation,
-                item.y + distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize
+                item.y + distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize / FollowMeDistance
             );
             this.controls.update();
         }
@@ -792,18 +793,29 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 container.rotation.y = (Math.PI * 2.0 / 360) * (-item.heading);
                 item.referenceThreshold = container;
 
-                var runwayLength = 1000;
-                var runwayWidth = 120;
-                const runwayHeight = 10;
+                // Meters to feet
+                var runwayLength = 500 * 3.28084;
+                var runwayWidth = 10 * 3.28084;
+                const runwayHeight = 20;
 
-                if (item.hasOwnProperty("length_ft") && item.length_ft>runwayLength) runwayLength = item.length_ft / (setup.cellSize / 20);
+                if (item.hasOwnProperty("length_ft") && item.length_ft>runwayLength) runwayLength = item.length_ft;
                 if (item.hasOwnProperty("width_ft") && item.width_ft>runwayWidth) runwayWidth = item.width_ft;
+
+                // Feet to DEM
+                runwayLength = runwayLength / (setup.cellSize/32.8084);
+                // Width will be DOUBLED!
+                runwayWidth = runwayWidth / (setup.cellSize/32.8084/2);
 
 
                 const runwayGeometry = new THREE.BoxGeometry(runwayWidth, runwayHeight, runwayLength);
                 const runwayMaterial = new THREE.MeshBasicMaterial({ color: 0x555555 });
                 const runway = new THREE.Mesh(runwayGeometry, runwayMaterial);
                 container.add(runway);
+
+                const runwayGeometryWhite = new THREE.BoxGeometry(120, 5, runwayLength+120*2);
+                const runwayMaterialWhite = new THREE.MeshBasicMaterial({ color: 0xffffff });
+                const runwayWhite = new THREE.Mesh(runwayGeometryWhite, runwayMaterialWhite);
+                container.add(runwayWhite);
 
                 if (window.hasOwnProperty("font")) {
                     const fontSize = 75;
@@ -828,20 +840,51 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     });
 
 
-                    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+                    const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
                     const text1 = new THREE.Mesh(text1Geo, textMaterial);
                     const text2 = new THREE.Mesh(text2Geo, textMaterial);
 
                     text1.geometry.center();
                     text2.geometry.center();
-                    text1.position.z = -(runwayLength / 2 - fontSize/2);
-                    text2.position.z = (runwayLength / 2 - fontSize/2);
+                    text1.position.z = -(runwayLength / 2 + fontSize);
+                    text2.position.z = (runwayLength / 2 + fontSize);
 
                     text1.rotation.x = (Math.PI * 2.0 / 360) * (90)
                     text2.rotation.x = (Math.PI * 2.0 / 360) * (-90)
                     text1.rotation.y = (Math.PI * 2.0 / 360) * (180)
                     container.add(text1);
                     container.add(text2);
+
+                    const shape = new THREE.Shape();
+                    shape.moveTo(0, 0);
+                    shape.lineTo(40, 0);
+                    shape.lineTo(20, 40);
+                    shape.closePath();
+
+                    // Flat triangle geometry (like a painted arrow)
+                    const triGeometry = new THREE.ShapeGeometry(shape);
+                    const triMaterial = new THREE.MeshLambertMaterial({
+                        color: 0x000000,
+                        side: THREE.DoubleSide
+                    });
+
+                    // === Triangle pointing toward heading 160° ===
+                    const triangleH = new THREE.Mesh(triGeometry, triMaterial);
+                    triangleH.geometry.center();
+                    triangleH.position.z = -(runwayLength / 2 + 20);
+                    triangleH.rotation.x = (Math.PI * 2.0 / 360) * (90)
+                    triangleH.rotation.y = (Math.PI * 2.0 / 360) * (180)
+                    triangleH.position.y = 5;
+                    container.add(triangleH);
+
+                    const triangleL = new THREE.Mesh(triGeometry, triMaterial);
+                    triangleL.geometry.center();
+                    triangleL.position.z = (runwayLength / 2 + 20);
+                    triangleL.rotation.x = (Math.PI * 2.0 / 360) * (-90)
+                    triangleL.rotation.y = (Math.PI * 2.0 / 360) * (180)
+                    triangleL.position.y = 5;
+                    container.add(triangleL);
+
                 }
             }
 
@@ -1170,6 +1213,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
                 resources.terrain.terrainFetch(situation.GPSLatitude, situation.GPSLongitude, setup.elevationUrl).then((terrainElevations) => {
+                    // Automatic zoom based on the Terrain detail
+                    // Example of empiric calculion is:
+                    // DEM for 100 NM => 240 cols/rows considering 100 meter DB
+                    // Heuristic formula: 10*feet
+                    setup.cellSize = parseInt((240.0 / terrainElevations.terrainData.length) * 328.084);
                     rendering.loadDEM(terrainElevations.terrainData, setup);
 
                     setup.items = remote.updateItemsBySituation(setup.items, situation, resources);

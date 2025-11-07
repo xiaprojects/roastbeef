@@ -598,7 +598,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
 			return; // we are getting called once after clicking away from the status page
 		}
         $scope.situation = event.detail;
-        if($scope.situation.GPSFixQuality > 0 ) {
+        if($scope.situation.GPSLatitude != 0 && $scope.situation.GPSLongitude != 0 ) {
         // when database is ready we load labels
             $scope.radioDBReload();
             removeEventListener("SituationUpdated", situationUpdated);
@@ -635,23 +635,21 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
                 }
             });
             $scope.playbackReload();
-            if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
-                if (false) {
-                    $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
-                }
-            }
         });
     }
+
+    $scope.playbackCacheCount = 0;
 
     // TODO: Add WebSocket to avoid Polling
     $scope.playbackReload = function() {
     // Load the Playback:
     $http.get(URL_PLAYBACK_GET).then(function (response) {
         var list = angular.fromJson(response.data);
-        if(list === undefined || list.length == 0)
+        if(list === undefined || list.length == 0 || list.length == $scope.playbackCacheCount)
         {
             return;
         }
+        $scope.playbackCacheCount = list.length;
         // {"Name":"radio_20240607_051225_130000000.mp3","Source":"RTL","Path":"/playback/radio_20240607_051225_130000000.mp3","Size":12380,"ModTime":"2024-06-07T06:12:30.20311712+01:00","Frequency":""}
         var listParsed = [];
         for (var i = list.length - 1; i >= 0; i--) {
@@ -663,7 +661,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
                 var fr = (p.Path.split("_").pop().split(".")[0]).slice(0,6);
                 var f = fr.slice(0,3) + "." + fr.slice(3,6);
                 var fn = $scope.radioFindFrequency(f);
-                if (fn == "") {
+                if (fn == null || fn == "" || fn == "---") {
                     p.Frequency = f;
                 }
                 else {
@@ -672,7 +670,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             }
 
             if(listParsed.length%2 == 0){
-                p.style = "background-color:lightgray;";
+                p.style = "background-color:#ffffff1a;";
             }
             p.className = "keypadSelectedNo";
             listParsed.push(p);
@@ -707,6 +705,12 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         window.open(url,'_blank');
       }
       
+    if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
+        // TODO: Add a switch on the global configuration
+        if (true) {
+            $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
+        }
+    }
 }
 
 

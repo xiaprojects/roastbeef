@@ -83,7 +83,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.hsiClassSelected = "keypadSelectedNo";
     $scope.destClassSelected = "keypadSelectedNo";
     $scope.forecastClassSelected = "keypadSelectedNo";
-    $scope.QNH = 1013;
+    $scope.QNH = 1013.25;
     $scope.isSelectedHSI = false;
     $scope.overrideHSI = 0;
     $scope.GPSGroundSpeedReference = 200;
@@ -918,7 +918,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             var a = (situation.BaroPressureAltitude / altitudeVsMillibar).toFixed(0);
             var b = (situation.GPSAltitudeMSL / altitudeVsMillibar).toFixed(0);
             var c = (b-a);
-            $scope.QNH = 1013 + c;
+            $scope.QNH = 1013.25 + c;
 
         } else {
             $scope.ahrs_heading = "---";

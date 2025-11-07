@@ -32,7 +32,7 @@ angular.module('appControllers').controller('AlertsCtrl', AlertsCtrl); // get th
 AlertsCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
 
 var URL_ALERTS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getAlerts";
-var URL_ALERTSMAPPING_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/resources/alertsMapping.json";
+var URL_ALERTSMAPPING_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/alertsMapping.json";
 
 // Shared Routines
 function textBySeconds(seconds) {
@@ -104,7 +104,7 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
     }
     else {
     document.getElementById("audioproxy").autoplay = true;
-    document.getElementById("audioproxy").src = url;
+    document.getElementById("audioproxy").src = "/" + url;
     document.getElementById("audioproxy").load();
     }
   }

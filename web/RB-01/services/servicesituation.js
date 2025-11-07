@@ -71,13 +71,16 @@ function SituationService($scope, $http) {
         };
 
         $scope.situationByPilot = {
-            QNH: 1013,
+            QNH: 1013.25,
+            AutoQNH: true
         };
 
         function situationUpdatedByPilot(event) {
-            if(event.detail.hasOwnProperty("QNH") && parseInt(event.detail.QNH)>900) {
-                $scope.situationByPilot.QNH = event.detail.QNH;
-            }
+            Object.keys(event.detail).forEach(element => {
+                $scope.situationByPilot[element] = event.detail[element];
+            });
+            // Trigger the update
+            $scope.sendSituationTimer = SERVICE_SITUATION_MAX_COUNT;
         }
 
         addEventListener("SituationUpdatedByPilot", situationUpdatedByPilot);
@@ -98,18 +101,26 @@ function SituationService($scope, $http) {
                 $scope.sendSituationTimer = 0;
 
                 // RB-Addons
-                if (situation.hasOwnProperty("BaroPressureAltitude") && situation.GPSFixQuality > 0) {
+                if (
+                    situation.hasOwnProperty("BaroPressureAltitude")
+                    &&
+                    situation.GPSFixQuality > 0
+                    &&
+                    $scope.situationByPilot.AutoQNH == true
+                    &&
+                    situation.hasOwnProperty("BaroVerticalSpeed") && Math.abs(situation.BaroVerticalSpeed) < 200
+                ) {
                     var altitudeVsMillibar = 8 / 0.3048;
                     var a = (situation.BaroPressureAltitude / altitudeVsMillibar).toFixed(0);
                     var b = (situation.GPSAltitudeMSL / altitudeVsMillibar).toFixed(0);
                     var c = (b - a);
-                    situation.QNH = 1013 + c;
+                    situation.QNH = 1013.25 + c;
+                    $scope.situationByPilot.QNH = situation.QNH;
                 }
                 else {
                     situation.QNH = $scope.situationByPilot.QNH;
                 }
-
-                //situation.GPSAltitudeMSL = situation.GPSAltitudeMSL + 1000;
+                situation.AutoQNH = $scope.situationByPilot.AutoQNH;
 
 
                 window.situation = situation;
@@ -117,12 +128,17 @@ function SituationService($scope, $http) {
                 dispatchEvent(proxy);
 
             }
+            // GMeter Buzzer Play
+            // TODO: flight test and configuration switch
+            // Temporary  moved inside the G-Meter
+            if(false) {
+                window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
+            }
         };
     }
 
     // Last Situation, shared out-of-angular to avoid angular triggers
     // Moved in global.js window.situation = {};
-
     connect($scope);
     if(false){
         var simulatorSeed = 0;

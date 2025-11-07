@@ -79,7 +79,28 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     "MagMinX":"Magnetometer",
     "MagMinY":"Magnetometer",
     "MagMinZ":"Magnetometer",
-    "BaroTemperature": "System"
+    "BaroTemperature": "System",
+    "Egt1":"EMS",
+    "Egt2":"EMS",
+    "Egt3":"EMS",
+    "Egt4":"EMS",
+    "Cht1":"EMS",
+    "Cht2":"EMS",
+    "Cht3":"EMS",
+    "Cht4":"EMS",
+    "Fuel1":"EMS",
+    "Fuel2":"EMS",
+    "Fuel":"EMS",
+    "Oilpressure":"EMS",
+    "Oiltemperature":"EMS",
+    "BatteryVoltage":"EMS",
+    "AlternatorOut":"EMS",
+    "ManifoldPressure":"EMS",
+    "EngineRpm":"EMS",
+    "Fuelpressure":"EMS",
+    "Amps":"EMS",
+    "Fuelremaining":"EMS",
+    "OutsideTemperature":"EMS"
   };
   const chart_field_axis = {
     "GPSGroundSpeed": "y",
@@ -102,6 +123,28 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
     "GPS_satellites_locked": "y",
     "CPUTemp": "y1",
     "BaroTemperature": "y1"
+    ,
+    "Egt1":"y1",
+    "Egt2":"y1",
+    "Egt3":"y1",
+    "Egt4":"y1",
+    "Cht1":"y1",
+    "Cht2":"y1",
+    "Cht3":"y1",
+    "Cht4":"y1",
+    "Fuel1":"y",
+    "Fuel2":"y",
+    "Fuel":"y",
+    "Oilpressure":"y",
+    "Oiltemperature":"y1",
+    "BatteryVoltage":"y",
+    "AlternatorOut":"y",
+    "ManifoldPressure":"y",
+    "EngineRpm":"y1",
+    "Fuelpressure":"y",
+    "Amps":"y",
+    "Fuelremaining":"y",
+    "OutsideTemperature":"y1"    
   };
 
 

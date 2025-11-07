@@ -25,7 +25,7 @@
 }
 
 /* RB-01 with Round display is 480x480 */
-@container (width < 512px) {
+@container (aspect-ratio = 1) and (width < 512px) {
     .ems_egt_intrument {
         max-height: 70cqh;
         margin-top: 15%;

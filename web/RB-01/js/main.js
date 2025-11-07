@@ -102,6 +102,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'SixPackInstrumentVariometer',
 			reloadOnSearch: false
 		})
+		.state('gmetergauge', {
+			url: '/gmetergauge',
+			templateUrl: 'plates/gmetergauge.html',
+			controller: 'SixPackInstrumentGmetergauge',
+			reloadOnSearch: false
+		})
 		.state('radio', {
 			url: '/radio',
 			templateUrl: 'plates/radio.html',
@@ -254,6 +260,13 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 		}
 
 		dispatchEvent(proxy);
+		if(true) {
+			// Attach the buzzer volume here
+			// TODO: move away and add a configuration switch
+			window.gMeterBuzzerPlayer.setVolumeTo(100);
+			window.gMeterBuzzerPlayer.playSinToObject(window.gMeterBuzzerPlayer, 880, 100, 0.2);
+			//window.gMeterBuzzerPlayer.beepTest();
+		}
 	};
 
 
@@ -278,7 +291,7 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 	$scope.fabNorthEnabled = false;
 	$scope.fabSouthEnabled = false;
 
-	if (window.innerHeight > 512) {
+	if (window.innerHeight > 480) {
 		$scope.fabNorthEnabled = true;
 		$scope.fabSouthEnabled = true;
 	}
@@ -305,75 +318,15 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 				$scope.EMS = status.widgets;
 				// Gracefully load to avoid bloat the startup
 				//$scope.$apply();
+				// Add some fancy effects
+				for(var index = 0; index < $scope.EMS.length; index++) {
+					$scope.EMS[index].speedTicks = createProgressiveTicksForRoundInstrument($scope.EMS[index].maxSpeed, $scope.EMS[index].minSpeed, $scope.EMS[index].endSpeedDegree, $scope.EMS[index].startSpeedDegree, 9);
+					for(var arcIndex = 0; arcIndex < $scope.EMS[index].arcs.length; arcIndex++) {
+						$scope.EMS[index].arcs[arcIndex].activeColor = $scope.EMS[index].arcs[arcIndex].color;
+					}
+				}
 			}
 	});
-
-
-	// Sidebar simulation to be moved
-
-	addEventListener("EMSUpdated", (emsData) => {
-		const OILTEMP = 0;
-		const OILPRES = 1;
-		const RPM = 2;
-		const MAP = 3;
-
-		var degreeOut = 0;
-
-
-		var keyIn = "rpm";
-		var indexOut = RPM;
-		//
-		degreeOut = (((emsData.detail[keyIn] - $scope.EMS[indexOut].minSpeed) / ($scope.EMS[indexOut].maxSpeed - $scope.EMS[indexOut].minSpeed)) * ($scope.EMS[indexOut].endSpeedDegree - $scope.EMS[indexOut].startSpeedDegree) + $scope.EMS[indexOut].startSpeedDegree);
-		$scope.EMS[indexOut].speed = parseInt(emsData.detail[keyIn]);
-		$scope.EMS[indexOut].speedDegree = (degreeOut + 90) + "deg";
-		for(var thresholdIndex = $scope.EMS[indexOut].arcs.length-1;thresholdIndex>=0;thresholdIndex--)
-		{
-			if($scope.EMS[indexOut].arcs[thresholdIndex].threshold<$scope.EMS[indexOut].speed)
-			{
-				$scope.EMS[indexOut]["backgroundColor"] = $scope.EMS[indexOut].arcs[thresholdIndex]["backgroundColor"];
-				break;
-			}
-		}
-
-
-		//
-		keyIn = "oiltemperature";
-		indexOut = OILTEMP;
-		degreeOut = (((emsData.detail[keyIn] - $scope.EMS[indexOut].minSpeed) / ($scope.EMS[indexOut].maxSpeed - $scope.EMS[indexOut].minSpeed)) * ($scope.EMS[indexOut].endSpeedDegree - $scope.EMS[indexOut].startSpeedDegree) + $scope.EMS[indexOut].startSpeedDegree);
-		$scope.EMS[indexOut].speed = parseInt(emsData.detail[keyIn]);
-		$scope.EMS[indexOut].speedDegree = (degreeOut + 90) + "deg";
-		for(var thresholdIndex = $scope.EMS[indexOut].arcs.length-1;thresholdIndex>=0;thresholdIndex--)
-		{
-			if($scope.EMS[indexOut].arcs[thresholdIndex].threshold<$scope.EMS[indexOut].speed)
-			{
-				$scope.EMS[indexOut]["backgroundColor"] = $scope.EMS[indexOut].arcs[thresholdIndex]["backgroundColor"];
-				break;
-			}
-		}
-
-
-
-		keyIn = "oilpressure";
-		indexOut = OILPRES;
-		degreeOut = (((emsData.detail[keyIn] - $scope.EMS[indexOut].minSpeed) / ($scope.EMS[indexOut].maxSpeed - $scope.EMS[indexOut].minSpeed)) * ($scope.EMS[indexOut].endSpeedDegree - $scope.EMS[indexOut].startSpeedDegree) + $scope.EMS[indexOut].startSpeedDegree);
-		$scope.EMS[indexOut].speed = parseInt(emsData.detail[keyIn]);
-		$scope.EMS[indexOut].speedDegree = (degreeOut + 90) + "deg";
-		for(var thresholdIndex = $scope.EMS[indexOut].arcs.length-1;thresholdIndex>=0;thresholdIndex--)
-		{
-			if($scope.EMS[indexOut].arcs[thresholdIndex].threshold<$scope.EMS[indexOut].speed)
-			{
-				$scope.EMS[indexOut]["backgroundColor"] = $scope.EMS[indexOut].arcs[thresholdIndex]["backgroundColor"];
-				break;
-			}
-		}
-
-
-
-	});
-
-
-
-
 }).service('craftService', function () {
 	let trafficSourceColors = {
 		1: 'cornflowerblue', // ES

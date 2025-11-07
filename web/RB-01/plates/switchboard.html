@@ -29,10 +29,14 @@
                 </form>
             </div>
             <div class="row" ng-show="item.Edit==false" style="padding: 4px;">
-                <span>Status: </span>
-                <strong>{{item.Status==0?"NEVER STARTED":(item.Status==4?"ERROR":(item.Status==1?"RUNNING":"COMPLETED"))}}</strong>
+                <span>Status:</span>
+                <span ng-if="item.Status==0" class="label label-default">NEVER STARTED</span>
+                <span ng-if="item.Status==1" class="label label-info">RUNNING</span>
+                <span ng-if="item.Status==2" class="label label-success">COMPLETED</span>
+                <span ng-if="item.Status==3" class="label label-warning">WARNING</span>
+                <span ng-if="item.Status==4" class="label label-danger">ERROR</span>
             </div>
-            <div class="row" ng-show="item.Status!=0&&item.Edit==false"  style="padding: 4px;">
+            <div class="row" ng-show="item.Edit==false"  style="padding: 4px;">
                 <span>Started on: </span>
                 <strong>{{textByEpoch(item.EpochStart)}}</strong>
                 <span> within </span>

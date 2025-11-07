@@ -84,7 +84,7 @@ func (alertsInstance *AlertsStratuxPlugin) InitFunc() bool {
 	alertsInstance.Name = "Audio"
 	alertsInstance.alertsDataMutex = &sync.Mutex{}
 	alertsInstance.alertsData = make([]interface{}, 0)
-	alertsMapping := STRATUX_WWW_DIR + "resources/" + ALERT_MAPPING_JSON_NAME
+	alertsMapping := STRATUX_WWW_DIR + "settings/" + ALERT_MAPPING_JSON_NAME
 	log.Println("AlertsStratuxPlugin Loading Sound Mapping from: ", alertsMapping)
 	// Open our jsonFile
 	jsonFile, err := os.Open(alertsMapping)

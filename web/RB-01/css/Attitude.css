@@ -107,11 +107,10 @@
     vertical-align: middle;
     text-align: left;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3cqw;
+    font-size: 6cqmin;
     font-weight: bolder;
     color: white;
-    top: 44%;
-    left: 1%;
+    top: 45%;
 }
 
 .attitude-altimeter {
@@ -124,9 +123,9 @@
     vertical-align: middle;
     text-align: right;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3cqw;
+    font-size: 6cqmin;
     font-weight: bolder;
     color: white;
-    top: 44%;
-    right: 1%;
+    top: 45%;
+    right: 0%;
 }

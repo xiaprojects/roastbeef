@@ -9,6 +9,6 @@
             <div class="attitude-rollpitch-numbers" style="top:{{Attitude.pitchTop}};" ></div>
             <div class="attitude-roll" style="transform: rotate({{Attitude.rollDegree}});" ></div>
             <div class="attitude-center" ></div>
-            <div class="attitude-speed" >{{Speed.speed}}</div>
-            <div class="attitude-altimeter" >{{Altimeter.altitude}}</div>
+            <div class="attitude-speed" ng-if="Attitude.standalone==true">{{Speed.speed}}</div>
+            <div class="attitude-altimeter" ng-if="Attitude.standalone==true">{{Altimeter.altitude}}</div>
         </div>
