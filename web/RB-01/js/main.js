@@ -296,18 +296,26 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 		$scope.fabSouthEnabled = true;
 	}
 
-
 	$scope.rightpages = [
-		{ "url": "plates/radio.html", "ctrl": RadioCtrl, pointer: null, "name": "radio" },
-		{ "url": "plates/radar.html", "ctrl": RadarCtrl, pointer: null, "name": "radar" }
-
 	];
 
 	$scope.leftpages = [
-		{ "url": "plates/ems.html", "ctrl": EMSCtrl, pointer: null, "name": "ems", "height":"100px" }
-		,{ "url": "plates/emsegt.html", "ctrl": EmsegtCtrl, pointer: null, "name": "emsegt", "height":"200px" }
 	];
 
+	// Reading Panel configuration
+	for(var index = 0; index < globalInterfaceSettings.RightPages.length; index++) {
+		if(globalInterfaceSettings.RightPages[index].ctrl == null) {
+			globalInterfaceSettings.RightPages[index].ctrl = eval(globalInterfaceSettings.RightPages[index].ctrlName);
+		}
+	}
+	for(var index = 0; index < globalInterfaceSettings.LeftPages.length; index++) {
+		if(globalInterfaceSettings.LeftPages[index].ctrl == null) {
+			globalInterfaceSettings.LeftPages[index].ctrl = eval(globalInterfaceSettings.LeftPages[index].ctrlName);
+		}
+	}
+	$scope.rightpages = globalInterfaceSettings.RightPages;
+
+	$scope.leftpages = globalInterfaceSettings.LeftPages;
 
 	$scope.EMS = [
 	];
@@ -320,7 +328,14 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 				//$scope.$apply();
 				// Add some fancy effects
 				for(var index = 0; index < $scope.EMS.length; index++) {
-					$scope.EMS[index].speedTicks = createProgressiveTicksForRoundInstrument($scope.EMS[index].maxSpeed, $scope.EMS[index].minSpeed, $scope.EMS[index].endSpeedDegree, $scope.EMS[index].startSpeedDegree, 9);
+					$scope.EMS[index].speedTicks = createProgressiveTicksForRoundInstrument($scope.EMS[index].maxSpeed,
+						$scope.EMS[index].minSpeed,
+						$scope.EMS[index].endSpeedDegree,
+						$scope.EMS[index].startSpeedDegree,
+						9,
+						$scope.EMS[index].ceil,
+						$scope.EMS[index].scale
+					);
 					for(var arcIndex = 0; arcIndex < $scope.EMS[index].arcs.length; arcIndex++) {
 						$scope.EMS[index].arcs[arcIndex].activeColor = $scope.EMS[index].arcs[arcIndex].color;
 					}

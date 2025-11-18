@@ -44,5 +44,6 @@ function AircraftService($scope, $http) {
             return;
         }
         $scope.aircraftData = db;
+        window.aircraftData = db;
     });
 }

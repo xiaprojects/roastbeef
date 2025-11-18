@@ -174,4 +174,10 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     addEventListener("SituationUpdated", situationUpdateEventListener);
     addEventListener("StatusUpdated", statusUpdateEventListener);
 
+    if(window.aircraftData !== undefined) {
+        $scope.aircraftData = window.aircraftData;
+        // update the scope variables
+        $scope.applyNewData(window.aircraftData);
+        $scope.name = window.aircraftData.name;
+    }
 };

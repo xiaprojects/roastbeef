@@ -2,6 +2,8 @@
     "widgets":
     [
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": true,
 			"speed": 0,
 			"source": "oiltemperature",
@@ -22,6 +24,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": true,
 			"speed": 0,
 			"source": "oilpressure",
@@ -43,6 +47,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": true,
 			"speed": 0,
 			"source": "enginerpm",
@@ -63,6 +69,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": true,
 			"speed": 0,
 			"source": "manifoldpressure",
@@ -83,6 +91,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "oiltemperature",
@@ -103,6 +113,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "oilpressure",
@@ -124,6 +136,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 0.01,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "enginerpm",
@@ -144,6 +158,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "manifoldpressure",
@@ -164,6 +180,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "fuelpressure",
@@ -184,6 +202,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "fuel1",
@@ -204,6 +224,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "fuel2",
@@ -224,6 +246,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source": "outsidetemperature",
@@ -244,6 +268,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 1,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"speed": 0,
 			"source":"batteryvoltage",
@@ -261,6 +287,8 @@
 			"speedTicks": []
 		},
 		{
+        	"ceil": 0,
+        	"scale": 1,
 			"displayInSidebar": false,
 			"source":"amps",
 			"speed": 0,

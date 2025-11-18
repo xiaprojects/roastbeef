@@ -5,19 +5,36 @@
     "engineTime": 0,
     "units": {
         "speed": "KMH",
+        "speedConversionFromKmh" : {
+            "multiply" : 1,
+            "sum" : 0
+        },
+        "temperatureConversionFromC" : {
+            "multiply" : 1.8,
+            "sum" : 32
+        },
         "temperatures": "°F"
     },
-    "speedArcs": [
-        {"value":0,"type":"low","color":"#0000ff"},
-        {"value":90,"type":"normal","color":"#ffffff"},
-        {"value":110,"type":"normal","color":"#00ff00"},
-        {"value":250,"type":"warning","color":"#ffff00"},
-        {"value":300,"type":"danger","color":"#ff0000"}
-    ],
-    "egt":[
-        {"value":0,"type":"low","color":"#0000ff"},
-        {"value":550,"type":"normal","color":"#00ff00"},
-        {"value":650,"type":"warning","color":"#ffff00"},
-        {"value":750,"type":"danger","color":"#ff0000"}
-    ]
+    "GPSGroundSpeed": {
+        "startSpeedDegree": 0,
+        "endSpeedDegree": 350,
+        "label": "GPS SPEED",
+        "unit": "KMH",
+        "speed": 0,
+        "sensorType": "GPSGroundSpeed",
+        "minSpeed": 50,
+        "backgroundColor":"#000000",
+        "maxSpeed": 400,
+        "speedDegree": "45deg",
+        "arcs": [
+			{ "color": "#000000", "sizeDegree": "30deg", "startDegree": "0deg", "threshold": 0, "backgroundColor": "#000000" },
+			{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "30deg", "threshold": 100, "backgroundColor": "#333333" },
+			{ "color": "#00ff00", "sizeDegree": "45deg", "startDegree": "120deg", "threshold": 170, "backgroundColor": "#00aa00" },
+			{ "color": "#0000ff", "sizeDegree": "5deg", "startDegree": "165deg", "threshold": 210, "backgroundColor": "#00aa00" },
+			{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "170deg", "threshold": 220, "backgroundColor": "#00aa00" },
+			{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "260deg", "threshold": 290, "backgroundColor": "#aaaa00" },
+			{ "color": "#ff0000", "sizeDegree": "5deg", "startDegree": "290deg", "threshold": 350, "backgroundColor": "#aa0000" }
+        ],
+        "speedTicks": []
+    }
 }

@@ -45,9 +45,12 @@ SixPackInstrumentHeading.$inject = ['$rootScope', '$scope', '$state', '$http', '
 angular.module('appControllers').controller('SixPackInstrumentVariometer', SixPackInstrumentVariometer);
 SixPackInstrumentVariometer.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];
 
-function createProgressiveTicksForRoundInstrument(maxValue = 100, minValue = 0, endDegree = 330, startDegree = 0,  numberOfTicks = 15, decimalNumber = 0, scaleMoltiplier = 1) {
+function createProgressiveTicksForRoundInstrument(maxValue = 100, minValue = 0, endDegree = 330, startDegree = 0,  numberOfTicks = 0, decimalNumber = 0, scaleMoltiplier = 1) {
   var speedTicks = [];
   const arcsArc = (endDegree - startDegree);
+  if(numberOfTicks<1) {
+    numberOfTicks = arcsArc / 30;
+  }
   const tickSpedSlots = parseInt(arcsArc / numberOfTicks); // max is 15°
   var tickSpedSlot = startDegree;
   const tickSpeedIncrement = (maxValue - minValue) / numberOfTicks;
@@ -93,7 +96,7 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
 
 
 
-  $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree,  15, 1);
+  $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree,  0, 1);
 
 
   $scope.updateSituation = (situation) => {
@@ -112,6 +115,10 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
     }
 
   };
+
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }
 }
 
 
@@ -127,6 +134,7 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
     "label": "GPS SPEED",
     "unit": "KMH",
     "speed": 0,
+    "sensorType": "GPSGroundSpeed",
     "minSpeed": 0,
     "backgroundColor":"#000000",
     "maxSpeed": 330,
@@ -142,9 +150,24 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
 
    $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree);
 
+  // TODO: Unify this call under a service
+  if(window.aircraftData !== undefined && window.aircraftData.GPSGroundSpeed !== undefined) {
+      // update the scope variables
+      $scope.Speed = window.aircraftData.GPSGroundSpeed;
+      $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree);
+  } else {
+  $http.get(URL_AIRCRAFT_GET).then(function (response) {
+        var db = angular.fromJson(response.data);
+        if (db === undefined || Object.keys(db).length == 0) {
+            return;
+        }
+        $scope.Speed = db.GPSGroundSpeed;
+        $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree);
+  });
+  }
 
   $scope.updateSituation = (situation) => {
-    $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);
+    $scope.Speed.speed = parseInt(situation[$scope.Speed.sensorType]);
 
     const arcsArc = ($scope.Speed.endSpeedDegree - $scope.Speed.startSpeedDegree);
     const speedIncrement = ($scope.Speed.maxSpeed - $scope.Speed.minSpeed);
@@ -153,6 +176,9 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
     $scope.Speed.speedDegree = (situation.GPSGroundSpeed * ratio + $scope.Speed.startSpeedDegree + 90) + "deg";
 
   };
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }  
 }
 function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "attitude");
@@ -184,6 +210,9 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
     $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);    
   };
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }   
 }
 function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "altimeter");
@@ -224,6 +253,9 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
       dispatchEvent(proxy);
     }    
   };
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }   
 }
 function SixPackInstrumentTurnslip($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "turnslip");
@@ -248,6 +280,9 @@ function SixPackInstrumentTurnslip($rootScope, $scope, $state, $http, $interval)
     $scope.TurnSlip.ballLeft = (46 + 1.0 * skid) + "%";
     $scope.TurnSlip.ballTop = (66 - Math.abs(0.1 * skid)) + "%";
   };
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }   
 }
 function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "heading");
@@ -268,6 +303,9 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
       $scope.Heading.sourceName = "GYRO";
     }
   };
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }   
 }
 function SixPackInstrumentVariometer($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "variometer");
@@ -278,6 +316,9 @@ function SixPackInstrumentVariometer($rootScope, $scope, $state, $http, $interva
   $scope.updateSituation = (situation) => {
     $scope.Variometer.varioDegree = (situation.BaroVerticalSpeed) / 2000 * 180 + "deg";
   };
+  if(window.situation !== undefined) {
+    $scope.updateSituation(window.situation);
+  }   
 }
 
 function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
