@@ -57,7 +57,10 @@ const SwipeLeft = "SwipeLeft";
 const SwipeRight = "SwipeRight";
 
 function KeypadService($scope, $http, $state) {
-    $scope.keypadSettings = {};
+    $scope.keypadSettings = {
+        "directKey": {
+        }
+    };
     $scope.keypadSettingsNavigation = {};
 
 

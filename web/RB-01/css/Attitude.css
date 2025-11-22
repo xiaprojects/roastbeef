@@ -98,7 +98,7 @@
 
 
 .attitude-speed {
-    background-color: #000000a0;
+    background-color: #000000;
     border: none;
     border-radius: 10%;
     padding-left: 4px;
@@ -111,10 +111,13 @@
     font-weight: bolder;
     color: white;
     top: 45%;
+    right: 88cqmin;
+    width: 14cqmin;
+    text-align: right;
 }
 
 .attitude-altimeter {
-    background-color: #000000a0;
+    background-color: #000000;
     border: none;
     border-radius: 10%;
     padding-left: 4px;
@@ -128,4 +131,90 @@
     color: white;
     top: 45%;
     right: 0%;
+}
+
+.attitude-left-bar {
+    position: absolute;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3cqmin;
+    font-weight: bolder;
+    color: white;
+    transition: transform 1s ease-out;
+    bottom: 50%;
+}
+
+.attitude-triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 2cqmin solid transparent;
+	border-left: 2.5cqmin solid black;
+	border-bottom: 2cqmin solid transparent;
+    position: absolute;
+    right: -2cqmin;
+    bottom: 2cqmin;
+}
+.attitude-left-bar-slider {
+    display:flex;
+    line-height: 6cqmin;
+    width: 8cqmin;
+    height: 6cqmin;
+}
+
+.attitude-left-bar-ias {
+    width: 2cqmin;
+    height: 98%;
+    margin-left: auto;
+}
+
+.attitude-bottom-bar {
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3cqmin;
+    font-weight: bolder;
+    color: white;
+    transition: transform 1s ease-out;
+    display: flex;
+}
+
+.attitude-bottom-block {
+    height: 5cqmin;
+    width: 8cqmin;
+    display: flex;
+}
+
+.attitude-bottom-tick {
+    width: 50%;height: 50%;
+    border-left: 1px solid white;
+    border-right: 2px solid white;
+}
+
+.attitude-heading {
+    background-color: #000000;
+    border: none;
+    border-radius: 10%;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    vertical-align: middle;
+    text-align: right;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4cqmin;
+    font-weight: bolder;
+    color: white;
+    bottom: 5%;
+    text-align: center;
+    left: 45%;
+    width: 10%;
+}
+.attitude-triangle-bottom {
+	width: 0;
+	height: 0;
+	border-right: 2cqmin solid transparent;
+	border-left: 2cqmin solid transparent;
+	border-top: 2cqmin solid black;
+    position: absolute;
+    bottom: -1.5cqmin;
+    left: 30%;
 }

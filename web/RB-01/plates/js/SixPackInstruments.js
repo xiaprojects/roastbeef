@@ -183,7 +183,75 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
 function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "attitude");
 
+  $scope.ticks = {
+    "speed":[],
+    "altimeter":[],
+    "heading":[]
+  };
 
+
+  for(var tickIndex = 40;tickIndex>=0;tickIndex--){
+    $scope.ticks.speed.push({"label":tickIndex+"0","color":"#0000004c","value":tickIndex*10});
+  }
+  for(var tickIndex = -6;tickIndex<36+6;tickIndex++){
+    switch(tickIndex){
+      case 0:
+          $scope.ticks.heading.push({"label":"N"});
+        break;
+      case 18:
+          $scope.ticks.heading.push({"label":"S"});
+        break;
+      case 9:
+          $scope.ticks.heading.push({"label":"E"});
+        break;
+      case 27:
+          $scope.ticks.heading.push({"label":"W"});
+        break;
+      default:
+          $scope.ticks.heading.push({"label":(36+tickIndex)%36});
+        break;
+    }
+  }
+  // 192 is for FL192
+  // For experimental aircraft we stick to 120
+  for(var tickIndex = 120;tickIndex>=0;tickIndex--){
+   $scope.ticks.altimeter.push({"label":tickIndex,"labelBig":"80"});
+   $scope.ticks.altimeter.push({"label":tickIndex,"labelBig":"60"});
+   $scope.ticks.altimeter.push({"label":tickIndex,"labelBig":"40"});
+   $scope.ticks.altimeter.push({"label":tickIndex,"labelBig":"20"});
+   $scope.ticks.altimeter.push({"label":tickIndex,"labelBig":"00"});
+  }
+
+  // TODO: Unify this call under a service
+  if(window.aircraftData !== undefined && window.aircraftData.GPSGroundSpeed !== undefined) {
+      // update the scope variables
+      $scope.Speed = window.aircraftData.GPSGroundSpeed;
+      for(var tickIndex = $scope.ticks.speed.length-1;tickIndex>=0;tickIndex--){
+        for(var colorIndex = $scope.Speed.arcs.length-1;colorIndex>=0;colorIndex--){
+          if($scope.ticks.speed[tickIndex].value > $scope.Speed.arcs[colorIndex].threshold){
+            $scope.ticks.speed[tickIndex].color = $scope.Speed.arcs[colorIndex].color;
+            break;
+          }
+        }
+      }
+      
+  } else {
+    $http.get(URL_AIRCRAFT_GET).then(function (response) {
+        var db = angular.fromJson(response.data);
+        if (db === undefined || Object.keys(db).length == 0) {
+            return;
+        }
+        $scope.Speed = db.GPSGroundSpeed;
+        for(var tickIndex = $scope.ticks.speed.length-1;tickIndex>=0;tickIndex--){
+          for(var colorIndex = $scope.Speed.arcs.length-1;colorIndex>=0;colorIndex--){
+            if($scope.ticks.speed[tickIndex].value > $scope.Speed.arcs[colorIndex].threshold){
+              $scope.ticks.speed[tickIndex].color = $scope.Speed.arcs[colorIndex].color;
+              break;
+            }
+          }
+        }
+  });
+  }
   $scope.Attitude = {
     "rollDegree": "0deg",
     "pitchOrigin": "50% 0%",
@@ -197,6 +265,11 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
   $scope.Altimeter = {
     "altitude": 0
   };
+    $scope.Heading = {
+    "heading": 0
+    ,
+    "sourceName":"GYRO"
+  };
 
   if($scope.$parent.hasOwnProperty("$parent") 
     && $scope.$parent.$parent.hasOwnProperty("instruments")) {
@@ -209,6 +282,13 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
     $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
     $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);    
+    if(situation.GPSFixQuality > 0) {
+      $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
+      $scope.Heading.sourceName = "GPS";
+    } else {
+    $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+      $scope.Heading.sourceName = "GYRO";
+    }
   };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);

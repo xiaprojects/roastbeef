@@ -9,6 +9,33 @@
             <div class="attitude-rollpitch-numbers" style="top:{{Attitude.pitchTop}};" ></div>
             <div class="attitude-roll" style="transform: rotate({{Attitude.rollDegree}});" ></div>
             <div class="attitude-center" ></div>
-            <div class="attitude-speed" ng-if="Attitude.standalone==true">{{Speed.speed}}</div>
+            <div class="attitude-bottom-bar" ng-if="Attitude.standalone==true" style="transform: translateX({{-2-8*Heading.heading/10}}cqmin);">
+              <div ng-repeat="tick in ticks.heading" style="background-color: #0000007f;text-align: center;">
+                {{tick.label}}
+                <div class="attitude-bottom-block">
+                  <div class="attitude-bottom-tick"></div>
+                </div>
+              </div>
+            </div>
+            <div class="attitude-heading" ng-if="Attitude.standalone==true">
+              {{Heading.heading}}
+              <div class="attitude-triangle-bottom"></div>
+            </div>
+            <div class="attitude-left-bar" ng-if="Attitude.standalone==true" style="transform: translateY({{3+(0.6)*(Altimeter.altitude/2)}}cqmin);right:0%;background-color:#0000007c;">
+              <div ng-repeat="tick in ticks.altimeter" class="attitude-left-bar-slider" style="width: 14cqmin;align-content: right;justify-content: right;">
+                <div style="font-size: 3cqmin;">{{tick.label}}</div>
+                <div style="font-size: 5cqmin;padding-right: 1cqmin;">{{tick.labelBig}}</div>
+              </div>
+            </div>
+            <div class="attitude-left-bar" ng-if="Attitude.standalone==true" style="transform: translateY({{3+(0.6)*(Speed.speed)}}cqmin);left:6%;">
+              <div ng-repeat="tick in ticks.speed" class="attitude-left-bar-slider">
+                {{tick.label}}
+                <div class="attitude-left-bar-ias" style="background-color: {{tick.color}};"></div>
+              </div>
+            </div>
+            <div class="attitude-speed" ng-if="Attitude.standalone==true">
+              {{Speed.speed}}
+              <div class="attitude-triangle-right"></div>
+            </div>
             <div class="attitude-altimeter" ng-if="Attitude.standalone==true">{{Altimeter.altitude}}</div>
         </div>
