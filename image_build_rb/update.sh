@@ -21,7 +21,8 @@ tail -n +"$SKIP_LINE" "$0" > "$PAYLOAD_FILE"
 
 echo "Extracting done. Installing"
 tar -C /opt/stratux -xzf "$PAYLOAD_FILE"
-cp /opt/stratux/bin/stratuxrun /opt/stratux/bin/gen_gdl90
+rm -Rf /opt/stratux/bin/gen_gdl90
+ln -s /opt/stratux/bin/stratuxrun /opt/stratux/bin/gen_gdl90
 echo "Installed."
 
 # re-enable overlay if it is configured. TODO: switch to jq for json parsing in the future once it's available in all installations
@@ -39,14 +40,11 @@ sed -i /media/root-ro/etc/fstab -e "s#\(.*/boot$FIRMWARE.*\)defaults,ro\(.*\)#\1
 
 # Check for settings moved on the boot partition
 export RB_SETTINGS_FOLDER="/boot/firmware/rb"
-export RB_WWW_SETTINGS="/opt/stratux/www/settings.sample"
-if [ -e "$RB_SETTINGS_FOLDER" ]; then
-    echo $RB_SETTINGS_FOLDER already moved into boot
-else
-    echo Moving configuration from $RB_SETTINGS_FOLDER
-    cp -R $RB_WWW_SETTINGS $RB_SETTINGS_FOLDER
-    # Link is already bundled into the tgz
-fi
+export RB_WWW_SETTINGS="/opt/stratux/www/settings-default"
+
+mkdir -p $RB_SETTINGS_FOLDER
+echo Moving configuration from $RB_SETTINGS_FOLDER
+cp -fR $RB_WWW_SETTINGS/* $RB_SETTINGS_FOLDER
 
 exit 0
 

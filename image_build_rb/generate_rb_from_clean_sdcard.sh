@@ -219,6 +219,9 @@ cp $USER_HOME/stratux/debian/stratux.service /lib/systemd/system
 systemctl daemon-reload
 systemctl enable stratux
 
+# Enable device mapping
+cp $USER_HOME/stratux/debian/*.rules /etc/udev/rules.d
+
 # Move the configuration away into /boot/firmware/rb
 mv $RB_WWW_SETTINGS $RB_SETTINGS_FOLDER
 ln -s $RB_SETTINGS_FOLDER $RB_WWW_SETTINGS

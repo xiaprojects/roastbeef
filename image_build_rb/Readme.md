@@ -39,6 +39,8 @@ These are the steps to be followed:
 3. Create the image using: 
 
 ### Create SDCard Image
+## Requirements
+1. Set your WiFi name and Password
 
 ## Configuration
 | Step | Subject | Description | Example |
@@ -52,3 +54,29 @@ https://www.cgtrader.com/free-3d-models/aircraft/private-aircraft/template-cessn
 | 5 | --- | --- | --- |
 | 6 | --- | --- | --- |
 | 7 | --- | --- | --- |
+## Manual post steps
+1. Clean up log and temporary folders
+```
+rm -Rf var/log
+rm -Rf .config/chromium
+rm -Rf .cache/chromium
+```
+2. Default settings: `mv settings settings-default`
+3. Links: `ln -s /boot/firmware/rb settings`
+3. `ls -l .well-known/public.pem`
+4. `ls -l /etc/udev/rules.d`
+
+### Create installable img
+```
+sudo dd if=/dev/sdb of=RB-01-raw.img bs=100M count=70
+sudo pishrink.sh -vz RB-01-raw.img 
+```
+
+### Create Update file
+## Manual post steps
+1. `tar -czf update-2.1.0.tgz bin/stratuxrun ogn RB-01.20251030.txt www`
+2. Create TGZ compatible with stratux
+```
+cp update.sh update-from-Stratux-1.6EU-to-RB-01-2.1.1.sh
+cat update-2.1.1.tgz >> update-from-Stratux-1.6EU-to-RB-01-2.1.1.sh
+```
