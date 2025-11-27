@@ -20,6 +20,7 @@
         "endSpeedDegree": 350,
         "label": "GPS SPEED",
         "unit": "KMH",
+        "raw": -1,
         "speed": 0,
         "sensorType": "GPSGroundSpeed",
         "minSpeed": 50,

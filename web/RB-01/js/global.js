@@ -91,9 +91,8 @@ function whichKeywordIsForThisDisplay() {
 }
 
 
-//
-window.situation = {};
-// { "GPSLastFixSinceMidnightUTC": 32304.2, "GPSLatitude": 43.0, "GPSLongitude": 12.0, "GPSFixQuality": 1, "GPSHeightAboveEllipsoid": 1057.4148, "GPSGeoidSep": 145.34122, "GPSSatellites": 8, "GPSSatellitesTracked": 12, "GPSSatellitesSeen": 10, "GPSHorizontalAccuracy": 5.4, "GPSNACp": 10, "GPSAltitudeMSL": 912.07355, "GPSVerticalAccuracy": 10.700001, "GPSVerticalSpeed": 0, "GPSLastFixLocalTime": "0001-01-01T00:49:25.51Z", "GPSTrueCourse": 48.3, "GPSTurnRate": 0, "GPSGroundSpeed": 0, "GPSLastGroundTrackTime": "0001-01-01T00:49:25.51Z", "GPSTime": "2023-12-31T08:58:24.3Z", "GPSLastGPSTimeStratuxTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessageTime": "0001-01-01T00:49:25.51Z", "GPSLastValidNMEAMessage": "$GPGGA,085824.20,4311.12143,N,01208.18939,E,1,08,1.08,278.0,M,44.3,M,,*51", "GPSPositionSampleRate": 9.99973784244331, "BaroTemperature": 29.04, "BaroPressureAltitude": 776.60333, "BaroVerticalSpeed": -1.2355082, "BaroLastMeasurementTime": "0001-01-01T00:49:25.52Z", "BaroSourceType": 1, "AHRSPitch": -56.752181757536206, "AHRSRoll": -77.98562991928083, "AHRSGyroHeading": 3276.7, "AHRSMagHeading": 332.9175199350767, "AHRSSlipSkid": 78.88479760867865, "AHRSTurnRate": 3276.7, "AHRSGLoad": 0.10920454632244811, "AHRSGLoadMin": 0.10626655052683534, "AHRSGLoadMax": 0.1099768285851461, "AHRSLastAttitudeTime": "0001-01-01T00:49:25.51Z", "AHRSStatus": 7 }
+// Last Situation, shared out-of-angular to avoid angular triggers
+window.situation = { "GPSLastFixSinceMidnightUTC": 0, "GPSLatitude": 0, "GPSLongitude":0, "GPSFixQuality": 0, "GPSHeightAboveEllipsoid": 0, "GPSGeoidSep": 0, "GPSSatellites": 0, "GPSSatellitesTracked": 0, "GPSSatellitesSeen": 0, "GPSHorizontalAccuracy": 0, "GPSNACp": 0, "GPSAltitudeMSL": 0, "GPSVerticalAccuracy": 0, "GPSVerticalSpeed": 0, "GPSLastFixLocalTime": "", "GPSTrueCourse": 0, "GPSTurnRate": 0, "GPSGroundSpeed": 0, "GPSLastGroundTrackTime": "", "GPSTime": "", "GPSLastGPSTimeStratuxTime": "", "GPSLastValidNMEAMessageTime": "", "GPSLastValidNMEAMessage": "", "GPSPositionSampleRate": 0, "BaroTemperature": 0, "BaroPressureAltitude": 0, "BaroVerticalSpeed": 0, "BaroLastMeasurementTime": "", "BaroSourceType": 0, "AHRSPitch": 0, "AHRSRoll": 0, "AHRSGyroHeading": 0, "AHRSMagHeading": 0, "AHRSSlipSkid": 0, "AHRSTurnRate": 0, "AHRSGLoad": 0, "AHRSGLoadMin": 0, "AHRSGLoadMax": 0, "AHRSLastAttitudeTime": "0", "AHRSStatus": 0 }
 
 function loadJSONSynchronous(url) {
   var xhr = new XMLHttpRequest();
@@ -147,4 +146,11 @@ function distance(lon1, lat1, lon2, lat2) {
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   var d = R * c; // Distance in km
   return d;
+}
+
+
+function pilotDisplayedSpeedFromKT(GPSGroundSpeedIsInKt) {
+  const kmh = GPSGroundSpeedIsInKt * 1.852;
+  const ratio = window.aircraftData?.units?.speedConversionFromKmh?.multiply ?? 1;
+  return kmh*ratio;
 }

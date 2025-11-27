@@ -134,6 +134,7 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
     "label": "GPS SPEED",
     "unit": "KMH",
     "speed": 0,
+    "raw": -1,
     "sensorType": "GPSGroundSpeed",
     "minSpeed": 0,
     "backgroundColor":"#000000",
@@ -167,14 +168,25 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
   }
 
   $scope.updateSituation = (situation) => {
-    $scope.Speed.speed = parseInt(situation[$scope.Speed.sensorType]);
+    const GPSGroundSpeedIsInKt = situation[$scope.Speed.sensorType];
+    if($scope.Speed.raw == GPSGroundSpeedIsInKt) {
+      return;
+    } else {
+      $scope.Speed.raw = GPSGroundSpeedIsInKt;
+    }
+    $scope.Speed.pilotValue = pilotDisplayedSpeedFromKT(GPSGroundSpeedIsInKt)
+    $scope.Speed.speed = parseInt($scope.Speed.pilotValue);
 
     const arcsArc = ($scope.Speed.endSpeedDegree - $scope.Speed.startSpeedDegree);
     const speedIncrement = ($scope.Speed.maxSpeed - $scope.Speed.minSpeed);
     const ratio = speedIncrement / arcsArc;
 
-    $scope.Speed.speedDegree = (situation.GPSGroundSpeed * ratio + $scope.Speed.startSpeedDegree + 90) + "deg";
 
+    if($scope.Speed.pilotValue < $scope.Speed.minSpeed) {
+      $scope.Speed.speedDegree = ($scope.Speed.startSpeedDegree + 90) + "deg";
+    } else {
+      $scope.Speed.speedDegree = (($scope.Speed.pilotValue-$scope.Speed.minSpeed) * ratio + $scope.Speed.startSpeedDegree + 90) + "deg";
+    }
   };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);
