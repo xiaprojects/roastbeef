@@ -219,6 +219,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.$apply(); // trigger any needed refreshing of data
     }
 
+    $scope.pilotGPSGroundSpeed = 0;
+    $scope.pilotGPSGroundSpeedUnit = "Kt";
+    $scope.pilotGPSAltitudeMSL = 0;
 
     // ************
     function situationUpdateEventListener(event) {
@@ -235,8 +238,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
         if (requireRefresh == true) {
             $scope.situation = situation;
-            $scope.situation.GPSGroundSpeed = parseInt($scope.situation.GPSGroundSpeed);
-            $scope.situation.GPSAltitudeMSL = parseInt($scope.situation.GPSAltitudeMSL);
+            $scope.pilotGPSGroundSpeed = parseInt(pilotDisplayedSpeedFromKT($scope.situation.GPSGroundSpeed));
+            $scope.pilotGPSGroundSpeedUnit = window.aircraftData?.units?.speed ?? "Kmh";
+            $scope.pilotGPSAltitudeMSL = parseInt($scope.situation.GPSAltitudeMSL);
             loadSituationInSynthView(situation);
             loadSituationInAHRS(situation);
             $scope.$apply(); // trigger any needed refreshing of data
