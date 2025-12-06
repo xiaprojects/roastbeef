@@ -9,6 +9,11 @@
             "multiply" : 1,
             "sum" : 0
         },
+        "altimeter": "feet",
+        "altimeterConversionFromMeters" : {
+            "multiply" : 3.28084,
+            "sum" : 0
+        },        
         "temperatureConversionFromC" : {
             "multiply" : 1.8,
             "sum" : 32

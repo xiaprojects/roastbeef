@@ -154,3 +154,8 @@ function pilotDisplayedSpeedFromKT(GPSGroundSpeedIsInKt) {
   const ratio = window.aircraftData?.units?.speedConversionFromKmh?.multiply ?? 1;
   return kmh*ratio;
 }
+
+function pilotDisplayedAltitudeFromMeters(GPSAltitudeMSL) {
+  const ratio = window.aircraftData?.units?.altimeterConversionFromMeters?.multiply ?? 1;
+  return GPSAltitudeMSL*ratio;
+}

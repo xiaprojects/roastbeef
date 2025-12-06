@@ -10,7 +10,7 @@
   <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSGroundSpeedUnit}}</div>
 </div>
 <div ng-show="remote.reset==false" class="SynthView-side-right">{{pilotGPSAltitudeMSL}}
-  <div style="font-size: 4cqmin;margin-top: -15%;">feet</div>
+  <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSAltitudeMSLUnit}}</div>
 </div>
 
 <div  ng-show="displayHSI()" ng-controller="HSICtrl" ng-init="init('SynthViewCtrl','#000000')">
