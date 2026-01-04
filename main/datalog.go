@@ -25,7 +25,7 @@ import (
 )
 
 const (
-	LOG_TIMESTAMP_RESOLUTION = 250 * time.Millisecond
+	LOG_TIMESTAMP_RESOLUTION = 1000 * time.Millisecond
 )
 
 type StratuxTimestamp struct {
@@ -477,6 +477,7 @@ func dataLog() {
 		makeTable(Dump1090TermMessage{}, "dump1090_terminal", db)
 		makeTable(gpsPerfStats{}, "gps_attitude", db)
 		makeTable(StratuxStartup{}, "startup", db)
+		makeTable(EMSDataLogger{}, "ems", db)
 	}
 
 	// The first entry to be created is the "startup" entry.
@@ -533,9 +534,15 @@ func isDataLogReady() bool {
 	return dataLogReadyToWrite
 }
 
+var logSituationLastTime time.Time
 func logSituation() {
 	if globalSettings.ReplayLog && isDataLogReady() {
+		now := time.Now()
+		if now.Sub(logSituationLastTime) < LOG_TIMESTAMP_RESOLUTION {
+			return
+		}
 		dataLogChan <- DataLogRow{tbl: "mySituation", data: mySituation}
+		logSituationLastTime = now
 	}
 }
 
@@ -566,6 +573,12 @@ func logMsg(m msg) {
 func logESMsg(m esmsg) {
 	if globalSettings.ReplayLog && isDataLogReady() {
 		dataLogChan <- DataLogRow{tbl: "es_messages", data: m}
+	}
+}
+
+func logEMS(m EMSDataLogger) {
+	if globalSettings.ReplayLog && isDataLogReady() {
+		dataLogChan <- DataLogRow{tbl: "ems", data: m}
 	}
 }
 

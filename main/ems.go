@@ -36,6 +36,7 @@ import (
 	"log"
 	"strings"
 	"sync"
+	"time"
 )
 
 type EMSStratuxPlugin struct {
@@ -45,6 +46,13 @@ type EMSStratuxPlugin struct {
 	emsDataMax map[string] float32
 	emsDataMin map[string] float32
 	emsDataMutex *sync.Mutex
+}
+
+// Data Logger
+type EMSDataLogger struct {
+	Clock                time.Time
+	SensorName           string
+	SensorValue          float32
 }
 
 var ems = EMSStratuxPlugin{}
