@@ -28,7 +28,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/stratux/stratux/common"
+	"github.com/xiaprojects/roastbeef/common"
 )
 
 const (
@@ -97,6 +97,10 @@ type SituationData struct {
 	muBaro                  *sync.Mutex
 	BaroTemperature         float32
 	BaroPressureAltitude    float32
+	/* Ready for Professional board
+	BaroHumidity		    float32
+	BaroPpm				    float32	
+	*/
 	BaroVerticalSpeed       float32
 	BaroLastMeasurementTime time.Time
 	BaroSourceType          uint8
@@ -117,6 +121,11 @@ type SituationData struct {
 
 	// Magnetometer data to calculate the Mag Offsets
 	Magnetometer         MagnetometerData
+
+	// External board
+	/* Ready for Professional board
+	IndicatedAirSpeed				    float32
+	*/
 }
 
 /*

@@ -35,8 +35,8 @@ import (
 
 	humanize "github.com/dustin/go-humanize"
 	"github.com/ricochet2200/go-disk-usage/du"
-	"github.com/stratux/stratux/common"
-	"github.com/stratux/stratux/uatparse"
+	"github.com/xiaprojects/roastbeef/common"
+	"github.com/xiaprojects/roastbeef/uatparse"
 )
 
 // https://www.faa.gov/nextgen/programs/adsb/Archival/
@@ -1355,16 +1355,12 @@ func defaultSettings() {
 	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.SwitchBoard_Enabled = false
 	globalSettings.Switches = make([]switchModel, 0)
-	globalSettings.MagCalibration.Heading = 0	// Angle Correction Offset
-	globalSettings.MagCalibration.X = 0			// Magnetic Field Correction Offset
-	globalSettings.MagCalibration.Y = 0			// Magnetic Field Correction Offset
-	globalSettings.MagCalibration.Z = 0			// Magnetic Field Correction Offset
-	globalSettings.MagCalibration.MagMaxX = 0	// Magnetic Field Range
-	globalSettings.MagCalibration.MagMaxY = 0	// Magnetic Field Range
-	globalSettings.MagCalibration.MagMaxZ = 0	// Magnetic Field Range
-	globalSettings.MagCalibration.MagMinX = 0	// Magnetic Field Range
-	globalSettings.MagCalibration.MagMinY = 0	// Magnetic Field Range
-	globalSettings.MagCalibration.MagMinZ = 0	// Magnetic Field Range
+	globalSettings.MagCalibration.CalibrationReset()
+	mySituation.Magnetometer.CalibrationReset()
+	globalSettings.MagCalibration.Calibrating = true
+	mySituation.Magnetometer.Calibrating = true
+	globalSettings.MagCalibration.Offset = 0
+	mySituation.Magnetometer.Offset = 0
 	globalSettings.Radio_Enabled = false
 	globalSettings.EMS_Enabled = false
 	// Region is none if not specified, default to US settings
@@ -1761,6 +1757,7 @@ func main() {
 	mySituation.muAttitude = &sync.Mutex{}
 	mySituation.muBaro = &sync.Mutex{}
 	mySituation.muSatellite = &sync.Mutex{}
+	MagnetometerDataMutex = &sync.Mutex{}
 
 	// Set up system error tracking.
 	systemErrsMutex = &sync.Mutex{}
@@ -1824,6 +1821,7 @@ func main() {
 
 	// Read settings.
 	readSettings()
+	mySituation.Magnetometer = globalSettings.MagCalibration
 
 	// Clear the logfile on startup
 	if globalSettings.ClearLogOnStart { clearDebugLogFile() }

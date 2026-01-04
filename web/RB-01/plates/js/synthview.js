@@ -241,8 +241,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.situation = situation;
             $scope.pilotGPSGroundSpeed = parseInt(pilotDisplayedSpeedFromKT($scope.situation.GPSGroundSpeed));
             $scope.pilotGPSGroundSpeedUnit = window.aircraftData?.units?.speed ?? "Kmh";
-            $scope.pilotGPSAltitudeMSLUnit = window.aircraftData?.units?.altitude ?? "Meters";
-            $scope.pilotGPSAltitudeMSL = parseInt(pilotDisplayedAltitudeFromMeters($scope.situation.GPSAltitudeMSL));
+            $scope.pilotGPSAltitudeMSLUnit = window.aircraftData?.units?.altimeter ?? "Meters";
+            $scope.pilotGPSAltitudeMSL = parseInt(pilotDisplayedAltitudeFromMeters($scope.situation.GPSAltitudeMSL/3.28084));
             loadSituationInSynthView(situation);
             loadSituationInAHRS(situation);
             $scope.$apply(); // trigger any needed refreshing of data
@@ -400,7 +400,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
                 var data = await response.json(); // Parse the JSON
                 data.moltipliers = { "lat": (data.planimetry.end.lat - data.planimetry.start.lat) / data.terrainData.length, "lon": (data.planimetry.end.lon - data.planimetry.start.lon) / data.terrainData[0].length }
-                data = this.trimTerrainByDistance(data, lat, lon, 100);
+                data = this.trimTerrainByDistance(data, lat, lon, 75);
                 data.moltipliers = { "lat": (data.planimetry.end.lat - data.planimetry.start.lat) / data.terrainData.length, "lon": (data.planimetry.end.lon - data.planimetry.start.lon) / data.terrainData[0].length }
                 this.terrainData = data.terrainData;
                 this.latitude = data.latitude;
@@ -752,7 +752,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
 
-        cameraFollowItem(item, resources, distance = 10) {
+        cameraFollowItem(item, resources, distance = 5) {
             this.camera.position.set(
                 item.x - distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize / FollowMeDistance,
                 item.elevation,
@@ -940,9 +940,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 (gltf) => {
                     //console.log('Model loaded successfully:', gltf);
 
-                    gltf.scene.scale.x = item.scale;
-                    gltf.scene.scale.y = item.scale;
-                    gltf.scene.scale.z = item.scale;
+                    gltf.scene.scale.x = item.scale * setup.cellSize / 300;
+                    gltf.scene.scale.y = item.scale * setup.cellSize / 300;
+                    gltf.scene.scale.z = item.scale * setup.cellSize / 300;
 
                     gltf.scene.position.x = item.x
                     gltf.scene.position.y = item.elevation

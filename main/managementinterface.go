@@ -42,7 +42,7 @@ import (
 	humanize "github.com/dustin/go-humanize"
 	"golang.org/x/net/websocket"
 
-	"github.com/stratux/stratux/common"
+	"github.com/xiaprojects/roastbeef/common"
 )
 
 type SettingMessage struct {
@@ -567,19 +567,94 @@ func handleTimersRest(w http.ResponseWriter, r *http.Request) {
  * Magnetometer REST API Start
  */
 func handleMagnetometerGet(w http.ResponseWriter, r *http.Request) {
-	/*
-	magnetometer.magDataMutex.Lock()
-	statusJSON, err := json.Marshal(&magnetometer.field)
-	magnetometer.magDataMutex.Unlock()
+	MagnetometerDataMutex.Lock()
+	statusJSON, err := json.Marshal(&mySituation.Magnetometer)
+	MagnetometerDataMutex.Unlock()
 	if err == nil {
 		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
 		fmt.Fprintf(w, "[]\n")
 		log.Printf("%s", err)
 	}
-	*/
-	fmt.Fprintf(w, "[]\n")
 }
+
+func handleMagnetometerDelete(w http.ResponseWriter, r *http.Request) {
+	globalSettings.MagCalibration.CalibrationReset()
+	mySituation.Magnetometer.CalibrationReset()
+	// Do not saveSettings()
+	MagnetometerDataMutex.Lock()
+	statusJSON, err := json.Marshal(&mySituation.Magnetometer)
+	MagnetometerDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+
+
+func handleMagnetometerPut(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+	var msg MagnetometerData
+	err := decoder.Decode(&msg)
+	if err == io.EOF {
+
+	} else if err != nil {
+		log.Printf("handleMagnetometerPost:error: %s\n", err.Error())
+	} else {
+		globalSettings.MagCalibration = msg
+		saveSettings()
+	}
+	statusJSON, err := json.Marshal(&globalSettings.MagCalibration)
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+
+
+
+func handleMagnetometerPost(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+	var msg MagnetometerData
+	err := decoder.Decode(&msg)
+	if err == io.EOF {
+
+	} else if err != nil {
+		log.Printf("handleMagnetometerPost:error: %s\n", err.Error())
+	} else {
+		MagnetometerDataMutex.Lock()
+		mySituation.Magnetometer = msg
+
+				mySituation.AHRSMagHeading = HeadingFromMag(mySituation.AHRSPitch,
+					mySituation.AHRSRoll,
+					mySituation.Magnetometer.X,
+					mySituation.Magnetometer.Y,
+					mySituation.Magnetometer.Z,
+					mySituation.Magnetometer.MagMinX,mySituation.Magnetometer.MagMaxX,
+					mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
+					mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
+					mySituation.Magnetometer.Offset,
+					false)
+				mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
+
+		MagnetometerDataMutex.Unlock()
+	}
+
+	MagnetometerDataMutex.Lock()
+	statusJSON, err := json.Marshal(&mySituation.Magnetometer)
+	MagnetometerDataMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
+	}
+}
+
 
  func handleMagnetometerRest(w http.ResponseWriter, r *http.Request) {
 	// define header in support of cross-domain AJAX
@@ -593,15 +668,15 @@ func handleMagnetometerGet(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method == "DELETE" {
-
+		handleMagnetometerDelete(w, r)
 	}
 
 	if r.Method == "PUT" {
-
+		handleMagnetometerPut(w, r)
 	}
 
 	if r.Method == "POST" {
-
+		handleMagnetometerPost(w, r)
 	}
 }
 
@@ -901,6 +976,7 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "[]\n")
 		log.Printf("%s", err4)
 	}
+	saveSettings()
 }
 func handleRadioDelete(w http.ResponseWriter, r *http.Request) {
 
@@ -1172,6 +1248,7 @@ func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
 						if prevValue != ival {
 						ems.emsData[key]=ival
 						reconfigureEMS = true
+						logEMS(EMSDataLogger{time.Now(),key,ival})
 						if ems.emsDataMax[key] < ival {
 							ems.emsDataMax[key] = ival
 						}

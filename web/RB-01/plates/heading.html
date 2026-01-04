@@ -3,5 +3,6 @@
     <div class="gyrobearing" style="transform: rotate(-{{Heading.heading}}deg);"></div>
     <div class="gyroheading"></div>
     <div class="gyroheading-track">{{Heading.heading}}°</div>
-    <div class="fabNavigation fabCenter" ng-click="fabClick('C',this,$event);">{{Heading.sourceName}}</div>
+    <div class="gyroheading-source">{{Heading.sourceName}}</div>
+    <div class="fabNavigation fabCenter" ng-click="fabClick('C',this,$event);"></div>
 </div>

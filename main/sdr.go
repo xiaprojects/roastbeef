@@ -22,7 +22,7 @@ import (
 	"time"
 
 	rtl "github.com/jpoirier/gortlsdr"
-	"github.com/stratux/stratux/godump978"
+	"github.com/xiaprojects/roastbeef/godump978"
 )
 
 // Device holds per dongle values and attributes

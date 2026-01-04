@@ -462,7 +462,7 @@ func (chartsInstance *ChartsStratuxPlugin) logSituation() {
 
 		// Magnetometer
 		chartsInstance.last.Magnetometer = mySituation.Magnetometer
-		chartsInstance.last.Magnetometer.Heading = int(mySituation.AHRSMagHeading)
+		chartsInstance.last.Magnetometer.Heading = mySituation.AHRSMagHeading
 
 		chartsInstance.chartsDataMutex.Unlock()
 	}
@@ -518,7 +518,7 @@ func chartsSamplesByIndexToSample(index int, samples ChartDataExport) ChartDataC
 			X: samples.MagX[index],
 			Y: samples.MagY[index],
 			Z: samples.MagZ[index],
-			Heading: int(samples.AHRSMagHeading[index]),
+			Heading: samples.AHRSMagHeading[index],
 		},
 	Fuel1 : samples.Fuel1[index],
 	Fuel2  : samples.Fuel2[index],

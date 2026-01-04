@@ -8,7 +8,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/stratux/serial"
+	"github.com/xiaprojects/serial"
 )
 
 /*

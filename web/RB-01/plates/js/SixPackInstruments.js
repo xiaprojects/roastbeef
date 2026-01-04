@@ -293,13 +293,13 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Attitude.pitchOrigin = "50% " + situation.AHRSPitch + "%";
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
     $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
-    $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);    
+    $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);
     if(situation.GPSFixQuality > 0) {
-      $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
+          $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
       $scope.Heading.sourceName = "GPS";
-    } else {
-    $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
-      $scope.Heading.sourceName = "GYRO";
+        } else {
+        $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+          $scope.Heading.sourceName = "GYRO";
     }
   };
   if(window.situation !== undefined) {
@@ -387,12 +387,39 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
 
 
   $scope.updateSituation = (situation) => {
-    if(situation.GPSFixQuality > 0) {
-      $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
-      $scope.Heading.sourceName = "GPS";
-    } else {
-    $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
-      $scope.Heading.sourceName = "GYRO";
+    switch ($scope.Heading.sourceName) {
+      case "GPS":
+        if (situation.GPSFixQuality > 0) {
+          $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
+        } else {
+          $scope.Heading.sourceName = "GYRO";
+          $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+        }
+        break;
+      case "GYRO":
+        $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+        break;
+      case "MAG":
+        $scope.Heading.heading = parseInt(situation.AHRSMagHeading);
+        break;
+      default:
+        $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+        break;
+    }
+  };
+  $scope.fabClick = (direction, item, browserEvent) => {
+    if (direction == "C") {
+      switch ($scope.Heading.sourceName) {
+        case "GPS":
+          $scope.Heading.sourceName = "GYRO";
+          break;
+        case "GYRO":
+          $scope.Heading.sourceName = "MAG";
+          break;
+        case "MAG":
+          $scope.Heading.sourceName = "GPS";
+          break;
+      }
     }
   };
   if(window.situation !== undefined) {

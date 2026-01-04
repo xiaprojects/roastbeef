@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/kidoman/embd"
-	"github.com/stratux/goflying/bmp280"
+	"github.com/xiaprojects/goflying/bmp280"
 )
 
 const (

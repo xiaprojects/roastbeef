@@ -20,7 +20,7 @@ import (
 
 	// Using forked version of tarm/serial to force Linux
 	// instead of posix code, allowing for higher baud rates
-	"github.com/stratux/serial"
+	"github.com/xiaprojects/serial"
 )
 
 // pong device data
@@ -60,7 +60,7 @@ func initPongSerial() bool {
 		return false
 	}
 	/*
-	main/pong.go:62:14: p.ClearRTS undefined (type *"github.com/stratux/serial".Port has no field or method ClearRTS)
+	main/pong.go:62:14: p.ClearRTS undefined (type *"github.com/xiaprojects/serial".Port has no field or method ClearRTS)
 	errRts := p.ClearRTS()
 	if errRts != nil {
 		log.Printf("Clearing RTS returned %s\n", errRts.Error())

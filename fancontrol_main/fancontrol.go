@@ -16,7 +16,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/stianeikeland/go-rpio/v4"
-	"github.com/stratux/stratux/common"
+	"github.com/xiaprojects/roastbeef/common"
 )
 
 import "C"

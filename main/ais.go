@@ -18,7 +18,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stratux/stratux/common"
+	"github.com/xiaprojects/roastbeef/common"
 
 	"github.com/BertoldVdb/go-ais"
 	"github.com/BertoldVdb/go-ais/aisnmea"

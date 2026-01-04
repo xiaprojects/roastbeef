@@ -8,15 +8,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stratux/stratux/sensors/bmp388"
+	"github.com/xiaprojects/roastbeef/sensors/bmp388"
 
 	"github.com/kidoman/embd"
 	_ "github.com/kidoman/embd/host/all"
 	"github.com/ricochet2200/go-disk-usage/du"
-	"github.com/stratux/goflying/ahrs"
-	"github.com/stratux/goflying/ahrsweb"
-	"github.com/stratux/stratux/common"
-	"github.com/stratux/stratux/sensors"
+	"github.com/xiaprojects/goflying/ahrs"
+	"github.com/xiaprojects/goflying/ahrsweb"
+	"github.com/xiaprojects/roastbeef/common"
+	"github.com/xiaprojects/roastbeef/sensors"
 )
 
 const (
@@ -214,7 +214,6 @@ func initIMU() (ok bool) {
 	return false
 }
 
-//FIXME: Shoud be moved to managementinterface.go and standardized on management interface port.
 
 func sensorAttitudeSender() {
 	var (
@@ -334,30 +333,33 @@ func sensorAttitudeSender() {
 				}
 				m.MValid = false
 			} else {
-					if(m.M1==0 || m.M2 == 0 || m.M3 ==0){
+					if((m.M1<5 && m.M1 >-5) || (m.M2<5 && m.M2 >-5) || (m.M3<5 && m.M3 >-5) || globalStatus.Uptime < 5000){
 					} else {
-						mySituation.Magnetometer.X=(m.M1)
-						mySituation.Magnetometer.Y=(m.M2)
-						mySituation.Magnetometer.Z=(m.M3)
-						
-						if(mySituation.Magnetometer.MagMaxX<m.M1){
-							mySituation.Magnetometer.MagMaxX=m.M1
+						MagnetometerDataMutex.Lock()
+						mySituation.Magnetometer.X = m.M1
+						mySituation.Magnetometer.Y = m.M2
+						mySituation.Magnetometer.Z = m.M3
+						if(mySituation.Magnetometer.Calibrating == true){
+							if(mySituation.Magnetometer.MagMaxX<mySituation.Magnetometer.X){
+								mySituation.Magnetometer.MagMaxX=mySituation.Magnetometer.X
+							}
+							if(mySituation.Magnetometer.MagMaxY<mySituation.Magnetometer.Y){
+								mySituation.Magnetometer.MagMaxY=mySituation.Magnetometer.Y
+							}
+							if(mySituation.Magnetometer.MagMaxZ<mySituation.Magnetometer.Z){
+								mySituation.Magnetometer.MagMaxZ=mySituation.Magnetometer.Z
+							}
+							if(mySituation.Magnetometer.MagMinX>mySituation.Magnetometer.X){
+								mySituation.Magnetometer.MagMinX=mySituation.Magnetometer.X
+							}
+							if(mySituation.Magnetometer.MagMinY>mySituation.Magnetometer.Y){
+								mySituation.Magnetometer.MagMinY=mySituation.Magnetometer.Y
+							}
+							if(mySituation.Magnetometer.MagMinZ>mySituation.Magnetometer.Z){
+								mySituation.Magnetometer.MagMinZ=mySituation.Magnetometer.Z
+							}
 						}
-						if(mySituation.Magnetometer.MagMaxY<m.M2){
-							mySituation.Magnetometer.MagMaxY=m.M2
-						}
-						if(mySituation.Magnetometer.MagMaxZ<m.M3){
-							mySituation.Magnetometer.MagMaxZ=m.M3
-						}
-						if(mySituation.Magnetometer.MagMinX>m.M1){
-							mySituation.Magnetometer.MagMinX=m.M1
-						}
-						if(mySituation.Magnetometer.MagMinY>m.M2){
-							mySituation.Magnetometer.MagMinY=m.M2
-						}
-						if(mySituation.Magnetometer.MagMinZ>m.M3){
-							mySituation.Magnetometer.MagMinZ=m.M3
-						}
+						MagnetometerDataMutex.Unlock()
 					}
 			}
 
@@ -373,44 +375,6 @@ func sensorAttitudeSender() {
 					m.W3 = float64(mySituation.GPSVerticalSpeed) * 3600 / 6076.12
 				}
 			}
-
-			// Magnetometer steps required to apply in ahrs_simple.go the s.headingMag = math.Atan2(m1, -m2)
-			// Magnetometer Calibration Step 0: Offset set?
-			if(globalSettings.MagCalibration.MagMaxX !=0){
-			// Magnetometer Calibration Step 1: Hard Iron
-				magXRange := globalSettings.MagCalibration.MagMaxX-globalSettings.MagCalibration.MagMinX
-			// Magnetometer Calibration Step 2: Soft Iron
-				magXOffset := (globalSettings.MagCalibration.MagMaxX+globalSettings.MagCalibration.MagMinX)/2.0
-			// Magnetometer Sphere Value
-				m.M1 = 1.0 * (m.M1 - magXOffset) / magXRange;
-			}
-			// Magnetometer Calibration Step 0: Offset set?
-			if(globalSettings.MagCalibration.MagMaxY !=0){
-				// Magnetometer Calibration Step 1: Hard Iron
-					magYRange := globalSettings.MagCalibration.MagMaxY-globalSettings.MagCalibration.MagMinY
-				// Magnetometer Calibration Step 2: Soft Iron
-					magYOffset := (globalSettings.MagCalibration.MagMaxY+globalSettings.MagCalibration.MagMinY)/2.0
-				// Magnetometer Sphere Value
-					m.M2 = 1.0 * (m.M2 - magYOffset) / magYRange;
-				}
-			// Magnetometer Calibration Step 0: Offset set?
-			if(globalSettings.MagCalibration.MagMaxZ !=0){
-				// Magnetometer Calibration Step 1: Hard Iron
-					magZRange := globalSettings.MagCalibration.MagMaxZ-globalSettings.MagCalibration.MagMinZ
-				// Magnetometer Calibration Step 2: Soft Iron
-					magZOffset := (globalSettings.MagCalibration.MagMaxZ+globalSettings.MagCalibration.MagMinZ)/2.0
-				// Magnetometer Sphere Value
-					m.M3 = 1.0 * (m.M3 - magZOffset) / magZRange;
-				}
-		
-			// Magnetometer Calibration Step 3: Normalisation
-			if(m.M1 != 0 && m.M2 != 0 && m.M3 !=0){
-				magnitude :=  math.Sqrt(m.M1*m.M1 + m.M2*m.M2 + m.M3*m.M3)
-				m.M1 = m.M1 / magnitude
-				m.M2 = m.M2 / magnitude
-				m.M3 = m.M3 / magnitude
-			}
-
 			// Run the AHRS calculations.
 			s.Compute(m)
 
@@ -424,9 +388,17 @@ func sensorAttitudeSender() {
 				if !isAHRSInvalidValue(heading) {
 					mySituation.AHRSGyroHeading /= ahrs.Deg
 				}
-
-				//TODO westphae: until magnetometer calibration is performed, no mag heading
-				mySituation.AHRSMagHeading = s.MagHeading()
+				mySituation.AHRSMagHeading = HeadingFromMag(mySituation.AHRSPitch,
+					mySituation.AHRSRoll,
+					mySituation.Magnetometer.X,
+					mySituation.Magnetometer.Y,
+					mySituation.Magnetometer.Z,
+					mySituation.Magnetometer.MagMinX,mySituation.Magnetometer.MagMaxX,
+					mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
+					mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
+					mySituation.Magnetometer.Offset,
+					false)
+				mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
 				mySituation.AHRSSlipSkid = s.SlipSkid()
 				mySituation.AHRSTurnRate = s.RateOfTurn()
 				mySituation.AHRSGLoad = s.GLoad()
