@@ -1,3 +1,33 @@
+/*
+	This file is part of RB.
+
+	Copyright (C) 2026 XIAPROJECTS SRL
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published
+	by the Free Software Foundation, version 3.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+	This source is part of the project RB:
+	01 -> Display with Synthetic vision, Autopilot and ADSB
+	02 -> Display with SixPack
+	03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+	04 -> Display with EMS: Engine monitoring system
+	05 -> Display with Stratux BLE Traffic
+	06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+	07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+
+	Community edition will be free for all builders and personal use as defined by the licensing model
+	Dual licensing for commercial agreement is available
+	Please join Discord community
+*/
 package main
 
 import (
@@ -38,6 +68,7 @@ const (
 
 var (
 	i2cbus           embd.I2CBus
+	i2cbus0          embd.I2CBus	
 	myPressureReader sensors.PressureReader
 	myIMUReader      sensors.IMUReader
 	cal              chan (string)
@@ -57,6 +88,7 @@ func initI2CSensors() {
 	}()
 	embd.SetHost(embd.HostRPi, 3)
 	i2cbus = embd.NewI2CBus(1)
+	i2cbus0 = embd.NewI2CBus(0)
 	go pollSensors()
 	go sensorAttitudeSender()
 	go updateAHRSStatus()
@@ -69,7 +101,11 @@ func pollSensors() {
 
 		// If it's not currently connected, try connecting to pressure sensor
 		if globalSettings.BMP_Sensor_Enabled && !globalStatus.BMPConnected {
-			globalStatus.BMPConnected = initPressureSensor() // I2C temperature and pressure altitude.
+			log.Printf("Attempting to connect to pressure sensor...\n")
+			globalStatus.BMPConnected = initPressureSensor(i2cbus) // I2C temperature and pressure altitude.
+			if(globalStatus.BMPConnected == false) {
+				globalStatus.BMPConnected = initPressureSensor(i2cbus0) // I2C temperature and pressure altitude.
+			}
 			go tempAndPressureSender()
 		}
 
@@ -80,7 +116,7 @@ func pollSensors() {
 	}
 }
 
-func initPressureSensor() (ok bool) {
+func initPressureSensor(i2cbus embd.I2CBus) (ok bool) {
 
 	v, err := i2cbus.ReadByteFromReg(0x76, PRESSURE_WHO_AM_I)
 
@@ -99,6 +135,18 @@ func initPressureSensor() (ok bool) {
 			return true
 		}
 	} else {
+		v, err = i2cbus.ReadByteFromReg(0x77, sensors.BME680_REG_CHIP_ID)
+		if err != nil {
+			v, err = i2cbus.ReadByteFromReg(0x76, sensors.BME680_REG_CHIP_ID)
+		}
+		if v == sensors.BME680_CHIP_ID_VAL {
+			// Try BME680 first (new sensor)
+			if bme, err := sensors.NewBME680(&i2cbus, 100*time.Millisecond); err == nil {
+				log.Printf("BME680 detected")
+				myPressureReader = bme
+				return true
+			}
+	} else {
 		log.Printf("using BMP-280")
 		bmp, err := sensors.NewBMP280(&i2cbus, 100*time.Millisecond)
 		if err == nil {
@@ -106,6 +154,7 @@ func initPressureSensor() (ok bool) {
 			return true
 		}
 	}
+}
 
 	return false
 }
@@ -151,6 +200,21 @@ func tempAndPressureSender() {
 				break
 			}
 			continue
+		}
+
+		if proInterface, ok := myPressureReader.(sensors.AirReader); ok {
+			hum, humError := proInterface.Humidity()
+			if humError == nil {
+				mySituation.BaroHumidity = float32(hum)
+			}
+			gas, gasError := proInterface.GasResistance()
+			if gasError == nil {
+				mySituation.BaroGasResistance = float32(gas)
+			}
+			coPpm, coError := proInterface.COppm()
+			if coError == nil {
+				mySituation.BaroPpm = float32(coPpm)
+			}
 		}
 
 		altitude = common.CalcAltitude(press, globalSettings.AltitudeOffset)

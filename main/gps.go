@@ -97,10 +97,9 @@ type SituationData struct {
 	muBaro                  *sync.Mutex
 	BaroTemperature         float32
 	BaroPressureAltitude    float32
-	/* Ready for Professional board
 	BaroHumidity		    float32
 	BaroPpm				    float32	
-	*/
+	BaroGasResistance		float32
 	BaroVerticalSpeed       float32
 	BaroLastMeasurementTime time.Time
 	BaroSourceType          uint8
