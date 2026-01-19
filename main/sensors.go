@@ -1,32 +1,32 @@
 /*
-	This file is part of RB.
+This file is part of RB.
 
 	Copyright (C) 2026 XIAPROJECTS SRL
 
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Affero General Public License as published
-	by the Free Software Foundation, version 3.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, version 3.
 
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-	GNU Affero General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
 
-	You should have received a copy of the GNU Affero General Public License
-	along with this program. If not, see <https://www.gnu.org/licenses/>.
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-	This source is part of the project RB:
-	01 -> Display with Synthetic vision, Autopilot and ADSB
-	02 -> Display with SixPack
-	03 -> Display with Autopilot, ADSB, Radio, Flight Computer
-	04 -> Display with EMS: Engine monitoring system
-	05 -> Display with Stratux BLE Traffic
-	06 -> Display with Android 6.25" 7" 8" 10" 10.2"
-	07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+This source is part of the project RB:
+01 -> Display with Synthetic vision, Autopilot and ADSB
+02 -> Display with SixPack
+03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+04 -> Display with EMS: Engine monitoring system
+05 -> Display with Stratux BLE Traffic
+06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
 
-	Community edition will be free for all builders and personal use as defined by the licensing model
-	Dual licensing for commercial agreement is available
-	Please join Discord community
+Community edition will be free for all builders and personal use as defined by the licensing model
+Dual licensing for commercial agreement is available
+Please join Discord community
 */
 package main
 
@@ -61,6 +61,7 @@ const (
 	MPUREG_WHO_AM_I_VAL_6500    = 0x70 // Expected value for MPU6500, seems to be same as 9250 but without magnetometer
 	MPUREG_WHO_AM_I_VAL_60X0    = 0x68 // Expected value for MPU6000 and MPU6050 (and MPU9150)
 	MPUREG_WHO_AM_I_VAL_UNKNOWN = 0x75 // Unknown MPU found on recent batch of gy91 boards see discussion 182
+	MPUREG_WHO_AM_I_VAL_GY85	= 0x69
 	ICMREG_WHO_AM_I             = 0x00
 	ICMREG_WHO_AM_I_VAL         = 0xEA             // Expected value.
 	PRESSURE_WHO_AM_I           = bmp388.RegChipId // Expected address for bosch pressure sensors bmpXXX.
@@ -111,7 +112,10 @@ func pollSensors() {
 
 		// If it's not currently connected, try connecting to IMU
 		if globalSettings.IMU_Sensor_Enabled && !globalStatus.IMUConnected {
-			globalStatus.IMUConnected = initIMU() // I2C accel/gyro/mag.
+			globalStatus.IMUConnected = initIMU(i2cbus) // I2C accel/gyro/mag.
+			if(globalStatus.IMUConnected == false) {
+				globalStatus.IMUConnected = initIMU(i2cbus0) // I2C accel/gyro/mag.
+			}
 		}
 	}
 }
@@ -241,13 +245,25 @@ func tempAndPressureSender() {
 	//mySituation.BaroVerticalSpeed = 99999
 }
 
-func initIMU() (ok bool) {
+func initIMU(i2cbus embd.I2CBus) (ok bool) {
 	// Check if the chip is the ICM-20948 or MPU-9250.
 	v, err := i2cbus.ReadByteFromReg(0x68, ICMREG_WHO_AM_I)
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
 		return false
 	}
+
+	if v == MPUREG_WHO_AM_I_VAL_GY85 {
+		log.Printf("MPU detected (%02x).\n", v)
+		imu, err := sensors.NewGY85(&i2cbus)
+		if err == nil {
+			myIMUReader = imu
+			return true
+		} else {
+			log.Printf("Error identifying IMU: %s\n", err.Error())
+		}
+	}
+	
 	v2, err := i2cbus.ReadByteFromReg(0x68, MPUREG_WHO_AM_I)
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
