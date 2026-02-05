@@ -24,11 +24,22 @@
     position: relative;
 }
 
+.ems_egt_oil_intrument {
+    display: none;
+}
+
 /* RB-01 with Round display is 480x480 */
 @container (aspect-ratio = 1) and (width < 512px) {
+.ems_egt_oil_intrument {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+
     .ems_egt_intrument {
         max-height: 70cqh;
-        margin-top: 15%;
+        /*margin-top: 15%;*/
         /* TODO: fix me by removing it*/
         margin-left: 11%;
     }

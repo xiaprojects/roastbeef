@@ -98,6 +98,10 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 	$scope.bars = [
 	];
 
+	$scope.oilTemperature = 0;
+	$scope.engineRpm = 0;
+	$scope.outsideTemperature = 0;
+
 	for (var index = 1; index <= 4; index++) {
 		var item = JSON.parse(JSON.stringify(templateCHT));
 		item.ranges = item.ranges.reverse();
@@ -135,7 +139,7 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 				$scope.bars[index].valueMax = newValue;
 				isNewMax = true;
 			}
-			$scope.bars[index].format = parseInt(newValue) + "°";
+			$scope.bars[index].format = parseInt(pilotDisplayedTemperaturesFromCelsius(newValue)) + "°";
 			// Linear range
 			var max = $scope.bars[index].ranges[0].max;
 			var min = $scope.bars[index].ranges[$scope.bars[index].ranges.length - 1].min;
@@ -194,6 +198,15 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 			$scope.$apply();
 		}
 
+		if (emsData.detail.hasOwnProperty("oiltemperature")) {
+			$scope.oilTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(parseInt(emsData.detail["oiltemperature"])));
+		}
+		if (emsData.detail.hasOwnProperty("outsidetemperature")) {
+			$scope.outsideTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(parseInt(emsData.detail["outsidetemperature"])));
+		}
+		if (emsData.detail.hasOwnProperty("enginerpm")) {
+			$scope.engineRpm = parseInt(parseInt(emsData.detail["enginerpm"]));
+		}
 	};
 
 	addEventListener("EMSUpdated", emsUpdated);

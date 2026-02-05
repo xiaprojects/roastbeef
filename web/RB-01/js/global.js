@@ -159,3 +159,10 @@ function pilotDisplayedAltitudeFromMeters(GPSAltitudeMSL) {
   const ratio = window.aircraftData?.units?.altimeterConversionFromMeters?.multiply ?? 1;
   return GPSAltitudeMSL*ratio;
 }
+
+
+function pilotDisplayedTemperaturesFromCelsius(TemperatureIsCelsius) {
+  const ratio = window.aircraftData?.units?.temperatureConversionFromC?.multiply ?? 1;
+  const offset = window.aircraftData?.units?.temperatureConversionFromC?.sum ?? 0;
+  return TemperatureIsCelsius * ratio + offset;
+}

@@ -1,4 +1,8 @@
 <div ui-content-for="title">EGT</div>
+<div class="ems_egt_oil_intrument">
+<div style="font-size: 10cqmin;margin-bottom: -4cqmin;">{{oilTemperature}}°</div>
+<div style="font-size: 3cqmin;">OIL</div>
+</div>
 <div class="ems_egt_intrument">
     <div class="ems_egt_intrument_bar_container">
         <div ng-repeat="bar in bars"
@@ -16,4 +20,8 @@
             <div style="font-size: 4cqmin;">{{bar.name}}</div>
         </div>
     </div>
+</div>
+<div class="ems_egt_oil_intrument">
+<div style="font-size: 10cqmin;margin-bottom: -4cqmin;margin-top: -2cqmin;">{{outsideTemperature}}° {{engineRpm}}</div>
+<div style="font-size: 3cqmin;">OAT / RPM</div>
 </div>
