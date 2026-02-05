@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
+	"math/rand"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -419,6 +419,21 @@ func dataLogWriter(db *sql.DB) {
 }
 
 func dataLog() {
+	// RB-Avionics Cloud Upload and history
+	// you can configure storage path to store data in USB Stick or writeable dedicated partition
+	// file name is rotating with date time
+	// starts only once GPS is ready
+	if isGPSValid() && mySituation.GPSFixQuality > 0 {
+		t := time.Now()
+		dataLogFilef = fmt.Sprintf("%s/flightlog-%s.%04d.sqlite",
+			globalSettings.ReplayLogPath,
+			fmt.Sprintf("%d%02d%02d%02d%02d%02d",
+       		t.Year(), t.Month(), t.Day(),
+        	t.Hour(), t.Minute(), t.Second()),
+			rand.Int()%999)
+	} else {
+		return
+	}
 	dataLogStarted = true
 	log.Printf("datalog.go: dataLog() started\n")
 	dataLogChan = make(chan DataLogRow, 10240)

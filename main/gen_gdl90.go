@@ -1202,6 +1202,7 @@ type settings struct {
 	DisplayTrafficSource bool
 	DEBUG                bool
 	ReplayLog            bool
+	ReplayLogPath        string
 	TraceLog             bool
 	AHRSLog              bool
 	PersistentLogging    bool
@@ -1395,6 +1396,7 @@ func defaultSettings() {
 	globalSettings.DEBUG = false
 	globalSettings.DisplayTrafficSource = false
 	globalSettings.ReplayLog = false //TODO: 'true' for debug builds.
+	globalSettings.ReplayLogPath = "/var/log"
 	globalSettings.AHRSLog = false
 	globalSettings.IMUMapping = [2]int{-1, 0}
 	globalSettings.OwnshipModeS = "F00000"
@@ -1671,38 +1673,53 @@ var sigs = make(chan os.Signal, 1) // Signal catch channel (shutdown).
 func gracefulShutdown() {
 	// Shut down SDRs.
 	sdrKill()
+	log.Printf("gracefulShutdown --> sdrKill()")
 	pingKill()
+	log.Printf("gracefulShutdown --> pingKill()")
 	pongKill()
+	log.Printf("gracefulShutdown --> pongKill()")
 
 	// Shut down data logging.
 	if dataLogStarted {
 		closeDataLog()
 	}
+	log.Printf("gracefulShutdown --> closeDataLog()")
 
 	pprof.StopCPUProfile()
+	log.Printf("gracefulShutdown --> pprof()")
 
 	//TODO: Any other graceful shutdown functions.
 	// EMS Feature
 	ems.ShutdownFunc()
+	log.Printf("gracefulShutdown --> ems()")
 	// Radio
 	radio.ShutdownFunc()
+	log.Printf("gracefulShutdown --> radio()")
 	// Checklist Feature
 	checklist.ShutdownFunc()
+	log.Printf("gracefulShutdown --> checklist()")
 	// Autopilot Feature
 	autopilot.ShutdownFunc()
+	log.Printf("gracefulShutdown --> autopilot()")
 	autopilotUdp.ShutdownFunc()
+	log.Printf("gracefulShutdown --> autopilotUdp()")
 	// Timers Feature
 	timers.ShutdownFunc()
+	log.Printf("gracefulShutdown --> timers()")
 	// Alerts Feature
 	alerts.ShutdownFunc()
+	log.Printf("gracefulShutdown --> alerts()")
 	// USB Keyboard and Keypad Driver
 	keypad.ShutdownFunc()
+	log.Printf("gracefulShutdown --> keypad()")
 	// Charts
 	charts.ShutdownFunc()
+	log.Printf("gracefulShutdown --> charts()")
 	// SwitchBoards
 	switchBoard.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
+	log.Printf("gracefulShutdown --> setActLed()")
 }
 
 // Turn off green ACT LED on the Pi. Path changed to leds/ACT/brighgtness around kernel 6.1.21-v8
@@ -1781,6 +1798,9 @@ func main() {
 	//Merlin: detect presence of /etc/Merlin file.
 	if _, err := os.Stat("/etc/Merlin"); !os.IsNotExist(err) {
 		globalStatus.HardwareBuild = "Merlin"
+	}
+	if _, err := os.Stat("/boot/firmware/rb"); !os.IsNotExist(err) {
+		globalStatus.HardwareBuild = "RB"
 	}
 	dataLogFilef = filepath.Join(logDirf, dataLogFile)
 

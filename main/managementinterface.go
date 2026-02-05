@@ -851,6 +851,34 @@ func handleResourcesGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+
+func handleFlightLogsGet(w http.ResponseWriter, r *http.Request) {
+	fileInfo, err := ioutil.ReadDir(globalSettings.ReplayLogPath)
+    if err != nil {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+
+	list := []ResourceDataModel{}
+
+	for i := range fileInfo {
+		if(strings.HasSuffix(fileInfo[i].Name(),"sqlite")==false){
+			continue
+		}
+		r := ResourceDataModel{Name: fileInfo[i].Name(),Size: fileInfo[i].Size(),ModTime: fileInfo[i].ModTime(),Path: "/logs/"+fileInfo[i].Name(),Ident: "",Description: ""}
+		list = append(list, r)
+	}
+
+	statusJSON, err2 := json.Marshal(&list)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+
 /***
  * Radio REST API
  */
@@ -1224,9 +1252,6 @@ func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
 	// for an OPTION method request, we return header without processing.
 	// this insures we are recognized as supporting cross-domain AJAX REST calls
 	if r.Method == "POST" {
-		raw, _ := httputil.DumpRequest(r, true)
-		log.Printf("handleEMSSetRequest:raw: %s\n", raw)
-		log.Printf(ems.Name);
 		decoder := json.NewDecoder(r.Body)
 		
 			var msg map[string]float32 // support key:int JSON
@@ -1920,7 +1945,7 @@ func handleDownloadAHRSLogsRequest(w http.ResponseWriter, r *http.Request) {
 func handleDownloadDBRequest(w http.ResponseWriter, r *http.Request) {
 	//w.Header().Set("Content-Type", "application/zip")
 	w.Header().Set("Content-Disposition", "attachment; filename=stratux.sqlite")
-	http.ServeFile(w, r, "/var/log/stratux.sqlite")
+	http.ServeFile(w, r, dataLogFilef)
 }
 
 // Upload an update file.
@@ -2412,6 +2437,8 @@ func managementInterface() {
 	http.HandleFunc("/playback", handlePlaybackGet)
 	// Resources Feature
 	http.HandleFunc("/resources", handleResourcesGet)
+	// Resources Flight logs
+	http.HandleFunc("/flightlogs", handleFlightLogsGet)
 	// Checklist Feature
 	http.HandleFunc("/checklist/default/status", handleChecklistRest)
 	// Alerts Feature
