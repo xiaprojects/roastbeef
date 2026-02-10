@@ -62,14 +62,14 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 		"name": "CHT1",
 		"sensor": "cht1",
 		"ranges": [
-			{ "colorOff": "#000088", "colorOn": "#0000ff", "min": 40, "max": 60 },
-			{ "colorOff": "#000088", "colorOn": "#0000ff", "min": 60, "max": 80 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 80, "max": 100 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 100, "max": 120 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 120, "max": 140 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 140, "max": 160 },
-			{ "colorOff": "#888800", "colorOn": "#ffff00", "min": 160, "max": 180 },
-			{ "colorOff": "#880000", "colorOn": "#ff0000", "min": 180, "max": 200 }
+			{ "colorOff": "#000048", "colorOn": "#0000ff", "min": 40, "max": 60 },
+			{ "colorOff": "#000048", "colorOn": "#0000ff", "min": 60, "max": 80 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 80, "max": 100 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 100, "max": 120 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 120, "max": 140 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 140, "max": 160 },
+			{ "colorOff": "#484800", "colorOn": "#ffff00", "min": 160, "max": 180 },
+			{ "colorOff": "#480000", "colorOn": "#ff0000", "min": 180, "max": 200 }
 		]
 	};
 
@@ -84,14 +84,14 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 		"name": "CHT1",
 		"sensor": "cht1",
 		"ranges": [
-			{ "colorOff": "#000088", "colorOn": "#0000ff", "min": 400, "max": 450 },
-			{ "colorOff": "#000088", "colorOn": "#0000ff", "min": 450, "max": 500 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 500, "max": 550 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 550, "max": 600 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 600, "max": 650 },
-			{ "colorOff": "#008800", "colorOn": "#00ff00", "min": 650, "max": 700 },
-			{ "colorOff": "#888800", "colorOn": "#ffff00", "min": 700, "max": 750 },
-			{ "colorOff": "#880000", "colorOn": "#ff0000", "min": 750, "max": 800 }
+			{ "colorOff": "#000048", "colorOn": "#0000ff", "min": 400, "max": 450 },
+			{ "colorOff": "#000048", "colorOn": "#0000ff", "min": 450, "max": 500 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 500, "max": 550 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 550, "max": 600 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 600, "max": 650 },
+			{ "colorOff": "#004800", "colorOn": "#00ff00", "min": 650, "max": 700 },
+			{ "colorOff": "#484800", "colorOn": "#ffff00", "min": 700, "max": 750 },
+			{ "colorOff": "#480000", "colorOn": "#ff0000", "min": 750, "max": 800 }
 		]
 	};
 
@@ -199,13 +199,13 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 		}
 
 		if (emsData.detail.hasOwnProperty("oiltemperature")) {
-			$scope.oilTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(parseInt(emsData.detail["oiltemperature"])));
+			$scope.oilTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["oiltemperature"]));
 		}
 		if (emsData.detail.hasOwnProperty("outsidetemperature")) {
-			$scope.outsideTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(parseInt(emsData.detail["outsidetemperature"])));
+			$scope.outsideTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["outsidetemperature"]));
 		}
 		if (emsData.detail.hasOwnProperty("enginerpm")) {
-			$scope.engineRpm = parseInt(parseInt(emsData.detail["enginerpm"]));
+			$scope.engineRpm = parseInt(emsData.detail["enginerpm"]);
 		}
 	};
 
