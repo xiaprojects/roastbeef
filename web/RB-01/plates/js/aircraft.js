@@ -44,6 +44,10 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $state.get(name).onExit = function () {
         console.log("onExit" + name);
+        removeEventListener("EMSUpdated", emsUpdated);
+        removeEventListener("keypad", keypadEventListener);
+        removeEventListener("SituationUpdated", situationUpdateEventListener);
+        removeEventListener("StatusUpdated", statusUpdateEventListener);
     };
 
     console.log("Controller " + name);
@@ -66,8 +70,14 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         "engineTime": { "section": 0, "row": 1 },
         "CPUTemp":{ "section": 1, "row": 1 },
         "ES_messages_last_minute":{ "section": 1, "row": 9 },
+        "EMS":{ "section": 0, "row": 8 },
+        "Cloud":{ "section": 1, "row": 8 },
         "GPS_satellites_locked":{ "section": 1, "row": 11 }
     };
+
+    $scope.gearnoseBackgroundColor = "#4444ff";
+    $scope.gearrightBackgroundColor = "#4444ff";
+    $scope.gearleftBackgroundColor = "#4444ff";
 
 
     $scope.items = [[
@@ -75,27 +85,27 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         { "label": "Engine", "value": "", "color": "#4444ff","unit":"m" },
         { "label": "Fuel L", "value": "35L", "color": "#ff7c00", "href":"#/ems","unit":"" },
         { "label": "", "value": null, "color": "transparent","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "Flaps", "value": "0%", "color": "#007c00", "href":"#/switchboard","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
-        { "label": "", "value": "", "color": "#00000000","unit":"" },
-        { "label": "", "value": "", "color": "#00000000","unit":"" },
 
-        { "label": "EMS", "value": "OK", "color": "#007c00", "href":"#/ems","unit":"" },
-        { "label": "VP-X", "value": "14.4 V", "color": "#007c00", "href":"#/switchboard","unit":"" },
-        { "label": "BATT", "value": "11.9 V", "color": "#ff7c00", "href":"#/ems","unit":"" },
+        { "label": "EMS", "value": "KO", "color": "#ff0000", "href":"#/ems","unit":"" },
+        { "label": "VP-X", "value": "--.- V", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
+        { "label": "BATT", "value": "--.- V", "color": "#ff7c00", "href":"#/ems","unit":"" },
         { "label": "CHECK", "value": "TODO", "color": "#ff7c00", "href":"#/checklist","unit":"" },
     ], [
         { "label": "Pilot", "value": "", "color": "#007c00","unit":"" },
         { "label": "CPU", "value": "---", "color": "#007c00", "href":"#/charts","unit":"°C" },
         { "label": "Fuel R", "value": "90L", "color": "#007c00", "href":"#/ems","unit":"" },
         { "label": "", "value": null, "color": "transparent","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "Trim", "value": "TO", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
-        { "label": "", "value": "", "color": "#00000000","unit":"" },
-        { "label": "", "value": "", "color": "#00000000","unit":"" },
 
 
-        { "label": "Internet", "value": "OFFLINE", "color": "#ff0000","unit":"" },
+        { "label": "Cloud", "value": "OFFLINE", "color": "#ff0000","unit":"" },
         { "label": "ADS-B", "value": "OFF", "color": "#7c7c7c", "href":"#/radar","unit":""  },
         { "label": "RADIO", "value": "KRT2", "color": "#007c00", "href":"#/radio","unit":"" },
         { "label": "GPS", "value": "---", "color": "#007c00","unit":""  },
@@ -170,6 +180,56 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     }
 
+
+    function emsUpdated(emsData) {
+        if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'AircraftCtrl')) {
+            removeEventListener("EMSUpdated", emsUpdated);
+            return; // we are getting called once after clicking away from the status page
+        }
+
+        if (emsData.detail.hasOwnProperty("gearnose")) {
+            if (emsData.detail["gearnose"] == 0) {
+                $scope.gearnoseBackgroundColor = "#ff0000";
+            } else {
+                $scope.gearnoseBackgroundColor = "#007c00";
+            }
+        }
+
+        if (emsData.detail.hasOwnProperty("gearleft")) {
+            if (emsData.detail["gearleft"] == 0) {
+                $scope.gearleftBackgroundColor = "#ff0000";
+            } else {
+                $scope.gearleftBackgroundColor = "#007c00";
+            }
+        }        
+
+        if (emsData.detail.hasOwnProperty("gearright")) {
+            if (emsData.detail["gearright"] == 0) {
+                $scope.gearrightBackgroundColor = "#ff0000";
+            } else {
+                $scope.gearrightBackgroundColor = "#007c00";
+            }
+        }
+
+        if (emsData.detail.hasOwnProperty("clouduploaded")) {
+            const key = "Cloud";
+
+            if (emsData.detail["clouduploaded"] > 0) {
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = "OK";
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#007c00";
+            } else {
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = "OFFLINE";
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#ff0000";
+            }
+        }
+        if(true){
+            const key = "EMS";
+            $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = "OK";
+            $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#007c00";
+        }
+    };
+
+	addEventListener("EMSUpdated", emsUpdated);
     addEventListener("keypad", keypadEventListener);
     addEventListener("SituationUpdated", situationUpdateEventListener);
     addEventListener("StatusUpdated", statusUpdateEventListener);

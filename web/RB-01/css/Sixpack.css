@@ -10,3 +10,10 @@
 .Sixpack_intrument {
     width: 33cqmax
 }
+
+
+@container (aspect-ratio > 1) {
+.Sixpack_intrument {
+    width: 50cqmin
+}
+}
