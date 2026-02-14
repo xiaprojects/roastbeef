@@ -254,7 +254,16 @@ func initIMU(i2cbus embd.I2CBus) (ok bool) {
 		return false
 	}
 
-
+	if v == MPUREG_WHO_AM_I_VAL_BMI270 {
+		log.Printf("MPU detected (%02x).\n", v)
+		imu, err := sensors.NewBMI270(&i2cbus)
+		if err == nil {
+			myIMUReader = imu
+			return true
+		} else {
+			log.Printf("Error identifying IMU: %s\n", err.Error())
+		}
+	}
 
 	if v == MPUREG_WHO_AM_I_VAL_GY85 {
 		log.Printf("MPU detected (%02x).\n", v)
