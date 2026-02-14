@@ -32,7 +32,7 @@
 	- Generate the /etc/mpu9250cal.json
 	{"A01":0,"A02":0,"A03":0,"G01":0,"G02":0,"G03":0,"M01":0,"M02":0,"M03":0,"Ms11":1,"Ms12":0,"Ms13":0,"Ms21":0,"Ms22":1,"Ms23":0,"Ms31":0,"Ms32":0,"Ms33":1}
 
-	
+
 	Airworthiness:
 	1) You shall repeat this procedure everything you change something in the aircraft
 	2) You shall repeat this procedure during winter and during summer
@@ -50,7 +50,7 @@
 	curl -X POST http://localhost/magnetometer  -H "Accept: application/json" -d '{"MagMaxX": 1180,"MagMaxY": 7290,"MagMaxZ": 396,"MagMinX": -4051,"MagMinY": 2401,"MagMinZ": -2242,"X": -454,"Y": 2781,"Z": -595,"Heading": 333,"Offset": 180, "Calibrating": false}'
 	6) Store these data
 	curl -X PUT http://localhost/magnetometer  -H "Accept: application/json" -d '{"MagMaxX": 1180,"MagMaxY": 7290,"MagMaxZ": 396,"MagMinX": -4051,"MagMinY": 2401,"MagMinZ": -2242,"X": -454,"Y": 2781,"Z": -595,"Heading": 333,"Offset": 180, "Calibrating": false}'
-	
+
 	TODO: Axis mapping if the install does not meet the original chip axis
 */
 
@@ -63,6 +63,10 @@ import (
 )
 
 var MagnetometerDataMutex *sync.Mutex
+
+// SmoothHeadingAlpha is the exponential smoothing factor applied to
+// magnetic heading updates (0..1). Lower values produce smoother output.
+const SmoothHeadingAlpha float64 = 0.05
 
 type MagnetometerData struct {
 	MagMaxX		float64
@@ -81,11 +85,11 @@ type MagnetometerData struct {
 
 
 func (p MagnetometerData) String() string {
-    data, err := json.Marshal(p)
-    if err != nil {
-        return "{}" // or handle error as needed
-    }
-    return string(data)
+	data, err := json.Marshal(p)
+	if err != nil {
+		return "{}" // or handle error as needed
+	}
+	return string(data)
 }
 
 func (p *MagnetometerData)CalibrationReset() {
@@ -99,7 +103,7 @@ func (p *MagnetometerData)CalibrationReset() {
 	MagnetometerDataMutex.Unlock()
 }
 
-func HeadingFromMag(
+func MagApplyCalibration(
 	pitchDeg float64,
 	rollDeg float64,
 
@@ -112,68 +116,150 @@ func HeadingFromMag(
 	minZ float64, maxZ float64,
 	offset float64,
 	softIronEnabled bool,
-) float64 {
-
+) (float64, float64, float64) {
 	// ----------------------------------------------------
 	// 1. Hard-iron offsets
 	// ----------------------------------------------------
-	offX := (maxX + minX) * 0.5
-	offY := (maxY + minY) * 0.5
-	offZ := (maxZ + minZ) * 0.5
+	offX := (maxX - minX)
+	offY := (maxY - minY)
+	offZ := (maxZ - minZ)
 
-	x := magX - offX
-	y := magY - offY
-	z := magZ - offZ
+	x := (magX-minX)/offX - 0.5
+	y := (magY-minY)/offY - 0.5
+	z := (magZ-minZ)/offZ - 0.5
 
 	// ----------------------------------------------------
 	// 2. Soft-iron scale normalization (optional but good)
 	// ----------------------------------------------------
 
-	if(softIronEnabled == true) {
-		scaleX := (maxX - minX) * 0.5
-		scaleY := (maxY - minY) * 0.5
-		scaleZ := (maxZ - minZ) * 0.5
-
-		avgScale := (scaleX + scaleY + scaleZ) / 3.0
-
-		x *= avgScale / scaleX
-		y *= avgScale / scaleY
-		z *= avgScale / scaleZ
+	if softIronEnabled == true {
 	}
 
-	// ----------------------------------------------------
-	// 3. Axis alignment → NED frame
-	// ----------------------------------------------------
-	// Based on your measured sensor orientation
-	north := y
-	east  := x
-	down  := z
-
-	// ----------------------------------------------------
-	// 4. Tilt compensation
-	// ----------------------------------------------------
-	pitch := pitchDeg * math.Pi / 180.0
-	roll  := rollDeg  * math.Pi / 180.0
-
-	cosPitch := math.Cos(pitch)
-	sinPitch := math.Sin(pitch)
-	cosRoll  := math.Cos(roll)
-	sinRoll  := math.Sin(roll)
-
-	// Rotate magnetic vector into horizontal plane
-	hx := north*cosPitch + down*sinPitch
-	hy := north*sinRoll*sinPitch + east*cosRoll - down*sinRoll*cosPitch
-
-	// ----------------------------------------------------
-	// 5. Heading
-	// ----------------------------------------------------
-	heading := math.Atan2(hy, hx) * 180.0 / math.Pi + offset
-	// Wrap to 0-360°
-	if heading < 0 {
-		heading += 360.0
-	} else if heading > 360.0 {
-		heading -= 360.0
-	}
-	return heading
+	return x, y, z
 }
 
+// MagneticHeadingDeg computes a tilt-compensated magnetic heading (0..360 deg).
+//
+// Assumptions (match your “new axis” dataset):
+// - magX/magY/magZ are already remapped into the same BODY frame as pitch/roll.
+// - rollDeg is rotation about +X (right-hand rule / per your remap it behaves as X-axis roll).
+// - pitchDeg is rotation about +Y.
+// - Heading increases clockwise when rotating the body on the horizontal plane (typical compass convention).
+//
+// If your heading is mirrored (E/W swapped), change atan2(yh, xh) to atan2(-yh, xh) or swap axes.
+func MagneticHeadingDeg(pitchDeg, rollDeg, magX, magY, magZ float64) float64 {
+	phi := rollDeg * math.Pi / 180.0    // roll  (rad)
+	theta := pitchDeg * math.Pi / 180.0 // pitch (rad)
+
+	// Tilt compensation (common form)
+	xh := magX*math.Cos(theta) + magZ*math.Sin(theta)
+	yh := magX*math.Sin(phi)*math.Sin(theta) + magY*math.Cos(phi) - magZ*math.Sin(phi)*math.Cos(theta)
+
+	headingRad := math.Atan2(yh, xh)
+	headingDeg := headingRad * 180.0 / math.Pi
+
+	// Normalize to [0,360)
+	headingDeg = math.Mod(headingDeg+360.0, 360.0)
+	return headingDeg
+}
+
+func CalibrateFromMag(
+	magX float64,
+	magY float64,
+	magZ float64,
+	minX float64, maxX float64,
+	minY float64, maxY float64,
+	minZ float64, maxZ float64, softIronEnabled bool) (float64, float64, float64) {
+
+	// Hard-iron offset: centro dell'intervallo per ciascun asse
+	offX := (maxX + minX) * 0.5
+	offY := (maxY + minY) * 0.5
+	offZ := (maxZ + minZ) * 0.5
+
+	// Semi-range (ampiezza/2) per asse; usato come scale factor grezzo
+	rngX := (maxX - minX) * 0.5
+	rngY := (maxY - minY) * 0.5
+	rngZ := (maxZ - minZ) * 0.5
+
+	// Evita divisioni per zero o range degeneri
+	const eps = 1e-12
+	if math.Abs(rngX) < eps {
+		rngX = 1.0
+	}
+	if math.Abs(rngY) < eps {
+		rngY = 1.0
+	}
+	if math.Abs(rngZ) < eps {
+		rngZ = 1.0
+	}
+
+	// Applica correzioni offset + scala (soft-iron diagonale)
+	cx := (magX - offX) / rngX
+	cy := (magY - offY) / rngY
+	cz := (magZ - offZ) / rngZ
+	if softIronEnabled == true {
+		// Normalizza a modulo 1 (utile per heading e per confronti direzionali)
+		n := math.Sqrt(cx*cx + cy*cy + cz*cz)
+		if n > eps {
+			cx /= n
+			cy /= n
+			cz /= n
+		}
+	}
+
+	return cx, cy, cz
+}
+
+func HeadingFromMag(
+	pitchDeg float64,
+	rollDeg float64,
+	magX float64,
+	magY float64,
+	magZ float64,
+	minX float64, maxX float64,
+	minY float64, maxY float64,
+	minZ float64, maxZ float64,
+	offset float64,
+	softIronEnabled bool,
+	lastMagHeading float64,
+) float64 {
+	cx, cy, cz := CalibrateFromMag(magX,
+		magY,
+		magZ,
+		minX, maxX,
+		minY, maxY,
+		minZ, maxZ,
+		softIronEnabled)
+	heading := MagneticHeadingDeg(-pitchDeg, -rollDeg, -cy, -cx, cz) + offset
+
+	// Helper to normalize angle into [0,360)
+	normalize := func(a float64) float64 {
+		a = math.Mod(a, 360.0)
+		if a < 0 {
+			a += 360.0
+		}
+		return a
+	}
+
+	heading = normalize(heading)
+
+	// If lastMagHeading is not a number, or smoothing disabled (alpha==1), return raw heading
+	if math.IsNaN(lastMagHeading) {
+		return heading
+	}
+
+	last := normalize(lastMagHeading)
+
+	// Compute shortest angular difference (-180,180]
+	delta := heading - last
+	if delta > 180.0 {
+		delta -= 360.0
+	} else if delta <= -180.0 {
+		delta += 360.0
+	}
+
+	// Apply exponential smoothing on the angular difference, then re-normalize
+	smoothed := last + SmoothHeadingAlpha*delta
+	smoothed = normalize(smoothed)
+	return smoothed
+}

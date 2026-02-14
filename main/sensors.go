@@ -52,7 +52,7 @@ import (
 const (
 	numRetries uint8 = 50
 	calCLimit        = 0.15
-	calDLimit        = 10.0
+	calDLimit        = 15.0
 
 	// WHO_AM_I values to differentiate between the different IMUs.
 	MPUREG_WHO_AM_I             = 0x75
@@ -62,6 +62,7 @@ const (
 	MPUREG_WHO_AM_I_VAL_60X0    = 0x68 // Expected value for MPU6000 and MPU6050 (and MPU9150)
 	MPUREG_WHO_AM_I_VAL_UNKNOWN = 0x75 // Unknown MPU found on recent batch of gy91 boards see discussion 182
 	MPUREG_WHO_AM_I_VAL_GY85	= 0x69
+	MPUREG_WHO_AM_I_VAL_BMI270	= 0x24
 	ICMREG_WHO_AM_I             = 0x00
 	ICMREG_WHO_AM_I_VAL         = 0xEA             // Expected value.
 	PRESSURE_WHO_AM_I           = bmp388.RegChipId // Expected address for bosch pressure sensors bmpXXX.
@@ -69,7 +70,7 @@ const (
 
 var (
 	i2cbus           embd.I2CBus
-	i2cbus0          embd.I2CBus	
+	i2cbus0          embd.I2CBus
 	myPressureReader sensors.PressureReader
 	myIMUReader      sensors.IMUReader
 	cal              chan (string)
@@ -150,15 +151,15 @@ func initPressureSensor(i2cbus embd.I2CBus) (ok bool) {
 				myPressureReader = bme
 				return true
 			}
-	} else {
-		log.Printf("using BMP-280")
-		bmp, err := sensors.NewBMP280(&i2cbus, 100*time.Millisecond)
-		if err == nil {
-			myPressureReader = bmp
-			return true
+		} else {
+			log.Printf("using BMP-280")
+			bmp, err := sensors.NewBMP280(&i2cbus, 100*time.Millisecond)
+			if err == nil {
+				myPressureReader = bmp
+				return true
+			}
 		}
 	}
-}
 
 	return false
 }
@@ -253,6 +254,8 @@ func initIMU(i2cbus embd.I2CBus) (ok bool) {
 		return false
 	}
 
+
+
 	if v == MPUREG_WHO_AM_I_VAL_GY85 {
 		log.Printf("MPU detected (%02x).\n", v)
 		imu, err := sensors.NewGY85(&i2cbus)
@@ -263,7 +266,7 @@ func initIMU(i2cbus embd.I2CBus) (ok bool) {
 			log.Printf("Error identifying IMU: %s\n", err.Error())
 		}
 	}
-	
+
 	v2, err := i2cbus.ReadByteFromReg(0x68, MPUREG_WHO_AM_I)
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
@@ -413,34 +416,35 @@ func sensorAttitudeSender() {
 				}
 				m.MValid = false
 			} else {
-					if((m.M1<5 && m.M1 >-5) || (m.M2<5 && m.M2 >-5) || (m.M3<5 && m.M3 >-5) || globalStatus.Uptime < 5000){
-					} else {
-						MagnetometerDataMutex.Lock()
-						mySituation.Magnetometer.X = m.M1
-						mySituation.Magnetometer.Y = m.M2
-						mySituation.Magnetometer.Z = m.M3
+					if((m.M1<5 && m.M1 >-5) || (m.M2<5 && m.M2 >-5) || (m.M3<5 && m.M3 >-5)){
+				} else {
+					MagnetometerDataMutex.Lock()
+					mySituation.Magnetometer.X = (mySituation.Magnetometer.X*29 + m.M1) / 30
+					mySituation.Magnetometer.Y = (mySituation.Magnetometer.Y*29 + m.M2) / 30
+					mySituation.Magnetometer.Z = (mySituation.Magnetometer.Z*29 + m.M3) / 30
+	
 						if(mySituation.Magnetometer.Calibrating == true){
 							if(mySituation.Magnetometer.MagMaxX<mySituation.Magnetometer.X){
 								mySituation.Magnetometer.MagMaxX=mySituation.Magnetometer.X
-							}
+						}
 							if(mySituation.Magnetometer.MagMaxY<mySituation.Magnetometer.Y){
 								mySituation.Magnetometer.MagMaxY=mySituation.Magnetometer.Y
-							}
+						}
 							if(mySituation.Magnetometer.MagMaxZ<mySituation.Magnetometer.Z){
 								mySituation.Magnetometer.MagMaxZ=mySituation.Magnetometer.Z
-							}
+						}
 							if(mySituation.Magnetometer.MagMinX>mySituation.Magnetometer.X){
 								mySituation.Magnetometer.MagMinX=mySituation.Magnetometer.X
-							}
+						}
 							if(mySituation.Magnetometer.MagMinY>mySituation.Magnetometer.Y){
 								mySituation.Magnetometer.MagMinY=mySituation.Magnetometer.Y
-							}
+						}
 							if(mySituation.Magnetometer.MagMinZ>mySituation.Magnetometer.Z){
 								mySituation.Magnetometer.MagMinZ=mySituation.Magnetometer.Z
-							}
 						}
-						MagnetometerDataMutex.Unlock()
 					}
+					MagnetometerDataMutex.Unlock()
+				}
 			}
 
 			// Make the GPS measurements.
@@ -470,14 +474,15 @@ func sensorAttitudeSender() {
 				}
 				mySituation.AHRSMagHeading = HeadingFromMag(mySituation.AHRSPitch,
 					mySituation.AHRSRoll,
-					mySituation.Magnetometer.X,
-					mySituation.Magnetometer.Y,
-					mySituation.Magnetometer.Z,
+					m.M1,
+					m.M2,
+					m.M3,
 					mySituation.Magnetometer.MagMinX,mySituation.Magnetometer.MagMaxX,
 					mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
 					mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
 					mySituation.Magnetometer.Offset,
-					false)
+					true,
+					mySituation.AHRSMagHeading)
 				mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
 				mySituation.AHRSSlipSkid = s.SlipSkid()
 				mySituation.AHRSTurnRate = s.RateOfTurn()
