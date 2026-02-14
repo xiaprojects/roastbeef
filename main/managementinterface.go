@@ -638,7 +638,8 @@ func handleMagnetometerPost(w http.ResponseWriter, r *http.Request) {
 					mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
 					mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
 					mySituation.Magnetometer.Offset,
-					false)
+					false,
+					mySituation.AHRSMagHeading)
 				mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
 
 		MagnetometerDataMutex.Unlock()
