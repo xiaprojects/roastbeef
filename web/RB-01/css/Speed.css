@@ -61,6 +61,13 @@
   color: white;
 }
 
+.speed-round-background {
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
 .speed-value {
   top: 48%;
   left: 50%;
@@ -68,9 +75,12 @@
   -webkit-transform: translate(-50%, -50%);
   position: absolute;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 20cqmin;
+  font-size: 30cqmin;
   font-weight: bolder;
   color: white;
+  text-shadow: 0px 0px 5px #000000;
+  
+  /*
   background-color: black;
   border-radius: 10%;
   border-width: 1%;
@@ -78,6 +88,7 @@
   padding-right: 2%;
   border-color: lightslategray;
   border-style: solid;
+  */
 }
 
 

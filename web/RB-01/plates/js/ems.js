@@ -94,6 +94,7 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 		return degreeOut;
 	}
 
+	$scope.emsStatusError = true;
 
 	function emsUpdated(emsData) {
 		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'EMSCtrl' && $scope.$parent.$parent.hasOwnProperty("radarSocket") == false)) {
@@ -108,6 +109,7 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 		for(var index=0;index<$scope.EMS.length;index++) {
 			$scope.updateChart(index, $scope.EMS[index].source, emsData.detail);
 		}
+		$scope.emsStatusError = false;
 		$scope.$apply();
 
 	};

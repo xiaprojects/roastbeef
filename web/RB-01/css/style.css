@@ -56,6 +56,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;  
 }
 
 *:-webkit-full-screen {
@@ -346,4 +348,17 @@ body {
 
 .layer-switcher .panel {
  background-color: black;
+}
+
+/* RB-01 with Round display is 480x480 */
+@container (aspect-ratio = 1) and (width < 512px) {
+.layer-switcher {
+  top: 14%;
+  right: 14%;
+  text-align: center;
+  
+}
+.layer-switcher button {
+  background-color: transparent;
+}
 }

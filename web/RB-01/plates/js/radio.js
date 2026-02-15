@@ -667,6 +667,8 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
                 else {
                     p.Frequency = fn;
                 }
+                // 202060215 Force Frequency for small displays and this does not really help the Pilot
+                p.Frequency = f;
             }
 
             if(listParsed.length%2 == 0){

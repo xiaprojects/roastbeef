@@ -11,7 +11,7 @@
     </div>
     <div class="panel panel-default {{radio.className}}">
         <div class="panel-heading">
-            <a ng-click="switchFreq(radio)" class="label label-warning" style="padding-left: 2%;padding-right: 2%;max-width: 45%;display: inline-block;overflow: hidden;">SWITCH FREQ.</a>
+            <a ng-click="switchFreq(radio)" class="label label-warning" style="padding-left: 2%;padding-right: 2%;max-width: 48%;display: inline-block;overflow: hidden;">SWITCH FREQ.</a>
 
             <a ng-click="dualFreq(radio,false)" ng-show="radio.dual == true" class="label label-success pull-right" style="padding-left: 2%;padding-right: 2%;">DUAL
                 ON</a>
@@ -20,7 +20,7 @@
         </div>
         <div class="text-center">
             <a ng-click="increaseFreq(radio,1000)" class="btn btn-default {{radio.classStandByLeft}}" style="width:30%;">&#9650;</a>
-            <a ng-click="toggleKeypad(radio)" class="btn btn-default" style="width: 30%;">KEYPAD</a>
+            <a ng-click="toggleKeypad(radio)" class="btn btn-default" style="width: 30%;overflow: hidden;padding-left:0;padding-right:0;">KEYPAD</a>
             <a ng-click="increaseFreq(radio,5)" class="btn btn-default {{radio.classStandByRight}}" style="width:  30%;">&#9650;</a>
                 <div class="Radio"
                     style="pointer-events: none;font-size: 20cqmin;padding: 0px;">
@@ -29,7 +29,7 @@
                 <div style="font-size: 10cqmin;padding: 0px;margin: 0px;white-space:nowrap;overflow:hidden;margin-top: -4%;">{{radio.standbyLabel}}</div>
 
                 <a ng-click="increaseFreq(radio,-1000)" class="btn btn-default  {{radio.classStandByLeft}}" style="width:  30%;">&#9660;</a>
-                <a ng-click="search(radio)" class="btn btn-default " style="width: 30%;">SEARCH</a>
+                <a ng-click="search(radio)" class="btn btn-default " style="width: 30%;overflow: hidden;padding-left:0;padding-right:0;">SEARCH</a>
                 <a ng-click="increaseFreq(radio,-5)" class="btn btn-default  {{radio.classStandByRight}}" style="width:  30%;">&#9660;</a>
             </div>
         <div ng-if="radio.keypadVisible" style="margin-bottom: 4px;" id="radio_keypad_{{radio.index}}">
@@ -137,9 +137,12 @@
                             {{playback.Duration}}s
                         </td>
                         <td class="text-center" style="margin: 0px;padding:0px;">
-                            <button class="btn-success">REPLAY</button> &nbsp;
+                            <button class="btn-success">REPLAY</button>
+                            <!-- Download button does not really help the Pilot -->
+                            <!-- &nbsp;
                             <a ng-click="shareAudio(playback.Path)" class="btn"><i class="fa fa-download"></i>
                                 </a>
+                            -->
                         </td>
                     </tr>
             </div>

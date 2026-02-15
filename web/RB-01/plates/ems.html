@@ -1,11 +1,12 @@
 <div ui-content-for="title">EMS</div>
 <div class="panel panel-default">
 	<div class="panel-heading">Engine
-		<a class="label label-warning pull-right">DISCONNECTED</a>
+		<a class="label label-danger pull-right" ng-show="emsStatusError == true">OFF</a>
 	</div>
 	<!-- we know so far this EMS is composed by semi round gauges, so we can trim the lower side -->
 	<div class="panel-body" style="container-type: inline-size;width: 100%; margin-bottom: -5%; margin-top: -2%;">
 			<div class="speed ems_intrument" ng-repeat="sensor in EMS | filter:{ displayInSidebar: isSidebar}">
+				<div class="speed-round-background" style="background-color: {{sensor.backgroundColor}};"></div>
 				<div class="arc"
 					style="transform: rotate({{arc.startDegree}});background-color: {{arc.color}};--a:{{arc.sizeDegree}};"
 					ng-repeat="arc in sensor.arcs"></div>
@@ -15,7 +16,7 @@
 				<div class="speed-label">{{sensor.label}}</div>
 				<div class="speed-unit">{{sensor.unit}}</div>
 				<div class="speed-fi_needle" style="transform: rotate({{sensor.speedDegree}});"></div>
-				<div class="speed-value" style="background-color: {{sensor.backgroundColor}};">{{sensor.speed}}</div>
+				<div class="speed-value" >{{sensor.speed}}</div>
 			</div>
 </div>
 
