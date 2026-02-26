@@ -22,7 +22,7 @@ function append_defaultconfig {
     -DWITH_OGN
     -DWITH_ADSL
     -DWITH_FANET
-    -DWITH_PAW
+    ;-DWITH_PAW       ; PAW moving to ADS-L
     -DWITH_CONFIG     ; allow to change parameters via serial console
     -DWITH_GPS_NMEA_PASS
     -DWITH_OLED
