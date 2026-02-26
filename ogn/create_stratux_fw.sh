@@ -35,6 +35,8 @@ function append_defaultconfig {
     ;-DWITH_AP         ; enable these 3 once AP_BUTTON is properly implemented
     ;-DWITH_AP_BUTTON
     ;-DWITH_HTTP
+    -DWITH_SPIFFS      ; use SPIFFS in flash
+    -DWITH_SPIFFS_FAT  ; replace SPIFFS file system with FAT which seems not giving trouble when flash starts getting full
     -DRADIOLIB_GODMODE' >> platformio.ini
 }
 
