@@ -264,7 +264,7 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 			// Attach the buzzer volume here
 			// TODO: move away and add a configuration switch
 			window.gMeterBuzzerPlayer.setVolumeTo(100);
-			window.gMeterBuzzerPlayer.playSinToObject(window.gMeterBuzzerPlayer, 880, 100, 0.2);
+			window.gMeterBuzzerPlayer.playSinToObject(window.gMeterBuzzerPlayer, 580, 100, 0.15);
 			//window.gMeterBuzzerPlayer.beepTest();
 		}
 	};

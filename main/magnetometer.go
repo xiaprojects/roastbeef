@@ -69,20 +69,19 @@ var MagnetometerDataMutex *sync.Mutex
 const SmoothHeadingAlpha float64 = 0.05
 
 type MagnetometerData struct {
-	MagMaxX		float64
-	MagMaxY		float64
-	MagMaxZ		float64
-	MagMinX		float64
-	MagMinY		float64
-	MagMinZ		float64
-	X			float64
-	Y			float64
-	Z			float64
-	Heading		float64
-	Offset		float64
+	MagMaxX     float64
+	MagMaxY     float64
+	MagMaxZ     float64
+	MagMinX     float64
+	MagMinY     float64
+	MagMinZ     float64
+	X           float64
+	Y           float64
+	Z           float64
+	Heading     float64
+	Offset      float64
 	Calibrating bool
 }
-
 
 func (p MagnetometerData) String() string {
 	data, err := json.Marshal(p)
@@ -92,14 +91,14 @@ func (p MagnetometerData) String() string {
 	return string(data)
 }
 
-func (p *MagnetometerData)CalibrationReset() {
+func (p *MagnetometerData) CalibrationReset() {
 	MagnetometerDataMutex.Lock()
-	p.MagMaxX = -99999	// Magnetic Field Range
-	p.MagMaxY = -99999	// Magnetic Field Range
-	p.MagMaxZ = -99999	// Magnetic Field Range
-	p.MagMinX = 99999	// Magnetic Field Range
-	p.MagMinY = 99999	// Magnetic Field Range
-	p.MagMinZ = 99999	// Magnetic Field Range
+	p.MagMaxX = -99999 // Magnetic Field Range
+	p.MagMaxY = -99999 // Magnetic Field Range
+	p.MagMaxZ = -99999 // Magnetic Field Range
+	p.MagMinX = 99999  // Magnetic Field Range
+	p.MagMinY = 99999  // Magnetic Field Range
+	p.MagMinZ = 99999  // Magnetic Field Range
 	MagnetometerDataMutex.Unlock()
 }
 
@@ -230,7 +229,15 @@ func HeadingFromMag(
 		minY, maxY,
 		minZ, maxZ,
 		softIronEnabled)
-	heading := MagneticHeadingDeg(-pitchDeg, -rollDeg, -cy, -cx, cz) + offset
+	// Axis mapping
+	pitchDegAligned := globalSettings.MagRollPitchInterference[0] * pitchDeg
+	rollDegAligned := globalSettings.MagRollPitchInterference[1] * rollDeg
+	// Most of the Magnetometers are (magX, magY, magZ) = (-cy, +cx, +cz) compared to the Accelerometer
+	cxAligned := globalSettings.MagAxisMappingX[0]*cx + globalSettings.MagAxisMappingX[1]*cy + globalSettings.MagAxisMappingX[2]*cz
+	cyAligned := globalSettings.MagAxisMappingY[0]*cx + globalSettings.MagAxisMappingY[1]*cy + globalSettings.MagAxisMappingY[2]*cz
+	czAligned := globalSettings.MagAxisMappingZ[0]*cx + globalSettings.MagAxisMappingZ[1]*cy + globalSettings.MagAxisMappingZ[2]*cz
+	//log.Printf("%.0f,%.0f,%.0f<=%.0f,%.0f,%.0f", cxAligned, cyAligned, czAligned, cx, cy, cz)
+	heading := MagneticHeadingDeg(pitchDegAligned, rollDegAligned, cxAligned, cyAligned, czAligned) + offset
 
 	// Helper to normalize angle into [0,360)
 	normalize := func(a float64) float64 {

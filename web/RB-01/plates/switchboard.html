@@ -2,8 +2,8 @@
 <div class="panel-group col-sm-6 {{scrollItemCounter==$index?'keypadSelectedYes':'keypadSelectedNo'}}"
     ng-repeat="item in switches">
     <div class="panel panel-default ">
-        <div class="panel-heading" ng-click="itemEdit($index,item)" id="{{'item_' + $index}}">
-            <span class="panel_label">{{item.Name}}</span>
+        <div class="panel-heading" ng-click="itemEdit($index,item)" id="{{'item_' + $index}}" style="text-align: center; ">
+            <span style="font-size: 16px;font-weight: bold;line-height: 1;">{{item.Name}}</span>
             <span ng-show="item.Edit==false" class="label label-info pull-right">Edit</span>
             <span ng-show="item.Edit==true" class="label label-danger pull-right">Save</span>
         </div>

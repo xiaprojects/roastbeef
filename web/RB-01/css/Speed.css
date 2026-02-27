@@ -79,16 +79,8 @@
   font-weight: bolder;
   color: white;
   text-shadow: 0px 0px 5px #000000;
-  
-  /*
-  background-color: black;
+  line-height: 1;
   border-radius: 10%;
-  border-width: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-color: lightslategray;
-  border-style: solid;
-  */
 }
 
 
