@@ -1269,6 +1269,13 @@ type settings struct {
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
 	Switches             []switchModel // Switches Settings
 	MagCalibration       MagnetometerData // Magnetometer Calibration
+	/* We will add the Quaternion dedicated for the Magnetometer
+	MagSensorQuaternion  [4]float64 // Quaternion mapping from sensor frame to aircraft frame
+	*/
+	MagRollPitchInterference [2]float64 // aircraft frame to Mag alignment
+	MagAxisMappingX		 [3]float64 // aircraft frame to Mag alignment
+	MagAxisMappingY		 [3]float64 // aircraft frame to Mag alignment
+	MagAxisMappingZ		 [3]float64 // aircraft frame to Mag alignment
 	RegionSelected       int			// 0 - none, 1 = US, 2 = EU
 }
 
@@ -1358,6 +1365,14 @@ func defaultSettings() {
 	globalSettings.Switches = make([]switchModel, 0)
 	globalSettings.MagCalibration.CalibrationReset()
 	mySituation.Magnetometer.CalibrationReset()
+	globalSettings.MagRollPitchInterference = [2]float64{1, -1}
+	// Most of the Magnetometers are (magX, magY, magZ) = (-cy, +cx, +cz) compared to the Accelerometer
+	globalSettings.MagAxisMappingX = [3]float64{0, -1, 0}
+	globalSettings.MagAxisMappingY = [3]float64{1, 0, 0}
+	globalSettings.MagAxisMappingZ = [3]float64{0, 0, 1}
+	/* We will move to quaternion
+	globalSettings.MagSensorQuaternion = [4]float64{0, 0, 0, 0}
+	*/
 	globalSettings.MagCalibration.Calibrating = true
 	mySituation.Magnetometer.Calibrating = true
 	globalSettings.MagCalibration.Offset = 0
