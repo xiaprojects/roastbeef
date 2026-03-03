@@ -84,6 +84,7 @@ func (e *ES) read() {
 		"--mlat") // display raw messages in Beast ascii mode
 	stdout, _ := cmd.StdoutPipe()
 	stderr, _ := cmd.StderrPipe()
+	autoRestart := true // automatically restart crashing child process
 
 	err := cmd.Start()
 	if err != nil {
@@ -111,6 +112,7 @@ func (e *ES) read() {
 				return
 			case <-e.closeCh:
 				log.Println("ES read(): shutdown msg received, calling cmd.Process.Kill() ...")
+				autoRestart = false
 				err := cmd.Process.Kill()
 				if err == nil {
 					log.Println("kill successful...")
@@ -162,6 +164,13 @@ func (e *ES) read() {
 	// the "done" channel, which ensures we don't leak
 	// goroutines...
 	close(done)
+
+	if autoRestart && !shutdownES{
+		time.Sleep(5 * time.Second)
+		log.Println("ES: restarting crashed dump1090")
+		e.wg.Add(1)
+		go e.read()
+	}
 }
 
 func (u *UAT) read() {
