@@ -2,89 +2,102 @@
     <p>The <strong>Settings</strong> page provides both control and configuration of your Stratux device.</p>
 
     <p>Use the toggles in the <strong>Hardware</strong> section to control which devices are active.</p>
-    <p class="text-warning">NOTE: Only hardware toggled on here, will appear on the
-        <strong>Status</strong> page.</p>
+    <p class="text-warning">NOTE: Only hardware toggled on here will appear on the <strong>Status</strong> page.</p>
 
-<p>
-    The <strong>WiFi</strong> section allows the user to change various WiFi Settings:
-    <dl class="dl-horizontal">
-    <dt>WiFi SSID</dt><dd>The name of your Stratux Network.
-    You might want to change this to match your A/C Tail Number (ex: Stratux-N12345).</dd>
-    <dt>Network Security</dt><dd>This switch will turn your wireless security <b>On</b> or <b>Off</b>.</dd>
-    <dt>WiFi Passphrase</dt><dd>When Security is turned on this will be the password for your network.</dd>
-    <dt>WiFi Channel</dt><dd>Changing the WiFi Channel can improve the wireless signal if in a congested WiFi area.</dd>
-</dl>
-    </p>
-
-<p>The <strong>Diagnostics</strong> section helps with debugging and communicating with the Stratux project contributors
-    via GitHub and the reddit subgroup.</p>
+    <h4>WiFi</h4>
+    <p>Stratux can operate in several WiFi modes:</p>
     <ul class="list-simple">
-        <li>Toggling <strong>Traffic Source</strong> adds text for traffic targets within your navigation application.
-            Traffic received via UAT will display <code>u</code>
-            while traffic received via 1090 will display <code>e</code>.</li>
+        <li><strong>Access Point only (default)</strong> &mdash; Stratux creates its own WiFi network. Your EFB connects directly to it.</li>
+        <li><strong>Access Point + Client</strong> &mdash; Stratux creates its own network <em>and</em> connects to an existing network (e.g. a phone hotspot). Use this to enable internet connectivity for OGN APRS position reporting.</li>
+        <li><strong>Client only</strong> &mdash; Stratux connects to an existing network and does not create its own. Advanced use only.</li>
+    </ul>
+    <p class="text-warning"><strong>WARNING:</strong> Misconfiguring WiFi settings can make your Stratux unreachable via the web interface. Recovery requires either SSH access over a wired connection or reflashing the SD card. Change these settings carefully.</p>
+    <dl class="dl-horizontal">
+        <dt>WiFi SSID</dt><dd>The name of your Stratux network. Consider setting this to your aircraft tail number (e.g. Stratux-N12345) so it is easy to identify in the EFB connection list.</dd>
+        <dt>Network Security</dt><dd>Turns wireless password protection <strong>On</strong> or <strong>Off</strong>. Disable only if your EFB has difficulty connecting.</dd>
+        <dt>WiFi Passphrase</dt><dd>Password for your Stratux network when security is enabled.</dd>
+        <dt>WiFi Channel</dt><dd>Changing the channel can help in congested WiFi environments (e.g. busy airports or FBOs).</dd>
+        <dt>WiFi Client Network</dt><dd>SSID and password of an existing network to connect to (phone hotspot, home router, etc). Used for internet-dependent features such as OGN APRS.</dd>
+    </dl>
+
+    <h4>Diagnostics</h4>
+    <ul class="list-simple">
+        <li>Toggling <strong>Traffic Source</strong> adds a two-letter prefix to callsigns in your navigation app,
+            indicating where each target was received. For example: <code>ea</code> = 1090 MHz air-to-air ADS-B,
+            <code>ur</code> = 978 MHz ADS-R rebroadcast, <code>fl</code> = FLARM, <code>fn</code> = FLARM network / PilotAware.
+            Useful for understanding what your Stratux is hearing.</li>
         <li>Toggling <strong>Record Logs</strong> enables logging to a series of files for your Stratux device including
             data recorded for UAT traffic and weather, 1090 traffic, GPS messages, and AHRS messages.
-            The log files are accessible from the <strong>Logs</strong> menu available on the left.</li>
+            Log files are accessible from the <strong>Logs</strong> menu on the left.
+            <span class="text-warning">NOTE: Logs are stored in RAM by default and are lost on reboot.
+            Enable <strong>Persistent Logging</strong> (below) to write logs to the SD card instead.
+            Persistent logging increases SD card wear &mdash; use it for troubleshooting, not permanently.</span>
+        </li>
+        <li><strong>Persistent Logging</strong> &mdash; Writes logs to the SD card rather than RAM so they survive a reboot.
+            A reboot is required after enabling this setting.
+            <span class="text-warning">Increases SD card write cycles. Recommended for troubleshooting sessions only.</span>
+        </li>
     </ul>
 
-    <p>The <strong>AHRS</strong> section allows for calibration and future configuration of the AHRS function.
-        <strong>Calibrate AHRS Sensors</strong> guides initial setup of the AHRS function,
-        specifying the orientation of the sensors relative to the airplane.
-        Additional calibration may be added later.</p>
-    <p>The calibration process determines which sensor direction will be forward.
-        You only have to do this once.  The settings for this sensor will be saved for future flights.</p>
-    <p>The direction of gravity is used to determine the forward orientation.</p>
-    <p>To find your <strong>Minimum fan duty cycle %</strong> follow these instructions:<br>
-        Start with a value of 50% and wait untill the fan spins up and watch what happens after<br>
-        - When he fan stops running again or does not run smooth increase the % value untill it spins up, then lower again.<br> 
-        - When it runs smooth and you think it can run slower, decrease the value.<br />
-        The goal is to ensure the fan runs smooth at lowest RPM without the tendency to go off and with minimum noise.</p>
+    <h4>AHRS</h4>
+    <p><strong>Calibrate AHRS Sensors</strong> guides initial setup of the AHRS function,
+        specifying the orientation of the sensors relative to the airplane. You only need to do this once.
+        The direction of gravity is used to determine which axis is forward.</p>
+    <p>To find your <strong>Minimum fan duty cycle %</strong>: start at 50% and wait for the fan to spin up.
+        Decrease slowly until the fan runs smoothly at the lowest stable RPM without stalling.</p>
+    <p><strong>GLoad Limits</strong> sets the values shown on the G Meter on the GPS/AHRS page.
+        Enter a space-separated list, e.g. <code>-1.76 4.4</code>.</p>
 
-    <p>GLoad Limits allows the user to set which limits will show on the G Meter on the GPS/AHRS page.
-        Enter a space-separated list of G limits, e.g. "-1.76 4.4".</p>
-
-    <p>The <strong>Configuration</strong> section lets you adjust the default operation of your Stratux device.</p>
+    <h4>Configuration</h4>
     <ul class="list-simple">
-        <li>To avoid having your own aircraft appear as traffic, and scare the bejeezus out of you,
-            you may provide your <strong>Ownship Mode S/OGN code(s)</strong>.
-            You can find this value in the FAA N-Number Registry for your aircraft, or on popular flight tracking sites.
-            You should use the hexadecimal value (not the octal value) for this setting. And once set, you must set the Tracker
-            address type to ICAO.
-            Stratux will automatically try to determine if the provided codes are actually flying with you. So you may enter
-            all codes of aircraft that you fly on a regular basis and Stratux will always try to filter the correct one(s).
+        <li>
+            <strong>Ownship Mode S / OGN Code</strong> &mdash; Enter your aircraft's ICAO 24-bit code
+            (hexadecimal, not octal) to prevent your own transponder from appearing as traffic.
+            You can find this value on popular flight tracking websites by searching your tail number.
+            Set the address type to <strong>ICAO</strong> after entering the code.
+            Stratux will automatically determine which code is flying with you if you enter multiple codes
+            for aircraft you fly regularly.
         </li>
-        <li>The <strong>Weather</strong> page uses a user-defined <strong>Watch List</strong> to filter the
-            large volume of ADS-B weather messages for display.
-            Define a list of identifiers (airport, VOR, etc) separated by a spaces.
-            For example <code>KBOS EEN LAH LKP</code>.
-            You may change this list at any time and the <strong>Weather</strong> page will start watching for the
-            updated list immediately.
-            <br/>
-            <span class="text-warning">NOTE: To save your changes, you must either tap somewhere else on the page
-                or hit <code>ENTER</code> or <code>RETURN</code> or <code>GO</code>
-                (or whatever your keyboard indicates).</span>
+        <li>
+            <strong>Weather Watch List</strong> &mdash; A space-separated list of airport or navaid identifiers
+            (e.g. <code>KBOS EEN LAH</code>). Stations on this list appear at the top of the
+            <strong>Weather</strong> page. Weather data for all stations within range is always received regardless
+            of this list &mdash; it affects display order only.
+            <span class="text-warning">NOTE: Changes take effect immediately but must be confirmed by tapping
+            elsewhere or pressing <code>ENTER</code>.</span>
         </li>
-        <li>The SDR (software defined radio) receiver support an adjustment in the form of a
-            <strong>PPM Correction</strong>. From the Raspberry Pi, you may use the command
-            <code>kal -g 48 -s GSM850</code> to scan for available channels in your area.
-            Then use the command <code>kal -g 48 -c <em>channel#</em></code> to calculate the PPM.
-            <br/>
-            <span class="text-warning">NOTE: You will need to perform all commands as <code>root</code>
-                by issuing the command: <code>sudo su -</code>.
-                You will need to stop the Stratux software before running the calibration process.
-                You can stop all of the Stratux processes with the command: <code>pkill screen</code>.</span>
+        <li>
+            <strong>PPM Correction</strong> &mdash; A frequency offset correction value for your SDR dongle.
+            Most modern RTL-SDR dongles have low enough error that a value of <strong>0</strong> works well.
+            If you suspect PPM error (e.g. consistently missing traffic that others report), try adjusting in
+            small increments (&plusmn;5 PPM) and test in flight.
         </li>
-        <li>Stratux estimates the distance of Mode C/S equipped transponders that don't have ADS-B out capabilities.
-            When using NMEA Output (with PFLAA/PFLAU traffic messages), these are shown as circles in most EFBs.
-            GDL90, however, does not support this directly. <strong>GDL90 bearingless target circle emulation</strong>
-            can be enabled and Stratux will create 8 pseudo-targets in a circle around you to emulate this support in GDL90.
+        <li>
+            <strong>GDL90 bearingless target circle emulation</strong> &mdash; Stratux can receive altitude reports
+            from Mode C/S transponders that do not transmit ADS-B position. When using NMEA output, these appear
+            as circles in most EFBs. GDL90 does not natively support this; enabling this option creates 8
+            pseudo-targets in a ring to emulate the display in GDL90-based apps.
         </li>
-        <li>Additional settings will be added in future releases.</li>
     </ul>
-    <p>The <strong>System</strong> section lets you safely shutdown or reboot your Stratux device.</p>
+
+    <h4>Settings Storage and Migration</h4>
+    <p>All settings are stored in <code>stratux.conf</code> on the <strong>boot partition</strong> of the SD card
+        (<code>/boot/firmware/stratux.conf</code>). This partition uses the FAT32 format and is directly readable
+        and writable when you plug the SD card into any computer &mdash; no special software required.</p>
+    <p>To <strong>back up or migrate settings</strong> between SD cards or Stratux units:</p>
+    <ol>
+        <li>Shut down Stratux and remove the SD card.</li>
+        <li>Insert the SD card into a computer. The boot partition will mount automatically on most systems.</li>
+        <li>Copy <code>stratux.conf</code> to your computer (backup) or copy a saved <code>stratux.conf</code>
+            onto the new card (restore/migrate).</li>
+        <li>Reinsert the card and boot Stratux. Your settings will be applied immediately.</li>
+    </ol>
+    <p class="text-warning">NOTE: After a major version upgrade (e.g. v1.x to v2.x) some settings fields may have
+        changed. If Stratux behaves unexpectedly after migration, try resetting to defaults and reconfiguring.</p>
+
+    <h4>System</h4>
     <ul>
-        <li><strong>Shutdown</strong> will immediately shutdown the Stratux.  You may then safely remove power.</li>
-        <li><strong>Reboot</strong> will immediately reboot the Stratux.
-            After the reboot you may have to rejoin the WiFi connection to reconnect.</li>
+        <li><strong>Shutdown</strong> &mdash; Safely shuts down the Stratux. Wait for the status light to go out before removing power.</li>
+        <li><strong>Reboot</strong> &mdash; Immediately reboots the Stratux. You may need to rejoin the WiFi network after reboot.</li>
     </ul>
 </div>
