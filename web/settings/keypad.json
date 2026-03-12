@@ -9,6 +9,27 @@
             "MediaPlayPause":{
                 "href": "#/"
             },
+            "altimeter": {
+                "href": "#/altimeter"
+            },
+            "turnslip": {
+                "href": "#/turnslip"
+            },
+            "attitude": {
+                "href": "#/attitude"
+            },
+            "gmeter": {
+                "href": "#/"
+            },
+            "resources": {
+                "href": "#/resources"
+            },
+            "heading": {
+                "href": "#/heading"
+            },
+            "variometer": {
+                "href": "#/variometer"
+            },
             "A": {
                 "href": "#/"
             },

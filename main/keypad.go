@@ -24,6 +24,14 @@ import (
 	A
 */
 
+
+type KeyEvent struct {
+	Source	string	`json:"source"`
+	Target	string	`json:"target"`
+	Key		string	`json:"key"`
+	Status	int		`json:"status"`
+}
+
 type KeypadStratuxPlugin struct {
 	StratuxPlugin
 	device *keylogger.KeyLogger

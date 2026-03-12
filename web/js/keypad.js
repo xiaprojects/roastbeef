@@ -26,21 +26,36 @@ KeypadService.prototype = {
 
 var URL_KEYPAD_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/keypad";
 let KEYPAD_HOLD_TIMEOUT = 500 // Applicable to WS, in JS .repeat is used
-let KEYPAD_MAPPING_PREV = "1"
-let KEYPAD_MAPPING_TAP = "2"
-let KEYPAD_MAPPING_NEXT = "3"
+// Knob with keys
+let KEYPAD_MAPPING_PREV = "1"; //"MediaTrackNext"
+let KEYPAD_MAPPING_TAP = "2";//"Enter"
+let KEYPAD_MAPPING_NEXT = "3";//"MediaTrackPrevious"
 
-function KeypadService($scope, settings) {
+// Media controller is defined here because the installation may be reversed
+let KEYPAD_MAPPING_PREV_MEDIA = "MediaTrackNext"
+let KEYPAD_MAPPING_TAP_MEDIA = "Enter"
+let KEYPAD_MAPPING_NEXT_MEDIA = "MediaTrackPrevious"
+
+function KeypadService($scope,$state, settings) {
     // Default User Settings, Mapping Key->Screen
     var keypadSettings = {
         "A": {
-            href: "#/autopilot"
+            href: "#/"
         },
         "B": {
-            href: "#/map"
+            href: "#/radar"
         },
         "C": {
-            href: "#/timers"
+            href: "#/airfields"
+        },
+        "a": {
+            href: "#/"
+        },
+        "b": {
+            href: "#/radar"
+        },
+        "c": {
+            href: "#/airfields"
         }
     };
 
@@ -119,7 +134,7 @@ function KeypadService($scope, settings) {
                 return; // we are getting called once after clicking away from the page
             console.log(msg);
             var k = JSON.parse(msg.data);
-
+            if(k.key=="")return;
             switch (k.status) {
                 case 0: // KeyRelease
                     // Key has being relesed
@@ -171,6 +186,17 @@ function KeypadService($scope, settings) {
     });
 
 
+    $scope.onclickDom = function(event){
+        const z = ZoneFinder(event);
+		console.log("DOM Clicked "+ z + " Controller: "+$state.current.controller);
+        const proxy = new KeyboardEvent("keypad", { key: z});
+		//dispatchEvent(proxy);
+		return false;
+	}
+
+	addEventListener("click", $scope.onclickDom,{passive :true});
+
+
     /**
      * User experience based on a big centered rotary on center to show the selector
      */
@@ -190,20 +216,285 @@ function KeypadService($scope, settings) {
     ];
     // Current Rotary Navigation Pattern: Left Side Menu
     var keypadSettingsNavigation = {
+
+
+        "#/radar": {
+            "SwipeRight": "#/",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/map",
+            "SwipeLeft": "#/map",
+            "ArrowLeft": "#/map",
+            "ArrowUp": "#/map",
+            "1": "#/map",
+            "knobDeg": 0,
+            "title": "Radar"
+        },
         "#/": {
-            "SwipeRight": "#/cockpit",
-            "ArrowRight": "#/cockpit",
-            "ArrowDown": "#/cockpit",
-            "3": "#/cockpit",
-            "to": "#/cockpit",
-            "from": "#/",
-            "SwipeLeft": "#/",
-            "ArrowLeft": "#/",
+            "disableRotary": true,
+            "SwipeRight": "",
+            "ArrowRight": "#/hsi",
+            "ArrowDown": "#/hsi",
+            "3": "#/hsi",
+            "to": "#/hsi",
+            "from": "#/radar",
+            "SwipeLeft": "",
+            "ArrowLeft": "#/radar",
             "ArrowUp": "#/",
-            "1": "#/",
+            "1": "#/radar",
             "knobDeg": 0,
             "title": "Home"
         },
+        "#/hsi": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewspeed",
+            "ArrowRight": "#/roundviewspeed",
+            "E": "#/roundviewspeed",
+            "ArrowDown": "#/roundviewspeed",
+            "3": "#/roundviewspeed",
+            "to": "#/roundviewspeed",
+            "from": "#/",
+            "SwipeLeft": "#/",
+            "ArrowLeft": "#/",
+            "W": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
+            "knobDeg": 0,
+            "title": "HSI"
+        },
+        "#/roundviewspeed": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewattitude",
+            "ArrowRight": "#/roundviewattitude",
+            "E": "#/roundviewattitude",
+            "ArrowDown": "#/roundviewattitude",
+            "3": "#/roundviewattitude",
+            "to": "#/roundviewattitude",
+            "from": "#/hsi",
+            "SwipeLeft": "#/hsi",
+            "ArrowLeft": "#/hsi",
+            "W": "#/hsi",
+            "ArrowUp": "#/hsi",
+            "1": "#/hsi",
+            "knobDeg": 0,
+            "title": "IAS"
+        },
+        "#/roundviewspeed": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewattitude",
+            "ArrowRight": "#/roundviewattitude",
+            "E": "#/roundviewattitude",
+            "ArrowDown": "#/roundviewattitude",
+            "3": "#/roundviewattitude",
+            "to": "#/roundviewattitude",
+            "from": "#/hsi",
+            "SwipeLeft": "#/hsi",
+            "ArrowLeft": "#/hsi",
+            "W": "#/hsi",
+            "ArrowUp": "#/hsi",
+            "1": "#/hsi",
+            "knobDeg": 0,
+            "title": "IAS"
+        },
+        "#/roundviewattitude": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewaltimeter",
+            "ArrowRight": "#/roundviewaltimeter",
+            "E": "#/roundviewaltimeter",
+            "ArrowDown": "#/roundviewaltimeter",
+            "3": "#/roundviewaltimeter",
+            "to": "#/roundviewaltimeter",
+            "from": "#/roundviewspeed",
+            "SwipeLeft": "#/roundviewspeed",
+            "ArrowLeft": "#/roundviewspeed",
+            "W": "#/roundviewspeed",
+            "ArrowUp": "#/roundviewspeed",
+            "1": "#/roundviewspeed",
+            "knobDeg": 0,
+            "title": "Attitude"
+        },
+        "#/roundviewaltimeter": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewball",
+            "ArrowRight": "#/roundviewball",
+            "E": "#/roundviewball",
+            "ArrowDown": "#/roundviewball",
+            "3": "#/roundviewball",
+            "to": "#/roundviewball",
+            "from": "#/roundviewattitude",
+            "SwipeLeft": "#/roundviewattitude",
+            "ArrowLeft": "#/roundviewattitude",
+            "W": "#/roundviewattitude",
+            "ArrowUp": "#/roundviewattitude",
+            "1": "#/roundviewattitude",
+            "knobDeg": 0,
+            "title": "Altimeter"
+        },
+        "#/roundviewball": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewgyro",
+            "ArrowRight": "#/roundviewgyro",
+            "E": "#/roundviewgyro",
+            "ArrowDown": "#/roundviewgyro",
+            "3": "#/roundviewgyro",
+            "to": "#/roundviewgyro",
+            "from": "#/roundviewaltimeter",
+            "SwipeLeft": "#/roundviewaltimeter",
+            "ArrowLeft": "#/roundviewaltimeter",
+            "W": "#/roundviewaltimeter",
+            "ArrowUp": "#/roundviewaltimeter",
+            "1": "#/roundviewaltimeter",
+            "knobDeg": 0,
+            "title": "Turn - Slip"
+        },
+        "#/roundviewgyro": {
+            "disableRotary": true,
+            "SwipeRight": "#/roundviewvariometer",
+            "ArrowRight": "#/roundviewvariometer",
+            "E": "#/roundviewvariometer",
+            "ArrowDown": "#/roundviewvariometer",
+            "3": "#/roundviewvariometer",
+            "to": "#/roundviewvariometer",
+            "from": "#/roundviewball",
+            "SwipeLeft": "#/roundviewball",
+            "ArrowLeft": "#/roundviewball",
+            "W": "#/roundviewball",
+            "ArrowUp": "#/roundviewball",
+            "1": "#/roundviewball",
+            "knobDeg": 0,
+            "title": "Gyro"
+        },
+        "#/roundviewvariometer": {
+            "disableRotary": true,
+            "SwipeRight": "#/resources",
+            "ArrowRight": "#/resources",
+            "E": "#/resources",
+            "ArrowDown": "#/resources",
+            "3": "#/resources",
+            "to": "#/resources",
+            "from": "#/roundviewgyro",
+            "SwipeLeft": "#/roundviewgyro",
+            "ArrowLeft": "#/roundviewgyro",
+            "W": "#/roundviewgyro",
+            "ArrowUp": "#/roundviewgyro",
+            "1": "#/roundviewgyro",
+            "knobDeg": 0,
+            "title": "Variometer"
+        },
+        "#/resources": {
+            "disableRotary": true,
+            "SwipeRight": "#/airfields",
+            "ArrowRight": "#/airfields",
+            "E": "#/airfields",
+            "ArrowDown": "#/airfields",
+            "3": "#/airfields",
+            "to": "#/airfields",
+            "from": "#/roundviewvariometer",
+            "SwipeLeft": "#/roundviewvariometer",
+            "ArrowLeft": "#/roundviewvariometer",
+            "W": "#/roundviewvariometer",
+            "ArrowUp": "#/roundviewvariometer",
+            "1": "#/roundviewvariometer",
+            "knobDeg": 0,
+            "title": "Resources"
+        },
+
+        "#/airfields": {
+            "disableRotary": true,
+            "SwipeRight": "#/timers",
+            "ArrowRight": "#/timers",
+            "ArrowDown": "#/timers",
+            "3": "#/timers",
+            "E":"",
+            "to": "#/timers",
+            "from": "#/resources",
+            "W":"",
+            "SwipeLeft": "#/resources",
+            "ArrowLeft": "#/resources",
+            "ArrowUp": "#/resources",
+            "1": "#/resources",
+            "knobDeg": 0,
+            "title": "Airfields"
+        },
+
+
+        "#/roundview": {
+            "SwipeRight": "#/timers",
+            "ArrowRight": "#/timers",
+            "ArrowDown": "#/timers",
+            "3": "#/timers",
+            "to": "#/timers",
+            "from": "#/hsi",
+            "SwipeLeft": "#/hsi",
+            "ArrowLeft": "#/hsi",
+            "ArrowUp": "#/hsi",
+            "1": "#/hsi",
+            "knobDeg": 0,
+            "title": "Round View"
+        },
+
+
+        "#/timers": {
+            "disableRotary": true,
+            "SwipeRight": "#/radio",
+            "ArrowRight": "#/radio",
+            "ArrowDown": "#/radio",
+            "3": "#/radio",
+            "to": "#/radio",
+            "SwipeLeft": "#/airfields",
+            "from": "#/airfields",
+            "ArrowLeft": "#/airfields",
+            "ArrowUp": "#/airfields",
+            "1": "#/airfields",
+            "knobDeg": 0,
+            "title": "Timers"
+        },
+        "#/radio": {
+            "disableRotary": true,
+            "SwipeRight": "#/switchboard",
+            "ArrowRight": "#/switchboard",
+            "ArrowDown": "#/switchboard",
+            "3": "#/switchboard",
+            "to": "#/switchboard",
+            "from": "#/timers",
+            "SwipeLeft": "#/timers",
+            "ArrowLeft": "#/timers",
+            "ArrowUp": "#/timers",
+            "1": "#/timers",
+            "knobDeg": 0,
+            "title": "Radio"
+        },  
+        "#/autopilot": {
+            "disableRotary": true,
+            "SwipeRight": "#/map",
+            "ArrowRight": "#/map",
+            "ArrowDown": "#/map",
+            "3": "#/map",
+            "to": "#/map",
+            "from": "#/radio",
+            "SwipeLeft": "#/radio",
+            "ArrowLeft": "#/radio",
+            "ArrowUp": "#/radio",
+            "1": "#/radio",
+            "knobDeg": 0,
+            "title": "Autopilot"
+        },
+        "#/camera": {
+            "disableRotary": true,
+            "ArrowRight": "#/map",
+            "ArrowDown": "#/map",
+            "3": "#/map",
+            "to": "#/map",
+            "from": "#/autopilot",
+            "ArrowLeft": "#/autopilot",
+            "ArrowUp": "#/autopilot",
+            "1": "#/autopilot",
+            "knobDeg": 0,
+            "title": "Camera"
+        },
+
         "#/cockpit": {
             "disableRotary": true,
             "SwipeRight": "#/synthview",
@@ -233,172 +524,125 @@ function KeypadService($scope, settings) {
             "title": "SynthView"
         },
 
-        "#/radio": {
-            "disableRotary": true,
-            "SwipeRight": "#/traffic",
-            "ArrowRight": "#/traffic",
-            "ArrowDown": "#/traffic",
-            "3": "#/traffic",
-            "to": "#/traffic",
-            "from": "#/cockpit",
-            "SwipeLeft": "#/cockpit",
-            "ArrowLeft": "#/cockpit",
-            "ArrowUp": "#/cockpit",
-            "1": "#/cockpit",
-            "knobDeg": 0,
-            "title": "Radio"
-        },        
+      
         "#/traffic": {
-            "SwipeRight": "#/gps",
-            "ArrowRight": "#/gps",
-            "ArrowDown": "#/gps",
-            "3": "#/gps",
-            "to": "#/gps",
-            "from": "#/radio",
-            "SwipeLeft": "#/radio",
-            "ArrowLeft": "#/radio",
-            "ArrowUp": "#/radio",
-            "1": "#/radio",
+            "SwipeRight": "#/",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/",
+            "SwipeLeft": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
             "knobDeg": 0,
             "title": "Traffic"
         },
         "#/gps": {
-            "SwipeRight": "#/autopilot",
-            "ArrowRight": "#/autopilot",
-            "ArrowDown": "#/autopilot",
-            "3": "#/autopilot",
-            "to": "#/autopilot",
-            "from": "#/traffic",
-            "SwipeLeft": "#/traffic",
-            "ArrowLeft": "#/traffic",
-            "ArrowUp": "#/traffic",
-            "1": "#/traffic",
+            "SwipeRight": "#/",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/",
+            "SwipeLeft": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
             "knobDeg": 0,
             "title": "GPS"
         },
-        "#/autopilot": {
-            "disableRotary": true,
-            "SwipeRight": "#/camera",
-            "ArrowRight": "#/camera",
-            "ArrowDown": "#/camera",
-            "3": "#/camera",
-            "to": "#/camera",
-            "from": "#/gps",
-            "SwipeLeft": "#/gps",
-            "ArrowLeft": "#/gps",
-            "ArrowUp": "#/gps",
-            "1": "#/gps",
-            "knobDeg": 0,
-            "title": "Autopilot"
-        },
-        "#/camera": {
-            "disableRotary": true,
-            "ArrowRight": "#/logs",
-            "ArrowDown": "#/logs",
-            "3": "#/logs",
-            "to": "#/logs",
-            "from": "#/autopilot",
-            "ArrowLeft": "#/autopilot",
-            "ArrowUp": "#/autopilot",
-            "1": "#/autopilot",
-            "knobDeg": 0,
-            "title": "Camera"
-        },
+
         "#/logs": {
-            "ArrowRight": "#/settings",
-            "ArrowDown": "#/settings",
-            "3": "#/settings",
-            "to": "#/settings",
-            "from": "#/gps",
-            "ArrowLeft": "#/gps",
-            "ArrowUp": "#/gps",
-            "1": "#/gps",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
             "knobDeg": 0,
             "title": "Logs"
         },
         "#/settings": {
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/logs",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
+            "knobDeg": 0,
+            "title": "Settings"
+        },
+
+        "#/switchboard": {
+            "SwipeRight": "#/radar",
             "ArrowRight": "#/radar",
             "ArrowDown": "#/radar",
             "3": "#/radar",
             "to": "#/radar",
-            "from": "#/logs",
-            "ArrowLeft": "#/logs",
-            "ArrowUp": "#/logs",
-            "1": "#/logs",
+            "SwipeLeft": "#/radio",
+            "from": "#/radio",
+            "ArrowLeft": "#/radio",
+            "ArrowUp": "#/radio",
+            "1": "#/radio",
             "knobDeg": 0,
-            "title": "Settings"
+            "title": "Switchboard"
         },
-        "#/radar": {
-            "ArrowRight": "#/map",
-            "ArrowDown": "#/map",
-            "3": "#/map",
-            "to": "#/map",
-            "from": "#/settings",
-            "ArrowLeft": "#/settings",
-            "ArrowUp": "#/settings",
-            "1": "#/settings",
-            "knobDeg": 0,
-            "title": "Radar"
-        },
+
         "#/map": {
-            "ArrowRight": "#/timers",
-            "ArrowDown": "#/timers",
-            "3": "#/timers",
-            "to": "#/timers",
-            "from": "#/radar",
-            "ArrowLeft": "#/radar",
-            "ArrowUp": "#/radar",
-            "1": "#/radar",
+            "SwipeRight": "#/radar",
+            "ArrowRight": "#/radar",
+            "ArrowDown": "#/radar",
+            "3": "#/radar",
+            "to": "#/radar",
+            "SwipeLeft": "#/switchboard",
+            "from": "#/switchboard",
+            "ArrowLeft": "#/switchboard",
+            "ArrowUp": "#/switchboard",
+            "1": "#/switchboard",
             "knobDeg": 0,
             "title": "Map"
         },
-        "#/timers": {
-            "disableRotary": true,
-            "ArrowRight": "#/alerts",
-            "ArrowDown": "#/alerts",
-            "3": "#/alerts",
-            "to": "#/alerts",
-            "from": "#/map",
-            "ArrowLeft": "#/map",
-            "ArrowUp": "#/map",
-            "1": "#/map",
-            "knobDeg": 0,
-            "title": "Timers"
-        },
+
         "#/alerts": {
-            "ArrowRight": "#/checklist",
-            "ArrowDown": "#/checklist",
-            "3": "#/checklist",
-            "to": "#/checklist",
-            "from": "#/timers",
-            "ArrowLeft": "#/timers",
-            "ArrowUp": "#/timers",
-            "1": "#/timers",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
             "knobDeg": 0,
             "title": "Alerts"
         },
         "#/checklist": {
             "disableRotary": true,
-            "ArrowRight": "#/charts",
-            "ArrowDown": "#/charts",
-            "3": "#/charts",
-            "to": "#/charts",
-            "from": "#/alerts",
-            "ArrowLeft": "#/alerts",
-            "ArrowUp": "#/alerts",
-            "1": "#/alerts",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
             "knobDeg": 0,
             "title": "Checklist"
         },
         "#/charts": {
-            "ArrowRight": "#/charts",
-            "ArrowDown": "#/charts",
-            "3": "#/charts",
-            "to": "#/charts",
-            "from": "#/checklist",
-            "ArrowLeft": "#/checklist",
-            "ArrowUp": "#/checklist",
-            "1": "#/checklist",
+            "ArrowRight": "#/",
+            "ArrowDown": "#/",
+            "3": "#/",
+            "to": "#/",
+            "from": "#/",
+            "ArrowLeft": "#/",
+            "ArrowUp": "#/",
+            "1": "#/",
             "knobDeg": 0,
             "title": "Charts"
         }
@@ -507,6 +751,42 @@ function KeypadService($scope, settings) {
             return; // we are getting called once after clicking away from the gps page
         console.log(event);
 
+        // Joystick mapping
+        switch (event.key) {
+            case "MediaFastForward":
+                event = {};
+                event.key = "ArrowLeft";
+                break;
+            case "MediaRewind":
+                event = {};
+                event.key = "ArrowRight";
+                break;
+            case "ENTER":
+                event = {};
+                event.key = "Enter";
+                break;
+            case "MediaTrackNext":
+                event = {};
+                event.key = "ArrowUp";
+                break;
+            case "MediaTrackPrevious":
+                event = {};
+                event.key = "ArrowDown";
+                break;
+            case "AudioVolumeUp":
+                event = {};
+                event.key = "SwipeLeft";
+                break;
+            case "AudioVolumeDown":
+                event = {};
+                event.key = "SwipeRight";
+                break;
+            case "MediaPlayPause":
+                event = {};
+                event.key = "A";
+                break;
+        }
+
         if (keypadSettings.hasOwnProperty(event.key)) {
             if (keypadSettings[event.key].href.length > 0) {
                 document.location = keypadSettings[event.key].href;
@@ -587,4 +867,23 @@ function KeypadService($scope, settings) {
             }
         }
     }
+}
+
+
+
+
+function ZoneFinder(event){
+	const ZoneMapping = [
+		["NW", "N", "NE"],
+		["W", "C", "E"],
+		["SW", "S", "SE"],
+	];
+	const ZoneCount = ZoneMapping.length; // Start-Center-End
+	const VerticalZoneSize = window.innerHeight / ZoneCount;
+	const HorizontalZoneSize = window.innerWidth / ZoneCount;
+	const VerticalZone = parseInt(event.clientY / VerticalZoneSize);
+	const HorizontalZone = parseInt(event.clientX / HorizontalZoneSize);
+	const zone = ZoneMapping[VerticalZone][HorizontalZone];
+	
+	return zone;
 }
