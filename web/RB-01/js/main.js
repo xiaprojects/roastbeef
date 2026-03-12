@@ -260,7 +260,7 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 		}
 
 		dispatchEvent(proxy);
-		if(true) {
+		if(localDisplayGetFlag("Display_Audio_Enabled") && false) {
 			// Attach the buzzer volume here
 			// TODO: move away and add a configuration switch
 			window.gMeterBuzzerPlayer.setVolumeTo(100);

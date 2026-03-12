@@ -159,6 +159,18 @@ function KeypadService($scope, $http, $state) {
             console.log(msg);
             var k = JSON.parse(msg.data);
             if (k.key == "") return;
+            // Adding Remote Keypad and Voice Recognition
+            if(k.hasOwnProperty("target") && k.target !="" && localDisplayGetFlag("displayName")!=false)
+            {
+                if(k.target!=localDisplayGetFlag("displayName")){
+                    console.log("Remote command is not for this display");
+                    return;
+                }
+                else
+                {
+
+                }
+            }
             switch (k.status) {
                 case 0: // KeyRelease
                     // Key has being relesed
@@ -233,7 +245,7 @@ function KeypadService($scope, $http, $state) {
         console.log(event);
 
         if ($scope.keypadSettings.directKey.hasOwnProperty(event.key)) {
-            if ($scope.keypadSettings.directKey[event.key].hasOwnProperty("href") && $scope.keypadSettings.directKey[event.key].length > 0) {
+            if ($scope.keypadSettings.directKey[event.key].hasOwnProperty("href") && $scope.keypadSettings.directKey[event.key].href.length > 0) {
                 document.location = $scope.keypadSettings.directKey[event.key].href;
             }
         }
