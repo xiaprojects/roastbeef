@@ -117,7 +117,13 @@ type SituationData struct {
 	AHRSGLoadMax         float64
 	AHRSLastAttitudeTime time.Time
 	AHRSStatus           uint8
-
+	AHRSTemperature      float64
+	AHRSAccX             float64
+	AHRSAccY             float64
+	AHRSAccZ             float64
+	AHRSGyroX            float64
+	AHRSGyroY            float64
+	AHRSGyroZ            float64
 	// Magnetometer data to calculate the Mag Offsets
 	Magnetometer         MagnetometerData
 

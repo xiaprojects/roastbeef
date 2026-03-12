@@ -474,6 +474,12 @@ func sensorAttitudeSender() {
 			// If we have valid AHRS info, then update mySituation.
 			mySituation.muAttitude.Lock()
 			if s.Valid() {
+				mySituation.AHRSAccX = m.A1
+				mySituation.AHRSAccY = m.A2
+				mySituation.AHRSAccZ = m.A3
+				mySituation.AHRSGyroX = m.B1
+				mySituation.AHRSGyroY = m.B2
+				mySituation.AHRSGyroZ = m.B3
 				roll, pitch, heading = s.RollPitchHeading()
 				mySituation.AHRSRoll = roll / ahrs.Deg
 				mySituation.AHRSPitch = pitch / ahrs.Deg
