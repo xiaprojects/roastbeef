@@ -31,7 +31,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"syscall"
 	"text/template"
 	"time"
 
@@ -231,6 +230,21 @@ func handleJsonIo(conn *websocket.Conn) {
 			continue
 		}
 		time.Sleep(1 * time.Second)
+	}
+}
+
+// Helper to fetch traffics with HTTP Get Method
+func handleTrafficRequest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	trafficMutex.Lock()
+	trafficJSON, err := json.Marshal(&traffic)
+	trafficMutex.Unlock()
+	if err == nil {
+		fmt.Fprintf(w, "%s\n", trafficJSON)
+	} else {
+		fmt.Fprintf(w, "{}\n")
+		log.Printf("%s", err)
 	}
 }
 
@@ -455,6 +469,49 @@ func handleSwitchBoardRest(w http.ResponseWriter, r *http.Request) {
 /***
  * SwitchBoard REST API End
  */
+
+/***
+ * Remote Keypad and Voice Recognition API
+ *
+ */
+func handleRemoteRequest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, DELETE, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// for an OPTION method request, we return header without processing.
+	// this insures we are recognized as supporting cross-domain AJAX REST calls
+
+	if r.Method == "GET" {
+	}
+
+	if r.Method == "DELETE" {
+	}
+
+	if r.Method == "PUT" {
+		handleRemotePut(w, r)
+	}
+
+	if r.Method == "POST" {
+	}
+}
+
+func handleRemotePut(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+
+	var msg KeyEvent
+	err := decoder.Decode(&msg)
+	if err == io.EOF {
+
+	} else if err != nil {
+		log.Printf("handleRemotePut:error: %s\n", err.Error())
+	} else {
+		keypadUpdate.SendJSON(msg)
+	}
+	fmt.Fprintf(w, "{}\n")
+}
 
 
 /***
@@ -1723,12 +1780,12 @@ func setPersistentLogging(persistent bool) {
 }
 
 func handleShutdownRequest(w http.ResponseWriter, r *http.Request) {
-	syscall.Sync()
+	exec.Command("sync").Run()
 	exec.Command("systemctl", "poweroff").Run()
 }
 
 func doReboot() {
-	syscall.Sync()
+	exec.Command("sync").Run()
 	exec.Command("systemctl", "reboot").Run()
 }
 
@@ -1863,7 +1920,7 @@ func handleResetGMeter(w http.ResponseWriter, r *http.Request) {
 
 func doRestartApp() {
 	time.Sleep(1)
-	syscall.Sync()
+	exec.Command("sync").Run()
 	out, err := exec.Command("/bin/systemctl", "restart", "stratux").Output()
 	if err != nil {
 		log.Printf("restart error: %s\n%s", err.Error(), out)
@@ -2430,6 +2487,7 @@ func managementInterface() {
 	http.HandleFunc("/charts/view/", handleChartsRequest)
 	http.HandleFunc("/charts/export/", handleChartsExportRequest)
 	http.HandleFunc("/getSituation", handleSituationRequest)
+	http.HandleFunc("/getTraffic", handleTrafficRequest)
 	http.HandleFunc("/getTowers", handleTowersRequest)
 	http.HandleFunc("/autopilot", handleAutopilotRest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
@@ -2460,6 +2518,8 @@ func managementInterface() {
 	http.HandleFunc("/getEMSMax", handleEMSMaxRequest)
 	http.HandleFunc("/getEMSMin", handleEMSMinRequest)
 	http.HandleFunc("/setEMS", handleEMSSetRequest)
+	// Remote Keypad and Voice Recognition
+	http.HandleFunc("/remote/", handleRemoteRequest)
 	http.HandleFunc("/getRegion", handleRegionGet)
 	http.HandleFunc("/setRegion", handleRegionSet)
 	http.HandleFunc("/setSettings", handleSettingsSetRequest)
