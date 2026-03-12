@@ -110,7 +110,10 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
 
     $scope.Speed.speedDegree = ((situation.AHRSGLoad-$scope.Speed.minSpeed) / ratio + $scope.Speed.startSpeedDegree + 90) + "deg";
 
-    if(true) {
+    if(localDisplayGetFlag("Display_Audio_GLoad_Enabled")) {
+      // Audio Play on Service
+    }
+    else {
       window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
     }
 

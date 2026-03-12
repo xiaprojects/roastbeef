@@ -131,7 +131,7 @@ function SituationService($scope, $http) {
             // GMeter Buzzer Play
             // TODO: flight test and configuration switch
             // Temporary  moved inside the G-Meter
-            if(false) {
+            if(localDisplayGetFlag("Display_Audio_GLoad_Enabled")) {
                 window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
             }
         };

@@ -2,6 +2,9 @@
 // Shared instance that can be used across screens
 if(window.gMeterBuzzerPlayer === undefined || window.gMeterBuzzerPlayer === null){
 window.gMeterBuzzerPlayer = new AudioSinusoidPlayer();
+    if(localDisplayGetFlag("Display_Audio_Enabled")) {
+        window.gMeterBuzzerPlayer.setVolumeTo(100);
+    }
 }
 
 AudioSinusoidPlayer.prototype = {

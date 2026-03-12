@@ -166,3 +166,12 @@ function pilotDisplayedTemperaturesFromCelsius(TemperatureIsCelsius) {
   const offset = window.aircraftData?.units?.temperatureConversionFromC?.sum ?? 0;
   return TemperatureIsCelsius * ratio + offset;
 }
+
+function localDisplayGetFlag(flagName) {
+  if (window.localStorage.getItem(flagName) === undefined || window.localStorage.getItem(flagName) === false || window.localStorage.getItem(flagName) == null) {
+  }
+  else {
+      return window.localStorage.getItem(flagName);
+  }
+  return false;
+}

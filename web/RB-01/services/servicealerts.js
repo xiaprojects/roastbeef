@@ -80,6 +80,7 @@ function AlertsService($scope, $http) {
 
                     if (document.getElementById("audioproxy") === undefined 
                     || document.getElementById("audioproxy") === false
+                    || localDisplayGetFlag("Display_Audio_Enabled") == false
                     || document.getElementById("audioproxy") == null){
                         // DOM is not ready or Audio in not enabled on the browser (ex.:Round display)
                     }
