@@ -57,7 +57,7 @@ fi
 # package based update in download location
 if [ -e ${TEMP_PACKAGE_LOCATION} ]; then
 	wLog "Found Update Package in $TEMP_PACKAGE_LOCATION$PACKAGE_MASK"
-	TEMP_PACKAGE_FILE=`ls -1t ${TEMP_PACAGE_LOCATION} | head -1`
+	TEMP_PACKAGE_FILE=`ls -1t ${TEMP_PACKAGE_LOCATION} | head -1`
 	wLog "Moving Update Package $TEMP_PACKAGE_FILE"
 	cp -r ${TEMP_PACKAGE_FILE} /root/
 	wLog "Changing permissions to chmod a+x $PACKAGE_UPDATE_LOCATION"
@@ -72,7 +72,7 @@ if [ -e ${PACKAGE_UPDATE_LOCATION} ]; then
 	if [ -n ${UPDATE_PACKAGE_FILE} ] ; then
 		# Install the new packagepackage, remove it, then reboot.
 		wLog "Installing update package ${UPDATE_PACKAGE_FILE}..."
-		bash dpkg -i ${UPDATE_PACKAGE_FILE}
+		dpkg -i ${UPDATE_PACKAGE_FILE}
 		wLog "Removing Update Package"
 		rm -f ${UPDATE_PACKAGE_FILE}
 		wLog "Finished... Rebooting... Bye"
