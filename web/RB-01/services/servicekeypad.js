@@ -160,6 +160,11 @@ function KeypadService($scope, $http, $state) {
             var k = JSON.parse(msg.data);
             if (k.key == "") return;
             // Adding Remote Keypad and Voice Recognition
+            if(k.hasOwnProperty("source") && k.source == "voice")
+            {
+                const proxy = new CustomEvent("voice", { detail: k });
+                dispatchEvent(proxy);
+            }            
             if(k.hasOwnProperty("target") && k.target !="" && localDisplayGetFlag("displayName")!=false)
             {
                 if(k.target!=localDisplayGetFlag("displayName")){
@@ -245,8 +250,16 @@ function KeypadService($scope, $http, $state) {
         console.log(event);
 
         if ($scope.keypadSettings.directKey.hasOwnProperty(event.key)) {
+            const k=whichKeywordIsForThisDisplay();
+            if($scope.keypadSettings.hasOwnProperty("directKey"+k)){
+                if ($scope.keypadSettings["directKey"+k].hasOwnProperty(event.key) && $scope.keypadSettings["directKey"+k][event.key].hasOwnProperty("href") && $scope.keypadSettings["directKey"+k][event.key].href.length > 0) {
+                    document.location = $scope.keypadSettings["directKey"+k][event.key].href;
+                    return false;
+                }
+            }
             if ($scope.keypadSettings.directKey[event.key].hasOwnProperty("href") && $scope.keypadSettings.directKey[event.key].href.length > 0) {
                 document.location = $scope.keypadSettings.directKey[event.key].href;
+                return false;
             }
         }
         else {
@@ -313,7 +326,8 @@ function KeypadService($scope, $http, $state) {
             }
             else {
                 // in case we are in a unknown navigation place, we brings the pilot to the home
-                document.location = "#/";
+                // Temporary workaround to manage direct navigation not in current display pane
+                //document.location = "#/";
             }
         }
     });

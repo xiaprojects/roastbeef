@@ -1,0 +1,33 @@
+<div ui-content-for="title">Voice</div>
+<!-- List of Airfields -->
+<div class="col-xs-12" style="overflow: hidden;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center;">
+                Voice
+                <span ng-show="speaking == true" class="label label-success">SPEAKING</span>
+                <span ng-show="speaking == false" class="label label-default">SPEAKING</span>
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <table style="width:100%;margin: 0px;padding:0px;">
+                    <tr ng-repeat="phrase in phrases"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            <div class="pull-right" style="border-right: 4px solid green;">{{phrase.in}}</div>
+                            <div class="pull-left" style="border-left: 5px solid blue;">{{phrase.out}}</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center;">
+<a ng-click="setName('primario')" class="btn btn-default">PRIMARIO</a>
+<a ng-click="setName('secondario')" class="btn btn-default">SECONDARIO</a>
+<a ng-click="setName('display')" class="btn btn-default">DISPLAY</a>
+</div>
+<div style="text-align: center;">
+<a ng-click="enableAudio()" class="btn btn-default">Enable Audio</a>
+</div>

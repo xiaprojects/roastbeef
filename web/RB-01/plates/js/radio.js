@@ -654,10 +654,15 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         var listParsed = [];
         for (var i = list.length - 1; i >= 0; i--) {
             var p = list[i];
+            if(p.Path.split(".").pop() == "wav"){
+                p.Duration = parseInt(p.Size / 30000);
+            } else {
             p.Duration = parseInt(p.Size / 3000);
-            if(p.Duration<2)continue;
+            }
+            //if(p.Duration<2)continue;
             
             if (p.Frequency == "") {
+                if(p.Path.split("_").length == 4) {
                 var fr = (p.Path.split("_").pop().split(".")[0]).slice(0,6);
                 var f = fr.slice(0,3) + "." + fr.slice(3,6);
                 var fn = $scope.radioFindFrequency(f);
@@ -669,6 +674,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
                 }
                 // 202060215 Force Frequency for small displays and this does not really help the Pilot
                 p.Frequency = f;
+                } else {
+                    p.Frequency = (p.Path.split("/").pop()).split("_")[0];
+                }
             }
 
             if(listParsed.length%2 == 0){

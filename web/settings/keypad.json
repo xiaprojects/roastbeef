@@ -4,11 +4,93 @@
         "KEYPAD_MAPPING_TAP": ["2","Enter","ENTER","BrowserHome","AudioVolumeMute"],
         "KEYPAD_MAPPING_NEXT": ["3","MediaTrackPrevious","ArrowRight","ArrowDown","MediaRewind"],
         "SwipeLeft": ["AudioVolumeUp","DOM_CLICK_W","a"],
-        "SwipeRight": ["AudioVolumeDown","DOM_CLICK_E","b"],       
+        "SwipeRight": ["AudioVolumeDown","DOM_CLICK_E","b"],
+        "directKeyPortrait":
+        {
+            "ems": {
+                "href": "#/ems"
+            },
+            "speed": {
+                "href": "#/sixpack"
+            },
+            "altimeter": {
+                "href": "#/sixpack"
+            },
+            "turnslip": {
+                "href": "#/sixpack"
+            },
+            "attitude": {
+                "href": "#/sixpack"
+            },
+            "heading": {
+                "href": "#/sixpack"
+            },
+            "variometer": {
+                "href": "#/sixpack"
+            }            
+        },        
+        "directKeyLandscape":
+        {
+            "ems": {
+                "href": "#/ems"
+            },
+            "speed": {
+                "href": "#/sixpack"
+            },
+            "altimeter": {
+                "href": "#/sixpack"
+            },
+            "turnslip": {
+                "href": "#/sixpack"
+            },
+            "attitude": {
+                "href": "#/sixpack"
+            },
+            "heading": {
+                "href": "#/sixpack"
+            },
+            "variometer": {
+                "href": "#/sixpack"
+            }            
+        },
         "directKey": {
             "MediaPlayPause":{
                 "href": "#/"
             },
+            "speed": {
+                "href": "#/sixpack"
+            },
+            "synthview": {
+                "href": "#/synthview"
+            },
+            "airfields": {
+                "href": "#/airfields"
+            },
+            "autopilot": {
+                "href": "#/autopilot"
+            },
+            "timers": {
+                "href": "#/timers"
+            },
+            "radio": {
+                "href": "#/radio"
+            },
+            "ems": {
+                "href": "#/emsegt"
+            },
+            "checklist": {
+                "href": "#/checklist"
+            },
+            "voice": {
+                "href": "#/voice"
+            },
+            "map": {
+                "href": "#/map"
+            },            
+            "radar": {
+                "href": "#/radar"
+            },
+
             "altimeter": {
                 "href": "#/altimeter"
             },
@@ -19,7 +101,7 @@
                 "href": "#/attitude"
             },
             "gmeter": {
-                "href": "#/"
+                "href": "#/gmetergauge"
             },
             "resources": {
                 "href": "#/resources"

@@ -29,6 +29,8 @@ type KeyEvent struct {
 	Source	string	`json:"source"`
 	Target	string	`json:"target"`
 	Key		string	`json:"key"`
+	Input	string	`json:"in"`
+	Output	string	`json:"out"`
 	Status	int		`json:"status"`
 }
 

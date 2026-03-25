@@ -237,9 +237,18 @@ func handleJsonIo(conn *websocket.Conn) {
 func handleTrafficRequest(w http.ResponseWriter, r *http.Request) {
 	setNoCache(w)
 	setJSONHeaders(w)
+	trafficArray := make([]TrafficInfo, 0)
 	trafficMutex.Lock()
-	trafficJSON, err := json.Marshal(&traffic)
+
+	for _, traf := range traffic {
+		if !traf.Position_valid { // Don't send unless a valid position exists.
+			continue
+		}
+		trafficArray = append(trafficArray, traf)
+	}
+	trafficJSON, err := json.Marshal(&trafficArray)
 	trafficMutex.Unlock()
+
 	if err == nil {
 		fmt.Fprintf(w, "%s\n", trafficJSON)
 	} else {
