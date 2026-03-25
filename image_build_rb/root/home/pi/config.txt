@@ -57,3 +57,7 @@ dtparam=i2c1_baudrate=400000
 dtparam=i2c_arm_baudrate=400000
 # Enable the second UART
 dtparam=uart0=on
+# If you have USB heavy load like 8" Display you shall enable this
+# Warning: check temperatures and cables, cables are very important
+# Enabling this may involves into glitches on the SD Card! Be careful
+# usb_max_current_enable=1
