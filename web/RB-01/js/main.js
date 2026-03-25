@@ -192,6 +192,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'ResourcesCtrl',
 			reloadOnSearch: false
 		})
+		.state('voice', {
+			url: '/voice',
+			templateUrl: 'plates/voice.html',
+			controller: 'VoiceCtrl',
+			reloadOnSearch: false
+		})
 		;
 	$urlRouterProvider.otherwise('/');
 });
@@ -246,6 +252,11 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 	if (true) {
 		if (($scope.radioService === undefined) || ($scope.radioService === null)) {
 			$scope.radioService = new RadioService($scope, $http, $state);
+		}
+	}
+	if (true) {
+		if (($scope.voiceService === undefined) || ($scope.voiceService === null)) {
+			$scope.voiceService = new VoiceService($scope, $http, $state);
 		}
 	}
 	$scope.fabClick = (direction, item, browserEvent) => {
