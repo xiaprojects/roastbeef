@@ -1,0 +1,15 @@
+[Unit]
+Description=Wayfire
+After=stratux.service
+BindsTo=user-runtime-dir@1000.service
+After=user-runtime-dir@1000.service
+
+[Service]
+ExecStart=/bin/bash -lc /home/pi/wayfire.sh
+KillMode=process
+Restart=always
+User=pi
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
