@@ -29,9 +29,10 @@ nmcli connection modify 'AccessPoint' wifi-sec.psk $WIFI_AP_PASSWORD
 nmcli connection modify 'AccessPoint' ipv4.method manual
 nmcli connection modify 'AccessPoint' ipv6.method disabled
 nmcli connection modify 'AccessPoint' ipv4.addresses 192.168.10.1/24
-nmcli connection modify 'AccessPoint' wifi.powersave 0
+nmcli connection modify 'AccessPoint' wifi.powersave 2
 nmcli connection modify 'AccessPoint' 802-11-wireless.band $WIFI_AP_BAND
-#nmcli connection modify 'AccessPoint' 802-11-wireless.channel 1
+nmcli connection modify 'AccessPoint' 802-11-wireless.channel 44
+nmcli connection modify 'AccessPoint' 802-11-wireless.channel-width 20
 nmcli con up AccessPoint
 
 
