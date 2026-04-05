@@ -67,6 +67,15 @@
             elsewhere or pressing <code>ENTER</code>.</span>
         </li>
         <li>
+            <strong>SoftRF Tracker Settings</strong> &mdash; When a compatible SoftRF tracker is connected,
+            additional tracker controls appear on the Settings page. Stratux first reads the current values back
+            from the tracker before allowing configuration changes. <strong>Configure Tracker</strong> writes the
+            selected values to the SoftRF itself, where they should persist across tracker and Stratux reboot.
+            <span class="text-warning">NOTE: If the SoftRF has just powered up, give it a moment to finish
+            starting and refresh the page if the values do not appear immediately. Unsupported primary/secondary
+            protocol combinations are intentionally filtered out.</span>
+        </li>
+        <li>
             <strong>PPM Correction</strong> &mdash; A frequency offset correction value for your SDR dongle.
             Most modern RTL-SDR dongles have low enough error that a value of <strong>0</strong> works well.
             If you suspect PPM error (e.g. consistently missing traffic that others report), try adjusting in
