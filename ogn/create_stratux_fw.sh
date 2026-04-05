@@ -88,7 +88,7 @@ create_fw ogn-tracker-bin-tbeam10-sx1262 ttgo-lora32-v1 '
     -DWITH_AXP
     -DWITH_GPS_UBX
     -DWITH_GPS_UBX_PASS'
-	
+
 # Build SX1262-tbeam-12
 create_fw ogn-tracker-bin-tbeam12-sx1262 ttgo-lora32-v1 '
     -DWITH_TBEAM12
