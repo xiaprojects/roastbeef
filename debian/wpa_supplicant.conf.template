@@ -33,12 +33,8 @@ ap_scan=1
 
 {{range .WiFiClientNetworks}}
 network={
-	ssid="{{.SSID}}"
-	{{if .Password}}
-    psk="{{.Password}}"
-    {{else}}
-    key_mgmt=NONE
-    {{end}}
+ssid="{{.SSID}}"
+{{if .Password}}psk="{{.Password}}"{{else}}key_mgmt=NONE{{end}}
 }
 {{end}}
 
