@@ -11,8 +11,11 @@
 #
 # By default this script does nothing.
 
-
+# Enable Routing and other network related settings
 /home/pi/enable_accesspoint.sh
+# Enable the CPU Governor
 /home/pi/powersave.sh
+# Watchdog for Bluetooth hci0: Opcode 0x2006 tx timeout
+#/home/pi/hci0-watchdog.sh &
 
 exit 0
