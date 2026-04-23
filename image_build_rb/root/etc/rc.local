@@ -18,4 +18,7 @@
 # Watchdog for Bluetooth hci0: Opcode 0x2006 tx timeout
 #/home/pi/hci0-watchdog.sh &
 
+# Waydroid Passthrough network GDL90
+#/home/pi/android/gdl90-passthrough.sh
+
 exit 0

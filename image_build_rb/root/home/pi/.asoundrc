@@ -1,0 +1,16 @@
+pcm.mixout {
+    type dmix
+    ipc_key 1024
+    slave {
+        pcm "hw:0,0"
+        channels 2
+        rate 44100
+        period_size 1024
+        buffer_size 4096
+    }
+}
+
+ctl.mixout {
+    type hw
+    card 0
+}
