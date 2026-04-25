@@ -268,7 +268,7 @@
                         <div class="form-group reset-flow">
                             <label class="control-label col-xs-5">WiFi Country</label>
                             <select class="custom-select" ng-model="WiFiCountry"
-                                    ng-options="country.key as country.value for country in sortedCountries() track by country.key">
+                                    ng-options="country.key as country.value for country in sortedCountries()">
                                 <option value="" label="Unspecified">Unspecified</option>
                             </select>
                         </div>
@@ -691,6 +691,7 @@
                     </div>
                     <div class="modal-body">
                         <p>WiFi Mode: <b>{{wifiModeStr()}}</b></p>
+                        <p>WiFi Country: <b>{{WifiCountry || "Unspecified"}}</b></p>
                         <p>WiFi SSID: <b>{{WiFiSSID}}</b></p>
                         <p>WiFi Security: <b>{{WiFiSecurityEnabled}}</b></p>
                         <p>WiFi Passphrase: <b>{{WiFiPassphrase}}</b></p>

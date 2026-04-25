@@ -685,7 +685,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 
 		if (!$scope.WiFiErrors.Errors) {
 			var newsettings = {
-				"WiFiCountry": $scope.WiFiCountry,
+				"WiFiCountry": $scope.WiFiCountry || "",
 				"WiFiSSID" :  $scope.WiFiSSID,
 				"WiFiSecurityEnabled" : $scope.WiFiSecurityEnabled,
 				"WiFiPassphrase" : $scope.WiFiPassphrase,
