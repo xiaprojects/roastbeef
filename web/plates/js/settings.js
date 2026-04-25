@@ -5,7 +5,6 @@ SettingsCtrl.$inject = ['$rootScope', '$scope', '$state', '$location', '$window'
 // create our controller function with all necessary logic
 function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 	$scope.countryCodes = {
-		"":"Unspecified",
 		"AD":"Andorra",
 		"AE":"United Arab Emirates",
 		"AF":"Afghanistan",
@@ -256,7 +255,12 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		"ZM":"Zambia",
 		"ZW":"Zimbabwe"
 	};
-
+	
+	$scope.sortedCountries = function() {
+		return Object.entries($scope.countryCodes)
+			.map(([key, value]) => ({ key, value }))
+			.sort((a, b) => a.value.localeCompare(b.value));
+	};
 
 	$scope.$parent.helppage = 'plates/settings-help.html';
 

@@ -267,8 +267,9 @@
                         </div>
                         <div class="form-group reset-flow">
                             <label class="control-label col-xs-5">WiFi Country</label>
-                            <select class="custom-select" ng-model="WiFiCountry">
-                                <option ng-repeat="(key, value) in countryCodes" value="{{key}}" ng-selected="WiFiCountry=='{{key}}'">{{value}}</option>
+                            <select class="custom-select" ng-model="WiFiCountry"
+                                    ng-options="country.key as country.value for country in sortedCountries() track by country.key">
+                                <option value="" label="Unspecified">Unspecified</option>
                             </select>
                         </div>
                         <div class="form-group reset-flow">
