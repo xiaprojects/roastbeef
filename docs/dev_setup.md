@@ -25,7 +25,11 @@ You will also have to enable developer mode and persistent logging on the web in
 - Restart again and verify that persistent logging is enabled before you continue.
 
 ### Set root password
-Then connect to it via Putty/SSH and set a root password (`sudo passwd`).
+Then connect to it via Putty/SSH and set a root password
+```bash
+sudo -s
+passwd
+```
 
 ### Set the correct date
 ```bash
@@ -37,12 +41,9 @@ If you run out of disk space, persistent logging is probably disabled
 
 ```bash
 apt update
-apt install build-essential git ncurses-dev
-```
-Notes:
-Some dpkg errors are normal.
-
-```bash
+apt-mark hold linux-image-rpi-*
+apt install -y build-essential git ncurses-dev libusb-1.0-0-dev
+apt-mark unhold linux-image-rpi-*
 cd /tmp
 wget https://github.com/stratux/rtlsdr/releases/download/v1.0/librtlsdr0_2.0.2-2_arm64.deb
 dpkg -i librtlsdr0_2.0.2-2_arm64.deb
@@ -51,7 +52,7 @@ dpkg -i librtlsdr-dev_2.0.2-2_arm64.deb
 ```
 
 ### Clone the repo
-Now clone the Stratux repository and install go:
+Now clone the Stratux repository with submodules and install go:
 
 ```bash
 cd /root
