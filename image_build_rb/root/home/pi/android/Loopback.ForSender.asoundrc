@@ -1,0 +1,44 @@
+pcm.loop44100 {
+    type dmix
+    ipc_key 2048
+    ipc_key_add_uid false
+    slave {
+        pcm "hw:Loopback,0,0"
+        channels 2
+        rate 44100
+        format S16_LE
+        period_time 0
+        period_size 512
+        buffer_size 2048
+    }
+    bindings {
+        0 0
+        1 1
+    }
+}
+
+pcm.loopcap {
+    type dsnoop
+    ipc_key 2049
+    ipc_key_add_uid false
+    slave {
+        pcm "hw:Loopback,1,0"
+        channels 2
+        rate 44100
+        format S16_LE
+        period_time 0
+        period_size 512
+        buffer_size 2048
+    }
+}
+
+pcm.!default {
+    type asym
+    playback.pcm "plug:loop44100"
+    capture.pcm "plug:loopcap"
+}
+
+ctl.!default {
+    type hw
+    card Loopback
+}
