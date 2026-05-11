@@ -881,6 +881,61 @@ func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+
+/***
+ *
+ *
+ */
+func handleUpdatesRemoteGetRequest(w http.ResponseWriter, r *http.Request) {
+	updates, err := ota.FetchAvailableUpdates()
+	if err != nil {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+	statusJSON, err2 := json.Marshal(&updates)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+
+
+func handleUpdatesAvailableGetRequest(w http.ResponseWriter, r *http.Request) {
+	updates, err := ota.GetAvailableUpdates()
+	if err != nil || len(updates) == 0{
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+	statusJSON, err2 := json.Marshal(&updates)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
+
+
+func handleUpdatesInstallPostRequest(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+
+	var msg UpdateInfo
+	err := decoder.Decode(&msg)
+	if err == io.EOF {
+
+	} else if err != nil {
+		log.Printf("handleUpdatesInstallPostRequest:error: %s\n", err.Error())
+	} else {
+		ota.ApplyUpdate(msg)
+	}
+}
+
+
+
 /***
  * 
  * Static resources REST API End
@@ -2501,6 +2556,9 @@ func managementInterface() {
 	http.HandleFunc("/autopilot", handleAutopilotRest)
 	http.HandleFunc("/getSatellites", handleSatellitesRequest)
 	http.HandleFunc("/getSettings", handleSettingsGetRequest)
+	http.HandleFunc("/updates/remote", handleUpdatesRemoteGetRequest)
+	http.HandleFunc("/updates/available", handleUpdatesAvailableGetRequest)
+	http.HandleFunc("/updates/install", handleUpdatesInstallPostRequest)
 	// Radio Platback Feature
 	http.HandleFunc("/playback", handlePlaybackGet)
 	// Resources Feature

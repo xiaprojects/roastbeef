@@ -1,0 +1,47 @@
+<div ui-content-for="title">Over The Air Update</div>
+<div class="col-xs-12" style="overflow: hidden;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center;">
+                Summary
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <table style="width:100%;margin: 0px;padding:0px;">
+                    <tr
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Component
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Remote
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Installed
+                        </td>
+                    </tr>                    
+                    <tr ng-repeat="update in updates"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            {{update.component}}
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            {{update.version}}
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            {{update.installed}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center;">
+<a ng-show="updateAvailable == true" ng-click="installUpdate()" class="btn btn-default">INSTALL UPDATE</a>
+</div>

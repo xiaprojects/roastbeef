@@ -1704,6 +1704,7 @@ func gracefulShutdown() {
 	log.Printf("gracefulShutdown --> pprof()")
 
 	//TODO: Any other graceful shutdown functions.
+	ota.ShutdownFunc()
 	// EMS Feature
 	ems.ShutdownFunc()
 	log.Printf("gracefulShutdown --> ems()")
@@ -1901,6 +1902,8 @@ func main() {
 		ems.InitFunc()
 		// Switchboards
 		switchBoard.InitFunc()
+		// OTA
+		ota.InitFunc()
 		pongInit()
 	}
 	initTraffic(isTraceReplayMode)

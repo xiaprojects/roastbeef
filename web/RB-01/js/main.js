@@ -78,6 +78,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'AutopilotCtrl',
 			reloadOnSearch: false
 		})
+		.state('ota', {
+			url: '/ota',
+			templateUrl: 'plates/ota.html',
+			controller: 'OtaCtrl',
+			reloadOnSearch: false
+		})		
 		.state('charts', {
 			url: '/charts',
 			templateUrl: 'plates/charts.html',
@@ -263,18 +269,30 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 		console.log(direction + " " + item + " " + browserEvent);
 		const proxy = new KeyboardEvent("key", { key: "DOM_CLICK_" + direction });
 
+
+		if (direction == "NW") {
+			window.localStorage.setItem('uiSidebarLeft', $scope.Ui.get('uiSidebarLeft') == 'false' || $scope.Ui.get('uiSidebarLeft') == false);
+		}
+
+		if (direction == "NE") {
+			window.localStorage.setItem('uiSidebarRight', $scope.Ui.get('uiSidebarRight') == 'false' || $scope.Ui.get('uiSidebarRight') == false);
+		}
+
+
 		if (direction == "N") {
 			$scope.uiSidebarTop = !$scope.uiSidebarTop;
+			window.localStorage.setItem("uiSidebarTop", $scope.uiSidebarTop);
 		}
 		if (direction == "S") {
 			$scope.uiSidebarBottom = !$scope.uiSidebarBottom;
+			window.localStorage.setItem("uiSidebarBottom", $scope.uiSidebarBottom);
 		}
 
 		dispatchEvent(proxy);
-		if(localDisplayGetFlag("Display_Audio_Enabled") && false) {
+		if(localDisplayGetFlag("Display_Audio_Enabled") == "true" && false) {
 			// Attach the buzzer volume here
 			// TODO: move away and add a configuration switch
-			window.gMeterBuzzerPlayer.setVolumeTo(100);
+			window.gMeterBuzzerPlayer.setVolumeTo(75);
 			window.gMeterBuzzerPlayer.playSinToObject(window.gMeterBuzzerPlayer, 580, 100, 0.15);
 			//window.gMeterBuzzerPlayer.beepTest();
 		}
@@ -294,8 +312,17 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 
 		*/
 
-	$scope.uiSidebarTop = false;
-	$scope.uiSidebarBottom = false;
+	$scope.uiSidebarTop = localDisplayGetFlag("uiSidebarTop")  == "true";
+	$scope.uiSidebarBottom = localDisplayGetFlag("uiSidebarBottom")  == "true";
+
+	window.setTimeout(() => {
+		if (localDisplayGetFlag("uiSidebarLeft") == "true") {
+			$scope.Ui.turnOn("uiSidebarLeft");
+		}
+		if (localDisplayGetFlag("uiSidebarRight") == "true") {
+			$scope.Ui.turnOn("uiSidebarRight");
+		}
+	}, 100);
 
 	$scope.fabEastEnabled = true;
 	$scope.fabWestEnabled = true;
