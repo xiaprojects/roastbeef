@@ -1,0 +1,13 @@
+[Unit]
+Description=Audio Service Sender
+
+[Service]
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/android/audioServiceSender.sh
+KillMode=process
+Restart=always
+User=pi
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

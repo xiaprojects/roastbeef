@@ -1,0 +1,13 @@
+[Unit]
+Description=Audio Service Server
+
+[Service]
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/android/audioServiceServer.sh
+KillMode=process
+Restart=always
+User=pi
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
