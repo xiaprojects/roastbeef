@@ -48,12 +48,63 @@ const URL_SWITCHES_GET = URL_SETTINGS_GET;
 
 const URL_SWITCH_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/switches";
 
+
+function switchBoardHelperGet(switchId) {
+  switch (switchId) {
+    case "AUDIO_STATUS":
+      if (localDisplayGetFlag("Display_Audio_Enabled") == "true") {
+        return SW_STATUS_FINISH_0;
+      } else {
+        return SW_STATUS_UNKNOWN;
+      }
+      break;
+    case "AUDIO_STATUS_GMETER":
+      if (localDisplayGetFlag("Display_Audio_GLoad_Enabled") == "true") {
+        return SW_STATUS_FINISH_0;
+      } else {
+        return SW_STATUS_UNKNOWN;
+      }
+      break;
+    case "AUDIO_STATUS_ALARMS":
+      if (localDisplayGetFlag("Display_Audio_Alerts_Enabled") == "true") {
+        return SW_STATUS_FINISH_0;
+      } else {
+        return SW_STATUS_UNKNOWN;
+      }
+      break;
+
+
+  }
+  return SW_STATUS_FINISH_2;
+}
+
+function switchBoardHelperToggle(switchId){
+  switch (switchId) {
+    case "AUDIO_STATUS":
+      var prevValue = localDisplayGetFlag("Display_Audio_Enabled") == "true";
+      var newValue = !prevValue;
+      window.localStorage.setItem("Display_Audio_Enabled", newValue);
+      break;
+    case "AUDIO_STATUS_GMETER":
+      var prevValue = localDisplayGetFlag("Display_Audio_GLoad_Enabled") == "true";
+      var newValue = !prevValue;
+      window.localStorage.setItem("Display_Audio_GLoad_Enabled", newValue);
+      break;
+    case "AUDIO_STATUS_ALARMS":
+      var prevValue = localDisplayGetFlag("Display_Audio_Alerts_Enabled") == "true";
+      var newValue = !prevValue;
+      window.localStorage.setItem("Display_Audio_Alerts_Enabled", newValue);
+      break;
+  }
+  return switchBoardHelperGet(switchId);
+}
+
 // create our controller function with all necessary logic
 function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
 
   $scope.$parent.helppage = 'plates/switchboard-help.html';
   $scope.switches = [];
-  
+
   function keypadEventListener(event) {
     if (($scope === undefined) || ($scope === null)) {
       removeEventListener("keypad", keypadEventListener);
@@ -66,24 +117,24 @@ function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
       // user is changing screen
       return;
     }
-/*
-    switch (event.key) {
-      case KEYPAD_MAPPING_PREV_MEDIA:
-      case KEYPAD_MAPPING_PREV:
-      case "ArrowUp":
-      case "ArrowLeft":
-        break;
-      case "Enter":
-      case " ":
-      case KEYPAD_MAPPING_TAP:
-        break;
-      case "ArrowDown":
-      case "ArrowRight":
-      case KEYPAD_MAPPING_NEXT_MEDIA:
-      case KEYPAD_MAPPING_NEXT:
-        break;
-    }
-*/
+    /*
+        switch (event.key) {
+          case KEYPAD_MAPPING_PREV_MEDIA:
+          case KEYPAD_MAPPING_PREV:
+          case "ArrowUp":
+          case "ArrowLeft":
+            break;
+          case "Enter":
+          case " ":
+          case KEYPAD_MAPPING_TAP:
+            break;
+          case "ArrowDown":
+          case "ArrowRight":
+          case KEYPAD_MAPPING_NEXT_MEDIA:
+          case KEYPAD_MAPPING_NEXT:
+            break;
+        }
+    */
   }
   $state.get('switchboard').onEnter = function () {
     // everything gets handled correctly by the controller
@@ -144,6 +195,11 @@ function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.switches[index] = updatedItem;
       }, function (response) {
       });
+    switch ($scope.switches[index].Type) {
+      case 5:
+        $scope.switches[index].Status = switchBoardHelperToggle($scope.switches[index].Uri);
+        break;
+    }
   }
 
   /**
@@ -220,6 +276,11 @@ function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
       // Restore Angular Model
       for (index = 0; index < newItems.length; index++) {
         newItems[index]["Edit"] = false;
+        switch (newItems[index].Type) {
+          case 5:
+            newItems[index].Status = switchBoardHelperGet(newItems[index].Uri);
+            break;
+        }
       }
       $scope.switches = newItems;
 

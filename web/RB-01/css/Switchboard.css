@@ -1,0 +1,49 @@
+.switchBoardButton {
+  min-width: 160px;
+  width: 20cqw;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px #acacac;
+  border-radius: 12px;
+  background: linear-gradient(#000000, #000000, #333333, #121212);
+  place-items: center;
+  color: #ffffff;
+  text-align: center;
+  line-height: 8cqmin;
+  font-size: 10cqmin;
+}
+
+.switchBoardButtonSelected {
+  background: linear-gradient(#888888, #888888, #afafff, #9999ff);
+}
+
+.switchBoardButtonLight {
+  display: block;
+  min-height: 24px;
+  min-width: 100px;
+  border: 1px solid #acacac;
+  border-radius: 12px;
+  margin-bottom: 4px;
+}
+
+.switchButtonStatus0 {
+  background: #7f7f7f;
+  
+}
+
+.switchButtonStatus1 {
+  background: #0000ff;
+}
+
+.switchButtonStatus2 {
+  background: #00ff00;
+
+}
+
+.switchButtonStatus3 {
+  background: #ffff00;
+}
+
+.switchButtonStatus4 {
+  background: #ff0000;
+}
