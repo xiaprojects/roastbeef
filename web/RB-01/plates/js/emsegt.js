@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -182,30 +184,51 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 	}
 
 	function emsUpdated(emsData) {
-		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'EmsegtCtrl' && $scope.$parent.$parent.hasOwnProperty("radarSocket") == false)) {
+		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'EmsegtCtrl' && $scope.$parent.$parent.hasOwnProperty("emsSocket") == false)) {
 			removeEventListener("EMSUpdated", emsUpdated);
 			return; // we are getting called once after clicking away from the status page
 		}
+
+		if($state.current.controller != 'EmsegtCtrl' && $scope.Ui.get('uiSidebarLeft') == false)
+		{
+			return;
+		}
+
 
 		var changed = 0;
 		for (var index = 0; index < $scope.bars.length; index++) {
 			if (emsData.detail.hasOwnProperty($scope.bars[index].sensor)) {
 				var newValue = emsData.detail[$scope.bars[index].sensor];
+				if(newValue != $scope.bars[index].value){
 				changed += barApplyValue(index, newValue);
+				}
 			}
-		}
-		if (changed > 0) {
-			$scope.$apply();
 		}
 
 		if (emsData.detail.hasOwnProperty("oiltemperature")) {
-			$scope.oilTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["oiltemperature"]));
+			const updatedValue = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["oiltemperature"]));
+			if($scope.oilTemperature != updatedValue){
+			$scope.oilTemperature = updatedValue;
+				changed++;
+			}
 		}
 		if (emsData.detail.hasOwnProperty("outsidetemperature")) {
-			$scope.outsideTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["outsidetemperature"]));
+			const updatedValue = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["outsidetemperature"]));
+			if($scope.outsideTemperature != updatedValue){
+			$scope.outsideTemperature = updatedValue;
+				changed++;
+			}
 		}
 		if (emsData.detail.hasOwnProperty("enginerpm")) {
-			$scope.engineRpm = parseInt(emsData.detail["enginerpm"]);
+			const updatedValue = parseInt(emsData.detail["enginerpm"]);
+			if($scope.engineRpm != updatedValue){
+			$scope.engineRpm = updatedValue;
+				changed++;
+			}			
+		}
+
+		if (changed > 0) {
+			$scope.$apply();
 		}
 	};
 

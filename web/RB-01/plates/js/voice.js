@@ -23,7 +23,7 @@
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
  * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
- *
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
  * Please join Discord community

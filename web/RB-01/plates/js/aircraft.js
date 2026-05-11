@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -65,6 +67,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     });
 
     $scope.mappingData = {
+        "ota": { "section": 1, "row": 7 },
         "pilot": { "section": 1, "row": 0 },
         "propellerTime": { "section": 0, "row": 0 },
         "engineTime": { "section": 0, "row": 1 },
@@ -83,7 +86,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.items = [[
         { "label": "Propeller", "value": "", "color": "#4444ff","unit":"m" },
         { "label": "Engine", "value": "", "color": "#4444ff","unit":"m" },
-        { "label": "Fuel L", "value": "35L", "color": "#ff7c00", "href":"#/ems","unit":"" },
+        { "label": "Fuel L", "value": "0L", "color": "#ff0000", "href":"#/ems","unit":"L" },
         { "label": "", "value": null, "color": "transparent","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
@@ -97,12 +100,12 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     ], [
         { "label": "Pilot", "value": "", "color": "#007c00","unit":"" },
         { "label": "CPU", "value": "---", "color": "#007c00", "href":"#/charts","unit":"°C" },
-        { "label": "Fuel R", "value": "90L", "color": "#007c00", "href":"#/ems","unit":"" },
+        { "label": "Fuel R", "value": "0L", "color": "#ff0000", "href":"#/ems","unit":"L" },
         { "label": "", "value": null, "color": "transparent","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
-        { "label": "Trim", "value": "TO", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
-        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "Trim", "value": "--", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
+        { "label": "Update", "value": "OFFLINE", "color": "#7c7c7c", "href":"#/ota","unit":"" },
 
 
         { "label": "Cloud", "value": "OFFLINE", "color": "#ff0000","unit":"" },
@@ -114,11 +117,18 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     $scope.applyNewData = function(newData){
+        var requiredRefresh = 0;
         Object.keys(newData).forEach(key => {
             if($scope.mappingData.hasOwnProperty(key)==true){
-                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value=newData[key] + $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].unit;
+                const prevValue =  $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value;
+                const newValue = newData[key] + $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].unit;
+                if(prevValue != newValue){
+                    requiredRefresh++;
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value=newValue;
+                }
             }
         });
+        return requiredRefresh;
     }
 
     /*****************************************************
@@ -141,17 +151,25 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $scope.situation = {};
     $scope.updateSituation = (situation) => {
+        const requiredRefresh = false;
+        if(requiredRefresh == true){
         $scope.$apply(); // trigger any needed refreshing of data
+        }
     };
 
     $scope.status = {};
     $scope.updateStatus = (status) => {
-
-        $scope.status = status;
-        $scope.status["propellerTime"] = Number.parseFloat((status.Uptime/60000)).toFixed(0);
+        var requiredRefresh = $scope.applyNewData(status);
+        // TODO: move from status.Uptime to EMS Engine Status
+        const newValue = Number.parseFloat((status.Uptime/60000)).toFixed(0);
+        if($scope.status["propellerTime"] != newValue){
+        $scope.status["propellerTime"] = newValue;
         $scope.status["engineTime"] = Number.parseFloat((status.Uptime/60000)).toFixed(0);
-        $scope.applyNewData(status);
+            requiredRefresh++;
+        }
+        if(requiredRefresh > 0){
         $scope.$apply(); // trigger any needed refreshing of data
+        }
     };
     // ************
     function statusUpdateEventListener(event) {
@@ -160,7 +178,6 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
             return; // we are getting called once after clicking away from the status page
         }
         var status = event.detail;
-        $scope.status = status;
         $scope.updateStatus(status);
     }
     // ************
@@ -170,8 +187,8 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
             return; // we are getting called once after clicking away from the status page
         }
         var situation = event.detail;
-        $scope.situation = situation;
         $scope.updateSituation(situation);
+        $scope.situation = situation;
     }
 
     $scope.goTo = function(item) {
@@ -180,14 +197,15 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     }
 
-
+    $scope.emsData = {};
+    $scope.emsDataHasArrived = 0;
     function emsUpdated(emsData) {
         if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'AircraftCtrl')) {
             removeEventListener("EMSUpdated", emsUpdated);
             return; // we are getting called once after clicking away from the status page
         }
 
-        if (emsData.detail.hasOwnProperty("gearnose")) {
+        if (emsData.detail.hasOwnProperty("gearnose") && emsData.detail["gearnose"] != $scope.emsData["gearnose"]) {
             if (emsData.detail["gearnose"] == 0) {
                 $scope.gearnoseBackgroundColor = "#ff0000";
             } else {
@@ -195,7 +213,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
             }
         }
 
-        if (emsData.detail.hasOwnProperty("gearleft")) {
+        if (emsData.detail.hasOwnProperty("gearleft") && emsData.detail["gearnose"] != $scope.emsData["gearleft"]) {
             if (emsData.detail["gearleft"] == 0) {
                 $scope.gearleftBackgroundColor = "#ff0000";
             } else {
@@ -203,7 +221,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
             }
         }        
 
-        if (emsData.detail.hasOwnProperty("gearright")) {
+        if (emsData.detail.hasOwnProperty("gearright") && emsData.detail["gearnose"] != $scope.emsData["gearright"]) {
             if (emsData.detail["gearright"] == 0) {
                 $scope.gearrightBackgroundColor = "#ff0000";
             } else {
@@ -211,7 +229,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
             }
         }
 
-        if (emsData.detail.hasOwnProperty("clouduploaded")) {
+        if (emsData.detail.hasOwnProperty("clouduploaded") && emsData.detail["gearnose"] != $scope.emsData["clouduploaded"]) {
             const key = "Cloud";
 
             if (emsData.detail["clouduploaded"] > 0) {
@@ -222,11 +240,13 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
                 $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#ff0000";
             }
         }
-        if(true){
+        if($scope.emsDataHasArrived == 0){
             const key = "EMS";
             $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = "OK";
             $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#007c00";
+            $scope.emsDataHasArrived = 1;
         }
+        $scope.emsData = emsData.detail;
     };
 
 	addEventListener("EMSUpdated", emsUpdated);
@@ -240,4 +260,29 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.applyNewData(window.aircraftData);
         $scope.name = window.aircraftData.name;
     }
+
+
+    $http.get(URL_OTA_REMOTE_GET).then(function (response) {
+        var db = angular.fromJson(response.data);
+        if (db === undefined || Object.keys(db).length == 0) {
+            return;
+        }
+        var updatesCount = 0;
+        db.forEach(element => {
+            if(element.version>element.installed){
+                updatesCount++;
+            }
+        });
+
+        const key = "ota";
+        if(updatesCount>0){
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = "INSTALL";
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#ff7c00";
+        } else {
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = "LATEST";
+                $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = "#007c00";
+        }
+
+    });
+
 };

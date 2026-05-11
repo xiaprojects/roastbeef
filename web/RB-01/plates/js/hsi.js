@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -83,11 +85,21 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
      */
 
     addEventListener("SituationUpdated", SituationUpdated);
+    $scope.hsiDataRequestedRefresh = 0;
     function SituationUpdated(event) {
         if (($scope === undefined) || ($scope === null) || ($state.current.controller != $scope.controllerName)) {
             removeEventListener("SituationUpdated", SituationUpdated);
             return; // we are getting called once after clicking away from the status page
         }
+
+        if($scope.situation.GPSTrueCourse == event.detail.GPSTrueCourse) {
+            return;
+        }
+        var now = Date.now();
+        if (now - $scope.hsiDataRequestedRefresh < 1000) {
+            return;
+        }
+        $scope.hsiDataRequestedRefresh = now;
 
         $scope.loadSituationInHSI(event.detail)
     }

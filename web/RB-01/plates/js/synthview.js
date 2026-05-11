@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -284,12 +286,17 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $scope.AHRSCageAndCalibrate = function () {
+        const requestedCage = true;
+        if(requestedCage==true){
         window.setTimeout(function () {
             $scope.AHRSCage();
         }, 5000);
+        }
+        if(requestedCalibration==true){
         window.setTimeout(function () {
             $scope.AHRSCalibrate();
         }, 100);
+        }
 
         $scope.synthviewFrameReset();
     }
@@ -698,8 +705,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         attachToContainer(divName) {
             const container = document.getElementById(divName);
             this.renderer.setSize(container.clientWidth, container.clientHeight);
-            this.renderer.domElement.style.width = "100cqw";
-            this.renderer.domElement.style.height = "100cqh";
+            //this.renderer.domElement.style.width = "100cqw";
+            //this.renderer.domElement.style.height = "100cqh";
             container.appendChild(this.renderer.domElement);
         }
 
@@ -1147,6 +1154,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         for (var i = resources.itemIndexStartingTraffic; i < resources.items.length; i++) {
             var currentItem = resources.items[i];
+            if(currentItem === undefined){
+                continue;
+            }
             if (currentItem.name == "" + element.Icao_addr) {
                 founded = i;
                 break;

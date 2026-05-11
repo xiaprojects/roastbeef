@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -649,6 +651,20 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         {
             return;
         }
+        // Performance improvements
+        const MAX_PLAYBACK_ITEMS = 20;
+        var shortList = [];
+        for(var reverseIndex =  list.length - 1; reverseIndex>=0; reverseIndex--){
+            if(list[reverseIndex].Name.startsWith("vrin")){
+                shortList.push(list[reverseIndex]);
+                if(shortList.length>=MAX_PLAYBACK_ITEMS){
+                    break;
+                }
+            }
+        }
+        list = shortList;
+
+        list.sort((a, b) => new Date(a.ModTime) - new Date(b.ModTime));
         $scope.playbackCacheCount = list.length;
         // {"Name":"radio_20240607_051225_130000000.mp3","Source":"RTL","Path":"/playback/radio_20240607_051225_130000000.mp3","Size":12380,"ModTime":"2024-06-07T06:12:30.20311712+01:00","Frequency":""}
         var listParsed = [];

@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -119,6 +121,8 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		return angle * Math.PI / 180;
 	}
 
+	$scope.radarUpdatedRequest = 0;
+
 	function ownSituationUpdated(event) {
 
 		if (($scope === undefined) || ($scope === null) || ($state.current.controller != 'RadarCtrl' && $scope.$parent.$parent.hasOwnProperty("radarSocket") == false )) {
@@ -126,8 +130,13 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 			return; // we are getting called once after clicking away from the status page
 		}
 
+		var now = Date.now();
+		if (now - $scope.radarUpdatedRequest >= 1000) {
+			$scope.radarUpdatedRequest = now;
 		ownSituation(event.detail);
 		if ($scope.radar) $scope.radar.update($scope);
+		}
+
 	}
 
 	// get situation data and turn radar
@@ -517,6 +526,9 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		var boardtemp = globalStatus.CPUTemp;
 		if (boardtemp != undefined) {
 			$scope.CPUTemp = boardtemp.toFixed(1);
+		}
+		if ($scope.radar == null || $scope.radar.canvas == null) {
+			$scope.radar = new RadarRenderer($scope.locationId, $scope, $http);
 		}
 		if ($scope.radar) $scope.radar.update($scope);
 	}

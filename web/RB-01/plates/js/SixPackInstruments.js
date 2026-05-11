@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -100,6 +102,11 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
 
 
   $scope.updateSituation = (situation) => {
+    const newValue = Number.parseFloat(situation.AHRSGLoad).toFixed(1);
+    if($scope.Speed.speed == newValue){
+      return;
+    }
+
     $scope.Speed.speed = Number.parseFloat(situation.AHRSGLoad).toFixed(1);
     $scope.Speed.label = Number.parseFloat(situation.AHRSGLoadMax).toFixed(1)+String.fromCodePoint(9650);
     $scope.Speed.unit = Number.parseFloat(situation.AHRSGLoadMin).toFixed(1)+String.fromCodePoint(9660);
@@ -110,7 +117,7 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
 
     $scope.Speed.speedDegree = ((situation.AHRSGLoad-$scope.Speed.minSpeed) / ratio + $scope.Speed.startSpeedDegree + 90) + "deg";
 
-    if(localDisplayGetFlag("Display_Audio_GLoad_Enabled")) {
+    if(localDisplayGetFlag("Display_Audio_GLoad_Enabled") == "true") {
       // Audio Play on Service
     }
     else {
@@ -171,7 +178,7 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
   }
 
   $scope.updateSituation = (situation) => {
-    const GPSGroundSpeedIsInKt = situation[$scope.Speed.sensorType];
+    const GPSGroundSpeedIsInKt = Number.parseFloat(situation[$scope.Speed.sensorType]).toFixed(1);
     if($scope.Speed.raw == GPSGroundSpeedIsInKt) {
       return;
     } else {
@@ -292,6 +299,7 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
   }
 
   $scope.updateSituation = (situation) => {
+    // Refresh filtering is already applied before invoking this method
     $scope.Attitude.pitchTop = (situation.AHRSPitch) + "%";
     $scope.Attitude.pitchOrigin = "50% " + situation.AHRSPitch + "%";
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
@@ -317,10 +325,15 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
     "AutoQNH": true,
     "altimeterDegreeM": "90deg",
     "altimeterDegreeC": "90deg",
+    "BaroPressureAltitude":-1
   };
 
   $scope.updateSituation = (situation) => {
     const altitude1013 = situation.BaroPressureAltitude;
+    if($scope.BaroPressureAltitude == altitude1013){
+      return;
+    }
+    $scope.BaroPressureAltitude = altitude1013;
     $scope.Altimeter.AutoQNH = situation.AutoQNH;
     $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude+27*(situation.QNH-1013.25));
     $scope.Altimeter.GPSAltitudeMSL = parseInt(situation.GPSAltitudeMSL);
@@ -358,10 +371,15 @@ function SixPackInstrumentTurnslip($rootScope, $scope, $state, $http, $interval)
   $scope.TurnSlip = {
     "turnDegree": "0deg",
     "ballLeft": "46%",
+    "AHRSSlipSkid":0,
     "ballTop": "66%"
   };
 
   $scope.updateSituation = (situation) => {
+    if($scope.AHRSSlipSkid == situation.AHRSSlipSkid){
+      return;
+    }
+    $scope.AHRSSlipSkid = situation.AHRSSlipSkid;
     $scope.TurnSlip.turnDegree = situation.AHRSTurnRate + "deg";
     var skid = -(situation.AHRSSlipSkid);
     if (skid > 30) {
@@ -390,25 +408,31 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
 
 
   $scope.updateSituation = (situation) => {
+
+    var newHeading = 0;
     switch ($scope.Heading.sourceName) {
       case "GPS":
         if (situation.GPSFixQuality > 0) {
-          $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
+          newHeading = parseInt(situation.GPSTrueCourse);
         } else {
           $scope.Heading.sourceName = "GYRO";
-          $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+          newHeading = parseInt(situation.AHRSGyroHeading);
         }
         break;
       case "GYRO":
-        $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+        newHeading = parseInt(situation.AHRSGyroHeading);
         break;
       case "MAG":
-        $scope.Heading.heading = parseInt(situation.AHRSMagHeading);
+        newHeading = parseInt(situation.AHRSMagHeading);
         break;
       default:
-        $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
+        newHeading = parseInt(situation.AHRSGyroHeading);
         break;
     }
+    if($scope.Heading.heading == newHeading){
+      return;
+    }
+    $scope.Heading.heading = newHeading;
   };
   $scope.fabClick = (direction, item, browserEvent) => {
     if (direction == "C") {
@@ -432,10 +456,15 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
 function SixPackInstrumentVariometer($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "variometer");
   $scope.Variometer = {
+    "BaroVerticalSpeed": 0,
     "varioDegree": "0deg"
   };
 
   $scope.updateSituation = (situation) => {
+    if($scope.BaroVerticalSpeed == situation.BaroVerticalSpeed){
+      return;
+    }
+    $scope.BaroVerticalSpeed = situation.BaroVerticalSpeed;
     $scope.Variometer.varioDegree = (situation.BaroVerticalSpeed) / 2000 * 180 + "deg";
   };
   if(window.situation !== undefined) {
@@ -523,8 +552,8 @@ function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
     // Service is already protecting the update
     const requireRefresh = true;
     if (requireRefresh == true) {
-      $scope.situation = situation;
       $scope.updateSituation(situation);
+      $scope.situation = situation;
       $scope.$apply(); // trigger any needed refreshing of data
     }
   }
