@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -30,7 +32,7 @@
  */
 
 var URL_EMS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/getEMS";
-var URL_EMS_WS           = WS_HOST_PROTOCOL + URL_HOST_BASE + "/ems"
+var URL_EMS_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/ems"
 
 
 EMSService.prototype = {
@@ -63,12 +65,30 @@ function EMSService($scope, $http) {
         $scope.emsSocket.onerror = function (msg) {
         };
 
+        $scope.emsData = {};
+        $scope.emsDataRequestedRefresh = 0;
+        $scope.emsDataRequestedBusy = false;
         $scope.emsSocket.onmessage = function (msg) {
             if (($scope === undefined) || ($scope === null))
                 return; // we are getting called once after clicking away from the page
             var k = JSON.parse(msg.data);
-            const proxy = new CustomEvent("EMSUpdated", { detail: k });
-            dispatchEvent(proxy);
+
+            for (var key in k) {
+                if (k.hasOwnProperty(key)) {
+                    $scope.emsData[key] = k[key];
+                }
+            }
+            var now = Date.now();
+            if (now - $scope.emsDataRequestedRefresh >= 300 && $scope.emsDataRequestedBusy == false) {
+                $scope.emsDataRequestedRefresh = now;
+                $scope.emsDataRequestedBusy = true;
+                requestAnimationFrame(() => {
+                    $scope.emsDataRequestedBusy = false;
+                    const proxy = new CustomEvent("EMSUpdated", { detail: $scope.emsData });
+                    $scope.emsData = {};
+                    dispatchEvent(proxy);
+                });
+            }
         };
     }
     connect($scope);

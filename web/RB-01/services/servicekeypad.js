@@ -21,7 +21,9 @@
  * 03 -> Display with Autopilot, ADSB, Radio, Flight Computer
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
- * 06 -> Display with Android
+ * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -327,7 +329,15 @@ function KeypadService($scope, $http, $state) {
             else {
                 // in case we are in a unknown navigation place, we brings the pilot to the home
                 // Temporary workaround to manage direct navigation not in current display pane
-                //document.location = "#/";
+                switch(event.key){
+                    case "SPEAKING":
+                        break;
+                    case "VOICE":
+                        break;
+                    default:
+                document.location = "#/";
+                    break;
+                }
             }
         }
     });

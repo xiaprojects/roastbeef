@@ -22,6 +22,8 @@
  * 04 -> Display with EMS: Engine monitoring system
  * 05 -> Display with Stratux BLE Traffic
  * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
  *
  * Community edition will be free for all builders and personal use as defined by the licensing model
  * Dual licensing for commercial agreement is available
@@ -40,7 +42,6 @@ SituationService.prototype = {
 };
 
 
-let SERVICE_SITUATION_MAX_COUNT = 10
 
 /**
  * SituationService Service Class
@@ -80,25 +81,38 @@ function SituationService($scope, $http) {
                 $scope.situationByPilot[element] = event.detail[element];
             });
             // Trigger the update
-            $scope.sendSituationTimer = SERVICE_SITUATION_MAX_COUNT;
+            $scope.sendSituationTimer = 0;
         }
 
         addEventListener("SituationUpdatedByPilot", situationUpdatedByPilot);
 
         $scope.sendSituationTimer = 0;
+        $scope.sendSituationBusy = false;
         $scope.situationSocket.onmessage = function (msg) {
             if (($scope === undefined) || ($scope === null))
                 return; // we are getting called once after clicking away from the page
             var situation = angular.fromJson(msg.data);
-            $scope.sendSituationTimer++;
+
+            var now = Date.now();
+            if (now - $scope.sendSituationTimer >= 200 && $scope.sendSituationBusy == false) {
+                $scope.sendSituationBusy = true;
+                $scope.sendSituationTimer = now;
+                requestAnimationFrame(() => {
+                    $scope.sendSituationBusy = false;
+                    $scope.situationSocket.onmessageTick(situation);
+                });
+            }
+        };
+
+        $scope.situationSocket.onmessageTick = function (situation) {
+
             // Filter to avoid blow up CPU
             const oldSituation = window.situation;
             const newSituation = situation;
             const ahrsThreshold = 1;
             const altitudeThreshold = 50 / 3.2808;
-            const requireRefresh = SERVICE_SITUATION_MAX_COUNT < $scope.sendSituationTimer || globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
             if (requireRefresh == true) {
-                $scope.sendSituationTimer = 0;
 
                 // RB-Addons
                 if (
@@ -131,7 +145,7 @@ function SituationService($scope, $http) {
             // GMeter Buzzer Play
             // TODO: flight test and configuration switch
             // Temporary  moved inside the G-Meter
-            if(localDisplayGetFlag("Display_Audio_GLoad_Enabled")) {
+            if(localDisplayGetFlag("Display_Audio_GLoad_Enabled") == "true") {
                 window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
             }
         };
@@ -205,17 +219,19 @@ function SituationService($scope, $http) {
     
             situation.BaroVerticalSpeed = Math.sin(radians) * 2000.0;
             //situation.GPSAltitudeMSL = 5000 + Math.sin(radians) * 5000.0;
-            situation.GPSAltitudeMSL = 2000;
+            situation.GPSAltitudeMSL = Math.sin(radians) * 1000.0 + 2000;
+            situation.AHRSGLoad = Math.sin(radians) * 4.0 + 1.0;
             situation.AHRSRoll = Math.sin(radians) * 90.0;
             situation.AHRSGyroHeading = Math.sin(radians) * 360.0;
             situation.GPSGroundSpeed = 180+Math.sin(radians) * 180.0;
             situation.AHRSTurnRate = Math.sin(radians) * 45.0
+            situation.AHRSSlipSkid = Math.sin(radians) * 15.0
+            
     
             simulatorSeed++;
+
+            $scope.situationSocket.onmessage({data:situation})
     
-    
-            const proxy = new CustomEvent("SituationUpdated", { detail: situation });
-            dispatchEvent(proxy);
         }, 100);
     }
 }

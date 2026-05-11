@@ -1,9 +1,41 @@
+/**
+ * This file is part of RB.
+ *
+ * Copyright (C) 2024 XIAPROJECTS SRL
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+ * This source is part of the project RB:
+ * 01 -> Display with Synthetic vision, Autopilot and ADSB
+ * 02 -> Display with SixPack
+ * 03 -> Display with Autopilot, ADSB, Radio, Flight Computer
+ * 04 -> Display with EMS: Engine monitoring system
+ * 05 -> Display with Stratux BLE Traffic
+ * 06 -> Display with Android 6.25" 7" 8" 10" 10.2"
+ * 07 -> Display with Stratux BLE Traffic composed by RB-05 + RB-03 in the same box
+ * 08 -> Voice Recognition Box with LLM and Natural speaking and Voice Recorder
+ *
+ * Community edition will be free for all builders and personal use as defined by the licensing model
+ * Dual licensing for commercial agreement is available
+ * Please join Discord community
+ *
+ */
 
 // Shared instance that can be used across screens
 if(window.gMeterBuzzerPlayer === undefined || window.gMeterBuzzerPlayer === null){
 window.gMeterBuzzerPlayer = new AudioSinusoidPlayer();
-    if(localDisplayGetFlag("Display_Audio_Enabled")) {
-        window.gMeterBuzzerPlayer.setVolumeTo(100);
+    if(localDisplayGetFlag("Display_Audio_Enabled") == "true") {
+        window.gMeterBuzzerPlayer.setVolumeTo(75);
     }
 }
 
@@ -20,9 +52,9 @@ function AudioSinusoidPlayer() {
     this.volume = 0;
     this.seconds = 0.20;
     this.waitFor = 300;
-    this.quietRange = 0.3; // G: 0.7<-G->1.3 will be quiet
-    this.max = 5;
-    this.min = -2;
+    this.quietRange = 1.0; // G: 0.0<-G->2.0 will be quiet
+    this.max = 6;
+    this.min = -3;
     this.maxHz = 1320;
     this.minHz = 220;
     this.lastPlayTime = new Date();
