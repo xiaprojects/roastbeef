@@ -1,5 +1,8 @@
 <div ui-content-for="title">Bottom</div>
-<div style="margin: 0 auto;text-align: center;">
-    <div class="rb-button-switch" ng-repeat="item in items" ng-click="click(item)">
-        <div class="rb-button-switch-light" style="background-color: {{item.color}};">&nbsp;</div>{{item.value}}</div>
+<div style="display: inline-flex;flex-wrap: wrap;">
+    <span class="rb-button-switch" ng-repeat="item in items" ng-click="click(item)">
+        <span class="rb-button-switch-light" style="background-color: {{item.color}};">&nbsp;</span>
+        <span >{{item.value}}</span>
+        <span style="font-size: 2cqmin;white-space: pre-line;">{{item.title}}</span>        
+    </span>
 </div>

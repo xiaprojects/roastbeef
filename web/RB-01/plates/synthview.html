@@ -1,10 +1,10 @@
 <div ui-content-for="title">Syntetic View</div>
 <div id="synthviewFrame" name="synthviewFrame"
-  style="position: fixed;    right: 0;    bottom: 0;    min-width: 100%;    min-height: 100%; background-color: black;">
+  style="position: fixed; width: 100cqw;height: 100cqh;">
 </div>
 
 <div ng-show="remote.reset==false" id="ahrs_display"
-  style="position: fixed;width: 100vh;  left: 50%;transform: translate(-50%, -2%);pointer-events: none;cursor: not-allowed;">
+  style="position: fixed;width: 100cqw;height: 100cqh;  left: 50%;transform: translate(-50%, 0%);pointer-events: none;cursor: not-allowed;">
 </div>
 <div ng-show="remote.reset==false" class="SynthView-side-left">{{pilotGPSGroundSpeed}}
   <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSGroundSpeedUnit}}</div>

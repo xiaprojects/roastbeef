@@ -35,42 +35,42 @@
         <div ng-if="radio.keypadVisible" style="margin-bottom: 4px;" id="radio_keypad_{{radio.index}}">
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,1)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==6">1</a>
                 <a ng-click="digitKeypad(radio,2)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==6">2</a>
                 <a ng-click="digitKeypad(radio,3)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==6">3</a>
             </div>
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,4)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">4</a>
                 <a ng-click="digitKeypad(radio,5)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1">5</a>
                 <a ng-click="digitKeypad(radio,6)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">6</a>
             </div>
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,7)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">7</a>
                 <a ng-click="digitKeypad(radio,8)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">8</a>
                 <a ng-click="digitKeypad(radio,9)" class="btn btn-default"
-                    style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                    style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">9</a>
             </div>
             <div class="text-center">
-                <a ng-click="digitKeypad(radio,0)" class="btn " style="width: 30%;margin: 1px; font-size: 5cqmin;"></a>
-                <a ng-click="digitKeypad(radio,0)" class="btn btn-default" style="width: 30%;margin: 1px; font-size: 5cqmin;"
+                <a ng-click="digitKeypad(radio,0)" class="btn " style="width: 30%;margin: 1px; font-size: 8cqmin;"></a>
+                <a ng-click="digitKeypad(radio,0)" class="btn btn-default" style="width: 30%;margin: 1px; font-size: 8cqmin;"
                     ng-disabled="radio.keypadDigitIndex==1">0</a>
-                <a ng-click="digitKeypad(radio,0)" class="btn " style="width: 30%;margin: 1px; font-size: 5cqmin;"></a>
+                <a ng-click="digitKeypad(radio,0)" class="btn " style="width: 30%;margin: 1px; font-size: 8cqmin;"></a>
             </div>
         </div>
         <table ng-if="radio.searchEnabled" style="width:100%;margin: 0px;padding:0px;">
@@ -137,7 +137,7 @@
                             {{playback.Duration}}s
                         </td>
                         <td class="text-center" style="margin: 0px;padding:0px;">
-                            <button class="btn-success">REPLAY</button>
+                            <button class="btn-success" style="font-size:8cqmin;">REPLAY</button>
                             <!-- Download button does not really help the Pilot -->
                             <!-- &nbsp;
                             <a ng-click="shareAudio(playback.Path)" class="btn"><i class="fa fa-download"></i>

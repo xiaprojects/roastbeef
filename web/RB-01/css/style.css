@@ -71,6 +71,11 @@ body {
   border-width: 0px;
 }
 
+.navbar-absolute-top,
+.navbar-absolute-bottom {
+  text-align: center;
+}
+
 body {
 
   -webkit-user-select: none;
@@ -134,13 +139,10 @@ body {
 .rb-button-switch {
   border-color: lightgray;
   color: white;
-  text-align: center;
   font-size: 5cqmin;
-  padding-left: 0;
-  padding-right: 1%;
+  line-height: 1;
   border-style: solid;
-  border-width: 1%;
-  display: inline-block;
+  display: flex;
   border-radius: 5%;
   margin-right: 4px;
 }
@@ -148,7 +150,6 @@ body {
 .rb-button-switch-light {
   height: 100%;
   width: 16px;
-  display: inline-block;
 }
 
 .fabNavigation {

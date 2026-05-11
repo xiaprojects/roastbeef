@@ -44,3 +44,17 @@
         margin-left: 11%;
     }
 }
+
+/* RB-06 with Portrait sidebad display is 480x480 */
+@container (aspect-ratio < 1) {
+    .ems_egt_oil_intrument {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+
+    .ems_egt_intrument {
+        max-height: 70cqh;
+    }
+}

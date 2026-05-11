@@ -50,7 +50,7 @@
 
 
 .speed-unit {
-  top: 78%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -59,6 +59,8 @@
   font-size: 8cqw;
   font-weight: normal;
   color: white;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 1cqmin black;    
 }
 
 .speed-round-background {
@@ -78,7 +80,8 @@
   font-size: 30cqmin;
   font-weight: bolder;
   color: white;
-  text-shadow: 0px 0px 5px #000000;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2cqmin black;
   line-height: 1;
   border-radius: 10%;
 }
@@ -95,4 +98,6 @@
   font-weight: bolder;
   color: white;
   white-space: nowrap;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 1cqmin black;  
 }
