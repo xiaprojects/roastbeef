@@ -5,9 +5,11 @@
 # Uncomment some or all of these to enable the optional hardware interfaces
 dtparam=i2c_arm=on
 #dtparam=i2s=on
+# Enable EMS
 #dtparam=spi=on
 
 # Enable audio (loads snd_bcm2835)
+# Default RB-01 uses external USB Card
 #dtparam=audio=on
 
 # Additional overlays and parameters are documented
@@ -23,12 +25,16 @@ display_auto_detect=1
 auto_initramfs=1
 
 # Enable DRM VC4 V3D driver
-dtoverlay=vc4-kms-v3d
-max_framebuffers=2
+# Disable display audio because we are routing using USB stick
+dtoverlay=vc4-kms-v3d,noaudio
+# Number of connected displays:
+# None => Auto
+# 0 => release memory
+#max_framebuffers=2
 
 # Don't have the firmware create an initial video= setting in cmdline.txt.
 # Use the kernel's default instead.
-disable_fw_kms_setup=1
+#disable_fw_kms_setup=1
 
 # Run in 64-bit mode
 arm_64bit=1
@@ -57,7 +63,30 @@ dtparam=i2c1_baudrate=400000
 dtparam=i2c_arm_baudrate=400000
 # Enable the second UART
 dtparam=uart0=on
+# Enable the third UART
+dtoverlay=uart2-pi5
+
+# EMS Enable SPI with external CS
+dtoverlay=spi0-0cs
+# EMS Enable SPI with integrated (and external!) CS
+dtoverlay=spi1-1cs
+
+# Enable the second I2C interface
+# Use cases:
+# CO sensor
+# Pitot
+# EMS-ADC
+dtparam=i2c_vc=on
+
 # If you have USB heavy load like 8" Display you shall enable this
 # Warning: check temperatures and cables, cables are very important
 # Enabling this may involves into glitches on the SD Card! Be careful
 # usb_max_current_enable=1
+
+# RTC Exernal battery rechargeable
+#dtparam=rtc_bbat_vchg=3000000
+
+# Waydroid integration
+# Add psi=1 into cmdline.txt
+# Rollback to the slow kernel v8
+#kernel=kernel8.img

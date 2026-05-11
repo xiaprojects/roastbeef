@@ -35,6 +35,9 @@ nmcli connection modify 'AccessPoint' 802-11-wireless.channel 44
 nmcli connection modify 'AccessPoint' 802-11-wireless.channel-width 20
 nmcli con up AccessPoint
 
+# Ethernet in the Aircraft as primary backbone
+
+
 
 # If you have Internet WiFi in your Aircraft here is the right place to enable it
 # raspi-config nonint do_wifi_setup "MyNetwork" "MyPassword"
@@ -165,6 +168,10 @@ systemctl disable cloud-init-network.service
 systemctl disable cloud-config.service
 # Trixie will use directly Network manager
 systemctl disable dnsmasq.service
+# In case you need to manually enable the radio with
+# rfkill unblock 0
+# systemctl mask systemd-rfkill
+
 # Disable swap and others
 swapoff -a
 systemctl disable rpi-setup-loop@var-swap.service
@@ -264,3 +271,6 @@ chown -R $USER:$USER /opt/stratux/
 # Join Discord Channel for the script
 # Create EU SDCard with Maps and detailed elevations:
 # Join Discord Channel for the script
+
+# RB-06 Support
+loginctl enable-linger pi
