@@ -55,18 +55,18 @@
       "UUIDService": "FFE0",
       "UUIDGatt": "FFE1",
       "Characteristic": {}
+    },
+    {
+      "Capability": 8,
+      "UUIDService": "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",
+      "UUIDGatt": "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",
+      "Characteristic": {}
     }
-    ,
-    {                                                                                                                              
-      "Capability": 8,                                                                                                             
-      "UUIDService": "6E400001-B5A3-F393-E0A9-E50E24DCCA9E",                                                                       
-      "UUIDGatt": "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",                                                                          
-      "Characteristic": {}                                                                                                         
-    }                                                                                                                              
   ],
   "DisplayTrafficSource": false,
   "DEBUG": false,
-  "ReplayLog": false,
+  "ReplayLog": true,
+  "ReplayLogPath": "/var/log",
   "TraceLog": false,
   "AHRSLog": false,
   "PersistentLogging": false,
@@ -76,20 +76,20 @@
     0
   ],
   "SensorQuaternion": [
-    0.009490568388145876,
-    0.0002591196954326215,
-    0.9995824318285395,
-    -0.027291462924272952
+    0.0005732474392044685,
+    -0.12840998546971166,
+    -0.004427193557406954,
+    -0.991711120722673
   ],
   "C": [
-    -0.015947752311777093,
-    -0.045821710867641224,
-    -0.8385119174779504
+    0.2301,
+    0.0078,
+    0.8735999999999999
   ],
   "D": [
-    -2.457960753196814,
-    2.4373607593005158,
-    -0.4849391155735954
+    -6.4,
+    -0.1391304347826087,
+    -0.34782608695652173
   ],
   "PPM": 0,
   "Dump1090Gain": 37.2,
@@ -97,7 +97,7 @@
   "OwnshipModeS": "F00000",
   "WatchList": "",
   "DeveloperMode": true,
-  "GLimits": "6 -3",
+  "GLimits": "-3 6",
   "StaticIps": [],
   "WiFiCountry": "",
   "WiFiSSID": "Stratux",
@@ -138,34 +138,34 @@
   "Audio_Enabled": true,
   "Camera_Enabled": true,
   "Radio_Enabled": true,
-  "Radio": [                                                                                                                       
-    {                                                                                                                              
-      "Name": "KRT2",                                                                                                              
-      "SquelchLevel": 0,                                                                                                           
-      "VolumeLevel": 0,                                                                                                            
-      "FrequencyActive": "",                                                                                                       
-      "FrequencyStandby": "",                                                                                                      
-      "Enabled": false,                                                                                                            
-      "Dual": false,                                                                                                               
-      "Driver": "SERIAL",                                                                                                          
-      "Path": "/dev/prolific0",                                                                                                    
-      "LabelActive": "",                                                                                                           
-      "LabelStandby": ""                                                                                                           
-    },                                                                                                                             
-    {                                                                                                                              
-      "Name": "TRIG",                                                                                                              
-      "SquelchLevel": 0,                                                                                                           
-      "VolumeLevel": 0,                                                                                                            
-      "FrequencyActive": "",                                                                                                       
-      "FrequencyStandby": "",                                                                                                      
-      "Enabled": false,                                                                                                            
-      "Dual": false,                                                                                                               
-      "Driver": "NMEA",                                                                                                            
-      "Path": "",                                                                                                      
-      "LabelActive": "",                                                                                                           
-      "LabelStandby": ""                                                                                                           
-    }                                                                                                                              
-  ],  
+  "Radio": [
+    {
+      "Name": "KRT2",
+      "SquelchLevel": 0,
+      "VolumeLevel": 0,
+      "FrequencyActive": "",
+      "FrequencyStandby": "",
+      "Enabled": false,
+      "Dual": false,
+      "Driver": "SERIAL",
+      "Path": "/dev/prolific0",
+      "LabelActive": "",
+      "LabelStandby": ""
+    },
+    {
+      "Name": "TRIG",
+      "SquelchLevel": 0,
+      "VolumeLevel": 0,
+      "FrequencyActive": "",
+      "FrequencyStandby": "",
+      "Enabled": false,
+      "Dual": false,
+      "Driver": "NMEA",
+      "Path": "",
+      "LabelActive": "",
+      "LabelStandby": ""
+    }
+  ],
   "Cameras": [
     {
       "Name": "Windy",
@@ -209,35 +209,119 @@
   "SwitchBoard_Enabled": true,
   "Switches": [
     {
-      "Name": "Display OFF",
+      "Name": "DSP OFF",
       "Type": 2,
-      "Status": 0,
+      "Status": 2,
       "Uri": "su pi -c /home/pi/off.sh",
       "UriStatus": "",
       "EpochStart": 0,
       "EpochFinish": 0
     },
     {
-      "Name": "Display ON",
+      "Name": "DSP ON",
       "Type": 2,
       "Status": 0,
       "Uri": "sudo su pi -c /home/pi/on.sh",
       "UriStatus": "",
       "EpochStart": 0,
       "EpochFinish": 0
+    },
+    {
+      "Name": "CON BT",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "sudo nmcli connection up BTPAN",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "VOL 50%",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "amixer sset Speaker 50%",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "VOL 75%",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "amixer sset Speaker 75%",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "VOL MAX",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "amixer sset Speaker 100%",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "PWR OFF",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "/usr/sbin/halt",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "CON BT",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "sudo nmcli connection up BTPAN",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "PWR RBT",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "/usr/sbin/reboot",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
     }
   ],
   "MagCalibration": {
-    "MagMaxX": 0,
-    "MagMaxY": 0,
-    "MagMaxZ": 0,
-    "MagMinX": 0,
-    "MagMinY": 0,
-    "MagMinZ": 0,
+    "MagMaxX": 1050,
+    "MagMaxY": 755,
+    "MagMaxZ": -248,
+    "MagMinX": -1300,
+    "MagMinY": -1382,
+    "MagMinZ": -1878,
     "X": 0,
     "Y": 0,
     "Z": 0,
-    "Heading": 0
+    "Heading": 0,
+    "Offset": 8,
+    "Calibrating": false
   },
+  "MagRollPitchInterference": [
+    1,
+    -1
+  ],
+  "MagAxisMappingX": [
+    0,
+    -1,
+    0
+  ],
+  "MagAxisMappingY": [
+    1,
+    0,
+    0
+  ],
+  "MagAxisMappingZ": [
+    0,
+    0,
+    1
+  ],
   "RegionSelected": 2
 }

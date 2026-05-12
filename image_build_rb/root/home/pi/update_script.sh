@@ -4,12 +4,12 @@
 
 if [ $# -ne 4 ]; then
     echo "Usage: $0 <download_url> <process_name> <start_command> <expected_md5>"
-    echo "Example: $0 'https://example.com/update.tar.gz' 'myapp' './myapp --start' 'a1b2c3d4e5f6...'"
+    echo "Example: $0 'https://example.com/update.tar.gz' './myapp --stop' './myapp --start' 'a1b2c3d4e5f6...'"
     exit 1
 fi
 
 URL="$1"
-PROCESS_NAME="$2"
+STOP_CMD="$2"
 START_CMD="$3"
 EXPECTED_MD5="$4"
 PACKAGE_NAME="update.tar.gz"
@@ -35,13 +35,16 @@ if [ "$ACTUAL_MD5" != "$EXPECTED_MD5" ]; then
 fi
 echo "MD5 checksum verified successfully."
 
+# 3. Stop the service
+$STOP_CMD
+
 # 3. Wait for no specific process running
-echo "Waiting for process '$PROCESS_NAME' to stop..."
-while pgrep -x "$PROCESS_NAME" > /dev/null; do
-    echo "Process '$PROCESS_NAME' still running. Waiting 5 seconds..."
-    sleep 5
-done
-echo "No '$PROCESS_NAME' processes found."
+#echo "Waiting for process '$PROCESS_NAME' to stop..."
+#while pgrep -x "$PROCESS_NAME" > /dev/null; do
+#    echo "Process '$PROCESS_NAME' still running. Waiting 5 seconds..."
+#    sleep 5
+#done
+#echo "No '$PROCESS_NAME' processes found."
 
 # 4. Install the package
 echo "Installing update package..."

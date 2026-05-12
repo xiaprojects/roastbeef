@@ -181,7 +181,7 @@ func (otaInstance *OTAStratuxPlugin) ApplyUpdate(update UpdateInfo) error {
 	fileURL := fmt.Sprintf("%s/updates/%s/%s/download?Authorization=%s", config.BaseURL, config.DeviceID, update.File, config.Authorization)
 
 	// Build the full nohup command as a single string
-	updateCmd := fmt.Sprintf(`/opt/stratux/bin/update_script.sh "%s" "stratuxrun" "systemctl start stratux" "%s"`,
+	updateCmd := fmt.Sprintf(`/opt/stratux/bin/update_script.sh "%s" "systemctl stop stratux" "systemctl start stratux" "%s"`,
 		fileURL, update.MD5Sum)
 
 	nohupCmd := fmt.Sprintf(`nohup bash -c '%s' > /tmp/update-%s.log 2>&1 &`,
