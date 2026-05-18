@@ -94,16 +94,17 @@ function SituationService($scope, $http) {
             var situation = angular.fromJson(msg.data);
 
             var now = Date.now();
-            if (now - $scope.sendSituationTimer >= 200 && $scope.sendSituationBusy == false) {
+            if (now - $scope.sendSituationTimer >= 100 && $scope.sendSituationBusy == false) {
                 $scope.sendSituationBusy = true;
                 $scope.sendSituationTimer = now;
                 requestAnimationFrame(() => {
                     $scope.sendSituationBusy = false;
-                    $scope.situationSocket.onmessageTick(situation);
+                    $scope.situationSocket.onmessageTick(situation);    
                 });
             }
         };
 
+        $scope.lastUpdateTime = 0;
         $scope.situationSocket.onmessageTick = function (situation) {
 
             // Filter to avoid blow up CPU
@@ -112,8 +113,9 @@ function SituationService($scope, $http) {
             const ahrsThreshold = 1;
             const altitudeThreshold = 50 / 3.2808;
             const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
-            if (requireRefresh == true) {
-
+            var now = Date.now();
+            if (requireRefresh == true || now - $scope.lastUpdateTime >= 1000) {
+                $scope.lastUpdateTime = now;
                 // RB-Addons
                 if (
                     situation.hasOwnProperty("BaroPressureAltitude")

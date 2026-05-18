@@ -238,7 +238,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         const newSituation = situation;
         const ahrsThreshold = 1;
         const altitudeThreshold = 50 / 3.2808;
-        const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+        const requireRefresh = true;
         if (requireRefresh == true) {
             $scope.situation = situation;
             $scope.pilotGPSGroundSpeed = parseInt(pilotDisplayedSpeedFromKT($scope.situation.GPSGroundSpeed));

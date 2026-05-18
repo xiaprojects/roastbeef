@@ -787,45 +787,20 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
 
-        if (($scope.socket === undefined) || ($scope.socket === null)) {
-            socket = new WebSocket(URL_GPS_WS);
-            $scope.socket = socket; // store socket in scope for enter/exit usage
-        }
-
-        $scope.ConnectState = "Disconnected";
-
-        socket.onopen = function (msg) {
-            // $scope.ConnectStyle = "label-success";
-            $scope.ConnectState = "Connected";
-        };
-
-        socket.onclose = function (msg) {
-            // $scope.ConnectStyle = "label-danger";
-            $scope.ConnectState = "Disconnected";
-            $scope.$apply();
-            delete $scope.socket;
-            setTimeout(function () { connect($scope); }, 1000);
-        };
-
-        socket.onerror = function (msg) {
-            // $scope.ConnectStyle = "label-danger";
-            $scope.ConnectState = "Error";
-            resetSituation();
-            $scope.$apply();
-        };
-
-        socket.onmessage = function (msg) {
-            if (($scope === undefined) || ($scope === null)) {
-                socket.close();
-                return;
+        addEventListener("SituationUpdated", situationUpdateEventListener);
+    }
+    function situationUpdateEventListener(event) {
+            if (($scope === undefined) || ($scope === null) || $state.current.controller != 'AutopilotCtrl') {
+            removeEventListener("SituationUpdated", situationUpdateEventListener);
+            return; // we are getting called once after clicking away from the status page
             }
-            var situation = angular.fromJson(msg.data);
+            var situation = event.detail;
             // Filter to avoid blow up CPU
             const oldSituation = $scope.situation;
             const newSituation = situation;
             const ahrsThreshold = 2;
             const altitudeThreshold = 50 / 3.2808;
-            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+            const requireRefresh = true;
             if (requireRefresh == true) {
                 $scope.situation = situation;
                 loadSituationInAutopilot(situation);
@@ -835,9 +810,6 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             {
                 return;
             }
-    
-
-        };
     }
 
     /*****************************************************
