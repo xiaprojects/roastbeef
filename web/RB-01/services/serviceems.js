@@ -79,7 +79,7 @@ function EMSService($scope, $http) {
                 }
             }
             var now = Date.now();
-            if (now - $scope.emsDataRequestedRefresh >= 300 && $scope.emsDataRequestedBusy == false) {
+            if ($scope.emsDataRequestedBusy == false && (now - $scope.emsDataRequestedRefresh >= 300 || now - $scope.emsDataRequestedRefresh < 0)) {
                 $scope.emsDataRequestedRefresh = now;
                 $scope.emsDataRequestedBusy = true;
                 requestAnimationFrame(() => {

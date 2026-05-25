@@ -94,7 +94,7 @@ function SituationService($scope, $http) {
             var situation = angular.fromJson(msg.data);
 
             var now = Date.now();
-            if (now - $scope.sendSituationTimer >= 100 && $scope.sendSituationBusy == false) {
+            if ($scope.sendSituationBusy == false && (now - $scope.sendSituationTimer >= 100 || now - $scope.sendSituationTimer < 0)) {
                 $scope.sendSituationBusy = true;
                 $scope.sendSituationTimer = now;
                 requestAnimationFrame(() => {
@@ -126,7 +126,7 @@ function SituationService($scope, $http) {
                     &&
                     situation.hasOwnProperty("BaroVerticalSpeed") && Math.abs(situation.BaroVerticalSpeed) < 200
                 ) {
-                    var altitudeVsMillibar = 8 / 0.3048;
+                    var altitudeVsMillibar = 27 + situation.GPSAltitudeMSL / 1500;
                     var a = (situation.BaroPressureAltitude / altitudeVsMillibar).toFixed(0);
                     var b = (situation.GPSAltitudeMSL / altitudeVsMillibar).toFixed(0);
                     var c = (b - a);
