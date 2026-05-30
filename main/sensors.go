@@ -32,7 +32,9 @@ const (
 	MPUREG_WHO_AM_I_VAL_60X0    = 0x68 // Expected value for MPU6000 and MPU6050 (and MPU9150)
 	MPUREG_WHO_AM_I_VAL_UNKNOWN = 0x75 // Unknown MPU found on recent batch of gy91 boards see discussion 182
 	ICMREG_WHO_AM_I             = 0x00
-	ICMREG_WHO_AM_I_VAL         = 0xEA             // Expected value.
+	ICMREG_WHO_AM_I_VAL         = 0xEA // Expected value.
+	BMXREG_WHO_AM_I             = 0x00
+	BMXREG_WHO_AM_I_VAL         = 0xD8             // Expected value for BMX160.
 	PRESSURE_WHO_AM_I           = bmp388.RegChipId // Expected address for bosch pressure sensors bmpXXX.
 )
 
@@ -178,12 +180,23 @@ func tempAndPressureSender() {
 }
 
 func initIMU() (ok bool) {
-	// Check if the chip is the ICM-20948 or MPU-9250.
-	v, err := i2cbus.ReadByteFromReg(0x68, ICMREG_WHO_AM_I)
+	// Check if the chip is the BMX160, ICM-20948 or MPU-9250.
+	v, err := i2cbus.ReadByteFromReg(0x68, BMXREG_WHO_AM_I)
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
 		return false
 	}
+	if v == BMXREG_WHO_AM_I_VAL {
+		log.Println("BMX160 detected.")
+		imu, err := sensors.NewBMX160(&i2cbus)
+		if err == nil {
+			myIMUReader = imu
+			return true
+		}
+		log.Printf("Error initializing BMX160: %s\n", err.Error())
+		return false
+	}
+
 	v2, err := i2cbus.ReadByteFromReg(0x68, MPUREG_WHO_AM_I)
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
