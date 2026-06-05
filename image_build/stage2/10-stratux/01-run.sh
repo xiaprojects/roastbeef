@@ -8,7 +8,7 @@
 apt update
 
 on_chroot << EOF
-    apt install --yes dnsmasq ifplugd
+    apt install --yes dnsmasq ifplugd iptables
 
     # try to reduce writing to SD card as much as possible, so they don't get
     # bricked when yanking the power cable
