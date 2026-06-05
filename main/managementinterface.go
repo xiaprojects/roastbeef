@@ -864,6 +864,14 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		log.Printf("not running as root, using base_dir of %s", base_dir)
 	}
 
+	// Ensure the upload directory exists. The SD card flow relies on the user
+	// creating this path manually; the web flow has no such step, so create it
+	// here to avoid a silent failure when os.OpenFile cannot create the file.
+	if err := os.MkdirAll(base_dir, 0755); err != nil {
+		log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
+		return
+	}
+
 	for {
 		part, err := reader.NextPart()
 		if err != nil {

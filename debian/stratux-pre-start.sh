@@ -41,14 +41,16 @@ if [ -e ${TEMP_SCRIPT_LOCATION} ]; then
 	wLog "Found update script $TEMP_SCRIPT_FILE"
 	if overlay_is_active; then
 		wLog "Overlay active — staging script to ext4 lower layer and disabling overlay..."
-		/sbin/overlayctl unlock
-		cp "${TEMP_SCRIPT_FILE}" /overlay/robase/root/
-		chmod a+x /overlay/robase/root/$(basename "${TEMP_SCRIPT_FILE}")
-		rm -f "${TEMP_SCRIPT_FILE}"
-		/sbin/overlayctl disable
-		/sbin/overlayctl lock
-		wLog "Script staged. Rebooting to apply on bare ext4..."
-		reboot
+		if /sbin/overlayctl unlock && cp "${TEMP_SCRIPT_FILE}" /overlay/robase/root/; then
+			chmod a+x /overlay/robase/root/$(basename "${TEMP_SCRIPT_FILE}")
+			rm -f "${TEMP_SCRIPT_FILE}"
+			/sbin/overlayctl disable
+			wLog "Script staged. Rebooting to apply on bare ext4..."
+			reboot
+		else
+			wLog "ERROR: Failed to stage script to ext4 lower layer. Update aborted."
+			/sbin/overlayctl lock
+		fi
 	else
 		# Overlay already inactive — copy to /root/ for next section to pick up
 		cp "${TEMP_SCRIPT_FILE}" /root/
@@ -66,7 +68,7 @@ if [ -e ${SCRIPT_UPDATE_LOCATION} ]; then
 		# triggers a service restart that kills this ExecStartPre process.
 		UPDATE_TEMP_SCRIPT="/tmp/$(basename "${UPDATE_SCRIPT_FILE}")"
 		mv "${UPDATE_SCRIPT_FILE}" "${UPDATE_TEMP_SCRIPT}"
-		rm -f /overlay/disable
+		/sbin/overlayctl enable
 		if bash "${UPDATE_TEMP_SCRIPT}"; then
 			wLog "Update script completed successfully."
 		else
@@ -87,13 +89,15 @@ if [ -e ${TEMP_PACKAGE_LOCATION} ]; then
 	wLog "Found update package $TEMP_PACKAGE_FILE"
 	if overlay_is_active; then
 		wLog "Overlay active — staging package to ext4 lower layer and disabling overlay..."
-		/sbin/overlayctl unlock
-		cp "${TEMP_PACKAGE_FILE}" /overlay/robase/root/
-		rm -f "${TEMP_PACKAGE_FILE}"
-		/sbin/overlayctl disable
-		/sbin/overlayctl lock
-		wLog "Package staged. Rebooting to install on bare ext4..."
-		reboot
+		if /sbin/overlayctl unlock && cp "${TEMP_PACKAGE_FILE}" /overlay/robase/root/; then
+			rm -f "${TEMP_PACKAGE_FILE}"
+			/sbin/overlayctl disable
+			wLog "Package staged. Rebooting to install on bare ext4..."
+			reboot
+		else
+			wLog "ERROR: Failed to stage package to ext4 lower layer. Update aborted."
+			/sbin/overlayctl lock
+		fi
 	else
 		# Overlay already inactive — copy to /root/ for next section to pick up
 		cp "${TEMP_PACKAGE_FILE}" /root/
@@ -112,7 +116,7 @@ if [ -e ${PACKAGE_UPDATE_LOCATION} ]; then
 		# first the system is in a consistent state even if dpkg kills this script.
 		UPDATE_TEMP_FILE="/tmp/$(basename "${UPDATE_PACKAGE_FILE}")"
 		mv "${UPDATE_PACKAGE_FILE}" "${UPDATE_TEMP_FILE}"
-		rm -f /overlay/disable
+		/sbin/overlayctl enable
 		if dpkg -i --force-depends "${UPDATE_TEMP_FILE}"; then
 			wLog "Package installed successfully."
 		else
