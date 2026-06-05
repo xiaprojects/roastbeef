@@ -56,6 +56,7 @@ EOF
 
 LIBRTLSDR_DEB="librtlsdr0_2.0.2-2_arm64.deb"
 LIBRTLSDR_DEV_DEB="librtlsdr-dev_2.0.2-2_arm64.deb"
+RTLSDR_DEB="rtl-sdr_2.0.2-2_arm64.deb"
 on_chroot << EOF
     echo "Installing librtlsdr in chroot"
     cd /tmp
@@ -66,6 +67,12 @@ on_chroot << EOF
     dpkg -i ${LIBRTLSDR_DEV_DEB}
     rm ${LIBRTLSDR_DEB}
     rm ${LIBRTLSDR_DEV_DEB}
+
+    echo "Installing rtlsdr"
+    cd /tmp
+    wget https://github.com/stratux/rtlsdr/releases/download/v1.0/${RTLSDR_DEB}
+    dpkg -i ${RTLSDR_DEB}
+    rm ${RTLSDR_DEB}
 
     echo "Building and installing kalibrate-rtl"
 
