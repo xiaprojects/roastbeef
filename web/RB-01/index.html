@@ -86,6 +86,25 @@
 	<link rel="stylesheet" href="/css/checklist.css" />
 	<link rel="stylesheet" href="/css/alerts.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<script>
+				if (document.location.hash == "") {
+					console.log("Default page is going to be loaded...");
+					if (window.localStorage.getItem("STARTUP_PAGE") === undefined || window.localStorage.getItem("STARTUP_PAGE") === false || window.localStorage.getItem("STARTUP_PAGE") == null) {
+					}
+					else {
+						const STARTUP_PAGE = window.localStorage.getItem("STARTUP_PAGE");
+						console.log("User default page: " + STARTUP_PAGE);
+						document.location = STARTUP_PAGE;
+					}
+				}
+
+				function onHashChanged() {
+					const hash = window.location.hash;
+					window.localStorage.setItem("STARTUP_PAGE",hash);
+
+				}
+				window.addEventListener('hashchange', onHashChanged);
+	</script>
 
 	<script src="maui/js/angular.min.js"></script>
 	<script src="maui/js/angular-ui-router.min.js"></script>
