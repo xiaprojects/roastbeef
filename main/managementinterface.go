@@ -846,7 +846,6 @@ func handleDownloadDBRequest(w http.ResponseWriter, r *http.Request) {
 func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	setNoCache(w)
 	setJSONHeaders(w)
-	overlayctl("unlock")
 	reader, err := r.MultipartReader()
 	if err != nil {
 		log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
@@ -859,15 +858,22 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 	var base_dir string
 
 	if common.IsRunningAsRoot() {
-		base_dir = "/overlay/robase/root"
-	} else
-	{
+		base_dir = "/boot/firmware/StratuxUpdates"
+	} else {
 		base_dir = "."
 		log.Printf("not running as root, using base_dir of %s", base_dir)
 	}
 
+	// Ensure the upload directory exists. The SD card flow relies on the user
+	// creating this path manually; the web flow has no such step, so create it
+	// here to avoid a silent failure when os.OpenFile cannot create the file.
+	if err := os.MkdirAll(base_dir, 0755); err != nil {
+		log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
+		return
+	}
+
 	for {
-		part, err := reader.NextPart();
+		part, err := reader.NextPart()
 		if err != nil {
 			log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
 			return
@@ -883,7 +889,7 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 		temp_filename = fmt.Sprintf("%s/TMP_%s", base_dir, part.FileName())
 		upload_filename = fmt.Sprintf("%s/%s", base_dir, part.FileName())
 
-		fi, err := os.OpenFile(temp_filename, os.O_WRONLY | os.O_CREATE | os.O_TRUNC, 0666)
+		fi, err := os.OpenFile(temp_filename, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0666)
 		if err != nil {
 			log.Printf("Update failed from %s (%s).\n", r.RemoteAddr, err.Error())
 			return
@@ -900,8 +906,7 @@ func handleUpdatePostRequest(w http.ResponseWriter, r *http.Request) {
 
 	os.Rename(temp_filename, upload_filename)
 	log.Printf("%s uploaded %s for update.\n", r.RemoteAddr, upload_filename)
-	overlayctl("disable")
-	// Successful update upload. Now reboot.
+	// Successful update upload. stratux-pre-start.sh handles the rest on next boot.
 	go delayReboot()
 }
 
