@@ -44,7 +44,14 @@ block-beta
 
 ### release.yml
 
-The release process is similar to the CI process
+The release process is similar to the CI process, but produces both the `.deb`
+package and the full Raspberry Pi SD-card image.
+
+Unlike the diagram you might expect, `release.yml` has a **single job** (`build_image`)
+that runs `cd image_build && ./build.sh`. That script does *both* steps internally:
+it first builds the `.deb` (`make ddpkg`, via `pi-gen/stratux`) and then runs pi-gen
+to assemble the image. The two stages below happen inside that one job, not as
+separate workflow jobs.
 
 ```mermaid
 block-beta
@@ -52,13 +59,14 @@ block-beta
    GithubRunner["<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/github.svg" width="50" height="50">GitHub Runner"]
    ubuntu["<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/ubuntu.svg" width="50" height="50">ubuntu 24.04 arm"]
    release["release.yml workflow"]
-   build_deb
-   build_image
-   artifact_deb["publish .deb artifacts"]
+   build_image["build_image job → image_build/build.sh"]
+   stage_deb["stage 1: make ddpkg (.deb)"]
+   stage_image["stage 2: pi-gen image build"]
+   artifact_deb["publish .deb artifact"]
    artifact_image["publish PI image artifact"]
 ```
 
-#### build_deb
+#### stage 1 — .deb build (`make ddpkg`)
 
 ```mermaid
 block-beta
@@ -69,7 +77,7 @@ block-beta
    make_dpkg["make dpkg"]
 ```
 
-#### build_image
+#### stage 2 — pi-gen image build
 
 ```mermaid
 block-beta
@@ -137,10 +145,10 @@ Examples:
 
 # Interfacing with Stratux
 If you are a developer of a third-party software, and want to interface with Stratux and use its data?
-See [app-vendor-integration.md](app-vendor-integration.md)
+See the [integration guide](integration/README.md) (GDL90, FLARM/NMEA, BLE, X-Plane, CoT) and the [HTTP/WebSocket API reference](http-api.md).
 
 # Development Environment setup
-If you want to get started working on the code, see [dev_setup.md](dev_setup.md)
+If you want to get started working on the code, see [dev-setup.md](dev-setup.md)
 
 # OTA upgrade process
 
@@ -155,13 +163,16 @@ Both of the update processes are similar and run through the same code paths.
 
 ## OTA update process
 
-1. Update dpkg file(<font style='background: purple'>DEB</font>)  or (<font style='background: green'>US</font>) is uploaded via the Stratux web interface (settings.js)
-1. The <font style='background: purple'>DEB</font> / <font style='background: green'>US</font> is placed in /overlay/robase/root/ (managementinterface.go handleUpdatePostRequest())
-1. Stratux reboots
-1. stratux-pre-start.sh runs at boot
-1. If the <font style='background: purple'>DEB</font> / <font style='background: green'>US</font> is found, it is moved from /boot/firmware/StratuxUpdates/ to  /root/
-1. A <font style='background: purple'>DEB</font> is installed via 'dpkg -i'
-1. A <font style='background: green'>US</font> is executed
-1. The <font style='background: purple'>DEB</font> / <font style='background: green'>US</font> is deleted
-1. Stratux reboots again
-1. Updated Stratux software starts
+The flow is overlay-filesystem aware. On a normal Stratux image the root filesystem
+is mounted read-only behind an overlay, so an update has to be staged into the ext4
+lower layer (`/overlay/robase/root/`) with the overlay temporarily disabled before it
+can be installed. That is why more than one reboot can be involved.
+
+1. The update file (<font style='background: purple'>DEB</font> or <font style='background: green'>US</font>) is uploaded via the Stratux web interface (`settings.js` → `POST /updateUpload`).
+1. `handleUpdatePostRequest()` (managementinterface.go) creates `/boot/firmware/StratuxUpdates/` if needed and writes the upload there, then triggers a delayed reboot.
+1. At boot, `stratux-pre-start.sh` runs and looks for an update in `/boot/firmware/StratuxUpdates/`.
+1. **If the overlay is active:** the update is copied from `/boot/firmware/StratuxUpdates/` into the overlay lower layer (`/overlay/robase/root/`), the source is removed, the overlay is disabled, and the system reboots.
+1. **On the next boot (overlay inactive):** the update is copied to `/root/`.
+1. A <font style='background: purple'>DEB</font> is installed via `dpkg -i --force-depends`; a <font style='background: green'>US</font> script is executed.
+1. The update file is removed and the overlay is re-enabled.
+1. Stratux reboots and the updated software starts.

@@ -112,7 +112,7 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
 ### Web UI + HTTP/WebSocket API (`main/managementinterface.go`)
 
 `managementInterface()` is the HTTP server. It serves the web UI and the JSON/WebSocket API
-documented in `docs/api-reference.md` (e.g. `GET /getStatus`, `/getSituation`, `POST
+documented in `docs/http-api.md` (e.g. `GET /getStatus`, `/getSituation`, `POST
 /setSettings`, WebSocket `/gdl90`, `/situation`, `/traffic`, `/weather`). No auth — it's a
 local AP network. The frontend (`web/`) is an **AngularJS** single-page app (mobile-angular-ui +
 OpenLayers for maps). Each screen is a "plate": HTML in `web/plates/*.html` with its controller
@@ -135,18 +135,20 @@ in `web/plates/js/*.js`, talking to the API above.
 - `debian/` — systemd units, udev rules, `.deb` packaging scripts, boot/network templates.
 - `image_build/` — pi-gen stages that produce the Raspberry Pi SD-card image.
 - `test/` — standalone diagnostic tools. `test-data/` — sample logs. `notes/` — design notes.
-- `docs/` — developer docs (build, API, app-vendor integration, dev setup).
+- `docs/` — developer docs: architecture, building, dev setup, the HTTP/WebSocket API
+  (`http-api.md`), the integration guide (`integration/`), the settings reference, and
+  hardware support (`hardware/`). Index in `docs/README.md`.
 
 ## Versioning & OTA
 
 Semantic `MAJOR.MINOR` (e.g. `3.6`). **OTA updates work only between minor versions.** Two OTA
 mechanisms run through the same boot-time path (`debian/stratux-pre-start.sh`): a `.deb` for the
 Stratux app, and a legacy update script (`US`) for system-level changes. Full flow in
-`docs/DEVELOPING.md`.
+`docs/building.md`.
 
 ## Conventions
 
-- Match the style of the file/area you are editing (project guidance in `docs/DEVELOPING.md`).
+- Match the style of the file/area you are editing (project guidance in `docs/building.md`).
 - User-facing docs live in the GitHub **wiki**; **developer** docs that track the code live in
   `docs/` in this repo (so they're reviewed in PRs alongside code changes).
 - Keep the image small: the target is to fit the SD-card image on a 4GB card.

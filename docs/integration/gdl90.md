@@ -1,4 +1,10 @@
-# app side integration
+# App-side integration: GDL90 over UDP
+
+> This document covers the primary **GDL90 over UDP :4000** transport used by EFBs such
+> as ForeFlight. Stratux simultaneously offers several other output transports (FLARM/NMEA
+> over TCP/UDP/serial/BLE, X-Plane, Cursor-on-Target). For the full picture and the port
+> map, see the [integration overview](README.md) and [other-transports.md](other-transports.md).
+> For the HTTP/WebSocket JSON API, see [http-api.md](../http-api.md).
 
 ### Protocol & network information
 
@@ -6,7 +12,7 @@ Stratux uses GDL90 protocol over port 4000 UDP. All messages are sent as **unica
 network and a DHCP lease is issued to the device, the IP of the DHCP lease is added to the list of clients receiving GDL90 messages.
 
 
-The GDL90 is "standard" with the exception of three non-standard GDL90-style messages: `0xCC` (stratux heartbeat), `0x5358` (another stratux heartbeat), and `0x4C` (AHRS report).
+The GDL90 is "standard" with the exception of these non-standard GDL90-style messages: `0xCC` (stratux heartbeat), `0x5358` (another stratux heartbeat), and `0x4C` (AHRS report). In addition, two ForeFlight-proprietary GDL90 messages with ID `0x65` are emitted — a ForeFlight "ID" message (device identification) and a ForeFlight AHRS message — for EFBs that consume them.
 
 ### How to recognize stratux
 
@@ -150,65 +156,46 @@ Stratux makes available a webserver to retrieve statistics which may be useful t
 }
 ```
 
-* `http://192.168.10.1/getSettings` - get device settings. Example output:
+* `http://192.168.10.1/getSettings` - get device settings. The settings object has grown
+substantially; for the **complete, field-by-field reference** see
+[settings-reference.md](../settings-reference.md). An abbreviated example showing the parts
+most relevant to integrators:
 
 ```json
 {
   "UAT_Enabled": true,
   "ES_Enabled": false,
+  "OGN_Enabled": false,
+  "AIS_Enabled": false,
   "Ping_Enabled": false,
   "Pong_Enabled": false,
   "GPS_Enabled": true,
   "BMP_Sensor_Enabled": true,
   "IMU_Sensor_Enabled": true,
   "NetworkOutputs": [
-    {
-      "Conn": null,
-      "Ip": "",
-      "Port": 4000,
-      "Capability": 5,
-      "MessageQueueLen": 0,
-      "LastUnreachable": "0001-01-01T00:00:00Z",
-      "SleepFlag": false,
-      "FFCrippled": false
-    }
+    { "Conn": null, "Ip": "", "Port": 4000,  "Capability": 5,  "LastPingResponse": "0001-01-01T00:00:00Z", "LastPongResponse": "0001-01-01T00:00:00Z", "LastUnreachable": "0001-01-01T00:00:00Z", "SleepFlag": false },
+    { "Conn": null, "Ip": "", "Port": 2000,  "Capability": 8,  "LastPingResponse": "0001-01-01T00:00:00Z", "LastPongResponse": "0001-01-01T00:00:00Z", "LastUnreachable": "0001-01-01T00:00:00Z", "SleepFlag": false },
+    { "Conn": null, "Ip": "", "Port": 49002, "Capability": 18, "LastPingResponse": "0001-01-01T00:00:00Z", "LastPongResponse": "0001-01-01T00:00:00Z", "LastUnreachable": "0001-01-01T00:00:00Z", "SleepFlag": false }
   ],
   "SerialOutputs": null,
+  "BleOutputs": [ ... ],
   "DisplayTrafficSource": false,
   "DEBUG": false,
-  "ReplayLog": false,
-  "AHRSLog": false,
-  "IMUMapping": [
-    -1,
-    0
-  ],
-  "SensorQuaternion": [
-    0.0068582877312501,
-    0.0067230280142738,
-    0.7140806859355,
-    -0.69999752767998
-  ],
-  "C": [
-    -0.019065523239845,
-    -0.99225684377575,
-    -0.019766228217414
-  ],
-  "D": [
-    -2.7707754753258,
-    5.544145023957,
-    -1.890621662038
-  ],
   "PPM": 0,
   "AltitudeOffset": 0,
   "OwnshipModeS": "F00000",
   "WatchList": "",
   "DeveloperMode": false,
   "GLimits": "",
-  "StaticIps": [
-    
-  ]
+  "StaticIps": []
 }
 ```
+
+Notes on `NetworkOutputs`:
+- The default install has **three** UDP outputs, not one: `:4000` (GDL90, `Capability` 5 = `GDL90_STANDARD|AHRS_GDL90`), `:2000` (FLARM/NMEA, `Capability` 8), and `:49002` (X-Plane / ForeFlight-sim, `Capability` 18). `Capability` is a static bitmask that controls which message classes each output receives — see [other-transports.md](other-transports.md) for the bit values.
+- The legacy `FFCrippled` / `MessageQueueLen` fields shown in older docs **no longer exist**. The serialized per-connection fields are `Conn`, `Ip`, `Port`, `Capability`, `LastPingResponse`, `LastPongResponse`, `LastUnreachable`, `SleepFlag`.
+- `BleOutputs` (Bluetooth LE) is a separate output array; `SerialOutputs` is a JSON object/map (it serializes as `null` when empty), not an array.
+
 * `http://192.168.10.1/setSettings` - set device settings. Use an HTTP POST of JSON content in the format given above - posting only the fields containing the settings to be modified.
 
 * `http://192.168.10.1/getSituation` - get GPS/AHRS information. Example output:

@@ -49,7 +49,7 @@ Example:
 ```
 
 #### `POST /setRegion`
-Sets the region. Accepts JSON: `{"Region": "US"}` or `{"Region": "EU"}`.
+Sets the region. Accepts JSON: `{"Region": "US"}` or `{"Region": "EU"}`. This applies the region change at runtime (UAT band selection, OGN behavior); note that it does **not** itself write `stratux.conf` — persistence is handled by the region-change path, not an explicit settings save in the handler.
 
 ---
 
@@ -87,7 +87,7 @@ Shuts down the Raspberry Pi.
 Restarts the Stratux software without rebooting the Pi.
 
 #### `POST /develmodetoggle`
-Toggles Developer Mode (equivalent to tapping the version number in the web UI Settings page).
+**Enables** Developer Mode (equivalent to tapping the version number in the web UI Settings page). Despite the name this is one-way — it only ever sets `DeveloperMode` to `true`; it does not toggle it back off. To disable Developer Mode, clear it via `POST /setSettings` (`{"DeveloperMode": false}`).
 
 #### `POST /roPartitionRebuild`
 Rebuilds the read-only filesystem partition. Use with caution — intended for recovery scenarios.
@@ -127,6 +127,16 @@ Returns available offline map tilesets.
 
 #### `GET /tiles/{tileset}/{z}/{x}/{y}`
 Serves individual map tiles from offline tilesets.
+
+#### `GET /mapdata/styles/…`
+Serves vector-tile map style JSON files (referenced by the `stratux_style_url` field in the `/tiles/tilesets` response). Backed by a static file server rooted at `$STRATUX_HOME/mapdata/styles`.
+
+---
+
+### Web UI (static)
+
+#### `GET /`
+The root path is a catch-all static file server for the web configuration UI (served from `$STRATUX_WWW_DIR`, default `/opt/stratux/www`). Responses carry a short `Cache-Control: max-age` header. Not a JSON API, but listed here for completeness since it shares the same HTTP server.
 
 ---
 
@@ -169,7 +179,7 @@ Useful when GPS autodetection fails or for non-standard hardware:
 |-------|------|-------------|
 | `GpsManualConfig` | bool | Enable manual GPS config (disables autodetect) |
 | `GpsManualDevice` | string | Serial device path, e.g. `/dev/ttyAMA0` |
-| `GpsManualChip` | string | Chip type: `ublox`, `ublox8`, `ublox9` |
+| `GpsManualChip` | string | Chip type: `ublox6`, `ublox7`, `ublox8`, `ublox9`, `ublox10`, or `ublox` (generic). Any other/empty value leaves the chip unconfigured |
 | `GpsManualTargetBaud` | int | Target baud rate, e.g. `115200` |
 
 Example:
@@ -190,7 +200,7 @@ Example:
 | `NoSleep` | bool | Disable sleep mode detection for GDL90 clients. Useful for always-on panel-mount EFIS installations where the display never sleeps |
 | `SensorQuaternion` | [4]float64 | AHRS calibration quaternion. Set by the calibration wizard; can be set manually for aircraft-specific alignment |
 | `RegionSelected` | int | `0`=none, `1`=US, `2`=EU. Drives UAT band selection and some OGN behavior. Prefer using `/setRegion` |
-| `DeveloperMode` | bool | Enables additional SDR diagnostics. Toggle via `/develmodetoggle` or by tapping the version number in Settings |
+| `DeveloperMode` | bool | Enables additional SDR diagnostics. Enable via `/develmodetoggle` (one-way) or by tapping the version number in Settings; disable by posting `{"DeveloperMode": false}` to `/setSettings` |
 
 ---
 
