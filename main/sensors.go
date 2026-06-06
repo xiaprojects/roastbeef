@@ -26,14 +26,13 @@ const (
 
 	// WHO_AM_I values to differentiate between the different IMUs.
 	MPUREG_WHO_AM_I             = 0x75
-	MPUREG_WHO_AM_I_VAL         = 0x71 // Expected value.
-	MPUREG_WHO_AM_I_VAL_9255    = 0x73 // Expected value for MPU9255, seems to be compatible to 9250
-	MPUREG_WHO_AM_I_VAL_6500    = 0x70 // Expected value for MPU6500, seems to be same as 9250 but without magnetometer
-	MPUREG_WHO_AM_I_VAL_60X0    = 0x68 // Expected value for MPU6000 and MPU6050 (and MPU9150)
-	MPUREG_WHO_AM_I_VAL_UNKNOWN = 0x75 // Unknown MPU found on recent batch of gy91 boards see discussion 182
-	ICMREG_WHO_AM_I             = 0x00
-	ICMREG_WHO_AM_I_VAL         = 0xEA // Expected value.
-	BMXREG_WHO_AM_I             = 0x00
+	MPUREG_WHO_AM_I_VAL         = 0x71             // Expected value.
+	MPUREG_WHO_AM_I_VAL_9255    = 0x73             // Expected value for MPU9255, seems to be compatible to 9250
+	MPUREG_WHO_AM_I_VAL_6500    = 0x70             // Expected value for MPU6500, seems to be same as 9250 but without magnetometer
+	MPUREG_WHO_AM_I_VAL_60X0    = 0x68             // Expected value for MPU6000 and MPU6050 (and MPU9150)
+	MPUREG_WHO_AM_I_VAL_UNKNOWN = 0x75             // Unknown MPU found on recent batch of gy91 boards see discussion 182
+	ICMREG_WHO_AM_I             = 0x00             // Shared by the ICM-20948 and BMX160 (chip ID in register 0x00).
+	ICMREG_WHO_AM_I_VAL         = 0xEA             // Expected value for ICM-20948.
 	BMXREG_WHO_AM_I_VAL         = 0xD8             // Expected value for BMX160.
 	PRESSURE_WHO_AM_I           = bmp388.RegChipId // Expected address for bosch pressure sensors bmpXXX.
 )
@@ -180,50 +179,58 @@ func tempAndPressureSender() {
 }
 
 func initIMU() (ok bool) {
-	// Check if the chip is the BMX160, ICM-20948 or MPU-9250.
-	v, err := i2cbus.ReadByteFromReg(0x68, BMXREG_WHO_AM_I)
+	// The ICM-20948 and BMX160 both report their chip ID in register 0x00 (at
+	// I2C address 0x68), distinguished by value; the MPU-9250 family reports
+	// its ID in a different register (0x75). Check register 0x00 first, then
+	// fall back to the MPU register.
+	icmBmxID, err := i2cbus.ReadByteFromReg(0x68, ICMREG_WHO_AM_I) // 0x00, shared by ICM-20948 and BMX160
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
 		return false
 	}
-	if v == BMXREG_WHO_AM_I_VAL {
+
+	switch icmBmxID {
+	case BMXREG_WHO_AM_I_VAL:
 		log.Println("BMX160 detected.")
 		imu, err := sensors.NewBMX160(&i2cbus)
-		if err == nil {
-			myIMUReader = imu
-			return true
+		if err != nil {
+			log.Printf("Error initializing BMX160: %s\n", err.Error())
+			return false
 		}
-		log.Printf("Error initializing BMX160: %s\n", err.Error())
-		return false
+		myIMUReader = imu
+		return true
+	case ICMREG_WHO_AM_I_VAL:
+		log.Println("ICM-20948 detected.")
+		imu, err := sensors.NewICM20948(&i2cbus)
+		if err != nil {
+			log.Printf("Error initializing ICM-20948: %s\n", err.Error())
+			return false
+		}
+		myIMUReader = imu
+		return true
 	}
 
-	v2, err := i2cbus.ReadByteFromReg(0x68, MPUREG_WHO_AM_I)
+	// Fall back to the MPU-9250 family, which uses a different WHO_AM_I register.
+	mpuID, err := i2cbus.ReadByteFromReg(0x68, MPUREG_WHO_AM_I) // 0x75
 	if err != nil {
 		log.Printf("Error identifying IMU: %s\n", err.Error())
 		return false
 	}
 
-	if v == ICMREG_WHO_AM_I_VAL {
-		log.Println("ICM-20948 detected.")
-		imu, err := sensors.NewICM20948(&i2cbus)
-		if err == nil {
-			myIMUReader = imu
-			return true
-		}
-	} else if v2 == MPUREG_WHO_AM_I_VAL || v2 == MPUREG_WHO_AM_I_VAL_9255 || v2 == MPUREG_WHO_AM_I_VAL_6500 ||
-		v2 == MPUREG_WHO_AM_I_VAL_60X0 || v2 == MPUREG_WHO_AM_I_VAL_UNKNOWN {
-
-		log.Printf("MPU detected (%02x).\n", v2)
+	switch mpuID {
+	case MPUREG_WHO_AM_I_VAL, MPUREG_WHO_AM_I_VAL_9255, MPUREG_WHO_AM_I_VAL_6500,
+		MPUREG_WHO_AM_I_VAL_60X0, MPUREG_WHO_AM_I_VAL_UNKNOWN:
+		log.Printf("MPU detected (%02x).\n", mpuID)
 		imu, err := sensors.NewMPU9250(&i2cbus)
-		if err == nil {
-			myIMUReader = imu
-			return true
+		if err != nil {
+			log.Printf("Error initializing MPU: %s\n", err.Error())
+			return false
 		}
-	} else {
-		log.Printf("Could not identify MPU. v=%02x, v2=%02x.\n", v, v2)
-		return false
+		myIMUReader = imu
+		return true
 	}
 
+	log.Printf("Could not identify IMU. reg0x00=%02x, reg0x75=%02x.\n", icmBmxID, mpuID)
 	return false
 }
 
