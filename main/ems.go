@@ -33,6 +33,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"strings"
 	"sync"
@@ -40,49 +41,94 @@ import (
 )
 
 type EMSStratuxPlugin struct {
-    StratuxPlugin
-	emsData map[string] float32
+	StratuxPlugin
+	emsData map[string]float32
 	// Added Max
-	emsDataMax map[string] float32
-	emsDataMin map[string] float32
-	emsDataMutex *sync.Mutex
+	emsDataMax       map[string]float32
+	emsDataMin       map[string]float32
+	emsDataMutex     *sync.Mutex
+	emsIsSendingData bool
 }
 
 // Data Logger
 type EMSDataLogger struct {
-	Clock                time.Time
-	SensorName           string
-	SensorValue          float32
+	Clock       time.Time
+	SensorName  string
+	SensorValue float32
 }
 
 var ems = EMSStratuxPlugin{}
 
-
-func (emsInstance *EMSStratuxPlugin)InitFunc() bool {
+func (emsInstance *EMSStratuxPlugin) InitFunc() bool {
 	log.Println("Entered EMS init() ...")
 	emsInstance.Name = "Unix Socket"
-	log.Println("EMS Driver: ",emsInstance.Name)
+	log.Println("EMS Driver: ", emsInstance.Name)
 	emsInstance.emsDataMutex = &sync.Mutex{}
 	emsInstance.emsData = make(map[string]float32)
 	emsInstance.emsDataMin = make(map[string]float32)
 	emsInstance.emsDataMax = make(map[string]float32)
 
 	// Pre-fill with default values
-	defaultEMSSensors := []string{"Egt1","Egt2","Egt3","Egt4","Cht1","Cht2","Cht3","Cht4","Fuel1","Fuel2","Fuel","Oilpressure","Oiltemperature","BatteryVoltage","AlternatorOut","ManifoldPressure","EngineRpm","Fuelpressure","Amps","Fuelremaining","OutsideTemperature"}
-	for _,key := range defaultEMSSensors {
+	defaultEMSSensors := []string{"Egt1", "Egt2", "Egt3", "Egt4", "Cht1", "Cht2", "Cht3", "Cht4", "Fuel1", "Fuel2", "Fuel", "Oilpressure", "Oiltemperature", "BatteryVoltage", "AlternatorOut", "ManifoldPressure", "EngineRpm", "Fuelpressure", "Amps", "Fuelremaining", "OutsideTemperature"}
+	for _, key := range defaultEMSSensors {
 		emsInstance.emsData[strings.ToLower(key)] = 0
 	}
-
+	emsInstance.emsData["coolanttemperature"] = 0.0
+	emsInstance.emsIsSendingData = true
 	go emsInstance.ListenerFunc()
 	return true
 }
 
-func (emsInstance *EMSStratuxPlugin)ListenerFunc() bool {
+func (emsInstance *EMSStratuxPlugin) makeRBEMSString() string {
+	msg := fmt.Sprintf("$RBEMS,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f",
+		emsInstance.emsData["enginerpm"],
+		emsInstance.emsData["manifoldpressure"],
+		emsInstance.emsData["oiltemperature"],
+		emsInstance.emsData["oilpressure"],
+		emsInstance.emsData["coolanttemperature"],
+		emsInstance.emsData["outsidetemperature"],
+		emsInstance.emsData["fuelpressure"],
+		emsInstance.emsData["fuel1"],
+		emsInstance.emsData["fuel2"])
+	msg = appendNmeaChecksum(msg)
+	msg += "\r\n"
+	return msg
+}
+
+func (emsInstance *EMSStratuxPlugin) makeRBCYLString() string {
+	msg := fmt.Sprintf("$RBCYL,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f,%.0f",
+		emsInstance.emsData["cht1"],
+		emsInstance.emsData["cht2"],
+		emsInstance.emsData["cht3"],
+		emsInstance.emsData["cht4"],
+		emsInstance.emsData["egt1"],
+		emsInstance.emsData["egt2"],
+		emsInstance.emsData["egt3"],
+		emsInstance.emsData["egt4"])
+	msg = appendNmeaChecksum(msg)
+	msg += "\r\n"
+	return msg
+}
+
+func (emsInstance *EMSStratuxPlugin) ListenerFunc() bool {
+	timerForTemperatures := 10
+	for emsInstance.emsIsSendingData == true {
+		emsInstance.emsDataMutex.Lock()
+		nmeaRBEMS := emsInstance.makeRBEMSString()
+		nmeaRBCYL := emsInstance.makeRBCYLString()
+		emsInstance.emsDataMutex.Unlock()
+		sendNetFLARM(nmeaRBEMS, time.Second, 0)
+		if timerForTemperatures < 1 {
+			sendNetFLARM(nmeaRBCYL, time.Second, 0)
+			timerForTemperatures = 10
+		}
+		timerForTemperatures = timerForTemperatures - 1
+		time.Sleep(200 * time.Millisecond)
+	}
 	return true
 }
 
-
-func (emsInstance *EMSStratuxPlugin)ShutdownFunc() bool {
+func (emsInstance *EMSStratuxPlugin) ShutdownFunc() bool {
 	log.Println("Entered EMS shutdown() ...")
 	return true
 }
