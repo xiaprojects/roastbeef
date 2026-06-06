@@ -4,8 +4,7 @@ SettingsCtrl.$inject = ['$rootScope', '$scope', '$state', '$location', '$window'
 
 // create our controller function with all necessary logic
 function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
-	$scope.countryCodes = {
-		"":"Unspecified",
+	var countryCodes = {
 		"AD":"Andorra",
 		"AE":"United Arab Emirates",
 		"AF":"Afghanistan",
@@ -256,7 +255,10 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 		"ZM":"Zambia",
 		"ZW":"Zimbabwe"
 	};
-
+	
+	$scope.sortedCountries = Object.entries(countryCodes)
+		.map(function ([key, value]) { return { key, value }})
+		.sort(function (a, b) {return a.value.localeCompare(b.value)});
 
 	$scope.$parent.helppage = 'plates/settings-help.html';
 
@@ -718,7 +720,7 @@ function SettingsCtrl($rootScope, $scope, $state, $location, $window, $http) {
 
 		if (!$scope.WiFiErrors.Errors) {
 			var newsettings = {
-				"WiFiCountry": $scope.WiFiCountry,
+				"WiFiCountry": $scope.WiFiCountry || "",
 				"WiFiSSID" :  $scope.WiFiSSID,
 				"WiFiSecurityEnabled" : $scope.WiFiSecurityEnabled,
 				"WiFiPassphrase" : $scope.WiFiPassphrase,
