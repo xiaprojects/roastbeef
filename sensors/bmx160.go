@@ -15,28 +15,28 @@ const (
 // BMX160 is a Bosch BMX160 attached to the I2C bus and satisfies
 // the IMUReader interface.
 type BMX160 struct {
-	mpu *bmx160.BMX160
+	dev *bmx160.BMX160
 }
 
 // NewBMX160 returns an instance of the BMX160 IMUReader, connected to a
 // BMX160 attached on the I2C bus.
 func NewBMX160(i2cbus *embd.I2CBus) (*BMX160, error) {
-	mpu, err := bmx160.NewBMX160(i2cbus, bmx160GyroRange, bmx160AccelRange, bmx160UpdateFreq, false, false)
+	dev, err := bmx160.NewBMX160(i2cbus, bmx160GyroRange, bmx160AccelRange, bmx160UpdateFreq, false, false)
 	if err != nil {
 		return nil, err
 	}
 
-	return &BMX160{mpu: mpu}, nil
+	return &BMX160{dev: dev}, nil
 }
 
 // Read returns the average (since last reading) time, Gyro X-Y-Z, Accel X-Y-Z, Mag X-Y-Z,
 // error reading Gyro/Accel, and error reading Mag.
 func (m *BMX160) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GAError, MAGError error) {
 	var i int8
-	data := new(bmx160.MPUData)
+	data := new(bmx160.BMX160Data)
 
 	for data.N == 0 && i < 5 {
-		data = <-m.mpu.CAvg
+		data = <-m.dev.CAvg
 		T = data.T.UnixNano()
 		G1 = data.G1
 		G2 = data.G2
@@ -57,7 +57,7 @@ func (m *BMX160) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GA
 // ReadOne returns the most recent time, Gyro X-Y-Z, Accel X-Y-Z, Mag X-Y-Z,
 // error reading Gyro/Accel, and error reading Mag.
 func (m *BMX160) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GAError, MAGError error) {
-	data := <-m.mpu.C
+	data := <-m.dev.C
 	T = data.T.UnixNano()
 	G1 = data.G1
 	G2 = data.G2
@@ -73,7 +73,7 @@ func (m *BMX160) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64,
 	return
 }
 
-// Close stops reading the MPU.
+// Close stops reading the BMX160.
 func (m *BMX160) Close() {
-	m.mpu.CloseMPU()
+	m.dev.Close()
 }
