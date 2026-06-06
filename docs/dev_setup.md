@@ -1,6 +1,6 @@
 ## Choices...
 If you want to start working on the Stratux code base, here are a few hints for a developer-friendly setup.
-Note that this only works as-is for the Stratux EU Edition.
+Note that this only works as-is for the Stratux image.
 
 You basically have two choices.
 - Remotely working on a PI
@@ -25,7 +25,7 @@ You will also have to enable developer mode and persistent logging on the web in
 - Restart again and verify that persistent logging is enabled before you continue.
 
 ### Set root password
-Then connect to it via Putty/SSH and set a root password
+Then connect to it via Putty/SSH and set a root password:
 ```bash
 sudo -s
 passwd
@@ -37,18 +37,18 @@ timedatectl set-ntp on
 ```
 
 ### Install build dependencies
-If you run out of disk space, persistent logging is probably disabled
+If you run out of disk space, persistent logging is probably disabled.
 
 ```bash
 apt update
-apt-mark hold linux-image-rpi-*
 apt install -y build-essential git ncurses-dev libusb-1.0-0-dev
-apt-mark unhold linux-image-rpi-*
 cd /tmp
 wget https://github.com/stratux/rtlsdr/releases/download/v1.0/librtlsdr0_2.0.2-2_arm64.deb
 dpkg -i librtlsdr0_2.0.2-2_arm64.deb
+rm librtlsdr0_2.0.2-2_arm64.deb
 wget https://github.com/stratux/rtlsdr/releases/download/v1.0/librtlsdr-dev_2.0.2-2_arm64.deb
 dpkg -i librtlsdr-dev_2.0.2-2_arm64.deb
+rm librtlsdr-dev_2.0.2-2_arm64.deb
 ```
 
 ### Clone the repo
@@ -67,15 +67,15 @@ Afterwards, install Visual Studio Code on your PC, and additionally install and 
 When done, connect to the RPi as root via Visual Studio Code.
 Then click `File->Open Folder` and type in `/root/stratux`.
 You should now have the Stratux project loaded into VSCode.
-There are preconfigured build an debug tasks in the project which allow you to create a debuggable Stratux build and remote-debug it in VSCode.
+There are preconfigured build and debug tasks in the project which allow you to create a debuggable Stratux build and remote-debug it in VSCode.
 To get started, you need to install the "Go" extensions ("Install on Stratux" while connected via Remote-SSH).
 The extension will ask you to install several tools (including delve if you want to debug). Go ahead and do so.
 Before debugging, run `stxstop` to stop the already running stratux service.
 
 There is also a makefile in the repository, so `make && make install && stxrestart` would be a simple way to build, install and start.
 
-### Save your public key to the pi
-Run on your local machine (On windows use git bash).  Stops VSCode from continually prompting for passwords
+### Save your public key to the Pi
+Run this on your local machine (on Windows, use Git Bash). This stops VSCode from continually prompting for passwords:
 
 ```bash
 ssh-copy-id root@stratux
