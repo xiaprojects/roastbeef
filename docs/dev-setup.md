@@ -51,15 +51,25 @@ dpkg -i librtlsdr-dev_2.0.2-2_arm64.deb
 rm librtlsdr-dev_2.0.2-2_arm64.deb
 ```
 
+### Install Go
+The repo's `go.mod` sets the minimum Go version (currently `go 1.20`). The official
+build (see [building.md](building.md)) uses Debian Bookworm's `golang-go` package, so
+on the Pi the simplest, build-consistent option is:
+
+```bash
+apt install -y golang-go
+go version   # confirm it satisfies the 'go' directive in go.mod
+```
+
+If your distro's `golang-go` is older than the version required by `go.mod`, install a
+newer Go from <https://go.dev/dl/> (pick the `linux-arm64` tarball) instead.
+
 ### Clone the repo
-Now clone the Stratux repository with submodules and install go:
+Now clone the Stratux repository with submodules:
 
 ```bash
 cd /root
 git clone --recursive https://github.com/stratux/stratux.git
-wget https://golang.org/dl/go1.20.1.linux-arm64.tar.gz
-tar xzf go1.20.1.linux-arm64.tar.gz
-rm go1.20.1.linux-arm64.tar.gz
 ```
 
 ### Set up VSCode
