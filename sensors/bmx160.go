@@ -3,7 +3,7 @@ package sensors
 
 import (
 	"github.com/kidoman/embd"
-	"github.com/stratux/stratux/sensors/bmx160"
+	"github.com/xiaprojects/roastbeef/sensors/bmx160"
 )
 
 const (
