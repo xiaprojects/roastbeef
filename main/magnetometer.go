@@ -230,8 +230,8 @@ func HeadingFromMag(
 		minZ, maxZ,
 		softIronEnabled)
 	// Axis mapping
-	pitchDegAligned := globalSettings.MagRollPitchInterference[0] * pitchDeg
-	rollDegAligned := globalSettings.MagRollPitchInterference[1] * rollDeg
+	pitchDegAligned := globalSettings.MagRollPitchInterference[0] * pitchDeg + globalSettings.MagRollPitchOffset[0]
+	rollDegAligned := globalSettings.MagRollPitchInterference[1] * rollDeg + globalSettings.MagRollPitchOffset[1]
 	// Most of the Magnetometers are (magX, magY, magZ) = (-cy, +cx, +cz) compared to the Accelerometer
 	cxAligned := globalSettings.MagAxisMappingX[0]*cx + globalSettings.MagAxisMappingX[1]*cy + globalSettings.MagAxisMappingX[2]*cz
 	cyAligned := globalSettings.MagAxisMappingY[0]*cx + globalSettings.MagAxisMappingY[1]*cy + globalSettings.MagAxisMappingY[2]*cz

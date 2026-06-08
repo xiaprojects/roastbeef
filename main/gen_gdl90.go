@@ -1273,6 +1273,7 @@ type settings struct {
 	MagSensorQuaternion  [4]float64 // Quaternion mapping from sensor frame to aircraft frame
 	*/
 	MagRollPitchInterference [2]float64 // aircraft frame to Mag alignment
+	MagRollPitchOffset   [2]float64 // aircraft frame to Mag alignment
 	MagAxisMappingX		 [3]float64 // aircraft frame to Mag alignment
 	MagAxisMappingY		 [3]float64 // aircraft frame to Mag alignment
 	MagAxisMappingZ		 [3]float64 // aircraft frame to Mag alignment
@@ -1366,6 +1367,7 @@ func defaultSettings() {
 	globalSettings.MagCalibration.CalibrationReset()
 	mySituation.Magnetometer.CalibrationReset()
 	globalSettings.MagRollPitchInterference = [2]float64{1, -1}
+	globalSettings.MagRollPitchInterference = [2]float64{0, 0}
 	// Most of the Magnetometers are (magX, magY, magZ) = (-cy, +cx, +cz) compared to the Accelerometer
 	globalSettings.MagAxisMappingX = [3]float64{0, -1, 0}
 	globalSettings.MagAxisMappingY = [3]float64{1, 0, 0}

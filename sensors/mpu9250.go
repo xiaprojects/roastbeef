@@ -9,7 +9,7 @@ import (
 const (
 	mpu9250GyroRange  = 250 // mpu9250GyroRange is the default range to use for the Gyro.
 	mpu9250AccelRange = 4   // mpu9250AccelRange is the default range to use for the Accel.
-	mpu9250UpdateFreq = 50  // mpu9250UpdateFreq is the rate at which to update the sensor values.
+	mpu9250UpdateFreq = 30  // mpu9250UpdateFreq is the rate at which to update the sensor values.
 )
 
 // MPU9250 represents an InvenSense MPU9250 attached to the I2C bus and satisfies
@@ -31,10 +31,6 @@ func NewMPU9250(i2cbus *embd.I2CBus) (*MPU9250, error) {
 	if err != nil {
 		return nil, err
 	}
-
-	// Set Gyro (Accel) LPFs to 20 (21) Hz to filter out prop/glareshield vibrations above 1200 (1260) RPM
-	mpu.SetGyroLPF(21)
-	mpu.SetAccelLPF(21)
 
 	m.mpu = mpu
 	return &m, nil
