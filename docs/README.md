@@ -37,6 +37,17 @@ hardware integration). User-facing how-tos live in the
   - [hardware/ogn-ais-receivers.md](hardware/ogn-ais-receivers.md) — OGN trackers (RX/TX),
     AIS, and external ADS-B receivers (Ping/Pong/UATRadio).
 
+## Tech debt
+
+Point-in-time audits tracking cleanup backlogs. Findings are candidates, not commitments —
+re-verify before acting.
+
+- **[tech-debt/modernization.md](tech-debt/modernization.md)** — outdated dependencies,
+  deprecated language/stdlib usage, EOL frameworks (AngularJS), and aging build/CI/packaging
+  tooling, with a prioritized backlog and suggested sequencing.
+- **[tech-debt/dead-code.md](tech-debt/dead-code.md)** — functions, types, and fields that are
+  defined but never referenced.
+
 ## Doc conventions
 
 - Keep these docs in sync with the code in the same PR — they are reviewed alongside code
