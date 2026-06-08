@@ -1,0 +1,111 @@
+package bmx160
+
+// Register addresses, masks and configuration values for the Bosch BMX160,
+// which combines a BMI160 inertial measurement unit with a BMM150 magnetometer.
+// Names mirror the Bosch reference (BMI160/BMM150) datasheets so the driver can
+// be cross-checked against them. Only the constants actually used by the driver
+// are kept here.
+const (
+	// BMM150 magnetometer (accessed through the BMI160 auxiliary interface).
+	BMM150_CHIP_ID_ADDR       = 0x40
+	BMM150_POWER_CONTROL_ADDR = 0x4B
+	BMM150_DIG_X1             = 0x5D
+	BMM150_DIG_Z4_LSB         = 0x62
+	BMM150_DIG_Z2_LSB         = 0x68
+	BMM150_POWER_CNTRL_ENABLE = 0x01
+	BMM150_PWR_CNTRL_MSK      = 0x01
+	BMM150_START_UP_TIME      = 3 // Start-up time delay, in ms.
+
+	// BMI160 unique chip identifier.
+	BMI160_CHIP_ID = 0xD8
+
+	// BMI160 register map.
+	BMI160_CHIP_ID_ADDR       = 0x00
+	BMI160_ERROR_REG_ADDR     = 0x02
+	BMI160_PMU_STATUS_ADDR    = 0x03
+	BMI160_AUX_DATA_ADDR      = 0x04
+	BMI160_GYRO_DATA_ADDR     = 0x0C
+	BMI160_ACCEL_DATA_ADDR    = 0x12
+	BMI160_STATUS_ADDR        = 0x1B
+	BMI160_ACCEL_CONFIG_ADDR  = 0x40
+	BMI160_ACCEL_RANGE_ADDR   = 0x41
+	BMI160_GYRO_CONFIG_ADDR   = 0x42
+	BMI160_GYRO_RANGE_ADDR    = 0x43
+	BMI160_AUX_ODR_ADDR       = 0x44
+	BMI160_FIFO_CONFIG_0_ADDR = 0x46
+	BMI160_FIFO_CONFIG_1_ADDR = 0x47
+	BMI160_AUX_IF_1_ADDR      = 0x4C
+	BMI160_AUX_IF_2_ADDR      = 0x4D
+	BMI160_AUX_IF_3_ADDR      = 0x4E
+	BMI160_AUX_IF_4_ADDR      = 0x4F
+	BMI160_INT_ENABLE_0_ADDR  = 0x50
+	BMI160_INT_ENABLE_1_ADDR  = 0x51
+	BMI160_INT_ENABLE_2_ADDR  = 0x52
+	BMI160_FOC_CONF_ADDR      = 0x69
+	BMI160_IF_CONF_ADDR       = 0x6B
+	BMI160_SELF_TEST_ADDR     = 0x6D
+	BMI160_OFFSET_CONF_ADDR   = 0x77
+	BMI160_COMMAND_REG_ADDR   = 0x7E
+
+	// BMI160 I2C address.
+	BMI160_I2C_ADDR = 0x68
+
+	// BMI160 commands.
+	BMI160_SOFT_RESET_CMD = 0xb6
+	BMI160_START_FOC_CMD  = 0x03
+
+	// BMI160 delay settings, in ms.
+	BMI160_AUX_COM_DELAY = 10
+
+	// BMI160 power mode settings.
+	BMI160_ACCEL_NORMAL_MODE = 0x11
+	BMI160_GYRO_NORMAL_MODE  = 0x15
+	BMI160_AUX_NORMAL_MODE   = 0x19
+
+	// BMI160 accelerometer range settings.
+	BMI160_ACCEL_RANGE_2G  = 0x03
+	BMI160_ACCEL_RANGE_4G  = 0x05
+	BMI160_ACCEL_RANGE_8G  = 0x08
+	BMI160_ACCEL_RANGE_16G = 0x0C
+
+	// BMI160 gyroscope range settings.
+	BMI160_GYRO_RANGE_2000_DPS = 0x00
+	BMI160_GYRO_RANGE_1000_DPS = 0x01
+	BMI160_GYRO_RANGE_500_DPS  = 0x02
+	BMI160_GYRO_RANGE_250_DPS  = 0x03
+	BMI160_GYRO_RANGE_125_DPS  = 0x04
+
+	// BMI160 accelerometer output data rate settings.
+	BMI160_ACCEL_ODR_12_5HZ = 0x05
+	BMI160_ACCEL_ODR_25HZ   = 0x06
+	BMI160_ACCEL_ODR_50HZ   = 0x07
+	BMI160_ACCEL_ODR_100HZ  = 0x08
+	BMI160_ACCEL_ODR_200HZ  = 0x09
+	BMI160_ACCEL_ODR_400HZ  = 0x0A
+	BMI160_ACCEL_ODR_800HZ  = 0x0B
+	BMI160_ACCEL_ODR_1600HZ = 0x0C
+
+	// BMI160 gyroscope output data rate settings.
+	BMI160_GYRO_ODR_25HZ   = 0x06
+	BMI160_GYRO_ODR_50HZ   = 0x07
+	BMI160_GYRO_ODR_100HZ  = 0x08
+	BMI160_GYRO_ODR_200HZ  = 0x09
+	BMI160_GYRO_ODR_400HZ  = 0x0A
+	BMI160_GYRO_ODR_800HZ  = 0x0B
+	BMI160_GYRO_ODR_1600HZ = 0x0C
+	BMI160_GYRO_ODR_3200HZ = 0x0D
+
+	// BMI160 auxiliary (magnetometer) output data rate settings.
+	BMI160_AUX_ODR_12_5HZ = 0x05
+
+	// BMI160 bit masks.
+	BMI160_MANUAL_MODE_EN_MSK        = 0x80
+	BMI160_GYRO_SELF_TEST_STATUS_MSK = 0x02
+	BMI160_GYRO_FOC_EN_MSK           = 0x40
+	BMI160_ACCEL_FOC_X_CONF_MSK      = 0x30
+	BMI160_ACCEL_FOC_Y_CONF_MSK      = 0x0C
+	BMI160_ACCEL_FOC_Z_CONF_MSK      = 0x03
+	BMI160_FOC_STATUS_MSK            = 0x08
+	BMI160_GYRO_OFFSET_EN_MSK        = 0x80
+	BMI160_ACCEL_OFFSET_EN_MSK       = 0x40
+)

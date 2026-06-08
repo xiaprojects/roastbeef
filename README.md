@@ -101,7 +101,9 @@ We recommend using a 8GB or larger microSD card for your stratux system.
 
 ## Developing
 
-See [DEVELOPING.md](docs/DEVELOPING.md) for details and information.
+See the [developer documentation](docs/README.md) for an index. Key starting points:
+[architecture](docs/architecture.md), [building](docs/building.md),
+[dev setup](docs/dev-setup.md), and the [integration guide](docs/integration/README.md).
 
 ## Docs in repository vs. in wiki
 
