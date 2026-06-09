@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>3D XYZ Sensor - JSON Calibration</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background: #111;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+
+    #info {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-family: monospace;
+      font-size: 13px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px;
+      max-width: 360px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    #config {
+      width: 100%;
+      height: 120px;
+      font-family: monospace;
+      font-size: 12px;
+      background: #222;
+      color: #ccc;
+      border: 1px solid #444;
+    }
+
+    button {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      cursor: pointer;
+      margin: 2px;
+    }
+
+    button.active {
+      background: #4a4 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+  <div id="info" style="display: block;">
+    <div>Points: <span id="pointCount">0</span> | <button id="toggleRaw" class="active">Calibrated</button> <button
+        id="loadConfig">Load JSON</button></div>
+    <textarea id="config" placeholder='Paste JSON here:
+{
+  "MaxX":10,"MaxY":10,"MaxZ":6,
+  "MinX":-10,"MinY":-10,"MinZ":-6
+}'>{
+  "MaxX":10,"MaxY":10,"MaxZ":6,
+  "MinX":-10,"MinY":-10,"MinZ":-6
+
+}</textarea>
+    <div id="bounds"></div>
+  </div>
+
+  <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    var x = 0;
+    var y = 0;
+    var z = 0;
+    const MAX_TRAIL_POINTS = 1000;
+    const positions = new Float32Array(MAX_TRAIL_POINTS * 3);
+    const colors = new Float32Array(MAX_TRAIL_POINTS * 3);
+
+    let scene, camera, renderer, controls, trailMesh, ellipsoidMesh;
+    let trailGeometry, trailMaterial;
+    let trailPointCount = 0, totalPoints = 0;
+    let useCalibration = true;
+    let calConfig = { MagMaxX: 5000, MagMaxY: 5000, MagMaxZ: 5000, MagMinX: -5000, MagMinY: -5000, MagMinZ: -5000 };
+
+    // Calibration state
+    let globalMinX = Infinity, globalMaxX = -Infinity;
+    let globalMinY = Infinity, globalMaxY = -Infinity;
+    let globalMinZ = Infinity, globalMaxZ = -Infinity;
+
+    init();
+    setupUI();
+    animate();
+
+
+
+    function init() {
+      var URL_HOST_BASE = window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+      window.situationSocket = new WebSocket("ws://"+URL_HOST_BASE+"/situation");
+
+      window.situationSocket.onmessage = function (msg) {
+        //console.log(msg);
+        var data = JSON.parse(msg.data);
+        x = data.Magnetometer.X;
+        y = data.Magnetometer.Y;
+        z = data.Magnetometer.Z;
+        calConfig = data.Magnetometer;
+      }
+      const container = document.getElementById('container');
+      scene = new THREE.Scene();
+      scene.rotation.x = -Math.PI / 2;
+      scene.background = new THREE.Color(0xffffff);
+
+      camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.set(6, 6, 6);
+
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      container.appendChild(renderer.domElement);
+
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.target.set(0, 0, 0);
+
+      scene.add(new THREE.AxesHelper(10));
+      scene.add(new THREE.GridHelper(10, 10));
+      let g2 = (new THREE.GridHelper(10, 10));
+      g2.rotation.x = -Math.PI / 2;
+      scene.add(g2);
+
+
+      trailGeometry = new THREE.BufferGeometry();
+      trailGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      trailGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+      trailMaterial = new THREE.PointsMaterial({
+        size: 0.1, sizeAttenuation: true, vertexColors: true,
+        transparent: true, opacity: 0.5
+      });
+      trailMesh = new THREE.Points(trailGeometry, trailMaterial);
+      scene.add(trailMesh);
+
+      const ellipsoidGeometry = new THREE.SphereGeometry(0.5, 32, 16);
+      const ellipsoidMaterial = new THREE.MeshBasicMaterial({
+        color: 0x44ff44, transparent: true, opacity: 0.25,
+        wireframe: true, side: THREE.DoubleSide
+      });
+      ellipsoidMesh = new THREE.Mesh(ellipsoidGeometry, ellipsoidMaterial);
+      scene.add(ellipsoidMesh);
+
+      window.addEventListener('resize', onWindowResize);
+    }
+
+    function setupUI() {
+      document.getElementById('toggleRaw').onclick = () => {
+        useCalibration = !useCalibration;
+        document.getElementById('toggleRaw').textContent = useCalibration ? 'Calibrated' : 'Raw';
+        document.getElementById('toggleRaw').className = useCalibration ? 'active' : '';
+
+        globalMinX = Infinity, globalMaxX = -Infinity;
+        globalMinY = Infinity, globalMaxY = -Infinity;
+        globalMinZ = Infinity, globalMaxZ = -Infinity;
+      };
+
+      document.getElementById('loadConfig').onclick = () => {
+        try {
+          calConfig = JSON.parse(document.getElementById('config').value);
+          alert('Calibration loaded!');
+        } catch (e) {
+          alert('Invalid JSON');
+        }
+      };
+    }
+
+    // NORMALIZE using calibration bounds
+    function applyCalibration(rawX, rawY, rawZ) {
+      if (!useCalibration) return { x: rawX, y: rawY, z: rawZ };
+
+      const cx = (calConfig.MagMinX + calConfig.MagMaxX) / 2;
+      const cy = (calConfig.MagMinY + calConfig.MagMaxY) / 2;
+      const cz = (calConfig.MagMinZ + calConfig.MagMaxZ) / 2;
+
+      const sx = (calConfig.MagMaxX - calConfig.MagMinX) / 2;
+      const sy = (calConfig.MagMaxY - calConfig.MagMinY) / 2;
+      const sz = (calConfig.MagMaxZ - calConfig.MagMinZ) / 2;
+
+      const normX = (rawX - cx) / sx;
+      const normY = (rawY - cy) / sy;
+      const normZ = (rawZ - cz) / sz;
+
+      return { x: normX, y: normY, z: normZ };
+    }
+    function updateSensorPoint(rawX, rawY, rawZ) {
+      const norm = applyCalibration(rawX, rawY, rawZ);
+      const x = norm.x, y = norm.y, z = norm.z;
+
+      totalPoints++;
+      trailPointCount = Math.min(trailPointCount + 1, MAX_TRAIL_POINTS);
+
+      // Track normalized global bounds
+      globalMinX = Math.min(globalMinX, x);
+      globalMaxX = Math.max(globalMaxX, x);
+      globalMinY = Math.min(globalMinY, y);
+      globalMaxY = Math.max(globalMaxY, y);
+      globalMinZ = Math.min(globalMinZ, z);
+      globalMaxZ = Math.max(globalMaxZ, z);
+
+      // Circular trail
+      for (let i = MAX_TRAIL_POINTS - 1; i > 0; i--) {
+        const i3 = i * 3, prev = (i - 1) * 3;
+        positions[i3] = positions[prev];
+        positions[i3 + 1] = positions[prev + 1];
+        positions[i3 + 2] = positions[prev + 2];
+        colors[i3] *= 0.96;
+        colors[i3 + 1] *= 0.96;
+        colors[i3 + 2] *= 0.96;
+      }
+
+      positions[0] = x; positions[1] = y; positions[2] = z;
+      colors[0] = 1; colors[1] = useCalibration ? 0.3 : 1; colors[2] = 0;  // Green tint when calibrated
+
+      trailGeometry.attributes.position.needsUpdate = true;
+      trailGeometry.attributes.color.needsUpdate = true;
+      trailGeometry.setDrawRange(0, trailPointCount);
+
+      document.getElementById('pointCount').textContent = parseInt(x * 10) + "," + parseInt(y * 10) + "," + parseInt(z * 10);
+    };
+
+    function updateEllipsoid() {
+      if (totalPoints === 0) return;
+
+      const cx = (globalMinX + globalMaxX) * 0.5;
+      const cy = (globalMinY + globalMaxY) * 0.5;
+      const cz = (globalMinZ + globalMaxZ) * 0.5;
+
+      const rx = (globalMaxX - globalMinX) //* 0.525;
+      const ry = (globalMaxY - globalMinY) //* 0.525;
+      const rz = (globalMaxZ - globalMinZ) //* 0.525;
+
+      ellipsoidMesh.position.set(cx, cy, cz);
+      ellipsoidMesh.scale.set(rx, ry, rz);
+
+      const mode = useCalibration ? 'CALIBRATED' : 'RAW';
+      document.getElementById('bounds').innerHTML =
+        `${mode}<br>X:${globalMinX.toFixed(2)}→${globalMaxX.toFixed(2)}<br>` +
+        `Y:${globalMinY.toFixed(2)}→${globalMaxY.toFixed(2)}<br>` +
+        `Z:${globalMinZ.toFixed(2)}→${globalMaxZ.toFixed(2)}<br>` +
+        `Calib: X${parseInt(calConfig.MagMinX)}-${parseInt(calConfig.MagMaxX)} Y${parseInt(calConfig.MagMinY)}-${parseInt(calConfig.MagMaxY)}`;
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      const t = performance.now() * 0.001;
+      // Simulate raw uncalibrated sensor data
+      updateSensorPoint(
+        //Math.sin(t) * 8 + Math.sin(t * 3) * 2,  // Raw X with offset
+        //Math.cos(t * 0.7) * 7,                 // Raw Y  
+        //Math.sin(t * 1.3) * 5 + 1              // Raw Z with bias
+        x, y, z
+      );
+      updateEllipsoid();
+      renderer.render(scene, camera);
+    }
+
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+  </script>
+</body>
+
+</html>
