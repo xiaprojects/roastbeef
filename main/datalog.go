@@ -45,6 +45,7 @@ type StratuxStartup struct {
 }
 
 var dataLogStarted bool
+var dataLogRequestShutdown bool
 var dataLogReadyToWrite bool
 
 var stratuxStartupID int64
@@ -622,6 +623,7 @@ func logAISTermMessage(m AISTermMessage) {
 }
 
 func initDataLog() {
+	dataLogRequestShutdown = false
 	//log.Printf("dataLogStarted = %t. dataLogReadyToWrite = %t\n", dataLogStarted, dataLogReadyToWrite) //REMOVE -- DEBUG
 	insertString = make(map[string]string)
 	insertBatchIfs = make(map[string][][]interface{})
@@ -651,6 +653,9 @@ func dataLogWatchdog() {
 		//log.Printf("Watchdog iterated.\n") //REMOVE -- DEBUG
 		time.Sleep(1 * time.Second)
 		//log.Printf("Watchdog sleep over.\n") //REMOVE -- DEBUG
+		if dataLogRequestShutdown == true {
+			break
+		}
 	}
 }
 
@@ -669,6 +674,7 @@ func dataLogWatchdog() {
 */
 
 func closeDataLog() {
+	dataLogRequestShutdown = true
 	//log.Printf("closeDataLog(): dataLogStarted = %t\n", dataLogStarted) //REMOVE -- DEBUG
 	dataLogReadyToWrite = false // prevent any new messages from being sent down the channels
 	log.Printf("datalog.go: Starting data log shutdown\n")
