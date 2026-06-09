@@ -151,10 +151,15 @@ func MagneticHeadingDeg(pitchDeg, rollDeg, magX, magY, magZ float64) float64 {
 	theta := pitchDeg * math.Pi / 180.0 // pitch (rad)
 
 	// Tilt compensation (common form)
-	xh := magX*math.Cos(theta) + magZ*math.Sin(theta)
-	yh := magX*math.Sin(phi)*math.Sin(theta) + magY*math.Cos(phi) - magZ*math.Sin(phi)*math.Cos(theta)
+	sinPhi := math.Sin(phi)
+	cosPhi := math.Cos(phi)
+	sinTheta := math.Sin(theta)
+	cosTheta := math.Cos(theta)
 
-	headingRad := math.Atan2(yh, xh)
+	xh := magX*cosTheta + magY*sinTheta*sinPhi + magZ*sinTheta*cosPhi
+	yh := magZ*sinPhi - magY*cosPhi
+
+	headingRad := math.Atan2(-yh, xh)
 	headingDeg := headingRad * 180.0 / math.Pi
 
 	// Normalize to [0,360)
