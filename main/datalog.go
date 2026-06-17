@@ -45,7 +45,7 @@ type StratuxStartup struct {
 }
 
 var dataLogStarted bool
-var dataLogRequestShutdown bool
+var dataLogRequestShutdown = false
 var dataLogReadyToWrite bool
 
 var stratuxStartupID int64

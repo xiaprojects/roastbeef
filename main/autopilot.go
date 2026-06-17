@@ -133,6 +133,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) InitFunc() bool {
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) autopilot() {
+	time.Sleep(1 * time.Second)
 	for autopilotInstance.requestToExit == false {
 		if globalSettings.Autopilot_Enabled == true {
 			if autopilotInstance.status.Active == true {

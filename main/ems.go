@@ -111,6 +111,7 @@ func (emsInstance *EMSStratuxPlugin) makeRBCYLString() string {
 }
 
 func (emsInstance *EMSStratuxPlugin) ListenerFunc() bool {
+	time.Sleep(1 * time.Second)
 	timerForTemperatures := 10
 	for emsInstance.emsIsSendingData == true {
 		emsInstance.emsDataMutex.Lock()
