@@ -13,6 +13,7 @@ import (
 	"archive/zip"
 	"bytes"
 	"compress/gzip"
+	"database/sql"
 	"encoding/hex"
 	"encoding/json"
 	"errors"
@@ -33,8 +34,7 @@ import (
 	"sync"
 	"text/template"
 	"time"
-
-	"database/sql"
+	"unicode"
 
 	_ "github.com/mattn/go-sqlite3"
 
@@ -82,6 +82,8 @@ var trafficUpdate *uibroadcaster
 var radarUpdate *uibroadcaster
 var gdl90Update *uibroadcaster
 var emsUpdate *uibroadcaster
+var bridgeFloatUpdate *uibroadcaster
+var bridgeStringUpdate *uibroadcaster
 
 /*
 	Keypad Feature
@@ -935,6 +937,59 @@ func handleUpdatesInstallPostRequest(w http.ResponseWriter, r *http.Request) {
 }
 
 
+// Capitalize returns a string with the first letter capitalized
+func Capitalize(s string) string {
+	if s == "" {
+		return s
+	}
+	
+	// Convert first character to uppercase
+	result := make([]byte, len(s))
+	for i, c := range s {
+		if i == 0 {
+			result[i] = byte(unicode.ToUpper(c))
+		} else {
+			result[i] = byte(c)
+		}
+	}
+	
+	return string(result)
+}
+type AddonDataModel struct {
+	Name string `json:"name"`
+	Js string `json:"js"`
+	Hash string `json:"hash"`
+	Html string `json:"html"`
+	Controller string `json:"controller"`
+}
+func handleAddonsGet(w http.ResponseWriter, r *http.Request) {
+	fileInfo, err := ioutil.ReadDir(STRATUX_WWW_DIR + "RB-01/addons")
+    if err != nil {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+		return
+    }
+
+	list := []AddonDataModel{}
+
+	for i := range fileInfo {
+		if strings.HasSuffix(fileInfo[i].Name(),".html") {
+			regEx, _ := regexp.Compile("\\.html")
+			n := regEx.ReplaceAllString(fileInfo[i].Name(),"")
+			ctrl := Capitalize(n)+"Ctrl"
+			r := AddonDataModel{Name: n,Js: "addons/js/"+n+".js",Hash: "/addons/"+n,Html: "addons/"+n+".html",Controller: ctrl}
+			list = append(list, r)
+		}
+	}
+
+	statusJSON, err2 := json.Marshal(&list)
+	if err == nil && err2 == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+	} else {
+		fmt.Fprintf(w, "[]\n")
+		log.Printf("%s", err)
+	}
+}
 
 /***
  * 
@@ -1284,6 +1339,77 @@ func handleChecklistRest(w http.ResponseWriter, r *http.Request) {
 	}
 	if r.Method == "DELETE" {
 		handleChecklistDelete(w, r)
+	}
+}
+
+/***
+ * Addons Bridge
+ */
+func handleBridgeFloatWS(conn *websocket.Conn) {
+	//	log.Printf("Web client connected.\n")
+	bridgeFloatUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+func handleBridgeStringWS(conn *websocket.Conn) {
+	//	log.Printf("Web client connected.\n")
+	bridgeStringUpdate.AddSocket(conn)
+	timer := time.NewTicker(1 * time.Second)
+	for {
+		<-timer.C
+	}
+}
+
+
+// AJAX call - /setEMS. receives via POST command, any/all EMS data.
+func handleBridgeFloatSetRequest(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+	if r.Method == "POST" {
+		decoder := json.NewDecoder(r.Body)
+		var msg map[string]float32
+		err := decoder.Decode(&msg)
+		if err == io.EOF {
+			
+		} else if err != nil {
+			log.Printf("handleBridgeFloatSetRequest:error: %s\n", err.Error())
+		} else {
+			reconfigure := false
+			for key, ival := range msg {
+				addonsBridge.bridgeDataMutex.Lock()
+				prevValue, hasExistingValue := addonsBridge.bridgeFloatData[key]
+				if hasExistingValue {
+					if prevValue != ival {
+						addonsBridge.bridgeFloatData[key]=ival
+						reconfigure = true
+					}
+				} else {
+					addonsBridge.bridgeFloatData[key] = ival
+					reconfigure = true
+				}
+				addonsBridge.bridgeDataMutex.Unlock()
+			}
+			if(reconfigure==true){
+				addonsBridge.bridgeDataMutex.Lock()
+				bridgeFloatUpdate.SendJSON(addonsBridge.bridgeFloatData)
+				addonsBridge.bridgeDataMutex.Unlock()
+			}			
+		}
+	}
+	if r.Method == "GET" {
+		addonsBridge.bridgeDataMutex.Lock()
+		statusJSON, err := json.Marshal(&addonsBridge.bridgeFloatData)
+		addonsBridge.bridgeDataMutex.Unlock()
+		if err == nil {
+		fmt.Fprintf(w, "%s\n", statusJSON)
+		} else {
+			fmt.Fprintf(w, "{}\n")
+		}		
 	}
 }
 
@@ -2474,6 +2600,7 @@ func managementInterface() {
 	emsUpdate = NewUIBroadcaster()
 	radioUpdate = NewUIBroadcaster()
 	autopilotUpdate = NewUIBroadcaster()
+	bridgeFloatUpdate = NewUIBroadcaster()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))
@@ -2497,6 +2624,12 @@ func managementInterface() {
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleRadioWS)}
+			s.ServeHTTP(w, req)
+		})
+	http.HandleFunc("/bridge/float/ws",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleBridgeFloatWS)}
 			s.ServeHTTP(w, req)
 		})
 	// EMS Feature
@@ -2568,6 +2701,8 @@ func managementInterface() {
 	http.HandleFunc("/playback", handlePlaybackGet)
 	// Resources Feature
 	http.HandleFunc("/resources", handleResourcesGet)
+	// Addons Feature
+	http.HandleFunc("/addons", handleAddonsGet)
 	// Resources Flight logs
 	http.HandleFunc("/flightlogs", handleFlightLogsGet)
 	// Checklist Feature
@@ -2585,6 +2720,8 @@ func managementInterface() {
 	// Radio Feature
 	http.HandleFunc("/radio", handleRadioRest)
 	http.HandleFunc("/radio/", handleRadioRest)
+	// Addons Bridge
+	http.HandleFunc("/bridge/float", handleBridgeFloatSetRequest)
 	// EMS Feature
 	http.HandleFunc("/getEMS", handleEMSRequest)
 	http.HandleFunc("/getEMSMax", handleEMSMaxRequest)

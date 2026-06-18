@@ -114,9 +114,74 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
 `managementInterface()` is the HTTP server. It serves the web UI and the JSON/WebSocket API
 documented in `docs/http-api.md` (e.g. `GET /getStatus`, `/getSituation`, `POST
 /setSettings`, WebSocket `/gdl90`, `/situation`, `/traffic`, `/weather`). No auth — it's a
-local AP network. The frontend (`web/`) is an **AngularJS** single-page app (mobile-angular-ui +
-OpenLayers for maps). Each screen is a "plate": HTML in `web/plates/*.html` with its controller
-in `web/plates/js/*.js`, talking to the API above.
+local AP network.
+
+**Two AngularJS frontends coexist**, both plain static files served from `STRATUX_WWW_DIR`
+by `http.FileServer` (no build step / bundler for either):
+
+- `web/` — the original Stratux config/EFB UI, served at `/`.
+- `web/RB-01/` — the **RB-01 product HMI**, served at `/RB-01/` (see the next section).
+
+In both, each screen is a "plate": HTML in `…/plates/*.html` with its controller in
+`…/plates/js/*.js`, talking to the API above. Both use mobile-angular-ui + OpenLayers (maps).
+
+### The RB-01 HMI (`web/RB-01/`)
+
+The avionics display the pilot actually sees (Chromium full-screen on the Pi). It is
+**AngularJS 1.x** (`maui/js/angular.min.js`, modules `ui.router` + `mobile-angular-ui`) —
+static files, no build step, reached at `/RB-01/`. It reuses shared assets from `web/`
+rather than duplicating them: `web/synthview/` (Three.js synthetic vision — `GLTFLoader`/
+`OrbitControls`, `*.glb` aircraft models, `elevations.json` terrain), shared
+`web/plates/js/ahrs.js`, and libs `ol.js` (OpenLayers), `chart.js`, `svg.min.js`.
+
+- **Entry/structure.** `web/RB-01/index.html` bootstraps app module `bobby` with root
+  `MainCtrl`; `web/RB-01/js/main.js` registers each screen as a ui-router state ("plate").
+  HTML lives in `web/RB-01/plates/*.html`, controllers in `web/RB-01/plates/js/*.js`. The
+  startup plate is remembered in `localStorage`.
+- **Live data.** `web/RB-01/services/*.js` is a thin layer of one service per backend
+  WebSocket. Each opens its socket, parses the JSON frame, and re-dispatches a DOM
+  `CustomEvent` (e.g. `SituationUpdated`) that the plates listen for; all auto-reconnect ~1s
+  after a drop. Stream → service:
+
+  | WebSocket | Service | Carries |
+  |---|---|---|
+  | `/situation` | `servicesituation.js` | GPS fix + AHRS attitude/baro |
+  | `/traffic` | `servicetraffic.js` | fused ADS-B/FLARM/AIS targets |
+  | `/radar` | `serviceradar.js` | radar/traffic display data |
+  | `/alerts` | `servicealerts.js` | alerts (with audio) |
+  | `/autopilot` | `serviceautopilot.js` | autopilot status/modes |
+  | `/ems` | `serviceems.js` | engine monitoring telemetry |
+  | `/status` | `servicestatus.js` | system health (temp/CPU/errors) |
+  | `/keypad` | `servicekeypad.js` | hardware knob/keypad input |
+  | `/radioStatus` | `serviceradio.js` | radio device status |
+  | `/bridge/float/ws` | `servicebridge.js` | addon/probe numeric bridge |
+
+- **Feature → file map** (plate HTML + controller under `web/RB-01/plates/`):
+
+  | Feature | HTML | Controller |
+  |---|---|---|
+  | Attitude / six-pack | `attitude.html`, `sixpack.html` | `js/SixPackInstruments.js` |
+  | Speed / altimeter / vario / turn-slip / heading / g-meter | `speed.html`, `altimeter.html`, `variometer.html`, `turnslip.html`, `heading.html`, `gmetergauge.html` | `js/SixPackInstruments.js` |
+  | Synthetic 3D view | `synthview.html` | `js/synthview.js` (+ `web/synthview/`) |
+  | HSI | `hsi.html` | `js/hsi.js` |
+  | Radar / traffic | `radar.html` | `js/radar.js` |
+  | Map | `map.html` | `js/map.js` (OpenLayers) |
+  | Alerts | `alerts.html` | `js/alerts.js` |
+  | Checklist | `checklist.html` | `js/checklist.js` |
+  | Charts / datalogger | `charts.html` | `js/charts.js` (Chart.js) |
+  | EMS (engine) | `ems.html`, `emsegt.html` | `js/ems.js`, `js/emsegt.js` |
+  | Autopilot | `autopilot.html` | `js/autopilot.js` |
+  | OTA updates | `ota.html` | `js/ota.js` |
+  | Radio remote | `radio.html` | `js/radio.js` |
+  | GPIO switchboard | `switchboard.html` | `js/switchboard.js` |
+  | Timers / resources / voice / camera / airfields / aircraft | `timers.html`, `resources.html`, `voice.html`, `camera.html`, `airfields.html`, `aircraft.html` | `js/timers.js`, `js/resources.js`, `js/voice.js`, `js/camera.js`, `js/airfields.js`, `js/aircraft.js` |
+
+- **Addons.** A plugin system: `GET /addons` lists JS+HTML under `web/RB-01/addons/`
+  (e.g. `vhfdf.*`, `example.*`), which `main.js` injects and registers at runtime.
+- **Engine / addon probes.** External probe (engine) data is pushed in over REST/WebSocket
+  rather than read from hardware here: `POST /bridge/float` and the `/bridge/float/ws`
+  stream (`main/bridge.go`), plus `/getEMS` / `/setEMS` (`main/ems.go`). See
+  `docs/http-api.md` for the full endpoint set.
 
 ### Other binaries
 
@@ -131,7 +196,9 @@ in `web/plates/js/*.js`, talking to the API above.
 - `dump978/` (C lib, built locally), `godump978/` (cgo wrapper), `uatparse/` (UAT/FIS-B parser).
 - `dump1090/`, `rtl-ais/`, `ogn/ogn-tracker/`, `image_build/pi-gen/` — git **submodules**.
 - `sensors/` — baro/IMU hardware drivers.
-- `web/` — AngularJS UI and assets.
+- `web/` — AngularJS UIs and shared assets: the legacy Stratux UI (served at `/`) and the
+  RB-01 product HMI in `web/RB-01/` (served at `/RB-01/`); shared 3D/synthetic-vision assets
+  in `web/synthview/`.
 - `debian/` — systemd units, udev rules, `.deb` packaging scripts, boot/network templates.
 - `image_build/` — pi-gen stages that produce the Raspberry Pi SD-card image.
 - `test/` — standalone diagnostic tools. `test-data/` — sample logs. `notes/` — design notes.

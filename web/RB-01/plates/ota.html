@@ -3,7 +3,43 @@
     <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-heading" style="text-align: center;">
-                Summary
+                Addons
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <table style="width:100%;margin: 0px;padding:0px;">
+                    <tr
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Addon
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Actions
+                        </td>
+                    </tr>                    
+                    <tr ng-repeat="item in addons"
+                        ng-click="goTo(item)"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            {{item.name}}
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            <button class="btn-success">START</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12" style="overflow: hidden;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center;">
+                Updates
             </div>
             <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
                 <table style="width:100%;margin: 0px;padding:0px;">
@@ -13,6 +49,10 @@
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
                             Component
                         </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Actions
+                        </td>                        
                         <td
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
                             Remote
@@ -30,6 +70,11 @@
                         </td>
                         <td
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            <a ng-show="update.installed == -1" ng-click="installUpdate(update)" class="btn btn-default">INSTALL</a>
+                            <a ng-show="update.installed != -1 && update.version>update.installed" ng-click="installUpdate(update)" class="btn btn-default">UPDATE</a>
+                        </td>                        
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
                             {{update.version}}
                         </td>
                         <td
@@ -41,7 +86,4 @@
             </div>
         </div>
     </div>
-</div>
-<div style="text-align: center;">
-<a ng-show="updateAvailable == true" ng-click="installUpdate()" class="btn btn-default">INSTALL UPDATE</a>
 </div>

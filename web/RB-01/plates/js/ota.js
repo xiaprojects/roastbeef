@@ -79,16 +79,27 @@ function OtaCtrl($rootScope, $scope, $state, $http, $interval) {
 
     });
 
-    $scope.installUpdate = function () {
-        $scope.updateAvailable = false;
-        $scope.updates.forEach(element => {
+    $scope.installUpdate = function (element) {
             if (element.version > element.installed) {
                  $http.post(URL_OTA_REMOTE_POST,JSON.stringify(element)).then(function (response) {
-
+                    document.location = "#/";
                  })
                  return;
             }
-        });
+    }
+    // Addons Module Navigation
+    $scope.addons = [];
+    $http.get(URL_ADDONS).then(function (response) {
+        var db = angular.fromJson(response.data);
+        if (db === undefined) {
+            return;
+        }
+        $scope.addons = db;
+    });
 
+    $scope.goTo = function(item) {
+        if(item.hasOwnProperty("hash") == true) {
+            document.location = "#" + item.hash;
+        }
     }
 };

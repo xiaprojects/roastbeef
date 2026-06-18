@@ -31,10 +31,14 @@
 var app = angular.module('bobby', ['ui.router', 'mobile-angular-ui', 'appControllers']);
 
 var URL_EMS_SETTINGS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/ems.json";
+var URL_ADDONS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/addons";
 
 var appControllers = angular.module('appControllers', []);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider, $controllerProvider) {
+  app.registerController = function (name, constructor) {
+    $controllerProvider.register(name, constructor);
+  };
 	$stateProvider
 		.state('home', {
 			url: '/',
@@ -205,6 +209,33 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			reloadOnSearch: false
 		})
 		;
+	fetch(URL_ADDONS)
+		.then(function (response) {
+			if (!response.ok) {
+				throw new Error('HTTP error ' + response.status);
+			}
+			return response.json();
+		}).then(function (addons) {
+			addons.forEach(element => {
+			var s = document.createElement('script');
+			s.src = element.js;
+			document.head.appendChild(s);
+			s.onload = () => {
+				$stateProvider.state(element.name, {
+					url: element.hash,
+					templateUrl: element.html,
+					controller: element.controller,
+					reloadOnSearch: false
+				});
+				app.registerController(element.controller, window[element.controller]);
+				console.log("Addon loaded: "+ element.controller);
+			}
+			});
+		})
+		.catch(function (error) {
+			console.error(error);
+		});
+	
 	$urlRouterProvider.otherwise('/');
 });
 
@@ -263,6 +294,11 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 	if (true) {
 		if (($scope.voiceService === undefined) || ($scope.voiceService === null)) {
 			$scope.voiceService = new VoiceService($scope, $http, $state);
+		}
+	}
+	if (true) {
+		if (($scope.addonsBridge === undefined) || ($scope.addonsBridge === null)) {
+			$scope.addonsBridge = new BridgeService($scope, $http, $state);
 		}
 	}
 	$scope.fabClick = (direction, item, browserEvent) => {

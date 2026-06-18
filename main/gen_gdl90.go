@@ -1735,6 +1735,8 @@ func gracefulShutdown() {
 	log.Printf("gracefulShutdown --> charts()")
 	// SwitchBoards
 	switchBoard.ShutdownFunc()
+	// Addons Bridge
+	addonsBridge.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 	log.Printf("gracefulShutdown --> setActLed()")
@@ -1906,6 +1908,8 @@ func main() {
 		switchBoard.InitFunc()
 		// OTA
 		ota.InitFunc()
+		// Addons Bridge
+		addonsBridge.InitFunc()
 		pongInit()
 	}
 	initTraffic(isTraceReplayMode)

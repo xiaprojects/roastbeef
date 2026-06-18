@@ -51,7 +51,7 @@ import (
 
 const (
 	numRetries uint8 = 50
-	calCLimit        = 0.15
+	calCLimit        = 0.20
 	calDLimit        = 15.0
 
 	// WHO_AM_I values to differentiate between the different IMUs.
@@ -401,6 +401,7 @@ func sensorAttitudeSender() {
 					_, d1, d2, d3, c1, c2, c3, _, _, _, mpuError, _ := myIMUReader.Read()
 					cc = math.Sqrt(c1*c1 + c2*c2 + c3*c3)
 					dd = math.Sqrt(d1*d1 + d2*d2 + d3*d3)
+					log.Printf("cc = %f dd = %f\n", cc,dd)
 					nTries++
 					log.Printf("AHRS Info: IMU calibration attempt #%d\n", nTries)
 					if mpuError != nil {
