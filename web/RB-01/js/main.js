@@ -217,6 +217,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $controllerProvider) {
 			return response.json();
 		}).then(function (addons) {
 			addons.forEach(element => {
+			// Addons CSS Themes
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('href', element.html.replace(/\.[^.]+$/, '.css'));
+			document.head.appendChild(link);
+
 			var s = document.createElement('script');
 			s.src = element.js;
 			document.head.appendChild(s);
