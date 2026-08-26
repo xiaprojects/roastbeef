@@ -1,0 +1,29 @@
+.addonVorSquare {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+    max-height: 100cqh;
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    container-type: inline-size;
+}
+
+
+.addonVorLabelTopRight {
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    font-size: 4cqmin;
+    margin-right: 20%;
+    color: white;
+    text-align: left;
+}
+.addonVorLabelTopLeft {
+    position: absolute;
+    top: 40%;
+    font-size: 4cqmin;
+    color: white;
+    margin-left: 25%;
+}

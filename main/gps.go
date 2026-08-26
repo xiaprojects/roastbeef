@@ -158,6 +158,9 @@ var gpsTimeOffsetPpsMs = 100.0 * time.Millisecond
 var serialConfig *serial.Config
 var serialPort *serial.Port
 
+// Dedicated serial port for an external FLARM traffic receiver (parallel to the GPS reader).
+var flarmSerialPort *serial.Port
+
 var readyToInitGPS bool //TODO: replace with channel control to terminate goroutine when complete
 
 var Satellites map[string]SatelliteInfo
@@ -2272,6 +2275,84 @@ func isTempPressValid() bool {
 	return stratuxClock.Since(mySituation.BaroLastMeasurementTime).Seconds() < 15
 }
 
+// initFlarmSerial opens the dedicated FLARM traffic serial-in device configured via
+// stratux.conf (FlarmSerialInDevice / FlarmSerialInBaud). Unlike the GPS reader, there is no
+// baud auto-detection: device path and baud are taken straight from the configuration.
+func initFlarmSerial() bool {
+	device := globalSettings.FlarmSerialInDevice
+	if device == "" {
+		return false
+	}
+	baud := globalSettings.FlarmSerialInBaud
+	if baud <= 0 {
+		baud = 38400
+	}
+	p, err := serial.OpenPort(&serial.Config{Name: device, Baud: baud, ReadTimeout: time.Millisecond * 2500})
+	if err != nil {
+		log.Printf("FLARM serial-in: cannot open %s @ %d: %s\n", device, baud, err.Error())
+		return false
+	}
+	logInf("FLARM serial-in: connected on %s @ %d", device, baud)
+	flarmSerialPort = p
+	return true
+}
+
+// flarmSerialReader reads NMEA from the dedicated FLARM traffic device and injects ONLY
+// FLARM traffic sentences ($PFLAU/$PFLAA). Everything else (GGA/RMC/...) is intentionally
+// ignored so this device never disturbs GPS position/status. Runs in its own goroutine,
+// in parallel with gpsSerialReader().
+func flarmSerialReader() {
+	defer func() {
+		flarmSerialPort.Close()
+		globalStatus.FLARM_In_connected = false
+	}()
+
+	scanner := bufio.NewScanner(flarmSerialPort)
+	for scanner.Scan() && globalSettings.FlarmSerialInDevice != "" {
+		s := scanner.Text()
+		// A single read may contain multiple NMEA sentences; split like gpsSerialReader().
+		for _, msg := range strings.Split(s, "$") {
+			if len(msg) == 0 {
+				continue
+			}
+			msg = "$" + msg
+			l_valid, validNMEAcs := validateNMEAChecksum(msg)
+			if !validNMEAcs {
+				continue
+			}
+			x := strings.Split(l_valid, ",")
+			if x[0] == "PFLAU" || x[0] == "PFLAA" {
+				// parseFlarmPFLAA/PFLAU read mySituation ownship position to resolve the
+				// relative FLARM geometry into absolute lat/lng. The GPS reader calls the
+				// same function while holding muGPS (see processNMEALineLow), so take the
+				// same lock here to avoid racing with GPS position updates.
+				mySituation.muGPS.Lock()
+				parseFlarmNmeaMessage(x)
+				mySituation.muGPS.Unlock()
+			}
+		}
+	}
+	if err := scanner.Err(); err != nil {
+		log.Printf("FLARM serial-in: read error: %s\n", err.Error())
+	}
+}
+
+// flarmSerialManager (re)connects the dedicated FLARM traffic device whenever it is
+// configured but not currently connected. Independent of GPS_Enabled so a FLARM-only-in
+// setup works too.
+func flarmSerialManager() {
+	timer := time.NewTicker(4 * time.Second)
+	for {
+		<-timer.C
+		if globalSettings.FlarmSerialInDevice != "" && !globalStatus.FLARM_In_connected {
+			if initFlarmSerial() {
+				globalStatus.FLARM_In_connected = true
+				go flarmSerialReader()
+			}
+		}
+	}
+}
+
 func pollGPS() {
 	readyToInitGPS = true //TODO: Implement more robust method (channel control) to kill zombie serial readers
 	timer := time.NewTicker(4 * time.Second)
@@ -2294,6 +2375,7 @@ func initGPS(isReplayMode bool) {
 
 	if !isReplayMode {
 		go pollGPS()
+		go flarmSerialManager()
 	}
 }
 

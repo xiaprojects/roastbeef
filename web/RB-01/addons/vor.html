@@ -1,0 +1,53 @@
+<div ui-content-for="title">HSI</div>
+<div ng-show="items.searchEnabled==false" class="addonVorSquare">
+    <div class="addonVorLabelTopLeft" style="font-size: 4cqmin;" ng-click="switchToFrom()">
+        <div ng-if="items.vorto == 1" class="label label-info" style="font-size: 4cqmin;">FROM</div>
+        <div ng-if="items.vorto == 0" class="label label-success" style="font-size: 4cqmin;">TO</div>
+        <br />SNR: {{items.vorsnr}}
+        <br />SUB: {{items.vorsub}}
+        <br />AM: {{items.voram}}
+    </div>
+    <div class="addonVorLabelTopRight" style="font-size: 4cqmin;" ng-click="enableSearchVor()">
+        <div ng-if="items.vorstatus == 0" class="label label-default" style="font-size: 4cqmin;">OFF</div>
+        <div ng-if="items.vorstatus == 1" class="label label-danger" style="font-size: 4cqmin;">NO SIGNAL</div>
+        <div ng-if="items.vorstatus == 2" class="label label-danger" style="font-size: 4cqmin;">TUNING</div>
+        <div ng-if="items.vorstatus == 3" class="label label-warning" style="font-size: 4cqmin;">ACQUIRING</div>
+        <div ng-if="items.vorstatus == 4" class="label label-info" style="font-size: 4cqmin;">DEGRADED</div>
+        <div ng-if="items.vorstatus == 5" class="label label-success" style="font-size: 4cqmin;">FIX</div>
+        <br />
+        {{items.vorname}}
+        <br />
+        {{items.vorfreqactive}}
+    </div>
+
+
+    <div id="vorHSI" style="margin: 0;display: flex;justify-content: center;align-items: center;">
+    </div>
+</div>
+<table ng-if="items.searchEnabled" style="width:100%;margin: 0px;padding:0px;">
+    <tr style="margin: 0px;padding:0px;">
+        <td class="text-center" style="font-size: 3cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+            Name
+        </td>
+        <td class="text-center" style="font-size: 3cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+            Frequency
+        </td>
+        <td class="text-center" style="font-size: 3cqmin;margin: 0px;padding:0px;">
+            Id
+        </td>
+    </tr>
+
+    <tr ng-repeat="frequency in vorList" ng-click="setFrequency(frequency.freq,frequency.name)"
+        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+        <td class="text-center"
+            style="font-size: 7cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;height: 16cqmin;">
+            {{frequency.name}}
+        </td>
+        <td class="text-center" style="font-size: 6cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+            {{frequency.freq}}
+        </td>
+        <td class="text-center" style="font-size: 6cqmin;margin: 0px;padding:0px;">
+            {{frequency.id}}
+        </td>
+    </tr>
+</table>

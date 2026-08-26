@@ -1252,6 +1252,8 @@ type settings struct {
 	GpsManualDevice	     string         // default: /dev/ttyAMA0
     GpsManualChip        string         // ublox8, ublox9, ublox
 	GpsManualTargetBaud  int            // default: 115200
+	FlarmSerialInDevice  string         // dedicated FLARM traffic serial-in device, e.g. /dev/flarmin or /dev/ttyUSB1; empty = disabled
+	FlarmSerialInBaud    int            // baud for FlarmSerialInDevice; default: 38400
 	// Plugins
 	BleParser_Enabled    bool // Receiving via BLE the Radio and Autopilot
 	Autopilot_Enabled    bool // Autopilot with HSI
@@ -1312,6 +1314,7 @@ type status struct {
 	GPS_satellites_tracked                     uint16
 	GPS_position_accuracy                      float32
 	GPS_connected                              bool
+	FLARM_In_connected                         bool // dedicated FLARM traffic serial-in device connected
 	GPS_solution                               string
 	GPS_detected_type                          uint
 	GPS_NetworkRemoteIp                        string // for NMEA via TCP from OGN tracker: display remote IP to configure the OGN tracker
@@ -1443,6 +1446,8 @@ func defaultSettings() {
 	globalSettings.GpsManualDevice = "/dev/ttyAMA0"
 	globalSettings.GpsManualTargetBaud = 115200
 	globalSettings.GpsManualChip = "ublox"
+	globalSettings.FlarmSerialInDevice = "" // off unless user sets it in stratux.conf
+	globalSettings.FlarmSerialInBaud = 38400
 }
 
 func readSettings() {
