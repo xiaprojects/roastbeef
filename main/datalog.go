@@ -494,6 +494,7 @@ func dataLog() {
 		makeTable(gpsPerfStats{}, "gps_attitude", db)
 		makeTable(StratuxStartup{}, "startup", db)
 		makeTable(EMSDataLogger{}, "ems", db)
+		makeTable(BridgeFloatDataLogger{}, "bridgefloat", db)
 	}
 
 	// The first entry to be created is the "startup" entry.
@@ -595,6 +596,12 @@ func logESMsg(m esmsg) {
 func logEMS(m EMSDataLogger) {
 	if globalSettings.ReplayLog && isDataLogReady() {
 		dataLogChan <- DataLogRow{tbl: "ems", data: m}
+	}
+}
+
+func logBridgeFloat(m BridgeFloatDataLogger) {
+	if globalSettings.ReplayLog && isDataLogReady() {
+		dataLogChan <- DataLogRow{tbl: "bridgefloat", data: m}
 	}
 }
 

@@ -1387,6 +1387,7 @@ func handleBridgeFloatSetRequest(w http.ResponseWriter, r *http.Request) {
 					if prevValue != ival {
 						addonsBridge.bridgeFloatData[key]=ival
 						reconfigure = true
+						logBridgeFloat(BridgeFloatDataLogger{time.Now(),key,ival})
 					}
 				} else {
 					addonsBridge.bridgeFloatData[key] = ival

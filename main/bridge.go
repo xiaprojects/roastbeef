@@ -35,6 +35,7 @@ package main
 import (
 	"log"
 	"sync"
+	"time"
 )
 
 type BridgeStratuxPlugin struct {
@@ -42,6 +43,13 @@ type BridgeStratuxPlugin struct {
 	bridgeFloatData  map[string]float32
 	bridgeStringData map[string]string
 	bridgeDataMutex  *sync.Mutex
+}
+
+// Data Logger
+type BridgeFloatDataLogger struct {
+	Clock       time.Time
+	SensorName  string
+	SensorValue float32
 }
 
 var addonsBridge = BridgeStratuxPlugin{}
