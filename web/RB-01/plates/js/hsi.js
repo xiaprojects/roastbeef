@@ -289,6 +289,9 @@ if($scope.hsi==null){
         }
         $scope.tickForRouting();
 
+        // The renderer is built asynchronously after the plate renders; a knob
+        // press in that window has nothing to draw on yet.
+        if ($scope.hsi == null) return;
         $scope.hsi.update(
             $scope.situation.GPSTrueCourse,
             {},

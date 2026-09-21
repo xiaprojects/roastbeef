@@ -108,9 +108,9 @@ function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
   $scope.switches = [];
 
   function keypadEventListener(event) {
-    if (($scope === undefined) || ($scope === null)) {
-      removeEventListener("keypad", keypadEventListener);
-      return; // we are getting called once after clicking away from the status page
+    if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SwitchboardCtrl') {
+        removeEventListener("keypad", keypadEventListener);
+        return; // we are getting called once after clicking away from the status page
     }
 
     if ($scope.keypadKnobTimerRemovePopup === undefined) {

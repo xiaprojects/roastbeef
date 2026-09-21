@@ -200,7 +200,8 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
     addEventListener("keypad",keypadEventListener);
     // Keypad Listener with supported keys
     function keypadEventListener(event){
-        if (($scope === undefined) || ($scope === null)) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'CheckCtrl') {
+            removeEventListener("keypad", keypadEventListener);
             return; // we are getting called once after clicking away from the status page
         }
         

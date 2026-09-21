@@ -75,7 +75,10 @@ function BottomCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.mappingData = {
 
         "GPSTrueCourse": { "section": "bottom", "row": 2, "prefix": "", "postfix": "°", "roundInt": 0, "value": 0 },
-        "GPSGroundSpeed": { "section": "bottom", "row": 0, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
+        // SpeedKt/SpeedSource are resolved by servicesituation.js (IAS when the
+        // airspeed board reports one, GPS ground speed otherwise); convert maps
+        // the sensor unit to the pilot's display unit from aircraft.json
+        "SpeedKt": { "section": "bottom", "row": 0, "prefix": "", "postfix": "", "roundInt": 0, "value": 0, "convert": pilotDisplayedSpeedFromKT },
         "AHRSGLoadMax": { "section": "bottom", "row": 1, "prefix": "", "postfix": "", "roundInt": 1, "value": 0 },
         "QNH": { "section": "bottom", "row": 3, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
         "AlertsCount": { "section": "top", "row": 3, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
@@ -93,9 +96,13 @@ function BottomCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.applyNewData = function (newData) {
         Object.keys($scope.mappingData).forEach(key => {
             if (newData.hasOwnProperty(key) == true && newData[key] != $scope.mappingData[key].value) {
-                var v = $scope.mappingData[key].prefix + newData[key] + $scope.mappingData[key].postfix;
+                var raw = newData[key];
+                if ($scope.mappingData[key].convert !== undefined) {
+                    raw = $scope.mappingData[key].convert(raw);
+                }
+                var v = $scope.mappingData[key].prefix + raw + $scope.mappingData[key].postfix;
                 if ($scope.mappingData[key].roundInt >= 0) {
-                    const i = newData[key].toFixed($scope.mappingData[key].roundInt);
+                    const i = raw.toFixed($scope.mappingData[key].roundInt);
                     v = $scope.mappingData[key].prefix + i + $scope.mappingData[key].postfix;
                 }
                 else {
@@ -119,7 +126,11 @@ function BottomCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
         $scope.applyNewData(event.detail);
-
+        // The speed tile names its source (IAS or GS) like the speed gauge does
+        if (event.detail.hasOwnProperty("SpeedSource")) {
+            var speedTile = $scope.itemsByPosition[$scope.mappingData.SpeedKt.section][$scope.mappingData.SpeedKt.row];
+            speedTile.title = event.detail.SpeedSource + "\n" + (window.aircraftData?.units?.speed ?? "KMH");
+        }
     }
 
     function emsUpdated(emsData) {
@@ -189,7 +200,7 @@ function BottomCtrl($rootScope, $scope, $state, $http, $interval) {
             { "value": "X", "color": "#5c5c5c", "url": "#/alerts", "action": "", "title": "AL\nRM" },
             { "value": "+", "color": "#5c5c5c", "url": "", "action": "FS", "title": "" },
         ], "bottom": [
-            { "value": "X", "color": "#5c5c5c", "url": "#/speed", "title": "IAS\nKMH" },
+            { "value": "X", "color": "#5c5c5c", "url": "#/speed", "title": "GS\nKMH" },
             { "value": "X", "color": "#5c5c5c", "url": "#/gmetergauge", "title": "MAX\nG" },
             /*
             { "value": "X", "color": "#5c5c5c", "url": "#/ems", "title": "OIL\n°C" },

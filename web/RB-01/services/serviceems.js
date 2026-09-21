@@ -68,6 +68,18 @@ function EMSService($scope, $http) {
         $scope.emsData = {};
         $scope.emsDataRequestedRefresh = 0;
         $scope.emsDataRequestedBusy = false;
+        $scope.emsDataRequestedTrailing = null;
+        // Publish the merged frames on the next animation frame, at most every 300 ms
+        function emsPublish() {
+            $scope.emsDataRequestedRefresh = Date.now();
+            $scope.emsDataRequestedBusy = true;
+            requestAnimationFrame(() => {
+                $scope.emsDataRequestedBusy = false;
+                const proxy = new CustomEvent("EMSUpdated", { detail: $scope.emsData });
+                $scope.emsData = {};
+                dispatchEvent(proxy);
+            });
+        }
         $scope.emsSocket.onmessage = function (msg) {
             if (($scope === undefined) || ($scope === null))
                 return; // we are getting called once after clicking away from the page
@@ -79,15 +91,21 @@ function EMSService($scope, $http) {
                 }
             }
             var now = Date.now();
-            if ($scope.emsDataRequestedBusy == false && (now - $scope.emsDataRequestedRefresh >= 300 || now - $scope.emsDataRequestedRefresh < 0)) {
-                $scope.emsDataRequestedRefresh = now;
-                $scope.emsDataRequestedBusy = true;
-                requestAnimationFrame(() => {
-                    $scope.emsDataRequestedBusy = false;
-                    const proxy = new CustomEvent("EMSUpdated", { detail: $scope.emsData });
-                    $scope.emsData = {};
-                    dispatchEvent(proxy);
-                });
+            var elapsed = now - $scope.emsDataRequestedRefresh;
+            if ($scope.emsDataRequestedBusy == false && (elapsed >= 300 || elapsed < 0)) {
+                emsPublish();
+            } else if ($scope.emsDataRequestedBusy == false && $scope.emsDataRequestedTrailing == null) {
+                // Inside the 300 ms window with no publish pending: the frame is
+                // merged above, but nothing would publish it until the next one
+                // arrives - and the daemon only sends on change, so the last
+                // reading before the data goes quiet would never be shown.
+                // Publish it when the window closes.
+                $scope.emsDataRequestedTrailing = setTimeout(() => {
+                    $scope.emsDataRequestedTrailing = null;
+                    if ($scope.emsDataRequestedBusy == false && Object.keys($scope.emsData).length > 0) {
+                        emsPublish();
+                    }
+                }, 300 - elapsed);
             }
         };
     }

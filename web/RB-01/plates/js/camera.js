@@ -303,11 +303,13 @@ function CameraCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
         if ($scope.scrollItemCounter >= 0 && $scope.scrollItemCounter < $scope.cameras.length) {
-            document.getElementById("camera_" + $scope.scrollItemCounter).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+            const cameraRow = document.getElementById("camera_" + $scope.scrollItemCounter);
+            if (cameraRow != null) cameraRow.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
         }
         else if ($scope.scrollItemCounter >= $scope.cameras.length) {
 
-            document.getElementById("camera_add").scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
+            const cameraAdd = document.getElementById("camera_add");
+            if (cameraAdd != null) cameraAdd.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
         } else 
         {
 

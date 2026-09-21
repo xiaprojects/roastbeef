@@ -322,6 +322,7 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     $scope.directToAirfield = function(point) {
+        if (point == null) return; // knob tapped before an airfield is selected
         point.Status = WAYPOINT_STATUS_TARGET
         $scope.gpxImportData({
             "routes": [{
