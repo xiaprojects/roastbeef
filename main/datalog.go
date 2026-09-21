@@ -15,12 +15,13 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"reflect"
 	"strconv"
 	"strings"
 	"time"
-	"math/rand"
+
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -296,6 +297,11 @@ func insertData(i interface{}, tbl string, db *sql.DB, ts_num int64) int64 {
 		if sqlTypeAlias == "notsupported" || fieldName == "id" {
 			continue
 		}
+		// Same rule as makeTable(): a struct without String() has no column, so
+		// giving it a value here would make every INSERT into the table fail.
+		if sqlTypeAlias == "struct" && !structCanBeMarshalled(val.Field(i)) {
+			continue
+		}
 
 		v := sqliteMarshalFunctions[sqlTypeAlias].Marshal(val.Field(i))
 
@@ -415,6 +421,9 @@ func dataLogWriter(db *sql.DB) {
 			shutdownDataLog <- true
 			return
 		}
+		if dataLogRequestShutdown == true {
+			break
+		}
 	}
 	log.Printf("datalog.go: dataLogWriter() shutting down\n")
 }
@@ -515,6 +524,9 @@ func dataLog() {
 		case <-shutdownDataLog: // Received a message on the channel to complete a graceful shutdown (see the 'defer func()...' statement above).
 			log.Printf("datalog.go: dataLog() received shutdown message\n")
 			return
+		}
+		if dataLogRequestShutdown == true {
+			break
 		}
 	}
 	log.Printf("datalog.go: dataLog() shutting down\n")
