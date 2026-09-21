@@ -28,6 +28,20 @@
         "g": 0.8,
         "b": 0.91
     },
+    "guidance": {
+        "enabled": true,
+        "color": 16711935,
+        "opacity": 0.55,
+        "widthCells": 0.35,
+        "aspect": 0.5,
+        "borderRatio": 0.08,
+        "spacingCells": 0.3,
+        "maxLegs": 3,
+        "maxBoxes": 60,
+        "maxRangeCells": 12,
+        "minAglMeters": 300,
+        "tiltWithPath": false
+    },
     "elevation": 1000,
     "trafficMapping": {},
     "trafficTemplates": {
