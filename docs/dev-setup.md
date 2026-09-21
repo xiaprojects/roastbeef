@@ -100,3 +100,26 @@ To make everything work, you will also have to run `sudo make install`, so that 
 Once everything is running, you might want to install Visual Studio Code and open the Stratux directory in there.
 There are preconfigured build and debug tasks for VSCode in the repository.
 
+## Developing the RB-01 HMI without deploying
+
+The display (`web/RB-01/`) needs none of the above: it is static files talking to
+REST and WebSockets, and `test/display/simulator.py` provides both from a laptop.
+Python 3 only.
+
+```sh
+cd test/display
+./simulator.py --idle                    # the aircraft's settings, a level situation
+./simulator.py                           # ...or a recorded flight playing
+./simulator.py --device http://192.168.10.1   # ...or the live aircraft behind it
+```
+
+Open `http://localhost:8000/RB-01/`, edit anything under `web/RB-01/`, reload.
+`http://localhost:8000/sim/` moves the aircraft (pitch, roll, heading, altitude,
+speed), starts or steps a recorded flight, and adds a traffic target; the same is
+available as `POST /sim/...` for scripts. With `--device` the working tree is
+served locally while every other request - REST and WebSockets - goes to the
+installed aircraft, so a new plate can be tried against real sensors without
+copying a file to the Pi; writes are refused until `--write` is given. Details
+and the test suite that runs the HMI in Chromium are in
+[test/display/README.md](../test/display/README.md).
+

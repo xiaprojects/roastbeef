@@ -13,8 +13,12 @@ Returns the current Stratux system status as JSON, including software version, c
 
 Example fields: `Version`, `GPS_connected`, `GPS_satellites_locked`, `UAT_messages_last_minute`, `ES_messages_last_minute`, `CPUTemp`, `Errors`
 
+Also carries the GPS Hobbs meter (`main/hobbsmeter.go`): `HobbsTimeMinutes` (the whole flight log, flight in progress included) and `HobbsFlightMinutes` (the flight in progress, 0 on the ground). Both are live; the RB-01 Aircraft plate adds `HobbsTimeMinutes` to the `propellerTime` / `engineTime` base values of `settings/aircraft.json`.
+
 #### `GET /getSituation`
 Returns the current GPS/AHRS situation: position, altitude, track, speed, vertical speed, and attitude (pitch/roll/slip-skid) if AHRS is connected.
+
+`IndicatedAirSpeed` (knots, 0 = no airspeed source) comes from the MS4525DO pitot-static sensor when one is recognised on the I²C bus (`main/airspeed.go`, `airspeedSender`; see [hardware/sensors.md](hardware/sensors.md)), together with `PitotPressure` (Pa, after the zero offset and filter), `PitotTemperature` (°C) and `PitotLastMeasurementTime`. Without one, an external airspeed board feeds it with `POST /bridge/float` and the JSON body `{"ias_mps": <m/s>}` (`main/managementinterface.go`, `handleBridgeFloatSetRequest`), which converts to knots; that key is ignored while the pitot sensor is connected. The RB-01 HMI shows it in place of `GPSGroundSpeed` on the speed gauge, the attitude tape and the bottom bar whenever it is above 0, labelled `IAS`, and falls back to ground speed labelled `GS` otherwise (`web/RB-01/services/servicesituation.js`).
 
 #### `GET /getTowers`
 Returns all ADS-B ground towers that have been received, as a JSON object keyed by `"(lat,lng)"`. Each entry includes:
@@ -56,7 +60,31 @@ Sets the region. Accepts JSON: `{"Region": "US"}` or `{"Region": "EU"}`. This ap
 ### Logs & Data
 
 #### `GET /logs/`
-Browse and download log files via HTTP. Useful for remote diagnostics without SSH access.
+Browse and download log files via HTTP. Useful for remote diagnostics without SSH access. Serves `/var/log`; a `*.sqlite` name is looked up in `ReplayLogPath` first, so the links from `/flightlogs` work wherever the flight logs are kept.
+
+#### `GET /flightlogs`
+Lists the SQLite flight logs in `ReplayLogPath` (written when the `ReplayLog` setting is on) as `[{Name, Size, ModTime, Path}]`, with `Path` under `/logs/`.
+
+#### `GET /settings/hobbsmeter.json`
+The GPS Hobbs meter's flight log (`main/hobbsmeter.go`): one entry per flight, a flight being the time the GPS ground speed stays above 50 km/h (opened after 5 s above, closed after 60 s below, so a touch-and-go does not split it). Read-only over HTTP; the file of the same name under `settings/` (the boot partition on RB devices) is hand-editable and is flushed at most every 5 minutes, at landing and at shutdown — this endpoint answers from memory, so it is live and returns `[]` before the first flight, when the file does not exist yet.
+
+```json
+[
+  {
+    "departureTime": "2026-09-17T10:23:45Z",
+    "departureLatitude": 41.952841,
+    "departureLongitude": 12.50197,
+    "departureAltitudeMeters": 35,
+    "landedTime": "2026-09-17T11:10:02Z",
+    "landedLatitude": 41.952841,
+    "landedLongitude": 12.50197,
+    "landedAltitudeMeters": 35,
+    "hobbsTimeMinutes": 45
+  }
+]
+```
+
+`departureTime` is the first second above the threshold, `landedTime` the last drop below it (RFC 3339 UTC, GPS time), altitudes are GPS MSL in meters, `hobbsTimeMinutes` the seconds above the threshold truncated to minutes. The flight in progress is present with an empty `landedTime`; after a power cut it stays in the log as last flushed.
 
 #### `GET /downloadlog`
 Downloads the current debug log file.
@@ -107,6 +135,9 @@ Cages the AHRS to the current attitude (sets current orientation as level refere
 
 #### `POST /resetGMeter`
 Resets the G-meter min/max values.
+
+#### `POST /calibrateAirspeed`
+Zeroes the pitot airspeed sensor: averages 2 s of differential pressure into the `AirspeedZeroOffset` setting. Do it with the aircraft stationary in still air and the pitot cover off. Replies `409` with a plain-text reason when no pitot sensor is connected or the GPS reports the aircraft moving (> 5 kt).
 
 ---
 

@@ -29,6 +29,16 @@ Stratux leverages GitHub workflows to ensure that all code changes are built, an
 
 ### ci.yml
 
+Two jobs run on every pull request and push to `master`:
+
+| Job | Runner | What |
+|---|---|---|
+| `check` | ubuntu 24.04 arm, inside the build container | `make check`: gofmt, `go vet`, `go test`, third-party hash verification |
+| `build` | ubuntu 24.04 arm | `make ddpkg` — the `.deb`, uploaded as an artifact |
+
+The RB-01 HMI suite runs separately in `display-tests.yml` (x64 runner with Chrome),
+only when `web/**` or `test/display/**` change, because it takes most of an hour.
+
 ```mermaid
 block-beta
    columns 1

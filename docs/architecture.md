@@ -52,7 +52,9 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
 - **FLARM/NMEA** (`flarm-nmea.go`) over UDP/TCP `:2000`, serial, and BLE.
 - **X-Plane / ForeFlight-sim** (`xplane.go`) over UDP `:49002`; **Cursor-on-Target** input
   (`cot-in.go`).
-- Traffic/situation history to SQLite via `main/datalog.go`.
+- Traffic/situation history to SQLite via `main/datalog.go` (`ReplayLog` setting; the
+  file holds the broadcast structs themselves, so `test/display/flightlog.py` can replay
+  it through the HMI).
 
 See the [integration guide](integration/README.md) for the full transport map and the
 `Capability` routing bitmask.

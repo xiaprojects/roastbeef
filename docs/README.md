@@ -48,6 +48,20 @@ re-verify before acting.
 - **[tech-debt/dead-code.md](tech-debt/dead-code.md)** — functions, types, and fields that are
   defined but never referenced.
 
+## Certification
+
+- **[certification/roadmap.md](certification/roadmap.md)** — ordered plan (easiest first) to
+  bring RB-01 under DO-178C / ED-12C and the related standards (DO-160, DO-330, DO-200B,
+  DO-326A, ARP4761), with the reality check on the current stack and the recommended
+  NORSEE / CS-STAN target.
+- **[certification/scmp.md](certification/scmp.md)** — configuration management plan:
+  how items are identified (version, build id, hashes), change control, archive, load
+  control; pending actions listed.
+- **[certification/provenance.md](certification/provenance.md)** — every prebuilt binary and
+  vendored library with version, origin, licence and SHA-256; verified by `make check`.
+- **[certification/fha.md](certification/fha.md)** — preliminary functional hazard
+  assessment: installation assumptions, failure conditions and proposed DAL per function.
+
 ## Doc conventions
 
 - Keep these docs in sync with the code in the same PR — they are reviewed alongside code

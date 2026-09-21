@@ -76,11 +76,17 @@ See [hardware/gps.md](hardware/gps.md) for autodetection and chip support.
 
 | Field | Type | Description |
 |---|---|---|
-| `IMUMapping` | [2]int | Maps aircraft axes to sensor axes (accelerometer). Set by the orientation wizard. |
+| `IMUMapping` | [2]int | `[forward, 0]`: the signed accelerometer axis that points to the aircraft nose (`±1` X, `±2` Y, `±3` Z; `-1` when unset, `2` for the RY836AI). Only the first entry is used; it feeds the sensor→aircraft quaternion when the AHRS levels. Set by the orientation wizard or the RB-01 settings addon (AHRS tab); a change through `/setSettings` is validated, drops `SensorQuaternion`/`MagSensorQuaternion` and restarts the IMU so the AHRS levels again from the current attitude. |
 | `SensorQuaternion` | [4]float64 | *Advanced.* AHRS calibration quaternion (sensor→aircraft frame). Set by `POST /cageAHRS`; can be set manually for aircraft-specific alignment. |
+| `MagAxisMappingX/Y/Z` | [3]float64 | Rows of the rotation from the magnetometer die to the accelerometer die: a signed axis permutation for the board layout, or any proper rotation - `test/magnetometer_check -flightlog` fits one from a recorded flight. The persistent alignment input; re-orthonormalized on load, so a few decimals are enough. A reflection (odd number of sign flips) is rejected with a log message. All-zero rows mean identity. |
+| `MagSensorQuaternion` | [4]float64 | *Derived.* `SensorQuaternion (x) q(MagAxisMapping)`, rebuilt on every cage and whenever the rows change, so `POST /cageAHRS` realigns the compass too. All-zero means "not derived yet". Can be written directly for an experiment, but the next cage replaces it - put a lasting alignment in the rows. |
 | `C` | [3]float64 | *Advanced.* IMU accelerometer zero-bias. |
 | `D` | [3]float64 | *Advanced.* IMU gyro zero-bias. |
+| `AHRSEngine` | string | Default `"simple"` (an empty or unknown value reads as simple): goflying's Simple AHRS (GPS/accel attitude with gyro smoothing; the compass is a separate tilt-compensated heading). `"kalman"`: goflying's Kalman filter, which fuses gyro, accelerometer, GPS velocity and the calibrated magnetometer into one attitude; the magnetometer gives it roll and heading, so `AHRSGyroHeading` is then magnetic and the filter also estimates the wind. Needs a calibrated magnetometer (`MagSensorQuaternion` and the `/magnetometer` envelope) and the local field, see `MagField`. Can be switched at runtime. |
+| `MagField` | float64 | *Advanced.* Magnitude of the local geomagnetic field in µT that the Kalman engine references the magnetometer to. `0` (default) uses a centred-dipole estimate at the GPS position, within ~10 %; set it (and `MagDip`) from a WMM/IGRF calculator for the operating area for better. |
+| `MagDip` | float64 | *Advanced.* Inclination of the local field in degrees, positive down (Europe ≈ 55–70). `0` uses the dipole estimate, within ~5°. |
 | `AltitudeOffset` | int | Barometric pressure-altitude offset. |
+| `AirspeedZeroOffset` | float64 | Differential pressure in Pa the MS4525DO pitot sensor reads at zero airflow, subtracted before the airspeed is computed. Set by `POST /calibrateAirspeed` with the aircraft stationary; must be measured on the installed unit (see [hardware/sensors.md](hardware/sensors.md)). The sensor itself has no enable setting: it is recognised on the I²C bus. |
 | `GLimits` | string | G-meter limit configuration. |
 
 ## SDR tuning
@@ -120,8 +126,9 @@ GXAirCom / SoftRF). See [hardware/ogn-ais-receivers.md](hardware/ogn-ais-receive
 | Field | Type | Description |
 |---|---|---|
 | `DEBUG` | bool | Enable debug logging. |
-| `TraceLog` | bool | *Advanced.* Verbose trace logging (beyond `DEBUG`). |
-| `ReplayLog` | bool | Write replay logs (for `-replay`). |
+| `TraceLog` | bool | *Advanced.* Record every raw input message (NMEA, dump1090, APRS, …) to `/var/log/stratux/*_trace.txt.gz`, replayable through the daemon with `stratuxrun -trace`. |
+| `ReplayLog` | bool | Write the SQLite flight log (`flightlog-<time>.<n>.sqlite` in `ReplayLogPath`, started once GPS has a fix): the broadcast situation/traffic/status/EMS structs, ~1 Hz. Listed by `GET /flightlogs`; replayable through the RB-01 HMI with `test/display/flightlog.py`. Not related to `-replay`, which replays UAT logs. |
+| `ReplayLogPath` | string | Directory for the SQLite flight logs (default `/var/log`; a USB stick or dedicated partition works). |
 | `AHRSLog` | bool | Write AHRS sensor CSV logs (downloadable via `/downloadahrslogs`). |
 | `PersistentLogging` | bool | Keep logs across reboots — also makes the filesystem writable (required for dev). |
 | `ClearLogOnStart` | bool | *Advanced.* Wipe the debug log on each boot. |
