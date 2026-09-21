@@ -34,6 +34,7 @@
         - Websocket connects and receive
         - Max, Min
         - Threshold to avoid cpu consumption
+        - Wind estimate from the wind triangle (WindSpeed, WindDirection, WindValid, WindSource)
 */
 
 
@@ -146,6 +147,10 @@ function SituationService($scope, $http) {
                 else {
                     situation.QNH = $scope.situationByPilot.QNH;
                 }
+                // Wind calculation
+                situationWind(situation);
+                // Speed source for the plates
+                situationSpeed(situation);
                 situation.AutoQNH = $scope.situationByPilot.AutoQNH;
                 // RB-Addons: share the QNH in use with 3rd party addons
                 bridgeQNHPublish(situation.QNH);
@@ -241,6 +246,74 @@ function SituationService($scope, $http) {
                 if (bridgeQNHSent === qnh && bridgeQNHSentAuto === auto)
                     bridgeQNHSent = null;
             });
+    }
+
+    // Wind estimate from the wind triangle: the ground vector (GPS ground speed
+    // along the true course) minus the air vector (airspeed along the heading).
+    // AHRSMagHeading is compared straight against GPSTrueCourse: the compass
+    // offset (magnetometer addon, OFFSET FROM GPS TRACK) absorbs the declination,
+    // so the 45 degrees gate is the sanity check against an uncalibrated compass,
+    // a stationary aircraft with a random track, or a skidding turn.
+    // IndicatedAirSpeed comes from an external board in knots, like GPSGroundSpeed:
+    //   A) IAS > 0: IAS becomes TAS with the ISA density ratio at the pressure
+    //      altitude, then the full triangle (WindSource "ias");
+    //   B) IAS = 0 or missing: no airspeed source, the ground speed stands in
+    //      for the airspeed (WindSource "gs").
+    // WindDirection is where the wind blows FROM, like a METAR. The four fields
+    // are written on every frame so a consumer never reads a stale estimate.
+    function situationWind(situation) {
+        situation.WindValid = false;
+        situation.WindSpeed = 0;
+        situation.WindDirection = 0;
+        situation.WindSource = "";
+        if (!(situation.GPSFixQuality > 0))
+            return;
+        var hdg = situation.AHRSMagHeading;
+        var trk = situation.GPSTrueCourse;
+        var gs = situation.GPSGroundSpeed;
+        var ias = situation.IndicatedAirSpeed ?? 0;
+        if (!isFinite(hdg) || !isFinite(trk) || !isFinite(gs) || !isFinite(ias) || ias < 0)
+            return;
+        var drift = ((trk - hdg + 540) % 360) - 180; // -180..180, wrap safe
+        if (Math.abs(drift) >= 45)
+            return;
+        var tas;
+        if (ias > 0) {
+            var pa = situation.BaroPressureAltitude ?? situation.GPSAltitudeMSL ?? 0; // ft
+            if (!isFinite(pa))
+                pa = 0;
+            var sigma = Math.pow(Math.max(1 - 6.8756e-6 * pa, 0.01), 4.2559);
+            tas = ias / Math.sqrt(sigma);
+            situation.WindSource = "ias";
+        }
+        else {
+            tas = gs;
+            situation.WindSource = "gs";
+        }
+        // North/east frame, bearings clockwise from north
+        var wx = gs * Math.sin(toRadians(trk)) - tas * Math.sin(toRadians(hdg));
+        var wy = gs * Math.cos(toRadians(trk)) - tas * Math.cos(toRadians(hdg));
+        situation.WindSpeed = Math.sqrt(wx * wx + wy * wy);
+        situation.WindDirection = (toDegrees(Math.atan2(-wx, -wy)) + 360) % 360;
+        situation.WindValid = true;
+    }
+
+    // The speed a pilot reads, resolved once for every plate: the external
+    // airspeed board when it reports one, the GPS ground speed otherwise, both
+    // in knots. SpeedSource names which ("IAS" or "GS") so a plate can
+    // annunciate it: ground speed read as airspeed is FHA-SPD-2. Same IAS test
+    // as situationWind, so the two never disagree on the source.
+    function situationSpeed(situation) {
+        var gs = situation.GPSGroundSpeed;
+        var ias = situation.IndicatedAirSpeed ?? 0;
+        if (isFinite(ias) && ias > 0) {
+            situation.SpeedKt = ias;
+            situation.SpeedSource = "IAS";
+        }
+        else {
+            situation.SpeedKt = isFinite(gs) ? gs : 0;
+            situation.SpeedSource = "GS";
+        }
     }
 
     // Last Situation, shared out-of-angular to avoid angular triggers
