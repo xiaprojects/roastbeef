@@ -342,7 +342,9 @@ func sensorAttitudeSender() {
 		failNum              uint8
 	)
 
-	s := ahrs.NewSimpleAHRS()
+	engine := globalSettings.AHRSEngine
+	s := newAHRS(engine)
+	var kfield kalmanField
 	m := ahrs.NewMeasurement()
 	cal = make(chan (string), 1)
 
@@ -380,11 +382,31 @@ func sensorAttitudeSender() {
 			}
 		}
 
+		// Derive the magnetometer quaternion if it is still unset. It hangs off
+		// the sensor quaternion, so it can only be built once that exists; the
+		// "level" branch below rebuilds it whenever the AHRS is caged.
+		if !common.QuaternionIsSet(globalSettings.MagSensorQuaternion) &&
+			common.QuaternionIsSet(globalSettings.SensorQuaternion) {
+			globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
+			log.Printf("AHRS Info: Magnetometer aligned to quaternion %v\n", globalSettings.MagSensorQuaternion)
+			saveSettings()
+		}
+
 		failNum = 0
 		<-timer.C
 		time.Sleep(950 * time.Millisecond)
 		for globalSettings.IMU_Sensor_Enabled && globalStatus.IMUConnected {
 			<-timer.C
+
+			// Switched from the UI: build the other engine and go round the
+			// outer loop so it gets the calibrations and the cage.
+			if globalSettings.AHRSEngine != engine {
+				engine = globalSettings.AHRSEngine
+				s = newAHRS(engine)
+				kfield = kalmanField{}
+				log.Printf("AHRS Info: engine %q\n", engine)
+				break
+			}
 
 			// Process calibration and level requests
 			select {
@@ -417,9 +439,11 @@ func sensorAttitudeSender() {
 							s.SetCalibrations(&globalSettings.C, nil)
 							globalSettings.SensorQuaternion = *makeOrientationQuaternion(globalSettings.C)
 							s.SetSensorQuaternion(&globalSettings.SensorQuaternion)
+							globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
 							s.Reset()
 							log.Printf("AHRS Info: IMU accel calibration: %3f %3f %3f\n", c1, c2, c3)
 							log.Printf("AHRS Info: Caged to quaternion %v\n", globalSettings.SensorQuaternion)
+							log.Printf("AHRS Info: Magnetometer aligned to quaternion %v\n", globalSettings.MagSensorQuaternion)
 						}
 						saveSettings()
 					}
@@ -452,36 +476,39 @@ func sensorAttitudeSender() {
 					log.Printf("AHRS Magnetometer Error, not using for this run: %s\n", magError)
 				}
 				m.MValid = false
+			} else if !magSampleUsable(m.M1, m.M2, m.M3) {
+				// Not a usable field vector. Clear MValid so the AHRS does not
+				// fuse it either: it is set from magError alone above, and some
+				// drivers (sensors/bmi270.go) report an all-zero magnetometer
+				// with a nil error.
+				m.MValid = false
 			} else {
-					if((m.M1<5 && m.M1 >-5) || (m.M2<5 && m.M2 >-5) || (m.M3<5 && m.M3 >-5)){
-				} else {
-					MagnetometerDataMutex.Lock()
-					mySituation.Magnetometer.X = (mySituation.Magnetometer.X*29 + m.M1) / 30
-					mySituation.Magnetometer.Y = (mySituation.Magnetometer.Y*29 + m.M2) / 30
-					mySituation.Magnetometer.Z = (mySituation.Magnetometer.Z*29 + m.M3) / 30
-	
-						if(mySituation.Magnetometer.Calibrating == true){
-							if(mySituation.Magnetometer.MagMaxX<mySituation.Magnetometer.X){
-								mySituation.Magnetometer.MagMaxX=mySituation.Magnetometer.X
-						}
-							if(mySituation.Magnetometer.MagMaxY<mySituation.Magnetometer.Y){
-								mySituation.Magnetometer.MagMaxY=mySituation.Magnetometer.Y
-						}
-							if(mySituation.Magnetometer.MagMaxZ<mySituation.Magnetometer.Z){
-								mySituation.Magnetometer.MagMaxZ=mySituation.Magnetometer.Z
-						}
-							if(mySituation.Magnetometer.MagMinX>mySituation.Magnetometer.X){
-								mySituation.Magnetometer.MagMinX=mySituation.Magnetometer.X
-						}
-							if(mySituation.Magnetometer.MagMinY>mySituation.Magnetometer.Y){
-								mySituation.Magnetometer.MagMinY=mySituation.Magnetometer.Y
-						}
-							if(mySituation.Magnetometer.MagMinZ>mySituation.Magnetometer.Z){
-								mySituation.Magnetometer.MagMinZ=mySituation.Magnetometer.Z
-						}
+				MagnetometerDataMutex.Lock()
+				mySituation.Magnetometer.X = (mySituation.Magnetometer.X*29 + m.M1) / 30
+				mySituation.Magnetometer.Y = (mySituation.Magnetometer.Y*29 + m.M2) / 30
+				mySituation.Magnetometer.Z = (mySituation.Magnetometer.Z*29 + m.M3) / 30
+
+				if(mySituation.Magnetometer.Calibrating == true){
+					if(mySituation.Magnetometer.MagMaxX<mySituation.Magnetometer.X){
+						mySituation.Magnetometer.MagMaxX=mySituation.Magnetometer.X
 					}
-					MagnetometerDataMutex.Unlock()
+					if(mySituation.Magnetometer.MagMaxY<mySituation.Magnetometer.Y){
+						mySituation.Magnetometer.MagMaxY=mySituation.Magnetometer.Y
+					}
+					if(mySituation.Magnetometer.MagMaxZ<mySituation.Magnetometer.Z){
+						mySituation.Magnetometer.MagMaxZ=mySituation.Magnetometer.Z
+					}
+					if(mySituation.Magnetometer.MagMinX>mySituation.Magnetometer.X){
+						mySituation.Magnetometer.MagMinX=mySituation.Magnetometer.X
+					}
+					if(mySituation.Magnetometer.MagMinY>mySituation.Magnetometer.Y){
+						mySituation.Magnetometer.MagMinY=mySituation.Magnetometer.Y
+					}
+					if(mySituation.Magnetometer.MagMinZ>mySituation.Magnetometer.Z){
+						mySituation.Magnetometer.MagMinZ=mySituation.Magnetometer.Z
+					}
 				}
+				MagnetometerDataMutex.Unlock()
 			}
 
 			// Make the GPS measurements.
@@ -496,6 +523,17 @@ func sensorAttitudeSender() {
 					m.W3 = float64(mySituation.GPSVerticalSpeed) * 3600 / 6076.12
 				}
 			}
+			// The compass below wants the raw sample; the Kalman engine wants
+			// the calibrated field in uT, referenced to the local field.
+			magRaw := [3]float64{m.M1, m.M2, m.M3}
+			if engine == "kalman" && m.MValid {
+				ok := false
+				if field, known := kfield.update(s); known {
+					m.M1, m.M2, m.M3, ok = kalmanMagnetometer(m.M1, m.M2, m.M3, field)
+				}
+				m.MValid = ok
+			}
+
 			// Run the AHRS calculations.
 			s.Compute(m)
 
@@ -515,18 +553,24 @@ func sensorAttitudeSender() {
 				if !isAHRSInvalidValue(heading) {
 					mySituation.AHRSGyroHeading /= ahrs.Deg
 				}
-				mySituation.AHRSMagHeading = HeadingFromMag(mySituation.AHRSPitch,
-					mySituation.AHRSRoll,
-					m.M1,
-					m.M2,
-					m.M3,
-					mySituation.Magnetometer.MagMinX,mySituation.Magnetometer.MagMaxX,
-					mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
-					mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
-					mySituation.Magnetometer.Offset,
-					true,
-					mySituation.AHRSMagHeading)
-				mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
+				// Hold the previous heading when the sample is unusable, rather
+				// than feeding a rejected vector into the smoother.
+				if m.MValid {
+					MagnetometerDataMutex.Lock()
+					mySituation.AHRSMagHeading = HeadingFromMag(mySituation.AHRSPitch,
+						mySituation.AHRSRoll,
+						magRaw[0],
+						magRaw[1],
+						magRaw[2],
+						mySituation.Magnetometer.MagMinX,mySituation.Magnetometer.MagMaxX,
+						mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
+						mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
+						mySituation.Magnetometer.Offset,
+						true,
+						mySituation.AHRSMagHeading)
+					mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
+					MagnetometerDataMutex.Unlock()
+				}
 				mySituation.AHRSSlipSkid = s.SlipSkid()
 				mySituation.AHRSTurnRate = s.RateOfTurn()
 				mySituation.AHRSGLoad = s.GLoad()
@@ -549,7 +593,12 @@ func sensorAttitudeSender() {
 				mySituation.AHRSGLoadMin = ahrs.Invalid
 				mySituation.AHRSGLoadMax = 0
 				mySituation.AHRSLastAttitudeTime = time.Time{}
-				s.Reset()
+				// The Simple AHRS is invalid only when its arithmetic broke and
+				// it needs restarting; the Kalman filter is invalid while it is
+				// still converging and has to be left running.
+				if engine != "kalman" {
+					s.Reset()
+				}
 			}
 			mySituation.muAttitude.Unlock()
 
@@ -583,6 +632,88 @@ func sensorAttitudeSender() {
 			}
 		}
 	}
+}
+
+// kalmanMagBiasSigma is the prior on the Kalman engine's magnetometer bias,
+// uT.  The hard iron is removed by the /magnetometer envelope before the
+// sample reaches the filter, so what is left is the calibration's residual;
+// a 20 degree heading error is 8 uT, so this is what lets the magnetometer
+// carry heading at all.
+const kalmanMagBiasSigma = 3.0
+
+// newAHRS returns the attitude engine AHRSEngine selects: goflying's Simple
+// AHRS, or its Kalman filter, which also fuses the magnetometer (see
+// kalmanMagnetometer and kalmanField).
+func newAHRS(engine string) ahrs.AHRSProvider {
+	/* To be Flight tested before releasing, as the Kalman engine is not yet fully tuned for the RB IMU.
+	if engine == "kalman" {
+		k := ahrs.NewKalmanAHRS()
+		k.SetConfig(map[string]float64{
+			"MagBiasSigma": kalmanMagBiasSigma,
+			// Roll and pitch known to this many degrees (1 sigma) count as a
+			// usable attitude, as the Simple AHRS, which never gates, is.
+			"MaxAttitudeSigma": 10,
+		})
+		return k
+	}
+	*/
+	return ahrs.NewSimpleAHRS()
+}
+
+// kalmanField keeps the Kalman engine referenced to the local geomagnetic
+// field: MagField/MagDip from the settings, or the centred-dipole estimate at
+// the GPS position, followed as the aircraft moves.
+type kalmanField struct {
+	field, dip float64 // as last handed to the filter
+}
+
+// update returns the field magnitude the magnetometer sample is to be scaled
+// to, or known=false while there is neither a setting nor a fix to estimate
+// it from.  The filter is reconfigured in place when the reference moves.
+func (k *kalmanField) update(s ahrs.AHRSProvider) (field float64, known bool) {
+	f, d := globalSettings.MagField, globalSettings.MagDip
+	if f <= 0 || d == 0 {
+		if !isGPSValid() {
+			return 0, false
+		}
+		f, d = common.GeomagneticDipole(float64(mySituation.GPSLatitude), float64(mySituation.GPSLongitude))
+	}
+	if math.Abs(f-k.field) > 0.5 || math.Abs(d-k.dip) > 0.5 {
+		if k.field == 0 {
+			log.Printf("AHRS Info: Kalman engine referenced to a %.1f uT field dipping %.0f deg\n", f, d)
+		}
+		k.field, k.dip = f, d
+		s.SetConfig(map[string]float64{"MagField": f, "MagDip": d})
+	}
+	return f, true
+}
+
+// kalmanMagnetometer turns a raw magnetometer sample into what the Kalman
+// engine expects: the calibrated field, scaled to the local magnitude in uT,
+// in the accelerometer chip frame, so that the sensor quaternion applies to
+// it as it does to the gyro and accelerometer.  ok is false while the
+// magnetometer is uncalibrated or its alignment unknown; the filter then
+// runs without it.
+func kalmanMagnetometer(m1, m2, m3, field float64) (x, y, z float64, ok bool) {
+	if !common.QuaternionIsSet(globalSettings.MagSensorQuaternion) ||
+		!common.QuaternionIsSet(globalSettings.SensorQuaternion) {
+		return 0, 0, 0, false
+	}
+	MagnetometerDataMutex.Lock()
+	md := mySituation.Magnetometer
+	MagnetometerDataMutex.Unlock()
+	if md.Calibrating || md.MagMaxX <= md.MagMinX || md.MagMaxY <= md.MagMinY || md.MagMaxZ <= md.MagMinZ {
+		return 0, 0, 0, false
+	}
+	cx, cy, cz := common.CalibrateFromMag(m1, m2, m3,
+		md.MagMinX, md.MagMaxX, md.MagMinY, md.MagMaxY, md.MagMinZ, md.MagMaxZ, true)
+	// MagSensorQuaternion = SensorQuaternion (x) q_axis: take SensorQuaternion
+	// back off to land in the accelerometer chip frame.
+	q := common.QuaternionUnit(common.QuaternionProduct(
+		common.QuaternionConjugate(common.QuaternionUnit(globalSettings.SensorQuaternion)),
+		globalSettings.MagSensorQuaternion))
+	x, y, z = common.QuaternionRotateVector(q, cx, cy, cz)
+	return x * field, y * field, z * field, true
 }
 
 func updateExtraLogging() {
@@ -624,6 +755,51 @@ func makeOrientationQuaternion(g [3]float64) (f *[4]float64) {
 	f = new([4]float64)
 	f[0], f[1], f[2], f[3] = ahrs.RotationMatrixToQuaternion(*rotmat)
 	return
+}
+
+// magSampleUsable rejects a magnetometer sample with a near-zero axis. A stuck
+// or unpopulated axis does not make the heading noisy, it makes it meaningless.
+func magSampleUsable(m1, m2, m3 float64) bool {
+	const deadband = 5.0
+	return math.Abs(m1) >= deadband && math.Abs(m2) >= deadband && math.Abs(m3) >= deadband
+}
+
+// makeMagOrientationQuaternion composes the magnetometer alignment out of the
+// two rotations that separate the magnetometer die from the aircraft:
+//
+//	MagSensorQuaternion = SensorQuaternion (x) qAxis
+//
+//	qAxis            magnetometer die -> accelerometer die (how the part is laid out)
+//	SensorQuaternion accelerometer die -> aircraft body    (how the board is mounted)
+//
+// qAxis comes from the MagAxisMapping rows - a signed axis permutation or any
+// proper rotation, e.g. the one fitted from a flight; all-zero rows mean
+// identity. Because the result hangs off SensorQuaternion, caging the AHRS
+// realigns the compass too, and the rows are what persists across cages.
+func makeMagOrientationQuaternion() [4]float64 {
+	// Nothing to hang off yet: stay unset so it is derived after the cage.
+	if !common.QuaternionIsSet(globalSettings.SensorQuaternion) {
+		return [4]float64{0, 0, 0, 0}
+	}
+
+	axis := [4]float64{1, 0, 0, 0} // identity
+
+	mx := globalSettings.MagAxisMappingX
+	my := globalSettings.MagAxisMappingY
+	mz := globalSettings.MagAxisMappingZ
+
+	if mx != [3]float64{} || my != [3]float64{} || mz != [3]float64{} {
+		if q, ok := common.MagAxisMappingToQuaternion(mx, my, mz); ok {
+			axis = q
+			log.Printf("AHRS Info: magnetometer die orientation quaternion %v\n", axis)
+		} else {
+			log.Printf("AHRS Error: MagAxisMapping %v %v %v is not a rotation "+
+				"(a reflection or a scale has no quaternion); using identity\n", mx, my, mz)
+		}
+	}
+
+	return common.QuaternionUnit(
+		common.QuaternionProduct(globalSettings.SensorQuaternion, axis))
 }
 
 // This is used in the orientation process where the user specifies the forward and up directions.

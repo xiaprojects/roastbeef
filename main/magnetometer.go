@@ -51,15 +51,30 @@
 	6) Store these data
 	curl -X PUT http://localhost/magnetometer  -H "Accept: application/json" -d '{"MagMaxX": 1180,"MagMaxY": 7290,"MagMaxZ": 396,"MagMinX": -4051,"MagMinY": 2401,"MagMinZ": -2242,"X": -454,"Y": 2781,"Z": -595,"Heading": 333,"Offset": 180, "Calibrating": false}'
 
-	TODO: Axis mapping if the install does not meet the original chip axis
+	Better: calibrate from a recorded flight instead of a turn on the apron -
+	see test/magnetometer_check -flightlog and docs/hardware/sensors.md. The
+	ellipsoid fit (common.FitMagEllipsoid) recovers the hard-iron centre and the
+	per-axis scale from real banks and pitch changes, which the flat turn cannot.
+
+	Axis mapping:
+	The magnetometer die is rarely aligned with the accelerometer die, and the
+	board is rarely aligned with the aircraft. Both are handled by a single
+	rotation, globalSettings.MagSensorQuaternion, which maps the magnetometer
+	frame straight into the aircraft body frame. It is derived automatically
+	from the AHRS cage (see makeMagOrientationQuaternion in sensors.go), so
+	POST /cageAHRS realigns the compass as well as the attitude.
+
+	The math itself lives in common/magnetometer.go so that the diagnostic tool
+	test/magnetometer_check.go can exercise it without the daemon.
 */
 
 package main
 
 import (
 	"encoding/json"
-	"math"
 	"sync"
+
+	"github.com/xiaprojects/roastbeef/common"
 )
 
 var MagnetometerDataMutex *sync.Mutex
@@ -102,118 +117,30 @@ func (p *MagnetometerData) CalibrationReset() {
 	MagnetometerDataMutex.Unlock()
 }
 
-func MagApplyCalibration(
-	pitchDeg float64,
-	rollDeg float64,
-
-	magX float64,
-	magY float64,
-	magZ float64,
-
-	minX float64, maxX float64,
-	minY float64, maxY float64,
-	minZ float64, maxZ float64,
-	offset float64,
-	softIronEnabled bool,
-) (float64, float64, float64) {
-	// ----------------------------------------------------
-	// 1. Hard-iron offsets
-	// ----------------------------------------------------
-	offX := (maxX - minX)
-	offY := (maxY - minY)
-	offZ := (maxZ - minZ)
-
-	x := (magX-minX)/offX - 0.5
-	y := (magY-minY)/offY - 0.5
-	z := (magZ-minZ)/offZ - 0.5
-
-	// ----------------------------------------------------
-	// 2. Soft-iron scale normalization (optional but good)
-	// ----------------------------------------------------
-
-	if softIronEnabled == true {
-	}
-
-	return x, y, z
-}
-
-// MagneticHeadingDeg computes a tilt-compensated magnetic heading (0..360 deg).
-//
-// Assumptions (match your “new axis” dataset):
-// - magX/magY/magZ are already remapped into the same BODY frame as pitch/roll.
-// - rollDeg is rotation about +X (right-hand rule / per your remap it behaves as X-axis roll).
-// - pitchDeg is rotation about +Y.
-// - Heading increases clockwise when rotating the body on the horizontal plane (typical compass convention).
-//
-// If your heading is mirrored (E/W swapped), change atan2(yh, xh) to atan2(-yh, xh) or swap axes.
+// MagneticHeadingDeg computes a tilt-compensated magnetic heading (0..360 deg)
+// from a field vector already expressed in the aircraft body frame.
 func MagneticHeadingDeg(pitchDeg, rollDeg, magX, magY, magZ float64) float64 {
-	phi := rollDeg * math.Pi / 180.0    // roll  (rad)
-	theta := pitchDeg * math.Pi / 180.0 // pitch (rad)
-
-	// Tilt compensation (common form)
-	sinPhi := math.Sin(phi)
-	cosPhi := math.Cos(phi)
-	sinTheta := math.Sin(theta)
-	cosTheta := math.Cos(theta)
-
-	xh := magX*cosTheta + magY*sinTheta*sinPhi + magZ*sinTheta*cosPhi
-	yh := magZ*sinPhi - magY*cosPhi
-
-	headingRad := math.Atan2(-yh, xh)
-	headingDeg := headingRad * 180.0 / math.Pi
-
-	// Normalize to [0,360)
-	headingDeg = math.Mod(headingDeg+360.0, 360.0)
-	return headingDeg
+	return common.MagneticHeadingDeg(pitchDeg, rollDeg, magX, magY, magZ)
 }
 
+// CalibrateFromMag applies the hard-iron offset and diagonal soft-iron scale
+// from the calibration envelope. The result is still in the magnetometer frame.
 func CalibrateFromMag(
 	magX float64,
 	magY float64,
 	magZ float64,
 	minX float64, maxX float64,
 	minY float64, maxY float64,
-	minZ float64, maxZ float64, softIronEnabled bool) (float64, float64, float64) {
+	minZ float64, maxZ float64, normalize bool) (float64, float64, float64) {
 
-	// Hard-iron offset: centro dell'intervallo per ciascun asse
-	offX := (maxX + minX) * 0.5
-	offY := (maxY + minY) * 0.5
-	offZ := (maxZ + minZ) * 0.5
-
-	// Semi-range (ampiezza/2) per asse; usato come scale factor grezzo
-	rngX := (maxX - minX) * 0.5
-	rngY := (maxY - minY) * 0.5
-	rngZ := (maxZ - minZ) * 0.5
-
-	// Evita divisioni per zero o range degeneri
-	const eps = 1e-12
-	if math.Abs(rngX) < eps {
-		rngX = 1.0
-	}
-	if math.Abs(rngY) < eps {
-		rngY = 1.0
-	}
-	if math.Abs(rngZ) < eps {
-		rngZ = 1.0
-	}
-
-	// Applica correzioni offset + scala (soft-iron diagonale)
-	cx := (magX - offX) / rngX
-	cy := (magY - offY) / rngY
-	cz := (magZ - offZ) / rngZ
-	if softIronEnabled == true {
-		// Normalizza a modulo 1 (utile per heading e per confronti direzionali)
-		n := math.Sqrt(cx*cx + cy*cy + cz*cz)
-		if n > eps {
-			cx /= n
-			cy /= n
-			cz /= n
-		}
-	}
-
-	return cx, cy, cz
+	return common.CalibrateFromMag(magX, magY, magZ,
+		minX, maxX, minY, maxY, minZ, maxZ, normalize)
 }
 
+// HeadingFromMag computes the smoothed magnetic heading for a raw sample,
+// rotating it into the aircraft body frame with globalSettings.MagSensorQuaternion
+// so that it shares a frame with the AHRS pitch and roll used for tilt
+// compensation.
 func HeadingFromMag(
 	pitchDeg float64,
 	rollDeg float64,
@@ -224,54 +151,18 @@ func HeadingFromMag(
 	minY float64, maxY float64,
 	minZ float64, maxZ float64,
 	offset float64,
-	softIronEnabled bool,
+	normalize bool,
 	lastMagHeading float64,
 ) float64 {
-	cx, cy, cz := CalibrateFromMag(magX,
-		magY,
-		magZ,
+	return common.HeadingFromMagQ(
+		pitchDeg, rollDeg,
+		magX, magY, magZ,
 		minX, maxX,
 		minY, maxY,
 		minZ, maxZ,
-		softIronEnabled)
-	// Axis mapping
-	pitchDegAligned := globalSettings.MagRollPitchInterference[0] * pitchDeg + globalSettings.MagRollPitchOffset[0]
-	rollDegAligned := globalSettings.MagRollPitchInterference[1] * rollDeg + globalSettings.MagRollPitchOffset[1]
-	// Most of the Magnetometers are (magX, magY, magZ) = (-cy, +cx, +cz) compared to the Accelerometer
-	cxAligned := globalSettings.MagAxisMappingX[0]*cx + globalSettings.MagAxisMappingX[1]*cy + globalSettings.MagAxisMappingX[2]*cz
-	cyAligned := globalSettings.MagAxisMappingY[0]*cx + globalSettings.MagAxisMappingY[1]*cy + globalSettings.MagAxisMappingY[2]*cz
-	czAligned := globalSettings.MagAxisMappingZ[0]*cx + globalSettings.MagAxisMappingZ[1]*cy + globalSettings.MagAxisMappingZ[2]*cz
-	//log.Printf("%.0f,%.0f,%.0f<=%.0f,%.0f,%.0f", cxAligned, cyAligned, czAligned, cx, cy, cz)
-	heading := MagneticHeadingDeg(pitchDegAligned, rollDegAligned, cxAligned, cyAligned, czAligned) + offset
-
-	// Helper to normalize angle into [0,360)
-	normalize := func(a float64) float64 {
-		a = math.Mod(a, 360.0)
-		if a < 0 {
-			a += 360.0
-		}
-		return a
-	}
-
-	heading = normalize(heading)
-
-	// If lastMagHeading is not a number, or smoothing disabled (alpha==1), return raw heading
-	if math.IsNaN(lastMagHeading) {
-		return heading
-	}
-
-	last := normalize(lastMagHeading)
-
-	// Compute shortest angular difference (-180,180]
-	delta := heading - last
-	if delta > 180.0 {
-		delta -= 360.0
-	} else if delta <= -180.0 {
-		delta += 360.0
-	}
-
-	// Apply exponential smoothing on the angular difference, then re-normalize
-	smoothed := last + SmoothHeadingAlpha*delta
-	smoothed = normalize(smoothed)
-	return smoothed
+		offset,
+		globalSettings.MagSensorQuaternion,
+		normalize,
+		SmoothHeadingAlpha,
+		lastMagHeading)
 }
