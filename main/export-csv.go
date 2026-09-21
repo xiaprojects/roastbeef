@@ -76,7 +76,7 @@ func (exportCSVInstance *ExportCSVStratuxPlugin) generatePointBySamples(samples 
 }
 
 func (exportCSVInstance *ExportCSVStratuxPlugin) generatePointBySample(sample ChartDataCurrent) string {
-	ret := fmt.Sprintf("%d,%s,%.6f,%.6f,%.0f,%.0f,%.0f,%.0f,%.1f,%.1f,%.1f,%.1f,%.1f,%d,%d,%.1f\n",
+	ret := fmt.Sprintf("%d,%s,%.6f,%.6f,%.0f,%.0f,%.0f,%.0f,%.1f,%.1f,%.1f,%.1f,%.1f,%d,%d,%.1f,%.1f,%.3f,%.3f,%.3f\n",
 		sample.Epoch,
 		time.Unix(sample.Epoch, 0).Format(time.RFC3339),
 		sample.GPSLatitude,
