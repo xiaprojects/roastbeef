@@ -1210,6 +1210,9 @@ type settings struct {
 	IMUMapping           [2]int     // Map from aircraft axis to sensor axis: accelerometer
 	SensorQuaternion     [4]float64 // Quaternion mapping from sensor frame to aircraft frame
 	C, D                 [3]float64 // IMU Accel, Gyro zero bias
+	AHRSEngine           string     // "simple" (default; "" reads as simple): goflying Simple AHRS; "kalman": its Kalman filter, which also fuses the magnetometer (newAHRS)
+	MagField             float64    // Local geomagnetic field the Kalman engine is referenced to, uT; 0 = dipole estimate at the GPS position
+	MagDip               float64    // Its inclination, deg positive down; 0 = dipole estimate
 	PPM                  int
 	Dump1090Gain         float64 // SDR RTL ES Gain
 	AltitudeOffset       int
@@ -1271,14 +1274,17 @@ type settings struct {
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
 	Switches             []switchModel // Switches Settings
 	MagCalibration       MagnetometerData // Magnetometer Calibration
-	/* We will add the Quaternion dedicated for the Magnetometer
-	MagSensorQuaternion  [4]float64 // Quaternion mapping from sensor frame to aircraft frame
-	*/
-	MagRollPitchInterference [2]float64 // aircraft frame to Mag alignment
-	MagRollPitchOffset   [2]float64 // aircraft frame to Mag alignment
-	MagAxisMappingX		 [3]float64 // aircraft frame to Mag alignment
-	MagAxisMappingY		 [3]float64 // aircraft frame to Mag alignment
-	MagAxisMappingZ		 [3]float64 // aircraft frame to Mag alignment
+	// Magnetometer alignment. The rows are the rotation from the magnetometer
+	// die to the accelerometer die: a signed axis permutation for how the part
+	// is laid out on the board, or any proper rotation - the flight fit in
+	// test/magnetometer_check -flightlog refines it by a few degrees. They are
+	// the persistent input; MagSensorQuaternion is derived from them and from
+	// SensorQuaternion on every cage (makeMagOrientationQuaternion), so it
+	// need not be edited by hand. All-zero rows mean identity.
+	MagAxisMappingX		 [3]float64 // magnetometer die -> accelerometer die, row X
+	MagAxisMappingY		 [3]float64 // row Y
+	MagAxisMappingZ		 [3]float64 // row Z
+	MagSensorQuaternion  [4]float64 // derived: magnetometer frame -> aircraft frame
 	RegionSelected       int			// 0 - none, 1 = US, 2 = EU
 }
 
