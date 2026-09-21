@@ -119,6 +119,12 @@ func pollSensors() {
 				globalStatus.IMUConnected = initIMU(i2cbus0) // I2C accel/gyro/mag.
 			}
 		}
+
+		// The pitot sensor has no enable flag: it is recognised on the bus
+		// (main/airspeed.go).
+		if !globalStatus.AirspeedConnected {
+			pollAirspeedSensor()
+		}
 	}
 }
 

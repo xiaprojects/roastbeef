@@ -1196,6 +1196,7 @@ type settings struct {
 	GPS_Enabled          bool
 	BMP_Sensor_Enabled   bool
 	IMU_Sensor_Enabled   bool
+	AirspeedZeroOffset   float64 // Pa the MS4525DO pitot sensor reads at zero airflow; set by POST /calibrateAirspeed (main/airspeed.go)
 	NetworkOutputs       []networkConnection
 	SerialOutputs        map[string]serialConnection
 	BleOutputs           []bleConnection
@@ -1347,7 +1348,7 @@ type status struct {
 	AHRS_LogFiles_Size                         int64
 	BMPConnected                               bool
 	IMUConnected                               bool
-	AirspeedConnected                          bool // MS4525DO pitot sensor found and being read
+	AirspeedConnected                          bool // MS4525DO pitot sensor recognised on I2C and being read (no enable setting)
 	NightMode                                  bool // For turning off LEDs.
 	OGN_noise_db                               float32
 	OGN_gain_db                                float32
@@ -1404,10 +1405,11 @@ func defaultSettings() {
 	globalSettings.GPS_Enabled = true
 	globalSettings.IMU_Sensor_Enabled = true
 	globalSettings.BMP_Sensor_Enabled = true
+	globalSettings.AirspeedZeroOffset = 0
 	// Attitude engine: goflying's Simple AHRS.  "kalman" is the Kalman filter
 	// that also fuses the magnetometer; it needs a calibrated compass and a
 	// goflying with its magnetometer rows (see sensorAttitudeSender).
-	globalSettings.AHRSEngine = "simple"	
+	globalSettings.AHRSEngine = "simple"
 	//FIXME: Need to change format below.
 	globalSettings.NetworkOutputs = []networkConnection{
 		{Conn: nil, Ip: "", Port: 4000, Capability: NETWORK_GDL90_STANDARD | NETWORK_AHRS_GDL90},
@@ -1622,6 +1624,9 @@ func printStats() {
 		}
 		if globalSettings.BMP_Sensor_Enabled {
 			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last BMP read: %s", stratuxClock.HumanizeTime(mySituation.BaroLastMeasurementTime)))
+		}
+		if globalStatus.AirspeedConnected {
+			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last pitot read: %s (%.0f Pa, IAS %.0f kt)", stratuxClock.HumanizeTime(mySituation.PitotLastMeasurementTime), mySituation.PitotPressure, mySituation.IndicatedAirSpeed))
 		}
 		if len(sensorsOutput) > 0 {
 			log.Print("- " + strings.Join(sensorsOutput, ", ") + "\n")

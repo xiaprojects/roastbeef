@@ -321,7 +321,11 @@ func Distance(lat1, lon1, lat2, lon2 float64) (dist, bearing float64) {
 	lat2 = Radians(lat2)
 	lon2 = Radians(lon2)
 
-	dist = math.Acos(math.Sin(lat1)*math.Sin(lat2)+math.Cos(lat1)*math.Cos(lat2)*math.Cos(lon2-lon1)) * radius_earth
+	// Rounding can push the cosine a hair outside [-1, 1] for identical or
+	// antipodal points, which would make Acos return NaN. Clamp it.
+	c := math.Sin(lat1)*math.Sin(lat2) + math.Cos(lat1)*math.Cos(lat2)*math.Cos(lon2-lon1)
+	c = math.Max(-1, math.Min(1, c))
+	dist = math.Acos(c) * radius_earth
 
 	var x, y float64
 
@@ -335,8 +339,28 @@ func Distance(lat1, lon1, lat2, lon2 float64) (dist, bearing float64) {
 
 // CalcAltitude determines the pressure altitude (feet) from the atmospheric pressure (hPa)
 func CalcAltitude(press float64, altoffset int) (altitude float64) {
-	altitude = 145366.45 * (1.0 - math.Pow(press/1013.25, 0.190284)) + float64(altoffset)
+	altitude = 145366.45*(1.0-math.Pow(press/1013.25, 0.190284)) + float64(altoffset)
 	return
+}
+
+// CalcIndicatedAirspeed determines the indicated airspeed (knots) from the
+// pitot-static differential pressure (Pa), using the compressible ISA
+// sea-level relation an airspeed indicator is calibrated to:
+//
+//	IAS = a0 * sqrt(5 * ((qc/P0 + 1)^(2/7) - 1))
+//
+// with a0 = 661.4786 kt the sea-level speed of sound and P0 = 101325 Pa. It
+// is within 0.2 % of sqrt(2 qc / rho0) below 100 kt and 1.5 kt above it at
+// 200 kt. A non-positive pressure is 0 knots.
+func CalcIndicatedAirspeed(qc float64) (knots float64) {
+	const (
+		a0 = 661.4786
+		p0 = 101325.0
+	)
+	if qc <= 0 {
+		return 0
+	}
+	return a0 * math.Sqrt(5*(math.Pow(qc/p0+1, 2.0/7.0)-1))
 }
 
 // golang only defines min/max for float64. Really.

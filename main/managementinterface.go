@@ -726,7 +726,7 @@ func handleMagnetometerPost(w http.ResponseWriter, r *http.Request) {
 					mySituation.Magnetometer.MagMinY,mySituation.Magnetometer.MagMaxY,
 					mySituation.Magnetometer.MagMinZ,mySituation.Magnetometer.MagMaxZ,
 					mySituation.Magnetometer.Offset,
-					false,
+					true, // must match sensorAttitudeSender(), or the preview lies
 					mySituation.AHRSMagHeading)
 				mySituation.Magnetometer.Heading = mySituation.AHRSMagHeading
 
@@ -1487,6 +1487,15 @@ func handleBridgeFloatSetRequest(w http.ResponseWriter, r *http.Request) {
 					logBridgeFloat(BridgeFloatDataLogger{time.Now(),key,ival}) // first reading, or the replay starts without it
 				}
 				addonsBridge.bridgeDataMutex.Unlock()
+				// Keys the situation consumes. The airspeed board posts
+				// "ias_mps" in m/s; the HMI reads IndicatedAirSpeed in knots
+				// like GPSGroundSpeed, and 0 means no airspeed source. A
+				// pitot sensor on the unit (main/airspeed.go airspeedSender)
+				// owns the field while it is connected.
+				if key == "ias_mps" && !globalStatus.AirspeedConnected {
+					mySituation.IndicatedAirSpeed = ival * 1.94384
+					mySituation.PitotLastMeasurementTime = time.Now()
+				}
 			}
 			if(reconfigure==true){
 				addonsBridge.bridgeDataMutex.Lock()
@@ -1873,6 +1882,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 							myPressureReader.Close()
 							globalStatus.BMPConnected = false
 						}
+					case "AirspeedZeroOffset":
+						globalSettings.AirspeedZeroOffset = val.(float64)
 					case "DEBUG":
 						globalSettings.DEBUG = val.(bool)
 					case "DisplayTrafficSource":
@@ -1896,10 +1907,56 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.PersistentLogging = val.(bool)
 						setPersistentLogging(globalSettings.PersistentLogging)
 					case "IMUMapping":
-						if globalSettings.IMUMapping != val.([2]int) {
-							globalSettings.IMUMapping = val.([2]int)
+						// [forward, 0]: the signed sensor axis (+-1 X, +-2 Y, +-3 Z)
+						// that points to the nose; only the first entry is used.
+						var mapping [2]float64
+						if !settingsFloatArray(val, mapping[:]) {
+							log.Printf("handleSettingsSetRequest:IMUMapping: expected [forward, 0], got %v\n", val)
+							continue
+						}
+						forward := int(mapping[0])
+						if forward == 0 || forward < -3 || forward > 3 {
+							log.Printf("handleSettingsSetRequest:IMUMapping: forward axis %d not in +-1..3\n", forward)
+							continue
+						}
+						if globalSettings.IMUMapping[0] != forward {
+							globalSettings.IMUMapping = [2]int{forward, 0}
+							// The orientation quaternions were derived with the old
+							// forward axis: drop them so the restarted AHRS levels
+							// again, as the orientation wizard's second step does.
+							globalSettings.SensorQuaternion = [4]float64{0, 0, 0, 0}
+							globalSettings.MagSensorQuaternion = [4]float64{0, 0, 0, 0}
+							if myIMUReader != nil {
 								myIMUReader.Close()
+							}
 							globalStatus.IMUConnected = false // Force a restart of the IMU reader
+						}
+					case "SensorQuaternion":
+						var q [4]float64
+						if settingsFloatArray(val, q[:]) {
+							globalSettings.SensorQuaternion = q
+							// The magnetometer alignment hangs off this; rebuild it.
+							globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
+							myIMUReader.Close()
+							globalStatus.IMUConnected = false // Force a restart so the AHRS picks it up
+						}
+					case "MagSensorQuaternion":
+						var q [4]float64
+						if settingsFloatArray(val, q[:]) {
+							globalSettings.MagSensorQuaternion = q // read per sample, takes effect at once
+						}
+					case "MagAxisMappingX", "MagAxisMappingY", "MagAxisMappingZ":
+						var row [3]float64
+						if settingsFloatArray(val, row[:]) {
+							switch key {
+							case "MagAxisMappingX":
+								globalSettings.MagAxisMappingX = row
+							case "MagAxisMappingY":
+								globalSettings.MagAxisMappingY = row
+							case "MagAxisMappingZ":
+								globalSettings.MagAxisMappingZ = row
+							}
+							globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
 						}
 					case "Dump1090Gain":
 						globalSettings.Dump1090Gain = (val.(float64))
@@ -2200,6 +2257,32 @@ func handleResetGMeter(w http.ResponseWriter, r *http.Request) {
 	// This ensures we are recognized as supporting cross-domain AJAX REST calls.
 	if r.Method == "POST" {
 		ResetAHRSGLoad()
+	}
+}
+
+// handleCalibrateAirspeed zeroes the pitot sensor: POST with the aircraft
+// stationary in still air (main/airspeed.go CalibrateAirspeed). 409 when
+// there is no sensor or the aircraft is moving, so the HMI can say why.
+func handleCalibrateAirspeed(w http.ResponseWriter, r *http.Request) {
+	// define header in support of cross-domain AJAX
+	setNoCache(w)
+	w.Header().Set("Content-Type", "text/plain")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	// For an OPTION method request, we return header without processing.
+	// This ensures we are recognized as supporting cross-domain AJAX REST calls.
+	if r.Method == "POST" {
+		if !globalStatus.AirspeedConnected {
+			http.Error(w, "no pitot sensor connected", http.StatusConflict)
+			return
+		}
+		if isGPSGroundTrackValid() && mySituation.GPSGroundSpeed > 5 {
+			http.Error(w, "the aircraft is moving: zero the pitot sensor at a standstill", http.StatusConflict)
+			return
+		}
+		CalibrateAirspeed()
 	}
 }
 
@@ -2854,6 +2937,7 @@ func managementInterface() {
 	http.HandleFunc("/develmodetoggle", handleDevelModeToggle)
 	http.HandleFunc("/orientAHRS", handleOrientAHRS)
 	http.HandleFunc("/calibrateAHRS", handleCalibrateAHRS)
+	http.HandleFunc("/calibrateAirspeed", handleCalibrateAirspeed)
 	http.HandleFunc("/cageAHRS", handleCageAHRS)
 	http.HandleFunc("/resetGMeter", handleResetGMeter)
 	http.HandleFunc("/deletelogfile", handleDeleteLogFile)

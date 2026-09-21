@@ -127,10 +127,12 @@ type SituationData struct {
 	// Magnetometer data to calculate the Mag Offsets
 	Magnetometer         MagnetometerData
 
-	// External board
-	/* Ready for Professional board
-	IndicatedAirSpeed				    float32
-	*/
+	// Airspeed: the pitot sensor (main/sensors.go airspeedSender) or, without
+	// one, an external board over POST /bridge/float.
+	IndicatedAirSpeed        float32   // knots; 0 = no airspeed source, the HMI shows ground speed
+	PitotPressure            float32   // Pa, dynamic pressure after the zero offset and the filter
+	PitotTemperature         float32   // degrees C at the pitot sensor
+	PitotLastMeasurementTime time.Time // zero while no pitot sensor is read
 }
 
 /*
