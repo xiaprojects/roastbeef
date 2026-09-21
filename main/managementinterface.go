@@ -631,6 +631,26 @@ func handleTimersRest(w http.ResponseWriter, r *http.Request) {
  * Timers REST API End
  */
 
+// settingsFloatArray copies a JSON array from /setSettings into a fixed-size
+// float slice. It returns false, leaving dst untouched, if the value is not an
+// array of exactly len(dst) numbers.
+func settingsFloatArray(val interface{}, dst []float64) bool {
+	arr, ok := val.([]interface{})
+	if !ok || len(arr) != len(dst) {
+		return false
+	}
+	tmp := make([]float64, len(dst))
+	for i, v := range arr {
+		f, ok := v.(float64)
+		if !ok {
+			return false
+		}
+		tmp[i] = f
+	}
+	copy(dst, tmp)
+	return true
+}
+
 /***
  * Magnetometer REST API Start
  */
@@ -991,8 +1011,80 @@ func handleAddonsGet(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// handleSettingsFileRest serves the JSON files under /settings/ the RB-01 HMI
+// loads on boot and its settings addon edits (aircraft.json, ems.json,
+// navigation.json, keypad.json); it is registered per file, so the request
+// path names one of them. GET returns the file like the static server would
+// but uncached, so the addon reloads what was last written; POST and PUT
+// replace it with the JSON object in the body.
+func handleSettingsFileRest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, POST, PUT, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+
+	path := STRATUX_WWW_DIR + "settings/" + filepath.Base(r.URL.Path)
+	if r.Method != "POST" && r.Method != "PUT" {
+		http.ServeFile(w, r, path)
+		return
+	}
+
+	body, err := ioutil.ReadAll(http.MaxBytesReader(w, r.Body, 1<<20))
+	if err != nil {
+		log.Printf("handleSettingsFileRest:error: %s\n", err.Error())
+		http.Error(w, "{}", http.StatusBadRequest)
+		return
+	}
+	var object map[string]interface{}
+	if err := json.Unmarshal(body, &object); err != nil {
+		log.Printf("handleSettingsFileRest:error: %s\n", err.Error())
+		http.Error(w, "{}", http.StatusBadRequest)
+		return
+	}
+	// Keep the file hand-editable.
+	var indented bytes.Buffer
+	if err := json.Indent(&indented, body, "", "    "); err != nil {
+		indented.Reset()
+		indented.Write(body)
+	}
+	indented.WriteString("\n")
+	if err := ioutil.WriteFile(path, indented.Bytes(), 0644); err != nil {
+		addSingleSystemErrorf("settings-file", "can't save %s: %s", path, err.Error())
+		http.Error(w, "{}", http.StatusInternalServerError)
+		return
+	}
+	log.Printf("wrote %s.\n", path)
+	fmt.Fprintf(w, "{}\n")
+}
+
+// handleHobbsMeterRest serves /settings/hobbsmeter.json from the Hobbs meter's memory
+// rather than from the file (main/hobbsmeter.go): the file is flushed only every 5
+// minutes and does not exist before the first flight, while this answer is live and
+// `[]` on a new aircraft. Read-only: the log is edited by hand on the boot partition.
+func handleHobbsMeterRest(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	w.Header().Set("Access-Control-Allow-Method", "GET, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+	if r.Method != "GET" {
+		http.Error(w, "[]", http.StatusMethodNotAllowed)
+		return
+	}
+	if hobbsMeter.mutex == nil { // not started (trace replay)
+		fmt.Fprintf(w, "[]\n")
+		return
+	}
+	entriesJSON, err := json.Marshal(hobbsMeter.getEntries())
+	if err != nil {
+		log.Printf("handleHobbsMeterRest:error: %s\n", err.Error())
+		fmt.Fprintf(w, "[]\n")
+		return
+	}
+	fmt.Fprintf(w, "%s\n", entriesJSON)
+}
+
 /***
- * 
+ *
  * Static resources REST API End
  */
 type ResourceDataModel struct {
@@ -1392,6 +1484,7 @@ func handleBridgeFloatSetRequest(w http.ResponseWriter, r *http.Request) {
 				} else {
 					addonsBridge.bridgeFloatData[key] = ival
 					reconfigure = true
+					logBridgeFloat(BridgeFloatDataLogger{time.Now(),key,ival}) // first reading, or the replay starts without it
 				}
 				addonsBridge.bridgeDataMutex.Unlock()
 			}
@@ -1533,6 +1626,7 @@ func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
 					} else {
 						ems.emsData[key] = ival
 						reconfigureEMS = true
+						logEMS(EMSDataLogger{time.Now(),key,ival}) // first reading, or the replay starts without it
 						ems.emsDataMax[key] = ival
 						ems.emsDataMin[key] = ival
 				}
@@ -1804,7 +1898,7 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 					case "IMUMapping":
 						if globalSettings.IMUMapping != val.([2]int) {
 							globalSettings.IMUMapping = val.([2]int)
-							myIMUReader.Close()
+								myIMUReader.Close()
 							globalStatus.IMUConnected = false // Force a restart of the IMU reader
 						}
 					case "Dump1090Gain":
@@ -2382,6 +2476,16 @@ type dirlisting struct {
 func viewLogs(w http.ResponseWriter, r *http.Request) {
 	urlpath := strings.TrimPrefix(r.URL.Path, "/logs/")
 	path := "/var/log/" + urlpath
+	// Flight logs are listed by /flightlogs from ReplayLogPath (a USB stick or a
+	// dedicated partition, when configured) but linked here under /logs/. Serve
+	// them from where they actually are; everything else is still /var/log.
+	if strings.HasSuffix(urlpath, ".sqlite") {
+		flightLog := filepath.Join(globalSettings.ReplayLogPath, filepath.Base(urlpath))
+		if _, err := os.Stat(flightLog); err == nil {
+			http.ServeFile(w, r, flightLog)
+			return
+		}
+	}
 	finfo, err := os.Stat(path)
 	if err != nil {
 		w.Write([]byte(fmt.Sprintf("Failed to open %s: %s", path, err.Error())))
@@ -2704,6 +2808,13 @@ func managementInterface() {
 	http.HandleFunc("/resources", handleResourcesGet)
 	// Addons Feature
 	http.HandleFunc("/addons", handleAddonsGet)
+	// Settings files edited by the RB-01 settings addon
+	http.HandleFunc("/settings/aircraft.json", handleSettingsFileRest)
+	http.HandleFunc("/settings/ems.json", handleSettingsFileRest)
+	http.HandleFunc("/settings/navigation.json", handleSettingsFileRest)
+	http.HandleFunc("/settings/keypad.json", handleSettingsFileRest)
+	// GPS Hobbs meter flight log, read-only and live
+	http.HandleFunc("/settings/hobbsmeter.json", handleHobbsMeterRest)
 	// Resources Flight logs
 	http.HandleFunc("/flightlogs", handleFlightLogsGet)
 	// Checklist Feature
