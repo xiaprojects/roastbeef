@@ -1326,6 +1326,8 @@ type status struct {
 	GPS_NetworkRemoteIp                        string // for NMEA via TCP from OGN tracker: display remote IP to configure the OGN tracker
 	Uptime                                     int64
 	UptimeClock                                time.Time
+	HobbsTimeMinutes                           int64 // GPS Hobbs meter: whole flight log, flight in progress included (main/hobbsmeter.go)
+	HobbsFlightMinutes                         int64 // GPS Hobbs meter: flight in progress, 0 on the ground
 	CPUTemp                                    float32
 	CPUTempMin                                 float32
 	CPUTempMax                                 float32
@@ -1345,6 +1347,7 @@ type status struct {
 	AHRS_LogFiles_Size                         int64
 	BMPConnected                               bool
 	IMUConnected                               bool
+	AirspeedConnected                          bool // MS4525DO pitot sensor found and being read
 	NightMode                                  bool // For turning off LEDs.
 	OGN_noise_db                               float32
 	OGN_gain_db                                float32
@@ -1375,15 +1378,15 @@ func defaultSettings() {
 	globalSettings.Switches = make([]switchModel, 0)
 	globalSettings.MagCalibration.CalibrationReset()
 	mySituation.Magnetometer.CalibrationReset()
-	globalSettings.MagRollPitchInterference = [2]float64{1, -1}
-	globalSettings.MagRollPitchInterference = [2]float64{0, 0}
-	// Most of the Magnetometers are (magX, magY, magZ) = (-cy, +cx, +cz) compared to the Accelerometer
-	globalSettings.MagAxisMappingX = [3]float64{0, -1, 0}
-	globalSettings.MagAxisMappingY = [3]float64{1, 0, 0}
+	// Die orientation unknown for a fresh install: identity, to be set from a
+	// flight fit (test/magnetometer_check -flightlog) or by hand for the board.
+	globalSettings.MagAxisMappingX = [3]float64{1, 0, 0}
+	globalSettings.MagAxisMappingY = [3]float64{0, 1, 0}
 	globalSettings.MagAxisMappingZ = [3]float64{0, 0, 1}
-	/* We will move to quaternion
+	// Zero norm means "not derived yet": sensorAttitudeSender() computes it
+	// from SensorQuaternion on the next cage, the same sentinel convention
+	// SensorQuaternion itself uses.
 	globalSettings.MagSensorQuaternion = [4]float64{0, 0, 0, 0}
-	*/
 	globalSettings.MagCalibration.Calibrating = true
 	mySituation.Magnetometer.Calibrating = true
 	globalSettings.MagCalibration.Offset = 0
@@ -1401,6 +1404,10 @@ func defaultSettings() {
 	globalSettings.GPS_Enabled = true
 	globalSettings.IMU_Sensor_Enabled = true
 	globalSettings.BMP_Sensor_Enabled = true
+	// Attitude engine: goflying's Simple AHRS.  "kalman" is the Kalman filter
+	// that also fuses the magnetometer; it needs a calibrated compass and a
+	// goflying with its magnetometer rows (see sensorAttitudeSender).
+	globalSettings.AHRSEngine = "simple"	
 	//FIXME: Need to change format below.
 	globalSettings.NetworkOutputs = []networkConnection{
 		{Conn: nil, Ip: "", Port: 4000, Capability: NETWORK_GDL90_STANDARD | NETWORK_AHRS_GDL90},
@@ -1617,7 +1624,7 @@ func printStats() {
 			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last BMP read: %s", stratuxClock.HumanizeTime(mySituation.BaroLastMeasurementTime)))
 		}
 		if len(sensorsOutput) > 0 {
-			log.Printf("- " + strings.Join(sensorsOutput, ", ") + "\n")
+			log.Print("- " + strings.Join(sensorsOutput, ", ") + "\n")
 		}
 		// Check if we're using more than 95% of the free space. If so, throw a warning (only once).
 		if usage.Usage() > 0.95 {
@@ -1744,6 +1751,9 @@ func gracefulShutdown() {
 	// Charts
 	charts.ShutdownFunc()
 	log.Printf("gracefulShutdown --> charts()")
+	// GPS Hobbs meter
+	hobbsMeter.ShutdownFunc()
+	log.Printf("gracefulShutdown --> hobbsMeter()")
 	// SwitchBoards
 	switchBoard.ShutdownFunc()
 	// Addons Bridge
@@ -1913,6 +1923,8 @@ func main() {
 		keypad.InitFunc()
 		// Charts
 		charts.InitFunc()
+		// GPS Hobbs meter
+		hobbsMeter.InitFunc()
 		// EMS Feature
 		ems.InitFunc()
 		// Switchboards

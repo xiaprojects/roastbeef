@@ -160,13 +160,14 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.status = {};
     $scope.updateStatus = (status) => {
         var requiredRefresh = $scope.applyNewData(status);
-        // TODO: move from status.Uptime to EMS Engine Status
-        const newValue = Number.parseFloat((status.Uptime/60000)).toFixed(0);
-        if($scope.status["propellerTime"] != newValue){
-        $scope.status["propellerTime"] = newValue;
-        $scope.status["engineTime"] = Number.parseFloat((status.Uptime/60000)).toFixed(0);
-            requiredRefresh++;
-        }
+        // Hobbs meter (main/hobbsmeter.go): minutes flown above 50 km/h, added to the
+        // base values the pilot set in aircraft.json.
+        const hobbs = Number(status.HobbsTimeMinutes) || 0;
+        const base = $scope.aircraftData || {};
+        requiredRefresh += $scope.applyNewData({
+            "propellerTime": (Number(base.propellerTime) || 0) + hobbs,
+            "engineTime": (Number(base.engineTime) || 0) + hobbs
+        });
         if(requiredRefresh > 0){
         $scope.$apply(); // trigger any needed refreshing of data
         }
