@@ -63,7 +63,7 @@ function SituationService($scope, $http) {
         };
 
         $scope.situationSocket.onclose = function (msg) {
-
+            bridgeQNHReset();
             delete $scope.situationSocket;
             setTimeout(function () { connect($scope); }, 1000);
         };
@@ -80,6 +80,14 @@ function SituationService($scope, $http) {
             Object.keys(event.detail).forEach(element => {
                 $scope.situationByPilot[element] = event.detail[element];
             });
+            // RB-Addons: a knob turn is a real, pilot-set QNH; publish it without
+            // waiting for the next situation frame. The AUTO button carries no QNH
+            // key, so its recomputed value is published by onmessageTick instead.
+            if (event.detail.hasOwnProperty("QNH")) {
+                bridgeQNHValid = true;
+                bridgeQNHAuto = 0;
+                bridgeQNHPublish($scope.situationByPilot.QNH);
+            }
             // Trigger the update
             $scope.sendSituationTimer = 0;
         }
@@ -132,11 +140,15 @@ function SituationService($scope, $http) {
                     var c = (b - a);
                     situation.QNH = 1013.25 + c;
                     $scope.situationByPilot.QNH = situation.QNH;
+                    bridgeQNHValid = true;
+                    bridgeQNHAuto = 1;
                 }
                 else {
                     situation.QNH = $scope.situationByPilot.QNH;
                 }
                 situation.AutoQNH = $scope.situationByPilot.AutoQNH;
+                // RB-Addons: share the QNH in use with 3rd party addons
+                bridgeQNHPublish(situation.QNH);
 
 
                 window.situation = situation;
@@ -151,6 +163,84 @@ function SituationService($scope, $http) {
                 window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
             }
         };
+    }
+
+    // RB-Addons: publish the QNH in use on the addons bridge, so 3rd party addons
+    // and external probes can read it from GET /bridge/float or /bridge/float/ws.
+    // autoqnh is the provenance of the value: 1 = derived by the auto branch,
+    // 0 = dialled by the pilot. It is not situationByPilot.AutoQNH, which only
+    // says the pilot has not overridden.
+    // One hPa of auto QNH is only ~27ft of GPS altitude, which is inside normal
+    // GPS vertical noise, so the value dithers between two steps whenever it sits
+    // on a rounding boundary. Every accepted POST makes the daemon re-broadcast
+    // the whole bridge map to every websocket client, so a plain change detector
+    // is not enough on its own.
+    var BRIDGE_QNH_MIN_INTERVAL = 2000;
+    var bridgeQNHValid = false;
+    var bridgeQNHAuto = 0;
+    var bridgeQNHSent = null;
+    var bridgeQNHSentAuto = null;
+    var bridgeQNHPending = null;
+    var bridgeQNHPendingAuto = 0;
+    var bridgeQNHLastPost = 0;
+    var bridgeQNHTimer = null;
+
+    function bridgeQNHReset() {
+        // The daemon keeps the bridge map in RAM only, so a restart wipes it and
+        // drops this socket: forget what we sent and republish once the altimeter
+        // has a real QNH again.
+        bridgeQNHValid = false;
+        bridgeQNHSent = null;
+        bridgeQNHSentAuto = null;
+        bridgeQNHPending = null;
+        if (bridgeQNHTimer !== null) {
+            clearTimeout(bridgeQNHTimer);
+            bridgeQNHTimer = null;
+        }
+    }
+
+    function bridgeQNHPublish(qnh) {
+        // Never the 1013.25 initialiser, and never a NaN: JSON.stringify writes
+        // NaN as null and the daemon would decode it as a QNH of 0
+        if (bridgeQNHValid == false || typeof qnh !== "number" || isFinite(qnh) == false)
+            return;
+        if (qnh === bridgeQNHSent && bridgeQNHAuto === bridgeQNHSentAuto) {
+            bridgeQNHPending = null; // dithered back to what the daemon already has
+            return;
+        }
+        bridgeQNHPending = qnh;
+        bridgeQNHPendingAuto = bridgeQNHAuto;
+        bridgeQNHFlush();
+    }
+
+    function bridgeQNHFlush() {
+        if (bridgeQNHPending === null)
+            return;
+        var now = Date.now();
+        var elapsed = now - bridgeQNHLastPost;
+        if (elapsed >= 0 && elapsed < BRIDGE_QNH_MIN_INTERVAL) {
+            if (bridgeQNHTimer === null) {
+                bridgeQNHTimer = setTimeout(function () {
+                    bridgeQNHTimer = null;
+                    bridgeQNHFlush();
+                }, BRIDGE_QNH_MIN_INTERVAL - elapsed);
+            }
+            return; // the trailing flush sends the settled value
+        }
+        var qnh = bridgeQNHPending;
+        var auto = bridgeQNHPendingAuto;
+        bridgeQNHPending = null;
+        bridgeQNHSent = qnh;
+        bridgeQNHSentAuto = auto;
+        bridgeQNHLastPost = now;
+        var msg = JSON.stringify({ "qnh": qnh, "autoqnh": auto });
+        $http.post(URL_BRIDGE_FLOAT_SET, msg).
+            then(function (response) {
+            }, function (response) {
+                // Let the next update retry, unless something newer went out already
+                if (bridgeQNHSent === qnh && bridgeQNHSentAuto === auto)
+                    bridgeQNHSent = null;
+            });
     }
 
     // Last Situation, shared out-of-angular to avoid angular triggers
