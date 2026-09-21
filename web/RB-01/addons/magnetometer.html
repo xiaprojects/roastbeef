@@ -1,0 +1,53 @@
+<div ui-content-for="title">Magnetometer</div>
+<div class="addonMagSquare">
+    <div id="magnetometer3d" class="addonMagCanvas"></div>
+
+    <div class="addonMagLabelTopLeft">
+        <div class="addonMagHeading">{{items.heading}}&deg;</div>
+        <div>offset {{items.offset}}&deg;</div>
+        <div class="addonMagMono">raw&nbsp; {{items.rawX}} {{items.rawY}} {{items.rawZ}}</div>
+        <div class="addonMagMono">cal&nbsp; {{items.calX}} {{items.calY}} {{items.calZ}}</div>
+        <div class="addonMagMono">|m|&nbsp; {{items.magnitude}}</div>
+    </div>
+
+    <div class="addonMagLabelTopRight">
+        <div ng-click="toggleMode()">
+            <div ng-if="items.calibratedMode" class="label label-success addonMagButton">CALIBRATED</div>
+            <div ng-if="!items.calibratedMode" class="label label-info addonMagButton">RAW</div>
+        </div>
+        <div ng-click="toggleCalibration()">
+            <div ng-if="items.calibrating" class="label label-danger addonMagButton">STOP &amp; STORE</div>
+            <div ng-if="!items.calibrating" class="label label-default addonMagButton">CALIBRATE</div>
+        </div>
+        <div class="addonMagMono addonMagEnvelope">
+            X {{items.envX}}<br />
+            Y {{items.envY}}<br />
+            Z {{items.envZ}}
+        </div>
+    </div>
+
+    <!-- Live state next to what stratux.conf holds; tap to close. -->
+    <pre ng-if="items.showConfig" class="addonMagConfig" ng-click="toggleConfig()">{{items.config}}</pre>
+
+    <div class="addonMagToolbar">
+        <div ng-click="toggleConfig()">
+            <div ng-if="items.showConfig" class="label label-primary addonMagButton">CLOSE</div>
+            <div ng-if="!items.showConfig" class="label label-default addonMagButton">CONFIG</div>
+        </div>
+        <div ng-click="toggleAutoCalibration()">
+            <div ng-if="items.calibrating" class="label label-success addonMagButton">AUTOCAL ON</div>
+            <div ng-if="!items.calibrating" class="label label-default addonMagButton">AUTOCAL OFF</div>
+        </div>
+        <div ng-click="resetCalibration()">
+            <div ng-if="items.confirmReset" class="label label-danger addonMagButton">CONFIRM RESET</div>
+            <div ng-if="!items.confirmReset" class="label label-warning addonMagButton">RESET</div>
+        </div>
+        <div ng-click="applyGpsTrackOffset()">
+            <div class="label label-default addonMagButton">OFFSET FROM GPS TRACK</div>
+        </div>
+    </div>
+
+    <div class="addonMagLabelBottom">
+        {{items.hint}}
+    </div>
+</div>
