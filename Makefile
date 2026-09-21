@@ -4,7 +4,12 @@ export DEBPKG_HOME := /tmp/dpkg-stratux/stratux/opt/stratux
 VERSIONSTR := $(shell ./scripts/getversion.sh)
 ARCH = $(shell ./scripts/getarch.sh)
 
-LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=`git log -n 1 --pretty=%H`
+# Build identification: the exact commit, suffixed "-dirty" when any tracked file
+# differs from it (submodules are pinned by commit and their build outputs ignored).
+# Shown in /getStatus (Build), the log, and the RB-01 OTA screen.
+GITSHA := $(shell git rev-parse HEAD)
+GITDIRTY := $(shell git diff --quiet --ignore-submodules=all HEAD -- 2>/dev/null || echo -dirty)
+LFLAGS=-X main.stratuxVersion=$(VERSIONSTR) -X main.stratuxBuild=$(GITSHA)$(GITDIRTY)
 BUILDINFO=-ldflags "$(LFLAGS)"
 BUILDINFO_STATIC=-ldflags "-extldflags -static $(LFLAGS)"
 PLATFORMDEPENDENT=fancontrol
@@ -42,6 +47,18 @@ xrtlais:
 .PHONY: test
 test:
 	make -C test
+
+# Static analysis and unit tests. This is the CI gate (.github/workflows/ci.yml);
+# see docs/certification/roadmap.md, Steps 1-2. GOPKGS deliberately excludes
+# ./test/, which is a directory of independent package-main tools.
+GOPKGS = ./main/ ./common/ ./uatparse/ ./sensors/... ./godump978/ ./fancontrol_main/
+.PHONY: check
+check: libdump978.so
+	@unformatted="$$(gofmt -l common uatparse godump978 sensors)"; \
+	if [ -n "$$unformatted" ]; then echo "gofmt: files need formatting:"; echo "$$unformatted"; exit 1; fi
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go vet $(GOPKGS)
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go test $(GOPKGS)
+	./scripts/provenance.sh --verify docs/certification/provenance.md
 
 www:
 	make -C web

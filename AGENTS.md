@@ -31,6 +31,7 @@ Common targets (see `Makefile`):
 | `make dpkg` | Builds the `.deb`. **Only works on the target OS/arch** (Debian 12 Bookworm, arm64) |
 | `make dall` / `make ddpkg` | Runs `make all` / `make dpkg` inside Docker (`docker_run.sh`) — use this to produce target-arch artifacts from any host |
 | `make test` | Compiles the standalone diagnostic utilities in `test/` (see Testing) |
+| `make check` | The CI gate: `gofmt` (leaf packages), `go vet` on every package, `go test`, and the third-party hash check (`scripts/provenance.sh --verify`). Run it before pushing. |
 | `make clean` | Cleans Go output and the C submodule builds |
 
 Notes:
@@ -41,7 +42,12 @@ Notes:
 - Version comes from the latest git tag (`scripts/getversion.sh`); arch from `uname -m`
   normalized by `scripts/getarch.sh` (`x86_64`→`amd64`, `aarch64`→`arm64`). The chosen
   `ogn-rx-eu` prebuilt binary depends on arch.
-- There is **no separate lint step**; rely on `go vet`/`gofmt` and the CI build (`.github/workflows/ci.yml`).
+- `make check` is the static-analysis step and must stay green: `go vet` is clean on every
+  package (keep it so — use `log.Print(s)` not `log.Printf(s)` for non-constant strings),
+  `gofmt` is enforced on `common`, `uatparse`, `godump978`, `sensors` (not yet on `main/`,
+  which has many unformatted files). CI (`.github/workflows/ci.yml`) runs `make check` in
+  the build container and `make ddpkg`; the RB-01 display tests run in
+  `display-tests.yml` when `web/**` or `test/display/**` change.
 
 ## Running & testing
 
@@ -55,10 +61,28 @@ Notes:
   `-replay -uatlog <file>` (replay a UAT log), `-trace <file> -traceSpeed -traceFilter`
   (replay a recorded trace; filter contexts: `ais,nmea,aprs,ogn-rx,dump1090,godump978,lowpower_uat`),
   `-port <n>`, `-cpuprofile <file>`, `-write-network-config`.
-- **There are no Go unit tests** (`*_test.go`). The `test/` directory is a collection of
-  independent `package main` diagnostic tools (e.g. `icao2reg.go`, `uat_read.go`,
-  `nexrad_annunciator.go`); `make -C test` just compiles each one. Sample input lives in
-  `test-data/`.
+- **Go unit tests** exist for `common/` (`equations_test.go`), `sensors/`
+  (`ms4525do_test.go`, against a scripted I2C bus) and `uatparse/`
+  (`uatparse_test.go`, golden frame from `test-data/`); `main/` has `bridge_test.go` and
+  `hobbsmeter_test.go`. They are
+  written requirements-style (one behaviour per test, robustness cases documented) — see
+  `docs/certification/roadmap.md` Step 5 for the intent. Run with `make check` or
+  `go test ./common/ ./uatparse/`. The `test/` directory is a collection of independent
+  `package main` diagnostic tools (e.g. `icao2reg.go`, `uat_read.go`,
+  `nexrad_annunciator.go`); `make -C test` just compiles each one — it is deliberately
+  excluded from `go vet ./...`-style globs. Sample input lives in `test-data/`.
+- **RB-01 display tests** live in `test/display/` (Python 3 + a Chromium, nothing else):
+  `cd test/display && ./run.py`. They drive the real HMI against a fake backend
+  (`rbserver.py`) whose REST answers are a snapshot of a real aircraft
+  (`fixtures/rb01-device.json`, refreshed with `./capture.py`, GET-only), and can replay a
+  recorded SQLite flight log through it (`flightlog.py`; `test_flight.py` verifies the plates
+  against `expected/<log>.json` derived from a specific recording). See its `README.md`.
+- **HMI dev loop without the Pi**: `cd test/display && ./simulator.py --idle` serves the
+  working tree at `http://localhost:8000/RB-01/` with the aircraft snapshot behind it; edit
+  `web/RB-01/`, reload. `/sim/` moves the aircraft or plays a recorded flight (any
+  `test-data/*.sqlite` by name: `./simulator.py --list`);
+  `--device http://192.168.10.1` proxies the live aircraft instead (writes blocked unless
+  `--write`). Details in `docs/dev-setup.md`.
 - **VSCode** has preconfigured Build + debug tasks (`.vscode/tasks.json`, `launch.json`).
   ⚠️ These still reference an older `gen_gdl90` binary/target; the current Makefile produces
   `stratuxrun`. If using them, expect to update the program/target name.
@@ -90,9 +114,11 @@ Understanding these three patterns is the key to the codebase:
    binary in `ogn/`) for 868MHz; and `rtl_ais` (submodule) for AIS. Each is spawned with
    `exec.Command`, monitored, and **auto-restarted on crash**. OGN APRS parsing is in
    `main/ogn.go` / `main/ogn-aprs.go`; AIS in `main/ais.go`.
-3. **GPS / baro / IMU → direct hardware.** `main/gps.go` (serial GPS, large file with chip
-   autodetect for various u-blox/SiRF modules), `main/sensors.go`, and the `sensors/` package
-   (BMP280/388 baro, ICM20948/MPU9250 IMU drivers).
+3. **GPS / baro / IMU / pitot → direct hardware.** `main/gps.go` (serial GPS, large file with
+   chip autodetect for various u-blox/SiRF modules), `main/sensors.go` (baro + IMU/AHRS),
+   `main/airspeed.go` (pitot, auto-detected, no enable setting) and the `sensors/` package
+   (BMP280/388/BME680 baro, ICM20948/MPU9250/GY85/BMI270 IMU, MS4525DO pitot airspeed
+   drivers; see `docs/hardware/sensors.md`).
 
 SDR dongles are assigned to bands by EEPROM serial prefix (`stx:1090`, `stx:978`, etc.);
 `main/sdr.go` owns this assignment and reconfiguration when settings change.
@@ -108,6 +134,9 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
 - **Bluetooth LE** traffic output, **Cursor-on-Target** (`cot-in.go`), **X-Plane**
   (`xplane.go`).
 - Traffic/situation history logged to SQLite via `main/datalog.go`.
+- GPS Hobbs meter / flight log: `main/hobbsmeter.go` counts the minutes above 50 km/h ground
+  speed, one entry per flight in `settings/hobbsmeter.json` (flushed every 5 minutes; no
+  default file is shipped, `make www` would overwrite it), totals in `/getStatus`.
 
 ### Web UI + HTTP/WebSocket API (`main/managementinterface.go`)
 
@@ -195,7 +224,7 @@ rather than duplicating them: `web/synthview/` (Three.js synthetic vision — `G
 - `main/` — the daemon (Go). `common/` — shared Go helpers.
 - `dump978/` (C lib, built locally), `godump978/` (cgo wrapper), `uatparse/` (UAT/FIS-B parser).
 - `dump1090/`, `rtl-ais/`, `ogn/ogn-tracker/`, `image_build/pi-gen/` — git **submodules**.
-- `sensors/` — baro/IMU hardware drivers.
+- `sensors/` — baro/IMU/pitot hardware drivers.
 - `web/` — AngularJS UIs and shared assets: the legacy Stratux UI (served at `/`) and the
   RB-01 product HMI in `web/RB-01/` (served at `/RB-01/`); shared 3D/synthetic-vision assets
   in `web/synthview/`.
