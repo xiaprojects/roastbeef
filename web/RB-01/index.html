@@ -98,9 +98,16 @@
 					}
 				}
 
+				let startupPageTimer = null;
 				function onHashChanged() {
 					const hash = window.location.hash;
-					window.localStorage.setItem("STARTUP_PAGE",hash);
+					if (startupPageTimer !== null) {
+						clearTimeout(startupPageTimer);
+					}
+					startupPageTimer = setTimeout(function() {
+						startupPageTimer = null;
+						window.localStorage.setItem("STARTUP_PAGE",hash);
+					}, 60000);
 				}
 				window.addEventListener('hashchange', onHashChanged);
 	</script>
