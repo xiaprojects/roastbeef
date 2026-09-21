@@ -75,6 +75,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         removeEventListener("keypad", keypadEventListener);
         removeEventListener("SituationUpdated", situationUpdateEventListener);
         removeEventListener("TrafficUpdated", trafficUpdateEventListener);
+        removeEventListener("WaypointChanged", waypointChangedEventListener);
+        rendering.disposeGuidanceResources();
 
     };
 
@@ -120,6 +122,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.synthViewSelectDown = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "from" });
         //dispatchEvent(proxy);
+        // Nothing to orbit around until startup() and the terrain fetch have
+        // populated resources.items; on a Pi that is a few seconds after entry.
+        if (resources.items.length == 0) return;
         if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
                 pitch: resources.items[0].pitch,
@@ -140,6 +145,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.synthViewSelectUp = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "from" });
         //dispatchEvent(proxy);
+        // Nothing to orbit around until startup() and the terrain fetch have
+        // populated resources.items; on a Pi that is a few seconds after entry.
+        if (resources.items.length == 0) return;
         if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
                 pitch: resources.items[0].pitch,
@@ -160,6 +168,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.synthViewSelectLeft = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "from" });
         //dispatchEvent(proxy);
+        // Nothing to orbit around until startup() and the terrain fetch have
+        // populated resources.items; on a Pi that is a few seconds after entry.
+        if (resources.items.length == 0) return;
         if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
                 pitch: resources.items[0].pitch,
@@ -180,6 +191,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.synthViewSelectRight = function () {
         //const proxy = new KeyboardEvent("keypad", { key: "to" });
         //dispatchEvent(proxy);
+        // Nothing to orbit around until startup() and the terrain fetch have
+        // populated resources.items; on a Pi that is a few seconds after entry.
+        if (resources.items.length == 0) return;
         if ($scope.remote.reset == false) {
             $scope.cameraRotating = {
                 pitch: resources.items[0].pitch,
@@ -219,6 +233,26 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         $scope.loadTraffics(event.detail);
         $scope.$apply(); // trigger any needed refreshing of data
+    }
+
+    // The autopilot service emits WaypointChanged without a payload, so the plan has
+    // to be fetched again to know what actually changed.
+    function waypointChangedEventListener(event) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SynthViewCtrl') {
+            removeEventListener("WaypointChanged", waypointChangedEventListener);
+            return; // we are getting called once after clicking away from the status page
+        }
+        resources.fetchRoute().then((route) => {
+            const signature = guidanceRouteSignature(route);
+            if (signature == resources.routeSignature) {
+                return; // same plan, nothing to rebuild
+            }
+            resources.routeSignature = signature;
+            // setup.elevation tracks the current altitude in metres (animate() keeps
+            // it fresh) and is always a number, unlike a not-yet-received situation.
+            rendering.buildGuidanceTunnel(route, resources.setup, resources.terrain, resources.setup.elevation);
+            requestAnimationFrame(animate);
+        });
     }
 
     $scope.pilotGPSGroundSpeed = 0;
@@ -286,7 +320,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $scope.AHRSCageAndCalibrate = function () {
-        const requestedCage = true;
+        // Please use the switchboard 
+        const requestedCage = false;
+        const requestedCalibration = false;
         if(requestedCage==true){
         window.setTimeout(function () {
             $scope.AHRSCage();
@@ -431,6 +467,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.items = [];
             this.itemIndexStartingTraffic = 0;
             this.setup = {};
+            this.route = [];
+            this.routeSignature = "";
         }
 
 
@@ -624,6 +662,27 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
             return this.items;
         }
+
+
+        // Autopilot flight plan: bare array of {Lat,Lon,Ele(feet),Status,Cmt}
+        // Errors are swallowed on purpose: a missing autopilot must not break the
+        // airfields/traffic startup chain this is hooked into.
+        async fetchRoute() {
+            try {
+                const response = await fetch(URL_AUTOPILOT_GET); // Fetch the data
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json(); // Parse the JSON
+                this.route = Array.isArray(data) ? data : [];
+            } catch (error) {
+                console.error('Error fetching route:', error);
+                this.route = [];
+            }
+
+
+            return this.route;
+        }
     }
     class RemoteController {
         constructor(rendering) {
@@ -665,6 +724,12 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     class Rendering {
         constructor(container) {
             this.terrainBrown = null;
+            // Autopilot guidance tunnel: the meshes live in guidanceGroup and are
+            // rebuilt on every route change, while geometry and material are shared
+            // singletons that survive rebuilds (nothing to dispose per rebuild).
+            this.guidanceGroup = null;
+            this.guidanceGeometry = null;
+            this.guidanceMaterial = null;
             this.scene = new THREE.Scene();
             this.camera = new THREE.PerspectiveCamera(
                 75,
@@ -938,6 +1003,265 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
             item.referenceTubeFront = cone;
             return item;
+        }
+
+
+        /*****************************************************
+         * Autopilot guidance tunnel (Highway In The Sky)
+         *
+         * Draws the flight plan as a row of magenta rectangular frames the pilot
+         * flies through, G3X style. The tunnel is STATIC in world coordinates: it
+         * is rebuilt only when the route changes, never per frame. That is what
+         * keeps it correct while the pilot pans the camera with OrbitControls.
+         */
+
+        // A device may still carry a synthview.json with no guidance block, or a
+        // partial one. Every knob the placement loop divides or counts by is given a
+        // sane positive value here, so a bad config can never hang the display.
+        guidanceSetup(guidance) {
+            const configured = guidance || {};
+            const positive = (value, fallback) => {
+                return (typeof value === "number" && isFinite(value) && value > 0) ? value : fallback;
+            };
+            // Zero is a legal value for these two, unlike the divisors below
+            const atLeastZero = (value, fallback) => {
+                return (typeof value === "number" && isFinite(value) && value >= 0) ? value : fallback;
+            };
+            return {
+                "enabled": configured.enabled === true,
+                "color": atLeastZero(configured.color, 0xFF00FF),
+                "opacity": positive(configured.opacity, 0.55),
+                "widthCells": positive(configured.widthCells, 0.35),
+                "aspect": positive(configured.aspect, 0.5),
+                "borderRatio": positive(configured.borderRatio, 0.08),
+                "spacingCells": positive(configured.spacingCells, 0.3),
+                "maxLegs": positive(configured.maxLegs, 3),
+                "maxBoxes": positive(configured.maxBoxes, 60),
+                "maxRangeCells": positive(configured.maxRangeCells, 12),
+                "minAglMeters": atLeastZero(configured.minAglMeters, 300),
+                "tiltWithPath": configured.tiltWithPath === true
+            };
+        }
+
+        // Shared, width-normalised frame: outer 1.0 x aspect with a hole inset by
+        // borderRatio. Every mesh scales it uniformly, so the border thickness stays
+        // visually even on all four edges and no shear is possible.
+        generateGuidanceFrame(guidance) {
+            if (this.guidanceGeometry != null) {
+                return;
+            }
+            const aspect = guidance.aspect;
+            const border = guidance.borderRatio;
+
+            const outer = new THREE.Shape();
+            outer.moveTo(-0.5, -aspect / 2);
+            outer.lineTo(0.5, -aspect / 2);
+            outer.lineTo(0.5, aspect / 2);
+            outer.lineTo(-0.5, aspect / 2);
+            outer.closePath();
+
+            const hole = new THREE.Path();
+            hole.moveTo(-0.5 + border, -aspect / 2 + border);
+            hole.lineTo(0.5 - border, -aspect / 2 + border);
+            hole.lineTo(0.5 - border, aspect / 2 - border);
+            hole.lineTo(-0.5 + border, aspect / 2 - border);
+            hole.closePath();
+            outer.holes.push(hole);
+
+            this.guidanceGeometry = new THREE.ShapeGeometry(outer);
+            // Basic, not Lambert: the single directional light would otherwise make
+            // the magenta dull and dependent on the leg heading.
+            // depthWrite:false keeps depthTest on (terrain correctly occludes the
+            // tunnel) while stopping the frames from occluding each other, so the
+            // tunnel blends with depth instead of becoming a solid magenta wall.
+            this.guidanceMaterial = new THREE.MeshBasicMaterial({
+                color: guidance.color,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: guidance.opacity,
+                depthWrite: false
+            });
+        }
+
+        // Vertical profile. Ele is int32 feet and is very often 0 (GPX imports carry
+        // no altitude), so gaps are interpolated by cumulative ground distance
+        // between the waypoints that do have one. Everything is clamped to a terrain
+        // clearance floor so the tunnel can never be drawn into a hillside.
+        generateGuidanceElevations(route, guidance, terrain, fallbackElevation) {
+            var elevations = [];
+            var distances = [0];
+            var anchors = [];
+
+            for (var i = 0; i < route.length; i++) {
+                elevations.push(route[i].Ele > 0 ? route[i].Ele * 0.3048 : null);
+                if (elevations[i] != null) {
+                    anchors.push(i);
+                }
+                if (i > 0) {
+                    distances.push(distances[i - 1] + guidanceLegMeters(route[i - 1], route[i]));
+                }
+            }
+
+            if (anchors.length == 0) {
+                for (var i = 0; i < route.length; i++) {
+                    elevations[i] = fallbackElevation;
+                }
+            }
+            else {
+                // Hold the outermost known altitudes level beyond the anchors
+                for (var i = 0; i < anchors[0]; i++) {
+                    elevations[i] = elevations[anchors[0]];
+                }
+                for (var i = anchors[anchors.length - 1] + 1; i < route.length; i++) {
+                    elevations[i] = elevations[anchors[anchors.length - 1]];
+                }
+                // Interpolate the gaps between two known altitudes
+                for (var a = 0; a < anchors.length - 1; a++) {
+                    const from = anchors[a];
+                    const to = anchors[a + 1];
+                    const span = distances[to] - distances[from];
+                    for (var i = from + 1; i < to; i++) {
+                        const ratio = span > 0 ? (distances[i] - distances[from]) / span : 0;
+                        elevations[i] = elevations[from] + (elevations[to] - elevations[from]) * ratio;
+                    }
+                }
+            }
+
+            // Terrain clearance floor. Written inverted so a NaN sneaking in from a
+            // missing fallback elevation is clamped too: NaN positions would break
+            // frustum culling through the bounding sphere.
+            for (var i = 0; i < route.length; i++) {
+                const floor = terrain.elevationByLatLon(route[i].Lat, route[i].Lon) + guidance.minAglMeters;
+                if (!(elevations[i] >= floor)) {
+                    elevations[i] = floor;
+                }
+            }
+            return elevations;
+        }
+
+        buildGuidanceTunnel(route, setup, terrain, fallbackElevation) {
+            this.disposeGuidance();
+
+            const guidance = this.guidanceSetup(setup.guidance);
+            if (guidance.enabled !== true) return;
+            if (!terrain.isReady()) return;
+            if (!setup.cellSize) return;
+            if (route == null || route.length < 2) return;
+
+            this.generateGuidanceFrame(guidance);
+
+            // Everything below is sized in world units derived from cellSize. The
+            // follow camera also sits at a multiple of cellSize (see
+            // cameraFollowItem), so tying the tunnel to the same unit keeps it a
+            // constant size on screen whatever the DEM resolution turns out to be.
+            // Real metres are useless here: the camera is ~2.5 cells back, which is
+            // tens of kilometres, and a true 180 m corridor renders under 2 pixels.
+            const width = guidance.widthCells * setup.cellSize;
+            const spacing = guidance.spacingCells * setup.cellSize;
+            const maxRange = guidance.maxRangeCells * setup.cellSize;
+            const elevations = this.generateGuidanceElevations(route, guidance, terrain, fallbackElevation);
+
+            // Start on the leg actually being flown: the one ENTERING the active
+            // target, not the one leaving it.
+            var start = -1;
+            for (var i = 0; i < route.length; i++) {
+                if (route[i].Status == WAYPOINT_STATUS_TARGET) {
+                    start = i > 0 ? i - 1 : 0;
+                    break;
+                }
+            }
+            if (start < 0) {
+                for (var i = 0; i < route.length; i++) {
+                    if (route[i].Status != WAYPOINT_STATUS_PAST) {
+                        start = i;
+                        break;
+                    }
+                }
+            }
+            if (start < 0 || start >= route.length - 1) return;
+
+            const group = new THREE.Group();
+            const lastLeg = Math.min(route.length - 2, start + guidance.maxLegs - 1);
+            // Frames are spaced evenly along the whole path rather than restarting at
+            // every waypoint, so turns keep a constant interval instead of showing a
+            // gap on one side and a doubled frame on the other.
+            var walked = 0;
+            var nextFrame = 0;
+
+            for (var leg = start; leg <= lastLeg; leg++) {
+                const from = route[leg];
+                const to = route[leg + 1];
+
+                const fromXY = terrain.plan(from.Lat, from.Lon);
+                const toXY = terrain.plan(to.Lat, to.Lon);
+                const x0 = fromXY[0] * setup.cellSize;
+                const z0 = fromXY[1] * setup.cellSize;
+                const y0 = elevations[leg];
+                const dx = toXY[0] * setup.cellSize - x0;
+                const dz = toXY[1] * setup.cellSize - z0;
+                const dy = elevations[leg + 1] - y0;
+
+                const horizontal = Math.hypot(dx, dz);
+                const legMeters = guidanceLegMeters(from, to);
+                // Coincident waypoints would give NaN positions, which silently
+                // break frustum culling through the bounding sphere.
+                if (horizontal < 1e-6 || legMeters < 1.0) continue;
+
+                const hx = dx / horizontal;
+                const hz = dz / horizontal;
+
+                // ShapeGeometry faces +Z, and Ry(yaw)*(0,0,1) == (sin yaw,0,cos yaw)
+                const yaw = Math.atan2(hx, hz);
+                // True flight path angle, from real metres: using the world-space dy
+                // would over-tilt the frames by the vertical exaggeration.
+                const tilt = guidance.tiltWithPath ? -Math.atan2(dy, legMeters) : 0;
+
+                while (nextFrame < walked + horizontal) {
+                    if (group.children.length >= guidance.maxBoxes) break;
+                    if (nextFrame > maxRange) break;
+
+                    const ratio = (nextFrame - walked) / horizontal;
+                    const frame = new THREE.Mesh(this.guidanceGeometry, this.guidanceMaterial);
+                    frame.position.set(x0 + dx * ratio, y0 + dy * ratio, z0 + dz * ratio);
+                    frame.rotation.order = 'YXZ';
+                    frame.rotation.y = yaw;
+                    frame.rotation.x = tilt;
+                    frame.scale.set(width, width, 1);
+                    frame.renderOrder = 1;
+                    group.add(frame);
+
+                    nextFrame = nextFrame + spacing;
+                }
+
+                walked = walked + horizontal;
+                if (nextFrame > maxRange) break;
+                if (group.children.length >= guidance.maxBoxes) break;
+            }
+
+            this.guidanceGroup = group;
+            this.scene.add(group);
+        }
+
+        // Called on every rebuild: the meshes are garbage collected, while the
+        // shared geometry and material are kept for the next build.
+        disposeGuidance() {
+            if (this.guidanceGroup != null) {
+                this.scene.remove(this.guidanceGroup);
+                this.guidanceGroup = null;
+            }
+        }
+
+        // Called only when leaving the plate
+        disposeGuidanceResources() {
+            this.disposeGuidance();
+            if (this.guidanceGeometry != null) {
+                this.guidanceGeometry.dispose();
+                this.guidanceGeometry = null;
+            }
+            if (this.guidanceMaterial != null) {
+                this.guidanceMaterial.dispose();
+                this.guidanceMaterial = null;
+            }
         }
 
         generateItemGLB(item, setup = {}, callback = null) {
@@ -1252,6 +1576,17 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                         $scope.cleanupOldTrafficTimer = window.setInterval($scope.cleanupOldTraffic, 10000, $scope);
                     });
 
+                    // Autopilot guidance tunnel: built here because the projection is
+                    // only valid once cellSize has been set and the DEM is loaded.
+                    // Subscribing here also guarantees the event can never fire before
+                    // the terrain exists.
+                    resources.fetchRoute().then((route) => {
+                        resources.routeSignature = guidanceRouteSignature(route);
+                        rendering.buildGuidanceTunnel(route, setup, resources.terrain, setup.elevation);
+                        addEventListener("WaypointChanged", waypointChangedEventListener);
+                        requestAnimationFrame(animate);
+                    });
+
                     //
                     //window.setInterval(()=>{contextUpdate()},100);
                 })
@@ -1329,6 +1664,26 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         rendering.renderer.render(rendering.scene, rendering.camera);
     }
 
+}
+
+// True ground length of a flight plan leg, in metres.
+// Deliberately computed from degrees and not from the rendered world units, which
+// are distorted by the terrain projection.
+function guidanceLegMeters(from, to) {
+    const latMid = toRadians((from.Lat + to.Lat) * 0.5);
+    return Math.hypot(
+        (to.Lat - from.Lat) * 111132.0,
+        (to.Lon - from.Lon) * 111320.0 * Math.cos(latMid)
+    );
+}
+
+// Cheap change detector for the flight plan. Status must be part of it: waypoint
+// sequencing has to rebuild the tunnel so the leg just flown disappears.
+function guidanceRouteSignature(route) {
+    if (route == null) return "";
+    return route.map(function (waypoint) {
+        return waypoint.Lat + "," + waypoint.Lon + "," + waypoint.Ele + "," + waypoint.Status;
+    }).join("|");
 }
 
 function globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold) {
