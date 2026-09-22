@@ -1,0 +1,7 @@
+/* Styles for the example addon.
+
+   js/main.js loads addons/<name>.css alongside <name>.html and js/<name>.js
+   for every addon the daemon lists, so each addon ships all three - an
+   addon without a stylesheet logs a 404 on every boot. Keep this file even
+   if it stays empty; put addon-specific rules here rather than in the
+   shared css/. */

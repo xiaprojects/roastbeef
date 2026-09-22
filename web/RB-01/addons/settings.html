@@ -1,0 +1,639 @@
+<div ui-content-for="title">Settings</div>
+<div class="col-sm-12 addonSettings">
+    <!-- Section switch: one file (or settings group) per section -->
+    <div class="col-sm-12 addonSettingsTabs">
+        <div class="btn-group btn-group-justified">
+            <div class="btn-group" ng-repeat="tab in tabs">
+                <button class="btn" ng-class="section == tab.id ? 'btn-primary' : 'btn-default'"
+                    ng-click="setSection(tab.id)">{{tab.label}}
+                    <span ng-if="state[tab.id].saveStatus == 'modified'" class="label label-warning">&bull;</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- Begin Left Col -->
+    <div class="col-sm-6">
+        <!-- Aircraft -->
+        <div class="panel-group col-sm-12" ng-if="section == 'aircraft' && aircraft">
+            <div class="panel panel-default">
+                <div class="panel-heading">Aircraft</div>
+                <div class="panel-body">
+                    <form name="AircraftForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Registration</label>
+                            <input class="col-xs-7" type="text" maxlength="15" ng-model="aircraft.name"
+                                placeholder="X-ABCD" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Pilot</label>
+                            <input class="col-xs-7" type="text" maxlength="31" ng-model="aircraft.pilot"
+                                placeholder="Pilot name" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Propeller Time<br /><small>minutes at install, the GPS Hobbs meter adds to it</small></label>
+                            <input class="col-xs-7" type="number" min="0" step="1" ng-model="aircraft.propellerTime" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Engine Time<br /><small>minutes at install, the GPS Hobbs meter adds to it</small></label>
+                            <input class="col-xs-7" type="number" min="0" step="1" ng-model="aircraft.engineTime" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Units -->
+        <div class="panel-group col-sm-12" ng-if="section == 'aircraft' && aircraft">
+            <div class="panel panel-default">
+                <div class="panel-heading">Units</div>
+                <div class="panel-body">
+                    <form name="UnitsForm" novalidate>
+                        <!-- Speed -->
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Speed</label>
+                            <select class="col-xs-7 custom-select" ng-model="aircraft.units.speed"
+                                ng-change="applyUnitPreset('speed')"
+                                ng-options="u.label as u.label for u in unitPresets.speed"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Factor / Offset<br /><small>from km/h</small></label>
+                            <input class="col-xs-3" type="number" step="any"
+                                ng-model="aircraft.units.speedConversionFromKmh.multiply" />
+                            <input class="col-xs-3 col-xs-offset-1" type="number" step="any"
+                                ng-model="aircraft.units.speedConversionFromKmh.sum" />
+                        </div>
+                        <!-- Altimeter -->
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Altimeter</label>
+                            <select class="col-xs-7 custom-select" ng-model="aircraft.units.altimeter"
+                                ng-change="applyUnitPreset('altimeter')"
+                                ng-options="u.label as u.label for u in unitPresets.altimeter"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Factor / Offset<br /><small>from meters</small></label>
+                            <input class="col-xs-3" type="number" step="any"
+                                ng-model="aircraft.units.altimeterConversionFromMeters.multiply" />
+                            <input class="col-xs-3 col-xs-offset-1" type="number" step="any"
+                                ng-model="aircraft.units.altimeterConversionFromMeters.sum" />
+                        </div>
+                        <!-- Temperatures -->
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Temperatures</label>
+                            <select class="col-xs-7 custom-select" ng-model="aircraft.units.temperatures"
+                                ng-change="applyUnitPreset('temperatures')"
+                                ng-options="u.label as u.label for u in unitPresets.temperatures"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Factor / Offset<br /><small>from &deg;C</small></label>
+                            <input class="col-xs-3" type="number" step="any"
+                                ng-model="aircraft.units.temperatureConversionFromC.multiply" />
+                            <input class="col-xs-3 col-xs-offset-1" type="number" step="any"
+                                ng-model="aircraft.units.temperatureConversionFromC.sum" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- EMS gauges -->
+        <div class="panel-group col-sm-12" ng-if="section == 'ems' && ems">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Gauges
+                    <a ng-click="addWidget()" class="btn pull-right"><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="panel-body">
+                    <table class="addonSettingsWidgets">
+                        <tr>
+                            <td>#</td>
+                            <td>Label</td>
+                            <td>Source</td>
+                            <td>Unit</td>
+                            <td>Shown in</td>
+                        </tr>
+                        <tr ng-repeat="widget in ems.widgets" ng-click="selectWidget($index)"
+                            ng-class="{ 'addonSettingsSelected': $index == selectedWidget }">
+                            <td>{{$index + 1}}</td>
+                            <td>{{widget.label}}</td>
+                            <td>{{widget.source}}</td>
+                            <td>{{widget.unit}}</td>
+                            <td>
+                                <span ng-if="widget.displayInSidebar" class="label label-info">SIDEBAR</span>
+                                <span ng-if="!widget.displayInSidebar" class="label label-default">EMS PAGE</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="addonSettingsHint" ng-if="ems.widgets.length == 0">No gauges: press + to add one.</div>
+                    <div class="addonSettingsHint" ng-if="ems.widgets.length > 0">Tap a gauge to edit it.</div>
+                </div>
+            </div>
+        </div>
+        <!-- AHRS: how the sensor board is installed, a stratux.conf setting -->
+        <div class="panel-group col-sm-12" ng-if="section == 'ahrs' && ahrs">
+            <div class="panel panel-default">
+                <div class="panel-heading">Sensor Installation</div>
+                <div class="panel-body">
+                    <form name="AhrsForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Forward Axis<br /><small>sensor axis toward the nose</small></label>
+                            <select class="col-xs-7 custom-select" ng-model="ahrs.IMUMapping[0]"
+                                ng-options="a.value as a.label for a in imuAxes"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">G Limits<br /><small>negative and positive, G</small></label>
+                            <input class="col-xs-7" type="text" ng-model="ahrs.GLimits" placeholder="-1.76 4.4" />
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="conf.BMP_Sensor_Enabled">
+                            <label class="control-label col-xs-5">Pressure Altitude Offset<br /><small>feet, added to the baro altitude</small></label>
+                            <input class="col-xs-7" type="number" step="1" ng-model="ahrs.AltitudeOffset" />
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">The axis of the IMU chip that points to the aircraft nose
+                        (IMUMapping in stratux.conf); X, Y and Z are printed on most boards. Saving a new axis
+                        restarts the AHRS and levels it from the current attitude, so do it with the aircraft
+                        parked level; it can be caged again from the synthetic view. The G limits drive the
+                        G meter and its buzzer.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Autopilot: the Bring-Me-Home waypoint, a stratux.conf setting -->
+        <div class="panel-group col-sm-12" ng-if="section == 'autopilot' && autopilot">
+            <div class="panel panel-default">
+                <div class="panel-heading">Home Waypoint</div>
+                <div class="panel-body">
+                    <form name="HomeWaypointForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Name</label>
+                            <input class="col-xs-7" type="text" maxlength="31"
+                                ng-model="autopilot.Autopilot_HomeWaypoint.Cmt" placeholder="Home" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Latitude<br /><small>decimal degrees, north positive</small></label>
+                            <input class="col-xs-7" type="number" step="any" min="-90" max="90"
+                                ng-model="autopilot.Autopilot_HomeWaypoint.Lat" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Longitude<br /><small>decimal degrees, east positive</small></label>
+                            <input class="col-xs-7" type="number" step="any" min="-180" max="180"
+                                ng-model="autopilot.Autopilot_HomeWaypoint.Lon" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Elevation<br /><small>feet</small></label>
+                            <input class="col-xs-7" type="number" step="1"
+                                ng-model="autopilot.Autopilot_HomeWaypoint.Ele" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <div class="col-xs-12">
+                                <button class="btn btn-default btn-block" ng-click="useCurrentPosition()"
+                                    ng-disabled="!hasGpsFix()">Use current GPS position</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">The target of the autopilot's Bring Me Home; stored in stratux.conf.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Receiver: ownship and traffic, stratux.conf -->
+        <div class="panel-group col-sm-12" ng-if="section == 'receiver' && receiver">
+            <div class="panel panel-default">
+                <div class="panel-heading">Ownship &amp; Traffic</div>
+                <div class="panel-body">
+                    <form name="ReceiverForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Ownship Mode S<br /><small>hex codes, comma separated</small></label>
+                            <input class="col-xs-7" type="text" ng-model="receiver.OwnshipModeS" placeholder="FAA HEX code" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Watch List<br /><small>4 letter identifiers, space separated</small></label>
+                            <input class="col-xs-7" type="text" ng-model="receiver.WatchList" placeholder="LIRU LIRA" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">PPM Correction<br /><small>SDR frequency error</small></label>
+                            <input class="col-xs-7" type="number" step="1" ng-model="receiver.PPM" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">1090 ES Gain<br /><small>dump1090, 37.2 default</small></label>
+                            <select class="col-xs-7 custom-select" ng-model="receiver.Dump1090Gain"
+                                ng-options="g as (g | number:1) for g in dump1090Gains"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Bearingless Target Circle<br /><small>GDL90 emulation of Mode S distance</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="receiver.EstimateBearinglessDist"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Traffic Source in Callsign<br /><small>diagnostics</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="receiver.DisplayTrafficSource"></ui-switch></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Hardware: the receivers and sensors the daemon runs, stratux.conf -->
+        <div class="panel-group col-sm-12" ng-if="section == 'hardware' && hardware">
+            <div class="panel panel-default">
+                <div class="panel-heading">Receivers &amp; Sensors</div>
+                <div class="panel-body">
+                    <form name="HardwareForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">GPS</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.GPS_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">978 MHz (UAT)</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.UAT_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">1090 MHz (ADS-B / Mode S ES)</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.ES_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">868 MHz (OGN, ADS-L)</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.OGN_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">162 MHz (AIS)</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.AIS_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Internet (OGN APRS)</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.APRS_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">AHRS Sensor</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.IMU_Sensor_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Baro Sensor</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.BMP_Sensor_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="hardware.IMU_Sensor_Enabled">
+                            <label class="control-label col-xs-5">Minimum Fan Duty<br /><small>%</small></label>
+                            <input class="col-xs-7" type="number" step="1" min="0" max="100" ng-model="hardware.PWMDutyMin" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Ping ADS-B</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Ping_Enabled" ng-disabled="hardware.Pong_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Pong ADS-B Receiver</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Pong_Enabled" ng-disabled="hardware.Ping_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">OGN Transmission<br /><small>via I&#178;C / GPIO HAT</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.OGNI2CTXEnabled"></ui-switch></div>
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">Receivers and sensors restart when saved.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation: the plate order the knob rotates through -->
+        <div class="panel-group col-sm-12" ng-if="section == 'navigation' && navigation">
+            <div class="panel panel-default">
+                <div class="panel-heading">Knob Navigation</div>
+                <div class="panel-body">
+                    <form name="NavigationForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">List</label>
+                            <select class="col-xs-7 custom-select" ng-model="edit.navigationList"
+                                ng-options="l.key as l.label for l in navigationLists"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Add plate</label>
+                            <select class="col-xs-7 custom-select" ng-model="edit.navigationAdd"
+                                ng-options="p.hash as p.name for p in plates"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <div class="col-xs-12">
+                                <button class="btn btn-default btn-block" ng-click="addNavigation()"
+                                    ng-disabled="!edit.navigationAdd">Append to list</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">The knob steps through the list in order and wraps around; each display
+                        shape uses its own list and falls back to Default. This display is {{displayShape}}.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Keypad: key names -> functions and plates -->
+        <div class="panel-group col-sm-12" ng-if="section == 'keypad' && keypad">
+            <div class="panel panel-default">
+                <div class="panel-heading">Functions</div>
+                <div class="panel-body">
+                    <form name="KeypadFunctionsForm" novalidate>
+                        <div class="form-group addonSettingsRow" ng-repeat="fn in keypadFunctions">
+                            <label class="control-label col-xs-5">{{fn.label}}<br /><small>{{fn.hint}}</small></label>
+                            <input class="col-xs-7" type="text" ng-model="keypadText[fn.key]"
+                                ng-change="parseKeypadText(fn.key)" placeholder="key names, comma separated" />
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">Browser key names (event.key): letters and digits as typed, or e.g.
+                        Enter, ArrowLeft, MediaTrackNext, AudioVolumeUp; DOM_CLICK_W / DOM_CLICK_E are the on-screen arrows.</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group col-sm-12" ng-if="section == 'keypad' && keypad">
+            <div class="panel panel-default">
+                <div class="panel-heading">Direct Keys</div>
+                <div class="panel-body">
+                    <form name="KeypadDirectForm" novalidate ng-submit="addDirectKey()">
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Map</label>
+                            <select class="col-xs-7 custom-select" ng-model="edit.directKeyMap"
+                                ng-options="m.key as m.label for m in directKeyMaps"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Key</label>
+                            <input class="col-xs-7" type="text" ng-model="edit.directKeyAdd.key" placeholder="e.g. A or MediaPlayPause" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Opens</label>
+                            <select class="col-xs-7 custom-select" ng-model="edit.directKeyAdd.href"
+                                ng-options="p.hash as p.name for p in plates"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <div class="col-xs-12">
+                                <button class="btn btn-default btn-block" type="submit"
+                                    ng-disabled="!edit.directKeyAdd.key || !edit.directKeyAdd.href">Add / replace key</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">A key in a display-shape map wins over the Default map on that display.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Save / Reload of the current section's file -->
+        <div class="panel-group col-sm-12" ng-if="file()">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{fileName()}}
+                    <span ng-if="state[section].saveStatus == 'saved'" class="label label-success pull-right">SAVED</span>
+                    <span ng-if="state[section].saveStatus == 'saving'" class="label label-info pull-right">SAVING</span>
+                    <span ng-if="state[section].saveStatus == 'error'" class="label label-danger pull-right">ERROR</span>
+                    <span ng-if="state[section].saveStatus == 'modified'" class="label label-warning pull-right">MODIFIED</span>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group addonSettingsRow">
+                        <div class="col-xs-6">
+                            <button class="btn btn-primary btn-block" ng-click="save(section)"
+                                ng-disabled="state[section].saveStatus == 'saving' || saveBlocked()">Save</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button class="btn btn-default btn-block" ng-click="reload(section)"
+                                ng-disabled="state[section].saveStatus == 'saving'">Reload</button>
+                        </div>
+                    </div>
+                    <div class="form-group addonSettingsRow">
+                        <div class="col-xs-12">
+                            <button class="btn btn-default btn-block" ng-click="edit.showJson = !edit.showJson">
+                                {{edit.showJson ? "Hide" : "Show"}} what Save posts</button>
+                        </div>
+                    </div>
+                    <div class="form-group addonSettingsRow" ng-if="edit.showJson">
+                        <pre class="col-xs-12 addonSettingsJson">{{filePreview() | json}}</pre>
+                    </div>
+                    <div class="form-group addonSettingsRow" ng-if="state[section].saveError">
+                        <div class="col-xs-12 text-danger">{{state[section].saveError}}</div>
+                    </div>
+                    <div class="form-group addonSettingsRow" ng-if="saveBlocked()">
+                        <div class="col-xs-12 text-warning">{{saveBlocked()}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loading / error -->
+        <div class="panel-group col-sm-12" ng-if="!file()">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{fileName()}}</div>
+                <div class="panel-body text-center">
+                    <span ng-if="!state[section].loadError">Loading {{fileName()}}&hellip;</span>
+                    <span ng-if="state[section].loadError" class="text-danger">{{state[section].loadError}}</span>
+                    <button ng-if="state[section].loadError" class="btn btn-primary btn-block"
+                        ng-click="reload(section)">Retry</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Left Col -->
+    <!-- Begin Right Col: the gauge editor, shared by the aircraft speed gauge and the EMS widgets -->
+    <div class="col-sm-6" ng-if="gauge && (section == 'aircraft' || section == 'ems')">
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span ng-if="section == 'aircraft'">Speed Gauge</span>
+                    <span ng-if="section == 'ems'">Gauge {{selectedWidget + 1}}: {{gauge.label}}</span>
+                    <span ng-if="section == 'ems'" class="pull-right">
+                        <a ng-click="moveWidget(-1)" class="btn" ng-class="{ 'disabled': selectedWidget == 0 }"><i class="fa fa-arrow-up"></i></a>
+                        <a ng-click="moveWidget(1)" class="btn" ng-class="{ 'disabled': selectedWidget >= ems.widgets.length - 1 }"><i class="fa fa-arrow-down"></i></a>
+                        <a ng-click="duplicateWidget()" class="btn"><i class="fa fa-copy"></i></a>
+                        <a ng-click="removeWidget()" class="btn"><i class="fa fa-trash"></i></a>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <form name="GaugeForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Label</label>
+                            <input class="col-xs-7" type="text" maxlength="15" ng-model="gauge.label" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Unit</label>
+                            <input class="col-xs-7" type="text" maxlength="7" ng-model="gauge.unit" />
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="section == 'ems'">
+                            <label class="control-label col-xs-5">Source<br /><small>EMS sensor key</small></label>
+                            <select class="col-xs-7 custom-select" ng-model="gauge.source"
+                                ng-options="s for s in emsSources"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="section == 'ems'">
+                            <label class="control-label col-xs-5">Shown in</label>
+                            <select class="col-xs-7 custom-select" ng-model="gauge.displayInSidebar"
+                                ng-options="p.value as p.label for p in placements"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Min / Max</label>
+                            <input class="col-xs-3" type="number" step="any" ng-model="gauge.minSpeed" />
+                            <input class="col-xs-3 col-xs-offset-1" type="number" step="any" ng-model="gauge.maxSpeed" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Start / End Degree<br /><small>scale sweep, 0 = bottom</small></label>
+                            <input class="col-xs-3" type="number" step="1" min="-360" max="720"
+                                ng-model="gauge.startSpeedDegree" />
+                            <input class="col-xs-3 col-xs-offset-1" type="number" step="1" min="-360" max="720"
+                                ng-model="gauge.endSpeedDegree" />
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="section == 'ems'">
+                            <label class="control-label col-xs-5">Tick Decimals / Scale<br /><small>e.g. 0 and 0.01 for 100rpm</small></label>
+                            <input class="col-xs-3" type="number" step="1" min="0" max="3" ng-model="gauge.ceil" />
+                            <input class="col-xs-3 col-xs-offset-1" type="number" step="any" ng-model="gauge.scale" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Value Background</label>
+                            <input class="col-xs-7" type="color" ng-model="gauge.backgroundColor" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Arcs -->
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Arcs
+                    <a ng-click="addArc()" class="btn pull-right"><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="panel-body">
+                    <table class="addonSettingsArcs">
+                        <tr>
+                            <td>Color</td>
+                            <td>Bkg</td>
+                            <td>Start</td>
+                            <td>Size</td>
+                            <td>Threshold</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="arc in gauge.arcs">
+                            <td><input type="color" ng-model="arc.color" /></td>
+                            <td><input type="color" ng-model="arc.backgroundColor" /></td>
+                            <td><input type="number" step="1" min="0" max="720"
+                                    ng-model="degreeField(arc, 'startDegree')" ng-model-options="{ getterSetter: true }" /></td>
+                            <td><input type="number" step="1" min="0" max="360"
+                                    ng-model="degreeField(arc, 'sizeDegree')" ng-model-options="{ getterSetter: true }" /></td>
+                            <td><input type="number" step="any" ng-model="arc.threshold" /></td>
+                            <td><a ng-click="removeArc($index)" class="btn"><i class="fa fa-trash"></i></a></td>
+                        </tr>
+                    </table>
+                    <div class="addonSettingsHint">Start and Size are degrees of the gauge circle, clockwise from the bottom.
+                        <span ng-if="section == 'ems'">Above its Threshold an arc lights up and colours the value with its Bkg.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Col, navigation: the ordered list being edited -->
+    <div class="col-sm-6" ng-if="section == 'navigation' && navigation">
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{navigationListLabel()}}
+                    <span class="label label-default pull-right">{{navigationEntries().length}} plates</span>
+                </div>
+                <div class="panel-body">
+                    <table class="addonSettingsList" ng-if="navigationEntries()">
+                        <tr>
+                            <td>#</td>
+                            <td>Plate</td>
+                            <td>Hash</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="hash in navigationEntries() track by $index">
+                            <td>{{$index + 1}}</td>
+                            <td>{{plateName(hash)}}</td>
+                            <td class="addonSettingsMono">{{hash}}</td>
+                            <td class="text-right addonSettingsNowrap">
+                                <a ng-click="moveNavigation($index, -1)" class="btn" ng-class="{ 'disabled': $index == 0 }"><i class="fa fa-arrow-up"></i></a>
+                                <a ng-click="moveNavigation($index, 1)" class="btn" ng-class="{ 'disabled': $index >= navigationEntries().length - 1 }"><i class="fa fa-arrow-down"></i></a>
+                                <a ng-click="removeNavigation($index)" class="btn"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="addonSettingsHint" ng-if="navigationEntries() && navigationEntries().length == 0">Empty: the knob falls back to the Default list.</div>
+                    <div class="addonSettingsHint" ng-if="!navigationEntries()">This entry is not a list in navigation.json; edit the file by hand.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Col, keypad: the direct key map being edited -->
+    <div class="col-sm-6" ng-if="section == 'keypad' && keypad">
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">{{directKeyMapLabel()}}</div>
+                <div class="panel-body">
+                    <table class="addonSettingsList">
+                        <tr>
+                            <td>Key</td>
+                            <td>Opens</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-repeat="(key, target) in directKeyEntries()">
+                            <td class="addonSettingsMono">{{key}}</td>
+                            <td><select class="custom-select" ng-model="target.href"
+                                    ng-options="p.hash as p.name for p in plates"></select></td>
+                            <td class="text-right"><a ng-click="removeDirectKey(key)" class="btn"><i class="fa fa-trash"></i></a></td>
+                        </tr>
+                    </table>
+                    <div class="addonSettingsHint" ng-if="!directKeyEntries() || directKeyEntriesCount() == 0">No keys in this map.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Col, receiver: one panel per serial port -->
+    <div class="col-sm-6" ng-if="section == 'receiver' && receiver">
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Serial Outputs</div>
+                <div class="panel-body">
+                    <form name="SerialForm" novalidate>
+                        <div ng-repeat="serial in receiver.SerialOutputs">
+                            <div class="form-group addonSettingsRow">
+                                <label class="control-label col-xs-12 addonSettingsMono">{{serial.DeviceString}}</label>
+                            </div>
+                            <div class="form-group addonSettingsRow">
+                                <select class="col-xs-5 custom-select" ng-model="serial.Baud"
+                                    ng-options="b as (b + ' baud') for b in serialBauds"></select>
+                                <select class="col-xs-6 col-xs-offset-1 custom-select" ng-model="serial.Capability"
+                                    ng-options="c.value as c.label for c in serialCapabilities"></select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint" ng-if="receiver.SerialOutputs.length == 0">No serial output ports on this Stratux.</div>
+                    <div class="addonSettingsHint" ng-if="receiver.SerialOutputs.length > 0">Each changed port is reopened with its new speed and protocol on save.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Col, hardware: the RB features -->
+    <div class="col-sm-6" ng-if="section == 'hardware' && hardware">
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Features</div>
+                <div class="panel-body">
+                    <form name="FeaturesForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Camera</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Camera_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Audio Internal Speaker</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Audio_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Autopilot</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Autopilot_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Autopilot UDP Forwarder</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.AutopilotUdp_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="hardware.AutopilotUdp_Enabled">
+                            <label class="control-label col-xs-5">Autopilot UDP Port</label>
+                            <input class="col-xs-7" type="number" step="1" min="1" max="65535" ng-model="hardware.AutopilotUdp_Port" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Keypad</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Keypad_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Radio</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.Radio_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">EMS</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.EMS_Enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">SwitchBoard</label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.SwitchBoard_Enabled"></ui-switch></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Right Col -->
+</div>

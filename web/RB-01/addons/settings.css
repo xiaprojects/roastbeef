@@ -1,0 +1,151 @@
+/* Styles for the settings addon: aircraft.json, ems.json, navigation.json,
+   keypad.json and the autopilot home waypoint. */
+
+.addonSettings .addonSettingsTabs {
+    margin-bottom: 12px;
+}
+
+.addonSettings .addonSettingsTabs .label {
+    margin-left: 4px;
+}
+
+.addonSettings .panel-heading .btn {
+    padding: 0 6px;
+    font-size: 16px;
+}
+
+.addonSettings .panel-heading .btn.disabled {
+    opacity: 0.3;
+}
+
+.addonSettings .addonSettingsRow {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.addonSettings .control-label {
+    padding-top: 6px;
+}
+
+.addonSettings input[type="color"] {
+    height: 34px;
+    padding: 2px;
+    border: 1px solid #acacac;
+    background-color: transparent;
+}
+
+/* Bootstrap's pre is light grey and the dark theme paints its text white:
+   give the preview the theme's input colours so the JSON is readable. */
+.addonSettings .addonSettingsJson {
+    font-size: 11px;
+    max-height: 40vh;
+    overflow: auto;
+    white-space: pre;
+    text-align: left;
+    color: #e0e0e0;
+    background-color: #212121;
+    border: 2px solid #2d2d2d;
+    border-radius: 4px;
+}
+
+.addonSettings .addonSettingsArcs {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.addonSettings .addonSettingsArcs td {
+    text-align: center;
+    padding: 2px 4px;
+    border-top: 1px #acacac solid;
+    width: 20%;
+}
+
+.addonSettings .addonSettingsArcs td:nth-child(1),
+.addonSettings .addonSettingsArcs td:nth-child(2) {
+    width: 10%;
+}
+
+.addonSettings .addonSettingsArcs td:nth-child(6) {
+    width: 8%;
+}
+
+.addonSettings .addonSettingsArcs tr:first-child td {
+    border-top: none;
+    font-size: 12px;
+}
+
+.addonSettings .addonSettingsArcs input {
+    width: 100%;
+    min-width: 3em;
+}
+
+.addonSettings .addonSettingsArcs input[type="color"] {
+    min-width: 2.5em;
+    height: 30px;
+}
+
+.addonSettings .addonSettingsArcs .btn {
+    padding: 2px 6px;
+}
+
+.addonSettings .addonSettingsHint {
+    font-size: 12px;
+    color: #acacac;
+    margin-top: 6px;
+}
+
+.addonSettings .addonSettingsWidgets,
+.addonSettings .addonSettingsList {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.addonSettings .addonSettingsWidgets td,
+.addonSettings .addonSettingsList td {
+    text-align: left;
+    padding: 6px 4px;
+    border-top: 1px #acacac solid;
+}
+
+.addonSettings .addonSettingsWidgets td {
+    cursor: pointer;
+}
+
+.addonSettings .addonSettingsWidgets tr:first-child td,
+.addonSettings .addonSettingsList tr:first-child td {
+    border-top: none;
+    font-size: 12px;
+    cursor: default;
+}
+
+.addonSettings .addonSettingsList select {
+    width: 100%;
+}
+
+.addonSettings .addonSettingsList .btn {
+    padding: 0 6px;
+    font-size: 16px;
+}
+
+.addonSettings .addonSettingsList .btn.disabled {
+    opacity: 0.3;
+}
+
+.addonSettings .addonSettingsMono {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+}
+
+.addonSettings .addonSettingsNowrap {
+    white-space: nowrap;
+}
+
+.addonSettings .addonSettingsWidgets tr.addonSettingsSelected td {
+    background-color: rgba(66, 139, 202, 0.35);
+    font-weight: bold;
+}

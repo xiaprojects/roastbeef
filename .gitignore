@@ -47,3 +47,7 @@ test/uatsummary
 
 .DS_Store
 
+
+# Local module overrides (go work init . ../goflying) - never committed.
+go.work
+go.work.sum
