@@ -142,6 +142,7 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
     "startSpeedDegree": 0,
     "endSpeedDegree": 330,
     "label": "GPS SPEED",
+    "sourceName": "GS",
     "unit": "KMH",
     "speed": 0,
     "raw": -1,
@@ -174,17 +175,22 @@ function SixPackInstrumentSpeed($rootScope, $scope, $state, $http, $interval) {
         }
         $scope.Speed = db.GPSGroundSpeed;
         $scope.Speed.speedTicks = createProgressiveTicksForRoundInstrument($scope.Speed.maxSpeed, $scope.Speed.minSpeed, $scope.Speed.endSpeedDegree, $scope.Speed.startSpeedDegree);
+        $scope.updateSituation(window.situation); // the gauge just replaced is unlabelled until then
   });
   }
 
   $scope.updateSituation = (situation) => {
-    const GPSGroundSpeedIsInKt = Number.parseFloat(situation[$scope.Speed.sensorType]).toFixed(1);
-    if($scope.Speed.raw == GPSGroundSpeedIsInKt) {
+    // SpeedKt/SpeedSource are resolved by servicesituation.js: IAS when the
+    // airspeed board reports one, GPS ground speed otherwise
+    const speedIsInKt = Number.parseFloat(situation.SpeedKt ?? 0).toFixed(1);
+    const sourceName = situation.SpeedSource ?? "GS";
+    if($scope.Speed.raw == speedIsInKt && $scope.Speed.sourceName == sourceName) {
       return;
     } else {
-      $scope.Speed.raw = GPSGroundSpeedIsInKt;
+      $scope.Speed.raw = speedIsInKt;
+      $scope.Speed.sourceName = sourceName;
     }
-    $scope.Speed.pilotValue = pilotDisplayedSpeedFromKT(GPSGroundSpeedIsInKt)
+    $scope.Speed.pilotValue = pilotDisplayedSpeedFromKT(speedIsInKt)
     $scope.Speed.speed = parseInt($scope.Speed.pilotValue);
 
     const arcsArc = ($scope.Speed.endSpeedDegree - $scope.Speed.startSpeedDegree);
@@ -282,7 +288,9 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
   };
   // TODO: unify
   $scope.Speed = {
-    "speed": 0
+    "speed": 0,
+    "sourceName": "GS",
+    "unit": ""
   };
   $scope.Altimeter = {
     "altitude": 0
@@ -304,7 +312,11 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Attitude.pitchOrigin = "50% " + situation.AHRSPitch + "%";
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
     $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
-    $scope.Speed.speed = parseInt(situation.GPSGroundSpeed);
+    // Tape and ticks are in the pilot's unit (aircraft.json) like the speed
+    // gauge; the source (IAS or GS) is resolved by servicesituation.js
+    $scope.Speed.speed = parseInt(pilotDisplayedSpeedFromKT(situation.SpeedKt ?? 0));
+    $scope.Speed.sourceName = situation.SpeedSource ?? "GS";
+    $scope.Speed.unit = window.aircraftData?.units?.speed ?? "KMH";
     if(situation.GPSFixQuality > 0) {
           $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
       $scope.Heading.sourceName = "GPS";

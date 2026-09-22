@@ -116,6 +116,22 @@
     text-align: right;
 }
 
+/* Source and unit of the speed value (IAS or GS), hung under its box so the
+   pointer triangle stays level with the number */
+.attitude-speed-source {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: #000000;
+    border-radius: 10%;
+    font-size: 2.5cqmin;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+}
+
 .attitude-altimeter {
     background-color: #000000;
     border: none;
