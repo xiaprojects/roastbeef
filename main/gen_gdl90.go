@@ -1196,6 +1196,7 @@ type settings struct {
 	GPS_Enabled          bool
 	BMP_Sensor_Enabled   bool
 	IMU_Sensor_Enabled   bool
+	MS4525DO_Enabled     bool    // poll the I2C bus for the MS4525DO pitot sensor (main/airspeed.go); default: true
 	AirspeedZeroOffset   float64 // Pa the MS4525DO pitot sensor reads at zero airflow; set by POST /calibrateAirspeed (main/airspeed.go)
 	NetworkOutputs       []networkConnection
 	SerialOutputs        map[string]serialConnection
@@ -1211,6 +1212,8 @@ type settings struct {
 	IMUMapping           [2]int     // Map from aircraft axis to sensor axis: accelerometer
 	SensorQuaternion     [4]float64 // Quaternion mapping from sensor frame to aircraft frame
 	C, D                 [3]float64 // IMU Accel, Gyro zero bias
+	GyroCalibrated       CalibrationRecord // When and at what IMU die temperature D was last calibrated
+	AccelCalibrated      CalibrationRecord // Same for C and SensorQuaternion (the cage)
 	AHRSEngine           string     // "simple" (default; "" reads as simple): goflying Simple AHRS; "kalman": its Kalman filter, which also fuses the magnetometer (newAHRS)
 	MagField             float64    // Local geomagnetic field the Kalman engine is referenced to, uT; 0 = dipole estimate at the GPS position
 	MagDip               float64    // Its inclination, deg positive down; 0 = dipole estimate
@@ -1275,6 +1278,7 @@ type settings struct {
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
 	Switches             []switchModel // Switches Settings
 	MagCalibration       MagnetometerData // Magnetometer Calibration
+	MagCalibrated        CalibrationRecord // When and at what IMU die temperature MagCalibration was last stored
 	// Magnetometer alignment. The rows are the rotation from the magnetometer
 	// die to the accelerometer die: a signed axis permutation for how the part
 	// is laid out on the board, or any proper rotation - the flight fit in
@@ -1348,7 +1352,7 @@ type status struct {
 	AHRS_LogFiles_Size                         int64
 	BMPConnected                               bool
 	IMUConnected                               bool
-	AirspeedConnected                          bool // MS4525DO pitot sensor recognised on I2C and being read (no enable setting)
+	AirspeedConnected                          bool // MS4525DO pitot sensor recognised on I2C and being read (MS4525DO_Enabled)
 	NightMode                                  bool // For turning off LEDs.
 	OGN_noise_db                               float32
 	OGN_gain_db                                float32
@@ -1405,6 +1409,7 @@ func defaultSettings() {
 	globalSettings.GPS_Enabled = true
 	globalSettings.IMU_Sensor_Enabled = true
 	globalSettings.BMP_Sensor_Enabled = true
+	globalSettings.MS4525DO_Enabled = false
 	globalSettings.AirspeedZeroOffset = 0
 	// Attitude engine: goflying's Simple AHRS.  "kalman" is the Kalman filter
 	// that also fuses the magnetometer; it needs a calibrated compass and a
@@ -1625,7 +1630,7 @@ func printStats() {
 		if globalSettings.BMP_Sensor_Enabled {
 			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last BMP read: %s", stratuxClock.HumanizeTime(mySituation.BaroLastMeasurementTime)))
 		}
-		if globalStatus.AirspeedConnected {
+		if globalSettings.MS4525DO_Enabled && globalStatus.AirspeedConnected {
 			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last pitot read: %s (%.0f Pa, IAS %.0f kt)", stratuxClock.HumanizeTime(mySituation.PitotLastMeasurementTime), mySituation.PitotPressure, mySituation.IndicatedAirSpeed))
 		}
 		if len(sensorsOutput) > 0 {

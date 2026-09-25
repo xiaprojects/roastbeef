@@ -118,6 +118,8 @@ type SituationData struct {
 	AHRSLastAttitudeTime time.Time
 	AHRSStatus           uint8
 	AHRSTemperature      float64
+	// Raw IMU sample: accelerometer in g, gyro in deg/s, chip frame, gyro
+	// before the AHRS offset D. Updated on every good sample, valid AHRS or not.
 	AHRSAccX             float64
 	AHRSAccY             float64
 	AHRSAccZ             float64

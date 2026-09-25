@@ -31,6 +31,7 @@ Please join Discord community
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"math"
@@ -120,9 +121,9 @@ func pollSensors() {
 			}
 		}
 
-		// The pitot sensor has no enable flag: it is recognised on the bus
+		// If it's not currently connected, try connecting to the pitot sensor
 		// (main/airspeed.go).
-		if !globalStatus.AirspeedConnected {
+		if globalSettings.MS4525DO_Enabled && !globalStatus.AirspeedConnected {
 			pollAirspeedSensor()
 		}
 	}
@@ -427,6 +428,12 @@ func sensorAttitudeSender() {
 				for (math.Abs(cc-1) > calCLimit || dd > calDLimit) && nTries < numRetries {
 					time.Sleep(1 * time.Second)
 					_, d1, d2, d3, c1, c2, c3, _, _, _, mpuError, _ := myIMUReader.Read()
+					// Die temperature of this very sample, for the calibration records.
+					var calTemp float64
+					calTempOK := false
+					if t, ok := myIMUReader.(sensors.IMUTemperature); ok {
+						calTemp, calTempOK = t.Temperature(), true
+					}
 					cc = math.Sqrt(c1*c1 + c2*c2 + c3*c3)
 					dd = math.Sqrt(d1*d1 + d2*d2 + d3*d3)
 					log.Printf("cc = %f dd = %f\n", cc,dd)
@@ -437,11 +444,13 @@ func sensorAttitudeSender() {
 					} else {
 						if strings.Contains(action, "cal") { // Calibrate gyros
 							globalSettings.D = [3]float64{d1, d2, d3}
+							globalSettings.GyroCalibrated = newCalibrationRecord(calTemp, calTempOK)
 							s.SetCalibrations(nil, &globalSettings.D)
 							log.Printf("AHRS Info: IMU gyro calibration: %3f %3f %3f\n", d1, d2, d3)
 						}
 						if strings.Contains(action, "level") { // Calibrate accel / level
 							globalSettings.C = [3]float64{c1, c2, c3}
+							globalSettings.AccelCalibrated = newCalibrationRecord(calTemp, calTempOK)
 							s.SetCalibrations(&globalSettings.C, nil)
 							globalSettings.SensorQuaternion = *makeOrientationQuaternion(globalSettings.C)
 							s.SetSensorQuaternion(&globalSettings.SensorQuaternion)
@@ -545,13 +554,21 @@ func sensorAttitudeSender() {
 
 			// If we have valid AHRS info, then update mySituation.
 			mySituation.muAttitude.Lock()
+			// IMU die temperature, logged for gyro drift analysis.
+			if t, ok := myIMUReader.(sensors.IMUTemperature); ok {
+				mySituation.AHRSTemperature = t.Temperature()
+			}
+			// Raw accelerometer (g) and gyro (deg/s) of this sample, as the
+			// driver delivers them: chip frame, gyro before the AHRS subtracts
+			// D. Written whether or not the attitude is valid, so the log keeps
+			// the sensor data exactly when the AHRS is struggling.
+			mySituation.AHRSAccX = m.A1
+			mySituation.AHRSAccY = m.A2
+			mySituation.AHRSAccZ = m.A3
+			mySituation.AHRSGyroX = m.B1
+			mySituation.AHRSGyroY = m.B2
+			mySituation.AHRSGyroZ = m.B3
 			if s.Valid() {
-				mySituation.AHRSAccX = m.A1
-				mySituation.AHRSAccY = m.A2
-				mySituation.AHRSAccZ = m.A3
-				mySituation.AHRSGyroX = m.B1
-				mySituation.AHRSGyroY = m.B2
-				mySituation.AHRSGyroZ = m.B3
 				roll, pitch, heading = s.RollPitchHeading()
 				mySituation.AHRSRoll = roll / ahrs.Deg
 				mySituation.AHRSPitch = pitch / ahrs.Deg
@@ -638,6 +655,56 @@ func sensorAttitudeSender() {
 			}
 		}
 	}
+}
+
+// CalibrationRecord tells when a calibration was taken and at what IMU die
+// temperature, so that a stale one - taken cold and used warm, see the gyro
+// zero-rate drift - can be recognised.  The zero value means "never".
+type CalibrationRecord struct {
+	Time time.Time // UTC, from the system clock
+	// TimeFromGPS is whether the system clock had been set from GPS when Time
+	// was taken.  The Pi has no RTC: without a fix since boot (e.g. indoors)
+	// the clock is the last shutdown time plus uptime and Time can be off by
+	// days.
+	TimeFromGPS bool
+	// Temperature is the IMU die temperature in degC (AHRSTemperature), or nil
+	// when there was no IMU reporting one.  For the magnetometer record it is
+	// still the IMU die on the same board: the magnetometer has no sensor.
+	Temperature *float64
+}
+
+// String gives the record a column in the datalog settings table.
+func (r CalibrationRecord) String() string {
+	b, err := json.Marshal(r)
+	if err != nil {
+		return "{}"
+	}
+	return string(b)
+}
+
+// newCalibrationRecord stamps a calibration taken now at die temperature
+// temp; ok false records the temperature as unknown.
+func newCalibrationRecord(temp float64, ok bool) CalibrationRecord {
+	r := CalibrationRecord{Time: time.Now().UTC(), TimeFromGPS: stratuxClock.HasRealTimeReference()}
+	if ok {
+		r.Temperature = &temp
+	}
+	return r
+}
+
+// imuTemperature returns the IMU die temperature from the AHRS loop's last
+// sample, for callers on other goroutines (the HTTP handlers).
+func imuTemperature() (float64, bool) {
+	if !globalStatus.IMUConnected {
+		return 0, false
+	}
+	if _, ok := myIMUReader.(sensors.IMUTemperature); !ok {
+		return 0, false
+	}
+	mySituation.muAttitude.Lock()
+	defer mySituation.muAttitude.Unlock()
+	// Zero is the field's initial value: no sample has been taken yet.
+	return mySituation.AHRSTemperature, mySituation.AHRSTemperature != 0
 }
 
 // kalmanMagBiasSigma is the prior on the Kalman engine's magnetometer bias,
