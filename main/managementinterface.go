@@ -692,6 +692,10 @@ func handleMagnetometerPut(w http.ResponseWriter, r *http.Request) {
 		log.Printf("handleMagnetometerPost:error: %s\n", err.Error())
 	} else {
 		globalSettings.MagCalibration = msg
+		// A PUT stores a calibration; stamp it once it is a finished one.
+		if !msg.Calibrating && msg.MagMaxX > msg.MagMinX && msg.MagMaxY > msg.MagMinY && msg.MagMaxZ > msg.MagMinZ {
+			globalSettings.MagCalibrated = newCalibrationRecord(imuTemperature())
+		}
 		saveSettings()
 	}
 	statusJSON, err := json.Marshal(&globalSettings.MagCalibration)
@@ -1882,6 +1886,9 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 							myPressureReader.Close()
 							globalStatus.BMPConnected = false
 						}
+					case "MS4525DO_Enabled":
+						// airspeedSender closes the sensor and blanks the airspeed when it sees this off.
+						globalSettings.MS4525DO_Enabled = val.(bool)
 					case "AirspeedZeroOffset":
 						globalSettings.AirspeedZeroOffset = val.(float64)
 					case "DEBUG":

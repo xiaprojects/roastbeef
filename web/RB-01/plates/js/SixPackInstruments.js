@@ -300,6 +300,59 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     ,
     "sourceName":"GYRO"
   };
+  $scope.Wind = {
+    "valid": false,
+    "direction": "---°",
+    "speed": "--",
+    "unit": "",
+    "estimated": false,
+    "arrowDegree": "0deg"
+  };
+  // Damping of the wind readout. servicesituation.js estimates the wind on
+  // every frame; that raw estimate moves with each compass and GPS sample, so
+  // what is displayed is smoothed over about five seconds, the order of a real
+  // wind readout. Smoothed as a vector, never as an angle: the mean of 359 and
+  // 001 is north, not south. arrow is the unwrapped screen angle.
+  const WIND_TAU = 5000; // ms
+  var windFilter = { "x": 0, "y": 0, "time": 0, "arrow": 0 };
+
+  function updateWind(situation) {
+    $scope.Wind.unit = window.aircraftData?.units?.speed ?? "KMH";
+    if(situation.WindValid != true) {
+      $scope.Wind.valid = false;
+      $scope.Wind.direction = "---°";
+      $scope.Wind.speed = "--";
+      $scope.Wind.estimated = false;
+      windFilter.time = 0; // the next estimate starts fresh, not out of a stale one
+      return;
+    }
+    const now = Date.now();
+    const x = situation.WindSpeed * Math.sin(toRadians(situation.WindDirection));
+    const y = situation.WindSpeed * Math.cos(toRadians(situation.WindDirection));
+    if(windFilter.time == 0) {
+      windFilter.x = x;
+      windFilter.y = y;
+    } else {
+      const alpha = 1 - Math.exp(-(now - windFilter.time) / WIND_TAU);
+      windFilter.x += alpha * (x - windFilter.x);
+      windFilter.y += alpha * (y - windFilter.y);
+    }
+    windFilter.time = now;
+    const speedKt = Math.sqrt(windFilter.x * windFilter.x + windFilter.y * windFilter.y);
+    const from = (toDegrees(Math.atan2(windFilter.x, windFilter.y)) + 360) % 360;
+    // Wind from the north reads 360, like a METAR: 000 is calm, not a direction
+    const degrees = Math.round(from) % 360;
+    $scope.Wind.valid = true;
+    $scope.Wind.direction = ("00" + (degrees == 0 ? 360 : degrees)).slice(-3) + "°";
+    $scope.Wind.speed = Math.round(pilotDisplayedSpeedFromKT(speedKt));
+    $scope.Wind.estimated = situation.WindSource == "gs";
+    // Where the wind blows TO, relative to the nose: a headwind points down the
+    // screen. Unwrapped so crossing north turns the arrow one degree instead of
+    // sending the CSS transition all the way round the other way.
+    const target = from + 180 - situation.AHRSMagHeading;
+    windFilter.arrow += ((((target - windFilter.arrow + 180) % 360) + 360) % 360) - 180;
+    $scope.Wind.arrowDegree = windFilter.arrow.toFixed(1) + "deg";
+  }
 
   if($scope.$parent.hasOwnProperty("$parent") 
     && $scope.$parent.$parent.hasOwnProperty("instruments")) {
@@ -324,6 +377,7 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
         $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
           $scope.Heading.sourceName = "GYRO";
     }
+    updateWind(situation);
   };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);

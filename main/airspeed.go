@@ -50,9 +50,9 @@ var (
 	airspeedCal      = make(chan struct{}, 1) // zero-calibration requests for airspeedSender
 )
 
-// pollAirspeedSensor is pollSensors' 4 s probe for the pitot sensor: there
-// is no enable setting, a chip that answers like an MS4525DO on either bus
-// is taken into use and read until it drops out.
+// pollAirspeedSensor is pollSensors' 4 s probe for the pitot sensor while
+// MS4525DO_Enabled: a chip that answers like an MS4525DO on either bus is
+// taken into use and read until it drops out or the setting is turned off.
 func pollAirspeedSensor() {
 	globalStatus.AirspeedConnected = initAirspeedSensor(i2cbus) // I2C pitot-static differential pressure.
 	if !globalStatus.AirspeedConnected {
@@ -96,7 +96,8 @@ const (
 // airspeedDeadbandPa the airspeed is 0, which the HMI reads as "no airspeed
 // source" and shows the ground speed for. When the sensor stops answering
 // the airspeed is blanked after 1 s and the sensor dropped (for pollSensors
-// to reconnect) after 5 s, never left standing (FHA-SPD-4).
+// to reconnect) after 5 s, never left standing (FHA-SPD-4). Turning
+// MS4525DO_Enabled off closes the sensor and blanks the airspeed the same way.
 func airspeedSender() {
 	var (
 		q           float64 // filtered dynamic pressure, Pa
@@ -110,7 +111,7 @@ func airspeedSender() {
 
 	timer := time.NewTicker(time.Duration(1000*airspeedDt) * time.Millisecond)
 	defer timer.Stop()
-	for globalStatus.AirspeedConnected {
+	for globalSettings.MS4525DO_Enabled && globalStatus.AirspeedConnected {
 		<-timer.C
 
 		raw, err := myAirspeedReader.DifferentialPressure()
@@ -170,6 +171,11 @@ func airspeedSender() {
 		mySituation.PitotPressure = float32(q)
 		mySituation.PitotTemperature = float32(temp)
 		mySituation.PitotLastMeasurementTime = stratuxClock.Time
+	}
+	if !globalSettings.MS4525DO_Enabled && globalStatus.AirspeedConnected {
+		myAirspeedReader.Close()
+		globalStatus.AirspeedConnected = false
+		removeSingleSystemError("airspeed-sensor-read")
 	}
 	mySituation.IndicatedAirSpeed = 0
 	mySituation.PitotPressure = 0

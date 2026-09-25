@@ -263,6 +263,10 @@
                             <label class="control-label col-xs-5">Baro Sensor</label>
                             <div class="col-xs-7"><ui-switch ng-model="hardware.BMP_Sensor_Enabled"></ui-switch></div>
                         </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Airspeed Sensor<br /><small>MS4525DO pitot</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="hardware.MS4525DO_Enabled"></ui-switch></div>
+                        </div>
                         <div class="form-group addonSettingsRow" ng-if="hardware.IMU_Sensor_Enabled">
                             <label class="control-label col-xs-5">Minimum Fan Duty<br /><small>%</small></label>
                             <input class="col-xs-7" type="number" step="1" min="0" max="100" ng-model="hardware.PWMDutyMin" />

@@ -96,7 +96,7 @@ var SETTINGS_CONF_TYPES = {
     bool: [
         "EstimateBearinglessDist", "DisplayTrafficSource",
         "GPS_Enabled", "UAT_Enabled", "ES_Enabled", "OGN_Enabled", "AIS_Enabled", "APRS_Enabled",
-        "IMU_Sensor_Enabled", "BMP_Sensor_Enabled", "Ping_Enabled", "Pong_Enabled", "OGNI2CTXEnabled",
+        "IMU_Sensor_Enabled", "BMP_Sensor_Enabled", "MS4525DO_Enabled", "Ping_Enabled", "Pong_Enabled", "OGNI2CTXEnabled",
         "Camera_Enabled", "Audio_Enabled", "Autopilot_Enabled", "AutopilotUdp_Enabled",
         "Keypad_Enabled", "Radio_Enabled", "EMS_Enabled", "SwitchBoard_Enabled"
     ],
@@ -557,7 +557,7 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
     // ---- Hardware: the receivers, sensors and features the daemon runs
     const hardwareSection = confSection([
         "GPS_Enabled", "UAT_Enabled", "ES_Enabled", "OGN_Enabled", "AIS_Enabled", "APRS_Enabled",
-        "IMU_Sensor_Enabled", "BMP_Sensor_Enabled", "PWMDutyMin", "Ping_Enabled", "Pong_Enabled",
+        "IMU_Sensor_Enabled", "BMP_Sensor_Enabled", "MS4525DO_Enabled", "PWMDutyMin", "Ping_Enabled", "Pong_Enabled",
         "OGNI2CTXEnabled", "Camera_Enabled", "Audio_Enabled", "Autopilot_Enabled", "AutopilotUdp_Enabled",
         "AutopilotUdp_Port", "Keypad_Enabled", "Radio_Enabled", "EMS_Enabled", "SwitchBoard_Enabled"
     ], {

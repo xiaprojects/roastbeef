@@ -234,3 +234,99 @@
     bottom: -1.5cqmin;
     left: 30%;
 }
+
+/* Wind readout, at the ball's lower left where a PFD carries it: clear of the
+   speed tape on the left, the heading tape below and the pitch ladder in the
+   middle, and inside the round clip of .attitude so none of it is cut off.
+   Dark plate like the speed and altitude boxes so it reads over sky or terrain. */
+.attitude-wind {
+    position: absolute;
+    left: 17%;
+    bottom: 13%;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    border: none;
+    border-radius: 10%;
+    padding: 0.6cqmin 1.2cqmin;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Drawn pointing up, so rotate() is simply where the wind blows relative to
+   the nose. Eased like the tapes; the controller unwraps the angle so it never
+   spins the long way round through north. */
+.attitude-wind-arrow {
+    position: relative;
+    width: 7cqmin;
+    height: 7cqmin;
+    transition: transform 1s ease-out;
+}
+
+.attitude-wind-arrow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -2cqmin;
+    width: 0;
+    height: 0;
+    border-left: 2cqmin solid transparent;
+    border-right: 2cqmin solid transparent;
+    border-bottom: 2.8cqmin solid white;
+}
+
+.attitude-wind-arrow::before {
+    content: "";
+    position: absolute;
+    top: 2.6cqmin;
+    bottom: 0.2cqmin;
+    left: 50%;
+    margin-left: -0.6cqmin;
+    width: 1.2cqmin;
+    background-color: white;
+}
+
+/* Fixed width: the digits must not shuffle the arrow sideways as they change */
+.attitude-wind-readout {
+    text-align: right;
+    line-height: 1.15;
+    padding-left: 1.4cqmin;
+    min-width: 15cqmin;
+}
+
+.attitude-wind-direction {
+    font-size: 4cqmin;
+    font-weight: bolder;
+}
+
+.attitude-wind-speed {
+    font-size: 3.4cqmin;
+    font-weight: bolder;
+}
+
+.attitude-wind-unit {
+    font-size: 2.2cqmin;
+    font-weight: normal;
+    padding-left: 0.5cqmin;
+}
+
+/* The airspeed board is optional: without one the air vector is the ground
+   speed, which makes the wind a drift estimate. Say so, rather than let it
+   pass for a measured wind. */
+.attitude-wind-estimated {
+    font-size: 2.2cqmin;
+    font-weight: bolder;
+    color: #ffb000;
+    padding-left: 0.8cqmin;
+}
+
+/* No estimate: dashes and no arrow, so a stale wind is never left on screen */
+.attitude-wind-invalid {
+    color: #ffffffb3;
+}
+
+.attitude-wind-arrow.attitude-wind-invalid::before,
+.attitude-wind-arrow.attitude-wind-invalid::after {
+    visibility: hidden;
+}

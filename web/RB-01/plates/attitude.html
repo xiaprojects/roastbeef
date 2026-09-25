@@ -39,4 +39,14 @@
               <div class="attitude-triangle-right"></div>
             </div>
             <div class="attitude-altimeter" ng-if="Attitude.standalone==true">{{Altimeter.altitude}}</div>
+            <!-- Wind, lower left of the ball as on a PFD. The arrow flies with
+                 the wind relative to the nose, so a headwind points down the
+                 screen; the digits repeat it as direction FROM and speed. -->
+            <div class="attitude-wind" ng-if="Attitude.standalone==true">
+              <div class="attitude-wind-arrow" ng-class="{'attitude-wind-invalid': Wind.valid==false}" style="transform: rotate({{Wind.arrowDegree}});"></div>
+              <div class="attitude-wind-readout" ng-class="{'attitude-wind-invalid': Wind.valid==false}">
+                <div class="attitude-wind-direction">{{Wind.direction}}</div>
+                <div class="attitude-wind-speed">{{Wind.speed}}<span class="attitude-wind-unit">{{Wind.unit}}</span><span class="attitude-wind-estimated" ng-if="Wind.estimated==true">EST</span></div>
+              </div>
+            </div>
         </div>
