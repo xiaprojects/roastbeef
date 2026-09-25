@@ -16,6 +16,8 @@ const (
 // the IMUReader interface.
 type MPU9250 struct {
 	mpu *mpu9250.MPU9250
+
+	lastTemp float64 // Die temperature from the last Read, degC
 }
 
 // NewMPU9250 returns an instance of the MPU9250 IMUReader, connected to an
@@ -61,6 +63,9 @@ func (m *MPU9250) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, G
 		MAGError = data.MagError
 		i++
 	}
+	if data.N > 0 {
+		m.lastTemp = data.Temp
+	}
 	return
 }
 
@@ -91,4 +96,11 @@ func (m *MPU9250) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64
 // Close stops reading the MPU.
 func (m *MPU9250) Close() {
 	m.mpu.CloseMPU()
+}
+
+// Temperature returns the die temperature in degC, averaged over the samples
+// behind the last Read.  Only Read updates it, so call it from the goroutine
+// that polls Read.
+func (m *MPU9250) Temperature() float64 {
+	return m.lastTemp
 }

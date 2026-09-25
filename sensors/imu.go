@@ -15,3 +15,20 @@ type IMUReader interface {
 	// Close stops reading the MPU.
 	Close()
 }
+
+// IMUTemperature is implemented by IMU readers that can report their die
+// temperature, which the daemon logs next to the gyro for drift analysis.
+// Temperature returns it in degC from the last Read; call it from the
+// goroutine that polls Read.
+type IMUTemperature interface {
+	Temperature() float64
+}
+
+// Every IMU driver in this package reports its die temperature.
+var (
+	_ IMUTemperature = (*GY85)(nil)
+	_ IMUTemperature = (*BMI270)(nil)
+	_ IMUTemperature = (*BMX160)(nil)
+	_ IMUTemperature = (*ICM20948)(nil)
+	_ IMUTemperature = (*MPU9250)(nil)
+)

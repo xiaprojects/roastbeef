@@ -665,3 +665,10 @@ func (m *GY85) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, G
 func (m *GY85) Close() {
 	// I2CBus is managed externally, nothing to do here
 }
+
+// Temperature returns the ITG-3200 die temperature in degC from the last
+// successful Read.  Only Read updates it, so call it from the goroutine that
+// polls Read.
+func (m *GY85) Temperature() float64 {
+	return m.lastTemp
+}

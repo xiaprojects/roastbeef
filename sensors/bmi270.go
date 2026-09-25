@@ -709,11 +709,13 @@ func (m *BMI270) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GA
 	if err != nil {
 		return T, 0, 0, 0, 0, 0, 0, 0, 0, 0, err, nil
 	}
-	tmp, _ := m.readTempC()
+	// A failed temperature read keeps the previous value rather than 0 degC.
+	if tmp, err := m.readTempC(); err == nil {
+		m.lastTemp = tmp
+	}
 
 	m.lastGyroX, m.lastGyroY, m.lastGyroZ = gx, gy, gz
 	m.lastAccelX, m.lastAccelY, m.lastAccelZ = ax, ay, az
-	m.lastTemp = tmp
 	m.lastRead = now
 
 	return T, gx, gy, gz, ax, ay, az, 0, 0, 0, nil, nil
@@ -737,3 +739,9 @@ func (m *BMI270) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64,
 
 // Close: bus is managed externally.
 func (m *BMI270) Close() {}
+
+// Temperature returns the die temperature in degC from the last Read.  Only
+// Read updates it, so call it from the goroutine that polls Read.
+func (m *BMI270) Temperature() float64 {
+	return m.lastTemp
+}

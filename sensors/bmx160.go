@@ -16,6 +16,8 @@ const (
 // the IMUReader interface.
 type BMX160 struct {
 	dev *bmx160.BMX160
+
+	lastTemp float64 // Die temperature from the last Read, degC
 }
 
 // NewBMX160 returns an instance of the BMX160 IMUReader, connected to a
@@ -51,6 +53,9 @@ func (m *BMX160) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GA
 		MAGError = data.MagError
 		i++
 	}
+	if data.N > 0 {
+		m.lastTemp = data.Temp
+	}
 	return
 }
 
@@ -76,4 +81,11 @@ func (m *BMX160) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64,
 // Close stops reading the BMX160.
 func (m *BMX160) Close() {
 	m.dev.Close()
+}
+
+// Temperature returns the die temperature in degC, averaged over the samples
+// behind the last Read.  Only Read updates it, so call it from the goroutine
+// that polls Read.
+func (m *BMX160) Temperature() float64 {
+	return m.lastTemp
 }

@@ -16,6 +16,8 @@ const (
 // the IMUReader interface.
 type ICM20948 struct {
 	mpu *icm20948.ICM20948
+
+	lastTemp float64 // Die temperature from the last Read, degC
 }
 
 // NewICM20948 returns an instance of the ICM-20948 IMUReader, connected to an
@@ -65,6 +67,9 @@ func (m *ICM20948) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, 
 		MAGError = data.MagError
 		i++
 	}
+	if data.N > 0 {
+		m.lastTemp = data.Temp
+	}
 	return
 }
 
@@ -95,4 +100,11 @@ func (m *ICM20948) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float6
 // Close stops reading the MPU.
 func (m *ICM20948) Close() {
 	m.mpu.CloseMPU()
+}
+
+// Temperature returns the die temperature in degC, averaged over the samples
+// behind the last Read.  Only Read updates it, so call it from the goroutine
+// that polls Read.
+func (m *ICM20948) Temperature() float64 {
+	return m.lastTemp
 }
