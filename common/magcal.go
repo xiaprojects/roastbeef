@@ -56,6 +56,44 @@ func (c MagCalibration) Magnitude(x, y, z float64) float64 {
 	return math.Sqrt(cx*cx + cy*cy + cz*cz)
 }
 
+// MinSweep is the fraction of an axis's fitted diameter the samples must
+// actually span for that axis to count as determined. An ellipsoid fit to an
+// arc is not identifiable: centre and radius trade off along the unswept
+// direction, and the residual stays small - a flight that banked little can
+// return |m| = 1.000 +/- 0.007 around a Z centre hundreds of counts and a
+// radius three times off. Only a real sweep pins them down.
+const MinSweep = 0.55
+
+// Sweep returns, per axis, how much of the fitted diameter the samples span.
+// Values below MinSweep mean that axis is guesswork, however good the residual.
+func Sweep(samples [][3]float64, cal MagCalibration) (s [3]float64) {
+	if len(samples) == 0 {
+		return
+	}
+	var lo, hi [3]float64
+	for i := 0; i < 3; i++ {
+		lo[i], hi[i] = samples[0][i], samples[0][i]
+	}
+	for _, p := range samples {
+		for i := 0; i < 3; i++ {
+			lo[i] = math.Min(lo[i], p[i])
+			hi[i] = math.Max(hi[i], p[i])
+		}
+	}
+	for i := 0; i < 3; i++ {
+		if cal.Semi[i] > 0 {
+			s[i] = (hi[i] - lo[i]) / (2 * cal.Semi[i])
+		}
+	}
+	return
+}
+
+// WellSwept reports whether every axis meets MinSweep.
+func WellSwept(samples [][3]float64, cal MagCalibration) bool {
+	s := Sweep(samples, cal)
+	return s[0] >= MinSweep && s[1] >= MinSweep && s[2] >= MinSweep
+}
+
 // FitMagEllipsoid fits an axis-aligned ellipsoid to raw magnetometer samples
 // by linear least squares on a x^2 + b y^2 + c z^2 + d x + e y + f z = 1.
 //
@@ -63,6 +101,8 @@ func (c MagCalibration) Magnitude(x, y, z float64) float64 {
 // when the aircraft never banked or pitched) or the fit is not an ellipsoid.
 // Samples are centred and scaled before solving so the normal equations stay
 // well conditioned for raw counts in the thousands.
+//
+// A small residual is NOT enough to trust the result: check Sweep/WellSwept.
 func FitMagEllipsoid(samples [][3]float64) (cal MagCalibration, ok bool) {
 	if len(samples) < 12 {
 		return cal, false

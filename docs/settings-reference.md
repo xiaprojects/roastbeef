@@ -82,6 +82,23 @@ See [hardware/gps.md](hardware/gps.md) for autodetection and chip support.
 | `MagSensorQuaternion` | [4]float64 | *Derived.* `SensorQuaternion (x) q(MagAxisMapping)`, rebuilt on every cage and whenever the rows change, so `POST /cageAHRS` realigns the compass too. All-zero means "not derived yet". Can be written directly for an experiment, but the next cage replaces it - put a lasting alignment in the rows. |
 | `C` | [3]float64 | *Advanced.* IMU accelerometer zero-bias. |
 | `D` | [3]float64 | *Advanced.* IMU gyro zero-bias. |
+| `GyroCalibrated` | object | *Read-only.* When and at what IMU die temperature `D` was last calibrated (`POST /calibrateAHRS`). See **Calibration records** below. |
+| `AccelCalibrated` | object | *Read-only.* Same for `C` and `SensorQuaternion`, i.e. the last cage (`POST /cageAHRS`). |
+| `MagCalibrated` | object | *Read-only.* Same for the magnetometer envelope `MagCalibration`, stamped when a finished calibration is stored with `PUT /magnetometer`. |
+
+#### Calibration records
+
+`GyroCalibrated`, `AccelCalibrated` and `MagCalibrated` share one shape:
+
+```json
+{"Time": "2026-09-24T09:05:43Z", "TimeFromGPS": true, "Temperature": 27.8}
+```
+
+- `Time`: UTC timestamp from the system clock. `0001-01-01T00:00:00Z` means the calibration was never taken.
+- `TimeFromGPS`: whether the system clock had been set from GPS when `Time` was taken. The Pi has no RTC, so without a fix since boot (indoors, for example) `Time` can be off by days.
+- `Temperature`: IMU die temperature in °C (`AHRSTemperature`), or `null` when no IMU reported one. For `MagCalibrated` it is still the IMU die on the same board, because the magnetometer has no temperature sensor.
+
+The daemon writes these; `POST /setSettings` ignores them. They record the last calibration *operation*: if `D`, `C` or a quaternion is later edited by hand, the record still shows the last measured calibration.
 | `AHRSEngine` | string | Default `"simple"` (an empty or unknown value reads as simple): goflying's Simple AHRS (GPS/accel attitude with gyro smoothing; the compass is a separate tilt-compensated heading). `"kalman"`: goflying's Kalman filter, which fuses gyro, accelerometer, GPS velocity and the calibrated magnetometer into one attitude; the magnetometer gives it roll and heading, so `AHRSGyroHeading` is then magnetic and the filter also estimates the wind. Needs a calibrated magnetometer (`MagSensorQuaternion` and the `/magnetometer` envelope) and the local field, see `MagField`. Can be switched at runtime. |
 | `MagField` | float64 | *Advanced.* Magnitude of the local geomagnetic field in µT that the Kalman engine references the magnetometer to. `0` (default) uses a centred-dipole estimate at the GPS position, within ~10 %; set it (and `MagDip`) from a WMM/IGRF calculator for the operating area for better. |
 | `MagDip` | float64 | *Advanced.* Inclination of the local field in degrees, positive down (Europe ≈ 55–70). `0` uses the dipole estimate, within ~5°. |

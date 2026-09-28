@@ -131,14 +131,23 @@ Two things worth knowing when comparing against older behaviour:
   are fixed, so **a unit upgrading from an older release must re-verify its heading against a
   known reference** before trusting it.
 
-**GY85 / QMC5883P note.** As delivered, the QMC5883P's three axes form a left-handed set
-relative to the ADXL345 accelerometer on the same board: no rotation - and so no
-`MagAxisMapping` or `MagSensorQuaternion` - can describe it. `sensors/gy85.go` negates the
-magnetometer Z axis to make the set right-handed; with that, the die orientation is the plain
-yaw of the shipped default, `MagAxisMapping = {0,-1,0},{1,0,0},{0,0,1}`. This was established
-from a flight log (heading sense) and a static sample at a known bearing (field dip angle):
-every mapping consistent with both had determinant -1. Changing the driver's axis signs
-invalidates a stored calibration envelope - recalibrate after any such change.
+**GY85 / QMC5883P note.** The QMC5883P's axes are right-handed relative to the ADXL345 on
+the same board; the die sits at a -90 degree yaw, `MagAxisMapping = {0,1,0},{-1,0,0},{0,0,1}`.
+
+A revision of this driver negated magnetometer Z, on the theory that the set was left-handed.
+Never do that. A sign flip on one axis is a reflection, and a reflection inverts the vertical
+field component while leaving the horizontal one recoverable: the heading still looks right in
+level flight, a mapping fitted against GPS track still scores well, and only the tilt
+compensation - the one thing the vertical component feeds - pushes the wrong way. The symptom
+is a heading that is steady on the ground and degrades with bank. It also shows up as an
+`Offset` near 180 degrees, which is a sign the mapping is half a turn out rather than a real
+die orientation.
+
+**Always check the dip.** `test/magnetometer_check -flightlog` reports it. In the northern
+hemisphere the vertical component is positive (down) and the dip matches the WMM value for the
+location - +59 degrees in central Italy. A negative dip means a reflection somewhere in the
+chain, and no rotation will fix it. Changing an axis sign in the driver also invalidates a
+stored calibration envelope: the Z range must be negated and swapped with it.
 
 **Calibrate from a flight, not from a turn on the apron.** The min/max envelope collected
 while taxiing a circle is a poor calibration: Z never sweeps its range, the field next to a

@@ -561,15 +561,20 @@ func (m *GY85) readMag() (mx, my, mz float64, err error) {
 
 	mx = float64(x) * m.magSens
 	my = float64(y) * m.magSens
-	// Z is negated: as delivered (with SIGN_DEF as configured above) the three
-	// axes form a LEFT-handed set relative to the accelerometer, which no
-	// rotation - and so no MagAxisMapping / MagSensorQuaternion - can express.
-	// Established from a flight log plus a static sample at a known bearing:
-	// every mapping consistent with both the heading sense and the field's dip
-	// angle had determinant -1, and the raw Z reads a downward field as up.
-	// With Z flipped the die orientation is the plain yaw of the shipped
-	// default, MagAxisMapping = {0,-1,0},{1,0,0},{0,0,1}.
-	mz = -float64(z) * m.magSens
+	mz = float64(z) * m.magSens
+	// The axes are delivered as the die reports them, right-handed: the die
+	// orientation is a plain -90 degree yaw relative to the accelerometer,
+	// MagAxisMapping = {0,1,0},{-1,0,0},{0,0,1}.
+	//
+	// An earlier revision negated Z here, on the theory that the set was
+	// left-handed. It was not: that reflection inverted the vertical field
+	// component while leaving the horizontal one recoverable, so the heading
+	// still looked right in level flight and only the tilt compensation - which
+	// is what the vertical component feeds - pushed the wrong way. A ground 360
+	// and the flight log both put the dip at -55 degrees where Italy is +59.
+	// If a heading is mirrored, fix the mapping rows, not the axis signs here:
+	// a sign flip in the driver is a reflection, and test/magnetometer_check
+	// -flightlog reports the dip so the mistake shows up at once.
 	return
 }
 
