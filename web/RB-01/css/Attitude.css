@@ -1,11 +1,6 @@
 .attitude {
-
-  border-radius: 50%;
-
   margin: 0 auto;
   max-height: 100cqh;
-  aspect-ratio: 1/1;
-  position: relative;
   overflow: hidden;
 }
 
@@ -15,6 +10,8 @@
     height:100%;
     width:100%;
     position: absolute;
+    /* Support for any display */
+    display: none;
 }
 
 .attitude-doughnut-inside { 
@@ -25,6 +22,26 @@
     top:0%;
     left:0%;
     position: absolute;
+    /* Support for any display */
+    display: none;
+}
+
+
+/* Force the round bevel only in SixPack Visualisation */
+.Sixpack_intrument {
+.attitude {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.attitude-doughnut { 
+    display:block;
+}
+
+.attitude-doughnut-inside { 
+    display:block;
+}
 }
 
 
@@ -221,8 +238,9 @@
     color: white;
     bottom: 5%;
     text-align: center;
-    left: 45%;
-    width: 10%;
+    left: 50cqmin;
+    margin-left: -5cqmin;
+    width: 10cqmin;
 }
 .attitude-triangle-bottom {
 	width: 0;
