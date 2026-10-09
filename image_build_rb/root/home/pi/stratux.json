@@ -3,13 +3,15 @@
   "UAT_Enabled": false,
   "ES_Enabled": true,
   "OGN_Enabled": false,
-  "APRS_Enabled": true,
+  "APRS_Enabled": false,
   "AIS_Enabled": false,
   "Ping_Enabled": false,
   "Pong_Enabled": false,
   "GPS_Enabled": true,
   "BMP_Sensor_Enabled": true,
   "IMU_Sensor_Enabled": true,
+  "MS4525DO_Enabled": false,
+  "AirspeedZeroOffset": 0,
   "NetworkOutputs": [
     {
       "Conn": null,
@@ -91,6 +93,19 @@
     -0.1391304347826087,
     -0.34782608695652173
   ],
+  "GyroCalibrated": {
+    "Time": "2026-10-02T13:33:44.936593115Z",
+    "TimeFromGPS": true,
+    "Temperature": 51.763627450980394
+  },
+  "AccelCalibrated": {
+    "Time": "2026-10-02T13:50:07.383185308Z",
+    "TimeFromGPS": true,
+    "Temperature": 51.06039215686275
+  },
+  "AHRSEngine": "simple",
+  "MagField": 0,
+  "MagDip": 0,
   "PPM": 0,
   "Dump1090Gain": 37.2,
   "AltitudeOffset": 0,
@@ -125,13 +140,16 @@
   "GpsManualDevice": "/dev/ttyAMA0",
   "GpsManualChip": "ublox",
   "GpsManualTargetBaud": 38400,
+  "FlarmSerialInDevice": "",
+  "FlarmSerialInBaud": 38400,
+  "BleParser_Enabled": false,
   "Autopilot_Enabled": true,
   "AutopilotUdp_Enabled": true,
   "AutopilotUdp_Port": 1234,
   "Autopilot_HomeWaypoint": {
     "Lat": 41.952843,
     "Lon": 12.50197,
-    "Ele": 0,
+    "Ele": 400,
     "Status": 0,
     "Cmt": "Home"
   },
@@ -143,8 +161,8 @@
       "Name": "KRT2",
       "SquelchLevel": 0,
       "VolumeLevel": 0,
-      "FrequencyActive": "",
-      "FrequencyStandby": "",
+      "FrequencyActive": "118.000",
+      "FrequencyStandby": "118.000",
       "Enabled": false,
       "Dual": false,
       "Driver": "SERIAL",
@@ -156,8 +174,8 @@
       "Name": "TRIG",
       "SquelchLevel": 0,
       "VolumeLevel": 0,
-      "FrequencyActive": "",
-      "FrequencyStandby": "",
+      "FrequencyActive": "118.000",
+      "FrequencyStandby": "118.000",
       "Enabled": false,
       "Dual": false,
       "Driver": "NMEA",
@@ -265,7 +283,7 @@
     {
       "Name": "PWR OFF",
       "Type": 2,
-      "Status": 0,
+      "Status": 4,
       "Uri": "/usr/sbin/halt",
       "UriStatus": "",
       "EpochStart": 0,
@@ -283,34 +301,89 @@
     {
       "Name": "PWR RBT",
       "Type": 2,
-      "Status": 0,
+      "Status": 3,
       "Uri": "/usr/sbin/reboot",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "ACC CGE",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "curl -X POST http://localhost/cageAHRS",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "GYR CGE",
+      "Type": 2,
+      "Status": 0,
+      "Uri": "curl -X POST http://localhost/calibrateAHRS",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "GMT RST",
+      "Type": 2,
+      "Status": 3,
+      "Uri": "curl -X POST http://localhost/resetGMeter",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "AUD EVT",
+      "Type": 5,
+      "Status": 0,
+      "Uri": "AUDIO_STATUS",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "AUD GMT",
+      "Type": 5,
+      "Status": 0,
+      "Uri": "AUDIO_STATUS_GMETER",
+      "UriStatus": "",
+      "EpochStart": 0,
+      "EpochFinish": 0
+    },
+    {
+      "Name": "ALR AUD",
+      "Type": 5,
+      "Status": 0,
+      "Uri": "AUDIO_STATUS_ALARMS",
       "UriStatus": "",
       "EpochStart": 0,
       "EpochFinish": 0
     }
   ],
   "MagCalibration": {
-    "MagMaxX": 1050,
-    "MagMaxY": 755,
-    "MagMaxZ": -248,
-    "MagMinX": -1300,
-    "MagMinY": -1382,
-    "MagMinZ": -1878,
-    "X": 0,
-    "Y": 0,
-    "Z": 0,
+    "MagMaxX": 6224.945684595417,
+    "MagMaxY": 11440.738977071067,
+    "MagMaxZ": 8928.066568077891,
+    "MagMinX": -5412.48790975771,
+    "MagMinY": 1909.26515573958,
+    "MagMinZ": -1910.1383666259392,
+    "X": 663.4674738366897,
+    "Y": 8772.82725055742,
+    "Z": 8522.649864901847,
     "Heading": 0,
-    "Offset": 8,
+    "Offset": 11,
     "Calibrating": false
   },
-  "MagRollPitchInterference": [
-    1,
-    -1
-  ],
+  "MagCalibrated": {
+    "Time": "2026-10-02T14:01:14.508773336Z",
+    "TimeFromGPS": true,
+    "Temperature": 59.5035294117647
+  },
   "MagAxisMappingX": [
     0,
-    -1,
+    1,
     0
   ],
   "MagAxisMappingY": [
@@ -321,7 +394,13 @@
   "MagAxisMappingZ": [
     0,
     0,
-    1
+    -1
+  ],
+  "MagSensorQuaternion": [
+    0.036692890225989976,
+    -0.70131678468307,
+    0.7061541133540602,
+    0.09030375142708631
   ],
   "RegionSelected": 2
 }

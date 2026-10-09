@@ -56,7 +56,11 @@ GOPKGS = ./main/ ./common/ ./uatparse/ ./sensors/... ./godump978/ ./fancontrol_m
 check: libdump978.so
 	@unformatted="$$(gofmt -l common uatparse godump978 sensors)"; \
 	if [ -n "$$unformatted" ]; then echo "gofmt: files need formatting:"; echo "$$unformatted"; exit 1; fi
-	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go vet $(GOPKGS)
+	# -stdmethods=false: the embd I2CBus interface this project implements declares
+	# ReadByte(addr byte)/WriteByte(addr, value byte), which collide with the stdlib
+	# io.ByteReader/io.ByteWriter signatures that the stdmethods analyser enforces.
+	# The signatures are forced by the dependency, so the finding is accepted, not fixed.
+	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go vet -stdmethods=false $(GOPKGS)
 	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go test $(GOPKGS)
 	./scripts/provenance.sh --verify docs/certification/provenance.md
 

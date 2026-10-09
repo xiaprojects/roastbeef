@@ -69,6 +69,13 @@ fork), `kidoman/embd` (I²C, unmaintained since 2017), `tarm/serial` and
 | addtohomescreen (`web/js/addtohomescreen.min.js`, `.css`) | not stated | github.com/cubiq/add-to-homescreen | MIT | out | Legacy UI only. |
 | GPXParser (`web/js/GPXParser.js`) | not stated | github.com/Luuka/GPXParser.js | MIT | out (flight-plan import, Level E) | |
 
+### Hardware and vendor firmware
+
+**[pending]** — tracked in `hardware/bom.md` (roadmap Step 8), not here: compute board part
+number and revision, SoC stepping, bootloader/EEPROM version, RP1 and PMIC firmware, display
+and sensor module part numbers. AMC 20-152A Objective COTS-4 makes vendor microcode a
+configuration item; see `hardware/platform-assessment.md` (derogations D-4, D-10).
+
 ### Data sets
 
 | Data | Origin | Certified baseline | Notes |

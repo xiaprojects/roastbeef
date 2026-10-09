@@ -17,6 +17,8 @@ HMI (`web/`), the Debian package and the SD-card image.
 | Prebuilt binaries and vendored web libraries | version + SHA-256 | `docs/certification/provenance.md`, verified by `make check` |
 | Build toolchain | `Dockerfile` (Debian trixie, distro `golang-go`, librtlsdr from stratux/rtlsdr v1.0) | **[pending]** pin the base image by digest and the Go version explicitly |
 | Executable | `Version` = latest tag (`scripts/getversion.sh`); `Build` = commit SHA, `-dirty` suffix when built from a modified tree | `Makefile` (`LFLAGS`), shown in the log at start-up, `/getStatus`, RB-01 OTA screen |
+| **Vendor microcode** (bootloader/EEPROM, RP1, PMIC configuration, VideoCore firmware) | **[pending]** version + SHA-256 per release | AMC 20-152A Objective COTS-4 treats microcode not qualified with the device as a configuration item that must be declared and controlled — see `hardware/platform-assessment.md` D-10 |
+| **Compute board** | **[pending]** part number, revision, SoC stepping, serial | `hardware/bom.md` (Step 8); per-unit build record |
 | Debian package | `stratux-<version>-<arch>.deb`, built by CI on every push to `master` | `.github/workflows/ci.yml` |
 | SD-card image | produced by `release.yml` on tag push | GitHub release (draft) |
 | OS package set of the image | **[pending]** capture `dpkg -l` at image build time into the release assets | `image_build/`, `image_build_rb/` |
@@ -99,3 +101,5 @@ the SQAP.
 | 6 | Byte-reproducible `.deb` | 1.3 |
 | 7 | Signed OTA packages | 1.6 |
 | 8 | Per-unit installation record | 1.6 |
+| 9 | Record vendor firmware versions/hashes as configuration items (COTS-4) | 8 / platform-assessment D-10 |
+| 10 | Stand up an errata and change-notice monitoring channel for the SoC and board (COTS-2/COTS-5) | 8 / platform-assessment D-4 |

@@ -57,8 +57,8 @@ rm -f "$PACKAGE_NAME"
 echo "Package installed successfully."
 
 # 4.5 Clean chromium cache to ensure the new web interface is correctly loaded
-rm -Rf /home/pi/.config/chromium/
-rm -Rf /home/pi/.cache/chromium/
+rm -Rf /home/pi/.config/chromium/*
+rm -Rf /home/pi/.cache/chromium/*
 
 
 # 5. Start the command

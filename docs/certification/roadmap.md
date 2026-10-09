@@ -155,7 +155,15 @@ A table exercise, cheap, but it decides the DAL and therefore everything after i
    Explicitly scoped out of the first baseline: coupled-autopilot output, GPIO switchboard,
    addons, camera, voice, radio, OTA UI, X-Plane/CoT.
 3. **Choose the route** (NORSEE / CS-STAN / ASTM F3153 / ETSO) and the target DAL. Validate
-   both with a DER/CVE before proceeding.
+   both with a DER/CVE before proceeding. Note what the NORSEE policy actually says, because
+   it reshapes the whole safety case: *"The overall safety evaluation for non-required
+   equipment **assumes the equipment will fail**, regardless of the system or subsystem and
+   the probability of such a failure. The safety evaluation must show evidence that such
+   failures do not reduce the capability of the aircraft or the ability of the
+   pilot/flightcrew to cope with a failure condition worse than minor."* The board's failure
+   rate is therefore not the argument — detection and annunciation are. The same policy also
+   lets the applicant *propose* the industry standard (the "minimum design requirements"),
+   which is what makes a tailored DO-160 set and DAL D credible.
 4. **Derived safety requirements** fall out of the FHA and feed Step 4: stale-data flagging
    times, power-up time, behaviour on sensor loss, watchdog, SD-card power-cut survival
    (the overlay root FS in `image_build_rb/` already helps).
@@ -255,16 +263,29 @@ The step that decides whether anything above DAL D is ever reachable.
    process (or disable them in the certified configuration) so the core process can claim
    a single DAL. The existing plugin/bridge boundaries (`main/plugin.go`, `main/bridge.go`)
    are the natural seam. Document data and control coupling.
-2. **Display path decision.** Either (a) keep Chromium/AngularJS as DAL D PDS backed by
-   service history and the HMI test suite, and confine addons/non-core plates to a separate
-   "non-certified" page, or (b) implement the core instruments natively (a small
-   framebuffer/DRM renderer in Go or C) and keep Chromium for the rest. (a) caps you at D;
-   (b) is the door to C and to (E)TSO.
+2. **Display path decision — which is really a board decision.** Either (a) keep
+   Chromium/AngularJS as DAL D PDS backed by service history and the HMI test suite, and
+   confine addons/non-core plates to a separate "non-certified" page, or (b) implement the
+   core instruments natively (a small framebuffer/DRM renderer in Go or C) and keep Chromium
+   for the rest. (a) caps you at D; (b) is the door to C and to (E)TSO. The reason is the
+   graphics driver: DO-178C DAL A certifiable drivers exist for AMD Embedded Radeon, NXP
+   i.MX 8 Vivante and Arm Mali-G78AE, and for **no** Broadcom VideoCore part — so on a Pi,
+   (b) is the only DAL-C-capable display path. See
+   [hardware/platform-assessment.md §5](hardware/platform-assessment.md).
 3. **Health monitoring.** Hardware watchdog (`bcm2835_wdt`) kicked by the core, stale-data
    flags end-to-end (sensor → daemon → HMI, with the times from Step 3), measured Go GC
    pause and worst-case frame latency, power-up time, read-only root FS in the certified
-   configuration.
-4. **Software Design Description**: architecture, the coupling analysis, and — at C —
+   configuration. On a bare Pi the only watchdog is the SoC's own — the same device that
+   computes and draws the data judges its own health (derogation D-9); an independent
+   supervisor needs either a carrier-board watchdog or a companion safety MCU.
+4. **Multi-core.** AMC 20-193 *"does not apply when the IDALs are all Level D or E"*, so at
+   DAL D a quad-core A76 costs nothing. At DAL C the full MCP objective set applies
+   (interference channels, WCET under contention) on a SoC with no published cache/memory
+   arbitration data. The mitigation is in the AMC's own applicability — it covers *"MCPs
+   with two or more activated cores"* — so a certified configuration pinned to **one
+   activated core** moves the problem to an AEH configuration argument. The core functions
+   do not need four cores; synthetic vision does.
+5. **Software Design Description**: architecture, the coupling analysis, and — at C —
    low-level requirements traced from HLRs.
 
 Deliverables: `docs/certification/sdd.md`, refactored process boundary, HIL evidence for
@@ -277,20 +298,45 @@ software removed.
 person-weeks of engineering plus laboratory time (budget in the tens of k€ for a reduced
 category set).*
 
-1. **Hardware baseline.** BOM with part numbers, revisions and datasheet operating ranges
-   (Pi 5, display, GY-91-class sensor board, power supply, cabling, enclosure).
-2. **DO-160 category selection** matching the target route. A NORSEE/CS-STAN set is
-   typically: §4 temperature/altitude, §5 humidity, §8 vibration, §16 power input,
-   §17 voltage spike, §18 audio-frequency susceptibility, §19 induced signal,
-   §20 RF susceptibility, §21 RF emission, §25 ESD. Lightning (§22) only if the route asks.
-3. **DO-254 position.** The Pi and sensors are COTS; at DAL D the obligation is an
-   Electronic Component Management Plan (sourcing, obsolescence, lot control), not DO-254
-   design assurance. Write it.
-4. Expect the consumer-grade IMU/baro to fail cold-temperature or vibration limits;
+> The platform analysis for this step is written up in
+> **[hardware/platform-assessment.md](hardware/platform-assessment.md)**: what the standards
+> require of a COTS board, the Raspberry Pi 5 fact sheet, a 12-row derogation register, and a
+> graded reference table of ARM64 alternatives. Headline: the Pi 5's **0 °C** lower limit
+> meets no DO-160G §4 category, and moving to **CM5 on an in-house carrier** closes that plus
+> three other derogations with no software port.
+
+1. **Pick the DO-160G §4 category first.** It is the decision that drives the board choice,
+   not the other way round: the mildest standard category (A1) already requires −15 °C
+   operating, so a 0…+70 °C board fails every category. Decide §4 before ordering hardware.
+2. **Hardware baseline.** BOM with part numbers, revisions and datasheet operating ranges
+   (compute board/module and its SoC stepping, display, GY-91-class sensor board, power
+   supply, cabling, enclosure), plus the **vendor firmware** versions and hashes (bootloader
+   EEPROM, RP1, PMIC configuration) — AMC 20-152A Objective COTS-4 treats unqualified
+   microcode as a configuration item.
+3. **DO-160 category selection** for the remaining sections, matching the target route. A
+   NORSEE/CS-STAN set is typically: §4 temperature/altitude, §5 humidity, §8 vibration,
+   §16 power input, §17 voltage spike, §18 audio-frequency susceptibility, §19 induced
+   signal, §20 RF susceptibility, §21 RF emission, §25 ESD. Lightning (§22) only if the
+   route asks. DO-160 qualifies the **equipment**, not the board — a COTS board inside a
+   qualified box is normal practice.
+4. **DO-254 / AEH position.** AMC 20-152A states that its use *"is not required for AEH
+   contributing to hardware DAL D functions"* (Appendix B.2.4 accepts DO-254, existing
+   Level D practices, or a system-level ARP4754A argument). The obligation at DAL D is an
+   **Electronic Component Management Plan** per IEC 62239-1 / SAE EIA-STD-4899 (selection,
+   qualification, configuration management, datasheet/errata/change-notice access), not
+   design assurance. Write it, and state plainly that no public errata list or PCN channel
+   exists for the BCM2712 (derogation D-4).
+5. **Thermal uprating, if the Pi 5 board is kept.** Objective COTS-3 plus IEC/TR 62240-1 is
+   the recognised route for using a device outside its datasheet range, with the data
+   *"documented and stored in a controlled, retrievable format"*. Plan it as a test campaign
+   across batches, or avoid it by selecting a wide-temperature module.
+6. Expect the consumer-grade IMU/baro to fail cold-temperature or vibration limits;
    plan a hardware iteration.
 
-Deliverables: `docs/certification/hardware/{bom,ecmp,eqtp}.md`, lab test report.
-**Exit criterion:** environmental qualification test report with no open failures.
+Deliverables: `docs/certification/hardware/{bom,ecmp,eqtp}.md` (the assessment and
+derogation register are already in `hardware/platform-assessment.md`), lab test report.
+**Exit criterion:** environmental qualification test report with no open failures, and
+every derogation in the register either closed by design or carried with its evidence.
 
 ### Step 9 — Tools, data and security (DO-330, DO-200B/DO-276, DO-326A)
 

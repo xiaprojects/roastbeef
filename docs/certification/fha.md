@@ -21,6 +21,20 @@ the installation manual (roadmap Step 10.4).
 | A5 | No output of the RB-01 is connected to a flight-control system (autopilot servos) or to aircraft electrical loads in the certified configuration (GPIO switchboard and autopilot guidance disabled — roadmap Step 3.2). |
 | A6 | Traffic and weather information is advisory ("see and avoid" remains the pilot's responsibility). |
 
+Two facts from the hardware assessment
+([hardware/platform-assessment.md](hardware/platform-assessment.md)) shape every row below:
+
+- **The platform's own failure rate rules out any Major failure condition that depends on
+  the platform working.** The closest published figure for this class of board is the
+  Compute Module 5's ground-mobile MTBF of 16 000 h ≈ **6 × 10⁻⁵ failures per hour** — about
+  six times the usual 10⁻⁵/flight-hour budget for a Major condition, before software. The
+  safety case therefore only closes if every credible platform failure produces **loss,
+  annunciated** (Minor), never silent misleading information.
+- **Annunciation is a regulatory requirement on the chosen route, not a nicety.** NORSEE
+  policy §1.5: *"The system status (that is, operation or failure) should be conveyed to the
+  pilot/flightcrew."* That is the hook for FHA-ATT-3 / FHA-ALT-3 below, and the reason the
+  missing stale-data flag is the highest-value fix in this document.
+
 Severity scale (AC 23.1309-1E / AMC 23.1309): **No safety effect · Minor · Major ·
 Hazardous · Catastrophic**. Proposed DAL per AC 23.1309-1E Class I–II mapping:
 Major → D, Hazardous → C, Catastrophic → C (Class I) / B (Class III).
