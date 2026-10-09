@@ -255,6 +255,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         });
     }
 
+    // Unusual attitude: the recovery chevrons the attitude plate draws, over the
+    // synthetic view as well - it is the attitude display when it is on screen
+    $scope.Attitude = { "chevrons": "" };
     $scope.pilotGPSGroundSpeed = 0;
     $scope.pilotGPSGroundSpeedUnit = "Kt";
     $scope.pilotGPSAltitudeMSL = 0;
@@ -279,6 +282,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.pilotGPSGroundSpeedUnit = window.aircraftData?.units?.speed ?? "Kmh";
             $scope.pilotGPSAltitudeMSLUnit = window.aircraftData?.units?.altimeter ?? "Meters";
             $scope.pilotGPSAltitudeMSL = parseInt(pilotDisplayedAltitudeFromMeters($scope.situation.GPSAltitudeMSL/3.28084));
+            $scope.Attitude.chevrons = globalPitchChevrons(situation.AHRSPitch, $scope.Attitude.chevrons);
             loadSituationInSynthView(situation);
             loadSituationInAHRS(situation);
             $scope.$apply(); // trigger any needed refreshing of data
@@ -354,7 +358,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         // iPad Mini 768x949
         // 8" display 785x1193
 
-        return $scope.remote.reset == false && window.innerHeight > 800;
+        return $scope.remote.reset == false && window.innerHeight > 800
+            && $scope.Attitude.chevrons == "";
     }
 
     //

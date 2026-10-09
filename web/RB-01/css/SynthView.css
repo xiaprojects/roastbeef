@@ -26,3 +26,22 @@
     padding: 1%;
     text-shadow: 1px 1px #1c1c1c;
 }
+
+/* Unusual-attitude recovery chevrons (css/Attitude.css draws them) over the
+   synthetic view: a full-screen frame to position them in, and insets that
+   clear the roll scale above and the heading tape below. The HSI gives way to
+   them, so the nose-low stack has the lower half to itself. */
+.SynthView-chevrons {
+    position: fixed;
+    width: 100cqw;
+    height: 100cqh;
+    pointer-events: none;
+}
+
+.SynthView-chevrons .attitude-chevrons-down {
+    top: 24%;
+}
+
+.SynthView-chevrons .attitude-chevrons-up {
+    bottom: 15%;
+}

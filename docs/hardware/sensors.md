@@ -131,6 +131,47 @@ Two things worth knowing when comparing against older behaviour:
   are fixed, so **a unit upgrading from an older release must re-verify its heading against a
   known reference** before trusting it.
 
+### Known board orientations
+
+The die orientation is a property of the board, not of the aircraft, so it is the one part of
+the magnetometer setup that transfers between installations of the same hardware. Everything
+else - envelope, `Offset`, `SensorQuaternion` - is per-aircraft and must be recalibrated.
+
+| Board | Magnetometer | Driver | `MagAxisMapping` X / Y / Z |
+|---|---|---|---|
+| GY-85 | QMC5883P | `sensors/gy85.go` | `{0,1,0}` `{-1,0,0}` `{0,0,1}` (-90 deg yaw) |
+| GY-91 | AK8963, inside the MPU-9250 | `sensors/mpu9250.go` | `{0,1,0}` `{1,0,0}` `{0,0,-1}` |
+
+Note the two are **not** related by a rotation: the GY-91's Z is inverted with respect to the
+accelerometer where the GY-85's is not. Nothing about one board's alignment carries over to
+the other - copying a `MagAxisMapping` between them puts the field 164 degrees from where it
+physically points, which is what a wrong mapping looks like when you check it (see the vector
+test below). Both entries were confirmed against a known heading and, for the GY-91, against
+a 360 degree rotating plate over 12 hours.
+
+GY-91 boards report a range of WHO_AM_I values, including `0x75` on recent batches; all of
+them route to the MPU-9250 driver (`main/sensors.go`), which passes the AK8963 axes through
+untouched apart from the optional soft-iron matrix in `/etc/mpu9250cal.json` (identity by
+default).
+
+The shipped image defaults to the GY-91 rows, since only one set can be the default. On any
+other board the mapping has to be set before the compass means anything - a wrong one does not
+read "a bit off", it reads nearly backwards.
+
+**Magnetometer noise differs markedly between these boards.** On the reference installations,
+parked and with the engine off:
+
+| Board | Heading sd | Raw axis sd |
+|---|---|---|
+| GY-85 / QMC5883P | 0.24 deg | 1-3 counts |
+| GY-91 / AK8963 | 2.3 deg | 12-27 counts |
+
+Roughly ten times noisier on the GY-91, with the IMU on the same board quiet (attitude sd
+0.09 deg), so it is the magnetometer rather than vibration. It is usable - the heading
+smoother absorbs most of it - but expect a couple of degrees of jitter, and do not read a
+small heading disagreement on a GY-91 as a calibration error. The GY-91 showed no drift with
+`AHRSTemperature` over 12 hours of continuous testing.
+
 **GY85 / QMC5883P note.** The QMC5883P's axes are right-handed relative to the ADXL345 on
 the same board; the die sits at a -90 degree yaw, `MagAxisMapping = {0,1,0},{-1,0,0},{0,0,1}`.
 
@@ -148,6 +189,16 @@ hemisphere the vertical component is positive (down) and the dip matches the WMM
 location - +59 degrees in central Italy. A negative dip means a reflection somewhere in the
 chain, and no rotation will fix it. Changing an axis sign in the driver also invalidates a
 stored calibration envelope: the Z range must be negated and swapped with it.
+
+**Identifying the mapping on a new board.** One stationary sample at a *known* heading, with
+the aircraft level and the AHRS caged, is enough to pick the mapping family. The field in the
+body frame is then fully determined - at heading h and dip I it must be
+`(cos I cos h, -cos I sin h, sin I)` - so for each of the 24 proper axis permutations you can
+measure the angle between where the field is measured to point and where it must point. A
+correct permutation leaves a few degrees (the die's off-axis yaw plus declination); a wrong
+one leaves tens or hundreds. That is a far sharper test than comparing headings, because it
+uses the vertical component too, and it needs no flying. It will not give you the envelope or
+the final `Offset` - for those you still need the sweep and the flight below.
 
 **Calibrate from a flight, not from a turn on the apron.** The min/max envelope collected
 while taxiing a circle is a poor calibration: Z never sweeps its range, the field next to a

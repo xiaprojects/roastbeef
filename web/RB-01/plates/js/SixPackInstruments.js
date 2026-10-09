@@ -284,8 +284,30 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "rollDegree": "0deg",
     "pitchOrigin": "50% 0%",
     "pitchTop": "50%",
-    "standalone" : true
+    "standalone" : true,
+    "chevrons": "",
+    "fail": "",
+    "slipSkid": "0cqmin",
+    "slipSkidValid": false
   };
+  // Slip/skid. The bar travels one of its own widths at full scale, and full
+  // scale is 10 degrees - the sign and the travel of the shared AHRS renderer
+  // (web/plates/js/ahrs.js), so this ball and the synthetic view read alike.
+  const SLIPSKID_FULL_SCALE = 10;   // degrees
+  const SLIPSKID_BAR_WIDTH = 10.8;  // cqmin, the width of the roll pointer base
+
+  function updateSlipSkid(skid) {
+    $scope.Attitude.slipSkidValid = globalAHRSValueIsValid(skid);
+    if($scope.Attitude.slipSkidValid == false) {
+      $scope.Attitude.slipSkid = "0cqmin";
+      return;
+    }
+    const clamped = Math.max(-SLIPSKID_FULL_SCALE, Math.min(SLIPSKID_FULL_SCALE, skid));
+    // Positive slip moves the bar left, like the ball of an inclinometer
+    $scope.Attitude.slipSkid = (-clamped / SLIPSKID_FULL_SCALE * SLIPSKID_BAR_WIDTH) + "cqmin";
+  }
+  // Unusual attitude: the thresholds and the hysteresis live in global.js, so
+  // this ball and the synthetic view raise the chevrons at the same pitch
   // TODO: unify
   $scope.Speed = {
     "speed": 0,
@@ -293,13 +315,125 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "unit": ""
   };
   $scope.Altimeter = {
-    "altitude": 0
+    "altitude": 0,
+    "QNH": 1013,
+    "AutoQNH": true
   };
+  $scope.TurnRate = {
+    "valid": false,
+    "left": "0cqmin",
+    "width": "0cqmin",
+    "pegged": false,
+    "arrowClass": "attitude-turnrate-arrow-right"
+  };
+  $scope.Variometer = {
+    "barTop": "50%",
+    "barHeight": "0%",
+    "tipTop": "50%",
+    "value": ""
+  };
+  // Vertical speed strip. Full scale matches the variometer gauge, and a PFD
+  // blanks the digits around zero rather than twitching them with the noise.
+  const VSI_FULL_SCALE = 2000;  // fpm at either end of the strip
+  const VSI_DIGITS_FROM = 100;  // fpm, below which no number is shown
+  const VSI_DIGITS_STEP = 50;   // fpm the number is rounded to
+
+  function updateVariometer(situation) {
+    // BaroVerticalSpeed is feet per minute. With no baro fitted the GPS rate is
+    // the only one there is, and that one is feet per second.
+    var vs = situation.BaroVerticalSpeed;
+    if(situation.BaroSourceType == 0 || !isFinite(vs)) {
+      vs = (situation.GPSVerticalSpeed ?? 0) * 60;
+    }
+    if(!isFinite(vs)) {
+      vs = 0;
+    }
+    // Half the strip is one full scale, so this is a signed percentage of it
+    const half = Math.max(-VSI_FULL_SCALE, Math.min(VSI_FULL_SCALE, vs)) / VSI_FULL_SCALE * 50;
+    $scope.Variometer.barTop = (half > 0 ? 50 - half : 50) + "%";
+    $scope.Variometer.barHeight = Math.abs(half) + "%";
+    $scope.Variometer.tipTop = (50 - half) + "%";
+    $scope.Variometer.value = Math.abs(vs) < VSI_DIGITS_FROM ? ""
+      : (vs > 0 ? "+" : "-") + Math.round(Math.abs(vs) / VSI_DIGITS_STEP) * VSI_DIGITS_STEP;
+  }
     $scope.Heading = {
     "heading": 0
     ,
+    "text": "0"
+    ,
+    "valid": true
+    ,
+    "bugValid": false
+    ,
+    "bugLeft": "52cqmin"
+    ,
     "sourceName":"GYRO"
   };
+
+  // Failure flags. A PFD removes the sky and ground presentation and draws a
+  // red X over the attitude area when the AHRS stops supplying an attitude; the
+  // daemon says so by sending ahrs.Invalid for every angle. While the IMU is
+  // calibrating it is not broken, only not ready, which gets the align message
+  // instead - bit 3 of AHRSStatus (main/sensors.go updateAHRSStatus).
+  const AHRS_STATUS_CALIBRATING = 1 << 3;
+
+  function updateFailures(situation) {
+    const attitude = globalAHRSValueIsValid(situation.AHRSPitch)
+                  && globalAHRSValueIsValid(situation.AHRSRoll);
+    if(attitude == true) {
+      $scope.Attitude.fail = "";
+    } else {
+      $scope.Attitude.fail = (situation.AHRSStatus & AHRS_STATUS_CALIBRATING) ? "align" : "fail";
+    }
+    // Heading has two sources and only fails when both are gone
+    $scope.Heading.valid = situation.GPSFixQuality > 0
+                        || globalAHRSValueIsValid(situation.AHRSGyroHeading);
+  }
+
+  // Turn rate. The compass card runs 8cqmin per 10 degrees and its labels are
+  // centred in their cells, so heading H sits at 52 + 0.8H on the card and the
+  // lubber line - where the card's own translation lands the current heading -
+  // is 50cqmin in. The vector ends at the heading predicted in six seconds, so
+  // standard rate (3 deg/s) stops it on the 18 degree tick, as on a G1000.
+  const TAPE_CQMIN_PER_DEGREE = 0.8;
+  const TURN_TREND_SECONDS = 6;
+  const TURN_FULL_SCALE = 18;  // degrees of predicted heading change
+
+  function updateTurnRate(situation) {
+    // AHRSTurnRate is the IMU's; the GPS works it out from the ground track and
+    // is what is left when there is no IMU
+    var rate = globalAHRSValueIsValid(situation.AHRSTurnRate) ? situation.AHRSTurnRate
+             : (globalAHRSValueIsValid(situation.GPSTurnRate) ? situation.GPSTurnRate : undefined);
+    if(rate === undefined || $scope.Heading.valid == false) {
+      $scope.TurnRate.valid = false;
+      $scope.TurnRate.pegged = false;
+      return;
+    }
+    const predicted = rate * TURN_TREND_SECONDS;
+    const shown = Math.max(-TURN_FULL_SCALE, Math.min(TURN_FULL_SCALE, predicted));
+    const width = Math.abs(shown) * TAPE_CQMIN_PER_DEGREE;
+    $scope.TurnRate.valid = true;
+    $scope.TurnRate.left = (shown < 0 ? -width : 0) + "cqmin";
+    $scope.TurnRate.width = width + "cqmin";
+    $scope.TurnRate.pegged = Math.abs(predicted) > TURN_FULL_SCALE;
+    $scope.TurnRate.arrowClass = predicted < 0 ? "attitude-turnrate-arrow-left"
+                                               : "attitude-turnrate-arrow-right";
+  }
+
+  // Course bug: the bearing the autopilot is steering to, placed on the card by
+  // the shortest way round so it never jumps to the far side of the compass.
+  // autopilotData belongs to the main scope, which every plate inherits from.
+  function updateCourseBug() {
+    const bearing = $scope.autopilotData?.GPRMB?.TrueBearing;
+    if($scope.autopilotData?.Active != true || !isFinite(bearing)
+       || $scope.Heading.valid == false) {
+      $scope.Heading.bugValid = false;
+      return;
+    }
+    const delta = ((((bearing - $scope.Heading.heading + 180) % 360) + 360) % 360) - 180;
+    $scope.Heading.bugValid = true;
+    $scope.Heading.bugLeft = (52 + TAPE_CQMIN_PER_DEGREE * ($scope.Heading.heading + delta)) + "cqmin";
+  }
   $scope.Wind = {
     "valid": false,
     "direction": "---°",
@@ -364,7 +498,14 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Attitude.pitchTop = (situation.AHRSPitch) + "%";
     $scope.Attitude.pitchOrigin = "50% " + situation.AHRSPitch + "%";
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
+    $scope.Attitude.chevrons = globalPitchChevrons(situation.AHRSPitch, $scope.Attitude.chevrons);
+    updateSlipSkid(situation.AHRSSlipSkid);
     $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
+    // The setting the altimeter is on, derived or dialled, from servicesituation.js
+    $scope.Altimeter.QNH = parseInt(situation.QNH);
+    $scope.Altimeter.AutoQNH = situation.AutoQNH;
+    updateFailures(situation);
+    updateVariometer(situation);
     // Tape and ticks are in the pilot's unit (aircraft.json) like the speed
     // gauge; the source (IAS or GS) is resolved by servicesituation.js
     $scope.Speed.speed = parseInt(pilotDisplayedSpeedFromKT(situation.SpeedKt ?? 0));
@@ -377,6 +518,9 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
         $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
           $scope.Heading.sourceName = "GYRO";
     }
+    $scope.Heading.text = $scope.Heading.valid == true ? String($scope.Heading.heading) : "---";
+    updateTurnRate(situation);
+    updateCourseBug();
     updateWind(situation);
   };
   if(window.situation !== undefined) {

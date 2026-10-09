@@ -61,6 +61,10 @@ re-verify before acting.
   vendored library with version, origin, licence and SHA-256; verified by `make check`.
 - **[certification/fha.md](certification/fha.md)** — preliminary functional hazard
   assessment: installation assumptions, failure conditions and proposed DAL per function.
+- **[certification/hardware/platform-assessment.md](certification/hardware/platform-assessment.md)**
+  — how the standards treat a COTS board, the Raspberry Pi 5 compliance fact sheet, the
+  derogation register (12 findings with the clause that carries each), and a graded
+  reference table of ARM64 alternatives compatible with the RB-01.
 
 ## Doc conventions
 

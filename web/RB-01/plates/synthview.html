@@ -13,6 +13,16 @@
   <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSAltitudeMSLUnit}}</div>
 </div>
 
+<!-- Unusual attitude: the same recovery chevrons as the attitude plate,
+     pointing at the horizon. The HSI below stands down while they are up. -->
+<div class="SynthView-chevrons" ng-if="Attitude.chevrons != ''">
+  <div class="attitude-chevrons" ng-class="'attitude-chevrons-' + Attitude.chevrons">
+    <div class="attitude-chevron"></div>
+    <div class="attitude-chevron"></div>
+    <div class="attitude-chevron"></div>
+  </div>
+</div>
+
 <div  ng-show="displayHSI()" ng-controller="HSICtrl" ng-init="init('SynthViewCtrl','#000000')">
   <div id="hsi" style="
   width: 40cqw;

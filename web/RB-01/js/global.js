@@ -167,6 +167,48 @@ function pilotDisplayedTemperaturesFromCelsius(TemperatureIsCelsius) {
   return TemperatureIsCelsius * ratio + offset;
 }
 
+/*****************************************************
+ * Attitude
+ */
+
+// The AHRS reports 3276.7 (ahrs.Invalid, 2**15-1 in tenths of a degree) for
+// every angle once it has lost its solution. Treating that as a number pegs an
+// indicator hard over or trips a warning, so the attitude cues check it first.
+const AHRS_INVALID = 3276.7;
+
+function globalAHRSValueIsValid(value) {
+  return isFinite(value) && Math.abs(value - AHRS_INVALID) >= 0.01;
+}
+
+
+// Which way the recovery chevrons point for this pitch, "" when it is not
+// dangerous: "down" nose high (push), "up" nose low (pull), always towards the
+// horizon. Garmin's experimental-aircraft EFIS raises them "when the pitch
+// attitude exceeds 50 degrees nose up or 30 degrees nose down" (G3X Pilot's
+// Guide), which is also where the RB-01 attitude ball runs out of travel.
+// Shared by every plate that draws an attitude, so the limit is one number.
+const PITCH_CHEVRON_UP = 50;
+const PITCH_CHEVRON_DOWN = -30;
+// Pitch noise sits on the order of a degree, so a bare threshold would blink
+// the warning on and off while the aircraft hangs at the limit. `shown` is what
+// is on screen now, and widens the band that keeps it there.
+const PITCH_CHEVRON_HYSTERESIS = 2;
+
+function globalPitchChevrons(pitch, shown) {
+  if (!globalAHRSValueIsValid(pitch)) {
+    return ""; // no attitude solution: no pitch to warn about
+  }
+  const up = shown == "down" ? PITCH_CHEVRON_UP - PITCH_CHEVRON_HYSTERESIS : PITCH_CHEVRON_UP;
+  const down = shown == "up" ? PITCH_CHEVRON_DOWN + PITCH_CHEVRON_HYSTERESIS : PITCH_CHEVRON_DOWN;
+  if (pitch > up) {
+    return "down"; // nose high: push, the horizon is below
+  }
+  if (pitch < down) {
+    return "up";   // nose low: pull, the horizon is above
+  }
+  return "";
+}
+
 function localDisplayGetFlag(flagName) {
   if (window.localStorage.getItem(flagName) === undefined || window.localStorage.getItem(flagName) === false || window.localStorage.getItem(flagName) == null) {
   }
