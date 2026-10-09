@@ -9,16 +9,57 @@
             <div class="attitude-rollpitch-numbers" style="top:{{Attitude.pitchTop}};" ></div>
             <div class="attitude-roll" style="transform: rotate({{Attitude.rollDegree}});" ></div>
             <div class="attitude-center" ></div>
-            <div class="attitude-bottom-bar" ng-if="Attitude.standalone==true" style="transform: translateX({{-2-8*Heading.heading/10}}cqmin);">
+            <!-- Attitude failure. A PFD removes the sky and ground presentation
+                 and draws a red X over the attitude area; while the AHRS is
+                 still aligning it says so instead of crying failure. -->
+            <div class="attitude-fail" ng-if="Attitude.fail != ''">
+              <div class="attitude-fail-x" ng-if="Attitude.fail == 'fail'"></div>
+              <div class="attitude-fail-x attitude-fail-x-back" ng-if="Attitude.fail == 'fail'"></div>
+              <div class="attitude-fail-label" ng-if="Attitude.fail == 'fail'">ATTITUDE FAIL</div>
+              <div class="attitude-fail-align" ng-if="Attitude.fail == 'align'">AHRS ALIGN<br/>KEEP WINGS LEVEL</div>
+            </div>
+            <!-- Slip/skid: the bar under the roll pointer, which slides away
+                 from it towards the rudder that has to go in. One bar width of
+                 travel is full scale, as on a PFD, where it equals one ball
+                 width of a traditional inclinometer. -->
+            <div class="attitude-slipskid" ng-if="Attitude.standalone==true && Attitude.slipSkidValid==true && Attitude.fail == ''"
+                 style="transform: translateX({{Attitude.slipSkid}});"></div>
+            <!-- Unusual attitude: three red chevrons pointing at the horizon,
+                 the way out of an extreme pitch. Not gated on standalone - a
+                 recovery cue belongs on the six-pack ball as well. -->
+            <div class="attitude-chevrons" ng-class="'attitude-chevrons-' + Attitude.chevrons" ng-if="Attitude.chevrons != ''">
+              <div class="attitude-chevron"></div>
+              <div class="attitude-chevron"></div>
+              <div class="attitude-chevron"></div>
+            </div>
+            <div class="attitude-bottom-bar" ng-if="Attitude.standalone==true && Heading.valid==true" style="transform: translateX({{-2-8*Heading.heading/10}}cqmin);">
               <div ng-repeat="tick in ticks.heading" style="background-color: #0000007f;text-align: center;">
                 {{tick.label}}
                 <div class="attitude-bottom-block">
                   <div class="attitude-bottom-tick"></div>
                 </div>
               </div>
+              <!-- Course bug: it marks a compass heading, so it rides the card.
+                   The card is 8cqmin per 10 degrees and its labels are centred
+                   in their cells, which puts heading H at 52 + 0.8H. -->
+              <div class="attitude-course-bug" ng-if="Heading.bugValid==true" style="left: {{Heading.bugLeft}};"></div>
             </div>
-            <div class="attitude-heading" ng-if="Attitude.standalone==true">
-              {{Heading.heading}}
+            <!-- Turn rate, above the compass card: ticks at 9 and 18 degrees
+                 either side of the lubber line - half standard and standard
+                 rate - and a vector ending at the heading predicted in six
+                 seconds. The lubber line is 50cqmin in, where the card's
+                 translation puts the current heading. -->
+            <div class="attitude-turnrate" ng-if="Attitude.standalone==true && Heading.valid==true">
+              <div class="attitude-turnrate-vector" ng-if="TurnRate.valid==true" style="left: {{TurnRate.left}};width: {{TurnRate.width}};"></div>
+              <div class="attitude-turnrate-arrow" ng-if="TurnRate.pegged==true" ng-class="TurnRate.arrowClass"></div>
+              <!-- after the vector, so the scale stays readable under it -->
+              <div class="attitude-turnrate-tick" style="left: -14.4cqmin;"></div>
+              <div class="attitude-turnrate-tick attitude-turnrate-tick-half" style="left: -7.2cqmin;"></div>
+              <div class="attitude-turnrate-tick attitude-turnrate-tick-half" style="left: 7.2cqmin;"></div>
+              <div class="attitude-turnrate-tick" style="left: 14.4cqmin;"></div>
+            </div>
+            <div class="attitude-heading" ng-if="Attitude.standalone==true" ng-class="{'attitude-fail-text': Heading.valid==false}">
+              {{Heading.text}}
               <div class="attitude-triangle-bottom"></div>
             </div>
             <div class="attitude-left-bar" ng-if="Attitude.standalone==true" style="transform: translateY({{3+(0.6)*(Altimeter.altitude/2)}}cqmin);right:0%;background-color:#0000007c;">
@@ -38,11 +79,32 @@
               <div class="attitude-speed-source">{{Speed.unit}}<br/>{{Speed.sourceName}}</div>
               <div class="attitude-triangle-right"></div>
             </div>
+            <!-- The barometric setting the altimeter is on. AUTO is lit while
+                 servicesituation.js is deriving it from the GPS altitude. -->
+            <div class="attitude-qnh" ng-if="Attitude.standalone==true">
+              {{Altimeter.QNH}}<span class="attitude-qnh-unit">hPa</span>
+              <div class="attitude-qnh-auto" ng-if="Altimeter.AutoQNH==true">AUTO</div>
+            </div>
+            <!-- Vertical speed, inboard of the altitude tape: the magenta bar
+                 grows from the zero line, up for a climb and down for a sink.
+                 The digits ride the tip of the bar and blank below 100 fpm,
+                 like a PFD, so a level aircraft shows a bare scale. -->
+            <div class="attitude-vsi" ng-if="Attitude.standalone==true">
+              <div class="attitude-vsi-tick" style="top: 0%;"></div>
+              <div class="attitude-vsi-tick" style="top: 25%;"></div>
+              <div class="attitude-vsi-tick" style="top: 75%;"></div>
+              <div class="attitude-vsi-tick" style="top: 100%;"></div>
+              <div class="attitude-vsi-zero"></div>
+              <div class="attitude-vsi-bar" style="top: {{Variometer.barTop}};height: {{Variometer.barHeight}};"></div>
+              <div class="attitude-vsi-value" ng-if="Variometer.value != ''" style="top: {{Variometer.tipTop}};">{{Variometer.value}}</div>
+            </div>
             <div class="attitude-altimeter" ng-if="Attitude.standalone==true">{{Altimeter.altitude}}</div>
             <!-- Wind, lower left of the ball as on a PFD. The arrow flies with
                  the wind relative to the nose, so a headwind points down the
-                 screen; the digits repeat it as direction FROM and speed. -->
-            <div class="attitude-wind" ng-if="Attitude.standalone==true">
+                 screen; the digits repeat it as direction FROM and speed. It
+                 gives way to the recovery chevrons: in an unusual attitude a
+                 PFD declutters the secondary readouts and keeps the tapes. -->
+            <div class="attitude-wind" ng-if="Attitude.standalone==true && Attitude.chevrons==''">
               <div class="attitude-wind-arrow" ng-class="{'attitude-wind-invalid': Wind.valid==false}" style="transform: rotate({{Wind.arrowDegree}});"></div>
               <div class="attitude-wind-readout" ng-class="{'attitude-wind-invalid': Wind.valid==false}">
                 <div class="attitude-wind-direction">{{Wind.direction}}</div>
