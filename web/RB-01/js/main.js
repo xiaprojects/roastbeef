@@ -420,6 +420,10 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 						$scope.EMS[index].arcs[arcIndex].activeColor = $scope.EMS[index].arcs[arcIndex].color;
 					}
 				}
+				// Temperature gauges follow the pilot's unit from aircraft.json. That
+				// file is fetched in parallel with this one, so when it is the slower
+				// of the two the dials are redrawn by the EMS page (plates/js/ems.js).
+				emsApplyPilotUnits($scope.EMS);
 			}
 	});
 }).service('craftService', function () {

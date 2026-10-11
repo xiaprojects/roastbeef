@@ -268,16 +268,29 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
     // Other plates read the aircraft profile from here on controller entry.
     function applyAircraftLive(db) {
         window.aircraftData = db;
+        // The EMS dials carry the temperature unit that was picked, so a change
+        // of unit has to redraw them (js/global.js emsApplyPilotUnits).
+        var owner = emsOwnerScope();
+        if (owner && typeof emsApplyPilotUnits === "function") {
+            emsApplyPilotUnits(owner.EMS);
+        }
+    }
+
+    // The scope that owns the EMS widgets the page and the sidebar draw:
+    // MainCtrl, somewhere up from this addon.
+    function emsOwnerScope() {
+        var owner = $scope.$parent;
+        while (owner && !Object.prototype.hasOwnProperty.call(owner, "EMS")) {
+            owner = owner.$parent;
+        }
+        return owner;
     }
 
     // The EMS page and sidebar draw MainCtrl's $scope.EMS, which main.js filled
     // from ems.json on boot: refresh it the same way so the change shows
     // without a reload.
     function applyEmsLive(db) {
-        var owner = $scope.$parent;
-        while (owner && !Object.prototype.hasOwnProperty.call(owner, "EMS")) {
-            owner = owner.$parent;
-        }
+        var owner = emsOwnerScope();
         if (!owner || typeof createProgressiveTicksForRoundInstrument !== "function") {
             return;
         }
@@ -289,6 +302,10 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
                 arc.activeColor = arc.color;
             });
         });
+        // The file is edited in degrees C; the dials are drawn in the pilot's unit.
+        if (typeof emsApplyPilotUnits === "function") {
+            emsApplyPilotUnits(widgets);
+        }
         owner.EMS = widgets;
     }
 

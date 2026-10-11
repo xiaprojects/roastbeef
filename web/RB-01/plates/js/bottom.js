@@ -83,7 +83,7 @@ function BottomCtrl($rootScope, $scope, $state, $http, $interval) {
         "QNH": { "section": "bottom", "row": 3, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
         "AlertsCount": { "section": "top", "row": 3, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
         /*
-        "oiltemperature": { "section": "bottom", "row": 2, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
+        "oiltemperature": { "section": "bottom", "row": 2, "prefix": "", "postfix": "", "roundInt": 0, "value": 0, "convert": pilotDisplayedTemperaturesFromCelsius },
         */
         "trafficCount": { "section": "top", "row": 0, "prefix": "", "postfix": "", "roundInt": 0, "value": 0 },
     };

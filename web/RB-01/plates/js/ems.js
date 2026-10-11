@@ -59,7 +59,11 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 		if (!emsDataMap.hasOwnProperty(keyIn)) {
 			emsDataMap[keyIn] = 0;
 		}
-		var useThisValueForGauge = emsDataMap[keyIn];
+		// The gauge is drawn in the pilot's unit (aircraft.json): a temperature
+		// is converted here, and emsApplyPilotUnits has put the scale, the ticks
+		// and the arc thresholds on the same unit.
+		var pilotValue = emsPilotValueFromSource(keyIn, emsDataMap[keyIn]);
+		var useThisValueForGauge = pilotValue;
 		if(useThisValueForGauge>$scope.EMS[indexOut].maxSpeed) {
 			useThisValueForGauge=$scope.EMS[indexOut].maxSpeed;
 		}
@@ -75,7 +79,7 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 			($scope.EMS[indexOut].endSpeedDegree - $scope.EMS[indexOut].startSpeedDegree)
 			+ $scope.EMS[indexOut].startSpeedDegree
 		);
-		$scope.EMS[indexOut].speed = parseInt(emsDataMap[keyIn]);
+		$scope.EMS[indexOut].speed = parseInt(pilotValue);
 		$scope.EMS[indexOut].speedDegree = (degreeOut + 90) + "deg";
 		// Change color by threshold
 		$scope.EMS[indexOut].backgroundColor = "#000000";
@@ -111,8 +115,22 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
 		var requireRefresh = false;
+		// aircraft.json may land after ems.json, and the settings addon can change
+		// the unit while this page is open: redraw the dials when it differs from
+		// what they carry. emsApplyPilotUnits is idempotent, so the EMS page and
+		// the sidebar sharing these widgets cost nothing.
+		const pilotUnit = pilotTemperatureSignature();
+		if ($scope.emsPilotUnit !== pilotUnit) {
+			emsApplyPilotUnits($scope.EMS);
+			$scope.emsPilotUnit = pilotUnit;
+			requireRefresh = true;
+		}
 		for(var index=0;index<$scope.EMS.length;index++) {
-			if($scope.EMS[index].speed != parseInt(emsData.detail[ $scope.EMS[index].source])){
+			// Compare in the displayed unit, or a converted reading would never
+			// match the gauge and every frame would redraw.
+			const pilotValue = emsPilotValueFromSource($scope.EMS[index].source,
+				emsData.detail[$scope.EMS[index].source]);
+			if($scope.EMS[index].speed != parseInt(pilotValue)){
 			$scope.updateChart(index, $scope.EMS[index].source, emsData.detail);
 			requireRefresh = true;
 			}

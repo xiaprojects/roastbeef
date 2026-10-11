@@ -47,5 +47,12 @@ function AircraftService($scope, $http) {
         }
         $scope.aircraftData = db;
         window.aircraftData = db;
+        // The EMS dials are drawn in the pilot's temperature unit, which lives
+        // in this profile. This fetch runs against the one for ems.json in
+        // main.js, so whichever lands second applies the unit (the helper is
+        // idempotent); $scope here is MainCtrl's, which owns the widgets.
+        if (typeof emsApplyPilotUnits === "function") {
+            emsApplyPilotUnits($scope.EMS);
+        }
     });
 }

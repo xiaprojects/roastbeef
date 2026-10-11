@@ -167,6 +167,91 @@ function pilotDisplayedTemperaturesFromCelsius(TemperatureIsCelsius) {
   return TemperatureIsCelsius * ratio + offset;
 }
 
+// The temperature unit the pilot picked (aircraft.json units), "°C" until the
+// profile has loaded.
+function pilotTemperatureUnit() {
+  return window.aircraftData?.units?.temperatures ?? "°C";
+}
+
+// What the temperature conversion currently is, as one comparable value: the
+// label alone is not enough, because the settings addon also lets the factor
+// and the offset be typed in under an unchanged label.
+function pilotTemperatureSignature() {
+  const c = window.aircraftData?.units?.temperatureConversionFromC;
+  return pilotTemperatureUnit() + "|" + (c?.multiply ?? 1) + "|" + (c?.sum ?? 0);
+}
+
+// The EMS probe keys that carry a temperature. The daemon publishes what the
+// probe reports (main/ems.go) and ems.json authors its gauge scales to match,
+// both in °C, so these are the readings that follow the pilot's temperature
+// unit; pressures, volts, litres and rpm are left alone.
+const EMS_TEMPERATURE_SOURCES = [
+  "oiltemperature", "coolanttemperature", "outsidetemperature",
+  "cht1", "cht2", "cht3", "cht4",
+  "egt1", "egt2", "egt3", "egt4"
+];
+
+function emsSourceIsTemperature(source) {
+  return EMS_TEMPERATURE_SOURCES.indexOf(String(source).toLowerCase()) >= 0;
+}
+
+// One EMS reading in the pilot's unit: a temperature converted from the °C the
+// probe reports, anything else unchanged.
+function emsPilotValueFromSource(source, value) {
+  if (!emsSourceIsTemperature(source) || !isFinite(value)) {
+    return value;
+  }
+  return pilotDisplayedTemperaturesFromCelsius(value);
+}
+
+// Puts the EMS gauge definitions into the pilot's temperature unit - the whole
+// dial, not just the number, so the needle, the arc colours and the tick labels
+// go on agreeing with it. The conversion is affine, so scaling minSpeed,
+// maxSpeed and the arc thresholds leaves every angle exactly where it was: the
+// dial is relabelled and the colours still change at the same temperature.
+//
+// The °C scale is kept aside as the baseline and each pass recomputes from it,
+// so this is idempotent and a unit change at runtime lands correctly (the
+// settings addon swaps window.aircraftData live, and aircraft.json may arrive
+// after ems.json has already been drawn). Only this in-memory copy is touched;
+// ems.json on disk stays in °C.
+function emsApplyPilotUnits(widgets) {
+  if (!Array.isArray(widgets)) {
+    return widgets;
+  }
+  const unit = pilotTemperatureUnit();
+  const signature = pilotTemperatureSignature();
+  widgets.forEach(function (widget) {
+    if (widget === null || typeof widget !== "object" || !emsSourceIsTemperature(widget.source)) {
+      return;
+    }
+    if (widget.celsiusScale === undefined) {
+      widget.celsiusScale = {
+        minSpeed: widget.minSpeed,
+        maxSpeed: widget.maxSpeed,
+        thresholds: (widget.arcs ?? []).map(function (arc) { return arc.threshold; })
+      };
+    } else if (widget.pilotUnitApplied === signature) {
+      return; // already drawn in this unit
+    }
+    const base = widget.celsiusScale;
+    widget.minSpeed = pilotDisplayedTemperaturesFromCelsius(base.minSpeed);
+    widget.maxSpeed = pilotDisplayedTemperaturesFromCelsius(base.maxSpeed);
+    (widget.arcs ?? []).forEach(function (arc, index) {
+      if (index < base.thresholds.length) {
+        arc.threshold = pilotDisplayedTemperaturesFromCelsius(base.thresholds[index]);
+      }
+    });
+    widget.unit = unit;
+    widget.pilotUnitApplied = signature;
+    if (typeof createProgressiveTicksForRoundInstrument === "function") {
+      widget.speedTicks = createProgressiveTicksForRoundInstrument(widget.maxSpeed, widget.minSpeed,
+        widget.endSpeedDegree, widget.startSpeedDegree, 9, widget.ceil, widget.scale);
+    }
+  });
+  return widgets;
+}
+
 /*****************************************************
  * Attitude
  */

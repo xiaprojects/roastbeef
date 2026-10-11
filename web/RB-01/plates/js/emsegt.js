@@ -196,6 +196,29 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
 		var changed = 0;
+		// The pilot can change the temperature unit while this page is open
+		// (settings addon): relabel what is already on screen from the degrees C
+		// kept behind it. Bars that never had a reading keep their dashes. The bar
+		// heights and colours stay on the degrees C ranges, which are not labelled.
+		const pilotUnit = pilotTemperatureSignature();
+		if ($scope.emsPilotUnit !== pilotUnit) {
+			$scope.emsPilotUnit = pilotUnit;
+			for (var barIndex = 0; barIndex < $scope.bars.length; barIndex++) {
+				if ($scope.bars[barIndex].format != "---°") {
+					$scope.bars[barIndex].format =
+						parseInt(pilotDisplayedTemperaturesFromCelsius($scope.bars[barIndex].value)) + "°";
+					changed++;
+				}
+			}
+			if ($scope.oilTemperatureCelsius !== undefined) {
+				$scope.oilTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius($scope.oilTemperatureCelsius));
+				changed++;
+			}
+			if ($scope.outsideTemperatureCelsius !== undefined) {
+				$scope.outsideTemperature = parseInt(pilotDisplayedTemperaturesFromCelsius($scope.outsideTemperatureCelsius));
+				changed++;
+			}
+		}
 		for (var index = 0; index < $scope.bars.length; index++) {
 			if (emsData.detail.hasOwnProperty($scope.bars[index].sensor)) {
 				var newValue = emsData.detail[$scope.bars[index].sensor];
@@ -206,14 +229,16 @@ function EmsegtCtrl($rootScope, $scope, $state, $http, $interval) {
 		}
 
 		if (emsData.detail.hasOwnProperty("oiltemperature")) {
-			const updatedValue = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["oiltemperature"]));
+			$scope.oilTemperatureCelsius = emsData.detail["oiltemperature"];
+			const updatedValue = parseInt(pilotDisplayedTemperaturesFromCelsius($scope.oilTemperatureCelsius));
 			if($scope.oilTemperature != updatedValue){
 			$scope.oilTemperature = updatedValue;
 				changed++;
 			}
 		}
 		if (emsData.detail.hasOwnProperty("outsidetemperature")) {
-			const updatedValue = parseInt(pilotDisplayedTemperaturesFromCelsius(emsData.detail["outsidetemperature"]));
+			$scope.outsideTemperatureCelsius = emsData.detail["outsidetemperature"];
+			const updatedValue = parseInt(pilotDisplayedTemperaturesFromCelsius($scope.outsideTemperatureCelsius));
 			if($scope.outsideTemperature != updatedValue){
 			$scope.outsideTemperature = updatedValue;
 				changed++;
