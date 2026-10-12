@@ -53,9 +53,13 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"math"
+	"os"
+	"strconv"
+	"strings"
 	"sync"
 	"time"
 
@@ -115,6 +119,14 @@ type GPRMBData struct {
 	// aircraft happens to be, which is a different angle as soon as it is off
 	// track, and steering to that alone never regains the course line.
 	LegCourse float64
+	// Course of the leg after the active waypoint, degrees true: $PGRMH field
+	// 8, so a receiver can show the turn that is coming.
+	NextLegTrue float64
+	HasNextLeg  bool
+	// Advisory vertical guidance for $PGRMH fields 3 to 5.
+	Vnav vnavResult
+	// Is this the last waypoint of the plan? Decides the VNAV target, section 6.1.
+	IsLastWaypoint bool
 }
 
 type AutopilotStatus struct {
@@ -190,6 +202,14 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilot() {
 					nmeaGPXTE := makeGPXTEString(gprmb)
 					log.Print(nmeaGPXTE)
 					sendNetFLARM(nmeaGPXTE,time.Second, 0)
+
+					// Vertical: baro vertical speed always, and the advisory
+					// descent profile when it is armed and trusted. This is the
+					// only sentence here that carries vertical guidance - plain
+					// NMEA 0183 has no VNAV deviation of its own.
+					nmeaPGRMH := makePGRMHString(pgrmhFromSolution(gprmb))
+					log.Print(nmeaPGRMH)
+					sendNetFLARM(nmeaPGRMH,time.Second, 0)
 				}
 			}
 			autopilotUpdate.SendJSON(autopilotInstance.status)
@@ -346,6 +366,31 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataC
 		}
 		_, legCourse := common.Distance(originLat, originLon, destLat, destLon)
 		gprmb.LegCourse = legCourse
+
+		// The leg after this one, if the plan has another waypoint.
+		if nearestWaypointIndex+1 < len(autopilotInstance.waypointsData) {
+			next := autopilotInstance.waypointsData[nearestWaypointIndex+1]
+			_, nextCourse := common.Distance(destLat, destLon, float64(next.Lat), float64(next.Lon))
+			gprmb.NextLegTrue = nextCourse
+			gprmb.HasNextLeg = true
+		}
+		gprmb.IsLastWaypoint = gprmb.HasNextLeg == false
+
+		// VNAV rides along with the other autopilot sentences: no switch of its
+		// own, active whenever the autopilot is. The glide profile comes from
+		// the aircraft, not the installation.
+		glide := readGlideProfile()
+		gprmb.Vnav = vnavSolution(vnavInputs{
+			AltitudeFt:        float64(mySituation.GPSAltitudeMSL),
+			DistNM:            gprmb.Distance,
+			ClosingKt:         gprmb.Knots,
+			TargetEleFt:       float64(autopilotInstance.waypointsData[nearestWaypointIndex].Ele),
+			IsLastWaypoint:    gprmb.IsLastWaypoint,
+			VerticalAccuracyM: float64(mySituation.GPSVerticalAccuracy),
+			AngleDeg:          glide.DescentAngleDeg,
+			ArrivalAglFt:      glide.ArrivalAglFt,
+			ArrivalOffsetNM:   glide.ArrivalOffsetNM,
+		})
 		gprmb.XTRKDistance = crossTrackNM(aircraftLat, aircraftLon, originLat, originLon, destLat, destLon)
 
 		// Right of course means steer left to regain it.
@@ -398,6 +443,331 @@ func (autopilotInstance *AutopilotStratuxPlugin) ShutdownFunc() bool {
 	return true
 }
 
+
+/*
+	The aircraft's glide profile, from settings/aircraft.json.
+
+	It lives with the aircraft rather than in stratux.conf because it describes
+	the airframe, not the installation: the same RB-01 moved to another aircraft
+	needs another descent angle, and the Aircraft plate already edits this file.
+
+	The file is owned by the web UI and may be edited while flying, so it is
+	re-read when its timestamp changes. A missing file, a missing "glide" block
+	or a value out of range falls back to the defaults below - this is advisory
+	guidance, and it is better to show a standard 3 degree path than none.
+*/
+const aircraftFileName = "settings/aircraft.json"
+
+const (
+	GLIDE_DEFAULT_ANGLE_DEG       = 3.0
+	GLIDE_DEFAULT_ARRIVAL_AGL_FT  = 1000.0
+	GLIDE_DEFAULT_ARRIVAL_OFFSET  = 2.0
+	GLIDE_MIN_ANGLE_DEG           = 1.0
+	GLIDE_MAX_ANGLE_DEG           = 9.0
+)
+
+// The resolved profile the autopilot flies.
+type glideProfile struct {
+	DescentAngleDeg float64
+	ArrivalAglFt    float64
+	ArrivalOffsetNM float64
+}
+
+// What the file actually carries. The pointers matter: an absent number
+// unmarshals to 0, and 0 is a legitimate arrivalAglFt ("cross the threshold at
+// field elevation"), so absent and zero must not look the same.
+type glideFileBlock struct {
+	DescentAngleDeg *float64 `json:"descentAngleDeg"`
+	ArrivalAglFt    *float64 `json:"arrivalAglFt"`
+	ArrivalOffsetNM *float64 `json:"arrivalOffsetNM"`
+}
+
+type aircraftFile struct {
+	Glide *glideFileBlock `json:"glide"`
+}
+
+// resolve fills in a default for every field the file leaves out or sets out
+// of range, so a half-written block still flies a sane path.
+func (b glideFileBlock) resolve() glideProfile {
+	g := glideDefaults()
+	if b.DescentAngleDeg != nil && *b.DescentAngleDeg >= GLIDE_MIN_ANGLE_DEG && *b.DescentAngleDeg <= GLIDE_MAX_ANGLE_DEG {
+		g.DescentAngleDeg = *b.DescentAngleDeg
+	}
+	if b.ArrivalAglFt != nil && *b.ArrivalAglFt >= 0 && *b.ArrivalAglFt <= 10000 {
+		g.ArrivalAglFt = *b.ArrivalAglFt
+	}
+	if b.ArrivalOffsetNM != nil && *b.ArrivalOffsetNM >= 0 && *b.ArrivalOffsetNM <= 50 {
+		g.ArrivalOffsetNM = *b.ArrivalOffsetNM
+	}
+	return g
+}
+
+var (
+	glideCache      = glideProfile{GLIDE_DEFAULT_ANGLE_DEG, GLIDE_DEFAULT_ARRIVAL_AGL_FT, GLIDE_DEFAULT_ARRIVAL_OFFSET}
+	glideCacheStamp time.Time
+	glideCacheMutex sync.Mutex
+	glideWarned     bool
+)
+
+// glideDefaults is what an absent or unusable file falls back to.
+func glideDefaults() glideProfile {
+	return glideProfile{GLIDE_DEFAULT_ANGLE_DEG, GLIDE_DEFAULT_ARRIVAL_AGL_FT, GLIDE_DEFAULT_ARRIVAL_OFFSET}
+}
+
+func readGlideProfile() glideProfile {
+	path := STRATUX_WWW_DIR + aircraftFileName
+	glideCacheMutex.Lock()
+	defer glideCacheMutex.Unlock()
+
+	info, err := os.Stat(path)
+	if err != nil {
+		return glideDefaults() // no aircraft file: standard profile
+	}
+	if info.ModTime().Equal(glideCacheStamp) {
+		return glideCache // unchanged since the last read
+	}
+
+	parsed := glideDefaults()
+	data, err := os.ReadFile(path)
+	if err == nil {
+		var file aircraftFile
+		if err = json.Unmarshal(data, &file); err == nil {
+			if file.Glide != nil {
+				parsed = file.Glide.resolve()
+			}
+			glideWarned = false
+		}
+	}
+	if err != nil && glideWarned == false {
+		// Once per bad edit, not once a second.
+		log.Printf("autopilot: can't read the glide profile from %s, using %.1f degrees: %s\n",
+			path, parsed.DescentAngleDeg, err.Error())
+		glideWarned = true
+	}
+	glideCache = parsed
+	glideCacheStamp = info.ModTime()
+	return parsed
+}
+
+/*
+	Advisory vertical navigation, for $PGRMH fields 3 to 5.
+
+	The model is specified in docs/integration/nmea-navigation-output.md
+	section 6: a straight descent path at the aircraft glide angle rising back
+	from a target point, with the aircraft's height above that path reported as
+	field 3 and the vertical speeds that would reach it as fields 4 and 5.
+
+	It is ADVISORY and DESCENT ONLY, and gives no terrain or obstacle protection
+	whatsoever. It has no enable of its own: like every other autopilot
+	sentence it is live whenever the autopilot is, and stays silent by sending
+	null fields when a leg carries no altitude to descend to. Every gate in section 6.3 exists to keep a misleading
+	cue off the panel rather than to refine one, so each returns null fields
+	instead of a best guess.
+*/
+type vnavInputs struct {
+	AltitudeFt        float64 // GPSAltitudeMSL
+	DistNM            float64 // aircraft -> TO waypoint
+	ClosingKt         float64 // ground speed along the bearing
+	TargetEleFt       float64 // Waypoint.Ele; 0 means "no altitude", section 6.1
+	IsLastWaypoint    bool
+	VerticalAccuracyM float64
+	AngleDeg          float64
+	ArrivalAglFt      float64
+	ArrivalOffsetNM   float64
+}
+
+type vnavResult struct {
+	Active        bool     // fields 3 and 4 are available
+	ErrorFt       *float64 // field 3, + above the profile
+	VsToTargetFpm *float64 // field 4
+	VsToWptFpm    *float64 // field 5, independent of the profile
+}
+
+// Minimum closing speed and worst vertical accuracy the profile is trusted at.
+const (
+	VNAV_MIN_CLOSING_KT = 30.0
+	VNAV_MAX_VFOM_M     = 30.0
+	VNAV_MIN_ABOVE_FT   = 100.0 // below this the descent is already over
+	VNAV_ARM_SECONDS    = 60.0  // show the cue a minute before top of descent
+	VNAV_FEET_PER_NM    = 6076.12
+)
+
+func vnavSolution(in vnavInputs) vnavResult {
+	var out vnavResult
+	// Section 6.1: Ele 0 is "no altitude", not sea level. A GPX point with no
+	// <ele> imports as 0, and descending to it would fly into the ground. That
+	// check is what keeps an always-on VNAV quiet on a plan without altitudes.
+	if in.TargetEleFt == 0 {
+		return out
+	}
+	targetAlt := in.TargetEleFt
+	offsetNM := 0.0
+	if in.IsLastWaypoint {
+		targetAlt = targetAlt + in.ArrivalAglFt
+		offsetNM = in.ArrivalOffsetNM
+	}
+	// Descent only.
+	if in.AltitudeFt <= targetAlt+VNAV_MIN_ABOVE_FT {
+		return out
+	}
+	if in.ClosingKt < VNAV_MIN_CLOSING_KT {
+		return out
+	}
+
+	// Field 5 asks only how fast to descend to reach the target altitude at the
+	// waypoint itself, so it needs no profile and survives the gates below.
+	if in.DistNM > 0 {
+		minutes := in.DistNM / in.ClosingKt * 60.0
+		if minutes > 0 {
+			vs := (targetAlt - in.AltitudeFt) / minutes
+			out.VsToWptFpm = &vs
+		}
+	}
+
+	if in.VerticalAccuracyM > VNAV_MAX_VFOM_M {
+		return out
+	}
+	k := VNAV_FEET_PER_NM * math.Tan(common.Radians(in.AngleDeg))
+	if k <= 0 {
+		return out
+	}
+	distToTarget := in.DistNM - offsetNM
+	if distToTarget <= 0 {
+		return out // past the target point
+	}
+	// Section 6.3 item 3: hold the cue off until a minute before top of
+	// descent, because before that the path is far overhead and the indication
+	// would read "fly up" on a descent-only profile.
+	distToTopOfDescent := (in.AltitudeFt - targetAlt) / k
+	secondsToTopOfDescent := (distToTarget - distToTopOfDescent) / in.ClosingKt * 3600.0
+	if secondsToTopOfDescent > VNAV_ARM_SECONDS {
+		return out
+	}
+
+	profileAlt := targetAlt + distToTarget*k
+	errorFt := in.AltitudeFt - profileAlt
+	minutesToTarget := distToTarget / in.ClosingKt * 60.0
+	if minutesToTarget <= 0 {
+		return out
+	}
+	vsToTarget := (targetAlt - in.AltitudeFt) / minutesToTarget
+
+	out.Active = true
+	out.ErrorFt = &errorFt
+	out.VsToTargetFpm = &vsToTarget
+	return out
+}
+
+/*
+	$PGRMH - Aviation Height and VNAV Data.
+
+	Wire format, rounding, saturation and null rules are specified in
+	docs/integration/pgrmh-format.md; this is that file's reference encoder, and
+	the golden vectors in its section 5 are the unit tests in autopilot_test.go.
+
+	A nil pointer is a null field, which means "not available" and is NOT the
+	same as zero: 0 is level flight in field 2, on-profile in field 3 and north
+	in field 7.
+*/
+type PGRMHData struct {
+	Valid         bool     // field 1
+	VertSpeedFpm  *float64 // field 2
+	VnavErrorFt   *float64 // field 3
+	VsToTargetFpm *float64 // field 4
+	VsToWptFpm    *float64 // field 5
+	HatFt         *float64 // field 6
+	DtkTrue       *float64 // field 7
+	NextLegTrue   *float64 // field 8
+}
+
+// Round half away from zero, saturate, then int: never "-0", which is what
+// formatting a float with %.0f would produce from -0.4.
+func pgrmhInt(v *float64, limit float64) string {
+	if v == nil {
+		return ""
+	}
+	return strconv.Itoa(int(math.Max(-limit, math.Min(limit, math.Round(*v)))))
+}
+
+// Whole degrees in [0, 360): 359.6 -> 0, -10 -> 350. 360 is never sent.
+func pgrmhDeg(v *float64) string {
+	if v == nil {
+		return ""
+	}
+	d := int(math.Round(*v)) % 360
+	if d < 0 {
+		d += 360
+	}
+	return strconv.Itoa(d)
+}
+
+// Rounded down to the next lowest 100 ft.
+func pgrmhHat(v *float64) string {
+	if v == nil {
+		return ""
+	}
+	return strconv.Itoa(int(math.Floor(math.Max(0, *v)/100) * 100))
+}
+
+/*
+	Turn the navigation solution into the $PGRMH fields.
+
+	Null means "not available" and is never a stand-in for zero, so each source
+	is checked before its pointer is set: docs/integration/pgrmh-format.md
+	section 3, and section 5.1 of the navigation-output document for the source
+	of each field.
+*/
+func pgrmhFromSolution(data GPRMBData) PGRMHData {
+	out := PGRMHData{Valid: data.Status == GPRMB_STATUS_OK}
+	if out.Valid == false {
+		return out // status V: every other field stays null
+	}
+
+	// Field 2. GPSVerticalSpeed is never assigned in this fork, so the baro is
+	// the only vertical speed source, and only while the sensor is valid.
+	if isTempPressValid() {
+		vs := float64(mySituation.BaroVerticalSpeed)
+		out.VertSpeedFpm = &vs
+	}
+
+	// Fields 3 to 5 from the advisory profile. Field 3 null implies field 4
+	// null, which vnavSolution already guarantees by setting them together.
+	out.VnavErrorFt = data.Vnav.ErrorFt
+	out.VsToTargetFpm = data.Vnav.VsToTargetFpm
+	out.VsToWptFpm = data.Vnav.VsToWptFpm
+
+	// Field 6 is always null: there is no terrain model in the daemon.
+
+	// Field 7 is the desired track, and must agree with $GPBOD field 1 of the
+	// same burst - both read LegCourse.
+	dtk := data.LegCourse
+	out.DtkTrue = &dtk
+
+	// Field 8 only exists while a leg follows the active waypoint.
+	if data.HasNextLeg {
+		next := data.NextLegTrue
+		out.NextLegTrue = &next
+	}
+	return out
+}
+
+func makePGRMHString(d PGRMHData) string {
+	// Status V means the whole sentence is unusable, so every other field is
+	// null - the commas stay, trailing ones included.
+	msg := "$PGRMH,V,,,,,,,"
+	if d.Valid {
+		msg = "$PGRMH,A," + strings.Join([]string{
+			pgrmhInt(d.VertSpeedFpm, 9999),
+			pgrmhInt(d.VnavErrorFt, 999),
+			pgrmhInt(d.VsToTargetFpm, 9999),
+			pgrmhInt(d.VsToWptFpm, 9999),
+			pgrmhHat(d.HatFt),
+			pgrmhDeg(d.DtkTrue),
+			pgrmhDeg(d.NextLegTrue),
+		}, ",")
+	}
+	return appendNmeaChecksum(msg) + "\r\n"
+}
 
 /*
 	How far the aircraft is from the course line it is supposed to be on.

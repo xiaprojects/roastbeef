@@ -22,6 +22,10 @@ hardware integration). User-facing how-tos live in the
     mode, traffic lifecycle, ForeFlight specifics.
   - [integration/other-transports.md](integration/other-transports.md) — FLARM/NMEA
     (TCP/UDP/serial/BLE), X-Plane, Cursor-on-Target.
+  - [integration/nmea-navigation-output.md](integration/nmea-navigation-output.md) — spec
+    (proposed): autopilot NMEA for an external HSI (`$GPRMB`/`$GPBOD`/`$PGRMH` VNAV).
+  - [integration/pgrmh-format.md](integration/pgrmh-format.md) — `$PGRMH` wire format:
+    fields, encoding, null rules, test vectors, reference encoder.
 - **[http-api.md](http-api.md)** — the full HTTP + WebSocket JSON API.
 - **[settings-reference.md](settings-reference.md)** — every `stratux.conf` / `/getSettings`
   field.

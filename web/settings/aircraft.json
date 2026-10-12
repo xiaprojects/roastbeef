@@ -20,6 +20,11 @@
         },
         "temperatures": "°F"
     },
+    "glide": {
+        "descentAngleDeg": 3.0,
+        "arrivalAglFt": 1000,
+        "arrivalOffsetNM": 2.0
+    },
     "GPSGroundSpeed": {
         "startSpeedDegree": 0,
         "endSpeedDegree": 350,

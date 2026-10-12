@@ -9,7 +9,14 @@ several other transports, and accepts two inbound feeds. Output routing is gover
 
 Stratux produces standard FLARM/NMEA sentences — `$PFLAA` and `$PFLAU` (traffic), `$GPRMC`,
 `$GPGGA`, `$GPGSA` (position/fix), and `$PGRMZ` (pressure altitude). Generators are in
-`main/flarm-nmea.go`. The same NMEA stream is offered four ways:
+`main/flarm-nmea.go`. While the internal autopilot is active, `main/autopilot.go` adds the
+navigation sentences (`$GPRMB`, `$GPAPB`, `$GPBOD`, `$GPXTE`, `$PGRMH`). `$PGRMH` carries the
+vertical picture — baro vertical speed always, and the advisory descent profile from the
+aircraft's `glide` block — which plain NMEA 0183 has no sentence for; its wire format is
+[pgrmh-format.md](pgrmh-format.md) and its values
+[nmea-navigation-output.md](nmea-navigation-output.md) §5.1 and §6. The golden vectors from
+that format document are the unit tests in `main/autopilot_test.go`. The same NMEA stream is offered four
+ways:
 
 - **UDP `:2000`** — pushed to DHCP-lease clients (one of the three default `NetworkOutputs`).
   An EFB on the Stratux Wi-Fi receives FLARM NMEA here automatically, in parallel with GDL90
