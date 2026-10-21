@@ -39,7 +39,10 @@
 	A flight opens after 5 consecutive seconds above the threshold (a GPS speed glitch on
 	the apron does not open one) and closes after 60 consecutive seconds below it (a
 	touch-and-go or a headwind slow-down does not split it). Seconds without a valid GPS
-	fix are neither counted nor do they advance either timer.
+	fix are neither counted nor do they advance either timer. Only a fix accurate enough
+	to trust its ground speed (isGPSGroundTrackValid, under 30 m) builds up the takeoff
+	debounce, and a leg with less than a minute above the threshold is dropped when it
+	closes: a GPS wandering in a hangar or a high-speed taxi is not a flight.
 
 	File format, hand-editable:
 	[
@@ -77,6 +80,7 @@ const (
 	hobbsSpeedThresholdKmh  = 50.0
 	hobbsTakeoffDebounceSec = 5
 	hobbsLandingDebounceSec = 60
+	hobbsMinimumLegSec      = 60
 	hobbsSaveIntervalSec    = 5 * 60
 	hobbsFileName           = "settings/hobbsmeter.json"
 )
@@ -97,6 +101,7 @@ type HobbsEntry struct {
 // hobbsSample is one second of GPS, already in the units the meter works with.
 type hobbsSample struct {
 	Valid     bool
+	Accurate  bool // the ground speed can be trusted to open a flight
 	Time      time.Time
 	SpeedKmh  float64
 	Lat       float64
@@ -197,6 +202,7 @@ func (hobbsInstance *HobbsMeterStratuxPlugin) sampleSituation() hobbsSample {
 	if !s.Valid {
 		return s
 	}
+	s.Accurate = isGPSGroundTrackValid()
 	if isGPSClockValid() {
 		s.Time = mySituation.GPSTime.UTC()
 	} else {
@@ -211,12 +217,20 @@ func (hobbsInstance *HobbsMeterStratuxPlugin) sampleSituation() hobbsSample {
 
 // update feeds one second of GPS into the flight state machine. It touches no globals
 // so it can be driven by the unit test. Returns true when a flight has just closed,
-// so the caller can save without waiting for the periodic flush.
+// or a leg too short to be one has just been dropped, so the caller can save without
+// waiting for the periodic flush.
 func (hobbsInstance *HobbsMeterStratuxPlugin) update(s hobbsSample) bool {
 	if !s.Valid {
 		return false
 	}
 	if s.SpeedKmh > hobbsSpeedThresholdKmh {
+		if !hobbsInstance.flying && !s.Accurate {
+			// A fix too poor to trust its speed (in a hangar, at a cold start) does
+			// not count towards a takeoff and restarts the debounce. Once flying,
+			// a degraded fix still counts: the aircraft has not stopped.
+			hobbsInstance.above = 0
+			return false
+		}
 		hobbsInstance.below = 0
 		hobbsInstance.above++
 		if !hobbsInstance.flying {
@@ -262,6 +276,11 @@ func (hobbsInstance *HobbsMeterStratuxPlugin) update(s hobbsSample) bool {
 	// Landed.
 	hobbsInstance.flying = false
 	hobbsInstance.below = 0
+	if hobbsInstance.legSeconds < hobbsMinimumLegSec {
+		// Under a minute above the threshold is not a flight: the leg leaves the
+		// log, which is saved again in case the open leg was already flushed.
+		hobbsInstance.entries = hobbsInstance.entries[:len(hobbsInstance.entries)-1]
+	}
 	hobbsInstance.legSeconds = 0
 	hobbsInstance.dirty = true
 	return true

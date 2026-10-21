@@ -37,12 +37,23 @@ func (f *hobbsFlight) at() time.Time {
 	return hobbsT0.Add(time.Duration(f.second) * time.Second)
 }
 
-// run feeds `seconds` samples at the given speed; lat/lon/alt encode the second so a
-// test can tell which sample a field was taken from.
+// run feeds `seconds` samples at the given speed, from a fix that is accurate whenever
+// it is valid; lat/lon/alt encode the second so a test can tell which sample a field
+// was taken from.
 func (f *hobbsFlight) run(seconds int, speedKmh float64, valid bool) {
+	f.feed(seconds, speedKmh, valid, valid)
+}
+
+// runPoorFix feeds valid samples whose accuracy is too poor to trust the ground speed.
+func (f *hobbsFlight) runPoorFix(seconds int, speedKmh float64) {
+	f.feed(seconds, speedKmh, true, false)
+}
+
+func (f *hobbsFlight) feed(seconds int, speedKmh float64, valid bool, accurate bool) {
 	for i := 0; i < seconds; i++ {
 		s := hobbsSample{
 			Valid:     valid,
+			Accurate:  accurate,
 			Time:      f.at(),
 			SpeedKmh:  speedKmh,
 			Lat:       45 + float64(f.second)/1e6,
@@ -192,6 +203,65 @@ func TestHobbsInvalidFixIsIgnored(t *testing.T) {
 	g.run(60, 100, false)
 	if len(g.meter.entries) != 0 {
 		t.Fatalf("invalid samples opened a flight")
+	}
+}
+
+// A fix too poor to trust its ground speed never opens a flight, however long it
+// reports a speed above the threshold, and one such second in the middle of a takeoff
+// restarts the debounce. (I-RVDX, 2026-10-17 16:49Z: the RB-01 powered up in the
+// hangar logged a 0-minute flight climbing from 839 m to 2492 m.)
+func TestHobbsPoorFixDoesNotTakeOff(t *testing.T) {
+	f := newHobbsFlight()
+	f.runPoorFix(600, 80)
+	if len(f.meter.entries) != 0 || f.meter.flying {
+		t.Fatalf("poor fix opened a flight: entries=%d flying=%v", len(f.meter.entries), f.meter.flying)
+	}
+
+	g := newHobbsFlight()
+	g.run(hobbsTakeoffDebounceSec-1, 80, true)
+	g.runPoorFix(1, 80)
+	g.run(hobbsTakeoffDebounceSec-1, 80, true)
+	if len(g.meter.entries) != 0 || g.meter.flying {
+		t.Fatalf("a poor second did not restart the takeoff debounce: entries=%d flying=%v", len(g.meter.entries), g.meter.flying)
+	}
+	g.run(1, 80, true)
+	if !g.meter.flying {
+		t.Fatalf("no takeoff after %d accurate seconds", hobbsTakeoffDebounceSec)
+	}
+}
+
+// Once flying, a fix whose accuracy degrades (a manoeuvre, a shadowed antenna) still
+// counts: the flight neither stops counting nor closes.
+func TestHobbsPoorFixInFlightStillCounts(t *testing.T) {
+	f := newHobbsFlight()
+	f.run(60, 150, true)
+	f.runPoorFix(120, 150)
+	f.run(60, 150, true)
+	if !f.meter.flying || len(f.meter.entries) != 1 || f.meter.entries[0].HobbsTimeMinutes != 4 {
+		t.Fatalf("flying=%v entries=%d minutes=%d, want one flight of 4 minutes still open",
+			f.meter.flying, len(f.meter.entries), f.meter.entries[0].HobbsTimeMinutes)
+	}
+}
+
+// A leg with less than a minute above the threshold (a high-speed taxi, a GPS that
+// wandered) is dropped when it closes and reported like a landing, so the caller saves
+// the log in case the open leg was flushed; a leg of exactly one minute is a flight.
+func TestHobbsLegUnderAMinuteIsDropped(t *testing.T) {
+	f := newHobbsFlight()
+	f.run(hobbsMinimumLegSec-1, 80, true)
+	f.meter.dirty = false
+	f.run(hobbsLandingDebounceSec, 0, true)
+	if len(f.meter.entries) != 0 || f.meter.flying || f.meter.totalMinutes() != 0 {
+		t.Fatalf("short leg kept: entries=%d flying=%v minutes=%d", len(f.meter.entries), f.meter.flying, f.meter.totalMinutes())
+	}
+	if f.landed != 1 || !f.meter.dirty {
+		t.Fatalf("landed=%d dirty=%v, want the drop reported once and the log dirty", f.landed, f.meter.dirty)
+	}
+
+	f.run(hobbsMinimumLegSec, 80, true)
+	f.run(hobbsLandingDebounceSec, 0, true)
+	if len(f.meter.entries) != 1 || f.meter.entries[0].HobbsTimeMinutes != 1 {
+		t.Fatalf("one-minute leg: entries=%d, want 1 flight of 1 minute", len(f.meter.entries))
 	}
 }
 
