@@ -112,8 +112,8 @@ func dlac_decode(data []byte, data_len uint32) string {
 }
 
 // Decodes the time format and aligns 'FISB_data' accordingly.
-//TODO: Make a new "FISB Time" structure that also encodes the type of timestamp received.
-//TODO: pass up error.
+// TODO: Make a new "FISB Time" structure that also encodes the type of timestamp received.
+// TODO: pass up error.
 func (f *UATFrame) decodeTimeFormat() {
 	if len(f.Raw_data) < 3 {
 		return // Can't determine time format.
@@ -243,7 +243,7 @@ func airmetLatLng(lat_raw, lng_raw int32, alt bool) (float64, float64) {
 	return lat, lng
 }
 
-//TODO: Ignoring flags (segmentation, etc.)
+// TODO: Ignoring flags (segmentation, etc.)
 // Aero_FISB_ProdDef_Rev4.pdf
 // Decode product IDs 8-13.
 func (f *UATFrame) decodeAirmet() {
@@ -654,7 +654,7 @@ func New(buf string) (*UATMsg, error) {
 		// dump978 can emit a truncated frame; pad it to the full uplink length.
 		difference := UPLINK_FRAME_DATA_BYTES - msglen
 		//s = append(s,strings.Repeat("00",difference))
-		s = s + strings.Repeat("00",difference)
+		s = s + strings.Repeat("00", difference)
 		msglen = len(s) / 2
 	}
 
