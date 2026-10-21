@@ -1,0 +1,24 @@
+[Unit]
+Description=Unblock rfkill soft block on Wi-Fi and Bluetooth
+Documentation=man:rfkill(8)
+ConditionPathExists=/dev/rfkill
+# systemd-rfkill restores the saved soft-block state when the rfkill device
+# appears, which is what leaves the radios blocked after a boot. Pull it in
+# and order after it, so the restore happens first and this unit has the last
+# word; it then saves the unblocked state for the next boot.
+Wants=systemd-rfkill.service
+After=systemd-rfkill.service
+# The radios must be live before anything tries to use them.
+Before=NetworkManager.service bluetooth.service accesspoint.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+# 0 = Wireless LAN (phy0), 1 = Bluetooth (hci0).
+# "-" so a device that is not registered yet does not fail the unit:
+# rfkill exits 1 on an unknown identifier.
+ExecStart=-/usr/sbin/rfkill unblock 0
+ExecStart=-/usr/sbin/rfkill unblock 1
+
+[Install]
+WantedBy=multi-user.target

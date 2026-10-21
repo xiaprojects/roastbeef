@@ -1,0 +1,80 @@
+name: Problem report
+description: A defect in the software, the image, or the documentation. Fields marked * feed the problem-report log (docs/certification/scmp.md).
+labels: ["problem-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. The fields below are what the change-control process needs to classify and trace the problem.
+        For questions or ideas, use Discussions or Discord instead.
+  - type: input
+    id: version
+    attributes:
+      label: Version found *
+      description: As shown on the RB-01 OTA screen or in `/getStatus` (`Version` and `Build`). A build ending in `-dirty` was made from a modified tree.
+      placeholder: "2.0-pre5 / 746d1867…"
+    validations:
+      required: true
+  - type: dropdown
+    id: function
+    attributes:
+      label: Affected function *
+      options:
+        - Attitude / six-pack instruments (PFD)
+        - Alerts
+        - Traffic (ADS-B / UAT / OGN / FLARM / AIS)
+        - EMS (engine)
+        - Synthetic vision / HSI / VOR / map / weather
+        - Autopilot guidance output
+        - GPIO switchboard
+        - GPS
+        - Sensors (baro / IMU / magnetometer)
+        - Datalog / charts / export
+        - Radio / checklist / timers / camera / voice
+        - OTA / addons / bridge
+        - Network / Wi-Fi / GDL90 / NMEA output
+        - Legacy web UI
+        - Build / image / packaging
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity *
+      description: Worst credible effect on the pilot, assuming the aircraft's required instruments remain installed.
+      options:
+        - "1 - Misleading or missing safety-relevant information (attitude, altitude, alert, traffic)"
+        - "2 - Function lost or degraded, pilot can notice"
+        - "3 - Cosmetic, non-safety function, or workaround exists"
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety-related
+      options:
+        - label: This problem could show wrong flight, engine or traffic data without a flag (hazardously misleading information).
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened, and what did you expect? *
+      description: Steps to reproduce if you have them. Attach the flight log (`/logs/`) or a screenshot when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Hardware and configuration
+      description: Board (Pi 4/5), display, SDR(s), GPS type, sensors, power supply, EFB app if relevant.
+  - type: input
+    id: fixed
+    attributes:
+      label: Version fixed
+      description: Filled in by the maintainer when the fix is released.
+  - type: textarea
+    id: rootcause
+    attributes:
+      label: Root cause
+      description: Filled in by the maintainer. One or two sentences, plus the commit that fixed it.

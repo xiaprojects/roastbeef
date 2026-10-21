@@ -14,6 +14,25 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # Static analysis and Go unit tests, run inside the same pinned build container
+  # as the package build (see `make check` and docs/certification/roadmap.md).
+  check:
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update submodule
+        run: git submodule update --init --recursive
+
+      - name: make check
+        run: ./docker_run.sh "cd data && make check"
+
+  # The RB-01 HMI suite (test/display/) runs in display-tests.yml, path-filtered
+  # because it takes the best part of an hour.
+
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on

@@ -168,8 +168,9 @@ systemctl disable cloud-init-network.service
 systemctl disable cloud-config.service
 # Trixie will use directly Network manager
 systemctl disable dnsmasq.service
-# In case you need to manually enable the radio with
-# rfkill unblock 0
+# The radios are unblocked at boot by rfkill-unblock.service (enabled below).
+# If the saved rfkill state still wins the race on your hardware, keep
+# systemd-rfkill from restoring it at all:
 # systemctl mask systemd-rfkill
 
 # Disable swap and others
@@ -181,6 +182,8 @@ systemctl stop systemd-zram-setup@zram0.service
 zramctl --reset /dev/zram0
 rm /var/swap
 
+# Wi-Fi and Bluetooth: clear the rfkill soft block left over from the previous boot
+systemctl enable rfkill-unblock.service
 # RB-Avionics ethernet service
 systemctl enable accesspoint.service
 # RB-01

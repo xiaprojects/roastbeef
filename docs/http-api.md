@@ -66,7 +66,7 @@ Browse and download log files via HTTP. Useful for remote diagnostics without SS
 Lists the SQLite flight logs in `ReplayLogPath` (written when the `ReplayLog` setting is on) as `[{Name, Size, ModTime, Path}]`, with `Path` under `/logs/`.
 
 #### `GET /settings/hobbsmeter.json`
-The GPS Hobbs meter's flight log (`main/hobbsmeter.go`): one entry per flight, a flight being the time the GPS ground speed stays above 50 km/h (opened after 5 s above, closed after 60 s below, so a touch-and-go does not split it). Read-only over HTTP; the file of the same name under `settings/` (the boot partition on RB devices) is hand-editable and is flushed at most every 5 minutes, at landing and at shutdown — this endpoint answers from memory, so it is live and returns `[]` before the first flight, when the file does not exist yet.
+The GPS Hobbs meter's flight log (`main/hobbsmeter.go`): one entry per flight, a flight being the time the GPS ground speed stays above 50 km/h (opened after 5 s above, closed after 60 s below, so a touch-and-go does not split it). Only a fix with a horizontal accuracy under 30 m counts towards opening a flight, and a leg with less than a minute above the threshold is dropped when it closes, so a GPS wandering in a hangar or a high-speed taxi leaves no entry. Read-only over HTTP; the file of the same name under `settings/` (the boot partition on RB devices) is hand-editable and is flushed at most every 5 minutes, at landing and at shutdown — this endpoint answers from memory, so it is live and returns `[]` before the first flight, when the file does not exist yet.
 
 ```json
 [

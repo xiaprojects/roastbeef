@@ -1,0 +1,58 @@
+name: RB-01 display tests
+
+# Drives the real RB-01 HMI in headless Chrome against the fake backend in
+# test/display/. It takes the best part of an hour, so it only runs when the HMI
+# or the tests themselves change, and can always be started by hand.
+on:
+  pull_request:
+    paths:
+      - "web/**"
+      - "test/display/**"
+      - "test-data/flightlog-sample.sqlite"
+      - ".github/workflows/display-tests.yml"
+  push:
+    branches:
+      - master
+    paths:
+      - "web/**"
+      - "test/display/**"
+      - "test-data/flightlog-sample.sqlite"
+      - ".github/workflows/display-tests.yml"
+  workflow_dispatch:
+
+jobs:
+  display:
+    # x64 on purpose: GitHub's Ubuntu image ships Google Chrome and Python 3, so
+    # nothing has to be installed. The ARM runner the build uses would need a
+    # browser install, and Ubuntu's chromium package there is a snap that does
+    # not start headless.
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Optional - the pixel diff falls back to a stdlib PNG decoder without it,
+      # but Pillow makes settle() several times faster.
+      - name: Install Pillow
+        run: python3 -m pip install --quiet pillow
+
+      - name: Chrome and Python versions
+        run: |
+          google-chrome --version
+          python3 --version
+
+      - name: Run the display suite
+        working-directory: test/display
+        run: python3 -u run.py -k
+
+      # The screenshots are the debug output: every plate, every geometry, before
+      # and after each instrument moves. Keep them whether the run passed or not.
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: display-screenshots
+          path: test/display/shots/
+          if-no-files-found: warn
+          retention-days: 14
