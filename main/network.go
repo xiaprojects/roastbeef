@@ -256,13 +256,13 @@ func tcpNMEAOutListener() {
 func tcpNMEAInListener() {
 	ln, err := net.Listen("tcp", ":30011")
 	if err != nil {
-		log.Printf(err.Error())
+		log.Print(err.Error())
 		return
 	}
 	for {
 		conn, err := ln.Accept()
 		if err != nil {
-			log.Printf(err.Error())
+			log.Print(err.Error())
 			continue
 		}
 		go handleNmeaInConnection(conn)

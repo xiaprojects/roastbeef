@@ -79,7 +79,7 @@ func processCotMessage(msg string) {
 	var event CotEvent
 	err := xml.Unmarshal([]byte(msg), &event)
 	if err != nil {
-		log.Printf("Failed to parse COT event: " + msg)
+		log.Print("Failed to parse COT event: " + msg)
 		return
 	}
 	if event.Point.Lat == 0 && event.Point.Lon == 0 {
@@ -140,6 +140,6 @@ func processCotMessage(msg string) {
 
 	if globalSettings.DEBUG {
 		txt, _ := json.Marshal(ti)
-		log.Printf("COT traffic imported: " + string(txt))
+		log.Print("COT traffic imported: " + string(txt))
 	}
 }

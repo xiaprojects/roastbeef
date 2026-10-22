@@ -285,7 +285,6 @@ func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency 
 			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", time.Second, 0)
 			return true
 		}
-		break
 	}
 	return false
 }
@@ -323,7 +322,6 @@ func (radioInstance *RadioStratuxPlugin) radioSetDual(index int, dual bool) bool
 			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", time.Second, 0)
 			return true
 		}
-		break
 	}
 	return false
 }

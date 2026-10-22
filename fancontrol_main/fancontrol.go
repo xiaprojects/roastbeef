@@ -235,9 +235,6 @@ func fanControl() {
 				pidControl.Set(myFanControl.TempTarget)
 		}
 	}
-
-	// Default to "ON" when we bail out
-	pin.DutyCycle(pwmDutyMax, pwmDutyMax)
 }
 
 // Manage by daemon commands or run the daemon
@@ -282,8 +279,6 @@ func Run() (string, error) {
 			return "Daemon was killed", nil
 		}
 	}
-
-	return "", nil
 }
 
 func readSettings() {

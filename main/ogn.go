@@ -100,7 +100,7 @@ func ognListen() {
 				ognIncomingMsgChan <- scanner.Text()
 			}
 			if scanner.Err() != nil {
-				log.Printf("ogn-rx-eu connection lost: " + scanner.Err().Error())
+				log.Print("ogn-rx-eu connection lost: " + scanner.Err().Error())
 			}
 			ognExitChan <- true
 		}()
@@ -140,7 +140,7 @@ func parseOgnMessage(data string, fakeCurrentTime bool) {
 	var msg OgnMessage
 	err := json.Unmarshal([]byte(data), &msg)
 	if err != nil {
-		log.Printf("Invalid Data from OGN: " + data + " -> " + err.Error())
+		log.Print("Invalid Data from OGN: " + data + " -> " + err.Error())
 		return
 	}
 
@@ -170,7 +170,7 @@ func importOgnTrafficMessage(msg OgnMessage, data string, fakeCurrentTime bool) 
 	addressBytes, _ := hex.DecodeString(msg.Addr)
 	addressBytes = append([]byte{0}, addressBytes...) // prepend 0 byte
 	if len(addressBytes) != 4 {
-		log.Printf("Ignoring invalid ogn address: " + msg.Addr)
+		log.Print("Ignoring invalid ogn address: " + msg.Addr)
 		return
 	}
 	address := binary.BigEndian.Uint32(addressBytes)
@@ -342,7 +342,7 @@ func importOgnTrafficMessage(msg OgnMessage, data string, fakeCurrentTime bool) 
 
 	if globalSettings.DEBUG {
 		txt, _ := json.Marshal(ti)
-		log.Printf("OGN traffic imported: " + string(txt))
+		log.Print("OGN traffic imported: " + string(txt))
 	}
 }
 

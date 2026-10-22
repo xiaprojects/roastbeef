@@ -140,7 +140,7 @@ func (tracker *OgnTracker) onNmea(serialPort *serial.Port, nmea []string) bool {
 			return true
 		}
 		// OGN tracker sent us its configuration
-		log.Printf("Received OGN Tracker configuration: " + strings.Join(nmea, ","))
+		log.Print("Received OGN Tracker configuration: " + strings.Join(nmea, ","))
 		oldAddr := globalSettings.OGNAddr
 		for i := 1; i < len(nmea); i++ {
 			kv := strings.SplitN(nmea[i], "=", 2);
@@ -213,7 +213,7 @@ func (tracker *OgnTracker) requestTrackerConfig(serialPort *serial.Port) {
 
 func (tracker *OgnTracker) writeConfigFromSettings(serialPort *serial.Port) bool {
 	cfg := formatOgnTrackerConfigString()
-	log.Printf("Configuring OGN Tracker: " + cfg)
+	log.Print("Configuring OGN Tracker: " + cfg)
 
 	serialPort.Write([]byte(cfg))
 	tracker.requestTrackerConfig(serialPort) // re-read settings from tracker
@@ -243,7 +243,7 @@ func (tracker *GxAirCom) onNmea(serialPort *serial.Port, nmea []string) bool {
 	if nmea[0] == "PGXCF" && nmea[1] == "1" {
 		// $PGXCF,<version>,<Output Serial>,<eMode>,<eOutputVario>,<output Fanet>,<output GPS>,<output FLARM>,<customGPSConfig>,<Aircraft Type (hex)>,<Address Type>,<Address (hex)>,<Pilot Name> 
 		//  0      1         2               3       4              5            6              7                 8                     9              10              11             12
-		log.Printf("Received GxAirCom Tracker configuration: " + strings.Join(nmea, ","))
+		log.Print("Received GxAirCom Tracker configuration: " + strings.Join(nmea, ","))
 		tracker.detected = true
 		tracker.trackerConfig = nmea
 
@@ -323,7 +323,7 @@ func (tracker *GxAirCom) writeConfigFromSettings(serialPort *serial.Port) bool {
 		globalSettings.OGNPilot)
 
 	fullSentence := appendNmeaChecksum(requiredSentence)
-	log.Printf("Configuring GxAirCom Tracker with: " + fullSentence)
+	log.Print("Configuring GxAirCom Tracker with: " + fullSentence)
 	serialPort.Write([]byte(fullSentence + "\r\n")) // Set configuration
 	return true
 }

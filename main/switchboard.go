@@ -119,7 +119,7 @@ func (switchBoard *SwitchBoardStratuxPlugin)forkCommand(msg switchModel, updateI
     go func() { 
         err = cmd.Wait()
 		msg.EpochFinish = time.Now().Unix()
-        log.Println("Command finished with error: %v", err)
+        log.Printf("Command finished with error: %v\n", err)
 		if err != nil {
 			msg.Status = SW_STATUS_FINISH_1
 		} else {

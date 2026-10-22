@@ -92,7 +92,7 @@ func setWifiIPAddress(ip string) {
 			hasChanged = true
 		}
 	} else {
-		log.Printf("Ignoring invalid IP Address: " + ip)
+		log.Print("Ignoring invalid IP Address: " + ip)
 	}
 }
 

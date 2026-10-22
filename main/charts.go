@@ -377,7 +377,6 @@ func (chartsInstance *ChartsStratuxPlugin) ListenerFunc() {
 		EveryMinute = EveryMinute - 1
 	}
 
-	log.Println("Entered ChartsStratuxPlugin done() ...")
 }
 
 func (chartsInstance *ChartsStratuxPlugin) ShutdownFunc() bool {

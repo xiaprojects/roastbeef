@@ -58,7 +58,7 @@ func aisListen() {
 				aisIncomingMsgChan <- scanner.Text()
 			}
 			if scanner.Err() != nil {
-				log.Printf("ais-rx-eu connection lost: " + scanner.Err().Error())
+				log.Print("ais-rx-eu connection lost: " + scanner.Err().Error())
 			}
 			aisExitChan <- true
 		}()
@@ -93,7 +93,7 @@ func parseAisMessage(data string) {
 	if err == nil && msg != nil && msg.Packet != nil {
 		importAISTrafficMessage(msg)
 	} else if err != nil {
-		log.Printf("Invalid Data from AIS: " + err.Error())
+		log.Print("Invalid Data from AIS: " + err.Error())
 	} else {
 		// Multiline sentences will have msg as nill without err
 	}
@@ -229,6 +229,6 @@ func importAISTrafficMessage(msg *aisnmea.VdmPacket) {
 
 	if globalSettings.DEBUG {
 		txt, _ := json.Marshal(ti)
-		log.Printf("AIS traffic imported: " + string(txt))
+		log.Print("AIS traffic imported: " + string(txt))
 	}
 }
