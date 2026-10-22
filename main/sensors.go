@@ -530,6 +530,12 @@ func sensorAttitudeSender() {
 						mySituation.Magnetometer.MagMinZ=mySituation.Magnetometer.Z
 					}
 				}
+				mySituation.MagBody = magBodyField()
+				MagnetometerDataMutex.Unlock()
+			}
+			if !m.MValid {
+				MagnetometerDataMutex.Lock()
+				mySituation.MagBody.Valid = false
 				MagnetometerDataMutex.Unlock()
 			}
 
@@ -766,6 +772,26 @@ func (k *kalmanField) update(s ahrs.AHRSProvider) (field float64, known bool) {
 		s.SetConfig(map[string]float64{"MagField": f, "MagDip": d})
 	}
 	return f, true
+}
+
+// magBodyField puts the smoothed situation vector through RB-01's own compass
+// calibration (envelope + MagSensorQuaternion) into the body frame, scaled to
+// the local field: MagField, else the dipole estimate at the GPS fix, else a
+// nominal 50 uT (the magnitude does not move the heading). The heading Offset
+// is not applied. Call with MagnetometerDataMutex held.
+func magBodyField() MagBodyData {
+	md := mySituation.Magnetometer
+	field := globalSettings.MagField
+	if field <= 0 {
+		field = 50.0
+		if isGPSValid() {
+			field, _ = common.GeomagneticDipole(float64(mySituation.GPSLatitude), float64(mySituation.GPSLongitude))
+		}
+	}
+	x, y, z, ok := common.BodyFieldFromMag(md.X, md.Y, md.Z,
+		md.MagMinX, md.MagMaxX, md.MagMinY, md.MagMaxY, md.MagMinZ, md.MagMaxZ,
+		globalSettings.MagSensorQuaternion, field)
+	return MagBodyData{X: x, Y: y, Z: z, Valid: ok}
 }
 
 // kalmanMagnetometer turns a raw magnetometer sample into what the Kalman
