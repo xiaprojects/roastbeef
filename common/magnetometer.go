@@ -345,6 +345,54 @@ func BodyFLUToFRD(x, y, z float64) (float64, float64, float64) {
 	return x, -y, -z
 }
 
+// magBodyUnit applies the calibration envelope to a raw sample and rotates it
+// into the aircraft body frame FRD (X forward, Y right wing, Z down): first by
+// magQuat into goflying's body frame (X forward, Y left, Z up), so the field
+// shares a frame with the AHRS pitch and roll, then into the frame the
+// tilt-compensation formula is written for. An unset quaternion is treated as
+// the identity. It is the one implementation behind both RB-01's own heading
+// (HeadingFromMagQ) and the field vector handed to an external display
+// (BodyFieldFromMag), so the two cannot disagree.
+func magBodyUnit(
+	magX, magY, magZ float64,
+	minX, maxX float64,
+	minY, maxY float64,
+	minZ, maxZ float64,
+	magQuat [4]float64,
+	normalize bool,
+) (float64, float64, float64) {
+	cx, cy, cz := CalibrateFromMag(magX, magY, magZ,
+		minX, maxX, minY, maxY, minZ, maxZ, normalize)
+	bx, by, bz := cx, cy, cz
+	if QuaternionIsSet(magQuat) {
+		bx, by, bz = QuaternionRotateVector(magQuat, cx, cy, cz)
+	}
+	return BodyFLUToFRD(bx, by, bz)
+}
+
+// BodyFieldFromMag returns the calibrated magnetic field in the aircraft body
+// frame FRD (X forward, Y right wing, Z down), scaled to fieldUT microtesla:
+// what a calibrated magnetometer reports to an EFIS. ok is false while there is
+// no calibration to apply: an unset magQuat (the AHRS was never caged) or an
+// envelope that is empty on some axis (Max <= Min, e.g. right after a reset).
+// The heading Offset is not applied: it corrects RB-01's heading, it is not part
+// of the field.
+func BodyFieldFromMag(
+	magX, magY, magZ float64,
+	minX, maxX float64,
+	minY, maxY float64,
+	minZ, maxZ float64,
+	magQuat [4]float64,
+	fieldUT float64,
+) (bx, by, bz float64, ok bool) {
+	if !QuaternionIsSet(magQuat) || maxX <= minX || maxY <= minY || maxZ <= minZ {
+		return 0, 0, 0, false
+	}
+	bx, by, bz = magBodyUnit(magX, magY, magZ,
+		minX, maxX, minY, maxY, minZ, maxZ, magQuat, true)
+	return bx * fieldUT, by * fieldUT, bz * fieldUT, true
+}
+
 // HeadingFromMagQ computes the smoothed magnetic heading from a raw
 // magnetometer sample.
 //
@@ -371,17 +419,8 @@ func HeadingFromMagQ(
 	lastMagHeading float64,
 ) float64 {
 
-	cx, cy, cz := CalibrateFromMag(magX, magY, magZ,
-		minX, maxX, minY, maxY, minZ, maxZ, normalize)
-
-	// Rotate the field into goflying's body frame, so it shares a frame with
-	// the AHRS pitch and roll used for tilt compensation below, then into the
-	// frame the tilt-compensation formula is written for.
-	bx, by, bz := cx, cy, cz
-	if QuaternionIsSet(magQuat) {
-		bx, by, bz = QuaternionRotateVector(magQuat, cx, cy, cz)
-	}
-	bx, by, bz = BodyFLUToFRD(bx, by, bz)
+	bx, by, bz := magBodyUnit(magX, magY, magZ,
+		minX, maxX, minY, maxY, minZ, maxZ, magQuat, normalize)
 
 	// A dropped AHRS solution leaves the sentinel in the attitude fields.
 	// Fall back to a flat compass rather than tilt-compensating by 3276.7 deg.

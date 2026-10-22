@@ -128,6 +128,13 @@ type SituationData struct {
 	AHRSGyroZ            float64
 	// Magnetometer data to calculate the Mag Offsets
 	Magnetometer         MagnetometerData
+	// MagBody: Magnetometer.X/Y/Z through RB-01's own calibration (envelope,
+	// MagSensorQuaternion, local field), in the body frame, uT. This is the
+	// vector an external display's magnetometer input takes (mag-can-bridge
+	// forwards it to the EFIS unchanged). Valid is false while there is no
+	// calibration or no usable sample. Kept out of MagnetometerData, which is
+	// persisted as globalSettings.MagCalibration.
+	MagBody MagBodyData
 
 	// Airspeed: the pitot sensor (main/sensors.go airspeedSender) or, without
 	// one, an external board over POST /bridge/float.

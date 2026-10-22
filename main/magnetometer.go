@@ -98,6 +98,15 @@ type MagnetometerData struct {
 	Calibrating bool
 }
 
+// MagBodyData is the calibrated magnetometer field in the aircraft body frame
+// (X forward, Y right wing, Z down), in uT; see SituationData.MagBody.
+type MagBodyData struct {
+	X     float64
+	Y     float64
+	Z     float64
+	Valid bool
+}
+
 func (p MagnetometerData) String() string {
 	data, err := json.Marshal(p)
 	if err != nil {

@@ -1947,6 +1947,22 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 							myIMUReader.Close()
 							globalStatus.IMUConnected = false // Force a restart so the AHRS picks it up
 						}
+					case "MagField":
+						// Local field magnitude, uT. 0 restores the dipole
+						// estimate from the GPS position.
+						if f, ok := val.(float64); ok && f >= 0 && f < 100 {
+							globalSettings.MagField = f
+						}
+					case "MagDip":
+						// Local inclination, deg positive down. 0 restores the
+						// dipole estimate.
+						if f, ok := val.(float64); ok && f > -90 && f < 90 {
+							globalSettings.MagDip = f
+						}
+					case "AHRSEngine":
+						if e, ok := val.(string); ok && (e == "simple" || e == "kalman") {
+							globalSettings.AHRSEngine = e
+						}
 					case "MagSensorQuaternion":
 						var q [4]float64
 						if settingsFloatArray(val, q[:]) {
@@ -2630,7 +2646,7 @@ func connectMbTilesArchive(path string) (*sql.DB, map[string]string, error) {
 		if !conn.IsOutdated() {
 			return conn.Conn, conn.Metadata, nil
 		}
-		log.Printf("Reloading MBTiles " + path)
+		log.Print("Reloading MBTiles " + path)
 	}
 
 	conn, err := sql.Open("sqlite3", "file:"+path+"?mode=ro")
