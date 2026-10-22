@@ -47,4 +47,3 @@ var (
 	errConfigWrite  = errors.New("bmp5xx: failed to configure sensor, check connection")
 	errDataRead     = errors.New("bmp5xx: failed to read sensor data")
 )
-

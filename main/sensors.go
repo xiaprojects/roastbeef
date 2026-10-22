@@ -136,31 +136,33 @@ func initPressureSensor(i2cbus embd.I2CBus) (ok bool) {
 	if err != nil {
 		v, err = i2cbus.ReadByteFromReg(0x77, PRESSURE_WHO_AM_I)
 	}
-	if err == nil && (v == bmp388.ChipId || v == bmp388.ChipId390) {
-		log.Printf("BMP-388 detected")
-		bmp, err := sensors.NewBMP388(&i2cbus)
-		if err == nil {
-			myPressureReader = bmp
-			return true
-		}
-	} else {
-		v, err = i2cbus.ReadByteFromReg(0x77, sensors.BME680_REG_CHIP_ID)
-		if err != nil {
-			v, err = i2cbus.ReadByteFromReg(0x76, sensors.BME680_REG_CHIP_ID)
-		}
-		if v == sensors.BME680_CHIP_ID_VAL {
-			// Try BME680 first (new sensor)
-			if bme, err := sensors.NewBME680(&i2cbus, 100*time.Millisecond); err == nil {
-				log.Printf("BME680 detected")
-				myPressureReader = bme
-				return true
-			}
-		} else {
-			log.Printf("using BMP-280")
-			bmp, err := sensors.NewBMP280(&i2cbus, 100*time.Millisecond)
+	if err == nil {
+		if v == bmp388.ChipId || v == bmp388.ChipId390 {
+			log.Printf("BMP-388 detected")
+			bmp, err := sensors.NewBMP388(&i2cbus)
 			if err == nil {
 				myPressureReader = bmp
 				return true
+			}
+		} else {
+			v, err = i2cbus.ReadByteFromReg(0x77, sensors.BME680_REG_CHIP_ID)
+			if err != nil {
+				v, err = i2cbus.ReadByteFromReg(0x76, sensors.BME680_REG_CHIP_ID)
+			}
+			if v == sensors.BME680_CHIP_ID_VAL {
+				// Try BME680 first (new sensor)
+				if bme, err := sensors.NewBME680(&i2cbus, 100*time.Millisecond); err == nil {
+					log.Printf("BME680 detected")
+					myPressureReader = bme
+					return true
+				}
+			} else {
+				log.Printf("using BMP-280")
+				bmp, err := sensors.NewBMP280(&i2cbus, 100*time.Millisecond)
+				if err == nil {
+					myPressureReader = bmp
+					return true
+				}
 			}
 		}
 	} else {

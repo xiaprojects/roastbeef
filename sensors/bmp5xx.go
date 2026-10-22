@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/kidoman/embd"
-	"github.com/stratux/stratux/sensors/bmp5xx"
+	"github.com/xiaprojects/roastbeef/sensors/bmp5xx"
 )
 
 type BMP5XX struct {
