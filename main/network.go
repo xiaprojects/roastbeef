@@ -21,7 +21,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tarm/serial"
+	"github.com/stratux/serial"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
 	"tinygo.org/x/bluetooth"
