@@ -38,7 +38,11 @@ func (m *BMX160) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GA
 	data := new(bmx160.BMX160Data)
 
 	for data.N == 0 && i < 5 {
-		data = <-m.dev.CAvg
+		var ok bool
+		if data, ok = <-m.dev.CAvg; !ok {
+			GAError, MAGError = errIMUClosed, errIMUClosed
+			return
+		}
 		T = data.T.UnixNano()
 		G1 = data.G1
 		G2 = data.G2
@@ -62,7 +66,11 @@ func (m *BMX160) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GA
 // ReadOne returns the most recent time, Gyro X-Y-Z, Accel X-Y-Z, Mag X-Y-Z,
 // error reading Gyro/Accel, and error reading Mag.
 func (m *BMX160) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GAError, MAGError error) {
-	data := <-m.dev.C
+	data, ok := <-m.dev.C
+	if !ok {
+		GAError, MAGError = errIMUClosed, errIMUClosed
+		return
+	}
 	T = data.T.UnixNano()
 	G1 = data.G1
 	G2 = data.G2

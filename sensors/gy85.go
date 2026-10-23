@@ -100,8 +100,10 @@ type GY85Config struct {
 	// selects the lowest available rate >= TargetHz.
 	MagODRHz int
 	// MagOSR1 (8, 4, 2, 1) and MagOSR2 (1, 2, 4, 8) set the on-chip
-	// oversampling and downsampling filters.  Higher values mean less noise
-	// and more current.
+	// filters.  Higher values mean less noise and more current; neither
+	// changes the output rate.  Bench tests posted with the Linux QMC5883P
+	// driver (LKML, May 2026) found OSR1 a low-pass filter and OSR2 an
+	// N-sample average, its noise falling as 1/sqrt(N).
 	MagOSR1, MagOSR2 int
 
 	// I2CSpeedHz is the bus clock, used to reject output rates the bus cannot
@@ -117,7 +119,7 @@ func DefaultGY85Config() GY85Config {
 		AccelRangeG: 8,
 		MagRangeG:   8,
 		MagOSR1:     8,
-		MagOSR2:     2,
+		MagOSR2:     8, // 8-sample average: about half the noise of 2
 		I2CSpeedHz:  100000,
 	}
 }

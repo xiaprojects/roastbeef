@@ -1,6 +1,14 @@
 // Package sensors provides a stratux interface to sensors used for AHRS calculations.
 package sensors
 
+import "errors"
+
+// errIMUClosed is what Read and ReadOne return once Close has stopped a driver
+// that delivers its samples on channels (MPU9250, ICM20948, BMX160): the AHRS
+// goroutine can be waiting in Read when the web UI closes the IMU, and must
+// get an error rather than the nil sample a closed channel yields.
+var errIMUClosed = errors.New("IMU Error: IMU reader is closed")
+
 // IMUReader provides an interface to various Inertial Measurement Unit sensors,
 // such as the InvenSense MPU9150 or MPU9250.  It is a light abstraction on top
 // of the current github.com/westphae/goflying MPU9250 driver so that it can accommodate other types

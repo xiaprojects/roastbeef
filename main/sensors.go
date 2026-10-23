@@ -548,9 +548,11 @@ func sensorAttitudeSender() {
 				m.MValid = false
 			} else {
 				MagnetometerDataMutex.Lock()
-				mySituation.Magnetometer.X = (mySituation.Magnetometer.X*29 + m.M1) / 30
-				mySituation.Magnetometer.Y = (mySituation.Magnetometer.Y*29 + m.M2) / 30
-				mySituation.Magnetometer.Z = (mySituation.Magnetometer.Z*29 + m.M3) / 30
+				magnetometerLpf := 7
+				magnetometerLpfd := magnetometerLpf + 1
+				mySituation.Magnetometer.X = (mySituation.Magnetometer.X*float64(magnetometerLpf) + m.M1) / float64(magnetometerLpfd)
+				mySituation.Magnetometer.Y = (mySituation.Magnetometer.Y*float64(magnetometerLpf) + m.M2) / float64(magnetometerLpfd)
+				mySituation.Magnetometer.Z = (mySituation.Magnetometer.Z*float64(magnetometerLpf) + m.M3) / float64(magnetometerLpfd)
 
 				if(mySituation.Magnetometer.Calibrating == true){
 					if(mySituation.Magnetometer.MagMaxX<mySituation.Magnetometer.X){

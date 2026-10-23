@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"math"
+	"sync"
 	"time"
 
 	"github.com/kidoman/embd"
@@ -77,6 +78,7 @@ type BMX160 struct {
 	CAvg                  <-chan *BMX160Data // Average sensor values (since CAvg last read)
 	CBuf                  <-chan *BMX160Data // Buffer of instantaneous sensor values
 	cClose                chan bool          // Turn off sensor polling
+	closeOnce             sync.Once          // Close stops the read goroutine once
 }
 
 /*
@@ -653,10 +655,12 @@ func (dev *BMX160) readSensors() {
 	}
 }
 
-// Close stops the driver from reading the BMX160.
+// Close stops the driver from reading the BMX160.  Calling it again does
+// nothing: the read goroutine has closed cClose on its way out, so a second
+// send would panic.
 // TODO westphae: need a way to start it going again!
 func (dev *BMX160) Close() {
-	dev.cClose <- true
+	dev.closeOnce.Do(func() { dev.cClose <- true })
 }
 
 // SetSampleRate changes the sampling rate of the BMX160.

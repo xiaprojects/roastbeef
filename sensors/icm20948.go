@@ -52,7 +52,11 @@ func (m *ICM20948) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, 
 	data = new(icm20948.MPUData)
 
 	for data.N == 0 && i < 5 {
-		data = <-m.mpu.CAvg
+		var ok bool
+		if data, ok = <-m.mpu.CAvg; !ok {
+			GAError, MAGError = errIMUClosed, errIMUClosed
+			return
+		}
 		T = data.T.UnixNano()
 		G1 = data.G1
 		G2 = data.G2
@@ -81,7 +85,11 @@ func (m *ICM20948) ReadOne() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float6
 	)
 	data = new(icm20948.MPUData)
 
-	data = <-m.mpu.C
+	var ok bool
+	if data, ok = <-m.mpu.C; !ok {
+		GAError, MAGError = errIMUClosed, errIMUClosed
+		return
+	}
 	T = data.T.UnixNano()
 	G1 = data.G1
 	G2 = data.G2
