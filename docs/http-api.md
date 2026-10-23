@@ -128,10 +128,16 @@ Rebuilds the read-only filesystem partition. Use with caution — intended for r
 Triggers AHRS orientation detection.
 
 #### `POST /calibrateAHRS`
-Runs the AHRS calibration routine.
+Calibrates the gyro zero (`D`): averages the IMU for 5 s at the AHRS rate. Do it at rest with the engine off; the time and IMU die temperature go to `GyroCalibrated`.
 
 #### `POST /cageAHRS`
-Cages the AHRS to the current attitude (sets current orientation as level reference). The resulting quaternion is saved to `SensorQuaternion` in settings.
+Cages the AHRS with the aircraft at rest: averages the IMU for 5 s, re-solves the accelerometer offset of the axis carrying gravity so the corrected reading is 1 g (`AccelOffset`), stores the corrected reading as `C`, and derives `SensorQuaternion` so that this reading is the given attitude.
+
+Optional parameters (query or form), degrees, within ±45:
+- `pitch` — nose up positive, default 0
+- `roll` — right wing down positive, default 0
+
+Without them the current attitude becomes level, as before. A tailwheel aircraft is caged on the ground at its ground attitude, e.g. `POST /cageAHRS?pitch=11&roll=0`; the AHRS then reads 11° parked and 0° in level flight. Use the attitude read from a reference (a certified attitude indicator, or an inclinometer on the longerons): an error in it becomes the same error in flight. Replies `400` when a parameter is not a number within ±45.
 
 #### `POST /resetGMeter`
 Resets the G-meter min/max values.

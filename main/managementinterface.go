@@ -1968,6 +1968,30 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						if settingsFloatArray(val, q[:]) {
 							globalSettings.MagSensorQuaternion = q // read per sample, takes effect at once
 						}
+					case "AccelGain", "AccelOffset":
+						// Accelerometer calibration, applied per sample before
+						// the AHRS. C and SensorQuaternion were derived with the
+						// old values: cage again after changing them.
+						var v [3]float64
+						if !settingsFloatArray(val, v[:]) {
+							log.Printf("handleSettingsSetRequest:%s: want 3 numbers\n", key)
+							continue
+						}
+						ok := true
+						for _, x := range v {
+							if key == "AccelGain" && x != 0 && (x < 0.5 || x > 1.5) || key == "AccelOffset" && math.Abs(x) > 0.5 {
+								ok = false
+							}
+						}
+						if !ok {
+							log.Printf("handleSettingsSetRequest:%s: %v out of range (gain 0.5..1.5 or 0, offset +-0.5 g)\n", key, v)
+							continue
+						}
+						if key == "AccelGain" {
+							globalSettings.AccelGain = v
+						} else {
+							globalSettings.AccelOffset = v
+						}
 					case "MagAxisMappingX", "MagAxisMappingY", "MagAxisMappingZ":
 						var row [3]float64
 						if settingsFloatArray(val, row[:]) {
@@ -2249,7 +2273,23 @@ func handleCageAHRS(w http.ResponseWriter, r *http.Request) {
 	// For an OPTION method request, we return header without processing.
 	// This ensures we are recognized as supporting cross-domain AJAX REST calls.
 	if r.Method == "POST" {
-		CageAHRS()
+		// Optional ?pitch=&roll=: the attitude the aircraft is at, deg (pitch
+		// nose up, roll right wing down), e.g. a tailwheel aircraft on the
+		// ground. Absent means level, as before.
+		var att [2]float64
+		for i, name := range []string{"pitch", "roll"} {
+			v := r.FormValue(name)
+			if v == "" {
+				continue
+			}
+			f, err := strconv.ParseFloat(v, 64)
+			if err != nil || math.IsNaN(f) || math.Abs(f) > 45 {
+				http.Error(w, fmt.Sprintf("%s must be a number of degrees within +-45, got %q", name, v), http.StatusBadRequest)
+				return
+			}
+			att[i] = f
+		}
+		CageAHRSAt(att[0], att[1])
 	}
 }
 

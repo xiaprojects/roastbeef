@@ -1211,7 +1211,9 @@ type settings struct {
 	ClearLogOnStart      bool
 	IMUMapping           [2]int     // Map from aircraft axis to sensor axis: accelerometer
 	SensorQuaternion     [4]float64 // Quaternion mapping from sensor frame to aircraft frame
-	C, D                 [3]float64 // IMU Accel, Gyro zero bias
+	C, D                 [3]float64 // Accelerometer reading at the last cage (after AccelGain/AccelOffset), gyro zero bias
+	AccelGain            [3]float64 // Accelerometer gain per axis, driver frame: corrected = (raw - AccelOffset) / AccelGain; 0 reads as 1
+	AccelOffset          [3]float64 // Accelerometer zero offset per axis, g; the cage re-solves the gravity axis (accelRestOffset)
 	GyroCalibrated       CalibrationRecord // When and at what IMU die temperature D was last calibrated
 	AccelCalibrated      CalibrationRecord // Same for C and SensorQuaternion (the cage)
 	AHRSEngine           string     // "simple" (default; "" reads as simple): goflying Simple AHRS; "kalman": its Kalman filter, which also fuses the magnetometer (newAHRS)
