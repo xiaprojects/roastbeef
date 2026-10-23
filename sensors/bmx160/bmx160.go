@@ -210,6 +210,9 @@ func NewBMX160(i2cbus *embd.I2CBus, sensitivityGyro, sensitivityAccel, sampleRat
 	if err := dev.i2cWrite(BMI160_COMMAND_REG_ADDR, BMI160_SOFT_RESET_CMD); err != nil {
 		return nil, errors.New("Error resetting BMX160")
 	}
+	// The chip ignores commands while the reset completes (1 ms in Bosch's
+	// BMI160 API); without this the next one, accel normal mode, can be lost.
+	time.Sleep(2 * time.Millisecond)
 
 	//set all instruments: accelerometer, gyroscope, and magnetometer into normal power mode
 	if err := dev.i2cWrite(BMI160_COMMAND_REG_ADDR, BMI160_ACCEL_NORMAL_MODE); err != nil {

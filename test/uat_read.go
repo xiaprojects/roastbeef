@@ -11,7 +11,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/stratux/stratux/godump978"
+	"github.com/xiaprojects/roastbeef/godump978"
 
 	rtl "github.com/jpoirier/gortlsdr"
 	// "unsafe"

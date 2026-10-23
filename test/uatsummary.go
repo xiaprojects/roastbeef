@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/stratux/stratux/uatparse"
+	"github.com/xiaprojects/roastbeef/uatparse"
 )
 
 func main() {

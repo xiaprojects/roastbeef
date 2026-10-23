@@ -36,6 +36,7 @@ import (
 	"log"
 	"math"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
@@ -53,6 +54,21 @@ import (
 const (
 	numRetries uint8 = 50
 	calCLimit        = 0.20
+	// calWindow is how long a gyro calibration or a cage averages the IMU:
+	// a single sample of a GY-85 gyro scatters by 2-2.5 deg/s with the engine
+	// running.
+	calWindow = 5 * time.Second
+	// calMaxTries bounds the retries when the averaged reading fails the
+	// calCLimit/calDLimit sanity gates; the attitude is not updated meanwhile.
+	calMaxTries = 4
+	// restOffsetLimit is the largest zero offset the cage accepts when it
+	// re-solves the gravity axis from "1 g at rest", g. The ADXL345 datasheet
+	// allows up to 0.25 g on Z; beyond that the reading is not at rest or the
+	// stored gains are wrong.
+	restOffsetLimit = 0.3
+	// restOffsetWarn is the change of that offset since the last cage above
+	// which a re-mount or a fault is suspected, g.
+	restOffsetWarn = 0.02
 	calDLimit        = 15.0
 
 	// WHO_AM_I values to differentiate between the different IMUs.
@@ -429,48 +445,67 @@ func sensorAttitudeSender() {
 			case action := <-cal:
 				log.Printf("AHRS Info: cal received action %s\n", action)
 				ahrsCalibrating = true
+				// "level [pitch roll]": the attitude the aircraft is at, deg;
+				// level when absent (CageAHRSAt).
+				var cagePitch, cageRoll float64
+				if f := strings.Fields(action); len(f) == 3 && f[0] == "level" {
+					cagePitch, _ = strconv.ParseFloat(f[1], 64)
+					cageRoll, _ = strconv.ParseFloat(f[2], 64)
+				}
 				myIMUReader.Read() // Clear out the averages
 				var (
 					nTries uint8
 					cc, dd float64
 				)
-				for (math.Abs(cc-1) > calCLimit || dd > calDLimit) && nTries < numRetries {
-					time.Sleep(1 * time.Second)
-					_, d1, d2, d3, c1, c2, c3, _, _, _, mpuError, _ := myIMUReader.Read()
-					// Die temperature of this very sample, for the calibration records.
-					var calTemp float64
-					calTempOK := false
-					if t, ok := myIMUReader.(sensors.IMUTemperature); ok {
-						calTemp, calTempOK = t.Temperature(), true
+				for (math.Abs(cc-1) > calCLimit || dd > calDLimit) && nTries < calMaxTries {
+					st, err := calSample(timer)
+					nTries++
+					if err != nil {
+						log.Printf("AHRS Info: IMU calibration attempt #%d: %s\n", nTries, err)
+						continue
 					}
+					d1, d2, d3 := st.D[0], st.D[1], st.D[2]
+					c1, c2, c3 := st.C[0], st.C[1], st.C[2]
 					cc = math.Sqrt(c1*c1 + c2*c2 + c3*c3)
 					dd = math.Sqrt(d1*d1 + d2*d2 + d3*d3)
-					log.Printf("cc = %f dd = %f\n", cc,dd)
-					nTries++
-					log.Printf("AHRS Info: IMU calibration attempt #%d\n", nTries)
-					if mpuError != nil {
-						log.Printf("AHRS Info: Error reading IMU while calibrating: %s\n", mpuError)
-					} else {
-						if strings.Contains(action, "cal") { // Calibrate gyros
-							globalSettings.D = [3]float64{d1, d2, d3}
-							globalSettings.GyroCalibrated = newCalibrationRecord(calTemp, calTempOK)
-							s.SetCalibrations(nil, &globalSettings.D)
-							log.Printf("AHRS Info: IMU gyro calibration: %3f %3f %3f\n", d1, d2, d3)
-						}
-						if strings.Contains(action, "level") { // Calibrate accel / level
-							globalSettings.C = [3]float64{c1, c2, c3}
-							globalSettings.AccelCalibrated = newCalibrationRecord(calTemp, calTempOK)
-							s.SetCalibrations(&globalSettings.C, nil)
-							globalSettings.SensorQuaternion = *makeOrientationQuaternion(globalSettings.C)
-							s.SetSensorQuaternion(&globalSettings.SensorQuaternion)
-							globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
-							s.Reset()
-							log.Printf("AHRS Info: IMU accel calibration: %3f %3f %3f\n", c1, c2, c3)
-							log.Printf("AHRS Info: Caged to quaternion %v\n", globalSettings.SensorQuaternion)
-							log.Printf("AHRS Info: Magnetometer aligned to quaternion %v\n", globalSettings.MagSensorQuaternion)
-						}
-						saveSettings()
+					log.Printf("AHRS Info: IMU calibration attempt #%d: %d samples over %v, |a| %.4f g, |gyro| %.3f deg/s, sd accel %.4f %.4f %.4f g, sd gyro %.3f %.3f %.3f deg/s\n",
+						nTries, st.N, calWindow, cc, dd, st.CSD[0], st.CSD[1], st.CSD[2], st.DSD[0], st.DSD[1], st.DSD[2])
+					if math.Abs(cc-1) > calCLimit || dd > calDLimit {
+						continue // implausible reading: try again
 					}
+					if strings.Contains(action, "cal") { // Calibrate gyros
+						globalSettings.D = [3]float64{d1, d2, d3}
+						globalSettings.GyroCalibrated = newCalibrationRecord(st.Temp, st.TempOK)
+						s.SetCalibrations(nil, &globalSettings.D)
+						log.Printf("AHRS Info: IMU gyro calibration: %3f %3f %3f\n", d1, d2, d3)
+					}
+					if strings.Contains(action, "level") { // Calibrate accel / level
+						// The aircraft is at rest, so the corrected reading
+						// must be 1 g: re-solve the offset of the axis carrying
+						// gravity, then cage on the corrected reading.
+						if axis, off, err := accelRestOffset(st.C); err != nil {
+							log.Printf("AHRS Warning: accelerometer offset not updated: %s\n", err)
+						} else {
+							old := globalSettings.AccelOffset[axis]
+							globalSettings.AccelOffset[axis] = off
+							log.Printf("AHRS Info: accelerometer axis %d offset %+.4f -> %+.4f g (1 g at rest)\n", axis, old, off)
+							if old != 0 && math.Abs(off-old) > restOffsetWarn {
+								log.Printf("AHRS Warning: accelerometer axis %d offset moved %+.0f mg since the last cage: re-mounted, or not at rest?\n", axis, (off-old)*1000)
+							}
+						}
+						globalSettings.C = accelCorrect(st.C)
+						globalSettings.AccelCalibrated = newCalibrationRecord(st.Temp, st.TempOK)
+						s.SetCalibrations(&globalSettings.C, nil)
+						globalSettings.SensorQuaternion = *makeOrientationQuaternion(globalSettings.C, cagePitch, cageRoll)
+						s.SetSensorQuaternion(&globalSettings.SensorQuaternion)
+						globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
+						s.Reset()
+						log.Printf("AHRS Info: IMU accel calibration: raw %.4f %.4f %.4f -> corrected %.4f %.4f %.4f g\n",
+							c1, c2, c3, globalSettings.C[0], globalSettings.C[1], globalSettings.C[2])
+						log.Printf("AHRS Info: Caged at pitch %.1f roll %.1f deg to quaternion %v\n", cagePitch, cageRoll, globalSettings.SensorQuaternion)
+						log.Printf("AHRS Info: Magnetometer aligned to quaternion %v\n", globalSettings.MagSensorQuaternion)
+					}
+					saveSettings()
 				}
 				ahrsCalibrating = false
 				<-timer.C // Make sure we get data for the actual algorithm
@@ -481,6 +516,11 @@ func sensorAttitudeSender() {
 			t = stratuxClock.Time
 			m.T = float64(t.UnixNano()/1000) / 1e6
 			_, m.B1, m.B2, m.B3, m.A1, m.A2, m.A3, m.M1, m.M2, m.M3, mpuError, magError = myIMUReader.Read()
+			// The AHRS gets the calibrated accelerometer; mySituation keeps
+			// the raw one below, so a calibration can be refitted from a log.
+			rawA := [3]float64{m.A1, m.A2, m.A3}
+			corrA := accelCorrect(rawA)
+			m.A1, m.A2, m.A3 = corrA[0], corrA[1], corrA[2]
 			m.SValid = mpuError == nil
 			m.MValid = magError == nil
 			if mpuError != nil {
@@ -577,9 +617,9 @@ func sensorAttitudeSender() {
 			// driver delivers them: chip frame, gyro before the AHRS subtracts
 			// D. Written whether or not the attitude is valid, so the log keeps
 			// the sensor data exactly when the AHRS is struggling.
-			mySituation.AHRSAccX = m.A1
-			mySituation.AHRSAccY = m.A2
-			mySituation.AHRSAccZ = m.A3
+			mySituation.AHRSAccX = rawA[0]
+			mySituation.AHRSAccY = rawA[1]
+			mySituation.AHRSAccZ = rawA[2]
 			mySituation.AHRSGyroX = m.B1
 			mySituation.AHRSGyroY = m.B2
 			mySituation.AHRSGyroZ = m.B3
@@ -843,7 +883,11 @@ func updateExtraLogging() {
 	logMap["BaroVerticalSpeed"] = float64(mySituation.BaroVerticalSpeed)
 }
 
-func makeOrientationQuaternion(g [3]float64) (f *[4]float64) {
+// makeOrientationQuaternion returns the sensor quaternion that maps g, the
+// accelerometer reading at rest, onto the gravity reaction of an aircraft at
+// the given attitude (deg; 0, 0 = level), with the IMUMapping forward axis
+// kept as close to the nose as the tilt allows.
+func makeOrientationQuaternion(g [3]float64, pitchDeg, rollDeg float64) (f *[4]float64) {
 	if globalSettings.IMUMapping[0] == 0 { // if unset, default to some standard orientation
 		globalSettings.IMUMapping[0] = -1 // +2 for RY836AI
 	}
@@ -859,10 +903,125 @@ func makeOrientationQuaternion(g [3]float64) (f *[4]float64) {
 	// Normalize the gravity vector to be 1 G.
 	z, _ := ahrs.MakeUnitVector(g)
 
-	rotmat, _ := ahrs.MakeHardSoftRotationMatrix(*z, *x, [3]float64{0, 0, 1}, [3]float64{1, 0, 0})
-	f = new([4]float64)
-	f[0], f[1], f[2], f[3] = ahrs.RotationMatrixToQuaternion(*rotmat)
+	// The specific force an accelerometer at rest reads, in goflying's body
+	// frame (x nose, y left wing, z up), for pitch nose-up and roll right
+	// wing down: up, tilted forward by the pitch and toward the raised left
+	// wing by the roll.
+	th, ph := pitchDeg*ahrs.Deg, rollDeg*ahrs.Deg
+	up := [3]float64{math.Sin(th), math.Sin(ph) * math.Cos(th), math.Cos(ph) * math.Cos(th)}
+
+	rotmat, _ := ahrs.MakeHardSoftRotationMatrix(*z, *x, up, [3]float64{1, 0, 0})
+	// Not ahrs.RotationMatrixToQuaternion: it divides by sqrt(1+trace)/2,
+	// which is 0 for the 180-degree turn a flat board with the default
+	// IMUMapping (-1, forward = -X) needs - NaN - and returns a quaternion
+	// short of unit length near it, which the AHRS does not renormalise.
+	q := common.QuaternionUnit(common.RotationMatrixToQuaternion(*rotmat))
+	f = &q
 	return
+}
+
+// calStats is the IMU averaged over a calibration window.
+type calStats struct {
+	D, C     [3]float64 // mean gyro, deg/s, and raw accelerometer, g
+	DSD, CSD [3]float64 // their per-axis standard deviations
+	Temp     float64    // mean IMU die temperature, degC
+	TempOK   bool       // whether the IMU reports one
+	N        int        // samples read
+}
+
+// calSample averages the IMU over calWindow, read at the AHRS rate, so that
+// a calibration rests on ~100 samples instead of one. The drivers that
+// already average between reads (MPU-9250, ICM-20948, BMX160) simply get
+// averaged further.
+func calSample(timer *time.Ticker) (st calStats, err error) {
+	var sd, sc, sdd, scc [3]float64
+	var sT float64
+	nT := 0
+	tc, hasT := myIMUReader.(sensors.IMUTemperature)
+	for deadline := time.Now().Add(calWindow); time.Now().Before(deadline); {
+		<-timer.C
+		_, d1, d2, d3, c1, c2, c3, _, _, _, e, _ := myIMUReader.Read()
+		if e != nil {
+			continue
+		}
+		d := [3]float64{d1, d2, d3}
+		c := [3]float64{c1, c2, c3}
+		for i := 0; i < 3; i++ {
+			sd[i] += d[i]
+			sdd[i] += d[i] * d[i]
+			sc[i] += c[i]
+			scc[i] += c[i] * c[i]
+		}
+		if hasT {
+			sT += tc.Temperature()
+			nT++
+		}
+		st.N++
+	}
+	// At the 20 Hz AHRS rate the window holds 100 samples; half is plenty.
+	if want := int(calWindow / (50 * time.Millisecond)); st.N < want/2 {
+		return st, fmt.Errorf("only %d good IMU samples in %v", st.N, calWindow)
+	}
+	n := float64(st.N)
+	for i := 0; i < 3; i++ {
+		st.D[i], st.C[i] = sd[i]/n, sc[i]/n
+		st.DSD[i] = math.Sqrt(math.Max(0, sdd[i]/n-st.D[i]*st.D[i]))
+		st.CSD[i] = math.Sqrt(math.Max(0, scc[i]/n-st.C[i]*st.C[i]))
+	}
+	if nT > 0 {
+		st.Temp, st.TempOK = sT/float64(nT), true
+	}
+	return st, nil
+}
+
+// accelGain returns the stored gain of accelerometer axis i; zero - a
+// stratux.conf from before the setting existed - reads as 1.
+func accelGain(i int) float64 {
+	if g := globalSettings.AccelGain[i]; g != 0 {
+		return g
+	}
+	return 1
+}
+
+// accelCorrect applies the accelerometer calibration, AccelGain and
+// AccelOffset, to a raw sample: (raw - offset) / gain per axis, in the
+// driver's frame. The default (0 gain, 0 offset) leaves the sample as is.
+func accelCorrect(a [3]float64) (c [3]float64) {
+	for i := 0; i < 3; i++ {
+		c[i] = (a[i] - globalSettings.AccelOffset[i]) / accelGain(i)
+	}
+	return
+}
+
+// accelRestOffset returns the zero offset of the accelerometer axis that
+// carries gravity at rest, solved so that the corrected reading a is exactly
+// 1 g, the gains and the other two offsets held. One attitude cannot tell a
+// gain from an offset, but at rest that axis is close to vertical, so the
+// constraint fixes its offset almost one for one - and that is the offset
+// that drifts (temperature, re-mounting) while the gains stay put. Without a
+// gain from a flight fit, the gain stays 1 and the G-meter error drops from
+// the ~8 % a divide-by-|C| gives to ~3 % (I-RVDX, 2026-10-17 flights).
+func accelRestOffset(a [3]float64) (axis int, offset float64, err error) {
+	for i := 1; i < 3; i++ {
+		if math.Abs(a[i]) > math.Abs(a[axis]) {
+			axis = i
+		}
+	}
+	rest := 1.0
+	for i := 0; i < 3; i++ {
+		if i != axis {
+			c := (a[i] - globalSettings.AccelOffset[i]) / accelGain(i)
+			rest -= c * c
+		}
+	}
+	if rest <= 0 {
+		return axis, 0, fmt.Errorf("the other axes already read %.3f g", math.Sqrt(1-rest))
+	}
+	offset = a[axis] - math.Copysign(accelGain(axis)*math.Sqrt(rest), a[axis])
+	if math.Abs(offset) > restOffsetLimit {
+		return axis, offset, fmt.Errorf("axis %d would need %+.3f g, more than %.2f g: not at rest, or wrong AccelGain", axis, offset, restOffsetLimit)
+	}
+	return axis, offset, nil
 }
 
 // magSampleUsable rejects a magnetometer sample with a near-zero axis. A stuck
@@ -945,7 +1104,14 @@ func getMinAccelDirection() (i int, err error) {
 
 // CageAHRS sends a signal to the AHRSProvider that it should recalibrate and reset its level orientation.
 func CageAHRS() {
-	cal <- "level"
+	CageAHRSAt(0, 0)
+}
+
+// CageAHRSAt cages the AHRS with the aircraft at rest at the given attitude,
+// deg (pitch nose up, roll right wing down): a tailwheel aircraft can be caged
+// in the hangar at its ground attitude instead of with the tail raised.
+func CageAHRSAt(pitch, roll float64) {
+	cal <- fmt.Sprintf("level %.3f %.3f", pitch, roll)
 }
 
 // CageAHRS sends a signal to the AHRSProvider that it should recalibrate and reset its level orientation.

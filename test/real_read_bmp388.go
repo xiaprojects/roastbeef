@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/stratux/stratux/sensors/bmp388"
 	"github.com/kidoman/embd"
 	_ "github.com/kidoman/embd/host/all"
+	"github.com/xiaprojects/roastbeef/sensors/bmp388"
 )
 
 func main() {

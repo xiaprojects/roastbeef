@@ -72,8 +72,8 @@
 package main
 
 import (
-	"fmt"	
 	"errors"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -81,7 +81,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tarm/serial"
+	"github.com/xiaprojects/serial"
 )
 
 

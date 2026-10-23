@@ -4,7 +4,6 @@ package sensors
 import (
 	"encoding/binary"
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/kidoman/embd"
@@ -43,15 +42,22 @@ const (
 	pwrCtrlTempEn = 0x08
 )
 
-// Example “normal mode” configs from datasheet quick start (you can tune later). [page:0]
+// Output rate and filter. The AHRS polls Read at 20 Hz and takes one sample,
+// so, as in gy85.go, the chip runs just above that rate and its own low pass
+// does the anti-aliasing: 25 Hz with the normal filter puts the 3 dB cut-off
+// at 11 Hz for both sensors (BMI270 datasheet BST-BMI270-DS000, tables 7 and
+// 10). At the old 200/100 Hz with the 77/44 Hz filters, sampling at 20 Hz
+// folded engine vibration straight into the attitude.
 const (
-	// 200 Hz gyro, filter_perf=1 (aliasing free) + noise_perf=0 => 0xA9 from datasheet example
-	BMI270_GYR_CONF_ADDR  = 0x42
-	BMI270_GYR_CONF_200HZ = 0xA9
+	BMI270_GYR_CONF_ADDR = 0x42
+	// gyr_filter_perf=1 (bit 7), gyr_noise_perf=1 (bit 6), gyr_bwp=normal
+	// (bits 5:4 = 2), gyr_odr=25 Hz (bits 3:0 = 0x06).
+	BMI270_GYR_CONF_25HZ = 0xE6
 
-	// 100 Hz accel, filter_perf=1 (aliasing free) => 0xA8 from datasheet example
-	BMI270_ACC_CONF_ADDR  = 0x40
-	BMI270_ACC_CONF_100HZ = 0xA8
+	BMI270_ACC_CONF_ADDR = 0x40
+	// acc_filter_perf=1 (bit 7), acc_bwp=normal (bits 6:4 = 2), acc_odr=25 Hz
+	// (bits 3:0 = 0x06).
+	BMI270_ACC_CONF_25HZ = 0xA6
 
 	// Range registers exist in BMI270; keep your previous choices but with correct addresses if needed.
 	// If your board needs explicit range set, add the correct registers from datasheet section 5.
@@ -60,10 +66,6 @@ const (
 const (
 	BMI270_ACC_RANGE_ADDR = 0x41
 	BMI270_GYR_RANGE_ADDR = 0x43
-
-	// Datasheet examples:
-	BMI270_ACC_CONF_MAX_FILTER = 0xA8 // acc_filter_perf=1, acc_bwp=normal, acc_odr=100Hz [web:10]
-	BMI270_GYR_CONF_MAX_NOISE  = 0xE9 // gyr_filter_perf=1 + gyr_noise_perf=1, gyr_bwp=normal, gyr_odr=200Hz [web:10]
 
 	// Range encodings are defined by Bosch BMI2 API (bmi2_defs.h) for BMI270. [web:4]
 	BMI2_ACC_RANGE_8G  = 0x02
@@ -518,7 +520,7 @@ type BMI270 struct {
 
 	lastRead time.Time
 
-	accelScale float64 // m/s² per LSB
+	accelScale float64 // g per LSB
 	gyroScale  float64 // °/s per LSB
 
 	lastGyroX, lastGyroY, lastGyroZ    float64
@@ -545,8 +547,10 @@ func NewBMI270(i2cbus *embd.I2CBus) (*BMI270, error) {
 		return nil, fmt.Errorf("chip-id read failed: %w", err)
 	}
 	if chip != BMI270_CHIP_ID_VAL {
-		// Some modules can present different IDs (variant/derivative), but 0 usually means bus issue.
-		log.Printf("BMI270: unexpected chip-id 0x%02X (expected 0x%02X)\n", chip, BMI270_CHIP_ID_VAL)
+		// initIMU only gets here after reading the BMI270 id, so a different
+		// one after the reset means a bus fault or another chip: do not go on
+		// uploading 8 kB of firmware into it.
+		return nil, fmt.Errorf("unexpected chip-id 0x%02X after reset (expected 0x%02X)", chip, BMI270_CHIP_ID_VAL)
 	}
 
 	// 3) Mandatory init: disable adv power save, upload config file, wait internal status. [page:0]
@@ -565,21 +569,20 @@ func NewBMI270(i2cbus *embd.I2CBus) (*BMI270, error) {
 	_ = m.writeReg(BMI270_ACC_RANGE_ADDR, BMI2_ACC_RANGE_8G)
 	_ = m.writeReg(BMI270_GYR_RANGE_ADDR, BMI2_GYR_RANGE_125)
 
-	// Max noise filtering / best quality settings (datasheet examples)
-	_ = m.writeReg(BMI270_GYR_CONF_ADDR, BMI270_GYR_CONF_MAX_NOISE)
-	_ = m.writeReg(BMI270_ACC_CONF_ADDR, BMI270_ACC_CONF_MAX_FILTER)
-
+	// Output rate and filters, see BMI270_GYR_CONF_25HZ.
+	if err := m.writeReg(BMI270_GYR_CONF_ADDR, BMI270_GYR_CONF_25HZ); err != nil {
+		return nil, fmt.Errorf("gyro config failed: %w", err)
+	}
+	if err := m.writeReg(BMI270_ACC_CONF_ADDR, BMI270_ACC_CONF_25HZ); err != nil {
+		return nil, fmt.Errorf("accel config failed: %w", err)
+	}
 	time.Sleep(20 * time.Millisecond)
-
-	// datasheet “normal mode” example values (optional but good baseline). [page:0]
-	_ = m.writeReg(BMI270_GYR_CONF_ADDR, BMI270_GYR_CONF_200HZ)
-	_ = m.writeReg(BMI270_ACC_CONF_ADDR, BMI270_ACC_CONF_100HZ)
 
 	// 5) Scaling factors (16-bit signed).
 	// accel: for ±4g -> 8192 LSB/g (datasheet sensitivity table). [page:0]
 	// gyro: for ±250 dps -> 131.072 LSB/dps (datasheet sensitivity table). [page:0]
 	// If you change range, update these.
-	m.accelScale = 1.0 / 4096.0 // m/s² per LSB @ ±8g [web:10]
+	m.accelScale = 1.0 / 4096.0 // g per LSB @ ±8g [web:10]
 	m.gyroScale = 1.0 / 262.144 // dps per LSB @ ±125 dps [web:10]
 
 	time.Sleep(50 * time.Millisecond)
@@ -693,10 +696,15 @@ func (m *BMI270) readTempC() (float64, error) {
 		return 0, err
 	}
 	raw := int16(binary.LittleEndian.Uint16(buf))
+	if uint16(raw) == 0x8000 {
+		// The chip's "no valid temperature" value (e.g. right after power-up).
+		return 0, fmt.Errorf("temperature not valid yet")
+	}
 	return 23.0 + float64(raw)/512.0, nil
 }
 
-// Read returns average time since last read (ns), gyro (dps), accel (m/s²), mag unused.
+// Read returns the time since the last read (ns), gyro (deg/s) and accel (g)
+// of the latest sample; mag unused.
 func (m *BMI270) Read() (T int64, G1, G2, G3, A1, A2, A3, M1, M2, M3 float64, GAError, MagError error) {
 	now := time.Now()
 	T = now.Sub(m.lastRead).Nanoseconds()

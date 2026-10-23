@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/stratux/stratux/uatparse"
 	"github.com/gansidui/geohash"
+	"github.com/xiaprojects/roastbeef/uatparse"
 )
 
 type UATFrame struct {
