@@ -17,7 +17,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/tarm/serial"
+	"github.com/xiaprojects/serial"
 	"tinygo.org/x/bluetooth"
 )
 

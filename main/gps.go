@@ -23,7 +23,7 @@ import (
 
 	"bufio"
 
-	"github.com/tarm/serial"
+	"github.com/xiaprojects/serial"
 
 	"os"
 	"os/exec"

@@ -11,6 +11,7 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -20,8 +21,8 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"encoding/json"
-	"github.com/tarm/serial"
+
+	"github.com/xiaprojects/serial"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
 	"tinygo.org/x/bluetooth"
