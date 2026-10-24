@@ -15,7 +15,7 @@ require (
 	github.com/prometheus/client_golang v1.25.0
 	github.com/ricochet2200/go-disk-usage/du v0.0.0-20210707232629-ac9918953285
 	github.com/stianeikeland/go-rpio/v4 v4.6.0
-	github.com/xiaprojects/goflying v1.1.1
+	github.com/xiaprojects/goflying v1.1.2
 	github.com/xiaprojects/serial v0.0.0-20261022003628-e8643089a191
 	golang.org/x/exp v0.0.0-20261014143641-f0251eb4aa3e
 	golang.org/x/net v0.61.0
