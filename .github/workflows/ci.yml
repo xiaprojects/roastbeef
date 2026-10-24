@@ -14,8 +14,10 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # Static analysis and Go unit tests, run inside the same pinned build container
-  # as the package build (see `make check` and docs/certification/roadmap.md).
+  # Static analysis and Go unit tests, run inside the same build container as the
+  # package build (see `make check` and docs/certification/roadmap.md). The container's
+  # Go is pinned by ARG GO_VERSION/GO_SHA256 in Dockerfile; the debian:trixie base tag
+  # is still floating (docs/certification/scmp.md tracks pinning it by digest).
   check:
     runs-on: ubuntu-24.04-arm
 

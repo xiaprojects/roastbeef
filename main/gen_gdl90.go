@@ -1096,6 +1096,10 @@ func parseInput(buf string) ([]byte, uint16) {
 		}
 	}
 
+	if len(s)/2 > UPLINK_FRAME_DATA_BYTES { // Longer than any UAT frame: noise, or lines run together.
+		return nil, 0
+	}
+
 	if s[0] == '-' {
 		parseDownlinkReport(s, int(thisSignalStrength))
 	}

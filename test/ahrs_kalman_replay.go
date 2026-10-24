@@ -19,32 +19,30 @@
 	  -field uT -dip deg    local geomagnetic field magnitude and inclination
 	  -decl deg             declination, added to magnetic headings so they
 	                        compare with the GPS (true) track
-	  -accelsign +1|-1      sign applied to the accelerometer for the Kalman
-	                        filter (its measurement model predicts -1 g on
-	                        the up axis at rest; the drivers report +1)
 	  -magenv a,b,c,d,e,f   replace the logged mag calibration envelope (min/max
 	                        per axis) and -magoffset its compass Offset, e.g.
 	                        with the fit from magnetometer_check
 	  -magbias uT           Kalman prior sd of the mag bias L; -wind kt and
 	                        -windnoise kt/sqrt(s) the wind prior and process noise
-	  -provider             drive the filter through its AHRSProvider adapter
-	                        (ahrs.KalmanAHRS) with the daemon's own C, D and
-	                        SensorQuaternion, the way sensorAttitudeSender
-	                        drives SimpleState.  Needs a build with
-	                        -tags kalmanahrs against a goflying carrying
-	                        notes/goflying-kalman-mag.patch.
+	  -provider             (default) drive the filter through its
+	                        AHRSProvider adapter ahrs.KalmanAHRS with the
+	                        daemon's own C, D and SensorQuaternion, exactly as
+	                        newAHRS("kalman") does.  -provider=false drives
+	                        the bare KalmanState instead, for experiments: it
+	                        loads C as the filter's bias state, which it is
+	                        not (it is the reading at level), and F
+	                        unconjugated, so its attitude is not the daemon's.
+	  -accelsign +1|-1      with -provider=false only: sign applied to the
+	                        accelerometer (the filter predicts -1 g on the up
+	                        axis at rest; the drivers report +1)
 	  -csv out.csv          per-sample dump for plotting
 	  -mingps kt            ground speed above which heading is scored
 	                        against the track (default 40)
 
-	NOTE: in goflying as vendored (v0.0.0-20260103193118) the magnetometer
-	rows of KalmanState's measurement Jacobian are commented out
-	("TODO westphae: fix these"), so -mag free and pinned change nothing:
-	the residual is computed but has no path into the state.
-	notes/goflying-kalman-mag.patch restores them (validated against finite
-	differences), fixes the attitude-sigma propagation Valid() relies on, and
-	adds the AHRSProvider adapter ahrs.KalmanAHRS; build this tool against a
-	goflying with that patch to see the magnetometer act.
+	NOTE: the datalog is 1 Hz and the daemon runs the filter at 20 Hz, so the
+	replay sees 1/20th of the updates.  Heading and pitch hold up; roll lags
+	in turns and is lost through aerobatic figures.  Judge those on a 20 Hz
+	AHRSLog (sensors_*.csv) instead.
 
 	Build: make -C test
 */
@@ -154,17 +152,6 @@ func parseVec(s string, n int) ([]float64, error) {
 
 func conj(q [4]float64) [4]float64 { return [4]float64{q[0], -q[1], -q[2], -q[3]} }
 
-// kalmanProvider is the AHRSProvider adapter around the Kalman filter.  It
-// only exists in a goflying carrying notes/goflying-kalman-mag.patch, so it is
-// wired in by ahrs_kalman_replay_provider.go under the kalmanahrs build tag;
-// without the tag -provider is refused.
-type kalmanProvider interface {
-	ahrs.AHRSProvider
-	KalmanState() *ahrs.KalmanState
-}
-
-var newKalmanProvider func(cfg map[string]float64, c, d *[3]float64, f *[4]float64) kalmanProvider
-
 // score accumulates heading error statistics against the GPS track.
 type score struct {
 	n            int
@@ -197,13 +184,13 @@ func main() {
 	field := flag.Float64("field", 46.5, "local field magnitude, uT")
 	dip := flag.Float64("dip", 59, "local field inclination, deg (positive down)")
 	decl := flag.Float64("decl", 3.5, "declination, deg east")
-	accelSign := flag.Float64("accelsign", -1, "sign applied to accel for the Kalman filter")
+	accelSign := flag.Float64("accelsign", -1, "with -provider=false: sign applied to accel for the Kalman filter")
 	magEnvS := flag.String("magenv", "", "override the logged mag calibration envelope: minX,maxX,minY,maxY,minZ,maxZ")
 	magOffset := flag.Float64("magoffset", 0, "with -magenv: the compass Offset that goes with it, deg")
 	magBiasSD := flag.Float64("magbias", 10, "Kalman prior sd of the mag bias L, uT (10 is goflying's default; ~1 for a pre-calibrated mag)")
 	windSD := flag.Float64("wind", 0, "Kalman prior sd of the wind V, kt (0 keeps goflying's default)")
 	windNoise := flag.Float64("windnoise", 0, "Kalman process noise of the wind V, kt per sqrt(s) (0 keeps goflying's default)")
-	provider := flag.Bool("provider", false, "drive the Kalman filter through its AHRSProvider adapter exactly as the daemon drives SimpleState (needs -tags kalmanahrs, see the header)")
+	provider := flag.Bool("provider", true, "drive the Kalman filter through its AHRSProvider adapter exactly as the daemon does; false: the bare KalmanState, see the header")
 	csvOut := flag.String("csv", "", "per-sample CSV dump")
 	minGPS := flag.Float64("mingps", 40, "ground speed above which heading is scored against track, kt")
 	flag.Parse()
@@ -288,18 +275,17 @@ func main() {
 	// --- Kalman AHRS.
 	var kal *ahrs.KalmanState
 	km := ahrs.NewMeasurement()
-	var prov kalmanProvider
+	var prov *ahrs.KalmanAHRS
 	if *provider {
-		if newKalmanProvider == nil {
-			fmt.Fprintln(os.Stderr, "-provider needs a build with -tags kalmanahrs against a patched goflying")
-			os.Exit(2)
-		}
 		cfg := map[string]float64{"MagBiasSigma": *magBiasSD, "WindSigma": *windSD, "WindNoise": *windNoise}
 		if *magMode == "pinned" {
 			cfg["MagField"], cfg["MagDip"] = *field, *dip
 		}
 		// The daemon's C (accelerometer at level) and D, as SetCalibrations takes them.
-		prov = newKalmanProvider(cfg, &C, &D, &sensorQ)
+		prov = ahrs.NewKalmanAHRS()
+		prov.SetCalibrations(&C, &D)
+		prov.SetSensorQuaternion(&sensorQ)
+		prov.SetConfig(cfg)
 	}
 
 	var (
@@ -383,7 +369,7 @@ func main() {
 			// The adapter applies the drivers' accel sign and scale itself.
 			km.A1, km.A2, km.A3 = r.a[0], r.a[1], r.a[2]
 			prov.Compute(km)
-			kal = prov.KalmanState()
+			kal = &prov.KalmanState
 			if kal.M == nil {
 				continue
 			}

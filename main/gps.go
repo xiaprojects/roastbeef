@@ -72,7 +72,7 @@ type SituationData struct {
 	GPSLongitude                float32
 	GPSFixQuality               uint8
 	GPSHeightAboveEllipsoid     float32 // GPS height above WGS84 ellipsoid, ft. This is specified by the GDL90 protocol, but most EFBs use MSL altitude instead. HAE is about 70-100 ft below GPS MSL altitude over most of the US.
-	GPSGeoidSep                 float32 // geoid separation, ft, MSL minus HAE (used in altitude calculation)
+	GPSGeoidSep                 float32 // geoid separation, ft, HAE minus MSL as NMEA GGA reports it (used in altitude calculation)
 	GPSSatellites               uint16  // satellites used in solution
 	GPSSatellitesTracked        uint16  // satellites tracked (almanac data received)
 	GPSSatellitesSeen           uint16  // satellites seen (signal received)

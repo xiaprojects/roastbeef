@@ -1,0 +1,11 @@
+# Go source must use LF: gofmt always writes LF, so a CRLF .go file shows up as a
+# whole-file diff and fails `make check`. This normalises on checkin/checkout.
+*.go text eol=lf
+
+# Shell scripts and the Debian packaging scripts must be LF to run on the target.
+*.sh text eol=lf
+debian/* text eol=lf
+
+# Everything else is left alone on purpose. In particular the RB-01 web assets are
+# CRLF in this repository; do not "fix" them, it turns a two-line change into a
+# whole-file diff and buries the review.

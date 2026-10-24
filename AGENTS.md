@@ -28,7 +28,7 @@ Common targets (see `Makefile`):
 | `make stratuxrun` | Just the main Go daemon (needs `libdump978.so` present) |
 | `make www` | Copies the web UI into `$STRATUX_HOME/www` (default `/opt/stratux`) |
 | `make optinstall` | Installs binaries/libs/web/config into `/opt/stratux` (needed before running on a dev machine so it can find dump1090, ogn-rx, etc.) |
-| `make dpkg` | Builds the `.deb`. **Only works on the target OS/arch** (Debian 12 Bookworm, arm64) |
+| `make dpkg` | Builds the `.deb`. **Only works on the target OS/arch** (Debian 13 Trixie, arm64 — what `Dockerfile` provides) |
 | `make dall` / `make ddpkg` | Runs `make all` / `make dpkg` inside Docker (`docker_run.sh`) — use this to produce target-arch artifacts from any host |
 | `make test` | Compiles the standalone diagnostic utilities in `test/` (see Testing) |
 | `make check` | The CI gate: `gofmt` (leaf packages), `go vet` on every package, `go test`, and the third-party hash check (`scripts/provenance.sh --verify`). Run it before pushing. |
@@ -38,6 +38,14 @@ Notes:
 - The Go build needs CGO and the locally-built shared lib: the Makefile sets
   `LIBRARY_PATH=$(CURDIR)` and `CGO_CFLAGS_ALLOW="-L$(CURDIR)"`. Replicate these env vars if
   building `stratuxrun` by hand.
+- **Go toolchain:** `go.mod` needs `go 1.27` and the dependencies set their own floor
+  (`golang.org/x/exp` >= 1.26, `tinygo.org/x/bluetooth` >= 1.25). Debian's `golang-go` is
+  Go 1.24 with `GOTOOLCHAIN=local` patched in, so it refuses rather than upgrading itself;
+  `Dockerfile` therefore installs a checksum-pinned Go from go.dev (`ARG GO_VERSION`).
+  Bump that ARG (and `GO_SHA256`) when raising the `go` directive, or CI fails with
+  `go.mod requires go >= ...`.
+- A local `go.work` (for developing `../goflying` alongside) silently changes module
+  resolution; use `GOWORK=off` to reproduce what CI and `make` see.
 - `make debug=true ...` adds `-gcflags '-N -l'` for delve debugging.
 - Version comes from the latest git tag (`scripts/getversion.sh`); arch from `uname -m`
   normalized by `scripts/getarch.sh` (`x86_64`→`amd64`, `aarch64`→`arm64`). The chosen
@@ -63,8 +71,11 @@ Notes:
   `-port <n>`, `-cpuprofile <file>`, `-write-network-config`.
 - **Go unit tests** exist for `common/` (`equations_test.go`), `sensors/`
   (`ms4525do_test.go`, against a scripted I2C bus) and `uatparse/`
-  (`uatparse_test.go`, golden frame from `test-data/`); `main/` has `bridge_test.go` and
-  `hobbsmeter_test.go`. They are
+  (`uatparse_test.go`, golden frame from `test-data/`); `main/` has `bridge_test.go`,
+  `hobbsmeter_test.go`, `autopilot_test.go`, `gen_gdl90_test.go` (GDL90 framing against
+  the ICD examples) and `traffic_test.go` (UAT/1090 decoding against recorded frames and
+  dump978's `uat2text`, the GDL90 traffic report, `icao2reg`, ownship filter, and the
+  `sendTrafficUpdates` cycle: staleness, expiry, radar limits, bearingless). They are
   written requirements-style (one behaviour per test, robustness cases documented) — see
   `docs/certification/roadmap.md` Step 5 for the intent. Run with `make check` or
   `go test ./common/ ./uatparse/`. The `test/` directory is a collection of independent

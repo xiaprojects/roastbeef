@@ -28,27 +28,45 @@ the certified configuration; **build** = build-time only, not on the device.
 | `ogn-rx-eu` (aarch64 / arm / x86) | Unversioned binaries; repo commit `dcf625b1` (2026-02-26, "bump ogn-rx-eu and ogn-tracker binaries") | OGN project (Pawel Jalocha), obtained via upstream stratux | Proprietary / OGN | **out** | 868 MHz OGN/FLARM receiver. No source, no version string (only `libjpeg-turbo 2.1.2` inside). Replace with a source-built receiver or scope OGN out. |
 | OGN tracker firmware (`ogn-tracker-bin-*.zip`) | 7 board variants, same commit as above | OGN project | OGN | **out** | Flashed to an external T-Beam; not executed on the RB-01. |
 | SoftRF firmware (`softrf/SoftRF.mb.esp32.zip`, `USB-flashing-ESP32.zip`) | Unversioned | SoftRF project (lyusupov) | GPL-3.0 | **out** | External ESP32 device firmware. |
-| Raspberry Pi OS (Bookworm, 64-bit Lite) | Recorded per image in `image_build/pi-gen` submodule (`2024-11-19-raspios-bookworm-arm64`) | Raspberry Pi Foundation | Various (Debian) | **core, PDS** | Kernel, systemd, Chromium. Package list of the certified image to be captured at image build time (Step 1.2). |
+| Raspberry Pi OS (Trixie, 64-bit Lite) | Recorded per image in `image_build/pi-gen` submodule (`2026-06-18-raspios-trixie-armhf`+8) | Raspberry Pi Foundation | Various (Debian) | **core, PDS** | Kernel, systemd, Chromium. Package list of the certified image to be captured at image build time (Step 1.2). |
 | Chromium (kiosk browser for the HMI) | From the Raspberry Pi OS package set | Debian / Raspberry Pi | BSD-3 and others | **core, PDS** | Display path; see roadmap Step 7. |
 
 ### Submodules built from source (pinned by commit)
 
 | Component | Commit | Origin | Licence | Certified baseline |
 |---|---|---|---|---|
-| `dump1090` | `8c138313` (v10.2-23) | github.com/flightaware/dump1090 via stratux fork | GPL-2.0 | core (1090 ES receiver) |
+| `dump1090` | `0339a57b` (v11.1) | github.com/flightaware/dump1090 via stratux fork | GPL-2.0 | core (1090 ES receiver) |
 | `rtl-ais` | `01b8c996` (v0.3-48) | github.com/dgiardini/rtl-ais via stratux fork | GPL-2.0 | out (AIS is Level E) |
-| `ogn/ogn-tracker` | `7e18d4a7` | github.com/pjalocha/esp32-ogn-tracker | OGN | out |
-| `image_build/pi-gen` | `b9e30f2e` | github.com/RPi-Distro/pi-gen | BSD-3 | build |
+| `ogn/ogn-tracker` | `7542eab1` | github.com/pjalocha/esp32-ogn-tracker | OGN | out |
+| `image_build/pi-gen` | `6a0419c1` | github.com/RPi-Distro/pi-gen | BSD-3 | build |
 | `dump978` (in-tree C, `libdump978.so`) | in-tree | github.com/mutability/dump978 (2015 lineage) | BSD-2 | core (978 UAT decoder) |
 
 ### Go modules
 
-Pinned in `go.mod` / `go.sum` (38 modules). Roadmap Step 1.2 adds `go mod vendor` so the
-sources are in the tree; the SBOM per build comes from `go version -m stratuxrun`.
-Modules with hardware or safety relevance: `xiaprojects/goflying` (AHRS/IMU drivers,
-fork), `kidoman/embd` (I²C, unmaintained since 2017), `tarm/serial` and
-`xiaprojects/serial` (GPS/NMEA serial), `mattn/go-sqlite3` (flight log), `gorilla/websocket`
-(HMI transport).
+Pinned in `go.mod` / `go.sum`: **52 modules** (18 direct, 34 indirect), of which **18 are
+linked into `stratuxrun`**. The remainder are build- or test-only and reach no certified
+binary: `gonum.org/v1/plot` and its font/PDF chain serve the `test/` diagnostic tools,
+`kellydunn/golang-geo` drags in unused SQL backends (`lib/pq`, `ziutek/mymysql`), and the
+TinyGo/Windows paths under `tinygo.org/x/*` and `saltosystems/winrt-go` are not built for
+the target. The `fancontrol` binary adds the `prometheus/client_golang` set; `stratuxrun`
+does not contain it. Roadmap Step 1.2 adds `go mod vendor` so the sources are in the tree;
+the SBOM per build comes from `go version -m stratuxrun`.
+
+Modules with hardware or safety relevance: `xiaprojects/goflying` v1.1.1 (AHRS/IMU drivers,
+fork), `kidoman/embd` (I²C, unmaintained since 2017), `xiaprojects/serial` (GPS/NMEA
+serial), `mattn/go-sqlite3` (flight log), `gorilla/websocket` (HMI transport). Upstream
+`github.com/stratux/stratux` is **no longer a dependency**: six `test/` tools imported its
+copies of `uatparse`/`godump978`/`sensors/bmp388` instead of this fork's own packages, which
+pulled the whole upstream tree (and a stale `tarm/serial`) into the module graph.
+
+### Build toolchain (`Dockerfile`, build-time only)
+
+| Component | Version / identification | Origin | Pinned by | Notes |
+|---|---|---|---|---|
+| Base image | `debian:trixie` | Debian | **[pending]** floating tag | Pin by digest for a reproducible builder (see `scmp.md`). |
+| Go compiler | 1.27.3, `go1.27.3.linux-arm64.tar.gz` | go.dev | `ARG GO_VERSION` + `ARG GO_SHA256` verified with `sha256sum -c` | SHA-256 `a06e99309dbcbdca1a8ccd2282c3ee146e55930886e26b4f1193269587165f49`. `GOTOOLCHAIN=local` keeps this compiler authoritative, so a `go.mod` that outgrows it fails the build instead of silently downloading another toolchain. Debian's `golang-go` is deliberately not used: Trixie ships Go 1.24 with `GOTOOLCHAIN=local` patched in, which cannot build `go 1.27` (nor `golang.org/x/exp`, which needs >= 1.26). |
+| `librtlsdr0` / `librtlsdr-dev` | 2.0.2-2 arm64 `.deb` | github.com/stratux/rtlsdr release v1.0 | URL only, **[pending]** no checksum | Fetched with `wget` at image build. |
+| gcc, make, git, ncurses-dev, libusb-1.0-0-dev | Debian Trixie package set | Debian | **[pending]** unversioned `apt-get install` | Capture the package list of the builder image alongside the device image (Step 1.2). |
 
 ### Vendored web libraries (served to the HMI)
 

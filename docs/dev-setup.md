@@ -52,17 +52,25 @@ rm librtlsdr-dev_2.0.2-2_arm64.deb
 ```
 
 ### Install Go
-The repo's `go.mod` sets the minimum Go version (currently `go 1.20`). The official
-build (see [building.md](building.md)) uses Debian Bookworm's `golang-go` package, so
-on the Pi the simplest, build-consistent option is:
+The repo's `go.mod` sets the minimum Go version (currently `go 1.27`), and some
+dependencies set their own floor (`golang.org/x/exp` needs >= 1.26,
+`tinygo.org/x/bluetooth` >= 1.25). **Debian's `golang-go` is not new enough**: Trixie
+ships Go 1.24 *and* patches the default to `GOTOOLCHAIN=local`, so it will not fetch a
+newer toolchain for you — it just fails with
+`go.mod requires go >= 1.27 (running go 1.24.x; GOTOOLCHAIN=local)`.
+
+Install Go from <https://go.dev/dl/> (pick the `linux-arm64` tarball on the Pi), which is
+what the official build does — `Dockerfile` pins the version and its SHA-256:
 
 ```bash
-apt install -y golang-go
+GO_VERSION=1.27.3
+wget https://go.dev/dl/go$GO_VERSION.linux-arm64.tar.gz
+sudo tar -C /usr/local -xzf go$GO_VERSION.linux-arm64.tar.gz
+export PATH=/usr/local/go/bin:$PATH
 go version   # confirm it satisfies the 'go' directive in go.mod
 ```
 
-If your distro's `golang-go` is older than the version required by `go.mod`, install a
-newer Go from <https://go.dev/dl/> (pick the `linux-arm64` tarball) instead.
+Keep this in step with `ARG GO_VERSION` in `Dockerfile` so local and CI builds agree.
 
 ### Clone the repo
 Now clone the Stratux repository with submodules:

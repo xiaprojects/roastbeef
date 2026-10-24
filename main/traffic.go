@@ -314,7 +314,7 @@ func sendTrafficUpdates() {
 
 	var currAlt float32
 	currAlt = mySituation.BaroPressureAltitude
-	if currAlt == 99999 {   // no valid BaroAlt, take GPS instead, better than nothing
+	if !isTempPressValid() {   // no valid BaroAlt, take GPS instead, better than nothing
 		currAlt = mySituation.GPSAltitudeMSL
 	}
 
@@ -690,9 +690,13 @@ func makeTrafficReportMsg(ti TrafficInfo) []byte {
 func parseDownlinkReport(s string, signalLevel int) {
 
 	var ti TrafficInfo
-	s = s[1:]
-	frame := make([]byte, len(s)/2)
-	hex.Decode(frame, []byte(s))
+	frame, err := hex.DecodeString(s[1:])
+	// A basic report (MDB type 0) is 18 bytes and every other type a 34-byte long report,
+	// either possibly followed by its parity (Ping/Pong). Anything else - a truncated or
+	// garbled line from a serial receiver - is dropped rather than read out of bounds.
+	if err != nil || len(frame) < 18 || len(frame) > 48 || (frame[0]>>3 != 0 && len(frame) < 34) {
+		return
+	}
 
 	// Extract header
 	msg_type := (uint8(frame[0]) >> 3) & 0x1f
@@ -982,7 +986,7 @@ func parseDownlinkReport(s string, signalLevel int) {
 		raw_track := ((uint16(frame[13]) & 0x03) << 9) | (uint16(frame[14]) << 1) | ((uint16(frame[15]) & 0x80) >> 7)
 		//tt := ((raw_track & 0x0600) >> 9)
 		//FIXME: tt == 1 TT_TRACK. tt == 2 TT_MAG_HEADING. tt == 3 TT_TRUE_HEADING.
-		track = float32((raw_track & 0x1ff) * 360 / 512)
+		track = float32(uint32(raw_track&0x1ff) * 360 / 512) // uint32: 511*360 overflows uint16
 
 		// Dimensions of vehicle - skip.
 	}
@@ -1094,6 +1098,9 @@ func parseDump1090Message(buf string) {
 	err := json.Unmarshal([]byte(buf), &newTi)
 	if err != nil {
 		log.Printf("can't read ES traffic information from %s: %s\n", buf, err.Error())
+		return
+	}
+	if newTi == nil { // "null" is valid JSON but no message
 		return
 	}
 

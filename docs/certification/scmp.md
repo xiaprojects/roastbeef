@@ -15,7 +15,7 @@ HMI (`web/`), the Debian package and the SD-card image.
 | Submodules (`dump1090`, `rtl-ais`, `ogn/ogn-tracker`, `image_build/pi-gen`) | commit pinned in the superproject | `.gitmodules`, `git submodule status` |
 | Go dependencies | `go.mod` + `go.sum` (module path, version, hash) | repo root. **[pending]** `go mod vendor` so sources are in the tree |
 | Prebuilt binaries and vendored web libraries | version + SHA-256 | `docs/certification/provenance.md`, verified by `make check` |
-| Build toolchain | `Dockerfile` (Debian trixie, distro `golang-go`, librtlsdr from stratux/rtlsdr v1.0) | **[pending]** pin the base image by digest and the Go version explicitly |
+| Build toolchain | `Dockerfile`: Debian trixie base, Go 1.27.3 from go.dev pinned by `ARG GO_VERSION`/`ARG GO_SHA256` and checksum-verified, `GOTOOLCHAIN=local`, librtlsdr from stratux/rtlsdr v1.0 | Inventoried in `provenance.md` (Build toolchain). **[pending]** pin the base image by digest and checksum the librtlsdr `.deb`s |
 | Executable | `Version` = latest tag (`scripts/getversion.sh`); `Build` = commit SHA, `-dirty` suffix when built from a modified tree | `Makefile` (`LFLAGS`), shown in the log at start-up, `/getStatus`, RB-01 OTA screen |
 | **Vendor microcode** (bootloader/EEPROM, RP1, PMIC configuration, VideoCore firmware) | **[pending]** version + SHA-256 per release | AMC 20-152A Objective COTS-4 treats microcode not qualified with the device as a configuration item that must be declared and controlled — see `hardware/platform-assessment.md` D-10 |
 | **Compute board** | **[pending]** part number, revision, SoC stepping, serial | `hardware/bom.md` (Step 8); per-unit build record |
