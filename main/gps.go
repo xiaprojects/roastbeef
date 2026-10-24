@@ -1217,7 +1217,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		tmpSituation.GPSFixQuality = uint8(q) // 1 = 3D GPS; 2 = DGPS (SBAS /WAAS)
 
 		// Timestamp.
-		if len(x[1]) < 7 {
+		if len(x[1]) < 6 { // hhmmss, the decimals are optional
 			return false
 		}
 		hr, err1 := strconv.Atoi(x[1][0:2])
@@ -1333,7 +1333,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		}
 
 		// Timestamp.
-		if len(x[1]) < 7 {
+		if len(x[1]) < 6 { // hhmmss, the decimals are optional
 			return false
 		}
 		hr, err1 := strconv.Atoi(x[1][0:2])
@@ -2015,6 +2015,10 @@ func gpsSerialReader() {
 }
 
 func makeAHRSSimReport() {
+	// XATT has no invalid encoding: send nothing rather than the Invalid sentinel as an attitude.
+	if isAHRSInvalidValue(mySituation.AHRSPitch) || isAHRSInvalidValue(mySituation.AHRSRoll) {
+		return
+	}
 	msg := createXPlaneAttitudeMsg(float32(mySituation.AHRSGyroHeading), float32(mySituation.AHRSPitch), float32(mySituation.AHRSRoll))
 	sendXPlane(msg, 100 * time.Millisecond, 1)
 }
@@ -2283,7 +2287,9 @@ func isAHRSValid() bool {
 }
 
 func isTempPressValid() bool {
-	return stratuxClock.Since(mySituation.BaroLastMeasurementTime).Seconds() < 15
+	// IsZero: before the first reading, the stratux clock itself starting at zero would
+	// make the empty one look fresh for the first 15 s of uptime - a pressure altitude of 0 ft.
+	return !mySituation.BaroLastMeasurementTime.IsZero() && stratuxClock.Since(mySituation.BaroLastMeasurementTime).Seconds() < 15
 }
 
 // initFlarmSerial opens the dedicated FLARM traffic serial-in device configured via

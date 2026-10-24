@@ -65,6 +65,17 @@ re-verify before acting.
   vendored library with version, origin, licence and SHA-256; verified by `make check`.
 - **[certification/fha.md](certification/fha.md)** — preliminary functional hazard
   assessment: installation assumptions, failure conditions and proposed DAL per function.
+- **[certification/standards/requirements.md](certification/standards/requirements.md)** —
+  the requirements standard: identifier scheme, required fields, phrasing rules, derived
+  requirements, traceability and the review checklist. Read it before touching
+  [`requirements/`](../requirements/).
+- **[../requirements/](../requirements/)** — the system and software high-level
+  requirements themselves, with `scripts/trace.py` enforcing the trace both ways from
+  `make check`.
+- **[certification/agent-tasks.md](certification/agent-tasks.md)** — the open roadmap
+  items rewritten as self-contained briefs a coding agent can execute in this checkout,
+  each graded by whether an agent can finish it alone, needs a human decision first, or is
+  not agent work at all.
 - **[certification/hardware/platform-assessment.md](certification/hardware/platform-assessment.md)**
   — how the standards treat a COTS board, the Raspberry Pi 5 compliance fact sheet, the
   derogation register (12 findings with the clause that carries each), and a graded

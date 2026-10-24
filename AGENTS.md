@@ -31,7 +31,7 @@ Common targets (see `Makefile`):
 | `make dpkg` | Builds the `.deb`. **Only works on the target OS/arch** (Debian 13 Trixie, arm64 — what `Dockerfile` provides) |
 | `make dall` / `make ddpkg` | Runs `make all` / `make dpkg` inside Docker (`docker_run.sh`) — use this to produce target-arch artifacts from any host |
 | `make test` | Compiles the standalone diagnostic utilities in `test/` (see Testing) |
-| `make check` | The CI gate: `gofmt` (leaf packages), `go vet` on every package, `go test`, and the third-party hash check (`scripts/provenance.sh --verify`). Run it before pushing. |
+| `make check` | The CI gate: `gofmt` (leaf packages), `go vet` on every package, `go test`, the third-party hash check (`scripts/provenance.sh --verify`) and the requirements trace (`scripts/trace.py --check`). Run it before pushing. |
 | `make clean` | Cleans Go output and the C submodule builds |
 
 Notes:
@@ -75,19 +75,47 @@ Notes:
   `hobbsmeter_test.go`, `autopilot_test.go`, `gen_gdl90_test.go` (GDL90 framing against
   the ICD examples) and `traffic_test.go` (UAT/1090 decoding against recorded frames and
   dump978's `uat2text`, the GDL90 traffic report, `icao2reg`, ownship filter, and the
-  `sendTrafficUpdates` cycle: staleness, expiry, radar limits, bearingless). They are
+  `sendTrafficUpdates` cycle: staleness, expiry, radar limits, bearingless),
+  `flarm-nmea_test.go` (PFLAA/PFLAU out and in, ownship NMEA) and `sensors_test.go` (the
+  attitude function: cage over all 24 board mountings, a simulated coordinated turn with an
+  exact IMU, the GDL90/ForeFlight/X-Plane attitude outputs, and `sensorAttitudeSender`
+  itself on a fake IMU), `airdata_test.go` (the pitot and baro senders on scripted sensors)
+  and `gps_test.go` (the NMEA parser: textbook sentences, all hemispheres, malformed input,
+  NACp). The sensor loops run on real tickers, each in a child process (`inChild`), in
+  parallel, so `go test ./main/` takes ~15 s. A known, undecided hazard is a test that
+  measures it and `t.Skip`s with the numbers, so `go test -v ./main/` lists them. They are
   written requirements-style (one behaviour per test, robustness cases documented) — see
   `docs/certification/roadmap.md` Step 5 for the intent. Run with `make check` or
   `go test ./common/ ./uatparse/`. The `test/` directory is a collection of independent
   `package main` diagnostic tools (e.g. `icao2reg.go`, `uat_read.go`,
   `nexrad_annunciator.go`); `make -C test` just compiles each one — it is deliberately
   excluded from `go vet ./...`-style globs. Sample input lives in `test-data/`.
+- **Requirements and traceability.** `requirements/` holds the system and software
+  high-level requirements for the certified core; the rules are in
+  `docs/certification/standards/requirements.md`. The traffic function is fully specified
+  and traced — a test declares what it verifies with a `// Covers: RB-HLR-TRF-150` line in
+  the comment block above it, and `scripts/trace.py --check` (run by `make check`) fails
+  the build if a tag names a requirement that does not exist, or if a requirement loses its
+  last test without being added to the agreed budget in `requirements/untraced.txt`.
+  **If you delete or rename a tagged test, move its `Covers:` tag to whatever replaces
+  it.** `scripts/trace.py --matrix` prints the trace matrix.
+  `docs/certification/agent-tasks.md` carries the open certification work as task briefs
+  written to be handed to an agent: read the house rules there before starting one, and the
+  grade column before accepting one — some of that work is not agent work.
 - **RB-01 display tests** live in `test/display/` (Python 3 + a Chromium, nothing else):
   `cd test/display && ./run.py`. They drive the real HMI against a fake backend
   (`rbserver.py`) whose REST answers are a snapshot of a real aircraft
   (`fixtures/rb01-device.json`, refreshed with `./capture.py`, GET-only), and can replay a
   recorded SQLite flight log through it (`flightlog.py`; `test_flight.py` verifies the plates
   against `expected/<log>.json` derived from a specific recording). See its `README.md`.
+- **Daemon integration test** in `test/integration/` (Go + Python 3, no root):
+  `cd test/integration && python3 test_daemon.py` builds `stratuxrun`, replays two minutes of a
+  real flight's dump1090 input and GPS through `-trace`, and checks the daemon's sockets
+  (`/traffic`, `/radar`, `/gdl90`, `/situation`) against what the aircraft's daemon logged from
+  the same input, and its FLARM NMEA output (TCP `:2000`) against its GDL90. Fixtures are cut
+  from a recording with `replay.py make`. See its `README.md`. Non-root, `stratuxrun` serves the
+  API on `:8000`, or on `-port` when one is given; `:2000` is fixed, so the FLARM checks SKIP if
+  another daemon holds it.
 - **HMI dev loop without the Pi**: `cd test/display && ./simulator.py --idle` serves the
   working tree at `http://localhost:8000/RB-01/` with the aircraft snapshot behind it; edit
   `web/RB-01/`, reload. `/sim/` moves the aircraft or plays a recorded flight (any

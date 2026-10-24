@@ -3019,6 +3019,9 @@ func managementInterface() {
 	} else {
 		addr = ":8000" // Make sure we can run without root priviledges on different port
 		addrTls = ":8443"
+		if ManagementAddr != defaultManagementAddr { // an explicit -port, e.g. a test beside a running simulator
+			addr = fmt.Sprintf(":%d", ManagementAddr)
+		}
 	}
 
 	go managementInterfaceForServe(addr)

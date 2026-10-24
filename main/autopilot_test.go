@@ -274,13 +274,12 @@ func TestVnavFieldFiveIndependentOfProfile(t *testing.T) {
 // it decides which fields are null. The encoder tests above cover formatting,
 // these cover sourcing.
 func TestPgrmhFromSolution(t *testing.T) {
-	saved := mySituation
-	defer func() { mySituation = saved }()
+	saved, clock := mySituation, stratuxClock
+	defer func() { mySituation, stratuxClock = saved, clock }()
 	// stratuxClock is created in main(), which a test never runs; isTempPressValid
-	// reads it, so give the package one.
-	if stratuxClock == nil {
-		stratuxClock = NewMonotonic()
-	}
+	// reads it, so give the package one - stopped, and past zero, since a reading
+	// stamped with the zero time is taken for no reading at all.
+	stratuxClock = &monotonic{Time: time.Time{}.Add(time.Hour)}
 
 	// A valid solution on the worked-example leg, baro fresh so field 2 is
 	// present, and a following leg so field 8 is too.

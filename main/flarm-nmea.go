@@ -241,7 +241,7 @@ func makeFlarmPFLAAString(ti TrafficInfo) (msg string, valid bool, alarmLevel ui
 	}
 
 	if ti.Position_valid {
-		msg = fmt.Sprintf("$PFLAA,%d,%d,%d,%d,%d,%s,%d,%d,%d,%0.1f,%s", alarmLevel, relativeNorth, relativeEast, relativeVertical, idType, idstr, uint16(ti.Track), uint16(ti.TurnRate), groundSpeed, climbRate, acType)
+		msg = fmt.Sprintf("$PFLAA,%d,%d,%d,%d,%d,%s,%d,%d,%d,%0.1f,%s", alarmLevel, relativeNorth, relativeEast, relativeVertical, idType, idstr, uint16(ti.Track), int32(ti.TurnRate), groundSpeed, climbRate, acType) // turn rate is signed, + = right
 	} else {
 		msg = fmt.Sprintf("$PFLAA,%d,%d,,%d,%d,%s,,,,%0.1f,%s", alarmLevel, int32(math.Abs(dist)), relativeVertical, idType, idstr, climbRate, acType) // prototype for bearingless traffic
 	}
@@ -459,7 +459,7 @@ func makeAHRSLevilReport() {
 	}
 
 	msg := fmt.Sprintf("$RPYL,%d,%d,%d,%d,%d,%d,0", roll, pitch, hdg, slip_skid, yaw_rate, g)
-	appendNmeaChecksum(msg)
+	msg = appendNmeaChecksum(msg)
 	sendNetFLARM(msg + "\r\n", 100 * time.Millisecond, 4)
 }
 
@@ -551,8 +551,8 @@ func parseFlarmPFLAU(message []string) {
 	// We don't know idType any more in PFLAU message.. just use anything we have.. Not optimal, but better than having multiple targets
 	key := address
 	existingTi, ok := traffic[key]
-	key = 1 << 24 | address
-	if !ok {
+	if !ok { // keep a known target under its own key, or the update becomes a second target
+		key = 1 << 24 | address
 		existingTi, ok = traffic[key]
 	}
 	if ok {
@@ -662,15 +662,24 @@ func parseFlarmPFLAA(message []string) {
 	ti.Last_source = TRAFFIC_SOURCE_OGN
 	ti.Alt, ti.AltIsGNSS = relativeGpsAltToBaro(relVert)
 
-	// lat dist = 60nm = 111,12km
-	ti.Lat = mySituation.GPSLatitude + (relNorth / 111120.0)
-	avgLat := ti.Lat / 2.0 + mySituation.GPSLatitude / 2.0
-	lngFactor := float32(111120.0 * math.Cos(common.Radians(float64(avgLat))))
-	ti.Lng = mySituation.GPSLongitude + (relEast / lngFactor)
+	if len(message[3]) == 0 || !isGPSValid() {
+		// No bearing - FLARM sends a target it cannot locate with its distance in
+		// <RelativeNorth> and <RelativeEast> empty - or no own position to place it from:
+		// track it by distance alone, as a bearingless Mode S target is.
+		ti.DistanceEstimated = math.Hypot(float64(relNorth), float64(relEast))
+		ti.DistanceEstimatedLastTs = stratuxClock.Time
+		ti.Position_valid = false
+		ti.BearingDist_valid = false
+	} else {
+		// lat dist = 60nm = 111,12km
+		ti.Lat = mySituation.GPSLatitude + (relNorth / 111120.0)
+		avgLat := ti.Lat / 2.0 + mySituation.GPSLatitude / 2.0
+		lngFactor := float32(111120.0 * math.Cos(common.Radians(float64(avgLat))))
+		ti.Lng = mySituation.GPSLongitude + (relEast / lngFactor)
 
-	if isGPSValid() {
 		ti.Distance, ti.Bearing = common.Distance(float64(mySituation.GPSLatitude), float64(mySituation.GPSLongitude), float64(ti.Lat), float64(ti.Lng))
 		ti.BearingDist_valid = true
+		ti.Position_valid = true
 	}
 	
 	ti.Track = track
@@ -679,7 +688,6 @@ func parseFlarmPFLAA(message []string) {
 	ti.Speed_valid = true
 	ti.Vvel = int16(vspeed * 196.85) // m/s to feet/min
 
-	ti.Position_valid = true
 	ti.ExtrapolatedPosition = false
 	ti.Last_seen = stratuxClock.Time
 	ti.Last_alt = stratuxClock.Time

@@ -94,7 +94,26 @@ Sources (from `web/RB-01/plates/js/SixPackInstruments.js` and `main/sensors.go`)
 | FHA-SYS-3 | Whole unit | Distraction / excessive workload (unreadable display, spurious alerts) | Minor | — | Human-factors review of alerts and night mode. |
 | FHA-E-1 | Checklist, timers, camera, voice, radio remote, OTA UI, addons, X-Plane, CoT, charts, export | Any | No safety effect | E | Must be shown not to interfere with the core (partitioning, roadmap Step 7). |
 
-## 4. Items to resolve in the review
+## 4. Derived requirements fed back from the software requirements
+
+DO-178C requires derived requirements — those with no parent above them, i.e. design
+decisions the FHA could not have anticipated — to be given back to the safety assessment.
+This section is that feedback loop; `scripts/trace.py` reports any derived requirement in
+`requirements/` that is not named here.
+
+| Requirement | Decision | Effect on the hazard analysis |
+|---|---|---|
+| RB-SYS-SYS-010 | The equipment performs no function on which continued safe flight and landing depends | Not a new failure condition — it is the assumption (A1) every row above is classified under. Verified by analysis, i.e. by this document. |
+| RB-SYS-SYS-020 | Every displayed quantity is annunciated invalid or non-current within 1 s | Reduces severity: it is the mitigation that keeps FHA-ATT-3, FHA-ALT-3, FHA-HDG-2 and FHA-TRF-2 at Major rather than Hazardous, and the reason the platform's ~6 × 10⁻⁵/h failure rate is tolerable. No new failure condition; its own failure is FHA-ALR-1. |
+| RB-SYS-SYS-030 | A failure outside the certified core cannot stop the core functions | Reduces severity: without it every Level E function inherits the core's DAL. Its own failure mode (interference) is FHA-E-1. |
+| RB-SYS-SYS-040 | Installed software version and build are readable without disassembly | No safety effect in flight. Supports configuration control and field problem reporting (`scmp.md` §5); a wrong answer could mislead maintenance, which is a Minor, ground-only condition. |
+| RB-SYS-TRF-050 | Traffic output conforms to the GDL90 ICD and the FLARM NMEA definition | No new failure condition. Non-conformance manifests as the EFB mis-drawing or dropping targets, already covered by FHA-TRF-1 (missing target) and FHA-TRF-2 (misleading target). |
+| RB-HLR-TRF-040 | Ambiguous UAT address qualifier 2 is resolved to ADS-R using NIC ≥ 7 and emitter category | Covered by FHA-TRF-2: a wrong resolution mislabels a target's type, not its position. The label is advisory; no new condition. |
+| RB-HLR-TRF-160 | A dead-reckoned position is discarded once the last real report is 25 s old | Bounds FHA-TRF-2: the limit is what stops an extrapolated target drifting indefinitely from the truth. The value has no source in a standard and is the one to challenge in review — at 120 kt, 25 s is 0.8 NM of accumulated error before the target disappears. |
+| RB-HLR-TRF-230 | One bearingless target may be drawn as eight GDL90 targets on a circle | **New failure condition, accepted.** It deliberately presents a false traffic picture — eight aircraft where there is one — to work around EFBs that cannot draw a range ring. Mitigated by being off by default (`EstimateBearinglessDist`) and by the eight targets carrying the callsign "MODE S". Classified with FHA-TRF-2 as Minor under assumption A6; worth a human-factors opinion at the DER review. |
+| RB-HLR-TRF-330 | Transmitted target count is limited to what an EFB can process | Covered by FHA-TRF-1 (missing target): the limit trades completeness for the client staying alive. **The code does not appear to implement it** — open problem report. |
+
+## 5. Items to resolve in the review
 
 1. Confirm A2 (VFR only) is acceptable to the target market; if any customer will use the
    attitude display in IMC, FHA-ATT-2/3 become Hazardous and the core becomes DAL C.

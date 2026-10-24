@@ -27,6 +27,7 @@ import (
 	"encoding/json"
 	"io"
 	"math"
+	"sort"
 	"strings"
 	"sync"
 	"testing"
@@ -130,6 +131,7 @@ type uatWant struct {
 // velocity and accuracy that dump978's decoder reads from it. Track may differ from
 // the true value by under a degree (it is truncated to whole degrees); everything
 // else must match to the precision uat2text prints.
+// Covers: RB-HLR-TRF-010
 func TestUATDownlinkMatchesDump978(t *testing.T) {
 	cases := []struct {
 		name string
@@ -207,6 +209,7 @@ func TestUATDownlinkMatchesDump978(t *testing.T) {
 // one, the target is kept on pressure altitude (as every other source is) and the
 // GNSS-minus-baro difference is recorded. uat2text, fed the N230TX frame with its
 // altitude-type bit set, reads 3150 ft geometric and 3125 ft barometric.
+// Covers: RB-HLR-TRF-020
 func TestUATGeometricAltitudeSwappedForBaro(t *testing.T) {
 	withTrafficState(t)
 	parseInput(withUATByte(uatN230TX, 9, func(b byte) byte { return b | 0x01 }))
@@ -219,6 +222,7 @@ func TestUATGeometricAltitudeSwappedForBaro(t *testing.T) {
 // A surface target's 9-bit track field covers the whole circle: every value h decodes
 // to h*360/512 whole degrees, below 360. (It used to wrap for tracks of 128 degrees
 // and more: 207 was shown as 79.)
+// Covers: RB-HLR-TRF-030
 func TestUATSurfaceTrackCoversTheCircle(t *testing.T) {
 	for h := 0; h < 512; h++ {
 		withTrafficState(t)
@@ -234,6 +238,7 @@ func TestUATSurfaceTrackCoversTheCircle(t *testing.T) {
 // The UAT address qualifier sets the target type: 0 ADS-B, 3 TIS-B, 6 ADS-R, and 2
 // TIS-B with an ICAO address, which is taken as ADS-R when the target reports NIC >= 7
 // and an emitter category (a rebroadcast ADS-B target rather than a radar track).
+// Covers: RB-HLR-TRF-040
 func TestUATAddressQualifierSetsTargetType(t *testing.T) {
 	cases := []struct {
 		name      string
@@ -265,6 +270,7 @@ func TestUATAddressQualifierSetsTargetType(t *testing.T) {
 // Robustness: a UAT line that is not a whole frame - noise or a truncated or merged
 // line on the Ping/Pong serial link, or a hand-edited replay log - is dropped. It
 // creates no target and never panics, since a panic takes the whole daemon down.
+// Covers: RB-HLR-TRF-050
 func TestUATMalformedLinesAreDropped(t *testing.T) {
 	payload := strings.SplitN(uatTISB, ";", 2)[0][1:]
 	cases := map[string]string{
@@ -298,6 +304,7 @@ func TestUATMalformedLinesAreDropped(t *testing.T) {
 // and operational status. The messages fuse into one target carrying the latest of
 // each field; the position message sets NIC 8 (type code 11, no supplement bit) and
 // the operational status message the NACp.
+// Covers: RB-HLR-TRF-060
 func TestES1090MessagesFuseIntoOneTarget(t *testing.T) {
 	withTrafficState(t)
 	ownshipAt(43.0, 12.0, 3000)
@@ -344,6 +351,7 @@ func TestES1090MessagesFuseIntoOneTarget(t *testing.T) {
 // GA aircraft at 3000 ft) is tracked by altitude only: no position, "last seen" moves
 // with the altitude replies, and its distance is estimated from signal strength so it
 // can be shown as bearingless traffic.
+// Covers: RB-HLR-TRF-070
 func TestES1090ModeSOnlyTargetIsBearingless(t *testing.T) {
 	withTrafficState(t)
 	parseDump1090Message(`{"Icao_addr":3146723,"DF":0,"CA":0,"TypeCode":0,"SubtypeCode":0,"SignalLevel":0.000357,"Gain":37.200000,"IsMlat":false,"Tail":null,"Alt":3000,"AltIsGNSS":false,"GnssDiffFromBaroAlt":null,"Speed_valid":false,"Speed":null,"Track":null,"Lat":null,"Lng":null,"Position_valid":false,"Vvel":null,"Squawk":null,"OnGround":null,"NACp":null,"Emitter_category":null,"Timestamp":"2026-09-13T10:25:57.774Z"}`)
@@ -366,6 +374,7 @@ func TestES1090ModeSOnlyTargetIsBearingless(t *testing.T) {
 
 // dump1090's heartbeat (address 0x07FFFFFF) is not a target, and the non-ICAO flag
 // (bit 24, set for TIS-B track numbers) is stripped from the address.
+// Covers: RB-HLR-TRF-080
 func TestES1090HeartbeatAndNonICAOAddress(t *testing.T) {
 	withTrafficState(t)
 	parseDump1090Message(`{"Icao_addr":134217727,"DF":0}`)
@@ -380,6 +389,7 @@ func TestES1090HeartbeatAndNonICAOAddress(t *testing.T) {
 
 // Robustness: a line from dump1090 that is not a message object is logged and
 // dropped. It creates no target and never panics.
+// Covers: RB-HLR-TRF-090
 func TestES1090MalformedLinesAreDropped(t *testing.T) {
 	for _, line := range []string{"", "{", "null", "[]", "42", `"text"`, `{"Icao_addr":"4D2516"}`, `{"Icao_addr":-1}`} {
 		withTrafficState(t)
@@ -400,6 +410,7 @@ func TestES1090MalformedLinesAreDropped(t *testing.T) {
 // The worked Traffic Report example of the GDL90 ICD: N825V, ICAO 52642511 octal,
 // 44.90708 -122.99488, 5000 ft pressure altitude, airborne, true track, NIC 10 NACp 9,
 // 123 kt on 45 degrees climbing 64 fpm, light aircraft, no alert, no emergency.
+// Covers: RB-HLR-TRF-250
 func TestTrafficReportMatchesGDL90Example(t *testing.T) {
 	withTrafficState(t)
 	ti := TrafficInfo{
@@ -433,6 +444,7 @@ func TestTrafficReportMatchesGDL90Example(t *testing.T) {
 
 // Pressure altitude is sent in 25 ft steps offset by 1000 ft, as the ICD tabulates;
 // outside -1000..101350 ft it is sent as 0xFFF, "invalid or unavailable".
+// Covers: RB-HLR-TRF-260
 func TestTrafficReportAltitudeEncoding(t *testing.T) {
 	withTrafficState(t)
 	for alt, want := range map[int32]int{-1000: 0x000, 0: 0x028, 1000: 0x050, 5000: 0x0F0, 101350: 0xFFE, -1025: 0xFFF, 101375: 0xFFF} {
@@ -446,6 +458,7 @@ func TestTrafficReportAltitudeEncoding(t *testing.T) {
 // A target that reports GNSS height (above the WGS-84 ellipsoid) is sent at the
 // pressure altitude ownship's own baro/GNSS offset gives it: height minus geoid
 // separation is MSL, shifted by ownship's (pressure altitude - GPS MSL).
+// Covers: RB-HLR-TRF-270
 func TestTrafficReportConvertsGNSSHeightToPressureAltitude(t *testing.T) {
 	withTrafficState(t)
 	ownshipAt(45, 9, 3000)
@@ -459,6 +472,7 @@ func TestTrafficReportConvertsGNSSHeightToPressureAltitude(t *testing.T) {
 
 // The alert bit is set for traffic within 2 NM, and for traffic whose distance cannot
 // be computed, so a target of unknown range is never presented as harmless.
+// Covers: RB-HLR-TRF-280
 func TestTrafficReportAlertWithinTwoNM(t *testing.T) {
 	withTrafficState(t)
 	cases := []struct {
@@ -481,6 +495,7 @@ func TestTrafficReportAlertWithinTwoNM(t *testing.T) {
 // is a signed 12-bit count of 64 fpm; the priority code fills the high nibble of the
 // last byte; and the callsign is cut to 8 characters, anything but digits, capitals
 // and space (and the source-prefix letters e u a r t) becoming a space.
+// Covers: RB-HLR-TRF-290
 func TestTrafficReportFlagsVerticalSpeedAndCallsign(t *testing.T) {
 	withTrafficState(t)
 	p := gdl90Payload(t, makeTrafficReportMsg(TrafficInfo{
@@ -502,6 +517,7 @@ func TestTrafficReportFlagsVerticalSpeedAndCallsign(t *testing.T) {
 // A UAT frame as heard reaches the EFB with the same identity, position, altitude
 // and velocity: the decoded target, re-encoded as a GDL90 traffic report, carries
 // dump978's values to the resolution of the GDL90 fields.
+// Covers: RB-HLR-TRF-300
 func TestUATFrameToTrafficReport(t *testing.T) {
 	withTrafficState(t)
 	parseInput(uatTISB)
@@ -560,6 +576,7 @@ func faaNNumbers() []string {
 
 // Every US civil address A00001..ADF7C7 maps to the N-number the FAA assigned it,
 // and the registry ends exactly at ADF7C7 = N99999.
+// Covers: RB-HLR-TRF-100
 func TestIcao2RegCoversTheFAARegistry(t *testing.T) {
 	all := faaNNumbers()
 	if last := uint32(0xA00001 + len(all) - 1); last != 0xADF7C7 || all[len(all)-1] != "N99999" {
@@ -581,6 +598,7 @@ func TestIcao2RegCoversTheFAARegistry(t *testing.T) {
 
 // Real aircraft that broadcast their registration as callsign: two GA aircraft in the
 // 2015 Michigan UAT log and three US business jets over Italy in the I-RVDX 1090 log.
+// Covers: RB-HLR-TRF-100, RB-HLR-TRF-110
 func TestIcao2RegMatchesBroadcastRegistrations(t *testing.T) {
 	for icao, want := range map[uint32]string{
 		0xA10AC1: "N1663H", 0xA20A3F: "N230TX",
@@ -595,6 +613,7 @@ func TestIcao2RegMatchesBroadcastRegistrations(t *testing.T) {
 // Addresses outside the US and Canadian civil blocks yield no registration: other
 // states (here Italy and Germany), US non-civil, and Canadian non-civil. The first
 // and last Canadian civil addresses are C-FAAA and C-IZZZ.
+// Covers: RB-HLR-TRF-110, RB-HLR-TRF-120
 func TestIcao2RegOutsideCivilBlocks(t *testing.T) {
 	cases := []struct {
 		icao uint32
@@ -617,6 +636,7 @@ func TestIcao2RegOutsideCivilBlocks(t *testing.T) {
 // ownship only when it is where ownship is; a target using the code somewhere else
 // (another aircraft the pilot also flies, airborne now) stays visible as traffic. A
 // report that cannot be checked is hidden but not used as ownship.
+// Covers: RB-HLR-TRF-130
 func TestOwnshipFilter(t *testing.T) {
 	near := TrafficInfo{Icao_addr: 0x3003E3, Position_valid: true, Lat: 43.0, Lng: 12.0, Alt: 3000}
 	far := near
@@ -658,6 +678,7 @@ func TestOwnshipFilter(t *testing.T) {
 // Dead reckoning: a target not heard for 30 s at 120 kt on 090 is moved 1 NM east and
 // by 30 s of its vertical speed; the last real fix is kept, and the next step starts
 // from the previous extrapolation rather than the fix, so nothing is counted twice.
+// Covers: RB-HLR-TRF-190
 func TestExtrapolateTraffic(t *testing.T) {
 	withTrafficState(t)
 	ti := TrafficInfo{Position_valid: true, Lat: 45, Lng: 9, Alt: 3000, Vvel: 500, Speed: 120, Speed_valid: true,
@@ -678,6 +699,7 @@ func TestExtrapolateTraffic(t *testing.T) {
 }
 
 // A turning target keeps turning at its last turn rate, and its track stays in 0..360.
+// Covers: RB-HLR-TRF-200
 func TestExtrapolateTrafficTurnWrapsTrack(t *testing.T) {
 	withTrafficState(t)
 	for _, c := range []struct{ track, rate, want float32 }{{350, 3, 80}, {10, -3, 280}} {
@@ -814,6 +836,7 @@ func trafficCycleAt(t *testing.T) func() trafficCycle {
 // Stale data is not presented as current: a position report under 6 s old goes to the
 // EFB (GDL90 and FLARM) and the radar; at 6 s it goes to neither, though the target
 // stays in the table and the web UI is sent its growing age.
+// Covers: RB-HLR-TRF-150, RB-HLR-TRF-180
 func TestTrafficCycleDropsReportsOlderThanSixSeconds(t *testing.T) {
 	run := trafficCycleAt(t)
 	heard(0x4D2516, 5900*time.Millisecond, 3, 3000)
@@ -842,6 +865,7 @@ func TestTrafficCycleDropsReportsOlderThanSixSeconds(t *testing.T) {
 // A dead-reckoned target is sent, flagged as extrapolated, while the extrapolator keeps
 // it fresh (under 2 s) and its last real report is under 25 s old; past either limit
 // it is not sent.
+// Covers: RB-HLR-TRF-160
 func TestTrafficCycleExtrapolatedTargetLimits(t *testing.T) {
 	run := trafficCycleAt(t)
 	for icao, ages := range map[uint32][2]time.Duration{
@@ -867,6 +891,7 @@ func TestTrafficCycleExtrapolatedTargetLimits(t *testing.T) {
 
 // Targets leave the table 60 s after they were last heard, keeping identity across
 // short gaps; AIS vessels, which report far less often, are kept for 15 minutes.
+// Covers: RB-HLR-TRF-170
 func TestTrafficCycleExpiresTargets(t *testing.T) {
 	run := trafficCycleAt(t)
 	heard(0x000001, 59*time.Second, 3, 3000)
@@ -887,6 +912,7 @@ func TestTrafficCycleExpiresTargets(t *testing.T) {
 // The radar shows traffic within 1.3 x RadarLimits of ownship altitude and within
 // 1.3 x RadarRange; a Mode S target without position passes the range limit. The
 // limits apply to the radar only: the EFB still gets every current target.
+// Covers: RB-HLR-TRF-210
 func TestTrafficCycleRadarLimits(t *testing.T) {
 	run := trafficCycleAt(t)
 	heard(0x000001, time.Second, 3, 3000+2590)
@@ -911,6 +937,7 @@ func TestTrafficCycleRadarLimits(t *testing.T) {
 // Without a current baro reading the radar's altitude band is centred on GPS altitude:
 // both when there has never been a pressure sensor (pressure altitude reads 0) and
 // when it stopped a minute ago (pressure altitude frozen at its last value).
+// Covers: RB-HLR-TRF-220
 func TestTrafficCycleRadarFallsBackToGPSAltitude(t *testing.T) {
 	for name, c := range map[string]struct {
 		frozen float32
@@ -939,6 +966,7 @@ func TestTrafficCycleRadarFallsBackToGPSAltitude(t *testing.T) {
 // kept as the ownship report instead. A report under an ownship code that is close,
 // but not close enough to be trusted as ownship (here 200 m off, against 107 m), is
 // not shown as traffic either, nor used as ownship.
+// Covers: RB-HLR-TRF-140
 func TestTrafficCycleOwnshipIsNotTraffic(t *testing.T) {
 	run := trafficCycleAt(t)
 	globalSettings.OwnshipModeS = "3003E3,3003E4"
@@ -961,6 +989,7 @@ func TestTrafficCycleOwnshipIsNotTraffic(t *testing.T) {
 // by estimated distance (if under 15 km) is sent as a FLARM PFLAA with the distance
 // and no bearing, and - with EstimateBearinglessDist - as eight GDL90 targets "MODE S"
 // on a circle of that radius, for EFBs that cannot show a range ring.
+// Covers: RB-HLR-TRF-230
 func TestTrafficCycleBearinglessNearestModeS(t *testing.T) {
 	run := trafficCycleAt(t)
 	globalSettings.EstimateBearinglessDist = true
@@ -996,6 +1025,7 @@ func TestTrafficCycleBearinglessNearestModeS(t *testing.T) {
 // Distance and bearing are recomputed every cycle from ownship's current position, so
 // the alert bit follows ownship: a target 5 NM ahead raises it once ownship is on top
 // of it, and keeps it raised (distance unknown) when the GPS fix is lost.
+// Covers: RB-HLR-TRF-240
 func TestTrafficCycleGeometryFollowsOwnship(t *testing.T) {
 	run := trafficCycleAt(t)
 	heard(0x000001, 0, 5, 3000)
@@ -1014,6 +1044,7 @@ func TestTrafficCycleGeometryFollowsOwnship(t *testing.T) {
 }
 
 // The status page counts the targets tracked from each receiver.
+// Covers: RB-HLR-TRF-310
 func TestTrafficCycleCountsTargetsBySource(t *testing.T) {
 	run := trafficCycleAt(t)
 	heard(0x000001, 0, 3, 3000)
@@ -1024,5 +1055,50 @@ func TestTrafficCycleCountsTargetsBySource(t *testing.T) {
 	run()
 	if globalStatus.ES_traffic_targets_tracking != 2 || globalStatus.UAT_traffic_targets_tracking != 1 {
 		t.Errorf("tracking ES %d UAT %d; want 2, 1", globalStatus.ES_traffic_targets_tracking, globalStatus.UAT_traffic_targets_tracking)
+	}
+}
+
+// The dead-reckoning pass and the output cycle each run once a second, at whatever phase
+// to each other. A target reporting its position every 4.2 s is in every cycle's output
+// at every phase: the pass leaves a report alone until it is 2 s old. (It used to decide
+// on the age the previous cycle had computed, so a fresh report was dead-reckoned at once
+// and then missed a cycle: 299 one-second gaps in the 49-minute flight of 2026-09-13.)
+// Covers: RB-HLR-TRF-160, RB-HLR-TRF-190
+func TestTrafficCycleKeepsDeadReckonedTargets(t *testing.T) {
+	for _, lead := range []time.Duration{100 * time.Millisecond, 500 * time.Millisecond, 900 * time.Millisecond} {
+		run := trafficCycleAt(t)
+		t0 := stratuxClock.Time
+		heard(1, 0, 3, 3000)
+		type event struct {
+			at   time.Duration
+			kind string
+		}
+		var events []event
+		for s := 1; s <= 20; s++ {
+			events = append(events, event{time.Duration(s) * time.Second, "cycle"},
+				event{time.Duration(s)*time.Second - lead, "pass"})
+		}
+		for k := 1; k <= 4; k++ {
+			events = append(events, event{time.Duration(k) * 4200 * time.Millisecond, "report"})
+		}
+		sort.Slice(events, func(i, j int) bool { return events[i].at < events[j].at })
+		for _, e := range events {
+			stratuxClock.Time = t0.Add(e.at)
+			switch e.kind {
+			case "report": // what parseDump1090Message does with a position message
+				ti := traffic[1]
+				ti.Lat += 0.01
+				ti.Last_seen, ti.Last_alt, ti.ExtrapolatedPosition = stratuxClock.Time, stratuxClock.Time, false
+				traffic[1] = ti
+			case "pass":
+				extrapolateStaleTraffic()
+			case "cycle":
+				if _, ok := run().gdl90[1]; !ok {
+					ti := traffic[1]
+					t.Errorf("pass %v before the cycle: missing at %v (age %.1f, extrapolated %v, %.1f s ago)",
+						lead, e.at, ti.Age, ti.ExtrapolatedPosition, ti.AgeExtrapolation)
+				}
+			}
+		}
 	}
 }

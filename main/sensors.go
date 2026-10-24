@@ -239,6 +239,7 @@ func tempAndPressureSender() {
 			}
 			continue
 		}
+		failNum = 0 // numRetries counts failures in a row, as for the IMU and the pitot
 
 		if proInterface, ok := myPressureReader.(sensors.AirReader); ok {
 			hum, humError := proInterface.Humidity()

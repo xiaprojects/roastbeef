@@ -1,7 +1,7 @@
 # RB-01 Certification Roadmap (DO-178C / ED-12C and related standards)
 
-Status: **Step 1 and Step 2 in progress** (see Progress log at the end). Owner: xiaprojects.
-Drafted 2026-09-12, updated 2026-09-14.
+Status: **Steps 1, 2 and 5 in progress; Step 4 has its first traced function.** Owner:
+xiaprojects. Drafted 2026-09-12, updated 2026-10-24 (see the Progress log at the end).
 This is the ordered list of activities to take the RB-01 avionics software from
 "community project" to a package an authority (EASA/FAA) or a DER/CVE can review.
 Steps are ordered from the **first, easiest, achievable** to the hardest. Each step is
@@ -10,6 +10,12 @@ self-contained and produces value even if the next one never happens.
 > Regulatory numbers, routes and eligibility below are a starting structure written by
 > engineers, not a DER opinion. Confirm the route (Step 3) with a DER (FAA) / CVE (EASA)
 > before spending money on Steps 6–10.
+
+> **Executing this plan.** The open items of Steps 1–9 that can be done in the checkout are
+> written up as agent-ready task briefs in [agent-tasks.md](agent-tasks.md), graded by
+> whether an agent can finish one alone (A), needs a recorded human decision first (B), or
+> is not agent work at all (C). That file is the executable subset of this one; this one
+> stays the plan and the reasoning.
 
 ---
 
@@ -180,10 +186,20 @@ The largest gap. Reverse-engineer from what exists (DO-178C §12.1.4): `docs/htt
 `docs/settings-reference.md`, `docs/integration/gdl90.md`, `docs/hardware/sensors.md`,
 `docs/architecture.md` and the `test/display/` suite are de-facto requirements already.
 
-1. **Pick a text-based, git-native requirements tool** so requirements are reviewed in PRs
-   like code: StrictDoc or Doorstop (both open source, both produce traceability matrices).
-   Requirement IDs `RB-SYS-…` (system), `RB-HLR-<FUNC>-nnn` (software), `RB-ICD-…`
-   (interfaces).
+> **Done for the traffic function.** The mechanism is in place and enforced:
+> [`../../requirements/`](../../requirements/) holds the requirements,
+> [standards/requirements.md](standards/requirements.md) is the rulebook, and
+> `scripts/trace.py --check` runs from `make check`. 47 requirements; 35 of the 38 HLRs
+> verifiable by test are covered, by 39 tags on tests that already existed. Remaining:
+> every other function — attitude, altimetry, speed, heading, alerts, EMS, situation.
+
+1. ~~**Pick a text-based, git-native requirements tool.**~~ Neither StrictDoc nor Doorstop
+   was adopted: both add a dependency and a build step to a repository that deliberately has
+   neither, and the trace they produce is a report rather than a gate. Requirements are plain
+   Markdown in a strict, parsed heading-and-fields form, and `scripts/trace.py` (stdlib only)
+   produces the matrix and fails the build on an inconsistency. Revisit if the requirement
+   count passes roughly a thousand. IDs: `RB-SYS-<FUNC>-nnn` (system),
+   `RB-HLR-<FUNC>-nnn` (software), `RB-ICD-<IFACE>-nnn` (interfaces).
 2. **Write system requirements** for the core (from the FHA + target memo), then HLRs per
    function: ranges, resolutions, update rates, latency, behaviour on invalid/stale input,
    flags, units, colour/symbology, power-up defaults. Interface requirements for
@@ -192,12 +208,23 @@ The largest gap. Reverse-engineer from what exists (DO-178C §12.1.4): `docs/htt
    the safety assessment, as DO-178C requires.
 4. **Review** each requirement against the requirements standard with a checklist; record
    the review (a PR review with the checklist is acceptable evidence).
-5. **Trace** system → HLR → test (Step 5). A script in CI fails when an HLR has no test or
-   a test has no HLR.
+5. ~~**Trace** system → HLR → test.~~ `scripts/trace.py`, wired into `make check`. The
+   rules it enforces, and the one it deliberately does not: a tag naming a non-existent
+   requirement, a duplicate id, a missing field, a bad parent and a derived requirement
+   missing from the FHA are **hard errors**; a requirement with no test is **reported and
+   budgeted** in `requirements/untraced.txt`, which may only shrink. A permanently red gate
+   trains everyone to ignore it — the same reasoning as `test/display/known.py`.
 
 Deliverables: `requirements/` tree, requirements standard applied, review records, trace
-matrix generated in CI. **Exit criterion:** every core function has reviewed HLRs and
-zero untraced items.
+matrix generated in CI (`scripts/trace.py --matrix`). **Exit criterion:** every core
+function has reviewed HLRs and zero untraced items.
+
+**Order of attack for the rest.** Traffic was done first because 32 tests already existed
+to trace to, which proved the mechanism on real evidence rather than on a sample of three.
+That is not the safety order: the FHA ranks attitude and alerting highest, both are still
+unspecified, and neither has any unit test behind it (`main/sensors.go` has none). Attitude
+is therefore both the next function and the harder one — expect to write its tests and its
+requirements together rather than recover requirements from tested code.
 
 ### Step 5 — Requirements-based verification and coverage
 
@@ -414,7 +441,14 @@ doubles the effort.
       safety-related, root cause.
 - [x] `docs/certification/fha.md` — assumptions, the seven PFD instruments, skeleton for the rest.
 - [x] `common/equations_test.go`, `uatparse/uatparse_test.go` — 17 tests, golden UAT frame.
+- [x] `docs/certification/standards/requirements.md` — the requirements standard.
+- [x] `requirements/` + `scripts/trace.py` — the traffic function specified and traced
+      bidirectionally, enforced by `make check`.
+- [x] `docs/certification/hardware/platform-assessment.md` — Pi 5 compliance, the
+      derogation register, the graded ARM64 platform table.
 - [ ] Book a first conversation with a DER/CVE to validate the NORSEE/CS-STAN target.
+- [ ] **Next:** attitude (`ATT`) requirements and the unit tests to go with them — the
+      function the FHA ranks highest and the one with no test coverage at all.
 
 ## Progress log
 
@@ -430,6 +464,47 @@ doubles the effort.
 - Deliverables written: `scmp.md` (with its pending-action table), `provenance.md`, `fha.md`.
 - Not done, needs the owner: baseline tag, branch protection, signed OTA, off-GitHub
   archive, `go mod vendor`, container image pinned by digest.
+
+**2026-10-02 — Step 8 (assessment written).**
+
+- `hardware/platform-assessment.md`: how the standards treat a COTS board, a Raspberry Pi 5
+  fact sheet against the vendor datasheets, a 12-entry derogation register, and a graded
+  reference table of ARM64 alternatives. Three findings drive the rest: the Pi 5's **0 °C**
+  lower limit meets no DO-160G §4 category; AMC 20-152A is *not required* at DAL D and
+  AMC 20-193 *does not apply* at DAL D or E; and no certifiable graphics driver exists for
+  any Broadcom VideoCore part, which makes Step 7's display-path choice a board choice.
+- NORSEE's *"assumes the equipment will fail"* was folded back into Step 3 and the FHA: the
+  platform's ~6 × 10⁻⁵/h failure rate makes annunciation, not reliability, the argument.
+
+**2026-10-24 — Step 4 (first function traced), Step 2 (requirements standard).**
+
+- `standards/requirements.md` written: identifier scheme, required fields, phrasing rules,
+  derived-requirement handling, the review checklist, and the two rules that keep
+  reverse-engineering honest (write what the code *should* do; mark the uncertain ones).
+- `requirements/` created with 47 requirements: 9 system (`RB-SYS`), 34 traffic HLRs
+  (`RB-HLR-TRF`), 4 GDL90 interface requirements (`RB-ICD-GDL`). Traffic was chosen first
+  because 32 unit tests already existed to trace to, so the mechanism could be proved on
+  real evidence.
+- `scripts/trace.py` enforces the trace from `make check`. 39 `Covers:` tags added to
+  existing tests; 35 of 38 HLRs verifiable by test are covered. All three negative paths
+  were verified to actually fail the build (unknown identifier in a tag, a requirement
+  losing its last test, a parent that does not exist) — a gate that cannot fail is theatre.
+- System requirements trace *through* their children rather than to a test of their own,
+  so `RB-SYS-SYS-040` (installed-software identification) shows up correctly as having no
+  flow-down yet.
+- The FHA gained §4, the derived-requirements feedback loop DO-178C asks for: 9 derived
+  requirements, each with its effect on the hazard analysis. One is a **new failure
+  condition, accepted**: RB-HLR-TRF-230 draws a single bearingless target as eight GDL90
+  targets on a circle, a deliberate distortion of the traffic picture, mitigated by being
+  off by default and worth a human-factors opinion at the DER review.
+- Writing the requirements surfaced one problem report: **RB-HLR-TRF-330, the EFB target
+  count limit, is specified in a code comment but does not appear to be implemented**
+  (`main/traffic.go` `trafficCycle()` records that ForeFlight 7.5 fails at roughly
+  1000–2000 messages, then transmits every current target). Recorded as a requirement with
+  low confidence and no test, rather than written up as if the behaviour existed.
+- Untraced budget: 3 (`requirements/untraced.txt`) — FLARM PFLAA/PFLAU conformance (no test
+  file for `flarm-nmea.go` at all), the target count limit above, and staleness annunciation
+  on the traffic display (the HMI half of RB-SYS-SYS-020, same gap as FHA-ATT-3).
 
 ## Standards referenced
 

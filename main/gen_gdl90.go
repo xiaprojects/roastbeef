@@ -306,7 +306,10 @@ func makeLatLng(v float32) []byte {
 }
 
 func isDetectedOwnshipValid() bool {
-	return stratuxClock.Since(OwnshipTrafficInfo.Last_seen).Seconds() < 10
+	// Position_valid: until ownship's transponder has been heard, the record is all zeroes,
+	// and with the stratux clock itself starting at zero it would look fresh for the first
+	// 10 s of uptime - an ownship report at 0N 0E.
+	return OwnshipTrafficInfo.Position_valid && stratuxClock.Since(OwnshipTrafficInfo.Last_seen).Seconds() < 10
 }
 
 func makeOwnshipReport() bool {

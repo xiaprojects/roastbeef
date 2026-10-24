@@ -246,7 +246,9 @@ func tcpNMEAOutListener() {
 			NETWORK_FLARM_NMEA,
 			key,
 		}
+		netMutex.Lock() // sendMsg() ranges over the map; an unlocked write is a fatal runtime error
 		clientConnections[tcpConn.GetConnectionKey()] = tcpConn
+		netMutex.Unlock()
 		go connectionWriter(tcpConn)
 	}
 }
@@ -688,6 +690,8 @@ func getNetworkConn(ipAndPort string) *networkConnection {
 }
 
 func getNetworkConnsByIp(ip string) []*networkConnection {
+	netMutex.Lock()
+	defer netMutex.Unlock()
 	conns := make([]*networkConnection, 0)
 	// Search for any connection with the same IP to match ping responses
 	for key, conn := range clientConnections {
