@@ -274,7 +274,12 @@ func isOwnshipTrafficInfo(ti TrafficInfo) (isOwnshipInfo bool, shouldIgnore bool
 			// If we have a pressure sensor, and the pressure altitude of traffic and ownship is too big, skip...
 			if altDiff > 500 {
 				log.Printf("Skipping ownship %s because the altitude is off (%f ft)", ownCode, altDiff)
+				// TODO: find a better strategy for the following cases
+				// You fly near the sea level and transponder is in A, reporting 0 as altitude
+				// You fly aerobatics and the "lag" on the system makes the altitude difference too big between attitude and transponder loopback
+				/*
 				continue
+				*/
 			}
 
 			// To really use the information from the ownship traffic info, we have much more
