@@ -1969,6 +1969,9 @@ func main() {
 	}
 
 	if !isTraceReplayMode {
+		// Start from where the aircraft was switched off until the GPS has a fix.
+		restoreLastPosition()
+
 		//FIXME: Only do this if data logging is enabled.
 		initDataLog()
 

@@ -81,7 +81,8 @@ Notes:
   exact IMU, the GDL90/ForeFlight/X-Plane attitude outputs, and `sensorAttitudeSender`
   itself on a fake IMU), `airdata_test.go` (the pitot and baro senders on scripted sensors)
   and `gps_test.go` (the NMEA parser: textbook sentences, all hemispheres, malformed input,
-  NACp). The sensor loops run on real tickers, each in a child process (`inChild`), in
+  NACp), `lastposition_test.go` (the startup position: clean and power-cut logs read with
+  nothing written, log order, the Hobbs fallback). The sensor loops run on real tickers, each in a child process (`inChild`), in
   parallel, so `go test ./main/` takes ~15 s. A known, undecided hazard is a test that
   measures it and `t.Skip`s with the numbers, so `go test -v ./main/` lists them. They are
   written requirements-style (one behaviour per test, robustness cases documented) — see
@@ -176,6 +177,10 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
 - GPS Hobbs meter / flight log: `main/hobbsmeter.go` counts the minutes above 50 km/h ground
   speed, one entry per flight in `settings/hobbsmeter.json` (flushed every 5 minutes; no
   default file is shipped, `make www` would overwrite it), totals in `/getStatus`.
+- Last known position: `main/lastposition.go` seeds lat/lon/altitude at startup (fix quality
+  left 0) from the newer of the newest flight log's last fix and the Hobbs log's last landing.
+  It writes nothing to the card: a WAL-mode SQLite file opened even `mode=ro` rewrites its
+  `-shm`, so a power-cut log is read `readonly_shm=1` and a clean one `immutable=1`.
 
 ### Web UI + HTTP/WebSocket API (`main/managementinterface.go`)
 
