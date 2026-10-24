@@ -186,12 +186,13 @@ The largest gap. Reverse-engineer from what exists (DO-178C §12.1.4): `docs/htt
 `docs/settings-reference.md`, `docs/integration/gdl90.md`, `docs/hardware/sensors.md`,
 `docs/architecture.md` and the `test/display/` suite are de-facto requirements already.
 
-> **Done for the traffic function.** The mechanism is in place and enforced:
+> **Done for traffic and attitude.** The mechanism is in place and enforced:
 > [`../../requirements/`](../../requirements/) holds the requirements,
 > [standards/requirements.md](standards/requirements.md) is the rulebook, and
-> `scripts/trace.py --check` runs from `make check`. 47 requirements; 35 of the 38 HLRs
-> verifiable by test are covered, by 39 tags on tests that already existed. Remaining:
-> every other function — attitude, altimetry, speed, heading, alerts, EMS, situation.
+> `scripts/trace.py --check` runs from `make check`. 93 requirements; 68 of the 72 HLRs
+> verifiable by test are covered, by 80 tags; the four that are not are in the agreed
+> budget and two of them are findings. Remaining functions: altimetry, speed, heading,
+> variometer, alerts, EMS, situation.
 
 1. ~~**Pick a text-based, git-native requirements tool.**~~ Neither StrictDoc nor Doorstop
    was adopted: both add a dependency and a build step to a repository that deliberately has
@@ -221,10 +222,16 @@ function has reviewed HLRs and zero untraced items.
 
 **Order of attack for the rest.** Traffic was done first because 32 tests already existed
 to trace to, which proved the mechanism on real evidence rather than on a sample of three.
-That is not the safety order: the FHA ranks attitude and alerting highest, both are still
-unspecified, and neither has any unit test behind it (`main/sensors.go` has none). Attitude
-is therefore both the next function and the harder one — expect to write its tests and its
-requirements together rather than recover requirements from tested code.
+Attitude was done second because the FHA ranks it highest, and it was the harder case:
+its evidence had to be built — a simulated IMU, every square board mounting, and the
+daemon's own attitude loop driven on a fake sensor — before the requirements could be
+written at a grain a test can hold. That is the pattern for the rest.
+
+Next, in safety order: **alerting** (`ALR`, FHA-ALR-1, the linchpin of most mitigations in
+the FHA and still with no test file), then **altimetry and speed** (`ALT`, `SPD`), whose
+evidence already exists in `main/airdata_test.go`, then **heading and the situation**
+(`HDG`, `SIT`) against `main/gps_test.go`. Each open function is written up as an
+agent-executable brief in [agent-tasks.md](agent-tasks.md).
 
 ### Step 5 — Requirements-based verification and coverage
 
@@ -447,8 +454,11 @@ doubles the effort.
 - [x] `docs/certification/hardware/platform-assessment.md` — Pi 5 compliance, the
       derogation register, the graded ARM64 platform table.
 - [ ] Book a first conversation with a DER/CVE to validate the NORSEE/CS-STAN target.
-- [ ] **Next:** attitude (`ATT`) requirements and the unit tests to go with them — the
-      function the FHA ranks highest and the one with no test coverage at all.
+- [x] `requirements/RB-HLR-ATT.md` — the attitude function specified (37 requirements) and
+      traced to `main/sensors_test.go`, with the attitude system requirements
+      (`RB-SYS-ATT-010`…`070`) and the two GDL90 AHRS message interface requirements.
+- [ ] **Next:** alerting (`ALR`) requirements and the first `main/alerts.go` tests — the
+      function the FHA credits for most of its mitigations, and the one with no test file.
 
 ## Progress log
 
@@ -505,6 +515,37 @@ doubles the effort.
 - Untraced budget: 3 (`requirements/untraced.txt`) — FLARM PFLAA/PFLAU conformance (no test
   file for `flarm-nmea.go` at all), the target count limit above, and staleness annunciation
   on the traffic display (the HMI half of RB-SYS-SYS-020, same gap as FHA-ATT-3).
+
+**2026-10-24 (second pass) — Step 4 (attitude), Step 5 (attitude tests).**
+
+- `requirements/RB-HLR-ATT.md`: 37 software requirements for the attitude function, plus
+  seven attitude system requirements in `RB-SYS.md` and two interface requirements for the
+  Stratux (0x4C) and ForeFlight (0x65) AHRS messages. 30 are traced to
+  `main/sensors_test.go`, five are verified by analysis with the justification written into
+  the requirement as the standard requires, and two are in the untraced budget — both
+  findings rather than omissions.
+- The attitude evidence was built for the purpose rather than inherited: a simulated IMU
+  derived from first principles (the simulator checks its own output against the 1/cos(bank)
+  load factor of a coordinated turn), all 24 square board mountings plus out-of-square
+  variants, and `sensorAttitudeSender` itself driven on a fake IMU in a child process. Two
+  small gaps were closed by writing tests rather than budgeting them (the magnetometer
+  dead-axis deadband, the G-meter reset).
+- Three findings came out of writing the requirements, all now in the FHA §4 feedback
+  table and the untraced budget:
+  **(a)** with no GPS ground track the Simple AHRS levels the horizon in a turn and says
+  nothing — only the turn rate goes invalid (`RB-HLR-ATT-350`, measured by a test that
+  skips with the numbers; the mitigation in force is that a *lost* fix blanks the attitude
+  on the EFB interfaces, which does not cover a merely inaccurate one);
+  **(b)** the `AHRSEngine` selector selects nothing, because the Kalman branch of
+  `newAHRS()` is commented out pending flight test — and selecting `kalman` additionally
+  suppresses the engine restart in the loop's recovery branch (`RB-HLR-ATT-360`);
+  **(c)** with no IMU, pitch and roll are derived from GPS track changes and published in
+  the same fields, distinguished only by a status bit (`RB-HLR-ATT-030`) — a candidate new
+  failure condition the FHA's attitude rows were not written for.
+- Noted while reading the loop: `SimpleState.Valid()` returns `true` unconditionally, so
+  the branch that writes the invalid sentinel into every attitude field is unreachable with
+  the shipped engine. Loss of attitude is caught downstream instead, by the 1 s currency
+  rule — which the tests do cover.
 
 ## Standards referenced
 

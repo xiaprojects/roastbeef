@@ -66,7 +66,7 @@ pulled the whole upstream tree (and a stale `tarm/serial`) into the module graph
 | Base image | `debian:trixie` | Debian | **[pending]** floating tag | Pin by digest for a reproducible builder (see `scmp.md`). |
 | Go compiler | 1.27.3, `go1.27.3.linux-arm64.tar.gz` | go.dev | `ARG GO_VERSION` + `ARG GO_SHA256` verified with `sha256sum -c` | SHA-256 `a06e99309dbcbdca1a8ccd2282c3ee146e55930886e26b4f1193269587165f49`. `GOTOOLCHAIN=local` keeps this compiler authoritative, so a `go.mod` that outgrows it fails the build instead of silently downloading another toolchain. Debian's `golang-go` is deliberately not used: Trixie ships Go 1.24 with `GOTOOLCHAIN=local` patched in, which cannot build `go 1.27` (nor `golang.org/x/exp`, which needs >= 1.26). |
 | `librtlsdr0` / `librtlsdr-dev` | 2.0.2-2 arm64 `.deb` | github.com/stratux/rtlsdr release v1.0 | URL only, **[pending]** no checksum | Fetched with `wget` at image build. |
-| gcc, make, git, ncurses-dev, libusb-1.0-0-dev | Debian Trixie package set | Debian | **[pending]** unversioned `apt-get install` | Capture the package list of the builder image alongside the device image (Step 1.2). |
+| gcc, make, git, ncurses-dev, libusb-1.0-0-dev, python3 | Debian Trixie package set | Debian | **[pending]** unversioned `apt-get install` | Capture the package list of the builder image alongside the device image (Step 1.2). |
 
 ### Vendored web libraries (served to the HMI)
 
