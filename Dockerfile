@@ -12,7 +12,9 @@ RUN apt-get update \
   && apt-get -y install ncurses-dev \
   && apt-get -y install wget \
   && apt-get -y install ca-certificates \
-  && apt-get -y install libusb-1.0-0-dev
+  && apt-get -y install libusb-1.0-0-dev \
+  && apt-get -y install python3
+# python3 (stdlib only) runs scripts/trace.py, the requirements trace in `make check`.
 
 # Go is installed from upstream, not from Debian's golang-go: Trixie ships Go 1.24 and
 # patches the default to GOTOOLCHAIN=local, so it refuses to build go.mod's `go 1.27`

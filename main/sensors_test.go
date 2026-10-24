@@ -129,6 +129,7 @@ func staticAttitude(cage [4]float64, raw [3]float64, secs float64) (roll, pitch 
 // an accelerometer zero offset that the cage re-solves. Among them is the flat board
 // with the default forward axis (-X), a half turn: the case that once produced a NaN
 // quaternion.
+// Covers: RB-HLR-ATT-060, RB-HLR-ATT-070, RB-HLR-ATT-080, RB-HLR-ATT-090
 func TestCageMakesTheAHRSReadTheCagedAttitude(t *testing.T) {
 	withAttitudeSettings(t)
 	n := 0
@@ -382,6 +383,7 @@ func flyCaged(t *testing.T, f [4]float64, path flight, secs float64) []flown {
 // factor 1/cos(bank), no slip, and the turn rate g tan(bank) / v. The board is caged
 // level as installed: I-RVDX's mounting, a flat board facing back, and one a few
 // degrees out of square.
+// Covers: RB-HLR-ATT-140, RB-HLR-ATT-150, RB-HLR-ATT-160, RB-HLR-ATT-170
 func TestAttitudeInCoordinatedTurns(t *testing.T) {
 	withAttitudeSettings(t)
 	for _, f := range [][4]float64{iRVDXMount, axisMount(-1, -2), tilted(axisMount(2, -1), 3, [3]float64{0, 1, 0})} {
@@ -417,6 +419,7 @@ func TestAttitudeInCoordinatedTurns(t *testing.T) {
 // instant over the whole 3 s. The test measures it and skips, so that make check stays
 // green and go test -v shows it; it passes - and the skip should come out - once the
 // attitude holds through the outage or is flagged invalid.
+// Covers: RB-HLR-ATT-270
 func TestAttitudeThroughAGPSOutage(t *testing.T) {
 	withAttitudeSettings(t)
 	// The attitude error, deg, 1, 5 and 30 s into an outage that starts at 80 s, and
@@ -500,6 +503,7 @@ func be16(b []byte, i int) int { return int(int16(uint16(b[i])<<8 | uint16(b[i+1
 // ft/min. Each attitude field is 0x7FFF while the attitude is not current - more than
 // 1 s old, or no GPS fix (isAHRSValid) - or that field is Invalid; the pressure fields
 // follow the baro alone.
+// Covers: RB-ICD-GDL-050, RB-HLR-ATT-200, RB-HLR-ATT-210, RB-HLR-ATT-220
 func TestAHRSGDL90Report(t *testing.T) {
 	withTrafficState(t)
 	sent := captureNet(t, NETWORK_AHRS_GDL90)
@@ -545,6 +549,7 @@ func TestAHRSGDL90Report(t *testing.T) {
 // The ForeFlight AHRS message (0x65 0x01) carries roll and pitch in tenths of a
 // degree, 0x7FFF while the attitude is not current; heading, indicated and true
 // airspeed are sent as unavailable (0xFFFF).
+// Covers: RB-ICD-GDL-060, RB-HLR-ATT-200
 func TestForeFlightAHRSMessage(t *testing.T) {
 	withTrafficState(t)
 	sent := captureNet(t, NETWORK_AHRS_GDL90)
@@ -571,6 +576,7 @@ func TestForeFlightAHRSMessage(t *testing.T) {
 // degrees. It has no way to say a value is invalid, so with roll or pitch Invalid -
 // the Kalman engine while it converges - nothing is sent, rather than the Invalid
 // sentinel as an attitude (3276.7 deg, which an EFB can draw as 36.7 deg).
+// Covers: RB-HLR-ATT-230
 func TestXPlaneAttitude(t *testing.T) {
 	withTrafficState(t)
 	sent := captureNet(t, NETWORK_POSITION_FFSIM)
@@ -593,6 +599,7 @@ func TestXPlaneAttitude(t *testing.T) {
 // other two axes already read more than 1 g, or one that would need more than 0.3 g of
 // offset on the gravity axis (not at rest, or a wrong gain). A stored gain scales the
 // solved offset.
+// Covers: RB-HLR-ATT-050, RB-HLR-ATT-090, RB-HLR-ATT-100
 func TestAccelRestOffsetRejectsAReadingNotAtRest(t *testing.T) {
 	withAttitudeSettings(t)
 	if c := accelCorrect([3]float64{0.5, -0.5, -1.35}); c != [3]float64{0.5, -0.5, -1.35} {
@@ -619,6 +626,7 @@ func TestAccelRestOffsetRejectsAReadingNotAtRest(t *testing.T) {
 // sample reaches the aircraft frame through both. A reflection in the rows - an odd
 // number of sign flips, no rotation at all - falls back to the identity layout; with
 // no sensor quaternion yet the alignment stays unset.
+// Covers: RB-HLR-ATT-280, RB-HLR-ATT-290, RB-HLR-ATT-300
 func TestMagOrientationHangsOffTheSensorQuaternion(t *testing.T) {
 	withAttitudeSettings(t)
 	if q := makeMagOrientationQuaternion(); common.QuaternionIsSet(q) {
@@ -648,6 +656,7 @@ func TestMagOrientationHangsOffTheSensorQuaternion(t *testing.T) {
 // /magnetometer envelope), normalised, scaled to the local field, and turned into the
 // accelerometer chip frame - the frame the sensor quaternion applies to - by the die
 // layout alone. Without a usable envelope, or before the cage, it gets nothing.
+// Covers: RB-HLR-ATT-320, RB-HLR-ATT-330
 func TestKalmanMagnetometerIsInTheChipFrame(t *testing.T) {
 	withAttitudeSettings(t)
 	md, mu := mySituation.Magnetometer, MagnetometerDataMutex
@@ -698,6 +707,7 @@ func (f *fakeIMU) Close() {}
 // The orientation step picks the axis the accelerometer reads most of gravity on,
 // signed: what the installer is asked to point up or forward. An exact tie between two
 // axes is refused rather than resolved arbitrarily.
+// Covers: RB-HLR-ATT-130
 func TestMinAccelDirection(t *testing.T) {
 	imu := myIMUReader
 	t.Cleanup(func() { myIMUReader = imu })
@@ -746,6 +756,7 @@ func (l *loopIMU) Close() { l.mu.Lock(); l.closed = true; l.mu.Unlock() }
 //
 // The loop never returns and paces itself on a real 20 Hz ticker, so it runs in a
 // child process (inChild), about 5 s.
+// Covers: RB-HLR-ATT-010, RB-HLR-ATT-020, RB-HLR-ATT-025, RB-HLR-ATT-040, RB-HLR-ATT-180, RB-HLR-ATT-240, RB-HLR-ATT-250
 func TestAttitudeLoop(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -861,5 +872,42 @@ func TestAttitudeLoop(t *testing.T) {
 	imu.mu.Unlock()
 	if failed != 51 || !closed {
 		t.Errorf("IMU declared disconnected after %d failed reads, closed %v; want 51, closed", failed, closed)
+	}
+}
+
+// A magnetometer sample with a dead axis is not a noisy heading, it is a meaningless one:
+// any axis under 5 uT in magnitude rejects the whole sample, however healthy the other two
+// look. An all-zero sample is what sensors/bmi270.go reports, with no error, when no
+// magnetometer is populated.
+// Covers: RB-HLR-ATT-310
+func TestMagSampleWithADeadAxisIsRejected(t *testing.T) {
+	for _, c := range []struct {
+		m    [3]float64
+		want bool
+	}{
+		{[3]float64{20, -15, 40}, true},
+		{[3]float64{5, -5, 5}, true}, // exactly the deadband
+		{[3]float64{0, 0, 0}, false},
+		{[3]float64{20, -4.9, 40}, false},
+		{[3]float64{4.9, -15, 40}, false},
+		{[3]float64{20, -15, 4.9}, false},
+	} {
+		if got := magSampleUsable(c.m[0], c.m[1], c.m[2]); got != c.want {
+			t.Errorf("magSampleUsable(%v) = %v; want %v", c.m, got, c.want)
+		}
+	}
+}
+
+// Resetting the G-meter sets both retained extremes to the load factor of the moment, not
+// to zero and not to 1 g: the pilot may well press the button while pulling.
+// Covers: RB-HLR-ATT-190
+func TestResettingTheGMeterKeepsTheCurrentLoad(t *testing.T) {
+	sit := mySituation
+	t.Cleanup(func() { mySituation = sit })
+	mySituation.AHRSGLoad, mySituation.AHRSGLoadMin, mySituation.AHRSGLoadMax = 2.4, -0.8, 3.9
+	ResetAHRSGLoad()
+	if mySituation.AHRSGLoadMin != 2.4 || mySituation.AHRSGLoadMax != 2.4 {
+		t.Errorf("g min/max %.2f/%.2f after a reset at %.2f g; want both 2.40",
+			mySituation.AHRSGLoadMin, mySituation.AHRSGLoadMax, mySituation.AHRSGLoad)
 	}
 }

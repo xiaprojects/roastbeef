@@ -63,6 +63,7 @@ check: libdump978.so
 	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go vet -stdmethods=false $(GOPKGS)
 	LIBRARY_PATH=$(CURDIR) CGO_CFLAGS_ALLOW="-L$(CURDIR)" go test $(GOPKGS)
 	./scripts/provenance.sh --verify docs/certification/provenance.md
+	./scripts/trace.py --check
 
 www:
 	make -C web

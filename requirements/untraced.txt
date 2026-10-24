@@ -1,0 +1,11 @@
+# Requirements that are specified but have no test yet.
+# Verification method is 'test', so each one is a real gap.
+#
+# scripts/trace.py --check fails if a requirement not listed here has no
+# test, so the list may only shrink. Delete the line when you write the
+# test; never add a line to make the build pass without agreeing it.
+# Regenerate with: scripts/trace.py --budget
+RB-HLR-ATT-350
+RB-HLR-ATT-360
+RB-HLR-TRF-330
+RB-HLR-TRF-340
