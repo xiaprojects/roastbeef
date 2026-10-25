@@ -126,9 +126,18 @@ exact version it installed: `staticcheck`, `golangci-lint`, `govulncheck` (all
 ## 3. The state the tasks start from
 
 ```
-trace: 93 requirements, 68/72 HLRs verifiable by test are covered, 80 tag(s) bound
+trace: 126 requirements, 83/96 HLRs verifiable by test are covered, 95 tag(s) bound
 
-UNTRACED (4) - specified, no test yet:
+UNTRACED (13) - specified, no test yet:
+  RB-HLR-ALR-150  A core-function failure identifies the function that failed
+  RB-HLR-ALR-160  A failure that has gone is cleared
+  RB-HLR-ALR-190  The aural annunciation does not require the pilot to touch the display
+  RB-HLR-ALR-200  The aural annunciation follows the configured language
+  RB-HLR-ALR-210  An undefined event type is not raised
+  RB-HLR-ALR-220  The retained alert list is bounded
+  RB-HLR-ALR-230  An alert is indicated without the pilot selecting the alert list
+  RB-HLR-ALR-250  The age of each alert is shown
+  RB-HLR-ALR-260  An alert the display cannot present is still listed
   RB-HLR-ATT-350  The attitude survives a loss of GPS, or says it has not
   RB-HLR-ATT-360  The attitude engine is the one that was selected
   RB-HLR-TRF-330  Target count limit
@@ -138,9 +147,15 @@ NO FLOW-DOWN (1) - system requirements with no HLR beneath them:
   RB-SYS-SYS-040  Identification of the installed software
 ```
 
-Specified: attitude (`RB-HLR-ATT`, 37), traffic (`RB-HLR-TRF`, 34), GDL90 interface
-(`RB-ICD-GDL`, 6), system (`RB-SYS`, 16). **Unspecified: alerts, altimetry, speed,
-heading, variometer, EMS, situation.**
+Specified: attitude (`RB-HLR-ATT`, 37), traffic (`RB-HLR-TRF`, 35), alerts
+(`RB-HLR-ALR`, 26), GDL90 interface (`RB-ICD-GDL`, 6), system (`RB-SYS`, 22).
+**Unspecified: altimetry, speed, heading, variometer, EMS, situation.**
+
+Eleven of the thirteen untraced items are **findings** — requirements the equipment does
+not meet — not tests nobody has written. Nine of those came out of AT-02 and are listed
+in `RB-HLR-ALR.md` with the evidence. A task that touches the alerting or attitude code
+should read them first; several are a few lines to fix, and two are decisions for the
+safety review rather than code at all.
 
 Test evidence that exists and is not yet traced to anything: `main/airdata_test.go`
 (pitot airspeed and barometric altitude/vertical speed, each sender driven on a scripted
@@ -165,7 +180,7 @@ tests are first-class evidence, not just Go unit tests:
 | ID | Task | Grade | Step | Depends on |
 |---|---|---|---|---|
 | ~~[AT-01](#at-01--attitude-att-requirements-and-the-first-mainsensorsgo-tests)~~ **done** | Attitude (`ATT`) requirements + `main/sensors.go` unit tests | **A** | 4, 5 | — |
-| [AT-02](#at-02--alerting-alr-requirements-and-tests) | Alerting (`ALR`) requirements + `main/alerts.go` tests | **A** | 4, 5 | — |
+| ~~[AT-02](#at-02--alerting-alr-requirements-and-tests)~~ **done** | Alerting (`ALR`) requirements + `main/alerts.go` tests | **A** | 4, 5 | — |
 | [AT-03](#at-03--http-interface-requirements-rb-icd-http) | HTTP/WebSocket interface requirements (`RB-ICD-HTTP`) | **A** | 4 | — |
 | [AT-04](#at-04--close-rb-sys-sys-040-installed-software-identification) | Close `RB-SYS-SYS-040`: software identification flow-down | **A** | 1, 4 | — |
 | [AT-05](#at-05--close-rb-hlr-trf-340-staleness-on-the-traffic-display) | Close `RB-HLR-TRF-340` with an HMI test | **A** | 5 | — |
@@ -185,11 +200,14 @@ tests are first-class evidence, not just Go unit tests:
 | [AT-19](#at-19--altimetry-and-speed-requirements) | Altimetry (`ALT`) and speed (`SPD`) requirements against `main/airdata_test.go` | **A** | 4 | — |
 | [AT-20](#at-20--heading-and-situation-requirements) | Heading (`HDG`) and situation (`SIT`) requirements against `main/gps_test.go` | **A** | 4 | — |
 
-**AT-01 is done** (36 attitude requirements, traced; see the roadmap progress log). Start
-with AT-02: alerting is the remaining function the FHA ranks at the top, it is the
-linchpin of most of the FHA's mitigations, and it is the last core function with no test
-file at all. AT-19 and AT-20 are the cheapest, because the tests already exist. AT-04, AT-05, AT-13 are each under a day and each closes a line
-the gate currently prints.
+**AT-01 and AT-02 are done** (37 attitude and 26 alerting requirements, traced; see the
+roadmap progress log). Start with **AT-19** and **AT-20**: they are the cheapest left,
+because `main/airdata_test.go` and `main/gps_test.go` already hold the evidence and only
+the requirements are missing. Then **AT-13**, which has become more useful than it was
+when this file was written: AT-02 produced nine findings and they are currently recorded
+in `requirements/untraced.txt`, a file whose job is budgeting untested requirements, not
+tracking defects. AT-04, AT-05 are each under a day and each closes a line the gate
+currently prints.
 
 ---
 
@@ -284,6 +302,27 @@ its heading: that is this task's.
 ### AT-02 — Alerting (`ALR`) requirements and tests
 
 **Grade A. Roadmap steps 4 and 5.**
+
+> **Done, 2026-10-24.** `requirements/RB-HLR-ALR.md` (26 requirements), the
+> `RB-SYS-ALR-*` section of `RB-SYS.md`, and eight tagged tests in the new
+> `main/alerts_test.go`. **The acceptance criterion below was not met as written and was
+> not met deliberately: `untraced.txt` grew by nine.** Each of the nine is a requirement
+> the equipment does not meet — not a test nobody wrote — and the brief's own step 3 says
+> to record an open question rather than pick a policy silently. The alternatives were to
+> not write the requirement (hiding the finding) or to write a test that asserts the
+> defective behaviour (freezing it), and both are worse. The findings are in the
+> requirement bodies with their evidence, in `fha.md` §4, and summarised in the roadmap
+> progress log; two of them are on the review agenda in `fha.md` §5 item 3 because they
+> bear on what severity the FHA may claim. **AT-13 is now the task that matters here**: a
+> problem-report register is where those nine belong, and `untraced.txt` is holding them
+> only because nothing better exists yet.
+>
+> Where this brief guessed wrong, for the next one's benefit: the queue policy is not
+> unspecified, it is unimplemented (`EVENT_MAX_QUEUE` is declared and the trim is a
+> `TODO`); de-duplication lives in `addSingleSystemErrorf`, not in the alert function;
+> and there is no acknowledgement to specify because there is no master caution to
+> acknowledge. The latency question turned out to be the wrong one — the path from
+> condition to queue is a function call, and what fails is the path from queue to pilot.
 
 **Goal.** Specify the alerting function (`FHA-ALR-1`: alert missing / false / late) and test
 it. The alerting path is small — `main/alerts.go` is 187 lines — and carries a Major

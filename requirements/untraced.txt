@@ -5,6 +5,15 @@
 # test, so the list may only shrink. Delete the line when you write the
 # test; never add a line to make the build pass without agreeing it.
 # Regenerate with: scripts/trace.py --budget
+RB-HLR-ALR-150
+RB-HLR-ALR-160
+RB-HLR-ALR-190
+RB-HLR-ALR-200
+RB-HLR-ALR-210
+RB-HLR-ALR-220
+RB-HLR-ALR-230
+RB-HLR-ALR-250
+RB-HLR-ALR-260
 RB-HLR-ATT-350
 RB-HLR-ATT-360
 RB-HLR-TRF-330

@@ -1,6 +1,6 @@
 # RB-01 Certification Roadmap (DO-178C / ED-12C and related standards)
 
-Status: **Steps 1, 2 and 5 in progress; Step 4 has its first traced function.** Owner:
+Status: **Steps 1, 2 and 5 in progress; Step 4 has three of nine functions traced.** Owner:
 xiaprojects. Drafted 2026-09-12, updated 2026-10-24 (see the Progress log at the end).
 This is the ordered list of activities to take the RB-01 avionics software from
 "community project" to a package an authority (EASA/FAA) or a DER/CVE can review.
@@ -186,13 +186,14 @@ The largest gap. Reverse-engineer from what exists (DO-178C §12.1.4): `docs/htt
 `docs/settings-reference.md`, `docs/integration/gdl90.md`, `docs/hardware/sensors.md`,
 `docs/architecture.md` and the `test/display/` suite are de-facto requirements already.
 
-> **Done for traffic and attitude.** The mechanism is in place and enforced:
+> **Done for traffic, attitude and alerting.** The mechanism is in place and enforced:
 > [`../../requirements/`](../../requirements/) holds the requirements,
 > [standards/requirements.md](standards/requirements.md) is the rulebook, and
-> `scripts/trace.py --check` runs from `make check`. 93 requirements; 68 of the 72 HLRs
-> verifiable by test are covered, by 80 tags; the four that are not are in the agreed
-> budget and two of them are findings. Remaining functions: altimetry, speed, heading,
-> variometer, alerts, EMS, situation.
+> `scripts/trace.py --check` runs from `make check`. 126 requirements; 83 of the 96 HLRs
+> verifiable by test are covered, by 95 tags. The thirteen that are not are in the agreed
+> budget, and eleven of the thirteen are findings — requirements the equipment does not
+> meet — rather than tests nobody has written. Remaining functions: altimetry, speed,
+> heading, variometer, EMS, situation.
 
 1. ~~**Pick a text-based, git-native requirements tool.**~~ Neither StrictDoc nor Doorstop
    was adopted: both add a dependency and a build step to a repository that deliberately has
@@ -227,11 +228,19 @@ its evidence had to be built — a simulated IMU, every square board mounting, a
 daemon's own attitude loop driven on a fake sensor — before the requirements could be
 written at a grain a test can hold. That is the pattern for the rest.
 
-Next, in safety order: **alerting** (`ALR`, FHA-ALR-1, the linchpin of most mitigations in
-the FHA and still with no test file), then **altimetry and speed** (`ALT`, `SPD`), whose
-evidence already exists in `main/airdata_test.go`, then **heading and the situation**
-(`HDG`, `SIT`) against `main/gps_test.go`. Each open function is written up as an
-agent-executable brief in [agent-tasks.md](agent-tasks.md).
+Alerting was done third, out of that order on purpose: it had no test file at all, and the
+FHA classifies most of its own rows under it. Specifying it produced the opposite result to
+attitude — the function turns out not to meet nine of its own 26 requirements — which is
+the other thing this exercise is for. A specification that only ever confirms the code is
+not being written honestly.
+
+Next: **altimetry and speed** (`ALT`, `SPD`), whose evidence already exists in
+`main/airdata_test.go`, then **heading and the situation** (`HDG`, `SIT`) against
+`main/gps_test.go`, then **EMS**. Each open function is written up as an agent-executable
+brief in [agent-tasks.md](agent-tasks.md). The nine alerting findings want a decision
+before they want code — two of them (no master caution, no re-annunciation of a recurring
+failure) change what the FHA may claim — so they are on the review agenda in
+[fha.md](fha.md) §5 item 3 rather than in a branch.
 
 ### Step 5 — Requirements-based verification and coverage
 
@@ -457,8 +466,13 @@ doubles the effort.
 - [x] `requirements/RB-HLR-ATT.md` — the attitude function specified (37 requirements) and
       traced to `main/sensors_test.go`, with the attitude system requirements
       (`RB-SYS-ATT-010`…`070`) and the two GDL90 AHRS message interface requirements.
-- [ ] **Next:** alerting (`ALR`) requirements and the first `main/alerts.go` tests — the
-      function the FHA credits for most of its mitigations, and the one with no test file.
+- [x] `requirements/RB-HLR-ALR.md` — the alert function specified (26 requirements), with
+      six alerting system requirements (`RB-SYS-ALR-010`…`060`) and the first
+      `main/alerts.go` tests. Nine of the 26 are open findings; two of them belong on the
+      review agenda before the FHA's Minor classifications can stand.
+- [ ] **Next:** altimetry and speed (`ALT`, `SPD`) against `main/airdata_test.go`, then
+      heading and the situation (`HDG`, `SIT`) against `main/gps_test.go` — both cheap,
+      because the evidence already exists.
 
 ## Progress log
 
@@ -546,6 +560,71 @@ doubles the effort.
   the branch that writes the invalid sentinel into every attitude field is unreachable with
   the shipped engine. Loss of attitude is caught downstream instead, by the 1 s currency
   rule — which the tests do cover.
+
+**2026-10-24 (third pass) — Step 4 (alerting), Step 5 (alert tests).**
+
+- `requirements/RB-HLR-ALR.md`: 26 software requirements for the alert function, plus six
+  alerting system requirements in `RB-SYS.md`. 14 are traced to the new
+  `main/alerts_test.go` (eight tests), two are verified by analysis — the aural path is
+  `exec.Command` on a fixed `aplay` path with no seam a test can observe — one by review
+  (the display's ordering of the list), and nine are in the untraced budget as open
+  findings.
+- Alerting was taken third, before the functions with evidence waiting, because the FHA
+  classifies most of its rows under it: `fha.md` §3 item 3 says in as many words that the
+  alert function is what keeps FHA-ATT-3, FHA-ALT-3, FHA-SPD-4, FHA-HDG-2 and FHA-TRF-2 at
+  Minor. It was the last core function with no test file.
+- Specifying it found that it does not carry that weight yet. The nine findings, all in
+  the FHA §4 table and the budget, in the order they matter:
+  **(a)** there is no master caution — `$scope.alarmIsLit` is set on every alert and bound
+  to nothing in any template, and never cleared, so an equipment-level failure is visible
+  only on a page the pilot has to choose (`RB-HLR-ALR-230`);
+  **(b)** and it is usually inaudible too: the daemon's own audio is off by default and the
+  display's `<audio>` element will not autoplay until someone has touched the screen, which
+  the code comments say outright (`RB-HLR-ALR-190`);
+  **(c)** thirteen of the fifteen failure identifiers are never cleared, so a failure that
+  recovers and recurs is annunciated once, for the first occurrence only — the
+  intermittent-sensor case (`RB-HLR-ALR-160`);
+  **(d)** the two functions the FHA ranks highest are the two the alert cannot name:
+  `ahrs-web-start` and `airspeed-sensor-read` fall through to a generic "Danger" with the
+  same sound as a full disk (`RB-HLR-ALR-150`);
+  **(e)** `/alert/<n>` takes an event type off the network unchecked and the lookup is
+  bounded only above, so `GET /alert/-1` panics `pushEvent` — confirmed on this tree. The
+  process survives only because `net/http` recovers a panic in a handler goroutine, and the
+  display repeats the same one-sided bound in JavaScript, where it empties the alert list
+  instead (`RB-HLR-ALR-210`, `RB-HLR-ALR-260`);
+  **(f)** `EVENT_MAX_QUEUE = 100` is declared, documented in the display as enforced, and
+  not implemented — the trim is a `TODO`, so the list grows for as long as the daemon runs
+  (`RB-HLR-ALR-220`);
+  **(g)** the alerts list's time column is `textBySeconds(hours * 60 + minutes)` — a count
+  of minutes passed to a formatter that reads seconds — so it renders the wall-clock time as
+  `mm:ss` and the pilot cannot tell a current failure from one from a previous flight
+  (`RB-HLR-ALR-250`);
+  **(h)** the daemon's aural annunciation is hard-coded to `en-US` while the display selects
+  on the browser's language (`RB-HLR-ALR-200`).
+- Two of the tests are data tests rather than behaviour tests, and they earn their place:
+  the presentation mapping is addressed by event-type *number* from three places in two
+  languages, with nothing in the file saying which row is which, so one test reads the
+  `EVENT_TYPE_` constants straight out of `main/alerts.go` and checks every row against
+  them, and the other checks that every sound the mapping names exists both as the `.wav`
+  the daemon plays and the `.mp3` the browser plays. A row inserted in the middle of that
+  file silently relabels every alert after it.
+- Noted while reading: four event types (`EVENT_TYPE_UNKOWN_INFO`, both autopilot
+  engage/disengage types and `EVENT_TYPE_EMS_GENERIC_FAILURE`) have rows, text and sounds
+  and are raised by nothing in the daemon or the RB-01. The EMS one matters for the EMS
+  function's own requirements (agent-tasks.md AT-18), which have an alerting path specified
+  for them and no code behind it.
+- Unrelated to alerting, found because `make check` runs the whole suite: **HEAD was red.**
+  `3d02953c` ("shadow aircraft ... FLARM #149") disabled the 500 ft vertical agreement check
+  in `isOwnshipTrafficInfo()`, which `TestOwnshipFilter` — committed earlier, in `f5caad94` —
+  asserts. The commit is right and the test was written against the behaviour before it, so
+  the test's expectation and `RB-HLR-TRF-130` were corrected to say "horizontal", and the
+  decision is now recorded as `RB-HLR-TRF-135` (derived) with its own FHA §4 row: the
+  equipment was raising a FLARM collision warning about its own transponder loopback during
+  aerobatics, and what it accepts in exchange is suppressing a *different* aircraft that
+  transmits this aircraft's Mode S address 1000 ft away. That is the trade the review should
+  see, and it is exactly the kind of decision a requirements trace exists to catch — the
+  behaviour changed in one commit, and nothing but the gate noticed that two other artifacts
+  now described something the equipment no longer did.
 
 ## Standards referenced
 

@@ -11,6 +11,7 @@ mechanical half of it.
 | File | Function | Requirements | Tests |
 |---|---|---|---|
 | [`RB-SYS.md`](RB-SYS.md) | System level, all core functions | system | — |
+| [`RB-HLR-ALR.md`](RB-HLR-ALR.md) | Alerts: raise, classify, annunciate, retain | software | `main/alerts_test.go` |
 | [`RB-HLR-ATT.md`](RB-HLR-ATT.md) | Attitude: sample, calibrate, fuse, annunciate | software | `main/sensors_test.go` |
 | [`RB-HLR-TRF.md`](RB-HLR-TRF.md) | Traffic: receive, fuse, age, present | software | `main/traffic_test.go`, `main/gen_gdl90_test.go`, `main/flarm-nmea_test.go`, `test/integration/test_daemon.py` |
 | [`RB-ICD-GDL.md`](RB-ICD-GDL.md) | GDL90 output: framing, ownship, AHRS messages | interface | `main/gen_gdl90_test.go`, `main/sensors_test.go` |
@@ -18,25 +19,36 @@ mechanical half of it.
 
 ## Status
 
-**Traffic (`TRF`) and attitude (`ATT`) are specified and traced.** Traffic was done first
-because it already had 32 unit tests to trace to, so the mechanism could be proved
-end-to-end on real evidence rather than on a sample of three. Attitude followed because
-the FHA ranks it highest. Its evidence — a simulated IMU, 216 board mountings and the
-daemon's own attitude loop on a fake sensor, in `main/sensors_test.go` — was built for
+**Traffic (`TRF`), attitude (`ATT`) and alerts (`ALR`) are specified and traced.** Traffic
+was done first because it already had 32 unit tests to trace to, so the mechanism could be
+proved end-to-end on real evidence rather than on a sample of three. Attitude followed
+because the FHA ranks it highest. Its evidence — a simulated IMU, 216 board mountings and
+the daemon's own attitude loop on a fake sensor, in `main/sensors_test.go` — was built for
 this purpose rather than inherited, so the requirements could be written at the grain the
 tests actually verify, and the two gaps left over were closed by adding tests rather than
 by budgeting them.
 
-Still unspecified: altimetry, speed, heading, variometer, the situation, alerts and EMS.
-`main/airdata_test.go` and `main/gps_test.go` are the evidence waiting for the first
-three. Roadmap Step 4 carries them, and
+Alerts came third, ahead of functions whose tests already exist, because the FHA
+classifies most of its own rows under the alert function. That one went the other way:
+specifying it found that the function does not meet nine of its own requirements, and the
+nine are the substance of `RB-HLR-ALR.md`. **If you read one file in this directory, read
+its preamble.**
+
+Still unspecified: altimetry, speed, heading, variometer, the situation and EMS.
+`main/airdata_test.go` and `main/gps_test.go` are the evidence waiting for the first four.
+Roadmap Step 4 carries them, and
 [`../docs/certification/agent-tasks.md`](../docs/certification/agent-tasks.md) carries
 them as task briefs.
 
-Four requirements are specified with no passing test and are counted in `untraced.txt`.
-Two of them are findings rather than omissions: RB-HLR-ATT-350 (the attitude levels itself
-during a GPS outage and says nothing) and RB-HLR-ATT-360 (the engine selector does not
-select anything, because the Kalman branch is commented out).
+Thirteen requirements are specified with no passing test and are counted in
+`untraced.txt`, and eleven of the thirteen are **findings** rather than omissions — the
+nine alerting ones, plus RB-HLR-ATT-350 (the attitude levels itself during a GPS outage
+and says nothing) and RB-HLR-ATT-360 (the engine selector does not select anything,
+because the Kalman branch is commented out). That is more weight than a budget file was
+meant to carry: the file exists to stop the gate going permanently red over untested
+requirements, not to track defects. A problem-report register
+([`agent-tasks.md`](../docs/certification/agent-tasks.md) AT-13) is where the eleven
+belong, and until it exists this file is the register.
 
 ## Working with the trace
 

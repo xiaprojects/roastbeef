@@ -556,3 +556,21 @@ Note also that the second consequence is currently unreachable: `SimpleState.Val
 returns `true` unconditionally, so the loop's invalid branch — the one that writes the
 sentinel into every attitude field — never runs with the shipped engine. Loss of attitude
 is detected downstream instead, by RB-HLR-ATT-200 and RB-HLR-ATT-240.
+
+### RB-HLR-ATT-370 — The fusion filter holds the attitude through aerobatic figures
+
+**The fusion filter shall indicate the vertical within 7° through aileron rolls, a loop,
+an Immelmann and 20 s of inverted flight without GPS, within 4° from 5 s after each, and
+shall not indicate a valid attitude more than 10° in error.**
+
+- **Parent:** none
+- **Source:** `main/sensors.go` `kalmanConfig()`; goflying `ahrs.KalmanAHRS`
+- **Verification:** test
+- **Derived:** yes
+
+Derived: the figures are the ones flown on the development aircraft, which RB-SYS-ATT-030's
+envelope leaves out, and the numbers are what the filter achieves on simulated figures with
+perfect sensors (5.2°, 3.3° and none) plus a margin, not what any standard asks for. To be
+reviewed together with RB-SYS-ATT-030, and confirmed in flight against an independent
+attitude reference before the Kalman branch of `newAHRS()` is restored (RB-HLR-ATT-360).
+The vertical, not roll and pitch: those are undefined with the nose straight up.
