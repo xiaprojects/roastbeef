@@ -45,16 +45,16 @@ on_chroot << EOF
     pip install --break-system-packages esptool
 EOF
 
-# install bluez 5.87 to fix BLE advertising issues
-# BlueZ 5.79 had limitations in peripheral mode, 5.87 provides better BLE support
-BLUEZ_VERSION="5.87"
+# install bluez 5.82 to fix BLE advertising issues
+# BlueZ 5.79 had limitations in peripheral mode, 5.82 is the latest confirmed to work with EU EFB software
+BLUEZ_VERSION="5.82"
 on_chroot << EOF
     cd /tmp
     
     # Install build dependencies
     apt install -y build-essential libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
     
-    # Clone, build, and install BlueZ 5.87
+    # Clone, build, and install BlueZ 5.82
     git clone --depth 1 --branch ${BLUEZ_VERSION} https://github.com/bluez/bluez.git bluez-src
     cd bluez-src
     ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-library
