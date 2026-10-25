@@ -204,6 +204,11 @@ type flown struct {
 	roll, pitch, rate        float64 // truth, deg, deg/s
 	estRoll, estPitch        float64 // AHRS, deg
 	gLoad, slipSkid, estRate float64 // AHRS, g, deg, deg/s
+	// tilt is the angle between the true and the reported vertical, deg: the
+	// attitude error that holds through any attitude, where roll and pitch
+	// errors do not (inverted, or with the nose straight up).
+	tilt  float64
+	valid bool // the AHRS called its attitude valid
 }
 
 // fly runs the Simple AHRS on the IMU a board mounted by f reads along the flight, the
@@ -217,11 +222,20 @@ func fly(t *testing.T, f [4]float64, path flight, secs float64) []flown {
 }
 
 // flyWith is fly with the AHRS given sensor quaternion cage for a board mounted by f.
-func flyWith(t *testing.T, cage, f [4]float64, path flight, secs float64) (out []flown) {
+func flyWith(t *testing.T, cage, f [4]float64, path flight, secs float64) []flown {
 	t.Helper()
-	const dt, gpsDT = 0.05, 0.1
 	s := ahrs.NewSimpleAHRS()
 	s.SetSensorQuaternion(&cage)
+	return flyEngine(t, s, f, path, secs, 20, [3]float64{})
+}
+
+// flyEngine flies AHRS s, already caged, on a board mounted by f, a row every
+// every samples. A nonzero field (uT, earth frame: east, north, up) gives the
+// AHRS a magnetometer as kalmanMagnetometer hands it the Kalman engine:
+// calibrated, in the accelerometer's chip frame.
+func flyEngine(t *testing.T, s ahrs.AHRSProvider, f [4]float64, path flight, secs float64, every int, field [3]float64) (out []flown) {
+	t.Helper()
+	const dt, gpsDT = 0.05, 0.1
 	m := ahrs.NewMeasurement()
 	lastFix, accurate := -1.0, false
 	var w1, w2, w3 float64
@@ -260,6 +274,10 @@ func flyWith(t *testing.T, cage, f [4]float64, path flight, secs float64) (out [
 		c := accelCorrect(a)
 		m.A1, m.A2, m.A3 = c[0], c[1], c[2]
 		m.B1, m.B2, m.B3 = b[0]/ahrs.Deg, b[1]/ahrs.Deg, b[2]/ahrs.Deg
+		if m.MValid = field != [3]float64{}; m.MValid {
+			mag := toChip(f, toAircraft(e0, field))
+			m.M1, m.M2, m.M3 = mag[0], mag[1], mag[2]
+		}
 		if gps != gpsLost && tt-lastFix >= gpsDT-1e-9 {
 			lastFix, accurate = tt, gps == gpsGood
 			_, _, _, gs, trk, climb, _ := path(tt)
@@ -269,12 +287,15 @@ func flyWith(t *testing.T, cage, f [4]float64, path flight, secs float64) (out [
 		m.TW = 1000 + lastFix
 		m.W1, m.W2, m.W3 = w1, w2, w3
 		s.Compute(m)
-		if i%20 == 0 {
+		if i%every == 0 {
 			r, p, _ := s.RollPitchHeading()
 			_, _, h1 := path3(path, tt+0.5)
 			_, _, h0 := path3(path, tt-0.5)
+			up := toAircraft(attitudeQ(roll, pitch, 0), [3]float64{0, 0, 1})
+			estUp := toAircraft(attitudeQ(r/ahrs.Deg, p/ahrs.Deg, 0), [3]float64{0, 0, 1})
+			tilt := math.Acos(math.Max(-1, math.Min(1, up[0]*estUp[0]+up[1]*estUp[1]+up[2]*estUp[2]))) / ahrs.Deg
 			out = append(out, flown{tt, roll, pitch, angleDiffSigned(h1, h0), r / ahrs.Deg, p / ahrs.Deg,
-				s.GLoad(), s.SlipSkid(), s.RateOfTurn()})
+				s.GLoad(), s.SlipSkid(), s.RateOfTurn(), tilt, s.Valid()})
 		}
 	}
 	return out
@@ -458,6 +479,201 @@ func TestAttitudeThroughAGPSOutage(t *testing.T) {
 	}
 	if report != nil {
 		t.Skipf("KNOWN HAZARD FHA-ATT-2: attitude error in a 30 deg turn 1/5/30 s into a GPS outage: %s", strings.Join(report, "; "))
+	}
+}
+
+// rampedAngle is the angle turned t s into a manoeuvre that turns a in secs (> 2),
+// the rate rising over its first second and falling over its last; rampedRate is
+// its rate, a per s. Before the manoeuvre both are 0, after it a and 0.
+func rampedAngle(a, secs, t float64) float64 {
+	q := a / (secs - 1)
+	switch {
+	case t <= 0:
+		return 0
+	case t < 1:
+		return q * (t - math.Sin(math.Pi*t)/math.Pi) / 2
+	case t < secs-1:
+		return q * (t - 0.5)
+	case t < secs:
+		u := t - (secs - 1)
+		return q * (secs - 1.5 + (u+math.Sin(math.Pi*u)/math.Pi)/2)
+	}
+	return a
+}
+
+func rampedRate(a, secs, t float64) float64 {
+	q := a / (secs - 1)
+	switch {
+	case t <= 0 || t >= secs:
+		return 0
+	case t < 1:
+		return q * (1 - math.Cos(math.Pi*t)) / 2
+	case t < secs-1:
+		return q
+	}
+	return q * (1 + math.Cos(math.Pi*(t-(secs-1)))) / 2
+}
+
+// The aerobatic figures I-RVDX flies, from straight and level north at start s.
+// Each is the attitude and the velocity along the flight path; flyEngine derives
+// the specific force from them, so the load in a figure is the load the motion
+// takes, not what the filter's own model would predict.
+
+// aileronRoll is a 360 deg roll in secs at 120 kt, right for dir 1, left for -1.
+func aileronRoll(start, secs, dir float64) flight {
+	return func(t float64) (roll, pitch, heading, gs, track, climb float64, g gpsState) {
+		return math.Remainder(dir*rampedAngle(360, secs, t-start), 360), 0, 0, 120, 0, 0, gpsGood
+	}
+}
+
+// loop is a 14 s loop entered at 140 kt, over the top at 70: about 4.7 g at the
+// bottom and 0.8 g over the top. The nose rides an angle of attack above the flight
+// path that grows with the load and with the speed lost, 2 deg in level flight at
+// 140 kt and 9 deg at the bottom of the loop.
+func loop(start float64) flight {
+	const (
+		secs        = 14.0
+		vIn, vTop   = 140.0, 70.0 // kt
+		alphaLevel  = 2.0         // deg at 1 g and vIn
+		loopRadians = 2 * math.Pi
+	)
+	return func(t float64) (roll, pitch, heading, gs, track, climb float64, g gpsState) {
+		gamma := rampedAngle(loopRadians, secs, t-start) // flight path angle, rad
+		v := vIn - (vIn-vTop)*(1-math.Cos(gamma))/2
+		n := v*rampedRate(loopRadians, secs, t-start)/ahrs.G + math.Cos(gamma) // load factor
+		alpha := alphaLevel * n * (vIn / v) * (vIn / v)
+		return 0, gamma/ahrs.Deg + alpha, 0, v * math.Cos(gamma), 0, v * math.Sin(gamma), gpsGood
+	}
+}
+
+// invertedPass is a half roll to inverted in 3 s, 20 s inverted - the GPS without a
+// fix, as I-RVDX's loses it upside down - and a half roll back, at 120 kt.
+func invertedPass(start float64) flight {
+	return func(t float64) (roll, pitch, heading, gs, track, climb float64, g gpsState) {
+		tt := t - start
+		g = gpsGood
+		if tt >= 3 && tt < 23 {
+			g = gpsLost
+		}
+		return math.Remainder(rampedAngle(180, 3, tt)+rampedAngle(180, 3, tt-23), 360), 0, 0, 120, 0, 0, g
+	}
+}
+
+// immelmann pulls from 140 kt to the vertical in 5 s, climbs straight up for 4 s
+// losing speed to 60 kt, pulls over the top to inverted in 5 s and half rolls
+// upright in 3 s, heading south.
+func immelmann(start float64) flight {
+	return func(t float64) (roll, pitch, heading, gs, track, climb float64, g gpsState) {
+		tt := t - start
+		gamma := rampedAngle(math.Pi/2, 5, tt) + rampedAngle(math.Pi/2, 5, tt-9)
+		var v float64
+		switch {
+		case tt < 5:
+			v = 140 - 15*(1-math.Cos(gamma))
+		case tt < 9:
+			v = 125 - 65*(tt-5)/4
+		default:
+			v = 60
+		}
+		return rampedAngle(180, 3, tt-14), gamma / ahrs.Deg, 0, v * math.Cos(gamma), 0, v * math.Sin(gamma), gpsGood
+	}
+}
+
+// aeroScore is how an AHRS flew a figure that runs from start to end: the tilt error
+// (deg), worst in the 10 s before it, worst from its start on, and worst from 5 s
+// after it on; and the time (s) it called the attitude valid while more than
+// wrongDeg off, and the time it called it invalid.
+type aeroScore struct {
+	before, worst, after float64
+	validWrong, invalid  float64
+}
+
+func scoreFigure(rows []flown, start, end, wrongDeg float64) (s aeroScore) {
+	const dt = 0.05 // flyEngine with a row every sample
+	for _, r := range rows {
+		switch {
+		case r.t < start-10:
+		case r.t < start:
+			s.before = math.Max(s.before, r.tilt)
+		default:
+			s.worst = math.Max(s.worst, r.tilt)
+			if r.t >= end+5 {
+				s.after = math.Max(s.after, r.tilt)
+			}
+			if r.valid && r.tilt > wrongDeg {
+				s.validWrong += dt
+			}
+			if !r.valid {
+				s.invalid += dt
+			}
+		}
+	}
+	return
+}
+
+// The Kalman engine, as kalmanConfig sets it up on I-RVDX's mounting with a
+// magnetometer, holds the vertical through the aerobatic figures I-RVDX flies:
+// within worstDeg of it all the way through, within afterDeg from 5 s after the
+// figure on, never called valid while more than wrongDeg (its MaxAttitudeSigma)
+// off, and called invalid for no more than invalidSecs.
+//
+// Measured (perfect sensors): 0.4 deg through the rolls, 0.3 inverted without GPS,
+// 0.7 through the Immelmann; 5.2 in the loop, whose angle of attack goflying's
+// coordinated-flight model allows only so far, settling to 2.6 deg in level flight
+// at 2 deg angle of attack after it (1.3 before it: the filter cannot tell pitch
+// from angle of attack when nothing moves). Never invalid, never valid while
+// wrong. The Simple AHRS, logged alongside, is 7 deg out in the rolls, 49 in the
+// loop and 43 in the Immelmann, and its attitude goes NaN 3 s into the inverted
+// pass, when the lost GPS puts it in static mode: there it builds an exact half
+// turn, which goflying's RotationMatrixToQuaternion cannot convert.
+// Covers: RB-HLR-ATT-370
+func TestKalmanAttitudeThroughAerobaticFigures(t *testing.T) {
+	withAttitudeSettings(t)
+	const (
+		start, trail = 60.0, 40.0
+		field, dip   = 46.3, 62.1 // uT, deg: central Italy
+		worstDeg     = 7.0
+		afterDeg     = 4.0
+		wrongDeg     = 10.0 // kalmanConfig's MaxAttitudeSigma
+		invalidSecs  = 0.5
+	)
+	earth := [3]float64{0, field * math.Cos(dip*ahrs.Deg), -field * math.Sin(dip*ahrs.Deg)}
+	for _, fig := range []struct {
+		name string
+		path flight
+		secs float64
+	}{
+		{"aileron roll right", aileronRoll(start, 4, 1), 4},
+		{"aileron roll left", aileronRoll(start, 4, -1), 4},
+		{"loop", loop(start), 14},
+		{"20 s inverted, no GPS", invertedPass(start), 26},
+		{"Immelmann with a vertical line", immelmann(start), 17},
+	} {
+		f := iRVDXMount
+		cage := levelCage(t, f)
+		k := ahrs.NewKalmanAHRS()
+		k.SetConfig(kalmanConfig())
+		k.SetConfig(map[string]float64{"MagField": field, "MagDip": dip})
+		c, d := atRestReading(f, 0, 0), [3]float64{}
+		k.SetCalibrations(&c, &d)
+		k.SetSensorQuaternion(&cage)
+		ks := scoreFigure(flyEngine(t, k, f, fig.path, start+fig.secs+trail, 1, earth), start, start+fig.secs, wrongDeg)
+
+		s := ahrs.NewSimpleAHRS()
+		s.SetSensorQuaternion(&cage)
+		ss := scoreFigure(flyEngine(t, s, f, fig.path, start+fig.secs+trail, 1, [3]float64{}), start, start+fig.secs, wrongDeg)
+		t.Logf("%-31s kalman: before %4.1f worst %5.1f after %4.1f deg, valid while wrong %4.1f s, invalid %4.1f s | simple: before %4.1f worst %5.1f after %4.1f",
+			fig.name, ks.before, ks.worst, ks.after, ks.validWrong, ks.invalid, ss.before, ss.worst, ss.after)
+		if ks.worst > worstDeg || ks.after > afterDeg {
+			t.Errorf("%s: vertical off by up to %.1f deg through the figure and %.1f from 5 s after it; want at most %.0f and %.0f",
+				fig.name, ks.worst, ks.after, worstDeg, afterDeg)
+		}
+		if ks.validWrong > 0 {
+			t.Errorf("%s: valid for %.2f s while more than %.0f deg off", fig.name, ks.validWrong, wrongDeg)
+		}
+		if ks.invalid > invalidSecs {
+			t.Errorf("%s: invalid for %.2f s, want at most %.1f", fig.name, ks.invalid, invalidSecs)
+		}
 	}
 }
 

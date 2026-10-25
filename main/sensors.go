@@ -772,6 +772,18 @@ func imuTemperature() (float64, bool) {
 // carry heading at all.
 const kalmanMagBiasSigma = 3.0
 
+// kalmanConfig is the Kalman engine's configuration, the local field aside
+// (kalmanField). goflying's own GyroSigma and MagSigma defaults, its tuning for
+// aerobatic figures, stand.
+func kalmanConfig() map[string]float64 {
+	return map[string]float64{
+		"MagBiasSigma": kalmanMagBiasSigma,
+		// Roll and pitch known to this many degrees (1 sigma) count as a
+		// usable attitude, as the Simple AHRS, which never gates, is.
+		"MaxAttitudeSigma": 10,
+	}
+}
+
 // newAHRS returns the attitude engine AHRSEngine selects: goflying's Simple
 // AHRS, or its Kalman filter, which also fuses the magnetometer (see
 // kalmanMagnetometer and kalmanField).
@@ -779,12 +791,7 @@ func newAHRS(engine string) ahrs.AHRSProvider {
 	/* To be Flight tested before releasing, as the Kalman engine is not yet fully tuned for the RB IMU.
 	if engine == "kalman" {
 		k := ahrs.NewKalmanAHRS()
-		k.SetConfig(map[string]float64{
-			"MagBiasSigma": kalmanMagBiasSigma,
-			// Roll and pitch known to this many degrees (1 sigma) count as a
-			// usable attitude, as the Simple AHRS, which never gates, is.
-			"MaxAttitudeSigma": 10,
-		})
+		k.SetConfig(kalmanConfig())
 		return k
 	}
 	*/

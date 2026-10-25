@@ -636,7 +636,13 @@ func TestIcao2RegOutsideCivilBlocks(t *testing.T) {
 // ownship only when it is where ownship is; a target using the code somewhere else
 // (another aircraft the pilot also flies, airborne now) stays visible as traffic. A
 // report that cannot be checked is hidden but not used as ownship.
-// Covers: RB-HLR-TRF-130
+//
+// "Where ownship is" is horizontal only. The altitude half of the check was disabled in
+// 3d02953c (#149) because the aircraft's own transponder loopback disagrees with the
+// barometric altitude by more than 500 ft near sea level in Mode A and during aerobatics,
+// and the aircraft was then warned about itself in the FLARM sentences. RB-HLR-TRF-135
+// records that decision; this test's "1000 ft above" case is what it means.
+// Covers: RB-HLR-TRF-130, RB-HLR-TRF-135
 func TestOwnshipFilter(t *testing.T) {
 	near := TrafficInfo{Icao_addr: 0x3003E3, Position_valid: true, Lat: 43.0, Lng: 12.0, Alt: 3000}
 	far := near
@@ -657,7 +663,7 @@ func TestOwnshipFilter(t *testing.T) {
 		{"ownship code, here", "3003E3", true, near, true, true},
 		{"one of several codes, spaced", "4B1A24, 3003e3", true, near, true, true},
 		{"ownship code, 22 km away", "3003E3", true, far, false, false},
-		{"ownship code, 1000 ft above", "3003E3", true, above, false, false},
+		{"ownship code, 1000 ft above", "3003E3", true, above, true, true},
 		{"ownship code, no position", "3003E3", true, noPos, false, true},
 		{"ownship code, no baro to compare", "3003E3", false, near, false, true},
 	}
