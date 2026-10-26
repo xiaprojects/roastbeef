@@ -86,6 +86,30 @@ The GPS Hobbs meter's flight log (`main/hobbsmeter.go`): one entry per flight, a
 
 `departureTime` is the first second above the threshold, `landedTime` the last drop below it (RFC 3339 UTC, GPS time), altitudes are GPS MSL in meters, `hobbsTimeMinutes` the seconds above the threshold truncated to minutes. The flight in progress is present with an empty `landedTime`; after a power cut it stays in the log as last flushed.
 
+#### `GET /settings/deviation.json`
+Magnetic declination (variation), a static file generated from the World Magnetic Model by `scripts/gen_deviation.py`. The generator writes one grid per region under `settings/databases/deviations/` and `deviation.json` is the one in use, a copy of one of them (`europe.json` as shipped):
+
+| File | Grid, 1° nodes | Covers |
+|---|---|---|
+| `europe.json` | 27°N 32°W to 72°N 45°E | Canary Islands and Azores to Moscow, Cyprus to North Cape |
+| `usa.json` | 17°N 180°W to 72°N 64°W | CONUS, Alaska (Aleutians east of 180°), Hawaii, Puerto Rico |
+| `canada.json` | 41°N 142°W to 84°N 52°W | All of Canada up to northern Ellesmere |
+
+Each grid is at sea level, evaluated at `date` (decimal year) and valid from `validFrom` to `validTo`. `declination[i][j]` (degrees, East positive: magnetic = true − declination) is the value at latitude `planimetry.start.lat + i * step.lat` and longitude `planimetry.start.lon + j * step.lon`, both ends included; `annualChange[i][j]` is its rate in degrees per year. Interpolate bilinearly between the four nodes around the position and add `annualChange * (year - date)`: over the validity window this stays within 0.06° of the full model in Europe, 0.08° in the USA and 0.15° in Canada south of 78°N, well inside the model's own uncertainty (about 0.3–0.5° at mid latitudes). North of about 70°N in the Canadian Arctic the horizontal field is under 6000 nT, the WMM caution zone where the model and any magnetic compass degrade; there the grid is up to 0.8° off. Regenerate the grids when NOAA publishes the next model.
+
+```json
+{
+    "model": "WMM-2025",
+    "validFrom": 2025.0,
+    "validTo": 2030.0,
+    "date": 2027.5,
+    "planimetry": {"start": {"lat": 27, "lon": -32}, "end": {"lat": 72, "lon": 45}},
+    "step": {"lat": 1, "lon": 1},
+    "declination": [[-9.4, -9.0, …], …],
+    "annualChange": [[0.17, 0.17, …], …]
+}
+```
+
 #### `GET /downloadlog`
 Downloads the current debug log file.
 

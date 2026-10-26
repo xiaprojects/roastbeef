@@ -59,9 +59,11 @@
  *   RESET       two taps: DELETE /magnetometer wipes the envelope (live and
  *               settings), the compass is unusable until calibrated again;
  *   OFFSET FROM GPS TRACK
- *               sets Offset so the magnetic heading reads the current GPS
- *               track. Flying straight and level, no wind: the offset then
- *               absorbs the magnetic declination and any drift too.
+ *               sets Offset so the magnetic heading reads the current magnetic
+ *               track: the GPS track minus the variation from
+ *               /settings/deviation.json. Flying straight and level, no wind.
+ *               Outside that grid there is no variation and the compass is
+ *               aligned to the true track instead, absorbing the declination.
  *
  * Uses the Three.js already loaded by index.html (/synthview/three.min.js and
  * OrbitControls.js), so it works with no network.
@@ -486,8 +488,9 @@ function MagnetometerCtrl($rootScope, $scope, $state, $http) {
         return ((a % 360) + 540) % 360 - 180;
     }
 
-    // OFFSET FROM GPS TRACK: move Offset by the difference between the GPS
-    // track and the magnetic heading, so the compass reads the track now.
+    // OFFSET FROM GPS TRACK: move Offset by the difference between the magnetic
+    // track (GPS track minus the variation, when servicesituation.js knows it)
+    // and the magnetic heading, so the compass reads the magnetic track now.
     // Needs a fix and some ground speed for the track to mean anything.
     $scope.applyGpsTrackOffset = function () {
         var m = $scope.lastMag, s = $scope.lastSituation;
@@ -503,10 +506,16 @@ function MagnetometerCtrl($rootScope, $scope, $state, $http) {
             notify("no magnetic heading to align");
             return;
         }
-        var offset = normalizeOffset(m.Offset + normalizeOffset(trk - hdg));
+        var known = s.MagneticVariationValid === true;
+        var variation = known ? s.MagneticVariation : 0;
+        var mtrk = (((trk - variation) % 360) + 360) % 360;
+        var offset = normalizeOffset(m.Offset + normalizeOffset(mtrk - hdg));
         offset = Math.round(offset * 10) / 10;
         storeCalibration(calibrationMessage(m, { Offset: offset }), "offset",
-            "offset " + offset + "°: heading " + hdg.toFixed(0) + "° aligned to GPS track " + trk.toFixed(0) + "°");
+            "offset " + offset + "°: heading " + hdg.toFixed(0) + "° aligned to "
+            + (known ? "magnetic track " + mtrk.toFixed(0) + "° (GPS " + trk.toFixed(0) + "°, variation "
+                + (variation >= 0 ? "+" : "") + variation.toFixed(1) + "°)"
+                : "GPS track " + trk.toFixed(0) + "° (no variation known: true)"));
     };
 
     // CONFIG: the live state next to the stored calibration, as a snapshot.

@@ -34,7 +34,9 @@
         - Websocket connects and receive
         - Max, Min
         - Threshold to avoid cpu consumption
-        - Wind estimate from the wind triangle (WindSpeed, WindDirection, WindValid, WindSource)
+        - Wind estimate (WindSpeed, WindDirection, WindValid, WindSource), see windestimator.js
+        - Magnetic variation at the aircraft (MagneticVariation, MagneticVariationValid,
+          MagneticVariationExpired), see variation.js
 */
 
 
@@ -115,6 +117,10 @@ function SituationService($scope, $http) {
 
         $scope.lastUpdateTime = 0;
         $scope.situationSocket.onmessageTick = function (situation) {
+            // Every frame, not only the published ones: the estimator keeps its
+            // own one-per-second samples on the GPS clock
+            situationVariation(situation);
+            windEstimator.observe(situation);
 
             // Filter to avoid blow up CPU
             const oldSituation = window.situation;
@@ -248,54 +254,43 @@ function SituationService($scope, $http) {
             });
     }
 
-    // Wind estimate from the wind triangle: the ground vector (GPS ground speed
-    // along the true course) minus the air vector (airspeed along the heading).
-    // AHRSMagHeading is compared straight against GPSTrueCourse: the compass
-    // offset (magnetometer addon, OFFSET FROM GPS TRACK) absorbs the declination,
-    // so the 45 degrees gate is the sanity check against an uncalibrated compass,
-    // a stationary aircraft with a random track, or a skidding turn.
-    // IndicatedAirSpeed comes from an external board in knots, like GPSGroundSpeed:
-    //   A) IAS > 0: IAS becomes TAS with the ISA density ratio at the pressure
-    //      altitude, then the full triangle (WindSource "ias");
-    //   B) IAS = 0 or missing: no airspeed source, the ground speed stands in
-    //      for the airspeed (WindSource "gs").
-    // WindDirection is where the wind blows FROM, like a METAR. The four fields
-    // are written on every frame so a consumer never reads a stale estimate.
+    // Wind estimate, from windestimator.js (fed by onmessageTick):
+    //   "tas": airspeed + GPS fit over a course change, no heading involved,
+    //          held through straight flight (15 min / 2000 ft);
+    //   "ias": otherwise the compass triangle, airspeed along AHRSMagHeading,
+    //          averaged over 45 s of steady flight, turns left out;
+    //   "gs":  the same with the ground speed standing in for a missing airspeed.
+    // AHRSMagHeading is magnetic; the triangle turns it true with the variation
+    // (situationVariation). Where none is known it is taken as true, which is
+    // what the magnetometer addon's OFFSET FROM GPS TRACK makes it there.
+    // IndicatedAirSpeed comes from an external board in knots, like GPSGroundSpeed.
+    // WindDirection is where the wind blows FROM, true, like a METAR. The four
+    // fields are written on every frame so a consumer never reads a stale estimate.
+    var windEstimator = new WindEstimator();
+    window.windEstimator = windEstimator; // diagnostics: tasScale, fit
     function situationWind(situation) {
-        situation.WindValid = false;
-        situation.WindSpeed = 0;
-        situation.WindDirection = 0;
-        situation.WindSource = "";
-        if (!(situation.GPSFixQuality > 0))
-            return;
-        var hdg = situation.AHRSMagHeading;
-        var trk = situation.GPSTrueCourse;
-        var gs = situation.GPSGroundSpeed;
-        var ias = situation.IndicatedAirSpeed ?? 0;
-        if (!isFinite(hdg) || !isFinite(trk) || !isFinite(gs) || !isFinite(ias) || ias < 0)
-            return;
-        var drift = ((trk - hdg + 540) % 360) - 180; // -180..180, wrap safe
-        if (Math.abs(drift) >= 45)
-            return;
-        var tas;
-        if (ias > 0) {
-            var pa = situation.BaroPressureAltitude ?? situation.GPSAltitudeMSL ?? 0; // ft
-            if (!isFinite(pa))
-                pa = 0;
-            var sigma = Math.pow(Math.max(1 - 6.8756e-6 * pa, 0.01), 4.2559);
-            tas = ias / Math.sqrt(sigma);
-            situation.WindSource = "ias";
-        }
-        else {
-            tas = gs;
-            situation.WindSource = "gs";
-        }
-        // North/east frame, bearings clockwise from north
-        var wx = gs * Math.sin(toRadians(trk)) - tas * Math.sin(toRadians(hdg));
-        var wy = gs * Math.cos(toRadians(trk)) - tas * Math.cos(toRadians(hdg));
-        situation.WindSpeed = Math.sqrt(wx * wx + wy * wy);
-        situation.WindDirection = (toDegrees(Math.atan2(-wx, -wy)) + 360) % 360;
-        situation.WindValid = true;
+        var wind = windEstimator.estimate(situation);
+        situation.WindValid = wind.valid;
+        situation.WindSpeed = wind.speed;
+        situation.WindDirection = wind.direction;
+        situation.WindSource = wind.source;
+    }
+
+    // Magnetic variation at the aircraft from /settings/deviation.json, East
+    // positive: true = magnetic + MagneticVariation. From the position the
+    // daemon reports, a fix or the last known one, and the GPS date.
+    // MagneticVariationValid is false (and the value 0) outside the grid or
+    // until the grid has loaded; MagneticVariationExpired flags a date outside
+    // the model's validity, where the value is extrapolated.
+    var magneticVariation = new MagneticVariation();
+    window.magneticVariation = magneticVariation; // diagnostics
+    magneticVariation.load();
+    function situationVariation(situation) {
+        var v = magneticVariation.at(situation.GPSLatitude, situation.GPSLongitude,
+            magneticVariationYear(situation));
+        situation.MagneticVariation = v.variation;
+        situation.MagneticVariationValid = v.valid;
+        situation.MagneticVariationExpired = v.expired;
     }
 
     // The speed a pilot reads, resolved once for every plate: the external

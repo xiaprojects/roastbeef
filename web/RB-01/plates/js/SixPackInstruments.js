@@ -442,11 +442,11 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "estimated": false,
     "arrowDegree": "0deg"
   };
-  // Damping of the wind readout. servicesituation.js estimates the wind on
-  // every frame; that raw estimate moves with each compass and GPS sample, so
-  // what is displayed is smoothed over about five seconds, the order of a real
-  // wind readout. Smoothed as a vector, never as an angle: the mean of 359 and
-  // 001 is north, not south. arrow is the unwrapped screen angle.
+  // Damping of the wind readout. servicesituation.js already publishes an
+  // averaged or fitted wind (windestimator.js); this only eases the steps, when
+  // a new fit lands or the source changes, over about five seconds. Smoothed
+  // as a vector, never as an angle: the mean of 359 and 001 is north, not
+  // south. arrow is the unwrapped screen angle.
   const WIND_TAU = 5000; // ms
   var windFilter = { "x": 0, "y": 0, "time": 0, "arrow": 0 };
 
@@ -481,9 +481,11 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Wind.speed = Math.round(pilotDisplayedSpeedFromKT(speedKt));
     $scope.Wind.estimated = situation.WindSource == "gs";
     // Where the wind blows TO, relative to the nose: a headwind points down the
-    // screen. Unwrapped so crossing north turns the arrow one degree instead of
-    // sending the CSS transition all the way round the other way.
-    const target = from + 180 - situation.AHRSMagHeading;
+    // screen. The wind is true and AHRSMagHeading magnetic, so the nose is the
+    // true heading. Unwrapped so crossing north turns the arrow one degree
+    // instead of sending the CSS transition all the way round the other way.
+    const variation = situation.MagneticVariationValid === true ? situation.MagneticVariation : 0;
+    const target = from + 180 - (situation.AHRSMagHeading + variation);
     windFilter.arrow += ((((target - windFilter.arrow + 180) % 360) + 360) % 360) - 180;
     $scope.Wind.arrowDegree = windFilter.arrow.toFixed(1) + "deg";
   }
