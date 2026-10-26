@@ -32,8 +32,8 @@ jobs:
       - name: make check
         run: ./docker_run.sh "cd data && make check"
 
-  # The RB-01 HMI suite (test/display/) runs in display-tests.yml, path-filtered
-  # because it takes the best part of an hour.
+  # The RB-01 HMI suite (test/display/) is run locally only, never on GitHub:
+  # cd test/display && ./run.py
 
   # This workflow contains a single job called "build"
   build:

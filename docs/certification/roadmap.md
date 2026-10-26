@@ -136,8 +136,8 @@ Mechanical, and it turns the CI from "it compiles" into a gate.
    "shall" phrasing, verifiability, derived-requirement rule), `standards/design.md`,
    `standards/code.md` (Go/C/JS rules, complexity limits, forbidden constructs, review
    checklist).
-5. **CI runs the tests:** `make test`, `go test ./...`, and `test/display/run.py` headless
-   (Chromium is present on GitHub runners). Failure blocks the merge.
+5. **CI runs the tests:** `make test` and `go test ./...`. Failure blocks the merge.
+   `test/display/run.py` (headless Chromium) is run locally only, not on GitHub.
 
 Deliverables: `.golangci.yml`, `.eslintrc`, `docs/certification/standards/*.md`, CI job.
 **Exit criterion:** CI is red on lint or test failure; the standards are referenced by the
@@ -448,7 +448,7 @@ doubles the effort.
       `master` (GitHub settings — needs the repository owner).
 - [x] `make check` = `gofmt` (leaf packages) + `go vet` (all packages, now clean) +
       `go test` + provenance hash check; wired into `.github/workflows/ci.yml`. The HMI
-      suite already runs in `display-tests.yml`. `staticcheck`/`golangci-lint` still to add.
+      suite runs locally only (`test/display/run.py`). `staticcheck`/`golangci-lint` still to add.
 - [x] Build id = commit SHA with `-dirty` suffix, shown on the RB-01 OTA screen and in
       `/getStatus`.
 - [x] `docs/certification/provenance.md` + `scripts/provenance.sh` — 40 artifacts hashed and

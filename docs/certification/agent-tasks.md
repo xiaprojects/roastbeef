@@ -517,8 +517,7 @@ disabling the rule. Preserve CRLF in every file you touch and verify with `file`
 
 **Acceptance.** `eslint -c .eslintrc.json web/RB-01/js web/RB-01/plates/js web/RB-01/services
 web/plates/js web/js` exits 0; `test/display/run.py` still passes (a lint fix that breaks the
-HMI is worse than the lint finding); the run is wired into `display-tests.yml` or
-`make check`; `git diff --stat` shows no whole-file rewrites, which is how a CRLF accident
+HMI is worse than the lint finding); the run is wired into `make check`; `git diff --stat` shows no whole-file rewrites, which is how a CRLF accident
 shows up.
 
 ---

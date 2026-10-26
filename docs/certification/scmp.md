@@ -46,7 +46,7 @@ later certification artifact is measured.
   (severity 1–3, safety-related flag). Severity 1 or safety-related problems are triaged
   before any other work and get an entry in the release notes even if not fixed.
 - **Change control**: **[pending]** GitHub branch protection on `master` — require a PR,
-  require the `check` and `build` jobs (and `display-tests.yml` when it runs) to pass,
+  require the `check` and `build` jobs to pass,
   no force-push, no direct push. Until then the rule is procedural.
 - **Change review**: the PR review. The reviewer checks the standards checklist
   (roadmap Step 2, **[pending]**) and that the issue is referenced.
@@ -79,8 +79,8 @@ later certification artifact is measured.
 
 - Build and static-analysis run inside the container defined by `Dockerfile` /
   `docker-compose.yaml` (`make ddpkg`, `make check` in CI).
-- HMI tests need only Python 3 and a Chromium; `display-tests.yml` uses the stock GitHub
-  runner's Chrome and prints its version in the job log.
+- HMI tests need only Python 3 and a Chromium and run on the maintainer's machine only,
+  not on GitHub.
 - Editor/IDE settings are not configuration items.
 
 ## 7. Roles
@@ -96,7 +96,7 @@ the SQAP.
 | 1 | Tag `v2.0-cert-base` on a clean tree | 1.1 |
 | 2 | `go mod vendor`; pin container base image by digest and Go version | 1.2 |
 | 3 | Capture the OS package list into release assets | 1.2 |
-| 4 | Branch protection on `master` requiring `check`, `build`, `display-tests` | 1.4 |
+| 4 | Branch protection on `master` requiring `check`, `build` | 1.4 |
 | 5 | Off-GitHub archive + yearly restore test | 1.5 |
 | 6 | Byte-reproducible `.deb` | 1.3 |
 | 7 | Signed OTA packages | 1.6 |

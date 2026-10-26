@@ -54,8 +54,8 @@ Notes:
   package (keep it so — use `log.Print(s)` not `log.Printf(s)` for non-constant strings),
   `gofmt` is enforced on `common`, `uatparse`, `godump978`, `sensors` (not yet on `main/`,
   which has many unformatted files). CI (`.github/workflows/ci.yml`) runs `make check` in
-  the build container and `make ddpkg`; the RB-01 display tests run in
-  `display-tests.yml` when `web/**` or `test/display/**` change.
+  the build container and `make ddpkg`. The RB-01 display tests are **local only**: they
+  do not run on GitHub, and no workflow for them should be added.
 
 ## Running & testing
 
