@@ -51,6 +51,14 @@
 	                        KalmanAHRS GyroSigma, MagSigma and
 	                        AngleOfAttackSigma: negative keeps goflying's
 	                        default, 0 is the filter as written
+	  -engine kalman|ins    the engine scored against Simple: KalmanAHRS
+	                        (default) or INSAHRS, the GPS-aided inertial
+	                        filter (no magnetometer); -cfg Key=value,... is
+	                        handed to its SetConfig last
+	  -vs baro|fast         the vertical speed the AHRS gets: baro (default)
+	                        is the daemon's BaroVerticalSpeed, a 5 s average
+	                        for the VSI that lags a zoom by about 4 s; fast is
+	                        the pressure altitude's rate over the last second
 	  -provider             (default) drive the filter through its
 	                        AHRSProvider adapter ahrs.KalmanAHRS with the
 	                        daemon's own C, D and SensorQuaternion, exactly as
@@ -107,11 +115,13 @@ type row struct {
 	g, a       [3]float64
 	mag        [3]float64
 	env        [6]float64 // minX,maxX,minY,maxY,minZ,maxZ
+	magCal     bool       // a compass calibration was running: env is being built
 	magOffset  float64
 	gs, trk    float64
 	gpsVS      float64 // ft/min
 	baroVS     float64 // ft/min
 	w3         float64 // kt, the vertical speed the daemon hands the AHRS
+	baroAlt    float64 // ft, pressure altitude
 	fix        int
 	hacc       float64
 	wValid     bool // isGPSGroundTrackValid, as the daemon judged it
@@ -138,6 +148,7 @@ type magJSON struct {
 	MagMinX, MagMinY, MagMinZ float64
 	X, Y, Z                   float64
 	Heading, Offset           float64
+	Calibrating               bool
 }
 
 func readLog(path string) ([]row, error) {
@@ -150,7 +161,7 @@ func readLog(path string) ([]row, error) {
 		s.AHRSGyroX, s.AHRSGyroY, s.AHRSGyroZ, s.AHRSAccX, s.AHRSAccY, s.AHRSAccZ,
 		s.Magnetometer, s.GPSGroundSpeed, s.GPSTrueCourse, s.GPSVerticalSpeed, s.BaroVerticalSpeed,
 		s.GPSFixQuality, s.GPSHorizontalAccuracy, s.AHRSRoll, s.AHRSPitch, s.AHRSGyroHeading, s.AHRSMagHeading,
-		s.GPSLatitude, s.GPSLongitude
+		s.GPSLatitude, s.GPSLongitude, s.BaroPressureAltitude
 		FROM mySituation s JOIN timestamp ts ON ts.id = s.timestamp_id ORDER BY s.timestamp_id`)
 	if err != nil {
 		return nil, err
@@ -162,7 +173,7 @@ func readLog(path string) ([]row, error) {
 		var clock, mag string
 		if err := rows.Scan(&clock, &r.g[0], &r.g[1], &r.g[2], &r.a[0], &r.a[1], &r.a[2],
 			&mag, &r.gs, &r.trk, &r.gpsVS, &r.baroVS, &r.fix, &r.hacc,
-			&r.roll, &r.pitch, &r.gyroHdg, &r.magHdg, &r.lat, &r.lon); err != nil {
+			&r.roll, &r.pitch, &r.gyroHdg, &r.magHdg, &r.lat, &r.lon, &r.baroAlt); err != nil {
 			return nil, err
 		}
 		var err error
@@ -178,6 +189,7 @@ func readLog(path string) ([]row, error) {
 		}
 		r.mag = [3]float64{mj.X, mj.Y, mj.Z}
 		r.env = [6]float64{mj.MagMinX, mj.MagMaxX, mj.MagMinY, mj.MagMaxY, mj.MagMinZ, mj.MagMaxZ}
+		r.magCal = mj.Calibrating
 		r.magOffset = mj.Offset
 		r.compassHdg = mj.Heading
 		out = append(out, r)
@@ -251,12 +263,31 @@ func readSensorLog(path string, ref []row) ([]row, error) {
 		r.a = [3]float64{v("A1"), v("A2"), v("A3")}
 		r.mag = [3]float64{v("M1"), v("M2"), v("M3")}
 		r.roll, r.pitch, r.gyroHdg = v("Roll"), v("Pitch"), v("Heading")
+		if _, ok := col["BaroPressureAltitude"]; ok {
+			r.baroAlt = v("BaroPressureAltitude")
+		}
 		out = append(out, r)
 	}
 	if len(out) == 0 {
 		return nil, fmt.Errorf("%s: no samples", path)
 	}
 	return out, nil
+}
+
+// fastVS replaces the vertical speed of rs (in time order) with the pressure
+// altitude's rate over the last second, kt: what the AHRS would get if the
+// daemon handed it that rather than BaroVerticalSpeed, a 5 s average for the
+// VSI that lags a zoom by about 4 s.
+func fastVS(rs []row) {
+	j := 0
+	for i := range rs {
+		for j+1 < i && rs[j+1].t <= rs[i].t-1 {
+			j++
+		}
+		if dt := rs[i].t - rs[j].t; dt >= 0.5 && dt < 3 {
+			rs[i].w3 = (rs[i].baroAlt - rs[j].baroAlt) / dt * 0.592484 // ft/s to kt
+		}
+	}
 }
 
 // nearestRow is the row of rs (in time order) nearest t.
@@ -505,6 +536,9 @@ func main() {
 	windNoise := flag.Float64("windnoise", 0, "Kalman process noise of the wind V, kt per sqrt(s) (0 keeps goflying's default)")
 	provider := flag.Bool("provider", true, "drive the Kalman filter through its AHRSProvider adapter exactly as the daemon does; false: the bare KalmanState, see the header")
 	csvOut := flag.String("csv", "", "per-sample CSV dump")
+	engine := flag.String("engine", "kalman", "the engine scored against Simple: kalman (KalmanAHRS) or ins (INSAHRS)")
+	cfgS := flag.String("cfg", "", "Key=value,... handed to the engine's SetConfig after everything else")
+	vsMode := flag.String("vs", "baro", "vertical speed for the AHRS: baro, what the daemon hands it (BaroVerticalSpeed, a 5 s average for the VSI); fast, the pressure altitude's rate over the last second")
 	minGPS := flag.Float64("mingps", 40, "ground speed above which heading and attitude are scored, kt")
 	flag.Parse()
 	set := map[string]bool{}
@@ -636,6 +670,14 @@ func main() {
 		}
 		src = *sensorLog
 	}
+	switch *vsMode {
+	case "baro":
+	case "fast":
+		fastVS(rows)
+	default:
+		fmt.Fprintln(os.Stderr, "-vs: baro or fast")
+		os.Exit(2)
+	}
 	fmt.Printf("%s: %d rows, %.0f s; mag=%s field %.1f uT dip %.1f decl %+.1f; external unit %d samples\n",
 		src, len(rows), rows[len(rows)-1].t-rows[0].t, *magMode, *field, *dip, *decl, len(extRoll.t))
 
@@ -681,6 +723,34 @@ func main() {
 		prov.SetSensorQuaternion(&sensorQ)
 		prov.SetConfig(cfg)
 	}
+	extraCfg := map[string]float64{}
+	if *cfgS != "" {
+		for _, kv := range strings.Split(*cfgS, ",") {
+			k, v, ok := strings.Cut(kv, "=")
+			x, err := strconv.ParseFloat(v, 64)
+			if !ok || err != nil {
+				fmt.Fprintln(os.Stderr, "-cfg: want Key=value,...:", kv)
+				os.Exit(2)
+			}
+			extraCfg[strings.TrimSpace(k)] = x
+		}
+	}
+	var ins *ahrs.INSAHRS
+	switch *engine {
+	case "kalman":
+		if prov != nil {
+			prov.SetConfig(extraCfg)
+		}
+	case "ins":
+		ins = ahrs.NewINSAHRS()
+		ins.SetCalibrations(&C, &D)
+		ins.SetSensorQuaternion(&sensorQ)
+		ins.SetConfig(map[string]float64{"MaxAttitudeSigma": *maxSigma})
+		ins.SetConfig(extraCfg)
+	default:
+		fmt.Fprintln(os.Stderr, "-engine: kalman or ins")
+		os.Exit(2)
+	}
 
 	var (
 		kScore, sScore, cScore, logGyroScore, logMagScore, kVsCompass score
@@ -718,6 +788,12 @@ func main() {
 		// chip frame, in uT.
 		m.MValid = *magMode != "none"
 		if forKalman {
+			// As kalmanMagnetometer: no magnetometer while a calibration is
+			// running or before the envelope spans every axis (an -magenv
+			// override is the calibration in force throughout).
+			if magEnv == nil && (r.magCal || r.env[1] <= r.env[0] || r.env[3] <= r.env[2] || r.env[5] <= r.env[4]) {
+				m.MValid = false
+			}
 			cx, cy, cz := common.CalibrateFromMag(r.mag[0], r.mag[1], r.mag[2],
 				r.env[0], r.env[1], r.env[2], r.env[3], r.env[4], r.env[5], true)
 			bx, by, bz := common.QuaternionRotateVector(axisQ, cx, cy, cz)
@@ -766,38 +842,56 @@ func main() {
 		}
 
 		fill(km, r, true)
-		if prov != nil {
-			// The adapter applies the drivers' accel sign and scale itself.
+		var kRoll, kPitch, kHdg, kdRoll, kdPitch, kdHdg float64
+		var kValid bool
+		var kExtra [9]float64 // the CSV's kN, kD, kV and kU1 columns
+		// The engines apply the drivers' accel sign and scale themselves.
+		if ins != nil {
 			km.A1, km.A2, km.A3 = r.a[0], r.a[1], r.a[2]
-			prov.Compute(km)
-			kal = &prov.KalmanState
-			if kal.M == nil {
+			km.MValid = false
+			ins.Compute(km)
+			kRoll, kPitch, kHdg = ins.RollPitchHeading()
+			if kHdg == ahrs.Invalid {
+				kHdg = math.NaN()
+			}
+			kRoll, kPitch, kHdg = kRoll/ahrs.Deg, kPitch/ahrs.Deg, kHdg/ahrs.Deg
+			kdRoll, kdPitch, kdHdg = ins.CalcRollPitchHeadingUncertainty()
+			kValid = ins.Valid()
+			st := ins.GetState()
+			kExtra[3], kExtra[4], kExtra[5] = st.D1, st.D2, st.D3
+		} else {
+			if prov != nil {
+				km.A1, km.A2, km.A3 = r.a[0], r.a[1], r.a[2]
+				prov.Compute(km)
+				kal = &prov.KalmanState
+				if kal.M == nil {
+					continue
+				}
+			} else if kal == nil {
+				if !km.WValid {
+					continue
+				}
+				kal = ahrs.InitializeKalman(km)
+				kal.F0, kal.F1, kal.F2, kal.F3 = sensorQ[0], sensorQ[1], sensorQ[2], sensorQ[3]
+				kal.C1, kal.C2, kal.C3 = *accelSign*C[0], *accelSign*C[1], *accelSign*C[2]
+				kal.D1, kal.D2, kal.D3 = D[0], D[1], D[2]
+				priors(kal)
+				if *magMode == "pinned" {
+					pin(kal)
+				}
 				continue
+			} else {
+				kal.Compute(km)
 			}
-		} else if kal == nil {
-			if !km.WValid {
-				continue
+			kRoll, kPitch, kHdg = kal.CalcRollPitchHeading()
+			kdRoll, kdPitch, kdHdg = kal.CalcRollPitchHeadingUncertainty()
+			kValid = kal.Valid()
+			if prov != nil {
+				kValid = prov.Valid()
 			}
-			kal = ahrs.InitializeKalman(km)
-			kal.F0, kal.F1, kal.F2, kal.F3 = sensorQ[0], sensorQ[1], sensorQ[2], sensorQ[3]
-			kal.C1, kal.C2, kal.C3 = *accelSign*C[0], *accelSign*C[1], *accelSign*C[2]
-			kal.D1, kal.D2, kal.D3 = D[0], D[1], D[2]
-			priors(kal)
-			if *magMode == "pinned" {
-				pin(kal)
-			}
-			continue
-		}
-		if prov == nil {
-			kal.Compute(km)
+			kExtra = [9]float64{kal.N1, kal.N2, kal.N3, kal.D1, kal.D2, kal.D3, kal.V1, kal.V2, kal.U1}
 		}
 		kUpdates++
-		kRoll, kPitch, kHdg := kal.CalcRollPitchHeading()
-		kdRoll, kdPitch, kdHdg := kal.CalcRollPitchHeadingUncertainty()
-		kValid := kal.Valid()
-		if prov != nil {
-			kValid = prov.Valid()
-		}
 		kHdgTrue := common.NormalizeHeadingDeg(kHdg + *decl)
 		// Compass from the calibration in force here and the daemon's logged
 		// attitude (the replayed Simple attitude is not faithful at 1 Hz).
@@ -859,7 +953,7 @@ func main() {
 			}
 			w.Write([]string{f(r.t), f(r.gs), f(r.trk), f(kRoll), f(kPitch), f(kHdgTrue), f(kdRoll / ahrs.Deg), f(kdPitch / ahrs.Deg), f(kdHdg / ahrs.Deg), b(kValid),
 				f(sRoll), f(sPitch), f(sHdg), b(sValid), f(compass), f(r.roll), f(r.pitch), f(r.gyroHdg), f(r.magHdg),
-				f(kal.N1), f(kal.N2), f(kal.N3), f(kal.D1), f(kal.D2), f(kal.D3), f(kal.V1), f(kal.V2), f(kal.U1), f(eRoll), f(ePitch)})
+				f(kExtra[0]), f(kExtra[1]), f(kExtra[2]), f(kExtra[3]), f(kExtra[4]), f(kExtra[5]), f(kExtra[6]), f(kExtra[7]), f(kExtra[8]), f(eRoll), f(ePitch)})
 		}
 	}
 
