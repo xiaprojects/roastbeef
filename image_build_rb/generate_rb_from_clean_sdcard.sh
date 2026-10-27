@@ -173,6 +173,29 @@ systemctl disable dnsmasq.service
 # systemd-rfkill from restoring it at all:
 # systemctl mask systemd-rfkill
 
+# Disable serial getty services to avoid conflicts
+systemctl disable serial-getty@.service
+systemctl disable serial-getty@.service
+systemctl disable serial-getty@ttyAMA0.service
+systemctl disable serial-getty@ttyAMA10.service
+systemctl disable serial-getty@ttyAMA0.service
+systemctl disable serial-getty@ttyAMA1.service
+systemctl disable serial-getty@ttyS0.service
+systemctl disable serial-getty@ttyS1.service
+systemctl disable serial-getty@serial0.service
+systemctl disable serial-getty@serial1.service
+
+systemctl mask serial-getty@.service
+systemctl mask serial-getty@ttyAMA0.service
+systemctl mask serial-getty@ttyAMA10.service
+systemctl mask serial-getty@ttyAMA0.service
+systemctl mask serial-getty@ttyAMA1.service
+systemctl mask serial-getty@ttyS0.service
+systemctl mask serial-getty@ttyS1.service
+systemctl mask serial-getty@serial0.service
+systemctl mask serial-getty@serial1.service
+
+
 # Disable swap and others
 swapoff -a
 systemctl disable rpi-setup-loop@var-swap.service
