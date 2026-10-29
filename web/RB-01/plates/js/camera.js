@@ -122,10 +122,10 @@ function CameraCtrl($rootScope, $scope, $state, $http, $interval) {
         switch (cameras[index].Type) {
             case 0:
                 cameras[index].UrlImg = cameras[index].Url;
-                cameras[index].UrliFrame = "/img/logo-transparent.png";
+                cameras[index].UrliFrame = "img/logo-transparent.png";
                 break;
             case 1:
-                cameras[index].UrlImg = "/img/logo-transparent.png";
+                cameras[index].UrlImg = "img/logo-transparent.png";
                 cameras[index].UrliFrame = cameras[index].Url;
                 break;
 

@@ -120,7 +120,7 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
    */
   function generateAlertRow($scope, alert) {
     // TODO: missing Keyboard navigator
-    var template = { "barclass": "barinfo", "icon": "/img/info.svg", "id": 0, "type": "info", "date": "", "text": "", "sound": "sounds/notify.mp3" };
+    var template = { "barclass": "barinfo", "icon": "img/info.svg", "id": 0, "type": "info", "date": "", "text": "", "sound": "sounds/notify.mp3" };
     // Load translations from Mapping
     var userLang = navigator.language || navigator.userLanguage;
     if ($scope.alertsMapping.hasOwnProperty(userLang)) {
@@ -134,11 +134,11 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
       // It is an array balanced with enumeration starting from 0
       if ($scope.alertsMapping[userLang].length > alert.Type) {
         if ($scope.alertsMapping[userLang][alert.Type].Sound !== undefined && $scope.alertsMapping[userLang][alert.Type].Sound.length > 0) {
-          template.sound = "/sounds/" + $scope.alertsMapping[userLang][alert.Type].Sound + ".mp3";
+          template.sound = "sounds/" + $scope.alertsMapping[userLang][alert.Type].Sound + ".mp3";
         }
         template.type = $scope.alertsMapping[userLang][alert.Type].Icon;
         template.text = $scope.alertsMapping[userLang][alert.Type].Text;
-        template.icon = "/img/" + $scope.alertsMapping[userLang][alert.Type].Icon + ".svg";
+        template.icon = "img/" + $scope.alertsMapping[userLang][alert.Type].Icon + ".svg";
         // alerts.css contains the colors attributes using the Type info,warning and danger
         template.barclass = "bar" + $scope.alertsMapping[userLang][alert.Type].Icon;
       }

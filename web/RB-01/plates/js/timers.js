@@ -111,7 +111,7 @@ function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
             // play some feedback for the user interaction
             // audioproxy is in index.html
             document.getElementById("audioproxy").autoplay = true;
-            document.getElementById("audioproxy").src = "/alert.wav";
+            document.getElementById("audioproxy").src = "sounds/alert.wav";
             document.getElementById("audioproxy").load();
         }
     }

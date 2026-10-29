@@ -1,0 +1,52 @@
+.alertsline {
+    min-height: 0.5in;
+    font-size: large;
+    margin: 0;
+}
+
+.alertsline .alertstitle {
+    font-size: x-large;
+    padding-left: 4px;
+}
+
+.alertsline.warning {
+    border-bottom: 2px solid yellow;
+    border-top: 2px solid yellow;
+}
+.alertsline.info {
+    border-bottom: 1px solid #7f7f7f;
+}
+.alertsline.danger {
+
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+.alertsline .bardanger {
+    background-color: red;
+    width: 0.5in;
+    height: 0.5in;
+    background-image: url(../img/danger.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 1px 2px;
+}
+.alertsline .barwarning {
+    background-color: yellow;
+    width: 0.5in;
+    height: 0.5in;
+    background-image: url(../img/warning.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+.alertsline .barinfo {
+    background-color: #efefef;
+    width: 0.5in;
+    height: 0.5in;
+    background-image: url(../img/info.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+}
+

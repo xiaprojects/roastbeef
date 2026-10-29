@@ -1,0 +1,8 @@
+@font-face {
+  font-family: DS-Digital;
+  src: url(ds-digi.ttf);
+}
+
+.Radio {
+  font-family: "DS-Digital";
+}

@@ -88,7 +88,7 @@ function AlertsService($scope, $http) {
                     }
                     else {
                     document.getElementById("audioproxy").autoplay = true;
-                    document.getElementById("audioproxy").src = "/sounds/" + $scope.alertsMapping[userLang][alertType].Sound + ".mp3";
+                    document.getElementById("audioproxy").src = "sounds/" + $scope.alertsMapping[userLang][alertType].Sound + ".mp3";
                     document.getElementById("audioproxy").load();
                     }
                 }
