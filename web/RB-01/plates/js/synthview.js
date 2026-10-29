@@ -51,7 +51,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     // RB-01, RB-03 using the Airfields integration we need a font, this is the default 3D font async loader
     // TODO: move this part
     const fontLoader = new THREE.FontLoader();
-    fontLoader.load("/synthview/helvetiker_regular.typeface.json", (font) => {
+    fontLoader.load("synthview/helvetiker_regular.typeface.json", (font) => {
         window.font = font;
     });
     $scope.$parent.helppage = 'plates/synthview-help.html';
@@ -370,6 +370,13 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.longitude = 0.0;
             this.planimetry = { "start": { "lat": 37, "lon": 4 }, "end": { "lat": 47, "lon": 19 } };
             this.moltipliers = { "lat": (this.planimetry.end.lat - this.planimetry.start.lat) / this.terrainData.length, "lon": (this.planimetry.end.lon - this.planimetry.start.lon) / this.terrainData[0].length }
+            // Centre of the first window loaded: the scene's (0, 0). Later windows
+            // are laid around it, so nothing already in the scene has to move.
+            this.origin = null;
+        }
+
+        static hasCells(data) {
+            return data != null && data.terrainData.length > 0 && data.terrainData[0].length > 0;
         }
 
         isReady() {
@@ -381,80 +388,60 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return this.terrainData[indexIJ[0]][indexIJ[1]];
         }
 
-        trimTerrainByDistance(data, lat, lon, nm) {
-            return this.trimTerrainBySquare(data,
-                lat - nm / 1.86 / 45,
-                lon - nm / 1.86 / 45,
-                lat + nm / 1.86 / 45,
-                lon + nm / 1.86 / 45
-            );
-        }
-
-        trimTerrainBySquare(data, startLat, startLon, endLat, endLon) {
-
-            const indexLatLonStart = this.index(startLat, startLon, data);
-            const indexLatLonEnd = this.index(endLat, endLon, data);
-
-            var terrainTrimmedData = {
-                "terrainData":
-                    [],
-                "latitude": (endLat + startLat) / 2.0,
-                "longitude": (endLon + endLat) / 2.0,
-                "planimetry": { "start": { "lat": startLat, "lon": startLon }, "end": { "lat": endLat, "lon": endLon } }
-            }
-                ;
-
-            for (var i = indexLatLonStart[0]; i < indexLatLonEnd[0]; i++) {
-                var terrainLine = [];
-                for (var j = indexLatLonStart[1]; j < indexLatLonEnd[1]; j++) {
-                    terrainLine.push(data.terrainData[i][j]);
-                }
-                terrainTrimmedData.terrainData.push(terrainLine);
-            }
-            return terrainTrimmedData;
-        }
-
         index(lat, lon, data = this) {
             const dlat = lat - data.planimetry.start.lat;
             const dlon = lon - data.planimetry.start.lon;
             var mlat = parseInt(dlat / data.moltipliers.lat);
             var mlon = parseInt(dlon / data.moltipliers.lon);
             if (mlat < 0) mlat = 0;
-            if (mlat > data.terrainData.length) mlat = data.terrainData.length - 1;
+            if (mlat >= data.terrainData.length) mlat = data.terrainData.length - 1;
             if (mlon < 0) mlon = 0;
-            if (mlon > data.terrainData[mlat].length) mlon = data.terrainData[mlat].length - 1;
+            if (mlon >= data.terrainData[mlat].length) mlon = data.terrainData[mlat].length - 1;
             return [mlat, mlon];
         }
 
+        centre() {
+            return {
+                "lat": (this.planimetry.start.lat + this.planimetry.end.lat) / 2,
+                "lon": (this.planimetry.start.lon + this.planimetry.end.lon) / 2
+            };
+        }
 
+        // Scene position of a point, in cells east and south of the origin
         plan(lat, lon) {
-            const dlat = lat - this.planimetry.start.lat;
-            const dlon = lon - this.planimetry.start.lon;
-            const mlat = dlat / this.moltipliers.lat;
-            const mlon = dlon / this.moltipliers.lon;
-            const dilat = -mlat + this.terrainData.length / 2;
-            const dilon = mlon - this.terrainData[0].length / 2;
+            const origin = this.origin || this.centre();
+            const dilat = (origin.lat - lat) / this.moltipliers.lat;
+            const dilon = (lon - origin.lon) / this.moltipliers.lon;
 
             return [dilon, dilat];
         }
 
-        async terrainFetch(lat, lon, url) {
+        // Scene position of the window in memory, where its mesh goes
+        windowPlan() {
+            const centre = this.centre();
+            return this.plan(centre.lat, centre.lon);
+        }
+
+        load(data) {
+            this.terrainData = data.terrainData;
+            this.latitude = data.latitude;
+            this.longitude = data.longitude;
+            this.planimetry = data.planimetry;
+            this.moltipliers = data.moltipliers;
+            if (this.origin === null) {
+                this.origin = this.centre();
+            }
+        }
+
+        // The terrain window around (lat, lon), shared with the other screens
+        // and moved as the aircraft flies (globalLoadTerrainGrid, js/global.js)
+        async terrainFetch(lat, lon) {
             try {
-                const response = await fetch(url); // Fetch the data
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
+                const data = await globalLoadTerrainGrid(lat, lon);
+                if (!TerrainManager.hasCells(data)) {
+                    throw new Error(`No terrain at ${lat}, ${lon}`);
                 }
-
-
-                var data = await response.json(); // Parse the JSON
-                data.moltipliers = { "lat": (data.planimetry.end.lat - data.planimetry.start.lat) / data.terrainData.length, "lon": (data.planimetry.end.lon - data.planimetry.start.lon) / data.terrainData[0].length }
-                data = this.trimTerrainByDistance(data, lat, lon, 75);
-                data.moltipliers = { "lat": (data.planimetry.end.lat - data.planimetry.start.lat) / data.terrainData.length, "lon": (data.planimetry.end.lon - data.planimetry.start.lon) / data.terrainData[0].length }
-                this.terrainData = data.terrainData;
-                this.latitude = data.latitude;
-                this.longitude = data.longitude;
-                this.planimetry = data.planimetry;
-                this.moltipliers = data.moltipliers;
+                this.load(data);
                 return data;
 
 
@@ -468,6 +455,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     class ResourceManager {
         constructor() {
             this.airfields = [];
+            this.airfieldsInScene = new Set();  // "Lat,Lon" of each airfield imported
             this.terrain = new TerrainManager();
             this.items = [];
             this.itemIndexStartingTraffic = 0;
@@ -589,13 +577,16 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         importAirfields(airfields) {
             let itemsToAdd = [];
             airfields.forEach(element => {
+                const key = element.Lat + "," + element.Lon;
                 if (
+                    !this.airfieldsInScene.has(key) &&
                     element.Lat > this.terrain.planimetry.start.lat &&
                     element.Lat < this.terrain.planimetry.end.lat &&
                     element.Lon > this.terrain.planimetry.start.lon &&
                     element.Lon < this.terrain.planimetry.end.lon
 
                 ) {
+                    this.airfieldsInScene.add(key);
                     const aXY = this.terrain.plan(element.Lat, element.Lon);
                     var item = this.itemTemplate();
                     // TODO: fix Airfields database with real Elevations
@@ -657,6 +648,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 const data = await response.json(); // Parse the JSON
+                this.airfields = data;
                 const itemsToAdd = this.importAirfields(data);
                 this.items.push(...itemsToAdd);
             } catch (error) {
@@ -666,6 +658,14 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
             return this.items;
+        }
+
+        // After the terrain has moved: the airfields under the new window that
+        // are not in the scene yet. Those already there stay.
+        importNewAirfields() {
+            const itemsToAdd = this.importAirfields(this.airfields);
+            this.items.push(...itemsToAdd);
+            return itemsToAdd;
         }
 
 
@@ -1323,7 +1323,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
 
-        generateMaterial(terrainElevation, cellSize, elevationMapping, baseColor) {
+        generateMaterial(terrainElevation, cellSize, altitude, baseColor) {
 
             const ncols = terrainElevation[0].length
             const nrows = terrainElevation.length
@@ -1331,28 +1331,10 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             const size = ncols * nrows * 3;
             const colors = [];
 
-            var lastColor = [0, 0, 0]
             for (let i = 0, j = 0; i < size; i += 3, j++) {
-                lastColor = [0, 1, 0];
                 var elevation = grid[nrows - 1 - Math.floor(j / ncols)][j % ncols]; // Elevation as Z value
-                if (elevation <= 0) {
-                    lastColor = [0, 0, 1];
-                } else {
-                    if (elevation <= 50) {
-
-
-                    } else {
-                        for (var c = 0; c < elevationMapping.length; c++) {
-                            if (elevation > elevationMapping[c].maxElevation) {
-                                lastColor = elevationMapping[c].color;
-                                break;
-                            }
-                        }
-                    }
-                }
-
-                colors.push(...lastColor)
-
+                // Same rule as the map overlay (js/global.js)
+                colors.push(...globalTerrainColor(elevation, altitude))
             }
             const materialDynamic = new THREE.MeshPhongMaterial({
                 color: baseColor, // Base color
@@ -1364,7 +1346,21 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return [materialDynamic, colors];
         }
 
-        loadDEM(terrainElevation, setup) {
+        // The terrain moves with the aircraft: take the old window out of the
+        // scene and free its buffers before laying the new one.
+        disposeDEM() {
+            if (this.terrainBrown == null) return;
+            this.scene.remove(this.terrainBrown);
+            this.terrainBrown.traverse((o) => {
+                if (o.geometry) o.geometry.dispose();
+                if (o.material) o.material.dispose();
+            });
+            this.terrainBrown = null;
+        }
+
+        // plan: the window's scene position in cells (TerrainManager.windowPlan)
+        loadDEM(terrainElevation, setup, plan = [0, 0]) {
+            this.disposeDEM();
             const ncols = terrainElevation[0].length
             const nrows = terrainElevation.length
             const grid = terrainElevation;
@@ -1383,20 +1379,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             }
             geometryBrown.computeVertexNormals();
 
-            const materialBrownColors = this.generateMaterial(terrainElevation, setup.cellSize, [
-                {
-                    "maxElevation": setup.elevation - 0,
-                    "color": [1, 0, 0]
-                },
-                {
-                    "maxElevation": setup.elevation - 200,
-                    "color": [1, 1, 0]
-                },
-                {
-                    "maxElevation": setup.elevation - 500,
-                    "color": [0, 1, 0]
-                },
-            ], setup.terrainBaseColor);
+            const materialBrownColors = this.generateMaterial(terrainElevation, setup.cellSize, setup.elevation, setup.terrainBaseColor);
             // Add the color attribute to the geometry
             geometryBrown.setAttribute('color', new THREE.Float32BufferAttribute(materialBrownColors[1], 3));
 
@@ -1404,6 +1387,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
             this.terrainBrown = new THREE.Mesh(geometryBrown, materialBrownColors[0]);
             this.terrainBrown.rotation.x = -Math.PI / 2; // Rotate to lay flat
+            this.terrainBrown.position.set(plan[0] * setup.cellSize, 0, plan[1] * setup.cellSize);
             this.scene.add(this.terrainBrown);
             // Add Wireframe to improve readability
             var geo = new THREE.EdgesGeometry(this.terrainBrown.geometry); // or WireframeGeometry
@@ -1540,6 +1524,25 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     }
 
+    // The shared terrain window moves once the aircraft is half way to its edge
+    // (globalLoadTerrainGrid, js/global.js). The scene keeps its origin, so only
+    // the terrain mesh, the airfields the new window brings and the guidance
+    // floors change; the aircraft, traffic and markers stay where they are.
+    var terrainFollowed = null;  // the last window handed to the scene
+    function followTerrain(situation) {
+        globalLoadTerrainGrid(situation.GPSLatitude, situation.GPSLongitude).then((data) => {
+            if (data === terrainFollowed) return;
+            terrainFollowed = data;
+            if (!TerrainManager.hasCells(data)) return;  // off the grid: keep the terrain we have
+            resources.terrain.load(data);
+            rendering.loadDEM(data.terrainData, resources.setup, resources.terrain.windowPlan());
+            resources.importNewAirfields();
+            rendering.generateItems(resources.items, resources.setup);
+            rendering.buildGuidanceTunnel(resources.route, resources.setup, resources.terrain, resources.setup.elevation);
+            requestAnimationFrame(animate);
+        }).catch((error) => console.error('Error moving the terrain:', error));
+    }
+
     function loadSituationInSynthView(situation) {
         if (situation.GPSLatitude == 0 || situation.GPSLongitude == 0) {
             console.log("GPS Not ready");
@@ -1547,6 +1550,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         //"GPSLatitude": 43.0, "GPSLongitude": 12.0
         if (resources.terrain.isReady()) {
+            followTerrain(situation);
             requestAnimationFrame(animate);
         }
         else {
@@ -1557,13 +1561,14 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 setup.elevation = situation.GPSAltitudeMSL * 0.3048
 
 
-                resources.terrain.terrainFetch(situation.GPSLatitude, situation.GPSLongitude, setup.elevationUrl).then((terrainElevations) => {
+                resources.terrain.terrainFetch(situation.GPSLatitude, situation.GPSLongitude).then((terrainElevations) => {
+                    terrainFollowed = terrainElevations;
                     // Automatic zoom based on the Terrain detail
                     // Example of empiric calculion is:
                     // DEM for 100 NM => 240 cols/rows considering 100 meter DB
                     // Heuristic formula: 10*feet
                     setup.cellSize = parseInt((240.0 / terrainElevations.terrainData.length) * 328.084);
-                    rendering.loadDEM(terrainElevations.terrainData, setup);
+                    rendering.loadDEM(terrainElevations.terrainData, setup, resources.terrain.windowPlan());
 
                     setup.items = remote.updateItemsBySituation(setup.items, situation, resources);
 
@@ -1644,20 +1649,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         if (resources.setup.elevation > 150 + $scope.situation.GPSAltitudeMSL * 0.3048 || resources.setup.elevation < -150 + $scope.situation.GPSAltitudeMSL * 0.3048) {
             resources.setup.elevation = $scope.situation.GPSAltitudeMSL * 0.3048
-            const material = rendering.generateMaterial(resources.terrain.terrainData, resources.setup.cellSize, [
-                {
-                    "maxElevation": resources.setup.elevation - 0,
-                    "color": [1, 0, 0]
-                },
-                {
-                    "maxElevation": resources.setup.elevation - 200,
-                    "color": [1, 1, 0]
-                },
-                {
-                    "maxElevation": resources.setup.elevation - 500,
-                    "color": [0, 1, 0]
-                },
-            ], resources.setup.terrainBaseColor);
+            const material = rendering.generateMaterial(resources.terrain.terrainData, resources.setup.cellSize, resources.setup.elevation, resources.setup.terrainBaseColor);
 
             if (rendering.terrainBrown != null) {
                 rendering.terrainBrown.geometry.setAttribute('color', new THREE.Float32BufferAttribute(material[1], 3));
