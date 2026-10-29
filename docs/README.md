@@ -29,6 +29,9 @@ hardware integration). User-facing how-tos live in the
 - **[http-api.md](http-api.md)** — the full HTTP + WebSocket JSON API.
 - **[settings-reference.md](settings-reference.md)** — every `stratux.conf` / `/getSettings`
   field.
+- **[terrain-elevations.md](terrain-elevations.md)** — the `elevations.json` terrain grid
+  behind synthetic vision: format, grid geometry, how the HMI reads it, known gaps, and a
+  proposed water layer.
 
 ## Hardware
 
