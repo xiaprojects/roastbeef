@@ -65,7 +65,7 @@
  *               Outside that grid there is no variation and the compass is
  *               aligned to the true track instead, absorbing the declination.
  *
- * Uses the Three.js already loaded by index.html (/synthview/three.min.js and
+ * Uses the Three.js already loaded by index.html (synthview/three.min.js and
  * OrbitControls.js), so it works with no network.
  */
 

@@ -76,18 +76,11 @@
     <div id="bounds"></div>
   </div>
 
-  <script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-  }
-}
-</script>
+  <!-- Same local Three.js build as the synthetic view, so the tool works with no network -->
+  <script src="../synthview/three.min.js"></script>
+  <script src="../synthview/OrbitControls.js"></script>
 
-  <script type="module">
-    import * as THREE from 'three';
-    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  <script>
     var x = 0;
     var y = 0;
     var z = 0;
@@ -136,7 +129,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       container.appendChild(renderer.domElement);
 
-      controls = new OrbitControls(camera, renderer.domElement);
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
       controls.target.set(0, 0, 0);
 
       scene.add(new THREE.AxesHelper(10));
