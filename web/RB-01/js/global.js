@@ -294,6 +294,119 @@ function globalPitchChevrons(pitch, shown) {
   return "";
 }
 
+// Terrain colour against the aircraft's altitude, both in metres MSL. Shared
+// by the synthetic view (3D) and the map overlay (2D) so the two always agree.
+// Red: the terrain is above the aircraft. Yellow: it is less than
+// TERRAIN_CAUTION_METERS below. Green: clear. Blue: at or below sea level,
+// whatever the altitude. Terrain up to 50 m is always green.
+// docs/terrain-elevations.md describes the grid these elevations come from.
+const TERRAIN_CAUTION_METERS = 200;
+const TERRAIN_COLOR_WATER = [0, 0, 1];
+const TERRAIN_COLOR_CLEAR = [0, 1, 0];
+const TERRAIN_COLOR_CAUTION = [1, 1, 0];
+const TERRAIN_COLOR_WARNING = [1, 0, 0];
+
+function globalTerrainColor(elevation, altitude) {
+  if (elevation <= 0) {
+    return TERRAIN_COLOR_WATER;
+  }
+  if (elevation > 50) {
+    if (elevation > altitude) {
+      return TERRAIN_COLOR_WARNING;
+    }
+    if (elevation > altitude - TERRAIN_CAUTION_METERS) {
+      return TERRAIN_COLOR_CAUTION;
+    }
+  }
+  return TERRAIN_COLOR_CLEAR;
+}
+
+// The terrain in memory is a window around the aircraft, cut from the elevation
+// grid (elevationUrl in /settings/synthview.json, docs/terrain-elevations.md):
+// TERRAIN_WINDOW_DEGREES each side, the area the synthetic view has always drawn.
+// The synthetic view and the map share it, so only the first screen that needs
+// a window downloads the grid. Once the aircraft is TERRAIN_MOVE_FRACTION of the
+// way from the window's centre to its edge, the grid is downloaded again and a
+// new window is cut around the aircraft; the rest of the grid is not kept.
+var URL_TERRAIN_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/synthview.json";
+const TERRAIN_WINDOW_DEGREES = 75 / 1.86 / 45;  // 75 NM, as the synthetic view converts it
+const TERRAIN_MOVE_FRACTION = 0.5;
+const TERRAIN_RETRY_MS = 30000;  // after a failed download
+
+// data is the window, null until the first one is cut. Screens must not modify it.
+//   terrainData   elevations in metres, row 0 the south edge; no rows off the grid
+//   planimetry    {start, end}: the south-west corner of the first cell and the
+//                 north-east corner of the last, on the grid's own cell edges
+//   moltipliers   {lat, lon}: degrees per row and per column, the grid's step
+//   latitude, longitude   the position the window was cut around
+var globalTerrainGrid = { data: null, loading: null, failedAt: 0 };
+
+// Promise of the terrain window for an aircraft at (lat, lon): the one in memory
+// while the aircraft is within TERRAIN_MOVE_FRACTION of its centre, otherwise a
+// new one, downloaded and cut around (lat, lon). Calls made while a download is
+// under way share it. A failed download rejects; for TERRAIN_RETRY_MS after that,
+// calls get the window in memory, or null, without downloading.
+function globalLoadTerrainGrid(lat, lon) {
+  const terrain = globalTerrainGrid;
+  if (terrain.loading) {
+    return terrain.loading;
+  }
+  const reach = TERRAIN_MOVE_FRACTION * TERRAIN_WINDOW_DEGREES;
+  const near = terrain.data
+    && Math.abs(lat - terrain.data.latitude) <= reach
+    && Math.abs(lon - terrain.data.longitude) <= reach;
+  if (near || Date.now() - terrain.failedAt < TERRAIN_RETRY_MS) {
+    return Promise.resolve(terrain.data);
+  }
+  terrain.loading = fetch(URL_TERRAIN_SETUP)
+    .then((response) => response.json())
+    .then((setup) => fetch(setup.elevationUrl))
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((grid) => {
+      terrain.data = globalTerrainCut(grid, lat, lon);
+      return terrain.data;
+    })
+    .finally(() => {
+      terrain.loading = null;
+    });
+  terrain.loading.catch(() => {
+    terrain.failedAt = Date.now();
+  });
+  return terrain.loading;
+}
+
+// The cells of `grid` within TERRAIN_WINDOW_DEGREES of (lat, lon). Whole cells
+// only, so every window keeps the grid's step and lines up with the others.
+// Smaller at the grid's edges, and empty off it.
+function globalTerrainCut(grid, lat, lon) {
+  const rows = grid.terrainData.length;
+  const cols = grid.terrainData[0].length;
+  const start = grid.planimetry.start;
+  const stepLat = (grid.planimetry.end.lat - start.lat) / rows;
+  const stepLon = (grid.planimetry.end.lon - start.lon) / cols;
+  const cell = (degrees, first, step, count) =>
+    Math.min(Math.max(Math.floor((degrees - first) / step), 0), count);
+  const i0 = cell(lat - TERRAIN_WINDOW_DEGREES, start.lat, stepLat, rows);
+  const i1 = cell(lat + TERRAIN_WINDOW_DEGREES, start.lat, stepLat, rows);
+  const j0 = cell(lon - TERRAIN_WINDOW_DEGREES, start.lon, stepLon, cols);
+  const j1 = cell(lon + TERRAIN_WINDOW_DEGREES, start.lon, stepLon, cols);
+  return {
+    terrainData: grid.terrainData.slice(i0, i1).map((row) => row.slice(j0, j1)),
+    planimetry: {
+      start: { lat: start.lat + i0 * stepLat, lon: start.lon + j0 * stepLon },
+      end: { lat: start.lat + i1 * stepLat, lon: start.lon + j1 * stepLon }
+    },
+    moltipliers: { lat: stepLat, lon: stepLon },
+    latitude: lat,
+    longitude: lon
+  };
+}
+
 function localDisplayGetFlag(flagName) {
   if (window.localStorage.getItem(flagName) === undefined || window.localStorage.getItem(flagName) === false || window.localStorage.getItem(flagName) == null) {
   }

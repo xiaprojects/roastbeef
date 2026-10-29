@@ -61,6 +61,105 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 		})
 	});
 
+	// Terrain overlay: the synthetic view's terrain window, coloured against our
+	// GPS altitude by the same rule (globalTerrainColor): green clear, yellow
+	// within the caution band, red above us, blue water. Outside the window, or
+	// before the first fix, nothing is drawn: no data is not clear terrain.
+	const TERRAIN_REDRAW_METERS = 15;
+	const TERRAIN_OPACITY = 0.4;
+	$scope.terrainGrid = null;	// the window, globalTerrainGrid.data (js/global.js)
+	$scope.terrainAltitude = null;	// metres MSL the overlay is coloured for
+	let terrainCanvas = document.createElement('canvas');
+
+	function drawTerrain(extent, resolution, pixelRatio, size) {
+		const width = Math.round(size[0]);
+		const height = Math.round(size[1]);
+		terrainCanvas.width = width;	// also clears it
+		terrainCanvas.height = height;
+		const grid = $scope.terrainGrid;
+		const altitude = $scope.terrainAltitude;
+		if (!grid || altitude === null || !width || !height)
+			return terrainCanvas;
+
+		// Web Mercator is separable: a pixel column is one longitude and a pixel
+		// row one latitude, so find the grid column and row once for each.
+		const start = grid.planimetry.start;
+		const columns = new Int32Array(width);
+		for (let x = 0; x < width; x++) {
+			const lon = ol.proj.toLonLat([extent[0] + (x + 0.5) * (extent[2] - extent[0]) / width, 0])[0];
+			columns[x] = Math.floor((lon - start.lon) / grid.moltipliers.lon);
+		}
+		const context = terrainCanvas.getContext('2d');
+		const image = context.createImageData(width, height);
+		const pixels = image.data;
+		for (let y = 0; y < height; y++) {
+			const lat = ol.proj.toLonLat([0, extent[3] - (y + 0.5) * (extent[3] - extent[1]) / height])[1];
+			const i = Math.floor((lat - start.lat) / grid.moltipliers.lat);
+			if (i < 0 || i >= grid.terrainData.length)
+				continue;
+			const row = grid.terrainData[i];
+			for (let x = 0, p = y * width * 4; x < width; x++, p += 4) {
+				const j = columns[x];
+				if (j < 0 || j >= row.length)
+					continue;
+				const color = globalTerrainColor(row[j], altitude);
+				pixels[p] = color[0] * 255;
+				pixels[p + 1] = color[1] * 255;
+				pixels[p + 2] = color[2] * 255;
+				pixels[p + 3] = 255;
+			}
+		}
+		context.putImageData(image, 0, 0);
+		return terrainCanvas;
+	}
+
+	let terrainSource = new ol.source.ImageCanvas({
+		canvasFunction: drawTerrain,
+		ratio: 1,
+		imageSmoothing: false
+	});
+	let terrainLayer = new ol.layer.Image({
+		title: 'Terrain',
+		type: 'overlay',
+		className: 'map-terrain',
+		opacity: TERRAIN_OPACITY,
+		// The saved choice is restored with the other layers once the tilesets
+		// are in; read it now, so an overlay left off downloads nothing.
+		visible: localStorage.getItem('stratux.map.layers.Terrain.visible') !== 'false',
+		source: terrainSource
+	});
+
+	// The overlay draws the terrain window the synthetic view shares
+	// (globalLoadTerrainGrid, js/global.js). Asking for it on every fix is what
+	// moves the window once the aircraft is half way to its edge. While the
+	// overlay is off the map asks for nothing, so it downloads nothing.
+	let terrainPosition = null;	// [lat, lon] of the last fix
+	function followTerrain() {
+		if (!terrainLayer.getVisible() || terrainPosition === null)
+			return;
+		globalLoadTerrainGrid(terrainPosition[0], terrainPosition[1])
+			.then((grid) => {
+				if (grid === $scope.terrainGrid)
+					return;
+				$scope.terrainGrid = grid;
+				terrainSource.changed();
+			})
+			.catch((error) => console.warn('Map terrain overlay unavailable:', error));
+	}
+	terrainLayer.on('change:visible', followTerrain);
+
+	function updateTerrainAltitude(msg) {
+		if (msg.GPSFixQuality <= 0)
+			return;
+		terrainPosition = [msg.GPSLatitude, msg.GPSLongitude];
+		followTerrain();
+		const altitude = msg.GPSAltitudeMSL * 0.3048;	// feet, as synthview.js reads it
+		if ($scope.terrainAltitude !== null && Math.abs(altitude - $scope.terrainAltitude) < TERRAIN_REDRAW_METERS)
+			return;
+		$scope.terrainAltitude = altitude;
+		terrainSource.changed();
+	}
+
 
 	// Dynamic MBTiles layers
 	$http.get(URL_GET_TILESETS).then(function (response) {
@@ -159,6 +258,7 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 		target: 'map_display',
 		layers: [
 			osm,
+			terrainLayer,	// above the base maps, below the aeronautical overlays
 			openaip
 		],
 		view: new ol.View({
@@ -179,31 +279,31 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 		let html = ``;
 		let color = craftService.getTransportColor(aircraft);
 		if (aircraft.TargetType === TARGET_TYPE_AIS)
-			return ['/img/actype/vessel.svg', true];
+			return ['img/actype/vessel.svg', true];
 
 		switch (aircraft.Emitter_category) {
 			case 1:
 			case 6:
-				return ['/img/actype/light.svg', true];
+				return ['img/actype/light.svg', true];
 			case 2:
 			case 3:
 			case 4:
 			case 5:
-				return ['/img/actype/heavy.svg', true];
+				return ['img/actype/heavy.svg', true];
 			case 7:
-				return ['/img/actype/helicopter.svg', true];
+				return ['img/actype/helicopter.svg', true];
 			case 9:
-				return ['/img/actype/glider.svg', true];
+				return ['img/actype/glider.svg', true];
 			case 10:
-				return ['/img/actype/lighter-than-air.svg', false];
+				return ['img/actype/lighter-than-air.svg', false];
 			case 11:
 			case 12:
-				return ['/img/actype/skydiver.svg', false];
+				return ['img/actype/skydiver.svg', false];
 			default:
-				return ['/img/actype/undef.svg', true];
+				return ['img/actype/undef.svg', true];
 		}
 
-		return ['/img/actype/undef.svg', true];
+		return ['img/actype/undef.svg', true];
 	}
 
 	// Converts from degrees to radians.
@@ -520,6 +620,7 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 			return; // we are getting called once after clicking away from the status page
 		}
 		updateMyLocation(event.detail);
+		updateTerrainAltitude(event.detail);
 	}
 
 	addEventListener("SituationUpdated", situationUpdated);
