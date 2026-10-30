@@ -16,7 +16,6 @@ all:
 	cp -r resources $(www)/
 	cp -r settings $(www)/
 	cp -r sounds $(www)/
-	cp -r synthview $(www)/
 	cp -r css $(www)/
 	cp -r js $(www)/
 	cp -r img $(www)/
