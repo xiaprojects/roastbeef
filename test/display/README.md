@@ -81,6 +81,7 @@ not hand-typed placeholders. Constructor arguments (`settings=`, `status=`,
 | `test_layout.py` | Every screen on all five panel geometries, checking nothing overflows |
 | `test_settings.py` | The settings addon: every tab saves, and every body it posts is a key `/setSettings` knows with the type the daemon asserts |
 | `test_synthview.py` | Terrain, traffic and the autopilot guidance tunnel |
+| `test_map_terrain.py` | The map's terrain overlay flown over Europe (Alps, Genoa, Po plain, the grid's north edge): ~2000 probes per view read back from the layer canvas and checked against the grid at the aircraft's altitude, the Terrain box in the layer switcher tapped off and on (and remembered on the next visit), the 3D mesh holding the same window and coloured by the same rule, the shared window around the aircraft (only its cells in memory) moved on both screens once the aircraft is past half way to its edge, and the downloads counted (none at all for the map with the overlay off) |
 | `test_guidance.py` | The guidance tunnel flown down a **real recorded path**: the plan is derived from the track, so the aircraft must fly inside its own tunnel |
 | `flightpath.py` | A committed JSON track: replay it through the sockets, and derive a flight plan from it |
 | `fixtures/*.path.json` | Ground tracks cut from a recording with `flightlog.py path` - small enough to commit, so a real flight is available on a clean clone |

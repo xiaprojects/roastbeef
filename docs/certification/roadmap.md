@@ -451,7 +451,7 @@ doubles the effort.
       suite runs locally only (`test/display/run.py`). `staticcheck`/`golangci-lint` still to add.
 - [x] Build id = commit SHA with `-dirty` suffix, shown on the RB-01 OTA screen and in
       `/getStatus`.
-- [x] `docs/certification/provenance.md` + `scripts/provenance.sh` — 40 artifacts hashed and
+- [x] `docs/certification/provenance.md` + `scripts/provenance.sh` — 58 artifacts hashed and
       verified by `make check`.
 - [x] `.github/ISSUE_TEMPLATE/problem-report.yml` — version found/fixed, function, severity,
       safety-related, root cause.
