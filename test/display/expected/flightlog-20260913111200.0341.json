@@ -1,0 +1,1001 @@
+{
+ "log": "flightlog-20260913111200.0341.sqlite",
+ "duration": 2949.9,
+ "started": "2026-09-13T10:12:00Z",
+ "checkpoints": [
+  {
+   "name": "takeoff",
+   "t": 270.2,
+   "why": "10 s after ground speed first exceeded 40 kt",
+   "situation": {
+    "GPSGroundSpeed": 84.0090026855,
+    "GPSAltitudeMSL": 779.5275878906,
+    "GPSTrueCourse": 122.4700012207,
+    "AHRSGyroHeading": 121.7453125294,
+    "AHRSRoll": 1.831564067,
+    "AHRSPitch": 12.9077170044,
+    "GPSVerticalSpeed": 0.0,
+    "BaroPressureAltitude": 538.0777587891,
+    "GPSLatitude": 43.1023139954,
+    "GPSLongitude": 12.2545499802,
+    "GPSFixQuality": 1
+   },
+   "ems": {
+    "enginerpm": 2113.0,
+    "rail50": 4.9991250038,
+    "oilprobe": 0.1773593724,
+    "oiltemperature": 40.6640625,
+    "cht1": 139.265625,
+    "cht2": 138.5,
+    "cht4": 143.3125,
+    "egt1": 635.6550292969,
+    "egt2": 620.0775146484,
+    "egt3": 605.4299926758,
+    "outsidetemperature": 34.1121101379,
+    "eth0_rx_bytes": 81783.0,
+    "pmic_3V3_SYS_V": 3.3063220978,
+    "pmic_EXT5V_V": 5.0008797646,
+    "eth0_tx_bytes": 2310733.0,
+    "gpu_temp_c": 54.2999992371,
+    "pmic_0V8_AON_A": 0.0037851001,
+    "pmic_VDD_CORE_A": 1.6609799862,
+    "cpu_load_15m": 0.5600000024,
+    "pmic_0V8_SW_A": 0.415746212,
+    "pmic_1V1_SYS_V": 1.099998951,
+    "pmic_DDR_VDD2_A": 0.0605076589,
+    "pmic_DDR_VDDQ_V": 0.6058601737,
+    "pmic_HDMI_A": 0.0051282002,
+    "pmic_VDD_CORE_V": 0.7201701999,
+    "uptime_seconds": 307.0,
+    "cpu_load_5m": 1.1699999571,
+    "pmic_3V3_ADC_A": 0.00030525,
+    "cpu_temp_c": 52.9000015259,
+    "free_ram_kb": 2143792.0,
+    "pmic_0V8_SW_V": 0.7981678247,
+    "pmic_DDR_VDDQ_A": 0.0,
+    "cpu_load_1m": 1.4700000286,
+    "pmic_1V8_SYS_A": 0.2576454878,
+    "pmic_3V3_SYS_A": 0.1990897059,
+    "pmic_DDR_VDD2_V": 1.105126977,
+    "pmic_HDMI_V": 4.9981999397,
+    "pmic_3V7_WL_SW_V": 3.7007040977,
+    "pmic_0V8_AON_V": 0.7999991775,
+    "pmic_1V1_SYS_A": 0.2937549055,
+    "pmic_1V8_SYS_V": 1.8168480396,
+    "pmic_3V3_ADC_V": 3.3104360104,
+    "input_voltage_v": 0.9144999981,
+    "pmic_3V3_DAC_V": 3.3076889515,
+    "pmic_3V7_WL_SW_A": 0.0634354502,
+    "storage_avail_gb": 15899.0,
+    "pmic_3V3_DAC_A": 0.00018315,
+    "pmic_BATT_V": 0.0051282002,
+    "cpu_fan": 1.0
+   },
+   "bridge": {
+    "qnh": 1022.25,
+    "vorfreq": 109.4000015259,
+    "vorstatus": 1.0
+   },
+   "traffic": {
+    "must": [
+     {
+      "Icao_addr": 9004578,
+      "Tail": "UAE102",
+      "Age": 0.25
+     },
+     {
+      "Icao_addr": 4660995,
+      "Tail": "WMT6Z",
+      "Age": 0.3
+     },
+     {
+      "Icao_addr": 4456951,
+      "Tail": "EJU96KT",
+      "Age": 0.3
+     },
+     {
+      "Icao_addr": 5024017,
+      "Tail": "RYR1512",
+      "Age": 0.47
+     },
+     {
+      "Icao_addr": 4921892,
+      "Tail": "EZS32QW",
+      "Age": 0.74
+     },
+     {
+      "Icao_addr": 4901542,
+      "Tail": "SAS4713",
+      "Age": 0.8
+     },
+     {
+      "Icao_addr": 5055114,
+      "Tail": "RYR5NB",
+      "Age": 0.9
+     },
+     {
+      "Icao_addr": 11280815,
+      "Tail": "AAL780",
+      "Age": 3.03
+     },
+     {
+      "Icao_addr": 4660988,
+      "Tail": "WMT6QH",
+      "Age": 3.8
+     },
+     {
+      "Icao_addr": 4756000,
+      "Tail": "ENT4091",
+      "Age": 3.85
+     },
+     {
+      "Icao_addr": 5055766,
+      "Tail": "SWU1909",
+      "Age": 6.42
+     },
+     {
+      "Icao_addr": 3789493,
+      "Tail": "AFR934",
+      "Age": 8.77
+     },
+     {
+      "Icao_addr": 3957933,
+      "Tail": "DLH8PK",
+      "Age": 17.62
+     }
+    ],
+    "may": [
+     {
+      "Icao_addr": 9004578,
+      "Tail": "UAE102",
+      "Age": 0.25
+     },
+     {
+      "Icao_addr": 4660995,
+      "Tail": "WMT6Z",
+      "Age": 0.3
+     },
+     {
+      "Icao_addr": 4456951,
+      "Tail": "EJU96KT",
+      "Age": 0.3
+     },
+     {
+      "Icao_addr": 5024017,
+      "Tail": "RYR1512",
+      "Age": 0.47
+     },
+     {
+      "Icao_addr": 4921892,
+      "Tail": "EZS32QW",
+      "Age": 0.74
+     },
+     {
+      "Icao_addr": 4901542,
+      "Tail": "SAS4713",
+      "Age": 0.8
+     },
+     {
+      "Icao_addr": 5055114,
+      "Tail": "RYR5NB",
+      "Age": 0.9
+     },
+     {
+      "Icao_addr": 11280815,
+      "Tail": "AAL780",
+      "Age": 3.03
+     },
+     {
+      "Icao_addr": 4660988,
+      "Tail": "WMT6QH",
+      "Age": 3.8
+     },
+     {
+      "Icao_addr": 4756000,
+      "Tail": "ENT4091",
+      "Age": 3.85
+     },
+     {
+      "Icao_addr": 5055766,
+      "Tail": "SWU1909",
+      "Age": 6.42
+     },
+     {
+      "Icao_addr": 3789493,
+      "Tail": "AFR934",
+      "Age": 8.77
+     },
+     {
+      "Icao_addr": 3957933,
+      "Tail": "DLH8PK",
+      "Age": 17.62
+     }
+    ]
+   }
+  },
+  {
+   "name": "climb",
+   "t": 533.2,
+   "why": "60% of the way from 769 ft to the top of climb",
+   "situation": {
+    "GPSGroundSpeed": 112.4929962158,
+    "GPSAltitudeMSL": 2602.3623046875,
+    "GPSTrueCourse": 351.8699951172,
+    "AHRSGyroHeading": 353.399942144,
+    "AHRSRoll": -2.43182266,
+    "AHRSPitch": 3.7946686945,
+    "GPSVerticalSpeed": 0.0,
+    "BaroPressureAltitude": 2334.7749023438,
+    "GPSLatitude": 43.2190742493,
+    "GPSLongitude": 12.2703914642,
+    "GPSFixQuality": 2
+   },
+   "ems": {
+    "enginerpm": 1849.0,
+    "rail50": 5.0107498169,
+    "oilprobe": 0.1231406257,
+    "oiltemperature": 68.9375,
+    "cht1": 149.1796875,
+    "cht2": 144.6796875,
+    "cht4": 142.4921875,
+    "egt1": 644.4899902344,
+    "egt2": 637.9799804688,
+    "egt3": 637.9799804688,
+    "outsidetemperature": 21.4771881104,
+    "eth0_rx_bytes": 919845.0,
+    "pmic_3V3_SYS_V": 3.3044650555,
+    "pmic_EXT5V_V": 5.0062398911,
+    "eth0_tx_bytes": 38377080.0,
+    "gpu_temp_c": 47.2000007629,
+    "pmic_0V8_AON_A": 0.0038461499,
+    "pmic_VDD_CORE_A": 0.9555100203,
+    "cpu_load_15m": 0.8299999833,
+    "pmic_0V8_SW_A": 0.3542625904,
+    "pmic_1V1_SYS_V": 1.1003650427,
+    "pmic_DDR_VDD2_A": 0.0146389501,
+    "pmic_DDR_VDDQ_V": 0.6018308997,
+    "pmic_HDMI_A": 0.0054945,
+    "pmic_VDD_CORE_V": 0.7212446928,
+    "uptime_seconds": 570.0,
+    "cpu_load_5m": 1.4400000572,
+    "pmic_3V3_ADC_A": 0.00018315,
+    "cpu_temp_c": 46.8499984741,
+    "free_ram_kb": 1739680.0,
+    "pmic_0V8_SW_V": 0.7967025042,
+    "pmic_DDR_VDDQ_A": 0.0,
+    "cpu_load_1m": 1.6799999475,
+    "pmic_1V8_SYS_A": 0.2469103038,
+    "pmic_3V3_SYS_A": 0.1854266971,
+    "pmic_DDR_VDD2_V": 1.103662014,
+    "pmic_HDMI_V": 5.0008797646,
+    "pmic_3V7_WL_SW_V": 3.6997759342,
+    "pmic_0V8_AON_V": 0.7999991775,
+    "pmic_1V1_SYS_A": 0.2068971992,
+    "pmic_1V8_SYS_V": 1.8002419472,
+    "pmic_3V3_ADC_V": 3.3104360104,
+    "input_voltage_v": 0.7200000286,
+    "pmic_3V3_DAC_V": 3.3113520145,
+    "pmic_3V7_WL_SW_A": 0.0634354502,
+    "storage_avail_gb": 15899.0,
+    "pmic_3V3_DAC_A": 6.105e-05,
+    "pmic_BATT_V": 0.0051282002,
+    "cpu_fan": 1.0
+   },
+   "bridge": {
+    "qnh": 1022.25,
+    "vorfreq": 109.4000015259,
+    "vorstatus": 1.0
+   },
+   "traffic": {
+    "must": [
+     {
+      "Icao_addr": 4000919,
+      "Tail": "DEDAD",
+      "Age": 0.08
+     },
+     {
+      "Icao_addr": 4834464,
+      "Tail": "OKFUG97",
+      "Age": 0.24
+     },
+     {
+      "Icao_addr": 10836522,
+      "Tail": "N444HB",
+      "Age": 0.46
+     },
+     {
+      "Icao_addr": 3441547,
+      "Tail": "VOE1336",
+      "Age": 0.84
+     },
+     {
+      "Icao_addr": 12614035,
+      "Tail": "TSC691",
+      "Age": 1.83
+     },
+     {
+      "Icao_addr": 5055114,
+      "Tail": "RYR5NB",
+      "Age": 2.81
+     },
+     {
+      "Icao_addr": 5024017,
+      "Tail": "RYR1512",
+      "Age": 10.78
+     },
+     {
+      "Icao_addr": 4456951,
+      "Tail": "EJU96KT",
+      "Age": 13.84
+     },
+     {
+      "Icao_addr": 4901542,
+      "Tail": "SAS4713",
+      "Age": 24.49
+     }
+    ],
+    "may": [
+     {
+      "Icao_addr": 4000919,
+      "Tail": "DEDAD",
+      "Age": 0.08
+     },
+     {
+      "Icao_addr": 4834464,
+      "Tail": "OKFUG97",
+      "Age": 0.24
+     },
+     {
+      "Icao_addr": 10836522,
+      "Tail": "N444HB",
+      "Age": 0.46
+     },
+     {
+      "Icao_addr": 3441547,
+      "Tail": "VOE1336",
+      "Age": 0.84
+     },
+     {
+      "Icao_addr": 12614035,
+      "Tail": "TSC691",
+      "Age": 1.83
+     },
+     {
+      "Icao_addr": 5055114,
+      "Tail": "RYR5NB",
+      "Age": 2.81
+     },
+     {
+      "Icao_addr": 5024017,
+      "Tail": "RYR1512",
+      "Age": 10.78
+     },
+     {
+      "Icao_addr": 4456951,
+      "Tail": "EJU96KT",
+      "Age": 13.84
+     },
+     {
+      "Icao_addr": 4901542,
+      "Tail": "SAS4713",
+      "Age": 24.49
+     }
+    ]
+   }
+  },
+  {
+   "name": "turn",
+   "t": 799.1,
+   "why": "steepest sustained bank (5 s median of |roll|: 64 deg)",
+   "situation": {
+    "GPSGroundSpeed": 93.1689987183,
+    "GPSAltitudeMSL": 1736.8768310547,
+    "GPSTrueCourse": 346.7200012207,
+    "AHRSGyroHeading": 336.939862294,
+    "AHRSRoll": -63.6156135828,
+    "AHRSPitch": 16.1113798449,
+    "GPSVerticalSpeed": 0.0,
+    "BaroPressureAltitude": 1450.9816894531,
+    "GPSLatitude": 43.3555030823,
+    "GPSLongitude": 12.2204704285,
+    "GPSFixQuality": 2
+   },
+   "ems": {
+    "enginerpm": 1418.0,
+    "rail50": 5.0199375153,
+    "oilprobe": 0.1099218726,
+    "oiltemperature": 75.8515625,
+    "cht1": 123.125,
+    "cht2": 116.890625,
+    "cht4": 116.265625,
+    "egt1": 591.7125244141,
+    "egt2": 581.25,
+    "egt3": 558.6975097656,
+    "outsidetemperature": 21.7678127289,
+    "eth0_rx_bytes": 1822519.0,
+    "pmic_3V3_SYS_V": 3.3044650555,
+    "pmic_EXT5V_V": 5.0116000175,
+    "eth0_tx_bytes": 44070484.0,
+    "gpu_temp_c": 47.2000007629,
+    "pmic_0V8_AON_A": 0.0038461499,
+    "pmic_VDD_CORE_A": 3.5452098846,
+    "cpu_load_15m": 1.5700000525,
+    "pmic_0V8_SW_A": 0.3728052974,
+    "pmic_1V1_SYS_V": 1.103662014,
+    "pmic_DDR_VDD2_A": 0.0497724302,
+    "pmic_DDR_VDDQ_V": 0.6040287018,
+    "pmic_HDMI_A": 0.0067154998,
+    "pmic_VDD_CORE_V": 0.7207074165,
+    "uptime_seconds": 835.0,
+    "cpu_load_5m": 2.75,
+    "pmic_3V3_ADC_A": 0.00030525,
+    "cpu_temp_c": 46.2999992371,
+    "free_ram_kb": 1199600.0,
+    "pmic_0V8_SW_V": 0.7992665768,
+    "pmic_DDR_VDDQ_A": 0.012255,
+    "cpu_load_1m": 3.1600000858,
+    "pmic_1V8_SYS_A": 0.2527658939,
+    "pmic_3V3_SYS_A": 0.1922581941,
+    "pmic_DDR_VDD2_V": 1.1014640331,
+    "pmic_HDMI_V": 5.0209798813,
+    "pmic_3V7_WL_SW_V": 3.7007040977,
+    "pmic_0V8_AON_V": 0.7999991775,
+    "pmic_1V1_SYS_A": 0.2068971992,
+    "pmic_1V8_SYS_V": 1.7982889414,
+    "pmic_3V3_ADC_V": 3.3122680187,
+    "input_voltage_v": 0.7200000286,
+    "pmic_3V3_DAC_V": 3.3076889515,
+    "pmic_3V7_WL_SW_A": 0.0644113794,
+    "storage_avail_gb": 15896.0,
+    "pmic_3V3_DAC_A": 0.00018315,
+    "pmic_BATT_V": 0.0051282002,
+    "cpu_fan": 1.0,
+    "clouduploaded": 17.0
+   },
+   "bridge": {
+    "qnh": 1021.25,
+    "vorfreq": 109.4000015259,
+    "vorstatus": 1.0
+   },
+   "traffic": {
+    "must": [
+     {
+      "Icao_addr": 12614035,
+      "Tail": "TSC691",
+      "Age": 0.4
+     },
+     {
+      "Icao_addr": 5054956,
+      "Tail": "RYR8XK",
+      "Age": 0.45
+     },
+     {
+      "Icao_addr": 4000919,
+      "Tail": "DEDAD",
+      "Age": 0.84
+     },
+     {
+      "Icao_addr": 4051825,
+      "Tail": "AIW2",
+      "Age": 1.93
+     },
+     {
+      "Icao_addr": 4834464,
+      "Tail": "OKFUG97",
+      "Age": 2.36
+     },
+     {
+      "Icao_addr": 10836522,
+      "Tail": "N444HB",
+      "Age": 2.53
+     },
+     {
+      "Icao_addr": 4219187,
+      "Tail": "",
+      "Age": 6.46
+     },
+     {
+      "Icao_addr": 66057,
+      "Tail": "",
+      "Age": 16.29
+     }
+    ],
+    "may": [
+     {
+      "Icao_addr": 12614035,
+      "Tail": "TSC691",
+      "Age": 0.4
+     },
+     {
+      "Icao_addr": 5054956,
+      "Tail": "RYR8XK",
+      "Age": 0.45
+     },
+     {
+      "Icao_addr": 4000919,
+      "Tail": "DEDAD",
+      "Age": 0.84
+     },
+     {
+      "Icao_addr": 4051825,
+      "Tail": "AIW2",
+      "Age": 1.93
+     },
+     {
+      "Icao_addr": 4834464,
+      "Tail": "OKFUG97",
+      "Age": 2.36
+     },
+     {
+      "Icao_addr": 10836522,
+      "Tail": "N444HB",
+      "Age": 2.53
+     },
+     {
+      "Icao_addr": 4219187,
+      "Tail": "",
+      "Age": 6.46
+     },
+     {
+      "Icao_addr": 66057,
+      "Tail": "",
+      "Age": 16.29
+     }
+    ]
+   }
+  },
+  {
+   "name": "top",
+   "t": 1739.0,
+   "why": "highest altitude of the flight",
+   "situation": {
+    "GPSGroundSpeed": 144.1089935303,
+    "GPSAltitudeMSL": 3826.1154785156,
+    "GPSTrueCourse": 218.5399932861,
+    "AHRSGyroHeading": 218.8283549787,
+    "AHRSRoll": -3.4705928261,
+    "AHRSPitch": 3.7916992854,
+    "GPSVerticalSpeed": 0.0,
+    "BaroPressureAltitude": 3544.927734375,
+    "GPSLatitude": 43.4083709717,
+    "GPSLongitude": 11.9779996872,
+    "GPSFixQuality": 1
+   },
+   "ems": {
+    "enginerpm": 2022.0,
+    "rail50": 5.0163750648,
+    "oilprobe": 0.1250312477,
+    "oiltemperature": 67.3671875,
+    "cht1": 148.1328125,
+    "cht2": 144.5,
+    "cht4": 142.4765625,
+    "egt1": 653.5574951172,
+    "egt2": 655.8825073242,
+    "egt3": 650.0700073242,
+    "outsidetemperature": 16.5365619659,
+    "eth0_rx_bytes": 2704006.0,
+    "pmic_3V3_SYS_V": 3.3044650555,
+    "pmic_EXT5V_V": 5.0102601051,
+    "eth0_tx_bytes": 67329968.0,
+    "gpu_temp_c": 45.5,
+    "pmic_0V8_AON_A": 0.00372405,
+    "pmic_VDD_CORE_A": 2.0092499256,
+    "cpu_load_15m": 1.7699999809,
+    "pmic_0V8_SW_A": 0.3708533943,
+    "pmic_1V1_SYS_V": 1.098533988,
+    "pmic_DDR_VDD2_A": 0.0829540491,
+    "pmic_DDR_VDDQ_V": 0.601098299,
+    "pmic_HDMI_A": 0.0070818001,
+    "pmic_VDD_CORE_V": 0.7215133905,
+    "uptime_seconds": 1783.0,
+    "cpu_load_5m": 1.8799999952,
+    "pmic_3V3_ADC_A": 0.00030525,
+    "cpu_temp_c": 45.75,
+    "free_ram_kb": 1252880.0,
+    "pmic_0V8_SW_V": 0.7981678247,
+    "pmic_DDR_VDDQ_A": 0.0264708009,
+    "cpu_load_1m": 1.6799999475,
+    "pmic_1V8_SYS_A": 0.2615492046,
+    "pmic_3V3_SYS_A": 0.1912823021,
+    "pmic_DDR_VDD2_V": 1.1054940224,
+    "pmic_HDMI_V": 5.0183000565,
+    "pmic_3V7_WL_SW_V": 3.6988480091,
+    "pmic_0V8_AON_V": 0.7999991775,
+    "pmic_1V1_SYS_A": 0.2947309017,
+    "pmic_1V8_SYS_V": 1.789008975,
+    "pmic_3V3_ADC_V": 3.3113520145,
+    "input_voltage_v": 0.9144999981,
+    "pmic_3V3_DAC_V": 3.3095200062,
+    "pmic_3V7_WL_SW_A": 0.0634354502,
+    "storage_avail_gb": 15896.0,
+    "pmic_3V3_DAC_A": 0.00018315,
+    "pmic_BATT_V": 0.0051282002,
+    "cpu_fan": 0.0,
+    "clouduploaded": 1.0
+   },
+   "bridge": {
+    "qnh": 1023.25,
+    "vorfreq": 109.4000015259,
+    "vorstatus": 1.0
+   },
+   "traffic": {
+    "must": [
+     {
+      "Icao_addr": 5023291,
+      "Tail": "EIN45N",
+      "Age": 0.27
+     },
+     {
+      "Icao_addr": 12583828,
+      "Tail": "CNK6",
+      "Age": 0.71
+     },
+     {
+      "Icao_addr": 66142,
+      "Tail": "MSR703",
+      "Age": 0.82
+     },
+     {
+      "Icao_addr": 4227627,
+      "Tail": "SXN608",
+      "Age": 1.35
+     },
+     {
+      "Icao_addr": 5025191,
+      "Tail": "ITY437",
+      "Age": 1.7
+     },
+     {
+      "Icao_addr": 5024000,
+      "Tail": "ITY1466",
+      "Age": 1.75
+     },
+     {
+      "Icao_addr": 66181,
+      "Tail": "PYR013",
+      "Age": 2.09
+     },
+     {
+      "Icao_addr": 66093,
+      "Tail": "MSC806",
+      "Age": 4.64
+     },
+     {
+      "Icao_addr": 5025243,
+      "Tail": "SAS42K",
+      "Age": 5.63
+     },
+     {
+      "Icao_addr": 854702,
+      "Tail": "XAOLE",
+      "Age": 5.79
+     },
+     {
+      "Icao_addr": 3958380,
+      "Tail": "DLH2EL",
+      "Age": 14.25
+     },
+     {
+      "Icao_addr": 4458004,
+      "Tail": "EJU743A",
+      "Age": 24.45
+     }
+    ],
+    "may": [
+     {
+      "Icao_addr": 5023291,
+      "Tail": "EIN45N",
+      "Age": 0.27
+     },
+     {
+      "Icao_addr": 12583828,
+      "Tail": "CNK6",
+      "Age": 0.71
+     },
+     {
+      "Icao_addr": 66142,
+      "Tail": "MSR703",
+      "Age": 0.82
+     },
+     {
+      "Icao_addr": 4227627,
+      "Tail": "SXN608",
+      "Age": 1.35
+     },
+     {
+      "Icao_addr": 5025191,
+      "Tail": "ITY437",
+      "Age": 1.7
+     },
+     {
+      "Icao_addr": 5024000,
+      "Tail": "ITY1466",
+      "Age": 1.75
+     },
+     {
+      "Icao_addr": 66181,
+      "Tail": "PYR013",
+      "Age": 2.09
+     },
+     {
+      "Icao_addr": 66093,
+      "Tail": "MSC806",
+      "Age": 4.64
+     },
+     {
+      "Icao_addr": 5025243,
+      "Tail": "SAS42K",
+      "Age": 5.63
+     },
+     {
+      "Icao_addr": 854702,
+      "Tail": "XAOLE",
+      "Age": 5.79
+     },
+     {
+      "Icao_addr": 3958380,
+      "Tail": "DLH2EL",
+      "Age": 14.25
+     },
+     {
+      "Icao_addr": 4458004,
+      "Tail": "EJU743A",
+      "Age": 24.45
+     }
+    ]
+   }
+  },
+  {
+   "name": "final",
+   "t": 2813.6,
+   "why": "last time below 1269 ft and above 55 kt before landing",
+   "situation": {
+    "GPSGroundSpeed": 55.1300010681,
+    "GPSAltitudeMSL": 897.6378173828,
+    "GPSTrueCourse": 291.4100036621,
+    "AHRSGyroHeading": 297.1294413001,
+    "AHRSRoll": 11.5260787752,
+    "AHRSPitch": 1.8080260844,
+    "GPSVerticalSpeed": 0.0,
+    "BaroPressureAltitude": 674.9440307617,
+    "GPSLatitude": 43.0982437134,
+    "GPSLongitude": 12.2630977631,
+    "GPSFixQuality": 2
+   },
+   "ems": {
+    "enginerpm": 867.0,
+    "rail50": 5.0122499466,
+    "oilprobe": 0.1381093711,
+    "oiltemperature": 62.21875,
+    "cht1": 118.0546875,
+    "cht2": 113.6171875,
+    "cht4": 116.953125,
+    "egt1": 469.8825073242,
+    "egt2": 521.0324707031,
+    "egt3": 494.0625,
+    "outsidetemperature": 26.2724990845,
+    "eth0_rx_bytes": 3761818.0,
+    "pmic_3V3_SYS_V": 3.3109610081,
+    "pmic_EXT5V_V": 5.0209798813,
+    "eth0_tx_bytes": 101672200.0,
+    "gpu_temp_c": 50.5,
+    "pmic_0V8_AON_A": 0.0043955999,
+    "pmic_VDD_CORE_A": 1.0269500017,
+    "cpu_load_15m": 1.7999999523,
+    "pmic_0V8_SW_A": 0.3591422141,
+    "pmic_1V1_SYS_V": 1.098533988,
+    "pmic_DDR_VDD2_A": 0.0224463902,
+    "pmic_DDR_VDDQ_V": 0.6003656983,
+    "pmic_HDMI_A": 0.0061050002,
+    "pmic_VDD_CORE_V": 0.7209761739,
+    "uptime_seconds": 2856.0,
+    "cpu_load_5m": 1.7300000191,
+    "pmic_3V3_ADC_A": 0.00042735,
+    "cpu_temp_c": 48.5,
+    "free_ram_kb": 1176336.0,
+    "pmic_0V8_SW_V": 0.7992665768,
+    "pmic_DDR_VDDQ_A": 0.0,
+    "cpu_load_1m": 1.7899999619,
+    "pmic_1V8_SYS_A": 0.2566696107,
+    "pmic_3V3_SYS_A": 0.1746914983,
+    "pmic_DDR_VDD2_V": 1.1084239483,
+    "pmic_HDMI_V": 5.023660183,
+    "pmic_3V7_WL_SW_V": 3.697920084,
+    "pmic_0V8_AON_V": 0.7997062206,
+    "pmic_1V1_SYS_A": 0.207873106,
+    "pmic_1V8_SYS_V": 1.8002419472,
+    "pmic_3V3_ADC_V": 3.3104360104,
+    "input_voltage_v": 0.7200000286,
+    "pmic_3V3_DAC_V": 3.3076889515,
+    "pmic_3V7_WL_SW_A": 0.0614835918,
+    "storage_avail_gb": 15896.0,
+    "pmic_3V3_DAC_A": 0.00018315,
+    "pmic_BATT_V": 0.0051282002,
+    "cpu_fan": 1.0,
+    "clouduploaded": 0.0
+   },
+   "bridge": {
+    "qnh": 1022.25,
+    "vorfreq": 109.4000015259,
+    "vorstatus": 1.0
+   },
+   "traffic": {
+    "must": [
+     {
+      "Icao_addr": 5055669,
+      "Tail": "WMT9KF",
+      "Age": 0.08
+     },
+     {
+      "Icao_addr": 4458814,
+      "Tail": "EJU61ND",
+      "Age": 0.09
+     },
+     {
+      "Icao_addr": 4458290,
+      "Tail": "EJU52DB",
+      "Age": 3.25
+     },
+     {
+      "Icao_addr": 5046509,
+      "Tail": "LGL846",
+      "Age": 6.91
+     },
+     {
+      "Icao_addr": 5055367,
+      "Tail": "RYR1729",
+      "Age": 7.07
+     }
+    ],
+    "may": [
+     {
+      "Icao_addr": 5055669,
+      "Tail": "WMT9KF",
+      "Age": 0.08
+     },
+     {
+      "Icao_addr": 4458814,
+      "Tail": "EJU61ND",
+      "Age": 0.09
+     },
+     {
+      "Icao_addr": 4458290,
+      "Tail": "EJU52DB",
+      "Age": 3.25
+     },
+     {
+      "Icao_addr": 5046509,
+      "Tail": "LGL846",
+      "Age": 6.91
+     },
+     {
+      "Icao_addr": 5055367,
+      "Tail": "RYR1729",
+      "Age": 7.07
+     }
+    ]
+   }
+  },
+  {
+   "name": "landed",
+   "t": 2856.7,
+   "why": "15 s after ground speed last exceeded 40 kt",
+   "situation": {
+    "GPSGroundSpeed": 26.5620002747,
+    "GPSAltitudeMSL": 753.2808837891,
+    "GPSTrueCourse": 305.6499938965,
+    "AHRSGyroHeading": 306.2060810171,
+    "AHRSRoll": 3.567029667,
+    "AHRSPitch": 13.8532746774,
+    "GPSVerticalSpeed": 0.0,
+    "BaroPressureAltitude": 502.4113769531,
+    "GPSLatitude": 43.1030960083,
+    "GPSLongitude": 12.2529783249,
+    "GPSFixQuality": 2
+   },
+   "ems": {
+    "enginerpm": 1030.0,
+    "rail50": 5.0173125267,
+    "oilprobe": 0.1401406229,
+    "oiltemperature": 59.328125,
+    "cht1": 120.1484375,
+    "cht2": 115.1171875,
+    "cht4": 120.0546875,
+    "egt1": 468.0224914551,
+    "egt2": 514.2899780273,
+    "egt3": 495.9224853516,
+    "outsidetemperature": 27.3260154724,
+    "eth0_rx_bytes": 3772173.0,
+    "pmic_3V3_SYS_V": 3.303538084,
+    "pmic_EXT5V_V": 5.0156202316,
+    "eth0_tx_bytes": 102007752.0,
+    "gpu_temp_c": 49.4000015259,
+    "pmic_0V8_AON_A": 0.00396825,
+    "pmic_VDD_CORE_A": 1.1430399418,
+    "cpu_load_15m": 1.7799999714,
+    "pmic_0V8_SW_A": 0.4869891107,
+    "pmic_1V1_SYS_V": 1.1047610044,
+    "pmic_DDR_VDD2_A": 0.0146389501,
+    "pmic_DDR_VDDQ_V": 0.6032961011,
+    "pmic_HDMI_A": 0.0057386998,
+    "pmic_VDD_CORE_V": 0.9154570103,
+    "uptime_seconds": 2903.0,
+    "cpu_load_5m": 1.6799999475,
+    "pmic_3V3_ADC_A": 0.00030525,
+    "cpu_temp_c": 50.1500015259,
+    "free_ram_kb": 1178112.0,
+    "pmic_0V8_SW_V": 0.7989003062,
+    "pmic_DDR_VDDQ_A": 0.0,
+    "cpu_load_1m": 1.5399999619,
+    "pmic_1V8_SYS_A": 0.2556937039,
+    "pmic_3V3_SYS_A": 0.1854266971,
+    "pmic_DDR_VDD2_V": 1.1040279865,
+    "pmic_HDMI_V": 5.0062398911,
+    "pmic_3V7_WL_SW_V": 3.6997759342,
+    "pmic_0V8_AON_V": 0.7997062206,
+    "pmic_1V1_SYS_A": 0.208848998,
+    "pmic_1V8_SYS_V": 1.8168480396,
+    "pmic_3V3_ADC_V": 3.3113520145,
+    "input_voltage_v": 0.7200000286,
+    "pmic_3V3_DAC_V": 3.3086049557,
+    "pmic_3V7_WL_SW_A": 0.0605076589,
+    "storage_avail_gb": 15896.0,
+    "pmic_3V3_DAC_A": 0.00030525,
+    "pmic_BATT_V": 0.0051282002,
+    "cpu_fan": 1.0,
+    "clouduploaded": 0.0
+   },
+   "bridge": {
+    "qnh": 1022.25,
+    "vorfreq": 109.4000015259,
+    "vorstatus": 1.0
+   },
+   "traffic": {
+    "must": [
+     {
+      "Icao_addr": 5055669,
+      "Tail": "WMT9KF",
+      "Age": 0.05
+     },
+     {
+      "Icao_addr": 4458814,
+      "Tail": "EJU61ND",
+      "Age": 0.27
+     },
+     {
+      "Icao_addr": 5046509,
+      "Tail": "LGL846",
+      "Age": 0.48
+     },
+     {
+      "Icao_addr": 4458290,
+      "Tail": "EJU52DB",
+      "Age": 2.07
+     }
+    ],
+    "may": [
+     {
+      "Icao_addr": 5055669,
+      "Tail": "WMT9KF",
+      "Age": 0.05
+     },
+     {
+      "Icao_addr": 4458814,
+      "Tail": "EJU61ND",
+      "Age": 0.27
+     },
+     {
+      "Icao_addr": 5046509,
+      "Tail": "LGL846",
+      "Age": 0.48
+     },
+     {
+      "Icao_addr": 4458290,
+      "Tail": "EJU52DB",
+      "Age": 2.07
+     }
+    ]
+   }
+  }
+ ]
+}

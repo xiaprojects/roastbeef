@@ -1,0 +1,2952 @@
+{
+ "captured": "2026-09-12T17:30:01Z",
+ "device": {
+  "Build": "6e608922a1f0749572cdbb5000058f856c580e4c",
+  "HardwareBuild": "RB",
+  "Version": "2.1.1"
+ },
+ "files": {
+  "/settings/aircraft.json": {
+   "GPSGroundSpeed": {
+    "arcs": [
+     {
+      "backgroundColor": "#000000",
+      "color": "#000000",
+      "sizeDegree": "30deg",
+      "startDegree": "0deg",
+      "threshold": 0
+     },
+     {
+      "backgroundColor": "#333333",
+      "color": "#ffffff",
+      "sizeDegree": "90deg",
+      "startDegree": "30deg",
+      "threshold": 100
+     },
+     {
+      "backgroundColor": "#00aa00",
+      "color": "#00ff00",
+      "sizeDegree": "45deg",
+      "startDegree": "120deg",
+      "threshold": 170
+     },
+     {
+      "backgroundColor": "#00aa00",
+      "color": "#0000ff",
+      "sizeDegree": "5deg",
+      "startDegree": "165deg",
+      "threshold": 210
+     },
+     {
+      "backgroundColor": "#00aa00",
+      "color": "#00ff00",
+      "sizeDegree": "90deg",
+      "startDegree": "170deg",
+      "threshold": 220
+     },
+     {
+      "backgroundColor": "#aaaa00",
+      "color": "#ffff00",
+      "sizeDegree": "30deg",
+      "startDegree": "260deg",
+      "threshold": 290
+     },
+     {
+      "backgroundColor": "#aa0000",
+      "color": "#ff0000",
+      "sizeDegree": "5deg",
+      "startDegree": "290deg",
+      "threshold": 350
+     }
+    ],
+    "backgroundColor": "#000000",
+    "endSpeedDegree": 350,
+    "label": "GPS SPEED",
+    "maxSpeed": 400,
+    "minSpeed": 50,
+    "raw": -1,
+    "sensorType": "GPSGroundSpeed",
+    "speed": 0,
+    "speedDegree": "45deg",
+    "speedTicks": [],
+    "startSpeedDegree": 0,
+    "unit": "KMH"
+   },
+   "engineTime": 0,
+   "name": "I-RVDX",
+   "pilot": "Stefano",
+   "propellerTime": 0,
+   "units": {
+    "altimeter": "feet",
+    "altimeterConversionFromMeters": {
+     "multiply": 3.28084,
+     "sum": 0
+    },
+    "speed": "KMH",
+    "speedConversionFromKmh": {
+     "multiply": 1,
+     "sum": 0
+    },
+    "temperatureConversionFromC": {
+     "multiply": 1.8,
+     "sum": 32
+    },
+    "temperatures": "\u00b0F"
+   }
+  },
+  "/settings/db.frequencies.json": {
+   "global": {
+    "119.075": {
+     "gps": {
+      "lat": 41.906937255255045,
+      "lon": 12.493022362177584,
+      "range": 500000
+     },
+     "name": "FIC ROMA CENTER"
+    },
+    "121.500": {
+     "gps": {
+      "lat": 43.0,
+      "lon": 12.0,
+      "range": 500000
+     },
+     "name": "121.5 EMER"
+    },
+    "124.150": {
+     "gps": {
+      "lat": 45.47232573387434,
+      "lon": 9.19140680728237,
+      "range": 500000
+     },
+     "name": "MILANO"
+    },
+    "124.925": {
+     "gps": {
+      "lat": 45.47232573387434,
+      "lon": 9.19140680728237,
+      "range": 500000
+     },
+     "name": "MILANO"
+    },
+    "125.100": {
+     "gps": {
+      "lat": 41.906937255255045,
+      "lon": 12.493022362177584,
+      "range": 500000
+     },
+     "name": "FIC ROMA EST"
+    },
+    "125.750": {
+     "gps": {
+      "lat": 41.906937255255045,
+      "lon": 12.493022362177584,
+      "range": 500000
+     },
+     "name": "FIC ROMA NORTH"
+    },
+    "126.425": {
+     "gps": {
+      "lat": 45.40845091257402,
+      "lon": 11.88963135972633,
+      "range": 500000
+     },
+     "name": "PADOVA"
+    },
+    "128.925": {
+     "gps": {
+      "lat": 45.47232573387434,
+      "lon": 9.19140680728237,
+      "range": 500000
+     },
+     "name": "MILANO"
+    },
+    "129.575": {
+     "gps": {
+      "lat": 41.906937255255045,
+      "lon": 12.493022362177584,
+      "range": 500000
+     },
+     "name": "FIC ROMA SOUTH"
+    },
+    "130.000": {
+     "gps": {
+      "lat": 43.0,
+      "lon": 12.0,
+      "range": 500000
+     },
+     "name": "130Mhz Mountain"
+    },
+    "131.125": {
+     "gps": {
+      "lat": 40.63084716831531,
+      "lon": 17.92425748877277,
+      "range": 500000
+     },
+     "name": "BRINDISI"
+    },
+    "134.125": {
+     "gps": {
+      "lat": 41.906937255255045,
+      "lon": 12.493022362177584,
+      "range": 500000
+     },
+     "name": "FIC ROMA SEA"
+    },
+    "135.075": {
+     "gps": {
+      "lat": 45.47232573387434,
+      "lon": 9.19140680728237,
+      "range": 500000
+     },
+     "name": "MILANO"
+    }
+   }
+  },
+  "/settings/ems.json": {
+   "widgets": [
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 60
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "55deg",
+       "startDegree": "45deg",
+       "threshold": 90
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "30deg",
+       "startDegree": "100deg",
+       "threshold": 110
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": true,
+     "endSpeedDegree": 495,
+     "label": "OIL TEMP",
+     "maxSpeed": 120,
+     "minSpeed": 30,
+     "scale": 1,
+     "source": "oiltemperature",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "\u00b0C"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "45deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "45deg",
+       "startDegree": "270deg",
+       "threshold": 20
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 45
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 90
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 130
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": true,
+     "endSpeedDegree": 495,
+     "label": "OIL PRES",
+     "maxSpeed": 135,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "oilpressure",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "PSI"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "135deg",
+       "startDegree": "315deg",
+       "threshold": 3000
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "30deg",
+       "startDegree": "90deg",
+       "threshold": 5500
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 5700
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": true,
+     "endSpeedDegree": 495,
+     "label": "RPM",
+     "maxSpeed": 6000,
+     "minSpeed": 1500,
+     "scale": 1,
+     "source": "enginerpm",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "100rpm"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 20
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 30
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 39
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": true,
+     "endSpeedDegree": 495,
+     "label": "MAP",
+     "maxSpeed": 40,
+     "minSpeed": 10,
+     "scale": 1,
+     "source": "manifoldpressure",
+     "speed": 0,
+     "speedDegree": "180deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "mmHg"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 60
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "55deg",
+       "startDegree": "45deg",
+       "threshold": 90
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "30deg",
+       "startDegree": "100deg",
+       "threshold": 110
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "OIL TEMP",
+     "maxSpeed": 120,
+     "minSpeed": 30,
+     "scale": 1,
+     "source": "oiltemperature",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "\u00b0C"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "45deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "45deg",
+       "startDegree": "270deg",
+       "threshold": 20
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 45
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 90
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 130
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "OIL PRES",
+     "maxSpeed": 135,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "oilpressure",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "PSI"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "135deg",
+       "startDegree": "315deg",
+       "threshold": 3000
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "30deg",
+       "startDegree": "90deg",
+       "threshold": 5500
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 5700
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "RPM",
+     "maxSpeed": 6000,
+     "minSpeed": 1500,
+     "scale": 0.01,
+     "source": "enginerpm",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "100rpm"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 20
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 30
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 39
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "MAP",
+     "maxSpeed": 40,
+     "minSpeed": 10,
+     "scale": 1,
+     "source": "manifoldpressure",
+     "speed": 0,
+     "speedDegree": "180deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "mmHg"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 4
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 7
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 11
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "FUEL PRES",
+     "maxSpeed": 11,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "fuelpressure",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "PSI"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 20
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 40
+      },
+      {
+       "backgroundColor": "#0000aa",
+       "color": "#0000ff",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 55
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "FUEL LEFT",
+     "maxSpeed": 60,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "fuel1",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "LT"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 20
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "75deg",
+       "startDegree": "45deg",
+       "threshold": 40
+      },
+      {
+       "backgroundColor": "#0000aa",
+       "color": "#0000ff",
+       "sizeDegree": "15deg",
+       "startDegree": "120deg",
+       "threshold": 55
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "FUEL RIGHT",
+     "maxSpeed": 60,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "fuel2",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "LT"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#0000aa",
+       "color": "#0000ff",
+       "sizeDegree": "90deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      },
+      {
+       "backgroundColor": "#00aa00",
+       "color": "#00ff00",
+       "sizeDegree": "90deg",
+       "startDegree": "315deg",
+       "threshold": 15
+      },
+      {
+       "backgroundColor": "#aaaa00",
+       "color": "#ffff00",
+       "sizeDegree": "15deg",
+       "startDegree": "45deg",
+       "threshold": 30
+      },
+      {
+       "backgroundColor": "#aa0000",
+       "color": "#ff0000",
+       "sizeDegree": "15deg",
+       "startDegree": "60deg",
+       "threshold": 55
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "OUT TEMP",
+     "maxSpeed": 45,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "outsidetemperature",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "\u00b0C"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "270deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 1,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "BATTERY",
+     "maxSpeed": 18,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "batteryvoltage",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "Volt"
+    },
+    {
+     "arcs": [
+      {
+       "backgroundColor": "#333333",
+       "color": "#ffffff",
+       "sizeDegree": "270deg",
+       "startDegree": "225deg",
+       "threshold": 0
+      }
+     ],
+     "backgroundColor": "#000000",
+     "ceil": 0,
+     "displayInSidebar": false,
+     "endSpeedDegree": 495,
+     "label": "ALTERNATOR",
+     "maxSpeed": 27,
+     "minSpeed": 0,
+     "scale": 1,
+     "source": "amps",
+     "speed": 0,
+     "speedDegree": "45deg",
+     "speedTicks": [],
+     "startSpeedDegree": 225,
+     "unit": "AMPS"
+    }
+   ]
+  },
+  "/settings/synthview.json": {
+   "cellSize": 250,
+   "elevation": 1000,
+   "elevationUrl": "/settings/elevations.json",
+   "glbPath": "/settings/glb/",
+   "guidance": {
+    "aspect": 0.5,
+    "borderRatio": 0.08,
+    "color": 16711935,
+    "enabled": true,
+    "maxBoxes": 60,
+    "maxLegs": 3,
+    "maxRangeCells": 12,
+    "minAglMeters": 300,
+    "opacity": 0.55,
+    "spacingCells": 0.3,
+    "tiltWithPath": false,
+    "widthCells": 0.35
+   },
+   "items": [
+    {
+     "color": 986895,
+     "direction": 0,
+     "directionModel": 0,
+     "elevation": 1000,
+     "name": "ME",
+     "pitch": 0,
+     "pitchModel": 0,
+     "projectionSize": 1000,
+     "reference": null,
+     "referenceTubeFront": null,
+     "referenceTubeVertical": null,
+     "roll": 0,
+     "scale": 60,
+     "template": "me",
+     "x": 0,
+     "y": 0
+    }
+   ],
+   "skyColor": {
+    "b": 0.91,
+    "g": 0.8,
+    "r": 0.52
+   },
+   "terrainBaseColor": null,
+   "terrainColorGreen": {
+    "b": 0,
+    "g": 1.0,
+    "r": 0
+   },
+   "terrainColorRed": {
+    "b": 0,
+    "g": 0,
+    "r": 1.0
+   },
+   "terrainColorSea": {
+    "b": 1.0,
+    "g": 0,
+    "r": 0
+   },
+   "terrainColorYellow": {
+    "b": 0,
+    "g": 0,
+    "r": 1.0
+   },
+   "trafficMapping": {},
+   "trafficTemplates": {
+    "Helic": [
+     {
+      "color": null,
+      "directionModel": 0,
+      "pitch": 0,
+      "roll": 0,
+      "scale": 20,
+      "template": "traffic_helicopter"
+     }
+    ],
+    "Large": [
+     {
+      "color": null,
+      "directionModel": 0,
+      "pitch": 0,
+      "roll": 0,
+      "scale": 20,
+      "template": "traffic_large"
+     }
+    ],
+    "Light": [
+     {
+      "color": null,
+      "directionModel": 0,
+      "pitch": 0,
+      "roll": 0,
+      "scale": 20,
+      "template": "traffic_light"
+     }
+    ]
+   }
+  }
+ },
+ "get": {
+  "/addons": [
+   {
+    "controller": "ExampleCtrl",
+    "hash": "/addons/example",
+    "html": "addons/example.html",
+    "js": "addons/js/example.js",
+    "name": "example"
+   },
+   {
+    "controller": "VhfdfCtrl",
+    "hash": "/addons/vhfdf",
+    "html": "addons/vhfdf.html",
+    "js": "addons/js/vhfdf.js",
+    "name": "vhfdf"
+   },
+   {
+    "controller": "VhfdfdisplayCtrl",
+    "hash": "/addons/vhfdfdisplay",
+    "html": "addons/vhfdfdisplay.html",
+    "js": "addons/js/vhfdfdisplay.js",
+    "name": "vhfdfdisplay"
+   },
+   {
+    "controller": "VorCtrl",
+    "hash": "/addons/vor",
+    "html": "addons/vor.html",
+    "js": "addons/js/vor.js",
+    "name": "vor"
+   }
+  ],
+  "/autopilot": [],
+  "/charts/view/live": {
+   "AHRSGLoad": [
+    0,
+    0.8226328329776951,
+    0.822366121913422,
+    0.8217336437578623,
+    0.8225416474311088,
+    0.8222891597594152,
+    0.8217929414010958,
+    0.8220656380634814
+   ],
+   "AHRSGLoadMax": [
+    0.8265776378856957,
+    0.8275680732207764,
+    0.8275680732207764,
+    0.8275680732207764,
+    0.8275680732207764,
+    0.8275680732207764,
+    0.8275680732207764,
+    0.8275680732207764
+   ],
+   "AHRSGLoadMin": [
+    0.8225142034898107,
+    0.8225142034898107,
+    0.8220798445094447,
+    0.8217336437578623,
+    0.8217336437578623,
+    0.8217336437578623,
+    0.8217336437578623,
+    0.8217336437578623
+   ],
+   "AHRSGyroHeading": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "AHRSMagHeading": [
+    0.654933964054557,
+    0.26332282191577605,
+    0.3559432580116322,
+    0.393642889130355,
+    0.23039382665034785,
+    0.21273272277352823,
+    0.23767670645002026,
+    0.7144627512566832
+   ],
+   "AHRSPitch": [
+    5.170668488451713,
+    5.144442483925555,
+    5.145709638009481,
+    5.183155133563491,
+    5.206156121193749,
+    5.187763636239282,
+    5.181290604074383,
+    5.221308781432977
+   ],
+   "AHRSRoll": [
+    5.080846382638189,
+    5.0784395408339575,
+    5.11149323943409,
+    5.082966168523125,
+    5.073136752907571,
+    5.060593807919641,
+    5.040710072531537,
+    5.364288335330026
+   ],
+   "AHRSSlipSkid": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "AHRSTurnRate": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Alt": [
+    815.28876,
+    816.273,
+    790.3543,
+    722.1129,
+    802.82153,
+    843.50397,
+    838.25464,
+    789.3701
+   ],
+   "AlternatorOut": [],
+   "Amps": [],
+   "BaroPressureAltitude": [
+    546.8702,
+    547.4272,
+    546.44,
+    546.7835,
+    546.39557,
+    547.0056,
+    546.8734,
+    546.4866
+   ],
+   "BaroTemperature": [
+    34.95,
+    34.99,
+    35.05,
+    35.04,
+    35.1,
+    35.11,
+    35.1,
+    35.11
+   ],
+   "BaroVerticalSpeed": [
+    -3.2132046,
+    0.98352796,
+    -0.8166395,
+    0.2439188,
+    0.4536973,
+    -0.659284,
+    1.0017415,
+    0.116346754
+   ],
+   "BatteryVoltage": [],
+   "CPUTemp": [
+    55.65,
+    56.75,
+    55.65,
+    56.75,
+    56.2,
+    55.65,
+    56.75,
+    56.2
+   ],
+   "Cht1": [
+    33,
+    33,
+    34,
+    34,
+    34,
+    34,
+    34,
+    34
+   ],
+   "Cht2": [
+    33,
+    33,
+    33,
+    33,
+    33,
+    33,
+    34,
+    34
+   ],
+   "Cht3": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "Cht4": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    33,
+    33,
+    33
+   ],
+   "Egt1": [
+    38,
+    38,
+    38,
+    39,
+    39,
+    39,
+    39,
+    40
+   ],
+   "Egt2": [
+    37,
+    37,
+    38,
+    38,
+    38,
+    38,
+    39,
+    39
+   ],
+   "Egt3": [
+    36,
+    36,
+    36,
+    37,
+    37,
+    37,
+    37,
+    37
+   ],
+   "Egt4": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "EngineRpm": [],
+   "Epoch": [
+    1789233737,
+    1789233797,
+    1789233857,
+    1789233918,
+    1789233978,
+    1789234038,
+    1789234098,
+    1789234158
+   ],
+   "Fuel": [],
+   "Fuel1": [],
+   "Fuel2": [],
+   "Fuelpressure": [],
+   "Fuelremaining": [],
+   "GPSGroundSpeed": [
+    0.4620000123977661,
+    1.0429999828338623,
+    0.5659999847412109,
+    0.40700000524520874,
+    0.843999981880188,
+    0.4350000023841858,
+    0.7459999918937683,
+    1.6200000047683716
+   ],
+   "GPSLatitude": [
+    43.104614,
+    43.104603,
+    43.10459,
+    43.104588,
+    43.104706,
+    43.104733,
+    43.104706,
+    43.104694
+   ],
+   "GPSLongitude": [
+    12.251096,
+    12.251168,
+    12.251139,
+    12.251099,
+    12.251093,
+    12.251112,
+    12.251081,
+    12.2511
+   ],
+   "GPSTrueCourse": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "GPS_satellites_locked": [
+    13,
+    13,
+    12,
+    14,
+    13,
+    14,
+    13,
+    14
+   ],
+   "GpsTurnRate": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "MagMaxX": [
+    850,
+    850,
+    850,
+    850,
+    850,
+    850,
+    850,
+    850
+   ],
+   "MagMaxY": [
+    770,
+    770,
+    770,
+    770,
+    770,
+    770,
+    770,
+    770
+   ],
+   "MagMaxZ": [
+    -1000,
+    -1000,
+    -1000,
+    -1000,
+    -1000,
+    -1000,
+    -1000,
+    -1000
+   ],
+   "MagMinX": [
+    -1400,
+    -1400,
+    -1400,
+    -1400,
+    -1400,
+    -1400,
+    -1400,
+    -1400
+   ],
+   "MagMinY": [
+    -1010,
+    -1010,
+    -1010,
+    -1010,
+    -1010,
+    -1010,
+    -1010,
+    -1010
+   ],
+   "MagMinZ": [
+    -1778,
+    -1778,
+    -1778,
+    -1778,
+    -1778,
+    -1778,
+    -1778,
+    -1778
+   ],
+   "MagX": [
+    -488.3212364238623,
+    -494.21873927223714,
+    -493.9166271517995,
+    -493.3310141253232,
+    -494.38811232726636,
+    -494.14427586181216,
+    -493.7613579442003,
+    -495.27888319621394
+   ],
+   "MagY": [
+    336.02407734604674,
+    336.40527155495766,
+    335.73418264812386,
+    335.20910510209313,
+    336.1751276312941,
+    335.60203448286825,
+    336.2074788700768,
+    335.62208805112056
+   ],
+   "MagZ": [
+    -505.47929481906107,
+    -515.9299327207207,
+    -515.7481780376578,
+    -517.3067472970963,
+    -519.2804250009824,
+    -520.3219240231908,
+    -518.4345459628277,
+    -515.5491535204317
+   ],
+   "ManifoldPressure": [],
+   "Oilpressure": [],
+   "Oiltemperature": [],
+   "OutsideTemperature": [],
+   "TrafficCount": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
+   ]
+  },
+  "/checklist/default/status": [
+   {
+    "date": "",
+    "dateParsed": "__:__",
+    "id": 0,
+    "isselected": "",
+    "items": [
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 0,
+      "isselected": "keypadSelectedYes",
+      "name": "CINTURE",
+      "text": "ALLACCIATE",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 1,
+      "isselected": "",
+      "name": "CUFFIE",
+      "text": "INDOSSATE",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 2,
+      "isselected": "",
+      "name": "CARBURANTE",
+      "text": "RUBINETTI ENTRAMBI APERTI",
+      "value": "todo"
+     }
+    ],
+    "name": "PRE-FLIGHT",
+    "text": "DOLIST",
+    "value": "todo"
+   },
+   {
+    "date": "",
+    "dateParsed": "__:__",
+    "id": 1,
+    "isselected": "",
+    "items": [
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 0,
+      "isselected": "",
+      "name": "MASTER",
+      "text": "ON (+12V line)",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 1,
+      "isselected": "",
+      "name": "FUEL PUMP",
+      "text": "On - 5.5 psi",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 2,
+      "isselected": "",
+      "name": "FUEL PUMP",
+      "text": "Off - 0.0 psi",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 3,
+      "isselected": "",
+      "name": "TEMPERATURE",
+      "text": "Airbox Temp >15\u00b0 <30\u00b0",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 4,
+      "isselected": "",
+      "name": "SEATBELT",
+      "text": "Seatbelt fasten",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 5,
+      "isselected": "",
+      "name": "CANOPY",
+      "text": "Canopy Close",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 6,
+      "isselected": "",
+      "name": "AREA",
+      "text": "Check Propeller Area",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 7,
+      "isselected": "",
+      "name": "PITOT",
+      "text": "Pitot onboard",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 8,
+      "isselected": "",
+      "name": "CONTACT",
+      "text": "Magneto 1 and 2 Active",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 9,
+      "isselected": "",
+      "name": "CHOKE",
+      "text": "Choke On and Throttle Off",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 10,
+      "isselected": "",
+      "name": "CRANKING",
+      "text": "Cranking up to 10 seconds",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 11,
+      "isselected": "",
+      "name": "CHOKE",
+      "text": "Release Choke",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 12,
+      "isselected": "",
+      "name": "OIL PRESSURE",
+      "text": "OIL Pressure Green Arc",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 13,
+      "isselected": "",
+      "name": "FUEL PRESSURE",
+      "text": "Fuel Pressure >2psi",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 14,
+      "isselected": "",
+      "name": "RPM",
+      "text": "RPM >1800 <2200",
+      "value": "todo"
+     },
+     {
+      "date": "",
+      "dateParsed": "__:__",
+      "id": 15,
+      "isselected": "",
+      "name": "OIL PRESSURE",
+      "text": "OIL Pressure Green Arc",
+      "value": "todo"
+     }
+    ],
+    "name": "AVVIAMENTO",
+    "text": "CHECKLIST",
+    "value": "todo"
+   }
+  ],
+  "/flightlogs": [
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-04T18:39:53.031999999+01:00",
+    "Name": "flightlog-20260904183952.0691.sqlite",
+    "Path": "/logs/flightlog-20260904183952.0691.sqlite",
+    "Size": 4096,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-05T07:52:21.427999984+01:00",
+    "Name": "flightlog-20260905075155.0361.sqlite",
+    "Path": "/logs/flightlog-20260905075155.0361.sqlite",
+    "Size": 270336,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-05T09:08:07.239997588+01:00",
+    "Name": "flightlog-20260905080041.0478.sqlite",
+    "Path": "/logs/flightlog-20260905080041.0478.sqlite",
+    "Size": 133775360,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-05T16:07:24.103999884+01:00",
+    "Name": "flightlog-20260905160405.0915.sqlite",
+    "Path": "/logs/flightlog-20260905160405.0915.sqlite",
+    "Size": 6803456,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-05T17:45:21.219996783+01:00",
+    "Name": "flightlog-20260905161524.0768.sqlite",
+    "Path": "/logs/flightlog-20260905161524.0768.sqlite",
+    "Size": 126349312,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-12T18:02:03.051999837+01:00",
+    "Name": "flightlog-20260912175730.0112.sqlite",
+    "Path": "/logs/flightlog-20260912175730.0112.sqlite",
+    "Size": 2375680,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2026-09-12T18:29:35.023999707+01:00",
+    "Name": "flightlog-20260912182124.0457.sqlite",
+    "Path": "/logs/flightlog-20260912182124.0457.sqlite",
+    "Size": 1036288,
+    "Source": ""
+   }
+  ],
+  "/getAlerts": [
+   {
+    "Timestamp": "2026-09-12T18:21:16.907816816+01:00",
+    "Title": "Startup",
+    "Type": 7
+   }
+  ],
+  "/getClients": {
+   "/dev/serialout_nmea0": {
+    "Baud": 9600,
+    "Capability": 8,
+    "DeviceString": "/dev/serialout_nmea0"
+   },
+   "/dev/serialout_nmea1": {
+    "Baud": 115200,
+    "Capability": 8,
+    "DeviceString": "/dev/serialout_nmea1"
+   },
+   "192.168.0.2:2000": {
+    "Capability": 8,
+    "Conn": {},
+    "Ip": "192.168.0.2",
+    "LastPingResponse": "0001-01-01T00:08:45Z",
+    "LastPongResponse": "0001-01-01T00:08:45Z",
+    "LastUnreachable": "0001-01-01T00:00:00Z",
+    "Port": 2000,
+    "SleepFlag": false
+   },
+   "192.168.0.2:4000": {
+    "Capability": 5,
+    "Conn": {},
+    "Ip": "192.168.0.2",
+    "LastPingResponse": "0001-01-01T00:08:45Z",
+    "LastPongResponse": "0001-01-01T00:08:45Z",
+    "LastUnreachable": "0001-01-01T00:00:00Z",
+    "Port": 4000,
+    "SleepFlag": false
+   },
+   "192.168.0.2:49002": {
+    "Capability": 18,
+    "Conn": {},
+    "Ip": "192.168.0.2",
+    "LastPingResponse": "0001-01-01T00:08:45Z",
+    "LastPongResponse": "0001-01-01T00:08:45Z",
+    "LastUnreachable": "0001-01-01T00:00:00Z",
+    "Port": 49002,
+    "SleepFlag": false
+   },
+   "192.168.10.233:2000": {
+    "Capability": 8,
+    "Conn": {},
+    "Ip": "192.168.10.233",
+    "LastPingResponse": "0001-01-01T00:08:45Z",
+    "LastPongResponse": "0001-01-01T00:08:45Z",
+    "LastUnreachable": "0001-01-01T00:08:43.94Z",
+    "Port": 2000,
+    "SleepFlag": true
+   },
+   "192.168.10.233:4000": {
+    "Capability": 5,
+    "Conn": {},
+    "Ip": "192.168.10.233",
+    "LastPingResponse": "0001-01-01T00:08:45Z",
+    "LastPongResponse": "0001-01-01T00:08:45Z",
+    "LastUnreachable": "0001-01-01T00:08:47.19Z",
+    "Port": 4000,
+    "SleepFlag": true
+   },
+   "192.168.10.233:49002": {
+    "Capability": 18,
+    "Conn": {},
+    "Ip": "192.168.10.233",
+    "LastPingResponse": "0001-01-01T00:08:45Z",
+    "LastPongResponse": "0001-01-01T00:08:45Z",
+    "LastUnreachable": "0001-01-01T00:08:46Z",
+    "Port": 49002,
+    "SleepFlag": true
+   },
+   "6E400001-B5A3-F393-E0A9-E50E24DCCA9E": {
+    "Capability": 8,
+    "Characteristic": {},
+    "UUIDGatt": "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",
+    "UUIDService": "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+   },
+   "FFE0": {
+    "Capability": 8,
+    "Characteristic": {},
+    "UUIDGatt": "FFE1",
+    "UUIDService": "FFE0"
+   }
+  },
+  "/getEMS": {
+   "alternatorout": 0,
+   "amps": 0,
+   "ap0_rx_bytes": 42650970,
+   "ap0_tx_bytes": 158387550,
+   "batteryvoltage": 0,
+   "cht1": 34.585938,
+   "cht2": 34.132812,
+   "cht3": 0,
+   "cht4": 33.265625,
+   "clouduploaded": 1,
+   "coolanttemperature": 0,
+   "cpu_load_15m": 0.47,
+   "cpu_load_1m": 0.3,
+   "cpu_load_5m": 0.32,
+   "cpu_temp_c": 55.65,
+   "egt1": 40.2225,
+   "egt2": 39.2925,
+   "egt3": 37.8975,
+   "egt4": 0,
+   "enginerpm": 0,
+   "eth0_rx_bytes": 490233250,
+   "eth0_tx_bytes": 70247576,
+   "free_ram_kb": 631760,
+   "fuel": 0,
+   "fuel1": 0,
+   "fuel2": 0,
+   "fuelpressure": 0,
+   "fuelremaining": 0,
+   "gpu_temp_c": 55.4,
+   "manifoldpressure": 0,
+   "oilpressure": 0,
+   "oilprobe": 0.005015625,
+   "oiltemperature": 127.5,
+   "outsidetemperature": 27.870937,
+   "pmic_0V8_AON_A": 0.00384615,
+   "pmic_0V8_AON_V": 0.7991202,
+   "pmic_0V8_SW_A": 0.4216018,
+   "pmic_0V8_SW_V": 0.7981678,
+   "pmic_1V1_SYS_A": 0.2098249,
+   "pmic_1V1_SYS_V": 1.10183,
+   "pmic_1V8_SYS_A": 0.2478862,
+   "pmic_1V8_SYS_V": 1.790963,
+   "pmic_3V3_ADC_A": 0.00042735,
+   "pmic_3V3_ADC_V": 3.310436,
+   "pmic_3V3_DAC_A": 0.00018315,
+   "pmic_3V3_DAC_V": 3.30952,
+   "pmic_3V3_SYS_A": 0.1854267,
+   "pmic_3V3_SYS_V": 3.304465,
+   "pmic_3V7_WL_SW_A": 0.0712429,
+   "pmic_3V7_WL_SW_V": 3.621828,
+   "pmic_BATT_V": 0.0051282,
+   "pmic_DDR_VDD2_A": 0.01659081,
+   "pmic_DDR_VDD2_V": 1.107691,
+   "pmic_DDR_VDDQ_A": 0,
+   "pmic_DDR_VDDQ_V": 0.6058602,
+   "pmic_EXT5V_V": 4.75566,
+   "pmic_HDMI_A": 0.004884,
+   "pmic_HDMI_V": 4.75164,
+   "pmic_VDD_CORE_A": 1.44666,
+   "pmic_VDD_CORE_V": 0.7209762,
+   "rail50": 4.7315626,
+   "uptime_seconds": 2009
+  },
+  "/getEMSMax": {
+   "ap0_rx_bytes": 42650970,
+   "ap0_tx_bytes": 158387550,
+   "cht1": 34.65625,
+   "cht2": 34.164062,
+   "cht4": 33.320312,
+   "clouduploaded": 1,
+   "cpu_load_15m": 0.61,
+   "cpu_load_1m": 0.58,
+   "cpu_load_5m": 0.36,
+   "cpu_temp_c": 56.75,
+   "egt1": 40.2225,
+   "egt2": 39.2925,
+   "egt3": 37.8975,
+   "eth0_rx_bytes": 490233250,
+   "eth0_tx_bytes": 70247576,
+   "free_ram_kb": 673120,
+   "gpu_temp_c": 57.1,
+   "oilprobe": 0.0050625,
+   "oiltemperature": 129.64844,
+   "outsidetemperature": 27.914532,
+   "pmic_0V8_AON_A": 0.0041514,
+   "pmic_0V8_AON_V": 0.8005854,
+   "pmic_0V8_SW_A": 0.5318819,
+   "pmic_0V8_SW_V": 0.8029296,
+   "pmic_1V1_SYS_A": 0.3806127,
+   "pmic_1V1_SYS_V": 1.103296,
+   "pmic_1V8_SYS_A": 0.2605733,
+   "pmic_1V8_SYS_V": 1.821243,
+   "pmic_3V3_ADC_A": 0.0009768,
+   "pmic_3V3_ADC_V": 3.315015,
+   "pmic_3V3_DAC_A": 0.00018315,
+   "pmic_3V3_DAC_V": 3.30952,
+   "pmic_3V3_SYS_A": 0.2156806,
+   "pmic_3V3_SYS_V": 3.307249,
+   "pmic_3V7_WL_SW_A": 0.08392998,
+   "pmic_3V7_WL_SW_V": 3.658018,
+   "pmic_BATT_V": 0.0051282,
+   "pmic_DDR_VDD2_A": 0.09076149,
+   "pmic_DDR_VDD2_V": 1.108424,
+   "pmic_DDR_VDDQ_A": 0.0078432,
+   "pmic_DDR_VDDQ_V": 0.6065928,
+   "pmic_EXT5V_V": 4.76504,
+   "pmic_HDMI_A": 0.0059829,
+   "pmic_HDMI_V": 4.7637,
+   "pmic_VDD_CORE_A": 2.00925,
+   "pmic_VDD_CORE_V": 0.7220506,
+   "rail50": 4.762125,
+   "uptime_seconds": 2009
+  },
+  "/getEMSMin": {
+   "ap0_rx_bytes": 23026108,
+   "ap0_tx_bytes": 139711490,
+   "clouduploaded": 1,
+   "cpu_load_15m": 0.47,
+   "cpu_load_1m": 0.11,
+   "cpu_load_5m": 0.26,
+   "cpu_temp_c": 54.55,
+   "eth0_rx_bytes": 488446530,
+   "eth0_tx_bytes": 48047284,
+   "free_ram_kb": 617280,
+   "gpu_temp_c": 53.8,
+   "oilprobe": 0.000734375,
+   "pmic_0V8_AON_A": 0.00360195,
+   "pmic_0V8_AON_V": 0.7991202,
+   "pmic_0V8_SW_A": 0.3571904,
+   "pmic_0V8_SW_V": 0.7967025,
+   "pmic_1V1_SYS_A": 0.208849,
+   "pmic_1V1_SYS_V": 1.099266,
+   "pmic_1V8_SYS_A": 0.2430066,
+   "pmic_1V8_SYS_V": 1.789009,
+   "pmic_3V3_ADC_A": 0.00018315,
+   "pmic_3V3_ADC_V": 3.30952,
+   "pmic_3V3_DAC_A": 6.105e-05,
+   "pmic_3V3_DAC_V": 3.306773,
+   "pmic_3V3_SYS_A": 0.1756674,
+   "pmic_3V3_SYS_V": 3.301682,
+   "pmic_3V7_WL_SW_A": 0.05953173,
+   "pmic_3V7_WL_SW_V": 3.58007,
+   "pmic_BATT_V": 0.0042735,
+   "pmic_DDR_VDD2_A": 0.00780744,
+   "pmic_DDR_VDD2_V": 1.101464,
+   "pmic_DDR_VDDQ_A": 0,
+   "pmic_DDR_VDDQ_V": 0.5992668,
+   "pmic_EXT5V_V": 4.7369,
+   "pmic_HDMI_A": 0.0045177,
+   "pmic_HDMI_V": 4.73288,
+   "pmic_VDD_CORE_A": 1.08053,
+   "pmic_VDD_CORE_V": 0.717484,
+   "rail50": 4.7109375,
+   "uptime_seconds": 1494
+  },
+  "/getRegion": {
+   "IsSet": true,
+   "Region": "EU"
+  },
+  "/getSatellites": {
+   "G10": {
+    "Azimuth": 288,
+    "Elevation": 13,
+    "InSolution": true,
+    "SatelliteID": "G10",
+    "SatelliteNMEA": 10,
+    "Signal": 23,
+    "TimeLastSeen": "0001-01-01T00:08:47.7Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.7Z",
+    "Type": 1
+   },
+   "G11": {
+    "Azimuth": 131,
+    "Elevation": 0,
+    "InSolution": false,
+    "SatelliteID": "G11",
+    "SatelliteNMEA": 11,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:00:00Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.7Z",
+    "Type": 1
+   },
+   "G12": {
+    "Azimuth": 256,
+    "Elevation": 59,
+    "InSolution": true,
+    "SatelliteID": "G12",
+    "SatelliteNMEA": 12,
+    "Signal": 31,
+    "TimeLastSeen": "0001-01-01T00:08:47.7Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.7Z",
+    "Type": 1
+   },
+   "G13": {
+    "Azimuth": 269,
+    "Elevation": 64,
+    "InSolution": true,
+    "SatelliteID": "G13",
+    "SatelliteNMEA": 13,
+    "Signal": 31,
+    "TimeLastSeen": "0001-01-01T00:08:47.71Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G15": {
+    "Azimuth": 191,
+    "Elevation": 32,
+    "InSolution": true,
+    "SatelliteID": "G15",
+    "SatelliteNMEA": 15,
+    "Signal": 39,
+    "TimeLastSeen": "0001-01-01T00:08:47.71Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G17": {
+    "Azimuth": 42,
+    "Elevation": 18,
+    "InSolution": false,
+    "SatelliteID": "G17",
+    "SatelliteNMEA": 17,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:08:41.71Z",
+    "TimeLastSolution": "0001-01-01T00:08:19.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G19": {
+    "Azimuth": 69,
+    "Elevation": 44,
+    "InSolution": false,
+    "SatelliteID": "G19",
+    "SatelliteNMEA": 19,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:08:45.21Z",
+    "TimeLastSolution": "0001-01-01T00:08:45.19Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G20": {
+    "Azimuth": 166,
+    "Elevation": 13,
+    "InSolution": true,
+    "SatelliteID": "G20",
+    "SatelliteNMEA": 20,
+    "Signal": 36,
+    "TimeLastSeen": "0001-01-01T00:08:47.71Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G22": {
+    "Azimuth": 59,
+    "Elevation": 9,
+    "InSolution": true,
+    "SatelliteID": "G22",
+    "SatelliteNMEA": 22,
+    "Signal": 26,
+    "TimeLastSeen": "0001-01-01T00:08:47.71Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G23": {
+    "Azimuth": 257,
+    "Elevation": 8,
+    "InSolution": true,
+    "SatelliteID": "G23",
+    "SatelliteNMEA": 23,
+    "Signal": 37,
+    "TimeLastSeen": "0001-01-01T00:08:47.71Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G24": {
+    "Azimuth": 81,
+    "Elevation": 82,
+    "InSolution": false,
+    "SatelliteID": "G24",
+    "SatelliteNMEA": 24,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:07:43.22Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.71Z",
+    "Type": 1
+   },
+   "G25": {
+    "Azimuth": 252,
+    "Elevation": 24,
+    "InSolution": true,
+    "SatelliteID": "G25",
+    "SatelliteNMEA": 25,
+    "Signal": 41,
+    "TimeLastSeen": "0001-01-01T00:08:47.72Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.69Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 1
+   },
+   "G32": {
+    "Azimuth": 322,
+    "Elevation": 12,
+    "InSolution": false,
+    "SatelliteID": "G32",
+    "SatelliteNMEA": 32,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:00:35.72Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 1
+   },
+   "G6": {
+    "Azimuth": 99,
+    "Elevation": 9,
+    "InSolution": false,
+    "SatelliteID": "G6",
+    "SatelliteNMEA": 6,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:01:14.2Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.7Z",
+    "Type": 1
+   },
+   "R1": {
+    "Azimuth": 328,
+    "Elevation": 23,
+    "InSolution": false,
+    "SatelliteID": "R1",
+    "SatelliteNMEA": 65,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:02:25.73Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 2
+   },
+   "R10": {
+    "Azimuth": 319,
+    "Elevation": 60,
+    "InSolution": false,
+    "SatelliteID": "R10",
+    "SatelliteNMEA": 74,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:07:27.73Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.73Z",
+    "Type": 2
+   },
+   "R11": {
+    "Azimuth": 271,
+    "Elevation": 19,
+    "InSolution": true,
+    "SatelliteID": "R11",
+    "SatelliteNMEA": 75,
+    "Signal": 40,
+    "TimeLastSeen": "0001-01-01T00:08:47.73Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.7Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.73Z",
+    "Type": 2
+   },
+   "R18": {
+    "Azimuth": 25,
+    "Elevation": 14,
+    "InSolution": true,
+    "SatelliteID": "R18",
+    "SatelliteNMEA": 82,
+    "Signal": 23,
+    "TimeLastSeen": "0001-01-01T00:08:47.73Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.7Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.73Z",
+    "Type": 2
+   },
+   "R19": {
+    "Azimuth": 79,
+    "Elevation": 28,
+    "InSolution": false,
+    "SatelliteID": "R19",
+    "SatelliteNMEA": 83,
+    "Signal": 18,
+    "TimeLastSeen": "0001-01-01T00:08:47.73Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.73Z",
+    "Type": 2
+   },
+   "R20": {
+    "Azimuth": 133,
+    "Elevation": 12,
+    "InSolution": true,
+    "SatelliteID": "R20",
+    "SatelliteNMEA": 84,
+    "Signal": 31,
+    "TimeLastSeen": "0001-01-01T00:08:47.73Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.7Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.73Z",
+    "Type": 2
+   },
+   "R7": {
+    "Azimuth": 200,
+    "Elevation": 29,
+    "InSolution": true,
+    "SatelliteID": "R7",
+    "SatelliteNMEA": 71,
+    "Signal": 31,
+    "TimeLastSeen": "0001-01-01T00:08:47.72Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.7Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 2
+   },
+   "R8": {
+    "Azimuth": 270,
+    "Elevation": 53,
+    "InSolution": false,
+    "SatelliteID": "R8",
+    "SatelliteNMEA": 72,
+    "Signal": 23,
+    "TimeLastSeen": "0001-01-01T00:08:47.72Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 2
+   },
+   "R9": {
+    "Azimuth": 49,
+    "Elevation": 44,
+    "InSolution": false,
+    "SatelliteID": "R9",
+    "SatelliteNMEA": 73,
+    "Signal": 21,
+    "TimeLastSeen": "0001-01-01T00:08:47.72Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 2
+   },
+   "S121": {
+    "Azimuth": 204,
+    "Elevation": 37,
+    "InSolution": true,
+    "SatelliteID": "S121",
+    "SatelliteNMEA": 34,
+    "Signal": 37,
+    "TimeLastSeen": "0001-01-01T00:08:47.72Z",
+    "TimeLastSolution": "0001-01-01T00:08:47.72Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 10
+   },
+   "S136": {
+    "Azimuth": 191,
+    "Elevation": 40,
+    "InSolution": false,
+    "SatelliteID": "S136",
+    "SatelliteNMEA": 49,
+    "Signal": -99,
+    "TimeLastSeen": "0001-01-01T00:00:00Z",
+    "TimeLastSolution": "0001-01-01T00:00:00Z",
+    "TimeLastTracked": "0001-01-01T00:08:47.72Z",
+    "Type": 10
+   }
+  },
+  "/getSettings": {
+   "AHRSLog": false,
+   "AIS_Enabled": false,
+   "APRS_Enabled": false,
+   "AltitudeOffset": 0,
+   "Audio_Enabled": false,
+   "AutopilotUdp_Enabled": true,
+   "AutopilotUdp_Port": 1234,
+   "Autopilot_Enabled": true,
+   "Autopilot_HomeWaypoint": {
+    "Cmt": "Home",
+    "Ele": 0,
+    "Lat": 41.952843,
+    "Lon": 12.50197,
+    "Status": 0
+   },
+   "BMP_Sensor_Enabled": true,
+   "MS4525DO_Enabled": true,
+   "BleOutputs": [
+    {
+     "Capability": 8,
+     "Characteristic": {},
+     "UUIDGatt": "FFE1",
+     "UUIDService": "FFE0"
+    },
+    {
+     "Capability": 8,
+     "Characteristic": {},
+     "UUIDGatt": "6E400003-B5A3-F393-E0A9-E50E24DCCA9E",
+     "UUIDService": "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+    }
+   ],
+   "BleParser_Enabled": true,
+   "C": [
+    0.3081,
+    -0.011699999999999999,
+    1.0101
+   ],
+   "Camera_Enabled": true,
+   "Cameras": [
+    {
+     "Name": "Windy",
+     "Type": 1,
+     "Url": "http://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=default&metricTemp=default&metricWind=default&zoom=5&overlay=wind&product=ecmwf&level=surface&lat=43.111&lon=12.398"
+    },
+    {
+     "Name": "Meteo",
+     "Type": 1,
+     "Url": "https://radar.wo-cloud.com/pwa/?zoom=5&placemark=41.8919,12.5113&layer=WetterRadar&loop=true&period=periodPrognose24h&center=41.88,12.48&tz=Europe/Rome&tf=HH:mm&windunit=kmh&lang=it"
+    },
+    {
+     "Name": "Aircraft",
+     "Type": 1,
+     "Url": "http://192.168.10.245/video/livemb.asp"
+    },
+    {
+     "Name": "LIAF - Foligno",
+     "Type": 0,
+     "Url": "https://www.meteofoligno.it/aeroporto/webcam/webcam.php"
+    }
+   ],
+   "Charts_Enabled": true,
+   "ClearLogOnStart": false,
+   "D": [
+    -6.4,
+    0.5565217391304348,
+    -0.5565217391304348
+   ],
+   "DEBUG": false,
+   "DarkMode": true,
+   "DeveloperMode": true,
+   "DisplayTrafficSource": false,
+   "Dump1090Gain": 37.2,
+   "EMS_Enabled": true,
+   "ES_Enabled": true,
+   "EstimateBearinglessDist": false,
+   "FlarmSerialInBaud": 38400,
+   "FlarmSerialInDevice": "/dev/ttyACM1",
+   "GLimits": "-3 6",
+   "GPS_Enabled": true,
+   "GpsManualChip": "ublox",
+   "GpsManualConfig": false,
+   "GpsManualDevice": "/dev/ttyAMA0",
+   "GpsManualTargetBaud": 115200,
+   "IMUMapping": [
+    -1,
+    0
+   ],
+   "IMU_Sensor_Enabled": true,
+   "Keypad_Enabled": false,
+   "MagAxisMappingX": [
+    0,
+    -1,
+    0
+   ],
+   "MagAxisMappingY": [
+    1,
+    0,
+    0
+   ],
+   "MagAxisMappingZ": [
+    0,
+    0,
+    1
+   ],
+   "MagCalibration": {
+    "Calibrating": false,
+    "Heading": 0,
+    "MagMaxX": 850,
+    "MagMaxY": 770,
+    "MagMaxZ": -1000,
+    "MagMinX": -1400,
+    "MagMinY": -1010,
+    "MagMinZ": -1778,
+    "Offset": 0,
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+   },
+   "MagRollPitchInterference": [
+    -1,
+    1
+   ],
+   "MagRollPitchOffset": [
+    20,
+    0
+   ],
+   "MagSensorQuaternion": [
+    -0.6987591141922346,
+    0.10023097892872197,
+    -0.10833143741925846,
+    0.6999669641225585
+   ],
+   "NetworkOutputs": [
+    {
+     "Capability": 5,
+     "Conn": null,
+     "Ip": "",
+     "LastPingResponse": "0001-01-01T00:00:00Z",
+     "LastPongResponse": "0001-01-01T00:00:00Z",
+     "LastUnreachable": "0001-01-01T00:00:00Z",
+     "Port": 4000,
+     "SleepFlag": false
+    },
+    {
+     "Capability": 8,
+     "Conn": null,
+     "Ip": "",
+     "LastPingResponse": "0001-01-01T00:00:00Z",
+     "LastPongResponse": "0001-01-01T00:00:00Z",
+     "LastUnreachable": "0001-01-01T00:00:00Z",
+     "Port": 2000,
+     "SleepFlag": false
+    },
+    {
+     "Capability": 18,
+     "Conn": null,
+     "Ip": "",
+     "LastPingResponse": "0001-01-01T00:00:00Z",
+     "LastPongResponse": "0001-01-01T00:00:00Z",
+     "LastUnreachable": "0001-01-01T00:00:00Z",
+     "Port": 49002,
+     "SleepFlag": false
+    }
+   ],
+   "NoSleep": false,
+   "OGNAcftType": 0,
+   "OGNAddr": "",
+   "OGNAddrType": 0,
+   "OGNI2CTXEnabled": false,
+   "OGNPilot": "",
+   "OGNReg": "",
+   "OGNTxPower": 0,
+   "OGN_Enabled": false,
+   "OwnshipModeS": "300A61,D885A8",
+   "PPM": 0,
+   "PWMDutyMin": 0,
+   "PersistentLogging": false,
+   "Ping_Enabled": false,
+   "Pong_Enabled": false,
+   "RadarLimits": 50000,
+   "RadarRange": 40,
+   "Radio": [
+    {
+     "Driver": "SERIAL",
+     "Dual": true,
+     "Enabled": true,
+     "FrequencyActive": "130.000",
+     "FrequencyStandby": "119.555",
+     "LabelActive": "130Mhz Mountain",
+     "LabelStandby": "Foligno Airfield",
+     "Name": "KRT2",
+     "Path": "/dev/radio0",
+     "SquelchLevel": 0,
+     "VolumeLevel": 0
+    }
+   ],
+   "Radio_Enabled": true,
+   "RegionSelected": 2,
+   "ReplayLog": true,
+   "ReplayLogPath": "/var/log",
+   "SensorQuaternion": [
+    0.0008540788764084712,
+    0.14747589890389523,
+    -0.005727889129517793,
+    0.989048695022907
+   ],
+   "SerialOutputs": {
+    "/dev/serialout_nmea0": {
+     "Baud": 9600,
+     "Capability": 8,
+     "DeviceString": "/dev/serialout_nmea0"
+    },
+    "/dev/serialout_nmea1": {
+     "Baud": 115200,
+     "Capability": 8,
+     "DeviceString": "/dev/serialout_nmea1"
+    }
+   },
+   "StaticIps": [],
+   "SwitchBoard_Enabled": true,
+   "Switches": [
+    {
+     "EpochFinish": 1761806727,
+     "EpochStart": 1761806726,
+     "Name": "DSP OFF",
+     "Status": 2,
+     "Type": 2,
+     "Uri": "su pi -c /home/pi/off.sh",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "DSP ON",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "sudo su pi -c /home/pi/on.sh",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "CON BT",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "sudo nmcli connection up BTPAN",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "VOL 50%",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "amixer sset Speaker 50%",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "VOL 75%",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "amixer sset Speaker 75%",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "VOL MAX",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "amixer sset Speaker 100%",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "PWR OFF",
+     "Status": 2,
+     "Type": 2,
+     "Uri": "/usr/sbin/halt",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "CON BT",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "sudo nmcli connection up BTPAN",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "PWR RBT",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "/usr/sbin/reboot",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "ACC CGE",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "curl -X POST http://localhost/cageAHRS",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "GYR CGE",
+     "Status": 0,
+     "Type": 2,
+     "Uri": "curl -X POST http://localhost/calibrateAHRS",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "AUD ON",
+     "Status": 0,
+     "Type": 5,
+     "Uri": "AUDIO_STATUS",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "AUD GMT",
+     "Status": 0,
+     "Type": 5,
+     "Uri": "AUDIO_STATUS_GMETER",
+     "UriStatus": ""
+    },
+    {
+     "EpochFinish": 0,
+     "EpochStart": 0,
+     "Name": "AUD ALM",
+     "Status": 0,
+     "Type": 5,
+     "Uri": "AUDIO_STATUS_ALARMS",
+     "UriStatus": ""
+    }
+   ],
+   "TraceLog": false,
+   "UAT_Enabled": false,
+   "WatchList": "",
+   "WiFiChannel": 1,
+   "WiFiClientNetworks": [],
+   "WiFiCountry": "",
+   "WiFiDirectPin": "",
+   "WiFiIPAddress": "192.168.10.1",
+   "WiFiInternetPassThroughEnabled": false,
+   "WiFiMode": 0,
+   "WiFiPassphrase": "",
+   "WiFiSSID": "Stratux",
+   "WiFiSecurityEnabled": false
+  },
+  "/getSituation": {
+   "AHRSAccX": 0.12869999999999998,
+   "AHRSAccY": -0.0897,
+   "AHRSAccZ": 0.8696999999999999,
+   "AHRSGLoad": 0.825473084389337,
+   "AHRSGLoadMax": 0.8275680732207764,
+   "AHRSGLoadMin": 0.8217336437578623,
+   "AHRSGyroHeading": 3276.7,
+   "AHRSGyroX": -6.191304347826087,
+   "AHRSGyroY": -0.9043478260869565,
+   "AHRSGyroZ": -0.34782608695652173,
+   "AHRSLastAttitudeTime": "0001-01-01T00:08:44.76Z",
+   "AHRSMagHeading": 0.3878812575394565,
+   "AHRSPitch": 5.170942192775191,
+   "AHRSRoll": 5.0578581542239665,
+   "AHRSSlipSkid": -5.305149716468503,
+   "AHRSStatus": 7,
+   "AHRSTemperature": 0,
+   "AHRSTurnRate": 3276.7,
+   "BaroGasResistance": 0,
+   "BaroHumidity": 0,
+   "BaroLastMeasurementTime": "0001-01-01T00:08:44.71Z",
+   "BaroPpm": 0,
+   "BaroPressureAltitude": 546.2417,
+   "BaroSourceType": 1,
+   "BaroTemperature": 35.11,
+   "BaroVerticalSpeed": -1.5429937,
+   "GPSAltitudeMSL": 762.7953,
+   "GPSFixQuality": 2,
+   "GPSGeoidSep": 145.01314,
+   "GPSGroundSpeed": 0.15600000321865082,
+   "GPSHeightAboveEllipsoid": 907.8084,
+   "GPSHorizontalAccuracy": 2.376973,
+   "GPSLastAccuracyTime": "0001-01-01T00:08:44.79Z",
+   "GPSLastFixLocalTime": "0001-01-01T00:08:44.78Z",
+   "GPSLastFixSinceMidnightUTC": 63001.6,
+   "GPSLastGPSTimeStratuxTime": "0001-01-01T00:08:44.77Z",
+   "GPSLastGroundTrackTime": "0001-01-01T00:08:44.77Z",
+   "GPSLastValidNMEAMessage": "$GNGST,173001.60,35,,,,0.93,0.74,1.4*41",
+   "GPSLastValidNMEAMessageTime": "0001-01-01T00:08:44.79Z",
+   "GPSLatitude": 43.104656,
+   "GPSLongitude": 12.2511215,
+   "GPSNACp": 11,
+   "GPSPositionSampleRate": 10.001048767697954,
+   "GPSSatellites": 14,
+   "GPSSatellitesSeen": 17,
+   "GPSSatellitesTracked": 25,
+   "GPSTime": "2026-09-12T17:30:01.68Z",
+   "GPSTrueCourse": 0,
+   "GPSTurnRate": 0,
+   "GPSVerticalAccuracy": 2.8,
+   "GPSVerticalSpeed": 0,
+   "Magnetometer": {
+    "Calibrating": false,
+    "Heading": 0.3878812575394565,
+    "MagMaxX": 850,
+    "MagMaxY": 770,
+    "MagMaxZ": -1000,
+    "MagMinX": -1400,
+    "MagMinY": -1010,
+    "MagMinZ": -1778,
+    "Offset": 0,
+    "X": -494.39433311814116,
+    "Y": 336.17638839282694,
+    "Z": -514.0974470054049
+   }
+  },
+  "/getStatus": {
+   "AHRS_LogFiles_Size": 0,
+   "AIS_connected": false,
+   "AIS_messages_last_minute": 0,
+   "AIS_messages_max": 0,
+   "AIS_messages_total": 0,
+   "APRS_connected": false,
+   "AutopilotUDPReceivingMessages": 0,
+   "BMPConnected": true,
+   "Build": "6e608922a1f0749572cdbb5000058f856c580e4c",
+   "CPUTemp": 55.1,
+   "CPUTempMax": 57.85,
+   "CPUTempMin": 53.45,
+   "Connected_Users": 12,
+   "Devices": 2,
+   "DiskBytesFree": 17756848128,
+   "ES_messages_last_minute": 247,
+   "ES_messages_max": 247,
+   "ES_messages_total": 371,
+   "ES_traffic_targets_tracking": 1,
+   "Errors": [
+    "System uptime 1495 seconds. Daemon was restarted.\n"
+   ],
+   "FLARM_In_connected": true,
+   "GPS_NetworkRemoteIp": "",
+   "GPS_connected": true,
+   "GPS_detected_type": 24,
+   "GPS_position_accuracy": 2.405078,
+   "GPS_satellites_locked": 14,
+   "GPS_satellites_seen": 17,
+   "GPS_satellites_tracked": 25,
+   "GPS_solution": "3D GPS + SBAS",
+   "HardwareBuild": "RB",
+   "IMUConnected": true,
+   "Logfile_Size": 6945182,
+   "NetworkDataBytesSent": 3312741,
+   "NetworkDataBytesSentLastSec": 6914,
+   "NetworkDataMessagesSent": 100565,
+   "NetworkDataMessagesSentLastSec": 206,
+   "NightMode": false,
+   "OGNPrevRandomAddr": "",
+   "OGN_connected": false,
+   "OGN_gain_db": 0,
+   "OGN_messages_last_minute": 0,
+   "OGN_messages_max": 0,
+   "OGN_messages_total": 0,
+   "OGN_noise_db": 0,
+   "OGN_tx_enabled": false,
+   "Ping_connected": false,
+   "Pong_Heartbeats": 0,
+   "Pong_connected": false,
+   "UATRadio_connected": false,
+   "UAT_METAR_total": 0,
+   "UAT_NEXRAD_total": 0,
+   "UAT_NOTAM_total": 0,
+   "UAT_OTHER_total": 0,
+   "UAT_PIREP_total": 0,
+   "UAT_SIGMET_total": 0,
+   "UAT_TAF_total": 0,
+   "UAT_messages_last_minute": 0,
+   "UAT_messages_max": 0,
+   "UAT_messages_total": 0,
+   "UAT_traffic_targets_tracking": 0,
+   "Uptime": 524000,
+   "UptimeClock": "0001-01-01T00:08:44Z",
+   "Version": "2.1.1"
+  },
+  "/getTowers": {},
+  "/getTraffic": [
+   {
+    "Addr_type": 0,
+    "Age": 14.52,
+    "AgeExtrapolation": 0.75,
+    "AgeLastAlt": 13.31,
+    "Alt": 34000,
+    "AltIsGNSS": false,
+    "Alt_fix": 34000,
+    "Bearing": 175.3362110842594,
+    "BearingDist_valid": true,
+    "Distance": 49308.77172768313,
+    "DistanceEstimated": 155581.15174086668,
+    "DistanceEstimatedLastTs": "2026-09-12T17:29:59.991Z",
+    "Emitter_category": 3,
+    "ExtrapolatedPosition": true,
+    "GnssDiffFromBaroAlt": 1375,
+    "Icao_addr": 5055312,
+    "IsStratux": false,
+    "Last_GnssDiff": "0001-01-01T00:08:43.13Z",
+    "Last_GnssDiffAlt": 34000,
+    "Last_alt": "0001-01-01T00:08:33.69Z",
+    "Last_extrapolation": "0001-01-01T00:08:46.25Z",
+    "Last_seen": "0001-01-01T00:08:32.48Z",
+    "Last_source": 1,
+    "Last_speed": "0001-01-01T00:08:33.69Z",
+    "Lat": 42.662663,
+    "Lat_fix": 42.640503,
+    "Lng": 12.300152,
+    "Lng_fix": 12.321229,
+    "NACp": 11,
+    "NIC": 8,
+    "OnGround": false,
+    "Position_valid": true,
+    "PriorityStatus": 0,
+    "ReceivedMsgs": 247,
+    "Reg": "",
+    "SignalLevel": -34.17936637088291,
+    "SignalLevelHist": [
+     -34.388986163509436,
+     -34.17936637088291,
+     -35.91760034688151,
+     -36.47817481888638,
+     -35.86700235918748,
+     -37.166987712964506,
+     -37.30487055782084,
+     -38.35647144215563
+    ],
+    "Speed": 424,
+    "Speed_valid": true,
+    "Squawk": 1000,
+    "SurfaceVehicleType": 0,
+    "Tail": "RYR465X",
+    "TargetType": 1,
+    "Timestamp": "2026-09-12T17:29:59.991Z",
+    "Track": 325,
+    "TurnRate": 0,
+    "Vvel": 0
+   }
+  ],
+  "/magnetometer": {
+   "Calibrating": false,
+   "Heading": 0.37685929888850345,
+   "MagMaxX": 850,
+   "MagMaxY": 770,
+   "MagMaxZ": -1000,
+   "MagMinX": -1400,
+   "MagMinY": -1010,
+   "MagMinZ": -1778,
+   "Offset": 0,
+   "X": -494.7483331584741,
+   "Y": 335.6010754529844,
+   "Z": -514.3296856017388
+  },
+  "/playback": [
+   {
+    "Frequency": "",
+    "ModTime": "2026-06-13T19:00:02.295999819+01:00",
+    "Name": "old",
+    "Path": "/playback/old",
+    "Size": 81920,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-08-26T18:50:54.877098285+01:00",
+    "Name": "vr_20260413203842.json",
+    "Path": "/playback/vr_20260413203842.json",
+    "Size": 9022,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-09-05T17:25:06.052153988+01:00",
+    "Name": "vr_20260413203843.json",
+    "Path": "/playback/vr_20260413203843.json",
+    "Size": 30391,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-09-02T18:32:25.002507102+01:00",
+    "Name": "vr_20260413203847.json",
+    "Path": "/playback/vr_20260413203847.json",
+    "Size": 3811,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-06-14T09:25:05.159999907+01:00",
+    "Name": "vr_20260614092243.json",
+    "Path": "/playback/vr_20260614092243.json",
+    "Size": 319,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-06-14T09:53:26.20573672+01:00",
+    "Name": "vr_20260614093234.json",
+    "Path": "/playback/vr_20260614093234.json",
+    "Size": 8124,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-06-14T10:36:45.121286248+01:00",
+    "Name": "vr_20260614101940.json",
+    "Path": "/playback/vr_20260614101940.json",
+    "Size": 3254,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-06-14T11:43:27.186216351+01:00",
+    "Name": "vr_20260614112309.json",
+    "Path": "/playback/vr_20260614112309.json",
+    "Size": 6256,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-07-12T18:39:21.384360447+01:00",
+    "Name": "vr_20260712182725.json",
+    "Path": "/playback/vr_20260712182725.json",
+    "Size": 518,
+    "Source": "RTL"
+   },
+   {
+    "Frequency": "",
+    "ModTime": "2026-09-05T09:08:01.207997592+01:00",
+    "Name": "vr_20260905080058.json",
+    "Path": "/playback/vr_20260905080058.json",
+    "Size": 41895,
+    "Source": "RTL"
+   }
+  ],
+  "/radio": [
+   {
+    "Driver": "SERIAL",
+    "Dual": true,
+    "Enabled": true,
+    "FrequencyActive": "130.000",
+    "FrequencyStandby": "119.555",
+    "LabelActive": "130Mhz Mountain",
+    "LabelStandby": "Foligno Airfield",
+    "Name": "KRT2",
+    "Path": "/dev/radio0",
+    "SquelchLevel": 0,
+    "VolumeLevel": 0
+   }
+  ],
+  "/resources": [
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2025-11-05T19:51:50Z",
+    "Name": "NZAC 20252026 Sports Known Black.png",
+    "Path": "/resources/NZAC 20252026 Sports Known Black.png",
+    "Size": 36991,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2025-11-02T06:43:14.315999827Z",
+    "Name": "SP01.jpg",
+    "Path": "/resources/SP01.jpg",
+    "Size": 60836,
+    "Source": ""
+   },
+   {
+    "Description": "",
+    "Ident": "",
+    "ModTime": "2025-11-05T20:16:54Z",
+    "Name": "ZZ Conversion Table.svg",
+    "Path": "/resources/ZZ Conversion Table.svg",
+    "Size": 77919,
+    "Source": ""
+   }
+  ],
+  "/tiles/tilesets": {
+   "osm.mbtiles": {
+    "bounds": "-180,-85,180,85",
+    "format": "png",
+    "maxzoom": "7",
+    "minzoom": "1",
+    "name": "OSM Low Detail",
+    "type": "baselayer"
+   }
+  },
+  "/timers": [
+   {
+    "CountDown": 1200,
+    "Epoch": 0,
+    "Fired": false,
+    "Status": false
+   },
+   {
+    "CountDown": 1200,
+    "Epoch": 0,
+    "Fired": false,
+    "Status": false
+   },
+   {
+    "CountDown": 0,
+    "Epoch": 0,
+    "Fired": false,
+    "Status": false
+   },
+   {
+    "CountDown": 0,
+    "Epoch": 0,
+    "Fired": false,
+    "Status": false
+   }
+  ],
+  "/updates/available": [
+   {
+    "component": "avionics",
+    "file": "avionics-3-20260511",
+    "installed": -1,
+    "md5sum": "1ca87c987e1d8f95e13b3fddeb8c654f",
+    "size": 12189696,
+    "version": 3
+   },
+   {
+    "component": "cloud",
+    "file": "cloud-2-20260511",
+    "installed": 2,
+    "md5sum": "2c2e22c2eb82e64517bdc62aeebf114c",
+    "size": 4199,
+    "version": 2
+   },
+   {
+    "component": "ems",
+    "file": "ems-3-20260511",
+    "installed": -1,
+    "md5sum": "e1b96bdc08e860e33c1d3f339440b0e3",
+    "size": 19046445,
+    "version": 3
+   },
+   {
+    "component": "voiceia",
+    "file": "voiceia-1-20260512",
+    "installed": -1,
+    "md5sum": "e957439b0e20cea5fdba4e11c67f4cbe",
+    "size": 60129368,
+    "version": 1
+   }
+  ]
+ },
+ "host": "http://192.168.10.1",
+ "skipped": {
+  "/playback": "truncated to 10 of 1106 entries",
+  "/settings/alertsMapping.json": "identical to the repo copy",
+  "/settings/db.airfields.json": "differs from the repo copy but is 159824 bytes; served from web/",
+  "/settings/keypad.json": "identical to the repo copy",
+  "/settings/navigation.json": "identical to the repo copy"
+ }
+}

@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- Control page of the RB-01 simulator, served at /sim/ by rbserver.py.
+     Plain HTML, no dependencies: it only talks to the /sim API. Open the HMI
+     at /RB-01/ in another window and move the sliders. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RB-01 simulator</title>
+<style>
+  body { font: 14px system-ui, sans-serif; margin: 0; padding: 16px; background: #1b1b1b; color: #ddd; }
+  h1 { font-size: 18px; margin: 0 0 12px; }
+  h1 a { color: #6cf; }
+  section { background: #262626; border-radius: 6px; padding: 12px 16px; margin-bottom: 12px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: #9a9a9a; margin: 0 0 8px; }
+  .row { display: grid; grid-template-columns: 9em 1fr 5em; gap: 10px; align-items: center; margin: 4px 0; }
+  input[type=range] { width: 100%; }
+  output { text-align: right; font-variant-numeric: tabular-nums; }
+  button { background: #3a6ea5; color: #fff; border: 0; border-radius: 4px; padding: 6px 12px; margin: 2px 4px 2px 0; cursor: pointer; }
+  button.alt { background: #555; }
+  input[type=text], input[type=number] { background: #111; color: #ddd; border: 1px solid #444; border-radius: 4px; padding: 5px; }
+  #status { font-family: ui-monospace, monospace; white-space: pre; color: #9c9; }
+  .note { color: #888; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>RB-01 simulator <span class="note">- open the display at <a href="/RB-01/" target="_blank">/RB-01/</a></span></h1>
+
+<section>
+  <h2>Situation</h2>
+  <div id="sliders"></div>
+  <button class="alt" onclick="level()">Wings level</button>
+  <span class="note">Each move POSTs /sim/situation with just that field; the rest of the situation is kept.</span>
+</section>
+
+<section>
+  <h2>Recorded flight</h2>
+  <div class="row"><label for="log">log</label><input type="text" id="log" list="logs" placeholder="flightlog-sample (default) - pick one from test-data/, or type a path"><span></span></div>
+  <datalist id="logs"></datalist>
+  <div class="row"><label for="start">start at (s)</label><input type="number" id="start" value="0" min="0"><span></span></div>
+  <div class="row"><label for="speed">speed</label><input type="number" id="speed" value="1" min="0" step="0.5"><span class="note">0 = step</span></div>
+  <button onclick="replay()">Play</button>
+  <button class="alt" onclick="post('/sim/replay/stop', {})">Stop</button>
+  <button class="alt" onclick="post('/sim/replay/step', {seconds: 1})">+1 s</button>
+  <button class="alt" onclick="post('/sim/replay/step', {seconds: 10})">+10 s</button>
+</section>
+
+<section>
+  <h2>Traffic</h2>
+  <button onclick="target()">Add a target 2 nm ahead</button>
+  <span class="note">POST /sim/push/traffic with a TrafficInfo; the daemon would re-send it every second, so the plate ages it out after a while.</span>
+</section>
+
+<section>
+  <h2>State</h2>
+  <div id="status">-</div>
+</section>
+
+<script>
+const FIELDS = [
+  ["AHRSPitch",        -30,   30, 0.5, "pitch °"],
+  ["AHRSRoll",         -60,   60, 0.5, "roll °"],
+  ["AHRSGyroHeading",    0,  359, 1,   "heading °"],
+  ["GPSTrueCourse",      0,  359, 1,   "track °"],
+  ["GPSGroundSpeed",     0,  250, 1,   "ground speed kt"],
+  ["GPSAltitudeMSL",     0, 15000, 50, "altitude ft"],
+  ["BaroPressureAltitude", 0, 15000, 50, "baro alt ft"],
+  ["GPSVerticalSpeed", -2000, 2000, 50, "vertical speed"],
+  ["AHRSSlipSkid",     -10,   10, 0.5, "slip/skid"],
+  ["AHRSGLoad",         -2,    5, 0.1, "g load"],
+];
+
+async function post(path, body) {
+  const r = await fetch(path, {method: "POST", body: JSON.stringify(body)});
+  const j = await r.json();
+  if (!r.ok) console.warn(path, j);
+  refresh();
+  return j;
+}
+
+function slider([key, min, max, step, label], value) {
+  const row = document.createElement("div"); row.className = "row";
+  row.innerHTML = `<label for="${key}">${label}</label>
+    <input type="range" id="${key}" min="${min}" max="${max}" step="${step}" value="${value}">
+    <output for="${key}">${value}</output>`;
+  const input = row.querySelector("input"), out = row.querySelector("output");
+  input.oninput = () => { out.value = input.value; post("/sim/situation", {[key]: parseFloat(input.value)}); };
+  return row;
+}
+
+function level() {
+  post("/sim/situation", {AHRSPitch: 0, AHRSRoll: 0, AHRSSlipSkid: 0, AHRSGLoad: 1, GPSVerticalSpeed: 0});
+  sync();
+}
+
+function replay() {
+  const body = {start: parseFloat(start.value) || 0, speed: parseFloat(speed.value)};
+  if (log.value.trim()) body.log = log.value.trim();
+  post("/sim/replay", body);
+}
+
+async function target() {
+  const s = (await (await fetch("/sim")).json()).situation;
+  const trk = (s.GPSTrueCourse || 0) * Math.PI / 180, d = 2 / 60;      // 2 nm in degrees of latitude
+  post("/sim/push/traffic", {
+    Icao_addr: 0xABCDEF, Tail: "SIM001", Reg: "SIM001", Emitter_category: 1, Addr_type: 0, TargetType: 1,
+    Position_valid: true, Lat: s.GPSLatitude + d * Math.cos(trk),
+    Lng: s.GPSLongitude + d * Math.sin(trk) / Math.cos(s.GPSLatitude * Math.PI / 180),
+    Alt: (s.GPSAltitudeMSL || 0) + 500, Track: s.GPSTrueCourse || 0, Speed: 120, Speed_valid: true, Vvel: 0,
+    Age: 0.5, AgeLastAlt: 0.5, Last_seen: new Date().toISOString(), Timestamp: new Date().toISOString(),
+    BearingDist_valid: true, Bearing: s.GPSTrueCourse || 0, Distance: 3704, Last_source: 1, SignalLevel: -20,
+    Squawk: 7000, OnGround: false, ExtrapolatedPosition: false, IsStratux: false, ReceivedMsgs: 1,
+  });
+}
+
+let syncing = false;
+async function sync() {           // sliders follow the situation (e.g. during a replay)
+  const j = await (await fetch("/sim")).json();
+  for (const f of FIELDS) {
+    const input = document.getElementById(f[0]);
+    if (input && document.activeElement !== input && j.situation[f[0]] !== undefined) {
+      input.value = j.situation[f[0]];
+      input.nextElementSibling.value = Number(j.situation[f[0]]).toFixed(1);
+    }
+  }
+  const rp = j.replay;
+  document.getElementById("status").textContent =
+    (j.upstream ? `proxying the aircraft at ${j.upstream}` + (j.blocked_writes ? ` (${j.blocked_writes} writes blocked)` : "") + "\n" : "") +
+    `traffic targets: ${j.traffic}\n` +
+    (rp ? `replay ${rp.log}\n  t=${rp.position.toFixed(1)} / ${Number(rp.duration).toFixed(0)} s  ${rp.playing ? "playing" : rp.done ? "done" : "paused"}  ${rp.pushed} frames`
+        : "no replay running");
+}
+function refresh() { if (!syncing) { syncing = true; sync().finally(() => syncing = false); } }
+
+(async () => {
+  const j = await (await fetch("/sim")).json();
+  const box = document.getElementById("sliders");
+  for (const f of FIELDS) box.appendChild(slider(f, j.situation[f[0]] ?? 0));
+  sync(); setInterval(refresh, 1000);
+  // the recordings in test-data/, as the picker's suggestions
+  const logs = await (await fetch("/sim/logs")).json();
+  const list = document.getElementById("logs");
+  for (const l of logs) {
+    if (l.error) continue;
+    const o = document.createElement("option");
+    o.value = l.name;
+    o.label = `${Math.round(l.duration)} s, ${l.targets} targets, ${l.started || "no GPS time"}`;
+    list.appendChild(o);
+  }
+})();
+</script>
+</body>
+</html>
