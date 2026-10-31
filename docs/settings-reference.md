@@ -149,7 +149,7 @@ GXAirCom / SoftRF). See [hardware/ogn-ais-receivers.md](hardware/ogn-ais-receive
 | `TraceLog` | bool | *Advanced.* Record every raw input message (NMEA, dump1090, APRS, …) to `/var/log/stratux/*_trace.txt.gz`, replayable through the daemon with `stratuxrun -trace`. |
 | `ReplayLog` | bool | Write the SQLite flight log (`flightlog-<time>.<n>.sqlite` in `ReplayLogPath`, started once GPS has a fix): the broadcast situation/traffic/status/EMS structs, ~1 Hz. Listed by `GET /flightlogs`; replayable through the RB-01 HMI with `test/display/flightlog.py`. Not related to `-replay`, which replays UAT logs. |
 | `ReplayLogPath` | string | Directory for the SQLite flight logs (default `/var/log`; a USB stick or dedicated partition works). |
-| `AHRSLog` | bool | Write AHRS sensor CSV logs (downloadable via `/downloadahrslogs`). |
+| `AHRSLog` | bool | Write AHRS sensor CSV logs (`sensors_<time>.csv`, one row per IMU read, started once GPS has a fix; downloadable via `/downloadahrslogs`). The `Timestamp` column is the wall-clock time of the row, Unix seconds UTC; `T` is the stratux clock. Columns come in no fixed order: read them by header. |
 | `PersistentLogging` | bool | Keep logs across reboots — also makes the filesystem writable (required for dev). |
 | `ClearLogOnStart` | bool | *Advanced.* Wipe the debug log on each boot. |
 | `DeveloperMode` | bool | Additional SDR diagnostics. Enable via `/develmodetoggle` (one-way) or by tapping the version number; disable via `/setSettings`. |
