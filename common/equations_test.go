@@ -244,6 +244,26 @@ func TestCalcAltitude(t *testing.T) {
 	}
 }
 
+// CalcPressure inverts CalcAltitude: 1013.25 hPa at 0 ft, the ISA points
+// above, and a round trip through both within a millifoot from below sea
+// level to the tropopause.
+func TestCalcPressure(t *testing.T) {
+	if p := CalcPressure(0); !near(p, 1013.25, 1e-9) {
+		t.Errorf("CalcPressure(0) = %v; want 1013.25", p)
+	}
+	if p := CalcPressure(10000); !near(p, 696.82, 0.5) {
+		t.Errorf("CalcPressure(10000) = %v; want ~696.82", p)
+	}
+	if p := CalcPressure(36089); !near(p, 226.32, 0.5) {
+		t.Errorf("CalcPressure(36089) = %v; want ~226.32", p)
+	}
+	for alt := -2000.0; alt <= 36000; alt += 500 {
+		if a := CalcAltitude(CalcPressure(alt), 0); !near(a, alt, 1e-3) {
+			t.Errorf("CalcAltitude(CalcPressure(%v)) = %v", alt, a)
+		}
+	}
+}
+
 // CalcIndicatedAirspeed inverts the ISA compressible pitot equation: the
 // impact pressure of Mach M at sea level, P0*((1 + 0.2 M^2)^3.5 - 1), reads
 // back as M*a0 knots; at low speed it agrees with the incompressible

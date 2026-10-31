@@ -15,7 +15,11 @@ vertical picture — baro vertical speed always, and the advisory descent profil
 aircraft's `glide` block — which plain NMEA 0183 has no sentence for; its wire format is
 [pgrmh-format.md](pgrmh-format.md) and its values
 [nmea-navigation-output.md](nmea-navigation-output.md) §5.1 and §6. The golden vectors from
-that format document are the unit tests in `main/autopilot_test.go`. The same NMEA stream is offered four
+that format document are the unit tests in `main/autopilot_test.go`. For a slave display
+(RB-09), the Slave NMEA Display plugin (`main/slavenmeadisplay.go`) adds `$RBATT` (attitude)
+and `$RBAIR` (static pressure, QNH, vertical speed and airspeed), both every
+`SlaveNMEADisplay_SleepMs` (default 1 s, 0 = off); their wire format is
+[slave-nmea-display-format.md](slave-nmea-display-format.md). The same NMEA stream is offered four
 ways:
 
 - **UDP `:2000`** — pushed to DHCP-lease clients (one of the three default `NetworkOutputs`).

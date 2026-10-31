@@ -1845,6 +1845,8 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.Camera_Enabled = val.(bool)
 					case "EMS_Enabled":
 						globalSettings.EMS_Enabled = val.(bool)
+					case "SlaveNMEADisplay_SleepMs":
+						globalSettings.SlaveNMEADisplay_SleepMs = int(val.(float64))
 					case "Charts_Enabled":
 						globalSettings.Charts_Enabled = val.(bool)
 					case "Switches":

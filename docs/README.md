@@ -26,6 +26,8 @@ hardware integration). User-facing how-tos live in the
     (proposed): autopilot NMEA for an external HSI (`$GPRMB`/`$GPBOD`/`$PGRMH` VNAV).
   - [integration/pgrmh-format.md](integration/pgrmh-format.md) — `$PGRMH` wire format:
     fields, encoding, null rules, test vectors, reference encoder.
+  - [integration/slave-nmea-display-format.md](integration/slave-nmea-display-format.md) —
+    `$RBATT`/`$RBAIR`, the attitude and air data RB-01 sends a slave display (RB-09).
 - **[http-api.md](http-api.md)** — the full HTTP + WebSocket JSON API.
 - **[settings-reference.md](settings-reference.md)** — every `stratux.conf` / `/getSettings`
   field.

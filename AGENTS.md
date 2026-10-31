@@ -82,7 +82,9 @@ Notes:
   itself on a fake IMU), `airdata_test.go` (the pitot and baro senders on scripted sensors)
   and `gps_test.go` (the NMEA parser: textbook sentences, all hemispheres, malformed input,
   NACp), `lastposition_test.go` (the startup position: clean and power-cut logs read with
-  nothing written, log order, the Hobbs fallback). The sensor loops run on real tickers, each in a child process (`inChild`), in
+  nothing written, log order, the Hobbs fallback), `slavenmeadisplay_test.go` (the Slave
+  NMEA Display plugin: `$RBATT`/`$RBAIR` for an RB-09, its loop and its setting,
+  `docs/integration/slave-nmea-display-format.md`). The sensor loops run on real tickers, each in a child process (`inChild`), in
   parallel, so `go test ./main/` takes ~15 s. A known, undecided hazard is a test that
   measures it and `t.Skip`s with the numbers, so `go test -v ./main/` lists them. They are
   written requirements-style (one behaviour per test, robustness cases documented) — see

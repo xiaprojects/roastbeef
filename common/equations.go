@@ -343,6 +343,13 @@ func CalcAltitude(press float64, altoffset int) (altitude float64) {
 	return
 }
 
+// CalcPressure is the inverse of CalcAltitude with no offset: the atmospheric
+// pressure (hPa) at a pressure altitude (feet).
+func CalcPressure(altitude float64) (press float64) {
+	press = 1013.25 * math.Pow(1.0-altitude/145366.45, 1/0.190284)
+	return
+}
+
 // CalcIndicatedAirspeed determines the indicated airspeed (knots) from the
 // pitot-static differential pressure (Pa), using the compressible ISA
 // sea-level relation an airspeed indicator is calibrated to:

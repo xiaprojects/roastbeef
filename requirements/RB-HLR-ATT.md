@@ -321,7 +321,8 @@ attitude from the EFB at the moment the pilot has fewest references.
 computed value is the invalid sentinel, independently of the other fields.**
 
 - **Parent:** RB-SYS-ATT-060
-- **Source:** `main/gps.go` `makeAHRSGDL90Report()`, `isAHRSInvalidValue()`
+- **Source:** `main/gps.go` `makeAHRSGDL90Report()`, `isAHRSInvalidValue()`; `main/slavenmeadisplay.go`
+  `makeRBATTString()`, whose yaw field carries the sentinel itself
 - **Verification:** test
 - **Derived:** no
 
@@ -335,7 +336,8 @@ horizon or publish a bad rate.
 unavailable value when any transmitted field holds the invalid sentinel.**
 
 - **Parent:** RB-SYS-ATT-060
-- **Source:** `main/gps.go` `makeAHRSSimReport()` (X-Plane `XATT`, UDP 49002)
+- **Source:** `main/gps.go` `makeAHRSSimReport()` (X-Plane `XATT`, UDP 49002); `main/slavenmeadisplay.go`
+  `makeRBATTString()` (Slave NMEA Display `$RBATT`: roll, pitch, slip and load factor)
 - **Verification:** test
 - **Derived:** no
 

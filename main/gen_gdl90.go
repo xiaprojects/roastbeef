@@ -1282,6 +1282,7 @@ type settings struct {
 	Radio                []RadioStatus // Radio settings with device path
 	Cameras              []cameraModel // Camera Settings
 	EMS_Enabled       	 bool // Engine Monitoring System
+	SlaveNMEADisplay_SleepMs int // Slave NMEA Display: ms between $RBATT/$RBAIR pairs, 0 = not sent; default 1000
 	Keypad_Enabled       bool
 	Charts_Enabled       bool
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
@@ -1390,6 +1391,7 @@ func defaultSettings() {
 	globalSettings.Cameras = make([]cameraModel, 0)
 	globalSettings.SwitchBoard_Enabled = false
 	globalSettings.Switches = make([]switchModel, 0)
+	globalSettings.SlaveNMEADisplay_SleepMs = 1000 // 1 Hz
 	globalSettings.MagCalibration.CalibrationReset()
 	mySituation.Magnetometer.CalibrationReset()
 	// Die orientation unknown for a fresh install: identity, to be set from a
@@ -1777,6 +1779,8 @@ func gracefulShutdown() {
 	switchBoard.ShutdownFunc()
 	// Addons Bridge
 	addonsBridge.ShutdownFunc()
+	// Slave NMEA Display
+	slaveNMEADisplay.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 	log.Printf("gracefulShutdown --> setActLed()")
@@ -1952,6 +1956,8 @@ func main() {
 		ota.InitFunc()
 		// Addons Bridge
 		addonsBridge.InitFunc()
+		// Slave NMEA Display: $RBATT and $RBAIR, with the QNH the HMI posts to the bridge
+		slaveNMEADisplay.InitFunc()
 		pongInit()
 	}
 	initTraffic(isTraceReplayMode)

@@ -44,6 +44,7 @@ See [hardware/sdr-and-bands.md](hardware/sdr-and-bands.md),
 | `SerialOutputs` | map[string]serialConnection | Serial output ports (e.g. EFIS over RS-232/USB). Serializes as `null` when empty. |
 | `BleOutputs` | []bleConnection | Bluetooth LE outputs (FLARM/NMEA over GATT — SoftRF-style `FFE0/FFE1` and Nordic UART profiles). |
 | `StaticIps` | []string | Additional client IPs to always send GDL90 to (beyond DHCP-lease clients). |
+| `SlaveNMEADisplay_SleepMs` | int | Slave NMEA Display (`main/slavenmeadisplay.go`): milliseconds between the `$RBATT`/`$RBAIR` pairs sent on the FLARM/NMEA outputs for a slave display such as an RB-09; `0` sends neither. Default `1000` (1 Hz). Advanced. Format: [slave-nmea-display-format.md](integration/slave-nmea-display-format.md). |
 | `DisplayTrafficSource` | bool | Annotate traffic with its source (UAT/ES/OGN) for debugging. |
 
 ## Wi-Fi / networking
