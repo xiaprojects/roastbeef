@@ -21,13 +21,18 @@ package main
 
 import (
 	"bytes"
+	"encoding/csv"
 	"fmt"
 	"math"
+	"os"
+	"path/filepath"
+	"strconv"
 	"strings"
 	"sync"
 	"testing"
 	"time"
 
+	"github.com/ricochet2200/go-disk-usage/du"
 	"github.com/xiaprojects/goflying/ahrs"
 	"github.com/xiaprojects/roastbeef/common"
 )
@@ -1088,6 +1093,102 @@ func TestAttitudeLoop(t *testing.T) {
 	imu.mu.Unlock()
 	if failed != 51 || !closed {
 		t.Errorf("IMU declared disconnected after %d failed reads, closed %v; want 51, closed", failed, closed)
+	}
+}
+
+// The AHRSLog CSV, from the daemon's own attitude loop on a fake IMU: no file while the
+// GPS has no fix, one file from the fix on, each row stamped with the wall-clock time in
+// a Timestamp column, and the same file carrying on when the fix is lost again.
+//
+// As TestAttitudeLoop, in a child process (inChild), about 3 s.
+func TestAHRSLogStartsWithAGPSFix(t *testing.T) {
+	if !inChild(t) {
+		return
+	}
+	if u := du.NewDiskUsage("/").Usage(); u >= 0.95 {
+		t.Skipf("/ is %.0f%% full: the loop does not log over 95%%", 100*u)
+	}
+	netMutex, avoidLoopBackMutex, avoidLoopBackMap = &sync.Mutex{}, &sync.Mutex{}, make(map[string]string)
+	clientConnections = map[string]connection{}
+	logDirf = t.TempDir()
+
+	globalSettings = settings{IMU_Sensor_Enabled: true, AHRSEngine: "simple", IMUMapping: [2]int{-1, 0}, AHRSLog: true}
+	globalSettings.SensorQuaternion = levelCage(t, axisMount(-1, -2))
+	globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
+	globalSettings.D = [3]float64{2, -1.5, 1}
+	globalSettings.C = accelCorrect([3]float64{0, 0, 1})
+	imu := &loopIMU{f: fakeIMU{g: globalSettings.D, a: [3]float64{0, 0, 1}, m: [3]float64{20, -15, 40}}}
+	myIMUReader = imu
+	globalStatus.IMUConnected = true
+
+	fix := func(quality uint8) {
+		mySituation.muGPS.Lock()
+		globalStatus.GPS_connected = true
+		mySituation.GPSFixQuality, mySituation.GPSHorizontalAccuracy = quality, 5
+		mySituation.GPSLastFixLocalTime = stratuxClock.Time
+		mySituation.muGPS.Unlock()
+	}
+	// rows returns the CSV files written so far and the complete rows of the first.
+	rows := func() (files []string, header []string, recs [][]string) {
+		files, _ = filepath.Glob(filepath.Join(logDirf, "sensors_*.csv"))
+		if len(files) == 0 {
+			return
+		}
+		b, err := os.ReadFile(files[0])
+		if err != nil {
+			t.Fatal(err)
+		}
+		all, err := csv.NewReader(bytes.NewReader(b[:bytes.LastIndexByte(b, '\n')+1])).ReadAll()
+		if err != nil || len(all) == 0 {
+			t.Fatalf("%s: %v %q", files[0], err, b)
+		}
+		return files, all[0], all[1:]
+	}
+
+	go sensorAttitudeSender()
+	imu.wait(t, 20)
+	if files, _, _ := rows(); len(files) != 0 {
+		t.Fatalf("logging without a GPS fix: %v", files)
+	}
+
+	start := time.Now()
+	fix(1)
+	imu.wait(t, 20)
+	files, header, recs := rows()
+	if len(files) != 1 {
+		t.Fatalf("%d CSV files 20 IMU reads after the fix; want 1", len(files))
+	}
+	ts := -1
+	for i, h := range header {
+		if h == "Timestamp" {
+			ts = i
+		}
+	}
+	if ts < 0 {
+		t.Fatalf("no Timestamp column in %v", header)
+	}
+	if len(recs) < 15 {
+		t.Fatalf("%d rows in 20 IMU reads", len(recs))
+	}
+	prev := 0.0
+	for i, r := range recs {
+		v, err := strconv.ParseFloat(r[ts], 64)
+		if err != nil {
+			t.Fatalf("row %d: Timestamp %q: %v", i, r[ts], err)
+		}
+		if when := time.Unix(0, int64(v*1e9)); when.Before(start.Add(-time.Second)) || when.After(time.Now()) {
+			t.Errorf("row %d: Timestamp %s, outside the %s run", i, when.UTC(), start.UTC())
+		}
+		if v <= prev {
+			t.Errorf("row %d: Timestamp %f not after the row before's %f", i, v, prev)
+		}
+		prev = v
+	}
+
+	fix(0)
+	imu.wait(t, 20)
+	if files2, _, recs2 := rows(); len(files2) != 1 || len(recs2) < len(recs)+15 {
+		t.Errorf("after the fix was lost: %d files, %d rows (from %d); want the one file growing", len(files2), len(recs2), len(recs))
 	}
 }
 

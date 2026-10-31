@@ -697,7 +697,11 @@ func sensorAttitudeSender() {
 
 			// Log it to csv for later analysis.
 			if globalSettings.AHRSLog && du.NewDiskUsage("/").Usage() < 0.95 {
-				if analysisLogger == nil {
+				// Start a recording only with a GPS fix: by then the system
+				// clock, which names the file and fills Timestamp, has been set
+				// from the GPS (the Pi has no RTC).  A fix lost later does not
+				// stop it.
+				if analysisLogger == nil && isGPSValid() {
 					analysisFilename := fmt.Sprintf("sensors_%s.csv", time.Now().Format("20060102_150405"))
 					logMap = s.GetLogMap()
 					updateExtraLogging()
@@ -875,6 +879,8 @@ func kalmanMagnetometer(m1, m2, m3, field float64) (x, y, z float64, ok bool) {
 }
 
 func updateExtraLogging() {
+	// Wall-clock time of the row, Unix seconds UTC to the microsecond.
+	logMap["Timestamp"] = float64(time.Now().UnixNano()/1000) / 1e6
 	logMap["GPSNACp"] = float64(mySituation.GPSNACp)
 	logMap["GPSTrueCourse"] = mySituation.GPSTrueCourse
 	logMap["GPSVerticalAccuracy"] = mySituation.GPSVerticalAccuracy
