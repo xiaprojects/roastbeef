@@ -76,7 +76,6 @@ var synth;          // global speechSynthesis variable
 var AltDiffThreshold;         // in 100 feet display value
 var OldAltDiffThreshold = 0;  // in 100 feet display value
 */
-//var sound_alert = new Audio('alert.wav');
 
 function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 	//  basics();
