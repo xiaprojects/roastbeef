@@ -103,13 +103,16 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
 
   $scope.updateSituation = (situation) => {
     const newValue = Number.parseFloat(situation.AHRSGLoad).toFixed(1);
-    if($scope.Speed.speed == newValue){
+    const newLabel = Number.parseFloat(situation.AHRSGLoadMax).toFixed(1)+String.fromCodePoint(9650);
+    const newUnit = Number.parseFloat(situation.AHRSGLoadMin).toFixed(1)+String.fromCodePoint(9660);
+    // Max/Min also change alone, after a reset at steady G
+    if($scope.Speed.speed == newValue && $scope.Speed.label == newLabel && $scope.Speed.unit == newUnit){
       return;
     }
 
-    $scope.Speed.speed = Number.parseFloat(situation.AHRSGLoad).toFixed(1);
-    $scope.Speed.label = Number.parseFloat(situation.AHRSGLoadMax).toFixed(1)+String.fromCodePoint(9650);
-    $scope.Speed.unit = Number.parseFloat(situation.AHRSGLoadMin).toFixed(1)+String.fromCodePoint(9660);
+    $scope.Speed.speed = newValue;
+    $scope.Speed.label = newLabel;
+    $scope.Speed.unit = newUnit;
 
     const arcsArc = ($scope.Speed.endSpeedDegree - $scope.Speed.startSpeedDegree);
     const speedIncrement = ($scope.Speed.maxSpeed - $scope.Speed.minSpeed);
@@ -124,6 +127,17 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
       window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
     }
 
+  };
+
+  $scope.fabClick = (direction, item, browserEvent) => {
+    if (direction == "C") {
+      // Reset Max-Min
+      $http.post(URL_GMETER_RESET).then(function (response) {
+        // do nothing
+      }, function (response) {
+        // do nothing
+      });
+    }
   };
 
   if(window.situation !== undefined) {
