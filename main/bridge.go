@@ -64,6 +64,26 @@ func (bridgeInstance *BridgeStratuxPlugin) InitFunc() bool {
 	return true
 }
 
+// setFloats is what a POST to /bridge/float does, for the code inside this daemon:
+// store the values, log the ones that changed and, if any did, send the whole map to
+// every /bridge/float/ws client. Unchanged values reach nobody, so repeating is harmless.
+func (bridgeInstance *BridgeStratuxPlugin) setFloats(values map[string]float32) {
+	bridgeInstance.bridgeDataMutex.Lock()
+	defer bridgeInstance.bridgeDataMutex.Unlock()
+	changed := false
+	for key, value := range values {
+		if prevValue, hasExistingValue := bridgeInstance.bridgeFloatData[key]; hasExistingValue && prevValue == value {
+			continue
+		}
+		bridgeInstance.bridgeFloatData[key] = value
+		changed = true
+		logBridgeFloat(BridgeFloatDataLogger{time.Now(), key, value}) // also a first reading, or the replay starts without it
+	}
+	if changed {
+		bridgeFloatUpdate.SendJSON(bridgeInstance.bridgeFloatData)
+	}
+}
+
 func (bridgeInstance *BridgeStratuxPlugin) ShutdownFunc() bool {
 	log.Println("Entered EMS shutdown() ...")
 	return true
