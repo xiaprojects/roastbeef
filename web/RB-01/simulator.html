@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>RB-Avionics Simulator</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">	
+	<link rel="stylesheet" href="maui/css/mobile-angular-ui-base.css" />
+	<link rel="stylesheet" href="css/Variometer.css" />
+	<link rel="stylesheet" href="css/Altimeter.css" />
+	<link rel="stylesheet" href="css/TurnSlip.css" />
+	<link rel="stylesheet" href="css/Attitude.css" />
+	<link rel="stylesheet" href="css/Speed.css" />
+	<link rel="stylesheet" href="css/Gyro.css" />
+	<link rel="stylesheet" href="css/EMS.css" />
+	<link rel="stylesheet" href="css/EMSEGT.css" />
+	<link rel="stylesheet" href="css/Radar.css" />
+	<link rel="stylesheet" href="css/Aircraft.css" />
+	<link rel="stylesheet" href="css/Sixpack.css" />
+	<link rel="stylesheet" href="css/Switchboard.css" />
+	<link rel="stylesheet" href="css/ahrs.css" />
+	<link rel="stylesheet" href="css/timers.css" />
+	<link rel="stylesheet" href="css/ol.css" />
+	<link rel="stylesheet" href="css/ol-layerswitcher.css" />
+	<link rel="stylesheet" href="css/map.css" />
+	<link rel="stylesheet" href="css/radio.css" />
+	<link rel="stylesheet" href="css/Resources.css" />
+	<link rel="stylesheet" href="css/SynthView.css" />
+	<link rel="stylesheet" href="css/dark-mode.css" />
+	<link rel="stylesheet" href="css/checklist.css" />
+	<link rel="stylesheet" href="css/alerts.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script>
+				if (document.location.hash == "") {
+					console.log("Default page is going to be loaded...");
+					if (window.localStorage.getItem("STARTUP_PAGE") === undefined || window.localStorage.getItem("STARTUP_PAGE") === false || window.localStorage.getItem("STARTUP_PAGE") == null) {
+					}
+					else {
+						const STARTUP_PAGE = window.localStorage.getItem("STARTUP_PAGE");
+						console.log("User default page: " + STARTUP_PAGE);
+						document.location = STARTUP_PAGE;
+					}
+				}
+
+				let startupPageTimer = null;
+				function onHashChanged() {
+					const hash = window.location.hash;
+					if (startupPageTimer !== null) {
+						clearTimeout(startupPageTimer);
+					}
+					startupPageTimer = setTimeout(function() {
+						startupPageTimer = null;
+						window.localStorage.setItem("STARTUP_PAGE",hash);
+					}, 60000);
+				}
+				window.addEventListener('hashchange', onHashChanged);
+	</script>
+
+	<!-- No daemon behind this page: these answer for it, before anything can ask -->
+	<script src="servicesSimulator/serviceloopback.js"></script>
+	<script src="servicesSimulator/servicedaemon.js"></script>
+	<script src="servicesSimulator/servicereplay.js"></script>
+
+	<script src="maui/js/angular.min.js"></script>
+	<script src="maui/js/angular-ui-router.min.js"></script>
+	<script src="maui/js/mobile-angular-ui.js"></script>
+	<script src="js/global.js"></script>
+	<script src="services/servicekeypad.js"></script>
+	<script src="services/servicealerts.js"></script>
+	<script src="services/serviceautopilot.js"></script>
+	<script src="services/variation.js"></script>
+	<script src="services/windestimator.js"></script>
+	<script src="services/servicesituation.js"></script>
+	<script src="services/serviceradar.js"></script>
+	<script src="services/servicetraffic.js"></script>
+	<script src="services/serviceems.js"></script>
+	<script src="services/servicestatus.js"></script>
+	<script src="services/serviceradio.js"></script>
+	<script src="services/serviceaircraft.js"></script>
+	<script src="services/servicevoice.js"></script>
+	<script src="services/servicebridge.js"></script>
+	<script src="js/startup.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<script src="js/ahrs.js"></script>
+	<script src="js/svg.min.js"></script>
+	<script src="js/ol.js"></script>
+	<script src="js/olms.js"></script>
+	<script src="js/ol-layerswitcher.js"></script>
+
+	<script src="plates/js/SixPackInstruments.js"></script>
+	<script src="plates/js/radar.js"></script>
+	<script src="plates/js/bottom.js"></script>
+	<script src="plates/js/radio.js"></script>
+	<script src="plates/js/timers.js"></script>
+	<script src="plates/js/emsegt.js"></script>
+	<script src="plates/js/ems.js"></script>
+	<script src="plates/js/synthview.js"></script>
+	<script src="plates/js/switchboard.js"></script>
+	<script src="plates/js/map.js"></script>
+	<script src="plates/js/hsi.js"></script>
+	<script src="plates/js/airfields.js"></script>
+	<script src="plates/js/aircraft.js"></script>
+	<script src="plates/js/autopilot.js"></script>
+	<script src="plates/js/camera.js"></script>
+	<script src="plates/js/charts.js"></script>
+	<script src="plates/js/checklist.js"></script>
+	<script src="plates/js/alerts.js"></script>
+	<script src="plates/js/resources.js"></script>
+	<script src="plates/js/voice.js"></script>
+	<script src="synthview/three.min.js"></script>
+	<script src="synthview/OrbitControls.js"></script>
+	<script src="synthview/GLTFLoader.js"></script>
+	<script src="plates/js/ota.js"></script>
+	<script src="js/chart.js"></script>
+	<script src="js/GPXParser.js"></script>
+	<script src="synthview/FontLoader.js"></script>
+	<script src="synthview/TextGeometry.js"></script>
+	<style>
+	</style>
+</head>
+
+<body id="body" ng-app="bobby" ng-controller="MainCtrl" ui-prevent-touchmove-defaults>
+	<!-- Needed for modal confirmation dialogs -->
+	<div ui-yield-to="modals"></div>
+	<!-- alertsModal -->
+	<div id="alertsModal"></div>
+	<audio id="audioproxy"></audio>
+	<!-- Define Left (Menu) Sidebar Navigation -->
+	<div ui-track-as-search-param='true' class="sidebar sidebar-left">
+		<div class="scrollable">
+			<div class="scrollable-content">
+				<a class="fabNavigation fabNorthEast" ng-click="fabClick('NW',this,$event);" ui-toggle="uiSidebarLeft">
+					<i class="fa fa-caret-right pull-right"></i>
+				</a>
+				<div style="container-type: inline-size;width: 100%;" ng-repeat="item in leftpages"
+					ng-init="init({isSidebar:true,side:'left'})"
+					ng-include="item.url" ng-controller="item.ctrl"></div>
+
+			</div>
+		</div>
+	</div>
+
+	<div ui-track-as-search-param='true' class="sidebar sidebar-right">
+		<div class="scrollable">
+			<div class="scrollable-content">
+
+				<a class="fabNavigation fabNorthWest" ng-click="fabClick('NE',this,$event);" ui-toggle="uiSidebarRight">
+					<i class="fa fa-caret-left pull-left"></i>
+				</a>
+
+				<div style="container-type: inline-size;width: 100%;" ng-repeat="item in rightpages"
+					ng-init="init({isSidebar:true,side:'right'})"
+					ng-include="item.url" ng-controller="item.ctrl"></div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	<div class="app">
+		<!-- Create Header Navbar with left Menu Button -->
+
+
+		<!--
+
+
+		<a class="fabSouthEast" ng-click="fabClick('SE',this,$event);">
+		</a>
+		<a class="fabSouthWest" ng-click="fabClick('SW',this,$event);">
+		</a>
+-->
+		<a class="fabNavigation fabEast semiroundright" ng-click="fabClick('E',this,$event);" ng-if="fabEastEnabled">
+			<i class="fa fa-caret-left"></i>
+		</a>
+		<a class="fabNavigation fabWest semiroundleft" ng-click="fabClick('W',this,$event);"  ng-if="fabWestEnabled">
+			<i class="fa fa-caret-right"></i>
+		</a>
+		<a class="fabNavigation fabNorth semiroundtop" ng-click="fabClick('N',this,$event);" ng-if="!uiSidebarTop && fabNorthEnabled">
+			<i class="fa fa-caret-down"></i>
+		</a>
+		<a class="fabNavigation fabSouth semiroundbottom" ng-click="fabClick('S',this,$event);" ng-if="!uiSidebarBottom && fabSouthEnabled">
+			<i class="fa fa-caret-up"></i>
+		</a>
+		<div class="navbar navbar-app navbar-absolute-top" ng-if="uiSidebarTop" ng-include="'plates/sidebottom.html'"
+			ng-controller="BottomCtrl" ng-init="init('top')"></div>
+		<!--
+		<div class="navbar navbar-app navbar-absolute-top" ng-if="uiSidebarTop" ng-include="'plates/sidetop.html'">
+			<div class="btn-group pull-left semiroundleft">
+				<div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle" style="height: 42px;">
+					
+				</div>
+			</div>
+
+			<div class="navbar btn-group semiroundtop" ui-yield-to="title">
+			</div>
+
+
+			<div class="btn-group pull-right semiroundright">
+				<div ui-toggle="uiSidebarRight" class="btn sidebar-toggle" style="height: 42px;">
+					<i class="fa fa-caret-left"></i>
+				</div>
+			</div>
+		</div>
+			-->
+		<div class="navbar navbar-app navbar-absolute-bottom" ng-if="uiSidebarBottom"
+			ng-include="'plates/sidebottom.html'" ng-controller="BottomCtrl" ng-init="init('bottom')">
+		</div>
+
+		<!-- App Body -->
+		<div class="app-body">
+			<div class="app-content">
+				<div class="scrollable">
+					<div class="scrollable-content" style="container-type: size;">
+						<div ui-view></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				window.scrollTo(0, 1); // forces repaint
+			}, 100);
+		});
+
+	</script>
+	<script src="services/servicebuzzer.js"></script>
+</body>
+
+</html>
