@@ -78,6 +78,9 @@ not hand-typed placeholders. Constructor arguments (`settings=`, `status=`,
 | `test_instruments.py` | Instruments track their data source and settle when it is constant |
 | `test_controls.py` | Presses every `ng-click` control on every screen: reachable by touch, and does not throw |
 | `test_keypad.py` | Drives the hardware knob on every screen, and walks the configured navigation order |
+| `test_alerts.py` | The alert balloon at exactly 480x480 and 1280x800: colours, shape, one line, 10 s close, click to hide. The state of each alert in the Alerts list, and the alarm replayed when an alert comes back |
+| `test_radio.py` | The radio plate: what the spinner posts (kHz padding, wrap inside the MHz), and the Enabled switch: only it changes the flag, it can be pressed on every panel and is on the round glass |
+| `test_vor.py` | The VOR addon's list: OFF posts `vorfreq` 0 and a station its frequency, and every corner of the word OFF can be pressed on all five panels and is on the round glass |
 | `test_layout.py` | Every screen on all five panel geometries, checking nothing overflows |
 | `test_settings.py` | The settings addon: every tab saves, and every body it posts is a key `/setSettings` knows with the type the daemon asserts |
 | `test_synthview.py` | Terrain, traffic and the autopilot guidance tunnel |

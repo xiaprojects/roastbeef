@@ -16,6 +16,8 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"path/filepath"
+	"strings"
 	"sync"
 	"time"
 )
@@ -23,6 +25,8 @@ import (
 // Resources
 const ALERT_MAPPING_JSON_NAME = "alertsMapping.json"
 const ALERT_DEFAULT_LANGUAGE = "en-US"
+// The folder of the sounds the daemon plays, unless Audio_SoundsDir names another
+const ALERT_SOUNDS_DIR = "sounds"
 
 // Please define a unique Id and check for collision using the keyword "EVENT_TYPE_"
 const (
@@ -40,6 +44,8 @@ const (
 	EVENT_TYPE_AUTOPILOT_GOTO           = 11
 	EVENT_TYPE_RADIO_COMMAND_NOT_OK     = 12
 	EVENT_TYPE_EMS_GENERIC_FAILURE		= 13
+	EVENT_TYPE_EMS_RULE_YELLOW            = 14
+	EVENT_TYPE_EMS_RULE_RED               = 15
 )
 
 // Maximum events in the list
@@ -58,9 +64,19 @@ var EventLanguages map[string][]EventHolder
 
 // Web Interaction
 type Alert struct {
-	Type      int
-	Title     string
+	// Raise time as HHMMSScc, 19:06:44.55 is 19064455 and 00:00:00.00 is 0
+	// Unique in the list but not ordered: a flight can cross midnight and the GPS steps the clock
+	Id    int
+	Type  int
+	Title string
+	// Set on a new alert. An event without it updates the alert with that Id, see pushEvent()
 	Timestamp time.Time
+	// Last time the condition was seen, Timestamp until then
+	TimestampEnd time.Time
+	// The condition has not been seen to go. Always false for a one-shot event
+	Active bool
+	// Time in the condition, TimestampEnd-Timestamp also counts the gaps of a condition that came back
+	ActiveSeconds float64
 }
 
 type AlertsStratuxPlugin struct {
@@ -102,7 +118,11 @@ func (alertsInstance *AlertsStratuxPlugin) InitFunc() bool {
 	}
 	log.Println("AlertsStratuxPlugin Loadded Sound Mapping Count: ", len(EventLanguages[ALERT_DEFAULT_LANGUAGE]))
 	// Push initial event to track the startup
-	alertsInstance.pushEvent(Alert{EVENT_TYPE_STARTUP_INFO, "Startup", time.Now()})
+	alertsInstance.pushEvent(Alert{Type: EVENT_TYPE_STARTUP_INFO, Title: "Startup", Timestamp: time.Now()})
+	// Nothing reads the result of aplay: this is the only report of a folder gone missing
+	if globalSettings.Audio_Enabled && !soundsDirExists(globalSettings.Audio_SoundsDir) {
+		addSingleSystemErrorf("sounds-dir", "Sounds folder not found: %s", soundsDir(globalSettings.Audio_SoundsDir))
+	}
 	return true
 }
 
@@ -120,8 +140,9 @@ func (alertsInstance *AlertsStratuxPlugin) ShutdownFunc() bool {
 alerts.pushEventByIdent().
 
 	wide event for System to pipe alerts
+	returns the Id as pushEvent()
 */
-func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event Alert) bool {
+func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event Alert) int {
 	// System wide alert signal mapping
 	if(ident=="save-settings" || 
 		ident=="disk-space" ||
@@ -136,6 +157,12 @@ func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event 
 	} else if (ident=="sdrconfig" ||
 	ident=="ping-missing"){
 		event.Type = EVENT_TYPE_SYSTEM_DANGER_SDR
+	} else if ident == "ems-feed" {
+		event.Type = EVENT_TYPE_EMS_GENERIC_FAILURE
+	} else if strings.HasPrefix(ident, "ems-") && strings.HasSuffix(ident, "-yellow") {
+		event.Type = EVENT_TYPE_EMS_RULE_YELLOW
+	} else if strings.HasPrefix(ident, "ems-") && strings.HasSuffix(ident, "-red") {
+		event.Type = EVENT_TYPE_EMS_RULE_RED
 	} else {
 		// Fallback to system danger
 		event.Type = EVENT_TYPE_SYSTEM_DANGER
@@ -147,22 +174,31 @@ func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event 
 alerts.pushEvent().
 
 	wide generic event api to pipe info,warning,danger
+	An event with a Timestamp is a new alert
+	An event without one updates the alert with that Id, if found: see updateEvent()
+	Timestamp tells them apart and not Id, because 0 is the Id of the alert of 00:00:00.00
+	Returns the Id, the caller can keep it to update the alert, -1 if nothing was raised or found
 */
-func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) bool {
+func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) int {
 	// incoming data without right InitFunc timing
 	if alertsInstance.alertsData == nil {
 		log.Println("Entered AlertsStratuxPlugin::pushEvent() too early")
 		// Event discarded
-		return false
+		return -1
 	}
-	// Dispatch event on web interface, if any
-	alertUpdate.SendJSON(event)
+	if event.Timestamp.IsZero() {
+		return alertsInstance.updateEvent(event)
+	}
 	// Queue the Alert
 	alertsInstance.alertsDataMutex.Lock()
+	event.Id = alertsInstance.newEventId(event.Timestamp)
+	event.TimestampEnd = event.Timestamp
 	alertsInstance.alertsData = append(alertsInstance.alertsData, event)
 	// Check for Maximum queue up to EVENT_MAX_QUEUE
 	// TODO: Remove first element
 	alertsInstance.alertsDataMutex.Unlock()
+	// Dispatch event on web interface, if any
+	alertUpdate.SendJSON(event)
 	// Play audio locally on RPI, if enabled
 	if globalSettings.Audio_Enabled == true {
 		if len(EventLanguages[ALERT_DEFAULT_LANGUAGE]) > event.Type {
@@ -170,7 +206,7 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) bool {
 			sound := item.Sound
 			if len(sound) > 0 {
 				// TODO: Migrate from Wav to Mp3
-				soundPath := STRATUX_WWW_DIR + "sounds/" + sound + ".wav"
+				soundPath := soundFile(sound)
 				// TODO: Let's customisable the player command line
 				// TODO: Queue sounds in case of multiple events
 				cmd := exec.Command("/usr/bin/aplay", soundPath)
@@ -179,6 +215,103 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) bool {
 		}
 	}
 	// Event pushed
+	return event.Id
+}
+
+/*
+alerts.updateEvent().
+
+	Copy Active on the alert with the Id of event and, while it is active, move its end to now
+	The display is not told: every message on the alerts socket is a new alert, with its sound
+	and balloon. It reads the state from /getAlerts and decides by itself if to replay the alarm
+*/
+func (alertsInstance *AlertsStratuxPlugin) updateEvent(event Alert) int {
+	alertsInstance.alertsDataMutex.Lock()
+	defer alertsInstance.alertsDataMutex.Unlock()
+	for i := len(alertsInstance.alertsData) - 1; i >= 0; i-- {
+		found, ok := alertsInstance.alertsData[i].(Alert)
+		if !ok || found.Id != event.Id {
+			continue
+		}
+		if event.Active {
+			now := time.Now()
+			if found.Active {
+				found.ActiveSeconds += now.Sub(found.TimestampEnd).Seconds()
+			}
+			found.TimestampEnd = now
+		}
+		found.Active = event.Active
+		alertsInstance.alertsData[i] = found
+		return found.Id
+	}
+	return -1
+}
+
+/*
+alerts.newEventId().
+
+	The time as HHMMSScc, alone it separates the alerts of a flight which is less than 24 hours
+	An Id already in the list takes the next free centisecond, or one alert could not be updated
+	Call it with alertsDataMutex held
+*/
+func (alertsInstance *AlertsStratuxPlugin) newEventId(t time.Time) int {
+	for {
+		id := t.Hour()*1000000 + t.Minute()*10000 + t.Second()*100 + t.Nanosecond()/10000000
+		if !alertsInstance.hasEventId(id) {
+			return id
+		}
+		t = t.Add(10 * time.Millisecond)
+	}
+}
+
+func (alertsInstance *AlertsStratuxPlugin) hasEventId(id int) bool {
+	for _, item := range alertsInstance.alertsData {
+		if alert, ok := item.(Alert); ok && alert.Id == id {
+			return true
+		}
+	}
+	return false
+}
+
+/*
+soundsDir().
+
+	the folder a value of Audio_SoundsDir names: absolute, or relative to the web folder
+	No value is ALERT_SOUNDS_DIR. Only the daemon reads it, the browser has its own copy
+*/
+func soundsDir(dir string) string {
+	if dir == "" {
+		dir = ALERT_SOUNDS_DIR
+	}
+	if filepath.IsAbs(dir) {
+		return filepath.Clean(dir)
+	}
+	return filepath.Join(STRATUX_WWW_DIR, dir)
+}
+
+// soundFile is the file the daemon plays for a sound of the mapping
+func soundFile(sound string) string {
+	return filepath.Join(soundsDir(globalSettings.Audio_SoundsDir), sound+".wav")
+}
+
+func soundsDirExists(dir string) bool {
+	info, err := os.Stat(soundsDir(dir))
+	return err == nil && info.IsDir()
+}
+
+/*
+setSoundsDir().
+
+	change the folder of the sounds, for /setSettings
+	A folder that is not there would silence every alert on the aircraft's audio
+	Returns false if it is refused, the folder in use stays
+*/
+func setSoundsDir(dir string) bool {
+	if !soundsDirExists(dir) {
+		return false
+	}
+	globalSettings.Audio_SoundsDir = dir
+	removeSingleSystemError("sounds-dir")
 	return true
 }
 

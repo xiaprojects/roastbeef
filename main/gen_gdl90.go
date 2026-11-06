@@ -1277,6 +1277,7 @@ type settings struct {
 	AutopilotUdp_Port    int  // Autopilot UDP Port, default 1234
 	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
+	Audio_SoundsDir      string // Folder of the .wav played on RPI: absolute or relative to the web folder, default sounds
 	Camera_Enabled       bool // USB Camera and WebCam
 	Radio_Enabled        bool // RTL SDR Used as Audio Radio
 	Radio                []RadioStatus // Radio settings with device path
@@ -1385,6 +1386,7 @@ func defaultSettings() {
 	globalSettings.AutopilotUdp_Port = 1234	
 	globalSettings.Autopilot_HomeWaypoint = Waypoint{Lat:41.95284169758052,Lon:12.501970590019647,Ele:0,Cmt:"Home"} // Home Location, LIRU as example
 	globalSettings.Audio_Enabled = false
+	globalSettings.Audio_SoundsDir = ALERT_SOUNDS_DIR
 	globalSettings.Keypad_Enabled = false
 	globalSettings.Camera_Enabled = false
 	globalSettings.Charts_Enabled = false
@@ -1533,7 +1535,7 @@ func addSingleSystemErrorf(ident string, format string, a ...interface{}) {
 		globalStatus.Errors = append(globalStatus.Errors, systemErrs[ident])
 		log.Printf("Added critical system error: %s\n", systemErrs[ident])
 		// Alerts Feature Push critical events
-		alerts.pushEventByIdent(ident,Alert{EVENT_TYPE_UNKOWN_WARNING,fmt.Sprintf(format, a...),time.Now()})
+		alerts.pushEventByIdent(ident,Alert{Type: EVENT_TYPE_UNKOWN_WARNING, Title: fmt.Sprintf(format, a...), Timestamp: time.Now()})
 	}
 	// Do nothing on this call if the error has already been thrown.
 	systemErrsMutex.Unlock()
@@ -1940,6 +1942,8 @@ func main() {
 		alerts.InitFunc()
 		// Timers Feature
 		timers.InitFunc()
+		// Addons Bridge, before the Radio whose thread writes to it
+		addonsBridge.InitFunc()
 		// Radio
 		radio.InitFunc()
 		// USB Keyboard and Keypad Driver
@@ -1954,8 +1958,6 @@ func main() {
 		switchBoard.InitFunc()
 		// OTA
 		ota.InitFunc()
-		// Addons Bridge
-		addonsBridge.InitFunc()
 		// Slave NMEA Display: $RBATT and $RBAIR, with the QNH the HMI posts to the bridge
 		slaveNMEADisplay.InitFunc()
 		pongInit()

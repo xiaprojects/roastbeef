@@ -9,6 +9,15 @@
     padding-left: 4px;
 }
 
+.alertsline .alertsstatus {
+    font-size: large;
+    white-space: nowrap;
+}
+
+.alertsline .alertsstatus.active {
+    font-weight: bold;
+}
+
 .alertsline.warning {
     border-bottom: 2px solid yellow;
     border-top: 2px solid yellow;
@@ -50,3 +59,64 @@
     background-position: 4px 4px;
 }
 
+/* Alert balloon, services/servicealerts.js adds it to alertsModal: a colored rounded rectangle at 3/4 of the height */
+.alertsballoon {
+    --balloon-color: #ffffff;
+    position: fixed;
+    z-index: 10000000; /* above .fabNavigation */
+    left: 50%;
+    top: 75%;
+    width: min(800px, 90vw);
+    transform: translate(-50%, -50%);
+    padding: 4.5vmin 3vmin;
+    border-radius: 2vmin;
+    box-shadow: 0 0 0 2px #000000;
+    background-color: var(--balloon-color);
+    color: #000000;
+    font-size: min(48px, 6vmin);
+    line-height: min(58px, 7.25vmin); /* fixed: a long title shrinks the font, not the balloon */
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.alertsballoon.warning {
+    --balloon-color: #ffc400;
+}
+
+.alertsballoon.danger {
+    --balloon-color: #c40000;
+    color: #ffffff;
+}
+
+/* RB-01 with Round display is 480x480: a cap on the bottom edge, the text inside the circle, and a ring around the screen */
+@media (aspect-ratio: 1/1) and (max-width: 511px) {
+    .alertsballoon {
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 132px;
+        transform: none;
+        padding: 26px 90px 0 90px;
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    .alertsballoon::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 9px solid var(--balloon-color);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+}

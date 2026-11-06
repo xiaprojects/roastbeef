@@ -75,16 +75,32 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
     // Websocket is not here, it is shared inherited in the main.js
   };
 
+  // Replace the rows, the most recent first
+  function showAlerts($scope, status) {
+    $scope.data_list = [];
+    for (var index = 0; index < status.length; index++) {
+      $scope.data_list.unshift(generateAlertRow($scope, status[index]));
+    }
+  }
+
   // Download Alerts list, up to MAX which shall be 100 items
   function refreshAlertsAsync($scope) {
     $http.get(URL_ALERTS_GET).then(function (response) {
-      var status = angular.fromJson(response.data);
-      $scope.data_list = [];
-      for (var index = 0; index < status.length; index++) {
-        $scope.data_list.unshift(generateAlertRow($scope, status[index]));
-      }
+      showAlerts($scope, angular.fromJson(response.data));
     });
   }
+
+  // The service reads the list for every page, here it keeps the rows updated
+  function alertsUpdated(event) {
+    if (Object.keys($scope.alertsMapping).length > 0) {
+      showAlerts($scope, event.detail);
+    }
+  }
+  addEventListener("AlertsUpdated", alertsUpdated);
+
+  $scope.$on('$destroy', function () {
+    removeEventListener("AlertsUpdated", alertsUpdated);
+  });
 
   // Download voices, text, mappings for multi language
   function refreshMappingsAndAlertsAsync($scope) {
@@ -151,6 +167,17 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
     template.id = alert.Type;
     // Time "Elapsed"
     template.date = textBySeconds(new Date(alert.Timestamp).getHours() * 60 + new Date(alert.Timestamp).getMinutes());
+    // Keeps the row when the list is updated, 0 is a valid Id and an older daemon has none
+    template.alertId = alert.Id;
+    // Time in alarm, a one-shot alert has none
+    template.active = alert.Active === true;
+    template.status = "";
+    if (template.active) {
+      template.status = "ACTIVE " + textBySeconds(alert.ActiveSeconds || 0);
+    }
+    else if (alert.ActiveSeconds >= 1) {
+      template.status = textBySeconds(alert.ActiveSeconds);
+    }
 
     return template;
   }

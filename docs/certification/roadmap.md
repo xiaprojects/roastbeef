@@ -575,9 +575,10 @@ doubles the effort.
   Minor. It was the last core function with no test file.
 - Specifying it found that it does not carry that weight yet. The nine findings, all in
   the FHA §4 table and the budget, in the order they matter:
-  **(a)** there is no master caution — `$scope.alarmIsLit` is set on every alert and bound
-  to nothing in any template, and never cleared, so an equipment-level failure is visible
-  only on a page the pilot has to choose (`RB-HLR-ALR-230`);
+  **(a)** there is no master caution — an alert shows a balloon for 10 s and
+  `$scope.alarmIsLit` is bound to nothing and never cleared, so after that an
+  equipment-level failure is visible only on a page the pilot has to choose
+  (`RB-HLR-ALR-230`);
   **(b)** and it is usually inaudible too: the daemon's own audio is off by default and the
   display's `<audio>` element will not autoplay until someone has touched the screen, which
   the code comments say outright (`RB-HLR-ALR-190`);

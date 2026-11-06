@@ -257,7 +257,7 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 		}
 	}
 	if (true) {
-		if (($scope.keypad === undefined) || ($scope.keypad === null)) {
+		if (($scope.alerts === undefined) || ($scope.alerts === null)) {
 			$scope.alerts = new AlertsService($scope, $http, $state);
 		}
 	}

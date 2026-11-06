@@ -56,6 +56,14 @@ re-verify before acting.
   tooling, with a prioritized backlog and suggested sequencing.
 - **[tech-debt/dead-code.md](tech-debt/dead-code.md)** — functions, types, and fields that are
   defined but never referenced.
+- **[tech-debt/avionics-standards-open-source.md](tech-debt/avionics-standards-open-source.md)** —
+  avionics standards against the open-source model: pros and cons, what the NORSEE / CS-STAN /
+  ASTM routes actually say, licence and EU product-law debts, precedents and literature.
+- **[tech-debt/ALERTS-NAVIGATION-UI-PROPOSAL.md](tech-debt/ALERTS-NAVIGATION-UI-PROPOSAL.md)** —
+  proposed alert popups and navigation panel for the 480×480 round and 1280×800 displays, by
+  touch and external keypad, with mockups on the real HMI, competitor review and phased plan.
+- **[tech-debt/radio-active-status.md](tech-debt/radio-active-status.md)** — the radio plate's
+  ACTIVE shows the command, not the radio, and a dead receiver stays on its plate as if alive.
 
 ## Certification
 
@@ -85,6 +93,12 @@ re-verify before acting.
   — how the standards treat a COTS board, the Raspberry Pi 5 compliance fact sheet, the
   derogation register (12 findings with the clause that carries each), and a graded
   reference table of ARM64 alternatives compatible with the RB-01.
+
+## Product
+
+- **[product/competitor-features.md](product/competitor-features.md)** — RB-01 against
+  Garmin G3X Touch, Dynon SkyView HDX, MGL iEFIS, Kanardia Nesis and Stratux: parity list,
+  gap and differentiator matrix, and the ranked implementation priorities.
 
 ## Doc conventions
 

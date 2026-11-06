@@ -149,7 +149,7 @@ func handleAlertsPutRequest(w http.ResponseWriter, r *http.Request) {
 
 	if err == nil {
 		log.Printf("Push Alert %d", alertId)
-		alerts.pushEvent(Alert{alertId, fmt.Sprintf(""), time.Now()})
+		alerts.pushEvent(Alert{Type: alertId, Title: fmt.Sprintf(""), Timestamp: time.Now()})
 	} else {
 		log.Printf("Push Alert Error %d", alertId)
 		log.Printf("%s %d", r.RequestURI, len(parts))
@@ -1210,7 +1210,10 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 
 	radio.radioDataMutex.Lock()
 
-	var msg RadioStatus
+	// What a body leaves out keeps its value. radio.js posts no levels, and on the SDR
+	// 0 is a real one: volume releases ALSA, squelch is held open.
+	msg := radio.radioData[radioIndex]
+	msg.Record = nil
 	err2 := decoder.Decode(&msg)
 	if err2 == io.EOF {
 		log.Printf("handleRadioPostio.EOF:error: %s\n", err2.Error())
@@ -1224,6 +1227,8 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 			for index, _ := range radio.radioData {
 				radio.radioData[index].Enabled = (index == radioIndex)
 			}	
+		} else {
+			radio.radioData[radioIndex].Enabled = false
 		}
 		// no need for Mutex because the writer is here, no other thread will access to the array
 		if(radio.radioData[radioIndex].Dual != msg.Dual){
@@ -1235,7 +1240,7 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 				time.Sleep(250 * time.Millisecond)
 			} else {
 				log.Printf("handleRadioPost:error: %s\n", "command not accepted")
-				alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio DUAL Set fail"), time.Now()})
+				alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio DUAL Set fail"), Timestamp: time.Now()})
 
 			}
 		}
@@ -1249,7 +1254,7 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 				time.Sleep(250 * time.Millisecond)
 			} else {
 					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
-					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Active fail"), time.Now()})
+					alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Freq. Set Active fail"), Timestamp: time.Now()})
 				}
 			}
 		if(radio.radioData[radioIndex].FrequencyStandby != msg.FrequencyStandby){
@@ -1262,9 +1267,23 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 				time.Sleep(250 * time.Millisecond)
 			} else {
 					log.Printf("handleRadioPost:error: %s\n", "command not accepted")
-					alerts.pushEvent(Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, fmt.Sprintf("Radio Freq. Set Standby fail"), time.Now()})
+					alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Freq. Set Standby fail"), Timestamp: time.Now()})
 				}
 			}
+		if(radio.radioData[radioIndex].VolumeLevel != msg.VolumeLevel && !radio.radioSetVolume(radioIndex, msg.VolumeLevel)){
+			log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+			alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Volume Set fail"), Timestamp: time.Now()})
+		}
+		if(radio.radioData[radioIndex].SquelchLevel != msg.SquelchLevel && !radio.radioSetSquelch(radioIndex, msg.SquelchLevel)){
+			log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+			alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Squelch Set fail"), Timestamp: time.Now()})
+		}
+		if(msg.Record != nil && !radio.radioSetRecord(radioIndex, *msg.Record)){
+			log.Printf("handleRadioPost:error: %s\n", "command not accepted")
+			alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Record Set fail"), Timestamp: time.Now()})
+		}
+		// Last, on the stored frequency: a POST may enable the radio and set the channel
+		radio.radioSdrTune()
 	}
 	// Store the current configuration back to facilitate the restore
 	globalSettings.Radio = radio.radioData
@@ -1475,37 +1494,16 @@ func handleBridgeFloatSetRequest(w http.ResponseWriter, r *http.Request) {
 		} else if err != nil {
 			log.Printf("handleBridgeFloatSetRequest:error: %s\n", err.Error())
 		} else {
-			reconfigure := false
-			for key, ival := range msg {
-				addonsBridge.bridgeDataMutex.Lock()
-				prevValue, hasExistingValue := addonsBridge.bridgeFloatData[key]
-				if hasExistingValue {
-					if prevValue != ival {
-						addonsBridge.bridgeFloatData[key]=ival
-						reconfigure = true
-						logBridgeFloat(BridgeFloatDataLogger{time.Now(),key,ival})
-					}
-				} else {
-					addonsBridge.bridgeFloatData[key] = ival
-					reconfigure = true
-					logBridgeFloat(BridgeFloatDataLogger{time.Now(),key,ival}) // first reading, or the replay starts without it
-				}
-				addonsBridge.bridgeDataMutex.Unlock()
-				// Keys the situation consumes. The airspeed board posts
-				// "ias_mps" in m/s; the HMI reads IndicatedAirSpeed in knots
-				// like GPSGroundSpeed, and 0 means no airspeed source. A
-				// pitot sensor on the unit (main/airspeed.go airspeedSender)
-				// owns the field while it is connected.
-				if key == "ias_mps" && !globalStatus.AirspeedConnected {
-					mySituation.IndicatedAirSpeed = ival * 1.94384
-					mySituation.PitotLastMeasurementTime = time.Now()
-				}
+			addonsBridge.setFloats(msg)
+			// Keys the situation consumes. The airspeed board posts
+			// "ias_mps" in m/s; the HMI reads IndicatedAirSpeed in knots
+			// like GPSGroundSpeed, and 0 means no airspeed source. A
+			// pitot sensor on the unit (main/airspeed.go airspeedSender)
+			// owns the field while it is connected.
+			if ival, ok := msg["ias_mps"]; ok && !globalStatus.AirspeedConnected {
+				mySituation.IndicatedAirSpeed = ival * 1.94384
+				mySituation.PitotLastMeasurementTime = time.Now()
 			}
-			if(reconfigure==true){
-				addonsBridge.bridgeDataMutex.Lock()
-				bridgeFloatUpdate.SendJSON(addonsBridge.bridgeFloatData)
-				addonsBridge.bridgeDataMutex.Unlock()
-			}			
 		}
 	}
 	if r.Method == "GET" {
@@ -1650,6 +1648,8 @@ func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
 					emsUpdate.SendJSON(ems.emsData)
 					ems.emsDataMutex.Unlock()
 				}
+				// Every frame, changed or not: it is what says that a rule is still in the same color
+				ems.validateRules()
 			}
 	}
 }
@@ -1841,6 +1841,10 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.Ping_Enabled = val.(bool)
 					case "Audio_Enabled":
 						globalSettings.Audio_Enabled = val.(bool)
+					case "Audio_SoundsDir":
+						if dir, ok := val.(string); !ok || !setSoundsDir(dir) {
+							log.Printf("handleSettingsSetRequest:json: Audio_SoundsDir %v refused, not a folder\n", val)
+						}
 					case "Camera_Enabled":
 						globalSettings.Camera_Enabled = val.(bool)
 					case "EMS_Enabled":

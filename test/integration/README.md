@@ -92,3 +92,76 @@ python3 replay.py info fixtures/<name>.trace.csv.gz
 The log is named by path or by any unique part of its file name in `test-data/`.
 Two minutes of traffic is about 340 KB of fixtures. Point `NAME` in
 `test_daemon.py` at a new pair, or add a loop over several.
+
+# VOR and radio taking turns on one dongle
+
+`test_vor_radio.py` presses the RB-01 screen in a real Chromium and checks that `rb-vor`
+and `rb-sdr-radio` take turns on one dongle. Only one program can hold a dongle, so the
+two work on it only if each lets go when the screen tells it to.
+
+```sh
+cd test/integration
+python3 test_vor_radio.py                         # build, then ~1 min
+python3 test_vor_radio.py --dongle                # on the real dongle, see below
+RB_RADIOS_KEEP=/tmp/r python3 test_vor_radio.py   # also keep the logs and dongle.log
+```
+
+Needs what `test_daemon.py` needs, a Chromium, and `../rb-vor` and `../rb-sdr-radio`
+with a Python that has their dependencies (`../rb-sdr-radio/.venv` by default; `RB_VOR`,
+`RB_SDR_RADIO` and `RB_RADIOS_PYTHON` move them). If those are missing it prints SKIP and
+passes. It leaves any other daemon alone: scratch `HOME`, free port, every SDR service off.
+
+| Part | In this test |
+|---|---|
+| HMI | Real: `web/RB-01` in Chromium, at exactly 1024x600. Every press is a real mouse event after a hit test, so a control under a navigation FAB fails |
+| `stratuxrun` | Real, built from this checkout: `POST /radio/0`, the float bridge, `radioSdrTune` |
+| `rb-vor`, `rb-sdr-radio` | Real: each daemon's own `main()`, bridge client, state machine and DSP |
+| Dongle | Stand-in, `dongle.py`. Refuses a second claim as `usb_claim_interface` does, gives it back if the holder dies, and runs in real time. Radiates a VOR on 109.400 (radial 130) and 113.800 (radial 245) and AM on 118.700, with noise everywhere else |
+| Audio player | A script that saves what it is sent |
+
+Because a signal exists only on its own channel, the plate can show the right station
+and radial only if the press reached the receiver and the receiver tuned what was pressed.
+
+## What it checks
+
+| Area | Requirement |
+|---|---|
+| Two rounds of turns | VOR plate: pick a station, the plate shows FIX with that station's name and frequency, the needle gets that station's radial (3°). OFF, and the dongle is free. Radio plate: INACTIVE to ACTIVE, the channel is received with its SNR. SWITCH FREQ. retunes and the empty channel stays shut, and back. ACTIVE to INACTIVE, and the dongle is free |
+| The dongle's own log | The claims go `vor, radio, vor, radio`, none refused, so each released it before the other asked. `rb-vor` tuned what was pressed. Each transmission is a WAV under its channel, and reached the player |
+| Radio pressed while the VOR holds it | `rb-sdr-radio` reports status 1, fault bit 2, and `rb-vor` is not disturbed. OFF on the VOR, and the radio takes the dongle by itself at its next retry |
+| VOR picked while the radio holds it | The plate shows NO SIGNAL with that station. `rb-vor` is refused, tries again, and stays up. The radio is not disturbed. When the radio goes INACTIVE, `rb-vor` takes the dongle by itself |
+| `rb-vor` killed and restarted | With a station selected, it comes back on that station with no press. With a station picked while it was down, it comes up on that one. Either way it has read the bridge, and OFF still reaches it |
+| Logs | No error in the HMI, no panic, all three daemons still up |
+
+One known gap: the radio plate says ACTIVE while the radio waits for the dongle. The test
+prints it as KNOWN without failing, see `docs/tech-debt/radio-active-status.md`.
+
+## On the real dongle
+
+`--dongle` runs the same presses with the daemons opening the real device, and
+`dongle.py` adds only the log. The claim, the release and the kernel driver coming back
+between two processes are real, which is what the stand-in cannot show. Nothing known
+is on the air, so it checks that the receivers took turns and tuned, not that they heard
+anything: any working status will do, with no radial and no recording. An antenna
+indoors usually hears nothing, so `NO SIGNAL`, `ACQUIRING` and a shut squelch all pass.
+
+`rb-vor` needs `pyrtlsdr` or SoapySDR, and the `.venv` has neither. A current `pyrtlsdr`
+does not import on a stock librtlsdr (`rtlsdr_set_dithering`, `rb-vor` A27), but 0.3.0
+does and reads samples from an R820T. It needs `pkg_resources`:
+
+```sh
+../rb-sdr-radio/.venv/bin/python -m pip install --target /tmp/pyrtl "pyrtlsdr==0.3.0" "setuptools<81"
+PYTHONPATH=/tmp/pyrtl python3 test_vor_radio.py --dongle
+```
+
+It opens device index 0 and stops at once, exit 2, if no dongle or no backend is there.
+On 2026-11-05 it passed on a Nooelec NESDR Nano 3 (R820T), indoors on an x86 PC, with the
+kernel DVB driver loaded: each claim detaches it and each release reattaches it, and a
+handover takes about 1.8 s. Not yet run on a Pi or with an FC0012.
+
+`/tmp` here is a tmpfs with a per-user quota, so `df` can show space while the Go linker
+fails with `No space left on device`. Point `TMPDIR` at a directory on disk.
+
+A test that is killed stops its receivers, even with SIGKILL (`PR_SET_PDEATHSIG`). One left
+behind would go on retrying and take the dongle the moment it is plugged in, which is what
+this did before that was added.

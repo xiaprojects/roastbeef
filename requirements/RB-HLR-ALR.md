@@ -11,13 +11,14 @@ the alert function is not an inconvenience; it is the failure of the mitigation 
 other row is classified under.
 
 Recovered from `main/alerts.go` (`pushEvent()`, `pushEventByIdent()`, `InitFunc()`),
+`main/ems.go` (`validateRules()`, `checkFeed()`),
 `main/gen_gdl90.go` (`addSingleSystemErrorf()`, `removeSingleSystemError()`),
 `main/managementinterface.go` (`/getAlerts`, `/alerts`, `/alert/`) and the display's
 `web/RB-01/services/servicealerts.js` and `web/RB-01/plates/js/alerts.js`, under
 DO-178C §12.1.4. Rules and field definitions:
 [`../docs/certification/standards/requirements.md`](../docs/certification/standards/requirements.md).
 
-**Read this before the rest of the file.** Nine of these 26 requirements are in
+**Read this before the rest of the file.** Nine of these 34 requirements are in
 `untraced.txt`, and not one of them is there because nobody has got round to the test:
 each is a requirement the equipment does **not** meet today. The alert function was
 written as a convenience feature — a notification bell and a sound — and these
@@ -162,7 +163,7 @@ equipment plays through the aircraft's audio and in the format the display plays
 the browser.**
 
 - **Parent:** RB-SYS-ALR-020
-- **Source:** `main/alerts.go` `pushEvent()` (`sounds/<name>.wav`);
+- **Source:** `main/alerts.go` `soundFile()` (`sounds/<name>.wav`, the default folder);
   `web/RB-01/services/servicealerts.js` `pushAlert()` (`/sounds/<name>.mp3`)
 - **Verification:** test
 - **Derived:** no
@@ -290,8 +291,8 @@ longer present.**
 - **Verification:** test
 - **Derived:** no
 
-**Open finding — the equipment meets this for two of fifteen identifiers.** Only
-`airspeed-sensor-read` and `sdrconfig` are ever cleared. The other thirteen — including
+**Open finding — the equipment meets this for three of sixteen identifiers.** Only
+`airspeed-sensor-read`, `sdrconfig` and `sounds-dir` are ever cleared. The other thirteen — including
 every barometer identifier — latch for the life of the process: the message stays in
 `globalStatus.Errors` and on the display after the condition has gone, and because
 RB-HLR-ALR-140 suppresses a repeat while the identifier is reported, a failure that
@@ -337,6 +338,26 @@ empty `Sound` field rather than a flag. Verified by analysis for the same reason
 RB-HLR-ALR-170. It matters because it is the only control over which alerts make a noise:
 the choice is in a data file, so it can be changed in the field without rebuilding, and
 equally it can be changed in the field without anyone noticing.
+
+### RB-HLR-ALR-340 — The sounds are played from the folder the settings name
+
+**The system shall play the aural annunciation from the folder named by the settings, and
+shall report a system error at start-up when local audio playback is enabled and that
+folder does not exist.**
+
+- **Parent:** none
+- **Source:** `main/alerts.go` `soundFile()`, `setSoundsDir()`, `InitFunc()`,
+  `globalSettings.Audio_SoundsDir`
+- **Verification:** test
+- **Derived:** yes
+
+Derived: a design decision, so that an installation can name the folder that holds its
+sounds. The default stays `sounds`. A folder that is not there would silence every alert on
+the aircraft's audio with no report, because nothing reads the result of `aplay`, so
+`/setSettings` refuses it and start-up reports one that went missing, under the identifier
+`sounds-dir`, cleared when a folder is accepted. The report is on the folder and not on each
+file: a folder that lacks one sound stays silent for that alert, and RB-HLR-ALR-080 checks
+the default folder only.
 
 ### RB-HLR-ALR-190 — The aural annunciation does not require the pilot to touch the display
 
@@ -447,24 +468,25 @@ requests. Tracked in `untraced.txt`.
 requiring the pilot to have selected the alert list.**
 
 - **Parent:** RB-SYS-ALR-030
-- **Source:** FHA-ALR-1; `web/RB-01/services/servicealerts.js`, `$scope.alarmIsLit`
+- **Source:** FHA-ALR-1; `web/RB-01/services/servicealerts.js`, `showAlertBalloon()`
 - **Verification:** test
 - **Derived:** no
 
-**Open finding — the equipment does not meet this, and of the nine it is the one that
-matters most.** The service that receives alerts sets `$scope.alarmIsLit = true` on every
-one, and nothing in the RB-01 reads that flag: it is not bound in any template, and the
-bottom bar's `ALRM` key is a static label with a fixed colour. The flag is also never
-cleared, so even if something did render it, it would latch on the first alert of the
-flight and stay lit — it cannot distinguish "an alert happened" from "an alert is
-active", and there is no acknowledgement.
+**Open finding — partly met, and of the nine it is the one that matters most.** Since
+2026-11-04 every alert shows a one-line balloon for 10 s or until it is clicked
+(`test/display/test_alerts.py`). Before that the service was never created, because the
+guard in `MainCtrl` tested `$scope.keypad`, so an alert was invisible and the display's
+sound path was dead.
 
-The effect, with RB-HLR-ALR-190: a barometer failure, a receiver failure or a full disk
-produces an alert that is **silent and invisible** until the pilot happens to navigate to
-the Alerts page. Every FHA row that is classified Minor "because loss is annunciated"
-depends on an annunciation path that, for equipment-level failures, is not currently
-there. A master caution the pilot can see and acknowledge is the fix, and it is a
-human-factors question as much as a coding one. Tracked in `untraced.txt`.
+What is still missing is an indication that outlasts the balloon. After 10 s nothing on
+the screen says the alert happened or that the condition is still present: a pilot who
+was looking outside misses it, and `$scope.alarmIsLit` is still bound to nothing and
+never cleared. Every FHA row that is classified Minor "because loss is annunciated"
+depends on this path. A master caution the pilot can see and acknowledge, held until the
+condition ends, is the fix, and it is a human-factors question as much as a coding one.
+It is recorded as tech debt in
+[`ALERTS-NAVIGATION-UI-PROPOSAL.md`](../docs/tech-debt/ALERTS-NAVIGATION-UI-PROPOSAL.md).
+Tracked in `untraced.txt` until then, which is why the test carries no `Covers:` tag.
 
 ### RB-HLR-ALR-240 — The alert list is ordered most recent first
 
@@ -499,8 +521,8 @@ passed to a formatter that reads its argument as seconds. The result happens to 
 the wall-clock time of the alert as `mm:ss`, so the column looks plausible and is
 labelled as though it were elapsed time. It is neither — it carries no date, so an alert
 from a previous flight is indistinguishable from one a minute old, and it is not an age.
-The pilot cannot tell from the list whether a failure is current. Tracked in
-`untraced.txt`.
+An engine alert now says whether it is current (RB-HLR-ALR-310), but no other alert does,
+and none of them shows an age. Tracked in `untraced.txt`.
 
 ### RB-HLR-ALR-260 — An alert the display cannot present is still listed
 
@@ -519,3 +541,130 @@ alert is listed with its title, which is the required behaviour. For a type belo
 the lookup throws a `TypeError` inside the loop that builds the list, and the list is left
 empty — one malformed alert hides every real one. The daemon and the display repeat the
 same one-sided bound, so the fix belongs in both. Tracked in `untraced.txt`.
+
+---
+
+## The state of an alert
+
+Until these requirements an alert was a one-shot record: nothing said whether the
+condition behind it was still there. They cover the alerts raised by the engine rules,
+which are the only ones a later evaluation can confirm. Every other alert keeps its end at
+its raise time and is never active: RB-HLR-ALR-160 records why the system failures cannot
+join them yet.
+
+### RB-HLR-ALR-270 — An alert has an identifier
+
+**The system shall identify each retained alert by an integer formed from its raise time
+as `HHMMSScc`, unique among the retained alerts.**
+
+- **Parent:** RB-SYS-ALR-040
+- **Source:** `main/alerts.go` `newEventId()`, `pushEvent()`
+- **Verification:** test
+- **Derived:** no
+
+19:06:44.55 is `19064455`, and 00:00:00.00 is `0`, an identifier like any other. A flight
+is under 24 h, so the time alone separates its alerts. An alert whose identifier is already
+in the list takes the next free centisecond, because two alerts with one identifier would
+leave one of them impossible to update. The identifier is not ordered: a flight can cross
+midnight and the GPS steps the clock, so the order of the alerts is RB-HLR-ALR-010's.
+
+### RB-HLR-ALR-280 — An alert retains when its condition was last seen
+
+**The system shall retain with each alert the time its condition was last seen, which is
+the time of the event until the condition is seen again.**
+
+- **Parent:** RB-SYS-ALR-040
+- **Source:** `main/alerts.go` `pushEvent()`, `updateEvent()`
+- **Verification:** test
+- **Derived:** no
+
+The difference from the time of the event is the overall duration of the alarm. A condition
+that comes back within the interval of RB-HLR-ALR-300 is the same alert, so that difference
+counts the gaps; the alert also retains the time actually spent in the condition, which is
+what RB-HLR-ALR-310 shows. On a flapping rule the two differ by 1.5 to 1.9 times, in the
+eight recordings replayed on 2026-11-05 (347 minutes). The time comes from the system clock
+with no correction, so a duration spanning a GPS clock step can be wrong: accepted, this is
+a record for the pilot and not a measurement.
+
+### RB-HLR-ALR-290 — An engine alert follows its condition without being annunciated again
+
+**The system shall update an alert, with no transmission to the display clients and no
+sound, on each EMS update that finds the engine rule that raised it in the same colour.**
+
+- **Parent:** RB-SYS-ALR-050
+- **Source:** `main/ems.go` `validateRules()`; `main/alerts.go` `updateEvent()`;
+  `main/managementinterface.go` `handleEMSSetRequest()`
+- **Verification:** test
+- **Derived:** no
+
+The rules run on every EMS update, not only on a changed value: `ems-adc` and `rb-sysmon`
+post on change only, so a steady reading sends nothing of its own, and any update confirms
+every rule from the latest values. Nothing goes on the socket because the display treats
+every frame there as a new alert, with its sound and balloon.
+
+### RB-HLR-ALR-300 — An engine alert stays active until its condition is seen to go
+
+**The system shall report an alert raised by an engine rule as active until an EMS update
+finds that rule out of the colour that raised it.**
+
+- **Parent:** RB-SYS-ALR-040
+- **Source:** `main/ems.go` `validateRules()`; `main/alerts.go` `updateEvent()`
+- **Verification:** test
+- **Derived:** no
+
+Active clears on evidence and not on a timeout. Silence is not a recovery: when the updates
+stop the alert stays active with its end at the last update, and RB-HLR-ALR-320 says why. A
+value outside every band neither confirms nor clears. Each colour is its own alert, and
+yellow to red closes yellow at once, so a rule shows one active alert. A rule back in the
+colour within `EMS_RULE_ALERT_INTERVAL` reopens the alert of that colour, with the same
+identifier.
+
+### RB-HLR-ALR-310 — The list shows the state of an alert
+
+**The display shall show, for each listed alert with a condition, whether the condition is
+active and the time spent in it.**
+
+- **Parent:** RB-SYS-ALR-040
+- **Source:** `web/RB-01/plates/js/alerts.js` `generateAlertRow()`;
+  `web/RB-01/services/servicealerts.js` `pollAlerts()`
+- **Verification:** test
+- **Derived:** no
+
+The list follows the daemon while it is open, through the poll of RB-HLR-ALR-330. A one-shot
+alert shows neither, and neither does an alert from an older daemon.
+
+### RB-HLR-ALR-320 — Loss of the EMS data during an alarm is annunciated
+
+**The system shall raise one alert when no EMS update has been received for 5 s while an
+engine rule is yellow or red.**
+
+- **Parent:** RB-SYS-ALR-010
+- **Source:** `main/ems.go` `checkFeed()`
+- **Verification:** test
+- **Derived:** no
+
+Without it an alarm whose data stopped is indistinguishable from one still being confirmed.
+The alert is `EVENT_TYPE_EMS_GENERIC_FAILURE`, it is active while the silence lasts, and it
+closes when an update arrives. It stays quiet before the first update, so an aircraft with
+no EMS never sees it, and with every rule green, so a single update posted by hand does not
+raise it. 5 s is more than twice the widest gap between EMS updates in the eight recordings
+replayed on 2026-11-05, 2.28 s.
+
+### RB-HLR-ALR-330 — An alarm that returns is replayed by the display
+
+**The display shall replay the alarm of an alert that becomes active again after being
+inactive for at least 60 s.**
+
+- **Parent:** RB-SYS-ALR-050
+- **Source:** `web/RB-01/services/servicealerts.js` `followAlerts()`,
+  `ALERT_REPLAY_CLEAR_SECONDS`
+- **Verification:** test
+- **Derived:** no
+
+The daemon reports `Active` and the display decides: each display has its own audio setting,
+and the limit is one constant there. The limit departs from "on each occurrence" of the
+parent on purpose, on the side of FHA-SYS-3: in the eight recordings replayed on 2026-11-05
+an alert came back 43 times an hour on top of the 14.5 raised, nearly all an `EGTDIFF` rule
+at the edge of a band, against 3.5 an hour at 60 s. The daemon's own sound through
+RB-HLR-ALR-170 is played only when an alert is raised, so a return is not heard on the
+aircraft's audio.

@@ -148,7 +148,7 @@ NO FLOW-DOWN (1) - system requirements with no HLR beneath them:
 ```
 
 Specified: attitude (`RB-HLR-ATT`, 37), traffic (`RB-HLR-TRF`, 35), alerts
-(`RB-HLR-ALR`, 26), GDL90 interface (`RB-ICD-GDL`, 6), system (`RB-SYS`, 22).
+(`RB-HLR-ALR`, 34), GDL90 interface (`RB-ICD-GDL`, 6), system (`RB-SYS`, 22).
 **Unspecified: altimetry, speed, heading, variometer, EMS, situation.**
 
 Eleven of the thirteen untraced items are **findings** — requirements the equipment does

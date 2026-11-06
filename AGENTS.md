@@ -84,7 +84,9 @@ Notes:
   NACp), `lastposition_test.go` (the startup position: clean and power-cut logs read with
   nothing written, log order, the Hobbs fallback), `slavenmeadisplay_test.go` (the Slave
   NMEA Display plugin: `$RBATT`/`$RBAIR` for an RB-09, its loop and its setting,
-  `docs/integration/slave-nmea-display-format.md`). The sensor loops run on real tickers, each in a child process (`inChild`), in
+  `docs/integration/slave-nmea-display-format.md`), `radio_test.go` (the SDR driver: every
+  channel name through float32 and JSON, the `POST /radio` handler, restore after a restart,
+  a real `/bridge/float/ws` client). The sensor loops run on real tickers, each in a child process (`inChild`), in
   parallel, so `go test ./main/` takes ~15 s. A known, undecided hazard is a test that
   measures it and `t.Skip`s with the numbers, so `go test -v ./main/` lists them. They are
   written requirements-style (one behaviour per test, robustness cases documented) — see
@@ -119,6 +121,13 @@ Notes:
   from a recording with `replay.py make`. See its `README.md`. Non-root, `stratuxrun` serves the
   API on `:8000`, or on `-port` when one is given; `:2000` is fixed, so the FLARM checks SKIP if
   another daemon holds it.
+- **VOR and radio integration test** in `test/integration/` (also needs Chromium, `../rb-vor`
+  and `../rb-sdr-radio`, no root): `python3 test_vor_radio.py` presses the real HMI, on a
+  `stratuxrun` built from this checkout, and checks the real `rb-vor` and `rb-sdr-radio` taking
+  turns on one dongle, a stand-in (`dongle.py`) that refuses a second claim and radiates each
+  station on its own channel. It also checks that `rb-vor` waits for a dongle the radio holds and
+  comes back on the pilot's station after a kill. `--dongle` uses the real device. It skips if the
+  sibling repos are missing. See its `README.md`.
 - **HMI dev loop without the Pi**: `cd test/display && ./simulator.py --idle` serves the
   working tree at `http://localhost:8000/RB-01/` with the aircraft snapshot behind it; edit
   `web/RB-01/`, reload. `/sim/` moves the aircraft or plays a recorded flight (any

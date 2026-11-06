@@ -227,7 +227,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotEventAbeamPoint(waypoi
 	}
 	autopilotInstance.waypointsDataMutex.Unlock()
 	// Emit Signal
-	alerts.pushEvent(Alert{EVENT_TYPE_AUTOPILOT_ABEAM, fmt.Sprintf("Abeam: %s",waypoint.Cmt), time.Now()})
+	alerts.pushEvent(Alert{Type: EVENT_TYPE_AUTOPILOT_ABEAM, Title: fmt.Sprintf("Abeam: %s",waypoint.Cmt), Timestamp: time.Now()})
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) autopilotEventGoTo(waypointIndex int, bearing float64, distance float64) {
@@ -241,7 +241,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotEventGoTo(waypointInde
 	// cross-track is computed from.
 	autopilotInstance.legOriginValid = false
 	// Emit Signal
-	alerts.pushEvent(Alert{EVENT_TYPE_AUTOPILOT_GOTO, fmt.Sprintf("To: %.0f° %.1fN %s", bearing, distance * 0.539957 / 1000.0, waypoint.Cmt), time.Now()})
+	alerts.pushEvent(Alert{Type: EVENT_TYPE_AUTOPILOT_GOTO, Title: fmt.Sprintf("To: %.0f° %.1fN %s", bearing, distance * 0.539957 / 1000.0, waypoint.Cmt), Timestamp: time.Now()})
 }
 
 func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataCopy []Waypoint) GPRMBData{

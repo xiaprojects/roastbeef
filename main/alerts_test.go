@@ -27,6 +27,7 @@ import (
 	"regexp"
 	"sort"
 	"strconv"
+	"strings"
 	"sync"
 	"testing"
 	"time"
@@ -37,10 +38,10 @@ import (
 // whatever the rest of the package left in them.
 func withAlerts(t *testing.T) {
 	savedAlerts, savedUpdate, savedLangs := alerts, alertUpdate, EventLanguages
-	savedAudio, savedWWW := globalSettings.Audio_Enabled, STRATUX_WWW_DIR
+	savedAudio, savedDir, savedWWW := globalSettings.Audio_Enabled, globalSettings.Audio_SoundsDir, STRATUX_WWW_DIR
 	t.Cleanup(func() {
 		alerts, alertUpdate, EventLanguages = savedAlerts, savedUpdate, savedLangs
-		globalSettings.Audio_Enabled, STRATUX_WWW_DIR = savedAudio, savedWWW
+		globalSettings.Audio_Enabled, globalSettings.Audio_SoundsDir, STRATUX_WWW_DIR = savedAudio, savedDir, savedWWW
 	})
 	alerts = AlertsStratuxPlugin{
 		alertsDataMutex: &sync.Mutex{},
@@ -128,12 +129,12 @@ func mapping(t *testing.T) map[string][]EventHolder {
 // Covers: RB-HLR-ALR-010, RB-HLR-ALR-020
 func TestARaisedAlertIsQueuedAndSentToTheDisplay(t *testing.T) {
 	withAlerts(t)
-	first := Alert{EVENT_TYPE_TIMER, "Timer 2 fired", time.Now().Add(-time.Minute)}
-	second := Alert{EVENT_TYPE_RADIO_COMMAND_NOT_OK, "Radio Freq. Set Active fail", time.Now()}
+	first := Alert{Type: EVENT_TYPE_TIMER, Title: "Timer 2 fired", Timestamp: time.Now().Add(-time.Minute)}
+	second := Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: "Radio Freq. Set Active fail", Timestamp: time.Now()}
 
 	for _, a := range []Alert{first, second} {
-		if !alerts.pushEvent(a) {
-			t.Fatalf("pushEvent(%v) = false, want the alert to be accepted", a)
+		if alerts.pushEvent(a) == -1 {
+			t.Fatalf("pushEvent(%v) = -1, want the alert to be accepted", a)
 		}
 	}
 
@@ -149,6 +150,150 @@ func TestARaisedAlertIsQueuedAndSentToTheDisplay(t *testing.T) {
 	}
 }
 
+// clockAt is a time of the day, for the tests of the identifier: h:m:s.cs
+func clockAt(h, m, s, cs int) time.Time {
+	return time.Date(2026, 11, 5, h, m, s, cs*10000000, time.UTC)
+}
+
+// raiseAt raises an alert at a given time and returns its identifier.
+func raiseAt(when time.Time) int {
+	return alerts.pushEvent(Alert{Type: EVENT_TYPE_TIMER, Title: "Timer 1 fired", Timestamp: when})
+}
+
+// An alert is identified by the time it was raised, as HHMMSScc. Midnight is the number
+// 0, which is an identifier like any other and not a way of saying "no alert".
+// Covers: RB-HLR-ALR-270
+func TestAnAlertIsIdentifiedByItsRaiseTime(t *testing.T) {
+	withAlerts(t)
+	for _, c := range []struct {
+		when time.Time
+		want int
+	}{
+		{clockAt(19, 6, 44, 55), 19064455},
+		{clockAt(23, 59, 59, 99), 23595999},
+		{clockAt(0, 0, 0, 0), 0},
+		{clockAt(0, 0, 0, 1), 1},
+	} {
+		if got := raiseAt(c.when); got != c.want {
+			t.Errorf("raised at %s: Id %d, want %d", c.when.Format("15:04:05.00"), got, c.want)
+		}
+	}
+}
+
+// The time alone would give two alerts the same identifier when they are raised in
+// the same centisecond, or at the same time of a later day, and only one of them could
+// ever be updated. Each takes the next free centisecond instead.
+// Covers: RB-HLR-ALR-270
+func TestAlertsRaisedAtTheSameTimeHaveDifferentIdentifiers(t *testing.T) {
+	withAlerts(t)
+	when := clockAt(19, 6, 44, 55)
+	got := []int{raiseAt(when), raiseAt(when), raiseAt(when.Add(24 * time.Hour))}
+	for i, want := range []int{19064455, 19064456, 19064457} {
+		if got[i] != want {
+			t.Errorf("alert %d: Id %d, want %d", i, got[i], want)
+		}
+	}
+	// The next free centisecond of the last one of the day is the first one of the next
+	if a, b := raiseAt(clockAt(23, 59, 59, 99)), raiseAt(clockAt(23, 59, 59, 99)); a != 23595999 || b != 0 {
+		t.Errorf("end of the day: Id %d and %d, want 23595999 and 0", a, b)
+	}
+}
+
+// What pushEvent returns is the identifier the alert carries in the list and on the
+// socket, so that a caller that keeps it can update that alert.
+// Covers: RB-HLR-ALR-270
+func TestTheIdentifierReturnedIsTheOneTheAlertCarries(t *testing.T) {
+	withAlerts(t)
+	id := raiseAt(time.Now())
+	if got := queued(); len(got) != 1 || got[0].Id != id {
+		t.Errorf("queued %v, want one alert with Id %d", got, id)
+	}
+	if got := sent(t); len(got) != 1 || got[0].Id != id {
+		t.Errorf("sent %v, want one alert with Id %d", got, id)
+	}
+}
+
+// The end of an alert is the time it was raised until something says the condition was
+// seen again, and an event with nothing to follow it is not active.
+// Covers: RB-HLR-ALR-280
+func TestARaisedAlertEndsWhenItWasRaised(t *testing.T) {
+	withAlerts(t)
+	raiseAt(time.Now())
+	for what, got := range map[string][]Alert{"queued": queued(), "sent to the display": sent(t)} {
+		if len(got) != 1 {
+			t.Fatalf("%s %d alerts, want 1", what, len(got))
+		}
+		if !got[0].TimestampEnd.Equal(got[0].Timestamp) {
+			t.Errorf("%s: ends at %v, want its raise time %v", what, got[0].TimestampEnd, got[0].Timestamp)
+		}
+		if got[0].Active || got[0].ActiveSeconds != 0 {
+			t.Errorf("%s: a one-shot alert with state %v", what, got[0])
+		}
+	}
+}
+
+// An update reaches the alert with that identifier and no other, even an older one with
+// the same type and title, and the display is not told: every frame on the socket is a
+// new alert with its sound and balloon.
+// Covers: RB-HLR-ALR-290
+func TestAnUpdateChangesOnlyTheAlertWithThatIdentifier(t *testing.T) {
+	withAlerts(t)
+	older := raiseAt(clockAt(19, 6, 44, 55))
+	newer := raiseAt(clockAt(19, 6, 50, 0))
+	sent(t)
+
+	if got := alerts.pushEvent(Alert{Id: older, Active: true}); got != older {
+		t.Errorf("update returned %d, want %d", got, older)
+	}
+	list := queued()
+	if len(list) != 2 {
+		t.Fatalf("an update changed the list to %d alerts, want 2", len(list))
+	}
+	if !list[0].Active || list[0].TimestampEnd.Equal(list[0].Timestamp) {
+		t.Errorf("the alert updated: %+v", list[0])
+	}
+	if list[1].Active || !list[1].TimestampEnd.Equal(list[1].Timestamp) {
+		t.Errorf("the other alert changed too: %+v", list[1])
+	}
+	if got := sent(t); len(got) != 0 {
+		t.Errorf("an update reached the display: %v", got)
+	}
+
+	if got := alerts.pushEvent(Alert{Id: newer + 1, Active: true}); got != -1 {
+		t.Errorf("update of an unknown Id returned %d, want -1", got)
+	}
+	if got := queued(); len(got) != 2 {
+		t.Errorf("an update of an unknown Id changed the list: %v", got)
+	}
+}
+
+// 0 is the alert of 00:00:00.00. It updates like any other, and a new alert leaves its
+// Id at the default, 0, so a new alert must not be read as an update of that one: it
+// would be lost with no alarm.
+// Covers: RB-HLR-ALR-270, RB-HLR-ALR-290
+func TestTheAlertOfMidnightIsAnAlertLikeAnyOther(t *testing.T) {
+	withAlerts(t)
+	midnight := raiseAt(clockAt(0, 0, 0, 0))
+	if midnight != 0 {
+		t.Fatalf("Id %d, want 0", midnight)
+	}
+	if got := alerts.pushEvent(Alert{Id: midnight, Active: true}); got != midnight {
+		t.Errorf("update of Id 0 returned %d", got)
+	}
+	if !queued()[0].Active {
+		t.Error("the alert of Id 0 was not updated")
+	}
+	sent(t)
+
+	later := raiseAt(clockAt(0, 0, 5, 0))
+	if got := queued(); later == midnight || len(got) != 2 {
+		t.Errorf("a new alert after the one of midnight: Id %d, list %v", later, got)
+	}
+	if got := sent(t); len(got) != 1 {
+		t.Errorf("the new alert sent to the display %d times, want once", len(got))
+	}
+}
+
 // An alert raised before the alert function has been initialised is discarded and
 // reported as not raised, rather than queued somewhere nothing will read.
 // Covers: RB-HLR-ALR-030
@@ -156,8 +301,8 @@ func TestAnAlertRaisedBeforeTheAlertFunctionIsReadyIsDiscarded(t *testing.T) {
 	withAlerts(t)
 	alerts.alertsData = nil
 
-	if alerts.pushEvent(Alert{EVENT_TYPE_SYSTEM_DANGER, "too early", time.Now()}) {
-		t.Error("pushEvent = true before InitFunc, want false")
+	if id := alerts.pushEvent(Alert{Type: EVENT_TYPE_SYSTEM_DANGER, Title: "too early", Timestamp: time.Now()}); id != -1 {
+		t.Errorf("pushEvent = %d before InitFunc, want -1", id)
 	}
 	if alerts.alertsData != nil {
 		t.Errorf("the queue was created by the push: %v", alerts.alertsData)
@@ -212,12 +357,15 @@ func TestTheAlertFunctionStartsWithNoPresentationMapping(t *testing.T) {
 	// Audio on, with nothing to look the sound up in: the lookup must not take the
 	// function down, which is the whole point of this test.
 	globalSettings.Audio_Enabled = true
+	if err := os.Mkdir(STRATUX_WWW_DIR+ALERT_SOUNDS_DIR, 0755); err != nil {
+		t.Fatal(err)
+	}
 
 	if !alerts.InitFunc() {
 		t.Fatal("InitFunc = false with no mapping file, want the alert function to start")
 	}
-	if !alerts.pushEvent(Alert{EVENT_TYPE_SYSTEM_DANGER_BAROMETER, "BaroBroken", time.Now()}) {
-		t.Fatal("pushEvent = false with no mapping file, want the alert to be raised")
+	if alerts.pushEvent(Alert{Type: EVENT_TYPE_SYSTEM_DANGER_BAROMETER, Title: "BaroBroken", Timestamp: time.Now()}) == -1 {
+		t.Fatal("pushEvent = -1 with no mapping file, want the alert to be raised")
 	}
 	if got := queued(); len(got) != 2 {
 		t.Errorf("queued %v, want the startup alert and the barometer alert", got)
@@ -243,6 +391,7 @@ func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 		{"BaroBroken", EVENT_TYPE_SYSTEM_DANGER_BAROMETER},
 		{"sdrconfig", EVENT_TYPE_SYSTEM_DANGER_SDR},
 		{"ping-missing", EVENT_TYPE_SYSTEM_DANGER_SDR},
+		{"ems-feed", EVENT_TYPE_EMS_GENERIC_FAILURE},
 		// The rest of the identifiers the daemon raises, all unclassified.
 		{"ahrs-web-start", EVENT_TYPE_SYSTEM_DANGER},
 		{"airspeed-sensor-read", EVENT_TYPE_SYSTEM_DANGER},
@@ -250,6 +399,7 @@ func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 		{"hobbsmeter", EVENT_TYPE_SYSTEM_DANGER},
 		{"restart-warn", EVENT_TYPE_SYSTEM_DANGER},
 		{"settings-file", EVENT_TYPE_SYSTEM_DANGER},
+		{"sounds-dir", EVENT_TYPE_SYSTEM_DANGER},
 		{"", EVENT_TYPE_SYSTEM_DANGER},
 	} {
 		name := c.ident
@@ -260,9 +410,9 @@ func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 			withAlerts(t)
 			// The caller's own type is always replaced by the classification: every
 			// caller in the daemon passes EVENT_TYPE_UNKOWN_WARNING.
-			raised := Alert{EVENT_TYPE_UNKOWN_WARNING, "sensor " + name + " failed", time.Now()}
-			if !alerts.pushEventByIdent(c.ident, raised) {
-				t.Fatal("pushEventByIdent = false, want the alert to be raised")
+			raised := Alert{Type: EVENT_TYPE_UNKOWN_WARNING, Title: "sensor " + name + " failed", Timestamp: time.Now()}
+			if alerts.pushEventByIdent(c.ident, raised) == -1 {
+				t.Fatal("pushEventByIdent = -1, want the alert to be raised")
 			}
 			got := queued()
 			if len(got) != 1 {
@@ -278,16 +428,22 @@ func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 	}
 }
 
-// A system failure is annunciated once while it is present, and again if it comes
-// back after being cleared - not on every poll of the sensor that noticed it.
-// Covers: RB-HLR-ALR-140
-func TestASystemFailureIsAnnouncedOnceUntilItIsCleared(t *testing.T) {
-	withAlerts(t)
+// withSystemErrors gives the test an empty list of system errors, and puts back whatever
+// the rest of the package left in it.
+func withSystemErrors(t *testing.T) {
 	savedErrs, savedMutex, savedStatus := systemErrs, systemErrsMutex, globalStatus.Errors
 	t.Cleanup(func() {
 		systemErrs, systemErrsMutex, globalStatus.Errors = savedErrs, savedMutex, savedStatus
 	})
 	systemErrs, systemErrsMutex, globalStatus.Errors = make(map[string]string), &sync.Mutex{}, nil
+}
+
+// A system failure is annunciated once while it is present, and again if it comes
+// back after being cleared - not on every poll of the sensor that noticed it.
+// Covers: RB-HLR-ALR-140
+func TestASystemFailureIsAnnouncedOnceUntilItIsCleared(t *testing.T) {
+	withAlerts(t)
+	withSystemErrors(t)
 
 	for i := 0; i < 3; i++ {
 		addSingleSystemErrorf("sdrconfig", "SDR %d is gone", 1)
@@ -367,6 +523,134 @@ func TestEverySoundAndIconTheMappingNamesExists(t *testing.T) {
 				t.Errorf("%s: %s is missing", what, filepath.ToSlash(f))
 			}
 		}
+	}
+}
+
+// The daemon plays from the folder the settings name, relative to the web folder or
+// absolute. No value is the folder it has always played from, so a settings file that
+// has no such field changes nothing.
+// Covers: RB-HLR-ALR-340
+func TestTheSoundsPlayedComeFromTheFolderTheSettingsName(t *testing.T) {
+	withAlerts(t)
+	STRATUX_WWW_DIR = "/opt/stratux/www/"
+	for dir, want := range map[string]string{
+		"":                "/opt/stratux/www/sounds/notify.wav",
+		"sounds":          "/opt/stratux/www/sounds/notify.wav",
+		"RB-01/sounds":    "/opt/stratux/www/RB-01/sounds/notify.wav",
+		"RB-01/sounds/":   "/opt/stratux/www/RB-01/sounds/notify.wav",
+		"/mnt/usb/sounds": "/mnt/usb/sounds/notify.wav",
+	} {
+		globalSettings.Audio_SoundsDir = dir
+		if got := soundFile("notify"); got != want {
+			t.Errorf("Audio_SoundsDir %q plays %s, want %s", dir, got, want)
+		}
+	}
+}
+
+// A stratux.conf written before the setting existed plays the sounds it always played,
+// and a stored folder is kept.
+// Covers: RB-HLR-ALR-340
+func TestTheSoundsFolderSetting(t *testing.T) {
+	if !inChild(t) {
+		return
+	}
+	for _, c := range []struct{ conf, want string }{
+		{`{"RadarRange": 5}`, ALERT_SOUNDS_DIR},
+		{`{"Audio_SoundsDir": "RB-01/sounds"}`, "RB-01/sounds"},
+	} {
+		if err := os.WriteFile(configLocation, []byte(c.conf), 0644); err != nil {
+			t.Fatal(err)
+		}
+		readSettings()
+		if got := globalSettings.Audio_SoundsDir; got != c.want {
+			t.Errorf("stratux.conf %s: Audio_SoundsDir %q, want %q", c.conf, got, c.want)
+		}
+	}
+}
+
+// soundsFolders is a web folder holding the folder RB-01/sounds, and a file named like one.
+func soundsFolders(t *testing.T) {
+	STRATUX_WWW_DIR = t.TempDir() + "/"
+	if err := os.MkdirAll(STRATUX_WWW_DIR+"RB-01/sounds", 0755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(STRATUX_WWW_DIR+"notafolder", nil, 0644); err != nil {
+		t.Fatal(err)
+	}
+}
+
+// A folder that is not there would silence every alert on the aircraft's audio with
+// nothing to report it, so the folder in use stays. A file is not a folder.
+// Covers: RB-HLR-ALR-340
+func TestASoundsFolderThatIsNotThereIsRefused(t *testing.T) {
+	withAlerts(t)
+	withSystemErrors(t)
+	soundsFolders(t)
+	globalSettings.Audio_SoundsDir = "RB-01/sounds"
+
+	for _, dir := range []string{"RB-01/sound", "notafolder", "/no/such/folder"} {
+		if setSoundsDir(dir) {
+			t.Errorf("setSoundsDir(%q) = true, want it refused", dir)
+		}
+		if got := globalSettings.Audio_SoundsDir; got != "RB-01/sounds" {
+			t.Fatalf("after setSoundsDir(%q) the folder is %q, want the one in use", dir, got)
+		}
+	}
+	absolute := STRATUX_WWW_DIR + "RB-01/sounds"
+	if !setSoundsDir(absolute) {
+		t.Errorf("setSoundsDir(%q) = false, want it accepted", absolute)
+	}
+	if got := globalSettings.Audio_SoundsDir; got != absolute {
+		t.Errorf("the folder is %q, want %q", got, absolute)
+	}
+}
+
+// A folder that went missing is reported at start-up with its path, and the report goes
+// when a folder is accepted. With no audio the folder is not used, so nothing is said.
+// Covers: RB-HLR-ALR-340
+func TestAMissingSoundsFolderIsReportedAtStartup(t *testing.T) {
+	for _, c := range []struct {
+		name  string
+		audio bool
+		dir   string
+		want  bool
+	}{
+		{"missing folder", true, "gone", true},
+		{"folder there", true, "RB-01/sounds", false},
+		{"no audio", false, "gone", false},
+	} {
+		t.Run(c.name, func(t *testing.T) {
+			withAlerts(t)
+			withSystemErrors(t)
+			soundsFolders(t)
+			globalSettings.Audio_Enabled, globalSettings.Audio_SoundsDir = c.audio, c.dir
+
+			if !alerts.InitFunc() {
+				t.Fatal("InitFunc = false, want the alert function to start")
+			}
+			if got := len(globalStatus.Errors) == 1; got != c.want {
+				t.Fatalf("system errors %v, want one: %v", globalStatus.Errors, c.want)
+			}
+			if !c.want {
+				if got := queued(); len(got) != 1 {
+					t.Errorf("queued %v, want the startup alert alone", got)
+				}
+				return
+			}
+			got := queued()
+			if len(got) != 2 || got[1].Type != EVENT_TYPE_SYSTEM_DANGER {
+				t.Fatalf("queued %v, want the startup alert and a system danger", got)
+			}
+			if path := STRATUX_WWW_DIR + "gone"; !strings.Contains(got[1].Title, path) {
+				t.Errorf("alert titled %q, want it to name %s", got[1].Title, path)
+			}
+			if !setSoundsDir("RB-01/sounds") {
+				t.Fatal("setSoundsDir = false for a folder that is there")
+			}
+			if len(globalStatus.Errors) != 0 {
+				t.Errorf("system errors %v once a folder was accepted, want none", globalStatus.Errors)
+			}
+		})
 	}
 }
 

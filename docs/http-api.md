@@ -181,6 +181,65 @@ Upload firmware for the Pong ADS-B receiver.
 
 ---
 
+### Radio
+
+#### `GET /radio`
+The radios of the `Radio` setting as an array, with their live state. `ws://…/radioStatus` pushes the same array on a change.
+
+#### `POST /radio/{index}`
+Changes one radio. The body holds the fields that change; what it leaves out keeps its value. A refused command raises an `EVENT_TYPE_RADIO_COMMAND_NOT_OK` alert and leaves that field as it was.
+
+| Field | Meaning |
+|---|---|
+| `FrequencyActive`, `FrequencyStandby` | MHz as a string, such as `"118.030"` |
+| `LabelActive`, `LabelStandby` | Station names |
+| `Dual` | Dual watch. Refused on the `SDR` driver, a single receiver |
+| `Enabled` | `true` selects this radio and disables the others. On the `SDR` driver `false` turns the receiver off |
+| `VolumeLevel` | `SDR` only, 0 to 100. 0 releases the sound device; reception and recording carry on |
+| `SquelchLevel` | `SDR` only, 0 to 100 dB above the noise. 0 holds the squelch open |
+| `Record` | `SDR` only. Save received audio to the recording folder |
+
+With `"Driver": "SDR"` these become commands to the `rb-sdr-radio` daemon, sent through the float bridge (`main/radio.go`; the contract is `docs/RB-SDR-RADIO-IF-v1.0.md` in that repository):
+
+| Field | Bridge key |
+|---|---|
+| `FrequencyActive` | `sdrradiofreq`, the channel name in MHz |
+| `VolumeLevel` | `sdrradiovolume` |
+| `SquelchLevel` | `sdrradiosquelch` |
+| `Record` | `sdrradiorecord`, 0 or 1 |
+
+`FrequencyActive` must be a 25 or 8.33 kHz channel name from 118.000 to 136.990. Names ending 20, 45, 70 and 95 do not exist and are refused, so the radio stays on its channel. `FrequencyStandby` stays in RB-01: there is one receiver, so it takes effect when swapped to active.
+
+`Enabled` decides whether the receiver runs. With no SDR radio enabled, `sdrradiofreq` is 0, the bridge's empty frequency, and the daemon releases the dongle and the sound device. That includes selecting another radio. `FrequencyActive` is kept and can still be changed while off; enabling the radio tunes it. Volume, squelch and `Record` keep working as settings.
+
+The bridge is held in memory, so with `Radio_Enabled` set the levels, `Record` and the frequency are sent again at start-up, 0 if the radio is disabled. A level of 0 is not sent, because it cannot be told from a level never set, and `Record` is not sent until it has been chosen. The daemon's own defaults apply in those cases.
+
+What the radio is really doing is on the same bridge, in the `sdrradio*` status keys of `ws://…/bridge/float/ws`.
+
+---
+
+### Alerts
+
+#### `GET /getAlerts`
+Every alert raised since the daemon started, oldest first, as an array.
+
+| Field | Meaning |
+|---|---|
+| `Id` | The raise time as the integer `HHMMSScc`: 19:06:44.55 is `19064455`, 00:00:00.00 is `0`. Unique in the list, taking the next free centisecond if needed. Not ordered: a flight can cross midnight and the GPS steps the clock, so do not sort by it. |
+| `Type` | Event type, the row of `settings/alertsMapping.json` |
+| `Title` | Text of the alert, can be empty |
+| `Timestamp` | When it was raised |
+| `TimestampEnd` | When its condition was last seen. The same as `Timestamp` for a one-shot event. `TimestampEnd - Timestamp` is the overall duration, which counts the gaps of a condition that came back. |
+| `Active` | The condition has not been seen to go. It clears when an EMS update finds the rule out of that colour, not when the updates stop. Always false for a one-shot event. |
+| `ActiveSeconds` | Time actually spent in the condition, without those gaps |
+
+Today only the alerts raised by an engine rule and "EMS data lost" have a condition to follow. The times use the system clock, so a duration spanning a GPS clock step can be off.
+
+#### `ws://…/alerts`
+One alert, with the fields above, each time an alert is raised. Nothing is sent when an alert changes: a client sounds an alarm for every frame, so a client that wants the state reads `/getAlerts`.
+
+---
+
 ### Map Data
 
 #### `GET /tiles/tilesets`
