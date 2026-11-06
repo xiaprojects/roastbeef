@@ -2,8 +2,8 @@
 <div class="panel-group col-sm-6" id="radio_box" ng-repeat="radio in radioList" style="container-type: inline-size;line-height: normal;">
     <div class="panel panel-default {{radio.className}} text-center">
         <div class="panel-heading">{{radio.name}}
-            <span class="label label-success pull-right" ng-show="radio.enabled == true">ACTIVE</span>
-            <span class="label label-default pull-right" ng-show="radio.enabled == false">INACTIVE</span>
+            <a ng-click="enableRadio(radio,false)" ng-show="radio.enabled == true" class="label label-success" style="padding-left: 2%;padding-right: 2%;">ACTIVE</a>
+            <a ng-click="enableRadio(radio,true)" ng-show="radio.enabled == false" class="label label-default" style="padding-left: 2%;padding-right: 2%;">INACTIVE</a>
         </div>
                 <div style="font-size: 28cqmin;padding: 0px;" class="Radio">
                     {{radio.active}}</div>

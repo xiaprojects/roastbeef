@@ -86,10 +86,6 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $scope.radioApply = function(index){
-        for (var i = 0; i < $scope.radioList.length; i++) {
-            $scope.radioList[i].enabled = (i == index);
-        }
-
         var item = {
             "Enabled": $scope.radioList[index].enabled,
             "FrequencyActive": $scope.radioList[index].active,
@@ -172,6 +168,13 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.radioApply(radio.index);
     }
 
+    // Enabling one radio disables the others: the daemon does that, the refresh shows it
+    $scope.enableRadio = function (radio, enabled) {
+        $scope.radioList[radio.index].enabled = enabled;
+
+        $scope.radioApply(radio.index);
+    }
+
     $scope.increaseFreq = function (radio, increase) {
         increase = parseInt(increase);
         var mhz = $scope.radioList[radio.index].standby.split(".")[0];
@@ -183,7 +186,10 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         if (increase >= 1000 || increase <= -1000) {
             mhzFinal = parseInt(mhz) + increase / 1000;
         }
-        var khzFinal = (""+(parseInt(khz) + increase % 1000) % 1000).padEnd(3,"0");
+        // The digits are a fraction on the way in (118.7 is 700) and a number on the way
+        // out (30 is 118.030). The kHz wrap inside the MHz, in both directions.
+        var khzValue = parseInt((""+khz).padEnd(3,"0")) + increase % 1000;
+        var khzFinal = String((khzValue + 1000) % 1000).padStart(3,"0");
         $scope.radioList[radio.index].standby = mhzFinal + "." + khzFinal;
         $scope.radioList[radio.index].standbyLabel = $scope.radioFindFrequency($scope.radioList[radio.index].standby);
 

@@ -37,6 +37,18 @@
         </td>
     </tr>
 
+    <!-- OFF is under Frequency, as Name is under .fabNorth in the first row, and to the left of
+         the column, or its corner is off the round panel -->
+    <tr ng-click="setFrequency(0,'')" style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+        <td class="text-center"
+            style="font-size: 7cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;height: 16cqmin;">
+        </td>
+        <td style="font-size: 5cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;">
+            OFF
+        </td>
+        <td class="text-center" style="font-size: 6cqmin;margin: 0px;padding:0px;">
+        </td>
+    </tr>
     <tr ng-repeat="frequency in vorList" ng-click="setFrequency(frequency.freq,frequency.name)"
         style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
         <td class="text-center"

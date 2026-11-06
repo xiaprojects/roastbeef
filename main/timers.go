@@ -93,7 +93,7 @@ func (timersInstance *TimersStratuxPlugin)ListenerFunc() bool {
 				timersInstance.timersDataMutex.Unlock()
 				// Out of mutex warn user
 				if(reconfigureAlerts == true){
-					alerts.pushEvent(Alert{EVENT_TYPE_TIMER,fmt.Sprintf("Timer %d fired",t),time.Now()})				
+					alerts.pushEvent(Alert{Type: EVENT_TYPE_TIMER, Title: fmt.Sprintf("Timer %d fired",t), Timestamp: time.Now()})				
 				}
 			}
 		}
