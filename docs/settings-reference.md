@@ -162,6 +162,6 @@ GXAirCom / SoftRF). See [hardware/ogn-ais-receivers.md](hardware/ogn-ais-receive
 |---|---|---|
 | `PWMDutyMin` | int | *Advanced.* Minimum fan PWM duty cycle (consumed by the `fancontrol` binary, `fancontrol_main/`). |
 | `DarkMode` | bool | Web UI dark theme. |
-| `Audio_SoundsDir` | string | *Advanced.* Folder of the `.wav` files the daemon plays through `aplay` when `Audio_Enabled` is on: absolute, or relative to the web folder. Default `sounds`, and `""` reads as the default. `/setSettings` refuses a folder that does not exist, and one missing at start-up raises the system error `sounds-dir`. `RB-01/sounds` holds every sound the alert mapping names. The display is not affected: the browser plays its own `.mp3` copy. |
+| `Audio_SoundsDir` | string | *Advanced.* Folder of the `.wav` files the daemon plays through `aplay` when `Audio_Enabled` is on: absolute, or relative to the web folder. Default `RB-01/sounds`, which holds every sound the alert mapping names, and `""` reads as the default. `/setSettings` refuses a folder that does not exist, and one missing at start-up raises the system error `sounds-dir`. The display is not affected: the browser plays its own `.mp3` copy. |
 | `NoSleep` | bool | *Advanced.* Disable [sleep-mode detection](integration/gdl90.md#sleep-mode) for GDL90 clients. Useful for always-on panel-mount EFIS where the display never sleeps. |
 | `RegionSelected` | int | `0`=none, `1`=US, `2`=EU. Drives UAT band selection and some OGN behavior. Prefer `POST /setRegion`. |

@@ -357,7 +357,7 @@ func TestTheAlertFunctionStartsWithNoPresentationMapping(t *testing.T) {
 	// Audio on, with nothing to look the sound up in: the lookup must not take the
 	// function down, which is the whole point of this test.
 	globalSettings.Audio_Enabled = true
-	if err := os.Mkdir(STRATUX_WWW_DIR+ALERT_SOUNDS_DIR, 0755); err != nil {
+	if err := os.MkdirAll(STRATUX_WWW_DIR+ALERT_SOUNDS_DIR, 0755); err != nil {
 		t.Fatal(err)
 	}
 
@@ -503,8 +503,8 @@ func TestEverySoundAndIconTheMappingNamesExists(t *testing.T) {
 				// The daemon plays .wav through aplay, the display .mp3 through the
 				// browser; both are named by the one Sound field.
 				assets[where+" sound "+row.Sound] = []string{
-					filepath.Join("..", "web", "sounds", row.Sound+".wav"),
-					filepath.Join("..", "web", "sounds", row.Sound+".mp3"),
+					filepath.Join("..", "web", ALERT_SOUNDS_DIR, row.Sound+".wav"),
+					filepath.Join("..", "web", ALERT_SOUNDS_DIR, row.Sound+".mp3"),
 				}
 			}
 			if row.Icon != "" {
@@ -527,14 +527,14 @@ func TestEverySoundAndIconTheMappingNamesExists(t *testing.T) {
 }
 
 // The daemon plays from the folder the settings name, relative to the web folder or
-// absolute. No value is the folder it has always played from, so a settings file that
-// has no such field changes nothing.
+// absolute. No value is the default folder, so a settings file that has no such field
+// plays the default.
 // Covers: RB-HLR-ALR-340
 func TestTheSoundsPlayedComeFromTheFolderTheSettingsName(t *testing.T) {
 	withAlerts(t)
 	STRATUX_WWW_DIR = "/opt/stratux/www/"
 	for dir, want := range map[string]string{
-		"":                "/opt/stratux/www/sounds/notify.wav",
+		"":                "/opt/stratux/www/RB-01/sounds/notify.wav",
 		"sounds":          "/opt/stratux/www/sounds/notify.wav",
 		"RB-01/sounds":    "/opt/stratux/www/RB-01/sounds/notify.wav",
 		"RB-01/sounds/":   "/opt/stratux/www/RB-01/sounds/notify.wav",
@@ -547,8 +547,8 @@ func TestTheSoundsPlayedComeFromTheFolderTheSettingsName(t *testing.T) {
 	}
 }
 
-// A stratux.conf written before the setting existed plays the sounds it always played,
-// and a stored folder is kept.
+// A stratux.conf written before the setting existed plays the default folder, and a
+// stored folder is kept: the stored value here must differ from the default to show that.
 // Covers: RB-HLR-ALR-340
 func TestTheSoundsFolderSetting(t *testing.T) {
 	if !inChild(t) {
@@ -556,7 +556,7 @@ func TestTheSoundsFolderSetting(t *testing.T) {
 	}
 	for _, c := range []struct{ conf, want string }{
 		{`{"RadarRange": 5}`, ALERT_SOUNDS_DIR},
-		{`{"Audio_SoundsDir": "RB-01/sounds"}`, "RB-01/sounds"},
+		{`{"Audio_SoundsDir": "sounds"}`, "sounds"},
 	} {
 		if err := os.WriteFile(configLocation, []byte(c.conf), 0644); err != nil {
 			t.Fatal(err)

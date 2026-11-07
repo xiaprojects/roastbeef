@@ -206,9 +206,15 @@ func removeTarget(id uint32) {
 	}
 }
 
+// How far, in feet, a report carrying an ownship address may sit from our own altitude and
+// still be us (RB-HLR-TRF-135). Deliberately wide: the last altitude heard from our own
+// transponder can be 25 s old, and aerobatics change altitude by up to 1193 ft in that time
+// (the worst of 30 recorded flights). A different aircraft beyond this is traffic.
+const ownshipMaxAltDiffFt = 2000
+
 // Checks if the given TrafficInfo is our ownship. As the user can specify multiple ownship
 // hex codes, this is able to smartly identify if it really is our ownship.
-// If the ti is very close and at same altitude, it is considered to be us
+// If the ti is very close and within ownshipMaxAltDiffFt of our altitude, it is considered to be us
 // If it has no position information, we will not take it as ownship, but ignore its data (no mode-s detection for everything that is configured as ownship)
 func isOwnshipTrafficInfo(ti TrafficInfo) (isOwnshipInfo bool, shouldIgnore bool) {
 	// First, check if this is our own OGN tracker
@@ -271,12 +277,9 @@ func isOwnshipTrafficInfo(ti TrafficInfo) (isOwnshipInfo bool, shouldIgnore bool
 				continue
 			}
 			
-			// If we have a pressure sensor, and the pressure altitude of traffic and ownship is too big, skip...
-			if altDiff > 999 {
+			// This far from our altitude it is a different aircraft, so it is traffic
+			if altDiff > ownshipMaxAltDiffFt {
 				log.Printf("Skipping ownship %s because the altitude is off (%f ft)", ownCode, altDiff)
-				// TODO: find a better strategy for the following cases
-				// You fly near the sea level and transponder is in A, reporting 0 as altitude
-				// You fly aerobatics and the "lag" on the system makes the altitude difference too big between attitude and transponder loopback
 				continue
 			}
 

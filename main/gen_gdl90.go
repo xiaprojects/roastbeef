@@ -1277,7 +1277,7 @@ type settings struct {
 	AutopilotUdp_Port    int  // Autopilot UDP Port, default 1234
 	Autopilot_HomeWaypoint Waypoint     // Autopilot GoToHome GPS Position
 	Audio_Enabled        bool // Alerts Audio Playback on RPI
-	Audio_SoundsDir      string // Folder of the .wav played on RPI: absolute or relative to the web folder, default sounds
+	Audio_SoundsDir      string // Folder of the .wav played on RPI: absolute or relative to the web folder, default RB-01/sounds
 	Camera_Enabled       bool // USB Camera and WebCam
 	Radio_Enabled        bool // RTL SDR Used as Audio Radio
 	Radio                []RadioStatus // Radio settings with device path

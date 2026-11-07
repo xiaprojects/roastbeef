@@ -637,11 +637,14 @@ func TestIcao2RegOutsideCivilBlocks(t *testing.T) {
 // (another aircraft the pilot also flies, airborne now) stays visible as traffic. A
 // report that cannot be checked is hidden but not used as ownship.
 //
-// "Where ownship is" is horizontal only. The altitude half of the check was disabled in
-// 3d02953c (#149) because the aircraft's own transponder loopback disagrees with the
-// barometric altitude by more than 500 ft near sea level in Mode A and during aerobatics,
-// and the aircraft was then warned about itself in the FLARM sentences. RB-HLR-TRF-135
-// records that decision; this test's "1000 ft above" case is what it means.
+// "Where ownship is" is horizontal first, then vertical within a wide limit. The 500 ft
+// check was removed in 3d02953c (#149) because the aircraft's own transponder loopback
+// failed it during aerobatics, and the aircraft was then warned about itself in the FLARM
+// sentences. It is back at 2000 ft for GA integration (#127), so a different aircraft
+// carrying an ownship address is traffic. RB-HLR-TRF-135 records the decision and the
+// measurements behind the number, which is written out here so that moving it has to be a
+// deliberate change to that requirement. An altitude of zero cannot be compared, so that
+// report is hidden, not passed on as traffic.
 // Covers: RB-HLR-TRF-130, RB-HLR-TRF-135
 func TestOwnshipFilter(t *testing.T) {
 	near := TrafficInfo{Icao_addr: 0x3003E3, Position_valid: true, Lat: 43.0, Lng: 12.0, Alt: 3000}
@@ -649,6 +652,14 @@ func TestOwnshipFilter(t *testing.T) {
 	far.Lat = 43.2 // 22 km north
 	above := near
 	above.Alt = 4000
+	atLimit := near
+	atLimit.Alt = 5000
+	overLimit := near
+	overLimit.Alt = 5001
+	underLimit := near
+	underLimit.Alt = 999
+	noAlt := near
+	noAlt.Alt = 0
 	noPos := TrafficInfo{Icao_addr: 0x3003E3, Alt: 3000}
 	other := near
 	other.Icao_addr = 0x3C64AD
@@ -664,6 +675,10 @@ func TestOwnshipFilter(t *testing.T) {
 		{"one of several codes, spaced", "4B1A24, 3003e3", true, near, true, true},
 		{"ownship code, 22 km away", "3003E3", true, far, false, false},
 		{"ownship code, 1000 ft above", "3003E3", true, above, true, true},
+		{"ownship code, 2000 ft above", "3003E3", true, atLimit, true, true},
+		{"ownship code, 2001 ft above", "3003E3", true, overLimit, false, false},
+		{"ownship code, 2001 ft below", "3003E3", true, underLimit, false, false},
+		{"ownship code, altitude zero", "3003E3", true, noAlt, false, true},
 		{"ownship code, no position", "3003E3", true, noPos, false, true},
 		{"ownship code, no baro to compare", "3003E3", false, near, false, true},
 	}

@@ -163,8 +163,8 @@ equipment plays through the aircraft's audio and in the format the display plays
 the browser.**
 
 - **Parent:** RB-SYS-ALR-020
-- **Source:** `main/alerts.go` `soundFile()` (`sounds/<name>.wav`, the default folder);
-  `web/RB-01/services/servicealerts.js` `pushAlert()` (`/sounds/<name>.mp3`)
+- **Source:** `main/alerts.go` `soundFile()` (`RB-01/sounds/<name>.wav`, the default folder);
+  `web/RB-01/services/servicealerts.js` `pushAlert()` (`sounds/<name>.mp3`, the same folder)
 - **Verification:** test
 - **Derived:** no
 
@@ -352,8 +352,9 @@ folder does not exist.**
 - **Derived:** yes
 
 Derived: a design decision, so that an installation can name the folder that holds its
-sounds. The default stays `sounds`. A folder that is not there would silence every alert on
-the aircraft's audio with no report, because nothing reads the result of `aplay`, so
+sounds. The default is `RB-01/sounds`, which holds every sound the mapping names. A folder
+that is not there would silence every alert on the aircraft's audio with no report, because
+nothing reads the result of `aplay`, so
 `/setSettings` refuses it and start-up reports one that went missing, under the identifier
 `sounds-dir`, cleared when a folder is accepted. The report is on the folder and not on each
 file: a folder that lacks one sound stays silent for that alert, and RB-HLR-ALR-080 checks
