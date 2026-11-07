@@ -149,8 +149,6 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	terrainLayer.on('change:visible', followTerrain);
 
 	function updateTerrainAltitude(msg) {
-		if (msg.GPSFixQuality <= 0)
-			return;
 		terrainPosition = [msg.GPSLatitude, msg.GPSLongitude];
 		followTerrain();
 		const altitude = msg.GPSAltitudeMSL * 0.3048;	// feet, as synthview.js reads it
@@ -559,10 +557,11 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	function updateMyLocation(msg) {
 		const lat = msg.GPSLatitude;
 		const lon = msg.GPSLongitude;
+		/* Since we have a restore of latest known position, we don't want to hide it if the GPS is not fixed
 		const fix = msg.GPSFixQuality
 		if (fix <= 0)
 			return;
-
+		*/
 		const layer = getOrCreateGpsLayer(lat, lon);
 		const source = layer.getSource();
 
