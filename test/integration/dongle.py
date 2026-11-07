@@ -15,7 +15,10 @@ is different, and that keeps the three properties test_vor_radio.py depends on:
   when the holder dies, as it does a USB interface.
 - A signal only on its channel. Tuned anywhere else the dongle reads noise, so a daemon
   on the wrong frequency hears nothing and the plate shows it.
-- Real time. A read takes as long as the samples it returns.
+- Real time. A read takes as long as the samples it returns, and a retune as long as a
+  real R820T's, so dual watch cycles at about the rate it does on the air.
+- Transmissions. A station is on the air until <dir>/air.json exists, and then only if
+  its kHz are in that list, which is how a test keys and unkeys one.
 
 Every claim, refusal, tune and release is one JSON line in <dir>/dongle.log. With --real
 the daemon opens the dongle itself and only the log is added, so the test reads both
@@ -41,6 +44,9 @@ NOISE_DBFS = -60.0
 # What is on the air. Each VOR has its own radial, so the plate shows which one it hears.
 VOR_KHZ = {109_400: 130, 113_800: 245}
 COM_KHZ = 118_700
+COM2_KHZ = 119_700     # for dual watch. 121.500 stays empty, for test_vor_radio.py
+NAV_KHZ = 113_800      # what the radio hears there: a carrier that never stops
+HOP_S = 0.029          # rtlsdr_set_center_freq, measured on a real R820T
 
 
 class Logged:
@@ -101,12 +107,23 @@ class Dongle(Logged):
         self.note("open")
 
     def set_frequency(self, hz):
+        time.sleep(HOP_S)
         self.hz = int(hz)
         self.note("tune", hz=self.hz)
 
+    def reset_buffer(self):
+        pass
+
+    def on_air(self):
+        try:
+            with open(os.path.join(self.directory, "air.json")) as fp:
+                return (self.hz - OFFSET) // 1000 in json.load(fp)
+        except OSError:
+            return True
+
     def read(self, n):
         time.sleep(n / FS)
-        source = self.sky.get(self.hz, self.quiet)
+        source = self.sky[self.hz] if self.hz in self.sky and self.on_air() else self.quiet
         start = self.position % (source.size - BLOCK)
         self.position += n
         return source[start:start + n]
@@ -154,8 +171,8 @@ def radio(directory, argv, real):
         opener = sdr.RtlDevice
         sdr.RtlDevice = lambda cfg: Real("radio", directory, opener, cfg, sdr.SdrError)
     else:
-        tone = synth.am(LOOP_S, -30.0, tone_hz=1000.0) + noise(np)
-        sky = {COM_KHZ * 1000 + OFFSET: looped(np, tone)}
+        sky = {khz * 1000 + OFFSET: looped(np, synth.am(LOOP_S, -30.0, tone_hz=1000.0) + noise(np))
+               for khz in (COM_KHZ, COM2_KHZ, NAV_KHZ)}
         quiet = looped(np, noise(np))
         sdr.RtlDevice = lambda cfg: Dongle("radio", directory, sky, quiet, sdr.SdrError)
     from rbsdrradio.__main__ import main

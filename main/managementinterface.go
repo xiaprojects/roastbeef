@@ -1210,10 +1210,13 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 
 	radio.radioDataMutex.Lock()
 
-	// What a body leaves out keeps its value. radio.js posts no levels, and on the SDR
-	// 0 is a real one: volume releases ALSA, squelch is held open.
+	// What a body leaves out keeps its value. radio.js sends levels one at a time, and on
+	// the SDR 0 is a real one: volume releases ALSA, squelch is held open. A level the body
+	// does name always goes: a stored 0 can also mean never set, with the daemon on its own
+	// default, so comparing with the stored value would lose the pilot's 0.
 	msg := radio.radioData[radioIndex]
 	msg.Record = nil
+	msg.VolumeLevel, msg.SquelchLevel = RADIO_LEVEL_ABSENT, RADIO_LEVEL_ABSENT
 	err2 := decoder.Decode(&msg)
 	if err2 == io.EOF {
 		log.Printf("handleRadioPostio.EOF:error: %s\n", err2.Error())
@@ -1222,6 +1225,11 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 		log.Printf("handleRadioPost:error: %s\n", err2.Error())
 		http.Error(w, err2.Error(), 500)
 	} else {
+		wasEnabled := radio.radioData[radioIndex].Enabled
+		// VOL 0 is the SDR radio's off position, whatever else the body says
+		if(msg.VolumeLevel == 0 && radio.radioData[radioIndex].Driver == RADIO_DRIVER_SDR){
+			msg.Enabled = false
+		}
 		// Multi radio support
 		if(msg.Enabled == true) {
 			for index, _ := range radio.radioData {
@@ -1270,17 +1278,20 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 					alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Freq. Set Standby fail"), Timestamp: time.Now()})
 				}
 			}
-		if(radio.radioData[radioIndex].VolumeLevel != msg.VolumeLevel && !radio.radioSetVolume(radioIndex, msg.VolumeLevel)){
+		if(msg.VolumeLevel != RADIO_LEVEL_ABSENT && !radio.radioSetVolume(radioIndex, msg.VolumeLevel)){
 			log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 			alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Volume Set fail"), Timestamp: time.Now()})
 		}
-		if(radio.radioData[radioIndex].SquelchLevel != msg.SquelchLevel && !radio.radioSetSquelch(radioIndex, msg.SquelchLevel)){
+		if(msg.SquelchLevel != RADIO_LEVEL_ABSENT && !radio.radioSetSquelch(radioIndex, msg.SquelchLevel)){
 			log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 			alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Squelch Set fail"), Timestamp: time.Now()})
 		}
 		if(msg.Record != nil && !radio.radioSetRecord(radioIndex, *msg.Record)){
 			log.Printf("handleRadioPost:error: %s\n", "command not accepted")
 			alerts.pushEvent(Alert{Type: EVENT_TYPE_RADIO_COMMAND_NOT_OK, Title: fmt.Sprintf("Radio Record Set fail"), Timestamp: time.Now()})
+		}
+		if(msg.Enabled == true && wasEnabled == false){
+			radio.radioSdrVolumeOn(radioIndex)
 		}
 		// Last, on the stored frequency: a POST may enable the radio and set the channel
 		radio.radioSdrTune()

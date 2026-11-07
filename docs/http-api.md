@@ -193,28 +193,33 @@ Changes one radio. The body holds the fields that change; what it leaves out kee
 |---|---|
 | `FrequencyActive`, `FrequencyStandby` | MHz as a string, such as `"118.030"` |
 | `LabelActive`, `LabelStandby` | Station names |
-| `Dual` | Dual watch. Refused on the `SDR` driver, a single receiver |
+| `Dual` | Dual watch. On the `SDR` driver the radio takes turns on active and standby, one tuner hearing one place at a time, and the active channel always wins |
 | `Enabled` | `true` selects this radio and disables the others. On the `SDR` driver `false` turns the receiver off |
-| `VolumeLevel` | `SDR` only, 0 to 100. 0 releases the sound device; reception and recording carry on |
-| `SquelchLevel` | `SDR` only, 0 to 100 dB above the noise. 0 holds the squelch open |
+| `VolumeLevel` | `SDR` only, 0 to 100. 0 is the off position: `Enabled` goes `false` and the receiver releases the dongle and the sound device, whatever else the body says. `Enabled` `true` brings the radio back on its last level. A level alone does not turn it on, as `Enabled` also selects between radios |
+| `SquelchLevel` | `SDR` only, 0 to 100 dB above the noise, of which the plate's slider covers 0 to 10. 0 holds the squelch open |
 | `Record` | `SDR` only. Save received audio to the recording folder |
 
-With `"Driver": "SDR"` these become commands to the `rb-sdr-radio` daemon, sent through the float bridge (`main/radio.go`; the contract is `docs/RB-SDR-RADIO-IF-v1.0.md` in that repository):
+With `"Driver": "SDR"` these become commands to the `rb-sdr-radio` daemon, sent through the float bridge (`main/radio.go`; the contract is `docs/RB-SDR-RADIO-IF-v1.1.md` in that repository):
 
 | Field | Bridge key |
 |---|---|
-| `FrequencyActive` | `sdrradiofreq`, the channel name in MHz |
+| `FrequencyActive` | `sdrradiofreq`, the channel name in MHz, from 108.000 to 136.990. Below 118 only the 50 kHz grid of the VOR band exists |
+| `FrequencyStandby` with `Dual` on | `sdrradiofreqsecondary`, the channel name in MHz. 0 when `Dual` is off, when the radio is off, or while the standby is not a channel |
 | `VolumeLevel` | `sdrradiovolume` |
 | `SquelchLevel` | `sdrradiosquelch` |
 | `Record` | `sdrradiorecord`, 0 or 1 |
 
-`FrequencyActive` must be a 25 or 8.33 kHz channel name from 118.000 to 136.990. Names ending 20, 45, 70 and 95 do not exist and are refused, so the radio stays on its channel. `FrequencyStandby` stays in RB-01: there is one receiver, so it takes effect when swapped to active.
+`FrequencyActive` must be a channel name: 25 or 8.33 kHz from 118.000 to 136.990, where names ending 20, 45, 70 and 95 do not exist, or the 50 kHz grid from 108.000 to 117.950. Anything else is refused, so the radio stays on its channel. `FrequencyStandby` is not checked, as the plate's spinner passes through names that are not channels. It reaches the radio with `Dual` on, and otherwise takes effect when swapped to active.
+
+The serial radios keep the COM band: the plate stops at 118 for them.
 
 `Enabled` decides whether the receiver runs. With no SDR radio enabled, `sdrradiofreq` is 0, the bridge's empty frequency, and the daemon releases the dongle and the sound device. That includes selecting another radio. `FrequencyActive` is kept and can still be changed while off; enabling the radio tunes it. Volume, squelch and `Record` keep working as settings.
 
-The bridge is held in memory, so with `Radio_Enabled` set the levels, `Record` and the frequency are sent again at start-up, 0 if the radio is disabled. A level of 0 is not sent, because it cannot be told from a level never set, and `Record` is not sent until it has been chosen. The daemon's own defaults apply in those cases.
+A level named in a body is always sent, even if it equals the stored value, as a stored 0 can also mean the daemon is on its own default.
 
-What the radio is really doing is on the same bridge, in the `sdrradio*` status keys of `ws://…/bridge/float/ws`.
+The bridge is held in memory, so with `Radio_Enabled` set the levels, `Record` and both frequencies are sent again at start-up, 0 if the radio is disabled. A level of 0 is not sent, because it cannot be told from a level never set, and `Record` is not sent until it has been chosen. The daemon's own defaults apply in those cases.
+
+What the radio is really doing is on the same bridge, in the `sdrradio*` status keys of `ws://…/bridge/float/ws`. The radio plate shows `sdrradiofreqactive` as the active channel, the reply to `sdrradiofreq`, as the VOR plate does with `vorfreqactive`, and marks `sdrradiofreqheard`.
 
 ---
 

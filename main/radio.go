@@ -33,7 +33,7 @@
 	- RS232 Serial Port receiver
 	- RS232 Configuration
 	- Set frequency on RS232 binary protocol
-	- Set frequency, volume, squelch and recording on rb-sdr-radio
+	- Set frequency, dual watch, volume, squelch and recording on rb-sdr-radio
 
 	Roadmap:
 	- Get frequency on RS232 binary protocol
@@ -69,11 +69,12 @@
 
 	Standard 2 with NMEA Messages
 
-	Standard 3 with rb-sdr-radio, RB-SDR-RADIO-IF v1.0
+	Standard 3 with rb-sdr-radio, RB-SDR-RADIO-IF v1.1
 	An airband receiver in its own process, a client of /bridge/float/ws. Commands are
 	keys of the float bridge, in the one map every addon shares:
 	sdrradiofreq		// MHz, channel name as dialled. 0 is off and releases the SDR: Enabled false
-	sdrradiovolume		// 0 to 100. 0 releases the ALSA device
+	sdrradiofreqsecondary	// MHz, the standby while Dual is on. 0 is one channel
+	sdrradiovolume		// 0 to 100. 0 releases the ALSA device. Here it is the off position, see radioSdrVolumeOn
 	sdrradiosquelch		// dB above the noise. 0 holds it open
 	sdrradiorecord		// 0 or 1
 	The bridge lives in memory, so the commands are sent again after a restart.
@@ -103,12 +104,21 @@ const (
 	RADIO_DRIVER_RS232_STX =   0x02
 
 	RADIO_SDR_KEY_FREQUENCY = "sdrradiofreq"
+	RADIO_SDR_KEY_SECONDARY = "sdrradiofreqsecondary"
 	RADIO_SDR_KEY_VOLUME =    "sdrradiovolume"
+	RADIO_SDR_KEY_VOLUME_ACTIVE = "sdrradiovolumeactive"
 	RADIO_SDR_KEY_SQUELCH =   "sdrradiosquelch"
 	RADIO_SDR_KEY_RECORD =    "sdrradiorecord"
 	RADIO_SDR_LEVEL_MAX =     100
-	RADIO_SDR_BAND_MIN_KHZ =  118000
+	RADIO_SDR_VOLUME_ON =     50 // Back on from VOL 0 with no earlier level. The receiver's own default
+	RADIO_SDR_BAND_MIN_KHZ =  108000
 	RADIO_SDR_BAND_MAX_KHZ =  136990
+	RADIO_SDR_NAV_MAX_KHZ =   117950 // Below 118 MHz: navaids, on a 50 kHz grid
+	RADIO_SDR_COM_MIN_KHZ =   118000
+	RADIO_SDR_NAV_GRID_KHZ =  50
+
+	// What a level left out of a POST reads as: 0 is a real level on the SDR
+	RADIO_LEVEL_ABSENT = -1
 )
 
 type RadioPlayback struct {
@@ -135,6 +145,7 @@ type RadioStatus struct {
 	LabelStandby     string
 	Record *bool // SDR only. nil until the pilot chooses: the daemon's own default is on
 	sdrRestored bool
+	volumeOn int // SDR only. The last level above 0, for when VOL 0 has turned the radio off
 }
 
 type RadioStratuxPlugin struct {
@@ -157,6 +168,7 @@ func (radioInstance *RadioStratuxPlugin) InitFunc() bool {
 	for comm := range radioInstance.radioData {
 		thisRadio := &radioInstance.radioData[comm]
 		thisRadio.serialPort = nil
+		thisRadio.volumeOn = thisRadio.VolumeLevel
 		if thisRadio.FrequencyActive == "" {
 			thisRadio.FrequencyActive = "118.000"
 		}
@@ -312,8 +324,9 @@ func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency 
 			return true
 		}
 	case RADIO_DRIVER_SDR:
-		// One receiver, so standby exists only here. It is not checked either: the 5 kHz
-		// spinner in radio.js steps through names that are not channels, such as 118.020.
+		// Standby reaches the radio only with Dual on, through radioSdrTune. It is not
+		// checked either: the 5 kHz spinner in radio.js steps through names that are not
+		// channels, such as 118.020.
 		if toActive == false {
 			return true
 		}
@@ -365,8 +378,8 @@ func (radioInstance *RadioStratuxPlugin) radioSetDual(index int, dual bool) bool
 			return true
 		}
 	case RADIO_DRIVER_SDR:
-		// One receiver on one channel: there is no dual watch to turn on
-		return false
+		// The caller stores Dual, and radioSdrTune sends what it means
+		return true
 	}
 	return false
 }
@@ -380,7 +393,31 @@ func (radioInstance *RadioStratuxPlugin) radioSetVolume(index int, level int) bo
 		return false
 	}
 	radioInstance.radioData[index].VolumeLevel = level
+	if level > 0 {
+		radioInstance.radioData[index].volumeOn = level
+	}
 	return true
+}
+
+// radioSdrVolumeOn is for a radio being turned on. VOL 0 is the off position, so a radio on
+// at 0 would look on and be silent: it comes back on its last level. It goes by what the
+// receiver holds, as a stored 0 can also mean never set, with the receiver on its own default.
+func (radioInstance *RadioStratuxPlugin) radioSdrVolumeOn(index int) {
+	thisRadio := &radioInstance.radioData[index]
+	if thisRadio.Driver != RADIO_DRIVER_SDR {
+		return
+	}
+	addonsBridge.bridgeDataMutex.Lock()
+	commanded, isCommanded := addonsBridge.bridgeFloatData[RADIO_SDR_KEY_VOLUME]
+	active, isActive := addonsBridge.bridgeFloatData[RADIO_SDR_KEY_VOLUME_ACTIVE]
+	addonsBridge.bridgeDataMutex.Unlock()
+	if (isCommanded && commanded == 0) || (isActive && active == 0) {
+		level := thisRadio.volumeOn
+		if level == 0 {
+			level = RADIO_SDR_VOLUME_ON
+		}
+		radioInstance.radioSetVolume(index, level)
+	}
 }
 
 func (radioInstance *RadioStratuxPlugin) radioSetSquelch(index int, level int) bool {
@@ -417,8 +454,10 @@ func (radioInstance *RadioStratuxPlugin) radioSdrCommand(index int, key string, 
 // enabled SDR radio, or the empty frequency when none is. The bridge holds only numbers,
 // so empty is 0, which releases the dongle. It looks at every radio because selecting one
 // disables the others, and there is one receiver however many entries point at it.
+// sdrradiofreqsecondary goes with it, in one frame, and every time: the daemon may have
+// outlived a restart still watching.
 func (radioInstance *RadioStratuxPlugin) radioSdrTune() {
-	var mhz float32
+	var mhz, secondary float32
 	present, valid := false, true
 	for comm := range radioInstance.radioData {
 		thisRadio := &radioInstance.radioData[comm]
@@ -426,12 +465,27 @@ func (radioInstance *RadioStratuxPlugin) radioSdrTune() {
 			present = true
 			if thisRadio.Enabled {
 				mhz, valid = radioSdrChannelMHz(thisRadio.FrequencyActive)
+				secondary = radioSdrSecondaryMHz(thisRadio, mhz)
 			}
 		}
 	}
 	if present && valid {
-		addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_FREQUENCY: mhz})
+		addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_FREQUENCY: mhz, RADIO_SDR_KEY_SECONDARY: secondary})
 	}
+}
+
+// radioSdrSecondaryMHz returns the value of sdrradiofreqsecondary: the standby channel, or
+// 0 when there is nothing to watch as well. A standby the spinner is passing through is
+// 0 rather than a bad name, as the radio must not drop out on the way to the next channel.
+func radioSdrSecondaryMHz(thisRadio *RadioStatus, primary float32) float32 {
+	if thisRadio.Dual == false {
+		return 0
+	}
+	mhz, valid := radioSdrChannelMHz(thisRadio.FrequencyStandby)
+	if valid == false || mhz == primary {
+		return 0
+	}
+	return mhz
 }
 
 // radioSdrRestore sends what the pilot last chose: the bridge starts empty after a restart.
@@ -461,7 +515,8 @@ func radioSdrFlag(on bool) float32 {
 }
 
 // radioSdrChannelMHz returns the value of sdrradiofreq for a frequency: the channel name
-// in MHz. Anything else makes the daemon release the SDR, so it is refused here and the
+// in MHz, from the VOR band up. The serial radios are COM only and do not come here.
+// Anything else makes the daemon release the SDR, so it is refused here and the
 // radio stays on its channel. Integer kHz throughout, as a float32 frequency must never
 // be compared.
 func radioSdrChannelMHz(frequency string) (float32, bool) {
@@ -477,6 +532,12 @@ func radioSdrChannelMHz(frequency string) (float32, bool) {
 	name := mhz*1000 + khz
 	if name < RADIO_SDR_BAND_MIN_KHZ || name > RADIO_SDR_BAND_MAX_KHZ || name%5 != 0 {
 		return 0, false
+	}
+	if name < RADIO_SDR_COM_MIN_KHZ {
+		if name > RADIO_SDR_NAV_MAX_KHZ || name%RADIO_SDR_NAV_GRID_KHZ != 0 {
+			return 0, false // The navaid band has no 25 or 8.33 kHz plan
+		}
+		return float32(name) / 1000, true
 	}
 	switch name % 100 {
 	case 20, 45, 70, 95:

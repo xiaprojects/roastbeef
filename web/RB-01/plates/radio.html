@@ -2,18 +2,20 @@
 <div class="panel-group col-sm-6" id="radio_box" ng-repeat="radio in radioList" style="container-type: inline-size;line-height: normal;">
     <div class="panel panel-default {{radio.className}} text-center">
         <div class="panel-heading">{{radio.name}}
-            <a ng-click="enableRadio(radio,false)" ng-show="radio.enabled == true" class="label label-success" style="padding-left: 2%;padding-right: 2%;">ACTIVE</a>
-            <a ng-click="enableRadio(radio,true)" ng-show="radio.enabled == false" class="label label-default" style="padding-left: 2%;padding-right: 2%;">INACTIVE</a>
+            <span ng-if="isHeard(radio,activeShown(radio))" class="label label-success radioHeard">RX</span>
+            <a ng-if="radio.sdr" ng-click="toggleLevels(radio)" class="label {{radioLevelsShown[radio.index] ? 'label-info' : 'label-default'}}" style="padding-left: 1%;padding-right: 1%;">SQL</a>
+            <a ng-click="enableRadio(radio,false)" ng-show="radio.enabled == true" class="label label-success" style="padding-left: 1%;padding-right: 1%;">ACTIVE</a>
+            <a ng-click="enableRadio(radio,true)" ng-show="radio.enabled == false" class="label label-default" style="padding-left: 1%;padding-right: 1%;">INACTIVE</a>
         </div>
                 <div style="font-size: 28cqmin;padding: 0px;" class="Radio">
-                    {{radio.active}}</div>
-                <div style="font-size: 10cqmin;padding: 0px;margin:0px; white-space:nowrap;overflow:hidden;margin-top: -4%;">{{radio.label}}</div>
+                    {{activeShown(radio)}}</div>
+                <div style="font-size: 10cqmin;padding: 0px;margin:0px; white-space:nowrap;overflow:hidden;margin-top: -4%;">{{labelShown(radio)}}</div>
     </div>
     <div class="panel panel-default {{radio.className}}">
         <div class="panel-heading">
             <a ng-click="switchFreq(radio)" class="label label-warning" style="padding-left: 2%;padding-right: 2%;max-width: 48%;display: inline-block;overflow: hidden;">SWITCH FREQ.</a>
 
-            <a ng-click="dualFreq(radio,false)" ng-show="radio.dual == true" class="label label-success pull-right" style="padding-left: 2%;padding-right: 2%;">DUAL
+            <a ng-click="dualFreq(radio,false)" ng-show="radio.dual == true" class="label {{dualClass(radio)}} pull-right" style="padding-left: 2%;padding-right: 2%;">DUAL
                 ON</a>
             <a ng-click="dualFreq(radio,true)" ng-show="radio.dual == false" class="label label-default pull-right" style="padding-left: 2%;padding-right: 2%;">DUAL
                 OFF</a>
@@ -25,6 +27,7 @@
                 <div class="Radio"
                     style="pointer-events: none;font-size: 20cqmin;padding: 0px;">
                     {{radio.standby}}
+                    <span ng-if="isHeard(radio,radio.standby)" class="label label-success radioHeard">RX</span>
                 </div>
                 <div style="font-size: 10cqmin;padding: 0px;margin: 0px;white-space:nowrap;overflow:hidden;margin-top: -4%;">{{radio.standbyLabel}}</div>
 
@@ -32,44 +35,62 @@
                 <a ng-click="search(radio)" class="btn btn-default " style="width: 30%;overflow: hidden;padding-left:0;padding-right:0;">SEARCH</a>
                 <a ng-click="increaseFreq(radio,-5)" class="btn btn-default  {{radio.classStandByRight}}" style="width:  30%;">&#9660;</a>
             </div>
+        <div ng-if="radio.sdr && radioLevelsShown[radio.index]" class="radioLevels" id="radio_levels_{{radio.index}}">
+            <div class="radioLevel {{radio.classVolume}}" id="radio_level_{{radio.index}}_2">
+                <span class="radioLevelName">VOL</span>
+                <div class="radioLevelTrack" style="--radio-level-cells: {{volumeCells.length}};">
+                    <i ng-repeat="cell in volumeCells" ng-class="{radioLevelOn: cell > 0 && cell <= radio.volume}"></i>
+                    <input type="range" min="0" max="{{radioLevels.volume.max}}" step="{{radioLevels.volume.step}}" ng-model="radio.volume" ng-change="levelChanged(radio,'volume')" aria-label="Volume" />
+                </div>
+                <span class="radioLevelValue">{{radio.volume}}</span>
+            </div>
+            <div class="radioLevel {{radio.classSquelch}}" id="radio_level_{{radio.index}}_3">
+                <span class="radioLevelName">SQL</span>
+                <div class="radioLevelTrack" style="--radio-level-cells: {{squelchCells.length}};">
+                    <i ng-repeat="cell in squelchCells" ng-class="{radioLevelOn: cell > 0 && cell <= radio.squelch}"></i>
+                    <input type="range" min="0" max="{{radioLevels.squelch.max}}" step="{{radioLevels.squelch.step}}" ng-model="radio.squelch" ng-change="levelChanged(radio,'squelch')" aria-label="Squelch" />
+                </div>
+                <span class="radioLevelValue">{{squelchText(radio)}}</span>
+            </div>
+        </div>
         <div ng-if="radio.keypadVisible" style="margin-bottom: 4px;" id="radio_keypad_{{radio.index}}">
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,1)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==6">1</a>
+                    ng-disabled="!keypadAllows(radio,1)">1</a>
                 <a ng-click="digitKeypad(radio,2)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==6">2</a>
+                    ng-disabled="!keypadAllows(radio,2)">2</a>
                 <a ng-click="digitKeypad(radio,3)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==6">3</a>
+                    ng-disabled="!keypadAllows(radio,3)">3</a>
             </div>
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,4)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">4</a>
+                    ng-disabled="!keypadAllows(radio,4)">4</a>
                 <a ng-click="digitKeypad(radio,5)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1">5</a>
+                    ng-disabled="!keypadAllows(radio,5)">5</a>
                 <a ng-click="digitKeypad(radio,6)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">6</a>
+                    ng-disabled="!keypadAllows(radio,6)">6</a>
             </div>
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,7)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">7</a>
+                    ng-disabled="!keypadAllows(radio,7)">7</a>
                 <a ng-click="digitKeypad(radio,8)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">8</a>
+                    ng-disabled="!keypadAllows(radio,8)">8</a>
                 <a ng-click="digitKeypad(radio,9)" class="btn btn-default"
                     style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1||radio.keypadDigitIndex==6">9</a>
+                    ng-disabled="!keypadAllows(radio,9)">9</a>
             </div>
             <div class="text-center">
                 <a ng-click="digitKeypad(radio,0)" class="btn " style="width: 30%;margin: 1px; font-size: 8cqmin;"></a>
                 <a ng-click="digitKeypad(radio,0)" class="btn btn-default" style="width: 30%;margin: 1px; font-size: 8cqmin;"
-                    ng-disabled="radio.keypadDigitIndex==1">0</a>
+                    ng-disabled="!keypadAllows(radio,0)">0</a>
                 <a ng-click="digitKeypad(radio,0)" class="btn " style="width: 30%;margin: 1px; font-size: 8cqmin;"></a>
             </div>
         </div>

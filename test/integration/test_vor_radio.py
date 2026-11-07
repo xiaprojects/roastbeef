@@ -183,7 +183,7 @@ class Bench:
                                             preexec_fn=die_with_parent)
 
     def start_stratuxrun(self):
-        binary = replay.build(self.work)
+        self.binary = replay.build(self.work)
         # A non-root daemon serves <its directory>/web. The checkout's files, except
         # settings/, which it writes to and which is not the test's to change.
         web = self.path("web")
@@ -200,7 +200,11 @@ class Bench:
             json.dump(SETTINGS, fp)
         self.port = replay.free_port()
         self.url = "http://127.0.0.1:%d" % self.port
-        self.spawn("stratuxrun", [binary, "-port", str(self.port)], HOME=home, LD_LIBRARY_PATH=REPO)
+        self.run_stratuxrun()
+
+    def run_stratuxrun(self):
+        self.spawn("stratuxrun", [self.binary, "-port", str(self.port)], HOME=self.path("home"),
+                   LD_LIBRARY_PATH=REPO)
         self.wait_for(lambda: self.get("/getStatus"), 15, "stratuxrun to serve")
 
     def start_receivers(self):

@@ -165,3 +165,39 @@ fails with `No space left on device`. Point `TMPDIR` at a directory on disk.
 A test that is killed stops its receivers, even with SIGKILL (`PR_SET_PDEATHSIG`). One left
 behind would go on retrying and take the dongle the moment it is plugged in, which is what
 this did before that was added.
+
+# The SDR radio watching two channels
+
+`test_radio_dual.py` presses the RB-01 radio plate in a real Chromium, on a `stratuxrun` built
+from this checkout, and checks the real `rb-sdr-radio` taking turns on two channels. It uses
+the harness of `test_vor_radio.py`, without `rb-vor`.
+
+```sh
+python3 test_radio_dual.py                         # build, then ~1 min
+python3 test_radio_dual.py --dongle                # on the real dongle
+RB_RADIOS_KEEP=/tmp/r python3 test_radio_dual.py   # also keep the logs and dongle.log
+```
+
+`dongle.py` radiates a station on each of 118.700, 119.700 and 113.800, and retunes as slowly
+as a real R820T. A station is on the air until `air.json` exists in the scratch directory, and
+then only if its kHz are listed there, which is how the test keys one. Nothing else in the
+chain is a stand-in, so the receiver can only find a transmission by really hopping to it.
+
+| Step | Checks |
+|---|---|
+| Sliders | Opened by the button, a real press on a step reaches the receiver, which replies |
+| VOL 0 | From a fresh config too: the radio goes INACTIVE, the dongle and sound device are released, and ACTIVE brings it back on its last level |
+| DUAL | The receiver replies, the tuner hops about 20 times a second between those two channels, no hop reaches the bridge |
+| A transmission | It locks on the standby, RX moves there, and the active digits stay |
+| The primary | Starting during a secondary that never stops, it takes the lock inside a look back |
+| After the hold | It goes quiet and takes turns again, and each channel has a recording |
+| SWITCH FREQ. | The digits wait for the reply, like `vorfreqactive`, and the watching swaps |
+| Squelch OPEN | The watching stops and DUAL warns, and a squelch brings it back |
+| A restart of `stratuxrun` | The bridge starts empty, and the watching comes back on the pilot's squelch |
+| DUAL off | The tuner stops, on the active |
+| The VOR band | The receiver tunes it, hears a carrier that never stops, and records none of it |
+| Off | The dongle is released |
+
+`--dongle` skips the transmissions, as nothing known is on the air. The hops are real, the rest
+holds, and for what the tuner itself does use `python3 -m rbsdrradio test-dual`, see the
+`rb-sdr-radio` README.

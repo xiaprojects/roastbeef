@@ -127,6 +127,84 @@
       "Id": "EVENT_TYPE_SYSTEM_DANGER",
       "Icon": "danger",
       "Sound": "danger"
+    },
+    {
+      "Text": "Errore del barometro",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_BAROMETER"
+    },
+    {
+      "Text": "Errore del ricevitore SDR",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_SDR",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_SDR"
+    },
+    {
+      "Text": "Errore nelle impostazioni",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_SYSTEM_DANGER_SETTINGS"
+    },
+    {
+      "Text": "Sistema avviato e funzionante",
+      "Id": "EVENT_TYPE_STARTUP_INFO",
+      "Icon": "info",
+      "Sound": "notify"
+    },
+    {
+      "Text": "Autopilota inserito",
+      "Id": "EVENT_TYPE_AUTOPILOT_ENGAGE",
+      "Icon": "info",
+      "Sound": "EVENT_TYPE_AUTOPILOT_ENGAGE"
+    },
+    {
+      "Text": "Autopilota disinserito",
+      "Id": "EVENT_TYPE_AUTOPILOT_DISENGAGE",
+      "Icon": "info",
+      "Sound": "EVENT_TYPE_AUTOPILOT_DISENGAGE"
+    },
+    {
+      "Text": "Autopilota: punto raggiunto",
+      "Id": "EVENT_TYPE_AUTOPILOT_ABEAM",
+      "Icon": "info",
+      "Sound": "EVENT_TYPE_AUTOPILOT_ABEAM"
+    },
+    {
+      "Text": "Autopilota: nuova destinazione impostata",
+      "Id": "EVENT_TYPE_AUTOPILOT_GOTO",
+      "Icon": "info",
+      "Sound": "EVENT_TYPE_AUTOPILOT_GOTO"
+    },
+    {
+      "Text": "Errore, la radio non risponde ai comandi",
+      "Id": "EVENT_TYPE_RADIO_COMMAND_NOT_OK",
+      "Icon": "info",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Errore generico del motore",
+      "Id": "EVENT_TYPE_EMS_GENERIC_FAILURE",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_EMS_GENERIC_FAILURE"
+    },
+    {
+      "Text": "Parametro motore in zona gialla",
+      "Id": "EVENT_TYPE_EMS_RULE_YELLOW",
+      "Icon": "warning",
+      "Sound": "EVENT_TYPE_EMS_RULE_YELLOW"
+    },
+    {
+      "Text": "Parametro motore in zona rossa",
+      "Id": "EVENT_TYPE_EMS_RULE_RED",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_EMS_RULE_RED"
+    },
+    {
+      "Text": "GPS senza fix",
+      "Id": "EVENT_TYPE_GPS_NOT_FIXED",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_GPS_NOT_FIXED"
     }
   ]
 }

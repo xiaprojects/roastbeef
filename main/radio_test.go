@@ -1,5 +1,5 @@
 /*
-	radio_test.go: the SDR driver, RB-SDR-RADIO-IF v1.0.
+	radio_test.go: the SDR driver, RB-SDR-RADIO-IF v1.1.
 
 	rb-sdr-radio is a client of the float bridge, so its contract here is the bridge
 	map and the frames on /bridge/float/ws. POST /radio/{index} drives the real
@@ -77,6 +77,18 @@ func TestRadioSdrChannelNames(t *testing.T) {
 		{"118.7", 118.7, true},     // digits as a person types them
 		{"121", 121, true},
 
+		{"108.000", 108, true},     // the VOR band, on its 50 kHz grid
+		{"108.050", 108.05, true},
+		{"108.100", 108.1, true}, // a localiser: only audio here, so it passes
+		{"109.400", 109.4, true},
+		{"113.800", 113.8, true},
+		{"117.950", 117.95, true}, // last navaid channel
+
+		{"107.950", 0, false},
+		{"108.005", 0, false}, // no 8.33 kHz plan below 118
+		{"108.025", 0, false},
+		{"117.900", 117.9, true},
+		{"117.980", 0, false},
 		{"118.020", 0, false}, // names ending 20, 45, 70, 95 do not exist
 		{"118.045", 0, false},
 		{"118.070", 0, false},
@@ -108,29 +120,34 @@ func TestRadioSdrChannelNames(t *testing.T) {
 // Every channel, the way the daemon reads it: float32 on the bridge, JSON on the socket,
 // a float64 within 0.05 kHz of the name in freqrules.parse_channel.
 func TestRadioSdrEveryChannelSurvivesTheBridge(t *testing.T) {
-	digits := []int{0, 5, 10, 15, 25, 30, 35, 40, 50, 55, 60, 65, 75, 80, 85, 90}
 	channels := 0
-	for hundreds := 118000; hundreds <= 136900; hundreds += 100 {
+	check := func(khz int) {
+		frequency := fmt.Sprintf("%d.%03d", khz/1000, khz%1000)
+		mhz, valid := radioSdrChannelMHz(frequency)
+		if !valid {
+			t.Fatalf("%s refused", frequency)
+		}
+		frame, _ := json.Marshal(map[string]float32{RADIO_SDR_KEY_FREQUENCY: mhz})
+		var decoded map[string]float64
+		if err := json.Unmarshal(frame, &decoded); err != nil {
+			t.Fatal(err)
+		}
+		received := decoded[RADIO_SDR_KEY_FREQUENCY] * 1000
+		if math.Abs(received-float64(khz)) > 0.05 {
+			t.Errorf("%s reaches the daemon as %v kHz", frequency, received)
+		}
+		channels++
+	}
+	for khz := RADIO_SDR_BAND_MIN_KHZ; khz <= RADIO_SDR_NAV_MAX_KHZ; khz += RADIO_SDR_NAV_GRID_KHZ {
+		check(khz)
+	}
+	digits := []int{0, 5, 10, 15, 25, 30, 35, 40, 50, 55, 60, 65, 75, 80, 85, 90}
+	for hundreds := RADIO_SDR_COM_MIN_KHZ; hundreds <= 136900; hundreds += 100 {
 		for _, last := range digits {
-			khz := hundreds + last
-			frequency := fmt.Sprintf("%d.%03d", khz/1000, khz%1000)
-			mhz, valid := radioSdrChannelMHz(frequency)
-			if !valid {
-				t.Fatalf("%s refused", frequency)
-			}
-			frame, _ := json.Marshal(map[string]float32{RADIO_SDR_KEY_FREQUENCY: mhz})
-			var decoded map[string]float64
-			if err := json.Unmarshal(frame, &decoded); err != nil {
-				t.Fatal(err)
-			}
-			received := decoded[RADIO_SDR_KEY_FREQUENCY] * 1000
-			if math.Abs(received-float64(khz)) > 0.05 {
-				t.Errorf("%s reaches the daemon as %v kHz", frequency, received)
-			}
-			channels++
+			check(hundreds + last)
 		}
 	}
-	if channels != 3040 { // len(freqrules.all_channels())
+	if channels != 3240 { // len(freqrules.all_channels())
 		t.Errorf("%d channels", channels)
 	}
 }
@@ -269,15 +286,136 @@ func TestRadioWithoutAnSdrWritesNoFrequency(t *testing.T) {
 	}
 }
 
-// One receiver: standby stays in RB-01, and must accept what the 5 kHz spinner passes on
-// its way, or it could never get beyond 118.015.
+// With Dual off standby stays in RB-01, and it must accept what the 5 kHz spinner passes
+// on its way, or it could never get beyond 118.015.
 func TestRadioSdrStandbyIsNotSent(t *testing.T) {
-	sdrRadioState(t, RADIO_DRIVER_SDR)
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
 	if !radio.radioSetFrequency(0, "118.020", false, "") {
 		t.Error("standby refused")
 	}
 	if got, ok := bridgeKey(RADIO_SDR_KEY_FREQUENCY); ok {
 		t.Errorf("sdrradiofreq = %v; want nothing", got)
+	}
+	this.FrequencyStandby = "121.500"
+	postRadio(t, `{"FrequencyStandby":"121.500"}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("Dual off: sdrradiofreqsecondary = %v, %v; want 0", got, ok)
+	}
+}
+
+// DUAL watches the standby as well, and the plate's button is the POST.
+func TestRadioSdrDualSendsTheStandby(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby = "118.700", "121.500"
+
+	postRadio(t, `{"Dual":true}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_FREQUENCY); got != 118.7 {
+		t.Errorf("sdrradiofreq = %v", got)
+	}
+	if got, _ := bridgeKey(RADIO_SDR_KEY_SECONDARY); got != 121.5 {
+		t.Errorf("sdrradiofreqsecondary = %v", got)
+	}
+	if !this.Dual {
+		t.Error("Dual not stored")
+	}
+	if len(alerts.alertsData) != 0 {
+		t.Errorf("alerts: %v", alerts.alertsData)
+	}
+
+	postRadio(t, `{"Dual":false}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("Dual off: sdrradiofreqsecondary = %v, %v; want 0", got, ok)
+	}
+}
+
+func TestRadioSdrDualFollowsTheStandby(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "121.500", true
+	postRadio(t, `{"FrequencyStandby":"122.800"}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_SECONDARY); got != 122.8 {
+		t.Errorf("sdrradiofreqsecondary = %v", got)
+	}
+}
+
+// The spinner on its way through 118.020 must not stop the radio or raise an alert: the
+// daemon drops a bad primary, and a bad secondary is 0 here.
+func TestRadioSdrDualThroughAStandbyThatIsNotAChannel(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "121.500", true
+	postRadio(t, `{"FrequencyStandby":"118.020"}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("sdrradiofreqsecondary = %v, %v; want 0", got, ok)
+	}
+	if got, _ := bridgeKey(RADIO_SDR_KEY_FREQUENCY); got != 118.7 {
+		t.Errorf("sdrradiofreq = %v", got)
+	}
+	if len(alerts.alertsData) != 0 {
+		t.Errorf("alerts: %v", alerts.alertsData)
+	}
+	if this.FrequencyStandby != "118.020" {
+		t.Errorf("FrequencyStandby = %q", this.FrequencyStandby)
+	}
+}
+
+// The same frequency on both is one channel, and there is nothing to hop to.
+func TestRadioSdrDualOnTheSameChannelWatchesNothing(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "118.700", true
+	postRadio(t, `{"Enabled":true}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("sdrradiofreqsecondary = %v, %v; want 0", got, ok)
+	}
+}
+
+func TestRadioSdrDualSwapsWithTheChannels(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "121.500", true
+	postRadio(t, `{"FrequencyActive":"121.500","FrequencyStandby":"118.700"}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_FREQUENCY); got != 121.5 {
+		t.Errorf("sdrradiofreq = %v", got)
+	}
+	if got, _ := bridgeKey(RADIO_SDR_KEY_SECONDARY); got != 118.7 {
+		t.Errorf("sdrradiofreqsecondary = %v", got)
+	}
+}
+
+// Off releases the dongle: nothing may be left asking it to watch.
+func TestRadioSdrDualOffWithTheRadio(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "121.500", true
+	postRadio(t, `{"Enabled":false}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("sdrradiofreqsecondary = %v, %v; want 0", got, ok)
+	}
+	if !this.Dual {
+		t.Error("Dual lost: it should be there when the radio comes back on")
+	}
+}
+
+// A KRT2 has its own dual watch: nothing may appear on the bridge for it.
+func TestRadioDualOnTheOtherDriversWritesNothing(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_RS232)
+	this.FrequencyStandby = "121.500"
+	postRadio(t, `{"Dual":true}`)
+	if len(addonsBridge.bridgeFloatData) != 0 {
+		t.Errorf("bridge = %v", addonsBridge.bridgeFloatData)
+	}
+}
+
+// A restart of RB-01 restores the watching. The daemon may have outlived it, so a radio
+// saved with Dual off says so as well.
+func TestRadioSdrRestoreCarriesDual(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "121.500", true
+	radio.radioSdrRestore(this)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_SECONDARY); got != 121.5 {
+		t.Errorf("sdrradiofreqsecondary = %v", got)
+	}
+
+	this = sdrRadioState(t, RADIO_DRIVER_SDR)
+	radio.radioSdrRestore(this)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("Dual off: sdrradiofreqsecondary = %v, %v; want 0", got, ok)
 	}
 }
 
@@ -294,13 +432,6 @@ func TestRadioSdrBadChannelKeepsTheRadioTuned(t *testing.T) {
 	}
 	if len(alerts.alertsData) != 1 {
 		t.Errorf("%d alerts, want the refusal", len(alerts.alertsData))
-	}
-}
-
-func TestRadioSdrHasNoDual(t *testing.T) {
-	sdrRadioState(t, RADIO_DRIVER_SDR)
-	if radio.radioSetDual(0, true) {
-		t.Error("dual watch accepted on a single receiver")
 	}
 }
 
@@ -387,6 +518,218 @@ func TestRadioPostWithoutLevelsLeavesThem(t *testing.T) {
 	}
 }
 
+// A level the body names is a command. In every stratux.conf so far the stored 0 means
+// never set, with the daemon on its own default, so a slider moved to 0 would otherwise
+// compare equal, send nothing, and spring back.
+func TestRadioPostOfALevelEqualToTheStoredOneGoes(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	postRadio(t, `{"VolumeLevel":0}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_VOLUME); !ok || got != 0 {
+		t.Errorf("sdrradiovolume = %v, %v; want 0", got, ok)
+	}
+	postRadio(t, `{"SquelchLevel":0}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SQUELCH); !ok || got != 0 {
+		t.Errorf("sdrradiosquelch = %v, %v; want 0", got, ok)
+	}
+	if this.VolumeLevel != 0 || this.SquelchLevel != 0 {
+		t.Errorf("stored %v, %v", this.VolumeLevel, this.SquelchLevel)
+	}
+	if len(alerts.alertsData) != 0 {
+		t.Errorf("alerts: %v", alerts.alertsData)
+	}
+}
+
+// VOL 0 is the off position: the radio goes INACTIVE and the receiver gives the dongle back,
+// keeping everything the pilot set for when it comes back.
+func TestRadioSdrVolumeZeroTurnsTheRadioOff(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive, this.FrequencyStandby, this.Dual = "118.700", "121.500", true
+	postRadio(t, `{"VolumeLevel":35}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_FREQUENCY); got != 118.7 {
+		t.Fatalf("on: sdrradiofreq = %v", got)
+	}
+
+	postRadio(t, `{"VolumeLevel":0}`)
+
+	if this.Enabled {
+		t.Error("still enabled at VOL 0")
+	}
+	if got, ok := bridgeKey(RADIO_SDR_KEY_FREQUENCY); !ok || got != 0 {
+		t.Errorf("sdrradiofreq = %v, %v; want 0, which releases the SDR", got, ok)
+	}
+	if got, ok := bridgeKey(RADIO_SDR_KEY_SECONDARY); !ok || got != 0 {
+		t.Errorf("sdrradiofreqsecondary = %v, %v; want 0", got, ok)
+	}
+	if got, ok := bridgeKey(RADIO_SDR_KEY_VOLUME); !ok || got != 0 {
+		t.Errorf("sdrradiovolume = %v, %v; want 0", got, ok)
+	}
+	if this.FrequencyActive != "118.700" || this.FrequencyStandby != "121.500" || !this.Dual {
+		t.Errorf("settings lost: %q, %q, %v", this.FrequencyActive, this.FrequencyStandby, this.Dual)
+	}
+	if len(alerts.alertsData) != 0 {
+		t.Errorf("alerts: %v", alerts.alertsData)
+	}
+}
+
+// One body that asks for both, as a client that posts every field would.
+func TestRadioSdrVolumeZeroWinsOverEnabled(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive = "118.700"
+	postRadio(t, `{"Enabled":true,"VolumeLevel":0}`)
+	if this.Enabled {
+		t.Error("enabled at VOL 0")
+	}
+	if got, ok := bridgeKey(RADIO_SDR_KEY_FREQUENCY); !ok || got != 0 {
+		t.Errorf("sdrradiofreq = %v, %v; want 0", got, ok)
+	}
+}
+
+// Enabled also selects between radios, so a level alone must not take the selection.
+func TestRadioSdrRaisingTheVolumeDoesNotTurnItOn(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	postRadio(t, `{"VolumeLevel":0}`)
+	postRadio(t, `{"VolumeLevel":40}`)
+	if this.Enabled {
+		t.Error("a level turned the radio on")
+	}
+	if got, _ := bridgeKey(RADIO_SDR_KEY_FREQUENCY); got != 0 {
+		t.Errorf("sdrradiofreq = %v", got)
+	}
+}
+
+// Back on from VOL 0, on the level it was at: on and silent would not be on.
+func TestRadioSdrOnFromVolumeZeroRestoresTheLevel(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.FrequencyActive = "118.700"
+	postRadio(t, `{"VolumeLevel":35}`)
+	postRadio(t, `{"VolumeLevel":0}`)
+	addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_VOLUME_ACTIVE: 0})
+
+	postRadio(t, `{"Enabled":true}`)
+
+	if !this.Enabled {
+		t.Error("not enabled")
+	}
+	if got, _ := bridgeKey(RADIO_SDR_KEY_VOLUME); got != 35 {
+		t.Errorf("sdrradiovolume = %v, want 35", got)
+	}
+	if this.VolumeLevel != 35 {
+		t.Errorf("VolumeLevel = %v", this.VolumeLevel)
+	}
+	if got, _ := bridgeKey(RADIO_SDR_KEY_FREQUENCY); got != 118.7 {
+		t.Errorf("sdrradiofreq = %v", got)
+	}
+}
+
+// The receiver has not answered yet, or is not running, and it will read the 0 on the bridge.
+func TestRadioSdrOnFromVolumeZeroBeforeTheReceiverReplies(t *testing.T) {
+	sdrRadioState(t, RADIO_DRIVER_SDR)
+	postRadio(t, `{"VolumeLevel":35}`)
+	postRadio(t, `{"VolumeLevel":0}`)
+	postRadio(t, `{"Enabled":true}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_VOLUME); got != 35 {
+		t.Errorf("sdrradiovolume = %v, want 35", got)
+	}
+}
+
+// After a restart there is no earlier level, and a receiver that outlived it still holds 0.
+func TestRadioSdrOnFromVolumeZeroWithNoEarlierLevel(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.Enabled = false
+	addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_VOLUME_ACTIVE: 0})
+	postRadio(t, `{"Enabled":true}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_VOLUME); got != RADIO_SDR_VOLUME_ON {
+		t.Errorf("sdrradiovolume = %v, want %v", got, RADIO_SDR_VOLUME_ON)
+	}
+}
+
+// A stored 0 in a stratux.conf that never set a level must not turn anything off or send a
+// level: the receiver is on its own default, and says so.
+func TestRadioSdrOnLeavesTheReceiversOwnVolume(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.Enabled = false
+	addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_VOLUME_ACTIVE: 75})
+	postRadio(t, `{"Enabled":true}`)
+	if !this.Enabled {
+		t.Error("not enabled")
+	}
+	if got, ok := bridgeKey(RADIO_SDR_KEY_VOLUME); ok {
+		t.Errorf("sdrradiovolume = %v, want nothing sent", got)
+	}
+}
+
+// With no receiver heard from yet there is nothing to go by, and nothing is sent.
+func TestRadioSdrOnWithNoReceiverSendsNoVolume(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	this.Enabled = false
+	postRadio(t, `{"Enabled":true}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_VOLUME); ok {
+		t.Errorf("sdrradiovolume = %v, want nothing sent", got)
+	}
+}
+
+// A level in the same body is the pilot's, and the last one must not replace it.
+func TestRadioSdrOnWithALevelTakesThatLevel(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	postRadio(t, `{"VolumeLevel":35}`)
+	postRadio(t, `{"VolumeLevel":0}`)
+	addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_VOLUME_ACTIVE: 0})
+	postRadio(t, `{"Enabled":true,"VolumeLevel":60}`)
+	if got, _ := bridgeKey(RADIO_SDR_KEY_VOLUME); got != 60 || this.VolumeLevel != 60 || !this.Enabled {
+		t.Errorf("sdrradiovolume = %v, stored %v, enabled %v", got, this.VolumeLevel, this.Enabled)
+	}
+}
+
+// An enabled radio pressed again, as every spinner press does, is not being turned on.
+func TestRadioSdrOnOnlyWhenItWasOff(t *testing.T) {
+	sdrRadioState(t, RADIO_DRIVER_SDR)
+	addonsBridge.setFloats(map[string]float32{RADIO_SDR_KEY_VOLUME_ACTIVE: 0})
+	postRadio(t, `{"Enabled":true}`)
+	if got, ok := bridgeKey(RADIO_SDR_KEY_VOLUME); ok {
+		t.Errorf("sdrradiovolume = %v, want nothing sent", got)
+	}
+}
+
+// A KRT2 has no such command: the rule must not reach it.
+func TestRadioVolumeZeroOnTheOtherDriversChangesNothing(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_RS232)
+	postRadio(t, `{"VolumeLevel":0}`)
+	if !this.Enabled {
+		t.Error("a serial radio was turned off")
+	}
+	if len(addonsBridge.bridgeFloatData) != 0 {
+		t.Errorf("bridge = %v", addonsBridge.bridgeFloatData)
+	}
+}
+
+// The stored level is the one to come back to after a restart of RB-01.
+func TestRadioStartsWithTheStoredLevelToComeBackTo(t *testing.T) {
+	sdrRadioState(t, RADIO_DRIVER_SDR)
+	globalSettings.Radio = []RadioStatus{{Driver: RADIO_DRIVER_SDR, VolumeLevel: 35}}
+	radio.InitFunc()
+	defer radio.ShutdownFunc()
+	if got := radio.radioData[0].volumeOn; got != 35 {
+		t.Errorf("volumeOn = %v, want 35", got)
+	}
+}
+
+// The levels of the slider: the extremes reach the daemon as they are, and out of range
+// is refused with an alert.
+func TestRadioPostOfALevelOutOfRangeIsRefused(t *testing.T) {
+	this := sdrRadioState(t, RADIO_DRIVER_SDR)
+	postRadio(t, `{"VolumeLevel":100,"SquelchLevel":30}`)
+	if volume, _ := bridgeKey(RADIO_SDR_KEY_VOLUME); volume != 100 {
+		t.Errorf("sdrradiovolume = %v", volume)
+	}
+	postRadio(t, `{"VolumeLevel":101}`)
+	if this.VolumeLevel != 100 {
+		t.Errorf("VolumeLevel = %v", this.VolumeLevel)
+	}
+	if len(alerts.alertsData) != 1 {
+		t.Errorf("%d alerts, want the refusal", len(alerts.alertsData))
+	}
+}
+
 // A volume slider sends the volume. Read as "", the frequencies it left out would be a
 // refused command with an alert, and a blank standby.
 func TestRadioPostOfOneFieldLeavesTheOthers(t *testing.T) {
@@ -425,12 +768,12 @@ func TestRadioSdrRestore(t *testing.T) {
 }
 
 // What every stratux.conf holds today. Sending those zeros would silence the radio, open
-// the squelch and turn recording off, so only the frequency goes.
+// the squelch and turn recording off, so only the frequencies go.
 func TestRadioSdrRestoreLeavesDaemonDefaults(t *testing.T) {
 	this := sdrRadioState(t, RADIO_DRIVER_SDR)
 	radio.radioSdrRestore(this)
-	if got := addonsBridge.bridgeFloatData; len(got) != 1 || got[RADIO_SDR_KEY_FREQUENCY] != 118 {
-		t.Errorf("bridge = %v, want only sdrradiofreq 118", got)
+	if got := addonsBridge.bridgeFloatData; len(got) != 2 || got[RADIO_SDR_KEY_FREQUENCY] != 118 || got[RADIO_SDR_KEY_SECONDARY] != 0 {
+		t.Errorf("bridge = %v, want only the frequency 118, on one channel", got)
 	}
 
 	this = sdrRadioState(t, RADIO_DRIVER_SDR)
@@ -504,22 +847,22 @@ func TestRadioSdrCommandReachesTheWebSocket(t *testing.T) {
 		t.Fatal(err)
 	}
 
+	// A change of the channel may be more than one frame. The last of them is the state
+	until := func(done func() bool) {
+		t.Helper()
+		for !done() {
+			if err := websocket.JSON.Receive(conn, &frame); err != nil {
+				t.Fatalf("%v, last frame %v", err, frame)
+			}
+		}
+	}
+
 	postRadio(t, `{"FrequencyActive":"118.030"}`)
-	if err := websocket.JSON.Receive(conn, &frame); err != nil {
-		t.Fatal(err)
-	}
-	if got := frame[RADIO_SDR_KEY_FREQUENCY] * 1000; math.Abs(got-118030) > 0.05 {
-		t.Errorf("sdrradiofreq on the socket = %v kHz", got)
-	}
+	until(func() bool { return math.Abs(frame[RADIO_SDR_KEY_FREQUENCY]*1000-118030) <= 0.05 })
 	if frame["rpm"] != 2400 {
 		t.Errorf("frame = %v, want the whole map", frame)
 	}
 
 	postRadio(t, `{"Enabled":false}`)
-	if err := websocket.JSON.Receive(conn, &frame); err != nil {
-		t.Fatal(err)
-	}
-	if got, ok := frame[RADIO_SDR_KEY_FREQUENCY]; !ok || got != 0 {
-		t.Errorf("disabled, on the socket: sdrradiofreq = %v, %v; want 0", got, ok)
-	}
+	until(func() bool { got, ok := frame[RADIO_SDR_KEY_FREQUENCY]; return ok && got == 0 })
 }

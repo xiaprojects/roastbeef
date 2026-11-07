@@ -128,6 +128,12 @@ Notes:
   station on its own channel. It also checks that `rb-vor` waits for a dongle the radio holds and
   comes back on the pilot's station after a kill. `--dongle` uses the real device. It skips if the
   sibling repos are missing. See its `README.md`.
+- **Dual watch integration test** in `test/integration/` (also needs Chromium and
+  `../rb-sdr-radio`, no root): `python3 test_radio_dual.py` presses the real radio plate on a
+  `stratuxrun` built from this checkout and checks the real `rb-sdr-radio` taking turns on two
+  channels of the stand-in dongle, which keys each station on and off: sliders, DUAL, the
+  primary taking the lock, a restart, the VOR band. `--dongle` uses the real device. It skips
+  if the sibling repo is missing. See its `README.md`.
 - **HMI dev loop without the Pi**: `cd test/display && ./simulator.py --idle` serves the
   working tree at `http://localhost:8000/RB-01/` with the aircraft snapshot behind it; edit
   `web/RB-01/`, reload. `/sim/` moves the aircraft or plays a recorded flight (any

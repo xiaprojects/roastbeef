@@ -26,7 +26,7 @@ import (
 const ALERT_MAPPING_JSON_NAME = "alertsMapping.json"
 const ALERT_DEFAULT_LANGUAGE = "en-US"
 // The folder of the sounds the daemon plays, unless Audio_SoundsDir names another
-const ALERT_SOUNDS_DIR = "sounds"
+const ALERT_SOUNDS_DIR = "RB-01/sounds"
 
 // Please define a unique Id and check for collision using the keyword "EVENT_TYPE_"
 const (

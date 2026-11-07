@@ -6,3 +6,114 @@
 .Radio {
   font-family: "DS-Digital";
 }
+
+/* The RX mark, in a heading or beside the digits, which would otherwise make it as large as they are */
+.label.radioHeard {
+  font-size: 4cqmin;
+  padding: 0.2em 0.5em;
+  margin-right: 2cqmin;
+  vertical-align: middle;
+}
+
+/* In a heading it is one label among the others, and the round panel has no room to spare */
+.panel-heading .label.radioHeard {
+  font-size: 75%;
+  margin-right: 0;
+}
+
+/*
+  The round panel: the top of the glass is its narrowest part, and the heading holds up to a
+  name, RX, SQL and the switch. A little lower is what puts their corners back on the glass.
+*/
+@media (max-width: 480px) {
+  #radio_box > .panel:first-child > .panel-heading {
+    padding-top: 18px;
+  }
+}
+
+/*
+  Volume and squelch: a row of cells, one per step, with a real slider laid over it.
+  The thumb is one cell wide, which puts every value on the middle of its cell, and it is
+  invisible because the lit cells show the level. The label and the read-out are at the ends
+  so that only they fall under the navigation FABs at the sides, which take the press.
+*/
+.radioLevels {
+  padding: 1cqmin 6cqmin;
+}
+
+
+.radioLevel {
+  display: flex;
+  align-items: center;
+  gap: 2cqmin;
+  height: min(13cqmin, 64px);
+}
+
+.radioLevel.btn-danger,
+.radioLevel.btn-success {
+  border: none;
+  white-space: normal;
+  border-radius: 0;
+}
+
+.radioLevelName {
+  flex: 0 0 9cqmin;
+  font-size: 5cqmin;
+  text-align: left;
+}
+
+.radioLevelValue {
+  flex: 0 0 15cqmin;
+  font-size: 5cqmin;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.radioLevelTrack {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  gap: 2px;
+  height: 100%;
+  padding: 1.5cqmin 0;
+}
+
+.radioLevelTrack i {
+  flex: 1 1 0;
+  background-color: #ffffff1a;
+  border: 1px solid #acacac;
+}
+
+.radioLevelTrack i:first-child {
+  background-color: transparent;
+}
+
+.radioLevelTrack i.radioLevelOn {
+  background-color: #5cb85c;
+}
+
+.radioLevelTrack input[type=range] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  /* A drag across moves the level, a drag down still scrolls the plate */
+  touch-action: pan-y;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.radioLevelTrack input[type=range]::-webkit-slider-runnable-track {
+  height: 100%;
+}
+
+.radioLevelTrack input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 100%;
+  width: calc(100% / var(--radio-level-cells));
+}

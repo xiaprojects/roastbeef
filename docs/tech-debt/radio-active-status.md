@@ -11,7 +11,7 @@ The word is bound to `radio.enabled` (`web/RB-01/plates/radio.html:5-6`). That i
 `main/managementinterface.go:1226`. So the button can only ever repeat itself.
 
 `rb-sdr-radio` publishes what is really happening on the float bridge
-(`RB-SDR-RADIO-IF-v1.0.md` sections 3.1 and 3.2 in `../rb-sdr-radio/docs/`), and nothing
+(`RB-SDR-RADIO-IF-v1.1.md` sections 3.1 and 3.2 in `../rb-sdr-radio/docs/`), and nothing
 in `web/RB-01` reads those keys.
 
 | Situation | `sdrradiostatus` | `sdrradiofault` | Plate says | Evidence |
@@ -43,7 +43,7 @@ Keep the button and add the truth beside it.
    serial radios report no such status, so they keep what they have today.
 3. **A message for each `sdrradiofault` bit**, as section 6 of the interface asks. The
    one that matters most tells the pilot why: the dongle is in use by the VOR.
-4. **Show `sdrradiofreqactive`** rather than the frequency sent, which is the channel
+4. **Done, 2026-11-06.** **Show `sdrradiofreqactive`** rather than the frequency sent, which is the channel
    the radio is really on. Same section.
 
 `radio.js` has no bridge values today. `addons/js/vor.js` shows the pattern: listen for
