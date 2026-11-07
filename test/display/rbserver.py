@@ -194,6 +194,7 @@ class FakeStratux:
         self.rest = {
             "/radio": {"Devices": [], "Status": "OK"},
             "/radioStatus": {"Devices": []},
+            "/bridge/float": {},
             "/getEMS": {}, "/getEMSMin": {}, "/getEMSMax": {},
             "/getAlerts": [], "/getSatellites": {}, "/getTowers": {},
             "/getTraffic": {}, "/getClients": [], "/getRegion": {"Region": "EU"},

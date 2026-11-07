@@ -8,6 +8,7 @@ Chromium on an RB-01 display started with --remote-debugging-port.
 import base64
 import json
 import os
+import shutil
 import socket
 import struct
 import subprocess
@@ -133,6 +134,7 @@ class Chrome:
         self.console = []
         self.errors = []
         self.proc = None
+        self.profile = None
         self.send("Runtime.enable")
         self.send("Page.enable")
         self.send("Log.enable")
@@ -146,6 +148,7 @@ class Chrome:
         binary = binary or _find_chrome()
         if not port:
             port = _free_port()
+        profile = _tmp_profile(port)
         args = [
             binary,
             "--headless=new",
@@ -157,12 +160,13 @@ class Chrome:
             "--remote-debugging-port=%d" % port,
             "--remote-allow-origins=*",
             "--window-size=%s" % window,
-            "--user-data-dir=%s" % _tmp_profile(port),
+            "--user-data-dir=%s" % profile,
             "about:blank",
         ] + (extra or [])
         proc = subprocess.Popen(args, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         session = cls.attach(port)
         session.proc = proc
+        session.profile = profile
         return session
 
     @classmethod
@@ -207,6 +211,9 @@ class Chrome:
             except OSError:
                 pass
             self.proc = None
+        if self.profile:
+            shutil.rmtree(self.profile, ignore_errors=True)     # 60 to 160 MB on a tmpfs
+            self.profile = None
 
     @property
     def alive(self):
