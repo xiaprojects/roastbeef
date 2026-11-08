@@ -46,6 +46,10 @@ const (
 	EVENT_TYPE_EMS_GENERIC_FAILURE		= 13
 	EVENT_TYPE_EMS_RULE_YELLOW            = 14
 	EVENT_TYPE_EMS_RULE_RED               = 15
+	// 16 is EVENT_TYPE_GPS_NOT_FIXED in the mapping, with no constant here
+	EVENT_TYPE_TERRAIN_CAUTION            = 17
+	EVENT_TYPE_TERRAIN_WARNING            = 18
+	EVENT_TYPE_TERRAIN_UNAVAILABLE        = 19
 )
 
 // Maximum events in the list
@@ -163,6 +167,12 @@ func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event 
 		event.Type = EVENT_TYPE_EMS_RULE_YELLOW
 	} else if strings.HasPrefix(ident, "ems-") && strings.HasSuffix(ident, "-red") {
 		event.Type = EVENT_TYPE_EMS_RULE_RED
+	} else if ident == "terrain-caution" {
+		event.Type = EVENT_TYPE_TERRAIN_CAUTION
+	} else if ident == "terrain-warning" {
+		event.Type = EVENT_TYPE_TERRAIN_WARNING
+	} else if ident == "terrain-unavailable" {
+		event.Type = EVENT_TYPE_TERRAIN_UNAVAILABLE
 	} else {
 		// Fallback to system danger
 		event.Type = EVENT_TYPE_SYSTEM_DANGER

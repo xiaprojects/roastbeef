@@ -15,6 +15,8 @@ Example fields: `Version`, `GPS_connected`, `GPS_satellites_locked`, `UAT_messag
 
 Also carries the GPS Hobbs meter (`main/hobbsmeter.go`): `HobbsTimeMinutes` (the whole flight log, flight in progress included) and `HobbsFlightMinutes` (the flight in progress, 0 on the ground). Both are live; the RB-01 Aircraft plate adds `HobbsTimeMinutes` to the `propellerTime` / `engineTime` base values of `settings/aircraft.json`.
 
+And the terrain function (`main/terrain.go`), updated once a second: `Terrain_State` (`OFF`, `CLEAR`, `CAUTION`, `WARNING`, `UNAVAILABLE`), `Terrain_Reason` (why unavailable: `NO_FIX`, `POOR_FIX`, `NO_RATE`, `OFF_GRID`, `GRID_BAD`), `Terrain_Phase` (`CRUISE`, `TAKEOFF`, `LANDING`), `Terrain_Suppressed` (near a field, no alert), `Terrain_ClearanceFt` (lowest predicted height above terrain in the next 60 s, 0 if not evaluated) and the threat on the path: `Terrain_TimeToThreatS`, `Terrain_ThreatLat`, `Terrain_ThreatLon`, `Terrain_ThreatElevationFt` (0 when there is none), and `Terrain_AglFt`, the GPS altitude above the grid cell under the aircraft. It can be negative, and is valid while `Terrain_AglValid` is true: a usable fix over the grid, on the ground too, whatever the state (0 otherwise). See [tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md).
+
 #### `GET /getSituation`
 Returns the current GPS/AHRS situation: position, altitude, track, speed, vertical speed, and attitude (pitch/roll/slip-skid) if AHRS is connected.
 

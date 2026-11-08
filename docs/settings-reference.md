@@ -143,6 +143,17 @@ GXAirCom / SoftRF). See [hardware/ogn-ais-receivers.md](hardware/ogn-ais-receive
 | `OGNReg` | string | Aircraft registration. |
 | `OGNTxPower` | int | Transmit power. |
 
+## Terrain alerts
+
+`main/terrain.go`, step 1 of [tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md). All
+three take effect at the next evaluation, within a second, with no restart.
+
+| Field | Type | Description |
+|---|---|---|
+| `Terrain_Enabled` | bool | *Advanced.* The terrain function evaluates the predicted path once a second against the grid that `elevationUrl` in `settings/synthview.json` names, and reports in the `Terrain_*` fields of `/getStatus` and in the flight log's `status` table. Off, it reports `OFF` and keeps no terrain in memory. Default `false`. |
+| `Terrain_Alerts_Enabled` | bool | *Advanced.* While `Terrain_Enabled` is on, the function raises its caution, warning and unavailable alerts through the alert pipeline: the display, and `aplay` when `Audio_Enabled` is on. Off, it reports the same with no alert (shadow mode), and turning it off closes the open alert. Default `false`: the grid and the nuisance rates are not fit for release yet. |
+| `Terrain_Alerts_MinSpeedKmh` | int | *Advanced.* GPS ground speed in km/h below which the terrain function counts the aircraft as on the ground (TER-020). Below it nothing is evaluated or announced, the unavailable alert included, and an open alert is closed. `Terrain_State` reads `CLEAR` and `Terrain_ClearanceFt` 0. Below 1 it is 45 kt (83 km/h). `/setSettings` takes 0 to 500 and rounds to a whole km/h. Ground speed, not airspeed: set high, a headwind can take a slow cruise below it. Default `0`, that is 45 kt. |
+
 ## Logging / diagnostics
 
 | Field | Type | Description |

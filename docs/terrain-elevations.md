@@ -168,6 +168,19 @@ the grid, and Lake Lucerne and Balaton are cut at the edge.
 Elevation is the only input for both height and colour. A cell is blue if, and only if,
 its value is ≤ 0.
 
+## How the daemon uses it
+
+The terrain alerts (`main/terrain.go`, [tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md))
+read the same file, found through the same `elevationUrl`, and keep the same window:
+±`TERRAIN_WINDOW_DEGREES`, cut again past `TERRAIN_MOVE_FRACTION`, retried 30 s after a
+failure. Two things differ:
+
+- The file is streamed, so only one row besides the window is in memory. It takes two
+  passes, because the Europe grid writes `planimetry` after the rows.
+- A grid whose rows, with the last row on `end.lat`, are spaced like its columns is read at
+  that step. The Europe grid is therefore read at 0.01°, without the northward drift
+  described above, while the map and the 3D view still draw it with the drift.
+
 ## Known gaps
 
 - **Lakes are green.** Every inland lake sits at its real surface level, above 0, so none

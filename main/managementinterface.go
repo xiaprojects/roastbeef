@@ -1862,6 +1862,19 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.EMS_Enabled = val.(bool)
 					case "SlaveNMEADisplay_SleepMs":
 						globalSettings.SlaveNMEADisplay_SleepMs = int(val.(float64))
+					case "Terrain_Enabled":
+						globalSettings.Terrain_Enabled = val.(bool)
+					case "Terrain_Alerts_Enabled":
+						globalSettings.Terrain_Alerts_Enabled = val.(bool)
+					case "Terrain_Alerts_MinSpeedKmh":
+						// GPS ground speed below which the terrain function counts the aircraft
+						// on the ground, 0 = 45 kt. Bounded so that a slip of the finger cannot
+						// switch the function off in flight
+						if f, ok := val.(float64); ok && f >= 0 && f <= TERRAIN_SPEED_SETTING_MAX_KMH {
+							globalSettings.Terrain_Alerts_MinSpeedKmh = int(math.Round(f))
+						} else {
+							log.Printf("handleSettingsSetRequest:json: Terrain_Alerts_MinSpeedKmh %v refused, not 0 to %d km/h\n", val, TERRAIN_SPEED_SETTING_MAX_KMH)
+						}
 					case "Charts_Enabled":
 						globalSettings.Charts_Enabled = val.(bool)
 					case "Switches":

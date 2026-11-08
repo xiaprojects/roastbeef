@@ -1284,6 +1284,9 @@ type settings struct {
 	Cameras              []cameraModel // Camera Settings
 	EMS_Enabled       	 bool // Engine Monitoring System
 	SlaveNMEADisplay_SleepMs int // Slave NMEA Display: ms between $RBATT/$RBAIR pairs, 0 = not sent; default 1000
+	Terrain_Enabled        bool // Terrain function (main/terrain.go) evaluates and fills the Terrain_ status; default false
+	Terrain_Alerts_Enabled bool // Terrain function raises its alerts; off, it only reports (shadow mode); default false
+	Terrain_Alerts_MinSpeedKmh int // Terrain function: GPS ground speed, km/h, below which the aircraft is on the ground, nothing evaluated or announced; below 1 = 45 kt; default 0
 	Keypad_Enabled       bool
 	Charts_Enabled       bool
 	SwitchBoard_Enabled  bool // Trigger remote functions and hardware switches
@@ -1344,6 +1347,18 @@ type status struct {
 	UptimeClock                                time.Time
 	HobbsTimeMinutes                           int64 // GPS Hobbs meter: whole flight log, flight in progress included (main/hobbsmeter.go)
 	HobbsFlightMinutes                         int64 // GPS Hobbs meter: flight in progress, 0 on the ground
+	// Terrain function (main/terrain.go), docs/http-api.md
+	Terrain_State                              string  // OFF, CLEAR, CAUTION, WARNING, UNAVAILABLE
+	Terrain_Reason                             string  // why UNAVAILABLE: NO_FIX, POOR_FIX, NO_RATE, OFF_GRID, GRID_BAD
+	Terrain_Phase                              string  // CRUISE, TAKEOFF, LANDING; empty if not classified
+	Terrain_Suppressed                         bool    // near a field: no alert, the evaluation goes on
+	Terrain_ClearanceFt                        int     // lowest predicted height above terrain in the next 60 s, 0 if not evaluated
+	Terrain_TimeToThreatS                      int     // seconds to where the alert condition first holds
+	Terrain_ThreatLat                          float64 // that point, 0 if the condition does not hold
+	Terrain_ThreatLon                          float64
+	Terrain_ThreatElevationFt                  int
+	Terrain_AglFt                              int     // GPS altitude above the grid cell under the aircraft, can be negative; 0 while Terrain_AglValid is false
+	Terrain_AglValid                           bool    // a usable fix over the grid, with Terrain_Enabled on; whatever the state, on the ground too
 	CPUTemp                                    float32
 	CPUTempMin                                 float32
 	CPUTempMax                                 float32
@@ -1394,6 +1409,9 @@ func defaultSettings() {
 	globalSettings.SwitchBoard_Enabled = false
 	globalSettings.Switches = make([]switchModel, 0)
 	globalSettings.SlaveNMEADisplay_SleepMs = 1000 // 1 Hz
+	globalSettings.Terrain_Enabled = false
+	globalSettings.Terrain_Alerts_Enabled = false
+	globalSettings.Terrain_Alerts_MinSpeedKmh = 0 // TERRAIN_MIN_GROUND_SPEED_KT, 45 kt
 	globalSettings.MagCalibration.CalibrationReset()
 	mySituation.Magnetometer.CalibrationReset()
 	// Die orientation unknown for a fresh install: identity, to be set from a
@@ -1783,6 +1801,8 @@ func gracefulShutdown() {
 	addonsBridge.ShutdownFunc()
 	// Slave NMEA Display
 	slaveNMEADisplay.ShutdownFunc()
+	// Terrain alerts
+	terrain.ShutdownFunc()
 	// Turn off green ACT LED on the Pi. Path changed around kernel 6.1.21-v8
 	setActLed(false)
 	log.Printf("gracefulShutdown --> setActLed()")
@@ -1963,6 +1983,9 @@ func main() {
 		pongInit()
 	}
 	initTraffic(isTraceReplayMode)
+	// Terrain alerts, in a -trace replay too: they only read the GPS and the baro, and a
+	// replay of a real flight is how they are tuned
+	terrain.InitFunc()
 
 
 	// Disable replay logs when replaying - so that messages replay data isn't copied into the logs.

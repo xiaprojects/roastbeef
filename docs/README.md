@@ -64,6 +64,9 @@ re-verify before acting.
   touch and external keypad, with mockups on the real HMI, competitor review and phased plan.
 - **[tech-debt/radio-active-status.md](tech-debt/radio-active-status.md)** — the radio plate's
   ACTIVE shows the command, not the radio, and a dead receiver stays on its plate as if alive.
+- **[tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md)** — spoken terrain alerts:
+  the requirements (TER-nnn), what step 1 in `main/terrain.go` builds and leaves out, and how
+  it was checked against recorded flights and the real daemon.
 
 ## Certification
 

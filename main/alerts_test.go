@@ -392,6 +392,9 @@ func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 		{"sdrconfig", EVENT_TYPE_SYSTEM_DANGER_SDR},
 		{"ping-missing", EVENT_TYPE_SYSTEM_DANGER_SDR},
 		{"ems-feed", EVENT_TYPE_EMS_GENERIC_FAILURE},
+		{"terrain-caution", EVENT_TYPE_TERRAIN_CAUTION},
+		{"terrain-warning", EVENT_TYPE_TERRAIN_WARNING},
+		{"terrain-unavailable", EVENT_TYPE_TERRAIN_UNAVAILABLE},
 		// The rest of the identifiers the daemon raises, all unclassified.
 		{"ahrs-web-start", EVENT_TYPE_SYSTEM_DANGER},
 		{"airspeed-sensor-read", EVENT_TYPE_SYSTEM_DANGER},
