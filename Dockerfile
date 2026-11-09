@@ -13,7 +13,9 @@ RUN apt-get update \
   && apt-get -y install wget \
   && apt-get -y install ca-certificates \
   && apt-get -y install libusb-1.0-0-dev \
-  && apt-get -y install python3
+  && apt-get -y install python3 \
+  && apt-get -y install librtlsdr0 \
+  && apt-get -y install librtlsdr-dev
 # python3 (stdlib only) runs scripts/trace.py, the requirements trace in `make check`.
 
 # Go is installed from upstream, not from Debian's golang-go: Trixie ships Go 1.24 and
@@ -34,13 +36,6 @@ ENV PATH="/usr/local/go/bin:${PATH}"
 # (bump GO_VERSION) rather than silently downloading a different compiler mid-build.
 ENV GOTOOLCHAIN=local
 
-RUN cd /tmp \
-    && wget https://github.com/stratux/rtlsdr/releases/download/v1.0/librtlsdr0_2.0.2-2_arm64.deb \
-    && dpkg -i librtlsdr0_2.0.2-2_arm64.deb
-
-RUN cd /tmp \
-    && wget https://github.com/stratux/rtlsdr/releases/download/v1.0/librtlsdr-dev_2.0.2-2_arm64.deb \
-    && dpkg -i librtlsdr-dev_2.0.2-2_arm64.deb
 
 # specific to debian, ubuntu images come with user 'ubuntu' that is uid 1000
 ENV USERNAME="stratux"
