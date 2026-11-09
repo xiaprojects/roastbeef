@@ -889,7 +889,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         const MAX_PLAYBACK_ITEMS = 20;
         var shortList = [];
         for(var reverseIndex =  list.length - 1; reverseIndex>=0; reverseIndex--){
-            if(list[reverseIndex].Name.startsWith("vrin")){
+            if(list[reverseIndex].Name.startsWith("vrin") || list[reverseIndex].Name.startsWith("radio")){
                 shortList.push(list[reverseIndex]);
                 if(shortList.length>=MAX_PLAYBACK_ITEMS){
                     break;
