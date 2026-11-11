@@ -27,3 +27,18 @@
     color: white;
     margin-left: 25%;
 }
+
+/* RB-VOR-IF v2.3 localizer: the notice under the rose, on the glass of the round panel */
+.addonVorLocNotice {
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.2cqmin;
+    line-height: 1.15;
+    color: #ffcc00;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.4cqmin 1cqmin;
+    text-align: center;
+    white-space: nowrap;
+}

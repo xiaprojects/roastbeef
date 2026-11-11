@@ -1,28 +1,46 @@
 <div ui-content-for="title">HSI</div>
 <div ng-show="items.searchEnabled==false" class="addonVorSquare">
-    <div class="addonVorLabelTopLeft" style="font-size: 4cqmin;" ng-click="switchToFrom()">
+    <div ng-if="!locMode()" class="addonVorLabelTopLeft" style="font-size: 4cqmin;" ng-click="switchToFrom()">
         <div ng-if="items.vorto == 1" class="label label-info" style="font-size: 4cqmin;">FROM</div>
         <div ng-if="items.vorto == 0" class="label label-success" style="font-size: 4cqmin;">TO</div>
         <br />SNR: {{items.vorsnr}}
         <br />SUB: {{items.vorsub}}
         <br />AM: {{items.voram}}
     </div>
+    <!-- RB-VOR-IF v2.3: a localizer. Measurements only; the deviation is the bar -->
+    <div ng-if="locMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;">
+        <div class="label label-warning" style="font-size: 4cqmin;">LOC</div>
+        <br />SNR: {{items.locsnr}}
+        <br />SDM: {{items.locsdm}}
+        <br />DDM: {{items.locddm / 1000 | number:3}}
+    </div>
     <div class="addonVorLabelTopRight" style="font-size: 4cqmin;" ng-click="enableSearchVor()">
-        <div ng-if="items.vorstatus == 0" class="label label-default" style="font-size: 4cqmin;">OFF</div>
-        <div ng-if="items.vorstatus == 1" class="label label-danger" style="font-size: 4cqmin;">NO SIGNAL</div>
-        <div ng-if="items.vorstatus == 2" class="label label-danger" style="font-size: 4cqmin;">TUNING</div>
-        <div ng-if="items.vorstatus == 3" class="label label-warning" style="font-size: 4cqmin;">ACQUIRING</div>
-        <div ng-if="items.vorstatus == 4" class="label label-info" style="font-size: 4cqmin;">DEGRADED</div>
-        <div ng-if="items.vorstatus == 5" class="label label-success" style="font-size: 4cqmin;">FIX</div>
+        <div ng-if="!locMode() && items.vorstatus == 0 && !locUnavailable()" class="label label-default" style="font-size: 4cqmin;">OFF</div>
+        <div ng-if="!locMode() && items.vorstatus == 1" class="label label-danger" style="font-size: 4cqmin;">NO SIGNAL</div>
+        <div ng-if="!locMode() && items.vorstatus == 2" class="label label-danger" style="font-size: 4cqmin;">TUNING</div>
+        <div ng-if="!locMode() && items.vorstatus == 3" class="label label-warning" style="font-size: 4cqmin;">ACQUIRING</div>
+        <div ng-if="!locMode() && items.vorstatus == 4" class="label label-info" style="font-size: 4cqmin;">DEGRADED</div>
+        <div ng-if="!locMode() && items.vorstatus == 5" class="label label-success" style="font-size: 4cqmin;">FIX</div>
+        <!-- A localizer was picked and the receiver does not decode localizers (loc.enabled false) -->
+        <div ng-if="locUnavailable() && items.vorstatus == 0" class="label label-default" style="font-size: 4cqmin;">NO LOC</div>
+        <!-- LOC: the bar is drawn only on the last two; each other word is why it is parked -->
+        <div ng-if="locMode() && items.locstatus == 0" class="label label-default" style="font-size: 4cqmin;">LOC OFF</div>
+        <div ng-if="locMode() && items.locstatus == 1" class="label label-danger" style="font-size: 4cqmin;">LOC NO SIGNAL</div>
+        <div ng-if="locMode() && items.locstatus == 2" class="label label-danger" style="font-size: 4cqmin;">LOC TUNING</div>
+        <div ng-if="locMode() && items.locstatus == 3" class="label label-warning" style="font-size: 4cqmin;">LOC ACQUIRING</div>
+        <div ng-if="locMode() && items.locstatus == 4" class="label label-info" style="font-size: 4cqmin;">LOC DEGRADED</div>
+        <div ng-if="locMode() && items.locstatus == 5" class="label label-success" style="font-size: 4cqmin;">LOC</div>
         <br />
-        {{items.vorname}}
+        <span ng-if="!locMode()">{{items.vorname}}</span><span ng-if="locMode()">{{items.locname}}</span>
         <br />
-        {{items.vorfreqactive}}
+        <span ng-if="!locMode()">{{items.vorfreqactive}}</span><span ng-if="locMode()">{{items.locfreqactive}}</span>
     </div>
 
 
     <div id="vorHSI" style="margin: 0;display: flex;justify-content: center;align-items: center;">
     </div>
+    <!-- Wherever LOC appears: supplemental equipment, not approach guidance -->
+    <div ng-if="locMode() || locUnavailable()" class="addonVorLocNotice">LOC SUPPLEMENTAL<br />NOT APPROACH GUIDANCE</div>
 </div>
 <table ng-if="items.searchEnabled" style="width:100%;margin: 0px;padding:0px;">
     <tr style="margin: 0px;padding:0px;">
@@ -49,6 +67,12 @@
         <td class="text-center" style="font-size: 6cqmin;margin: 0px;padding:0px;">
         </td>
     </tr>
+    <!-- Only when the list carries ILS entries -->
+    <tr ng-if="hasLocalizers()" class="addonVorLocListNotice" style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+        <td colspan="3" class="text-center" style="font-size: 3.5cqmin;margin: 0px;padding:0px;line-height: 1.2;">
+            <span class="addonVorLocListNoticeText">LOC SUPPLEMENTAL<br />NOT APPROACH GUIDANCE</span>
+        </td>
+    </tr>
     <tr ng-repeat="frequency in vorList" ng-click="setFrequency(frequency.freq,frequency.name)"
         style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
         <td class="text-center"
@@ -59,7 +83,7 @@
             {{frequency.freq}}
         </td>
         <td class="text-center" style="font-size: 6cqmin;margin: 0px;padding:0px;">
-            {{frequency.id}}
+            {{frequency.id}}<span ng-if="isLocalizer(frequency)" class="label label-warning" style="font-size: 3cqmin;">LOC</span>
         </td>
     </tr>
 </table>
