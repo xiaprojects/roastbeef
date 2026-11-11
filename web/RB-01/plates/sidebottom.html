@@ -1,8 +1,9 @@
-<div ui-content-for="title">Bottom</div>
-<div style="display: inline-flex;flex-wrap: wrap;">
-    <span class="rb-button-switch" ng-repeat="item in items" ng-click="click(item)">
-        <span class="rb-button-switch-light" style="background-color: {{item.color}};">&nbsp;</span>
-        <span >{{item.value}}</span>
-        <span style="font-size: 2cqmin;white-space: pre-line;">{{item.title}}</span>        
-    </span>
+<!-- Bottom bar: the soft keys of main.js, BottomBarCtrl in plates/js/bottom.js, docs/tech-debt/top-bottom-bars.md -->
+<div class="rb-softkeys">
+    <a class="rb-softkey" ng-repeat="key in softKeyRows[softKeyLevel] track by key.slot" data-slot="{{key.slot}}"
+        ng-click="press(key.slot)" ng-class="{'rb-lit': softKeyLit(key)}">
+        <span class="rb-lamp" ng-if="softKeyHasLamp(key)"></span>
+        <span class="rb-softkey-label">{{key.label}}</span>
+    </a>
+    <a class="rb-bar-hide" data-slot="hide" ng-click="toggleBar('bottom')"><i class="fa fa-caret-down"></i></a>
 </div>

@@ -1,0 +1,214 @@
+/* Top and bottom bars, docs/tech-debt/top-bottom-bars.md
+   Top: status values the pilot reads, plates/sidetop.html
+   Bottom: six soft keys, plates/sidebottom.html
+   Never drawn at 480x480 nor 800x480: barsAllowed in js/main.js */
+
+:root {
+  /* Tune a real panel here: 48 px and 72 px at 800 px high, 40 px and 56 px at 600 */
+  --rb-bar-top: clamp(40px, 6vh, 52px);
+  --rb-bar-bottom: clamp(56px, 9vh, 80px);
+  /* The hide key at the right end of each bar, outside the six key grid */
+  --rb-bar-hide: 56px;
+  --rb-bar-line: #3a3a3a;
+  --rb-bar-label: #b8b8b8;
+  --rb-bar-lamp: #00ff00;
+  --rb-bar-pressed: #3a3a3a;
+}
+
+/* mobile-angular-ui pads the body by a fixed 51 px for each navbar: a shown bar reserves its own height */
+.has-navbar-top .app-body {
+  padding-top: var(--rb-bar-top);
+}
+
+.has-navbar-bottom .app-body {
+  padding-bottom: var(--rb-bar-bottom);
+}
+
+.navbar.rb-bar {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #000000;
+  color: #ffffff;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  /* The slots drop and the key labels size on the width of the bar, not of the window:
+     with both side panels open the bar is 54% of the screen */
+  container-type: inline-size;
+}
+
+.navbar.rb-bar-top {
+  height: var(--rb-bar-top);
+  border-bottom: 1px solid var(--rb-bar-line);
+}
+
+.navbar.rb-bar-bottom {
+  height: var(--rb-bar-bottom);
+  border-top: 1px solid var(--rb-bar-line);
+}
+
+.rb-bar a,
+.rb-bar a:hover,
+.rb-bar a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* A touch surface gives no other feedback (AC 20-175 3-5) */
+.rb-bar a:active {
+  background: var(--rb-bar-pressed);
+}
+
+.rb-bar-hide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--rb-bar-hide);
+  width: var(--rb-bar-hide);
+  height: 100%;
+  border-left: 1px solid var(--rb-bar-line);
+  font-size: 28px;
+}
+
+.rb-bar .rb-bar-hide,
+.rb-bar .rb-bar-hide:hover,
+.rb-bar .rb-bar-hide:focus {
+  color: var(--rb-bar-label);
+}
+
+/* Top bar: slots 1 to 4 on the left, 5 in the centre, 6 to 8 on the right, one row */
+.rb-status {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  height: 100%;
+}
+
+.rb-status-group {
+  display: flex;
+  height: 100%;
+}
+
+.rb-status-left {
+  justify-self: start;
+}
+
+.rb-status-centre {
+  justify-self: center;
+}
+
+.rb-status-right {
+  justify-self: end;
+}
+
+.rb-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: none;
+  min-width: 72px;
+  height: 100%;
+  padding: 0 8px;
+}
+
+.rb-slot-label {
+  color: var(--rb-bar-label);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.rb-slot-value {
+  margin-top: 2px;
+  color: #ffffff;
+  /* 22 px at 40 px high, 24 px from 48 */
+  font-size: clamp(22px, calc(var(--rb-bar-top) - 24px), 24px);
+  font-weight: bold;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Off when no alert is active, else the colour of the balloon of the worst one */
+.rb-alerts-lamp {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background: #2c2c2c;
+}
+
+.rb-alerts-lamp[data-severity="info"] {
+  background: #ffffff;
+}
+
+.rb-alerts-lamp[data-severity="warning"] {
+  background: #ffc400;
+}
+
+.rb-alerts-lamp[data-severity="danger"] {
+  background: #c40000;
+}
+
+/* Dropped when the bar is too narrow, in TOP_BAR_DROP_ORDER of plates/js/bottom.js:
+   measured, because the values change length; a slot never moves across the groups */
+.rb-slot.rb-slot-dropped {
+  display: none;
+}
+
+/* Bottom bar: six keys of equal width, then the hide key; the whole cell is the touch target */
+.rb-softkeys {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) var(--rb-bar-hide);
+  height: 100%;
+}
+
+.rb-softkey {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
+  padding: 0 4px;
+  border-right: 1px solid var(--rb-bar-line);
+  /* Follows the key width so the longest label, RIGHT PNL, fits: 20 px from a 884 px bar,
+     15 px with both side panels open at 1280 (691 px), 11.5 px at 1024 (553 px) */
+  font-size: clamp(11px, calc((100cqw - var(--rb-bar-hide) - 48px) / 39), 20px);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+/* The sixth key already draws the line before the hide key */
+.rb-softkeys .rb-bar-hide {
+  border-left: 0;
+}
+
+.rb-softkey-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The lamp is a line on the top edge of the key: green while its page is shown or what it toggles is on */
+.rb-lamp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #2c2c2c;
+}
+
+.rb-lit .rb-lamp {
+  background: var(--rb-bar-lamp);
+}
+

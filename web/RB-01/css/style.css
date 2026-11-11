@@ -136,22 +136,6 @@ body {
 }
 
 
-.rb-button-switch {
-  border-color: lightgray;
-  color: white;
-  font-size: 5cqmin;
-  line-height: 1;
-  border-style: solid;
-  display: flex;
-  border-radius: 5%;
-  margin-right: 4px;
-}
-
-.rb-button-switch-light {
-  height: 100%;
-  width: 16px;
-}
-
 .fabNavigation {
   z-index: 9999999;
   cursor: pointer;

@@ -98,6 +98,8 @@ function AutopilotService($scope, $http) {
                 dispatchEvent(proxy);
             }
             $scope.autopilotData = k;
+            // Every status, once a second while the autopilot setting is on: the top bar reads it
+            dispatchEvent(new CustomEvent("AutopilotUpdated", { detail: k }));
             // Angular UI Updated, due to background WebSocket
             $scope.$apply()
         };
