@@ -47,7 +47,10 @@ RadioCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; //
 
 var URL_RADIO_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
 var URL_RADIO_SET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/radio";
-var URL_PLAYBACK_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/playback";
+// The recordings as /playback answers, on connect and whenever the folder changes
+var URL_PLAYBACK_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/playback/ws";
+// A playback socket that closes is opened again after this time
+var PLAYBACK_RECONNECT_SECONDS = 1;
 // Load frequencies from airfields
 var URL_RADIO_DB_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/db.frequencies.json";
 
@@ -232,14 +235,6 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         return khz > 0 && Math.round(parseFloat(frequency) * 1000) == khz;
     }
 
-    // DUAL is on and the radio is not taking turns: a standby that is not a channel, the
-    // squelch held open, or a tuner that failed to hop. No key means no daemon has said so
-    $scope.dualClass = function (radio) {
-        if (radio.sdr && radio.enabled && $scope.bridge["sdrradiosecondaryactive"] === 0) {
-            return "label-warning";
-        }
-        return "label-success";
-    }
 
     /**
      * Volume and squelch. The slider shows the daemon's reply, as the stored level can be a
@@ -389,8 +384,6 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     $state.get('radio').onExit = function () {
         removeEventListener("RadioUpdated", radioUpdateEventListener);
         removeEventListener("BridgeUpdated", bridgeUpdatedEventListener);
-        clearInterval($scope.tickerPlayback);
-        delete $scope.tickerPlayback;
         removeEventListener("keypad", keypadEventListener);
 /*
         $scope.noSleep.disable();
@@ -875,12 +868,19 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     $scope.playbackCacheCount = 0;
+    var playbackText = null; // The last list from the daemon, as JSON text
 
-    // TODO: Add WebSocket to avoid Polling
+    // Show the last list again, as the frequency database has come
     $scope.playbackReload = function() {
-    // Load the Playback:
-    $http.get(URL_PLAYBACK_GET).then(function (response) {
-        var list = angular.fromJson(response.data);
+        if (playbackText !== null) {
+            $scope.playbackCacheCount = 0;
+            playbackShow(playbackText);
+        }
+    }
+
+    // Each row gets its fields set, so every showing parses its own copy
+    function playbackShow(text) {
+        var list = angular.fromJson(text);
         if(list === undefined || list.length == 0 || list.length == $scope.playbackCacheCount)
         {
             return;
@@ -944,7 +944,28 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
         $scope.replayList = listParsed;
-    });
+    }
+
+    var playbackSocket = null;
+    var playbackReconnect = null;
+
+    // The daemon sends the list on connect, so a reconnection catches up by itself
+    function playbackConnect() {
+        var socket = new WebSocket(URL_PLAYBACK_WS);
+        playbackSocket = socket;
+        socket.onclose = function () {
+            if (playbackSocket !== socket) {
+                return; // closed by $destroy
+            }
+            playbackSocket = null;
+            playbackReconnect = setTimeout(playbackConnect, PLAYBACK_RECONNECT_SECONDS * 1000);
+        };
+        socket.onmessage = function (msg) {
+            playbackText = msg.data;
+            $scope.$apply(function () {
+                playbackShow(playbackText);
+            });
+        };
     }
     $scope.elapsed = function (dateISO) {
         return textBySeconds(new Date(dateISO).getHours() * 60 + new Date(dateISO).getMinutes())
@@ -965,12 +986,16 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         window.open(url,'_blank');
       }
       
-    if (($scope.tickerPlayback === undefined) || ($scope.tickerPlayback === null)) {
-        // TODO: Add a switch on the global configuration
-        if (true) {
-            $scope.tickerPlayback = window.setInterval($scope.playbackReload, 5000);
+    // Per controller and not in onExit: the sidebar has its own copy of the plate
+    $scope.$on('$destroy', function () {
+        clearTimeout(playbackReconnect);
+        if (playbackSocket !== null) {
+            var socket = playbackSocket;
+            playbackSocket = null;
+            socket.close();
         }
-    }
+    });
+    playbackConnect();
 }
 
 

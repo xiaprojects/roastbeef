@@ -7,19 +7,6 @@
   font-family: "DS-Digital";
 }
 
-/* The RX mark, in a heading or beside the digits, which would otherwise make it as large as they are */
-.label.radioHeard {
-  font-size: 4cqmin;
-  padding: 0.2em 0.5em;
-  margin-right: 2cqmin;
-  vertical-align: middle;
-}
-
-/* In a heading it is one label among the others, and the round panel has no room to spare */
-.panel-heading .label.radioHeard {
-  font-size: 75%;
-  margin-right: 0;
-}
 
 /*
   The round panel: the top of the glass is its narrowest part, and the heading holds up to a
