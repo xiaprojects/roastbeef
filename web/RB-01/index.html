@@ -36,6 +36,7 @@
 	<link rel="stylesheet" href="css/checklist.css" />
 	<link rel="stylesheet" href="css/alerts.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bars.css" />
 	<script>
 				if (document.location.hash == "") {
 					console.log("Default page is going to be loaded...");
@@ -182,36 +183,17 @@
 		<a class="fabNavigation fabWest semiroundleft" ng-click="fabClick('W',this,$event);"  ng-if="fabWestEnabled">
 			<i class="fa fa-caret-right"></i>
 		</a>
-		<a class="fabNavigation fabNorth semiroundtop" ng-click="fabClick('N',this,$event);" ng-if="!uiSidebarTop && fabNorthEnabled">
+		<a class="fabNavigation fabNorth semiroundtop" ng-click="fabClick('N',this,$event);" ng-if="barsAllowed && !uiSidebarTop">
 			<i class="fa fa-caret-down"></i>
 		</a>
-		<a class="fabNavigation fabSouth semiroundbottom" ng-click="fabClick('S',this,$event);" ng-if="!uiSidebarBottom && fabSouthEnabled">
+		<a class="fabNavigation fabSouth semiroundbottom" ng-click="fabClick('S',this,$event);" ng-if="barsAllowed && !uiSidebarBottom">
 			<i class="fa fa-caret-up"></i>
 		</a>
-		<div class="navbar navbar-app navbar-absolute-top" ng-if="uiSidebarTop" ng-include="'plates/sidebottom.html'"
-			ng-controller="BottomCtrl" ng-init="init('top')"></div>
-		<!--
-		<div class="navbar navbar-app navbar-absolute-top" ng-if="uiSidebarTop" ng-include="'plates/sidetop.html'">
-			<div class="btn-group pull-left semiroundleft">
-				<div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle" style="height: 42px;">
-					
-				</div>
-			</div>
-
-			<div class="navbar btn-group semiroundtop" ui-yield-to="title">
-			</div>
-
-
-			<div class="btn-group pull-right semiroundright">
-				<div ui-toggle="uiSidebarRight" class="btn sidebar-toggle" style="height: 42px;">
-					<i class="fa fa-caret-left"></i>
-				</div>
-			</div>
-		</div>
-			-->
-		<div class="navbar navbar-app navbar-absolute-bottom" ng-if="uiSidebarBottom"
-			ng-include="'plates/sidebottom.html'" ng-controller="BottomCtrl" ng-init="init('bottom')">
-		</div>
+		<!-- Top bar: status values; bottom bar: soft keys. docs/tech-debt/top-bottom-bars.md -->
+		<div class="navbar navbar-app navbar-absolute-top rb-bar rb-bar-top" ng-if="barsAllowed && uiSidebarTop"
+			ng-include="'plates/sidetop.html'" ng-controller="TopBarCtrl"></div>
+		<div class="navbar navbar-app navbar-absolute-bottom rb-bar rb-bar-bottom" ng-if="barsAllowed && uiSidebarBottom"
+			ng-include="'plates/sidebottom.html'" ng-controller="BottomBarCtrl"></div>
 
 		<!-- App Body -->
 		<div class="app-body">

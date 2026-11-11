@@ -119,14 +119,84 @@ func handleAlertsWS(conn *websocket.Conn) {
 	}
 }
 
+/*
+waitSocketClosed().
+
+	Block until the browser closes the socket. The handler returning closes it
+	on the server side, and the broadcaster drops it at its next failed write
+*/
+func waitSocketClosed(conn *websocket.Conn) {
+	buf := make([]byte, 512)
+	for {
+		if _, err := conn.Read(buf); err != nil {
+			return
+		}
+	}
+}
+
+/*
+Alerts list WS - /alerts/ws
+
+	The whole list as /getAlerts answers it: once on connect, then on every change
+	(new alert, Active going on or off, the end of an active alert moving).
+	/alerts still carries each new alert alone, for its sound and balloon
+*/
+var alertsListUpdate *uibroadcaster
+
+// One pending change wakes alertsListSender, more changes meanwhile are one message
+var alertsListChanged = make(chan struct{}, 1)
+
+// An active condition moves its end every time it is seen, several times a second
+// for an engine rule: the list goes out at most this often
+const ALERTS_LIST_MIN_INTERVAL = 500 * time.Millisecond
+
+/*
+notifyAlertsListChanged().
+
+	Called by alerts.go on every change of alertsData, never blocks
+*/
+func notifyAlertsListChanged() {
+	select {
+	case alertsListChanged <- struct{}{}:
+	default:
+	}
+}
+
+// The list as JSON, nil if it does not marshal
+func alertsListJSON() []byte {
+	alerts.alertsDataMutex.Lock()
+	defer alerts.alertsDataMutex.Unlock()
+	statusJSON, err := json.Marshal(&alerts.alertsData)
+	if err != nil {
+		log.Printf("alerts list: %s", err)
+		return nil
+	}
+	return statusJSON
+}
+
+func alertsListSender() {
+	for range alertsListChanged {
+		if statusJSON := alertsListJSON(); statusJSON != nil {
+			alertsListUpdate.Send(statusJSON)
+		}
+		time.Sleep(ALERTS_LIST_MIN_INTERVAL)
+	}
+}
+
+func handleAlertsListWS(conn *websocket.Conn) {
+	// Added first: a change between the two is sent twice rather than lost
+	alertsListUpdate.AddSocket(conn)
+	if statusJSON := alertsListJSON(); statusJSON != nil {
+		conn.Write(statusJSON)
+	}
+	waitSocketClosed(conn)
+}
+
 // AJAX call - /getAlerts. Responds with current Alerts status
 func handleAlertsRequest(w http.ResponseWriter, r *http.Request) {
 	setNoCache(w)
 	setJSONHeaders(w)
-	alerts.alertsDataMutex.Lock()
-	statusJSON, err := json.Marshal(&alerts.alertsData)
-	alerts.alertsDataMutex.Unlock()
-	if err == nil {
+	if statusJSON := alertsListJSON(); statusJSON != nil {
 		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
 		fmt.Fprintf(w, "{}\n")
@@ -156,6 +226,68 @@ func handleAlertsPutRequest(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+
+/*
+Alerts REST - POST /alert
+
+	An external service raises an alert, or updates one it raised:
+
+	  {"Type": 15, "Title": "CHT red 225", "Active": true}  raises a new alert
+	  {"Id": 10152233, "Active": false}                     updates the alert with that Id
+
+	A body with an Id is an update, Id 0 included, as in pushEvent(). The answer is
+	{"Id": n}: keep it to update the alert. A new alert goes out on /alerts, with its
+	sound and balloon, and every change on /alerts/ws.
+	400 for a body that does not parse or a type the mapping does not define,
+	404 for an Id that is not in the list, 405 for anything but POST
+*/
+type AlertRequest struct {
+	Id     *int
+	Type   *int
+	Title  string
+	Active bool
+}
+
+// An external service has no business filling the list with essays
+const ALERT_TITLE_MAX_LEN = 128
+
+func handleAlertPost(w http.ResponseWriter, r *http.Request) {
+	setNoCache(w)
+	setJSONHeaders(w)
+	if r.Method != "POST" {
+		w.Header().Set("Allow", "POST")
+		http.Error(w, `{"Error":"POST only"}`, http.StatusMethodNotAllowed)
+		return
+	}
+	var request AlertRequest
+	if err := json.NewDecoder(io.LimitReader(r.Body, 4096)).Decode(&request); err != nil {
+		http.Error(w, `{"Error":"the body is not an alert"}`, http.StatusBadRequest)
+		return
+	}
+	var id int
+	if request.Id != nil {
+		id = alerts.pushEvent(Alert{Id: *request.Id, Active: request.Active})
+		if id == -1 {
+			http.Error(w, `{"Error":"no alert with this Id"}`, http.StatusNotFound)
+			return
+		}
+	} else {
+		if request.Type == nil || !alertTypeDefined(*request.Type) {
+			http.Error(w, `{"Error":"Type is not a defined event type"}`, http.StatusBadRequest)
+			return
+		}
+		title := request.Title
+		if runes := []rune(title); len(runes) > ALERT_TITLE_MAX_LEN {
+			title = string(runes[:ALERT_TITLE_MAX_LEN])
+		}
+		id = alerts.pushEvent(Alert{Type: *request.Type, Title: title, Active: request.Active, Timestamp: time.Now()})
+		if id == -1 {
+			http.Error(w, `{"Error":"the alert function is not ready"}`, http.StatusServiceUnavailable)
+			return
+		}
+	}
+	fmt.Fprintf(w, "{\"Id\":%d}\n", id)
+}
 
 // Alerts Feature End Code
 
@@ -883,28 +1015,84 @@ func handleAutopilotRest(w http.ResponseWriter, r *http.Request) {
  * Audio replay REST API End
  */
 
-func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
+// The recordings in the playback folder as JSON, as /playback answers
+func playbackListJSON() ([]byte, error) {
 	fileInfo, err := ioutil.ReadDir(STRATUX_WWW_DIR + "playback")
-    if err != nil {
-		fmt.Fprintf(w, "[]\n")
-		log.Printf("%s", err)
-		return
-    }
+	if err != nil {
+		return nil, err
+	}
 
 	list := []RadioPlayback{}
 
 	for i := range fileInfo {
-		r := RadioPlayback{Name: fileInfo[i].Name(),Size: fileInfo[i].Size(),ModTime: fileInfo[i].ModTime(),Path: "/playback/"+fileInfo[i].Name(),Source: "RTL",Frequency: ""}
+		r := RadioPlayback{Name: fileInfo[i].Name(), Size: fileInfo[i].Size(), ModTime: fileInfo[i].ModTime(), Path: "/playback/" + fileInfo[i].Name(), Source: "RTL", Frequency: ""}
 		list = append(list, r)
 	}
 
-	statusJSON, err2 := json.Marshal(&list)
-	if err == nil && err2 == nil {
+	return json.Marshal(&list)
+}
+
+func handlePlaybackGet(w http.ResponseWriter, r *http.Request) {
+	statusJSON, err := playbackListJSON()
+	if err == nil {
 		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
 		fmt.Fprintf(w, "[]\n")
 		log.Printf("%s", err)
 	}
+}
+
+/*
+Playback WS - /playback/ws
+
+	The list as /playback answers it: once on connect, then whenever the folder
+	changes. The recorders are other processes, so the folder is read again every
+	PLAYBACK_WATCH_INTERVAL, only while a display is connected. A recording still
+	being written changes its size, and goes out on every read
+*/
+var playbackUpdate *uibroadcaster
+
+const PLAYBACK_WATCH_INTERVAL = 1 * time.Second
+
+// A folder that cannot be read is an empty list, as /playback answers
+func playbackListOrEmpty() []byte {
+	statusJSON, err := playbackListJSON()
+	if err != nil {
+		return []byte("[]")
+	}
+	return statusJSON
+}
+
+/*
+playbackWatchStep().
+
+	One read of the folder: sends the list if it is not last, returns the list to
+	compare the next read with. Also sends when last is nil, so a change between
+	the snapshot on connect and the first read is not lost
+*/
+func playbackWatchStep(last []byte) []byte {
+	if !playbackUpdate.HasSockets() {
+		return nil
+	}
+	statusJSON := playbackListOrEmpty()
+	if !bytes.Equal(statusJSON, last) {
+		playbackUpdate.Send(statusJSON)
+	}
+	return statusJSON
+}
+
+func playbackWatcher() {
+	var last []byte
+	ticker := time.NewTicker(PLAYBACK_WATCH_INTERVAL)
+	for range ticker.C {
+		last = playbackWatchStep(last)
+	}
+}
+
+func handlePlaybackWS(conn *websocket.Conn) {
+	playbackUpdate.AddSocket(conn)
+	conn.Write(playbackListOrEmpty())
+	waitSocketClosed(conn)
 }
 
 
@@ -2882,6 +3070,10 @@ func managementInterface() {
 	radioUpdate = NewUIBroadcaster()
 	autopilotUpdate = NewUIBroadcaster()
 	bridgeFloatUpdate = NewUIBroadcaster()
+	alertsListUpdate = NewUIBroadcaster()
+	playbackUpdate = NewUIBroadcaster()
+	go alertsListSender()
+	go playbackWatcher()
 
 	http.HandleFunc("/", defaultServer)
 	//http.Handle("/logs/", http.StripPrefix("/logs/", http.FileServer(http.Dir("/var/log"))))
@@ -2925,6 +3117,19 @@ func managementInterface() {
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleAlertsWS)}
+			s.ServeHTTP(w, req)
+		})
+	http.HandleFunc("/alerts/ws",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleAlertsListWS)}
+			s.ServeHTTP(w, req)
+		})
+	// Radio Playback Feature
+	http.HandleFunc("/playback/ws",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handlePlaybackWS)}
 			s.ServeHTTP(w, req)
 		})
 	// Keypad Feature
@@ -2998,6 +3203,7 @@ func managementInterface() {
 	// Alerts Feature
 	http.HandleFunc("/getAlerts", handleAlertsRequest)
 	http.HandleFunc("/alert/", handleAlertsPutRequest)
+	http.HandleFunc("/alert", handleAlertPost)
 	// Magnetometer Feature
 	http.HandleFunc("/magnetometer", handleMagnetometerRest)
 	// Timers Feature

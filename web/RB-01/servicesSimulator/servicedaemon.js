@@ -209,4 +209,11 @@ function daemonSocketOpened(path) {
     if (path == "/radar") {
         daemonRadarUpdate();
     }
+    // As the daemon, the list on connect: the same answer as its REST path
+    if (path == "/alerts/ws") {
+        loopbackPush(path, JSON.stringify(DAEMON_REST["/getAlerts"].GET()));
+    }
+    if (path == "/playback/ws") {
+        loopbackPush(path, JSON.stringify(DAEMON_REST["/playback"].GET()));
+    }
 }

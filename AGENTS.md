@@ -86,7 +86,11 @@ Notes:
   NMEA Display plugin: `$RBATT`/`$RBAIR` for an RB-09, its loop and its setting,
   `docs/integration/slave-nmea-display-format.md`), `radio_test.go` (the SDR driver: every
   channel name through float32 and JSON, the `POST /radio` handler, restore after a restart,
-  a real `/bridge/float/ws` client), `terrain_test.go` (the terrain alerts on a synthetic
+  a real `/bridge/float/ws` client), `uisockets_test.go` (`/alerts/ws` and `/playback/ws`,
+  the lists the display used to poll, through real clients), `alertsrest_test.go` (`POST /alert`,
+  alerts raised and updated by an external service, no undefined event type on any path, the
+  list held to `EVENT_MAX_QUEUE` and no dropped Id issued again),
+  `terrain_test.go` (the terrain alerts on a synthetic
   grid: confirmation, one alert per episode, the settings and the minimum speed, the height above ground, field box, the TSO-C151c
   Class C tables, the window cut as `web/RB-01/js/global.js` cuts it; TER-nnn ids from
   `docs/tech-debt/terrain-alerts.md`, no `Covers:` tags yet). The sensor loops run on real tickers, each in a child process (`inChild`), in

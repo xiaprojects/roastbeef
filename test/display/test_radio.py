@@ -72,6 +72,20 @@ REFRESH = SCOPE + ".radioRefresh()"
 LABELS = """[...document.querySelectorAll('%s .panel-heading .label')]
     .filter(e => e.offsetParent !== null && /ACTIVE/.test(e.textContent))
     .map(e => e.textContent.trim())""" % BOX
+# Which channel is heard, as shown: RX in the heading for the active, DUAL RX for the standby
+HEARD = """(() => {
+    const shown = e => e.offsetParent !== null;
+    const out = [];
+    if ([...document.querySelectorAll('%s .panel-heading span.label')]
+            .some(e => shown(e) && e.textContent.trim() == 'RX')) out.push('active');
+    if ([...document.querySelectorAll('%s a[ng-click^="dualFreq"]')]
+            .some(e => shown(e) && /RX/.test(e.textContent))) out.push('standby');
+    return out;
+})()""" % (BOX, BOX)
+# The DUAL button shown, as its colour and its words: ["label-info DUAL ON"]
+DUAL = """[...document.querySelectorAll('%s a[ng-click^="dualFreq"]')]
+    .filter(e => e.offsetParent !== null)
+    .map(e => (e.className.match(/label-[a-z]+/) || [''])[0] + ' ' + e.textContent.replace(/\\s+/g, ' ').trim())""" % BOX
 
 
 # The VOR band, on an SDR. The fine step is 50 kHz and it wraps inside the MHz as well
@@ -372,10 +386,8 @@ def check_no_sliders(res):
         refresh(d, FrequencyActive="119.000", Dual=True)
         bridge(d, sdrradiofreqactive=121500, sdrradiofreqheard=119000, sdrradiosecondaryactive=0)
         res.check(active_digits(d) == "119.000", "a serial radio ignores the SDR's reply", active_digits(d))
-        marks = d.page.eval("document.querySelectorAll('%s .radioHeard').length" % BOX)
-        res.check(marks == 0, "and shows no RX", marks)
-        dual = d.page.eval("""document.querySelector('%s a[ng-click="dualFreq(radio,false)"]').className""" % BOX)
-        res.check("label-success" in dual, "and keeps its DUAL", dual)
+        res.check(d.page.eval(HEARD) == [], "and shows no RX", repr(d.page.eval(HEARD)))
+        res.check(d.page.eval(DUAL) == ["label-info DUAL ON"], "and keeps its DUAL ON", repr(d.page.eval(DUAL)))
 
 
 def check_reply(d, res):
@@ -431,37 +443,40 @@ def check_quiet(d, res):
 
 def check_dual(d, res):
     refresh(d, Enabled=True, Dual=True, FrequencyActive="118.700", FrequencyStandby="121.500")
-    dual = """document.querySelector('%s a[ng-click="dualFreq(radio,false)"]').className""" % BOX
-    # The active's mark is in the heading, the standby's beside its digits
-    heard = """[...document.querySelectorAll('%s .radioHeard')]
-        .filter(e => e.offsetParent !== null)
-        .map(e => e.closest('.panel-heading') ? 'active' : 'standby')""" % BOX
+    on, rx = ["label-info DUAL ON"], ["label-success DUAL RX"]
 
     bridge(d)
-    res.check("label-success" in d.page.eval(dual), "DUAL ON: no daemon, as it always looked", d.page.eval(dual))
+    res.check(d.page.eval(DUAL) == on, "DUAL ON: no daemon", repr(d.page.eval(DUAL)))
     bridge(d, sdrradiofreqactive=118700, sdrradiosecondaryactive=121500, sdrradiofreqheard=0)
-    res.check("label-success" in d.page.eval(dual), "DUAL ON: taking turns", d.page.eval(dual))
-    res.check(d.page.eval(heard) == [], "nothing heard, no RX", repr(d.page.eval(heard)))
+    res.check(d.page.eval(DUAL) == on, "DUAL ON: taking turns", repr(d.page.eval(DUAL)))
+    res.check(d.page.eval(HEARD) == [], "nothing heard, no RX", repr(d.page.eval(HEARD)))
     bridge(d, sdrradiofreqactive=118700, sdrradiosecondaryactive=121500, sdrradiofreqheard=121500)
-    res.check(d.page.eval(heard) == ["standby"], "RX beside the standby being heard",
-              repr(d.page.eval(heard)))
-    # .label would make it as large as the digits it sits beside
-    tall = d.page.eval("""(() => {
-        const mark = document.querySelector('%s .radioHeard');
-        return [mark.getBoundingClientRect().height, mark.parentElement.getBoundingClientRect().height];
-    })()""" % BOX)
-    res.check(tall[0] * 2 < tall[1], "a small mark, not the size of the digits", repr(tall))
+    res.check(d.page.eval(DUAL) == rx, "the standby being heard: DUAL RX", repr(d.page.eval(DUAL)))
+    res.check(d.page.eval(HEARD) == ["standby"], "and no RX in the heading", repr(d.page.eval(HEARD)))
+    # Nothing beside the digits any more
+    digits = d.page.eval("document.querySelector('%s .Radio').children.length" % BOX)
+    res.check(digits == 0, "the standby digits stand alone", digits)
     bridge(d, sdrradiofreqactive=118700, sdrradiosecondaryactive=121500, sdrradiofreqheard=118700)
-    res.check(d.page.eval(heard) == ["active"], "RX in the heading for the active being heard",
-              repr(d.page.eval(heard)))
+    res.check(d.page.eval(HEARD) == ["active"], "RX in the heading for the active being heard",
+              repr(d.page.eval(HEARD)))
+    res.check(d.page.eval(DUAL) == on, "and DUAL back to ON", repr(d.page.eval(DUAL)))
     fits = d.page.eval("""(() => {
-        const mark = document.querySelector('%s .radioHeard');
+        const mark = [...document.querySelectorAll('%s .panel-heading span.label')]
+            .find(e => e.offsetParent !== null && e.textContent.trim() == 'RX');
         const heading = mark.closest('.panel-heading');
         return [mark.getBoundingClientRect().height, heading.getBoundingClientRect().height];
     })()""" % BOX)
     res.check(fits[0] < fits[1], "and it fits the heading", repr(fits))
+    # No warning any more: DUAL ON whatever the receiver says about the watching
     bridge(d, sdrradiofreqactive=118700, sdrradiosecondaryactive=0, sdrradiofreqheard=0)
-    res.check("label-warning" in d.page.eval(dual), "DUAL on and not taking turns: a warning", d.page.eval(dual))
+    res.check(d.page.eval(DUAL) == on, "DUAL on and not taking turns: still DUAL ON", repr(d.page.eval(DUAL)))
+    # Either DUAL ON or DUAL RX turns it off
+    for name, colour, heard in (("DUAL ON", "label-info", 0), ("DUAL RX", "label-success", 121500)):
+        bridge(d, sdrradiofreqactive=118700, sdrradiosecondaryactive=121500, sdrradiofreqheard=heard)
+        body = click_and_read(d, """%s a[ng-click="dualFreq(radio,false)"].%s""" % (BOX, colour))
+        res.check(bool(body) and body["Dual"] is False, "%s posts Dual off" % name,
+                  repr(body and body.get("Dual")))
+        refresh(d, Dual=True)
     refresh(d, Dual=False)
 
 

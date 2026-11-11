@@ -37,6 +37,8 @@ AlertsService.prototype = {
 
 // Alerts WebSockets
 var URL_ALERTS_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/alerts";
+// The whole list as /getAlerts answers it, on connect and on every change
+var URL_ALERTS_LIST_WS = WS_HOST_PROTOCOL + URL_HOST_BASE + "/alerts/ws";
 
 // Every balloon closes by itself after this time
 const ALERT_BALLOON_SECONDS = 10;
@@ -44,8 +46,9 @@ const ALERT_BALLOON_SECONDS = 10;
 const ALERT_BALLOON_MIN_FONT_PX = 18;
 // The Icon of the mapping by severity: a balloon never covers a more severe one
 const ALERT_BALLOON_SEVERITY = ["info", "warning", "danger"];
-// The alerts socket carries only new alerts: the state of an alert is read from here
-const ALERTS_POLL_SECONDS = 2;
+// The alerts socket carries only new alerts: the state of an alert comes on the list socket
+// A socket that closes is opened again after this time
+const ALERTS_RECONNECT_SECONDS = 1;
 // An alert coming back replays the alarm only if it was inactive for this long
 // An engine rule at the edge of a band comes back every few seconds
 var ALERT_REPLAY_CLEAR_SECONDS = 60;
@@ -84,6 +87,8 @@ function AlertsService($scope, $http) {
         }
         return rows === undefined ? undefined : rows[alertType];
     }
+    // The top bar colours its ALERTS lamp with the severity the balloon uses
+    $scope.alertMappingRow = alertMappingRow;
 
     var alertBalloon = null; // The element on screen, alertsModal is in index.html
     var alertBalloonTimer = null;
@@ -163,7 +168,7 @@ function AlertsService($scope, $http) {
     /**
      * followAlerts: compare the list with the previous one and replay the alarm of an alert coming back
      * The first answer only records the state, and a new Id has already been announced by the socket
-     * @param {*} list - Alerts as /getAlerts answers, an older daemon has no Id
+     * @param {*} list - Alerts as /alerts/ws sends them, an older daemon has no Id
      */
     function followAlerts(list) {
         var now = Date.now();
@@ -187,19 +192,30 @@ function AlertsService($scope, $http) {
     }
 
     /**
-     * pollAlerts: the state of the alerts for every page, plates listen to AlertsUpdated
+     * connectList: the state of the alerts for every page, plates listen to AlertsUpdated
+     * The daemon sends the list on connect, so a reconnection catches up by itself
      */
-    function pollAlerts() {
-        $http.get(URL_ALERTS_GET).then(function (response) {
-            var list = angular.fromJson(response.data);
+    function connectList() {
+        var listSocket = new WebSocket(URL_ALERTS_LIST_WS);
+
+        listSocket.onclose = function (msg) {
+            setTimeout(connectList, ALERTS_RECONNECT_SECONDS * 1000);
+        };
+
+        listSocket.onmessage = function (msg) {
+            var list = JSON.parse(msg.data);
             if (!Array.isArray(list)) {
-                return; // {} on a daemon error
+                return; // a list the daemon could not marshal
             }
-            followAlerts(list);
-            // Inside the digest of $http: a listener shall not call $apply
-            const proxy = new CustomEvent("AlertsUpdated", { detail: list });
-            dispatchEvent(proxy);
-        });
+            // Inside this digest: a listener shall not call $apply
+            $scope.$apply(function () {
+                // The last list, for a top bar shown after it came
+                $scope.alertsList = list;
+                followAlerts(list);
+                const proxy = new CustomEvent("AlertsUpdated", { detail: list });
+                dispatchEvent(proxy);
+            });
+        };
     }
 
     function connect($scope) {
@@ -237,6 +253,5 @@ function AlertsService($scope, $http) {
     // Service Startup...
     $scope.alarmIsLit = false;
     connect($scope);
-    pollAlerts();
-    setInterval(pollAlerts, ALERTS_POLL_SECONDS * 1000);
+    connectList();
 }

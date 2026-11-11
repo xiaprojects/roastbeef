@@ -48,6 +48,14 @@ COM2_KHZ = 119_700     # for dual watch. 121.500 stays empty, for test_vor_radio
 NAV_KHZ = 113_800      # what the radio hears there: a carrier that never stops
 HOP_S = 0.029          # rtlsdr_set_center_freq, measured on a real R820T
 
+# ILS localizers (rb-vor with loc.enabled, RB-VOR-IF v2.3), by kHz: the DDM each radiates,
+# + = 150 Hz predominates = right of the front course = fly left. 0.0775 is half of full
+# scale (0.155), so the plate's bar must sit 1.5 dots to the left of its pointer. Both
+# channels are odd-tenth localizer channels clear of every other station here, and of the
+# two TACAN entries in the plate's list on 109.10 and 111.10.
+LOC_KHZ = {110_300: 0.0775}
+LOC_QUIET_KHZ = 108_900   # a localizer channel with nothing on the air: noise only
+
 
 class Logged:
     def __init__(self, who, directory):
@@ -146,6 +154,11 @@ def vor(directory, argv, real):
     from rbvor import sdr
     from rbvor.__main__ import main
     from tools.vor_gen import VorParams, generate_blocks
+    try:
+        from tools.loc_gen import LocParams
+        from tools.loc_gen import generate_blocks as loc_blocks
+    except ImportError:         # an rb-vor from before the localizer: no localizer on the air
+        LocParams = None
 
     if real:
         opener = sdr.open_device
@@ -157,6 +170,12 @@ def vor(directory, argv, real):
         params = VorParams(radial_deg=radial, fs=FS, seconds=LOOP_S, offset_hz=OFFSET,
                            snr_db=40.0, ident="", seed=khz)
         sky[khz * 1000 + OFFSET] = looped(np, np.concatenate(list(generate_blocks(params))))
+    if LocParams is not None:
+        for khz, ddm in LOC_KHZ.items():
+            # LOOP_S holds whole cycles of 90 and 150 Hz, so the loop has no seam
+            params = LocParams(ddm=ddm, fs=FS, seconds=LOOP_S, offset_hz=OFFSET, snr_db=40.0,
+                               ident="", seed=khz)
+            sky[khz * 1000 + OFFSET] = looped(np, np.concatenate(list(loc_blocks(params))))
     quiet = looped(np, noise(np))
     sdr.open_device = lambda cfg: Dongle("vor", directory, sky, quiet, sdr.SdrError)
     return main(argv)

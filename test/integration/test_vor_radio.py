@@ -13,7 +13,10 @@ dongle and both receivers want it, so they work only if the screen makes them ta
                   ACTIVE           rb-sdr-radio releases it
 
 Two rounds, on different VOR stations, then what happens when the pilot does not take
-turns, and when rb-vor is killed and restarted. dongle.py radiates each station on its
+turns, and when rb-vor is killed and restarted. Then an ILS localizer (RB-VOR-IF v2.3,
+rb-vor with loc.enabled): the deviation bar is drawn only while locstatus >= 4, on the
+side that means fly left; a localizer channel with only noise keeps it parked; and a VOR
+clears the localizer display, and back. dongle.py radiates each station on its
 own channel with its own radial, so the plate can only show the right station and radial
 if the click reached the receiver and the receiver tuned it. Each press is a real mouse
 event after a hit test, so a control under a navigation FAB fails rather than being
@@ -72,6 +75,15 @@ COM_HEARING = (3, 4) if REAL else (4,)
 COM_QUIET = (3, 4) if REAL else (3,)
 
 RADIAL_TOLERANCE = 3     # degrees. A real bearing, not a looked-up one: it comes from the DSP
+# The localizer rounds. The list entries are test fixtures, added to the page's list only
+# while this test runs, in place of the shipped entries on the same channels (Peretola
+# ILS 05 on 110.30, Albenga LOC 27 on 108.90).
+LOC_FIXTURE = {"name": "TEST LOC FIXTURE", "id": "TSTX", "type": "ILS",
+               "freq": 110.3, "course": 90}
+LOC_QUIET_FIXTURE = {"name": "TEST LOC NOISE", "id": "TSTN", "type": "ILS",
+                     "freq": 108.9, "course": 90}
+LOC_DEV_TOLERANCE = 4    # % of full scale, against round(100 * DDM / 0.155)
+QUIET_S = 12             # how long the noise-only channel is watched for a bar
 FIX_S = 30               # to FIX from a press: debounce, settle, 2 s windows, the smoother
 RETUNE_S = 8             # rb-sdr-radio's 300 ms debounce and a few blocks of squelch
 RELEASE_S = 4
@@ -100,10 +112,31 @@ VOR_STATUS = "[ui-view] .addonVorLabelTopRight"    # also the button that opens 
 # when the word is not
 VOR_ROW = """[...document.querySelectorAll('[ui-view] tr[ng-click] td')]
     .find(e => e.textContent.trim() === %s)"""
+# The name cell of the row with that name and frequency: names repeat in the shipped list
+# (Alghero is a TACAN on 109.30 and a VORTAC on 113.80)
+VOR_STATION_ROW = """[...document.querySelectorAll('[ui-view] tr[ng-click]')]
+    .map(r => r.querySelectorAll('td'))
+    .filter(t => t.length > 1 && t[0].textContent.trim() === %s
+                 && Math.round(parseFloat(t[1].textContent) * 1000) === %d)
+    .map(t => t[0])[0]"""
 # What the status corner says, line by line: FIX, the station, the frequency
 VOR_SHOWS = """document.querySelector('%s').innerText.split('\\n')
     .map(s => s.trim()).filter(s => s)""" % VOR_STATUS
 VOR_ITEMS = "angular.element(document.querySelector('%s')).scope().items" % VOR_ROOT
+VOR_SCOPE = "angular.element(document.querySelector('%s')).scope()" % VOR_ROOT
+# The HSI's deviation bar: drawn or parked, and where, in the course pointer's frame
+# (viewbox units, -12.5 per +1 of `vertical`) and on the screen against the rose's centre
+VOR_BAR = """(() => {
+    const s = %s;
+    if (!s || !s.vorHSI) return null;
+    const bar = s.vorHSI.verticalLineDirection;
+    const svg = document.querySelector('#vorHSI svg').getBoundingClientRect();
+    const r = bar.node.getBoundingClientRect(), k = svg.width / 280;
+    return {drawn: bar.visible() && r.width > 0, frame: bar.cx(),
+            dx: (r.left + r.width / 2 - svg.left - svg.width / 2) / k,
+            dy: (r.top + r.height / 2 - svg.top - svg.height / 2) / k,
+            track: s.items.GPSTrueCourse};
+})()""" % VOR_SCOPE
 
 BOX = "[ui-view] #radio_box"
 RADIO_ON = 'document.querySelector(\'%s a[ng-click="enableRadio(radio,true)"]\')' % BOX
@@ -227,7 +260,8 @@ class Bench:
             return self.path(name)
 
         cfg = config(RB_VOR, "rb-vor.json", bearing={"phase_offset_deg": SYNTHETIC_PHASE_OFFSET},
-                     log={"solution_csv": self.path("solutions.csv")})
+                     log={"solution_csv": self.path("solutions.csv")},
+                     loc={"enabled": True, "solution_csv": self.path("loc.csv")})
         self.vor_config = cfg
         self.start_vor()
         cfg = config(RB_SDR_RADIO, "rb-sdr-radio.json", audio={"player": player},
@@ -345,12 +379,30 @@ class Bench:
                            button="left", clickCount=1)
         self.page.pump(0.2)
 
-    def pick(self, row):
-        """Open the VOR list and press the row that says `row`."""
+    def pick(self, row, khz=None):
+        """Open the VOR list and press the row that says `row`, on `khz` when given."""
         self.show("addons/vor", VOR_ROOT)
         self.press("document.querySelector('%s')" % VOR_STATUS)
-        self.page.wait("!!(%s)" % (VOR_ROW % json.dumps(row)), timeout=5, label="VOR list")
-        self.press(VOR_ROW % json.dumps(row))
+        cell = (VOR_ROW % json.dumps(row) if khz is None
+                else VOR_STATION_ROW % (json.dumps(row), khz))
+        self.page.wait("!!(%s)" % cell, timeout=5, label="VOR list")
+        self.press(cell)
+
+    def pick_fixture(self, entry):
+        """Put a test-only entry in the plate's list, then pick it as a pilot would."""
+        self.show("addons/vor", VOR_ROOT)
+        # Real stations on the fixture's channel leave for the test: the plate names the
+        # channel and takes its front course from the first entry on it
+        self.page.eval("""(() => { const s = %s, e = %s;
+            s.vorList = s.vorList.filter(x => x.name === e.name || x.freq != e.freq);
+            if (!s.vorList.some(x => x.name === e.name)) s.vorList.push(e);
+            s.$apply(); })()""" % (VOR_SCOPE, json.dumps(entry)))
+        self.press("document.querySelector('%s')" % VOR_STATUS)
+        self.page.wait("!!(%s)" % (VOR_ROW % json.dumps(entry["name"])), timeout=5, label="VOR list")
+        self.press(VOR_ROW % json.dumps(entry["name"]))
+
+    def bar(self):
+        return self.page.eval(VOR_BAR)
 
     def vor_shows(self):
         return self.page.eval(VOR_SHOWS)
@@ -367,7 +419,7 @@ def vor_turn(b, res, station, khz):
     held_by = b.holder()
     res.check(held_by is None, "the dongle is free", held_by)
     pressed = time.monotonic()
-    b.pick(station)
+    b.pick(station, khz)
     shown = b.until(lambda: b.vor_working() and b.vor_shows()[1:] == [station, str(khz)], FIX_S)
     res.check(shown, "the plate shows %s %d, %s" % (station, khz, "/".join(VOR_WORKING)),
               "%s, %.1f s" % (b.vor_shows()[0], time.monotonic() - pressed) if shown else b.vor_shows())
@@ -456,7 +508,7 @@ def check_no_turns(b, res):
     """A pilot does not have to know there is one dongle."""
     print("\n-- the radio pressed while the VOR holds the dongle")
     station, khz = ROUNDS[0]
-    b.pick(station)
+    b.pick(station, khz)
     res.check(b.until(b.vor_working, FIX_S), "the plate shows %s" % station, b.vor_shows())
     b.show("radio", BOX)
     b.press(RADIO_ON)
@@ -481,7 +533,7 @@ def check_no_turns(b, res):
     print("\n-- a VOR picked while the radio holds the dongle")
     refused = len(b.events("busy", "vor"))
     vor = b.procs["vor"]
-    b.pick(station)
+    b.pick(station, khz)
     res.check(b.until(lambda: b.vor_shows() == ["NO SIGNAL", station, str(khz)], RETUNE_S),
               "the plate shows NO SIGNAL %s %d" % (station, khz), b.vor_shows())
     res.check(b.until(lambda: len(b.events("busy", "vor")) >= refused + 2, RETRY_S),
@@ -516,11 +568,99 @@ def check_restart(b, res):
     print("\n-- a station picked while rb-vor is down")
     station, khz = ROUNDS[1]
     b.kill_vor()
-    b.pick(station)
+    b.pick(station, khz)
     comes_back(station, khz, "it comes up on %s" % station)
 
     b.pick("OFF")
     res.check(b.until(lambda: b.holder() is None, RELEASE_S), "OFF: the restarted rb-vor releases the dongle",
+              b.holder())
+
+
+def loc_watch(b, until, timeout):
+    """Serve the browser until `until()` or the timeout, and collect every moment the bar
+    was drawn while the plate's status word was not a usable one (LOC, LOC DEGRADED)."""
+    bad = []
+    deadline = time.monotonic() + timeout
+    while True:
+        shows, bar = b.vor_shows(), b.bar()
+        if bar and bar["drawn"] and shows[:1] not in (["LOC"], ["LOC DEGRADED"]):
+            bad.append((shows[:1], bar))
+        if until() or time.monotonic() > deadline:
+            return until(), bad
+        b.page.pump(0.1)
+
+
+def loc_round(b, res):
+    if REAL:
+        return        # nothing known is on the air: no localizer to find
+    khz = int(round(LOC_FIXTURE["freq"] * 1000))
+    print("\n-- ILS localizer: %s %d" % (LOC_FIXTURE["name"], khz))
+    ddm = dongle.LOC_KHZ[khz]
+    expect_dev = round(100 * ddm / 0.155)
+    res.check(b.holder() is None, "the dongle is free", b.holder())
+    pressed = time.monotonic()
+    b.pick_fixture(LOC_FIXTURE)
+    shown, bad = loc_watch(b, lambda: b.vor_shows() == ["LOC", LOC_FIXTURE["name"], str(khz)],
+                           FIX_S)
+    res.check(shown, "the plate shows LOC %s %d" % (LOC_FIXTURE["name"], khz),
+              "%.1f s" % (time.monotonic() - pressed) if shown else b.vor_shows())
+    res.check(not bad, "no bar while tuning and acquiring", bad[:2])
+    res.check(b.tuned("vor")[-1:] == [khz * 1000], "rb-vor tuned %d" % khz, b.tuned("vor")[-1:])
+    items = b.page.eval(VOR_ITEMS)
+    res.check(abs(items["locdev"] - expect_dev) <= LOC_DEV_TOLERANCE,
+              "locdev %d, the DDM %+.4f the station radiates" % (expect_dev, ddm), items["locdev"])
+    res.check(items["vorfreqactive"] == 0 and items["vorstatus"] == 0,
+              "every vor* field is 0 on a localizer", (items["vorfreqactive"], items["vorstatus"]))
+    bar = b.bar()
+    # + = fly left. In the pointer's frame the bar is left of the pointer by locdev * 6/100
+    # half-dots of 12.5 units; on the screen, with the fixture's 090 course and the
+    # stand-in's track, the pointer's left is the screen's north when the track is 000
+    want = -items["locdev"] * 6 / 100 * 12.5
+    res.check(bar and bar["drawn"] and bar["frame"] < 0 and abs(bar["frame"] - want) <= 0.5,
+              "the bar is drawn LEFT of the course pointer (fly left), %.1f units" % want, bar)
+    if bar and bar["track"] == 0:
+        res.check(bar["dy"] < -30 and abs(bar["dx"]) <= 2,
+                  "course 090, track 000: the bar is north of centre, where the course is", bar)
+    notice = b.page.eval("(() => { const e = document.querySelector('[ui-view] .addonVorLocNotice');"
+                         " return e ? e.innerText : ''; })()")
+    res.check("NOT APPROACH GUIDANCE" in notice, "the plate says not approach guidance", notice)
+
+    print("\n-- ILS localizer with only noise: %s" % LOC_QUIET_FIXTURE["name"])
+    quiet = int(round(LOC_QUIET_FIXTURE["freq"] * 1000))
+    b.pick_fixture(LOC_QUIET_FIXTURE)
+    reached, bad = loc_watch(b, lambda: b.vor_shows()[:1] == ["LOC NO SIGNAL"]
+                             and b.vor_shows()[2:] == [str(quiet)], FIX_S)
+    res.check(reached, "the plate shows LOC NO SIGNAL %d" % quiet, b.vor_shows())
+    _, more = loc_watch(b, lambda: False, QUIET_S)
+    res.check(not bad and not more, "no bar on noise, over %d s" % QUIET_S, (bad + more)[:2])
+    statuses = b.page.eval(VOR_ITEMS + ".locstatus")
+    res.check(statuses < 4, "locstatus is not usable on noise", statuses)
+
+    print("\n-- from the localizer to a VOR, and back")
+    station, vkhz = ROUNDS[0]
+    b.pick(station, vkhz)
+    shown, bad = loc_watch(b, lambda: b.vor_working() and b.vor_shows()[1:] == [station, str(vkhz)],
+                           FIX_S)
+    res.check(shown, "a VOR: the plate shows %s %d" % (station, vkhz), b.vor_shows())
+    left = b.page.eval("document.querySelector('[ui-view] .addonVorLabelTopLeft').innerText")
+    notice = b.page.eval("!!document.querySelector('[ui-view] .addonVorLocNotice')")
+    res.check(not bad and not b.bar()["drawn"] and not notice and "SUB:" in left,
+              "the localizer display is cleared: no bar, no LOC notice, the VOR corner back",
+              (bad[:1], b.bar(), notice, left))
+    b.pick_fixture(LOC_FIXTURE)
+    shown, bad = loc_watch(b, lambda: b.vor_shows()[:1] == ["LOC"], FIX_S)
+    res.check(shown and not bad and b.bar()["drawn"],
+              "and back to the localizer: LOC, the bar drawn again", (b.vor_shows(), bad[:1]))
+    res.check(not b.page.eval("!!document.querySelector('[ui-view] .addonVorLabelTopLeft') && "
+                              "/SUB:/.test(document.querySelector('[ui-view] .addonVorLabelTopLeft')"
+                              ".innerText)"),
+              "the VOR corner is gone again")
+
+    b.pick("OFF")
+    off, bad = loc_watch(b, lambda: b.vor_shows()[:1] == ["OFF"], RELEASE_S)
+    res.check(off and not bad and not b.bar()["drawn"], "OFF: the plate shows OFF, no bar",
+              (b.vor_shows(), b.bar()))
+    res.check(b.until(lambda: b.holder() is None, RELEASE_S), "OFF: rb-vor has released the dongle",
               b.holder())
 
 
@@ -555,6 +695,7 @@ def main():
         check_turns(b, res)
         check_no_turns(b, res)
         check_restart(b, res)
+        loc_round(b, res)
         check_clean(b, res)
     print("\n%d checks, %d failed" % (len(res.checks), len(res.failed)))
     return 1 if res.failed else 0

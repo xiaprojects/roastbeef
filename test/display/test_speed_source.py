@@ -3,7 +3,7 @@
 servicesituation.js resolves the speed once per frame - SpeedKt is the airspeed
 board's IAS when it reports one, the GPS ground speed otherwise, and SpeedSource
 names which - so the plates never disagree on the source. The speed gauge, the
-attitude tape and the bottom bar consume it. This asserts on the published frame
+attitude tape and slot 1 of the top bar consume it. This asserts on the published frame
 and on the text and colours the plates render from it, all in the pilot's unit
 from aircraft.json.
 """
@@ -115,25 +115,25 @@ def main():
         value = text(d, ".attitude-speed").strip().split()[0]
         res.check(value == str(pilot(120)), "tape follows the airspeed", value)
 
-        # -- bottom bar -----------------------------------------------------
+        # -- top bar, slot 1 ------------------------------------------------
         d.page.eval("(function(){var s = angular.element(document.body).scope();"
-                    " s.uiSidebarBottom = true; s.$apply();})()")
-        d.page.wait("!!document.querySelector('.navbar-absolute-bottom .rb-button-switch')",
-                    timeout=10, label="bottom bar")
-        tile = lambda: d.page.eval(
-            "angular.element(document.querySelector('.navbar-absolute-bottom')).scope().items[0]")
+                    " s.uiSidebarTop = true; s.$apply();})()")
+        d.page.wait("!!document.querySelector(\".rb-bar-top [data-slot='speed']\")",
+                    timeout=10, label="top bar")
+        tile = lambda: {part: (text(d, ".rb-bar-top [data-slot='speed'] .rb-slot-%s" % part) or "").strip()
+                        for part in ("label", "value")}
         d.fly(frames=4, interval=0.3, **frame(8, gs=100, ias=0))
         published(d, 8)
         d.page.pump(0.5)
         t = tile()
-        res.check(t["title"] == "GS\n%s" % unit and t["value"] == str(pilot(100)),
-                  "bottom tile GS in %s" % unit, t)
+        res.check(t["label"] == "GS %s" % unit and t["value"] == str(pilot(100)),
+                  "top bar speed GS in %s" % unit, t)
         d.fly(frames=4, interval=0.3, **frame(9, gs=100, ias=120))
         published(d, 9)
         d.page.pump(0.5)
         t = tile()
-        res.check(t["title"] == "IAS\n%s" % unit and t["value"] == str(pilot(120)),
-                  "bottom tile IAS in %s" % unit, t)
+        res.check(t["label"] == "IAS %s" % unit and t["value"] == str(pilot(120)),
+                  "top bar speed IAS in %s" % unit, t)
 
         errs = d.js_errors()
         res.check(not errs, "no JS errors across the speed source run", errs[:1])

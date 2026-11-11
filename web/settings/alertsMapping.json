@@ -101,6 +101,24 @@
       "Id": "EVENT_TYPE_GPS_NOT_FIXED",
       "Icon": "danger",
       "Sound": "EVENT_TYPE_GPS_NOT_FIXED"
+    },
+    {
+      "Text": "Terrain ahead",
+      "Id": "EVENT_TYPE_TERRAIN_CAUTION",
+      "Icon": "warning",
+      "Sound": "EVENT_TYPE_TERRAIN_CAUTION"
+    },
+    {
+      "Text": "Terrain ahead, pull up",
+      "Id": "EVENT_TYPE_TERRAIN_WARNING",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_TERRAIN_WARNING"
+    },
+    {
+      "Text": "Terrain alerts unavailable",
+      "Id": "EVENT_TYPE_TERRAIN_UNAVAILABLE",
+      "Icon": "warning",
+      "Sound": "EVENT_TYPE_TERRAIN_UNAVAILABLE"
     }
   ],
   "it-IT": [
@@ -205,6 +223,24 @@
       "Id": "EVENT_TYPE_GPS_NOT_FIXED",
       "Icon": "danger",
       "Sound": "EVENT_TYPE_GPS_NOT_FIXED"
+    },
+    {
+      "Text": "Terreno davanti",
+      "Id": "EVENT_TYPE_TERRAIN_CAUTION",
+      "Icon": "warning",
+      "Sound": "EVENT_TYPE_TERRAIN_CAUTION_IT"
+    },
+    {
+      "Text": "Terreno davanti, cabra",
+      "Id": "EVENT_TYPE_TERRAIN_WARNING",
+      "Icon": "danger",
+      "Sound": "EVENT_TYPE_TERRAIN_WARNING_IT"
+    },
+    {
+      "Text": "Allarmi terreno non disponibili",
+      "Id": "EVENT_TYPE_TERRAIN_UNAVAILABLE",
+      "Icon": "warning",
+      "Sound": "EVENT_TYPE_TERRAIN_UNAVAILABLE_IT"
     }
   ]
 }

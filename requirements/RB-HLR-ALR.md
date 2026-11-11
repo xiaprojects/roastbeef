@@ -13,7 +13,7 @@ other row is classified under.
 Recovered from `main/alerts.go` (`pushEvent()`, `pushEventByIdent()`, `InitFunc()`),
 `main/ems.go` (`validateRules()`, `checkFeed()`),
 `main/gen_gdl90.go` (`addSingleSystemErrorf()`, `removeSingleSystemError()`),
-`main/managementinterface.go` (`/getAlerts`, `/alerts`, `/alert/`) and the display's
+`main/managementinterface.go` (`/getAlerts`, `/alerts`, `/alerts/ws`, `/alert`, `/alert/`) and the display's
 `web/RB-01/services/servicealerts.js` and `web/RB-01/plates/js/alerts.js`, under
 DO-178C §12.1.4. Rules and field definitions:
 [`../docs/certification/standards/requirements.md`](../docs/certification/standards/requirements.md).
@@ -408,37 +408,24 @@ two annunciations of the same event, decided in two places. Tracked in `untraced
 types.**
 
 - **Parent:** RB-SYS-ALR-060
-- **Source:** `main/managementinterface.go` `handleAlertsPutRequest()` (`/alert/<n>`);
-  `main/alerts.go` `pushEvent()`; RB-SYS-TRF-030
+- **Source:** `main/managementinterface.go` `handleAlertsPutRequest()` (`/alert/<n>`),
+  `handleAlertPost()` (`POST /alert`); `main/alerts.go` `pushEvent()`; RB-SYS-TRF-030
 - **Verification:** test
 - **Derived:** no
 
-**Open finding — the equipment does not meet this.** `/alert/<n>` takes the event type
-from the request path through `strconv.Atoi` and passes it to `pushEvent()` unchecked, so
-any integer on the network becomes an event type. The lookup that follows is guarded only
-against the upper bound (`len(EventLanguages[…]) > event.Type`), so a **negative** type
-passes the guard and indexes the array out of range:
+**Closed 2026-11-10.** `pushEvent()` raises nothing for a type that is not a row of the
+loaded mapping (`alertTypeDefined()`), or, when the mapping did not load, not below
+`EVENT_TYPE_COUNT`, and returns -1. Every path goes through it: `POST /alert` (which
+also answers 400), the legacy `/alert/<n>`, and the callers inside the daemon. A new
+event type therefore needs only its row in the mapping. Verified by
+`TestUndefinedEventTypeIsNotRaised` (`main/alertsrest_test.go`).
 
-```
-GET /alert/-1   →  panic: runtime error: index out of range [-1]
-```
-
-Confirmed on this tree, with audio playback enabled, by calling `pushEvent` with type
-`-1`. What stops it being a loss of the whole unit today is that the only caller with an
-unchecked type is an HTTP handler, and `net/http` recovers a panic in a handler
-goroutine: the request dies, the daemon lives. That is containment by accident, not by
-design — `pushEvent()` is called from several goroutines that have no such recovery, and
-one `int` is all that separates them.
-
-Two further consequences do not depend on the panic. The event is queued and sent to the
-display *before* the sound lookup, so the bogus type reaches the alert list and stays
-there; and the display repeats the same one-sided bound in JavaScript
-(`alertsMapping[lang].length > alert.Type`), where `rows[-1]` is `undefined` and reading
-`.Sound` from it throws — taking out the rendering of the whole alert list, which is
-FHA-ALR-1 directly. The upper bound is not safe either: it is the length of the
-language's array, and `it-IT` is 82 rows long because the file also holds unrelated
-interface words (RB-HLR-ALR-070), so types 14…81 render an arbitrary word as an alert.
-Tracked in `untraced.txt`.
+The finding as it stood: `/alert/<n>` took the event type from the request path through
+`strconv.Atoi` and passed it to `pushEvent()` unchecked, and the sound lookup was guarded
+only against the upper bound, so `GET /alert/-1` panicked in `pushEvent()`; `net/http`
+recovered it, the bogus type stayed in the list, and the display's one-sided bound in
+JavaScript threw on it and emptied the alert list. That display-side bound is still there,
+and is RB-HLR-ALR-260's to close: the daemon no longer sends it such a type.
 
 ### RB-HLR-ALR-220 — The retained alert list is bounded
 
@@ -446,18 +433,21 @@ Tracked in `untraced.txt`.
 first.**
 
 - **Parent:** none
-- **Source:** `main/alerts.go` `EVENT_MAX_QUEUE`; `web/RB-01/plates/js/alerts.js`
+- **Source:** `main/alerts.go` `EVENT_MAX_QUEUE`, `pushEvent()`; `web/RB-01/plates/js/alerts.js`
   (*"up to MAX which shall be 100 items"*)
 - **Verification:** test
 - **Derived:** yes
 
-Derived: a resource decision with no parent above it. **Open finding — the equipment does
-not meet this.** `EVENT_MAX_QUEUE = 100` is declared, the display's comment says it is
-enforced, and it is not: `pushEvent()` appends and the trim is a `TODO: Remove first
-element`. The list therefore grows for as long as the daemon runs, and `/getAlerts`
-returns all of it on every entry to the Alerts page. With RB-HLR-ALR-210 open, an
-unauthenticated client on the aircraft's own network can grow it as fast as it can send
-requests. Tracked in `untraced.txt`.
+Derived: a resource decision with no parent above it. **Closed 2026-11-11.**
+`pushEvent()` keeps the list in the order raised and, past `EVENT_MAX_QUEUE`, drops the
+oldest alerts, active or not. A dropped alert was announced when it was raised; an update
+of it finds nothing (`POST /alert` answers 404, the callers inside the daemon ignore the
+-1). A dropped Id is not issued again in a burst, see `newEventId()`
+(`TestABurstDoesNotReissueADroppedId`). Verified by `TestRetainedAlertListIsBounded` (`main/alertsrest_test.go`), through
+`POST /alert`, the path an unauthenticated client on the aircraft's network would use.
+
+The finding as it stood: the constant was declared and the display's comment said it was
+enforced, but the trim was a `TODO`, so the list grew for as long as the daemon ran.
 
 ---
 

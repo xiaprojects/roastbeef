@@ -155,10 +155,13 @@ a configuration file or a request that is malformed, out of range or absent.**
 - **Verification:** test
 - **Derived:** no
 
-The alert function is reachable from the aircraft's own network — `/alert/<n>` — and reads
+The alert function is reachable from the aircraft's own network — `/alert/<n>` and
+`POST /alert` — and reads
 a settings file that the settings pages write. Both are inputs the function does not
 control, and it is the mitigation the rest of the FHA depends on, so it is the one
-function where robustness is not a matter of taste. RB-HLR-ALR-210 is the open finding.
+function where robustness is not a matter of taste. RB-HLR-ALR-210 (an undefined
+event type) and RB-HLR-ALR-220 (the unbounded list) were its open findings, closed on
+2026-11-10 and 2026-11-11.
 
 ---
 

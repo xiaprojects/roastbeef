@@ -116,7 +116,7 @@ passes. It leaves any other daemon alone: scratch `HOME`, free port, every SDR s
 | HMI | Real: `web/RB-01` in Chromium, at exactly 1024x600. Every press is a real mouse event after a hit test, so a control under a navigation FAB fails |
 | `stratuxrun` | Real, built from this checkout: `POST /radio/0`, the float bridge, `radioSdrTune` |
 | `rb-vor`, `rb-sdr-radio` | Real: each daemon's own `main()`, bridge client, state machine and DSP |
-| Dongle | Stand-in, `dongle.py`. Refuses a second claim as `usb_claim_interface` does, gives it back if the holder dies, and runs in real time. Radiates a VOR on 109.400 (radial 130) and 113.800 (radial 245) and AM on 118.700, with noise everywhere else |
+| Dongle | Stand-in, `dongle.py`. Refuses a second claim as `usb_claim_interface` does, gives it back if the holder dies, and runs in real time. Radiates a VOR on 109.400 (radial 130) and 113.800 (radial 245), a localizer on 110.300 (DDM +0.0775) and AM on 118.700, with noise everywhere else |
 | Audio player | A script that saves what it is sent |
 
 Because a signal exists only on its own channel, the plate can show the right station
@@ -131,6 +131,7 @@ and radial only if the press reached the receiver and the receiver tuned what wa
 | Radio pressed while the VOR holds it | `rb-sdr-radio` reports status 1, fault bit 2, and `rb-vor` is not disturbed. OFF on the VOR, and the radio takes the dongle by itself at its next retry |
 | VOR picked while the radio holds it | The plate shows NO SIGNAL with that station. `rb-vor` is refused, tries again, and stays up. The radio is not disturbed. When the radio goes INACTIVE, `rb-vor` takes the dongle by itself |
 | `rb-vor` killed and restarted | With a station selected, it comes back on that station with no press. With a station picked while it was down, it comes up on that one. Either way it has read the bridge, and OFF still reaches it |
+| ILS localizer (RB-VOR-IF v2.3) | `rb-vor` runs with `loc.enabled`. A localizer list entry added to the page only while the test runs (`TEST LOC FIXTURE`, 110.300, course 090; the shipped list has none) is picked: the plate shows LOC with that name and frequency, the bar is never drawn while TUNING or ACQUIRING, `locdev` is the 50 % the stand-in radiates (DDM +0.0775, `dongle.LOC_KHZ`), and the bar sits left of the course pointer, which is fly left. A second fixture on 108.900, where only noise is on the air, shows LOC NO SIGNAL and no bar for 12 s. A VOR then clears the localizer display, the localizer brings it back, and OFF parks the bar and frees the dongle |
 | Logs | No error in the HMI, no panic, all three daemons still up |
 
 One known gap: the radio plate says ACTIVE while the radio waits for the dongle. The test

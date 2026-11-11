@@ -8,6 +8,8 @@ The first row of a list is where the north navigation zone sits above 480 px hig
 that zone keeps taking presses after it fades. A press in the middle of the word can
 land 2 px clear of it while the end of the word is underneath, so all four corners of
 the word are hit-tested. On the round panel they must also be on the glass.
+
+The list opens nearest first from the last GPS position.
 """
 
 import json
@@ -79,6 +81,35 @@ def press(d, word):
     return None
 
 
+# Overhead Perugia airport
+NEAR = {"GPSLatitude": 43.0959, "GPSLongitude": 12.5132}
+
+
+def check_nearest_first(d, res, label):
+    """The list opens sorted by distance from the last GPS position."""
+    # The position and the press in one go: the fixture's own feed cannot move it between.
+    # Set on the scope: a partial SituationUpdated breaks the other plates' listeners.
+    d.page.eval("""(() => {
+        const s = angular.element(document.querySelector('%s')).scope();
+        s.lastPosition = {lat: %f, lon: %f};
+        document.querySelector('%s').click();
+    })()""" % (ROOT, NEAR["GPSLatitude"], NEAR["GPSLongitude"], STATUS))
+    d.page.wait("%s.length > 0" % CELLS, timeout=5, label="the list")
+    d.page.pump(0.2)
+    got = d.page.eval("""(() => {
+        const s = angular.element(document.querySelector('[ui-view] table')).scope();
+        const p = {lat: %f, lon: %f};
+        const d = s.vorList.map(e => s.distanceNm(p.lat, p.lon, e.lat, e.lon));
+        const rows = [...document.querySelectorAll('[ui-view] tr[ng-click]')]
+            .map(r => r.querySelector('td').textContent.trim()).filter(t => t);
+        return {rows: rows.slice(0, 3), sorted: d.every((x, i) => i == 0 || d[i - 1] <= x),
+                first: s.vorList[0].name};
+    })()""" % (NEAR["GPSLatitude"], NEAR["GPSLongitude"]))
+    res.check(got["sorted"] and got["rows"][:1] == [got["first"]] and got["first"].startswith("Perugia"),
+              "%-9s the list opens nearest first" % label, got)
+    press(d, "OFF")
+
+
 def main():
     res = Result()
     for width, height in PANELS:
@@ -96,8 +127,10 @@ def main():
             body = press(d, "OFF")
             res.check(body == {"vorfreq": 0}, "%-9s it posts vorfreq 0" % label, repr(body))
             open_list(d)
-            body = press(d, "Alghero")
-            res.check(body == {"vorfreq": 113.8}, "%-9s a station posts its frequency" % label, repr(body))
+            # a name only one row has: Alghero is a TACAN and a VORTAC in the shipped list
+            body = press(d, "Bolsena")
+            res.check(body == {"vorfreq": 114.4}, "%-9s a station posts its frequency" % label, repr(body))
+            check_nearest_first(d, res, label)
             res.check(not d.js_errors(), "%-9s no errors" % label, d.js_errors()[:2])
     print("\n%d/%d checks passed" % (len(res.checks) - len(res.failed), len(res.checks)))
     return 1 if res.failed else 0

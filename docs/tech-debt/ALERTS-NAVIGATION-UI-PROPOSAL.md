@@ -325,6 +325,8 @@ The east and west edge zones stay as next and previous page, so existing habits 
 
 ### 4.2 1280×800: soft bar
 
+Replaced by [top-bottom-bars.md](top-bottom-bars.md): a status bar on top and six soft keys along the bottom, each hideable.
+
 Eight keys in a bar 96 px high along the bottom, always visible. Each hit area is the full
 160×96 cell. The bar reserves its space, so plates reflow to 1280×704 and nothing sits beneath it.
 The bottom edge lets a finger rest on the bezel in turbulence (AC 20-175 §2-10).

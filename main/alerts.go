@@ -50,10 +50,15 @@ const (
 	EVENT_TYPE_TERRAIN_CAUTION            = 17
 	EVENT_TYPE_TERRAIN_WARNING            = 18
 	EVENT_TYPE_TERRAIN_UNAVAILABLE        = 19
+	// The defined types when the mapping did not load: keep it one past the last constant
+	EVENT_TYPE_COUNT = EVENT_TYPE_TERRAIN_UNAVAILABLE + 1
 )
 
 // Maximum events in the list
 const EVENT_MAX_QUEUE = 100
+
+// How far behind the last Id the clock may be and still be a burst, see newEventId()
+const ALERT_ID_BURST_WINDOW = time.Minute
 
 // Resource Parsing
 type EventHolder struct {
@@ -87,6 +92,8 @@ type AlertsStratuxPlugin struct {
 	StratuxPlugin
 	alertsData      []interface{}
 	alertsDataMutex *sync.Mutex
+	// The time the last Id was taken from, after newEventId() walked it
+	lastIdTime time.Time
 }
 
 // Shared instance
@@ -199,16 +206,26 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) int {
 	if event.Timestamp.IsZero() {
 		return alertsInstance.updateEvent(event)
 	}
+	// The type can come from the network, see handleAlertPost(): RB-HLR-ALR-210
+	if !alertTypeDefined(event.Type) {
+		log.Printf("AlertsStratuxPlugin::pushEvent() undefined event type %d discarded", event.Type)
+		return -1
+	}
 	// Queue the Alert
 	alertsInstance.alertsDataMutex.Lock()
 	event.Id = alertsInstance.newEventId(event.Timestamp)
 	event.TimestampEnd = event.Timestamp
 	alertsInstance.alertsData = append(alertsInstance.alertsData, event)
-	// Check for Maximum queue up to EVENT_MAX_QUEUE
-	// TODO: Remove first element
+	// The list is in the order raised: past EVENT_MAX_QUEUE the oldest go, active or not
+	// (RB-HLR-ALR-220). An update of a dropped alert finds nothing and returns -1
+	if count := len(alertsInstance.alertsData); count > EVENT_MAX_QUEUE {
+		copy(alertsInstance.alertsData, alertsInstance.alertsData[count-EVENT_MAX_QUEUE:])
+		alertsInstance.alertsData = alertsInstance.alertsData[:EVENT_MAX_QUEUE]
+	}
 	alertsInstance.alertsDataMutex.Unlock()
 	// Dispatch event on web interface, if any
 	alertUpdate.SendJSON(event)
+	notifyAlertsListChanged()
 	// Play audio locally on RPI, if enabled
 	if globalSettings.Audio_Enabled == true {
 		if len(EventLanguages[ALERT_DEFAULT_LANGUAGE]) > event.Type {
@@ -229,11 +246,25 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) int {
 }
 
 /*
+alertTypeDefined().
+
+	A type is defined if the mapping has a row for it, so a new type needs only its row.
+	Without a mapping alerts are still raised (RB-HLR-ALR-060), up to the last constant
+*/
+func alertTypeDefined(alertType int) bool {
+	count := len(EventLanguages[ALERT_DEFAULT_LANGUAGE])
+	if count == 0 {
+		count = EVENT_TYPE_COUNT
+	}
+	return alertType >= 0 && alertType < count
+}
+
+/*
 alerts.updateEvent().
 
 	Copy Active on the alert with the Id of event and, while it is active, move its end to now
-	The display is not told: every message on the alerts socket is a new alert, with its sound
-	and balloon. It reads the state from /getAlerts and decides by itself if to replay the alarm
+	/alerts is not told: every message on it is a new alert, with its sound and balloon.
+	The display reads the state from /alerts/ws and decides by itself if to replay the alarm
 */
 func (alertsInstance *AlertsStratuxPlugin) updateEvent(event Alert) int {
 	alertsInstance.alertsDataMutex.Lock()
@@ -250,8 +281,13 @@ func (alertsInstance *AlertsStratuxPlugin) updateEvent(event Alert) int {
 			}
 			found.TimestampEnd = now
 		}
+		// Inactive staying inactive changes nothing
+		changed := event.Active || found.Active
 		found.Active = event.Active
 		alertsInstance.alertsData[i] = found
+		if changed {
+			notifyAlertsListChanged()
+		}
 		return found.Id
 	}
 	return -1
@@ -262,12 +298,22 @@ alerts.newEventId().
 
 	The time as HHMMSScc, alone it separates the alerts of a flight which is less than 24 hours
 	An Id already in the list takes the next free centisecond, or one alert could not be updated
+	A burst walks the Ids ahead of the clock, so a new Id starts past the last one: starting
+	from the clock, it could take the Id of an alert the list has dropped (RB-HLR-ALR-220),
+	and a late update of that alert would change this one. The Id is then later than the
+	raise time, which Timestamp keeps. A clock further behind than ALERT_ID_BURST_WINDOW
+	has been stepped back, by the GPS or a new day in a test, and the Id follows it again:
+	a dropped Id can come back only if both happen together
 	Call it with alertsDataMutex held
 */
 func (alertsInstance *AlertsStratuxPlugin) newEventId(t time.Time) int {
+	if behind := alertsInstance.lastIdTime.Sub(t); behind >= 0 && behind < ALERT_ID_BURST_WINDOW {
+		t = alertsInstance.lastIdTime.Add(10 * time.Millisecond)
+	}
 	for {
 		id := t.Hour()*1000000 + t.Minute()*10000 + t.Second()*100 + t.Nanosecond()/10000000
 		if !alertsInstance.hasEventId(id) {
+			alertsInstance.lastIdTime = t
 			return id
 		}
 		t = t.Add(10 * time.Millisecond)

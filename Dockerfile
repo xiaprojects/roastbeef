@@ -11,6 +11,7 @@ RUN apt-get update \
   && apt-get -y install gcc \
   && apt-get -y install ncurses-dev \
   && apt-get -y install wget \
+  && apt-get -y install pkgconf \
   && apt-get -y install ca-certificates \
   && apt-get -y install libusb-1.0-0-dev \
   && apt-get -y install python3 \

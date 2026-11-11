@@ -51,14 +51,26 @@ RADIO_ON = 'document.querySelector(\'%s a[ng-click="enableRadio(radio,true)"]\')
 RADIO_OFF = 'document.querySelector(\'%s a[ng-click="enableRadio(radio,false)"]\')' % BOX
 RADIO_SWAP = 'document.querySelector(\'%s a[ng-click="switchFreq(radio)"]\')' % BOX
 DUAL_ON = 'document.querySelector(\'%s a[ng-click="dualFreq(radio,true)"]\')' % BOX
-DUAL_OFF = 'document.querySelector(\'%s a[ng-click="dualFreq(radio,false)"]\')' % BOX
+# DUAL ON and DUAL RX both turn it off: the one on screen
+DUAL_OFF = """[...document.querySelectorAll('%s a[ng-click="dualFreq(radio,false)"]')]
+    .find(e => e.offsetParent !== null)""" % BOX
 DIGITS = "document.querySelector('%s .Radio').textContent.trim()" % BOX
 LEVELS = 'document.querySelector(\'%s a[ng-click="toggleLevels(radio)"]\')' % BOX
-# The active's mark is in the heading, the standby's beside its digits
-RX_ON = """[...document.querySelectorAll('%s .radioHeard')]
-    .filter(e => e.offsetParent !== null)
-    .map(e => e.closest('.panel-heading') ? 'active' : 'standby')""" % BOX
-DUAL_CLASS = "%s.className" % DUAL_OFF
+# Which channel is heard, as shown: RX in the heading for the active, DUAL RX for the standby
+RX_ON = """(() => {
+    const shown = e => e.offsetParent !== null;
+    const out = [];
+    if ([...document.querySelectorAll('%s .panel-heading span.label')]
+            .some(e => shown(e) && e.textContent.trim() == 'RX')) out.push('active');
+    if ([...document.querySelectorAll('%s a[ng-click^="dualFreq"]')]
+            .some(e => shown(e) && /RX/.test(e.textContent))) out.push('standby');
+    return out;
+})()""" % (BOX, BOX)
+# The DUAL button shown, as its colour and its words: "label-info DUAL ON"
+DUAL_SHOWN = """(() => {
+    const e = %s;
+    return e ? (e.className.match(/label-[a-z]+/) || [''])[0] + ' ' + e.textContent.replace(/\\s+/g, ' ').trim() : null;
+})()""" % DUAL_OFF
 # Scroll a slider to the middle and say where one of its cells is
 CELL = """(() => {
     const e = document.querySelector('%s input[aria-label=%%s]');
@@ -172,8 +184,7 @@ def check_dual_on(b, res):
     tuned = {hz // 1000 for hz in b.tuned("radio")[-10:]}
     res.check(tuned == {ACTIVE_KHZ, STANDBY_KHZ}, "between those two channels", sorted(tuned))
     res.check(b.page.eval(DIGITS) == ACTIVE, "the digits stay on the active", b.page.eval(DIGITS))
-    res.check("label-success" in b.page.eval(DUAL_CLASS), "DUAL ON, without a warning",
-              b.page.eval(DUAL_CLASS))
+    res.check(b.page.eval(DUAL_SHOWN) == "label-info DUAL ON", "DUAL ON", b.page.eval(DUAL_SHOWN))
     state = b.bridge()
     res.check(state.get("sdrradiostatus") == 3 and state.get("sdrradiosnr") == 0,
               "a hop reaches nobody: status 3, no reading", state.get("sdrradiostatus"))
@@ -190,6 +201,8 @@ def check_transmissions(b, res):
     res.check(b.key("sdrradiostatus", 4), "the status is receiving", b.bridge().get("sdrradiostatus"))
     res.check(b.until(lambda: b.page.eval(RX_ON) == ["standby"], RELEASE_S),
               "RX is on the standby", b.page.eval(RX_ON))
+    res.check(b.page.eval(DUAL_SHOWN) == "label-success DUAL RX", "the button says DUAL RX",
+              b.page.eval(DUAL_SHOWN))
     res.check(b.page.eval(DIGITS) == ACTIVE, "the active digits do not move", b.page.eval(DIGITS))
     b.page.pump(1.5)
 
@@ -201,6 +214,8 @@ def check_transmissions(b, res):
               % (time.monotonic() - keyed), b.bridge().get("sdrradiofreqheard"))
     res.check(b.until(lambda: b.page.eval(RX_ON) == ["active"], RELEASE_S),
               "RX moves to the active", b.page.eval(RX_ON))
+    res.check(b.page.eval(DUAL_SHOWN) == "label-info DUAL ON", "and the button back to DUAL ON",
+              b.page.eval(DUAL_SHOWN))
     b.page.pump(1.5)
 
     print("\n-- both stop")
@@ -241,13 +256,14 @@ def check_warning(b, res):
     res.check(b.until(lambda: b.key("sdrradiosecondaryactive", 0), RETUNE_S),
               "OPEN stops the watching: every look would find a signal",
               b.bridge().get("sdrradiosecondaryactive"))
-    res.check(b.until(lambda: "label-warning" in b.page.eval(DUAL_CLASS), RELEASE_S),
-              "and DUAL says so", b.page.eval(DUAL_CLASS))
+    # DUAL no longer warns: it stays DUAL ON
+    res.check(b.page.eval(DUAL_SHOWN) == "label-info DUAL ON", "and DUAL stays ON",
+              b.page.eval(DUAL_SHOWN))
     b.slide("Squelch", SQUELCH_DB, 10, 1)
     res.check(b.until(lambda: b.key("sdrradiosecondaryactive", STANDBY_KHZ), RETUNE_S),
               "a squelch brings it back", b.bridge().get("sdrradiosecondaryactive"))
-    res.check(b.until(lambda: "label-success" in b.page.eval(DUAL_CLASS), RELEASE_S),
-              "and DUAL with it", b.page.eval(DUAL_CLASS))
+    res.check(b.page.eval(DUAL_SHOWN) == "label-info DUAL ON", "and DUAL with it",
+              b.page.eval(DUAL_SHOWN))
 
 
 def check_restart(b, res):

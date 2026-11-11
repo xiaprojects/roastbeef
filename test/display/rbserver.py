@@ -57,7 +57,11 @@ SIM_PANEL = os.path.join(HERE, "simpanel.html")
 # errors a test is actually looking for.
 WS_PATHS = ("/situation", "/traffic", "/status", "/autopilot", "/alerts",
             "/radar", "/ems", "/keypad", "/radioStatus", "/bridge/float/ws",
-            "/gdl90", "/weather")
+            "/gdl90", "/weather", "/alerts/ws", "/playback/ws")
+
+# Sockets that carry what a REST path answers: on connect, and again after
+# set_rest() changes it, as the daemon does when the list changes
+WS_MIRRORS = {"/alerts/ws": "/getAlerts", "/playback/ws": "/playback"}
 
 DEFAULT_SITUATION = {
     "GPSLastFixSinceMidnightUTC": 43200, "GPSLatitude": 45.0, "GPSLongitude": 10.0,
@@ -468,6 +472,8 @@ class FakeStratux:
                 self._send(sock, target)
         elif path == "/status":
             self._send(sock, self.status)
+        elif path in WS_MIRRORS:
+            self._send(sock, self._rest_body(WS_MIRRORS[path]))
 
         # Hold the connection open; the UI reconnects if we return.
         try:
@@ -493,6 +499,19 @@ class FakeStratux:
         for sock in sockets:
             if self._send(sock, payload):
                 delivered += 1
+        return delivered
+
+    def _rest_body(self, path):
+        body = self.rest.get(path)
+        return body() if callable(body) else body
+
+    def set_rest(self, path, body):
+        """Change a REST answer and push it to the socket mirroring it, if any."""
+        self.rest[path] = body
+        delivered = 0
+        for ws_path, rest_path in WS_MIRRORS.items():
+            if rest_path == path:
+                delivered += self.push(ws_path, self._rest_body(path))
         return delivered
 
     def push_situation(self, **overrides):

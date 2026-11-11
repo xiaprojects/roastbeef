@@ -32,6 +32,8 @@ var app = angular.module('bobby', ['ui.router', 'mobile-angular-ui', 'appControl
 
 var URL_EMS_SETTINGS_GET = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/ems.json";
 var URL_ADDONS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/addons";
+// The soft key menu returns to the root level by itself after this time without a press
+const SOFTKEY_MENU_SECONDS = 10;
 
 var appControllers = angular.module('appControllers', []);
 
@@ -245,7 +247,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $controllerProvider) {
 	$urlRouterProvider.otherwise('/');
 });
 
-app.controller('MainCtrl', function ($scope, $http, $state) {
+app.controller('MainCtrl', function ($scope, $http, $state, $timeout) {
 	if (true) {
 		if (($scope.keypad === undefined) || ($scope.keypad === null)) {
 			$scope.keypad = new KeypadService($scope, $http, $state);
@@ -309,6 +311,12 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 	}
 	$scope.fabClick = (direction, item, browserEvent) => {
 		console.log(direction + " " + item + " " + browserEvent);
+		// The north and south FABs only show a bar. No key event: on a page outside the
+		// navigation list the keypad service answers an unknown key by going home
+		if (direction == "N" || direction == "S") {
+			$scope.toggleBar(direction == "N" ? "top" : "bottom");
+			return;
+		}
 		const proxy = new KeyboardEvent("key", { key: "DOM_CLICK_" + direction });
 
 
@@ -320,15 +328,6 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 			window.localStorage.setItem('uiSidebarRight', $scope.Ui.get('uiSidebarRight') == 'false' || $scope.Ui.get('uiSidebarRight') == false);
 		}
 
-
-		if (direction == "N") {
-			$scope.uiSidebarTop = !$scope.uiSidebarTop;
-			window.localStorage.setItem("uiSidebarTop", $scope.uiSidebarTop);
-		}
-		if (direction == "S") {
-			$scope.uiSidebarBottom = !$scope.uiSidebarBottom;
-			window.localStorage.setItem("uiSidebarBottom", $scope.uiSidebarBottom);
-		}
 
 		dispatchEvent(proxy);
 		if(localDisplayGetFlag("Display_Audio_Enabled") == "true" && false) {
@@ -354,8 +353,143 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 
 		*/
 
+	// Top and bottom bars, docs/tech-debt/top-bottom-bars.md
+	// They and the north and south FABs need the height: never on the 480x480 round
+	// panel nor at 800x480, even if a bar was left shown in localStorage
+	$scope.barsAllowed = window.innerHeight > 480;
 	$scope.uiSidebarTop = localDisplayGetFlag("uiSidebarTop")  == "true";
 	$scope.uiSidebarBottom = localDisplayGetFlag("uiSidebarBottom")  == "true";
+
+	/**
+	 * toggleBar: show or hide a bar, for the FABs, the hide keys and the menu
+	 * @param {*} bar - "top" or "bottom"
+	 */
+	$scope.toggleBar = function (bar) {
+		const name = bar == "top" ? "uiSidebarTop" : "uiSidebarBottom";
+		$scope[name] = !$scope[name];
+		window.localStorage.setItem(name, $scope[name]);
+	};
+
+	/**
+	 * togglePanel: open or close a side panel and remember it
+	 * @param {*} name - "uiSidebarLeft" or "uiSidebarRight"
+	 */
+	$scope.togglePanel = function (name) {
+		$scope.Ui.toggle(name);
+		window.localStorage.setItem(name, $scope.Ui.isActive(name));
+	};
+
+	// Full screen only: the pilot who pressed it keeps the key they pressed
+	function toggleFullScreen() {
+		const request = document.fullscreenElement ? document.exitFullscreen() : document.body.requestFullscreen();
+		if (request !== undefined && request.catch !== undefined) {
+			request.catch(function (error) {
+				console.log("Full screen: " + error);
+			});
+		}
+		window.scrollTo(0, 1);
+	}
+	document.addEventListener("fullscreenchange", function () {
+		$scope.$applyAsync();
+	});
+
+	// The soft keys, one row per slot and level: a key opens `href` or runs `action`
+	// The five page keys of the root level, set by xiaprojects 2026-11-11 (decision D1)
+	$scope.softKeys = [
+		{ level: "root", slot: 1, label: "SIXPACK", href: "#/sixpack" },
+		{ level: "root", slot: 2, label: "3D", href: "#/synthview" },
+		{ level: "root", slot: 3, label: "MAP", href: "#/map" },
+		{ level: "root", slot: 4, label: "ENGINE", href: "#/ems" },
+		{ level: "root", slot: 5, label: "SWITCH", href: "#/switchboard" },
+		{ level: "root", slot: 6, label: "MENU", action: "menu" },
+		{ level: "menu", slot: 1, label: "LEFT PNL", action: "leftPanel" },
+		{ level: "menu", slot: 2, label: "RIGHT PNL", action: "rightPanel" },
+		{ level: "menu", slot: 3, label: "TOP BAR", action: "topBar" },
+		{ level: "menu", slot: 4, label: "FULL SCR", action: "fullScreen" },
+		{ level: "menu", slot: 5, label: "ALERTS", href: "#/alerts" },
+		{ level: "menu", slot: 6, label: "BACK", action: "back" },
+	];
+	// What an action does, and when its lamp is lit if it has one
+	const softKeyActions = {
+		menu: { run: function () { $scope.softKeyLevel = "menu"; } },
+		back: { run: function () { $scope.softKeyLevel = "root"; } },
+		leftPanel: {
+			run: function () { $scope.togglePanel("uiSidebarLeft"); },
+			lit: function () { return $scope.Ui.isActive("uiSidebarLeft"); }
+		},
+		rightPanel: {
+			run: function () { $scope.togglePanel("uiSidebarRight"); },
+			lit: function () { return $scope.Ui.isActive("uiSidebarRight"); }
+		},
+		topBar: {
+			run: function () { $scope.toggleBar("top"); },
+			lit: function () { return $scope.uiSidebarTop; }
+		},
+		fullScreen: {
+			run: toggleFullScreen,
+			lit: function () { return !!document.fullscreenElement; }
+		},
+	};
+	$scope.softKeyLevel = "root";
+	// The keys of each level in slot order, for the bottom bar to draw
+	$scope.softKeyRows = {};
+	$scope.softKeys.forEach(function (key) {
+		($scope.softKeyRows[key.level] = $scope.softKeyRows[key.level] || []).push(key);
+	});
+	angular.forEach($scope.softKeyRows, function (row) {
+		row.sort(function (a, b) { return a.slot - b.slot; });
+	});
+	var softKeyMenuTimer = null;
+
+	$scope.softKeyHasLamp = function (key) {
+		return key.href !== undefined || softKeyActions[key.action].lit !== undefined;
+	};
+
+	// A page key is lit while its page is shown, an action while what it toggles is on
+	$scope.softKeyLit = function (key) {
+		if (key.href !== undefined) {
+			// A side panel adds ?uiSidebarLeft=true to the hash
+			return window.location.hash.split("?")[0] == key.href;
+		}
+		const lit = softKeyActions[key.action].lit;
+		return lit !== undefined && lit() == true;
+	};
+
+	function runSoftKey(key) {
+		if (key.href !== undefined) {
+			document.location = key.href;
+			// A page key in the menu returns to the root level
+			$scope.softKeyLevel = "root";
+		}
+		else {
+			softKeyActions[key.action].run();
+		}
+		// The menu returns to the root level by itself, counted from the last press
+		$timeout.cancel(softKeyMenuTimer);
+		if ($scope.softKeyLevel == "menu") {
+			softKeyMenuTimer = $timeout(function () {
+				$scope.softKeyLevel = "root";
+			}, SOFTKEY_MENU_SECONDS * 1000);
+		}
+	}
+
+	/**
+	 * softkey event: the one entry point of every soft key press, touch or keypad
+	 * dispatchEvent(new CustomEvent("softkey", { detail: { slot: 3 } }))
+	 * It runs the key in that slot at the current level, also with the bar hidden
+	 */
+	addEventListener("softkey", function (event) {
+		const slot = event.detail !== undefined && event.detail !== null ? event.detail.slot : undefined;
+		// From a touch this comes inside a digest, from a keypad it will not
+		$scope.$evalAsync(function () {
+			const key = $scope.softKeys.find(function (row) {
+				return row.level == $scope.softKeyLevel && row.slot == slot;
+			});
+			if (key !== undefined) {
+				runSoftKey(key);
+			}
+		});
+	});
 
 	window.setTimeout(() => {
 		if (localDisplayGetFlag("uiSidebarLeft") == "true") {
@@ -368,13 +502,6 @@ app.controller('MainCtrl', function ($scope, $http, $state) {
 
 	$scope.fabEastEnabled = true;
 	$scope.fabWestEnabled = true;
-	$scope.fabNorthEnabled = false;
-	$scope.fabSouthEnabled = false;
-
-	if (window.innerHeight > 480) {
-		$scope.fabNorthEnabled = true;
-		$scope.fabSouthEnabled = true;
-	}
 
 	$scope.rightpages = [
 	];

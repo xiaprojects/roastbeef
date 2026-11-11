@@ -8,9 +8,10 @@ bottom edge with a ring around the screen; on a bigger panel a rounded rectangle
 3/4 of the height.
 
 The socket carries only new alerts. AlertsService reads the state of each alert from
-/getAlerts, on every page: the list follows it, and an alert going from inactive to
-active replays the alarm if it had been inactive for ALERT_REPLAY_CLEAR_SECONDS. The
-daemon only reports Active, so these checks drive it by changing /getAlerts.
+/alerts/ws, the whole list on connect and on every change, on every page: the list
+follows it, and an alert going from inactive to active replays the alarm if it had
+been inactive for ALERT_REPLAY_CLEAR_SECONDS. The daemon only reports Active, so
+these checks drive it by sending a new list, as /getAlerts would answer it.
 
 Not covered, because it does not exist yet: the status that has to outlive the
 balloon until the condition ends (docs/tech-debt/ALERTS-NAVIGATION-UI-PROPOSAL.md),
@@ -100,8 +101,8 @@ def listed(id_, kind, title, active=False, seconds=0):
 
 
 def poll(d):
-    """Long enough for AlertsService to read /getAlerts again."""
-    d.page.pump(2.3)
+    """Long enough for AlertsService to take the list the daemon just sent."""
+    d.page.pump(0.5)
 
 
 def inside_circle(x, y, centre, radius):
@@ -236,7 +237,7 @@ def check_alert_list(res, label, width, height):
         d.shot("alerts_list_%s" % label)
 
         d.page.eval("document.querySelector('[ui-view] .alertsline').dataset.kept = '1'")
-        d.srv.rest["/getAlerts"] = [older, oneshot, closed, dict(oil, ActiveSeconds=80)]
+        d.srv.set_rest("/getAlerts", [older, oneshot, closed, dict(oil, ActiveSeconds=80)])
         poll(d)
         rows = d.page.eval(ROWS)
         res.check(rows[0]["status"] == "ACTIVE 01:20",
@@ -244,8 +245,8 @@ def check_alert_list(res, label, width, height):
         res.check(rows[0]["kept"], "%s the same Id keeps its row" % label, rows[0])
 
         fresh = listed(19100000, TIMER, "Timer 2 fired")
-        d.srv.rest["/getAlerts"] = [older, oneshot, closed,
-                                    dict(oil, Active=False, ActiveSeconds=82), fresh]
+        d.srv.set_rest("/getAlerts", [older, oneshot, closed,
+                                      dict(oil, Active=False, ActiveSeconds=82), fresh])
         poll(d)
         rows = d.page.eval(ROWS)
         res.check(rows[0]["title"] == "Timer 2 fired" and rows[1]["title"] == "OILAVG red 125",
@@ -264,7 +265,7 @@ def check_alert_replay(res, label, width, height):
 
     with Display(window="%d,%d" % (width, height)) as d:
         def report(active):
-            d.srv.rest["/getAlerts"] = [dict(oil, Active=active)]
+            d.srv.set_rest("/getAlerts", [dict(oil, Active=active)])
             poll(d)
 
         d.srv.rest["/getAlerts"] = [oil]
@@ -293,17 +294,19 @@ def check_alert_replay(res, label, width, height):
                   "%s and the sound of the alert" % label, src)
         res.check(d.hash() == before, "%s a replay does not change the page" % label, d.hash())
         clear(d)
+        # The daemon sends the list again as the end of an active alert moves
+        d.srv.set_rest("/getAlerts", [dict(oil, ActiveSeconds=12)])
         poll(d)
         res.check(balloon(d) is None, "%s staying active replays nothing" % label)
 
-        d.srv.rest["/getAlerts"] = [oil, listed(15000500, EMS_RED, "CHTMAX red 225", active=True)]
+        d.srv.set_rest("/getAlerts", [oil, listed(15000500, EMS_RED, "CHTMAX red 225", active=True)])
         poll(d)
         res.check(balloon(d) is None, "%s a new Id is left to the socket" % label)
 
-        # Robustness: a daemon error answers {}, and an older daemon sends no Id
-        d.srv.rest["/getAlerts"] = {}
+        # Robustness: a list that is not one, and an older daemon sends no Id
+        d.srv.set_rest("/getAlerts", {})
         poll(d)
-        d.srv.rest["/getAlerts"] = [{"Type": EMS_RED, "Title": "Old", "Timestamp": "2026-11-04T09:00:00Z"}]
+        d.srv.set_rest("/getAlerts", [{"Type": EMS_RED, "Title": "Old", "Timestamp": "2026-11-04T09:00:00Z"}])
         poll(d)
         res.check(balloon(d) is None, "%s an answer it cannot follow replays nothing" % label)
 

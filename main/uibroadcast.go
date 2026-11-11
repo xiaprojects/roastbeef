@@ -51,6 +51,13 @@ func (u *uibroadcaster) AddSocket(sock *websocket.Conn) {
 	u.sockets_mu.Unlock()
 }
 
+// A closed socket counts until the next message fails to reach it
+func (u *uibroadcaster) HasSockets() bool {
+	u.sockets_mu.Lock()
+	defer u.sockets_mu.Unlock()
+	return len(u.sockets) > 0
+}
+
 func (u *uibroadcaster) writer() {
 	for {
 		msg := <-u.messages
