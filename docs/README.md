@@ -67,6 +67,14 @@ re-verify before acting.
 - **[tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md)** — spoken terrain alerts:
   the requirements (TER-nnn), what step 1 in `main/terrain.go` builds and leaves out, and how
   it was checked against recorded flights and the real daemon.
+- **[tech-debt/glideslope-reception.md](tech-debt/glideslope-reception.md)** — the glideslope
+  is announced and not built: what exists (localizer, GPS slope marks on the HSI) and what the
+  plate needs once `rb-vor` delivers it.
+- **[tech-debt/voice-switchboard-trim-flaps.md](tech-debt/voice-switchboard-trim-flaps.md)** —
+  trim and flaps by voice through the switchboard: what must confirm and limit the action, and
+  what is missing in rbvoice and here.
+- **[tech-debt/shipped-defaults.md](tech-debt/shipped-defaults.md)** — defaults in the code that
+  disagree with "every feature shipped enabled" in the 2.4.1 image.
 
 ## Certification
 
