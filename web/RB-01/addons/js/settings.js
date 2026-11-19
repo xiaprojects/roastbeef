@@ -120,6 +120,12 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
 
     console.log("Controller " + name);
 
+    // The keypad is off on this page until the pilot leaves it: a USB keyboard types into the
+    // fields, never a knob or swipe key (services/servicekeypad.js, keypadDisable)
+    if (typeof $scope.keypadDisable === "function") {
+        $scope.keypadDisable($scope);
+    }
+
     // One section per file: $scope[section] is the object being edited (null
     // until loaded) and state[section] tracks it against the last copy known
     // to match the file, to flag pending edits.

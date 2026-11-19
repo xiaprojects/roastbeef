@@ -79,6 +79,12 @@ var RADIO_KNOB_MHZ = 0;
 var RADIO_KNOB_KHZ = 1;
 var RADIO_KNOB_VOLUME = 2;
 var RADIO_KNOB_SQUELCH = 3;
+// SWITCH FREQ.: an action, TAP swaps active and standby. Between kHz and the sliders
+var RADIO_KNOB_SWAP = 4;
+// The stops inside a radio, in the knob's order
+var RADIO_KNOB_ORDER = [RADIO_KNOB_MHZ, RADIO_KNOB_KHZ, RADIO_KNOB_SWAP, RADIO_KNOB_VOLUME, RADIO_KNOB_SQUELCH];
+// scrollItemCounter on a playback row, whose row is then scrollItemRight
+var RADIO_KNOB_PLAYBACK = -1;
 
 
 // create our controller function with all necessary logic
@@ -168,7 +174,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.radioReceivedNewStatus = function(status) {
         var radioList = $scope.radioList;
         for(var index=0;index<status.length;index++){
-            var template = { "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "classVolume": "", "classSquelch": "", "name": "", "active": "000.000", "standby": "000.000", "dual": false, "index": 0, "levelHeldUntil": {}, "levelTimer": {} };
+            var template = { "className": "keypadSelectedNo", "classStandByLeft": "btn-default", "classStandByRight": "btn-default", "classVolume": "", "classSquelch": "", "classSwap": "label-warning", "name": "", "active": "000.000", "standby": "000.000", "dual": false, "index": 0, "levelHeldUntil": {}, "levelTimer": {} };
             if(index<radioList.length){
                 template = radioList[index];
             } else {
@@ -190,13 +196,8 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             template.standbyLabel = $scope.radioFindFrequency(template.standby);
             radioFollowLevels(template);
         }
-        // Auto select the first Radio only the first time
-        if(radioList.length>0 && $scope.radioList.length==0){
-            radioList[0].className = "keypadSelectedYes";
-            radioList[0].classStandByLeft= "btn-danger";
-        }
         $scope.radioList = radioList;
-        $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
+        radioShowKnob();
     }
     $scope.radioRefresh();
 
@@ -401,54 +402,45 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.$apply(); // trigger any needed refreshing of data
     }
 
-    // Key pad management
+    // Key pad management. The routed copy of the plate owns the knob; the sidebar holds a
+    // second copy that must not be retuned from another page, nor move with this one (D3 of
+    // docs/tech-debt/keypad-page-navigation.md). index.html calls init on the sidebar copy
+    $scope.isSidebar = false;
+    $scope.init = function (params) {
+        $scope.isSidebar = !!(params && params.isSidebar);
+    };
+
     function keypadEventListener(event) {
         if (($scope === undefined) || ($scope === null)) {
             removeEventListener("keypad", keypadEventListener);
             return; // we are getting called once after clicking away from the status page
         }
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
-        }
-        else
-        {
-            // user is changing screen
+        if ($scope.isSidebar || $state.current.name != "radio") {
             return;
         }
-        radioKnobStayOnAStop();
-        switch (event.key) {
-
-            case KEYPAD_MAPPING_PREV:
-
-                $scope.radioSelectPrev();
-                break;
-
-            case KEYPAD_MAPPING_TAP:
-                $scope.radioSelectTap();
-                break;
-            case KEYPAD_MAPPING_NEXT:
-                $scope.radioSelectNext();
-                break;
+        if ($scope.keypadKnobTimerRemovePopup !== undefined) {
+            return; // user is changing screen
         }
-    }
-
-    $scope.playlistSelectByIndex = function (index) {
-        for (var x = 0; x < $scope.replayList.length; x++) {
-            if (x == index) {
-                $scope.replayList[x].className = "keypadSelectedYes";
+        var turn = function () {
+            radioKnobStayOnAStop();
+            switch (event.key) {
+                case KEYPAD_MAPPING_PREV:
+                    radioKnobMove(-1);
+                    break;
+                case KEYPAD_MAPPING_TAP:
+                    $scope.radioSelectTap();
+                    break;
+                case KEYPAD_MAPPING_NEXT:
+                    radioKnobMove(1);
+                    break;
             }
-            else {
-                $scope.replayList[x].className = "keypadSelectedNo";
-            }
+        };
+        if ($scope.$root.$$phase) {
+            turn();
+        } else {
+            $scope.$apply(turn);
         }
-        var off = "btn-default";
-        for (var x = 0; x < $scope.radioList.length; x++) {
-                $scope.radioList[x].className = "keypadSelectedNo";
-                $scope.radioList[x].classStandByLeft = off;
-                $scope.radioList[x].classStandByRight = off;
-                $scope.radioList[x].classVolume = "";
-                $scope.radioList[x].classSquelch = "";
-        }
-        $scope.$apply();
+        radioShowKnobStop();
     }
 
     $scope.radioSelectByIndex = function (index, right, selected) {
@@ -466,39 +458,77 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.radioList[x].classStandByRight = (here == RADIO_KNOB_KHZ) ? on : off;
             $scope.radioList[x].classVolume = (here == RADIO_KNOB_VOLUME) ? on : "";
             $scope.radioList[x].classSquelch = (here == RADIO_KNOB_SQUELCH) ? on : "";
+            $scope.radioList[x].classSwap = (here == RADIO_KNOB_SWAP) ? "label-danger" : "label-warning";
         }
+    }
+
+    // Draw the knob's place from the state: the radio stops and the playback rows
+    function radioShowKnob() {
+        var row = ($scope.scrollItemCounter == RADIO_KNOB_PLAYBACK) ? $scope.scrollItemRight : -1;
+        $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
         for (var x = 0; x < $scope.replayList.length; x++) {
-                $scope.replayList[x].className = "keypadSelectedNo";
+            $scope.replayList[x].className = (x == row) ? "keypadSelectedYes" : "keypadSelectedNo";
         }
     }
 
     $scope.radioSelectTap = function () {
-        var availableItems = $scope.radioList.length;
-        if ($scope.scrollItemCounter < availableItems) {
-        $scope.scrollItemSelected = !$scope.scrollItemSelected;
-        $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
-        } else {
-            var playBackItemSelected = $scope.scrollItemCounter - availableItems + $scope.scrollItemRight;
-            $scope.playAudio($scope.replayList[playBackItemSelected].Path);
+        if ($scope.scrollItemCounter == RADIO_KNOB_PLAYBACK) {
+            var playback = $scope.replayList[$scope.scrollItemRight];
+            if (playback !== undefined) {
+                $scope.playAudio(playback.Path);
+            }
+            return;
         }
-        $scope.$apply();
+        if ($scope.scrollItemRight == RADIO_KNOB_SWAP && $scope.scrollItemCounter >= 0 && $scope.scrollItemCounter < $scope.radioList.length) {
+            $scope.switchFreq($scope.radioList[$scope.scrollItemCounter]);
+            return;
+        }
+        if ($scope.scrollItemCounter < $scope.radioList.length) {
+            $scope.scrollItemSelected = !$scope.scrollItemSelected;
+            radioShowKnob();
+        }
     }
 
-    // The last place the knob stops at inside an item: a playback row has two, as ever. A
-    // hidden slider is not a stop: the knob would change a level nobody can see.
+    // The last place the knob stops at inside a radio. A hidden slider is not a stop: the
+    // knob would change a level nobody can see.
     function radioLastKnobStop(radio) {
         return (radio !== undefined && radio.sdr && $rootScope.radioLevelsShown[radio.index])
-            ? RADIO_KNOB_SQUELCH : RADIO_KNOB_KHZ;
+            ? RADIO_KNOB_SQUELCH : RADIO_KNOB_SWAP;
     }
 
-    // For both copies of the plate: only one of them saw the button
-    function radioKnobStayOnAStop() {
-        var last = radioLastKnobStop($scope.radioList[$scope.scrollItemCounter]);
-        if ($scope.scrollItemRight > last) {
-            $scope.scrollItemRight = last;
-            $scope.scrollItemSelected = false;
-            $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
+    // Every place the knob stops at, in reading order: each radio's MHz, kHz and, with its
+    // sliders shown, volume and squelch; then each playback row, newest first
+    function radioKnobStops() {
+        var stops = [];
+        for (var x = 0; x < $scope.radioList.length; x++) {
+            var last = RADIO_KNOB_ORDER.indexOf(radioLastKnobStop($scope.radioList[x]));
+            for (var n = 0; n <= last; n++) {
+                stops.push({ counter: x, right: RADIO_KNOB_ORDER[n] });
+            }
         }
+        for (var row = 0; row < $scope.replayList.length; row++) {
+            stops.push({ counter: RADIO_KNOB_PLAYBACK, right: row });
+        }
+        return stops;
+    }
+
+    // Keep the knob on a stop that still exists: the sliders were hidden, the list got shorter
+    function radioKnobStayOnAStop() {
+        var stops = radioKnobStops();
+        var here = stops.findIndex(function (stop) {
+            return stop.counter == $scope.scrollItemCounter && stop.right == $scope.scrollItemRight;
+        });
+        if (here >= 0 || stops.length == 0) {
+            return;
+        }
+        var stop = stops[stops.length - 1];
+        if ($scope.scrollItemCounter >= 0 && $scope.scrollItemCounter < $scope.radioList.length) {
+            stop = { counter: $scope.scrollItemCounter, right: radioLastKnobStop($scope.radioList[$scope.scrollItemCounter]) };
+        }
+        $scope.scrollItemCounter = stop.counter;
+        $scope.scrollItemRight = stop.right;
+        $scope.scrollItemSelected = false;
+        radioShowKnob();
     }
 
     function radioKnobTurn(direction) {
@@ -513,91 +543,48 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             default:
                 $scope.increaseFreq(radio, ($scope.scrollItemRight == RADIO_KNOB_KHZ ? 5 : 1000) * direction);
         }
-        $scope.$apply();
     }
 
-    // The sliders sit below the fold on the small panels. By the routed plate, as the closed
-    // sidebar holds a second copy with the same ids
+    // In edit mode the knob changes the value; otherwise it moves one stop, and stops at both
+    // ends of the list (D2): a knob turned too far must not change anything
+    function radioKnobMove(direction) {
+        if ($scope.scrollItemSelected && $scope.scrollItemCounter >= 0 && $scope.scrollItemCounter < $scope.radioList.length) {
+            radioKnobTurn(direction);
+            return;
+        }
+        var stops = radioKnobStops();
+        if (stops.length == 0) {
+            return;
+        }
+        var here = stops.findIndex(function (stop) {
+            return stop.counter == $scope.scrollItemCounter && stop.right == $scope.scrollItemRight;
+        });
+        var next = Math.min(stops.length - 1, Math.max(0, here + direction));
+        $scope.scrollItemCounter = stops[next].counter;
+        $scope.scrollItemRight = stops[next].right;
+        $scope.scrollItemSelected = false;
+        radioShowKnob();
+    }
+
+    // The stop the knob is on, on the glass. Centred when it is near or past an edge: on the
+    // round panel a stop at the edge of the scroll area is cut by the circle. By the routed
+    // plate, as the closed sidebar holds a second copy with the same ids
     function radioShowKnobStop() {
-        if ($scope.scrollItemRight >= RADIO_KNOB_VOLUME) {
-            var row = document.querySelector("[ui-view] #radio_level_" + $scope.scrollItemCounter + "_" + $scope.scrollItemRight);
-            if (row !== null) {
-                row.scrollIntoView({ behavior: "instant", block: "center", inline: "nearest" });
-            }
+        var id = "radio_stop_" + $scope.scrollItemCounter + "_" + $scope.scrollItemRight;
+        if ($scope.scrollItemCounter == RADIO_KNOB_PLAYBACK) {
+            id = "radio_playback_" + $scope.scrollItemRight;
+        } else if ($scope.scrollItemRight == RADIO_KNOB_VOLUME || $scope.scrollItemRight == RADIO_KNOB_SQUELCH) {
+            id = "radio_level_" + $scope.scrollItemCounter + "_" + $scope.scrollItemRight;
         }
-    }
-
-    $scope.radioSelectNext = function () {
-        if ($scope.scrollItemSelected) {
-            radioKnobTurn(1);
+        var stop = document.querySelector("[ui-view] #" + id);
+        if (stop === null) {
+            return;
         }
-        else {
-            if ($scope.scrollItemRight >= radioLastKnobStop($scope.radioList[$scope.scrollItemCounter])) {
-                $scope.scrollItemCounter++;
-                $scope.scrollItemRight = 0;
-            }
-            else {
-                $scope.scrollItemRight++;
-            }
-            var availableItems = $scope.radioList.length;
-
-
-            if ($scope.scrollItemCounter >= availableItems) {
-                var playBackItemSelected = ($scope.scrollItemCounter - availableItems)*2 + $scope.scrollItemRight;
-                if(playBackItemSelected >= $scope.replayList.length){
-
-                $scope.scrollItemCounter = availableItems - 1;
-                $scope.scrollItemRight = 1;
-                const proxy = new KeyboardEvent("keypad", { key: "to" });
-                dispatchEvent(proxy);
-                
-                } else {
-                    $scope.playlistSelectByIndex(playBackItemSelected);
-                }
-            }
-            else {
-                $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
-                radioShowKnobStop();
-                $scope.$apply();
-            }
+        var box = stop.getBoundingClientRect();
+        var margin = window.innerHeight * 0.2;
+        if (box.top < margin || box.bottom > window.innerHeight - margin) {
+            stop.scrollIntoView({ behavior: "instant", block: "center", inline: "nearest" });
         }
-
-
-    }
-
-    $scope.radioSelectPrev = function () {
-        if ($scope.scrollItemSelected) {
-            radioKnobTurn(-1);
-        }
-        else {
-            if ($scope.scrollItemRight < 1) {
-                $scope.scrollItemCounter--;
-                $scope.scrollItemRight = radioLastKnobStop($scope.radioList[$scope.scrollItemCounter]);
-            }
-            else {
-                $scope.scrollItemRight--;
-            }
-            var availableItems = $scope.radioList.length;
-            if ($scope.scrollItemCounter >= availableItems) {
-                var playBackItemSelected = ($scope.scrollItemCounter - availableItems)*2 + $scope.scrollItemRight;
-                if(playBackItemSelected < $scope.replayList.length) {
-                    $scope.playlistSelectByIndex(playBackItemSelected);
-                }
-            } else {
-            if ($scope.scrollItemCounter < 0) {
-                $scope.scrollItemCounter = 0;
-                $scope.scrollItemRight = 0;
-                const proxy = new KeyboardEvent("keypad", { key: "to" });
-                dispatchEvent(proxy);
-            }
-            else {
-                $scope.radioSelectByIndex($scope.scrollItemCounter, $scope.scrollItemRight, $scope.scrollItemSelected);
-                radioShowKnobStop();
-                $scope.$apply();
-            }
-            }
-        }
-
     }
 
     // Display Frequency Name
@@ -935,12 +922,9 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
             p.className = "keypadSelectedNo";
             listParsed.push(p);
         }
-        var availableItems = $scope.radioList.length;
-        if ($scope.scrollItemCounter >= availableItems) {
-            var playBackItemSelected = ($scope.scrollItemCounter - availableItems)*2 + $scope.scrollItemRight;
-            if(playBackItemSelected < listParsed.length) {
-                listParsed[playBackItemSelected].className = "keypadSelectedYes";
-            }
+        if ($scope.scrollItemCounter == RADIO_KNOB_PLAYBACK) {
+            $scope.scrollItemRight = Math.min($scope.scrollItemRight, listParsed.length - 1);
+            listParsed[$scope.scrollItemRight].className = "keypadSelectedYes";
         }
 
         $scope.replayList = listParsed;
@@ -988,6 +972,7 @@ function RadioCtrl($rootScope, $scope, $state, $http, $interval) {
       
     // Per controller and not in onExit: the sidebar has its own copy of the plate
     $scope.$on('$destroy', function () {
+        removeEventListener("keypad", keypadEventListener);
         clearTimeout(playbackReconnect);
         if (playbackSocket !== null) {
             var socket = playbackSocket;

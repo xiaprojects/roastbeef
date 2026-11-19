@@ -129,14 +129,26 @@ function SixPackInstrumentGmetergauge($rootScope, $scope, $state, $http, $interv
 
   };
 
+  // Reset Max-Min: the daemon starts them again from the G now
+  $scope.gmeterReset = () => {
+    $http.post(URL_GMETER_RESET).then(function (response) {
+      // do nothing
+    }, function (response) {
+      // do nothing
+    });
+  };
+
   $scope.fabClick = (direction, item, browserEvent) => {
     if (direction == "C") {
-      // Reset Max-Min
-      $http.post(URL_GMETER_RESET).then(function (response) {
-        // do nothing
-      }, function (response) {
-        // do nothing
-      });
+      $scope.gmeterReset();
+    }
+  };
+
+  // The knob: TAP resets Max-Min, as the centre touch zone does. PREV and NEXT have nothing to
+  // change here (docs/tech-debt/keypad-page-navigation.md 3.4, a direct page)
+  $scope.knob = (key) => {
+    if (key == KEYPAD_MAPPING_TAP) {
+      $scope.gmeterReset();
     }
   };
 
@@ -299,14 +311,15 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "pitchOrigin": "50% 0%",
     "pitchTop": "50%",
     "standalone" : true,
+    "overlay": false,
     "chevrons": "",
     "fail": "",
     "slipSkid": "0cqmin",
     "slipSkidValid": false
   };
   // Slip/skid. The bar travels one of its own widths at full scale, and full
-  // scale is 10 degrees - the sign and the travel of the shared AHRS renderer
-  // (web/plates/js/ahrs.js), so this ball and the synthetic view read alike.
+  // scale is 10 degrees - the sign and the travel of the legacy Stratux AHRS
+  // renderer (web/plates/js/ahrs.js), so this ball and the synthetic view read alike.
   const SLIPSKID_FULL_SCALE = 10;   // degrees
   const SLIPSKID_BAR_WIDTH = 10.8;  // cqmin, the width of the roll pointer base
 
@@ -507,6 +520,8 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
   if($scope.$parent.hasOwnProperty("$parent") 
     && $scope.$parent.$parent.hasOwnProperty("instruments")) {
     $scope.Attitude.standalone = false;
+    // Transparent marks-only mode over the synthetic view (host entry: overlay: true)
+    $scope.Attitude.overlay = $scope.instrument?.overlay === true;
   }
 
   $scope.updateSituation = (situation) => {
@@ -555,11 +570,14 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
   };
 
   $scope.updateSituation = (situation) => {
-    const altitude1013 = situation.BaroPressureAltitude;
-    if($scope.BaroPressureAltitude == altitude1013){
+    // A new QNH or AUTO redraws too: on the ground the baro altitude does not change, and the
+    // needle and the AUTO label would wait for a climb
+    const drawn = situation.BaroPressureAltitude + "|" + situation.QNH + "|" + situation.AutoQNH;
+    if($scope.altimeterDrawn == drawn){
       return;
     }
-    $scope.BaroPressureAltitude = altitude1013;
+    $scope.altimeterDrawn = drawn;
+    $scope.BaroPressureAltitude = situation.BaroPressureAltitude;
     $scope.Altimeter.AutoQNH = situation.AutoQNH;
     $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude+27*(situation.QNH-1013.25));
     $scope.Altimeter.GPSAltitudeMSL = parseInt(situation.GPSAltitudeMSL);
@@ -569,23 +587,48 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
 
   };
 
+  // The pilot's QNH, one hPa a step; it holds until AUTO again
+  $scope.qnhStep = (direction) => {
+    $scope.Altimeter.QNH += direction;
+    $scope.Altimeter.AutoQNH = false;
+    const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {QNH:$scope.Altimeter.QNH,AutoQNH:false} });
+    dispatchEvent(proxy);
+  };
+
+  // AUTO: services/servicesituation.js derives the QNH from the GPS while level
+  $scope.qnhAuto = () => {
+    const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {AutoQNH:true} });
+    dispatchEvent(proxy);
+  };
+
   $scope.fabClick = (direction, item, browserEvent) => {
     console.log(direction + " " + item + " " + browserEvent);
 
     if (direction == "NC") {
-      $scope.Altimeter.QNH++;
-      const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {QNH:$scope.Altimeter.QNH,AutoQNH:false} });
-      dispatchEvent(proxy);
+      $scope.qnhStep(1);
     }
     if (direction == "SC") {
-      $scope.Altimeter.QNH--;
-      const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {QNH:$scope.Altimeter.QNH,AutoQNH:false} });
-      dispatchEvent(proxy);
+      $scope.qnhStep(-1);
     }
     if (direction == "C") {
-      const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {AutoQNH:true} });
-      dispatchEvent(proxy);
-    }    
+      $scope.qnhAuto();
+    }
+  };
+
+  // The knob, the same three actions: PREV -1 hPa, NEXT +1 hPa, TAP AUTO
+  // (docs/tech-debt/keypad-page-navigation.md 3.4, a direct page)
+  $scope.knob = (key) => {
+    switch (key) {
+      case KEYPAD_MAPPING_PREV:
+        $scope.qnhStep(-1);
+        break;
+      case KEYPAD_MAPPING_NEXT:
+        $scope.qnhStep(1);
+        break;
+      case KEYPAD_MAPPING_TAP:
+        $scope.qnhAuto();
+        break;
+    }
   };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);
@@ -675,6 +718,14 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
       }
     }
   };
+
+  // The knob: TAP cycles the heading source, as the centre touch zone does. No heading bug
+  // exists to turn, so PREV and NEXT stay inert (docs/tech-debt/keypad-page-navigation.md 3.4)
+  $scope.knob = (key) => {
+    if (key == KEYPAD_MAPPING_TAP) {
+      $scope.fabClick("C");
+    }
+  };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);
   }   
@@ -750,6 +801,11 @@ function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
       // user is changing screen
       return;
     }
+    // A plate with something to operate defines $scope.knob(key); the others leave the keys
+    // inert. Only the routed plate gets here: the copy inside the sixpack fails the check above
+    if (typeof $scope.knob === "function") {
+      $scope.$apply(() => $scope.knob(event.key));
+    }
   }
 
   $scope.situation = {};
@@ -788,6 +844,9 @@ function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
 
   addEventListener("keypad", keypadEventListener);
   addEventListener("SituationUpdated", situationUpdateEventListener);
+  $scope.$on("$destroy", function () {
+    removeEventListener("keypad", keypadEventListener);
+  });
 
   // Inject route on the parent if any
 

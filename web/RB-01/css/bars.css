@@ -5,7 +5,7 @@
 
 :root {
   /* Tune a real panel here: 48 px and 72 px at 800 px high, 40 px and 56 px at 600 */
-  --rb-bar-top: clamp(40px, 6vh, 52px);
+  --rb-bar-top: clamp(40px, 4vh, 52px);
   --rb-bar-bottom: clamp(56px, 9vh, 80px);
   /* The hide key at the right end of each bar, outside the six key grid */
   --rb-bar-hide: 56px;
@@ -173,6 +173,7 @@
 .rb-softkey {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-width: 0;
@@ -191,11 +192,26 @@
   border-left: 0;
 }
 
-.rb-softkey-label {
-  min-width: 0;
+.rb-softkey-label,
+.rb-softkey-value {
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* The reading under the label, ETA or timer: tabular digits so it does not shake as it counts */
+.rb-softkey-value {
+  margin-top: 0.2em;
+  color: var(--rb-bar-label);
+  font-size: 0.8em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* A slot with no key keeps its place in the grid and does nothing */
+.rb-bar a.rb-softkey.rb-softkey-empty {
+  cursor: default;
+  background: transparent;
 }
 
 /* The lamp is a line on the top edge of the key: green while its page is shown or what it toggles is on */

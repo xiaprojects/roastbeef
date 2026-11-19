@@ -47,9 +47,9 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     $state.get(name).onExit = function () {
         console.log("onExit" + name);
         removeEventListener("EMSUpdated", emsUpdated);
-        removeEventListener("keypad", keypadEventListener);
         removeEventListener("SituationUpdated", situationUpdateEventListener);
         removeEventListener("StatusUpdated", statusUpdateEventListener);
+        removeEventListener("BridgeUpdated", bridgeUpdatedEventListener);
     };
 
     console.log("Controller " + name);
@@ -76,7 +76,8 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         "EMS":{ "section": 0, "row": 8 },
         "Cloud":{ "section": 1, "row": 8 },
         "GPS_satellites_locked":{ "section": 1, "row": 11 },
-        "RADIO":{ "section": 1, "row": 10 }
+        "RADIO":{ "section": 1, "row": 10 },
+        "CHECKLIST":{ "section": 0, "row": 11 }
     };
 
     // Tiles fed by the EMS map, same rule as the gear lights in emsUpdated: the key
@@ -148,19 +149,9 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
      *  Keypad Management
      */
 
-    function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller != "AircraftCtrl") {
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
-        }
-
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
-        }
-        else {
-            // user is changing screen
-            return;
-        }
-    }
+    // The knob makes the home page a launcher: each tile that opens a page is a stop, TAP
+    // opens it as a touch does, left column then right (docs/tech-debt/keypad-page-navigation.md)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, ["home", "aircraft"]);
 
     $scope.situation = {};
     $scope.updateSituation = (situation) => {
@@ -292,8 +283,83 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         return 1;
     }
 
+    /*****************************************************
+     *  Checklist tile: completed/total, green when every check is completed.
+     *  The list comes from the checklist REST, then CHECKLIST_{SECTION}_{INDEX}
+     *  keys on the bridge (posted by checklist.js) keep it live.
+     */
+    $scope.checklistStatus = []; // [section][index] = value string, see CHECKLIST_BRIDGE_VALUES
+
+    $scope.refreshChecklistTile = function () {
+        var total = 0;
+        var completed = 0;
+        $scope.checklistStatus.forEach(section => {
+            section.forEach(value => {
+                total++;
+                if (CHECKLIST_COMPLETED_VALUES.indexOf(value) >= 0) {
+                    completed++;
+                }
+            });
+        });
+        const key = "CHECKLIST";
+        const item = $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row];
+        const prevValue = item.value;
+        const prevColor = item.color;
+        if (total == 0) {
+            item.value = "TODO";
+            item.color = "#ff7c00";
+        } else {
+            item.value = completed + "/" + total;
+            item.color = (completed == total) ? "#007c00" : "#ff7c00";
+        }
+        return (prevValue != item.value || prevColor != item.color) ? 1 : 0;
+    }
+
+    $scope.applyChecklistBridge = function (bridge) {
+        var requiredRefresh = 0;
+        Object.keys(bridge).forEach(key => {
+            const parts = key.split("_");
+            if (parts.length != 3 || parts[0] != "CHECKLIST") {
+                return;
+            }
+            const section = $scope.checklistStatus[parseInt(parts[1])];
+            const index = parseInt(parts[2]);
+            if (section === undefined || index < 0 || index >= section.length) {
+                return; // not in the loaded checklist
+            }
+            const value = CHECKLIST_BRIDGE_VALUES[Math.round(bridge[key])];
+            if (value !== undefined && section[index] != value) {
+                section[index] = value;
+                requiredRefresh++;
+            }
+        });
+        if (requiredRefresh > 0) {
+            requiredRefresh = $scope.refreshChecklistTile();
+        }
+        return requiredRefresh;
+    }
+
+    function bridgeUpdatedEventListener(event) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != "AircraftCtrl") {
+            removeEventListener("BridgeUpdated", bridgeUpdatedEventListener);
+            return; // we are getting called once after clicking away from the status page
+        }
+        if ($scope.applyChecklistBridge(event.detail) > 0) {
+            $scope.$apply();
+        }
+    }
+
+    $http.get(URL_CHECKLIST_GET).then(function (response) {
+        var list = angular.fromJson(response.data);
+        if (!Array.isArray(list)) {
+            return;
+        }
+        $scope.checklistStatus = list.map(group => (group && Array.isArray(group.items)) ? group.items.map(check => check.value) : []);
+        $scope.refreshChecklistTile();
+    });
+
 	addEventListener("EMSUpdated", emsUpdated);
-    addEventListener("keypad", keypadEventListener);
+    addEventListener("BridgeUpdated", bridgeUpdatedEventListener);
     addEventListener("SituationUpdated", situationUpdateEventListener);
     addEventListener("StatusUpdated", statusUpdateEventListener);
 
@@ -307,13 +373,12 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $http.get(URL_RADIO_GET).then(function (response) {
         var db = angular.fromJson(response.data);
-        // [] or null when no radio is configured
-        if (Array.isArray(db) == false || db.length == 0) {
-            return;
-        }
+        // [] or null when no radio is configured: the first active radio, --- when none is active
+        const active = Array.isArray(db) ? db.find(r => r && r.Enabled) : undefined;
         const key = "RADIO";
-        $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].value = db[0].Name;
-        $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row].color = db[0].Enabled ? "#007c00" : "#7c7c7c";
+        const item = $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row];
+        item.value = active ? (active.Name || "---") : "---";
+        item.color = active ? "#007c00" : "#7c7c7c";
     });
 
     $http.get(URL_OTA_REMOTE_GET).then(function (response) {

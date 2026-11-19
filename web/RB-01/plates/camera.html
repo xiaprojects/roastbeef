@@ -1,7 +1,7 @@
 <div ui-content-for="title">Camera</div>
-<div class="panel-group col-sm-12 {{scrollItemCounter==$index?'keypadSelectedYes':'keypadSelectedNo'}}" ng-repeat="camera in cameras">
+<div class="panel-group col-sm-12" ng-repeat="camera in cameras">
     <div class="panel panel-default ">
-        <div class="panel-heading" ng-click="cameraEdit($index,camera)" id="{{'camera_' + $index}}">
+        <div class="panel-heading" ng-click="cameraEdit($index,camera)" id="{{'camera_' + $index}}" data-keypad="tap" data-keypad-name="{{camera.Name}} {{camera.Edit ? 'SAVE' : 'EDIT'}}">
             <span class="panel_label">{{camera.Name}}</span>
             <span ng-show="camera.Edit==false" class="label label-info pull-right">Edit</span>
             <span ng-show="camera.Edit==true" class="label label-danger pull-right">Save</span>
@@ -10,7 +10,7 @@
             <div class="row">
                 <form name="CameraEdit" novalidate ng-show="camera.Edit">
                     <input class="col-xs-6" type="text" ng-model="camera.Name" placeholder="{{'Camera '+$index}}" />
-                    <select class="col-xs-6 custom-select" ng-model="camera.Type">
+                    <select class="col-xs-6 custom-select" ng-model="camera.Type" data-keypad="adjust" data-keypad-name="{{camera.Name}} TYPE">
                         <option value="0" ng-selected="camera.Type==0">Image</option>
                         <option value="1" ng-selected="camera.Type==1">Website</option>
                     </select>
@@ -30,17 +30,14 @@
     </div>
 </div>
 
-<!--{{scrollItemCounter==$index?'keypadSelectedYes':'keypadSelectedNo'}}
-{{scrollItemCounter>=cameras.length'keypadSelectedYes':'keypadSelectedNo'}}
--->
 <div>&nbsp;</div>
-<div class="panel-group col-sm-12 {{scrollItemCounter>=cameras.length?'keypadSelectedYes':'keypadSelectedNo'}}" id="camera_add">
+<div class="panel-group col-sm-12" id="camera_add">
     <div class="panel panel-default ">
         <div class="panel-heading">Camera</div>
         <div class="panel-body text-center">
             <div class="panel-group col-sm-12">
-                <a ng-click="cameraCreate('img/logo-transparent.png')" class="btn btn-primary btn-block">Create new Online Camera</a>
-                <a ng-click="cameraCreate('http://192.168.10.1:8081/0/stream')" class="btn btn-primary btn-block">Create new Local USB Motion Camera</a>
+                <a ng-click="cameraCreate('img/logo-transparent.png')" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="CREATE ONLINE">Create new Online Camera</a>
+                <a ng-click="cameraCreate('http://192.168.10.1:8081/0/stream')" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="CREATE USB">Create new Local USB Motion Camera</a>
             </div>
         </div>
     </div>

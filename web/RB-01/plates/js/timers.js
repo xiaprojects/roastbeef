@@ -30,6 +30,8 @@
  * Please join Discord community
  *
     timers.js: Timers interface
+    The list comes from TimersService (/timers/ws) on every change, the seconds are
+    counted here: the 1 s tick only redraws, it never asks the daemon
 */
 angular.module('appControllers').controller('TimersCtrl', TimersCtrl); // get the main module controllers set
 TimersCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
@@ -55,22 +57,19 @@ function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
     */
 
     $scope.timers = [];
-    $scope.timerTemplate = { "className": "keypadSelectedNo", "name": "", "text": "00:00", timerId: 0, CountDown: 0, Epoch: 0, Status: false, triggered: "", Fired: false };
+    $scope.timerTemplate = { "name": "", "text": "00:00", timerId: 0, CountDown: 0, Epoch: 0, Status: false, triggered: "", Fired: false };
 
     $scope.timerCreate = function () {
+        // The answer is the new list, /timers/ws brings it too
         $http.put(URL_TIMERS_SET).then(function (response) {
-            // do nothing
-            console.log(response);
-            $scope.refreshTimers();
+            $scope.applyTimers(angular.fromJson(response.data));
         }, function (response) {
             // do nothing
         });
     }
     $scope.dropTimer = function (timerId) {
         $http.delete(URL_TIMERS_DEL + "/" + timerId).then(function (response) {
-            // do nothing
-            console.log(response);
-            $scope.refreshTimers();
+            $scope.applyTimers(angular.fromJson(response.data));
         }, function (response) {
             // do nothing
         });
@@ -175,122 +174,10 @@ function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
         A
     */
 
-    /**
-     * Currently Selected Timer by the Keypad
-     * -2 exit to prev screen
-     * -1 focus on clock
-     * 0->N-1 Timer selected
-     * N focus on Add new Timer
-     * N+1 exit to next screen
-     */
-    $scope.scrollItemCounter = 0;
-    // Keypad Navigation
-    $scope.timerSelectNext = function () {
-        for (var timerId = 0; timerId < $scope.timers.length; timerId++) {
-            if ($scope.timers[timerId].className == "keypadSelectedYes") {
-                $scope.timers[timerId].className = "keypadSelectedNo";
-                if (timerId < $scope.timers.length - 1) {
-                    $scope.timers[timerId + 1].className = "keypadSelectedYes";
-                    for (var timerId2 = timerId + 2; timerId2 < $scope.timers.length; timerId2++) {
-                        $scope.timers[timerId].className = "keypadSelectedNo";
-                    }
-                    document.getElementById("timer_" + (timerId + 1)).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-                    $scope.$apply();
-                    $scope.scrollItemCounter = 0;
-                    return;
-                }
-            }
-        }
-        $scope.scrollItemCounter++;
-
-        document.getElementById("timer_create").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-        $scope.$apply();
-
-        if ($scope.scrollItemCounter > 2) {
-            const proxy = new KeyboardEvent("keypad", { key: "to" });
-            dispatchEvent(proxy);
-        }
-
-    }
-
-    // Keypad Navigation
-    $scope.timerSelectPrev = function () {
-        if ($scope.scrollItemCounter > 0 && $scope.timers.length > 0) {
-            $scope.timers[$scope.timers.length - 1].className = "keypadSelectedYes";
-            $scope.$apply();
-            $scope.scrollItemCounter = 0;
-            return;
-        }
-        for (var timerId = 1; timerId < $scope.timers.length; timerId++) {
-            if ($scope.timers[timerId].className == "keypadSelectedYes") {
-                $scope.timers[timerId].className = "keypadSelectedNo";
-                if (timerId < 1) {
-                    $scope.timers[$scope.timers.length - 1].className == "keypadSelectedYes";
-                }
-                else {
-                    $scope.timers[timerId - 1].className = "keypadSelectedYes";
-                    for (var timerId2 = timerId; timerId2 < $scope.timers.length; timerId2++) {
-                        $scope.timers[timerId].className = "keypadSelectedNo";
-                    }
-                    document.getElementById("timer_" + (timerId - 1)).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-                    $scope.$apply();
-                    $scope.scrollItemCounter = 0;
-                    return;
-                }
-            }
-        }
-        // if we are here, scroll to Clock
-        document.getElementById("timer_clock").scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
-        $scope.scrollItemCounter--;
-        if ($scope.scrollItemCounter < -1) {
-            const proxy = new KeyboardEvent("keypad", { key: "from" });
-            dispatchEvent(proxy);
-        }
-    }
-
-    // Bridge from servicekeypad
-    addEventListener("keypad", keypadEventListener);
-    // Keypad Listener with supported keys
-    function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller != 'TimersCtrl') {
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
-        }
-        if (($scope.ticker === undefined) || ($scope.ticker === null)) {
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
-        }
-
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
-        }
-        else {
-            // user is changing screen
-            return;
-        }
-
-        switch (event.key) {
-            case KEYPAD_MAPPING_PREV:
-                $scope.timerSelectPrev();
-                break;
-            case KEYPAD_MAPPING_TAP:
-                if ($scope.scrollItemCounter == 0) {
-                    for (var timerId = 0; timerId < $scope.timers.length; timerId++) {
-                        if ($scope.timers[timerId].className == "keypadSelectedYes") {
-                            $scope.timerStart($scope.timers[timerId]);
-                        }
-                    }
-                }
-                if ($scope.scrollItemCounter > 0) {
-                    $scope.timerCreate();
-                }
-
-                break;
-            case KEYPAD_MAPPING_NEXT:
-                $scope.timerSelectNext();
-                break;
-        }
-
-    }
+    // The knob: per timer START/STOP, mode, -5, +5 and last DELETE, so that NEXT, NEXT, TAP
+    // by habit cannot reach it; then "Create new timer". TAP is a touch on the button. Hidden
+    // and disabled buttons are not stops (docs/tech-debt/keypad-page-navigation.md 3.4)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, "timers");
 
     /**
      * Timers Business logic
@@ -382,43 +269,61 @@ function TimersCtrl($rootScope, $scope, $state, $http, $interval) {
         */
         clearInterval($scope.ticker);
         delete $scope.ticker;
-        removeEventListener("keypad", keypadEventListener);
     };
 
     /**
-     * Restore Timers from RPI
+     * applyTimers: show the list of the daemon
+     * @param {*} status - The list as GET /timers and /timers/ws send it; anything else is ignored
+     */
+    $scope.applyTimers = function (status) {
+        if (!Array.isArray(status)) {
+            return;
+        }
+        for (var timerId = 0; timerId < status.length; timerId++) {
+            if ($scope.timers.length <= timerId) {
+                $scope.timers.push(JSON.parse(JSON.stringify($scope.timerTemplate)));
+            }
+            $scope.timers[timerId].name = "Timer " + (timerId + 1);
+            $scope.timers[timerId].timerId = timerId;
+            if (status[timerId].hasOwnProperty("CountDown")) $scope.timers[timerId].CountDown = status[timerId].CountDown;
+            if (status[timerId].hasOwnProperty("Epoch")) $scope.timers[timerId].Epoch = status[timerId].Epoch;
+            if (status[timerId].hasOwnProperty("Status")) $scope.timers[timerId].Status = status[timerId].Status;
+            if (status[timerId].hasOwnProperty("Fired")) $scope.timers[timerId].Fired = status[timerId].Fired;
+            // A reset on another display clears the red here too
+            $scope.timers[timerId].triggered = $scope.timers[timerId].Fired ? "timerTriggered" : "";
+            $scope.timerElaborate(timerId);
+        }
+        $scope.timers.splice(status.length);
+    }
+
+    /**
+     * Restore Timers from RPI, for a plate opened before the socket brought the list
      */
     $scope.refreshTimers = function () {
         $http.get(URL_TIMERS_GET).then(function (response) {
-            var status = angular.fromJson(response.data);
-            for (var timerId = 0; timerId < status.length; timerId++) {
-                if ($scope.timers.length <= timerId) {
-                    $scope.timers.push(JSON.parse(JSON.stringify($scope.timerTemplate)));
-                }
-                if (timerId == 0) {
-                    $scope.timers[timerId].className = "keypadSelectedYes";
-                }
-
-                $scope.timers[timerId].name = "Timer " + (timerId + 1);
-                $scope.timers[timerId].timerId = timerId;
-                if (status[timerId].hasOwnProperty("CountDown")) $scope.timers[timerId].CountDown = status[timerId].CountDown;
-                if (status[timerId].hasOwnProperty("Epoch")) $scope.timers[timerId].Epoch = status[timerId].Epoch;
-                if (status[timerId].hasOwnProperty("Status")) $scope.timers[timerId].Status = status[timerId].Status;
-                if (status[timerId].hasOwnProperty("Fired")) $scope.timers[timerId].Fired = status[timerId].Fired;
-                $scope.timerElaborate(timerId);
-            }
-            for (var timerId = $scope.timers.length - 1; timerId >= status.length; timerId--) {
-                delete $scope.timers[timerId];
-                $scope.timers.splice(timerId, 1);
-            }
-            $scope.scrollItemCounter = 0;
+            $scope.applyTimers(angular.fromJson(response.data));
         });
-        if (($scope.ticker === undefined) || ($scope.ticker === null)) {
-
-            $scope.ticker = window.setInterval($scope.tick, 1000);
-        }
     }
+
+    // Every change of the daemon: another display, the voice, a countdown that fired
+    function timersUpdated(event) {
+        $scope.$evalAsync(function () {
+            $scope.applyTimers(event.detail);
+        });
+    }
+    addEventListener("TimersUpdated", timersUpdated);
+    $scope.$on('$destroy', function () {
+        removeEventListener("TimersUpdated", timersUpdated);
+    });
+
     // Timer init
     $scope.updateClock();
-    $scope.refreshTimers();
+    if (Array.isArray($scope.timersList)) {
+        $scope.applyTimers($scope.timersList);
+    } else {
+        $scope.refreshTimers();
+    }
+    if (($scope.ticker === undefined) || ($scope.ticker === null)) {
+        $scope.ticker = window.setInterval($scope.tick, 1000);
+    }
 }

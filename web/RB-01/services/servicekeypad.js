@@ -86,10 +86,61 @@ function KeypadService($scope, $http, $state) {
     });
 
 
+    // A key typed into a field is text, not a keypad key (F2). A slider, a check box and a
+    // button take no text: the knob keeps its keys there
+    const KEYPAD_NOT_TEXT_INPUTS = ["range", "checkbox", "radio", "button", "submit", "reset"];
+    function keypadIsTextEntry(target) {
+        if (target === undefined || target === null || target.tagName === undefined) {
+            return false;
+        }
+        if (target.isContentEditable) {
+            return true;
+        }
+        switch (target.tagName) {
+            case "TEXTAREA":
+            case "SELECT":
+                return true;
+            case "INPUT":
+                return KEYPAD_NOT_TEXT_INPUTS.indexOf(String(target.type).toLowerCase()) < 0;
+        }
+        return false;
+    }
+
+    // A page made for typing (the settings addon) turns the keypad off while it is on screen
+    // (docs/tech-debt/keypad-page-navigation.md, F10). No key from Chromium or from the Pi
+    // reaches the keypad: no knob, no swipe, no direct key, no hold. Every key keeps its
+    // browser meaning. Touch, including the navigation FABs, still works and is the way out.
+    // The keypad comes back when that page's scope is destroyed, when the pilot leaves it
+    var keypadDisabledBy = null;
+    $scope.keypadDisable = function (pageScope) {
+        keypadDisabledBy = pageScope;
+        $scope.lastKey = null;
+        pageScope.$on("$destroy", function () {
+            if (keypadDisabledBy === pageScope) {
+                keypadDisabledBy = null;
+            }
+        });
+    };
+    function keypadIsDisabled() {
+        return keypadDisabledBy !== null;
+    }
+
+    // A key the keypad uses does only that: no page scroll on an arrow, no click on Enter (F3).
+    // Every other key keeps its browser meaning
+    function keypadIsMapped(key) {
+        return directKeyHref(key) !== null || keyToFunction(key) !== undefined;
+    }
+
     // Driver to match the Key HOLD and Key Press
     function fromKeyboardDownToKeypad(event) {
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
+        if (keypadIsDisabled() || keypadIsTextEntry(event.target)) {
+            return;
+        }
+        if (keypadIsMapped(event.key)) {
+            event.preventDefault();
+        }
         if (event.repeat == true) {
             if ($scope.lastKey != event.key) {
                 $scope.lastKey = event.key;
@@ -106,6 +157,12 @@ function KeypadService($scope, $http, $state) {
     function fromKeyboardUpToKeypad(event) {
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
+        if (keypadIsDisabled() || keypadIsTextEntry(event.target)) {
+            return;
+        }
+        if (keypadIsMapped(event.key)) {
+            event.preventDefault();
+        }
         console.log(event);
         var elapsed = (new Date()) - $scope.lastKeyTime;
         console.log(elapsed);
@@ -134,7 +191,7 @@ function KeypadService($scope, $http, $state) {
             $scope.lastKeyTime = 0;
             window.removeEventListener("keyup", fromKeyboardUpToKeypad);
             window.addEventListener("keyup", fromKeyboardUpToKeypad);
-            window.removeEventListener("keyup", fromKeyboardDownToKeypad);
+            window.removeEventListener("keydown", fromKeyboardDownToKeypad);
             window.addEventListener("keydown", fromKeyboardDownToKeypad);
 
         }
@@ -166,7 +223,10 @@ function KeypadService($scope, $http, $state) {
             {
                 const proxy = new CustomEvent("voice", { detail: k });
                 dispatchEvent(proxy);
-            }            
+            }
+            if (keypadIsDisabled()) {
+                return; // a page made for typing has the keypad off (F10)
+            }
             if(k.hasOwnProperty("target") && k.target !="" && localDisplayGetFlag("displayName")!=false)
             {
                 if(k.target!=localDisplayGetFlag("displayName")){
@@ -219,127 +279,93 @@ function KeypadService($scope, $http, $state) {
 
 
 
+    // The table from key name to function, built again when the settings object is replaced
+    // (the settings addon assigns a new one after a save). A list missing from keypad.json
+    // maps nothing rather than throwing on every key
+    var keypadFunctionsFor = null;
+    var keypadFunctions = {};
     function keyToFunction(key) {
-        // create a cache
-        if ($scope.keypadSettings.hasOwnProperty("cacheFunctions")) {
-
-        }
-        else {
-            var cacheFunctions = {};
-            const functionList = [
-                KEYPAD_MAPPING_PREV,
-                KEYPAD_MAPPING_TAP,
-                KEYPAD_MAPPING_NEXT,
-                SwipeLeft,
-                SwipeRight];
-            functionList.forEach(fun => {
-                const list = $scope.keypadSettings[fun];
-                list.forEach(element => {
-                    cacheFunctions[element] = fun;
-                });
-
+        if (keypadFunctionsFor !== $scope.keypadSettings) {
+            keypadFunctionsFor = $scope.keypadSettings;
+            keypadFunctions = {};
+            [KEYPAD_MAPPING_PREV, KEYPAD_MAPPING_TAP, KEYPAD_MAPPING_NEXT, SwipeLeft, SwipeRight].forEach(fun => {
+                const list = ($scope.keypadSettings || {})[fun];
+                if (Array.isArray(list)) {
+                    list.forEach(element => {
+                        keypadFunctions[element] = fun;
+                    });
+                }
             });
-
-            $scope.keypadSettings["cacheFunctions"] = cacheFunctions;
         }
-        return $scope.keypadSettings.cacheFunctions[key];
+        return keypadFunctions.hasOwnProperty(key) ? keypadFunctions[key] : undefined;
     }
 
+    // The page a direct key opens, the one for this display's shape first; null if none
+    function directKeyHref(key) {
+        const settings = $scope.keypadSettings || {};
+        const generic = settings.directKey || {};
+        if (!generic.hasOwnProperty(key)) {
+            return null;
+        }
+        const shaped = settings["directKey" + whichKeywordIsForThisDisplay()];
+        if (shaped !== undefined && shaped.hasOwnProperty(key) && shaped[key].hasOwnProperty("href") && shaped[key].href.length > 0) {
+            return shaped[key].href;
+        }
+        if (generic[key].hasOwnProperty("href") && generic[key].href.length > 0) {
+            return generic[key].href;
+        }
+        return null;
+    }
 
+    function keypadSwipe(f) {
+        const list = $scope.keypadSettingsNavigation;
+        if (!Array.isArray(list) || list.length == 0) {
+            return;
+        }
+        const indexOf = list.indexOf(document.location.hash.split("?")[0]);
+        var nextIndex = 0; // outside the list a swipe starts it from the first page
+        if (indexOf >= 0) {
+            if (f == SwipeLeft) {
+                nextIndex = indexOf > 0 ? indexOf - 1 : list.length - 1;
+            } else {
+                nextIndex = indexOf < list.length - 1 ? indexOf + 1 : 0;
+            }
+        }
+        if (nextIndex != indexOf) {
+            console.log("Swipe direct to:" + list[nextIndex]);
+            document.location = list[nextIndex];
+        }
+    }
+
+    // Who owns a key, first match wins (docs/tech-debt/keypad-page-navigation.md 3.5):
+    // 1. an alert popup on screen: TAP acknowledges (ALERTS-NAVIGATION-UI-PROPOSAL.md 4.4, not built,
+    //    its hook goes here); 2. a direct key opens its page; 3. a swipe walks the navigation list;
+    // 4. PREV, TAP and NEXT go to the routed plate, whether or not it is in the list.
+    // A key mapped to nothing does nothing (D1)
     window.addEventListener("key", (event) => {
         if (($scope === undefined) || ($scope === null))
             return; // we are getting called once after clicking away from the gps page
         console.log(event);
 
-        if ($scope.keypadSettings.directKey.hasOwnProperty(event.key)) {
-            const k=whichKeywordIsForThisDisplay();
-            if($scope.keypadSettings.hasOwnProperty("directKey"+k)){
-                if ($scope.keypadSettings["directKey"+k].hasOwnProperty(event.key) && $scope.keypadSettings["directKey"+k][event.key].hasOwnProperty("href") && $scope.keypadSettings["directKey"+k][event.key].href.length > 0) {
-                    document.location = $scope.keypadSettings["directKey"+k][event.key].href;
-                    return false;
-                }
-            }
-            if ($scope.keypadSettings.directKey[event.key].hasOwnProperty("href") && $scope.keypadSettings.directKey[event.key].href.length > 0) {
-                document.location = $scope.keypadSettings.directKey[event.key].href;
+        const href = directKeyHref(event.key);
+        if (href !== null) {
+            document.location = href;
+            return false;
+        }
+        const f = keyToFunction(event.key);
+        console.log("function: " + f);
+        switch (f) {
+            case SwipeLeft:
+            case SwipeRight:
+                keypadSwipe(f);
                 return false;
-            }
+            case KEYPAD_MAPPING_PREV:
+            case KEYPAD_MAPPING_TAP:
+            case KEYPAD_MAPPING_NEXT:
+                dispatchEvent(new KeyboardEvent("keypad", { key: f }));
+                return false;
         }
-        else {
-            // Check for vertical navigation
-            const indexOf = $scope.keypadSettingsNavigation.indexOf(document.location.hash.split("?")[0]);
-            if (indexOf >= 0) {
-                const f = keyToFunction(event.key);
-                console.log("function: " + f);
-                if (f === undefined || f == null) {
-                    return false;
-                }
-                else {
-                    var nextIndex = indexOf;
-                    switch (f) {
-                        case "SwipeLeft":
-                            if (indexOf > 0) {
-                                nextIndex--;
-                            }
-                            else {
-                                nextIndex = $scope.keypadSettingsNavigation.length - 1;
-                            }
-
-                            break;
-                        case "SwipeRight":
-                            if (indexOf < $scope.keypadSettingsNavigation.length - 1) {
-                                nextIndex++;
-                            }
-                            else {
-                                nextIndex = 0;
-                            }
-                            break;
-                        default:
-                            const event = {
-                                key:f
-                            };
-                            const proxy = new KeyboardEvent("keypad", event);
-                            dispatchEvent(proxy);
-                            break;
-                    }
-                    if (nextIndex != indexOf) {
-                        const nextLocation = $scope.keypadSettingsNavigation[nextIndex];
-                        console.log("Swipe direct to:" + nextLocation);
-                        document.location = nextLocation;
-                        return false;
-
-                    }
-                }
-                /*
-                if ($scope.keypadSettingsNavigation[indexOf].hasOwnProperty(event.key)) {
-                    if ($scope.keypadSettingsNavigation[document.location.hash][event.key].length > 0) {
-                        if ((event.key == "SwipeRight" || event.key == "SwipeLeft")) {
-                            var nextLocation = $scope.keypadSettingsNavigation[document.location.hash][event.key];
-                            console.log("Swipe direct to:" + nextLocation);
-                            document.location = nextLocation;
-                            return;
-                        }
-                        if ($scope.keypadSettingsNavigation[document.location.hash].hasOwnProperty("disableRotary") == false || event.key == "to" || event.key == "from" || $scope.keypadKnobTimerRemovePopup !== undefined) {
-                            $scope.keypadShowRotary(event.key);
-                            $scope.$apply();
-                        }
-                    }
-                }
-            */
-            }
-            else {
-                // in case we are in a unknown navigation place, we brings the pilot to the home
-                // Temporary workaround to manage direct navigation not in current display pane
-                switch(event.key){
-                    case "SPEAKING":
-                        break;
-                    case "VOICE":
-                        break;
-                    default:
-                document.location = "#/";
-                    break;
-                }
-            }
-        }
+        return false;
     });
 
     function keypadHideRotary() {

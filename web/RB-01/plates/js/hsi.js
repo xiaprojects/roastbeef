@@ -33,184 +33,51 @@
     hsi.js
 */
 
-// Standalone version from cockpit_widget.js
-// TODO: convert to the new Sixpack div format
-/**
- * HSI
- * @param {*} div 
- * @param {*} item 
- */
-function HSICircleRenderer(div, item,foregroundColor="#000000") {
-    var hsiSettings = {
-        "middleCircleSize": 5,
-        "middleCircleDistance": 25,
-        "horizontalLine": { "w": 10, "h": 100, "color": "orange" },
-        "h": 140
-    };
+// HSI values for the DOM in css/Hsi.css and the markup of plates/hsi.html, synthview.html,
+// autopilot.html and addons/vor.html. No DOM code here: hosts keep the result on $scope.HSI
+// and the markup binds it, like $scope.Altimeter. Geometry of the old SVG.js drawing: a
+// viewbox of 280 units, so 1 unit = 100/280 cqw.
 
-    var image = SVG(div).viewbox(-hsiSettings.h, -hsiSettings.h, 2 * hsiSettings.h, 2 * hsiSettings.h);
+// Compass card: a tick every 5 degrees, long ones every 15, none under the letters
+const HSI_TICKS = [];   // {deg, big}  - deg % 90 != 0
+for (let deg = 0; deg < 360; deg += 5) {
+    if (deg % 90 == 0) continue;
+    HSI_TICKS.push({ deg: deg, big: deg % 15 == 0 });
+}
+// N E S W at 0/90/180/270, 3 6 12 15 21 24 30 33 on the 30 degree steps between
+const HSI_LABELS = [
+    { deg: 0, text: "N", cardinal: true }, { deg: 30, text: "3", cardinal: false },
+    { deg: 60, text: "6", cardinal: false }, { deg: 90, text: "E", cardinal: true },
+    { deg: 120, text: "12", cardinal: false }, { deg: 150, text: "15", cardinal: false },
+    { deg: 180, text: "S", cardinal: true }, { deg: 210, text: "21", cardinal: false },
+    { deg: 240, text: "24", cardinal: false }, { deg: 270, text: "W", cardinal: true },
+    { deg: 300, text: "30", cardinal: false }, { deg: 330, text: "33", cardinal: false }
+];
+const HSI_UNIT_CQW = 100 / 280;
 
-
-    /*****************/
-    var slopeTextLeft = image.text("GS").style('font-size', '10px');
-    slopeTextLeft.cx(-hsiSettings.h + 8);
-    slopeTextLeft.cy(-hsiSettings.middleCircleDistance * 4 - 10);
-    var slopeLeft = image.polygon('0,0 -5,5 -5,10 5,10 5,5 0,0 -5,-5 -5,-10 5,-10 5,-5');
-    slopeLeft.style("fill", hsiSettings.horizontalLine.color);
-    slopeLeft.cx(-hsiSettings.h + 8);
-    slopeLeft.cy(0);
-    /*****************/
-    var slopeTextRight = image.text("GS").style('font-size', '10px');
-    slopeTextRight.cx(+hsiSettings.h - 8);
-    slopeTextRight.cy(-hsiSettings.middleCircleDistance * 4 - 10);
-    var slopeRight = image.polygon('0,0 -5,5 -5,10 5,10 5,5 0,0 -5,-5 -5,-10 5,-10 5,-5');
-    slopeRight.style("fill", hsiSettings.horizontalLine.color);
-    slopeRight.cx(hsiSettings.h - 8);
-    slopeRight.cy(0);
-
-    for (var hsiIndex = -4; hsiIndex < 5; hsiIndex++) {
-        var cl = image.circle(hsiSettings.middleCircleSize);
-        cl.cx(-hsiSettings.h + 8).cy(hsiSettings.middleCircleDistance * hsiIndex);
-        var cr = image.circle(hsiSettings.middleCircleSize);
-        cr.cx(hsiSettings.h - 8).cy(hsiSettings.middleCircleDistance * hsiIndex);
-
-        if (hsiIndex == 0) {
-            cl.style('fill', "red");
-            cr.style('fill', "red");
-        }
-        else
-        {
-            cl.style("fill", foregroundColor);
-            cr.style("fill", foregroundColor);
-        }
-    }
-    /*****************/
-    var containerOuter = image.group();
-    containerOuter.text("N").style('font-size', '32px').style("fill", "#ff0000").style("stroke", "#ff0000")
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2);
-    containerOuter.text("E").style('font-size', '32px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2)
-        .transform({ rotation: 90, cx: 0, cy: 0, relative: false });
-    containerOuter.text("S").style('font-size', '32px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2)
-        .transform({ rotation: 180, cx: 0, cy: 0, relative: false });
-    containerOuter.text("W").style('font-size', '32px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.2)
-        .transform({ rotation: 270, cx: 0, cy: 0, relative: false });
-
-    containerOuter.text("3").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 30, cx: 0, cy: 0, relative: false });
-    containerOuter.text("6").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 60, cx: 0, cy: 0, relative: false });
-    containerOuter.text("12").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 120, cx: 0, cy: 0, relative: false });
-    containerOuter.text("15").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 150, cx: 0, cy: 0, relative: false });
-    containerOuter.text("21").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 210, cx: 0, cy: 0, relative: false });
-    containerOuter.text("24").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 240, cx: 0, cy: 0, relative: false });
-    containerOuter.text("30").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 300, cx: 0, cy: 0, relative: false });
-    containerOuter.text("33").style('font-size', '24px').style("fill", foregroundColor)
-        .cx(0).cy(-hsiSettings.horizontalLine.h * 1.25)
-        .transform({ rotation: 330, cx: 0, cy: 0, relative: false });
-
-
-    for (var degree = 0; degree < 360; degree += 5) {
-        if (degree % 90 == 0) continue;
-        var h = 10;
-        if (degree % 15 == 0) h = 20;
-        var miniline = containerOuter.rect(h / 5, h);
-        miniline.cx(0).cy(-hsiSettings.horizontalLine.h * 1.05);
-        miniline.transform({ rotation: degree, cx: 0, cy: 0, relative: false });
-        miniline.style("fill", "gray");
-    }
-
-    /*****************/
-    var containerCenter = image.group();
-    var containerCenterCircle = containerCenter.circle(hsiSettings.horizontalLine.h * 2.0);
-    containerCenterCircle.cx(0).cy(0);
-    containerCenterCircle.style('fill', "transparent");
-    containerCenterCircle.style('stroke', foregroundColor);
-    containerCenterCircle.style('stroke-width', hsiSettings.horizontalLine.h * 0.01);
-
-    var verticalLineDirection = containerCenter.rect(hsiSettings.horizontalLine.w, hsiSettings.horizontalLine.h);
-    verticalLineDirection.cx(0).cy(0);
-    verticalLineDirection.style("fill", hsiSettings.horizontalLine.color);
-
-    for (var hsiIndex = -3; hsiIndex < 4; hsiIndex++) {
-        var c = containerCenter.circle(hsiSettings.middleCircleSize);
-        c.style("fill", foregroundColor);
-        c.cx(hsiSettings.middleCircleDistance * hsiIndex).cy(0);
-    }
-    /*****************/
-    var arrow = containerCenter.polygon('0,0 10,20 5,20 5,40 -5,40 -5,20 -10,20').style("fill", foregroundColor);
-    arrow.cy(-hsiSettings.horizontalLine.h * 0.8);
-    containerCenter.rect(10, 40).cx(0).cy(hsiSettings.horizontalLine.h * 0.8).style("fill", foregroundColor);
-
-    /*****************/
-    var radial = containerCenter.polygon('0,0 -10,-15 -5,-15 -1,-5 1,-5 5,-15 10,-15 ').style("fill", foregroundColor);
-    radial.cy(-hsiSettings.horizontalLine.h * 1.08);
-    radial.style("fill", hsiSettings.horizontalLine.color);
-
-    /*****************/
-    var centerLine = image.rect(5, 50);
-    centerLine.cx(0);
-    centerLine.cy(-hsiSettings.horizontalLine.h * 1.2);
-    centerLine.style("fill", hsiSettings.horizontalLine.color);
-
-    image.rect(2, 30).style("fill", foregroundColor).cx(0).cy(5);
-    image.rect(10, 2).style("fill", foregroundColor).cx(0).cy(15);
-    image.rect(30, 2).style("fill", foregroundColor).cx(0).cy(0);
-
-    /*****************/
-    this.containerOuter = containerOuter;
-    this.containerCenter = containerCenter;
-    this.slopeLeft = slopeLeft;
-    this.slopeRight = slopeRight;
-    this.radial = radial;
-    this.verticalLineDirection = verticalLineDirection;
-    this.canvas = document.getElementById(this.locationId);
-    this.width = -1;
-    this.height = -1;
+// showGs / showCdi: the VOR addon parks the GS diamonds and the CDI bar when there is no
+// usable signal; the other hosts always draw them. gsActive: a glideslope signal is being
+// received (only the VOR addon has a receiver), it gates the small "GS" labels
+function hsiCreate(foregroundColor) {
+    return { fg: foregroundColor, ticks: HSI_TICKS, labels: HSI_LABELS,
+             sides: ["left", "right"], gsDots: [-4, -3, -2, -1, 0, 1, 2, 3, 4],
+             courseDots: [-3, -2, -1, 0, 1, 2, 3],
+             showGs: true, showCdi: true, gsActive: false,
+             card: "0deg", course: "0deg", bug: "0deg", cdi: "0cqw", gs: "0cqw" };
 }
 
-
-HSICircleRenderer.prototype = {
-    constructor: HSICircleRenderer,
-    resize: function () {
-        var canvasWidth = this.canvas.parentElement.offsetWidth;
-
-        if (canvasWidth !== this.width) {
-            this.width = canvasWidth;
-            this.height = canvasWidth * 0.5;
-
-            this.canvas.width = this.width;
-            this.canvas.height = this.height;
-        }
-    },
-    update: function (outer, item, center, vertical, radial, glideSlope) {
-        this.containerOuter.transform({ rotation: -outer, cx: 0, cy: 0, relative: false });
-        this.radial.transform({ rotation: radial, cx: 0, cy: 0, relative: false });
-        this.containerCenter.transform({ rotation: -center, cx: 0, cy: 0, relative: false });
-        if (vertical > 6) vertical = 6;
-        if (vertical < -6) vertical = -6;
-        this.verticalLineDirection.cx(-vertical * 25 / 2);
-        if (glideSlope > 15) glideSlope = 15;
-        if (glideSlope < -15) glideSlope = -15;
-        this.slopeLeft.cy(-glideSlope * 25 / 3);
-        this.slopeRight.cy(-glideSlope * 25 / 3);
-    }
-};
-// End of copy
+// Same arguments, order and clamps as the SVG.js renderer this replaced, minus its
+// unused `item`
+function hsiUpdate(HSI, outer, center, vertical, radial, glideSlope) {
+    const num = function (v) { v = Number(v); return isFinite(v) ? v : 0; };
+    vertical = Math.max(-6, Math.min(6, num(vertical)));
+    glideSlope = Math.max(-15, Math.min(15, num(glideSlope)));
+    HSI.card = (-num(outer)) + "deg";
+    HSI.course = (-num(center)) + "deg";
+    HSI.bug = num(radial) + "deg";
+    HSI.cdi = (-vertical * 12.5 * HSI_UNIT_CQW) + "cqw";
+    HSI.gs = (-glideSlope * 25 / 3 * HSI_UNIT_CQW) + "cqw";
+}
 
 angular.module('appControllers').controller('HSICtrl', HSICtrl); // get the main module controllers set
 HSICtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
@@ -220,9 +87,11 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.name="HSICtrl";
     $scope.controllerName = $scope.name;
     $scope.foregroundColor = "#ffffff"
+    $scope.HSI = hsiCreate($scope.foregroundColor);
     $scope.init = function (controllerName,foregroundColor) {
         $scope.controllerName = controllerName;
         $scope.foregroundColor = foregroundColor;
+        $scope.HSI.fg = foregroundColor;
     }
     $scope.directTo = {
         "Lat": 0,
@@ -280,11 +149,10 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
         }
         $scope.hsiDataRequestedRefresh = now;
 
-        $scope.loadSituationInHSI(event.detail)
+        $scope.loadSituationInHSI(event.detail);
+        if (!$scope.$root.$$phase) $scope.$apply(); // the DOM is bound: digest
     }
 
-
-    $scope.hsi = null;
 
     $scope.autopilotLoadCurrentStatus();
 
@@ -413,15 +281,10 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.situation = {};
     $scope.loadSituationInHSI = function (situation) { // mySituation
 
-if($scope.hsi==null){
-        $scope.hsi = new HSICircleRenderer("hsi", {}, $scope.foregroundColor);
-}
-
         $scope.situation = situation;
         $scope.tickForRouting();
-        $scope.hsi.update(
+        hsiUpdate($scope.HSI,
             $scope.situation.GPSTrueCourse,
-            {},
             $scope.to.xtrk,
             $scope.to.hsi,
             $scope.overrideHSI,
@@ -468,12 +331,8 @@ if($scope.hsi==null){
         }
         $scope.tickForRouting();
 
-        // The renderer is built asynchronously after the plate renders; a knob
-        // press in that window has nothing to draw on yet.
-        if ($scope.hsi == null) return;
-        $scope.hsi.update(
+        hsiUpdate($scope.HSI,
             $scope.situation.GPSTrueCourse,
-            {},
             $scope.to.xtrk,
             $scope.to.hsi,
             $scope.overrideHSI,

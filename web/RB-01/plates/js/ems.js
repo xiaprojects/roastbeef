@@ -55,14 +55,14 @@ function EMSCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
 	$scope.updateChart = function (indexOut, keyIn, emsDataMap) {
-		//
-		if (!emsDataMap.hasOwnProperty(keyIn)) {
-			emsDataMap[keyIn] = 0;
-		}
+		// A field the frame does not carry draws as 0. The frame is the detail every
+		// EMSUpdated listener shares: writing the 0 into it would hide the last real
+		// value from the bars, which keep it across the partial frames
+		const rawValue = emsDataMap.hasOwnProperty(keyIn) ? emsDataMap[keyIn] : 0;
 		// The gauge is drawn in the pilot's unit (aircraft.json): a temperature
 		// is converted here, and emsApplyPilotUnits has put the scale, the ticks
 		// and the arc thresholds on the same unit.
-		var pilotValue = emsPilotValueFromSource(keyIn, emsDataMap[keyIn]);
+		var pilotValue = emsPilotValueFromSource(keyIn, rawValue);
 		var useThisValueForGauge = pilotValue;
 		if(useThisValueForGauge>$scope.EMS[indexOut].maxSpeed) {
 			useThisValueForGauge=$scope.EMS[indexOut].maxSpeed;

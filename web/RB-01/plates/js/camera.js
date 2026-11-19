@@ -250,72 +250,10 @@ function CameraCtrl($rootScope, $scope, $state, $http, $interval) {
         );
     }
 
-    /**
-     * Currently Selected Camera by the Keypad
-     * -1 exit to prev screen
-     * 0->N-1 Camera selected
-     * N focus on Add new Camera
-     * N+1 exit to next screen
-     */
-    $scope.scrollItemCounter = 0;
-
-
-    // Keypad Listener with supported keys
-    function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null)) {
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
-        }
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
-        }
-        else {
-            // user is changing screen
-            return;
-        }
-
-        switch (event.key) {
-
-            case KEYPAD_MAPPING_PREV:
-
-                {
-                    $scope.scrollItemCounter--;
-                    if ($scope.scrollItemCounter < 0) {
-                        $scope.scrollItemCounter = -1;
-                        return;
-                    }
-                }
-                break;
-
-            case KEYPAD_MAPPING_TAP:
-                if ($scope.scrollItemCounter >= $scope.cameras.length) {
-                    $scope.cameraCreate('/img/logo-transparent.png');
-                }
-                break;
-
-            case KEYPAD_MAPPING_NEXT:
-                {
-                    $scope.scrollItemCounter++;
-                    if ($scope.scrollItemCounter > $scope.cameras.length + 1) {
-                        return;
-                    }
-                }
-                break;
-        }
-
-        if ($scope.scrollItemCounter >= 0 && $scope.scrollItemCounter < $scope.cameras.length) {
-            const cameraRow = document.getElementById("camera_" + $scope.scrollItemCounter);
-            if (cameraRow != null) cameraRow.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-        }
-        else if ($scope.scrollItemCounter >= $scope.cameras.length) {
-
-            const cameraAdd = document.getElementById("camera_add");
-            if (cameraAdd != null) cameraAdd.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
-        } else 
-        {
-
-        }
-        $scope.$apply();
-    }
+    // The knob: each camera's heading (TAP = Edit / Save), its type list while editing (TAP to
+    // edit, PREV / NEXT to choose), then the two create buttons. The name and URL fields are
+    // text: touch or a real keyboard (D5 of docs/tech-debt/keypad-page-navigation.md)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, "camera");
 
 
 
@@ -324,7 +262,6 @@ function CameraCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('camera').onExit = function () {
-        removeEventListener("keypad", keypadEventListener);
         // Remove all SRC to avoid continue loading in background
         for (index = 0; index < $scope.cameras.length; index++) {
             $scope.cameras[index].UrlImg = "";
@@ -336,8 +273,6 @@ function CameraCtrl($rootScope, $scope, $state, $http, $interval) {
 
     // Startup
     $scope.cameraRestoreConfiguration();
-    // Bridge from servicekeypad
-    addEventListener("keypad", keypadEventListener);
 }
 
 

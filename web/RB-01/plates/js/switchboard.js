@@ -107,42 +107,14 @@ function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
   $scope.$parent.helppage = 'plates/switchboard-help.html';
   $scope.switches = [];
 
-  function keypadEventListener(event) {
-    if (($scope === undefined) || ($scope === null) || $state.current.controller != 'SwitchboardCtrl') {
-        removeEventListener("keypad", keypadEventListener);
-        return; // we are getting called once after clicking away from the status page
-    }
+  // The knob: each tile is a stop, TAP runs it as a touch does. Nothing has the focus when the
+  // page opens, so a stray TAP runs no switch (docs/tech-debt/keypad-page-navigation.md 3.4)
+  $scope.keypadFocus = new KeypadFocus($scope, $state, "switchboard");
 
-    if ($scope.keypadKnobTimerRemovePopup === undefined) {
-    }
-    else {
-      // user is changing screen
-      return;
-    }
-    /*
-        switch (event.key) {
-          case KEYPAD_MAPPING_PREV_MEDIA:
-          case KEYPAD_MAPPING_PREV:
-          case "ArrowUp":
-          case "ArrowLeft":
-            break;
-          case "Enter":
-          case " ":
-          case KEYPAD_MAPPING_TAP:
-            break;
-          case "ArrowDown":
-          case "ArrowRight":
-          case KEYPAD_MAPPING_NEXT_MEDIA:
-          case KEYPAD_MAPPING_NEXT:
-            break;
-        }
-    */
-  }
   $state.get('switchboard').onEnter = function () {
     // everything gets handled correctly by the controller
   };
   $state.get('switchboard').onExit = function () {
-    removeEventListener("keypad", keypadEventListener);
   };
 
 
@@ -291,8 +263,6 @@ function SwitchboardCtrl($rootScope, $scope, $state, $http, $interval) {
 
   // Startup
   $scope.restoreConfiguration();
-  // Bridge from servicekeypad
-  addEventListener("keypad", keypadEventListener);
 }
 
 

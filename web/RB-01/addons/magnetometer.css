@@ -120,3 +120,12 @@
     font-family: monospace;
     white-space: nowrap;
 }
+
+/* The round panel (square viewport): the top right corner is off the glass, and the mode and
+   calibrate buttons with it, for a finger and for the knob's highlight. Bring them inside */
+@media (min-aspect-ratio: 10/11) and (max-aspect-ratio: 11/10) {
+    .addonMagLabelTopRight {
+        top: 14cqmin;
+        right: 14cqmin;
+    }
+}

@@ -98,8 +98,20 @@ function AlertsCtrl($rootScope, $scope, $state, $http, $interval) {
   }
   addEventListener("AlertsUpdated", alertsUpdated);
 
+  // The knob: each row, most recent first; TAP plays its sound again, as a touch on the row.
+  // A row keeps the focus while new alerts arrive above it (rows are tracked by alertId)
+  $scope.keypadFocus = new KeypadFocus($scope, $state, "alerts");
+
+  // The top bar lamp stays on until the pilot opens this page
+  if ($scope.alertsSeen !== undefined) {
+    $scope.alertsSeen(true);
+  }
+
   $scope.$on('$destroy', function () {
     removeEventListener("AlertsUpdated", alertsUpdated);
+    if ($scope.alertsSeen !== undefined) {
+      $scope.alertsSeen(false);
+    }
   });
 
   // Download voices, text, mappings for multi language

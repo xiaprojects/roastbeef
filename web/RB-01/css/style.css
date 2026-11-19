@@ -130,12 +130,6 @@ body {
 }
 
 
-/* RoastBeaf - Make transparent the AHRS */
-.ai .transparent {
-  fill: #00000000
-}
-
-
 .fabNavigation {
   z-index: 9999999;
   cursor: pointer;
@@ -346,4 +340,19 @@ body {
 .layer-switcher button {
   background-color: transparent;
 }
+}
+
+/* The knob's place inside a page (js/keypadfocus.js, docs/tech-debt/keypad-page-navigation.md 3.2).
+   An outline, so the content does not move; the dark ring makes it read on any background */
+.keypadFocus {
+  outline: 3px solid #ff0000;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .6);
+}
+
+/* Edit: the knob changes this value */
+.keypadEdit {
+  outline: 3px solid #00c000;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, .6);
 }

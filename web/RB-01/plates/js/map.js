@@ -37,6 +37,9 @@ MapCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval', 'craf
 var URL_GET_TILESETS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles/tilesets";
 var URL_GET_TILE = URL_HOST_PROTOCOL + URL_HOST_BASE + "/tiles";
 var URL_GET_STYLE = URL_HOST_PROTOCOL + URL_HOST_BASE + "/mapdata/styles"
+// The knob's zoom range: a whole country down to the deepest level the tile sets carry
+var MAP_KNOB_MIN_ZOOM = 2;
+var MAP_KNOB_MAX_ZOOM = 18;
 
 function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	let TRAFFIC_MAX_AGE_SECONDS = 15;
@@ -624,6 +627,42 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 
 	addEventListener("SituationUpdated", situationUpdated);
 	addEventListener("TrafficUpdated", $scope.onMessage);
+
+	// The knob zooms: PREV out, NEXT in, one level a click about the middle of the map, as
+	// the pinch does. Whole levels, from wherever a pinch left it. No focus to move on this
+	// page: docs/tech-debt/keypad-page-navigation.md, 3.1 rule 3
+	$scope.knobZoom = function (direction) {
+		const view = $scope.map.getView();
+		const zoom = view.getZoom();
+		if (zoom === undefined) {
+			return;
+		}
+		const low = Math.max(MAP_KNOB_MIN_ZOOM, view.getMinZoom());
+		const high = Math.min(MAP_KNOB_MAX_ZOOM, view.getMaxZoom());
+		const next = Math.min(high, Math.max(low, Math.round(zoom) + direction));
+		if (next != zoom) {
+			view.cancelAnimations();
+			view.setZoom(next);
+		}
+	};
+
+	function keypadEventListener(event) {
+		if (($scope === undefined) || ($scope === null) || $state.current.controller != 'MapCtrl') {
+			return; // not the routed plate: $destroy removes this listener
+		}
+		switch (event.key) {
+			case KEYPAD_MAPPING_PREV:
+				$scope.knobZoom(-1);
+				break;
+			case KEYPAD_MAPPING_NEXT:
+				$scope.knobZoom(1);
+				break;
+		}
+	}
+	addEventListener("keypad", keypadEventListener);
+	$scope.$on('$destroy', function () {
+		removeEventListener("keypad", keypadEventListener);
+	});
 
 	$scope.updateTimer = $interval($scope.update, 1000);
 }

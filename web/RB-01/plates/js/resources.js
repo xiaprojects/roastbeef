@@ -57,7 +57,11 @@ function ResourcesCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     });
 
+    // The resource shown full screen, -1 when the list is shown
+    $scope.zoomed = -1;
+
     $scope.zoom = function (resource, event) {
+        $scope.zoomed = $scope.resources.indexOf(resource);
         var zoomContainer = document.getElementById("zoomContainer");
         const imagePath = 'url(' + encodeURI(resource.Path) + ')';
         zoomContainer.style.backgroundImage = imagePath;
@@ -69,7 +73,34 @@ function ResourcesCtrl($rootScope, $scope, $state, $http, $interval) {
         }
     }
     $scope.backFromZoom = function (event) {
-        zoomContainer.style.display = "none";
-        event.stopPropagation()
+        $scope.zoomed = -1;
+        document.getElementById("zoomContainer").style.display = "none";
+        if (event) {
+            event.stopPropagation()
+        }
     }
+
+    // The knob. With an image full screen: PREV / NEXT the previous / next one (stopping at both
+    // ends), TAP back to the list. On the list: each row a stop, TAP shows it, as a touch does
+    // (docs/tech-debt/keypad-page-navigation.md 3.4)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, name, {
+        direct: function (key) {
+            if ($scope.zoomed < 0) {
+                return false;
+            }
+            switch (key) {
+                case KEYPAD_MAPPING_PREV:
+                case KEYPAD_MAPPING_NEXT:
+                    var next = $scope.zoomed + (key == KEYPAD_MAPPING_NEXT ? 1 : -1);
+                    if (next >= 0 && next < $scope.resources.length) {
+                        $scope.zoom($scope.resources[next], null);
+                    }
+                    return true;
+                case KEYPAD_MAPPING_TAP:
+                    $scope.backFromZoom(null);
+                    return true;
+            }
+            return false;
+        }
+    });
 };

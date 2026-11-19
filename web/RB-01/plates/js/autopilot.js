@@ -80,13 +80,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     ];
 
     $scope.situation = window.situation;
-    $scope.scrollItemCounter = -4;
-    $scope.ahrsClassSelected = "keypadSelectedYes";
-    $scope.hsiClassSelected = "keypadSelectedNo";
-    $scope.destClassSelected = "keypadSelectedNo";
-    $scope.forecastClassSelected = "keypadSelectedNo";
     $scope.QNH = 1013.25;
-    $scope.isSelectedHSI = false;
     $scope.overrideHSI = 0;
     $scope.GPSGroundSpeedReference = 200;
     $scope.gpx = { "routes": [] };
@@ -353,6 +347,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             }]
         });
         $scope.uploadWaypoints();
+        $scope.knobToHsi();
     }
 
     $scope.directToNearest = function () {
@@ -528,9 +523,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             }]
         });
         $scope.uploadWaypoints();
-        // Autoselect the HSI
-        $scope.scrollItemCounter = -3;
-        $scope.redrawSelectedIndex();
+        // The knob lands on the HSI, to set the approach direction
+        $scope.knobToHsi();
 
     }
 
@@ -551,9 +545,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             $scope.gpx.routes[routeIndex].points[waypointIndex].Status = WAYPOINT_STATUS_TARGET;
         }
         $scope.uploadWaypoints();
-        // Autoselect the HSI
-        $scope.scrollItemCounter = -3;
-        $scope.redrawSelectedIndex();
+        // The knob lands on the HSI, to set the approach direction
+        $scope.knobToHsi();
     }
 
     $scope.tickForRouting = function () {
@@ -578,7 +571,6 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('autopilot').onExit = function () {
-        removeEventListener("keypad", keypadEventListener);
         removeEventListener("WaypointChanged", waypointChanged);
 /*
         $scope.noSleep.disable();
@@ -592,191 +584,45 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     /*****************************************************
-     *  Keypad Management
+     *  Keypad Management: js/keypadfocus.js, the stops chosen by the owner (2026-11-18)
+     *  - the HSI panel: TAP to turn the approach direction (override radial) with the knob,
+     *    1 degree a click, TAP again to release it;
+     *  - the HOME button: TAP = a touch on it;
+     *  - each waypoint of the flight plan, then each airfield: TAP = a touch on the row.
+     *  After a direct-to the knob lands on the HSI panel, when the knob was in use.
      */
-    $scope.redrawSelectedIndex = function () {
-        for (var x = 0; x < $scope.gpx.routes.length; x++) {
-            for (var y = 0; y < $scope.gpx.routes[x].points.length; y++) {
-                // TODO: Add multi route scroll keypad
-                if ($scope.scrollItemCounter == y) {
-                    $scope.gpx.routes[x].points[y].className = "keypadSelectedYes";
-                    document.getElementById("line_" + x + "_"+ y).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-
-                }
-                else {
-                    $scope.gpx.routes[x].points[y].className = "keypadSelectedNo";
-                }
+    var keypadFocus = new KeypadFocus($scope, $state, "autopilot", {
+        adjust: {
+            hsi: function (direction) {
+                $scope.overrideHSI = $scope.overrideHSI + direction;
+                $scope.tickForRouting();
+                hsiUpdate($scope.HSI, $scope.situation.GPSTrueCourse,
+                    $scope.to.xtrk,
+                    $scope.to.hsi,
+                    $scope.overrideHSI,
+                    $scope.to.slope
+                );
             }
         }
+    });
 
-
-        switch ($scope.scrollItemCounter) {
-            case -4:
-                $scope.ahrsClassSelected = "keypadSelectedYes";
-                $scope.hsiClassSelected = "keypadSelectedNo";
-                $scope.destClassSelected = "keypadSelectedNo";
-                $scope.forecastClassSelected = "keypadSelectedNo";
-                document.getElementById("ahrs_panel").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-
-                break;
-            case -3:
-                $scope.hsiClassSelected = "keypadSelectedYes";
-                $scope.ahrsClassSelected = "keypadSelectedNo";
-                $scope.destClassSelected = "keypadSelectedNo";
-                $scope.forecastClassSelected = "keypadSelectedNo";
-                document.getElementById("hsi_panel").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-                break;
-            case -2:
-                $scope.hsiClassSelected = "keypadSelectedNo";
-                $scope.ahrsClassSelected = "keypadSelectedNo";
-                $scope.destClassSelected = "keypadSelectedYes";
-                $scope.forecastClassSelected = "keypadSelectedNo";
-                document.getElementById("dest_panel").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-
-                break;
-            case -1:
-                $scope.hsiClassSelected = "keypadSelectedNo";
-                $scope.ahrsClassSelected = "keypadSelectedNo";
-                $scope.destClassSelected = "keypadSelectedNo";
-                $scope.forecastClassSelected = "keypadSelectedYes";
-                document.getElementById("forecast_panel").scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-
-                break;
-            default:
-                $scope.hsiClassSelected = "keypadSelectedNo";
-                $scope.ahrsClassSelected = "keypadSelectedNo";
-                $scope.destClassSelected = "keypadSelectedNo";
-                $scope.forecastClassSelected = "keypadSelectedNo";
-                break;
+    $scope.knobToHsi = function () {
+        if (keypadFocus.element !== null) {
+            keypadFocus.select(document.querySelector("[ui-view] #hsi_panel"));
         }
+    };
 
-
-
-    }
-
-
-    function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller!='AutopilotCtrl'){
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
-        }
-
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
-        }
-        else
-        {
-            // user is changing screen
-            return;
-        }
-
-        switch (event.key) {
-            case KEYPAD_MAPPING_PREV:
-                $scope.autopilotSelectPrev();
-                break;
-
-            case KEYPAD_MAPPING_TAP:
-                $scope.autopilotSelectTap();
-                break;
-            case KEYPAD_MAPPING_NEXT:
-                $scope.autopilotSelectNext();
-                break;
-        }
-    }
-
-
-
-    $scope.autopilotSelectPrev = function () {
-        if ($scope.isSelectedHSI == true) {
-            $scope.overrideHSI = $scope.overrideHSI - 1;
-            $scope.tickForRouting();
-            $scope.hsi.update($scope.situation.GPSTrueCourse,
-                {},
-                $scope.to.xtrk,
-                $scope.to.hsi,
-                $scope.overrideHSI,
-                $scope.to.slope
-            );
-            $scope.$apply();
-        }
-        else {
-            $scope.scrollItemCounter--;
-            if ($scope.scrollItemCounter <= -5) {
-                $scope.scrollItemCounter = -4;
-                const proxy = new KeyboardEvent("keypad", { key: "from" });
-                dispatchEvent(proxy);
-            }
-            else {
-                $scope.redrawSelectedIndex();
-                $scope.$apply();
-            }
-        }
-    }
-    $scope.autopilotSelectNext = function () {
-        if ($scope.isSelectedHSI == true) {
-            $scope.overrideHSI = $scope.overrideHSI + 1;
-            $scope.tickForRouting();
-            $scope.hsi.update($scope.situation.GPSTrueCourse,
-                {},
-                $scope.to.xtrk,
-                $scope.to.hsi,
-                $scope.overrideHSI,
-                $scope.to.slope
-            );
-            $scope.$apply();
-        }
-        else {
-
-            $scope.scrollItemCounter++;
-
-            var availableItems = 0;
-            if ($scope.gpx.routes.length > 0) {
-                // TODO: add multiple routings scroll
-                availableItems = $scope.gpx.routes[0].points.length;
-            }
-
-            if ($scope.scrollItemCounter >= availableItems) {
-                $scope.scrollItemCounter = availableItems -1;
-                const proxy = new KeyboardEvent("keypad", { key: "to" });
-                dispatchEvent(proxy);
-            }
-            else {
-                $scope.redrawSelectedIndex();
-                $scope.$apply();
-            }
-
-
-        }
-    }
-
-    $scope.autopilotSelectTap = function () {
-        switch ($scope.scrollItemCounter) {
-            case -4:
-            case -3:
-            case -2:
-            case -1:
-                $scope.isSelectedHSI = !$scope.isSelectedHSI;
-                break;
-            default:
-                var availableItems = 0;
-                if ($scope.gpx.routes.length > 0) {
-                    // TODO: add multiple routings scroll
-                    availableItems = $scope.gpx.routes[0].points.length;
-                }
-                if ($scope.scrollItemCounter < availableItems) {
-                    // TODO: support for multi routing keypad
-                    $scope.directToWaypoint(0, $scope.scrollItemCounter);
-                }
-                break;
-        }
-        $scope.$apply();
-    }
+    $scope.hsiEditing = function () {
+        return keypadFocus.isEditing(document.querySelector("[ui-view] #hsi_panel"));
+    };
 
     /*****************************************************
      * Replicate the AHRS
      */
     // GPS/AHRS Controller tasks go here
-    var ahrs = new AHRSRenderer("ahrs_display");
-    ahrs.turn_on();
+    $scope.instruments = [
+        { "url": "plates/attitude.html", "ctrl": SixPackInstrumentAttitude, pointer: null, "name": "attitude" }
+    ];
 
     /*****************************************************
      * Situation Update
@@ -804,6 +650,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             if (requireRefresh == true) {
                 $scope.situation = situation;
                 loadSituationInAutopilot(situation);
+                // The attitude handles its own failures (X / AHRS ALIGN), so it gets every frame
+                $scope.instruments.forEach(i => { if (i.pointer != null) i.pointer.updateSituation(situation); });
                 $scope.$apply(); // trigger any needed refreshing of data
             }
             else
@@ -815,8 +663,7 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
     /*****************************************************
     * Init
     */
-    $scope.hsi = new HSICircleRenderer("hsi", {},"#ffffff");
-    addEventListener("keypad", keypadEventListener);
+    $scope.HSI = hsiCreate("#ffffff");
     addEventListener("WaypointChanged", waypointChanged);
     //$scope.tickForAll();
 
@@ -850,7 +697,6 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
             if ($scope.ahrs_slip_skid > 360) {
                 $scope.ahrs_slip_skid = "--";
             }
-            ahrs.update(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid, situation.GPSGroundSpeed, situation.GPSAltitudeMSL);
 
             $scope.ahrs_heading_mag = situation.AHRSMagHeading.toFixed(0);
             if ($scope.ahrs_heading_mag > 360) {
@@ -907,9 +753,8 @@ function AutopilotCtrl($rootScope, $scope, $state, $http, $interval) {
 
         
         $scope.tickForRouting();
-        $scope.hsi.update(
+        hsiUpdate($scope.HSI,
             $scope.situation.GPSTrueCourse,
-            {},
             $scope.to.xtrk,
             $scope.to.hsi,
             $scope.overrideHSI,

@@ -17,3 +17,8 @@
     width: 50cqmin
 }
 }
+
+/* Autopilot AHRS panel: the ball fills the panel column instead of the six-pack grid cell */
+#ahrs_panel .Sixpack_intrument {
+    width: 100%;
+}

@@ -5,12 +5,12 @@
 		</div>
 			<table style="width:100%">
 				<tbody>
-					<tr class="checksline {{check.value}} {{check.isselected}}" ng-repeat="check in checklist.items ">
+					<tr class="checksline {{check.value}} {{knobClass($parent.$index, $index)}}" ng-repeat="check in checklist.items " id="check_{{$parent.$index}}_{{$index}}">
 						<th scope="row">
 						<td class="text-center">
 							<select id="status_{{check.id}}" name="status_{{check.id}}"
 								class="col-xs-7 custom-select checker {{check.value}}" ng-model="check.value"
-								ng-change="updateStatusForItem(check)">
+								ng-change="statusChosen(check, $parent.$index, $index)">
 								<option value="todo" ng-selected="check.value=='todo'">CHECK</option>
 								<option value="pass" ng-selected="check.value=='pass'">PASS</option>
 								<option value="skip" ng-selected="check.value=='skip'">SKIP</option>

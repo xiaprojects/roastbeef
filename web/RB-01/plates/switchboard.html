@@ -1,9 +1,11 @@
 <div ui-content-for="title">Switchboard</div>
-<span class="switchBoardButton {{scrollItemCounter==$index?'keypadSelectedYes':'keypadSelectedNo'}}"
-    ng-repeat="item in switches" ng-click="sendCommand($index)">
-    <div style="height: 8px;"></div>
-        <span>{{item.Name}}</span>
-    <div style="height: 8px;"></div>
+<!-- Fixed-size tiles in a grid: a long name wraps to two lines and is then
+     cut with an ellipsis, so it can never resize its button or push the
+     row out of line. The full name stays in the tooltip. -->
+<div class="switchBoardGrid">
+    <button type="button" class="switchBoardButton" data-keypad="tap"
+        ng-repeat="item in switches" ng-click="sendCommand($index)" title="{{item.Name}}">
+        <span class="switchBoardButtonName">{{item.Name}}</span>
         <span class="switchBoardButtonLight switchButtonStatus{{item.Status}}"></span>
-    <div style="height: 8px;"></div>
-</span>
+    </button>
+</div>

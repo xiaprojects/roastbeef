@@ -102,4 +102,9 @@ function OtaCtrl($rootScope, $scope, $state, $http, $interval) {
             document.location = "#" + item.hash;
         }
     }
+
+    // The knob: each addon row, TAP opens it as START does. INSTALL and UPDATE are not stops:
+    // touch runs them with no confirmation, and a stray press must not start an install. Open
+    // question for the owner in docs/tech-debt/keypad-page-navigation.md (Status, ota)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, name);
 };

@@ -8,6 +8,7 @@
     <tr ng-repeat="resource in resources"
         style="margin: 0px;padding:0px;border-top: 1px #acacac solid;"
         ng-click="zoom(resource,$event);"
+        data-keypad="tap" data-keypad-name="{{resource.Name}}"
         >
         <td class="text-center">
            {{resource.Name}}

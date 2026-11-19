@@ -1,6 +1,6 @@
 <div ui-content-for="title">Autopilot</div>
     <!---->
-	<div ng-class="[hsi_panel,ahrsClassSelected]"  id="ahrs_panel">
+	<div ng-class="[hsi_panel]"  id="ahrs_panel">
         <div class="panel-group" ng-click="zoom('hsi_panel');">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -10,14 +10,14 @@
                 </div>
 
                 <div class="panel-body">
-                            <div id="ahrs_display"></div>
+                            <div ng-repeat="instrument in instruments" ng-include="instrument.url" ng-controller="instrument.ctrl" class="Sixpack_intrument"></div>
                             <span ng-repeat="g in gmeterIcons" class="label {{g.class}}" id="{{g.name}}" style="margin-right:1px;">{{g.text}}</span>
                 </div>
 
             </div>
         </div>        
     </div>
-	<div ng-class="[hsi_panel,hsiClassSelected]" id="hsi_panel">
+	<div ng-class="[hsi_panel]" id="hsi_panel" data-keypad="adjust" data-keypad-name="hsi" data-keypad-order="1">
         <div class="panel-group" ng-click="zoom('hsi_panel');">
             <div class="panel panel-default">
                 <div class="panel-heading" >
@@ -25,15 +25,37 @@
                     <span class="label {{directTo.Lat==0?'label-danger':'label-success'}}">{{directTo.Lat==0?'OFF':'ACTIVE'}}</span>
                 </div>
                 <div class="panel-body" id="hsi_container">
-                            <div id="hsi"></div>
-                            <span class="label {{isSelectedHSI==true?'label-danger':(overrideHSI!=0?'label-warning':'label-info')}}" id="overrideHSI">OVERRIDE RADIAL {{overrideHSI==0?'OFF':overrideHSI+'°'}}</span>
+                            <div id="hsi" class="hsi" style="--hsi-fg: {{HSI.fg}};">
+                              <div class="hsi-gs" ng-repeat="side in HSI.sides track by $index" ng-class="'hsi-gs-' + side">
+                                <div class="hsi-gs-label" ng-show="HSI.gsActive">GS</div>
+                                <div class="hsi-gs-dot" ng-repeat="i in HSI.gsDots track by $index" ng-class="{'hsi-gs-dot-center': i == 0}" style="--i: {{::i}};"></div>
+                                <div class="hsi-gs-diamond" ng-show="HSI.showGs" style="transform: translate(-50%, -50%) translateY({{HSI.gs}});"></div>
+                              </div>
+                              <div class="hsi-card" style="transform: rotate({{HSI.card}});">
+                                <div class="hsi-tick" ng-repeat="t in HSI.ticks track by $index" ng-class="{'hsi-tick-big': t.big}" style="transform: rotate({{::t.deg}}deg);"></div>
+                                <div class="hsi-label" ng-repeat="l in HSI.labels track by $index" ng-class="{'hsi-cardinal': l.cardinal, 'hsi-north': l.deg == 0}" style="transform: rotate({{::l.deg}}deg);"><span>{{::l.text}}</span></div>
+                              </div>
+                              <div class="hsi-course" style="transform: rotate({{HSI.course}});">
+                                <div class="hsi-ring"></div>
+                                <div class="hsi-cdi" ng-show="HSI.showCdi" style="transform: translate(-50%, -50%) translateX({{HSI.cdi}});"></div>
+                                <div class="hsi-dot" ng-repeat="i in HSI.courseDots track by $index" style="--i: {{::i}};"></div>
+                                <div class="hsi-arrow"></div>
+                                <div class="hsi-tail"></div>
+                                <div class="hsi-bug-layer" style="transform: rotate({{HSI.bug}});"><div class="hsi-bug"></div></div>
+                              </div>
+                              <div class="hsi-lubber"></div>
+                              <div class="hsi-aircraft-a"></div>
+                              <div class="hsi-aircraft-b"></div>
+                              <div class="hsi-aircraft-c"></div>
+                            </div>
+                            <span class="label {{hsiEditing()?'label-danger':(overrideHSI!=0?'label-warning':'label-info')}}" id="overrideHSI">OVERRIDE RADIAL {{overrideHSI==0?'OFF':overrideHSI+'°'}}</span>
 
                 </div>
             </div>
         </div>        
     </div>
 <!---->
-	<div class="col-sm-6 col-xs-12" ng-class="destClassSelected" id="dest_panel">
+	<div class="col-sm-6 col-xs-12" id="dest_panel">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -58,7 +80,7 @@
                             <span>ft</span>
 
                             </div>
-                        <button class="btn btn-success"
+                        <button class="btn btn-success" data-keypad="tap" data-keypad-name="home" data-keypad-order="2"
                             ng-click="directToHome();">&ETH; HOME</button>
                         <button class="btn btn-default" ng-click="directToNearest()">&ETH; Nearest</button>
                         <button class="btn btn-danger" ng-click="autopilotStop()">STOP AP</button>
@@ -69,7 +91,7 @@
     </div>
 
 <!---->
-<div class="col-sm-6  col-xs-12" ng-class="forecastClassSelected" id="forecast_panel"> 
+<div class="col-sm-6  col-xs-12" id="forecast_panel"> 
     <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -129,7 +151,8 @@
     
                     <tr ng-repeat="point in route.points"
                     ng-click="directToWaypoint(route.index,point.index)"
-                    style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" ng-class="point.className" id="line_{{route.index}}_{{point.index}}">
+                    style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" id="line_{{route.index}}_{{point.index}}"
+                    data-keypad="tap" data-keypad-name="WP {{point.Cmt}}" data-keypad-order="{{1000 + route.index * 1000 + point.index}}">
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
                                 <i class="fa fa-location-arrow" aria-hidden="true"
                                     style="font-size: 32px;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>
@@ -250,7 +273,8 @@
     
     
                     <tr ng-repeat="point in airfields"
-                        ng-click="directToAirfield(point)"
+                        ng-click="directToAirfield(point)" id="airfield_{{$index}}"
+                        data-keypad="tap" data-keypad-name="AF {{point.Cmt}}" data-keypad-order="{{1000000 + $index}}"
                         style="margin: 0px;padding:0px;border-top: 1px #acacac;{{point.style}}">
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
                                 <i class="fa fa-location-arrow" aria-hidden="true"

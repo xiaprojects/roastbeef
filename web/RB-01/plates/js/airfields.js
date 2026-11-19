@@ -63,7 +63,6 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
     ];
 
     $scope.situation = window.situation;
-    $scope.scrollItemCounter = 0;
     $scope.GPSGroundSpeedReference = 200;
     $scope.gpx = { "routes": [] };
 
@@ -359,106 +358,14 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     $state.get('airfields').onExit = function () {
-        removeEventListener("keypad", keypadEventListener);
 		removeEventListener("SituationUpdated", situationUpdated);
     };
 
 
-    /*****************************************************
-     *  Keypad Management
-     */
-    $scope.redrawSelectedIndex = function () {
-
-            for (var y = 0; y < $scope.airfields.length; y++) {
-                // TODO: Add multi route scroll keypad
-                if ($scope.scrollItemCounter == y) {
-                    $scope.airfields[y].className = "keypadSelectedYesFull";
-                    document.getElementById("line_" + 0 + "_"+ y).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-
-                }
-                else {
-                    $scope.airfields[y].className = "keypadSelectedNo";
-                }
-            }
-    }
-
-
-    function keypadEventListener(event) {
-        if (($scope === undefined) || ($scope === null) || $state.current.controller!='AirfieldsCtrl'){
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
-        }
-
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
-        }
-        else
-        {
-            // user is changing screen
-            return;
-        }
-
-        switch (event.key) {
-            case KEYPAD_MAPPING_PREV:
-                $scope.autopilotSelectPrev();
-                break;
-            case KEYPAD_MAPPING_TAP:
-                $scope.autopilotSelectTap();
-                break;
-            case KEYPAD_MAPPING_NEXT:
-                $scope.autopilotSelectNext();
-                break;
-        }
-        
-    }
-
-
-
-    $scope.autopilotSelectPrev = function () {
-
-            $scope.scrollItemCounter--;
-            if ($scope.scrollItemCounter <0) {
-                $scope.scrollItemCounter = 0;
-                const proxy = new KeyboardEvent("keypad", { key: "from" });
-                dispatchEvent(proxy);
-            }
-            else {
-                $scope.redrawSelectedIndex();
-                $scope.$apply();
-            }
-        
-    }
-    $scope.autopilotSelectNext = function () {
-
-
-            $scope.scrollItemCounter++;
-
-            var availableItems = $scope.airfields.length;
-
-            if ($scope.scrollItemCounter >= availableItems) {
-                $scope.scrollItemCounter = availableItems -1;
-                const proxy = new KeyboardEvent("keypad", { key: "to" });
-                dispatchEvent(proxy);
-            }
-            else {
-                $scope.redrawSelectedIndex();
-                $scope.$apply();
-            }
-
-    }
-
-    $scope.autopilotSelectTap = function () {
-        switch ($scope.scrollItemCounter) {
-            default:
-                var availableItems = $scope.airfields.length;
-
-                if ($scope.scrollItemCounter < availableItems) {
-                    // TODO: support for multi routing keypad
-                    $scope.directToAirfield($scope.airfields[$scope.scrollItemCounter]);
-                }
-                break;
-        }
-        $scope.$apply();
-    }
+    // The knob: the sort toggle, then each airfield row; TAP on a row sets a direct-to it, as a
+    // touch does. No row has the focus on entry, so a stray press flies nowhere
+    // (docs/tech-debt/keypad-page-navigation.md, phase 5)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, "airfields");
 
     /*****************************************************
      * Replicate the AHRS
@@ -473,7 +380,6 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
     * Init
     */
 
-    addEventListener("keypad", keypadEventListener);
 
     //$scope.tickForAll();
 
@@ -509,7 +415,6 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
                 status.forEach(element => {
                     element.Cmt = formatAirfieldNameByItem(element);
                     element.QFU = calculateQFU(element);
-                    element.className ="keypadSelectedNo";
                     $scope.airfields.push(element);
                 });
                 $scope.calculateDistanceFromAirfields();
@@ -523,7 +428,6 @@ function AirfieldsCtrl($rootScope, $scope, $state, $http, $interval) {
                     //$scope.airfields[x].style =  x%2==0?"background-color:lightgray;":""
                     $scope.airfields[x].index=x;
                 }
-                $scope.airfields[0].className ="keypadSelectedYesFull";
                 // Trim the list to the first 50 results
                 if($scope.airfields.length>50){
                     $scope.airfields = $scope.airfields.slice(0, 50);

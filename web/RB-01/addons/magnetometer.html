@@ -11,11 +11,11 @@
     </div>
 
     <div class="addonMagLabelTopRight">
-        <div ng-click="toggleMode()">
+        <div ng-click="toggleMode()" data-keypad="tap">
             <div ng-if="items.calibratedMode" class="label label-success addonMagButton">CALIBRATED</div>
             <div ng-if="!items.calibratedMode" class="label label-info addonMagButton">RAW</div>
         </div>
-        <div ng-click="toggleCalibration()">
+        <div ng-click="toggleCalibration()" data-keypad="tap">
             <div ng-if="items.calibrating" class="label label-danger addonMagButton">STOP &amp; STORE</div>
             <div ng-if="!items.calibrating" class="label label-default addonMagButton">CALIBRATE</div>
         </div>
@@ -30,19 +30,19 @@
     <pre ng-if="items.showConfig" class="addonMagConfig" ng-click="toggleConfig()">{{items.config}}</pre>
 
     <div class="addonMagToolbar">
-        <div ng-click="toggleConfig()">
+        <div ng-click="toggleConfig()" data-keypad="tap">
             <div ng-if="items.showConfig" class="label label-primary addonMagButton">CLOSE</div>
             <div ng-if="!items.showConfig" class="label label-default addonMagButton">CONFIG</div>
         </div>
-        <div ng-click="toggleAutoCalibration()">
+        <div ng-click="toggleAutoCalibration()" data-keypad="tap">
             <div ng-if="items.calibrating" class="label label-success addonMagButton">AUTOCAL ON</div>
             <div ng-if="!items.calibrating" class="label label-default addonMagButton">AUTOCAL OFF</div>
         </div>
-        <div ng-click="resetCalibration()">
+        <div ng-click="resetCalibration()" data-keypad="tap">
             <div ng-if="items.confirmReset" class="label label-danger addonMagButton">CONFIRM RESET</div>
             <div ng-if="!items.confirmReset" class="label label-warning addonMagButton">RESET</div>
         </div>
-        <div ng-click="applyGpsTrackOffset()">
+        <div ng-click="applyGpsTrackOffset()" data-keypad="tap">
             <div class="label label-default addonMagButton">OFFSET FROM GPS TRACK</div>
         </div>
     </div>

@@ -238,6 +238,11 @@ MagnetometerFieldRenderer.prototype.dispose = function () {
 function MagnetometerCtrl($rootScope, $scope, $state, $http) {
 
     const name = "magnetometer";
+
+    // The knob: mode, calibrate, config, autocal, then RESET (two presses, as by touch) and the
+    // offset from the GPS track, which change the calibration, last. TAP is a touch
+    // (docs/tech-debt/keypad-page-navigation.md 3.4)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, name);
     const controllerName = String(name).charAt(0).toLocaleUpperCase() + String(name).slice(1) + "Ctrl";
 
     $state.get(name).onEnter = function () {

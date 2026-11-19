@@ -22,3 +22,11 @@
 .timerTriggered {
     background-color: #ff0000;
 }
+
+/* The round panel (square viewport): a timer's delete button at the right end of its heading is
+   off the glass near the top of the page, where no scroll can bring it in. Pull it inside */
+@media (min-aspect-ratio: 10/11) and (max-aspect-ratio: 11/10) {
+  [id^=timer_] .panel-heading .pull-right {
+    margin-right: 12%;
+  }
+}

@@ -216,41 +216,13 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
   };
 
   $state.get('charts').onExit = function () {
-    removeEventListener("keypad", keypadEventListener);
   };
 
-  
-  function keypadEventListener(event) {
-    if (($scope === undefined) || ($scope === null)) {
-        removeEventListener("keypad", keypadEventListener);
-        return; // we are getting called once after clicking away from the status page
-    }
-
-    if ($scope.keypadKnobTimerRemovePopup === undefined) {
-    }
-    else
-    {
-        // user is changing screen
-        return;
-    }
-
-    switch (event.key) {
-        case KEYPAD_MAPPING_PREV_MEDIA:
-        case KEYPAD_MAPPING_PREV:
-        case "ArrowUp":
-        case "ArrowLeft":
-            break;
-        case "Enter":
-        case " ":
-        case KEYPAD_MAPPING_TAP:
-            break;
-        case "ArrowDown":
-        case "ArrowRight":
-        case KEYPAD_MAPPING_NEXT_MEDIA:
-        case KEYPAD_MAPPING_NEXT:
-            break;
-    }
-}
+  // The knob: the chart list (TAP to edit, PREV / NEXT to choose: the chart reloads), KML, GPX,
+  // CSV, then each chart's Download. The old listener named KEYPAD_MAPPING_PREV_MEDIA and
+  // KEYPAD_MAPPING_NEXT_MEDIA, which do not exist, and was never registered
+  // (docs/tech-debt/keypad-page-navigation.md 3.4)
+  $scope.keypadFocus = new KeypadFocus($scope, $state, "charts");
 
 
 
@@ -288,8 +260,14 @@ function ChartsCtrl($rootScope, $scope, $state, $http, $interval) {
 
       Object.keys($scope.charts).forEach(function (groupName) {
 
-        // Time to create the div
-        $scope.charts[groupName] = new Chart(document.getElementById('chart_' + groupName), $scope.chartConfig[groupName]);
+        // Time to create the div. A canvas drawn before (another chart chosen in the list)
+        // must give up its chart first, or Chart.js throws "Canvas is already in use"
+        const canvas = document.getElementById('chart_' + groupName);
+        const drawn = canvas !== null && typeof Chart.getChart === "function" ? Chart.getChart(canvas) : undefined;
+        if (drawn !== undefined) {
+          drawn.destroy();
+        }
+        $scope.charts[groupName] = new Chart(canvas, $scope.chartConfig[groupName]);
       });
 
 

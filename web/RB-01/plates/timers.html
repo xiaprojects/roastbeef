@@ -1,27 +1,27 @@
 <div ui-content-for="title">Timers</div>
-	<div class="panel-group col-sm-12" id="timer_clock">
+	<div class="panel-group col-sm-12" id="timer_clock" style="padding: 0px;margin:0px;padding-left: 2px;padding-right: 2px;">
 		<div class="panel panel-default">
 			<div class="panel-heading">UTC Time</div>
 			<div class="panel-body text-center">
 				<div class="form-group" style="padding: 0px;margin:0px;">
-					<span style="font-size: 10vmax">{{clockText}}</span>
+					<span style="font-size: 10vmax;line-height: 0.6;">{{clockText}}</span>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-sm-6" ng-repeat="timer in timers">
-		<div class=" {{timer.className}}" id="timer_{{timer.timerId}}">
+	<div class="col-sm-6" ng-repeat="timer in timers" style="padding: 0px;margin:0px;padding-left: 2px;padding-right: 2px;">
+		<div id="timer_{{timer.timerId}}">
 			<div class="panel panel-default  {{timer.triggered}}">
 				<div class="panel-heading">{{timer.name}}<a ng-click="dropTimer(timer.timerId)"
-						class="btn pull-right"><i style="font-size: 24px;padding: 0px;margin:0px;"
+						class="btn pull-right" data-keypad="tap" data-keypad-name="{{timer.name}} DELETE" data-keypad-order="{{$index * 10 + 9}}"><i style="font-size: 24px;padding: 0px;margin:0px;"
 							class="fa fa-trash"></i></a></div>
 				<div class="panel-body text-center">
-					<div class2=" col-sm-12" style="padding: 0px;margin:0px;font-size: 12cqmin;">
+					<div class2=" col-sm-12" style="padding: 0px;margin:0px;font-size: 12cqmin;line-height: 1;">
 						{{timer.text}}
 					</div>
 					<div  class="col-sm-6 col-xs-6">
-						<a ng-click="timerStart(timer)" class="btn btn-primary btn-block"
+						<a ng-click="timerStart(timer)" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="{{timer.name}} {{timer.Status==false?'START':'STOP'}}" data-keypad-order="{{$index * 10 + 1}}"
 							style="background-color: {{timer.Status==false?'green':'orange'}};"><i
 								class="fa {{timer.Status==false?'fa-play':'fa-stop'}}"></i>
 							{{timer.Status==false?"START":"STOP"}}</a>
@@ -30,17 +30,17 @@
 
 
 					<div  class="col-sm-6 col-xs-6" style="display: {{timer.Status==true?'none':'block'}};">
-						<a ng-click="timerSwitch(timer)" ng-disabled="timer.Status==true"class="btn btn-primary btn-block" >
+						<a ng-click="timerSwitch(timer)" ng-disabled="timer.Status==true" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="{{timer.name}} MODE" data-keypad-order="{{$index * 10 + 2}}">
 							<i class="fa fa-refresh"></i> {{timer.CountDown==0?'TIMER':'CHRNO'}}</a>
 					</div>
 
 					<div  class="col-sm-3 col-xs-3" style="display: {{timer.Status==true && timer.CountDown>0?'blocl':'none'}};">
 						<a ng-click="timerCountdownIncrease(timer,-5)" ng-disabled="timer.CountDown<300"
-							ng-show="timer.CountDown>0" class="btn btn-primary btn-block">-5</a>
+							ng-show="timer.CountDown>0" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="{{timer.name}} -5" data-keypad-order="{{$index * 10 + 3}}">-5</a>
 							</div>
 
 							<div  class="col-sm-3 col-xs-3" style="display: {{timer.Status==true && timer.CountDown>0?'blocl':'none'}};">
-								<a ng-click="timerCountdownIncrease(timer,5)" ng-show="timer.CountDown>0" class="btn btn-primary btn-block">+5</a>
+								<a ng-click="timerCountdownIncrease(timer,5)" ng-show="timer.CountDown>0" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="{{timer.name}} +5" data-keypad-order="{{$index * 10 + 4}}">+5</a>
 					</div>
 				</div>
 			</div>
@@ -49,12 +49,12 @@
 </div>
 <div>&nbsp;</div>
 <div class="col-sm-6">
-	<div class="panel-group col-sm-12 {{scrollItemCounter>0?'keypadSelectedYes':'keypadSelectedNo'}}" id="timer_create">
+	<div class="panel-group col-sm-12" id="timer_create">
 		<div class="panel panel-default ">
 			<div class="panel-heading">Timer</div>
 			<div class="panel-body text-center">
 				<div class="panel-group col-sm-12">
-					<a ng-click="timerCreate()" class="btn btn-primary btn-block">Create new timer</a>
+					<a ng-click="timerCreate()" class="btn btn-primary btn-block" data-keypad="tap" data-keypad-name="CREATE" data-keypad-order="100000">Create new timer</a>
 				</div>
 			</div>
 		</div>

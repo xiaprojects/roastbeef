@@ -47,6 +47,15 @@ function ExampleCtrl($rootScope, $scope, $state, $http, $interval) {
     const name = "example";
     const controllerName = String(name).charAt(0).toLocaleUpperCase()+String(name).slice(1) +"Ctrl";
 
+    // The knob (docs/tech-debt/keypad-page-navigation.md 3.3). Mark each control in the template
+    // with data-keypad="tap" (TAP clicks it) or data-keypad="adjust" (a <select>, a range input,
+    // or data-keypad-name with an adjust function below), then create the helper. This plate
+    // has nothing to operate, so it stays commented:
+    // $scope.keypadFocus = new KeypadFocus($scope, $state, name, {
+    //     adjust: { qnh: function (direction) { /* -1 or +1 */ } },
+    //     direct: function (key) { return false; /* true when the page used the key itself */ }
+    // });
+
     $state.get(name).onEnter = function () {
         console.log("onEnter" + name);
     };

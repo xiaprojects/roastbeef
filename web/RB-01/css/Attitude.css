@@ -128,7 +128,10 @@
     font-weight: bolder;
     color: white;
     top: 45%;
-    right: 88cqmin;
+    /* Anchored to the speed tape (left: 6%), not to the right edge: with a
+       right offset in cqmin the box drifted to the middle whenever the plate
+       is wider than tall. Never left of the edge, where a round panel cuts it. */
+    left: max(0px, calc(6% - 8cqmin - 8px));
     width: 14cqmin;
     text-align: right;
 }
@@ -612,4 +615,64 @@
 .attitude-wind-arrow.attitude-wind-invalid::before,
 .attitude-wind-arrow.attitude-wind-invalid::after {
     visibility: hidden;
+}
+/* Synthetic view overlay: only the marks (horizon line, roll scale + pointer,
+   slip/skid bar, heading tape) over the 3D scene. Set by SixPackInstrumentAttitude
+   from the host's instruments entry (overlay: true); false everywhere else. */
+.attitude.attitude-overlay {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    aspect-ratio: auto;
+    border-radius: 0;
+    background: transparent;
+}
+
+.attitude-overlay .attitude-rollpitch {
+    background-color: transparent;
+}
+
+.attitude-overlay .attitude-rollpitch-sky {
+    background-color: transparent;
+}
+
+.attitude-overlay .attitude-rollpitch-terrain {
+    background-color: transparent;
+    border-top: 3px solid white;
+}
+
+.attitude-overlay .attitude-rollpitch-numbers,
+.attitude-overlay .attitude-doughnut,
+.attitude-overlay .attitude-doughnut-inside,
+.attitude-overlay .attitude-fail {
+    display: none;
+}
+
+/* The sky pointer is painted into the centre artwork, in its top 15 %: keep that
+   and clip away the aircraft symbol below it */
+.attitude-overlay .attitude-center {
+    clip-path: inset(0 0 85% 0);
+}
+
+/* Heading tape without the panel behind it, and the lubber triangle that
+   .attitude-heading (standalone only) would otherwise draw */
+.attitude-overlay .attitude-bottom-bar > div {
+    background-color: transparent !important;
+}
+
+.attitude-overlay::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -2cqmin;
+    border-left: 2cqmin solid transparent;
+    border-right: 2cqmin solid transparent;
+    border-top: 3cqmin solid white;
+}
+
+/* The tape's translateX is in cqmin, which puts the lubber line 50cqmin in: that
+   is mid-screen only on a square. Move the bar by the extra half width. */
+.attitude-overlay .attitude-bottom-bar {
+    left: calc(50cqw - 50cqmin);
 }

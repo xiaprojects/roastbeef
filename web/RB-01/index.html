@@ -18,13 +18,13 @@
 	<link rel="stylesheet" href="css/Attitude.css" />
 	<link rel="stylesheet" href="css/Speed.css" />
 	<link rel="stylesheet" href="css/Gyro.css" />
+	<link rel="stylesheet" href="css/Hsi.css" />
 	<link rel="stylesheet" href="css/EMS.css" />
 	<link rel="stylesheet" href="css/EMSEGT.css" />
 	<link rel="stylesheet" href="css/Radar.css" />
 	<link rel="stylesheet" href="css/Aircraft.css" />
 	<link rel="stylesheet" href="css/Sixpack.css" />
 	<link rel="stylesheet" href="css/Switchboard.css" />
-	<link rel="stylesheet" href="css/ahrs.css" />
 	<link rel="stylesheet" href="css/timers.css" />
 	<link rel="stylesheet" href="css/ol.css" />
 	<link rel="stylesheet" href="css/ol-layerswitcher.css" />
@@ -69,6 +69,7 @@
 	<script src="js/global.js"></script>
 	<script src="services/servicekeypad.js"></script>
 	<script src="services/servicealerts.js"></script>
+	<script src="services/servicetimers.js"></script>
 	<script src="services/serviceautopilot.js"></script>
 	<script src="services/variation.js"></script>
 	<script src="services/windestimator.js"></script>
@@ -83,10 +84,9 @@
 	<script src="services/servicebridge.js"></script>
 	<script src="js/startup.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/keypadfocus.js"></script>
 
 
-	<script src="js/ahrs.js"></script>
-	<script src="js/svg.min.js"></script>
 	<script src="js/ol.js"></script>
 	<script src="js/olms.js"></script>
 	<script src="js/ol-layerswitcher.js"></script>
@@ -129,6 +129,11 @@
 	<!-- alertsModal -->
 	<div id="alertsModal"></div>
 	<audio id="audioproxy"></audio>
+		<!-- Top bar: status values; bottom bar: soft keys. docs/tech-debt/top-bottom-bars.md -->
+		<div class="navbar navbar-app navbar-absolute-top rb-bar rb-bar-top" ng-if="barsAllowed && uiSidebarTop"
+			ng-include="'plates/sidetop.html'" ng-controller="TopBarCtrl"></div>
+		<div class="navbar navbar-app navbar-absolute-bottom rb-bar rb-bar-bottom" ng-if="barsAllowed && uiSidebarBottom"
+			ng-include="'plates/sidebottom.html'" ng-controller="BottomBarCtrl"></div>
 	<!-- Define Left (Menu) Sidebar Navigation -->
 	<div ui-track-as-search-param='true' class="sidebar sidebar-left">
 		<div class="scrollable">
@@ -189,11 +194,6 @@
 		<a class="fabNavigation fabSouth semiroundbottom" ng-click="fabClick('S',this,$event);" ng-if="barsAllowed && !uiSidebarBottom">
 			<i class="fa fa-caret-up"></i>
 		</a>
-		<!-- Top bar: status values; bottom bar: soft keys. docs/tech-debt/top-bottom-bars.md -->
-		<div class="navbar navbar-app navbar-absolute-top rb-bar rb-bar-top" ng-if="barsAllowed && uiSidebarTop"
-			ng-include="'plates/sidetop.html'" ng-controller="TopBarCtrl"></div>
-		<div class="navbar navbar-app navbar-absolute-bottom rb-bar rb-bar-bottom" ng-if="barsAllowed && uiSidebarBottom"
-			ng-include="'plates/sidebottom.html'" ng-controller="BottomBarCtrl"></div>
 
 		<!-- App Body -->
 		<div class="app-body">

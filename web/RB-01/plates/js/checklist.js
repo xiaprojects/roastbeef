@@ -34,6 +34,15 @@
 */
 
 angular.module('appControllers').controller('CheckCtrl', CheckCtrl); // get the main module controllers set
+
+// Check values in bridge order: CHECKLIST_{SECTION}_{INDEX} carries the position in this list
+var CHECKLIST_BRIDGE_VALUES = ["todo", "pass", "skip", "fail", "test"];
+// A check counts as completed when PASS or SKIP
+var CHECKLIST_COMPLETED_VALUES = ["pass", "skip"];
+
+function checklistValueIndex(value) {
+    return CHECKLIST_BRIDGE_VALUES.indexOf(value);
+}
 CheckCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval']; // Inject my dependencies
 
 
@@ -73,7 +82,7 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
 
-    $scope.updateStatusForItem = function (check) {
+    $scope.updateStatusForItem = function (check, groupId, checkId) {
         check.date = new Date().toISOString()
         check.dateParsed = textBySeconds(new Date(check.date).getHours() * 60 + new Date(check.date).getMinutes());
         var msg = JSON.stringify($scope.data_list);
@@ -82,81 +91,120 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
         }, function (response) {
             // do nothing
         });
+        $scope.postBridgeValue(check, groupId, checkId);
         return check;
     }
 
-
-
-
-    $scope.checklistSelectNext = function () {
-        for (var groupId = 0; groupId < $scope.data_list.length; groupId++) {
-            for (var checkId = 0; checkId < $scope.data_list[groupId].items.length; checkId++) {
-                if ($scope.data_list[groupId].items[checkId].isselected == "keypadSelectedYes") {
-                    if (checkId == $scope.data_list[groupId].items.length - 1) {
-                        if (groupId < $scope.data_list.length - 1) {
-                            $scope.data_list[groupId].items[checkId].isselected = "keypadSelectedNo";
-                            $scope.data_list[groupId + 1].items[0].isselected = "keypadSelectedYes";
-                            $scope.$apply();
-                            $scope.scrollItemCounter = 0;
-                            return;
-                        }
-                        else {
-
-                        }
-                    }
-                    else {
-                        $scope.data_list[groupId].items[checkId].isselected = "keypadSelectedNo";
-                        $scope.data_list[groupId].items[checkId + 1].isselected = "keypadSelectedYes";
-
-                        document.getElementById("status_" + (checkId + 1)).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-                        $scope.$apply();
-                        $scope.scrollItemCounter = 0;
-                        return;
-                    }
-                }
-            }
+    // Publish one check on the bridge: "CHECKLIST_{SECTION}_{INDEX}" = position of the
+    // value in checklistValues (0 todo, 1 pass, 2 skip, 3 fail, 4 test).
+    // The aircraft page counts the completed checks from these keys.
+    $scope.postBridgeValue = function (check, groupId, checkId) {
+        if (groupId === undefined || checkId === undefined) {
+            return;
         }
-        $scope.scrollItemCounter++;
-        if ($scope.scrollItemCounter > 1) {
-            const proxy = new KeyboardEvent("keypad", { key: "to" });
-            dispatchEvent(proxy);
+        var valueId = checklistValueIndex(check.value);
+        if (valueId < 0) {
+            return;
         }
+        var msg = {};
+        msg["CHECKLIST_" + groupId + "_" + checkId] = valueId;
+        $http.post(URL_BRIDGE_FLOAT_SET, JSON.stringify(msg)).then(function (response) {
+            // do nothing
+        }, function (response) {
+            // do nothing
+        });
     }
 
 
-    $scope.checklistSelectPrev = function () {
+
+
+    // The knob's place: a row of the checklist, {group, item}. Kept here and not in the checks'
+    // own isselected, which is saved with the checklist: the place would go to the daemon on
+    // every TAP, be shared by every display, light several rows, or none on a checklist saved
+    // without one. On the root scope, so that the pilot comes back to the row they left.
+    // docs/tech-debt/keypad-page-navigation.md
+    $rootScope.checklistKnob = $rootScope.checklistKnob || { group: 0, item: 0 };
+
+    // Every row the knob stops at, in reading order
+    function checklistKnobStops() {
+        var stops = [];
         for (var groupId = 0; groupId < $scope.data_list.length; groupId++) {
-            for (var checkId = 0; checkId < $scope.data_list[groupId].items.length; checkId++) {
-                if ($scope.data_list[groupId].items[checkId].isselected == "keypadSelectedYes") {
-
-                    if (checkId == 0) {
-                        if (groupId > 0) {
-                            $scope.data_list[groupId].items[checkId].isselected = "keypadSelectedNo";
-                            $scope.data_list[groupId - 1].items[$scope.data_list[groupId - 1].items.length - 1].isselected = "keypadSelectedYes";
-                            $scope.$apply();
-                            $scope.scrollItemCounter = 0;
-                            return;
-                        }
-                    }
-                    else {
-
-
-                        $scope.data_list[groupId].items[checkId].isselected = "keypadSelectedNo";
-                        $scope.data_list[groupId].items[checkId - 1].isselected = "keypadSelectedYes";
-
-                        document.getElementById("status_" + (checkId - 1)).scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-                        $scope.$apply();
-                        $scope.scrollItemCounter = 0;
-                        return;
-                    }
-
-                }
+            var items = $scope.data_list[groupId].items || [];
+            for (var checkId = 0; checkId < items.length; checkId++) {
+                stops.push({ group: groupId, item: checkId });
             }
         }
-        $scope.scrollItemCounter--;
-        if ($scope.scrollItemCounter < -1) {
-            const proxy = new KeyboardEvent("keypad", { key: "from" });
-            dispatchEvent(proxy);
+        return stops;
+    }
+
+    // Where the knob is in the list; a checklist that changed under it keeps it on a row
+    function checklistKnobIndex(stops) {
+        var knob = $rootScope.checklistKnob;
+        var here = stops.findIndex(function (stop) {
+            return stop.group == knob.group && stop.item == knob.item;
+        });
+        if (here < 0 && stops.length > 0) {
+            here = stops.length - 1;
+            $rootScope.checklistKnob = { group: stops[here].group, item: stops[here].item };
+        }
+        return here;
+    }
+
+    $scope.knobClass = function (groupId, checkId) {
+        var knob = $rootScope.checklistKnob;
+        return (knob.group == groupId && knob.item == checkId) ? "keypadSelectedYes" : "keypadSelectedNo";
+    }
+
+    // One row per press, and stop at both ends (D2): a knob turned too far changes nothing
+    function checklistKnobMove(direction) {
+        var stops = checklistKnobStops();
+        var here = checklistKnobIndex(stops);
+        if (here < 0) {
+            return;
+        }
+        var next = Math.min(stops.length - 1, Math.max(0, here + direction));
+        $rootScope.checklistKnob = { group: stops[next].group, item: stops[next].item };
+    }
+
+    // The knob's row on the glass, centred when near or past an edge: the round panel cuts
+    // the top and the bottom of the scroll area
+    function checklistShowKnob() {
+        var knob = $rootScope.checklistKnob;
+        var row = document.querySelector("[ui-view] #check_" + knob.group + "_" + knob.item);
+        if (row === null) {
+            return;
+        }
+        var box = row.getBoundingClientRect();
+        var margin = window.innerHeight * 0.2;
+        if (box.top < margin || box.bottom > window.innerHeight - margin) {
+            row.scrollIntoView({ behavior: "instant", block: "center", inline: "nearest" });
+        }
+    }
+
+    $scope.checklistSelectNext = function () {
+        checklistKnobMove(1);
+    }
+
+    $scope.checklistSelectPrev = function () {
+        checklistKnobMove(-1);
+    }
+
+    // TAP: the next status of the knob's row, as choosing it in the row's list does
+    $scope.checklistSelectTap = function () {
+        var stops = checklistKnobStops();
+        var here = checklistKnobIndex(stops);
+        if (here >= 0) {
+            $scope.cycleStatus(stops[here].group, stops[here].item);
+        }
+    }
+
+    // A list a finger opened keeps the focus after the choice, and a focused list takes no
+    // keypad key (servicekeypad.js, F2): give the knob its keys back
+    $scope.statusChosen = function (check, groupId, checkId) {
+        $rootScope.checklistKnob = { group: groupId, item: checkId };
+        $scope.updateStatusForItem(check, groupId, checkId);
+        if (document.activeElement && document.activeElement.tagName == "SELECT") {
+            document.activeElement.blur();
         }
     }
 
@@ -180,13 +228,13 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
             if ($scope.data_list[groupId].items[checkId].value == $scope.checklistValues[valueId].value) {
                 if (valueId < $scope.checklistValues.length - 1) {
                     $scope.data_list[groupId].items[checkId].value = $scope.checklistValues[valueId + 1].value
-                    $scope.updateStatusForItem($scope.data_list[groupId].items[checkId]);
+                    $scope.updateStatusForItem($scope.data_list[groupId].items[checkId], groupId, checkId);
                     break;
 
                 }
                 else {
                     $scope.data_list[groupId].items[checkId].value = $scope.checklistValues[0].value
-                    $scope.updateStatusForItem($scope.data_list[groupId].items[checkId]);
+                    $scope.updateStatusForItem($scope.data_list[groupId].items[checkId], groupId, checkId);
                     break;
                 }
 
@@ -197,43 +245,40 @@ function CheckCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     // Bridge from servicekeypad
-    addEventListener("keypad",keypadEventListener);
+    addEventListener("keypad", keypadEventListener);
     // Keypad Listener with supported keys
-    function keypadEventListener(event){
+    function keypadEventListener(event) {
         if (($scope === undefined) || ($scope === null) || $state.current.controller != 'CheckCtrl') {
-            removeEventListener("keypad", keypadEventListener);
-            return; // we are getting called once after clicking away from the status page
+            return; // not the routed plate: $destroy removes this listener
         }
-        
-        if ($scope.keypadKnobTimerRemovePopup === undefined) {
+        if ($scope.keypadKnobTimerRemovePopup !== undefined) {
+            return; // user is changing screen
         }
-        else
-        {
-            // user is changing screen
-            return;
+        var turn = function () {
+            switch (event.key) {
+                case KEYPAD_MAPPING_PREV:
+                    $scope.checklistSelectPrev();
+                    break;
+                case KEYPAD_MAPPING_TAP:
+                    $scope.checklistSelectTap();
+                    break;
+                case KEYPAD_MAPPING_NEXT:
+                    $scope.checklistSelectNext();
+                    break;
+            }
+        };
+        if ($scope.$root.$$phase) {
+            turn();
+        } else {
+            $scope.$apply(turn);
         }
-
-        switch (event.key) {
-            case KEYPAD_MAPPING_PREV:
-                $scope.checklistSelectPrev();
-                break;
-            case KEYPAD_MAPPING_TAP:
-                for (var groupId = 0; groupId < $scope.data_list.length; groupId++) {
-                    for (var checkId = 0; checkId < $scope.data_list[groupId].items.length; checkId++) {
-                        if ($scope.data_list[groupId].items[checkId].isselected == "keypadSelectedYes") {
-                            $scope.cycleStatus(groupId, checkId);
-                        }
-                    }
-                }
-                $scope.$apply();
-                break;
-            case KEYPAD_MAPPING_NEXT:
-                $scope.checklistSelectNext();
-                break;
-        }
+        checklistShowKnob();
     }
 
-
+    // A left plate must not hear the knob: on a return its stale list would be posted back
+    $scope.$on('$destroy', function () {
+        removeEventListener("keypad", keypadEventListener);
+    });
 
     $scope.refreshChecklist = function () {
         $http.get(URL_CHECKLIST_GET).then(function (response) {

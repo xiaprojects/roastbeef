@@ -5,8 +5,7 @@
         <div class="panel panel-default">
             <div class="panel-heading" style="margin-left: 20px;margin-right: 6px;">
                 Airfields
-                <a ng-click="airfieldsSortByDistance=false;airfieldsReload()" ng-show="airfieldsSortByDistance == true" class="label label-success pull-right">SORT BY DISTANCE</a>
-                <a ng-click="airfieldsSortByDistance=true;airfieldsReload()" ng-show="airfieldsSortByDistance == false" class="label label-default pull-right">SORT BY NAME</a>
+                <a ng-click="airfieldsSortByDistance=!airfieldsSortByDistance;airfieldsReload()" class="label {{airfieldsSortByDistance ? 'label-success' : 'label-default'}} pull-right" data-keypad="tap">{{airfieldsSortByDistance ? 'SORT BY DISTANCE' : 'SORT BY NAME'}}</a>
                 
             </div>
             <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
@@ -32,7 +31,7 @@
     
                     <tr ng-repeat="point in airfields"
                         ng-click="directToAirfield(point)"
-                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" ng-class="point.className" id="line_0_{{point.index}}">
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;{{point.style}}" id="line_0_{{point.index}}" data-keypad="tap" data-keypad-name="{{point.Cmt}}">
                         <td class="text-center" style="margin: 0px;padding:0px;border-right: 1px #acacac solid;">
                                 <i class="fa fa-location-arrow" aria-hidden="true"
                                     style="font-size: 4cqmin;transform: rotate({{point.trk.toFixed(0)-45}}deg);"></i>
