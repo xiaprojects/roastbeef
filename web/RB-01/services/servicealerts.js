@@ -52,6 +52,11 @@ const ALERTS_RECONNECT_SECONDS = 1;
 // An alert coming back replays the alarm only if it was inactive for this long
 // An engine rule at the edge of a band comes back every few seconds
 var ALERT_REPLAY_CLEAR_SECONDS = 60;
+// An alerts socket that closes means no alert can reach the pilot any more: that is an avionics failure
+// EVENT_TYPE_SYSTEM_DANGER, and the row to use if the mapping never came because the daemon is gone
+const AVIONICS_MALFUNCTION_TYPE = 3;
+const AVIONICS_MALFUNCTION_TITLE = "AVIONICS MALFUNCTION";
+const AVIONICS_MALFUNCTION_ROW = { Text: "Danger", Icon: "danger", Sound: "danger" };
 
 /**
  * AlertsService Service Class
@@ -105,9 +110,13 @@ function AlertsService($scope, $http) {
      * showAlertBalloon: one line, colored by severity in alerts.css, closed by the timer or by a click
      * @param {*} alertTitle - Title of the alert, if any
      * @param {*} row - Row of the mapping, undefined if the event type is unknown
+     * @param {*} sticky - True: no timer, it stays until a click or until the cause is gone, and no other balloon covers it
      */
-    function showAlertBalloon(alertTitle, row) {
+    function showAlertBalloon(alertTitle, row, sticky) {
         var severity = row !== undefined ? row.Icon : "warning";
+        if (alertBalloon !== null && !sticky && alertBalloon.dataset.sticky === "true") {
+            return;
+        }
         if (alertBalloon !== null
             && ALERT_BALLOON_SEVERITY.indexOf(alertBalloon.dataset.severity) > ALERT_BALLOON_SEVERITY.indexOf(severity)) {
             return;
@@ -116,6 +125,7 @@ function AlertsService($scope, $http) {
         alertBalloon = document.createElement("div");
         alertBalloon.className = "alertsballoon " + severity;
         alertBalloon.dataset.severity = severity;
+        alertBalloon.dataset.sticky = sticky ? "true" : "false";
         alertBalloon.textContent = alertTitle || (row !== undefined ? row.Text : "") || "Alert";
         alertBalloon.onclick = hideAlertBalloon;
         document.getElementById("alertsModal").appendChild(alertBalloon);
@@ -126,7 +136,9 @@ function AlertsService($scope, $http) {
             alertBalloon.style.fontSize = fontSize + "px";
         }
 
-        alertBalloonTimer = setTimeout(hideAlertBalloon, ALERT_BALLOON_SECONDS * 1000);
+        if (!sticky) {
+            alertBalloonTimer = setTimeout(hideAlertBalloon, ALERT_BALLOON_SECONDS * 1000);
+        }
     }
 
     /**
@@ -136,7 +148,21 @@ function AlertsService($scope, $http) {
      * @param {*} newUrl - Future implemetantion, if any redirect the user to the scree, useful for EMS and Dangerous things
      */
     $scope.pushAlert = function (alertType, alertTitle, newUrl) {
-        var row = alertMappingRow(alertType);
+        raiseAlert(alertMappingRow(alertType), alertTitle, false);
+
+        // Goto Page
+        if(newUrl !== undefined && newUrl.length>0){
+            document.location = newUrl;
+        }
+    }
+
+    /**
+     * raiseAlert: sound, bell and balloon of one alert
+     * @param {*} row - Row of the mapping, undefined if the event type is unknown
+     * @param {*} alertTitle - Title of the balloon to be displayed
+     * @param {*} sticky - True: the balloon stays, see showAlertBalloon
+     */
+    function raiseAlert(row, alertTitle, sticky) {
         if (row !== undefined && row.Sound !== undefined && row.Sound.length > 0) {
             // AudioProxy HTML Item is in index.html
 
@@ -155,15 +181,70 @@ function AlertsService($scope, $http) {
         // Turn on the bell
         $scope.alarmIsLit = true;
 
-        showAlertBalloon(alertTitle, row);
+        showAlertBalloon(alertTitle, row, sticky);
+    }
 
-        // Goto Page
-        if(newUrl !== undefined && newUrl.length>0){
-            document.location = newUrl;
+    var alertsLinksOpen = {}; // socket name to true while it is open
+    var avionicsMalfunction = false; // raised, and not yet cleared by both sockets opening again
+    var pageUnloading = false; // leaving the page closes the sockets too, that is no failure
+    window.addEventListener("beforeunload", function () { pageUnloading = true; });
+    window.addEventListener("pagehide", function () { pageUnloading = true; });
+
+    /**
+     * alertsLinkOpened: both alert sockets open again clear the malfunction balloon
+     * @param {*} name - "alerts" or "list"
+     */
+    function alertsLinkOpened(name) {
+        alertsLinksOpen[name] = true;
+        if (avionicsMalfunction && alertsLinksOpen.alerts && alertsLinksOpen.list) {
+            avionicsMalfunction = false;
+            if (alertBalloon !== null && alertBalloon.dataset.sticky === "true") {
+                hideAlertBalloon();
+            }
         }
     }
 
+    /**
+     * alertsLinkClosed: an open alert socket that closes raises the red AVIONICS MALFUNCTION at once
+     * Once per outage: the reconnection attempts that fail never opened, so they raise nothing
+     * @param {*} name - "alerts" or "list"
+     */
+    function alertsLinkClosed(name) {
+        var wasOpen = alertsLinksOpen[name] === true;
+        alertsLinksOpen[name] = false;
+        if (!wasOpen || avionicsMalfunction || pageUnloading) {
+            return;
+        }
+        avionicsMalfunction = true;
+        // The close comes outside any digest, the bell needs one
+        $scope.$applyAsync(function () {
+            raiseAlert(alertMappingRow(AVIONICS_MALFUNCTION_TYPE) || AVIONICS_MALFUNCTION_ROW, AVIONICS_MALFUNCTION_TITLE, true);
+        });
+    }
+
     var alertStates = null; // Id to {active, clearedAt}, null until the first answer
+    // Id to true for the alerts raised, or raised again, since the pilot last saw the alerts page
+    var alertsUnseen = {};
+    var alertsOnScreen = false; // The alerts page is open: whatever comes is seen
+
+    /**
+     * alertsSeen: the alerts page opens (true) or closes (false); opening it sees every alert
+     * @param {*} onScreen - True while the alerts page is shown
+     */
+    $scope.alertsSeen = function (onScreen) {
+        alertsOnScreen = onScreen === true;
+        if (alertsOnScreen) {
+            alertsUnseen = {};
+        }
+    };
+
+    /**
+     * alertUnseen: the alert came, or came back, after the pilot last opened the alerts page
+     * @param {*} alert - An alert of the list
+     */
+    $scope.alertUnseen = function (alert) {
+        return alert !== undefined && alert !== null && alertsUnseen[alert.Id] === true;
+    };
 
     /**
      * followAlerts: compare the list with the previous one and replay the alarm of an alert coming back
@@ -173,12 +254,18 @@ function AlertsService($scope, $http) {
     function followAlerts(list) {
         var now = Date.now();
         var states = {};
+        var unseen = {};
         list.forEach(function (alert) {
             if (alert.Id === undefined) {
                 return;
             }
             var state = { active: alert.Active === true, clearedAt: now };
             var known = alertStates === null ? undefined : alertStates[alert.Id];
+            // New, or active again: unseen until the alerts page is opened
+            if (!alertsOnScreen && (alertsUnseen[alert.Id] === true || known === undefined
+                || (state.active && !known.active))) {
+                unseen[alert.Id] = true;
+            }
             if (known !== undefined && known.active === state.active) {
                 state.clearedAt = known.clearedAt;
             }
@@ -189,6 +276,7 @@ function AlertsService($scope, $http) {
             states[alert.Id] = state;
         });
         alertStates = states;
+        alertsUnseen = unseen;
     }
 
     /**
@@ -198,7 +286,12 @@ function AlertsService($scope, $http) {
     function connectList() {
         var listSocket = new WebSocket(URL_ALERTS_LIST_WS);
 
+        listSocket.onopen = function (msg) {
+            alertsLinkOpened("list");
+        };
+
         listSocket.onclose = function (msg) {
+            alertsLinkClosed("list");
             setTimeout(connectList, ALERTS_RECONNECT_SECONDS * 1000);
         };
 
@@ -229,9 +322,11 @@ function AlertsService($scope, $http) {
 
 
         $scope.alertsSocket.onopen = function (msg) {
+            alertsLinkOpened("alerts");
         };
 
         $scope.alertsSocket.onclose = function (msg) {
+            alertsLinkClosed("alerts");
 
             delete $scope.alertsSocket;
             setTimeout(function () { connect($scope); }, 1000);

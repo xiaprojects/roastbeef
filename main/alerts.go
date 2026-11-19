@@ -46,7 +46,7 @@ const (
 	EVENT_TYPE_EMS_GENERIC_FAILURE		= 13
 	EVENT_TYPE_EMS_RULE_YELLOW            = 14
 	EVENT_TYPE_EMS_RULE_RED               = 15
-	// 16 is EVENT_TYPE_GPS_NOT_FIXED in the mapping, with no constant here
+	EVENT_TYPE_GPS_NOT_FIXED              = 16
 	EVENT_TYPE_TERRAIN_CAUTION            = 17
 	EVENT_TYPE_TERRAIN_WARNING            = 18
 	EVENT_TYPE_TERRAIN_UNAVAILABLE        = 19
