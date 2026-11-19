@@ -39,6 +39,7 @@
         - Interpolate the situation, which the log only holds at 1 Hz
         - Repeat the status, which the log only holds every 30 s
         - Every clock keeps running forward across a loop
+        - The last frame of each stream stays readable in simulatorReplay.lastFrames
 
     simulatorReplay.speed on the browser console runs it faster.
 */
@@ -151,6 +152,7 @@ ReplayPlayer.prototype = {
                 frame[name] = this.time(frame[name]);
             }
         });
+        this.lastFrames[path] = frame;
         const text = JSON.stringify(frame);
         loopbackPush(path, text);
         if (path == "/traffic") {
@@ -195,6 +197,7 @@ ReplayPlayer.prototype = {
             // GPS clock of the wind estimator is left alone: it keeps its own
             // time from GPSLastFixSinceMidnightUTC, and resets on a replay restart.
             this.clockShift += this.duration + REPLAY_LOOP_GAP;
+            this.loops++;
             this.rewind();
         }
         Object.keys(this.streams).forEach(path => {
@@ -224,6 +227,10 @@ function ReplayPlayer(replay) {
     this.duration = replay.duration;
     this.speed = 1;
     this.clockShift = 0;    // seconds added to every clock, grows by a flight on each loop
+    this.loops = 0;         // times the flight has started again
+    // path -> the last frame sent on it, for the simulated equipment that listens
+    // to the aircraft (servicevorreceiver.js, serviceengine.js)
+    this.lastFrames = {};
     this.rewind();
 }
 

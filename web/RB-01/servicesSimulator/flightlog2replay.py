@@ -42,8 +42,8 @@ from flightlog import FlightLog, STREAMS  # noqa: E402
 DEFAULT_OUT = os.path.join(HERE, "..", "..", "settings", "replay.json")
 
 # table -> key of a stream with one state per target. /bridge/float/ws is left out
-# on purpose: only addons read it, simulator.html lists none, and it is by far the
-# busiest table of a recent log.
+# on purpose: it is by far the busiest table of a recent log, and in the simulator
+# the bridge belongs to servicevorreceiver.js, which hears the pilot's tuning.
 KEYS = {"mySituation": None, "traffic": "Icao_addr", "ems": None, "status": None}
 
 # Worth the bytes in a replay only where something can see them. The last NMEA
