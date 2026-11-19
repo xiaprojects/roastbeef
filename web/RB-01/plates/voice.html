@@ -23,11 +23,18 @@
         </div>
     </div>
 </div>
+<!-- Voice control on the addons bridge (rbvoice bridge.py): push to talk, and the wake word for this session -->
 <div style="text-align: center;">
-<a ng-click="setName('primario')" class="btn btn-default">PRIMARIO</a>
-<a ng-click="setName('secondario')" class="btn btn-default">SECONDARIO</a>
-<a ng-click="setName('display')" class="btn btn-default">DISPLAY</a>
+<a ng-click="voiceTrigger()" class="btn btn-lg" data-keypad="tap"
+    ng-class="voiceListening ? 'btn-success' : 'btn-primary'">{{voiceListening ? 'LISTENING' : 'PUSH TO TALK'}}</a>
+<a ng-click="voiceToggleWakeWord()" class="btn btn-lg" data-keypad="tap"
+    ng-class="voiceWakeWord ? 'btn-info' : 'btn-default'">WAKE WORD {{voiceWakeWord ? 'ON' : 'OFF'}}</a>
 </div>
 <div style="text-align: center;">
-<a ng-click="enableAudio()" class="btn btn-default">Enable Audio</a>
+<a ng-click="setName('primario')" class="btn btn-default" data-keypad="tap">PRIMARIO</a>
+<a ng-click="setName('secondario')" class="btn btn-default" data-keypad="tap">SECONDARIO</a>
+<a ng-click="setName('display')" class="btn btn-default" data-keypad="tap">DISPLAY</a>
+</div>
+<div style="text-align: center;">
+<a ng-click="enableAudio()" class="btn btn-default" data-keypad="tap">Enable Audio</a>
 </div>

@@ -32,6 +32,10 @@
 
 angular.module('appControllers').controller('VoiceCtrl', VoiceCtrl);
 
+// Bridge keys owned by rbvoice (bridge.py)
+var VOICE_WAKEWORD_KEY = "voice_wakeword";
+var VOICE_TRIGGER_KEY = "voice_trigger";
+
 
 
 
@@ -46,6 +50,7 @@ function VoiceCtrl($rootScope, $scope, $state, $http, $interval) {
     $state.get(name).onExit = function () {
         console.log("onExit" + name);
         removeEventListener("voice", voiceEventListener);
+        removeEventListener("BridgeUpdated", voiceBridgeUpdatedEventListener);
     };
 
     console.log("Controller " + name);
@@ -65,6 +70,71 @@ function VoiceCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.setName = function (displayName) {
         window.localStorage.setItem("displayName", displayName);
     }
+
+    /*****************************************************
+     *  Voice control on the addons bridge (rbvoice bridge.py)
+     *  voice_wakeword: 1 = rbvoice answers after a wake word, 0 = only after a trigger.
+     *                  rbvoice publishes its default at startup, so a change lasts until it restarts.
+     *  voice_trigger:  1 = listen now without a wake word; rbvoice writes 0 back when it stops listening.
+     */
+    $scope.voiceWakeWord = true;
+    $scope.voiceListening = false;
+
+    function voiceBridgeReceived(bridge) {
+        if (bridge === undefined || bridge === null) {
+            return false;
+        }
+        var changed = false;
+        if (bridge.hasOwnProperty(VOICE_WAKEWORD_KEY) && (bridge[VOICE_WAKEWORD_KEY] >= 0.5) != $scope.voiceWakeWord) {
+            $scope.voiceWakeWord = bridge[VOICE_WAKEWORD_KEY] >= 0.5;
+            changed = true;
+        }
+        if (bridge.hasOwnProperty(VOICE_TRIGGER_KEY) && (bridge[VOICE_TRIGGER_KEY] >= 0.5) != $scope.voiceListening) {
+            $scope.voiceListening = bridge[VOICE_TRIGGER_KEY] >= 0.5;
+            changed = true;
+        }
+        return changed;
+    }
+
+    function voiceBridgePost(msg) {
+        $http.post(URL_BRIDGE_FLOAT_SET, JSON.stringify(msg)).then(function (response) {
+            // the socket brings the new values back
+        }, function (response) {
+            // do nothing
+        });
+    }
+
+    $scope.voiceTrigger = function () {
+        var msg = {};
+        msg[VOICE_TRIGGER_KEY] = 1;
+        voiceBridgePost(msg);
+    }
+
+    $scope.voiceToggleWakeWord = function () {
+        var msg = {};
+        msg[VOICE_WAKEWORD_KEY] = $scope.voiceWakeWord ? 0 : 1;
+        voiceBridgePost(msg);
+    }
+
+    function voiceBridgeUpdatedEventListener(event) {
+        if (($scope === undefined) || ($scope === null) || $state.current.controller != "VoiceCtrl") {
+            removeEventListener("BridgeUpdated", voiceBridgeUpdatedEventListener);
+            return; // we are getting called once after clicking away from the page
+        }
+        if (voiceBridgeReceived(event.detail)) {
+            $scope.$apply();
+        }
+    }
+
+    // The socket says nothing on connect, only after a change
+    $http.get(URL_BRIDGE_FLOAT_SET).then(function (response) {
+        voiceBridgeReceived(angular.fromJson(response.data));
+    });
+    addEventListener("BridgeUpdated", voiceBridgeUpdatedEventListener);
+
+    // The knob: PUSH TO TALK, WAKE WORD, PRIMARIO, SECONDARIO, DISPLAY, Enable Audio; TAP is a touch on the button
+    // (docs/tech-debt/keypad-page-navigation.md 3.4)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, name);
     /*****************************************************
      *  Keypad Management
      */
