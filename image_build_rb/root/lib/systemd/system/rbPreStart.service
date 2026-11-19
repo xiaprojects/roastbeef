@@ -1,0 +1,12 @@
+[Unit]
+Description=RB PreStart
+ConditionPathExists=/boot/firmware/rb/rb-prestart.sh
+Before=stratux.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=bash /boot/firmware/rb/rb-prestart.sh
+
+[Install]
+WantedBy=multi-user.target
