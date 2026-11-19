@@ -17,13 +17,13 @@ What the interface says (../rb-vor/docs/RB-VOR-IF-v2.3.md):
        last values on the bridge.
   4.4  the 359 -> 0 wrap.
 
-The course pointer. HSICircleRenderer (plates/js/hsi.js) turns the rose by -track and the
+The course pointer. hsiUpdate (plates/js/hsi.js) turns the rose by -track and the
 pointer group by -center, so with `center` = track - course the arrow's screen angle is
 course - track, and it reads `course` on the rose: what the HSI plate and the LOC mode of
 this plate do. The test measures where the arrow head is on the screen against the centre
 of the rose, so it does not depend on how the plate gets there.
 
-"Drawn" is the arrow head with a box and no hidden ancestor up to the svg, so hiding the
+"Drawn" is the arrow head with a box and no hidden ancestor up to #vorHSI, so hiding the
 arrow, its group or making either transparent all count as not drawn.
 """
 
@@ -54,18 +54,18 @@ SHOWS = """(() => {
 })()""" % STATUS
 
 # The arrow head of the course pointer: its screen angle, clockwise from up, and whether
-# it is drawn. The first polygon of the pointer group is the arrow (plates/js/hsi.js).
+# it is drawn (`.hsi-arrow` in the course layer, plates/js/hsi.js hsiUpdate).
 POINTER = """(() => {
-    const hsi = %s.vorHSI;
+    const hsi = %s.HSI;
     if (!hsi) return null;
-    const svg = document.querySelector('#vorHSI svg');
-    const arrow = hsi.containerCenter.node.querySelector('polygon');
-    const s = svg.getBoundingClientRect(), r = arrow.getBoundingClientRect();
+    const root = document.querySelector('#vorHSI');
+    const arrow = root.querySelector('.hsi-arrow');
+    const s = root.getBoundingClientRect(), r = arrow.getBoundingClientRect();
     let hidden = false;
-    for (let e = arrow; e && e !== svg; e = e.parentNode) {
+    for (let e = arrow; e && e !== root; e = e.parentNode) {
         const cs = getComputedStyle(e);
-        if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0
-            || e.getAttribute('opacity') === '0') hidden = true;
+        if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0)
+            hidden = true;
     }
     const dx = (r.left + r.width / 2) - (s.left + s.width / 2);
     const dy = (r.top + r.height / 2) - (s.top + s.height / 2);
@@ -234,7 +234,7 @@ def check_duplicate(d, res, label):
                 % (ROOT, SCOPE), timeout=5, label="back on the rose")
     settle(d)
     body = posted(d)[-1] if len(posted(d)) > before else None
-    res.check(body == {"vorfreq": 112.1}, "%-9s Pisa posts 112.1" % label, repr(body))
+    res.check(body == {"vorfreq": 112.1, "gsselect": 0}, "%-9s Pisa posts 112.1" % label, repr(body))
     res.check(d.page.eval(SHOWS)["name"] == "Pisa", "%-9s Pisa is named at once" % label,
               d.page.eval(SHOWS))
     frame(d, **vor(status=3, khz=112100))
@@ -289,7 +289,9 @@ def check_stale(d, res, label):
 def check_bar(d, res, label):
     """The VOR mode computes no deviation: the bar is never drawn (a centred lie)."""
     frame(d, **vor(status=5, radial=130))
-    drawn = d.page.eval("%s.vorHSI.verticalLineDirection.visible()" % SCOPE)
+    drawn = d.page.eval("""(() => { const b = document.querySelector('#vorHSI .hsi-cdi');
+        const r = b.getBoundingClientRect();
+        return !!%s.HSI.showCdi && r.width > 0 && r.height > 0; })()""" % SCOPE)
     res.check(not drawn, "%-9s no deviation bar in VOR mode" % label)
     d.shot("vor-hsi-%s" % label)
 

@@ -57,11 +57,11 @@ SIM_PANEL = os.path.join(HERE, "simpanel.html")
 # errors a test is actually looking for.
 WS_PATHS = ("/situation", "/traffic", "/status", "/autopilot", "/alerts",
             "/radar", "/ems", "/keypad", "/radioStatus", "/bridge/float/ws",
-            "/gdl90", "/weather", "/alerts/ws", "/playback/ws")
+            "/gdl90", "/weather", "/alerts/ws", "/playback/ws", "/timers/ws")
 
 # Sockets that carry what a REST path answers: on connect, and again after
 # set_rest() changes it, as the daemon does when the list changes
-WS_MIRRORS = {"/alerts/ws": "/getAlerts", "/playback/ws": "/playback"}
+WS_MIRRORS = {"/alerts/ws": "/getAlerts", "/playback/ws": "/playback", "/timers/ws": "/timers"}
 
 DEFAULT_SITUATION = {
     "GPSLastFixSinceMidnightUTC": 43200, "GPSLatitude": 45.0, "GPSLongitude": 10.0,
@@ -192,6 +192,7 @@ class FakeStratux:
         self._thread = None
         self._port = port
         self.posted = []            # every POST body the UI sent, for assertions
+        self.deleted = []           # every DELETE path the UI sent
         self.missing = []           # paths that 404'd, so tests can spot dead assets
         # Plain GET endpoints the plates poll on load. Without these the browser
         # logs 404s that swamp the real errors a test is looking for.
@@ -329,6 +330,15 @@ class FakeStratux:
                     except (ValueError, AttributeError):
                         pass
                     return self._json(outer.settings)
+                if self.command == "PUT" and path == "/switches":
+                    # handleSwitchBoardPut runs the switch and answers with it, its Status the
+                    # result: SW_STATUS_FINISH_0 here
+                    try:
+                        item = json.loads(body or b"{}")
+                        item["Status"] = 2
+                        return self._json(item)
+                    except (ValueError, TypeError):
+                        pass
                 if path.startswith("/settings/") and path.endswith(".json"):
                     # handleSettingsFileRest writes the file under settings/.
                     try:
@@ -344,6 +354,7 @@ class FakeStratux:
             def do_DELETE(self):
                 if outer.upstream:
                     return self._write_upstream(b"")
+                outer.deleted.append(self.path)
                 return self._json({"ok": True})
 
             def _json(self, payload, status=200):

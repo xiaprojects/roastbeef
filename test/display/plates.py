@@ -315,6 +315,29 @@ class Display:
         self.page.eval("dispatchEvent(new KeyboardEvent('keypad', {key: %r}))" % key)
         self.page.pump(0.25)
 
+    def key(self, name, text=None, settle=0.25):
+        """A real key press in Chromium: the browser path through services/servicekeypad.js.
+
+        `name` is the DOM key name as web/settings/keypad.json spells it ("1", "Enter",
+        "ArrowDown"). `text` makes the press type that text into a focused field.
+        """
+        down = {"type": "keyDown" if text else "rawKeyDown", "key": name}
+        if text:
+            down["text"] = text
+        self.page.send("Input.dispatchKeyEvent", **down)
+        self.page.send("Input.dispatchKeyEvent", type="keyUp", key=name)
+        self.page.pump(settle)
+
+    def ws_key(self, name, status=0, settle=0.25):
+        """A key from the keyboard on the Pi: main/keypad.go over the /keypad socket.
+
+        status 0 is a release (a press), 2 a hold.
+        """
+        if not self.srv.wait_for_client("/keypad", timeout=10):
+            raise TimeoutError("the display has no /keypad socket")
+        self.srv.push("/keypad", {"key": name, "status": status, "source": "", "target": ""})
+        self.page.pump(settle)
+
     def hash(self):
         return self.page.eval("window.location.hash") or ""
 

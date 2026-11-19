@@ -39,18 +39,19 @@ FIXTURE = {"name": "TEST LOC FIXTURE", "id": "TSTX", "type": "ILS", "freq": 110.
 VOR_KEYS = ("vorradial", "vorsnr", "voram", "vorstatus", "vorsub", "vorfreqactive")
 
 # Where the bar is on the screen against the centre of the rose, in viewbox units
-# (the svg's own scale), and whether it is drawn at all
+# (the HSI root is 280 units wide: the old SVG scale), and whether it is drawn at all.
+# `frame` is the bar's travel in its own frame, from $scope.HSI.cdi (cqw, 100/280 per unit).
 BAR = """(() => {
-    const s = %s, hsi = s.vorHSI;
+    const s = %s, hsi = s.HSI;
     if (!hsi) return null;
-    const bar = hsi.verticalLineDirection;
-    const svg = document.querySelector('#vorHSI svg').getBoundingClientRect();
-    const r = bar.node.getBoundingClientRect();
-    const scale = svg.width / 280;
-    return {drawn: bar.visible() && r.width > 0,
-            dx: ((r.left + r.width / 2) - (svg.left + svg.width / 2)) / scale,
-            dy: ((r.top + r.height / 2) - (svg.top + svg.height / 2)) / scale,
-            frame: bar.cx()};
+    const bar = document.querySelector('#vorHSI .hsi-cdi');
+    const root = document.querySelector('#vorHSI').getBoundingClientRect();
+    const r = bar.getBoundingClientRect();
+    const scale = root.width / 280;
+    return {drawn: !!hsi.showCdi && r.width > 0 && r.height > 0,
+            dx: ((r.left + r.width / 2) - (root.left + root.width / 2)) / scale,
+            dy: ((r.top + r.height / 2) - (root.top + root.height / 2)) / scale,
+            frame: parseFloat(hsi.cdi) * 2.8};
 })()""" % SCOPE
 
 # A text element's own box: every corner on the glass of the round panel, and not under
@@ -178,7 +179,7 @@ def check_list(d, res, label, width, height):
         if len(posted(d)) > before:
             break
     body = posted(d)[-1] if len(posted(d)) > before else None
-    res.check(body == {"vorfreq": 110.3}, "%-9s the ILS entry posts its frequency to vorfreq"
+    res.check(body == {"vorfreq": 110.3, "gsselect": 0}, "%-9s the ILS entry posts its frequency, on LOC"
               % label, repr(body))
     d.page.wait("!!document.querySelector('%s') && %s.items.searchEnabled == false"
                 % (ROOT, SCOPE), timeout=5, label="back on the rose")

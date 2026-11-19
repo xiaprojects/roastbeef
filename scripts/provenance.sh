@@ -58,7 +58,6 @@ web/RB-01/js/ol.js
 web/RB-01/js/olms.js
 web/RB-01/js/ol-layerswitcher.js
 web/RB-01/js/chart.js
-web/RB-01/js/svg.min.js
 web/RB-01/js/GPXParser.js
 web/RB-01/synthview/three.min.js
 web/RB-01/synthview/GLTFLoader.js

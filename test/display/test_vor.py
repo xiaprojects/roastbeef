@@ -125,11 +125,11 @@ def main():
                 res.check(far <= ROUND_RADIUS, "%-9s OFF is on the glass" % label,
                           "%.0f px from the centre" % far)
             body = press(d, "OFF")
-            res.check(body == {"vorfreq": 0}, "%-9s it posts vorfreq 0" % label, repr(body))
+            res.check(body == {"vorfreq": 0, "gsselect": 0}, "%-9s it posts vorfreq 0" % label, repr(body))
             open_list(d)
             # a name only one row has: Alghero is a TACAN and a VORTAC in the shipped list
             body = press(d, "Bolsena")
-            res.check(body == {"vorfreq": 114.4}, "%-9s a station posts its frequency" % label, repr(body))
+            res.check(body == {"vorfreq": 114.4, "gsselect": 0}, "%-9s a station posts its frequency" % label, repr(body))
             check_nearest_first(d, res, label)
             res.check(not d.js_errors(), "%-9s no errors" % label, d.js_errors()[:2])
     print("\n%d/%d checks passed" % (len(res.checks) - len(res.failed), len(res.checks)))

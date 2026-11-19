@@ -488,8 +488,8 @@ def check_knob(d, res):
     key = "dispatchEvent(new KeyboardEvent('keypad', {key: KEYPAD_MAPPING_%s}))"
     where = """(() => {
         const r = %s.radio;
-        return [r.classStandByLeft, r.classStandByRight, r.classVolume, r.classSquelch]
-            .map(c => /btn-(danger|success)/.test(c));
+        return [r.classStandByLeft, r.classStandByRight, r.classSwap, r.classVolume, r.classSquelch]
+            .map(c => /(btn|label)-(danger|success)/.test(c));
     })()""" % SCOPE
 
     def stops():
@@ -500,11 +500,11 @@ def check_knob(d, res):
     d.page.eval("""window.radioLeft = 0;
         addEventListener("keypad", e => { if (e.key === "to") window.radioLeft++; })""")
     seen = [stops()]
-    for _ in range(3):
+    for _ in range(4):
         d.page.eval(key % "NEXT")
         d.page.pump(0.1)
         seen.append(stops())
-    res.check(seen == [0, 1, 2, 3], "the knob reaches MHz, kHz, volume, squelch", repr(seen))
+    res.check(seen == [0, 1, 2, 3, 4], "the knob reaches MHz, kHz, SWITCH FREQ., volume, squelch", repr(seen))
     res.check(d.page.eval("window.radioLeft") == 0, "and no copy of the plate leaves it",
               d.page.eval("window.radioLeft"))
 
@@ -522,22 +522,23 @@ def check_knob(d, res):
     res.check({"SquelchLevel": 10} in bodies, "turning it steps the squelch, 1 dB a click", repr(bodies))
     res.check(all(list(body) == ["SquelchLevel"] for body in bodies), "and posts only that", repr(bodies))
 
-    for _ in range(3):
+    for _ in range(4):
         d.page.eval(key % "PREV")
         d.page.pump(0.1)
     res.check(stops() == 0, "and back to MHz", stops())
 
     # A level nobody can see must not be one the knob can change
-    for _ in range(3):
+    for _ in range(4):
         d.page.eval(key % "NEXT")
         d.page.pump(0.1)
-    res.check(stops() == 3, "on the squelch", stops())
+    res.check(stops() == 4, "on the squelch", stops())
     press_levels_button(d)
-    res.check(d.page.eval(where).index(True) == 1, "hiding the sliders puts the knob on kHz", d.page.eval(where))
+    res.check(d.page.eval(where).index(True) == 2, "hiding the sliders puts the knob on SWITCH FREQ., the last stop left",
+              d.page.eval(where))
     before = len(posted(d))
     d.page.eval(key % "PREV")
     d.page.pump(0.1)
-    res.check(stops() == 0, "and it goes on from there", stops())
+    res.check(stops() == 1, "and it goes on from there", stops())
     d.page.eval(key % "TAP")
     d.page.pump(0.1)
     d.page.eval(key % "NEXT")
@@ -566,7 +567,7 @@ def check_knob_scrolls(res):
                   "bottom %.0f" % d.page.eval(low))
         d.page.eval("document.querySelector('%s').scrollIntoView({behavior: 'instant', block: 'start'})" % BOX)
         d.page.pump(0.2)
-        for _ in range(3):
+        for _ in range(4):
             d.page.eval("dispatchEvent(new KeyboardEvent('keypad', {key: KEYPAD_MAPPING_NEXT}))")
             d.page.pump(0.2)
         res.check(d.page.eval(low) <= 480, "480x480 and so does the knob", "bottom %.0f" % d.page.eval(low))

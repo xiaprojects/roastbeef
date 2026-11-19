@@ -16,24 +16,29 @@ are outside the routed view and the side panels, so their selectors cannot match
 sidebar copy of a plate.
 """
 
+import json
 import sys
 import time
 
 from plates import Display, Result
 
 KT_TO_KMH = 1.852
-ROOT = ["SIXPACK", "3D", "MAP", "ENGINE", "SWITCH", "MENU"]
+ROOT = ["SIXPACK", "MAP", "TIMERS", "SWITCH", "EMS", "MENU"]
 MENU = ["LEFT PNL", "RIGHT PNL", "TOP BAR", "FULL SCR", "ALERTS", "BACK"]
-PAGES = {1: "#/sixpack", 2: "#/synthview", 3: "#/map", 4: "#/ems", 5: "#/switchboard"}
+# The page each root key opens first; slots 1 and 2 then cycle through CYCLES
+PAGES = {1: "#/sixpack", 2: "#/map", 3: "#/timers", 4: "#/switchboard", 5: "#/ems"}
+CYCLES = {1: [("SIXPACK", "#/sixpack"), ("3D", "#/synthview")],
+          2: [("MAP", "#/map"), ("AUTOPILOT", "#/autopilot")],
+          5: [("EMS", "#/ems"), ("EGT", "#/emsegt")]}
 MENU_SECONDS = 10
 # Event types of web/settings/alertsMapping.json and the severity the balloon gives them
 TIMER, EMS_YELLOW, EMS_RED = 2, 14, 15
 LAMP = {"": "rgb(44, 44, 44)", "info": "rgb(255, 255, 255)",
         "warning": "rgb(255, 196, 0)", "danger": "rgb(196, 0, 0)"}
-SLOTS = ["speed", "alt", "qnh", "agl", "track", "ap", "gmax", "com", "stby", "utc",
+SLOTS = ["speed", "alt", "uptime", "agl", "track", "ap", "gmax", "com", "stby", "utc",
          "oil", "traffic", "alerts", "hide"]
 # TOP_BAR_DROP_ORDER of plates/js/bottom.js; the slots not in it are never dropped
-DROP_ORDER = ["utc", "gmax", "qnh", "track", "stby", "traffic", "agl", "oil", "ap"]
+DROP_ORDER = ["utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "oil", "ap"]
 NEVER_DROPPED = [s for s in SLOTS if s not in DROP_ORDER]
 
 # Counts the window listeners and the intervals alive, before any page script runs
@@ -132,8 +137,14 @@ def key(slot):
 
 
 def labels(d):
-    return d.page.eval("[...document.querySelectorAll('.rb-bar-bottom .rb-softkey')]"
+    return d.page.eval("[...document.querySelectorAll('.rb-bar-bottom .rb-softkey-label')]"
                        ".map(k => k.textContent.trim())")
+
+
+def key_value(d, slot):
+    """The reading under the label of a key, None when the key has none."""
+    return d.page.eval("(e => e && e.textContent.trim())(document.querySelector(%r))"
+                       % (key(slot) + " .rb-softkey-value"))
 
 
 def lit(d, slot):
@@ -323,7 +334,7 @@ def check_root_keys(res, d):
     press(d, 6)
     d.page.pump(MENU_SECONDS - 1.5 - (time.time() - start))
     still = labels(d)
-    d.page.wait("document.querySelector(%r).textContent.trim() == 'MENU'" % key(6),
+    d.page.wait("document.querySelector(%r).textContent.trim() == 'MENU'" % (key(6) + " .rb-softkey-label"),
                 timeout=4, label="menu returns")
     after = time.time() - start
     res.check(still == MENU and abs(after - MENU_SECONDS) < 1,
@@ -334,6 +345,100 @@ def check_root_keys(res, d):
     d.page.wait("location.hash.split('?')[0] == '#/alerts'", timeout=10, label="alerts page")
     res.check(labels(d) == ROOT, "T5 ALERTS in the menu opens #/alerts and returns to the root level",
               labels(d))
+
+
+def check_cycles(res, d):
+    """Slots 1, 2 and 5 cycle through their pages; the label names the page shown, or the one
+    the key opens from elsewhere, which is the last one it showed."""
+    for slot, cycle in sorted(CYCLES.items()):
+        press(d, 4)
+        d.page.wait("location.hash.split('?')[0] == '#/switchboard'", timeout=10, label="switchboard")
+        steps = []
+        for label, href in cycle + cycle[:1]:
+            press(d, slot)
+            d.page.wait("location.hash.split('?')[0] == %r" % href, timeout=10, label="page %s" % href)
+            d.page.pump(0.3)
+            steps.append((page(d), labels(d)[slot - 1], lit(d, slot)))
+        want = [(href, label, True) for label, href in cycle + cycle[:1]]
+        res.check(steps == want, "slot %d cycles %s" % (slot, " > ".join(l for l, _ in cycle)),
+                  steps)
+        # Leave the key on its second page: from another page it shows and opens that one
+        press(d, slot)
+        d.page.wait("location.hash.split('?')[0] == %r" % cycle[1][1], timeout=10, label="second page")
+        press(d, 4)
+        d.page.wait("location.hash.split('?')[0] == '#/switchboard'", timeout=10, label="switchboard")
+        remembered = labels(d)[slot - 1]
+        press(d, slot)
+        d.page.wait("location.hash.split('?')[0] == %r" % cycle[1][1], timeout=10, label="remembered page")
+        stored = d.page.eval("localStorage.getItem('softKeyPage_root_%d')" % slot)
+        res.check(remembered == cycle[1][0] and stored == "1",
+                  "slot %d from another page shows and opens the page it last showed" % slot,
+                  (remembered, page(d), stored))
+        # Back to the first page for the checks that follow
+        press(d, slot)
+        d.page.wait("location.hash.split('?')[0] == %r" % cycle[0][1], timeout=10, label="first page")
+
+
+def check_key_values(res, d):
+    """Under the labels: QNH, the ETA to the active waypoint, the first running timer,
+    the CPU load and the battery voltage. MENU has no reading."""
+    got = [key_value(d, s) for s in range(1, 7)]
+    res.check(got == ["QNH ---", "---", "---", "CPU ---", "--- V", None],
+              "the readings show --- with no data, MENU has none", got)
+
+    d.fly(frames=3, interval=0.3, GPSGroundSpeed=100, GPSFixQuality=2)
+    qnh = d.page.eval("window.situation.QNH")
+    want = "QNH %d" % round(qnh) if isinstance(qnh, (int, float)) else "QNH ---"
+    res.check(key_value(d, 1) == want, "slot 1 shows the QNH of the situation", (key_value(d, 1), want))
+    d.page.pump(4)
+    res.check(key_value(d, 1) == "QNH ---", "slot 1 shows QNH --- 3 s after the situation stops",
+              key_value(d, 1))
+
+    d.srv.push("/ems", {"cpu_load_1m": 0.734, "batteryvoltage": 13.46})
+    d.page.pump(0.8)
+    d.srv.push("/ems", {"cht1": 121})
+    d.page.pump(0.8)
+    got = (key_value(d, 4), key_value(d, 5))
+    res.check(got == ("CPU 0.73", "13.5 V"), "slots 4 and 5 show the CPU load and the battery, "
+              "kept across an EMS frame without them", got)
+    d.page.pump(5.5)
+    got = (key_value(d, 4), key_value(d, 5))
+    res.check(got == ("CPU ---", "--- V"), "slots 4 and 5 show --- 5 s after the EMS stops", got)
+
+    def autopilot(active, distance, knots):
+        d.page.eval("dispatchEvent(new CustomEvent('AutopilotUpdated', {detail: %s}))" % json.dumps(
+            {"Active": active, "GPRMB": {"Status": "A", "Distance": distance, "Knots": knots}}))
+        d.page.pump(0.3)
+
+    # 10 NM at 120 kt: 5 minutes from now, in UTC
+    autopilot(True, 10, 120)
+    want = d.page.eval("[0, 60000].map(m => new Date(Date.now() + 300000 - m).toISOString().substring(11, 16))")
+    res.check(key_value(d, 2) in want, "MAP shows the ETA of 10 NM at 120 kt", (key_value(d, 2), want))
+    autopilot(True, 10, 0)
+    res.check(key_value(d, 2) == "---", "MAP shows --- with no speed towards the waypoint", key_value(d, 2))
+    autopilot(False, 10, 120)
+    res.check(key_value(d, 2) == "---", "MAP shows --- with the autopilot off", key_value(d, 2))
+    autopilot(True, 10, 120)
+    d.page.pump(6.5)
+    res.check(key_value(d, 2) == "---", "MAP shows --- when the autopilot stream stops", key_value(d, 2))
+
+    now = int(time.time())
+    d.srv.set_rest("/timers", [{"CountDown": 1200, "Epoch": 0, "Fired": False, "Status": False},
+                               {"CountDown": 600, "Epoch": now - 90, "Fired": False, "Status": True},
+                               {"CountDown": 0, "Epoch": now - 30, "Fired": False, "Status": True}])
+    d.page.wait("document.querySelector(%r).textContent.trim() != '---'" % (key(3) + " .rb-softkey-value"),
+                timeout=5, label="timer value")
+    res.check(key_value(d, 3) in ("08:30", "08:29", "08:28"),
+              "TIMERS shows the time left of the first running timer", key_value(d, 3))
+    # /timers/ws pushes the list: the key follows within a second, nothing polls
+    d.srv.set_rest("/timers", [{"CountDown": 0, "Epoch": now - 30, "Fired": False, "Status": True}])
+    d.page.pump(1)
+    elapsed = int(time.time()) - (now - 30)
+    res.check(key_value(d, 3) in ["00:%02d" % (elapsed + e) for e in (-1, 0, 1)],
+              "TIMERS shows the elapsed time of a running chrono", key_value(d, 3))
+    d.srv.set_rest("/timers", [])
+    d.page.pump(1)
+    res.check(key_value(d, 3) == "---", "TIMERS shows --- when no timer runs", key_value(d, 3))
 
 
 def check_toggles(res, d):
@@ -365,9 +470,11 @@ def check_toggles(res, d):
 
 
 def check_softkey_event(res, d):
+    # From another page: on the map, slot 2 would step on to the autopilot
+    press(d, 4)
     d.page.eval("window.__rbSoftkeys = []; addEventListener('softkey', e => __rbSoftkeys.push(e.detail && e.detail.slot))")
-    press(d, 3)
-    res.check(d.page.eval("__rbSoftkeys") == [3] and page(d) == "#/map",
+    press(d, 2)
+    res.check(d.page.eval("__rbSoftkeys") == [2] and page(d) == "#/map",
               "T7 a touch only sends the softkey event with its slot", d.page.eval("__rbSoftkeys"))
     softkey(d, 1)
     res.check(page(d) == "#/sixpack" and lit(d, 1), "T7 softkey slot 1 does what SIXPACK does, lamp lit",
@@ -375,8 +482,8 @@ def check_softkey_event(res, d):
 
     scope(d, "s.uiSidebarBottom = false")
     bar_shown(d, "bottom", False)
-    softkey(d, 3)
-    res.check(page(d) == "#/map", "T7 with the bar hidden: softkey slot 3 opens the map", d.hash())
+    softkey(d, 2)
+    res.check(page(d) == "#/map", "T7 with the bar hidden: softkey slot 2 opens the map", d.hash())
     softkey(d, 6)
     res.check(main_scope(d, "softKeyLevel") == "menu", "T7 with the bar hidden: slot 6 enters the menu")
     softkey(d, 3)
@@ -399,7 +506,7 @@ def check_values(res, d):
     unit = d.page.eval("window.aircraftData.units.speed")
     scope(d, "s.uiSidebarTop = true")
     bar_shown(d, "top")
-    before = {s: slot_text(d, s, "value") for s in ("speed", "track", "qnh", "gmax")}
+    before = {s: slot_text(d, s, "value") for s in ("speed", "track", "gmax")}
     res.check(all(v == "---" for v in before.values()), "T8 --- before any data", before)
     d.page.eval("addEventListener('SituationUpdated', () => { window.__rbSituationAt = Date.now(); })")
 
@@ -412,10 +519,8 @@ def check_values(res, d):
         d.fly(frames=4, interval=0.3, **frame(seq, gs, ias, track, gmax))
         d.page.wait("window.situation.TestSeq === %d" % seq, timeout=10, label="frame %d" % seq)
         d.page.pump(0.3)
-        qnh = d.page.eval("window.situation.QNH")
         kt = gs if source == "GS" else ias
         want = {"speed": "%d" % round(kt * KT_TO_KMH * ratio), "track": "%03d°" % round(track),
-                "qnh": "%d" % round(qnh) if isinstance(qnh, (int, float)) else "---",
                 "gmax": "%.1f" % gmax}
         got = {s: slot_text(d, s, "value") for s in want}
         res.check(got == want, "T8 values follow the situation (%s)" % source, {"got": got, "want": want})
@@ -427,7 +532,7 @@ def check_values(res, d):
     d.page.wait("document.querySelector(\".rb-bar-top [data-slot='speed'] .rb-slot-value\")"
                 ".textContent.trim() == '---'", timeout=5, label="stale")
     gone = d.page.eval("(Date.now() - window.__rbSituationAt) / 1000")
-    after = {s: slot_text(d, s, "value") for s in ("speed", "track", "qnh", "gmax")}
+    after = {s: slot_text(d, s, "value") for s in ("speed", "track", "gmax")}
     res.check(early != "---" and all(v == "---" for v in after.values()) and 3.0 <= gone <= 4.3,
               "T8 --- 3 s after the situation stops", {"at 2 s": early, "after %.1f s" % gone: after})
 
@@ -448,12 +553,12 @@ def check_values(res, d):
     d.page.eval("Date.now = window.__rbNow")
     res.check(aged == "0", "T8 a target not heard for 60 s is no longer counted", aged)
 
-    d.page.click(".rb-bar-top [data-slot='qnh']")
+    d.page.click(".rb-bar-top [data-slot='uptime']")
     d.page.pump(0.4)
-    res.check(page(d) == "#/altimeter", "T8 a tap on QNH opens the altimeter", d.hash())
+    res.check(page(d) == "#/hsi", "T8 a tap on UPTIME opens nothing", d.hash())
     d.page.click(".rb-bar-top [data-slot='utc']")
     d.page.pump(0.4)
-    res.check(page(d) == "#/altimeter", "T8 a tap on UTC opens nothing", d.hash())
+    res.check(page(d) == "#/hsi", "T8 a tap on UTC opens nothing", d.hash())
 
 
 def check_new_values(res, d):
@@ -508,7 +613,11 @@ def check_new_values(res, d):
     d.page.pump(0.6)
     res.check(slot_text(d, "agl", "value") == "---", "T12 AGL --- while Terrain_AglValid is false",
               slot_text(d, "agl", "value"))
-    d.srv.push("/status", dict(d.srv.status or {}, Terrain_AglValid=True, Terrain_AglFt=1730))
+    d.srv.push("/status", dict(d.srv.status or {}, Terrain_AglValid=True, Terrain_AglFt=1730,
+                               Uptime=(3 * 60 + 7) * 60000 + 59000))
+    d.page.pump(0.6)
+    res.check(slot_text(d, "uptime", "value") == "3:07" and slot_text(d, "uptime", "label") == "UPTIME",
+              "UPTIME shows the daemon uptime, H:MM", slot_text(d, "uptime", "value"))
 
     gprmb = dict(d.srv.autopilot_status["GPRMB"], Steer="R", TrueBearing=268.4)
     d.srv.push_autopilot(Active=True, GPRMB=gprmb)
@@ -522,10 +631,10 @@ def check_new_values(res, d):
     # Five seconds later without a word from the streams: the radio is a selection, it stays
     d.page.eval("window.__rbNow = Date.now; Date.now = () => window.__rbNow() + 6000")
     d.page.pump(1.5)
-    stale = {x: slot_text(d, x, "value") for x in ("oil", "agl", "ap", "com", "stby")}
+    stale = {x: slot_text(d, x, "value") for x in ("oil", "agl", "uptime", "ap", "com", "stby")}
     d.page.eval("Date.now = window.__rbNow")
-    res.check(stale == {"oil": "---", "agl": "---", "ap": "---", "com": "118.275", "stby": "121.500"},
-              "T12 OIL, AGL and AP go to --- 5 s after their stream stops, COM and STBY stay", stale)
+    res.check(stale == {"oil": "---", "agl": "---", "uptime": "---", "ap": "---", "com": "118.275", "stby": "121.500"},
+              "T12 OIL, AGL, UPTIME and AP go to --- 5 s after their stream stops, COM and STBY stay", stale)
 
     for slot, href in (("ap", "#/autopilot"), ("com", "#/radio"), ("oil", "#/ems"), ("track", "#/heading")):
         d.page.click(".rb-bar-top [data-slot='%s']" % slot)
@@ -544,27 +653,45 @@ def lamp(d):
 
 
 def check_alerts(res, d):
+    """T9: ALERTS counts every alert of the list; the lamp shows the worst one the pilot has not
+    seen yet, and stays on until the alerts page is opened."""
     d.page.wait("Object.keys(angular.element(document.body).scope().alertsMapping).length > 0",
                 timeout=10, label="alerts mapping")
-    cases = [
-        ("an empty list", [], "0", ""),
-        ("one active warning, one cleared danger",
-         [listed(1, EMS_RED, False), listed(2, EMS_YELLOW, True)], "1", "warning"),
-        ("an active danger on top", [listed(1, EMS_RED, True), listed(2, EMS_YELLOW, True)], "2", "danger"),
-        ("one-shot and cleared alerts only",
-         [listed(1, EMS_RED, False), listed(2, EMS_YELLOW, False), listed(3, TIMER, False)], "0", ""),
-        ("an active info", [listed(3, TIMER, True)], "1", "info"),
-        ("a type the mapping cannot name", [listed(4, 999, True)], "1", "warning"),
-    ]
-    for name, alerts, count, severity in cases:
-        d.srv.set_rest("/getAlerts", alerts)
-        d.page.pump(0.5)
+
+    def expect(name, alerts, count, severity):
+        if alerts is not None:
+            d.srv.set_rest("/getAlerts", alerts)
+            d.page.pump(0.5)
         got = (slot_text(d, "alerts", "value"), lamp(d))
         res.check(got[0] == count and got[1] == {"severity": severity, "colour": LAMP[severity]},
                   "T9 %s: ALERTS %s, lamp %s" % (name, count, severity or "off"), got)
 
+    def visit():
+        d.show("alerts")
+        d.page.pump(0.5)
+        d.show("attitude", "#attitude-rollpitch", timeout=20)
+
+    expect("an empty list", [], "0", "")
+    expect("a cleared danger and an active warning, both new",
+           [listed(1, EMS_RED, False), listed(2, EMS_YELLOW, True)], "2", "danger")
+    expect("the same list a second later stays lit", None, "2", "danger")
+    visit()
+    expect("the alerts page was opened", None, "2", "")
+    expect("still active, already seen",
+           [listed(1, EMS_RED, False), listed(2, EMS_YELLOW, True)], "2", "")
+    expect("a one-shot info comes",
+           [listed(1, EMS_RED, False), listed(2, EMS_YELLOW, True), listed(3, TIMER, False)], "3", "info")
+    expect("the cleared danger comes back",
+           [listed(1, EMS_RED, True), listed(2, EMS_YELLOW, True), listed(3, TIMER, False)], "3", "danger")
+    expect("it clears again before the page is opened",
+           [listed(1, EMS_RED, False), listed(2, EMS_YELLOW, True), listed(3, TIMER, False)], "3", "danger")
+    visit()
+    expect("opened again", None, "3", "")
+    expect("a type the mapping cannot name", [listed(4, 999, False)], "1", "warning")
+    visit()
+
     scope(d, "s.uiSidebarTop = false")
-    d.srv.set_rest("/getAlerts", [listed(1, EMS_RED, True)])
+    d.srv.set_rest("/getAlerts", [listed(5, EMS_RED, True)])
     d.page.pump(0.5)
     scope(d, "s.uiSidebarTop = true")
     bar_shown(d, "top")
@@ -572,12 +699,13 @@ def check_alerts(res, d):
     res.check(got == ("1", "danger"), "T9 a bar shown after the list came shows it", got)
     d.srv.set_rest("/getAlerts", [])
     d.page.pump(0.5)
+    visit()
 
 
 def check_listeners(res, d):
     """Bars created and destroyed by ng-if leave one set of listeners and timers."""
     events = ["SituationUpdated", "RadarChanged", "AlertsUpdated", "RadioUpdated", "EMSUpdated",
-              "StatusUpdated", "AutopilotUpdated", "softkey"]
+              "StatusUpdated", "AutopilotUpdated", "TimersUpdated", "softkey"]
     count = lambda: {e: d.page.eval("__rbListeners(%r)" % e) for e in events}
     scope(d, "s.uiSidebarTop = false; s.uiSidebarBottom = false")
     d.page.pump(0.5)
@@ -590,11 +718,13 @@ def check_listeners(res, d):
         scope(d, "s.toggleBar('top'); s.toggleBar('bottom')")
     bar_shown(d, "top")
     again, timers_again = count(), d.page.eval("__rbIntervals()")
-    res.check(all(shown[e] == hidden[e] + 1 for e in events[:-1]) and shown["softkey"] == hidden["softkey"],
-              "T11 a shown top bar adds one listener per stream, the bars add no softkey listener",
+    # The bottom bar also listens to the autopilot, the situation and the EMS for its readings
+    added = {e: 2 if e in ("AutopilotUpdated", "SituationUpdated", "EMSUpdated") else 1 for e in events[:-1]}
+    res.check(all(shown[e] == hidden[e] + added[e] for e in events[:-1]) and shown["softkey"] == hidden["softkey"],
+              "T11 the shown bars add one listener per stream each, no softkey listener",
               {"hidden": hidden, "shown": shown})
-    res.check(again == shown and timers_again == timers_shown and timers_shown == timers_hidden + 1,
-              "T11 five show and hide cycles leave one listener set and one timer",
+    res.check(again == shown and timers_again == timers_shown and timers_shown == timers_hidden + 2,
+              "T11 five show and hide cycles leave one listener set and one timer per bar",
               {"after": again, "timers": (timers_hidden, timers_shown, timers_again)})
     scope(d, "s.uiSidebarTop = false; s.uiSidebarBottom = false")
     d.page.pump(0.5)
@@ -714,6 +844,8 @@ def run_wide(res):
         check_off_list_page(res, d)
         d.show("attitude", "#attitude-rollpitch", timeout=20)
         check_root_keys(res, d)
+        check_cycles(res, d)
+        check_key_values(res, d)
         check_toggles(res, d)
         check_softkey_event(res, d)
         check_values(res, d)

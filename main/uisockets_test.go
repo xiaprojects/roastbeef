@@ -2,8 +2,8 @@
 	uisockets_test.go: the two sockets that replaced polling on the display.
 
 	/alerts/ws carries the whole alert list, once on connect and again on every
-	change, and /playback/ws does the same for the recordings in the playback
-	folder. Both are driven through the real handlers by a real WebSocket client.
+	change, /playback/ws does the same for the recordings in the playback
+	folder and /timers/ws for the timers. Both are driven through the real handlers by a real WebSocket client.
 	The goroutines that pace them (alertsListSender, playbackWatcher) run forever
 	on the package globals, so each test does their one step itself instead.
 */
@@ -12,10 +12,12 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http/httptest"
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
 	"testing"
 	"time"
 
@@ -191,5 +193,112 @@ func TestPlaybackSocketWithoutFolder(t *testing.T) {
 	handlePlaybackGet(recorder, httptest.NewRequest("GET", "/playback", nil))
 	if got := strings.TrimSpace(recorder.Body.String()); got != "[]" {
 		t.Errorf("/playback answered %q", got)
+	}
+}
+
+// withTimers: two stopped timers, a countdown and a chrono, and a fresh /timers/ws broadcaster
+func withTimers(t *testing.T) {
+	t.Helper()
+	saved, savedUpdate := timers, timersListUpdate
+	t.Cleanup(func() { timers, timersListUpdate = saved, savedUpdate })
+	timers = TimersStratuxPlugin{
+		timersDataMutex: &sync.Mutex{},
+		timersData:      []SingleTimer{{0, 1200, false, false}, {0, 0, false, false}},
+	}
+	timersListUpdate = NewUIBroadcaster()
+	drainTimersListChanged()
+}
+
+// drainTimersListChanged empties the pending change, as timersListSender would; true if there was one
+func drainTimersListChanged() bool {
+	select {
+	case <-timersListChanged:
+		return true
+	default:
+		return false
+	}
+}
+
+// What timersListSender does on a change
+func sendTimersListStep(t *testing.T) {
+	t.Helper()
+	if !drainTimersListChanged() {
+		t.Fatal("the change did not wake the sender")
+	}
+	timersListUpdate.Send(timersListJSON())
+}
+
+// timersRequest runs one request through the /timers handler
+func timersRequest(method, path, body string) *httptest.ResponseRecorder {
+	recorder := httptest.NewRecorder()
+	handleTimersRest(recorder, httptest.NewRequest(method, path, strings.NewReader(body)))
+	return recorder
+}
+
+// The list on connect, then create, start, delete and a countdown firing each push the list.
+func TestTimersSocketFollowsTheList(t *testing.T) {
+	withTimers(t)
+	conn := dialSocket(t, handleTimersWS, timersListUpdate)
+	var list []SingleTimer
+	receiveJSON(t, conn, &list)
+	if len(list) != 2 || list[0].CountDown != 1200 {
+		t.Fatalf("on connect: %+v", list)
+	}
+
+	timersRequest("PUT", "/timers", "")
+	sendTimersListStep(t)
+	receiveJSON(t, conn, &list)
+	if len(list) != 3 {
+		t.Fatalf("after PUT: %+v", list)
+	}
+
+	epoch := time.Now().Unix() - 1300
+	timersRequest("POST", "/timers", fmt.Sprintf(`{"0":{"CountDown":1200,"Epoch":%d,"Status":true,"Fired":false}}`, epoch))
+	sendTimersListStep(t)
+	receiveJSON(t, conn, &list)
+	if !list[0].Status || list[0].Epoch != epoch {
+		t.Fatalf("after POST: %+v", list)
+	}
+
+	// The countdown is 100 s past its end: it fires once
+	if fired := timers.fireDue(time.Now().Unix()); len(fired) != 1 || fired[0] != 0 {
+		t.Fatalf("fireDue: %v, want [0]", fired)
+	}
+	if fired := timers.fireDue(time.Now().Unix()); len(fired) != 0 {
+		t.Fatalf("fireDue again: %v, want none", fired)
+	}
+
+	timersRequest("DELETE", "/timers/1", "")
+	sendTimersListStep(t)
+	receiveJSON(t, conn, &list)
+	if len(list) != 2 || list[0].CountDown != 1200 {
+		t.Fatalf("after DELETE /timers/1: %+v", list)
+	}
+}
+
+// A POST of an index that does not exist, or a DELETE of one, changes nothing and sends nothing.
+func TestTimersNoChangeSendsNothing(t *testing.T) {
+	withTimers(t)
+	timersRequest("POST", "/timers", `{"5":{"CountDown":60,"Status":true},"-1":{"Status":true}}`)
+	if drainTimersListChanged() {
+		t.Error("a POST of unknown indexes woke the sender")
+	}
+	timersRequest("DELETE", "/timers/5", "")
+	if drainTimersListChanged() {
+		t.Error("a DELETE of an unknown index woke the sender")
+	}
+	if recorder := timersRequest("DELETE", "/timers/ws", ""); recorder.Code != 400 {
+		t.Errorf("DELETE /timers/ws: %d, want 400", recorder.Code)
+	}
+	if len(timers.timersData) != 2 {
+		t.Errorf("the timers changed: %+v", timers.timersData)
+	}
+}
+
+// GET /timers answers what /timers/ws carries.
+func TestTimersRequestMatchesTheSocket(t *testing.T) {
+	withTimers(t)
+	if got, want := strings.TrimSpace(timersRequest("GET", "/timers", "").Body.String()), string(timersListJSON()); got != want {
+		t.Errorf("GET /timers %s, socket %s", got, want)
 	}
 }

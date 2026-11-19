@@ -40,6 +40,33 @@ def nav_order():
     return nav.get("navigationSortSquare") or nav.get("navigationSort") or []
 
 
+# Pages with nothing to operate: the knob must leave them alone
+# (docs/tech-debt/keypad-page-navigation.md 6.4). Every other route has its own test_keypad_*.py
+INERT = [("sixpack", None), ("speed", None), ("attitude", "#attitude-rollpitch"), ("turnslip", None),
+         ("variometer", None), ("ems", None), ("emsegt", None)]
+
+
+def check_inert(d, res):
+    """Real key presses, through the service: no page change, no request, no JS error."""
+    for plate, ready in INERT:
+        try:
+            d.show(plate, ready, timeout=20)
+        except TimeoutError:
+            res.check(False, "%-12s reachable" % plate)
+            continue
+        posted = len(d.srv.posted)
+        before = len(d.page.errors)
+        for key in ("1", "2", "3", "ArrowUp", "ArrowDown", "Enter"):
+            d.key(key, settle=0.1)
+        d.ws_key("2")
+        d.page.pump(0.4)
+        new = [e for e in d.page.errors[before:] if not environmental(e)
+               and not known.lookup("keypad", plate, e) and "failed to load resource" not in e.lower()]
+        res.check(d.hash() == "#/" + plate and len(d.srv.posted) == posted and not new,
+                  "%-12s the knob changes nothing (inert)" % plate,
+                  (d.hash(), d.srv.posted[posted:][:2], new[:1]))
+
+
 def main():
     res = Result()
     failures = []
@@ -74,6 +101,9 @@ def main():
                         break
             res.check(not bad, "%-12s survives all %d keypad keys" % (plate, len(KEYS)),
                       bad[0] if bad else "")
+
+        # 1b. pages with nothing to operate stay inert under the real keys
+        check_inert(d, res)
 
         # 2. the configured navigation order must be walkable end to end
         order = nav_order()
