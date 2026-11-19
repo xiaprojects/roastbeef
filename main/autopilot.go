@@ -424,6 +424,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) stop() bool {
 	autopilotInstance.waypointsDataMutex.Lock()
 	autopilotInstance.status.Active = false
 	autopilotInstance.waypointsDataMutex.Unlock()
+	alerts.pushEvent(Alert{Type: EVENT_TYPE_AUTOPILOT_DISENGAGE, Title: fmt.Sprintf("Autopilot disengaged"), Timestamp: time.Now()})
 	return autopilotInstance.status.Active
 }
 
@@ -434,6 +435,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) start() bool {
 		autopilotInstance.status.Active = true
 	}
 	autopilotInstance.waypointsDataMutex.Unlock()
+	alerts.pushEvent(Alert{Type: EVENT_TYPE_AUTOPILOT_ENGAGE, Title: fmt.Sprintf("Autopilot engaged"), Timestamp: time.Now()})
 	return autopilotInstance.status.Active
 }
 
