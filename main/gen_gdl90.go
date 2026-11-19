@@ -852,6 +852,7 @@ func heartBeatSender() {
 			// ---end traffic demo code ---
 			sendTrafficUpdates()
 			updateStatus()
+			gpsFixAlert.check(isGPSValid(), time.Now())
 		case <-timerMessageStats.C:
 			// Save a bit of CPU by not pruning the message log every 1 second.
 			updateMessageStats()
@@ -1827,7 +1828,9 @@ func signalWatcher() {
 
 		log.Printf("signal caught: %s - shutting down.\n", sig.String())
 		gracefulShutdown()
-		os.Exit(1)
+		// A requested stop is a clean exit: 0 keeps systemd from marking the
+		// unit "failed", so a real crash still stands out in the journal.
+		os.Exit(0)
 	}
 }
 
