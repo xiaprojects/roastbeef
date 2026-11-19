@@ -10,10 +10,6 @@
             <span class="rb-slot-label">ALT {{altitudeUnit}}</span>
             <span class="rb-slot-value">{{values.alt}}</span>
         </a>
-        <a class="rb-slot" data-slot="qnh" ng-click="open('#/altimeter')">
-            <span class="rb-slot-label">QNH hPa</span>
-            <span class="rb-slot-value">{{values.qnh}}</span>
-        </a>
         <a class="rb-slot" data-slot="agl" ng-click="open('#/synthview')">
             <span class="rb-slot-label">AGL {{altitudeUnit}}</span>
             <span class="rb-slot-value">{{values.agl}}</span>
@@ -40,15 +36,23 @@
             <span class="rb-slot-label">STBY</span>
             <span class="rb-slot-value">{{values.stby}}</span>
         </a>
-        <span class="rb-slot" data-slot="utc" ng-click="open('#/aircraft')">
+        <a class="rb-slot" data-slot="utc" ng-click="open('#/aircraft')">
             <span class="rb-slot-label">UTC</span>
             <span class="rb-slot-value">{{values.utc}}</span>
-        </span>
+        </a>
+        <a class="rb-slot" data-slot="uptime" ng-click="open('#/timers')">
+            <span class="rb-slot-label">UPTIME</span>
+            <span class="rb-slot-value">{{values.uptime}}</span>
+        </a>
     </div>
     <div class="rb-status-group rb-status-right">
         <a class="rb-slot" data-slot="oil" ng-click="open('#/ems')">
             <span class="rb-slot-label">OIL {{temperatureUnit}}</span>
             <span class="rb-slot-value">{{values.oil}}</span>
+        </a>
+        <a class="rb-slot" data-slot="outsideTemperature" ng-click="open('#/ems')">
+            <span class="rb-slot-label">OUT {{temperatureUnit}}</span>
+            <span class="rb-slot-value">{{values.outsideTemperature}}</span>
         </a>
         <a class="rb-slot" data-slot="traffic" ng-click="open('#/radar')">
             <span class="rb-slot-label">TRAFFIC</span>

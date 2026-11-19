@@ -13,7 +13,6 @@ RB_ADDON_PATH="/opt"
 tar -czf ${OTA_FILE_NAME} ${RB_SETTINGS_PATH}/alertsMapping.json \
      ${OTA_FILE_NAME} ${RB_SETTINGS_PATH}/databases \
      ${OTA_FILE_NAME} ${RB_SETTINGS_PATH}/deviation.json \
-     ${OTA_FILE_NAME} ${RB_SETTINGS_PATH}/keypad.json \
      ${OTA_FILE_NAME} ${RB_SETTINGS_PATH}/navigation.json \
      ${OTA_FILE_NAME} ${RB_SETTINGS_PATH}/keypad.json \
     ${SYSTEMD_PATH}/${OTA_SERVICE_NAME}.service ${RB_ADDON_PATH}/${OTA_SERVICE_NAME} ${STRATUX_PATH}/${OTA_PACKAGE_NAME}.version

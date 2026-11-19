@@ -1,9 +1,10 @@
 <!-- Bottom bar: the soft keys of main.js, BottomBarCtrl in plates/js/bottom.js, docs/tech-debt/top-bottom-bars.md -->
 <div class="rb-softkeys">
     <a class="rb-softkey" ng-repeat="key in softKeyRows[softKeyLevel] track by key.slot" data-slot="{{key.slot}}"
-        ng-click="press(key.slot)" ng-class="{'rb-lit': softKeyLit(key)}">
+        ng-click="press(key.slot)" ng-class="{'rb-lit': softKeyLit(key), 'rb-softkey-empty': key.empty}">
         <span class="rb-lamp" ng-if="softKeyHasLamp(key)"></span>
-        <span class="rb-softkey-label">{{key.label}}</span>
+        <span class="rb-softkey-label">{{softKeyLabel(key)}}</span>
+        <span class="rb-softkey-value" ng-if="key.value">{{keyValues[key.value]}}</span>
     </a>
     <a class="rb-bar-hide" data-slot="hide" ng-click="toggleBar('bottom')"><i class="fa fa-caret-down"></i></a>
 </div>

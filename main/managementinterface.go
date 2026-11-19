@@ -673,21 +673,27 @@ func handleTimersGet(w http.ResponseWriter, r *http.Request) {
 }
 func handleTimersDelete(w http.ResponseWriter, r *http.Request) {
 
-	parts := strings.Split(r.RequestURI, "/")
-	log.Printf("%s %d", r.RequestURI, len(parts))
-
+	parts := strings.Split(r.URL.Path, "/")
 	if len(parts) < 3 {
+		http.Error(w, `{"Error":"DELETE /timers/<index>"}`, http.StatusBadRequest)
 		return
 	}
-	idx := len(parts) - 1
-	timerId, err := strconv.Atoi(parts[idx])
+	timerId, err := strconv.Atoi(parts[len(parts)-1])
+	if err != nil || timerId < 0 {
+		http.Error(w, `{"Error":"the index is not a number"}`, http.StatusBadRequest)
+		return
+	}
 	log.Printf("Timer delete %d", timerId)
 	timers.timersDataMutex.Lock()
-	if len(timers.timersData) > timerId {
+	deleted := len(timers.timersData) > timerId
+	if deleted {
 		timers.timersData = append(timers.timersData[:timerId], timers.timersData[timerId+1:]...)
 	}
 	statusJSON, err := json.Marshal(&timers.timersData)
 	timers.timersDataMutex.Unlock()
+	if deleted {
+		notifyTimersChanged()
+	}
 	if err == nil {
 		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
@@ -700,6 +706,7 @@ func handleTimersPut(w http.ResponseWriter, r *http.Request) {
 	timers.timersData = append(timers.timersData, SingleTimer{0, 0, false, false})
 	statusJSON, err := json.Marshal(&timers.timersData)
 	timers.timersDataMutex.Unlock()
+	notifyTimersChanged()
 	if err == nil {
 		fmt.Fprintf(w, "%s\n", statusJSON)
 	} else {
@@ -708,8 +715,6 @@ func handleTimersPut(w http.ResponseWriter, r *http.Request) {
 	}
 }
 func handleTimersPost(w http.ResponseWriter, r *http.Request) {
-	//raw, _ := httputil.DumpRequest(r, true)
-	//log.Printf("handleTimersPost:raw: %s\n", raw)
 	decoder := json.NewDecoder(r.Body)
 
 	var msg map[int]SingleTimer
@@ -719,15 +724,20 @@ func handleTimersPost(w http.ResponseWriter, r *http.Request) {
 	} else if err != nil {
 		log.Printf("handleTimersSetRequest:error: %s\n", err.Error())
 	} else {
+		changed := false
+		timers.timersDataMutex.Lock()
 		for key, thisTimer := range msg {
-			if len(timers.timersData) > key {
-				timers.timersDataMutex.Lock()
+			if key >= 0 && len(timers.timersData) > key {
 				timers.timersData[key].CountDown = thisTimer.CountDown
 				timers.timersData[key].Status = thisTimer.Status
 				timers.timersData[key].Epoch = thisTimer.Epoch
 				timers.timersData[key].Fired = thisTimer.Fired
-				timers.timersDataMutex.Unlock()
+				changed = true
 			}
+		}
+		timers.timersDataMutex.Unlock()
+		if changed {
+			notifyTimersChanged()
 		}
 	}
 }
@@ -3071,8 +3081,10 @@ func managementInterface() {
 	autopilotUpdate = NewUIBroadcaster()
 	bridgeFloatUpdate = NewUIBroadcaster()
 	alertsListUpdate = NewUIBroadcaster()
+	timersListUpdate = NewUIBroadcaster()
 	playbackUpdate = NewUIBroadcaster()
 	go alertsListSender()
+	go timersListSender()
 	go playbackWatcher()
 
 	http.HandleFunc("/", defaultServer)
@@ -3208,6 +3220,15 @@ func managementInterface() {
 	http.HandleFunc("/magnetometer", handleMagnetometerRest)
 	// Timers Feature
 	http.HandleFunc("/timers", handleTimersRest)
+	// DELETE /timers/<index>
+	http.HandleFunc("/timers/", handleTimersRest)
+	// The list on connect and on every change
+	http.HandleFunc("/timers/ws",
+		func(w http.ResponseWriter, req *http.Request) {
+			s := websocket.Server{
+				Handler: websocket.Handler(handleTimersWS)}
+			s.ServeHTTP(w, req)
+		})
 	// SwitchBoard Feature
 	http.HandleFunc("/switches", handleSwitchBoardRest)
 	http.HandleFunc("/switches/", handleSwitchBoardRest)

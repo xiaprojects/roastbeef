@@ -264,6 +264,11 @@ app.controller('MainCtrl', function ($scope, $http, $state, $timeout) {
 		}
 	}
 	if (true) {
+		if (($scope.timersService === undefined) || ($scope.timersService === null)) {
+			$scope.timersService = new TimersService($scope, $http);
+		}
+	}
+	if (true) {
 		if (($scope.situationService === undefined) || ($scope.situationService === null)) {
 			$scope.situationService = new SituationService($scope, $http, $state);
 		}
@@ -393,14 +398,16 @@ app.controller('MainCtrl', function ($scope, $http, $state, $timeout) {
 		$scope.$applyAsync();
 	});
 
-	// The soft keys, one row per slot and level: a key opens `href` or runs `action`
-	// The five page keys of the root level, set by xiaprojects 2026-11-11 (decision D1)
+	// The soft keys, one row per slot and level: a key opens `href`, cycles through `pages`
+	// or runs `action`. `value` names the reading BottomBarCtrl draws under the label.
+	// A slot with no row is drawn as an empty key, so MENU stays on slot 6.
+	// Page keys of the root level set by xiaprojects 2026-11-17
 	$scope.softKeys = [
-		{ level: "root", slot: 1, label: "SIXPACK", href: "#/sixpack" },
-		{ level: "root", slot: 2, label: "3D", href: "#/synthview" },
-		{ level: "root", slot: 3, label: "MAP", href: "#/map" },
-		{ level: "root", slot: 4, label: "ENGINE", href: "#/ems" },
-		{ level: "root", slot: 5, label: "SWITCH", href: "#/switchboard" },
+		{ level: "root", slot: 1, pages: [{ label: "SIXPACK", href: "#/sixpack" }, { label: "3D", href: "#/synthview" }], value: "qnh" },
+		{ level: "root", slot: 2, pages: [{ label: "MAP", href: "#/map" }, { label: "AUTOPILOT", href: "#/autopilot" }], value: "eta" },
+		{ level: "root", slot: 3, label: "TIMERS", href: "#/timers", value: "timer" },
+		{ level: "root", slot: 4, label: "SWITCH", href: "#/switchboard", value: "cpu" },
+		{ level: "root", slot: 5, pages: [{ label: "EMS", href: "#/ems" }, { label: "EGT", href: "#/emsegt" }], value: "battery" },
 		{ level: "root", slot: 6, label: "MENU", action: "menu" },
 		{ level: "menu", slot: 1, label: "LEFT PNL", action: "leftPanel" },
 		{ level: "menu", slot: 2, label: "RIGHT PNL", action: "rightPanel" },
@@ -431,33 +438,76 @@ app.controller('MainCtrl', function ($scope, $http, $state, $timeout) {
 		},
 	};
 	$scope.softKeyLevel = "root";
-	// The keys of each level in slot order, for the bottom bar to draw
+	// A single page key is a cycle of one page
+	$scope.softKeys.forEach(function (key) {
+		if (key.href !== undefined) {
+			key.pages = [{ label: key.label, href: key.href }];
+		}
+		if (key.pages !== undefined) {
+			// The page of the cycle the key opens from another page: the last one it showed
+			const stored = parseInt(localDisplayGetFlag("softKeyPage_" + key.level + "_" + key.slot), 10);
+			key.choice = stored >= 0 && stored < key.pages.length ? stored : 0;
+		}
+	});
+	// The keys of each level in slot order, for the bottom bar to draw; an empty slot
+	// gets a blank key so the others keep their place
+	const SOFTKEY_SLOTS = 6;
 	$scope.softKeyRows = {};
 	$scope.softKeys.forEach(function (key) {
 		($scope.softKeyRows[key.level] = $scope.softKeyRows[key.level] || []).push(key);
 	});
-	angular.forEach($scope.softKeyRows, function (row) {
+	angular.forEach($scope.softKeyRows, function (row, level) {
+		for (var slot = 1; slot <= SOFTKEY_SLOTS; slot++) {
+			if (!row.some(function (key) { return key.slot == slot; })) {
+				row.push({ level: level, slot: slot, empty: true });
+			}
+		}
 		row.sort(function (a, b) { return a.slot - b.slot; });
 	});
 	var softKeyMenuTimer = null;
 
+	// The index in key.pages of the page shown now, -1 when none of them is.
+	// A side panel adds ?uiSidebarLeft=true to the hash
+	function softKeyShownPage(key) {
+		const hash = window.location.hash.split("?")[0];
+		return key.pages.findIndex(function (page) { return page.href == hash; });
+	}
+
 	$scope.softKeyHasLamp = function (key) {
-		return key.href !== undefined || softKeyActions[key.action].lit !== undefined;
+		return key.pages !== undefined || (key.action !== undefined && softKeyActions[key.action].lit !== undefined);
 	};
 
-	// A page key is lit while its page is shown, an action while what it toggles is on
+	// A page key is lit while one of its pages is shown, an action while what it toggles is on
 	$scope.softKeyLit = function (key) {
-		if (key.href !== undefined) {
-			// A side panel adds ?uiSidebarLeft=true to the hash
-			return window.location.hash.split("?")[0] == key.href;
+		if (key.pages !== undefined) {
+			return softKeyShownPage(key) >= 0;
+		}
+		if (key.action === undefined) {
+			return false;
 		}
 		const lit = softKeyActions[key.action].lit;
 		return lit !== undefined && lit() == true;
 	};
 
+	// The title of a key: for a cycle the page shown now, else the one it will open
+	$scope.softKeyLabel = function (key) {
+		if (key.pages === undefined) {
+			return key.label || "";
+		}
+		const shown = softKeyShownPage(key);
+		return key.pages[shown >= 0 ? shown : key.choice].label;
+	};
+
 	function runSoftKey(key) {
-		if (key.href !== undefined) {
-			document.location = key.href;
+		if (key.empty === true) {
+			return;
+		}
+		if (key.pages !== undefined) {
+			// The first press opens the page the key last showed, the next ones step the cycle
+			const shown = softKeyShownPage(key);
+			key.choice = shown >= 0 ? (shown + 1) % key.pages.length : key.choice;
+			window.localStorage.setItem("softKeyPage_" + key.level + "_" + key.slot, key.choice);
+			document.location = key.pages[key.choice].href;
 			// A page key in the menu returns to the root level
 			$scope.softKeyLevel = "root";
 		}
