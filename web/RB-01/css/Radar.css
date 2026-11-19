@@ -1,86 +1,139 @@
+/*
+ * Radar plate (plates/radar.html), DOM + inline svg, no SVG.js.
+ * The box is 402 units wide, centred on the own ship: --u is one of those units,
+ * a size of N units is calc(N * var(--u)) and a position of v units is (201 + v) / 4.02 percent.
+ * Font sizes keep the em values of the former SVG drawing (1em = 16 units).
+ */
 .radar
 {
-margin: 0 auto;
-max-height: 100cqh;
-overflow: hidden;
-aspect-ratio: 1/1;
-
-
+	--u: calc(100cqw / 402);
+	position: relative;
+	container-type: inline-size;
+	margin: 0 auto;
+	width: min(100%, 100cqh);
+	overflow: hidden;
+	aspect-ratio: 1/1;
+	font-family: sans-serif;
 }
 
-
-.radar .backRect {
-
+.radar-card,
+.radar-fixed,
+.radar-traces {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.radar .card {
-
-    stroke: white;
+.radar-fixed {
+	pointer-events: none;
 }
 
-.radar .circle {
+.radar-traces {
+	overflow: visible;
+}
 
-    stroke: white;
+/* rings of 400 and 200 units */
+.radar-ring {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	box-sizing: border-box;
+	border: var(--u) solid white;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.radar-ring-outer {
+	width: 99.5%;
+	height: 99.5%;
+}
+
+.radar-ring-inner {
+	width: 49.75%;
+	height: 49.75%;
 }
 
 .radar .textDir {
-	font-size: 1em;
-	font-family: sans-serif;
+	position: absolute;
+	font-size: calc(16 * var(--u));
+	line-height: 1;
 	font-weight: normal;
-	text-anchor: left;
-	fill: white;
+	color: white;
+	-webkit-text-stroke: var(--u) white;
+	transform: translate(-50%, -50%);
 }
 
-.radar .textOutside {
-	font-size: 1.3em;
-	font-family: sans-serif;
-	font-weight: normal;
-	text-anchor: left;
-        fill: white;
-	stroke: none;
-}
-.radar .textOutsideRight {
-	font-size: 1.3em;
-	font-family: sans-serif;
-	font-weight: normal;
-	text-anchor: end;
-        fill: white;
-	stroke: none;
-}
-.radar .textCirc {
-	font-size: 1.8em;
-	font-family: sans-serif;
-	text-anchor: center;
-	fill: #7B1AB9;
-}
-.radar .textCircReg {
-	font-size: 0.8em;
-	font-family: sans-serif;
-	text-anchor: center;
-	fill: #7B1AB9;
-}
-.radar .textRegOut {
-	font-size: 0.8em;
-	font-family: sans-serif;
-	text-anchor: center;
-	fill: white;
-	stroke: white;
-	stroke-width: 3px;
+.radar-dir-n { left: 50%; top: 2.74%; }
+.radar-dir-s { left: 50%; top: 97.26%; }
+.radar-dir-w { left: 2.74%; top: 50%; }
+.radar-dir-e { left: 97.26%; top: 50%; }
+
+/* traffic with a position: a zero size group on the target, the icon and labels hang from it */
+.radar-target {
+	position: absolute;
+	width: 0;
+	height: 0;
 }
 
-.radar .textCOut {
-	font-size: 1.8em;
-	font-family: sans-serif;
-	text-anchor: center;
-	fill: #121212;
-	stroke: white;
-	stroke-width: 7px;
+.radar-plane {
+	position: absolute;
+	width: calc(30 * var(--u));
+	height: calc(30 * var(--u));
+	left: calc(-15 * var(--u));
+	top: calc(-12 * var(--u));
+	transform-origin: calc(15 * var(--u)) calc(12 * var(--u));
+	overflow: visible;
 }
 
-.radar .greenCirc {
-	fill: none;
-	stroke: #7B1AB9;
-	stroke-width: 3px;
+.radar-dot {
+	position: absolute;
+	width: calc(2 * var(--u));
+	height: calc(2 * var(--u));
+	left: calc(-1 * var(--u));
+	top: calc(-1 * var(--u));
+	box-sizing: border-box;
+	border: var(--u) solid white;
+	border-radius: 50%;
+	background: white;
+}
+
+.radar-labels {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	transform-origin: 0 0;
+}
+
+.radar-label {
+	position: absolute;
+	left: calc(17 * var(--u));
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.radar-alt { top: calc(-20 * var(--u)); }
+.radar-speed { top: calc(2 * var(--u)); }
+.radar-tail { top: calc(13 * var(--u)); }
+
+.radar .textPlane {
+	font-size: calc(28.8 * var(--u));
+	color: white;
+}
+
+.radar .textPlaneOut {
+	font-size: calc(28.8 * var(--u));
+	color: black;
+	-webkit-text-stroke: calc(2 * var(--u)) white;
+}
+
+.radar .textPlaneSmall,
+.radar .textPlaneReg {
+	font-size: calc(12.8 * var(--u));
+	color: white;
 }
 
 .radar .trace {
@@ -90,56 +143,102 @@ aspect-ratio: 1/1;
 	stroke-dasharray: 2px;
 }
 
-.radar .textPlane {
-	font-size: 1.8em;
-	font-family: sans-serif;
-	text-anchor: start;
-	fill: white;
-	stroke-width: 0px;
-}
-
-.radar .textPlaneOut {
-	font-size: 1.8em;
-	font-family: sans-serif;
-	text-anchor: start;
-	fill: black;
-	stroke: white;
-	stroke-width: 2px;
-}
-
-.radar .textPlaneSmall {
-	font-size: 0.8em;
-	font-family: sans-serif;
-	text-anchor: start;
-	fill: white;
-	stroke-width: 0px;
-}
-
-.radar .textPlaneReg {
-	font-size: 0.8em;
-	font-family: sans-serif;
-	text-anchor: start;
-	fill: white;
-	stroke-width: 0px;
-}
-
-.radar .textPlaneVerySmall {
-	font-size: 0.5em;
-	font-family: sans-serif;
-	text-anchor: start;
-	fill: white;
-}
-
-.radar .textSmall {
-	font-size: 1em;
-	font-family: sans-serif;
-	text-anchor: left;
-	fill: #1122EE;
-}
-
 .radar .plane {
 	fill: white;
 	stroke: none;
+}
+
+/* Mode S targets without a position: a ring around the own ship plus the labels on it */
+.radar-modes {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.radar-modes-ring {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	aspect-ratio: 1/1;
+	box-sizing: border-box;
+	border: calc(3 * var(--u)) solid #7B1AB9;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.radar-modes-labels {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.radar-modes-text {
+	position: absolute;
+	line-height: 1;
+	white-space: nowrap;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+.radar-modes-alt { left: 0; top: 0; }
+.radar-modes-tail { left: 0; top: calc(18 * var(--u)); }
+
+.radar .textCirc {
+	font-size: calc(28.8 * var(--u));
+	color: #7B1AB9;
+}
+
+.radar .textCircReg {
+	font-size: calc(12.8 * var(--u));
+	color: #7B1AB9;
+}
+
+.radar .textRegOut {
+	font-size: calc(12.8 * var(--u));
+	color: white;
+	-webkit-text-stroke: calc(3 * var(--u)) white;
+}
+
+.radar .textCOut {
+	font-size: calc(28.8 * var(--u));
+	color: #121212;
+	-webkit-text-stroke: calc(7 * var(--u)) white;
+}
+
+/* fixed texts */
+.radar .textOutside,
+.radar .textOutsideRight {
+	position: absolute;
+	top: 10.7%;
+	font-size: calc(18 * var(--u));
+	line-height: 1;
+	white-space: nowrap;
+	color: white;
+	transform: translateY(-50%);
+}
+
+.radar .textOutside { left: 0.25%; }
+.radar .textOutsideRight { right: 0.25%; }
+
+.radar .textSmall {
+	position: absolute;
+	left: 51.74%;
+	top: 51.24%;
+	font-size: calc(16 * var(--u));
+	line-height: 1;
+	color: #1122EE;
+}
+
+/* own ship */
+.radar-ownship {
+	position: absolute;
+	left: 50%;
+	top: calc(50% + 3 * var(--u));
+	width: calc(25 * var(--u));
+	height: calc(25 * var(--u));
+	transform: translate(-50%, -50%);
 }
 
 .radar .centerplane {
@@ -147,55 +246,44 @@ aspect-ratio: 1/1;
 	stroke: none;
 }
 
-.radar .planeRotationPoint {
-	fill: white;
-	stroke-width: 1px;
-	stroke: white;
+.radar-dot-own {
+	left: calc(50% - var(--u));
+	top: calc(50% - var(--u));
 }
 
-.radar .zoom {
+/* Ra-, Ra+, Alt+, Alt-: 45 unit round buttons */
+.radar-button {
+	position: absolute;
+	top: 2.99%;
+	width: calc(45 * var(--u));
+	height: calc(45 * var(--u));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	pointer-events: auto;
+	transform: translate(-50%, -50%);
 }
 
-.radar .zoomInvert {
-    stroke: white;
-    stroke-width: 2;
-}
+.radar-zoomin { left: 20.15%; }
+.radar-zoomout { left: 5.97%; }
+.radar-altmore { left: 79.85%; }
+.radar-altless { left: 94.03%; }
 
 .radar .textZoom {
-    font-size: 1.1em;
-    font-family: sans-serif;
-    text-anchor: middle;
-    font-weight: bold;
-	stroke-width: 0;
-    fill:white;
+	font-size: calc(17.6 * var(--u));
+	font-weight: bold;
+	color: white;
 }
 
-.radar .textZoomInvert {
-    font-size: 1.1em;
-    font-family: sans-serif;
-    text-anchor: middle;
-    font-weight: bold;
-    stroke-width: 0;
-    fill:white;
+/* press feedback: a quarter turn out and back, as the SVG buttons did */
+.radar-spin {
+	animation: radar-spin 0.4s linear;
 }
 
-.radar .tSmall {
-    line-height: 0.8;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    text-anchor: middle;
-    font-weight: bold;
-    stroke-width: 0;
-    fill: white;
+@keyframes radar-spin {
+	0% { transform: translate(-50%, -50%) rotate(0deg); }
+	50% { transform: translate(-50%, -50%) rotate(90deg); }
+	100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
-
-.radar .tSmallInvert {
-    line-height: 0.8;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    text-anchor: middle;
-    font-weight: bold;
-    stroke-width: 0;
-    fill: white;
-}
-

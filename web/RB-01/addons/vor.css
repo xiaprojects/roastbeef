@@ -28,6 +28,19 @@
     margin-left: 25%;
 }
 
+/* RB-VOR-IF v2.4: LOC / GS switch on a shared dongle, above the rose centre, inside the circle */
+.addonVorGsSwitch {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.addonVorGsSwitch .btn {
+    font-size: 4.5cqmin;
+    padding: 1cqmin 4cqmin;
+}
+
 /* RB-VOR-IF v2.3 localizer: the notice under the rose, on the glass of the round panel */
 .addonVorLocNotice {
     position: absolute;

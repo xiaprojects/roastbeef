@@ -49,7 +49,7 @@ keys along the bottom edge.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
-│ IAS KMH ALT ft QNH hPa AGL ft TRK  AP     MAX G  COM     STBY    UTC   OIL °C TRAF ALERTS ▴│
+│ IAS KMH ALT ft UPTIME  AGL ft TRK  AP     MAX G  COM     STBY    UTC   OIL °C TRAF ALERTS ▴│
 │ 182     4500   1018    1730   274° 268° ► 1.8    118.275 121.500 14:32 81     3    1      │
 ├──────────────────────────────────────────────────────────────────────────────────────┤
 │                                       plate                                          │
@@ -68,7 +68,7 @@ temperature and the autopilot were added.
 |---|---|---|---|---|---|---|
 | speed | left | `IAS` or `GS`, with the pilot's unit | Speed | `SpeedKt`, `SpeedSource` from `SituationUpdated` | `#/speed` | never |
 | alt | left | `ALT ft` or `ALT m` | Altimeter: `BaroPressureAltitude + 27 × (QNH − 1013.25)` ft, as the altimeter plate; `---` with no baro (`BaroSourceType` 0) | `SituationUpdated` | `#/altimeter` | never |
-| qnh | left | `QNH hPa` | QNH | `QNH` | `#/altimeter` | 3rd |
+| uptime | left | `UPTIME` | Daemon uptime, H:MM; `---` 5 s after the status stops | `StatusUpdated` `Uptime` (ms) | nothing | 3rd |
 | agl | left | `AGL ft` or `AGL m` | Height above the terrain grid cell | `Terrain_AglFt` when `Terrain_AglValid`, `StatusUpdated` (main/terrain.go) | `#/synthview` | 7th |
 | track | left | `TRK` | Track, `°` | `GPSTrueCourse` | `#/heading` | 4th |
 | ap | left | `AP` | Bearing the autopilot steers to and `►`/`◄`, `OFF` when not engaged | `GPRMB.TrueBearing`, `GPRMB.Steer`, `AutopilotUpdated` (1 s, only with the autopilot setting on) | `#/autopilot` | 9th |
@@ -78,7 +78,7 @@ temperature and the autopilot were added.
 | utc | centre | `UTC` | `HH:MM` | Browser clock | nothing | 1st |
 | oil | right | `OIL °C` or `OIL °F` | Oil temperature | `oiltemperature` from `EMSUpdated` | `#/ems` | 8th |
 | traffic | right | `TRAFFIC` | Targets heard in the last 60 s | `RadarChanged` | `#/radar` | 6th |
-| alerts | right | `ALERTS` | Active alerts | `AlertsUpdated` (see below) | `#/alerts` | never |
+| alerts | right | `ALERTS` | All alerts, lamp until seen | `AlertsUpdated` (see below) | `#/alerts` | never |
 | hide | right | `▴` | Hide the top bar | | | never |
 
 - Dropping a slot never moves the others across the groups. With 13 slots fixed container
@@ -94,11 +94,13 @@ temperature and the autopilot were added.
   the terrain alerts are off (`Terrain_Enabled`), which is the default.
 - **No data is shown as `---`**, never as `X` and never as an old number. Speed, ALT, QNH, TRK
   and MAX G go to `---` when no `SituationUpdated` has arrived for 3 s.
-- **ALERTS** counts the entries of the last `AlertsUpdated` list whose `Active` is true. Its lamp
-  takes the colour of the worst active one, using the same severity the balloon uses
-  (`alertMappingRow()` in `services/servicealerts.js`: `danger` red, `warning` amber), and is off
-  when the count is 0. Check in `main/alerts.go` what `Active` is for alerts that are not engine
-  rules, and say in the report what the count means for them. This is only a count: it is not the
+- **ALERTS** counts every entry of the last `AlertsUpdated` list, active or not: the alerts page
+  shows them all. Its lamp is on while an alert has come, or has come back (inactive to active),
+  since the pilot last opened `#/alerts`, and stays on even if that alert clears meanwhile. It
+  takes the colour of the worst such alert, using the same severity the balloon uses
+  (`alertMappingRow()` in `services/servicealerts.js`: `danger` red, `warning` amber). The unseen
+  state lives in `AlertsService` (`alertsSeen()`, `alertUnseen()`), so it survives the bar being
+  hidden; it is lost on a page reload, when the whole list counts as new again. This is not the
   acknowledgement of TD1 and TD2, which stays in the roadmap.
 - Red and amber are used for the ALERTS lamp only. Values are white, labels grey.
 
@@ -108,11 +110,11 @@ Six keys of equal width, then a narrow hide key. The whole cell is the touch tar
 
 | Slot | Root level | Menu level |
 |---|---|---|
-| 1 | `SIXPACK` → `#/sixpack` | `LEFT PNL` toggle, lamp when open |
-| 2 | `3D` → `#/synthview` | `RIGHT PNL` toggle, lamp when open |
-| 3 | `MAP` → `#/map` | `TOP BAR` toggle, lamp when shown |
-| 4 | `ENGINE` → `#/ems` | `FULL SCR` toggle |
-| 5 | `SWITCH` → `#/switchboard` | `ALERTS` → `#/alerts` |
+| 1 | `SIXPACK` → `#/sixpack`, `3D` → `#/synthview` (cycle); reading: QNH | `LEFT PNL` toggle, lamp when open |
+| 2 | `MAP` → `#/map`, `AUTOPILOT` → `#/autopilot` (cycle); reading: ETA | `RIGHT PNL` toggle, lamp when open |
+| 3 | `TIMERS` → `#/timers`; reading: first running timer | `TOP BAR` toggle, lamp when shown |
+| 4 | `SWITCH` → `#/switchboard`; reading: CPU load | `FULL SCR` toggle |
+| 5 | `EMS` → `#/ems`, `EGT` → `#/emsegt` (cycle); reading: battery | `ALERTS` → `#/alerts` |
 | 6 | `MENU` | `BACK` |
 | end | `▾` hide the bottom bar | same |
 
@@ -128,7 +130,22 @@ Six keys of equal width, then a narrow hide key. The whole cell is the touch tar
 - The keys of both levels are defined in **one table in the code**, one row per slot and level,
   with `label`, and `href` or `action`. Nothing addresses a key by array index.
 - The five page keys were set by xiaprojects on 2026-11-11 (decision D1). The switchboard key is
-  labelled `SWITCH` so the key font is not shrunk: `RIGHT PNL` stays the longest label.
+  labelled `SWITCH` so the key font is not shrunk: `RIGHT PNL` and `AUTOPILOT` stay the longest labels.
+- The root keys were changed by xiaprojects on 2026-11-17 to five page keys, three of them cycles; `EMS`/`EGT` added the same day.
+  A cycle key has `pages` in place of `href`. Its label names the page shown now; from another page it names
+  the page the key last showed. The first press opens that page and each press after it steps the cycle.
+  The step is kept in `localStorage.softKeyPage_<level>_<slot>`. A slot with no row is drawn as an
+  empty key, so `MENU` stays on slot 6.
+- A key with `value` draws a reading under its label (`BottomBarCtrl`), `---` with no data:
+  - `qnh`: `QNH 1013`, the `QNH` of the situation; `---` 3 s after the situation stops. It moved here
+    from the top bar on 2026-11-17, where `UPTIME` took its slot.
+  - `cpu`: `CPU 0.30`, `cpu_load_1m` of the EMS frames; `battery`: `13.4 V`, `batteryvoltage` of the
+    EMS frames. Each is kept across the partial frames, and reads `---` 5 s after the EMS stops.
+  - `eta`: UTC HH:MM of arrival at the active waypoint, from `GPRMB.Distance / GPRMB.Knots`. It reads
+    `---` with the autopilot off, with no speed towards the waypoint, or after 5 s with no `AutopilotUpdated`.
+  - `timer`: the first running timer of the list `TimersService` receives on `/timers/ws` (sent on
+    connect and on every change, no polling; the bar counts the seconds). A countdown shows the time left,
+    a chrono the time elapsed.
 
 ### Hiding and showing
 

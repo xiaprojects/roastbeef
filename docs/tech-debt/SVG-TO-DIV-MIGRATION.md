@@ -1,5 +1,11 @@
 # SVG.js to DIV migration: HSI, AHRS, Radar
 
+**Status (2026-11-17): phases A-D implemented, uncommitted.** RB-01 no longer loads
+SVG.js. Deviations from this plan: the autopilot ball shows the fail X only when
+pitch/roll are invalid (no timeout check); the synthview overlay heading tape follows
+GPS track; the HSI's GS labels show only while a glideslope is received
+(`HSI.gsActive`); the VOR display suites were updated to the new HSI DOM.
+
 ## Context
 The six-pack instruments were moved from SVG.js drawings to plain DIVs: the plate
 holds the markup, a per-instrument stylesheet positions it, and the controller only

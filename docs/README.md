@@ -42,6 +42,8 @@ hardware integration). User-facing how-tos live in the
   - [hardware/sdr-and-bands.md](hardware/sdr-and-bands.md) — RTL-SDR dongles and band
     assignment.
   - [hardware/gps.md](hardware/gps.md) — GPS/GNSS receivers.
+  - [hardware/gps-authenticity.md](hardware/gps-authenticity.md) — how to identify a u-blox
+    receiver and spot a clone chip, with the RB-01 reference unit as an example.
   - [hardware/sensors.md](hardware/sensors.md) — barometric and IMU/AHRS sensors.
   - [hardware/ogn-ais-receivers.md](hardware/ogn-ais-receivers.md) — OGN trackers (RX/TX),
     AIS, and external ADS-B receivers (Ping/Pong/UATRadio).
@@ -62,6 +64,9 @@ re-verify before acting.
 - **[tech-debt/ALERTS-NAVIGATION-UI-PROPOSAL.md](tech-debt/ALERTS-NAVIGATION-UI-PROPOSAL.md)** —
   proposed alert popups and navigation panel for the 480×480 round and 1280×800 displays, by
   touch and external keypad, with mockups on the real HMI, competitor review and phased plan.
+- **[tech-debt/keypad-page-navigation.md](tech-debt/keypad-page-navigation.md)** — plan for
+  operating every RB-01 page with the three keypad functions (previous, tap, next): page
+  inventory, what works today, per-page proposal and highlight, priorities, costs and tests.
 - **[tech-debt/radio-active-status.md](tech-debt/radio-active-status.md)** — the radio plate's
   ACTIVE shows the command, not the radio, and a dead receiver stays on its plate as if alive.
 - **[tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md)** — spoken terrain alerts:

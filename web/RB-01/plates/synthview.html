@@ -3,8 +3,9 @@
   style="position: fixed; width: 100cqw;height: 100cqh;">
 </div>
 
-<div ng-show="remote.reset==false" id="ahrs_display"
+<div ng-show="remote.reset==false"
   style="position: fixed;width: 100cqw;height: 100cqh;  left: 50%;transform: translate(-50%, 0%);pointer-events: none;cursor: not-allowed;">
+  <div ng-repeat="instrument in instruments" ng-include="instrument.url" ng-controller="instrument.ctrl" style="width: 100%;height: 100%;"></div>
 </div>
 <div ng-show="remote.reset==false" class="SynthView-side-left">{{pilotGPSGroundSpeed}}
   <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSGroundSpeedUnit}}</div>
@@ -24,7 +25,7 @@
 </div>
 
 <div  ng-show="displayHSI()" ng-controller="HSICtrl" ng-init="init('SynthViewCtrl','#000000')">
-  <div id="hsi" style="
+  <div style="
   width: 40cqw;
   height: 40cqmin;
   position: absolute;
@@ -32,8 +33,33 @@
   margin-left: 30cqw;
   padding: 0;
   bottom: 11cqh;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   ">
+  <div id="hsi" class="hsi" style="height: 100%; max-width: 100%; max-height: none; margin: 0; --hsi-fg: {{HSI.fg}};">
+    <div class="hsi-gs" ng-repeat="side in HSI.sides track by $index" ng-class="'hsi-gs-' + side">
+      <div class="hsi-gs-label" ng-show="HSI.gsActive">GS</div>
+      <div class="hsi-gs-dot" ng-repeat="i in HSI.gsDots track by $index" ng-class="{'hsi-gs-dot-center': i == 0}" style="--i: {{::i}};"></div>
+      <div class="hsi-gs-diamond" ng-show="HSI.showGs" style="transform: translate(-50%, -50%) translateY({{HSI.gs}});"></div>
+    </div>
+    <div class="hsi-card" style="transform: rotate({{HSI.card}});">
+      <div class="hsi-tick" ng-repeat="t in HSI.ticks track by $index" ng-class="{'hsi-tick-big': t.big}" style="transform: rotate({{::t.deg}}deg);"></div>
+      <div class="hsi-label" ng-repeat="l in HSI.labels track by $index" ng-class="{'hsi-cardinal': l.cardinal, 'hsi-north': l.deg == 0}" style="transform: rotate({{::l.deg}}deg);"><span>{{::l.text}}</span></div>
+    </div>
+    <div class="hsi-course" style="transform: rotate({{HSI.course}});">
+      <div class="hsi-ring"></div>
+      <div class="hsi-cdi" ng-show="HSI.showCdi" style="transform: translate(-50%, -50%) translateX({{HSI.cdi}});"></div>
+      <div class="hsi-dot" ng-repeat="i in HSI.courseDots track by $index" style="--i: {{::i}};"></div>
+      <div class="hsi-arrow"></div>
+      <div class="hsi-tail"></div>
+      <div class="hsi-bug-layer" style="transform: rotate({{HSI.bug}});"><div class="hsi-bug"></div></div>
+    </div>
+    <div class="hsi-lubber"></div>
+    <div class="hsi-aircraft-a"></div>
+    <div class="hsi-aircraft-b"></div>
+    <div class="hsi-aircraft-c"></div>
+  </div>
   </div>
 </div>
 

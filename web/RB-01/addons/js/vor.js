@@ -53,8 +53,8 @@
  * anything less would look like an approach on no signal. Supplemental equipment,
  * not approach guidance; the plate says so wherever LOC appears.
  *
- * HSICircleRenderer.update(outer, item, center, vertical, ...) as the HSI plate
- * (plates/js/hsi.js) uses it: `center` is track - course, so the course pointer is
+ * hsiUpdate(HSI, outer, center, vertical, radial, glideSlope) (plates/js/hsi.js) as the
+ * HSI plate uses it: `center` is track - course, so the course pointer is
  * drawn at (course - track) clockwise; `vertical` moves the bar by -vertical*12.5 in
  * the pointer's frame, with dots 25 apart, so `vertical` is in half-dots, clamped at
  * +/-6 = the third dot, and POSITIVE MOVES THE BAR LEFT of the pointer: the HSI plate
@@ -81,6 +81,10 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
 
     const name = "vor";
     const controllerName = String(name).charAt(0).toLocaleUpperCase() + String(name).slice(1) + "Ctrl";
+
+    // The knob: TO/FROM (or LOC / GS on an ILS) and the station search; with the list open,
+    // OFF and each station, TAP tunes it as a touch does (docs/tech-debt/keypad-page-navigation.md)
+    $scope.keypadFocus = new KeypadFocus($scope, $state, name);
 
     $state.get(name).onEnter = function () {
         console.log("onEnter" + name);
@@ -121,7 +125,18 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
         locfreqactive: 0,
         locname: "",
         loccourse: null,
-        locKnown: false
+        locKnown: false,
+        // RB-VOR-IF v2.4 glide-slope fields; absent (0) from a receiver without gs.enabled
+        gsstatus: 0,
+        gsdev: 0,
+        gsddm: 0,
+        gssdm: 0,
+        gssnr: 0,
+        gsfreqactive: 0,
+        gsshared: 0,
+        gsKnown: false,
+        // The pilot's LOC / GS choice on a shared dongle (sent as gsselect): 0 LOC, 1 GS
+        gsselect: 0
     };
 
     // Generated from web/settings/db.vor.json (open community data, not for navigation:
@@ -313,6 +328,35 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
     };
 
     // The only condition under which the deviation bar is drawn
+    // v2.4: one dongle, GS selected; the localizer is not received (locfreqactive 0)
+    $scope.gsMode = function() {
+        return $scope.items.gsshared == 1 && $scope.items.gsfreqactive > 0
+            && !($scope.items.locfreqactive > 0) && !($scope.items.vorfreqactive > 0);
+    };
+
+    // Either half of an ILS is on the plate
+    $scope.ilsMode = function() {
+        return $scope.locMode() || $scope.gsMode();
+    };
+
+    // The switch exists only when the receiver says the ILS shares one dongle
+    $scope.gsSwitchVisible = function() {
+        return $scope.items.gsshared == 1 && !($scope.items.vorfreqactive > 0);
+    };
+
+    $scope.setGsSelect = function(value) {
+        $scope.items.gsselect = value;
+        $http.post("/bridge/float", JSON.stringify({ "gsselect": value })).
+            then(function (response) {
+            }, function (response) {
+            });
+    };
+
+    // v2.4: draw the glide-slope marker only while gsstatus >= 4 (false paths, no GS at all)
+    $scope.gsUsable = function() {
+        return $scope.items.gsfreqactive > 0 && $scope.items.gsstatus >= 4;
+    };
+
     $scope.locUsable = function() {
         return $scope.locMode() && $scope.items.locstatus >= 4;
     };
@@ -328,26 +372,28 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
         return isFinite(x) ? x : 0;
     }
 
-    // One drawing path. VOR mode calls the renderer exactly as this plate always has;
-    // LOC mode follows the renderer's contract as the HSI plate uses it.
+    // One drawing path. VOR mode calls hsiUpdate exactly as this plate always has;
+    // LOC mode follows its contract as the HSI plate uses it.
     $scope.renderHSI = function() {
-        if ($scope.vorHSI == null) {
-            $scope.vorHSI = new HSICircleRenderer("vorHSI", {}, $scope.foregroundColor);
-        }
-        if ($scope.locMode()) {
+        // gsdev: % of full scale, + = below the path = fly up = marker above centre. The
+        // hsiUpdate clamps glideSlope to +-15 (full deflection), so 100 % maps to 15.
+        $scope.items.slope = $scope.gsUsable() ? $scope.items.gsdev * 15 / 100 : 0;
+        // Parked = not drawn (the markup shows the diamonds on HSI.showGs)
+        $scope.HSI.showGs = $scope.gsUsable();
+        $scope.HSI.gsActive = $scope.HSI.showGs;
+        if ($scope.ilsMode()) {
+            // In GS mode the needle stays centred and parked: no lateral deviation is received
             var course = $scope.items.loccourse;
-            $scope.vorHSI.update(
+            hsiUpdate($scope.HSI,
                 $scope.items.GPSTrueCourse,
-                {},
                 course === null ? 0 : $scope.items.GPSTrueCourse - course,
                 $scope.locUsable() ? $scope.items.locdev * 6 / 100 : 0,
                 $scope.items.overrideHSI,
                 $scope.items.slope
             );
         } else {
-            $scope.vorHSI.update(
+            hsiUpdate($scope.HSI,
                 $scope.items.GPSTrueCourse,
-                {},
                 $scope.items.vorradial + $scope.items.vorto * 180,
                 $scope.items.vertical,
                 $scope.items.overrideHSI,
@@ -356,11 +402,7 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         // Parked = not drawn. The VOR mode never computes a deviation (vertical is a
         // constant 0), so a bar there would only ever be a centred needle.
-        if ($scope.locUsable()) {
-            $scope.vorHSI.verticalLineDirection.show();
-        } else {
-            $scope.vorHSI.verticalLineDirection.hide();
-        }
+        $scope.HSI.showCdi = $scope.locUsable();
     };
 
     $scope.vorNameByFreq = function(freq) {
@@ -426,7 +468,10 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.items.vorfreq = freq;
         $scope.items.vorname = name;
         $scope.items.searchEnabled = false;
-        var msg = JSON.stringify({ "vorfreq": freq });
+        // v2.4 §2.5: a new station always starts on the localizer; sending gsselect 0 with
+        // every pick keeps a later press of GS a change the bridge rebroadcasts
+        $scope.items.gsselect = 0;
+        var msg = JSON.stringify({ "vorfreq": freq, "gsselect": 0 });
         $http.post("/bridge/float", msg).
             then(function (response) {
             }, function (response) {
@@ -451,6 +496,7 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
         $scope.renderHSI();
+        if (!$scope.$root.$$phase) $scope.$apply(); // the DOM is bound: digest
     }
 
     function bridgeUpdatedEventListener(event) {
@@ -475,7 +521,20 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.items.locsdm = num(status["locsdm"]);
         $scope.items.locsnr = num(status["locsnr"]);
         $scope.items.locfreqactive = num(status["locfreqactive"]);
-        var station = $scope.stationByFreq($scope.items.locfreqactive);
+        // v2.4: present only from a receiver with gs.enabled
+        $scope.items.gsKnown = ("gsstatus" in status);
+        $scope.items.gsstatus = num(status["gsstatus"]);
+        $scope.items.gsdev = num(status["gsdev"]);
+        $scope.items.gsddm = num(status["gsddm"]);
+        $scope.items.gssdm = num(status["gssdm"]);
+        $scope.items.gssnr = num(status["gssnr"]);
+        $scope.items.gsfreqactive = num(status["gsfreqactive"]);
+        $scope.items.gsshared = num(status["gsshared"]);
+        if ("gsselect" in status) {
+            $scope.items.gsselect = num(status["gsselect"]) == 1 ? 1 : 0;
+        }
+        // In GS mode locfreqactive is 0: the ILS is the vorfreq that was sent
+        var station = $scope.stationByFreq($scope.gsMode() ? $scope.items.vorfreq : $scope.items.locfreqactive);
         $scope.items.locname = station ? station.name : "";
         $scope.items.loccourse = (station && $scope.isLocalizer(station)
                                   && isFinite(parseFloat(station.course)))
@@ -489,7 +548,7 @@ function VorCtrl($rootScope, $scope, $state, $http, $interval) {
         // draw by one tick and brings its labels up to date sooner.
         $scope.$applyAsync($scope.renderHSI);
     }
-    $scope.vorHSI = null;
+    $scope.HSI = hsiCreate($scope.foregroundColor);
     addEventListener("BridgeUpdated", bridgeUpdatedEventListener);
     addEventListener("SituationUpdated", situationUpdateEventListener);
 };

@@ -31,7 +31,7 @@
  *
 */
 angular.module('appControllers').controller('RadarCtrl', RadarCtrl);           // get the main module contollers set
-RadarCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval'];  // Inject my dependencies
+RadarCtrl.$inject = ['$rootScope', '$scope', '$state', '$http', '$interval', '$timeout'];  // Inject my dependencies
 
 
 
@@ -42,8 +42,16 @@ var MaxAlarms = 5;        // number of times an alarm sound is played, if airpla
 var MaxSpeechAlarms = 1;  // number of times the aircraft is announced, MaxSpeedAlarms needs to be less than MaxAlarms
 
 var minimalCircle = 25;  //minimal circle in pixel around center ist distance is very close
-var radar;               // global RadarRenderer
 var posangle = Math.PI;  //global var for angle position of text
+
+// Aircraft silhouette, shared by own ship and traffic (bound as ng-attr-d in radar.html).
+// Its bounding box is 0.9,6.5 .. 63.1,57.6; the template uses it as the viewBox.
+const RADAR_PLANE_PATH = 'm 32,6.5 0.5,0.9 0.4,1.4 5.3,0.1 -5.3,0.1 0.1,0.5 0.3,0.1 0.6,0.4 0.4,0.4 0.4,0.8 1.1,7.1 0.1,0.8 3.7,1.7 22.2,1.3 0.5,0.1 0.3,0.3 0.3,0.7 0.2,6 -0.1,0.1 -26.5,2.8 -0.3,0.1 -0.4,0.3 -0.3,0.5 -0.1,0.3 -0.9,6.3 -1.7,10.3 9.5,0 0.2,0.1 0.2,0.2 -0.1,4.6 -0.2,0.2 -8.8,0 -1.1,-2.4 -0.2,2.5 -0.3,2.5 -0.3,-2.5 -0.2,-2.5 -1.1,2.4 -8.8,0 -0.2,-0.2 -0.1,-4.6 0.2,-0.2 0.2,-0.1 9.5,0 -1.7,-10.3 -0.9,-6.3 -0.1,-0.3 -0.3,-0.5 -0.4,-0.3 -0.3,-0.1 -26.5,-2.8 -0.1,-0.1 0.2,-6 0.3,-0.7 0.3,-0.3 0.5,-0.1 22.2,-1.3 3.7,-1.7 0,-0.8 1.2,-7.1 0.4,-0.8 0.4,-0.4 0.6,-0.4 0.3,-0.1 0.1,-0.5 -5.3,-0.1 5.3,-0.1 0.4,-1.4 z';
+
+// The radar box is 402 units wide, centred on the own ship: a position of v units is (201 + v) / 4.02 percent
+function radarPct(v) {
+	return ((201 + v) / 4.02).toFixed(2) + '%';
+}
 /*
 
 //------------------   General Options ------------
@@ -77,11 +85,18 @@ var AltDiffThreshold;         // in 100 feet display value
 var OldAltDiffThreshold = 0;  // in 100 feet display value
 */
 
-function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
+function RadarCtrl($rootScope, $scope, $state, $http, $interval, $timeout) {
 	//  basics();
 	$scope.data_list = [];
 	$scope.data_list_invalid = [];
-	$scope.radar = null;
+	$scope.planePath = RADAR_PLANE_PATH;
+	// values bound by radar.html: card = rotation of the compass card, counter = upright labels, fl = FL text, spin = button animating
+	$scope.Radar = { card: '0deg', counter: '0deg', fl: 0, spin: '', knob: 'range', knobShown: false };
+
+	// the listeners are not called from a digest: apply, unless one is running
+	function applyScope() {
+		if (!$scope.$root.$$phase) $scope.$apply();
+	}
 
 
 	$scope.Lat = 0;
@@ -96,6 +111,8 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 	$scope.OldBaroAltitude = 0;  // Old Value
 	$scope.DisplayRadius = 10;  // Radius in NM, below this radius targets are displayed
 	$scope.OldDisplayRadius = 0;
+	$scope.AltDiffThreshold = 20;  // in 100 feet display value
+	$scope.OldAltDiffThreshold = 0;
 
 
 
@@ -133,17 +150,12 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		if (now - $scope.radarUpdatedRequest >= 1000) {
 			$scope.radarUpdatedRequest = now;
 		ownSituation(event.detail);
-		if ($scope.radar) $scope.radar.update($scope);
 		}
 
 	}
 
 	// get situation data and turn radar
 	function ownSituation(situation) {
-
-		if ($scope.radar == null || $scope.radar.canvas == null) {
-			$scope.radar = new RadarRenderer($scope.locationId, $scope, $http);
-		}
 
 		// consider using angular.extend()
 		$scope.raw_data = situation;
@@ -181,8 +193,94 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		} else {
 			$scope.GPSValid = 'Valid';
 		}
-		$scope.$apply();
+		radarRefresh($scope);
+		applyScope();
 	}
+
+	// refresh of the bound values: the texts and the card are bound in radar.html, only the traces need a reset
+	function radarRefresh($scope) {
+		$scope.OldBaroAltitude = $scope.BaroAltitude;
+		$scope.Radar.fl = Math.round($scope.BaroAltitude / 100);
+		if ($scope.AltDiffThreshold !== $scope.OldAltDiffThreshold) {
+			clearRadarTraces($scope);
+			$scope.OldAltDiffThreshold = $scope.AltDiffThreshold;
+		}
+		if ($scope.DisplayRadius !== $scope.OldDisplayRadius) {
+			clearRadarTraces($scope);
+			$scope.OldDisplayRadius = $scope.DisplayRadius;
+		}
+		$scope.OldGPSCourse = $scope.GPSCourse;
+		$scope.Radar.card = (-$scope.GPSCourse) + 'deg';  // the card turns opposite to the course
+		$scope.Radar.counter = $scope.GPSCourse + 'deg';  // the labels turn back to stay upright
+	}
+
+	// press animation of the four buttons
+	function spinButton(name, ms) {
+		$scope.Radar.spin = name;
+		$timeout(function () { if ($scope.Radar.spin == name) $scope.Radar.spin = ''; }, ms);
+	}
+
+	$scope.radarZoomIn = function () {  // Ra-
+		var newval = $scope.DisplayRadius;
+		var animateTime = 400;
+		switch ($scope.DisplayRadius) {
+			case 40: newval = 20; break;
+			case 20: newval = 10; break;
+			case 10: newval = 5; break;
+			case 5: newval = 2; break;
+			default: animateTime = 0;  // keep 2
+		}
+		communicateLimits(100 * $scope.AltDiffThreshold, newval, $http, $scope);
+		radarRefresh($scope);
+		if (animateTime) spinButton('zoomin', animateTime);
+	};
+
+	$scope.radarZoomOut = function () {  // Ra+
+		var newval = $scope.DisplayRadius;
+		var animateTime = 400;
+		switch ($scope.DisplayRadius) {
+			case 2: newval = 5; break;
+			case 5: newval = 10; break;
+			case 10: newval = 20; break;
+			case 20: newval = 40; break;
+			default: animateTime = 0;  // keep 40
+		}
+		communicateLimits(100 * $scope.AltDiffThreshold, newval, $http, $scope);
+		radarRefresh($scope);
+		if (animateTime) spinButton('zoomout', animateTime);
+	};
+
+	$scope.radarAltMore = function () {  // Alt+
+		var newval = $scope.AltDiffThreshold;
+		var animateTime = 400;
+		switch ($scope.AltDiffThreshold) {
+			case 5: newval = 10; break;
+			case 10: newval = 20; break;
+			case 20: newval = 50; break;
+			case 50: newval = 100; break;
+			case 100: newval = 500; break;
+			default: animateTime = 0;
+		}
+		communicateLimits(100 * newval, $scope.DisplayRadius, $http, $scope);
+		radarRefresh($scope);
+		if (animateTime) spinButton('altmore', animateTime);
+	};
+
+	$scope.radarAltLess = function () {  // Alt-
+		var newval = $scope.AltDiffThreshold;
+		var animateTime = 400;
+		switch ($scope.AltDiffThreshold) {
+			case 500: newval = 100; break;
+			case 100: newval = 50; break;
+			case 50: newval = 20; break;
+			case 20: newval = 10; break;
+			case 10: newval = 5; break;
+			default: animateTime = 0;  //5 stays 5
+		}
+		communicateLimits(100 * newval, $scope.DisplayRadius, $http, $scope);
+		radarRefresh($scope);
+		if (animateTime) spinButton('altless', animateTime);
+	};
 	/*
 		function speaktraffic(altitudeDiff, direction) {
 			if ((soundType == 0) || (soundType == 2)) {
@@ -200,17 +298,13 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		}
 	*/
 	function checkCollisionVector(traffic, $scope) {
-		var doUpdate = 0;                                             //1 if update has to be done;
 		var altDiff;                                                  //difference of altitude to my altitude
 		var altDiffValid = 3;                                         // 1 = valid difference 2 = absolute height 3 = u/s
 		var distcirc = traffic.distance_estimated / 1852.0;
 		var distx = Math.round(200 / $scope.DisplayRadius * distcirc);       // x position for circle
 		var ctxt;
 
-		if (traffic.circ) {                      //delete circle + Text
-			traffic.circ.remove().forget();  // undisplay elements and clear children
-			doUpdate = 1;
-		}
+		traffic.circleShown = false;  // hide the ring, it is shown again below if the target is still relevant
 		//console.log("Mode S %d traffic. Distance %f nm Distx %d \n", traffic.icao_int, distcirc, distx);
 		if (distx < minimalCircle) distx = minimalCircle;
 		if ($scope.BaroAltitude > -100000) {  // valid BaroAlt or valid GPSAlt
@@ -222,7 +316,6 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		if (traffic.altitude == 0) altDiffValid = 3;  //set height to unspecified, nothing displayed for now
 		if (distx <= 200) {
 			if (((altDiffValid == 1) && (Math.abs(altDiff) <= $scope.AltDiffThreshold)) || (altDiffValid == 2)) {
-				doUpdate = 1;
 				if (distcirc <= ($scope.DisplayRadius / 2)) {
 					if (!traffic.alarms) traffic.alarms = 0;
 					if ((traffic.alarms < MaxSpeechAlarms) && (altDiffValid == 1)) {
@@ -237,9 +330,6 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 						traffic.alarms = 0;                // reset alarm counter, to play again
 					}
 				}
-				traffic.circ = $scope.radar.allScreen.group();  //not rotated
-				var circle = $scope.radar.allScreen.circle(distx * 2).cx(0).cy(0).addClass('greenCirc');
-				traffic.circ.add(circle);
 				if (!traffic.posangle) {  //not yet with position for text
 					traffic.posangle = posangle;
 					posangle = posangle + 3 * Math.PI / 16;
@@ -259,34 +349,21 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 				}
 				var dx = Math.round(distx * Math.cos(traffic.posangle));
 				var dy = Math.round(distx * Math.sin(traffic.posangle));
-				var outtext = $scope.radar.allScreen.text(ctxt).addClass('textCOut').center(dx, dy);  //Outline
-				traffic.circ.add(outtext);
-				var tratext = $scope.radar.allScreen.text(ctxt).addClass('textCirc').center(dx, dy);
-				traffic.circ.add(tratext);
-				var tailout = $scope.radar.allScreen.text(traffic.tail).addClass('textRegOut').center(dx, dy + 18);
-				traffic.circ.add(tailout);
-				var tailtext = $scope.radar.allScreen.text(traffic.tail).addClass('textCircReg').center(dx, dy + 18);
-				traffic.circ.add(tailtext);
+				traffic.circleSize = (distx * 2 / 4.02).toFixed(2) + '%';
+				traffic.labelX = radarPct(dx);
+				traffic.labelY = radarPct(dy);
+				traffic.altText = ctxt;
+				traffic.circleShown = true;
 			}
 		}
-		if (doUpdate == 1) $scope.radar.update($scope);
 	}
 
 	function checkCollisionVectorValid(traffic, $scope) {
 		var radius_earth = 6371008.8;  // in meters
 		//simplified from equations.go
 		var avgLat, distanceLat, distanceLng;
-		var doUpdate = 0;
 
-		if (traffic.planeimg) {  //delete Images + Text
-			traffic.planeimg.remove().forget();
-			traffic.planetext.remove().forget();
-			traffic.planetextOut.remove().forget();
-			traffic.planespeed.remove().forget();
-			traffic.planetail.remove().forget();
-			// do not remove radar-trace
-			doUpdate = 1;
-		}
+		traffic.shown = false;  // hide the plane + texts, shown again below if still in range (the trace stays)
 		var altDiff;                   //difference of altitude to my altitude
 		if ($scope.BaroAltitude > -100000) {  // valid BaroAlt or valid GPSAlt
 			altDiff = Math.round((traffic.altitude - $scope.BaroAltitude) / 100);
@@ -294,7 +371,6 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 			altDiff = traffic.altitude;  //take absolute altitude
 		}
 		if (Math.abs(altDiff) > $scope.AltDiffThreshold) {
-			if (doUpdate == 1) $scope.radar.update($scope);
 			return;  //finished
 		}
 
@@ -307,7 +383,6 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		var distradius = Math.sqrt((distanceLat * distanceLat) + (distanceLng * distanceLng));  // pythagoras
 		//console.log("Alt %f Long %f Lat %f DistanceLong %f DistLat %f Heading %f dx %d dy %d\n", traffic.altitude, traffic.lon, traffic.lat, distanceLat, distanceLng, traffic.heading, distx, disty);
 		if (distradius <= $scope.DisplayRadius) {
-			doUpdate = 1;
 			if (distradius <= ($scope.DisplayRadius / 2)) {
 				if (!traffic.alarms) traffic.alarms = 0;
 				if (/*((soundType == 0) || (soundType == 2)) &&*/ (traffic.alarms < MaxSpeechAlarms)) {
@@ -335,41 +410,28 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 			var heading = 0;
 			if (traffic.heading != '---') heading = traffic.heading;  //sometimes heading is missing, then set to zero
 
-			traffic.planeimg = $scope.radar.rScreen.group();
-			traffic.planeimg.path('m 32,6.5 0.5,0.9 0.4,1.4 5.3,0.1 -5.3,0.1 0.1,0.5 0.3,0.1 0.6,0.4 0.4,0.4 0.4,0.8 1.1,7.1 0.1,0.8 3.7,1.7 22.2,1.3 0.5,0.1 0.3,0.3 0.3,0.7 0.2,6 -0.1,0.1 -26.5,2.8 -0.3,0.1 -0.4,0.3 -0.3,0.5 -0.1,0.3 -0.9,6.3 -1.7,10.3 9.5,0 0.2,0.1 0.2,0.2 -0.1,4.6 -0.2,0.2 -8.8,0 -1.1,-2.4 -0.2,2.5 -0.3,2.5 -0.3,-2.5 -0.2,-2.5 -1.1,2.4 -8.8,0 -0.2,-0.2 -0.1,-4.6 0.2,-0.2 0.2,-0.1 9.5,0 -1.7,-10.3 -0.9,-6.3 -0.1,-0.3 -0.3,-0.5 -0.4,-0.3 -0.3,-0.1 -26.5,-2.8 -0.1,-0.1 0.2,-6 0.3,-0.7 0.3,-0.3 0.5,-0.1 22.2,-1.3 3.7,-1.7 0,-0.8 1.2,-7.1 0.4,-0.8 0.4,-0.4 0.6,-0.4 0.3,-0.1 0.1,-0.5 -5.3,-0.1 5.3,-0.1 0.4,-1.4 z')
-				.addClass('plane')
-				.size(30, 30)
-				.center(distx, disty + 3);
-			traffic.planeimg.circle(2).center(distx, disty).addClass('planeRotationPoint');
-			traffic.planeimg.rotate(heading, distx, disty);
-
 			var vorzeichen = '+';
 			if (altDiff < 0) vorzeichen = '-';
 			var pfeil = '';
 			if (traffic.vspeed > 0) pfeil = '\u2191';
 			if (traffic.vspeed < 0) pfeil = '\u2193';
-			traffic.planetextOut = $scope.radar.rScreen.text(vorzeichen + Math.abs(altDiff) + pfeil).move(distx + 17, disty - 10).rotate($scope.GPSCourse, distx, disty).addClass('textPlaneOut');
-			traffic.planetext = $scope.radar.rScreen.text(vorzeichen + Math.abs(altDiff) + pfeil).move(distx + 17, disty - 10).rotate($scope.GPSCourse, distx, disty).addClass('textPlane');
-			traffic.planespeed = $scope.radar.rScreen.text(traffic.nspeed + 'kts').move(distx + 17, disty).rotate($scope.GPSCourse, distx, disty).addClass('textPlaneSmall');
-			traffic.planetail = $scope.radar.rScreen.text(traffic.tail).move(distx + 17, disty + 10).rotate($scope.GPSCourse, distx, disty).addClass('textPlaneReg');
+			traffic.x = radarPct(distx);
+			traffic.y = radarPct(disty);
+			traffic.headingDeg = heading + 'deg';
+			traffic.altText = vorzeichen + Math.abs(altDiff) + pfeil;
+			traffic.speedText = traffic.nspeed + 'kts';
+			traffic.shown = true;
 			if (showTraces) {
-				if (!traffic.trace) {
-					traffic.trace = $scope.radar.rScreen.polyline([[distx, disty]]).addClass('trace');
+				if (!traffic.tracePoints) {
+					traffic.tracePoints = distx + ',' + disty;
 				} else {
-					var points = traffic.trace.attr('points');
-					points += ' ' + [distx, disty];
-					traffic.trace.attr('points', points);
+					traffic.tracePoints += ' ' + distx + ',' + disty;
 				}
 			}
 		} else {                      // if airplane is outside of radarscreen
-			if (traffic.trace) {  //remove trace when aircraft gets out of range
-				traffic.trace.remove().forget();
-				traffic.trace = '';
-				doUpdate = 1;
-			}
+			traffic.tracePoints = '';  //remove trace when aircraft gets out of range
 			traffic.alarms = 0;  //reset alarm counter
 		}
-		if (doUpdate == 1 && $scope.radar) $scope.radar.update($scope);  // only necessary if changes were done
 	}
 
 	function setAircraft(obj, new_traffic) {
@@ -414,16 +476,8 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		var message = msg.detail;
 		if ('RadarLimits' in message || 'RadarRange' in message) {
 			onSettingsMessage(message, $scope);
-			return;
-		}
-
-		if ($scope.radar == null || $scope.radar.canvas == null) {
-			$scope.radar = new RadarRenderer($scope.locationId, $scope, $http);
-		}
-
-
-		//$scope.raw_data = angular.toJson(msg.data, true);
-		if ($scope.radar == null || $scope.radar.canvas == null) {
+			radarRefresh($scope);
+			applyScope();
 			return;
 		}
 
@@ -479,30 +533,16 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		// Handle the negative cases of those above - where an aircraft moves from "valid" to "invalid" or vice-versa.
 		if ((validIdx >= 0) && !message.Position_valid) {
 			// Position is not valid any more or outside Threshold. Remove from "valid" table.
-			if ($scope.data_list[validIdx].planeimg) {
-				$scope.data_list[validIdx].planeimg.remove().forget();    // remove plane image
-				$scope.data_list[validIdx].planetext.remove().forget();   // remove plane image
-				$scope.data_list[validIdx].planetextOut.remove().forget();   // remove plane image
-				$scope.data_list[validIdx].planespeed.remove().forget();  // remove plane image
-				$scope.data_list[validIdx].planetail.remove().forget();   // remove plane image
-				if ($scope.data_list[validIdx].trace) {
-					$scope.data_list[validIdx].trace.remove().forget();  // remove plane image
-					$scope.data_list[validIdx].trace = '';
-				}
-			}
 			$scope.data_list.splice(validIdx, 1);
 		}
 
 		if ((invalidIdx >= 0) && message.Position_valid) {  //known invalid aircraft now with valid position
 			// Position is now valid. Remove from "invalid" table.
-			if ($scope.data_list_invalid[invalidIdx].circ) {  //delete circle + Text
-				$scope.data_list_invalid[invalidIdx].circ.remove().forget();
-				delete $scope.data_list_invalid[invalidIdx].posangle;  //make sure angle is not used again
-			}
+			delete $scope.data_list_invalid[invalidIdx].posangle;  //make sure angle is not used again
 			$scope.data_list_invalid.splice(invalidIdx, 1);
 		}
 
-		$scope.$apply();
+		applyScope();
 	}
 
 
@@ -526,10 +566,8 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		if (boardtemp != undefined) {
 			$scope.CPUTemp = boardtemp.toFixed(1);
 		}
-		if ($scope.radar == null || $scope.radar.canvas == null) {
-			$scope.radar = new RadarRenderer($scope.locationId, $scope, $http);
-		}
-		if ($scope.radar) $scope.radar.update($scope);
+		radarRefresh($scope);
+		applyScope();
 	}
 
 
@@ -544,17 +582,6 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		// Clean up "valid position" table.
 		for (var i = $scope.data_list.length; i > 0; i--) {
 			if ($scope.data_list[i - 1].Last_seen <= cutTime) {
-				if ($scope.data_list[i - 1].planeimg) {
-					$scope.data_list[i - 1].planeimg.remove().forget();    // remove plane image
-					$scope.data_list[i - 1].planetext.remove().forget();   // remove plane image
-					$scope.data_list[i - 1].planetextOut.remove().forget();   // remove plane image
-					$scope.data_list[i - 1].planespeed.remove().forget();  // remove plane image
-					$scope.data_list[i - 1].planetail.remove().forget();   // remove plane image
-					if ($scope.data_list[i - 1].trace) {
-						$scope.data_list[i - 1].trace.remove().forget();  // remove plane image
-						$scope.data_list[i - 1].trace = '';
-					}
-				}
 				$scope.data_list.splice(i - 1, 1);
 			}
 		}
@@ -562,13 +589,11 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 		// Clean up "invalid position" table.
 		for (var i = $scope.data_list_invalid.length; i > 0; i--) {
 			if ($scope.data_list_invalid[i - 1].Last_seen <= cutTime) {
-				if ($scope.data_list_invalid[i - 1].circ) {  // is displayed
-					$scope.data_list_invalid[i - 1].circ.remove().forget();
-				}
 				$scope.data_list_invalid.splice(i - 1, 1);
 			}
 		}
-		if ($scope.radar) $scope.radar.update($scope);
+		radarRefresh($scope);
+		applyScope();
 	}, (1000 * 10), 0, false);
 
 
@@ -611,9 +636,42 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 
 	$scope.locationId = 'radar_display' + (Date.now());
 
-	$scope.init = function () {
+	// index.html calls init({isSidebar: true}) on the copy in the right sidebar; radar.html
+	// calls init() again on both copies, which must not undo it
+	$scope.isSidebar = false;
+	$scope.init = function (params) {
+		if (params && params.isSidebar) {
+			$scope.isSidebar = true;
+		}
 		console.log("Init Radar loaded: " + $scope.locationId);
 	}
+
+	// The knob turns one of the two filters: the range (PREV = Ra-, NEXT = Ra+, 2 to 40 NM) or the
+	// altitude band (PREV = Alt-, NEXT = Alt+, 500 to 50000 ft). TAP switches between them; the
+	// label it turns is outlined from the first knob key on. Every entry starts on the range. The
+	// routed plate only: the sidebar copy must not move with it (docs/tech-debt/keypad-page-navigation.md)
+	function keypadEventListener(event) {
+		if ($scope.isSidebar || $state.current.name != 'radar') {
+			return;
+		}
+		var alt = $scope.Radar.knob == 'alt';
+		var turn = null;
+		if (event.key == KEYPAD_MAPPING_PREV) turn = alt ? $scope.radarAltLess : $scope.radarZoomIn;
+		if (event.key == KEYPAD_MAPPING_NEXT) turn = alt ? $scope.radarAltMore : $scope.radarZoomOut;
+		if (event.key == KEYPAD_MAPPING_TAP) {
+			turn = function () { $scope.Radar.knob = alt ? 'range' : 'alt'; };
+		}
+		if (turn !== null) {
+			$scope.$apply(function () {
+				$scope.Radar.knobShown = true;
+				turn();
+			});
+		}
+	}
+	addEventListener("keypad", keypadEventListener);
+	$scope.$on('$destroy', function () {
+		removeEventListener("keypad", keypadEventListener);
+	});
 
 	$scope.$on('$includeContentLoaded', function (event, tempalteUrl) {
 		console.log("DOM Radar loaded: " + $scope.locationId);
@@ -630,65 +688,13 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval) {
 
 function clearRadarTraces($scope) {
 	for (var i = $scope.data_list.length; i > 0; i--) {
-		if ($scope.data_list[i - 1].planeimg) {
-			$scope.data_list[i - 1].planeimg.remove().forget();    // remove plane image
-			$scope.data_list[i - 1].planetext.remove().forget();   // remove plane image
-			$scope.data_list[i - 1].planetextOut.remove().forget();   // remove plane image
-			$scope.data_list[i - 1].planespeed.remove().forget();  // remove plane image
-			$scope.data_list[i - 1].planetail.remove().forget();   // remove plane image
-			$scope.data_list[i - 1].alarms = 0;                    //reset alarm counter
-			if ($scope.data_list[i - 1].trace) {
-				$scope.data_list[i - 1].trace.remove().forget();  // remove plane image
-				$scope.data_list[i - 1].trace = '';
-			}
-		}
+		var t = $scope.data_list[i - 1];
+		t.shown = false;       // hide plane + texts until the next packet
+		t.alarms = 0;          //reset alarm counter
+		t.tracePoints = '';
 	}
 	for (var i = $scope.data_list_invalid.length; i > 0; i--) {  //clear circles
-		if ($scope.data_list_invalid[i - 1].circ) {          // is displayed
-			$scope.data_list_invalid[i - 1].circ.remove().forget();
-		}
-	}
-}
-
-
-
-function displaySoundStatus(speech, soundMode) {
-	switch (soundMode) {
-		case 0:
-			if (synth) {
-				var utterOn = new SpeechSynthesisUtterance('Beep and Speech on');
-				utterOn.lang = 'en-US';
-				synth.speak(utterOn);
-			}
-			speech.get(0).removeClass('zoom').addClass('zoomInvert');
-			speech.get(1).removeClass('tSmall').addClass('tSmallInvert').text('BpSp').cx(16).cy(0);
-			break;
-		case 1:
-			if (synth) {
-				var utterOn = new SpeechSynthesisUtterance('Beep only');
-				utterOn.lang = 'en-US';
-				synth.speak(utterOn);
-			}
-			speech.get(0).removeClass('zoom').addClass('zoomInvert');
-			speech.get(1).removeClass('tSmall').addClass('tSmallInvert').text('Beep').cx(16).cy(0);
-			break;
-		case 2:
-			if (synth) {
-				var utterOn = new SpeechSynthesisUtterance('Speech only');
-				utterOn.lang = 'en-US';
-				synth.speak(utterOn);
-			}
-			speech.get(0).removeClass('zoom').addClass('zoomInvert');
-			speech.get(1).removeClass('tSmall').addClass('tSmallInvert').text('Spch').cx(16).cy(0);
-			break;
-		default:
-			if (synth) {
-				var utterOn = new SpeechSynthesisUtterance('Sound off');
-				utterOn.lang = 'en-US';
-				synth.speak(utterOn);
-			}
-			speech.get(0).removeClass('zoomInvert').addClass('zoom');
-			speech.get(1).removeClass('tSmallInvert').addClass('tSmall').text('SnOff').cx(18).cy(0);
+		$scope.data_list_invalid[i - 1].circleShown = false;
 	}
 }
 
@@ -712,245 +718,3 @@ function onSettingsMessage(message, $scope) {
 	$scope.AltDiffThreshold = message.RadarLimits / 100;
 	$scope.DisplayRadius = message.RadarRange;
 }
-
-function RadarRenderer(locationId, $scope, $http) {
-	this.width = -1;
-	this.height = -1;
-	this.canvas = document.getElementById(locationId);
-	if (this.canvas == null) {
-		return;
-	}
-	this.resize();
-
-	$scope.AltDiffThreshold = 20;
-	$scope.DisplayRadius = 10;
-
-	// Draw the radar using the svg.js library
-	var radarAll = SVG(locationId).viewbox(-201, -201, 402, 402).group().addClass('radar');
-	//var background = radarAll.rect(402, 402).radius(5).x(-201).y(-201).addClass('blackRect');
-	var card = radarAll.group().addClass('card');
-	card.circle(400).cx(0).cy(0).addClass('circle');
-	card.circle(200).cx(0).cy(0).addClass('circle');
-	this.displayText = radarAll.text($scope.DisplayRadius + ' nm').addClass('textOutside').x(-200).cy(-158);               //not rotated
-	this.altText = radarAll.text('\xB1' + $scope.AltDiffThreshold + '00ft').addClass('textOutsideRight').x(200).cy(-158);  //not rotated
-	this.fl = radarAll.text('FL' + Math.round($scope.BaroAltitude / 100)).addClass('textSmall').move(7, 5);
-	card.text('N').addClass('textDir').center(0, -190);
-	card.text('S').addClass('textDir').center(0, 190);
-	card.text('W').addClass('textDir').center(-190, 0);
-	card.text('E').addClass('textDir').center(190, 0);
-
-	var middle = radarAll.path('m 32,6.5 0.5,0.9 0.4,1.4 5.3,0.1 -5.3,0.1 0.1,0.5 0.3,0.1 0.6,0.4 0.4,0.4 0.4,0.8 1.1,7.1 0.1,0.8 3.7,1.7 22.2,1.3 0.5,0.1 0.3,0.3 0.3,0.7 0.2,6 -0.1,0.1 -26.5,2.8 -0.3,0.1 -0.4,0.3 -0.3,0.5 -0.1,0.3 -0.9,6.3 -1.7,10.3 9.5,0 0.2,0.1 0.2,0.2 -0.1,4.6 -0.2,0.2 -8.8,0 -1.1,-2.4 -0.2,2.5 -0.3,2.5 -0.3,-2.5 -0.2,-2.5 -1.1,2.4 -8.8,0 -0.2,-0.2 -0.1,-4.6 0.2,-0.2 0.2,-0.1 9.5,0 -1.7,-10.3 -0.9,-6.3 -0.1,-0.3 -0.3,-0.5 -0.4,-0.3 -0.3,-0.1 -26.5,-2.8 -0.1,-0.1 0.2,-6 0.3,-0.7 0.3,-0.3 0.5,-0.1 22.2,-1.3 3.7,-1.7 0,-0.8 1.2,-7.1 0.4,-0.8 0.4,-0.4 0.6,-0.4 0.3,-0.1 0.1,-0.5 -5.3,-0.1 5.3,-0.1 0.4,-1.4 z');
-	middle.size(25, 25).center(0, 3).addClass('centerplane');
-	radarAll.circle(2).center(0, 0).addClass('planeRotationPoint');
-
-	var zoomin = radarAll.group().cx(-120).cy(-190).addClass('zoom');
-	zoomin.circle(45).cx(0).cy(0).addClass('zoom');
-	zoomin.text('Ra-').cx(12).cy(2).addClass('textZoom');
-	zoomin.on('click', function () {
-		var animateTime = 200;
-		var newval = $scope.DisplayRadius;
-		switch ($scope.DisplayRadius) {
-			case 40:
-				newval = 20;
-				break;
-			case 20:
-				newval = 10;
-				break;
-			case 10:
-				newval = 5;
-				break;
-			case 5:
-				newval = 2;
-				break;
-			default:  // keep 2
-				animateTime = 20;
-		}
-		communicateLimits(100 * $scope.AltDiffThreshold, newval, $http, $scope);
-		zoomin.animate(animateTime).rotate(90, 0, 0);
-		zoomin.animate(animateTime).rotate(0, 0, 0);
-	}, this);
-
-	var zoomout = radarAll.group().cx(-177).cy(-190).addClass('zoom');
-	zoomout.circle(45).cx(0).cy(0).addClass('zoom');
-	zoomout.text('Ra+').cx(12).cy(2).addClass('textZoom');
-	zoomout.on('click', function () {
-		var animateTime = 200;
-		var newval = $scope.DisplayRadius;
-		switch ($scope.DisplayRadius) {
-			case 2:
-				newval = 5;
-				break;
-			case 5:
-				newval = 10;
-				break;
-			case 10:
-				newval = 20;
-				break;
-			case 20:
-				newval = 40;
-				break;
-			default:  // keep 40
-				animateTime = 20;
-		}
-		communicateLimits(100 * $scope.AltDiffThreshold, newval, $http, $scope);
-		zoomout.animate(animateTime).rotate(90, 0, 0);
-		zoomout.animate(animateTime).rotate(0, 0, 0);
-	}, this);
-
-	var altmore = radarAll.group().cx(120).cy(-190).addClass('zoom');
-	altmore.circle(45).cx(0).cy(0).addClass('zoom');
-	altmore.text('Alt+').cx(12).cy(2).addClass('textZoom');
-	altmore.on('click', function () {
-		var newval = $scope.AltDiffThreshold;
-		var animateTime = 200;
-		switch ($scope.AltDiffThreshold) {
-			case 5:
-				newval = 10;
-				break;
-			case 10:
-				newval = 20;
-				break;
-			case 20:
-				newval = 50;
-				break;
-			case 50:
-				newval = 100;
-				break;
-			case 100:
-				newval = 500;
-				break;
-			default:
-				animateTime = 20;
-		}
-		communicateLimits(100 * newval, $scope.DisplayRadius, $http, $scope);
-		altmore.animate(animateTime).rotate(90, 0, 0);
-		altmore.animate(animateTime).rotate(0, 0, 0);
-	}, this);
-
-	var altless = radarAll.group().cx(177).cy(-190).addClass('zoom');
-	altless.circle(45).cx(0).cy(0).addClass('zoom');
-	altless.text('Alt-').cx(12).cy(2).addClass('textZoom');
-	altless.on('click', function () {
-		var newval = $scope.AltDiffThreshold;
-		var animateTime = 200;
-		switch ($scope.AltDiffThreshold) {
-			case 500:
-				newval = 100;
-				break;
-			case 100:
-				newval = 50;
-				break;
-			case 50:
-				newval = 20;
-				break;
-			case 20:
-				newval = 10;
-				break;
-			case 10:
-				newval = 5;
-				break;
-			default:  //5 stays 5
-				animateTime = 20;
-		}
-		communicateLimits(100 * newval, $scope.DisplayRadius, $http, $scope);
-		altless.animate(animateTime).rotate(90, 0, 0);
-		altless.animate(animateTime).rotate(0, 0, 0);
-	}, this);
-
-	/*
-	var fullscreen = radarAll.group().cx(185).cy(-125).addClass('zoom');
-	fullscreen.rect(40, 35).radius(10).cx(0).cy(0).addClass('zoom');
-	fullscreen.text('F/S').cx(10).cy(2).addClass('textZoom');
-	fullscreen.on('click', function () {
-		var elem = this.canvas;
-		var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !== null) || (document.mozFullScreen || document.webkitIsFullScreen);
-
-		if (isInFullScreen) {
-			fullscreen.get(0).removeClass('zoomInvert').addClass('zoom');
-			fullscreen.get(1).removeClass('textZoomInvert').addClass('textZoom');
-			cancelFullScreen(document);
-		} else {
-			fullscreen.get(0).removeClass('zoom').addClass('zoomInvert');
-			fullscreen.get(1).removeClass('textZoom').addClass('textZoomInvert');
-			requestFullScreen(elem);
-		}
-	}, this);
-*/
-	/*
-		var speech = radarAll.group().cx(-185).cy(-125);
-		speech.rect(40, 35).radius(10).cx(0).cy(0).addClass('zoom');
-		speech.text('Undef').cx(16).cy(0).addClass('tSmall');
-	
-		//displaySoundStatus(speech, soundType);  //first time activation without synth speak
-		synth = window.speechSynthesis;
-		if (!synth) soundType = 1;  // speech function not working, default now beep
-	
-		speech.on('click', function () {
-			switch (soundType) {
-				case 0:                 //speech and beep
-					soundType = 1;  // beep only
-					break;
-				case 1:  //beep only
-					if (synth) {
-						soundType = 2;
-					} else {
-						soundType = 3
-					};
-					break;
-				case 2:                 //speech only
-					soundType = 3;  //Sound off
-					break;
-				default:
-					soundType = 0;  //speech and beep
-			}
-			displaySoundStatus(speech, soundType);
-		}, this);
-	
-	*/
-
-	this.allScreen = radarAll;
-	this.rScreen = card;
-}
-
-RadarRenderer.prototype = {
-	constructor: RadarRenderer,
-
-	resize: function () {
-		if (this.canvas == null) {
-			return;
-		}
-		var canvasWidth = this.canvas.parentElement.offsetWidth - 12;
-
-		if (canvasWidth !== this.width) {
-			this.width = canvasWidth;
-			this.height = canvasWidth * 0.5;
-
-			this.canvas.width = this.width;
-			this.canvas.height = this.height;
-		}
-	},
-
-	update: function ($scope) {
-		if (this.canvas == null) {
-			return;
-		}
-		if ($scope.BaroAltitude !== $scope.OldBaroAltitude) {
-			this.fl.text('FL' + Math.round($scope.BaroAltitude / 100));  // just update text
-			$scope.OldBaroAltitude = $scope.BaroAltitude;
-		}
-		if ($scope.AltDiffThreshold !== $scope.OldAltDiffThreshold) {
-			this.altText.text('\xB1' + $scope.AltDiffThreshold + '00ft');
-			clearRadarTraces($scope);
-			$scope.OldAltDiffThreshold = $scope.AltDiffThreshold;
-		}
-		if ($scope.DisplayRadius !== $scope.OldDisplayRadius) {
-			this.displayText.text($scope.DisplayRadius + ' nm');
-			clearRadarTraces($scope);
-			$scope.OldDisplayRadius = $scope.DisplayRadius;
-		}
-		if ($scope.GPSCourse !== $scope.OldGPSCourse) {
-			this.rScreen.rotate(-$scope.GPSCourse, 0, 0);  // rotate conforming to GPSCourse
-			$scope.OldGPSCourse = $scope.GPSCourse;
-		}
-	}
-};

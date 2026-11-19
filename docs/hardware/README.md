@@ -10,6 +10,7 @@ a new device."
 |---|---|
 | SDR dongles & band assignment (1090ES / 978 UAT / 868 OGN / AIS) | [sdr-and-bands.md](sdr-and-bands.md) |
 | GPS / GNSS receivers | [gps.md](gps.md) |
+| Checking a u-blox receiver for a clone chip | [gps-authenticity.md](gps-authenticity.md) |
 | Barometric & IMU/AHRS sensors | [sensors.md](sensors.md) |
 | OGN trackers (RX/TX), AIS, and external ADS-B receivers (Ping/Pong/UATRadio) | [ogn-ais-receivers.md](ogn-ais-receivers.md) |
 | Cooling fan | see `fancontrol_main/` (PID PWM fan, default BCM pin 18, own systemd service) |

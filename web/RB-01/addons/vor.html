@@ -1,26 +1,34 @@
 <div ui-content-for="title">HSI</div>
 <div ng-show="items.searchEnabled==false" class="addonVorSquare">
-    <div ng-if="!locMode()" class="addonVorLabelTopLeft" style="font-size: 4cqmin;" ng-click="switchToFrom()">
+    <div ng-if="!ilsMode()" class="addonVorLabelTopLeft" style="font-size: 4cqmin;" ng-click="switchToFrom()" data-keypad="tap" data-keypad-name="TO/FROM">
         <div ng-if="items.vorto == 1" class="label label-info" style="font-size: 4cqmin;">FROM</div>
         <div ng-if="items.vorto == 0" class="label label-success" style="font-size: 4cqmin;">TO</div>
         <br />SNR: {{items.vorsnr}}
         <br />SUB: {{items.vorsub}}
         <br />AM: {{items.voram}}
     </div>
+    <!-- RB-VOR-IF v2.4 §2.5: one dongle for the ILS, the pilot picks which half to receive -->
     <!-- RB-VOR-IF v2.3: a localizer. Measurements only; the deviation is the bar -->
-    <div ng-if="locMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;">
+    <div ng-if="locMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;" ng-click="setGsSelect(0)" data-keypad="tap" data-keypad-name="LOC">
         <div class="label label-warning" style="font-size: 4cqmin;">LOC</div>
         <br />SNR: {{items.locsnr}}
         <br />SDM: {{items.locsdm}}
         <br />DDM: {{items.locddm / 1000 | number:3}}
     </div>
-    <div class="addonVorLabelTopRight" style="font-size: 4cqmin;" ng-click="enableSearchVor()">
-        <div ng-if="!locMode() && items.vorstatus == 0 && !locUnavailable()" class="label label-default" style="font-size: 4cqmin;">OFF</div>
-        <div ng-if="!locMode() && items.vorstatus == 1" class="label label-danger" style="font-size: 4cqmin;">NO SIGNAL</div>
-        <div ng-if="!locMode() && items.vorstatus == 2" class="label label-danger" style="font-size: 4cqmin;">TUNING</div>
-        <div ng-if="!locMode() && items.vorstatus == 3" class="label label-warning" style="font-size: 4cqmin;">ACQUIRING</div>
-        <div ng-if="!locMode() && items.vorstatus == 4" class="label label-info" style="font-size: 4cqmin;">DEGRADED</div>
-        <div ng-if="!locMode() && items.vorstatus == 5" class="label label-success" style="font-size: 4cqmin;">FIX</div>
+    <!-- RB-VOR-IF v2.4: the glide slope, received alone on a shared dongle -->
+    <div ng-if="gsMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;" ng-click="setGsSelect(1)" data-keypad="tap" data-keypad-name="GS">
+        <div class="label label-warning" style="font-size: 4cqmin;">GS</div>
+        <br />SNR: {{items.gssnr}}
+        <br />SDM: {{items.gssdm}}
+        <br />DDM: {{items.gsddm / 1000 | number:3}}
+    </div>
+    <div class="addonVorLabelTopRight" style="font-size: 4cqmin;" ng-click="enableSearchVor()" data-keypad="tap" data-keypad-name="SEARCH">
+        <div ng-if="!ilsMode() && items.vorstatus == 0 && !locUnavailable()" class="label label-default" style="font-size: 4cqmin;">OFF</div>
+        <div ng-if="!ilsMode() && items.vorstatus == 1" class="label label-danger" style="font-size: 4cqmin;">NO SIGNAL</div>
+        <div ng-if="!ilsMode() && items.vorstatus == 2" class="label label-danger" style="font-size: 4cqmin;">TUNING</div>
+        <div ng-if="!ilsMode() && items.vorstatus == 3" class="label label-warning" style="font-size: 4cqmin;">ACQUIRING</div>
+        <div ng-if="!ilsMode() && items.vorstatus == 4" class="label label-info" style="font-size: 4cqmin;">DEGRADED</div>
+        <div ng-if="!ilsMode() && items.vorstatus == 5" class="label label-success" style="font-size: 4cqmin;">FIX</div>
         <!-- A localizer was picked and the receiver does not decode localizers (loc.enabled false) -->
         <div ng-if="locUnavailable() && items.vorstatus == 0" class="label label-default" style="font-size: 4cqmin;">NO LOC</div>
         <!-- LOC: the bar is drawn only on the last two; each other word is why it is parked -->
@@ -30,17 +38,44 @@
         <div ng-if="locMode() && items.locstatus == 3" class="label label-warning" style="font-size: 4cqmin;">LOC ACQUIRING</div>
         <div ng-if="locMode() && items.locstatus == 4" class="label label-info" style="font-size: 4cqmin;">LOC DEGRADED</div>
         <div ng-if="locMode() && items.locstatus == 5" class="label label-success" style="font-size: 4cqmin;">LOC</div>
+        <div ng-if="gsMode() && items.gsstatus == 0" class="label label-default" style="font-size: 4cqmin;">GS OFF</div>
+        <div ng-if="gsMode() && items.gsstatus == 1" class="label label-danger" style="font-size: 4cqmin;">GS NO SIGNAL</div>
+        <div ng-if="gsMode() && items.gsstatus == 2" class="label label-danger" style="font-size: 4cqmin;">GS TUNING</div>
+        <div ng-if="gsMode() && items.gsstatus == 3" class="label label-warning" style="font-size: 4cqmin;">GS ACQUIRING</div>
+        <div ng-if="gsMode() && items.gsstatus == 4" class="label label-info" style="font-size: 4cqmin;">GS DEGRADED</div>
+        <div ng-if="gsMode() && items.gsstatus == 5" class="label label-success" style="font-size: 4cqmin;">GS</div>
         <br />
-        <span ng-if="!locMode()">{{items.vorname}}</span><span ng-if="locMode()">{{items.locname}}</span>
+        <span ng-if="!ilsMode()">{{items.vorname}}</span><span ng-if="ilsMode()">{{items.locname}}</span>
         <br />
-        <span ng-if="!locMode()">{{items.vorfreqactive}}</span><span ng-if="locMode()">{{items.locfreqactive}}</span>
+        <span ng-if="!ilsMode()">{{items.vorfreqactive}}</span><span ng-if="locMode()">{{items.locfreqactive}}</span><span ng-if="gsMode()">{{items.gsfreqactive}}</span>
     </div>
 
 
-    <div id="vorHSI" style="margin: 0;display: flex;justify-content: center;align-items: center;">
+    <div id="vorHSI" class="hsi" style="width: 100%; max-height: none; --hsi-fg: {{HSI.fg}};">
+      <div class="hsi-gs" ng-repeat="side in HSI.sides track by $index" ng-class="'hsi-gs-' + side">
+        <div class="hsi-gs-label" ng-show="HSI.gsActive">GS</div>
+        <div class="hsi-gs-dot" ng-repeat="i in HSI.gsDots track by $index" ng-class="{'hsi-gs-dot-center': i == 0}" style="--i: {{::i}};"></div>
+        <div class="hsi-gs-diamond" ng-show="HSI.showGs" style="transform: translate(-50%, -50%) translateY({{HSI.gs}});"></div>
+      </div>
+      <div class="hsi-card" style="transform: rotate({{HSI.card}});">
+        <div class="hsi-tick" ng-repeat="t in HSI.ticks track by $index" ng-class="{'hsi-tick-big': t.big}" style="transform: rotate({{::t.deg}}deg);"></div>
+        <div class="hsi-label" ng-repeat="l in HSI.labels track by $index" ng-class="{'hsi-cardinal': l.cardinal, 'hsi-north': l.deg == 0}" style="transform: rotate({{::l.deg}}deg);"><span>{{::l.text}}</span></div>
+      </div>
+      <div class="hsi-course" style="transform: rotate({{HSI.course}});">
+        <div class="hsi-ring"></div>
+        <div class="hsi-cdi" ng-show="HSI.showCdi" style="transform: translate(-50%, -50%) translateX({{HSI.cdi}});"></div>
+        <div class="hsi-dot" ng-repeat="i in HSI.courseDots track by $index" style="--i: {{::i}};"></div>
+        <div class="hsi-arrow"></div>
+        <div class="hsi-tail"></div>
+        <div class="hsi-bug-layer" style="transform: rotate({{HSI.bug}});"><div class="hsi-bug"></div></div>
+      </div>
+      <div class="hsi-lubber"></div>
+      <div class="hsi-aircraft-a"></div>
+      <div class="hsi-aircraft-b"></div>
+      <div class="hsi-aircraft-c"></div>
     </div>
     <!-- Wherever LOC appears: supplemental equipment, not approach guidance -->
-    <div ng-if="locMode() || locUnavailable()" class="addonVorLocNotice">LOC SUPPLEMENTAL<br />NOT APPROACH GUIDANCE</div>
+    <div ng-if="ilsMode() || locUnavailable()" class="addonVorLocNotice">{{gsMode() ? 'GS' : 'LOC'}} SUPPLEMENTAL<br />NOT APPROACH GUIDANCE</div>
 </div>
 <table ng-if="items.searchEnabled" style="width:100%;margin: 0px;padding:0px;">
     <tr style="margin: 0px;padding:0px;">
@@ -57,7 +92,7 @@
 
     <!-- OFF is under Frequency, as Name is under .fabNorth in the first row, and to the left of
          the column, or its corner is off the round panel -->
-    <tr ng-click="setFrequency(0,'')" style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+    <tr ng-click="setFrequency(0,'')" data-keypad="tap" data-keypad-name="OFF" style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
         <td class="text-center"
             style="font-size: 7cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;height: 16cqmin;">
         </td>
@@ -73,7 +108,7 @@
             <span class="addonVorLocListNoticeText">LOC SUPPLEMENTAL<br />NOT APPROACH GUIDANCE</span>
         </td>
     </tr>
-    <tr ng-repeat="frequency in vorList" ng-click="setFrequency(frequency.freq,frequency.name)"
+    <tr ng-repeat="frequency in vorList" ng-click="setFrequency(frequency.freq,frequency.name)" data-keypad="tap" data-keypad-name="{{frequency.id}} {{frequency.freq}}"
         style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
         <td class="text-center"
             style="font-size: 7cqmin;margin: 0px;padding:0px;border-right: 1px #acacac solid;height: 16cqmin;">

@@ -98,18 +98,16 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return;
         }
 
+        // A direct page: PREV / NEXT orbit the camera, TAP resets the view. Zoom and cage AHRS
+        // stay touch only (docs/tech-debt/keypad-page-navigation.md 3.4). The service sends only
+        // the three functions, so the raw MediaTrackNext / MediaTrackPrevious cases that called
+        // synthViewSelectUp / Down (zoom) could never run and are gone
         switch (event.key) {
-            case "MediaTrackNext":
-                $scope.synthViewSelectUp();
-                break;
             case KEYPAD_MAPPING_PREV:
                 $scope.synthViewSelectLeft();
                 break;
             case KEYPAD_MAPPING_TAP:
                 $scope.synthViewSelectTap();
-                break;
-            case "MediaTrackPrevious":
-                $scope.synthViewSelectDown();
                 break;
             case KEYPAD_MAPPING_NEXT:
                 $scope.synthViewSelectRight();
@@ -220,8 +218,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
      * Replicate the AHRS
      */
     // GPS/AHRS Controller tasks go here
-    var ahrs = new AHRSRenderer("ahrs_display", true, "transparent", "transparent", "transparent", "transparent");
-    ahrs.turn_on();
+    $scope.instruments = [
+        { "url": "plates/attitude.html", "ctrl": SixPackInstrumentAttitude, pointer: null, "name": "attitude", "overlay": true }
+    ];
 
     /*****************************************************
      * Situation Update
@@ -302,7 +301,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     * AHRS and GPS Helper
     */
     function loadSituationInAHRS(situation) { // mySituation
-        ahrs.update(situation.AHRSPitch, situation.AHRSRoll, situation.AHRSGyroHeading, situation.AHRSSlipSkid, 0 /*situation.GPSGroundSpeed*/, /*situation.GPSAltitudeMSL*/);
+        $scope.instruments.forEach(i => { if (i.pointer != null) i.pointer.updateSituation(situation); });
     }
 
 

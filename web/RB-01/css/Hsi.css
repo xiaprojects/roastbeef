@@ -1,0 +1,190 @@
+/*
+ * HSI (plates/hsi.html, synthview, autopilot, addons/vor.html), plain DIVs bound by Angular.
+ * Geometry comes from the old SVG.js drawing: a viewbox of 280 units centred on 0, so a size
+ * of N units is N/2.8 % and a point at y is (140 + y)/2.8 % from the top. Fonts, borders and
+ * the CDI / GS travel are in cqw (the .hsi is the container). Values come from hsiCreate /
+ * hsiUpdate in plates/js/hsi.js.
+ */
+.hsi {
+    --hsi-fg: #ffffff;
+    margin: 0 auto;
+    max-height: 100cqh;
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    container-type: inline-size;
+    color: var(--hsi-fg);
+    /* Display only. In the VOR addon it sits over the status and TO/FROM buttons */
+    pointer-events: none;
+}
+
+.hsi-gs,
+.hsi-card,
+.hsi-course,
+.hsi-bug-layer,
+.hsi-tick,
+.hsi-label {
+    position: absolute;
+    inset: 0;
+}
+
+.hsi-gs {
+    pointer-events: none;
+}
+
+.hsi-gs-label,
+.hsi-gs-dot,
+.hsi-gs-diamond,
+.hsi-dot,
+.hsi-cdi,
+.hsi-arrow,
+.hsi-tail,
+.hsi-bug,
+.hsi-lubber,
+.hsi-aircraft-a,
+.hsi-aircraft-b,
+.hsi-aircraft-c {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+/* Glide slope columns, 8 units from each edge */
+.hsi-gs-left > * { left: 2.857%; }
+.hsi-gs-right > * { left: 97.143%; }
+
+.hsi-gs-label {
+    top: 10.714%;
+    font-size: 3.571cqw;
+    line-height: 1;
+    color: var(--hsi-fg);
+}
+
+.hsi-gs-dot {
+    top: calc(50% + var(--i) * 8.929%);
+    width: 1.786%;
+    height: 1.786%;
+    border-radius: 50%;
+    background: var(--hsi-fg);
+}
+
+.hsi-gs-dot-center {
+    background: red;
+}
+
+.hsi-gs-diamond {
+    top: 50%;
+    width: 3.571%;
+    height: 7.143%;
+    background: orange;
+    clip-path: polygon(50% 50%, 0 75%, 0 100%, 100% 100%, 100% 75%, 50% 50%, 0 25%, 0 0, 100% 0, 100% 25%);
+}
+
+/* Compass card, turns with -track */
+.hsi-tick::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 12.5%;
+    width: 0.714%;
+    height: 3.571%;
+    background: gray;
+    transform: translate(-50%, -50%);
+}
+
+.hsi-tick-big::before {
+    width: 1.429%;
+    height: 7.143%;
+}
+
+.hsi-label > span {
+    position: absolute;
+    left: 50%;
+    top: 5.357%;
+    transform: translate(-50%, -50%);
+    font-size: 8.571cqw;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--hsi-fg);
+}
+
+.hsi-label.hsi-cardinal > span {
+    top: 7.143%;
+    font-size: 11.429cqw;
+}
+
+.hsi-label.hsi-north > span {
+    color: #ff0000;
+    -webkit-text-stroke: 0.3cqw #ff0000;
+}
+
+/* Course ring, arrow and CDI, turns with -(track - course) */
+.hsi-ring {
+    position: absolute;
+    inset: 14.286%;
+    box-sizing: border-box;
+    border: 0.357cqw solid var(--hsi-fg);
+    border-radius: 50%;
+}
+
+.hsi-cdi {
+    left: 50%;
+    top: 50%;
+    width: 3.571%;
+    height: 35.714%;
+    background: orange;
+}
+
+.hsi-dot {
+    left: calc(50% + var(--i) * 8.929%);
+    top: 50%;
+    width: 1.786%;
+    height: 1.786%;
+    border-radius: 50%;
+    background: var(--hsi-fg);
+}
+
+.hsi-arrow {
+    left: 50%;
+    top: 21.429%;
+    width: 7.143%;
+    height: 14.286%;
+    background: var(--hsi-fg);
+    clip-path: polygon(50% 0, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0 50%);
+}
+
+.hsi-tail {
+    left: 50%;
+    top: 78.571%;
+    width: 3.571%;
+    height: 14.286%;
+    background: var(--hsi-fg);
+}
+
+.hsi-bug {
+    left: 50%;
+    top: 11.429%;
+    width: 7.143%;
+    height: 5.357%;
+    background: orange;
+    clip-path: polygon(50% 100%, 0 0, 25% 0, 45% 67%, 55% 67%, 75% 0, 100% 0);
+}
+
+/* Fixed marks */
+.hsi-lubber {
+    left: 50%;
+    top: 7.143%;
+    width: 1.786%;
+    height: 17.857%;
+    background: orange;
+}
+
+.hsi-aircraft-a,
+.hsi-aircraft-b,
+.hsi-aircraft-c {
+    left: 50%;
+    background: var(--hsi-fg);
+}
+
+.hsi-aircraft-a { top: 51.786%; width: 0.714%; height: 10.714%; }
+.hsi-aircraft-b { top: 55.357%; width: 3.571%; height: 0.714%; }
+.hsi-aircraft-c { top: 50%; width: 10.714%; height: 0.714%; }

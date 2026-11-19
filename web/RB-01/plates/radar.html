@@ -1,2 +1,53 @@
 <div ui-content-for="title">Radar</div>
-<div id="{{locationId}}" class="radar" ng-init="init()"></div>
+<div id="{{locationId}}" class="radar" ng-init="init()">
+	<!-- rotates with the course: rings, N/S/W/E, traces and traffic with a position -->
+	<div class="radar-card" style="transform: rotate({{Radar.card}});">
+		<div class="radar-ring radar-ring-outer"></div>
+		<div class="radar-ring radar-ring-inner"></div>
+		<div class="textDir radar-dir radar-dir-n">N</div>
+		<div class="textDir radar-dir radar-dir-s">S</div>
+		<div class="textDir radar-dir radar-dir-w">W</div>
+		<div class="textDir radar-dir radar-dir-e">E</div>
+		<svg class="radar-traces" viewBox="-201 -201 402 402">
+			<polyline class="trace" ng-repeat="t in data_list" ng-attr-points="{{t.tracePoints}}"></polyline>
+		</svg>
+		<div class="radar-target" ng-repeat="t in data_list" ng-if="t.shown" style="left: {{t.x}}; top: {{t.y}};">
+			<svg class="radar-plane" viewBox="0.9 6.5 62.2 51.1" preserveAspectRatio="none" style="transform: rotate({{t.headingDeg}});">
+				<path class="plane" ng-attr-d="{{planePath}}"></path>
+			</svg>
+			<div class="radar-dot"></div>
+			<div class="radar-labels" style="transform: rotate({{Radar.counter}});">
+				<div class="textPlaneOut radar-label radar-alt">{{t.altText}}</div>
+				<div class="textPlane radar-label radar-alt">{{t.altText}}</div>
+				<div class="textPlaneSmall radar-label radar-speed">{{t.speedText}}</div>
+				<div class="textPlaneReg radar-label radar-tail">{{t.tail}}</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mode S targets without a position: a range ring around the own ship, it does not rotate -->
+	<div class="radar-fixed">
+		<div class="radar-modes" ng-repeat="t in data_list_invalid" ng-if="t.circleShown">
+			<div class="greenCirc radar-modes-ring" style="width: {{t.circleSize}};"></div>
+			<div class="radar-modes-labels" style="left: {{t.labelX}}; top: {{t.labelY}};">
+				<div class="textCOut radar-modes-text radar-modes-alt">{{t.altText}}</div>
+				<div class="textCirc radar-modes-text radar-modes-alt">{{t.altText}}</div>
+				<div class="textRegOut radar-modes-text radar-modes-tail">{{t.tail}}</div>
+				<div class="textCircReg radar-modes-text radar-modes-tail">{{t.tail}}</div>
+			</div>
+		</div>
+
+		<div class="textOutside radar-range" ng-class="{'keypadEdit': !isSidebar && Radar.knobShown && Radar.knob == 'range'}">{{DisplayRadius}} nm</div>
+		<div class="textOutsideRight radar-altband" ng-class="{'keypadEdit': !isSidebar && Radar.knobShown && Radar.knob == 'alt'}">&plusmn;{{AltDiffThreshold}}00ft</div>
+		<div class="textSmall radar-fl">FL{{Radar.fl}}</div>
+		<svg class="centerplane radar-ownship" viewBox="0.9 6.5 62.2 51.1" preserveAspectRatio="none">
+			<path ng-attr-d="{{planePath}}"></path>
+		</svg>
+		<div class="radar-dot radar-dot-own"></div>
+
+		<div class="zoom radar-button radar-zoomin" ng-class="{'radar-spin': Radar.spin == 'zoomin'}" ng-click="radarZoomIn()"><span class="textZoom">Ra-</span></div>
+		<div class="zoom radar-button radar-zoomout" ng-class="{'radar-spin': Radar.spin == 'zoomout'}" ng-click="radarZoomOut()"><span class="textZoom">Ra+</span></div>
+		<div class="zoom radar-button radar-altmore" ng-class="{'radar-spin': Radar.spin == 'altmore'}" ng-click="radarAltMore()"><span class="textZoom">Alt+</span></div>
+		<div class="zoom radar-button radar-altless" ng-class="{'radar-spin': Radar.spin == 'altless'}" ng-click="radarAltLess()"><span class="textZoom">Alt-</span></div>
+	</div>
+</div>

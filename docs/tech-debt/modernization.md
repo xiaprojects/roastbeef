@@ -140,7 +140,7 @@ and stamps the appcache. `web/index.html` loads ~15 separate `<script>` tags wit
 | OpenLayers (`ol.js`) | ~6.x (2021) | 10.x | Behind, self-contained, no critical CVEs | 🟢 |
 | ol-mapbox-style (`olms.js`) | OL6-era | tracks OL 10 | Pairs with OL | 🟢 |
 | ol-layerswitcher | OL6-era | 4.x | Pairs with OL | 🟢 |
-| svg.js | 2.7.1 | 3.2.5 | One major behind; renders AHRS gauges | 🟢 |
+| svg.js | 2.7.1 | 3.2.5 | One major behind; renders AHRS gauges in the legacy `web/` UI only. RB-01 no longer uses svg.js (replaced by DIV instruments, see SVG-TO-DIV-MIGRATION.md) | 🟢 |
 | NoSleep.js | 0.5.0 | 0.12.0 | Behind; replaceable by native Screen Wake Lock API | 🟢 |
 | add-to-homescreen (cubiq) | archived build | — | Repo archived Feb 2019; obsolete | 🟢 |
 | jQuery | not present | — | Only jqLite refs inside angular.js | — |
@@ -152,7 +152,7 @@ CSS: Bootstrap 3 (via mobile-angular-ui). Icons: Font Awesome v4-era.
 Deeply embedded — it is the core of the UI: **11 controllers** (one per screen/plate),
 **10 custom directives** (input validators in `settings.js`), ui-router routing in `main.js`,
 ~300+ `ng-*` directive uses across the HTML plates, ~4,500 LOC of `$scope`/`$http`/`$interval`-coupled
-app JS. The two interactive non-Angular pieces — svg.js (AHRS gauges, `ahrs.js`) and
+app JS. The two interactive non-Angular pieces — svg.js (AHRS gauges, `plates/js/ahrs.js`; legacy `web/` UI only, RB-01 no longer uses svg.js) and
 OpenLayers (map/radar) — are framework-independent and would survive a migration unchanged.
 
 Options: (A) bridge to a patched AngularJS 1.8.3 build — small/medium; (B) migrate to a modern
@@ -167,7 +167,7 @@ service worker, no `manifest.json`), archived add-to-homescreen, and many pre-iP
 ### Frontend quick wins
 
 1. Bump OpenLayers + olms + ol-layerswitcher to current majors (only `map.js`/`radar.js` consume them).
-2. Bump svg.js 2.7.1 → 3.2.5 (only `ahrs.js`; reconcile minor v3 API changes).
+2. Bump svg.js 2.7.1 → 3.2.5 (legacy `web/` UI only, via `plates/js/ahrs.js`; RB-01 no longer uses svg.js; reconcile minor v3 API changes).
 3. Replace NoSleep.js with the native Screen Wake Lock API (single call site in `gps.js`).
 4. Remove dead PWA cruft; if PWA install is wanted, add a real `manifest.json` + minimal service worker.
 
@@ -260,6 +260,6 @@ All in-tree scripts are `#!/bin/bash` (so bashisms are legitimate). Common patte
 1. **Security:** the four dep bumps (x/net, x/text, protobuf-via-Prometheus) + the `dump978/uat_decode.c:841` `strcpy` fix.
 2. **Mechanical Go PR:** ioutil→os/io, `interface{}`→`any`, delete `IMin`/`IMax`, x/exp→stdlib `slices`, build-tag cleanup — then bump the `go` directive.
 3. **CI automation:** Dependabot + `setup-go` (pinned + cached) + `govulncheck` + run `make test`.
-4. **Self-contained frontend bumps:** OpenLayers, svg.js, NoSleep→Wake Lock, remove PWA cruft.
+4. **Self-contained frontend bumps:** OpenLayers, svg.js (legacy `web/` UI only), NoSleep→Wake Lock, remove PWA cruft.
 5. **Careful bumps:** Prometheus (→ Go 1.23), go-sqlite3, bluetooth, go-ais, go-nmea, gonum/plot — each tested on hardware.
 6. **Strategic:** plan the AngularJS migration as its own project.
