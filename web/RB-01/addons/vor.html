@@ -9,14 +9,14 @@
     </div>
     <!-- RB-VOR-IF v2.4 §2.5: one dongle for the ILS, the pilot picks which half to receive -->
     <!-- RB-VOR-IF v2.3: a localizer. Measurements only; the deviation is the bar -->
-    <div ng-if="locMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;" ng-click="setGsSelect(0)" data-keypad="tap" data-keypad-name="LOC">
+    <div ng-if="locMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;" ng-click="gsSwitchVisible() && setGsSelect(1)" data-keypad="tap" data-keypad-name="LOC">
         <div class="label label-warning" style="font-size: 4cqmin;">LOC</div>
         <br />SNR: {{items.locsnr}}
         <br />SDM: {{items.locsdm}}
         <br />DDM: {{items.locddm / 1000 | number:3}}
     </div>
     <!-- RB-VOR-IF v2.4: the glide slope, received alone on a shared dongle -->
-    <div ng-if="gsMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;" ng-click="setGsSelect(1)" data-keypad="tap" data-keypad-name="GS">
+    <div ng-if="gsMode()" class="addonVorLabelTopLeft addonVorLoc" style="font-size: 4cqmin;" ng-click="setGsSelect(0)" data-keypad="tap" data-keypad-name="GS">
         <div class="label label-warning" style="font-size: 4cqmin;">GS</div>
         <br />SNR: {{items.gssnr}}
         <br />SDM: {{items.gssdm}}
