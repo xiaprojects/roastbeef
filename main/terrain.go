@@ -402,7 +402,8 @@ func (terrainInstance *TerrainStratuxPlugin) turnRate() float64 {
 }
 
 // gpsVerticalRate is the slope of the GPS altitude over the fixes kept, TER-050.
-// GPSVerticalSpeed is never assigned in this fork.
+// Its own slope rather than GPSVerticalSpeed: over the TERRAIN_SLOPE_SAMPLES fixes kept
+// here, so it matches the trend the threat search projects (gpsvspeed.go has the other).
 func (terrainInstance *TerrainStratuxPlugin) gpsVerticalRate() (float64, bool) {
 	n := len(terrainInstance.samples)
 	if n < TERRAIN_SLOPE_SAMPLES {

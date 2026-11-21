@@ -246,7 +246,7 @@ RB-01 has the inputs, but not in one place: terrain lives in the browser, while 
 | Terrain grid | `web/settings/elevations.json`: 1001 × 1500 integer metres, 0.01° step, 37–47 N, 4–19 E | Point samples, so summits read low (Mont Blanc 4578 m against 4808 m). The declared bound shifts rows by up to about 1 km at the Alps. No hash at load (task AT-14). |
 | Terrain in software | Browser only: `globalLoadTerrainGrid` in `web/RB-01/js/global.js`, asked for by the 3D view and the map overlay | No daemon copy (`main/autopilot.go`: "there is no terrain model in the daemon"). No grid is loaded while other plates are open. |
 | Terrain colouring | `globalTerrainColor`: red if `e > alt`, yellow within 200 m below `alt` | Uses current altitude only, with no path or time. The water rule runs first, so water near aircraft altitude never turns red or yellow. |
-| Position | `mySituation` in `main/gps.go`: `GPSAltitudeMSL` (ft), `GPSTrueCourse`, `GPSGroundSpeed`, `Baro``VerticalSpeed`. `isGPSValid()` goes false 3 s after the last fix | Position is about 1 Hz in recordings. GPSVerticalSpeed is never assigned in this fork and reads 0 in every log, so the vertical rate must come from the baro or from GPS altitude. |
+| Position | `mySituation` in `main/gps.go`: `GPSAltitudeMSL` (ft), `GPSTrueCourse`, `GPSGroundSpeed`, `Baro``VerticalSpeed`. `isGPSValid()` goes false 3 s after the last fix | Position is about 1 Hz in recordings. GPSVerticalSpeed read 0 in every log up to 2026-11-20 (now the GGA altitude slope over 2 s, ft/s, `main/gpsvspeed.go`); terrain keeps its own slope over the fixes it holds. |
 | Alert pipeline | `pushEvent()` and `updateEvent()` in `main/alerts.go`; `main/ems.go` shows the active-alert pattern | No severity or priority in the daemon. Next free event type is 17: row 16, `GPS_NOT_FIXED`, is in the mapping with no Go constant. |
 | Daemon audio | `aplay` started in a goroutine; `Audio_Enabled` defaults to false | No queue or pre-emption, so sounds can overlap. Language is fixed to en-US. RB-HLR-ALR-190 and -200 are open. |
 | Display audio | Browser `<audio>` element, per-display flag `Display_Audio_Alerts_Enabled` | Blocked until the first touch after boot, so it cannot carry a warning alone. |
@@ -339,7 +339,7 @@ In level flight the 250 ft clearance also meets Table B: no alert at 340 ft abov
 | TER-010 | Run the terrain function in the daemon with no display connected | RB-SYS-ALR-030 | Test |
 | TER-020 | Evaluate only while ground speed is at or above `Terrain_MinGroundSpeedKt` | No weight-on-wheels input | Test |
 | TER-030 | Use GPS altitude MSL, not QNH-corrected pressure altitude, as aircraft height | TSO App. 3 §1.2 | Test |
-| TER-040 | Use `BaroVerticalSpeed` as vertical rate while `isTempPressValid()` is true | `main/autopilot.go`: `GPSVerticalSpeed` is never assigned | Test |
+| TER-040 | Use `BaroVerticalSpeed` as vertical rate while `isTempPressValid()` is true | `main/autopilot.go` uses the baro for the same reason | Test |
 | TER-050 | Use the slope of GPS altitude over 5 s as vertical rate while the baro is invalid | TSO App. 1 §5.6 | Test |
 | TER-060 | Stop alerting and report `NO_FIX` while `isGPSValid()` is false | TSO App. 1 §5.6 | Test |
 | TER-070 | Stop alerting and report `POOR_FIX` while horizontal accuracy is 30 m or worse, or vertical accuracy 30 m or worse | TSO App. 1 §5.6; `isGPSGroundTrackValid()` | Test |

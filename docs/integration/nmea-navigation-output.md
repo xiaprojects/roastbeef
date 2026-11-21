@@ -77,7 +77,7 @@ replace it) to carry at least these fields:
 | `GPSGroundSpeed` | knots |
 | `GPSAltitudeMSL` | feet; VNAV altitude source, §6 |
 | `GPSVerticalAccuracy` | metres |
-| `BaroVerticalSpeed` | ft/min, valid when `isTempPressValid()`. `GPSVerticalSpeed` is never assigned in this fork, so it must not be used |
+| `BaroVerticalSpeed` | ft/min, valid when `isTempPressValid()`. `GPSVerticalSpeed` (ft/s, slope of the GGA altitude, `main/gpsvspeed.go`) is not used for this field |
 
 ### 4.2 Leg and desired track
 

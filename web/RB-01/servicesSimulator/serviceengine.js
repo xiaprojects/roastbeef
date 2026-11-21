@@ -112,10 +112,11 @@ SimulatedEngine.prototype = {
         if (!(situation.GPSGroundSpeed >= ENGINE_GROUND_KT)) {
             return "ground";
         }
-        if (situation.GPSVerticalSpeed > ENGINE_CLIMB_FPM) {
+        var fpm = (situation.GPSVerticalSpeed || 0) * 60; // ft/s
+        if (fpm > ENGINE_CLIMB_FPM) {
             return "climb";
         }
-        if (situation.GPSVerticalSpeed < ENGINE_DESCENT_FPM) {
+        if (fpm < ENGINE_DESCENT_FPM) {
             return "descent";
         }
         return "cruise";

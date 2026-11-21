@@ -725,8 +725,8 @@ func pgrmhFromSolution(data GPRMBData) PGRMHData {
 		return out // status V: every other field stays null
 	}
 
-	// Field 2. GPSVerticalSpeed is never assigned in this fork, so the baro is
-	// the only vertical speed source, and only while the sensor is valid.
+	// Field 2 is the baro vertical speed, and only while the sensor is valid:
+	// pgrmh-format.md nulls it without a baro (vector T6), GPS rate or not.
 	if isTempPressValid() {
 		vs := float64(mySituation.BaroVerticalSpeed)
 		out.VertSpeedFpm = &vs
