@@ -760,6 +760,15 @@ func createAISDev(id int, serial string, idSet bool) error {
 	return nil
 }
 
+// reservedSerialPrefix marks dongles owned by other RB services (rb-vor,
+// rb-sdr-radio). Stratux never assigns them, not even as an anonymous
+// fallback when its own tagged dongle is missing.
+const reservedSerialPrefix = "rb:"
+
+func isReservedSerial(serial string) bool {
+	return strings.HasPrefix(serial, reservedSerialPrefix)
+}
+
 func configDevices(count int, esEnabled, uatEnabled, ognEnabled, aisEnabled bool) {
 	// once the tagged dongles have been assigned, explicitly range over
 	// the remaining IDs and assign them to any anonymous dongles
@@ -771,6 +780,10 @@ func configDevices(count int, esEnabled, uatEnabled, ognEnabled, aisEnabled bool
 		if err == nil {
 			//FIXME: Trim NULL from the serial. Best done in gortlsdr, but putting this here for now.
 			s = strings.Trim(s, "\x00")
+			if isReservedSerial(s) {
+				log.Printf("SDR id %d serial %q is reserved for RB receivers, not assigned\n", i, s)
+				continue
+			}
 			// no need to check if createXDev returned an error; if it
 			// failed to config the error is logged and we can ignore
 			// it here so it doesn't get queued up again

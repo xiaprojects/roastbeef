@@ -38,6 +38,12 @@ per-dongle clock correction; if absent, `globalSettings.PPM` is used as the fall
 2. **Pass 2** assigns any *untagged* (anonymous) dongles to whichever enabled band still
    needs one.
 
+Dongles whose serial starts with **`rb:`** (e.g. `rb:nav1`, `rb:radio1`) are reserved for
+rb-vor and rb-sdr-radio: `configDevices()` skips them in both passes, so Stratux never takes
+one, even when its tagged `stx:1090` dongle is missing. Any other untagged serial is fair game
+for pass 2. Set it with `rtl_eeprom -d <n> -s rb:nav1`, then replug the dongle and use the
+same serial in the receiver's `device_serial`.
+
 There is also a **fallback** mode (`stx:0:<ppm>`) written by `sdr-tool.sh`: a dongle tagged
 this way will serve 1090ES, but fall back to 978 UAT if the dedicated UAT dongle is missing —
 useful for single-dongle setups.
