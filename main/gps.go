@@ -163,6 +163,12 @@ type gpsPerfStats struct {
 }
 
 var gpsPerf gpsPerfStats
+
+// gpsLastRMCTrack is when an RMC last set the ground track; for gpsRMCPreferredFor after
+// it a VTG is ignored, so each fix stamps GPSLastGroundTrackTime once (see the VTG case).
+var gpsLastRMCTrack time.Time
+
+const gpsRMCPreferredFor = 2 * time.Second
 var myGPSPerfStats []gpsPerfStats
 var gpsTimeOffsetPpsMs = 100.0 * time.Millisecond
 
@@ -1172,6 +1178,16 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 			return false
 		}
 
+		// One velocity sample a fix. A receiver sending RMC as well (the u-blox sends
+		// RMC, VTG, GGA every fix) has already given this fix's speed and track, and a
+		// second GPSLastGroundTrackTime stamp would reach the AHRS as a new sample with
+		// zero change in velocity whenever its 50 ms tick falls between the two: the
+		// Simple engine then sees roughly half the turn, so it shows 0.55-0.7 of the bank
+		// and turn rate in a steady turn (2026-11-20 flight). VTG is used only without RMC.
+		if !gpsLastRMCTrack.IsZero() && stratuxClock.Since(gpsLastRMCTrack) < gpsRMCPreferredFor {
+			return false
+		}
+
 		groundspeed, err := strconv.ParseFloat(x[5], 32) // Knots.
 		if err != nil {
 			return false
@@ -1277,6 +1293,14 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		}
 		tmpSituation.GPSGeoidSep = float32(geoidSep * 3.28084) // Convert to feet.
 		tmpSituation.GPSHeightAboveEllipsoid = tmpSituation.GPSGeoidSep + tmpSituation.GPSAltitudeMSL
+
+		// Vertical speed, the slope of the altitude over the last fixes (gpsvspeed.go)
+		if q > 0 {
+			tmpSituation.GPSVerticalSpeed = gpsVSpeed.add(float64(tmpSituation.GPSLastFixSinceMidnightUTC), alt*3.28084)
+		} else {
+			gpsVSpeed.reset()
+			tmpSituation.GPSVerticalSpeed = 0
+		}
 
 		// Timestamp.
 		tmpSituation.GPSLastFixLocalTime = stratuxClock.Time
@@ -1433,6 +1457,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		updateGPSPerf = true
 		thisGpsPerf.msgType = x[0]
 		tmpSituation.GPSLastGroundTrackTime = stratuxClock.Time
+		gpsLastRMCTrack = stratuxClock.Time
 
 		// We've made it this far, so that means we've processed "everything" and can now make the change to mySituation.
 		mySituation = tmpSituation
@@ -2261,6 +2286,7 @@ func isGPSValid() bool {
 		mySituation.GPSSatellites = 0
 		mySituation.GPSHorizontalAccuracy = 999999
 		mySituation.GPSVerticalAccuracy = 999999
+		mySituation.GPSVerticalSpeed = 0
 		mySituation.GPSNACp = 0
 	}
 	return isValid

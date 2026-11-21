@@ -25,9 +25,13 @@ import (
 func withGPSState(t *testing.T) {
 	t.Helper()
 	withTrafficState(t)
-	perf, detected := myGPSPerfStats, globalStatus.GPS_detected_type
-	t.Cleanup(func() { myGPSPerfStats, globalStatus.GPS_detected_type = perf, detected })
+	perf, detected, vs, rmc := myGPSPerfStats, globalStatus.GPS_detected_type, gpsVSpeed, gpsLastRMCTrack
+	t.Cleanup(func() {
+		myGPSPerfStats, globalStatus.GPS_detected_type, gpsVSpeed, gpsLastRMCTrack = perf, detected, vs, rmc
+	})
 	myGPSPerfStats = nil
+	gpsVSpeed = gpsVSpeedEstimator{}
+	gpsLastRMCTrack = time.Time{}
 	mySituation.muGPS, mySituation.muGPSPerformance = &sync.Mutex{}, &sync.Mutex{}
 	globalStatus.GPS_connected = true
 }
@@ -121,7 +125,9 @@ func TestNMEATrackIsHeldBelowThreeKnots(t *testing.T) {
 	if !nmea("GPRMC,104200.20,A,4300.000,N,01200.000,E,0.4,,130926,,,A") || math.Abs(mySituation.GPSGroundSpeed-0.4) > 1e-6 || !near(mySituation.GPSTrueCourse, 123.4, 1e-4) {
 		t.Errorf("RMC at 0.4 kt with no track: %.1f kt on %.1f; want 0.4, 123.4", mySituation.GPSGroundSpeed, mySituation.GPSTrueCourse)
 	}
-	// VTG: true track, magnetic track, speed in knots and in km/h.
+	// VTG: true track, magnetic track, speed in knots and in km/h. Taken only from a
+	// receiver that has stopped sending RMC (TestNMEAOneTrackStampPerFix).
+	stratuxClock.Time = stratuxClock.Time.Add(gpsRMCPreferredFor)
 	if !nmea("GPVTG,054.7,T,034.4,M,005.5,N,010.2,K,A") || !near(mySituation.GPSTrueCourse, 54.7, 1e-4) ||
 		math.Abs(mySituation.GPSGroundSpeed-5.5) > 1e-6 || mySituation.GPSLastGroundTrackTime != stratuxClock.Time {
 		t.Errorf("VTG: %.1f kt on %.1f; want 5.5 kt on 054.7", mySituation.GPSGroundSpeed, mySituation.GPSTrueCourse)
@@ -204,5 +210,27 @@ func TestNACpFromTheGSTAccuracy(t *testing.T) {
 	}
 	if s := mySituation; !near(s.GPSHorizontalAccuracy, 5, 1e-5) || !near(s.GPSVerticalAccuracy, 6, 1e-5) || s.GPSNACp != 10 {
 		t.Errorf("GST sigmas 2.0/1.5/3.0 m: accuracy %.2f/%.2f m NACp %d; want 5, 6, 10", s.GPSHorizontalAccuracy, s.GPSVerticalAccuracy, s.GPSNACp)
+	}
+}
+
+// A u-blox sends RMC, VTG and GGA every fix, RMC and VTG with the same speed and track.
+// The fix must stamp GPSLastGroundTrackTime once: the AHRS takes every new stamp for a
+// new GPS sample, and a second one with no change in velocity halves the turn it sees.
+// On 2026-11-20 that made the Simple engine show 0.75 of the bank and 0.63 of the turn
+// rate in steady turns. A receiver sending only VTG still has its track taken.
+func TestNMEAOneTrackStampPerFix(t *testing.T) {
+	withGPSState(t)
+	nmea("GNRMC,080304.20,A,4305.240,N,01217.000,E,120.0,135.0,201126,,,A")
+	stamp := mySituation.GPSLastGroundTrackTime
+	stratuxClock.Time = stratuxClock.Time.Add(10 * time.Millisecond)
+	if nmea("GNVTG,135.0,T,,M,120.0,N,222.2,K,A") || mySituation.GPSLastGroundTrackTime != stamp {
+		t.Errorf("VTG after the RMC of the same fix restamped the track: %v, want %v", mySituation.GPSLastGroundTrackTime, stamp)
+	}
+
+	// The RMCs stop (only VTG enabled): after gpsRMCPreferredFor the VTG track is used.
+	stratuxClock.Time = stratuxClock.Time.Add(gpsRMCPreferredFor)
+	if !nmea("GNVTG,140.0,T,,M,118.0,N,218.5,K,A") || mySituation.GPSLastGroundTrackTime != stratuxClock.Time ||
+		!near(mySituation.GPSTrueCourse, 140, 1e-4) || mySituation.GPSGroundSpeed != 118 {
+		t.Errorf("VTG-only: %.1f kt on %.1f stamped %v; want 118 kt on 140, now", mySituation.GPSGroundSpeed, mySituation.GPSTrueCourse, mySituation.GPSLastGroundTrackTime)
 	}
 }
