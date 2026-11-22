@@ -35,7 +35,7 @@
     },
     "cameraClearanceMeters": 60,
     "haze": {
-        "enabled": true,
+        "enabled": false,
         "color": {
             "r": 0.79,
             "g": 0.86,

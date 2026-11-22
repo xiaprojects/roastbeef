@@ -50,7 +50,7 @@ const TOP_BAR_TRAFFIC_SECONDS = 60;
 // EMS frames come at least every ~2.3 s, the status and the autopilot every 1 s
 const TOP_BAR_STREAM_STALE_SECONDS = 5;
 // When the bar is too narrow the slots are dropped in this order; the others never are
-const TOP_BAR_DROP_ORDER = ["utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "outsideTemperature", "oil", "ap"];
+const TOP_BAR_DROP_ORDER = ["voice", "utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "outsideTemperature", "oil", "ap"];
 
 /**
  * barNumber: a value as the bar shows it
@@ -95,6 +95,36 @@ function barAltitudeUnit() {
     return unit.startsWith("f") ? "ft" : "m";
 }
 
+// VOICE: rbvoice has no event for the end of its spoken answer, so ANSW lasts as long as
+// the reply takes to say at this pace, between the two limits
+const TOP_BAR_VOICE_CHARS_PER_SECOND = 14;
+const TOP_BAR_VOICE_ANSWER_MIN_SECONDS = 2;
+const TOP_BAR_VOICE_ANSWER_MAX_SECONDS = 20;
+// A SPEAKING 1 whose SPEAKING 0 never came stops counting after this long
+const TOP_BAR_VOICE_SPEAKING_MAX_SECONDS = 30;
+
+/**
+ * barVoice: the state of the voice recognition (rbvoice) as the bar shows it
+ * @param {*} voice - wakeWord and trigger: the bridge keys voice_wakeword and voice_trigger,
+ *                    undefined until rbvoice publishes them; speakingUntil and answerUntil: Date.now() limits
+ * @param {*} now - Date.now()
+ * @returns ANSW while the reply is spoken, SPEAK while the pilot speaks, LISTNG while rbvoice
+ *          listens (wake word on, or after a push to talk), MNUAL when it waits for a push to talk,
+ *          BAR_NO_DATA before rbvoice has published its keys
+ */
+function barVoice(voice, now) {
+    if (now < voice.answerUntil) {
+        return "ANSW";
+    }
+    if (now < voice.speakingUntil) {
+        return "SPEAK";
+    }
+    if (voice.trigger === true || voice.wakeWord === true) {
+        return "LISTNG";
+    }
+    return voice.wakeWord === false ? "MNUAL" : BAR_NO_DATA;
+}
+
 // An altitude in feet, as the daemon gives it, in the pilot's unit
 function barAltitudeFromFeet(raw) {
     return barNumber(raw, 0, function (feet) {
@@ -105,6 +135,8 @@ function barAltitudeFromFeet(raw) {
 function TopBarCtrl($scope, $interval, $http) {
     var trafficHeard = {}; // Icao_addr to the Date.now() it was last heard
     var alertsList = $scope.alertsList; // The last list of AlertsService, undefined until the first
+    // rbvoice: the bridge keys and how long the pilot's speech and the spoken reply last, barVoice()
+    const voice = { wakeWord: undefined, trigger: undefined, speakingUntil: 0, answerUntil: 0 };
     // Date.now() of the last frame of each stream, and the slots that go to BAR_NO_DATA when it stops
     const streams = {
         situation: { time: 0, seconds: TOP_BAR_STALE_SECONDS, slots: ["speed", "track", "gmax", "alt"] },
@@ -116,7 +148,7 @@ function TopBarCtrl($scope, $interval, $http) {
     $scope.values = {
         speed: BAR_NO_DATA, track: BAR_NO_DATA, uptime: BAR_NO_DATA, gmax: BAR_NO_DATA, alt: BAR_NO_DATA,
         agl: BAR_NO_DATA, ap: BAR_NO_DATA, com: BAR_NO_DATA, stby: BAR_NO_DATA, oil: BAR_NO_DATA,
-        outsideTemperature: BAR_NO_DATA,
+        outsideTemperature: BAR_NO_DATA, voice: BAR_NO_DATA,
         utc: "", traffic: "0"
     };
     $scope.altitudeUnit = barAltitudeUnit();
@@ -156,6 +188,21 @@ function TopBarCtrl($scope, $interval, $http) {
         $scope.values.traffic = String(Object.keys(trafficHeard).length);
     }
 
+    // The rbvoice keys of the addons bridge (rbvoice bridge.py); false when the frame has neither
+    function voiceBridge(bridge) {
+        var found = false;
+        if (typeof bridge.voice_wakeword === "number") {
+            voice.wakeWord = bridge.voice_wakeword >= 0.5;
+            found = true;
+        }
+        if (typeof bridge.voice_trigger === "number") {
+            voice.trigger = bridge.voice_trigger >= 0.5;
+            found = true;
+        }
+        $scope.values.voice = barVoice(voice, Date.now());
+        return found;
+    }
+
     // What each event changes; every one then redraws the bar
     const listeners = {
         SituationUpdated: function (situation) {
@@ -175,6 +222,25 @@ function TopBarCtrl($scope, $interval, $http) {
             alertsList = list;
         },
         RadioUpdated: showRadio,
+        // The bridge carries every addon: only a frame with the rbvoice keys redraws the bar
+        BridgeUpdated: voiceBridge,
+        // rbvoice through the keypad socket: SPEAKING 1 and 0 around the pilot's speech, then
+        // VOICE with the reply ("out", empty when rbvoice does not answer)
+        voice: function (event) {
+            const now = Date.now();
+            if (event.key === "SPEAKING") {
+                voice.speakingUntil = event.status === 1 ? now + TOP_BAR_VOICE_SPEAKING_MAX_SECONDS * 1000 : 0;
+                if (event.status === 1) {
+                    voice.answerUntil = 0;
+                }
+            } else if (event.key === "VOICE") {
+                voice.speakingUntil = 0;
+                const seconds = String(event.out || "").length / TOP_BAR_VOICE_CHARS_PER_SECOND;
+                voice.answerUntil = event.out ? now + 1000 * Math.min(TOP_BAR_VOICE_ANSWER_MAX_SECONDS,
+                    Math.max(TOP_BAR_VOICE_ANSWER_MIN_SECONDS, seconds)) : 0;
+            }
+            $scope.values.voice = barVoice(voice, now);
+        },
         // EMS frames are partial: the oil temperature is kept while any frame keeps coming
         EMSUpdated: function (ems) {
             streams.ems.time = Date.now();
@@ -203,8 +269,9 @@ function TopBarCtrl($scope, $interval, $http) {
     const handlers = {};
     Object.keys(listeners).forEach(function (name) {
         handlers[name] = function (event) {
-            listeners[name](event.detail || {});
-            redraw();
+            if (listeners[name](event.detail || {}) !== false) {
+                redraw();
+            }
         };
         addEventListener(name, handlers[name]);
     });
@@ -235,6 +302,7 @@ function TopBarCtrl($scope, $interval, $http) {
         const now = Date.now();
         $scope.values.utc = new Date(now).toISOString().substring(11, 16);
         showTraffic();
+        $scope.values.voice = barVoice(voice, now);
         angular.forEach(streams, function (stream) {
             if (now - stream.time > stream.seconds * 1000) {
                 stream.slots.forEach(function (slot) {
@@ -281,6 +349,10 @@ function TopBarCtrl($scope, $interval, $http) {
     // The daemon sends the radios only when they change: ask once for where they are now
     $http.get(URL_RADIO_GET).then(function (response) {
         showRadio(response.data);
+    }, function () { });
+    // The bridge socket says nothing on connect: ask once whether rbvoice has published its keys
+    $http.get(URL_BRIDGE_FLOAT_SET).then(function (response) {
+        voiceBridge(angular.fromJson(response.data) || {});
     }, function () { });
 
     // The width of the bar changes with the window and the side panels; the first

@@ -68,14 +68,15 @@ temperature and the autopilot were added.
 |---|---|---|---|---|---|---|
 | speed | left | `IAS` or `GS`, with the pilot's unit | Speed | `SpeedKt`, `SpeedSource` from `SituationUpdated` | `#/speed` | never |
 | alt | left | `ALT ft` or `ALT m` | Altimeter: `BaroPressureAltitude + 27 × (QNH − 1013.25)` ft, as the altimeter plate; `---` with no baro (`BaroSourceType` 0) | `SituationUpdated` | `#/altimeter` | never |
-| uptime | left | `UPTIME` | Daemon uptime, H:MM; `---` 5 s after the status stops | `StatusUpdated` `Uptime` (ms) | nothing | 3rd |
+| uptime | left | `UPTIME` | Daemon uptime, H:MM; `---` 5 s after the status stops | `StatusUpdated` `Uptime` (ms) | `#/timers` | 3rd |
 | agl | left | `AGL ft` or `AGL m` | Height above the terrain grid cell | `Terrain_AglFt` when `Terrain_AglValid`, `StatusUpdated` (main/terrain.go) | `#/synthview` | 7th |
 | track | left | `TRK` | Track, `°` | `GPSTrueCourse` | `#/heading` | 4th |
 | ap | left | `AP` | Bearing the autopilot steers to and `►`/`◄`, `OFF` when not engaged | `GPRMB.TrueBearing`, `GPRMB.Steer`, `AutopilotUpdated` (1 s, only with the autopilot setting on) | `#/autopilot` | 9th |
 | gmax | left | `MAX G` | Peak load | `AHRSGLoadMax` | `#/gmetergauge` | 2nd |
 | com | centre | `COM` | Active frequency of the first radio | `RadioUpdated[0].FrequencyActive` | `#/radio` | never |
 | stby | centre | `STBY` | Standby frequency of the first radio | `RadioUpdated[0].FrequencyStandby` | `#/radio` | 5th |
-| utc | centre | `UTC` | `HH:MM` | Browser clock | nothing | 1st |
+| utc | centre | `UTC` | `HH:MM` | Browser clock | `#/aircraft` | 1st |
+| voice | right | `VOICE` | Voice recognition: `ANSW` while rbvoice speaks its reply, `SPEAK` while the pilot speaks, `LISTNG` with the wake word on or after a push to talk, `MNUAL` when it waits for a push to talk, `---` before rbvoice publishes its keys. rbvoice has no end-of-reply event: `ANSW` lasts the reply length at 14 characters/s, 2 to 20 s | bridge keys `voice_wakeword`, `voice_trigger` (`BridgeUpdated`, `GET /bridge/float` once); `SPEAKING` and `VOICE` of the `voice` event (keypad socket) | `#/voice` | 1st (added 2026-11-22, the others drop one place later) |
 | oil | right | `OIL °C` or `OIL °F` | Oil temperature | `oiltemperature` from `EMSUpdated` | `#/ems` | 8th |
 | traffic | right | `TRAFFIC` | Targets heard in the last 60 s | `RadarChanged` | `#/radar` | 6th |
 | alerts | right | `ALERTS` | All alerts, lamp until seen | `AlertsUpdated` (see below) | `#/alerts` | never |
@@ -163,7 +164,7 @@ Six keys of equal width, then a narrow hide key. The whole cell is the touch tar
   FABs, the hide keys and the menu. It does not dispatch a `key` event (B7).
 - When hidden, the north and south FABs fade as today but leave a **grip line** (about 64×4 px,
   low contrast, centred on the edge) so the place to touch stays marked (AC 20-175 §3-2, B9). The
-  east and west FABs are not changed.
+  east and west FABs are not changed. Changed 2026-11-22 (xiaprojects): there is no grip line.
 
 ### 480×480 (R1)
 
@@ -175,10 +176,10 @@ An 800×480 panel therefore has no bars either, exactly as today.
 
 | | Top | Bottom |
 |---|---|---|
-| Height | `clamp(40px, 6vh, 52px)`: 48 px at 800, 40 px at 600 | `clamp(56px, 9vh, 80px)`: 72 px at 800, 56 px at 600 |
+| Height | `clamp(40px, 4vh, 52px)`: 40 px at 800 and at 600 | `clamp(56px, 9vh, 80px)`: 72 px at 800, 56 px at 600 |
 | Key or slot width at 1280 | by content, minimum 72 px | 204 px |
 | Key width at 1024 | | 161 px |
-| Key width at 1280 with both side panels (691 px) | | 105 px |
+| Key width at 1280 with both side panels | | 204 px: the bars keep the full width, the panels open between them (2026-11-22) |
 
 - Heights are CSS variables (`--rb-bar-top`, `--rb-bar-bottom`) so a real panel can be tuned in
   one place. `mobile-angular-ui` pads `.app-body` by a fixed 51 px for `.has-navbar-top` and

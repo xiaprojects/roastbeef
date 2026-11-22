@@ -1,6 +1,6 @@
 """The top and bottom bars: status values on top, six soft keys along the bottom.
 
-docs/tech-debt/top-bottom-bars.md, phase 1, checks T1 to T12. Each bar is hidden by
+docs/tech-debt/top-bottom-bars.md, phase 1, checks T1 to T13. Each bar is hidden by
 default, shown by the north or south FAB and hidden by its own key at the right end,
 and neither is ever drawn at 480x480 (nor at 800x480): `barsAllowed` in js/main.js.
 A shown bar reserves its height, so the plate area shrinks by it.
@@ -37,10 +37,11 @@ MENU_SECONDS = 10
 TIMER, EMS_YELLOW, EMS_RED = 2, 14, 15
 LAMP = {"": "rgb(44, 44, 44)", "info": "rgb(255, 255, 255)",
         "warning": "rgb(255, 196, 0)", "danger": "rgb(196, 0, 0)"}
-SLOTS = ["speed", "alt", "uptime", "agl", "track", "ap", "gmax", "com", "stby", "utc",
-         "oil", "traffic", "alerts", "hide"]
+SLOTS = ["speed", "alt", "agl", "track", "ap", "gmax", "com", "stby", "utc", "uptime",
+         "voice", "oil", "outsideTemperature", "traffic", "alerts", "hide"]
 # TOP_BAR_DROP_ORDER of plates/js/bottom.js; the slots not in it are never dropped
-DROP_ORDER = ["utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "oil", "ap"]
+DROP_ORDER = ["voice", "utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "outsideTemperature",
+              "oil", "ap"]
 NEVER_DROPPED = [s for s in SLOTS if s not in DROP_ORDER]
 
 # Counts the window listeners and the intervals alive, before any page script runs
@@ -212,18 +213,11 @@ def check_hidden_default(res, d, width, height):
     res.check(g["north"] and near(g["north"]["top"], 0), "T2 north FAB on the top edge", g["north"])
     res.check(g["south"] and near(g["south"]["bottom"], height), "T2 south FAB on the bottom edge",
               g["south"])
-    grip = d.page.eval("""['.fabNorth', '.fabSouth'].map(sel => {
-        const e = document.querySelector(sel);
-        if (!e) return null;
-        const s = getComputedStyle(e, '::after');
-        return {content: s.content, width: s.width, height: s.height};
-    })""")
-    res.check(all(g_ and g_["content"] != "none" and g_["width"] == "64px" and g_["height"] == "4px"
-                  for g_ in grip), "T2 both FABs carry a 64x4 grip line", grip)
 
 
 def expected_heights(height):
-    top = min(max(40, 0.06 * height), 52)
+    # --rb-bar-top and --rb-bar-bottom of css/bars.css
+    top = min(max(40, 0.04 * height), 52)
     bottom = min(max(56, 0.09 * height), 80)
     return top, bottom
 
@@ -571,21 +565,22 @@ def check_values(res, d):
     d.page.eval("Date.now = window.__rbNow")
     res.check(aged == "0", "T8 a target not heard for 60 s is no longer counted", aged)
 
-    d.page.click(".rb-bar-top [data-slot='uptime']")
-    d.page.pump(0.4)
-    res.check(page(d) == "#/hsi", "T8 a tap on UPTIME opens nothing", d.hash())
-    d.page.click(".rb-bar-top [data-slot='utc']")
-    d.page.pump(0.4)
-    res.check(page(d) == "#/hsi", "T8 a tap on UTC opens nothing", d.hash())
+    for slot, href in (("uptime", "#/timers"), ("utc", "#/aircraft")):
+        d.page.click(".rb-bar-top [data-slot='%s']" % slot)
+        d.page.pump(0.4)
+        res.check(page(d) == href, "T8 a tap on %s opens %s" % (slot.upper(), href), d.hash())
 
 
 def check_new_values(res, d):
     """T12 the slots added on 2026-11-11: COM and STBY of the first radio, ALT, AGL, OIL, AP."""
     d.show("hsi", "#hsi")
+    # The captured fixture has radios: GET /radio answers none, and the bar is created again to ask it
+    d.srv.rest["/radio"] = []
+    scope(d, "s.uiSidebarTop = false")
+    bar_shown(d, "top", False)
     scope(d, "s.uiSidebarTop = true")
     bar_shown(d, "top")
     d.page.wait("window.aircraftData && window.aircraftData.units", timeout=10, label="aircraft units")
-    # The fixture answers GET /radio with no radio list
     res.check(slot_text(d, "com", "value") == "---" and slot_text(d, "stby", "value") == "---",
               "T12 COM and STBY --- before any radio", (slot_text(d, "com", "value"), slot_text(d, "stby", "value")))
 
@@ -622,18 +617,19 @@ def check_new_values(res, d):
     res.check(slot_text(d, "oil", "value") == want, "T12 an EMS frame without oil keeps the oil value",
               slot_text(d, "oil", "value"))
 
+    # servicestatus.js drops a status frame that comes within ~1 s of the previous one
     d.srv.push("/status", dict(d.srv.status or {}, Terrain_AglValid=True, Terrain_AglFt=1730))
-    d.page.pump(0.6)
+    d.page.pump(1.1)
     want = d.page.eval("pilotDisplayedAltitudeFromMeters(1730 / 3.28084).toFixed(0)")
     res.check(slot_text(d, "agl", "value") == want and slot_text(d, "agl", "label") == "AGL " + unit,
               "T12 AGL follows Terrain_AglFt", {"got": slot_text(d, "agl", "value"), "want": want})
     d.srv.push("/status", dict(d.srv.status or {}, Terrain_AglValid=False, Terrain_AglFt=0))
-    d.page.pump(0.6)
+    d.page.pump(1.1)
     res.check(slot_text(d, "agl", "value") == "---", "T12 AGL --- while Terrain_AglValid is false",
               slot_text(d, "agl", "value"))
     d.srv.push("/status", dict(d.srv.status or {}, Terrain_AglValid=True, Terrain_AglFt=1730,
                                Uptime=(3 * 60 + 7) * 60000 + 59000))
-    d.page.pump(0.6)
+    d.page.pump(1.1)
     res.check(slot_text(d, "uptime", "value") == "3:07" and slot_text(d, "uptime", "label") == "UPTIME",
               "UPTIME shows the daemon uptime, H:MM", slot_text(d, "uptime", "value"))
 
@@ -658,6 +654,48 @@ def check_new_values(res, d):
         d.page.click(".rb-bar-top [data-slot='%s']" % slot)
         d.page.pump(0.4)
         res.check(page(d) == href, "T12 a tap on %s opens %s" % (slot, href), d.hash())
+
+
+def check_voice(res, d):
+    """T13 VOICE, added 2026-11-22: the rbvoice state from the bridge keys and the voice events."""
+    d.show("hsi", "#hsi")
+    scope(d, "s.uiSidebarTop = true")
+    bar_shown(d, "top")
+
+    def voice(kind, detail):
+        d.page.eval("dispatchEvent(new CustomEvent('%s', {detail: %s}))" % (kind, json.dumps(detail)))
+        d.page.pump(0.3)
+        return slot_text(d, "voice", "value")
+
+    # The fixture's /bridge/float has no rbvoice keys
+    res.check(slot_text(d, "voice", "value") == "---", "T13 VOICE --- before rbvoice publishes its keys",
+              slot_text(d, "voice", "value"))
+    got = voice("BridgeUpdated", {"vor_bearing": 12.0})
+    res.check(got == "---", "T13 a bridge frame without the rbvoice keys changes nothing", got)
+    got = voice("BridgeUpdated", {"voice_wakeword": 0, "voice_trigger": 0})
+    res.check(got == "MNUAL", "T13 MNUAL with the wake word off", got)
+    got = voice("BridgeUpdated", {"voice_trigger": 1})
+    res.check(got == "LISTNG", "T13 LISTNG after a push to talk", got)
+    got = voice("voice", {"source": "voice", "key": "SPEAKING", "status": 1})
+    res.check(got == "SPEAK", "T13 SPEAK while the pilot speaks", got)
+    got = voice("voice", {"source": "voice", "key": "SPEAKING", "status": 0})
+    res.check(got == "LISTNG", "T13 back to LISTNG when the pilot stops", got)
+    got = voice("voice", {"source": "voice", "key": "VOICE", "in": "radio", "out": "Radio set", "status": 0})
+    res.check(got == "ANSW", "T13 ANSW while the reply is spoken", got)
+    got = voice("BridgeUpdated", {"voice_trigger": 0})
+    res.check(got == "ANSW", "T13 the end of the push to talk window keeps ANSW", got)
+    # "Radio set" is 9 characters: the 2 s minimum
+    d.page.pump(2.5)
+    res.check(slot_text(d, "voice", "value") == "MNUAL", "T13 ANSW ends after the reply time",
+              slot_text(d, "voice", "value"))
+    got = voice("voice", {"source": "voice", "key": "VOICE", "in": "boh", "out": "", "status": 0})
+    res.check(got == "MNUAL", "T13 no ANSW when rbvoice does not answer", got)
+    got = voice("BridgeUpdated", {"voice_wakeword": 1})
+    res.check(got == "LISTNG", "T13 LISTNG with the wake word on", got)
+
+    d.page.click(".rb-bar-top [data-slot='voice']")
+    d.page.pump(0.4)
+    res.check(page(d) == "#/voice", "T13 a tap on VOICE opens #/voice", d.hash())
 
 
 def listed(id_, kind, active):
@@ -869,6 +907,7 @@ def run_wide(res):
         check_softkey_event(res, d)
         check_values(res, d)
         check_new_values(res, d)
+        check_voice(res, d)
         check_alerts(res, d)
         check_listeners(res, d)
 
@@ -888,7 +927,7 @@ def run_wide(res):
         scope(d, "s.Ui.turnOn('uiSidebarLeft'); s.Ui.turnOn('uiSidebarRight')")
         d.page.pump(1.0)
         bar = d.page.eval("document.querySelector('.rb-bar-bottom').getBoundingClientRect().width")
-        res.check(near(bar, width * 0.54, 2), "T10 both side panels leave the bars 54%% of the screen", bar)
+        res.check(near(bar, width), "T10 the bars keep the full width with both side panels open", bar)
         d.fly(frames=3, interval=0.3, GPSGroundSpeed=100, IndicatedAirSpeed=0, GPSTrueCourse=274.0,
               AHRSGLoadMax=1.8)
         check_row(res, d, "%dx%d both panels" % (width, height), " (%.0f px)" % bar)
