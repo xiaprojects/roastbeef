@@ -1,0 +1,247 @@
+[
+ {
+  "config": "baseline (dome, Phong, wireframe)",
+  "finish": {
+   "medianFinishMs": 3.6,
+   "p90": 4.2
+  },
+  "scene": [
+   218380,
+   137
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 3.21,
+   "gpuProc%": 8.9,
+   "renderer%": 10.1,
+   "system%of4": 9.7,
+   "v3dRender%": 7.1,
+   "v3dBin%": 1.8,
+   "temp": 49.6,
+   "v3dMHz": 500
+  },
+  "max": {
+   "frames": 1248,
+   "fps": 62.4,
+   "jsMsPerFrame": 3.06,
+   "gpuProc%": 25.4,
+   "renderer%": 33.1,
+   "system%of4": 19.8,
+   "v3dRender%": 26.4,
+   "v3dBin%": 8.4,
+   "temp": 51.25,
+   "v3dMHz": 500
+  }
+ },
+ {
+  "config": "+ haze (fog)",
+  "finish": {
+   "medianFinishMs": 3.5,
+   "p90": 4.4
+  },
+  "scene": [
+   218380,
+   137
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 3.29,
+   "gpuProc%": 9.4,
+   "renderer%": 10.4,
+   "system%of4": 9.0,
+   "v3dRender%": 7.7,
+   "v3dBin%": 1.8,
+   "temp": 50.7,
+   "v3dMHz": 500
+  },
+  "max": {
+   "frames": 1245,
+   "fps": 62.3,
+   "jsMsPerFrame": 3.61,
+   "gpuProc%": 27.4,
+   "renderer%": 37.4,
+   "system%of4": 22.0,
+   "v3dRender%": 26.3,
+   "v3dBin%": 9.3,
+   "temp": 51.25,
+   "v3dMHz": 1150
+  }
+ },
+ {
+  "config": "smooth hill shading (Lambert)",
+  "finish": {
+   "medianFinishMs": 4.5,
+   "p90": 4.9
+  },
+  "scene": [
+   257778,
+   207
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 4.14,
+   "gpuProc%": 10.3,
+   "renderer%": 11.4,
+   "system%of4": 9.9,
+   "v3dRender%": 5.4,
+   "v3dBin%": 2.1,
+   "temp": 50.15,
+   "v3dMHz": 500
+  },
+  "max": {
+   "frames": 1248,
+   "fps": 62.4,
+   "jsMsPerFrame": 4.06,
+   "gpuProc%": 31.2,
+   "renderer%": 39.2,
+   "system%of4": 23.1,
+   "v3dRender%": 14.6,
+   "v3dBin%": 9.8,
+   "temp": 51.25,
+   "v3dMHz": 500
+  }
+ },
+ {
+  "config": "+ cast shadows (2048 PCF soft)",
+  "finish": {
+   "medianFinishMs": 8.4,
+   "p90": 10
+  },
+  "scene": [
+   265360,
+   213
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 7.08,
+   "gpuProc%": 14.2,
+   "renderer%": 14.9,
+   "system%of4": 12.1,
+   "v3dRender%": 15.9,
+   "v3dBin%": 4.6,
+   "temp": 50.7,
+   "v3dMHz": 500
+  },
+  "max": {
+   "frames": 1246,
+   "fps": 62.3,
+   "jsMsPerFrame": 7.79,
+   "gpuProc%": 58.1,
+   "renderer%": 66.6,
+   "system%of4": 37.7,
+   "v3dRender%": 77.3,
+   "v3dBin%": 34.2,
+   "temp": 52.9,
+   "v3dMHz": 1150
+  }
+ },
+ {
+  "config": "+ haze + shadows",
+  "finish": {
+   "medianFinishMs": 8.5,
+   "p90": 9.9
+  },
+  "scene": [
+   265360,
+   213
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 7.37,
+   "gpuProc%": 15.0,
+   "renderer%": 16.3,
+   "system%of4": 13.2,
+   "v3dRender%": 16.3,
+   "v3dBin%": 4.7,
+   "temp": 50.7,
+   "v3dMHz": 1150
+  },
+  "max": {
+   "frames": 1247,
+   "fps": 62.4,
+   "jsMsPerFrame": 7.9,
+   "gpuProc%": 58.8,
+   "renderer%": 66.9,
+   "system%of4": 38.3,
+   "v3dRender%": 77.8,
+   "v3dBin%": 35.2,
+   "temp": 54.0,
+   "v3dMHz": 1150
+  }
+ },
+ {
+  "config": "unlit strong colours (variant B)",
+  "finish": {
+   "medianFinishMs": 4.5,
+   "p90": 5.6
+  },
+  "scene": [
+   265360,
+   212
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 4.1,
+   "gpuProc%": 9.9,
+   "renderer%": 11.8,
+   "system%of4": 10.0,
+   "v3dRender%": 5.0,
+   "v3dBin%": 1.7,
+   "temp": 51.25,
+   "v3dMHz": 1150
+  },
+  "max": {
+   "frames": 1247,
+   "fps": 62.4,
+   "jsMsPerFrame": 3.98,
+   "gpuProc%": 30.7,
+   "renderer%": 38.8,
+   "system%of4": 22.4,
+   "v3dRender%": 14.9,
+   "v3dBin%": 7.9,
+   "temp": 51.8,
+   "v3dMHz": 500
+  }
+ },
+ {
+  "config": "baseline again",
+  "finish": {
+   "medianFinishMs": 4.5,
+   "p90": 4.9
+  },
+  "scene": [
+   265360,
+   213
+  ],
+  "10Hz": {
+   "frames": 200,
+   "fps": 10,
+   "jsMsPerFrame": 4.09,
+   "gpuProc%": 9.4,
+   "renderer%": 10.6,
+   "system%of4": 9.6,
+   "v3dRender%": 6.3,
+   "v3dBin%": 2.0,
+   "temp": 51.8,
+   "v3dMHz": 500
+  },
+  "max": {
+   "frames": 1249,
+   "fps": 62.5,
+   "jsMsPerFrame": 3.69,
+   "gpuProc%": 28.4,
+   "renderer%": 38.0,
+   "system%of4": 22.5,
+   "v3dRender%": 25.7,
+   "v3dBin%": 9.5,
+   "temp": 52.35,
+   "v3dMHz": 500
+  }
+ }
+]

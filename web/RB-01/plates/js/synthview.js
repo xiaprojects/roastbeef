@@ -44,16 +44,25 @@ var URL_SYNTH_SETUP = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/synthview.j
 // TODO: move in setup
 const elevantionPOIfromSurface = 100;
 const FollowMeDistance = 2;
+// Brown of the ground below the horizon and of the terrain's underside
+const TERRAIN_UNDERSIDE_COLOR = { r: 0.36, g: 0.25, b: 0.16 };
+// Haze, sun and cast shadows when synthview.json leaves them out
+// (docs/tech-debt/synthview-terrain-rendering.md sections 11-12)
+const SYNTHVIEW_HAZE = { enabled: true, color: { r: 0.79, g: 0.86, b: 0.9 }, start: 0.2, end: 0.77 };
+const SYNTHVIEW_SUN = { relativeAzimuth: 315, elevation: 15, intensity: 0.9, ambient: 0.6 };
+const SYNTHVIEW_SHADOWS = { enabled: true, mapSize: 1024, range: 0.4 };
 
 
 // create our controller function with all necessary logic
 function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     // RB-01, RB-03 using the Airfields integration we need a font, this is the default 3D font async loader
     // TODO: move this part
-    const fontLoader = new THREE.FontLoader();
-    fontLoader.load("synthview/helvetiker_regular.typeface.json", (font) => {
-        window.font = font;
-    });
+    if (!window.hasOwnProperty("font")) {
+        const fontLoader = new THREE.FontLoader();
+        fontLoader.load("synthview/helvetiker_regular.typeface.json", (font) => {
+            window.font = font;
+        });
+    }
     $scope.$parent.helppage = 'plates/synthview-help.html';
     $scope.data_list = [];
     $scope.isHidden = false;
@@ -76,7 +85,10 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         removeEventListener("SituationUpdated", situationUpdateEventListener);
         removeEventListener("TrafficUpdated", trafficUpdateEventListener);
         removeEventListener("WaypointChanged", waypointChangedEventListener);
-        rendering.disposeGuidanceResources();
+        window.clearInterval($scope.cleanupOldTrafficTimer);
+        // Every visit builds a new Rendering with its own WebGL context: free the
+        // old one, or each visit keeps a context, the terrain and every model
+        rendering.dispose();
 
     };
 
@@ -242,6 +254,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return; // we are getting called once after clicking away from the status page
         }
         resources.fetchRoute().then((route) => {
+            if (rendering.disposed) return;
             const signature = guidanceRouteSignature(route);
             if (signature == resources.routeSignature) {
                 return; // same plan, nothing to rebuild
@@ -588,6 +601,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     this.airfieldsInScene.add(key);
                     const aXY = this.terrain.plan(element.Lat, element.Lon);
                     var item = this.itemTemplate();
+                    // Marks the item as an airfield: never expired as traffic,
+                    // pruned when the terrain window leaves it (pruneAirfields)
+                    item.airfieldKey = key;
+                    item.lat = element.Lat;
+                    item.lon = element.Lon;
                     // TODO: fix Airfields database with real Elevations
                     //item.elevation = element.Ele + 20;
                     item.elevation = this.terrain.elevationByLatLon(element.Lat, element.Lon) + elevantionPOIfromSurface;
@@ -667,6 +685,35 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return itemsToAdd;
         }
 
+        // Takes an item out of the list. The first airfields sit before the
+        // traffic, so removing one of them moves where the traffic starts. An
+        // airfield removed can be imported again when the window comes back.
+        removeItem(index) {
+            const item = this.items[index];
+            this.items.splice(index, 1);
+            if (index < this.itemIndexStartingTraffic) this.itemIndexStartingTraffic--;
+            if (item != null && item.airfieldKey != null) this.airfieldsInScene.delete(item.airfieldKey);
+            return item;
+        }
+
+        // After the terrain has moved: the airfields left outside the new window
+        // go, or a long flight keeps every airfield it ever passed in the scene.
+        // dispose frees each one's meshes (Rendering.disposeItem).
+        pruneAirfields(dispose) {
+            const area = this.terrain.planimetry;
+            let removed = 0;
+            for (let i = this.items.length - 1; i > 0; i--) {
+                const item = this.items[i];
+                if (item == null || item.airfieldKey == null) continue;
+                if (item.lat > area.start.lat && item.lat < area.end.lat &&
+                    item.lon > area.start.lon && item.lon < area.end.lon) continue;
+                dispose(item);
+                this.removeItem(i);
+                removed++;
+            }
+            return removed;
+        }
+
 
         // Autopilot flight plan: bare array of {Lat,Lon,Ele(feet),Status,Cmt}
         // Errors are swallowed on purpose: a missing autopilot must not break the
@@ -727,6 +774,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
     class Rendering {
         constructor(container) {
+            this.disposed = false;
             this.terrainBrown = null;
             // Autopilot guidance tunnel: the meshes live in guidanceGroup and are
             // rebuilt on every route change, while geometry and material are shared
@@ -751,14 +799,18 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             renderer.toneMappingExposure = 1;
             */
 
-            // Add ambient and directional lighting
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-            this.scene.add(ambientLight);
+            // Add ambient and directional lighting. configureLighting() sets them
+            // from synthview.json; the sun then follows the heading (updateSun).
+            this.ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            this.scene.add(this.ambientLight);
 
-            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-            directionalLight.position.set(2000, 2000, 0);
-            //directionalLight.castShadow = true;
-            this.scene.add(directionalLight);
+            this.sun = new THREE.DirectionalLight(0xffffff, 1);
+            this.sun.position.set(2000, 2000, 0);
+            this.scene.add(this.sun);
+            this.scene.add(this.sun.target);
+            this.sunSetup = SYNTHVIEW_SUN;
+            this.hazeSetup = SYNTHVIEW_HAZE;
+            this.shadowSetup = SYNTHVIEW_SHADOWS;
 
             // Add controls for navigation
             this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
@@ -766,9 +818,100 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
 
-        setBackgroundColor(skyColor) {
+        // Sun, haze and cast shadows from synthview.json (sun, haze, shadows), each
+        // falling back to the SYNTHVIEW_* defaults. Haze and shadow distances are
+        // fractions of the terrain window's half width, so they follow the grid.
+        configureLighting(setup) {
+            this.sunSetup = Object.assign({}, SYNTHVIEW_SUN, setup.sun || {});
+            this.hazeSetup = Object.assign({}, SYNTHVIEW_HAZE, setup.haze || {});
+            this.shadowSetup = Object.assign({}, SYNTHVIEW_SHADOWS, setup.shadows || {});
+            this.ambientLight.intensity = this.sunSetup.ambient;
+            this.sun.intensity = this.sunSetup.intensity;
+            const shadows = this.shadowSetup.enabled === true;
+            this.renderer.shadowMap.enabled = shadows;
+            this.renderer.shadowMap.type = THREE.PCFShadowMap;
+            this.sun.castShadow = shadows;
+            if (shadows) {
+                this.sun.shadow.mapSize.set(this.shadowSetup.mapSize, this.shadowSetup.mapSize);
+                this.sun.shadow.bias = -0.0008;
+                this.sun.shadow.normalBias = 20;
+            }
+        }
+
+        // Haze and shadow box sized on the terrain window, called by loadDEM
+        fitToTerrain(width) {
+            const half = width / 2;
+            const haze = this.hazeSetup;
+            this.scene.fog = haze.enabled === true ?
+                new THREE.Fog(new THREE.Color(haze.color.r, haze.color.g, haze.color.b), haze.start * half, haze.end * half) : null;
+            if (this.sun.castShadow) {
+                const box = this.sun.shadow.camera, r = this.shadowSetup.range * half;
+                box.left = -r; box.right = r; box.bottom = -r; box.top = r;
+                box.near = 1; box.far = half * 2;
+                box.updateProjectionMatrix();
+                this.sunDistance = half;
+            }
+        }
+
+        // The sun stays at relativeAzimuth from the heading (front left by default),
+        // elevation degrees up, so the relief is lit the same way on every heading.
+        // It sits over the point the camera looks at, which the shadow box covers.
+        updateSun(heading) {
+            const az = (heading + this.sunSetup.relativeAzimuth) * Math.PI / 180;
+            const el = this.sunSetup.elevation * Math.PI / 180;
+            const target = this.controls.target;
+            const d = this.sunDistance || 30000;
+            this.sun.target.position.copy(target);
+            this.sun.position.set(
+                target.x + d * Math.cos(el) * Math.sin(az),
+                target.y + d * Math.sin(el),
+                target.z - d * Math.cos(el) * Math.cos(az)   // north is -Z
+            );
+        }
+
+        setBackgroundColor(skyColor, groundColor = null) {
             const colorSky = 255 * skyColor.r << 16 | 255 * skyColor.g << 8 | 255 * skyColor.b;
             this.scene.background = new THREE.Color(colorSky); // Sky blue background
+            if (groundColor == null) return;
+            // Sky and ground dome around the camera, as on the attitude indicator:
+            // sky above the eye-level horizon, brown below it. Wherever there is no
+            // terrain (beyond the window edge, seen from altitude) the ground is
+            // brown, not the sky colour. With haze on, sky and ground both fade into
+            // the haze colour at the horizon, where the hazed terrain ends; otherwise
+            // the horizon is hard. Drawn first and without depth, so everything else
+            // covers it.
+            if (this.dome != null) {
+                this.scene.remove(this.dome);
+                this.dome.geometry.dispose();
+                this.dome.material.dispose();
+            }
+            this.dome = new THREE.Mesh(
+                new THREE.SphereGeometry(this.camera.far * 0.5, 32, 16),
+                new THREE.ShaderMaterial({
+                    uniforms: {
+                        sky: { value: new THREE.Vector3(skyColor.r, skyColor.g, skyColor.b) },
+                        ground: { value: new THREE.Vector3(groundColor.r, groundColor.g, groundColor.b) },
+                        haze: { value: new THREE.Vector3(this.hazeSetup.color.r, this.hazeSetup.color.g, this.hazeSetup.color.b) },
+                        hazeOn: { value: this.hazeSetup.enabled === true ? 1.0 : 0.0 }
+                    },
+                    // vUp: the sine of the elevation of the direction drawn
+                    vertexShader: 'varying float vUp; void main() { vUp = normalize(position).y; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+                    fragmentShader: 'uniform vec3 sky; uniform vec3 ground; uniform vec3 haze; uniform float hazeOn; varying float vUp; void main() {' +
+                        ' vec3 c = vUp >= 0.0 ? mix(haze, sky, max(smoothstep(0.0, 0.18, vUp), 1.0 - hazeOn)) : mix(haze, ground, max(smoothstep(0.0, 0.12, -vUp), 1.0 - hazeOn));' +
+                        ' gl_FragColor = vec4(c, 1.0); }',
+                    side: THREE.BackSide,
+                    depthTest: false,
+                    depthWrite: false
+                })
+            );
+            this.dome.renderOrder = -1000;
+            this.dome.frustumCulled = false;
+            // Centred on the camera on every frame: the horizon stays at eye level
+            this.dome.onBeforeRender = (renderer, scene, camera) => {
+                this.dome.position.copy(camera.position);
+                this.dome.updateMatrixWorld();
+            };
+            this.scene.add(this.dome);
         }
 
         attachToContainer(divName) {
@@ -786,38 +929,47 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 if (item.reference != null || item.generating != null) {
                     continue;
                 }
-                items[i].generating = true;
+                item.generating = true;
+                // The model loads asynchronously: the callback works on the item
+                // itself, never on items[i]. With a function scoped i it wrote
+                // every load to the slot past the end of the array, duplicating
+                // items or overwriting traffic pushed meanwhile, which then stayed
+                // in the scene forever with no way to remove it.
                 this.generateItem(item, setup, (itemReady) => {
-                    items[i] = itemReady;
-                    if (items[i].reference != null) {
-                        this.scene.add(items[i].reference.scene);
+                    if (this.disposed || itemReady.removed) {
+                        // Plate left or traffic expired while the model loaded
+                        if (itemReady.reference != null) this.disposeObject(itemReady.reference.scene);
+                        return;
+                    }
+                    if (itemReady.reference != null) {
+                        this.scene.add(itemReady.reference.scene);
                     }
 
                     // Generate Vertical Tube
-                    items[i] = this.generateTubeVertical(itemReady, setup);
-                    if (items[i].referenceTubeVertical != null) {
-                        this.scene.add(items[i].referenceTubeVertical);
+                    this.generateTubeVertical(itemReady, setup);
+                    if (itemReady.referenceTubeVertical != null) {
+                        this.scene.add(itemReady.referenceTubeVertical);
                     }
 
-                    items[i] = this.generateThreshold(itemReady, setup);
-                    if (items[i].referenceThreshold != null) {
-                        this.scene.add(items[i].referenceThreshold);
+                    this.generateThreshold(itemReady, setup);
+                    if (itemReady.referenceThreshold != null) {
+                        this.scene.add(itemReady.referenceThreshold);
                     }
-                    if (items[i].referenceLabel != null) {
-                        this.scene.add(items[i].referenceLabel);
+                    if (itemReady.referenceLabel != null) {
+                        this.scene.add(itemReady.referenceLabel);
                     }
 
                     // TODO: unify the code heading/direction (that shall be "projection")
-                    if (items[i].direction == 0) {
+                    if (itemReady.direction == 0) {
 
                     }
                     else {
 
                         // Generate H Tube
                         if (itemReady.projectionSize > 0) {
-                            items[i] = this.generateTubeProjection(itemReady, setup);
-                            if (items[i].referenceTubeFront != null) {
-                                this.scene.add(items[i].referenceTubeFront);
+                            this.generateTubeProjection(itemReady, setup);
+                            if (itemReady.referenceTubeFront != null) {
+                                this.scene.add(itemReady.referenceTubeFront);
                             }
                         }
                     }
@@ -834,12 +986,37 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 item.elevation,
                 item.y - distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize / FollowMeDistance
             );
+            // The camera sits behind the aircraft at its altitude: on the ground, on
+            // final or climbing out of a valley the terrain behind is higher and the
+            // camera would be inside the hill. Keep it above the ground under it; it
+            // then looks down at the aircraft.
+            const ground = this.groundAt(this.camera.position.x, this.camera.position.z);
+            if (ground != null) {
+                const clearance = resources.setup.cameraClearanceMeters != null ? resources.setup.cameraClearanceMeters : 60;
+                this.camera.position.y = Math.max(this.camera.position.y, ground + clearance);
+            }
             this.controls.target.set(
                 item.x + distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize / FollowMeDistance,
                 item.elevation,
                 item.y + distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize / FollowMeDistance
             );
             this.controls.update();
+        }
+
+        // Terrain height in metres under a scene point, null off the window. The
+        // highest of the four surrounding nodes: the mesh between them is never
+        // above it, so a camera held at this height is never inside the surface.
+        groundAt(x, z) {
+            if (this.terrainBrown == null || this.terrainGrid == null) return null;
+            const grid = this.terrainGrid;
+            const nrows = grid.length, ncols = grid[0].length;
+            const p = this.terrainBrown.geometry.parameters;
+            const col = (x - this.terrainBrown.position.x + p.width / 2) / (p.width / (ncols - 1));
+            const fromNorth = (z - this.terrainBrown.position.z + p.height / 2) / (p.height / (nrows - 1));
+            if (!(col >= 0 && col <= ncols - 1 && fromNorth >= 0 && fromNorth <= nrows - 1)) return null;
+            const c0 = Math.floor(col), c1 = Math.min(c0 + 1, ncols - 1);
+            const r0 = nrows - 1 - Math.floor(fromNorth), r1 = Math.max(r0 - 1, 0);
+            return Math.max(grid[r0][c0], grid[r0][c1], grid[r1][c0], grid[r1][c1]);
         }
 
         generateItem(item, setup = {}, callback = null) {
@@ -1255,6 +1432,61 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             }
         }
 
+        // Frees the GPU buffers of an object and everything under it. Removing
+        // a mesh from the scene alone keeps its buffers alive in the renderer.
+        disposeObject(object) {
+            if (object == null) return;
+            if (object.parent != null) object.parent.remove(object);
+            object.traverse((o) => {
+                if (o.geometry) o.geometry.dispose();
+                if (o.material) {
+                    const materials = Array.isArray(o.material) ? o.material : [o.material];
+                    materials.forEach((m) => {
+                        Object.keys(m).forEach((key) => {
+                            if (m[key] && m[key].isTexture) m[key].dispose();
+                        });
+                        m.dispose();
+                    });
+                }
+            });
+        }
+
+        // An item (traffic, airfield) leaving the scene: model, tubes, threshold
+        // and label. A model still loading is freed by generateItems on arrival.
+        disposeItem(item) {
+            item.removed = true;
+            if (item.reference != null) this.disposeObject(item.reference.scene);
+            this.disposeObject(item.referenceTubeFront);
+            this.disposeObject(item.referenceTubeVertical);
+            this.disposeObject(item.referenceThreshold);
+            this.disposeObject(item.referenceLabel);
+            item.reference = null;
+            item.referenceTubeFront = null;
+            item.referenceTubeVertical = null;
+            item.referenceThreshold = null;
+            item.referenceLabel = null;
+        }
+
+        // Leaving the plate: the next visit builds a new Rendering, so free the
+        // scene, the controls and the WebGL context. Browsers keep only about 16
+        // contexts; the oldest are lost and their memory is held until then.
+        dispose() {
+            if (this.disposed) return;
+            this.disposed = true;
+            this.disposeGuidanceResources();
+            this.disposeDEM();
+            while (this.scene.children.length > 0) {
+                this.disposeObject(this.scene.children[0]);
+            }
+            this.dome = null;
+            this.controls.dispose();
+            this.renderer.dispose();
+            this.renderer.forceContextLoss();
+            if (this.renderer.domElement.parentNode != null) {
+                this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);
+            }
+        }
+
         // Called only when leaving the plate
         disposeGuidanceResources() {
             this.disposeGuidance();
@@ -1322,8 +1554,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
 
-        generateMaterial(terrainElevation, cellSize, altitude, baseColor) {
-
+        // Vertex colours of the terrain for the aircraft altitude
+        generateColors(terrainElevation, altitude) {
             const ncols = terrainElevation[0].length
             const nrows = terrainElevation.length
             const grid = terrainElevation;
@@ -1335,11 +1567,29 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 // Same rule as the map overlay (js/global.js)
                 colors.push(...globalTerrainColor(elevation, altitude))
             }
-            const materialDynamic = new THREE.MeshPhongMaterial({
+            return colors;
+        }
+
+        // Recolour the terrain after an altitude change. The colours are written
+        // into the existing buffer: a new attribute per change left the old GPU
+        // buffer behind, and a new material per change was never used.
+        updateTerrainColors(terrainElevation, altitude) {
+            if (this.terrainBrown == null || terrainElevation == null) return;
+            const colors = this.generateColors(terrainElevation, altitude);
+            const attribute = this.terrainBrown.geometry.attributes.color;
+            if (attribute != null && attribute.array.length == colors.length) {
+                attribute.array.set(colors);
+                attribute.needsUpdate = true;
+            }
+        }
+
+        generateMaterial(terrainElevation, cellSize, altitude, baseColor) {
+            const colors = this.generateColors(terrainElevation, altitude);
+            // Lambert: lit by the sun and shadows, with no specular glare on slopes
+            const materialDynamic = new THREE.MeshLambertMaterial({
                 color: baseColor, // Base color
-                shininess: 50, // Adjust shininess for specular highlights
                 vertexColors: true, // Enable vertex colors
-                side: THREE.DoubleSide, // Make the material visible on both sides
+                side: THREE.FrontSide, // The underside is drawn brown by loadDEM
                 wireframe: false
             });
             return [materialDynamic, colors];
@@ -1355,6 +1605,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 if (o.material) o.material.dispose();
             });
             this.terrainBrown = null;
+            this.terrainGrid = null;
         }
 
         // plan: the window's scene position in cells (TerrainManager.windowPlan)
@@ -1387,7 +1638,20 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.terrainBrown = new THREE.Mesh(geometryBrown, materialBrownColors[0]);
             this.terrainBrown.rotation.x = -Math.PI / 2; // Rotate to lay flat
             this.terrainBrown.position.set(plan[0] * setup.cellSize, 0, plan[1] * setup.cellSize);
+            // Only the terrain casts and receives shadows: the aircraft symbols are
+            // drawn far above true scale and would throw huge shadows
+            this.terrainBrown.castShadow = this.sun.castShadow;
+            this.terrainBrown.receiveShadow = this.sun.castShadow;
             this.scene.add(this.terrainBrown);
+            this.terrainGrid = grid;
+            this.fitToTerrain(ncols * setup.cellSize);
+            // Seen from below, the terrain is solid brown, as on the attitude
+            // indicator, never the sky colour or the top colours mirrored.
+            const under = setup.terrainUndersideColor != null ? setup.terrainUndersideColor : TERRAIN_UNDERSIDE_COLOR;
+            this.terrainBrown.add(new THREE.Mesh(geometryBrown, new THREE.MeshBasicMaterial({
+                color: new THREE.Color(under.r, under.g, under.b),
+                side: THREE.BackSide
+            })));
             // Add Wireframe to improve readability
             var geo = new THREE.EdgesGeometry(this.terrainBrown.geometry); // or WireframeGeometry
             var mat = new THREE.LineBasicMaterial({
@@ -1419,7 +1683,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.remote = remote;
     async function engageContext() {
         const setup = await resources.startup();
-        rendering.setBackgroundColor(setup.skyColor);
+        if (rendering.disposed) return setup;  // plate left during the fetch
+        rendering.configureLighting(setup);
+        rendering.setBackgroundColor(setup.skyColor, setup.terrainUndersideColor != null ? setup.terrainUndersideColor : TERRAIN_UNDERSIDE_COLOR);
         rendering.attachToContainer("synthviewFrame");
         return setup;
     }
@@ -1435,20 +1701,16 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return; // we are getting called once after clicking away from the status page
         }
 
+        // Every expired item goes, not one per tick, and its buffers are freed:
+        // scene.remove() alone kept each model, tube and label on the GPU
         const now = Date.now() - 1000 * 10;
-        for (var i = resources.itemIndexStartingTraffic; i < resources.items.length; i++) {
+        for (var i = resources.items.length - 1; i >= resources.itemIndexStartingTraffic; i--) {
             var currentItem = resources.items[i];
-            if (currentItem.ttl < now) {
-                rendering.scene.remove(currentItem.referenceTubeFront);
-                rendering.scene.remove(currentItem.referenceTubeVertical);
-                if(currentItem.referenceLabel != null)rendering.scene.remove(currentItem.referenceLabel);
-                rendering.scene.remove(currentItem.reference.scene);
-
-                resources.items.splice(i, 1);
-                delete currentItem;
-                break;
-            }
-            else {
+            // Airfields imported after a terrain move sit among the traffic:
+            // they leave with the terrain window, never on a timeout
+            if (currentItem !== undefined && currentItem.airfieldKey == null && currentItem.ttl < now) {
+                rendering.disposeItem(currentItem);
+                resources.removeItem(i);
             }
         }
     }
@@ -1466,7 +1728,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
         for (var i = resources.itemIndexStartingTraffic; i < resources.items.length; i++) {
             var currentItem = resources.items[i];
-            if(currentItem === undefined){
+            // Airfields imported after a terrain move sit among the traffic
+            if(currentItem === undefined || currentItem.airfieldKey != null){
                 continue;
             }
             if (currentItem.name == "" + element.Icao_addr) {
@@ -1530,11 +1793,13 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     var terrainFollowed = null;  // the last window handed to the scene
     function followTerrain(situation) {
         globalLoadTerrainGrid(situation.GPSLatitude, situation.GPSLongitude).then((data) => {
+            if (rendering.disposed) return;
             if (data === terrainFollowed) return;
             terrainFollowed = data;
             if (!TerrainManager.hasCells(data)) return;  // off the grid: keep the terrain we have
             resources.terrain.load(data);
             rendering.loadDEM(data.terrainData, resources.setup, resources.terrain.windowPlan());
+            resources.pruneAirfields((item) => rendering.disposeItem(item));
             resources.importNewAirfields();
             rendering.generateItems(resources.items, resources.setup);
             rendering.buildGuidanceTunnel(resources.route, resources.setup, resources.terrain, resources.setup.elevation);
@@ -1561,6 +1826,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
                 resources.terrain.terrainFetch(situation.GPSLatitude, situation.GPSLongitude).then((terrainElevations) => {
+                    if (rendering.disposed) return;
                     terrainFollowed = terrainElevations;
                     // Automatic zoom based on the Terrain detail
                     // Example of empiric calculion is:
@@ -1577,8 +1843,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
                     resources.fetchAndImportAirFields().then(() => {
+                        if (rendering.disposed) return;
                         rendering.generateItems(setup.items, setup);
-                        resources.itemIndexStartingTraffic = setup.items.length + 1;
+                        resources.itemIndexStartingTraffic = setup.items.length;
                         // Event chain
                         addEventListener("TrafficUpdated", trafficUpdateEventListener);
                         //
@@ -1590,6 +1857,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     // Subscribing here also guarantees the event can never fire before
                     // the terrain exists.
                     resources.fetchRoute().then((route) => {
+                        if (rendering.disposed) return;
                         resources.routeSignature = guidanceRouteSignature(route);
                         rendering.buildGuidanceTunnel(route, setup, resources.terrain, setup.elevation);
                         addEventListener("WaypointChanged", waypointChangedEventListener);
@@ -1609,6 +1877,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
     // Render loop
     function animate() {
+        // A frame or a load requested before leaving the plate
+        if (rendering.disposed) return;
         const item = resources.items[0];
         if (item.reference != null) {
 
@@ -1648,15 +1918,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
         if (resources.setup.elevation > 150 + $scope.situation.GPSAltitudeMSL * 0.3048 || resources.setup.elevation < -150 + $scope.situation.GPSAltitudeMSL * 0.3048) {
             resources.setup.elevation = $scope.situation.GPSAltitudeMSL * 0.3048
-            const material = rendering.generateMaterial(resources.terrain.terrainData, resources.setup.cellSize, resources.setup.elevation, resources.setup.terrainBaseColor);
-
-            if (rendering.terrainBrown != null) {
-                rendering.terrainBrown.geometry.setAttribute('color', new THREE.Float32BufferAttribute(material[1], 3));
-
-            }
+            rendering.updateTerrainColors(resources.terrain.terrainData, resources.setup.elevation);
 
         }
 
+        rendering.updateSun(item.direction || 0);
         rendering.renderer.render(rendering.scene, rendering.camera);
     }
 
