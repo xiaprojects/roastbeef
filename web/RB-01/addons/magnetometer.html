@@ -1,9 +1,8 @@
 <div ui-content-for="title">Magnetometer</div>
-<div class="addonMagSquare">
+<div class="addonMagView">
     <div id="magnetometer3d" class="addonMagCanvas"></div>
 
     <div class="addonMagLabelTopLeft">
-        <div class="addonMagHeading">{{items.heading}}&deg;</div>
         <div>offset {{items.offset}}&deg;</div>
         <div class="addonMagMono">raw&nbsp; {{items.rawX}} {{items.rawY}} {{items.rawZ}}</div>
         <div class="addonMagMono">cal&nbsp; {{items.calX}} {{items.calY}} {{items.calZ}}</div>
@@ -29,6 +28,10 @@
     <!-- Live state next to what stratux.conf holds; tap to close. -->
     <pre ng-if="items.showConfig" class="addonMagConfig" ng-click="toggleConfig()">{{items.config}}</pre>
 
+    <!-- Bottom centre, stacked: heading, then the toolbar, then the hint. -->
+    <div class="addonMagBottom">
+    <div class="addonMagHeading">{{items.heading}}&deg;</div>
+
     <div class="addonMagToolbar">
         <div ng-click="toggleConfig()" data-keypad="tap">
             <div ng-if="items.showConfig" class="label label-primary addonMagButton">CLOSE</div>
@@ -49,5 +52,6 @@
 
     <div class="addonMagLabelBottom">
         {{items.hint}}
+    </div>
     </div>
 </div>

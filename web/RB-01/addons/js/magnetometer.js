@@ -91,7 +91,7 @@ function MagnetometerFieldRenderer(containerId) {
     // Sensor Z up on screen: Three.js is Y-up, so lay the sensor frame down.
     this.scene.rotation.x = -Math.PI / 2;
 
-    this.camera = new THREE.PerspectiveCamera(50, w / h, 0.01, 100);
+    this.camera = new THREE.PerspectiveCamera(MagnetometerFieldRenderer.fovFor(w / h), w / h, 0.01, 100);
     this.camera.position.set(2.6, 2.2, 2.6);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: false });
@@ -138,7 +138,21 @@ function MagnetometerFieldRenderer(containerId) {
     var self = this;
     this.onResize = function () { self.resize(); };
     window.addEventListener('resize', this.onResize);
+    // The plate also changes size without a window resize (bars, sidebar).
+    if (typeof ResizeObserver !== 'undefined') {
+        this.resizeObserver = new ResizeObserver(this.onResize);
+        this.resizeObserver.observe(this.container);
+    }
 }
+
+// fovFor keeps 50 degrees across the shorter side: three.js fixes the vertical
+// field of view, so a portrait plate would cut the sphere at the sides.
+MagnetometerFieldRenderer.fovFor = function (aspect) {
+    if (aspect >= 1) {
+        return 50;
+    }
+    return 2 * Math.atan(Math.tan(25 * Math.PI / 180) / aspect) * 180 / Math.PI;
+};
 
 MagnetometerFieldRenderer.prototype.resize = function () {
     var w = this.container.clientWidth, h = this.container.clientHeight;
@@ -146,6 +160,7 @@ MagnetometerFieldRenderer.prototype.resize = function () {
         return;
     }
     this.camera.aspect = w / h;
+    this.camera.fov = MagnetometerFieldRenderer.fovFor(w / h);
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(w, h);
 };
@@ -224,6 +239,9 @@ MagnetometerFieldRenderer.prototype.start = function () {
 MagnetometerFieldRenderer.prototype.dispose = function () {
     this.running = false;
     window.removeEventListener('resize', this.onResize);
+    if (this.resizeObserver) {
+        this.resizeObserver.disconnect();
+    }
     this.controls.dispose();
     this.trailGeometry.dispose();
     this.envelope.geometry.dispose();
