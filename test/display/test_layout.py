@@ -22,7 +22,7 @@ GEOMETRIES = [
 PLATES = ["home", "synthview", "hsi", "attitude", "sixpack", "speed",
           "altimeter", "variometer", "turnslip", "heading", "gmetergauge",
           "autopilot", "airfields", "timers", "ems", "emsegt", "radio",
-          "checklist", "switchboard", "map", "radar", "alerts", "resources",
+          "checklist", "switchboard", "addons", "map", "radar", "alerts", "resources",
           "aircraft", "charts"]
 
 READY = {"synthview": "#synthviewFrame", "hsi": "#hsi",

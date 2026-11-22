@@ -90,6 +90,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $controllerProvider) {
 			controller: 'OtaCtrl',
 			reloadOnSearch: false
 		})		
+		.state('addons', {
+			url: '/addons',
+			templateUrl: 'plates/addons.html',
+			controller: 'AddonsCtrl',
+			reloadOnSearch: false
+		})
 		.state('charts', {
 			url: '/charts',
 			templateUrl: 'plates/charts.html',
@@ -406,7 +412,7 @@ app.controller('MainCtrl', function ($scope, $http, $state, $timeout) {
 		{ level: "root", slot: 1, pages: [{ label: "SIXPACK", href: "#/sixpack" }, { label: "3D", href: "#/synthview" }], value: "qnh" },
 		{ level: "root", slot: 2, pages: [{ label: "MAP", href: "#/map" }, { label: "AUTOPILOT", href: "#/autopilot" }], value: "eta" },
 		{ level: "root", slot: 3, label: "TIMERS", href: "#/timers", value: "timer" },
-		{ level: "root", slot: 4, label: "SWITCH", href: "#/switchboard", value: "cpu" },
+		{ level: "root", slot: 4, pages: [{ label: "SWITCH", href: "#/switchboard" }, { label: "ADDONS", href: "#/addons" }], value: "cpu" },
 		{ level: "root", slot: 5, pages: [{ label: "EMS", href: "#/ems" }, { label: "EGT", href: "#/emsegt" }], value: "battery" },
 		{ level: "root", slot: 6, label: "MENU", action: "menu" },
 		{ level: "menu", slot: 1, label: "LEFT PNL", action: "leftPanel" },

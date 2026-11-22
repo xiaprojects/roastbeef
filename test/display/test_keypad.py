@@ -18,7 +18,7 @@ KEYS = ["KEYPAD_MAPPING_PREV", "KEYPAD_MAPPING_NEXT", "KEYPAD_MAPPING_TAP",
 # Screens whose controllers listen for the keypad event
 LISTENERS = [
     ("synthview", "#synthviewFrame"), ("hsi", "#hsi"), ("airfields", None),
-    ("timers", None), ("switchboard", None), ("checklist", None),
+    ("timers", None), ("switchboard", None), ("addons", None), ("checklist", None),
     ("aircraft", None), ("autopilot", None), ("radio", None),
     ("attitude", "#attitude-rollpitch"), ("sixpack", None), ("camera", None),
 ]

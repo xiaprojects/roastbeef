@@ -113,7 +113,7 @@ Six keys of equal width, then a narrow hide key. The whole cell is the touch tar
 | 1 | `SIXPACK` → `#/sixpack`, `3D` → `#/synthview` (cycle); reading: QNH | `LEFT PNL` toggle, lamp when open |
 | 2 | `MAP` → `#/map`, `AUTOPILOT` → `#/autopilot` (cycle); reading: ETA | `RIGHT PNL` toggle, lamp when open |
 | 3 | `TIMERS` → `#/timers`; reading: first running timer | `TOP BAR` toggle, lamp when shown |
-| 4 | `SWITCH` → `#/switchboard`; reading: CPU load | `FULL SCR` toggle |
+| 4 | `SWITCH` → `#/switchboard`, `ADDONS` → `#/addons` (cycle); reading: CPU load | `FULL SCR` toggle |
 | 5 | `EMS` → `#/ems`, `EGT` → `#/emsegt` (cycle); reading: battery | `ALERTS` → `#/alerts` |
 | 6 | `MENU` | `BACK` |
 | end | `▾` hide the bottom bar | same |

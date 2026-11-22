@@ -25,11 +25,13 @@ from plates import Display, Result
 KT_TO_KMH = 1.852
 ROOT = ["SIXPACK", "MAP", "TIMERS", "SWITCH", "EMS", "MENU"]
 MENU = ["LEFT PNL", "RIGHT PNL", "TOP BAR", "FULL SCR", "ALERTS", "BACK"]
-# The page each root key opens first; slots 1 and 2 then cycle through CYCLES
+# The page each root key opens first; slots 1, 2 and 5 then cycle through CYCLES, slot 4
+# through SWITCH_CYCLE (checked on its own: the other checks use slot 4 to leave a page)
 PAGES = {1: "#/sixpack", 2: "#/map", 3: "#/timers", 4: "#/switchboard", 5: "#/ems"}
 CYCLES = {1: [("SIXPACK", "#/sixpack"), ("3D", "#/synthview")],
           2: [("MAP", "#/map"), ("AUTOPILOT", "#/autopilot")],
           5: [("EMS", "#/ems"), ("EGT", "#/emsegt")]}
+SWITCH_CYCLE = [("SWITCH", "#/switchboard"), ("ADDONS", "#/addons")]
 MENU_SECONDS = 10
 # Event types of web/settings/alertsMapping.json and the severity the balloon gives them
 TIMER, EMS_YELLOW, EMS_RED = 2, 14, 15
@@ -377,6 +379,22 @@ def check_cycles(res, d):
         # Back to the first page for the checks that follow
         press(d, slot)
         d.page.wait("location.hash.split('?')[0] == %r" % cycle[0][1], timeout=10, label="first page")
+
+
+def check_switch_cycle(res, d):
+    """Slot 4 opens the switchboard, then cycles to the addons list and back."""
+    press(d, 3)
+    d.page.wait("location.hash.split('?')[0] == '#/timers'", timeout=10, label="timers")
+    steps = []
+    for label, href in SWITCH_CYCLE + SWITCH_CYCLE[:1]:
+        press(d, 4)
+        d.page.wait("location.hash.split('?')[0] == %r" % href, timeout=10, label="page %s" % href)
+        d.page.pump(0.3)
+        steps.append((page(d), labels(d)[3], lit(d, 4)))
+    want = [(href, label, True) for label, href in SWITCH_CYCLE + SWITCH_CYCLE[:1]]
+    res.check(steps == want, "slot 4 cycles SWITCH > ADDONS", steps)
+    stored = d.page.eval("localStorage.getItem('softKeyPage_root_4')")
+    res.check(stored == "0", "slot 4 is left on SWITCH for the checks that follow", stored)
 
 
 def check_key_values(res, d):
@@ -845,6 +863,7 @@ def run_wide(res):
         d.show("attitude", "#attitude-rollpitch", timeout=20)
         check_root_keys(res, d)
         check_cycles(res, d)
+        check_switch_cycle(res, d)
         check_key_values(res, d)
         check_toggles(res, d)
         check_softkey_event(res, d)

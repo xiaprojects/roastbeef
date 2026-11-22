@@ -87,21 +87,8 @@ function OtaCtrl($rootScope, $scope, $state, $http, $interval) {
                  return;
             }
     }
-    // Addons Module Navigation
-    $scope.addons = [];
-    $http.get(URL_ADDONS).then(function (response) {
-        var db = angular.fromJson(response.data);
-        if (db === undefined) {
-            return;
-        }
-        $scope.addons = db;
-    });
-
-    $scope.goTo = function(item) {
-        if(item.hasOwnProperty("hash") == true) {
-            document.location = "#" + item.hash;
-        }
-    }
+    // Addons Module Navigation, shared with the addons page: plates/js/addons.js
+    addonsListLoad($scope, $http);
 
     // The knob: each addon row, TAP opens it as START does. INSTALL and UPDATE are not stops:
     // touch runs them with no confirmation, and a stray press must not start an install. Open

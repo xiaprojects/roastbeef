@@ -1,0 +1,36 @@
+<div ui-content-for="title">Addons</div>
+<div class="col-xs-12" style="overflow: hidden;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center;">
+                Addons
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <table style="width:100%;margin: 0px;padding:0px;">
+                    <tr
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Addon
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            Actions
+                        </td>
+                    </tr>                    
+                    <tr ng-repeat="item in addons"
+                        ng-click="goTo(item)" data-keypad="tap" data-keypad-name="{{item.name}}"
+                        style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            {{item.name}}
+                        </td>
+                        <td
+                            style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
+                            <button class="btn-success">START</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
