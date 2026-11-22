@@ -3,8 +3,8 @@
         "KEYPAD_MAPPING_PREV": ["1","MediaTrackNext","ArrowLeft","ArrowUp","MediaFastForward"],
         "KEYPAD_MAPPING_TAP": ["2","Enter","ENTER","BrowserHome","AudioVolumeMute"],
         "KEYPAD_MAPPING_NEXT": ["3","MediaTrackPrevious","ArrowRight","ArrowDown","MediaRewind"],
-        "SwipeLeft": ["AudioVolumeUp","DOM_CLICK_W","a"],
-        "SwipeRight": ["AudioVolumeDown","DOM_CLICK_E","b"],
+        "SwipeLeft": ["AudioVolumeUp","DOM_CLICK_W","a","PageUp"],
+        "SwipeRight": ["AudioVolumeDown","DOM_CLICK_E","b","PageDown"],
         "directKeyPortrait":
         {
             "ems": {
