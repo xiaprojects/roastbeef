@@ -11,7 +11,7 @@ Stratux exposes a set of HTTP JSON endpoints and WebSocket streams accessible on
 #### `GET /getStatus`
 Returns the current Stratux system status as JSON, including software version, connected devices, message counts, GPS status, CPU temperature, and error list.
 
-Example fields: `Version`, `GPS_connected`, `GPS_satellites_locked`, `UAT_messages_last_minute`, `ES_messages_last_minute`, `CPUTemp`, `Errors`
+Example fields: `Version`, `GPS_connected`, `GPS_satellites_locked`, `UAT_messages_last_minute`, `ES_messages_last_minute`, `CPUTemp`, `Errors`, `FLARM_In_connected` (FLARM serial-in port open), `FLARM_In_receiving` (valid `$PFLAU`/`$PFLAA` in the last 10 s), `FLARM_In_targets` (aircraft the FLARM reports receiving, `$PFLAU` RX from the FLARM serial-in or GPS port; 0 after 10 s without one)
 
 Also carries the GPS Hobbs meter (`main/hobbsmeter.go`): `HobbsTimeMinutes` (the whole flight log, flight in progress included) and `HobbsFlightMinutes` (the flight in progress, 0 on the ground). Both are live; the RB-01 Aircraft plate adds `HobbsTimeMinutes` to the `propellerTime` / `engineTime` base values of `settings/aircraft.json`.
 

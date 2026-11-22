@@ -74,7 +74,8 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         "CPUTemp":{ "section": 1, "row": 1 },
         "ES_messages_last_minute":{ "section": 1, "row": 9 },
         "EMS":{ "section": 0, "row": 8 },
-        "Cloud":{ "section": 1, "row": 8 },
+        "Cloud":{ "section": 1, "row": 6 },
+        "FLARM":{ "section": 1, "row": 8 },
         "GPS_satellites_locked":{ "section": 1, "row": 11 },
         "RADIO":{ "section": 1, "row": 10 },
         "CHECKLIST":{ "section": 0, "row": 11 }
@@ -87,7 +88,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         "fuel1":          { "section": 0, "row": 2,  "decimals": 0, "zeroIsAlarm": true },
         "fuel2":          { "section": 1, "row": 2,  "decimals": 0, "zeroIsAlarm": true },
         "flaps":          { "section": 0, "row": 6,  "decimals": 0, "zeroIsAlarm": false },
-        "trim":           { "section": 1, "row": 6,  "decimals": 0, "zeroIsAlarm": false },
+        "trim":           { "section": 0, "row": 7,  "decimals": 0, "zeroIsAlarm": false },
         "alternatorout":  { "section": 0, "row": 9,  "decimals": 1, "zeroIsAlarm": true },
         "batteryvoltage": { "section": 0, "row": 10, "decimals": 1, "zeroIsAlarm": true }
     };
@@ -105,7 +106,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "Flaps", "value": "0%", "color": "#007c00", "href":"#/switchboard","unit":"%" },
-        { "label": "", "value": "", "color": "#00000000","unit":"" },
+        { "label": "Trim", "value": "--", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
 
         { "label": "EMS", "value": "KO", "color": "#ff0000", "href":"#/ems","unit":"" },
         { "label": "VP-X", "value": "--.- V", "color": "#ff7c00", "href":"#/switchboard","unit":"V" },
@@ -118,11 +119,11 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         { "label": "", "value": null, "color": "transparent","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },
-        { "label": "Trim", "value": "--", "color": "#ff7c00", "href":"#/switchboard","unit":"" },
+        { "label": "Cloud", "value": "OFFLINE", "color": "#ff0000","unit":"" },
         { "label": "Update", "value": "OFFLINE", "color": "#7c7c7c", "href":"#/ota","unit":"" },
 
 
-        { "label": "Cloud", "value": "OFFLINE", "color": "#ff0000","unit":"" },
+        { "label": "FLARM", "value": "KO", "color": "#ff0000", "href":"#/radar","unit":"" },
         { "label": "ADS-B", "value": "OFF", "color": "#7c7c7c", "href":"#/radar","unit":""  },
         { "label": "RADIO", "value": "---", "color": "#7c7c7c", "href":"#/radio","unit":"" },
         { "label": "GPS", "value": "---", "color": "#007c00","unit":""  },
@@ -164,6 +165,7 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
     $scope.status = {};
     $scope.updateStatus = (status) => {
         var requiredRefresh = $scope.applyNewData(status);
+        requiredRefresh += $scope.applyFlarmTile(status);
         // Hobbs meter (main/hobbsmeter.go): minutes flown above 50 km/h, added to the
         // base values the pilot set in aircraft.json.
         const hobbs = Number(status.HobbsTimeMinutes) || 0;
@@ -176,6 +178,28 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
         $scope.$apply(); // trigger any needed refreshing of data
         }
     };
+
+    // FLARM serial-in (main/gps.go flarmSerialReader): red when the device is not
+    // connected or silent for 10 s, amber when it hears nobody, green with the count
+    // of aircraft it reports receiving ($PFLAU RX).
+    $scope.applyFlarmTile = function (status) {
+        const key = "FLARM";
+        const item = $scope.items[$scope.mappingData[key].section][$scope.mappingData[key].row];
+        const prevValue = item.value;
+        const prevColor = item.color;
+        const targets = Number(status.FLARM_In_targets) || 0;
+        if (!status.FLARM_In_connected || !status.FLARM_In_receiving) {
+            item.value = "KO";
+            item.color = "#ff0000";
+        } else if (targets == 0) {
+            item.value = "0";
+            item.color = "#ff7c00";
+        } else {
+            item.value = String(targets);
+            item.color = "#007c00";
+        }
+        return (prevValue != item.value || prevColor != item.color) ? 1 : 0;
+    }
     // ************
     function statusUpdateEventListener(event) {
         if (($scope === undefined) || ($scope === null) || $state.current.controller != "AircraftCtrl") {

@@ -178,6 +178,15 @@ var serialPort *serial.Port
 // Dedicated serial port for an external FLARM traffic receiver (parallel to the GPS reader).
 var flarmSerialPort *serial.Port
 
+// Last valid $PFLAU/$PFLAA from flarmSerialPort, for FLARM_In_receiving.
+var flarmInLastSentence time.Time
+
+// Last $PFLAU with a valid <RX> from any FLARM source, for FLARM_In_targets.
+var flarmTargetsLastPFLAU time.Time
+
+// FLARM serial-in is "silent" (red tile) after this long without a valid sentence.
+const flarmInSilenceTimeout = 10 * time.Second
+
 var readyToInitGPS bool //TODO: replace with channel control to terminate goroutine when complete
 
 var Satellites map[string]SatelliteInfo
@@ -2348,6 +2357,7 @@ func flarmSerialReader() {
 	defer func() {
 		flarmSerialPort.Close()
 		globalStatus.FLARM_In_connected = false
+		globalStatus.FLARM_In_receiving = false
 	}()
 
 	scanner := bufio.NewScanner(flarmSerialPort)
@@ -2365,6 +2375,8 @@ func flarmSerialReader() {
 			}
 			x := strings.Split(l_valid, ",")
 			if x[0] == "PFLAU" || x[0] == "PFLAA" {
+				flarmInLastSentence = stratuxClock.Time
+				globalStatus.FLARM_In_receiving = true
 				// parseFlarmPFLAA/PFLAU read mySituation ownship position to resolve the
 				// relative FLARM geometry into absolute lat/lng. The GPS reader calls the
 				// same function while holding muGPS (see processNMEALineLow), so take the
@@ -2387,6 +2399,15 @@ func flarmSerialManager() {
 	timer := time.NewTicker(4 * time.Second)
 	for {
 		<-timer.C
+		if globalStatus.FLARM_In_connected && globalStatus.FLARM_In_receiving &&
+			stratuxClock.Since(flarmInLastSentence) > flarmInSilenceTimeout {
+			globalStatus.FLARM_In_receiving = false
+		}
+		// FLARM_In_targets is fed by every FLARM source, so it ages out on its own.
+		if globalStatus.FLARM_In_targets != 0 &&
+			stratuxClock.Since(flarmTargetsLastPFLAU) > flarmInSilenceTimeout {
+			globalStatus.FLARM_In_targets = 0
+		}
 		if globalSettings.FlarmSerialInDevice != "" && !globalStatus.FLARM_In_connected {
 			if initFlarmSerial() {
 				globalStatus.FLARM_In_connected = true

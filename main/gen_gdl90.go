@@ -1341,6 +1341,8 @@ type status struct {
 	GPS_position_accuracy                      float32
 	GPS_connected                              bool
 	FLARM_In_connected                         bool // dedicated FLARM traffic serial-in device connected
+	FLARM_In_receiving                         bool   // a valid $PFLAU/$PFLAA arrived from the FLARM serial-in device in the last 10 s
+	FLARM_In_targets                           uint16 // aircraft the FLARM reports receiving ($PFLAU <RX>, serial-in or GPS port; 0 after 10 s without it)
 	GPS_solution                               string
 	GPS_detected_type                          uint
 	GPS_NetworkRemoteIp                        string // for NMEA via TCP from OGN tracker: display remote IP to configure the OGN tracker

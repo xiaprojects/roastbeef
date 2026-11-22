@@ -513,3 +513,25 @@ func TestFlarmInputMalformedIsDiscarded(t *testing.T) {
 		}
 	}
 }
+
+// FLARM_In_targets follows the <RX> field of every $PFLAU, whichever port it came from
+// and whether or not it carries a traffic ID; a non-numeric RX leaves it unchanged.
+func TestFlarmInputTargetsFromPFLAURX(t *testing.T) {
+	withTrafficState(t)
+	ownshipAt(43, 12, 3000)
+	saved := globalStatus.FLARM_In_targets
+	t.Cleanup(func() { globalStatus.FLARM_In_targets = saved })
+
+	flarmIn(t, "PFLAU,3,1,2,1,0,,0,,")
+	if globalStatus.FLARM_In_targets != 3 {
+		t.Errorf("PFLAU without traffic: targets %d, want 3", globalStatus.FLARM_In_targets)
+	}
+	flarmIn(t, "PFLAU,5,1,2,1,2,30,2,61,2000,4B1A2C")
+	if globalStatus.FLARM_In_targets != 5 {
+		t.Errorf("PFLAU with traffic: targets %d, want 5", globalStatus.FLARM_In_targets)
+	}
+	flarmIn(t, "PFLAU,x,1,2,1,0,,0,,")
+	if globalStatus.FLARM_In_targets != 5 {
+		t.Errorf("bad RX: targets %d, want 5 unchanged", globalStatus.FLARM_In_targets)
+	}
+}

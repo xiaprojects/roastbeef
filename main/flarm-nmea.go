@@ -518,6 +518,14 @@ func getIdTail(idReceived string) (idStr string, tail string, address uint32) {
 
 func parseFlarmPFLAU(message []string) {
 	// $PFLAU,<RX>,<TX>,<GPS>,<Power>,<AlarmLevel>,<RelativeBearing>,<AlarmType>,<RelativeVertical>,<RelativeDistance>,<ID>
+	// <RX>: devices the FLARM receives, from any FLARM source (serial-in or GPS port).
+	// Read before the ID check: a PFLAU without traffic still reports RX.
+	if len(message) > 1 {
+		if rx, err := strconv.Atoi(message[1]); err == nil && rx >= 0 {
+			globalStatus.FLARM_In_targets = uint16(rx)
+			flarmTargetsLastPFLAU = stratuxClock.Time
+		}
+	}
 	if len(message) < 11 {
 		// PFLAU without ID is valid FLARM
 		// log.Printf("Discarding invalid NMEA: " + strings.Join(message, ","))

@@ -72,6 +72,7 @@ BOOL_COLUMNS = {
     "BearingDist_valid", "IsStratux",
     "OGN_connected", "APRS_connected", "AIS_connected", "Ping_connected",
     "Pong_connected", "UATRadio_connected", "GPS_connected", "FLARM_In_connected",
+    "FLARM_In_receiving",
     "BMPConnected", "IMUConnected", "NightMode", "OGN_tx_enabled",
     "Calibrating",
 }
