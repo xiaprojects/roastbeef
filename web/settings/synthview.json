@@ -28,6 +28,33 @@
         "g": 0.8,
         "b": 0.91
     },
+    "terrainUndersideColor": {
+        "r": 0.36,
+        "g": 0.25,
+        "b": 0.16
+    },
+    "cameraClearanceMeters": 60,
+    "haze": {
+        "enabled": true,
+        "color": {
+            "r": 0.79,
+            "g": 0.86,
+            "b": 0.9
+        },
+        "start": 0.2,
+        "end": 0.77
+    },
+    "sun": {
+        "relativeAzimuth": 315,
+        "elevation": 15,
+        "intensity": 0.9,
+        "ambient": 0.6
+    },
+    "shadows": {
+        "enabled": true,
+        "mapSize": 1024,
+        "range": 0.4
+    },
     "guidance": {
         "enabled": true,
         "color": 16711935,
