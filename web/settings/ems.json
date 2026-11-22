@@ -13,13 +13,13 @@
 			"backgroundColor": "#000000",
 			"startSpeedDegree": 225,
 			"minSpeed": 30,
-			"maxSpeed": 165,
+			"maxSpeed": 130,
 			"speedDegree": "45deg",
 			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 75, "backgroundColor": "#00aa00" },
-				{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "45deg", "threshold": 120, "backgroundColor": "#aaaa00" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "75deg", "threshold": 135, "backgroundColor": "#aa0000" }
+				{ "color": "#ffffff", "sizeDegree": "21deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "180deg", "startDegree": "246deg", "threshold": 37.8, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "37.5deg", "startDegree": "66deg", "threshold": 104.4, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "31.5deg", "startDegree": "103.5deg", "threshold": 118.3, "backgroundColor": "#aa0000" }
 			],
 			"speedTicks": []
 		},
@@ -102,13 +102,13 @@
 			"backgroundColor": "#000000",
 			"startSpeedDegree": 225,
 			"minSpeed": 30,
-			"maxSpeed": 165,
+			"maxSpeed": 130,
 			"speedDegree": "45deg",
 			"arcs": [
-				{ "color": "#ffffff", "sizeDegree": "90deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
-				{ "color": "#00ff00", "sizeDegree": "90deg", "startDegree": "315deg", "threshold": 75, "backgroundColor": "#00aa00" },
-				{ "color": "#ffff00", "sizeDegree": "30deg", "startDegree": "45deg", "threshold": 120, "backgroundColor": "#aaaa00" },
-				{ "color": "#ff0000", "sizeDegree": "15deg", "startDegree": "75deg", "threshold": 135, "backgroundColor": "#aa0000" }
+				{ "color": "#ffffff", "sizeDegree": "21deg", "startDegree": "225deg", "threshold": 0, "backgroundColor": "#333333" },
+				{ "color": "#00ff00", "sizeDegree": "180deg", "startDegree": "246deg", "threshold": 37.8, "backgroundColor": "#00aa00" },
+				{ "color": "#ffff00", "sizeDegree": "37.5deg", "startDegree": "66deg", "threshold": 104.4, "backgroundColor": "#aaaa00" },
+				{ "color": "#ff0000", "sizeDegree": "31.5deg", "startDegree": "103.5deg", "threshold": 118.3, "backgroundColor": "#aa0000" }
 			],
 			"speedTicks": []
 		},

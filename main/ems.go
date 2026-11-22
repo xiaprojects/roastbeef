@@ -46,6 +46,9 @@ import (
 type EMSStratuxPlugin struct {
 	StratuxPlugin
 	emsData map[string]float32
+	// Keys an EMS sender has really posted. emsData is pre-filled with zeros for the NMEA
+	// sentences and the pages, and a rule must not read a zero no sensor sent.
+	emsReceived map[string]bool
 	// Added Max
 	emsDataMax       map[string]float32
 	emsDataMin       map[string]float32
@@ -80,6 +83,14 @@ type EMSRule struct {
 	Algorithm  string         `json:"algorithm"`
 	ProbeNames []string       `json:"probeNames"`
 	Colors     []EMSRuleColor `json:"colors"`
+	// Alert false keeps the rule for rbvoice answers only, for a rule that would repeat
+	// the alert of another (an average next to the max of the same probes). Missing is true.
+	Alert *bool `json:"alert,omitempty"`
+}
+
+// raisesAlerts tells if the rule raises alerts: every rule does, unless "alert" is false.
+func (rule EMSRule) raisesAlerts() bool {
+	return rule.Alert == nil || *rule.Alert
 }
 
 type EMSRules struct {
@@ -101,6 +112,7 @@ func (emsInstance *EMSStratuxPlugin) InitFunc() bool {
 	log.Println("EMS Driver: ", emsInstance.Name)
 	emsInstance.emsDataMutex = &sync.Mutex{}
 	emsInstance.emsData = make(map[string]float32)
+	emsInstance.emsReceived = make(map[string]bool)
 	emsInstance.emsDataMin = make(map[string]float32)
 	emsInstance.emsDataMax = make(map[string]float32)
 
@@ -191,12 +203,20 @@ func (emsInstance *EMSStratuxPlugin) loadRules(path string) bool {
 	return true
 }
 
-// ruleValue applies the rule algorithm to the probes available in data.
+// markReceived records that an EMS sender posted key. Call it with emsDataMutex held.
+func (emsInstance *EMSStratuxPlugin) markReceived(key string) {
+	if emsInstance.emsReceived == nil {
+		emsInstance.emsReceived = make(map[string]bool)
+	}
+	emsInstance.emsReceived[key] = true
+}
+
+// ruleValue applies the rule algorithm to the probes of data that a sender posted.
 // ok is false when none of the probes has been received.
-func ruleValue(rule EMSRule, data map[string]float32) (value float32, ok bool) {
+func ruleValue(rule EMSRule, data map[string]float32, received map[string]bool) (value float32, ok bool) {
 	var values []float32
 	for _, probe := range rule.ProbeNames {
-		if v, found := data[probe]; found {
+		if v, found := data[probe]; found && received[probe] {
 			values = append(values, v)
 		}
 	}
@@ -242,6 +262,7 @@ func ruleColor(rule EMSRule, value float32) string {
 // A rule entering yellow or red raises an alert, and while it stays in that color the alert is
 // updated, which moves its end. Leaving the color closes the alert, and green raises nothing.
 // A value outside every band neither confirms nor clears.
+// A rule with "alert": false is left to rbvoice and skipped here.
 // The same alert is not raised again within EMS_RULE_ALERT_INTERVAL: it is reopened with the same
 // Id, nothing is sent to the display and the display decides if to replay the alarm from Active.
 // It takes emsDataMutex itself, do not call it with the mutex held. The alerts are pushed with the
@@ -251,7 +272,10 @@ func (emsInstance *EMSStratuxPlugin) validateRules() {
 	defer emsInstance.emsDataMutex.Unlock()
 	emsInstance.lastFrame = time.Now()
 	for _, rule := range emsInstance.rules {
-		value, ok := ruleValue(rule, emsInstance.emsData)
+		if !rule.raisesAlerts() {
+			continue
+		}
+		value, ok := ruleValue(rule, emsInstance.emsData, emsInstance.emsReceived)
 		if !ok {
 			continue
 		}

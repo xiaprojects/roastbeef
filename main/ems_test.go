@@ -24,16 +24,62 @@ func testRule(algorithm string, probes ...string) EMSRule {
 
 func TestRuleAlgorithms(t *testing.T) {
 	data := map[string]float32{"a": 600, "b": 700, "c": 800}
+	received := map[string]bool{"a": true, "b": true, "c": true}
 	for algorithm, want := range map[string]float32{"average": 700, "max": 800, "min": 600, "averageDiff": 100} {
-		if got, ok := ruleValue(testRule(algorithm, "a", "b", "c"), data); !ok || got != want {
+		if got, ok := ruleValue(testRule(algorithm, "a", "b", "c"), data, received); !ok || got != want {
 			t.Errorf("%s = %v (%v), want %v", algorithm, got, ok, want)
 		}
 	}
-	if got, ok := ruleValue(testRule("average", "a", "x"), data); !ok || got != 600 {
+	if got, ok := ruleValue(testRule("average", "a", "x"), data, received); !ok || got != 600 {
 		t.Errorf("a missing probe must be skipped, got %v (%v)", got, ok)
 	}
-	if _, ok := ruleValue(testRule("average", "x"), data); ok {
+	if _, ok := ruleValue(testRule("average", "x"), data, received); ok {
 		t.Error("a rule with no received probe must be skipped")
+	}
+}
+
+// emsData starts with a zero for every known sensor. A probe no sender has posted yet must
+// not count as 0: with the engine already running when the daemon starts, the EGT that
+// reports last turned the spread red (flight logs of 2026-11-14 and 2026-11-20).
+func TestAPreFilledZeroIsNotAReading(t *testing.T) {
+	data := map[string]float32{"a": 600, "b": 640, "c": 0}
+	received := map[string]bool{"a": true, "b": true}
+	if got, ok := ruleValue(testRule("averageDiff", "a", "b", "c"), data, received); !ok || got != 20 {
+		t.Errorf("averageDiff = %v (%v), want 20 from a and b only", got, ok)
+	}
+	if _, ok := ruleValue(testRule("max", "c"), data, received); ok {
+		t.Error("a rule whose only probe was never posted must be skipped")
+	}
+}
+
+// Only a POST to /setEMS makes a probe count for the rules.
+func TestAPostedProbeCountsForTheRules(t *testing.T) {
+	withEMS(t)
+	ems.emsData["c"] = 0
+	ems.rules = []EMSRule{testRule("averageDiff", "a", "c")}
+	ems.rules[0].Colors = []EMSRuleColor{{"green", 0, 50}, {"red", 50, 9999}}
+	emsFrame()
+	if got := queued(); len(got) != 0 {
+		t.Fatalf("the pre-filled zero of c raised %v", got)
+	}
+	postEMS(t, `{"c":0}`)
+	if got := queued(); len(got) != 1 || got[0].Type != EVENT_TYPE_EMS_RULE_RED {
+		t.Errorf("c posted at 0 against a at 600, want one red alert: %+v", got)
+	}
+}
+
+// A rule with "alert": false raises nothing: it only answers rbvoice, next to the max rule
+// that already alerts on the same probes.
+func TestARuleWithAlertFalseRaisesNothing(t *testing.T) {
+	withEMS(t)
+	off := false
+	ems.rules[0].Alert = &off
+	emsFrame(800)
+	if got := queued(); len(got) != 0 {
+		t.Errorf("a rule with alert false raised %v", got)
+	}
+	if ems.ruleInAlarm() {
+		t.Error("a rule with alert false counts as in alarm")
 	}
 }
 
@@ -53,6 +99,7 @@ func TestARuleColorChangeRaisesAnAlertOnce(t *testing.T) {
 	ems = EMSStratuxPlugin{
 		emsDataMutex:   &sync.Mutex{},
 		emsData:        map[string]float32{"a": 600},
+		emsReceived:    map[string]bool{"a": true},
 		ruleColors:     map[string]string{},
 		ruleAlertTimes: map[string]time.Time{},
 		ruleAlertIds:   map[string]int{},
@@ -93,6 +140,7 @@ func withEMS(t *testing.T) {
 	ems = EMSStratuxPlugin{
 		emsDataMutex:   &sync.Mutex{},
 		emsData:        map[string]float32{"a": 600, "b": 600},
+		emsReceived:    map[string]bool{"a": true, "b": true},
 		emsDataMin:     map[string]float32{},
 		emsDataMax:     map[string]float32{},
 		ruleColors:     map[string]string{},

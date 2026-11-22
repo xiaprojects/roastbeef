@@ -1829,6 +1829,7 @@ func handleEMSSetRequest(w http.ResponseWriter, r *http.Request) {
 					//ival,err2 := strconv.Atoi(val)					
 					//if(err2==nil){
 						ems.emsDataMutex.Lock()
+					ems.markReceived(key)
 
 					prevValue, hasExistingValue := ems.emsData[key]
 					if hasExistingValue {
