@@ -101,6 +101,10 @@ Progress (2026-11-17, display tests only, uncommitted):
     (touch too); the old Chart.js chart is destroyed first. `test_keypad_charts.py`.
   - `ota`: each addon row, TAP opens it. INSTALL and UPDATE are not stops (open question below).
     `test_keypad_ota.py`.
+  - `addons` (2026-11-22): the addon list of `ota` on its own page, after `switchboard` in every
+    navigation list and on bottom bar slot 4 as the alternative to SWITCH. Each row a stop, TAP
+    opens it. The list code is shared: `addonsListLoad` in `plates/js/addons.js`.
+    `test_keypad_addons.py`.
   - addon `settings`: no stops, and the keypad is off on the page (F10, owner, 2026-11-19): the
     controller calls `$scope.keypadDisable($scope)`. `test_keypad_settings.py` types into its
     fields, then checks keys from both paths do nothing and a touch swipe still leaves.
@@ -229,6 +233,7 @@ L = Landscape, P = Portrait). It matters because of finding F1.
 | 26 | `#/radar` | `plates/radar.html` | `RadarCtrl` | S L P | none in the template |
 | 27 | `#/resources` | `plates/resources.html` | `ResourcesCtrl` | S L P | thumbnail = zoom, zoom = back |
 | 28 | `#/ota` | `plates/ota.html` | `OtaCtrl` | none | tiles, INSTALL / UPDATE |
+| 28a | `#/addons` | `plates/addons.html` | `AddonsCtrl` | S L P | addon row = open it (START) |
 | 29 | `#/addons/settings` | `addons/settings.html` | from `/addons` | none | 19 buttons, 51 inputs |
 | 30 | `#/addons/vor` | `addons/vor.html` | from `/addons` | none | TO/FROM, LOC/GS select, search, station rows |
 | 31 | `#/addons/magnetometer` | `addons/magnetometer.html` | from `/addons` | none | 7 toggles and actions |
