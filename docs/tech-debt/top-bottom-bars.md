@@ -49,8 +49,8 @@ keys along the bottom edge.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
-│ IAS KMH ALT ft UPTIME  AGL ft TRK  AP     MAX G  COM     STBY    UTC   OIL °C TRAF ALERTS ▴│
-│ 182     4500   1018    1730   274° 268° ► 1.8    118.275 121.500 14:32 81     3    1      │
+│ WIND KMH ALT ft UPTIME AGL ft TRK  AP     MAX G  COM     STBY    UTC   OIL °C TRAF ALERTS ▴│
+│ 270°/28  4500   1018   1730   274° 268° ► 1.8    118.275 121.500 14:32 81     3    1      │
 ├──────────────────────────────────────────────────────────────────────────────────────┤
 │                                       plate                                          │
 ├──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬─────────┬───┤
@@ -64,9 +64,13 @@ keys along the bottom edge.
 Slots 1 to 13 changed on 2026-11-11 (xiaprojects): the first radio, the altimeter, AGL, oil
 temperature and the autopilot were added.
 
+WIND took the first place from the speed on 2026-11-23 (xiaprojects). The speed slot is kept,
+hidden by default, for units with no airspeed sensor: see [Changing the top bar](#changing-the-top-bar).
+
 | Slot | Group | Label | Value | Source | Tap opens | Drop order |
 |---|---|---|---|---|---|---|
-| speed | left | `IAS` or `GS`, with the pilot's unit | Speed | `SpeedKt`, `SpeedSource` from `SituationUpdated` | `#/speed` | never |
+| wind | left | `WIND` with the pilot's speed unit, `WIND EST` when the ground speed stood in for a missing airspeed (`WindSource` `gs`) | `270°/28`: direction the wind blows from, true, three digits, `360` for north; then the speed. `---` with no estimate | `WindValid`, `WindDirection`, `WindSpeed`, `WindSource` that `services/windestimator.js` adds to `SituationUpdated` | `#/attitude` (wind arrow) | never |
+| speed | left | `IAS` or `GS`, with the pilot's unit | Speed. **Hidden by default** (`TOP_BAR_SLOTS_HIDDEN`) | `SpeedKt`, `SpeedSource` from `SituationUpdated` | `#/speed` | never |
 | alt | left | `ALT ft` or `ALT m` | Altimeter: `BaroPressureAltitude + 27 × (QNH − 1013.25)` ft, as the altimeter plate; `---` with no baro (`BaroSourceType` 0) | `SituationUpdated` | `#/altimeter` | never |
 | uptime | left | `UPTIME` | Daemon uptime, H:MM; `---` 5 s after the status stops | `StatusUpdated` `Uptime` (ms) | `#/timers` | 3rd |
 | agl | left | `AGL ft` or `AGL m` | Height above the terrain grid cell | `Terrain_AglFt` when `Terrain_AglValid`, `StatusUpdated` (main/terrain.go) | `#/synthview` | 7th |
@@ -93,8 +97,12 @@ temperature and the autopilot were added.
   the oil probe sends on change only, so the last oil value is kept while other frames come.
 - AGL and AP go to `---` when their stream has been quiet for 5 s. AGL is also `---` whenever
   the terrain alerts are off (`Terrain_Enabled`), which is the default.
-- **No data is shown as `---`**, never as `X` and never as an old number. Speed, ALT, QNH, TRK
+- **No data is shown as `---`**, never as `X` and never as an old number. WIND, speed, ALT, TRK
   and MAX G go to `---` when no `SituationUpdated` has arrived for 3 s.
+- WIND needs an estimate from `windestimator.js`: an airspeed and a course change of 30-60°
+  (source `tas`), or a heading from the AHRS in steady flight (`ias`, or `gs` without an airspeed).
+  A unit with neither an airspeed sensor nor a magnetometer heading never gets one and reads
+  `---`: show the speed slot there instead.
 - **ALERTS** counts every entry of the last `AlertsUpdated` list, active or not: the alerts page
   shows them all. Its lamp is on while an alert has come, or has come back (inactive to active),
   since the pilot last opened `#/alerts`, and stays on even if that alert clears meanwhile. It
@@ -104,6 +112,61 @@ temperature and the autopilot were added.
   hidden; it is lost on a page reload, when the whole list counts as new again. This is not the
   acknowledgement of TD1 and TD2, which stays in the roadmap.
 - Red and amber are used for the ALERTS lamp only. Values are white, labels grey.
+
+### Changing the top bar
+
+The slots are the `<a class="rb-slot" data-slot="…">` blocks of `web/RB-01/plates/sidetop.html`,
+filled by `TopBarCtrl` in `web/RB-01/plates/js/bottom.js`. Slot names are the `data-slot`
+values in the table above: `wind`, `speed`, `alt`, `agl`, `track`, `ap`, `gmax`, `com`, `stby`,
+`utc`, `uptime`, `voice`, `oil`, `outsideTemperature`, `traffic`, `alerts`.
+
+Each slot is drawn only while it is not in the list of hidden slots. That list is read when the
+bar is created, so after changing it hide the bar with `▴` and show it again with the north FAB,
+or reload the page.
+
+**On one unit, no code change.** Set `localStorage.topBarSlotsHidden` in the kiosk browser to a
+JSON list of slot names. It replaces the default list, so name every slot you want hidden;
+`'[]'` shows them all. A value that is not a JSON list of strings is ignored and the default is
+used. `localStorage` belongs to the browser and the origin: set it in the kiosk Chromium, which
+loads `http://localhost/RB-01`, not from a laptop browsing to the unit's IP.
+
+The kiosk Chromium is started with `--remote-debugging-port=9222`
+(`image_build_rb/root/home/pi/display.sh`). From a computer on the unit's Wi-Fi:
+
+1. `ssh -L 9222:localhost:9222 pi@192.168.10.1`
+2. Open `chrome://inspect` in Chrome or Chromium, add `localhost:9222` under *Configure…*, and
+   click *inspect* under the RB-01 page.
+3. In the console, one of:
+
+   ```js
+   // Speed back in the first place, no wind (a unit with no airspeed sensor and no magnetometer)
+   localStorage.topBarSlotsHidden = '["wind"]'
+   // Both wind and speed
+   localStorage.topBarSlotsHidden = '[]'
+   // Wind, no speed, and no UTC clock
+   localStorage.topBarSlotsHidden = '["speed", "utc"]'
+   // Back to the default of the installed version
+   localStorage.removeItem('topBarSlotsHidden')
+   ```
+
+4. `location.reload()`, or hide and show the bar.
+
+The setting survives reboots and software updates (it lives in the Chromium profile of user
+`pi`) and is lost if that profile is cleared.
+
+**For every unit, in the code.**
+
+| Change | Where |
+|---|---|
+| Which slots are hidden by default | `TOP_BAR_SLOTS_HIDDEN` in `plates/js/bottom.js`, today `["speed"]`. Units with `localStorage.topBarSlotsHidden` set keep their own list. |
+| The order of the slots, or the group they are in | Move the `<a class="rb-slot">` block in `plates/sidetop.html`. Groups are `rb-status-left`, `rb-status-centre`, `rb-status-right`; a slot never moves across groups when others are dropped. |
+| Which slots are dropped first when the bar is too narrow | `TOP_BAR_DROP_ORDER` in `plates/js/bottom.js`. A slot not in it is never dropped: keep that set small (today wind, speed, alt, com, alerts) or the bar no longer fits at 1024×600. |
+| A new slot | Add a block in `sidetop.html` with a new `data-slot` and `ng-if="slotShown('<name>')"`, set `$scope.values.<name>` from a listener in `TopBarCtrl` (start it at `BAR_NO_DATA`), add the slot to the `slots` of its stream in `streams` so it goes to `---` when the stream stops, and to `TOP_BAR_DROP_ORDER` unless it must never be dropped. Add it to `SLOTS` in `test/display/test_bars.py`. |
+
+RB-01 HTML and JS files are CRLF: keep the line endings when editing. `simulator.html` includes
+the same `sidetop.html`, so it follows. After a code change run `test/display/test_bars.py`
+(local only); T10 checks that the bar is still one row at 1280×800 with both side panels and at
+1024×600. The bars are never drawn at 480×480 or 800×480, whatever the list says.
 
 ### Bottom bar: soft keys
 

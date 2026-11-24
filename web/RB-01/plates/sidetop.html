@@ -1,68 +1,74 @@
 <!-- Top bar: status values, TopBarCtrl in plates/js/bottom.js, docs/tech-debt/top-bottom-bars.md
-     Left: flight, centre: radio and clock, right: engine and annunciators -->
+     Left: flight, centre: radio and clock, right: engine and annunciators
+     A slot is left out while slotShown() says so: TOP_BAR_SLOTS_HIDDEN in bottom.js, or
+     localStorage.topBarSlotsHidden on a unit. "Changing the top bar" in docs/tech-debt/top-bottom-bars.md -->
 <div class="rb-status">
     <div class="rb-status-group rb-status-left">
-        <a class="rb-slot" data-slot="speed" ng-click="open('#/speed')">
+        <a class="rb-slot" data-slot="wind" ng-if="slotShown('wind')" ng-click="open('#/attitude')">
+            <span class="rb-slot-label">{{windLabel}}</span>
+            <span class="rb-slot-value">{{values.wind}}</span>
+        </a>
+        <a class="rb-slot" data-slot="speed" ng-if="slotShown('speed')" ng-click="open('#/speed')">
             <span class="rb-slot-label">{{speedLabel}}</span>
             <span class="rb-slot-value">{{values.speed}}</span>
         </a>
-        <a class="rb-slot" data-slot="alt" ng-click="open('#/altimeter')">
+        <a class="rb-slot" data-slot="alt" ng-if="slotShown('alt')" ng-click="open('#/altimeter')">
             <span class="rb-slot-label">ALT {{altitudeUnit}}</span>
             <span class="rb-slot-value">{{values.alt}}</span>
         </a>
-        <a class="rb-slot" data-slot="agl" ng-click="open('#/synthview')">
+        <a class="rb-slot" data-slot="agl" ng-if="slotShown('agl')" ng-click="open('#/synthview')">
             <span class="rb-slot-label">AGL {{altitudeUnit}}</span>
             <span class="rb-slot-value">{{values.agl}}</span>
         </a>
-        <a class="rb-slot" data-slot="track" ng-click="open('#/heading')">
+        <a class="rb-slot" data-slot="track" ng-if="slotShown('track')" ng-click="open('#/heading')">
             <span class="rb-slot-label">TRK</span>
             <span class="rb-slot-value">{{values.track}}</span>
         </a>
-        <a class="rb-slot" data-slot="ap" ng-click="open('#/autopilot')">
+        <a class="rb-slot" data-slot="ap" ng-if="slotShown('ap')" ng-click="open('#/autopilot')">
             <span class="rb-slot-label">AP</span>
             <span class="rb-slot-value">{{values.ap}}</span>
         </a>
-        <a class="rb-slot" data-slot="gmax" ng-click="open('#/gmetergauge')">
+        <a class="rb-slot" data-slot="gmax" ng-if="slotShown('gmax')" ng-click="open('#/gmetergauge')">
             <span class="rb-slot-label">MAX G</span>
             <span class="rb-slot-value">{{values.gmax}}</span>
         </a>
     </div>
     <div class="rb-status-group rb-status-centre">
-        <a class="rb-slot" data-slot="com" ng-click="open('#/radio')">
+        <a class="rb-slot" data-slot="com" ng-if="slotShown('com')" ng-click="open('#/radio')">
             <span class="rb-slot-label">COM</span>
             <span class="rb-slot-value">{{values.com}}</span>
         </a>
-        <a class="rb-slot" data-slot="stby" ng-click="open('#/radio')">
+        <a class="rb-slot" data-slot="stby" ng-if="slotShown('stby')" ng-click="open('#/radio')">
             <span class="rb-slot-label">STBY</span>
             <span class="rb-slot-value">{{values.stby}}</span>
         </a>
-        <a class="rb-slot" data-slot="utc" ng-click="open('#/aircraft')">
+        <a class="rb-slot" data-slot="utc" ng-if="slotShown('utc')" ng-click="open('#/aircraft')">
             <span class="rb-slot-label">UTC</span>
             <span class="rb-slot-value">{{values.utc}}</span>
         </a>
-        <a class="rb-slot" data-slot="uptime" ng-click="open('#/timers')">
+        <a class="rb-slot" data-slot="uptime" ng-if="slotShown('uptime')" ng-click="open('#/timers')">
             <span class="rb-slot-label">UPTIME</span>
             <span class="rb-slot-value">{{values.uptime}}</span>
         </a>
     </div>
     <div class="rb-status-group rb-status-right">
-        <a class="rb-slot" data-slot="voice" ng-click="open('#/voice')">
+        <a class="rb-slot" data-slot="voice" ng-if="slotShown('voice')" ng-click="open('#/voice')">
             <span class="rb-slot-label">VOICE</span>
             <span class="rb-slot-value">{{values.voice}}</span>
         </a>
-        <a class="rb-slot" data-slot="oil" ng-click="open('#/ems')">
+        <a class="rb-slot" data-slot="oil" ng-if="slotShown('oil')" ng-click="open('#/ems')">
             <span class="rb-slot-label">OIL {{temperatureUnit}}</span>
             <span class="rb-slot-value">{{values.oil}}</span>
         </a>
-        <a class="rb-slot" data-slot="outsideTemperature" ng-click="open('#/ems')">
+        <a class="rb-slot" data-slot="outsideTemperature" ng-if="slotShown('outsideTemperature')" ng-click="open('#/ems')">
             <span class="rb-slot-label">OUT {{temperatureUnit}}</span>
             <span class="rb-slot-value">{{values.outsideTemperature}}</span>
         </a>
-        <a class="rb-slot" data-slot="traffic" ng-click="open('#/radar')">
+        <a class="rb-slot" data-slot="traffic" ng-if="slotShown('traffic')" ng-click="open('#/radar')">
             <span class="rb-slot-label">TRAFFIC</span>
             <span class="rb-slot-value">{{values.traffic}}</span>
         </a>
-        <a class="rb-slot" data-slot="alerts" ng-click="open('#/alerts')">
+        <a class="rb-slot" data-slot="alerts" ng-if="slotShown('alerts')" ng-click="open('#/alerts')">
             <span class="rb-slot-label">ALERTS</span>
             <span class="rb-slot-value">{{alertsCount()}}<span class="rb-alerts-lamp" data-severity="{{alertsLamp()}}"></span></span>
         </a>

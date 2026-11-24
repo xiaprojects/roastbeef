@@ -31,7 +31,9 @@
  *
  * Top and bottom bars, docs/tech-debt/top-bottom-bars.md
  * - TopBarCtrl: the status values the pilot reads, plates/sidetop.html; the slots that
- *   do not fit are dropped in TOP_BAR_DROP_ORDER
+ *   do not fit are dropped in TOP_BAR_DROP_ORDER, the slots of TOP_BAR_SLOTS_HIDDEN (or
+ *   localStorage.topBarSlotsHidden) are left out: "Changing the top bar" in
+ *   docs/tech-debt/top-bottom-bars.md
  * - BottomBarCtrl: draws the soft keys of main.js, plates/sidebottom.html, and the
  *   readings under their labels: QNH, ETA to the active waypoint, the first running timer,
  *   the CPU load and the battery voltage
@@ -51,6 +53,29 @@ const TOP_BAR_TRAFFIC_SECONDS = 60;
 const TOP_BAR_STREAM_STALE_SECONDS = 5;
 // When the bar is too narrow the slots are dropped in this order; the others never are
 const TOP_BAR_DROP_ORDER = ["voice", "utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "outsideTemperature", "oil", "ap"];
+// The slots (data-slot of plates/sidetop.html) the bar leaves out. WIND took the first place
+// from the speed on 2026-11-23; the speed slot is kept for the units with no airspeed sensor,
+// where the wind needs a heading to be estimated at all: take "speed" out of this list, or
+// set localStorage.topBarSlotsHidden on the unit, to show it again
+const TOP_BAR_SLOTS_HIDDEN = ["speed"];
+
+/**
+ * topBarSlotsHidden: the slots the bar leaves out on this unit
+ * @returns localStorage.topBarSlotsHidden when it is a JSON list of slot names ('[]' shows
+ *          every slot), TOP_BAR_SLOTS_HIDDEN otherwise. Read when the bar is created: hide
+ *          and show the bar, or reload, after changing it
+ */
+function topBarSlotsHidden() {
+    try {
+        const stored = JSON.parse(localStorage.getItem("topBarSlotsHidden"));
+        if (Array.isArray(stored) && stored.every(function (slot) { return typeof slot === "string"; })) {
+            return stored;
+        }
+    } catch (e) {
+        // Not JSON, or no storage in this browser: the default
+    }
+    return TOP_BAR_SLOTS_HIDDEN;
+}
 
 /**
  * barNumber: a value as the bar shows it
@@ -82,6 +107,28 @@ function barTrack(raw) {
     }
     const degrees = ((Math.round(raw) % 360) + 360) % 360;
     return ("00" + degrees).slice(-3) + "°";
+}
+
+/**
+ * barWind: the wind of windestimator.js as the bar shows it, METAR style
+ * @param {*} situation - WindValid, WindDirection (FROM, true), WindSpeed (kt)
+ * @returns "270°/15": the direction in three digits, 360 for north (000 is calm), then the
+ *          speed in the pilot's unit; BAR_NO_DATA with no estimate
+ */
+function barWind(situation) {
+    if (situation.WindValid !== true || typeof situation.WindSpeed !== "number" || !isFinite(situation.WindSpeed)
+        || typeof situation.WindDirection !== "number" || !isFinite(situation.WindDirection)) {
+        return BAR_NO_DATA;
+    }
+    const degrees = ((Math.round(situation.WindDirection) % 360) + 360) % 360;
+    return ("00" + (degrees === 0 ? 360 : degrees)).slice(-3) + "°/"
+        + Math.round(pilotDisplayedSpeedFromKT(situation.WindSpeed));
+}
+
+// WIND and the unit; EST when the ground speed stood in for a missing airspeed (WindSource
+// "gs"), as the attitude plate marks it
+function barWindLabel(source) {
+    return "WIND " + (source === "gs" ? "EST " : "") + barSpeedUnit();
 }
 
 // The speed unit the pilot picked in aircraft.json
@@ -139,14 +186,14 @@ function TopBarCtrl($scope, $interval, $http) {
     const voice = { wakeWord: undefined, trigger: undefined, speakingUntil: 0, answerUntil: 0 };
     // Date.now() of the last frame of each stream, and the slots that go to BAR_NO_DATA when it stops
     const streams = {
-        situation: { time: 0, seconds: TOP_BAR_STALE_SECONDS, slots: ["speed", "track", "gmax", "alt"] },
+        situation: { time: 0, seconds: TOP_BAR_STALE_SECONDS, slots: ["wind", "speed", "track", "gmax", "alt"] },
         ems: { time: 0, seconds: TOP_BAR_STREAM_STALE_SECONDS, slots: ["oil"] },
         status: { time: 0, seconds: TOP_BAR_STREAM_STALE_SECONDS, slots: ["agl", "uptime"] },
         autopilot: { time: 0, seconds: TOP_BAR_STREAM_STALE_SECONDS, slots: ["ap"] }
     };
 
     $scope.values = {
-        speed: BAR_NO_DATA, track: BAR_NO_DATA, uptime: BAR_NO_DATA, gmax: BAR_NO_DATA, alt: BAR_NO_DATA,
+        wind: BAR_NO_DATA, speed: BAR_NO_DATA, track: BAR_NO_DATA, uptime: BAR_NO_DATA, gmax: BAR_NO_DATA, alt: BAR_NO_DATA,
         agl: BAR_NO_DATA, ap: BAR_NO_DATA, com: BAR_NO_DATA, stby: BAR_NO_DATA, oil: BAR_NO_DATA,
         outsideTemperature: BAR_NO_DATA, voice: BAR_NO_DATA,
         utc: "", traffic: "0"
@@ -155,6 +202,12 @@ function TopBarCtrl($scope, $interval, $http) {
     $scope.temperatureUnit = pilotTemperatureUnit();
     // IAS when the airspeed board reports one, GPS ground speed otherwise: servicesituation.js
     $scope.speedLabel = "GS " + barSpeedUnit();
+    $scope.windLabel = barWindLabel("");
+    // The slots left out on this unit, fixed for the life of the bar
+    const slotsHidden = topBarSlotsHidden();
+    $scope.slotShown = function (slot) {
+        return slotsHidden.indexOf(slot) < 0;
+    };
 
     // Outside a digest only this bar is checked, inside one the running digest takes the change
     function redraw() {
@@ -207,6 +260,8 @@ function TopBarCtrl($scope, $interval, $http) {
     const listeners = {
         SituationUpdated: function (situation) {
             streams.situation.time = Date.now();
+            $scope.values.wind = barWind(situation);
+            $scope.windLabel = barWindLabel(situation.WindSource);
             $scope.values.speed = barNumber(situation.SpeedKt, 0, pilotDisplayedSpeedFromKT);
             $scope.values.track = barTrack(situation.GPSTrueCourse);
             $scope.values.gmax = barNumber(situation.AHRSGLoadMax, 1);

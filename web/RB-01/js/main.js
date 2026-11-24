@@ -156,6 +156,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $controllerProvider) {
 			controller: 'HSICtrl',
 			reloadOnSearch: false
 		})
+		.state('logbook', {
+			url: '/logbook',
+			templateUrl: 'plates/logbook.html',
+			controller: 'LogbookCtrl',
+			reloadOnSearch: false
+		})
 		.state('timers', {
 			url: '/timers',
 			templateUrl: 'plates/timers.html',
