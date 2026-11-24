@@ -568,9 +568,14 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
 
   };
 
-  // The pilot's QNH, one hPa a step; it holds until AUTO again
+  // The pilot's QNH, one hPa a step; it holds until AUTO again.
+  // The pilot cannot dial outside QNH_MIN..QNH_MAX hPa: a step past a limit stays on the
+  // limit, and a step from an AUTO value outside the range lands on the nearest limit.
+  // Same window as RB-09 ($RBAIR, main/slavenmeadisplay.go), so a pilot QNH always reaches it.
+  const QNH_MIN = 850;
+  const QNH_MAX = 1100;
   $scope.qnhStep = (direction) => {
-    $scope.Altimeter.QNH += direction;
+    $scope.Altimeter.QNH = Math.min(QNH_MAX, Math.max(QNH_MIN, $scope.Altimeter.QNH + direction));
     $scope.Altimeter.AutoQNH = false;
     const proxy = new CustomEvent("SituationUpdatedByPilot", { detail: {QNH:$scope.Altimeter.QNH,AutoQNH:false} });
     dispatchEvent(proxy);

@@ -11,6 +11,9 @@ Every press is a real Chromium key or a frame on the /keypad socket.
 
 The frames here keep the same baro altitude, as on the ground: the plate used to redraw only
 when that changed, so a new QNH or AUTO did not show until the aircraft climbed.
+
+The pilot cannot set a QNH outside 850..1100 hPa (QNH_MIN / QNH_MAX in SixPackInstruments.js):
+a step past a limit stays on it, a step from an AUTO value outside the range lands on the limit.
 """
 
 import sys
@@ -98,6 +101,39 @@ def check_touch(d, res):
     res.check(read(d)["auto"], "a touch on the centre turns AUTO on, as TAP does", read(d))
 
 
+def check_limits(d, res, label):
+    """The pilot QNH stops at 1100 and 850 hPa, whatever AUTO derived."""
+    global FRAME
+    keep = FRAME
+    try:
+        # GPS 0 ft, baro -2322 ft: AUTO gives 1013.25 + 86 = 1099.25, shown 1099
+        FRAME = dict(keep, GPSAltitudeMSL=0, BaroPressureAltitude=-2322)
+        press(d, TAP)
+        res.check(read(d)["qnh"] == 1099, "%s AUTO near the top limit" % label, read(d))
+        got = press(d, NEXT)
+        res.check(got["qnh"] == 1100 and not got["auto"], "%s NEXT reaches 1100 hPa" % label, got)
+        got = press(d, NEXT)
+        got = press(d, NEXT)
+        res.check(got["qnh"] == 1100, "%s NEXT past 1100 hPa is blocked" % label, got)
+        got = press(d, PREV)
+        res.check(got["qnh"] == 1099, "%s PREV comes back down from the limit" % label, got)
+        # GPS 0 ft, baro 4428 ft: AUTO gives 1013.25 - 164 = 849.25, shown 849, outside the range
+        FRAME = dict(keep, GPSAltitudeMSL=0, BaroPressureAltitude=4428)
+        press(d, TAP)
+        res.check(read(d)["qnh"] == 849 and read(d)["auto"], "%s AUTO below the bottom limit" % label, read(d))
+        got = press(d, PREV)
+        res.check(got["qnh"] == 850 and not got["auto"],
+                  "%s PREV from an AUTO value below 850 lands on 850 hPa" % label, got)
+        got = press(d, PREV)
+        res.check(got["qnh"] == 850, "%s PREV past 850 hPa is blocked" % label, got)
+        got = press(d, NEXT)
+        res.check(got["qnh"] == 851, "%s NEXT goes up from the limit" % label, got)
+    finally:
+        FRAME = keep
+    press(d, TAP)
+    res.check(read(d)["auto"] and read(d)["qnh"] == AUTO_QNH, "%s back to AUTO" % label, read(d))
+
+
 def check_other_page(d, res):
     """The sixpack holds an altimeter too: the knob must not set the QNH from there."""
     press(d, TAP)
@@ -126,6 +162,7 @@ def main():
             ready(d)
             label = "%dx%d" % (width, height)
             check_knob(d, res, label + " 1/2/3", PREV, NEXT, TAP, d.key)
+            check_limits(d, res, label)
             if width == 1280:
                 # Not in the Landscape navigation list: the knob reaches it all the same
                 check_knob(d, res, label + " arrows", "ArrowUp", "ArrowDown", "Enter", d.key)

@@ -54,7 +54,8 @@ Progress (2026-11-17, display tests only, uncommitted):
   `SixPackInstruments.js` hands the key to `$scope.knob(key)` when a plate defines one (only the
   routed plate: the altimeter inside the sixpack stays inert) and is removed on `$destroy`. Fixed on
   the way: the plate redrew only on a new baro altitude, so on the ground a new QNH did not move the
-  needle and AUTO did not light until a climb. No QNH limits, as touch has none. Test:
+  needle and AUTO did not light until a climb. The pilot QNH is limited to 850 to 1100 hPa
+  (2026-11-24, `QNH_MIN` / `QNH_MAX` in `qnhStep`, so knob and touch share it). Test:
   `test_keypad_altimeter.py`.
 - `gmetergauge` done sixth (2026-11-18), as the owner asked: TAP resets Max and Min, the same
   `POST /resetGMeter` as the centre touch zone (it existed: F8 was wrong here too); PREV and NEXT

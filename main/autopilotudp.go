@@ -335,7 +335,8 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 		"$GPRMB",
 		"$GPAPB"}
 
-	p := make([]byte, 2048)
+	// The largest UDP payload, so no datagram is cut
+	p := make([]byte, 65535)
 	addr := net.UDPAddr{
 		Port: globalSettings.AutopilotUdp_Port,
 		IP:   net.ParseIP("0.0.0.0"),
@@ -352,15 +353,17 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 		// Set to 2 seconds because source is 1 second
 		ser.SetReadDeadline(time.Now().Add(2 * time.Second))
 
-		_, _, err := ser.ReadFromUDP(p)
+		n, _, err := ser.ReadFromUDP(p)
 		if err != nil {
 			// Timeout cases log.Printf("AutopilotUDPStratuxPlugin ERROR: %v: %s\n", err, err.Error())
 			// Todo Mutex?
 			globalStatus.AutopilotUDPReceivingMessages = 0
 			continue
 		}
-		if len(p) > 0 {
-			str := string(p)
+		// Only the n bytes of this datagram: the buffer still holds the tail of a longer,
+		// earlier one, and those sentences must not be parsed twice
+		if n > 0 {
+			str := string(p[:n])
 			nmeaReceivedSentences := strings.Split(str, "\n")
 			for _, nmeaSentence := range nmeaReceivedSentences {
 

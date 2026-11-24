@@ -866,3 +866,28 @@ func TestRadioSdrCommandReachesTheWebSocket(t *testing.T) {
 	postRadio(t, `{"Enabled":false}`)
 	until(func() bool { got, ok := frame[RADIO_SDR_KEY_FREQUENCY]; return ok && got == 0 })
 }
+
+// With no radio configured (the default) or a wrong index, POST /radio/{index} answers
+// 404 and leaves the radio list unlocked, so the next radio call still goes through.
+func TestRadioPostToAMissingRadioDoesNotLockTheList(t *testing.T) {
+	sdrRadioState(t, RADIO_DRIVER_SDR)
+	radio.radioData = []RadioStatus{}
+	for _, index := range []int{0, 1, -1} {
+		req := httptest.NewRequest(http.MethodPost, fmt.Sprintf("/radio/%d", index), strings.NewReader(`{"FrequencyStandby":"121.500"}`))
+		rec := httptest.NewRecorder()
+		handleRadioPost(rec, req)
+		if rec.Code != http.StatusNotFound {
+			t.Errorf("POST /radio/%d with no radio: got %d, want 404", index, rec.Code)
+		}
+	}
+	done := make(chan struct{})
+	go func() {
+		handleRadioGet(httptest.NewRecorder(), httptest.NewRequest(http.MethodGet, "/radio", nil))
+		close(done)
+	}()
+	select {
+	case <-done:
+	case <-time.After(2 * time.Second):
+		t.Fatal("GET /radio hangs: the radio list was left locked")
+	}
+}

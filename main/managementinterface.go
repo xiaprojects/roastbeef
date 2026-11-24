@@ -1408,6 +1408,14 @@ func handleRadioPost(w http.ResponseWriter, r *http.Request) {
 
 	radio.radioDataMutex.Lock()
 
+	// No radio configured (the default) or a wrong index: answer before touching the
+	// list, an index panic here would leave the mutex locked for every later radio call
+	if(radioIndex < 0 || radioIndex >= len(radio.radioData)){
+		radio.radioDataMutex.Unlock()
+		http.Error(w, fmt.Sprintf("radio %d is not configured", radioIndex), http.StatusNotFound)
+		return
+	}
+
 	// What a body leaves out keeps its value. radio.js sends levels one at a time, and on
 	// the SDR 0 is a real one: volume releases ALSA, squelch is held open. A level the body
 	// does name always goes: a stored 0 can also mean never set, with the daemon on its own
