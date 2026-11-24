@@ -441,6 +441,7 @@ func mavLinkFormat(x []byte) {
 			signalLevelSimulated -= 5
 		}
 		ti.Vvel = int16(float32(mavLink.ver_velocity) * 60.0 / 10.0 / 3.048)
+		ti.Vvel_valid = true
 		var callsignLen = 0
 		for a, b := range mavLink.callsign {
 			if b == ' ' || b == '\u0000' {

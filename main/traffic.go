@@ -104,6 +104,7 @@ type TrafficInfo struct {
 	Speed               uint16    // knots
 	Speed_valid         bool      // set when speed report received.
 	Vvel                int16     // feet per minute
+	Vvel_valid          bool      // set when the last report carried a vertical rate; Vvel is 0 otherwise
 	Timestamp           time.Time // timestamp of traffic message, UTC
 	PriorityStatus      uint8     // Emergency or priority code as defined in GDL90 spec, DO-260B (Type 28 msg) and DO-282B
 
@@ -934,6 +935,7 @@ func parseDownlinkReport(s string, signalLevel int) {
 	speed_valid := false
 	speed := uint16(0)
 	vvel := int16(0)
+	vvel_valid := false
 	//	vvel_geo := false
 	if airground_state == 0 || airground_state == 1 { // Subsonic. Supersonic.
 		ti.OnGround = false
@@ -974,7 +976,8 @@ func parseDownlinkReport(s string, signalLevel int) {
 
 		// Vertical velocity.
 		raw_vvel := ((int16(frame[15]) & 0x7f) << 4) | ((int16(frame[16]) & 0xf0) >> 4)
-		if (raw_vvel & 0x1ff) != 0 {
+		if (raw_vvel & 0x1ff) != 0 { // 0: no vertical rate information
+			vvel_valid = true
 			//			vvel_geo = (raw_vvel & 0x400) == 0
 			vvel = ((raw_vvel & 0x1ff) - 1) * 64
 			if (raw_vvel & 0x200) != 0 {
@@ -1020,6 +1023,7 @@ func parseDownlinkReport(s string, signalLevel int) {
 	ti.Track = track
 	ti.Speed = speed
 	ti.Vvel = vvel
+	ti.Vvel_valid = vvel_valid
 	ti.Speed_valid = speed_valid
 	if ti.Speed_valid {
 		ti.Last_speed = stratuxClock.Time
@@ -1270,7 +1274,10 @@ func parseDump1090Message(buf string) {
 
 		if newTi.Vvel != nil {
 			ti.Vvel = int16(*newTi.Vvel)
+			ti.Vvel_valid = true
 		} else { // we'll still make the message without a valid vertical speed.
+			ti.Vvel = 0
+			ti.Vvel_valid = false
 			//log.Printf("Missing vertical speed in DF=17/18 TC19 airborne velocity message\n")
 		}
 
@@ -1553,6 +1560,7 @@ func updateDemoTraffic(icao uint32, tail string, relAlt float32, gs float64, off
 		ti.Speed_valid = true
 	}
 	ti.Vvel = 0
+	ti.Vvel_valid = true
 	ti.Tail = tail // "DEMO1234"
 	ti.Timestamp = time.Now()
 	ti.Last_seen = stratuxClock.Time

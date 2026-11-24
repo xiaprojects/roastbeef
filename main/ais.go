@@ -126,6 +126,7 @@ func importAISTrafficMessage(msg *aisnmea.VdmPacket) {
 		ti.NIC = 0
 		ti.NACp = 0
 		ti.Vvel = 0
+		ti.Vvel_valid = false // vessels
 		ti.PriorityStatus = 0
 
 		ti.Age = 0

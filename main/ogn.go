@@ -309,6 +309,7 @@ func importOgnTrafficMessage(msg OgnMessage, data string, fakeCurrentTime bool) 
 		ti.TurnRate = 0
 	}
 	ti.Vvel = int16(msg.Climb_mps * 196.85)
+	ti.Vvel_valid = true
 	ti.Lat = msg.Lat_deg
 	ti.Lng = msg.Lon_deg
 	ti.Track = float32(msg.Track_deg)

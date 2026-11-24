@@ -331,6 +331,9 @@ func TestES1090MessagesFuseIntoOneTarget(t *testing.T) {
 	if !ti.Speed_valid || ti.Speed != 457 || ti.Track != 171 || ti.Vvel != -2624 || ti.OnGround {
 		t.Errorf("speed %v %d track %.0f vvel %d ground %v; want 457 kt, 171, -2624 fpm, airborne", ti.Speed_valid, ti.Speed, ti.Track, ti.Vvel, ti.OnGround)
 	}
+	if !ti.Vvel_valid {
+		t.Errorf("Vvel_valid false; want true after a TC19 message with a vertical rate")
+	}
 	if ti.NIC != 8 || ti.NACp != 9 || ti.GnssDiffFromBaroAlt != 1250 {
 		t.Errorf("NIC %d NACp %d GNSS diff %d; want 8, 9, 1250", ti.NIC, ti.NACp, ti.GnssDiffFromBaroAlt)
 	}
