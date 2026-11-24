@@ -110,12 +110,13 @@ func (slaveInstance *SlaveNMEADisplayStratuxPlugin) ListenerFunc() bool {
 			continue
 		}
 		sleep := time.Duration(sleepMs) * time.Millisecond
-		// A sentence still queued when the next one is due is dropped
+		// A sentence still queued when the next one is due is dropped.
+		// Not sent to the reduced 9600 baud outputs.
 		if msg, ok := slaveInstance.makeRBATTString(); ok {
-			sendNetFLARM(msg, sleep, 4)
+			sendNetFLARMFull(msg, sleep, 4)
 		}
 		if msg, ok := slaveInstance.makeRBAIRString(); ok {
-			sendNetFLARM(msg, sleep, 4)
+			sendNetFLARMFull(msg, sleep, 4)
 		}
 		time.Sleep(sleep)
 	}

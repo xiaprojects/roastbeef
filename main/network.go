@@ -45,6 +45,10 @@ const (
 	NETWORK_FLARM_NMEA     = 8
 	NETWORK_POSITION_FFSIM = 16
 	NETWORK_RESERVED_FEA32 = 32	
+	// Reduced FLARM NMEA for a 9600 baud port: everything NETWORK_FLARM_NMEA
+	// carries except the RB slave-display sentences ($RPYL, $RBEMS, $RBCYL,
+	// $RBATT, $RBAIR), which alone would fill the port. See sendNetFLARMFull.
+	NETWORK_FLARM_NMEA_9600 = 64
 	dhcp_lease_file        = "/var/lib/misc/dnsmasq.leases"
 	dhcp_lease_dir         = "/var/lib/misc/"
 	extra_hosts_file       = "/etc/stratux-static-hosts.conf"
@@ -621,11 +625,24 @@ func sendXPlane(msg []byte, maxAge time.Duration, priority int32) {
 	sendMsg(msg, NETWORK_POSITION_FFSIM, maxAge, priority)
 }
 
+// sendNetFLARM sends an NMEA sentence to the full FLARM NMEA outputs and to
+// the reduced 9600 baud ones. A sentence sent several times per second, or one
+// only a slave display reads, must use sendNetFLARMFull instead, or it fills
+// a 9600 port (docs/tech-debt/nmea-serial-out-bandwidth.md).
 func sendNetFLARM(msg string, maxAge time.Duration, priority int32) {
+	sendNetFLARMTo(msg, NETWORK_FLARM_NMEA|NETWORK_FLARM_NMEA_9600, maxAge, priority)
+}
+
+// sendNetFLARMFull sends an NMEA sentence to the full FLARM NMEA outputs only.
+func sendNetFLARMFull(msg string, maxAge time.Duration, priority int32) {
+	sendNetFLARMTo(msg, NETWORK_FLARM_NMEA, maxAge, priority)
+}
+
+func sendNetFLARMTo(msg string, msgType uint8, maxAge time.Duration, priority int32) {
 	avoidLoopBackMutex.Lock()
 	avoidLoopBackMap[msg[0:6]] = msg
 	avoidLoopBackMutex.Unlock()
-	sendMsg([]byte(msg), NETWORK_FLARM_NMEA, maxAge, priority)
+	sendMsg([]byte(msg), msgType, maxAge, priority)
 }
 
 

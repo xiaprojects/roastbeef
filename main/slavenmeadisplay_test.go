@@ -177,6 +177,9 @@ func TestSlaveNMEADisplayLoop(t *testing.T) {
 	}
 	slaveNMEADisplayState(t)
 	sent := captureFlarmOutput(t)
+	// A reduced 9600 baud port next to it: it gets neither sentence
+	reduced := &capConn{captureConn{q: NewMessageQueue(1024)}, NETWORK_FLARM_NMEA_9600}
+	clientConnections["reduced"] = reduced
 	slaveNMEADisplayAttitude()
 	slaveNMEADisplayAir()
 	count := func() (rbatt, rbair, other int) {
@@ -206,6 +209,9 @@ func TestSlaveNMEADisplayLoop(t *testing.T) {
 	time.Sleep(200 * time.Millisecond)
 	if rbatt, rbair, other := count(); rbatt != rbair || rbatt < 12 || rbatt > 21 || other != 0 {
 		t.Errorf("in 1 s at 50 ms: %d $RBATT, %d $RBAIR, %d other; want the same number of each, about 20", rbatt, rbair, other)
+	}
+	if n := len(reduced.q.GetQueueDump(false)); n != 0 {
+		t.Errorf("FLARM NMEA 9600 port: %d sentences; want none", n)
 	}
 
 	time.Sleep(1500 * time.Millisecond)

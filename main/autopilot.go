@@ -339,7 +339,7 @@ func (autopilotInstance *AutopilotStratuxPlugin) autopilotRoutine(waypointsDataC
 		gprmb.Distance = nearestWaypointDistance * METERS_TO_NM
 		// Field 12 is the closing speed on the waypoint, not the ground speed:
 		// only the component along the bearing shortens the remaining distance.
-		// GPSGroundSpeed is already knots (gps.go parses VTG field 5 as knots).
+		// GPSGroundSpeed is already knots (gps.go parses RMC field 7, in knots).
 		gprmb.Knots = mySituation.GPSGroundSpeed *
 			math.Cos(common.Radians(nearestWaypointBearing-float64(mySituation.GPSTrueCourse)))
 		gprmb.TrueBearing = nearestWaypointBearing

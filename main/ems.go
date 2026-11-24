@@ -170,9 +170,10 @@ func (emsInstance *EMSStratuxPlugin) ListenerFunc() bool {
 		nmeaRBEMS := emsInstance.makeRBEMSString()
 		nmeaRBCYL := emsInstance.makeRBCYLString()
 		emsInstance.emsDataMutex.Unlock()
-		sendNetFLARM(nmeaRBEMS, time.Second, 0)
+		// 5 Hz: too much for a 9600 port, so full FLARM NMEA outputs only
+		sendNetFLARMFull(nmeaRBEMS, time.Second, 0)
 		if timerForTemperatures < 1 {
-			sendNetFLARM(nmeaRBCYL, time.Second, 0)
+			sendNetFLARMFull(nmeaRBCYL, time.Second, 0)
 			timerForTemperatures = 10
 		}
 		timerForTemperatures = timerForTemperatures - 1

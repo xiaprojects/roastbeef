@@ -164,11 +164,6 @@ type gpsPerfStats struct {
 
 var gpsPerf gpsPerfStats
 
-// gpsLastRMCTrack is when an RMC last set the ground track; for gpsRMCPreferredFor after
-// it a VTG is ignored, so each fix stamps GPSLastGroundTrackTime once (see the VTG case).
-var gpsLastRMCTrack time.Time
-
-const gpsRMCPreferredFor = 2 * time.Second
 var myGPSPerfStats []gpsPerfStats
 var gpsTimeOffsetPpsMs = 100.0 * time.Millisecond
 
@@ -394,8 +389,8 @@ func initGPSSerial() bool {
 		p.Write(makeNMEACmd("PSRF103,02,00,01,01"))
 		// Enable RMC.
 		p.Write(makeNMEACmd("PSRF103,04,00,01,01"))
-		// Enable VTG.
-		p.Write(makeNMEACmd("PSRF103,05,00,01,01"))
+		// Disable VTG: RMC carries the same speed and track (see processNMEALine).
+		p.Write(makeNMEACmd("PSRF103,05,00,00,01"))
 		// Enable GSV (once every 5 position updates)
 		p.Write(makeNMEACmd("PSRF103,03,00,05,01"))
 		// Enable 38400 baud.
@@ -633,7 +628,7 @@ func writeUbloxGenericCommands(navrate uint16, p *serial.Port) {
 	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x02, 0x00, 0x05, 0x00, 0x05, 0x00, 0x00})) // GSA - GNSS DOP and Active Satellites
 	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x03, 0x00, 0x05, 0x00, 0x05, 0x00, 0x00})) // GSV - GNSS Satellites in View
 	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x04, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00})) // RMC - Recommended Minimum data
-	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x05, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00})) // VGT - Course over ground and Ground speed
+	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})) // VTG - Course over ground and Ground speed: off, RMC carries them (see processNMEALine)
 	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})) // GRS - GNSS Range Residuals
 	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x07, 0x00, 0x05, 0x00, 0x05, 0x00, 0x00})) // GST - GNSS Pseudo Range Error Statistics
 	p.Write(makeUBXCFG(0x06, 0x01, 8, []byte{0xF0, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00})) // ZDA - Time and Date<
@@ -1127,7 +1122,13 @@ func calculateNavRate() float64 {
 /*
 processNMEALine parses NMEA-0183 formatted strings against several message types.
 
-Standard messages supported: RMC GGA VTG GSA
+Standard messages supported: RMC GGA GSA GST (plus PUBX and serial-tracker sentences).
+
+RMC and GGA are mandatory: RMC gives the time, date, validity, ground speed and track,
+GGA the fix quality and altitude. VTG is not parsed. It repeats RMC's speed and track
+without a time stamp, so it cannot be tied to a fix; parsing both stamped each fix twice,
+and the AHRS saw half the turn (2026-11-20 flight). The u-blox and SiRF configurations
+turn VTG off.
 
 return is false if errors occur during parse, or if GPS position is invalid
 return is true if parse occurs correctly and position is valid.
@@ -1181,48 +1182,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 	mySituation.GPSLastValidNMEAMessageTime = stratuxClock.Time
 	mySituation.GPSLastValidNMEAMessage = l
 
-	if (x[0] == "GNVTG") || (x[0] == "GPVTG") { // Ground track information.
-		tmpSituation := mySituation // If we decide to not use the data in this message, then don't make incomplete changes in mySituation.
-		if len(x) < 9 {             // Reduce from 10 to 9 to allow parsing by devices pre-NMEA v2.3
-			return false
-		}
-
-		// One velocity sample a fix. A receiver sending RMC as well (the u-blox sends
-		// RMC, VTG, GGA every fix) has already given this fix's speed and track, and a
-		// second GPSLastGroundTrackTime stamp would reach the AHRS as a new sample with
-		// zero change in velocity whenever its 50 ms tick falls between the two: the
-		// Simple engine then sees roughly half the turn, so it shows 0.55-0.7 of the bank
-		// and turn rate in a steady turn (2026-11-20 flight). VTG is used only without RMC.
-		if !gpsLastRMCTrack.IsZero() && stratuxClock.Since(gpsLastRMCTrack) < gpsRMCPreferredFor {
-			return false
-		}
-
-		groundspeed, err := strconv.ParseFloat(x[5], 32) // Knots.
-		if err != nil {
-			return false
-		}
-		tmpSituation.GPSGroundSpeed = groundspeed
-
-		trueCourse := float32(0)
-		tc, err := strconv.ParseFloat(x[1], 32)
-		if err != nil {
-			return false
-		}
-		if groundspeed > 3 { //TODO: use average groundspeed over last n seconds to avoid random "jumps"
-			trueCourse = float32(tc)
-			setTrueCourse(uint16(groundspeed), tc)
-			tmpSituation.GPSTrueCourse = trueCourse
-		} else {
-			// Negligible movement. Don't update course, but do use the slow speed.
-			//TODO: use average course over last n seconds?
-		}
-		tmpSituation.GPSLastGroundTrackTime = stratuxClock.Time
-
-		// We've made it this far, so that means we've processed "everything" and can now make the change to mySituation.
-		mySituation = tmpSituation
-		return true
-
-	} else if (x[0] == "GNGGA") || (x[0] == "GPGGA") { // Position fix.
+	if (x[0] == "GNGGA") || (x[0] == "GPGGA") { // Position fix.
 		tmpSituation := mySituation // If we decide to not use the data in this message, then don't make incomplete changes in mySituation.
 
 		if len(x) < 15 {
@@ -1466,7 +1426,6 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		updateGPSPerf = true
 		thisGpsPerf.msgType = x[0]
 		tmpSituation.GPSLastGroundTrackTime = stratuxClock.Time
-		gpsLastRMCTrack = stratuxClock.Time
 
 		// We've made it this far, so that means we've processed "everything" and can now make the change to mySituation.
 		mySituation = tmpSituation
