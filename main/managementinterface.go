@@ -2120,6 +2120,14 @@ func handleSettingsSetRequest(w http.ResponseWriter, r *http.Request) {
 						globalSettings.MS4525DO_Enabled = val.(bool)
 					case "AirspeedZeroOffset":
 						globalSettings.AirspeedZeroOffset = val.(float64)
+					case "AirspeedScale":
+						// Factor on the pitot airspeed (main/airspeed.go). Bounded so that a slip
+						// of the finger cannot halve or zero the airspeed.
+						if f, ok := val.(float64); ok && validAirspeedScale(f) {
+							globalSettings.AirspeedScale = f
+						} else {
+							log.Printf("handleSettingsSetRequest:json: AirspeedScale %v refused, not %g to %g\n", val, airspeedScaleMin, airspeedScaleMax)
+						}
 					case "DEBUG":
 						globalSettings.DEBUG = val.(bool)
 					case "DisplayTrafficSource":
