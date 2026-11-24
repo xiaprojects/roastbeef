@@ -25,6 +25,13 @@
         "arrivalAglFt": 1000,
         "arrivalOffsetNM": 2.0
     },
+    "bestGlide": {
+        "enabled": true,
+        "glideRatio": 9,
+        "speedKt": 75,
+        "clearanceAglFt": 500,
+        "useWind": true
+    },
     "GPSGroundSpeed": {
         "startSpeedDegree": 0,
         "endSpeedDegree": 350,

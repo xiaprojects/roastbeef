@@ -138,7 +138,7 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 	// overlay is off the map asks for nothing, so it downloads nothing.
 	let terrainPosition = null;	// [lat, lon] of the last fix
 	function followTerrain() {
-		if (!terrainLayer.getVisible() || terrainPosition === null)
+		if (!(terrainLayer.getVisible() || glideLayer.getVisible()) || terrainPosition === null)
 			return;
 		globalLoadTerrainGrid(terrainPosition[0], terrainPosition[1])
 			.then((grid) => {
@@ -146,14 +146,70 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 					return;
 				$scope.terrainGrid = grid;
 				terrainSource.changed();
+				updateGlide(null, true);
 			})
 			.catch((error) => console.warn('Map terrain overlay unavailable:', error));
 	}
 	terrainLayer.on('change:visible', followTerrain);
 
-	function updateTerrainAltitude(msg) {
-		terrainPosition = [msg.GPSLatitude, msg.GPSLongitude];
+	// Glide range: the area reachable in a best-glide descent from where we are,
+	// over the terrain window and with the estimated wind (glideReach,
+	// js/glidereach.js; parameters from aircraft.json "bestGlide"). Drawn only
+	// with a GPS fix, the terrain window and some height above the clearance.
+	const GLIDE_RECOMPUTE_MS = 1000;
+	$scope.glideSource = new ol.source.Vector();
+	$scope.glideReach = null;	// the last glideReach result, null when none is drawn
+	let glideLayer = new ol.layer.Vector({
+		title: 'Glide range',
+		type: 'overlay',
+		className: 'map-glide',
+		source: $scope.glideSource,
+		visible: localStorage.getItem('stratux.map.layers.Glide range.visible') !== 'false',
+		zIndex: 8,	// above the maps and the terrain, below traffic trails and symbols
+		style: [
+			new ol.style.Style({
+				stroke: new ol.style.Stroke({ color: 'rgba(0, 0, 0, 0.8)', width: 5 })
+			}),
+			new ol.style.Style({
+				fill: new ol.style.Fill({ color: 'rgba(255, 0, 255, 0.12)' }),
+				stroke: new ol.style.Stroke({ color: '#ff00ff', width: 2.5, lineDash: [10, 6] })
+			})
+		]
+	});
+	let glideSituation = null;	// the last situation
+	let glideComputedAt = 0;
+	function updateGlide(msg, force) {
+		if (msg)
+			glideSituation = msg;
+		const now = Date.now();
+		if (!force && now - glideComputedAt < GLIDE_RECOMPUTE_MS)
+			return;
+		glideComputedAt = now;
+		const s = glideSituation;
+		const params = glideParameters(window.aircraftData);
+		let reach = null;
+		if (s && params.enabled && glideLayer.getVisible() && s.GPSFixQuality > 0) {
+			const wind = (params.useWind && s.WindValid) ? { from: s.WindDirection, speed: s.WindSpeed } : null;
+			reach = glideReach($scope.terrainGrid, s.GPSLatitude, s.GPSLongitude, s.GPSAltitudeMSL, params, wind);
+		}
+		$scope.glideReach = reach;
+		$scope.glideFor = s ? [s.GPSLatitude, s.GPSLongitude, s.GPSAltitudeMSL] : null;
+		$scope.glideSource.clear();
+		if (reach) {
+			const ring = reach.points.map((p) => ol.proj.fromLonLat([p[1], p[0]]));
+			ring.push(ring[0]);
+			$scope.glideSource.addFeature(new ol.Feature({ geometry: new ol.geom.Polygon([ring]) }));
+		}
+	}
+	glideLayer.on('change:visible', () => {
 		followTerrain();
+		updateGlide(null, true);
+	});
+
+	function updateTerrainAltitude(msg) {
+			terrainPosition = [msg.GPSLatitude, msg.GPSLongitude];
+			followTerrain();
+		updateGlide(msg, false);
 		const altitude = msg.GPSAltitudeMSL * 0.3048;	// feet, as synthview.js reads it
 		if ($scope.terrainAltitude !== null && Math.abs(altitude - $scope.terrainAltitude) < TERRAIN_REDRAW_METERS)
 			return;
@@ -260,7 +316,8 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 		layers: [
 			osm,
 			terrainLayer,	// above the base maps, below the aeronautical overlays
-			openaip
+			openaip,
+			glideLayer
 		],
 		view: new ol.View({
 			center: ol.proj.fromLonLat([10.0, 52.0]),
