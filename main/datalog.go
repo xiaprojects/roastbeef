@@ -504,6 +504,7 @@ func dataLog() {
 		makeTable(StratuxStartup{}, "startup", db)
 		makeTable(EMSDataLogger{}, "ems", db)
 		makeTable(BridgeFloatDataLogger{}, "bridgefloat", db)
+		makeTable(AlertDataLogger{}, "alerts", db)
 	}
 
 	// The first entry to be created is the "startup" entry.
@@ -614,6 +615,13 @@ func logEMS(m EMSDataLogger) {
 func logBridgeFloat(m BridgeFloatDataLogger) {
 	if globalSettings.ReplayLog && isDataLogReady() {
 		dataLogChan <- DataLogRow{tbl: "bridgefloat", data: m}
+	}
+}
+
+// logAlert writes a raise or a change of Active of an alert, see logAlertEvent()
+func logAlert(m AlertDataLogger) {
+	if globalSettings.ReplayLog && isDataLogReady() {
+		dataLogChan <- DataLogRow{tbl: "alerts", data: m}
 	}
 }
 

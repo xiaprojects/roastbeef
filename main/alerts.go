@@ -88,6 +88,48 @@ type Alert struct {
 	ActiveSeconds float64
 }
 
+// Kinds of row in the flight log's alerts table, see logAlertEvent()
+const (
+	ALERT_LOG_RAISE  = "raise"  // a new alert, Active false for a one-shot event
+	ALERT_LOG_REOPEN = "reopen" // a closed alert is active again, same AlertId
+	ALERT_LOG_CLOSE  = "close"  // the condition went, TimestampEnd is its last sight
+)
+
+// One row of the flight log's alerts table. Alert cannot be logged as it is: its Id
+// column would clash with the table's own id, as SQLite column names ignore case
+type AlertDataLogger struct {
+	Clock         time.Time // when the row was written, with the m=+ of the other tables
+	Event         string    // ALERT_LOG_*
+	AlertId       int
+	Type          int
+	Title         string
+	Active        bool
+	Timestamp     time.Time
+	TimestampEnd  time.Time
+	ActiveSeconds float64
+}
+
+/*
+logAlertEvent().
+
+	Writes an alert to the flight log: its raise and every change of Active. The moves of
+	the end of an alert that stays active are not written, the close row carries the end.
+	Call it without alertsDataMutex: a full log queue blocks
+*/
+func logAlertEvent(event string, a Alert) {
+	logAlert(AlertDataLogger{
+		Clock:         time.Now(),
+		Event:         event,
+		AlertId:       a.Id,
+		Type:          a.Type,
+		Title:         a.Title,
+		Active:        a.Active,
+		Timestamp:     a.Timestamp,
+		TimestampEnd:  a.TimestampEnd,
+		ActiveSeconds: a.ActiveSeconds,
+	})
+}
+
 type AlertsStratuxPlugin struct {
 	StratuxPlugin
 	alertsData      []interface{}
@@ -223,6 +265,7 @@ func (alertsInstance *AlertsStratuxPlugin) pushEvent(event Alert) int {
 		alertsInstance.alertsData = alertsInstance.alertsData[:EVENT_MAX_QUEUE]
 	}
 	alertsInstance.alertsDataMutex.Unlock()
+	logAlertEvent(ALERT_LOG_RAISE, event)
 	// Dispatch event on web interface, if any
 	alertUpdate.SendJSON(event)
 	notifyAlertsListChanged()
@@ -265,10 +308,21 @@ alerts.updateEvent().
 	Copy Active on the alert with the Id of event and, while it is active, move its end to now
 	/alerts is not told: every message on it is a new alert, with its sound and balloon.
 	The display reads the state from /alerts/ws and decides by itself if to replay the alarm
+	A change of Active is written to the flight log, see logAlertEvent()
 */
 func (alertsInstance *AlertsStratuxPlugin) updateEvent(event Alert) int {
 	alertsInstance.alertsDataMutex.Lock()
-	defer alertsInstance.alertsDataMutex.Unlock()
+	id, logEvent, logged := alertsInstance.updateEventLocked(event)
+	alertsInstance.alertsDataMutex.Unlock()
+	if logEvent != "" {
+		logAlertEvent(logEvent, logged)
+	}
+	return id
+}
+
+// updateEventLocked is updateEvent() with alertsDataMutex held. It returns the Id, and
+// the flight log row to write once the mutex is released, "" for none
+func (alertsInstance *AlertsStratuxPlugin) updateEventLocked(event Alert) (int, string, Alert) {
 	for i := len(alertsInstance.alertsData) - 1; i >= 0; i-- {
 		found, ok := alertsInstance.alertsData[i].(Alert)
 		if !ok || found.Id != event.Id {
@@ -283,14 +337,20 @@ func (alertsInstance *AlertsStratuxPlugin) updateEvent(event Alert) int {
 		}
 		// Inactive staying inactive changes nothing
 		changed := event.Active || found.Active
+		logEvent := ""
+		if event.Active && !found.Active {
+			logEvent = ALERT_LOG_REOPEN
+		} else if !event.Active && found.Active {
+			logEvent = ALERT_LOG_CLOSE
+		}
 		found.Active = event.Active
 		alertsInstance.alertsData[i] = found
 		if changed {
 			notifyAlertsListChanged()
 		}
-		return found.Id
+		return found.Id, logEvent, found
 	}
-	return -1
+	return -1, "", Alert{}
 }
 
 /*
