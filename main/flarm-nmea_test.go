@@ -535,3 +535,27 @@ func TestFlarmInputTargetsFromPFLAURX(t *testing.T) {
 		t.Errorf("bad RX: targets %d, want 5 unchanged", globalStatus.FLARM_In_targets)
 	}
 }
+
+// PFLAA ClimbRate is optional: an empty field is no vertical rate, not a level
+// target, so Vvel_valid tells the displays which of the two they are drawing.
+func TestPFLAAClimbRateSetsVvelValid(t *testing.T) {
+	withTrafficState(t)
+	ownshipAt(43.0, 12.0, 3000)
+	parseFlarmPFLAA(strings.Split("$PFLAA,0,1000,2000,150,2,DD1234,90,0,50,2.5,1", ","))
+	parseFlarmPFLAA(strings.Split("$PFLAA,0,1000,2000,150,2,DD5678,90,0,50,,1", ","))
+	var climbing, unknown TrafficInfo
+	for _, ti := range traffic {
+		switch ti.Icao_addr {
+		case 0xDD1234:
+			climbing = ti
+		case 0xDD5678:
+			unknown = ti
+		}
+	}
+	if !climbing.Vvel_valid || climbing.Vvel != 492 {
+		t.Errorf("ClimbRate 2.5 m/s: Vvel_valid %v Vvel %d; want true, 492 ft/min", climbing.Vvel_valid, climbing.Vvel)
+	}
+	if unknown.Vvel_valid || unknown.Vvel != 0 {
+		t.Errorf("empty ClimbRate: Vvel_valid %v Vvel %d; want false, 0", unknown.Vvel_valid, unknown.Vvel)
+	}
+}

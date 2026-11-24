@@ -460,7 +460,8 @@ func makeAHRSLevilReport() {
 
 	msg := fmt.Sprintf("$RPYL,%d,%d,%d,%d,%d,%d,0", roll, pitch, hdg, slip_skid, yaw_rate, g)
 	msg = appendNmeaChecksum(msg)
-	sendNetFLARM(msg + "\r\n", 100 * time.Millisecond, 4)
+	// 20 Hz alone is 70 % of a 9600 port: full FLARM NMEA outputs only
+	sendNetFLARMFull(msg + "\r\n", 100 * time.Millisecond, 4)
 }
 
 func atof32(val string) float32 {
@@ -695,6 +696,7 @@ func parseFlarmPFLAA(message []string) {
 	ti.Speed = uint16(speed * 1.94384) // m/s to knots
 	ti.Speed_valid = true
 	ti.Vvel = int16(vspeed * 196.85) // m/s to feet/min
+	ti.Vvel_valid = message[10] != "" // ClimbRate is optional in PFLAA
 
 	ti.ExtrapolatedPosition = false
 	ti.Last_seen = stratuxClock.Time
