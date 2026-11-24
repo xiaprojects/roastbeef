@@ -48,6 +48,31 @@ path for others. The GPS time-pulse LED is disabled via UBX-CFG-TP5.
 
 The detected receiver type is reported as `GPS_detected_type` in `/getStatus`.
 
+## Required NMEA sentences: RMC and GGA
+
+RB-01 needs a receiver that sends **RMC and GGA** every fix. Without one of them there is
+no usable GPS:
+
+| Sentence | Gives | Required |
+|---|---|---|
+| RMC | UTC time and date (sets the system clock), valid flag, position, ground speed, true track | yes |
+| GGA | fix quality, satellites, altitude, geoid separation | yes |
+| GSA, GSV, GST | DOP, satellites in view, accuracy (NACp) | optional |
+| VTG | ground speed and track, which RMC already gives | **not parsed** |
+
+VTG was dropped on 2026-11-23. It has no time stamp, so it can't be tied to a fix. When the
+parser took speed and track from both RMC and VTG, each fix stamped
+`GPSLastGroundTrackTime` twice. Whenever the 50 ms AHRS tick fell between the two stamps,
+the AHRS saw a second GPS sample with no change in velocity. In steady turns the Simple
+engine then showed about 0.75 of the bank (flight of 2026-11-20). The u-blox `CFG-MSG`
+setup and the SiRF setup (`main/gps.go`, `test/sirf_config.sh`) now turn VTG off, and a
+VTG from any other source, such as a manually configured receiver or NMEA in over TCP
+`:30011`, is ignored. A receiver that sends only GGA and VTG is not supported. Configure
+it to send RMC.
+
+The `$GPVTG` pass-through in `main/network.go` (BLE) and `main/autopilotudp.go` (UDP)
+is unrelated: it forwards an EFB's VTG to the autopilot and is still supported.
+
 ## Tips
 
 ### Is the receiver genuine?

@@ -91,8 +91,8 @@ SCENE = """((lat) => {
 def lateral_m(scene):
     """Ownship's perpendicular distance from the tunnel line, in ground metres.
 
-    World units are anisotropic - plan() has no cos(lat) term - so each axis is
-    converted before the offset is measured.
+    Each axis is converted with its own measured scale, so the check holds
+    whatever plan() does east-west (TerrainManager.eastScale keeps them equal).
     """
     me, frames = scene.get("me"), scene.get("frames") or []
     uNS, uEW = scene.get("uNS"), scene.get("uEW")
@@ -164,6 +164,13 @@ def main():
             print("\n%d/%d checks passed" % (len(res.checks) - len(res.failed), len(res.checks)))
             return 1
 
+        # The hook captures the terrain and setup on the first animated frame,
+        # which can land after the tunnel: reading before it returned null.
+        try:
+            d.page.wait("!!(window.__rbTerrain && window.__rbSetup)", timeout=30,
+                        label="first animated frame")
+        except TimeoutError:
+            pass
         first = d.page.eval(SCENE % fp.situation_at(START)["GPSLatitude"])
         res.check(first and first["cellSize"] > 0, "scene scale readable",
                   first and "cellSize=%d" % first["cellSize"])

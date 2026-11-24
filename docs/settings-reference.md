@@ -108,7 +108,8 @@ The daemon writes these; `POST /setSettings` ignores them. They record the last 
 | `MagField` | float64 | *Advanced.* Magnitude of the local geomagnetic field in µT that the Kalman engine references the magnetometer to. `0` (default) uses a centred-dipole estimate at the GPS position, within ~10 %; set it (and `MagDip`) from a WMM/IGRF calculator for the operating area for better. |
 | `MagDip` | float64 | *Advanced.* Inclination of the local field in degrees, positive down (Europe ≈ 55–70). `0` uses the dipole estimate, within ~5°. |
 | `AltitudeOffset` | int | Barometric pressure-altitude offset. |
-| `AirspeedZeroOffset` | float64 | Differential pressure in Pa the MS4525DO pitot sensor reads at zero airflow, subtracted before the airspeed is computed. Set by `POST /calibrateAirspeed` with the aircraft stationary; must be measured on the installed unit (see [hardware/sensors.md](hardware/sensors.md)). The sensor itself has no enable setting: it is recognised on the I²C bus. |
+| `AirspeedZeroOffset` | float64 | Differential pressure in Pa the MS4525DO pitot sensor reads at zero airflow, subtracted before the airspeed is computed. Set by `POST /calibrateAirspeed` (RB-01 Settings → Hardware → *Zero Airspeed*) with the aircraft stationary; must be measured on the installed unit (see [hardware/sensors.md](hardware/sensors.md)). The sensor itself has no enable setting: it is recognised on the I²C bus. |
+| `AirspeedScale` | float64 | Factor on the MS4525DO airspeed: the pitot-static position error correction, measured in flight (1.03 if IAS reads 3 % low). 0.5 to 1.5, default 1; `/setSettings` refuses a value outside the range and a stored one outside it counts as 1. Applied after the 10 Pa deadband. Set in RB-01 Settings → Hardware (see [hardware/sensors.md](hardware/sensors.md)). |
 | `GLimits` | string | G-meter limit configuration. |
 
 ## SDR tuning

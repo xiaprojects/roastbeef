@@ -21,7 +21,7 @@ PLATES = [
     ("airfields", None), ("autopilot", None), ("timers", None),
     ("ems", None), ("emsegt", None), ("radio", None), ("checklist", None),
     ("switchboard", None), ("map", "#map_display"), ("radar", "canvas, svg"),
-    ("alerts", None), ("charts", None), ("aircraft", None), ("camera", None),
+    ("alerts", None), ("charts", None), ("aircraft", None), ("logbook", None), ("camera", None),
     ("voice", None), ("ota", None),
 ]
 

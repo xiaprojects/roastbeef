@@ -42,13 +42,23 @@ CONF_TYPES = {
     "EstimateBearinglessDist": bool, "DisplayTrafficSource": bool, "SerialOutput": dict,
     "GPS_Enabled": bool, "UAT_Enabled": bool, "ES_Enabled": bool, "OGN_Enabled": bool,
     "AIS_Enabled": bool, "APRS_Enabled": bool, "IMU_Sensor_Enabled": bool,
-    "BMP_Sensor_Enabled": bool, "MS4525DO_Enabled": bool, "PWMDutyMin": int, "Ping_Enabled": bool, "Pong_Enabled": bool,
+    "BMP_Sensor_Enabled": bool, "MS4525DO_Enabled": bool, "AirspeedScale": float, "PWMDutyMin": int, "Ping_Enabled": bool, "Pong_Enabled": bool,
     "OGNI2CTXEnabled": bool, "Camera_Enabled": bool, "Audio_Enabled": bool,
     "Autopilot_Enabled": bool, "AutopilotUdp_Enabled": bool, "AutopilotUdp_Port": int,
     "Keypad_Enabled": bool, "Radio_Enabled": bool, "EMS_Enabled": bool, "SwitchBoard_Enabled": bool,
+    "Switches": list,
 }
 
-SECTIONS = ["aircraft", "ems", "autopilot", "ahrs", "receiver", "hardware", "navigation", "keypad"]
+# What /setSettings reads out of each entry of "Switches", with the type it
+# asserts (Name/Uri .(string), Type .(float64)); anything else is dropped.
+SWITCH_FIELDS = {"Name": str, "Type": int, "Uri": str}
+
+# The display's own audio flags, in localStorage (Display_Audio_*), as the
+# services and the Switchboard's display toggles read them.
+AUDIO_FLAGS = ["Display_Audio_Enabled", "Display_Audio_GLoad_Enabled", "Display_Audio_Alerts_Enabled"]
+
+SECTIONS = ["aircraft", "ems", "autopilot", "ahrs", "receiver", "hardware", "switchboard", "audio",
+            "navigation", "keypad"]
 
 # The addon lives in the routed view; the sidebar carries its own EMS gauges and
 # panels, so every selector is anchored to [ui-view] to keep them apart.
@@ -111,6 +121,12 @@ def click_icon(d, icon, panel=None):
     d.page.pump(0.4)
 
 
+def unit_options(d):
+    """The texts the gauge editor's Unit picker offers."""
+    return d.page.eval("Array.from(document.querySelector(%s).options).map(o=>o.textContent.trim()).filter(t=>t)"
+                       % json.dumps(VIEW + "select[ng-model='gauge.unit']"))
+
+
 def badge(d):
     return d.page.eval("(document.querySelector(%s)||{}).textContent"
                        % json.dumps(VIEW + ".addonSettings .panel-heading .label.pull-right")) or ""
@@ -153,7 +169,8 @@ def load_test(d, res):
     labels = d.page.eval("Array.from(document.querySelectorAll(%s)).map(b=>b.textContent.trim()).join('|')"
                          % json.dumps(VIEW + ".addonSettingsTabs button"))
     res.check(all(s.lower() in labels.lower() for s in ("Aircraft", "EMS", "Autopilot", "AHRS",
-                                                        "Receiver", "Hardware", "Navigation", "Keypad")),
+                                                        "Receiver", "Hardware", "Switchboard", "Audio",
+                                                        "Navigation", "Keypad")),
               "every section has a tab", labels)
     loaded = [s for s in SECTIONS if d.page.eval(SCOPE + ".%s !== null" % s)]
     res.check(len(loaded) == len(SECTIONS), "every section loads its configuration",
@@ -170,6 +187,8 @@ def aircraft_test(d, res):
     select_text(d, "aircraft.units.speed", "KT")
     res.check(d.page.eval(SCOPE + ".aircraft.units.speedConversionFromKmh.multiply") == 0.539957,
               "picking a unit fills in its conversion factor")
+    res.check(unit_options(d) == ["KMH", "KT", "MPH"],
+              "the speed gauge's Unit offers the speed units", unit_options(d))
     res.check(badge(d) == "MODIFIED", "an edit is flagged as unsaved", badge(d))
     res.check(d.page.eval("document.querySelectorAll(%s).length > 0"
                           % json.dumps(VIEW + ".addonSettingsTabs .label-warning")),
@@ -212,10 +231,26 @@ def ems_test(d, res):
     click_icon(d, "fa-plus", panel="Gauges")
     res.check(d.page.eval(SCOPE + ".ems.widgets.length") == n + 1, "a gauge can be added")
 
+    # The Unit is picked from what its source can carry, not typed.
+    res.check(unit_options(d) == ["RPM", "100rpm"] and d.page.eval(SCOPE + ".gauge.unit") == "RPM",
+              "a new gauge offers its source's units and takes the first", unit_options(d))
+    select_text(d, "gauge.source", "oilpressure")
+    res.check(unit_options(d) == ["PSI", "bar", "kPa"] and d.page.eval(SCOPE + ".gauge.unit") == "PSI",
+              "a new source swaps in its own units", unit_options(d))
+    select_text(d, "gauge.unit", "bar")
+    select_text(d, "gauge.source", "fuelpressure")
+    res.check(d.page.eval(SCOPE + ".gauge.unit") == "bar",
+              "a unit that still fits the new source is kept", d.page.eval(SCOPE + ".gauge.unit"))
+    select_text(d, "gauge.source", "cht1")
+    res.check(unit_options(d) == ["°C"] and d.page.eval(SCOPE + ".gauge.unit") == "°C",
+              "a temperature is stored in °C", unit_options(d))
+
     before = count(d, "/settings/ems.json")
     save(d)
     body = posts(d, "/settings/ems.json", before)[-1]
     res.check(len(body["widgets"]) == n + 1, "every gauge is written to ems.json")
+    res.check(body["widgets"][-1]["source"] == "cht1" and body["widgets"][-1]["unit"] == "°C",
+              "the picked source and unit are written", body["widgets"][-1].get("unit"))
     res.check("activeColor" not in json.dumps(body),
               "the arcs' runtime colour never reaches the file")
     res.check(d.page.eval(MAIN + ".EMS.length") == n + 1 and
@@ -409,6 +444,8 @@ def hardware_test(d, res):
               "only the keys that changed are posted", json.dumps(body))
     res.check(isinstance(body["AIS_Enabled"], bool), "a switch is posted as a boolean")
 
+    airspeed_test(d, res)
+
     was = d.page.eval(SCOPE + ".hardware.MS4525DO_Enabled")
     toggle(d, "hardware.MS4525DO_Enabled")
     before = count(d)
@@ -417,6 +454,152 @@ def hardware_test(d, res):
     res.check(body == {"MS4525DO_Enabled": not was},
               "the airspeed sensor switch posts MS4525DO_Enabled", json.dumps(body))
     d.shot("settings_hardware")
+
+
+def airspeed_test(d, res):
+    """The pitot sensor's scale and zero (main/airspeed.go). The fixture's daemon
+    predates AirspeedScale, so the form must read it as 1 and not post it unasked;
+    the zero offset is measured by POST /calibrateAirspeed, never posted."""
+    res.check(d.page.eval(SCOPE + ".hardware.MS4525DO_Enabled") is True,
+              "the fixture has the airspeed sensor on")
+    res.check(d.page.eval(SCOPE + ".hardware.AirspeedScale") == 1,
+              "no AirspeedScale in stratux.conf reads as 1",
+              d.page.eval(SCOPE + ".hardware.AirspeedScale"))
+
+    for bad in ("0", "1.6"):
+        set_input(d, "hardware.AirspeedScale", bad)
+        disabled, why = blocked(d)
+        res.check(disabled and ("AirspeedScale" in why or "Airspeed scale" in why),
+                  "an airspeed scale of %s blocks Save" % bad, why)
+
+    set_input(d, "hardware.AirspeedScale", "1.04")
+    before = count(d)
+    save(d)
+    body = posts(d, since=before)[-1]
+    res.check(body == {"AirspeedScale": 1.04}, "the airspeed scale posts only AirspeedScale, a number",
+              json.dumps(body))
+
+    # The daemon averages 2 s, saves the offset and serves it on /getSettings.
+    d.srv.settings["AirspeedZeroOffset"] = 17.6
+    zeros = lambda: sum(1 for p, _ in d.srv.posted if p.split("?")[0] == "/calibrateAirspeed")
+    before = zeros()
+    res.check(press(d, "Zero Airspeed"), "the Zero Airspeed button is there")
+    d.page.pump(3.2)
+    res.check(zeros() == before + 1, "Zero Airspeed posts /calibrateAirspeed once")
+    msg = d.page.eval(SCOPE + ".airspeedZero.message")
+    res.check("17.6 Pa" in msg, "the new zero offset is shown", msg)
+    res.check(d.page.eval(SCOPE + ".state.hardware.saveStatus") != "modified",
+              "zeroing leaves the hardware section unmodified",
+              d.page.eval(SCOPE + ".state.hardware.saveStatus"))
+    d.page.eval("document.querySelector(%s).scrollIntoView({block:'center'})"
+                % json.dumps(VIEW + "[ng-model='hardware.AirspeedScale']"))
+    d.shot("settings_airspeed")
+    set_input(d, "hardware.AirspeedScale", "1")
+    before = count(d)
+    save(d)
+    body = posts(d, since=before)[-1]
+    res.check(body == {"AirspeedScale": 1}, "the zero offset is never posted back", json.dumps(body))
+
+
+def switchboard_test(d, res):
+    """Switches: the tiles of the Switchboard plate, posted as one list."""
+    tab(d, "Switchboard")
+    fixture = d.srv.settings.get("Switches", [])
+    n = d.page.eval(SCOPE + ".switchboard.Switches.length")
+    res.check(n == len(fixture) and n > 0, "every switch of stratux.conf is listed", "%d of %d" % (n, len(fixture)))
+    rows = d.page.eval("Array.from(document.querySelectorAll(%s)).map(r=>r.textContent.replace(/\\s+/g,' ').trim())"
+                       % json.dumps(VIEW + ".addonSettingsSwitches tr"))
+    toggles = [r for r in rows if "Display toggle" in r]
+    res.check(len(toggles) == sum(1 for f in fixture if f["Type"] == 5) and "Audio: Beeper" in toggles[0],
+              "a display toggle is shown as the Audio switch it flips", toggles[:1])
+
+    d.page.eval("document.querySelectorAll(%s)[1].click()" % json.dumps(VIEW + ".addonSettingsSwitches tr"))
+    d.page.pump(0.3)
+    set_input(d, "switchItem().Name", "")
+    disabled, why = blocked(d)
+    res.check(disabled and "name is empty" in why, "a switch with no name blocks Save", why)
+    set_input(d, "switchItem().Name", "DSP OFF")
+
+    click_icon(d, "fa-plus", panel="Switches")
+    res.check(d.page.eval(SCOPE + ".edit.selectedSwitch") == n and
+              d.page.eval(SCOPE + ".switchItem().Type") == 2,
+              "a new switch is a command, selected for editing")
+    disabled, why = blocked(d)
+    res.check(disabled and "command is empty" in why, "a command switch with no command blocks Save", why)
+    set_input(d, "switchItem().Uri", "amixer sset Speaker 25%")
+    select_text(d, "switchItem().Type", "Display toggle")
+    res.check(d.page.eval(SCOPE + ".switchItem().Uri") == "AUDIO_STATUS",
+              "turning it into a display toggle picks a toggle instead of the command",
+              d.page.eval(SCOPE + ".switchItem().Uri"))
+    select_text(d, "switchItem().Uri", "Alert Sounds")
+    click_icon(d, "fa-arrow-up", panel="Switch %d:" % (n + 1))
+    res.check(d.page.eval(SCOPE + ".edit.selectedSwitch") == n - 1 and
+              d.page.eval(SCOPE + ".switchboard.Switches[%d].Uri" % (n - 1)) == "AUDIO_STATUS_ALARMS",
+              "a switch can be moved up the list")
+    d.shot("settings_switchboard")
+
+    before = count(d)
+    save(d)
+    body = posts(d, since=before)[-1]
+    res.check(list(body.keys()) == ["Switches"] and len(body["Switches"]) == n + 1,
+              "the whole list is posted as Switches", json.dumps(body)[:80])
+    bad = [item for item in body["Switches"]
+           if sorted(item.keys()) != sorted(SWITCH_FIELDS) or
+           any(isinstance(item[k], bool) or not isinstance(item[k], t) for k, t in SWITCH_FIELDS.items())]
+    res.check(not bad, "each switch is posted with the fields and types the daemon asserts", bad[:1])
+    res.check(body["Switches"][n - 1] == {"Name": "NEW", "Type": 5, "Uri": "AUDIO_STATUS_ALARMS"},
+              "the new switch is posted where it was moved", body["Switches"][n - 1])
+    res.check(badge(d) == "SAVED", "saving the switches reports success", badge(d))
+    before = count(d)
+    save(d)
+    res.check(count(d) == before, "saving unchanged switches posts nothing")
+
+
+def audio_flags(d):
+    return d.page.eval("[%s].map(k=>window.localStorage.getItem(k))" % ",".join(json.dumps(k) for k in AUDIO_FLAGS))
+
+
+def audio_toggle(d, index):
+    d.page.eval("(function(){var e=document.querySelectorAll(%s)[%d]; (e.querySelector('.switch')||e).click();})()"
+                % (json.dumps(VIEW + "ui-switch[ng-model='audio[flag.key]']"), index))
+    d.page.pump(0.3)
+
+
+def audio_test(d, res):
+    """Audio: the display's sound switches, kept in localStorage."""
+    tab(d, "Audio")
+    stored = audio_flags(d)
+    shown = d.page.eval("[%s].map(k=>%s.audio[k])" % (",".join(json.dumps(k) for k in AUDIO_FLAGS), SCOPE))
+    res.check(shown == [v == "true" for v in stored], "the switches show what this display has stored",
+              "%s vs %s" % (shown, stored))
+    res.check(d.page.eval("document.querySelectorAll(%s).length"
+                          % json.dumps(VIEW + "ui-switch[ng-model='audio[flag.key]']")) == len(AUDIO_FLAGS),
+              "one switch per audio flag")
+    want = [not v for v in shown]
+    for index, flip in enumerate(want):
+        if flip != shown[index]:
+            audio_toggle(d, index)
+    res.check(badge(d) == "MODIFIED", "an audio edit is flagged as unsaved", badge(d))
+    res.check(audio_flags(d) == stored, "nothing is stored before Save", audio_flags(d))
+    d.shot("settings_audio")
+
+    before = count(d)
+    save(d)
+    res.check(count(d) == before, "the audio switches post nothing to the daemon")
+    res.check(audio_flags(d) == ["true" if v else "false" for v in want],
+              "Save stores the flags as the services read them", audio_flags(d))
+    res.check(badge(d) == "SAVED", "saving the audio switches reports success", badge(d))
+    volume = d.page.eval("window.gMeterBuzzerPlayer ? window.gMeterBuzzerPlayer.volume : null")
+    res.check(volume == (75 if want[0] else 0), "the beeper volume follows at once, no reload", volume)
+
+    press(d, "Reload")
+    res.check(d.page.eval("[%s].map(k=>%s.audio[k])" % (",".join(json.dumps(k) for k in AUDIO_FLAGS), SCOPE)) == want,
+              "Reload reads the stored flags back")
+    # The Switchboard's display toggle flips the same flag the panel shows.
+    d.page.eval("window.localStorage.setItem('Display_Audio_Alerts_Enabled', %s)" % json.dumps("false" if want[2] else "true"))
+    press(d, "Reload")
+    res.check(d.page.eval(SCOPE + ".audio.Display_Audio_Alerts_Enabled") == (not want[2]),
+              "a flag flipped elsewhere shows on Reload")
 
 
 def posted_bodies_test(d, res):
@@ -462,7 +645,8 @@ def main():
 
         load_test(d, res)
         for section_test in (aircraft_test, ems_test, navigation_test, keypad_test,
-                             autopilot_test, ahrs_test, receiver_test, hardware_test):
+                             autopilot_test, ahrs_test, receiver_test, hardware_test,
+                             switchboard_test, audio_test):
             section_test(d, res)
         posted_bodies_test(d, res)
         res.check(not d.js_errors(), "no JS errors in the whole run", d.js_errors()[:2])

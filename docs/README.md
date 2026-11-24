@@ -31,6 +31,16 @@ hardware integration). User-facing how-tos live in the
 - **[http-api.md](http-api.md)** — the full HTTP + WebSocket JSON API.
 - **[settings-reference.md](settings-reference.md)** — every `stratux.conf` / `/getSettings`
   field.
+- **[tech-debt/top-bottom-bars.md](tech-debt/top-bottom-bars.md#changing-the-top-bar)** — the
+  RB-01 top and bottom bars; how to hide, show, reorder or add top bar slots, per unit or in
+  the code.
+- **[glide-range.md](glide-range.md)** — the glide range on the RB-01 map and synthetic view:
+  the `bestGlide` parameters in `aircraft.json`, the `glideRange` curtain style in
+  `synthview.json`, how the reachable area is computed over terrain and wind, and what is not
+  modelled.
+- **[synthview-traffic-tubes.md](synthview-traffic-tubes.md)** — the vertical tube and the
+  predicted path (speed, track and vertical speed) of every aircraft on the synthetic view,
+  the `projection` setting in `synthview.json`, traffic altitude reference and scene scale.
 - **[terrain-elevations.md](terrain-elevations.md)** — the `elevations.json` terrain grid
   behind synthetic vision: format, grid geometry, how the HMI reads it, known gaps, and a
   proposed water layer.

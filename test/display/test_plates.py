@@ -31,6 +31,7 @@ PLATES = [
     ("airfields", None),
     ("resources", None),
     ("aircraft", None),
+    ("logbook", None),
     ("switchboard", None),
     ("charts", None),
 ]

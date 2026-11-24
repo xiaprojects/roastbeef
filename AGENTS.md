@@ -81,7 +81,7 @@ Notes:
   exact IMU, the GDL90/ForeFlight/X-Plane attitude outputs, and `sensorAttitudeSender`
   itself on a fake IMU), `airdata_test.go` (the pitot and baro senders on scripted sensors)
   and `gps_test.go` (the NMEA parser: textbook sentences, all hemispheres, malformed input,
-  NACp), `lastposition_test.go` (the startup position: clean and power-cut logs read with
+  NACp, VTG ignored since RMC + GGA are mandatory), `lastposition_test.go` (the startup position: clean and power-cut logs read with
   nothing written, log order, the Hobbs fallback), `slavenmeadisplay_test.go` (the Slave
   NMEA Display plugin: `$RBATT`/`$RBAIR` for an RB-09, its loop and its setting,
   `docs/integration/slave-nmea-display-format.md`), `radio_test.go` (the SDR driver: every
@@ -200,7 +200,9 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
 - Traffic/situation history logged to SQLite via `main/datalog.go`.
 - GPS Hobbs meter / flight log: `main/hobbsmeter.go` counts the minutes above 50 km/h ground
   speed, one entry per flight in `settings/hobbsmeter.json` (flushed every 5 minutes; no
-  default file is shipped, `make www` would overwrite it), totals in `/getStatus`.
+  default file is shipped, `make www` would overwrite it), totals in `/getStatus`. The RB-01
+  Logbook plate (`web/RB-01/plates/logbook.html`, from the Propeller / Engine tiles of the
+  Aircraft plate) lists it, newest first, named by the nearest airfield of `db.airfields.json`.
 - Last known position: `main/lastposition.go` seeds lat/lon/altitude at startup (fix quality
   left 0) from the newer of the newest flight log's last fix and the Hobbs log's last landing.
   It writes nothing to the card: a WAL-mode SQLite file opened even `mode=ro` rewrites its

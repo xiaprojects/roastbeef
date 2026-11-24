@@ -99,8 +99,8 @@ function AircraftCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     $scope.items = [[
-        { "label": "Propeller", "value": "", "color": "#4444ff","unit":"m" },
-        { "label": "Engine", "value": "", "color": "#4444ff","unit":"m" },
+        { "label": "Propeller", "value": "", "color": "#4444ff", "href":"#/logbook","unit":"m" },
+        { "label": "Engine", "value": "", "color": "#4444ff", "href":"#/logbook","unit":"m" },
         { "label": "Fuel L", "value": "0L", "color": "#ff0000", "href":"#/ems","unit":"L" },
         { "label": "", "value": null, "color": "transparent","unit":"" },
         { "label": "", "value": "", "color": "#00000000","unit":"" },

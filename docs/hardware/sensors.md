@@ -56,14 +56,21 @@ type B output) are a `sensors.MS4525DOConfig` away; the daemon probes the type I
 Detection insists on a *fresh* sample within a few reads, so a foreign chip at `0x28` (a
 BNO055 answers `0xA0…`, which decodes as "stale", forever) is not taken for a pitot sensor.
 
-`airspeedSender()` (`main/airspeed.go`) runs at 10 Hz:
+The driver polls the sensor at 20 Hz (about 1 % of a 100 kHz I²C bus) and hands out the
+mean of the fresh samples since the previous read (stale answers are repeats and are
+skipped). `airspeedSender()` reads it at 2 Hz, so each value averages about 10 samples:
+roughly 3× less white noise (the 1 Pa count steps and the sensor's own noise) at the cost
+of a 0.5 s update period. Then
+`airspeedSender()` (`main/airspeed.go`):
 
 1. subtracts `AirspeedZeroOffset` (Pa), the sensor's reading at zero airflow;
 2. takes the magnitude, so the tube order does not matter;
 3. filters the dynamic pressure with a 0.3 s EWMA (the square root inflates the sensor
    noise near zero);
 4. below 10 Pa (≈ 8 kt) reports 0, otherwise `common.CalcIndicatedAirspeed()` — the
-   compressible ISA sea-level relation an airspeed indicator is calibrated to.
+   compressible ISA sea-level relation an airspeed indicator is calibrated to;
+5. multiplies that by `AirspeedScale` (default 1), the installation's position error
+   correction (see below).
 
 The result is `IndicatedAirSpeed` (knots) in `/getSituation`, with `PitotPressure` (Pa,
 filtered, after the offset), `PitotTemperature` (°C) and `PitotLastMeasurementTime`. 0 means
@@ -78,10 +85,27 @@ for 1 s) the last airspeed stands for 1 s, then is zeroed rather than left stand
 ≈ 15 kt of spurious airspeed), so `AirspeedZeroOffset` must be measured on the installed
 unit: `POST /calibrateAirspeed` with the aircraft stationary in still air and the pitot cover
 off averages 2 s of samples into the setting (`409` if no sensor is connected or the GPS says
-the aircraft is moving). The GPS/AHRS page of the legacy UI has a *Zero Airspeed* button and
-shows IAS / pitot pressure / temperature; the RB-01 HMI can call the endpoint from an addon.
+the aircraft is moving). The RB-01 HMI has a *Zero Airspeed* button in Settings → Hardware
+(shown while the airspeed sensor is on), which shows the new offset in Pa when done; the
+GPS/AHRS page of the legacy UI has one too and shows IAS / pitot pressure / temperature.
+An unzeroed sensor typically reads 10–20 km/h on the ground: the first RB-01 install read
+17.6 Pa at rest, 19 km/h of IAS standing on the bench.
 The offset drifts a few Pa with temperature, which the deadband absorbs on the ground and is
 negligible in flight (15 Pa at 100 kt ≈ 0.2 kt).
+
+**Scale for the position error.** Zeroing fixes the sensor; it cannot fix where the pitot
+and static ports sit on the airframe, which makes IAS read a few percent off calibrated
+airspeed. `AirspeedScale` (Settings → Hardware → *Airspeed Scale*, 0.5 to 1.5, default 1)
+multiplies the airspeed to correct it: 1.03 when IAS reads 3 % low. Measure it in flight,
+e.g. with a GPS three-leg run at constant IAS and altitude: the TAS solved from the three
+ground speeds, converted back to CAS for the altitude and temperature, divided by the IAS
+shown. It is a single factor; if the error varies much across the speed range, use the
+value at approach speed. It is applied after the deadband, so it never makes a parked
+aircraft show an airspeed. The daemon refuses a value outside the range on `/setSettings`
+and treats one in a hand-edited `stratux.conf` as 1. There is deliberately no offset in
+km/h: airspeed goes with the square root of the pressure, so a fixed speed offset would
+read wrong across the range or show speed when parked; the offset belongs in Pa, which is
+`AirspeedZeroOffset`.
 
 There is no enable setting: `pollSensors()` probes for the chip every ~4 s while none is
 connected (a miss is logged only in `DEBUG`) and takes it into use as soon as it answers like

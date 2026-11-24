@@ -54,6 +54,8 @@ These are **inputs**, not outputs — Stratux consumes data from them:
 - **NMEA in (TCP :30011)** — a listener that lets an external device (e.g. an OGN tracker)
   feed NMEA into Stratux over TCP. The remote IP is surfaced as `GPS_NetworkRemoteIp` in
   `/getStatus` so you can point the external device at the right address.
+  A device that provides the GPS this way must send RMC and GGA. VTG is ignored (see
+  [gps.md](../hardware/gps.md#required-nmea-sentences-rmc-and-gga)).
 
 ## Where the outputs are configured
 

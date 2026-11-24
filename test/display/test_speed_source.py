@@ -115,7 +115,10 @@ def main():
         value = text(d, ".attitude-speed").strip().split()[0]
         res.check(value == str(pilot(120)), "tape follows the airspeed", value)
 
-        # -- top bar, slot 1 ------------------------------------------------
+        # -- top bar speed slot ---------------------------------------------
+        # Left out by default since WIND took the first place (TOP_BAR_SLOTS_HIDDEN): shown
+        # again as a unit with no airspeed sensor would, read when the bar is created
+        d.page.eval("localStorage.setItem('topBarSlotsHidden', '[]')")
         d.page.eval("(function(){var s = angular.element(document.body).scope();"
                     " s.uiSidebarTop = true; s.$apply();})()")
         d.page.wait("!!document.querySelector(\".rb-bar-top [data-slot='speed']\")",

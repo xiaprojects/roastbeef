@@ -37,12 +37,16 @@ MENU_SECONDS = 10
 TIMER, EMS_YELLOW, EMS_RED = 2, 14, 15
 LAMP = {"": "rgb(44, 44, 44)", "info": "rgb(255, 255, 255)",
         "warning": "rgb(255, 196, 0)", "danger": "rgb(196, 0, 0)"}
-SLOTS = ["speed", "alt", "agl", "track", "ap", "gmax", "com", "stby", "utc", "uptime",
+SLOTS = ["wind", "speed", "alt", "agl", "track", "ap", "gmax", "com", "stby", "utc", "uptime",
          "voice", "oil", "outsideTemperature", "traffic", "alerts", "hide"]
 # TOP_BAR_DROP_ORDER of plates/js/bottom.js; the slots not in it are never dropped
 DROP_ORDER = ["voice", "utc", "gmax", "uptime", "track", "stby", "traffic", "agl", "outsideTemperature",
               "oil", "ap"]
 NEVER_DROPPED = [s for s in SLOTS if s not in DROP_ORDER]
+# TOP_BAR_SLOTS_HIDDEN of plates/js/bottom.js. The checks boot with every slot shown
+# (localStorage.topBarSlotsHidden '[]'); check_slots_hidden checks the default
+HIDDEN_BY_DEFAULT = ["speed"]
+ALL_SLOTS_SHOWN = {"topBarSlotsHidden": "[]"}
 
 # Counts the window listeners and the intervals alive, before any page script runs
 INSTRUMENT = """(() => {
@@ -102,7 +106,7 @@ def boot(d, width, height, storage=None, plate=None):
     """Load the HMI at an exact viewport, with localStorage set before it starts."""
     d.page.send("Emulation.setDeviceMetricsOverride", width=width, height=height,
                 deviceScaleFactor=1, mobile=False)
-    for key, value in (storage or {}).items():
+    for key, value in dict(ALL_SLOTS_SHOWN, **(storage or {})).items():
         d.page.eval("localStorage.setItem(%r, %r)" % (key, value))
     d.page.goto(d.srv.url + "/RB-01/index.html")
     d.page.wait("typeof angular !== 'undefined' && !!angular.element(document.body).scope()",
@@ -571,6 +575,50 @@ def check_values(res, d):
         res.check(page(d) == href, "T8 a tap on %s opens %s" % (slot.upper(), href), d.hash())
 
 
+def check_slots_hidden(res, d):
+    """The slots of TOP_BAR_SLOTS_HIDDEN are left out by default, localStorage.topBarSlotsHidden
+    replaces the list, and WIND is the first slot with its value from the wind estimate."""
+    d.show("hsi", "#hsi")
+
+    def recreate(stored):
+        d.page.eval("localStorage.removeItem('topBarSlotsHidden')" if stored is None
+                    else "localStorage.setItem('topBarSlotsHidden', %r)" % stored)
+        scope(d, "s.uiSidebarTop = false")
+        bar_shown(d, "top", False)
+        scope(d, "s.uiSidebarTop = true")
+        bar_shown(d, "top")
+        return d.page.eval("[...document.querySelectorAll('.rb-bar-top .rb-slot')].map(e => e.dataset.slot)")
+
+    shown = recreate(None)
+    res.check(shown and shown[0] == "wind" and not any(s in shown for s in HIDDEN_BY_DEFAULT),
+              "default: WIND first, %s left out" % HIDDEN_BY_DEFAULT, shown)
+    shown = recreate('["wind", "utc"]')
+    res.check(shown and shown[0] == "speed" and "wind" not in shown and "utc" not in shown,
+              "topBarSlotsHidden replaces the list: speed back in the first place", shown)
+    shown = recreate("not json")
+    res.check(shown and shown[0] == "wind" and "speed" not in shown, "a stored value that is not a list is ignored",
+              shown)
+    shown = recreate(ALL_SLOTS_SHOWN["topBarSlotsHidden"])
+    res.check(shown is not None and shown[:2] == ["wind", "speed"], "'[]' shows every slot", shown)
+
+    # The wind of windestimator.js, which needs a turn to fit: its estimate is stood in for
+    unit = d.page.eval("window.aircraftData.units.speed")
+    for valid, source, direction, kt, label, value in (
+            (True, "tas", 0.3, 15, "WIND %s" % unit, None),
+            (True, "gs", 269.6, 20, "WIND EST %s" % unit, None),
+            (False, "", 0, 0, "WIND %s" % unit, "---")):
+        d.page.eval("window.windEstimator.estimate = () => ({valid: %s, speed: %r, direction: %r, source: %r})"
+                    % ("true" if valid else "false", kt, direction, source))
+        d.fly(frames=3, interval=0.3, GPSGroundSpeed=100, GPSTrueCourse=90.0, GPSFixQuality=2)
+        d.page.pump(0.3)
+        if value is None:
+            value = "%03d°/%d" % (round(direction) % 360 or 360, d.page.eval(
+                "Math.round(pilotDisplayedSpeedFromKT(%r))" % kt))
+        got = (slot_text(d, "wind", "label"), slot_text(d, "wind", "value"))
+        res.check(got == (label, value), "WIND %s %s" % (source or "invalid", value), {"got": got, "want": (label, value)})
+    d.page.eval("delete window.windEstimator.estimate")
+
+
 def check_new_values(res, d):
     """T12 the slots added on 2026-11-11: COM and STBY of the first radio, ALT, AGL, OIL, AP."""
     d.show("hsi", "#hsi")
@@ -907,6 +955,7 @@ def run_wide(res):
         check_softkey_event(res, d)
         check_values(res, d)
         check_new_values(res, d)
+        check_slots_hidden(res, d)
         check_voice(res, d)
         check_alerts(res, d)
         check_listeners(res, d)

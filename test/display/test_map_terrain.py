@@ -3,8 +3,10 @@
 The map colours the synthetic view's terrain against the aircraft's GPS altitude
 with the rule the 3D view uses (globalTerrainColor in js/global.js): green clear,
 yellow less than 200 m below the aircraft, red above it, blue at or below sea
-level, nothing before the first fix. Both screens share one window of the
-elevation grid around the aircraft (globalTerrainGrid in js/global.js), cut
+level. Without a fix it colours the last known position (main/lastposition.go
+restores it from the card at boot, and a GPS loss leaves it in place); before
+any position, at 0, 0, the window is off the grid and nothing is drawn. Both
+screens share one window of the elevation grid around the aircraft (globalTerrainGrid in js/global.js), cut
 anew once the aircraft is half way to its edge; outside it nothing is drawn.
 
 The test flies the display over real European terrain and reads the overlay back
@@ -16,7 +18,8 @@ shows up as a mismatch at a named position, not as a picture that looks about
 right. Named points (Mont Blanc, the sea off Genoa, ...) then check that the
 data says what a pilot expects there.
 
-    no fix       nothing downloaded, nothing drawn
+    no position  0, 0 (no fix, nothing restored): off the grid, nothing drawn
+    last known   no fix at Aosta, 10,000 ft: drawn and coloured as with a fix
     Alps FL100   Aosta at 10,000 ft: Mont Blanc red, slopes yellow, valleys green
     Alps FL160   the same place at 16,000 ft: above everything, all green
     Genoa        3,000 ft on the coast: the sea blue, the Apennines red
@@ -124,8 +127,10 @@ PROBE = """((step) => {
 TERRAIN_MESHES = """(() => {
     const s = window.__rbScene; if (!s) return [];
     const meshes = [];
+    // The brown underside (loadDEM) shares the geometry: BackSide, skipped
     s.traverse(o => { if (o.isMesh && o.geometry.type === 'PlaneGeometry'
-                           && o.geometry.attributes.color) meshes.push(o); });
+                           && o.geometry.attributes.color
+                           && o.material.side !== THREE.BackSide) meshes.push(o); });
     return meshes;
 })()"""
 
@@ -139,19 +144,20 @@ MESH = """((meshes) => {
         vertices.push([pos[v * 3 + 2], col[v * 3], col[v * 3 + 1], col[v * 3 + 2]]);
     return {count: meshes.length, uuid: mesh.uuid, x: mesh.position.x, y: mesh.position.y,
             z: mesh.position.z, cols: p.widthSegments + 1, rows: p.heightSegments + 1,
-            width: p.width, vertices: vertices};
+            width: p.width, height: p.height, vertices: vertices};
 })(%s)""" % TERRAIN_MESHES
 
 MESH_IDS = "%s.map(m => m.uuid)" % TERRAIN_MESHES
 
 # Every point of interest stands on a vertical tube (generateTubeVertical in
-# synthview.js) as tall as the marker's height: [x, z, height] of each.
+# synthview.js) as tall as the marker's height: [x, z, height] of each. The
+# tube is a unit cylinder that updateTubes() stretches to that height.
 TUBES = """(() => {
     const s = window.__rbScene; if (!s) return [];
     const out = [];
     s.traverse(o => { if (o.isMesh && o.geometry.type === 'CylinderGeometry'
                            && o.geometry.parameters.radiusTop === 5)
-        out.push([o.position.x, o.position.z, o.geometry.parameters.height]); });
+        out.push([o.position.x, o.position.z, o.geometry.parameters.height * o.scale.y]); });
     return out;
 })()"""
 
@@ -324,9 +330,9 @@ def mismatch_note(bad, compared):
     return "%d compared, %d wrong%s" % (compared, len(bad), (": " + bad[0]) if bad else "")
 
 
-def scenario(d, res, grid, name, lat, lon, alt_ft, points, extra):
+def scenario(d, res, grid, name, lat, lon, alt_ft, points, extra, fix=2):
     altitude = alt_ft * FT
-    fly(d, lat, lon, alt_ft)
+    fly(d, lat, lon, alt_ft, fix)
     look_at(d, lat, lon)
     tag = "%-13s" % name
     res.check(wait_window(d, lat, lon), "%s the map draws a window cut around the aircraft" % tag,
@@ -547,8 +553,9 @@ def check_mesh(res, tag, mesh, win, origin, alt_ft):
     res.check(not bad, "%s the mesh holds the window around %.3fN %.3fE" % (tag, win.lat, win.lon),
               bad[:1] or "%d x %d cells" % (win.rows, win.cols))
 
-    cell = mesh["width"] / mesh["cols"]
-    want = ((win.centre[1] - origin[1]) / grid.dlon * cell, (origin[0] - win.centre[0]) / grid.dlat * cell)
+    # A cell is narrower east-west than north-south (TerrainManager.eastScale)
+    cell_ew, cell_ns = mesh["width"] / mesh["cols"], mesh["height"] / mesh["rows"]
+    want = ((win.centre[1] - origin[1]) / grid.dlon * cell_ew, (origin[0] - win.centre[0]) / grid.dlat * cell_ns)
     res.check(abs(mesh["x"] - want[0]) < 0.01 and abs(mesh["z"] - want[1]) < 0.01 and mesh["y"] == 0,
               "%s laid at its place in the scene" % tag,
               "at x %.2f z %.2f, want %.2f %.2f" % (mesh["x"], mesh["z"], want[0], want[1]))
@@ -618,16 +625,21 @@ def synthview_follows(d, res, grid, downloads, first, airfields, lat, lon, alt_f
     win = Window(grid, lat, far)
     check_mesh(res, tag, d.page.eval(MESH), win, first.centre, alt_ft)
 
-    # Every airfield of either window stands where plan() puts it from the
-    # scene's origin, on the terrain it was imported over.
-    cell = d.page.eval("(%s)[0].geometry.parameters.width" % TERRAIN_MESHES) / win.cols
-    wanted = []
+    # Every airfield of the new window stands where plan() puts it from the
+    # scene's origin, on the terrain it was imported over; those only the first
+    # window covered are gone (pruneAirfields).
+    # A cell is narrower east-west than north-south (TerrainManager.eastScale)
+    cell_ew = d.page.eval("(%s)[0].geometry.parameters.width" % TERRAIN_MESHES) / win.cols
+    cell_ns = d.page.eval("(%s)[0].geometry.parameters.height" % TERRAIN_MESHES) / win.rows
+    wanted, left = [], []
     for a in airfields:
-        if first.covers(a["Lat"], a["Lon"]) or win.covers(a["Lat"], a["Lon"]):
-            x = (a["Lon"] - first.centre[1]) / grid.dlon * cell
-            z = (first.centre[0] - a["Lat"]) / grid.dlat * cell
+        x = (a["Lon"] - first.centre[1]) / grid.dlon * cell_ew
+        z = (first.centre[0] - a["Lat"]) / grid.dlat * cell_ns
+        if win.covers(a["Lat"], a["Lon"]):
             elevation, edge = grid.lookup(a["Lat"], a["Lon"])
             wanted.append((a.get("name"), x, z, None if edge else elevation + POI_ABOVE_GROUND))
+        elif first.covers(a["Lat"], a["Lon"]):
+            left.append((a.get("name"), x, z))
     new = sum(1 for a in airfields if win.covers(a["Lat"], a["Lon"]) and not first.covers(a["Lat"], a["Lon"]))
 
     def missing():
@@ -645,18 +657,26 @@ def synthview_follows(d, res, grid, downloads, first, airfields, lat, lon, alt_f
         d.page.pump(1.0)
         lost = missing()
     res.check(new and not lost,
-              "%s all %d airfields of both windows in place, %d of them new" % (tag, len(wanted), new),
+              "%s all %d airfields of the new window in place, %d of them new" % (tag, len(wanted), new),
               lost[:1] or "%d markers" % len(d.page.eval(TUBES) or []))
+    tubes = d.page.eval(TUBES) or []
+    stayed = ["%s at %.0f, %.0f" % (name, x, z) for name, x, z in left
+              if any(abs(t[0] - x) < 0.01 and abs(t[1] - z) < 0.01 for t in tubes)]
+    res.check(not stayed, "%s the %d airfields only the first window covered are gone" % (tag, len(left)),
+              stayed[:1])
     d.shot("map_terrain_synthview_follows")
 
 
 def on_request(res, grid, lat, lon, alt_ft):
     """A fresh session with the overlay saved off: the map downloads nothing, the
-    3D view downloads the grid, and the map, turned on, draws from its window."""
+    3D view downloads the grid, and the map, turned on, draws from its window.
+    The glide range (test_map_glide.py) also reads the terrain, so it is saved
+    off too: with either layer on, the map needs the grid."""
     tag = "%-13s" % "on request"
     with Display(situation={"GPSFixQuality": 0}) as d:
         downloads = Downloads(d.srv, grid)
         d.page.eval("localStorage.setItem('stratux.map.layers.Terrain.visible', 'false')")
+        d.page.eval("localStorage.setItem('stratux.map.layers.Glide range.visible', 'false')")
         d.show("map", "#map_display", timeout=25)
         fly(d, lat, lon, alt_ft)
         d.page.wait(LAYERS_RESTORED, timeout=15, label="map layers restored")
@@ -717,11 +737,16 @@ def main():
                               "l => l.get('title') === 'Terrain' && l.getVisible())" % SCOPE),
                   "map has a visible Terrain layer")
 
-        # -- no fix: no position to cut a window around ------------------------
-        fly(d, 45.74, 7.32, 10000, fix=0)
+        # -- no position yet: 0, 0 until the GPS or the card gives one ---------
+        fly(d, 0.0, 0.0, 0, fix=0)
+        res.check(wait_window(d, 0.0, 0.0), "no position  the window is cut at 0, 0",
+                  d.page.eval(CUT_AT))
         empty, shown = nothing_drawn(d)
-        res.check(empty and downloads.count == 0, "no fix: nothing downloaded, nothing drawn",
-                  "%d downloads, %s" % (downloads.count, shown))
+        res.check(empty, "no position  off the grid, nothing drawn", shown)
+
+        # -- no fix: the last known position is coloured as with a fix --------
+        _, lat, lon, alt_ft, points, extra = SCENARIOS[0]
+        scenario(d, res, grid, "last_known", lat, lon, alt_ft, points, extra, fix=0)
 
         # -- across Europe -------------------------------------------------------
         for name, lat, lon, alt_ft, points, extra in SCENARIOS:

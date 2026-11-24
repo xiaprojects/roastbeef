@@ -23,7 +23,7 @@ PLATES = ["home", "synthview", "hsi", "attitude", "sixpack", "speed",
           "altimeter", "variometer", "turnslip", "heading", "gmetergauge",
           "autopilot", "airfields", "timers", "ems", "emsegt", "radio",
           "checklist", "switchboard", "addons", "map", "radar", "alerts", "resources",
-          "aircraft", "charts"]
+          "aircraft", "logbook", "charts"]
 
 READY = {"synthview": "#synthviewFrame", "hsi": "#hsi",
          "attitude": "#attitude-rollpitch", "map": "#map_display"}

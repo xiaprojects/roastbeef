@@ -96,8 +96,8 @@ printf "\$PSRF103,03,00,05,01*22\r\n" > /dev/ttyUSB0
 
 # RMC:
 printf "\$PSRF103,04,00,01,01*21\r\n" > /dev/ttyUSB0
-# VTG:
-printf "\$PSRF103,05,00,01,01*20\r\n" > /dev/ttyUSB0
+# VTG off (RMC + GGA are mandatory, VTG is not parsed):
+printf "\$PSRF103,05,00,00,01*21\r\n" > /dev/ttyUSB0
 sleep 0.2
 
 printf "Sending SIRF PSRF151 command to enable WAAS\n"
