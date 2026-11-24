@@ -46,6 +46,13 @@ const elevantionPOIfromSurface = 100;
 const FollowMeDistance = 2;
 // Brown of the ground below the horizon and of the terrain's underside
 const TERRAIN_UNDERSIDE_COLOR = { r: 0.36, g: 0.25, b: 0.16 };
+// The two tubes of every aircraft: down to sea level, and its predicted path
+const TUBE_COLOR = 0x1c1c1c;
+// A predicted path drawn level because the target sends no vertical rate
+const TUBE_COLOR_NO_VERTICAL = 0x8a8a8a;
+const TUBE_RADIUS = 5;
+// Predicted path when synthview.json "projection" leaves it out
+const PROJECTION_SECONDS = 60;
 // Haze, sun and cast shadows when synthview.json leaves them out
 // (docs/tech-debt/synthview-terrain-rendering.md sections 11-12)
 const SYNTHVIEW_HAZE = { enabled: true, color: { r: 0.79, g: 0.86, b: 0.9 }, start: 0.2, end: 0.77 };
@@ -419,13 +426,32 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             };
         }
 
-        // Scene position of a point, in cells east and south of the origin
+        // Scene position of a point, in cells east and south of the origin. A
+        // cell is cellSize world units north-south; east-west it is eastScale()
+        // of that, so the scene keeps true horizontal proportions.
         plan(lat, lon) {
             const origin = this.origin || this.centre();
             const dilat = (origin.lat - lat) / this.moltipliers.lat;
             const dilon = (lon - origin.lon) / this.moltipliers.lon;
 
-            return [dilon, dilat];
+            return [dilon * this.eastScale(), dilat];
+        }
+
+        // East-west ground width of a cell over its north-south length. The grid
+        // is square in degrees, not in metres: 0.01 deg of longitude is 800 m at
+        // 44 N, of latitude 1111 m. Drawn square, east-west distances came out
+        // 1.4 times too long and a 045 track pointed 054 over the terrain. Taken
+        // at the origin, so every later window lines up with the first.
+        eastScale() {
+            const at = this.origin || this.centre();
+            return Math.cos(at.lat * Math.PI / 180) * 111320.0 * this.moltipliers.lon / (111132.0 * this.moltipliers.lat);
+        }
+
+        // North-south length of a cell in metres: one horizontal metre is
+        // cellSize / metersPerCell() world units. Heights are one unit a metre,
+        // so the scene stands that many times taller than it is wide.
+        metersPerCell() {
+            return 111132.0 * this.moltipliers.lat;
         }
 
         // Scene position of the window in memory, where its mesh goes
@@ -481,7 +507,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return {
                 "ttl": Date.now() + 1000 * 60 * 60 * 12,
                 "directionModel": 0,
-                "projectionSize": 0,
+                "groundSpeedKt": 0,
+                "verticalFpm": 0,
+                "verticalKnown": true,
                 "reference": null,
                 "referenceTubeFront": null,
                 "referenceTubeVertical": null,
@@ -564,7 +592,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return item;
         }
 
-        convertTrafficToItem(traffic) {
+        convertTrafficToItem(traffic, situation) {
             if (this.setup.hasOwnProperty("trafficTemplates") == false) {
                 return null;
             }
@@ -576,10 +604,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             item.name = "" + traffic.Icao_addr;
             item.scale = 1;
             item = this.trafficTemplateMapper(item, this.getAircraftCategory(traffic.Emitter_category));
-            // item
-            item.projectionSize = this.setup.cellSize * 10.0 * traffic.Speed / 60.0;
-            item.direction = traffic.Track;
-            item.elevation = traffic.Alt * 0.3048;
+            applyTrafficMotion(item, traffic, situation);
             item.x = aXY[0] * this.setup.cellSize;
             item.y = aXY[1] * this.setup.cellSize;
 
@@ -753,6 +778,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             items[0].y = aXY[1] * resources.setup.cellSize;
             items[0].elevation = situation.GPSAltitudeMSL * 0.3048;
             items[0].direction = situation.GPSTrueCourse;
+            items[0].groundSpeedKt = situation.GPSGroundSpeed || 0;
+            items[0].verticalFpm = (situation.GPSVerticalSpeed || 0) * 60;  // ft/s
             items[0].roll = situation.AHRSRoll;
             items[0].pitch = -situation.AHRSPitch + items[0].pitchModel;
 
@@ -776,12 +803,15 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         constructor(container) {
             this.disposed = false;
             this.terrainBrown = null;
+            this.heightScale = 1;  // scene units per metre of height (sceneY), set by loadDEM
             // Autopilot guidance tunnel: the meshes live in guidanceGroup and are
             // rebuilt on every route change, while geometry and material are shared
             // singletons that survive rebuilds (nothing to dispose per rebuild).
             this.guidanceGroup = null;
             this.guidanceGeometry = null;
             this.guidanceMaterial = null;
+            // Glide range curtain (buildGlideRange): rebuilt as the reach changes
+            this.glideGroup = null;
             this.scene = new THREE.Scene();
             this.camera = new THREE.PerspectiveCamera(
                 75,
@@ -945,11 +975,15 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                         this.scene.add(itemReady.reference.scene);
                     }
 
-                    // Generate Vertical Tube
+                    // Tube down to sea level, and the predicted path of an
+                    // aircraft (airfields stand still: no path)
                     this.generateTubeVertical(itemReady, setup);
-                    if (itemReady.referenceTubeVertical != null) {
-                        this.scene.add(itemReady.referenceTubeVertical);
+                    this.scene.add(itemReady.referenceTubeVertical);
+                    if (itemReady.airfieldKey == null) {
+                        this.generateTubeProjection(itemReady, setup);
+                        this.scene.add(itemReady.referenceTubeFront);
                     }
+                    this.updateTubes(itemReady, setup);
 
                     this.generateThreshold(itemReady, setup);
                     if (itemReady.referenceThreshold != null) {
@@ -959,20 +993,6 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                         this.scene.add(itemReady.referenceLabel);
                     }
 
-                    // TODO: unify the code heading/direction (that shall be "projection")
-                    if (itemReady.direction == 0) {
-
-                    }
-                    else {
-
-                        // Generate H Tube
-                        if (itemReady.projectionSize > 0) {
-                            this.generateTubeProjection(itemReady, setup);
-                            if (itemReady.referenceTubeFront != null) {
-                                this.scene.add(itemReady.referenceTubeFront);
-                            }
-                        }
-                    }
                     requestAnimationFrame(animate);
                 })
             }
@@ -983,7 +1003,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         cameraFollowItem(item, resources, distance = 5) {
             this.camera.position.set(
                 item.x - distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize / FollowMeDistance,
-                item.elevation,
+                this.sceneY(item.elevation),
                 item.y - distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize / FollowMeDistance
             );
             // The camera sits behind the aircraft at its altitude: on the ground, on
@@ -993,17 +1013,24 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             const ground = this.groundAt(this.camera.position.x, this.camera.position.z);
             if (ground != null) {
                 const clearance = resources.setup.cameraClearanceMeters != null ? resources.setup.cameraClearanceMeters : 60;
-                this.camera.position.y = Math.max(this.camera.position.y, ground + clearance);
+                this.camera.position.y = Math.max(this.camera.position.y, ground + this.sceneY(clearance));
             }
             this.controls.target.set(
                 item.x + distance * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 0)) * resources.setup.cellSize / FollowMeDistance,
-                item.elevation,
+                this.sceneY(item.elevation),
                 item.y + distance * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180)) * resources.setup.cellSize / FollowMeDistance
             );
             this.controls.update();
         }
 
-        // Terrain height in metres under a scene point, null off the window. The
+        // Scene height of a height in metres. One unit a metre by default, which
+        // stands the scene 1 / unitsPerMeter (about 2.5) times taller than wide;
+        // synthview.json "verticalExaggeration" sets that ratio (heightScaleFor).
+        sceneY(metres) {
+            return metres * this.heightScale;
+        }
+
+        // Terrain height under a scene point, in scene units (sceneY), null off the window. The
         // highest of the four surrounding nodes: the mesh between them is never
         // above it, so a camera held at this height is never inside the surface.
         groundAt(x, z) {
@@ -1016,7 +1043,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             if (!(col >= 0 && col <= ncols - 1 && fromNorth >= 0 && fromNorth <= nrows - 1)) return null;
             const c0 = Math.floor(col), c1 = Math.min(c0 + 1, ncols - 1);
             const r0 = nrows - 1 - Math.floor(fromNorth), r1 = Math.max(r0 - 1, 0);
-            return Math.max(grid[r0][c0], grid[r0][c1], grid[r1][c0], grid[r1][c1]);
+            return this.sceneY(Math.max(grid[r0][c0], grid[r0][c1], grid[r1][c0], grid[r1][c1]));
         }
 
         generateItem(item, setup = {}, callback = null) {
@@ -1025,27 +1052,77 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             }
         }
 
+        // Both tubes are one unit tall cylinders that updateTubes() stretches:
+        // built once with an item, they follow its climbs, descents and speed
+        // changes without new buffers. Sized at creation they kept the first
+        // altitude (the vertical one floated or sank as the traffic moved) and
+        // the first speed (a target first seen at 0 kt never got a path).
         generateTubeVertical(item, setup) {
-            const geometryConeVertical = new THREE.CylinderGeometry(5, 5, item.elevation, 32)
-            const materialConeVertical = new THREE.MeshBasicMaterial({ color: 0x1c1c1c });
-            const coneConeVertical = new THREE.Mesh(geometryConeVertical, materialConeVertical);
-            coneConeVertical.position.y = item.elevation / 2.0
-            coneConeVertical.position.x = item.x
-            coneConeVertical.position.z = item.y
-            item.referenceTubeVertical = coneConeVertical;
+            item.referenceTubeVertical = new THREE.Mesh(
+                new THREE.CylinderGeometry(TUBE_RADIUS, TUBE_RADIUS, 1, 32),
+                new THREE.MeshBasicMaterial({ color: TUBE_COLOR }));
+            item.referenceTubeVertical.name = "tubeVertical";
             return item;
+        }
+
+        generateTubeProjection(item, setup) {
+            item.referenceTubeFront = new THREE.Mesh(
+                new THREE.CylinderGeometry(TUBE_RADIUS, TUBE_RADIUS, 1, 32),
+                new THREE.MeshBasicMaterial({ color: TUBE_COLOR }));
+            item.referenceTubeFront.name = "tubeProjection";
+            return item;
+        }
+
+        // synthview.json "projection", every value checked
+        projectionSetup(configured) {
+            const c = configured || {};
+            const seconds = c.seconds;
+            return {
+                "enabled": c.enabled !== false,
+                "seconds": (typeof seconds === "number" && isFinite(seconds) && seconds >= 5 && seconds <= 600) ? seconds : PROJECTION_SECONDS
+            };
+        }
+
+        // The vertical tube from sea level up to the item; the predicted path
+        // from the item to where it will be in projection.seconds at its ground
+        // speed, track and vertical speed: climbing it points up, descending
+        // down. Both drawn in the scene's own scales (setup.unitsPerMeter
+        // across, a unit a metre up), so a path that meets the terrain or
+        // another aircraft's path does so in that time. No ground speed, no path.
+        updateTubes(item, setup) {
+            const vertical = item.referenceTubeVertical;
+            if (vertical != null) {
+                const height = Math.max(this.sceneY(item.elevation), 0);
+                vertical.visible = height > 0;
+                vertical.scale.y = Math.max(height, 1e-3);
+                vertical.position.set(item.x, height / 2, item.y);
+            }
+            const path = item.referenceTubeFront;
+            if (path == null) return;
+            const projection = this.projectionSetup(setup.projection);
+            const d = predictedPathOffset(item.groundSpeedKt || 0, item.direction || 0, item.verticalFpm || 0,
+                projection.seconds, setup.unitsPerMeter || 0);
+            d[1] = this.sceneY(d[1]);
+            const length = Math.hypot(d[0], d[1], d[2]);
+            path.visible = projection.enabled && item.groundSpeedKt > 0 && isFinite(length) && length > 1;
+            if (!path.visible) return;
+            path.material.color.setHex(item.verticalKnown === false ? TUBE_COLOR_NO_VERTICAL : TUBE_COLOR);
+            path.scale.y = length;
+            path.position.set(item.x + d[0] / 2, this.sceneY(item.elevation) + d[1] / 2, item.y + d[2] / 2);
+            path.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0),
+                new THREE.Vector3(d[0] / length, d[1] / length, d[2] / length));
         }
 
         generateThreshold(item, setup) {
 
-            var labelDisplacement = item.elevation + 120;
+            var labelDisplacement = this.sceneY(item.elevation) + 120;
 
             if (item.hasOwnProperty("heading")) {
                 if(item.heading>180) {
                     item.heading = item.heading - 180;
                 }
                 const container = new THREE.Object3D();
-                container.position.y = item.elevation - elevantionPOIfromSurface + 10;
+                container.position.y = this.sceneY(item.elevation - elevantionPOIfromSurface) + 10;
                 labelDisplacement = container.position.y + elevantionPOIfromSurface + 130;
                 container.position.x = item.x
                 container.position.z = item.y
@@ -1170,22 +1247,102 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             return item;
         }
 
-        generateTubeProjection(item, setup) {
 
-            const geometry2 = new THREE.CylinderGeometry(5, 5, item.projectionSize, 32)
-            const material2 = new THREE.MeshBasicMaterial({ color: 0x1c1c1c });
-            const cone = new THREE.Mesh(geometry2, material2);
-            cone.position.x = item.x + item.projectionSize / 2 * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180 + 90))
-            cone.position.y = item.elevation
-            cone.position.z = item.y + item.projectionSize / 2 * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 180 + 90))
+        /*****************************************************
+         * Glide range (js/glidereach.js, docs/glide-range.md)
+         *
+         * The boundary of the area reachable in a best-glide descent, the one the
+         * 2D map outlines, stood on the terrain as a dashed translucent curtain
+         * with a solid line along its foot: a line flat on the ground disappears
+         * at the grazing angles of a cockpit view, a fence does not. Magenta and
+         * dashed like the map's outline unless synthview.json "glideRange" says
+         * otherwise. Static in world coordinates, rebuilt when the reach changes.
+         */
 
-            cone.rotation.z = (Math.PI * 2.0 / 360) * (180 + item.direction)
-            cone.rotation.x = (Math.PI * 2.0 / 360) * (90)
-
-            item.referenceTubeFront = cone;
-            return item;
+        // synthview.json "glideRange", every value checked
+        glideRangeSetup(configured) {
+            const c = configured || {};
+            const number = (value, fallback, min, max) => {
+                return (typeof value === "number" && isFinite(value) && value >= min && value <= max) ? value : fallback;
+            };
+            return {
+                "enabled": c.enabled !== false,
+                "color": number(c.color, 0xFF00FF, 0, 0xFFFFFF),
+                "opacity": number(c.opacity, 0.55, 0.05, 1),
+                "wallMeters": number(c.wallMeters, 150, 10, 2000),
+                "liftMeters": number(c.liftMeters, 15, 0, 500),
+                "dashCells": number(c.dashCells, 1.0, 0.1, 50),
+                "gapCells": number(c.gapCells, 0.6, 0, 50)
+            };
         }
 
+        // reach: glideReach() or null; terrain: the TerrainManager (its projection)
+        buildGlideRange(reach, terrain, setup) {
+            this.disposeGlideRange();
+            const style = this.glideRangeSetup(setup.glideRange);
+            if (reach == null || !style.enabled || this.terrainBrown == null || !setup.cellSize) return;
+            const cell = setup.cellSize;
+            const dash = style.dashCells * cell, period = dash + style.gapCells * cell;
+
+            // The boundary in scene units, half a cell between samples so it follows
+            // the ground; a sample off the terrain mesh breaks it (null).
+            const ring = reach.points.concat([reach.points[0]]);
+            const samples = [];
+            for (let k = 0; k + 1 < ring.length; k++) {
+                const a = ring[k], b = ring[k + 1];
+                const n = Math.max(1, Math.ceil(2 * Math.max(Math.abs(b[0] - a[0]) / terrain.moltipliers.lat,
+                    Math.abs(b[1] - a[1]) / terrain.moltipliers.lon)));
+                for (let i = (k == 0 ? 0 : 1); i <= n; i++) {
+                    const t = i / n;
+                    const xy = terrain.plan(a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1]));
+                    const x = xy[0] * cell, z = xy[1] * cell;
+                    const ground = this.groundAt(x, z);
+                    samples.push(ground == null ? null : [x, Math.max(ground, 0) + this.sceneY(style.liftMeters), z]);
+                }
+            }
+
+            const wall = [], lines = [];
+            let along = 0;
+            for (let k = 0; k + 1 < samples.length; k++) {
+                const p = samples[k], q = samples[k + 1];
+                if (p == null || q == null) continue;
+                const top = this.sceneY(style.wallMeters);
+                lines.push(p[0], p[1], p[2], q[0], q[1], q[2]);
+                const length = Math.hypot(q[0] - p[0], q[2] - p[2]);
+                const on = (along % period) < dash;
+                along += length;
+                if (!on) continue;
+                wall.push(p[0], p[1], p[2], q[0], q[1], q[2], q[0], q[1] + top, q[2],
+                    p[0], p[1], p[2], q[0], q[1] + top, q[2], p[0], p[1] + top, p[2]);
+                lines.push(p[0], p[1] + top, p[2], q[0], q[1] + top, q[2]);
+            }
+            if (lines.length == 0) return;
+
+            const group = new THREE.Group();
+            group.name = "glideRange";
+            const wallGeometry = new THREE.BufferGeometry();
+            wallGeometry.setAttribute('position', new THREE.Float32BufferAttribute(wall, 3));
+            const curtain = new THREE.Mesh(wallGeometry, new THREE.MeshBasicMaterial({
+                color: style.color, transparent: true, opacity: style.opacity,
+                side: THREE.DoubleSide, depthWrite: false
+            }));
+            curtain.name = "glideRangeCurtain";
+            group.add(curtain);
+            const lineGeometry = new THREE.BufferGeometry();
+            lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(lines, 3));
+            const outline = new THREE.LineSegments(lineGeometry, new THREE.LineBasicMaterial({ color: style.color }));
+            outline.name = "glideRangeLine";
+            group.add(outline);
+            this.glideGroup = group;
+            this.scene.add(group);
+        }
+
+        disposeGlideRange() {
+            if (this.glideGroup == null) return;
+            this.scene.remove(this.glideGroup);
+            this.disposeObject(this.glideGroup);
+            this.glideGroup = null;
+        }
 
         /*****************************************************
          * Autopilot guidance tunnel (Highway In The Sky)
@@ -1377,10 +1534,11 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 const toXY = terrain.plan(to.Lat, to.Lon);
                 const x0 = fromXY[0] * setup.cellSize;
                 const z0 = fromXY[1] * setup.cellSize;
-                const y0 = elevations[leg];
+                const y0 = this.sceneY(elevations[leg]);
                 const dx = toXY[0] * setup.cellSize - x0;
                 const dz = toXY[1] * setup.cellSize - z0;
-                const dy = elevations[leg + 1] - y0;
+                const dyMeters = elevations[leg + 1] - elevations[leg];
+                const dy = this.sceneY(dyMeters);
 
                 const horizontal = Math.hypot(dx, dz);
                 const legMeters = guidanceLegMeters(from, to);
@@ -1395,7 +1553,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                 const yaw = Math.atan2(hx, hz);
                 // True flight path angle, from real metres: using the world-space dy
                 // would over-tilt the frames by the vertical exaggeration.
-                const tilt = guidance.tiltWithPath ? -Math.atan2(dy, legMeters) : 0;
+                const tilt = guidance.tiltWithPath ? -Math.atan2(dyMeters, legMeters) : 0;
 
                 while (nextFrame < walked + horizontal) {
                     if (group.children.length >= guidance.maxBoxes) break;
@@ -1474,6 +1632,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             if (this.disposed) return;
             this.disposed = true;
             this.disposeGuidanceResources();
+            this.disposeGlideRange();
             this.disposeDEM();
             while (this.scene.children.length > 0) {
                 this.disposeObject(this.scene.children[0]);
@@ -1512,7 +1671,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     gltf.scene.scale.z = item.scale * setup.cellSize / 300;
 
                     gltf.scene.position.x = item.x
-                    gltf.scene.position.y = item.elevation
+                    gltf.scene.position.y = this.sceneY(item.elevation)
                     gltf.scene.position.z = item.y
                     gltf.scene.rotation.x = (Math.PI * 2.0 / 360) * item.pitch // Pitch
                     gltf.scene.rotation.y = (Math.PI * 2.0 / 360) * (180 - item.direction + item.directionModel) // Yaw
@@ -1608,16 +1767,18 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.terrainGrid = null;
         }
 
-        // plan: the window's scene position in cells (TerrainManager.windowPlan)
-        loadDEM(terrainElevation, setup, plan = [0, 0]) {
+        // plan: the window's scene position in cells (TerrainManager.windowPlan);
+        // eastScale: a cell's east-west width over its length (TerrainManager.eastScale)
+        loadDEM(terrainElevation, setup, plan = [0, 0], eastScale = 1) {
             this.disposeDEM();
+            this.heightScale = setup.heightScale || 1;
             const ncols = terrainElevation[0].length
             const nrows = terrainElevation.length
             const grid = terrainElevation;
 
             // Set vertex heights based on DEM data
             const geometryBrown = new THREE.PlaneGeometry(
-                ncols * setup.cellSize,
+                ncols * setup.cellSize * eastScale,
                 nrows * setup.cellSize,
                 ncols - 1,
                 nrows - 1
@@ -1625,7 +1786,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             const verticesBrown = geometryBrown.attributes.position.array;
             for (let i = 0, j = 0; i < verticesBrown.length; i += 3, j++) {
                 var elevation = grid[nrows - 1 - Math.floor(j / ncols)][j % ncols]; // Elevation as Z value
-                verticesBrown[i + 2] = elevation
+                verticesBrown[i + 2] = elevation * this.heightScale
             }
             geometryBrown.computeVertexNormals();
 
@@ -1644,7 +1805,9 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             this.terrainBrown.receiveShadow = this.sun.castShadow;
             this.scene.add(this.terrainBrown);
             this.terrainGrid = grid;
-            this.fitToTerrain(ncols * setup.cellSize);
+            // The nearest edge, east-west now that cells keep true proportions:
+            // haze and shadows end before it on every heading
+            this.fitToTerrain(Math.min(ncols * eastScale, nrows) * setup.cellSize);
             // Seen from below, the terrain is solid brown, as on the attitude
             // indicator, never the sky colour or the top colours mirrored.
             const under = setup.terrainUndersideColor != null ? setup.terrainUndersideColor : TERRAIN_UNDERSIDE_COLOR;
@@ -1681,6 +1844,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
     const resources = new ResourceManager();
     const remote = new RemoteController(rendering);
     $scope.remote = remote;
+    $scope.resources = resources;  // read by the display tests
     async function engageContext() {
         const setup = await resources.startup();
         if (rendering.disposed) return setup;  // plate left during the fetch
@@ -1739,7 +1903,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         }
 
         if (founded < 0) {
-            var newItem = resources.convertTrafficToItem(element);
+            var newItem = resources.convertTrafficToItem(element, $scope.situation);
             if (newItem == null) {
                 return;
             }
@@ -1750,8 +1914,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             resources.items[founded].ttl = Date.now();
 
             const aXY = resources.terrain.plan(element.Lat, element.Lng);
-            resources.items[founded].direction = element.Track;
-            resources.items[founded].elevation = element.Alt * 0.3048;
+            applyTrafficMotion(resources.items[founded], element, $scope.situation);
             resources.items[founded].x = aXY[0] * resources.setup.cellSize;
             resources.items[founded].y = aXY[1] * resources.setup.cellSize;
             const item = resources.items[founded];
@@ -1759,26 +1922,14 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
             if (gltf != null && gltf.hasOwnProperty("scene")) {
                 gltf.scene.position.x = item.x
-                gltf.scene.position.y = item.elevation
+                gltf.scene.position.y = rendering.sceneY(item.elevation)
                 gltf.scene.position.z = item.y
                 gltf.scene.rotation.x = (Math.PI * 2.0 / 360) * item.pitch // Pitch
                 gltf.scene.rotation.y = (Math.PI * 2.0 / 360) * (180 - item.direction + item.directionModel) // Yaw
                 gltf.scene.rotation.z = (Math.PI * 2.0 / 360) * item.roll // Roll
-                //
-                if (item.referenceTubeVertical != null) {
-                    item.referenceTubeVertical.position.y = item.elevation / 2.0
-                    item.referenceTubeVertical.position.x = item.x
-                    item.referenceTubeVertical.position.z = item.y
-                }
-                if (item.referenceTubeFront != null) {
-                    item.referenceTubeFront.position.x = item.x + item.projectionSize / 2 * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180 + 90))
-                    item.referenceTubeFront.position.y = item.elevation
-                    item.referenceTubeFront.position.z = item.y + item.projectionSize / 2 * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 180 + 90))
-                    item.referenceTubeFront.rotation.z = (Math.PI * 2.0 / 360) * (180 + item.direction)
-                    item.referenceTubeFront.rotation.x = (Math.PI * 2.0 / 360) * (90)
-                }
+                rendering.updateTubes(item, resources.setup);
                 if (item.referenceLabel != null) {
-                    item.referenceLabel.position.y = item.elevation + 120;
+                    item.referenceLabel.position.y = rendering.sceneY(item.elevation) + 120;
                     item.referenceLabel.position.x = item.x
                     item.referenceLabel.position.z = item.y
                 }
@@ -1798,13 +1949,37 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
             terrainFollowed = data;
             if (!TerrainManager.hasCells(data)) return;  // off the grid: keep the terrain we have
             resources.terrain.load(data);
-            rendering.loadDEM(data.terrainData, resources.setup, resources.terrain.windowPlan());
+            rendering.loadDEM(data.terrainData, resources.setup, resources.terrain.windowPlan(), resources.terrain.eastScale());
             resources.pruneAirfields((item) => rendering.disposeItem(item));
             resources.importNewAirfields();
             rendering.generateItems(resources.items, resources.setup);
             rendering.buildGuidanceTunnel(resources.route, resources.setup, resources.terrain, resources.setup.elevation);
+            updateGlideRange(situation, true);
             requestAnimationFrame(animate);
         }).catch((error) => console.error('Error moving the terrain:', error));
+    }
+
+    // Glide range: recomputed at most once a second, and on every new terrain
+    // window, from aircraft.json "bestGlide" (glideParameters) over the window the
+    // scene draws. Nothing without a fix or below the clearance (glideReach).
+    const GLIDE_RECOMPUTE_MS = 1000;
+    var glideComputedAt = 0;
+    $scope.glideReach = null;
+    $scope.glideFor = null;
+    function updateGlideRange(situation, force) {
+        const now = Date.now();
+        if (!force && now - glideComputedAt < GLIDE_RECOMPUTE_MS) return;
+        if (rendering.disposed || !resources.terrain.isReady() || !resources.setup || !resources.setup.cellSize) return;
+        glideComputedAt = now;
+        const params = glideParameters(window.aircraftData);
+        let reach = null;
+        if (params.enabled && situation.GPSFixQuality > 0) {
+            const wind = (params.useWind && situation.WindValid) ? { from: situation.WindDirection, speed: situation.WindSpeed } : null;
+            reach = glideReach(resources.terrain, situation.GPSLatitude, situation.GPSLongitude, situation.GPSAltitudeMSL, params, wind);
+        }
+        $scope.glideReach = reach;
+        $scope.glideFor = [situation.GPSLatitude, situation.GPSLongitude, situation.GPSAltitudeMSL];
+        rendering.buildGlideRange(reach, resources.terrain, resources.setup);
     }
 
     function loadSituationInSynthView(situation) {
@@ -1815,6 +1990,7 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         //"GPSLatitude": 43.0, "GPSLongitude": 12.0
         if (resources.terrain.isReady()) {
             followTerrain(situation);
+            updateGlideRange(situation, false);
             requestAnimationFrame(animate);
         }
         else {
@@ -1833,7 +2009,10 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
                     // DEM for 100 NM => 240 cols/rows considering 100 meter DB
                     // Heuristic formula: 10*feet
                     setup.cellSize = parseInt((240.0 / terrainElevations.terrainData.length) * 328.084);
-                    rendering.loadDEM(terrainElevations.terrainData, setup, resources.terrain.windowPlan());
+                    // World units per horizontal metre: every window has the grid's step
+                    setup.unitsPerMeter = setup.cellSize / resources.terrain.metersPerCell();
+                    setup.heightScale = heightScaleFor(setup.verticalExaggeration, setup.unitsPerMeter);
+                    rendering.loadDEM(terrainElevations.terrainData, setup, resources.terrain.windowPlan(), resources.terrain.eastScale());
 
                     setup.items = remote.updateItemsBySituation(setup.items, situation, resources);
 
@@ -1890,19 +2069,8 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
 
             item.reference.scene.position.x = item.x;
             item.reference.scene.position.z = item.y;
-            item.reference.scene.position.y = item.elevation;
-            if (item.referenceTubeVertical != null) {
-                item.referenceTubeVertical.position.y = item.elevation / 2.0
-                item.referenceTubeVertical.position.x = item.x
-                item.referenceTubeVertical.position.z = item.y
-            }
-            if (item.referenceTubeFront != null) {
-                item.referenceTubeFront.position.x = item.x + item.projectionSize / 2 * Math.cos((Math.PI * 2.0 / 360) * (item.direction + 180 + 90))
-                item.referenceTubeFront.position.y = item.elevation
-                item.referenceTubeFront.position.z = item.y + item.projectionSize / 2 * Math.sin((Math.PI * 2.0 / 360) * (item.direction + 180 + 90))
-                item.referenceTubeFront.rotation.z = (Math.PI * 2.0 / 360) * (180 + item.direction)
-                item.referenceTubeFront.rotation.x = (Math.PI * 2.0 / 360) * (90)
-            }
+            item.reference.scene.position.y = rendering.sceneY(item.elevation);
+            rendering.updateTubes(item, resources.setup);
 
 
             if (remote.reset == false) {
@@ -1926,6 +2094,54 @@ function SynthViewCtrl($rootScope, $scope, $state, $http, $interval) {
         rendering.renderer.render(rendering.scene, rendering.camera);
     }
 
+}
+
+// Scene units per metre of height. Without "verticalExaggeration" one unit a
+// metre, the scene as it has always been drawn: heights 1 / unitsPerMeter
+// (about 2.5) times the horizontal scale. With it, heights that many times
+// the horizontal scale: 1 is true proportions. Out of 0.5..10: the default.
+function heightScaleFor(exaggeration, unitsPerMeter) {
+    if (typeof exaggeration !== "number" || !isFinite(exaggeration) || exaggeration < 0.5 || exaggeration > 10) return 1;
+    if (!(unitsPerMeter > 0)) return 1;
+    return exaggeration * unitsPerMeter;
+}
+
+// Traffic altitude in metres MSL, the reference the scene draws the aircraft
+// and the terrain in. Alt is pressure altitude unless AltIsGNSS: drawn as it
+// came, every target sat (GPS MSL - pressure altitude) off, 280 ft too high on
+// a 1003 hPa day. Shifted by that difference when a baro source or the ADS-B
+// estimate gives the aircraft's own pressure altitude; as it came otherwise.
+function trafficAltitudeMeters(traffic, situation) {
+    var feet = traffic.Alt || 0;
+    if (!traffic.AltIsGNSS && situation && situation.BaroSourceType > 0 && situation.GPSFixQuality > 0) {
+        const offset = situation.GPSAltitudeMSL - situation.BaroPressureAltitude;
+        // 3000 ft is 100 hPa off standard: beyond, one of the two is not valid
+        if (isFinite(offset) && Math.abs(offset) < 3000) feet += offset;
+    }
+    return feet * 0.3048;
+}
+
+// A traffic report onto its scene item: track, ground speed, vertical speed
+// and altitude. No speed report, no ground speed, so no predicted path; no
+// vertical rate, a level path in TUBE_COLOR_NO_VERTICAL.
+function applyTrafficMotion(item, traffic, situation) {
+    item.direction = traffic.Track || 0;
+    item.groundSpeedKt = traffic.Speed_valid === false ? 0 : (traffic.Speed || 0);
+    // Vvel_valid false: the source sends no vertical rate. Absent (an older
+    // daemon): taken as known, as before
+    item.verticalKnown = traffic.Vvel_valid !== false;
+    item.verticalFpm = item.verticalKnown ? (traffic.Vvel || 0) : 0;
+    item.elevation = trafficAltitudeMeters(traffic, situation);
+    return item;
+}
+
+// Where an aircraft will be in `seconds` at its ground speed (kt), true track
+// and vertical speed (ft/min), as a scene offset [east, up, south]: horizontal
+// metres through unitsPerMeter, vertical one unit a metre like the terrain.
+function predictedPathOffset(groundSpeedKt, trackDeg, verticalFpm, seconds, unitsPerMeter) {
+    const across = groundSpeedKt * 1852.0 / 3600.0 * seconds * unitsPerMeter;
+    const track = trackDeg * Math.PI / 180;
+    return [across * Math.sin(track), verticalFpm * 0.3048 / 60.0 * seconds, -across * Math.cos(track)];
 }
 
 // True ground length of a flight plan leg, in metres.

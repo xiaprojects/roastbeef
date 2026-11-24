@@ -69,6 +69,20 @@
         "minAglMeters": 300,
         "tiltWithPath": false
     },
+    "glideRange": {
+        "enabled": true,
+        "color": 16711935,
+        "opacity": 0.55,
+        "wallMeters": 150,
+        "liftMeters": 15,
+        "dashCells": 1.0,
+        "gapCells": 0.6
+    },
+    "projection": {
+        "enabled": true,
+        "seconds": 60
+    },
+    "verticalExaggeration": null,
     "elevation": 1000,
     "trafficMapping": {},
     "trafficTemplates": {
