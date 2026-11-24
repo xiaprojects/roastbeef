@@ -1206,6 +1206,7 @@ type settings struct {
 	IMU_Sensor_Enabled   bool
 	MS4525DO_Enabled     bool    // poll the I2C bus for the MS4525DO pitot sensor (main/airspeed.go); default: true
 	AirspeedZeroOffset   float64 // Pa the MS4525DO pitot sensor reads at zero airflow; set by POST /calibrateAirspeed (main/airspeed.go)
+	AirspeedScale        float64 // factor on the MS4525DO airspeed: the pitot-static position error correction, 0.5 to 1.5; default: 1
 	NetworkOutputs       []networkConnection
 	SerialOutputs        map[string]serialConnection
 	BleOutputs           []bleConnection
@@ -1445,6 +1446,7 @@ func defaultSettings() {
 	globalSettings.BMP_Sensor_Enabled = true
 	globalSettings.MS4525DO_Enabled = false
 	globalSettings.AirspeedZeroOffset = 0
+	globalSettings.AirspeedScale = 1
 	// Attitude engine: goflying's Simple AHRS.  "kalman" is the Kalman filter
 	// that also fuses the magnetometer; it needs a calibrated compass and a
 	// goflying with its magnetometer rows (see sensorAttitudeSender).
