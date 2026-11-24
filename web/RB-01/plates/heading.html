@@ -1,8 +1,15 @@
 <div ui-content-for="title">Heading</div>
-<div class="gyro">
-    <div class="gyrobearing" style="transform: rotate(-{{Heading.heading}}deg);"></div>
+<div class="gyro" ng-class="'gyro-primary-' + Heading.sourceName">
+    <div class="gyrobearing" style="transform: rotate({{Heading.card}});"></div>
+    <div class="gyro-mark gyro-mark-wind" ng-show="Wind.showArrow" style="transform: rotate({{Wind.arrowDegree}});"><div class="gyro-wind-arrow"></div></div>
     <div class="gyroheading"></div>
-    <div class="gyroheading-track">{{Heading.heading}}°</div>
+    <div class="gyro-mark gyro-mark-trk" ng-show="Heading.marks.GPS.valid" style="transform: rotate({{Heading.marks.GPS.deg}});"><div class="gyro-diamond"></div></div>
+    <div class="gyro-mark gyro-mark-mag" ng-show="Heading.marks.MAG.valid" style="transform: rotate({{Heading.marks.MAG.deg}});"><div class="gyro-triangle"></div></div>
+    <div class="gyro-mark gyro-mark-gyro" ng-show="Heading.marks.GYRO.valid" style="transform: rotate({{Heading.marks.GYRO.deg}});"><div class="gyro-triangle"></div></div>
     <div class="gyroheading-source">{{Heading.sourceName}}</div>
+    <div class="gyroheading-track" ng-class="{'gyroheading-invalid': !Heading.valid}">{{Heading.text}}°</div>
+    <div class="gyroheading-info gyroheading-variation" ng-class="{'gyroheading-caution': !Variation.valid}">{{Variation.text}}</div>
+    <div class="gyroheading-info gyroheading-wind" ng-show="Wind.valid"><span class="gyroheading-windlabel">WIND</span> {{Wind.direction}}/{{Wind.speed}} {{Wind.unit}}<span class="gyroheading-est" ng-show="Wind.estimated"> EST</span></div>
+    <div class="gyroheading-info gyroheading-windcomp" ng-show="Wind.valid && Wind.head != ''">{{Wind.head}}&nbsp;&nbsp;{{Wind.cross}}</div>
     <div class="fabNavigation fabCenter" ng-click="fabClick('C',this,$event);"></div>
 </div>

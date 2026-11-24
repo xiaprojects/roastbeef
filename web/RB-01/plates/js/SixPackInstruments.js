@@ -469,52 +469,33 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "estimated": false,
     "arrowDegree": "0deg"
   };
-  // Damping of the wind readout. servicesituation.js already publishes an
-  // averaged or fitted wind (windestimator.js); this only eases the steps, when
-  // a new fit lands or the source changes, over about five seconds. Smoothed
-  // as a vector, never as an angle: the mean of 359 and 001 is north, not
-  // south. arrow is the unwrapped screen angle.
-  const WIND_TAU = 5000; // ms
-  var windFilter = { "x": 0, "y": 0, "time": 0, "arrow": 0 };
+  // The readout is damped by createWindFilter(); arrow is the unwrapped screen angle
+  const windFilter = createWindFilter();
+  var windArrow = 0;
 
   function updateWind(situation) {
     $scope.Wind.unit = window.aircraftData?.units?.speed ?? "KMH";
-    if(situation.WindValid != true) {
+    const wind = windFilter(situation);
+    if(wind.valid != true) {
       $scope.Wind.valid = false;
       $scope.Wind.direction = "---°";
       $scope.Wind.speed = "--";
       $scope.Wind.estimated = false;
-      windFilter.time = 0; // the next estimate starts fresh, not out of a stale one
       return;
     }
-    const now = Date.now();
-    const x = situation.WindSpeed * Math.sin(toRadians(situation.WindDirection));
-    const y = situation.WindSpeed * Math.cos(toRadians(situation.WindDirection));
-    if(windFilter.time == 0) {
-      windFilter.x = x;
-      windFilter.y = y;
-    } else {
-      const alpha = 1 - Math.exp(-(now - windFilter.time) / WIND_TAU);
-      windFilter.x += alpha * (x - windFilter.x);
-      windFilter.y += alpha * (y - windFilter.y);
-    }
-    windFilter.time = now;
-    const speedKt = Math.sqrt(windFilter.x * windFilter.x + windFilter.y * windFilter.y);
-    const from = (toDegrees(Math.atan2(windFilter.x, windFilter.y)) + 360) % 360;
-    // Wind from the north reads 360, like a METAR: 000 is calm, not a direction
-    const degrees = Math.round(from) % 360;
+    const from = wind.from;
     $scope.Wind.valid = true;
-    $scope.Wind.direction = ("00" + (degrees == 0 ? 360 : degrees)).slice(-3) + "°";
-    $scope.Wind.speed = Math.round(pilotDisplayedSpeedFromKT(speedKt));
-    $scope.Wind.estimated = situation.WindSource == "gs";
+    $scope.Wind.direction = headingReadout(from) + "°";
+    $scope.Wind.speed = Math.round(pilotDisplayedSpeedFromKT(wind.speedKt));
+    $scope.Wind.estimated = wind.estimated;
     // Where the wind blows TO, relative to the nose: a headwind points down the
     // screen. The wind is true and AHRSMagHeading magnetic, so the nose is the
     // true heading. Unwrapped so crossing north turns the arrow one degree
     // instead of sending the CSS transition all the way round the other way.
     const variation = situation.MagneticVariationValid === true ? situation.MagneticVariation : 0;
     const target = from + 180 - (situation.AHRSMagHeading + variation);
-    windFilter.arrow += ((((target - windFilter.arrow + 180) % 360) + 360) % 360) - 180;
-    $scope.Wind.arrowDegree = windFilter.arrow.toFixed(1) + "deg";
+    windArrow += ((((target - windArrow + 180) % 360) + 360) % 360) - 180;
+    $scope.Wind.arrowDegree = windArrow.toFixed(1) + "deg";
   }
 
   if($scope.$parent.hasOwnProperty("$parent") 
@@ -666,56 +647,198 @@ function SixPackInstrumentTurnslip($rootScope, $scope, $state, $http, $interval)
     $scope.updateSituation(window.situation);
   }   
 }
+// Damping of the wind readout, shared by the attitude and heading plates.
+// servicesituation.js already publishes an averaged or fitted wind
+// (windestimator.js); this only eases the steps, when a new fit lands or the
+// source changes, over about five seconds. Smoothed as a vector, never as an
+// angle: the mean of 359 and 001 is north, not south. Returns a function of
+// the situation giving {valid, from (true, degrees), speedKt, estimated}; an
+// invalid wind resets it, so the next estimate starts fresh, not out of a
+// stale one.
+function createWindFilter(tau = 5000 /* ms */) {
+  var state = { "x": 0, "y": 0, "time": 0 };
+  return function (situation) {
+    if(situation.WindValid != true) {
+      state.time = 0;
+      return { "valid": false };
+    }
+    const now = Date.now();
+    const x = situation.WindSpeed * Math.sin(toRadians(situation.WindDirection));
+    const y = situation.WindSpeed * Math.cos(toRadians(situation.WindDirection));
+    if(state.time == 0) {
+      state.x = x;
+      state.y = y;
+    } else {
+      const alpha = 1 - Math.exp(-(now - state.time) / tau);
+      state.x += alpha * (x - state.x);
+      state.y += alpha * (y - state.y);
+    }
+    state.time = now;
+    return {
+      "valid": true,
+      "from": (toDegrees(Math.atan2(state.x, state.y)) + 360) % 360,
+      "speedKt": Math.sqrt(state.x * state.x + state.y * state.y),
+      "estimated": situation.WindSource == "gs"
+    };
+  };
+}
+
+// A direction as a pilot reads it, three digits. North reads 360, like a
+// METAR or a runway: 000 is calm, not a direction.
+function headingReadout(degrees) {
+  const d = Math.round(((degrees % 360) + 360) % 360) % 360;
+  return ("00" + (d == 0 ? 360 : d)).slice(-3);
+}
+
+// The directional gyro plate. A magnetic compass card turned by the selected
+// source (TAP or the centre zone cycles GPS > GYRO > MAG), with every source
+// shown on it at once as a coloured mark, as a G5 shows the GPS track as a
+// magenta diamond:
+//   MAG   white triangle on the rim   AHRSMagHeading, already magnetic
+//   GYRO  cyan triangle on the rim    AHRSGyroHeading, aligned to the GPS track: true
+//   TRK   magenta diamond inside      GPSTrueCourse, true
+// The two true ones are turned magnetic with the variation from
+// /settings/deviation.json (variation.js, East positive: magnetic = true -
+// variation), which the plate shows as VAR. Outside the grid there is none:
+// the magnetometer addon's OFFSET FROM GPS TRACK then makes the compass a true
+// one, so the card stays one reference and says TRUE.
+// The wind arrow sits on the rim where the wind comes from and points at the
+// aircraft, turning with the card; the readout gives it magnetic, like a
+// tower, with its head/tail and cross components against the nose.
 function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "heading");
 
+  // Below this the GPS track is noise: a G5 drops its track diamond too
+  const TRACK_MIN_SPEED_KT = 5;
+  const SOURCES = ["GPS", "GYRO", "MAG"];
+
+  function mark() {
+    return { "valid": false, "deg": "0deg" };
+  }
   $scope.Heading = {
-    "heading": 0
-    ,
-    "sourceName":"GYRO"
+    "heading": 0,       // magnetic (or true, see reference), what the card shows
+    "card": "0deg",
+    "text": "---",
+    "valid": false,
+    "sourceName": "GYRO",
+    "reference": "MAG", // "TRUE" without a variation
+    "marks": { "GPS": mark(), "GYRO": mark(), "MAG": mark() }
   };
+  $scope.Variation = { "valid": false, "text": "VAR ---" };
+  $scope.Wind = {
+    "valid": false,
+    "direction": "---°",
+    "speed": "--",
+    "unit": "",
+    "estimated": false,
+    "arrowDegree": "0deg",
+    "showArrow": false,
+    "head": "",
+    "cross": ""
+  };
+  const windFilter = createWindFilter();
 
+  function wrap360(a) {
+    return ((a % 360) + 360) % 360;
+  }
+  // An angle off the lubber line, the short way round
+  function offLubber(a) {
+    return (wrap360(a - $scope.Heading.heading + 180) - 180).toFixed(1) + "deg";
+  }
+  // A wind component with the arrow it pushes along, none when there is none
+  function component(value, positive, negative) {
+    return value == 0 ? "0" : (value > 0 ? positive : negative) + Math.abs(value);
+  }
 
-  $scope.updateSituation = (situation) => {
+  // Every source on the card's reference, undefined when it has nothing to say
+  function sourceHeadings(situation, variation) {
+    const track = situation.GPSFixQuality > 0 && situation.GPSGroundSpeed >= TRACK_MIN_SPEED_KT
+               && isFinite(situation.GPSTrueCourse);
+    return {
+      "MAG": globalAHRSValueIsValid(situation.AHRSMagHeading)
+        ? wrap360(situation.AHRSMagHeading) : undefined,
+      "GYRO": globalAHRSValueIsValid(situation.AHRSGyroHeading)
+        ? wrap360(situation.AHRSGyroHeading - variation) : undefined,
+      "GPS": track ? wrap360(situation.GPSTrueCourse - variation) : undefined
+    };
+  }
 
-    var newHeading = 0;
-    switch ($scope.Heading.sourceName) {
-      case "GPS":
-        if (situation.GPSFixQuality > 0) {
-          newHeading = parseInt(situation.GPSTrueCourse);
-        } else {
-          $scope.Heading.sourceName = "GYRO";
-          newHeading = parseInt(situation.AHRSGyroHeading);
-        }
-        break;
-      case "GYRO":
-        newHeading = parseInt(situation.AHRSGyroHeading);
-        break;
-      case "MAG":
-        newHeading = parseInt(situation.AHRSMagHeading);
-        break;
-      default:
-        newHeading = parseInt(situation.AHRSGyroHeading);
-        break;
+  function updateVariation(situation) {
+    $scope.Variation.valid = situation.MagneticVariationValid === true;
+    $scope.Heading.reference = $scope.Variation.valid ? "MAG" : "TRUE";
+    if($scope.Variation.valid == false) {
+      $scope.Variation.text = "VAR --- TRUE";
+      return 0;
     }
-    if($scope.Heading.heading == newHeading){
+    const v = situation.MagneticVariation;
+    const shown = Math.round(Math.abs(v));
+    $scope.Variation.text = "VAR " + shown + "°" + (shown == 0 ? "" : (v > 0 ? "E" : "W"));
+    return v;
+  }
+
+  function updateWind(situation, variation, nose) {
+    $scope.Wind.unit = window.aircraftData?.units?.speed ?? "KMH";
+    const wind = windFilter(situation);
+    if(wind.valid != true) {
+      $scope.Wind.valid = false;
+      $scope.Wind.showArrow = false;
       return;
     }
-    $scope.Heading.heading = newHeading;
+    const from = wrap360(wind.from - variation);
+    const speed = Math.round(pilotDisplayedSpeedFromKT(wind.speedKt));
+    $scope.Wind.valid = true;
+    $scope.Wind.direction = headingReadout(from) + "°";
+    $scope.Wind.speed = speed;
+    $scope.Wind.estimated = wind.estimated;
+    // Calm has no direction to point at
+    $scope.Wind.showArrow = speed > 0;
+    $scope.Wind.arrowDegree = offLubber(from);
+    if(nose === undefined) {
+      $scope.Wind.head = "";
+      $scope.Wind.cross = "";
+      return;
+    }
+    // Arrows the way each component pushes the aircraft: a headwind down
+    // the screen, a wind from the right to the left
+    const off = toRadians(from - nose);
+    const head = Math.round(pilotDisplayedSpeedFromKT(wind.speedKt * Math.cos(off)));
+    const cross = Math.round(pilotDisplayedSpeedFromKT(wind.speedKt * Math.sin(off)));
+    $scope.Wind.head = component(head, "▼", "▲");
+    $scope.Wind.cross = component(cross, "◀", "▶");
+  }
+
+  $scope.updateSituation = (situation) => {
+    // Without a fix there is no track, as before: GPS gives way to the gyro
+    if($scope.Heading.sourceName == "GPS" && !(situation.GPSFixQuality > 0)) {
+      $scope.Heading.sourceName = "GYRO";
+    }
+    const variation = updateVariation(situation);
+    const headings = sourceHeadings(situation, variation);
+    const primary = headings[$scope.Heading.sourceName];
+    $scope.Heading.valid = primary !== undefined;
+    if($scope.Heading.valid) {
+      $scope.Heading.heading = primary;
+      $scope.Heading.card = (-primary).toFixed(1) + "deg";
+      $scope.Heading.text = headingReadout(primary);
+    } else {
+      // The card holds where it was; the digits say it is not current
+      $scope.Heading.text = "---";
+    }
+    SOURCES.forEach(name => {
+      const m = $scope.Heading.marks[name];
+      m.valid = headings[name] !== undefined;
+      if(m.valid) {
+        m.deg = offLubber(headings[name]);
+      }
+    });
+    // The nose for the wind components: the compass, else the gyro, else the track
+    const nose = headings.MAG ?? headings.GYRO ?? headings.GPS;
+    updateWind(situation, variation, nose);
   };
   $scope.fabClick = (direction, item, browserEvent) => {
     if (direction == "C") {
-      switch ($scope.Heading.sourceName) {
-        case "GPS":
-          $scope.Heading.sourceName = "GYRO";
-          break;
-        case "GYRO":
-          $scope.Heading.sourceName = "MAG";
-          break;
-        case "MAG":
-          $scope.Heading.sourceName = "GPS";
-          break;
-      }
+      const i = SOURCES.indexOf($scope.Heading.sourceName);
+      $scope.Heading.sourceName = SOURCES[(i + 1) % SOURCES.length];
     }
   };
 
@@ -728,7 +851,7 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
   };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);
-  }   
+  }
 }
 function SixPackInstrumentVariometer($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "variometer");
