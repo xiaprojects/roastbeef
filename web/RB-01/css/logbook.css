@@ -1,0 +1,99 @@
+/* logbook.html: the Hobbs meter flight log */
+.logbook-heading {
+    margin-left: 20px;
+    margin-right: 6px;
+}
+
+.logbook-totals {
+    float: right;
+    font-weight: bold;
+}
+
+.logbook-empty {
+    padding: 4cqmin;
+    font-size: 4cqmin;
+    color: #acacac;
+}
+
+.logbook-table {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 4cqmin;
+}
+
+.logbook-table td {
+    margin: 0px;
+    padding: 0.5cqmin 1cqmin;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.logbook-header td {
+    font-size: 3cqmin;
+    color: #acacac;
+    border-right: 1px #acacac solid;
+}
+
+.logbook-header td:last-child,
+.logbook-row td:last-child {
+    border-right: none;
+}
+
+.logbook-row {
+    border-top: 1px #acacac solid;
+}
+
+.logbook-row td {
+    border-right: 1px #acacac solid;
+}
+
+.logbook-date small {
+    color: #acacac;
+}
+
+.logbook-route .fa {
+    margin: 0 1cqmin;
+}
+
+.logbook-hobbs {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logbook-open {
+    background-color: rgba(0, 124, 0, 0.25);
+}
+
+.logbook-expanded {
+    background-color: rgba(68, 68, 255, 0.25);
+}
+
+.logbook-detail td {
+    text-align: left;
+    font-size: 3.2cqmin;
+    padding: 1cqmin 3cqmin;
+    background-color: rgba(68, 68, 255, 0.12);
+}
+
+.logbook-detail-label {
+    display: inline-block;
+    min-width: 14cqmin;
+    color: #acacac;
+}
+
+/* The round panel (square viewport): the top and bottom of the table sit on the edge of the
+   circle, keep the columns away from it */
+@media (min-aspect-ratio: 10/11) and (max-aspect-ratio: 11/10) {
+    .logbook .panel-heading {
+        margin-left: 14%;
+        margin-right: 14%;
+    }
+    .logbook-table {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .logbook-empty {
+        padding-bottom: 20cqmin;
+    }
+}

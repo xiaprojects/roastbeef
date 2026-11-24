@@ -1,0 +1,45 @@
+<div ui-content-for="title">Logbook</div>
+<!-- Flight log recorded by the GPS Hobbs meter (main/hobbsmeter.go), newest first -->
+<div class="col-xs-12 logbook" style="overflow: hidden;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading logbook-heading">
+                Logbook
+                <span class="logbook-totals">{{logbook.flights}} {{logbook.flights == 1 ? 'flight' : 'flights'}} &middot; {{logbook.totalText}}</span>
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <div class="logbook-empty" ng-if="logbook.loaded && logbook.entries.length == 0">No flights recorded yet</div>
+                <div class="logbook-empty" ng-if="logbook.error">{{logbook.error}}</div>
+                <table class="logbook-table" ng-if="logbook.entries.length > 0">
+                    <tr class="logbook-header">
+                        <td>Date</td>
+                        <td>Route</td>
+                        <td>Hobbs</td>
+                    </tr>
+                    <tr ng-repeat-start="flight in logbook.entries track by flight.key"
+                        id="logbook_{{$index}}"
+                        class="logbook-row" ng-class="{'logbook-open': flight.inFlight, 'logbook-expanded': flight.expanded}"
+                        ng-click="flight.expanded = !flight.expanded"
+                        data-keypad="tap" data-keypad-name="{{flight.date}} {{flight.from}} {{flight.to}}">
+                        <td class="logbook-date">{{flight.date}}<br><small>{{flight.departureClock}}</small></td>
+                        <td class="logbook-route">
+                            <strong>{{flight.from}}</strong>
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <strong ng-if="!flight.open">{{flight.to}}</strong>
+                            <span class="label label-success" ng-if="flight.inFlight">IN FLIGHT</span>
+                            <span class="label label-warning" ng-if="flight.open && !flight.inFlight">NO LANDING</span>
+                        </td>
+                        <td class="logbook-hobbs">{{flight.hobbsText}}</td>
+                    </tr>
+                    <tr ng-repeat-end class="logbook-detail" ng-if="flight.expanded">
+                        <td colspan="3">
+                            <div><span class="logbook-detail-label">Departure</span> {{flight.departureText}}</div>
+                            <div ng-if="!flight.open"><span class="logbook-detail-label">Landed</span> {{flight.landedText}}</div>
+                            <div ng-if="flight.elapsedText"><span class="logbook-detail-label">Off-on</span> {{flight.elapsedText}}</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
