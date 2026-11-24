@@ -208,3 +208,43 @@ func TestMS4525DOStaleAndFault(t *testing.T) {
 		t.Errorf("DifferentialPressure() after Close = %v; want %v", err, errMS4525DO)
 	}
 }
+
+// DifferentialPressure hands out the mean of the fresh measurements since the
+// previous call (stale answers are repeats and do not count), and the previous
+// value again when no fresh one has arrived.
+func TestMS4525DOOversampling(t *testing.T) {
+	pa := func(c float64) float64 {
+		return ((c-0.1*ms4525doCountsMax)*2/(0.8*ms4525doCountsMax) - 1) * ms4525doPsiToPa
+	}
+	detect := ms4525doFrame(ms4525doStatusOK, 8192, 800)
+	bus := newFakeBus(MS4525DO_ADDR_I, detect,
+		ms4525doFrame(ms4525doStatusOK, 8292, 800),
+		ms4525doFrame(ms4525doStatusStale, 8292, 800),
+		ms4525doFrame(ms4525doStatusOK, 8392, 800),
+		ms4525doFrame(ms4525doStatusStale, 8392, 800))
+	m, err := NewMS4525DO(bus, MS4525DOConfig{}, time.Millisecond)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer m.Close()
+	f := (*bus).(*fakeI2C)
+	for i := 0; i < 200 && f.reads() < 8; i++ {
+		time.Sleep(time.Millisecond)
+	}
+	want := (pa(8292) + pa(8392)) / 2
+	if got, err := m.DifferentialPressure(); err != nil || math.Abs(got-want) > 0.01 {
+		t.Errorf("DifferentialPressure() = %v, %v; want the mean %.2f, nil", got, err, want)
+	}
+	if got, err := m.DifferentialPressure(); err != nil || math.Abs(got-want) > 0.01 {
+		t.Errorf("DifferentialPressure() with only stale reads since = %v, %v; want %.2f again", got, err, want)
+	}
+	f.script(ms4525doFrame(ms4525doStatusOK, 8192, 800))
+	for i := 0; i < 200 && f.reads() < 3; i++ {
+		time.Sleep(time.Millisecond)
+	}
+	m.DifferentialPressure() // may still mix in the old window's tail
+	time.Sleep(10 * time.Millisecond)
+	if got, err := m.DifferentialPressure(); err != nil || math.Abs(got-pa(8192)) > 0.01 {
+		t.Errorf("DifferentialPressure() after new samples = %v, %v; want %.2f", got, err, pa(8192))
+	}
+}

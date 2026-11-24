@@ -60,7 +60,9 @@ type MS4525DO struct {
 	outMax float64 // counts at PMaxPSI
 
 	mu          sync.Mutex
-	pressure    float64 // Pa, last fresh measurement
+	pressure    float64 // Pa, last value handed out by DifferentialPressure
+	pressureSum float64 // Pa, sum of the fresh measurements not handed out yet
+	pressureN   int     // how many measurements pressureSum holds
 	temperature float64 // degrees C, last fresh measurement
 	staleCount  int     // consecutive fetches the sensor reported stale
 	err         error   // why the last fetch gave no measurement, nil if it did
@@ -224,7 +226,8 @@ func (m *MS4525DO) run(freq time.Duration) {
 		default:
 			m.staleCount = 0
 			m.err = nil
-			m.pressure = pa
+			m.pressureSum += pa
+			m.pressureN++
 			m.temperature = temp
 		}
 		m.mu.Unlock()
@@ -237,8 +240,12 @@ func (m *MS4525DO) isRunning() bool {
 	return m.running
 }
 
-// DifferentialPressure returns the last pressure measured across the two
-// ports in Pa, or the error that stands in the way of one.
+// DifferentialPressure returns the pressure across the two ports in Pa, or
+// the error that stands in the way of one. The value is the mean of the fresh
+// measurements taken since the previous call (oversampling: polled at 20 Hz
+// and read at 2 Hz, ten samples cut the white noise about 3x with no more
+// lag than the reader's own period). With no fresh measurement since then,
+// the previous value stands.
 func (m *MS4525DO) DifferentialPressure() (float64, error) {
 	m.mu.Lock()
 	defer m.mu.Unlock()
@@ -247,6 +254,10 @@ func (m *MS4525DO) DifferentialPressure() (float64, error) {
 	}
 	if m.err != nil {
 		return 0, m.err
+	}
+	if m.pressureN > 0 {
+		m.pressure = m.pressureSum / float64(m.pressureN)
+		m.pressureSum, m.pressureN = 0, 0
 	}
 	return m.pressure, nil
 }
