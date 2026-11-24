@@ -5,6 +5,27 @@
     margin-bottom: 12px;
 }
 
+/* Ten tabs do not fit one row on a narrow panel (480 px): let them wrap
+   instead of cutting every label. */
+@media (max-width: 767px) {
+    .addonSettings .addonSettingsTabs .btn-group-justified {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .addonSettings .addonSettingsTabs .btn-group-justified > .btn-group {
+        display: block;
+        flex: 1 0 auto;
+        width: auto;
+    }
+
+    .addonSettings .addonSettingsTabs .btn-group-justified > .btn-group .btn {
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
 .addonSettings .addonSettingsTabs .label {
     margin-left: 4px;
 }

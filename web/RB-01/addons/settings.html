@@ -92,6 +92,39 @@
                 </div>
             </div>
         </div>
+        <!-- Best glide: the glide range on the map and the synthetic view (docs/glide-range.md) -->
+        <div class="panel-group col-sm-12" ng-if="section == 'aircraft' && aircraft && aircraft.bestGlide">
+            <div class="panel panel-default">
+                <div class="panel-heading">Best Glide</div>
+                <div class="panel-body">
+                    <form name="GlideForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Glide Range<br /><small>map and 3D view</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="aircraft.bestGlide.enabled"></ui-switch></div>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Glide Ratio<br /><small>still air, {{glideLimits.glideRatio[0]}}-{{glideLimits.glideRatio[1]}}</small></label>
+                            <input class="col-xs-7" type="number" step="0.1" min="{{glideLimits.glideRatio[0]}}" max="{{glideLimits.glideRatio[1]}}"
+                                ng-model="aircraft.bestGlide.glideRatio" placeholder="9" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Best Glide Speed<br /><small>IAS, kt{{glideSpeedHint()}}</small></label>
+                            <input class="col-xs-7" type="number" step="1" min="{{glideLimits.speedKt[0]}}" max="{{glideLimits.speedKt[1]}}"
+                                ng-model="aircraft.bestGlide.speedKt" placeholder="75" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Terrain Clearance<br /><small>ft above ground{{glideClearanceHint()}}</small></label>
+                            <input class="col-xs-7" type="number" step="50" min="{{glideLimits.clearanceAglFt[0]}}" max="{{glideLimits.clearanceAglFt[1]}}"
+                                ng-model="aircraft.bestGlide.clearanceAglFt" placeholder="500" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Wind Correction<br /><small>estimated wind</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="aircraft.bestGlide.useWind"></ui-switch></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <!-- EMS gauges -->
         <div class="panel-group col-sm-12" ng-if="section == 'ems' && ems">
             <div class="panel panel-default">
@@ -267,6 +300,22 @@
                             <label class="control-label col-xs-5">Airspeed Sensor<br /><small>MS4525DO pitot</small></label>
                             <div class="col-xs-7"><ui-switch ng-model="hardware.MS4525DO_Enabled"></ui-switch></div>
                         </div>
+                        <div class="form-group addonSettingsRow" ng-if="hardware.MS4525DO_Enabled">
+                            <label class="control-label col-xs-5">Airspeed Scale<br /><small>&times; IAS, 1 = none</small></label>
+                            <input class="col-xs-7" type="number" step="0.01" min="0.5" max="1.5" ng-model="hardware.AirspeedScale" />
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="hardware.MS4525DO_Enabled">
+                            <label class="control-label col-xs-5">Airspeed Zero<br /><small>{{hardware.AirspeedZeroOffset | number:1}} Pa</small></label>
+                            <div class="col-xs-7">
+                                <button class="btn btn-default btn-block" ng-click="zeroAirspeed()"
+                                    ng-disabled="airspeedZero.status == 'zeroing'">Zero Airspeed</button>
+                            </div>
+                        </div>
+                        <div class="addonSettingsHint" ng-if="hardware.MS4525DO_Enabled">
+                            <span ng-if="airspeedZero.message">{{airspeedZero.message}}<br /></span>
+                            Zero with the aircraft still, in still air, pitot cover off. The scale corrects the
+                            pitot-static position error measured in flight: 1.03 if IAS reads 3 % low.
+                        </div>
                         <div class="form-group addonSettingsRow" ng-if="hardware.IMU_Sensor_Enabled">
                             <label class="control-label col-xs-5">Minimum Fan Duty<br /><small>%</small></label>
                             <input class="col-xs-7" type="number" step="1" min="0" max="100" ng-model="hardware.PWMDutyMin" />
@@ -363,6 +412,52 @@
                 </div>
             </div>
         </div>
+        <!-- Switchboard: the tiles of the Switchboard plate, stratux.conf Switches -->
+        <div class="panel-group col-sm-12" ng-if="section == 'switchboard' && switchboard">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Switches
+                    <a ng-click="addSwitch()" class="btn pull-right"><i class="fa fa-plus"></i></a>
+                </div>
+                <div class="panel-body">
+                    <table class="addonSettingsWidgets addonSettingsSwitches">
+                        <tr>
+                            <td>#</td>
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Action</td>
+                        </tr>
+                        <tr ng-repeat="item in switchboard.Switches" ng-click="selectSwitch($index)"
+                            ng-class="{ 'addonSettingsSelected': $index == edit.selectedSwitch }">
+                            <td>{{$index + 1}}</td>
+                            <td>{{item.Name}}</td>
+                            <td>{{switchTypeLabel(item.Type)}}</td>
+                            <td class="addonSettingsMono">{{switchAction(item)}}</td>
+                        </tr>
+                    </table>
+                    <div class="addonSettingsHint" ng-if="switchboard.Switches.length == 0">No switches: press + to add one.</div>
+                    <div class="addonSettingsHint" ng-if="switchboard.Switches.length > 0">Tap a switch to edit it. The plate shows them in this order.</div>
+                    <div class="addonSettingsHint text-warning" ng-if="conf.SwitchBoard_Enabled === false">The Switchboard is off in Hardware &gt; Features.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Audio: this display's sound switches, browser storage -->
+        <div class="panel-group col-sm-12" ng-if="section == 'audio' && audio">
+            <div class="panel panel-default">
+                <div class="panel-heading">Audio Panel</div>
+                <div class="panel-body">
+                    <form name="AudioForm" novalidate>
+                        <div class="form-group addonSettingsRow" ng-repeat="flag in audioFlags">
+                            <label class="control-label col-xs-5">{{flag.label}}<br /><small>{{flag.hint}}</small></label>
+                            <div class="col-xs-7"><ui-switch ng-model="audio[flag.key]"></ui-switch></div>
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">Kept in this display's browser, not in stratux.conf: each display has its own.
+                        A Switchboard Display toggle flips the same switches in flight.
+                        The speaker itself is Hardware &gt; Features &gt; Audio Internal Speaker.</div>
+                </div>
+            </div>
+        </div>
         <!-- Save / Reload of the current section's file -->
         <div class="panel-group col-sm-12" ng-if="file()">
             <div class="panel panel-default">
@@ -436,14 +531,16 @@
                             <label class="control-label col-xs-5">Label</label>
                             <input class="col-xs-7" type="text" maxlength="15" ng-model="gauge.label" />
                         </div>
-                        <div class="form-group addonSettingsRow">
-                            <label class="control-label col-xs-5">Unit</label>
-                            <input class="col-xs-7" type="text" maxlength="7" ng-model="gauge.unit" />
-                        </div>
                         <div class="form-group addonSettingsRow" ng-if="section == 'ems'">
                             <label class="control-label col-xs-5">Source<br /><small>EMS sensor key</small></label>
                             <select class="col-xs-7 custom-select" ng-model="gauge.source"
+                                ng-change="gaugeSourceChanged()"
                                 ng-options="s for s in emsSources"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Unit<br /><small>{{gaugeUnitHint()}}</small></label>
+                            <select class="col-xs-7 custom-select" ng-model="gauge.unit"
+                                ng-options="u for u in gaugeUnits()"></select>
                         </div>
                         <div class="form-group addonSettingsRow" ng-if="section == 'ems'">
                             <label class="control-label col-xs-5">Shown in</label>
@@ -506,6 +603,48 @@
                     <div class="addonSettingsHint">Start and Size are degrees of the gauge circle, clockwise from the bottom.
                         <span ng-if="section == 'ems'">Above its Threshold an arc lights up and colours the value with its Bkg.</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Col, switchboard: the selected switch -->
+    <div class="col-sm-6" ng-if="section == 'switchboard' && switchboard && switchItem()">
+        <div class="panel-group col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Switch {{edit.selectedSwitch + 1}}: {{switchItem().Name}}
+                    <span class="pull-right">
+                        <a ng-click="moveSwitch(-1)" class="btn" ng-class="{ 'disabled': edit.selectedSwitch == 0 }"><i class="fa fa-arrow-up"></i></a>
+                        <a ng-click="moveSwitch(1)" class="btn" ng-class="{ 'disabled': edit.selectedSwitch >= switchboard.Switches.length - 1 }"><i class="fa fa-arrow-down"></i></a>
+                        <a ng-click="duplicateSwitch()" class="btn"><i class="fa fa-copy"></i></a>
+                        <a ng-click="removeSwitch()" class="btn"><i class="fa fa-trash"></i></a>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <form name="SwitchForm" novalidate>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Name<br /><small>the tile's label</small></label>
+                            <input class="col-xs-7" type="text" maxlength="15" ng-model="switchItem().Name"
+                                placeholder="{{'Item ' + (edit.selectedSwitch + 1)}}" />
+                        </div>
+                        <div class="form-group addonSettingsRow">
+                            <label class="control-label col-xs-5">Type<br /><small>{{switchTypeHint()}}</small></label>
+                            <select class="col-xs-7 custom-select" ng-model="switchItem().Type"
+                                ng-change="switchTypeChanged()"
+                                ng-options="t.value as t.label for t in switchTypes"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="switchItem().Type == 5">
+                            <label class="control-label col-xs-5">Toggles<br /><small>an Audio switch of this display</small></label>
+                            <select class="col-xs-7 custom-select" ng-model="switchItem().Uri"
+                                ng-options="t.value as t.label for t in switchToggles()"></select>
+                        </div>
+                        <div class="form-group addonSettingsRow" ng-if="switchItem().Type != 5">
+                            <label class="control-label col-xs-5">Command<br /><small>run by the daemon with bash -c</small></label>
+                            <input class="col-xs-7 addonSettingsMono" type="text" ng-model="switchItem().Uri"
+                                placeholder="e.g. amixer sset Speaker 75%" />
+                        </div>
+                    </form>
+                    <div class="addonSettingsHint">Tapping the tile on the Switchboard plate runs it; the light shows how the last run ended.</div>
                 </div>
             </div>
         </div>

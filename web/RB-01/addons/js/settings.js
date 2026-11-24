@@ -34,8 +34,10 @@
  *
  *   aircraft.json  the aircraft profile (serviceaircraft.js -> window.aircraftData):
  *                  registration and pilot, the pilot's display units with their
- *                  conversion factors (js/global.js), and the GPS speed gauge
- *                  (SixPackInstruments.js).
+ *                  conversion factors (js/global.js), the GPS speed gauge
+ *                  (SixPackInstruments.js), and bestGlide, the parameters of the
+ *                  glide range on the map and the synthetic view (js/glidereach.js,
+ *                  docs/glide-range.md).
  *   ems.json       the engine gauges, {widgets: [...]}, drawn by plates/ems.html
  *                  on the EMS page and in the sidebar (main.js loads it into
  *                  MainCtrl's $scope.EMS).
@@ -61,6 +63,14 @@
  *                  bearingless target circle, the traffic source in the
  *                  callsign, and the serial outputs (one post per port).
  *   Hardware       the receivers, sensors and features the daemon runs.
+ *   Switchboard    Switches, the tiles of plates/switchboard.html: name, type
+ *                  (Command run by the daemon, or Display toggle run by the
+ *                  browser) and the command or toggle; posted as a whole list.
+ *
+ * One section is neither a file nor stratux.conf:
+ *   Audio          this display's sound switches, localStorage flags
+ *                  (Display_Audio_*), the same ones the Switchboard's display
+ *                  toggles flip in flight (plates/js/switchboard.js).
  *
  * The speed gauge and every EMS widget share the same shape (label, unit,
  * min/max, scale sweep in degrees, coloured arcs), so one editor serves both;
@@ -87,6 +97,7 @@ var URL_AIRCRAFT_SETTINGS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/aircr
 var URL_EMS_SETTINGS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/ems.json";
 var URL_NAVIGATION_SETTINGS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/navigation.json";
 var URL_KEYPAD_SETTINGS = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/keypad.json";
+var URL_CALIBRATE_AIRSPEED = URL_HOST_PROTOCOL + URL_HOST_BASE + "/calibrateAirspeed";
 // URL_SETTINGS_GET / URL_SETTINGS_SET come from js/global.js
 
 // How /setSettings type-asserts each stratux.conf key (handleSettingsSetRequest
@@ -101,11 +112,17 @@ var SETTINGS_CONF_TYPES = {
         "Keypad_Enabled", "Radio_Enabled", "EMS_Enabled", "SwitchBoard_Enabled"
     ],
     int: ["PPM", "AltitudeOffset", "PWMDutyMin", "AutopilotUdp_Port"],
-    float: ["Dump1090Gain"],
+    float: ["Dump1090Gain", "AirspeedScale", "AirspeedZeroOffset"],
     string: ["OwnshipModeS", "WatchList", "GLimits"]
 };
 
-function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
+// AirspeedScale bounds, as validAirspeedScale in main/airspeed.go
+var AIRSPEED_SCALE_MIN = 0.5;
+var AIRSPEED_SCALE_MAX = 1.5;
+// POST /calibrateAirspeed averages 2 s of samples before it saves the offset
+var AIRSPEED_ZERO_WAIT_MS = 2600;
+
+function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q, $timeout) {
 
     const name = "settings";
     const controllerName = String(name).charAt(0).toLocaleUpperCase() + String(name).slice(1) + "Ctrl";
@@ -136,6 +153,8 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         { id: "ahrs", label: "AHRS" },
         { id: "receiver", label: "Receiver" },
         { id: "hardware", label: "Hardware" },
+        { id: "switchboard", label: "Switchboard" },
+        { id: "audio", label: "Audio" },
         { id: "navigation", label: "Navigation" },
         { id: "keypad", label: "Keypad" }
     ];
@@ -192,6 +211,77 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         "batteryvoltage", "alternatorout", "amps",
         "cht1", "cht2", "cht3", "cht4", "egt1", "egt2", "egt3", "egt4"
     ];
+    // What a gauge's Unit may say, by the source that feeds it. The unit is a
+    // label, not a conversion: EMS values are drawn as the sender posts them,
+    // except temperatures, which ems.json keeps in °C and the HMI converts and
+    // relabels to Units > Temperatures (js/global.js emsApplyPilotUnits). The
+    // speed gauge is likewise relabelled to Units > Speed (SixPackInstruments.js).
+    const emsUnitChoices = [
+        { match: /^(oiltemperature|coolanttemperature|outsidetemperature|cht\d+|egt\d+)$/, units: ["°C"] },
+        { match: /^enginerpm$/, units: ["RPM", "100rpm"] },
+        { match: /^manifoldpressure$/, units: ["inHg", "mmHg", "hPa", "kPa"] },
+        { match: /pressure$/, units: ["PSI", "bar", "kPa"] },
+        { match: /^fuel(\d+|remaining)?$/, units: ["LT", "GAL", "%"] },
+        { match: /^batteryvoltage$/, units: ["Volt"] },
+        { match: /^alternatorout$/, units: ["Volt", "AMPS"] },
+        { match: /^amps$/, units: ["AMPS"] }
+    ];
+    // A source no rule knows can carry any of the units above.
+    const emsAnyUnit = emsUnitChoices.reduce(function (all, rule) {
+        rule.units.forEach(function (u) {
+            if (all.indexOf(u) < 0) {
+                all.push(u);
+            }
+        });
+        return all;
+    }, []);
+    function unitsForSource(source) {
+        const key = String(source || "").toLowerCase();
+        const rule = emsUnitChoices.find(function (r) { return r.match.test(key); });
+        return rule ? rule.units : emsAnyUnit;
+    }
+    // The picker's choices for the gauge being edited, always including the
+    // unit it already has so a hand-edited file is shown as it is. Cached per
+    // key so ng-options sees the same array on every digest.
+    const gaugeUnitCache = {};
+    $scope.gaugeUnits = function () {
+        const gauge = $scope.gauge;
+        if (!gauge) {
+            return [];
+        }
+        const base = $scope.section == "aircraft"
+            ? $scope.unitPresets.speed.map(function (u) { return u.label; })
+            : unitsForSource(gauge.source);
+        const current = gauge.unit === undefined || gauge.unit === null ? "" : String(gauge.unit);
+        const key = $scope.section + "|" + base.join("|") + "|" + current;
+        if (gaugeUnitCache[key] === undefined) {
+            gaugeUnitCache[key] = (current === "" || base.indexOf(current) >= 0) ? base : base.concat([current]);
+        }
+        return gaugeUnitCache[key];
+    };
+    $scope.gaugeUnitHint = function () {
+        if (!$scope.gauge) {
+            return "";
+        }
+        if ($scope.section == "aircraft") {
+            return "shown in Units > Speed";
+        }
+        if (emsUnitChoices[0].match.test(String($scope.gauge.source || "").toLowerCase())) {
+            return "°C in the file, shown in Units > Temperatures";
+        }
+        return "label only, no conversion";
+    };
+    // A new source keeps the unit when it still fits, else takes its first one.
+    $scope.gaugeSourceChanged = function () {
+        const gauge = $scope.gauge;
+        if (!gauge) {
+            return;
+        }
+        const units = unitsForSource(gauge.source);
+        if (units.indexOf(gauge.unit) < 0) {
+            gauge.unit = units[0];
+        }
+    };
     $scope.placements = [
         { value: true, label: "Sidebar" },
         { value: false, label: "EMS page" }
@@ -241,8 +331,55 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         if (!Array.isArray(db.GPSGroundSpeed.arcs)) {
             db.GPSGroundSpeed.arcs = [];
         }
+        // Best glide: a key the file lacks gets the default the glide range
+        // already uses for it (GLIDE_DEFAULTS, js/glidereach.js), so the form shows
+        // what is drawn. A value out of range is kept, for validate to name it.
+        if (db.bestGlide === undefined || db.bestGlide === null || typeof db.bestGlide !== "object") {
+            db.bestGlide = {};
+        }
+        Object.keys(GLIDE_DEFAULTS).forEach(function (key) {
+            const value = db.bestGlide[key];
+            if (value === undefined || value === null || value === "") {
+                db.bestGlide[key] = GLIDE_DEFAULTS[key];
+            }
+        });
         return db;
     }
+
+    // Best glide: the ranges the glide range accepts (js/glidereach.js), so the
+    // form refuses what the map would silently replace with a default.
+    $scope.glideLimits = GLIDE_LIMITS;
+    const glideLabels = { glideRatio: "Glide ratio", speedKt: "Best glide speed", clearanceAglFt: "Terrain clearance" };
+    function validateAircraft(obj) {
+        const glide = obj.bestGlide || {};
+        for (const key in GLIDE_LIMITS) {
+            const value = glide[key];
+            const limits = GLIDE_LIMITS[key];
+            if (typeof value !== "number" || !isFinite(value) || value < limits[0] || value > limits[1]) {
+                return glideLabels[key] + ": from " + limits[0] + " to " + limits[1] + ".";
+            }
+        }
+        return "";
+    }
+    // The speed and the clearance in the pilot's display units, when those are
+    // not knots and feet already
+    $scope.glideSpeedHint = function () {
+        const kt = $scope.aircraft && $scope.aircraft.bestGlide ? $scope.aircraft.bestGlide.speedKt : null;
+        const unit = $scope.aircraft && $scope.aircraft.units ? $scope.aircraft.units.speed : "";
+        if (typeof kt !== "number" || !isFinite(kt) || /^kts?$/i.test(String(unit))) {
+            return "";
+        }
+        const c = $scope.aircraft.units.speedConversionFromKmh || {};
+        return " (" + Math.round(kt * 1.852 * (c.multiply ?? 1) + (c.sum ?? 0)) + " " + unit + ")";
+    };
+    $scope.glideClearanceHint = function () {
+        const ft = $scope.aircraft && $scope.aircraft.bestGlide ? $scope.aircraft.bestGlide.clearanceAglFt : null;
+        const unit = $scope.aircraft && $scope.aircraft.units ? String($scope.aircraft.units.altimeter || "") : "";
+        if (typeof ft !== "number" || !isFinite(ft) || /^f(ee)?t$/i.test(unit)) {
+            return "";
+        }
+        return " (" + Math.round(ft * 0.3048) + " m)";
+    };
 
     function normalizeEms(db) {
         if (!Array.isArray(db.widgets)) {
@@ -580,11 +717,24 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
     // ---- Hardware: the receivers, sensors and features the daemon runs
     const hardwareSection = confSection([
         "GPS_Enabled", "UAT_Enabled", "ES_Enabled", "OGN_Enabled", "AIS_Enabled", "APRS_Enabled",
-        "IMU_Sensor_Enabled", "BMP_Sensor_Enabled", "MS4525DO_Enabled", "PWMDutyMin", "Ping_Enabled", "Pong_Enabled",
+        "IMU_Sensor_Enabled", "BMP_Sensor_Enabled", "MS4525DO_Enabled", "AirspeedScale", "AirspeedZeroOffset",
+        "PWMDutyMin", "Ping_Enabled", "Pong_Enabled",
         "OGNI2CTXEnabled", "Camera_Enabled", "Audio_Enabled", "Autopilot_Enabled", "AutopilotUdp_Enabled",
         "AutopilotUdp_Port", "Keypad_Enabled", "Radio_Enabled", "EMS_Enabled", "SwitchBoard_Enabled"
     ], {
+        // The zero offset is measured by the daemon (Zero Airspeed below), never typed
+        skip: ["AirspeedZeroOffset"],
+        normalize: function (obj, db) {
+            // A daemon older than the setting has no AirspeedScale: it means 1
+            if (!(Number(db.AirspeedScale) > 0)) {
+                obj.AirspeedScale = 1;
+            }
+        },
         validate: function (obj) {
+            // The daemon refuses a factor outside this range (validAirspeedScale, main/airspeed.go)
+            if (obj.AirspeedScale < AIRSPEED_SCALE_MIN || obj.AirspeedScale > AIRSPEED_SCALE_MAX) {
+                return "Airspeed scale: " + AIRSPEED_SCALE_MIN + " to " + AIRSPEED_SCALE_MAX + " (1 = no correction).";
+            }
             if (obj.PWMDutyMin < 0 || obj.PWMDutyMin > 100) {
                 return "Minimum fan duty cycle: 0 to 100 %.";
             }
@@ -594,6 +744,37 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
             return "";
         }
     });
+
+    // ---- Zero Airspeed: POST /calibrateAirspeed averages 2 s of pitot pressure
+    // into AirspeedZeroOffset (main/airspeed.go); the daemon refuses it (409) with
+    // no sensor or while the GPS says the aircraft moves. The new offset is read
+    // back once the 2 s are over and taken as saved, so the page stays unmodified.
+    $scope.airspeedZero = { status: "", message: "" };
+    $scope.zeroAirspeed = function () {
+        if ($scope.airspeedZero.status == "zeroing") {
+            return;
+        }
+        $scope.airspeedZero = { status: "zeroing", message: "Zeroing: keep the aircraft still…" };
+        $http.post(URL_CALIBRATE_AIRSPEED, "").then(function () {
+            return $timeout(function () {}, AIRSPEED_ZERO_WAIT_MS).then(function () {
+                return $http.get(URL_SETTINGS_GET, { params: { "_": Date.now() } });
+            });
+        }).then(function (response) {
+            const db = angular.fromJson(response.data) || {};
+            const offset = Number(db.AirspeedZeroOffset) || 0;
+            if ($scope.hardware) {
+                $scope.hardware.AirspeedZeroOffset = offset;
+            }
+            if ($scope.state.hardware && $scope.state.hardware.saved) {
+                $scope.state.hardware.saved.AirspeedZeroOffset = offset;
+            }
+            $scope.airspeedZero = { status: "done", message: "Zeroed: offset " + offset.toFixed(1) + " Pa." };
+        }, function (response) {
+            const reason = typeof response.data === "string" && response.data.trim() !== "" ?
+                response.data.trim() : "HTTP " + response.status;
+            $scope.airspeedZero = { status: "error", message: "Zero failed: " + reason + "." };
+        });
+    };
 
     // ---- Navigation: one plate list per display shape
     $scope.displayShape = typeof whichKeywordIsForThisDisplay === "function" ? whichKeywordIsForThisDisplay() : "";
@@ -768,9 +949,208 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         }
     }
 
+    // ---- Audio: the display's own sound switches. Not stratux.conf: flags in
+    // this browser's localStorage, "true"/"false", read by the services
+    // (servicebuzzer.js, servicesituation.js, servicealerts.js) and toggled in
+    // flight by the Switchboard's display toggles (plates/js/switchboard.js,
+    // switchBoardHelperToggle), which name them by `toggle`.
+    $scope.audioFlags = [
+        { key: "Display_Audio_Enabled", toggle: "AUDIO_STATUS", label: "Beeper",
+            hint: "the tone generator; off keeps it silent" },
+        { key: "Display_Audio_GLoad_Enabled", toggle: "AUDIO_STATUS_GMETER", label: "G-Load Tones",
+            hint: "beeps with the G load on every page, needs the Beeper" },
+        { key: "Display_Audio_Alerts_Enabled", toggle: "AUDIO_STATUS_ALARMS", label: "Alert Sounds",
+            hint: "the sound of each alert (alertsMapping.json)" }
+    ];
+    // The volume servicebuzzer.js gives the beeper at boot when it is on.
+    const BEEPER_VOLUME = 75;
+
+    const audioSection = {
+        local: true, name: "this display (browser storage)",
+        load: function () {
+            var obj = {};
+            $scope.audioFlags.forEach(function (flag) {
+                obj[flag.key] = localDisplayGetFlag(flag.key) == "true";
+            });
+            return obj;
+        },
+        store: function (obj) {
+            $scope.audioFlags.forEach(function (flag) {
+                window.localStorage.setItem(flag.key, obj[flag.key] === true ? "true" : "false");
+            });
+        },
+        normalize: function (db) { return db; },
+        serialize: angular.toJson,
+        // The beeper's volume is only read at boot: set it now so the switch
+        // takes effect without a reload. The other two flags are read per event.
+        applyLive: function (obj) {
+            if (window.gMeterBuzzerPlayer && typeof window.gMeterBuzzerPlayer.setVolumeTo === "function") {
+                window.gMeterBuzzerPlayer.setVolumeTo(obj.Display_Audio_Enabled === true ? BEEPER_VOLUME : 0);
+            }
+        }
+    };
+
+    // ---- Switchboard: the tiles of plates/switchboard.html, stratux.conf
+    // "Switches". /setSettings rebuilds the list from Name, Uri and Type only,
+    // asserting each type (a missing or wrong one panics the request), and
+    // resets the run status, so only those three are edited and posted.
+    // Types: main/switchboard.go SW_TYPE_*; the daemon runs only Command, a
+    // Display toggle is run by the browser (switchBoardHelperToggle).
+    $scope.switchTypes = [
+        { value: 0, label: "Disabled", hint: "shown, does nothing" },
+        { value: 2, label: "Command", hint: "a bash command line the daemon runs" },
+        { value: 5, label: "Display toggle", hint: "turns one of this display's Audio switches on and off" }
+    ];
+    $scope.edit.selectedSwitch = 0;
+
+    function cleanSwitch(item) {
+        return {
+            Name: (item.Name === undefined || item.Name === null) ? "" : String(item.Name),
+            Type: parseInt(item.Type) || 0,
+            Uri: (item.Uri === undefined || item.Uri === null) ? "" : String(item.Uri)
+        };
+    }
+
+    const switchboardSection = confSection(["Switches"], {
+        normalize: function (obj, db) {
+            obj.Switches = Array.isArray(db.Switches) ? db.Switches.map(cleanSwitch) : [];
+            obj.Switches.forEach(function (item) {
+                if (!$scope.switchTypes.some(function (t) { return t.value == item.Type; })) {
+                    $scope.switchTypes.push({ value: item.Type, label: "Type " + item.Type, hint: "not run by RB-01" });
+                }
+            });
+        },
+        // The whole list or nothing: the daemon replaces it in one go.
+        serialize: function (body, obj) {
+            if (body.Switches !== undefined) {
+                body.Switches = obj.Switches.map(cleanSwitch);
+            }
+        },
+        validate: function (obj) {
+            var why = "";
+            obj.Switches.forEach(function (item, index) {
+                if (why !== "") {
+                    return;
+                }
+                if (String(item.Name || "").trim() === "") {
+                    why = "Switch " + (index + 1) + ": the name is empty.";
+                } else if (parseInt(item.Type) !== 0 && String(item.Uri || "").trim() === "") {
+                    why = "Switch " + (index + 1) + " (" + item.Name + "): the " +
+                        (parseInt(item.Type) == 5 ? "display toggle" : "command") + " is empty.";
+                }
+            });
+            return why;
+        }
+    });
+
+    $scope.switchItem = function () {
+        if ($scope.switchboard === null) {
+            return null;
+        }
+        const list = $scope.switchboard.Switches;
+        if ($scope.edit.selectedSwitch >= list.length) {
+            $scope.edit.selectedSwitch = list.length - 1;
+        }
+        if ($scope.edit.selectedSwitch < 0) {
+            $scope.edit.selectedSwitch = 0;
+        }
+        return list.length > 0 ? list[$scope.edit.selectedSwitch] : null;
+    };
+
+    $scope.selectSwitch = function (index) {
+        $scope.edit.selectedSwitch = index;
+    };
+
+    $scope.addSwitch = function () {
+        $scope.switchboard.Switches.push({ Name: "NEW", Type: 2, Uri: "" });
+        $scope.edit.selectedSwitch = $scope.switchboard.Switches.length - 1;
+    };
+
+    $scope.duplicateSwitch = function () {
+        const item = $scope.switchItem();
+        if (item === null) {
+            return;
+        }
+        $scope.switchboard.Switches.splice($scope.edit.selectedSwitch + 1, 0, cleanSwitch(item));
+        $scope.edit.selectedSwitch++;
+    };
+
+    $scope.removeSwitch = function () {
+        if ($scope.switchItem() === null) {
+            return;
+        }
+        $scope.switchboard.Switches.splice($scope.edit.selectedSwitch, 1);
+        $scope.switchItem();
+    };
+
+    $scope.moveSwitch = function (delta) {
+        const list = $scope.switchboard.Switches;
+        const from = $scope.edit.selectedSwitch;
+        const to = from + delta;
+        if (to < 0 || to >= list.length) {
+            return;
+        }
+        list[from] = list.splice(to, 1, list[from])[0];
+        $scope.edit.selectedSwitch = to;
+    };
+
+    // A display toggle names an Audio switch; a command is typed. Changing the
+    // type swaps one for the other instead of leaving a mismatched Uri behind.
+    $scope.switchTypeChanged = function () {
+        const item = $scope.switchItem();
+        if (item === null) {
+            return;
+        }
+        item.Type = parseInt(item.Type) || 0;
+        const isToggle = $scope.audioFlags.some(function (f) { return f.toggle == item.Uri; });
+        if (item.Type == 5 && !isToggle) {
+            item.Uri = $scope.audioFlags[0].toggle;
+        } else if (item.Type != 5 && isToggle) {
+            item.Uri = "";
+        }
+    };
+
+    // The toggles a Display toggle can name, keeping one this RB-01 does not
+    // know. Cached per extra entry: ng-options needs the same objects on every
+    // digest, or it never settles ($rootScope:infdig).
+    const switchToggleCache = {};
+    $scope.switchToggles = function () {
+        const item = $scope.switchItem();
+        const known = $scope.audioFlags.some(function (f) { return item && f.toggle == item.Uri; });
+        const extra = (item && item.Uri && !known) ? item.Uri : "";
+        if (switchToggleCache[extra] === undefined) {
+            const list = $scope.audioFlags.map(function (f) { return { value: f.toggle, label: f.label }; });
+            if (extra !== "") {
+                list.push({ value: extra, label: extra + " (unknown)" });
+            }
+            switchToggleCache[extra] = list;
+        }
+        return switchToggleCache[extra];
+    };
+
+    $scope.switchTypeLabel = function (type) {
+        const found = $scope.switchTypes.find(function (t) { return t.value == type; });
+        return found ? found.label : "Type " + type;
+    };
+
+    $scope.switchTypeHint = function () {
+        const item = $scope.switchItem();
+        const found = item ? $scope.switchTypes.find(function (t) { return t.value == item.Type; }) : null;
+        return found ? found.hint : "";
+    };
+
+    $scope.switchAction = function (item) {
+        if (parseInt(item.Type) == 5) {
+            const flag = $scope.audioFlags.find(function (f) { return f.toggle == item.Uri; });
+            return flag ? "Audio: " + flag.label : item.Uri;
+        }
+        return item.Uri;
+    };
+
     const files = {
         aircraft: { getUrl: URL_AIRCRAFT_SETTINGS, postUrl: URL_AIRCRAFT_SETTINGS, name: "aircraft.json",
-            normalize: normalizeAircraft, serialize: angular.toJson, applyLive: applyAircraftLive },
+            normalize: normalizeAircraft, serialize: angular.toJson, applyLive: applyAircraftLive,
+            validate: validateAircraft },
         ems: { getUrl: URL_EMS_SETTINGS, postUrl: URL_EMS_SETTINGS, name: "ems.json",
             normalize: normalizeEms, serialize: angular.toJson, applyLive: applyEmsLive },
         autopilot: { getUrl: URL_SETTINGS_GET, postUrl: URL_SETTINGS_SET, name: "stratux.conf", conf: true,
@@ -789,6 +1169,8 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         ahrs: ahrsSection,
         receiver: receiverSection,
         hardware: hardwareSection,
+        switchboard: switchboardSection,
+        audio: audioSection,
         navigation: { getUrl: URL_NAVIGATION_SETTINGS, postUrl: URL_NAVIGATION_SETTINGS, name: "navigation.json",
             normalize: normalizeNavigation, serialize: angular.toJson, applyLive: applyNavigationLive },
         keypad: { getUrl: URL_KEYPAD_SETTINGS, postUrl: URL_KEYPAD_SETTINGS, name: "keypad.json",
@@ -857,6 +1239,7 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         widget.scale = 1;
         widget.displayInSidebar = false;
         widget.source = $scope.emsSources[0];
+        widget.unit = unitsForSource(widget.source)[0];
         $scope.ems.widgets.push(widget);
         $scope.selectWidget($scope.ems.widgets.length - 1);
     };
@@ -971,16 +1354,33 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         });
     }
 
+    // A local section is read from this browser, not fetched.
+    function loadLocal(section) {
+        try {
+            applyLoaded(section, files[section].load());
+        } catch (e) {
+            loadFailed(section, "Cannot read " + files[section].name + ": " + e);
+        }
+    }
+
     $scope.reload = function (section) {
         const state = $scope.state[section];
         state.loadError = "";
         state.saveError = "";
+        if (files[section].local) {
+            loadLocal(section);
+            return;
+        }
         fetch(files[section].getUrl, [section]);
     };
 
     function reloadAll() {
         var byUrl = {};
         Object.keys(files).forEach(function (section) {
+            if (files[section].local) {
+                loadLocal(section);
+                return;
+            }
             const url = files[section].getUrl;
             byUrl[url] = (byUrl[url] || []).concat([section]);
         });
@@ -994,6 +1394,19 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q) {
         const state = $scope.state[section];
         state.saveStatus = "saving";
         state.saveError = "";
+        if (file.local) {
+            try {
+                file.store($scope[section]);
+            } catch (e) {
+                state.saveStatus = "error";
+                state.saveError = "Save failed: " + e;
+                return;
+            }
+            state.saved = angular.copy($scope[section]);
+            state.saveStatus = "saved";
+            file.applyLive($scope[section]);
+            return;
+        }
         // angular.toJson drops the $$hashKey ng-repeat adds to the arrays.
         const body = file.serialize($scope[section], state.saved);
         const extras = file.extraPosts ? file.extraPosts($scope[section], state.saved) : [];
