@@ -31,7 +31,7 @@ Please join Discord community
 package main
 
 // Pitot-static airspeed: the MS4525DO driver (sensors/ms4525do.go) is found
-// on the I2C bus by pollSensors (main/sensors.go), read here at 10 Hz into
+// on the I2C bus by pollSensors (main/sensors.go), read here at 2 Hz into
 // mySituation.IndicatedAirSpeed, and zeroed on request from
 // POST /calibrateAirspeed (main/managementinterface.go).
 
@@ -67,6 +67,8 @@ func pollAirspeedSensor() {
 // initAirspeedSensor looks for the MS4525DO pitot-static sensor on the bus.
 // Most units have none, so a miss is logged only in DEBUG.
 func initAirspeedSensor(i2cbus embd.I2CBus) (ok bool) {
+	// Polled at 20 Hz (about 1 % of a 100 kHz bus); airspeedSender's 2 Hz
+	// reads get the mean of the last ~10 samples (see DifferentialPressure).
 	ms, err := sensors.NewMS4525DO(&i2cbus, sensors.MS4525DOConfig{}, 50*time.Millisecond)
 	if err != nil {
 		if globalSettings.DEBUG {
@@ -81,20 +83,41 @@ func initAirspeedSensor(i2cbus embd.I2CBus) (ok bool) {
 
 // Airspeed pipeline constants, see airspeedSender.
 const (
-	airspeedDt         = 0.1  // s, the sender's period
+	airspeedDt         = 0.5  // s, the sender's period: each read averages ~10 samples polled at 20 Hz
 	airspeedTau        = 0.3  // s, EWMA time constant on the dynamic pressure
 	airspeedDeadbandPa = 10.0 // below this (about 8 kt) the airspeed is 0: the zero offset's drift and the noise floor
-	airspeedCalSamples = 20   // 2 s of samples averaged into AirspeedZeroOffset
-	airspeedHoldTicks  = 10   // 1 s: the last airspeed stands through a transient read error, then it is blanked
+	airspeedCalSamples = 4    // 2 s of samples averaged into AirspeedZeroOffset
+	airspeedHoldTicks  = 2    // 1 s: the last airspeed stands through a transient read error, then it is blanked
+	airspeedDropTicks  = 10   // 5 s of read errors and the sensor is dropped for pollSensors to reconnect
+	airspeedScaleMin   = 0.5  // AirspeedScale outside [min, max] is a typo, not a calibration: it is refused
+	airspeedScaleMax   = 1.5
 )
 
+// validAirspeedScale reports whether s can be an AirspeedScale: a position
+// error correction is a few percent, so anything far from 1 is refused.
+func validAirspeedScale(s float64) bool {
+	return s >= airspeedScaleMin && s <= airspeedScaleMax
+}
+
+// airspeedScale is the AirspeedScale setting, or 1 when the stored value is
+// out of range (a hand-edited stratux.conf), so the airspeed is never scaled
+// by 0 or by nonsense.
+func airspeedScale() float64 {
+	if validAirspeedScale(globalSettings.AirspeedScale) {
+		return globalSettings.AirspeedScale
+	}
+	return 1
+}
+
 // airspeedSender turns the pitot differential pressure into
-// mySituation.IndicatedAirSpeed at 10 Hz. The stored zero offset comes off
+// mySituation.IndicatedAirSpeed at 2 Hz. The stored zero offset comes off
 // first (POST /calibrateAirspeed sets it, see the cal branch), then the
 // magnitude is taken so the tube order does not matter, a light EWMA tames
 // the sensor noise that the square root inflates near zero, and below
 // airspeedDeadbandPa the airspeed is 0, which the HMI reads as "no airspeed
-// source" and shows the ground speed for. When the sensor stops answering
+// source" and shows the ground speed for. Above it the airspeed is multiplied
+// by AirspeedScale, the installation's position error correction measured in
+// flight (1 = none). When the sensor stops answering
 // the airspeed is blanked after 1 s and the sensor dropped (for pollSensors
 // to reconnect) after 5 s, never left standing (FHA-SPD-4). Turning
 // MS4525DO_Enabled off closes the sensor and blanks the airspeed the same way.
@@ -123,7 +146,7 @@ func airspeedSender() {
 				mySituation.PitotLastMeasurementTime = time.Time{}
 				first = true
 			}
-			if failNum > numRetries {
+			if failNum > airspeedDropTicks {
 				myAirspeedReader.Close()
 				globalStatus.AirspeedConnected = false // Try reconnecting a little later
 				addSingleSystemErrorf("airspeed-sensor-read", "Airspeed Error: Couldn't read the pitot sensor: %s", err.Error())
@@ -163,7 +186,7 @@ func airspeedSender() {
 		q = u*q + (1-u)*dp
 		ias := 0.0
 		if q >= airspeedDeadbandPa {
-			ias = common.CalcIndicatedAirspeed(q)
+			ias = common.CalcIndicatedAirspeed(q) * airspeedScale()
 		}
 		temp, _ := myAirspeedReader.Temperature()
 

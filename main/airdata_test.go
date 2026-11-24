@@ -16,6 +16,7 @@ package main
 
 import (
 	"math"
+	"net/http/httptest"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -150,8 +151,8 @@ func stopped(t *testing.T, done chan struct{}, d time.Duration, what string) {
 // The pitot chain (FHA-SPD-4): the stored zero offset comes off, the tube order does
 // not matter, below 10 Pa the airspeed is 0 (the HMI then shows the ground speed), and
 // otherwise it is the airspeed of the dynamic pressure. When the sensor stops
-// answering the last airspeed stands for 10 reads (1 s), then it is blanked - value and
-// measurement time - and after 50 (5 s) the sensor is dropped, closed and an error
+// answering the last airspeed stands for 2 reads (1 s at 2 Hz), then it is blanked - value
+// and measurement time - and after 10 (5 s) the sensor is dropped, closed and an error
 // raised, for pollSensors to reconnect. It is never left standing.
 func TestAirspeedSender(t *testing.T) {
 	if !inChild(t) {
@@ -164,7 +165,7 @@ func TestAirspeedSender(t *testing.T) {
 		t.Errorf("8 Pa over the zero offset: airspeed %.1f kt, measured %v; want 0, current", ias, at)
 	}
 	pitot.set(4+1000, nil)
-	pitot.wait(t, 20) // the 0.3 s smoothing settles to 0.3 %
+	pitot.wait(t, 8) // the 0.3 s smoothing at 2 Hz settles to 0.04 %
 	want := bernoulliKt(1000)
 	if ias := float64(mySituation.IndicatedAirSpeed); math.Abs(ias-want) > 0.005*want {
 		t.Errorf("1000 Pa: airspeed %.2f kt; want %.2f", ias, want)
@@ -178,14 +179,14 @@ func TestAirspeedSender(t *testing.T) {
 	pitot.wait(t, 1) // the situation is written after the read
 	held, at := mySituation.IndicatedAirSpeed, mySituation.PitotLastMeasurementTime
 	pitot.set(0, errI2C)
-	pitot.wait(t, 9)
+	pitot.wait(t, 2)
 	if mySituation.IndicatedAirSpeed != held || mySituation.PitotLastMeasurementTime != at {
-		t.Errorf("9 failed reads: airspeed %.1f kt measured %v; want the last, %.1f at %v, held",
+		t.Errorf("2 failed reads: airspeed %.1f kt measured %v; want the last, %.1f at %v, held",
 			mySituation.IndicatedAirSpeed, mySituation.PitotLastMeasurementTime, held, at)
 	}
-	pitot.wait(t, 3)
+	pitot.wait(t, 1)
 	if mySituation.IndicatedAirSpeed != 0 || !mySituation.PitotLastMeasurementTime.IsZero() {
-		t.Errorf("12 failed reads: airspeed %.1f kt measured %v; want blanked",
+		t.Errorf("3 failed reads: airspeed %.1f kt measured %v; want blanked",
 			mySituation.IndicatedAirSpeed, mySituation.PitotLastMeasurementTime)
 	}
 	stopped(t, done, 6*time.Second, "a read error")
@@ -200,7 +201,7 @@ func TestAirspeedSender(t *testing.T) {
 
 var errI2C = &os.PathError{Op: "read", Path: "/dev/i2c-1", Err: os.ErrDeadlineExceeded}
 
-// Zeroing the pitot (POST /calibrateAirspeed) averages 20 reads (2 s) of the pressure
+// Zeroing the pitot (POST /calibrateAirspeed) averages 4 reads (2 s at 2 Hz) of the pressure
 // with no airflow into AirspeedZeroOffset and saves it; the airspeed reads 0 meanwhile
 // and is measured from the new zero after. Turning the sensor off in the settings
 // closes it and blanks the airspeed.
@@ -219,7 +220,7 @@ func TestAirspeedZeroAndDisable(t *testing.T) {
 	if mySituation.IndicatedAirSpeed != 0 {
 		t.Errorf("zeroing: airspeed %.1f kt; want 0", mySituation.IndicatedAirSpeed)
 	}
-	pitot.wait(t, 20)
+	pitot.wait(t, 2) // 4 reads from the request, the first of the 3 above included
 	if globalSettings.AirspeedZeroOffset != 46.5 {
 		t.Errorf("zero offset %.2f Pa; want the 46.5 read", globalSettings.AirspeedZeroOffset)
 	}
@@ -227,7 +228,7 @@ func TestAirspeedZeroAndDisable(t *testing.T) {
 		t.Errorf("settings saved: %v %.80q", err, b)
 	}
 	pitot.set(46.5+1000, nil)
-	pitot.wait(t, 20)
+	pitot.wait(t, 8)
 	if ias, want := float64(mySituation.IndicatedAirSpeed), bernoulliKt(1000); math.Abs(ias-want) > 0.005*want {
 		t.Errorf("1000 Pa over the new zero: airspeed %.2f kt; want %.2f", ias, want)
 	}
@@ -237,6 +238,66 @@ func TestAirspeedZeroAndDisable(t *testing.T) {
 		t.Errorf("turned off: connected %v closed %v airspeed %.1f measured %v; want closed and blanked",
 			globalStatus.AirspeedConnected, pitot.closed, mySituation.IndicatedAirSpeed, mySituation.PitotLastMeasurementTime)
 	}
+}
+
+// AirspeedScale, the position error correction, multiplies the airspeed above the
+// deadband and never lifts a reading inside it; 1 by default, and a stored value outside
+// 0.5 to 1.5 (a hand-edited stratux.conf) counts as 1. POST /setSettings refuses such a
+// value, or a non-number, and keeps the last one, which is saved.
+func TestAirspeedScale(t *testing.T) {
+	if !inChild(t) {
+		return
+	}
+	readSettings() // no stratux.conf yet: the defaults
+	if globalSettings.AirspeedScale != 1 {
+		t.Errorf("default AirspeedScale %g; want 1", globalSettings.AirspeedScale)
+	}
+	for _, c := range []struct {
+		body string
+		want float64
+	}{
+		{`{"AirspeedScale": 1.04}`, 1.04},
+		{`{"AirspeedScale": 0}`, 1.04},
+		{`{"AirspeedScale": 2}`, 1.04},
+		{`{"AirspeedScale": "fast"}`, 1.04},
+		{`{"AirspeedScale": 0.5}`, 0.5},
+		{`{"AirspeedScale": 1.5}`, 1.5},
+		{`{"AirspeedScale": 0.97}`, 0.97},
+	} {
+		handleSettingsSetRequest(httptest.NewRecorder(), httptest.NewRequest("POST", "/setSettings", strings.NewReader(c.body)))
+		if globalSettings.AirspeedScale != c.want {
+			t.Errorf("POST /setSettings %s: AirspeedScale %g; want %g", c.body, globalSettings.AirspeedScale, c.want)
+		}
+	}
+	readSettings()
+	if globalSettings.AirspeedScale != 0.97 {
+		t.Errorf("stratux.conf after /setSettings: AirspeedScale %g; want the 0.97 saved", globalSettings.AirspeedScale)
+	}
+
+	globalSettings.AirspeedScale = 1.5
+	pitot := &fakePitot{dp: 8}
+	done := startAirspeed(pitot, 0)
+	pitot.wait(t, 3)
+	if ias := mySituation.IndicatedAirSpeed; ias != 0 {
+		t.Errorf("8 Pa, scale 1.5: airspeed %.1f kt; want 0, the deadband is on the pressure", ias)
+	}
+	for _, c := range []struct {
+		scale, want float64
+	}{
+		{1.04, 1.04},
+		{0.97, 0.97},
+		{0, 1}, // out of range in stratux.conf: unscaled
+		{3, 1},
+	} {
+		globalSettings.AirspeedScale = c.scale
+		pitot.set(1000, nil)
+		pitot.wait(t, 8)
+		if ias, want := float64(mySituation.IndicatedAirSpeed), c.want*bernoulliKt(1000); math.Abs(ias-want) > 0.005*want {
+			t.Errorf("1000 Pa, AirspeedScale %g: airspeed %.2f kt; want %.2f", c.scale, ias, want)
+		}
+	}
+	globalSettings.MS4525DO_Enabled = false
+	stopped(t, done, time.Second, "it was turned off")
 }
 
 // fakeBaro is a scripted pressure sensor: the ISA pressure of an altitude that moves
