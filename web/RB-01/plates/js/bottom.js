@@ -218,7 +218,9 @@ function TopBarCtrl($scope, $interval, $http) {
 
     // The altimeter: the pressure altitude on the QNH in use, as the altimeter plate has it
     function barAltitude(situation) {
-        if (situation.BaroSourceType === 0 || typeof situation.QNH !== "number") {
+        // Only a current barometer (servicesituation.js BaroValid): a stopped one or
+        // the ADS-B estimate reads --- rather than a frozen or borrowed altitude
+        if (situation.BaroValid !== true || typeof situation.QNH !== "number") {
             return BAR_NO_DATA;
         }
         return barAltitudeFromFeet(situation.BaroPressureAltitude + 27 * (situation.QNH - 1013.25));

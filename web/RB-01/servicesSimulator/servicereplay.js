@@ -100,6 +100,11 @@ const REPLAY_BLENDS = {};
 REPLAY_LINEAR_FIELDS.forEach(name => REPLAY_BLENDS[name] = replayLinear);
 REPLAY_HEADING_FIELDS.forEach(name => REPLAY_BLENDS[name] = replayHeading);
 REPLAY_ATTITUDE_FIELDS.forEach(name => REPLAY_BLENDS[name] = replayAttitude);
+// The barometer's clock runs between two rows that both moved it, as the daemon's does
+// at 10 Hz: held, it would stand still for a second at a time, and servicesituation.js
+// would take the barometer for stopped (BARO FAIL). A log whose barometer did stop
+// does not move it in the next row, so it holds, and the replay shows the failure.
+REPLAY_BLENDS["BaroLastMeasurementTime"] = replayLinear;
 
 ReplayPlayer.prototype = {
     constructor: ReplayPlayer,

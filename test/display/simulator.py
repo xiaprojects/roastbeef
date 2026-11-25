@@ -40,7 +40,7 @@ def hold(srv):
     while True:
         rp = srv.replay_current
         if not (rp and rp.playing):
-            srv.push("/situation", srv.situation)
+            srv.push_situation()  # freshly stamped, or the barometer reads stopped
             for target in srv.traffic:
                 srv.push("/traffic", target)
         time.sleep(1)

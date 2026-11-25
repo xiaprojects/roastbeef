@@ -68,6 +68,8 @@
             <div class="attitude-heading" ng-if="Attitude.standalone==true" ng-class="{'attitude-fail-text': Heading.valid==false}">
               {{Heading.text}}
               <div class="attitude-triangle-bottom"></div>
+              <!-- The box is the GPS track, and says so (RB-HLR-HDG-070) -->
+              <div class="attitude-heading-source">{{Heading.sourceName}}</div>
             </div>
             <div class="attitude-left-bar" ng-if="Attitude.standalone==true" style="transform: translateY({{3+(0.6)*(Altimeter.altitude/2)}}cqmin);right:0%;background-color:#0000007c;">
               <div ng-repeat="tick in ticks.altimeter" class="attitude-left-bar-slider" style="width: 14cqmin;align-content: right;justify-content: right;">
@@ -103,9 +105,11 @@
               <div class="attitude-vsi-tick" style="top: 100%;"></div>
               <div class="attitude-vsi-zero"></div>
               <div class="attitude-vsi-bar" style="top: {{Variometer.barTop}};height: {{Variometer.barHeight}};"></div>
-              <div class="attitude-vsi-value" ng-if="Variometer.value != ''" style="top: {{Variometer.tipTop}};">{{Variometer.value}}</div>
+              <div class="attitude-vsi-value" ng-if="Variometer.value != ''" ng-class="{'attitude-fail-text': Variometer.valid==false}" style="top: {{Variometer.tipTop}};">{{Variometer.value}}</div>
             </div>
-            <div class="attitude-altimeter" ng-if="Attitude.standalone==true">{{Altimeter.altitude}}</div>
+            <!-- The barometric altitude on the setting above it, --- in red while the
+                 barometer is not current (RB-HLR-ALT-140, RB-HLR-ALT-070) -->
+            <div class="attitude-altimeter" ng-if="Attitude.standalone==true" ng-class="{'attitude-fail-text': Altimeter.valid==false}">{{Altimeter.text}}</div>
             <!-- Wind, lower left of the ball as on a PFD. The arrow flies with
                  the wind relative to the nose, so a headwind points down the
                  screen; the digits repeat it as direction FROM and speed. It

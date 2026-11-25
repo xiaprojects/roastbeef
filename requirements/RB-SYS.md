@@ -351,12 +351,17 @@ is a hardware property and belongs to roadmap Step 8, not here.
 ### RB-SYS-ALT-020 — Stale barometric data is not presented as current
 
 **The equipment shall not present a barometric altitude or a barometric vertical speed as
-current when the static pressure has not been measured within the last 1 s.**
+current when the static pressure has not been measured within the currency limit defined
+for its source.**
 
 - **Parent:** RB-SYS-SYS-020
 - **Source:** FHA-ALT-3, FHA-VSI-1; `main/gps.go` `isTempPressValid()`
 - **Verification:** test
 - **Derived:** no
+
+Written, like RB-SYS-SIT-020 and RB-SYS-TRF-020, against a limit per source: 1 s for the
+unit's own barometer, 3 s for the 1 Hz NMEA barometers (RB-HLR-ALT-070). The 3 s is above
+RB-SYS-SYS-020's 1 s and is for the review.
 
 ### RB-SYS-ALT-030 — The altimeter setting and its origin are shown
 

@@ -170,6 +170,10 @@ class FakeStratux:
         self.files = dict(self.device.get("files", {}))
         self.route = route if route is not None else []
         self.situation = dict(DEFAULT_SITUATION)
+        # The barometer's clock, as the daemon stamps BaroLastMeasurementTime: on
+        # every push unless a test pins it (see push_situation)
+        self._baro_clock_auto = True
+        self._baro_clock_t0 = time.monotonic()
         if situation:
             self.situation.update(situation)
         if settings is None:
@@ -525,8 +529,22 @@ class FakeStratux:
                 delivered += self.push(ws_path, self._rest_body(path))
         return delivered
 
+    def baro_stamp(self):
+        """A fresh BaroLastMeasurementTime on the daemon's uptime clock (Go's year 1),
+        an hour in so it is never Go's zero time, which means "never measured"."""
+        t = 3600 + time.monotonic() - self._baro_clock_t0
+        return "0001-01-01T%02d:%02d:%06.3fZ" % (t // 3600, t % 3600 // 60, t % 60)
+
     def push_situation(self, **overrides):
+        """Push the situation with overrides applied. The barometer reads as the
+        daemon's does, freshly stamped on every frame, so servicesituation.js sees a
+        live one. Pass BaroLastMeasurementTime to pin the stamp (a barometer that has
+        stopped, or "0001-01-01T00:00:00Z" for none ever), None to let it run again."""
+        if "BaroLastMeasurementTime" in overrides:
+            self._baro_clock_auto = overrides["BaroLastMeasurementTime"] is None
         self.situation.update(overrides)
+        if self._baro_clock_auto:
+            self.situation["BaroLastMeasurementTime"] = self.baro_stamp()
         return self.push("/situation", self.situation)
 
     def push_autopilot(self, **overrides):

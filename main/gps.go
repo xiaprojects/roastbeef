@@ -1765,7 +1765,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 	// OGN Tracker pressure data:
 	// $POGNB,22.0,+29.1,100972.3,3.8,+29.4,+87.2,-0.04,+32.6,*6B
 	if x[0] == "POGNB" {
-		if len(x) < 5 {
+		if len(x) < 8 { // x[5] and x[7] are read: a shorter sentence would panic the reader
 			return false
 		}
 		var vspeed float64
@@ -1776,7 +1776,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		}
 		
 		vspeed, err = strconv.ParseFloat(x[7], 32)
-		if err != nil {
+		if err != nil || !isFinite(pressureAlt) || !isFinite(vspeed) { // ParseFloat takes "NaN" and "Inf"
 			return false
 		}
 
@@ -1836,7 +1836,7 @@ func processNMEALineLow(l string, fakeGpsTimeToCurr bool) (sentenceUsed bool) {
 		}
 		// Assume pressure altitude in PGRMZ if we don't have any other baro (SoftRF style)
 		pressureAlt, err := strconv.ParseFloat(x[1], 32)
-		if err != nil {
+		if err != nil || !isFinite(pressureAlt) { // ParseFloat takes "NaN" and "Inf"
 			return false
 		}
 		unit := x[2]

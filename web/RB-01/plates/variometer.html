@@ -1,4 +1,10 @@
 <div ui-content-for="title">Variometer</div>
         <div class="variometer" >
             <div class="variometer-fi_needle" style="transform: rotate({{Variometer.varioDegree}});"></div>
+            <!-- No vertical speed: neither a current barometer nor a GPS fix (RB-HLR-ALT-200) -->
+            <div class="attitude-fail" ng-if="Variometer.valid == false" style="background-color: transparent; pointer-events: none; z-index: 1000;">
+              <div class="attitude-fail-x"></div>
+              <div class="attitude-fail-x attitude-fail-x-back"></div>
+              <div class="attitude-fail-label">NO VS</div>
+            </div>
         </div>

@@ -14,12 +14,13 @@ box of `SixPackInstrumentAttitude`) under DO-178C §12.1.4, against the behaviou
 The magnetometer's *alignment* is in `RB-HLR-ATT.md` (RB-HLR-ATT-280…300); its heading is
 here.
 
-**Two displays, two answers.** The heading plate does what FHA-HDG-2 asks: it names its
-source, shows "---" for a GPS track below 5 kt, hands GPS over to GYRO without a fix and
-says so. The heading box on the attitude plate does none of that — it shows the GPS track
-whenever there is a fix, at any speed, and the gyro heading otherwise, with no label
-(RB-HLR-HDG-070, RB-HLR-HDG-080). The requirements are written per display so the review
-sees which one meets them.
+**Two displays.** The heading plate does what FHA-HDG-2 asks: it names its source, shows
+"---" for a GPS track below 5 kt, hands GPS over to GYRO without a fix and says so. The
+heading box on the attitude plate used to switch between the GPS track and the gyro heading
+with no label. Since 2026-11-25, by the owner's decision, it is the GPS track and nothing
+else, labelled TRK, "---" without a fix, and the track the daemon holds below 3 kt is shown
+held (RB-HLR-HDG-070; RB-HLR-HDG-080 withdrawn). There is no longer a substitution to
+annunciate, and the label says it is a track rather than a heading.
 
 **What the FHA feared does not happen, for a reason it did not know.** FHA-HDG-2 worries
 about a silent switch to an unslaved gyro heading that drifts after the GPS is lost. The
@@ -73,7 +74,7 @@ reason — and it is written down so nobody "fixes" it.
 that source's mark, when the selected source has no valid heading, the GPS track counting
 as invalid below 5 kt of ground speed.**
 
-- **Parent:** RB-SYS-HDG-020
+- **Parent:** RB-SYS-HDG-020, RB-SYS-HDG-030
 - **Source:** `SixPackInstrumentHeading` `sourceHeadings()` (`TRACK_MIN_SPEED_KT`),
   `global.js` `globalAHRSValueIsValid()` (the 3276.7 sentinel)
 - **Verification:** test
@@ -132,22 +133,22 @@ set to `Invalid` only when the whole attitude is, which the Simple AHRS never re
 
 ## The attitude plate's heading box
 
-### RB-HLR-HDG-070 — The attitude plate's heading names its source
+### RB-HLR-HDG-070 — The attitude plate's heading box is the GPS track, and says so
 
-**The system shall display, with the heading on the attitude plate, the name of the source
-it is taken from.**
+**The system shall show in the attitude plate's heading box the GPS true track only,
+labelled TRK, and "---" in red while the GPS has no fix.**
 
 - **Parent:** RB-SYS-HDG-010
-- **Source:** `SixPackInstrumentAttitude` `updateSituation` (`Heading.sourceName` is set
-  and not drawn); `web/RB-01/plates/attitude.html` (`.attitude-heading`)
+- **Source:** `SixPackInstrumentAttitude` `updateFailures()`, `updateSituation`;
+  `web/RB-01/plates/attitude.html` (`.attitude-heading`, `.attitude-heading-source`);
+  owner decision of 2026-11-25
 - **Verification:** test
 - **Derived:** no
 
-**Open finding.** The box switches between the GPS track (whenever there is a fix) and the
-gyro heading (otherwise) and draws neither name. This is FHA-HDG-2 as written: source
-substitution without indication. With the Simple AHRS the switch is to "---" rather than
-to a drifting value (RB-HLR-HDG-050), which bounds it; with any engine that has a heading
-of its own it would not be.
+Until 2026-11-25 the box switched between the GPS track (with a fix) and the gyro heading
+(without) and named neither — FHA-HDG-2 as written. One source and a label close it. The
+heading tape and the turn-rate vector drawn on it go with the box: without a fix both are
+hidden, where the turn rate used to stay on the gyro heading.
 
 ### RB-HLR-HDG-080 — The attitude plate does not show a GPS track as heading at low speed
 
@@ -155,12 +156,13 @@ of its own it would not be.
 the ground speed is below 5 kt.**
 
 - **Parent:** RB-SYS-HDG-030
-- **Source:** `SixPackInstrumentAttitude` `updateSituation` (`GPSFixQuality > 0`
-  selects `GPSTrueCourse`)
+- **Source:** `SixPackInstrumentAttitude` `updateSituation`
 - **Verification:** test
 - **Derived:** no
+- **Status:** withdrawn
 
-**Open finding.** The box shows `GPSTrueCourse` at any speed with a fix. Below 3 kt the
-daemon holds the last track (RB-HLR-SIT-050), so on the ground the attitude plate shows,
-unlabelled, the direction the aircraft was last moving in — after a turn onto the
-runway, the taxiway's.
+Withdrawn 2026-11-25 by the owner's decision: the attitude plate's box keeps the GPS track,
+held by the daemon below 3 kt (RB-HLR-SIT-050), and since RB-HLR-HDG-070 labels it TRK it
+presents a track, not a heading, so RB-SYS-HDG-030 does not apply to it. What the pilot
+sees on the ground is the direction the aircraft last moved in — after a turn onto the
+runway, the taxiway's — labelled as such. `fha.md` §4 records the trade.

@@ -67,6 +67,7 @@ function SituationService($scope, $http) {
 
         $scope.situationSocket.onclose = function (msg) {
             bridgeQNHReset();
+            baroReset();
             delete $scope.situationSocket;
             setTimeout(function () { connect($scope); }, 1000);
         };
@@ -120,6 +121,9 @@ function SituationService($scope, $http) {
             // Every frame, not only the published ones: the estimator keeps its
             // own one-per-second samples on the GPS clock
             situationVariation(situation);
+            // Every frame too: a barometer that stopped is seen from the frames
+            // that keep arriving with its old time stamp
+            situationBaro(situation, Date.now());
             windEstimator.observe(situation);
 
             // Filter to avoid blow up CPU
@@ -127,13 +131,16 @@ function SituationService($scope, $http) {
             const newSituation = situation;
             const ahrsThreshold = 1;
             const altitudeThreshold = 50 / 3.2808;
-            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold);
+            // A barometer going stale, or coming back, is published at once rather
+            // than with the next 1 s refresh
+            const requireRefresh = globalCompareSituationsIfNeedRefresh(oldSituation, newSituation, ahrsThreshold, altitudeThreshold)
+                || oldSituation.BaroStatus !== newSituation.BaroStatus;
             var now = Date.now();
             if (requireRefresh == true || now - $scope.lastUpdateTime >= 1000) {
                 $scope.lastUpdateTime = now;
                 // RB-Addons
                 if (
-                    situation.hasOwnProperty("BaroPressureAltitude")
+                    situation.BaroValid === true
                     &&
                     situation.GPSFixQuality > 0
                     &&
@@ -174,6 +181,49 @@ function SituationService($scope, $http) {
                 window.gMeterBuzzerPlayer.beepWithGLoadFactor(situation.AHRSGLoad);
             }
         };
+    }
+
+    // Is the barometric altitude current, and does it come from a barometer?
+    // RB-HLR-ALT-070 and RB-HLR-ALT-130. The daemon stamps every measurement on
+    // its own uptime clock (BaroLastMeasurementTime) and names the source
+    // (BaroSourceType: 1 the unit's own sensor, 2 an OGN tracker, 3 $PGRMZ from
+    // a SoftRF or FLARM, 4 estimated from nearby ADS-B traffic). The stamp cannot
+    // be compared with the browser's clock, so a barometer that stopped is one
+    // whose stamp has not changed for BARO_STALE_MS of browser time: 1 s for the
+    // unit's sensor, read at 10 Hz, 3 s for the NMEA ones, which send at 1 Hz (the
+    // GPS currency limit for the same reason, RB-HLR-SIT-070).
+    //   BaroStatus  "ok"     current, from a barometer
+    //               "stale"  a barometer that has stopped (or is rejecting its
+    //                        readings, RB-HLR-ALT-030/035): BARO FAIL
+    //               "none"   no barometer, or only the ADS-B estimate: NO BARO
+    //   BaroValid   BaroStatus == "ok"
+    var BARO_STALE_MS = { 1: 1000, 2: 3000, 3: 3000 };
+    var BARO_ZERO_TIME = "0001-01-01T00:00:00Z"; // Go's zero time: never measured
+    var baroStamp = null;
+    var baroStampSeenAt = 0;
+
+    function baroReset() {
+        baroStamp = null;
+        baroStampSeenAt = 0;
+    }
+
+    function situationBaro(situation, now) {
+        const stamp = situation.BaroLastMeasurementTime;
+        if (stamp !== baroStamp) {
+            baroStamp = stamp;
+            baroStampSeenAt = now;
+        }
+        const limit = BARO_STALE_MS[situation.BaroSourceType];
+        if (limit === undefined || typeof stamp !== "string" || stamp === "" || stamp === BARO_ZERO_TIME) {
+            situation.BaroStatus = "none";
+        }
+        else if (now - baroStampSeenAt > limit || !isFinite(situation.BaroPressureAltitude)) {
+            situation.BaroStatus = "stale";
+        }
+        else {
+            situation.BaroStatus = "ok";
+        }
+        situation.BaroValid = situation.BaroStatus == "ok";
     }
 
     // RB-Addons: publish the QNH in use on the addons bridge, so 3rd party addons

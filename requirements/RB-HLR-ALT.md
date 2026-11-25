@@ -10,18 +10,21 @@ Recovered from `main/sensors.go` (`tempAndPressureSender()`), `main/gps.go`
 `web/RB-01/services/servicesituation.js` (the AUTO altimeter setting) and
 `web/RB-01/plates/js/SixPackInstruments.js` (the altimeter plate, the attitude plate's
 altitude box and vertical speed strip) under DO-178C §12.1.4, against the behaviour pinned
-by `main/airdata_test.go`, `common/equations_test.go`, `test/display/test_keypad_altimeter.py`
-and `test/display/test_variometer.py`. Rules and field definitions:
+by `main/airdata_test.go`, `main/gps_test.go`, `common/equations_test.go`,
+`test/display/test_keypad_altimeter.py`, `test/display/test_variometer.py` and
+`test/display/test_baro.py`. Rules and field definitions:
 [`../docs/certification/standards/requirements.md`](../docs/certification/standards/requirements.md).
 
-**Read this before the requirements.** Of the fifteen requirements here six are open
-findings, and they share one shape: the daemon knows more than the display uses. The
-daemon stamps every barometric measurement (`BaroLastMeasurementTime`) and names its
-source (`BaroSourceType`); the altimeter plate reads neither. So a barometer that stops is
-drawn frozen (RB-HLR-ALT-070), an altitude estimated from other aircraft's ADS-B reports is
-drawn as a barometric one (RB-HLR-ALT-130), and the attitude plate's altitude box is the
-GPS altitude, printed next to the altimeter setting (RB-HLR-ALT-140). The data to fix all
-three is already on the socket.
+**Read this before the requirements.** When this file was first written, six of its
+fifteen requirements were open findings, and four of them shared one shape: the daemon
+knew more than the display used. It stamps every barometric measurement
+(`BaroLastMeasurementTime`) and names its source (`BaroSourceType`), and the altimeter plate
+read neither. Fixed on 2026-11-25: `servicesituation.js` now publishes `BaroStatus`
+(`ok`, `stale`, `none`) with every frame, and the altimeter, the attitude plate's altitude
+box, the vertical speed indications and the bar read it (RB-HLR-ALT-070, -130, -140, -200);
+the impossible-pressure freeze is fixed in the daemon (RB-HLR-ALT-035). Two remain open:
+the alert for a barometer lost after a glitch (RB-HLR-ALT-060) and the 27 ft/hPa setting
+correction (RB-HLR-ALT-080).
 
 Two behaviours are specified as they are and put to the review rather than called
 defects, because the intent could not be recovered from the code:
@@ -34,6 +37,10 @@ defects, because the intent could not be recovered from the code:
   disagree with the GPS, and it does not behave like an altimeter set to a QNH and left
   alone. That is a reasonable design for a VFR microlight and it is the opposite of what
   FHA-ALT-2's mitigation ("flag baro-vs-GPS disagreement") assumes. `fha.md` §5 carries it.
+  **The cross-check is available with AUTO off**: the altimeter plate always prints the GPS
+  altitude under the barometric needles, so a pilot who sets the QNH by hand can compare the
+  two; there is no automatic disagreement flag. A maximum range of validity for AUTO is
+  proposed in `fha.md` §5 item 5 and waits for the owner's decision.
 
 Code references in **Source** name the function, not a line number, so the trace survives
 a refactor.
@@ -85,13 +92,22 @@ time unchanged.**
 - **Verification:** test
 - **Derived:** no
 
-**Open finding.** Only a reading of exactly 0 is refused. `TestPressureSenderRejectsAnImpossiblePressure`
-measures the rest and skips: −1 hPa is published as an altitude of NaN, 2000 hPa as
-−20 080 ft. The NaN is worse than it looks. `encoding/json` refuses to encode a NaN, and
-`handleSituationWS()` discards the error, so from that reading on every `/situation`
-frame is empty: **every instrument on the display freezes on its last value, the attitude
-included, with nothing marked failed** — FHA-ATT-3 for the whole display, from one bad
-barometer read. Confirmed by encoding a struct holding a NaN; not reproduced end to end.
+Fixed 2026-11-25 (`plausiblePressure()`): such a reading is a failed read, and counts
+towards RB-HLR-ALT-050. Before the fix −1 hPa was published as an altitude of NaN and
+2000 hPa as −20 080 ft, and the NaN was worse than it looked: `encoding/json` refuses to
+encode a NaN and `handleSituationWS()` discards the error, so every `/situation` frame
+after it went out empty and **every instrument froze on its last value, the attitude
+included, with nothing marked failed**.
+
+The same holds for the two other writers of the pressure altitude, the OGN tracker's
+`$POGNB` and the SoftRF's `$PGRMZ`: `strconv.ParseFloat` accepts "NaN" and "Inf", and they
+now refuse both. Writing that test found a crash: `$POGNB` checked for 5 fields and read
+the 6th and 8th, so a short sentence on the serial port panicked the GPS reader. Fixed in
+the same change.
+
+**Not fixed, and wider than this function:** any other NaN anywhere in the situation still
+empties every frame. A sanitising encoder in `handleSituationWS()` would close the class;
+it is a candidate problem report.
 
 The numbers are the FHA candidate's. The BMP388's datasheet range is 300–1250 hPa; 1100
 is the highest QNH the pilot can set (RB-HLR-ALT-100). To confirm at review.
@@ -146,21 +162,29 @@ as RB-HLR-ALR-160.
 
 ### RB-HLR-ALT-070 — A barometer that has stopped is not drawn as current
 
-**The system shall mark the altimeter indication and the barometric vertical speed
-indication not current when the barometric altitude was last measured more than 1 s
-earlier.**
+**The system shall mark the altimeter and the attitude plate's altitude not current, and
+stop driving the vertical speed indications from the barometer, when the barometric
+measurement time has not advanced for 1 s, or for 3 s for a barometer reporting over
+NMEA.**
 
 - **Parent:** RB-SYS-ALT-020
-- **Source:** FHA-ALT-3; `main/gps.go` `isTempPressValid()`
+- **Source:** FHA-ALT-3; `web/RB-01/services/servicesituation.js` `situationBaro()`
+  (`BARO_STALE_MS`, `BaroStatus`); `SixPackInstruments.js` (the altimeter plate and the
+  attitude plate's altitude box)
 - **Verification:** test
 - **Derived:** no
 
-**Open finding.** No plate reads `BaroLastMeasurementTime`. When the sensor stops, the
-daemon stops updating the altitude but leaves the last value, and leaves `BaroSourceType`
-saying BMP, so the altimeter, the attitude plate's vertical speed strip and the needle
-freeze where they were. The daemon's own validity window (`isTempPressValid`) is 15 s,
-which the GDL90 and FLARM outputs use; that is fifteen times RB-SYS-SYS-020's 1 s. A
-rejected altitude (RB-HLR-ALT-030) freezes the indication the same way.
+Fixed 2026-11-25. The altimeter plate is crossed out BARO FAIL with the needles held and
+the GPS altitude still printed; the attitude plate's altitude box reads "---" in red; the
+vertical speed falls back to the GPS rate (RB-HLR-ALT-200). The measurement time is on the
+daemon's uptime clock, which the browser cannot compare with its own, so "not advanced"
+is measured in the browser's time between frames that carry the same stamp. Two
+consequences: the 3 s for the OGN-tracker and `$PGRMZ` barometers, which report at 1 Hz
+and would flicker at 1 s (the GPS currency limit has the same reason, RB-HLR-SIT-070); and
+a `/situation` socket that stops altogether is not seen here — that is the whole-display
+case of FHA-ATT-3 and needs its own requirement. A rejected altitude (RB-HLR-ALT-030,
+-035) stops the stamp and is shown the same way. The daemon's own validity window for its
+GDL90 and FLARM outputs (`isTempPressValid`, 15 s) is unchanged.
 
 ### RB-HLR-ALT-080 — The altimeter setting is applied as a barometric altimeter applies it
 
@@ -231,8 +255,9 @@ does not quite make the altimeter read the GPS altitude above sea level.
 ### RB-HLR-ALT-120 — AUTO derives only with a fix and while level
 
 **While AUTO is selected, the system shall derive a new altimeter setting only while the
-GPS has a fix and the barometric vertical speed is under 200 ft/min either way, and shall
-otherwise keep the last derived setting.**
+barometer is current (RB-HLR-ALT-070, RB-HLR-ALT-130), the GPS has a fix and the
+barometric vertical speed is under 200 ft/min either way, and shall otherwise keep the
+last derived setting.**
 
 - **Parent:** none
 - **Source:** `web/RB-01/services/servicesituation.js` `onmessageTick`
@@ -254,12 +279,13 @@ barometric altitude.**
 - **Verification:** test
 - **Derived:** no
 
-**Open finding.** With no barometer fitted, the daemon fills `BaroPressureAltitude` with
+Fixed 2026-11-25. With no barometer fitted, the daemon fills `BaroPressureAltitude` with
 the GPS height less a regression of other aircraft's reported GNSS–baro differences, and
-marks it `BaroSourceType = 4`. The radar plate honours the mark; the altimeter plate and
-AUTO do not, so on a unit without a barometer the altimeter draws an ADS-B estimate, and
-AUTO derives a setting from it. The same applies to the OGN-tracker and `$PGRMZ` sources,
-which are real barometers but someone else's — not specified here, for the review.
+marks it `BaroSourceType = 4`. `servicesituation.js` now treats that, no source, and a
+measurement time that was never set alike (`BaroStatus` "none"): the altimeter plate is
+crossed out NO BARO, the attitude plate's altitude box reads "---", the bar's altitude slot
+reads its no-data mark, and AUTO derives nothing. The OGN-tracker and `$PGRMZ` sources are
+real barometers, though someone else's, and are accepted — for the review.
 
 ### RB-HLR-ALT-140 — The attitude plate's altitude is the barometric altitude
 
@@ -273,26 +299,29 @@ barometric altitude corrected for that setting and no other altitude.**
 - **Verification:** test
 - **Derived:** no
 
-**Open finding.** The attitude plate's altitude box is the GPS altitude above mean sea
-level, drawn next to the altimeter setting with its AUTO label — so a pilot who dials a
-new QNH sees the setting change and the altitude beside it stay where it was. Either the
-box should show the corrected barometric altitude or it should be labelled GPS and lose
-the setting. Which one is the owner's call; the requirement is written for the first
-because the layout copies a PFD's altitude tape.
+Fixed 2026-11-25, the owner's choice: the box shows the barometric altitude on the
+setting beside it, with the same 27 ft/hPa correction as the altimeter plate (so
+RB-HLR-ALT-080 applies to both), and "---" in red without a current barometer. Before, it
+was the GPS altitude, so a pilot who dialled a new QNH saw the setting change and the
+altitude beside it stay where it was.
 
 ## Vertical speed indication
 
 ### RB-HLR-ALT-200 — Vertical speed source
 
-**The system shall drive the vertical speed indication from the barometric vertical speed
-while a barometric source is present, and from the GPS vertical speed converted from ft/s
-to ft/min otherwise.**
+**The system shall drive the vertical speed indications from the barometric vertical
+speed while the barometer is current, from the GPS vertical speed converted from ft/s to
+ft/min while it is not and the GPS has a fix, and shall mark them failed when neither is
+available.**
 
 - **Parent:** none
-- **Source:** `SixPackInstruments.js` `updateVariometer()`
+- **Source:** `web/RB-01/js/global.js` `globalVerticalSpeedFpm()`, used by the attitude
+  plate's strip (`updateVariometer()`) and the variometer gauge
 - **Verification:** test
 - **Derived:** yes
 
 Derived: a substitution, and it is not annunciated — the strip looks the same with either
-source. The GPS rate lags the barometric one and is noisier (RB-HLR-SIT-120). Classified
-under FHA-VSI-1 (Minor) in `fha.md` §4.
+source. The GPS rate lags the barometric one and is noisier (RB-HLR-SIT-120). With neither
+source the strip reads "---" in red and the gauge is crossed out NO VS; until 2026-11-25
+the gauge read the barometric rate whatever its state, and the strip showed a GPS rate of
+0 — level — without a fix. Classified under FHA-VSI-1 (Minor) in `fha.md` §4.

@@ -209,6 +209,25 @@ func initPressureSensor(i2cbus embd.I2CBus) (ok bool) {
 	return false
 }
 
+// The static pressures a barometer can read in this equipment's envelope, hPa: the
+// BMP388's lower limit, about 30 000 ft, and the highest altimeter setting the pilot can
+// dial. Anything else - a negative pressure from a driver's sign or overflow error, a NaN
+// - is a failed read, and the last good altitude stands (RB-HLR-ALT-035).
+const (
+	baroMinHPa = 300.0
+	baroMaxHPa = 1100.0
+)
+
+// isFinite reports whether v is a number: not NaN, not an infinity.
+func isFinite(v float64) bool {
+	return !math.IsNaN(v) && !math.IsInf(v, 0)
+}
+
+// plausiblePressure reports whether p, hPa, can be a static pressure; NaN cannot.
+func plausiblePressure(p float64) bool {
+	return p >= baroMinHPa && p <= baroMaxHPa
+}
+
 func tempAndPressureSender() {
 	var (
 		temp     float64
@@ -233,6 +252,11 @@ func tempAndPressureSender() {
 			addSingleSystemErrorf("pressure-sensor-temp-read", "AHRS Error: Couldn't read temperature from sensor: %s", err)
 		}
 		press, err = myPressureReader.Pressure()
+		if err == nil && press != 0 && !plausiblePressure(press) {
+			// A NaN would reach /situation, where encoding/json refuses it and every
+			// frame goes out empty: the whole display would freeze (RB-HLR-ALT-035).
+			err = fmt.Errorf("pressure %v hPa outside %g..%g hPa", press, baroMinHPa, baroMaxHPa)
+		}
 		if press == 0 || err != nil {
 			if err != nil {
 				addSingleSystemErrorf("pressure-sensor-pressure-read", "AHRS Error: Couldn't read pressure from sensor: %s", err)

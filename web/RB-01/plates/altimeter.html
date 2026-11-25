@@ -5,6 +5,14 @@
             <div class="altimeter-qnh">{{Altimeter.QNH}}</div>
             <div class="altimeter-gps">{{Altimeter.GPSAltitudeMSL}}</div>
             <div class="altimeter-label">GPS</div>
+            <!-- The barometer crossed out: BARO FAIL when it has stopped, NO BARO when
+                 there is none or only the ADS-B estimate (RB-HLR-ALT-070, -130).
+                 Transparent, so the held needles and the GPS altitude stay readable. -->
+            <div class="attitude-fail" ng-if="Altimeter.fail != ''" style="background-color: transparent; pointer-events: none; z-index: 1000;">
+              <div class="attitude-fail-x"></div>
+              <div class="attitude-fail-x attitude-fail-x-back"></div>
+              <div class="attitude-fail-label">{{Altimeter.fail}}</div>
+            </div>
             <div class="fabNavigation fabNorthCenter" ng-click="fabClick('NC',this,$event);"></div>
             <div class="fabNavigation fabSouthCenter" ng-click="fabClick('SC',this,$event);"></div>
             <div class="fabNavigation fabCenter" ng-click="fabClick('C',this,$event);"></div>

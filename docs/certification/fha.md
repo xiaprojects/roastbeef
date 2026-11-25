@@ -68,7 +68,7 @@ Sources (from `web/RB-01/plates/js/SixPackInstruments.js` and `main/sensors.go`)
 | FHA-SPD-3 | Speed | HMI: wrong GPS speed, no indication | all | As SPD-2, less likely (GPS speed is robust). | Major | GPS fix quality gating; stale flag. | D | Speed blanked when `GPSFixQuality == 0` or fix age > 2 s. |
 | FHA-SPD-4 | Speed | HMI: wrong or frozen IAS from the pitot sensor (unzeroed or drifted offset, blocked/iced pitot or static line, sensor hung on stale data, reboot in flight) | approach, slow flight | As SPD-2 but labelled `IAS`, which the pilot trusts more: a 34 Pa unzeroed offset reads 15 kt on the ground and ~0.5 kt at 100 kt; a blocked pitot freezes or decays the reading; a hung sensor freezes it. | **Major** | The daemon zeroes the airspeed (→ `GS` fallback, annunciated) 1 s after the sensor stops answering (I²C errors, a fault status, or 1 s of stale data), and takes the magnitude so a reversed tube cannot read 0 in flight. The zero offset is persisted, set only at a GPS standstill, and a 10 Pa deadband absorbs its drift. No plausibility check against ground speed yet. | D | IAS blanked (0) within 2 s of sensor loss; zero offset only settable stationary; flag IAS vs GS disagreement > 30 kt outside a plausible wind (derived-requirement candidate). |
 | FHA-ALT-1 | Altimeter | Loss | all | Pilot uses the required altimeter. | Minor | — | E→D | Loss annunciated. |
-| FHA-ALT-2 | Altimeter | HMI: wrong altitude, no indication (baro fault, wrong QNH, AutoQNH from a poor GPS fix) | cruise, approach, in controlled airspace | Pilot may fly a wrong level; airspace infringement, terrain margin reduced at night. Required altimeter remains (A1). | **Major** | AutoQNH silently replaces the pilot's setting with a GPS-derived one; the source in use must be visible. Baro range/rate plausibility; compare with GPS altitude and flag > 300 ft disagreement. | D | Show QNH source (SET / AUTO); flag baro-vs-GPS disagreement; reject pressure ≤ 0 or out of 300–1100 hPa (see `CalcAltitude` test note). |
+| FHA-ALT-2 | Altimeter | HMI: wrong altitude, no indication (baro fault, wrong QNH, AutoQNH from a poor GPS fix) | cruise, approach, in controlled airspace | Pilot may fly a wrong level; airspace infringement, terrain margin reduced at night. Required altimeter remains (A1). | **Major** | AutoQNH silently replaces the pilot's setting with a GPS-derived one; the source in use must be visible. Baro range/rate plausibility; compare with GPS altitude and flag > 300 ft disagreement. **Cross-check as built (2026-11-25):** with AUTO off, the altimeter plate prints the GPS altitude under the barometric needles, so the pilot can compare them; no automatic flag exists, and with AUTO on the two agree by construction (item 5). The altimeter is crossed out BARO FAIL or NO BARO when the barometer stops or is absent (RB-HLR-ALT-070, -130). | D | Show QNH source (SET / AUTO); flag baro-vs-GPS disagreement; reject pressure ≤ 0 or out of 300–1100 hPa (see `CalcAltitude` test note). |
 | FHA-ALT-3 | Altimeter | Frozen | all | As ALT-2. | Major | Stale flag. | D | Stale-data flag ≤ 1 s. |
 | FHA-VSI-1 | Variometer | Loss / HMI | climb, descent, approach | Pilot uses the required VSI; trend misread is a workload issue. | Minor | Cross-checked by altimeter trend. | E→D | — |
 | FHA-TRN-1 | Turn / slip | Loss / HMI | turns, all | Uncoordinated flight not shown; a wrong turn indicator in reduced visibility contributes to disorientation. | Minor (Major under A2 violation) | Required turn coordinator/ball remains. | E→D | Invalid sentinel → flag. |
@@ -128,21 +128,21 @@ This section is that feedback loop; `scripts/trace.py` reports any derived requi
 | RB-HLR-TRF-330 | Transmitted target count is limited to what an EFB can process | Covered by FHA-TRF-1 (missing target): the limit trades completeness for the client staying alive. **The code does not appear to implement it** — open problem report. |
 | RB-SYS-ALT-010 | The barometric altitude is the ISA pressure altitude of the measured static pressure, corrected for the altimeter setting | Defines "correct" for FHA-ALT-2; no new failure condition. The sensor's own accuracy is a hardware property for roadmap Step 8. One finding sits under it: the display applies the setting at a constant 27 ft/hPa and reads high away from 1013 hPa — 64 ft at 950 hPa, 371 ft at the 850 hPa limit (RB-HLR-ALT-080, open). |
 | RB-SYS-ALT-030 | The altimeter setting and whether the pilot or the equipment set it are shown with the altitude | Reduces FHA-ALT-2: it is the mitigation the row names ("the source in use must be visible"). Met on the altimeter plate (RB-HLR-ALT-090). |
-| RB-SYS-ALT-040 | No altitude derived from the GPS or from other aircraft is presented as barometric | Reduces FHA-ALT-2. **Not met twice**: the altimeter draws an ADS-B-estimated pressure altitude as barometric on a unit with no barometer (RB-HLR-ALT-130), and the attitude plate's altitude box is the GPS altitude, drawn beside the altimeter setting (RB-HLR-ALT-140). Both open. |
+| RB-SYS-ALT-040 | No altitude derived from the GPS or from other aircraft is presented as barometric | Reduces FHA-ALT-2. Met since 2026-11-25: the ADS-B estimate reads NO BARO (RB-HLR-ALT-130) and the attitude plate's altitude box is the barometric altitude (RB-HLR-ALT-140); both were drawing a non-barometric altitude as one before. |
 | RB-HLR-ALT-040 | The barometric vertical speed is smoothed with a 5 s time constant | Covered by FHA-VSI-1 (Minor): a lag the pilot sees, about a third of the rate 2 s into a climb. No new condition. |
-| RB-HLR-ALT-050 | A barometer that fails 50 reads in a row is closed and searched for again | No new condition; a recovery strategy. While it is closed the last altitude is left standing with no indication on the display — that is FHA-ALT-3, carried by RB-HLR-ALT-070 (open). |
-| RB-HLR-ALT-110 | While AUTO is selected the altimeter setting is re-derived from the GPS altitude, in whole hectopascals | **Candidate new failure condition.** In level flight with AUTO on (the default at every start-up) the altimeter reads the GPS altitude to within about 27 ft and can never disagree with it, so FHA-ALT-2's proposed mitigation — flag a baro-vs-GPS disagreement — cannot work while AUTO is on, and a GPS altitude error becomes an altimeter error. Item 5 below. |
+| RB-HLR-ALT-050 | A barometer that fails 50 reads in a row is closed and searched for again | No new condition; a recovery strategy. While it is closed the daemon leaves the last altitude standing; the display crosses it out BARO FAIL within 1 s (RB-HLR-ALT-070). |
+| RB-HLR-ALT-110 | While AUTO is selected the altimeter setting is re-derived from the GPS altitude, in whole hectopascals | **Candidate new failure condition.** In level flight with AUTO on (the default at every start-up) the altimeter reads the GPS altitude to within about 27 ft and can never disagree with it, so FHA-ALT-2's proposed mitigation — flag a baro-vs-GPS disagreement — cannot work while AUTO is on, and a GPS altitude error becomes an altimeter error. The cross-check is available with AUTO off (the GPS altitude is printed on the altimeter plate). A maximum range of validity is proposed in item 5 below. |
 | RB-HLR-ALT-120 | AUTO derives only with a fix and while the barometric vertical speed is under 200 ft/min | Bounds RB-HLR-ALT-110: the setting does not chase a climb or descent, and stops changing when the fix is lost. The gate does not look at the GPS's vertical accuracy, which is FHA-ALT-2's "AutoQNH from a poor GPS fix". |
-| RB-HLR-ALT-200 | With no barometer the vertical speed indication is driven by the GPS vertical speed | Covered by FHA-VSI-1 (Minor). The substitution is not annunciated; the GPS rate is noisier and is computed over 2 s of fixes (RB-HLR-SIT-120). |
+| RB-HLR-ALT-200 | Without a current barometer the vertical speed indications are driven by the GPS vertical speed, and marked failed with neither | Covered by FHA-VSI-1 (Minor). The substitution is not annunciated; the GPS rate is noisier and is computed over 2 s of fixes (RB-HLR-SIT-120). It also means a stopped barometer never freezes the vertical speed. |
 | RB-SYS-SPD-010 | The indicated airspeed is the ISA calibrated airspeed of the measured pitot pressure, corrected for position error | Defines "correct" for FHA-SPD-4; no new failure condition. |
 | RB-SYS-SPD-020 | Every displayed speed is labelled IAS or GS | Reduces FHA-SPD-2: the labelling half of its mitigation. Met on the gauge, the attitude tape and the top bar (RB-HLR-SPD-210). |
 | RB-SYS-SPD-030 | Airspeed limit markings are not drawn on a ground speed | Reduces FHA-SPD-2: takes the stricter answer to item 2 below. **Not met** — the arcs are drawn on ground speed too (RB-HLR-SPD-220, open). |
 | RB-HLR-SPD-030 | Below 10 Pa (about 8 kt) the airspeed is 0, and the display shows the ground speed | No new condition while the label switches with it (RB-HLR-SPD-200). It is the reason a slow-flight airspeed under 8 kt is never shown, which matters for nothing this equipment is used for. |
-| RB-SYS-HDG-010 | Every heading indication names its source | Reduces FHA-HDG-2: it is the mitigation the row names. Met on the heading plate (RB-HLR-HDG-010); **not met** on the attitude plate's heading box (RB-HLR-HDG-070, open). |
-| RB-SYS-HDG-030 | The GPS track is not presented as a heading below 5 kt | Reduces FHA-HDG-2 on the ground. Met on the heading plate; **not met** on the attitude plate, which shows the track held from the last movement (RB-HLR-HDG-080, open). |
+| RB-SYS-HDG-010 | Every heading indication names its source | Reduces FHA-HDG-2: it is the mitigation the row names. Met on the heading plate (RB-HLR-HDG-010) and, since 2026-11-25, on the attitude plate, whose box is the GPS track only, labelled TRK (RB-HLR-HDG-070). |
+| RB-SYS-HDG-030 | The GPS track is not presented as a heading below 5 kt | Reduces FHA-HDG-2 on the ground. Met on the heading plate. The attitude plate shows the track held from the last movement, by the owner's decision of 2026-11-25, labelled TRK so it presents a track rather than a heading (RB-HLR-HDG-080 withdrawn). **Accepted:** on the ground the box shows the direction last moved in, which after a turn onto the runway is the taxiway's. |
 | RB-SYS-SIT-010 | The situation is the position, altitude, ground speed and track the receiver reported | Defines the function; no new condition. Its two deliberate exceptions are the derived requirements below. |
 | RB-SYS-SIT-040 | Position accuracy is never reported better than the receiver's | Bounds FHA-TRF-2 on the EFB side: an overstated NACp would let an EFB trust the ownship position more than it should. No new condition. |
-| RB-HLR-SIT-050 | Below 3 kt the track is held at its last value | **Candidate new failure condition, bounded.** On the ground the "track" is the direction of the last movement, not the aircraft's. Harmless where the track is not drawn as a heading below 5 kt (the heading plate); a misleading heading on the attitude plate, which is RB-HLR-HDG-080. |
+| RB-HLR-SIT-050 | Below 3 kt the track is held at its last value | **Candidate new failure condition, bounded.** On the ground the "track" is the direction of the last movement, not the aircraft's. Harmless where the track is not drawn as a heading below 5 kt (the heading plate), and labelled TRK on the attitude plate, where it is kept by the owner's decision (RB-SYS-HDG-030). |
 | RB-HLR-SIT-110 | VTG sentences are not used | Reduces FHA-ATT-2: VTG's duplicate velocity stamp made the Simple AHRS show 0.75 of the bank in steady turns on 2026-11-20. No new condition. |
 | RB-HLR-SIT-120 | The GPS vertical speed is the slope of 2 s of GGA altitudes | No new condition; it feeds the vertical speed indication on a unit with no barometer (FHA-VSI-1, Minor) and the AHRS's vertical velocity there. |
 
@@ -173,15 +173,32 @@ This section is that feedback loop; `scripts/trace.py` reports any derived requi
    function — a reasonable one for a VFR microlight — and if it is, rewrite FHA-ALT-2's
    mitigation, because a baro-vs-GPS disagreement flag can never fire while AUTO is on.
    If it is not, AUTO should derive once (on the ground, or on request) and then hold.
-6. **The display does not read the barometer's time stamp or source.** Four open
-   findings — a frozen altimeter (RB-HLR-ALT-070), an ADS-B estimate drawn as a barometric
+   **Documented 2026-11-25:** the baro-vs-GPS cross-check is available with AUTO off — the
+   altimeter plate prints the GPS altitude under the barometric needles — and is not
+   available, by construction, with AUTO on.
+   **Proposed maximum range of validity for AUTO** (not built; for the owner's decision):
+   (a) *value* — accept a derived setting only between 950 and 1050 hPa; outside it, hold
+   the last one and show AUTO in amber, because a QNH that far out at a microlight field is
+   a GPS or barometer fault, not weather;
+   (b) *source quality* — derive only from a 3D fix with a vertical accuracy of 10 m
+   (about 1 hPa) or better, which closes FHA-ALT-2's "AutoQNH from a poor GPS fix";
+   (c) *rate* — move the derived setting by at most 1 hPa per minute: real QNH changes by
+   a few hectopascals a day, so anything faster is a GPS altitude error;
+   (d) *time and distance* — derive on the ground before take-off and hold the setting in
+   flight, as a pilot sets the field QNH; treat it as valid for 60 min or 50 NM from where
+   it was derived (the life and extent of a regional QNH), after which AUTO turns amber and
+   asks for the ATIS or regional QNH. (d) is the change that makes the disagreement flag
+   meaningful again, because an in-flight GPS error no longer moves the setting.
+6. ~~**The display does not read the barometer's time stamp or source.**~~ Closed
+   2026-11-25: a frozen altimeter (RB-HLR-ALT-070), an ADS-B estimate drawn as a barometric
    altitude (RB-HLR-ALT-130), the attitude plate's GPS altitude beside the setting
-   (RB-HLR-ALT-140) and the attitude plate's unlabelled heading source (RB-HLR-HDG-070) —
-   undo the mitigations FHA-ALT-2, FHA-ALT-3 and FHA-HDG-2 rely on. All four are display
-   changes; the data is already on the `/situation` socket.
+   (RB-HLR-ALT-140) and its unlabelled heading source (RB-HLR-HDG-070) are fixed. Left for
+   the review: the 3 s limit for the 1 Hz NMEA barometers, against RB-SYS-SYS-020's 1 s.
 7. **One bad barometer read can freeze every instrument.** A negative pressure becomes a
    NaN altitude, `encoding/json` refuses to encode it, and the `/situation` socket sends
    empty frames from then on, so the whole display — attitude included — holds its last
    picture with nothing marked failed (RB-HLR-ALT-035). This is FHA-ATT-3 for the whole
-   unit from a single sensor value, and the fix is a range check in one place; it belongs
-   in a problem report before the review, not on its agenda.
+   unit from a single sensor value. **Fixed 2026-11-25** for the barometer and the two NMEA
+   barometers (and a crash on a short `$POGNB` found on the way). Any other NaN in the
+   situation still empties the stream; a sanitising encoder in `handleSituationWS()` is the
+   remaining candidate problem report.

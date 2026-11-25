@@ -343,6 +343,8 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
   };
   $scope.Altimeter = {
     "altitude": 0,
+    "text": "---",
+    "valid": false,
     "QNH": 1013,
     "AutoQNH": true
   };
@@ -354,6 +356,7 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     "arrowClass": "attitude-turnrate-arrow-right"
   };
   $scope.Variometer = {
+    "valid": true,
     "barTop": "50%",
     "barHeight": "0%",
     "tipTop": "50%",
@@ -366,14 +369,16 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
   const VSI_DIGITS_STEP = 50;   // fpm the number is rounded to
 
   function updateVariometer(situation) {
-    // BaroVerticalSpeed is feet per minute. With no baro fitted the GPS rate is
-    // the only one there is, and that one is feet per second.
-    var vs = situation.BaroVerticalSpeed;
-    if(situation.BaroSourceType == 0 || !isFinite(vs)) {
-      vs = (situation.GPSVerticalSpeed ?? 0) * 60;
-    }
-    if(!isFinite(vs)) {
-      vs = 0;
+    // The barometric rate while the barometer is current, else the GPS rate, else
+    // none: the strip empties and reads --- in red (RB-HLR-ALT-200)
+    const vs = globalVerticalSpeedFpm(situation);
+    $scope.Variometer.valid = vs !== undefined;
+    if($scope.Variometer.valid == false) {
+      $scope.Variometer.barTop = "50%";
+      $scope.Variometer.barHeight = "0%";
+      $scope.Variometer.tipTop = "50%";
+      $scope.Variometer.value = "---";
+      return;
     }
     // Half the strip is one full scale, so this is a signed percentage of it
     const half = Math.max(-VSI_FULL_SCALE, Math.min(VSI_FULL_SCALE, vs)) / VSI_FULL_SCALE * 50;
@@ -394,7 +399,7 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     ,
     "bugLeft": "52cqmin"
     ,
-    "sourceName":"GYRO"
+    "sourceName":"TRK"
   };
 
   // Failure flags. A PFD removes the sky and ground presentation and draws a
@@ -412,9 +417,8 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     } else {
       $scope.Attitude.fail = (situation.AHRSStatus & AHRS_STATUS_CALIBRATING) ? "align" : "fail";
     }
-    // Heading has two sources and only fails when both are gone
-    $scope.Heading.valid = situation.GPSFixQuality > 0
-                        || globalAHRSValueIsValid(situation.AHRSGyroHeading);
+    // The heading box is the GPS track, and fails with the fix (RB-HLR-HDG-070)
+    $scope.Heading.valid = situation.GPSFixQuality > 0 && isFinite(situation.GPSTrueCourse);
   }
 
   // Turn rate. The compass card runs 8cqmin per 10 degrees and its labels are
@@ -512,9 +516,19 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Attitude.rollDegree = -situation.AHRSRoll + "deg";
     $scope.Attitude.chevrons = globalPitchChevrons(situation.AHRSPitch, $scope.Attitude.chevrons);
     updateSlipSkid(situation.AHRSSlipSkid);
-    $scope.Altimeter.altitude = parseInt(situation.GPSAltitudeMSL);
     // The setting the altimeter is on, derived or dialled, from servicesituation.js
     $scope.Altimeter.QNH = parseInt(situation.QNH);
+    // The altitude box beside it: the barometric altitude on that setting, never the
+    // GPS one (RB-HLR-ALT-140), and --- in red while the barometer is not current
+    // (RB-HLR-ALT-070); the tape holds where it was
+    $scope.Altimeter.valid = situation.BaroValid === true;
+    if($scope.Altimeter.valid) {
+      $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude + 27 * (situation.QNH - 1013.25));
+      $scope.Altimeter.text = String($scope.Altimeter.altitude);
+    }
+    else {
+      $scope.Altimeter.text = "---";
+    }
     $scope.Altimeter.AutoQNH = situation.AutoQNH;
     updateFailures(situation);
     updateVariometer(situation);
@@ -523,12 +537,12 @@ function SixPackInstrumentAttitude($rootScope, $scope, $state, $http, $interval)
     $scope.Speed.speed = parseInt(pilotDisplayedSpeedFromKT(situation.SpeedKt ?? 0));
     $scope.Speed.sourceName = situation.SpeedSource ?? "GS";
     $scope.Speed.unit = window.aircraftData?.units?.speed ?? "KMH";
-    if(situation.GPSFixQuality > 0) {
-          $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
-      $scope.Heading.sourceName = "GPS";
-        } else {
-        $scope.Heading.heading = parseInt(situation.AHRSGyroHeading);
-          $scope.Heading.sourceName = "GYRO";
+    // The GPS track and nothing else, labelled TRK, so there is no change of source
+    // to hide (RB-HLR-HDG-070). Below 3 kt the daemon holds the last track
+    // (RB-HLR-SIT-050), and it is shown held: owner decision of 2026-11-25.
+    $scope.Heading.sourceName = "TRK";
+    if($scope.Heading.valid) {
+      $scope.Heading.heading = parseInt(situation.GPSTrueCourse);
     }
     $scope.Heading.text = $scope.Heading.valid == true ? String($scope.Heading.heading) : "---";
     updateTurnRate(situation);
@@ -547,22 +561,31 @@ function SixPackInstrumentAltimeter($rootScope, $scope, $state, $http, $interval
     "AutoQNH": true,
     "altimeterDegreeM": "90deg",
     "altimeterDegreeC": "90deg",
-    "BaroPressureAltitude":-1
+    "BaroPressureAltitude":-1,
+    "fail": ""
   };
 
   $scope.updateSituation = (situation) => {
     // A new QNH or AUTO redraws too: on the ground the baro altitude does not change, and the
     // needle and the AUTO label would wait for a climb
-    const drawn = situation.BaroPressureAltitude + "|" + situation.QNH + "|" + situation.AutoQNH;
+    const drawn = situation.BaroPressureAltitude + "|" + situation.QNH + "|" + situation.AutoQNH + "|" + situation.BaroStatus;
     if($scope.altimeterDrawn == drawn){
       return;
     }
     $scope.altimeterDrawn = drawn;
-    $scope.BaroPressureAltitude = situation.BaroPressureAltitude;
+    // A barometer that has stopped is crossed out BARO FAIL, a unit with none - or
+    // with only the ADS-B estimate - NO BARO; the needles hold and the GPS altitude
+    // under them stays (RB-HLR-ALT-070, RB-HLR-ALT-130)
+    $scope.Altimeter.fail = situation.BaroStatus == "ok" ? ""
+                          : (situation.BaroStatus == "stale" ? "BARO FAIL" : "NO BARO");
     $scope.Altimeter.AutoQNH = situation.AutoQNH;
-    $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude+27*(situation.QNH-1013.25));
     $scope.Altimeter.GPSAltitudeMSL = parseInt(situation.GPSAltitudeMSL);
     $scope.Altimeter.QNH = parseInt(situation.QNH);
+    if($scope.Altimeter.fail != "") {
+      return;
+    }
+    $scope.BaroPressureAltitude = situation.BaroPressureAltitude;
+    $scope.Altimeter.altitude = parseInt(situation.BaroPressureAltitude+27*(situation.QNH-1013.25));
     $scope.Altimeter.altimeterDegreeC = (90 + (360.0 * ($scope.Altimeter.altitude / 1000) / 10.0)) + "deg";
     $scope.Altimeter.altimeterDegreeM = (90 + (360.0 * ($scope.Altimeter.altitude % 1000) / 1000.0)) + "deg";
 
@@ -861,16 +884,19 @@ function SixPackInstrumentHeading($rootScope, $scope, $state, $http, $interval) 
 function SixPackInstrumentVariometer($rootScope, $scope, $state, $http, $interval) {
   SixPackInstrument($rootScope, $scope, $state, $http, $interval, "variometer");
   $scope.Variometer = {
-    "BaroVerticalSpeed": 0,
+    "valid": true,
     "varioDegree": "0deg"
   };
 
+  // The same source as the attitude plate's strip (RB-HLR-ALT-200): the barometric
+  // rate while the barometer is current, else the GPS rate; with neither the needle
+  // holds and the gauge is crossed out
   $scope.updateSituation = (situation) => {
-    if($scope.BaroVerticalSpeed == situation.BaroVerticalSpeed){
-      return;
+    const vs = globalVerticalSpeedFpm(situation);
+    $scope.Variometer.valid = vs !== undefined;
+    if($scope.Variometer.valid) {
+      $scope.Variometer.varioDegree = vs / 2000 * 180 + "deg";
     }
-    $scope.BaroVerticalSpeed = situation.BaroVerticalSpeed;
-    $scope.Variometer.varioDegree = (situation.BaroVerticalSpeed) / 2000 * 180 + "deg";
   };
   if(window.situation !== undefined) {
     $scope.updateSituation(window.situation);

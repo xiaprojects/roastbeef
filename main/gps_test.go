@@ -251,3 +251,37 @@ func TestGPSFixIsCurrentForThreeSeconds(t *testing.T) {
 			s.GPSFixQuality, s.GPSSatellites, s.GPSHorizontalAccuracy, s.GPSVerticalAccuracy, s.GPSVerticalSpeed, s.GPSNACp)
 	}
 }
+
+// The two other barometric sources on the GPS port, an OGN tracker's $POGNB and a
+// SoftRF's $PGRMZ, leave the pressure altitude alone on a sentence too short to carry it
+// - a short $POGNB used to index past its fields and panic the reader - and on a "NaN" or
+// "Inf" field, which strconv.ParseFloat accepts and which would freeze /situation.
+// Covers: RB-HLR-ALT-035
+func TestBaroSentencesRejectShortAndNonFiniteFields(t *testing.T) {
+	withGPSState(t)
+	mySituation.muBaro = &sync.Mutex{}
+	globalStatus.GPS_detected_type = GPS_TYPE_SERIAL
+	if !nmea("PGRMZ,1089,f,3") || mySituation.BaroPressureAltitude != 1089 || mySituation.BaroSourceType != BARO_TYPE_NMEA {
+		t.Fatalf("PGRMZ 1089 ft: altitude %.0f source %d; want 1089, NMEA", mySituation.BaroPressureAltitude, mySituation.BaroSourceType)
+	}
+	for _, body := range []string{
+		"PGRMZ,NaN,f,3", "PGRMZ,Inf,f,3", "PGRMZ,-Inf,f,3",
+		"POGNB,22.0,+29.1,100972.3,3.8",
+		"POGNB,22.0,+29.1,100972.3,3.8,+29.4,+87.2",
+		"POGNB,22.0,+29.1,100972.3,3.8,NaN,+87.2,-0.04,+32.6",
+		"POGNB,22.0,+29.1,100972.3,3.8,+29.4,+87.2,Inf,+32.6",
+	} {
+		func() {
+			defer func() {
+				if r := recover(); r != nil {
+					t.Errorf("%s panicked: %v", body, r)
+				}
+			}()
+			nmea(body)
+		}()
+		if a := mySituation.BaroPressureAltitude; a != 1089 {
+			t.Errorf("%s: altitude %v; want 1089 left standing", body, a)
+			mySituation.BaroPressureAltitude = 1089
+		}
+	}
+}

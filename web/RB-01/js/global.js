@@ -267,6 +267,21 @@ function globalAHRSValueIsValid(value) {
   return isFinite(value) && Math.abs(value - AHRS_INVALID) >= 0.01;
 }
 
+// The vertical speed the pilot is shown, ft/min, or undefined when there is none
+// (RB-HLR-ALT-200): the barometric rate while the barometer is current (BaroValid,
+// set by servicesituation.js), else the GPS rate, which the daemon gives in ft/s,
+// while there is a fix. A barometer that has stopped therefore never freezes the
+// indication: it gives way to the GPS, or to a failure flag.
+function globalVerticalSpeedFpm(situation) {
+  if (situation.BaroValid === true && isFinite(situation.BaroVerticalSpeed)) {
+    return situation.BaroVerticalSpeed;
+  }
+  if (situation.GPSFixQuality > 0 && isFinite(situation.GPSVerticalSpeed)) {
+    return situation.GPSVerticalSpeed * 60;
+  }
+  return undefined;
+}
+
 
 // Which way the recovery chevrons point for this pitch, "" when it is not
 // dangerous: "down" nose high (push), "up" nose low (pull), always towards the

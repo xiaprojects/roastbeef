@@ -55,8 +55,14 @@ def read_attitude(d):
     return d.page.eval("""(() => {
         const txt = sel => (document.querySelector(sel) || {textContent: ''}).textContent.trim();
         const m = /rotate\\((-?[\\d.]+)deg\\)/.exec(document.getElementById('attitude-rollpitch').style.transform || '');
+        const box = document.querySelector('.attitude-heading');
+        const s = window.situation || {};
         return {speed: txt('.attitude-speed'), altitude: txt('.attitude-altimeter'),
-                heading: txt('.attitude-heading'), roll: m ? parseFloat(m[1]) : null};
+                // the box's own number, without the TRK label hung beside it
+                heading: box ? box.childNodes[0].textContent.trim() : '',
+                headingSource: txt('.attitude-heading-source'),
+                baro: s.BaroPressureAltitude, qnh: s.QNH, baroValid: s.BaroValid,
+                roll: m ? parseFloat(m[1]) : null};
     })()""")
 
 
@@ -87,13 +93,20 @@ def checkpoint_test(d, res, log, cp, gauges):
     d.settle()
     shown = read_attitude(d)
     d.shot("flight_%s_attitude" % name)
-    want_heading = int(sit["GPSTrueCourse"]) if sit["GPSFixQuality"] > 0 else int(sit["AHRSGyroHeading"])
+    # The heading box is the GPS track and nothing else, labelled TRK (RB-HLR-HDG-070)
+    want_heading = str(int(sit["GPSTrueCourse"])) if sit["GPSFixQuality"] > 0 else "---"
     res.check(shown["speed"] == str(int(sit["GPSGroundSpeed"])),
               "%s attitude shows %d kt" % (tag, int(sit["GPSGroundSpeed"])), shown["speed"])
-    res.check(shown["altitude"] == str(int(sit["GPSAltitudeMSL"])),
-              "%s attitude shows %d ft" % (tag, int(sit["GPSAltitudeMSL"])), shown["altitude"])
-    res.check(shown["heading"] == str(want_heading),
-              "%s attitude shows heading %d" % (tag, want_heading), shown["heading"])
+    # The altitude box is the barometric altitude on the setting beside it (RB-HLR-ALT-140):
+    # the flight has its own barometer, which must read current through the replay
+    want_alt = (str(int(shown["baro"] + 27 * (shown["qnh"] - 1013.25)))
+                if shown["baroValid"] and shown["baro"] is not None and shown["qnh"] is not None else "---")
+    res.check(shown["baroValid"] is True and shown["altitude"] == want_alt,
+              "%s attitude shows the barometric altitude %s ft" % (tag, want_alt),
+              (shown["altitude"], shown["baro"], shown["qnh"], shown["baroValid"]))
+    res.check(shown["heading"] == want_heading and shown["headingSource"] == "TRK",
+              "%s attitude shows track %s, labelled TRK" % (tag, want_heading),
+              (shown["heading"], shown["headingSource"]))
     res.check(shown["roll"] is not None and abs(shown["roll"] + sit["AHRSRoll"]) <= ROLL_TOLERANCE,
               "%s attitude is banked %+.1f deg" % (tag, sit["AHRSRoll"]), shown["roll"])
 

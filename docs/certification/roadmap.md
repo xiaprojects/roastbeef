@@ -473,9 +473,11 @@ doubles the effort.
       altimetry, speed, heading and the situation specified (52 HLRs, 17 system
       requirements), 41 traced; 11 open findings, and three new review items in
       `fha.md` §5 (items 5–7).
-- [ ] **Next:** AT-13, the problem-report register — twenty findings now sit in the
-      untraced budget — and the NaN-altitude fix of RB-HLR-ALT-035, which freezes the
-      whole display from one bad barometer read.
+- [x] Barometer fixes of 2026-11-25: the NaN-altitude freeze (RB-HLR-ALT-035), the
+      display reading the barometer's time stamp and source (RB-HLR-ALT-070, -130), the
+      attitude plate's barometric altitude and TRK box (RB-HLR-ALT-140, RB-HLR-HDG-070).
+- [ ] **Next:** AT-13, the problem-report register (fourteen findings in the untraced
+      budget); the owner's decision on AUTO's range of validity (`fha.md` §5 item 5).
 
 ## Progress log
 
@@ -668,6 +670,25 @@ doubles the effort.
   altimeter is the GPS altitude to within 1 hPa (`fha.md` §5 item 5); the GPS currency
   limit is 3 s against RB-SYS-SYS-020's 1 s; pitot zeroing is accepted when the GPS cannot
   tell whether the aircraft is moving.
+
+**2026-11-25 (second pass) — fixes for five altimetry and heading findings.**
+
+- Daemon: a static pressure outside 300–1100 hPa, or not a number, is a failed read
+  (`plausiblePressure()`); the `$POGNB` and `$PGRMZ` paths refuse "NaN" and "Inf"; a
+  short `$POGNB`, which indexed past its fields and panicked the GPS reader, is refused.
+  `TestPressureSenderRejectsAnImpossiblePressure` (no longer a skipping known issue) and
+  `TestBaroSentencesRejectShortAndNonFiniteFields`, which panics on the old code.
+- Display: `servicesituation.js` publishes `BaroStatus` — stale when the measurement time
+  has not advanced for 1 s (3 s for the 1 Hz NMEA barometers), none for no barometer or
+  the ADS-B estimate. The altimeter is crossed out BARO FAIL or NO BARO, the attitude
+  plate's altitude box is the barometric altitude ("---" without one), AUTO derives only
+  from a current barometer, the vertical speed falls back to the GPS rate and is marked
+  failed with neither, the bar's altitude slot follows. The attitude plate's heading box is
+  the GPS track only, labelled TRK, held below 3 kt by the owner's decision
+  (RB-HLR-HDG-080 withdrawn). `test_baro.py` 23/23, 4/23 on the old code; the simulator
+  replay interpolates the barometer's clock so it does not read BARO FAIL between rows.
+- Untraced budget 22 → 16. The AUTO setting's range of validity is proposed in `fha.md`
+  §5 item 5, not built.
 
 ## Standards referenced
 

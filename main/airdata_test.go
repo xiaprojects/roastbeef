@@ -15,7 +15,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"net/http/httptest"
 	"os"
@@ -460,13 +459,12 @@ func TestPressureSenderAlertsTheLoss(t *testing.T) {
 	}
 }
 
-// KNOWN ISSUE (FHA-ALT-2, not yet decided). A pressure no barometer can read - negative
-// (a driver's sign or overflow error), or 2000 hPa - is turned into an altitude and
-// published: CalcAltitude gives NaN for the one and -20 000 ft for the other, and the
-// only plausibility checks are 70 000 ft and 5000 ft from a valid GPS altitude, which a
-// NaN passes and which, without a fix, the other passes too. The test measures it and
-// skips; it passes once such a reading leaves the last good altitude standing, its
-// measurement time stopped, as a reading 5000 ft off the GPS already does.
+// A pressure no barometer can read is a failed read: negative (a driver's sign or
+// overflow error), NaN, infinite, or outside 300..1100 hPa. The last good altitude stands
+// and its measurement time stops, as for a reading 5000 ft off the GPS. A NaN that got
+// through would reach /situation, where encoding/json refuses it and every frame after
+// it goes out empty, freezing the whole display.
+// Covers: RB-HLR-ALT-035
 func TestPressureSenderRejectsAnImpossiblePressure(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -475,8 +473,7 @@ func TestPressureSenderRejectsAnImpossiblePressure(t *testing.T) {
 	b.fly(1200, 0)
 	startBaro(b)
 	b.wait(t, 5)
-	var report []string
-	for _, p := range []float64{-1, 2000} {
+	for _, p := range []float64{-1, math.NaN(), math.Inf(1), 250, 1200, 2000} {
 		b.fly(1200, 0)
 		b.wait(t, 3)
 		alt0, _, at0 := baro()
@@ -484,15 +481,17 @@ func TestPressureSenderRejectsAnImpossiblePressure(t *testing.T) {
 		b.bad = p
 		b.mu.Unlock()
 		b.wait(t, 3)
-		if alt, _, at := baro(); alt != alt0 || at != at0 {
-			report = append(report, fmt.Sprintf("%g hPa published as %.0f ft", p, alt))
+		if alt, _, at := baro(); alt != alt0 || at != at0 || math.IsNaN(alt) {
+			t.Errorf("%g hPa: altitude %.0f ft measured %v; want the last good %.0f ft, %v, standing", p, alt, at, alt0, at0)
 		}
 		b.mu.Lock()
 		b.bad = 0
 		b.mu.Unlock()
 	}
-	if len(report) > 0 {
-		t.Skipf("KNOWN ISSUE FHA-ALT-2: %s", strings.Join(report, ", "))
+	b.fly(1200, 0)
+	b.wait(t, 3)
+	if alt, _, at := baro(); math.Abs(alt-1200) > 1 || at.IsZero() || !globalStatus.BMPConnected {
+		t.Errorf("good readings again: altitude %.0f ft measured %v connected %v; want 1200, current, in use", alt, at, globalStatus.BMPConnected)
 	}
 }
 

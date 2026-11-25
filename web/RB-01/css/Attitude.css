@@ -245,6 +245,20 @@
     margin-left: -5cqmin;
     width: 10cqmin;
 }
+/* TRK beside the heading box: the box is the GPS track, not a heading */
+.attitude-heading-source {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    margin-left: 0.5cqmin;
+    padding: 0 0.5cqmin;
+    background-color: #000000;
+    border-radius: 10%;
+    font-size: 2.5cqmin;
+    font-weight: normal;
+    color: #ff00ff;
+    line-height: 1.4;
+}
 .attitude-triangle-bottom {
 	width: 0;
 	height: 0;

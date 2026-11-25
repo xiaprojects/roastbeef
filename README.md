@@ -116,3 +116,23 @@ Developer documentation is stored in the repository because:
 
 1. Developer documentation is typically tied tightly to code. Changes to code and developer documentation should occur together in this case. Code releases are tied to their developer documentation.
 1. In-repository markdown enables PRs and PR review, ensuring accuracy and alignment with other developers.
+
+## License
+
+RB-Avionics is open source and open design. This repository is dual-licensed by XIAPROJECTS SRL:
+
+1. **GNU Affero General Public License v3.0** (`AGPL-3.0-only`): the community edition, free for all
+   builders and personal use. The full text is in [LICENSE](LICENSE). If you distribute this software or a
+   modified version, or let others use a modified version over a network, you must offer them its
+   complete source code under the same licence.
+2. **Commercial licence** from XIAPROJECTS SRL, for products and services that cannot meet the
+   AGPL-3.0 terms, for example closed-source devices, firmware or services. Ask through
+   [www.rbavionics.com](https://www.rbavionics.com) or the [Discord community](https://discord.gg/G4u6kjmrUG).
+
+Copyright © 2023-2026 XIAPROJECTS SRL.
+
+RB-01 is a fork of [Stratux](https://github.com/stratux/stratux). Code from Stratux and its
+contributors stays under the BSD 3-Clause licence in [LICENSE-STRATUX](LICENSE-STRATUX), and those
+files keep their original copyright headers. `dump978/` is GPL-2.0-or-later and its `fec/` is
+LGPL; the browser libraries under `web/` (AngularJS, Mobile Angular UI, Chart.js, OpenLayers,
+three.js and others) keep their own licences.

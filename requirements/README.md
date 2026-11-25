@@ -13,9 +13,9 @@ mechanical half of it.
 | [`RB-SYS.md`](RB-SYS.md) | System level, all core functions | system | — |
 | [`RB-HLR-ALR.md`](RB-HLR-ALR.md) | Alerts: raise, classify, annunciate, retain | software | `main/alerts_test.go` |
 | [`RB-HLR-ATT.md`](RB-HLR-ATT.md) | Attitude: sample, calibrate, fuse, annunciate | software | `main/sensors_test.go` |
-| [`RB-HLR-ALT.md`](RB-HLR-ALT.md) | Altimetry: pressure altitude, altimeter setting (pilot and AUTO), vertical speed | software | `main/airdata_test.go`, `common/equations_test.go`, `test/display/test_keypad_altimeter.py`, `test/display/test_variometer.py` |
+| [`RB-HLR-ALT.md`](RB-HLR-ALT.md) | Altimetry: pressure altitude, altimeter setting (pilot and AUTO), vertical speed | software | `main/airdata_test.go`, `main/gps_test.go`, `common/equations_test.go`, `test/display/test_keypad_altimeter.py`, `test/display/test_variometer.py`, `test/display/test_baro.py` |
 | [`RB-HLR-SPD.md`](RB-HLR-SPD.md) | Speed: pitot airspeed, zeroing, sensor loss, IAS/GS presentation | software | `main/airdata_test.go`, `common/equations_test.go`, `sensors/ms4525do_test.go`, `test/display/test_speed_source.py` |
-| [`RB-HLR-HDG.md`](RB-HLR-HDG.md) | Heading: GPS track, gyro and magnetic sources, the heading plate, the attitude plate's heading | software | `main/sensors_test.go`, `test/display/test_heading.py` |
+| [`RB-HLR-HDG.md`](RB-HLR-HDG.md) | Heading: GPS track, gyro and magnetic sources, the heading plate, the attitude plate's heading | software | `main/sensors_test.go`, `test/display/test_heading.py`, `test/display/test_baro.py` |
 | [`RB-HLR-SIT.md`](RB-HLR-SIT.md) | Situation: NMEA parsing, fix currency, accuracy, GPS vertical speed, fix-loss alert | software | `main/gps_test.go`, `main/gpsvspeed_test.go`, `main/gpsfixalert_test.go`, `main/lastposition_test.go` |
 | [`RB-HLR-TRF.md`](RB-HLR-TRF.md) | Traffic: receive, fuse, age, present | software | `main/traffic_test.go`, `main/gen_gdl90_test.go`, `main/flarm-nmea_test.go`, `test/integration/test_daemon.py` |
 | [`RB-ICD-GDL.md`](RB-ICD-GDL.md) | GDL90 output: framing, ownship, AHRS messages | interface | `main/gen_gdl90_test.go`, `main/sensors_test.go` |
@@ -48,10 +48,11 @@ and heading data, and the display draws them without looking at the stamp or the
 
 Still unspecified: EMS (AT-18, waiting on the supplemental-or-primary decision).
 
-Twenty-two requirements are specified with no passing test and are counted in
-`untraced.txt`, and twenty of them are **findings** rather than omissions — seven
-alerting ones; RB-HLR-ATT-350 and RB-HLR-ATT-360; six in altimetry, three in heading,
-one in speed and one in the situation, each with its evidence in the requirement body.
+Sixteen requirements are specified with no passing test and are counted in
+`untraced.txt`, and fourteen of them are **findings** rather than omissions — seven
+alerting ones; RB-HLR-ATT-350 and RB-HLR-ATT-360; two in altimetry, one each in heading,
+speed and the situation, each with its evidence in the requirement body. Five more, in
+altimetry and heading, were fixed on 2026-11-25 and one was withdrawn by the owner.
 That is more weight than a budget file was meant to carry: the file exists to stop the
 gate going permanently red over untested requirements, not to track defects. A
 problem-report register ([`agent-tasks.md`](../docs/certification/agent-tasks.md)
