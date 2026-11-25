@@ -142,6 +142,18 @@ func pollSensors() {
 		if globalSettings.MS4525DO_Enabled && !globalStatus.AirspeedConnected {
 			pollAirspeedSensor()
 		}
+
+		// The AHT20 humidity sensor (main/humidity.go) rides on the baro
+		// switch: it ships on the same breakout as a BMP280.
+		if globalSettings.BMP_Sensor_Enabled && !globalStatus.HumidityConnected {
+			pollHumiditySensor()
+		}
+
+		// The ENS160 gas sensor (main/airquality.go), on the same switch: it
+		// ships on a breakout with an AHT21, which compensates it.
+		if globalSettings.BMP_Sensor_Enabled && !globalStatus.AirQualityConnected {
+			pollAirQualitySensor()
+		}
 	}
 }
 
