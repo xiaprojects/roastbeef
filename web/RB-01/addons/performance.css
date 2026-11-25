@@ -1,0 +1,228 @@
+/* Styles for the performance addon. js/main.js loads addons/<name>.css alongside
+   <name>.html and js/<name>.js.
+
+   Each KPI is a horizontal G-meter: the G-meter's arc colours (#00ff00, #ffff00,
+   #ff0000) as a strip, a white needle, and the value in the speed plate's box
+   (css/Speed.css .speed-value: Lucida, bolder, white with a black stroke, the band's
+   darker colour behind). On the round 480x480 panel the list is kept inside the
+   circle: 76 % of the side wide, its corners stay on the glass. */
+
+.addonPerfView {
+    width: 100%;
+    height: 100cqh;
+    min-height: 240px;
+    position: relative;
+    overflow: hidden;
+    container-type: size;
+    background: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.addonPerfList {
+    position: absolute;
+    left: 3cqw;
+    right: 3cqw;
+    top: 3cqh;
+    bottom: 7cqh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.addonPerfScale,
+.addonPerfRow {
+    display: grid;
+    grid-template-columns: 22% 1fr 17%;
+    column-gap: 2%;
+    align-items: center;
+    transition: opacity 0.6s ease;
+}
+
+.addonPerfRow {
+    flex: 1 1 0;
+    max-height: 13cqh;
+}
+
+.addonPerfRowOverall {
+    flex-grow: 1.4;
+    max-height: 17cqh;
+    border-bottom: 0.4cqmin solid #333;
+}
+
+.addonPerfLabel {
+    font-size: 4.2cqmin;
+    font-weight: bolder;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 0.4cqmin black;
+}
+
+.addonPerfRowOverall .addonPerfLabel {
+    font-size: 5.2cqmin;
+}
+
+/* The scale: tick numbers like .speed-number */
+.addonPerfScale {
+    flex: 0 0 auto;
+    height: 4.5cqmin;
+}
+
+.addonPerfTrackScale {
+    height: 100%;
+}
+
+.addonPerfTick {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-size: 3.2cqmin;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.addonPerfValueScale {
+    font-size: 3.2cqmin !important;
+    color: #8a8a8a;
+    -webkit-text-stroke: 0 !important;
+}
+
+/* The track: a black strip with the bands along its lower edge, as the G-meter arc ring */
+.addonPerfTrack {
+    position: relative;
+    height: 70%;
+    min-height: 3cqmin;
+}
+
+.addonPerfBand {
+    position: absolute;
+    bottom: 0;
+    height: 32%;
+}
+
+.addonPerfBaseline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.5cqmin;
+    transform: translateX(-50%);
+    background: #fff;
+    opacity: 0.8;
+}
+
+/* The needle: a white wedge pointing down onto the strip, outlined in black */
+.addonPerfNeedle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3.2cqmin;
+    transform: translateX(-50%);
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 62% 70%, 62% 100%, 38% 100%, 38% 70%);
+    filter: drop-shadow(0 0 0.3cqmin #000);
+    transition: left 0.6s ease;
+}
+
+.addonPerfNote {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 2.6cqmin;
+    color: #bbb;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 0.5cqmin black;
+}
+
+.addonPerfRowInvalid .addonPerfNote {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 3cqmin;
+}
+
+/* The value, as css/Speed.css .speed-value */
+.addonPerfValue {
+    font-size: 6cqmin;
+    font-weight: bolder;
+    line-height: 1.1;
+    text-align: center;
+    color: #fff;
+    border-radius: 1.2cqmin;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 0.6cqmin black;
+}
+
+.addonPerfRowOverall .addonPerfValue {
+    font-size: 8cqmin;
+}
+
+.addonPerfFootnote {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5cqh;
+    transform: translateX(-50%);
+    font-size: 2.4cqmin;
+    color: #8a8a8a;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Round 480x480 (and other near square) panels: inside the circle */
+@container (aspect-ratio < 1.3) {
+    /* corners at (0.33, 0.37) of the side from the centre: inside the 0.5 radius */
+    .addonPerfList {
+        left: 17cqw;
+        right: 17cqw;
+        top: 13cqh;
+        bottom: 17cqh;
+    }
+    .addonPerfScale,
+    .addonPerfRow {
+        grid-template-columns: 25% 1fr 19%;
+    }
+    .addonPerfLabel {
+        font-size: 3.4cqmin;
+    }
+    .addonPerfRowOverall .addonPerfLabel {
+        font-size: 3.4cqmin;
+    }
+    .addonPerfValue {
+        font-size: 4.6cqmin;
+    }
+    .addonPerfRowOverall .addonPerfValue {
+        font-size: 6cqmin;
+    }
+    .addonPerfTick,
+    .addonPerfValueScale {
+        font-size: 2.6cqmin !important;
+    }
+    .addonPerfNote {
+        font-size: 2.2cqmin;
+    }
+    .addonPerfRowInvalid .addonPerfNote {
+        font-size: 2.4cqmin;
+    }
+    .addonPerfFootnote {
+        bottom: 9cqh;
+        font-size: 2.2cqmin;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .addonPerfFootnote .addonPerfFootnoteSep {
+        display: none;
+    }
+    .addonPerfFootnote .addonPerfFootnoteBreak {
+        display: inline;
+    }
+}
+
+/* One line on a landscape panel, two inside the circle */
+.addonPerfFootnoteBreak {
+    display: none;
+}

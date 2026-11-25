@@ -1,0 +1,31 @@
+<div ui-content-for="title">Performance</div>
+<!-- Aircraft performance KPIs (js/perfengine.js, settings/performance.json): one
+     horizontal G-meter per indicator. The coloured strip is the indicator's bands in the
+     G-meter arc colours, the white line is 100 % (the aircraft as trained), the white
+     needle the KPI, and the value box takes the speed plate's darker band colour.
+     Display only: nothing here takes a tap. docs/performance/implementation.md -->
+<div class="addonPerfView">
+    <div class="addonPerfList">
+        <div class="addonPerfScale">
+            <div class="addonPerfLabel"></div>
+            <div class="addonPerfTrack addonPerfTrackScale">
+                <div class="addonPerfTick" ng-repeat="t in scaleTicks track by $index" style="left: {{t.left}}%;">{{t.text}}</div>
+            </div>
+            <div class="addonPerfValue addonPerfValueScale">%</div>
+        </div>
+        <div class="addonPerfRow" ng-repeat="k in kpis track by k.id"
+            ng-class="{'addonPerfRowOverall': k.id == 'overall', 'addonPerfRowInvalid': !k.valid}"
+            ng-style="{opacity: k.opacity}" data-kpi="{{k.id}}">
+            <div class="addonPerfLabel">{{k.label}}</div>
+            <div class="addonPerfTrack">
+                <div class="addonPerfBand" ng-repeat="b in k.bands track by $index"
+                    style="left: {{b.left}}%; width: {{b.width}}%; background-color: {{b.color}};"></div>
+                <div class="addonPerfBaseline" style="left: {{baseline}}%;"></div>
+                <div class="addonPerfNeedle" ng-show="k.valid" style="left: {{k.left}}%;"></div>
+                <div class="addonPerfNote">{{k.note}}</div>
+            </div>
+            <div class="addonPerfValue" style="background-color: {{k.box}};">{{k.text}}</div>
+        </div>
+    </div>
+    <div class="addonPerfFootnote">{{footnote[0]}}<span class="addonPerfFootnoteSep" ng-show="footnote[1]"> · </span><br class="addonPerfFootnoteBreak" />{{footnote[1]}}</div>
+</div>

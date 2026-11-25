@@ -1,0 +1,217 @@
+{
+    "version": 1,
+    "aircraft": "I-RVDX",
+    "notes": "Sample trained on I-RVDX (fixed pitch propeller, carburettor, 3 EGT probes, internal AHRS) from 4 flights with the airspeed board, above 70 kt (no flaps). CRUISE is well determined (61 level segments, one segment within 0.7 %) and FUEL has a clean baseline. ATTITUDE is limited by the internal AHRS pitch (about 0.6 deg between segments). CLIMB and ENGINE come from 12 climb segments, none known to be at full throttle: low confidence until full power climbs are trained with detector.climbMinRpm set. Retrain for any other aircraft: docs/performance/training-from-sqlite.md",
+    "trainedAt": "2026-11-25",
+    "trainedFrom": [
+        "flightlog-20260927175640.0159.sqlite",
+        "flightlog-20261017161040.0001.sqlite",
+        "flightlog-20261017165832.0128.sqlite",
+        "flightlog-20261025101548.0171.sqlite"
+    ],
+    "trainedSpeedSource": "IAS",
+    "engineVersion": "1.0.0",
+    "detector": {
+        "samplePeriodS": 1,
+        "windowS": 20,
+        "minSpeedKt": 70,
+        "maxRollDeg": 8,
+        "maxGDev": 0.15,
+        "maxSpeedStdKt": 3,
+        "maxRpmTrend": 50,
+        "levelVsFpm": 150,
+        "maxVsStdFpm": 250,
+        "climbVsFpm": 300,
+        "climbMinRpm": 0,
+        "climbMinMapInHg": 0,
+        "emsStaleS": 5
+    },
+    "display": {
+        "scaleMin": 50,
+        "scaleMax": 130,
+        "fadeS": 300,
+        "holdS": 1800,
+        "smoothing": 0.5,
+        "bands": [
+            {
+                "color": "red",
+                "min": 0,
+                "max": 70
+            },
+            {
+                "color": "yellow",
+                "min": 70,
+                "max": 90
+            },
+            {
+                "color": "green",
+                "min": 90,
+                "max": 200
+            }
+        ]
+    },
+    "overall": {
+        "enabled": true,
+        "label": "OVERALL",
+        "minIndicators": 2
+    },
+    "indicators": [
+        {
+            "id": "cruise",
+            "label": "CRUISE",
+            "algorithm": "rb-open",
+            "weight": 1,
+            "model": {
+                "target": "tasKt",
+                "features": [
+                    "rpm",
+                    "vsFpm"
+                ],
+                "intercept": 3.287359,
+                "coef": [
+                    0.06653806,
+                    -0.01481129
+                ],
+                "range": {
+                    "rpm": [
+                        1440.8,
+                        2338.9
+                    ],
+                    "vsFpm": [
+                        -145.8796,
+                        149.0661
+                    ]
+                },
+                "rangeMargin": 0.15,
+                "n": 61,
+                "outliers": 2,
+                "rmse": 1.0457,
+                "r2": 0.9875,
+                "meanTarget": 148.1421
+            }
+        },
+        {
+            "id": "attitude",
+            "label": "ATTITUDE",
+            "algorithm": "rb-open",
+            "weight": 1,
+            "aoaRefDeg": 4,
+            "minAoaDeg": 2.5,
+            "smoothing": 0.2,
+            "model": {
+                "target": "aoaPitchDeg",
+                "features": [
+                    "invEas2"
+                ],
+                "intercept": -5.979468,
+                "coef": [
+                    3.16490026
+                ],
+                "range": {
+                    "invEas2": [
+                        0.4124,
+                        1.0255
+                    ]
+                },
+                "rangeMargin": 0.15,
+                "n": 63,
+                "outliers": 0,
+                "rmse": 0.5944,
+                "r2": 0.2152,
+                "meanTarget": -4.3906
+            }
+        },
+        {
+            "id": "climb",
+            "label": "CLIMB",
+            "algorithm": "rb-open",
+            "weight": 1,
+            "smoothing": 0.3,
+            "model": {
+                "target": "vsFpm",
+                "features": [
+                    "rpm",
+                    "iasKt"
+                ],
+                "intercept": 2688.454273,
+                "coef": [
+                    0.55211182,
+                    -25.00542782
+                ],
+                "range": {
+                    "rpm": [
+                        2071.3,
+                        2278.4
+                    ],
+                    "iasKt": [
+                        113.6209,
+                        147.6767
+                    ]
+                },
+                "rangeMargin": 0.15,
+                "n": 12,
+                "outliers": 0,
+                "rmse": 155.5608,
+                "r2": 0.6447,
+                "meanTarget": 589.1216
+            }
+        },
+        {
+            "id": "engine",
+            "label": "ENGINE",
+            "algorithm": "rb-open",
+            "weight": 1,
+            "model": {
+                "target": "rpm",
+                "features": [
+                    "iasKt",
+                    "densityAltFt"
+                ],
+                "intercept": 1202.804696,
+                "coef": [
+                    6.76666752,
+                    0.02162081
+                ],
+                "range": {
+                    "iasKt": [
+                        113.6209,
+                        147.6767
+                    ],
+                    "densityAltFt": [
+                        1180.4384,
+                        4653.6645
+                    ]
+                },
+                "rangeMargin": 0.15,
+                "n": 12,
+                "outliers": 0,
+                "rmse": 25.0999,
+                "r2": 0.8284,
+                "meanTarget": 2155.8041
+            }
+        },
+        {
+            "id": "fuel",
+            "label": "FUEL",
+            "algorithm": "rb-open",
+            "weight": 1,
+            "egtSpreadRefC": 14.906,
+            "egtSpreadTolC": 40.0,
+            "rpmJitterRef": 4.796,
+            "rpmJitterTol": 30.0
+        },
+        {
+            "id": "density",
+            "label": "DENSITY",
+            "algorithm": "rb-open",
+            "weight": 0.5
+        },
+        {
+            "id": "icing",
+            "label": "ICING",
+            "algorithm": "rb-open",
+            "weight": 1,
+            "carbWeight": 1
+        }
+    ]
+}
