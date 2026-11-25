@@ -680,7 +680,13 @@ function MapCtrl($rootScope, $scope, $state, $http, $interval, craftService) {
 		}
 		updateMyLocation(event.detail);
 		updateTerrainAltitude(event.detail);
+		const noFix = !(event.detail.GPSFixQuality > 0);
+		if (noFix !== $scope.gpsNoFix) {
+			$scope.gpsNoFix = noFix;
+			$scope.$applyAsync();
+		}
 	}
+	$scope.gpsNoFix = !(window.situation?.GPSFixQuality > 0);
 
 	addEventListener("SituationUpdated", situationUpdated);
 	addEventListener("TrafficUpdated", $scope.onMessage);

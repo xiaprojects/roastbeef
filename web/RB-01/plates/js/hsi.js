@@ -140,6 +140,11 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
             return; // we are getting called once after clicking away from the status page
         }
 
+        const noFix = !(event.detail.GPSFixQuality > 0);
+        if (noFix !== $scope.gpsNoFix) {
+            $scope.gpsNoFix = noFix;
+            if (!$scope.$root.$$phase) $scope.$apply();
+        }
         if($scope.situation.GPSTrueCourse == event.detail.GPSTrueCourse) {
             return;
         }
@@ -279,6 +284,7 @@ function HSICtrl($rootScope, $scope, $state, $http, $interval) {
     }
 
     $scope.situation = {};
+    $scope.gpsNoFix = !(window.situation?.GPSFixQuality > 0);
     $scope.loadSituationInHSI = function (situation) { // mySituation
 
         $scope.situation = situation;

@@ -7,10 +7,15 @@
   style="position: fixed;width: 100cqw;height: 100cqh;  left: 50%;transform: translate(-50%, 0%);pointer-events: none;cursor: not-allowed;">
   <div ng-repeat="instrument in instruments" ng-include="instrument.url" ng-controller="instrument.ctrl" style="width: 100%;height: 100%;"></div>
 </div>
-<div ng-show="remote.reset==false" class="SynthView-side-left">{{pilotGPSGroundSpeed}}
+<div class="attitude-fail" ng-if="gpsNoFix" style="background-color: transparent; pointer-events: none; z-index: 1000;">
+  <div class="attitude-fail-x"></div>
+  <div class="attitude-fail-x attitude-fail-x-back"></div>
+  <div class="attitude-fail-label">NO GPS FIX</div>
+</div>
+<div ng-show="remote.reset==false" class="SynthView-side-left" ng-class="{'attitude-fail-text': gpsNoFix}">{{pilotGPSGroundSpeed}}
   <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSGroundSpeedUnit}}</div>
 </div>
-<div ng-show="remote.reset==false" class="SynthView-side-right">{{pilotGPSAltitudeMSL}}
+<div ng-show="remote.reset==false" class="SynthView-side-right" ng-class="{'attitude-fail-text': gpsNoFix}">{{pilotGPSAltitudeMSL}}
   <div style="font-size: 4cqmin;margin-top: -15%;">{{pilotGPSAltitudeMSLUnit}}</div>
 </div>
 

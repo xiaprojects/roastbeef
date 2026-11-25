@@ -21,4 +21,11 @@
   <div class="hsi-aircraft-a"></div>
   <div class="hsi-aircraft-b"></div>
   <div class="hsi-aircraft-c"></div>
+  <!-- No GPS fix: the same red X as an attitude failure, see -->
+  <!-- the attitude plate; transparent so the last picture stays readable -->
+  <div class="attitude-fail" ng-if="gpsNoFix" style="background-color: transparent; pointer-events: none; z-index: 1000;">
+    <div class="attitude-fail-x"></div>
+    <div class="attitude-fail-x attitude-fail-x-back"></div>
+    <div class="attitude-fail-label">NO GPS FIX</div>
+  </div>
 </div>

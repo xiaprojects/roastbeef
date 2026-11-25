@@ -3,6 +3,19 @@
     <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-heading" style="text-align: center;">
+                Installed Software
+            </div>
+            <div class="panel-body text-center" style="overflow:hidden;padding:0px;font-size: 4cqmin;">
+                <span id="otaCurrentVersion">Version {{currentVersion || '-'}}</span>
+                <span ng-show="currentBuild"> ({{currentBuild}})</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12" style="overflow: hidden;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center;">
                 Addons
             </div>
             <div class="panel-body text-center" style="overflow:hidden;padding:0px;">

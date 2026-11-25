@@ -54,6 +54,19 @@ function OtaCtrl($rootScope, $scope, $state, $http, $interval) {
 
     $scope.updates = [];
     $scope.updateAvailable = false;
+    $scope.currentVersion = "";
+    $scope.currentBuild = "";
+
+    // The installed software version, to compare with the manual: Version is the git tag,
+    // Build the commit (with -dirty for a modified build). URL_STATUS_GET: services/servicestatus.js
+    $http.get(URL_STATUS_GET).then(function (response) {
+        var status = angular.fromJson(response.data);
+        if (status === undefined || status === null) {
+            return;
+        }
+        $scope.currentVersion = status.Version || "";
+        $scope.currentBuild = status.Build || "";
+    });
 
 
     $http.get(URL_OTA_REMOTE_GET).then(function (response) {

@@ -50,4 +50,11 @@
 		<div class="zoom radar-button radar-altmore" ng-class="{'radar-spin': Radar.spin == 'altmore'}" ng-click="radarAltMore()"><span class="textZoom">Alt+</span></div>
 		<div class="zoom radar-button radar-altless" ng-class="{'radar-spin': Radar.spin == 'altless'}" ng-click="radarAltLess()"><span class="textZoom">Alt-</span></div>
 	</div>
+	<!-- No GPS fix: the same red X as an attitude failure, see -->
+	<!-- the attitude plate; transparent so the last picture stays readable -->
+	<div class="attitude-fail" ng-if="gpsNoFix" style="background-color: transparent; pointer-events: none; z-index: 1000;">
+	  <div class="attitude-fail-x"></div>
+	  <div class="attitude-fail-x attitude-fail-x-back"></div>
+	  <div class="attitude-fail-label">NO GPS FIX</div>
+	</div>
 </div>

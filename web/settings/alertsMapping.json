@@ -119,6 +119,42 @@
       "Id": "EVENT_TYPE_TERRAIN_UNAVAILABLE",
       "Icon": "warning",
       "Sound": "EVENT_TYPE_TERRAIN_UNAVAILABLE"
+    },
+    {
+      "Text": "Cabin air quality poor",
+      "Id": "EVENT_TYPE_CABINAIR_YELLOW",
+      "Icon": "warning",
+      "Sound": "generic_warning"
+    },
+    {
+      "Text": "Cabin air unhealthy, ventilate",
+      "Id": "EVENT_TYPE_CABINAIR_RED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Carburettor icing risk at reduced power",
+      "Id": "EVENT_TYPE_ICINGCARB_YELLOW",
+      "Icon": "warning",
+      "Sound": "generic_warning"
+    },
+    {
+      "Text": "Serious carburettor icing risk, apply carb heat",
+      "Id": "EVENT_TYPE_ICINGCARB_RED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Airframe icing conditions possible",
+      "Id": "EVENT_TYPE_ICINGAIRFRAME_YELLOW",
+      "Icon": "warning",
+      "Sound": "generic_warning"
+    },
+    {
+      "Text": "Airframe icing conditions likely",
+      "Id": "EVENT_TYPE_ICINGAIRFRAME_RED",
+      "Icon": "danger",
+      "Sound": "danger"
     }
   ],
   "it-IT": [
@@ -241,6 +277,42 @@
       "Id": "EVENT_TYPE_TERRAIN_UNAVAILABLE",
       "Icon": "warning",
       "Sound": "EVENT_TYPE_TERRAIN_UNAVAILABLE_IT"
+    },
+    {
+      "Text": "Qualità aria in cabina scarsa",
+      "Id": "EVENT_TYPE_CABINAIR_YELLOW",
+      "Icon": "warning",
+      "Sound": "generic_warning"
+    },
+    {
+      "Text": "Aria in cabina nociva, ventilare",
+      "Id": "EVENT_TYPE_CABINAIR_RED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Rischio ghiaccio al carburatore riducendo potenza",
+      "Id": "EVENT_TYPE_ICINGCARB_YELLOW",
+      "Icon": "warning",
+      "Sound": "generic_warning"
+    },
+    {
+      "Text": "Grave rischio ghiaccio al carburatore, inserire riscaldamento",
+      "Id": "EVENT_TYPE_ICINGCARB_RED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Possibili condizioni di ghiaccio sulla cellula",
+      "Id": "EVENT_TYPE_ICINGAIRFRAME_YELLOW",
+      "Icon": "warning",
+      "Sound": "generic_warning"
+    },
+    {
+      "Text": "Probabili condizioni di ghiaccio sulla cellula",
+      "Id": "EVENT_TYPE_ICINGAIRFRAME_RED",
+      "Icon": "danger",
+      "Sound": "danger"
     }
   ]
 }

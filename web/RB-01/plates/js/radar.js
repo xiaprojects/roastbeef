@@ -88,6 +88,7 @@ var OldAltDiffThreshold = 0;  // in 100 feet display value
 function RadarCtrl($rootScope, $scope, $state, $http, $interval, $timeout) {
 	//  basics();
 	$scope.data_list = [];
+	$scope.gpsNoFix = !(window.situation?.GPSFixQuality > 0);
 	$scope.data_list_invalid = [];
 	$scope.planePath = RADAR_PLANE_PATH;
 	// values bound by radar.html: card = rotation of the compass card, counter = upright labels, fl = FL text, spin = button animating
@@ -156,6 +157,7 @@ function RadarCtrl($rootScope, $scope, $state, $http, $interval, $timeout) {
 
 	// get situation data and turn radar
 	function ownSituation(situation) {
+		$scope.gpsNoFix = !(situation.GPSFixQuality > 0);
 
 		// consider using angular.extend()
 		$scope.raw_data = situation;

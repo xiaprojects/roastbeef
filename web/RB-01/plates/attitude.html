@@ -18,6 +18,13 @@
               <div class="attitude-fail-label" ng-if="Attitude.fail == 'fail'">ATTITUDE FAIL</div>
               <div class="attitude-fail-align" ng-if="Attitude.fail == 'align'">AHRS ALIGN<br/>KEEP WINGS LEVEL</div>
             </div>
+            <!-- No GPS fix: the same red X as an attitude failure, see -->
+            <!-- the attitude plate; transparent so the last picture stays readable -->
+            <div class="attitude-fail" ng-if="gpsNoFix && Attitude.fail == '' && !Attitude.overlay" style="background-color: transparent; pointer-events: none; z-index: 1000;">
+              <div class="attitude-fail-x"></div>
+              <div class="attitude-fail-x attitude-fail-x-back"></div>
+              <div class="attitude-fail-label">NO GPS FIX</div>
+            </div>
             <!-- Slip/skid: the bar under the roll pointer, which slides away
                  from it towards the rudder that has to go in. One bar width of
                  travel is full scale, as on a PFD, where it equals one ball
@@ -74,7 +81,7 @@
                 <div class="attitude-left-bar-ias" style="background-color: {{tick.color}};"></div>
               </div>
             </div>
-            <div class="attitude-speed" ng-if="Attitude.standalone==true">
+            <div class="attitude-speed" ng-if="Attitude.standalone==true" ng-class="{'attitude-fail-text': gpsNoFix && Speed.sourceName == 'GS'}">
               {{Speed.speed}}
               <div class="attitude-speed-source">{{Speed.unit}}<br/>{{Speed.sourceName}}</div>
               <div class="attitude-triangle-right"></div>

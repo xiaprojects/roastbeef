@@ -962,6 +962,7 @@ function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
     // Service is already protecting the update
     const requireRefresh = true;
     if (requireRefresh == true) {
+      $scope.gpsNoFix = !(situation.GPSFixQuality > 0);
       $scope.updateSituation(situation);
       $scope.situation = situation;
       $scope.$apply(); // trigger any needed refreshing of data
@@ -970,6 +971,7 @@ function SixPackInstrument($rootScope, $scope, $state, $http, $interval, name) {
 
 
 
+  $scope.gpsNoFix = !(window.situation?.GPSFixQuality > 0);
   addEventListener("keypad", keypadEventListener);
   addEventListener("SituationUpdated", situationUpdateEventListener);
   $scope.$on("$destroy", function () {
