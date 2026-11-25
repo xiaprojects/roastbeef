@@ -326,6 +326,7 @@ func TestLastPositionNewerSourceWins(t *testing.T) {
 
 // At startup the position, altitude included, is set and is not a fix: the GPS stays
 // invalid until it reports one. A fix or a position already there is never overwritten.
+// Covers: RB-HLR-SIT-140
 func TestLastPositionIsNotAFix(t *testing.T) {
 	withGPSState(t)
 	meter := hobbsMeter

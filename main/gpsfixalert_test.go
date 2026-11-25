@@ -17,6 +17,7 @@ func withGPSFixAlert(t *testing.T) {
 	gpsFixAlert = GPSFixAlert{}
 }
 
+// Covers: RB-HLR-SIT-130
 func TestGPSFixLostRaisesOneDangerAlertAndClosesIt(t *testing.T) {
 	withGPSFixAlert(t)
 	start := time.Now()
@@ -56,6 +57,7 @@ func TestGPSFixLostRaisesOneDangerAlertAndClosesIt(t *testing.T) {
 	}
 }
 
+// Covers: RB-HLR-SIT-130
 func TestGPSFixAlertIsQuietBeforeTheFirstFix(t *testing.T) {
 	withGPSFixAlert(t)
 	start := time.Now()

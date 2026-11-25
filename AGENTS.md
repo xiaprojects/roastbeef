@@ -141,6 +141,11 @@ Notes:
   channels of the stand-in dongle, which keys each station on and off: sliders, DUAL, the
   primary taking the lock, a restart, the VOR band. `--dongle` uses the real device. It skips
   if the sibling repo is missing. See its `README.md`.
+- **Performance KPIs** (`#/addons/performance`, engine `web/RB-01/js/perfengine.js`): unit
+  tests with `node tools/performance/test_perfengine.js`, the page with
+  `test/display/test_performance.py`, training from flight logs with
+  `tools/performance/perf_train.py`. The engine stays pure (no DOM, no clock) because the
+  trainer runs the same code in Node. See `docs/performance/implementation.md`.
 - **HMI dev loop without the Pi**: `cd test/display && ./simulator.py --idle` serves the
   working tree at `http://localhost:8000/RB-01/` with the aircraft snapshot behind it; edit
   `web/RB-01/`, reload. `/sim/` moves the aircraft or plays a recorded flight (any
@@ -181,8 +186,8 @@ Understanding these three patterns is the key to the codebase:
 3. **GPS / baro / IMU / pitot → direct hardware.** `main/gps.go` (serial GPS, large file with
    chip autodetect for various u-blox/SiRF modules), `main/sensors.go` (baro + IMU/AHRS),
    `main/airspeed.go` (pitot, auto-detected, no enable setting) and the `sensors/` package
-   (BMP280/388/BME680 baro, ICM20948/MPU9250/GY85/BMI270 IMU, MS4525DO pitot airspeed
-   drivers; see `docs/hardware/sensors.md`).
+   (BMP280/388/BME680 baro, ICM20948/MPU9250/GY85/BMI270 IMU, MS4525DO pitot airspeed,
+   AHT20 humidity, ENS160 air quality drivers; see `docs/hardware/sensors.md`).
 
 SDR dongles are assigned to bands by EEPROM serial prefix (`stx:1090`, `stx:978`, etc.);
 `main/sdr.go` owns this assignment and reconfiguration when settings change.

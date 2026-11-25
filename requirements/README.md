@@ -13,6 +13,10 @@ mechanical half of it.
 | [`RB-SYS.md`](RB-SYS.md) | System level, all core functions | system | — |
 | [`RB-HLR-ALR.md`](RB-HLR-ALR.md) | Alerts: raise, classify, annunciate, retain | software | `main/alerts_test.go` |
 | [`RB-HLR-ATT.md`](RB-HLR-ATT.md) | Attitude: sample, calibrate, fuse, annunciate | software | `main/sensors_test.go` |
+| [`RB-HLR-ALT.md`](RB-HLR-ALT.md) | Altimetry: pressure altitude, altimeter setting (pilot and AUTO), vertical speed | software | `main/airdata_test.go`, `common/equations_test.go`, `test/display/test_keypad_altimeter.py`, `test/display/test_variometer.py` |
+| [`RB-HLR-SPD.md`](RB-HLR-SPD.md) | Speed: pitot airspeed, zeroing, sensor loss, IAS/GS presentation | software | `main/airdata_test.go`, `common/equations_test.go`, `sensors/ms4525do_test.go`, `test/display/test_speed_source.py` |
+| [`RB-HLR-HDG.md`](RB-HLR-HDG.md) | Heading: GPS track, gyro and magnetic sources, the heading plate, the attitude plate's heading | software | `main/sensors_test.go`, `test/display/test_heading.py` |
+| [`RB-HLR-SIT.md`](RB-HLR-SIT.md) | Situation: NMEA parsing, fix currency, accuracy, GPS vertical speed, fix-loss alert | software | `main/gps_test.go`, `main/gpsvspeed_test.go`, `main/gpsfixalert_test.go`, `main/lastposition_test.go` |
 | [`RB-HLR-TRF.md`](RB-HLR-TRF.md) | Traffic: receive, fuse, age, present | software | `main/traffic_test.go`, `main/gen_gdl90_test.go`, `main/flarm-nmea_test.go`, `test/integration/test_daemon.py` |
 | [`RB-ICD-GDL.md`](RB-ICD-GDL.md) | GDL90 output: framing, ownship, AHRS messages | interface | `main/gen_gdl90_test.go`, `main/sensors_test.go` |
 | `untraced.txt` | The agreed budget of requirements with no test yet | — | — |
@@ -34,21 +38,24 @@ specifying it found that the function does not meet nine of its own requirements
 nine are the substance of `RB-HLR-ALR.md`. **If you read one file in this directory, read
 its preamble.**
 
-Still unspecified: altimetry, speed, heading, variometer, the situation and EMS.
-`main/airdata_test.go` and `main/gps_test.go` are the evidence waiting for the first four.
-Roadmap Step 4 carries them, and
-[`../docs/certification/agent-tasks.md`](../docs/certification/agent-tasks.md) carries
-them as task briefs.
+Altimetry (`ALT`, with the variometer), speed (`SPD`), heading (`HDG`) and the situation
+(`SIT`) followed on 2026-11-25 (agent-tasks AT-19, AT-20), traced to the air data and
+GPS tests that were waiting for them, four display tests and three new tests. Speed and
+the situation come out nearly clean; altimetry and heading do not, and for one reason
+worth knowing before reading either file: the daemon stamps and labels its barometric
+and heading data, and the display draws them without looking at the stamp or the label.
+**Read the preambles of `RB-HLR-ALT.md` and `RB-HLR-HDG.md`.**
 
-Thirteen requirements are specified with no passing test and are counted in
-`untraced.txt`, and eleven of the thirteen are **findings** rather than omissions — the
-nine alerting ones, plus RB-HLR-ATT-350 (the attitude levels itself during a GPS outage
-and says nothing) and RB-HLR-ATT-360 (the engine selector does not select anything,
-because the Kalman branch is commented out). That is more weight than a budget file was
-meant to carry: the file exists to stop the gate going permanently red over untested
-requirements, not to track defects. A problem-report register
-([`agent-tasks.md`](../docs/certification/agent-tasks.md) AT-13) is where the eleven
-belong, and until it exists this file is the register.
+Still unspecified: EMS (AT-18, waiting on the supplemental-or-primary decision).
+
+Twenty-two requirements are specified with no passing test and are counted in
+`untraced.txt`, and twenty of them are **findings** rather than omissions — seven
+alerting ones; RB-HLR-ATT-350 and RB-HLR-ATT-360; six in altimetry, three in heading,
+one in speed and one in the situation, each with its evidence in the requirement body.
+That is more weight than a budget file was meant to carry: the file exists to stop the
+gate going permanently red over untested requirements, not to track defects. A
+problem-report register ([`agent-tasks.md`](../docs/certification/agent-tasks.md)
+AT-13) is where they belong, and until it exists this file is the register.
 
 ## Working with the trace
 

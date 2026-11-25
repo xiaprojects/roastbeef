@@ -52,6 +52,7 @@ func near(got float32, want, tol float64) bool { return math.Abs(float64(got)-wa
 // 31.000' E, 545.4 m MSL with the geoid 46.9 m below the ellipsoid, 22.4 kt on
 // 084.4 true - parse to that ownship. NMEA 0183 writes the time hhmmss with the
 // decimals optional; the daemon once required them and dropped both sentences.
+// Covers: RB-HLR-SIT-010, RB-HLR-SIT-020, RB-HLR-SIT-030
 func TestNMEAParsesTheTextbookSentences(t *testing.T) {
 	withGPSState(t)
 	if !nmea("GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,") {
@@ -86,6 +87,7 @@ func TestNMEAParsesTheTextbookSentences(t *testing.T) {
 
 // South and west are negative, longitude has three degree digits, and both GGA and
 // RMC agree. (The recorded flights are all north and east.)
+// Covers: RB-HLR-SIT-040
 func TestNMEAHemispheres(t *testing.T) {
 	withGPSState(t)
 	for _, c := range []struct {
@@ -113,6 +115,7 @@ func TestNMEAHemispheres(t *testing.T) {
 
 // The track is taken from RMC only above 3 kt: below, a stationary receiver's
 // track wanders, so the last one is kept while the speed itself is still taken.
+// Covers: RB-HLR-SIT-050
 func TestNMEATrackIsHeldBelowThreeKnots(t *testing.T) {
 	withGPSState(t)
 	nmea("GPRMC,104200.00,A,4300.000,N,01200.000,E,45.0,123.4,130926,,,A")
@@ -128,6 +131,7 @@ func TestNMEATrackIsHeldBelowThreeKnots(t *testing.T) {
 
 // A sentence with a bad checksum, too few fields, or a field that is not a number
 // changes nothing.
+// Covers: RB-HLR-SIT-060
 func TestNMEARejectsMalformedSentences(t *testing.T) {
 	withGPSState(t)
 	nmea("GPGGA,104200.00,4300.000,N,01200.000,E,1,12,0.8,120.0,M,20.0,M,,")
@@ -180,6 +184,7 @@ func TestNMEAExplicitNoFixEndsValidity(t *testing.T) {
 // worse class than the truth, never a better one. A GST sentence gives the accuracy as
 // twice the root sum square of the latitude and longitude 1-sigma errors (2 DRMS), and
 // the vertical as twice the altitude's.
+// Covers: RB-HLR-SIT-090, RB-HLR-SIT-100
 func TestNACpFromTheGSTAccuracy(t *testing.T) {
 	withGPSState(t)
 	for _, c := range []struct {
@@ -206,6 +211,7 @@ func TestNACpFromTheGSTAccuracy(t *testing.T) {
 // a new sample with no change in velocity: on 2026-11-20 the Simple engine then showed
 // 0.75 of the bank and 0.63 of the turn rate in steady turns. A VTG, before or after
 // the RMC of its fix, must change nothing.
+// Covers: RB-HLR-SIT-110
 func TestNMEAVTGIsIgnored(t *testing.T) {
 	withGPSState(t)
 	nmea("GNRMC,080304.20,A,4305.240,N,01217.000,E,120.0,135.0,201126,,,A")
@@ -217,5 +223,31 @@ func TestNMEAVTGIsIgnored(t *testing.T) {
 			t.Errorf("VTG %v after the RMC: %.1f kt on %.1f stamped %v; want unchanged 120 kt on 135",
 				d, mySituation.GPSGroundSpeed, mySituation.GPSTrueCourse, mySituation.GPSLastGroundTrackTime)
 		}
+	}
+}
+
+// A fix is current for 3 s from the GGA that reported it, and no longer: at 3 s the
+// GPS is invalid and the fix quality, satellite count, accuracies, vertical speed and
+// NACp read "no fix", so nothing downstream takes the last fix for a current one.
+// Covers: RB-HLR-SIT-070
+func TestGPSFixIsCurrentForThreeSeconds(t *testing.T) {
+	withGPSState(t)
+	nmea("GPGGA,104200.00,4300.000,N,01200.000,E,1,12,0.8,120.0,M,20.0,M,,")
+	nmea("GPGST,104200.00,1.2,,,,2.0,1.5,3.0")
+	mySituation.GPSSatellites = 12 // counted from GSV/UBX, not from GGA
+	t0 := stratuxClock.Time
+	stratuxClock.Time = t0.Add(2900 * time.Millisecond)
+	if s := mySituation; !isGPSValid() || s.GPSFixQuality != 1 || s.GPSSatellites != 12 || s.GPSNACp != 10 {
+		t.Errorf("2.9 s after the fix: valid %v quality %d satellites %d NACp %d; want valid, 1, 12, 10",
+			isGPSValid(), s.GPSFixQuality, s.GPSSatellites, s.GPSNACp)
+	}
+	stratuxClock.Time = t0.Add(3 * time.Second)
+	if isGPSValid() {
+		t.Error("3 s after the fix: still valid")
+	}
+	if s := mySituation; s.GPSFixQuality != 0 || s.GPSSatellites != 0 || s.GPSHorizontalAccuracy != 999999 ||
+		s.GPSVerticalAccuracy != 999999 || s.GPSVerticalSpeed != 0 || s.GPSNACp != 0 {
+		t.Errorf("3 s after the fix: quality %d satellites %d accuracy %.0f/%.0f m vs %.1f NACp %d; want all 'no fix'",
+			s.GPSFixQuality, s.GPSSatellites, s.GPSHorizontalAccuracy, s.GPSVerticalAccuracy, s.GPSVerticalSpeed, s.GPSNACp)
 	}
 }

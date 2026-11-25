@@ -197,16 +197,14 @@ tests are first-class evidence, not just Go unit tests:
 | [AT-16](#at-16--coupling-analysis-for-the-process-split) | Data/control coupling analysis for the Level E split | **A** | 7 | AT-03 |
 | [AT-17](#at-17--close-rb-hlr-trf-330-the-efb-target-count-limit) | `RB-HLR-TRF-330`: the EFB target count limit | **B** | 4, 5 | a cap + drop policy |
 | [AT-18](#at-18--ems-requirements-across-two-repositories) | EMS (`EMS`) requirements across `roastbeef` + `rb-ems-go` | **B** | 4 | primary/supplemental scope |
-| [AT-19](#at-19--altimetry-and-speed-requirements) | Altimetry (`ALT`) and speed (`SPD`) requirements against `main/airdata_test.go` | **A** | 4 | — |
-| [AT-20](#at-20--heading-and-situation-requirements) | Heading (`HDG`) and situation (`SIT`) requirements against `main/gps_test.go` | **A** | 4 | — |
+| ~~[AT-19](#at-19--altimetry-and-speed-requirements)~~ **done** | Altimetry (`ALT`) and speed (`SPD`) requirements against `main/airdata_test.go` | **A** | 4 | — |
+| ~~[AT-20](#at-20--heading-and-situation-requirements)~~ **done** | Heading (`HDG`) and situation (`SIT`) requirements against `main/gps_test.go` | **A** | 4 | — |
 
-**AT-01 and AT-02 are done** (37 attitude and 26 alerting requirements, traced; see the
-roadmap progress log). Start with **AT-19** and **AT-20**: they are the cheapest left,
-because `main/airdata_test.go` and `main/gps_test.go` already hold the evidence and only
-the requirements are missing. Then **AT-13**, which has become more useful than it was
-when this file was written: AT-02 produced nine findings and they are currently recorded
-in `requirements/untraced.txt`, a file whose job is budgeting untested requirements, not
-tracking defects. AT-04, AT-05 are each under a day and each closes a line the gate
+**AT-01, AT-02, AT-19 and AT-20 are done** (attitude, alerting, altimetry, speed,
+heading and the situation, traced; see the roadmap progress log). Start with **AT-13**,
+which has become more useful than it was when this file was written: twenty findings are
+now recorded in `requirements/untraced.txt`, a file whose job is budgeting untested
+requirements, not tracking defects. AT-04, AT-05 are each under a day and each closes a line the gate
 currently prints.
 
 ---

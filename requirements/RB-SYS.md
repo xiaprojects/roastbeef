@@ -323,3 +323,233 @@ encoding, and to the FLARM NMEA definition for PFLAA/PFLAU sentences.**
 - **Source:** GDL 90 Data Interface Specification 560-1058-00 Rev A; `docs/integration/`
 - **Verification:** test
 - **Derived:** yes
+
+---
+
+## Altimetry
+
+Barometric altitude, the altimeter setting it is referenced to, and the vertical speed.
+The altimeter is the instrument the pilot uses for airspace and terrain clearance, so the
+failure the FHA ranks highest is not loss but a believable wrong number (FHA-ALT-2), and
+the frozen one (FHA-ALT-3).
+
+### RB-SYS-ALT-010 — Barometric altitude is the pressure altitude of the static pressure
+
+**The indicated barometric altitude shall be the ISA pressure altitude of the measured
+static pressure, corrected for the altimeter setting in use.**
+
+- **Parent:** none
+- **Source:** FHA-ALT-2; `main/sensors.go` `tempAndPressureSender()`;
+  `web/RB-01/plates/js/SixPackInstruments.js` `SixPackInstrumentAltimeter`
+- **Verification:** test
+- **Derived:** yes
+
+Derived: no standard fixes it for this class of equipment. It says what a correct altitude
+is, which FHA-ALT-2 needs before it can say what a wrong one is. The sensor's own accuracy
+is a hardware property and belongs to roadmap Step 8, not here.
+
+### RB-SYS-ALT-020 — Stale barometric data is not presented as current
+
+**The equipment shall not present a barometric altitude or a barometric vertical speed as
+current when the static pressure has not been measured within the last 1 s.**
+
+- **Parent:** RB-SYS-SYS-020
+- **Source:** FHA-ALT-3, FHA-VSI-1; `main/gps.go` `isTempPressValid()`
+- **Verification:** test
+- **Derived:** no
+
+### RB-SYS-ALT-030 — The altimeter setting and its origin are shown
+
+**The equipment shall display, with every barometric altitude, the altimeter setting it is
+referenced to and whether that setting was entered by the pilot or derived by the
+equipment.**
+
+- **Parent:** none
+- **Source:** FHA-ALT-2 (*AutoQNH silently replaces the pilot's setting with a GPS-derived
+  one; the source in use must be visible*)
+- **Verification:** test
+- **Derived:** yes
+
+### RB-SYS-ALT-040 — Only a barometric altitude is presented as one
+
+**The equipment shall not present an altitude derived from the GPS, or from other
+aircraft's reports, as a barometric altitude.**
+
+- **Parent:** none
+- **Source:** FHA-ALT-2; `main/gps.go` `BARO_TYPE_ADSBESTIMATE`
+- **Verification:** test
+- **Derived:** yes
+
+A GPS altitude and a pressure altitude differ by the day's temperature and pressure — by
+hundreds of feet — and airspace and other traffic are flown on the pressure one. An
+indication that looks like an altimeter but is driven by the GPS is the wrong-altitude
+failure of FHA-ALT-2 with no fault anywhere.
+
+---
+
+## Speed
+
+### RB-SYS-SPD-010 — Indicated airspeed is the airspeed of the measured pitot pressure
+
+**The indicated airspeed shall be the ISA calibrated airspeed of the measured pitot-static
+differential pressure, corrected for the installation's position error.**
+
+- **Parent:** none
+- **Source:** FHA-SPD-4; `main/airspeed.go` `airspeedSender()`
+- **Verification:** test
+- **Derived:** yes
+
+Derived for the same reason as RB-SYS-ALT-010.
+
+### RB-SYS-SPD-020 — The speed source is annunciated
+
+**The equipment shall label every displayed speed as either indicated airspeed or GPS
+ground speed.**
+
+- **Parent:** none
+- **Source:** FHA-SPD-2; FHA assumption A4;
+  `web/RB-01/services/servicesituation.js` `situationSpeed()`
+- **Verification:** test
+- **Derived:** yes
+
+### RB-SYS-SPD-030 — Airspeed markings only on an airspeed
+
+**The equipment shall not draw airspeed limit markings on an indication of GPS ground
+speed.**
+
+- **Parent:** none
+- **Source:** FHA-SPD-2 (*do not draw Vs/Vso arcs unless an airspeed source exists*);
+  `fha.md` §5 item 2
+- **Verification:** test
+- **Derived:** yes
+
+`fha.md` §5 item 2 leaves open whether labelling alone mitigates FHA-SPD-2. This
+requirement takes the stricter answer, because the colour arcs invite exactly the reading
+the label is meant to prevent: a 20 kt headwind on approach puts the ground speed in the
+white arc at an airspeed in the green. RB-HLR-SPD-220 is its open finding.
+
+### RB-SYS-SPD-040 — Loss of the airspeed sensor is annunciated
+
+**The equipment shall stop presenting indicated airspeed within 1 s of the pitot sensor
+ceasing to deliver valid readings.**
+
+- **Parent:** RB-SYS-SYS-020
+- **Source:** FHA-SPD-1, FHA-SPD-4; `main/airspeed.go` `airspeedSender()`
+- **Verification:** test
+- **Derived:** no
+
+What the pilot then sees is the speed indication relabelled GS (RB-HLR-SPD-200), which is
+the annunciation.
+
+### RB-SYS-SPD-050 — Ground speed without a fix is not presented as current
+
+**The equipment shall indicate that a displayed ground speed is not current while the GPS
+has no valid fix.**
+
+- **Parent:** RB-SYS-SYS-020
+- **Source:** FHA-SPD-3
+- **Verification:** test
+- **Derived:** no
+
+---
+
+## Heading
+
+### RB-SYS-HDG-010 — The heading source is annunciated
+
+**The equipment shall display, with every heading indication, the source it is derived
+from: GPS track, gyro or magnetometer.**
+
+- **Parent:** none
+- **Source:** FHA-HDG-2 (*source substitution without indication*)
+- **Verification:** test
+- **Derived:** yes
+
+Track and heading differ by the drift angle, and a gyro and a compass differ by whatever
+each has got wrong. The hazard of FHA-HDG-2 is a switch between them that the pilot does
+not see; this requirement makes every switch visible rather than forbidding it.
+
+### RB-SYS-HDG-020 — Loss of heading is annunciated
+
+**The equipment shall indicate that the heading is unavailable within 1 s of the selected
+heading source ceasing to provide a valid heading.**
+
+- **Parent:** RB-SYS-SYS-020
+- **Source:** FHA-HDG-1
+- **Verification:** test
+- **Derived:** no
+
+### RB-SYS-HDG-030 — The GPS track is not a heading at low speed
+
+**The equipment shall not present the GPS track as a heading while the ground speed is
+below 5 kt.**
+
+- **Parent:** none
+- **Source:** FHA-HDG-2 (*on the ground GPS track is meaningless; at GS < 5 kt show
+  "---"*)
+- **Verification:** test
+- **Derived:** yes
+
+---
+
+## Situation
+
+The situation is the GPS half of the ownship state: position, GPS altitude, ground speed,
+track, fix validity and accuracy. Every other function reads it — the attitude uses the
+track and speed, the speed indication falls back to the ground speed, the heading to the
+track, the traffic function places targets against the position.
+
+### RB-SYS-SIT-010 — The situation is what the receiver reported
+
+**The equipment shall present the position, altitude, ground speed and track reported by
+the GPS receiver without altering their values beyond unit conversion.**
+
+- **Parent:** none
+- **Source:** NMEA 0183 (GGA, RMC, GST); `main/gps.go` `processNMEALine()`
+- **Verification:** test
+- **Derived:** yes
+
+Derived: it defines the function rather than flowing from a hazard. The exceptions the
+equipment makes on purpose — the track held at low speed, the VTG sentence ignored — are
+derived HLRs below, each with its reason.
+
+### RB-SYS-SIT-020 — Stale GPS data is not presented as current
+
+**The equipment shall not present a GPS position, altitude, ground speed or track as
+current when it is older than the currency limit defined for it, or when the receiver has
+reported that it has no fix.**
+
+- **Parent:** RB-SYS-SYS-020
+- **Source:** FHA-SPD-3, FHA-ATT-3; `main/gps.go` `isGPSValid()`
+- **Verification:** test
+- **Derived:** no
+
+### RB-SYS-SIT-030 — Received GPS data cannot corrupt the situation
+
+**The equipment shall leave the situation unchanged by a received GPS sentence that is
+malformed, truncated, fails its checksum or carries a non-numeric value in a numeric
+field.**
+
+- **Parent:** RB-SYS-SYS-030
+- **Source:** NMEA 0183 checksum rule; RB-SYS-TRF-030 (the same argument for radio input)
+- **Verification:** test
+- **Derived:** no
+
+### RB-SYS-SIT-040 — Position accuracy is never overstated
+
+**The equipment shall not report a position accuracy better than the accuracy the receiver
+reported.**
+
+- **Parent:** none
+- **Source:** DO-260B / AC 20-165 NACp categories; `main/gps.go` `calculateNACp()`
+- **Verification:** test
+- **Derived:** yes
+
+### RB-SYS-SIT-050 — Loss of the GPS fix raises an alert
+
+**The equipment shall raise an alert when the GPS fix is lost.**
+
+- **Parent:** RB-SYS-ALR-010
+- **Source:** `main/gpsfixalert.go`; FHA-SPD-3, FHA-HDG-1
+- **Verification:** test
+- **Derived:** no

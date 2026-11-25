@@ -186,14 +186,13 @@ The largest gap. Reverse-engineer from what exists (DO-178C §12.1.4): `docs/htt
 `docs/settings-reference.md`, `docs/integration/gdl90.md`, `docs/hardware/sensors.md`,
 `docs/architecture.md` and the `test/display/` suite are de-facto requirements already.
 
-> **Done for traffic, attitude and alerting.** The mechanism is in place and enforced:
-> [`../../requirements/`](../../requirements/) holds the requirements,
-> [standards/requirements.md](standards/requirements.md) is the rulebook, and
-> `scripts/trace.py --check` runs from `make check`. 126 requirements; 83 of the 96 HLRs
-> verifiable by test are covered, by 95 tags. The thirteen that are not are in the agreed
-> budget, and eleven of the thirteen are findings — requirements the equipment does not
-> meet — rather than tests nobody has written. Remaining functions: altimetry, speed,
-> heading, variometer, EMS, situation.
+> **Done for traffic, attitude, alerting, altimetry, speed, heading and the situation.**
+> The mechanism is in place and enforced: [`../../requirements/`](../../requirements/)
+> holds the requirements, [standards/requirements.md](standards/requirements.md) is the
+> rulebook, and `scripts/trace.py --check` runs from `make check`. 204 requirements; 135 of
+> the 157 HLRs verifiable by test are covered, by 181 tags. The twenty-two that are not are
+> in the agreed budget, and twenty of them are findings — requirements the equipment does
+> not meet — rather than tests nobody has written. Remaining function: EMS (AT-18).
 
 1. ~~**Pick a text-based, git-native requirements tool.**~~ Neither StrictDoc nor Doorstop
    was adopted: both add a dependency and a build step to a repository that deliberately has
@@ -470,9 +469,13 @@ doubles the effort.
       six alerting system requirements (`RB-SYS-ALR-010`…`060`) and the first
       `main/alerts.go` tests. Nine of the 26 are open findings; two of them belong on the
       review agenda before the FHA's Minor classifications can stand.
-- [ ] **Next:** altimetry and speed (`ALT`, `SPD`) against `main/airdata_test.go`, then
-      heading and the situation (`HDG`, `SIT`) against `main/gps_test.go` — both cheap,
-      because the evidence already exists.
+- [x] `requirements/RB-HLR-ALT.md`, `RB-HLR-SPD.md`, `RB-HLR-HDG.md`, `RB-HLR-SIT.md` —
+      altimetry, speed, heading and the situation specified (52 HLRs, 17 system
+      requirements), 41 traced; 11 open findings, and three new review items in
+      `fha.md` §5 (items 5–7).
+- [ ] **Next:** AT-13, the problem-report register — twenty findings now sit in the
+      untraced budget — and the NaN-altitude fix of RB-HLR-ALT-035, which freezes the
+      whole display from one bad barometer read.
 
 ## Progress log
 
@@ -626,6 +629,45 @@ doubles the effort.
   see, and it is exactly the kind of decision a requirements trace exists to catch — the
   behaviour changed in one commit, and nothing but the gate noticed that two other artifacts
   now described something the equipment no longer did.
+
+**2026-11-25 — Step 4 (altimetry, speed, heading, situation), Step 5 (four tests).**
+
+- Four requirement files, 69 requirements: `RB-HLR-ALT.md` (15), `RB-HLR-SPD.md` (15),
+  `RB-HLR-HDG.md` (8), `RB-HLR-SIT.md` (14), and 17 system requirements in `RB-SYS.md`.
+  41 of the 52 HLRs are traced: to `main/airdata_test.go`, `main/gps_test.go`,
+  `main/gpsvspeed_test.go`, `main/gpsfixalert_test.go`, `main/lastposition_test.go`,
+  `common/equations_test.go`, `sensors/ms4525do_test.go`, and to four display tests
+  restructured into bindable `check_` functions (`test_speed_source.py`,
+  `test_heading.py`, `test_keypad_altimeter.py`, `test_variometer.py`).
+- New evidence written rather than budgeted: `TestGyroHeadingNeedsAGPSTrack` (the Simple
+  AHRS's gyro heading is the GPS track and goes `Invalid` without one, so the drifting
+  unslaved gyro FHA-HDG-2 fears cannot happen with the shipped engine),
+  `TestCalibrateAirspeedIsRefusedWhileMoving`, `TestGPSFixIsCurrentForThreeSeconds`, the
+  no-fix marking of the speed indications and the AUTO altimeter setting's gates.
+  `test_speed_source.py`'s two failing tape checks were a test bug (the tape prints the
+  unit and the source on two lines); it now fails on one check only, the real finding.
+- Eleven findings, each in its requirement with the evidence and in the budget:
+  **(a)** a negative pressure becomes a NaN altitude, which `encoding/json` refuses, so the
+  `/situation` socket goes silent and every instrument freezes on its last picture
+  (RB-HLR-ALT-035, measured by a new skipping test; the socket half confirmed by encoding
+  a NaN);
+  **(b)** the display never reads `BaroLastMeasurementTime`, so a barometer that stops is
+  drawn frozen (RB-HLR-ALT-070), and never reads `BaroSourceType`, so on a unit with no
+  barometer an ADS-B-estimated altitude is drawn as barometric (RB-HLR-ALT-130);
+  **(c)** the attitude plate's altitude box is the GPS altitude, beside the altimeter
+  setting (RB-HLR-ALT-140), and its heading box switches between GPS track and gyro with
+  no label, and shows a held track below 5 kt (RB-HLR-HDG-070, RB-HLR-HDG-080);
+  **(d)** the altimeter setting is applied at a constant 27 ft/hPa — 64 ft high at 950 hPa,
+  371 ft at the 850 hPa limit (RB-HLR-ALT-080);
+  **(e)** a magnetic heading is held indefinitely when the magnetometer stops, and is 0
+  when there is none (RB-HLR-HDG-060, by reading);
+  **(f)** colour arcs on ground speed (RB-HLR-SPD-220), no alert for a barometer lost after
+  a glitch (RB-HLR-ALT-060), an explicit no-fix not believed (RB-HLR-SIT-080).
+- Specified as found and sent to the review rather than called defects: AUTO is on at every
+  start-up and re-derives the setting from the GPS on every level frame, so in cruise the
+  altimeter is the GPS altitude to within 1 hPa (`fha.md` §5 item 5); the GPS currency
+  limit is 3 s against RB-SYS-SYS-020's 1 s; pitot zeroing is accepted when the GPS cannot
+  tell whether the aircraft is moving.
 
 ## Standards referenced
 

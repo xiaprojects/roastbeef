@@ -16,6 +16,7 @@ import (
 
 // A steady 1000 fpm climb at 10 Hz with the u-blox's decimetre altitude jitter reads
 // 1000 fpm within 100 fpm once 2 s are in, and 0 before half a second is.
+// Covers: RB-HLR-SIT-120
 func TestGPSVSpeedSteadyClimbAt10Hz(t *testing.T) {
 	var e gpsVSpeedEstimator
 	rnd := rand.New(rand.NewSource(1))
@@ -33,6 +34,7 @@ func TestGPSVSpeedSteadyClimbAt10Hz(t *testing.T) {
 }
 
 // A 1 Hz receiver still gets a rate, from the 2 or 3 fixes in the window.
+// Covers: RB-HLR-SIT-120
 func TestGPSVSpeedAt1Hz(t *testing.T) {
 	var e gpsVSpeedEstimator
 	var v float32
@@ -45,6 +47,7 @@ func TestGPSVSpeedAt1Hz(t *testing.T) {
 }
 
 // 23:59:59.x to 00:00:00.x is the next fix, not a step back.
+// Covers: RB-HLR-SIT-120
 func TestGPSVSpeedAcrossMidnight(t *testing.T) {
 	var e gpsVSpeedEstimator
 	var v float32
@@ -59,6 +62,7 @@ func TestGPSVSpeedAcrossMidnight(t *testing.T) {
 
 // A gap longer than 3 s, or the fix time stepping back, drops the history: the slope
 // across a dropout would mix two different climbs.
+// Covers: RB-HLR-SIT-120
 func TestGPSVSpeedRestartsAfterGapOrStepBack(t *testing.T) {
 	for name, next := range map[string]float64{"gap": 36010, "step back": 35990} {
 		var e gpsVSpeedEstimator
@@ -73,6 +77,7 @@ func TestGPSVSpeedRestartsAfterGapOrStepBack(t *testing.T) {
 
 // The same fix time twice (a resent GGA) is not a second sample: no division by a zero
 // time span, and the rate stays what it was.
+// Covers: RB-HLR-SIT-120
 func TestGPSVSpeedRepeatedFix(t *testing.T) {
 	var e gpsVSpeedEstimator
 	var v float32
@@ -85,6 +90,7 @@ func TestGPSVSpeedRepeatedFix(t *testing.T) {
 }
 
 // An altitude jump faster than 12000 fpm is a glitch, reported as 0 rather than as a dive.
+// Covers: RB-HLR-SIT-120
 func TestGPSVSpeedRejectsGlitch(t *testing.T) {
 	var e gpsVSpeedEstimator
 	e.add(36000, 1000)
@@ -95,6 +101,7 @@ func TestGPSVSpeedRejectsGlitch(t *testing.T) {
 
 // Through the parser: GGA altitudes climbing 3 m a second set GPSVerticalSpeed to
 // 9.84 ft/s, a no-fix GGA zeroes it, and so does the fix going stale.
+// Covers: RB-HLR-SIT-120
 func TestNMEAGGASetsGPSVerticalSpeed(t *testing.T) {
 	withGPSState(t)
 	for i := 0; i <= 20; i++ {

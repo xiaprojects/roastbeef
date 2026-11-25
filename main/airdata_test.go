@@ -155,6 +155,7 @@ func stopped(t *testing.T, done chan struct{}, d time.Duration, what string) {
 // answering the last airspeed stands for 2 reads (1 s at 2 Hz), then it is blanked - value
 // and measurement time - and after 10 (5 s) the sensor is dropped, closed and an error
 // raised, for pollSensors to reconnect. It is never left standing.
+// Covers: RB-HLR-SPD-010, RB-HLR-SPD-020, RB-HLR-SPD-030, RB-HLR-SPD-060, RB-HLR-SPD-070
 func TestAirspeedSender(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -206,6 +207,7 @@ var errI2C = &os.PathError{Op: "read", Path: "/dev/i2c-1", Err: os.ErrDeadlineEx
 // with no airflow into AirspeedZeroOffset and saves it; the airspeed reads 0 meanwhile
 // and is measured from the new zero after. Turning the sensor off in the settings
 // closes it and blanks the airspeed.
+// Covers: RB-HLR-SPD-080, RB-HLR-SPD-100
 func TestAirspeedZeroAndDisable(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -245,6 +247,7 @@ func TestAirspeedZeroAndDisable(t *testing.T) {
 // deadband and never lifts a reading inside it; 1 by default, and a stored value outside
 // 0.5 to 1.5 (a hand-edited stratux.conf) counts as 1. POST /setSettings refuses such a
 // value, or a non-number, and keeps the last one, which is saved.
+// Covers: RB-HLR-SPD-030, RB-HLR-SPD-040, RB-HLR-SPD-050
 func TestAirspeedScale(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -360,6 +363,7 @@ func baro() (alt, vs float64, at time.Time) {
 // rate), a reading 5000 ft from the GPS altitude is rejected as a broken sensor - the
 // last altitude stands, its measurement time stops, and BaroBroken is raised - and the
 // 51st failed read in a row drops the sensor, for pollSensors to reconnect.
+// Covers: RB-HLR-ALT-010, RB-HLR-ALT-030, RB-HLR-ALT-040, RB-HLR-ALT-050
 func TestPressureSender(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -406,6 +410,7 @@ func TestPressureSender(t *testing.T) {
 
 // The sensor is dropped after 50 failed reads in a row, not 50 in all: two bursts of
 // 30 with good reads between them leave it in use.
+// Covers: RB-HLR-ALT-050
 func TestPressureSenderCountsConsecutiveFailures(t *testing.T) {
 	if !inChild(t) {
 		return
