@@ -556,7 +556,7 @@ func collectMessages(conn connection) []byte {
 		data = append(data, msg...)
 		// So we can estimate if another message fits in
 		if len(msg) > maxMsgLen {
-			maxMsgLen = len(data)
+			maxMsgLen = len(msg)
 		}
 		if len(data) + maxMsgLen > conn.GetDesiredPacketSize() {
 			// Probably can't fit in another message
@@ -574,16 +574,28 @@ func connectionWriter(connection connection) {
 				return
 			}
 
+			// Serial: wait until the kernel backlog drains, so messages age (and expire) in our queue, not in the tty buffers
+			if paced, ok := connection.(pacedConnection); ok {
+				paced.WaitForTxRoom()
+				if queue.Closed {
+					return
+				}
+			}
+
 			// Try to send around 1kb of data per packet to reduce IOPS when queue is full
 			msg := collectMessages(connection)
 			if msg == nil || len(msg) == 0 {
 				break // Wait for next time that the DataAvailable channel has more for us
 			}
 			//fmt.Printf("Sending message bytes %d\n", len(msg))
+			paced, isPaced := connection.(pacedConnection)
 			written := 0
 			for written < len(msg) {
-				writtenNow, err := connection.Writer().Write(msg)
+				writtenNow, err := connection.Writer().Write(msg[written:])
 				written += writtenNow
+				if isPaced && writtenNow > 0 {
+					paced.OnWritten(writtenNow)
+				}
 				if err != nil {
 					connection.OnError(err)
 					break
