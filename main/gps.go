@@ -142,6 +142,14 @@ type SituationData struct {
 	PitotPressure            float32   // Pa, dynamic pressure after the zero offset and the filter
 	PitotTemperature         float32   // degrees C at the pitot sensor
 	PitotLastMeasurementTime time.Time // zero while no pitot sensor is read
+
+	// Air quality: the ENS160 gas sensor (main/airquality.go). Not a CO or
+	// CO2 measurement: eCO2 is estimated from the volatile organics.
+	AirQualityIndex               uint8     // 1..5 on the UBA scale (1 excellent, 5 unhealthy); 0 = no sensor
+	AirQualityTVOC                uint16    // total volatile organic compounds, ppb
+	AirQualityECO2                uint16    // equivalent CO2, ppm (400..65000)
+	AirQualityValidity            string    // "normal", "warm-up" (3 min), "start-up" (first hour ever), "invalid"; "" = no sensor
+	AirQualityLastMeasurementTime time.Time // zero while no air quality sensor is read
 }
 
 /*

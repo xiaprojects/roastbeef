@@ -50,8 +50,14 @@ const (
 	EVENT_TYPE_TERRAIN_CAUTION            = 17
 	EVENT_TYPE_TERRAIN_WARNING            = 18
 	EVENT_TYPE_TERRAIN_UNAVAILABLE        = 19
+	EVENT_TYPE_CABINAIR_YELLOW           = 20 // EMS rule CABINAIR (rbvoice-aircraft-rules.json, main/ems.go alertTypeFor)
+	EVENT_TYPE_CABINAIR_RED              = 21
+	EVENT_TYPE_ICINGCARB_YELLOW          = 22 // EMS rule ICINGCARB, main/icing.go probes
+	EVENT_TYPE_ICINGCARB_RED             = 23
+	EVENT_TYPE_ICINGAIRFRAME_YELLOW      = 24 // EMS rule ICINGAIRFRAME
+	EVENT_TYPE_ICINGAIRFRAME_RED         = 25
 	// The defined types when the mapping did not load: keep it one past the last constant
-	EVENT_TYPE_COUNT = EVENT_TYPE_TERRAIN_UNAVAILABLE + 1
+	EVENT_TYPE_COUNT = EVENT_TYPE_ICINGAIRFRAME_RED + 1
 )
 
 // Maximum events in the list
@@ -212,10 +218,8 @@ func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event 
 		event.Type = EVENT_TYPE_SYSTEM_DANGER_SDR
 	} else if ident == "ems-feed" {
 		event.Type = EVENT_TYPE_EMS_GENERIC_FAILURE
-	} else if strings.HasPrefix(ident, "ems-") && strings.HasSuffix(ident, "-yellow") {
-		event.Type = EVENT_TYPE_EMS_RULE_YELLOW
-	} else if strings.HasPrefix(ident, "ems-") && strings.HasSuffix(ident, "-red") {
-		event.Type = EVENT_TYPE_EMS_RULE_RED
+	} else if strings.HasPrefix(ident, "ems-") {
+		// An EMS rule alert: the rule typed it (main/ems.go alertTypeFor)
 	} else if ident == "terrain-caution" {
 		event.Type = EVENT_TYPE_TERRAIN_CAUTION
 	} else if ident == "terrain-warning" {
@@ -294,6 +298,20 @@ alertTypeDefined().
 	A type is defined if the mapping has a row for it, so a new type needs only its row.
 	Without a mapping alerts are still raised (RB-HLR-ALR-060), up to the last constant
 */
+// alertTypeByName is the event type whose alertsMapping.json row has Id name, -1 for an
+// empty name or one the mapping does not have (or no mapping loaded).
+func alertTypeByName(name string) int {
+	if name == "" {
+		return -1
+	}
+	for i, row := range EventLanguages[ALERT_DEFAULT_LANGUAGE] {
+		if row.Id == name {
+			return i
+		}
+	}
+	return -1
+}
+
 func alertTypeDefined(alertType int) bool {
 	count := len(EventLanguages[ALERT_DEFAULT_LANGUAGE])
 	if count == 0 {

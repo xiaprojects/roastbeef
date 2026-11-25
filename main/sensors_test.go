@@ -214,6 +214,9 @@ type flown struct {
 	// errors do not (inverted, or with the nose straight up).
 	tilt  float64
 	valid bool // the AHRS called its attitude valid
+	// heading is the true heading, deg; estHdg the AHRS's gyro heading, deg, or
+	// ahrs.Invalid when the AHRS has none to give.
+	heading, estHdg float64
 }
 
 // fly runs the Simple AHRS on the IMU a board mounted by f reads along the flight, the
@@ -293,14 +296,17 @@ func flyEngine(t *testing.T, s ahrs.AHRSProvider, f [4]float64, path flight, sec
 		m.W1, m.W2, m.W3 = w1, w2, w3
 		s.Compute(m)
 		if i%every == 0 {
-			r, p, _ := s.RollPitchHeading()
+			r, p, h := s.RollPitchHeading()
+			if !isAHRSInvalidValue(h) {
+				h = math.Mod(h/ahrs.Deg+360, 360) // as sensorAttitudeSender publishes it
+			}
 			_, _, h1 := path3(path, tt+0.5)
 			_, _, h0 := path3(path, tt-0.5)
 			up := toAircraft(attitudeQ(roll, pitch, 0), [3]float64{0, 0, 1})
 			estUp := toAircraft(attitudeQ(r/ahrs.Deg, p/ahrs.Deg, 0), [3]float64{0, 0, 1})
 			tilt := math.Acos(math.Max(-1, math.Min(1, up[0]*estUp[0]+up[1]*estUp[1]+up[2]*estUp[2]))) / ahrs.Deg
 			out = append(out, flown{tt, roll, pitch, angleDiffSigned(h1, h0), r / ahrs.Deg, p / ahrs.Deg,
-				s.GLoad(), s.SlipSkid(), s.RateOfTurn(), tilt, s.Valid()})
+				s.GLoad(), s.SlipSkid(), s.RateOfTurn(), tilt, s.Valid(), hdg, h})
 		}
 	}
 	return out
@@ -1226,5 +1232,39 @@ func TestResettingTheGMeterKeepsTheCurrentLoad(t *testing.T) {
 	if mySituation.AHRSGLoadMin != 2.4 || mySituation.AHRSGLoadMax != 2.4 {
 		t.Errorf("g min/max %.2f/%.2f after a reset at %.2f g; want both 2.40",
 			mySituation.AHRSGLoadMin, mySituation.AHRSGLoadMax, mySituation.AHRSGLoad)
+	}
+}
+
+// The gyro heading comes from the GPS track: goflying's Simple AHRS aligns its yaw to
+// the track and has no heading of its own, so it reports one only while it has a GPS
+// ground track (a fix under 3 s old, accurate to under 30 m) at 5 kt or more of
+// smoothed ground speed, and ahrs.Invalid otherwise. The display then shows "---" for a
+// gyro source, rather than an unslaved heading drifting off: the substitution the FHA
+// fears (FHA-HDG-2) cannot happen through this source. Checked straight, in a 30 deg
+// turn, after the fix is lost, and taxiing at 3 kt.
+// Covers: RB-HLR-HDG-050
+func TestGyroHeadingNeedsAGPSTrack(t *testing.T) {
+	withAttitudeSettings(t)
+	for _, r := range flyCaged(t, iRVDXMount, turn(30, 20, between(gpsLost, 80, 1e9)), 100) {
+		switch {
+		case r.t >= 10 && r.t < 80:
+			if isAHRSInvalidValue(r.estHdg) {
+				t.Errorf("%.0f s, 100 kt with a fix: no gyro heading", r.t)
+			} else if d := math.Abs(angleDiffSigned(r.estHdg, r.heading)); d > 2 {
+				t.Errorf("%.0f s, 100 kt with a fix: gyro heading %.1f, true %.1f, %.1f deg off", r.t, r.estHdg, r.heading, d)
+			}
+		case r.t >= 84:
+			if !isAHRSInvalidValue(r.estHdg) {
+				t.Errorf("%.0f s, %.0f s after the fix was lost: gyro heading %.1f; want Invalid", r.t, r.t-80, r.estHdg)
+			}
+		}
+	}
+	taxi := func(t float64) (roll, pitch, heading, gs, track, climb float64, g gpsState) {
+		return 0, 0, 90, 3, 90, 0, gpsGood
+	}
+	for _, r := range flyCaged(t, iRVDXMount, taxi, 30) {
+		if r.t >= 1 && !isAHRSInvalidValue(r.estHdg) {
+			t.Errorf("%.0f s taxiing at 3 kt: gyro heading %.1f; want Invalid", r.t, r.estHdg)
+		}
 	}
 }
