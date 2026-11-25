@@ -1286,8 +1286,8 @@ type settings struct {
 	Cameras              []cameraModel // Camera Settings
 	EMS_Enabled       	 bool // Engine Monitoring System
 	SlaveNMEADisplay_SleepMs int // Slave NMEA Display: ms between $RBATT/$RBAIR pairs, 0 = not sent; default 1000
-	Terrain_Enabled        bool // Terrain function (main/terrain.go) evaluates and fills the Terrain_ status; default false
-	Terrain_Alerts_Enabled bool // Terrain function raises its alerts; off, it only reports (shadow mode); default false
+	Terrain_Enabled        bool // Terrain function (main/terrain.go) evaluates and fills the Terrain_ status; default true
+	Terrain_Alerts_Enabled bool // Terrain function raises its alerts; off, it only reports (shadow mode); default true
 	Terrain_Alerts_MinSpeedKmh int // Terrain function: GPS ground speed, km/h, below which the aircraft is on the ground, nothing evaluated or announced; below 1 = 45 kt; default 0
 	Keypad_Enabled       bool
 	Charts_Enabled       bool
@@ -1383,6 +1383,8 @@ type status struct {
 	BMPConnected                               bool
 	IMUConnected                               bool
 	AirspeedConnected                          bool // MS4525DO pitot sensor recognised on I2C and being read (MS4525DO_Enabled)
+	HumidityConnected                          bool // AHT20 humidity sensor recognised on I2C and being read (BMP_Sensor_Enabled)
+	AirQualityConnected                        bool // ENS160 gas sensor recognised on I2C and being read (BMP_Sensor_Enabled)
 	NightMode                                  bool // For turning off LEDs.
 	OGN_noise_db                               float32
 	OGN_gain_db                                float32
@@ -1413,8 +1415,8 @@ func defaultSettings() {
 	globalSettings.SwitchBoard_Enabled = false
 	globalSettings.Switches = make([]switchModel, 0)
 	globalSettings.SlaveNMEADisplay_SleepMs = 1000 // 1 Hz
-	globalSettings.Terrain_Enabled = false
-	globalSettings.Terrain_Alerts_Enabled = false
+	globalSettings.Terrain_Enabled = true
+	globalSettings.Terrain_Alerts_Enabled = true
 	globalSettings.Terrain_Alerts_MinSpeedKmh = 0 // TERRAIN_MIN_GROUND_SPEED_KT, 45 kt
 	globalSettings.MagCalibration.CalibrationReset()
 	mySituation.Magnetometer.CalibrationReset()
@@ -1669,6 +1671,9 @@ func printStats() {
 		if globalSettings.MS4525DO_Enabled && globalStatus.AirspeedConnected {
 			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last pitot read: %s (%.0f Pa, IAS %.0f kt)", stratuxClock.HumanizeTime(mySituation.PitotLastMeasurementTime), mySituation.PitotPressure, mySituation.IndicatedAirSpeed))
 		}
+		if globalStatus.AirQualityConnected {
+			sensorsOutput = append(sensorsOutput, fmt.Sprintf("Last air quality read: %s (AQI %d, TVOC %d ppb, eCO2 %d ppm, %s)", stratuxClock.HumanizeTime(mySituation.AirQualityLastMeasurementTime), mySituation.AirQualityIndex, mySituation.AirQualityTVOC, mySituation.AirQualityECO2, mySituation.AirQualityValidity))
+		}
 		if len(sensorsOutput) > 0 {
 			log.Print("- " + strings.Join(sensorsOutput, ", ") + "\n")
 		}
@@ -1771,6 +1776,8 @@ func gracefulShutdown() {
 
 	//TODO: Any other graceful shutdown functions.
 	ota.ShutdownFunc()
+	// Icing advisories
+	icing.ShutdownFunc()
 	// EMS Feature
 	ems.ShutdownFunc()
 	log.Printf("gracefulShutdown --> ems()")
@@ -1981,6 +1988,8 @@ func main() {
 		hobbsMeter.InitFunc()
 		// EMS Feature
 		ems.InitFunc()
+		// Icing advisories, published as EMS probes: after the EMS
+		icing.InitFunc()
 		// Switchboards
 		switchBoard.InitFunc()
 		// OTA
