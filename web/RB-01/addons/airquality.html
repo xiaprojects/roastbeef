@@ -1,0 +1,25 @@
+<div ui-content-for="title">Air Quality</div>
+<!-- Six round instruments built from the G-meter / speed gauge component
+     (css/Speed.css: .speed, .arc, .speed-number, .speed-fi_needle, .speed-value,
+     .speed-label, .speed-unit): cabin air and humidity, then the carburettor and
+     airframe icing advisories (main/icing.go). The coloured arcs are the bands of the matching
+     rule in settings/rbvoice-aircraft-rules.json: what is drawn is what alarms.
+     Display only: nothing here takes a tap. -->
+<div class="addonAqView">
+    <div class="addonAqGrid">
+        <div class="addonAqCell" ng-repeat="g in gauges track by g.key" ng-style="{opacity: g.opacity}">
+            <div class="speed">
+                <div class="arc"
+                    style="transform: rotate({{arc.startDegree}});background-color: {{arc.color}};--a:{{arc.sizeDegree}};"
+                    ng-repeat="arc in g.arcs track by $index"></div>
+                <div class="speed-number" style="left:{{t.left}};top:{{t.top}};" ng-repeat="t in g.speedTicks track by $index">
+                    {{t.speed}}</div>
+                <div class="speed-label">{{g.label}}</div>
+                <div class="speed-unit">{{g.unit}}</div>
+                <div class="speed-fi_needle" ng-show="g.valid" style="transform: rotate({{g.speedDegree}});"></div>
+                <div class="speed-value" style="background-color: {{g.backgroundColor}};font-size: {{g.valueSize}};">{{g.speed}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="addonAqFootnote">eCO₂ estimated · not a CO detector<span class="addonAqFootnoteSep"> · </span><br class="addonAqFootnoteBreak" />icing advisory only</div>
+</div>
