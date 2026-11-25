@@ -460,8 +460,9 @@ func makeAHRSLevilReport() {
 
 	msg := fmt.Sprintf("$RPYL,%d,%d,%d,%d,%d,%d,0", roll, pitch, hdg, slip_skid, yaw_rate, g)
 	msg = appendNmeaChecksum(msg)
-	// 20 Hz alone is 70 % of a 9600 port: full FLARM NMEA outputs only
-	sendNetFLARMFull(msg + "\r\n", 100 * time.Millisecond, 4)
+	// 20 Hz alone is 70 % of a 9600 port: full FLARM NMEA outputs only.
+	// Expires with the 50 ms sensor period so at most one copy waits in the queue.
+	sendNetFLARMFull(msg + "\r\n", 50 * time.Millisecond, 4)
 }
 
 func atof32(val string) float32 {

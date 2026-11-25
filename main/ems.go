@@ -88,6 +88,19 @@ type EMSRule struct {
 	Alert *bool `json:"alert,omitempty"`
 }
 
+// alertTypeFor is the event type the rule raises in color, yellow or red: the
+// alertsMapping.json row with Id EVENT_TYPE_<rule name>_<COLOR> (EVENT_TYPE_ICINGCARB_RED)
+// when the mapping has one, else the engine rule type. Renaming a rule changes its alert.
+func (rule EMSRule) alertTypeFor(color string) int {
+	if t := alertTypeByName("EVENT_TYPE_" + rule.Name + "_" + strings.ToUpper(color)); t >= 0 {
+		return t
+	}
+	if color == "red" {
+		return EVENT_TYPE_EMS_RULE_RED
+	}
+	return EVENT_TYPE_EMS_RULE_YELLOW
+}
+
 // raisesAlerts tells if the rule raises alerts: every rule does, unless "alert" is false.
 func (rule EMSRule) raisesAlerts() bool {
 	return rule.Alert == nil || *rule.Alert
@@ -170,8 +183,10 @@ func (emsInstance *EMSStratuxPlugin) ListenerFunc() bool {
 		nmeaRBEMS := emsInstance.makeRBEMSString()
 		nmeaRBCYL := emsInstance.makeRBCYLString()
 		emsInstance.emsDataMutex.Unlock()
-		// 5 Hz: too much for a 9600 port, so full FLARM NMEA outputs only
-		sendNetFLARMFull(nmeaRBEMS, time.Second, 0)
+		// 5 Hz: too much for a 9600 port, so full FLARM NMEA outputs only.
+		// Expires with the 200 ms period, so a backlog never holds stale copies,
+		// and priority 4 (like $RBATT/$RBAIR) lets throttling shed it before position and traffic.
+		sendNetFLARMFull(nmeaRBEMS, 200*time.Millisecond, 4)
 		if timerForTemperatures < 1 {
 			sendNetFLARMFull(nmeaRBCYL, time.Second, 0)
 			timerForTemperatures = 10
@@ -272,8 +287,14 @@ func (emsInstance *EMSStratuxPlugin) validateRules() {
 	emsInstance.emsDataMutex.Lock()
 	defer emsInstance.emsDataMutex.Unlock()
 	emsInstance.lastFrame = time.Now()
+	emsInstance.evaluateRules(nil)
+}
+
+// evaluateRules is validateRules' body: every rule when only is nil, else only the rules
+// reading one of the probes in only. Call it with emsDataMutex held.
+func (emsInstance *EMSStratuxPlugin) evaluateRules(only map[string]bool) {
 	for _, rule := range emsInstance.rules {
-		if !rule.raisesAlerts() {
+		if !rule.raisesAlerts() || (only != nil && !ruleReadsAny(rule, only)) {
 			continue
 		}
 		value, ok := ruleValue(rule, emsInstance.emsData, emsInstance.emsReceived)
@@ -296,7 +317,8 @@ func (emsInstance *EMSStratuxPlugin) validateRules() {
 		ident := "ems-" + rule.Name + "-" + color
 		if color != old && time.Since(emsInstance.ruleAlertTimes[ident]) >= EMS_RULE_ALERT_INTERVAL {
 			emsInstance.ruleAlertTimes[ident] = time.Now()
-			emsInstance.ruleAlertIds[ident] = alerts.pushEventByIdent(ident, Alert{Type: EVENT_TYPE_EMS_RULE_YELLOW, Title: fmt.Sprintf("%s %s %.0f", rule.Name, color, value), Timestamp: time.Now(), Active: true})
+			alertType := rule.alertTypeFor(color)
+			emsInstance.ruleAlertIds[ident] = alerts.pushEventByIdent(ident, Alert{Type: alertType, Title: fmt.Sprintf("%s %s %.0f", rule.Name, color, value), Timestamp: time.Now(), Active: true})
 		} else {
 			alerts.pushEvent(Alert{Id: emsInstance.ruleAlertIds[ident], Active: true})
 		}
@@ -330,4 +352,116 @@ func (emsInstance *EMSStratuxPlugin) ruleInAlarm() bool {
 		}
 	}
 	return false
+}
+
+// ruleReadsAny tells if the rule reads one of probes.
+func ruleReadsAny(rule EMSRule, probes map[string]bool) bool {
+	for _, p := range rule.ProbeNames {
+		if probes[p] {
+			return true
+		}
+	}
+	return false
+}
+
+// Probes the daemon publishes itself, from its own I2C sensors (main/airquality.go) and
+// the icing loop (main/icing.go), next to the ones the EMS senders post to /setEMS, so that
+// rbvoice-aircraft-rules.json, rbvoice (GET /getEMS) and the flight log treat them alike.
+const (
+	PROBE_AIRQUALITY_AQI  = "airquality_aqi"
+	PROBE_AIRQUALITY_ECO2 = "airquality_eco2"
+	PROBE_AIRQUALITY_TVOC = "airquality_tvoc"
+	PROBE_DEW_POINT       = "dew_point"
+	PROBE_OUTSIDE_HUM     = "outside_humidity"
+	PROBE_ICING_CARB      = "icing_carb"
+	PROBE_ICING_AIRFRAME  = "icing_airframe"
+)
+
+// senderValue is the reading of a probe that an EMS sender posts to /setEMS, ok only if
+// a sender posted it and the feed is alive: a probe sent on change only says nothing of
+// its own age, and the EMS pre-fills 0 for keys nobody sent.
+func (emsInstance *EMSStratuxPlugin) senderValue(key string) (value float32, ok bool) {
+	if emsInstance.emsDataMutex == nil {
+		return 0, false // EMS not started
+	}
+	emsInstance.emsDataMutex.Lock()
+	defer emsInstance.emsDataMutex.Unlock()
+	value, ok = emsInstance.emsData[key]
+	ok = ok && emsInstance.emsReceived[key] &&
+		!emsInstance.lastFrame.IsZero() && time.Since(emsInstance.lastFrame) < EMS_FEED_TIMEOUT
+	return value, ok
+}
+
+// publishInternal stores readings of the daemon's own sensors as EMS probes, as /setEMS
+// does for a sender (logged on change, Min/Max, the EMS websocket), and evaluates the rules
+// that read them. It does not stamp lastFrame: these probes say nothing about the EMS
+// senders, and the engine rules are not re-confirmed by them.
+func (emsInstance *EMSStratuxPlugin) publishInternal(values map[string]float32) {
+	if emsInstance.emsDataMutex == nil {
+		return // EMS not started
+	}
+	emsInstance.emsDataMutex.Lock()
+	defer emsInstance.emsDataMutex.Unlock()
+	changed := false
+	only := make(map[string]bool, len(values))
+	for key, v := range values {
+		only[key] = true
+		prev, had := emsInstance.emsData[key]
+		wasReceived := emsInstance.emsReceived[key]
+		emsInstance.markReceived(key)
+		if had && wasReceived && prev == v {
+			continue
+		}
+		emsInstance.emsData[key] = v
+		changed = true
+		logEMS(EMSDataLogger{time.Now(), key, v})
+		if !had || !wasReceived || emsInstance.emsDataMax[key] < v {
+			emsInstance.emsDataMax[key] = v
+		}
+		if !had || !wasReceived || emsInstance.emsDataMin[key] > v {
+			emsInstance.emsDataMin[key] = v
+		}
+	}
+	if changed && emsUpdate != nil {
+		emsUpdate.SendJSON(emsInstance.emsData)
+	}
+	emsInstance.evaluateRules(only)
+}
+
+// withdrawInternal takes probes of the daemon's own sensors out of the EMS data: the sensor
+// is gone, warming up or invalid. Unlike an engine rule left in alarm by a silent sender,
+// a rule that has nothing left to read closes its alert: a missing cabin sensor is not
+// cabin air in alarm, and "EMS data lost" is not raised for it.
+func (emsInstance *EMSStratuxPlugin) withdrawInternal(keys ...string) {
+	if emsInstance.emsDataMutex == nil {
+		return
+	}
+	emsInstance.emsDataMutex.Lock()
+	defer emsInstance.emsDataMutex.Unlock()
+	gone := make(map[string]bool, len(keys))
+	changed := false
+	for _, key := range keys {
+		gone[key] = true
+		if _, had := emsInstance.emsData[key]; had {
+			delete(emsInstance.emsData, key)
+			changed = true
+		}
+		delete(emsInstance.emsReceived, key)
+	}
+	for _, rule := range emsInstance.rules {
+		if !ruleReadsAny(rule, gone) {
+			continue
+		}
+		if _, ok := ruleValue(rule, emsInstance.emsData, emsInstance.emsReceived); ok {
+			continue // another of its probes still reads
+		}
+		old := emsInstance.ruleColors[rule.Name]
+		delete(emsInstance.ruleColors, rule.Name)
+		if old == "yellow" || old == "red" {
+			alerts.pushEvent(Alert{Id: emsInstance.ruleAlertIds["ems-"+rule.Name+"-"+old], Active: false})
+		}
+	}
+	if changed && emsUpdate != nil {
+		emsUpdate.SendJSON(emsInstance.emsData)
+	}
 }

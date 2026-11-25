@@ -15,7 +15,9 @@ import (
 	"math/rand"
 	"net"
 	"strconv"
+	"syscall"
 	"time"
+	"unsafe"
 
 	"github.com/xiaprojects/serial"
 	"tinygo.org/x/bluetooth"
@@ -32,6 +34,13 @@ type connection interface {
 	GetDesiredPacketSize() int
 	OnError(error)
 	Close()
+}
+
+// Optional: connections whose writes are absorbed by large kernel buffers
+// (serial) pace themselves so the backlog stays in the MessageQueue.
+type pacedConnection interface {
+	WaitForTxRoom()
+	OnWritten(n int)
 }
 
 type networkConnection struct {
@@ -125,6 +134,83 @@ type serialConnection struct {
 	Capability   uint8
 	serialPort   *serial.Port
 	Queue        *MessageQueue `json:"-"` // don't store in settings
+
+	// Transmit pacing (only touched by the connectionWriter goroutine).
+	// A blocking tty write returns as soon as the bytes are copied into kernel
+	// buffers (tty layer, UART xmit ring, cdc-acm URBs), so without pacing the
+	// userspace queue empties instantly and messages go stale inside the kernel,
+	// where maxAge and priorities cannot drop them.
+	txBusyUntil time.Time // when the bytes handed to the kernel so far will have left the wire
+	outqFd      int       // second fd on the tty, used only for TIOCOUTQ; 0 = not opened, -1 = unavailable
+}
+
+// Maximum transmit backlog allowed below userspace, as time on the wire.
+const serialMaxBacklog = 250 * time.Millisecond
+
+// bytesPerSecond assumes 8N1: 10 bits per byte.
+func (conn *serialConnection) bytesPerSecond() float64 {
+	if conn.Baud <= 0 {
+		return 960
+	}
+	return float64(conn.Baud) / 10
+}
+
+// outQueueLen returns the bytes still waiting in the kernel output queue (TIOCOUTQ),
+// or -1 if unknown. For cdc-acm this only counts host-side data, not the device FIFO,
+// which is why the software pacer below is the primary limit.
+func (conn *serialConnection) outQueueLen() int {
+	if conn.outqFd == 0 {
+		fd, err := syscall.Open(conn.DeviceString, syscall.O_RDONLY|syscall.O_NOCTTY|syscall.O_NONBLOCK, 0)
+		if err != nil {
+			conn.outqFd = -1
+		} else {
+			conn.outqFd = fd
+		}
+	}
+	if conn.outqFd < 0 {
+		return -1
+	}
+	var n int32
+	if _, _, errno := syscall.Syscall(syscall.SYS_IOCTL, uintptr(conn.outqFd), uintptr(syscall.TIOCOUTQ), uintptr(unsafe.Pointer(&n))); errno != 0 {
+		return -1
+	}
+	return int(n)
+}
+
+// backlog is the larger of the software estimate and what the kernel reports.
+func (conn *serialConnection) backlog() time.Duration {
+	b := time.Until(conn.txBusyUntil)
+	if q := conn.outQueueLen(); q > 0 {
+		k := time.Duration(float64(q) / conn.bytesPerSecond() * float64(time.Second))
+		if k > b {
+			b = k
+		}
+	}
+	if b < 0 {
+		b = 0
+	}
+	return b
+}
+
+// WaitForTxRoom blocks until the backlog below userspace is under serialMaxBacklog,
+// so unsent messages stay in the MessageQueue where they can expire.
+func (conn *serialConnection) WaitForTxRoom() {
+	for {
+		b := conn.backlog()
+		if b <= serialMaxBacklog {
+			return
+		}
+		time.Sleep(b - serialMaxBacklog + 5*time.Millisecond)
+	}
+}
+
+// OnWritten accounts n bytes handed to the kernel.
+func (conn *serialConnection) OnWritten(n int) {
+	now := time.Now()
+	if conn.txBusyUntil.Before(now) {
+		conn.txBusyUntil = now
+	}
+	conn.txBusyUntil = conn.txBusyUntil.Add(time.Duration(float64(n) / conn.bytesPerSecond() * float64(time.Second)))
 }
 
 func (conn *serialConnection) MessageQueue() *MessageQueue {
@@ -137,8 +223,10 @@ func (conn *serialConnection) MessageQueue() *MessageQueue {
 func (conn *serialConnection) Writer() io.Writer {
 	return conn.serialPort
 }
+// Throttled when more than half the allowed backlog is queued below userspace:
+// then only priority <= 0 messages (position, status, crucial traffic) are collected.
 func (conn *serialConnection) IsThrottled() bool {
-	return false
+	return conn.backlog() > serialMaxBacklog/2
 }
 func (conn *serialConnection) IsSleeping() bool {
 	return conn.serialPort == nil
@@ -161,6 +249,10 @@ func (conn *serialConnection) OnError(err error) {
 func (conn *serialConnection) Close() {
 	if conn.serialPort != nil {
 		conn.serialPort.Close()
+		if conn.outqFd > 0 {
+			syscall.Close(conn.outqFd)
+			conn.outqFd = -1
+		}
 		log.Printf("Closed serial port %s", conn.DeviceString)
 		conn.Queue.Close()
 		onConnectionClosed(conn)

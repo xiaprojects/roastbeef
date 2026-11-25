@@ -96,6 +96,13 @@ import (
 )
 
 
+// A radio command over the shared NMEA output is sent once, on a button press,
+// with no retry: it must outlive a serial backlog and go ahead of periodic data.
+const (
+	radioNmeaCommandMaxAge   = 10 * time.Second
+	radioNmeaCommandPriority = -1
+)
+
 const (
 	RADIO_DRIVER_SDR = 			"SDR"
 	RADIO_DRIVER_RS232 = 		"SERIAL"
@@ -320,7 +327,7 @@ func (radioInstance *RadioStratuxPlugin) radioSetFrequency(index int, frequency 
 			}
 		} else {
 			// use existing NMEA output channel
-			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", time.Second, 0)
+			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", radioNmeaCommandMaxAge, radioNmeaCommandPriority)
 			return true
 		}
 	case RADIO_DRIVER_SDR:
@@ -374,7 +381,7 @@ func (radioInstance *RadioStratuxPlugin) radioSetDual(index int, dual bool) bool
 			}
 		} else {
 			// use existing NMEA output channel
-			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", time.Second, 0)
+			sendNetFLARM(appendNmeaRadioChecksum(nmeaRadioUpdate)+"\r\n", radioNmeaCommandMaxAge, radioNmeaCommandPriority)
 			return true
 		}
 	case RADIO_DRIVER_SDR:

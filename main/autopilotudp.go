@@ -386,7 +386,7 @@ func (autopilotInstance *AutopilotUDPStratuxPlugin) udpListener() {
 							// Check for a passtrough
 							if radio.radioData[index].Path == "" && radio.radioData[index].Driver == RADIO_DRIVER_RS232_NMEA {
 								fmt.Println(nmeaSentence)
-								sendNetFLARM(nmeaSentence+"\n", time.Second, 0)
+								sendNetFLARM(nmeaSentence+"\n", radioNmeaCommandMaxAge, radioNmeaCommandPriority)
 								// Store latest configuration
 								newStatus, _ := ParsePMRRCCompact(nmeaSentence, radio.radioData[index])
 								if newStatus != nil {
