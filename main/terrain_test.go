@@ -308,7 +308,7 @@ func TestTerrainSettingOffStopsTheFunction(t *testing.T) {
 	}
 }
 
-// The settings are off, and the minimum speed 0 (45 kt), unless stratux.conf says
+// The settings are on, and the minimum speed 0 (45 kt), unless stratux.conf says
 // otherwise. /setSettings takes a minimum speed from 0 to 500 km/h, rounded, and refuses
 // any other.
 func TestTerrainSettingsDefaults(t *testing.T) {
@@ -320,10 +320,10 @@ func TestTerrainSettingsDefaults(t *testing.T) {
 		enabled, alerts bool
 		speedKmh        int
 	}{
-		{`{"RadarRange": 5}`, false, false, 0},
-		{`{"Terrain_Enabled": true}`, true, false, 0},
-		{`{"Terrain_Enabled": true, "Terrain_Alerts_Enabled": true}`, true, true, 0},
-		{`{"Terrain_Alerts_MinSpeedKmh": 180}`, false, false, 180},
+		{`{"RadarRange": 5}`, true, true, 0},
+		{`{"Terrain_Alerts_Enabled": false}`, true, false, 0},
+		{`{"Terrain_Enabled": false, "Terrain_Alerts_Enabled": false}`, false, false, 0},
+		{`{"Terrain_Alerts_MinSpeedKmh": 180}`, true, true, 180},
 	} {
 		if err := os.WriteFile(configLocation, []byte(c.conf), 0644); err != nil {
 			t.Fatal(err)

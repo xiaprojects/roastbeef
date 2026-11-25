@@ -82,6 +82,59 @@ def near(a, b, tol=0.15):
     return a is not None and abs(((a - b + 540) % 360) - 180) <= tol
 
 
+# Covers: RB-HLR-HDG-010, RB-HLR-HDG-040
+def check_sources(d, res):
+    """The card follows the selected source, says which, and is magnetic."""
+    # MAG primary: card on the compass, the true sources 3 degrees back
+    s = state(d, "MAG")
+    res.check(near(s["card"], -100) and s["readout"] == "100°" and s["source"] == "MAG",
+              "MAG turns the card to the compass", (s["card"], s["readout"], s["source"]))
+    res.check(near(s["mag"], 0) and near(s["gyro"], 0) and near(s["trk"], 0)
+              and s["magShown"] and s["gyroShown"] and s["trkShown"],
+              "gyro and track 103 true sit on 100 magnetic with 3 E",
+              (s["mag"], s["gyro"], s["trk"]))
+    res.check(s["variation"] == "VAR 3°E", "the variation reads East", s["variation"])
+
+    # Each mark at its own value, the shortest way round across north
+    s = state(d, "GYRO", AHRSGyroHeading=2.0, AHRSMagHeading=350.0, GPSTrueCourse=13.0)
+    res.check(near(s["card"], -359) and s["readout"] == "359°",
+              "GYRO 002 true reads 359 magnetic", (s["card"], s["readout"]))
+    res.check(near(s["mag"], -9) and near(s["trk"], 11) and near(s["gyro"], 0),
+              "MAG 9 left and TRK 11 right of the gyro across north",
+              (s["mag"], s["gyro"], s["trk"]))
+    res.check(near(s["mag"] % 360, 351) and near((s["trk"] + 359) % 360, 10),
+              "every mark lands on its own card value", (s["mag"], s["trk"]))
+
+    # West variation, GPS primary
+    s = state(d, "GPS", MagneticVariation=-2.4, GPSTrueCourse=88.0)
+    res.check(s["readout"] == "090°" and s["variation"] == "VAR 2°W" and s["source"] == "GPS",
+              "GPS 088 true with 2.4 W reads 090", (s["readout"], s["variation"]))
+
+    # No variation: one true card, said so
+    s = state(d, "MAG", MagneticVariationValid=False, MagneticVariation=0.0)
+    res.check(near(s["gyro"], 3) and near(s["trk"], 3) and s["variation"] == "VAR --- TRUE",
+              "outside the grid the card is true and says TRUE", (s["gyro"], s["variation"]))
+
+
+# Covers: RB-HLR-HDG-020, RB-HLR-HDG-030
+def check_invalid_sources(d, res):
+    """A source that has nothing to say loses its mark; a selected one reads ---."""
+    # Invalid sources lose their mark; the primary says --- and holds the card
+    s = state(d, "MAG", AHRSMagHeading=INVALID)
+    res.check(not s["magShown"] and s["gyroShown"] and s["readout"] == "---°",
+              "no magnetometer: no MAG mark, MAG primary reads ---", (s["magShown"], s["readout"]))
+    s = state(d, "GYRO", AHRSGyroHeading=INVALID)
+    res.check(not s["gyroShown"] and s["magShown"], "no gyro: no GYRO mark", s["gyroShown"])
+    s = state(d, "MAG", GPSGroundSpeed=3.0)
+    res.check(not s["trkShown"], "below 5 kt there is no track diamond", s["trkShown"])
+    s = state(d, "GPS", GPSFixQuality=0)
+    res.check(s["source"] == "GYRO" and not s["trkShown"], "no fix: GPS gives way to the gyro",
+              (s["source"], s["trkShown"]))
+    s = state(d, "GPS", GPSGroundSpeed=3.0)
+    res.check(s["readout"] == "---°" and s["source"] == "GPS",
+              "GPS primary below 5 kt reads ---", (s["source"], s["readout"]))
+
+
 def main():
     res = Result()
     with Display() as d:
@@ -91,47 +144,8 @@ def main():
         unit = d.page.eval("window.aircraftData?.units?.speed ?? 'KMH'")
         kmh = d.page.eval("pilotDisplayedSpeedFromKT(1)")
 
-        # MAG primary: card on the compass, the true sources 3 degrees back
-        s = state(d, "MAG")
-        res.check(near(s["card"], -100) and s["readout"] == "100°" and s["source"] == "MAG",
-                  "MAG turns the card to the compass", (s["card"], s["readout"], s["source"]))
-        res.check(near(s["mag"], 0) and near(s["gyro"], 0) and near(s["trk"], 0)
-                  and s["magShown"] and s["gyroShown"] and s["trkShown"],
-                  "gyro and track 103 true sit on 100 magnetic with 3 E",
-                  (s["mag"], s["gyro"], s["trk"]))
-        res.check(s["variation"] == "VAR 3°E", "the variation reads East", s["variation"])
-
-        # Each mark at its own value, the shortest way round across north
-        s = state(d, "GYRO", AHRSGyroHeading=2.0, AHRSMagHeading=350.0, GPSTrueCourse=13.0)
-        res.check(near(s["card"], -359) and s["readout"] == "359°",
-                  "GYRO 002 true reads 359 magnetic", (s["card"], s["readout"]))
-        res.check(near(s["mag"], -9) and near(s["trk"], 11) and near(s["gyro"], 0),
-                  "MAG 9 left and TRK 11 right of the gyro across north",
-                  (s["mag"], s["gyro"], s["trk"]))
-        res.check(near(s["mag"] % 360, 351) and near((s["trk"] + 359) % 360, 10),
-                  "every mark lands on its own card value", (s["mag"], s["trk"]))
-
-        # West variation, GPS primary
-        s = state(d, "GPS", MagneticVariation=-2.4, GPSTrueCourse=88.0)
-        res.check(s["readout"] == "090°" and s["variation"] == "VAR 2°W" and s["source"] == "GPS",
-                  "GPS 088 true with 2.4 W reads 090", (s["readout"], s["variation"]))
-
-        # Invalid sources lose their mark; the primary says --- and holds the card
-        s = state(d, "MAG", AHRSMagHeading=INVALID)
-        res.check(not s["magShown"] and s["gyroShown"] and s["readout"] == "---°",
-                  "no magnetometer: no MAG mark, MAG primary reads ---", (s["magShown"], s["readout"]))
-        s = state(d, "GYRO", AHRSGyroHeading=INVALID)
-        res.check(not s["gyroShown"] and s["magShown"], "no gyro: no GYRO mark", s["gyroShown"])
-        s = state(d, "MAG", GPSGroundSpeed=3.0)
-        res.check(not s["trkShown"], "below 5 kt there is no track diamond", s["trkShown"])
-        s = state(d, "GPS", GPSFixQuality=0)
-        res.check(s["source"] == "GYRO" and not s["trkShown"], "no fix: GPS gives way to the gyro",
-                  (s["source"], s["trkShown"]))
-
-        # No variation: one true card, said so
-        s = state(d, "MAG", MagneticVariationValid=False, MagneticVariation=0.0)
-        res.check(near(s["gyro"], 3) and near(s["trk"], 3) and s["variation"] == "VAR --- TRUE",
-                  "outside the grid the card is true and says TRUE", (s["gyro"], s["variation"]))
+        check_sources(d, res)
+        check_invalid_sources(d, res)
 
         # Wind: from 40 true = 37 magnetic, nose 100 magnetic
         state(d, "MAG")   # WindValid false resets the damping: the next one is exact

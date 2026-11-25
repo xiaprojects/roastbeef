@@ -11,8 +11,8 @@ trees.
 
 | Setting | Repository | Default in code | Notes |
 |---|---|---|---|
-| `Terrain_Enabled` | roastbeef | `false` | `main/gen_gdl90.go` `defaultSettings()`. Also blanks the AGL slot of the top bar (`---`) |
-| `Terrain_Alerts_Enabled` | roastbeef | `false` | Same place. `docs/settings-reference.md` gives the reason: the grid and the nuisance rates are not fit for release |
+| `Terrain_Enabled` | roastbeef | ~~`false`~~ `true` since 2026-11-24 | `main/gen_gdl90.go` `defaultSettings()`. Off, it also blanks the AGL slot of the top bar (`---`). **Resolved** |
+| `Terrain_Alerts_Enabled` | roastbeef | ~~`false`~~ `true` since 2026-11-24 | Same place. Tested by the owner and turned on. **Resolved** |
 | `Audio_Enabled` | roastbeef | `false` | The daemon plays alert sounds through `aplay` only with it on, so spoken terrain alerts need it; the display plays its own copy |
 | `MS4525DO_Enabled` | roastbeef | `false` | `defaultSettings()`. The comment on the field in `gen_gdl90.go` says "default: true", and `docs/hardware/sensors.md` says there is no enable setting: three statements, two of them wrong. The settings page switch is new in the working tree |
 | `Radio_Enabled` | roastbeef | `false` | The SDR radio is not driven until it is on |
@@ -26,9 +26,8 @@ trees.
 
 Open terrain-alert items are not repeated here: `terrain-alerts.md` lists them under
 "Not built yet", "Known limits found", "Next" and "Open questions, risks and regulatory
-notes", and its status line still reads "built, not released". Enabling the announcements
-by default goes against that document as it stands; it needs updating together with the
-default.
+notes". Its status line was updated on 2026-11-24, when the owner turned both terrain
+defaults on.
 
 ## Proposal
 1. Decide, setting by setting, whether the default changes in code or the image sets it, and

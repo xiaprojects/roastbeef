@@ -54,6 +54,19 @@ def at_vs(d, seq, vs, **extra):
     return d.page.eval(VSI_JS)
 
 
+# Covers: RB-HLR-ALT-200
+def check_gps_rate(d, res):
+    """No baro fitted: the GPS rate is the only one there is, and it arrives in feet
+    per second."""
+    s = at_vs(d, 8, 0.0, BaroSourceType=0, GPSVerticalSpeed=10.0)
+    res.check(s["digits"] == "+600",
+              "without a baro the GPS rate drives the strip", s["digits"])
+    res.check(abs(s["barBottom"] - s["zero"]) <= PX and s["barTop"] < s["zero"],
+              "and it draws the same way up", s)
+    s = at_vs(d, 20, 750.0, BaroSourceType=1, GPSVerticalSpeed=10.0)
+    res.check(s["digits"] == "+750", "with a baro the baro rate drives it, not the GPS", s["digits"])
+
+
 def main():
     res = Result()
     with Display() as d:
@@ -103,13 +116,7 @@ def main():
         res.check(at_vs(d, 6, 735.0)["digits"] == "+750", "735 fpm reads +750")
         res.check(at_vs(d, 7, 724.0)["digits"] == "+700", "724 fpm reads +700")
 
-        # No baro fitted: the GPS rate is the only one there is, and it arrives
-        # in feet per second
-        s = at_vs(d, 8, 0.0, BaroSourceType=0, GPSVerticalSpeed=10.0)
-        res.check(s["digits"] == "+600",
-                  "without a baro the GPS rate drives the strip", s["digits"])
-        res.check(abs(s["barBottom"] - s["zero"]) <= PX and s["barTop"] < s["zero"],
-                  "and it draws the same way up", s)
+        check_gps_rate(d, res)
 
         # Same gate as the other tapes: the six-pack ball is too small for it
         d.show("sixpack", None)

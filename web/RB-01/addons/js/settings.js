@@ -644,6 +644,7 @@ function SettingsCtrl($rootScope, $scope, $state, $http, $interval, $q, $timeout
         { value: 2, label: "AHRS FFSIM" },
         { value: 4, label: "AHRS GDL90" },
         { value: 8, label: "FLARM NMEA (default)" },
+        { value: 64, label: "FLARM NMEA 9600 (no RB slave sentences)" },
         { value: 16, label: "FFSIM" }
     ];
 

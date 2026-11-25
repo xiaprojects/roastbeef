@@ -38,6 +38,9 @@ hardware integration). User-facing how-tos live in the
   the `bestGlide` parameters in `aircraft.json`, the `glideRange` curtain style in
   `synthview.json`, how the reachable area is computed over terrain and wind, and what is not
   modelled.
+- **[performance/README.md](performance/README.md)** — the RB-01 aircraft performance KPIs
+  (cruise, attitude, climb, engine, fuel, density, icing): the engine, `performance.json`,
+  training from flight logs, and how closed-source algorithms plug in.
 - **[synthview-traffic-tubes.md](synthview-traffic-tubes.md)** — the vertical tube and the
   predicted path (speed, track and vertical speed) of every aircraft on the synthetic view,
   the `projection` setting in `synthview.json`, traffic altitude reference and scene scale.
@@ -82,6 +85,9 @@ re-verify before acting.
 - **[tech-debt/terrain-alerts.md](tech-debt/terrain-alerts.md)** — spoken terrain alerts:
   the requirements (TER-nnn), what step 1 in `main/terrain.go` builds and leaves out, and how
   it was checked against recorded flights and the real daemon.
+- **[tech-debt/icing-alerts.md](tech-debt/icing-alerts.md)** — icing advisories: the owner's
+  decisions, what `main/icing.go` builds (dew point, carb-icing chart %, airframe icing %),
+  what the sensors cannot detect, and the open steps (replay, spoken warnings, pitot icing).
 - **[tech-debt/glideslope-reception.md](tech-debt/glideslope-reception.md)** — the glideslope
   is announced and not built: what exists (localizer, GPS slope marks on the HSI) and what the
   plate needs once `rb-vor` delivers it.

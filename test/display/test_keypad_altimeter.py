@@ -65,6 +65,7 @@ def errors(d):
     return [e for e in d.js_errors() if not known.lookup("keypad", "altimeter", e)]
 
 
+# Covers: RB-HLR-ALT-090, RB-HLR-ALT-100, RB-HLR-ALT-110
 def check_knob(d, res, label, prev, nxt, tap, send):
     press(d, tap, send)
     start = read(d)
@@ -101,6 +102,7 @@ def check_touch(d, res):
     res.check(read(d)["auto"], "a touch on the centre turns AUTO on, as TAP does", read(d))
 
 
+# Covers: RB-HLR-ALT-100
 def check_limits(d, res, label):
     """The pilot QNH stops at 1100 and 850 hPa, whatever AUTO derived."""
     global FRAME
@@ -134,6 +136,32 @@ def check_limits(d, res, label):
     res.check(read(d)["auto"] and read(d)["qnh"] == AUTO_QNH, "%s back to AUTO" % label, read(d))
 
 
+# Covers: RB-HLR-ALT-120
+def check_auto_gates(d, res):
+    """AUTO derives the QNH only with a fix and while the baro says level, under
+    200 fpm; otherwise the last derived one holds."""
+    global FRAME
+    keep = FRAME
+    try:
+        press(d, TAP)
+        # 300 ft more GPS: AUTO would give 1013.25 + 1 = 1014.25 if it derived now
+        for label, over in (("climbing at 500 fpm", dict(BaroVerticalSpeed=500)),
+                            ("sinking at 250 fpm", dict(BaroVerticalSpeed=-250)),
+                            ("without a fix", dict(GPSFixQuality=0))):
+            FRAME = dict(keep, GPSAltitudeMSL=1300, **over)
+            frames(d, 4)
+            got = read(d)
+            res.check(got["qnh"] == AUTO_QNH and got["auto"], "AUTO keeps %d hPa %s" % (AUTO_QNH, label), got)
+        FRAME = dict(keep, GPSAltitudeMSL=1300, BaroVerticalSpeed=150)
+        frames(d, 4)
+        got = read(d)
+        res.check(got["qnh"] == 1014 and got["auto"], "level again, AUTO derives 1014 hPa", got)
+    finally:
+        FRAME = keep
+    press(d, TAP)
+    res.check(read(d)["qnh"] == AUTO_QNH, "and back on the first frame, %d hPa" % AUTO_QNH, read(d))
+
+
 def check_other_page(d, res):
     """The sixpack holds an altimeter too: the knob must not set the QNH from there."""
     press(d, TAP)
@@ -163,6 +191,7 @@ def main():
             label = "%dx%d" % (width, height)
             check_knob(d, res, label + " 1/2/3", PREV, NEXT, TAP, d.key)
             check_limits(d, res, label)
+            check_auto_gates(d, res)
             if width == 1280:
                 # Not in the Landscape navigation list: the knob reaches it all the same
                 check_knob(d, res, label + " arrows", "ArrowUp", "ArrowDown", "Enter", d.key)

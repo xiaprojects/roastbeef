@@ -96,7 +96,7 @@ hidden by default, for units with no airspeed sensor: see [Changing the top bar]
 - OIL goes to `---` when no EMS frame of any kind has come for 5 s. EMS frames are partial and
   the oil probe sends on change only, so the last oil value is kept while other frames come.
 - AGL and AP go to `---` when their stream has been quiet for 5 s. AGL is also `---` whenever
-  the terrain alerts are off (`Terrain_Enabled`), which is the default.
+  the terrain function is off (`Terrain_Enabled`; on by default since 2026-11-24).
 - **No data is shown as `---`**, never as `X` and never as an old number. WIND, speed, ALT, TRK
   and MAX G go to `---` when no `SituationUpdated` has arrived for 3 s.
 - WIND needs an estimate from `windestimator.js`: an airspeed and a course change of 30-60°

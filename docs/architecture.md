@@ -54,7 +54,8 @@ extrapolates positions between updates, and estimates Mode-S target distance. Ou
   (`cot-in.go`).
 - Traffic/situation history to SQLite via `main/datalog.go` (`ReplayLog` setting; the
   file holds the broadcast structs themselves, so `test/display/flightlog.py` can replay
-  it through the HMI).
+  it through the HMI). Its `alerts` table records each alert's raise, reopen and close for
+  RB-Cloud; the format is in [tech-debt/cloud-flight-alerts-analysis.md](tech-debt/cloud-flight-alerts-analysis.md#21-the-alerts-table).
 
 See the [integration guide](integration/README.md) for the full transport map and the
 `Capability` routing bitmask.

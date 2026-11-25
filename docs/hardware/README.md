@@ -13,7 +13,8 @@ a new device."
 | Checking a u-blox receiver for a clone chip | [gps-authenticity.md](gps-authenticity.md) |
 | Barometric & IMU/AHRS sensors | [sensors.md](sensors.md) |
 | OGN trackers (RX/TX), AIS, and external ADS-B receivers (Ping/Pong/UATRadio) | [ogn-ais-receivers.md](ogn-ais-receivers.md) |
-| Cooling fan | see `fancontrol_main/` (PID PWM fan, default BCM pin 18, own systemd service) |
+| Cooling | **Raspberry Pi 5 Active Cooler (fan and aluminium heatsink) is mandatory** on RB-01; the Pi firmware drives its fan. The Stratux PWM fan controller (`fancontrol_main/`, `stratux_fancontrol.service`, BCM pin 18) is **not used** and is disabled by the install scripts (2026-11-24). Temperature: `CPUTemp` in `/getStatus`, `cpu_temp_c` / `cpu_fan` from rb-sysmon |
+| Booting from an NVMe SSD instead of the SD card | [nvme-boot.md](nvme-boot.md) |
 
 ## How devices are recognized
 

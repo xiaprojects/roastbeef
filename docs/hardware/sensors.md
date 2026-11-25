@@ -23,6 +23,97 @@ The Bosch WHO_AM_I / chip-id register is read at I²C address `0x76`, then `0x77
 Enabled by `BMP_Sensor_Enabled`; reported as `BMPConnected` in `/getStatus`. Pressure
 altitude appears as `BaroPressureAltitude` in `/getSituation`, offset by `AltitudeOffset`.
 
+## Humidity sensor
+
+| Chip | Detection | Driver |
+|---|---|---|
+| AHT20 (Aosong/ASAIR), also AHT21 / AHT25 | at I²C `0x38`: status read, calibration command if the status says uncalibrated, then one measurement that must pass the CRC and read -40 to 85 °C | `sensors/aht20.go` |
+
+The AHT20 is usually the second chip on the common "AHT20 + BMP280" breakout, where it
+supplies the humidity the BMP280 does not measure. It has no enable setting of its own:
+it is probed every ~4 s while `BMP_Sensor_Enabled` is on, and reported as
+`HumidityConnected` in `/getStatus`. A measurement is triggered with `0xAC 0x33 0x00`
+and read 80 ms later as 7 bytes (status, 20 bits humidity, 20 bits temperature, CRC-8
+poly `0x31` init `0xFF`). The driver measures every 2 s, the datasheet's limit for keeping
+self-heating under 0.1 °C. The CRC check at detection keeps another chip at `0x38` (an
+FT6236 touch controller, for example) from being taken for a humidity sensor. The older
+AHT10 answers without the CRC byte and is not accepted.
+
+`humiditySender()` (`main/humidity.go`) copies the reading into `BaroHumidity` (%RH) in
+`/getSituation`. If the pressure sensor measures humidity itself (BME680), that value is
+kept and the AHT20 is ignored. After 10 s of read errors the field is blanked to 0 (no
+value), a `humidity-sensor-read` system error is raised and the sensor is probed again.
+The AHT20's own temperature is not used: `BaroTemperature` stays the baro's.
+
+## Air quality sensor
+
+| Chip | Detection | Driver |
+|---|---|---|
+| ENS160 (ScioSense) metal-oxide multi-gas sensor | part ID `0x0160` (register `0x00`, little endian) at I²C `0x53`, then `0x52`; nothing is written before the ID matches | `sensors/ens160.go` |
+
+Usually sold as the "ENS160 + AHT21" breakout. Like the AHT20 it has no setting of its own:
+it is probed every ~4 s while `BMP_Sensor_Enabled` is on and reported as
+`AirQualityConnected` in `/getStatus`. On detection the driver resets the chip and starts
+standard mode, which produces one sample a second; `airQualitySender()`
+(`main/airquality.go`) reads it into `/getSituation`:
+
+| Field | Meaning |
+|---|---|
+| `AirQualityIndex` | 1..5 on the German UBA scale (1 excellent, 2 good, 3 moderate, 4 poor, 5 unhealthy); 0 = no sensor |
+| `AirQualityTVOC` | total volatile organic compounds, ppb |
+| `AirQualityECO2` | equivalent CO₂, ppm (400..65000) |
+| `AirQualityValidity` | `normal`; `warm-up` for the first 3 min after power-on; `start-up` for the first hour of the sensor's very first operation; `invalid`; empty = no sensor |
+| `AirQualityLastMeasurementTime` | time of the last new sample; zero while no sensor is read |
+
+> **Not a CO detector.** eCO₂ is the chip's estimate from volatile organics (it tracks
+> people breathing in a closed room), not a measurement of CO₂, and the ENS160 does not
+> measure carbon monoxide. Engine exhaust in the cabin needs a dedicated CO sensor. The
+> BME680's `BaroPpm` estimate is a separate field and the ENS160 never writes to it.
+
+Each second, when the AHT20/AHT21 is read, its temperature and humidity are written to the
+ENS160's `TEMP_IN`/`RH_IN` registers so the gas algorithm corrects for them (otherwise the
+chip assumes 25 °C and 50 %RH). Readings taken during `warm-up` and `start-up` are published
+with that validity; a display should show them as provisional. The RB-01 shows them on the *airquality* addon
+(`web/RB-01/addons/airquality.html`, Addons → airquality): six round gauges of the G-meter /
+speed component (`css/Speed.css`) for AQI, eCO₂, TVOC, cabin RH (with the cabin temperature),
+carburettor icing and airframe icing (see [Icing advisories](#icing-advisories)), whose coloured arcs are the bands of the rules below, so the value box turns yellow or red
+exactly when the daemon alarms. The AQI gauge's unit line gives the band word, or WARM-UP,
+START-UP, NO DATA (10 s without a new sample), NO SENSOR; ▲/▼ after eCO₂ and TVOC is a
+one-minute trend. `test/display/test_airquality.py` drives it.
+
+### Alarms: EMS probes and rbvoice-aircraft-rules.json
+
+Once the ENS160 is warmed up (validity `normal`), each sample is also published as EMS probes,
+next to the ones the EMS senders post to `/setEMS`: `airquality_aqi`, `airquality_eco2`
+(rounded to 10 ppm) and `airquality_tvoc` (10 ppb). The cabin humidity is not an EMS probe:
+it stays in `BaroHumidity`, which the icing loop below reads for its own probes. They are in `GET /getEMS` for rbvoice, in the flight log `ems`
+table, and evaluated by the rules of `settings/rbvoice-aircraft-rules.json`
+(`publishInternal()`, `main/ems.go`). Shipped rules:
+
+| Rule | Probe | Green | Yellow | Red | Alert |
+|---|---|---|---|---|---|
+| `CABINAIR` | `airquality_aqi` | 1–3 | 4 (poor) | 5 (unhealthy) | yes, `EVENT_TYPE_CABINAIR_*` |
+| `ECO2` | `airquality_eco2` | 400–1000 | 1000–1500 | > 1500 | no (`"alert": false`) |
+| `TVOC` | `airquality_tvoc` | 0–660 | 660–2200 | > 2200 | no |
+| `ICINGCARB` | `icing_carb` | 0–20 % | 20–60 % | 60–100 % | yes, `EVENT_TYPE_ICINGCARB_*` |
+| `ICINGAIRFRAME` | `icing_airframe` | 0–20 % | 20–60 % | 60–100 % | yes, `EVENT_TYPE_ICINGAIRFRAME_*` |
+
+Of the air quality rules only AQI alarms: the chip derives it from the same gas signal as eCO₂
+and TVOC, so three alarms would announce one smell. A rule whose name has rows `EVENT_TYPE_<name>_YELLOW` / `_RED`
+in `alertsMapping.json` raises those, so `CABINAIR` raises `EVENT_TYPE_CABINAIR_YELLOW` (20,
+"Cabin air quality poor") and `_RED` (21, "Cabin air unhealthy, ventilate") rather than the
+engine types; their sounds are `generic_warning` and `danger` until dedicated recordings exist.
+The icing rules raise `EVENT_TYPE_ICINGCARB_YELLOW` / `_RED` (22, 23: "Carburettor icing risk at
+reduced power", "Serious carburettor icing risk, apply carb heat") and
+`EVENT_TYPE_ICINGAIRFRAME_YELLOW` / `_RED` (24, 25: "Airframe icing conditions possible",
+"... likely"), with the same two sounds.
+The probes differ from a sender's in two ways: they do not stamp the EMS feed (a dead engine
+sender still raises "EMS data lost"; any rule in alarm, cabin air included, counts for it), and when the sensor drops, warms up again or reports invalid output the probes
+are withdrawn from `/getEMS` and the rule's open alert is closed (`withdrawInternal()`). A sensor that reports an
+invalid operating mode or an out-of-range value for 10 s, or stops producing new samples
+for 5 s, is put to sleep and dropped: the fields are blanked, an `airquality-sensor-read`
+system error is raised and the sensor is probed again.
+
 ## IMU sensors
 
 Probed by WHO_AM_I at I²C address `0x68`:
@@ -265,3 +356,25 @@ Validate the pipeline with the standalone tool (`make -C test`):
 ./test/magnetometer_check -migrate    # legacy matrix -> quaternion conversion
 ./test/magnetometer_check -csv sensors_20260101_120000.csv   # replay an AHRS log
 ```
+
+## Icing advisories
+
+`main/icing.go` runs once a second. It reads `BaroHumidity` (the only humidity it uses) with the temperature next to it
+(`BaroTemperature`, the baro on the same breakout, fresh within 5 s) and the outside air
+temperature an EMS sender posts as `outsidetemperature` (taken only if a sender posted it, the
+EMS feed is alive and it reads -60 to +60 °C). It publishes these EMS probes, each only while
+its inputs are reliable and only when the value changed; a probe whose inputs go is withdrawn:
+
+| Probe | Needs | Value |
+|---|---|---|
+| `dew_point` | humidity, cabin temperature | °C, 1 °C steps (Magnus formula). A ventilated cabin holds about as much water as the outside air, so the cabin dew point stands for the outside one |
+| `outside_humidity` | the above and OAT | %RH at the OAT |
+| `icing_carb` | the above and OAT | carburettor icing chart zone: 100 serious at any power, 75 moderate (serious at descent power), 50 serious at descent power, 25 light, 0 none. No RPM is used: it is the risk if power is reduced, for carburettor and injection engines alike |
+| `icing_airframe` | the above and OAT | 0–100 %: full from 0 to -10 °C, fading to 0 at +3 and -20 °C, times saturation: full at an OAT - dew point spread of 1 °C or less, 0 from 4 °C |
+
+The chart zones are the outlines of `docs/icing/licterature/map.txt`, shifted back by the
+1 °C / 1.5 °C they sit off the axes of `image0.webp` (the chart of the BEA study in the same
+folder). A dew point above the OAT reads as saturated. Airframe icing cannot tell cloud from
+humid clear air, and nothing here sees ice forming: both are advisories. The design and the
+open steps are in `docs/tech-debt/icing-alerts.md`; `main/icing_test.go` and
+`test/display/test_airquality.py` cover them.

@@ -188,6 +188,7 @@ function pilotTemperatureSignature() {
 // unit; pressures, volts, litres and rpm are left alone.
 const EMS_TEMPERATURE_SOURCES = [
   "oiltemperature", "coolanttemperature", "outsidetemperature",
+  "dew_point",
   "cht1", "cht2", "cht3", "cht4",
   "egt1", "egt2", "egt3", "egt4"
 ];

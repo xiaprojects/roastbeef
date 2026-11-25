@@ -5,10 +5,12 @@ Requirements and implementation record for rank 3 of the agreed priorities
 will reach terrain. On 2026-11-08 the requirements reference written in Claude Docs on
 2026-11-07 moved here unchanged. Only its three diagrams did not carry over.
 
-**Status: step 1 built, not released.** `main/terrain.go` evaluates once a second and can
-raise alerts, behind two settings that are both off by default. It still uses the display
-grid, which reads summits up to 755 ft low, and its nuisance rates are above the release
-targets. Do not turn the alerts on for pilots yet.
+**Status: step 1 built, on by default since 2026-11-24.** `main/terrain.go` evaluates once a
+second and raises alerts, behind two settings that are both **on** by default. The owner tested
+it and found it working (2026-11-24), and set both defaults on. It still uses the display
+grid, which reads summits up to 755 ft low, and the nuisance rates measured on the replays below
+stand. The open items further down are still open. Turn it off with `Terrain_Enabled` or
+`Terrain_Alerts_Enabled`.
 
 ## Implementation, step 1 (2026-11-08)
 
@@ -24,8 +26,8 @@ skipped.
 | Only the terrain near the aircraft in memory, cut as the map and the synthetic view cut it | `windowAround()` and `terrainCut()`, which follow `globalLoadTerrainGrid()` and `globalTerrainCut()` in `web/RB-01/js/global.js` |
 | Terrain information in `globalStatus` | The `Terrain_*` fields below |
 | The height above ground at the aircraft, in `globalStatus` | `Terrain_AglFt`, with `Terrain_AglValid` |
-| On/off for the function | `Terrain_Enabled`, default off |
-| On/off for the alerts | `Terrain_Alerts_Enabled`, default off |
+| On/off for the function | `Terrain_Enabled`, default on (off until 2026-11-24) |
+| On/off for the alerts | `Terrain_Alerts_Enabled`, default on (off until 2026-11-24) |
 | The minimum ground speed `TERRAIN_MIN_GROUND_SPEED_KT` configurable, in km/h, 45 kt below 1 | `Terrain_Alerts_MinSpeedKmh`, default 0 |
 
 ### How it works
@@ -86,10 +88,10 @@ once a second:
 | Unavailable: "once, if it happens in flight" | Once per flight. Later episodes reopen the same alert with no sound. A flight ends below 45 kt within 2 NM and 500 ft of a field | Below 45 kt on its own also happens at the top of a vertical figure. In the 2026-06-14 10:19 flight that rule alone gave three announcements in 100 s. |
 | Terrain state message: `/terrain`, `/getTerrain` | The `Terrain_*` fields of `globalStatus` | Step 4 asked for it this way. The flight log's `status` table then gives shadow-mode records without the `terrain` table of TER-690. |
 | `State` values | `OFF` added, `INHIBITED` left out | There is no manual inhibit yet. |
-| Defaults: alerts on at release | Both settings off | This is step 1, before the alerting grid. Off by default matches `EMS_Enabled` and `Audio_Enabled`. |
+| Defaults: alerts on at release | Both settings on since 2026-11-24 | Off by default during step 1. The owner tested the function and turned both defaults on on 2026-11-24. The daemon speaks them only with `Audio_Enabled` on; the display plays its own copy. |
 
 The plugin also starts in a `-trace` replay, so recorded flights can drive it through the
-real daemon. With `Terrain_Enabled` off, the default, it reports `OFF` and does nothing.
+real daemon. With `Terrain_Enabled` off (default on since 2026-11-24) it reports `OFF` and does nothing.
 
 ### Not built yet
 

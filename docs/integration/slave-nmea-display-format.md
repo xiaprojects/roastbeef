@@ -75,8 +75,14 @@ sentinel (RB-HLR-ATT-230).
 
 **The heading sentinel.** The Simple AHRS has no heading below taxi speed (static mode), while
 its roll and pitch are good. The yaw field then carries `3276.70` unchanged, as the
-field's unavailable value (RB-HLR-ATT-220). RB-09 firmware up to 1.8.0 rejects `|yaw| > 360`,
-so it shows attitude INOP in that state until it handles the sentinel.
+field's unavailable value (RB-HLR-ATT-220).
+
+**Rule for every display (owner, 2026-11-24):** a yaw outside −360 … 360, `3276.70` included,
+means the heading is **not ready / not available**. The display shows its heading as not
+available (for example `HDG ---` or a "not ready" flag on the heading card) and keeps drawing
+roll, pitch, slip and G from the same sentence, which stay valid. It must not read the value as
+000, and it must not flag the whole attitude INOP. RB-09 firmware up to 1.8.0 rejected
+`|yaw| > 360` and showed attitude INOP instead; the firmware side belongs to `../rb-esp`.
 
 ## 3. `$RBAIR` — air data
 

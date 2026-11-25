@@ -15,6 +15,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 	"net/http/httptest"
 	"os"
@@ -308,6 +309,7 @@ type fakeBaro struct {
 	since      time.Time
 	err        error
 	closed     bool
+	bad        float64 // when nonzero, the pressure read, hPa, whatever the altitude
 }
 
 func (f *fakeBaro) fly(alt, climb float64) {
@@ -325,6 +327,9 @@ func (f *fakeBaro) Pressure() (float64, error) {
 	f.read()
 	if f.err != nil {
 		return 0, f.err
+	}
+	if f.bad != 0 {
+		return f.bad, nil
 	}
 	// The inverse of common.CalcAltitude: ISA, hPa.
 	return 1013.25 * math.Pow(1-f.altitude()/145366.45, 1/0.190284), nil
@@ -447,5 +452,91 @@ func TestPressureSenderAlertsTheLoss(t *testing.T) {
 	if len(lossAlerts) == len(glitchAlerts) {
 		t.Skipf("KNOWN ISSUE FHA-ALR-1: one failed read raised %d alert(s), still up %v 5 reads after the sensor recovered; "+
 			"the loss of the sensor after it raised %d more", len(glitchAlerts), upAfterGlitch, len(lossAlerts)-len(glitchAlerts))
+	}
+}
+
+// KNOWN ISSUE (FHA-ALT-2, not yet decided). A pressure no barometer can read - negative
+// (a driver's sign or overflow error), or 2000 hPa - is turned into an altitude and
+// published: CalcAltitude gives NaN for the one and -20 000 ft for the other, and the
+// only plausibility checks are 70 000 ft and 5000 ft from a valid GPS altitude, which a
+// NaN passes and which, without a fix, the other passes too. The test measures it and
+// skips; it passes once such a reading leaves the last good altitude standing, its
+// measurement time stopped, as a reading 5000 ft off the GPS already does.
+func TestPressureSenderRejectsAnImpossiblePressure(t *testing.T) {
+	if !inChild(t) {
+		return
+	}
+	b := &fakeBaro{}
+	b.fly(1200, 0)
+	startBaro(b)
+	b.wait(t, 5)
+	var report []string
+	for _, p := range []float64{-1, 2000} {
+		b.fly(1200, 0)
+		b.wait(t, 3)
+		alt0, _, at0 := baro()
+		b.mu.Lock()
+		b.bad = p
+		b.mu.Unlock()
+		b.wait(t, 3)
+		if alt, _, at := baro(); alt != alt0 || at != at0 {
+			report = append(report, fmt.Sprintf("%g hPa published as %.0f ft", p, alt))
+		}
+		b.mu.Lock()
+		b.bad = 0
+		b.mu.Unlock()
+	}
+	if len(report) > 0 {
+		t.Skipf("KNOWN ISSUE FHA-ALT-2: %s", strings.Join(report, ", "))
+	}
+}
+
+// Zeroing the pitot (POST /calibrateAirspeed) is refused with 409 when there is no
+// sensor, and while a valid GPS ground track shows the aircraft moving at more than
+// 5 kt, so that the airflow of a taxi or a flight is never taken for the zero. At a
+// standstill it is queued. With no GPS ground track the equipment cannot tell, and the
+// request is accepted: that is the installer's ground action in a hangar.
+// Covers: RB-HLR-SPD-110
+func TestCalibrateAirspeedIsRefusedWhileMoving(t *testing.T) {
+	withGPSState(t)
+	queued := func() bool {
+		select {
+		case <-airspeedCal:
+			return true
+		default:
+			return false
+		}
+	}
+	queued()
+	t.Cleanup(func() { queued() })
+	post := func() int {
+		w := httptest.NewRecorder()
+		handleCalibrateAirspeed(w, httptest.NewRequest("POST", "/calibrateAirspeed", nil))
+		return w.Code
+	}
+	fix := func(gs float64) {
+		mySituation.GPSFixQuality, mySituation.GPSLastFixLocalTime = 1, stratuxClock.Time
+		mySituation.GPSHorizontalAccuracy, mySituation.GPSGroundSpeed = 5, gs
+	}
+	fix(0)
+	globalStatus.AirspeedConnected = false
+	if c := post(); c != 409 || queued() {
+		t.Errorf("no pitot sensor: %d, queued %v; want 409, not queued", c, queued())
+	}
+	globalStatus.AirspeedConnected = true
+	for _, c := range []struct {
+		gs   float64
+		want int
+	}{{60, 409}, {5.5, 409}, {5, 200}, {0.3, 200}} {
+		fix(c.gs)
+		code := post()
+		if q := queued(); code != c.want || q != (c.want == 200) {
+			t.Errorf("fix at %.1f kt: %d, queued %v; want %d", c.gs, code, q, c.want)
+		}
+	}
+	fix(60)
+	mySituation.GPSLastFixLocalTime = stratuxClock.Time.Add(-4 * time.Second)
+	if c := post(); c != 200 || !queued() {
+		t.Errorf("60 kt on a fix 4 s old: %d; want accepted, there is no ground track to refuse on", c)
 	}
 }

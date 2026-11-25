@@ -220,6 +220,7 @@ func TestDistance(t *testing.T) {
 // CalcAltitude follows the ISA pressure-altitude formula: 0 ft at
 // 1013.25 hPa, ~10 000 ft at 696.82 hPa, ~36 089 ft at 226.32 hPa, and the
 // offset is added linearly.
+// Covers: RB-HLR-ALT-010
 func TestCalcAltitude(t *testing.T) {
 	if a := CalcAltitude(1013.25, 0); !near(a, 0, 1e-9) {
 		t.Errorf("CalcAltitude(1013.25) = %v; want 0", a)
@@ -269,6 +270,7 @@ func TestCalcPressure(t *testing.T) {
 // back as M*a0 knots; at low speed it agrees with the incompressible
 // sqrt(2 qc / rho0) to 0.2 %; no airflow or a negative (reversed tube)
 // pressure is 0 knots.
+// Covers: RB-HLR-SPD-010
 func TestCalcIndicatedAirspeed(t *testing.T) {
 	const a0, p0, rho0 = 661.4786, 101325.0, 1.225
 	for _, mach := range []float64{0.05, 0.1, 0.15, 0.2, 0.3} {

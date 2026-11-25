@@ -53,90 +53,146 @@ def expect_speed(res, d, label, f, source, kt):
     return s
 
 
+def pilot_unit(d):
+    """The pilot's unit for this aircraft (the device fixture's aircraft.json) and
+    the conversion of a speed in knots into it, as the plates print it."""
+    d.page.wait("window.aircraftData && window.aircraftData.units", timeout=10,
+                label="aircraft units loaded")
+    ratio = d.page.eval("window.aircraftData.units.speedConversionFromKmh.multiply")
+    unit = d.page.eval("window.aircraftData.units.speed")
+    return unit, (lambda kt: int(kt * KT_TO_KMH * ratio))
+
+
+def lines(d, selector):
+    """The rendered lines of an element, as the pilot reads them: the tape prints
+    the unit and the source one above the other."""
+    return d.page.eval("(function(){var e = document.querySelector(%r);"
+                       " return e ? e.innerText.split(/\\s+/).filter(Boolean) : null;})()"
+                       % selector)
+
+
+# Covers: RB-HLR-SPD-200
+def check_service(res, d):
+    """servicesituation.js resolves the source once for every plate."""
+    expect_speed(res, d, "GS when the airspeed board reports nothing",
+                 frame(1, gs=100, ias=0), "GS", 100)
+    expect_speed(res, d, "IAS as soon as the board reports one",
+                 frame(2, gs=100, ias=120), "IAS", 120)
+    expect_speed(res, d, "a negative airspeed is not a source",
+                 frame(3, gs=100, ias=-5), "GS", 100)
+
+
+# Covers: RB-HLR-SPD-210
+def check_gauge_label(res, d, unit, pilot):
+    d.show("speed", GAUGE + " .speed-label")
+    d.fly(frames=4, interval=0.3, **frame(4, gs=100, ias=0))
+    published(d, 4)
+    d.page.pump(0.5)
+    res.check(text(d, GAUGE + " .speed-label") == "GS", "gauge labelled GS on ground speed",
+              text(d, GAUGE + " .speed-label"))
+    res.check(text(d, GAUGE + " .speed-value").strip() == str(pilot(100)),
+              "gauge shows ground speed in %s" % unit, text(d, GAUGE + " .speed-value").strip())
+
+    d.fly(frames=4, interval=0.3, **frame(5, gs=100, ias=120))
+    published(d, 5)
+    d.page.pump(0.5)
+    res.check(text(d, GAUGE + " .speed-label") == "IAS", "gauge labelled IAS on airspeed",
+              text(d, GAUGE + " .speed-label"))
+    res.check(text(d, GAUGE + " .speed-value").strip() == str(pilot(120)),
+              "gauge shows airspeed in %s" % unit, text(d, GAUGE + " .speed-value").strip())
+
+
+# No Covers: RB-HLR-SPD-220 is an open finding. The arcs are drawn on ground speed
+# too, so the first check fails, and the requirement stays in requirements/untraced.txt
+# until it passes.
+def check_gauge_arcs(res, d):
+    d.show("speed", GAUGE + " .speed-label")
+    d.fly(frames=4, interval=0.3, **frame(4, gs=100, ias=0))
+    published(d, 4)
+    d.page.pump(0.5)
+    plain = arc_colors(d)
+    res.check(plain and all(c in ("rgb(255, 255, 255)", "rgb(0, 0, 0)") for c in plain),
+              "colour arcs suppressed on ground speed (FHA-SPD-2)", plain)
+    d.fly(frames=4, interval=0.3, **frame(5, gs=100, ias=120))
+    published(d, 5)
+    d.page.pump(0.5)
+    coloured = arc_colors(d)
+    res.check(any(c not in ("rgb(255, 255, 255)", "rgb(0, 0, 0)") for c in coloured),
+              "colour arcs drawn on airspeed", coloured)
+
+
+# Covers: RB-HLR-SPD-210
+def check_tape_label(res, d, unit, pilot):
+    d.show("attitude", ".attitude-speed")
+    d.fly(frames=4, interval=0.3, **frame(6, gs=100, ias=0))
+    published(d, 6)
+    d.page.pump(0.5)
+    res.check(lines(d, ".attitude-speed-source") == [unit, "GS"],
+              "tape annunciates GS and the unit", lines(d, ".attitude-speed-source"))
+    value = text(d, ".attitude-speed").strip().split()[0]
+    res.check(value == str(pilot(100)), "tape value converted to %s" % unit, value)
+
+    d.fly(frames=4, interval=0.3, **frame(7, gs=100, ias=120))
+    published(d, 7)
+    d.page.pump(0.5)
+    res.check(lines(d, ".attitude-speed-source") == [unit, "IAS"],
+              "tape annunciates IAS", lines(d, ".attitude-speed-source"))
+    value = text(d, ".attitude-speed").strip().split()[0]
+    res.check(value == str(pilot(120)), "tape follows the airspeed", value)
+
+
+# Covers: RB-HLR-SPD-230
+def check_no_fix(res, d):
+    """A ground speed without a fix is marked failed, on the gauge and on the tape;
+    an airspeed is not, because it does not come from the GPS."""
+    for plate, ready, failed in (("speed", GAUGE + " .speed-label", "[ui-view] .speed .attitude-fail"),
+                                 ("attitude", ".attitude-speed", ".attitude-speed.attitude-fail-text")):
+        d.show(plate, ready)
+        for seq, ias, fix, want in ((10, 0, 0, True), (11, 0, 2, False), (12, 120, 0, False)):
+            d.fly(frames=4, interval=0.3, **frame(seq, gs=100, ias=ias, fix=fix))
+            published(d, seq)
+            d.page.pump(0.5)
+            got = d.page.eval("!!document.querySelector(%r)" % failed)
+            res.check(got == want, "%s: %s with fix quality %d %s" % (
+                plate, "IAS" if ias else "GS", fix, "marked failed" if want else "not marked"), got)
+
+
+# Covers: RB-HLR-SPD-210
+def check_top_bar_label(res, d, unit, pilot):
+    # Left out by default since WIND took the first place (TOP_BAR_SLOTS_HIDDEN): shown
+    # again as a unit with no airspeed sensor would, read when the bar is created
+    d.page.eval("localStorage.setItem('topBarSlotsHidden', '[]')")
+    d.page.eval("(function(){var s = angular.element(document.body).scope();"
+                " s.uiSidebarTop = true; s.$apply();})()")
+    d.page.wait("!!document.querySelector(\".rb-bar-top [data-slot='speed']\")",
+                timeout=10, label="top bar")
+    tile = lambda: {part: (text(d, ".rb-bar-top [data-slot='speed'] .rb-slot-%s" % part) or "").strip()
+                    for part in ("label", "value")}
+    d.fly(frames=4, interval=0.3, **frame(8, gs=100, ias=0))
+    published(d, 8)
+    d.page.pump(0.5)
+    t = tile()
+    res.check(t["label"] == "GS %s" % unit and t["value"] == str(pilot(100)),
+              "top bar speed GS in %s" % unit, t)
+    d.fly(frames=4, interval=0.3, **frame(9, gs=100, ias=120))
+    published(d, 9)
+    d.page.pump(0.5)
+    t = tile()
+    res.check(t["label"] == "IAS %s" % unit and t["value"] == str(pilot(120)),
+              "top bar speed IAS in %s" % unit, t)
+
+
 def main():
     res = Result()
     with Display() as d:
         d.show("hsi", "#hsi")
-
-        # -- the service ----------------------------------------------------
-        expect_speed(res, d, "GS when the airspeed board reports nothing",
-                     frame(1, gs=100, ias=0), "GS", 100)
-        expect_speed(res, d, "IAS as soon as the board reports one",
-                     frame(2, gs=100, ias=120), "IAS", 120)
-        expect_speed(res, d, "a negative airspeed is not a source",
-                     frame(3, gs=100, ias=-5), "GS", 100)
-
-        # The pilot's unit for this aircraft (the device fixture's aircraft.json)
-        d.page.wait("window.aircraftData && window.aircraftData.units", timeout=10,
-                    label="aircraft units loaded")
-        ratio = d.page.eval("window.aircraftData.units.speedConversionFromKmh.multiply")
-        unit = d.page.eval("window.aircraftData.units.speed")
-        pilot = lambda kt: int(kt * KT_TO_KMH * ratio)
-
-        # -- speed gauge ----------------------------------------------------
-        d.show("speed", GAUGE + " .speed-label")
-        d.fly(frames=4, interval=0.3, **frame(4, gs=100, ias=0))
-        published(d, 4)
-        d.page.pump(0.5)
-        res.check(text(d, GAUGE + " .speed-label") == "GS", "gauge labelled GS on ground speed",
-                  text(d, GAUGE + " .speed-label"))
-        res.check(text(d, GAUGE + " .speed-value").strip() == str(pilot(100)),
-                  "gauge shows ground speed in %s" % unit, text(d, GAUGE + " .speed-value").strip())
-        plain = arc_colors(d)
-        res.check(plain and all(c in ("rgb(255, 255, 255)", "rgb(0, 0, 0)") for c in plain),
-                  "colour arcs suppressed on ground speed (FHA-SPD-2)", plain)
-
-        d.fly(frames=4, interval=0.3, **frame(5, gs=100, ias=120))
-        published(d, 5)
-        d.page.pump(0.5)
-        res.check(text(d, GAUGE + " .speed-label") == "IAS", "gauge labelled IAS on airspeed",
-                  text(d, GAUGE + " .speed-label"))
-        res.check(text(d, GAUGE + " .speed-value").strip() == str(pilot(120)),
-                  "gauge shows airspeed in %s" % unit, text(d, GAUGE + " .speed-value").strip())
-        coloured = arc_colors(d)
-        res.check(any(c not in ("rgb(255, 255, 255)", "rgb(0, 0, 0)") for c in coloured),
-                  "colour arcs drawn on airspeed", coloured)
-
-        # -- attitude tape --------------------------------------------------
-        d.show("attitude", ".attitude-speed")
-        d.fly(frames=4, interval=0.3, **frame(6, gs=100, ias=0))
-        published(d, 6)
-        d.page.pump(0.5)
-        res.check(text(d, ".attitude-speed-source").strip() == "GS %s" % unit,
-                  "tape annunciates GS and the unit", text(d, ".attitude-speed-source"))
-        value = text(d, ".attitude-speed").strip().split()[0]
-        res.check(value == str(pilot(100)), "tape value converted to %s" % unit, value)
-
-        d.fly(frames=4, interval=0.3, **frame(7, gs=100, ias=120))
-        published(d, 7)
-        d.page.pump(0.5)
-        res.check(text(d, ".attitude-speed-source").strip() == "IAS %s" % unit,
-                  "tape annunciates IAS", text(d, ".attitude-speed-source"))
-        value = text(d, ".attitude-speed").strip().split()[0]
-        res.check(value == str(pilot(120)), "tape follows the airspeed", value)
-
-        # -- top bar speed slot ---------------------------------------------
-        # Left out by default since WIND took the first place (TOP_BAR_SLOTS_HIDDEN): shown
-        # again as a unit with no airspeed sensor would, read when the bar is created
-        d.page.eval("localStorage.setItem('topBarSlotsHidden', '[]')")
-        d.page.eval("(function(){var s = angular.element(document.body).scope();"
-                    " s.uiSidebarTop = true; s.$apply();})()")
-        d.page.wait("!!document.querySelector(\".rb-bar-top [data-slot='speed']\")",
-                    timeout=10, label="top bar")
-        tile = lambda: {part: (text(d, ".rb-bar-top [data-slot='speed'] .rb-slot-%s" % part) or "").strip()
-                        for part in ("label", "value")}
-        d.fly(frames=4, interval=0.3, **frame(8, gs=100, ias=0))
-        published(d, 8)
-        d.page.pump(0.5)
-        t = tile()
-        res.check(t["label"] == "GS %s" % unit and t["value"] == str(pilot(100)),
-                  "top bar speed GS in %s" % unit, t)
-        d.fly(frames=4, interval=0.3, **frame(9, gs=100, ias=120))
-        published(d, 9)
-        d.page.pump(0.5)
-        t = tile()
-        res.check(t["label"] == "IAS %s" % unit and t["value"] == str(pilot(120)),
-                  "top bar speed IAS in %s" % unit, t)
+        check_service(res, d)
+        unit, pilot = pilot_unit(d)
+        check_gauge_label(res, d, unit, pilot)
+        check_gauge_arcs(res, d)
+        check_tape_label(res, d, unit, pilot)
+        check_no_fix(res, d)
+        check_top_bar_label(res, d, unit, pilot)
 
         errs = d.js_errors()
         res.check(not errs, "no JS errors across the speed source run", errs[:1])

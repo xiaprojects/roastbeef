@@ -165,6 +165,7 @@ func TestMS4525DODetectRejects(t *testing.T) {
 // A running sensor keeps the last measurement through stale answers, then
 // reports an error once the data has been stale for ms4525doStaleLimit
 // fetches (the ASIC stopped), on a fault, and after Close.
+// Covers: RB-HLR-SPD-090
 func TestMS4525DOStaleAndFault(t *testing.T) {
 	fresh := ms4525doFrame(ms4525doStatusOK, 11468, 800)
 	stale := ms4525doFrame(ms4525doStatusStale, 11468, 800)

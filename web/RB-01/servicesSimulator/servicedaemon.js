@@ -44,10 +44,12 @@
     stays silent, and no alert is ever raised.
 */
 
-// Only the VOR addon: servicevorreceiver.js answers it. The other bundled ones
-// drive hardware (magnetometer) or save to the aircraft (settings).
+// The VOR addon (servicevorreceiver.js answers it) and the performance one (pure JS on
+// the situation and the simulated engine). The other bundled ones drive hardware
+// (magnetometer) or save to the aircraft (settings).
 const DAEMON_ADDONS = [
-    { "controller": "VorCtrl", "hash": "/addons/vor", "html": "addons/vor.html", "js": "addons/js/vor.js", "name": "vor" }
+    { "controller": "VorCtrl", "hash": "/addons/vor", "html": "addons/vor.html", "js": "addons/js/vor.js", "name": "vor" },
+    { "controller": "PerformanceCtrl", "hash": "/addons/performance", "html": "addons/performance.html", "js": "addons/js/performance.js", "name": "performance" }
 ];
 
 // What a real RB-01 sends, for the keys the plates read. Radar: 40 NM, no altitude filter.
