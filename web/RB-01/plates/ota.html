@@ -55,6 +55,17 @@
                 Updates
             </div>
             <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
+                <div id="otaMovingWarning" ng-show="otaMoving" class="alert alert-warning"
+                    style="margin: 0px;padding:4px;font-size: 4cqmin;">
+                    Ground speed {{otaGroundSpeedKmh}} km/h: install is available only below 10 km/h
+                </div>
+                <div id="otaConfirm" ng-show="pendingUpdate" class="alert alert-info"
+                    style="margin: 0px;padding:4px;font-size: 4cqmin;">
+                    <div>Install {{pendingUpdate.component}} version {{pendingUpdate.version}}?</div>
+                    <div>The display can restart during the update.</div>
+                    <button id="otaConfirmInstall" ng-click="confirmInstall()" class="btn btn-danger">CONFIRM</button>
+                    <button id="otaCancelInstall" ng-click="cancelInstall()" class="btn btn-default">CANCEL</button>
+                </div>
                 <table style="width:100%;margin: 0px;padding:0px;">
                     <tr
                         style="margin: 0px;padding:0px;border-top: 1px #acacac solid;">
@@ -83,8 +94,8 @@
                         </td>
                         <td
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
-                            <a ng-show="update.installed == -1" ng-click="installUpdate(update)" class="btn btn-default">INSTALL</a>
-                            <a ng-show="update.installed != -1 && update.version>update.installed" ng-click="installUpdate(update)" class="btn btn-default">UPDATE</a>
+                            <button ng-show="update.installed == -1" ng-click="installUpdate(update)" ng-disabled="otaMoving" class="btn btn-default">INSTALL</button>
+                            <button ng-show="update.installed != -1 && update.version>update.installed" ng-click="installUpdate(update)" ng-disabled="otaMoving" class="btn btn-default">UPDATE</button>
                         </td>                        
                         <td
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
