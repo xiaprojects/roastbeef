@@ -56,8 +56,13 @@ const (
 	EVENT_TYPE_ICINGCARB_RED             = 23
 	EVENT_TYPE_ICINGAIRFRAME_YELLOW      = 24 // EMS rule ICINGAIRFRAME
 	EVENT_TYPE_ICINGAIRFRAME_RED         = 25
+	// A core function's failure names the function (RB-HLR-ALR-150): pushEventByIdent()
+	EVENT_TYPE_SYSTEM_DANGER_ATTITUDE    = 26 // imu-read
+	EVENT_TYPE_SYSTEM_DANGER_AIRSPEED    = 27 // airspeed-sensor-read
+	EVENT_TYPE_SYSTEM_DANGER_HEADING     = 28 // mag-sensor-read
+	EVENT_TYPE_SYSTEM_DANGER_TRAFFIC     = 29 // flarm-feed
 	// The defined types when the mapping did not load: keep it one past the last constant
-	EVENT_TYPE_COUNT = EVENT_TYPE_ICINGAIRFRAME_RED + 1
+	EVENT_TYPE_COUNT = EVENT_TYPE_SYSTEM_DANGER_TRAFFIC + 1
 )
 
 // Maximum events in the list
@@ -216,6 +221,14 @@ func (alertsInstance *AlertsStratuxPlugin) pushEventByIdent(ident string, event 
 	} else if (ident=="sdrconfig" ||
 	ident=="ping-missing"){
 		event.Type = EVENT_TYPE_SYSTEM_DANGER_SDR
+	} else if ident == "imu-read" {
+		event.Type = EVENT_TYPE_SYSTEM_DANGER_ATTITUDE
+	} else if ident == "airspeed-sensor-read" {
+		event.Type = EVENT_TYPE_SYSTEM_DANGER_AIRSPEED
+	} else if ident == "mag-sensor-read" {
+		event.Type = EVENT_TYPE_SYSTEM_DANGER_HEADING
+	} else if ident == "flarm-feed" {
+		event.Type = EVENT_TYPE_SYSTEM_DANGER_TRAFFIC
 	} else if ident == "ems-feed" {
 		event.Type = EVENT_TYPE_EMS_GENERIC_FAILURE
 	} else if strings.HasPrefix(ident, "ems-") {

@@ -373,10 +373,11 @@ func TestTheAlertFunctionStartsWithNoPresentationMapping(t *testing.T) {
 }
 
 // A system failure is classified by the identifier that raised it, so that the
-// display and the aural annunciation can tell the pilot which part failed. An
-// identifier with no classification of its own is raised as a general system
-// failure; RB-HLR-ALR-150 is the open finding that two core functions use it.
-// Covers: RB-HLR-ALR-100, RB-HLR-ALR-110, RB-HLR-ALR-120, RB-HLR-ALR-130
+// display and the aural annunciation can tell the pilot which part failed. Each core
+// function's failure names the function - attitude, airspeed, heading, traffic (the
+// FLARM feed; the radio receivers are SDR) and the engine (ems-feed). An identifier
+// with no classification of its own is raised as a general system failure.
+// Covers: RB-HLR-ALR-100, RB-HLR-ALR-110, RB-HLR-ALR-120, RB-HLR-ALR-130, RB-HLR-ALR-150
 func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 	for _, c := range []struct {
 		ident string
@@ -392,12 +393,16 @@ func TestASystemFailureIsClassifiedByTheIdentifierThatRaisedIt(t *testing.T) {
 		{"sdrconfig", EVENT_TYPE_SYSTEM_DANGER_SDR},
 		{"ping-missing", EVENT_TYPE_SYSTEM_DANGER_SDR},
 		{"ems-feed", EVENT_TYPE_EMS_GENERIC_FAILURE},
+		{"imu-read", EVENT_TYPE_SYSTEM_DANGER_ATTITUDE},
+		{"airspeed-sensor-read", EVENT_TYPE_SYSTEM_DANGER_AIRSPEED},
+		{"mag-sensor-read", EVENT_TYPE_SYSTEM_DANGER_HEADING},
+		{"flarm-feed", EVENT_TYPE_SYSTEM_DANGER_TRAFFIC},
 		{"terrain-caution", EVENT_TYPE_TERRAIN_CAUTION},
 		{"terrain-warning", EVENT_TYPE_TERRAIN_WARNING},
 		{"terrain-unavailable", EVENT_TYPE_TERRAIN_UNAVAILABLE},
-		// The rest of the identifiers the daemon raises, all unclassified.
+		// The rest of the identifiers the daemon raises, all unclassified. ahrs-web-start
+		// is the AHRS debug listener, not the attitude function.
 		{"ahrs-web-start", EVENT_TYPE_SYSTEM_DANGER},
-		{"airspeed-sensor-read", EVENT_TYPE_SYSTEM_DANGER},
 		{"BLE", EVENT_TYPE_SYSTEM_DANGER},
 		{"hobbsmeter", EVENT_TYPE_SYSTEM_DANGER},
 		{"restart-warn", EVENT_TYPE_SYSTEM_DANGER},

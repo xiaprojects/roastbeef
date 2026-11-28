@@ -53,7 +53,10 @@ import (
 
 const (
 	numRetries uint8 = 50
-	calCLimit        = 0.20
+	// magFailReads unusable magnetometer samples in a row (1 s at 20 Hz), after
+	// the magnetometer has given a usable one, raise mag-sensor-read.
+	magFailReads = 20
+	calCLimit    = 0.20
 	// calWindow is how long a gyro calibration or a cage averages the IMU:
 	// a single sample of a GY-85 gyro scatters by 2-2.5 deg/s with the engine
 	// running.
@@ -409,6 +412,12 @@ func sensorAttitudeSender() {
 		roll, pitch, heading float64
 		mpuError, magError   error
 		failNum              uint8
+		// The magnetometer health, for mag-sensor-read: magSeen once it has given
+		// a usable sample this run, so an IMU with no magnetometer never alerts.
+		magSeen bool
+		magBad  int
+		// imu-read is up, raised when the IMU was given up on.
+		imuAlerted bool
 	)
 
 	engine := globalSettings.AHRSEngine
@@ -459,6 +468,12 @@ func sensorAttitudeSender() {
 			globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
 			log.Printf("AHRS Info: Magnetometer aligned to quaternion %v\n", globalSettings.MagSensorQuaternion)
 			saveSettings()
+		}
+
+		if imuAlerted && !globalSettings.IMU_Sensor_Enabled {
+			// Turned off in the settings: not a failure any more.
+			removeSingleSystemError("imu-read")
+			imuAlerted = false
 		}
 
 		failNum = 0
@@ -568,10 +583,28 @@ func sensorAttitudeSender() {
 						failNum-1, mpuError)
 					myIMUReader.Close()
 					globalStatus.IMUConnected = false
+					// The attitude function has failed: say so (RB-HLR-ALR-150).
+					addSingleSystemErrorf("imu-read", "AHRS Error: the IMU stopped answering, attitude lost: %s", mpuError)
+					imuAlerted = true
 				}
 				continue
 			}
+			if imuAlerted {
+				// Cleared on the first good read after the reconnect (RB-HLR-ALR-160).
+				removeSingleSystemError("imu-read")
+				imuAlerted = false
+			}
 			failNum = 0
+			if magError == nil && magSampleUsable(m.M1, m.M2, m.M3) {
+				if magBad >= magFailReads {
+					removeSingleSystemError("mag-sensor-read")
+				}
+				magSeen, magBad = true, 0
+			} else if magSeen {
+				if magBad++; magBad == magFailReads {
+					addSingleSystemErrorf("mag-sensor-read", "AHRS Error: the magnetometer stopped giving a usable field, magnetic heading lost")
+				}
+			}
 			if magError != nil {
 				if globalSettings.DEBUG {
 					log.Printf("AHRS Magnetometer Error, not using for this run: %s\n", magError)

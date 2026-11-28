@@ -175,7 +175,11 @@ Proposed level for each event. Levels are a judgement for review against FHA-ALR
 | `EMS_RULE_RED` (15) | danger | WARNING | Rule leaves red | |
 | `EMS_GENERIC_FAILURE` (13) | danger | WARNING | Failure clears | |
 | `SYSTEM_DANGER_BAROMETER` (4) | danger | WARNING | Identifier clears | FHA: the altitude is the quantity least likely to be noticed frozen |
-| `SYSTEM_DANGER` (3) | danger | WARNING | Identifier clears | Attitude and airspeed failures land here until RB-HLR-ALR-150 is fixed |
+| `SYSTEM_DANGER` (3) | danger | WARNING | Identifier clears | Unclassified failures only, since RB-HLR-ALR-150 (2026-11-27) |
+| `SYSTEM_DANGER_ATTITUDE` (26) | danger | WARNING | Identifier clears | FHA-ATT-1: the highest-ranked function |
+| `SYSTEM_DANGER_AIRSPEED` (27) | danger | WARNING | Identifier clears | FHA-SPD-4, Major |
+| `SYSTEM_DANGER_HEADING` (28) | danger | CAUTION | Identifier clears | Magnetic heading only; the GPS track remains |
+| `SYSTEM_DANGER_TRAFFIC` (29) | danger | CAUTION | Identifier clears | As SDR: traffic is advisory (A6 in the FHA) |
 | `EMS_RULE_YELLOW` (14) | warning | CAUTION | Rule leaves yellow | |
 | `SYSTEM_DANGER_SDR` (5) | danger | CAUTION | Identifier clears | Downgraded: traffic is advisory (A6 in the FHA) |
 | `SYSTEM_DANGER_SETTINGS` (6) | danger | CAUTION | Identifier clears | Downgraded: no effect on the flight in progress |

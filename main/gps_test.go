@@ -285,3 +285,69 @@ func TestBaroSentencesRejectShortAndNonFiniteFields(t *testing.T) {
 		}
 	}
 }
+
+// The FLARM serial-in feed (the traffic function's FLARM source): configured and
+// silent for longer than flarmInSilenceTimeout - from the start when it never spoke,
+// so a device that never connects is a failure too - raises flarm-feed, a traffic
+// alert; a valid sentence clears it, and so does turning the device off.
+// Covers: RB-HLR-ALR-150
+func TestFlarmFeedLossIsATrafficAlert(t *testing.T) {
+	withAlerts(t)
+	withSystemErrors(t)
+	savedClock, savedLast, savedDevice := stratuxClock, flarmInLastSentence, globalSettings.FlarmSerialInDevice
+	t.Cleanup(func() {
+		stratuxClock, flarmInLastSentence, globalSettings.FlarmSerialInDevice = savedClock, savedLast, savedDevice
+	})
+	start := time.Date(2026, 11, 27, 10, 0, 0, 0, time.UTC)
+	stratuxClock = &monotonic{Time: start}
+	flarmInLastSentence = time.Time{}
+	up := func() bool {
+		systemErrsMutex.Lock()
+		defer systemErrsMutex.Unlock()
+		_, ok := systemErrs["flarm-feed"]
+		return ok
+	}
+	at := func(d time.Duration) { stratuxClock.Time = start.Add(d) }
+
+	globalSettings.FlarmSerialInDevice = ""
+	at(time.Minute)
+	flarmFeedCheck(start)
+	if up() {
+		t.Error("no FLARM serial-in configured: flarm-feed raised")
+	}
+
+	globalSettings.FlarmSerialInDevice = "/dev/flarmin"
+	at(flarmInSilenceTimeout)
+	flarmFeedCheck(start)
+	if up() {
+		t.Errorf("configured, silent for %v since the start: flarm-feed raised; want after more than that", flarmInSilenceTimeout)
+	}
+	at(flarmInSilenceTimeout + 4*time.Second)
+	flarmFeedCheck(start)
+	if !up() {
+		t.Fatal("configured and never heard from: flarm-feed not raised")
+	}
+	got := queued()
+	if len(got) != 1 || got[0].Type != EVENT_TYPE_SYSTEM_DANGER_TRAFFIC {
+		t.Errorf("alerts %v; want one traffic alert", got)
+	}
+
+	flarmInLastSentence = stratuxClock.Time
+	at(flarmInSilenceTimeout + 6*time.Second)
+	flarmFeedCheck(start)
+	if up() {
+		t.Error("a sentence 2 s ago: flarm-feed still raised")
+	}
+
+	at(2*flarmInSilenceTimeout + 10*time.Second)
+	flarmFeedCheck(start)
+	if !up() || len(queued()) != 2 {
+		t.Errorf("silent again: raised %v, alerts %v; want raised again, a second alert", up(), queued())
+	}
+
+	globalSettings.FlarmSerialInDevice = ""
+	flarmFeedCheck(start)
+	if up() {
+		t.Error("device turned off in the settings: flarm-feed still raised")
+	}
+}

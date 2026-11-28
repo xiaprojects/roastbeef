@@ -155,6 +155,30 @@
       "Id": "EVENT_TYPE_ICINGAIRFRAME_RED",
       "Icon": "danger",
       "Sound": "danger"
+    },
+    {
+      "Text": "Error on the attitude sensor",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_ATTITUDE",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Error on the airspeed sensor",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_AIRSPEED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Error on the magnetometer (heading)",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_HEADING",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "FLARM traffic lost",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_TRAFFIC",
+      "Icon": "danger",
+      "Sound": "danger"
     }
   ],
   "it-IT": [
@@ -311,6 +335,30 @@
     {
       "Text": "Probabili condizioni di ghiaccio sulla cellula",
       "Id": "EVENT_TYPE_ICINGAIRFRAME_RED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Errore del sensore di assetto",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_ATTITUDE",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Errore del sensore di velocità",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_AIRSPEED",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Errore del magnetometro (prua)",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_HEADING",
+      "Icon": "danger",
+      "Sound": "danger"
+    },
+    {
+      "Text": "Traffico FLARM perso",
+      "Id": "EVENT_TYPE_SYSTEM_DANGER_TRAFFIC",
       "Icon": "danger",
       "Sound": "danger"
     }

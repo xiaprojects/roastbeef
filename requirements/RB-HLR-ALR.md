@@ -243,8 +243,8 @@ when a system error is reported under any other identifier.**
 - **Derived:** no
 
 The fallback is what makes RB-SYS-ALR-010 true for identifiers nobody classified: a new
-failure path added anywhere in the daemon annunciates something rather than nothing. The
-price is RB-HLR-ALR-150.
+failure path added anywhere in the daemon annunciates something rather than nothing. A
+core function's failure must not rely on it (RB-HLR-ALR-150).
 
 ### RB-HLR-ALR-140 — A failure is annunciated once per occurrence
 
@@ -268,18 +268,27 @@ comes back is annunciated again.
 error is reported for the attitude, air-data, heading, traffic or engine function.**
 
 - **Parent:** RB-SYS-ALR-020
-- **Source:** FHA-ALR-1; FHA-ATT-1, FHA-SPD-4; `main/alerts.go` `pushEventByIdent()`
+- **Source:** FHA-ALR-1; FHA-ATT-1, FHA-SPD-4; `main/alerts.go` `pushEventByIdent()`;
+  `main/sensors.go` `sensorAttitudeSender()`; `main/gps.go` `flarmFeedCheck()`
 - **Verification:** test
 - **Derived:** no
 
-**Open finding — the equipment does not meet this.** Of the fifteen identifiers the
-daemon raises, six fall through to the general failure of RB-HLR-ALR-130, and two of
-those six are core functions: `ahrs-web-start` (attitude) and `airspeed-sensor-read`
-(the pitot airspeed, the Major row FHA-SPD-4). Both annunciate as "Danger" with
-`danger.wav` — the same text and the same sound the pilot gets for a full disk. The two
-functions the FHA ranks highest are the two whose failures the alert cannot name. Fixing
-it is an event type per core function plus its rows in the mapping; it is not a design
-change. Tracked in `untraced.txt`.
+| Function | Identifier | Event type | Raised when | Cleared when |
+|---|---|---|---|---|
+| Attitude | `imu-read` | `EVENT_TYPE_SYSTEM_DANGER_ATTITUDE` (26) | the IMU is given up on after 51 failed reads in a row | the first good read after it reconnects, or the IMU turned off |
+| Air data, airspeed | `airspeed-sensor-read` | `EVENT_TYPE_SYSTEM_DANGER_AIRSPEED` (27) | the pitot sensor is dropped (RB-HLR-SPD-070) | it reconnects |
+| Air data, barometer | `pressure-sensor-*`, `BaroBroken` | `EVENT_TYPE_SYSTEM_DANGER_BAROMETER` (4) | RB-HLR-ALR-110 | not cleared (RB-HLR-ALR-160) |
+| Heading | `mag-sensor-read` | `EVENT_TYPE_SYSTEM_DANGER_HEADING` (28) | 20 unusable magnetometer samples in a row (1 s), once it has given a usable one this run | the next usable sample |
+| Traffic, FLARM | `flarm-feed` | `EVENT_TYPE_SYSTEM_DANGER_TRAFFIC` (29) | a configured FLARM serial-in silent for more than 10 s, from start-up if it never spoke | a valid sentence, or the device turned off |
+| Traffic, radio | `sdrconfig`, `ping-missing` | `EVENT_TYPE_SYSTEM_DANGER_SDR` (5) | RB-HLR-ALR-120 | `sdrconfig` only |
+| Engine | `ems-feed` | `EVENT_TYPE_EMS_GENERIC_FAILURE` (13) | the EMS feed is lost | it comes back |
+
+**Closed 2026-11-27.** The finding as first written named `ahrs-web-start` as the
+attitude failure. It is not: it is the AHRS debug websocket, and its raise is commented
+out. The real finding was worse — losing the IMU, the magnetometer or the FLARM feed
+raised no alert at all, and the pitot's failure was the generic "Danger". The four new
+identifiers clear when the failure goes, so they do not add to RB-HLR-ALR-160. Each new
+row plays `danger` until its own voice file is recorded; the text names the function.
 
 ### RB-HLR-ALR-160 — A failure that has gone is cleared
 

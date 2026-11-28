@@ -95,8 +95,8 @@ performing its intended function.**
 - **Derived:** no
 
 An alert the pilot cannot attribute to a function is not much better than no alert: the
-response to a failed barometer is not the response to a failed receiver. This is the
-requirement RB-HLR-ALR-150 fails today.
+response to a failed barometer is not the response to a failed receiver. RB-HLR-ALR-150
+flows it down to the core functions; it failed until 2026-11-27.
 
 ### RB-SYS-ALR-030 — An alert reaches the pilot without being looked for
 

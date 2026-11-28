@@ -2359,17 +2359,41 @@ func flarmSerialReader() {
 	}
 }
 
+// flarmFeedCheck raises flarm-feed when a FLARM serial-in device is configured and no
+// valid $PFLAU/$PFLAA has come from it for flarmInSilenceTimeout - counted from
+// watchFrom, the manager's start, when none has come at all, so a device that never
+// connects alerts too - and clears it when one has (RB-HLR-ALR-150, RB-HLR-ALR-160).
+// Turning the device off in the settings clears it.
+func flarmFeedCheck(watchFrom time.Time) {
+	if globalSettings.FlarmSerialInDevice == "" {
+		removeSingleSystemError("flarm-feed")
+		return
+	}
+	last := flarmInLastSentence
+	if last.Before(watchFrom) {
+		last = watchFrom
+	}
+	if stratuxClock.Since(last) > flarmInSilenceTimeout {
+		addSingleSystemErrorf("flarm-feed", "FLARM Error: no traffic data from %s for %.0f s, FLARM traffic lost",
+			globalSettings.FlarmSerialInDevice, flarmInSilenceTimeout.Seconds())
+	} else {
+		removeSingleSystemError("flarm-feed")
+	}
+}
+
 // flarmSerialManager (re)connects the dedicated FLARM traffic device whenever it is
 // configured but not currently connected. Independent of GPS_Enabled so a FLARM-only-in
 // setup works too.
 func flarmSerialManager() {
 	timer := time.NewTicker(4 * time.Second)
+	watchFrom := stratuxClock.Time
 	for {
 		<-timer.C
 		if globalStatus.FLARM_In_connected && globalStatus.FLARM_In_receiving &&
 			stratuxClock.Since(flarmInLastSentence) > flarmInSilenceTimeout {
 			globalStatus.FLARM_In_receiving = false
 		}
+		flarmFeedCheck(watchFrom)
 		// FLARM_In_targets is fed by every FLARM source, so it ages out on its own.
 		if globalStatus.FLARM_In_targets != 0 &&
 			stratuxClock.Since(flarmTargetsLastPFLAU) > flarmInSilenceTimeout {

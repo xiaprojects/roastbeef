@@ -128,7 +128,7 @@ The 1 s is measured from the first read that failed; from the last good reading 
 - **Derived:** no
 
 That is 5 s after the first failure, 4 s after the airspeed was blanked. The alert this
-raises falls through to a generic "Danger" today (RB-HLR-ALR-150).
+raises is the airspeed-sensor alert (RB-HLR-ALR-150).
 
 ### RB-HLR-SPD-080 — Turning the sensor off blanks the airspeed
 

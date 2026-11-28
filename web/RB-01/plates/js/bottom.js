@@ -149,13 +149,17 @@ const TOP_BAR_VOICE_ANSWER_MIN_SECONDS = 2;
 const TOP_BAR_VOICE_ANSWER_MAX_SECONDS = 20;
 // A SPEAKING 1 whose SPEAKING 0 never came stops counting after this long
 const TOP_BAR_VOICE_SPEAKING_MAX_SECONDS = 30;
+// A THINKING 1 whose answer never came stops counting after this long (rbvoice waits rb-llm 30 s at most)
+const TOP_BAR_VOICE_THINKING_MAX_SECONDS = 35;
 
 /**
  * barVoice: the state of the voice recognition (rbvoice) as the bar shows it
  * @param {*} voice - wakeWord and trigger: the bridge keys voice_wakeword and voice_trigger,
- *                    undefined until rbvoice publishes them; speakingUntil and answerUntil: Date.now() limits
+ *                    undefined until rbvoice publishes them; speakingUntil, thinkingUntil and answerUntil:
+ *                    Date.now() limits
  * @param {*} now - Date.now()
- * @returns ANSW while the reply is spoken, SPEAK while the pilot speaks, LISTNG while rbvoice
+ * @returns ANSW while the reply is spoken, SPEAK while the pilot speaks, THINK while rb-llm prepares
+ *          an answer (rbvoice keeps listening meanwhile, so SPEAK wins), LISTNG while rbvoice
  *          listens (wake word on, or after a push to talk), MNUAL when it waits for a push to talk,
  *          BAR_NO_DATA before rbvoice has published its keys
  */
@@ -165,6 +169,9 @@ function barVoice(voice, now) {
     }
     if (now < voice.speakingUntil) {
         return "SPEAK";
+    }
+    if (now < voice.thinkingUntil) {
+        return "THINK";
     }
     if (voice.trigger === true || voice.wakeWord === true) {
         return "LISTNG";
@@ -183,7 +190,7 @@ function TopBarCtrl($scope, $interval, $http) {
     var trafficHeard = {}; // Icao_addr to the Date.now() it was last heard
     var alertsList = $scope.alertsList; // The last list of AlertsService, undefined until the first
     // rbvoice: the bridge keys and how long the pilot's speech and the spoken reply last, barVoice()
-    const voice = { wakeWord: undefined, trigger: undefined, speakingUntil: 0, answerUntil: 0 };
+    const voice = { wakeWord: undefined, trigger: undefined, speakingUntil: 0, thinkingUntil: 0, answerUntil: 0 };
     // Date.now() of the last frame of each stream, and the slots that go to BAR_NO_DATA when it stops
     const streams = {
         situation: { time: 0, seconds: TOP_BAR_STALE_SECONDS, slots: ["wind", "speed", "track", "gmax", "alt"] },
@@ -282,7 +289,8 @@ function TopBarCtrl($scope, $interval, $http) {
         // The bridge carries every addon: only a frame with the rbvoice keys redraws the bar
         BridgeUpdated: voiceBridge,
         // rbvoice through the keypad socket: SPEAKING 1 and 0 around the pilot's speech, then
-        // VOICE with the reply ("out", empty when rbvoice does not answer)
+        // VOICE with the reply ("out", empty when rbvoice does not answer). With rb-llm, THINKING 1
+        // after the question and THINKING 0 before its VOICE, or when push to talk cancels it
         voice: function (event) {
             const now = Date.now();
             if (event.key === "SPEAKING") {
@@ -290,8 +298,13 @@ function TopBarCtrl($scope, $interval, $http) {
                 if (event.status === 1) {
                     voice.answerUntil = 0;
                 }
-            } else if (event.key === "VOICE") {
+            } else if (event.key === "THINKING") {
                 voice.speakingUntil = 0;
+                voice.thinkingUntil = event.status === 1 ? now + TOP_BAR_VOICE_THINKING_MAX_SECONDS * 1000 : 0;
+            } else if (event.key === "VOICE") {
+                // A new utterance cancels a pending question without THINKING 0: any reply ends it
+                voice.speakingUntil = 0;
+                voice.thinkingUntil = 0;
                 const seconds = String(event.out || "").length / TOP_BAR_VOICE_CHARS_PER_SECOND;
                 voice.answerUntil = event.out ? now + 1000 * Math.min(TOP_BAR_VOICE_ANSWER_MAX_SECONDS,
                     Math.max(TOP_BAR_VOICE_ANSWER_MIN_SECONDS, seconds)) : 0;

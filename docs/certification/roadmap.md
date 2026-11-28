@@ -476,7 +476,9 @@ doubles the effort.
 - [x] Barometer fixes of 2026-11-25: the NaN-altitude freeze (RB-HLR-ALT-035), the
       display reading the barometer's time stamp and source (RB-HLR-ALT-070, -130), the
       attitude plate's barometric altitude and TRK box (RB-HLR-ALT-140, RB-HLR-HDG-070).
-- [ ] **Next:** AT-13, the problem-report register (fourteen findings in the untraced
+- [x] RB-HLR-ALR-150 closed 2026-11-27: attitude, airspeed, heading and FLARM traffic
+      failures each raise an alert naming the function.
+- [ ] **Next:** AT-13, the problem-report register (thirteen findings in the untraced
       budget); the owner's decision on AUTO's range of validity (`fha.md` §5 item 5).
 
 ## Progress log
@@ -689,6 +691,22 @@ doubles the effort.
   replay interpolates the barometer's clock so it does not read BARO FAIL between rows.
 - Untraced budget 22 → 16. The AUTO setting's range of validity is proposed in `fha.md`
   §5 item 5, not built.
+
+**2026-11-27 — RB-HLR-ALR-150 closed: a core function's failure names the function.**
+
+- The finding was worse than recorded. `ahrs-web-start` is the AHRS debug websocket, not
+  the attitude function, and its raise is commented out; losing the IMU, the magnetometer
+  or the FLARM serial-in raised no alert at all, and the pitot's failure was "Danger".
+- Event types 26–29, `SYSTEM_DANGER_ATTITUDE`, `_AIRSPEED`, `_HEADING`, `_TRAFFIC`, with
+  rows in both languages (sound `danger` until voice files are recorded). New
+  identifiers `imu-read` (the IMU given up on), `mag-sensor-read` (20 unusable samples in
+  a row once the magnetometer has worked this run, so an IMU with none never alerts) and
+  `flarm-feed` (a configured FLARM serial-in silent over 10 s, from start-up if it never
+  spoke). All three clear when the failure goes, unlike thirteen of the older
+  identifiers (RB-HLR-ALR-160). The spoken-callouts plan moved to 30–37.
+- Evidence: `TestAttitudeLoop` extended (fails on the old code at both new checks),
+  `TestAttitudeLoopWithNoMagnetometerRaisesNothing`, `TestFlarmFeedLossIsATrafficAlert`,
+  the classification table. Untraced budget 16 → 15.
 
 ## Standards referenced
 

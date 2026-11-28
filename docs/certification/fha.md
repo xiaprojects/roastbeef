@@ -155,7 +155,7 @@ This section is that feedback loop; `scripts/trace.py` reports any derived requi
 3. The alert function (FHA-ALR-1) is the linchpin of most mitigations. It now has its own
    requirements (`requirements/RB-HLR-ALR.md`), and specifying it against the code found
    that it does not yet carry the weight this document puts on it: of 26 requirements,
-   nine are open findings. Two are decisions for this review rather than defects to fix —
+   nine were open findings (eight since 2026-11-27). Two are decisions for this review rather than defects to fix —
    **(a)** an equipment-level failure is annunciated by a sound that is off or
    un-autoplayable by default and by a 10 s balloon, then only by a page the pilot must
    choose, with no master caution
@@ -164,6 +164,10 @@ This section is that feedback loop; `scripts/trace.py` reports any derived requi
    stand; **(b)** a failure that recovers and recurs is annunciated once only, for thirteen
    of the fifteen failure identifiers (RB-HLR-ALR-160), which is the intermittent-sensor
    case FHA-ALT-3 and FHA-SPD-4 are about.
+   **Closed 2026-11-27:** a third finding, that a core function's failure did not name
+   the function (RB-HLR-ALR-150), was worse than recorded — losing the IMU, the
+   magnetometer or the FLARM feed raised no alert at all. Each now raises an alert
+   naming its function, cleared when the failure goes. (a) and (b) stand.
 4. Agree the DAL mapping table with the DER/CVE (Class I/II vs the post-2017 Part 23
    Level 1–4 / ASTM F3230 language).
 5. **AUTO altimeter setting, on by default.** RB-HLR-ALT-110 and RB-HLR-ALT-120 specify

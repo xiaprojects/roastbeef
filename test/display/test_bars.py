@@ -740,6 +740,21 @@ def check_voice(res, d):
     res.check(got == "MNUAL", "T13 no ANSW when rbvoice does not answer", got)
     got = voice("BridgeUpdated", {"voice_wakeword": 1})
     res.check(got == "LISTNG", "T13 LISTNG with the wake word on", got)
+    # rb-llm (rbvoice THINKING, added 2026-11-27): THINK until its answer, SPEAK wins while the pilot talks
+    got = voice("voice", {"source": "voice", "key": "THINKING", "in": "how far is the field", "out": "", "status": 1})
+    res.check(got == "THINK", "T13 THINK while rb-llm prepares an answer", got)
+    got = voice("voice", {"source": "voice", "key": "SPEAKING", "status": 1})
+    res.check(got == "SPEAK", "T13 SPEAK over THINK while the pilot speaks", got)
+    got = voice("voice", {"source": "voice", "key": "SPEAKING", "status": 0})
+    res.check(got == "THINK", "T13 back to THINK when the pilot stops", got)
+    got = voice("voice", {"source": "voice", "key": "THINKING", "in": "", "out": "", "status": 0})
+    res.check(got == "LISTNG", "T13 THINKING 0 (push to talk cancels) ends THINK", got)
+    got = voice("voice", {"source": "voice", "key": "THINKING", "in": "how far", "out": "", "status": 1})
+    got = voice("voice", {"source": "voice", "key": "VOICE", "in": "radio", "out": "Radio set", "status": 0})
+    res.check(got == "ANSW", "T13 a reply without THINKING 0 ends THINK", got)
+    d.page.pump(2.5)
+    res.check(slot_text(d, "voice", "value") == "LISTNG", "T13 no THINK left after the reply",
+              slot_text(d, "voice", "value"))
 
     d.page.click(".rb-bar-top [data-slot='voice']")
     d.page.pump(0.4)

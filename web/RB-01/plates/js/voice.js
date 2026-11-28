@@ -35,6 +35,34 @@ angular.module('appControllers').controller('VoiceCtrl', VoiceCtrl);
 // Bridge keys owned by rbvoice (bridge.py)
 var VOICE_WAKEWORD_KEY = "voice_wakeword";
 var VOICE_TRIGGER_KEY = "voice_trigger";
+// The utterances rbvoice understands, listed at the end of the page
+var VOICE_CASES_URL = URL_HOST_PROTOCOL + URL_HOST_BASE + "/settings/rbvoice-cases.it.json";
+
+/**
+ * voiceUtterances: one list per component of rbvoice-cases, keeping only the first keyword of each value
+ * @param {Object} cases the rbvoice-cases JSON, components: { name: { keywords: { "phrase": "value" } } }
+ * @returns [{ name, keywords: ["phrase", ...] }] in the file order; [] when the file has no components
+ */
+function voiceUtterances(cases) {
+    var list = [];
+    if (cases === undefined || cases === null || cases.components === undefined || cases.components === null) {
+        return list;
+    }
+    for (var name in cases.components) {
+        var keywords = cases.components[name].keywords || {};
+        var seen = {};
+        var phrases = [];
+        for (var phrase in keywords) {
+            var value = keywords[phrase];
+            if (!seen.hasOwnProperty(value)) {
+                seen[value] = true;
+                phrases.push(phrase);
+            }
+        }
+        list.push({ name: name, keywords: phrases });
+    }
+    return list;
+}
 
 
 
@@ -59,6 +87,8 @@ function VoiceCtrl($rootScope, $scope, $state, $http, $interval) {
 
 
     $scope.speaking = false;
+    // rb-llm is preparing an answer (THINKING of rbvoice)
+    $scope.thinking = false;
     $scope.phrases = [
     ];
 
@@ -132,6 +162,14 @@ function VoiceCtrl($rootScope, $scope, $state, $http, $interval) {
     });
     addEventListener("BridgeUpdated", voiceBridgeUpdatedEventListener);
 
+    // Supported utterances: one table per component, the first phrase of each value
+    $scope.utterances = [];
+    $http.get(VOICE_CASES_URL).then(function (response) {
+        $scope.utterances = voiceUtterances(angular.fromJson(response.data));
+    }, function (response) {
+        $scope.utterances = [];
+    });
+
     // The knob: PUSH TO TALK, WAKE WORD, PRIMARIO, SECONDARIO, DISPLAY, Enable Audio; TAP is a touch on the button
     // (docs/tech-debt/keypad-page-navigation.md 3.4)
     $scope.keypadFocus = new KeypadFocus($scope, $state, name);
@@ -148,6 +186,8 @@ function VoiceCtrl($rootScope, $scope, $state, $http, $interval) {
         if (event.detail.key == "SPEAKING") {
             $scope.speaking = event.detail.status;
         } else {
+            // THINKING and VOICE: servicevoice.js has updated the list and the state first
+            $scope.thinking = window.voiceThinking === true;
             $scope.phrases = window.voicePhrases;
         }
         $scope.$apply();
@@ -158,4 +198,5 @@ function VoiceCtrl($rootScope, $scope, $state, $http, $interval) {
     if(window.hasOwnProperty("voicePhrases")){
         $scope.phrases = window.voicePhrases;
     }
+    $scope.thinking = window.voiceThinking === true;
 };

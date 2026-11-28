@@ -982,8 +982,13 @@ func (l *loopIMU) Close() { l.mu.Lock(); l.closed = true; l.mu.Unlock() }
 // and the 51st failed read in a row declares the IMU disconnected and closes it.
 //
 // The loop never returns and paces itself on a real 20 Hz ticker, so it runs in a
-// child process (inChild), about 5 s.
-// Covers: RB-HLR-ATT-010, RB-HLR-ATT-020, RB-HLR-ATT-025, RB-HLR-ATT-040, RB-HLR-ATT-180, RB-HLR-ATT-240, RB-HLR-ATT-250
+// child process (inChild), about 8 s.
+//
+// The failures are annunciated by the function they cost (RB-HLR-ALR-150): a
+// magnetometer that stops giving a usable field for 1 s raises mag-sensor-read, a
+// heading alert, cleared by the next usable sample; the IMU given up on raises
+// imu-read, an attitude alert, cleared by the first good read after it reconnects.
+// Covers: RB-HLR-ATT-010, RB-HLR-ATT-020, RB-HLR-ATT-025, RB-HLR-ATT-040, RB-HLR-ATT-180, RB-HLR-ATT-240, RB-HLR-ATT-250, RB-HLR-ALR-150
 func TestAttitudeLoop(t *testing.T) {
 	if !inChild(t) {
 		return
@@ -1069,6 +1074,26 @@ func TestAttitudeLoop(t *testing.T) {
 		t.Errorf("logged raw accel %v gyro %v; want the driver's own 0.15 0 1 (with the offset) and 2 -1.5 1", rawA, rawG)
 	}
 
+	// The magnetometer: 19 unusable samples are not a failure, the 20th is.
+	imu.mu.Lock()
+	imu.f.m = [3]float64{}
+	imu.mu.Unlock()
+	imu.wait(t, 15)
+	if up, _ := raised("mag-sensor-read"); up {
+		t.Error("mag-sensor-read raised after 15 unusable magnetometer samples; want 20")
+	}
+	imu.wait(t, 10)
+	if up, pushed := raised("mag-sensor-read"); !up || !alerted(pushed, EVENT_TYPE_SYSTEM_DANGER_HEADING) {
+		t.Errorf("after 25 unusable magnetometer samples: raised %v, alerts %v; want a heading alert", up, pushed)
+	}
+	imu.mu.Lock()
+	imu.f.m = [3]float64{20, -15, 40}
+	imu.mu.Unlock()
+	imu.wait(t, 2)
+	if up, _ := raised("mag-sensor-read"); up {
+		t.Error("mag-sensor-read still raised after a usable magnetometer sample")
+	}
+
 	imu.mu.Lock()
 	imu.f.err = fmt.Errorf("i2c: no answer")
 	failedFrom := imu.n
@@ -1099,6 +1124,58 @@ func TestAttitudeLoop(t *testing.T) {
 	imu.mu.Unlock()
 	if failed != 51 || !closed {
 		t.Errorf("IMU declared disconnected after %d failed reads, closed %v; want 51, closed", failed, closed)
+	}
+	if up, pushed := raised("imu-read"); !up || !alerted(pushed, EVENT_TYPE_SYSTEM_DANGER_ATTITUDE) {
+		t.Errorf("IMU disconnected: imu-read raised %v, alerts %v; want an attitude alert", up, pushed)
+	}
+
+	// pollSensors reconnects it.
+	imu.mu.Lock()
+	imu.f.err = nil
+	imu.mu.Unlock()
+	globalStatus.IMUConnected = true
+	imu.wait(t, 2)
+	if up, _ := raised("imu-read"); up {
+		t.Error("imu-read still raised after the IMU reconnected and answered")
+	}
+}
+
+// alerted is whether an alert of type typ was pushed.
+func alerted(pushed []Alert, typ int) bool {
+	for _, a := range pushed {
+		if a.Type == typ {
+			return true
+		}
+	}
+	return false
+}
+
+// An IMU with no magnetometer, or one whose magnetometer never gives a usable field
+// (sensors/bmi270.go reports all zeros with no error), is not a failed magnetometer:
+// mag-sensor-read is raised only once the magnetometer has worked this run.
+//
+// As TestAttitudeLoop, in a child process (inChild), about 3 s.
+// Covers: RB-HLR-ALR-150
+func TestAttitudeLoopWithNoMagnetometerRaisesNothing(t *testing.T) {
+	if !inChild(t) {
+		return
+	}
+	netMutex, avoidLoopBackMutex, avoidLoopBackMap = &sync.Mutex{}, &sync.Mutex{}, make(map[string]string)
+	clientConnections = map[string]connection{}
+	globalSettings = settings{IMU_Sensor_Enabled: true, AHRSEngine: "simple", IMUMapping: [2]int{-1, 0}}
+	mount := axisMount(-1, -2)
+	globalSettings.SensorQuaternion = levelCage(t, mount)
+	globalSettings.MagSensorQuaternion = makeMagOrientationQuaternion()
+	globalSettings.D = [3]float64{2, -1.5, 1}
+	globalSettings.C = accelCorrect([3]float64{0, 0, 1})
+	imu := &loopIMU{f: fakeIMU{g: globalSettings.D, a: [3]float64{0, 0, 1}}}
+	myIMUReader = imu
+	globalStatus.IMUConnected = true
+	go sensorAttitudeSender()
+
+	imu.wait(t, 45)
+	if up, pushed := raised("mag-sensor-read"); up || len(pushed) != 0 {
+		t.Errorf("45 reads with no magnetometer: mag-sensor-read %v, alerts %v; want neither", up, pushed)
 	}
 }
 
