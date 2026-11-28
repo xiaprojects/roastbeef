@@ -7,6 +7,8 @@
                 Voice
                 <span ng-show="speaking == true" class="label label-success">SPEAKING</span>
                 <span ng-show="speaking == false" class="label label-default">SPEAKING</span>
+                <span ng-show="thinking == true" class="label label-warning">THINKING</span>
+                <span ng-show="thinking != true" class="label label-default">THINKING</span>
             </div>
             <div class="panel-body text-center" style="overflow:hidden;padding:0px;">
                 <table style="width:100%;margin: 0px;padding:0px;">
@@ -15,7 +17,8 @@
                         <td
                             style="margin: 0px;padding:0px;border-right: 1px #acacac solid;align-items:center;font-size: 4cqmin;">
                             <div class="pull-right" style="border-right: 4px solid green;">{{phrase.in}}</div>
-                            <div class="pull-left" style="border-left: 5px solid blue;">{{phrase.out}}</div>
+                            <div class="pull-left" style="border-left: 5px solid blue;"
+                                ng-style="phrase.thinking ? {'border-left-color': 'orange', 'font-style': 'italic'} : {}">{{phrase.out}}</div>
                         </td>
                     </tr>
                 </table>
@@ -37,4 +40,15 @@
 </div>
 <div style="text-align: center;">
 <a ng-click="enableAudio()" class="btn btn-default" data-keypad="tap">Enable Audio</a>
+</div>
+<!-- Supported utterances from /settings/rbvoice-cases.it.json: one table per component, first phrase of each value -->
+<div class="col-xs-12" ng-repeat="component in utterances">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;">{{component.name}}</div>
+        <table class="table table-condensed" style="margin: 0px;">
+            <tr ng-repeat="keyword in component.keywords track by $index">
+                <td>{{keyword}}</td>
+            </tr>
+        </table>
+    </div>
 </div>

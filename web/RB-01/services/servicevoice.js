@@ -42,11 +42,28 @@ VoiceService.prototype = {
  */
 function VoiceService($scope, $http) {
     window.voicePhrases = [];
+    // rb-llm is preparing an answer: THINKING 1 with the question ("in"), THINKING 0 before its VOICE,
+    // or with an empty "in" when push to talk cancels it (rbvoice docs/llm-integration.md)
+    window.voiceThinking = false;
+    function dropThinkingPhrases() {
+        window.voicePhrases = window.voicePhrases.filter(function (phrase) {
+            return phrase.thinking !== true;
+        });
+    }
     function voiceEventListener(event) {
         if (event.detail.key == "SPEAKING") {
             // Still speaking
+        } else if (event.detail.key == "THINKING") {
+            dropThinkingPhrases();
+            window.voiceThinking = event.detail.status == 1;
+            if (window.voiceThinking) {
+                // The question waits in the list until its answer comes
+                window.voicePhrases.unshift({ "in": event.detail.in, "out": "\u2026", "thinking": true });
+            }
         } else {
-            // Spoke
+            // Spoke. A new utterance cancels a pending question without THINKING 0: any reply ends it
+            dropThinkingPhrases();
+            window.voiceThinking = false;
             window.voicePhrases.unshift(event.detail);
         }
     }
